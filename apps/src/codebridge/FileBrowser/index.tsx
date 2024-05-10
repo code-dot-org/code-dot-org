@@ -8,6 +8,9 @@ import {ProjectType, FileId, FolderId} from '@codebridge/types';
 import {findFolder, getErrorMessage} from '@codebridge/utils';
 import React, {useMemo} from 'react';
 
+import {START_SOURCES} from '@cdo/apps/lab2/constants';
+import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+
 import './styles/fileBrowser.css';
 
 type FilesComponentProps = {
@@ -19,6 +22,7 @@ type FilesComponentProps = {
   moveFilePrompt: (fileId: FileId) => void;
   renameFilePrompt: (fileId: FileId) => void;
   renameFolderPrompt: (folderId: FolderId) => void;
+  toggleFileVisibility: (fileId: FileId) => void;
 };
 
 const InnerFileBrowser = React.memo(
@@ -31,10 +35,11 @@ const InnerFileBrowser = React.memo(
     moveFilePrompt,
     renameFilePrompt,
     renameFolderPrompt,
+    toggleFileVisibility,
   }: FilesComponentProps) => {
     const {openFile, deleteFile, toggleOpenFolder, deleteFolder} =
       useCodebridgeContext();
-
+    const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
     return (
       <>
         {Object.values(folders)
@@ -87,6 +92,7 @@ const InnerFileBrowser = React.memo(
                       moveFilePrompt={moveFilePrompt}
                       renameFilePrompt={renameFilePrompt}
                       renameFolderPrompt={renameFolderPrompt}
+                      toggleFileVisibility={toggleFileVisibility}
                     />
                   </ul>
                 )}
@@ -94,12 +100,21 @@ const InnerFileBrowser = React.memo(
             );
           })}
         {Object.values(files)
-          .filter(f => f.folderId === parentId)
+          .filter(f => f.folderId === parentId && (!f.hidden || isStartMode))
           .sort((a, b) => a.name.localeCompare(b.name))
           .map(f => (
             <li key={f.id}>
               <span className="label">
-                <span onClick={() => openFile(f.id)}>{f.name}</span>
+                <span onClick={() => openFile(f.id)}>
+                  {isStartMode && (
+                    <i
+                      className={`fa-solid ${
+                        f.hidden ? 'fa-eye-slash' : 'fa-eye'
+                      }`}
+                    />
+                  )}
+                  {f.name}
+                </span>
                 <span className="button-bar">
                   <span onClick={() => moveFilePrompt(f.id)}>
                     <i className="fa-solid fa-arrow-right" />
@@ -110,6 +125,15 @@ const InnerFileBrowser = React.memo(
                   <span onClick={() => deleteFile(f.id)}>
                     <i className="fa-solid fa-trash" />
                   </span>
+                  {isStartMode && (
+                    <span onClick={() => toggleFileVisibility(f.id)}>
+                      <i
+                        className={`fa-solid ${
+                          f.hidden ? 'fa-eye' : 'fa-eye-slash'
+                        }`}
+                      />
+                    </span>
+                  )}
                 </span>
               </span>
             </li>
@@ -128,6 +152,7 @@ export const FileBrowser = React.memo(() => {
 
     renameFolder,
     newFolder,
+    setFileVisibility,
   } = useCodebridgeContext();
 
   const newFolderPrompt: FilesComponentProps['newFolderPrompt'] = useMemo(
@@ -259,6 +284,16 @@ export const FileBrowser = React.memo(() => {
     [renameFolder, project.folders]
   );
 
+  const toggleFileVisibility: FilesComponentProps['toggleFileVisibility'] =
+    useMemo(
+      () => fileId => {
+        const file = project.files[fileId];
+        const hide = !file.hidden;
+        setFileVisibility(fileId, hide);
+      },
+      [setFileVisibility, project.files]
+    );
+
   return (
     <div className="file-browser">
       <div className="files-toolbar">
@@ -281,6 +316,7 @@ export const FileBrowser = React.memo(() => {
           moveFilePrompt={moveFilePrompt}
           renameFilePrompt={renameFilePrompt}
           renameFolderPrompt={renameFolderPrompt}
+          toggleFileVisibility={toggleFileVisibility}
         />
       </ul>
     </div>

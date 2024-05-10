@@ -18,55 +18,9 @@
               "html": "\n<p><span style='font-size: 12pt;'>The following are questions about your experience and interests in <strong>using Artificial Intelligence (AI) to support you while teaching Computer Science</strong>. Your responses will inform our priorities around tool development.</span></p>\n"
             },
             {
-              "type": "matrix",
-              "name": "teaching_with_ai_ta_matrix",
-              "title": "[AI TA - OPTION 1] How much do you agree or disagree with the following statements about using an AI-assisted tool to assess and evaluate students' computer science projects?",
-              "description": "Such a tool uses AI to check students' work against a rubric, assessing progress toward learning outcomes and standards.",
-              "columns": [
-                {
-                  "value": "1",
-                  "text": "Do not agree at all"
-                },
-                {
-                  "value": "2",
-                  "text": "Disagree"
-                },
-                {
-                  "value": "3",
-                  "text": "Slightly disagree"
-                },
-                {
-                  "value": "4",
-                  "text": "Neutral"
-                },
-                {
-                  "value": "5",
-                  "text": "Slightly agree"
-                },
-                {
-                  "value": "6",
-                  "text": "Agree"
-                },
-                {
-                  "value": "7",
-                  "text": "Definitely agree"
-                }
-              ],
-              "rows": [
-                {
-                  "value": "teaching_with_ai_ta_familiarity",
-                  "text": "I am familiar with AI-assisted tools to assess and evaluate students' work"
-                },
-                {
-                  "value": "teaching_with_ai_ta_likelihood",
-                  "text": "I would use an AI-assisted tool to support me in assessing and evaluating students' computer science projects"
-                }
-              ]
-            },
-            {
               "type": "rating",
-              "name": "teaching_with_ai_ta_rating",
-              "title": "[AI TA - OPTION 2, has follow-up for values < 6] How likely are you to use an AI-assisted tool to assess and evaluate students' computer science projects?",
+              "name": "teaching_with_ai_ta_likelihood",
+              "title": "How likely are you to use an AI-assisted tool to assess and evaluate students' computer science projects?",
               "description": "Such a tool uses AI to check students' work against a rubric, assessing progress toward learning outcomes and standards.",
               "rateCount": 7,
               "rateMax": 7,
@@ -75,8 +29,8 @@
             },
             {
               "type": "checkbox",
-              "name": "teaching_with_ai_ta_reasons_not_use",
-              "visibleIf": "{teaching_with_ai_ta_rating} < 6",
+              "name": "teaching_with_ai_ta_reasons",
+              "visibleIf": "{teaching_with_ai_ta_likelihood} < 5",
               "title": "Please share the reasons why you wouldn't use an AI-assisted tool to assess and evaluate students' computer science projects. Understanding your answer will help us find how to improve the tool and supports.",
               "description": "(Please select all that apply)",
               "choices": [
@@ -85,20 +39,12 @@
                   "text": "I would like to understand how the tool works before using it"
                 },
                 {
-                  "value": "not_familiar",
-                  "text": "I am not familiar with AI-assisted tools to assess and evaluate students' work"
+                  "value": "dont_trust",
+                  "text": "I don't trust AI enough to use it for essential components of teaching"
                 },
                 {
                   "value": "tool_not_as_good_as_me",
-                  "text": "I don't trust that the tool will assess student work as well as I can"
-                },
-                {
-                  "value": "tool_lacks_student_context",
-                  "text": "I know my students, so my assessments include context that tools can't consider"
-                },
-                {
-                  "value": "anxious_introducing_ai",
-                  "text": "I'm nervous about introducing AI into my teaching practices"
+                  "text": "I am not confident that an AI tool will assess student work as well as I can"
                 },
                 {
                   "value": "lack_access_ai_tools",
@@ -112,174 +58,148 @@
             },
             {
               "type": "text",
-              "name": "teaching_with_ai_ta_reasons_not_use_other_comment",
-              "visibleIf": "{teaching_with_ai_ta_reasons_not_use} = 'other'",
+              "name": "teaching_with_ai_ta_reasons_other_comment",
+              "visibleIf": "{teaching_with_ai_ta_reasons} contains 'other'",
               "title": "Please share what are some other reasons why you wouldn't use an AI-assisted tool to assess and evaluate students' computer science projects."
             },
             {
-              "type": "matrix",
-              "name": "teaching_with_ai_pl_tutor_matrix",
-              "title": "[AI PL tutor - OPTION 1: general interest] How much do you agree or disagree with the following statements about using an AI-assisted tool to guide and support you while teaching computer science?",
-              "description": "E.g. A tool that gives you suggestions for activities based on the lesson you are teaching, guidance on how to introduce differentiation practices,  develop guided questions to encourage critical thinking, etc.",
-              "columns": [
+              "type": "rating",
+              "name": "teaching_with_ai_pl_tutor_teaching_cs",
+              "title": "How likely are you to use an AI-assisted tool to enhance your computer science teaching practices?",
+              "description": "This AI-assisted tool would assist with lesson planning, offer guidance for differentiation, and suggest activities and assessments relevant to the computer science concepts you are teaching.",
+              "rateCount": 7,
+              "rateMax": 7,
+              "minRateDescription": "Not Likely At All",
+              "maxRateDescription": "Extremely Likely"
+            },
+            {
+              "type": "checkbox",
+              "name": "teaching_with_ai_pl_tutor_teaching_cs_reasons",
+              "visibleIf": "{teaching_with_ai_pl_tutor_teaching_cs} < 5",
+              "title": "Please share the reasons why you wouldn't use an AI-assisted tool to enhance your computer science teaching practices.",
+              "description": "(Please select all that apply)",
+              "choices": [
                 {
-                  "value": "1",
-                  "text": "Do not agree at all"
+                  "value": "need_more_prep_or_knowledge",
+                  "text": "I would like to understand how the tool works before using it"
                 },
                 {
-                  "value": "2",
-                  "text": "Disagree"
+                  "value": "dont_trust",
+                  "text": "I don't trust AI enough to use it for essential components of teaching"
                 },
                 {
-                  "value": "3",
-                  "text": "Slightly disagree"
+                  "value": "tool_not_as_good_as_me",
+                  "text": "I am not confident that an AI tool will do my work as well as I can"
                 },
                 {
-                  "value": "4",
-                  "text": "Neutral"
+                  "value": "lack_access_ai_tools",
+                  "text": "My school restricts access to AI tools"
                 },
                 {
-                  "value": "5",
-                  "text": "Slightly agree"
-                },
-                {
-                  "value": "6",
-                  "text": "Agree"
-                },
-                {
-                  "value": "7",
-                  "text": "Definitely agree"
-                }
-              ],
-              "rows": [
-                {
-                  "value": "teaching_with_ai_pl_tutor_interest",
-                  "text": "I would be interested in using an AI-assisted tool to guide and support me while teaching computer science"
-                },
-                {
-                  "value": "teaching_with_ai_pl_tutor_comfort",
-                  "text": "I would be comfortable using an AI-assisted tool to guide and support me while teaching computer science"
+                  "value": "other",
+                  "text": "Other"
                 }
               ]
             },
             {
-              "type": "matrix",
-              "name": "teaching_with_ai_pl_tutor_features_matrix",
-              "title": "[AI PL tutor - OPTION 2: specific features] How interested would you be in using an AI-assisted tool with the following features to guide and support you while teaching computer science?",
-              "columns": [
+              "type": "text",
+              "name": "teaching_with_ai_pl_tutor_teaching_cs_reasons_other_comment",
+              "visibleIf": "{teaching_with_ai_pl_tutor_teaching_cs_reasons} contains 'other'",
+              "title": "Please share what are some other reasons why you wouldn't use an AI-assisted tool to enhance your computer science teaching practices."
+            },
+            {
+              "type": "rating",
+              "name": "teaching_with_ai_pl_tutor_learn_cs",
+              "title": "How likely are you to use an AI-assisted tool to guide and support your learning of computer science while you teach?",
+              "description": "This would be an AI-assisted tool to enhance your learning and understanding of the computer science concepts you are teaching.",
+              "rateCount": 7,
+              "rateMax": 7,
+              "minRateDescription": "Not Likely At All",
+              "maxRateDescription": "Extremely Likely"
+            },
+            {
+              "type": "checkbox",
+              "name": "teaching_with_ai_pl_tutor_learn_cs_reasons",
+              "visibleIf": "{teaching_with_ai_pl_tutor_learn_cs} < 5",
+              "title": "Please share the reasons why you wouldn't use an AI-assisted tool to enhance your learning and understanding of the computer science concepts you are teaching.",
+              "description": "(Please select all that apply)",
+              "choices": [
                 {
-                  "value": "1",
-                  "text": "Definitely would not use"
+                  "value": "need_more_prep_or_knowledge",
+                  "text": "I would like to understand how the tool works before using it"
                 },
                 {
-                  "value": "2",
-                  "text": "Would not use"
+                  "value": "dont_trust",
+                  "text": "I don't trust AI enough to use it for learning"
                 },
                 {
-                  "value": "3",
-                  "text": "Not likely to use"
+                  "value": "prefer_learn_other_ways",
+                  "text": "I prefer to learn in other ways"
                 },
                 {
-                  "value": "4",
-                  "text": "Neutral"
+                  "value": "lack_access_ai_tools",
+                  "text": "My school restricts access to AI tools"
                 },
                 {
-                  "value": "5",
-                  "text": "Might use"
-                },
-                {
-                  "value": "6",
-                  "text": "Would use"
-                },
-                {
-                  "value": "7",
-                  "text": "Definitely would use"
-                }
-              ],
-              "rows": [
-                {
-                  "value": "teaching_with_ai_pl_tutor_grading",
-                  "text": "Grading: an AI-assisted tool to help grade student assignments more efficiently and accurately in computer science."
-                },
-                {
-                  "value": "teaching_with_ai_pl_tutor_feedback",
-                  "text": "Providing Feedback on Student Code: an AI-assisted tool to provide constructive feedback on student code, aiding their learning and understanding."
-                },
-                {
-                  "value": "teaching_with_ai_pl_tutor_lesson_planning",
-                  "text": "Lesson Planning: an AI-assisted tool to assist in planning more engaging and effective computer science lessons."
-                },
-                {
-                  "value": "teaching_with_ai_pl_tutor_differentiation",
-                  "text": "Differentiation: an AI-assisted tool to offer guidance to better differentiate instruction and meet the diverse needs of computer science students."
-                },
-                {
-                  "value": "teaching_with_ai_pl_tutor_teacher_learning_cs",
-                  "text": "Supporting Teacher Learning of CS: an AI-assisted tool to enhance my own learning and understanding of computer science, ultimately improving my teaching."
-                },
-                {
-                  "value": "teaching_with_ai_pl_tutor_guided_questions",
-                  "text": "Developing Guided Questions: an AI-assisted tool to help develop guided questions that encourage critical thinking and problem-solving skills among CS students."
-                },
-                {
-                  "value": "teaching_with_ai_pl_tutor_assessments",
-                  "text": "Developing Assessments: an AI-assisted tool to develop custom assessment questions to assess student learning of code.org curricula."
-                },
-                {
-                  "value": "teaching_with_ai_pl_tutor_debugging",
-                  "text": "Debugging Student Code: an AI-assisted tool to assist in debugging student code, helping identify and explain errors more effectively."
+                  "value": "other",
+                  "text": "Other"
                 }
               ]
             },
             {
-              "type": "matrix",
-              "name": "teaching_with_ai_cs_tutor_matrix",
-              "title": "How much do you agree or disagree with the following statements about enabling your students to use an AI-assisted tool to support their computer science learning, such as an AI tutor?",
+              "type": "text",
+              "name": "teaching_with_ai_pl_tutor_learn_cs_reasons_other_comment",
+              "visibleIf": "{teaching_with_ai_pl_tutor_learn_cs_reasons} contains 'other'",
+              "title": "Please share what are some other reasons why you wouldn't use an AI-assisted tool to enhance your learning and understanding of the computer science concepts you are teaching."
+            },
+            {
+              "type": "rating",
+              "name": "teaching_with_ai_cs_tutor_students",
+              "title": "How likely are you to enable your students to use an AI-assisted tool to support their computer science learning, such as an AI tutor?",
               "description": "This would be an AI-powered tool for students that can deliver content and guidance, personalized hints, feedback, and encouragement on CS concepts as students work through their projects.",
-              "columns": [
+              "rateCount": 7,
+              "rateMax": 7,
+              "minRateDescription": "Not Likely At All",
+              "maxRateDescription": "Extremely Likely"
+            },
+            {
+              "type": "checkbox",
+              "name": "teaching_with_ai_cs_tutor_students_reasons",
+              "visibleIf": "{teaching_with_ai_cs_tutor_students} < 5",
+              "title": "Please share the reasons why you wouldn't enable your students to use an AI-assisted tool to support their computer science learning, such as an AI tutor.",
+              "description": "(Please select all that apply)",
+              "choices": [
                 {
-                  "value": "1",
-                  "text": "Do not agree at all"
+                  "value": "need_more_prep_or_knowledge",
+                  "text": "I would like to understand how the tool works before using it"
                 },
                 {
-                  "value": "2",
-                  "text": "Disagree"
+                  "value": "dont_trust",
+                  "text": "I don't trust that an AI tool can support my students reliably and accurately"
                 },
                 {
-                  "value": "3",
-                  "text": "Slightly disagree"
+                  "value": "prevent_learning",
+                  "text": "My students won't learn as much if they over-rely on AI tools"
                 },
                 {
-                  "value": "4",
-                  "text": "Neutral"
+                  "value": "academic_integrity",
+                  "text": "I want to prevent cheating and academic integrity violations caused by AI misuse"
                 },
                 {
-                  "value": "5",
-                  "text": "Slightly agree"
+                  "value": "lack_access_ai_tools",
+                  "text": "My school restricts access to AI tools"
                 },
                 {
-                  "value": "6",
-                  "text": "Agree"
-                },
-                {
-                  "value": "7",
-                  "text": "Definitely agree"
-                }
-              ],
-              "rows": [
-                {
-                  "value": "teaching_with_ai_cs_tutor_familiarity",
-                  "text": "I am familiar with AI-assisted tools to support student learning"
-                },
-                {
-                  "value": "teaching_with_ai_cs_tutor_interest",
-                  "text": "I would be interested in providing my students AI-assisted tools to support their learning of computer science"
-                },
-                {
-                  "value": "teaching_with_ai_cs_tutor_comfort",
-                  "text": "I would be comfortable with the use of AI-assisted tools by my students to support their learning of computer science"
+                  "value": "other",
+                  "text": "Other"
                 }
               ]
+            },
+            {
+              "type": "text",
+              "name": "teaching_with_ai_cs_tutor_students_reasons_other_comment",
+              "visibleIf": "{teaching_with_ai_cs_tutor_students_reasons} contains 'other'",
+              "title": "Please share what are some other reasons why you wouldn't enable your students to use an AI-assisted tool to support their computer science learning, such as an AI tutor."
             }
           ]
         }

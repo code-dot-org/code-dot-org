@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-07 20:48:18 UTC",
+    "serialized_at": "2024-05-09 22:00:52 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -62,8 +62,8 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "**Purpose:**\nThis session is intended to orient participants to Code.org, the CS Discoveries curriculum and the PL program. This is a lot of new information for participants so it is important to ground conversations in the content of the curriculum guide to reinforce for participants that all of this information is available for them to come back to and dig deeper into later. At a minimum, participants should walk away from this session knowing what information about the course is available to them and where to find it in the future.\n\n**Objectives:**\n\n* Participants have been introduced to the Code.org curriculum values and equity “why”\n* Participants understand that they are not expected to be CS experts, but they are expected to be open to learning together\n* Participants have a high-level understanding of the overall themes and structure of the CS Discoveries course\n\n**Suggested time:** 35 minutes",
-        "student_overview": "**You will:**\n\n* Get an introduction to the Code.org curriculum values and equity “why”.\n* Understand that you are not expected to be CS experts, but are expected to be open to learning together.\n* Gain a high-level understanding of the overall themes and structure of the CS Discoveries course.\n"
+        "overview": "**Purpose:**\nThis session is intended to orient participants to Code.org, the CS Discoveries curriculum and the PL program. This is a lot of new information for participants so it is important to ground conversations in the content of the curriculum guide to reinforce for participants that all of this information is available for them to come back to and dig deeper into later. At a minimum, participants should walk away from this session knowing what information about the course is available to them and where to find it in the future.\n\n**Objectives:**\n\n* Participants have been introduced to Code.org's stance on equity\n* Participants understand that they are not expected to be CS experts, but they are expected to be open to learning together\n* Participants have a high-level understanding of the overall themes and structure of the CS Discoveries course\n\n**Suggested time:** 35 minutes",
+        "student_overview": "**You will:**\n\n* Get an introduction to Code.org's stance on equity\n* Understand that you are not expected to be CS experts, but are expected to be open to learning together.\n* Gain a high-level understanding of the overall themes and structure of the CS Discoveries course.\n"
       },
       "seeding_key": {
         "lesson.key": "CS Discoveries Overview",

@@ -1,7 +1,8 @@
 import {FieldGridDropdown} from '@blockly/field-grid-dropdown';
-import color from '@cdo/apps/util/color';
 import {BlockSvg, MenuItem, MenuOption} from 'blockly';
 import {ImageProperties} from 'blockly/core/field_dropdown';
+
+import color from '@cdo/apps/util/color';
 
 interface ButtonConfig {
   text: string;
