@@ -2008,6 +2008,7 @@
         how_to: "App Lab How-to: Make a Choose-Your-Own-Adventure App"
 
   music_lab:
+    opengraph_title: "%{music_lab} | Create music with code"
     introducing: "Introducing"
     music_lab: "Music Lab"
     introducing_music_lab: "Introducing Music Lab"
@@ -2018,7 +2019,7 @@
       access_teachers_guide: "Access teacher's guide"
       get_teachers_guide: "Get the teacher's guide"
       amazon_career_tour: "See Career Tour"
-    in_partnerhip_with: "In partnership with"
+    in_partnership_with: "In partnership with"
     amazon_future_engineer: "Amazon Future Engineer"
     banner:
       heading: "Create music with code"
@@ -2055,6 +2056,7 @@
         quote_01: "It's like you're coding without even knowing you're coding."
         quote_02: "I never would have imagined I'd be making music with computer science."
         quote_03: "I think it's a cool way to compose music."
+        byline: "High School Student"
     teachers_guide:
       heading: "Get the teacher's guide to Music Lab"
       desc: "Grab your copy of the teacher's guide to Music Lab to learn how to get started, explore activity ideas, and get answers to frequently asked questions."
@@ -10832,7 +10834,7 @@
   about_page_section_specific_description_7: "[Sign up to receive status updates](%{sign_up_url}) about progress in the K-12 computer science movement and about the work of Code.org. Or follow Code.org on social media:"
   about_page_section_specific_description_8: "Over 40% of our website traffic comes from outside of the United States and that number continues to climb. In order to expand global access to computer science, our team works closely with [more than 100 international partners](%{partners_url}), helping them to promote the Hour of Code, advocate for policy change, and train teachers. We are making computer science part of the international education discourse by partnering with ministries of education from around the world and working with international organizations like the Organization for Economic Co-operation and Development and the United Nations Educational, Scientific and Cultural Organization."
   about_page_section_donors_description_1: "Code.org® is a registered public 501c3 nonprofit, with support from the general public. We are grateful for the generous support we've received from [individuals and organizations](%{individuals_url}) who support our vision."
-  about_page_section_donors_description_2: "Codes accomplishments (above) demonstrate our ability to leverage those dollars into strong outcomes. But given our nonprofit ambition that every child in every school should have access to computer science — to become literate citizens in today's digital world and to test their interests in exploring CS further as a career — we have a long way to go to meet a fundraising goal that will support that vision."
+  about_page_section_donors_description_2: "Code.org's accomplishments (above) demonstrate our ability to leverage those dollars into strong outcomes. But given our nonprofit ambition that every child in every school should have access to computer science — to become literate citizens in today's digital world and to test their interests in exploring CS further as a career — we have a long way to go to meet a fundraising goal that will support that vision."
   about_page_donors_link_1: "Make a donations"
   about_page_donors_link_2: "[see our list of donors](%{donors_url})"
 
