@@ -362,13 +362,20 @@ export function sendSuccessReport(appType: string): ProgressThunkAction {
         'content-type': 'application/json',
       },
       body: JSON.stringify(data),
-    }).then(response => {
-      if (response.ok && levelId !== null) {
-        // Update the progress store by merging in this
-        // particular result immediately.
-        dispatch(mergeResults({[levelId]: idealPassResult}));
-      }
-    });
+    })
+      .then(response => {
+        if (response.ok && levelId !== null) {
+          // Update the progress store by merging in this
+          // particular result immediately.
+          dispatch(mergeResults({[levelId]: idealPassResult}));
+        }
+        return response.json();
+      })
+      .then(data => {
+        // TODO: use data.redirect to navigate to the next level.
+        // Last level of a script will be redirected to the script overview page.
+        console.log('data.redirect', data.redirect);
+      });
   };
 }
 
