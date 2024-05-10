@@ -92,7 +92,7 @@ class Policies::ChildAccount
 
   # Check if parent permission is required for this account according to our
   # Child Account Policy.
-def self.parent_permission_required?(user)
+  def self.parent_permission_required?(user)
     return false unless user.student?
 
     policy = state_policy(user)
