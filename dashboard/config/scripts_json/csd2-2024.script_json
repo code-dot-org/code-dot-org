@@ -17,6 +17,7 @@
         }
       ],
       "curriculum_umbrella": "CSD",
+      "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
@@ -28,7 +29,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-02 20:51:18 UTC",
+    "serialized_at": "2024-05-09 18:01:07 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5133,7 +5134,7 @@
       "key": "fec7cad8-9547-4f8b-b2d6-03c19583b6e5",
       "position": 4,
       "properties": {
-        "description": "**Distribute:** Hand out the activity guide.\n\nThe teams should already have the topic for their project, but they should check that they are all in agreement about the topic.",
+        "description": "**Distribute:** Hand out the activity guide.\n\nThe teams should start by discussing possible topics for their project and eventually, they should make a decision and all be in agreement about the topic.",
         "name": "Team Goal\r"
       },
       "seeding_key": {

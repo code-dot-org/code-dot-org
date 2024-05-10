@@ -3,21 +3,33 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Game Design
+# Game Design: Ignite Creativity! 
 
-##### Welcome! This free self-paced professional learning module is designed help you prepare to teach Code.org's Artificial Intelligence and Machine Learning unit. 
+##### Welcome, educators, to an exhilarating journey into the world of game design! 🎮✨ This free, self-paced module is designed to equip you with the skills to inspire budding game designers. Dive into the fundamentals of game creation and Code.org's module in just 45 minutes! Discover the art of crafting captivating games, empowering students to unleash their creativity and technical skills. Through problem-solving, storytelling, and teamwork, students will develop resilience and empathy. Using Sprite Lab, your students will bring their imagination to life. 
+
+<img src="https://images.code.org/b201f3b28b7d2c536741773242ca1352-image-1715287595815.png" alt="pixelated cartoon image of a green dinosaur" style="border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;">
 
 
-<img src="https://images.code.org/1cd0ec71458414495502b9598efd2028-image-1639773441510.37.01 PM.png" alt="Image of AI bot and a model card" style="border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;">
+##### Check out what teachers are saying about teaching game design: 
+* ##### "The most vital aspect was the discussion at the end. Students really embraced the process of verbalizing the 'glows and grows,' enhancing their learning experience through reflective conversation."
+* ##### "It was just pure fun. Everyone loves playing games, but learning how to design them? That's something special. This was how I introduced game design to both 4th and 5th graders, and they were instantly engaged and excited."
+* ##### "I noted particular enthusiasm from students who previously didn't feel confident with coding, including gifted students who might not typically enjoy it. They became very excited when they managed to grasp new concepts and even more so when they could help a classmate understand a problem."
 
 
-## In this module, you will:
 
-* ##### Get an introduction to artificial intelligence and machine learning.
-* ##### Practice key concepts included in the unit.
-* ##### Engage with AI Lab and App Lab.
-* ##### Explore end of chapter projects.
-* ##### Make a plan for implementing the unit with your students.
+
+
+
+
+
+
+
+## In this lesson, you will::
+
+* ##### Get an introduction to game design.
+* ##### Learn about the big ideas students will be taught in the Code.org Game Design module. 
+* ##### Practice foundational computer science concepts to modify and create games.
+
 
 ### **Suggested time:** ??? minutes
 
@@ -28,7 +40,7 @@ Update Survey link:
 
 <a class="btn btn-large btn-primary" href="https://studio.code.org/form/csd_selfpaced_pl_presurvey" target="blank" rel="noopener noreferrer">Take the pre-survey</a>
 
-## Let's get started!
+## Are you ready to ignite creativity in your classroom? Let's dive in! 🌟
 
 <div style="clear:both"/>
 
