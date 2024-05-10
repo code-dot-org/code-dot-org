@@ -261,10 +261,5 @@ export interface ExtraLinksData {
   level_name: string;
 }
 
-export const TEXT_BASED_LABS: AppName[] = [
-  'applab',
-  'javalab',
-  'weblab',
-  'pythonlab',
-  'weblab2',
-];
+// Text-based labs that are currently supported by lab2.
+export const TEXT_BASED_LABS: AppName[] = ['aichat', 'pythonlab', 'weblab2'];
