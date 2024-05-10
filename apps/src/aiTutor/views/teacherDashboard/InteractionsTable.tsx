@@ -315,24 +315,6 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
           </Table.Provider>
         )}
       </div>
-      <div>
-        {/* 
-        TODO: Reenable and test pagination in a separate PR
-        <Button
-          color={Button.ButtonColor.brandSecondaryDefault}
-          disabled={currentPage === 1}
-          onClick={() => setCurrentPage(currentPage - 1)}
-        >
-          Previous
-        </Button>
-        <Button
-          color={Button.ButtonColor.brandSecondaryDefault}
-          disabled={currentPage === totalPages}
-          onClick={() => setCurrentPage(currentPage + 1)}
-        >
-          Next
-        </Button> */}
-      </div>
     </div>
   );
 };
