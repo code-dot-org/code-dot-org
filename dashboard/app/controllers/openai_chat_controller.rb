@@ -90,7 +90,7 @@ class OpenaiChatController < ApplicationController
     # In production, cache the content after fetching it from S3
     # Note: We will hit this codepath in dev if the file is not found locally
     if Rails.env.production?
-      CDO_SHARED_CACHE.write(cache_key, content, expires_in: 12.hours)
+      CDO_SHARED_CACHE.write(cache_key, content, expires_in: 1.hour)
     end
     return content
   end
