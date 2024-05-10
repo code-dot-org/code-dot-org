@@ -3,7 +3,7 @@ class AichatController < ApplicationController
   authorize_resource class: false
 
   # params are
-  # newMessage: string
+  # newMessage: ChatCompletionMessage
   # storedMessages: Array of {role: <'user', 'system', or 'assistant'>; content: string} - does not include user's new message
   # aichatModelCustomizations: {temperature: number; retrievalContexts: string[]; systemPrompt: string;}
   # aichatContext: {currentLevelId: number; scriptId: number; channelId: string;}
@@ -15,35 +15,29 @@ class AichatController < ApplicationController
     end
 
     # Check for profanity
-    # locale = params[:locale] || "en"
-    # filter_result = ShareFiltering.find_failure(params[:newMessage], locale)
-    # if filter_result&.type == ShareFiltering::FailureType::PROFANITY
-    #   new_messages = [
-    #     {
-    #       role: 'user',
-    #       content: params[:newMessage],
-    #       status: SharedConstants::AI_INTERACTION_STATUS[:PROFANITY_VIOLATION]
-    #     }
-    #   ]
-    #   session_id = log_chat_session(new_messages)
-    #   return render(
-    #     status: :ok,
-    #     json: {
-    #       status: SharedConstants::AICHAT_ERROR_TYPE[:PROFANITY_USER],
-    #       flagged_content: filter_result.content,
-    #       session_id: session_id
-    #     }
-    #   )
-    # end
+    locale = params[:locale] || "en"
+    filter_result = ShareFiltering.find_failure(params[:newMessage][:chatMessageText], locale)
+    if filter_result&.type == ShareFiltering::FailureType::PROFANITY
+      updated_message = params[:userMessage].merge({status: SharedConstants::AI_INTERACTION_STATUS[:PROFANITY_VIOLATION]})
+      session_id = log_chat_session([updated_message])
+
+      return render(
+        status: :ok,
+        json: {
+          messages: params[:storedMessages] + [updated_message],
+          flagged_content: filter_result.content,
+          session_id: session_id
+        }
+      )
+    end
 
     # Use to_unsafe_h here to allow testing this function.
     # Safe params are primarily targeted at preventing "mass assignment vulnerability"
     # which isn't relevant here.
     input = AichatSagemakerHelper.format_inputs_for_sagemaker_request(
       params.to_unsafe_h[:aichatModelCustomizations],
-      params.to_unsafe_h[:storedMessages].filter {|message| message[:status] == SharedConstants::AI_INTERACTION_STATUS[:OK] ||
-        message[:status] == SharedConstants::AI_INTERACTION_STATUS[:UNKNOWN]
-      }
+      params.to_unsafe_h[:storedMessages].filter {|message| message[:status] == SharedConstants::AI_INTERACTION_STATUS[:OK]},
+      params.to_unsafe_h[:newMessage]
     )
     sagemaker_response = AichatSagemakerHelper.request_sagemaker_chat_completion(input, params[:aichatModelCustomizations][:selectedModelId])
     latest_assistant_response = AichatSagemakerHelper.get_sagemaker_assistant_response(sagemaker_response)
@@ -76,7 +70,7 @@ class AichatController < ApplicationController
     # end
 
     assistant_message = {
-      id: 100,
+      id: 100, # fix this
       role: "assistant",
       status: SharedConstants::AI_INTERACTION_STATUS[:OK],
       chatMessageText: latest_assistant_response,
@@ -87,19 +81,24 @@ class AichatController < ApplicationController
     # switch most recent user message status from unknown to ok
     messages = [
       *params[:storedMessages],
+      params[:newMessage],
       assistant_message
     ]
-    session_id = log_chat_session([assistant_message])
+    session_id = log_chat_session([params[:newMessage], assistant_message])
 
-    render(status: :ok, json: {messages: messages})
+    render(status: :ok, json: {messages: messages, session_id: session_id})
   end
 
   private def has_required_params?
     begin
-      params.require([:storedMessages, :aichatModelCustomizations, :aichatContext])
+      params.require([:newMessage, :aichatModelCustomizations, :aichatContext])
     rescue ActionController::ParameterMissing
       return false
     end
+    # It is possible that storedMessages is an empty array.
+    # If so, the above require check will not pass.
+    # Check storedMessages param separately.
+    params[:storedMessages].is_a?(Array)
   end
 
   private def log_chat_session(new_messages)
@@ -128,7 +127,7 @@ class AichatController < ApplicationController
     end
 
     if params[:aichatModelCustomizations] != JSON.parse(session.model_customizations) ||
-        params[:storedMessages][0..-1] != JSON.parse(session.messages)
+        params[:storedMessages] != JSON.parse(session.messages)
       return false
     end
 

@@ -255,8 +255,11 @@ export const submitChatContents = createAsyncThunk(
   'aichat/submitChatContents',
   async (newUserMessageText: string, thunkAPI) => {
     const state = thunkAPI.getState() as RootState;
-    const {savedAiCustomizations: aiCustomizations, currentSessionId} =
-      state.aichat;
+    const {
+      savedAiCustomizations: aiCustomizations,
+      chatMessages: storedMessages,
+      currentSessionId,
+    } = state.aichat;
 
     const aichatContext: AichatContext = {
       currentLevelId: parseInt(state.progress.currentLevelId || ''),
@@ -274,12 +277,11 @@ export const submitChatContents = createAsyncThunk(
     };
     thunkAPI.dispatch(addChatMessage(newMessage));
 
-    const stateUpdated = thunkAPI.getState() as RootState;
-    const {chatMessages: storedMessages} = stateUpdated.aichat;
-
     // Post user content and messages to backend and retrieve assistant response.
     const startTime = Date.now();
     const chatApiResponse = await postAichatCompletionMessage(
+      newMessage,
+      // update to just send everything?
       storedMessages.filter(
         message =>
           message.sessionId === currentSessionId ||

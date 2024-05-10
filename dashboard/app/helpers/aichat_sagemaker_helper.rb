@@ -15,8 +15,8 @@ module AichatSagemakerHelper
   # The instruction-tuned version of Mistral accepts formatted instructions where conversation roles
   # must start with a user prompt and alternate between user and assistant.
   # Mistral-7B-Instruction LLM instruction format doc at https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.1.
-  def self.format_inputs_for_sagemaker_request(aichat_params, stored_messages)
-    all_messages = [*stored_messages]
+  def self.format_inputs_for_sagemaker_request(aichat_params, stored_messages, new_message)
+    all_messages = [*stored_messages, new_message]
     inputs = aichat_params[:systemPrompt] + " "
     inputs += aichat_params[:retrievalContexts].join(" ") if aichat_params[:retrievalContexts]
     inputs = SENTENCE_BEGIN_TOKEN + wrap_as_instructions(inputs)
