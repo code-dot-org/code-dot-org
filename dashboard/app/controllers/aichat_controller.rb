@@ -59,8 +59,9 @@ class AichatController < ApplicationController
       session_id = log_chat_session(new_messages)
 
       Honeybadger.notify(
-        'Profanity returned from aichat model',
+        'Profanity returned from aichat model (blocked before reaching student)',
         context: {
+          model_response: latest_assistant_response,
           flagged_content: filter_result.content,
           aichat_session_id: session_id
         }

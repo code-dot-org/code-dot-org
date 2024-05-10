@@ -8,6 +8,7 @@ const retrieveInfoForCap = getScriptData('retrieveInfoForCap');
 const userId = getScriptData('userId');
 const inSection = getScriptData('inSection');
 const previousStateValue = getScriptData('currentUsState');
+const selectedLanguage = getScriptData('selectedLanguage');
 const forceStudentInterstitial = queryParams('forceStudentInterstitial');
 
 $(document).ready(function () {
@@ -21,6 +22,7 @@ $(document).ready(function () {
       analyticsReporter.sendEvent(EVENTS.CAP_STATE_FORM_SHOW, {
         user_id: userId,
         in_section: inSection,
+        selected_language: selectedLanguage,
       });
   }
 
@@ -32,10 +34,20 @@ $(document).ready(function () {
         in_section: inSection,
         us_state: newStateValue,
         previous_us_state: previousStateValue,
+        selected_language: selectedLanguage,
       });
 
     retrieveInfoForCap || forceStudentInterstitial
       ? location.reload()
       : modal.modal('hide');
+  });
+
+  $('#sign-out-btn').on('click', () => {
+    (retrieveInfoForCap || forceStudentInterstitial) &&
+      analyticsReporter.sendEvent(EVENTS.CAP_STATE_FORM_DISMISSED, {
+        user_id: userId,
+        in_section: inSection,
+        selected_language: selectedLanguage,
+      });
   });
 });
