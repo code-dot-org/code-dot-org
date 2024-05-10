@@ -228,13 +228,13 @@ export const levelsForLessonId = (state, lessonId) => {
  */
 export const levelById = (state, lessonId, levelId) => {
   return levelsForLessonId(state, lessonId)
-    .flatMap(level => [level, ...level.sublevels])
+    .flatMap(level => [level, ...(level?.sublevels || [])])
     .find(level => level.id === levelId);
 };
 
 export const getCurrentLevel = state => {
   return getCurrentLevels(state)
-    .flatMap(level => [level, ...level.sublevels])
+    .flatMap(level => [level, ...(level?.sublevels || [])])
     .find(level => level.isCurrentLevel);
 };
 
