@@ -273,7 +273,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                   id="instructions-continue-button"
                   type="button"
                   onClick={onNextPanel}
-                  className={moduleStyles.button}
+                  className={moduleStyles.buttonInstruction}
                 >
                   {commonI18n.continue()}
                 </button>
@@ -285,7 +285,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                     type="button"
                     onClick={onFinish}
                     disabled={isFinished}
-                    className={moduleStyles.button}
+                    className={moduleStyles.buttonInstruction}
                   >
                     {commonI18n.finish()}
                   </button>
