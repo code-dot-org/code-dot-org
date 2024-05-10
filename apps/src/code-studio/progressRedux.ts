@@ -329,17 +329,18 @@ export function onLevelIndexChange(
     }
 
     const level = levels[levelIndex];
-    let newLevelId = level.id;
     if (
       sublevelIndex !== undefined &&
       level.sublevels &&
       sublevelIndex < level.sublevels.length
     ) {
-      const sublevel = level.sublevels[sublevelIndex];
-      newLevelId = sublevel.id;
+      const newLevelId = level.sublevels[sublevelIndex].id;
+      dispatch(setCurrentLevelId(newLevelId));
+    } else {
+      const newLevelId = level.id;
+      dispatch(setCurrentLevelId(newLevelId));
     }
 
-    dispatch(setCurrentLevelId(newLevelId));
   };
 }
 
