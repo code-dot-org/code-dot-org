@@ -13,7 +13,7 @@ const SHOW_DELAY = 86400; // 1 day
 document.addEventListener('DOMContentLoaded', () => {
   const renderModal = () => {
     const reportEvent = (eventName, payload = {}) => {
-      analyticsReporter.sendEvent(eventName, payload, PLATFORMS.STATSIG);
+      analyticsReporter.sendEvent(eventName, payload, PLATFORMS.AMPLITUDE);
     };
 
     const handleClose = () => {

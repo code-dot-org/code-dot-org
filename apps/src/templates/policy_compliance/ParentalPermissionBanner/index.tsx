@@ -30,7 +30,7 @@ const ParentalPermissionBanner: React.FC<ParentalPermissionBannerProps> = ({
     .format('ll');
 
   const reportEvent = (eventName: string, payload: object = {}) => {
-    analyticsReporter.sendEvent(eventName, payload, PLATFORMS.STATSIG);
+    analyticsReporter.sendEvent(eventName, payload, PLATFORMS.AMPLITUDE);
   };
 
   const handleModalShow = () => {
