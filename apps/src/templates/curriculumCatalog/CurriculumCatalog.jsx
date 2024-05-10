@@ -10,6 +10,17 @@ import CourseCatalogNoSearchResultPenguin from '../../../static/curriculum_catal
 import {Heading5, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import CurriculumCatalogFilters from './CurriculumCatalogFilters';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
+import {
+  assignToSection,
+  sectionsForDropdown,
+  unassignSection,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import MultipleSectionsAssigner from '@cdo/apps/templates/MultipleSectionsAssigner';
+import {
+  CreateSectionsToAssignSectionsDialog,
+  SignInToAssignSectionsDialog,
+  UpgradeAccountToAssignSectionsDialog,
+} from '@cdo/apps/templates/curriculumCatalog/noSectionsToAssignDialogs';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {
@@ -17,6 +28,7 @@ import {
   getStretchRecommendations,
 } from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
+import {connect} from 'react-redux';
 
 const CurriculumCatalog = ({
   curriculaData,
@@ -26,6 +38,7 @@ const CurriculumCatalog = ({
   isSignedOut,
   isTeacher,
   curriculaTaught,
+  sectionsForDropdown,
   ...props
 }) => {
   const [filteredCurricula, setFilteredCurricula] = useState(curriculaData);
@@ -64,6 +77,68 @@ const CurriculumCatalog = ({
         curriculum_offering: assignmentData.assignedTitle,
       }
     );
+  };
+
+  const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
+  const [courseKeyForAssign, setCourseKeyForAssign] = useState(null);
+  const handleClickAssign = (cardType, courseKey) => {
+    setIsAssignDialogOpen(true);
+    setCourseKeyForAssign(courseKey);
+    analyticsReporter.sendEvent(
+      EVENTS.CURRICULUM_CATALOG_ASSIGN_CLICKED_EVENT,
+      {
+        curriculum_offering: courseKey,
+        has_sections: sectionsForDropdown.length > 0,
+        is_signed_in: !isSignedOut,
+        card_type: cardType,
+      }
+    );
+  };
+
+  const renderAssignDialog = () => {
+    const curriculumToAssign = filteredCurricula.find(
+      curriculum => curriculum.key === courseKeyForAssign
+    );
+    const courseDisplayNameWithLatestYear =
+      curriculumToAssign?.display_name_with_latest_year;
+    if (isSignedOut) {
+      return (
+        <SignInToAssignSectionsDialog
+          onClose={() => setIsAssignDialogOpen(false)}
+        />
+      );
+    } else if (isTeacher && sectionsForDropdown.length > 0) {
+      return (
+        <MultipleSectionsAssigner
+          assignmentName={courseDisplayNameWithLatestYear}
+          onClose={() => setIsAssignDialogOpen(false)}
+          sections={sectionsForDropdown}
+          participantAudience="student"
+          onAssignSuccess={handleAssignSuccess}
+          isAssigningCourse={!!curriculumToAssign?.course_id}
+          courseId={curriculumToAssign?.course_id}
+          scriptId={curriculumToAssign?.script_id}
+          courseOfferingId={curriculumToAssign?.course_offering_id}
+          courseVersionId={curriculumToAssign?.course_version_id}
+          sectionDirections={i18n.chooseSectionsDirectionsOnCatalog()}
+          isStandAloneUnit={curriculumToAssign?.is_standalone_unit}
+          {...props}
+        />
+      );
+    } else if (isTeacher) {
+      return (
+        <CreateSectionsToAssignSectionsDialog
+          onClose={() => setIsAssignDialogOpen(false)}
+          onClick={() => {}}
+        />
+      );
+    } else {
+      return (
+        <UpgradeAccountToAssignSectionsDialog
+          onClose={() => setIsAssignDialogOpen(false)}
+        />
+      );
+    }
   };
 
   const handleCloseAssignSuccessMessage = () => {
@@ -233,6 +308,7 @@ const CurriculumCatalog = ({
                   courseOfferingId={course_offering_id}
                   scriptId={script_id}
                   isStandAloneUnit={is_standalone_unit}
+                  handleClickAssign={handleClickAssign}
                   onAssignSuccess={response => handleAssignSuccess(response)}
                   deviceCompatibility={device_compatibility}
                   description={description}
@@ -300,6 +376,7 @@ const CurriculumCatalog = ({
       <div className={style.catalogContentContainer}>
         {renderSearchResults()}
       </div>
+      {isAssignDialogOpen && renderAssignDialog()}
     </>
   );
 };
@@ -312,6 +389,24 @@ CurriculumCatalog.propTypes = {
   isSignedOut: PropTypes.bool.isRequired,
   isTeacher: PropTypes.bool.isRequired,
   curriculaTaught: PropTypes.arrayOf(PropTypes.number),
+  sectionsForDropdown: PropTypes.array,
+  assignToSection: PropTypes.func.isRequired,
+  unassignSection: PropTypes.func.isRequired,
 };
 
-export default CurriculumCatalog;
+// export default CurriculumCatalog;
+
+export default connect(
+  (state, ownProps) => ({
+    sectionsForDropdown: sectionsForDropdown(
+      state.teacherSections,
+      ownProps.courseOfferingId,
+      ownProps.courseVersionId,
+      state.progress?.scriptId
+    ),
+  }),
+  {
+    assignToSection,
+    unassignSection,
+  }
+)(CurriculumCatalog);

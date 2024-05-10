@@ -15,12 +15,9 @@ import {
   translatedCourseOfferingCsTopics,
   translatedLabels,
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
-import teacherSections, {
-  setSections,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 import {expect} from '../../../util/reconfiguredChai';
-import {sections} from '../studioHomepages/fakeSectionUtils';
 
 describe('CurriculumCatalogCard', () => {
   const translationIconTitle = 'Curriculum is available in your language';
@@ -66,6 +63,7 @@ describe('CurriculumCatalogCard', () => {
       isSignedOut: true,
       onQuickViewClick: () => {},
       handleSetExpandedCardKey: () => {},
+      handleClickAssign: () => {},
       isTeacher: true,
       setExpandedCardKey: () => {},
       recommendedSimilarCurriculum: {},
@@ -271,67 +269,6 @@ describe('CurriculumCatalogCard', () => {
       name: new RegExp(
         `Assign ${defaultProps.courseDisplayName} to your classroom`
       ),
-    });
-  });
-
-  it('clicking Assign button as a teacher with sections shows dialog with sections and catalog-specific text with year', () => {
-    store.dispatch(setSections(sections));
-    renderCurriculumCard({
-      ...defaultProps,
-      isSignedOut: false,
-      isTeacher: true,
-    });
-
-    const assignButton = screen.getByRole('button', {
-      name: new RegExp(
-        `Assign ${defaultProps.courseDisplayName} to your classroom`
-      ),
-    });
-
-    sections.forEach(
-      section => expect(screen.queryByText(section.name)).to.be.null
-    );
-    fireEvent.click(assignButton);
-    sections.forEach(section => screen.getByText(section.name));
-    screen.getByText(defaultProps.courseDisplayNameWithLatestYear, {
-      exact: false,
-    });
-    screen.getByText('The most recent recommended version', {
-      exact: false,
-    });
-  });
-
-  it('clicking Assign button as a teacher without sections shows dialog to create section', () => {
-    renderCurriculumCard({
-      ...defaultProps,
-      isSignedOut: false,
-      isTeacher: true,
-    });
-
-    const assignButton = screen.getByRole('button', {
-      name: new RegExp(
-        `Assign ${defaultProps.courseDisplayName} to your classroom`
-      ),
-    });
-
-    fireEvent.click(assignButton);
-    screen.getByRole('heading', {
-      name: 'Create class section to assign a curriculum',
-    });
-  });
-
-  it('clicking Assign button as a signed out user shows dialog to sign in', () => {
-    renderCurriculumCard();
-
-    const assignButton = screen.getByRole('button', {
-      name: new RegExp(
-        `Assign ${defaultProps.courseDisplayName} to your classroom`
-      ),
-    });
-
-    fireEvent.click(assignButton);
-    screen.getByRole('heading', {
-      name: 'Sign in or create account to assign a curriculum',
     });
   });
 });
