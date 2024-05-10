@@ -72,14 +72,23 @@ class OpenaiChatController < ApplicationController
   end
 
   private def read_file_from_s3(key_path)
-    if [:development, :test].include?(rack_env)
+    cache_key = "s3_file_#{key_path}"
+    unless Rails.env.development?
+      cached_content = CDO.shared_cache.read(cache_key)
+      return cached_content if cached_content.present?
+    end
+
+    if Rails.env.development?
       local_path = File.join("local-aws", S3_AI_BUCKET, key_path)
       if File.exist?(local_path)
         puts "Note: Reading AI prompt from local file: #{key_path}"
         return File.read(local_path)
       end
     end
-    s3_client.get_object(bucket: S3_AI_BUCKET, key: key_path).body.read
+
+    content = s3_client.get_object(bucket: S3_AI_BUCKET, key: key_path).body.read
+    CDO.shared_cache.write(cache_key, content, expires_in: 1.hour)
+    return content
   end
 
   private def get_validated_level_test_file_contents(level_id)

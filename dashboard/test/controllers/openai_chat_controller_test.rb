@@ -158,4 +158,24 @@ class OpenaiChatControllerTest < ActionController::TestCase
 
     assert_equal "The specified key does not exist.", exception.message
   end
+
+  test 'read_file_from_s3 caches content in production' do
+    key_path = OpenaiChatController::S3_TUTOR_SYSTEM_PROMPT_PATH
+    expected_content = "Content of the system prompt file"
+    Rails.stubs(:env).returns(ActiveSupport::StringInquirer.new("production"))
+
+    CDO.shared_cache.stubs(:read).with("s3_file_#{key_path}").returns(nil)
+    CDO.shared_cache.expects(:write).with("s3_file_#{key_path}", expected_content, expires_in: 1.hour)
+
+    assert_equal expected_content, @controller.send(:read_file_from_s3, key_path)
+  end
+
+  test 'read_file_from_s3 reads from cache if available in production' do
+    key_path = OpenaiChatController::S3_TUTOR_SYSTEM_PROMPT_PATH
+    cached_content = "Cached system prompt"
+    Rails.stubs(:env).returns(ActiveSupport::StringInquirer.new("production"))
+    CDO.shared_cache.stubs(:read).with("s3_file_#{key_path}").returns(cached_content)
+
+    assert_equal cached_content, @controller.send(:read_file_from_s3, key_path)
+  end
 end
