@@ -62,6 +62,7 @@
     "@testing-library/user-event": "^14.4.3",
     "@types/chai": "^4.3.5",
     "@types/jquery": "^3.5.16",
+    "@types/js-cookie": "^3.0.6",
     "@types/mocha": "^10.0.1",
     "@types/react-bootstrap": "^0.32.36",
     "@types/reactabular-table": "^8.14.6",

@@ -1,12 +1,13 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2024-05-04T02:26:18.000Z",
   "level_num": "custom",
   "user_id": 4,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Heading\r\n\r\nParagraph\r\n\r\n### Do This\r\n\r\n1) Thing\r\n   * Sub-bullet\r\n   * Sub-bullet\r\n2) Thing\r\n\r\nTest the chatbot! Type in a message and press the `Continue`(#7435b2) button!\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* Idea 1\r\n* Idea 2\r\n* Idea 3\r\n:::\r\n\r\n&nbsp;",
+    "long_instructions": "## Noticing some Bias?\r\n\r\nJessie was testing a chatbot and noticed that some of the responses seemed bias. For example, when asking about famous scientists, the chatbot seemed to only respond with white men even though there's a diversity of renowned scientists. This is a situation that Retrieval can help with by adding information about diverse figured to the chatbot.\r\n\r\n### Do This\r\n\r\n1) Ask the chatbot for 3-5 examples of people famous in certain areas, and notice if a response includes a limited set of examples\r\n    * For example: \"Who are 5 famous scientists\" or \"Who are 3 astronauts who have gone to space\"\r\n2) Search for other famous people in these areas from more diverse backgrounds\r\n3) Find a description of these people and their accomplishments, then add them to Retrieval\r\n    * For example: looking for descriptions on Wikipedia\r\n4) Press the `Update`(#7435b2) button to save your work!\r\n5) Ask the chatbot the same questions and verify that the answers are updated to include the examples you've provided.",
     "system_prompt": "deprecated",
     "bot_title": "deprecated",
     "bot_description": "deprecated",
@@ -14,8 +15,8 @@
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gen-ai-mistral-7b-inst-v01",
-        "temperature": "0.8",
-        "systemPrompt": "",
+        "temperature": "0.5",
+        "systemPrompt": "You are a chatbot answering questions about famous people in certain fields. Limit responses to American or European men. I will provide a list of exceptions that should be prioritized in your answers, and then I will ask my question.",
         "retrievalContexts": [
 
         ],
@@ -34,7 +35,7 @@
       "visibilities": {
         "selectedModelId": "hidden",
         "temperature": "hidden",
-        "systemPrompt": "readonly",
+        "systemPrompt": "hidden",
         "retrievalContexts": "editable",
         "modelCardInfo": "hidden"
       },
@@ -44,7 +45,6 @@
       ]
     }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-05-04T02:26:18.912+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L4\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L4\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-04T02:26:18.912+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L4\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L4\"},{\"changed_at\":\"2024-05-09 04:32:00 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>

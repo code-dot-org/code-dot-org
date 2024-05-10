@@ -151,8 +151,8 @@ class UnconnectedMusicView extends React.Component {
   }
 
   componentDidMount() {
-    // Only record Amplitude analytics events on /projectbeats
-    if (this.props.onProjectBeats) {
+    // Only record Amplitude analytics events on standalone projects
+    if (this.props.isProjectLevel) {
       this.analyticsReporter.startSession().then(() => {
         this.analyticsReporter.setUserProperties(
           this.props.userId,
@@ -165,7 +165,7 @@ class UnconnectedMusicView extends React.Component {
     // we need a way of reporting analytics when the user navigates away from the page. Check with Amplitude for the
     // correct approach.
     window.addEventListener('beforeunload', event => {
-      if (this.props.onProjectBeats) {
+      if (this.props.isProjectLevel) {
         this.analyticsReporter.endSession();
       }
     });
@@ -183,7 +183,7 @@ class UnconnectedMusicView extends React.Component {
     this.musicBlocklyWorkspace.resizeBlockly();
 
     if (
-      this.props.onProjectBeats &&
+      this.props.isProjectLevel &&
       (prevProps.userId !== this.props.userId ||
         prevProps.userType !== this.props.userType ||
         prevProps.signInState !== this.props.signInState)
@@ -304,8 +304,9 @@ class UnconnectedMusicView extends React.Component {
     this.executeCompiledSong();
 
     Globals.setShowSoundFilters(
-      AppConfig.getValue('show-sound-filters') === 'true' ||
-        levelData?.showSoundFilters
+      AppConfig.getValue('show-sound-filters') !== 'false' &&
+        (AppConfig.getValue('show-sound-filters') === 'true' ||
+          levelData?.showSoundFilters)
     );
   }
 
@@ -445,7 +446,7 @@ class UnconnectedMusicView extends React.Component {
         }
       });
 
-      if (this.props.onProjectBeats) {
+      if (this.props.isProjectLevel) {
         this.analyticsReporter.onBlocksUpdated(
           this.musicBlocklyWorkspace.getAllBlocks()
         );
@@ -468,7 +469,7 @@ class UnconnectedMusicView extends React.Component {
   setPlaying = play => {
     if (play) {
       this.playSong();
-      if (this.props.onProjectBeats) {
+      if (this.props.isProjectLevel) {
         this.analyticsReporter.onButtonClicked('play');
       }
     } else {
@@ -484,7 +485,7 @@ class UnconnectedMusicView extends React.Component {
     if (!this.props.isPlaying) {
       return;
     }
-    if (this.props.onProjectBeats) {
+    if (this.props.isProjectLevel) {
       this.analyticsReporter.onButtonClicked('trigger', {id});
     }
 
@@ -654,7 +655,7 @@ class UnconnectedMusicView extends React.Component {
   render() {
     return (
       <AnalyticsContext.Provider
-        value={this.props.onProjectBeats ? this.analyticsReporter : null}
+        value={this.props.isProjectLevel ? this.analyticsReporter : null}
       >
         <KeyHandler
           togglePlaying={this.togglePlaying}

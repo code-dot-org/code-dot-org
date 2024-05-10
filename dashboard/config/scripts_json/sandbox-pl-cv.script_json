@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "sandbox-pl-cv",
-    "serialized_at": "2024-05-07 17:57:21 UTC",
+    "serialized_at": "2024-05-09 19:36:09 UTC",
     "published_state": "in_development",
     "instruction_type": "self_paced",
     "instructor_audience": "facilitator",
@@ -358,6 +358,31 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "sp-pl-CV-chk_LLM"
+        ],
+        "progression": "What is Computer Vision"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-CV-chk_LLM"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "ad7f37b3-2ba7-4ff7-9524-f1b82003b3b2"
+      },
+      "level_keys": [
+        "sp-pl-CV-chk_LLM"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "sp-pl-CV_Design_Process"
         ],
         "progression": "What is Computer Vision"
@@ -377,9 +402,9 @@
       ]
     },
     {
-      "chapter": 7,
-      "position": 7,
-      "activity_section_position": 4,
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -399,31 +424,6 @@
       },
       "level_keys": [
         "sp-pl-CV_Design_Process_Cycle"
-      ]
-    },
-    {
-      "chapter": 8,
-      "position": 8,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "sp-pl-CV-chk_LLM"
-        ],
-        "progression": "What is Computer Vision"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "sp-pl-CV-chk_LLM"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "sandbox-pl-cv",
-        "activity_section.key": "ad7f37b3-2ba7-4ff7-9524-f1b82003b3b2"
-      },
-      "level_keys": [
-        "sp-pl-CV-chk_LLM"
       ]
     },
     {
@@ -1057,6 +1057,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV_final_project"
+        ],
         "progression": "Final Project"
       },
       "bonus": false,
@@ -1079,6 +1082,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV_define_testing"
+        ],
         "progression": "Final Project"
       },
       "bonus": false,
@@ -1101,6 +1107,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV_feedback_Lessons"
+        ],
         "progression": "Final Project"
       },
       "bonus": false,
@@ -1123,6 +1132,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV_feedback_wrapUp"
+        ],
         "progression": "Final Project"
       },
       "bonus": false,
@@ -1145,6 +1157,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV-teacher_resources_overview"
+        ],
         "progression": "Teaching Resources"
       },
       "bonus": false,
@@ -1167,6 +1182,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl_CV_teaching_bias"
+        ],
         "progression": "Teaching Resources"
       },
       "bonus": false,
@@ -1189,6 +1207,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV-teachingTipsCode"
+        ],
         "progression": "Teaching Resources"
       },
       "bonus": false,
@@ -1211,6 +1232,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV-nextsteps"
+        ],
         "progression": "Teaching Resources"
       },
       "bonus": false,
@@ -1291,6 +1315,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "sp-pl-CV-chk_LLM",
+        "script_level.level_keys": [
+          "sp-pl-CV-chk_LLM"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "ad7f37b3-2ba7-4ff7-9524-f1b82003b3b2"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "sp-pl-CV_Design_Process",
         "script_level.level_keys": [
           "sp-pl-CV_Design_Process"
@@ -1306,18 +1342,6 @@
         "level.key": "sp-pl-CV_Design_Process_Cycle",
         "script_level.level_keys": [
           "sp-pl-CV_Design_Process_Cycle"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "sandbox-pl-cv",
-        "activity_section.key": "ad7f37b3-2ba7-4ff7-9524-f1b82003b3b2"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "sp-pl-CV-chk_LLM",
-        "script_level.level_keys": [
-          "sp-pl-CV-chk_LLM"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

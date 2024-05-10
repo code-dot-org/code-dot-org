@@ -6,7 +6,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "long_instructions": "## Reflection\r\n\r\nThinking about the ways to use generative AI in the pervious level, what WON'T you use it for in your classroom? And/Or what are you worried your students will use it for that you’d rather they didn’t?",
+    "long_instructions": "# Reflection\r\n\r\n#### Thinking about the ways to use generative AI in the pervious level, what WON'T you use it for in your classroom? And/Or what are you worried your students will use it for that you’d rather they didn’t?",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 19619,
@@ -20,7 +20,7 @@
     "allow_multiple_attempts": "true"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-04-10T21:33:49.961+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-ai-101-mod1-education_04_2024\\\"\"],\"cloned_from\":\"self-paced-pl-ai-101-mod1-education_04_2024\"},{\"changed_at\":\"2024-04-10 21:34:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-04-10T21:33:49.961+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-ai-101-mod1-education_04_2024\\\"\"],\"cloned_from\":\"self-paced-pl-ai-101-mod1-education_04_2024\"},{\"changed_at\":\"2024-04-10 21:34:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 14:41:24 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

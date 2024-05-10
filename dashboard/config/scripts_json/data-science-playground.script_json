@@ -1,0 +1,196 @@
+{
+  "script": {
+    "name": "data-science-playground",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
+      "is_course": true,
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "version_year": "unversioned",
+      "weekly_instructional_minutes": 225
+    },
+    "new_name": null,
+    "family_name": "data-science-playground",
+    "serialized_at": "2024-05-08 16:25:36 UTC",
+    "published_state": "in_development",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "data-science-playground"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "data-science-playground"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Performance Tasks",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "data-science-playground"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "4650af87-0eec-4db4-b1e8-75bef33f8f64",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4650af87-0eec-4db4-b1e8-75bef33f8f64",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "data-science-playground"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "00df9750-9091-413f-b93f-19602495ef6f",
+      "position": 1,
+      "properties": {
+        "description": "***Level 2 is the level for students to upload their data viz. Keeping it here for now until we can add it to the level group in Level 1***",
+        "progression_name": "Ch. 1 Performance Task"
+      },
+      "seeding_key": {
+        "activity_section.key": "00df9750-9091-413f-b93f-19602495ef6f",
+        "lesson_activity.key": "4650af87-0eec-4db4-b1e8-75bef33f8f64"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Ch. 1 Performance Task"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data_sci ch1_project"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "data-science-playground",
+        "activity_section.key": "00df9750-9091-413f-b93f-19602495ef6f"
+      },
+      "level_keys": [
+        "data_sci ch1_project"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Ch. 1 Performance Task"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data_sci ch1_viz"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "data-science-playground",
+        "activity_section.key": "00df9750-9091-413f-b93f-19602495ef6f"
+      },
+      "level_keys": [
+        "data_sci ch1_viz"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "data_sci ch1_project",
+        "script_level.level_keys": [
+          "data_sci ch1_project"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "data-science-playground",
+        "activity_section.key": "00df9750-9091-413f-b93f-19602495ef6f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data_sci ch1_viz",
+        "script_level.level_keys": [
+          "data_sci ch1_viz"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "data-science-playground",
+        "activity_section.key": "00df9750-9091-413f-b93f-19602495ef6f"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

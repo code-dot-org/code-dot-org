@@ -29,22 +29,9 @@ class DatasetsControllerTest < ActionController::TestCase
   end
 
   test 'update_manifest: can update manifest' do
-    test_response = mock
-    test_response.expects(:code).returns(200)
-    # TODO: unfirebase, write a version of this for Datablock Storage: #57004
-    # TODO: post-firebase-cleanup, switch to the datablock storage version: #56994
-    FirebaseHelper.any_instance.stubs(:set_library_manifest).returns(test_response)
     post :update_manifest, params: {manifest: @test_manifest.to_json}
     assert_response :success
-  end
 
-  test 'update_manifest: passes through the error code' do
-    test_response = mock
-    test_response.expects(:code).returns(401)
-    # TODO: unfirebase, write a version of this for Datablock Storage: #57004
-    # TODO: post-firebase-cleanup, switch to the datablock storage version: #56994
-    FirebaseHelper.any_instance.stubs(:set_library_manifest).returns(test_response)
-    post :update_manifest, params: {manifest: @test_manifest.to_json}
-    assert_response :unauthorized
+    assert_equal JSON.parse(@test_manifest.to_json), DatablockStorageLibraryManifest.instance.library_manifest
   end
 end

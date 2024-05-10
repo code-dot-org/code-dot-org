@@ -103,6 +103,13 @@ class StatsigReporter {
     }
   }
 
+  getIsInExperiment(name, parameter, defaultValue) {
+    if (this.local_mode) {
+      return false;
+    }
+    return Statsig.getExperiment(name).get(parameter, defaultValue);
+  }
+
   formatUserId(userId) {
     const userIdString = userId.toString() || 'none';
     if (!userId) {

@@ -154,6 +154,8 @@ class User < ApplicationRecord
     progress_table_v2_closed_beta
     lti_roster_sync_enabled
     ai_tutor_access_denied
+    progress_table_v2_timestamp
+    progress_table_v1_timestamp
     has_seen_progress_table_v2_invitation
     date_progress_table_invitation_last_delayed
     user_provided_us_state
@@ -2728,6 +2730,11 @@ class User < ApplicationRecord
 
   def code_review_groups
     followeds.filter_map(&:code_review_group)
+  end
+
+  # Can be used to identify users in cases where integer IDs may be vulnerable to abuse
+  def uuid
+    id && Digest::UUID.uuid_v5(Dashboard::Application.config.secret_key_base, id.to_s)
   end
 
   private def account_age_in_years
