@@ -7,7 +7,5 @@ right 'The background will change, all the sprites will stop, and the panda will
 allow_multiple_attempts true
 markdown <<MARKDOWN
 ##Predict what this code will do!
-Take a look at this code. Make sure to look at the if statement at the end. What will happen when the health variable reaches 0?
-
-What will happen when the **variable Health equals 0**?
+Take a look at this code. Scroll down to select an answer: What will happen when the **variable Health equals 0**?
 MARKDOWN

@@ -618,6 +618,11 @@ Dashboard::Application.routes.draw do
             patch :bulk_update_owners
           end
         end
+        namespace :account_linking do
+          get :landing
+          get :existing_account
+          post :link_email
+        end
       end
     end
 
@@ -1143,10 +1148,11 @@ Dashboard::Application.routes.draw do
     end
 
     # Policy Compliance
-    get '/policy_compliance/child_account_consent/', to:
-      'policy_compliance#child_account_consent'
-    post '/policy_compliance/child_account_consent/', to:
-      'policy_compliance#child_account_consent_request'
+    namespace :policy_compliance do
+      get :pending_permission_request
+      get :child_account_consent
+      post :child_account_consent, action: :child_account_consent_request
+    end
 
     # DatablockStorageController powers the data features of applab,
     # and the key/value pair store feature of gamelab

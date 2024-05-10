@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-02 20:08:53 UTC",
+    "serialized_at": "2024-05-09 19:38:48 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -172,7 +172,7 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 9.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nThe following practice on AP Classroom can be assigned as formative assessments for this lesson:\n\n* [**Code.org U7L5 Topic Questions**](https://apclassroom.collegeboard.org/8/shared-quizzes/c610f6aa13c8417ea4eb5b5d57df6cbd)\n\n* [**Code.org U7L5 Practice Questions**](https://apclassroom.collegeboard.org/8/shared-quizzes/4adaf200003741bda55d201aabbd93cf)\n\nAdditionally, the following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 9.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**How can I override methods from other classes?**\n\nIn this lesson, students have an opportunity to continue planning their Creative Coding with The Theater project. Students should spend this time finalizing their UML diagrams and algorithms and updating their Project Planning Board with tasks they have completed and still need to complete. Students then revisit overriding methods and how they used the `super` keyword to call the superclass version of a class. They consider scenarios for overriding methods and practice writing and calling overridden methods of their own. Students then revisit their Need to Knows to determine what they have learned that will be useful for their project and what they still need to learn.",
         "preparation": "* **(Optional)** Print copies of the U7L5 Guided Notes (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-7-5-overriding-methods/37943) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I override methods from other classes?**\n\nIn this lesson, you have an opportunity to continue planning your Creative Coding with The Theater project. You should spend this time finalizing your UML diagrams and algorithms and updating your Project Planning Board with tasks you have completed and still need to complete. You then revisit overriding methods and how you used the `super` keyword to call the superclass version of a class. You consider scenarios for overriding methods and practice writing and calling overridden methods of your own. You then revisit your Need to Knows to determine what you have learned that will be useful for your project and what you still need to learn."
@@ -210,7 +210,7 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 10.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nThe following practice on AP Classroom can be assigned as formative assessments for this lesson:\n\n* [**Code.org U7L7 Topic Questions**](https://apclassroom.collegeboard.org/8/shared-quizzes/6f3c0e490193496b922076d01bd4d0d9)\n\n* [**Code.org U7L7 Practice Questions**](https://apclassroom.collegeboard.org/8/shared-quizzes/bb55efc8091b4203a77eb503e72d1f8b)\n\nAdditionally, the following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 10.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**What is recursion?**\n\nIn this lesson, students are introduced to recursion through an unplugged activity and realize how these algorithms differ from how they have implemented algorithms throughout the year. Students learn how to identify the base case and recursive case of a recursive algorithm and how to translate an iterative algorithm into a recursive one. They then practice tracing recursive algorithms and consider the benefits and drawbacks of writing an algorithm using recursion.",
         "preparation": "* Preview the *Recursion* video\n* Print copies of the Recursion Unplugged handout (one for each pair of students)\n* Print copies of the Coloring Page handout\n* Print and cut out the Method Cards\n* Gather sets of ten disposable cups and markers or colored pencils\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-7-7-recursion/37945) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What is recursion?**\n\nIn this lesson, you are introduced to recursion through an unplugged activity and realize how these algorithms differ from how you have implemented algorithms throughout the year. You learn how to identify the base case and recursive case of a recursive algorithm and how to translate an iterative algorithm into a recursive one. You then practice tracing recursive algorithms and consider the benefits and drawbacks of writing an algorithm using recursion."
@@ -5625,6 +5625,18 @@
       }
     },
     {
+      "name": "[EXEMPLAR] U7L7 Guided Notes",
+      "url": "https://docs.google.com/document/d/14mjtcPZPErsFXgjtb2pC7AdqEN2urrJc-yDe4IiiB_A/edit?usp=sharing",
+      "key": "_exemplar_u7l7_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u7l7_guided_notes"
+      }
+    },
+    {
       "name": "[EXEMPLAR] U7L9 Guided Notes",
       "url": "https://docs.google.com/document/d/1f87HaFOh5yBSEIkFr-yGXozIJb71gEVVtI612-xpOeU/edit?usp=sharing",
       "key": "_exemplar_u7l9_guided_notes",
@@ -6485,6 +6497,19 @@
       }
     },
     {
+      "name": "U7L7 Guided Notes",
+      "url": "https://docs.google.com/document/d/1VRW4YWrRlHH6lJN789c_fJ-GW5LGa7l0X1XMupY2BDA/edit?usp=sharing",
+      "key": "u7l7_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "u7l7_guided_notes"
+      }
+    },
+    {
       "name": "U7L8 Extra Practice",
       "url": "https://docs.google.com/document/d/1yh2nWu2ErbFYjzsiZvYHmIpSh9fYimlFZf6yo6vtdDs/edit?usp=share_link",
       "key": "u7l8_extra_practice",
@@ -6913,6 +6938,12 @@
     {
       "seeding_key": {
         "lesson.key": "Recursion",
+        "resource.key": "_exemplar_u7l7_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Recursion",
         "resource.key": "_key_recursion_unplugged"
       }
     },
@@ -6956,6 +6987,12 @@
       "seeding_key": {
         "lesson.key": "Recursion",
         "resource.key": "u7l7_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Recursion",
+        "resource.key": "u7l7_guided_notes"
       }
     },
     {

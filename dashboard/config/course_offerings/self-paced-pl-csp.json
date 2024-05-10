@@ -1,10 +1,10 @@
 {
   "key": "self-paced-pl-csp",
   "display_name": "Teaching CS Principles",
-  "category": "other",
+  "category": "pl_self_paced",
   "is_featured": false,
   "assignable": true,
-  "curriculum_type": null,
+  "curriculum_type": "Professional Learning",
   "marketing_initiative": null,
   "grade_levels": null,
   "header": null,

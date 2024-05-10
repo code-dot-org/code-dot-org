@@ -8,6 +8,8 @@ import {
   FIELD_EFFECTS_NAME,
   FIELD_TRIGGER_START_NAME,
   TriggerStart,
+  DEFAULT_EFFECT_VALUE,
+  FIELD_EFFECTS_VALUE,
 } from './constants';
 import musicI18n from '../locale';
 
@@ -67,6 +69,7 @@ const toolboxBlocks = {
     type: BlockTypes.SET_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
     fields: {
       [FIELD_EFFECTS_NAME]: 'volume',
+      [FIELD_EFFECTS_VALUE]: DEFAULT_EFFECT_VALUE,
     },
   },
   [BlockTypes.SET_FILTER_EFFECT_AT_CURRENT_LOCATION_SIMPLE2]: {
@@ -74,6 +77,7 @@ const toolboxBlocks = {
     type: BlockTypes.SET_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
     fields: {
       [FIELD_EFFECTS_NAME]: 'filter',
+      [FIELD_EFFECTS_VALUE]: DEFAULT_EFFECT_VALUE,
     },
   },
   [BlockTypes.SET_DELAY_EFFECT_AT_CURRENT_LOCATION_SIMPLE2]: {
@@ -81,6 +85,7 @@ const toolboxBlocks = {
     type: BlockTypes.SET_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
     fields: {
       [FIELD_EFFECTS_NAME]: 'delay',
+      [FIELD_EFFECTS_VALUE]: DEFAULT_EFFECT_VALUE,
     },
   },
   [BlockTypes.PLAY_SOUNDS_TOGETHER]: {
