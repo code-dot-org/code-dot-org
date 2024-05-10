@@ -957,10 +957,10 @@ form {
     }
   }
 
+  // Has an image on each slide
+  // See code.org/ai for an example
   .carousel-wrapper {
     .with-image {
-      display: flex;
-      justify-content: space-between;
       align-items: center;
 
       @media screen and (max-width: $width-sm) {
@@ -971,14 +971,9 @@ form {
       img {
         width: 150px;
         height: 150px;
-        margin-inline-end: 3rem;
 
-        @media screen and (max-width: $width-md) {
-          display: block;
-        }
-
-        @media screen and (max-width: $width-sm) {
-          margin-right: 0;
+        @media (min-width: $width-sm) {
+          margin-inline-end: 3rem;
         }
       }
     }
@@ -1011,58 +1006,6 @@ form {
     span {
       color: var(--brand_accent_default);
       margin: 0 2px;
-    }
-  }
-}
-
-// Photo slideshow carousel
-// See code.org/educate/professional-learning/middle-high
-// and /views/pl_middle_high_carousel.haml for an example
-.photo-carousel-wrapper {
-  .with-image {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 5rem;
-
-    @media screen and (max-width: $width-md) {
-      gap: 3rem;
-    }
-
-    @media screen and (max-width: $width-sm) {
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    img {
-      width: 450px;
-      height: auto;
-      border-radius: 1rem;
-
-      @media screen and (max-width: $width-md) {
-        width: 300px;
-      }
-
-      @media screen and (max-width: $width-sm) {
-        width: 100%;
-      }
-    }
-  }
-
-  p {
-    font-size: 1.25rem;
-
-    @media screen and (max-width: $width-md) {
-      margin-bottom: 1rem;
-    }
-  }
-
-  .pagination {
-    margin-top: 2rem;
-
-    @media screen and (max-width: $width-md) {
-      margin-top: 3rem;
     }
   }
 }
