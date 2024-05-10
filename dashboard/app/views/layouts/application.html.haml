@@ -97,6 +97,11 @@
         = render partial: 'layouts/logo'
       - if current_user && Policies::Lti.early_access_banner_available?(current_user)
         = render partial: 'lti/v1/early_access_banner'
+
+      -# CAP parental permission warnings
+      - if current_user
+        = render_parental_permission_modal(current_user, request)
+
       - page = yield
 
       - if view_options[:full_width]

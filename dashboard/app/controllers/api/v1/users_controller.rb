@@ -24,7 +24,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     if current_user
       render json: {
         id: current_user.id,
-        uuid: Digest::UUID.uuid_v5(Dashboard::Application.config.secret_key_base, current_user.id.to_s),
+        uuid: current_user.uuid,
         username: current_user.username,
         user_type: current_user.user_type,
         is_signed_in: true,
@@ -41,6 +41,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         ai_tutor_access_denied: !!current_user.ai_tutor_access_denied,
         has_seen_progress_table_v2_invitation: current_user.has_seen_progress_table_v2_invitation?,
         date_progress_table_invitation_last_delayed: current_user.date_progress_table_invitation_last_delayed,
+        child_account_compliance_state: current_user.child_account_compliance_state,
       }
     else
       render json: {
