@@ -8,13 +8,16 @@ import {useFetch} from '@cdo/apps/util/useFetch';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {getFileByName} from '@cdo/apps/lab2/projects/utils';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
+import {MultiFileSource} from '../lab2/types';
 
 interface PermissionResponse {
   permissions: string[];
 }
 
 const PythonConsole: React.FunctionComponent = () => {
-  const source = useAppSelector(state => state.pythonlab.source);
+  const source = useAppSelector(
+    state => state.lab2Project.projectSource?.source
+  ) as MultiFileSource | undefined;
   const codeOutput = useAppSelector(state => state.pythonlab.output);
   const {loading, data} = useFetch('/api/v1/users/current/permissions');
   const dispatch = useDispatch();

@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-02 19:17:22 UTC",
+    "serialized_at": "2024-05-09 18:19:52 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4001,7 +4001,7 @@
     },
     {
       "name": "Assessment Day - Intro to App Development",
-      "url": "https://docs.google.com/presentation/d/10seNCnYOXM3rbamENm6uq91HEHob3UjbFtF5zhyTllY/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/16pBOhj2W2JQ0O-_kkeNMesABf3fObLqmMsLEYDIOOro/edit?usp=drive_link",
       "key": "assessment_day_-_intro_to_app_development",
       "properties": {
         "audience": "Teacher",
@@ -4061,11 +4061,9 @@
     },
     {
       "name": "CSP Unit 3 Slides",
-      "url": "https://docs.google.com/presentation/d/1LqpV9F_G2K97HbSywfMupo-HAnzCxP_TNR40hSyA9Hk/edit?usp=drive_link",
+      "url": "https://docs.google.com/presentation/d/1fhkhXMCx7LAwkjzq3r4oXLkCn2m6A9EA2e5NoNnndhg/edit?usp=drive_link",
       "key": "csp_unit_3_slides",
       "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csp_unit_3_slides"
@@ -4085,7 +4083,7 @@
     },
     {
       "name": "Debugging",
-      "url": "https://docs.google.com/presentation/d/1lbA2-DeAGIyw6wXoSr5upyvyzgnwnxk5Mr2QT8m5s00/template/preview",
+      "url": "https://docs.google.com/presentation/d/1C9bXPRlfG4u-o2ZNzhdQHxBiX20ItmQJCd1cPBAYCLc/edit?usp=drive_link",
       "key": "debugging_1",
       "properties": {
         "audience": "Teacher",
@@ -4097,7 +4095,7 @@
     },
     {
       "name": "Designing an App - Days 1-2",
-      "url": "https://docs.google.com/presentation/d/1E_AOW9LFj51KIPILNuXB78mGwi8UTZ6c4mzP-RYEVnQ/template/preview",
+      "url": "https://docs.google.com/presentation/d/1GkR1OzozJ5b4gWQ0-OWydxGY5n_Pe5duDS854HbqMlM/edit?usp=drive_link",
       "key": "designing_an_app_-_days_1-2",
       "properties": {
         "audience": "Teacher",
@@ -4109,7 +4107,7 @@
     },
     {
       "name": "Designing an App - Days 3-5",
-      "url": "https://docs.google.com/presentation/d/1at074YyYXix_cXDm79DThpcdqsZ5F9NgAcMzfdUqUu8/template/preview",
+      "url": "https://docs.google.com/presentation/d/19C9oe3Uihh3N3BvCWt4HXIFModtZ96YLoSxlXcDc9So/edit?usp=drive_link",
       "key": "designing_an_app_-_days_3-5",
       "properties": {
         "audience": "Teacher",
@@ -4147,7 +4145,7 @@
     },
     {
       "name": "Intro to Programming",
-      "url": "https://docs.google.com/presentation/d/1ho6pc2u4yVg0ggMSx3qGumU0HO9zjWnkuh0x7GzXVTE/template/preview",
+      "url": "https://docs.google.com/presentation/d/1mRpR7FKPCKrkMLB5uGr6P2O0aQj1J-MIk6VYsDiMK54/edit?usp=drive_link",
       "key": "intro_to_programming",
       "properties": {
         "audience": "Teacher",
@@ -4159,7 +4157,7 @@
     },
     {
       "name": "Introduction to Apps",
-      "url": "https://docs.google.com/presentation/d/1updHVqzKC0pbnVLIR3VOvL72v2sNuYBz_r1muMaa6iI/template/preview",
+      "url": "https://docs.google.com/presentation/d/1g6LFNgWIB6RQtBwLVM6Oub8MwCb7esjlspivaMmr_GI/edit?usp=drive_link",
       "key": "introduction_to_apps",
       "properties": {
         "audience": "Teacher",
@@ -4171,7 +4169,7 @@
     },
     {
       "name": "Introduction to Design Mode",
-      "url": "https://docs.google.com/presentation/d/1C-L-ajuryUMFWYCaNqK9H7XdgxiEMsxagqdMX9HfNcI/template/preview",
+      "url": "https://docs.google.com/presentation/d/1t5uWQ3OqPWfuT7HXSU98zw7vAfkvTB0HJHQAUOSBKX8/edit?usp=drive_link",
       "key": "introduction_to_design_mode",
       "properties": {
         "audience": "Teacher",
@@ -4220,7 +4218,7 @@
     },
     {
       "name": "The Need for Programming Languages",
-      "url": "https://docs.google.com/presentation/d/1vKDoFifrWW11cYJPtblcSb4OxFZJLKs9n4wLlWF4p3w/template/preview",
+      "url": "https://docs.google.com/presentation/d/1oXCko_CKu9SnMCYy4Gw5BTAG3YVtg8okK9G1SGVdlUI/edit?usp=drive_link",
       "key": "the_need_for_programming_languages",
       "properties": {
         "audience": "Teacher",

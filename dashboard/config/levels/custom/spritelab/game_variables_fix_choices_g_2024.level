@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2024-05-07T21:27:54.000Z",
   "level_num": "custom",
@@ -51,10 +52,10 @@
     "encrypted_examples": "Rj+lNfkHX0/wsWhH0UEukW6tpRxI8zj1Py8C9UYp9U/6ogBkqBAfEjhHVgrb\nEDxOqVFuJmTvRGzBzHf5VTKwrQ==\n",
     "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"To change the speed of the hay bundle, look for the variable named `difficultyLevel` near the top of the program and try changing the value. \\n<xml>\\n<block xmlns=\\\"https://developers.google.com/blockly/xml\\\" type=\\\"variables_set\\\" id=\\\"0po+N0fQV1d@mGOMvfn2\\\" deletable=\\\"false\\\">\\n  <field name=\\\"VAR\\\" id=\\\"GCYV(/}|5rKLotga]K0U\\\">difficultyLevel</field>\\n  <value name=\\\"VALUE\\\">\\n    <block type=\\\"math_number\\\" id=\\\":fx{-4c^^pOg:L}Ynr%G\\\" deletable=\\\"false\\\">\\n      <field name=\\\"NUM\\\">15</field>\\n    </block>\\n  </value>\\n</block>\\n</xml>\",\"hint_id\":\"Hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/18c259c1f607ee62f3c1ef867540d397/game_variables_fix_choices_g.mp3\"}]",
     "name_suffix": "_2024",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "instructions_icon": "fox"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-05-07T21:27:54.778+00:00\",\"changed\":[\"cloned from \\\"game_variables_fix_choices_g\\\"\"],\"cloned_from\":\"game_variables_fix_choices_g\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-07T21:27:54.778+00:00\",\"changed\":[\"cloned from \\\"game_variables_fix_choices_g\\\"\"],\"cloned_from\":\"game_variables_fix_choices_g\"},{\"changed_at\":\"2024-05-09 16:27:54 +0000\",\"changed\":[\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

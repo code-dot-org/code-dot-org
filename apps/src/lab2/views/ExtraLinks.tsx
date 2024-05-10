@@ -19,6 +19,10 @@ interface ExtraLinksResponse {
   can_clone: boolean;
   can_delete: boolean;
   level_name: string;
+  script_level_path_links: {
+    script: string;
+    path: string;
+  }[];
 }
 
 // If the user has permission to see extra links, fetch extra links for the level,

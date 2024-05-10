@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-02 19:17:59 UTC",
+    "serialized_at": "2024-05-09 18:56:27 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4112,7 +4112,7 @@
     },
     {
       "name": "Assessment Day - Data",
-      "url": "https://docs.google.com/presentation/d/18tJ6kC-TCmAxEJTN3n4TTiFsKBltoKv7bI3AbNe4WPA/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1g5KdQf8dJt3_JT3YyLyRDjEykQyXgjHtbiJ1DZ9wodM/template/preview",
       "key": "assessment_day_-_data",
       "properties": {
         "audience": "Teacher",
@@ -4196,12 +4196,11 @@
       }
     },
     {
-      "name": "CSP Unit 4 - Variables, Conditionals, and Functions",
-      "url": "https://docs.google.com/presentation/d/17DOii-3gPXZrNszMyiLnHUt7VhbCULJ9Jddlb_Xss5o/copy",
+      "name": "CSP Unit 4 Lesson 14 - Conditionals Practice (Alternative)",
+      "url": "https://docs.google.com/presentation/d/1BBWir1LgjxST5hQB2sdSLE_hTdHf9ymyqvVQZXuusEs/edit?usp=drive_link",
       "key": "csp_unit_4_-_variables_conditionals_and_functions",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/17DOii-3gPXZrNszMyiLnHUt7VhbCULJ9Jddlb_Xss5o/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -4210,7 +4209,7 @@
     },
     {
       "name": "CSP Unit 5 - Data",
-      "url": "https://docs.google.com/presentation/d/1Ocs-BeSnKsCKjCRhk43YR4cwGo8EzdEAYmT-Okz88Yc/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1lvfv9i1bouF7X0Vu0nwlbbQx-m2M9j5IIeLa6J8Uo3k/template/preview",
       "key": "csp_unit_5_-_data",
       "properties": {
         "audience": "Teacher",
@@ -4222,11 +4221,10 @@
     },
     {
       "name": "CSP Unit 5 - Lesson 1 - Learning from Data",
-      "url": "https://docs.google.com/presentation/d/1X9KdBT0PzWgwTBdh5-35-8Bkwm1HyuFwdf6TFYcmZSo/copy",
+      "url": "https://docs.google.com/presentation/d/19vCthigc18Zw6hA9Ux_bvdNIWrBvq6ZBI3qFwPYCGFc/template/preview",
       "key": "csp_unit_5_-_lesson_1_-_learning_from_data",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1X9KdBT0PzWgwTBdh5-35-8Bkwm1HyuFwdf6TFYcmZSo/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -4235,11 +4233,10 @@
     },
     {
       "name": "CSP Unit 5 - Lesson 2 - Exploring One Column",
-      "url": "https://docs.google.com/presentation/d/1jrF77jto1ZR_XWchlm0DHNxLygkx5L-FQQlqr9VYTU8/copy",
+      "url": "https://docs.google.com/presentation/d/1FrQ2MEvdPU0nAo5lrPpwczwqCnVV7ud4wn6W0yDvcU4/template/preview",
       "key": "csp_unit_5_-_lesson_2_-_exploring_one_column",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1jrF77jto1ZR_XWchlm0DHNxLygkx5L-FQQlqr9VYTU8/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -4248,11 +4245,10 @@
     },
     {
       "name": "CSP Unit 5 - Lesson 3 - Filtering and Cleaning Data",
-      "url": "https://docs.google.com/presentation/d/1ZA_vZPjoF1TbWAq0k-_VkIIP3M8WNdTyGWMeAAx0YhI/copy",
+      "url": "https://docs.google.com/presentation/d/11e-Az-Foy836UecoGL8TOYMkA3febRHFTGhURpvb2ZI/template/preview",
       "key": "csp_unit_5_-_lesson_3_-_filtering_and_cleaning_data",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1ZA_vZPjoF1TbWAq0k-_VkIIP3M8WNdTyGWMeAAx0YhI/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -4261,11 +4257,10 @@
     },
     {
       "name": "CSP Unit 5 - Lesson 4 - Exploring Two Columns",
-      "url": "https://docs.google.com/presentation/d/14G7ptwES6IcNnpXccTD-09noprIzbdnXuYM3aVEeFJE/copy",
+      "url": "https://docs.google.com/presentation/d/1ed8qAREqkWH_x68_pCLfvn8REze-zJC1uLOAz5srKaM/template/preview",
       "key": "csp_unit_5_-_lesson_4_-_exploring_two_columns",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/14G7ptwES6IcNnpXccTD-09noprIzbdnXuYM3aVEeFJE/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -4274,11 +4269,10 @@
     },
     {
       "name": "CSP Unit 5 - Lesson 5 - Big, Open, and Crowdsourced Data",
-      "url": "https://docs.google.com/presentation/d/1VIGRaI9M3G4HXKyPQOOvxucg5q5C4tLaVSxClSvC6Ng/copy",
+      "url": "https://docs.google.com/presentation/d/16mcg5Y16KcrZKIAAtcYE0j4XIBLClcFUF-hC88GGIXE/template/preview",
       "key": "csp_unit_5_-_lesson_5_-_big_open_and_crowdsourced_data",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1VIGRaI9M3G4HXKyPQOOvxucg5q5C4tLaVSxClSvC6Ng/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -4287,11 +4281,10 @@
     },
     {
       "name": "CSP Unit 5 - Lesson 6 - Machine Learning",
-      "url": "https://docs.google.com/presentation/d/1R0cyJ3KIqc0-joNe2yHOkrhC1UZrDU3OsJN9ctp885k/copy",
+      "url": "https://docs.google.com/presentation/d/1fl470YLtoJAlRs35Wta-O-ezGmHqeYZtkpqM9CnUzVw/template/preview",
       "key": "csp_unit_5_-_lesson_6_-_machine_learning",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1R0cyJ3KIqc0-joNe2yHOkrhC1UZrDU3OsJN9ctp885k/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -4300,11 +4293,10 @@
     },
     {
       "name": "CSP Unit 5 - Lesson 7 - Algorithmic Bias",
-      "url": "https://docs.google.com/presentation/d/1ySR0KHBdwpQIugYalf5NRnlGvI9YMeAEgvKmZtw8jcs/copy",
+      "url": "https://docs.google.com/presentation/d/1hsem9Jlm0L-B_SJ_M37ePSbEQJmGk899Rk3UCsJhNFI/template/preview",
       "key": "csp_unit_5_-_lesson_7_-_algorithmic_bias",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1ySR0KHBdwpQIugYalf5NRnlGvI9YMeAEgvKmZtw8jcs/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -4448,11 +4440,10 @@
     },
     {
       "name": "Project - Tell a Data Story",
-      "url": "https://docs.google.com/presentation/d/1fQ--8Xzl2xepnwUavthElckf2uc8iQft-4ZXKS95uwA/copy",
+      "url": "https://docs.google.com/presentation/d/1NnoRvjjSRLYRG-xcFU9MJ4xiSzaMhoQLDm_H1i3SwL4/template/preview",
       "key": "project_-_tell_a_data_story",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1fQ--8Xzl2xepnwUavthElckf2uc8iQft-4ZXKS95uwA/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
