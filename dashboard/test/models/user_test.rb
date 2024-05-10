@@ -7,6 +7,29 @@ class UserTest < ActiveSupport::TestCase
   include ProjectsTestUtils
   self.use_transactional_test_case = true
 
+  class UsStateCodeTest < ActiveSupport::TestCase
+    test 'returns us_state if present' do
+      student = create(:student, :in_colorado)
+      assert_equal 'CO', student.us_state_code
+    end
+
+    test 'returns teacher school US state code of student' do
+      student = create(:student, us_state: '??')
+      Queries::ChildAccount.expects(:teacher_us_state).with(student).returns('district of Columbia')
+      assert_equal 'DC', student.us_state_code
+    end
+
+    test 'returns teacher school US state code' do
+      teacher = create(:teacher, school_info: create(:school_info, state: 'ny'))
+      assert_equal 'NY', teacher.us_state_code
+    end
+
+    test 'returns teacher school US state code when state is name' do
+      teacher = create(:teacher, school_info: create(:school_info, state: 'district of Columbia'))
+      assert_equal 'DC', teacher.us_state_code
+    end
+  end
+
   setup_all do
     @good_data = {
       email: 'foo@bar.com',

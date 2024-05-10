@@ -21,7 +21,7 @@ store.dispatch(
   setInitialData({
     id: 1,
     user_type: 'teacher',
-    us_state: 'CO',
+    us_state_code: 'CO',
   })
 );
 
