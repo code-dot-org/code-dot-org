@@ -1,4 +1,4 @@
-import React, {useCallback, useContext, useState} from 'react';
+import React, {useCallback, useContext, useEffect, useState} from 'react';
 import classNames from 'classnames';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import moduleStyles from './instructions.module.scss';
@@ -8,8 +8,9 @@ import {
   levelCount,
   currentLevelIndex,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import Button from '@cdo/apps/componentLibrary/button/Button';
+import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import {LabState} from '../../lab2Redux';
 import {ProjectLevelData} from '../../types';
 import {ThemeContext} from '../ThemeWrapper';
@@ -98,7 +99,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       messageIndex={index}
       showContinueButton={showContinueButton}
       showFinishButton={showFinishButton}
-      beforeNextLevel={beforeNextLevel}
+      beforeFinish={beforeNextLevel}
       onNextPanel={onNextPanel}
       theme={theme}
       {...{baseUrl, layout, imagePopOutDirection, handleInstructionsTextClick}}
@@ -119,8 +120,8 @@ interface InstructionsPanelProps {
   showContinueButton?: boolean;
   /** If the finish button should be shown. */
   showFinishButton?: boolean;
-  /** Additional callback to fire before navigating to the next level. */
-  beforeNextLevel?: () => void;
+  /** Additional callback to fire before finishing the level. */
+  beforeFinish?: () => void;
   /** Callback to call when clicking the next button. */
   onNextPanel?: () => void;
   /** If the instructions panel should be rendered vertically or horizontally. Defaults to vertical. */
@@ -149,7 +150,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   imageUrl,
   showContinueButton,
   showFinishButton,
-  beforeNextLevel,
+  beforeFinish,
   onNextPanel,
   layout = 'vertical',
   imagePopOutDirection = 'right',
@@ -169,15 +170,22 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
 
   const canShowFinishButton = showFinishButton;
 
-  const onFinish = () => {
-    if (beforeNextLevel) {
-      beforeNextLevel();
+  const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
+
+  const onFinish = useCallback(() => {
+    if (beforeFinish) {
+      beforeFinish();
     }
     setIsFinished(true);
-  };
+  }, [beforeFinish]);
+
+  // When the level changes, the Finish button is active again if user returns to last level.
+  useEffect(() => {
+    setIsFinished(false);
+  }, [currentLevelId]);
 
   const finalMessage =
-    '<strong>You finished this lesson! Check in with your teacher for the next activity.</strong>';
+    'You finished this lesson! Check in with your teacher for the next activity';
 
   return (
     <div
@@ -264,24 +272,20 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
               {canShowContinueButton && (
                 <Button
                   text={commonI18n.continue()}
-                  disabled={isFinished}
                   onClick={onNextPanel}
                   className={moduleStyles.button}
                 />
               )}
               {canShowFinishButton && (
-                <Button
-                  text={commonI18n.finish()}
-                  disabled={isFinished}
-                  onClick={onFinish}
-                  className={moduleStyles.button}
-                />
-              )}
-              {finalMessage && isFinished && (
-                <EnhancedSafeMarkdown
-                  markdown={finalMessage}
-                  className={moduleStyles.markdownText}
-                />
+                <>
+                  <Button
+                    text={commonI18n.finish()}
+                    disabled={isFinished}
+                    onClick={onFinish}
+                    className={moduleStyles.button}
+                  />
+                  {isFinished && <Heading6>{finalMessage}</Heading6>}
+                </>
               )}
             </div>
           </div>

@@ -147,13 +147,7 @@
 
 .button {
   width: 100%;  
-  margin-bottom: 10px !important;
-  &:disabled, &[aria-disabled="true"] {
-    cursor: not-allowed;
-    border-color: $light_gray_200;
-    background-color: $light_gray_200;
-    color: $light_white;
-  }
+  margin-bottom: 10px !important;  
 }
 
 .markdownText {
