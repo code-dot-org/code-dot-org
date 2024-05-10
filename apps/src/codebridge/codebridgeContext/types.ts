@@ -1,4 +1,5 @@
 import {ProjectType, FileId, FolderId} from '@codebridge/types';
+
 export type ReplaceProjectFunction = (project: ProjectType) => void;
 
 export type SaveFileFunction = (fileId: FileId, contents: string) => void;

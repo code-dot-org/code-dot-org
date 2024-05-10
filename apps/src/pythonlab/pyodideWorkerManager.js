@@ -8,10 +8,10 @@ import {
   appendOutputImage,
   appendSystemMessage,
   appendSystemOutMessage,
-} from './pythonlabRedux';
+} from '@codebridge/redux/consoleRedux';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import MetricsReporter from '../lib/metrics/MetricsReporter';
-import {setAndSaveProjectSource} from '../lab2/redux/lab2ProjectRedux';
+import {setAndSaveProjectSource} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 
 // This syntax doesn't work with typescript, so this file is in js.
 const pyodideWorker = new Worker(
