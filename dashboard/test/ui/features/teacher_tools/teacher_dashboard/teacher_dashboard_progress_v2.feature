@@ -10,19 +10,19 @@ Feature: Using the V2 teacher dashboard
     And I get levelbuilder access
     And I navigate to the V2 progress dashboard
 
-  # toggle to V2 progress view
+    # toggle to V2 progress view
     And I wait until element "h6:contains(Icon Key)" is visible
     And I wait until element "#ui-test-progress-table-v2" is visible
     And element "#ui-test-progress-table-v2" is visible
 
-  # Teacher can minimize icon key
+    # Teacher can minimize icon key
     And I wait until element "strong:contains(Assignment Completion States)" is visible
     Then I click selector "h6:contains('Icon Key')"
     And element "strong:contains(Assignment Completion States)" is hidden
     Then I click selector "h6:contains('Icon Key')"
     And I wait until element "strong:contains(Assignment Completion States)" is visible
 
-  # Teacher can open the more details of the icon key and close it
+    # Teacher can open the more details of the icon key and close it
     Then I click selector "a:contains('More Details')"
     And I wait until element "h3:contains(Progress Tracking Icon Key)" is visible
     And I click selector "#ui-close-dialog"
@@ -36,12 +36,12 @@ Feature: Using the V2 teacher dashboard
     And I get levelbuilder access
     And I navigate to the V2 progress dashboard
 
-  # Teacher can open lesson to view level data
+    # Teacher can open lesson to view level data
     And I wait until element "#ui-test-lesson-header-2" is visible
     And I click selector "#ui-test-lesson-header-2"
     And I wait until element "#ui-test-s-allthethings-lessons-2-levels-1-cell-data" is visible
 
-  # Teacher can close lesson so level data is no longer visible
+    # Teacher can close lesson so level data is no longer visible
     And I click selector "#ui-test-expanded-progress-column-header-2"
     And element "#ui-test-s-allthethings-lessons-2-levels-1-cell-data" is not visible
 
@@ -53,7 +53,7 @@ Feature: Using the V2 teacher dashboard
     And I get levelbuilder access
     And I navigate to the V2 progress dashboard
 
-  # Teacher opens lesson data and clicks on level data cell
+    # Teacher opens lesson data and clicks on level data cell
     And I wait until element "#ui-test-lesson-header-2" is visible
     And I click selector "#ui-test-lesson-header-2"
     And I click selector "#ui-test-s-allthethings-lessons-2-levels-1-cell-data" once I see it to load a new tab
@@ -75,7 +75,7 @@ Feature: Using the V2 teacher dashboard
     # Waiting to make sure the user object has been updated before reloading the page
     And I wait for 3 seconds
 
-  # Verify the lesson is still open
+    # Verify the lesson is still open
     Then I reload the page
     And I wait until element "#ui-test-s-allthethings-lessons-2-levels-1-cell-data" is visible
 
@@ -84,10 +84,10 @@ Feature: Using the V2 teacher dashboard
   Scenario: Teacher can view lesson progress for when students have completed a lesson and when they have started a lesson but not finished
     Given I create an authorized teacher-associated student named "Sally"
     Given I am assigned to unit "allthethings"
-  # Student completes one of many levels in lesson 2
+    # Student completes one of many levels in lesson 2
     And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
 
-  # Student completes all the levels in lesson 10 (there is only one level)
+    # Student completes all the levels in lesson 10 (there is only one level)
     Given I am on "http://studio.code.org/s/allthethings/lessons/10/levels/1?noautoplay=true"
     Then I wait for 3 seconds
     And I wait until element ".submitButton" is visible
@@ -111,25 +111,25 @@ Feature: Using the V2 teacher dashboard
     Given I create an authorized teacher-associated student named "Sally"
     Given I am assigned to unit "allthethings"
 
-  # Student submits project
+    # Student submits project
     Given I am on "http://studio.code.org/s/allthethings/lessons/38/levels/1?noautoplay=true"
     Then I wait to see "#runButton"
     And I press "runButton"
     And I wait to see "#finishButton"
     And I press "finishButton"
 
-  # Teacher sees "needs feedback" in the table
+    # Teacher sees "needs feedback" in the table
     When I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access
     And I navigate to the V2 progress dashboard
 
-  # Check that the needs feedback icon is present
+    # Check that the needs feedback icon is present
     And I wait until element "#ui-test-lesson-header-1" is visible
     And I scroll to "#ui-test-lesson-header-38"
     And I click selector "#ui-test-lesson-header-38"
     And I see no difference for "needs feedback icon is displayed"
 
-  # Teacher gives feedbackAnd I wait to see "#rubric-input-performanceLevel1"
+    # Teacher gives feedbackAnd I wait to see "#rubric-input-performanceLevel1"
     And I click selector "#ui-test-s-allthethings-lessons-38-levels-1-cell-data" once I see it to load a new tab
     And I wait to see "#ui-test-feedback-input"
     And I press the first "#ui-test-feedback-input" element
@@ -137,20 +137,20 @@ Feature: Using the V2 teacher dashboard
     And I press "#ui-test-submit-feedback" using jQuery
     And element ".editor-column" contains text "Nice!"
 
-  # Teacher can see feedback given icon
+    # Teacher can see feedback given icon
     Given I am on "http://studio.code.org/"
     When I click selector "a:contains(Untitled Section)" once I see it to load a new page
     And I wait until element "#ui-test-lesson-header-39" is visible
     And I scroll to "#ui-test-lesson-header-39"
     And I see no difference for "feedback given icon is displayed"
 
-  # Teacher can indicate student needs to keep working
+    # Teacher can indicate student needs to keep working
     And I click selector "#ui-test-s-allthethings-lessons-38-levels-1-cell-data" once I see it to load a new tab
     And I wait to see "#ui-test-feedback-input"
     And I click selector "#keep-working" once I see it
     And I press "#ui-test-submit-feedback" using jQuery
 
-  # Teacher can see keep working icon
+    # Teacher can see keep working icon
     Given I am on "http://studio.code.org/"
     When I click selector "a:contains(Untitled Section)" once I see it to load a new page
     And I wait until element "#ui-test-lesson-header-39" is visible
@@ -228,7 +228,7 @@ Feature: Using the V2 teacher dashboard
     And I see no difference for "unexpanded lessons"
 
     # eyes test for expanded lessons with in progress and completed validated levels
-    And I click selector "#ui-test-lesson-header-44"
+    And I click selector g"#ui-test-lesson-header-44"
     And I wait until I see selector "div:contains('44.12')"
     And I scroll to "#ui-test-lesson-header-45"
     And I see no difference for "expanded lesson"
