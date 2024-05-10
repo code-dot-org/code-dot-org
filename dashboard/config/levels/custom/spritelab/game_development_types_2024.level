@@ -1,6 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "published": true,
   "game_id": 64,
   "created_at": "2024-05-08T22:39:42.000Z",
   "level_num": "custom",
@@ -65,7 +64,7 @@
     "mini_toolbox": "true",
     "validation_enabled": "false",
     "hide_pause_button": "false",
-    "instructions_icon": "purplebunny",
+    "instructions_icon": "fox",
     "hint_prompt_attempts_threshold": "1",
     "short_instructions": "Explore what happens when we apply gravity! Click `Finish` when you're ready to continue on.",
     "standalone_app_name": "game_design",
@@ -75,8 +74,9 @@
     "encrypted_examples": "TIdALavgLHun/5mCEOx4RHk141pArBgimnO+au9Uz5b0fW1RYu09aIVc5W9X\ndvq8VhPkhRriHFsdSpjwxXIGkw==\n",
     "preload_asset_list": null
   },
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-05-08T22:39:42.082+00:00\",\"changed\":[\"cloned from \\\"game_development_player_type_2024\\\"\"],\"cloned_from\":\"game_development_player_type_2024\"},{\"changed_at\":\"2024-05-08 22:44:21 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 22:44:51 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 22:45:05 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 22:48:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 22:49:25 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 22:49:52 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 22:54:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-08T22:39:42.082+00:00\",\"changed\":[\"cloned from \\\"game_development_player_type_2024\\\"\"],\"cloned_from\":\"game_development_player_type_2024\"},{\"changed_at\":\"2024-05-08 22:44:21 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 22:44:51 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 22:45:05 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 22:48:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 22:49:25 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 22:49:52 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 22:54:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-09 17:29:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions_icon\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-09 17:44:43 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-09 17:45:01 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -1251,47 +1251,5 @@
         </block>
       </xml>
     </start_blocks>
-    <toolbox_blocks>
-      <xml>
-        <block type="GameDev_setGroup" id="s0~~e0!}K[fm;ShKs2sG" x="25" y="27">
-          <field name="GROUP">"walls"</field>
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" id="x,sMj}}CfvGtzA+U2wfm">
-              <field name="ANIMATION">"greystone"</field>
-            </block>
-          </value>
-        </block>
-        <block type="GameDev_setGroup" id="949KnR,[*%QG72F_[g*9" x="27" y="135">
-          <field name="GROUP">"players"</field>
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" id="hCE*-r,=;X)np[I0{M3#">
-              <field name="ANIMATION">"gameplayadventure_08"</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_makeSpritesGridInput" id="%lIt9m#@H2J}unSh8[y!" x="21" y="247">
-          <field name="ANIMATION_NAME">"greystone"</field>
-          <value name="GRID">
-            <shadow type="gamelab_bitmap" id="2/X$Moo)bLDynrrY?;dv">
-              <field name="GRID">[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]</field>
-            </shadow>
-            <block type="gamelab_bitmap" id="%KH@7!,[}z6n_+#p*V{9">
-              <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[1,1,1,1,1,1,1,1],[0,0,0,0,0,0,0,0]]</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_makeNewSpriteAnon" id="IM+:ZqBn5NT-ZZL!04b:" x="21" y="341">
-          <field name="ANIMATION_NAME">"gameplayadventure_08"</field>
-          <value name="LOCATION">
-            <block type="gamelab_location_picker" id=")}o!T7jG3=$uWTqjEy0+">
-              <field name="LOCATION">{"x":81,"y":34}</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_setBackgroundImageAs" id="e_w.RAW8aDDfs68bKi=U" x="30" y="425">
-          <field name="IMG">"gradient_11"</field>
-        </block>
-      </xml>
-    </toolbox_blocks>
   </blocks>
 </GamelabJr>
