@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-08 18:42:12 UTC",
+    "serialized_at": "2024-05-09 23:18:16 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -79,8 +79,8 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "**Purpose:**\nOn Day 1, participants engaged in two model lessons: U2L2 Intro to HTML and U2L6 Styling Text with CSS. This session provides participants with space to review what they’ve learned and ask questions about Unit 2 - Web Development.\n\n\n**Objectives:**\n* Participants are aware of the content in Unit 2 - Web Development that has not been covered in the workshop\n* Participants are introduced to the Curriculum Investigation to continue practicing their HTML and CSS skills\n\n**Suggested Time:** 30 minutes",
-        "student_overview": "**You will:**\n* Get an overview of the content in Unit 2 - Web Development that has not been covered in the workshop\n* Get an introduction to the Curriculum Investigation to continue practicing your HTML and CSS skills"
+        "overview": "**Purpose:**\nOn Day 1, participants engaged in two model lessons: U2L2 Intro to HTML and U2L6 Styling Text with CSS. This session provides participants with space to review what they’ve learned and ask questions about Unit 2 - Web Development.\n\n\n**Objectives:**\n* Participants are aware of the content in Unit 2 - Web Development that has not been covered in the workshop\n* Participants are introduced to additional curriculum practice to continue practicing their HTML and CSS skills.\n\n**Suggested Time:** 30 minutes",
+        "student_overview": "**You will:**\n* Get an overview of the content in Unit 2 - Web Development that has not been covered in the workshop\n* Be introduced to additional curriculum practice to continue practicing your HTML and CSS skills."
       },
       "seeding_key": {
         "lesson.key": "Unit 2 - Web Development Connections",

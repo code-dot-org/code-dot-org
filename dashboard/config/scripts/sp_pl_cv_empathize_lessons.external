@@ -8,25 +8,39 @@ markdown <<MARKDOWN
 
 #### Lessons 2 and 3 in the Computer Vision unit help students realize the importance of **understanding user stories** and needs to develop an effective product. 
 
+---
 
 ## Lesson 2: Empathizing with Users 
 
-<img src="https://images.code.org/cbb985db617eb2cfa02e6a76f7c6f23c-image-1714578292267.png" alt="farmwise robot and crops" width="200px"  style="border-radius:10px; float:right; margin: 0 20px 40px 40px;">
+<img src="https://images.code.org/7546281a32ad5bbe5dfeeb22add1178f-image-1715283683089.png" alt="farmwise robot and crops" width="250px"  style="border-radius:10px; float:right; margin: 0 20px 40px 40px;">
 
 
-#### This lesson delves into understanding user needs and problems through qualitative and quantitative data collection. Students are introduced to the Design Thinking Process, particularly the **"Empathize"** phase, using real-world examples like FarmWise's approach to understanding farmer needs. Students then practice developing empathy and tailored research questions for community-specific issues. The aim is for students to learn effective strategies for gathering user data that will inform the design of practical solutions.
+#### This lesson delves into understanding user needs and problems through qualitative and quantitative **data collection**. 
+#### Students are introduced to the **empathize phase** of the design thinking process, using real-world examples like FarmWise's approach to understanding farmer needs. 
+
+#### In the main activity, students practice developing empathy and tailored research questions to gather user data that informs the design of practical solutions for community-specific issues.
 
 ### <b>Check out the entire lesson plan  <a href="http://studio.code.org/s/computer-vision-pilot/lessons/2" target="blank" rel="noopener noreferrer">here</a>.</b>
 
 
 
 ## Lesson 3: 
-<img src="https://images.code.org/7c51d9a0f3fe4cb77ffc27ec78a4a097-image-1714578560802.png" alt="person squatting with exercise app" width="200px" style="border-radius:10px; float:right; margin: 0 20px 40px 40px;">
+<img src="https://images.code.org/7c51d9a0f3fe4cb77ffc27ec78a4a097-image-1714578560802.png" alt="person squatting with exercise app" width="250px" style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
 
-#### In this lesson, students learn to distinguish between **qualitative and quantitative data**, which are vital skills for understanding user needs and behaviors. This lesson uses a workout tracking device as a case study to discuss privacy concerns and user demographics. Students then develop a **data collection plan** that includes crafting questions that yield both data types. By the end of the lesson, students should be able to apply these skills to create surveys tailored to collecting useful user data, which they will use to inform their project designs.
+#### In this lesson, students learn to distinguish between **qualitative and quantitative data**.
 
-#### <b>Check out the entire lesson plan  <a href="http://studio.code.org/s/computer-vision-pilot/lessons/3" target="blank" rel="noopener noreferrer">here</a>.</b>
+#### This lesson uses a workout tracking device as a case study to discuss privacy concerns and user demographics. 
+
+#### Students then develop a **data collection plan**, crafting questions to gather useful user data for surveys that inform their project designs.
+
+### <b>Check out the entire lesson plan  <a href="http://studio.code.org/s/computer-vision-pilot/lessons/3" target="blank" rel="noopener noreferrer">here</a>.</b>
+
+<br>
+
  
+---
 
+## Let's explore empathizing 
 
+#### In the next few levels, we will dive deeper into the activity from lesson 2. 
 MARKDOWN

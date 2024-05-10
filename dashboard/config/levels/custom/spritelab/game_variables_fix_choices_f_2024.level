@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2024-05-07T21:27:54.000Z",
   "level_num": "custom",
@@ -50,10 +51,10 @@
     "short_instructions": "Adjust the crab's speed by setting the difficultyLevel to 3 or 4.",
     "encrypted_examples": "xnjNxYaFGSFZomQAMKF3a/kkVS1sM6t9nBKFuXnaHwqst0RPLO/JmaFILOgl\npgamDuU1xtYthxt9nQfd2bu3IA==\n",
     "name_suffix": "_2024",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "instructions_icon": "fox"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-05-07T21:27:54.458+00:00\",\"changed\":[\"cloned from \\\"game_variables_fix_choices_f\\\"\"],\"cloned_from\":\"game_variables_fix_choices_f\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-07T21:27:54.458+00:00\",\"changed\":[\"cloned from \\\"game_variables_fix_choices_f\\\"\"],\"cloned_from\":\"game_variables_fix_choices_f\"},{\"changed_at\":\"2024-05-09 16:26:57 +0000\",\"changed\":[\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
