@@ -60,8 +60,9 @@ namespace :package do
     desc 'Update Dashboard symlink for apps package.'
     timed_task_with_logging 'symlink' do
       Dir.chdir(apps_dir) do
-        target = CDO.use_my_apps ? apps_dir('build/package') : 'apps-package'
-        RakeUtils.ln_s target, dashboard_dir('public', 'blockly')
+        package_dir = CDO.use_my_apps ? apps_dir('build/package') : 'apps-package'
+        RakeUtils.ln_s package_dir, dashboard_dir('public', 'blockly')
+        RakeUtils.ln_s File.join(package_dir, 'js', 'pyodide'), dashboard_dir('public', 'pyodide')
       end
     end
   end

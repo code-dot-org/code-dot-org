@@ -88,6 +88,7 @@ npm-debug.log
 /dashboard/db/ui_test_data.*
 /dashboard/public/blockly
 /dashboard/public/code-studio
+/dashboard/public/pyodide
 /dashboard/public/shared
 /dashboard/public/styleguide
 /pegasus/config/newrelic.yml
