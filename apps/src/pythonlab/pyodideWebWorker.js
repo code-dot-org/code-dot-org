@@ -8,9 +8,7 @@ import {loadPyodide, version} from 'pyodide';
 
 async function loadPyodideAndPackages() {
   self.pyodide = await loadPyodide({
-    indexURL: `https://cdn.jsdelivr.net/pyodide/v${version}/full`,
-    // This URL is not working on prod, so we will use the CDN for now.
-    // indexURL: `/assets/js/pyodide/${version}/`,
+    indexURL: `/assets/js/pyodide/${version}/`,
     // pre-load numpy as it will frequently be used, and matplotlib as we patch it.
     packages: ['numpy', 'matplotlib'],
   });

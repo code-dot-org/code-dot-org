@@ -364,3 +364,6 @@ gem 'statsig', '~> 1.33'
 
 gem 'mailgun-ruby', '~>1.2.14'
 gem 'mailjet', '~> 1.7.3'
+
+# Generate assets without hashes embedded in the filename
+gem 'non-digest-assets'

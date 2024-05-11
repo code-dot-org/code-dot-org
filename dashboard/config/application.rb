@@ -138,6 +138,13 @@ module Dashboard
     config.assets.paths << Rails.root.join('../shared/css')
     config.assets.paths << Rails.root.join('../shared/js')
 
+    # Configure the non-digest-assets gem to generate some assets/ without hashes in the filename:
+    NonDigestAssets.asset_selectors += [
+      # loadPyodide() hardcodes a list of path-names to load from HTTP, which won't work if Rails
+      # modifies the filename to include a hash:
+      %r{^js/pyodide/},
+    ]
+
     # Whether to fallback to assets pipeline if a precompiled asset is missed.
     config.assets.compile = !CDO.optimize_rails_assets
 

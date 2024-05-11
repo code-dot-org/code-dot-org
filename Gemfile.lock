@@ -603,6 +603,9 @@ GEM
     nokogiri (1.14.3)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
+    non-digest-assets (2.2.0)
+      activesupport (>= 5.2, < 7.1)
+      sprockets (>= 2.0, < 5.0)
     oauth2 (1.4.11)
       faraday (>= 0.17.3, < 3.0)
       jwt (>= 1.0, < 3.0)
@@ -1064,6 +1067,7 @@ DEPENDENCIES
   net-ssh
   newrelic_rpm (~> 6.14.0)
   nokogiri (>= 1.10.0)
+  non-digest-assets
   octokit
   oj (~> 3.10)
   omniauth-clever (~> 2.0.0)!
