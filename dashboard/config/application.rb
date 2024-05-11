@@ -141,7 +141,7 @@ module Dashboard
     # Configure the non-digest-assets gem to generate some assets/ without hashes in the filename:
     NonDigestAssets.asset_selectors += [
       # loadPyodide() hardcodes a list of path-names to load from HTTP, which won't work if Rails
-      # modifies the filename to include a hash:
+      # modifies the filenames in assets/js/pyodide/** to include hashes:
       %r{^js/pyodide/},
     ]
 
