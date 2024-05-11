@@ -243,7 +243,8 @@ class UnconnectedMusicView extends React.Component {
     // the level changes.
     if (
       (!isEqual(prevProps.levelProperties, this.props.levelProperties) ||
-        !isEqual(prevProps.initialSources, this.props.initialSources)) &&
+        !isEqual(prevProps.initialSources, this.props.initialSources) ||
+        prevProps.isReadOnlyWorkspace !== this.props.isReadOnlyWorkspace) &&
       this.props.levelProperties?.appName === 'music'
     ) {
       if (this.props.levelProperties?.appName === 'music') {

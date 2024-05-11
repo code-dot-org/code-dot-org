@@ -353,6 +353,7 @@ export default class MusicPlayer {
           effects: soundEvent.effects,
           originalBpm: soundData.bpm || DEFAULT_BPM,
           pitchShift: this.calculatePitchShift(soundData),
+          disableTempoAdjustment: soundData.type === 'preview',
         },
       ];
     } else if (event.type === 'pattern') {
@@ -550,7 +551,7 @@ export default class MusicPlayer {
   }
 
   private calculatePitchShift(soundData: SoundData) {
-    if (soundData.type === 'beat') {
+    if (['beat', 'preview'].includes(soundData.type)) {
       return 0;
     }
     const diff = this.key - (soundData.key || Key.C);
