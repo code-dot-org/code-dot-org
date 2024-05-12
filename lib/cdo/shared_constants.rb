@@ -10,6 +10,8 @@ require_relative 'http_cache'
 # result in changes to these other files.
 
 module SharedConstants
+  DEFAULT_LOCALE = 'en-US'.freeze
+
   # Used to communicate different types of levels
   LEVEL_KIND = OpenStruct.new(
     {
@@ -706,7 +708,7 @@ module SharedConstants
 
   # We should always specify a version for the LLM so the results don't unexpectedly change.
   # reference: https://platform.openai.com/docs/models/gpt-3-5
-  AI_TUTOR_CHAT_MODEL_VERISON = 'gpt-3.5-turbo-1106'
+  AI_TUTOR_CHAT_MODEL_VERISON = 'gpt-4-turbo-2024-04-09'
 
   # These reflect the 'status' of an AI Interaction,
   # and are used in both AI Tutor and AI Chat.
@@ -724,6 +726,11 @@ module SharedConstants
     COMPILATION: 'compilation',
     VALIDATION: 'validation',
     GENERAL_CHAT: 'general_chat',
+  }.freeze
+
+  AICHAT_ERROR_TYPE = {
+    PROFANITY_MODEL: 'profanity_model',
+    PROFANITY_USER: 'profanity_user'
   }.freeze
 
   USER_TYPES = OpenStruct.new(

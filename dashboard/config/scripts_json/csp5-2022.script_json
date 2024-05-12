@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-15 18:02:54 UTC",
+    "serialized_at": "2024-05-09 18:28:33 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2933,7 +2933,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Prepping for Investigate Lessons:** The best way to prepare for this lesson is to go through the experience yourself. Check out the three apps in Code Studio to get a sense for how they work. Then move on to the Code Investigation and actually try to answer all the questions for each app.  These questions are intended to help students read and make sense of the code.  It is not about getting the “right answer” as much as it is about building skills in your students to read, test, and make sense of code that they haven’t seen before.  Finally, you will notice that for the levels where the directions ask students to “Modify” the code, you will find “Example Solutions” in the “Teacher Panel” of that level. \n\n**A Note About Datasets:** In general, one of our [Code.org Curriculum Values](https://code.org/educate/curriculum/values) is \"Teachers in Classrooms\" - we believe individual teachers have the best knowledge of their students and the content that will engage them. From that perspective, we also think it's appropriate to make choices about our content & curriculum that best suits your classroom. With that said, the Spotify dataset updates automatically every day according to the latest trends - we hope it provides a real-world social connection for students to engage with datasets, but also understand that we can't control the songs that make it to the top 200 and don't have the bandwidth to filter it on our end. If the songs for a particular day are not appropriate for your students, it may be a good idea to skip that dataset.\n"
+            "markdown": "**Prepping for Investigate Lessons:** The best way to prepare for this lesson is to go through the experience yourself. Check out the three apps in Code Studio to get a sense for how they work. Then move on to the Code Investigation and actually try to answer all the questions for each app.  These questions are intended to help students read and make sense of the code.  It is not about getting the “right answer” as much as it is about building skills in your students to read, test, and make sense of code that they haven’t seen before.  Finally, you will notice that for the levels where the directions ask students to “Modify” the code, you will find “Example Solutions” in the “Teacher Panel” of that level. \n\n**A Note About Datasets:** In general, we believe individual teachers have the best knowledge of their students and the content that will engage them. From that perspective, we also think it's appropriate to make choices about our content & curriculum that best suits your classroom. With that said, the Spotify dataset updates automatically every day according to the latest trends - we hope it provides a real-world social connection for students to engage with datasets, but also understand that we can't control the songs that make it to the top 200 and don't have the bandwidth to filter it on our end. If the songs for a particular day are not appropriate for your students, it may be a good idea to skip that dataset.\n"
           }
         ]
       },
@@ -8076,6 +8076,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

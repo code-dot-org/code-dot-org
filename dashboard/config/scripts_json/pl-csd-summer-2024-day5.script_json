@@ -8,11 +8,12 @@
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-27 21:49:11 UTC",
+    "serialized_at": "2024-05-07 20:52:27 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -61,7 +62,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "**Purpose:**\nThis session is rooted in the curriculum values. Participants have an opportunity to look back on the week to reflect on where they saw these values come through. Participants also begin to prepare for the year by setting up their class sections in Code Studio.\n\n\n**Objectives:**\n* Participants know how to submit feedback to Code.org\n* Participants have set up class sections on Code Studio\n\n**Suggested Time:** 35 minutes",
+        "overview": "**Purpose:**\nThis session is rooted in the curriculum values. Participants have an opportunity to look back on the week to reflect on where they saw these values come through. Participants also begin to prepare for the year by setting up their class sections in Code Studio.\n\n\n**Objectives:**\n* Participants know how to submit feedback to Code.org\n* Participants have set up class sections on Code Studio\n\n**Suggested Time:** 25 minutes",
         "student_overview": "**You will:**\n* Learn how to submit feedback to Code.org\n* Set up class sections on Code Studio"
       },
       "seeding_key": {
@@ -78,7 +79,7 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "**Purpose:**\nTake a deeper look at assessment resources available in the curriculum\nDiscuss with other teachers who grade and assess in similar ways about how to grade and assess CS Discoveries\n\n\n**Objectives:**\n* Participants develop concrete strategies and plans for assessment while using this curriculum\n* Participants make plans for sharing resources and think about how they can build off of each other’s work\n* Participants become more familiar with the assessment resources in the curriculum\n\n**Suggested Time:** 40 minutes",
+        "overview": "**Purpose:**\nTake a deeper look at assessment resources available in the curriculum\nDiscuss with other teachers who grade and assess in similar ways about how to grade and assess CS Discoveries\n\n\n**Objectives:**\n* Participants develop concrete strategies and plans for assessment while using this curriculum\n* Participants make plans for sharing resources and think about how they can build off of each other’s work\n* Participants become more familiar with the assessment resources in the curriculum\n\n**Suggested Time:** 60 minutes",
         "student_overview": "**You will:**\n* Develop concrete strategies and plans for assessment while using this curriculum\n* Make plans for sharing resources and think about how you can build off of each other’s work\n* Become more familiar with the assessment resources in the curriculum"
       },
       "seeding_key": {
@@ -89,13 +90,13 @@
     },
     {
       "key": "Revisiting Topics from the Week",
-      "name": "Revisiting Topics from the Week",
+      "name": "Revisit Topics from the Week",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "overview": "**Purpose:**\nThis session is intended to provide a space for participants to revisit important topics from earlier in the week and share implementation ideas with each other. These ideas can be revisited later in the day when participants begin to work on their plans for the year.\n\n\n**Objectives:**\n* Participants have shared implementation ideas with each other\n* Participants have written down ideas they would like to implement in their classroom\n\n**Suggested Time:** 45 minutes",
+        "overview": "**Purpose:**\nThis session is intended to provide a space for participants to revisit important topics from earlier in the week and share implementation ideas with each other. These ideas can be revisited later in the day when participants begin to work on their plans for the year.\n\n\n**Objectives:**\n* Participants have shared implementation ideas with each other\n* Participants have written down ideas they would like to implement in their classroom\n\n**Suggested Time:** 75 minutes",
         "student_overview": "**You will:**\n* Share implementation ideas with other teachers\n* Write down ideas you would like to implement in your classroom"
       },
       "seeding_key": {
@@ -105,35 +106,35 @@
       }
     },
     {
-      "key": "Community ",
-      "name": "Community ",
+      "key": "Previewing Academic Year Workshops",
+      "name": "Previewing Academic Year Workshops",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 5,
-      "properties": {
-        "overview": "**Purpose:**\nThe goal of this session is for participants to recognize that they are part of something bigger than what is happening just in their own classroom. For some teachers, computer science can be isolating because CS teachers often do not have a built in community in their schools like math or english teachers naturally have. This session is about expanding our idea of community to include our local community and the national computer science community.\n\n\n**Objectives:**\n* Participants identify potential community resources that could be used to enhance the learning experience of their students and raise CS awareness within the community outside of the classroom\n* Participants identify ways to connect with CS educators outside of their school community\n* Participants know how to access and engage with the Code.org community through the Code.org forum\n\n**Suggested Time:** 40 minutes",
-        "student_overview": "**You will:**\n* Identify potential community resources that could be used to enhance the learning experience of your students and raise CS awareness within the community outside of your classroom\n* Identify ways to connect with CS educators outside of your school community\n* Learn how to access and engage with the Code.org community through the Code.org forum"
-      },
-      "seeding_key": {
-        "lesson.key": "Community ",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "pl-csd-summer-2024-day5"
-      }
-    },
-    {
-      "key": "Previewing Academic Year Workshops",
-      "name": "Previewing Academic Year Workshops",
-      "absolute_position": 6,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 6,
       "properties": {
         "overview": "**Purpose:**\nThis session provides participants with a roadmap for the Academic Year Workshops. Those who plan to teach the later units will get an idea of when they can expect a deeper dive into content.\n\n\n**Objectives:**\n* Participants know when they will learn about future units of the curriculum\n\n**Suggested Time:** 20 minutes",
         "student_overview": "**You will:**\n* Preview what you will learn about in future units of the curriculum"
       },
       "seeding_key": {
         "lesson.key": "Previewing Academic Year Workshops",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2024-day5"
+      }
+    },
+    {
+      "key": "Community ",
+      "name": "Community ",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+        "overview": "**Purpose:**\nThe goal of this session is for participants to recognize that they are part of something bigger than what is happening just in their own classroom. For some teachers, computer science can be isolating because CS teachers often do not have a built in community in their schools like math or english teachers naturally have. This session is about expanding our idea of community to include our local community and the national computer science community.\n\n\n**Objectives:**\n* Participants identify potential community resources that could be used to enhance the learning experience of their students and raise CS awareness within the community outside of the classroom\n* Participants identify ways to connect with CS educators outside of their school community\n* Participants know how to access and engage with the Code.org community through the Code.org forum\n\n**Suggested Time:** 30 minutes",
+        "student_overview": "**You will:**\n* Identify potential community resources that could be used to enhance the learning experience of your students and raise CS awareness within the community outside of your classroom\n* Identify ways to connect with CS educators outside of your school community\n* Learn how to access and engage with the Code.org community through the Code.org forum"
+      },
+      "seeding_key": {
+        "lesson.key": "Community ",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "pl-csd-summer-2024-day5"
       }
@@ -146,7 +147,7 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "**Purpose:**\nTeachers think about what questions they still have. Teachers are given time to take out their schedule and create a timeline for the course. They can think about assessment or other things they want to start digging into. Mostly work time.\n\n\n**Objectives:**\n* Make an action plan for getting through the first month of school\n* Teachers have time to prep for fall\n\n**Suggested Time:** 75 minutes",
+        "overview": "**Purpose:**\nTeachers think about what questions they still have. Teachers are given time to take out their schedule and create a timeline for the course. They can think about assessment or other things they want to start digging into. Mostly work time.\n\n\n**Objectives:**\n* Make an action plan for getting through the first month of school\n* Teachers have time to prep for fall\n\n**Suggested Time:** 45 minutes",
         "student_overview": "**You will:**\n* Make an action plan for getting through the first month of school\n* Prepare for the first day of class"
       },
       "seeding_key": {
@@ -223,18 +224,6 @@
       }
     },
     {
-      "key": "a255f469-26bd-42b7-b75d-7a818ee7bcc0",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "a255f469-26bd-42b7-b75d-7a818ee7bcc0",
-        "lesson.key": "Community ",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "pl-csd-summer-2024-day5"
-      }
-    },
-    {
       "key": "49d21536-1436-4899-a0e6-4757f99fb547",
       "position": 1,
       "properties": {
@@ -242,6 +231,18 @@
       "seeding_key": {
         "lesson_activity.key": "49d21536-1436-4899-a0e6-4757f99fb547",
         "lesson.key": "Previewing Academic Year Workshops",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2024-day5"
+      }
+    },
+    {
+      "key": "a255f469-26bd-42b7-b75d-7a818ee7bcc0",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a255f469-26bd-42b7-b75d-7a818ee7bcc0",
+        "lesson.key": "Community ",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "pl-csd-summer-2024-day5"
       }
@@ -313,16 +314,6 @@
       }
     },
     {
-      "key": "f94794c0-7a4f-4102-90c5-7bbc4708e83a",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "f94794c0-7a4f-4102-90c5-7bbc4708e83a",
-        "lesson_activity.key": "a255f469-26bd-42b7-b75d-7a818ee7bcc0"
-      }
-    },
-    {
       "key": "e332f36d-d871-4a40-95ab-dbe8816c6006",
       "position": 1,
       "properties": {
@@ -330,6 +321,16 @@
       "seeding_key": {
         "activity_section.key": "e332f36d-d871-4a40-95ab-dbe8816c6006",
         "lesson_activity.key": "49d21536-1436-4899-a0e6-4757f99fb547"
+      }
+    },
+    {
+      "key": "f94794c0-7a4f-4102-90c5-7bbc4708e83a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f94794c0-7a4f-4102-90c5-7bbc4708e83a",
+        "lesson_activity.key": "a255f469-26bd-42b7-b75d-7a818ee7bcc0"
       }
     },
     {
@@ -361,43 +362,43 @@
   ],
   "resources": [
     {
-      "name": "Activity Packet",
-      "url": "https://docs.google.com/document/d/15gERZooKYoMlBjeHTEb63zlkG9oaCayUUblHzaSW9VE/view",
-      "key": "activity_packet",
+      "name": "CSD Activity Packet 2024",
+      "url": "https://docs.google.com/document/d/1e6h0_yN0txqYVXmxUEco5ldh0l1K8cU4tukxdnXh3Xo/edit?usp=drive_link",
+      "key": "csd_activity_packet_2024",
       "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/document/d/15gERZooKYoMlBjeHTEb63zlkG9oaCayUUblHzaSW9VE/view",
-        "type": "Activity Guide"
       },
       "seeding_key": {
-        "resource.key": "activity_packet"
+        "resource.key": "csd_activity_packet_2024"
       }
     },
     {
-      "name": "Day 5 Agenda",
-      "url": "https://docs.google.com/document/d/14T8nyJAB0UPu7elW0cmhIUFAjU6b0sJnwyvLZJVjhSE/edit#",
-      "key": "day_5_agenda",
+      "name": "CSD In-Person Summer Workshop Day 5 Agenda",
+      "url": "https://docs.google.com/document/d/1wqmQfryf27dhl0nApe5JqcsXmDJ7Ys6vT0VTUf_XhPg/edit?usp=drive_link",
+      "key": "csd_in-person_summer_workshop_day_5_agenda",
       "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/document/d/14T8nyJAB0UPu7elW0cmhIUFAjU6b0sJnwyvLZJVjhSE/edit#",
-        "include_in_pdf": true,
-        "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "day_5_agenda"
+        "resource.key": "csd_in-person_summer_workshop_day_5_agenda"
       }
     },
     {
-      "name": "Day 5 Slides Template",
-      "url": "https://docs.google.com/presentation/d/1TiHYT50LWV8G6ldyoZds6ZeXRpHu8gldMF_YjZ8d8uM/edit?usp=share_link",
-      "key": "day_5_slides_template",
+      "name": "CSD In-Person Summer Workshop Day 5 Slides",
+      "url": "https://docs.google.com/presentation/d/1_IGDyXtadz25a3Ad9K5-4IO0A96ZZhNQF4nBUWulk8w/edit?usp=drive_link",
+      "key": "csd_in-person_summer_workshop_day_5_slides",
       "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1TiHYT50LWV8G6ldyoZds6ZeXRpHu8gldMF_YjZ8d8uM/edit?usp=share_link",
-        "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "day_5_slides_template"
+        "resource.key": "csd_in-person_summer_workshop_day_5_slides"
+      }
+    },
+    {
+      "name": "CSD Resource Packet 2024",
+      "url": "https://docs.google.com/document/d/17b0KVjqOsr2X3NUyE6gS82SEkXOsAuEE815H_Z6FRGU/edit?usp=drive_link",
+      "key": "csd_resource_packet_2024",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_resource_packet_2024"
       }
     },
     {
@@ -437,31 +438,30 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "activity_packet",
+        "resource.key": "csd_in-person_summer_workshop_day_5_agenda",
         "script.name": "pl-csd-summer-2024-day5"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "day_5_agenda",
-        "script.name": "pl-csd-summer-2024-day5"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "day_5_slides_template",
-        "script.name": "pl-csd-summer-2024-day5"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "resource_packet",
+        "resource.key": "csd_in-person_summer_workshop_day_5_slides",
         "script.name": "pl-csd-summer-2024-day5"
       }
     }
   ],
   "scripts_student_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "csd_activity_packet_2024",
+        "script.name": "pl-csd-summer-2024-day5"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_resource_packet_2024",
+        "script.name": "pl-csd-summer-2024-day5"
+      }
+    }
   ],
   "vocabularies": [
 

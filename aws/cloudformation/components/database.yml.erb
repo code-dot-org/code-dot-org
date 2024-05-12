@@ -124,8 +124,6 @@
         # BEGIN: Static configuration settings.
         # WARNING - Changing these settings triggers restart of each database instance in the cluster during Stack Update.
 
-        performance_schema: 1
-
         binlog_format: 'ROW'
         gtid-mode: 'ON'
         enforce_gtid_consistency: 'ON'
@@ -145,7 +143,7 @@
         # Favor write performance over durability. In the event of a database server crash
         # we could lose roughly 1 second of transactions.
         # https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit
-        innodb_flush_log_at_trx_commit: 0
+        innodb_flush_log_at_trx_commit: 1
         # END: Dynamic configuration settings.
   AuroraWriterDBParameters:
     Type: AWS::RDS::DBParameterGroup
@@ -154,7 +152,7 @@
       Family: aurora-mysql5.7
       Parameters:
         # BEGIN: Static configuration settings. Changing these settings will trigger a restart of each database instance.
-        performance_schema: 1
+
         # END: Static configuration settings.
 
         # BEGIN: Dynamic configuration settings. Changing these settings does NOT require nor trigger restart of instances.
@@ -171,8 +169,6 @@
       Parameters:
         # BEGIN: Static configuration settings.
         # WARNING - Changing these settings triggers restart of each database instance in the cluster during Stack Update.
-
-        performance_schema: 1
 
         binlog_format: 'ROW'
         gtid-mode: 'ON'
@@ -193,7 +189,7 @@
         # Favor write performance over durability. In the event of a database server crash
         # we could lose roughly 1 second of transactions.
         # https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit
-        innodb_flush_log_at_trx_commit: 0
+        innodb_flush_log_at_trx_commit: 1
         innodb_trx_commit_allow_data_loss: 1
         # END: Dynamic configuration settings.
   DBProxyRole:
@@ -340,6 +336,8 @@
       EnableIAMDatabaseAuthentication: true
       VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
       DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
+      PerformanceInsightsEnabled: <%= ['test', 'production'].include?(environment) %>
+      PerformanceInsightsRetentionPeriod: <%= rack_env?(:production) ? 465 : 7 %>
       EnableCloudwatchLogsExports:
         - general
         - audit

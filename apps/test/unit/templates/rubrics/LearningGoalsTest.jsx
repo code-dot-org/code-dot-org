@@ -1,4 +1,5 @@
 import {render, screen} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import {shallow, mount} from 'enzyme';
 import React from 'react';
 import {act} from 'react-dom/test-utils';
@@ -37,6 +38,7 @@ const learningGoals = [
     tips: 'Tips',
   },
   {
+    id: 3,
     key: 'efgh',
     learningGoal: 'Learning Goal 2',
     aiEnabled: false,
@@ -65,6 +67,16 @@ const aiEvaluations = [
     observations: observations,
     evidence:
       'Line 3-5: The sprite is defined here. `var sprite = createSprite(100, 120)`',
+  },
+  {
+    id: 3,
+    learning_goal_id: 3,
+    understanding: 2,
+    aiConfidencePassFail: 2,
+    aiConfidenceExactMatch: 1,
+    observations: observations,
+    evidence:
+      'Line 7-9: Some other sprite is defined here. `var sprite = createSprite(200, 240)`',
   },
 ];
 
@@ -95,6 +107,7 @@ const studentLevelInfo = {
 describe('LearningGoals - React Testing Library', () => {
   let annotatorStub,
     annotateLineStub,
+    scrollToLineStub,
     highlightLineStub,
     clearAnnotationsStub,
     clearHighlightedLinesStub;
@@ -107,6 +120,7 @@ describe('LearningGoals - React Testing Library', () => {
       .stub(EditorAnnotator, 'annotator')
       .returns(annotatorInstanceStub);
     annotateLineStub = sinon.stub(EditorAnnotator, 'annotateLine');
+    scrollToLineStub = sinon.stub(EditorAnnotator, 'scrollToLine');
     clearAnnotationsStub = sinon.stub(EditorAnnotator, 'clearAnnotations');
     highlightLineStub = sinon.stub(EditorAnnotator, 'highlightLine');
     clearHighlightedLinesStub = sinon.stub(
@@ -116,6 +130,7 @@ describe('LearningGoals - React Testing Library', () => {
   });
   afterEach(() => {
     annotatorStub.restore();
+    scrollToLineStub.restore();
     annotateLineStub.restore();
     clearAnnotationsStub.restore();
     highlightLineStub.restore();
@@ -134,6 +149,60 @@ describe('LearningGoals - React Testing Library', () => {
     expect(screen.getByText(/lg one limited/)).to.exist;
     expect(screen.getByText(/lg one convincing/)).to.exist;
     expect(screen.getByText(/lg one extensive/)).to.exist;
+  });
+
+  it('scrolls to the first line of evidence when the learning goal is selected', async () => {
+    render(
+      <LearningGoals
+        learningGoals={learningGoals}
+        teacherHasEnabledAi={true}
+        aiUnderstanding={3}
+        studentLevelInfo={studentLevelInfo}
+        aiEvaluations={aiEvaluations}
+      />
+    );
+
+    const user = userEvent.setup();
+
+    sinon.assert.calledWith(scrollToLineStub, 3);
+
+    const button = screen.getByRole('button', {
+      name: i18n.rubricNextLearningGoal(),
+    });
+    await user.click(button);
+
+    sinon.assert.calledWith(scrollToLineStub, 7);
+  });
+
+  it('does not scroll anywhere when the evidence is blank', async () => {
+    const myAiEvaluations = [
+      {
+        ...aiEvaluations[0],
+        evidence: '',
+      },
+      {
+        ...aiEvaluations[1],
+        evidence: '',
+      },
+    ];
+
+    render(
+      <LearningGoals
+        learningGoals={learningGoals}
+        teacherHasEnabledAi={true}
+        aiUnderstanding={3}
+        studentLevelInfo={studentLevelInfo}
+        aiEvaluations={myAiEvaluations}
+      />
+    );
+
+    const user = userEvent.setup();
+    const button = screen.getByRole('button', {
+      name: i18n.rubricNextLearningGoal(),
+    });
+    await user.click(button);
+
+    sinon.assert.notCalled(scrollToLineStub);
   });
 
   describe('when aiConfidenceExactMatch is high', () => {
@@ -238,6 +307,7 @@ function getSuggestedButtonNames() {
 describe('LearningGoals - Enzyme', () => {
   let annotatorStub,
     annotateLineStub,
+    scrollToLineStub,
     highlightLineStub,
     clearAnnotationsStub,
     clearHighlightedLinesStub;
@@ -251,6 +321,7 @@ describe('LearningGoals - Enzyme', () => {
       .stub(EditorAnnotator, 'annotator')
       .returns(annotatorInstanceStub);
     annotateLineStub = sinon.stub(EditorAnnotator, 'annotateLine');
+    scrollToLineStub = sinon.stub(EditorAnnotator, 'scrollToLine');
     clearAnnotationsStub = sinon.stub(EditorAnnotator, 'clearAnnotations');
     highlightLineStub = sinon.stub(EditorAnnotator, 'highlightLine');
     clearHighlightedLinesStub = sinon.stub(
@@ -261,6 +332,7 @@ describe('LearningGoals - Enzyme', () => {
 
   function restoreAnnotator() {
     annotatorStub.restore();
+    scrollToLineStub.restore();
     annotateLineStub.restore();
     clearAnnotationsStub.restore();
     highlightLineStub.restore();
@@ -433,6 +505,20 @@ describe('LearningGoals - Enzyme', () => {
     it('should annotate with the observations if the evidence has no message.', () => {
       annotateLines('Line 42: `draw()`', observations);
       sinon.assert.calledWith(annotateLineStub, 8, observations);
+    });
+
+    it('should return the parsed observations when the evidence is blank.', () => {
+      const annotations = annotateLines('', observations);
+
+      // One for each sentence
+      expect(annotations.length).to.be.equal(2);
+
+      // The lines are undefined for the written annotation since we don't know
+      // if it is relevant.
+      expect(annotations[0].firstLine).to.be.undefined;
+
+      // And they are in the order provided by the given observations string.
+      expect(annotations[0].message).to.be.equal(observations.split('.')[0]);
     });
 
     it('should return the set of sentences reflected in observations if the evidence has no message.', () => {

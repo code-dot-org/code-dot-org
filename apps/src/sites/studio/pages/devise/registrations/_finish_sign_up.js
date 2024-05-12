@@ -5,6 +5,7 @@ import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import statsigReporter from '@cdo/apps/lib/util/StatsigReporter';
 import experiments from '@cdo/apps/util/experiments';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
@@ -50,6 +51,12 @@ let isInUnitedStates = schoolData.countryCode === 'US';
 
 let userInRegionalPartnerVariant = experiments.isEnabled(
   experiments.OPT_IN_EMAIL_REG_PARTNER
+);
+
+const isInSchoolAssociationExperiment = statsigReporter.getIsInExperiment(
+  'sign_up_flow_school_association_update_2024',
+  'showNewFlow',
+  false
 );
 
 $(document).ready(() => {
@@ -106,11 +113,21 @@ $(document).ready(() => {
     countryInputEl.val(schoolData.countryCode);
 
     // Clear school_id if the searched school is not found.
+    // New school search flow
+    const newSchoolIdEl = $(
+      'select[name="user[school_info_attributes][school_id]"]'
+    );
     if (
-      ['-1', NO_SCHOOL_SETTING, CLICK_TO_ADD, SELECT_A_SCHOOL].includes(
-        schoolData.ncesSchoolId
+      [NO_SCHOOL_SETTING, CLICK_TO_ADD, SELECT_A_SCHOOL].includes(
+        newSchoolIdEl.val()
       )
     ) {
+      newSchoolIdEl.val('');
+      // Clear out zip before saving as well
+      $('input[name="user[school_info_attributes][school_zip]"]').val('');
+    }
+    // Old school search flow
+    if (schoolData.ncesSchoolId === '-1') {
       const schoolIdEl = $(
         'input[name="user[school_info_attributes][school_id]"]'
       );
@@ -228,7 +245,7 @@ $(document).ready(() => {
 
   function renderSchoolInfo() {
     if (schoolInfoMountPoint) {
-      if (experiments.isEnabled(experiments.SCHOOL_ASSOCIATION_V2)) {
+      if (isInSchoolAssociationExperiment) {
         ReactDOM.render(
           <div style={{padding: 10}}>
             <SchoolDataInputs />

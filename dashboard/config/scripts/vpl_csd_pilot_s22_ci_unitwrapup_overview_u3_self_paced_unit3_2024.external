@@ -5,17 +5,13 @@ description 'description here'
 markdown <<MARKDOWN
 # Unit Wrap Up
 
-##### In the next section of this professional learning module, you will have the opportunity to see sample student projects as you begin to make plans for how you will implement Code.org's Interactive Animations and Games unit with your students.
+#### In the next section of this professional learning module, you will have the opportunity to see sample student projects as you begin to make plans for how you will implement Code.org's Interactive Animations and Games unit with your students.
 
-## You will:
+### **You will:**
 
-* ##### Explore end of chapter projects.
-* ##### Make a plan for implementing the unit with your students.
+* #### Explore end-of-chapter projects.
+* #### Make a plan for implementing the unit with your students.
+<br>
 
-### **Suggested time:** 10 minutes
-
-#### Let's keep learning! 
-
-
-
+#### **Suggested time:** 10 minutes
 MARKDOWN

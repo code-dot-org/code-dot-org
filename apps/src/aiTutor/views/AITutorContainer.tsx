@@ -1,8 +1,8 @@
 import classnames from 'classnames';
 import React, {useState} from 'react';
 import Draggable, {DraggableEventHandler} from 'react-draggable';
+import Button from '@cdo/apps/componentLibrary/button';
 
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
@@ -53,13 +53,14 @@ const AITutorContainer: React.FC<AITutorContainerProps> = ({
             <span>{aiTutorHeaderText}</span>
           </div>
           <div className={style.aiTutorHeaderRightSide}>
-            <button
-              type="button"
+            <Button
+              color="white"
+              icon={{iconName: 'times', iconStyle: 'solid'}}
+              type="tertiary"
+              isIconOnly={true}
               onClick={closeTutor}
-              className={classnames(style.buttonStyle, style.closeButton)}
-            >
-              <FontAwesome icon="xrk" className="" title="Close AI Tutor" />
-            </button>
+              size="s"
+            />
           </div>
         </div>
 

@@ -44,6 +44,10 @@ class DatasetList extends React.Component {
           color={Button.ButtonColor.blue}
           size={Button.ButtonSize.large}
         />
+        <p>
+          After adding a new dataset, you'll need to
+          <a href="./manifest/edit">edit the manifest</a>.
+        </p>
       </div>
     );
   }

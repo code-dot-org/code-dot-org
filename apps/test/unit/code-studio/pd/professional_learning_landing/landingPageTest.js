@@ -47,6 +47,7 @@ const DEFAULT_PROPS = {
   userPermissions: [],
   joinedStudentSections: [],
   joinedPlSections: [],
+  coursesAsFacilitator: [],
   plSectionIds: [],
   hiddenPlSectionIds: [],
 };
@@ -86,8 +87,6 @@ describe('LandingPage', () => {
     screen.getByTestId('enrolled-workshops-loader');
     expect(screen.queryByText(i18n.plLandingSelfPacedProgressHeading())).to.not
       .exist;
-    expect(screen.queryByText('Online Professional Learning Courses')).to.not
-      .exist;
     screen.getByText(i18n.plLandingStaticPLMidHighHeading());
   });
 
@@ -98,7 +97,6 @@ describe('LandingPage', () => {
     screen.getByText(i18n.plLandingStartSurvey());
     screen.getByTestId('enrolled-workshops-loader');
     screen.getByText(i18n.plLandingSelfPacedProgressHeading());
-    screen.getByText('Online Professional Learning Courses');
     screen.getByText(i18n.plLandingStaticPLMidHighHeading());
   });
 
@@ -109,7 +107,6 @@ describe('LandingPage', () => {
     screen.getByText(i18n.plLandingStartSurvey());
     screen.getByTestId('enrolled-workshops-loader');
     screen.getByText(i18n.plLandingSelfPacedProgressHeading());
-    screen.getByText('Online Professional Learning Courses');
     screen.getByText(i18n.plLandingStaticPLMidHighHeading());
   });
 
@@ -123,7 +120,6 @@ describe('LandingPage', () => {
     expect(screen.queryByText(i18n.plLandingStartSurvey())).to.not.exist;
     screen.getByTestId('enrolled-workshops-loader');
     screen.getByText(i18n.plLandingSelfPacedProgressHeading());
-    screen.getByText('Online Professional Learning Courses');
     screen.getByText(i18n.plLandingStaticPLMidHighHeading());
   });
 
@@ -259,11 +255,26 @@ describe('LandingPage', () => {
     renderDefault({
       userPermissions: ['facilitator'],
       workshopsAsFacilitator: [TEST_WORKSHOP],
+      coursesAsFacilitator: ['CS Discoveries', 'Computer Science A'],
     });
     fireEvent.click(screen.getByText(i18n.plLandingTabFacilitatorCenter()));
 
     // Last workshop survey banner
     screen.getByText(i18n.plLandingSubheading());
+
+    // Facilitator Resources
+    screen.getByText(i18n.plSectionsWorkshopTitle());
+    screen.getByText(
+      i18n.plSectionsFacilitatorResourcesTitle({
+        course_name: 'CSD',
+      })
+    );
+    screen.getByText(
+      i18n.plSectionsFacilitatorResourcesTitle({
+        course_name: 'CSA',
+      })
+    );
+    screen.getByText(i18n.plSectionsOnboardingTitle());
 
     // Instructor Professional Learning sections table
     screen.getByText(i18n.plSectionsInstructorTitle());
@@ -276,7 +287,9 @@ describe('LandingPage', () => {
     renderDefault({
       userPermissions: ['universal_instructor'],
     });
-    fireEvent.click(screen.getByText(i18n.plLandingTabInstructorCenter()));
+    fireEvent.click(
+      screen.getAllByText(i18n.plLandingTabInstructorCenter())[0]
+    );
 
     // Instructor Professional Learning sections table
     screen.getByText(i18n.plSectionsInstructorTitle());
@@ -301,7 +314,7 @@ describe('LandingPage', () => {
 
     // Regional Partner resource center
     screen.getByText(i18n.plSectionsRegionalPartnerApplicationTitle());
-    screen.getByText(i18n.plSectionsRegionalPartnerWorkshopTitle());
+    screen.getByText(i18n.plSectionsWorkshopTitle());
     screen.getByText(i18n.plSectionsRegionalPartnerPlaybookTitle());
 
     // Regional Partner workshop table
@@ -314,8 +327,11 @@ describe('LandingPage', () => {
       workshopsAsOrganizer: [TEST_WORKSHOP],
     });
     fireEvent.click(
-      screen.getByText(i18n.plLandingTabWorkshopOrganizerCenter())
+      screen.getAllByText(i18n.plLandingTabWorkshopOrganizerCenter())[0]
     );
+
+    // Workshop Organizer Resources
+    screen.getByText(i18n.plSectionsWorkshopResources());
 
     // Workshop Organizer workshop table
     screen.getByText('My Workshops');

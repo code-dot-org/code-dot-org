@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-12 21:58:00 UTC",
+    "serialized_at": "2024-05-09 17:47:15 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -83,6 +83,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-levelgroup_2024"
+        ],
         "progression": "Survey"
       },
       "bonus": false,
