@@ -354,10 +354,11 @@
       DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
       Engine: aurora-mysql
       DBParameterGroupName: default.aurora-mysql5.7 #Explicitly stop setting a custom Instance ParameterGroup.
-      EnablePerformanceInsights: <%= ['test', 'production'].include?(environment) %>
+<%      if ['test', 'production'].include?(environment) -%>
+      EnablePerformanceInsights: true
       PerformanceInsightsRetentionPeriod: <%= rack_env?(:production) ? 465 : 7 %>
+<%      end -%>
 <%    end -%>
-
   DBProxy:
     Type: AWS::RDS::DBProxy
     DependsOn: [WriterSQLUser, ReaderSQLUser]
