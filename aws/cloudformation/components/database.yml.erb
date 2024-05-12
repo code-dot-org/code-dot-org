@@ -336,8 +336,6 @@
       EnableIAMDatabaseAuthentication: true
       VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
       DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
-      PerformanceInsightsEnabled: <%= ['test', 'production'].include?(environment) %>
-      PerformanceInsightsRetentionPeriod: <%= rack_env?(:production) ? 465 : 7 %>
       EnableCloudwatchLogsExports:
         - general
         - audit
@@ -356,6 +354,8 @@
       DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
       Engine: aurora-mysql
       DBParameterGroupName: default.aurora-mysql5.7 #Explicitly stop setting a custom Instance ParameterGroup.
+      EnablePerformanceInsights: <%= ['test', 'production'].include?(environment) %>
+      PerformanceInsightsRetentionPeriod: <%= rack_env?(:production) ? 465 : 7 %>
 <%    end -%>
 
   DBProxy:
