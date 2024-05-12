@@ -357,9 +357,8 @@
 <%      if ['test', 'production'].include?(environment) -%>
       EnablePerformanceInsights: true
       PerformanceInsightsRetentionPeriod: <%= rack_env?(:production) ? 465 : 7 %>
-
 <%      end -%>
-
+<%    end -%>
   DBProxy:
     Type: AWS::RDS::DBProxy
     DependsOn: [WriterSQLUser, ReaderSQLUser]
