@@ -1,15 +1,16 @@
 name 'game_variables_match_condition_2024'
 title 'Match the code to the animation'
 height '200'
-question '![](https://images.code.org/fc9ce7945e934cbaa95ad46c34988dae-image-1709767957304.gif)'
-answer '![](https://images.code.org/6698ec412ee301462adf0b1981eb201a-image-1711145088166.jpg)'
-question '![](https://images.code.org/8dd2cd7fd35c125e7771cea0de8fb5d2-image-1715270087301.gif)'
-answer '![](https://images.code.org/0a0af041ba7ce8ac8fd713a44699931a-image-1715270187376.jpg)'
-question '![](https://images.code.org/7f5449b38d22c1b5958028cc57bbd4c6-image-1715269824487.gif)'
-answer '![](https://images.code.org/c846957180d7f468d41e18111a887f3d-image-1711145135983.jpg)'
+question '![](https://images.code.org/c2bc23e6741cf4d56429e9afbceb2c06-image-1715379511851.jpg)'
+answer '![](https://images.code.org/be7a48af8f98a58601bbc77616896ff9-image-1715379516509.jpg)'
+question '![](https://images.code.org/3ab41f167b6994734714071c9ae25b4c-image-1715379524754.jpg)'
+answer '![](https://images.code.org/924ce0f736d18092eafbb5ce51e6c0f1-image-1715379529970.jpg)'
+question '![](https://images.code.org/d41816d671e9b82d3cf764802e29dc1e-image-1715379533515.jpg)'
+answer '![](https://images.code.org/cdddd2dd3a55ba22e88da5c9c33a63e1-image-1715379537572.jpg)'
 
 markdown <<MARKDOWN
-Look at these coding blocks using variables. Match the correct code to the animation.
+Look at these coding blocks using conditionals. Match the correct code to the picture.
+
 
 MARKDOWN
 

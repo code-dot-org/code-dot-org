@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "elem-game-design",
-    "serialized_at": "2024-05-09 23:00:03 UTC",
+    "serialized_at": "2024-05-10 22:40:00 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -751,6 +751,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_design_make_grid_2024"
+        ],
         "progression": "Game Design Setup"
       },
       "bonus": false,
@@ -823,6 +826,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_design_behavior_grid_2024"
+        ],
         "progression": "Sprite Behaviors"
       },
       "bonus": false,
@@ -845,6 +851,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_design_video_lots_2024"
+        ],
         "progression": "Events"
       },
       "bonus": false,
@@ -917,6 +926,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_design_toolbox_object_2024"
+        ],
         "progression": "Events"
       },
       "bonus": false,
@@ -939,6 +951,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_design_remove_object_2024"
+        ],
         "progression": "Events"
       },
       "bonus": false,
@@ -986,6 +1001,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_design_change_costume_2024"
+        ],
         "progression": "Events"
       },
       "bonus": false,
@@ -1258,6 +1276,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_variables_match_condition_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2198,11 +2219,11 @@
     },
     {
       "name": "Game Design Slides",
-      "url": "https://docs.google.com/presentation/d/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/template/preview",
+      "url": "https://docs.google.com/presentation/d/1oLL-I07CwcEgRu7tFQl4gNCPVH3OFwkU1Zjz6dcxQ4E/template/preview",
       "key": "game_design_slides",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/export/pdf",
+        "download_url": "https://docs.google.com/presentation/d/1oLL-I07CwcEgRu7tFQl4gNCPVH3OFwkU1Zjz6dcxQ4E/export/pdf",
         "type": "Slides"
       },
       "seeding_key": {
