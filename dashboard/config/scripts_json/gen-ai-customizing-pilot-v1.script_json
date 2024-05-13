@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "gen-ai-customizing-pilot-v1",
-    "serialized_at": "2024-05-13 07:26:43 UTC",
+    "serialized_at": "2024-05-13 08:40:40 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -235,6 +235,7 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
+        "overview": "Students explore the impact of generative AI by participating in a collaborative game. Students take on a persona of someone impacted by generative AI to read a few articles and react in-character. Then, students form groups and are given a scenario involving their persona and generative AI. Working together, they come up with guidelines for how generative AI should be implemented in this scenario that includes the voices and perspectives of all stakeholders. Finally, students share their results with the class and reflect on this process."
       },
       "seeding_key": {
         "lesson.key": "lesson-11",
@@ -244,12 +245,13 @@
     },
     {
       "key": "lesson-12",
-      "name": "Project: Make your own Chatbot",
+      "name": "Project: Create a Personal Chatbot",
       "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
+        "overview": "In this lesson, students create their project for the unit. In the project, students create a chatbot that represents their personality and is an expert on a specific interest they care about. Using their newfound knowledge from this unit, students apply techniques to adjust the temperature, system prompt, and retrieval settings of a chatbot. After testing their chatbot, they create a model card and “publish” it so other users can interact with it."
       },
       "seeding_key": {
         "lesson.key": "lesson-12",
@@ -814,6 +816,7 @@
       "key": "ea47fd64-5376-42c3-a108-f616e8f4003d",
       "position": 1,
       "properties": {
+        "name": "Before the Lesson"
       },
       "seeding_key": {
         "lesson_activity.key": "ea47fd64-5376-42c3-a108-f616e8f4003d",
@@ -823,9 +826,38 @@
       }
     },
     {
+      "key": "f54dae80-f87d-4cba-bb25-856377b661f6",
+      "position": 2,
+      "properties": {
+        "duration": 40,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f54dae80-f87d-4cba-bb25-856377b661f6",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "17fbdc9f-3d42-481e-a51f-3b59f280bf3d",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "17fbdc9f-3d42-481e-a51f-3b59f280bf3d",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
       "key": "5c1162fa-b1d3-4fa1-b85d-dae0494d8928",
       "position": 1,
       "properties": {
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -839,7 +871,7 @@
       "key": "fbb3df49-9233-456c-8c23-7969ae01cd60",
       "position": 2,
       "properties": {
-        "duration": 45,
+        "duration": 40,
         "name": "Day 1"
       },
       "seeding_key": {
@@ -867,7 +899,7 @@
       "key": "6d8f0c19-dbc3-47bd-9cdc-c29d2687cca3",
       "position": 4,
       "properties": {
-        "duration": 45,
+        "duration": 40,
         "name": "Day 3"
       },
       "seeding_key": {
@@ -878,25 +910,11 @@
       }
     },
     {
-      "key": "a5d579ac-3fa9-4bce-8c0a-9efa0400dd4a",
+      "key": "a0db99ec-dbb6-499b-a61e-53a9c274ad51",
       "position": 5,
       "properties": {
-        "duration": 45,
-        "name": "Day 4"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "a5d579ac-3fa9-4bce-8c0a-9efa0400dd4a",
-        "lesson.key": "lesson-12",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "gen-ai-customizing-pilot-v1"
-      }
-    },
-    {
-      "key": "a0db99ec-dbb6-499b-a61e-53a9c274ad51",
-      "position": 6,
-      "properties": {
-        "duration": 45,
-        "name": "Day 5"
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "a0db99ec-dbb6-499b-a61e-53a9c274ad51",
@@ -907,7 +925,7 @@
     },
     {
       "key": "6af26dea-9f10-433b-b913-38581fe67f07",
-      "position": 7,
+      "position": 6,
       "properties": {
         "name": "Post-Pilot Feedback"
       },
@@ -2349,6 +2367,7 @@
       "key": "baaea6e1-33de-4fd9-bd3c-4d02642d8ef1",
       "position": 1,
       "properties": {
+        "description": "This activity is based on the [Societal Impact of Generative AI](https://studio.code.org/s/ai-ethics-2023/lessons/2) lesson, with the key difference being the number of scenarios. In the original lesson, there are 9 different scenarios that students can choose from to participate in, but in this lesson there is only one scenario (the medical one).\n\nThe original lesson is also designed to be an hour long. For this lesson, the warm-up has been removed to shorten the lesson.\n\nIf you would like to extend and enrich this lesson, consider exploring the other scenarios in the original lesson."
       },
       "seeding_key": {
         "activity_section.key": "baaea6e1-33de-4fd9-bd3c-4d02642d8ef1",
@@ -2356,9 +2375,81 @@
       }
     },
     {
+      "key": "cc6e03e8-0d36-41d7-bfcd-ab7d28093c0b",
+      "position": 1,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Preparing for the Activity:** This activity has several components that, when reading the lesson plan linearly, can be difficult to see how they all fit together. Here's the big picture behind this activity:\n- Students are [participating in a **collaborative game**](https://docs.google.com/document/d/1rqtfMZyn-UekUoVFgYCHyVqOa7StNY9-wl-FlLOaZqk/edit#heading=h.59k2gm16lgj2), where each person takes on a specific role or persona and they all have to work together to \"win\" against the scenario set out by the game. This is similar in spirit to board games like [Pandemic](https://boardgamegeek.com/boardgame/30549/pandemic) or [Forbidden Island](https://en.wikipedia.org/wiki/Forbidden_Island_(game))\n- Students will be in groups of 4, where all four people have taken on a persona [related to a specific scenario](https://docs.google.com/document/d/1Z9P0FYWMBDQguWedAGi541P-HYbRS1gbcjFbFxdpRSk/edit). Their goal will be to work together to come up with guidelines for Generative AI that try to satisfy the needs and goals of everyone in the group. \n  - For example: an actor, a producer, an audience member, and a costume designer must work together to come up with guidelines for use of Generative AI in movie productions.\n- Each student has a particular persona they can embody on a [Character Card](https://docs.google.com/document/d/1e0C1Tp1JhpnJNFjzlxI-bJpisZmZZe6uyglW0JgNm7s/edit). These cards include some baseline information about how this person might feel about generative AI, along with some news articles that students read and react to _as this character_.\n\n\nEven though the ultimate goal is to be in a group as a character solving a problem, the lesson plan introduces these steps in stages rather than explaining the full game all-at-once. First students are introduced to their character and read their news articles. Once they understand their character, then they form their groups and are given their scenario. And once they understand their scenario, they can begin the collaborative game of coming up with guidelines for generative AI."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "cc6e03e8-0d36-41d7-bfcd-ab7d28093c0b",
+        "lesson_activity.key": "f54dae80-f87d-4cba-bb25-856377b661f6"
+      }
+    },
+    {
+      "key": "eb84508b-08c5-4d95-b144-a2a0f514f5e2",
+      "position": 2,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1DewlLvcb9fzBC8_VamtfPq4JuOXSvK-a-fqollwA8YY/export/png?id=1DewlLvcb9fzBC8_VamtfPq4JuOXSvK-a-fqollwA8YY&pageid=g1413e1213c5_0_216\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> Distribute an individual <a href=\"https://docs.google.com/document/d/1e0C1Tp1JhpnJNFjzlxI-bJpisZmZZe6uyglW0JgNm7s/edit\" target=\"_blank\">Character Card</a> for each student. Ideally, students are in groups of 4 and each student gets a different persona.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Each one of you will now take on the persona of someone affected by generative AI. This person has a unique perspective on how generative AI could be helpful or harmful for them. To better understand their perspective and embody this persona, we're going to read a bit about them and add a few more details to the character card. Then, we're going to read some of the same articles they've been reading that are influencing their thoughts and opinions.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip: Embrace the Persona** - Encourage students to really take on the persona of their character. In the Character Cards, they can give their character a name and some backstory. The students will be communicating with their group as if they really are this character stakeholder. Encourage them to think like their character would about the problem."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "eb84508b-08c5-4d95-b144-a2a0f514f5e2",
+        "lesson_activity.key": "f54dae80-f87d-4cba-bb25-856377b661f6"
+      }
+    },
+    {
+      "key": "d19ff378-4188-4971-9138-fccfe2a4d83d",
+      "position": 3,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1DewlLvcb9fzBC8_VamtfPq4JuOXSvK-a-fqollwA8YY/export/png?id=1DewlLvcb9fzBC8_VamtfPq4JuOXSvK-a-fqollwA8YY&pageid=g2dba4f3bd7f_0_135\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through the card individually. The card also has a few blank spaces - you can fill these in with additional information about your fake character to make them your own!\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Monitor students as they read through their character persona. At this point, students are only getting familiar with their character - they do not need to start reading the articles on the bottom of the card yet\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1DewlLvcb9fzBC8_VamtfPq4JuOXSvK-a-fqollwA8YY/export/png?id=1DewlLvcb9fzBC8_VamtfPq4JuOXSvK-a-fqollwA8YY&pageid=g2dba4f3bd7f_0_154\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through the articles on the bottom of the card as if you were this character. Think about how they would react to what is happening in these articles. Think about how they would feel about what's happening - are there things happening that would benefit them? Or that would concern them? On the bottom of your character card, respond to the articles in character.\n\t\t<br />\n\t\t<br />(Optional) <i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> Digitally distribute the <a href=\"https://docs.google.com/document/d/1rPltcrLUsIKSmmpS5tyFfUyab0JI4ye-8raei_O_7ys/edit\" target=\"_blank\">News Articles resource</a>, which is a complete list of all the articles students are reading. This is an especially good option if you decided to physically distribute the character cards.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Monitor students as they read through the articles. As they begin answering questions, remind them that they are acting in-character. You may even encourage them to speak to you as if they were that character, acting out how they feel about these articles.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1DewlLvcb9fzBC8_VamtfPq4JuOXSvK-a-fqollwA8YY/export/png?id=1DewlLvcb9fzBC8_VamtfPq4JuOXSvK-a-fqollwA8YY&pageid=g2dba4f3bd7f_0_168\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Now that you're familiar with this person, here's the next step: each of you has been invited to a meeting at a big company to discuss how generative AI will be used in that company. Working together, you and three other people will need to come up with guidelines for how to use generative AI in a way that has the most benefit and the least amount of harm. The key to developing good guidelines is making sure each person's voice and perspective is represented in the decisions you make.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1DewlLvcb9fzBC8_VamtfPq4JuOXSvK-a-fqollwA8YY/export/png?id=1DewlLvcb9fzBC8_VamtfPq4JuOXSvK-a-fqollwA8YY&pageid=g2dba4f3bd7f_0_197\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> Hand out the <a href=\"https://docs.google.com/document/d/1nMp7SJSf_xX2U8MK-mI60NjwKkcUgXI5C2x2x1BLInk/edit\" target=\"_blank\">Generative AI Activity Instructions</a> resource to each student.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1DewlLvcb9fzBC8_VamtfPq4JuOXSvK-a-fqollwA8YY/export/png?id=1DewlLvcb9fzBC8_VamtfPq4JuOXSvK-a-fqollwA8YY&pageid=g2dba4f3bd7f_0_210\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the first page as a class so students understand the instructions. Emphasize that the goals is not to argue or have a debate, but instead to try and work together to find common ground. It's okay to disagree, but students should use that the find common ground that includes all perspectives rather than invalidate or dismiss a point of view.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1DewlLvcb9fzBC8_VamtfPq4JuOXSvK-a-fqollwA8YY/export/png?id=1DewlLvcb9fzBC8_VamtfPq4JuOXSvK-a-fqollwA8YY&pageid=g2dba4f3bd7f_0_226\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> Pass out the <a href=\"https://docs.google.com/document/d/1Z9P0FYWMBDQguWedAGi541P-HYbRS1gbcjFbFxdpRSk/edit\" target=\"_blank\">Generative AI Scenario</a> to each group. Groups should now have 3 handouts: the scenario, their character card, and the activity instructions.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1DewlLvcb9fzBC8_VamtfPq4JuOXSvK-a-fqollwA8YY/export/png?id=1DewlLvcb9fzBC8_VamtfPq4JuOXSvK-a-fqollwA8YY&pageid=gca418c6afa_0_1529\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students follow the steps on their instruction sheet and discuss as a group what their recommendations should be, taking into account the different needs of each person.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Monitor students as they have their discussions and come up with their recommendations.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip: Differentiation Options** - As a way to differentiate how students perform this task, consider two possible adaptations for how students create their recommendations:\n- Create a Comic Strip / Movie Script: Students can work individually to create an artistic representation of what this discussion would look like as the team comes up with their generative AI recommendations. This still lets students think through the push-and-pull of a collaborative decision, but can be accomplished individually\n- Act out a Skit: Students work in their group to come up with a skit that acts out the process of coming up with their generative AI recommendations. This still lets students engage in the push-and-pull of a collaborative decision, but ups the ante to a more performative or exaggerated presentation of their solution."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d19ff378-4188-4971-9138-fccfe2a4d83d",
+        "lesson_activity.key": "f54dae80-f87d-4cba-bb25-856377b661f6"
+      }
+    },
+    {
+      "key": "fcefbd93-5329-41c4-8ada-82acd07bb18d",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "fcefbd93-5329-41c4-8ada-82acd07bb18d",
+        "lesson_activity.key": "f54dae80-f87d-4cba-bb25-856377b661f6"
+      }
+    },
+    {
+      "key": "4dd6b7af-f3c0-4b82-ba22-a43d242b29aa",
+      "position": 1,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1DewlLvcb9fzBC8_VamtfPq4JuOXSvK-a-fqollwA8YY/export/png?id=1DewlLvcb9fzBC8_VamtfPq4JuOXSvK-a-fqollwA8YY&pageid=g1b0012b9552_0_972\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Choose 2 prompts below to respond to:\n\t\t<br />- What was the biggest challenge you successfully resolved?\n\t\t<br />- Whose needs were the easiest to meet?\n\t\t<br />- Which compromise are you proudest of?\n\t\t<br />- List what you felt were the top concerns/needs that needed to be met.\n\t\t<br />- What is your biggest concern about generative AI moving forward?\n\t\t<br />- What is your most exciting hope about generative AI moving forward?\n    </td>\n  </tr>\n\n</table>    \n    "
+      },
+      "seeding_key": {
+        "activity_section.key": "4dd6b7af-f3c0-4b82-ba22-a43d242b29aa",
+        "lesson_activity.key": "17fbdc9f-3d42-481e-a51f-3b59f280bf3d"
+      }
+    },
+    {
       "key": "95e65be9-05b8-483a-9e1d-609b303cf089",
       "position": 1,
       "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1UULzAD3keKLVfambWx223hZBENVljEkTZ7pdiXyKN24/export/png?id=1UULzAD3keKLVfambWx223hZBENVljEkTZ7pdiXyKN24&pageid=g2b5b268c506_0_173\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What’s something you think you’re obsessed with? That you know more about than anyone else you know?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This can be a fun, silly discussion meant to prime students for the project where they will choose a topic to develop a chatbot for.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1UULzAD3keKLVfambWx223hZBENVljEkTZ7pdiXyKN24/export/png?id=1UULzAD3keKLVfambWx223hZBENVljEkTZ7pdiXyKN24&pageid=g2b5b268c506_0_197\"></td>\n    <td style=\"width: 75%\">\n      <strong>Question of the Day:</strong> How can I make a personal chatbot that channels my personality and knowledge on a specific topic?\n    </td>\n  </tr>\n\n</table>    \n    "
       },
       "seeding_key": {
         "activity_section.key": "95e65be9-05b8-483a-9e1d-609b303cf089",
@@ -2369,6 +2460,7 @@
       "key": "1b525d19-085a-4ec9-bd4b-08149d2c6aa5",
       "position": 1,
       "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1UULzAD3keKLVfambWx223hZBENVljEkTZ7pdiXyKN24/export/png?id=1UULzAD3keKLVfambWx223hZBENVljEkTZ7pdiXyKN24&pageid=g1413e1213c5_0_216\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> Pass out the <a href=\"https://docs.google.com/document/d/1Nyz1VFJ4ApBGNc-G3AD_spUOIQb_NC41Zu_NOMcZMS0/edit\" target=\"_blank\">Project Guide - Demystifying AI</a>\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1UULzAD3keKLVfambWx223hZBENVljEkTZ7pdiXyKN24/export/png?id=1UULzAD3keKLVfambWx223hZBENVljEkTZ7pdiXyKN24&pageid=g2dbaca4c0de_0_10\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the overview of the project. Students can read individually, or you can read the overview as a class.\n\t\t<br />\n\t\t<br />Students will be making a chatbot to speak on a subject or topic they care about and have deep knowledge of. This chatbot can act as their “agent” to answer questions and educate the world on your particular topic.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1UULzAD3keKLVfambWx223hZBENVljEkTZ7pdiXyKN24/export/png?id=1UULzAD3keKLVfambWx223hZBENVljEkTZ7pdiXyKN24&pageid=g2dbaca4c0de_0_27\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 1: Prepare your Topic\n\t\t<br />\n\t\t<br />Students will need to:\n\t\t<br />A) Decide on the topic you would like to design your chatbot around. \n\t\t<br />B) Identify the specific knowledge you will add to your chatbot\n\t\t<br />C) Decide on the specific guidance you will give to your chatbot\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Give ample time for students to decide on their topic and begin planning how they will develop their chatbot. This section of the guide will help students later when they need to make decisions about their system prompt, retrieval, and temperature.\n    </td>\n  </tr>\n\n</table>    \n    "
       },
       "seeding_key": {
         "activity_section.key": "1b525d19-085a-4ec9-bd4b-08149d2c6aa5",
@@ -2387,31 +2479,54 @@
       }
     },
     {
-      "key": "f6e05632-f2a1-4f84-98d5-1fb1de438d8b",
-      "position": 1,
+      "key": "fa497e2f-ce51-4382-b821-2564ba51cfdb",
+      "position": 2,
       "properties": {
         "progression_name": "Retrieval"
       },
       "seeding_key": {
-        "activity_section.key": "f6e05632-f2a1-4f84-98d5-1fb1de438d8b",
-        "lesson_activity.key": "6d8f0c19-dbc3-47bd-9cdc-c29d2687cca3"
+        "activity_section.key": "fa497e2f-ce51-4382-b821-2564ba51cfdb",
+        "lesson_activity.key": "20056d3c-e87e-4dad-8e36-44dcc1f90015"
       }
     },
     {
-      "key": "6a32462b-adbf-4126-af7e-b153b355cfb5",
+      "key": "fe5abc49-1234-4bc6-9e54-9ae80039c496",
+      "position": 3,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1UULzAD3keKLVfambWx223hZBENVljEkTZ7pdiXyKN24/export/png?id=1UULzAD3keKLVfambWx223hZBENVljEkTZ7pdiXyKN24&pageid=g270fde699fd_0_0\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson 13 Level 1.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 2: Prompt Engineering & Temperature. Students will be setting the system prompt and temperature and testing the chatbot, recording their data on the project guide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1UULzAD3keKLVfambWx223hZBENVljEkTZ7pdiXyKN24/export/png?id=1UULzAD3keKLVfambWx223hZBENVljEkTZ7pdiXyKN24&pageid=g270fde699fd_0_200\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson 13 Level 2.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 3: Retrieval. Students will be adding their retrieval and testing the chatbot, recording their data on the project guide.\n    </td>\n  </tr>\n\n</table>    \n    "
+      },
+      "seeding_key": {
+        "activity_section.key": "fe5abc49-1234-4bc6-9e54-9ae80039c496",
+        "lesson_activity.key": "20056d3c-e87e-4dad-8e36-44dcc1f90015"
+      }
+    },
+    {
+      "key": "4609e828-d2e0-45fa-bbc8-d2e16bfb7ec0",
       "position": 1,
       "properties": {
         "progression_name": "Model Card"
       },
       "seeding_key": {
-        "activity_section.key": "6a32462b-adbf-4126-af7e-b153b355cfb5",
-        "lesson_activity.key": "a5d579ac-3fa9-4bce-8c0a-9efa0400dd4a"
+        "activity_section.key": "4609e828-d2e0-45fa-bbc8-d2e16bfb7ec0",
+        "lesson_activity.key": "6d8f0c19-dbc3-47bd-9cdc-c29d2687cca3"
+      }
+    },
+    {
+      "key": "3d5cbbe5-29ac-4496-91cf-b5c7b2708a52",
+      "position": 2,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1UULzAD3keKLVfambWx223hZBENVljEkTZ7pdiXyKN24/export/png?id=1UULzAD3keKLVfambWx223hZBENVljEkTZ7pdiXyKN24&pageid=g2dbaca4c0de_0_43\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 4: Testing\n\t\t<br />\n\t\t<br />Students will be testing their chatbot to and determining if it accurately reflects their interest and personality accurately.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1UULzAD3keKLVfambWx223hZBENVljEkTZ7pdiXyKN24/export/png?id=1UULzAD3keKLVfambWx223hZBENVljEkTZ7pdiXyKN24&pageid=g270fde699fd_0_237\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson 13 Level 3.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 5: Model Card & Publish. Students will be adding their model card information to their chatbot and then “publishing”\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1UULzAD3keKLVfambWx223hZBENVljEkTZ7pdiXyKN24/export/png?id=1UULzAD3keKLVfambWx223hZBENVljEkTZ7pdiXyKN24&pageid=g1413e1213c5_0_280\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> (Optional) Gallery Walk. Have students place their chatbots in “User View” where others can interact. Have students interact with their peers work and leave post-it notes with positive feedback starting with “I Like…” or “I Wish…”\n    </td>\n  </tr>\n\n</table>    \n    "
+      },
+      "seeding_key": {
+        "activity_section.key": "3d5cbbe5-29ac-4496-91cf-b5c7b2708a52",
+        "lesson_activity.key": "6d8f0c19-dbc3-47bd-9cdc-c29d2687cca3"
       }
     },
     {
       "key": "70c1abc1-518e-4212-8dff-f790c0dbe83e",
       "position": 1,
       "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1UULzAD3keKLVfambWx223hZBENVljEkTZ7pdiXyKN24/export/png?id=1UULzAD3keKLVfambWx223hZBENVljEkTZ7pdiXyKN24&pageid=g1b0012b9552_0_972\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students complete Step 6: Reflect.\n\t\t<br />\n\t\t<br />Students will answer three reflection questions on the final page of the project guide\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1UULzAD3keKLVfambWx223hZBENVljEkTZ7pdiXyKN24/export/png?id=1UULzAD3keKLVfambWx223hZBENVljEkTZ7pdiXyKN24&pageid=g1b0012b9552_0_737\"></td>\n    <td style=\"width: 75%\">\n      <strong>Question of the Day:</strong>\n\t\t<br />\n\t\t<br />Pilot Survey Feedback: Please encourage students to submit feedback to the Code.org Curriculum Writers via the QR code on the slide. Alternatively, you can provide students with the pre-filled link\n    </td>\n  </tr>\n\n</table>    \n    "
       },
       "seeding_key": {
         "activity_section.key": "70c1abc1-518e-4212-8dff-f790c0dbe83e",
@@ -4369,9 +4484,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "gen-ai-customizing-project-L2"
-        ],
         "progression": "Retrieval"
       },
       "bonus": false,
@@ -4382,7 +4494,7 @@
         "lesson.key": "lesson-12",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "gen-ai-customizing-pilot-v1",
-        "activity_section.key": "f6e05632-f2a1-4f84-98d5-1fb1de438d8b"
+        "activity_section.key": "fa497e2f-ce51-4382-b821-2564ba51cfdb"
       },
       "level_keys": [
         "gen-ai-customizing-project-L2"
@@ -4394,9 +4506,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "gen-ai-customizing-project-L3"
-        ],
         "progression": "Model Card"
       },
       "bonus": false,
@@ -4407,7 +4516,7 @@
         "lesson.key": "lesson-12",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "gen-ai-customizing-pilot-v1",
-        "activity_section.key": "6a32462b-adbf-4126-af7e-b153b355cfb5"
+        "activity_section.key": "4609e828-d2e0-45fa-bbc8-d2e16bfb7ec0"
       },
       "level_keys": [
         "gen-ai-customizing-project-L3"
@@ -5372,7 +5481,7 @@
         "lesson.key": "lesson-12",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "gen-ai-customizing-pilot-v1",
-        "activity_section.key": "f6e05632-f2a1-4f84-98d5-1fb1de438d8b"
+        "activity_section.key": "fa497e2f-ce51-4382-b821-2564ba51cfdb"
       }
     },
     {
@@ -5384,7 +5493,7 @@
         "lesson.key": "lesson-12",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "gen-ai-customizing-pilot-v1",
-        "activity_section.key": "6a32462b-adbf-4126-af7e-b153b355cfb5"
+        "activity_section.key": "4609e828-d2e0-45fa-bbc8-d2e16bfb7ec0"
       }
     }
   ],
@@ -5448,6 +5557,42 @@
       }
     },
     {
+      "name": "Activity Instructions",
+      "url": "https://docs.google.com/document/d/1nMp7SJSf_xX2U8MK-mI60NjwKkcUgXI5C2x2x1BLInk/edit#heading=h.59k2gm16lgj2",
+      "key": "activity_instructions",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "activity_instructions"
+      }
+    },
+    {
+      "name": "AI Scenario",
+      "url": "https://docs.google.com/document/d/1Z9P0FYWMBDQguWedAGi541P-HYbRS1gbcjFbFxdpRSk/edit",
+      "key": "ai_scenario",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "ai_scenario"
+      }
+    },
+    {
+      "name": "Character Cards",
+      "url": "https://docs.google.com/document/d/1e0C1Tp1JhpnJNFjzlxI-bJpisZmZZe6uyglW0JgNm7s/edit",
+      "key": "character_cards",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "character_cards"
+      }
+    },
+    {
       "name": "Chatbots in Society",
       "url": "https://docs.google.com/presentation/d/1DewlLvcb9fzBC8_VamtfPq4JuOXSvK-a-fqollwA8YY/template/preview",
       "key": "chatbots_in_society",
@@ -5472,7 +5617,32 @@
       }
     },
     {
-      "name": "Project: Make your own Chatbot",
+      "name": "News Articles",
+      "url": "https://docs.google.com/document/d/1rPltcrLUsIKSmmpS5tyFfUyab0JI4ye-8raei_O_7ys/edit",
+      "key": "news_articles",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "news_articles"
+      }
+    },
+    {
+      "name": "Project - Create a Personal Chatbot",
+      "url": "https://docs.google.com/document/d/1Nyz1VFJ4ApBGNc-G3AD_spUOIQb_NC41Zu_NOMcZMS0/edit",
+      "key": "project_-_create_a_personal_chatbot",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "project_-_create_a_personal_chatbot"
+      }
+    },
+    {
+      "name": "Project: Create a Personal Chatbot",
       "url": "https://docs.google.com/presentation/d/1UULzAD3keKLVfambWx223hZBENVljEkTZ7pdiXyKN24/template/preview",
       "key": "project_make_your_own_chatbot",
       "properties": {
@@ -5572,7 +5742,37 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-11",
+        "resource.key": "activity_instructions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "ai_scenario"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "character_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
         "resource.key": "chatbots_in_society"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "news_articles"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "project_-_create_a_personal_chatbot"
       }
     },
     {
