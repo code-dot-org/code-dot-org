@@ -1,5 +1,6 @@
-import {BlocklyWrapperType, ExtendedBlock} from '@cdo/apps/blockly/types';
 import {Block} from 'blockly';
+
+import {BlocklyWrapperType, ExtendedBlock} from '@cdo/apps/blockly/types';
 
 export default function initializeGenerator(
   blocklyWrapper: BlocklyWrapperType

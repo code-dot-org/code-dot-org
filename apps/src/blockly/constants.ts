@@ -1,4 +1,5 @@
 import {makeEnum} from '@cdo/apps/utils';
+
 import {parseElement as parseXmlElement} from '../xml';
 
 export enum BlocklyVersion {

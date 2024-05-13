@@ -1,6 +1,7 @@
 import GoogleBlockly from 'blockly/core';
-import CdoPathObject from './cdoPathObjectZelos';
 import {BlockStyle} from 'blockly/core/theme';
+
+import CdoPathObject from './cdoPathObjectZelos';
 
 export default class CdoRendererZelos extends GoogleBlockly.zelos.Renderer {
   /**
