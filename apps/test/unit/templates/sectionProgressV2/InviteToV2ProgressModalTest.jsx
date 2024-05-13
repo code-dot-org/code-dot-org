@@ -15,7 +15,7 @@ const DEFAULT_PROPS = {
   setDateProgressTableInvitationDelayed: () => {},
 };
 
-describe('UnconnectedInviteToV2ProgressModal', () => {
+describe('InviteToV2ProgressModal', () => {
   let postStub;
 
   beforeEach(() => {
