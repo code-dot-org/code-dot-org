@@ -527,8 +527,4 @@ module UsersHelper
 
     Policies::Lti.lti?(current_user)
   end
-
-  def country_code(user, request)
-    user.country_code.presence || request.country.to_s.upcase
-  end
 end

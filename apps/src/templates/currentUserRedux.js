@@ -113,7 +113,6 @@ const initialState = {
   under13: true,
   over21: false,
   childAccountComplianceState: null,
-  countryCode: null,
   usStateCode: null,
 };
 
@@ -230,7 +229,6 @@ export default function currentUser(state = initialState, action) {
       date_progress_table_invitation_last_delayed,
       has_seen_progress_table_v2_invitation,
       child_account_compliance_state,
-      country_code,
       us_state_code,
     } = action.serverUser;
     analyticsReport.setUserProperties(
@@ -264,7 +262,6 @@ export default function currentUser(state = initialState, action) {
         date_progress_table_invitation_last_delayed,
       hasSeenProgressTableInvite: has_seen_progress_table_v2_invitation,
       childAccountComplianceState: child_account_compliance_state,
-      countryCode: country_code,
       usStateCode: us_state_code,
     };
   }
