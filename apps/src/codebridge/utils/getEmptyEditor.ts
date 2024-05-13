@@ -3,9 +3,7 @@ import {ConfigType} from '@codebridge/types';
 import {DefaultEmptyEditor, BlankEmptyEditor} from '../DefaultEmptyEditors';
 
 export const getEmptyEditor = (config: ConfigType) => {
-  if (config.EmptyEditorComponent) {
-    return config.EmptyEditorComponent;
-  } else if (config.blankEmptyEditor) {
+  if (config.blankEmptyEditor) {
     return BlankEmptyEditor;
   } else {
     return DefaultEmptyEditor;
