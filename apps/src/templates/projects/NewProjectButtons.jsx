@@ -117,6 +117,10 @@ const PROJECT_INFO = {
     label: i18n.projectTypePoetry(),
     thumbnail: '/shared/images/fill-70x70/courses/logo_poetry.png',
   },
+  music: {
+    label: i18n.projectTypeMusic(),
+    thumbnail: '/shared/images/fill-70x70/courses/logo_music.png',
+  },
 };
 
 const TILES_PER_ROW = 4;

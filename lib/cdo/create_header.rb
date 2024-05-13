@@ -56,6 +56,7 @@ class CreateHeader
       everyone_entries + applab_gamelab
 
     entries << "dance"
+    entries << "music"
 
     if options[:project_type] && !(entries.include? options[:project_type])
       entries.unshift(options[:project_type])
