@@ -1,6 +1,6 @@
-import React, {useState, useEffect, useReducer, useMemo} from 'react';
-import PropTypes from 'prop-types';
 import moment from 'moment';
+import PropTypes from 'prop-types';
+import React, {useState, useEffect, useReducer, useMemo} from 'react';
 // eslint-disable-next-line no-restricted-imports
 import {
   Col,
@@ -11,24 +11,23 @@ import {
   Fade,
 } from 'react-bootstrap';
 
-import {getStore} from '@cdo/apps/redux';
-import usePrevious from '@cdo/apps/util/usePrevious';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import i18n from '@cdo/locale';
-import currentLocale from '@cdo/apps/util/currentLocale';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
-import Skeleton from '@cdo/apps/util/loadingSkeleton';
-import Button from '@cdo/apps/templates/Button';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import newRequestImg from '@cdo/static/common_images/penguin/yelling.png';
-import updateRequestImg from '@cdo/static/common_images/penguin/dancing.png';
-
+import {getStore} from '@cdo/apps/redux';
 import parentalPermissionRequestReducer, {
   REQUEST_PARENTAL_PERMISSION_SUCCESS,
   fetchPendingPermissionRequest,
   requestParentalPermission,
 } from '@cdo/apps/redux/parentalPermissionRequestReducer';
+import Button from '@cdo/apps/templates/Button';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import currentLocale from '@cdo/apps/util/currentLocale';
+import Skeleton from '@cdo/apps/util/loadingSkeleton';
+import usePrevious from '@cdo/apps/util/usePrevious';
+import i18n from '@cdo/locale';
+import updateRequestImg from '@cdo/static/common_images/penguin/dancing.png';
+import newRequestImg from '@cdo/static/common_images/penguin/yelling.png';
 
 import './style.scss';
 
