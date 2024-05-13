@@ -245,24 +245,6 @@ const CustomizableCurriculumCatalogCard = ({
   };
 
   if (wide) {
-    console.log(style.wideCard);
-    const subjectsAndTopicsTagList = [];
-    if (subjectsAndTopics.length >= 1) {
-      const firstTag = subjectsAndTopics[0];
-      subjectsAndTopicsTagList.push({
-        label: firstTag,
-        tooltipContent: firstTag,
-        toolTipId: firstTag.replace(/s+/g, '-').toLowerCase(),
-      });
-    }
-    if (subjectsAndTopics.length > 1) {
-      const remainingTags = subjectsAndTopics.slice(1);
-      subjectsAndTopicsTagList.push({
-        label: `+${remainingTags.length}`,
-        tooltipContent: remainingTags.join(', '),
-        toolTipId: 'remaining-labels-tooltip',
-      });
-    }
     return (
       <div className={style.wideCard}>
         <img src={imageSrc} alt={imageAltText} className={style.wideCardImg} />
@@ -314,7 +296,7 @@ const CustomizableCurriculumCatalogCard = ({
                 <Button
                   color={Button.ButtonColor.brandSecondaryDefault}
                   type="button"
-                  onClick={() => handleClickAssign('top-card')}
+                  onClick={() => handleClickAssign('wide-card')}
                   aria-label={assignButtonDescription}
                   text={assignButtonText}
                   className={style.buttonFlex}
