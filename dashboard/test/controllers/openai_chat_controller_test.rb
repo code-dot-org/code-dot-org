@@ -164,8 +164,8 @@ class OpenaiChatControllerTest < ActionController::TestCase
     expected_content = "Content of the system prompt file"
     Rails.stubs(:env).returns(ActiveSupport::StringInquirer.new("production"))
 
-    CDO.shared_cache.stubs(:read).with("s3_file_#{key_path}").returns(nil)
-    CDO.shared_cache.expects(:write).with("s3_file_#{key_path}", expected_content, expires_in: 1.hour)
+    CDO.shared_cache.stubs(:read).with("s3_file:cdo-ai/#{key_path}").returns(nil)
+    CDO.shared_cache.expects(:write).with("s3_file:cdo-ai/#{key_path}", expected_content, expires_in: 1.hour)
 
     assert_equal expected_content, @controller.send(:read_file_from_s3, key_path)
   end
@@ -174,7 +174,7 @@ class OpenaiChatControllerTest < ActionController::TestCase
     key_path = OpenaiChatController::S3_TUTOR_SYSTEM_PROMPT_PATH
     cached_content = "Cached system prompt"
     Rails.stubs(:env).returns(ActiveSupport::StringInquirer.new("production"))
-    CDO.shared_cache.stubs(:read).with("s3_file_#{key_path}").returns(cached_content)
+    CDO.shared_cache.stubs(:read).with("s3_file:cdo-ai/#{key_path}").returns(cached_content)
 
     assert_equal cached_content, @controller.send(:read_file_from_s3, key_path)
   end
