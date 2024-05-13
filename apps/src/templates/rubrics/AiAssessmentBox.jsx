@@ -7,6 +7,8 @@ import {
   BodyFourText,
 } from '@cdo/apps/componentLibrary/typography';
 import EditorAnnotator from '@cdo/apps/EditorAnnotator';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
@@ -15,13 +17,23 @@ import AiAssessmentFeedbackContext from './AiAssessmentFeedbackContext';
 import AiAssessmentFeedbackRadio from './AiAssessmentFeedbackRadio';
 import AiConfidenceBox from './AiConfidenceBox';
 import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
-import {aiEvaluationShape, aiEvidenceShape} from './rubricShapes';
+import {
+  aiEvaluationShape,
+  aiEvidenceShape,
+  learningGoalShape,
+  reportingDataShape,
+  studentLevelInfoShape,
+} from './rubricShapes';
 
 import style from './rubrics.module.scss';
 
 export default function AiAssessmentBox({
   isAiAssessed,
+  learningGoals,
+  currentLearningGoal,
+  reportingData,
   studentName,
+  studentLevelInfo,
   aiUnderstandingLevel,
   aiConfidence,
   aiEvalInfo,
@@ -49,9 +61,22 @@ export default function AiAssessmentBox({
       : i18n.aiAssessmentDoesNotMeet();
   };
 
+  const onEvidenceLineNumberClick = () => {
+    // When somebody clicks on the line number embedded in the evidence line,
+    // record that event alongside information about the learning goal.
+    const eventName = EVENTS.TA_RUBRIC_EVIDENCE_GOTO_CLICKED;
+    analyticsReporter.sendEvent(eventName, {
+      ...(reportingData || {}),
+      learningGoalKey: learningGoals[currentLearningGoal].key,
+      learningGoal: learningGoals[currentLearningGoal].learningGoal,
+      studentId: !!studentLevelInfo ? studentLevelInfo.user_id : '',
+    });
+  };
+
   // When a line number is clicked in the evidence listing
   const lineNumberClickHandler = (lineNumber, e) => {
     e.preventDefault();
+    onEvidenceLineNumberClick();
     EditorAnnotator.scrollToLine(lineNumber);
   };
 
@@ -152,7 +177,11 @@ export default function AiAssessmentBox({
 
 AiAssessmentBox.propTypes = {
   isAiAssessed: PropTypes.bool.isRequired,
+  learningGoals: PropTypes.arrayOf(learningGoalShape),
+  currentLearningGoal: PropTypes.number,
+  reportingData: reportingDataShape,
   studentName: PropTypes.string,
+  studentLevelInfo: studentLevelInfoShape,
   aiUnderstandingLevel: PropTypes.number,
   aiConfidence: PropTypes.number,
   aiEvalInfo: aiEvaluationShape,

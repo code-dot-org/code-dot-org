@@ -126,9 +126,10 @@ export function clearAnnotations() {
  *
  * @param {string} evidence - A text block described above.
  * @param {string} observations - The text block for the overall observations, if needed.
+ * @param {function} hoverCallback - A function to call when the tooltip is opened.
  * @returns {Array} The ordered list of annotations.
  */
-export function annotateLines(evidence, observations) {
+export function annotateLines(evidence, observations, hoverCallback) {
   let ret = [];
 
   // When we fail to find specific instances of evidence, we use the
@@ -203,7 +204,8 @@ export function annotateLines(evidence, observations) {
           'INFO',
           ai_rubric_cyan,
           infoIcon,
-          tipStyle
+          tipStyle,
+          hoverCallback
         );
         for (let i = position.firstLine; i <= position.lastLine; i++) {
           EditorAnnotator.highlightLine(i, ai_rubric_cyan);
@@ -230,7 +232,8 @@ export function annotateLines(evidence, observations) {
         'INFO',
         ai_rubric_cyan,
         infoIcon,
-        tipStyle
+        tipStyle,
+        hoverCallback
       );
       for (let i = lineNumber; i <= lastLineNumber; i++) {
         EditorAnnotator.highlightLine(i, ai_rubric_cyan);
@@ -526,13 +529,26 @@ export default function LearningGoals({
   };
 
   const aiEvidence = useMemo(() => {
+    const onEvidenceTooltipOpened = () => {
+      // When the tooltip is opened, we will record that this happened alongside
+      // information about the learning goal.
+      const eventName = EVENTS.TA_RUBRIC_EVIDENCE_TOOLTIP_HOVERED;
+      analyticsReporter.sendEvent(eventName, {
+        ...(reportingData || {}),
+        learningGoalKey: learningGoals[currentLearningGoal].key,
+        learningGoal: learningGoals[currentLearningGoal].learningGoal,
+        studentId: !!studentLevelInfo ? studentLevelInfo.user_id : '',
+      });
+    };
+
     // Annotate the lines based on the AI observation
     clearAnnotations();
 
     if (!!aiEvalInfo && !productTour) {
       const annotations = annotateLines(
         aiEvalInfo.evidence,
-        aiEvalInfo.observations
+        aiEvalInfo.observations,
+        onEvidenceTooltipOpened
       );
       // Scroll to first evidence, if possible
       if (annotations[0]?.firstLine) {
@@ -549,7 +565,14 @@ export default function LearningGoals({
       ];
     }
     return [];
-  }, [aiEvalInfo, productTour]);
+  }, [
+    aiEvalInfo,
+    productTour,
+    currentLearningGoal,
+    learningGoals,
+    reportingData,
+    studentLevelInfo,
+  ]);
 
   const onCarouselPress = buttonValue => {
     if (!productTour) {
@@ -717,6 +740,10 @@ export default function LearningGoals({
                         isAiAssessed={
                           learningGoals[currentLearningGoal].aiEnabled
                         }
+                        currentLearningGoal={currentLearningGoal}
+                        learningGoals={learningGoals}
+                        reportingData={reportingData}
+                        studentLevelInfo={studentLevelInfo}
                         studentName={studentLevelInfo.name}
                         aiConfidence={aiConfidence}
                         aiUnderstandingLevel={aiEvalInfo.understanding}
