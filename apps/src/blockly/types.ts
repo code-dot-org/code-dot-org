@@ -1,4 +1,8 @@
 import {
+  ObservableParameterModel,
+  ObservableProcedureModel,
+} from '@blockly/block-shareable-procedures';
+import {
   Block,
   BlockSvg,
   BlocklyOptions,
@@ -14,36 +18,33 @@ import {
   Xml,
 } from 'blockly';
 import GoogleBlockly from 'blockly/core';
+import {Abstract} from 'blockly/core/events/events_abstract';
+import {Field, FieldProto} from 'blockly/core/field';
+import {IProcedureBlock, IProcedureModel} from 'blockly/core/procedures';
+import {ProcedureSerializer} from 'blockly/core/serialization/procedures';
+import {ToolboxDefinition} from 'blockly/core/utils/toolbox';
 import {javascriptGenerator} from 'blockly/javascript';
+
+import BlockSvgFrame from './addons/blockSvgFrame';
+import BlockSvgLimitIndicator from './addons/blockSvgLimitIndicator';
+import CdoFieldAngleDropdown from './addons/cdoFieldAngleDropdown';
+import CdoFieldAngleTextInput from './addons/cdoFieldAngleTextInput';
+import CdoFieldAnimationDropdown from './addons/cdoFieldAnimationDropdown';
+import CdoFieldBehaviorPicker from './addons/cdoFieldBehaviorPicker';
+import {CdoFieldBitmap} from './addons/cdoFieldBitmap';
+import CdoFieldButton from './addons/cdoFieldButton';
+import CdoFieldFlyout from './addons/cdoFieldFlyout';
+import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
+import CdoFieldToggle from './addons/cdoFieldToggle';
+import CdoFieldVariable from './addons/cdoFieldVariable';
+import FunctionEditor from './addons/functionEditor';
+import WorkspaceSvgFrame from './addons/workspaceSvgFrame';
 import {
   BLOCK_TYPES,
   BlocklyVersion,
   Themes,
   WORKSPACE_EVENTS,
 } from './constants';
-import {Field, FieldProto} from 'blockly/core/field';
-import CdoFieldAnimationDropdown from './addons/cdoFieldAnimationDropdown';
-import CdoFieldButton from './addons/cdoFieldButton';
-import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
-import CdoFieldToggle from './addons/cdoFieldToggle';
-import CdoFieldFlyout from './addons/cdoFieldFlyout';
-import {CdoFieldBitmap} from './addons/cdoFieldBitmap';
-import {ProcedureSerializer} from 'blockly/core/serialization/procedures';
-import {
-  ObservableParameterModel,
-  ObservableProcedureModel,
-} from '@blockly/block-shareable-procedures';
-import {Abstract} from 'blockly/core/events/events_abstract';
-import FunctionEditor from './addons/functionEditor';
-import WorkspaceSvgFrame from './addons/workspaceSvgFrame';
-import {IProcedureBlock, IProcedureModel} from 'blockly/core/procedures';
-import BlockSvgFrame from './addons/blockSvgFrame';
-import {ToolboxDefinition} from 'blockly/core/utils/toolbox';
-import CdoFieldVariable from './addons/cdoFieldVariable';
-import CdoFieldBehaviorPicker from './addons/cdoFieldBehaviorPicker';
-import CdoFieldAngleDropdown from './addons/cdoFieldAngleDropdown';
-import CdoFieldAngleTextInput from './addons/cdoFieldAngleTextInput';
-import BlockSvgLimitIndicator from './addons/blockSvgLimitIndicator';
 
 export interface BlockDefinition {
   category: string;

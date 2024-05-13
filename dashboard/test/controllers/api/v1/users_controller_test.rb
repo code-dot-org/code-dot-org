@@ -87,16 +87,16 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     refute @user.show_progress_table_v2
   end
 
-  test 'a post request to set_progress_table_timestamp updates appropriate timestamp' do
+  test 'a post request to show_progress_table_v2 updates appropriate timestamp' do
     sign_in(@user)
     assert_nil @user.progress_table_v2_timestamp
-    post :post_set_progress_table_timestamp, params: {user_id: 'me', is_v2_table: true}
+    post :post_show_progress_table_v2, params: {user_id: 'me', show_progress_table_v2: true}
     assert_response :success
     @user.reload
     assert @user.progress_table_v2_timestamp
     assert_nil @user.progress_table_v1_timestamp
 
-    post :post_set_progress_table_timestamp, params: {user_id: 'me', is_v2_table: false}
+    post :post_show_progress_table_v2, params: {user_id: 'me', show_progress_table_v2: false}
     assert_response :success
     @user.reload
     assert @user.progress_table_v2_timestamp

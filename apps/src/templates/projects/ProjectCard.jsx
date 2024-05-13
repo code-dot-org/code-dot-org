@@ -1,16 +1,18 @@
 /* eslint-disable react/jsx-no-target-blank */
 import PropTypes from 'prop-types';
 import React from 'react';
-import color from '../../util/color';
-import i18n from '@cdo/locale';
-import {studio} from '@cdo/apps/lib/util/urlHelpers';
+
 import fontConstants from '@cdo/apps/fontConstants';
+import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import i18n from '@cdo/locale';
+
+import color from '../../util/color';
+import {UnlocalizedTimeAgo} from '../TimeAgo';
+
 import style from './project-card.module.scss';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
-
-import {UnlocalizedTimeAgo} from '../TimeAgo';
 
 export default class ProjectCard extends React.Component {
   static propTypes = {

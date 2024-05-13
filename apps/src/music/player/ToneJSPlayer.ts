@@ -167,7 +167,10 @@ class ToneJSPlayer implements AudioPlayer {
       return;
     }
 
-    const playbackRate = Transport.bpm.value / sample.originalBpm;
+    const playbackRate = sample.disableTempoAdjustment
+      ? 1
+      : Transport.bpm.value / sample.originalBpm;
+
     const player = this.createPlayer(
       buffer,
       playbackRate,

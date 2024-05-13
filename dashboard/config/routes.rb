@@ -271,7 +271,9 @@ Dashboard::Application.routes.draw do
 
     # Get or create a project for the given level_id. Optionally, the request
     # can include script_id to get or create a project for the level and script.
-    get "projects(/script/:script_id)/level/:level_id", to: 'projects#get_or_create_for_level'
+    # Optionally, the request can include user_id to get a project for another user,
+    # like a teacher viewing a student's work.
+    get "projects(/script/:script_id)/level/:level_id(/user/:user_id)", to: 'projects#get_or_create_for_level'
 
     post '/locale', to: 'home#set_locale', as: 'locale'
 
@@ -912,7 +914,6 @@ Dashboard::Application.routes.draw do
         post 'users/sort_by_family_name', to: 'users#post_sort_by_family_name'
 
         post 'users/show_progress_table_v2', to: 'users#post_show_progress_table_v2'
-        post 'users/set_progress_table_timestamp', to: 'users#post_set_progress_table_timestamp'
         post 'users/date_progress_table_invitation_last_delayed', to: 'users#post_date_progress_table_invitation_last_delayed'
         post 'users/has_seen_progress_table_v2_invitation', to: 'users#post_has_seen_progress_table_v2_invitation'
         post 'users/ai_rubrics_disabled', to: 'users#post_ai_rubrics_disabled'
