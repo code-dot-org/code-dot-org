@@ -248,42 +248,48 @@
           ]
         },
         {
-          "type": "radiogroup",
+          "type": "rating",
           "name": "pd_facilitator_led_effectiveness",
           "visibleIf": "{pd_experience} allof ['yes_facilitator_led_cdo ']",
           "title": "In retrospect, how useful was Code.org's facilitator-led professional learning in preparing you to teach the content you learned about?",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Not Useful",
+          "maxRateDescription": "Very Useful"
+        },
+        {
+          "type": "radiogroup",
+          "name": "pd_facilitator_led_most_effective_component",
+          "visibleIf": "{pd_experience} allof ['yes_facilitator_led_cdo ']",
+          "title": "What component of Code.org's facilitator-led professional learning experience was most effective at preparing you to teach computer science?",
           "choices": [
             {
-              "value": "7",
-              "text": "Very useful"
+              "value": "curriculum_walkthrough",
+              "text": "Walk through the curriculum"
             },
             {
-              "value": "6",
-              "text": "Useful"
+              "value": "cs_concepts",
+              "text": "Learning about computer science concepts"
             },
             {
-              "value": "5",
-              "text": "Somewhat useful"
+              "value": "practice_reflection",
+              "text": "Reflecting on your own teaching practice"
             },
             {
-              "value": "4",
-              "text": "Neutral"
+              "value": "tool_navigation",
+              "text": "Understanding Code.org's tools and navigation"
             },
             {
-              "value": "3",
-              "text": "Not too useful"
+              "value": "community_building",
+              "text": "Building a community of practice with fellow computer science educators"
             },
             {
-              "value": "2",
-              "text": "Not useful"
+              "value": "other",
+              "text": "Other"
             },
             {
-              "value": "1",
-              "text": "Not useful at all"
-            },
-            {
-              "value": "0",
-              "text": "I didn't teach the content "
+              "value": "none",
+              "text": "None"
             }
           ]
         },
@@ -294,49 +300,51 @@
           "title": "What would have made  Code.org's facilitator-led professional learning more effective to prepare you to teach the content you learned about?"
         },
         {
-          "type": "radiogroup",
+          "type": "rating",
           "name": "pd_self_paced_effectiveness",
           "visibleIf": "{pd_experience} allof ['yes_self_paced_pd_cdo']",
           "title": "In retrospect, how useful was Code.org's online, self-paced professional learning in preparing you to teach the content you learned about?",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Not Useful",
+          "maxRateDescription": "Very Useful"
+        },
+        {
+          "type": "radiogroup",
+          "name": "pd_self_paced_most_effective_component",
+          "visibleIf": "{pd_experience} allof ['yes_self_paced_pd_cdo']",
+          "title": "What component of Code.org's online, self-paced professional learning modules was most effective at preparing you to teach computer science?",
           "choices": [
             {
-              "value": "7",
-              "text": "Very useful"
+              "value": "curriculum_walkthrough",
+              "text": "Walk through the curriculum"
             },
             {
-              "value": "6",
-              "text": "Useful"
+              "value": "cs_concepts",
+              "text": "Learning about computer science concepts"
             },
             {
-              "value": "5",
-              "text": "Somewhat useful"
+              "value": "practice_reflection",
+              "text": "Reflecting on your own teaching practice"
             },
             {
-              "value": "4",
-              "text": "Neutral"
+              "value": "tool_navigation",
+              "text": "Understanding Code.org's tools and navigation"
             },
             {
-              "value": "3",
-              "text": "Not too useful"
+              "value": "other",
+              "text": "Other"
             },
             {
-              "value": "2",
-              "text": "Not useful"
-            },
-            {
-              "value": "1",
-              "text": "Not useful at all"
-            },
-            {
-              "value": "0",
-              "text": "I didn't teach the content "
+              "value": "none",
+              "text": "None"
             }
           ]
         },
         {
           "type": "text",
           "name": "pd_self_paced_more_effective_comment",
-          "visibleIf": "{pd_self_paced_effectiveness} < 6",
+          "visibleIf": "{pd_self_paced_effectiveness} < 5",
           "title": "What would have made  Code.org's online, self-paced professional learning more effective in preparing you to teach the content you learned about?"
         },
         {
@@ -750,10 +758,6 @@
             {
               "value": "lack_support_admin",
               "text": "Lack of support/interest by administrators"
-            },
-            {
-              "value": "space",
-              "text": "Lack of classroom space"
             },
             {
               "value": "scheduling",
@@ -1377,29 +1381,9 @@
           ]
         },
         {
-          "type": "radiogroup",
-          "name": "ai_teaching_interest",
-          "title": "Are you interested in more AI content for your classroom? ",
-          "choices": [
-            {
-              "value": "yes",
-              "text": "Yes"
-            },
-            {
-              "value": "maybe",
-              "text": "Maybe, I am not very familiar with the existing content"
-            },
-            {
-              "value": "no",
-              "text": "No"
-            }
-          ]
-        },
-        {
           "type": "checkbox",
           "name": "ai_teaching_topics",
-          "visibleIf": "{ai_teaching_interest} anyof ['yes', 'maybe']",
-          "title": "What AI topics are you most interested in having more content on?",
+          "title": "Which of the following AI topics would you be most interested in teaching?",
           "description": "(Select all that apply)",
           "choices": [
             {
@@ -1407,52 +1391,35 @@
               "text": "An overview of AI: what it is, how it works, main topics and uses"
             },
             {
-              "value": "ai_generated_code",
-              "text": "AI-generated programming code"
+              "value": "ai_how_to_use_for_cs",
+              "text": "How to use AI tools for computer science and programming"
             },
             {
-              "value": "ai_generated_text_images",
-              "text": "AI-generated text and images (e.g. ChatGPT, DALL-E)"
+              "value": "ai_how_to_use_for_other_content_areas",
+              "text": "How to use AI tools for other subjects (e.g. ELA, history) "
             },
             {
-              "value": "ai_other_subjects",
-              "text": "AI in other subjects (e.g. ELA, history)"
+              "value": "ai_how_works_in_depth",
+              "text": "In-depth content about how AI works (e.g. Natural Language Processing, Neural Networks, Computer Vision)"
             },
             {
               "value": "ai_ethics",
-              "text": "Ethical implications of AI"
-            },
-            {
-              "value": "ai_society",
-              "text": "How AI is affecting jobs, industries and society"
-            },
-            {
-              "value": "ai_computer_sensing",
-              "text": "Computer sensing (e.g. sound and vision sensing)"
-            },
-            {
-              "value": "ai_apps",
-              "text": "Developing apps that use AI"
-            },
-            {
-              "value": "ai_ml",
-              "text": "Machine Learning (ML)"
-            },
-            {
-              "value": "ai_npl",
-              "text": "Natural Language Processing (NPL)"
+              "text": "Ethical and societal implications of AI"
             },
             {
               "value": "other",
               "text": "Other"
+            },
+            {
+              "value": "none",
+              "text": "None"
             }
           ]
         },
         {
           "type": "checkbox",
           "name": "ai_teaching_barriers",
-          "visibleIf": "{ai_teaching_interest} <> 'no'",
-          "title": "Which of the following do you see as barriers to implementing new AI curriculum at your school?",
+          "title": "Which of the following do you see as barriers to implementing AI curriculum at your school?",
           "description": "(Select all that apply)",
           "choices": [
             {
@@ -1465,23 +1432,15 @@
             },
             {
               "value": "support_admin",
-              "text": "I don't have support from my school's administration"
-            },
-            {
-              "value": "support_teachers",
-              "text": "I don't have support from other teachers"
-            },
-            {
-              "value": "need_traning_teaching_ai",
-              "text": "I need training on how to teach AI"
-            },
-            {
-              "value": "anxious_introducing_ai",
-              "text": "I'm nervous about introducing AI to my students"
+              "text": "AI has been discouraged in my school/district"
             },
             {
               "value": "lack_access_ai_tools",
               "text": "My school restricts access to AI tools"
+            },
+            {
+              "value": "none",
+              "text": "None"
             },
             {
               "value": "other",
@@ -1593,6 +1552,21 @@
           "name": "other_feedback_FR",
           "title": "Is there anything else you’d like to tell us about your experience teaching with Code.org?",
           "rows": 3
+        },
+        {
+          "type": "radiogroup",
+          "name": "participate_focus_group",
+          "title": "Would you be willing to participate in a follow-up discussion to provide direct feedback about your experience teaching with Code.org?",
+          "choices": [
+            {
+              "value": "yes",
+              "text": "Yes"
+            },
+            {
+              "value": "no",
+              "text": "No"
+            }
+          ]
         },
         {
           "type": "html",

@@ -1,10 +1,29 @@
-import React, {useEffect, useState, useRef, useMemo} from 'react';
-import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
 import classnames from 'classnames';
-import style from './rubrics.module.scss';
+import PropTypes from 'prop-types';
+import React, {useEffect, useState, useRef, useMemo} from 'react';
+
+import {
+  BodyThreeText,
+  OverlineThreeText,
+  Heading5,
+  StrongText,
+} from '@cdo/apps/componentLibrary/typography';
 import EditorAnnotator from '@cdo/apps/EditorAnnotator';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {ai_rubric_cyan} from '@cdo/apps/util/color';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import i18n from '@cdo/locale';
+
+import AiAssessment from './AiAssessment';
+import AiAssessmentFeedbackContext from './AiAssessmentFeedbackContext';
+import EvidenceLevels from './EvidenceLevels';
+import tipIcon from './images/AiBot_Icon.svg';
+import infoIcon from './images/info-icon.svg';
+import ProgressRing from './ProgressRing';
+import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
 import {
   learningGoalShape,
   reportingDataShape,
@@ -12,24 +31,8 @@ import {
   submittedEvaluationShape,
   aiEvaluationShape,
 } from './rubricShapes';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {
-  BodyThreeText,
-  OverlineThreeText,
-  Heading5,
-  StrongText,
-} from '@cdo/apps/componentLibrary/typography';
-import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import EvidenceLevels from './EvidenceLevels';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import AiAssessment from './AiAssessment';
-import HttpClient from '@cdo/apps/util/HttpClient';
-import ProgressRing from './ProgressRing';
-import AiAssessmentFeedbackContext from './AiAssessmentFeedbackContext';
-import infoIcon from './images/info-icon.svg';
-import tipIcon from './images/AiBot_Icon.svg';
+
+import style from './rubrics.module.scss';
 
 const INVALID_UNDERSTANDING = -1;
 
@@ -246,6 +249,12 @@ export function annotateLines(evidence, observations) {
         });
       }
     }
+  }
+
+  // If there was no evidence given, we do at least want to include the
+  // observations column.
+  if (ret.length === 0) {
+    shouldIncludeObservationsColumn = true;
   }
 
   // Somewhere, we annotated with the obserations column, or we have no other
@@ -519,8 +528,17 @@ export default function LearningGoals({
   const aiEvidence = useMemo(() => {
     // Annotate the lines based on the AI observation
     clearAnnotations();
-    if (!!aiEvalInfo?.evidence && !productTour) {
-      return annotateLines(aiEvalInfo.evidence, aiEvalInfo.observations);
+
+    if (!!aiEvalInfo && !productTour) {
+      const annotations = annotateLines(
+        aiEvalInfo.evidence,
+        aiEvalInfo.observations
+      );
+      // Scroll to first evidence, if possible
+      if (annotations[0]?.firstLine) {
+        EditorAnnotator.scrollToLine(annotations[0].firstLine);
+      }
+      return annotations;
     } else if (productTour) {
       return [
         {
@@ -588,6 +606,7 @@ export default function LearningGoals({
               style.learningGoalButton,
               style.learningGoalButtonLeft
             )}
+            aria-label={i18n.rubricPreviousLearningGoal()}
             onClick={() => onCarouselPress(-1)}
           >
             <FontAwesome icon="angle-left" />
@@ -655,6 +674,7 @@ export default function LearningGoals({
               style.learningGoalButton,
               style.learningGoalButtonRight
             )}
+            aria-label={i18n.rubricNextLearningGoal()}
             onClick={() => onCarouselPress(1)}
           >
             <FontAwesome icon="angle-right" />

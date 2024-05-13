@@ -1,11 +1,13 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
+
 import {groupedLessons} from '@cdo/apps/code-studio/progressReduxSelectors';
-import SummaryProgressTable from './SummaryProgressTable';
+
 import DetailProgressTable from './DetailProgressTable';
 import LessonGroup from './LessonGroup';
 import {groupedLessonsType} from './progressTypes';
+import SummaryProgressTable from './SummaryProgressTable';
 
 export const styles = {
   hidden: {

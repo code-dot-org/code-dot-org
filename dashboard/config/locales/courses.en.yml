@@ -572,7 +572,7 @@ en:
           description_teacher: "**Participants will:**\n\n* Prepare to teach CSA.\n* Practice key concepts in the CSA curriculum.\n* Grow in their understanding of equitable CS education. \n* Develop empathy for the student experience. \n* Become a part of a network of teachers who are doing similar work."
           version_title: ''
         virtual-pl-csp-summer-2024:
-          title: CSP Virtual PL Workshop Course
+          title: CS Principles Virtual PL Workshop Course
           description_short: ''
           description_student: "**You will:**\n\n* Prepare to teach CS Principles.\n* Practice key concepts in the CS Principles curriculum.\n* Grow in your understanding of equitable CS education. \n* Develop empathy for the student experience. \n* Become a part of a network of teachers who are doing similar work."
           description_teacher: "**Participants will:**\n\n* Prepare to teach CS Principles.\n* Practice key concepts in the CS Principles curriculum.\n* Grow in their understanding of equitable CS education. \n* Develop empathy for the student experience. \n* Become a part of a network of teachers who are doing similar work."
@@ -615,10 +615,22 @@ en:
           version_title: ''
         csd-2024:
           title: Computer Science Discoveries ('24-'25)
-          description_short: ''
-          description_student: ''
-          description_teacher: ''
-          version_title: ''
+          description_short: An introductory computer science course that empowers students to create authentic artifacts
+          description_student: |-
+            Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
+
+            **Interested in Teaching CS Discoveries?** Professional development is available to help you get started teaching CS Discoveries. [Click here](https://code.org/educate/professional-learning/middle-high) to learn more about professional learning opportunities in your region or [click here](https://code.org/educate/professional-development-online) to learn more about a self-paced online option.
+          description_teacher: |
+            Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
+
+            **Did You Know?**
+
+            - Professional development is available to help you get started teaching CS Discoveries. [Click here](https://code.org/educate/professional-learning/middle-high) to learn more about professional learning opportunities in your region or [click here](https://code.org/educate/professional-development-online) to learn more about a self-paced online option.
+
+            - This course has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out the [CSD Implementation Guide](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) for more information
+
+            - You can access the [Course Syllabus](https://docs.google.com/document/d/1wqoDRuGVb8ZNoVjikkq1ZflA_C57r-YHmn3awpJmSJQ/view) and [Getting Started Guide](https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview) to learn more about the course and get started.
+          version_title: "'24-'25"
         melissasandbox-2024:
           title: k5-maker-sandbox-2024
           description_short: sandbox for melissa toohey
@@ -633,9 +645,16 @@ en:
           version_title: ''
         csp-2024:
           title: Computer Science Principles '24-'25
-          description_short: ''
-          description_student: ''
-          description_teacher: ''
+          description_short: Learn foundational computer science concepts.
+          description_student: CSP introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities.
+          description_teacher: |-
+            CSP introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities.
+
+            **Did You Know?**
+
+            - Professional development is available to help you get started teaching CS Principles. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Click here</a> to learn more about professional learning opportunities in your region or <a href="https://code.org/educate/professional-development-online" target="blank" rel="noopener noreferrer">click here</a> to learn more about a self-paced online option.
+
+            - You can find the *Syllabus*, *Course Vocab*, and other resources to help you implement this curriculum in the Teacher Resources menu below
           version_title: "'24-'25"
         self-paced-pl-microbit-2024:
           title: Teaching Creating Apps with Devices (micro:bit)
@@ -772,16 +791,38 @@ en:
           description_teacher: ''
           version_title: ''
         vpl-csp-2024:
-          title: CS Principles Virtual PL Workshop Course 24-25
+          title: CS Principles Virtual PL Workshop Course
           description_short: ''
           description_student: ''
           description_teacher: ''
           version_title: ''
         self-paced-pl-csp-2024:
-          title: self-paced-pl-csp-2024
+          title: Teaching CS Principles
           description_short: ''
-          description_student: ''
-          description_teacher: ''
+          description_student: |-
+            ## Welcome
+
+            ##### Welcome to Code.org's free self-paced online modules for educators to get started teaching CS Principles! After completing these online modules, you'll be ready to get started teaching Code.org’s Computer Science Principles course with your students.
+
+            ###Find the learning that works for you
+
+            ##### **Go at your own pace**: These self-paced modules are designed to put you in the driver's seat and give you control over your own learning. Suggested times are given for each module and lesson. However, we encourage you to engage with the content at your own pace.
+
+            ### Pick your content
+
+            ##### The content of these professional learning modules is organized in the suggested progression for teachers new to both Code.org and CS Principles. However, you can engage with the content in the order that best meets your needs. We recommend all teachers start with the short welcome unit to learn more about these professional learning modules before getting started.
+          description_teacher: |-
+            ## Welcome
+
+            ##### Welcome to Code.org's free self-paced online modules for educators to get started teaching CS Principles! After completing these online modules, you'll be ready to get started teaching Code.org’s Computer Science Principles course with your students.
+
+            ###Find the learning that works for you
+
+            ##### **Go at your own pace**: These self-paced modules are designed to put you in the driver's seat and give you control over your own learning. Suggested times are given for each module and lesson. However, we encourage you to engage with the content at your own pace.
+
+            ### Pick your content
+
+            ##### The content of these professional learning modules is organized in the suggested progression for teachers new to both Code.org and CS Principles. However, you can engage with the content in the order that best meets your needs. We recommend all teachers start with the short welcome unit to learn more about these professional learning modules before getting started.
           version_title: ''
         csf-sandbox-2024:
           title: csf-sandbox-2024
@@ -806,7 +847,7 @@ en:
           description_short: ''
           description_student: |-
             ## Welcome!
-            Welcome to Code.org's free self-paced online course for educators to get started with AI.
+            Welcome to Code.org's self-paced online course for educators to get started with AI.
 
             This is a free, foundational online learning series for any teacher or educator interested in the groundbreaking world of artificial intelligence (AI) and its transformative potential in education.
 
@@ -820,7 +861,7 @@ en:
             * **Pick your content:** The content of this professional learning course is organized in the suggested progression for teachers new to AI. However, you can **engage with the content in the order that best meets your needs.**
           description_teacher: |-
             ## Welcome!
-            Welcome to Code.org's free self-paced online course for educators to get started with AI.
+            Welcome to Code.org's self-paced online course for educators to get started with AI.
 
             This is a free, foundational online learning series for any teacher or educator interested in the groundbreaking world of artificial intelligence (AI) and its transformative potential in education.
 

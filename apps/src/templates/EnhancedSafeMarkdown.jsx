@@ -3,8 +3,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {connect} from 'react-redux';
 
-import SafeMarkdown from './SafeMarkdown';
 import {openDialog} from '@cdo/apps/redux/instructionsDialog';
+
+import SafeMarkdown from './SafeMarkdown';
 import {renderExpandableImages} from './utils/expandableImages';
 
 export class UnconnectedExpandableImagesWrapper extends React.Component {

@@ -1,20 +1,14 @@
 -statistics = DB[:cdo_promote_impact_statistics].all.to_a
 
-#stats-impact-carousel-wrapper.carousel-wrapper
-  #stats-impact-carousel.carousel
-    .slides
-      -statistics.each do |statistic|
-        .slide
-          .slide-img<
-            %img{:src=>"#{statistic[:share_url_s]}"}
-    %a.slide-prev{:href=>'#'}<
-      %span<
-        %span.label Previous
-    %a.slide-next{:href=>'#'}<
-      %span<
-        %span.label Next
-  .pagination
-    %div{:id => "stats-impact-carousel-pagination"}
+.carousel-wrapper
+  %swiper-container.swiper-02{navigation: "true", "navigation-next-el": ".nav-next-02", "navigation-prev-el": ".nav-prev-02", pagination: "true", init: "false"}
+    -statistics.each do |statistic|
+      %swiper-slide
+        %figure{style: "width:100%"}
+          %img{src: "#{statistic[:share_url_s]}", style: "width:100%"}
+
+  %button.swiper-nav-prev.nav-prev-02
+  %button.swiper-nav-next.nav-next-02
 
 .impact-stats-link
   .left
@@ -26,26 +20,3 @@
     %a{:href=>'https://code.org/statistics', target: "_blank"}
       %button
         View Code.org Stats
-
-%script{:src=>'/js/jquery.carouFredSel-6.2.1-packed.js'}
-%script{:src=>'/js/jquery.touchSwipe.min.js'}
-:javascript
-  $(document).ready(function() {
-
-    var statistics = #{JSON.pretty_generate(statistics).html_safe};
-
-    var id = '#stats-impact-carousel';
-    // Define the carousel using the ID.
-    $(id + ' .slides').carouFredSel({
-      items : 1,
-      auto  : false,
-      responsive : true,
-      prev  : id + ' .slide-prev',
-      next  : id + ' .slide-next',
-      pagination : '#stats-impact-carousel-pagination',
-      swipe	: {
-        onTouch : true,
-        onMouse : false
-      },
-    });
-  });

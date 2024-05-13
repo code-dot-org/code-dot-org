@@ -1,9 +1,10 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import msg from '@cdo/locale';
 import classnames from 'classnames';
-import {queryParams} from '@cdo/apps/code-studio/utils';
+import PropTypes from 'prop-types';
 import queryString from 'query-string';
+import React from 'react';
+
+import {queryParams} from '@cdo/apps/code-studio/utils';
+import msg from '@cdo/locale';
 
 /**
  * A single row in the VersionHistory dialog, describing one version of a project.

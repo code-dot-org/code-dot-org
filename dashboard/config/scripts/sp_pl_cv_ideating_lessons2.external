@@ -9,7 +9,9 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/c675a2bca05104a34e6294714a79dca7-image-1715010418365.png" alt="COCO database categories" width="200px"  style="border-radius:10px; float:right; margin: 0 20px 30px 40px;">
 
-#### In this lesson, students explore the role of datasets in **training computer vision models** and learn how to evaluate the suitability of datasets for specific applications. The lesson includes hands-on exploration of the COCO dataset and **object detection models** using MediaPipe, allowing students to understand the practical aspects of using pre-trained models and the importance of confidence scores in model predictions. 
+#### In this lesson, students explore the role of datasets in **training computer vision models** and learn how to evaluate the suitability of datasets for specific applications. 
+
+#### The lesson includes hands-on exploration of datasets and **object detection models**.
 
 #### By the end of this lesson, students should be able to assess the relevance and quality of a dataset for solving a particular problem in computer vision.
 
@@ -18,14 +20,20 @@ markdown <<MARKDOWN
 
 
 ## Lesson 9: Training Data and Bias
-<img src="https://images.code.org/2ecc9e9eed1e7a41e83197c4c9eb5e8c-image-1715010522285.png" alt="dog going through dog door" width="200px" style="border-radius:10px; float:right; margin: 0 20px 30px 40px;">
+<img src="https://images.code.org/2ecc9e9eed1e7a41e83197c4c9eb5e8c-image-1715010522285.png" alt="dog going through dog door" width="200px" style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
 
-#### This lesson addresses the critical topic of **bias** in computer vision systems. Students explore how biases in training data can affect the performance and fairness of computer vision applications using practical activities like the COCO dataset exploration and Auto-Doggie Door model testing. 
+#### In this lesson, students explore how **iases in training data** can affect the performance and fairness of computer vision applications using practical activities like the COCO dataset exploration and Auto-Doggie Door model testing. 
 
-#### Students engage in discussions and activities designed to identify potential biases and propose methods to mitigate them, ensuring more **equitable technology solutions**. By the end of this lesson, students should be able to recognize bias in datasets and understand strategies to reduce its impact.
+#### By the end of this lesson, students should be able to recognize bias in datasets and understand strategies to reduce its impact.
 
 
 #### <b>Check out the entire lesson plan  <a href="http://studio.code.org/s/computer-vision-pilot/lessons/9" target="blank" rel="noopener noreferrer">here</a>.</b>
+
+
+ ---
+
+ ## Let's explore ideation
+ #### The next few lessons will dive into the activity from lesson 9. 
  
 
 

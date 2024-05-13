@@ -2,14 +2,15 @@
   "script": {
     "name": "self-paced-pl-ai-101-mod3",
     "wrapup_video_id": null,
-    "login_required": true,
+    "login_required": false,
     "properties": {
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-08 20:22:35 UTC",
+    "serialized_at": "2024-05-10 16:03:50 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -227,6 +228,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-mod3-guiding_02_b_2024"
+        ],
         "progression": "Guiding AI Use (10 min)"
       },
       "bonus": false,
@@ -525,31 +529,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "self-paced-pl-ai-101-mod3-closing_2024"
-        ],
-        "progression": "Wrap Up (5 min)"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-pl-ai-101-mod3-closing_2024"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-ai-101-mod3",
-        "activity_section.key": "3c1ea7eb-2974-409d-a307-6d64f1b0054d"
-      },
-      "level_keys": [
-        "self-paced-pl-ai-101-mod3-closing_2024"
-      ]
-    },
-    {
-      "chapter": 18,
-      "position": 18,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "self-paced-pl-ai-101-mod3-closing_02_2024"
         ],
         "progression": "Wrap Up (5 min)"
@@ -566,6 +545,31 @@
       },
       "level_keys": [
         "self-paced-pl-ai-101-mod3-closing_02_2024"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 18,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-mod3-closing_2024"
+        ],
+        "progression": "Wrap Up (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-ai-101-mod3-closing_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod3",
+        "activity_section.key": "3c1ea7eb-2974-409d-a307-6d64f1b0054d"
+      },
+      "level_keys": [
+        "self-paced-pl-ai-101-mod3-closing_2024"
       ]
     }
   ],
@@ -764,9 +768,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "self-paced-pl-ai-101-mod3-closing_2024",
+        "level.key": "self-paced-pl-ai-101-mod3-closing_02_2024",
         "script_level.level_keys": [
-          "self-paced-pl-ai-101-mod3-closing_2024"
+          "self-paced-pl-ai-101-mod3-closing_02_2024"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -776,9 +780,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "self-paced-pl-ai-101-mod3-closing_02_2024",
+        "level.key": "self-paced-pl-ai-101-mod3-closing_2024",
         "script_level.level_keys": [
-          "self-paced-pl-ai-101-mod3-closing_02_2024"
+          "self-paced-pl-ai-101-mod3-closing_2024"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

@@ -259,4 +259,11 @@ export interface ExtraLinksData {
   can_clone: boolean;
   can_delete: boolean;
   level_name: string;
+  script_level_path_links: {
+    script: string;
+    path: string;
+  }[];
 }
+
+// Text-based labs that are currently supported by lab2.
+export const TEXT_BASED_LABS: AppName[] = ['aichat', 'pythonlab', 'weblab2'];

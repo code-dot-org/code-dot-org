@@ -1,6 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "published": true,
   "game_id": 64,
   "created_at": "2024-05-07T21:27:16.000Z",
   "level_num": "custom",
@@ -13,7 +12,8 @@
       "adaptations"
     ],
     "helper_libraries": [
-      "NativeSpriteLab"
+      "NativeSpriteLab",
+      "zCriterionValidationLibrary"
     ],
     "use_default_sprites": "false",
     "hide_animation_mode": "true",
@@ -25,7 +25,7 @@
     "encrypted": "false",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "**Click the sprite to change the score.**\r\n\r\n1. Add a `change score by 1` under the event `when sprite clicked`  \r\n\r\n- Click the heart after pressing `Run`.  Does the scoreboard change?",
+    "long_instructions": "**Click the sprite to change the score.**\r\n\r\n1. Add a `change score by 1` under the event `when sprite clicked`  \r\n\r\n- Click the coin after pressing `Run`.  Does the scoreboard change?",
     "submittable": "false",
     "hide_share_and_remix": "true",
     "never_autoplay_video": "false",
@@ -37,8 +37,8 @@
     "debugger_disabled": "false",
     "validation_enabled": "false",
     "start_in_animation_tab": "false",
-    "start_animations": "{\"orderedKeys\":[\"b031c9dc-1155-402f-b364-be64fbd6572a\",\"22f09faf-57bb-4090-b931-f0b54364daa8\",\"9e13f793-48c3-49af-b77e-05aeb3c46c39\"],\"propsByKey\":{\"b031c9dc-1155-402f-b364-be64fbd6572a\":{\"name\":\"video_game_bg\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2023-03-07T22:22:15.000Z\",\"pngLastModified\":\"2023-03-07T22:22:14.000Z\",\"version\":\"jFj9lXHa6ce7Vuc0EVosLcyBQS0HEpdU\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/jFj9lXHa6ce7Vuc0EVosLcyBQS0HEpdU/video_game_bg.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"22f09faf-57bb-4090-b931-f0b54364daa8\":{\"name\":\"game_heart\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-03-06T16:36:39.000Z\",\"pngLastModified\":\"2024-03-06T16:36:39.000Z\",\"version\":\"hIZtlLp86gUH9PJliZy2wTnFHVsOJqF2\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/hIZtlLp86gUH9PJliZy2wTnFHVsOJqF2/game_heart.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"9e13f793-48c3-49af-b77e-05aeb3c46c39\":{\"name\":\"game_power\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-03-06T16:36:17.000Z\",\"pngLastModified\":\"2024-03-06T16:36:16.000Z\",\"version\":\"7E4Tz.T22o6iRE_SsPXr.zY2F25cNco8\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/7E4Tz.T22o6iRE_SsPXr.zY2F25cNco8/game_power.png\",\"sourceSize\":{\"x\":400,\"y\":400}}}}\r\n\r\n",
-    "mini_toolbox": "true",
+    "start_animations": "{\"orderedKeys\":[\"924fe17f-6258-43b1-9065-dda29ff7cd34\",\"db9514ae-b530-4ecf-b90e-99ebb1223b24\"],\"propsByKey\":{\"924fe17f-6258-43b1-9065-dda29ff7cd34\":{\"name\":\"coin_gold\",\"categories\":[\"board_games_and_cards\"],\"frameCount\":1,\"frameSize\":{\"x\":61,\"y\":61},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-20 00:00:45 UTC\",\"pngLastModified\":\"2021-01-19 23:59:01 UTC\",\"version\":\"DND7UUQ54JJXqwZomylZBnmahjzE2l3N\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/DND7UUQ54JJXqwZomylZBnmahjzE2l3N/category_board_games_and_cards/coin_gold.png\",\"sourceSize\":{\"x\":61,\"y\":61}},\"db9514ae-b530-4ecf-b90e-99ebb1223b24\":{\"name\":\"tech_bg_3\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2023-03-07T22:21:37.000Z\",\"pngLastModified\":\"2023-03-07T22:21:37.000Z\",\"version\":\"RsjrRnlchPjjIQRaZZDrylcgpAV48Y8m\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/RsjrRnlchPjjIQRaZZDrylcgpAV48Y8m/tech_bg_3.png\",\"sourceSize\":{\"x\":400,\"y\":400}}}}\r\n\r\n\r\n",
+    "mini_toolbox": "false",
     "hide_pause_button": "false",
     "soft_buttons": [
       "leftButton",
@@ -48,12 +48,14 @@
     ],
     "name_suffix": "_2024",
     "short_instructions": "Change the score by 1 and check that the scoreboard updated.",
-    "validation_code": "if (World.frameCount == 1) {\r\n\r\n  addCriteria(function() {\r\n    return variableBubblesCreated(); // Check whether variable bubble is visible on screen. \r\n  }, \"variableBubbles\");  // Failure message: \"Make sure to display your variable on screen.\"\r\n  \r\n   addCriteria(function() {\r\n    return variableValueSet(); // Check whether variable has been set to something. \r\n  }, \"variableSetValue\");  // Failure message: \"You need to set the value of your variable.\"\r\n  \r\n    addCriteria(function() {\r\n    return clickEventFound();\r\n  }, 'spritelabFeedbackClickSprite'); // Failure message: \"Make sure to click on your sprite after pressing *\"Run\"*.\"\r\n  \r\n   addCriteria(function() {\r\n    return variableValueChanged(); // Check whether variable has been set to something. \r\n  }, \"variableChangeValue\");  // Failure message: \"The value of your variable didn't change\"\r\n  \r\n\r\n  // Additional calls to addCriteria(), in order of precedence\r\n}\r\ncheck();",
+    "validation_code": "if (World.frameCount == 1) {\r\n  \r\n  setFailTime(150);\r\n  setDelayTime(90);\r\n  setupPrevious(); \r\n\r\n  addCriteria(function() {\r\n    return variableBubblesCreated(); // Check whether variable bubble is visible on screen. \r\n  }, \"variableBubbles\");  // Failure message: \"Make sure to display your variable on screen.\"\r\n  \r\n   addCriteria(function() {\r\n    return variableValueSet(); // Check whether variable has been set to something. \r\n  }, \"variableSetValue\");  // Failure message: \"You need to set the value of your variable.\"\r\n  \r\n    addCriteria(function() {\r\n    return clickEventFound();\r\n  }, 'spritelabFeedbackClickSprite'); // Failure message: \"Make sure to click on your sprite after pressing *\"Run\"*.\"\r\n  \r\n   addCriteria(function() {\r\n    return variableValueChanged(); // Check whether variable has been set to something. \r\n  }, \"variableChangeValue\");  // Failure message: \"The value of your variable didn't change\"\r\n  \r\n\r\n  // Additional calls to addCriteria(), in order of precedence\r\n}\r\n\r\n//Always have this first to get most up-to-date helper variables\r\ngetHelperVars();\r\ndrawHandsOnUnclickedSprites();\r\n\r\ncheck();\r\n\r\n//Always have this at end to store previous state in validationProps.previous\r\nupdatePrevious();",
     "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"The score will change by adding this block **under** the event:\\n\\n<xml><block xmlns=\\\"https://developers.google.com/blockly/xml\\\" type=\\\"gamelab_spriteClicked\\\" id=\\\"iyTk5JRMM=SvsXC%7kOF\\\">\\n  <mutation useDefaultIcon=\\\"true\\\"></mutation>\\n  <field name=\\\"button_gamelab_spriteClicked\\\"></field>\\n  <field name=\\\"CONDITION\\\">\\\"when\\\"</field>\\n  <value name=\\\"SPRITE\\\">\\n    <block type=\\\"gamelab_allSpritesWithAnimation\\\" id=\\\"{xllj:j`ZEs.6i(AJf/b\\\">\\n      <field name=\\\"ANIMATION\\\">\\\"game_heart\\\"</field>\\n    </block>\\n  </value>\\n  <next>\\n    <block type=\\\"math_change\\\" id=\\\"~0jqmFx/!a[v4n)xN]$F\\\">\\n      <field name=\\\"VAR\\\" id=\\\"brBn}v{CpUvR[.64ZYc{\\\">Score</field>\\n      <value name=\\\"DELTA\\\">\\n        <shadow type=\\\"math_number\\\" id=\\\"|BX%fUx-~IEsoyT+kpKL\\\">\\n          <field name=\\\"NUM\\\">1</field>\\n        </shadow>\\n        <block type=\\\"math_number\\\" id=\\\"Dsygy)_vgya%_J|C?^+(\\\">\\n          <field name=\\\"NUM\\\">1</field>\\n        </block>\\n      </value>\\n    </block>\\n  </next>\\n</block></xml>\",\"hint_id\":\"Hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7f4d4d680cd8cb86d96cd9c3fe75e625/game_variables_increase.mp3\"}]",
     "encrypted_examples": "7Y9SVB5MZp/aBqfoLWLRPL1nq5bBPOgRY6VBQeLx8vpoB+sRMLkSTKi5803f\nfIusVaW6yBse3K2MGs6EGQQvcA==\n",
+    "instructions_icon": "fox",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-07T21:27:16.245+00:00\",\"changed\":[\"cloned from \\\"game_variables_increase\\\"\"],\"cloned_from\":\"game_variables_increase\"},{\"changed_at\":\"2024-05-08 21:05:01 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 21:06:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 21:10:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 21:17:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 21:21:41 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 21:22:34 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-09 00:21:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-05-07T21:27:16.245+00:00\",\"changed\":[\"cloned from \\\"game_variables_increase\\\"\"],\"cloned_from\":\"game_variables_increase\"},{\"changed_at\":\"2024-05-08 21:05:01 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 21:06:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 21:10:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 21:17:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 21:21:41 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 21:22:34 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-09 00:21:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-09 15:39:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-09 22:47:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-09 22:48:30 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-09 22:48:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"mini_toolbox\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-09 22:50:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-09 22:51:07 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-09 22:51:33 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-10 18:07:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-10 18:15:50 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-10 18:17:54 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-10 18:19:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-10 20:38:59 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -65,29 +67,29 @@
         </variables>
         <block type="when_run" id="0WpyRqIux2B^Wms=lcLv" deletable="false" movable="false" editable="false" x="16" y="16">
           <next>
-            <block type="gamelab_setBackgroundImageAs" movable="false">
-              <field name="IMG">"video_game_bg"</field>
+            <block type="gamelab_setBackgroundImageAs" deletable="false">
+              <field name="IMG">"tech_bg_3"</field>
               <next>
-                <block type="gamelab_makeNewSpriteAnon" movable="false">
-                  <field name="ANIMATION_NAME">"game_heart"</field>
+                <block type="gamelab_makeNewSpriteAnon" deletable="false" movable="false">
+                  <field name="ANIMATION_NAME">"coin_gold"</field>
                   <value name="LOCATION">
-                    <block type="gamelab_location_picker" movable="false" editable="false">
-                      <field name="LOCATION">{"x":206,"y":189}</field>
+                    <block type="gamelab_location_picker" deletable="false" movable="false">
+                      <field name="LOCATION">{"x":200,"y":300}</field>
                     </block>
                   </value>
                   <next>
-                    <block type="gamelab_showVariable" movable="false" editable="false">
+                    <block type="gamelab_showVariable" deletable="false" movable="false" editable="false">
                       <field name="VAR" id="brBn}v{CpUvR[.64ZYc{">score</field>
                       <value name="LOCATION">
-                        <block type="gamelab_location_picker" movable="false" editable="false">
-                          <field name="LOCATION">{"x":207,"y":81}</field>
+                        <block type="gamelab_location_picker" deletable="false" movable="false">
+                          <field name="LOCATION">{"x":200,"y":200}</field>
                         </block>
                       </value>
                       <next>
-                        <block type="variables_set" movable="false" editable="false">
+                        <block type="variables_set" deletable="false" movable="false" editable="false">
                           <field name="VAR" id="brBn}v{CpUvR[.64ZYc{">score</field>
                           <value name="VALUE">
-                            <block type="math_number" movable="false" editable="false">
+                            <block type="math_number" deletable="false" movable="false" editable="false">
                               <field name="NUM">0</field>
                             </block>
                           </value>
@@ -101,12 +103,10 @@
           </next>
         </block>
         <block type="gamelab_spriteClicked" x="16" y="230">
-          <mutation useDefaultIcon="true"/>
-          <field name="button_gamelab_spriteClicked"/>
           <field name="CONDITION">"when"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"game_heart"</field>
+              <field name="ANIMATION">"coin_gold"</field>
             </block>
           </value>
         </block>
@@ -1268,7 +1268,7 @@
           <field name="VAR" id="@-=S@3O,n:QRq]zW8kK+">score</field>
           <value name="LOCATION">
             <block type="gamelab_location_picker" id="-OyFO}@bmFm.tQyEPF8L">
-              <field name="LOCATION">{"x":69,"y":46}</field>
+              <field name="LOCATION">{"x":200,"y":200}</field>
             </block>
           </value>
         </block>
@@ -1281,12 +1281,10 @@
           </value>
         </block>
         <block type="gamelab_spriteClicked" id="1{Tcgjp19pRJLYlv@H9x" x="16" y="503">
-          <mutation useDefaultIcon="true"/>
-          <field name="button_gamelab_spriteClicked"/>
           <field name="CONDITION">"when"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation" id="Uegtntb,URt(:fo{vg[!">
-              <field name="ANIMATION">"game_heart"</field>
+              <field name="ANIMATION">"coin_gold"</field>
             </block>
           </value>
         </block>

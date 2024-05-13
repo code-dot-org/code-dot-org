@@ -35,7 +35,6 @@ import {
 } from '../redux/musicRedux';
 import KeyHandler from './KeyHandler';
 import Callouts from './Callouts';
-import {currentLevelIndex} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {
   isReadOnlyWorkspace,
   setIsLoading,
@@ -71,7 +70,7 @@ class UnconnectedMusicView extends React.Component {
     onProjectBeats: PropTypes.bool,
 
     // populated by Redux
-    currentLevelIndex: PropTypes.number,
+    currentLevelId: PropTypes.string,
     userId: PropTypes.number,
     userType: PropTypes.string,
     signInState: PropTypes.oneOf(Object.values(SignInState)),
@@ -200,11 +199,11 @@ class UnconnectedMusicView extends React.Component {
     // callout that might be showing, and dispose of the Blockly workspace so that
     // any lingering UI is removed.
     //
-    // Note that the current level index updates before the app name has changed.
+    // Note that the current level ID updates before the app name has changed.
     // Therefore, this code will run when we are transitioning away from a music level
     // to another level (music or not).
     if (
-      prevProps.currentLevelIndex !== this.props.currentLevelIndex &&
+      prevProps.currentLevelId !== this.props.currentLevelId &&
       this.props.levelProperties?.appName === 'music'
     ) {
       this.stopSong();
@@ -243,7 +242,8 @@ class UnconnectedMusicView extends React.Component {
     // the level changes.
     if (
       (!isEqual(prevProps.levelProperties, this.props.levelProperties) ||
-        !isEqual(prevProps.initialSources, this.props.initialSources)) &&
+        !isEqual(prevProps.initialSources, this.props.initialSources) ||
+        prevProps.isReadOnlyWorkspace !== this.props.isReadOnlyWorkspace) &&
       this.props.levelProperties?.appName === 'music'
     ) {
       if (this.props.levelProperties?.appName === 'music') {
@@ -690,7 +690,7 @@ class UnconnectedMusicView extends React.Component {
 
 const MusicView = connect(
   state => ({
-    currentLevelIndex: currentLevelIndex(state),
+    currentLevelId: state.progress.currentLevelId,
 
     userId: state.currentUser.userId,
     userType: state.currentUser.userType,

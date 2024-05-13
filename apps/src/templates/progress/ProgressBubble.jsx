@@ -1,7 +1,10 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import {isLevelAssessment} from './progressHelpers';
-import {levelWithProgressType} from './progressTypes';
+import React from 'react';
+
+import {ReviewStates} from '@cdo/apps/templates/feedback/types';
+import i18n from '@cdo/locale';
+
+import BubbleBadge, {BadgeType} from './BubbleBadge';
 import {
   BasicBubble,
   BubbleLink,
@@ -12,10 +15,9 @@ import {
   getBubbleShape,
   getBubbleUrl,
 } from './BubbleFactory';
+import {isLevelAssessment} from './progressHelpers';
 import {levelProgressStyle} from './progressStyles';
-import {ReviewStates} from '@cdo/apps/templates/feedback/types';
-import BubbleBadge, {BadgeType} from './BubbleBadge';
-import i18n from '@cdo/locale';
+import {levelWithProgressType} from './progressTypes';
 
 /**
  * A ProgressBubble represents progress for a specific level. It can be a circle

@@ -8,14 +8,18 @@ markdown <<MARKDOWN
 
 #### Lesson 4 and 5 help students use data to understand their users to gain insight of their needs. 
 
+---
+
 
 ## Lesson 4: Data Visualization
 
 <img src="https://images.code.org/89ffb338a4a8017f4bf7f4bb2780dc9a-image-1714665228682.png" alt="farmwise robot and crops" width="250px"  style="border-radius:10px; float:right; margin: 0 20px 10px 40px;">
 
-#### This lesson focuses on the pivotal role of data in shaping product features and services. Students learn to **translate user data** into actionable insights through **visual representations**. 
+#### In this lesson, students learn to **translate user data** into actionable insights through **visual representations**. 
 
-#### Using examples like robotic vacuum cleaners, students explore how data visualizations can highlight user concerns and inform feature development. Activities guide them through **creating and interpreting their own visualizations** using tools like Google Sheets, culminating in a deep understanding of how visual data can reveal trends and needs within a community.
+#### Using examples like robotic vacuum cleaners, students explore how data visualizations can highlight user concerns and inform feature development. 
+
+#### Activities guide them through **creating and interpreting their own visualizations** using tools like Google Sheets, giving them a deep understanding of how visual data can reveal trends and needs within a community.
 
 
 ### <b>Check out the entire lesson plan  <a href="http://studio.code.org/s/computer-vision-pilot/lessons/4" target="blank" rel="noopener noreferrer">here</a>.</b>
@@ -25,11 +29,19 @@ markdown <<MARKDOWN
 ## Lesson 5: User Stories and Problem Statements
 <img src="https://images.code.org/28033debc5875a22c7dba89f17cb098e-image-1714665959027.png" alt="bar graph" width="250px" style="border-radius:10px; float:right; margin: 0 30px 40px 40px;">
 
-#### This lesson equips students with the tools to deeply understand user needs and articulate problem statements effectively. The lesson focuses on constructing user stories from gathered data and using these to develop specific, insightful problem statements that address real user concerns. 
+#### This lesson teaches students to understand user needs and articulate problem statements by constructing user stories from data to insightfully address real concerns.
 
-#### Activities will challenge students to **analyze user behavior patterns** and to think critically about the underlying reasons for these behaviors, using iterative questioning to refine their understanding. By the end of the lesson, students should be able to create **user stories and corresponding problem statements** that guide the development of user-centered solutions.
+#### Activities will challenge students to **analyze user behavior patterns** and to think critically about the underlying reasons for these behaviors, using iterative questioning to refine their understanding.
 
-#### <b>Check out the entire lesson plan  <a href="http://studio.code.org/s/computer-vision-pilot/lessons/5" target="blank" rel="noopener noreferrer">here</a>.</b>
+#### By the end of the lesson, students should be able to create **user stories and corresponding problem statements** that guide the development of user-centered solutions.
+
+### <b>Check out the entire lesson plan  <a href="http://studio.code.org/s/computer-vision-pilot/lessons/5" target="blank" rel="noopener noreferrer">here</a>.</b>
+
+
+---
+
+## Let's explore defining
+#### In the next few levels, we will dive deeper into the activity from lesson 5.
  
 
 MARKDOWN

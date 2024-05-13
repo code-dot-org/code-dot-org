@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2024-05-07T21:27:54.000Z",
   "level_num": "custom",
@@ -51,10 +52,10 @@
     "encrypted_examples": "xnjNxYaFGSFZomQAMKF3a+cLaYqpKpWthSuLyEY0Y5CVHMjUWIdlt1TIfuVG\n5+ahpOLay8Gipr/Hza3XtfUMxQ==\n",
     "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"Look for the speed variable at the top of the program. Try changing the value.\\n<xml>\\n<block xmlns=\\\"https://developers.google.com/blockly/xml\\\" type=\\\"variables_set\\\" id=\\\"J?iD?dAxk:5a|{3*vPkd\\\" deletable=\\\"false\\\">\\n  <field name=\\\"VAR\\\" id=\\\"r[GkJc@uY0o`[{8pH_Om\\\">speed</field>\\n  <value name=\\\"VALUE\\\">\\n    <block type=\\\"math_number\\\" id=\\\"oeoAo)P9r?JyFZaYez^P\\\" deletable=\\\"false\\\">\\n      <field name=\\\"NUM\\\">1</field>\\n    </block>\\n  </value>\\n</block>\\n</xml>\",\"hint_id\":\"Hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4c59b4cfaad5a91571cade95c233633f/game_variables_fix_choices_e.mp3\"}]",
     "name_suffix": "_2024",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "instructions_icon": "fox"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-05-07T21:27:54.115+00:00\",\"changed\":[\"cloned from \\\"game_variables_fix_choices_e\\\"\"],\"cloned_from\":\"game_variables_fix_choices_e\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-07T21:27:54.115+00:00\",\"changed\":[\"cloned from \\\"game_variables_fix_choices_e\\\"\"],\"cloned_from\":\"game_variables_fix_choices_e\"},{\"changed_at\":\"2024-05-09 16:26:33 +0000\",\"changed\":[\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
