@@ -61,7 +61,7 @@ class HelpHeader
     if options[:level] && options[:level].game == Game.music
       entries << {
         title: I18n.t("#{loc_prefix}music_lab_documentation"),
-        url: "/docs/ide/music/",
+        url: "/docs/ide/music",
         id: "musiclab-docs"
       }
     end
