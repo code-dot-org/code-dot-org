@@ -2,26 +2,32 @@
 @import 'color.scss';
 
 .titleRow {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
 .title {
-    margin-left: 10px;
-    margin-bottom: 0;
+  margin-left: 10px;
+  margin-bottom: 0;
 }
 .title:hover {
-    color: $teal;
+  color: $teal;
 }
 
 .titleIcon {
-    margin-left: 25px;
-    margin-bottom: 0;
-    color: $teal;
+  margin-left: 25px;
+  margin-bottom: 0;
+  color: $teal;
 }
 
 .expandCollapseButton {
-    @include remove-button-styles;
+  @include remove-button-styles;
+}
+
+.contentParent {
+  height: 0;
+  overflow: hidden;
+  transition: height ease 0.5s;
 }
