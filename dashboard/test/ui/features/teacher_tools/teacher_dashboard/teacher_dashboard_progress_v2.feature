@@ -214,9 +214,10 @@ Scenario: Teacher can view validated level
 
   # Student submits validated level
   Given I am on "http://studio.code.org/s/allthethings/lessons/44/levels/12?noautoplay=true"
-  And I wait to see "#runButton"
-  And I press "runButton"
-  And I wait until "#finishButton" is not disabled
+  And I wait to see "#finishButton"
+  And I press "testButton"
+  And I wait until element ".javalab-console" contains text "[JAVALAB] Program completed."
+  And I wait until "#finishButton" is enabled
   And I press "finishButton"
 
   When I sign in as "Teacher_Sally" and go home
