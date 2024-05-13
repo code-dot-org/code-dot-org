@@ -37,8 +37,8 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       [[:non_compliant_child, :not_U13], true],
       [[:non_compliant_child, :migrated_imported_from_clever], true],
       [[:non_compliant_child, :with_lti_auth], true],
-      [[:non_compliant_child, :with_pending_parent_permission, {created_at: '2023-06-30T23:59:59Z'}], true],
-      [[:non_compliant_child, :with_pending_parent_permission, {created_at: '2023-07-01T00:00:00Z'}], false],
+      [[:non_compliant_child, :with_pending_parent_permission, {created_at: '2023-06-30T23:59:59MST'}], true],
+      [[:non_compliant_child, :with_pending_parent_permission, {created_at: '2023-07-01T00:00:00MST'}], false],
     ]
     test_matrix.each do |traits, compliance|
       user = create(*traits)
