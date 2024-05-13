@@ -18,8 +18,11 @@ const ChatWorkspace: React.FunctionComponent = () => {
     (state: {aichat: AichatState}) => state.aichat.showWarningModal
   );
 
-  const storedMessages = useSelector(
-    (state: {aichat: AichatState}) => state.aichat.chatMessages
+  const storedMessagesCurrent = useSelector(
+    (state: {aichat: AichatState}) => state.aichat.chatMessagesCurrent
+  );
+  const storedMessagesPast = useSelector(
+    (state: {aichat: AichatState}) => state.aichat.chatMessagesPast
   );
 
   const isWaitingForChatResponse = useSelector(
@@ -35,7 +38,12 @@ const ChatWorkspace: React.FunctionComponent = () => {
         behavior: 'smooth',
       });
     }
-  }, [conversationContainerRef, storedMessages, isWaitingForChatResponse]);
+  }, [
+    conversationContainerRef,
+    storedMessagesCurrent,
+    storedMessagesPast,
+    isWaitingForChatResponse,
+  ]);
 
   const dispatch = useAppDispatch();
 
@@ -64,7 +72,7 @@ const ChatWorkspace: React.FunctionComponent = () => {
         className={moduleStyles.conversationArea}
         ref={conversationContainerRef}
       >
-        {storedMessages.map(message => (
+        {[...storedMessagesPast, ...storedMessagesCurrent].map(message => (
           <ChatMessage message={message} key={message.id} />
         ))}
         {showWaitingAnimation()}

@@ -73,7 +73,8 @@ const getCurrentTime = () => moment(Date.now()).format('LT');
 export interface AichatState {
   // All user and assistant chat messages - includes too personal and inappropriate user messages.
   // Messages will be logged and stored.
-  chatMessages: ChatCompletionMessage[];
+  chatMessagesPast: ChatCompletionMessage[];
+  chatMessagesCurrent: ChatCompletionMessage[];
   // Denotes whether we are waiting for a chat completion response from the backend
   isWaitingForChatResponse: boolean;
   // Denotes whether we should show the warning modal
@@ -88,7 +89,8 @@ export interface AichatState {
 }
 
 const initialState: AichatState = {
-  chatMessages: [],
+  chatMessagesPast: [],
+  chatMessagesCurrent: [],
   isWaitingForChatResponse: false,
   showWarningModal: true,
   chatMessageError: false,
@@ -257,7 +259,7 @@ export const submitChatContents = createAsyncThunk(
     const state = thunkAPI.getState() as RootState;
     const {
       savedAiCustomizations: aiCustomizations,
-      chatMessages: storedMessages,
+      chatMessagesCurrent: storedMessages,
       currentSessionId,
     } = state.aichat;
 
@@ -283,9 +285,7 @@ export const submitChatContents = createAsyncThunk(
       newMessage,
       // update to just send everything?
       storedMessages.filter(
-        message =>
-          message.sessionId === currentSessionId ||
-          message.status === Status.UNKNOWN
+        message => message.role === Role.USER || message.role === Role.ASSISTANT
       ),
       aiCustomizations,
       aichatContext,
@@ -302,15 +302,15 @@ export const submitChatContents = createAsyncThunk(
 
     // Regardless of response type,
     // assign last user message to session.
-    // if (chatApiResponse.session_id) {
-    //   thunkAPI.dispatch(setChatSessionId(chatApiResponse.session_id));
-    //   thunkAPI.dispatch(
-    //     updateChatMessageSession({
-    //       id: newMessage.id,
-    //       sessionId: chatApiResponse.session_id,
-    //     })
-    //   );
-    // }
+    if (chatApiResponse.session_id) {
+      thunkAPI.dispatch(setChatSessionId(chatApiResponse.session_id));
+      thunkAPI.dispatch(
+        updateChatMessageSession({
+          id: newMessage.id,
+          sessionId: chatApiResponse.session_id,
+        })
+      );
+    }
 
     thunkAPI.dispatch(setChatMessages(chatApiResponse?.messages));
 
@@ -371,10 +371,11 @@ const aichatSlice = createSlice({
   initialState,
   reducers: {
     addChatMessage: (state, action: PayloadAction<ChatCompletionMessage>) => {
-      state.chatMessages.push(action.payload);
+      state.chatMessagesCurrent.push(action.payload);
     },
     removeModelUpdateMessage: (state, action: PayloadAction<number>) => {
-      const updatedMessages = [...state.chatMessages];
+      // update to remove from current or past messages, not just current
+      const updatedMessages = [...state.chatMessagesCurrent];
       const messageToRemovePosition = updatedMessages.findIndex(
         message => message.id === action.payload
       );
@@ -392,19 +393,22 @@ const aichatSlice = createSlice({
       }
       updatedMessages.splice(messageToRemovePosition, 1);
 
-      state.chatMessages = updatedMessages;
+      state.chatMessagesCurrent = updatedMessages;
     },
     clearChatMessages: state => {
-      state.chatMessages = [];
+      state.chatMessagesPast = [];
+      state.chatMessagesCurrent = [];
       state.currentSessionId = undefined;
     },
     setChatMessages: (
       state,
       action: PayloadAction<ChatCompletionMessage[]>
     ) => {
-      state.chatMessages = action.payload;
+      state.chatMessagesCurrent = action.payload;
     },
     setNewChatSession: state => {
+      state.chatMessagesPast.push(...state.chatMessagesCurrent);
+      state.chatMessagesCurrent = [];
       state.currentSessionId = undefined;
     },
     setChatSessionId: (state, action: PayloadAction<number>) => {
@@ -420,8 +424,9 @@ const aichatSlice = createSlice({
       state,
       action: PayloadAction<{id: number; status: AichatInteractionStatusValue}>
     ) => {
+      // shouldn't ever need to update outside of current chat messsages
       const {id, status} = action.payload;
-      const chatMessage = state.chatMessages.find(msg => msg.id === id);
+      const chatMessage = state.chatMessagesCurrent.find(msg => msg.id === id);
       if (chatMessage && chatMessage.role === Role.USER) {
         chatMessage.status = status;
       }
@@ -430,8 +435,10 @@ const aichatSlice = createSlice({
       state,
       action: PayloadAction<{id: number; sessionId: number}>
     ) => {
+      // shouldn't ever need to update outside of current chat messsages
+      // maybe message doesn't even need to store session ID any more?
       const {id, sessionId} = action.payload;
-      const chatMessage = state.chatMessages.find(msg => msg.id === id);
+      const chatMessage = state.chatMessagesCurrent.find(msg => msg.id === id);
       if (chatMessage) {
         chatMessage.sessionId = sessionId;
       }

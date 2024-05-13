@@ -8,8 +8,9 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const CopyButton: React.FunctionComponent = () => {
+  // update to include historical messages
   const storedMessages = useSelector(
-    (state: {aichat: AichatState}) => state.aichat.chatMessages
+    (state: {aichat: AichatState}) => state.aichat.chatMessagesCurrent
   );
 
   const handleCopy = () => {
