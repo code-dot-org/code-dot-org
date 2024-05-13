@@ -3042,7 +3042,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@blockly/field-bitmap@npm:^4.0.15":
+"@blockly/field-bitmap@npm:^4.0.18":
   version: 4.0.18
   resolution: "@blockly/field-bitmap@npm:4.0.18"
   peerDependencies:
@@ -8041,7 +8041,7 @@ __metadata:
     "@babel/preset-react": ^7.24.1
     "@blockly/block-shareable-procedures": ~4.0.5
     "@blockly/field-angle": ^4.0.0
-    "@blockly/field-bitmap": ^4.0.15
+    "@blockly/field-bitmap": ^4.0.18
     "@blockly/field-colour": ^4.0.0
     "@blockly/field-grid-dropdown": ~4.0.9
     "@blockly/keyboard-navigation": ~0.5.6
