@@ -1,11 +1,13 @@
+import {Meta, StoryFn} from '@storybook/react';
 import React from 'react';
+import {Provider} from 'react-redux';
 import sinon from 'sinon';
+
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import currentUser, {
   setInitialData,
 } from '@cdo/apps/templates/currentUserRedux';
-import {Meta, StoryFn} from '@storybook/react';
-import {Provider} from 'react-redux';
+
 import ParentalPermissionBanner from '.';
 
 const store = getStore();

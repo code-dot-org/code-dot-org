@@ -1,18 +1,18 @@
-import React, {useState, useEffect} from 'react';
-import PropTypes from 'prop-types';
 import moment from 'moment/moment';
+import PropTypes from 'prop-types';
+import React, {useState, useEffect} from 'react';
+import {Fade} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {useSelector} from 'react-redux';
 
-import {RootState} from '@cdo/apps/types/redux';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import color from '@cdo/apps/util/color';
-import i18n from '@cdo/locale';
-import getCurrentLocale from '@cdo/apps/util/currentLocale';
-import {Fade} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-import Notification from '@cdo/apps/templates/Notification';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {ParentalPermissionRequest} from '@cdo/apps/redux/parentalPermissionRequestReducer';
+import Notification from '@cdo/apps/templates/Notification';
 import ParentalPermissionModal from '@cdo/apps/templates/policy_compliance/ParentalPermissionModal';
+import {RootState} from '@cdo/apps/types/redux';
+import color from '@cdo/apps/util/color';
+import getCurrentLocale from '@cdo/apps/util/currentLocale';
+import i18n from '@cdo/locale';
 
 interface ParentalPermissionBannerProps {
   lockoutDate: string;
