@@ -102,7 +102,10 @@ function SectionProgressSelector({
         <SectionProgressV2 />
       ) : (
         <>
-          <InviteToV2ProgressModal sectionId={sectionId} />
+          <InviteToV2ProgressModal
+            sectionId={sectionId}
+            onShowProgressTableV2Change={onShowProgressTableV2Change}
+          />
           <SectionProgress allowUserToSelectV2View={true} />
         </>
       )}
