@@ -1,11 +1,12 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
   "game_id": 52,
   "created_at": "2024-05-04T02:58:33.000Z",
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "long_instructions": "## Title\r\n\r\nQuestion!",
+    "long_instructions": "<img style=\"width: 40%; float: right;  margin: 10px; border: solid 2px black\" src=\"\" />\r\n\r\n# Predict (Part 1)\r\n\r\n#### .\r\n\r\n> Looking at the screenshot above, **What do you notice? What do you wonder?** Write 1 sentence for each of these. _There is no wrong answer - it's just your observation_.\r\n>\r\n> Type in your response, then press the `Run`(#FFA400) button to lock it in!",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 19018,
@@ -15,13 +16,13 @@
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
-    "optional": "true",
+    "optional": "false",
     "allow_multiple_attempts": "true",
-    "title": "Free Response Question",
     "placeholder": "Type your answer here!"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-05-04T02:58:33.788+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-synthesis-L9\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-synthesis-L9\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-04T02:58:33.788+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-synthesis-L9\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-synthesis-L9\"},{\"changed_at\":\"2024-05-11 03:46:11 +0000\",\"changed\":[\"long_instructions\",\"optional\",\"title\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-11 03:58:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </FreeResponse>

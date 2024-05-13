@@ -5,6 +5,7 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {StrongText} from '@cdo/apps/componentLibrary/typography';
 import aiBotIcon from '@cdo/static/aichat/ai-bot-icon.svg';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 import {removeModelUpdateMessage} from '../redux/aichatRedux';
 import {ChatCompletionMessage, Role} from '../types';
@@ -70,7 +71,7 @@ const displayAssistantMessage = (status: string, chatMessageText: string) => {
           moduleStyles.assistantMessage
         )}
       >
-        {chatMessageText}
+        <SafeMarkdown markdown={chatMessageText} />
       </div>
     );
   } else if (status === Status.ERROR) {

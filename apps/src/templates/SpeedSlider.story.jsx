@@ -1,4 +1,5 @@
 import React from 'react';
+
 import SpeedSlider from './SpeedSlider';
 
 class StorybookHarness extends React.Component {

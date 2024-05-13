@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "grade2-maker",
-    "serialized_at": "2024-05-03 22:07:13 UTC",
+    "serialized_at": "2024-05-10 15:23:05 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -25,7 +25,7 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Events, Sequencing, and Loops"
+        "display_name": "Emotion Badge with micro:bit - Events"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-2",
@@ -37,10 +37,22 @@
       "user_facing": true,
       "position": 2,
       "properties": {
-        "display_name": "[Optional] Extension: Data and Variables"
+        "display_name": "Calming LEDs with micro:bit - Sequencing and Loops"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "grade2-maker-2024"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Counter with micro:bit - Data and Variables"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade2-maker-2024"
       }
     }
@@ -127,7 +139,7 @@
     },
     {
       "key": "Cristina - Emotion badge with micro:bit",
-      "name": "Emotion badge with micro:bit",
+      "name": "micro:bit - Emotion badge",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -159,7 +171,7 @@
       },
       "seeding_key": {
         "lesson.key": "My Loopy Robotic Friends Jr",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024"
       }
     },
@@ -179,13 +191,13 @@
       },
       "seeding_key": {
         "lesson.key": "Drawing Gardens with Loops",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024"
       }
     },
     {
       "key": "Cristina - Calming LEDs with micro:bit",
-      "name": "Calming LEDs with micro:bit",
+      "name": "micro:bit - Calming LEDs",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
@@ -197,7 +209,7 @@
       },
       "seeding_key": {
         "lesson.key": "Cristina - Calming LEDs with micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024"
       }
     },
@@ -217,7 +229,7 @@
       },
       "seeding_key": {
         "lesson.key": "Picturing Data",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade2-maker-2024"
       }
     },
@@ -236,7 +248,7 @@
       },
       "seeding_key": {
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade2-maker-2024"
       }
     },
@@ -253,7 +265,7 @@
       },
       "seeding_key": {
         "lesson.key": "Cristina - Counter with micro:bit",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade2-maker-2024"
       }
     }
@@ -571,7 +583,7 @@
       "seeding_key": {
         "lesson_activity.key": "12d79b1d-e9f0-473f-aac0-9429e1bd7c4c",
         "lesson.key": "My Loopy Robotic Friends Jr",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024"
       }
     },
@@ -585,7 +597,7 @@
       "seeding_key": {
         "lesson_activity.key": "df8cc004-bf9a-46e3-ada6-31854638cd1f",
         "lesson.key": "My Loopy Robotic Friends Jr",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024"
       }
     },
@@ -597,7 +609,7 @@
       "seeding_key": {
         "lesson_activity.key": "7b551c15-33c3-4dda-bb9f-a13f41881f2e",
         "lesson.key": "My Loopy Robotic Friends Jr",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024"
       }
     },
@@ -611,7 +623,7 @@
       "seeding_key": {
         "lesson_activity.key": "d7012374-2c14-4abf-bfae-70be497775ad",
         "lesson.key": "My Loopy Robotic Friends Jr",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024"
       }
     },
@@ -624,7 +636,7 @@
       "seeding_key": {
         "lesson_activity.key": "b8b14b6f-f7d9-4e37-9411-1e6fb69973dc",
         "lesson.key": "My Loopy Robotic Friends Jr",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024"
       }
     },
@@ -638,7 +650,7 @@
       "seeding_key": {
         "lesson_activity.key": "9a553117-0022-4b86-a13d-4b3f02b23a37",
         "lesson.key": "Drawing Gardens with Loops",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024"
       }
     },
@@ -652,7 +664,7 @@
       "seeding_key": {
         "lesson_activity.key": "acf47b10-6286-4358-90e0-59a50cad2987",
         "lesson.key": "Drawing Gardens with Loops",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024"
       }
     },
@@ -666,7 +678,7 @@
       "seeding_key": {
         "lesson_activity.key": "7b3d20eb-bc67-4805-96fc-1530f9605bfe",
         "lesson.key": "Drawing Gardens with Loops",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024"
       }
     },
@@ -679,7 +691,7 @@
       "seeding_key": {
         "lesson_activity.key": "2e93284d-0521-4a1c-bc85-7fb76376c0f2",
         "lesson.key": "Drawing Gardens with Loops",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024"
       }
     },
@@ -693,7 +705,7 @@
       "seeding_key": {
         "lesson_activity.key": "61639f7f-cbc3-435b-b07d-33e28ca65d55",
         "lesson.key": "Cristina - Calming LEDs with micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024"
       }
     },
@@ -707,7 +719,7 @@
       "seeding_key": {
         "lesson_activity.key": "b00a7eb0-aeff-48b3-88cf-68ecec80641b",
         "lesson.key": "Cristina - Calming LEDs with micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024"
       }
     },
@@ -721,7 +733,7 @@
       "seeding_key": {
         "lesson_activity.key": "af71f0fd-78ad-4db4-872a-d68545d19dbc",
         "lesson.key": "Cristina - Calming LEDs with micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024"
       }
     },
@@ -734,7 +746,7 @@
       "seeding_key": {
         "lesson_activity.key": "6d2e7237-0f98-4de3-b575-f9230d76d557",
         "lesson.key": "Cristina - Calming LEDs with micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024"
       }
     },
@@ -748,7 +760,7 @@
       "seeding_key": {
         "lesson_activity.key": "57305743-4c93-4390-95c8-e80ac1a03578",
         "lesson.key": "Picturing Data",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade2-maker-2024"
       }
     },
@@ -762,7 +774,7 @@
       "seeding_key": {
         "lesson_activity.key": "755f6000-a78b-4558-8369-f764c2d9b761",
         "lesson.key": "Picturing Data",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade2-maker-2024"
       }
     },
@@ -774,7 +786,7 @@
       "seeding_key": {
         "lesson_activity.key": "2df7e545-df82-4528-a77e-c84dfc2ae1f1",
         "lesson.key": "Picturing Data",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade2-maker-2024"
       }
     },
@@ -788,7 +800,7 @@
       "seeding_key": {
         "lesson_activity.key": "571984e0-f378-4a37-9ae0-0dcccfedbd16",
         "lesson.key": "Picturing Data",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade2-maker-2024"
       }
     },
@@ -802,7 +814,7 @@
       "seeding_key": {
         "lesson_activity.key": "1f6b2407-3583-449f-9157-f03e2e4049af",
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade2-maker-2024"
       }
     },
@@ -816,7 +828,7 @@
       "seeding_key": {
         "lesson_activity.key": "1695e41e-2525-4487-8003-a16a6498b34c",
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade2-maker-2024"
       }
     },
@@ -830,7 +842,7 @@
       "seeding_key": {
         "lesson_activity.key": "0d87e731-f373-4a5f-ab44-92b6d896112a",
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade2-maker-2024"
       }
     },
@@ -844,7 +856,7 @@
       "seeding_key": {
         "lesson_activity.key": "53752af6-9b02-499b-928a-b328a5baa852",
         "lesson.key": "Cristina - Counter with micro:bit",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade2-maker-2024"
       }
     },
@@ -858,7 +870,7 @@
       "seeding_key": {
         "lesson_activity.key": "a9db63a0-d27a-436c-916d-7676946b8c18",
         "lesson.key": "Cristina - Counter with micro:bit",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade2-maker-2024"
       }
     },
@@ -872,7 +884,7 @@
       "seeding_key": {
         "lesson_activity.key": "32841f1b-66ba-4d0b-9a2a-20708fae7cda",
         "lesson.key": "Cristina - Counter with micro:bit",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade2-maker-2024"
       }
     },
@@ -885,7 +897,7 @@
       "seeding_key": {
         "lesson_activity.key": "a8ce412d-de4d-4ee1-9d0e-f01f2900b6b8",
         "lesson.key": "Cristina - Counter with micro:bit",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade2-maker-2024"
       }
     }
@@ -1425,23 +1437,13 @@
       }
     },
     {
-      "key": "ccff67c7-a43a-4309-a859-f85bbd78c669",
+      "key": "834fc5ca-2a88-4ea3-b6e7-a5fdf98d2837",
       "position": 2,
       "properties": {
-        "progression_name": "Emotion Badge"
-      },
-      "seeding_key": {
-        "activity_section.key": "ccff67c7-a43a-4309-a859-f85bbd78c669",
-        "lesson_activity.key": "3045ebc4-4b8b-4ac5-af39-4846bb8ae27a"
-      }
-    },
-    {
-      "key": "834fc5ca-2a88-4ea3-b6e7-a5fdf98d2837",
-      "position": 3,
-      "properties": {
-        "description": "After completing the lesson, assess students' knowledge of the concepts covered by going through the assessment slides in the \n**<a href=\"https://docs.google.com/presentation/d/17yc3y-VSBIoje0CKLKiYz_Q2cgtCkOQrfHnDmS6iZzQ/template/preview\" target=\"_blank\">slide deck</a>**. You can also assign students a content assessment hosted on the JuiceMind platform. To assign the assessment to your students, click <a href=\"https://play.juicemind.com/dashboard/explore/class/codeorg-microbit/unitNumber/1/topicNumber/2/quizId/rBYlV1ov5omq9rIKXB1s\" target=\"_blank\">here.</a>\n\n::: details [**Setting up a JuiceMind assessment**]\nClick \"Assign\" on the assessment page, then have students join your unique class session. Students have a link to the Join page on level 2, and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note**: You will need to <a href=\"https://play.juicemind.com/signup\" target=\"_blank\">sign up</a> for an account on JuiceMind to assign the assessment.\n:::\n",
+        "description": "After completing the lesson, assess students' knowledge of the concepts covered by going through the assessment slides in the \n**<a href=\"https://docs.google.com/presentation/d/17yc3y-VSBIoje0CKLKiYz_Q2cgtCkOQrfHnDmS6iZzQ/template/preview\"  target=\"_blank\">slide deck</a>**. You can also assign students a content assessment hosted on the JuiceMind platform. To assign the assessment to your students, click <a href=\"https://play.juicemind.com/dashboard/explore/class/codeorg-microbit/unitNumber/1/topicNumber/2/quizId/HreMBqsN2VV3eI8u8xSC\" target=\"_blank\">here.</a>\n\n::: details [**Setting up a JuiceMind assessment**]\nClick \"Assign\" on the assessment page, then have students join your unique class session. Students have a link to the Join page on level 2, and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note**: You will need to <a href=\"https://play.juicemind.com/signup\" target=\"_blank\">sign up</a> for an account on JuiceMind to assign the assessment.\n:::\n",
         "duration": "10",
-        "name": "Assessment"
+        "name": "Assessment",
+        "progression_name": "Calming LEDs with micro:bit"
       },
       "seeding_key": {
         "activity_section.key": "834fc5ca-2a88-4ea3-b6e7-a5fdf98d2837",
@@ -1761,6 +1763,7 @@
       "position": 1,
       "properties": {
         "description": "Students will make the project themselves using the MakeCode editor and micro:bit simulator. Once they have tested their code in the simulator, they will download their code onto the micro:bits.\n\nPick one:\n\n- Step by step coding **<a href=\"https://mbit.io/csf-c3-coding\" target=\"_blank\"> video </a>**\n- Live micro:bit **<a href=\"https://mbit.io/csf-c3-classroom\" target=\"_blank\"> classroom session </a>**",
+        "duration": "20",
         "name": "Student Coding"
       },
       "seeding_key": {
@@ -1769,8 +1772,21 @@
       }
     },
     {
-      "key": "dce5ea7f-d290-4ce7-b0dc-b405f0e5b5a9",
+      "key": "888dca47-7e81-457b-8246-e44358a2699c",
       "position": 2,
+      "properties": {
+        "description": "After completing the lesson, assess students' knowledge of the concepts covered by going through the assessment slides in the \n**<a href=\"https://docs.google.com/presentation/d/17yc3y-VSBIoje0CKLKiYz_Q2cgtCkOQrfHnDmS6iZzQ/template/preview\"  target=\"_blank\">slide deck</a>**. You can also assign students a content assessment hosted on the JuiceMind platform. To assign the assessment to your students, click <a href=\"https://play.juicemind.com/dashboard/explore/class/codeorg-microbit/unitNumber/1/topicNumber/2/quizId/HreMBqsN2VV3eI8u8xSC\" target=\"_blank\">here.</a>\n\n::: details [**Setting up a JuiceMind assessment**]\nClick \"Assign\" on the assessment page, then have students join your unique class session. Students have a link to the Join page on level 2, and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note**: You will need to <a href=\"https://play.juicemind.com/signup\" target=\"_blank\">sign up</a> for an account on JuiceMind to assign the assessment.\n:::",
+        "duration": "10",
+        "name": "Assessment "
+      },
+      "seeding_key": {
+        "activity_section.key": "888dca47-7e81-457b-8246-e44358a2699c",
+        "lesson_activity.key": "b00a7eb0-aeff-48b3-88cf-68ecec80641b"
+      }
+    },
+    {
+      "key": "dce5ea7f-d290-4ce7-b0dc-b405f0e5b5a9",
+      "position": 3,
       "properties": {
         "progression_name": "Calming LEDs with micro:bit"
       },
@@ -2165,6 +2181,7 @@
       "position": 1,
       "properties": {
         "description": "Students will make the project themselves using the MakeCode editor and micro:bit simulator. Once they have tested their code in the simulator, they will download their code onto the micro:bits.\n\nPick one:\n\n- Step by step coding **<a href=\"https://mbit.io/csf-c4-coding\" target=\"_blank\">video.</a>**  \n- Live micro:bit **<a href=\"https://mbit.io/csf-c4-classroom\" target=\"_blank\">classroom session.</a>**  ",
+        "duration": "20",
         "name": "Student Coding"
       },
       "seeding_key": {
@@ -2176,6 +2193,9 @@
       "key": "b1ef73f3-2862-45be-a6ad-b1aa7d8ef302",
       "position": 2,
       "properties": {
+        "description": "After completing the lesson, assess students' knowledge of the concepts covered by going through the assessment slides in the \n**<a href=\"https://docs.google.com/presentation/d/17yc3y-VSBIoje0CKLKiYz_Q2cgtCkOQrfHnDmS6iZzQ/template/preview\"  target=\"_blank\">slide deck</a>**. You can also assign students a content assessment hosted on the JuiceMind platform. To assign the assessment to your students, click <a href=\"https://play.juicemind.com/dashboard/explore/class/codeorg-microbit/unitNumber/1/topicNumber/2/quizId/m8PawyAAKNkODu8hvSX9\" target=\"_blank\">here.</a>\n\n::: details [**Setting up a JuiceMind assessment**]\nClick \"Assign\" on the assessment page, then have students join your unique class session. Students have a link to the Join page on level 2, and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note**: You will need to <a href=\"https://play.juicemind.com/signup\" target=\"_blank\">sign up</a> for an account on JuiceMind to assign the assessment.\n:::\n",
+        "duration": "10",
+        "name": "Assessment",
         "progression_name": "Counter with micro:bit"
       },
       "seeding_key": {
@@ -2764,10 +2784,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "course_c_maker_emotion_badge_grade2"
-        ],
-        "progression": "Emotion Badge"
       },
       "bonus": false,
       "seeding_key": {
@@ -2777,7 +2793,7 @@
         "lesson.key": "Cristina - Emotion badge with micro:bit",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "grade2-maker-2024",
-        "activity_section.key": "ccff67c7-a43a-4309-a859-f85bbd78c669"
+        "activity_section.key": "c63f88e3-6657-4fab-a377-efde6563d67c"
       },
       "level_keys": [
         "course_c_maker_emotion_badge_grade2"
@@ -2800,7 +2816,7 @@
           "MyLoopyRoboticFriends-Unplugged2022_maker_grade2"
         ],
         "lesson.key": "My Loopy Robotic Friends Jr",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "380902f8-f0ea-4a9c-94f8-75f0cd08088e"
       },
@@ -2825,7 +2841,7 @@
           "courseB_video_ArtistIntro_grade2"
         ],
         "lesson.key": "Drawing Gardens with Loops",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "41d2453f-5eaf-4913-a800-80735ace9b41"
       },
@@ -2850,7 +2866,7 @@
           "courseB_artist_loops1_grade2"
         ],
         "lesson.key": "Drawing Gardens with Loops",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "cf1b9bf6-c0f8-44a7-b6f7-19935d58fa4c"
       },
@@ -2875,7 +2891,7 @@
           "courseB_video_artistLoops_grade2"
         ],
         "lesson.key": "Drawing Gardens with Loops",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "584d86b4-1b2f-4759-a976-2439236ce543"
       },
@@ -2900,7 +2916,7 @@
           "courseB_artist_loops2_grade2"
         ],
         "lesson.key": "Drawing Gardens with Loops",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "6d319677-9439-4ecb-a72b-e1fa9eb46506"
       },
@@ -2925,7 +2941,7 @@
           "courseB_artist_loops3_grade2"
         ],
         "lesson.key": "Drawing Gardens with Loops",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "6d319677-9439-4ecb-a72b-e1fa9eb46506"
       },
@@ -2950,7 +2966,7 @@
           "courseB_artist_loops4_grade2"
         ],
         "lesson.key": "Drawing Gardens with Loops",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "6d319677-9439-4ecb-a72b-e1fa9eb46506"
       },
@@ -2975,7 +2991,7 @@
           "courseB_artist_loops5_grade2"
         ],
         "lesson.key": "Drawing Gardens with Loops",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "6d319677-9439-4ecb-a72b-e1fa9eb46506"
       },
@@ -3000,7 +3016,7 @@
           "courseB_artist_loops6_grade2"
         ],
         "lesson.key": "Drawing Gardens with Loops",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "6d319677-9439-4ecb-a72b-e1fa9eb46506"
       },
@@ -3026,7 +3042,7 @@
           "courseB_artist_loops7_grade2"
         ],
         "lesson.key": "Drawing Gardens with Loops",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "111ab6a8-0cc9-4304-a193-ffa1601fedd9"
       },
@@ -3051,7 +3067,7 @@
           "courseB_artist_loops8_grade2"
         ],
         "lesson.key": "Drawing Gardens with Loops",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "73d7ac75-38c2-4a0b-8309-e0b9240b3c4f"
       },
@@ -3076,7 +3092,7 @@
           "courseB_artist_loops9_grade2"
         ],
         "lesson.key": "Drawing Gardens with Loops",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "73d7ac75-38c2-4a0b-8309-e0b9240b3c4f"
       },
@@ -3101,7 +3117,7 @@
           "courseB_artist_loops10_grade2"
         ],
         "lesson.key": "Drawing Gardens with Loops",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "227c767a-f9ef-4e32-a4df-bc81037d4a30"
       },
@@ -3126,7 +3142,7 @@
           "courseB_artist_loops_challenge1_grade2"
         ],
         "lesson.key": "Drawing Gardens with Loops",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "1b0a693d-fb23-43ed-8891-ba16f521fd1c"
       },
@@ -3151,7 +3167,7 @@
           "courseB_artist_loops_challenge2_grade2"
         ],
         "lesson.key": "Drawing Gardens with Loops",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "1b0a693d-fb23-43ed-8891-ba16f521fd1c"
       },
@@ -3165,6 +3181,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_c_maker_calming_leds_grade2"
+        ],
         "progression": "Calming LEDs with micro:bit"
       },
       "bonus": false,
@@ -3173,7 +3192,7 @@
           "course_c_maker_calming_leds_grade2"
         ],
         "lesson.key": "Cristina - Calming LEDs with micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "dce5ea7f-d290-4ce7-b0dc-b405f0e5b5a9"
       },
@@ -3198,7 +3217,7 @@
           "courseC_data wizard_grade2"
         ],
         "lesson.key": "Picturing Data",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "a4300419-0de9-49b7-bde2-f77c6aad3033"
       },
@@ -3223,7 +3242,7 @@
           "courseF_variables2_predict_grade2"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "dc200466-7b00-480a-a4ed-0f824defd550"
       },
@@ -3248,7 +3267,7 @@
           "courseF_variables2_predict2_grade2"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "dc200466-7b00-480a-a4ed-0f824defd550"
       },
@@ -3273,7 +3292,7 @@
           "courseF_variables2_set_grade2"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "828f40b9-1365-4b33-884d-f7e9feedca74"
       },
@@ -3298,7 +3317,7 @@
           "courseF_variables2_change_grade2"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "828f40b9-1365-4b33-884d-f7e9feedca74"
       },
@@ -3323,7 +3342,7 @@
           "courseF_variables2_click_grade2"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "828f40b9-1365-4b33-884d-f7e9feedca74"
       },
@@ -3348,7 +3367,7 @@
           "courseF_clicker_explore_grade2"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "2c8d7c48-2b63-4bc3-90aa-caa03036e208"
       },
@@ -3373,7 +3392,7 @@
           "courseF_clicker_sprites_grade2"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "26e2bf97-bb58-4738-bc3b-5523dadcd3de"
       },
@@ -3398,7 +3417,7 @@
           "courseF_clicker_remove_grade2"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "26e2bf97-bb58-4738-bc3b-5523dadcd3de"
       },
@@ -3423,7 +3442,7 @@
           "courseF_clicker_variable_grade2"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "26e2bf97-bb58-4738-bc3b-5523dadcd3de"
       },
@@ -3448,7 +3467,7 @@
           "courseF_clicker_score_grade2"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "26e2bf97-bb58-4738-bc3b-5523dadcd3de"
       },
@@ -3473,7 +3492,7 @@
           "courseF_clicker_finish_grade2"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "26e2bf97-bb58-4738-bc3b-5523dadcd3de"
       },
@@ -3487,6 +3506,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_c_maker_counter_grade2"
+        ],
         "progression": "Counter with micro:bit"
       },
       "bonus": false,
@@ -3495,7 +3517,7 @@
           "course_c_maker_counter_grade2"
         ],
         "lesson.key": "Cristina - Counter with micro:bit",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "b1ef73f3-2862-45be-a6ad-b1aa7d8ef302"
       },
@@ -3778,7 +3800,7 @@
         "lesson.key": "Cristina - Emotion badge with micro:bit",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "grade2-maker-2024",
-        "activity_section.key": "ccff67c7-a43a-4309-a859-f85bbd78c669"
+        "activity_section.key": "c63f88e3-6657-4fab-a377-efde6563d67c"
       }
     },
     {
@@ -3788,7 +3810,7 @@
           "MyLoopyRoboticFriends-Unplugged2022_maker_grade2"
         ],
         "lesson.key": "My Loopy Robotic Friends Jr",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "380902f8-f0ea-4a9c-94f8-75f0cd08088e"
       }
@@ -3800,7 +3822,7 @@
           "courseB_video_ArtistIntro_grade2"
         ],
         "lesson.key": "Drawing Gardens with Loops",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "41d2453f-5eaf-4913-a800-80735ace9b41"
       }
@@ -3812,7 +3834,7 @@
           "courseB_artist_loops1_grade2"
         ],
         "lesson.key": "Drawing Gardens with Loops",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "cf1b9bf6-c0f8-44a7-b6f7-19935d58fa4c"
       }
@@ -3824,7 +3846,7 @@
           "courseB_video_artistLoops_grade2"
         ],
         "lesson.key": "Drawing Gardens with Loops",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "584d86b4-1b2f-4759-a976-2439236ce543"
       }
@@ -3836,7 +3858,7 @@
           "courseB_artist_loops2_grade2"
         ],
         "lesson.key": "Drawing Gardens with Loops",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "6d319677-9439-4ecb-a72b-e1fa9eb46506"
       }
@@ -3848,7 +3870,7 @@
           "courseB_artist_loops3_grade2"
         ],
         "lesson.key": "Drawing Gardens with Loops",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "6d319677-9439-4ecb-a72b-e1fa9eb46506"
       }
@@ -3860,7 +3882,7 @@
           "courseB_artist_loops4_grade2"
         ],
         "lesson.key": "Drawing Gardens with Loops",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "6d319677-9439-4ecb-a72b-e1fa9eb46506"
       }
@@ -3872,7 +3894,7 @@
           "courseB_artist_loops5_grade2"
         ],
         "lesson.key": "Drawing Gardens with Loops",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "6d319677-9439-4ecb-a72b-e1fa9eb46506"
       }
@@ -3884,7 +3906,7 @@
           "courseB_artist_loops6_grade2"
         ],
         "lesson.key": "Drawing Gardens with Loops",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "6d319677-9439-4ecb-a72b-e1fa9eb46506"
       }
@@ -3896,7 +3918,7 @@
           "courseB_artist_loops7_grade2"
         ],
         "lesson.key": "Drawing Gardens with Loops",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "111ab6a8-0cc9-4304-a193-ffa1601fedd9"
       }
@@ -3908,7 +3930,7 @@
           "courseB_artist_loops8_grade2"
         ],
         "lesson.key": "Drawing Gardens with Loops",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "73d7ac75-38c2-4a0b-8309-e0b9240b3c4f"
       }
@@ -3920,7 +3942,7 @@
           "courseB_artist_loops9_grade2"
         ],
         "lesson.key": "Drawing Gardens with Loops",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "73d7ac75-38c2-4a0b-8309-e0b9240b3c4f"
       }
@@ -3932,7 +3954,7 @@
           "courseB_artist_loops10_grade2"
         ],
         "lesson.key": "Drawing Gardens with Loops",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "227c767a-f9ef-4e32-a4df-bc81037d4a30"
       }
@@ -3944,7 +3966,7 @@
           "courseB_artist_loops_challenge1_grade2"
         ],
         "lesson.key": "Drawing Gardens with Loops",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "1b0a693d-fb23-43ed-8891-ba16f521fd1c"
       }
@@ -3956,7 +3978,7 @@
           "courseB_artist_loops_challenge2_grade2"
         ],
         "lesson.key": "Drawing Gardens with Loops",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "1b0a693d-fb23-43ed-8891-ba16f521fd1c"
       }
@@ -3968,7 +3990,7 @@
           "course_c_maker_calming_leds_grade2"
         ],
         "lesson.key": "Cristina - Calming LEDs with micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "dce5ea7f-d290-4ce7-b0dc-b405f0e5b5a9"
       }
@@ -3980,7 +4002,7 @@
           "courseC_data wizard_grade2"
         ],
         "lesson.key": "Picturing Data",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "a4300419-0de9-49b7-bde2-f77c6aad3033"
       }
@@ -3992,7 +4014,7 @@
           "courseF_variables2_predict_grade2"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "dc200466-7b00-480a-a4ed-0f824defd550"
       }
@@ -4004,7 +4026,7 @@
           "courseF_variables2_predict2_grade2"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "dc200466-7b00-480a-a4ed-0f824defd550"
       }
@@ -4016,7 +4038,7 @@
           "courseF_variables2_set_grade2"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "828f40b9-1365-4b33-884d-f7e9feedca74"
       }
@@ -4028,7 +4050,7 @@
           "courseF_variables2_change_grade2"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "828f40b9-1365-4b33-884d-f7e9feedca74"
       }
@@ -4040,7 +4062,7 @@
           "courseF_variables2_click_grade2"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "828f40b9-1365-4b33-884d-f7e9feedca74"
       }
@@ -4052,7 +4074,7 @@
           "courseF_clicker_explore_grade2"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "2c8d7c48-2b63-4bc3-90aa-caa03036e208"
       }
@@ -4064,7 +4086,7 @@
           "courseF_clicker_sprites_grade2"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "26e2bf97-bb58-4738-bc3b-5523dadcd3de"
       }
@@ -4076,7 +4098,7 @@
           "courseF_clicker_remove_grade2"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "26e2bf97-bb58-4738-bc3b-5523dadcd3de"
       }
@@ -4088,7 +4110,7 @@
           "courseF_clicker_variable_grade2"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "26e2bf97-bb58-4738-bc3b-5523dadcd3de"
       }
@@ -4100,7 +4122,7 @@
           "courseF_clicker_score_grade2"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "26e2bf97-bb58-4738-bc3b-5523dadcd3de"
       }
@@ -4112,7 +4134,7 @@
           "courseF_clicker_finish_grade2"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "26e2bf97-bb58-4738-bc3b-5523dadcd3de"
       }
@@ -4124,7 +4146,7 @@
           "course_c_maker_counter_grade2"
         ],
         "lesson.key": "Cristina - Counter with micro:bit",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade2-maker-2024",
         "activity_section.key": "b1ef73f3-2862-45be-a6ad-b1aa7d8ef302"
       }

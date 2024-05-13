@@ -79,7 +79,7 @@ class SessionsController < Devise::SessionsController
 
     # Find any existing permission request for this user
     # Students might have issued a few requests. We render the latest one.
-    permission_request = ParentalPermissionRequest.where(user: current_user).order(updated_at: :desc).limit(1).first
+    permission_request = Queries::ChildAccount.latest_permission_request(current_user)
 
     # If it exists, set the appropriate fields before rendering the lockout UI
     if permission_request

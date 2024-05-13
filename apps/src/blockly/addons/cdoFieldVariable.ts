@@ -6,6 +6,7 @@ import GoogleBlockly, {
   MenuOption,
   VariableModel,
 } from 'blockly/core';
+
 import {commonI18n} from '@cdo/apps/types/locale';
 
 const RENAME_THIS_ID = 'RENAME_THIS_ID';

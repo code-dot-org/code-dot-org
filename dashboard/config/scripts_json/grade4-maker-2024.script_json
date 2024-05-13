@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "grade4-maker",
-    "serialized_at": "2024-05-03 21:37:26 UTC",
+    "serialized_at": "2024-05-07 21:28:36 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -21,11 +21,23 @@
   },
   "lesson_groups": [
     {
-      "key": "lessonGroup-2",
+      "key": "lessonGroup-4",
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Events, Conditionals, and Designing for Accessibility"
+        "display_name": "Sensory Toy with micro:bit - Events and Designing for Accessibility"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "grade4-maker-2024"
+      }
+    },
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Simple Door Alarm Coding with micro:bit - Conditionals"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-2",
@@ -35,9 +47,9 @@
     {
       "key": "lessonGroup-3",
       "user_facing": true,
-      "position": 2,
+      "position": 3,
       "properties": {
-        "display_name": "[Optional] Extension: Functions"
+        "display_name": "Tilt alarm with micro:bit - Functions"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
@@ -62,7 +74,7 @@
       },
       "seeding_key": {
         "lesson.key": "Dance Party: Unplugged",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
@@ -82,7 +94,7 @@
       },
       "seeding_key": {
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
@@ -101,7 +113,7 @@
       },
       "seeding_key": {
         "lesson.key": "Designing for Accessibility",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
@@ -120,7 +132,7 @@
       },
       "seeding_key": {
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
@@ -137,7 +149,7 @@
       },
       "seeding_key": {
         "lesson.key": "Cristina - Sensory Toy with micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
@@ -290,7 +302,7 @@
       "seeding_key": {
         "lesson_activity.key": "e6d29afa-cd7e-4dea-81b8-d3e699aa3b85",
         "lesson.key": "Dance Party: Unplugged",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
@@ -304,7 +316,7 @@
       "seeding_key": {
         "lesson_activity.key": "18d352b3-04c6-4b9a-bc94-8857708868bd",
         "lesson.key": "Dance Party: Unplugged",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
@@ -318,7 +330,7 @@
       "seeding_key": {
         "lesson_activity.key": "de0ed543-4cd1-4587-90a8-002f2a3e0aa1",
         "lesson.key": "Dance Party: Unplugged",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
@@ -332,7 +344,7 @@
       "seeding_key": {
         "lesson_activity.key": "acfce5b7-eb91-49c9-957f-7ad06b858a1c",
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
@@ -346,7 +358,7 @@
       "seeding_key": {
         "lesson_activity.key": "839531da-49bd-40f0-ad19-9ff5000c39a3",
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
@@ -360,7 +372,7 @@
       "seeding_key": {
         "lesson_activity.key": "57bad2c7-fab6-4886-b9b9-69ba11b0c923",
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
@@ -372,7 +384,7 @@
       "seeding_key": {
         "lesson_activity.key": "f7bf3266-a12b-442b-b060-3170b4c6157a",
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
@@ -385,7 +397,7 @@
       "seeding_key": {
         "lesson_activity.key": "c33f4bbf-ed90-4540-b5a9-eb7a755916c1",
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
@@ -399,7 +411,7 @@
       "seeding_key": {
         "lesson_activity.key": "230f79a0-f540-4c50-926e-da5acf9e4958",
         "lesson.key": "Designing for Accessibility",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
@@ -413,7 +425,7 @@
       "seeding_key": {
         "lesson_activity.key": "5db17a19-935b-498c-86c5-c917e5466b69",
         "lesson.key": "Designing for Accessibility",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
@@ -427,7 +439,7 @@
       "seeding_key": {
         "lesson_activity.key": "8b026237-24bc-4046-807d-c1d6f1788726",
         "lesson.key": "Designing for Accessibility",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
@@ -441,7 +453,7 @@
       "seeding_key": {
         "lesson_activity.key": "2765d8ef-da06-451f-b457-235f691d7327",
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
@@ -455,7 +467,7 @@
       "seeding_key": {
         "lesson_activity.key": "d1ac5724-be34-464b-9700-2623131ffdb9",
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
@@ -469,7 +481,7 @@
       "seeding_key": {
         "lesson_activity.key": "ff3c7c7c-c637-499d-8cf9-0d1801beb7bf",
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
@@ -482,7 +494,7 @@
       "seeding_key": {
         "lesson_activity.key": "ed12ade2-c6a6-49e0-854d-9548f05fee85",
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
@@ -496,7 +508,7 @@
       "seeding_key": {
         "lesson_activity.key": "df3eaf2b-33d0-445c-b96a-42265307c0c0",
         "lesson.key": "Cristina - Sensory Toy with micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
@@ -510,7 +522,7 @@
       "seeding_key": {
         "lesson_activity.key": "50dfcb58-8e62-41d3-884e-8390007fdb33",
         "lesson.key": "Cristina - Sensory Toy with micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
@@ -524,7 +536,7 @@
       "seeding_key": {
         "lesson_activity.key": "6965fcf1-344e-4b23-8f40-cb5d41ef7175",
         "lesson.key": "Cristina - Sensory Toy with micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
@@ -537,7 +549,7 @@
       "seeding_key": {
         "lesson_activity.key": "981706cd-b1f7-40cf-b5fe-160f976e8457",
         "lesson.key": "Cristina - Sensory Toy with micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
@@ -2534,7 +2546,7 @@
           "course_e_maker_dance_party_unplugged_grade4"
         ],
         "lesson.key": "Dance Party: Unplugged",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "1d007c8e-164c-4bcf-9164-a2cb02a27e18"
       },
@@ -2559,7 +2571,7 @@
           "CourseD_Dance_2020_vid1_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "52f2af84-fa65-485b-a4bf-d2e77a0f759a"
       },
@@ -2584,7 +2596,7 @@
           "CourseD_Dance_2020_01_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "f11d0d50-de86-46a8-a05c-2a607d6dc387"
       },
@@ -2609,7 +2621,7 @@
           "CourseD_Dance_2020_vid2_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "2633b326-4805-4751-a579-22a69fde880f"
       },
@@ -2634,7 +2646,7 @@
           "CourseD_Dance_2020_02_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "3235ee66-a242-4c95-80d9-293b19dd486a"
       },
@@ -2659,7 +2671,7 @@
           "CourseD_Dance_2020_03_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "3235ee66-a242-4c95-80d9-293b19dd486a"
       },
@@ -2684,7 +2696,7 @@
           "CourseD_Dance_2020_vid3_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "32439074-3a4e-4185-9e66-6f2c51d4fa4b"
       },
@@ -2709,7 +2721,7 @@
           "CourseD_Dance_2020_04_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "9d6d87e2-ea3b-42e1-bd9b-63344ae00ffd"
       },
@@ -2734,7 +2746,7 @@
           "CourseD_Dance_2020_05_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "9d6d87e2-ea3b-42e1-bd9b-63344ae00ffd"
       },
@@ -2759,7 +2771,7 @@
           "CourseD_Dance_2020_06_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "9d6d87e2-ea3b-42e1-bd9b-63344ae00ffd"
       },
@@ -2784,7 +2796,7 @@
           "CourseD_Dance_2020_vid4_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "c386f5c1-1139-4fd7-9f7e-6fce0ee3f95c"
       },
@@ -2809,7 +2821,7 @@
           "CourseD_Dance_2020_07_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "b7a774cc-424c-4212-b35f-be0572579d64"
       },
@@ -2834,7 +2846,7 @@
           "CourseD_Dance_2020_08_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "b7a774cc-424c-4212-b35f-be0572579d64"
       },
@@ -2859,7 +2871,7 @@
           "CourseD_Dance_2020_09_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "b7a774cc-424c-4212-b35f-be0572579d64"
       },
@@ -2884,7 +2896,7 @@
           "CourseD_Dance_2020_vid5_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "21b749df-8c39-48cf-9234-b1212e35a22d"
       },
@@ -2909,7 +2921,7 @@
           "CourseD_Dance_2020_10_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "ec9e7095-8d44-4344-aaa9-965f50266a16"
       },
@@ -2934,7 +2946,7 @@
           "CourseD_Dance_2020_bonus1_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "3adbeff1-aecc-41a7-8cdd-4017fa8bd9e8"
       },
@@ -2959,7 +2971,7 @@
           "CourseD_Dance_2020_bonus3_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "3adbeff1-aecc-41a7-8cdd-4017fa8bd9e8"
       },
@@ -2984,7 +2996,7 @@
           "DesigningForAccessibilityMarkdownLevel2022_maker_grade4"
         ],
         "lesson.key": "Designing for Accessibility",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "4b5bc9ab-0487-4e8f-b8b4-51dac583d02d"
       },
@@ -3009,7 +3021,7 @@
           "course_c_maker_meet_your_microbit_grade4"
         ],
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "754d044a-1055-4742-9bf1-91abce68d6f2"
       },
@@ -3034,7 +3046,7 @@
           "grade4-maker-matching-1"
         ],
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "5a9c2269-e8e1-4677-a127-6bea6aad6c28"
       },
@@ -3048,6 +3060,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_e_maker_sensory_toy_grade4"
+        ],
         "progression": "Sensory toy coding with micro:bit"
       },
       "bonus": false,
@@ -3056,7 +3071,7 @@
           "course_e_maker_sensory_toy_grade4"
         ],
         "lesson.key": "Cristina - Sensory Toy with micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "0d18a755-7efb-46b7-b3f0-f4ffc99ad443"
       },
@@ -3521,6 +3536,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_e_maker_simple_door_alarm_grade4"
+        ],
         "progression": "Simple Door Alarm with micro:bit"
       },
       "bonus": false,
@@ -4268,6 +4286,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_e_maker_tilt_alarm_grade4"
+        ],
         "progression": "Tilt Alarm with micro:bit"
       },
       "bonus": false,
@@ -4293,7 +4314,7 @@
           "course_e_maker_dance_party_unplugged_grade4"
         ],
         "lesson.key": "Dance Party: Unplugged",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "1d007c8e-164c-4bcf-9164-a2cb02a27e18"
       }
@@ -4305,7 +4326,7 @@
           "CourseD_Dance_2020_vid1_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "52f2af84-fa65-485b-a4bf-d2e77a0f759a"
       }
@@ -4317,7 +4338,7 @@
           "CourseD_Dance_2020_01_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "f11d0d50-de86-46a8-a05c-2a607d6dc387"
       }
@@ -4329,7 +4350,7 @@
           "CourseD_Dance_2020_vid2_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "2633b326-4805-4751-a579-22a69fde880f"
       }
@@ -4341,7 +4362,7 @@
           "CourseD_Dance_2020_02_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "3235ee66-a242-4c95-80d9-293b19dd486a"
       }
@@ -4353,7 +4374,7 @@
           "CourseD_Dance_2020_03_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "3235ee66-a242-4c95-80d9-293b19dd486a"
       }
@@ -4365,7 +4386,7 @@
           "CourseD_Dance_2020_vid3_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "32439074-3a4e-4185-9e66-6f2c51d4fa4b"
       }
@@ -4377,7 +4398,7 @@
           "CourseD_Dance_2020_04_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "9d6d87e2-ea3b-42e1-bd9b-63344ae00ffd"
       }
@@ -4389,7 +4410,7 @@
           "CourseD_Dance_2020_05_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "9d6d87e2-ea3b-42e1-bd9b-63344ae00ffd"
       }
@@ -4401,7 +4422,7 @@
           "CourseD_Dance_2020_06_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "9d6d87e2-ea3b-42e1-bd9b-63344ae00ffd"
       }
@@ -4413,7 +4434,7 @@
           "CourseD_Dance_2020_vid4_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "c386f5c1-1139-4fd7-9f7e-6fce0ee3f95c"
       }
@@ -4425,7 +4446,7 @@
           "CourseD_Dance_2020_07_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "b7a774cc-424c-4212-b35f-be0572579d64"
       }
@@ -4437,7 +4458,7 @@
           "CourseD_Dance_2020_08_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "b7a774cc-424c-4212-b35f-be0572579d64"
       }
@@ -4449,7 +4470,7 @@
           "CourseD_Dance_2020_09_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "b7a774cc-424c-4212-b35f-be0572579d64"
       }
@@ -4461,7 +4482,7 @@
           "CourseD_Dance_2020_vid5_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "21b749df-8c39-48cf-9234-b1212e35a22d"
       }
@@ -4473,7 +4494,7 @@
           "CourseD_Dance_2020_10_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "ec9e7095-8d44-4344-aaa9-965f50266a16"
       }
@@ -4485,7 +4506,7 @@
           "CourseD_Dance_2020_bonus1_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "3adbeff1-aecc-41a7-8cdd-4017fa8bd9e8"
       }
@@ -4497,7 +4518,7 @@
           "CourseD_Dance_2020_bonus3_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "3adbeff1-aecc-41a7-8cdd-4017fa8bd9e8"
       }
@@ -4509,7 +4530,7 @@
           "DesigningForAccessibilityMarkdownLevel2022_maker_grade4"
         ],
         "lesson.key": "Designing for Accessibility",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "4b5bc9ab-0487-4e8f-b8b4-51dac583d02d"
       }
@@ -4521,7 +4542,7 @@
           "course_c_maker_meet_your_microbit_grade4"
         ],
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "754d044a-1055-4742-9bf1-91abce68d6f2"
       }
@@ -4533,7 +4554,7 @@
           "grade4-maker-matching-1"
         ],
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "5a9c2269-e8e1-4677-a127-6bea6aad6c28"
       }
@@ -4545,7 +4566,7 @@
           "course_e_maker_sensory_toy_grade4"
         ],
         "lesson.key": "Cristina - Sensory Toy with micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "0d18a755-7efb-46b7-b3f0-f4ffc99ad443"
       }

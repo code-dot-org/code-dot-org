@@ -1,10 +1,13 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import fontConstants from '@cdo/apps/fontConstants';
-import NewProjectButtons from './NewProjectButtons';
 import i18n from '@cdo/locale';
-import Button from '../Button';
+
 import color from '../../util/color';
+import Button from '../Button';
+
+import NewProjectButtons from './NewProjectButtons';
 
 export default class StartNewProject extends React.Component {
   static propTypes = {

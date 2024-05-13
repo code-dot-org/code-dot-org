@@ -127,14 +127,18 @@ class BubbleChoice < DSLDefined
     sublevels.each_with_index do |level, index|
       level_info = level.summary_for_lesson_plans.symbolize_keys
 
+      level_desc = level.try(:bubble_choice_description)
+      level_desc = I18n.t(level.name, scope: %i[data bubble_choice_description], default: level_desc) if should_localize
+
       level_info.merge!(
         {
           id: level.id.to_s,
-          description: level.try(:bubble_choice_description),
+          description: level_desc,
           thumbnail_url: level.try(:thumbnail_url),
           position: index + 1,
           letter: ALPHABET[index],
-          icon: level.try(:icon)
+          icon: level.try(:icon),
+          uses_lab2: level.uses_lab2?
         }
       )
 
@@ -144,6 +148,10 @@ class BubbleChoice < DSLDefined
       level_info[:url] = script_level ?
         build_script_level_url(script_level, {sublevel_position: index + 1}) :
         level_url(level.id)
+
+      level_info[:path] = script_level ?
+        build_script_level_path(script_level, {sublevel_position: index + 1}) :
+        level_path(level.id)
 
       if user_id
         level_for_sublevel_progress = BubbleChoice.level_for_progress_for_sublevel(level)

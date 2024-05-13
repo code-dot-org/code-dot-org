@@ -10838,6 +10838,8 @@
   about_page_donors_link_1: "Make a donations"
   about_page_donors_link_2: "[see our list of donors](%{donors_url})"
 
+  districts_skinny_banner_title: "Over 100+ Districts have joined our District Program! [See district partners](%{district_partners_url})"
+
   teach_ai_title: "Real-world Examples. Practical Resources."
   teach_ai_description: "The AI Guidance for Schools Toolkit is a resource for policymakers, school leaders, and staff to develop initial guidance on AI in their schools."
   teach_ai_button_label: "View the Toolkit"
