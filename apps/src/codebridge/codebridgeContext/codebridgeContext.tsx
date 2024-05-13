@@ -21,6 +21,7 @@ import {
   MoveFileFunction,
   RenameFolderFunction,
   SetFileVisibilityFunction,
+  ResetProjectFunction,
 } from './types';
 
 type CodebridgeContextType = {
@@ -41,6 +42,7 @@ type CodebridgeContextType = {
   moveFile: MoveFileFunction;
   renameFolder: RenameFolderFunction;
   setFileVisibility: SetFileVisibilityFunction;
+  resetProject: ResetProjectFunction;
 };
 
 export const CodebridgeContext = createContext<CodebridgeContextType | null>(

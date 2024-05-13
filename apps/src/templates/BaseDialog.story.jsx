@@ -1,6 +1,8 @@
 import React from 'react';
-import BaseDialog from './BaseDialog';
+
 import ExampleDialogButton from '../util/ExampleDialogButton';
+
+import BaseDialog from './BaseDialog';
 
 const EXAMPLE_DIALOG_BODY = (
   <div style={{border: '1px solid black'}}>

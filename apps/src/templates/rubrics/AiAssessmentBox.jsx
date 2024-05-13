@@ -1,20 +1,23 @@
-import React, {useContext} from 'react';
 import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
-import style from './rubrics.module.scss';
-import EditorAnnotator from '@cdo/apps/EditorAnnotator';
+import React, {useContext} from 'react';
+
 import {
   EmText,
   StrongText,
   BodyFourText,
 } from '@cdo/apps/componentLibrary/typography';
+import EditorAnnotator from '@cdo/apps/EditorAnnotator';
 import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
-import {aiEvaluationShape, aiEvidenceShape} from './rubricShapes';
-import AiConfidenceBox from './AiConfidenceBox';
+import i18n from '@cdo/locale';
+
+import AiAssessmentFeedback from './AiAssessmentFeedback';
 import AiAssessmentFeedbackContext from './AiAssessmentFeedbackContext';
 import AiAssessmentFeedbackRadio from './AiAssessmentFeedbackRadio';
-import AiAssessmentFeedback from './AiAssessmentFeedback';
+import AiConfidenceBox from './AiConfidenceBox';
 import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
+import {aiEvaluationShape, aiEvidenceShape} from './rubricShapes';
+
+import style from './rubrics.module.scss';
 
 export default function AiAssessmentBox({
   isAiAssessed,
