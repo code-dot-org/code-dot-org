@@ -6,10 +6,14 @@ import {combineReducers} from 'redux';
 
 import {Galleries} from './projectConstants';
 import {PUBLISH_SUCCESS} from './publishDialog/publishDialogRedux';
-// Disabling import order due to circular dependencies errors from build.
-import {DELETE_SUCCESS} from './deleteDialog/deleteProjectDialogRedux'; /* eslint-disable-line import/order */
-import {channels as channelsApi} from '../../clientApi'; /* eslint-disable-line import/order */
-import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi'; /* eslint-disable-line import/order */
+// Disabling import order due to a build error for circular dependencies errors.
+// Investigation is needed to determine where the circular dependency is coming from and whether
+// we can resolve it without the below specified order of imports.
+/* eslint-disable import/order */
+import {DELETE_SUCCESS} from './deleteDialog/deleteProjectDialogRedux';
+import {channels as channelsApi} from '../../clientApi';
+import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
+/* eslint-enable import/order */
 
 // Action types
 

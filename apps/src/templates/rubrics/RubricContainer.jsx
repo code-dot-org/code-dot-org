@@ -1,4 +1,3 @@
-// Disabling import/order rule for this file because product tour imports are grouped.
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useCallback, useEffect, useState, useRef} from 'react';
