@@ -51,7 +51,7 @@
   ]
 
 .carousel-wrapper
-  %swiper-container.swiper-00{navigation: "true", "navigation-next-el": ".nav-next-00", "navigation-prev-el": ".nav-prev-00", pagination: "true", init: "false"}
+  %swiper-container.swiper-elementary{navigation: "true", "navigation-next-el": ".nav-next-elementary", "navigation-prev-el": ".nav-prev-elementary", pagination: "true", init: "false"}
     - block_item.each do |block_item|
       %swiper-slide
         .action-block.action-block--one-col.flex-space-between
@@ -76,5 +76,5 @@
             %a.link-button.secondary{href: block_item[:url_secondary], aria:{label: "#{block_item[:aria_label_secondary]}"}}
               =hoc_s(:call_to_action_explore_curriculum)
 
-  %button.swiper-nav-prev.nav-prev-00
-  %button.swiper-nav-next.nav-next-00
+  %button.swiper-nav-prev.nav-prev-elementary
+  %button.swiper-nav-next.nav-next-elementary
