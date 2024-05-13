@@ -56,7 +56,6 @@ describe('UnconnectedInviteToV2ProgressModal', () => {
       setHasSeenProgressTableInvite: setHasSeenProgressTableInviteStub,
       hasSeenProgressTableInvite: false,
       dateProgressTableInvitationDelayed: null,
-      showProgressTableV2: null,
     });
 
     screen.getByText(i18n.progressTrackingAnnouncement());
