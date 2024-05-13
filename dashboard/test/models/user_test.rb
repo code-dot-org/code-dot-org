@@ -8,15 +8,14 @@ class UserTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
 
   class UsStateCodeTest < ActiveSupport::TestCase
-    test 'returns us_state if present' do
+    test 'returns student us_state if present' do
       student = create(:student, :in_colorado)
       assert_equal 'CO', student.us_state_code
     end
 
-    test 'returns teacher school US state code of student' do
-      student = create(:student, us_state: '??')
-      Queries::ChildAccount.expects(:teacher_us_state).with(student).returns('district of Columbia')
-      assert_equal 'DC', student.us_state_code
+    test 'returns nil if student us_state is "??"' do
+      student = create(:student, :unknown_us_region)
+      assert_nil student.us_state_code
     end
 
     test 'returns teacher school US state code' do

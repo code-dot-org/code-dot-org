@@ -2737,15 +2737,18 @@ class User < ApplicationRecord
     id && Digest::UUID.uuid_v5(Dashboard::Application.config.secret_key_base, id.to_s)
   end
 
-  # Finds the user's US state code based on existing info like the user's school
+  # @return [String, nil] the user's US state code in the ISO 3166-2:US standard
   def us_state_code
-    return us_state if us_state.present? && us_state != NOT_LISTED_US_STATE
+    state = student? ? us_state : school_info&.state
+    return if state.blank?
 
-    us_state = teacher? ? school_info&.state : Queries::ChildAccount.teacher_us_state(self)
-    return unless us_state
+    # {CO: 'Colorado', DC: 'District Of Columbia', ...}
+    state_code_to_name_map = CS.states(:US)
+    # Returns `state` if it is a US state code
+    return state.upcase if state_code_to_name_map.key?(state.upcase.to_sym)
 
-    us_states = CS.states(:US).transform_values(&:downcase)
-    us_states.key?(us_state.upcase.to_sym) ? us_state.upcase : us_states.key(us_state.downcase)&.to_s
+    # Returns the code of `state` if it is a US state name
+    state_code_to_name_map.transform_values(&:downcase).key(state.downcase)&.to_s
   end
 
   private def account_age_in_years
@@ -2836,7 +2839,6 @@ class User < ApplicationRecord
       Cdo::EmailValidator.email_address?(parent_email)
   end
 
-  NOT_LISTED_US_STATE = '??'.freeze
   US_STATE_DROPDOWN_OPTIONS = {
     'AL' => 'Alabama', 'AK' => 'Alaska', 'AZ' => 'Arizona', 'AR' => 'Arkansas',
     'CA' => 'California', 'CO' => 'Colorado', 'CT' => 'Connecticut',
@@ -2860,7 +2862,7 @@ class User < ApplicationRecord
   # selection inputs for User accounts.
   # Includes a '??' state code for a location not listed.
   def self.us_state_dropdown_options
-    {NOT_LISTED_US_STATE => I18n.t('signup_form.us_state_dropdown_options.other')}.
+    {'??' => I18n.t('signup_form.us_state_dropdown_options.other')}.
       merge(US_STATE_DROPDOWN_OPTIONS)
   end
 
