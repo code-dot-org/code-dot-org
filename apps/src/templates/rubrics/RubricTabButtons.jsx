@@ -1,12 +1,15 @@
-import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import style from './rubrics.module.scss';
-import i18n from '@cdo/locale';
+import React, {useState} from 'react';
+
 import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
-import RunAIAssessmentButton, {STATUS} from './RunAIAssessmentButton';
-import {reportingDataShape, rubricShape} from './rubricShapes';
+import i18n from '@cdo/locale';
+
 import {InfoAlert} from './RubricContent';
 import {TAB_NAMES} from './rubricHelpers';
+import {reportingDataShape, rubricShape} from './rubricShapes';
+import RunAIAssessmentButton, {STATUS} from './RunAIAssessmentButton';
+
+import style from './rubrics.module.scss';
 
 export default function RubricTabButtons({
   tabSelectCallback,

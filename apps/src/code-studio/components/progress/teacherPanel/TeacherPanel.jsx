@@ -390,7 +390,7 @@ export default connect(
       updateQueryParam('user_id', userId);
       updateQueryParam('version');
       if (isAsync) {
-        dispatch(queryUserProgress(userId));
+        dispatch(queryUserProgress(userId, false));
         dispatch(setViewAsUserId(userId));
       } else {
         reload();

@@ -2,6 +2,8 @@ import Typography from '@cdo/apps/componentLibrary/typography';
 import React from 'react';
 import {BaseDialogProps} from './DialogManager';
 import moduleStyles from './confirm-dialog.module.scss';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {TEXT_BASED_LABS} from '@cdo/apps/lab2/types';
 const commonI18n = require('@cdo/locale');
 
 /**
@@ -11,13 +13,21 @@ const StartOverDialog: React.FunctionComponent<BaseDialogProps> = ({
   handleConfirm,
   handleCancel,
 }) => {
+  const currentAppName = useAppSelector(
+    state => state.lab.levelProperties?.appName
+  );
+  const isTextWorkspace =
+    currentAppName && TEXT_BASED_LABS.includes(currentAppName);
+
   return (
     <div className={moduleStyles.confirmDialog}>
       <Typography semanticTag="h1" visualAppearance="heading-lg">
         {commonI18n.startOverTitle()}
       </Typography>
       <Typography semanticTag="p" visualAppearance="body-two">
-        {commonI18n.startOverWorkspace()}
+        {isTextWorkspace
+          ? commonI18n.startOverWorkspaceText()
+          : commonI18n.startOverWorkspace()}
       </Typography>
       <div className={moduleStyles.buttonContainer}>
         <button

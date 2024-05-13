@@ -35,7 +35,10 @@ describe('UnconnectedInviteToV2ProgressModal', () => {
   }
 
   it('renders the dialog with required elements', () => {
-    renderDefault();
+    renderDefault({
+      hasSeenProgressTableInvite: false,
+      dateProgressTableInvitationDelayed: null,
+    });
 
     screen.getByText(i18n.progressTrackingAnnouncement());
     screen.getByText(i18n.tryItNow());
@@ -50,6 +53,8 @@ describe('UnconnectedInviteToV2ProgressModal', () => {
     renderDefault({
       setShowProgressTableV2: setShowProgressTableV2Stub,
       setHasSeenProgressTableInvite: setHasSeenProgressTableInviteStub,
+      hasSeenProgressTableInvite: false,
+      dateProgressTableInvitationDelayed: null,
     });
 
     screen.getByText(i18n.progressTrackingAnnouncement());
@@ -75,6 +80,8 @@ describe('UnconnectedInviteToV2ProgressModal', () => {
 
     renderDefault({
       setHasSeenProgressTableInvite: setHasSeenProgressTableInviteStub,
+      hasSeenProgressTableInvite: false,
+      dateProgressTableInvitationDelayed: null,
     });
 
     const xButton = screen.getByLabelText(i18n.closeDialog());
@@ -93,7 +100,10 @@ describe('UnconnectedInviteToV2ProgressModal', () => {
   });
 
   it('allows user to delay the invitation', () => {
-    renderDefault();
+    renderDefault({
+      hasSeenProgressTableInvite: false,
+      dateProgressTableInvitationDelayed: null,
+    });
 
     const delayButton = screen.getByText(i18n.remindMeLater());
     fireEvent.click(delayButton);
@@ -133,6 +143,7 @@ describe('UnconnectedInviteToV2ProgressModal', () => {
     renderDefault({
       dateProgressTableInvitationDelayed:
         'Wed May 01 2024 14:22:23 GMT-0500 (Central Daylight Time)',
+      hasSeenProgressTableInvite: false,
     });
 
     screen.getByText(i18n.progressTrackingAnnouncement());
@@ -148,6 +159,7 @@ describe('UnconnectedInviteToV2ProgressModal', () => {
     yesterday.setDate(yesterday.getDate() - 1);
     renderDefault({
       dateProgressTableInvitationDelayed: yesterday,
+      hasSeenProgressTableInvite: false,
     });
 
     expect(screen.queryByText(i18n.tryItNow())).to.be.null;

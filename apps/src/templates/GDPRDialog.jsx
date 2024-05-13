@@ -1,10 +1,12 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import Button from './Button';
-import i18n from '@cdo/locale';
-import BaseDialog from './BaseDialog';
-import DialogFooter from './teacherDashboard/DialogFooter';
+
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import i18n from '@cdo/locale';
+
+import BaseDialog from './BaseDialog';
+import Button from './Button';
+import DialogFooter from './teacherDashboard/DialogFooter';
 
 export default class GDPRDialog extends Component {
   static propTypes = {

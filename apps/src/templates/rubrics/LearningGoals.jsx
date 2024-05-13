@@ -1,10 +1,29 @@
-import React, {useEffect, useState, useRef, useMemo} from 'react';
-import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
 import classnames from 'classnames';
-import style from './rubrics.module.scss';
+import PropTypes from 'prop-types';
+import React, {useEffect, useState, useRef, useMemo} from 'react';
+
+import {
+  BodyThreeText,
+  OverlineThreeText,
+  Heading5,
+  StrongText,
+} from '@cdo/apps/componentLibrary/typography';
 import EditorAnnotator from '@cdo/apps/EditorAnnotator';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {ai_rubric_cyan} from '@cdo/apps/util/color';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import i18n from '@cdo/locale';
+
+import AiAssessment from './AiAssessment';
+import AiAssessmentFeedbackContext from './AiAssessmentFeedbackContext';
+import EvidenceLevels from './EvidenceLevels';
+import tipIcon from './images/AiBot_Icon.svg';
+import infoIcon from './images/info-icon.svg';
+import ProgressRing from './ProgressRing';
+import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
 import {
   learningGoalShape,
   reportingDataShape,
@@ -12,24 +31,8 @@ import {
   submittedEvaluationShape,
   aiEvaluationShape,
 } from './rubricShapes';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {
-  BodyThreeText,
-  OverlineThreeText,
-  Heading5,
-  StrongText,
-} from '@cdo/apps/componentLibrary/typography';
-import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import EvidenceLevels from './EvidenceLevels';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import AiAssessment from './AiAssessment';
-import HttpClient from '@cdo/apps/util/HttpClient';
-import ProgressRing from './ProgressRing';
-import AiAssessmentFeedbackContext from './AiAssessmentFeedbackContext';
-import infoIcon from './images/info-icon.svg';
-import tipIcon from './images/AiBot_Icon.svg';
+
+import style from './rubrics.module.scss';
 
 const INVALID_UNDERSTANDING = -1;
 

@@ -264,3 +264,6 @@ export interface ExtraLinksData {
     path: string;
   }[];
 }
+
+// Text-based labs that are currently supported by lab2.
+export const TEXT_BASED_LABS: AppName[] = ['aichat', 'pythonlab', 'weblab2'];
