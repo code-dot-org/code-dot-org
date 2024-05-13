@@ -72,7 +72,8 @@ class OpenaiChatController < ApplicationController
   end
 
   private def read_file_from_s3(key_path)
-    cache_key = "s3_file_#{key_path}"
+    full_s3_path = "#{S3_AI_BUCKET}/#{S3_TUTOR_SYSTEM_PROMPT_PATH}"
+    cache_key = "s3_file_#{full_s3_path}"
     unless Rails.env.development?
       cached_content = CDO.shared_cache.read(cache_key)
       return cached_content if cached_content.present?
