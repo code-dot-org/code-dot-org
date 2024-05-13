@@ -1,0 +1,11 @@
+name 'virtual-pl-csp-summer-day4-asynch1-05-2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Applying Our Knowledge of Identity and Bias
+---
+<img src="https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png" alt="A clipboard with the words TO DO on it. This icon is used to signal an action item for participants." width="30px" style="border-radius:10px; float:left; margin: 0px 10px 5px 0px;">
+
+#### Complete <a href="https://docs.google.com/forms/d/e/1FAIpQLSfAI-U2YBsBxwcz3tPGEzejggoI5LYCEtzAUEuC28jZZex5tA/viewform?usp=sf_link">this survey</a> about your reaction and response to the scenario.
+MARKDOWN

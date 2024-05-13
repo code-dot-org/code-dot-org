@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-05-11T05:40:51.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "<img style=\"width: 20%; float: right; margin: 10px\" src=\"https://images.code.org/c98f85a5f4db51f1a5cf8a3592768b51-image-1715405977507.png\" />\r\n\r\n## User Story 2: Janet Lee\r\n\r\n### Worries and Fears\r\nI think chatbots can feel impersonal or fake. I'm concerned the chatbot might use complicated language that confuses our elderly members, making them feel more isolated.\r\n\r\n> **Prepare** also means planning to make sure the chatbot works as intended, and trying to proactively detect any unintended or harmful consequences.\r\n> \r\n> 1) Describe how you can **Test** the chatbot to make sure it doesn't fall into this pattern.\r\n>    - For example: what questions would you ask it, and what types of answers would you expect?\r\n> 2) If you discover it does, describe at least one **Mitigation** you can try to improve it.\r\n>    - For example: would you change the system prompt more? Or change the retrieval?",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19018,
+    "name_suffix": "2022",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "placeholder": "Write your response here!"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-05-11T05:40:51.517+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-synthesis-L4\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-synthesis-L4\"},{\"changed_at\":\"2024-05-11 05:42:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-11 05:48:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

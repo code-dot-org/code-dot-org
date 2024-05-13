@@ -1,12 +1,14 @@
-import React from 'react';
-import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
-import styleConstants from '../../styleConstants';
-import fontConstants from '@cdo/apps/fontConstants';
-import color from '../../util/color';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import _ from 'lodash';
+import React from 'react';
+import {connect} from 'react-redux';
+
+import fontConstants from '@cdo/apps/fontConstants';
+import i18n from '@cdo/locale';
+
+import styleConstants from '../../styleConstants';
+import color from '../../util/color';
 
 const PROJECT_INFO = {
   playlab: {

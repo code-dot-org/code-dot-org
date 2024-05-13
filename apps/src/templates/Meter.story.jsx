@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Meter from '@cdo/apps/templates/Meter';
 import color from '@cdo/apps/util/color';
 

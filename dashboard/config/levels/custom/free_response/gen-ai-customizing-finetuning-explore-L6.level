@@ -1,11 +1,11 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
   "game_id": 52,
   "created_at": "2024-05-04T02:59:24.000Z",
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "long_instructions": "## Title\r\n\r\nQuestion!",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 19018,
@@ -15,13 +15,13 @@
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
-    "optional": "true",
+    "optional": "false",
     "allow_multiple_attempts": "true",
-    "title": "Free Response Question",
     "placeholder": "Type your answer here!"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-05-04T02:59:24.748+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-finetuning-explore-L3\\\"\"],\"cloned_from\":\"gen-ai-customizing-finetuning-explore-L3\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-04T02:59:24.748+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-finetuning-explore-L3\\\"\"],\"cloned_from\":\"gen-ai-customizing-finetuning-explore-L3\"},{\"changed_at\":\"2024-05-13 07:24:43 +0000\",\"changed\":[\"long_instructions\",\"optional\",\"title\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </FreeResponse>

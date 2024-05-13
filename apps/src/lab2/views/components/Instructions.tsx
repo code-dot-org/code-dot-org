@@ -4,10 +4,7 @@ import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import moduleStyles from './instructions.module.scss';
 import {useSelector} from 'react-redux';
 import {navigateToNextLevel} from '@cdo/apps/code-studio/progressRedux';
-import {
-  levelCount,
-  currentLevelIndex,
-} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import {LabState} from '../../lab2Redux';
@@ -58,22 +55,19 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       (state.lab.levelProperties?.levelData as ProjectLevelData | undefined)
         ?.text
   );
-  const levelIndex = useSelector(currentLevelIndex);
-  const currentLevelCount = useSelector(levelCount);
+  const hasNextLevel = useSelector(state => nextLevelId(state) !== undefined);
   const {hasConditions, message, satisfied, index} = useSelector(
     (state: {lab: LabState}) => state.lab.validationState
   );
 
   // If there are no validation conditions, we can show the continue button so long as
   // there is another level. If validation is present, also check that conditions are satisfied.
-  const showContinueButton =
-    (!hasConditions || satisfied) && levelIndex + 1 < currentLevelCount;
+  const showContinueButton = (!hasConditions || satisfied) && hasNextLevel;
 
   // If there are no validation conditions, we can show the finish button so long as
   // this is the last level in the progression. If validation is present, also
   // check that conditions are satisfied.
-  const showFinishButton =
-    (!hasConditions || satisfied) && levelIndex + 1 === currentLevelCount;
+  const showFinishButton = (!hasConditions || satisfied) && !hasNextLevel;
 
   const dispatch = useAppDispatch();
 
