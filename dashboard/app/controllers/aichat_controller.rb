@@ -42,36 +42,39 @@ class AichatController < ApplicationController
     sagemaker_response = AichatSagemakerHelper.request_sagemaker_chat_completion(input, params[:aichatModelCustomizations][:selectedModelId])
     latest_assistant_response = AichatSagemakerHelper.get_sagemaker_assistant_response(sagemaker_response)
 
-    # filter_result = ShareFiltering.find_failure(latest_assistant_response, locale)
-    # if filter_result&.type == ShareFiltering::FailureType::PROFANITY
-    #   new_messages = [
-    #     {
-    #       role: 'user',
-    #       content: params[:newMessage],
-    #       status: SharedConstants::AI_INTERACTION_STATUS[:ERROR]
-    #     }
-    #   ]
-    #   session_id = log_chat_session(new_messages)
-    #
-    #   Honeybadger.notify(
-    #     'Profanity returned from aichat model',
-    #     context: {
-    #       flagged_content: filter_result.content,
-    #       aichat_session_id: session_id
-    #     }
-    #   )
-    #   return render(
-    #     status: :ok,
-    #     json: {
-    #       status: SharedConstants::AICHAT_ERROR_TYPE[:PROFANITY_MODEL],
-    #       session_id: session_id
-    #     }
-    #   )
-    # end
+    filter_result = ShareFiltering.find_failure(latest_assistant_response, locale)
+    if filter_result&.type == ShareFiltering::FailureType::PROFANITY
+      new_messages = [
+        params[:newMessage].merge({status: SharedConstants::AI_INTERACTION_STATUS[:ERROR]}),
+        {
+          id: -1,
+          role: "assistant",
+          status: SharedConstants::AI_INTERACTION_STATUS[:ERROR],
+          # manage sending placeholder to frontend, but storing profanity in backend?
+          chatMessageText: '[profane]',
+          timestamp: 'fix this'
+        }
+      ]
+      session_id = log_chat_session(new_messages)
 
-    # This structure results in logging some extraneous information -- we could filter (eg, ID, timestamp)
+      Honeybadger.notify(
+        'Profanity returned from aichat model',
+        context: {
+          flagged_content: filter_result.content,
+          aichat_session_id: session_id
+        }
+      )
+      return render(
+        status: :ok,
+        json: {
+          messages: params[:storedMessages] + new_messages,
+          session_id: session_id
+        }
+      )
+    end
+
+    # This structure results in logging some extraneous information -- we could filter (eg, timestamp)
     assistant_message = {
-      id: -1,
       role: "assistant",
       status: SharedConstants::AI_INTERACTION_STATUS[:OK],
       chatMessageText: latest_assistant_response,
@@ -85,6 +88,7 @@ class AichatController < ApplicationController
     ]
     session_id = log_chat_session([params[:newMessage], assistant_message])
 
+    # maybe simplify so this is the only render call
     render(status: :ok, json: {messages: messages, session_id: session_id})
   end
 
