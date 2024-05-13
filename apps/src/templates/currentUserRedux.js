@@ -211,6 +211,7 @@ export default function currentUser(state = initialState, action) {
       aiRubricsDisabled: action.aiRubricsDisabled,
     };
   }
+
   if (action.type === SET_INITIAL_DATA) {
     const {
       id,
