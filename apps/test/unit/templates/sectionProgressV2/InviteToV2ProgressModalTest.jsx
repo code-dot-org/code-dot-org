@@ -12,6 +12,7 @@ const DEFAULT_PROPS = {
   setShowProgressTableV2: () => {},
   setHasSeenProgressTableInvite: () => {},
   setDateProgressTableInvitationDelayed: () => {},
+  showProgressTableV2: null,
 };
 
 describe('UnconnectedInviteToV2ProgressModal', () => {
@@ -55,6 +56,7 @@ describe('UnconnectedInviteToV2ProgressModal', () => {
       setHasSeenProgressTableInvite: setHasSeenProgressTableInviteStub,
       hasSeenProgressTableInvite: false,
       dateProgressTableInvitationDelayed: null,
+      showProgressTableV2: null,
     });
 
     screen.getByText(i18n.progressTrackingAnnouncement());
@@ -160,6 +162,26 @@ describe('UnconnectedInviteToV2ProgressModal', () => {
     renderDefault({
       dateProgressTableInvitationDelayed: yesterday,
       hasSeenProgressTableInvite: false,
+    });
+
+    expect(screen.queryByText(i18n.tryItNow())).to.be.null;
+    expect(screen.queryByText(i18n.progressTrackingAnnouncement())).to.be.null;
+    expect(screen.queryByText(i18n.remindMeLater())).to.be.null;
+  });
+
+  it('does not show the dialog if the user has already seen the V2 dashboard', () => {
+    renderDefault({
+      showProgressTableV2: false,
+    });
+
+    expect(screen.queryByText(i18n.tryItNow())).to.be.null;
+    expect(screen.queryByText(i18n.progressTrackingAnnouncement())).to.be.null;
+    expect(screen.queryByText(i18n.remindMeLater())).to.be.null;
+  });
+
+  it('does not show the dialog if the user has already seen the V2 dashboard', () => {
+    renderDefault({
+      showProgressTableV2: true,
     });
 
     expect(screen.queryByText(i18n.tryItNow())).to.be.null;
