@@ -7,7 +7,7 @@ import {python} from '@codemirror/lang-python';
 import {Codebridge} from '@codebridge/Codebridge';
 import {ProjectSources} from '@cdo/apps/lab2/types';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
-import {useSource} from '../codebridge/hooks/useSource';
+import {useSource} from '@codebridge/hooks/useSource';
 import {handleRunClick} from './pyodideRunner';
 
 const pythonlabLangMapping: {[key: string]: LanguageSupport} = {

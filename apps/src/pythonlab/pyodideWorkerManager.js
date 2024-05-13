@@ -10,7 +10,7 @@ import {
   appendSystemOutMessage,
 } from '@codebridge/redux/consoleRedux';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
-import MetricsReporter from '../lib/metrics/MetricsReporter';
+import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
 import {setAndSaveProjectSource} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 
 // This syntax doesn't work with typescript, so this file is in js.

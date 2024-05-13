@@ -14,8 +14,8 @@ import {AITutorState} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {BlocklyState} from '../redux/blockly';
 import {AichatState} from '@cdo/apps/aichat/redux/aichatRedux';
 import {CurrentUserState} from '@cdo/apps/templates/CurrentUserState';
-import {Lab2ProjectState} from '../lab2/redux/lab2ProjectRedux';
-import {CodeBridgeConsoleState} from '../codebridge/redux/consoleRedux';
+import {Lab2ProjectState} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import {CodeBridgeConsoleState} from '@codebridge/redux/consoleRedux';
 
 // The type for our global redux store. This is incomplete until we type every slice
 // of our redux store. When converting a slice to typescript, add it to this object
