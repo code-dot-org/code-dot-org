@@ -10,11 +10,11 @@ import {
   SetProjectFunction,
   SetConfigFunction,
   OnRunFunction,
+  ResetProjectFunction,
 } from '@codebridge/types';
 import React from 'react';
 
 import './styles/cdoIDE.css';
-import {ResetProjectFunction} from './codebridgeContext/types';
 import Console from './Console';
 import Workspace from './Workspace';
 

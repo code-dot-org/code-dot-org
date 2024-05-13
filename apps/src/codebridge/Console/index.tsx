@@ -1,3 +1,4 @@
+import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {appendSystemMessage, resetOutput} from '@codebridge/redux/consoleRedux';
 import React from 'react';
 import {useDispatch} from 'react-redux';
@@ -6,8 +7,6 @@ import {MultiFileSource} from '@cdo/apps/lab2/types';
 import Button from '@cdo/apps/templates/Button';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {useFetch} from '@cdo/apps/util/useFetch';
-
-import {useCodebridgeContext} from '../codebridgeContext';
 
 import moduleStyles from './console.module.scss';
 
@@ -31,7 +30,7 @@ const Console: React.FunctionComponent = () => {
         : {permissions: []};
       onRun(runTests, dispatch, parsedPermissions.permissions, source);
     } else {
-      dispatch(appendSystemMessage("We don't know how to run your code"));
+      dispatch(appendSystemMessage("We don't know how to run your code."));
     }
   };
 

@@ -67,7 +67,7 @@ const defaultConfig: ConfigType = {
       action: () => window.alert('You are already on the file browser'),
     },
   ],
-  gridLayoutRows: '232px auto 500px',
+  gridLayoutRows: '1fr 1fr 1fr',
   gridLayoutColumns: '300px auto',
   gridLayout: `
     "instructions workspace"

@@ -1,5 +1,4 @@
 import {ProjectType, FileId, FolderId} from '@codebridge/types';
-
 export type ReplaceProjectFunction = (project: ProjectType) => void;
 
 export type SaveFileFunction = (fileId: FileId, contents: string) => void;
@@ -25,5 +24,3 @@ export type RenameFileFunction = (fileId: FileId, newName: string) => void;
 export type RenameFolderFunction = (folderId: string, newName: string) => void;
 export type MoveFileFunction = (fileId: FileId, folderId: FolderId) => void;
 export type SetFileVisibilityFunction = (fileId: FileId, hide: boolean) => void;
-
-export type ResetProjectFunction = () => void;
