@@ -201,7 +201,6 @@ Scenario: Teacher can view validated level
   # Student must be in CSA to run java lab
   # Teacher for this step is named `Dumbledore`
   Given I create a student named "Sally" in a CSA section
-  Given I am assigned to unit "allthethings"
 
   # Student makes progress in validated level
   Given I am on "http://studio.code.org/s/allthethings/lessons/44/levels/11?noautoplay=true"
@@ -221,6 +220,8 @@ Scenario: Teacher can view validated level
   And I wait until element ".javalab-console" contains text "[JAVALAB] Program completed."
   And I wait until "#finishButton" is enabled
   And I press "finishButton"
+
+  Given I am assigned to unit "allthethings"
 
   When I sign in as "Dumbledore" and go home
   And I get levelbuilder access
