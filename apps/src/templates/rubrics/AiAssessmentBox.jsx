@@ -7,11 +7,16 @@ import {
   BodyFourText,
 } from '@cdo/apps/componentLibrary/typography';
 import EditorAnnotator from '@cdo/apps/EditorAnnotator';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import AiAssessmentFeedback from './AiAssessmentFeedback';
-import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
+import AiAssessmentFeedbackContext from './AiAssessmentFeedbackContext';
+import AiAssessmentFeedbackRadio from './AiAssessmentFeedbackRadio';
+import AiConfidenceBox from './AiConfidenceBox';
+import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
 import {
   aiEvaluationShape,
   aiEvidenceShape,
@@ -19,13 +24,8 @@ import {
   reportingDataShape,
   studentLevelInfoShape,
 } from './rubricShapes';
-import AiAssessmentFeedbackContext from './AiAssessmentFeedbackContext';
-import AiAssessmentFeedbackRadio from './AiAssessmentFeedbackRadio';
-import AiConfidenceBox from './AiConfidenceBox';
-import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
+
 import style from './rubrics.module.scss';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 export default function AiAssessmentBox({
   isAiAssessed,

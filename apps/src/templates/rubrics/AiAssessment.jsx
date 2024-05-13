@@ -5,6 +5,7 @@ import {Heading6, StrongText} from '@cdo/apps/componentLibrary/typography';
 import i18n from '@cdo/locale';
 
 import AiAssessmentBox from './AiAssessmentBox';
+import aiBotImage from './images/AiBot_2x.png';
 import {
   aiEvaluationShape,
   aiEvidenceShape,
@@ -12,7 +13,6 @@ import {
   reportingDataShape,
   studentLevelInfoShape,
 } from './rubricShapes';
-import aiBotImage from './images/AiBot_2x.png';
 
 import style from './rubrics.module.scss';
 
