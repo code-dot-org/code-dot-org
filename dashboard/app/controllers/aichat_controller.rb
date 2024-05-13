@@ -18,7 +18,7 @@ class AichatController < ApplicationController
     locale = params[:locale] || "en"
     filter_result = ShareFiltering.find_failure(params[:newMessage][:chatMessageText], locale)
     if filter_result&.type == ShareFiltering::FailureType::PROFANITY
-      updated_message = params[:userMessage].merge({status: SharedConstants::AI_INTERACTION_STATUS[:PROFANITY_VIOLATION]})
+      updated_message = params[:newMessage].merge({status: SharedConstants::AI_INTERACTION_STATUS[:PROFANITY_VIOLATION]})
       session_id = log_chat_session([updated_message])
 
       return render(
@@ -69,15 +69,15 @@ class AichatController < ApplicationController
     #   )
     # end
 
+    # This structure results in logging some extraneous information -- we could filter (eg, ID, timestamp)
     assistant_message = {
-      id: 100, # fix this
+      id: -1,
       role: "assistant",
       status: SharedConstants::AI_INTERACTION_STATUS[:OK],
       chatMessageText: latest_assistant_response,
       timestamp: 'fix this'
     }
 
-    # how to manage ID?
     messages = [
       *params[:storedMessages],
       ok_user_message,

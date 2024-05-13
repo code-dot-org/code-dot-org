@@ -5,7 +5,7 @@ export type AichatInteractionStatusValue = string;
 
 // set up so sessionId is required for assistant/user messages, and not present for model updates?
 export type ChatCompletionMessage = {
-  id: number;
+  id?: number;
   role: Role;
   chatMessageText: string;
   status: AichatInteractionStatusValue;
