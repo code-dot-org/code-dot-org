@@ -92,7 +92,7 @@ class LoginTypePicker extends Component {
     const currentUser = getStore().getState().currentUser;
     const showStudentsToSectionPermissionWarning =
       currentUser.isTeacher &&
-      (['US'].includes(currentUser.countryCode) || !!currentUser.usStateCode) &&
+      !!currentUser.usStateCode &&
       experiments.isEnabledAllowingQueryString(experiments.CPA_EXPERIENCE);
 
     const style = {
