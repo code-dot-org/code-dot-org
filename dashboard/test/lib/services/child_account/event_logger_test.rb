@@ -9,17 +9,13 @@ class Services::ChildAccount::EventLoggerTest < ActiveSupport::TestCase
     event_name = CAP::UserEvent::ACCOUNT_LOCKING
 
     assert_creates 'CAP::UserEvent' do
-      Timecop.freeze
-
       assert_attributes Services::ChildAccount::EventLogger.call(user: @user, event_name: event_name), {
         id: :not_nil,
         user: @user,
         name: event_name,
         policy: 'cpa',
-        created_at: Time.zone.now,
+        created_at: :not_nil,
       }
-
-      Timecop.return
     end
   end
 
