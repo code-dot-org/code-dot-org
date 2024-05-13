@@ -639,6 +639,7 @@ class UnconnectedMusicView extends React.Component {
     this.player.stopSong();
     this.playingTriggers = [];
 
+    // Clear the timeline of triggered events when song is stopped.
     this.executeCompiledSong();
 
     this.props.setIsPlaying(false);
