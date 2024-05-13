@@ -194,7 +194,8 @@ Scenario: Teacher can view choice levels
   And I click selector "button:contains(b)"
   And I see no difference for "unexpanded choice level - closed"
 
-@eyes
+# The test requires java-lab which does not run on correctly on drone
+@eyes @no_circle
 Scenario: Teacher can view validated level
   And I open my eyes to test "V2 Progress - Validated Levels"
 
