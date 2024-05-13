@@ -198,7 +198,9 @@ Scenario: Teacher can view choice levels
 Scenario: Teacher can view validated level
   And I open my eyes to test "V2 Progress - Validated Levels"
 
-  Given I create an authorized teacher-associated student named "Sally"
+  # Student must be in CSA to run java lab
+  # Teacher for this step is named `Dumbledore`
+  Given I create a student named "Sally" in a CSA section
   Given I am assigned to unit "allthethings"
 
   # Student makes progress in validated level
@@ -220,7 +222,7 @@ Scenario: Teacher can view validated level
   And I wait until "#finishButton" is enabled
   And I press "finishButton"
 
-  When I sign in as "Teacher_Sally" and go home
+  When I sign in as "Dumbledore" and go home
   And I get levelbuilder access
   And I navigate to the V2 progress dashboard
 
