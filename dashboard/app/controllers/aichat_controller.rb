@@ -36,7 +36,7 @@ class AichatController < ApplicationController
     # which isn't relevant here.
     input = AichatSagemakerHelper.format_inputs_for_sagemaker_request(
       params.to_unsafe_h[:aichatModelCustomizations],
-      params.to_unsafe_h[:storedMessages].filter {|message| message[:status] == SharedConstants::AI_INTERACTION_STATUS[:OK]},
+      params.to_unsafe_h[:storedMessages].filter {|message| message[:status] == SharedConstants::AI_INTERACTION_STATUS[:OK] && ['assistant', 'user'].include?(message[:role])},
       params.to_unsafe_h[:newMessage]
     )
     sagemaker_response = AichatSagemakerHelper.request_sagemaker_chat_completion(input, params[:aichatModelCustomizations][:selectedModelId])
@@ -78,10 +78,9 @@ class AichatController < ApplicationController
     }
 
     # how to manage ID?
-    # switch most recent user message status from unknown to ok
     messages = [
       *params[:storedMessages],
-      params[:newMessage],
+      ok_user_message,
       assistant_message
     ]
     session_id = log_chat_session([params[:newMessage], assistant_message])
@@ -156,5 +155,9 @@ class AichatController < ApplicationController
 
   private def updated_message_list(new_messages)
     params[:storedMessages] + new_messages
+  end
+
+  private def ok_user_message
+    params[:newMessage].merge({status: 'ok'})
   end
 end

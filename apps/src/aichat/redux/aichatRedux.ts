@@ -275,18 +275,17 @@ export const submitChatContents = createAsyncThunk(
       status: Status.UNKNOWN,
       chatMessageText: newUserMessageText,
       timestamp: getCurrentTimestamp(),
-      sessionId: currentSessionId,
     };
     thunkAPI.dispatch(addChatMessage(newMessage));
 
     // Post user content and messages to backend and retrieve assistant response.
     const startTime = Date.now();
+
+    // need to send model updates too, so they can be sent back
     const chatApiResponse = await postAichatCompletionMessage(
       newMessage,
       // update to just send everything?
-      storedMessages.filter(
-        message => message.role === Role.USER || message.role === Role.ASSISTANT
-      ),
+      storedMessages,
       aiCustomizations,
       aichatContext,
       currentSessionId
@@ -304,12 +303,6 @@ export const submitChatContents = createAsyncThunk(
     // assign last user message to session.
     if (chatApiResponse.session_id) {
       thunkAPI.dispatch(setChatSessionId(chatApiResponse.session_id));
-      thunkAPI.dispatch(
-        updateChatMessageSession({
-          id: newMessage.id,
-          sessionId: chatApiResponse.session_id,
-        })
-      );
     }
 
     thunkAPI.dispatch(setChatMessages(chatApiResponse?.messages));
@@ -397,6 +390,7 @@ const aichatSlice = createSlice({
     },
     clearChatMessages: state => {
       state.chatMessagesPast = [];
+      // dedupe this with "setNewChatSession"
       state.chatMessagesCurrent = [];
       state.currentSessionId = undefined;
     },
@@ -429,18 +423,6 @@ const aichatSlice = createSlice({
       const chatMessage = state.chatMessagesCurrent.find(msg => msg.id === id);
       if (chatMessage && chatMessage.role === Role.USER) {
         chatMessage.status = status;
-      }
-    },
-    updateChatMessageSession: (
-      state,
-      action: PayloadAction<{id: number; sessionId: number}>
-    ) => {
-      // shouldn't ever need to update outside of current chat messsages
-      // maybe message doesn't even need to store session ID any more?
-      const {id, sessionId} = action.payload;
-      const chatMessage = state.chatMessagesCurrent.find(msg => msg.id === id);
-      if (chatMessage) {
-        chatMessage.sessionId = sessionId;
       }
     },
     setViewMode: (state, action: PayloadAction<ViewMode>) => {
@@ -577,7 +559,6 @@ export const {
   setIsWaitingForChatResponse,
   setShowWarningModal,
   updateUserChatMessageStatus,
-  updateChatMessageSession,
   setViewMode,
   setStartingAiCustomizations,
   setSavedAiCustomizations,
