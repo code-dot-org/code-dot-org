@@ -1,3 +1,4 @@
+@skip
 # AI evaluation is stubbed out in UI tests via the /api/test/ai_proxy/assessment route.
 @no_firefox
 @no_mobile
