@@ -205,7 +205,7 @@ class ToneJSPlayer implements AudioPlayer {
 
     await this.startContextIfNeeded();
     events.forEach(({notes, playbackPosition}) => {
-      this.samplers[instrument][EMPTY_EFFECTS_KEY].triggerAttack(
+      this.samplers[instrument][EMPTY_EFFECTS_KEY].unsync().triggerAttack(
         notes,
         `+${Transport.toSeconds(
           this.playbackTimeToTransportTime(playbackPosition)
