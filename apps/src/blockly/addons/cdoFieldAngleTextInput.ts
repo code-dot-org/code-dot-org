@@ -1,4 +1,5 @@
 import {FieldAngle} from '@blockly/field-angle';
+
 import {CLOCKWISE_TURN_DIRECTION} from '../constants';
 
 interface AngleTextInputOptions {

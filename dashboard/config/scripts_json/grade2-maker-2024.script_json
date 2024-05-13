@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "grade2-maker",
-    "serialized_at": "2024-05-08 03:44:22 UTC",
+    "serialized_at": "2024-05-10 15:23:05 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1440,7 +1440,7 @@
       "key": "834fc5ca-2a88-4ea3-b6e7-a5fdf98d2837",
       "position": 2,
       "properties": {
-        "description": "After completing the lesson, assess students' knowledge of the concepts covered by going through the assessment slides in the \n**<a href=\"https://docs.google.com/presentation/d/17yc3y-VSBIoje0CKLKiYz_Q2cgtCkOQrfHnDmS6iZzQ/template/preview\" target=\"_blank\">slide deck</a>**. You can also assign students a content assessment hosted on the JuiceMind platform. To assign the assessment to your students, click <a href=\"https://play.juicemind.com/dashboard/explore/class/codeorg-microbit/unitNumber/1/topicNumber/2/quizId/HreMBqsN2VV3eI8u8xSC\" target=\"_blank\">here.</a>\n\n::: details [**Setting up a JuiceMind assessment**]\nClick \"Assign\" on the assessment page, then have students join your unique class session. Students have a link to the Join page on level 2, and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note**: You will need to <a href=\"https://play.juicemind.com/signup\" target=\"_blank\">sign up</a> for an account on JuiceMind to assign the assessment.\n:::\n",
+        "description": "After completing the lesson, assess students' knowledge of the concepts covered by going through the assessment slides in the \n**<a href=\"https://docs.google.com/presentation/d/17yc3y-VSBIoje0CKLKiYz_Q2cgtCkOQrfHnDmS6iZzQ/template/preview\"  target=\"_blank\">slide deck</a>**. You can also assign students a content assessment hosted on the JuiceMind platform. To assign the assessment to your students, click <a href=\"https://play.juicemind.com/dashboard/explore/class/codeorg-microbit/unitNumber/1/topicNumber/2/quizId/HreMBqsN2VV3eI8u8xSC\" target=\"_blank\">here.</a>\n\n::: details [**Setting up a JuiceMind assessment**]\nClick \"Assign\" on the assessment page, then have students join your unique class session. Students have a link to the Join page on level 2, and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note**: You will need to <a href=\"https://play.juicemind.com/signup\" target=\"_blank\">sign up</a> for an account on JuiceMind to assign the assessment.\n:::\n",
         "duration": "10",
         "name": "Assessment",
         "progression_name": "Calming LEDs with micro:bit"
@@ -1763,6 +1763,7 @@
       "position": 1,
       "properties": {
         "description": "Students will make the project themselves using the MakeCode editor and micro:bit simulator. Once they have tested their code in the simulator, they will download their code onto the micro:bits.\n\nPick one:\n\n- Step by step coding **<a href=\"https://mbit.io/csf-c3-coding\" target=\"_blank\"> video </a>**\n- Live micro:bit **<a href=\"https://mbit.io/csf-c3-classroom\" target=\"_blank\"> classroom session </a>**",
+        "duration": "20",
         "name": "Student Coding"
       },
       "seeding_key": {
@@ -1771,8 +1772,21 @@
       }
     },
     {
-      "key": "dce5ea7f-d290-4ce7-b0dc-b405f0e5b5a9",
+      "key": "888dca47-7e81-457b-8246-e44358a2699c",
       "position": 2,
+      "properties": {
+        "description": "After completing the lesson, assess students' knowledge of the concepts covered by going through the assessment slides in the \n**<a href=\"https://docs.google.com/presentation/d/17yc3y-VSBIoje0CKLKiYz_Q2cgtCkOQrfHnDmS6iZzQ/template/preview\"  target=\"_blank\">slide deck</a>**. You can also assign students a content assessment hosted on the JuiceMind platform. To assign the assessment to your students, click <a href=\"https://play.juicemind.com/dashboard/explore/class/codeorg-microbit/unitNumber/1/topicNumber/2/quizId/HreMBqsN2VV3eI8u8xSC\" target=\"_blank\">here.</a>\n\n::: details [**Setting up a JuiceMind assessment**]\nClick \"Assign\" on the assessment page, then have students join your unique class session. Students have a link to the Join page on level 2, and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note**: You will need to <a href=\"https://play.juicemind.com/signup\" target=\"_blank\">sign up</a> for an account on JuiceMind to assign the assessment.\n:::",
+        "duration": "10",
+        "name": "Assessment "
+      },
+      "seeding_key": {
+        "activity_section.key": "888dca47-7e81-457b-8246-e44358a2699c",
+        "lesson_activity.key": "b00a7eb0-aeff-48b3-88cf-68ecec80641b"
+      }
+    },
+    {
+      "key": "dce5ea7f-d290-4ce7-b0dc-b405f0e5b5a9",
+      "position": 3,
       "properties": {
         "progression_name": "Calming LEDs with micro:bit"
       },
@@ -2167,6 +2181,7 @@
       "position": 1,
       "properties": {
         "description": "Students will make the project themselves using the MakeCode editor and micro:bit simulator. Once they have tested their code in the simulator, they will download their code onto the micro:bits.\n\nPick one:\n\n- Step by step coding **<a href=\"https://mbit.io/csf-c4-coding\" target=\"_blank\">video.</a>**  \n- Live micro:bit **<a href=\"https://mbit.io/csf-c4-classroom\" target=\"_blank\">classroom session.</a>**  ",
+        "duration": "20",
         "name": "Student Coding"
       },
       "seeding_key": {
@@ -2178,6 +2193,9 @@
       "key": "b1ef73f3-2862-45be-a6ad-b1aa7d8ef302",
       "position": 2,
       "properties": {
+        "description": "After completing the lesson, assess students' knowledge of the concepts covered by going through the assessment slides in the \n**<a href=\"https://docs.google.com/presentation/d/17yc3y-VSBIoje0CKLKiYz_Q2cgtCkOQrfHnDmS6iZzQ/template/preview\"  target=\"_blank\">slide deck</a>**. You can also assign students a content assessment hosted on the JuiceMind platform. To assign the assessment to your students, click <a href=\"https://play.juicemind.com/dashboard/explore/class/codeorg-microbit/unitNumber/1/topicNumber/2/quizId/m8PawyAAKNkODu8hvSX9\" target=\"_blank\">here.</a>\n\n::: details [**Setting up a JuiceMind assessment**]\nClick \"Assign\" on the assessment page, then have students join your unique class session. Students have a link to the Join page on level 2, and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note**: You will need to <a href=\"https://play.juicemind.com/signup\" target=\"_blank\">sign up</a> for an account on JuiceMind to assign the assessment.\n:::\n",
+        "duration": "10",
+        "name": "Assessment",
         "progression_name": "Counter with micro:bit"
       },
       "seeding_key": {
@@ -2766,7 +2784,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Calming LEDs with micro:bit"
       },
       "bonus": false,
       "seeding_key": {
@@ -2776,7 +2793,7 @@
         "lesson.key": "Cristina - Emotion badge with micro:bit",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "grade2-maker-2024",
-        "activity_section.key": "834fc5ca-2a88-4ea3-b6e7-a5fdf98d2837"
+        "activity_section.key": "c63f88e3-6657-4fab-a377-efde6563d67c"
       },
       "level_keys": [
         "course_c_maker_emotion_badge_grade2"
@@ -3783,7 +3800,7 @@
         "lesson.key": "Cristina - Emotion badge with micro:bit",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "grade2-maker-2024",
-        "activity_section.key": "834fc5ca-2a88-4ea3-b6e7-a5fdf98d2837"
+        "activity_section.key": "c63f88e3-6657-4fab-a377-efde6563d67c"
       }
     },
     {

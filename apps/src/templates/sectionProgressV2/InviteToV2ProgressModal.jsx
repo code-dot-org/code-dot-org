@@ -21,6 +21,8 @@ import styles from './progress-v2-invitation.module.scss';
 
 const newProgressViewGraphic = require('@cdo/static/teacherDashboard/progressOpenBetaAnnouncementGraphic.png');
 
+const MILLISECONDS_IN_ONE_DAY = 1000 * 3600 * 24;
+
 function InviteToV2ProgressModal({
   sectionId,
 
@@ -34,11 +36,12 @@ function InviteToV2ProgressModal({
   const [invitationOpen, setInvitationOpen] = React.useState(false);
 
   React.useEffect(() => {
-    const timeSinceInvitationLastDelayed = () => {
+    const numDaysSinceInvitationLastDelayed = () => {
       const startingDate = new Date(dateProgressTableInvitationDelayed);
       const today = new Date();
       const differenceInMilliseconds = today.getTime() - startingDate.getTime();
-      const differenceInDays = differenceInMilliseconds / (1000 * 3600 * 24);
+      const differenceInDays =
+        differenceInMilliseconds / MILLISECONDS_IN_ONE_DAY;
       return Math.floor(differenceInDays);
     };
 
@@ -48,7 +51,7 @@ function InviteToV2ProgressModal({
         return false;
       } else {
         if (!!dateProgressTableInvitationDelayed) {
-          return timeSinceInvitationLastDelayed() > 3;
+          return numDaysSinceInvitationLastDelayed() > 3;
         } else {
           return true;
         }
@@ -163,6 +166,8 @@ InviteToV2ProgressModal.propTypes = {
   setDateProgressTableInvitationDelayed: PropTypes.func.isRequired,
   setShowProgressTableV2: PropTypes.func.isRequired,
 };
+
+export const UnconnectedInviteToV2ProgressModal = InviteToV2ProgressModal;
 
 export default connect(
   state => ({

@@ -4,14 +4,13 @@ import React, {useState} from 'react';
 
 import {isEmail} from '@cdo/apps/util/formatValidation';
 import i18n from '@cdo/locale';
+import headerThanksImage from '@cdo/static/common_images/penguin/dancing.png';
+import headerImage from '@cdo/static/common_images/penguin/yelling.png';
 
 import {getStore} from '../../redux';
 import * as color from '../../util/color';
 import {hashString} from '../../utils';
 import Button from '../Button';
-
-import headerThanksImage from './images/dancing_penguin.png';
-import headerImage from './images/lockout_penguin.png';
 
 /**
  * This panel represents the page that is displayed to accounts that are being

@@ -13,7 +13,8 @@
       "Poetry"
     ],
     "helper_libraries": [
-      "NativeSpriteLab"
+      "NativeSpriteLab",
+      "zCriterionValidationLibrary"
     ],
     "use_default_sprites": "false",
     "hide_animation_mode": "true",
@@ -25,7 +26,7 @@
     "encrypted": "false",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "**How do you win?** Check if the player has a winning score.\r\n\r\n1.  Connect the `if score = 5` block at the end of the `when sprite clicked` program\r\n\r\n- Add a `do bubbles effect block` *inside* the new block\r\n- Press `Run` then click on the heart box. Can you win?",
+    "long_instructions": "**How do you win?** Check if the player has a winning score.\r\n\r\n1.  Connect the `if score = 5` block at the end of the `when sprite clicked` program\r\n\r\n- Add a `do starburst effect block` *inside* the new block\r\n- Press `Run` then click on the coin. Can you win?",
     "submittable": "false",
     "hide_share_and_remix": "true",
     "never_autoplay_video": "false",
@@ -37,7 +38,7 @@
     "debugger_disabled": "false",
     "validation_enabled": "false",
     "start_in_animation_tab": "false",
-    "start_animations": "{\"orderedKeys\":[\"b031c9dc-1155-402f-b364-be64fbd6572a\",\"22f09faf-57bb-4090-b931-f0b54364daa8\",\"9e13f793-48c3-49af-b77e-05aeb3c46c39\",\"72bfb838-9975-4448-9591-87ad59d983ec\"],\"propsByKey\":{\"b031c9dc-1155-402f-b364-be64fbd6572a\":{\"name\":\"video_game_bg\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2023-03-07T22:22:15.000Z\",\"pngLastModified\":\"2023-03-07T22:22:14.000Z\",\"version\":\"jFj9lXHa6ce7Vuc0EVosLcyBQS0HEpdU\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/jFj9lXHa6ce7Vuc0EVosLcyBQS0HEpdU/video_game_bg.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"22f09faf-57bb-4090-b931-f0b54364daa8\":{\"name\":\"game_heart\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-03-06T16:36:39.000Z\",\"pngLastModified\":\"2024-03-06T16:36:39.000Z\",\"version\":\"hIZtlLp86gUH9PJliZy2wTnFHVsOJqF2\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/hIZtlLp86gUH9PJliZy2wTnFHVsOJqF2/game_heart.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"9e13f793-48c3-49af-b77e-05aeb3c46c39\":{\"name\":\"game_power\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-03-06T16:36:17.000Z\",\"pngLastModified\":\"2024-03-06T16:36:16.000Z\",\"version\":\"7E4Tz.T22o6iRE_SsPXr.zY2F25cNco8\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/7E4Tz.T22o6iRE_SsPXr.zY2F25cNco8/game_power.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"72bfb838-9975-4448-9591-87ad59d983ec\":{\"name\":\"rainbow_bright\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2021-10-12 18:36:59 UTC\",\"pngLastModified\":\"2021-10-12 18:36:57 UTC\",\"version\":\"Hu0p4zpTnmX5EfRNZMvqM_hMHmk2u.IS\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/Hu0p4zpTnmX5EfRNZMvqM_hMHmk2u.IS/category_backgrounds/rainbow_bright.png\",\"sourceSize\":{\"x\":400,\"y\":400}}}}\r\n\r\n",
+    "start_animations": "{\"orderedKeys\":[\"924fe17f-6258-43b1-9065-dda29ff7cd34\",\"db9514ae-b530-4ecf-b90e-99ebb1223b24\"],\"propsByKey\":{\"924fe17f-6258-43b1-9065-dda29ff7cd34\":{\"name\":\"coin_gold\",\"categories\":[\"board_games_and_cards\"],\"frameCount\":1,\"frameSize\":{\"x\":61,\"y\":61},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-20 00:00:45 UTC\",\"pngLastModified\":\"2021-01-19 23:59:01 UTC\",\"version\":\"DND7UUQ54JJXqwZomylZBnmahjzE2l3N\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/DND7UUQ54JJXqwZomylZBnmahjzE2l3N/category_board_games_and_cards/coin_gold.png\",\"sourceSize\":{\"x\":61,\"y\":61}},\"db9514ae-b530-4ecf-b90e-99ebb1223b24\":{\"name\":\"tech_bg_3\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2023-03-07T22:21:37.000Z\",\"pngLastModified\":\"2023-03-07T22:21:37.000Z\",\"version\":\"RsjrRnlchPjjIQRaZZDrylcgpAV48Y8m\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/RsjrRnlchPjjIQRaZZDrylcgpAV48Y8m/tech_bg_3.png\",\"sourceSize\":{\"x\":400,\"y\":400}}}}\r\n\r\n",
     "mini_toolbox": "true",
     "hide_pause_button": "false",
     "soft_buttons": [
@@ -47,14 +48,15 @@
       "downButton"
     ],
     "name_suffix": "_2024",
-    "short_instructions": "Make the background change when the player scores 5 points.",
-    "validation_code": "if (World.frameCount == 1) {\r\n\r\n  addCriteria(function() {\r\n    return variableBubblesCreated(); // Check whether variable bubble is visible on screen. \r\n  }, \"variableBubbles\");  // Failure message: \"Make sure to display your variable on screen.\"\r\n  \r\n   addCriteria(function() {\r\n    return variableValueSet(); // Check whether variable has been set to something. \r\n  }, \"variableSetValue\");  // Failure message: \"You need to set the value of your variable.\"\r\n  \r\n   addCriteria(function() {\r\n    return clickEventFound();\r\n  }, 'spritelabFeedbackClickSprite'); // Failure message: \"Make sure to click on your sprite after pressing *\"Run\"*.\"\r\n  \r\n   addCriteria(function() {\r\n    return variableValueChanged('increase'); // Check whether variable has increased\r\n  }, \"variableIncreaseValue\");  // Failure message: \"The value of your variable didn't increase.\"\r\n  \r\n    addCriteria(function() {\r\n    return clickEventFound() && foregroundEffectRenderedThisFrame(); // Check if effect exists under event block.\r\n  }, \"gameDesignMissingDoEffectConditional\");  // Failure message: \"“There was no effect when you clicked. You need to add a do effect block under your event”\r\n  \r\n   addCriteria(function() {\r\n    return clickEventFound() && !foregroundEffectRenderedThisFrame(); // Check if effect happened inside the conditional\r\n  }, \"gameDesignEffectInsideConditional\");  // Failure message: \"Make sure to nest the `do effect` block inside an if block that checks for a changing score.\"\r\n}\r\ncheck();",
+    "short_instructions": "Make an effect happen when the player scores 5 points.",
+    "validation_code": "if (World.frameCount == 1) {\r\n\r\n  setFailTime(150);\r\n  setDelayTime(90);\r\n  setupPrevious(); \r\n  \r\n  addCriteria(function() {\r\n    return variableBubblesCreated(); // Check whether variable bubble is visible on screen. \r\n  }, \"variableBubbles\");  // Failure message: \"Make sure to display your variable on screen.\"\r\n  \r\n   addCriteria(function() {\r\n    return variableValueSet(); // Check whether variable has been set to something. \r\n  }, \"variableSetValue\");  // Failure message: \"You need to set the value of your variable.\"\r\n  \r\n   addCriteria(function() {\r\n    return clickEventFound();\r\n  }, 'spritelabFeedbackClickSprite'); // Failure message: \"Make sure to click on your sprite after pressing *\"Run\"*.\"\r\n  \r\n   addCriteria(function() {\r\n    return variableValueChanged('increase'); // Check whether variable has increased\r\n  }, \"variableIncreaseValue\");  // Failure message: \"The value of your variable didn't increase.\"\r\n  \r\n    addCriteria(function() {\r\n    return clickEventFound() && foregroundEffectRenderedThisFrame(); // Check if effect exists under event block.\r\n  }, \"gameDesignMissingDoEffectConditional\");  // Failure message: \"“There was no effect when you clicked. You need to add a do effect block under your event”\r\n  \r\n   addCriteria(function() {\r\n    return clickEventFound() && !foregroundEffectRenderedThisFrame(); // Check if effect happened inside the conditional\r\n  }, \"gameDesignEffectInsideConditional\");  // Failure message: \"Make sure to nest the `do effect` block inside an if block that checks for a changing score.\"\r\n}\r\n\r\n//Always have this first to get most up-to-date helper variables\r\ngetHelperVars();\r\ndrawHandsOnUnclickedSprites();\r\n\r\ncheck();\r\n\r\n//Always have this at end to store previous state in validationProps.previous\r\nupdatePrevious();",
     "encrypted_examples": "7Y9SVB5MZp/aBqfoLWLRPPdq8kwWZrJd5d6LuIqlblRQsTBdDD7F6g88S1g2\n0D1DpVWB+eOJctwie+3nPG/0xA==\n",
     "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"This conditional block will check to see if the value of the variable equals a certain value.\\n<xml>\\n<block xmlns=\\\"https://developers.google.com/blockly/xml\\\" type=\\\"gamelab_ifVarEquals\\\" id=\\\"`kUb%OM1icUG[7n:kdsV\\\">\\n  <field name=\\\"NUM\\\" id=\\\"brBn}v{CpUvR[.64ZYc{\\\">Score</field>\\n  <value name=\\\"VAL\\\">\\n    <block type=\\\"gamelab_int10\\\" id=\\\"2t8E!7{*h:db_buZJ|3I\\\">\\n      <field name=\\\"VALUE\\\">5</field>\\n    </block>\\n  </value>\\n</block></xml>\",\"hint_id\":\"Hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f7b9dcf57a2ebfbd130db49332828fd9/game_variables_conditional.mp3\"}]",
+    "instructions_icon": "fox",
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-05-07T21:27:16.602+00:00\",\"changed\":[\"cloned from \\\"game_variables_conditional\\\"\"],\"cloned_from\":\"game_variables_conditional\"},{\"changed_at\":\"2024-05-08 21:23:28 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 21:24:33 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 21:26:37 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-07T21:27:16.602+00:00\",\"changed\":[\"cloned from \\\"game_variables_conditional\\\"\"],\"cloned_from\":\"game_variables_conditional\"},{\"changed_at\":\"2024-05-08 21:23:28 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 21:24:33 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 21:26:37 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-09 15:40:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-09 22:53:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-09 22:54:46 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-09 22:55:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-09 22:55:55 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-09 22:56:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-10 18:06:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-10 18:19:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"short_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-10 20:40:27 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -66,14 +68,14 @@
         </variables>
         <block type="when_run" id="0WpyRqIux2B^Wms=lcLv" deletable="false" movable="false" editable="false" x="16" y="16">
           <next>
-            <block type="gamelab_setBackgroundImageAs" movable="false">
-              <field name="IMG">"video_game_bg"</field>
+            <block type="gamelab_setBackgroundImageAs" deletable="false">
+              <field name="IMG">"tech_bg_3"</field>
               <next>
-                <block type="gamelab_makeNewSpriteAnon" movable="false">
-                  <field name="ANIMATION_NAME">"game_heart"</field>
+                <block type="gamelab_makeNewSpriteAnon" deletable="false" movable="false">
+                  <field name="ANIMATION_NAME">"coin_gold"</field>
                   <value name="LOCATION">
                     <block type="gamelab_location_picker" deletable="false" movable="false">
-                      <field name="LOCATION">{"x":201,"y":217}</field>
+                      <field name="LOCATION">{"x":200,"y":300}</field>
                     </block>
                   </value>
                   <next>
@@ -81,7 +83,7 @@
                       <field name="VAR" id="brBn}v{CpUvR[.64ZYc{">score</field>
                       <value name="LOCATION">
                         <block type="gamelab_location_picker" deletable="false" movable="false">
-                          <field name="LOCATION">{"x":201,"y":103}</field>
+                          <field name="LOCATION">{"x":200,"y":200}</field>
                         </block>
                       </value>
                       <next>
@@ -101,17 +103,17 @@
             </block>
           </next>
         </block>
-        <block type="gamelab_spriteClicked" x="44" y="251">
+        <block type="gamelab_spriteClicked" deletable="false" x="26" y="263">
           <mutation useDefaultIcon="true"/>
           <field name="button_gamelab_spriteClicked"/>
           <field name="CONDITION">"when"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"game_heart"</field>
+              <field name="ANIMATION">"coin_gold"</field>
             </block>
           </value>
           <next>
-            <block type="math_change" movable="false">
+            <block type="math_change" deletable="false" movable="false">
               <field name="VAR" id="brBn}v{CpUvR[.64ZYc{">score</field>
               <value name="DELTA">
                 <shadow type="math_number" id="[o[fCv%xLKlU/tXpTXSK">
@@ -1275,14 +1277,14 @@
             </block>
           </value>
         </block>
-        <block type="gamelab_setForegroundEffect" id="R@jCxhQQZu5NvQqTs38B" x="76" y="140">
-          <field name="EFFECT">"bubbles"</field>
+        <block type="gamelab_setForegroundEffect" id="R@jCxhQQZu5NvQqTs38B" x="38" y="159">
+          <field name="EFFECT">"starburst"</field>
         </block>
-        <block type="gamelab_showVariable" id="3.cNzacS^N.O/t!LPkxr" x="42" y="370">
+        <block type="gamelab_showVariable" id="3.cNzacS^N.O/t!LPkxr" x="39" y="244">
           <field name="VAR" id="@-=S@3O,n:QRq]zW8kK+">score</field>
           <value name="LOCATION">
             <block type="gamelab_location_picker" id="MTpyz3~[)2]e-cv8R$w!">
-              <field name="LOCATION">{"x":200,"y":100}</field>
+              <field name="LOCATION">{"x":200,"y":200}</field>
             </block>
           </value>
         </block>
@@ -1311,7 +1313,7 @@
           <field name="CONDITION">"when"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation" id="9NoN6C[hdFFEG87A^JLm">
-              <field name="ANIMATION">"game_heart"</field>
+              <field name="ANIMATION">"coin_gold"</field>
             </block>
           </value>
         </block>

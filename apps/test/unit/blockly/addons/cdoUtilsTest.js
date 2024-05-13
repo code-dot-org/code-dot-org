@@ -1,7 +1,9 @@
 import sinon from 'sinon';
-import {getCode, moveHiddenBlocks} from '@cdo/apps/blockly/addons/cdoUtils';
+
 import * as cdoSerializationHelpers from '@cdo/apps/blockly/addons/cdoSerializationHelpers';
+import {getCode, moveHiddenBlocks} from '@cdo/apps/blockly/addons/cdoUtils';
 import * as cdoXml from '@cdo/apps/blockly/addons/cdoXml';
+
 import {expect} from '../../../util/reconfiguredChai';
 
 describe('CdoUtils', () => {

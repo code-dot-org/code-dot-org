@@ -7,13 +7,17 @@ const rootUrl = '/projects/';
 // get the project identifier (channel id) for that level (and script, if provided).
 export async function getChannelForLevel(
   levelId: number,
-  scriptId?: number
+  scriptId?: number,
+  userId?: string
 ): Promise<Response> {
   let requestString = rootUrl;
   if (scriptId !== undefined) {
     requestString += `script/${scriptId}/`;
   }
   requestString += `level/${levelId}`;
+  if (userId !== undefined) {
+    requestString += `/user/${userId}`;
+  }
   return fetch(requestString);
 }
 

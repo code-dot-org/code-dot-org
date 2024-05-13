@@ -113,6 +113,7 @@ const initialState = {
   // Setting default under13 value to true to err on the side of caution for age-restricted content.
   under13: true,
   over21: false,
+  childAccountComplianceState: null,
 };
 
 export default function currentUser(state = initialState, action) {
@@ -211,6 +212,7 @@ export default function currentUser(state = initialState, action) {
       aiRubricsDisabled: action.aiRubricsDisabled,
     };
   }
+
   if (action.type === SET_INITIAL_DATA) {
     const {
       id,
@@ -227,6 +229,7 @@ export default function currentUser(state = initialState, action) {
       is_lti,
       date_progress_table_invitation_last_delayed,
       has_seen_progress_table_v2_invitation,
+      child_account_compliance_state,
     } = action.serverUser;
     analyticsReport.setUserProperties(
       id,
@@ -258,6 +261,7 @@ export default function currentUser(state = initialState, action) {
       dateProgressTableInvitationDelayed:
         date_progress_table_invitation_last_delayed,
       hasSeenProgressTableInvite: has_seen_progress_table_v2_invitation,
+      childAccountComplianceState: child_account_compliance_state,
     };
   }
 
