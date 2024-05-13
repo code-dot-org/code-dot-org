@@ -1400,7 +1400,7 @@
             },
             {
               "value": "ai_how_works_in_depth",
-              "text": "In-depth content about how AI works (e.g. Machine Learning, Natural Language Processing)"
+              "text": "In-depth content about how AI works (e.g. Natural Language Processing, Neural Networks, Computer Vision)"
             },
             {
               "value": "ai_ethics",

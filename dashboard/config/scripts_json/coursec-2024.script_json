@@ -20,8 +20,8 @@
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2024-05-08 21:22:35 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2024-05-10 19:10:55 UTC",
+    "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -7388,6 +7388,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PatternBlock-Unplugged2022_2024"
+        ],
         "progression": "Pattern Block Data - Unplugged Activity"
       },
       "bonus": false,

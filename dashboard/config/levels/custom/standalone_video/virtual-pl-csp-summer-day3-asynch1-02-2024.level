@@ -1,0 +1,21 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2024-05-10T15:31:57.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "PL_CSD_EquityBlindSpotsvid",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28731,
+    "name_suffix": "_2023",
+    "encrypted": "false",
+    "long_instructions": "<img src=\"https://images.code.org/9df1a7b659aba5907457cec20dd907a8-Screenshot 2023-10-19 at 12.26.39 PM.png\" alt=\"A clipboard with the words TO DO on it. This icon is used to signal an action item for participants.\" width=\"30px\" style=\"border-radius:10px; float:left; margin: 0px 10px 5px 0px;\">\r\n\r\n#### When we think about the role identity plays in the classroom, we need to consider both our own identities and how those impact our experiences with students in the classrooms as well as how students’ identities impact their experiences in CS. In module 2, we talked about the role and responsibility we play in actively creating a classroom culture of inclusion in our CS classrooms, but even despite our best intentions, we can fall short of that goal. One factor we should consider when creating an inclusive classroom is the role Unconscious Bias plays in the decisions we make in our classrooms. We are going to start by watching a video to frame this discussion.\r\n\r\n---\r\n\r\n## Learn More:\r\n\r\n<img src=\"https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png\" alt=\"A clipboard with the words TO DO on it. This icon is used to signal an action item for participants.\" width=\"30px\" style=\"border-radius:10px; float:left; margin: 0px 10px 5px 0px;\">\r\n\r\n#### Watch the video Blind Spots: Challenge Assumptions (2:19)."
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-05-10T15:31:57.243+00:00\",\"changed\":[\"cloned from \\\"virtual-pl-csd-summer-day3-UnderstandingContext3_1_video\\\"\"],\"cloned_from\":\"virtual-pl-csd-summer-day3-UnderstandingContext3_1_video\"}]"
+}]]></config>
+</StandaloneVideo>
