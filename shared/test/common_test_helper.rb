@@ -101,12 +101,5 @@ module SetupTest
     # so reset them to ensure that they are not reused across tests.
     BucketHelper.s3 = nil if defined?(BucketHelper)
     AWS::S3.s3 = nil
-
-    # Reset AUTO_INCREMENT, since it is unaffected by transaction rollback.
-    DASHBOARD_TEST_TABLES.each do |table|
-      # rubocop:disable CustomCops/DashboardDbUsage
-      DASHBOARD_DB.execute("ALTER TABLE `#{table}` AUTO_INCREMENT = 1")
-      # rubocop:enable CustomCops/DashboardDbUsage
-    end
   end
 end
