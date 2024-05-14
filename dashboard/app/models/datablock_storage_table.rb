@@ -213,6 +213,11 @@ class DatablockStorageTable < ApplicationRecord
   def import_csv(table_data_csv)
     if_shared_table_copy_on_write
 
+    max_csv_size = MAX_TABLE_ROW_COUNT * DatablockStorageRecord::MAX_RECORD_LENGTH
+    if table_data_csv.bytesize > max_csv_size
+      raise StudentFacingError.new(:CSV_TOO_LARGE), "CSV is too large to import, max CSV size is #{(max_csv_size.to_f / (1024 * 1024)).round} MB"
+    end
+
     new_records = CSV.parse(table_data_csv, headers: true).map(&:to_h)
 
     # Auto-cast CSV strings on import, e.g. "5.0" => 5.0
