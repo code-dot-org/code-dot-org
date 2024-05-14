@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import MusicPlayer from '../player/MusicPlayer';
-import AnalyticsReporter from '../analytics/AnalyticsReporter';
+import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {AnalyticsContext} from '../context';
 import Globals from '../globals';

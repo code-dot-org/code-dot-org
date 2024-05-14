@@ -13,6 +13,7 @@ import {getPitchName, getTranposedNote, Key} from '../utils/Notes';
 import {Effects} from './interfaces/Effects';
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
 import {LoadFinishedCallback, UpdateLoadProgressCallback} from '../types';
 import {
   AudioPlayer,
@@ -40,6 +41,7 @@ const DEFAULT_KEY = Key.C;
  */
 export default class MusicPlayer {
   private readonly metricsReporter: LabMetricsReporter;
+  private readonly analyticsReporter: AnalyticsReporter;
   private readonly audioPlayer: AudioPlayer;
   private updateLoadProgress: UpdateLoadProgressCallback | undefined;
 
@@ -61,6 +63,7 @@ export default class MusicPlayer {
       this.audioPlayer = new ToneJSPlayer() || audioPlayer;
     }
     this.metricsReporter = metricsReporter;
+    this.analyticsReporter = new AnalyticsReporter();
     this.updateConfiguration(bpm, key);
   }
 
@@ -180,7 +183,8 @@ export default class MusicPlayer {
       blockId: 'preview',
       soundType: 'beat',
     };
-
+    console.log('audioPlayer.playSampleImmediately in MusicPlayer');
+    this.analyticsReporter.onSoundsPlayed(id);
     this.audioPlayer.playSampleImmediately(
       this.convertEventToSamples(preview)[0],
       onStop
@@ -280,6 +284,9 @@ export default class MusicPlayer {
   private scheduleEvents(events: PlaybackEvent[]) {
     for (const event of events) {
       if (event.type === 'sound' || !this.audioPlayer.supportsSamplers()) {
+        console.log('event in scheduleEvents', event.id);
+        // log event.id
+        this.analyticsReporter.onSoundsPlayed(event.id);
         for (const sample of this.convertEventToSamples(event)) {
           this.audioPlayer.scheduleSample(sample);
         }

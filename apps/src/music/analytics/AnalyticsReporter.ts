@@ -52,6 +52,7 @@ interface SessionEndPayload {
   soundsUsed: string[];
   blockStats: BlockStats;
   featuresUsed: {[feature: string]: boolean};
+  soundsPlayed: {[id: string]: number};
 }
 
 /**
@@ -64,6 +65,7 @@ export default class AnalyticsReporter {
   private identifyObj: Identify;
   private sessionStartTime: number;
   private soundsUsed: Set<string>;
+  private soundsPlayed: {[id: string]: number};
   private blockStats: BlockStats;
   private featuresUsed: {[feature: string]: boolean};
 
@@ -72,6 +74,7 @@ export default class AnalyticsReporter {
     this.identifyObj = new Identify();
     this.sessionStartTime = -1;
     this.soundsUsed = new Set();
+    this.soundsPlayed = {};
     this.blockStats = {
       endingBlockCount: 0,
       endingTriggerBlockCount: 0,
@@ -88,6 +91,7 @@ export default class AnalyticsReporter {
   }
 
   async startSession() {
+    console.log('startSession');
     // Capture start time before making init call
     this.sessionStartTime = Date.now();
 
@@ -165,6 +169,17 @@ export default class AnalyticsReporter {
     track(eventType, payload).promise;
   }
 
+  onSoundsPlayed(id: string) {
+    // Unsure why by the time this function is called, this.sessionInProgress is false.
+    console.log('this.sessionInProgress', this.sessionInProgress);
+    if (!this.soundsPlayed[id]) {
+      this.soundsPlayed[id] = 1;
+    } else {
+      this.soundsPlayed[id]++;
+    }
+    console.log('soundsPlayed', this.soundsPlayed);
+  }
+
   onBlocksUpdated(blocks: Block[]) {
     if (!this.sessionInProgress) {
       this.log('No session in progress');
@@ -212,6 +227,7 @@ export default class AnalyticsReporter {
   }
 
   endSession() {
+    console.log('endSession');
     if (!this.sessionInProgress) {
       this.log('No session in progress');
       return;
@@ -227,6 +243,7 @@ export default class AnalyticsReporter {
       soundsUsed: Array.from(this.soundsUsed),
       blockStats: this.blockStats,
       featuresUsed: this.featuresUsed,
+      soundsPlayed: this.soundsPlayed,
     };
 
     track('Session end', payload);
