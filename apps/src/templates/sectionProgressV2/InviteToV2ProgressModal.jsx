@@ -80,7 +80,7 @@ function InviteToV2ProgressModal({
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_DISMISS_INVITATION, {
       sectionId,
     });
-    setHasSeenProgressTableInviteData();
+    setHasSeenProgressTableInviteData(false);
     setHasSeenProgressTableInvite(true);
     setInvitationOpen(false);
   }, [sectionId, setHasSeenProgressTableInvite]);
@@ -89,10 +89,10 @@ function InviteToV2ProgressModal({
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_ACCEPT_INVITATION, {
       sectionId,
     });
-    setHasSeenProgressTableInviteData();
+    setHasSeenProgressTableInviteData(true);
     setHasSeenProgressTableInvite(true);
-    new UserPreferences().setShowProgressTableV2(true);
     setShowProgressTableV2(true);
+    new UserPreferences().setShowProgressTableV2(true); // still might be able to delete
   }, [sectionId, setHasSeenProgressTableInvite, setShowProgressTableV2]);
 
   const handleDelayInvitation = React.useCallback(() => {
@@ -110,9 +110,10 @@ function InviteToV2ProgressModal({
     });
   };
 
-  const setHasSeenProgressTableInviteData = () => {
+  const setHasSeenProgressTableInviteData = acceptedInvitation => {
     return $.post(`/api/v1/users/has_seen_progress_table_v2_invitation`, {
       has_seen_progress_table_v2_invitation: true,
+      show_progress_table_v2: acceptedInvitation,
     });
   };
 
