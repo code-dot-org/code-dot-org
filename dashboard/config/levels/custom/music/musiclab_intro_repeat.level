@@ -77,7 +77,7 @@
         "next": false
       },
       {
-        "message": "Please play a sound three times.  Attached a [repeat](#clickable=repeat-block) block to [when run](#clickable=when-run-block). Then put a [play](#clickable=play-sound-block) block inside of it.",
+        "message": "Please play a sound three times.  Attach a [repeat](#clickable=repeat-block) block to [when run](#clickable=when-run-block). Then put a [play](#clickable=play-sound-block) block inside of it.",
         "key": "musiclab_intro_repeat_b2a9ed31-f16f-45ac-9aaa-ab45620d6cd6",
         "next": false,
         "conditions": [
