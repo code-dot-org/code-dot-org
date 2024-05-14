@@ -1,12 +1,13 @@
 <Javalab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 68,
   "created_at": "2024-01-12T21:01:44.000Z",
   "level_num": "custom",
   "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "A teacher needs a plagiarism detection tool to search for specific phrases within a student's essay to identify potential sources of plagiarism.\r\n\r\nThe <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Teacher</code> class has an instance variable <code style=\"background-color: #ececec; color: black; font-weight: bold;\">studentEssays</code>, which is a 2D array of student essays submitted each week for different topics.\r\n\r\n✅ **TO DO #1:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Teacher</code> class, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">findPhrases()</code> method to return the student essay that contains any of the phrases in the parameter <code style=\"background-color: #ececec; color: black; font-weight: bold;\">targetPhrases</code>.\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">TeacherRunner</code> class, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">findPhrases()</code> method and print the result.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the documentation for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">String</code> class in the <strong>Documentation</strong> tab ⬆️ for help with using the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">indexOf()</code> method.\r\n</div>",
+    "long_instructions": "A teacher needs a plagiarism detection tool to search for specific phrases within a student's essay to identify potential sources of plagiarism.\r\n\r\nThe <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Teacher</code> class has an instance variable <code style=\"background-color: #ececec; color: black; font-weight: bold;\">studentEssays</code>, which is a 2D array of student essays submitted each week for different topics.\r\n\r\n✅ **TO DO #1:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Teacher</code> class, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">findPhrases()</code> method to return the **first** student essay that contains any of the phrases in the parameter <code style=\"background-color: #ececec; color: black; font-weight: bold;\">targetPhrases</code>.\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">TeacherRunner</code> class, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">findPhrases()</code> method and print the result.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the documentation for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">String</code> class in the <strong>Documentation</strong> tab ⬆️ for help with using the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">indexOf()</code> method.\r\n</div>",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -48,9 +49,12 @@
         "tabOrder": 5
       }
     },
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "encrypted_examples": [
+
+    ],
+    "ai_tutor_available": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-01-12T21:01:44.494+00:00\",\"changed\":[\"cloned from \\\"CSA U5L7-L5b_2023\\\"\"],\"cloned_from\":\"CSA U5L7-L5b_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-01-12T21:01:44.494+00:00\",\"changed\":[\"cloned from \\\"CSA U5L7-L5b_2023\\\"\"],\"cloned_from\":\"CSA U5L7-L5b_2023\"},{\"changed_at\":\"2024-05-09 19:31:14 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

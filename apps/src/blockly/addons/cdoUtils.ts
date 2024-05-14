@@ -1,9 +1,18 @@
-import _ from 'lodash';
 import {unregisterProcedureBlocks} from '@blockly/block-shareable-procedures';
-import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
+import {Block, BlockSvg, Field, Theme, WorkspaceSvg} from 'blockly';
+import {ToolboxItemInfo, BlockInfo} from 'blockly/core/utils/toolbox';
+import _ from 'lodash';
+
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
-import cdoTheme from '../themes/cdoTheme';
-import {blocks as procedureBlocks} from '../customBlocks/googleBlockly/proceduresBlocks';
+import {
+  getProjectXml,
+  processIndividualBlock,
+} from '@cdo/apps/blockly/addons/cdoXml';
+import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
+import experiments from '@cdo/apps/util/experiments';
+
+import * as blockUtils from '../../block_utils';
+import {parseElement as parseXmlElement} from '../../xml';
 import {
   BLOCK_TYPES,
   CLAMPED_NUMBER_REGEX,
@@ -13,6 +22,16 @@ import {
   Themes,
   ToolboxType,
 } from '../constants';
+import {blocks as procedureBlocks} from '../customBlocks/googleBlockly/proceduresBlocks';
+import cdoTheme from '../themes/cdoTheme';
+import {
+  BlockColor,
+  JsonBlockConfig,
+  SerializedFields,
+  WorkspaceSerialization,
+} from '../types';
+import {getBaseName} from '../utils';
+
 import {
   appendProceduresToState,
   convertFunctionsXmlToJson,
@@ -21,22 +40,6 @@ import {
   hasBlocks,
   positionBlocksOnWorkspace,
 } from './cdoSerializationHelpers';
-import {parseElement as parseXmlElement} from '../../xml';
-import * as blockUtils from '../../block_utils';
-import {
-  getProjectXml,
-  processIndividualBlock,
-} from '@cdo/apps/blockly/addons/cdoXml';
-import {Block, BlockSvg, Field, Theme, WorkspaceSvg} from 'blockly';
-import {
-  BlockColor,
-  JsonBlockConfig,
-  SerializedFields,
-  WorkspaceSerialization,
-} from '../types';
-import experiments from '@cdo/apps/util/experiments';
-import {getBaseName} from '../utils';
-import {ToolboxItemInfo, BlockInfo} from 'blockly/core/utils/toolbox';
 
 /**
  * Loads blocks to a workspace.

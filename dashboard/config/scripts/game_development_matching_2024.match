@@ -1,0 +1,18 @@
+name 'game_development_matching_2024'
+title 'Match the code to the animation'
+height '200'
+question '![](https://images.code.org/05437fe2286b685f2189d7c257c42e90-image-1715212532562.gif)'
+answer '![](https://images.code.org/0e8b9e7423184dd4761452bd37371934-image-1715212997449.jpg)'
+question '![](https://images.code.org/d5319a0c592f8f983f40d52a49ebddcc-image-1715212582221.gif)'
+answer '![](https://images.code.org/8cb38e28f3c6448f88bdd8aa5aeed7f9-image-1715212974933.jpg)'
+
+markdown <<MARKDOWN
+Look at these coding blocks using variables. Match the correct code to the animation.
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+allow_multiple_attempts true

@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {useCallback} from 'react';
 import {connect} from 'react-redux';
@@ -13,6 +14,7 @@ import i18n from '@cdo/locale';
 
 import SectionProgress from '../sectionProgress/SectionProgress';
 
+import InviteToV2ProgressModal from './InviteToV2ProgressModal';
 import ProgressBanners from './ProgressBanners';
 import SectionProgressV2 from './SectionProgressV2';
 
@@ -47,6 +49,15 @@ function SectionProgressSelector({
     [showProgressTableV2, setShowProgressTableV2, sectionId]
   );
 
+  const debouncedOnShowProgressTableV2Change = _.debounce(
+    onShowProgressTableV2Change,
+    300,
+    {
+      leading: true,
+      trailing: false,
+    }
+  );
+
   // If progress table is disabled, only show the v1 table.
   // If closed beta is disabled or the user is not in the closed beta, only show the v1 table.
   const isInClosedBeta =
@@ -72,7 +83,7 @@ function SectionProgressSelector({
       <Link
         type="primary"
         size="s"
-        onClick={onShowProgressTableV2Change}
+        onClick={debouncedOnShowProgressTableV2Change}
         id="ui-test-toggle-progress-view"
       >
         {displayV2
@@ -86,7 +97,15 @@ function SectionProgressSelector({
     <div className={styles.pageContent}>
       {displayV2 && <ProgressBanners toggleUsed={toggleUsed} />}
       {toggleV1OrV2Link()}
-      {displayV2 ? <SectionProgressV2 /> : <SectionProgress />}
+
+      {displayV2 ? (
+        <SectionProgressV2 />
+      ) : (
+        <>
+          <InviteToV2ProgressModal sectionId={sectionId} />
+          <SectionProgress allowUserToSelectV2View={true} />
+        </>
+      )}
     </div>
   );
 }

@@ -17,11 +17,13 @@ import styleConstants from '@cdo/apps/styleConstants';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 import {tableLayoutStyles as style} from '@cdo/apps/templates/tables/tableConstants';
+// TODO: Condense use of inline and imported styles
+import interactionsStyle from './interactions-table.module.scss';
 
 // TODO: Some of these overrides are necessary to reconcile CSS property values that are numbers
 // in the tableConstants file but must be strings according to the reactabular-table type definitions.
 // We should consider updating the tableConstants file to use strings where necessary.
-const styleOverrides = {
+export const styleOverrides = {
   table: {
     borderWidth: '1px',
     borderStyle: 'solid',
@@ -166,10 +168,8 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
       },
       cell: {
         formatters: [
-          (rowData: {prompt: string; aiResponse: string}) => {
-            console.log('rowData', rowData);
-            return interactionFormatter(rowData.prompt, rowData.aiResponse);
-          },
+          (rowData: {prompt: string; aiResponse: string}) =>
+            interactionFormatter(rowData.prompt, rowData.aiResponse),
         ],
         props: {style: {...style.cell, maxWidth: 'unset'}},
       },
@@ -250,6 +250,7 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
         <CheckboxDropdown
           allOptions={statusOptions}
           checkedOptions={selectedStatuses}
+          className={interactionsStyle.interactionsElement}
           color="black"
           labelText="Filter by Status"
           name="filter-statuses"
@@ -263,6 +264,7 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
         <CheckboxDropdown
           allOptions={studentFilterOptions}
           checkedOptions={selectedUserIds}
+          className={interactionsStyle.interactionsElement}
           color="black"
           labelText="Filter by Student"
           name="filter-students"
@@ -274,6 +276,7 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
           size="s"
         />
         <SimpleDropdown
+          className={interactionsStyle.interactionsElement}
           items={TIME_FILTER_OPTIONS}
           selectedValue={selectedTimeFilter}
           onChange={(event: React.ChangeEvent<HTMLSelectElement>) =>
@@ -286,26 +289,28 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
           isLabelVisible={false}
         />
       </div>
-      {filteredChatMessages && filteredChatMessages.length === 0 ? (
-        <>There are no chat messages to display.</>
-      ) : (
-        <Table.Provider
-          columns={columns}
-          style={{...style.table, ...styleOverrides.table}}
-        >
-          <Table.Header />
-          <Table.Body
-            rows={filteredChatMessages.map(msg => ({
-              id: msg.id,
-              student: msg.studentName,
-              timestamp: msg.createdAt,
-              interaction: {prompt: msg.prompt, aiResponse: msg.aiResponse},
-              status: msg.status,
-            }))}
-            rowKey="id"
-          />
-        </Table.Provider>
-      )}
+      <div className={interactionsStyle.interactionsElement}>
+        {filteredChatMessages && filteredChatMessages.length === 0 ? (
+          <>There are no chat messages to display.</>
+        ) : (
+          <Table.Provider
+            columns={columns}
+            style={{...style.table, ...styleOverrides.table}}
+          >
+            <Table.Header />
+            <Table.Body
+              rows={filteredChatMessages.map(msg => ({
+                id: msg.id,
+                student: msg.studentName,
+                timestamp: msg.createdAt,
+                interaction: {prompt: msg.prompt, aiResponse: msg.aiResponse},
+                status: msg.status,
+              }))}
+              rowKey="id"
+            />
+          </Table.Provider>
+        )}
+      </div>
     </div>
   );
 };

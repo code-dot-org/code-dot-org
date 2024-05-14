@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useMemo} from 'react';
+import React, {useState} from 'react';
 
 import './styles/Weblab2View.css';
 
@@ -6,46 +6,39 @@ import {Config} from './Config';
 
 import {Codebridge} from '@codebridge/Codebridge';
 import {ConfigType, ProjectType} from '@codebridge/types';
-import {useInitialSources} from '@codebridge/hooks';
 
-import {Editor as CDOEditor} from '@codebridge/Editor';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {MultiFileSource} from '@cdo/apps/lab2/types';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {html} from '@codemirror/lang-html';
 import {LanguageSupport} from '@codemirror/language';
 import {css} from '@codemirror/lang-css';
+import {useSource} from '../codebridge/hooks/useSource';
+import {ProjectSources} from '@cdo/apps/lab2/types';
 
 const weblabLangMapping: {[key: string]: LanguageSupport} = {
   html: html(),
   css: css(),
 };
 
-const DefaultEditorComponent = () =>
-  CDOEditor(weblabLangMapping, ['html', 'css']);
-
 const horizontalLayout = {
   gridLayoutRows: '32px 300px auto',
   gridLayoutColumns: '300px auto auto',
-  gridLayout: `    "instructions file-tabs preview-container"
-      "instructions editor preview-container"
-      "file-browser editor preview-container"`,
+  gridLayout: `    "instructions workspace preview-container"
+      "instructions workspace preview-container"
+      "file-browser workspace preview-container"`,
 };
 
 const verticalLayout = {
   gridLayoutRows: '32px 300px auto auto',
   gridLayoutColumns: '300px auto',
-  gridLayout: `    "instructions file-tabs file-tabs"
-      "instructions editor editor"
-      "file-browser editor editor"
+  gridLayout: `    "instructions workspace workspace"
+      "instructions workspace workspace"
+      "file-browser workspace workspace"
       "file-browser preview-container preview-container"`,
 };
 
 const defaultConfig: ConfigType = {
   activeLeftNav: 'Files',
-  EditorComponent: DefaultEditorComponent,
-  // editableFileTypes: ["html"],
-  // previewFileTypes: ["html"],
+  languageMapping: weblabLangMapping,
+  editableFileTypes: ['html', 'css'],
   leftNav: [
     {
       icon: 'fa-square-check',
@@ -75,7 +68,7 @@ const defaultConfig: ConfigType = {
   ...horizontalLayout,
 };
 
-const defaultProject: ProjectType = {
+const defaultSource: ProjectType = {
   // folders: {},
   folders: {
     '1': {id: '1', name: 'foo', parentId: '0'},
@@ -150,40 +143,17 @@ const defaultProject: ProjectType = {
   },
 };
 
+const defaultProject: ProjectSources = {source: defaultSource};
+
 const Weblab2View = () => {
-  const [currentProject, setCurrentProject] =
-    useState<ProjectType>(defaultProject);
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
+  const {source, setSource, resetToStartSource} = useSource(defaultProject);
   const [showConfig, setShowConfig] = useState<
     'project' | 'config' | 'layout' | ''
   >('');
-  const initialSources = useInitialSources({
-    source: defaultProject,
-  });
-  const channelId = useAppSelector(state => state.lab.channel?.id);
-
-  const setProject = useMemo(
-    () => (newProject: MultiFileSource) => {
-      setCurrentProject(newProject);
-      if (Lab2Registry.getInstance().getProjectManager()) {
-        const projectSources = {
-          source: newProject,
-        };
-        Lab2Registry.getInstance().getProjectManager()?.save(projectSources);
-      }
-    },
-    [setCurrentProject]
-  );
-
-  useEffect(() => {
-    // We reset the project when the channelId changes, as this means we are on a new level.
-    setCurrentProject(
-      (initialSources?.source as MultiFileSource) || defaultProject
-    );
-  }, [channelId, initialSources]);
 
   const configKey = {
-    project: currentProject,
+    project: source || defaultProject,
     config: config,
     layout: config,
   };
@@ -214,12 +184,15 @@ const Weblab2View = () => {
         </button>
       </div>
       <div className="app-ide">
-        <Codebridge
-          project={currentProject}
-          config={config}
-          setProject={setProject}
-          setConfig={setConfig}
-        />
+        {source && (
+          <Codebridge
+            project={source}
+            config={config}
+            setProject={setSource}
+            setConfig={setConfig}
+            resetProject={resetToStartSource}
+          />
+        )}
 
         {showConfig && (
           <Config
@@ -229,10 +202,8 @@ const Weblab2View = () => {
               newConfig: ProjectType | ConfigType | string
             ) => {
               if (configName === 'project') {
-                setProject(newConfig as ProjectType);
+                setSource(newConfig as ProjectType);
               } else if (configName === 'config' || configName === 'layout') {
-                (newConfig as ConfigType).EditorComponent =
-                  DefaultEditorComponent;
                 setConfig(newConfig as ConfigType);
               }
               setShowConfig('');

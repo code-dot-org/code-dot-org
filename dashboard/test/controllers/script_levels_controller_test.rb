@@ -55,6 +55,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     @script = @custom_script
     @script_level = @custom_s1_l1
+    @level = @script_level.level
 
     in_development_unit = create(:script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
     in_development_lesson_group = create(:lesson_group, script: in_development_unit)
