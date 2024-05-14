@@ -15,7 +15,7 @@ module SchoolInfoDeduplicator
   # Returns the SchoolInfo if it already exists.
   # Returns nil if the SchoolInfo is new or if it is invalid.
   def get_duplicate_school_info(school_info_attr)
-    return SchoolInfo.where(school_id: attr[:school_id], validation_type: SchoolInfo::VALIDATION_FULL).first if school_info_attr[:school_id]
+    return SchoolInfo.where(school_id: school_info_attr[:school_id], validation_type: SchoolInfo::VALIDATION_FULL).first if school_info_attr[:school_id]
 
     final_attr = process_school_info_attributes(school_info_attr)
 
