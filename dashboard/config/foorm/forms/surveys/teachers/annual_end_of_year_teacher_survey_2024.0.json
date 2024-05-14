@@ -886,31 +886,31 @@
           "columns": [
             {
               "value": "1",
-              "text": "Never"
+              "text": "Strongly Disagree"
             },
             {
               "value": "2",
-              "text": "Once or twice"
+              "text": "Disagree"
             },
             {
               "value": "3",
-              "text": "Once in a while"
+              "text": "Slightly Disagree"
             },
             {
               "value": "4",
-              "text": "Sometimes"
+              "text": "Neutral"
             },
             {
               "value": "5",
-              "text": "Often"
+              "text": "Slightly Agree"
             },
             {
               "value": "6",
-              "text": "Almost every time"
+              "text": "Agree"
             },
             {
               "value": "7",
-              "text": "Every time I taught"
+              "text": "Strongly Agree"
             }
           ],
           "rows": [
@@ -1117,7 +1117,8 @@
           "type": "rating",
           "name": "6_12_standalone_units_likelihood",
           "visibleIf": "{grade} anyof [6, 7, 8, 9, 10, 11, 12, '12up']",
-          "title": "If Code.org were to offer new units, 2-8 weeks in length, on specific topics such as data science or AI, designed for students in grades 6-12, how likely would you be to teach them?",
+          "title": "How likely are you to teach brief modules (2-8 week-long) focused on specific topics, designed for students in grades 6-12?",
+          "description": "These would be short modules focusing on one specific topic, for example data science or AI, that don't need to be taught within a longer course.",
           "rateCount": 7,
           "rateMax": 7,
           "minRateDescription": "Not Likely",
@@ -1127,7 +1128,7 @@
           "type": "checkbox",
           "name": "6_12_standalone_units_reasons",
           "visibleIf": "{6_12_standalone_units_likelihood} <= 4",
-          "title": "Please share some reasons why you wouldn't be likely to teach short units for students in grades 6-12, on specific topics such as data science or AI.",
+          "title": "Please share some reasons why you wouldn't be likely to teach brief, 2-8 week-long modules on specific topics, for students in grades 6-12.",
           "choices": [
             {
               "value": "content_overlaps",
@@ -1163,7 +1164,7 @@
           "type": "text",
           "name": "6_12_standalone_units_reasons_other_comment",
           "visibleIf": "{6_12_standalone_units_reasons} contains 'other'",
-          "title": "Please share what are some other reasons why you are not likely to teach short units on specific topics such as data science or AI."
+          "title": "Please share what are some other reasons why you are not likely to teach brief, 2-8 week-long modules on specific topics, for students in grades 6-12."
         },
         {
           "type": "rating",
@@ -1286,15 +1287,15 @@
           "columns": [
             {
               "value": "1",
-              "text": "Not likely at all"
+              "text": "Not interested at all"
             },
             {
               "value": "2",
-              "text": "Unlikely"
+              "text": "Not interested"
             },
             {
               "value": "3",
-              "text": "Somewhat unlikely"
+              "text": "Slightly uninterested"
             },
             {
               "value": "4",
@@ -1302,15 +1303,15 @@
             },
             {
               "value": "5",
-              "text": "Somewhat likely"
+              "text": "Somewhat interested"
             },
             {
               "value": "6",
-              "text": " Likely"
+              "text": " Interested"
             },
             {
               "value": "7",
-              "text": "Definitely likely"
+              "text": "very interested"
             }
           ],
           "rows": [
@@ -1437,6 +1438,14 @@
             {
               "value": "lack_access_ai_tools",
               "text": "My school restricts access to AI tools"
+            },
+            {
+              "value": "lack_school_ai_policy",
+              "text": "My school doesn't have clear guidance or policies around using and teaching AI"
+            },
+            {
+              "value": "lack_ai_standards",
+              "text": "It is not clear to me how AI aligns to standards"
             },
             {
               "value": "none",
