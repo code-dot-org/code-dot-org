@@ -1,5 +1,4 @@
 import React from 'react';
-const baseUrl = '';
 
 const optionsList = [
   {
@@ -199,7 +198,7 @@ export default class MusicMenu extends React.Component {
           userSelect: 'all',
         }}
       >
-        {baseUrl}?
+        ?
         {optionsList
           .map(option => {
             return (
