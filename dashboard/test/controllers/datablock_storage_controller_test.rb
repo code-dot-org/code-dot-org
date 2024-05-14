@@ -169,8 +169,6 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     post _url(:create_record), params: {table_name: 'mytable', record_json: {'name' => too_many_bees}.to_json}
     assert_response :bad_request
 
-    skip "FIXME: controller bug, test will fail, because enforcing DatablockStorageRecord::MAX_RECORD_LENGTH is not yet implemented at the DatablockStorage level, see #57001"
-    # Is MAX_RECORD_LENGTH_EXCEEDED the right error? check the JS
     assert_equal 'MAX_RECORD_LENGTH_EXCEEDED', JSON.parse(@response.body)['type']
   end
 
