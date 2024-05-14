@@ -171,9 +171,8 @@ class DatablockStorageTable < ApplicationRecord
     DatablockStorageRecord.transaction do
       # Because we're using a composite primary key for records: (project_id, table_name, record_id)
       # and we want an incrementing record_id unique to that (project_id, table_name), we lock
-      # the first record in a DatablockStorageTable when we begin to insert new records,
-      # and release it once we close the transaction.
-      DatablockStorageRecord.where(project_id: project_id, table_name: table_name).lock.minimum(:record_id)
+      # the table for the transaction, compute the next record_id and insert our records
+      lock!
 
       max_record_id = DatablockStorageRecord.where(project_id: project_id, table_name: table_name).maximum(:record_id) || 0
 
@@ -242,6 +241,7 @@ class DatablockStorageTable < ApplicationRecord
     # import_csv should overwrite existing data:
     records.delete_all
     self.columns = ['id']
+    save!
 
     create_records(new_records)
   rescue CSV::MalformedCSVError => exception
