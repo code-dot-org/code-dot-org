@@ -14,21 +14,22 @@ class AichatController < ApplicationController
       return render status: :bad_request, json: {}
     end
 
+    response_body = get_response_body
+    response_body[:session_id] = log_chat_session(response_body[:messages])
+    render(status: :ok, json: response_body)
+  end
+
+  private def get_response_body
     # Check for profanity
     locale = params[:locale] || "en"
     filter_result = ShareFiltering.find_failure(params[:newMessage][:chatMessageText], locale)
     if filter_result&.type == ShareFiltering::FailureType::PROFANITY
-      updated_message = params[:newMessage].merge({status: SharedConstants::AI_INTERACTION_STATUS[:PROFANITY_VIOLATION]})
-      session_id = log_chat_session([updated_message])
+      messages = [params[:newMessage].merge({status: SharedConstants::AI_INTERACTION_STATUS[:PROFANITY_VIOLATION]})]
 
-      return render(
-        status: :ok,
-        json: {
-          messages: [updated_message],
-          flagged_content: filter_result.content,
-          session_id: session_id
-        }
-      )
+      return {
+        messages: messages,
+        flagged_content: filter_result.content,
+      }
     end
 
     # Use to_unsafe_h here to allow testing this function.
@@ -44,7 +45,7 @@ class AichatController < ApplicationController
 
     filter_result = ShareFiltering.find_failure(latest_assistant_response, locale)
     if filter_result&.type == ShareFiltering::FailureType::PROFANITY
-      new_messages = [
+      messages = [
         params[:newMessage].merge({status: SharedConstants::AI_INTERACTION_STATUS[:ERROR]}),
         {
           id: -1,
@@ -55,7 +56,6 @@ class AichatController < ApplicationController
           timestamp: 'fix this'
         }
       ]
-      session_id = log_chat_session(new_messages)
 
       Honeybadger.notify(
         'Profanity returned from aichat model',
@@ -64,13 +64,8 @@ class AichatController < ApplicationController
           aichat_session_id: session_id
         }
       )
-      return render(
-        status: :ok,
-        json: {
-          messages: new_messages,
-          session_id: session_id
-        }
-      )
+
+      return {messages: messages}
     end
 
     # This structure results in logging some extraneous information -- we could filter (eg, timestamp)
@@ -85,10 +80,7 @@ class AichatController < ApplicationController
       ok_user_message,
       assistant_message
     ]
-    session_id = log_chat_session([params[:newMessage], assistant_message])
-
-    # maybe simplify so this is the only render call
-    render(status: :ok, json: {messages: messages, session_id: session_id})
+    {messages: messages}
   end
 
   private def has_required_params?
