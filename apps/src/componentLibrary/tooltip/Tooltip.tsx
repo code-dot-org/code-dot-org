@@ -13,7 +13,7 @@ export interface TooltipProps {
   text: string;
   /**
    * Tooltip id. Required to connect the element using the tooltip.
-   *  Also, you need to pass this id to that element as aria-describedBy html attribute
+   * Also, you need to pass this id to that element as aria-describedBy html attribute
    * */
   tooltipId: string;
   /** Tooltip left icon */
