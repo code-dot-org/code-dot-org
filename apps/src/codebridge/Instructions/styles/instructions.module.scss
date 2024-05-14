@@ -5,5 +5,12 @@
 }
 
 .dropdown {
-  display: inline;
+  // display: inline-block;
+  // position: relative;
+  z-index: 1000;
+  position: absolute;
+
+  li {
+    list-style-type: none;
+  }
 }
