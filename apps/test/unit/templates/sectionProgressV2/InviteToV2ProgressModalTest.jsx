@@ -12,7 +12,7 @@ const DEFAULT_PROPS = {
   setShowProgressTableV2: () => {},
   setHasSeenProgressTableInvite: () => {},
   setDateProgressTableInvitationDelayed: () => {},
-  showProgressTableV2: null,
+  progressTableV2Timestamp: null,
 };
 
 describe('UnconnectedInviteToV2ProgressModal', () => {
@@ -170,17 +170,7 @@ describe('UnconnectedInviteToV2ProgressModal', () => {
 
   it('does not show the dialog if the user has already seen the V2 dashboard', () => {
     renderDefault({
-      showProgressTableV2: false,
-    });
-
-    expect(screen.queryByText(i18n.tryItNow())).to.be.null;
-    expect(screen.queryByText(i18n.progressTrackingAnnouncement())).to.be.null;
-    expect(screen.queryByText(i18n.remindMeLater())).to.be.null;
-  });
-
-  it('does not show the dialog if the user has already seen the V2 dashboard', () => {
-    renderDefault({
-      showProgressTableV2: true,
+      progressTableV2Timestamp: '2024-05-14T10:02:53.194-05:00',
     });
 
     expect(screen.queryByText(i18n.tryItNow())).to.be.null;
