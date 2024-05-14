@@ -6,7 +6,7 @@ import {
 } from '../../types';
 import {modelDescriptions} from '@cdo/apps/aichat/constants';
 
-export const MIN_TEMPERATURE = 0;
+export const MIN_TEMPERATURE = 0.1;
 export const MAX_TEMPERATURE = 1;
 export const SET_TEMPERATURE_STEP = 0.1;
 export const MAX_RETRIEVAL_CONTEXTS = 20;
@@ -76,5 +76,5 @@ export const AI_CUSTOMIZATIONS_LABELS: {
   temperature: 'Temperature',
   systemPrompt: 'System prompt',
   retrievalContexts: 'Retrieval',
-  modelCardInfo: 'Model description',
+  modelCardInfo: 'Model card information',
 };

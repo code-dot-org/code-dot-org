@@ -2,6 +2,7 @@ import {
   getUpdatedOptionsFromConfig,
   arrayToMap,
 } from '@cdo/apps/blockly/addons/cdoFieldDropdown';
+
 import {expect} from '../../../util/reconfiguredChai';
 
 describe('Testing function getUpdateOptionsFromConfig', () => {

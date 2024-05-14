@@ -3,24 +3,21 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Teaching Coding with AI
-
-#### This unit empowers students to become confident, ethical coders. Students learn how to leverage generative AI tools to help **explain code, tackle problems, and even generate code.** More than just coding, this unit emphasizes **ethical considerations and responsible use of AI**, preparing students for the ever-evolving tech landscape.
+# Computer Vision Overview
  
+#### The Computer Vision unit offers an in-depth exploration into the world of artificial intelligence, specifically focusing on how computers interpret visual data. This educational module is crafted for students to gain a robust understanding of both the technical aspects and the broader societal impacts of computer vision technologies.
+
+<img src="https://images.code.org/f7bb164255d3f3c98c726748db1325e9-image-1714587785647.png" alt="Image of AI bot and a model card" style="border-radius:10px; float: right; ; height: 200px; margin: 50px 50px 50px 20px; ">
+
+## In this unit, students will: 
 
 
-<img src="https://images.code.org/253b0e26c460cbe7c84792effee1a70e-image-1712672034629.png" alt="Image of AI bot and a model card" style="border-radius:10px; float: right; ; height: 175px; margin: 20px 50px 50px 0px; ">
+- #### Understand the fundamental concepts and technologies behind computer vision.
+- #### Engage in hands-on activities that involve data collection, model training, and prototype development.
+- #### Explore and discuss the ethical implications and responsibilities associated with deploying computer vision technologies.
+- #### Apply iterative design and user-centered approaches to solve real-world problems.
 
-
-## In this module, students will:
-
-- #### Understand the ethical implications of the learner-AI relationship
-- #### Utilize AI tooling strategies useful during the initial stages of the programming process
-- #### Plan algorithms with the assistance of AI tooling strategies
-- #### Debug code with the assistance of AI tooling strategies
-- #### Analyze and expand their finished programs with the assistance of AI tooling strategies.
-
-## Let's start learning! 
+##Let’s start learning
 
 ![]()
 MARKDOWN

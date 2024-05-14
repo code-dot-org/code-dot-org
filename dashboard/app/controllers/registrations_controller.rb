@@ -24,7 +24,13 @@ class RegistrationsController < Devise::RegistrationsController
     if PartialRegistration.in_progress?(session)
       user_params = params[:user] || ActionController::Parameters.new
       user_params[:user_type] ||= session[:default_sign_up_user_type]
-      @user = User.new_with_session(user_params.permit(:user_type), session)
+      if DCDO.get('student-email-post-enabled', false)
+        user_params[:email] ||= params[:email]
+
+        @user = User.new_with_session(user_params.permit(:user_type, :email), session)
+      else
+        @user = User.new_with_session(user_params.permit(:user_type), session)
+      end
     else
       save_default_sign_up_user_type
       SignUpTracking.begin_sign_up_tracking(session, split_test: true)
@@ -53,13 +59,14 @@ class RegistrationsController < Devise::RegistrationsController
     @user = User.new(begin_sign_up_params)
     @user.validate_for_finish_sign_up
     SignUpTracking.log_begin_sign_up(@user, session)
+    is_signup_post_enabled = DCDO.get('student-email-post-enabled', false)
 
     if @user.errors.blank?
       PartialRegistration.persist_attributes(session, @user)
-      redirect_to new_user_registration_path
-    else
-      render 'new' # Re-render form to display validation errors
+      redirect_to new_user_registration_path and return unless is_signup_post_enabled
     end
+
+    render 'new'
   end
 
   #
@@ -141,6 +148,16 @@ class RegistrationsController < Devise::RegistrationsController
           metadata: metadata,
         )
       end
+      has_school = current_user.school_info&.school_id.present?
+      event_metadata = {
+        'has_school' => has_school,
+      }
+      Metrics::Events.log_event(
+        user: current_user,
+        event_name: 'Sign Up Finished Backend',
+        metadata: event_metadata,
+        get_enabled_experiments: true,
+      )
     end
 
     SignUpTracking.log_sign_up_result resource, session

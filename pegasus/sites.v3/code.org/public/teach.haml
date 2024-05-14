@@ -21,6 +21,9 @@ theme: responsive_full_width
 
 = view :poetry_banner
 
+// TODO - Remove this once the Music Lab launch is over
+= view :"music/music_lab_skinny_banner"
+
 %section.why-teach-cs.bg-neutral-light
   .wrapper
     %h2.centered
@@ -154,7 +157,3 @@ theme: responsive_full_width
             =hoc_s(:call_to_action_download_posters)
 
 = view :analytics_event_log_helper, event_name: AnalyticsConstants::TEACH_PAGE_VISITED_EVENT
-
-%script{:src=>'/js/jquery.carouFredSel-6.2.1-packed.js'}
-%script{:src=>'/js/jquery.touchSwipe.min.js'}
-%script{:src=>'/js/page/educate_csd.js'}

@@ -6,7 +6,7 @@ import {ChordEventValue} from '../player/interfaces/ChordEvent';
 import MusicLibrary from '../player/MusicLibrary';
 import {getNoteName} from '../utils/Notes';
 import {generateGraphDataFromChord, ChordGraphNote} from '../utils/Chords';
-import {LoadFinishedCallback} from '../types';
+import MusicPlayer from '../player/MusicPlayer';
 const experiments = require('@cdo/apps/util/experiments');
 const color = require('@cdo/apps/util/color');
 
@@ -17,16 +17,13 @@ const FIELD_PADDING = 2;
 
 interface FieldChordOptions {
   getLibrary: () => MusicLibrary;
-  previewChord: (value: ChordEventValue) => void;
-  previewNote: (note: number, instrument: string, onStop?: () => void) => void;
-  cancelPreviews: () => void;
+  previewChord: MusicPlayer['previewChord'];
+  previewNote: MusicPlayer['previewNote'];
+  cancelPreviews: MusicPlayer['cancelPreviews'];
   currentValue: ChordEventValue;
-  setupSampler: (
-    instrument: string,
-    onLoadFinished?: LoadFinishedCallback
-  ) => void;
-  isInstrumentLoading: (instrument: string) => boolean;
-  isInstrumentLoaded: (instrument: string) => boolean;
+  setupSampler: MusicPlayer['setupSampler'];
+  isInstrumentLoading: MusicPlayer['isInstrumentLoading'];
+  isInstrumentLoaded: MusicPlayer['isInstrumentLoaded'];
   registerInstrumentLoadCallback: (
     callback: (instrumentName: string) => void
   ) => void;

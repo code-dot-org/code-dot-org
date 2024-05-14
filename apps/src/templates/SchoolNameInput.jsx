@@ -1,7 +1,9 @@
-import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
+import React, {useState} from 'react';
+
 import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
+import i18n from '@cdo/locale';
+
 import style from './school-association.module.scss';
 
 export default function SchoolNameInput({fieldNames}) {

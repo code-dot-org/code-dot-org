@@ -1,10 +1,14 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {tableLayoutStyles} from '../tables/tableConstants';
-import {updateProjectName} from './projectsRedux';
+
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {showFrozenProjectInfoDialog} from '@cdo/apps/templates/projects/frozenProjectInfoDialog/frozenProjectInfoDialogRedux';
+
+import {tableLayoutStyles} from '../tables/tableConstants';
+
+import {updateProjectName} from './projectsRedux';
+
 import moduleStyles from './personal-projects-name-cell.module.scss';
 
 class PersonalProjectsNameCell extends Component {

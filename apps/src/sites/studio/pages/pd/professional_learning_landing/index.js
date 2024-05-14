@@ -36,6 +36,7 @@ $(() => {
         userPermissions={landingPageData['user_permissions']}
         joinedStudentSections={landingPageData['joined_student_sections']}
         joinedPlSections={landingPageData['joined_pl_sections']}
+        coursesAsFacilitator={landingPageData['courses_as_facilitator']}
       />
     </Provider>,
     document.getElementById('pl-landing-page-container')

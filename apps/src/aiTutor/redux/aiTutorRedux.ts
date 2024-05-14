@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import {getChatCompletionMessage} from '@cdo/apps/aiTutor/chatApi';
 import {createSlice, PayloadAction, createAsyncThunk} from '@reduxjs/toolkit';
-import {systemPrompt as baseSystemPrompt} from '@cdo/apps/aiTutor/constants';
 import {savePromptAndResponse} from '../interactionsApi';
 import {
   Role,
@@ -20,7 +19,7 @@ export interface AITutorState {
   aiResponse: string | undefined;
   chatMessages: ChatCompletionMessage[];
   isWaitingForChatResponse: boolean;
-  chatMessageError: boolean;
+  isChatOpen: boolean;
 }
 
 export interface InstructionsState {
@@ -41,7 +40,7 @@ const initialState: AITutorState = {
   aiResponse: '',
   chatMessages: initialChatMessages,
   isWaitingForChatResponse: false,
-  chatMessageError: false,
+  isChatOpen: false,
 };
 
 const formatQuestionForAITutor = (chatContext: ChatContext) => {
@@ -70,14 +69,7 @@ export const askAITutor = createAsyncThunk(
       scriptId: aiTutorState.aiTutor.scriptId,
     };
 
-    let systemPrompt = baseSystemPrompt;
     const levelInstructions = instructionsState.instructions.longInstructions;
-
-    if (levelInstructions.length > 0) {
-      systemPrompt +=
-        '\n Here are the student instructions for this level: ' +
-        levelInstructions;
-    }
 
     const storedMessages = aiTutorState.aiTutor.chatMessages;
     const newMessage: ChatCompletionMessage = {
@@ -89,13 +81,12 @@ export const askAITutor = createAsyncThunk(
 
     const formattedQuestion = formatQuestionForAITutor(chatContext);
     const chatApiResponse = await getChatCompletionMessage(
-      systemPrompt,
       formattedQuestion,
       storedMessages,
       levelContext.levelId,
-      chatContext.actionType
+      chatContext.actionType,
+      levelInstructions
     );
-
     thunkAPI.dispatch(
       updateLastChatMessage({
         status: chatApiResponse.status,
@@ -105,7 +96,7 @@ export const askAITutor = createAsyncThunk(
     if (chatApiResponse.assistantResponse) {
       const assistantChatMessage: ChatCompletionMessage = {
         role: Role.ASSISTANT,
-        status: Status.OK,
+        status: chatApiResponse.status,
         chatMessageText: chatApiResponse.assistantResponse,
       };
       thunkAPI.dispatch(addChatMessage(assistantChatMessage));
@@ -159,6 +150,9 @@ const aiTutorSlice = createSlice({
         state.chatMessages[index] = _.merge({}, lastMessage, action.payload);
       }
     },
+    setIsChatOpen: (state, action: PayloadAction<boolean>) => {
+      state.isChatOpen = action.payload;
+    },
   },
   extraReducers: builder => {
     builder.addCase(askAITutor.fulfilled, state => {
@@ -183,4 +177,5 @@ export const {
   clearChatMessages,
   setIsWaitingForChatResponse,
   updateLastChatMessage,
+  setIsChatOpen,
 } = aiTutorSlice.actions;

@@ -1,9 +1,10 @@
-import React from 'react';
-import ReactTooltip from 'react-tooltip';
+import classNames from 'classnames';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
+import React from 'react';
+import ReactTooltip from 'react-tooltip';
+
 import moduleStyles from './project-template-workspace-icon.module.scss';
-import classNames from 'classnames';
 
 var msg = require('@cdo/locale');
 

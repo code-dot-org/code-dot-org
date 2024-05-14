@@ -42,6 +42,7 @@ const CODE_STUDIO_ENTRIES = {
   'musiclab/menu': './src/sites/studio/pages/musiclab/menu.js',
   'musiclab/gallery': './src/sites/studio/pages/musiclab/gallery.js',
   'musiclab/embed': './src/sites/studio/pages/musiclab/embed.js',
+  'policy_compliance/parental_permission/_modal': './src/sites/studio/pages/policy_compliance/parental_permission/_modal.js',
   'policy_compliance/child_account_consent': './src/sites/studio/pages/policy_compliance/child_account_consent.js',
   'print_certificates/batch': './src/sites/studio/pages/print_certificates/batch.js',
   'print_certificates/show': './src/sites/studio/pages/print_certificates/show.js',
@@ -195,8 +196,11 @@ const PEGASUS_ENTRIES = {
   'code.org/views/swiper_page_csd': './src/sites/code.org/pages/views/swiper_page_csd.js',
   'code.org/views/swiper_page_self_paced_pl': './src/sites/code.org/pages/views/swiper_page_self_paced_pl.js',
   'code.org/views/swiper_page_ai': './src/sites/code.org/pages/views/swiper_page_ai.js',
+  'code.org/views/swiper_page_applab': './src/sites/code.org/pages/views/swiper_page_applab.js',
   'code.org/views/swiper_page_videos': './src/sites/code.org/pages/views/swiper_page_videos.js',
   'code.org/views/swiper_page_minecraft': './src/sites/code.org/pages/views/swiper_page_minecraft.js',
+  'code.org/views/swiper_page_music_lab': './src/sites/code.org/pages/views/swiper_page_music_lab.js',
+  'code.org/views/swiper_page_promote': './src/sites/code.org/pages/views/swiper_page_promote.js',
   'code.org/public/poetry': './src/sites/code.org/pages/public/poetry.js',
 
   // hourofcode.com
@@ -204,6 +208,7 @@ const PEGASUS_ENTRIES = {
   'hourofcode.com/views/theme_common_head_after': './src/sites/hourofcode.com/pages/views/theme_common_head_after.js',
   'hourofcode.com/views/hoc_events_map': './src/sites/hourofcode.com/pages/views/hoc_events_map.js',
   'hourofcode.com/views/theme_google_analytics': './src/sites/hourofcode.com/pages/views/theme_google_analytics.js',
+  'hourofcode.com/views/swiper_page_ai': './src/sites/hourofcode.com/pages/views/swiper_page_ai.js',
 
   // shared between code.org and hourofcode.com
   'tutorialExplorer': './src/tutorialExplorer/tutorialExplorer.js',

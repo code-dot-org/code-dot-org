@@ -12,50 +12,44 @@ interface UserMessageProps {
   message: ChatCompletionMessage;
 }
 
-const INAPPROPRIATE_MESSAGE = 'This chat is inappropriate.';
-const TOO_PERSONAL_MESSAGE = 'This chat is too personal.';
-const ERROR_MESSAGE =
-  'There was an error getting a response. Please try again.';
+const PROFANITY_VIOLATION_USER_MESSAGE =
+  'This chat has been hidden because it is inappropriate.';
+const PII_VIOLATION_USER_MESSAGE =
+  'This chat has been hidden because it contains personal information.';
 
 const statusToStyleMap = {
   [Status.OK]: style.userMessage,
   [Status.UNKNOWN]: style.userMessage,
-  [Status.PROFANITY_VIOLATION]: style.inappropriateMessage,
-  [Status.PII_VIOLATION]: style.tooPersonalMessage,
-  [Status.ERROR]: style.errorMessage,
+  [Status.PROFANITY_VIOLATION]: style.profaneMessage,
+  [Status.PII_VIOLATION]: style.piiMessage,
+  [Status.ERROR]: style.userMessage,
 };
 
 const getMessageText = (status: string, chatMessageText: string) => {
   switch (status) {
     case Status.PROFANITY_VIOLATION:
-      return INAPPROPRIATE_MESSAGE;
+      return PROFANITY_VIOLATION_USER_MESSAGE;
     case Status.PII_VIOLATION:
-      return TOO_PERSONAL_MESSAGE;
+      return PII_VIOLATION_USER_MESSAGE;
     case Status.ERROR:
-      return ERROR_MESSAGE;
     default:
       return chatMessageText;
   }
 };
 
-const displayUserMessage = (status: string, chatMessageText: string) => {
+const UserMessage: React.FC<UserMessageProps> = ({
+  message: {status, chatMessageText},
+}) => {
   const className = statusToStyleMap[status];
   const messageText = getMessageText(status, chatMessageText);
 
-  if (className && messageText) {
-    return (
-      <div className={classNames(style.message, className)}>{messageText}</div>
-    );
-  }
-  return null;
-};
-
-const UserMessage: React.FC<UserMessageProps> = ({message}) => {
   return (
-    <div id={`chat-message`}>
-      <div className={style.userMessageContainer}>
-        {displayUserMessage(message.status, message.chatMessageText)}
-      </div>
+    <div className={style.userMessageContainer}>
+      {messageText && className ? (
+        <div className={classNames(style.message, className)}>
+          {messageText}
+        </div>
+      ) : null}
     </div>
   );
 };

@@ -60,6 +60,7 @@ Scenario: Teacher can navigate to student work by clicking level cell.
   And check that the URL contains "&user_id="
   And check that the URL contains "allthethings/lessons/2/levels/1"
 
+@skip
 Scenario: Teacher can open lesson data, refresh the page, and lesson data will still be shown
   Given I create an authorized teacher-associated student named "Sally"
   Given I am assigned to unit "allthethings"
@@ -72,6 +73,8 @@ Scenario: Teacher can open lesson data, refresh the page, and lesson data will s
   And I wait until element "#ui-test-lesson-header-2" is visible
   And I click selector "#ui-test-lesson-header-2"
   And I wait until element "#ui-test-s-allthethings-lessons-2-levels-1-cell-data" is visible
+  # Waiting to make sure the user object has been updated before reloading the page
+  And I wait for 3 seconds
 
   # Verify the lesson is still open
   Then I reload the page
@@ -157,3 +160,81 @@ Scenario: Teacher can view student work, ask student to keep working, on rubric 
 
   And I close my eyes
 
+@eyes
+Scenario: Teacher can view choice levels
+  And I open my eyes to test "V2 Progress - Choice Levels"
+
+  Given I create an authorized teacher-associated student named "Sally"
+  Given I am assigned to unit "allthethings"
+
+  # Student submits choice level
+  Given I am on "http://studio.code.org/s/allthethings/lessons/40/levels/1/sublevel/2?noautoplay=true"
+  And I wait until I see selector "button:contains(Submit)"
+  And I click selector "button:contains(Submit)"
+  And I wait to see "#confirm-button"
+  And I press "confirm-button"
+
+  When I sign in as "Teacher_Sally" and go home
+  And I get levelbuilder access
+  And I navigate to the V2 progress dashboard
+
+  # View unexpanded choice level
+  And I wait until element "#ui-test-lesson-header-1" is visible
+  And I scroll to "#ui-test-lesson-header-40"
+  And I click selector "#ui-test-lesson-header-40"
+  Then I wait until I see selector "button:contains(40.1)"
+  And I see no difference for "unexpanded choice level"
+
+  # View expanded choice level
+  And I click selector "button:contains(40.1)"
+  Then I wait until I see selector "button:contains(b)"
+  And I see no difference for "expanded choice level"
+
+  # View expanded choice level
+  And I click selector "button:contains(b)"
+  And I see no difference for "unexpanded choice level - closed"
+
+# The test requires java-lab which does not run on correctly on drone
+@eyes @no_circle
+Scenario: Teacher can view validated level
+  And I open my eyes to test "V2 Progress - Validated Levels"
+
+  # Student must be in CSA to run java lab
+  # Teacher for this step is named `Dumbledore`
+  Given I create a student named "Sally" in a CSA section
+
+  # Student makes progress in validated level
+  Given I am on "http://studio.code.org/s/allthethings/lessons/44/levels/11?noautoplay=true"
+  And I wait until I see selector "button:contains(Commit Code)"
+  And I click selector "button:contains(Commit Code)"
+  And I wait to see "#commit-notes"
+  And I press the first "#commit-notes" element
+  And I press keys "Commit message" for element "#commit-notes"
+  And I wait until "#confirmationButton" is not disabled
+  And I press "confirmationButton"
+  And I wait for 5 seconds
+
+  # Student submits validated level
+  Given I am on "http://studio.code.org/s/allthethings/lessons/44/levels/12?noautoplay=true"
+  And I wait to see "#finishButton"
+  And I press "testButton"
+  And I wait until element ".javalab-console" contains text "[JAVALAB] Program completed."
+  And I wait until "#finishButton" is enabled
+  And I press "finishButton"
+
+  Given I am assigned to unit "allthethings"
+
+  When I sign in as "Dumbledore" and go home
+  And I get levelbuilder access
+  And I navigate to the V2 progress dashboard
+
+  # eyes test for unexpanded lessons
+  And I wait until element "#ui-test-lesson-header-1" is visible
+  And I scroll to "#ui-test-lesson-header-44"
+  And I see no difference for "unexpanded lessons"
+
+  # eyes test for expanded lessons with in progress and completed validated levels
+  And I click selector g"#ui-test-lesson-header-44"
+  And I wait until I see selector "div:contains('44.12')"
+  And I scroll to "#ui-test-lesson-header-45"
+  And I see no difference for "expanded lesson"

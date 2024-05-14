@@ -1,12 +1,13 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
 import {
   NavigationBar,
   NavigationCategory,
   NavigationItem,
 } from '@cdo/apps/templates/NavigationBar';
-import {organizeReferenceGuides} from '@cdo/apps/util/referenceGuideHelpers';
 import ReferenceGuide from '@cdo/apps/templates/referenceGuides/ReferenceGuide';
+import {organizeReferenceGuides} from '@cdo/apps/util/referenceGuideHelpers';
 
 const referenceGuideShape = PropTypes.shape({
   key: PropTypes.string,

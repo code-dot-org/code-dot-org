@@ -1,12 +1,15 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
+
+import experiments from '@cdo/apps/util/experiments';
+import i18n from '@cdo/locale';
+
+import styleConstants from '../../styleConstants';
+import color from '../../util/color';
+
 import ProjectAppTypeArea from './ProjectAppTypeArea.jsx';
 import {publishedFeaturedProjectPropType, Galleries} from './projectConstants';
-import i18n from '@cdo/locale';
-import {connect} from 'react-redux';
-import color from '../../util/color';
-import styleConstants from '../../styleConstants';
-import experiments from '@cdo/apps/util/experiments';
 
 const NUM_PROJECTS_ON_PREVIEW = 16;
 const NUM_PROJECTS_IN_APP_VIEW = 16;

@@ -80,6 +80,7 @@ export interface ProjectFile {
   open?: boolean;
   active?: boolean;
   folderId: string;
+  hidden?: boolean;
 }
 
 export interface ProjectFolder {
@@ -135,6 +136,7 @@ export interface LevelProperties {
   isK1?: boolean;
   skin?: string;
   toolboxBlocks?: string;
+  source?: MultiFileSource;
   sharedBlocks?: BlockDefinition[];
   // We are moving level validations out of level data and into level properties.
   // Temporarily keeping them in both places to avoid breaking existing code.
@@ -251,3 +253,17 @@ export enum ProjectManagerStorageType {
   LOCAL = 'LOCAL',
   REMOTE = 'REMOTE',
 }
+
+export interface ExtraLinksData {
+  links: {[key: string]: {text: string; url: string; access_key?: string}[]};
+  can_clone: boolean;
+  can_delete: boolean;
+  level_name: string;
+  script_level_path_links: {
+    script: string;
+    path: string;
+  }[];
+}
+
+// Text-based labs that are currently supported by lab2.
+export const TEXT_BASED_LABS: AppName[] = ['aichat', 'pythonlab', 'weblab2'];

@@ -1,8 +1,9 @@
-import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 import Immutable from 'immutable';
-import color from '../util/color';
 import _ from 'lodash';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+
+import color from '../util/color';
 
 const MARGIN = 10;
 export const styles = {

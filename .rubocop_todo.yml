@@ -112,11 +112,6 @@ Naming/MethodParameterName:
 Naming/VariableNumber:
   Enabled: false
 
-# Offense count: 1
-# This cop supports unsafe autocorrection (--autocorrect-all).
-Rails/ApplicationMailer:
-  Enabled: false
-
 # Offense count: 469
 # This cop supports unsafe autocorrection (--autocorrect-all).
 # Configuration parameters: Whitelist, AllowedMethods, AllowedReceivers.
@@ -206,13 +201,6 @@ Style/ExpandPathArguments:
 Style/FetchEnvVar:
   Enabled: false
 
-# Offense count: 2
-# This cop supports unsafe autocorrection (--autocorrect-all).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: left_coerce, right_coerce, single_coerce, fdiv
-Style/FloatDivision:
-  Enabled: false
-
 # Offense count: 99
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: EnforcedStyle, MaxUnannotatedPlaceholdersAllowed, AllowedMethods, AllowedPatterns.
@@ -235,16 +223,6 @@ Style/GlobalVars:
 # Offense count: 4
 # Configuration parameters: MinBranchesCount.
 Style/HashLikeCase:
-  Enabled: false
-
-# Offense count: 2
-# This cop supports unsafe autocorrection (--autocorrect-all).
-Style/HashTransformKeys:
-  Enabled: false
-
-# Offense count: 12
-# This cop supports unsafe autocorrection (--autocorrect-all).
-Style/HashTransformValues:
   Enabled: false
 
 # Offense count: 1

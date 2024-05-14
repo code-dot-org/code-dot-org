@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-12 21:05:27 UTC",
+    "serialized_at": "2024-05-09 17:37:24 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -116,7 +116,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.6\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nThe [**Code.org U6L2 Topic Questions**](https://apclassroom.collegeboard.org/8/shared-quizzes/b442d6924cee4c9db4f152577e49568a) on AP Classroom can be assigned as a formative assessment for this lesson.\n\nAdditionally, the following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.6\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**How can I analyze parts of a `String` object?**\n\nIn this lesson, students revisit the `String` class and learn how to use the `substring()` method. They discover that `String` objects are immutable and are not modified when calling methods in the `String` class. Students also explore how the `substring()` method can be combined with other methods in the `String` class to find the location of a specific character or substring within a `String` and compare substrings for equality. They then practice using the `substring()` method to retrieve a substring of a `String` object and to find and replace specific characters.",
         "preparation": "* **(Optional)** Print copies of the U6L2 Guided Notes (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-6-2-substrings/37923) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I analyze parts of a `String` object?**\n\nIn this lesson, you revisit the `String` class and learn how to use the `substring()` method. You discover that `String` objects are immutable and are not modified when calling methods in the `String` class. You also explore how the `substring()` method can be combined with other methods in the `String` class to find the location of a specific character or substring within a `String` and compare substrings for equality. You then practice using the `substring()` method to retrieve a substring of a `String` object and to find and replace specific characters."
@@ -135,7 +135,7 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.8\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nThe [**Code.org U6L3 Topic Questions**](https://apclassroom.collegeboard.org/8/shared-quizzes/e85574e87c4b4c93a982895ddc77516e) on AP Classroom can be assigned as a formative assessment for this lesson.\n\nAdditionally, the following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.8\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**Why would I want to represent primitive values as objects?**\n\nIn this lesson, students explore the `Integer` and `Double` classes and learn how these are used to represent `int` and `double` values as objects. They realize that using these classes allows them to use methods to work with `int` and `double` values, such as to convert a `String` to an `int` or `double` value. Students also discover the minimum and maximum values for integers and how exceeding these limits causes overflow or underflow errors then practice using methods in the `Integer` and `Double` classes.",
         "preparation": "* **(Optional)** Print copies of the U6L3 Guided Notes (one for each student)\n* Preview the *Wrapper Classes - Part 1* and *Wrapper Classes - Part 2* videos\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-6-3-integer-and-double-objects/37924) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**Why would I want to represent primitive values as objects?**\n\nIn this lesson, you explore the `Integer` and `Double` classes and learn how these are used to represent `int` and `double` values as objects. You realize that using these classes allows you to use methods to work with `int` and `double` values, such as to convert a `String` to an `int` or `double` value. You also discover the minimum and maximum values for integers and how exceeding these limits causes overflow or underflow errors then practice using methods in the `Integer` and `Double` classes."
@@ -211,7 +211,7 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 7.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nThe [**Code.org U6L7 Topic Questions**](https://apclassroom.collegeboard.org/8/shared-quizzes/3efd098109354cde8c43db3e541d9054) on AP Classroom can be assigned as a formative assessment for this lesson.\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 7.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**Why would I use generic types?**\n\nStudents have previously learned that an `ArrayList` can only store objects, such as `Integer` or `String`. In this lesson, they learn about generic types. Students realize that using the angle brackets when creating an `ArrayList` ensures that an `ArrayList` stores a specific type of object, while leaving out the angle brackets may result in multiple types of objects getting stored in the `ArrayList`. They then practice creating and using an `ArrayList` of objects and implementing algorithms to find information and perform calculations.",
         "preparation": "* **(Optional)** Print copies of the U6L7 Guided Notes (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-6-7-lists-of-objects/37928) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**Why would I use generic types?**\n\nYou have previously learned that an `ArrayList` can only store objects, such as `Integer` or `String`. In this lesson, you learn about generic types. You realize that using the angle brackets when creating an `ArrayList` ensures that an `ArrayList` stores a specific type of object, while leaving out the angle brackets may result in multiple types of objects getting stored in the `ArrayList`. You then practice creating and using an `ArrayList` of objects and implementing algorithms to find information and perform calculations."
@@ -249,7 +249,7 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nThe [**Code.org U6L9 Topic Questions**](https://apclassroom.collegeboard.org/8/shared-quizzes/c2e18f16b62443f0a7c7a609c99b6906) on AP Classroom can be assigned as a formative assessment for this lesson.",
         "overview": "**How can I use what I know about object-oriented programming and `ArrayList`s to plan and implement algorithms?**\n\nStudents use the knowledge and skills they have developed in this unit to implement algorithms to search or modify elements in an `ArrayList`. They explore basic natural language processing techniques, then work with a partner to plan and implement algorithms to work with `String` and `ArrayList` objects. Students participate in a code review to obtain feedback and iterate on the development of their programs.",
         "preparation": "* **(Optional)** Print copies of the U6L9 Guided Notes (one for each student)\n* Print copies of the Writing Algorithms with ArrayLists handout (one for each pair of students)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-6-9-arraylist-and-string-algorithms/37930) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I use what I know about object-oriented programming and `ArrayList`s to plan and implement algorithms?**\n\nYou use the knowledge and skills you have developed in this unit to implement algorithms to search or modify elements in an `ArrayList`. You explore basic natural language processing techniques, then work with a partner to plan and implement algorithms to work with `String` and `ArrayList` objects. You participate in a code review to obtain feedback and iterate on the development of your programs."
@@ -4239,6 +4239,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L1-L1_2024"
+        ],
         "progression": "Natural Language Processing Projects"
       },
       "bonus": false,
@@ -4261,6 +4264,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L1-L2_2024"
+        ],
         "progression": "Practice: Javadocs Comments"
       },
       "bonus": false,
@@ -4283,6 +4289,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L1-L3_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4305,6 +4314,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L1_2024"
+        ],
         "progression": "Predict and Run: The substring() Method"
       },
       "bonus": false,
@@ -4327,6 +4339,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L2_2024"
+        ],
         "progression": "Investigate and Modify: The substring() Method"
       },
       "bonus": false,
@@ -4349,6 +4364,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L3_2024"
+        ],
         "progression": "Investigate and Modify: The substring() Method"
       },
       "bonus": false,
@@ -4371,6 +4389,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L4_2024"
+        ],
         "progression": "Investigate and Modify: The substring() Method"
       },
       "bonus": false,
@@ -4393,6 +4414,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L5_2024"
+        ],
         "progression": "Practice: The substring() Method"
       },
       "bonus": false,
@@ -4415,6 +4439,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L6_2024"
+        ],
         "progression": "Practice: The substring() Method"
       },
       "bonus": false,
@@ -4437,6 +4464,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L7_2024"
+        ],
         "progression": "Practice: The substring() Method"
       },
       "bonus": false,
@@ -4459,6 +4489,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L8_2024"
+        ],
         "progression": "Practice: The substring() Method"
       },
       "bonus": false,
@@ -4481,6 +4514,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L9_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4503,6 +4539,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L1_2024"
+        ],
         "progression": "Predict and Run: Wrapper Classes"
       },
       "bonus": false,
@@ -4525,6 +4564,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L2_2024"
+        ],
         "progression": "Investigate and Modify: Wrapper Classes"
       },
       "bonus": false,
@@ -4547,6 +4589,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L3_2024"
+        ],
         "progression": "Investigate and Modify: Wrapper Classes"
       },
       "bonus": false,
@@ -4569,6 +4614,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L4_2024"
+        ],
         "progression": "Investigate and Modify: Wrapper Classes"
       },
       "bonus": false,
@@ -4591,6 +4639,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L5_2024"
+        ],
         "progression": "Practice: Wrapper Classes"
       },
       "bonus": false,
@@ -4613,6 +4664,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L6_2024"
+        ],
         "progression": "Practice: Wrapper Classes"
       },
       "bonus": false,
@@ -4635,6 +4689,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L7_2024"
+        ],
         "progression": "Practice: Wrapper Classes"
       },
       "bonus": false,
@@ -4657,6 +4714,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L8_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4679,6 +4739,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L1_2024"
+        ],
         "progression": "Predict and Run: The ArrayList Class"
       },
       "bonus": false,
@@ -4701,6 +4764,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L2_2024"
+        ],
         "progression": "Investigate and Modify: The ArrayList Class"
       },
       "bonus": false,
@@ -4723,6 +4789,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L3_2024"
+        ],
         "progression": "Investigate and Modify: The ArrayList Class"
       },
       "bonus": false,
@@ -4745,6 +4814,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L4_2024"
+        ],
         "progression": "Investigate and Modify: The ArrayList Class"
       },
       "bonus": false,
@@ -4767,6 +4839,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L5_2024"
+        ],
         "progression": "Practice: Creating ArrayLists"
       },
       "bonus": false,
@@ -4789,6 +4864,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L6_2024"
+        ],
         "progression": "Practice: Creating ArrayLists"
       },
       "bonus": false,
@@ -4811,6 +4889,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L7_2024"
+        ],
         "progression": "Practice: Creating ArrayLists"
       },
       "bonus": false,
@@ -4833,6 +4914,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L8_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4855,6 +4939,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L5-L1_2024"
+        ],
         "progression": "Predict and Run: Manipulating Elements"
       },
       "bonus": false,
@@ -4877,6 +4964,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L5-L2_2024"
+        ],
         "progression": "Investigate and Modify: Manipulating Elements"
       },
       "bonus": false,
@@ -4899,6 +4989,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L5-L3_2024"
+        ],
         "progression": "Investigate and Modify: Manipulating Elements"
       },
       "bonus": false,
@@ -4921,6 +5014,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L5-L4_2024"
+        ],
         "progression": "Investigate and Modify: Manipulating Elements"
       },
       "bonus": false,
@@ -4943,6 +5039,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L5-L5_2024"
+        ],
         "progression": "Practice: Manipulating Elements"
       },
       "bonus": false,
@@ -4965,6 +5064,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L5-L6_2024"
+        ],
         "progression": "Practice: Manipulating Elements"
       },
       "bonus": false,
@@ -4987,6 +5089,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L5-L7_2024"
+        ],
         "progression": "Practice: Manipulating Elements"
       },
       "bonus": false,
@@ -5009,6 +5114,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L5-L8_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5031,6 +5139,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L1_2024"
+        ],
         "progression": "Predict and Run: The compareTo() Method"
       },
       "bonus": false,
@@ -5053,6 +5164,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L2_2024"
+        ],
         "progression": "Investigate and Modify: The compareTo() Method"
       },
       "bonus": false,
@@ -5075,6 +5189,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L3_2024"
+        ],
         "progression": "Investigate and Modify: The compareTo() Method"
       },
       "bonus": false,
@@ -5097,6 +5214,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L4_2024"
+        ],
         "progression": "Investigate and Modify: The compareTo() Method"
       },
       "bonus": false,
@@ -5119,6 +5239,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L5_2024"
+        ],
         "progression": "Practice: Comparing Strings"
       },
       "bonus": false,
@@ -5141,6 +5264,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L6_2024"
+        ],
         "progression": "Practice: Comparing Strings"
       },
       "bonus": false,
@@ -5163,6 +5289,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L7_2024"
+        ],
         "progression": "Practice: Comparing Strings"
       },
       "bonus": false,
@@ -5185,6 +5314,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L8_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5207,6 +5339,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L1_2024"
+        ],
         "progression": "Predict and Run: Lists of Objects"
       },
       "bonus": false,
@@ -5229,6 +5364,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L2_2024"
+        ],
         "progression": "Investigate and Modify: Lists of Objects"
       },
       "bonus": false,
@@ -5251,6 +5389,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L3_2024"
+        ],
         "progression": "Investigate and Modify: Lists of Objects"
       },
       "bonus": false,
@@ -5273,6 +5414,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L4_2024"
+        ],
         "progression": "Investigate and Modify: Lists of Objects"
       },
       "bonus": false,
@@ -5295,6 +5439,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L5_2024"
+        ],
         "progression": "Practice: Lists of Objects"
       },
       "bonus": false,
@@ -5317,6 +5464,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L6_2024"
+        ],
         "progression": "Practice: Lists of Objects"
       },
       "bonus": false,
@@ -5339,6 +5489,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L7_2024"
+        ],
         "progression": "Practice: Lists of Objects"
       },
       "bonus": false,
@@ -5361,6 +5514,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L8_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5383,6 +5539,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L1_2024"
+        ],
         "progression": "Predict and Run: Removing Elements"
       },
       "bonus": false,
@@ -5405,6 +5564,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L2_2024"
+        ],
         "progression": "Investigate and Modify: Removing Elements"
       },
       "bonus": false,
@@ -5427,6 +5589,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L3_2024"
+        ],
         "progression": "Investigate and Modify: Removing Elements"
       },
       "bonus": false,
@@ -5449,6 +5614,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L4_2024"
+        ],
         "progression": "Investigate and Modify: Removing Elements"
       },
       "bonus": false,
@@ -5471,6 +5639,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L5_2024"
+        ],
         "progression": "Practice: Removing Elements"
       },
       "bonus": false,
@@ -5493,6 +5664,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L6_2024"
+        ],
         "progression": "Practice: Removing Elements"
       },
       "bonus": false,
@@ -5515,6 +5689,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L7_2024"
+        ],
         "progression": "Practice: Removing Elements"
       },
       "bonus": false,
@@ -5537,6 +5714,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L8_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5559,6 +5739,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L9-L1_2024"
+        ],
         "progression": "Predict and Run: NLP Techniques"
       },
       "bonus": false,
@@ -5581,6 +5764,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L9-L2_2024"
+        ],
         "progression": "Investigate and Modify: NLP Techniques"
       },
       "bonus": false,
@@ -5603,6 +5789,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L9-L3_2024"
+        ],
         "progression": "Investigate and Modify: NLP Techniques"
       },
       "bonus": false,
@@ -5625,6 +5814,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L9-L4_2024"
+        ],
         "progression": "Investigate and Modify: NLP Techniques"
       },
       "bonus": false,
@@ -5647,6 +5839,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L9-L5_2024"
+        ],
         "progression": "Practice: NLP Techniques"
       },
       "bonus": false,
@@ -5669,6 +5864,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L9-L6_2024"
+        ],
         "progression": "Practice: NLP Techniques"
       },
       "bonus": false,
@@ -5691,6 +5889,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L9-L7_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5713,6 +5914,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6 Natural Language Processing Project_2024"
+        ],
         "progression": "Natural Language Processing Project"
       },
       "bonus": false,
@@ -5735,6 +5939,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 6 Assessment_2024"
+        ],
         "progression": "Unit 6 Assessment"
       },
       "bonus": false,
@@ -5757,6 +5964,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa6_2024"
+        ],
         "progression": "Unit 6 Survey"
       },
       "bonus": false,
@@ -5779,6 +5989,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6 Natural Language Processing Project 1-Day_2024"
+        ],
         "progression": "Natural Language Processing Project"
       },
       "bonus": false,
@@ -5801,6 +6014,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Console Sandbox_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5822,6 +6038,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood Sandbox_2024"
+        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -5844,6 +6063,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox_2024"
+        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,
@@ -5866,6 +6088,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Theater Sandbox_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -7096,7 +7321,7 @@
     },
     {
       "name": "ArrayList and String Algorithms",
-      "url": "https://docs.google.com/presentation/d/1A1Mjzf7PcKH7h6ozio6iWEJhudVyM0ti4pZAMdtcf98/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1o8kvysOzHXv7XqcSPSKguZqE3utMp6fR3RMnGH_shwA/edit?usp=drive_link",
       "key": "arraylist_and_string_algorithms",
       "properties": {
         "audience": "Verified Teacher",
@@ -7108,7 +7333,7 @@
     },
     {
       "name": "ArrayLists",
-      "url": "https://docs.google.com/presentation/d/1Cs21p-_TzK6HAmI5Q09lzqSmZ3FhWLoiW1kyL64V0Cw/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1uBwp13VHJhdKFqIieM25jgk4TzbtmzXXj2YBYqtsvQA/edit?usp=drive_link",
       "key": "arraylists",
       "properties": {
         "audience": "Verified Teacher",
@@ -7120,7 +7345,7 @@
     },
     {
       "name": "Comparing Strings",
-      "url": "https://docs.google.com/presentation/d/1NnTlc0LpcvHEZah0_0a3lXbn8SIO5jV82zUmKIg27To/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1gLgMP77vnjF_Nk8BNkPKbKggaqhb88EBMbOlr7Y_hRI/edit?usp=drive_link",
       "key": "comparing_strings",
       "properties": {
         "audience": "Verified Teacher",
@@ -7157,11 +7382,9 @@
     },
     {
       "name": "CSA Unit 6 Slides",
-      "url": "https://docs.google.com/presentation/d/1eLWoMSaZ53xEjZo2iLPzxCPNhpveNFNifkOCiqycAYw/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1pBW51zFU3QWv6Gha-QH1h0MFwW-WlbRYlpHY1rQ5Xvo/edit?usp=drive_link",
       "key": "csa_unit_6_slides",
       "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csa_unit_6_slides"
@@ -7217,7 +7440,7 @@
     },
     {
       "name": "Integer and Double Objects",
-      "url": "https://docs.google.com/presentation/d/1Bjy5TBNgjgaVy61kKdoZywf93pqJ-atsTy56NM19Tu8/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1T79gn8z301r5d0kss2C8r5ju4w2Vd3NGUqBNhPkF_WI/edit?usp=drive_link",
       "key": "integer_and_double_objects",
       "properties": {
         "audience": "Verified Teacher",
@@ -7242,7 +7465,7 @@
     },
     {
       "name": "Lists of Objects",
-      "url": "https://docs.google.com/presentation/d/1GyDjMBiUCEz7JfNTC3FXako6Gx-DoXkX2NYlzeM2-H0/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/14DwunwW__lLpVTfO7bRZpYoEzezxMD46Ys_KWO-1OZY/edit?usp=drive_link",
       "key": "lists_of_objects",
       "properties": {
         "audience": "Verified Teacher",
@@ -7254,7 +7477,7 @@
     },
     {
       "name": "Manipulating Elements",
-      "url": "https://docs.google.com/presentation/d/1HIsfpwh-gRQEv87c-iH5gRP_wrFHzpO_ZvmRWjCrDC0/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1m4QbRznOsdXTmSqw5JPXrFjU964GxlpL3auqLX166lA/edit?usp=drive_link",
       "key": "manipulating_elements",
       "properties": {
         "audience": "Verified Teacher",
@@ -7266,7 +7489,7 @@
     },
     {
       "name": "Natural Language Processing Project",
-      "url": "https://docs.google.com/presentation/d/1O4FNZ2Wso6C-l4iBY5mb6hbKQWo5i_wF-TKmNV7BH1s/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1sIxDO8wGt8dnWoTNp06PXj-VnFn0cd8RWkBZKCCnB6Q/edit?usp=drive_link",
       "key": "natural_language_processing_project",
       "properties": {
         "audience": "Verified Teacher",
@@ -7278,7 +7501,7 @@
     },
     {
       "name": "Natural Language Processing Project",
-      "url": "https://docs.google.com/presentation/d/1g8ep7wnB32yVojiqnL5XYVaEH9T9KJmyShw0wWHaxiQ/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1NFesN5R6nA-wUUKTSy-E0XEHxbImpyMJOfydFMz-V5Q/edit?usp=drive_link",
       "key": "natural_language_processing_project_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -7329,7 +7552,7 @@
     },
     {
       "name": "Project Planning",
-      "url": "https://docs.google.com/presentation/d/1JZ8Bot9v4-CDk2dC3JK7JGIWAc5y0xUSQuwzlIqVDww/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/19M6hOEqNgbdoY8zidX5mzAWIwkHuGlOrmgeBqOAa92c/edit?usp=drive_link",
       "key": "project_planning",
       "properties": {
         "audience": "Verified Teacher",
@@ -7353,7 +7576,7 @@
     },
     {
       "name": "Removing Elements",
-      "url": "https://docs.google.com/presentation/d/18wmKqf7gCHShCTZDnqrz2PF2UqbL-SDG5LEEPivoXJI/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1AUiOXY9MxK-7HTy06SvKDYD-3yW7cQm3NCTswWaXeSI/edit?usp=drive_link",
       "key": "removing_elements",
       "properties": {
         "audience": "Verified Teacher",
@@ -7377,7 +7600,7 @@
     },
     {
       "name": "Substrings",
-      "url": "https://docs.google.com/presentation/d/1IPi8lcAecPmMUhj4Y8BjySTZl9FFah7wv-jDb5rx7MM/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1SBJgmT_ffImV7YNUzh6mmGWaOL_7OkpobSfp2P7a2GI/edit?usp=drive_link",
       "key": "substrings",
       "properties": {
         "audience": "Verified Teacher",
@@ -7389,7 +7612,7 @@
     },
     {
       "name": "TemperatureAction FRQ",
-      "url": "https://docs.google.com/presentation/d/1smbNTKOhCB_Wid8HPkkxHAtRszAfby_P0S3bv04v9wk/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1lnyah1-NrSiUmSceEDTCK2KaBdqINkJu4JcY8Ocna9U/edit?usp=drive_link",
       "key": "temperatureaction_frq",
       "properties": {
         "audience": "Verified Teacher",
@@ -7673,7 +7896,7 @@
     },
     {
       "name": "Unit 6 Assessment",
-      "url": "https://docs.google.com/presentation/d/1gXwHhjjCEruePrOefcFRc2DDBPrID4rbPV8YwR7Utls/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1YuzDZ-yZfsuzC1gyq5R9RdhtkPVP1RS26Y8tW9glVrs/edit?usp=drive_link",
       "key": "unit_6_assessment",
       "properties": {
         "audience": "Verified Teacher",

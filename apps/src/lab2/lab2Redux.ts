@@ -32,6 +32,8 @@ import {
   ValidationState,
 } from './progress/ProgressManager';
 import {LevelPropertiesValidator} from './responseValidators';
+import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import {START_SOURCES} from './constants';
 
 interface PageError {
   errorMessage: string;
@@ -87,6 +89,7 @@ export const setUpWithLevel = createAsyncThunk(
       scriptId?: number;
       levelPropertiesPath: string;
       channelId?: string;
+      userId?: string;
     },
     thunkAPI
   ) => {
@@ -123,6 +126,17 @@ export const setUpWithLevel = createAsyncThunk(
         return;
       }
 
+      // Start mode doesn't use channel ids so we can skip creating
+      // a project manager and just set the level data.
+      const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+      if (isStartMode) {
+        setProjectAndLevelData(
+          {levelProperties},
+          thunkAPI.signal.aborted,
+          thunkAPI.dispatch
+        );
+        return;
+      }
       // Create a new project manager. If we have a channel id,
       // default to loading the project for that channel. Otherwise
       // create a project manager for the given level and script id.
@@ -135,11 +149,25 @@ export const setUpWithLevel = createAsyncThunk(
           : await ProjectManagerFactory.getProjectManagerForLevel(
               ProjectManagerStorageType.REMOTE,
               payload.levelId,
+              payload.userId,
               payload.scriptId
             );
+
       // Only set the project manager and initiate load
       // if this request hasn't been cancelled.
       if (thunkAPI.signal.aborted) {
+        return;
+      }
+
+      // We might be a teacher attempting to view a student level that hasn't been
+      // started, and there is no project manager available.
+      if (!projectManager) {
+        // If the level hasn't been started, we can skip loading projects data.
+        setProjectAndLevelData(
+          {levelProperties},
+          thunkAPI.signal.aborted,
+          thunkAPI.dispatch
+        );
         return;
       }
 

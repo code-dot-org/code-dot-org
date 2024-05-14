@@ -1,5 +1,6 @@
-import {CdoFieldImageDropdown} from './cdoFieldImageDropdown';
 import {MenuOption} from 'blockly';
+
+import {CdoFieldImageDropdown} from './cdoFieldImageDropdown';
 
 interface ButtonConfig {
   text: string;
