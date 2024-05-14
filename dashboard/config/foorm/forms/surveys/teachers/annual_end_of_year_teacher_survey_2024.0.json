@@ -823,7 +823,7 @@
         {
           "type": "rating",
           "name": "teach_cs_cdo_easy",
-          "title": "How easy is it to teach computer science using code.org?",
+          "title": "How easy is it to teach computer science using Code.org?",
           "rateCount": 7,
           "rateMax": 7,
           "minRateDescription": "Very Hard",
@@ -859,7 +859,7 @@
         {
           "type": "rating",
           "name": "cdo_students_interest",
-          "title": "Are the topics in Code.org's activities related to their interests?",
+          "title": "Are the topics in Code.org's activities related to your students' interests?",
           "rateCount": 7,
           "rateMax": 7,
           "minRateDescription": "Unrelated to Students' Interests",
@@ -973,7 +973,7 @@
             },
             {
               "value": "features_teacher_resources",
-              "text": "I can use code.org's curriculum resources (lesson plans, slides, examples, guides and forums) to prepare my lessons"
+              "text": "I can use Code.org's curriculum resources (lesson plans, slides, examples, guides and forums) to prepare my lessons"
             },
             {
               "value": "features_students_experience",
@@ -1026,7 +1026,7 @@
             },
             {
               "value": "features_teacher_resources",
-              "text": "I can use code.org's curriculum resources (lesson plans, slides, examples, guides and forums) to prepare my lessons",
+              "text": "I can use Code.org's curriculum resources (lesson plans, slides, examples, guides and forums) to prepare my lessons",
               "visibleIf": "{features_main_choice} <> 'features_teacher_resources'"
             },
             {
@@ -1170,7 +1170,8 @@
           "type": "rating",
           "name": "9_12_cs_foundations_likelihood",
           "visibleIf": "{grade} anyof [ 9, 10, 11, 12, '12up']",
-          "title": "If Code.org were to offer a semester-long, introductory course about foundations of computer science, for students in grades 9-12, how likely would you be to teach it?  This course would be aligned to State and CSTA standards and would not be an AP course.",
+          "title": "If Code.org were to offer a semester-long, introductory course about foundations of computer science, for students in grades 9-12, how likely would you be to teach it?",
+          "description": "This course would be aligned to State and CSTA standards and would not be an AP course.",
           "rateCount": 7,
           "rateMax": 7,
           "minRateDescription": "Not Likely",
@@ -1236,8 +1237,8 @@
           "type": "checkbox",
           "name": "k_5_cross_curricular_content",
           "visibleIf": "{grade} anyof ['k', 1, 2, 3, 4, 5]",
-          "title": "Would you (or your colleagues) be interested in teaching short units (three to five lessons long) that incorporate computer science concepts while teaching core subject standards of the following areas?",
-          "description": "(Please select all that you (or your colleagues) would be likely to teach)",
+          "title": "Would you be interested in teaching short units (three to five lessons long) that incorporate computer science concepts while teaching core subject standards of the following areas?",
+          "description": "(You may answer this question thinking about your interest or that of your colleagues teaching other content-areas. Please select all that apply)",
           "choices": [
             {
               "value": "math",
@@ -1287,15 +1288,15 @@
           "columns": [
             {
               "value": "1",
-              "text": "Not interested at all"
+              "text": "Not Interested at All"
             },
             {
               "value": "2",
-              "text": "Not interested"
+              "text": "Not Interested"
             },
             {
               "value": "3",
-              "text": "Slightly uninterested"
+              "text": "Slightly Uninterested"
             },
             {
               "value": "4",
@@ -1303,7 +1304,7 @@
             },
             {
               "value": "5",
-              "text": "Somewhat interested"
+              "text": "Somewhat Interested"
             },
             {
               "value": "6",
@@ -1311,7 +1312,7 @@
             },
             {
               "value": "7",
-              "text": "very interested"
+              "text": "Very Interested"
             }
           ],
           "rows": [
@@ -1332,7 +1333,8 @@
         {
           "type": "text",
           "name": "customized_teaching_other",
-          "title": "If there are any other ways in which you would want to customize the Code.org content you teach, please describe them."
+          "title": "If there are any other ways in which you would want to customize the Code.org content you teach, please describe them.",
+          "description": "(Optional)"
         }
       ]
     },
@@ -1364,10 +1366,6 @@
           "title": "Have you taught AI content in a K-12 classroom?",
           "choices": [
             {
-              "value": "no",
-              "text": "No"
-            },
-            {
               "value": "yes_cdo",
               "text": "Yes, using mostly Code.org content"
             },
@@ -1378,6 +1376,10 @@
             {
               "value": "yes_own_content",
               "text": "Yes, using mostly content I developed myself"
+            },
+            {
+              "value": "no",
+              "text": "No"
             }
           ]
         },
@@ -1466,7 +1468,8 @@
         {
           "type": "comment",
           "name": "ai_teaching_comments",
-          "title": "Is there anything you would like us to know as we think about future AI content development?"
+          "title": "Is there anything you would like us to know as we think about future AI content development?",
+          "description": "(Optional)"
         }
       ]
     },
