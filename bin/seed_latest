@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require_relative '../deployment'
+require 'cdo/rake_utils'
+
+RakeUtils.git_pull
+RakeUtils.rake 'seed:default'
