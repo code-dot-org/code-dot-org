@@ -42,7 +42,10 @@ function getImportableScreen(dom) {
     if (!elementUtils.isIdAvailable(child.id)) {
       var existingElement = elementUtils.getPrefixedElementById(child.id);
       if (existingElement) {
-        const existingElementScreen = $(existingElement).parents('.screen')[0];
+        let existingElementScreen = $(existingElement).parents('.screen')[0];
+        if ($(existingElement).hasClass('screen')) {
+          existingElementScreen = existingElement;
+        }
         if (elementUtils.getId(existingElementScreen) !== id) {
           conflictingIds.push(child.id);
         }
