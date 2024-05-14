@@ -38,7 +38,6 @@ const CODE_STUDIO_ENTRIES = {
   'incubator/index': './src/sites/studio/pages/incubator/index.js',
   'lessons/show': './src/sites/studio/pages/lessons/show.js',
   'lessons/student_lesson_plan': './src/sites/studio/pages/lessons/student_lesson_plan.js',
-  'musiclab/index': './src/sites/studio/pages/musiclab/index.js',
   'musiclab/menu': './src/sites/studio/pages/musiclab/menu.js',
   'musiclab/gallery': './src/sites/studio/pages/musiclab/gallery.js',
   'musiclab/embed': './src/sites/studio/pages/musiclab/embed.js',

@@ -1,5 +1,5 @@
 import React from 'react';
-const baseUrl = window.location.origin + '/projectbeats';
+const baseUrl = '';
 
 const optionsList = [
   {
