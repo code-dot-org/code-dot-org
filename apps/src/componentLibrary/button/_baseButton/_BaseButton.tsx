@@ -1,7 +1,8 @@
 import classNames from 'classnames';
-import React, {memo, useMemo} from 'react';
+import React, {memo, useMemo, AriaAttributes} from 'react';
 
 import {ButtonType, ButtonColor} from '@cdo/apps/componentLibrary/button';
+import {getAriaPropsFromProps} from '@cdo/apps/componentLibrary/common/helpers';
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
@@ -27,7 +28,8 @@ export interface IconOnlyButtonSpecificProps {
 
 export interface CoreButtonProps
   extends TextButtonSpecificProps,
-    IconOnlyButtonSpecificProps {
+    IconOnlyButtonSpecificProps,
+    AriaAttributes {
   /** Button Component type */
   type?: ButtonType;
   /** Custom class name */
@@ -93,7 +95,6 @@ export interface _BaseButtonProps
     ButtonSpecificProps {}
 
 const checkButtonPropsForErrors = ({
-  type,
   icon,
   useAsLink,
   onClick,
@@ -190,9 +191,11 @@ const BaseButton: React.FunctionComponent<_BaseButtonProps> = ({
   onClick,
   value,
   name,
+  ...rest
 }) => {
   const ButtonTag = useAsLink ? 'a' : 'button';
 
+  const ariaProps = getAriaPropsFromProps(rest);
   const tagSpecificProps =
     ButtonTag === 'a'
       ? {
@@ -254,8 +257,9 @@ const BaseButton: React.FunctionComponent<_BaseButtonProps> = ({
       )}
       id={id}
       disabled={disabled}
-      aria-disabled={disabled}
-      aria-label={ariaLabel}
+      {...ariaProps}
+      aria-disabled={disabled || ariaProps['aria-disabled']}
+      aria-label={ariaLabel || ariaProps['aria-label']}
       {...tagSpecificProps}
     >
       {isPending && spinnerPosition === 'left' && (
