@@ -224,7 +224,9 @@ class DatablockStorageController < ApplicationController
     raise "record must be a hash" unless record_json.is_a? Hash
 
     table = table_or_create
-    table.create_records [record_json]
+    Retryable.retryable(tries: 1, on: [ActiveRecord::RecordNotUnique]) do
+      table.create_records [record_json]
+    end
     table.save!
 
     render json: record_json
