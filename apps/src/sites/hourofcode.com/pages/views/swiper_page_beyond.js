@@ -34,6 +34,10 @@ const actionBlocksParams = {
         position: relative;
         margin-top: 2rem;
       }
+
+      .swiper-pagination-bullet {
+        margin-block: 0.5rem !important;
+      }
     `,
   ],
 };
