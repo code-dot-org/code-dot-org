@@ -41,6 +41,8 @@ class DatablockStorageTable < ApplicationRecord
 
   after_initialize -> {self.columns ||= ['id']}, if: :new_record?
 
+  validate :validate_max_table_count, on: :create
+
   # These are errors that should show up in the Applab Debug Console
   # see description in datablock_storage_controller.rb.
   class StudentFacingError < StandardError
@@ -58,12 +60,7 @@ class DatablockStorageTable < ApplicationRecord
   # the special project_id to indicate it's a shared table.
   SHARED_TABLE_PROJECT_ID = 0
 
-  # TODO: #57003, implement enforcement of MAX_TABLE_COUNT, we already have
-  # a test for it but we're skipping it until this is implemented.
   MAX_TABLE_COUNT = 10
-
-  # TODO: #57002, enforce MAX_TABLE_ROW_COUNT, we already have a test for it
-  # but we're skipping it until this is implemented.
   MAX_TABLE_ROW_COUNT = 20000
 
   def self.get_table_names(project_id)
@@ -158,6 +155,10 @@ class DatablockStorageTable < ApplicationRecord
 
   def create_records(record_jsons)
     if_shared_table_copy_on_write
+
+    if records.count + record_jsons.count > MAX_TABLE_ROW_COUNT
+      raise StudentFacingError.new(:MAX_ROWS_EXCEEDED), "Cannot add more than #{MAX_TABLE_ROW_COUNT} rows to a table"
+    end
 
     DatablockStorageRecord.transaction do
       # Because we're using a composite primary key for records: (project_id, table_name, record_id)
@@ -329,6 +330,12 @@ class DatablockStorageTable < ApplicationRecord
       else
         raise StudentFacingError.new(:CANNOT_CONVERT_COLUMN_TYPE), "Couldn't convert #{value.inspect} to boolean"
       end
+    end
+  end
+
+  private def validate_max_table_count
+    if DatablockStorageTable.where(project_id: project_id).count >= MAX_TABLE_COUNT
+      raise StudentFacingError.new(:MAX_TABLES_EXCEEDED), "Cannot create more than #{MAX_TABLE_COUNT} tables"
     end
   end
 end
