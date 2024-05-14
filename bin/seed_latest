@@ -4,6 +4,6 @@ require_relative '../deployment'
 require 'cdo/rake_utils'
 
 RakeUtils.git_pull
-Dir.chdir("#{RakeUils.git_root_directory}/dashboard") do
+Dir.chdir("#{RakeUtils.git_root_directory}/dashboard") do
   RakeUtils.rake 'seed:default'
 end
