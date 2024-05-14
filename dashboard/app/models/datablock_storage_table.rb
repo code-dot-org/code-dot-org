@@ -60,10 +60,7 @@ class DatablockStorageTable < ApplicationRecord
   # the special project_id to indicate it's a shared table.
   SHARED_TABLE_PROJECT_ID = 0
 
-  # TODO: #57003, implement enforcement of MAX_TABLE_COUNT, we already have
-  # a test for it but we're skipping it until this is implemented.
   MAX_TABLE_COUNT = 10
-
   MAX_TABLE_ROW_COUNT = 20000
 
   def self.get_table_names(project_id)
