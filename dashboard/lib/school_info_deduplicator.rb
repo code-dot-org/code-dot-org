@@ -17,11 +17,11 @@ module SchoolInfoDeduplicator
   def get_duplicate_school_info(school_info_attr)
     return SchoolInfo.where(school_id: attr[:school_id], validation_type: SchoolInfo::VALIDATION_FULL).first if school_info_attr[:school_id]
 
-    attr = process_school_info_attributes(school_info_attr)
+    final_attr = process_school_info_attributes(school_info_attr)
 
-    return false unless SchoolInfo.new(attr).valid?
+    return false unless SchoolInfo.new(final_attr).valid?
 
-    SchoolInfo.where(attr).first
+    SchoolInfo.where(final_attr).first
   end
 
   # Processes school info attributes (as they come in from a form) to be passed into SchoolInfo.new
