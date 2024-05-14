@@ -302,6 +302,12 @@ export const submitChatContents = createAsyncThunk(
       thunkAPI.dispatch(setChatSessionId(chatApiResponse.session_id));
     }
 
+    if (chatApiResponse?.flagged_content) {
+      console.log(
+        `Content flagged by profanity filter: ${chatApiResponse?.flagged_content}`
+      );
+    }
+
     thunkAPI.dispatch(clearChatMessagePending());
     chatApiResponse?.messages.forEach((message: ChatCompletionMessage) =>
       thunkAPI.dispatch(addChatMessage(message))
