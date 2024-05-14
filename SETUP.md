@@ -128,7 +128,16 @@ These steps are for Apple devices running **macOS 14.x**, including those runnin
    ```
    git lfs install --skip-repo
    ```
-
+1. Start your local **Redis server**
+   1. Start redis server:
+       ```
+       brew services start redis
+       ```
+   2. The output from `brew` should confirm that `redis` has started
+       ```
+       ==> Successfully started `redis` (label: homebrew.mxcl.redis)
+       ```
+   3. macOS will notify you that `redis` has been configured to start automatically upon user login. Confirm this in System Settings --> General --> Login Items --> `redis-server` 
 1. Setup your local **MySql server**
    1. Start mysql server:
         ```
