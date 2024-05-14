@@ -22,6 +22,8 @@ class DatablockStorageRecord < ApplicationRecord
 
   validate :max_record_length
 
+  StudentFacingError = DatablockStorageTable::StudentFacingError
+
   MAX_RECORD_LENGTH = 4096
 
   private def max_record_length
