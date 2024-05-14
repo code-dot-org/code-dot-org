@@ -1426,7 +1426,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test 'can set ai_tutor_enabled to false by an authorized instructor' do
-    sign_in @universal_instructor
+    sign_in @teacher
     post :set_ai_tutor_enabled, params: {id: @section.id, ai_tutor_enabled: false}
     assert_response :success
     @section.reload
