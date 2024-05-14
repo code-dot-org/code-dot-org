@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {useCallback} from 'react';
@@ -21,12 +20,6 @@ import SectionProgressV2 from './SectionProgressV2';
 
 import styles from './progress-header.module.scss';
 
-const updateUserTimestamps = isV2Table => {
-  $.post(`/api/v1/users/set_progress_table_timestamp`, {
-    is_v2_table: isV2Table,
-  });
-};
-
 function SectionProgressSelector({
   showProgressTableV2,
   setShowProgressTableV2,
@@ -35,40 +28,39 @@ function SectionProgressSelector({
 }) {
   const [toggleUsed, setToggleUsed] = React.useState(false);
 
-  const updateV1Timestamp = _.once(() => updateUserTimestamps(false));
-  const updateV2Timestamp = _.once(() => updateUserTimestamps(true));
+  const onShowProgressTableV2Change = useCallback(() => {
+    const shouldShowV2 = !showProgressTableV2;
+    new UserPreferences().setShowProgressTableV2(shouldShowV2);
+    setShowProgressTableV2(shouldShowV2);
+    setToggleUsed(true);
 
-  const onShowProgressTableV2Change = useCallback(
+    if (shouldShowV2) {
+      analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_VIEW_NEW_PROGRESS, {
+        sectionId: sectionId,
+      });
+    } else {
+      analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_VIEW_OLD_PROGRESS, {
+        sectionId: sectionId,
+      });
+    }
+  }, [showProgressTableV2, setShowProgressTableV2, sectionId]);
+
+  const debouncedOnShowProgressTableV2Change = _.debounce(
+    onShowProgressTableV2Change,
+    300,
+    {
+      leading: true,
+      trailing: false,
+    }
+  );
+
+  const onToggleClick = useCallback(
     e => {
       e.preventDefault();
-      const shouldShowV2 = !showProgressTableV2;
-      new UserPreferences().setShowProgressTableV2(shouldShowV2);
-      setShowProgressTableV2(shouldShowV2);
-      setToggleUsed(true);
 
-      if (shouldShowV2) {
-        updateV2Timestamp();
-      } else {
-        updateV1Timestamp();
-      }
-
-      if (shouldShowV2) {
-        analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_VIEW_NEW_PROGRESS, {
-          sectionId: sectionId,
-        });
-      } else {
-        analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_VIEW_OLD_PROGRESS, {
-          sectionId: sectionId,
-        });
-      }
+      debouncedOnShowProgressTableV2Change();
     },
-    [
-      showProgressTableV2,
-      setShowProgressTableV2,
-      sectionId,
-      updateV1Timestamp,
-      updateV2Timestamp,
-    ]
+    [debouncedOnShowProgressTableV2Change]
   );
 
   // If progress table is disabled, only show the v1 table.
@@ -96,7 +88,7 @@ function SectionProgressSelector({
       <Link
         type="primary"
         size="s"
-        onClick={onShowProgressTableV2Change}
+        onClick={onToggleClick}
         id="ui-test-toggle-progress-view"
       >
         {displayV2
@@ -115,7 +107,10 @@ function SectionProgressSelector({
         <SectionProgressV2 />
       ) : (
         <>
-          <InviteToV2ProgressModal sectionId={sectionId} />
+          <InviteToV2ProgressModal
+            sectionId={sectionId}
+            onShowProgressTableV2Change={debouncedOnShowProgressTableV2Change}
+          />
           <SectionProgress allowUserToSelectV2View={true} />
         </>
       )}

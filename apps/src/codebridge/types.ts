@@ -1,3 +1,5 @@
+import {LanguageSupport} from '@codemirror/language';
+
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 
 export type {
@@ -32,12 +34,11 @@ export type ConfigType = {
   gridLayout: string;
   gridLayoutRows?: string;
   gridLayoutColumns?: string;
-  EditorComponent?: EditorComponent;
-  editableFileTypes?: string[];
+  editableFileTypes: string[];
   previewFileTypes?: string[];
-  EmptyEditorComponent?: EmptyEditorComponent;
   blankEmptyEditor?: boolean;
   PreviewComponents?: {[key: string]: PreviewComponent};
+  languageMapping: {[key: string]: LanguageSupport};
 };
 
 export type ProjectType = MultiFileSource;

@@ -4,12 +4,14 @@
  * Defines blocks useful in multiple blockly apps
  */
 
+import {Block, CodeGenerator} from 'blockly';
+
 import {
   BlocklyWrapperType,
   JavascriptGeneratorType,
 } from '@cdo/apps/blockly/types';
+
 import {readBooleanAttribute} from '../../utils';
-import {Block, CodeGenerator} from 'blockly';
 
 const mutatorProperties: string[] = [];
 
