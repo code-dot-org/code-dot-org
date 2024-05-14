@@ -18,6 +18,7 @@ class DatablockStorageKvp < ApplicationRecord
   self.primary_keys = :project_id, :key
 
   validate :max_kvp_count, on: :create
+  validate :max_value_length, on: [:create, :update]
 
   StudentFacingError = DatablockStorageTable::StudentFacingError
 
@@ -59,6 +60,12 @@ class DatablockStorageKvp < ApplicationRecord
     current_count = DatablockStorageKvp.where(project_id: project_id).count
     if current_count >= MAX_NUM_KVPS
       raise StudentFacingError.new(:MAX_KVPS_EXCEEDED), "Cannot have more than #{MAX_NUM_KVPS} key-value pairs per project"
+    end
+  end
+
+  private def max_value_length
+    if value.to_json.bytesize > MAX_VALUE_LENGTH
+      raise StudentFacingError.new(:MAX_VALUE_LENGTH_EXCEEDED), "Value data cannot exceed #{MAX_VALUE_LENGTH} bytes"
     end
   end
 end

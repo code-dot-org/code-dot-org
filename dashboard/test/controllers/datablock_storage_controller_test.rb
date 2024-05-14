@@ -90,8 +90,6 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     }
     assert_response :bad_request
 
-    skip "FIXME: controller bug, test will fail, because enforcing DatablockStorageTable::MAX_VALUE_LENGTH_EXCEEDED is not yet implemented, see #57002"
-    # Is MAX_VALUE_LENGTH_EXCEEDED the right error? check the JS
     assert_equal 'MAX_VALUE_LENGTH_EXCEEDED', JSON.parse(@response.body)['type']
   end
 
