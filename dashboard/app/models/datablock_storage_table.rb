@@ -41,6 +41,8 @@ class DatablockStorageTable < ApplicationRecord
 
   after_initialize -> {self.columns ||= ['id']}, if: :new_record?
 
+  validate :validate_max_table_count, on: :create
+
   # These are errors that should show up in the Applab Debug Console
   # see description in datablock_storage_controller.rb.
   class StudentFacingError < StandardError
@@ -332,6 +334,12 @@ class DatablockStorageTable < ApplicationRecord
       else
         raise StudentFacingError.new(:CANNOT_CONVERT_COLUMN_TYPE), "Couldn't convert #{value.inspect} to boolean"
       end
+    end
+  end
+
+  private def validate_max_table_count
+    if DatablockStorageTable.where(project_id: project_id).count >= MAX_TABLE_COUNT
+      raise StudentFacingError.new(:MAX_TABLES_EXCEEDED), "Cannot create more than #{MAX_TABLE_COUNT} tables"
     end
   end
 end
