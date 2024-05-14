@@ -167,30 +167,24 @@ class DatablockStorageTable < ApplicationRecord
       DatablockStorageRecord.where(project_id: project_id, table_name: table_name).lock.minimum(:record_id)
 
       max_record_id = DatablockStorageRecord.where(project_id: project_id, table_name: table_name).maximum(:record_id)
-      next_record_id = (max_record_id || 0) + 1
+      record_id = (max_record_id || 0)
 
       cols_in_records = Set.new
-      record_jsons.each do |record_json|
-        record_json.each do |_key, json_value|
-          raise StudentFacingError.new(:INVALID_RECORD), 'Invalid record: nested objects and arrays are not permitted' if json_value.is_a?(Hash) || json_value.is_a?(Array)
-        end
 
-        # We write the record_id into the JSON as well as storing it in its own column
-        # only create_record and update_record should be at risk of modifying this
-        record_json['id'] = next_record_id
-
-        DatablockStorageRecord.create(project_id: project_id, table_name: table_name, record_id: next_record_id, record_json: record_json)
-
+      new_record_attrs = record_jsons.map do |record_json|
+        raise StudentFacingError.new(:INVALID_RECORD), 'Invalid record: nested objects and arrays are not permitted' if record_json.values.any? {|v| v.is_a?(Hash) || v.is_a?(Array)}
         cols_in_records.merge(record_json.keys)
-        next_record_id += 1
+
+        record_id += 1
+        record_json['id'] = record_id
+        {project_id: project_id, table_name: table_name, record_id: record_id, record_json: record_json}
       end
+
+      records.insert_all(new_record_attrs)
 
       # Preserve the old column's order while adding any new columns
       self.columns += (cols_in_records - columns).to_a
       save!
-
-      # Reload association because we didn't modify records thru it
-      records.reload
     end
   end
 
