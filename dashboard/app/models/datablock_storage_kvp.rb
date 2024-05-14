@@ -36,7 +36,9 @@ class DatablockStorageKvp < ApplicationRecord
 
   def self.set_kvps(project_id, key_value_hashmap, upsert: true)
     kvps = key_value_hashmap.map do |key, value|
-      {project_id: project_id, key: key, value: value.to_json}
+      kvp_attr = {project_id: project_id, key: key, value: value.to_json}
+      DatablockStorageKvp.new(kvp_attr).valid?
+      kvp_attr
     end
 
     if upsert

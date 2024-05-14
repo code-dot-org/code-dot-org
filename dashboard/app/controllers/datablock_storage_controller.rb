@@ -61,7 +61,6 @@ class DatablockStorageController < ApplicationController
   ##########################################################
 
   def set_key_value
-    raise StudentFacingError, "The value is too large. The maximum allowable size is #{DatablockStorageKvp::MAX_VALUE_LENGTH} bytes" if params[:value].length > DatablockStorageKvp::MAX_VALUE_LENGTH
     value = JSON.parse params[:value]
     DatablockStorageKvp.set_kvp @project_id, params[:key], value
     render json: {key: params[:key], value: value}
