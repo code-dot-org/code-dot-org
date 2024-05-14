@@ -22,7 +22,7 @@ markdown <<MARKDOWN
 ## Lesson 9: Training Data and Bias
 <img src="https://images.code.org/2ecc9e9eed1e7a41e83197c4c9eb5e8c-image-1715010522285.png" alt="dog going through dog door" width="200px" style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
 
-#### In this lesson, students explore how **iases in training data** can affect the performance and fairness of computer vision applications using practical activities like the COCO dataset exploration and Auto-Doggie Door model testing. 
+#### In this lesson, students explore how **biases in training data** can affect the performance and fairness of computer vision applications using practical activities like the COCO dataset exploration and Auto-Doggie Door model testing. 
 
 #### By the end of this lesson, students should be able to recognize bias in datasets and understand strategies to reduce its impact.
 
