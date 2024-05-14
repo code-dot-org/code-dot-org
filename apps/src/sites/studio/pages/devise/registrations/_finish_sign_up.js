@@ -53,15 +53,10 @@ let userInRegionalPartnerVariant = experiments.isEnabled(
   experiments.OPT_IN_EMAIL_REG_PARTNER
 );
 
-const isInSchoolAssociationExperiment = statsigReporter.getIsInExperiment(
-  'school_association_update_2024',
-  'showNewFlow',
-  false
-);
-
 $(document).ready(() => {
   const schoolInfoMountPoint = document.getElementById('school-info-inputs');
   let user_type = $('#user_user_type').val();
+  let isInSchoolAssociationExperiment = false;
   init();
 
   function init() {
@@ -75,7 +70,6 @@ $(document).ready(() => {
         'width:135px;';
     }
     setUserType(user_type);
-    renderSchoolInfo();
     renderParentSignUpSection();
   }
 
@@ -221,6 +215,12 @@ $(document).ready(() => {
     fadeInFields(TEACHER_ONLY_FIELDS);
     hideFields(STUDENT_ONLY_FIELDS);
     toggleVisShareEmailRegPartner(isInUnitedStates);
+    isInSchoolAssociationExperiment = statsigReporter.getIsInExperiment(
+      'school_association_update_2024',
+      'showNewFlow',
+      false
+    );
+    renderSchoolInfo();
   }
 
   function switchToStudent() {
