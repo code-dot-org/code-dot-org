@@ -17,10 +17,6 @@ export const Instructions = React.memo(() => {
 
   const renderHeaderButton = () => {
     return (
-      // <DropdownButton color={'neutralDark'} size={'small'}>
-      //   <a onClick={() => setCurrentPanel(Panels.Instructions)}>Instructions</a>
-      //   <a onClick={() => setCurrentPanel(Panels.HelpAndTips)}>Help and Tips</a>
-      // </DropdownButton>
       <div>
         <Button
           icon={{
@@ -33,21 +29,6 @@ export const Instructions = React.memo(() => {
           ariaLabel={'Instructions dropdown'}
           size={'xs'}
         />
-
-        {isDropdownOpen && (
-          <ul className={moduleStyles.dropdown}>
-            <li key={Panels.Instructions}>
-              <Button
-                color={'black'}
-                onClick={() => setCurrentPanel(Panels.Instructions)}
-                ariaLabel={Panels.Instructions}
-                size={'xs'}
-                text={Panels.Instructions}
-              />
-            </li>
-            {/* <li key={Panels.HelpAndTips}>{Panels.HelpAndTips}</li> */}
-          </ul>
-        )}
       </div>
     );
   };
@@ -68,6 +49,23 @@ export const Instructions = React.memo(() => {
       rightHeaderContent={renderHeaderButton()}
       className={moduleStyles.instructions}
     >
+      {isDropdownOpen && (
+        <form className={moduleStyles.dropdownContainer}>
+          <ul>
+            <li key={Panels.Instructions}>
+              <Button
+                color={'black'}
+                onClick={() => setCurrentPanel(Panels.Instructions)}
+                ariaLabel={Panels.Instructions}
+                size={'xs'}
+                text={Panels.Instructions}
+                className={moduleStyles.dropdownItem}
+              />
+            </li>
+            {/* <li key={Panels.HelpAndTips}>{Panels.HelpAndTips}</li> */}
+          </ul>
+        </form>
+      )}
       {showCurrentPanel()}
     </PanelContainer>
   );
