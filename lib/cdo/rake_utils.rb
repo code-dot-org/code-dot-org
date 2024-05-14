@@ -163,6 +163,10 @@ module RakeUtils
     `git stash list --date=local`.lines.first.strip
   end
 
+  def self.git_root_directory
+    `git rev-parse --show-toplevel`.strip
+  end
+
   def self.git_update_count
     count = `git rev-list ..@{u} | wc -l`.strip.to_i
     return 0 if $?.exitstatus != 0
