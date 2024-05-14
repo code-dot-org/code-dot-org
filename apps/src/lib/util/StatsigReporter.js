@@ -104,6 +104,9 @@ class StatsigReporter {
   }
 
   getIsInExperiment(name, parameter, defaultValue) {
+    if (this.local_mode) {
+      return false;
+    }
     return Statsig.getExperiment(name).get(parameter, defaultValue);
   }
 

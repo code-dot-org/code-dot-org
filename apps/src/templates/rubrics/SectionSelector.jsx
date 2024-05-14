@@ -1,17 +1,19 @@
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import Select from 'react-select';
-import i18n from '@cdo/locale';
+
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
-import {reload} from '@cdo/apps/utils';
+import {BodyThreeText, EmText} from '@cdo/apps/componentLibrary/typography';
 import {
   selectSection,
   sectionsNameAndId,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {reload} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
+
 import style from './rubrics.module.scss';
-import classnames from 'classnames';
-import {BodyThreeText, EmText} from '@cdo/apps/componentLibrary/typography';
 
 // Exported for unit testing
 export const NO_SELECTED_SECTION_VALUE = '';

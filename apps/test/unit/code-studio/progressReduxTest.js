@@ -1522,7 +1522,7 @@ describe('progressReduxTest', () => {
       });
     });
 
-    it('requests user progress and dispatches appropriate actions', () => {
+    it('requests user progress and dispatches appropriate actions (default)', () => {
       const responseData = {
         isVerifiedInstructor: true,
         teacherViewingStudent: true,
@@ -1535,7 +1535,7 @@ describe('progressReduxTest', () => {
         current_lesson: 1,
       };
       serverResponse(responseData);
-      const promise = userProgressFromServer(state, dispatch, 1);
+      const promise = userProgressFromServer(state, dispatch, 1, true);
       server.respond();
 
       const expectedDispatchActions = [
@@ -1547,6 +1547,39 @@ describe('progressReduxTest', () => {
         'progress/setScriptCompleted',
         'progress/setScriptProgress',
         'progress/mergeResults',
+        'progress/mergePeerReviewProgress',
+        'progress/setCurrentLessonId',
+      ];
+      return promise.then(serverResponseData => {
+        assert.deepEqual(expectedDispatchActions, getDispatchActions());
+        assert.deepEqual(responseData, serverResponseData);
+      });
+    });
+
+    it('requests user progress and dispatches appropriate actions (no merge)', () => {
+      const responseData = {
+        isVerifiedInstructor: true,
+        teacherViewingStudent: true,
+        deeperLearningCourse: false,
+        focusAreaLessonIds: [1, 2],
+        lockableAuthorized: true,
+        completed: true,
+        progress: {},
+        peerReviewsPerformed: true,
+        current_lesson: 1,
+      };
+      serverResponse(responseData);
+      const promise = userProgressFromServer(state, dispatch, 1, false);
+      server.respond();
+
+      const expectedDispatchActions = [
+        'progress/clearResults',
+        'verifiedInstructor/SET_VERIFIED',
+        'progress/setIsSummaryView',
+        'progress/updateFocusArea',
+        'lessonLock/AUTHORIZE_LOCKABLE',
+        'progress/setScriptCompleted',
+        'progress/setScriptProgress',
         'progress/mergePeerReviewProgress',
         'progress/setCurrentLessonId',
       ];

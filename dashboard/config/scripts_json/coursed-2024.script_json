@@ -14,8 +14,8 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2024-05-08 23:40:36 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2024-05-10 19:11:07 UTC",
+    "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -200,7 +200,7 @@
       "relative_position": 5,
       "properties": {
         "overview": "In this unplugged lesson students will act out the ways internal and external parts of a computer work together. They will take on roles such as: CPU, Keyboard, Monitor, User and more.",
-        "preparation": "- Print the skit outlines and cut them out for each group of students\n- Create heterogeneous groups of students \n",
+        "preparation": "- Print the skit outlines and cut them out for each group of students\n- Print out one classroom set of the skit roles\n- Create heterogeneous groups of students \n",
         "purpose": "The purpose of this lesson is to understand the ways internal and external parts of a computer work together to perform their functions. Today you will collaborate with a group of students to create short skits showing how various computer parts work together to complete tasks.\n"
       },
       "seeding_key": {
@@ -716,7 +716,7 @@
       "key": "e38cd7e4-8faf-4d1f-90bb-0cd8ff33d410",
       "position": 1,
       "properties": {
-        "duration": 5,
+        "duration": 7,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -744,7 +744,7 @@
       "key": "49ec6c67-d0a2-4a90-8937-5076e41ca222",
       "position": 3,
       "properties": {
-        "duration": 5,
+        "duration": 3,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -1939,10 +1939,23 @@
       }
     },
     {
-      "key": "0ccd7f06-98d5-49c4-8098-a72a7bcdad2b",
+      "key": "786e592d-6751-4665-bd20-2805d567b4d2",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Warm Up” slide\n\n**Discuss:** \n- _Let’s view some items with interesting interiors. What stands out to you?_\n- _What are other items that you use frequently yet do not know how it really works on the “inside”?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Inside a computer” slide\n\n**Discuss:** \n- _What do you notice?_\n\n**Discussion Goal:** This image shows many of the computer parts that students will be using in their skits later in the lesson. This image may be totally new to students and present a new concept they hadn’t considered before - what is inside a computer? Students may start naming some easily identifiable internal computer parts such as wires. Let students know that by the end of the lesson they will have a much better idea of how everything inside the computer works together!\n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n- Go through some of the terms that might be unfamiliar to students\n- Have students refer back to these definitions throughout the main activity as needed\n",
+        "duration": "2",
+        "name": "Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "786e592d-6751-4665-bd20-2805d567b4d2",
+        "lesson_activity.key": "e38cd7e4-8faf-4d1f-90bb-0cd8ff33d410"
+      }
+    },
+    {
+      "key": "0ccd7f06-98d5-49c4-8098-a72a7bcdad2b",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Warm Up” slide\n\n**Discuss:** \n- _Think about an electronic device you use often. For example, a laptop, phone or tablet. What do you think it looks like inside?_\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Looking Inside” slide\n\n**Discuss:** \n- _What do you notice?_\n\n**Discussion Goal:** These images show many of the computer parts that students will be using in their skits later in the lesson. This view may be totally new to students and present a new concept they hadn’t considered before - what is inside a computer (or electronic device)? Students may start naming some easily identifiable internal computer parts such as wires. Let students know that by the end of the lesson they will have a much better idea of how everything inside the computer works together!\n\n\n",
         "duration": "5",
         "name": "Looking Inside"
       },
@@ -1955,7 +1968,7 @@
       "key": "236d99f6-0fc2-4263-850a-b12a553fb979",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Preparing Your Skit” slide\n\n**Do This:** Put students into groups of 5 and assign them a skit outline. First, students should decide who will take on the role of each computer part. Then, students should read through the skit and start brainstorming how they will bring it to life. Finally, students should rehearse their skit and be ready to present it.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Preparing Your Skit” slide\n\n**Do This:** Put students into groups of 5 and assign them a skit number from the **<a href=\"https://docs.google.com/document/d/1aVJ2CtnvVzde3eDzFOhOWA5f30UTreDZKOSZ2lJ1XYc/template/preview\" target=\"_blank\">skit outline</a>**. Give each student a sheet of paper with their **<a href=\"https://docs.google.com/document/d/19TF1oQThf0ZINZ2Eu37_S_b0aKXDdwVBUm6QnEZLTwc/template/preview\" target=\"_blank\">skit role</a>** on it. First, students should decide who will take on the role of each computer part. Then, students should read through the skit and start brainstorming how they will bring it to life. Finally, students should rehearse their skit and be ready to present it.\n",
         "duration": "15",
         "name": "Preparing your Skit ",
         "progression_name": "Unplugged Activity - Hardware and Software Skits"
@@ -1999,7 +2012,7 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflection” slide\n\n**Do This:** Have students share a glow (positive), grow (constructive feedback), and question they have for another group who performed.",
-        "duration": "5",
+        "duration": "3",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -4482,6 +4495,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "HardwareSkits-Unplugged2022_2024"
+        ],
         "progression": "Unplugged Activity - Hardware and Software Skits"
       },
       "bonus": false,
@@ -10352,6 +10368,19 @@
       }
     },
     {
+      "name": "Hardware and Software Skits - Roles",
+      "url": "https://docs.google.com/document/d/19TF1oQThf0ZINZ2Eu37_S_b0aKXDdwVBUm6QnEZLTwc/template/preview",
+      "key": "hardware_and_software_skits_-_roles",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/document/d/19TF1oQThf0ZINZ2Eu37_S_b0aKXDdwVBUm6QnEZLTwc/export/pdf",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "hardware_and_software_skits_-_roles"
+      }
+    },
+    {
       "name": "Implementation Guide",
       "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
       "key": "implementation_guide",
@@ -10936,6 +10965,12 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "hardware_and_software_skits"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "hardware_and_software_skits_-_roles"
       }
     }
   ],

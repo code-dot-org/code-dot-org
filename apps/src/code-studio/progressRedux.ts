@@ -50,6 +50,7 @@ export interface ProgressState {
   lessons: Lesson[] | null;
   lessonGroups: LessonGroup[] | null;
   scriptId: number | null;
+  viewAsUserId: string | null;
   scriptName: string | null;
   scriptDisplayName: string | undefined;
   unitTitle: string | null;
@@ -91,6 +92,7 @@ const initialState: ProgressState = {
   lessons: null,
   lessonGroups: null,
   scriptId: null,
+  viewAsUserId: null,
   scriptName: null,
   scriptDisplayName: undefined,
   unitTitle: null,
@@ -261,6 +263,9 @@ const progressSlice = createSlice({
     setLessonExtrasEnabled(state, action: PayloadAction<boolean>) {
       state.lessonExtrasEnabled = action.payload;
     },
+    setViewAsUserId(state, action: PayloadAction<string>) {
+      state.viewAsUserId = action.payload;
+    },
   },
   extraReducers: {
     // TODO: When we convert viewAsRedux to redux-toolkit, we will need to use
@@ -282,10 +287,10 @@ type ProgressThunkAction = ThunkAction<
 >;
 
 export const queryUserProgress =
-  (userId: string): ProgressThunkAction =>
+  (userId: string, mergeProgress: boolean = true): ProgressThunkAction =>
   (dispatch, getState) => {
     const state = getState().progress;
-    return userProgressFromServer(state, dispatch, userId);
+    return userProgressFromServer(state, dispatch, userId, mergeProgress);
   };
 
 // The user has navigated to a new level in the current lesson,
@@ -329,17 +334,17 @@ export function onLevelIndexChange(
     }
 
     const level = levels[levelIndex];
-    let newLevelId = level.id;
     if (
       sublevelIndex !== undefined &&
       level.sublevels &&
       sublevelIndex < level.sublevels.length
     ) {
-      const sublevel = level.sublevels[sublevelIndex];
-      newLevelId = sublevel.id;
+      const newLevelId = level.sublevels[sublevelIndex].id;
+      dispatch(setCurrentLevelId(newLevelId));
+    } else {
+      const newLevelId = level.id;
+      dispatch(setCurrentLevelId(newLevelId));
     }
-
-    dispatch(setCurrentLevelId(newLevelId));
   };
 }
 
@@ -355,7 +360,7 @@ export function navigateToNextLevel(): ProgressThunkAction {
 }
 
 // The user has successfully completed the level and the page
-// will not be reloading.
+// will not be reloading. Currently only used by Lab2 labs.
 export function sendSuccessReport(appType: string): ProgressThunkAction {
   return (dispatch, getState) => {
     const state = getState().progress;
@@ -418,7 +423,8 @@ export function sendSuccessReport(appType: string): ProgressThunkAction {
 const userProgressFromServer = (
   state: ProgressState,
   dispatch: ThunkDispatch<{progress: ProgressState}, undefined, AnyAction>,
-  userId: string | null = null
+  userId: string | null = null,
+  mergeProgress: boolean
 ) => {
   if (!state.scriptName) {
     const message = `Could not request progress for user ID ${userId} from server: scriptName must be present in progress redux.`;
@@ -472,12 +478,14 @@ const userProgressFromServer = (
     if (data.progress) {
       dispatch(setScriptProgress(data.progress));
 
-      // Note that we set the full progress object above in redux but also set
-      // a map containing just level results. This is the legacy code path and
-      // the goal is to eventually update all code paths to use unitProgress
-      // instead of levelResults.
-      const levelResults = _.mapValues(data.progress, getLevelResult);
-      dispatch(mergeResults(levelResults));
+      if (mergeProgress) {
+        // Note that we set the full progress object above in redux but also set
+        // a map containing just level results. This is the legacy code path and
+        // the goal is to eventually update all code paths to use unitProgress
+        // instead of levelResults.
+        const levelResults = _.mapValues(data.progress, getLevelResult);
+        dispatch(mergeResults(levelResults));
+      }
 
       if (data.peerReviewsPerformed) {
         dispatch(mergePeerReviewProgress(data.peerReviewsPerformed));
@@ -530,6 +538,7 @@ export const {
   setCurrentLessonId,
   setScriptCompleted,
   setLessonExtrasEnabled,
+  setViewAsUserId,
 } = progressSlice.actions;
 
 export default progressSlice.reducer;

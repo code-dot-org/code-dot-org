@@ -253,3 +253,48 @@ Feature: Using the teacher dashboard
     And I click selector "button.ui-test-join-section"
     Then I wait until element ".announcement-notification" is visible
     And element ".announcement-notification" contains text matching "You are already an instructor for section"
+
+  Scenario: Decline invitation to new progress view
+    Given I create an authorized teacher-associated student named "Sally"
+    Given I am assigned to unit "allthethings"
+    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
+
+    When I sign in as "Teacher_Sally" and go home
+    And I get levelbuilder access
+    And I wait until element "a:contains('Untitled Section')" is visible
+    And I save the section id from row 0 of the section table
+    Then I navigate to teacher dashboard for the section I saved
+    Then I append "/?enableExperiments=section_progress_v2" to the URL
+    Then I click selector "#ui-close-dialog"
+    And I wait until element "#uitest-course-dropdown" is visible
+    And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
+
+  Scenario: Accept invitation to new progress view and see new view immediately. 
+    Given I create an authorized teacher-associated student named "Sally"
+    Given I am assigned to unit "allthethings"
+    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
+
+    When I sign in as "Teacher_Sally" and go home
+    And I get levelbuilder access
+    And I wait until element "a:contains('Untitled Section')" is visible
+    And I save the section id from row 0 of the section table
+    Then I navigate to teacher dashboard for the section I saved
+    Then I append "/?enableExperiments=section_progress_v2" to the URL
+    Then I click selector "#accept-invitation"
+    And I wait until element "h6:contains(Icon Key)" is visible
+    And I wait until element "#ui-test-progress-table-v2" is visible
+
+  Scenario: Delay responding to invitation to new progress view and see old view immediately. 
+    Given I create an authorized teacher-associated student named "Sally"
+    Given I am assigned to unit "allthethings"
+    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
+
+    When I sign in as "Teacher_Sally" and go home
+    And I get levelbuilder access
+    And I wait until element "a:contains('Untitled Section')" is visible
+    And I save the section id from row 0 of the section table
+    Then I navigate to teacher dashboard for the section I saved
+    Then I append "/?enableExperiments=section_progress_v2" to the URL
+    Then I click selector "#remind-me-later-option"
+    And I wait until element "#uitest-course-dropdown" is visible
+    And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"

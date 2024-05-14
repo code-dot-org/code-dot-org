@@ -36,11 +36,13 @@ const DEFAULT_PROPS = {
   teacherId: 5,
   exampleSolutions: [],
   selectUser: () => {},
+  setViewAsUserId: () => {},
   setStudentsForCurrentSection: () => {},
   setSections: () => {},
   setSectionLockStatus: () => {},
   selectSection: () => {},
   setViewType: () => {},
+  isCurrentLevelLab2: false,
 };
 
 const setUp = overrideProps => {
