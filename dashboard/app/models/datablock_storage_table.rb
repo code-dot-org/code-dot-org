@@ -160,6 +160,14 @@ class DatablockStorageTable < ApplicationRecord
       raise StudentFacingError.new(:MAX_ROWS_EXCEEDED), "Cannot add more than #{MAX_TABLE_ROW_COUNT} rows to a table"
     end
 
+    # We want to do as much work as possible outside of the transaction, so validate and find new columns first
+    cols_in_records = Set.new
+    record_jsons.each do |record_json|
+      raise StudentFacingError.new(:INVALID_RECORD), 'Invalid record: nested objects and arrays are not permitted' if record_json.values.any? {|v| v.is_a?(Hash) || v.is_a?(Array)}
+      raise StudentFacingError.new(:INVALID_RECORD), 'Invalid record' unless DatablockStorageRecord.new(record_json: record_json).valid?
+      cols_in_records.merge(record_json.keys)
+    end
+
     DatablockStorageRecord.transaction do
       # Because we're using a composite primary key for records: (project_id, table_name, record_id)
       # and we want an incrementing record_id unique to that (project_id, table_name), we lock
@@ -167,26 +175,21 @@ class DatablockStorageTable < ApplicationRecord
       # and release it once we close the transaction.
       DatablockStorageRecord.where(project_id: project_id, table_name: table_name).lock.minimum(:record_id)
 
-      max_record_id = DatablockStorageRecord.where(project_id: project_id, table_name: table_name).maximum(:record_id)
-      record_id = (max_record_id || 0)
+      max_record_id = DatablockStorageRecord.where(project_id: project_id, table_name: table_name).maximum(:record_id) || 0
 
-      cols_in_records = Set.new
-
-      new_record_attrs = record_jsons.map do |record_json|
-        raise StudentFacingError.new(:INVALID_RECORD), 'Invalid record: nested objects and arrays are not permitted' if record_json.values.any? {|v| v.is_a?(Hash) || v.is_a?(Array)}
-        cols_in_records.merge(record_json.keys)
-
-        record_id += 1
-        record_json['id'] = record_id
-        {project_id: project_id, table_name: table_name, record_id: record_id, record_json: record_json}
-      end
-
-      records.insert_all(new_record_attrs)
+      records.insert_all(
+        record_jsons.map.with_index(max_record_id + 1) do |record_json, record_id|
+          record_json['id'] = record_id
+          {project_id: project_id, table_name: table_name, record_id: record_id, record_json: record_json}
+        end
+      )
 
       # Preserve the old column's order while adding any new columns
       self.columns += (cols_in_records - columns).to_a
       save!
     end
+
+    record_jsons
   end
 
   def update_record(record_id, record_json)
