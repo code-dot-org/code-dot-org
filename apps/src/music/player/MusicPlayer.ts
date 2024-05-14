@@ -41,7 +41,7 @@ const DEFAULT_KEY = Key.C;
  */
 export default class MusicPlayer {
   private readonly metricsReporter: LabMetricsReporter;
-  private readonly analyticsReporter: AnalyticsReporter;
+  private readonly analyticsReporter: AnalyticsReporter | undefined;
   private readonly audioPlayer: AudioPlayer;
   private updateLoadProgress: UpdateLoadProgressCallback | undefined;
 
@@ -51,6 +51,7 @@ export default class MusicPlayer {
   constructor(
     bpm: number = DEFAULT_BPM,
     key: Key = DEFAULT_KEY,
+    analyticsReporter?: AnalyticsReporter | undefined,
     audioPlayer?: AudioPlayer,
     metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
   ) {
@@ -63,7 +64,7 @@ export default class MusicPlayer {
       this.audioPlayer = new ToneJSPlayer() || audioPlayer;
     }
     this.metricsReporter = metricsReporter;
-    this.analyticsReporter = new AnalyticsReporter();
+    this.analyticsReporter = analyticsReporter;
     this.updateConfiguration(bpm, key);
   }
 
@@ -184,7 +185,7 @@ export default class MusicPlayer {
       soundType: 'beat',
     };
     console.log('audioPlayer.playSampleImmediately in MusicPlayer');
-    this.analyticsReporter.onSoundsPlayed(id);
+    this.analyticsReporter?.onSoundsPlayed(id);
     this.audioPlayer.playSampleImmediately(
       this.convertEventToSamples(preview)[0],
       onStop
@@ -286,7 +287,7 @@ export default class MusicPlayer {
       if (event.type === 'sound' || !this.audioPlayer.supportsSamplers()) {
         console.log('event in scheduleEvents', event.id);
         // log event.id
-        this.analyticsReporter.onSoundsPlayed(event.id);
+        this.analyticsReporter?.onSoundsPlayed(event.id);
         for (const sample of this.convertEventToSamples(event)) {
           this.audioPlayer.scheduleSample(sample);
         }

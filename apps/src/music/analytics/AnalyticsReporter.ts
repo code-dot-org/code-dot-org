@@ -170,8 +170,11 @@ export default class AnalyticsReporter {
   }
 
   onSoundsPlayed(id: string) {
-    // Unsure why by the time this function is called, this.sessionInProgress is false.
-    console.log('this.sessionInProgress', this.sessionInProgress);
+    if (!this.sessionInProgress) {
+      this.log('No session in progress');
+      return;
+    }
+
     if (!this.soundsPlayed[id]) {
       this.soundsPlayed[id] = 1;
     } else {
