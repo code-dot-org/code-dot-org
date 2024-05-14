@@ -64,6 +64,24 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     set_and_get_key_value('👁️👄👁️', 'value is: 🎉')
   end
 
+  test "set_key_value can't create more than MAX_NUM_KVPS kvps" do
+    # Lower the max table count to 3 so its easy to test
+    original_max_num_kvps = DatablockStorageKvp::MAX_NUM_KVPS
+    DatablockStorageKvp.const_set(:MAX_NUM_KVPS, 3)
+
+    # Create 3 kvps so we're right at the limit...
+    set_and_get_key_value('key1', 'val1')
+    set_and_get_key_value('key2', 'val2')
+    set_and_get_key_value('key3', 'val3')
+
+    post _url(:set_key_value), params: {key: 'key4', value: 'val4'.to_json}
+
+    assert_response :bad_request
+    assert_equal 'MAX_KVPS_EXCEEDED', JSON.parse(@response.body)['type']
+  ensure
+    DatablockStorageKvp.const_set(:MAX_NUM_KVPS, original_max_num_kvps)
+  end
+
   test "set_key_value should enforce MAX_VALUE_LENGTH" do
     too_many_bees = 'b' * (DatablockStorageKvp::MAX_VALUE_LENGTH + 1) # 1 more 'b' char than max
     post _url(:set_key_value), params: {

@@ -17,17 +17,15 @@ class DatablockStorageKvp < ApplicationRecord
 
   self.primary_keys = :project_id, :key
 
+  validate :max_kvp_count, on: :create
+
   StudentFacingError = DatablockStorageTable::StudentFacingError
 
   # TODO: #56999, implement enforcement of MAX_VALUE_LENGTH, we already have
   # a test for it, but we're skipping it until this is implemented.
   MAX_VALUE_LENGTH = 4096
 
-  # TODO: #57000, implement encforement of MAX_NUM_KVPS. We didn't find enfocrement
-  # of this in Firebase in our initial exploration, so we may need to partly pick
-  # a value here and start enforcing it, previous exploration:
-  # https://github.com/code-dot-org/code-dot-org/issues/55554#issuecomment-1876143286
-  MAX_NUM_KVPS = 20000 # does firebase already have a  limit? this matches max num table rows
+  MAX_NUM_KVPS = 20000
 
   def self.get_kvps(project_id)
     where(project_id: project_id).
@@ -54,6 +52,13 @@ class DatablockStorageKvp < ApplicationRecord
       DatablockStorageKvp.where(project_id: project_id, key: key).delete_all
     else
       DatablockStorageKvp.set_kvps(project_id, {key => value}, upsert: true)
+    end
+  end
+
+  private def max_kvp_count
+    current_count = DatablockStorageKvp.where(project_id: project_id).count
+    if current_count >= MAX_NUM_KVPS
+      raise StudentFacingError.new(:MAX_KVPS_EXCEEDED), "Cannot have more than #{MAX_NUM_KVPS} key-value pairs per project"
     end
   end
 end
