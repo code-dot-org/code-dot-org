@@ -632,14 +632,14 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "import_csv" do
-    CSV_DATA = <<~CSV
+    csv_data = <<~CSV
       id,name,age,male
       4,alice,7,false
       5,bob,8,true
       6,charlie,9,true
     CSV
 
-    EXPECTED_RECORDS = [
+    expected_records = [
       {"id" => 1, "name" => "alice", "age" => 7, "male" => false},
       {"id" => 2, "name" => "bob", "age" => 8, "male" => true},
       {"id" => 3, "name" => "charlie", "age" => 9, "male" => true},
@@ -647,11 +647,11 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
 
     post _url(:import_csv), params: {
       table_name: 'mytable',
-      table_data_csv: CSV_DATA,
+      table_data_csv: csv_data,
     }
     assert_response :success
 
-    assert_equal EXPECTED_RECORDS, read_records
+    assert_equal expected_records, read_records
   end
 
   test "import_csv overwrites existing data" do
@@ -661,14 +661,14 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     }
     assert_response :success
 
-    CSV_DATA = <<~CSV
+    csv_data = <<~CSV
       id,name
       1,alice
       2,bob
       3,charlie
     CSV
 
-    EXPECTED_RECORDS = [
+    expected_records = [
       {"id" => 1, "name" => "alice"},
       {"id" => 2, "name" => "bob"},
       {"id" => 3, "name" => "charlie"},
@@ -676,16 +676,16 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
 
     post _url(:import_csv), params: {
       table_name: 'mytable',
-      table_data_csv: CSV_DATA,
+      table_data_csv: csv_data,
     }
     assert_response :success
 
     # Tim, age 2 record should be gone:
-    assert_equal EXPECTED_RECORDS, read_records
+    assert_equal expected_records, read_records
   end
 
   test "export csv" do
-    CSV_DATA = <<~CSV
+    csv_data = <<~CSV
       id,name,age,male
       1,alice,7,false
       2,bob,8,true
@@ -694,7 +694,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
 
     post _url(:import_csv), params: {
       table_name: 'mytable',
-      table_data_csv: CSV_DATA,
+      table_data_csv: csv_data,
     }
     assert_response :success
 
@@ -703,7 +703,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     }
     assert_response :success
 
-    assert_equal CSV_DATA, @response.body
+    assert_equal csv_data, @response.body
   end
 
   test "project_has_data" do
