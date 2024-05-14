@@ -155,9 +155,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
 
     post _url(:create_record), params: {table_name: 'mytable', record_json: {'name' => 'bob'}.to_json}
 
-    skip "FIXME: controller bug, test will fail, because enforcing DatablockStorageTable::MAX_TABLE_ROW_COUNT is not yet implemented so we get :success when :bad_request is desired, see #57002"
     assert_response :bad_request
-    # Is MAX_ROWS_EXCEEDED the right error? check the JS
     assert_equal 'MAX_ROWS_EXCEEDED', JSON.parse(@response.body)['type']
   ensure
     DatablockStorageTable.const_set(:MAX_TABLE_ROW_COUNT, original_max_table_row_count)
