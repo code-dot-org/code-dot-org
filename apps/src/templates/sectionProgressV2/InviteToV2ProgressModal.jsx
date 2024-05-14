@@ -32,7 +32,7 @@ function InviteToV2ProgressModal({
   setHasSeenProgressTableInvite,
   setShowProgressTableV2,
   setDateProgressTableInvitationDelayed,
-  showProgressTableV2,
+  progressTableV2Timestamp,
 }) {
   const [invitationOpen, setInvitationOpen] = React.useState(false);
 
@@ -40,7 +40,7 @@ function InviteToV2ProgressModal({
     if (
       dateProgressTableInvitationDelayed === undefined ||
       hasSeenProgressTableInvite === undefined ||
-      showProgressTableV2 === undefined
+      progressTableV2Timestamp === undefined
     ) {
       // Do not proceed if data has not been fully loaded.
       return;
@@ -57,7 +57,7 @@ function InviteToV2ProgressModal({
 
     const showInvitation = () => {
       const alreadyViewedInvitation = !!hasSeenProgressTableInvite;
-      const alreadyViewedV2Dashboard = showProgressTableV2 !== null;
+      const alreadyViewedV2Dashboard = progressTableV2Timestamp !== null;
       if (alreadyViewedV2Dashboard || alreadyViewedInvitation) {
         return false;
       } else {
@@ -73,7 +73,7 @@ function InviteToV2ProgressModal({
   }, [
     dateProgressTableInvitationDelayed,
     hasSeenProgressTableInvite,
-    showProgressTableV2,
+    progressTableV2Timestamp,
   ]);
 
   const handleModalClose = React.useCallback(() => {
@@ -180,7 +180,7 @@ InviteToV2ProgressModal.propTypes = {
   hasSeenProgressTableInvite: PropTypes.bool,
   setDateProgressTableInvitationDelayed: PropTypes.func.isRequired,
   setShowProgressTableV2: PropTypes.func.isRequired,
-  showProgressTableV2: PropTypes.bool,
+  progressTableV2Timestamp: PropTypes.string,
 };
 
 export const UnconnectedInviteToV2ProgressModal = InviteToV2ProgressModal;
@@ -190,7 +190,7 @@ export default connect(
     dateProgressTableInvitationDelayed:
       state.currentUser.dateProgressTableInvitationDelayed,
     hasSeenProgressTableInvite: state.currentUser.hasSeenProgressTableInvite,
-    showProgressTableV2: state.currentUser.showProgressTableV2,
+    progressTableV2Timestamp: state.currentUser.progressTableV2Timestamp,
   }),
   dispatch => ({
     setHasSeenProgressTableInvite: hasSeenProgressTableInvite =>
