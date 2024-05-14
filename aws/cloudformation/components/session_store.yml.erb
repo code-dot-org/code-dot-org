@@ -44,7 +44,7 @@
         using have 4vCPUs
       ActionsEnabled: true
       AlarmActions:
-        - !Sub "arn:aws:sns:${AWS::Region}:${AWS::AccountId}:CDO-Urgent"
+        - !Ref InfraUrgent
       EvaluationPeriods: 5
       DatapointsToAlarm: 3
       Threshold: 90
@@ -80,7 +80,7 @@
         have enough data to understand our normal operating eviction rate.
       ActionsEnabled: true
       AlarmActions:
-        - !Sub "arn:aws:sns:${AWS::Region}:${AWS::AccountId}:CDO-LowPriority"
+        - !Ref InfraLowPriority
       EvaluationPeriods: 5
       DatapointsToAlarm: 3
       # TODO infra: update this threshold and upgrade the alarm to Urgent once
@@ -118,7 +118,7 @@
         1/4 of the total.
       ActionsEnabled: true
       AlarmActions:
-        - !Sub "arn:aws:sns:${AWS::Region}:${AWS::AccountId}:CDO-Urgent"
+        - !Ref InfraUrgent
       EvaluationPeriods: 5
       DatapointsToAlarm: 3
       Threshold: 3125000000
@@ -154,7 +154,7 @@
         of the total.
       ActionsEnabled: true
       AlarmActions:
-        - !Sub "arn:aws:sns:${AWS::Region}:${AWS::AccountId}:CDO-Urgent"
+        - !Ref InfraUrgent
       EvaluationPeriods: 5
       DatapointsToAlarm: 3
       Threshold: 6250000000
