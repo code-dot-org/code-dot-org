@@ -529,6 +529,8 @@ module UsersHelper
   end
 
   def country_code(user, request)
+    return user.country_code if user.student?
+
     user.country_code.presence || request.country.to_s.upcase
   end
 end
