@@ -51,7 +51,7 @@ Feature: BubbleChoice
     And I wait until element "#x-close" is not visible
 
     # Complete the level
-    And I click selector "#instructions-feedback-button" to load a new page
+    And I click selector "#instructions-continue-button" to load a new page
 
     # Make sure you are taken back to the Lab2 BubbleChoice activity page with progress
     And I wait until current URL contains "/lessons/52/levels/8"
