@@ -5,7 +5,7 @@ import {
   UnconnectedSectionSelector as SectionSelector,
   NO_SELECTED_SECTION_VALUE,
 } from '@cdo/apps/code-studio/components/progress/SectionSelector';
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import * as utils from '@cdo/apps/utils';
 import * as codeStudioUtils from '@cdo/apps/code-studio/utils';
 

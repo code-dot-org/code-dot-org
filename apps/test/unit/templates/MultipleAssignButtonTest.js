@@ -1,5 +1,5 @@
 import {expect} from 'chai';
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import {updateHiddenScript} from '@cdo/apps/code-studio/hiddenLessonRedux';
