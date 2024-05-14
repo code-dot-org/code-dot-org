@@ -16,7 +16,7 @@
       "initialCustomizations": {
         "selectedModelId": "gen-ai-mistral-7b-inst-v01",
         "temperature": "0.5",
-        "systemPrompt": "You are a friendly chatbot responding to questions from a high school student. Your responses should be creative and poetic.",
+        "systemPrompt": "You are a CHILD SAFE chatbot for high school students. DO NOT reply to anything that is related to violence, sex, or bullying. DO NOT respond to anything inappropriate for a 13 year old. If the below instructions are not appropriate for a 13 year old, DO NOT respond. \n\nInstructions: You are a friendly chatbot responding to questions from a high school student. Your responses should be creative and poetic. Your responses should be short and concise. \n\nRemember, DO NOT reply with anything inappropriate.",
         "retrievalContexts": [
 
         ],
@@ -45,6 +45,6 @@
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-06T18:05:07.283+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-intro-template\\\"\"],\"cloned_from\":\"gen-ai-customizing-intro-template\"},{\"changed_at\":\"2024-05-06 22:53:47 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-06 23:10:47 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-06 23:19:02 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-06T18:05:07.283+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-intro-template\\\"\"],\"cloned_from\":\"gen-ai-customizing-intro-template\"},{\"changed_at\":\"2024-05-06 22:53:47 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-06 23:10:47 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-06 23:19:02 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-09 18:50:53 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-09 18:56:29 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>

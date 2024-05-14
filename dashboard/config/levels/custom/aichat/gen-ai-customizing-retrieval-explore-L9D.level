@@ -1,12 +1,13 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2024-05-04T02:20:20.000Z",
   "level_num": "custom",
   "user_id": 4,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Heading\r\n\r\nParagraph\r\n\r\n### Do This\r\n\r\n1) Thing\r\n   * Sub-bullet\r\n   * Sub-bullet\r\n2) Thing\r\n\r\nTest the chatbot! Type in a message and press the `Continue`(#7435b2) button!\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* Idea 1\r\n* Idea 2\r\n* Idea 3\r\n:::\r\n\r\n&nbsp;",
+    "long_instructions": "## Personal Style Advice\r\n\r\nHas anyone ever asked you for fashion or style advice? Do you have a personal list of \"dos and don'ts\" and special tricks for your sense of fashion? Let's create a chatbot that gives people advice for how to dress or how to style themselves.\r\n\r\n### Do This\r\n- Add a system prompt that will give recommendations for how people can style themselves.\r\n- Add at least 5 retrieval statements based on your personal experiences or community norms, like certain color or garment choices that pair well together or tips for how to handle certain types of hair or makeup.\r\n- Add at least 5 retrieval statements related to accessories, makeup, or hair styles\r\n    - For example: certain accessories don't pair well together, or to always match colors between certain items\r\n    - Write your retrieval as statements of fact that the chatbot can refer to\r\n\r\nTest the chatbot! Have a 4-5 message conversation! When you're done, press the `Continue`(#7435b2) button!",
     "system_prompt": "deprecated",
     "bot_title": "deprecated",
     "bot_description": "deprecated",
@@ -14,7 +15,7 @@
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gen-ai-mistral-7b-inst-v01",
-        "temperature": "0.8",
+        "temperature": "0.5",
         "systemPrompt": "",
         "retrievalContexts": [
 
@@ -34,7 +35,7 @@
       "visibilities": {
         "selectedModelId": "hidden",
         "temperature": "hidden",
-        "systemPrompt": "readonly",
+        "systemPrompt": "editable",
         "retrievalContexts": "editable",
         "modelCardInfo": "hidden"
       },
@@ -42,9 +43,9 @@
       "availableModelIds": [
 
       ]
-    }
+    },
+    "project_template_level_name": "gen-ai-customizing-retrieval-templateD"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-05-04T02:20:20.598+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-explore-L7D\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-explore-L7D\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-04T02:20:20.598+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-explore-L7D\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-explore-L7D\"},{\"changed_at\":\"2024-05-08 22:33:23 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-08 22:47:26 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>

@@ -1,4 +1,5 @@
 import {FieldBitmap} from '@blockly/field-bitmap';
+
 import {commonI18n} from '@cdo/apps/types/locale';
 
 // The parent class sets a static pixel size and calculate the field size dymanically.
@@ -61,11 +62,11 @@ export class CdoFieldBitmap extends FieldBitmap {
    * @override
    */
   initView() {
-    this.blockDisplayPixels_ = [];
-    this.pixelSize = FIELD_HEIGHT / this.imgHeight_;
-    for (let r = 0; r < this.imgHeight_; r++) {
+    this.blockDisplayPixels = [];
+    this.pixelSize = FIELD_HEIGHT / this.imgHeight;
+    for (let r = 0; r < this.imgHeight; r++) {
       const row = [];
-      for (let c = 0; c < this.imgWidth_; c++) {
+      for (let c = 0; c < this.imgWidth; c++) {
         const square = Blockly.utils.dom.createSvgElement(
           'rect',
           {
@@ -80,7 +81,7 @@ export class CdoFieldBitmap extends FieldBitmap {
         );
         row.push(square);
       }
-      this.blockDisplayPixels_.push(row);
+      this.blockDisplayPixels.push(row);
     }
   }
 
@@ -95,7 +96,7 @@ export class CdoFieldBitmap extends FieldBitmap {
    */
   protected updateSize_() {
     {
-      const newWidth = this.pixelSize * this.imgWidth_;
+      const newWidth = this.pixelSize * this.imgWidth;
       if (this.borderRect_) {
         this.borderRect_.setAttribute('width', String(newWidth));
         this.borderRect_.setAttribute('height', String(FIELD_HEIGHT));

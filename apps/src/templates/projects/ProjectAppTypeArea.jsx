@@ -1,18 +1,21 @@
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
+
+import fontConstants from '@cdo/apps/fontConstants';
+import i18n from '@cdo/locale';
+
+import styleConstants from '../../styleConstants';
+import color from '../../util/color';
+import Button from '../Button';
+
 import ProjectCardRow from './ProjectCardRow';
 import {
   MAX_PROJECTS_PER_CATEGORY,
   publishedFeaturedProjectPropType,
 } from './projectConstants';
-import color from '../../util/color';
-import styleConstants from '../../styleConstants';
-import Button from '../Button';
-import {connect} from 'react-redux';
 import {appendProjects, setHasOlderProjects} from './projectsRedux';
-import i18n from '@cdo/locale';
-import fontConstants from '@cdo/apps/fontConstants';
 
 const NUM_PROJECTS_TO_ADD = 12;
 

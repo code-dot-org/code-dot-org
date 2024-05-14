@@ -3,22 +3,24 @@ import {
   CLAMPED_NUMBER_REGEX,
   stringIsXml,
 } from '@cdo/apps/blockly/constants';
+import {MetricEvent} from '@cdo/apps/lib/metrics/events';
 import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
-import customBlocks from './customBlocks/cdoBlockly/index.js';
-import {parseElement as parseXmlElement} from '../xml';
 import {getStore} from '@cdo/apps/redux';
 import {
   setFailedToGenerateCode,
   setHasIncompatibleSources,
 } from '@cdo/apps/redux/blockly';
+
 import * as blockUtils from '../block_utils';
+import {parseElement as parseXmlElement} from '../xml';
+
+import customBlocks from './customBlocks/cdoBlockly/index.js';
 import {
   INFINITE_LOOP_TRAP,
   LOOP_HIGHLIGHT,
   handleCodeGenerationFailure,
   strip,
 } from './utils';
-import {MetricEvent} from '@cdo/apps/lib/metrics/events';
 
 /**
  * Wrapper class for https://github.com/code-dot-org/blockly
@@ -348,6 +350,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
     },
     processToolboxXml(toolbox) {
       return toolbox;
+    },
+    highlightBlock(id, spotlight) {
+      Blockly.mainBlockSpace.highlightBlock(id, spotlight);
     },
   };
   blocklyWrapper.customBlocks = customBlocks;

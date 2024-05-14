@@ -1,14 +1,16 @@
 /**
  * An ordered set of progress bubbles.
  */
-import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import ProgressBubble from './ProgressBubble';
-import color from '@cdo/apps/util/color';
-import {levelWithProgressType} from './progressTypes';
-import {DOT_SIZE, DIAMOND_DOT_SIZE} from './progressStyles';
+import React from 'react';
 import {connect} from 'react-redux';
+
+import color from '@cdo/apps/util/color';
+
+import ProgressBubble from './ProgressBubble';
+import {DOT_SIZE, DIAMOND_DOT_SIZE} from './progressStyles';
+import {levelWithProgressType} from './progressTypes';
 
 // Deprecated in favor of ProgressTableDetailCell
 // component will be removed as part of https://codedotorg.atlassian.net/browse/LP-1606

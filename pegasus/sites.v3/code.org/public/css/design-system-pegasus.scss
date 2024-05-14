@@ -939,110 +939,6 @@ form {
   }
 }
 
-// Carousels
-// Uses the carouFredSel jQuery plugin: https://github.com/nzy/carouFredSel
-.carousel-wrapper {
-  margin: 2rem 0 0;
-
-  @media screen and (max-width: $width-sm) {
-    padding-bottom: 1rem;
-  }
-
-  // Carousel with prev and next button navigation
-  button.carousel__prev,
-  button.carousel__next {
-    display: none !important;
-  }
-
-  @media screen and (min-width: 1280px) {
-    button.carousel__prev {
-      position: absolute;
-      left: -3.5rem;
-    }
-
-    button.carousel__next {
-      position: absolute;
-      right: -3.5rem;
-    }
-
-    button.carousel__prev,
-    button.carousel__next {
-      display: block !important;
-      top: calc(50% - 50px);
-      background: none;
-      border: none;
-      transform: translateY(-50%);
-      transition: 0.3s;
-      padding: 0;
-      width: 1.75rem;
-
-      &:hover {
-        background: none;
-        opacity: 0.8;
-      }
-
-      img {
-        width: 100%;
-      }
-    }
-  }
-
-  // Set a min-height inline on the .carousel div
-  // inside .carousel-wrapper to account for varying
-  // quote lengths and prevent vertical height changes
-  .carousel {
-    overflow: hidden;
-
-    @media screen and (max-width: $width-md) {
-      height: unset !important;
-      overflow: unset;
-    }
-  }
-
-  // The plugin we're using disappears when <html dir="rtl">
-  // - updating the inset value fixes it; it does remove the swiping
-  // animation between slides on desktop, but keeps the content
-  .slides.rtl {
-    inset: 0 !important;
-  }
-
-  .pagination {
-    margin: 1rem 0 0 0;
-
-    @media screen and (max-width: $width-sm) {
-      margin-top: 3rem;
-    }
-
-    &.left-align {
-      text-align: left;
-
-      @media screen and (max-width: $width-md) {
-        text-align: center;
-      }
-
-      a:first-child {
-        margin-left: 0;
-      }
-    }
-
-    a {
-      background: var(--brand_primary_light);
-
-      &.selected {
-        background: var(--brand_primary_default);
-      }
-
-      &:focus {
-        @include focus-outline;
-
-        &:not(:focus-visible) {
-          outline: none;
-        }
-      }
-    }
-  }
-}
-
 // Quotes carousel
 // See code.org/educate/professional-learning/middle-high
 // and /views/pl_middle_high_carousel.haml for an example
@@ -1061,10 +957,10 @@ form {
     }
   }
 
+  // Has an image on each slide
+  // See code.org/ai for an example
   .carousel-wrapper {
     .with-image {
-      display: flex;
-      justify-content: space-between;
       align-items: center;
 
       @media screen and (max-width: $width-sm) {
@@ -1075,14 +971,9 @@ form {
       img {
         width: 150px;
         height: 150px;
-        margin-right: 3rem;
 
-        @media screen and (max-width: $width-md) {
-          display: block;
-        }
-
-        @media screen and (max-width: $width-sm) {
-          margin-right: 0;
+        @media (min-width: $width-sm) {
+          margin-inline-end: 3rem;
         }
       }
     }
@@ -1115,58 +1006,6 @@ form {
     span {
       color: var(--brand_accent_default);
       margin: 0 2px;
-    }
-  }
-}
-
-// Photo slideshow carousel
-// See code.org/educate/professional-learning/middle-high
-// and /views/pl_middle_high_carousel.haml for an example
-.photo-carousel-wrapper {
-  .with-image {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 5rem;
-
-    @media screen and (max-width: $width-md) {
-      gap: 3rem;
-    }
-
-    @media screen and (max-width: $width-sm) {
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    img {
-      width: 450px;
-      height: auto;
-      border-radius: 1rem;
-
-      @media screen and (max-width: $width-md) {
-        width: 300px;
-      }
-
-      @media screen and (max-width: $width-sm) {
-        width: 100%;
-      }
-    }
-  }
-
-  p {
-    font-size: 1.25rem;
-
-    @media screen and (max-width: $width-md) {
-      margin-bottom: 1rem;
-    }
-  }
-
-  .pagination {
-    margin-top: 2rem;
-
-    @media screen and (max-width: $width-md) {
-      margin-top: 3rem;
     }
   }
 }

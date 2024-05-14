@@ -2188,6 +2188,7 @@ sk-SK:
   user_header_applab: 'App Lab '
   user_header_artist: 'Umelec '
   user_header_create: 'Vytvoriť '
+  user_header_create_account: Vytvoriť účet
   user_header_dance: Tanečná Párty
   user_header_flappy: Flappy
   user_header_gamelab: Game Lab
@@ -2195,6 +2196,7 @@ sk-SK:
   user_header_logout: Odhlásiť sa
   user_header_minecraft: Minecraft
   user_header_my_projects: Moje projekty
+  user_header_new_project: Nový projekt
   user_header_playlab: Play Lab
   user_header_settings: Nastavenia účtu
   user_header_signin: Prihlásiť sa

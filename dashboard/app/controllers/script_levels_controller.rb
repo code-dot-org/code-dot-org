@@ -219,7 +219,7 @@ class ScriptLevelsController < ApplicationController
     @script_level = ScriptLevelsController.get_script_level(@script, params)
     raise ActiveRecord::RecordNotFound unless @script_level
 
-    @level = @script_level.level
+    @level = select_level
 
     render json: @level.summarize_for_lab2_properties(@script)
   end

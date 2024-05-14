@@ -35,6 +35,7 @@ const EVENTS = {
   // Child Account Policy
   CAP_STATE_FORM_SHOW: 'CAP State Form Shown',
   CAP_STATE_FORM_PROVIDED: 'CAP State Form Submitted',
+  CAP_STATE_FORM_DISMISSED: 'CAP State Form Sign Out Button Clicked',
 
   // School Selection Component
   COUNTRY_SELECTED: 'User Selects Country',
@@ -109,6 +110,11 @@ const EVENTS = {
   PROGRESS_V2_COLLAPSE_ICON_KEY: 'Section New Progress Icon Key Collapse',
   PROGRESS_V2_VIEW_MORE_DETAILS: 'Section New Progress More Details',
   PROGRESS_V2_VIEW_LEVEL_DETAILS: 'Section New Progress Level Details',
+  PROGRESS_V2_ACCEPT_INVITATION: 'Section Progress Invitation Modal Accept',
+  PROGRESS_V2_DISMISS_INVITATION: 'Section Progress Invitation Modal Dismiss',
+  PROGRESS_V2_DELAY_INVITATION:
+    'Section Progress Invitation Modal Remind Later',
+  PROGRESS_V2_SEEN_INVITATION: 'Section Progress Invitation Modal seen by user',
 
   // Levels
   FEEDBACK_SUBMITTED: 'Level Feedback Submitted',
@@ -167,6 +173,8 @@ const EVENTS = {
   TA_RUBRIC_TOUR_BACK: 'TA Rubric product tour back button clicked',
   TA_RUBRIC_TOUR_CLOSED: 'TA Rubric product tour closed',
   TA_RUBRIC_TOUR_COMPLETE: 'User viewed all of TA Rubric product tour',
+  TA_RUBRIC_EVIDENCE_TOOLTIP_HOVERED: 'TA Rubric Evidence Tooltip Hovered',
+  TA_RUBRIC_EVIDENCE_GOTO_CLICKED: 'TA Rubric Evidence Line Number Clicked',
 
   // AI Tutor
   AI_TUTOR_PANEL_OPENED: 'AI Tutor Panel Opened',
@@ -267,6 +275,13 @@ const EVENTS = {
   CHAT_ACTION: 'Student takes a chat action',
   SAVE_MODEL_CARD_INFO: 'Student saves their model card info',
   PUBLISH_MODEL_CARD_INFO: 'Student publishes their model card info',
+
+  // CPA
+  CPA_PARENT_EMAIL_MODAL_SHOWN: 'cpa_parent_email_modal_shown',
+  CPA_PARENT_EMAIL_MODAL_SUBMITTED: 'cpa_parent_email_modal_submitted',
+  CPA_PARENT_EMAIL_MODAL_UPDATED: 'cpa_parent_email_modal_updated',
+  CPA_PARENT_EMAIL_MODAL_RESEND: 'cpa_parent_email_modal_resend',
+  CPA_PARENT_EMAIL_MODAL_CLOSED: 'cpa_parent_email_modal_closed',
 };
 
 const EVENT_GROUP_NAMES = {
