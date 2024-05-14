@@ -356,6 +356,7 @@
   call_to_action_focus_on_topic: "Focus on a topic"
   call_to_action_teach_full_intro_course: "Teach a full intro course"
   call_to_action_see_module_details: "See module details"
+  call_to_action_start_module: "Start module"
   call_to_action_start_modules: "Start modules"
   call_to_action_see_course_details: "See course details"
   call_to_action_see_lesson_details: "See lesson details"
