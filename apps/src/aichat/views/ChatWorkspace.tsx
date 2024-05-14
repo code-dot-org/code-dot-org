@@ -24,6 +24,13 @@ const ChatWorkspace: React.FunctionComponent = () => {
   const storedMessagesPast = useSelector(
     (state: {aichat: AichatState}) => state.aichat.chatMessagesPast
   );
+  const pendingMessage = useSelector(
+    (state: {aichat: AichatState}) => state.aichat.chatMessagePending
+  );
+  const messages = [...storedMessagesPast, ...storedMessagesCurrent];
+  if (pendingMessage) {
+    messages.push(pendingMessage);
+  }
 
   const isWaitingForChatResponse = useSelector(
     (state: {aichat: AichatState}) => state.aichat.isWaitingForChatResponse
@@ -72,11 +79,9 @@ const ChatWorkspace: React.FunctionComponent = () => {
         className={moduleStyles.conversationArea}
         ref={conversationContainerRef}
       >
-        {[...storedMessagesPast, ...storedMessagesCurrent].map(
-          (message, index) => (
-            <ChatMessage message={message} key={index} />
-          )
-        )}
+        {messages.map((message, index) => (
+          <ChatMessage message={message} key={index} />
+        ))}
         {showWaitingAnimation()}
       </div>
       <UserChatMessageEditor />

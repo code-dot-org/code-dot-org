@@ -28,10 +28,9 @@ export async function postAichatCompletionMessage(
     retrievalContexts: aiCustomizations.retrievalContexts,
     systemPrompt: aiCustomizations.systemPrompt,
   };
-  const storedMessages = formatMessagesForAichatCompletion(messagesToSend);
   const payload = {
     newMessage,
-    storedMessages,
+    storedMessages: messagesToSend,
     aichatModelCustomizations,
     aichatContext,
     ...(sessionId ? {sessionId} : {}),
@@ -57,12 +56,6 @@ export async function postAichatCompletionMessage(
       .logError('Error in aichat completion request', error as Error);
   }
 }
-
-const formatMessagesForAichatCompletion = (
-  chatMessages: ChatCompletionMessage[]
-): ChatCompletionMessage[] => {
-  return chatMessages;
-};
 
 type AichatCompletionMessage = {
   role: Role;

@@ -75,6 +75,7 @@ export interface AichatState {
   // Messages will be logged and stored.
   chatMessagesPast: ChatCompletionMessage[];
   chatMessagesCurrent: ChatCompletionMessage[];
+  chatMessagePending?: ChatCompletionMessage;
   // Denotes whether we are waiting for a chat completion response from the backend
   isWaitingForChatResponse: boolean;
   // Denotes whether we should show the warning modal
@@ -91,6 +92,7 @@ export interface AichatState {
 const initialState: AichatState = {
   chatMessagesPast: [],
   chatMessagesCurrent: [],
+  chatMessagePending: undefined,
   isWaitingForChatResponse: false,
   showWarningModal: true,
   chatMessageError: false,
@@ -276,7 +278,7 @@ export const submitChatContents = createAsyncThunk(
       chatMessageText: newUserMessageText,
       timestamp: getCurrentTimestamp(),
     };
-    thunkAPI.dispatch(addChatMessage(newMessage));
+    thunkAPI.dispatch(setChatMessagePending(newMessage));
 
     // Post user content and messages to backend and retrieve assistant response.
     const startTime = Date.now();
@@ -300,7 +302,10 @@ export const submitChatContents = createAsyncThunk(
       thunkAPI.dispatch(setChatSessionId(chatApiResponse.session_id));
     }
 
-    thunkAPI.dispatch(setChatMessages(chatApiResponse?.messages));
+    thunkAPI.dispatch(clearChatMessagePending());
+    chatApiResponse?.messages.forEach((message: ChatCompletionMessage) =>
+      thunkAPI.dispatch(addChatMessage(message))
+    );
   }
 );
 
@@ -352,6 +357,13 @@ const aichatSlice = createSlice({
     ) => {
       state.chatMessagesCurrent = action.payload;
     },
+    setChatMessagePending: (
+      state,
+      action: PayloadAction<ChatCompletionMessage>
+    ) => {
+      state.chatMessagePending = action.payload;
+    },
+    clearChatMessagePending: state => (state.chatMessagePending = undefined),
     setNewChatSession: state => {
       state.chatMessagesPast.push(...state.chatMessagesCurrent);
       state.chatMessagesCurrent = [];
@@ -507,7 +519,9 @@ export const {
   setNewChatSession,
   setChatSessionId,
   setChatMessages,
+  setChatMessagePending,
   clearChatMessages,
+  clearChatMessagePending,
   setIsWaitingForChatResponse,
   setShowWarningModal,
   updateUserChatMessageStatus,

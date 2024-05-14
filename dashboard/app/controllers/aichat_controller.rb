@@ -24,7 +24,7 @@ class AichatController < ApplicationController
       return render(
         status: :ok,
         json: {
-          messages: params[:storedMessages] + [updated_message],
+          messages: [updated_message],
           flagged_content: filter_result.content,
           session_id: session_id
         }
@@ -67,7 +67,7 @@ class AichatController < ApplicationController
       return render(
         status: :ok,
         json: {
-          messages: params[:storedMessages] + new_messages,
+          messages: new_messages,
           session_id: session_id
         }
       )
@@ -82,7 +82,6 @@ class AichatController < ApplicationController
     }
 
     messages = [
-      *params[:storedMessages],
       ok_user_message,
       assistant_message
     ]
