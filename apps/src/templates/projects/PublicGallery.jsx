@@ -1,10 +1,13 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import _ from 'lodash';
 import {connect} from 'react-redux';
+
 import i18n from '@cdo/locale';
-import ProjectCardGrid from './ProjectCardGrid';
+
 import Button from '../Button';
+
+import ProjectCardGrid from './ProjectCardGrid';
 import {publishedFeaturedProjectPropType} from './projectConstants';
 
 class PublicGallery extends Component {

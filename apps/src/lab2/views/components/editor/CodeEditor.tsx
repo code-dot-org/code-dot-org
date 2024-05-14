@@ -2,7 +2,6 @@ import React, {useEffect, useRef, useState} from 'react';
 import classNames from 'classnames';
 import {EditorState, Extension} from '@codemirror/state';
 import {EditorView, ViewUpdate} from '@codemirror/view';
-import PanelContainer from '../PanelContainer';
 import {useDispatch} from 'react-redux';
 import {editorConfig} from './editorConfig';
 import {darkMode as darkModeTheme} from './editorThemes';
@@ -84,9 +83,9 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   }, [startCode, editorView, channelId]);
 
   return (
-    <PanelContainer id="code-editor" headerContent="Editor" hideHeaders={false}>
-      <div ref={editorRef} className={classNames('codemirror-container')} />
-    </PanelContainer>
+    <div id="code-editor">
+      <div ref={editorRef} className={classNames('codemirror-container')} />;
+    </div>
   );
 };
 

@@ -1,8 +1,8 @@
 /** @file font-awesome helper component. */
 
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import _ from 'lodash';
 
 /**
  * Given an icon name, render the icon using an <i> tag in typical font-awesome

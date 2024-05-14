@@ -36,6 +36,14 @@ function InviteToV2ProgressModal({
   const [invitationOpen, setInvitationOpen] = React.useState(false);
 
   React.useEffect(() => {
+    if (
+      dateProgressTableInvitationDelayed === undefined ||
+      hasSeenProgressTableInvite === undefined
+    ) {
+      // Do not proceed if data has not been fully loaded.
+      return;
+    }
+
     const numDaysSinceInvitationLastDelayed = () => {
       const startingDate = new Date(dateProgressTableInvitationDelayed);
       const today = new Date();

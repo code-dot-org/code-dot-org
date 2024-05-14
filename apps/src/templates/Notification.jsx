@@ -1,14 +1,17 @@
-import React, {useState} from 'react';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
+import React, {useState} from 'react';
 import {connect} from 'react-redux';
 import ReactTooltip from 'react-tooltip';
-import _ from 'lodash';
-import color from '@cdo/apps/util/color';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import Button from './Button';
-import trackEvent from '../util/trackEvent';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+
 import fontConstants from '@cdo/apps/fontConstants';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import color from '@cdo/apps/util/color';
+
+import trackEvent from '../util/trackEvent';
+
+import Button from './Button';
 
 export const NotificationType = {
   information: 'information',

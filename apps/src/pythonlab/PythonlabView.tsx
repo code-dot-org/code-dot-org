@@ -2,7 +2,6 @@
 import React, {useState} from 'react';
 import moduleStyles from './pythonlab-view.module.scss';
 import {ConfigType} from '@codebridge/types';
-import {Editor} from '@codebridge/Editor';
 import {LanguageSupport} from '@codemirror/language';
 import {python} from '@codemirror/lang-python';
 import {Codebridge} from '@codebridge/Codebridge';
@@ -40,7 +39,8 @@ const defaultProject: ProjectSources = {
 
 const defaultConfig: ConfigType = {
   activeLeftNav: 'Files',
-  EditorComponent: () => Editor(pythonlabLangMapping, ['py', 'csv', 'txt']),
+  languageMapping: pythonlabLangMapping,
+  editableFileTypes: ['py', 'csv', 'txt'],
   leftNav: [
     {
       icon: 'fa-square-check',
@@ -70,15 +70,15 @@ const defaultConfig: ConfigType = {
   gridLayoutRows: '32px 232px auto',
   gridLayoutColumns: '300px auto',
   gridLayout: `
-    "instructions file-tabs"
-    "instructions editor"
-    "file-browser editor"
+    "instructions workspace"
+    "instructions workspace"
+    "file-browser workspace"
   `,
 };
 
 const PythonlabView: React.FunctionComponent = () => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const {source, setSource} = useSource(defaultProject);
+  const {source, setSource, resetToStartSource} = useSource(defaultProject);
 
   return (
     <div className={moduleStyles.pythonlab}>
@@ -89,6 +89,7 @@ const PythonlabView: React.FunctionComponent = () => {
             config={config}
             setProject={setSource}
             setConfig={setConfig}
+            resetProject={resetToStartSource}
           />
         )}
       </div>
