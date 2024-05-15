@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "elem-game-design",
-    "serialized_at": "2024-05-13 16:12:06 UTC",
+    "serialized_at": "2024-05-13 19:04:51 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -876,15 +876,12 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "game_design_about_events_2024"
-        ],
         "progression": "Events"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "game_design_about_events_2024"
+          "game_design_panel_events"
         ],
         "lesson.key": "Game Design",
         "lesson_group.key": "",
@@ -892,7 +889,7 @@
         "activity_section.key": "94321661-0ae5-49f7-8235-a98501da2a6a"
       },
       "level_keys": [
-        "game_design_about_events_2024"
+        "game_design_panel_events"
       ]
     },
     {
@@ -1795,9 +1792,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "game_design_about_events_2024",
+        "level.key": "game_design_panel_events",
         "script_level.level_keys": [
-          "game_design_about_events_2024"
+          "game_design_panel_events"
         ],
         "lesson.key": "Game Design",
         "lesson_group.key": "",
