@@ -417,7 +417,6 @@ class HomeControllerTest < ActionController::TestCase
     sign_in student
     Policies::ChildAccount.stubs(:show_cap_state_modal?).with(student).returns(true)
     get :home
-
     assert_select '#student-information-modal', false
   end
 
