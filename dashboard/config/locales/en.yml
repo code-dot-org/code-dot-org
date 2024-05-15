@@ -434,6 +434,7 @@ en:
       signin: 'Sign in'
       signup: 'Create an account'
       create_account: 'Create Account'
+      create_account_low_cap: 'Create account'
       already_registered: 'Already registered?'
       pair_programming: 'Pair programming'
       team: 'Team'
