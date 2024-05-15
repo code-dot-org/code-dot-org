@@ -1,4 +1,5 @@
 import {LanguageSupport} from '@codemirror/language';
+import {AnyAction, Dispatch} from 'redux';
 
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 
@@ -45,6 +46,13 @@ export type ProjectType = MultiFileSource;
 
 export type SetProjectFunction = (project: ProjectType) => void;
 export type SetConfigFunction = (project: ConfigType) => void;
+export type ResetProjectFunction = () => void;
+export type OnRunFunction = (
+  runTexts: boolean,
+  dispatch: Dispatch<AnyAction>,
+  permissions: string[],
+  source: MultiFileSource | undefined
+) => void;
 
 export type ReducerAction = {
   type: string;

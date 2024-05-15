@@ -1,7 +1,6 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
-const registerReducers = require('@cdo/apps/redux').registerReducers;
 
-export interface PythonlabState {
+export interface CodeBridgeConsoleState {
   output: ConsoleLog[];
 }
 
@@ -10,13 +9,13 @@ export interface ConsoleLog {
   contents: string;
 }
 
-export const initialState: PythonlabState = {
+export const initialState: CodeBridgeConsoleState = {
   output: [],
 };
 
 // SLICE
-const pythonlabSlice = createSlice({
-  name: 'pythonlab',
+const consoleSlice = createSlice({
+  name: 'codebridgeConsole',
   initialState,
   reducers: {
     appendSystemOutMessage(state, action: PayloadAction<string>) {
@@ -37,12 +36,12 @@ const pythonlabSlice = createSlice({
   },
 });
 
-registerReducers({pythonlab: pythonlabSlice.reducer});
-
 export const {
   appendSystemOutMessage,
   appendSystemInMessage,
   appendOutputImage,
   appendSystemMessage,
   resetOutput,
-} = pythonlabSlice.actions;
+} = consoleSlice.actions;
+
+export default consoleSlice.reducer;
