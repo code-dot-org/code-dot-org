@@ -58,7 +58,7 @@ Create a new Poetry HOC project: [[local_poetry_hoc]](http://localhost-studio.co
 
 
 # Music Lab
-Go to Music Lab: [[local]](http://localhost-studio.code.org:3000/projects/music/new) [[production]](https://studio.code.org/projects/music/new)
+Create a new Music Lab project: [[local]](http://localhost-studio.code.org:3000/projects/music/new) [[production]](https://studio.code.org/projects/music/new)
 - Note that functions in music lab DO NOT have svg frames - check that function call ('do something') is added to toolbox once a function is defined.
 - Check the three Play blocks which contain customized fields - fieldSounds, fieldChords, and fieldPattern.
 
