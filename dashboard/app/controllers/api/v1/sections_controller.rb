@@ -176,7 +176,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       return
     end
     render json: {
-      sections: current_user.sections_as_student.map(&:summarize_without_students),
+      sections: current_user.sections_as_student.reload.map(&:summarize_without_students),
       studentSections: current_user.sections_as_student_participant.map(&:summarize_without_students),
       plSections: current_user.sections_as_pl_participant.map(&:summarize_without_students),
       result: result
