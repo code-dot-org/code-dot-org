@@ -25,7 +25,7 @@ export const InfoPanel = React.memo(() => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const renderHeaderButton = () => {
-    return (
+    return panelOptions().length > 1 ? (
       <div>
         <Button
           icon={{
@@ -39,11 +39,11 @@ export const InfoPanel = React.memo(() => {
           size={'xs'}
         />
       </div>
-    );
+    ) : null;
   };
 
   const panelOptions = () => {
-    // For now, always show Instructions panel.
+    // For now, always include Instructions panel.
     // TODO: support hiding this panel completely if there are no instructions.
     const panelOptions = [Panels.Instructions];
     if (mapReference || referenceLinks) {
