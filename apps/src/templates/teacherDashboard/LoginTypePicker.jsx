@@ -90,9 +90,12 @@ class LoginTypePicker extends Component {
       providers && providers.includes(OAuthSectionTypes.clever);
     const hasThirdParty = withGoogle | withMicrosoft | withClever;
     const currentUser = getStore().getState().currentUser;
+    const inUSA =
+      ['US', 'RD'].includes(currentUser.countryCode) ||
+      !!currentUser.usStateCode;
     const showStudentsToSectionPermissionWarning =
+      inUSA &&
       currentUser.isTeacher &&
-      (['US'].includes(currentUser.countryCode) || !!currentUser.usStateCode) &&
       experiments.isEnabledAllowingQueryString(experiments.CPA_EXPERIENCE);
 
     const style = {
