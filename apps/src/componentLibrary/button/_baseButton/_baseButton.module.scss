@@ -129,6 +129,7 @@ a.button-secondary {
 
   &.button-black {
     border: 1px solid $light_black;
+    background-color: $light_white;
     color: $light_black;
 
     &:hover {
@@ -151,6 +152,7 @@ a.button-secondary {
 
   &.button-white {
     border: 1px solid $light_white;
+    background-color: $light_black;
     color: $light_white;
 
     &:hover {
@@ -194,6 +196,7 @@ a.button-tertiary {
   }
 
   &.button-black {
+    background-color: $light_white;
     color: $light_black;
 
     &:hover {
@@ -213,6 +216,7 @@ a.button-tertiary {
   }
 
   &.button-white {
+    background-color: $light_black;
     color: $light_white;
 
     &:hover {
