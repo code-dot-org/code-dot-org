@@ -50,10 +50,8 @@ describe('InviteToV2ProgressModal', () => {
   it('allows user to accept the invitation', () => {
     const setShowProgressTableV2Stub = sinon.stub();
     const setHasSeenProgressTableInviteStub = sinon.stub();
-    const onShowProgressTableV2ChangeStub = sinon.stub();
 
     renderDefault({
-      onShowProgressTableV2Change: onShowProgressTableV2ChangeStub,
       setShowProgressTableV2: setShowProgressTableV2Stub,
       setHasSeenProgressTableInvite: setHasSeenProgressTableInviteStub,
       hasSeenProgressTableInvite: false,
@@ -67,7 +65,6 @@ describe('InviteToV2ProgressModal', () => {
     expect(setHasSeenProgressTableInviteStub).to.have.been.calledOnce;
     expect(setShowProgressTableV2Stub).to.have.been.calledOnce;
 
-    expect(onShowProgressTableV2ChangeStub).to.have.been.calledOnce;
     expect(postStub).to.have.been.calledOnce;
     expect(postStub).calledWith(
       '/api/v1/users/has_seen_progress_table_v2_invitation',
