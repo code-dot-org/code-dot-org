@@ -264,8 +264,8 @@ class ToneJSPlayer implements AudioPlayer {
     if (!library) {
       return null;
     }
+    // Schedule a callback to report the sound ID after the sound has been played.
     Transport.scheduleOnce(() => {
-      console.log('scheduleOnce callback');
       reportCallback(library.getSoundIdFromUrl(sample.sampleUrl));
     }, this.playbackTimeToTransportTime(sample.playbackPosition));
   }
