@@ -3,7 +3,7 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import ToggleSwitch from '@cdo/apps/code-studio/components/ToggleSwitch';
 import InfoHelpTip from '@cdo/apps/lib/ui/InfoHelpTip';
 import i18n from '@cdo/locale';
-import style from '@cdo/apps/templates/sectionsRefresh/sections-refresh.module.scss';
+import style from '@cdo/apps/aiTutor/views/teacherDashboard/access-controls/style.module.scss';
 import {useSelector} from 'react-redux';
 import {handleUpdateSectionAITutorEnabled} from '@cdo/apps/aiTutor/accessControlsApi';
 import {updateSectionAiTutorEnabled} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
