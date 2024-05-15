@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2024-05-13T23:21:39.000Z",
   "level_num": "custom",
@@ -19,7 +20,7 @@
     "show_type_hints": "true",
     "include_shared_functions": "true",
     "hide_custom_blocks": true,
-    "embed": "false",
+    "embed": "true",
     "instructions_important": "false",
     "submittable": "false",
     "never_autoplay_video": "false",
@@ -38,28 +39,27 @@
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
     "parent_level_id": 28361,
-    "short_instructions": "New items ",
+    "short_instructions": "It's time to sort!",
     "mini_rubric": "false",
-    "long_instructions": "**Click Run. Then click and drag each item into a box.**\r\n\r\n\r\n\r\n",
+    "long_instructions": "**Click Run. Then click and drag the items on screen.**\r\n\r\n<img src=\"\" width=30% style=\"float:right\" >\r\n\r\n<br>\r\n\r\n<div style=\"margin-right: 200px\">\r\n\r\n1. Start by choosing a spot on the horizontal axis from **Sad** to **Happy**. \r\n2. Then, move the food up the vertical axis based on how much you like it from **Black and white** to **Rainbow**\r\n</div>",
     "encrypted": "false",
     "auto_run_setup": "DRAW_LOOP",
     "encrypted_examples": "tGFXRCNeWDteZg5u4M4A1KCdvfpeYyQH41d7WkgAIFioUX0eyiXX4QwJs1oy\nqrOki4I9UPG8Dyzh1PRFgln4Gpco4MT+RjJ2crhcGYfzj6hKvZV9PgCIQO0M\nrNGbWavp8GvlC52njY848WC0vWZYjg==\n",
     "name_suffix": "_2021",
     "hint_prompt_attempts_threshold": "1",
-    "validation_enabled": "true",
+    "validation_enabled": "false",
     "mini_toolbox": "false",
     "hide_pause_button": "false",
     "instructions_icon": "emoji",
-    "start_animations": "{\"orderedKeys\":[\"b229aab6-4c09-46fe-960f-b9b77c33b372\",\"745b1c2d-f16c-4cff-952c-f8ae61177f30\",\"2aed2173-1a7d-4844-9e74-2a4e3a872bc7\",\"566de584-f616-4b43-8e28-887c826fbe67\",\"32349b83-71ee-4cb7-995a-7cc831c61ddf\",\"f2c08c54-b469-462b-883c-6cc2d213ac8d\",\"1f7de583-7671-46de-abf8-ec18eab2be80\",\"af18bfe1-2de7-4fe7-9077-86775152613f\",\"e48565e6-f0d9-40bc-8666-dd70d332d968\",\"0e2fc994-5f67-4a23-9fa4-46883c16415d\",\"6c4a7c26-c39f-4add-89f8-fe495687524f\",\"13a4981f-6c02-4a4d-9bb9-ae36d9148c96\"],\"propsByKey\":{\"b229aab6-4c09-46fe-960f-b9b77c33b372\":{\"name\":\"emoji-cold\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-05-13T23:17:09.000Z\",\"pngLastModified\":\"2024-05-13T23:17:09.000Z\",\"version\":\"TnuiGKDXfvX8weG1NR9sBxcImfCoWkpY\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/TnuiGKDXfvX8weG1NR9sBxcImfCoWkpY/emoji-cold.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"745b1c2d-f16c-4cff-952c-f8ae61177f30\":{\"name\":\"emoji-disco\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-05-13T23:17:38.000Z\",\"pngLastModified\":\"2024-05-13T23:17:33.000Z\",\"version\":\"4OdiKmyetVY4iN92Jv83VrMyF.Cs8AAv\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/4OdiKmyetVY4iN92Jv83VrMyF.Cs8AAv/emoji-disco.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"2aed2173-1a7d-4844-9e74-2a4e3a872bc7\":{\"name\":\"emoji-explode\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-05-13T23:18:04.000Z\",\"pngLastModified\":\"2024-05-13T23:18:04.000Z\",\"version\":\"J0Ryc8HpEDMJKf4eocwkj5k_xcc1hEE8\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/J0Ryc8HpEDMJKf4eocwkj5k_xcc1hEE8/emoji-explode.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"566de584-f616-4b43-8e28-887c826fbe67\":{\"name\":\"emoji-eyes\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-05-13T23:18:24.000Z\",\"pngLastModified\":\"2024-05-13T23:18:24.000Z\",\"version\":\"KWkq6ycU6cL_gnd58isPjyeMPNFvSYb1\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/KWkq6ycU6cL_gnd58isPjyeMPNFvSYb1/emoji-eyes.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"32349b83-71ee-4cb7-995a-7cc831c61ddf\":{\"name\":\"emoji-fire\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-05-13T23:18:46.000Z\",\"pngLastModified\":\"2024-05-13T23:18:46.000Z\",\"version\":\"hFF.FXFaSXHb.myvd9Zw1ooFoaZEB4Hh\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/hFF.FXFaSXHb.myvd9Zw1ooFoaZEB4Hh/emoji-fire.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"f2c08c54-b469-462b-883c-6cc2d213ac8d\":{\"name\":\"emoji-flag\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-05-13T23:19:03.000Z\",\"pngLastModified\":\"2024-05-13T23:19:02.000Z\",\"version\":\"24mdvdm5YPBvQYvfIeyBnjsAoOJLEb4I\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/24mdvdm5YPBvQYvfIeyBnjsAoOJLEb4I/emoji-flag.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"1f7de583-7671-46de-abf8-ec18eab2be80\":{\"name\":\"emoji-happy\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-05-13T23:19:20.000Z\",\"pngLastModified\":\"2024-05-13T23:19:20.000Z\",\"version\":\"Qqu5SGjfjqVMEBhBgfZ2d.PlL5muePwL\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/Qqu5SGjfjqVMEBhBgfZ2d.PlL5muePwL/emoji-happy.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"af18bfe1-2de7-4fe7-9077-86775152613f\":{\"name\":\"emoji-loved\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-05-13T23:19:36.000Z\",\"pngLastModified\":\"2024-05-13T23:19:36.000Z\",\"version\":\"wXDg6Sybgm35qx_j62znfyE4OROX0wMI\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/wXDg6Sybgm35qx_j62znfyE4OROX0wMI/emoji-loved.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"e48565e6-f0d9-40bc-8666-dd70d332d968\":{\"name\":\"emoji-paint\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-05-13T23:19:57.000Z\",\"pngLastModified\":\"2024-05-13T23:19:57.000Z\",\"version\":\"UJ1hS78Qc22DT1SYXIIvGUNYKdLsfp2q\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/UJ1hS78Qc22DT1SYXIIvGUNYKdLsfp2q/emoji-paint.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"0e2fc994-5f67-4a23-9fa4-46883c16415d\":{\"name\":\"emoji-poop\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-05-13T23:20:21.000Z\",\"pngLastModified\":\"2024-05-13T23:20:20.000Z\",\"version\":\"H6rGm0Le0dqp6HRIkxE6Vh3wOzFvfPmj\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/H6rGm0Le0dqp6HRIkxE6Vh3wOzFvfPmj/emoji-poop.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"6c4a7c26-c39f-4add-89f8-fe495687524f\":{\"name\":\"emoji-rainbow\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-05-13T23:20:35.000Z\",\"pngLastModified\":\"2024-05-13T23:20:34.000Z\",\"version\":\"hw_VzJKSdMnM0Yb1ADQCxETAPTPff0tz\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/hw_VzJKSdMnM0Yb1ADQCxETAPTPff0tz/emoji-rainbow.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"13a4981f-6c02-4a4d-9bb9-ae36d9148c96\":{\"name\":\"emoji-swirleyes\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-05-13T23:20:55.000Z\",\"pngLastModified\":\"2024-05-13T23:20:54.000Z\",\"version\":\"ZxOi_Bx41zQtTSPeI9d8bBJaZWRpzOkJ\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/ZxOi_Bx41zQtTSPeI9d8bBJaZWRpzOkJ/emoji-swirleyes.png\",\"sourceSize\":{\"x\":400,\"y\":400}}}}",
+    "start_animations": "                {\r\n  \"orderedKeys\": [\r\n    \"b229aab6-4c09-46fe-960f-b9b77c33b372\",\r\n    \"745b1c2d-f16c-4cff-952c-f8ae61177f30\",\r\n    \"2aed2173-1a7d-4844-9e74-2a4e3a872bc7\",\r\n    \"566de584-f616-4b43-8e28-887c826fbe67\",\r\n    \"32349b83-71ee-4cb7-995a-7cc831c61ddf\",\r\n    \"f2c08c54-b469-462b-883c-6cc2d213ac8d\",\r\n    \"1f7de583-7671-46de-abf8-ec18eab2be80\",\r\n    \"af18bfe1-2de7-4fe7-9077-86775152613f\",\r\n    \"e48565e6-f0d9-40bc-8666-dd70d332d968\",\r\n    \"0e2fc994-5f67-4a23-9fa4-46883c16415d\",\r\n    \"6c4a7c26-c39f-4add-89f8-fe495687524f\",\r\n    \"13a4981f-6c02-4a4d-9bb9-ae36d9148c96\",\r\n    \"b7b9b246-f75f-4cf4-99d1-35c68948cce1\",\r\n    \"15622c98-db3b-4a51-911b-4dac9007fa7f\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"b229aab6-4c09-46fe-960f-b9b77c33b372\": {\r\n      \"name\": \"emoji-cold\",\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"categories\": [\r\n        \"\"\r\n      ],\r\n      \"jsonLastModified\": \"2024-05-13T23:17:09.000Z\",\r\n      \"pngLastModified\": \"2024-05-13T23:17:09.000Z\",\r\n      \"version\": \"TnuiGKDXfvX8weG1NR9sBxcImfCoWkpY\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/level_animations/TnuiGKDXfvX8weG1NR9sBxcImfCoWkpY/emoji-cold.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      }\r\n    },\r\n    \"745b1c2d-f16c-4cff-952c-f8ae61177f30\": {\r\n      \"name\": \"emoji-disco\",\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"categories\": [\r\n        \"\"\r\n      ],\r\n      \"jsonLastModified\": \"2024-05-13T23:17:38.000Z\",\r\n      \"pngLastModified\": \"2024-05-13T23:17:33.000Z\",\r\n      \"version\": \"4OdiKmyetVY4iN92Jv83VrMyF.Cs8AAv\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/level_animations/4OdiKmyetVY4iN92Jv83VrMyF.Cs8AAv/emoji-disco.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      }\r\n    },\r\n    \"2aed2173-1a7d-4844-9e74-2a4e3a872bc7\": {\r\n      \"name\": \"emoji-explode\",\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"categories\": [\r\n        \"\"\r\n      ],\r\n      \"jsonLastModified\": \"2024-05-13T23:18:04.000Z\",\r\n      \"pngLastModified\": \"2024-05-13T23:18:04.000Z\",\r\n      \"version\": \"J0Ryc8HpEDMJKf4eocwkj5k_xcc1hEE8\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/level_animations/J0Ryc8HpEDMJKf4eocwkj5k_xcc1hEE8/emoji-explode.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      }\r\n    },\r\n    \"566de584-f616-4b43-8e28-887c826fbe67\": {\r\n      \"name\": \"emoji-eyes\",\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"categories\": [\r\n        \"\"\r\n      ],\r\n      \"jsonLastModified\": \"2024-05-13T23:18:24.000Z\",\r\n      \"pngLastModified\": \"2024-05-13T23:18:24.000Z\",\r\n      \"version\": \"KWkq6ycU6cL_gnd58isPjyeMPNFvSYb1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/level_animations/KWkq6ycU6cL_gnd58isPjyeMPNFvSYb1/emoji-eyes.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      }\r\n    },\r\n    \"32349b83-71ee-4cb7-995a-7cc831c61ddf\": {\r\n      \"name\": \"emoji-fire\",\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"categories\": [\r\n        \"\"\r\n      ],\r\n      \"jsonLastModified\": \"2024-05-13T23:18:46.000Z\",\r\n      \"pngLastModified\": \"2024-05-13T23:18:46.000Z\",\r\n      \"version\": \"hFF.FXFaSXHb.myvd9Zw1ooFoaZEB4Hh\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/level_animations/hFF.FXFaSXHb.myvd9Zw1ooFoaZEB4Hh/emoji-fire.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      }\r\n    },\r\n    \"f2c08c54-b469-462b-883c-6cc2d213ac8d\": {\r\n      \"name\": \"emoji-flag\",\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"categories\": [\r\n        \"\"\r\n      ],\r\n      \"jsonLastModified\": \"2024-05-13T23:19:03.000Z\",\r\n      \"pngLastModified\": \"2024-05-13T23:19:02.000Z\",\r\n      \"version\": \"24mdvdm5YPBvQYvfIeyBnjsAoOJLEb4I\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/level_animations/24mdvdm5YPBvQYvfIeyBnjsAoOJLEb4I/emoji-flag.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      }\r\n    },\r\n    \"1f7de583-7671-46de-abf8-ec18eab2be80\": {\r\n      \"name\": \"emoji-happy\",\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"categories\": [\r\n        \"\"\r\n      ],\r\n      \"jsonLastModified\": \"2024-05-13T23:19:20.000Z\",\r\n      \"pngLastModified\": \"2024-05-13T23:19:20.000Z\",\r\n      \"version\": \"Qqu5SGjfjqVMEBhBgfZ2d.PlL5muePwL\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/level_animations/Qqu5SGjfjqVMEBhBgfZ2d.PlL5muePwL/emoji-happy.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      }\r\n    },\r\n    \"af18bfe1-2de7-4fe7-9077-86775152613f\": {\r\n      \"name\": \"emoji-loved\",\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"categories\": [\r\n        \"\"\r\n      ],\r\n      \"jsonLastModified\": \"2024-05-13T23:19:36.000Z\",\r\n      \"pngLastModified\": \"2024-05-13T23:19:36.000Z\",\r\n      \"version\": \"wXDg6Sybgm35qx_j62znfyE4OROX0wMI\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/level_animations/wXDg6Sybgm35qx_j62znfyE4OROX0wMI/emoji-loved.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      }\r\n    },\r\n    \"e48565e6-f0d9-40bc-8666-dd70d332d968\": {\r\n      \"name\": \"emoji-paint\",\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"categories\": [\r\n        \"\"\r\n      ],\r\n      \"jsonLastModified\": \"2024-05-13T23:19:57.000Z\",\r\n      \"pngLastModified\": \"2024-05-13T23:19:57.000Z\",\r\n      \"version\": \"UJ1hS78Qc22DT1SYXIIvGUNYKdLsfp2q\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/level_animations/UJ1hS78Qc22DT1SYXIIvGUNYKdLsfp2q/emoji-paint.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      }\r\n    },\r\n    \"0e2fc994-5f67-4a23-9fa4-46883c16415d\": {\r\n      \"name\": \"emoji-poop\",\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"categories\": [\r\n        \"\"\r\n      ],\r\n      \"jsonLastModified\": \"2024-05-13T23:20:21.000Z\",\r\n      \"pngLastModified\": \"2024-05-13T23:20:20.000Z\",\r\n      \"version\": \"H6rGm0Le0dqp6HRIkxE6Vh3wOzFvfPmj\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/level_animations/H6rGm0Le0dqp6HRIkxE6Vh3wOzFvfPmj/emoji-poop.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      }\r\n    },\r\n    \"6c4a7c26-c39f-4add-89f8-fe495687524f\": {\r\n      \"name\": \"emoji-rainbow\",\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"categories\": [\r\n        \"\"\r\n      ],\r\n      \"jsonLastModified\": \"2024-05-13T23:20:35.000Z\",\r\n      \"pngLastModified\": \"2024-05-13T23:20:34.000Z\",\r\n      \"version\": \"hw_VzJKSdMnM0Yb1ADQCxETAPTPff0tz\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/level_animations/hw_VzJKSdMnM0Yb1ADQCxETAPTPff0tz/emoji-rainbow.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      }\r\n    },\r\n    \"13a4981f-6c02-4a4d-9bb9-ae36d9148c96\": {\r\n      \"name\": \"emoji-swirleyes\",\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"categories\": [\r\n        \"\"\r\n      ],\r\n      \"jsonLastModified\": \"2024-05-13T23:20:55.000Z\",\r\n      \"pngLastModified\": \"2024-05-13T23:20:54.000Z\",\r\n      \"version\": \"ZxOi_Bx41zQtTSPeI9d8bBJaZWRpzOkJ\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/level_animations/ZxOi_Bx41zQtTSPeI9d8bBJaZWRpzOkJ/emoji-swirleyes.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      }\r\n    },\r\n    \"b7b9b246-f75f-4cf4-99d1-35c68948cce1\": {\r\n      \"name\": \"emojifeaturevector2\",\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 800,\r\n        \"y\": 800\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ],\r\n      \"jsonLastModified\": \"2024-05-14T19:18:00.000Z\",\r\n      \"pngLastModified\": \"2024-05-14T19:17:59.000Z\",\r\n      \"version\": \"bfn6nu58gzaT1MFl0Sd54lKPVo1WWWHT\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/level_animations/bfn6nu58gzaT1MFl0Sd54lKPVo1WWWHT/emojifeaturevector2.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 800,\r\n        \"y\": 800\r\n      }\r\n    },\r\n    \"15622c98-db3b-4a51-911b-4dac9007fa7f\": {\r\n      \"name\": \"emojifeaturevector\",\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 800,\r\n        \"y\": 800\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ],\r\n      \"jsonLastModified\": \"2024-05-14T19:35:55.000Z\",\r\n      \"pngLastModified\": \"2024-05-14T19:35:55.000Z\",\r\n      \"version\": \"aiWXkpXgPuA9xstoOg0h00siSB09EKE_\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/level_animations/aiWXkpXgPuA9xstoOg0h00siSB09EKE_/emojifeaturevector.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 800,\r\n        \"y\": 800\r\n      }\r\n    }\r\n  }\r\n}\r\n                \r\n              ",
     "callout_json": "[]",
     "authored_hints": "[]",
     "skip_autosave": true,
     "standalone_app_name": "spritelab",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-05-13T23:21:39.236+00:00\",\"changed\":[\"cloned from \\\"sorting_items_new\\\"\"],\"cloned_from\":\"sorting_items_new\"},{\"changed_at\":\"2024-05-13 23:22:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-05-13 23:26:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-13T23:21:39.236+00:00\",\"changed\":[\"cloned from \\\"sorting_items_new\\\"\"],\"cloned_from\":\"sorting_items_new\"},{\"changed_at\":\"2024-05-13 23:22:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-05-13 23:26:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-05-14 18:45:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 18:48:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 18:50:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 18:54:53 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 19:19:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 19:19:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 19:37:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 19:44:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 19:44:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 19:45:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 19:46:35 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 19:46:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -69,13 +69,13 @@
         <block type="when_run" deletable="false" x="42" y="19">
           <next>
             <block type="gamelab_setBackgroundImageAs">
-              <field name="IMG">"grid"</field>
+              <field name="IMG">"emojifeaturevector"</field>
               <next>
                 <block type="gamelab_makeNewSpriteAnon">
                   <field name="ANIMATION_NAME">"emoji-cold"</field>
                   <value name="LOCATION">
                     <block type="gamelab_location_picker">
-                      <field name="LOCATION">{"x":45,"y":42}</field>
+                      <field name="LOCATION">{"x":92,"y":35}</field>
                     </block>
                   </value>
                   <next>
@@ -83,7 +83,7 @@
                       <field name="ANIMATION_NAME">"emoji-disco"</field>
                       <value name="LOCATION">
                         <block type="gamelab_location_picker">
-                          <field name="LOCATION">{"x":129,"y":37}</field>
+                          <field name="LOCATION">{"x":365,"y":35}</field>
                         </block>
                       </value>
                       <next>
@@ -91,7 +91,7 @@
                           <field name="ANIMATION_NAME">"emoji-explode"</field>
                           <value name="LOCATION">
                             <block type="gamelab_location_picker">
-                              <field name="LOCATION">{"x":215,"y":41}</field>
+                              <field name="LOCATION">{"x":129,"y":63}</field>
                             </block>
                           </value>
                           <next>
@@ -99,7 +99,7 @@
                               <field name="ANIMATION_NAME">"emoji-eyes"</field>
                               <value name="LOCATION">
                                 <block type="gamelab_location_picker">
-                                  <field name="LOCATION">{"x":300,"y":41}</field>
+                                  <field name="LOCATION">{"x":331,"y":65}</field>
                                 </block>
                               </value>
                               <next>
@@ -107,7 +107,7 @@
                                   <field name="ANIMATION_NAME">"emoji-fire"</field>
                                   <value name="LOCATION">
                                     <block type="gamelab_location_picker">
-                                      <field name="LOCATION">{"x":48,"y":123}</field>
+                                      <field name="LOCATION">{"x":224,"y":35}</field>
                                     </block>
                                   </value>
                                   <next>
@@ -115,7 +115,7 @@
                                       <field name="ANIMATION_NAME">"emoji-flag"</field>
                                       <value name="LOCATION">
                                         <block type="gamelab_location_picker">
-                                          <field name="LOCATION">{"x":131,"y":123}</field>
+                                          <field name="LOCATION">{"x":168,"y":36}</field>
                                         </block>
                                       </value>
                                       <next>
@@ -123,76 +123,46 @@
                                           <field name="ANIMATION_NAME">"emoji-happy"</field>
                                           <value name="LOCATION">
                                             <block type="gamelab_location_picker">
-                                              <field name="LOCATION">{"x":216,"y":125}</field>
+                                              <field name="LOCATION">{"x":261,"y":63}</field>
                                             </block>
                                           </value>
                                           <next>
                                             <block type="gamelab_makeNewSpriteAnon">
-                                              <field name="ANIMATION_NAME">"emoji-loved"</field>
+                                              <field name="ANIMATION_NAME">"emoji-paint"</field>
                                               <value name="LOCATION">
                                                 <block type="gamelab_location_picker">
-                                                  <field name="LOCATION">{"x":300,"y":123}</field>
+                                                  <field name="LOCATION">{"x":192,"y":63}</field>
                                                 </block>
                                               </value>
                                               <next>
                                                 <block type="gamelab_makeNewSpriteAnon">
-                                                  <field name="ANIMATION_NAME">"emoji-paint"</field>
+                                                  <field name="ANIMATION_NAME">"emoji-rainbow"</field>
                                                   <value name="LOCATION">
                                                     <block type="gamelab_location_picker">
-                                                      <field name="LOCATION">{"x":48,"y":211}</field>
+                                                      <field name="LOCATION">{"x":304,"y":35}</field>
                                                     </block>
                                                   </value>
                                                   <next>
-                                                    <block type="gamelab_makeNewSpriteAnon">
-                                                      <field name="ANIMATION_NAME">"emoji-poop"</field>
-                                                      <value name="LOCATION">
-                                                        <block type="gamelab_location_picker">
-                                                          <field name="LOCATION">{"x":129,"y":204}</field>
+                                                    <block type="gamelab_setProp">
+                                                      <field name="PROPERTY">"scale"</field>
+                                                      <value name="SPRITE">
+                                                        <block type="gamelab_getAllSprites"/>
+                                                      </value>
+                                                      <value name="VAL">
+                                                        <block type="math_number">
+                                                          <field name="NUM">40</field>
                                                         </block>
                                                       </value>
                                                       <next>
-                                                        <block type="gamelab_makeNewSpriteAnon">
-                                                          <field name="ANIMATION_NAME">"emoji-rainbow"</field>
-                                                          <value name="LOCATION">
-                                                            <block type="gamelab_location_picker">
-                                                            <field name="LOCATION">{"x":217,"y":204}</field>
-                                                            </block>
+                                                        <block type="gamelab_addBehaviorSimple">
+                                                          <value name="SPRITE">
+                                                            <block type="gamelab_getAllSprites"/>
                                                           </value>
-                                                          <next>
-                                                            <block type="gamelab_makeNewSpriteAnon">
-                                                            <field name="ANIMATION_NAME">"emoji-swirleyes"</field>
-                                                            <value name="LOCATION">
-                                                            <block type="gamelab_location_picker">
-                                                            <field name="LOCATION">{"x":301,"y":205}</field>
-                                                            </block>
-                                                            </value>
-                                                            <next>
-                                                            <block type="gamelab_setProp">
-                                                            <field name="PROPERTY">"scale"</field>
-                                                            <value name="SPRITE">
-                                                            <block type="gamelab_getAllSprites"/>
-                                                            </value>
-                                                            <value name="VAL">
-                                                            <block type="math_number">
-                                                            <field name="NUM">65</field>
-                                                            </block>
-                                                            </value>
-                                                            <next>
-                                                            <block type="gamelab_addBehaviorSimple">
-                                                            <value name="SPRITE">
-                                                            <block type="gamelab_getAllSprites"/>
-                                                            </value>
-                                                            <value name="BEHAVIOR">
+                                                          <value name="BEHAVIOR">
                                                             <block type="gamelab_playerBehaviors">
                                                             <field name="BEHAVIOR">draggable()</field>
                                                             </block>
-                                                            </value>
-                                                            </block>
-                                                            </next>
-                                                            </block>
-                                                            </next>
-                                                            </block>
-                                                          </next>
+                                                          </value>
                                                         </block>
                                                       </next>
                                                     </block>

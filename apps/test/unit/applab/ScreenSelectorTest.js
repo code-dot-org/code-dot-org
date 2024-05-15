@@ -1,7 +1,7 @@
 import {expect} from '../../util/reconfiguredChai';
 import React from 'react';
 import {Provider} from 'react-redux';
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import {
   getStore,
   registerReducers,

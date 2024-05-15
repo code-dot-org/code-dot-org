@@ -1,7 +1,7 @@
 import React from 'react';
 import {expect} from '../../util/reconfiguredChai';
 import sinon from 'sinon';
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import javalabMsg from '@cdo/javalab/locale';
 import {UnconnectedJavalabCaptchaDialog as JavalabCaptchaDialog} from '@cdo/apps/javalab/JavalabCaptchaDialog';
 import ReCaptchaDialog from '@cdo/apps/templates/ReCaptchaDialog';

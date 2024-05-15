@@ -1,7 +1,7 @@
 /** @file Test maker overlay */
 import React from 'react';
 import {expect} from '../../../../../util/deprecatedChai';
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import sinon from 'sinon';
 import {UnconnectedMakerStatusOverlay} from '@cdo/apps/lib/kits/maker/ui/MakerStatusOverlay';
 import applabI18n from '@cdo/applab/locale';
