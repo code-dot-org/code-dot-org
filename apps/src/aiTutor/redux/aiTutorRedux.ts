@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import {getChatCompletionMessage} from '@cdo/apps/aiTutor/chatApi';
 import {createSlice, PayloadAction, createAsyncThunk} from '@reduxjs/toolkit';
-import {systemPrompt as baseSystemPrompt} from '@cdo/apps/aiTutor/constants';
 import {savePromptAndResponse} from '../interactionsApi';
 import {
   Role,
@@ -20,7 +19,6 @@ export interface AITutorState {
   aiResponse: string | undefined;
   chatMessages: ChatCompletionMessage[];
   isWaitingForChatResponse: boolean;
-  chatMessageError: boolean;
   isChatOpen: boolean;
 }
 
@@ -42,7 +40,6 @@ const initialState: AITutorState = {
   aiResponse: '',
   chatMessages: initialChatMessages,
   isWaitingForChatResponse: false,
-  chatMessageError: false,
   isChatOpen: false,
 };
 
@@ -72,14 +69,7 @@ export const askAITutor = createAsyncThunk(
       scriptId: aiTutorState.aiTutor.scriptId,
     };
 
-    let systemPrompt = baseSystemPrompt;
     const levelInstructions = instructionsState.instructions.longInstructions;
-
-    if (levelInstructions.length > 0) {
-      systemPrompt +=
-        '\n Here are the student instructions for this level: ' +
-        levelInstructions;
-    }
 
     const storedMessages = aiTutorState.aiTutor.chatMessages;
     const newMessage: ChatCompletionMessage = {
@@ -91,11 +81,11 @@ export const askAITutor = createAsyncThunk(
 
     const formattedQuestion = formatQuestionForAITutor(chatContext);
     const chatApiResponse = await getChatCompletionMessage(
-      systemPrompt,
       formattedQuestion,
       storedMessages,
       levelContext.levelId,
-      chatContext.actionType
+      chatContext.actionType,
+      levelInstructions
     );
     thunkAPI.dispatch(
       updateLastChatMessage({
