@@ -72,6 +72,7 @@ describe('InviteToV2ProgressModal', () => {
       '/api/v1/users/has_seen_progress_table_v2_invitation',
       {
         has_seen_progress_table_v2_invitation: true,
+        show_progress_table_v2: true,
       }
     );
   });
@@ -93,6 +94,7 @@ describe('InviteToV2ProgressModal', () => {
       '/api/v1/users/has_seen_progress_table_v2_invitation',
       {
         has_seen_progress_table_v2_invitation: true,
+        show_progress_table_v2: false,
       }
     );
     expect(screen.queryByText(i18n.tryItNow())).to.be.null;
