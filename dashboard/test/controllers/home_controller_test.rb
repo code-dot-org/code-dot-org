@@ -413,7 +413,6 @@ class HomeControllerTest < ActionController::TestCase
     student = create :student, :clever_sso_provider
     student.update_attribute(:age, 11)
     request.env['HTTP_CLOUDFRONT_VIEWER_COUNTRY'] = 'US'
-
     sign_in student
     Policies::ChildAccount.stubs(:show_cap_state_modal?).with(student).returns(true)
     get :home
