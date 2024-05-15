@@ -1,7 +1,7 @@
 import {expect} from '../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import AssetManager from '@cdo/apps/code-studio/components/AssetManager';
 
 const DEFAULT_PROPS = {

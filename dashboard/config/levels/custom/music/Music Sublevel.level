@@ -1,0 +1,80 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2024-05-10T00:44:31.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "background": "music-black",
+    "level_data": {
+      "library": "intro2024",
+      "text": "First, please play one sound.",
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ]
+        },
+        "type": "flyout"
+      },
+      "sounds": {
+        "beats": [
+          "disco_beat",
+          "reggaeton_beat"
+        ]
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "id": "when-run-block",
+              "type": "when_run_simple2",
+              "deletable": false,
+              "movable": false,
+              "x": 34,
+              "y": 34
+            }
+          ]
+        },
+        "variables": [
+          {
+            "name": "currentTime"
+          },
+          {
+            "name": "i"
+          }
+        ]
+      }
+    },
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "validations": [
+      {
+        "conditions": [
+          {
+            "name": "played_sounds_together",
+            "value": 1
+          }
+        ],
+        "message": "Nice work.",
+        "next": true,
+        "key": "Music Sublevel_20cb71d4-b13c-4494-8ca0-a234414ec12d"
+      },
+      {
+        "message": "Please play one sound.",
+        "key": "Music Sublevel_e826dcbb-1947-42a8-b66f-aa676119b013",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2024-05-09T10:44:31.898-07:00\",\"changed\":[\"cloned from \\\"Music Level 1\\\"\"],\"cloned_from\":\"Music Level 1\"},{\"changed_at\":\"2024-05-09 10:44:35 -0700\",\"changed\":[\"level_data\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

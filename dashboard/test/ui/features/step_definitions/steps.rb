@@ -123,6 +123,10 @@ When /^I go to a new tab$/ do
   end
 end
 
+When /^I go back$/ do
+  @browser.execute_script('window.history.back();')
+end
+
 When /^I close the current tab$/ do
   @browser.close
   tabs = @browser.window_handles

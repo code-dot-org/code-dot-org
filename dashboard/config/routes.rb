@@ -271,7 +271,9 @@ Dashboard::Application.routes.draw do
 
     # Get or create a project for the given level_id. Optionally, the request
     # can include script_id to get or create a project for the level and script.
-    get "projects(/script/:script_id)/level/:level_id", to: 'projects#get_or_create_for_level'
+    # Optionally, the request can include user_id to get a project for another user,
+    # like a teacher viewing a student's work.
+    get "projects(/script/:script_id)/level/:level_id(/user/:user_id)", to: 'projects#get_or_create_for_level'
 
     post '/locale', to: 'home#set_locale', as: 'locale'
 
@@ -478,7 +480,7 @@ Dashboard::Application.routes.draw do
             get 'sublevel/:sublevel_position', to: 'script_levels#show', as: 'sublevel', format: false
             # Get the level's properties via JSON.
             # /s/xxx/lessons/yyy/levels/zzz/level_properties
-            get 'level_properties', to: 'script_levels#level_properties'
+            get '(sublevel/:sublevel_position)/level_properties', to: 'script_levels#level_properties'
           end
         end
         resources :script_levels, only: [:show], path: "/levels", format: false do

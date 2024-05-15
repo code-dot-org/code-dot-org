@@ -1,9 +1,11 @@
-import LegacyButton from './LegacyButton';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import msg from '@cdo/locale';
-import Lightbulb from './Lightbulb';
+
 import {getStore} from '@cdo/apps/redux';
+import msg from '@cdo/locale';
+
+import LegacyButton from './LegacyButton';
+import Lightbulb from './Lightbulb';
 
 export default class DialogButtons extends Component {
   static propTypes = {

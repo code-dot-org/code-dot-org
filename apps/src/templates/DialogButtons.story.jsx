@@ -1,4 +1,5 @@
 import React from 'react';
+
 import DialogButtons from './DialogButtons';
 
 export default {

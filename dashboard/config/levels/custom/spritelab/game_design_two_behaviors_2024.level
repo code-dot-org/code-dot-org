@@ -1,6 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "published": true,
   "game_id": 64,
   "created_at": "2024-05-07T21:26:46.000Z",
   "level_num": "custom",
@@ -24,7 +23,7 @@
     "encrypted": "false",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "**Set up a game of chase using behavior blocks.**\r\n\r\n1. Set the dragon sprite's behavior to `moving with arrow keys`.\r\n\r\n-  Press `Run` to get moving!",
+    "long_instructions": "**Set up a game of chase using behavior blocks.**\r\n\r\n1. Code the dragon sprites to `begin moving with arrow keys`.\r\n\r\n-  Press `Run` and use the arrows to get moving!",
     "submittable": "false",
     "hide_share_and_remix": "true",
     "never_autoplay_video": "false",
@@ -53,7 +52,8 @@
     "instructions_icon": "fox",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-07T21:26:46.105+00:00\",\"changed\":[\"cloned from \\\"game_design_two_behaviors\\\"\"],\"cloned_from\":\"game_design_two_behaviors\"},{\"changed_at\":\"2024-05-07 22:18:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-09 16:33:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-09 19:50:05 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-09 19:51:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"short_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-05-07T21:26:46.105+00:00\",\"changed\":[\"cloned from \\\"game_design_two_behaviors\\\"\"],\"cloned_from\":\"game_design_two_behaviors\"},{\"changed_at\":\"2024-05-07 22:18:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-09 16:33:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-09 19:50:05 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-09 19:51:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"short_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-10 19:58:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-13 16:52:00 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-13 16:54:08 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -62,10 +62,10 @@
       <xml xmlns="https://developers.google.com/blockly/xml">
         <block type="when_run" id="0WpyRqIux2B^Wms=lcLv" deletable="false" movable="false" editable="false" x="16" y="16">
           <next>
-            <block type="gamelab_setBackgroundImageAs" movable="false">
+            <block type="gamelab_setBackgroundImageAs" deletable="false">
               <field name="IMG">"gradient_01"</field>
               <next>
-                <block type="gamelab_makeNewSpriteAnon" movable="false">
+                <block type="gamelab_makeNewSpriteAnon" deletable="false" movable="false">
                   <field name="ANIMATION_NAME">"game_fire"</field>
                   <value name="LOCATION">
                     <block type="gamelab_location_picker" movable="false">
@@ -73,25 +73,25 @@
                     </block>
                   </value>
                   <next>
-                    <block type="gamelab_toggleBehaviorSimple" movable="false">
-                      <field name="TOGGLE">"begins"</field>
-                      <value name="SPRITE">
-                        <block type="gamelab_allSpritesWithAnimation">
-                          <field name="ANIMATION">"game_fire"</field>
-                        </block>
-                      </value>
-                      <value name="BEHAVIOR">
-                        <block type="gamelab_behavior_get" movable="false">
-                          <mutation behaviorId="wandering" name="wandering"/>
-                          <field name="NAME">wandering</field>
+                    <block type="gamelab_makeNewSpriteAnon" id="D.wB/V9`I,!x%OUC0r~d" deletable="false" movable="false">
+                      <field name="ANIMATION_NAME">"game_dragon"</field>
+                      <value name="LOCATION">
+                        <block type="gamelab_location_picker" id="_B!^#-dpOB/%aE$W/09V" movable="false">
+                          <field name="LOCATION">{"x":192,"y":347}</field>
                         </block>
                       </value>
                       <next>
-                        <block type="gamelab_makeNewSpriteAnon" id="D.wB/V9`I,!x%OUC0r~d" movable="false">
-                          <field name="ANIMATION_NAME">"game_dragon"</field>
-                          <value name="LOCATION">
-                            <block type="gamelab_location_picker" id="_B!^#-dpOB/%aE$W/09V" movable="false">
-                              <field name="LOCATION">{"x":192,"y":347}</field>
+                        <block type="gamelab_toggleBehaviorSimple" deletable="false" movable="false">
+                          <field name="TOGGLE">"begins"</field>
+                          <value name="SPRITE">
+                            <block type="gamelab_allSpritesWithAnimation">
+                              <field name="ANIMATION">"game_fire"</field>
+                            </block>
+                          </value>
+                          <value name="BEHAVIOR">
+                            <block type="gamelab_behavior_get" movable="false">
+                              <mutation behaviorId="wandering" name="wandering"/>
+                              <field name="NAME">wandering</field>
                             </block>
                           </value>
                         </block>
@@ -1223,14 +1223,6 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="gamelab_makeNewSpriteAnon" id="V-|A(r|A!%-x`fk;2urc" x="104" y="13">
-          <field name="ANIMATION_NAME">"game_dragon"</field>
-          <value name="LOCATION">
-            <block type="gamelab_location_picker" id="+,.@(#6Swh4ztV%L$6o{">
-              <field name="LOCATION">{"x":200,"y":200}</field>
-            </block>
-          </value>
-        </block>
         <block type="gamelab_toggleBehaviorSimple" id="hRWdfU%m;Xh{Q$^j;m$i" x="131" y="108">
           <field name="TOGGLE">"begins"</field>
           <value name="SPRITE">
@@ -1244,11 +1236,11 @@
             </block>
           </value>
         </block>
-        <block type="gamelab_spriteSay" id="Av.+^|l[j{:15v.p~~qV" x="31" y="228">
-          <field name="SPEECH">Catch me if you can!</field>
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" id="w7Q]*TrNRj3RsdJUgtFf">
-              <field name="ANIMATION">"game_fire"</field>
+        <block type="gamelab_makeNewSpriteAnon" id="V-|A(r|A!%-x`fk;2urc" x="302" y="196">
+          <field name="ANIMATION_NAME">"game_dragon"</field>
+          <value name="LOCATION">
+            <block type="gamelab_location_picker" id="+,.@(#6Swh4ztV%L$6o{">
+              <field name="LOCATION">{"x":200,"y":200}</field>
             </block>
           </value>
         </block>

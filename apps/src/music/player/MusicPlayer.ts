@@ -187,7 +187,11 @@ export default class MusicPlayer {
     );
   }
 
-  previewChord(chordValue: ChordEventValue, onStop?: () => void) {
+  previewChord(
+    chordValue: ChordEventValue,
+    onTick?: (tick: number) => void,
+    onStop?: () => void
+  ) {
     const chordEvent: ChordEvent = {
       type: 'chord',
       when: 1,
@@ -201,7 +205,7 @@ export default class MusicPlayer {
     if (this.audioPlayer.supportsSamplers()) {
       const sequence = this.convertChordEventToSequence(chordEvent);
       if (sequence) {
-        this.audioPlayer.playSequenceImmediately(sequence);
+        this.audioPlayer.playSequenceImmediately(sequence, onTick, onStop);
       }
     } else {
       this.audioPlayer.playSamplesImmediately(
@@ -221,7 +225,11 @@ export default class MusicPlayer {
     this.previewChord(singleNoteEvent);
   }
 
-  previewPattern(patternValue: PatternEventValue, onStop?: () => void) {
+  previewPattern(
+    patternValue: PatternEventValue,
+    onTick?: (tick: number) => void,
+    onStop?: () => void
+  ) {
     const patternEvent: PatternEvent = {
       type: 'pattern',
       when: 1,
@@ -235,7 +243,7 @@ export default class MusicPlayer {
     if (this.audioPlayer.supportsSamplers()) {
       const sequence = this.patternEventToSequence(patternEvent);
       if (sequence) {
-        this.audioPlayer.playSequenceImmediately(sequence);
+        this.audioPlayer.playSequenceImmediately(sequence, onTick, onStop);
       }
     } else {
       this.audioPlayer.playSamplesImmediately(
@@ -353,6 +361,7 @@ export default class MusicPlayer {
           effects: soundEvent.effects,
           originalBpm: soundData.bpm || DEFAULT_BPM,
           pitchShift: this.calculatePitchShift(soundData),
+          disableTempoAdjustment: soundData.type === 'preview',
         },
       ];
     } else if (event.type === 'pattern') {
@@ -550,7 +559,7 @@ export default class MusicPlayer {
   }
 
   private calculatePitchShift(soundData: SoundData) {
-    if (soundData.type === 'beat') {
+    if (['beat', 'preview'].includes(soundData.type)) {
       return 0;
     }
     const diff = this.key - (soundData.key || Key.C);
