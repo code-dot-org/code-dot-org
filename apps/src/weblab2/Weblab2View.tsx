@@ -19,18 +19,16 @@ const weblabLangMapping: {[key: string]: LanguageSupport} = {
 };
 
 const horizontalLayout = {
-  gridLayoutRows: '32px 300px auto',
+  gridLayoutRows: '300px auto',
   gridLayoutColumns: '300px auto auto',
   gridLayout: `    "instructions workspace preview-container"
-      "instructions workspace preview-container"
       "file-browser workspace preview-container"`,
 };
 
 const verticalLayout = {
-  gridLayoutRows: '32px 300px auto auto',
+  gridLayoutRows: '300px auto auto',
   gridLayoutColumns: '300px auto',
   gridLayout: `    "instructions workspace workspace"
-      "instructions workspace workspace"
       "file-browser workspace workspace"
       "file-browser preview-container preview-container"`,
 };

@@ -6,9 +6,9 @@ import {LanguageSupport} from '@codemirror/language';
 import {python} from '@codemirror/lang-python';
 import {Codebridge} from '@codebridge/Codebridge';
 import {ProjectSources} from '@cdo/apps/lab2/types';
-import PythonConsole from './PythonConsole';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
-import {useSource} from '../codebridge/hooks/useSource';
+import {useSource} from '@codebridge/hooks/useSource';
+import {handleRunClick} from './pyodideRunner';
 
 const pythonlabLangMapping: {[key: string]: LanguageSupport} = {
   py: python(),
@@ -67,12 +67,12 @@ const defaultConfig: ConfigType = {
       action: () => window.alert('You are already on the file browser'),
     },
   ],
-  gridLayoutRows: '32px 232px auto',
+  gridLayoutRows: '1fr 1fr 1fr',
   gridLayoutColumns: '300px auto',
   gridLayout: `
     "instructions workspace"
-    "instructions workspace"
     "file-browser workspace"
+    "file-browser console"
   `,
 };
 
@@ -82,21 +82,16 @@ const PythonlabView: React.FunctionComponent = () => {
 
   return (
     <div className={moduleStyles.pythonlab}>
-      <div className={moduleStyles.editor}>
-        {source && (
-          <Codebridge
-            project={source}
-            config={config}
-            setProject={setSource}
-            setConfig={setConfig}
-            resetProject={resetToStartSource}
-          />
-        )}
-      </div>
-      {/** TODO: Should the console be a part of CDOIDE? */}
-      <div className={moduleStyles.console}>
-        <PythonConsole />
-      </div>
+      {source && (
+        <Codebridge
+          project={source}
+          config={config}
+          setProject={setSource}
+          setConfig={setConfig}
+          resetProject={resetToStartSource}
+          onRun={handleRunClick}
+        />
+      )}
     </div>
   );
 };

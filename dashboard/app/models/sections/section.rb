@@ -408,6 +408,7 @@ class Section < ApplicationRecord
         participant_type: participant_type,
         sectionInstructors: serialized_section_instructors,
         sync_enabled: Policies::Lti.roster_sync_enabled?(teacher),
+        ai_tutor_enabled: ai_tutor_enabled,
       }
     end
   end
@@ -520,6 +521,7 @@ class Section < ApplicationRecord
         post_milestone_disabled: !!script && !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true),
         code_review_expires_at: code_review_expires_at,
         sync_enabled: Policies::Lti.roster_sync_enabled?(teacher),
+        ai_tutor_enabled: ai_tutor_enabled,
       }
     end
   end

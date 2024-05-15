@@ -11,7 +11,7 @@ import workshopDashboard, {
 } from '@cdo/apps/code-studio/pd/workshop_dashboard/reducers';
 import {expect} from 'chai';
 import Results from '@cdo/apps/code-studio/pd/workshop_dashboard/reports/foorm/results';
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 
 describe('Foorm Daily Survey Results', () => {
   beforeEach(() => {
