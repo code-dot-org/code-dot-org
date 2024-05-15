@@ -241,16 +241,12 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
     .sort((a, b) => moment(b.createdAt).diff(moment(a.createdAt)));
 
   if (isLoading) {
-    return (
-      <div className={interactionsStyle.interactionsElement}>
-        <Spinner />
-      </div>
-    );
+    return <Spinner />;
   }
 
   return (
-    <div className={interactionsStyle.interactionsElement}>
-      <div className={interactionsStyle.filterDropdowns}>
+    <div>
+      <div>
         <CheckboxDropdown
           allOptions={statusOptions}
           checkedOptions={selectedStatuses}
