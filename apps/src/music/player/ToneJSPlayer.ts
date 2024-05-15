@@ -25,6 +25,7 @@ import {Source, SourceOptions} from 'tone/build/esm/source/Source';
 import {BUS_EFFECT_COMBINATIONS, DEFAULT_BPM} from '../constants';
 import {Effects} from './interfaces/Effects';
 import {generateEffectsKeyString} from './utils';
+import MusicLibrary from './MusicLibrary';
 
 const EMPTY_EFFECTS_KEY = '';
 
@@ -259,6 +260,18 @@ class ToneJSPlayer implements AudioPlayer {
       .start(this.playbackTimeToTransportTime(sample.playbackPosition));
 
     this.activePlayers.push(player);
+    const library = MusicLibrary.getInstance();
+    if (!library) {
+      return null;
+    }
+    Transport.scheduleOnce(() => {
+      // this.analyticsReporter?.onSoundPlayed(sample.playbackPosition);
+      console.log('scheduleOnce callback');
+      console.log(
+        'getSoundIdFromUrl(sample.sampleUrl)',
+        library.getSoundIdFromUrl(sample.sampleUrl)
+      );
+    }, this.playbackTimeToTransportTime(sample.playbackPosition));
   }
 
   scheduleSamplerSequence({instrument, events, effects}: SamplerSequence) {

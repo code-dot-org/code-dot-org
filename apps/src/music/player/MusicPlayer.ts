@@ -285,9 +285,6 @@ export default class MusicPlayer {
   private scheduleEvents(events: PlaybackEvent[]) {
     for (const event of events) {
       if (event.type === 'sound' || !this.audioPlayer.supportsSamplers()) {
-        console.log('event in scheduleEvents', event.id);
-        // log event.id
-        this.analyticsReporter?.onSoundsPlayed(event.id);
         for (const sample of this.convertEventToSamples(event)) {
           this.audioPlayer.scheduleSample(sample);
         }

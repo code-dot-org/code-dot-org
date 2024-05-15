@@ -188,6 +188,13 @@ export default class MusicLibrary {
     return `${baseUrl}${this.libraryJson.path}/${folder.path}/${optionalSoundPath}${soundData.src}.mp3`;
   }
 
+  getSoundIdFromUrl(soundUrl: string): string {
+    const soundUrlParts = soundUrl.split('/');
+    const source = soundUrlParts[soundUrlParts.length - 1].slice(0, -4);
+    const folder = soundUrlParts[soundUrlParts.length - 2];
+    return `${folder}/${source}`;
+  }
+
   getAvailableSounds() {
     return this.getAllowedSounds().filter(
       folder =>

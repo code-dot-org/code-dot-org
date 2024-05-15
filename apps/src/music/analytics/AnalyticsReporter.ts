@@ -91,7 +91,6 @@ export default class AnalyticsReporter {
   }
 
   async startSession() {
-    console.log('startSession');
     // Capture start time before making init call
     this.sessionStartTime = Date.now();
 
@@ -230,7 +229,6 @@ export default class AnalyticsReporter {
   }
 
   endSession() {
-    console.log('endSession');
     if (!this.sessionInProgress) {
       this.log('No session in progress');
       return;
