@@ -35,6 +35,35 @@ export const handleUpdateAITutorAccess = async (
   }
 };
 
+export const handleUpdateSectionAITutorEnabled = async (
+  sectionId: number,
+  newEnabled: boolean
+) => {
+  try {
+    const response = await fetch(
+      `/api/v1/sections/${sectionId}/ai_tutor_enabled`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRF-Token': await getAuthenticityToken(),
+        },
+        body: JSON.stringify({ai_tutor_enabled: newEnabled}),
+      }
+    );
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+  } catch (error) {
+    MetricsReporter.logError({
+      event: MetricEvent.AI_TUTOR_UPDATE_SECTION_ACCESS_FAIL,
+      errorMessage: JSON.stringify(error),
+    });
+    // We need to rethrow the error so that the toggle can revert to its original state.
+    throw error;
+  }
+};
+
 // Fetch students and whether they have access to AI Tutor or not.
 export const fetchStudents = async (sectionId: number) => {
   try {
