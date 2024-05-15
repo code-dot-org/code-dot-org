@@ -1,54 +1,36 @@
+import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import {appendSystemMessage, resetOutput} from '@codebridge/redux/consoleRedux';
 import React from 'react';
-import moduleStyles from './python-console.module.scss';
 import {useDispatch} from 'react-redux';
-import {appendSystemMessage, resetOutput} from './pythonlabRedux';
+
+import {MultiFileSource} from '@cdo/apps/lab2/types';
 import Button from '@cdo/apps/templates/Button';
-import {runAllTests, runPythonCode} from './pyodideRunner';
-import {useFetch} from '@cdo/apps/util/useFetch';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {getFileByName} from '@cdo/apps/lab2/projects/utils';
-import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
-import {MultiFileSource} from '../lab2/types';
+import {useFetch} from '@cdo/apps/util/useFetch';
+
+import moduleStyles from './console.module.scss';
 
 interface PermissionResponse {
   permissions: string[];
 }
 
-const PythonConsole: React.FunctionComponent = () => {
+const Console: React.FunctionComponent = () => {
+  const {onRun} = useCodebridgeContext();
   const source = useAppSelector(
     state => state.lab2Project.projectSource?.source
   ) as MultiFileSource | undefined;
-  const codeOutput = useAppSelector(state => state.pythonlab.output);
+  const codeOutput = useAppSelector(state => state.codebridgeConsole.output);
   const {loading, data} = useFetch('/api/v1/users/current/permissions');
   const dispatch = useDispatch();
 
   const handleRun = (runTests: boolean) => {
-    const parsedData = data ? (data as PermissionResponse) : {permissions: []};
-    // For now, restrict running python code to levelbuilders.
-    if (!parsedData.permissions.includes('levelbuilder')) {
-      dispatch(
-        appendSystemMessage('You do not have permission to run python code.')
-      );
-      return;
-    }
-    if (!source) {
-      dispatch(appendSystemMessage('You have no code to run.'));
-      return;
-    }
-    if (runTests) {
-      dispatch(appendSystemMessage('Running tests...'));
-      runAllTests(source);
+    if (onRun) {
+      const parsedPermissions = data
+        ? (data as PermissionResponse)
+        : {permissions: []};
+      onRun(runTests, dispatch, parsedPermissions.permissions, source);
     } else {
-      // Run main.py
-      const code = getFileByName(source.files, MAIN_PYTHON_FILE)?.contents;
-      if (!code) {
-        dispatch(
-          appendSystemMessage(`You have no ${MAIN_PYTHON_FILE} to run.`)
-        );
-        return;
-      }
-      dispatch(appendSystemMessage('Running program...'));
-      runPythonCode(code, source);
+      dispatch(appendSystemMessage("We don't know how to run your code."));
     }
   };
 
@@ -97,4 +79,4 @@ const PythonConsole: React.FunctionComponent = () => {
   );
 };
 
-export default PythonConsole;
+export default Console;
