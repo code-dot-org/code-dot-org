@@ -1,6 +1,6 @@
 import React from 'react';
 import {expect} from '../../util/reconfiguredChai';
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import sinon from 'sinon';
 import i18n from '@cdo/javalab/locale';
 import BackpackClientApi from '@cdo/apps/code-studio/components/backpack/BackpackClientApi';

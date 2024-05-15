@@ -45,12 +45,11 @@ export const fieldSoundsDefinition = {
 export const fieldPatternDefinition = {
   type: FIELD_PATTERN_TYPE,
   name: FIELD_PATTERN_NAME,
-  getBPM: () => Globals.getPlayer().getBPM(),
   previewSound: (id, onStop) => {
     Globals.getPlayer().previewSound(id, onStop);
   },
-  previewPattern: (patternValue, onStop) => {
-    Globals.getPlayer().previewPattern(patternValue, onStop);
+  previewPattern: (patternValue, onTick, onStop) => {
+    Globals.getPlayer().previewPattern(patternValue, onTick, onStop);
   },
   currentValue: DEFAULT_PATTERN,
   ...instrumentCommonOptions,
@@ -59,8 +58,8 @@ export const fieldPatternDefinition = {
 export const fieldChordDefinition = {
   type: FIELD_CHORD_TYPE,
   name: FIELD_CHORD_NAME,
-  previewChord: (chordValue, onStop) => {
-    Globals.getPlayer().previewChord(chordValue, onStop);
+  previewChord: (chordValue, onTick, onStop) => {
+    Globals.getPlayer().previewChord(chordValue, onTick, onStop);
   },
   previewNote: (note, instrument, onStop) => {
     Globals.getPlayer().previewNote(note, instrument, onStop);
