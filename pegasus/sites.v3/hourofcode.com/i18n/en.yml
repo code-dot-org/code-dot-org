@@ -2087,6 +2087,21 @@
         title: "Try an Hour of Code"
         desc: "Looking for more short-form activities and resources for all age levels? Explore our large library of Hour of Code activities and tutorials!"
         button: "See Hour of Code activities"
+    tools_page:
+      top:
+        subheading: "Create music with code"
+        desc: "Music Lab is a programming environment where students are the producers! Using its large selection of sounds, including songs from popular artists, students work in Music Lab to create new mixes using code."
+      glance:
+        heading: "Music Lab at a glance"
+        ages: "10+"
+        level: "Beginner"
+        make: "Simple Javascript apps"
+        devices: "Laptop, Chromebook, Tablet"
+        browsers: "All modern browsers"
+        accessibility: "Text-to-speech, Closed captioning, Immersive reader"
+        teachers_guide_desc: "Check out the teacher's guide to learn how to get started, explore activity ideas, and get answers to common questions."
+      videos:
+        heading: "Videos to help you get started with Music Lab"
 
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'
