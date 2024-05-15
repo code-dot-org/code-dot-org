@@ -43,6 +43,7 @@ module TextToSpeech
   # match the expectation of the I18n gem since these locale keys are using
   # the JavaScript i18n expectations)
   VOICES = SharedConstants::VOICES.transform_keys do |locale|
+    return locale unless locale.to_s.include?('_')
     lang, country = locale.to_s.split('_')
     :"#{lang}-#{country.upcase}"
   end.freeze
