@@ -68,6 +68,7 @@ describe('InviteToV2ProgressModal', () => {
     expect(setShowProgressTableV2Stub).to.have.been.calledOnce;
 
     expect(onShowProgressTableV2ChangeStub).to.have.been.calledOnce;
+    expect(postStub).to.have.been.calledOnce;
     expect(postStub).calledWith(
       '/api/v1/users/has_seen_progress_table_v2_invitation',
       {
@@ -90,6 +91,7 @@ describe('InviteToV2ProgressModal', () => {
     fireEvent.click(xButton);
 
     expect(setHasSeenProgressTableInviteStub).to.have.been.calledOnce;
+
     expect(postStub).calledWith(
       '/api/v1/users/has_seen_progress_table_v2_invitation',
       {
