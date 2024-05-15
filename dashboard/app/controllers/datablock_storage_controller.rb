@@ -322,7 +322,11 @@ class DatablockStorageController < ApplicationController
   end
 
   private def where_table
-    DatablockStorageTable.where(project_id: @project_id, table_name: params[:table_name])
+    if params[:table_name]
+      DatablockStorageTable.where(project_id: @project_id, table_name: params[:table_name])
+    else
+      raise StudentFacingError, "You must specify a table"
+    end
   end
 
   private def table_or_create
