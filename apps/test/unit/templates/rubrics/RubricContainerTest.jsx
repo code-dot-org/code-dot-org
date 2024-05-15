@@ -1,6 +1,6 @@
 // react testing library import
 import {render, fireEvent, act, waitFor} from '@testing-library/react';
-import {mount, shallow} from 'enzyme';
+import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
 import React from 'react';
 import {Provider} from 'react-redux';

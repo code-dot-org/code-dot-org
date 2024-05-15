@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import {expect} from '../../../util/reconfiguredChai';
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import sinon from 'sinon';
 import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
 import {PoemEditor} from '@cdo/apps/p5lab/poetry/PoemSelector';
