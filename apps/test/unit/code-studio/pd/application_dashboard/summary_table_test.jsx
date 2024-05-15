@@ -1,5 +1,5 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import {assert} from 'chai';
 import {expect} from '../../../../util/reconfiguredChai';
 import {SummaryTable} from '../../../../../src/code-studio/pd/application_dashboard/summary_table';

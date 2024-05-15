@@ -1,7 +1,7 @@
 import {expect} from '../../util/reconfiguredChai';
 import sinon from 'sinon';
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import AppLabCrosshairOverlay from '@cdo/apps/applab/AppLabCrosshairOverlay';
 // ES5-style require necessary to stub gridUtils.draggedElementDropPoint
 var gridUtils = require('@cdo/apps/applab/gridUtils');

@@ -89,6 +89,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     render json: section.summarize
   end
 
+  # PATCH /api/v1/sections/<id>
   # Allows you to update a section. Clears any assigned script_id in the process
   def update
     section = Section.find(params[:id])
@@ -286,6 +287,12 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     @section.update_code_review_expiration(enable_code_review)
     @section.save
     render json: {result: 'success', expiration: @section.code_review_expires_at}
+  end
+
+  # POST /api/v1/sections/<id>/ai_tutor_enabled
+  def set_ai_tutor_enabled
+    @section.update!(ai_tutor_enabled: params[:ai_tutor_enabled])
+    render json: {result: 'success'}
   end
 
   private def find_follower
