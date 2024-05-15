@@ -33,16 +33,18 @@ module Pd
     self.use_transactional_test_case = true
 
     setup_all do
-      # create a temporary table for our DummyForm record. Note that because the
-      # table is temporary, it will be automatically destroyed once the session has
-      # ended so we don't need to worry about dropping the table in teardown
-      ActiveRecord::Base.connection.create_table(:pd_dummy_forms, temporary: true) do |t|
+      # Create a  table for our DummyForm record.
+      ActiveRecord::Base.connection.create_table(:pd_dummy_forms) do |t|
         t.integer :form_id, length: 8
         t.integer :submission_id, length: 8
         t.string :unique_key
         t.string :custom_field
         t.text :answers
       end
+    end
+
+    teardown_all do
+      ActiveRecord::Base.connection.drop_table(:pd_dummy_forms, {if_exists: true})
     end
 
     setup do
