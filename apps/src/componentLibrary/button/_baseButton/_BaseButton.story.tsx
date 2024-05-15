@@ -147,6 +147,13 @@ GroupOfColorsOf_BaseButtons.args = {
       onClick: () => null,
     },
     {
+      text: 'Button Secondary Grey',
+      color: buttonColors.grey,
+      type: 'secondary',
+      size: 'm',
+      onClick: () => null,
+    },
+    {
       text: 'Button Secondary White',
       color: buttonColors.white,
       type: 'secondary',
@@ -209,6 +216,14 @@ GroupOfColorsOf_BaseButtons.args = {
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
       color: buttonColors.black,
+      type: 'secondary',
+      isIconOnly: true,
+      size: 'm',
+      onClick: () => null,
+    },
+    {
+      icon: {iconName: 'smile', iconStyle: 'solid'},
+      color: buttonColors.grey,
       type: 'secondary',
       isIconOnly: true,
       size: 'm',

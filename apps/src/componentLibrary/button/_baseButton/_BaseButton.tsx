@@ -102,7 +102,13 @@ const checkButtonPropsForErrors = ({
   download,
   text,
   isIconOnly,
+  color,
+  type,
 }: _BaseButtonProps) => {
+  if (color === 'grey' && type !== 'secondary') {
+    throw new Error('Expect type prop to be secondary when color is grey');
+  }
+
   if (useAsLink) {
     if (!href) {
       throw new Error('Expect href prop when useAsLink is true');
@@ -169,7 +175,6 @@ const BaseButton: React.FunctionComponent<_BaseButtonProps> = ({
   disabled = false,
   isPending = false,
   ariaLabel,
-
   size = 'm',
   type = 'primary',
   color = 'purple',
@@ -225,8 +230,9 @@ const BaseButton: React.FunctionComponent<_BaseButtonProps> = ({
         download,
         text,
         isIconOnly,
+        color,
       }),
-    [type, icon, useAsLink, onClick, href, download, text, isIconOnly]
+    [type, icon, useAsLink, onClick, href, download, text, isIconOnly, color]
   );
 
   /** Handling isPending state content & spinner show logic here.
