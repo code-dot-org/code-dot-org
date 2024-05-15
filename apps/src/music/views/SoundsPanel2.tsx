@@ -252,7 +252,12 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   const currentSoundRef: React.MutableRefObject<HTMLDivElement | null> =
     useRef(null);
 
-  const isDefaultSoundSelected = currentValue === library.getDefaultSound();
+  // Capture whether the initially-selected sound is the default sound, in which
+  // case we will do a smooth scroll into view, rather than scroll directly
+  // to the current sound.
+  const isDefaultSoundSelected = useRef(
+    currentValue === library.getDefaultSound()
+  );
 
   const onModeChange = useCallback((value: Mode) => {
     setMode(value);
@@ -267,7 +272,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
     // If the user has selected a non-default sound, then jump directly to it.
     // If the default sound is selected, then the ScrollIntoView component will do
     // an initial scroll instead.
-    if (!isDefaultSoundSelected) {
+    if (!isDefaultSoundSelected.current) {
       // This timeout allows the initial scroll-to-current-selection to work
       // when wrapping the content with FocusLock.
       setTimeout(() => {
@@ -275,7 +280,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
         currentSoundRef.current?.scrollIntoView();
       }, 0);
     }
-  }, [isDefaultSoundSelected]);
+  }, []);
 
   const currentFolderRefCallback = (ref: HTMLDivElement) => {
     currentFolderRef.current = ref;
@@ -357,7 +362,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
             <ScrollIntoView
               id="sounds-panel-left"
               className={styles.leftColumn}
-              doScroll={isDefaultSoundSelected}
+              doScroll={isDefaultSoundSelected.current}
               delay={scrollIntoViewDelayFramesFolders}
               frames={scrollIntoViewFrames}
               distanceY={scrollIntoViewDistanceY}
@@ -384,7 +389,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
               styles.rightColumn,
               mode === 'sounds' && styles.rightColumnFullWidth
             )}
-            doScroll={isDefaultSoundSelected}
+            doScroll={isDefaultSoundSelected.current}
             delay={scrollIntoViewDelayFramesSounds}
             frames={scrollIntoViewFrames}
             distanceY={scrollIntoViewDistanceY}
