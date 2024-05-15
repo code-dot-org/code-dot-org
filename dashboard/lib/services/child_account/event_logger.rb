@@ -25,7 +25,11 @@ module Services
       def call
         return unless policy
 
-        CAP::UserEvent.create!(user: user, policy: policy, name: event_name)
+        # Get the value of the property before the user was last saved.
+        # This will be the current value if the value was not updated.
+        state_before = user.property_before_save('child_account_compliance_state')
+
+        CAP::UserEvent.create!(user: user, policy: policy, name: event_name, state_before: state_before, state_after: user.child_account_compliance_state)
       end
 
       private def policy

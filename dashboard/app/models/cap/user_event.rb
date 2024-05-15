@@ -36,5 +36,12 @@ module CAP
 
     validates :name, presence: true
     validates :policy, presence: true
+
+    before_save :ensure_state_is_set
+
+    private def ensure_state_is_set
+      self.state_before ||= user.child_account_compliance_state
+      self.state_after ||= user.child_account_compliance_state
+    end
   end
 end
