@@ -15,7 +15,6 @@ import teacherSections, {
   setSections,
   selectSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {expect} from '../../util/reconfiguredChai';
@@ -28,7 +27,7 @@ describe('AgeGatedStudentsModal', () => {
     sectionId: 101,
     hasEverSignedIn: true,
     dependsOnThisSectionForLogin: true,
-    loginType: 'picture',
+    loginType: 'google_oauth2',
     rowType: RowType.STUDENT,
     age: 10,
     atRiskAgeGatedStudent: true,
@@ -41,7 +40,7 @@ describe('AgeGatedStudentsModal', () => {
     id: 101,
     location: '/v2/sections/101',
     name: 'My Section',
-    login_type: SectionLoginType.picture,
+    login_type: 'google_oauth2',
     participant_type: 'student',
     grade: '2',
     code: 'PMTKVH',
