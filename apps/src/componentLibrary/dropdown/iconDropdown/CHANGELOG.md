@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.3.0]()
+* added `gray` color to `IconDropdown`
+
 ## [0.2.2](https://github.com/code-dot-org/code-dot-org/pull/58469)
 * added support of all `aria-` attributes by `IconDropdown` component
 
