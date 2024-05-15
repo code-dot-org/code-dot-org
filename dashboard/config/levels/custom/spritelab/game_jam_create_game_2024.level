@@ -75,7 +75,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-05-07T21:29:11.670+00:00\",\"changed\":[\"cloned from \\\"game_jam_create_game\\\"\"],\"cloned_from\":\"game_jam_create_game\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-07T21:29:11.670+00:00\",\"changed\":[\"cloned from \\\"game_jam_create_game\\\"\"],\"cloned_from\":\"game_jam_create_game\"},{\"changed_at\":\"2024-05-15 18:49:14 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -1319,7 +1319,8 @@
     <toolbox_blocks>
       <xml xmlns="https://developers.google.com/blockly/xml">
         <variables>
-          <variable>score</variable>
+          <variable id="ejfmTuR5RzWwoZrJjB/a">score</variable>
+          <variable id="4T(MlU%B3aqkUW.zrSzt">score2</variable>
         </variables>
         <category name="World">
           <block type="gamelab_setBackgroundImageAs" id="r(E.fkuhHSRU_ftumD*U">
@@ -1440,6 +1441,14 @@
               </block>
             </value>
           </block>
+          <block type="gamelab_mirrorSprite" id="y=@:CFj=Ro}j%y@jEuA}">
+            <field name="DIRECTION">"right"</field>
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation" id="rAG(GNMixO$=[o45yID,">
+                <field name="ANIMATION">"game_penguin"</field>
+              </block>
+            </value>
+          </block>
           <block type="gamelab_setTint" id="}hSLwYYy]vGd#m2)S~`s">
             <value name="THIS">
               <block type="gamelab_allSpritesWithAnimation" id="rnr:XzH0oXYW00KEX8gN">
@@ -1497,7 +1506,7 @@
             </value>
           </block>
           <block type="GameDev_playerJump" id="s67mUnR#LA%qC5`8+|0k">
-            <field name="STRENGTH">6.5</field>
+            <field name="STRENGTH">6</field>
           </block>
         </category>
         <category name="Events">
@@ -1549,7 +1558,7 @@
         </category>
         <category name="Variables" custom="VARIABLE">
           <block type="gamelab_showVariable" id="_2~iJ[jg7Hjp8QKvrC,w">
-            <field name="VAR">score</field>
+            <field name="VAR" id="ejfmTuR5RzWwoZrJjB/a">score</field>
             <value name="LOCATION">
               <block type="gamelab_location_picker" id="1nF~2/0Fw#i:(?/KkQ97">
                 <field name="LOCATION">{"x":200,"y":200}</field>
@@ -1557,10 +1566,10 @@
             </value>
           </block>
           <block type="gamelab_hideVariable" id="SFdrUqb*DU$JYp0iQ,z7">
-            <field name="VAR">score</field>
+            <field name="VAR" id="ejfmTuR5RzWwoZrJjB/a">score</field>
           </block>
           <block type="variables_set" id="I)lhdMV5WGSh,`TlR^yF">
-            <field name="VAR">score</field>
+            <field name="VAR" id="ejfmTuR5RzWwoZrJjB/a">score</field>
             <value name="VALUE">
               <block type="math_number" id="22)bHoex:[Gi=)vq-tcX">
                 <field name="NUM">0</field>
@@ -1568,7 +1577,7 @@
             </value>
           </block>
           <block type="math_change" id="0I1_nmfPS,Yqq?tTh;%=">
-            <field name="VAR">score</field>
+            <field name="VAR" id="ejfmTuR5RzWwoZrJjB/a">score</field>
             <value name="DELTA">
               <shadow type="math_number" id="p:f]5``s}2;CF~Sg8;`Y">
                 <field name="NUM">1</field>
@@ -1579,7 +1588,7 @@
             </value>
           </block>
           <block type="gamelab_ifVarEquals" id="^[_u*x!~G%Ss}tvJYO6M">
-            <field name="NUM">score2</field>
+            <field name="NUM" id="4T(MlU%B3aqkUW.zrSzt">score2</field>
             <value name="VAL">
               <block type="math_number" id="v)`/_rHpdLI:kG.Z[{Tg">
                 <field name="NUM">5</field>

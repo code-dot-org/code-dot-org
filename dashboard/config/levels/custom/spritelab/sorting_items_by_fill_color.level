@@ -1,7 +1,7 @@
 <GamelabJr>
   <config><![CDATA[{
   "game_id": 64,
-  "created_at": "2024-05-09T22:59:40.000Z",
+  "created_at": "2024-05-15T19:51:26.000Z",
   "level_num": "custom",
   "user_id": 833,
   "properties": {
@@ -28,7 +28,7 @@
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "use_modal_function_editor": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "disable_if_else_editing": "false",
     "free_play": "false",
     "start_in_animation_tab": "false",
@@ -40,10 +40,9 @@
     "parent_level_id": 28361,
     "short_instructions": "New items ",
     "mini_rubric": "false",
-    "long_instructions": "**Click Run. Then click and drag each item into a box.**\r\n\r\n<img src=\"https://images.code.org/69fb051968f0ad564ea17fec85b4db3f-image-1709317832722.gif\" width=30% style=\"padding-left: 100px\" >\r\n\r\n",
+    "long_instructions": "**Click Run. Then click and drag each item into a box.**\r\n\r\n<img src=\"\" width=30% style=\"padding-left: 100px\" >\r\n\r\n",
     "encrypted": "false",
     "auto_run_setup": "DRAW_LOOP",
-    "encrypted_examples": "tGFXRCNeWDteZg5u4M4A1KCdvfpeYyQH41d7WkgAIFioUX0eyiXX4QwJs1oy\nqrOki4I9UPG8Dyzh1PRFgln4Gpco4MT+RjJ2crhcGYfzj6hKvZV9PgCIQO0M\nrNGbWavp8GvlC52njY848WC0vWZYjg==\n",
     "name_suffix": "_2021",
     "hint_prompt_attempts_threshold": "1",
     "validation_enabled": "false",
@@ -59,7 +58,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-05-09T22:59:40.658+00:00\",\"changed\":[\"cloned from \\\"k5_ai_pilot_sorting_items\\\"\"],\"cloned_from\":\"k5_ai_pilot_sorting_items\"},{\"changed_at\":\"2024-05-09 23:00:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"encrypted_examples\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-05-09 23:01:36 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-05-09 23:02:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"callout_json\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-05-09 23:02:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-05-09 23:06:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-05-14 20:46:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 20:49:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 20:52:32 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 20:55:47 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:04:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:07:56 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:12:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:13:37 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:14:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:16:33 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:16:57 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:18:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:21:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-14 21:23:15 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-14 21:24:36 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-14 21:25:03 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-14 22:16:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:18:07 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:19:19 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:20:30 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:21:39 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:23:31 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:24:46 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:26:38 +0000\",\"changed\":[\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:26:51 +0000\",\"changed\":[\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:30:02 +0000\",\"changed\":[\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:31:19 +0000\",\"changed\":[\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:32:56 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:34:35 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:37:21 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:39:43 +0000\",\"changed\":[\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 16:41:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 16:41:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 16:44:35 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 16:45:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 19:16:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"free_play\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 19:21:55 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 19:24:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 19:25:36 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 19:27:04 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-15T19:51:26.049+00:00\",\"changed\":[\"cloned from \\\"sorting_items_prediction_2\\\"\"],\"cloned_from\":\"sorting_items_prediction_2\"},{\"changed_at\":\"2024-05-15 19:51:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 19:51:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 19:53:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -68,560 +67,31 @@
       <xml xmlns="https://developers.google.com/blockly/xml">
         <variables>
           <variable id="?x^U~(cTla@$I});v[2[">touchBool1</variable>
+          <variable id="=QyQ8 JA0g^_RoFHH^b=">boxOne</variable>
           <variable id="uJ4s-0_4(pl_JznGc3K`">touchBool2</variable>
-          <variable id="1;/VsVV=9mhT5Ap;/(xz">correctlySorted</variable>
+          <variable id="gS=]u|XRxKg2};05*LvR">boxTwo</variable>
           <variable id="n?o4Txsh=nU,z^j7e4?x">touchBool3</variable>
-          <variable id="[5MGQBj.wmTd1,hugh:a">boxOne</variable>
+          <variable id="/_J:cJ:33V|-/MBHd?Lj">boxThree</variable>
           <variable id="c)8KdO*;B9~k[4/mn1xU">touchBool4</variable>
-          <variable id="Mpvz^cL%/])CvWk|$+En">boxTwo</variable>
           <variable id="3MLSu#RGvY-^Spp9U3#_">touchBool5</variable>
-          <variable id="dG/wycthq4HPyln?dyYZ">boxThree</variable>
           <variable id="~rrd#)=tIEXEM|@Z3}*x">touchBool6</variable>
           <variable id="-izE0:15/$_z:jHDt`@1">touchBool7</variable>
           <variable id="wjg$u@oU8tL*=={@^sez">touchBool8</variable>
           <variable id="d6WVv9DrJrgdu*#[oKR}">touchBool9</variable>
           <variable id="^/#oNi7Szrhlm{(B#@S(">touchBool10</variable>
         </variables>
-        <block type="gamelab_everyInterval" x="410" y="17">
-          <field name="UNIT">"frames"</field>
-          <value name="N">
-            <block type="math_number">
-              <field name="NUM">5</field>
-            </block>
-          </value>
-          <next>
-            <block type="controls_if">
-              <mutation elseif="0" else="1"/>
-              <value name="IF0">
-                <block type="gamelab_isTouchingSprite">
-                  <value name="SPRITE">
-                    <block type="gamelab_allSpritesWithAnimation">
-                      <field name="ANIMATION">"circle_red"</field>
-                    </block>
-                  </value>
-                  <value name="TARGET">
-                    <block type="gamelab_allSpritesWithAnimation">
-                      <field name="ANIMATION">"card_white"</field>
-                    </block>
-                  </value>
-                </block>
-              </value>
-              <statement name="DO0">
-                <block type="variables_set">
-                  <field name="VAR" id="?x^U~(cTla@$I});v[2[">touchBool1</field>
-                  <value name="VALUE">
-                    <block type="math_number">
-                      <field name="NUM">1</field>
-                    </block>
-                  </value>
-                </block>
-              </statement>
-              <statement name="ELSE">
-                <block type="variables_set">
-                  <field name="VAR" id="?x^U~(cTla@$I});v[2[">touchBool1</field>
-                  <value name="VALUE">
-                    <block type="math_number">
-                      <field name="NUM">0</field>
-                    </block>
-                  </value>
-                </block>
-              </statement>
-              <next>
-                <block type="controls_if">
-                  <mutation elseif="0" else="1"/>
-                  <value name="IF0">
-                    <block type="gamelab_isTouchingSprite">
-                      <value name="SPRITE">
-                        <block type="gamelab_allSpritesWithAnimation">
-                          <field name="ANIMATION">"circle_red_blue_outline"</field>
-                        </block>
-                      </value>
-                      <value name="TARGET">
-                        <block type="gamelab_allSpritesWithAnimation">
-                          <field name="ANIMATION">"card_white"</field>
-                        </block>
-                      </value>
-                    </block>
-                  </value>
-                  <statement name="DO0">
-                    <block type="variables_set">
-                      <field name="VAR" id="uJ4s-0_4(pl_JznGc3K`">touchBool2</field>
-                      <value name="VALUE">
-                        <block type="math_number">
-                          <field name="NUM">1</field>
-                        </block>
-                      </value>
-                    </block>
-                  </statement>
-                  <statement name="ELSE">
-                    <block type="variables_set">
-                      <field name="VAR" id="uJ4s-0_4(pl_JznGc3K`">touchBool2</field>
-                      <value name="VALUE">
-                        <block type="math_number">
-                          <field name="NUM">0</field>
-                        </block>
-                      </value>
-                    </block>
-                  </statement>
-                  <next>
-                    <block type="controls_if">
-                      <mutation elseif="0" else="1"/>
-                      <value name="IF0">
-                        <block type="gamelab_isTouchingSprite">
-                          <value name="SPRITE">
-                            <block type="gamelab_allSpritesWithAnimation">
-                              <field name="ANIMATION">"circle_white_blue_outline"</field>
-                            </block>
-                          </value>
-                          <value name="TARGET">
-                            <block type="gamelab_allSpritesWithAnimation">
-                              <field name="ANIMATION">"card_white"</field>
-                            </block>
-                          </value>
-                        </block>
-                      </value>
-                      <statement name="DO0">
-                        <block type="variables_set">
-                          <field name="VAR" id="n?o4Txsh=nU,z^j7e4?x">touchBool3</field>
-                          <value name="VALUE">
-                            <block type="math_number">
-                              <field name="NUM">1</field>
-                            </block>
-                          </value>
-                        </block>
-                      </statement>
-                      <statement name="ELSE">
-                        <block type="variables_set">
-                          <field name="VAR" id="n?o4Txsh=nU,z^j7e4?x">touchBool3</field>
-                          <value name="VALUE">
-                            <block type="math_number">
-                              <field name="NUM">0</field>
-                            </block>
-                          </value>
-                        </block>
-                      </statement>
-                      <next>
-                        <block type="controls_if">
-                          <mutation elseif="0" else="1"/>
-                          <value name="IF0">
-                            <block type="gamelab_isTouchingSprite">
-                              <value name="SPRITE">
-                                <block type="gamelab_allSpritesWithAnimation">
-                                  <field name="ANIMATION">"circle_white_red_outline"</field>
-                                </block>
-                              </value>
-                              <value name="TARGET">
-                                <block type="gamelab_allSpritesWithAnimation">
-                                  <field name="ANIMATION">"card_white"</field>
-                                </block>
-                              </value>
-                            </block>
-                          </value>
-                          <statement name="DO0">
-                            <block type="variables_set">
-                              <field name="VAR" id="c)8KdO*;B9~k[4/mn1xU">touchBool4</field>
-                              <value name="VALUE">
-                                <block type="math_number">
-                                  <field name="NUM">1</field>
-                                </block>
-                              </value>
-                            </block>
-                          </statement>
-                          <statement name="ELSE">
-                            <block type="variables_set">
-                              <field name="VAR" id="c)8KdO*;B9~k[4/mn1xU">touchBool4</field>
-                              <value name="VALUE">
-                                <block type="math_number">
-                                  <field name="NUM">0</field>
-                                </block>
-                              </value>
-                            </block>
-                          </statement>
-                          <next>
-                            <block type="controls_if">
-                              <mutation elseif="0" else="1"/>
-                              <value name="IF0">
-                                <block type="gamelab_isTouchingSprite">
-                                  <value name="SPRITE">
-                                    <block type="gamelab_allSpritesWithAnimation">
-                                      <field name="ANIMATION">"triangle_red_black_outline"</field>
-                                    </block>
-                                  </value>
-                                  <value name="TARGET">
-                                    <block type="gamelab_allSpritesWithAnimation">
-                                      <field name="ANIMATION">"card_white_2"</field>
-                                    </block>
-                                  </value>
-                                </block>
-                              </value>
-                              <statement name="DO0">
-                                <block type="variables_set">
-                                  <field name="VAR" id="3MLSu#RGvY-^Spp9U3#_">touchBool5</field>
-                                  <value name="VALUE">
-                                    <block type="math_number">
-                                      <field name="NUM">1</field>
-                                    </block>
-                                  </value>
-                                </block>
-                              </statement>
-                              <statement name="ELSE">
-                                <block type="variables_set">
-                                  <field name="VAR" id="3MLSu#RGvY-^Spp9U3#_">touchBool5</field>
-                                  <value name="VALUE">
-                                    <block type="math_number">
-                                      <field name="NUM">0</field>
-                                    </block>
-                                  </value>
-                                </block>
-                              </statement>
-                              <next>
-                                <block type="controls_if">
-                                  <mutation elseif="0" else="1"/>
-                                  <value name="IF0">
-                                    <block type="gamelab_isTouchingSprite">
-                                      <value name="SPRITE">
-                                        <block type="gamelab_allSpritesWithAnimation">
-                                          <field name="ANIMATION">"triangle_yellow_blue_outline"</field>
-                                        </block>
-                                      </value>
-                                      <value name="TARGET">
-                                        <block type="gamelab_allSpritesWithAnimation">
-                                          <field name="ANIMATION">"card_white_2"</field>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </value>
-                                  <statement name="DO0">
-                                    <block type="variables_set">
-                                      <field name="VAR" id="~rrd#)=tIEXEM|@Z3}*x">touchBool6</field>
-                                      <value name="VALUE">
-                                        <block type="math_number">
-                                          <field name="NUM">1</field>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </statement>
-                                  <statement name="ELSE">
-                                    <block type="variables_set">
-                                      <field name="VAR" id="~rrd#)=tIEXEM|@Z3}*x">touchBool6</field>
-                                      <value name="VALUE">
-                                        <block type="math_number">
-                                          <field name="NUM">0</field>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </statement>
-                                  <next>
-                                    <block type="controls_if">
-                                      <mutation elseif="0" else="1"/>
-                                      <value name="IF0">
-                                        <block type="gamelab_isTouchingSprite">
-                                          <value name="SPRITE">
-                                            <block type="gamelab_allSpritesWithAnimation">
-                                              <field name="ANIMATION">"triangle_yellow_red_outline"</field>
-                                            </block>
-                                          </value>
-                                          <value name="TARGET">
-                                            <block type="gamelab_allSpritesWithAnimation">
-                                              <field name="ANIMATION">"card_white_2"</field>
-                                            </block>
-                                          </value>
-                                        </block>
-                                      </value>
-                                      <statement name="DO0">
-                                        <block type="variables_set">
-                                          <field name="VAR" id="-izE0:15/$_z:jHDt`@1">touchBool7</field>
-                                          <value name="VALUE">
-                                            <block type="math_number">
-                                              <field name="NUM">1</field>
-                                            </block>
-                                          </value>
-                                        </block>
-                                      </statement>
-                                      <statement name="ELSE">
-                                        <block type="variables_set">
-                                          <field name="VAR" id="-izE0:15/$_z:jHDt`@1">touchBool7</field>
-                                          <value name="VALUE">
-                                            <block type="math_number">
-                                              <field name="NUM">0</field>
-                                            </block>
-                                          </value>
-                                        </block>
-                                      </statement>
-                                      <next>
-                                        <block type="controls_if">
-                                          <mutation elseif="0" else="1"/>
-                                          <value name="IF0">
-                                            <block type="gamelab_isTouchingSprite">
-                                              <value name="SPRITE">
-                                                <block type="gamelab_allSpritesWithAnimation">
-                                                  <field name="ANIMATION">"square_red"</field>
-                                                </block>
-                                              </value>
-                                              <value name="TARGET">
-                                                <block type="gamelab_allSpritesWithAnimation">
-                                                  <field name="ANIMATION">"card_white_3"</field>
-                                                </block>
-                                              </value>
-                                            </block>
-                                          </value>
-                                          <statement name="DO0">
-                                            <block type="variables_set">
-                                              <field name="VAR" id="wjg$u@oU8tL*=={@^sez">touchBool8</field>
-                                              <value name="VALUE">
-                                                <block type="math_number">
-                                                  <field name="NUM">1</field>
-                                                </block>
-                                              </value>
-                                            </block>
-                                          </statement>
-                                          <statement name="ELSE">
-                                            <block type="variables_set">
-                                              <field name="VAR" id="wjg$u@oU8tL*=={@^sez">touchBool8</field>
-                                              <value name="VALUE">
-                                                <block type="math_number">
-                                                  <field name="NUM">0</field>
-                                                </block>
-                                              </value>
-                                            </block>
-                                          </statement>
-                                          <next>
-                                            <block type="controls_if">
-                                              <mutation elseif="0" else="1"/>
-                                              <value name="IF0">
-                                                <block type="gamelab_isTouchingSprite">
-                                                  <value name="SPRITE">
-                                                    <block type="gamelab_allSpritesWithAnimation">
-                                                      <field name="ANIMATION">"square_white"</field>
-                                                    </block>
-                                                  </value>
-                                                  <value name="TARGET">
-                                                    <block type="gamelab_allSpritesWithAnimation">
-                                                      <field name="ANIMATION">"card_white_3"</field>
-                                                    </block>
-                                                  </value>
-                                                </block>
-                                              </value>
-                                              <statement name="DO0">
-                                                <block type="variables_set">
-                                                  <field name="VAR" id="d6WVv9DrJrgdu*#[oKR}">touchBool9</field>
-                                                  <value name="VALUE">
-                                                    <block type="math_number">
-                                                      <field name="NUM">1</field>
-                                                    </block>
-                                                  </value>
-                                                </block>
-                                              </statement>
-                                              <statement name="ELSE">
-                                                <block type="variables_set">
-                                                  <field name="VAR" id="d6WVv9DrJrgdu*#[oKR}">touchBool9</field>
-                                                  <value name="VALUE">
-                                                    <block type="math_number">
-                                                      <field name="NUM">0</field>
-                                                    </block>
-                                                  </value>
-                                                </block>
-                                              </statement>
-                                              <next>
-                                                <block type="controls_if">
-                                                  <mutation elseif="0" else="1"/>
-                                                  <value name="IF0">
-                                                    <block type="gamelab_isTouchingSprite">
-                                                      <value name="SPRITE">
-                                                        <block type="gamelab_allSpritesWithAnimation">
-                                                          <field name="ANIMATION">"square_yellow"</field>
-                                                        </block>
-                                                      </value>
-                                                      <value name="TARGET">
-                                                        <block type="gamelab_allSpritesWithAnimation">
-                                                          <field name="ANIMATION">"card_white_3"</field>
-                                                        </block>
-                                                      </value>
-                                                    </block>
-                                                  </value>
-                                                  <statement name="DO0">
-                                                    <block type="variables_set">
-                                                      <field name="VAR" id="^/#oNi7Szrhlm{(B#@S(">touchBool10</field>
-                                                      <value name="VALUE">
-                                                        <block type="math_number">
-                                                          <field name="NUM">1</field>
-                                                        </block>
-                                                      </value>
-                                                    </block>
-                                                  </statement>
-                                                  <statement name="ELSE">
-                                                    <block type="variables_set">
-                                                      <field name="VAR" id="^/#oNi7Szrhlm{(B#@S(">touchBool10</field>
-                                                      <value name="VALUE">
-                                                        <block type="math_number">
-                                                          <field name="NUM">0</field>
-                                                        </block>
-                                                      </value>
-                                                    </block>
-                                                  </statement>
-                                                  <next>
-                                                    <block type="variables_set">
-                                                      <field name="VAR" id="[5MGQBj.wmTd1,hugh:a">boxOne</field>
-                                                      <value name="VALUE">
-                                                        <block type="math_arithmetic">
-                                                          <field name="OP">ADD</field>
-                                                          <value name="A">
-                                                            <block type="variables_get">
-                                                            <field name="VAR" id="?x^U~(cTla@$I});v[2[">touchBool1</field>
-                                                            </block>
-                                                          </value>
-                                                          <value name="B">
-                                                            <block type="math_arithmetic">
-                                                            <field name="OP">ADD</field>
-                                                            <value name="A">
-                                                            <block type="variables_get">
-                                                            <field name="VAR" id="uJ4s-0_4(pl_JznGc3K`">touchBool2</field>
-                                                            </block>
-                                                            </value>
-                                                            <value name="B">
-                                                            <block type="math_arithmetic">
-                                                            <field name="OP">ADD</field>
-                                                            <value name="A">
-                                                            <block type="variables_get">
-                                                            <field name="VAR" id="n?o4Txsh=nU,z^j7e4?x">touchBool3</field>
-                                                            </block>
-                                                            </value>
-                                                            <value name="B">
-                                                            <block type="variables_get">
-                                                            <field name="VAR" id="c)8KdO*;B9~k[4/mn1xU">touchBool4</field>
-                                                            </block>
-                                                            </value>
-                                                            </block>
-                                                            </value>
-                                                            </block>
-                                                          </value>
-                                                        </block>
-                                                      </value>
-                                                      <next>
-                                                        <block type="variables_set">
-                                                          <field name="VAR" id="Mpvz^cL%/])CvWk|$+En">boxTwo</field>
-                                                          <value name="VALUE">
-                                                            <block type="math_arithmetic">
-                                                            <field name="OP">ADD</field>
-                                                            <value name="A">
-                                                            <block type="variables_get">
-                                                            <field name="VAR" id="3MLSu#RGvY-^Spp9U3#_">touchBool5</field>
-                                                            </block>
-                                                            </value>
-                                                            <value name="B">
-                                                            <block type="math_arithmetic">
-                                                            <field name="OP">ADD</field>
-                                                            <value name="A">
-                                                            <block type="variables_get">
-                                                            <field name="VAR" id="~rrd#)=tIEXEM|@Z3}*x">touchBool6</field>
-                                                            </block>
-                                                            </value>
-                                                            <value name="B">
-                                                            <block type="variables_get">
-                                                            <field name="VAR" id="-izE0:15/$_z:jHDt`@1">touchBool7</field>
-                                                            </block>
-                                                            </value>
-                                                            </block>
-                                                            </value>
-                                                            </block>
-                                                          </value>
-                                                          <next>
-                                                            <block type="variables_set">
-                                                            <field name="VAR" id="dG/wycthq4HPyln?dyYZ">boxThree</field>
-                                                            <value name="VALUE">
-                                                            <block type="math_arithmetic">
-                                                            <field name="OP">ADD</field>
-                                                            <value name="A">
-                                                            <block type="variables_get">
-                                                            <field name="VAR" id="wjg$u@oU8tL*=={@^sez">touchBool8</field>
-                                                            </block>
-                                                            </value>
-                                                            <value name="B">
-                                                            <block type="math_arithmetic">
-                                                            <field name="OP">ADD</field>
-                                                            <value name="A">
-                                                            <block type="variables_get">
-                                                            <field name="VAR" id="d6WVv9DrJrgdu*#[oKR}">touchBool9</field>
-                                                            </block>
-                                                            </value>
-                                                            <value name="B">
-                                                            <block type="variables_get">
-                                                            <field name="VAR" id="^/#oNi7Szrhlm{(B#@S(">touchBool10</field>
-                                                            </block>
-                                                            </value>
-                                                            </block>
-                                                            </value>
-                                                            </block>
-                                                            </value>
-                                                            <next>
-                                                            <block type="variables_set">
-                                                            <field name="VAR" id="1;/VsVV=9mhT5Ap;/(xz">correctlySorted</field>
-                                                            <value name="VALUE">
-                                                            <block type="math_arithmetic">
-                                                            <field name="OP">ADD</field>
-                                                            <value name="A">
-                                                            <block type="variables_get">
-                                                            <field name="VAR" id="[5MGQBj.wmTd1,hugh:a">boxOne</field>
-                                                            </block>
-                                                            </value>
-                                                            <value name="B">
-                                                            <block type="math_arithmetic">
-                                                            <field name="OP">ADD</field>
-                                                            <value name="A">
-                                                            <block type="variables_get">
-                                                            <field name="VAR" id="Mpvz^cL%/])CvWk|$+En">boxTwo</field>
-                                                            </block>
-                                                            </value>
-                                                            <value name="B">
-                                                            <block type="variables_get">
-                                                            <field name="VAR" id="dG/wycthq4HPyln?dyYZ">boxThree</field>
-                                                            </block>
-                                                            </value>
-                                                            </block>
-                                                            </value>
-                                                            </block>
-                                                            </value>
-                                                            </block>
-                                                            </next>
-                                                            </block>
-                                                          </next>
-                                                        </block>
-                                                      </next>
-                                                    </block>
-                                                  </next>
-                                                </block>
-                                              </next>
-                                            </block>
-                                          </next>
-                                        </block>
-                                      </next>
-                                    </block>
-                                  </next>
-                                </block>
-                              </next>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
-        <block type="when_run" deletable="false" x="35" y="58">
+        <block type="when_run" deletable="false" x="28" y="16">
           <next>
             <block type="gamelab_makeNewSpriteAnon">
               <field name="ANIMATION_NAME">"emoji_19"</field>
               <value name="LOCATION">
                 <block type="gamelab_location_picker">
-                  <field name="LOCATION">{"x":45,"y":79}</field>
+                  <field name="LOCATION">{"x":40,"y":103}</field>
                 </block>
               </value>
               <next>
                 <block type="gamelab_spriteSay">
-                  <field name="SPEECH">Sort these items!</field>
+                  <field name="SPEECH">Finish sorting these items!</field>
                   <value name="SPRITE">
                     <block type="gamelab_allSpritesWithAnimation">
                       <field name="ANIMATION">"emoji_19"</field>
@@ -629,88 +99,80 @@
                   </value>
                   <next>
                     <block type="variables_set">
-                      <field name="VAR" id="1;/VsVV=9mhT5Ap;/(xz">correctlySorted</field>
+                      <field name="VAR" id="=QyQ8 JA0g^_RoFHH^b=">boxOne</field>
                       <value name="VALUE">
                         <block type="math_number">
-                          <field name="NUM">0</field>
+                          <field name="NUM">2</field>
                         </block>
                       </value>
                       <next>
                         <block type="variables_set">
-                          <field name="VAR" id="[5MGQBj.wmTd1,hugh:a">boxOne</field>
+                          <field name="VAR" id="gS=]u|XRxKg2};05*LvR">boxTwo</field>
                           <value name="VALUE">
                             <block type="math_number">
-                              <field name="NUM">0</field>
+                              <field name="NUM">1</field>
                             </block>
                           </value>
                           <next>
                             <block type="variables_set">
-                              <field name="VAR" id="Mpvz^cL%/])CvWk|$+En">boxTwo</field>
+                              <field name="VAR" id="/_J:cJ:33V|-/MBHd?Lj">boxThree</field>
                               <value name="VALUE">
                                 <block type="math_number">
-                                  <field name="NUM">0</field>
+                                  <field name="NUM">1</field>
                                 </block>
                               </value>
                               <next>
-                                <block type="variables_set">
-                                  <field name="VAR" id="dG/wycthq4HPyln?dyYZ">boxThree</field>
-                                  <value name="VALUE">
-                                    <block type="math_number">
-                                      <field name="NUM">0</field>
+                                <block type="gamelab_showVariable">
+                                  <field name="VAR" id="=QyQ8 JA0g^_RoFHH^b=">boxOne</field>
+                                  <value name="LOCATION">
+                                    <block type="gamelab_location_picker">
+                                      <field name="LOCATION">{"x":61,"y":367}</field>
                                     </block>
                                   </value>
                                   <next>
                                     <block type="gamelab_showVariable">
-                                      <field name="VAR" id="[5MGQBj.wmTd1,hugh:a">boxOne</field>
+                                      <field name="VAR" id="gS=]u|XRxKg2};05*LvR">boxTwo</field>
                                       <value name="LOCATION">
                                         <block type="gamelab_location_picker">
-                                          <field name="LOCATION">{"x":61,"y":367}</field>
+                                          <field name="LOCATION">{"x":199,"y":367}</field>
                                         </block>
                                       </value>
                                       <next>
                                         <block type="gamelab_showVariable">
-                                          <field name="VAR" id="Mpvz^cL%/])CvWk|$+En">boxTwo</field>
+                                          <field name="VAR" id="/_J:cJ:33V|-/MBHd?Lj">boxThree</field>
                                           <value name="LOCATION">
                                             <block type="gamelab_location_picker">
-                                              <field name="LOCATION">{"x":199,"y":367}</field>
+                                              <field name="LOCATION">{"x":332,"y":367}</field>
                                             </block>
                                           </value>
                                           <next>
-                                            <block type="gamelab_showVariable">
-                                              <field name="VAR" id="dG/wycthq4HPyln?dyYZ">boxThree</field>
-                                              <value name="LOCATION">
-                                                <block type="gamelab_location_picker">
-                                                  <field name="LOCATION">{"x":332,"y":367}</field>
-                                                </block>
-                                              </value>
+                                            <block type="gamelab_setBackgroundImageAs">
+                                              <field name="IMG">"sort_shapes_bg_3"</field>
                                               <next>
-                                                <block type="gamelab_setBackgroundImageAs">
-                                                  <field name="IMG">"sort_shapes_bg_3"</field>
+                                                <block type="gamelab_makeNewSpriteAnon">
+                                                  <field name="ANIMATION_NAME">"card_white"</field>
+                                                  <value name="LOCATION">
+                                                    <block type="gamelab_location_picker">
+                                                      <field name="LOCATION">{"x":67,"y":260}</field>
+                                                    </block>
+                                                  </value>
                                                   <next>
                                                     <block type="gamelab_makeNewSpriteAnon">
-                                                      <field name="ANIMATION_NAME">"card_white"</field>
+                                                      <field name="ANIMATION_NAME">"card_white_2"</field>
                                                       <value name="LOCATION">
                                                         <block type="gamelab_location_picker">
-                                                          <field name="LOCATION">{"x":67,"y":260}</field>
+                                                          <field name="LOCATION">{"x":200,"y":260}</field>
                                                         </block>
                                                       </value>
                                                       <next>
                                                         <block type="gamelab_makeNewSpriteAnon">
-                                                          <field name="ANIMATION_NAME">"card_white_2"</field>
+                                                          <field name="ANIMATION_NAME">"card_white_3"</field>
                                                           <value name="LOCATION">
-                                                            <block type="gamelab_location_picker">
-                                                            <field name="LOCATION">{"x":200,"y":260}</field>
-                                                            </block>
-                                                          </value>
-                                                          <next>
-                                                            <block type="gamelab_makeNewSpriteAnon">
-                                                            <field name="ANIMATION_NAME">"card_white_3"</field>
-                                                            <value name="LOCATION">
                                                             <block type="gamelab_location_picker">
                                                             <field name="LOCATION">{"x":333,"y":260}</field>
                                                             </block>
-                                                            </value>
-                                                            <next>
+                                                          </value>
+                                                          <next>
                                                             <block type="gamelab_makeNewSpriteAnon">
                                                             <field name="ANIMATION_NAME">"circle_red_blue_outline"</field>
                                                             <value name="LOCATION">
@@ -723,7 +185,7 @@
                                                             <field name="ANIMATION_NAME">"circle_white_blue_outline"</field>
                                                             <value name="LOCATION">
                                                             <block type="gamelab_location_picker">
-                                                            <field name="LOCATION">{"x":187,"y":61}</field>
+                                                            <field name="LOCATION">{"x":41,"y":211}</field>
                                                             </block>
                                                             </value>
                                                             <next>
@@ -739,7 +201,7 @@
                                                             <field name="ANIMATION_NAME">"circle_white_red_outline"</field>
                                                             <value name="LOCATION">
                                                             <block type="gamelab_location_picker">
-                                                            <field name="LOCATION">{"x":304,"y":60}</field>
+                                                            <field name="LOCATION">{"x":95,"y":245}</field>
                                                             </block>
                                                             </value>
                                                             <next>
@@ -747,7 +209,7 @@
                                                             <field name="ANIMATION_NAME">"square_red"</field>
                                                             <value name="LOCATION">
                                                             <block type="gamelab_location_picker">
-                                                            <field name="LOCATION">{"x":202,"y":105}</field>
+                                                            <field name="LOCATION">{"x":201,"y":219}</field>
                                                             </block>
                                                             </value>
                                                             <next>
@@ -755,7 +217,7 @@
                                                             <field name="ANIMATION_NAME">"triangle_yellow_blue_outline"</field>
                                                             <value name="LOCATION">
                                                             <block type="gamelab_location_picker">
-                                                            <field name="LOCATION">{"x":245,"y":61}</field>
+                                                            <field name="LOCATION">{"x":331,"y":220}</field>
                                                             </block>
                                                             </value>
                                                             <next>
@@ -811,7 +273,7 @@
                                                             </value>
                                                             <value name="VAL">
                                                             <block type="math_number">
-                                                            <field name="NUM">80</field>
+                                                            <field name="NUM">60</field>
                                                             </block>
                                                             </value>
                                                             <next>
@@ -1112,8 +574,6 @@
                                                             </block>
                                                             </next>
                                                             </block>
-                                                            </next>
-                                                            </block>
                                                           </next>
                                                         </block>
                                                       </next>
@@ -1140,963 +600,501 @@
             </block>
           </next>
         </block>
-        <block type="gamelab_checkTouching" x="343" y="1686">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"circle_red"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"card_white"</field>
+        <block type="gamelab_everyInterval" x="503" y="7">
+          <field name="UNIT">"frames"</field>
+          <value name="N">
+            <block type="math_number">
+              <field name="NUM">5</field>
             </block>
           </value>
           <next>
-            <block type="gamelab_spriteSayTime">
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"emoji_19"</field>
-                </block>
-              </value>
-              <value name="TEXT1">
-                <block type="text">
-                  <field name="TEXT">Correct!</field>
-                </block>
-              </value>
-              <value name="NUM">
-                <block type="math_number">
-                  <field name="NUM">2</field>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_checkTouching" x="748" y="1677">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"triangle_red_black_outline"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"card_white_2"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSayTime">
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"emoji_19"</field>
-                </block>
-              </value>
-              <value name="TEXT1">
-                <block type="text">
-                  <field name="TEXT">Correct!</field>
-                </block>
-              </value>
-              <value name="NUM">
-                <block type="math_number">
-                  <field name="NUM">2</field>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_checkTouching" x="1194" y="1678">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"square_red"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"card_white_3"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSayTime">
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"emoji_19"</field>
-                </block>
-              </value>
-              <value name="TEXT1">
-                <block type="text">
-                  <field name="TEXT">Correct!</field>
-                </block>
-              </value>
-              <value name="NUM">
-                <block type="math_number">
-                  <field name="NUM">2</field>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_checkTouching" x="339" y="1834">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"circle_red_blue_outline"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"card_white"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSayTime">
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"emoji_19"</field>
-                </block>
-              </value>
-              <value name="TEXT1">
-                <block type="text">
-                  <field name="TEXT">Correct!</field>
-                </block>
-              </value>
-              <value name="NUM">
-                <block type="math_number">
-                  <field name="NUM">2</field>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_checkTouching" x="753" y="1833">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"triangle_yellow_blue_outline"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"card_white_2"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSayTime">
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"emoji_19"</field>
-                </block>
-              </value>
-              <value name="TEXT1">
-                <block type="text">
-                  <field name="TEXT">Correct!</field>
-                </block>
-              </value>
-              <value name="NUM">
-                <block type="math_number">
-                  <field name="NUM">2</field>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_checkTouching" x="1190" y="1833">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"square_white"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"card_white_3"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSayTime">
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"emoji_19"</field>
-                </block>
-              </value>
-              <value name="TEXT1">
-                <block type="text">
-                  <field name="TEXT">Correct!</field>
-                </block>
-              </value>
-              <value name="NUM">
-                <block type="math_number">
-                  <field name="NUM">2</field>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_checkTouching" x="338" y="1974">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"circle_white_blue_outline"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"card_white"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSayTime">
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"emoji_19"</field>
-                </block>
-              </value>
-              <value name="TEXT1">
-                <block type="text">
-                  <field name="TEXT">Correct!</field>
-                </block>
-              </value>
-              <value name="NUM">
-                <block type="math_number">
-                  <field name="NUM">2</field>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_checkTouching" x="767" y="1983">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"triangle_yellow_red_outline"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"card_white_2"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSayTime">
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"emoji_19"</field>
-                </block>
-              </value>
-              <value name="TEXT1">
-                <block type="text">
-                  <field name="TEXT">Correct!</field>
-                </block>
-              </value>
-              <value name="NUM">
-                <block type="math_number">
-                  <field name="NUM">2</field>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_checkTouching" x="1195" y="1994">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"square_yellow"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"card_white_3"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSayTime">
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"emoji_19"</field>
-                </block>
-              </value>
-              <value name="TEXT1">
-                <block type="text">
-                  <field name="TEXT">Correct!</field>
-                </block>
-              </value>
-              <value name="NUM">
-                <block type="math_number">
-                  <field name="NUM">2</field>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_checkTouching" x="337" y="2120">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"circle_white_red_outline"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"card_white"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSayTime">
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"emoji_19"</field>
-                </block>
-              </value>
-              <value name="TEXT1">
-                <block type="text">
-                  <field name="TEXT">Correct!</field>
-                </block>
-              </value>
-              <value name="NUM">
-                <block type="math_number">
-                  <field name="NUM">2</field>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_checkTouching" x="1226" y="2156">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"square_red"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"card_white"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSayTime">
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"emoji_19"</field>
-                </block>
-              </value>
-              <value name="TEXT1">
-                <block type="text">
-                  <field name="TEXT">Not quite!</field>
-                </block>
-              </value>
-              <value name="NUM">
-                <block type="math_number">
-                  <field name="NUM">2</field>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_checkTouching" x="781" y="2183">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"triangle_red_black_outline"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"card_white"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSayTime">
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"emoji_19"</field>
-                </block>
-              </value>
-              <value name="TEXT1">
-                <block type="text">
-                  <field name="TEXT">Not quite!</field>
-                </block>
-              </value>
-              <value name="NUM">
-                <block type="math_number">
-                  <field name="NUM">2</field>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_checkTouching" x="330" y="2274">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"circle_red"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"card_white_2"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSayTime">
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"emoji_19"</field>
-                </block>
-              </value>
-              <value name="TEXT1">
-                <block type="text">
-                  <field name="TEXT">Not quite!</field>
-                </block>
-              </value>
-              <value name="NUM">
-                <block type="math_number">
-                  <field name="NUM">2</field>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_checkTouching" x="778" y="2343">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"triangle_red_black_outline"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"card_white_3"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSayTime">
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"emoji_19"</field>
-                </block>
-              </value>
-              <value name="TEXT1">
-                <block type="text">
-                  <field name="TEXT">Not quite!</field>
-                </block>
-              </value>
-              <value name="NUM">
-                <block type="math_number">
-                  <field name="NUM">2</field>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_checkTouching" x="1230" y="2330">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"square_red"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"card_white_2"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSayTime">
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"emoji_19"</field>
-                </block>
-              </value>
-              <value name="TEXT1">
-                <block type="text">
-                  <field name="TEXT">Not quite!</field>
-                </block>
-              </value>
-              <value name="NUM">
-                <block type="math_number">
-                  <field name="NUM">2</field>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_checkTouching" x="331" y="2417">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"circle_red"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"card_white_3"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSayTime">
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"emoji_19"</field>
-                </block>
-              </value>
-              <value name="TEXT1">
-                <block type="text">
-                  <field name="TEXT">Not quite!</field>
-                </block>
-              </value>
-              <value name="NUM">
-                <block type="math_number">
-                  <field name="NUM">2</field>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_checkTouching" x="801" y="2512">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"triangle_yellow_blue_outline"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"card_white"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSayTime">
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"emoji_19"</field>
-                </block>
-              </value>
-              <value name="TEXT1">
-                <block type="text">
-                  <field name="TEXT">Not quite!</field>
-                </block>
-              </value>
-              <value name="NUM">
-                <block type="math_number">
-                  <field name="NUM">2</field>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_checkTouching" x="1248" y="2504">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"square_white"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"card_white"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSayTime">
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"emoji_19"</field>
-                </block>
-              </value>
-              <value name="TEXT1">
-                <block type="text">
-                  <field name="TEXT">Not quite!</field>
-                </block>
-              </value>
-              <value name="NUM">
-                <block type="math_number">
-                  <field name="NUM">2</field>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_checkTouching" x="331" y="2570">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"circle_red_blue_outline"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"card_white_2"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSayTime">
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"emoji_19"</field>
-                </block>
-              </value>
-              <value name="TEXT1">
-                <block type="text">
-                  <field name="TEXT">Not quite!</field>
-                </block>
-              </value>
-              <value name="NUM">
-                <block type="math_number">
-                  <field name="NUM">2</field>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_checkTouching" x="807" y="2655">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"triangle_yellow_blue_outline"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"card_white_3"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSayTime">
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"emoji_19"</field>
-                </block>
-              </value>
-              <value name="TEXT1">
-                <block type="text">
-                  <field name="TEXT">Not quite!</field>
-                </block>
-              </value>
-              <value name="NUM">
-                <block type="math_number">
-                  <field name="NUM">2</field>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_checkTouching" x="1253" y="2657">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"square_white"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"card_white_2"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSayTime">
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"emoji_19"</field>
-                </block>
-              </value>
-              <value name="TEXT1">
-                <block type="text">
-                  <field name="TEXT">Not quite!</field>
-                </block>
-              </value>
-              <value name="NUM">
-                <block type="math_number">
-                  <field name="NUM">2</field>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_checkTouching" x="335" y="2709">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"circle_red_blue_outline"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"card_white_3"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSayTime">
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"emoji_19"</field>
-                </block>
-              </value>
-              <value name="TEXT1">
-                <block type="text">
-                  <field name="TEXT">Not quite!</field>
-                </block>
-              </value>
-              <value name="NUM">
-                <block type="math_number">
-                  <field name="NUM">2</field>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_checkTouching" x="813" y="2787">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"triangle_yellow_red_outline"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"card_white"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSayTime">
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"emoji_19"</field>
-                </block>
-              </value>
-              <value name="TEXT1">
-                <block type="text">
-                  <field name="TEXT">Not quite!</field>
-                </block>
-              </value>
-              <value name="NUM">
-                <block type="math_number">
-                  <field name="NUM">2</field>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_checkTouching" x="329" y="2843">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"circle_white_blue_outline"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"card_white_2"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSayTime">
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"emoji_19"</field>
-                </block>
-              </value>
-              <value name="TEXT1">
-                <block type="text">
-                  <field name="TEXT">Not quite!</field>
-                </block>
-              </value>
-              <value name="NUM">
-                <block type="math_number">
-                  <field name="NUM">2</field>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_checkTouching" x="1273" y="2819">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"square_yellow"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"card_white"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSayTime">
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"emoji_19"</field>
-                </block>
-              </value>
-              <value name="TEXT1">
-                <block type="text">
-                  <field name="TEXT">Not quite!</field>
-                </block>
-              </value>
-              <value name="NUM">
-                <block type="math_number">
-                  <field name="NUM">2</field>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_checkTouching" x="338" y="2964">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"circle_white_blue_outline"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"card_white_3"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSayTime">
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"emoji_19"</field>
-                </block>
-              </value>
-              <value name="TEXT1">
-                <block type="text">
-                  <field name="TEXT">Not quite!</field>
-                </block>
-              </value>
-              <value name="NUM">
-                <block type="math_number">
-                  <field name="NUM">2</field>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_checkTouching" x="835" y="2948">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"triangle_yellow_red_outline"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"card_white_3"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSayTime">
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"emoji_19"</field>
-                </block>
-              </value>
-              <value name="TEXT1">
-                <block type="text">
-                  <field name="TEXT">Not quite!</field>
-                </block>
-              </value>
-              <value name="NUM">
-                <block type="math_number">
-                  <field name="NUM">2</field>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_checkTouching" x="1281" y="2999">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"square_yellow"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"card_white_2"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSayTime">
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"emoji_19"</field>
-                </block>
-              </value>
-              <value name="TEXT1">
-                <block type="text">
-                  <field name="TEXT">Not quite!</field>
-                </block>
-              </value>
-              <value name="NUM">
-                <block type="math_number">
-                  <field name="NUM">2</field>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_checkTouching" x="335" y="3109">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"circle_white_red_outline"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"card_white_2"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSayTime">
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"emoji_19"</field>
-                </block>
-              </value>
-              <value name="TEXT1">
-                <block type="text">
-                  <field name="TEXT">Not quite!</field>
-                </block>
-              </value>
-              <value name="NUM">
-                <block type="math_number">
-                  <field name="NUM">2</field>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_checkTouching" x="335" y="3247">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"circle_white_red_outline"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"card_white_3"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSayTime">
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"emoji_19"</field>
-                </block>
-              </value>
-              <value name="TEXT1">
-                <block type="text">
-                  <field name="TEXT">Not quite!</field>
-                </block>
-              </value>
-              <value name="NUM">
-                <block type="math_number">
-                  <field name="NUM">2</field>
-                </block>
-              </value>
+            <block type="controls_if">
+              <mutation elseif="0" else="1"/>
+              <value name="IF0">
+                <block type="gamelab_isTouchingSprite">
+                  <value name="SPRITE">
+                    <block type="gamelab_allSpritesWithAnimation">
+                      <field name="ANIMATION">"circle_white_blue_outline"</field>
+                    </block>
+                  </value>
+                  <value name="TARGET">
+                    <block type="gamelab_allSpritesWithAnimation">
+                      <field name="ANIMATION">"card_white"</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="variables_set">
+                  <field name="VAR" id="?x^U~(cTla@$I});v[2[">touchBool1</field>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <field name="NUM">1</field>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+              <statement name="ELSE">
+                <block type="variables_set">
+                  <field name="VAR" id="?x^U~(cTla@$I});v[2[">touchBool1</field>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <field name="NUM">0</field>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+              <next>
+                <block type="controls_if">
+                  <mutation elseif="0" else="1"/>
+                  <value name="IF0">
+                    <block type="gamelab_isTouchingSprite">
+                      <value name="SPRITE">
+                        <block type="gamelab_allSpritesWithAnimation">
+                          <field name="ANIMATION">"circle_white_red_outline"</field>
+                        </block>
+                      </value>
+                      <value name="TARGET">
+                        <block type="gamelab_allSpritesWithAnimation">
+                          <field name="ANIMATION">"card_white"</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="variables_set">
+                      <field name="VAR" id="uJ4s-0_4(pl_JznGc3K`">touchBool2</field>
+                      <value name="VALUE">
+                        <block type="math_number">
+                          <field name="NUM">1</field>
+                        </block>
+                      </value>
+                    </block>
+                  </statement>
+                  <statement name="ELSE">
+                    <block type="variables_set">
+                      <field name="VAR" id="uJ4s-0_4(pl_JznGc3K`">touchBool2</field>
+                      <value name="VALUE">
+                        <block type="math_number">
+                          <field name="NUM">0</field>
+                        </block>
+                      </value>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="controls_if">
+                      <mutation elseif="0" else="1"/>
+                      <value name="IF0">
+                        <block type="gamelab_isTouchingSprite">
+                          <value name="SPRITE">
+                            <block type="gamelab_allSpritesWithAnimation">
+                              <field name="ANIMATION">"square_white"</field>
+                            </block>
+                          </value>
+                          <value name="TARGET">
+                            <block type="gamelab_allSpritesWithAnimation">
+                              <field name="ANIMATION">"card_white"</field>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="variables_set">
+                          <field name="VAR" id="n?o4Txsh=nU,z^j7e4?x">touchBool3</field>
+                          <value name="VALUE">
+                            <block type="math_number">
+                              <field name="NUM">1</field>
+                            </block>
+                          </value>
+                        </block>
+                      </statement>
+                      <statement name="ELSE">
+                        <block type="variables_set">
+                          <field name="VAR" id="n?o4Txsh=nU,z^j7e4?x">touchBool3</field>
+                          <value name="VALUE">
+                            <block type="math_number">
+                              <field name="NUM">0</field>
+                            </block>
+                          </value>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="controls_if">
+                          <mutation elseif="0" else="1"/>
+                          <value name="IF0">
+                            <block type="gamelab_isTouchingSprite">
+                              <value name="SPRITE">
+                                <block type="gamelab_allSpritesWithAnimation">
+                                  <field name="ANIMATION">"triangle_red_black_outline"</field>
+                                </block>
+                              </value>
+                              <value name="TARGET">
+                                <block type="gamelab_allSpritesWithAnimation">
+                                  <field name="ANIMATION">"card_white_2"</field>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <statement name="DO0">
+                            <block type="variables_set">
+                              <field name="VAR" id="c)8KdO*;B9~k[4/mn1xU">touchBool4</field>
+                              <value name="VALUE">
+                                <block type="math_number">
+                                  <field name="NUM">1</field>
+                                </block>
+                              </value>
+                            </block>
+                          </statement>
+                          <statement name="ELSE">
+                            <block type="variables_set">
+                              <field name="VAR" id="c)8KdO*;B9~k[4/mn1xU">touchBool4</field>
+                              <value name="VALUE">
+                                <block type="math_number">
+                                  <field name="NUM">0</field>
+                                </block>
+                              </value>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="controls_if">
+                              <mutation elseif="0" else="1"/>
+                              <value name="IF0">
+                                <block type="gamelab_isTouchingSprite">
+                                  <value name="SPRITE">
+                                    <block type="gamelab_allSpritesWithAnimation">
+                                      <field name="ANIMATION">"square_red"</field>
+                                    </block>
+                                  </value>
+                                  <value name="TARGET">
+                                    <block type="gamelab_allSpritesWithAnimation">
+                                      <field name="ANIMATION">"card_white_2"</field>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                              <statement name="DO0">
+                                <block type="variables_set">
+                                  <field name="VAR" id="3MLSu#RGvY-^Spp9U3#_">touchBool5</field>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <field name="NUM">1</field>
+                                    </block>
+                                  </value>
+                                </block>
+                              </statement>
+                              <statement name="ELSE">
+                                <block type="variables_set">
+                                  <field name="VAR" id="3MLSu#RGvY-^Spp9U3#_">touchBool5</field>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <field name="NUM">0</field>
+                                    </block>
+                                  </value>
+                                </block>
+                              </statement>
+                              <next>
+                                <block type="controls_if">
+                                  <mutation elseif="0" else="1"/>
+                                  <value name="IF0">
+                                    <block type="gamelab_isTouchingSprite">
+                                      <value name="SPRITE">
+                                        <block type="gamelab_allSpritesWithAnimation">
+                                          <field name="ANIMATION">"circle_red"</field>
+                                        </block>
+                                      </value>
+                                      <value name="TARGET">
+                                        <block type="gamelab_allSpritesWithAnimation">
+                                          <field name="ANIMATION">"card_white_2"</field>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </value>
+                                  <statement name="DO0">
+                                    <block type="variables_set">
+                                      <field name="VAR" id="~rrd#)=tIEXEM|@Z3}*x">touchBool6</field>
+                                      <value name="VALUE">
+                                        <block type="math_number">
+                                          <field name="NUM">1</field>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </statement>
+                                  <statement name="ELSE">
+                                    <block type="variables_set">
+                                      <field name="VAR" id="~rrd#)=tIEXEM|@Z3}*x">touchBool6</field>
+                                      <value name="VALUE">
+                                        <block type="math_number">
+                                          <field name="NUM">0</field>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </statement>
+                                  <next>
+                                    <block type="controls_if">
+                                      <mutation elseif="0" else="1"/>
+                                      <value name="IF0">
+                                        <block type="gamelab_isTouchingSprite">
+                                          <value name="SPRITE">
+                                            <block type="gamelab_allSpritesWithAnimation">
+                                              <field name="ANIMATION">"circle_red_blue_outline"</field>
+                                            </block>
+                                          </value>
+                                          <value name="TARGET">
+                                            <block type="gamelab_allSpritesWithAnimation">
+                                              <field name="ANIMATION">"card_white_2"</field>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </value>
+                                      <statement name="DO0">
+                                        <block type="variables_set">
+                                          <field name="VAR" id="-izE0:15/$_z:jHDt`@1">touchBool7</field>
+                                          <value name="VALUE">
+                                            <block type="math_number">
+                                              <field name="NUM">1</field>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </statement>
+                                      <statement name="ELSE">
+                                        <block type="variables_set">
+                                          <field name="VAR" id="-izE0:15/$_z:jHDt`@1">touchBool7</field>
+                                          <value name="VALUE">
+                                            <block type="math_number">
+                                              <field name="NUM">0</field>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </statement>
+                                      <next>
+                                        <block type="controls_if">
+                                          <mutation elseif="0" else="1"/>
+                                          <value name="IF0">
+                                            <block type="gamelab_isTouchingSprite">
+                                              <value name="SPRITE">
+                                                <block type="gamelab_allSpritesWithAnimation">
+                                                  <field name="ANIMATION">"triangle_yellow_blue_outline"</field>
+                                                </block>
+                                              </value>
+                                              <value name="TARGET">
+                                                <block type="gamelab_allSpritesWithAnimation">
+                                                  <field name="ANIMATION">"card_white_3"</field>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </value>
+                                          <statement name="DO0">
+                                            <block type="variables_set">
+                                              <field name="VAR" id="wjg$u@oU8tL*=={@^sez">touchBool8</field>
+                                              <value name="VALUE">
+                                                <block type="math_number">
+                                                  <field name="NUM">1</field>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </statement>
+                                          <statement name="ELSE">
+                                            <block type="variables_set">
+                                              <field name="VAR" id="wjg$u@oU8tL*=={@^sez">touchBool8</field>
+                                              <value name="VALUE">
+                                                <block type="math_number">
+                                                  <field name="NUM">0</field>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </statement>
+                                          <next>
+                                            <block type="controls_if">
+                                              <mutation elseif="0" else="1"/>
+                                              <value name="IF0">
+                                                <block type="gamelab_isTouchingSprite">
+                                                  <value name="SPRITE">
+                                                    <block type="gamelab_allSpritesWithAnimation">
+                                                      <field name="ANIMATION">"triangle_yellow_red_outline"</field>
+                                                    </block>
+                                                  </value>
+                                                  <value name="TARGET">
+                                                    <block type="gamelab_allSpritesWithAnimation">
+                                                      <field name="ANIMATION">"card_white_3"</field>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </value>
+                                              <statement name="DO0">
+                                                <block type="variables_set">
+                                                  <field name="VAR" id="d6WVv9DrJrgdu*#[oKR}">touchBool9</field>
+                                                  <value name="VALUE">
+                                                    <block type="math_number">
+                                                      <field name="NUM">1</field>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </statement>
+                                              <statement name="ELSE">
+                                                <block type="variables_set">
+                                                  <field name="VAR" id="d6WVv9DrJrgdu*#[oKR}">touchBool9</field>
+                                                  <value name="VALUE">
+                                                    <block type="math_number">
+                                                      <field name="NUM">0</field>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </statement>
+                                              <next>
+                                                <block type="controls_if">
+                                                  <mutation elseif="0" else="1"/>
+                                                  <value name="IF0">
+                                                    <block type="gamelab_isTouchingSprite">
+                                                      <value name="SPRITE">
+                                                        <block type="gamelab_allSpritesWithAnimation">
+                                                          <field name="ANIMATION">"square_yellow"</field>
+                                                        </block>
+                                                      </value>
+                                                      <value name="TARGET">
+                                                        <block type="gamelab_allSpritesWithAnimation">
+                                                          <field name="ANIMATION">"card_white_3"</field>
+                                                        </block>
+                                                      </value>
+                                                    </block>
+                                                  </value>
+                                                  <statement name="DO0">
+                                                    <block type="variables_set">
+                                                      <field name="VAR" id="^/#oNi7Szrhlm{(B#@S(">touchBool10</field>
+                                                      <value name="VALUE">
+                                                        <block type="math_number">
+                                                          <field name="NUM">1</field>
+                                                        </block>
+                                                      </value>
+                                                    </block>
+                                                  </statement>
+                                                  <statement name="ELSE">
+                                                    <block type="variables_set">
+                                                      <field name="VAR" id="^/#oNi7Szrhlm{(B#@S(">touchBool10</field>
+                                                      <value name="VALUE">
+                                                        <block type="math_number">
+                                                          <field name="NUM">0</field>
+                                                        </block>
+                                                      </value>
+                                                    </block>
+                                                  </statement>
+                                                  <next>
+                                                    <block type="variables_set">
+                                                      <field name="VAR" id="=QyQ8 JA0g^_RoFHH^b=">boxOne</field>
+                                                      <value name="VALUE">
+                                                        <block type="math_arithmetic">
+                                                          <field name="OP">ADD</field>
+                                                          <value name="A">
+                                                            <block type="variables_get">
+                                                            <field name="VAR" id="?x^U~(cTla@$I});v[2[">touchBool1</field>
+                                                            </block>
+                                                          </value>
+                                                          <value name="B">
+                                                            <block type="math_arithmetic">
+                                                            <field name="OP">ADD</field>
+                                                            <value name="A">
+                                                            <block type="variables_get">
+                                                            <field name="VAR" id="uJ4s-0_4(pl_JznGc3K`">touchBool2</field>
+                                                            </block>
+                                                            </value>
+                                                            <value name="B">
+                                                            <block type="variables_get">
+                                                            <field name="VAR" id="n?o4Txsh=nU,z^j7e4?x">touchBool3</field>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                          </value>
+                                                        </block>
+                                                      </value>
+                                                      <next>
+                                                        <block type="variables_set">
+                                                          <field name="VAR" id="gS=]u|XRxKg2};05*LvR">boxTwo</field>
+                                                          <value name="VALUE">
+                                                            <block type="math_arithmetic">
+                                                            <field name="OP">ADD</field>
+                                                            <value name="A">
+                                                            <block type="variables_get">
+                                                            <field name="VAR" id="c)8KdO*;B9~k[4/mn1xU">touchBool4</field>
+                                                            </block>
+                                                            </value>
+                                                            <value name="B">
+                                                            <block type="math_arithmetic">
+                                                            <field name="OP">ADD</field>
+                                                            <value name="A">
+                                                            <block type="variables_get">
+                                                            <field name="VAR" id="3MLSu#RGvY-^Spp9U3#_">touchBool5</field>
+                                                            </block>
+                                                            </value>
+                                                            <value name="B">
+                                                            <block type="math_arithmetic">
+                                                            <field name="OP">ADD</field>
+                                                            <value name="A">
+                                                            <block type="variables_get">
+                                                            <field name="VAR" id="~rrd#)=tIEXEM|@Z3}*x">touchBool6</field>
+                                                            </block>
+                                                            </value>
+                                                            <value name="B">
+                                                            <block type="variables_get">
+                                                            <field name="VAR" id="-izE0:15/$_z:jHDt`@1">touchBool7</field>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                          </value>
+                                                          <next>
+                                                            <block type="variables_set">
+                                                            <field name="VAR" id="/_J:cJ:33V|-/MBHd?Lj">boxThree</field>
+                                                            <value name="VALUE">
+                                                            <block type="math_arithmetic">
+                                                            <field name="OP">ADD</field>
+                                                            <value name="A">
+                                                            <block type="variables_get">
+                                                            <field name="VAR" id="wjg$u@oU8tL*=={@^sez">touchBool8</field>
+                                                            </block>
+                                                            </value>
+                                                            <value name="B">
+                                                            <block type="math_arithmetic">
+                                                            <field name="OP">ADD</field>
+                                                            <value name="A">
+                                                            <block type="variables_get">
+                                                            <field name="VAR" id="d6WVv9DrJrgdu*#[oKR}">touchBool9</field>
+                                                            </block>
+                                                            </value>
+                                                            <value name="B">
+                                                            <block type="variables_get">
+                                                            <field name="VAR" id="^/#oNi7Szrhlm{(B#@S(">touchBool10</field>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
             </block>
           </next>
         </block>
