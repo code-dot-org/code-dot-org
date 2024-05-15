@@ -424,10 +424,7 @@ describe('teacherSectionsRedux', () => {
     });
 
     it('populates sectionBeingEdited', () => {
-      console.log('-----------------------\n');
-      console.log('initialState: ', initialState);
       const stateWithSections = reducer(initialState, setSections(sections));
-      console.log('stateWithSections: ', stateWithSections);
       assert.isNull(stateWithSections.sectionBeingEdited);
       const state = reducer(stateWithSections, beginEditingSection(12));
       assert.deepEqual(state.sectionBeingEdited, {
