@@ -9,12 +9,13 @@ import i18n from '@cdo/locale';
 import {expect} from '../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
+  onShowProgressTableV2Change: () => {},
   setShowProgressTableV2: () => {},
   setHasSeenProgressTableInvite: () => {},
   setDateProgressTableInvitationDelayed: () => {},
 };
 
-describe('UnconnectedInviteToV2ProgressModal', () => {
+describe('InviteToV2ProgressModal', () => {
   let postStub;
 
   beforeEach(() => {
@@ -49,8 +50,10 @@ describe('UnconnectedInviteToV2ProgressModal', () => {
   it('allows user to accept the invitation', () => {
     const setShowProgressTableV2Stub = sinon.stub();
     const setHasSeenProgressTableInviteStub = sinon.stub();
+    const onShowProgressTableV2ChangeStub = sinon.stub();
 
     renderDefault({
+      onShowProgressTableV2Change: onShowProgressTableV2ChangeStub,
       setShowProgressTableV2: setShowProgressTableV2Stub,
       setHasSeenProgressTableInvite: setHasSeenProgressTableInviteStub,
       hasSeenProgressTableInvite: false,
@@ -64,9 +67,7 @@ describe('UnconnectedInviteToV2ProgressModal', () => {
     expect(setHasSeenProgressTableInviteStub).to.have.been.calledOnce;
     expect(setShowProgressTableV2Stub).to.have.been.calledOnce;
 
-    expect(postStub).calledWith('/api/v1/users/show_progress_table_v2', {
-      show_progress_table_v2: true,
-    });
+    expect(onShowProgressTableV2ChangeStub).to.have.been.calledOnce;
     expect(postStub).calledWith(
       '/api/v1/users/has_seen_progress_table_v2_invitation',
       {

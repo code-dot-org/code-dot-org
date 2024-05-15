@@ -222,7 +222,9 @@ class DatablockStorageController < ApplicationController
     raise "record must be a hash" unless record_json.is_a? Hash
 
     table = table_or_create
-    table.create_records [record_json]
+    Retryable.retryable(tries: 1, on: [ActiveRecord::RecordNotUnique]) do
+      table.create_records [record_json]
+    end
     table.save!
 
     render json: record_json
@@ -322,7 +324,11 @@ class DatablockStorageController < ApplicationController
   end
 
   private def where_table
-    DatablockStorageTable.where(project_id: @project_id, table_name: params[:table_name])
+    if params[:table_name]
+      DatablockStorageTable.where(project_id: @project_id, table_name: params[:table_name])
+    else
+      raise StudentFacingError, "You must specify a table"
+    end
   end
 
   private def table_or_create

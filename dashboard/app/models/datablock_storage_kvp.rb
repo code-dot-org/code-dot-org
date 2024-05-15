@@ -22,8 +22,6 @@ class DatablockStorageKvp < ApplicationRecord
 
   StudentFacingError = DatablockStorageTable::StudentFacingError
 
-  # TODO: #56999, implement enforcement of MAX_VALUE_LENGTH, we already have
-  # a test for it, but we're skipping it until this is implemented.
   MAX_VALUE_LENGTH = 4096
 
   MAX_NUM_KVPS = 20000

@@ -1,7 +1,7 @@
 /* eslint no-unused-vars: "error" */
 import React from 'react';
 import sinon from 'sinon';
-import {shallow, mount} from 'enzyme';
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import {expect} from '../../util/reconfiguredChai';
 import Dialog, {
   Body,

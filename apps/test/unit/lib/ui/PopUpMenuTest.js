@@ -3,7 +3,7 @@ import React from 'react';
 import sinon from 'sinon';
 import msg from '@cdo/locale';
 import {expect} from '../../../util/reconfiguredChai';
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import PopUpMenu, {MenuBubble} from '@cdo/apps/lib/ui/PopUpMenu';
 
 describe('PopUpMenu', () => {

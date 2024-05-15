@@ -1,4 +1,4 @@
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import StudentColumn from '@cdo/apps/templates/sectionProgressV2/StudentColumn.jsx';

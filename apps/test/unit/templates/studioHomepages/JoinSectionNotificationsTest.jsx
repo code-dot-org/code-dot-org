@@ -1,4 +1,4 @@
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import JoinSectionNotifications from '@cdo/apps/templates/studioHomepages/JoinSectionNotifications';
