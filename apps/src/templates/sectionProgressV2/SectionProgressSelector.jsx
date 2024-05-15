@@ -28,26 +28,22 @@ function SectionProgressSelector({
 }) {
   const [toggleUsed, setToggleUsed] = React.useState(false);
 
-  const onShowProgressTableV2Change = useCallback(
-    e => {
-      e.preventDefault();
-      const shouldShowV2 = !showProgressTableV2;
-      new UserPreferences().setShowProgressTableV2(shouldShowV2);
-      setShowProgressTableV2(shouldShowV2);
-      setToggleUsed(true);
+  const onShowProgressTableV2Change = useCallback(() => {
+    const shouldShowV2 = !showProgressTableV2;
+    new UserPreferences().setShowProgressTableV2(shouldShowV2);
+    setShowProgressTableV2(shouldShowV2);
+    setToggleUsed(true);
 
-      if (shouldShowV2) {
-        analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_VIEW_NEW_PROGRESS, {
-          sectionId: sectionId,
-        });
-      } else {
-        analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_VIEW_OLD_PROGRESS, {
-          sectionId: sectionId,
-        });
-      }
-    },
-    [showProgressTableV2, setShowProgressTableV2, sectionId]
-  );
+    if (shouldShowV2) {
+      analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_VIEW_NEW_PROGRESS, {
+        sectionId: sectionId,
+      });
+    } else {
+      analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_VIEW_OLD_PROGRESS, {
+        sectionId: sectionId,
+      });
+    }
+  }, [showProgressTableV2, setShowProgressTableV2, sectionId]);
 
   const debouncedOnShowProgressTableV2Change = _.debounce(
     onShowProgressTableV2Change,
@@ -56,6 +52,15 @@ function SectionProgressSelector({
       leading: true,
       trailing: false,
     }
+  );
+
+  const onToggleClick = useCallback(
+    e => {
+      e.preventDefault();
+
+      debouncedOnShowProgressTableV2Change();
+    },
+    [debouncedOnShowProgressTableV2Change]
   );
 
   // If progress table is disabled, only show the v1 table.
@@ -83,7 +88,7 @@ function SectionProgressSelector({
       <Link
         type="primary"
         size="s"
-        onClick={debouncedOnShowProgressTableV2Change}
+        onClick={onToggleClick}
         id="ui-test-toggle-progress-view"
       >
         {displayV2
@@ -102,7 +107,10 @@ function SectionProgressSelector({
         <SectionProgressV2 />
       ) : (
         <>
-          <InviteToV2ProgressModal sectionId={sectionId} />
+          <InviteToV2ProgressModal
+            sectionId={sectionId}
+            onShowProgressTableV2Change={debouncedOnShowProgressTableV2Change}
+          />
           <SectionProgress allowUserToSelectV2View={true} />
         </>
       )}
