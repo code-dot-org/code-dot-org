@@ -1,7 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import color from '@cdo/apps/util/color';
+import React from 'react';
+
 import {studentLessonProgressType} from '@cdo/apps/templates/progress/progressTypes';
+import color from '@cdo/apps/util/color';
 
 function BorderedBox({borderColor, onClick, children}) {
   const boxStyle = {

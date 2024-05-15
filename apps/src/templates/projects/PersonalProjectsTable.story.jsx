@@ -1,17 +1,21 @@
 import React from 'react';
-import {UnconnectedPersonalProjectsTable as PersonalProjectsTable} from './PersonalProjectsTable';
-import {stubFakePersonalProjectData} from './generateFakeProjects';
 import {Provider} from 'react-redux';
-import {reduxStore} from '@cdo/storybook/decorators';
-import publishDialog from '@cdo/apps/templates/projects/publishDialog/publishDialogRedux';
-import deleteDialog from '@cdo/apps/templates/projects/deleteDialog/deleteProjectDialogRedux';
 
+import deleteDialog from '@cdo/apps/templates/projects/deleteDialog/deleteProjectDialogRedux';
+import frozenProjectInfoDialog from '@cdo/apps/templates/projects/frozenProjectInfoDialog/frozenProjectInfoDialogRedux';
+import publishDialog from '@cdo/apps/templates/projects/publishDialog/publishDialogRedux';
+import {reduxStore} from '@cdo/storybook/decorators';
+
+import {stubFakePersonalProjectData} from './generateFakeProjects';
+import {UnconnectedPersonalProjectsTable as PersonalProjectsTable} from './PersonalProjectsTable';
 export default {
   component: PersonalProjectsTable,
 };
 
 const Template = args => (
-  <Provider store={reduxStore({publishDialog, deleteDialog})}>
+  <Provider
+    store={reduxStore({publishDialog, deleteDialog, frozenProjectInfoDialog})}
+  >
     <PersonalProjectsTable {...args} />
   </Provider>
 );

@@ -1,10 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
-import style from './rubrics.module.scss';
-import {learningGoalShape} from './rubricShapes';
-import color from '@cdo/apps/util/color';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
+import {learningGoalShape} from './rubricShapes';
+
+import style from './rubrics.module.scss';
 
 export default function ProgressRing({
   className,
@@ -13,13 +16,16 @@ export default function ProgressRing({
   understandingLevels,
   radius,
   stroke,
+  loaded,
 }) {
   const normalizedRadius = radius - stroke;
   const circumference = normalizedRadius * 2 * Math.PI;
   const assessedLearningGoals = understandingLevels.filter(u => u >= 0).length;
   const currentLearningGoalOffset =
-    circumference -
-    ((currentLearningGoal + 1) / learningGoals.length) * circumference;
+    currentLearningGoal === learningGoals.length
+      ? 0
+      : circumference -
+        ((currentLearningGoal + 1) / learningGoals.length) * circumference;
   const assessedLearningGoalOffset =
     circumference -
     (assessedLearningGoals / learningGoals.length) * circumference;
@@ -62,7 +68,10 @@ export default function ProgressRing({
         cy={radius}
       />
       <text className={style.progressRingText} x="50%" y="50%" dy="0.3em">
-        {currentLearningGoal + 1} {i18n.of()} {learningGoals.length}
+        {currentLearningGoal === learningGoals.length
+          ? currentLearningGoal
+          : currentLearningGoal + 1}{' '}
+        {i18n.of()} {learningGoals.length}
       </text>
     </svg>
   );
@@ -75,4 +84,5 @@ ProgressRing.propTypes = {
   understandingLevels: PropTypes.arrayOf(PropTypes.number),
   radius: PropTypes.number,
   stroke: PropTypes.number,
+  loaded: PropTypes.bool,
 };

@@ -1,14 +1,16 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import LevelFeedbackEntry from '@cdo/apps/templates/feedback/LevelFeedbackEntry';
-import {UnlocalizedTimeAgo as TimeAgo} from '@cdo/apps/templates/TimeAgo';
-import {KeepWorkingBadge} from '@cdo/apps/templates/progress/BubbleBadge';
-import {ReviewStates} from '@cdo/apps/templates/feedback/types';
-import color from '@cdo/apps/util/color';
-import i18n from '@cdo/locale';
 import ReactDOM from 'react-dom';
 import sinon from 'sinon';
+
+import LevelFeedbackEntry from '@cdo/apps/templates/feedback/LevelFeedbackEntry';
+import {ReviewStates} from '@cdo/apps/templates/feedback/types';
+import {KeepWorkingBadge} from '@cdo/apps/templates/progress/BubbleBadge';
+import {UnlocalizedTimeAgo as TimeAgo} from '@cdo/apps/templates/TimeAgo';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const DEFAULT_FEEDBACK = {
   id: 1,

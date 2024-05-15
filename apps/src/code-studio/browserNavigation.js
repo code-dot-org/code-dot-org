@@ -4,7 +4,7 @@
 // levels without doing page reloads.
 
 import {getStore} from '../redux';
-import {setCurrentLevelId} from '@cdo/apps/code-studio/progressRedux';
+import {onLevelIndexChange} from '@cdo/apps/code-studio/progressRedux';
 
 // Returns whether we can safely navigate between the two given levels
 // without reloading the whole page.
@@ -18,16 +18,18 @@ export function canChangeLevelInPage(currentLevel, newLevel) {
 // browser session history stack.
 export function setupNavigationHandler(lessonData) {
   window.addEventListener('popstate', function (event) {
-    // A path looks like this: /s/allthethings/lessons/46/levels/2
+    // A path looks like this: /s/allthethings/lessons/46/levels/2(/sublevels/1)
     // The level number will be at index 6 of a string split on '/'.
+    // The sublevel number will be at index 8 if present
     const levelNumberStringIndex = 6;
+    const sublevelNumberStringIndex = 8;
 
     const path = new URL(document.location).pathname;
     if (!path) {
       return;
     }
 
-    const values = path.split('/', levelNumberStringIndex + 1);
+    const values = path.split('/', sublevelNumberStringIndex + 1);
     if (values.length < levelNumberStringIndex + 1) {
       return;
     }
@@ -37,11 +39,18 @@ export function setupNavigationHandler(lessonData) {
       return;
     }
 
-    const levelIndex = levelNumber - 1;
-    const levelId = lessonData.levels[levelIndex].activeId;
+    let sublevelNumber;
+    if (values.length > sublevelNumberStringIndex) {
+      sublevelNumber = Number(values[sublevelNumberStringIndex]);
+      if (!Number.isInteger(sublevelNumber) || sublevelNumber <= 0) {
+        sublevelNumber = undefined;
+      }
+    }
 
     // Update the progress redux store.
-    getStore().dispatch(setCurrentLevelId(levelId));
+    getStore().dispatch(
+      onLevelIndexChange(levelNumber - 1, sublevelNumber && sublevelNumber - 1)
+    );
   });
 }
 
@@ -49,10 +58,10 @@ export function setupNavigationHandler(lessonData) {
 // onto the browser session history stack, and updating the window title.
 export function updateBrowserForLevelNavigation(
   progressStoreState,
-  levelUrl,
+  levelPath,
   levelId
 ) {
-  window.history.pushState({}, '', levelUrl + window.location.search);
+  window.history.pushState({}, '', levelPath + window.location.search);
   setWindowTitle(progressStoreState, levelId);
 }
 

@@ -1,13 +1,15 @@
 /** @file Test of Log Browser Filters component. */
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import React from 'react';
-import {shallow, mount} from 'enzyme';
 import {spy} from 'sinon';
-import {expect} from '../../util/reconfiguredChai';
+
 import NetSimLogBrowserFilters, {
   SentByDropdown,
 } from '@cdo/apps/netsim/NetSimLogBrowserFilters';
 import i18n from '@cdo/netsim/locale';
+
+import {expect} from '../../util/reconfiguredChai';
 
 describe('NetSimLogBrowserFilters', function () {
   describe('Student View', function () {

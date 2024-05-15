@@ -1,9 +1,11 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+
 import StyledCodeBlock, {
   buildProgrammingExpressionMarkdown,
 } from '@cdo/apps/templates/lessonOverview/StyledCodeBlock';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('StyledCodeBlock', () => {
   describe('buildProgrammingExpressionMarkdown', () => {

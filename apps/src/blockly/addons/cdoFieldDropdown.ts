@@ -3,11 +3,13 @@ import GoogleBlockly, {
   FieldDropdownValidator,
   MenuGeneratorFunction,
 } from 'blockly/core';
-import {EMPTY_OPTION} from '../constants';
+
 import {
   printerStyleNumberRangeToList,
   numberListToString,
 } from '@cdo/apps/blockly/utils';
+
+import {EMPTY_OPTION} from '../constants';
 
 type CustomMenuGenerator = CustomMenuOption[] | MenuGeneratorFunction;
 // Blockly's MenuOption can either be [string, string] or [ImageProperties, string]. We
@@ -37,13 +39,11 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
    * by quotes in xml.
    */
   doClassValidation_(newValue?: string) {
+    const sourceBlock = this.getSourceBlock();
     if (newValue === EMPTY_OPTION) {
       return newValue;
     } else {
-      // For behavior picker blocks, we need to regenerate menu options each time,
-      // in case a behavior has been renamed.
-      const useCache = this.name !== 'BEHAVIOR';
-      for (const option of this.getOptions(useCache, newValue)) {
+      for (const option of this.getOptions(true)) {
         if (option[1] === newValue) {
           return newValue;
         } else if (option[1] === `"${newValue}"`) {
@@ -51,11 +51,11 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
         }
       }
 
-      if (this.sourceBlock_) {
+      if (sourceBlock) {
         console.warn(
           "Cannot set the dropdown's value to an unavailable option." +
             ' Block type: ' +
-            this.sourceBlock_.type +
+            sourceBlock.type +
             ', Field name: ' +
             this.name +
             ', Value: ' +
@@ -64,34 +64,6 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
       }
       return null;
     }
-  }
-
-  /**
-   * Return a list of the options for this dropdown.
-   *
-   * @param useCache For dynamic options, whether or not to use the cached
-   *     options or to re-generate them.
-   * @param {string} newValue The new value to be checked and potentially added
-   *     to the options list (behaviorPicker blocks only).
-   * @returns A non-empty array of option tuples:
-   *     (human-readable text or image, language-neutral name).
-   * @throws {TypeError} If generated options are incorrectly structured.
-   */
-  getOptions(useCache?: boolean, newValue?: string) {
-    const options = super.getOptions(useCache);
-
-    // Behavior pickers do not populate correctly until the workspace has been loaded.
-    if (this.name === 'BEHAVIOR' && newValue) {
-      // Check whether the initial newValue option already exists
-      const optionExists = options.some(option => option[0] === newValue);
-      // The hidden workspace is created after the main workspace flyout is populated.
-      const loadingFinished = Blockly.getHiddenDefinitionWorkspace();
-      if (!optionExists && !loadingFinished) {
-        // Assume initial value is valid and add it to the menu if not yet present.
-        options.push([newValue, newValue]);
-      }
-    }
-    return options;
   }
 
   /**
@@ -181,13 +153,19 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
   }
 
   /**
-   * Override of createTextArrow_ to fix the arrow position on Safari.
-   * We need to add dominant-baseline="central" to the arrow element in order to
-   * center it on Safari.
-   * We can remove this if this Blockly issue is fixed:
-   * https://github.com/google/blockly/issues/7890
+   * We override createTextArrow_ to skip creating the arrow for uneditable blocks.
+   *
+   * Additionally, we need fix the arrow position on Safari, but only until
+   * upgrading to Blockly v11. After this, we should be able to just call
+   * super.createTextArrow_() after the early return.
    *  @override */
   createTextArrow_() {
+    if (!this.getSourceBlock()?.isEditable()) {
+      return;
+    }
+
+    // Once we are on v11, we should be able to use the parent class method
+    // for everything below this point.
     const arrow = Blockly.utils.dom.createSvgElement(
       Blockly.utils.Svg.TSPAN,
       {},

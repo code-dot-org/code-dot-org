@@ -1,0 +1,71 @@
+@import 'color.scss';
+@import '../../mixins.scss';
+
+.container {
+  display: flex;
+
+  .subContainer {
+    display: flex;
+  }
+}
+
+.button {
+  @include remove-button-styles;
+  background-color: $neutral_dark;
+  color: $neutral_light;
+  display: flex;
+  height: 24px;
+  width: 24px;
+  font-size: 13px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  margin: 2px;
+  transition: opacity 0.2s ease;
+
+  &Disabled {
+    opacity: 50%;
+    cursor: default;
+  }
+
+  &InteractionDisabled {
+    cursor: default;
+    background-color: $neutral_dark90;
+  }
+
+  &Wide {
+    width: initial;
+    padding: 0 6px 0 2px;
+
+    html[dir="rtl"] & {
+      padding: 0 2px 0 6px;
+    }
+
+    &Image {
+      height: 20px;
+      border-radius: 2px;
+    }
+
+    &Content {
+      padding: 0 16px 0 8px;
+
+      html[dir="rtl"] & {
+        padding: 0 8px 0 16px;
+      }
+
+      &NoRightPadding {
+        padding-right: 0;
+      }
+    }
+  }
+
+  .currentPack {
+    display: contents;
+  }
+
+  &Skip {
+    width: initial;
+    padding: 0 11px;
+    gap: 9px;
+  }
+}

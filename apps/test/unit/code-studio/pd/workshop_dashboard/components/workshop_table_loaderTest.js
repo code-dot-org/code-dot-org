@@ -3,7 +3,7 @@ import React from 'react';
 import _ from 'lodash';
 import sinon from 'sinon';
 import {expect} from 'chai';
-import {mount, shallow} from 'enzyme';
+import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 
 describe('WorkshopTableLoader', () => {
   let server;

@@ -1,9 +1,11 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import {expect} from '../../../util/reconfiguredChai';
-import {UnconnectedLoginTypePicker as LoginTypePicker} from '@cdo/apps/templates/teacherDashboard/LoginTypePicker';
+
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {UnconnectedLoginTypePicker as LoginTypePicker} from '@cdo/apps/templates/teacherDashboard/LoginTypePicker';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('LoginTypePicker', () => {
   it('sends analytic event when a login type is selected', () => {

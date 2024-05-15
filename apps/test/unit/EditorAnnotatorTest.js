@@ -73,6 +73,101 @@ describe('EditorAnnotator', () => {
       EditorAnnotator.annotateLine(4, message, 'INFO');
       sinon.assert.calledWith(annotationListStub, 'INFO', 4, message);
     });
+
+    it('should amend the styling for the annotation when given a color', () => {
+      let message = 'This is a line of code';
+      EditorAnnotator.annotateLine(6, message, 'INFO', '#d24');
+
+      // Detect that the <head> contains some styling including our color
+      expect(document.head.innerHTML.includes('#d24')).to.be.true;
+    });
+
+    it('should amend the styling for the annotation when given an icon URL', () => {
+      let message = 'This is a line of code';
+      EditorAnnotator.annotateLine(2, message, 'INFO', null, '/my/image.png');
+
+      // Detect that the <head> contains some styling including our color
+      expect(document.head.innerHTML.includes('url(/my/image.png)')).to.be.true;
+    });
+
+    it('should amend the styling for the annotation when given an icon URL and a color', () => {
+      let message = 'This is a line of code';
+      EditorAnnotator.annotateLine(2, message, 'INFO', '#f99', '/my/image.png');
+
+      // Detect that the <head> contains some styling including our color
+      expect(document.head.innerHTML.includes('url(/my/image.png), #f99')).to.be
+        .true;
+    });
+
+    it('should amend the styling for the tooltip element for an annotation when given', async () => {
+      let message = 'This is a line of code';
+
+      // Mock out the Ace Editor DOM presence
+      const aceContainer = document.createElement('div');
+      document.body.appendChild(aceContainer);
+      dropletStub.aceEditor.container = aceContainer;
+
+      EditorAnnotator.annotateLine(
+        2,
+        message,
+        'INFO',
+        '#f99',
+        '/my/image.png',
+        {backgroundImage: 'url(/my/bg.png)'}
+      );
+
+      // Simulate Ace Editor adding a tooltip
+      const tooltip = document.createElement('div');
+      tooltip.classList.add('ace_tooltip');
+      tooltip.textContent = message;
+      aceContainer.appendChild(tooltip);
+
+      // Detect that this tooltip element has the styling requested
+      // We need to make sure we go after any callbacks
+      // And we need to match any 'corrected' form. For instance, it is
+      // correct to put quotes in the resulting backgroundImage.
+      await new Promise(process.nextTick);
+      expect(tooltip.style.backgroundImage).to.match(
+        /url\(["]?\/my\/bg.png["]\)/
+      );
+
+      // Clean-up
+      aceContainer.remove();
+    });
+
+    it('should leave the styling for any unrelated tooltip elements', async () => {
+      let message = 'This is a line of code';
+
+      // Mock out the Ace Editor DOM presence
+      const aceContainer = document.createElement('div');
+      document.body.appendChild(aceContainer);
+      dropletStub.aceEditor.container = aceContainer;
+
+      EditorAnnotator.annotateLine(
+        2,
+        message,
+        'INFO',
+        '#f99',
+        '/my/image.png',
+        {backgroundImage: 'url(/my/bg.png)'}
+      );
+
+      // Simulate Ace Editor adding a tooltip
+      const tooltip = document.createElement('div');
+      tooltip.classList.add('ace_tooltip');
+      tooltip.textContent = 'some other message!';
+      aceContainer.appendChild(tooltip);
+
+      // Similar to above, but we shouldn't match because the text of this tooltip
+      // does not match the annotation we added.
+      await new Promise(process.nextTick);
+      expect(tooltip.style.backgroundImage).to.not.match(
+        /url\(["]?\/my\/bg.png["]\)/
+      );
+
+      // Clean-up
+      aceContainer.remove();
+    });
   });
 
   describe('clearAnnotations', () => {
@@ -238,8 +333,8 @@ describe('EditorAnnotator', () => {
       undimBlocksStub.restore();
     });
 
-    it('should mark the given line in the editor with the given class', () => {
-      EditorAnnotator.highlightLine(4, 'my_class');
+    it('should mark the given line in the editor', () => {
+      EditorAnnotator.highlightLine(4);
       // It should create just one range with the (0-based) line index we
       // passed it. The 42 is the length of the line which is stubbed out.
       sinon.assert.calledOnceWithExactly(rangeStub, 3, 0, 3, 42);
@@ -247,7 +342,7 @@ describe('EditorAnnotator', () => {
       sinon.assert.calledWith(
         aceSessionStub.addMarker,
         sinon.match.instanceOf(rangeStub),
-        'my_class',
+        sinon.match.any,
         'text'
       );
 
@@ -256,7 +351,7 @@ describe('EditorAnnotator', () => {
     });
 
     it('should dim blocks when possible', () => {
-      EditorAnnotator.highlightLine(4, 'my_class');
+      EditorAnnotator.highlightLine(4);
 
       sinon.assert.calledOnce(dimBlocksStub);
 
@@ -265,8 +360,8 @@ describe('EditorAnnotator', () => {
     });
 
     it('should only dim blocks the first time when called more than once', () => {
-      EditorAnnotator.highlightLine(4, 'my_class');
-      EditorAnnotator.highlightLine(5, 'my_class');
+      EditorAnnotator.highlightLine(4);
+      EditorAnnotator.highlightLine(5);
 
       sinon.assert.calledOnce(dimBlocksStub);
 
@@ -279,13 +374,32 @@ describe('EditorAnnotator', () => {
       blocks.push(sinon.stub());
       blocks.push(sinon.stub());
 
-      EditorAnnotator.highlightLine(4, 'my_class');
+      EditorAnnotator.highlightLine(4);
 
       // It should call undimBlock on each of them
       expect(undimBlockStub.callCount).to.equal(blocks.length);
       for (const block of blocks) {
         sinon.assert.calledWith(undimBlockStub, block);
       }
+
+      // Hopefully this function clears the state
+      EditorAnnotator.clearHighlightedLines();
+    });
+
+    it('should add a stylesheet for the given color', () => {
+      EditorAnnotator.highlightLine(4, '#042');
+
+      // It should create just one range with the (0-based) line index we
+      // passed it. The 42 is the length of the line which is stubbed out.
+      sinon.assert.calledWith(
+        aceSessionStub.addMarker,
+        sinon.match.instanceOf(rangeStub),
+        sinon.match.any,
+        'text'
+      );
+
+      // Detect that the <head> contains some styling including our color
+      expect(document.head.innerHTML.includes('#042')).to.be.true;
 
       // Hopefully this function clears the state
       EditorAnnotator.clearHighlightedLines();
@@ -328,8 +442,8 @@ describe('EditorAnnotator', () => {
     it('should remove each highlighted line previously highlighted', () => {
       // Highlight lines with a variety of classes
       EditorAnnotator.highlightLine(4);
-      EditorAnnotator.highlightLine(5, 'my_class');
-      EditorAnnotator.highlightLine(6, 'my_other_class');
+      EditorAnnotator.highlightLine(5);
+      EditorAnnotator.highlightLine(6, '#ff0');
       EditorAnnotator.clearHighlightedLines();
 
       // Should call the removeMarker as many times as we called highlightLine
@@ -338,11 +452,24 @@ describe('EditorAnnotator', () => {
 
     it('should undim all blocks', () => {
       EditorAnnotator.highlightLine(4);
-      EditorAnnotator.highlightLine(5, 'my_class');
-      EditorAnnotator.highlightLine(6, 'my_other_class');
+      EditorAnnotator.highlightLine(5);
+      EditorAnnotator.highlightLine(6, '#ff0');
       EditorAnnotator.clearHighlightedLines();
 
       sinon.assert.calledOnce(undimBlocksStub);
+    });
+  });
+
+  describe('scrollToLine', () => {
+    let scrollToLineStub;
+
+    beforeEach(() => {
+      scrollToLineStub = dropletStub.aceEditor.scrollToLine = sinon.stub();
+    });
+
+    it('should wrap and call the necessary method in Ace', () => {
+      EditorAnnotator.scrollToLine(42);
+      sinon.assert.calledOnceWithExactly(scrollToLineStub, 42, true, true);
     });
   });
 });

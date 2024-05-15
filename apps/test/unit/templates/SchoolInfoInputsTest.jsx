@@ -1,8 +1,10 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../util/deprecatedChai';
+
 import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
 import SchoolNotFound from '@cdo/apps/templates/SchoolNotFound';
+
+import {expect} from '../../util/deprecatedChai';
 
 const MINIMUM_PROPS = {
   onCountryChange: () => {},

@@ -378,7 +378,7 @@ class Blockly < Level
         success_condition: 'fn_successCondition',
         failure_condition: 'fn_failureCondition',
       }
-      properties.keys.each do |dashboard|
+      properties.each_key do |dashboard|
         blockly = overrides[dashboard.to_sym] || dashboard.camelize(:lower)
         # Select value from properties json
         # Don't override existing valid (non-nil/empty) values
@@ -451,18 +451,6 @@ class Blockly < Level
       level_prop.compact!
     end
     options.freeze
-  end
-
-  # FND-985 Create shared API to get localized level properties.
-  def get_localized_property(property_name)
-    if should_localize? && try(property_name)
-      I18n.t(
-        name,
-        scope: [:data, property_name],
-        default: nil,
-        smart: true
-      )
-    end
   end
 
   def localized_failure_message_override

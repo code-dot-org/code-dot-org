@@ -8,12 +8,22 @@
         {
           "key": "f503efed-1d08-4a36-b7ba-e64f583d5209",
           "notice": "Course Warning",
-          "details": "We are in the process of fully removing the Course 3 content and course from Code.org within the next 6-8 months, as we no longer actively support this older offering. Any existing bugs or seemingly-missing content within Course 3 content will unfortunately not be addressed or fixed, as we work towards fully removing it and dedicate our staff resources on new content offerings.",
+          "details": "We are in the process of fully removing the Course 3 content and course from Code.org within the next 15 months, as we no longer actively support this older offering. Any existing bugs or seemingly-missing content within Course 3 content will unfortunately not be addressed or fixed, as we work towards fully removing it and dedicate our staff resources on new content offerings.",
           "link": "https://support.code.org/hc/en-us/articles/16268528601101-List-of-Deprecated-or-Non-Supported-Code-org-Courses",
           "type": "warning",
           "visibility": "Teacher-only",
           "dismissible": false,
           "buttonText": "Learn More"
+        },
+        {
+          "key": "c37d12b7-d7d2-46c1-8809-17f17dc97790",
+          "notice": "CS Fundamentals now available in Filipino!",
+          "details": "With generous support from HP, we translated CS Fundamentals into Filipino. We invite you to begin using the CS Fundamentals created for all elementary and beginner secondary students. Sa bukas na suporta mula sa HP, isinalin namin ang CS Fundamentals sa Filipino. Inaanyayahan namin kayong simulan ang paggamit ng CS Fundamentals sa Filipino.",
+          "link": "https://studio.code.org/s/coursec-2021?lang=fil-PH",
+          "type": "bullhorn",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "CSF Kursong C"
         }
       ],
       "curriculum_path": "https://code.org/curriculum/course3/{LESSON}/Teacher",
@@ -33,7 +43,7 @@
     },
     "new_name": null,
     "family_name": "course3",
-    "serialized_at": "2023-09-18 14:47:33 UTC",
+    "serialized_at": "2024-04-17 19:09:52 UTC",
     "published_state": "preview",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

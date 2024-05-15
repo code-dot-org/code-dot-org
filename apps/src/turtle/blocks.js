@@ -22,14 +22,16 @@
  * @author fraser@google.com (Neil Fraser)
  */
 
-var Colours = require('./colours');
-var msg = require('./locale');
+import {Position} from '../constants';
+
 var commonMsg = require('@cdo/locale');
-var customLevelBlocks = require('./customLevelBlocks');
+
 var BlockStyles = require('../blockly/constants').BlockStyles;
 var BlockColors = require('../blockly/constants').BlockColors;
 
-import {Position} from '../constants';
+var Colours = require('./colours');
+var customLevelBlocks = require('./customLevelBlocks');
+var msg = require('./locale');
 
 const RANDOM_VALUE = 'RAND';
 
@@ -78,6 +80,7 @@ const DIRECTION_VALUES = [
 
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function (blockly, blockInstallOptions) {
+  Blockly.cdoUtils.registerCustomProcedureBlocks();
   var skin = blockInstallOptions.skin;
 
   var generator = blockly.getGenerator();

@@ -1,11 +1,13 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import Visualization from './Visualization';
-import StepButton from './StepButton';
-import SpellingControls from './SpellingControls';
-import CollectorGemCounter from './CollectorGemCounter';
-import GameButtons from '../templates/GameButtons';
+
 import BelowVisualization from '../templates/BelowVisualization';
+import GameButtons from '../templates/GameButtons';
+
+import CollectorGemCounter from './CollectorGemCounter';
+import SpellingControls from './SpellingControls';
+import StepButton from './StepButton';
+import Visualization from './Visualization';
 
 const MazeVisualizationColumn = function (props) {
   return (

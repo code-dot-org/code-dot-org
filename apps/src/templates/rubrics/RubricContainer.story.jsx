@@ -1,10 +1,13 @@
 import React from 'react';
-import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
-import RubricContainer from './RubricContainer';
 import {Provider} from 'react-redux';
-import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
+
 import teacherPanel from '@cdo/apps/code-studio/teacherPanelRedux';
+import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
+import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
+
 import teacherSections from '../teacherDashboard/teacherSectionsRedux';
+
+import RubricContainer from './RubricContainer';
 
 export default {
   component: RubricContainer,
@@ -26,7 +29,11 @@ const defaultRubric = {
     position: 3,
     name: 'Testing',
   },
+  script: {
+    id: 107,
+  },
   level: {
+    id: 42,
     name: rubricLevelName,
     position: 5,
   },
@@ -95,6 +102,7 @@ const defaultStudentLevelInfo = {
   attempts: 2,
   timeSpent: 404,
   lastAttempt: '5/26/23',
+  user_id: 107,
 };
 
 const Template = args => (

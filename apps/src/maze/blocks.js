@@ -21,8 +21,10 @@
  * @fileoverview Demonstration of Blockly: Solving a maze.
  * @author fraser@google.com (Neil Fraser)
  */
-var commonMsg = require('@cdo/locale');
+
 var mazeUtils = require('@code-dot-org/maze').utils;
+
+var commonMsg = require('@cdo/locale');
 
 var blockUtils = require('../block_utils');
 var BlockStyles = require('../blockly/constants').BlockStyles;
@@ -32,6 +34,7 @@ var msg = require('./locale');
 
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function (blockly, blockInstallOptions) {
+  Blockly.cdoUtils.registerCustomProcedureBlocks();
   var skin = blockInstallOptions.skin;
   var generator = blockly.getGenerator();
   blockly.JavaScript = generator;

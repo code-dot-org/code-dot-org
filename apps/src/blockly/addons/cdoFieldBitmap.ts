@@ -1,4 +1,5 @@
 import {FieldBitmap} from '@blockly/field-bitmap';
+
 import {commonI18n} from '@cdo/apps/types/locale';
 
 // The parent class sets a static pixel size and calculate the field size dymanically.
@@ -25,9 +26,8 @@ export class CdoFieldBitmap extends FieldBitmap {
 
   /**
    * Show the bitmap editor dialog. The parent class provides two buttons labeled
-   * "Randomize" and "Clear" which are not translatable. In our version, we find
-   * these buttons after they are added so that we can provide translatable
-   * strings.
+   * "Randomize" and "Clear". In our version, we remove the randomize button and
+   * replace the clear button text with a translation string.
    * @param {!Event=} e Optional mouse event that triggered the field to
    *     open, or undefined if triggered programmatically.
    * @param {boolean=} _quietInput Quiet input.
@@ -42,11 +42,11 @@ export class CdoFieldBitmap extends FieldBitmap {
       '.dropdownEditor .controlButton'
     );
 
-    // Update the button text to use our translations.
+    // Remove the button or update its text to use our translations.
     buttons.forEach(button => {
       switch (button.innerHTML.trim()) {
         case 'Randomize':
-          button.innerHTML = commonI18n.blocklyRandomize();
+          button.remove();
           break;
         case 'Clear':
           button.innerHTML = commonI18n.blocklyClear();
@@ -62,11 +62,11 @@ export class CdoFieldBitmap extends FieldBitmap {
    * @override
    */
   initView() {
-    this.blockDisplayPixels_ = [];
-    this.pixelSize = FIELD_HEIGHT / this.imgHeight_;
-    for (let r = 0; r < this.imgHeight_; r++) {
+    this.blockDisplayPixels = [];
+    this.pixelSize = FIELD_HEIGHT / this.imgHeight;
+    for (let r = 0; r < this.imgHeight; r++) {
       const row = [];
-      for (let c = 0; c < this.imgWidth_; c++) {
+      for (let c = 0; c < this.imgWidth; c++) {
         const square = Blockly.utils.dom.createSvgElement(
           'rect',
           {
@@ -81,7 +81,7 @@ export class CdoFieldBitmap extends FieldBitmap {
         );
         row.push(square);
       }
-      this.blockDisplayPixels_.push(row);
+      this.blockDisplayPixels.push(row);
     }
   }
 
@@ -96,7 +96,7 @@ export class CdoFieldBitmap extends FieldBitmap {
    */
   protected updateSize_() {
     {
-      const newWidth = this.pixelSize * this.imgWidth_;
+      const newWidth = this.pixelSize * this.imgWidth;
       if (this.borderRect_) {
         this.borderRect_.setAttribute('width', String(newWidth));
         this.borderRect_.setAttribute('height', String(FIELD_HEIGHT));

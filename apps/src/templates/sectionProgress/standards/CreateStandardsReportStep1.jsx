@@ -1,11 +1,14 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
+
+import {getUnpluggedLessonsForScript} from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
 import i18n from '@cdo/locale';
-import LessonStatusList from './LessonStatusList';
+
 import Button from '../../Button';
 import DialogFooter from '../../teacherDashboard/DialogFooter';
-import {connect} from 'react-redux';
-import {getUnpluggedLessonsForScript} from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
+
+import LessonStatusList from './LessonStatusList';
 
 class CreateStandardsReportStep1 extends Component {
   static propTypes = {

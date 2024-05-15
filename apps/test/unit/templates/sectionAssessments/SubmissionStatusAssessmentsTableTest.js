@@ -1,12 +1,14 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
-import {assert, expect} from '../../../util/reconfiguredChai';
-import SubmissionStatusAssessmentsTable from '@cdo/apps/templates/sectionAssessments/SubmissionStatusAssessmentsTable';
+
 import {
   studentOverviewData,
   testDataTimestamps,
 } from '@cdo/apps/templates/sectionAssessments/assessmentsTestHelpers';
+import SubmissionStatusAssessmentsTable from '@cdo/apps/templates/sectionAssessments/SubmissionStatusAssessmentsTable';
 import i18n from '@cdo/locale';
+
+import {assert, expect} from '../../../util/reconfiguredChai';
 
 describe('SubmissionStatusAssessmentsTable', () => {
   it('renders a table', () => {

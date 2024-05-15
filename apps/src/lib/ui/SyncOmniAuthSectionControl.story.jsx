@@ -8,7 +8,7 @@ import {
   DISABLED,
 } from './SyncOmniAuthSectionControl';
 import {action} from '@storybook/addon-actions';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 
 export default {
   component: SyncOmniAuthSectionButton,

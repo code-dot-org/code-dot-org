@@ -1,9 +1,29 @@
-import React, {useEffect, useState, useRef} from 'react';
-import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
 import classnames from 'classnames';
-import style from './rubrics.module.scss';
+import PropTypes from 'prop-types';
+import React, {useEffect, useState, useRef, useMemo} from 'react';
+
+import {
+  BodyThreeText,
+  OverlineThreeText,
+  Heading5,
+  StrongText,
+} from '@cdo/apps/componentLibrary/typography';
 import EditorAnnotator from '@cdo/apps/EditorAnnotator';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {ai_rubric_cyan} from '@cdo/apps/util/color';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import i18n from '@cdo/locale';
+
+import AiAssessment from './AiAssessment';
+import AiAssessmentFeedbackContext from './AiAssessmentFeedbackContext';
+import EvidenceLevels from './EvidenceLevels';
+import tipIcon from './images/AiBot_Icon.svg';
+import infoIcon from './images/info-icon.svg';
+import ProgressRing from './ProgressRing';
+import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
 import {
   learningGoalShape,
   reportingDataShape,
@@ -11,23 +31,31 @@ import {
   submittedEvaluationShape,
   aiEvaluationShape,
 } from './rubricShapes';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {
-  BodyThreeText,
-  OverlineThreeText,
-  Heading5,
-} from '@cdo/apps/componentLibrary/typography';
-import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import EvidenceLevels from './EvidenceLevels';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import AiAssessment from './AiAssessment';
-import HttpClient from '@cdo/apps/util/HttpClient';
-import ProgressRing from './ProgressRing';
-import AiAssessmentFeedbackContext from './AiAssessmentFeedbackContext';
+
+import style from './rubrics.module.scss';
 
 const INVALID_UNDERSTANDING = -1;
+
+/**
+ * Annotation tooltip styling.
+ *
+ * Needs to be here to capture the image URL and because EditorAnnotator can
+ * better add the styling overrides directly to the element so they always
+ * apply over other styling (including those also directly added to the
+ * element by the editor implementation, aka Droplet or Ace).
+ */
+const tipStyle = {
+  backgroundImage: `url(${tipIcon})`,
+  backgroundColor: '#333',
+  backgroundPosition: '2px center',
+  backgroundSize: '24px',
+  backgroundRepeat: 'no-repeat',
+  borderColor: '#555',
+  color: 'white',
+  borderRadius: '6px',
+  padding: '6px',
+  paddingLeft: '30px',
+};
 
 /**
  * Clear prior line annotations
@@ -67,14 +95,48 @@ export function clearAnnotations() {
  * In this case, we might find this code on lines 8 through 10. So, we would
  * annotate line 8 and highlight lines 8 through 10.
  *
+ * Another case requiring a fallback is when the evidence feedback does not
+ * contain a message. Something like: `Lines 5-6: `if (something) {...}`.
+ * In this case, we can highlight the line, but we want to annotate the line
+ * with the full observations. This is why we also pass those along.
+ *
+ * Also seen above is the way the AI might truncate code. In that case, we
+ * fallback to finding the first partial code match using the code before the
+ * ellipsis (...).
+ *
  * This will return a list of annotation blocks containing the line numbers
- * and the description.
+ * and the description that should be listed out to the viewer. Only items
+ * returned here will be listed. However, other content may be highlighted
+ * that does not end up in that list.
+ *
+ * This table suggests the fallbacks we have in place for responding to the
+ * provided 'evidence' column. Ideally, the evidence column can be parsed into
+ * items with a line number, code snippet, and a message (this first row of
+ * this table.) Then, it may be missing any one of those items and has to be
+ * gracefully handled. We should still strive to fix upstream the prompts such
+ * that they provide the ideal form.
+ *
+ * line number? | has code? | message? | annotated by | line number via
+ * ---------------------------------------------------------------------
+ * yes          | yes       | yes      | evidence     | code snippet
+ * yes          | no        | yes      | evidence     | AI line number
+ * yes          | yes       | no       | observations | code snippet
+ * yes          | no        | no       | observations | AI line number
+ * no           | --        | --       | none         | none
  *
  * @param {string} evidence - A text block described above.
+ * @param {string} observations - The text block for the overall observations, if needed.
+ * @param {function} hoverCallback - A function to call when the tooltip is opened.
  * @returns {Array} The ordered list of annotations.
  */
-export function annotateLines(evidence) {
+export function annotateLines(evidence, observations, hoverCallback) {
   let ret = [];
+
+  // When we fail to find specific instances of evidence, we use the
+  // 'observations' column to fill out the evidence section. This fall back
+  // is not our ideal since it does not include line numbers or landmarks in
+  // the code to follow.
+  let shouldIncludeObservationsColumn = false;
 
   // Go through the AI evidence
   // For every reference the AI gave us, we will find it in the code.
@@ -87,16 +149,24 @@ export function annotateLines(evidence) {
     let lineNumber = parseInt(match[1]);
     let lastLineNumber = parseInt(match[2] || lineNumber);
     let found = false;
-    let hasSnippet = false;
-    const context = match[3].trim();
+    const context = ' ' + match[3].trim();
 
-    const message = context
-      .substring(0, context.indexOf('`') || context.length)
-      .trim();
+    // The message is everything before the code reference (if it exists)
+    let message = (
+      context.includes('`')
+        ? context.substring(0, context.indexOf('`'))
+        : context
+    ).trim();
 
     // We look at all of the code references the AI gave us which are
     // surrounded by backticks.
-    const references = context.substring(message.length);
+    const references = context.substring(message.length).trim();
+
+    // If message is blank, just put in the observations
+    if (message === '') {
+      message = observations;
+    }
+
     for (const submatch of references.matchAll(/`([^\`]+)`/g)) {
       let snippet = submatch[1].trim();
 
@@ -106,48 +176,106 @@ export function annotateLines(evidence) {
         continue;
       }
 
-      // We have some kind of code reference
-      hasSnippet = true;
-
       // Find where this snippet actually happens
       let position = EditorAnnotator.findCodeRegion(snippet, {
         stripComments: true,
       });
 
+      // If it could not find the region, try a less aggressive approach
+      // by looking for common patterns.
+      if (!(position.firstLine || position.lastLine)) {
+        // We often see the AI truncate code blocks via something like:
+        // 'if (something) { ... }' ... This will at least find the beginning of it.
+        const truncationRegex = /{\s*[.]+\s*}/;
+        if (snippet.match(truncationRegex)) {
+          const prologue = snippet.split(truncationRegex)[0].trim();
+          position = EditorAnnotator.findCodeRegion(prologue, {
+            stripComments: true,
+          });
+        }
+      }
+
       // Annotate that first line and highlight all lines, if they were found
       if (position.firstLine && position.lastLine) {
         found = true;
-        EditorAnnotator.annotateLine(position.firstLine, message);
+        EditorAnnotator.annotateLine(
+          position.firstLine,
+          message,
+          'INFO',
+          ai_rubric_cyan,
+          infoIcon,
+          tipStyle,
+          hoverCallback
+        );
         for (let i = position.firstLine; i <= position.lastLine; i++) {
-          EditorAnnotator.highlightLine(i);
+          EditorAnnotator.highlightLine(i, ai_rubric_cyan);
         }
+
+        if (message === observations) {
+          shouldIncludeObservationsColumn = true;
+        } else {
+          ret.push({
+            firstLine: position.firstLine,
+            lastLine: position.lastLine,
+            message: message,
+          });
+        }
+      }
+    }
+
+    // If we have some evidence but couldn't find it, use the AI/Agent provided line
+    // numbers, which may be inaccurate.
+    if (!found) {
+      EditorAnnotator.annotateLine(
+        lineNumber,
+        message,
+        'INFO',
+        ai_rubric_cyan,
+        infoIcon,
+        tipStyle,
+        hoverCallback
+      );
+      for (let i = lineNumber; i <= lastLineNumber; i++) {
+        EditorAnnotator.highlightLine(i, ai_rubric_cyan);
+      }
+
+      // If we are forcing these lines to have the bulk annotation of
+      // the observations column, we do not append it to the list. This way,
+      // it does not get listed out.
+      if (message === observations) {
+        shouldIncludeObservationsColumn = true;
+      } else {
         ret.push({
-          firstLine: position.firstLine,
-          lastLine: position.lastLine,
+          firstLine: lineNumber,
+          lastLine: lastLineNumber,
           message: message,
         });
       }
     }
+  }
 
-    // If we have some code but couldn't find it, use the AI provided line
-    // numbers, which may be inaccurate.
-    if (!found && hasSnippet) {
-      EditorAnnotator.annotateLine(lineNumber, message);
-      for (let i = lineNumber; i <= lastLineNumber; i++) {
-        EditorAnnotator.highlightLine(i);
-      }
+  // If there was no evidence given, we do at least want to include the
+  // observations column.
+  if (ret.length === 0) {
+    shouldIncludeObservationsColumn = true;
+  }
+
+  // Somewhere, we annotated with the obserations column, or we have no other
+  // sources of evidence. We want to list out the observations column in our
+  // rendered list. So, here we parse out the observations column.
+  if (shouldIncludeObservationsColumn) {
+    observations.split('. ').forEach(observation => {
       ret.push({
-        firstLine: lineNumber,
-        lastLine: lastLineNumber,
-        message: message,
+        message: observation,
       });
-    }
+    });
   }
 
   return ret;
 }
 
 export default function LearningGoals({
+  productTour,
   open,
   learningGoals,
   teacherHasEnabledAi,
@@ -173,7 +301,8 @@ export default function LearningGoals({
     INVALID_UNDERSTANDING
   );
   const [aiFeedback, setAiFeedback] = useState(-1);
-  const [aiEvidence, setAiEvidence] = useState([]);
+  const [doneLoading, setDoneLoading] = useState(false);
+
   // The ref version of this state is used when updating the information based
   // on saved info retrieved by network requests so as not to race them.
   const [currentLearningGoal, setCurrentLearningGoal] = useState(0);
@@ -188,7 +317,9 @@ export default function LearningGoals({
   );
 
   const aiEnabled =
-    learningGoals[currentLearningGoal].aiEnabled && teacherHasEnabledAi;
+    currentLearningGoal === learningGoals.length
+      ? false
+      : learningGoals[currentLearningGoal].aiEnabled && teacherHasEnabledAi;
   const base_teacher_evaluation_endpoint = '/learning_goal_teacher_evaluations';
 
   // Timer variables for autosaving
@@ -196,7 +327,11 @@ export default function LearningGoals({
   const saveAfter = 2000;
 
   const handleFeedbackChange = event => {
-    if (studentLevelInfo.user_id && learningGoals[currentLearningGoal].id) {
+    if (
+      currentLearningGoal !== learningGoals.length &&
+      studentLevelInfo.user_id &&
+      learningGoals[currentLearningGoal].id
+    ) {
       if (autosaveTimer.current) {
         clearTimeout(autosaveTimer.current);
       }
@@ -208,10 +343,10 @@ export default function LearningGoals({
     }
   };
 
-  const getAiInfo = learningGoalId => {
-    if (!!aiEvaluations) {
+  const aiEvalInfo = useMemo(() => {
+    if (!!aiEvaluations && currentLearningGoal < learningGoals.length) {
       const aiInfo = aiEvaluations.find(
-        item => item.learning_goal_id === learningGoalId
+        item => item.learning_goal_id === learningGoals[currentLearningGoal].id
       );
       if (aiInfo) {
         aiInfo.showExactMatch = aiInfo.aiConfidenceExactMatch === 3;
@@ -220,9 +355,7 @@ export default function LearningGoals({
     } else {
       return null;
     }
-  };
-
-  const aiEvalInfo = getAiInfo(learningGoals[currentLearningGoal].id);
+  }, [learningGoals, aiEvaluations, currentLearningGoal]);
 
   // The backend provides two ai confidence levels. aiConfidenceExactMatch is
   // our confidence that the ai score is exactly correct, and and
@@ -242,36 +375,38 @@ export default function LearningGoals({
   }
 
   const autosave = () => {
-    setAutosaveStatus(STATUS.IN_PROGRESS);
-    const bodyData = JSON.stringify({
-      studentId: studentLevelInfo.user_id,
-      learningGoalId: learningGoals[currentLearningGoal].id,
-      feedback: teacherFeedbacks.current[currentLearningGoal],
-      understanding: understandingLevels.current[currentLearningGoal],
-    });
-    HttpClient.put(
-      `${base_teacher_evaluation_endpoint}/${learningGoalEvalIds.current[currentLearningGoal]}`,
-      bodyData,
-      true,
-      {
-        'Content-Type': 'application/json',
-      }
-    )
-      .then(() => {
-        setAutosaveStatus(STATUS.FINISHED);
-        if (!feedbackAdded) {
-          setFeedbackAdded(true);
-        }
-      })
-      .catch(error => {
-        console.error(error);
-        setAutosaveStatus(STATUS.ERROR);
+    if (!productTour) {
+      setAutosaveStatus(STATUS.IN_PROGRESS);
+      const bodyData = JSON.stringify({
+        studentId: studentLevelInfo.user_id,
+        learningGoalId: learningGoals[currentLearningGoal].id,
+        feedback: teacherFeedbacks.current[currentLearningGoal],
+        understanding: understandingLevels.current[currentLearningGoal],
       });
-    clearTimeout(autosaveTimer.current);
+      HttpClient.put(
+        `${base_teacher_evaluation_endpoint}/${learningGoalEvalIds.current[currentLearningGoal]}`,
+        bodyData,
+        true,
+        {
+          'Content-Type': 'application/json',
+        }
+      )
+        .then(() => {
+          setAutosaveStatus(STATUS.FINISHED);
+          if (!feedbackAdded) {
+            setFeedbackAdded(true);
+          }
+        })
+        .catch(error => {
+          console.error(error);
+          setAutosaveStatus(STATUS.ERROR);
+        });
+      clearTimeout(autosaveTimer.current);
+    }
   };
 
   useEffect(() => {
-    if (studentLevelInfo && learningGoals) {
+    if (studentLevelInfo && learningGoals && !productTour) {
       // Set our current idea of the feedback immediately
       setDisplayFeedback(teacherFeedbacks.current[currentLearningGoal]);
       setLoaded(teacherFeedbacksLoaded.current[currentLearningGoal]);
@@ -314,29 +449,34 @@ export default function LearningGoals({
                 setLoaded(teacherFeedbacksLoaded.current[index]);
                 setDisplayUnderstanding(understandingLevels.current[index]);
               }
+              if (index === learningGoals.length - 1) {
+                setDoneLoading(true);
+              }
             })
             .catch(error => console.error(error));
         });
     }
-  }, [studentLevelInfo, learningGoals, currentLearningGoal, open]);
+  }, [studentLevelInfo, learningGoals, currentLearningGoal, open, productTour]);
 
-  useEffect(() =>
-    document.addEventListener('keydown', handleKeyDown, {once: true})
-  );
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyDown, {once: true});
+  });
 
   // Callback to retrieve understanding data from EvidenceLevels
   const radioButtonCallback = radioButtonData => {
-    analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_EVIDENCE_LEVEL_SELECTED, {
-      ...(reportingData || {}),
-      learningGoalId: learningGoals[currentLearningGoal].id,
-      learningGoal: learningGoals[currentLearningGoal].learningGoal,
-      newlySelectedEvidenceLevel: radioButtonData,
-      previouslySelectedEvidenceLevel:
-        understandingLevels.current[currentLearningGoal],
-    });
-    setDisplayUnderstanding(radioButtonData);
-    understandingLevels.current[currentLearningGoal] = radioButtonData;
-    autosave();
+    if (currentLearningGoal !== learningGoals.length) {
+      analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_EVIDENCE_LEVEL_SELECTED, {
+        ...(reportingData || {}),
+        learningGoalId: learningGoals[currentLearningGoal].id,
+        learningGoal: learningGoals[currentLearningGoal].learningGoal,
+        newlySelectedEvidenceLevel: radioButtonData,
+        previouslySelectedEvidenceLevel:
+          understandingLevels.current[currentLearningGoal],
+      });
+      setDisplayUnderstanding(radioButtonData);
+      understandingLevels.current[currentLearningGoal] = radioButtonData;
+      autosave();
+    }
   };
 
   const renderAutoSaveTextbox = () => {
@@ -388,44 +528,96 @@ export default function LearningGoals({
     );
   };
 
-  const onCarouselPress = buttonValue => {
-    let currentIndex = currentLearningGoal;
-    currentIndex += buttonValue;
-    if (currentIndex < 0) {
-      currentIndex = learningGoals.length - 1;
-    } else if (currentIndex >= learningGoals.length) {
-      currentIndex = 0;
-    }
-    currentLearningGoalRef.current = currentIndex;
-    setCurrentLearningGoal(currentIndex);
-
-    // Clear feedback (without sending it)
-    setAiFeedback(-1);
+  const aiEvidence = useMemo(() => {
+    const onEvidenceTooltipOpened = () => {
+      // When the tooltip is opened, we will record that this happened alongside
+      // information about the learning goal.
+      const eventName = EVENTS.TA_RUBRIC_EVIDENCE_TOOLTIP_HOVERED;
+      analyticsReporter.sendEvent(eventName, {
+        ...(reportingData || {}),
+        learningGoalKey: learningGoals[currentLearningGoal].key,
+        learningGoal: learningGoals[currentLearningGoal].learningGoal,
+        studentId: !!studentLevelInfo ? studentLevelInfo.user_id : '',
+      });
+    };
 
     // Annotate the lines based on the AI observation
     clearAnnotations();
-    const aiEvalInfo = getAiInfo(learningGoals[currentIndex].id);
-    if (!!aiEvalInfo && aiEvalInfo.evidence) {
-      setAiEvidence(annotateLines(aiEvalInfo.evidence));
-    }
 
-    if (!isStudent) {
-      const eventName = EVENTS.TA_RUBRIC_LEARNING_GOAL_SELECTED;
-      analyticsReporter.sendEvent(eventName, {
-        ...(reportingData || {}),
-        learningGoalKey: learningGoals[currentIndex].key,
-        learningGoal: learningGoals[currentIndex].learningGoal,
-      });
+    if (!!aiEvalInfo && !productTour) {
+      const annotations = annotateLines(
+        aiEvalInfo.evidence,
+        aiEvalInfo.observations,
+        onEvidenceTooltipOpened
+      );
+      // Scroll to first evidence, if possible
+      if (annotations[0]?.firstLine) {
+        EditorAnnotator.scrollToLine(annotations[0].firstLine);
+      }
+      return annotations;
+    } else if (productTour) {
+      return [
+        {
+          firstLine: 12,
+          lastLine: 13,
+          message: 'A sprite is defined here.',
+        },
+      ];
+    }
+    return [];
+  }, [
+    aiEvalInfo,
+    productTour,
+    currentLearningGoal,
+    learningGoals,
+    reportingData,
+    studentLevelInfo,
+  ]);
+
+  const onCarouselPress = buttonValue => {
+    if (!productTour) {
+      let currentIndex = currentLearningGoal;
+      currentIndex += buttonValue;
+      if (currentIndex < 0) {
+        currentIndex = learningGoals.length;
+      } else if (currentIndex > learningGoals.length) {
+        currentIndex = 0;
+      }
+      currentLearningGoalRef.current = currentIndex;
+      setCurrentLearningGoal(currentIndex);
+
+      // Clear feedback (without sending it)
+      setAiFeedback(-1);
+
+      // Annotate the lines based on the AI observation
+      clearAnnotations();
+      if (currentIndex !== learningGoals.length) {
+        if (!isStudent) {
+          const eventName = EVENTS.TA_RUBRIC_LEARNING_GOAL_SELECTED;
+          analyticsReporter.sendEvent(eventName, {
+            ...(reportingData || {}),
+            learningGoalKey: learningGoals[currentIndex].key,
+            learningGoal: learningGoals[currentIndex].learningGoal,
+            studentId: !!studentLevelInfo ? studentLevelInfo.user_id : '',
+          });
+        }
+      }
     }
   };
 
   const handleKeyDown = event => {
-    if (event.key === 'ArrowLeft') {
-      onCarouselPress(-1);
-    } else if (event.key === 'ArrowRight') {
-      onCarouselPress(1);
+    if (open && !productTour) {
+      if (event.key === 'ArrowLeft') {
+        onCarouselPress(-1);
+      } else if (event.key === 'ArrowRight') {
+        onCarouselPress(1);
+      }
     }
   };
+
+  if (productTour && currentLearningGoal !== 0) {
+    setCurrentLearningGoal(0);
+  }
 
   return (
     <div className={style.learningGoalsContainer}>
@@ -437,6 +629,7 @@ export default function LearningGoals({
               style.learningGoalButton,
               style.learningGoalButtonLeft
             )}
+            aria-label={i18n.rubricPreviousLearningGoal()}
             onClick={() => onCarouselPress(-1)}
           >
             <FontAwesome icon="angle-left" />
@@ -448,6 +641,7 @@ export default function LearningGoals({
             understandingLevels={understandingLevels.current}
             radius={30}
             stroke={4}
+            loaded={doneLoading}
           />
           <div className={style.learningGoalsHeaderText}>
             <Heading5
@@ -456,17 +650,22 @@ export default function LearningGoals({
                 'uitest-learning-goal-title',
               ]}
             >
-              <span>{learningGoals[currentLearningGoal].learningGoal}</span>
+              <span>
+                {currentLearningGoal === learningGoals.length
+                  ? i18n.rubricLearningGoalSummary()
+                  : learningGoals[currentLearningGoal].learningGoal}
+              </span>
               {aiEnabled && displayUnderstanding === INVALID_UNDERSTANDING && (
                 <AiToken />
               )}
             </Heading5>
             <BodyThreeText className={style.learningGoalsHeaderTextBody}>
               {i18n.next()}:{' '}
-              {
-                learningGoals[(currentLearningGoal + 1) % learningGoals.length]
-                  .learningGoal
-              }
+              {currentLearningGoal + 1 === learningGoals.length
+                ? i18n.rubricLearningGoalSummary()
+                : learningGoals[
+                    (currentLearningGoal + 1) % learningGoals.length
+                  ].learningGoal}
             </BodyThreeText>
           </div>
         </div>
@@ -498,6 +697,7 @@ export default function LearningGoals({
               style.learningGoalButton,
               style.learningGoalButtonRight
             )}
+            aria-label={i18n.rubricNextLearningGoal()}
             onClick={() => onCarouselPress(1)}
           >
             <FontAwesome icon="angle-right" />
@@ -506,60 +706,91 @@ export default function LearningGoals({
       </div>
 
       <div className={style.learningGoalOuterBlock}>
-        <div className={style.learningGoalExpanded}>
-          <AiAssessmentFeedbackContext.Provider
-            value={{aiFeedback, setAiFeedback}}
-          >
-            {!!submittedEvaluation && renderSubmittedFeedbackTextbox()}
-            <EvidenceLevels
-              aiEvalInfo={aiEvalInfo}
-              isAiAssessed={learningGoals[currentLearningGoal].aiEnabled}
-              learningGoalKey={learningGoals[currentLearningGoal].key}
-              evidenceLevels={learningGoals[currentLearningGoal].evidenceLevels}
-              canProvideFeedback={canProvideFeedback}
-              understanding={displayUnderstanding}
-              radioButtonCallback={radioButtonCallback}
-              submittedEvaluation={submittedEvaluation}
-              isStudent={isStudent}
-              isAutosaving={autosaveStatus === STATUS.IN_PROGRESS}
-            />
-            {teacherHasEnabledAi &&
-              !!studentLevelInfo &&
-              !!aiEvalInfo &&
-              aiEvalInfo.understanding !== undefined && (
-                <div className={style.aiAssessmentOuterBlock}>
-                  <AiAssessment
-                    isAiAssessed={learningGoals[currentLearningGoal].aiEnabled}
-                    studentName={studentLevelInfo.name}
-                    aiConfidence={aiConfidence}
-                    aiUnderstandingLevel={aiEvalInfo.understanding}
-                    aiEvalInfo={aiEvalInfo}
-                    aiEvidence={aiEvidence}
-                  />
-                </div>
-              )}
-            {learningGoals[currentLearningGoal].tips && !isStudent && (
-              <details>
-                <summary>
-                  <strong>{i18n.tipsForEvaluation()}</strong>
-                </summary>
+        {currentLearningGoal !== learningGoals.length && (
+          <div className={style.learningGoalExpanded}>
+            <AiAssessmentFeedbackContext.Provider
+              value={{aiFeedback, setAiFeedback}}
+            >
+              {!!submittedEvaluation && renderSubmittedFeedbackTextbox()}
+              <div>
+                <EvidenceLevels
+                  productTour={productTour}
+                  aiEvalInfo={aiEvalInfo}
+                  isAiAssessed={learningGoals[currentLearningGoal].aiEnabled}
+                  learningGoalKey={learningGoals[currentLearningGoal].key}
+                  evidenceLevels={
+                    learningGoals[currentLearningGoal].evidenceLevels
+                  }
+                  canProvideFeedback={canProvideFeedback}
+                  understanding={displayUnderstanding}
+                  radioButtonCallback={radioButtonCallback}
+                  submittedEvaluation={submittedEvaluation}
+                  isStudent={isStudent}
+                  isAutosaving={autosaveStatus === STATUS.IN_PROGRESS}
+                />
+                {teacherHasEnabledAi &&
+                  !!studentLevelInfo &&
+                  !!aiEvalInfo &&
+                  aiEvalInfo.understanding !== undefined && (
+                    <div
+                      id="tour-ai-assessment"
+                      className={style.aiAssessmentOuterBlock}
+                    >
+                      <AiAssessment
+                        isAiAssessed={
+                          learningGoals[currentLearningGoal].aiEnabled
+                        }
+                        currentLearningGoal={currentLearningGoal}
+                        learningGoals={learningGoals}
+                        reportingData={reportingData}
+                        studentLevelInfo={studentLevelInfo}
+                        studentName={studentLevelInfo.name}
+                        aiConfidence={aiConfidence}
+                        aiUnderstandingLevel={aiEvalInfo.understanding}
+                        aiEvalInfo={aiEvalInfo}
+                        aiEvidence={aiEvidence}
+                      />
+                    </div>
+                  )}
+                {learningGoals[currentLearningGoal].tips && !isStudent && (
+                  <details>
+                    <summary className={style.tipsDetailsSummary}>
+                      <strong>{i18n.tipsForEvaluation()}</strong>
+                    </summary>
 
-                <div className={style.learningGoalsTips}>
-                  <SafeMarkdown
-                    markdown={learningGoals[currentLearningGoal].tips}
-                  />
-                </div>
-              </details>
-            )}
-            {!!studentLevelInfo && renderAutoSaveTextbox()}
-          </AiAssessmentFeedbackContext.Provider>
-        </div>
+                    <div className={style.learningGoalsTips}>
+                      <SafeMarkdown
+                        markdown={learningGoals[currentLearningGoal].tips}
+                      />
+                    </div>
+                  </details>
+                )}
+              </div>
+              {!!studentLevelInfo && renderAutoSaveTextbox()}
+            </AiAssessmentFeedbackContext.Provider>
+          </div>
+        )}
+        {currentLearningGoal === learningGoals.length && !productTour && (
+          <div>
+            {learningGoals.map((lg, i) => (
+              <div className={style.learningGoalSummary} key={i}>
+                <BodyThreeText>
+                  <StrongText>{lg.learningGoal}</StrongText>
+                </BodyThreeText>
+                <BodyThreeText>
+                  {UNDERSTANDING_LEVEL_STRINGS[understandingLevels.current[i]]}
+                </BodyThreeText>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
 }
 
 LearningGoals.propTypes = {
+  productTour: PropTypes.bool,
   open: PropTypes.bool,
   teacherHasEnabledAi: PropTypes.bool,
   canProvideFeedback: PropTypes.bool,

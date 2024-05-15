@@ -1,10 +1,12 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsList';
+
 import {
   COLUMNS,
   COLUMNS_WITHOUT_THUMBNAILS,
 } from '@cdo/apps/templates/projects/ProjectsList';
-import {mount} from 'enzyme';
+import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsList';
+
 import {expect} from '../../../util/reconfiguredChai';
 
 const CAT_IMAGE_URL = '/base/static/common_images/stickers/cat.png';

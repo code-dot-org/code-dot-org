@@ -1,9 +1,11 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
-import {expect, assert} from '../../../util/reconfiguredChai';
-import {UnconnectedBackgroundMusicMuteButton as BackgroundMusicMuteButton} from '@cdo/apps/templates/instructions/BackgroundMusicMuteButton';
 import sinon from 'sinon';
+
+import {UnconnectedBackgroundMusicMuteButton as BackgroundMusicMuteButton} from '@cdo/apps/templates/instructions/BackgroundMusicMuteButton';
 import i18n from '@cdo/locale';
+
+import {expect, assert} from '../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   teacherOnly: false,

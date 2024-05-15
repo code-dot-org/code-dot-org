@@ -1,8 +1,10 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import {UnconnectedLibraryTable as LibraryTable} from '@cdo/apps/templates/projects/LibraryTable';
+
 import {stubFakeProjectLibraryData} from '@cdo/apps/templates/projects/generateFakeProjects';
+import {UnconnectedLibraryTable as LibraryTable} from '@cdo/apps/templates/projects/LibraryTable';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   personalProjectsList: [],

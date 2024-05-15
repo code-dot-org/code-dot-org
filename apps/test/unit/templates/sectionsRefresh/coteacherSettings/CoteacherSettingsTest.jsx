@@ -1,8 +1,11 @@
+import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount, shallow} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
-import CoteacherSettings from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/CoteacherSettings';
 import sinon from 'sinon';
+
+import CoteacherSettings from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/CoteacherSettings';
+import i18n from '@cdo/locale';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 const testPrimaryTeacher = {
   name: 'T-rex',
@@ -95,6 +98,23 @@ describe('CoteacherSettings', () => {
     expect(cells.at(6).text()).to.include('Allosaurus');
     expect(cells.at(6).text()).to.include('allosaurus@code.org');
     expect(cells.at(7).text()).to.include('ACCEPTED');
+  });
+  it('renders LTI instructions for co-teacher and disables remove button if disabled', () => {
+    const wrapper = shallow(
+      <CoteacherSettings
+        sectionInstructors={testSectionInstructors}
+        setCoteachersToAdd={() => {}}
+        coteachersToAdd={[]}
+        primaryTeacher={testPrimaryTeacher}
+        disabled
+      />
+    );
+    const addCoteacher = wrapper.find('div').first().childAt(0);
+    expect(addCoteacher.text()).to.equal(i18n.coteacherLtiAddInfo());
+
+    const cells = wrapper.find('CoteacherTable').dive().find('td');
+    const button = cells.find('button');
+    expect(button).to.have.lengthOf(0);
   });
   it('clicking remove opens dialog', () => {
     const wrapper = shallow(

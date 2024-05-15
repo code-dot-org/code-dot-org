@@ -1,15 +1,18 @@
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow, mount} from 'enzyme';
 import sinon from 'sinon';
-import {expect} from '../../../util/reconfiguredChai';
-import QuickAssignTable from '@cdo/apps/templates/sectionsRefresh/QuickAssignTable';
+
 import {MARKETING_AUDIENCE} from '@cdo/apps/templates/sectionsRefresh/CurriculumQuickAssign';
+import QuickAssignTable from '@cdo/apps/templates/sectionsRefresh/QuickAssignTable';
+import i18n from '@cdo/locale';
+
+import {expect} from '../../../util/reconfiguredChai';
+
 import {
   elementarySchoolCourseOffering,
   highSchoolCourseOfferings,
   noRecommendedVersionsOfferings,
 } from './CourseOfferingsTestData';
-import i18n from '@cdo/locale';
 
 const DEFAULT_PROPS = {
   marketingAudience: MARKETING_AUDIENCE.HIGH,

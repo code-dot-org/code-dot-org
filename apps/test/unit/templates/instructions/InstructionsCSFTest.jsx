@@ -1,21 +1,22 @@
-import React from 'react';
-import {mount} from 'enzyme';
 import {assert} from 'chai';
-import InstructionsCSF from '@cdo/apps/templates/instructions/InstructionsCSF';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import React from 'react';
 import {Provider} from 'react-redux';
+
+import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
+import authoredHints from '@cdo/apps/redux/authoredHints';
 import instructions, {
   setFeedback,
   setInstructionsConstants,
 } from '@cdo/apps/redux/instructions';
-import authoredHints from '@cdo/apps/redux/authoredHints';
 import pageConstants, {setPageConstants} from '@cdo/apps/redux/pageConstants';
-import isRtl from '@cdo/apps/code-studio/isRtlRedux';
+import InstructionsCSF from '@cdo/apps/templates/instructions/InstructionsCSF';
 
 describe('InstructionsCSF', () => {
   beforeEach(() => {

@@ -1,15 +1,17 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './progress-table-v2.module.scss';
-import {studentShape} from '../teacherDashboard/teacherSectionsRedux';
+import React from 'react';
+import {connect} from 'react-redux';
+
 import {
   studentLessonProgressType,
   studentLevelProgressType,
 } from '../progress/progressTypes';
-import {connect} from 'react-redux';
+import {studentShape} from '../teacherDashboard/teacherSectionsRedux';
+
 import LessonDataCell from './LessonDataCell';
-import {studentNeedsFeedback} from '../progress/progressHelpers';
 import LessonProgressColumnHeader from './LessonProgressColumnHeader';
+
+import styles from './progress-table-v2.module.scss';
 
 function LessonProgressDataColumn({
   lesson,
@@ -30,22 +32,6 @@ function LessonProgressDataColumn({
         ])
       ),
     [levelProgressByStudent, sortedStudents, lesson]
-  );
-
-  const needsFeedbackByStudent = React.useMemo(
-    () =>
-      Object.fromEntries(
-        sortedStudents.map(student => [
-          student.id,
-          lesson.levels.some(level =>
-            studentNeedsFeedback(
-              levelProgressByStudent[student.id][level.id],
-              level
-            )
-          ),
-        ])
-      ),
-    [levelProgressByStudent, sortedStudents, lesson.levels]
   );
 
   // For lockable lessons, check whether each level is locked for each student.
@@ -71,7 +57,6 @@ function LessonProgressDataColumn({
             studentLessonProgress={
               lessonProgressByStudent[student.id][lesson.id]
             }
-            needsFeedback={needsFeedbackByStudent[student.id]}
             key={student.id + '.' + lesson.id}
             studentId={student.id}
             addExpandedLesson={addExpandedLesson}

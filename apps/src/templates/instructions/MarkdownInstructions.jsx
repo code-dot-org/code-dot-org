@@ -1,11 +1,12 @@
 import $ from 'jquery';
-import React from 'react';
-import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import {convertXmlToBlockly} from './utils';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 import EnhancedSafeMarkdown from '../EnhancedSafeMarkdown';
+
+import {convertXmlToBlockly} from './utils';
 
 class MarkdownInstructions extends React.Component {
   static propTypes = {

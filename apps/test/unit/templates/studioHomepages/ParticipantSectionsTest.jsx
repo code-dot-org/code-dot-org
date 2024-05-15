@@ -1,10 +1,13 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import {sections} from './fakeSectionUtils';
+import sinon from 'sinon';
+
 import ParticipantSections from '@cdo/apps/templates/studioHomepages/ParticipantSections';
 import SectionsAsStudentTable from '@cdo/apps/templates/studioHomepages/SectionsAsStudentTable';
-import sinon from 'sinon';
+
+import {expect} from '../../../util/reconfiguredChai';
+
+import {sections} from './fakeSectionUtils';
 
 describe('ParticipantSections', () => {
   let defaultProps, updateSections, updateSectionsResult;

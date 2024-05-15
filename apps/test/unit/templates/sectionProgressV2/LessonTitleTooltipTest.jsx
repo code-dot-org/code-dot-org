@@ -1,11 +1,11 @@
-import React from 'react';
 import {render, screen} from '@testing-library/react';
+import {expect} from 'chai';
+import React from 'react';
+
+import {fakeLessonWithLevels} from '@cdo/apps/templates/progress/progressTestHelpers';
 import LessonTitleTooltip, {
   getTooltipId,
 } from '@cdo/apps/templates/sectionProgressV2/LessonTitleTooltip';
-
-import {fakeLessonWithLevels} from '@cdo/apps/templates/progress/progressTestHelpers';
-import {expect} from 'chai';
 
 describe('LessonTitleTooltip', () => {
   it('Lesson text is parsed correctly', () => {

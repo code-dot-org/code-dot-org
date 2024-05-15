@@ -3,25 +3,27 @@
  *           This file is the main entry point for the Internet Simulator.
  */
 
-var utils = require('../utils');
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {openDialog as openInstructionsDialog} from '../redux/instructionsDialog';
+
 import {getStore} from '../redux';
+import {openDialog as openInstructionsDialog} from '../redux/instructionsDialog';
+
 var _ = require('lodash');
-/** @type {Object<string, function>} */
+var Provider = require('react-redux').Provider;
+
 var i18n = require('@cdo/netsim/locale');
+
 var ObservableEventDEPRECATED = require('../ObservableEventDEPRECATED');
 var RunLoop = require('../RunLoop');
-var Provider = require('react-redux').Provider;
-var NetSimView = require('./NetSimView');
-var page = require('./page.html.ejs');
-var NetSimAlert = require('./NetSimAlert');
-var NetSimConstants = require('./NetSimConstants');
-var NetSimUtils = require('./NetSimUtils');
+var utils = require('../utils');
+
 var DashboardUser = require('./DashboardUser');
+var NetSimAlert = require('./NetSimAlert');
 var NetSimBitLogPanel = require('./NetSimBitLogPanel');
+var NetSimConstants = require('./NetSimConstants');
+var NetSimGlobals = require('./NetSimGlobals');
 var NetSimLobby = require('./NetSimLobby');
 var NetSimLocalClientNode = require('./NetSimLocalClientNode');
 var NetSimLogger = require('./NetSimLogger');
@@ -32,13 +34,15 @@ var NetSimSendPanel = require('./NetSimSendPanel');
 var NetSimShard = require('./NetSimShard');
 var NetSimStatusPanel = require('./NetSimStatusPanel');
 var NetSimTabsComponent = require('./NetSimTabsComponent');
+var NetSimUtils = require('./NetSimUtils');
+var NetSimView = require('./NetSimView');
 var NetSimVisualization = require('./NetSimVisualization');
+var page = require('./page.html.ejs');
 
 var DnsMode = NetSimConstants.DnsMode;
 var MessageGranularity = NetSimConstants.MessageGranularity;
 
 var logger = NetSimLogger.getSingleton();
-var NetSimGlobals = require('./NetSimGlobals');
 
 /**
  * The top-level Internet Simulator controller.

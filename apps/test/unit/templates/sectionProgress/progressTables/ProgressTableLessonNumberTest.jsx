@@ -1,13 +1,15 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {expect} from '../../../../util/reconfiguredChai';
-import {shallow} from 'enzyme';
+import ReactTooltip from 'react-tooltip';
+import sinon from 'sinon';
+
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import ProgressTableLessonNumber, {
   unitTestExports,
 } from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLessonNumber';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import ReactTooltip from 'react-tooltip';
-import sinon from 'sinon';
 import color from '@cdo/apps/util/color';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   id: 1,

@@ -36,7 +36,6 @@ import logToCloud from './logToCloud';
 import msg from '@cdo/locale';
 import project from './code-studio/initApp/project';
 import puzzleRatingUtils from './puzzleRatingUtils';
-import userAgentParser from './code-studio/initApp/userAgentParser';
 import {
   KeyCodes,
   TestResults,
@@ -1589,13 +1588,10 @@ StudioApp.prototype.resizeToolboxHeader = function () {
 StudioApp.prototype.highlight = function (id, spotlight) {
   if (this.isUsingBlockly() && !isEditWhileRun(getStore().getState())) {
     if (id) {
-      var m = id.match(/^block_id_(\d+)$/);
-      if (m) {
-        id = m[1];
-      }
+      id = id.replace(/^block_id_/, '');
     }
 
-    Blockly.mainBlockSpace.highlightBlock(id, spotlight);
+    Blockly.cdoUtils.highlightBlock(id, spotlight);
   }
 };
 
@@ -2841,7 +2837,8 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
 
   // If levelbuilder provides an empty toolbox, some apps (like artist)
   // replace it with a full toolbox. I think some levels may depend on this
-  // behavior. We want a way to specify no toolbox, which is <xml></xml>
+  // behavior. We want a way to specify no toolbox, which is <xml></xml>.
+  // Google Blockly may also add a xmlns attribute to this xml.
   if (config.level.toolbox) {
     // Update CDO Blockly XML so it is compatible with mainline Google Blockly
     // (Nothing is changed if we are using CDO Blockly.)
@@ -2850,9 +2847,14 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     );
 
     const toolboxWithoutWhitespace = config.level.toolbox.replace(/\s/g, '');
+    const emptyToolboxOptionsWithoutWhitespace = [
+      '<xml></xml>',
+      '<xml/>',
+      '<xmlxmlns="https://developers.google.com/blockly/xml"/>',
+      '<xmlxmlns="https://developers.google.com/blockly/xml"></xml>',
+    ];
     if (
-      toolboxWithoutWhitespace === '<xml></xml>' ||
-      toolboxWithoutWhitespace === '<xml/>'
+      emptyToolboxOptionsWithoutWhitespace.includes(toolboxWithoutWhitespace)
     ) {
       config.level.toolbox = undefined;
     }
@@ -2932,13 +2934,11 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
   }
   this.setStartBlocks_(config, true);
 
-  if (userAgentParser.isMobile() && userAgentParser.isSafari()) {
-    // Mobile Safari resize events fire too early, see:
-    // https://openradar.appspot.com/31725316
-    // Rerun the blockly resize handler after 500ms when clientWidth/Height
-    // should be correct
-    window.setTimeout(() => Blockly.fireUiEvent(window, 'resize'), 500);
-  }
+  // In some cases, resize events fire too early. For example, see:
+  // https://openradar.appspot.com/31725316
+  // Resize the Blockly workspace after 500ms when clientWidth/Height
+  // should be correct.
+  window.setTimeout(() => Blockly.fireUiEvent(window, 'resize'), 500);
 };
 
 /**

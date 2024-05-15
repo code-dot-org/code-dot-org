@@ -1,0 +1,27 @@
+name 'virtual-pl-csp-summer-day5-asynch1-01-2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Day 4, Asynchronous Part 2
+
+##### Welcome! In this asynchronous module, you will explore AP Classroom and the Code.org Platform. 
+
+<img src="https://images.code.org/06423ae49092f12ad2b4a49e84b28ec0-Screenshot 2023-10-17 at 1.25.36 PM.png" alt="Image of the College Board AP Classroom site" style="border-radius:10px; float: right; height: 200px; clear: both; margin: 0 20px 20px 20px;">
+
+## In this module, you will:
+
+* ##### Navigate the College Board Resources.
+* ##### Get familiar with navigating the Code.org website, especially how you use it to manage a class.
+
+### **Suggested time:** 65 minutes
+
+
+## Let's get started!
+
+<div style="clear:both"/>
+
+
+
+
+MARKDOWN

@@ -7,6 +7,7 @@
   gap: -1px;
 
   .segmentedButton {
+    z-index: 1;
     &:first-child {
       border-start-start-radius: 4px;
       border-end-start-radius: 4px;
@@ -24,6 +25,7 @@
 
   // Selected styles
   .selectedSegmentedButton {
+    z-index: 0;
     background-color: $light_primary_500;
     border-color: $light_primary_500;
     color: $light_white;
@@ -119,6 +121,8 @@
     span {
       @include button-one-text;
       margin-bottom: 0;
+      // Margin-top for correct vertical alignment of the metropolis font
+      margin-top: 1px;
     }
 
     i {
@@ -148,6 +152,8 @@
     span {
       @include button-two-text;
       margin-bottom: 0;
+      // Margin-top for correct vertical alignment of the metropolis font
+      margin-top: 1px;
     }
 
     i {
@@ -177,6 +183,8 @@
     span {
       @include button-three-text;
       margin-bottom: 0;
+      // Margin-top for correct vertical alignment of the metropolis font
+      margin-top: 1px;
     }
 
     i {
@@ -206,6 +214,9 @@
     span {
       @include button-four-text;
       margin-bottom: 0;
+
+      // Margin-top for correct vertical alignment of the metropolis font
+      margin-top: 1px;
     }
 
     i {

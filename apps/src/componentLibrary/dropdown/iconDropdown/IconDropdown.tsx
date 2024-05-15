@@ -1,23 +1,21 @@
-import React, {useCallback, memo} from 'react';
 import classNames from 'classnames';
-
-import {
-  ComponentSizeXSToL,
-  DropdownColor,
-} from '@cdo/apps/componentLibrary/common/types';
-import moduleStyles from '@cdo/apps/componentLibrary/dropdown/customDropdown.module.scss';
-
-import CustomDropdown from '@cdo/apps/componentLibrary/dropdown/_CustomDropdown';
-
-import FontAwesomeV6Icon, {
-  FontAwesomeV6IconProps,
-} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+import React, {useCallback, memo, AriaAttributes} from 'react';
 
 import {dropdownColors} from '@cdo/apps/componentLibrary/common/constants';
 import {
   DropdownProviderWrapper,
   useDropdownContext,
 } from '@cdo/apps/componentLibrary/common/contexts/DropdownContext';
+import {
+  ComponentSizeXSToL,
+  DropdownColor,
+} from '@cdo/apps/componentLibrary/common/types';
+import CustomDropdown from '@cdo/apps/componentLibrary/dropdown/_CustomDropdown';
+import FontAwesomeV6Icon, {
+  FontAwesomeV6IconProps,
+} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+
+import moduleStyles from '@cdo/apps/componentLibrary/dropdown/customDropdown.module.scss';
 
 export interface IconDropdownOption {
   value: string;
@@ -26,10 +24,12 @@ export interface IconDropdownOption {
   icon: FontAwesomeV6IconProps;
 }
 
-export interface IconDropdownProps {
+export interface IconDropdownProps extends AriaAttributes {
   /** IconDropdown name.
    * Name of the dropdown, used as unique identifier of the dropdown's HTML element */
   name: string;
+  /** IconDropdown custom class name */
+  className?: string;
   /** IconDropdown color */
   color?: DropdownColor;
   /** IconDropdown size */
@@ -39,6 +39,8 @@ export interface IconDropdownProps {
   /** IconDropdown label
    * The user-facing label of the dropdown */
   labelText: string;
+  /** IconDropdown label style type*/
+  labelType?: 'thick' | 'thin';
   /** IconDropdown options */
   options: IconDropdownOption[];
   /** IconDropdown checked options */
@@ -49,13 +51,16 @@ export interface IconDropdownProps {
 
 const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
   name,
+  className,
   labelText,
+  labelType = 'thick',
   options,
   selectedOption = {},
   onChange,
   disabled = false,
   color = dropdownColors.black,
   size = 'm',
+  ...rest
 }) => {
   const {setActiveDropdownName} = useDropdownContext();
   const onOptionClick = useCallback(
@@ -71,11 +76,14 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
   return (
     <CustomDropdown
       name={name}
+      className={className}
       labelText={labelText}
+      labelType={labelType}
       disabled={disabled}
       color={color}
       icon={selectedOption?.icon}
       size={size}
+      {...rest}
     >
       <form className={moduleStyles.dropdownMenuContainer}>
         <ul>

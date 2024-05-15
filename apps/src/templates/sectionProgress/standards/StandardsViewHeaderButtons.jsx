@@ -1,20 +1,23 @@
+import _ from 'lodash';
+import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
-import _ from 'lodash';
-import i18n from '@cdo/locale';
+
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import Button from '@cdo/apps/templates/Button';
-import LessonStatusDialog from './LessonStatusDialog';
+import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import i18n from '@cdo/locale';
+
+import firehoseClient from '../../../lib/util/firehose';
+
 import {CreateStandardsReportDialog} from './CreateStandardsReportDialog';
+import LessonStatusDialog from './LessonStatusDialog';
 import {
   setTeacherCommentForReport,
   getUnpluggedLessonsForScript,
   fetchStudentLevelScores,
 } from './sectionStandardsProgressRedux';
-import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
-import firehoseClient from '../../../lib/util/firehose';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {TeacherScores} from './standardsConstants';
 
 const STANDARDS = 'standards';

@@ -8,18 +8,20 @@ import GoogleBlockly, {
   Theme,
   WorkspaceSvg,
 } from 'blockly/core';
+
 import {commonI18n} from '@cdo/apps/types/locale';
+import experiments from '@cdo/apps/util/experiments';
+
+import LegacyDialog from '../../code-studio/LegacyDialog';
 import {
   Themes,
   MenuOptionStates,
   BLOCKLY_CURSOR,
   BLOCKLY_THEME,
   NAVIGATION_CURSOR_TYPES,
+  DARK_THEME_SUFFIX,
 } from '../constants';
-import LegacyDialog from '../../code-studio/LegacyDialog';
-import experiments from '@cdo/apps/util/experiments';
-
-const dark = 'dark';
+import {getBaseName} from '../utils';
 
 // Some options are only available to levelbuilders via start mode.
 // Literal strings are used for display text instead of translatable strings
@@ -164,6 +166,38 @@ const registerUnshadow = function (weight: number) {
   GoogleBlockly.ContextMenuRegistry.registry.register(unshadowOption);
 };
 
+const registerAllBlocksUndeletable = function (weight: number) {
+  const workspaceBlocksUndeletableOption = {
+    displayText: function (scope: ContextMenuRegistry.Scope) {
+      return 'Make ALL Blocks Undeletable';
+    },
+    preconditionFn: function (scope: ContextMenuRegistry.Scope) {
+      if (Blockly.isStartMode) {
+        if (
+          scope.workspace?.getAllBlocks().every(block => !block.isDeletable())
+        ) {
+          return MenuOptionStates.DISABLED;
+        }
+        return MenuOptionStates.ENABLED;
+      }
+      return MenuOptionStates.HIDDEN;
+    },
+    callback: function (scope: ContextMenuRegistry.Scope) {
+      if (scope.workspace) {
+        scope.workspace
+          .getAllBlocks()
+          .forEach(block => block.setDeletable(false));
+      }
+    },
+    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
+    id: 'workspaceBlocksUndeletable',
+    weight,
+  };
+  GoogleBlockly.ContextMenuRegistry.registry.register(
+    workspaceBlocksUndeletableOption
+  );
+};
+
 const registerKeyboardNavigation = function (weight: number) {
   const keyboardNavigationOption = {
     displayText: function (scope: ContextMenuRegistry.Scope) {
@@ -224,37 +258,6 @@ const registerCursor = function (cursorType: string, weight: number) {
   GoogleBlockly.ContextMenuRegistry.registry.register(cursorOption);
 };
 
-/**
- * Toggle workspace theme between light/dark components
- */
-const registerDarkMode = function (weight: number) {
-  const toggleDarkModeOption = {
-    displayText: function (scope: ContextMenuRegistry.Scope) {
-      return scope.workspace && isDarkTheme(scope.workspace)
-        ? commonI18n.blocklyTurnOffDarkMode()
-        : commonI18n.blocklyTurnOnDarkMode();
-    },
-    preconditionFn: function () {
-      return MenuOptionStates.ENABLED;
-    },
-    callback: function (scope: ContextMenuRegistry.Scope) {
-      if (!scope.workspace) {
-        return;
-      }
-      const currentTheme = scope.workspace.getTheme();
-      const themeName =
-        baseName(currentTheme.name as Themes) +
-        (isDarkTheme(scope.workspace) ? '' : dark);
-      localStorage.setItem(BLOCKLY_THEME, themeName);
-      setAllWorkspacesTheme(Blockly.themes[themeName as Themes], currentTheme);
-    },
-    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
-    id: 'toggleDarkMode',
-    weight,
-  };
-  GoogleBlockly.ContextMenuRegistry.registry.register(toggleDarkModeOption);
-};
-
 const themes = [
   {
     name: Themes.MODERN,
@@ -297,9 +300,10 @@ const registerTheme = function (name: Themes, label: string, weight: number) {
       }
     },
     callback: function (scope: ContextMenuRegistry.Scope) {
+      localStorage.setItem(BLOCKLY_THEME, name);
       const currentTheme = scope.workspace?.getTheme();
-      const themeName = name + (isDarkTheme(scope.workspace) ? dark : '');
-      localStorage.setItem(BLOCKLY_THEME, themeName);
+      const themeName =
+        name + (isDarkTheme(currentTheme) ? DARK_THEME_SUFFIX : '');
       setAllWorkspacesTheme(Blockly.themes[themeName as Themes], currentTheme);
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
@@ -421,15 +425,13 @@ function hasShadowChildren(block: Block) {
 }
 
 function isCurrentTheme(theme: Themes, workspace: WorkspaceSvg | undefined) {
-  return baseName(workspace?.getTheme().name as Themes) === baseName(theme);
+  return (
+    getBaseName(workspace?.getTheme().name as Themes) === getBaseName(theme)
+  );
 }
 
-function isDarkTheme(workspace: WorkspaceSvg | undefined) {
-  return workspace?.getTheme().name.includes(dark);
-}
-
-function baseName(themeName: Themes) {
-  return themeName.replace(dark, '');
+function isDarkTheme(theme: Theme | undefined) {
+  return theme?.name.includes(DARK_THEME_SUFFIX);
 }
 
 function setAllWorkspacesTheme(
@@ -519,6 +521,6 @@ function registerCustomWorkspaceOptions() {
   // sorted in the order listed here. The ++ incrementation happens after the value is accessed.
   registerKeyboardNavigation(nextWeight++);
   registerAllCursors(nextWeight++, NAVIGATION_CURSOR_TYPES);
-  registerDarkMode(nextWeight++);
   registerThemes(nextWeight++, themes);
+  registerAllBlocksUndeletable(nextWeight++);
 }

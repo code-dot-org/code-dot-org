@@ -1,19 +1,21 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
-import {Provider, connect} from 'react-redux';
 import React from 'react';
-import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import ProjectAppTypeArea from '@cdo/apps/templates/projects/ProjectAppTypeArea';
+import {Provider, connect} from 'react-redux';
 import sinon from 'sinon';
+
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
+import ProjectAppTypeArea from '@cdo/apps/templates/projects/ProjectAppTypeArea';
 import projectsReducer, {
   appendProjects,
 } from '@cdo/apps/templates/projects/projectsRedux';
+
+import {expect} from '../../../util/reconfiguredChai';
 import {
   allowConsoleErrors,
   allowConsoleWarnings,
@@ -48,6 +50,7 @@ function generateFakeProjectData(numProjects, projectType) {
     publishedAt: new Date(startTime + projectNum).toISOString(),
     publishedToPublic: true,
     publishedToClass: true,
+    featuredAt: new Date(startTime + projectNum).toISOString(),
   }));
 }
 

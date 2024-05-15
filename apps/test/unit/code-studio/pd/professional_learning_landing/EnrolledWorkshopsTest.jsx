@@ -1,5 +1,5 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import {EnrolledWorkshopsTable} from '@cdo/apps/code-studio/pd/professional_learning_landing/EnrolledWorkshops';
 import sinon from 'sinon';
 import {assert, expect} from 'chai';
@@ -139,5 +139,23 @@ describe('EnrolledWorkshops', () => {
       .first();
 
     expect(preWorkshopSurveyButton.props().disabled).to.be.true;
+  });
+
+  it('shows Status column and only has Workshop Details button when forMyPlPage is true', function () {
+    const enrolledWorkshopsTable = shallow(
+      <EnrolledWorkshopsTable workshops={workshops} forMyPlPage={true} />
+    );
+
+    expect(enrolledWorkshopsTable.find('thead tr').text()).to.contain('Status');
+
+    const numButtonsInTable = enrolledWorkshopsTable
+      .find('tbody tr')
+      .find('Button').length;
+    expect(
+      enrolledWorkshopsTable
+        .find('tbody tr')
+        .find('Button')
+        .findWhere(n => n.text() === 'Workshop Details').length
+    ).to.equal(numButtonsInTable);
   });
 });

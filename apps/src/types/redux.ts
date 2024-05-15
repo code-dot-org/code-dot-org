@@ -10,9 +10,12 @@ import {MusicState} from '@cdo/apps/music/redux/musicRedux';
 import {ProgressState} from '@cdo/apps/code-studio/progressRedux';
 import {HeaderReduxState} from '@cdo/apps/code-studio/headerRedux';
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
-import {PythonlabState} from '@cdo/apps/pythonlab/pythonlabRedux';
 import {AITutorState} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {BlocklyState} from '../redux/blockly';
+import {AichatState} from '@cdo/apps/aichat/redux/aichatRedux';
+import {CurrentUserState} from '@cdo/apps/templates/CurrentUserState';
+import {Lab2ProjectState} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import {CodeBridgeConsoleState} from '@codebridge/redux/consoleRedux';
 
 // The type for our global redux store. This is incomplete until we type every slice
 // of our redux store. When converting a slice to typescript, add it to this object
@@ -21,18 +24,21 @@ import {BlocklyState} from '../redux/blockly';
 // with registerReducers.
 export interface RootState {
   aiTutor: AITutorState;
+  aichat: AichatState;
   blockly: BlocklyState;
+  codebridgeConsole: CodeBridgeConsoleState;
+  currentUser: CurrentUserState;
   header: HeaderReduxState;
   javalab: JavalabState;
   javalabConsole: JavalabConsoleState;
   javalabEditor: JavalabEditorState;
   javalabView: JavalabViewState;
   lab: LabState;
+  lab2Project: Lab2ProjectState;
   layout: LayoutState;
   locales: LocaleState;
   mapbox: MapboxState;
   maze: MazeState;
   music: MusicState;
   progress: ProgressState;
-  pythonlab: PythonlabState;
 }

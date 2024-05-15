@@ -1,11 +1,13 @@
-import {assert} from '../../../util/reconfiguredChai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
+
 import DetailProgressTable from '@cdo/apps/templates/progress/DetailProgressTable';
 import {
   fakeLesson,
   fakeLevels,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
+
+import {assert} from '../../../util/reconfiguredChai';
 
 describe('DetailProgressTable', () => {
   const lessons = [

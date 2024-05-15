@@ -1,13 +1,15 @@
-import {assert, expect} from '../../../util/reconfiguredChai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {UnconnectedCourseOverview as CourseOverview} from '@cdo/apps/templates/courseOverview/CourseOverview';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import * as utils from '@cdo/apps/utils';
 import sinon from 'sinon';
-import {VisibilityType} from '../../../../src/code-studio/announcementsRedux';
+
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {UnconnectedCourseOverview as CourseOverview} from '@cdo/apps/templates/courseOverview/CourseOverview';
 import {NotificationType} from '@cdo/apps/templates/Notification';
 import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
+import * as utils from '@cdo/apps/utils';
+
+import {VisibilityType} from '../../../../src/code-studio/announcementsRedux';
+import {assert, expect} from '../../../util/reconfiguredChai';
 
 const defaultProps = {
   name: 'csp',

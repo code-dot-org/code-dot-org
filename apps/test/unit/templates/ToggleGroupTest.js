@@ -1,7 +1,8 @@
 import {expect} from 'chai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
 import sinon from 'sinon';
+
 import ToggleButton from '@cdo/apps/templates/ToggleButton';
 import {UnconnectedToggleGroup as ToggleGroup} from '@cdo/apps/templates/ToggleGroup';
 

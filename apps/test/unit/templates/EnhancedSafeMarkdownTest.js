@@ -1,13 +1,14 @@
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon';
-import {shallow, mount} from 'enzyme';
 
-import * as expandableImages from '@cdo/apps/templates/utils/expandableImages';
 import EnhancedSafeMarkdown, {
   ExpandableImagesWrapper,
   UnconnectedExpandableImagesWrapper,
 } from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import * as expandableImages from '@cdo/apps/templates/utils/expandableImages';
+
 import {expect} from '../../util/reconfiguredChai';
 
 describe('EnhancedSafeMarkdown', () => {

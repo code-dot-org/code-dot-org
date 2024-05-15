@@ -1253,14 +1253,12 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  private
-
-  def tomorrow_at(hour, minute = nil)
+  private def tomorrow_at(hour, minute = nil)
     tomorrow = 1.day.from_now
     Time.zone.local(tomorrow.year, tomorrow.month, tomorrow.mday, hour, minute)
   end
 
-  def workshop_params
+  private def workshop_params
     session_start = tomorrow_at 9
     session_end = session_start + 8.hours
     {
@@ -1282,7 +1280,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
     }
   end
 
-  def response_workshop
+  private def response_workshop
     Pd::Workshop.find(JSON.parse(response.body)['id'])
   end
 end

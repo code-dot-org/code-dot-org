@@ -6,7 +6,7 @@ zh-TW:
   accelerated_gradelevel: 年齡 10-18
   accelerated_name: 速成課程
   account_sign_up_child_accept_terms: '我確定我的監護人已允許我使用 Code.org 提供的服務。 '
-  account_sign_up_email_opt_in: 我們是否可以透過電子郵件向你發送有關我們的課程、當地志工或其它計算機科學資訊的訊息？（大概一個月一次）
+  account_sign_up_email_opt_in: 我們是否可以透過電子郵件向您發送有關我們的課程、當地機會或其他計算機科學資訊的訊息？（大概一個月一次）
   ai_activity: 活動
   ai_and_ethics: 人工智慧和倫理
   ai_and_ethics_tile_description: 學生們仔細思量了倫理對人工智慧的含義以後，一同創造出了”人工智慧倫理準則“給世界各地的人工智慧創造者和立法者。
@@ -840,6 +840,7 @@ zh-TW:
   header_about_us: 關於我們
   header_course_catalog: 課程目錄
   header_courses: 課程
+  header_districts: 地區
   header_documentation: 說明文件
   header_educate_beyond: 超越 Code.org
   header_educate_community: 線上社群
@@ -1827,6 +1828,7 @@ zh-TW:
   user_header_applab: App Lab
   user_header_artist: '演出者 '
   user_header_create: '創造 '
+  user_header_create_account: 建立帳戶
   user_header_dance: 舞蹈派對
   user_header_flappy: 像素鳥
   user_header_gamelab: Game Lab

@@ -1,9 +1,12 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {BASE_DIALOG_WIDTH} from '../constants';
-import Button from './Button';
-import color from '../util/color';
+
 import i18n from '@cdo/locale';
+
+import {BASE_DIALOG_WIDTH} from '../constants';
+import color from '../util/color';
+
+import Button from './Button';
 
 /**
  * BaseDialog

@@ -1,6 +1,7 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
+import React from 'react';
+
 import color from '@cdo/apps/util/color';
 
 class LessonExtrasFlagIcon extends React.PureComponent {

@@ -28,6 +28,10 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
   const currentLevelId = useSelector(
     (state: {progress: ProgressState}) => state.progress.currentLevelId
   );
+  const userId = useSelector(
+    (state: {progress: ProgressState}) =>
+      state.progress.viewAsUserId || undefined
+  );
   const scriptId = useSelector(
     (state: {progress: ProgressState}) => state.progress.scriptId || undefined
   );
@@ -62,6 +66,7 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
       promise = dispatch(
         setUpWithLevel({
           levelId: parseInt(currentLevelId),
+          userId,
           scriptId,
           levelPropertiesPath,
           channelId,
@@ -80,7 +85,7 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
     return () => {
       // If we have an early return, we will abort the promise in progress.
       // An early return could happen if the level is changed mid-load.
-      promise.abort();
+      promise?.abort();
     };
   }, [
     channelId,
@@ -89,6 +94,7 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
     scriptId,
     levelPropertiesPath,
     dispatch,
+    userId,
   ]);
 
   useEffect(() => {

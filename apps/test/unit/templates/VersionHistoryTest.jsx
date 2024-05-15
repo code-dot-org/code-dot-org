@@ -1,13 +1,15 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
 import sinon from 'sinon';
-import {assert, expect} from '../../util/reconfiguredChai';
-import VersionHistory from '@cdo/apps/templates/VersionHistory';
-import VersionRow from '@cdo/apps/templates/VersionRow';
+
 import {sources as sourcesApi, files as filesApi} from '@cdo/apps/clientApi';
-import * as utils from '@cdo/apps/utils';
 import project from '@cdo/apps/code-studio/initApp/project';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import VersionHistory from '@cdo/apps/templates/VersionHistory';
+import VersionRow from '@cdo/apps/templates/VersionRow';
+import * as utils from '@cdo/apps/utils';
+
+import {assert, expect} from '../../util/reconfiguredChai';
 
 const FAKE_CURRENT_VERSION = 'current-version-id';
 const FAKE_PREVIOUS_VERSION = 'previous-version-id';

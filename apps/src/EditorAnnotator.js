@@ -1,7 +1,9 @@
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import annotationList from '@cdo/apps/acemode/annotationList';
 import {interpolateColors} from '@cdo/apps/utils';
+import {border_gray} from '@cdo/apps/util/color';
 import RGBColor from 'rgbcolor';
+import md5 from 'md5';
 
 /**
  * Represents an implementation of an editing environment and wraps functionality
@@ -19,6 +21,16 @@ export class Annotator {
     }
 
     this.patch();
+  }
+
+  __embedStyle(className, stylesheet) {
+    this.embeddedStyles_ ||= {};
+    if (!this.embeddedStyles_[className]) {
+      this.embeddedStyles_[className] = true;
+      const range = document.createRange();
+      const fragment = range.createContextualFragment(stylesheet);
+      document.querySelector('head').append(fragment);
+    }
   }
 
   /**
@@ -139,10 +151,10 @@ export class Annotator {
    * `unhighlightLine` to reverse this effect.
    *
    * @param {number} lineNumber The line number to highlight in the active editor.
-   * @param {string} highlightClass The class name to add to the line.
+   * @param {string} color The color to use when highlighting this line.
    * @returns {Object} The metadata retaining the Ace Editor marker instance.
    */
-  highlightLine(lineNumber, highlightClass) {
+  highlightLine(lineNumber, color) {
     return {};
   }
 
@@ -162,8 +174,19 @@ export class Annotator {
    * @param {number} lineNumber The line number (1-based index)
    * @param {string} message The text to display next to the line.
    * @param {string} logLevel The type of annotation ('ERROR', 'INFO', etc)
+   * @param {string} color The color to use, if possible, to accent the annotation (or none).
+   * @param {string} icon The icon image to use which will override a default, if any.
+   * @param {Object} tipStyle A set of CSS properties that might be applied to any related tooltip.
    */
-  annotateLine(lineNumber, message, logLevel = 'INFO') {}
+  annotateLine(
+    lineNumber,
+    message,
+    logLevel = 'INFO',
+    color = null,
+    icon = null,
+    tipStyle = {},
+    hoverCallback = null
+  ) {}
 
   /**
    * Removes annotations of a particular type.
@@ -171,6 +194,13 @@ export class Annotator {
    * @param {string} logLevel The type of annotation to clear ('ERROR', 'INFO', etc)
    */
   clearAnnotations(logLevel = 'INFO') {}
+
+  /**
+   * Makes the given line visible on the screen, if in a line-based editor.
+   *
+   * @param {number} lineNumber The line to scroll to where 1 is the first line.
+   */
+  scrollToLine(lineNumber) {}
 }
 
 /**
@@ -439,12 +469,30 @@ export class DropletAnnotator extends Annotator {
    * `unhighlightLine` to reverse this effect.
    *
    * @param {number} lineNumber The line number to highlight in the active editor.
-   * @param {string} highlightClass The class name to add to the line.
+   * @param {string} color The CSS color to use when highlighting this line.
    * @returns {Object} The metadata retaining the Ace Editor marker instance.
    */
-  highlightLine(lineNumber, highlightClass) {
+  highlightLine(lineNumber, color) {
     const droplet = this.droplet();
     const session = droplet.aceEditor.getSession();
+
+    // Create the highlighted line's style to apply the color
+    const colorHash = md5(color);
+    const highlightClass = `editor-annotator-highlight-line-${colorHash}`;
+    // Not too ideal. This styling ensures it exists for the particular class
+    // since adding a class is all we can do. We want this function to be abstract
+    // from the point of view of the caller to what editor technology is being used.
+    // Therefore, we just ask for a color and then have to inject the styling once
+    // per color to the page's <head>.
+    const stylesheet = `
+      <style>
+        .ace_editor .ace_marker-layer .ace_step.${highlightClass} {
+          background: ${color};
+        }
+      </style>
+    `;
+    this.__embedStyle(highlightClass, stylesheet);
+
     const marker = session.addMarker(
       new (window.ace.require('ace/range').Range)(
         lineNumber - 1,
@@ -452,7 +500,7 @@ export class DropletAnnotator extends Annotator {
         lineNumber - 1,
         session.getLine(lineNumber - 1).length
       ),
-      highlightClass,
+      `ace_step ${highlightClass}`,
       'text'
     );
 
@@ -494,9 +542,128 @@ export class DropletAnnotator extends Annotator {
    * @param {number} lineNumber The line number (1-based index)
    * @param {string} message The text to display next to the line.
    * @param {string} logLevel The type of annotation ('ERROR', 'INFO', etc)
+   * @param {string} color The color to use, if possible, to accent the annotation (or none).
+   * @param {string} icon The icon image to use which will override a default, if any.
+   * @param {Object} tipStyle A set of CSS properties that might be applied to any related tooltip.
    */
-  annotateLine(lineNumber, message, logLevel = 'INFO') {
+  annotateLine(
+    lineNumber,
+    message,
+    logLevel = 'INFO',
+    color = null,
+    icon = null,
+    tipStyle = {},
+    hoverCallback = null
+  ) {
+    const hash = md5((color || '') + (icon || ''));
+    if (color || icon) {
+      // Create the annotated gutter icon's style to apply the color
+      const highlightClass = `editor-annotator-gutter-cell-${hash}`;
+      if (icon) {
+        icon = `url(${icon})`;
+      }
+      const background = icon && color ? `${icon}, ${color}` : icon || color;
+      // Not too ideal. This is noted in 'highlightLine' as well, but the gist is that
+      // the icon is not easy to override, so we can just cover it up with our
+      // provided one. The tooltip is also difficult to style since we would want to
+      // style different annotations in unique ways, but also because tooltips are
+      // created and destroyed more or less on demand. They are then styled by Ace
+      // Editor via direct styles so the specificity is high. So we add generic
+      // properties here and then also override others when we see the page add the
+      // tooltip to the screen.
+      // The point of the Annotator is to abstract this behavior from the
+      // variety of editing environments that we have. So this requieres a bit
+      // of dirty hacks like these.
+      const stylesheet = `
+        <style>
+          .ace_editor .ace_gutter-layer .ace_gutter-cell.ace_info {
+            position: relative;
+          }
+
+          .ace_editor .ace_gutter-layer .ace_gutter-cell.ace_info::before {
+            content: '';
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            left: 3px;
+            top: 1px;
+            background: ${background};
+            background-position: center;
+            background-size: 9px;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            border: 1px solid ${border_gray};
+            box-sizing: border-box;
+          }
+
+          .ace_editor .ace_tooltip.editor-annotator-tooltip-${hash} {
+            max-width: 65%;
+            white-space: normal;
+          }
+        </style>
+      `;
+      this.__embedStyle(highlightClass, stylesheet);
+    }
+    this.knownAnnotations_ ||= [];
+    this.knownAnnotations_.push({
+      level: logLevel,
+      line: lineNumber,
+      message: message,
+      hash: hash,
+      tipStyle: tipStyle,
+      hoverCallback: hoverCallback,
+    });
     this.annotationList_().addRuntimeAnnotation(logLevel, lineNumber, message);
+
+    // The problem is that there is no easy way to style the tooltips individually.
+    // So, we have to set up an observer to do it. This will ping a callback
+    // function whenever a new element is added to the editor and we can check
+    // against it. (For a thorough reasoning why, see the comment above near the
+    // stylesheet logic.)
+
+    // Patch in this observer to spot the creation of the tooltip so we can
+    // append the class to it. We do that by matching its inner text with the
+    // requested annotation message and then add the styling class.
+    const aceElement = this.droplet().aceEditor.container;
+    if (!this.tooltipObserver_ && aceElement) {
+      // We set up an observer to tell us when an element is added
+      const config = {childList: true};
+
+      // Callback function to execute when mutations are observed
+      const callback = (mutationList, observer) => {
+        for (const mutation of mutationList) {
+          // We only care when a new child is added
+          if (mutation.type !== 'childList') {
+            continue;
+          }
+
+          for (const el of mutation.addedNodes) {
+            if (el.classList && el.classList.contains('ace_tooltip')) {
+              // See if it is one of our known annotations
+              for (const annotation of this.knownAnnotations_) {
+                if (el.textContent.trim() === annotation.message.trim()) {
+                  const annotationClass = `editor-annotator-tooltip-${annotation.hash}`;
+                  el.classList.add(annotationClass);
+                  if (annotation.hoverCallback) {
+                    annotation.hoverCallback(annotation);
+                  }
+                  Object.keys(annotation.tipStyle || {}).forEach(k => {
+                    el.style[k] = annotation.tipStyle[k];
+                  });
+                }
+              }
+            }
+          }
+        }
+      };
+
+      // Create an observer instance linked to the callback function
+      const observer = new MutationObserver(callback);
+
+      // Start observing the editor for any new children
+      observer.observe(aceElement, config);
+      this.tooltipObserver_ = observer;
+    }
   }
 
   /**
@@ -505,7 +672,18 @@ export class DropletAnnotator extends Annotator {
    * @param {string} logLevel The type of annotation to clear ('ERROR', 'INFO', etc)
    */
   clearAnnotations(logLevel = 'INFO') {
+    this.knownAnnotations_ = [];
     this.annotationList_().filterOutRuntimeAnnotations(logLevel);
+  }
+
+  /**
+   * Makes the given line visible on the screen, if in a line-based editor.
+   *
+   * @param {number} lineNumber The line to scroll to where 1 is the first line.
+   */
+  scrollToLine(lineNumber) {
+    const aceEditor = this.droplet().aceEditor;
+    aceEditor.scrollToLine(lineNumber, true, true);
   }
 }
 
@@ -591,7 +769,7 @@ export default class EditorAnnotator {
    * @returns {bool} Returns true when the editor is line based.
    */
   static isLineBased() {
-    return EditorAnnotator.annotator().isLineBased();
+    return EditorAnnotator.annotator()?.isLineBased() || false;
   }
 
   /**
@@ -600,7 +778,7 @@ export default class EditorAnnotator {
    * It may or not be still line-based.
    */
   static hasBlocks() {
-    return EditorAnnotator.annotator().hasBlocks();
+    return EditorAnnotator.annotator()?.hasBlocks() || false;
   }
 
   /**
@@ -610,7 +788,7 @@ export default class EditorAnnotator {
    * @returns {bool} Returns true when the editor is block based.
    */
   static isBlockBased() {
-    return EditorAnnotator.annotator().isBlockBased();
+    return EditorAnnotator.annotator()?.isBlockBased() || false;
   }
 
   static anonymizeCode_(code) {
@@ -877,13 +1055,10 @@ export default class EditorAnnotator {
    * Highlights the given line in the active editor.
    *
    * @param {number} lineNumber The line number to highlight in the active editor.
-   * @param {string} highlightClass The class name to add to the line.
+   * @param {string} color - The color to use when highlighting this line.
    */
-  static highlightLine(lineNumber, highlightClass = 'ace_step') {
-    const info = EditorAnnotator.annotator()?.highlightLine(
-      lineNumber,
-      highlightClass
-    );
+  static highlightLine(lineNumber, color = '#ff0') {
+    const info = EditorAnnotator.annotator()?.highlightLine(lineNumber, color);
 
     // If there are blocks... highlight line will highlight the blocks for that
     // line to properly emphasize them.
@@ -930,16 +1105,43 @@ export default class EditorAnnotator {
    * @param {number} lineNumber The line number (1-based index)
    * @param {string} message The text to display next to the line.
    * @param {string} logLevel The type of annotation ('ERROR', 'INFO', etc)
+   * @param {string} color The color to use, if possible, to accent the annotation (or none).
+   * @param {string} icon The icon image to use which will override a default, if any.
+   * @param {Object} tipStyle A set of CSS properties that might be applied to any related tooltip.
    */
-  static annotateLine(lineNumber, message, logLevel = 'INFO') {
-    EditorAnnotator.annotator().annotateLine(lineNumber, message, logLevel);
+  static annotateLine(
+    lineNumber,
+    message,
+    logLevel = 'INFO',
+    color = null,
+    icon = null,
+    tipStyle = {},
+    hoverCallback = null
+  ) {
+    EditorAnnotator.annotator()?.annotateLine(
+      lineNumber,
+      message,
+      logLevel,
+      color,
+      icon,
+      tipStyle
+    );
   }
 
   /**
    * Removes annotations of a particular type.
    */
   static clearAnnotations(logLevel = 'INFO') {
-    EditorAnnotator.annotator().clearAnnotations(logLevel);
+    EditorAnnotator.annotator()?.clearAnnotations(logLevel);
+  }
+
+  /**
+   * Makes the given line visible on the screen, if in a line-based editor.
+   *
+   * @param {number} lineNumber The line to scroll to where 1 is the first line.
+   */
+  static scrollToLine(lineNumber) {
+    EditorAnnotator.annotator()?.scrollToLine(lineNumber);
   }
 }
 
@@ -955,6 +1157,7 @@ if (IN_UNIT_TEST) {
     EditorAnnotator.strippedCode_ = undefined;
     EditorAnnotator.strippedLines_ = undefined;
     EditorAnnotator.highlightedLines = [];
+    document.head.querySelectorAll('style').forEach(el => el.remove());
   };
 }
 

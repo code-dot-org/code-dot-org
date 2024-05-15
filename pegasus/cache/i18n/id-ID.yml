@@ -7,8 +7,9 @@ id-ID:
   accelerated_name: Kursus Akselerasi
   account_sign_up_child_accept_terms: Saya mengonfirmasi bahwa saya telah menerima
     izin dari orang tua atau wali saya untuk menggunakan layanan Code.org.
-  account_sign_up_email_opt_in: Dapatkah kami mengirimi Anda email berisi pembaruan
-    kursus, peluang lokal, atau berita ilmu komputer lainnya? (kira-kira sekali sebulan)
+  account_sign_up_email_opt_in: Bolehkah kami mengirim email kepada Anda tentang pembaruan
+    program, peluang lokal, atau info lain terkait ilmu komputer? (kurang lebih sekali
+    sebulan)
   ai_activity: Kegiatan
   ai_aiedu_intro: 'aiEDU: Pengantar Kecerdasan Buatan'
   ai_aiedu_intro_description: Pengantar Kecerdasan Buatan adalah sebuah kurikulum
@@ -1185,6 +1186,7 @@ id-ID:
   header_about_us: Tentang Kami
   header_course_catalog: Katalog Kursus
   header_courses: Nama Kursus
+  header_districts: Distrik
   header_documentation: Dokumentasi
   header_educate_beyond: Di Luar Code.org
   header_educate_community: Komunitas Online

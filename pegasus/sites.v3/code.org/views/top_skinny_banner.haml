@@ -1,8 +1,12 @@
 %aside.top-skinny-banner{class: light_theme ? "light-theme" : "", id: banner_id}
-  %a{href: banner_url}
+  .content-wrapper{class: external_link ? "has-external-link" : ""}
     %i{class: "#{banner_icon}"}
-    %p.body-two
-      = banner_text
+    - if banner_url
+      %a.body-two.no-margin-bottom{href: banner_url}
+        = banner_text
+    - else
+      %p.body-two.no-margin-bottom
+        = banner_text
   %button{aria:{label: hoc_s(:call_to_action_hide_banner)}}
     %i{class: "fa fa-xmark"}
 

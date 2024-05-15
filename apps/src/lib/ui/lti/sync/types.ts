@@ -1,14 +1,25 @@
-interface LtiSection {
+export type LtiSection = {
   name: string;
+  short_name: string;
   size: number;
+  lti_section_id: number;
+  instructors: LtiInstructor[];
+};
+
+export interface LtiInstructor {
+  name: string;
+  id: number;
+  isOwner: boolean;
 }
 
 export type LtiSectionMap = {[sectionId: string]: LtiSection};
 
 export interface LtiSectionSyncResult {
   all?: LtiSectionMap;
-  updated?: LtiSectionMap;
+  changed?: LtiSectionMap;
   error?: string;
+  message?: string;
+  course_name?: string;
 }
 
 export interface LtiSectionSyncDialogProps {
@@ -16,6 +27,7 @@ export interface LtiSectionSyncDialogProps {
   syncResult: LtiSectionSyncResult;
   onClose?: () => void;
   disableRosterSyncButtonEnabled?: boolean;
+  lmsName: string;
 }
 
 export enum SubView {
@@ -24,3 +36,5 @@ export enum SubView {
   ERROR = 'error',
   DISABLE_ROSTER_SYNC = 'disableRosterSync',
 }
+
+export type LtiSectionOwnerMap = {[sectionId: string]: number};

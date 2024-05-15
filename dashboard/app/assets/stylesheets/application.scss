@@ -898,6 +898,10 @@ $small-footer-standard-width: 400px;
       color: $neutral_light;
     }
   }
+
+  .blocklyDropDownContent {
+    max-height: initial;
+  }
 }
 
 .header_separator {
@@ -4083,6 +4087,10 @@ a {
   .clickable-text {
     cursor: pointer;
   }
+}
+
+#teacher-dashboard {
+  overflow: auto;
 }
 
 #lti-integration-portal {

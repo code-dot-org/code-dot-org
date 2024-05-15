@@ -1,9 +1,11 @@
-import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
-import Activity from '@cdo/apps/templates/lessonOverview/activities/Activity';
-import {sampleActivities} from '../../../lib/levelbuilder/lesson-editor/activitiesTestData';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
+import React from 'react';
+
+import Activity from '@cdo/apps/templates/lessonOverview/activities/Activity';
+
+import {expect} from '../../../../util/reconfiguredChai';
+import {sampleActivities} from '../../../lib/levelbuilder/lesson-editor/activitiesTestData';
 
 describe('Activity', () => {
   let defaultProps;

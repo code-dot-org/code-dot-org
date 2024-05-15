@@ -1,10 +1,12 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+
 import MultiResponses, {
   exportedForTesting,
 } from '@cdo/apps/templates/levelSummary/MultiResponses';
 import color from '@cdo/apps/util/color';
+
+import {expect} from '../../../util/reconfiguredChai';
 const {multiAnswerCounts, multiChartData} = exportedForTesting;
 
 const JS_DATA = {

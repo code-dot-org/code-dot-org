@@ -27,7 +27,22 @@ Scenario Outline: Dragging play sound block
   # There should now be a music timeline entry.
   And element ".timeline-element" is visible
 
+  # Click the field inside the attached "play sound" block.
+  And I click block field "[data-id='when-run-block'] > [data-id='play_sound_at_current_location_simple2'] > .blocklyEditableText"
+
+  # Click on the second pack inside the sounds panel.
+  And I click selector "#sounds-panel .sounds-panel-folder-row:nth-of-type(2)"
+
+  # Click on the second sound inside the sounds panel.
+  And I click selector "#sounds-panel .sounds-panel-sound-row:nth-of-type(2)"
+
+  # The sounds panel should be dismissed.
+  And I wait until element "#sounds-panel" is not visible
+
+  # There should still be a music timeline entry.
+  And element ".timeline-element" is visible
+
 Examples:
   | url                                                       | test_name               |
   | http://studio.code.org/s/allthethings/lessons/46/levels/4 | music lab script level  |
-  | http://studio.code.org/projectbeats?show-video=false      | music lab incubator     |
+  | http://studio.code.org/projectbeats                       | music lab incubator     |

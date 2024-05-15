@@ -10,6 +10,8 @@ require_relative 'http_cache'
 # result in changes to these other files.
 
 module SharedConstants
+  DEFAULT_LOCALE = 'en-US'.freeze
+
   # Used to communicate different types of levels
   LEVEL_KIND = OpenStruct.new(
     {
@@ -135,6 +137,10 @@ module SharedConstants
     }
   )
 
+  FEATURED_PROJECT_CONSTANTS = OpenStruct.new(
+    {MAX_REQUESTS_PER_CATEGORY: 15}
+  )
+
   # This is a set of Applab blocks. It is used by dashboard to initialize the
   # default palette when creating a level. It is used by apps to determine
   # what the full set of blocks available is.
@@ -206,7 +212,6 @@ module SharedConstants
       "readRecords": null,
       "updateRecord": null,
       "deleteRecord": null,
-      "onRecordEvent": null,
       "getUserId": null,
       "drawChart": null,
       "drawChartFromRecords": null,
@@ -628,6 +633,8 @@ module SharedConstants
     PII_VIOLATION: 1001,
     # Profanity Failure
     PROFANITY_VIOLATION: 1002,
+    # Request Too Large
+    REQUEST_TOO_LARGE: 1003,
   }.freeze
 
   EMAIL_LINKS = OpenStruct.new(
@@ -649,6 +656,33 @@ module SharedConstants
     }
   ).freeze
 
+  VOICES = {
+    en_us: {
+      VOICE: 'sharon22k',
+      SPEED: 180,
+      SHAPE: 100,
+    },
+    es_es: {
+      VOICE: 'ines22k',
+      SPEED: 180,
+      SHAPE: 100,
+    },
+    es_mx: {
+      VOICE: 'rosa22k',
+      SPEED: 180,
+      SHAPE: 100,
+    },
+    it_it: {
+      VOICE: 'vittorio22k',
+      SPEED: 180,
+      SHAPE: 100,
+    },
+    pt_br: {
+      VOICE: 'marcia22k',
+      SPEED: 180,
+      SHAPE: 100,
+    },
+  }.freeze
   CENSUS_CONSTANTS = OpenStruct.new(
     {CURRENT_CENSUS_SCHOOL_YEAR: 2023}
   )
@@ -657,38 +691,50 @@ module SharedConstants
     {
       INTEGRATION_GUIDE_URL: 'https://support.code.org/hc/en-us/articles/23120014459405-Learning-Management-System-LMS-and-Single-Sign-On-SSO-Integrations-and-Support-for-Code-org',
       INSTALL_INSTRUCTIONS_URL: 'https://support.code.org/hc/en-us/articles/23621907533965-Install-Code-org-Integrations-for-your-Learning-Management-System',
+      INSTALL_GUIDE_FOR_CANVAS_URL: 'https://support.code.org/hc/en-us/articles/23123273783437-Install-the-Code-org-Integration-for-Canvas',
       ROSTER_SYNC_INSTRUCTIONS_URL: 'https://support.code.org/hc/en-us/articles/23621978654605-Sync-Rosters-with-your-Learning-Management-System',
       INTEGRATION_EARLY_ACCESS_URL: 'https://docs.google.com/forms/d/e/1FAIpQLScjfVR4CZs8Utf5vI4mz3e1q8vdH6RNIgTUWygZXN0oovBSQg/viewform',
       INTEGRATION_BUG_REPORT_URL: 'https://support.code.org/hc/en-us/requests/new?ticket_form_id=14998494738829&tf_23889708=lms_eaf',
+      ADDITIONAL_FEEDBACK_URL: 'https://studio.code.org/form/lms_integration_modal_feedback',
+      # TODO(P20-873): Replace SUPPORTED_METHODS_URL with the link to the supported methods documentation
+      SUPPORTED_METHODS_URL: 'https://github.com/code-dot-org/code-dot-org/blob/staging/docs/lti-integration.md#option-2-manual-entry',
     }
   ).freeze
 
   # Current song manifest file name for Dance Party. Note that different manifests
   # can be tested using query params (?manifest=...), but once this value is updated
   # the default manifest will change for all users.
-  DANCE_SONG_MANIFEST_FILENAME = 'songManifest2024_v1.json'
+  DANCE_SONG_MANIFEST_FILENAME = 'songManifest2024_v2.json'
 
   # We should always specify a version for the LLM so the results don't unexpectedly change.
   # reference: https://platform.openai.com/docs/models/gpt-3-5
-  AI_TUTOR_CHAT_MODEL_VERISON = 'gpt-3.5-turbo-1106'
+  AI_TUTOR_CHAT_MODEL_VERISON = 'gpt-4o-2024-05-13'
 
-  # These reflect the 'status' of an AI Tutor Interaction
-  AI_TUTOR_INTERACTION_SAVE_STATUS = {
+  # These reflect the 'status' of an AI Interaction,
+  # and are used in both AI Tutor and AI Chat.
+  AI_INTERACTION_STATUS = {
     ERROR: 'error',
-    PERSONAL: 'personal',
-    PROFANITY: 'profanity',
-    INAPPROPRIATE: 'inappropriate',
+    PII_VIOLATION: 'pii_violation',
+    PROFANITY_VIOLATION: 'profanity_violation',
     OK: 'ok',
     UNKNOWN: 'unknown',
-    EMAIL: 'email',
-    ADDRESS: 'address',
-    PHONE: 'phone',
   }.freeze
 
-  # These are the types of assistance AI Tutor can provide
+  AI_TUTOR_INTERACTION_STATUS = AI_INTERACTION_STATUS
+
   AI_TUTOR_TYPES = {
     COMPILATION: 'compilation',
     VALIDATION: 'validation',
     GENERAL_CHAT: 'general_chat',
   }.freeze
+
+  AICHAT_ERROR_TYPE = {
+    PROFANITY_MODEL: 'profanity_model',
+    PROFANITY_USER: 'profanity_user'
+  }.freeze
+
+  USER_TYPES = OpenStruct.new(
+    STUDENT: 'student',
+    TEACHER: 'teacher',
+  ).freeze
 end

@@ -1,14 +1,17 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
 import {Provider} from 'react-redux';
 import {combineReducers, createStore} from 'redux';
-import SummaryResponses from '@cdo/apps/templates/levelSummary/SummaryResponses';
-import styles from '@cdo/apps/templates/levelSummary/summary.module.scss';
+
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
-import viewAs from '@cdo/apps/code-studio/viewAsRedux';
-import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import progress from '@cdo/apps/code-studio/progressRedux';
+import viewAs from '@cdo/apps/code-studio/viewAsRedux';
+import SummaryResponses from '@cdo/apps/templates/levelSummary/SummaryResponses';
+import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+
+import {expect} from '../../../util/reconfiguredChai';
+
+import styles from '@cdo/apps/templates/levelSummary/summary.module.scss';
 
 const JS_DATA = {
   level: {

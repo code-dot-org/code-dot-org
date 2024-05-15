@@ -3,10 +3,9 @@ class Services::User
   # new values to the given User instance.
   def self.assign_form_params(user, params)
     assign_auth_option_params(user, params)
-    # Remove nested attributes, otherwise we might accidentally create new
-    # nested objects rather than updating existing ones.
-    # '_attributes' is how active_record identifies nested attrs.
-    flat_params = params.reject {|key, _| key.ends_with? '_attributes'}
+    # Remove nested attributes for authentication_options to prevent
+    # duplicates when email is ommitted from the LTI launch response
+    flat_params = params.except('authentication_options_attributes')
     user.assign_attributes(flat_params.compact)
   end
 

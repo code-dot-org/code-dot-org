@@ -1232,6 +1232,7 @@ es-ES:
   header_about_us: Acerca de nosotros
   header_course_catalog: Catalogo de cursos
   header_courses: Cursos
+  header_districts: Distritos Escolares (Sólo EEUU)
   header_documentation: Documentacion
   header_educate_beyond: Más allá de Code.org
   header_educate_community: Comunidad en línea
@@ -2669,6 +2670,7 @@ es-ES:
   user_header_applab: 'Laboratorio de Aplicaciones '
   user_header_artist: 'Artista '
   user_header_create: 'Crear '
+  user_header_create_account: Crear una cuenta
   user_header_dance: Fiesta de Baile
   user_header_flappy: Flappy
   user_header_gamelab: Laboratorio de Juegos
@@ -2676,6 +2678,7 @@ es-ES:
   user_header_logout: Cerrar sesión
   user_header_minecraft: Minecraft
   user_header_my_projects: Mis proyectos
+  user_header_new_project: Proyecto nuevo
   user_header_playlab: Laboratorio de juegos
   user_header_settings: Mi cuenta
   user_header_signin: Iniciar Sesión

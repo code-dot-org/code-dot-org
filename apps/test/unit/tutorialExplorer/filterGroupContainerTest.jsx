@@ -1,7 +1,9 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {assert} from '../../util/reconfiguredChai';
+
 import FilterGroupContainer from '@cdo/apps/tutorialExplorer/filterGroupContainer';
+
+import {assert} from '../../util/reconfiguredChai';
 
 describe('FilterGroupContainer', () => {
   it('renders', () => {

@@ -2,7 +2,7 @@ import React from 'react';
 import {act} from 'react-dom/test-utils';
 import PropTypes from 'prop-types';
 import {expect} from '../../../../util/reconfiguredChai';
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import sinon from 'sinon';
 import {useRegionalPartner} from '@cdo/apps/code-studio/pd/components/useRegionalPartner';
 import {

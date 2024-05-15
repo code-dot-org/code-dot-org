@@ -470,6 +470,10 @@ class Craft < Blockly
 
   }.freeze
 
+  def uses_google_blockly?
+    true
+  end
+
   def self.start_directions
     [['North', 0], ['East', 1], ['South', 2], ['West', 3]]
   end

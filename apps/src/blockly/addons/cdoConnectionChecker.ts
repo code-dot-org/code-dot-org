@@ -1,4 +1,5 @@
 import GoogleBlockly, {Connection} from 'blockly/core';
+
 import {customConnectionBlockTypes} from './cdoConstants';
 
 /**

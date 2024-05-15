@@ -1,10 +1,12 @@
-import React from 'react';
 import classNames from 'classnames';
+import React, {AriaAttributes} from 'react';
 
+import {getAriaPropsFromProps} from '@cdo/apps/componentLibrary/common/helpers';
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
+
 import moduleStyles from './simpleDropdown.module.scss';
 
-export interface SimpleDropdownProps {
+export interface SimpleDropdownProps extends AriaAttributes {
   /** SimpleDropdown items list */
   items?: {value: string; text: string}[];
   /** SimpleDropdown grouped list of items */
@@ -15,6 +17,8 @@ export interface SimpleDropdownProps {
   onChange: (args: React.ChangeEvent<HTMLSelectElement>) => void;
   /** SimpleDropdown label text */
   labelText: string;
+  /** SimpleDropdown dropdown text thickness */
+  dropdownTextThickness?: 'thick' | 'thin';
   /** Is SimpleDropdown label visible or added via aria-label attribute */
   isLabelVisible?: boolean;
   /** SimpleDropdown name */
@@ -56,19 +60,25 @@ const SimpleDropdown: React.FunctionComponent<SimpleDropdownProps> = ({
   id,
   className,
   labelText,
+  dropdownTextThickness = 'thick',
   isLabelVisible = true,
   disabled = false,
   color = 'black',
   size = 'm',
+  ...rest
 }) => {
+  const ariaProps = getAriaPropsFromProps(rest);
+
   return (
     <label
       className={classNames(
         moduleStyles.dropdownContainer,
         moduleStyles[`dropdownContainer-${size}`],
         moduleStyles[`dropdownContainer-${color}`],
+        moduleStyles[`dropdownContainer-${dropdownTextThickness}`],
         className
       )}
+      aria-describedby={ariaProps['aria-describedby']}
     >
       {isLabelVisible && (
         <span className={moduleStyles.dropdownLabel}>{labelText}</span>
@@ -81,8 +91,8 @@ const SimpleDropdown: React.FunctionComponent<SimpleDropdownProps> = ({
           onChange={onChange}
           value={selectedValue}
           id={id}
-          className={moduleStyles.dropdown}
           disabled={disabled}
+          {...ariaProps}
         >
           {itemGroups.length > 0
             ? itemGroups.map(({label, groupItems}, index) => (

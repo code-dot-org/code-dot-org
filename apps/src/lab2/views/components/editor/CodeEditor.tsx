@@ -2,7 +2,6 @@ import React, {useEffect, useRef, useState} from 'react';
 import classNames from 'classnames';
 import {EditorState, Extension} from '@codemirror/state';
 import {EditorView, ViewUpdate} from '@codemirror/view';
-import PanelContainer from '../PanelContainer';
 import {useDispatch} from 'react-redux';
 import {editorConfig} from './editorConfig';
 import {darkMode as darkModeTheme} from './editorThemes';
@@ -72,7 +71,7 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   // When we have a new channelId and/or start code, reset the editor with the start code.
   // A new channelId means we are loading a new project, and we need to reset the editor.
   useEffect(() => {
-    if (editorView) {
+    if (editorView && editorView.state.doc.toString() !== startCode) {
       editorView.dispatch({
         changes: {
           from: 0,
@@ -84,9 +83,9 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   }, [startCode, editorView, channelId]);
 
   return (
-    <PanelContainer id="code-editor" headerText="Editor" hideHeaders={false}>
-      <div ref={editorRef} className={classNames('codemirror-container')} />
-    </PanelContainer>
+    <div id="code-editor">
+      <div ref={editorRef} className={classNames('codemirror-container')} />;
+    </div>
   );
 };
 

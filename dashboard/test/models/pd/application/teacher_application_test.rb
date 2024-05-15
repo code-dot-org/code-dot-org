@@ -321,7 +321,7 @@ module Pd::Application
     test 'columns_to_remove' do
       ['csp', 'csd'].each do |course|
         columns = TeacherApplication.columns_to_remove(course)
-        columns.keys.each do |k|
+        columns.each_key do |k|
           columns[k].each {|c| refute_includes(c.to_s, course)}
         end
       end
@@ -1026,8 +1026,6 @@ module Pd::Application
       end
     end
 
-    private
-
     test 'test allow_sending_principal_email?' do
       # If we are awaiting_admin_approval, we can send.
       application = create :pd_teacher_application
@@ -1135,7 +1133,7 @@ module Pd::Application
       assert_equal 1, application.emails.where.not(sent_at: nil).where(email_type: 'admin_approval_teacher_reminder').count
     end
 
-    def assert_status_log(expected, application)
+    private def assert_status_log(expected, application)
       assert_equal JSON.parse(expected.to_json), application.status_log
     end
   end

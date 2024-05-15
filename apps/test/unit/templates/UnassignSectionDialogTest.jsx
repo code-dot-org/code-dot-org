@@ -1,8 +1,9 @@
-import React from 'react';
-import {mount} from 'enzyme';
-import sinon from 'sinon';
-import UnassignSectionDialog from '@cdo/apps/templates/UnassignSectionDialog';
 import {expect} from 'chai';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import React from 'react';
+import sinon from 'sinon';
+
+import UnassignSectionDialog from '@cdo/apps/templates/UnassignSectionDialog';
 
 const DEFAULT_PROPS = {
   isOpen: true,

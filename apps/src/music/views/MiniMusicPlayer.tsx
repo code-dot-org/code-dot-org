@@ -14,6 +14,8 @@ import Lab2Registry from '../../lab2/Lab2Registry';
 import moduleStyles from './MiniMusicPlayer.module.scss';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 
+import noteImage from '@cdo/static/music/music-note.png';
+
 interface MiniPlayerViewProps {
   projects: Channel[];
   libraryName: string;
@@ -102,9 +104,26 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
     return <div>Loading...</div>;
   }
 
+  const getPackDetails = (packId: string) => {
+    const packFolder = MusicLibrary.getInstance()?.getFolderForFolderId(packId);
+
+    if (!packFolder) {
+      return null;
+    }
+
+    return {
+      name: packFolder.name,
+      artist: packFolder.artist,
+      color: packFolder.color,
+    };
+  };
+
   return (
     <div className={moduleStyles.miniMusicPlayer}>
       {projects.map(project => {
+        const packId = project?.labConfig?.music.packId;
+        const packDetails = packId ? getPackDetails(packId) : undefined;
+
         return (
           <div
             className={moduleStyles.entry}
@@ -115,6 +134,21 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
                 : onPlaySong(project);
             }}
           >
+            <div className={moduleStyles.pack}>
+              {packId && (
+                <img
+                  src={noteImage}
+                  className={moduleStyles.packImage}
+                  style={{
+                    background:
+                      packDetails?.color &&
+                      `radial-gradient(${packDetails.color}, #000`,
+                  }}
+                  alt=""
+                />
+              )}
+            </div>
+
             <div className={moduleStyles.control}>
               <FontAwesomeV6Icon
                 iconName={project.id === currentProjectId ? 'stop' : 'play'}
@@ -122,21 +156,31 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
                 className={moduleStyles.icon}
               />
             </div>
-            <div className={moduleStyles.name}>{project.name}</div>
-            <a
-              href={`/projects/music/${project.id}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={e => e.stopPropagation()}
-            >
-              <div className={moduleStyles.other}>
+
+            <div className={moduleStyles.body}>
+              <div className={moduleStyles.name}>{project.name}</div>
+              {packDetails && (
+                <div className={moduleStyles.details}>
+                  {packDetails.name} &bull; {packDetails.artist}
+                </div>
+              )}
+            </div>
+
+            <div className={moduleStyles.other}>
+              <a
+                href={`/projects/music/${project.id}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={e => e.stopPropagation()}
+                className={moduleStyles.otherLink}
+              >
                 <FontAwesomeV6Icon
                   iconName="arrow-up-right-from-square"
                   iconStyle="solid"
                   className={moduleStyles.icon}
                 />
-              </div>
-            </a>
+              </a>
+            </div>
           </div>
         );
       })}

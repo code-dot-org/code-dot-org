@@ -31,7 +31,7 @@ markdown <<MARKDOWN
 ## Exemplar alt text for images: 
 ### "An Alien Game made in Game Lab"
 
-#### img src="https://images.code.org/3297ca57e23d5349eff36b91b811901e-image-1700511533861.18.48 PM.png" alt="An Alien Game made in Game Lab" style="border-radius:0px; float: center; height: 250px; clear: both; margin: 0px 0px 0px 0;"
+#### `alt="An Alien Game made in Game Lab"`
 
 <img src="https://images.code.org/3297ca57e23d5349eff36b91b811901e-image-1700511533861.18.48 PM.png" alt="An Alien Game made in Game Lab" style="border-radius:0px; float: center; height: 250px; clear: both; margin: 0px 0px 0px 0;">
 
