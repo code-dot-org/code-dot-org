@@ -37,6 +37,8 @@ TTSSafeScrubber.tags = ['xml']
 module TextToSpeech
   extend ActiveSupport::Concern
 
+  UPDATED_TTS_PATH_DCDO_KEY = 'updated_tts_path'.freeze
+
   # Pull the VOICES out of the SharedConstants (updating the locale keys to
   # match the expectation of the I18n gem since these locale keys are using
   # the JavaScript i18n expectations)
@@ -76,7 +78,7 @@ module TextToSpeech
     loc_voice = TextToSpeech.localized_voice(locale: locale)
 
     # Determine the location based on the experiment enabled
-    use_new_path = DCDO.get('updated_tts_path', false)
+    use_new_path = DCDO.get(UPDATED_TTS_PATH_DCDO_KEY, false)
     if use_new_path
       # New path
       "#{locale}/#{content_md5}/#{content_sha}/#{loc_voice[:VOICE]}-#{loc_voice[:SPEED]}-#{loc_voice[:SHAPE]}.mp3"

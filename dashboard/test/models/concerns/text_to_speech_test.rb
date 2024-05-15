@@ -66,7 +66,7 @@ class TextToSpeechTest < ActiveSupport::TestCase
     assert_equal 'sharon22k/180/100/71c7e35e3633b5dfce472bcbed146e9f/level-with-instructions.mp3', @level_with_instructions.tts_path(@level_with_instructions.tts_short_instructions_text)
     assert_equal 'sharon22k/180/100/e3b3f56615d1e5f2608d2f1130a7ef54/level-with-instructions-override.mp3', @level_with_instructions_override.tts_path(@level_with_instructions_override.tts_short_instructions_text)
 
-    DCDO.stubs(:get).with('updated_tts_path', false).returns(true)
+    DCDO.stubs(:get).with(TextToSpeech::UPDATED_TTS_PATH_DCDO_KEY, false).returns(true)
     assert_equal 'en-US/d41d8cd98f00b204e9800998ecf8427e/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855/sharon22k-180-100.mp3', @level_without_instructions.tts_path(@level_without_instructions.tts_short_instructions_text)
     assert_equal 'en-US/71c7e35e3633b5dfce472bcbed146e9f/f79d6e6828e6718bed14558024294018fc4411cd41cee4bac066656f70d8f718/sharon22k-180-100.mp3', @level_with_instructions.tts_path(@level_with_instructions.tts_short_instructions_text)
     assert_equal 'en-US/e3b3f56615d1e5f2608d2f1130a7ef54/ce603774135699e9abdfd65eb1f2733774da58af91782528e82ef5f9efdb8fba/sharon22k-180-100.mp3', @level_with_instructions_override.tts_path(@level_with_instructions_override.tts_short_instructions_text)
