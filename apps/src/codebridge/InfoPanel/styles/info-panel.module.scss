@@ -1,9 +1,9 @@
 @import "color";
 
-.instructions {
+.infoPanel {
   white-space: pre-wrap;
   width: 100%;
-  grid-area: instructions;
+  grid-area: info-panel;
   color: $white;
 }
 
