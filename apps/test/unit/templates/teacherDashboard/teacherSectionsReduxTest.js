@@ -359,7 +359,6 @@ describe('teacherSectionsRedux', () => {
         unitId: null,
         hidden: false,
         restrictSection: false,
-        aiTutorEnabled: false,
       });
     });
 
@@ -391,7 +390,6 @@ describe('teacherSectionsRedux', () => {
         unitId: unitId,
         hidden: false,
         restrictSection: false,
-        aiTutorEnabled: false,
       });
     });
   });
@@ -419,7 +417,6 @@ describe('teacherSectionsRedux', () => {
         unitId: null,
         hidden: false,
         restrictSection: false,
-        aiTutorEnabled: false,
       });
     });
 
@@ -467,7 +464,6 @@ describe('teacherSectionsRedux', () => {
           },
         ],
         syncEnabled: undefined,
-        aiTutorEnabled: undefined,
       });
     });
   });
@@ -625,7 +621,6 @@ describe('teacherSectionsRedux', () => {
       hidden: false,
       restrict_section: false,
       post_milestone_disabled: false,
-      ai_tutor_enabled: false,
     };
 
     function successResponse(customProps = {}) {
@@ -788,7 +783,6 @@ describe('teacherSectionsRedux', () => {
           isAssignedCSA: undefined,
           sectionInstructors: [],
           syncEnabled: undefined,
-          aiTutorEnabled: false,
         },
       });
     });
