@@ -328,7 +328,9 @@ class ProjectsController < ApplicationController
 
     if user_id
       # If viewing another user's work, ensure that we have permission.
-      script_level = level.script_levels.find_by_script_id(script_id)
+      script_level = params[:script_level_id] ?
+        ScriptLevel.cache_find(params[:script_level_id].to_i) :
+        level.script_levels.find_by_script_id(script_id)
       user = User.find(user_id)
       unless can?(:view_as_user, script_level, user)
         return render(status: :forbidden, json: {error: "Access denied."})
