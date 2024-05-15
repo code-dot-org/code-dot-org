@@ -7,7 +7,6 @@ import Button from '@cdo/apps/componentLibrary/button/Button';
 import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import {default as LinkedButton} from '@cdo/apps/templates/Button';
 import {
@@ -93,7 +92,6 @@ function InviteToV2ProgressModal({
     setHasSeenProgressTableInviteData(true);
     setHasSeenProgressTableInvite(true);
     setShowProgressTableV2(true);
-    new UserPreferences().setShowProgressTableV2(true);
   }, [sectionId, setHasSeenProgressTableInvite, setShowProgressTableV2]);
 
   const handleDelayInvitation = React.useCallback(() => {
