@@ -24,7 +24,7 @@ const MILLISECONDS_IN_ONE_DAY = 1000 * 3600 * 24;
 
 function InviteToV2ProgressModal({
   sectionId,
-  onShowProgressTableV2Change,
+  setHasJustSwitchedToV2,
 
   // from redux
   dateProgressTableInvitationDelayed,
@@ -92,7 +92,13 @@ function InviteToV2ProgressModal({
     setHasSeenProgressTableInviteData(true);
     setHasSeenProgressTableInvite(true);
     setShowProgressTableV2(true);
-  }, [sectionId, setHasSeenProgressTableInvite, setShowProgressTableV2]);
+    setHasJustSwitchedToV2(true);
+  }, [
+    sectionId,
+    setHasSeenProgressTableInvite,
+    setShowProgressTableV2,
+    setHasJustSwitchedToV2,
+  ]);
 
   const handleDelayInvitation = React.useCallback(() => {
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_DELAY_INVITATION, {
@@ -165,7 +171,7 @@ function InviteToV2ProgressModal({
 InviteToV2ProgressModal.propTypes = {
   setHasSeenProgressTableInvite: PropTypes.func.isRequired,
   sectionId: PropTypes.number,
-  onShowProgressTableV2Change: PropTypes.func.isRequired,
+  setHasJustSwitchedToV2: PropTypes.func.isRequired,
   dateProgressTableInvitationDelayed: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,

@@ -9,10 +9,10 @@ import i18n from '@cdo/locale';
 import {expect} from '../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
-  onShowProgressTableV2Change: () => {},
   setShowProgressTableV2: () => {},
   setHasSeenProgressTableInvite: () => {},
   setDateProgressTableInvitationDelayed: () => {},
+  setHasJustSwitchedToV2: () => {},
 };
 
 describe('InviteToV2ProgressModal', () => {
@@ -50,18 +50,21 @@ describe('InviteToV2ProgressModal', () => {
   it('allows user to accept the invitation', () => {
     const setShowProgressTableV2Stub = sinon.stub();
     const setHasSeenProgressTableInviteStub = sinon.stub();
+    const setHasJustSwitchedToV2Stub = sinon.stub();
 
     renderDefault({
       setShowProgressTableV2: setShowProgressTableV2Stub,
       setHasSeenProgressTableInvite: setHasSeenProgressTableInviteStub,
       hasSeenProgressTableInvite: false,
       dateProgressTableInvitationDelayed: null,
+      setHasJustSwitchedToV2: setHasJustSwitchedToV2Stub,
     });
 
     screen.getByText(i18n.progressTrackingAnnouncement());
     const acceptButton = screen.getByText(i18n.tryItNow());
     fireEvent.click(acceptButton);
 
+    expect(setHasJustSwitchedToV2Stub).to.have.been.calledOnce;
     expect(setHasSeenProgressTableInviteStub).to.have.been.calledOnce;
     expect(setShowProgressTableV2Stub).to.have.been.calledOnce;
 
