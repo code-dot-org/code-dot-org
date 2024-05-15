@@ -7,7 +7,6 @@ import Button from '@cdo/apps/componentLibrary/button/Button';
 import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import {default as LinkedButton} from '@cdo/apps/templates/Button';
 import {
@@ -25,6 +24,7 @@ const MILLISECONDS_IN_ONE_DAY = 1000 * 3600 * 24;
 
 function InviteToV2ProgressModal({
   sectionId,
+  onShowProgressTableV2Change,
 
   // from redux
   dateProgressTableInvitationDelayed,
@@ -92,8 +92,13 @@ function InviteToV2ProgressModal({
     setHasSeenProgressTableInviteData(true);
     setHasSeenProgressTableInvite(true);
     setShowProgressTableV2(true);
-    new UserPreferences().setShowProgressTableV2(true); // still might be able to delete
-  }, [sectionId, setHasSeenProgressTableInvite, setShowProgressTableV2]);
+    onShowProgressTableV2Change();
+  }, [
+    sectionId,
+    setHasSeenProgressTableInvite,
+    setShowProgressTableV2,
+    onShowProgressTableV2Change,
+  ]);
 
   const handleDelayInvitation = React.useCallback(() => {
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_DELAY_INVITATION, {
@@ -166,6 +171,7 @@ function InviteToV2ProgressModal({
 InviteToV2ProgressModal.propTypes = {
   setHasSeenProgressTableInvite: PropTypes.func.isRequired,
   sectionId: PropTypes.number,
+  onShowProgressTableV2Change: PropTypes.func.isRequired,
   dateProgressTableInvitationDelayed: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,
