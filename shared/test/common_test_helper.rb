@@ -27,20 +27,20 @@ module SetupTest
     # Filter unnecessary headers from the http interactions.
     c.before_record do |i|
       %w(
-      X-Amz-Security-Token
-      X-Amz-Content-Sha256
-      Authorization
-      X-Amz-Date
-      Accept
-      Accept-Encoding
-      User-Agent
-      Host
-      Content-Type
-    ).each {|h| i.request.headers.delete h}
+        X-Amz-Security-Token
+        X-Amz-Content-Sha256
+        Authorization
+        X-Amz-Date
+        Accept
+        Accept-Encoding
+        User-Agent
+        Host
+        Content-Type
+      ).each {|h| i.request.headers.delete h}
       %w(
-      X-Amz-Request-Id
-      X-Amz-Id-2
-    ).each {|h| i.response.headers.delete h}
+        X-Amz-Request-Id
+        X-Amz-Id-2
+      ).each {|h| i.response.headers.delete h}
     end
   end
 
