@@ -43,6 +43,9 @@ function getImportableScreen(dom) {
       var existingElement = elementUtils.getPrefixedElementById(child.id);
       if (existingElement) {
         let existingElementScreen = $(existingElement).parents('.screen')[0];
+
+        // Catch situation where existing element is a screen itself and
+        // has an ID that matches an element being imported
         if ($(existingElement).hasClass('screen')) {
           existingElementScreen = existingElement;
         }
