@@ -285,8 +285,11 @@ export default class MusicPlayer {
   private scheduleEvents(events: PlaybackEvent[]) {
     for (const event of events) {
       if (event.type === 'sound' || !this.audioPlayer.supportsSamplers()) {
+        const reportCallback = (soundId: string) => {
+          this.analyticsReporter?.onSoundsPlayed(soundId);
+        };
         for (const sample of this.convertEventToSamples(event)) {
-          this.audioPlayer.scheduleSample(sample);
+          this.audioPlayer.scheduleSample(sample, reportCallback);
         }
       } else {
         // Use samplers for chords and patterns if supported

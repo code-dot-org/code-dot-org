@@ -233,7 +233,7 @@ class ToneJSPlayer implements AudioPlayer {
     this.generateEffectBusses();
   }
 
-  scheduleSample(sample: SampleEvent) {
+  scheduleSample(sample: SampleEvent, reportCallback: (id: string) => void) {
     const buffer = this.soundCache.getSound(sample.sampleUrl);
     if (!buffer) {
       this.metricsReporter.logWarning(
@@ -265,12 +265,8 @@ class ToneJSPlayer implements AudioPlayer {
       return null;
     }
     Transport.scheduleOnce(() => {
-      // this.analyticsReporter?.onSoundPlayed(sample.playbackPosition);
       console.log('scheduleOnce callback');
-      console.log(
-        'getSoundIdFromUrl(sample.sampleUrl)',
-        library.getSoundIdFromUrl(sample.sampleUrl)
-      );
+      reportCallback(library.getSoundIdFromUrl(sample.sampleUrl));
     }, this.playbackTimeToTransportTime(sample.playbackPosition));
   }
 
