@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "k5-ai-data",
-    "serialized_at": "2024-05-14 15:20:50 UTC",
+    "serialized_at": "2024-05-14 21:26:33 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -372,8 +372,19 @@
       }
     },
     {
-      "key": "5f120584-c7b4-4ecb-96ee-4468f6cfcb0e",
+      "key": "dc798ba9-8a3f-4eac-9fea-9bf01b5fa054",
       "position": 3,
+      "properties": {
+        "progression_name": "Sorting Items (Wings vs No Wings)"
+      },
+      "seeding_key": {
+        "activity_section.key": "dc798ba9-8a3f-4eac-9fea-9bf01b5fa054",
+        "lesson_activity.key": "e2af077a-f2e2-4334-a4c1-4890ae8bbd98"
+      }
+    },
+    {
+      "key": "5f120584-c7b4-4ecb-96ee-4468f6cfcb0e",
+      "position": 4,
       "properties": {
         "description": " | Slide                                                                                                        | Lesson Guide                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |\n| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide10.png) | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide11.png) | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Have students list the different features they see on these items. Take time to think about what these items would look like if they were sorted vs. how they appear on screen.<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should notice that there are 3 different shapes (triangle, circle, square), 3 different border colors (red, green, black), and 3 different fill colors (yellow, white, red). They should explain that the items are not sorted because they are all grouped together, regardless of their features.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide12.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> For the first time through this activity, the teacher (or “Trainer”) will be given a set of sorted data. The students are the computers that are being trained on the model. At first, they will guess and check their categorizations. As they get more information, they will learn what the model is and how the items have been sorted.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide13.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Transition students to their devices. Have them go to level one and wait for their next instructions.<br><br>Note: This level starts out with all of the items together in the top of the screen. Students will click and drag items one at a time into the 3 boxes. They will click “Reset” when they finish and reuse this same level for Part Two.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide14.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Tell students to click the orange Run button under the playspace and look for the item on screen. Be careful to refer to this as an “item” and not a triangle to convey that a computer doesn’t understand shape. Have students store this item in one of the three boxes by clicking and dragging it into the box.<br><br>Students will act as the Computer “Guesser” trying to determine what box to put this in. Since students won’t have enough information yet to know where the item should go, they should take a guess.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide15.png) | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Ask students “What features does this item have?” They should note that it is shaped like a triangle, it has a green border, and it has a yellow fill color. Ask students how they decided what box to put it in.<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students may say that they took a guess or that they looked at specific features of the item. Both ways reflect how a computer would also decide what box to put the item in.<br><br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide16.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students move the item into Box 1 if it is not already there.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide17.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students locate and move these three items into Boxes 1, 2, and 3 respectively.<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide18.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students store this item in one of the three boxes by clicking and dragging it into the box.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide19.png) | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Ask students where this item could be sorted into. Then ask what information they could receive that would help them to be more accurate in sorting additional items.<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> They should realize that these items could be sorted by shape, border color, or fill. Which means that this item could either belong in Box 2 (squares) or Box 3 (black outline or red fill). Having more data available, i.e. more sorted items on screen, would help them make a more accurate guess.<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide20.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students move the item into Box 2 if it is not already there.<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide21.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students locate and move the remaining items into Boxes 1, 2, and 3 respectively. Note that there are more shapes on screen than appear in students’ playspace. If you are using physical manipulatives, students may have more items to sort.<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide22.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students sort this item in one of the three boxes by clicking and dragging it into the box.<br><br><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> “If you already sorted this item during the previous slide, you should know which Box this item belongs in.”<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide23.png) | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Have students discuss how accurate they were in the first round. How many of them knew the item belonged in Box 1? How about in Round 2? And Round 3? How did having more data sorted in each round, help students make a more accurate prediction of where to put the item on screen.<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should understand that having more data available to them will make their predictions more accurate. In the first round, they had no information and had to make a guess. In the second round, they had slightly more information but were still making a guess. In the third round, they had already seen the item sorted into Box 3 and should not have had to guess at all.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide24.png) | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Have students think about what would happen if they had to sort the three items on screen. Remind them that in the first round, they had no information to go off of and had to make a guess. Similarly, the pentagon, heart, and smiley face don’t appear in the training data so students would have to guess what box to put them in.<br><br>Then have students discuss how the items were sorted by shape.<br><br><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> If I had sorted these items by something other than shape, how would that have affected how you sorted your items?<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should understand that they are acting as a computer responding to data inputs. Had you sorted your items by something other than shape, then they would have mirrored that. This leads into the next activity where students will get to redo the previous 3 rounds, but sorting their items by something other than triangle, circle, and square.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide25.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> For the second time through this activity, one student will “train” the model on data and their partner will guess how the data is sorted.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide26.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Group students in pairs. Have students click “Reset” on level one. Have one student act as the trainer and give them a minute to sort the items on their screen however they want. They should keep their screen hidden from their partner until the end of Round 3. Have the other partner act as the Guesser. This student will complete the same steps as in Round 1.<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide27.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have the Guesser to click the orange Run button under the playspace and look for the item on screen. Have Guessers store this item in one of the three boxes by clicking and dragging it into the box. Since students won’t have enough information yet to know where the item should go, they should take a guess.<br><br>Have the Guesser show their screen to the Trainer and have the Trainer tell the Guesser if they are correct or if they need to move the item to a different box. The Trainer should keep their screen hidden from the Guesser.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide28.png) | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Ask students “What features does this item have?” They should note that it is shaped like a triangle, it has a green border, and it has a yellow fill. Ask students how they decided what box to put it in.<br><br>Have the Trainer reflect on what information the Guesser currently has.<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students may say that they took a guess or that they looked at specific features of the item. Both ways reflect how a computer would also decide what box to put the item in. Trainers should understand that at this point in the activity, Guessers have no information about how to sort the items on screen.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide29.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students sort these 3 items into the correct boxes if it is not already there. The example on screen is taken from Part One of the activity. Note that Trainers might have sorted their items differently. If so, have the Trainer indicate to the Guesser where on their screen to drag these three items.<br><br><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> As students complete this activity, see if you can find different ways that Trainers have sorted their items. Call on these students to explain how they sorted their data at the end of Part Two.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide30.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students store this item in one of the three boxes by clicking and dragging it into the box.<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide31.png) | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Ask students if they can guess how these items are sorted. Then ask what information they could receive that would help them to be more accurate in sorting additional items.<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> They should note that these items could be sorted by shape, border color, or fill. Having more data available, i.e. more sorted items on screen, would help them make a more accurate guess.<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide32.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students locate and move the remaining items into Boxes 1, 2, and 3 respectively. Note that there are more shapes on screen than appear in students’ playspace. If you are using physical manipulatives, students may have more items to sort.<br><br>The example on screen is taken from Part One of the activity. Note that Trainers might have sorted their items differently. If so, have the Trainer indicate to the Guesser where on their screen to drag these three items.<br><br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide33.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students sort this item in one of the three boxes by clicking and dragging it into the box.<br><br><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> “If you already sorted this item during the previous slide, you should know which Box this item belongs in.”<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide34.png) | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Have students discuss how the Trainers chose to sort their data. Highlight a couple students who sorted their data in different ways.<br><br>Discuss if knowing that the items were sorted by shape in Part One helped in Part Two.<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should be able to explain how their Trainer sorted the data by Round 3. Students should understand that knowing one way to sort a set of items doesn’t provide them with any additional information when starting the process over. Each time they perform this activity, they are starting with a blank slate. Similarly, each time a new machine learning model is trained, we assume that it has no prior knowledge and we must provide it with appropriately tagged and sorted data.<br><br><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> If there is additional time and students want to do a Part Three of this activity. Have the Guesser and Trainer switch roles and have the new Trainer choose a new feature to sort the items by.<br><br></p>|"
       },
@@ -495,7 +506,7 @@
       "key": "af504c40-7ffd-40eb-97f2-b3ccaac066a0",
       "position": 1,
       "properties": {
-        "progression_name": "Sorting Fruit and Vegetables"
+        "progression_name": "Sorting Food"
       },
       "seeding_key": {
         "activity_section.key": "af504c40-7ffd-40eb-97f2-b3ccaac066a0",
@@ -675,6 +686,28 @@
     },
     {
       "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Sorting Items (Wings vs No Wings)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sorting_items_wings"
+        ],
+        "lesson.key": "Sorting Data",
+        "lesson_group.key": "",
+        "script.name": "k5-ai-data-2024",
+        "activity_section.key": "dc798ba9-8a3f-4eac-9fea-9bf01b5fa054"
+      },
+      "level_keys": [
+        "sorting_items_wings"
+      ]
+    },
+    {
+      "chapter": 4,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -699,7 +732,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 5,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -724,7 +757,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -749,7 +782,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -774,7 +807,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -799,7 +832,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -807,7 +840,7 @@
         "level_keys": [
           "k5_ai_pilot_sorting_fruit_vegetables_2024"
         ],
-        "progression": "Sorting Fruit and Vegetables"
+        "progression": "Sorting Food"
       },
       "bonus": false,
       "seeding_key": {
@@ -824,7 +857,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -846,7 +879,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -871,7 +904,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -896,7 +929,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -944,6 +977,18 @@
         "lesson_group.key": "",
         "script.name": "k5-ai-data-2024",
         "activity_section.key": "6ac2a93e-5546-46f2-b8e6-9e068db84758"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sorting_items_wings",
+        "script_level.level_keys": [
+          "sorting_items_wings"
+        ],
+        "lesson.key": "Sorting Data",
+        "lesson_group.key": "",
+        "script.name": "k5-ai-data-2024",
+        "activity_section.key": "dc798ba9-8a3f-4eac-9fea-9bf01b5fa054"
       }
     },
     {

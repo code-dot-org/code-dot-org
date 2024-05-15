@@ -23,6 +23,7 @@ import lab from '@cdo/apps/lab2/lab2Redux';
 import lab2Project from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import javalabEditor from '@cdo/apps/javalab/redux/editorRedux';
 import javalab from '@cdo/apps/javalab/redux/javalabRedux';
+import codebridgeConsole from '@codebridge/redux/consoleRedux';
 
 registerReducers({
   header,
@@ -48,6 +49,7 @@ registerReducers({
   lab2Project,
   javalabEditor,
   javalab,
+  codebridgeConsole,
 });
 
 export {getStore};

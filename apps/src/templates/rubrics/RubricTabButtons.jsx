@@ -69,7 +69,7 @@ export default function RubricTabButtons({
           ]}
           onChange={value => tabSelectCallback(value)}
         />
-        {selectedTab === TAB_NAMES.RUBRIC && (
+        {selectedTab === TAB_NAMES.RUBRIC && teacherHasEnabledAi && (
           <div>
             <RunAIAssessmentButton
               canProvideFeedback={canProvideFeedback}
@@ -87,6 +87,7 @@ export default function RubricTabButtons({
       </div>
       {selectedTab === TAB_NAMES.RUBRIC &&
         canProvideFeedback &&
+        teacherHasEnabledAi &&
         !!statusText() && (
           <InfoAlert
             className={'uitest-eval-status-text'}
