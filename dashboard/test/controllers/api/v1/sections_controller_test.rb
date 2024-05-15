@@ -1411,26 +1411,23 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     create :code_review_group_member, follower: @followers[2], code_review_group: @group2
   end
 
-  test 'can set ai_tutor_enabled to true by the section teacher' do
+  test 'can toggle ai_tutor_enabled by the section teacher' do
     sign_in @teacher
     post :set_ai_tutor_enabled, params: {id: @section.id, ai_tutor_enabled: true}
     assert_response :success
     @section.reload
     assert @section.ai_tutor_enabled
+
+    post :set_ai_tutor_enabled, params: {id: @section.id, ai_tutor_enabled: false}
+    assert_response :success
+    @section.reload
+    refute @section.ai_tutor_enabled
   end
 
   test 'cannot set ai_tutor_enabled by a different teacher' do
     sign_in @following_teacher
     post :set_ai_tutor_enabled, params: {id: @section.id, ai_tutor_enabled: true}
     assert_response :forbidden
-  end
-
-  test 'can set ai_tutor_enabled to false by an authorized instructor' do
-    sign_in @teacher
-    post :set_ai_tutor_enabled, params: {id: @section.id, ai_tutor_enabled: false}
-    assert_response :success
-    @section.reload
-    refute @section.ai_tutor_enabled
   end
 
   test 'set ai_tutor_enabled returns 403 for unauthorized access' do
