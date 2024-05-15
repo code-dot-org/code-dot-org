@@ -8,7 +8,7 @@ Scenario: Teacher can open and close Icon Key and details
 
   When I sign in as "Teacher_Sally" and go home
   And I get levelbuilder access
-  And I navigate to the V2 progress dashboard
+  And I navigate to the V2 progress dashboard for "Untitled Section"
   
   # toggle to V2 progress view
   And I wait until element "h6:contains(Icon Key)" is visible
@@ -34,7 +34,7 @@ Scenario: Teacher can open and close lessons and see level data cells
     
   When I sign in as "Teacher_Sally" and go home
   And I get levelbuilder access
-  And I navigate to the V2 progress dashboard
+  And I navigate to the V2 progress dashboard for "Untitled Section"
 
   # Teacher can open lesson to view level data
   And I wait until element "#ui-test-lesson-header-2" is visible
@@ -51,7 +51,7 @@ Scenario: Teacher can navigate to student work by clicking level cell.
     
   When I sign in as "Teacher_Sally" and go home
   And I get levelbuilder access
-  And I navigate to the V2 progress dashboard
+  And I navigate to the V2 progress dashboard for "Untitled Section"
 
   # Teacher opens lesson data and clicks on level data cell
   And I wait until element "#ui-test-lesson-header-2" is visible
@@ -67,7 +67,7 @@ Scenario: Teacher can open lesson data, refresh the page, and lesson data will s
     
   When I sign in as "Teacher_Sally" and go home
   And I get levelbuilder access
-  And I navigate to the V2 progress dashboard
+  And I navigate to the V2 progress dashboard for "Untitled Section"
 
   # Open a lesson to see level data
   And I wait until element "#ui-test-lesson-header-2" is visible
@@ -99,7 +99,7 @@ Scenario: Teacher can view lesson progress for when students have completed a le
 
   When I sign in as "Teacher_Sally" and go home
   And I get levelbuilder access
-  And I navigate to the V2 progress dashboard
+  And I navigate to the V2 progress dashboard for "Untitled Section"
   And I wait until element "#uitest-circle" is visible
 
   And I open my eyes to test "V2 progress dashboard"
@@ -122,7 +122,7 @@ Scenario: Teacher can view student work, ask student to keep working, on rubric 
   # Teacher sees "needs feedback" in the table
   When I sign in as "Teacher_Sally" and go home
   And I get levelbuilder access
-  And I navigate to the V2 progress dashboard
+  And I navigate to the V2 progress dashboard for "Untitled Section"
 
   # Check that the needs feedback icon is present
   And I wait until element "#ui-test-lesson-header-1" is visible
@@ -176,7 +176,7 @@ Scenario: Teacher can view choice levels
 
   When I sign in as "Teacher_Sally" and go home
   And I get levelbuilder access
-  And I navigate to the V2 progress dashboard
+  And I navigate to the V2 progress dashboard for "Untitled Section"
 
   # View unexpanded choice level
   And I wait until element "#ui-test-lesson-header-1" is visible
@@ -226,7 +226,7 @@ Scenario: Teacher can view validated level
 
   When I sign in as "Dumbledore" and go home
   And I get levelbuilder access
-  And I navigate to the V2 progress dashboard
+  And I navigate to the V2 progress dashboard for "New Section"
 
   # eyes test for unexpanded lessons
   And I wait until element "#ui-test-lesson-header-1" is visible
