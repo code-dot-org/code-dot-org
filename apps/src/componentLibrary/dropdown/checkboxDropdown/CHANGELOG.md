@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.4.0] (https://github.com/code-dot-org/code-dot-org/pull/58637)
+
+* added `gray` color to `CheckboxDropdown`
+
 ## [0.3.2](https://github.com/code-dot-org/code-dot-org/pull/58469)
 
 * added support of all `aria-` attributes by `CheckboxDropdown` component
