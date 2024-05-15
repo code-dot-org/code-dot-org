@@ -26,13 +26,13 @@ function SectionProgressSelector({
   progressTableV2ClosedBeta,
   sectionId,
 }) {
-  const [toggleUsed, setToggleUsed] = React.useState(false);
+  const [hasJustSwitchedToV2, setHasJustSwitchedToV2] = React.useState(false);
 
   const onShowProgressTableV2Change = useCallback(() => {
     const shouldShowV2 = !showProgressTableV2;
     new UserPreferences().setShowProgressTableV2(shouldShowV2);
     setShowProgressTableV2(shouldShowV2);
-    setToggleUsed(true);
+    setHasJustSwitchedToV2(true);
 
     if (shouldShowV2) {
       analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_VIEW_NEW_PROGRESS, {
@@ -100,7 +100,9 @@ function SectionProgressSelector({
 
   return (
     <div className={styles.pageContent}>
-      {displayV2 && <ProgressBanners toggleUsed={toggleUsed} />}
+      {displayV2 && (
+        <ProgressBanners hasJustSwitchedToV2={hasJustSwitchedToV2} />
+      )}
       {toggleV1OrV2Link()}
 
       {displayV2 ? (
@@ -109,7 +111,7 @@ function SectionProgressSelector({
         <>
           <InviteToV2ProgressModal
             sectionId={sectionId}
-            onShowProgressTableV2Change={debouncedOnShowProgressTableV2Change}
+            setHasJustSwitchedToV2={setHasJustSwitchedToV2}
           />
           <SectionProgress allowUserToSelectV2View={true} />
         </>
