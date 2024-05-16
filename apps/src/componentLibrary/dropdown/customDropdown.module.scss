@@ -273,6 +273,10 @@
     color: $light_white;
     border-color: $light_white;
     background-color: $light_black;
+
+    span {
+      color: $light_white;
+    }
   }
 
   &:has(.dropdownButton:hover) {

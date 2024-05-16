@@ -3,7 +3,9 @@
 All notable changes to this project will be documented in this file.
 
 ## [0.6.0](https://github.com/code-dot-org/code-dot-org/pull/58637)
+
 * added `gray` color `SimpleDropdown`
+* fixed `thin` `white` dropdown text color
 
 ## [0.5.2](https://github.com/code-dot-org/code-dot-org/pull/58469)
 

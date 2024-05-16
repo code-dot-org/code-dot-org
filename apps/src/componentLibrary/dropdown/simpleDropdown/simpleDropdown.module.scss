@@ -148,7 +148,7 @@
     color: $light_white;
   }
 
-  select {
+  &.dropdownContainer.dropdownContainer-thin select, select {
     color: $light_white;
     border-color: $light_white;
     background-color: $light_black;
@@ -239,6 +239,7 @@
   &.dropdownContainer-thin {
     select {
       @include body-two;
+      color: inherit;
       margin-bottom: 0;
     }
   }
