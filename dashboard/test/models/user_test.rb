@@ -24,7 +24,7 @@ class UserTest < ActiveSupport::TestCase
     end
 
     test 'returns teacher school US state code when state is name' do
-      teacher = create(:teacher, school_info: create(:school_info, state: 'district of Columbia'))
+      teacher = create(:teacher, school_info: create(:school_info, state: 'washington dc'))
       assert_equal 'DC', teacher.us_state_code
     end
   end

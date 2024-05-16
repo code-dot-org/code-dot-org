@@ -70,6 +70,7 @@
 #
 
 require 'digest/md5'
+require 'state_abbr'
 require 'cdo/aws/metrics'
 require 'cdo/shared_constants'
 require_relative '../../legacy/middleware/helpers/user_helpers'
@@ -2742,13 +2743,11 @@ class User < ApplicationRecord
     state = student? ? us_state : school_info&.state
     return if state.blank?
 
-    # {CO: 'Colorado', DC: 'District Of Columbia', ...}
-    state_code_to_name_map = CS.states(:US)
     # Returns `state` if it is a US state code
-    return state.upcase if state_code_to_name_map.key?(state.upcase.to_sym)
+    return state.upcase if us_state_abbr?(state, include_dc: true)
 
     # Returns the code of `state` if it is a US state name
-    state_code_to_name_map.transform_values(&:downcase).key(state.downcase)&.to_s
+    get_us_state_abbr_from_name(state, include_dc: true)
   end
 
   private def account_age_in_years
