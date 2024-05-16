@@ -1,4 +1,4 @@
-import {useMemo, useEffect} from 'react';
+import {useMemo, useEffect, useCallback} from 'react';
 
 import header from '@cdo/apps/code-studio/header';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
@@ -21,6 +21,9 @@ export const useSource = (defaultSources: ProjectSources) => {
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const initialSources = useInitialSources(defaultSources);
+  const levelStartSource = useAppSelector(
+    state => state.lab.levelProperties?.source
+  );
 
   const setSource = useMemo(
     () => (newSource: MultiFileSource) => {
@@ -28,6 +31,10 @@ export const useSource = (defaultSources: ProjectSources) => {
     },
     [dispatch]
   );
+
+  const resetToStartSource = useCallback(() => {
+    setSource(levelStartSource || (defaultSources.source as MultiFileSource));
+  }, [defaultSources.source, levelStartSource, setSource]);
 
   useEffect(() => {
     if (isStartMode) {
@@ -44,5 +51,5 @@ export const useSource = (defaultSources: ProjectSources) => {
     }
   }, [channelId, initialSources, dispatch]);
 
-  return {source, setSource};
+  return {source, setSource, resetToStartSource};
 };

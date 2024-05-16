@@ -1,11 +1,15 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+
 import fontConstants from '@cdo/apps/fontConstants';
-import loadable from '../util/loadable';
-const VirtualizedSelect = loadable(() => import('./VirtualizedSelect'));
 import i18n from '@cdo/locale';
-import {styles} from './census2017/censusFormStyles';
+
 import {COUNTRIES} from '../geographyConstants';
+import loadable from '../util/loadable';
+
+const VirtualizedSelect = loadable(() => import('./VirtualizedSelect'));
+
+import {styles} from './census2017/censusFormStyles';
 
 const singleLineLayoutStyles = {
   display: 'table-cell',

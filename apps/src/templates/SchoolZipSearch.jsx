@@ -1,17 +1,19 @@
-import React, {useState, useEffect} from 'react';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
+import React, {useState, useEffect} from 'react';
+
+import {Button} from '@cdo/apps/componentLibrary/button';
+import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {
   BodyTwoText,
   BodyThreeText,
 } from '@cdo/apps/componentLibrary/typography';
-import style from './school-association.module.scss';
-import classNames from 'classnames';
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
-import SchoolNameInput from '@cdo/apps/templates/SchoolNameInput';
-import {Button} from '@cdo/apps/componentLibrary/button';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import SchoolNameInput from '@cdo/apps/templates/SchoolNameInput';
+import i18n from '@cdo/locale';
+
+import style from './school-association.module.scss';
 
 export const SELECT_A_SCHOOL = 'selectASchool';
 export const CLICK_TO_ADD = 'clickToAdd';

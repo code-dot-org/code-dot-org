@@ -5297,4 +5297,24 @@ class UserTest < ActiveSupport::TestCase
     pl_units_started = user.pl_units_started
     assert_equal 100, pl_units_started[0][:percent_completed]
   end
+
+  test "username characters are only validated when changed" do
+    student = create :student
+    # White spaces are not allowed in usernames
+    student.username = "big husky"
+    student.save!(validate: false)
+
+    # We only want to validate the username if it changes.
+    # An invalid username should not block other attributes of the user from
+    # changing.
+    # This is a temporary behavior while we investigate why users have invalid
+    # usernames.
+    student.update!(name: "#{student.name} Jr.")
+
+    # The username has changed to a new invalid value, so we expected validation
+    # to fail.
+    assert_raises(ActiveRecord::RecordInvalid) do
+      student.update!(username: "very big husky")
+    end
+  end
 end

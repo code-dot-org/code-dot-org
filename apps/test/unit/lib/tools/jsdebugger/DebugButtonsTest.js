@@ -1,7 +1,7 @@
 import React from 'react';
 import sinon from 'sinon';
 import {Provider} from 'react-redux';
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import {expect} from '../../../../util/reconfiguredChai';
 import DebugButtons from '@cdo/apps/lib/tools/jsdebugger/DebugButtons';
 import {reducers, actions} from '@cdo/apps/lib/tools/jsdebugger/redux';
