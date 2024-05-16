@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "k5-ai-data",
-    "serialized_at": "2024-05-15 19:52:30 UTC",
+    "serialized_at": "2024-05-15 23:01:42 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -372,19 +372,8 @@
       }
     },
     {
-      "key": "2cec70e1-a4b0-4977-8311-dc347af75846",
-      "position": 3,
-      "properties": {
-        "progression_name": "Sorting Items (Mult Choice 2)"
-      },
-      "seeding_key": {
-        "activity_section.key": "2cec70e1-a4b0-4977-8311-dc347af75846",
-        "lesson_activity.key": "e2af077a-f2e2-4334-a4c1-4890ae8bbd98"
-      }
-    },
-    {
       "key": "fa555caa-f9e2-400c-b7ab-7e812effc6d0",
-      "position": 4,
+      "position": 3,
       "properties": {
         "progression_name": "Sorting Items (Mult Choice 3)"
       },
@@ -395,7 +384,7 @@
     },
     {
       "key": "3f5d047f-5c9b-4f54-a4a3-1e589f9fd6f8",
-      "position": 5,
+      "position": 4,
       "properties": {
         "progression_name": "Sorting Items (Cont.)"
       },
@@ -406,12 +395,23 @@
     },
     {
       "key": "6ac2a93e-5546-46f2-b8e6-9e068db84758",
-      "position": 6,
+      "position": 5,
       "properties": {
         "progression_name": "Sorting Items (Remove??)"
       },
       "seeding_key": {
         "activity_section.key": "6ac2a93e-5546-46f2-b8e6-9e068db84758",
+        "lesson_activity.key": "e2af077a-f2e2-4334-a4c1-4890ae8bbd98"
+      }
+    },
+    {
+      "key": "4d4a5dd9-6bae-44b3-8137-b6a76d67fbe3",
+      "position": 6,
+      "properties": {
+        "progression_name": "Markdown"
+      },
+      "seeding_key": {
+        "activity_section.key": "4d4a5dd9-6bae-44b3-8137-b6a76d67fbe3",
         "lesson_activity.key": "e2af077a-f2e2-4334-a4c1-4890ae8bbd98"
       }
     },
@@ -731,28 +731,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Sorting Items (Mult Choice 2)"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "sorting_items_prediction_3"
-        ],
-        "lesson.key": "Sorting Data",
-        "lesson_group.key": "",
-        "script.name": "k5-ai-data-2024",
-        "activity_section.key": "2cec70e1-a4b0-4977-8311-dc347af75846"
-      },
-      "level_keys": [
-        "sorting_items_prediction_3"
-      ]
-    },
-    {
-      "chapter": 4,
-      "position": 4,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
         "progression": "Sorting Items (Mult Choice 3)"
       },
       "bonus": false,
@@ -770,8 +748,8 @@
       ]
     },
     {
-      "chapter": 5,
-      "position": 5,
+      "chapter": 4,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -792,8 +770,8 @@
       ]
     },
     {
-      "chapter": 6,
-      "position": 6,
+      "chapter": 5,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -814,6 +792,28 @@
       },
       "level_keys": [
         "sorting_items_new"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Markdown"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "k5_ai_sorting_markdown_level"
+        ],
+        "lesson.key": "Sorting Data",
+        "lesson_group.key": "",
+        "script.name": "k5-ai-data-2024",
+        "activity_section.key": "4d4a5dd9-6bae-44b3-8137-b6a76d67fbe3"
+      },
+      "level_keys": [
+        "k5_ai_sorting_markdown_level"
       ]
     },
     {
@@ -1116,18 +1116,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "sorting_items_prediction_3",
-        "script_level.level_keys": [
-          "sorting_items_prediction_3"
-        ],
-        "lesson.key": "Sorting Data",
-        "lesson_group.key": "",
-        "script.name": "k5-ai-data-2024",
-        "activity_section.key": "2cec70e1-a4b0-4977-8311-dc347af75846"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "sorting_items_prediction_2",
         "script_level.level_keys": [
           "sorting_items_prediction_2"
@@ -1160,6 +1148,18 @@
         "lesson_group.key": "",
         "script.name": "k5-ai-data-2024",
         "activity_section.key": "6ac2a93e-5546-46f2-b8e6-9e068db84758"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "k5_ai_sorting_markdown_level",
+        "script_level.level_keys": [
+          "k5_ai_sorting_markdown_level"
+        ],
+        "lesson.key": "Sorting Data",
+        "lesson_group.key": "",
+        "script.name": "k5-ai-data-2024",
+        "activity_section.key": "4d4a5dd9-6bae-44b3-8137-b6a76d67fbe3"
       }
     },
     {
@@ -1323,12 +1323,12 @@
       }
     },
     {
-      "name": "Elementary AI Module Slides",
-      "url": "https://docs.google.com/presentation/d/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/template/preview",
+      "name": "How AI Makes Predictions",
+      "url": "https://docs.google.com/presentation/d/16adWPsJf9kGrCZv_cdaqT2-MUr1CiWX0U5E4lPzas-g/template/preview",
       "key": "elementary_ai_module_slides",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/export/pdf",
+        "download_url": "https://docs.google.com/presentation/d/16adWPsJf9kGrCZv_cdaqT2-MUr1CiWX0U5E4lPzas-g/export/pdf",
         "type": "Slides"
       },
       "seeding_key": {

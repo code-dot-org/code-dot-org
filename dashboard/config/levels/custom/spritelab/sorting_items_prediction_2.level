@@ -1,6 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "published": true,
   "game_id": 64,
   "created_at": "2024-05-15T16:51:05.000Z",
   "level_num": "custom",
@@ -44,9 +43,6 @@
     "long_instructions": "**Click Run. Then click and drag each item into a box.**\r\n\r\n<img src=\"\" width=30% style=\"padding-left: 100px\" >\r\n\r\n",
     "encrypted": "false",
     "auto_run_setup": "DRAW_LOOP",
-    "encrypted_examples": [
-
-    ],
     "name_suffix": "_2021",
     "hint_prompt_attempts_threshold": "1",
     "validation_enabled": "false",
@@ -63,8 +59,9 @@
     ],
     "preload_asset_list": null
   },
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-05-15T16:51:05.464+00:00\",\"changed\":[\"cloned from \\\"sorting_items_prediction\\\"\"],\"cloned_from\":\"sorting_items_prediction\"},{\"changed_at\":\"2024-05-15 16:51:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 16:51:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 16:54:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 16:55:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 17:00:15 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 17:08:13 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 17:08:33 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 17:08:41 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 17:08:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 17:09:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 17:09:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 17:10:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 17:10:27 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 17:10:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 17:11:42 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 17:12:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 18:56:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"free_play\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 19:16:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 19:17:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-15T16:51:05.464+00:00\",\"changed\":[\"cloned from \\\"sorting_items_prediction\\\"\"],\"cloned_from\":\"sorting_items_prediction\"},{\"changed_at\":\"2024-05-15 16:51:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 16:51:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 16:54:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 16:55:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 17:00:15 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 17:08:13 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 17:08:33 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 17:08:41 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 17:08:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 17:09:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 17:09:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 17:10:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 17:10:27 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 17:10:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 17:11:42 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 17:12:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 18:56:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"free_play\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 19:16:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 19:17:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 22:23:57 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -391,146 +388,6 @@
                                                             <field name="NUM">170</field>
                                                             </block>
                                                             </value>
-                                                            <next>
-                                                            <block type="gamelab_addBehaviorSimple">
-                                                            <value name="SPRITE">
-                                                            <block type="gamelab_allSpritesWithAnimation">
-                                                            <field name="ANIMATION">"circle_red"</field>
-                                                            </block>
-                                                            </value>
-                                                            <value name="BEHAVIOR">
-                                                            <block type="gamelab_playerBehaviors">
-                                                            <field name="BEHAVIOR">draggable()</field>
-                                                            </block>
-                                                            </value>
-                                                            <next>
-                                                            <block type="gamelab_addBehaviorSimple">
-                                                            <value name="SPRITE">
-                                                            <block type="gamelab_allSpritesWithAnimation">
-                                                            <field name="ANIMATION">"circle_red_blue_outline"</field>
-                                                            </block>
-                                                            </value>
-                                                            <value name="BEHAVIOR">
-                                                            <block type="gamelab_playerBehaviors">
-                                                            <field name="BEHAVIOR">draggable()</field>
-                                                            </block>
-                                                            </value>
-                                                            <next>
-                                                            <block type="gamelab_addBehaviorSimple">
-                                                            <value name="SPRITE">
-                                                            <block type="gamelab_allSpritesWithAnimation">
-                                                            <field name="ANIMATION">"circle_white_blue_outline"</field>
-                                                            </block>
-                                                            </value>
-                                                            <value name="BEHAVIOR">
-                                                            <block type="gamelab_playerBehaviors">
-                                                            <field name="BEHAVIOR">draggable()</field>
-                                                            </block>
-                                                            </value>
-                                                            <next>
-                                                            <block type="gamelab_addBehaviorSimple">
-                                                            <value name="SPRITE">
-                                                            <block type="gamelab_allSpritesWithAnimation">
-                                                            <field name="ANIMATION">"circle_white_red_outline"</field>
-                                                            </block>
-                                                            </value>
-                                                            <value name="BEHAVIOR">
-                                                            <block type="gamelab_playerBehaviors">
-                                                            <field name="BEHAVIOR">draggable()</field>
-                                                            </block>
-                                                            </value>
-                                                            <next>
-                                                            <block type="gamelab_addBehaviorSimple">
-                                                            <value name="SPRITE">
-                                                            <block type="gamelab_allSpritesWithAnimation">
-                                                            <field name="ANIMATION">"square_red"</field>
-                                                            </block>
-                                                            </value>
-                                                            <value name="BEHAVIOR">
-                                                            <block type="gamelab_playerBehaviors">
-                                                            <field name="BEHAVIOR">draggable()</field>
-                                                            </block>
-                                                            </value>
-                                                            <next>
-                                                            <block type="gamelab_addBehaviorSimple">
-                                                            <value name="SPRITE">
-                                                            <block type="gamelab_allSpritesWithAnimation">
-                                                            <field name="ANIMATION">"square_white"</field>
-                                                            </block>
-                                                            </value>
-                                                            <value name="BEHAVIOR">
-                                                            <block type="gamelab_playerBehaviors">
-                                                            <field name="BEHAVIOR">draggable()</field>
-                                                            </block>
-                                                            </value>
-                                                            <next>
-                                                            <block type="gamelab_addBehaviorSimple">
-                                                            <value name="SPRITE">
-                                                            <block type="gamelab_allSpritesWithAnimation">
-                                                            <field name="ANIMATION">"square_yellow"</field>
-                                                            </block>
-                                                            </value>
-                                                            <value name="BEHAVIOR">
-                                                            <block type="gamelab_playerBehaviors">
-                                                            <field name="BEHAVIOR">draggable()</field>
-                                                            </block>
-                                                            </value>
-                                                            <next>
-                                                            <block type="gamelab_addBehaviorSimple">
-                                                            <value name="SPRITE">
-                                                            <block type="gamelab_allSpritesWithAnimation">
-                                                            <field name="ANIMATION">"triangle_red_black_outline"</field>
-                                                            </block>
-                                                            </value>
-                                                            <value name="BEHAVIOR">
-                                                            <block type="gamelab_playerBehaviors">
-                                                            <field name="BEHAVIOR">draggable()</field>
-                                                            </block>
-                                                            </value>
-                                                            <next>
-                                                            <block type="gamelab_addBehaviorSimple">
-                                                            <value name="SPRITE">
-                                                            <block type="gamelab_allSpritesWithAnimation">
-                                                            <field name="ANIMATION">"triangle_yellow_blue_outline"</field>
-                                                            </block>
-                                                            </value>
-                                                            <value name="BEHAVIOR">
-                                                            <block type="gamelab_playerBehaviors">
-                                                            <field name="BEHAVIOR">draggable()</field>
-                                                            </block>
-                                                            </value>
-                                                            <next>
-                                                            <block type="gamelab_addBehaviorSimple">
-                                                            <value name="SPRITE">
-                                                            <block type="gamelab_allSpritesWithAnimation">
-                                                            <field name="ANIMATION">"triangle_yellow_red_outline"</field>
-                                                            </block>
-                                                            </value>
-                                                            <value name="BEHAVIOR">
-                                                            <block type="gamelab_playerBehaviors">
-                                                            <field name="BEHAVIOR">draggable()</field>
-                                                            </block>
-                                                            </value>
-                                                            </block>
-                                                            </next>
-                                                            </block>
-                                                            </next>
-                                                            </block>
-                                                            </next>
-                                                            </block>
-                                                            </next>
-                                                            </block>
-                                                            </next>
-                                                            </block>
-                                                            </next>
-                                                            </block>
-                                                            </next>
-                                                            </block>
-                                                            </next>
-                                                            </block>
-                                                            </next>
-                                                            </block>
-                                                            </next>
                                                             </block>
                                                             </next>
                                                             </block>
@@ -1075,6 +932,144 @@
                                                   </next>
                                                 </block>
                                               </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_addBehaviorSimple" x="90" y="1682">
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"circle_red"</field>
+            </block>
+          </value>
+          <value name="BEHAVIOR">
+            <block type="gamelab_playerBehaviors">
+              <field name="BEHAVIOR">draggable()</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_addBehaviorSimple">
+              <value name="SPRITE">
+                <block type="gamelab_allSpritesWithAnimation">
+                  <field name="ANIMATION">"circle_red_blue_outline"</field>
+                </block>
+              </value>
+              <value name="BEHAVIOR">
+                <block type="gamelab_playerBehaviors">
+                  <field name="BEHAVIOR">draggable()</field>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_addBehaviorSimple">
+                  <value name="SPRITE">
+                    <block type="gamelab_allSpritesWithAnimation">
+                      <field name="ANIMATION">"circle_white_blue_outline"</field>
+                    </block>
+                  </value>
+                  <value name="BEHAVIOR">
+                    <block type="gamelab_playerBehaviors">
+                      <field name="BEHAVIOR">draggable()</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="gamelab_addBehaviorSimple">
+                      <value name="SPRITE">
+                        <block type="gamelab_allSpritesWithAnimation">
+                          <field name="ANIMATION">"circle_white_red_outline"</field>
+                        </block>
+                      </value>
+                      <value name="BEHAVIOR">
+                        <block type="gamelab_playerBehaviors">
+                          <field name="BEHAVIOR">draggable()</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="gamelab_addBehaviorSimple">
+                          <value name="SPRITE">
+                            <block type="gamelab_allSpritesWithAnimation">
+                              <field name="ANIMATION">"square_red"</field>
+                            </block>
+                          </value>
+                          <value name="BEHAVIOR">
+                            <block type="gamelab_playerBehaviors">
+                              <field name="BEHAVIOR">draggable()</field>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="gamelab_addBehaviorSimple">
+                              <value name="SPRITE">
+                                <block type="gamelab_allSpritesWithAnimation">
+                                  <field name="ANIMATION">"square_white"</field>
+                                </block>
+                              </value>
+                              <value name="BEHAVIOR">
+                                <block type="gamelab_playerBehaviors">
+                                  <field name="BEHAVIOR">draggable()</field>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="gamelab_addBehaviorSimple">
+                                  <value name="SPRITE">
+                                    <block type="gamelab_allSpritesWithAnimation">
+                                      <field name="ANIMATION">"square_yellow"</field>
+                                    </block>
+                                  </value>
+                                  <value name="BEHAVIOR">
+                                    <block type="gamelab_playerBehaviors">
+                                      <field name="BEHAVIOR">draggable()</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="gamelab_addBehaviorSimple">
+                                      <value name="SPRITE">
+                                        <block type="gamelab_allSpritesWithAnimation">
+                                          <field name="ANIMATION">"triangle_red_black_outline"</field>
+                                        </block>
+                                      </value>
+                                      <value name="BEHAVIOR">
+                                        <block type="gamelab_playerBehaviors">
+                                          <field name="BEHAVIOR">draggable()</field>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="gamelab_addBehaviorSimple">
+                                          <value name="SPRITE">
+                                            <block type="gamelab_allSpritesWithAnimation">
+                                              <field name="ANIMATION">"triangle_yellow_blue_outline"</field>
+                                            </block>
+                                          </value>
+                                          <value name="BEHAVIOR">
+                                            <block type="gamelab_playerBehaviors">
+                                              <field name="BEHAVIOR">draggable()</field>
+                                            </block>
+                                          </value>
+                                          <next>
+                                            <block type="gamelab_addBehaviorSimple">
+                                              <value name="SPRITE">
+                                                <block type="gamelab_allSpritesWithAnimation">
+                                                  <field name="ANIMATION">"triangle_yellow_red_outline"</field>
+                                                </block>
+                                              </value>
+                                              <value name="BEHAVIOR">
+                                                <block type="gamelab_playerBehaviors">
+                                                  <field name="BEHAVIOR">draggable()</field>
+                                                </block>
+                                              </value>
                                             </block>
                                           </next>
                                         </block>

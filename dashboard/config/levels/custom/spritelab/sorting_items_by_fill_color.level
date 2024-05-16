@@ -58,7 +58,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-05-15T19:51:26.049+00:00\",\"changed\":[\"cloned from \\\"sorting_items_prediction_2\\\"\"],\"cloned_from\":\"sorting_items_prediction_2\"},{\"changed_at\":\"2024-05-15 19:51:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 19:51:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 19:53:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-15T19:51:26.049+00:00\",\"changed\":[\"cloned from \\\"sorting_items_prediction_2\\\"\"],\"cloned_from\":\"sorting_items_prediction_2\"},{\"changed_at\":\"2024-05-15 19:51:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 19:51:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 19:53:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 22:20:33 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 22:22:04 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 22:36:17 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -421,42 +421,6 @@
                                                             <block type="gamelab_addBehaviorSimple">
                                                             <value name="SPRITE">
                                                             <block type="gamelab_allSpritesWithAnimation">
-                                                            <field name="ANIMATION">"circle_white_blue_outline"</field>
-                                                            </block>
-                                                            </value>
-                                                            <value name="BEHAVIOR">
-                                                            <block type="gamelab_playerBehaviors">
-                                                            <field name="BEHAVIOR">draggable()</field>
-                                                            </block>
-                                                            </value>
-                                                            <next>
-                                                            <block type="gamelab_addBehaviorSimple">
-                                                            <value name="SPRITE">
-                                                            <block type="gamelab_allSpritesWithAnimation">
-                                                            <field name="ANIMATION">"circle_white_red_outline"</field>
-                                                            </block>
-                                                            </value>
-                                                            <value name="BEHAVIOR">
-                                                            <block type="gamelab_playerBehaviors">
-                                                            <field name="BEHAVIOR">draggable()</field>
-                                                            </block>
-                                                            </value>
-                                                            <next>
-                                                            <block type="gamelab_addBehaviorSimple">
-                                                            <value name="SPRITE">
-                                                            <block type="gamelab_allSpritesWithAnimation">
-                                                            <field name="ANIMATION">"square_red"</field>
-                                                            </block>
-                                                            </value>
-                                                            <value name="BEHAVIOR">
-                                                            <block type="gamelab_playerBehaviors">
-                                                            <field name="BEHAVIOR">draggable()</field>
-                                                            </block>
-                                                            </value>
-                                                            <next>
-                                                            <block type="gamelab_addBehaviorSimple">
-                                                            <value name="SPRITE">
-                                                            <block type="gamelab_allSpritesWithAnimation">
                                                             <field name="ANIMATION">"square_white"</field>
                                                             </block>
                                                             </value>
@@ -493,18 +457,6 @@
                                                             <block type="gamelab_addBehaviorSimple">
                                                             <value name="SPRITE">
                                                             <block type="gamelab_allSpritesWithAnimation">
-                                                            <field name="ANIMATION">"triangle_yellow_blue_outline"</field>
-                                                            </block>
-                                                            </value>
-                                                            <value name="BEHAVIOR">
-                                                            <block type="gamelab_playerBehaviors">
-                                                            <field name="BEHAVIOR">draggable()</field>
-                                                            </block>
-                                                            </value>
-                                                            <next>
-                                                            <block type="gamelab_addBehaviorSimple">
-                                                            <value name="SPRITE">
-                                                            <block type="gamelab_allSpritesWithAnimation">
                                                             <field name="ANIMATION">"triangle_yellow_red_outline"</field>
                                                             </block>
                                                             </value>
@@ -513,14 +465,6 @@
                                                             <field name="BEHAVIOR">draggable()</field>
                                                             </block>
                                                             </value>
-                                                            </block>
-                                                            </next>
-                                                            </block>
-                                                            </next>
-                                                            </block>
-                                                            </next>
-                                                            </block>
-                                                            </next>
                                                             </block>
                                                             </next>
                                                             </block>
@@ -1097,6 +1041,616 @@
               </next>
             </block>
           </next>
+        </block>
+        <block type="gamelab_checkTouching" x="447" y="1643">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"square_white"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"card_white"</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_spriteSayTime">
+              <value name="SPRITE">
+                <block type="gamelab_allSpritesWithAnimation">
+                  <field name="ANIMATION">"emoji_19"</field>
+                </block>
+              </value>
+              <value name="TEXT1">
+                <block type="text">
+                  <field name="TEXT">Correct!</field>
+                </block>
+              </value>
+              <value name="NUM">
+                <block type="math_number">
+                  <field name="NUM">2</field>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_checkTouching" x="897" y="1629">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"circle_red"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"card_white_2"</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_spriteSayTime">
+              <value name="SPRITE">
+                <block type="gamelab_allSpritesWithAnimation">
+                  <field name="ANIMATION">"emoji_19"</field>
+                </block>
+              </value>
+              <value name="TEXT1">
+                <block type="text">
+                  <field name="TEXT">Correct!</field>
+                </block>
+              </value>
+              <value name="NUM">
+                <block type="math_number">
+                  <field name="NUM">2</field>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_checkTouching" x="1385" y="1623">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"triangle_yellow_red_outline"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"card_white_3"</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_spriteSayTime">
+              <value name="SPRITE">
+                <block type="gamelab_allSpritesWithAnimation">
+                  <field name="ANIMATION">"emoji_19"</field>
+                </block>
+              </value>
+              <value name="TEXT1">
+                <block type="text">
+                  <field name="TEXT">Correct!</field>
+                </block>
+              </value>
+              <value name="NUM">
+                <block type="math_number">
+                  <field name="NUM">2</field>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_checkTouching" x="448" y="1788">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"square_white"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"card_white_2"</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_spriteSayTime">
+              <value name="SPRITE">
+                <block type="gamelab_allSpritesWithAnimation">
+                  <field name="ANIMATION">"emoji_19"</field>
+                </block>
+              </value>
+              <value name="TEXT1">
+                <block type="text">
+                  <field name="TEXT">Not quite!</field>
+                </block>
+              </value>
+              <value name="NUM">
+                <block type="math_number">
+                  <field name="NUM">2</field>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_checkTouching" x="905" y="1782">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"triangle_red_black_outline"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"card_white_2"</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_spriteSayTime">
+              <value name="SPRITE">
+                <block type="gamelab_allSpritesWithAnimation">
+                  <field name="ANIMATION">"emoji_19"</field>
+                </block>
+              </value>
+              <value name="TEXT1">
+                <block type="text">
+                  <field name="TEXT">Correct!</field>
+                </block>
+              </value>
+              <value name="NUM">
+                <block type="math_number">
+                  <field name="NUM">2</field>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_checkTouching" x="1396" y="1775">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"square_yellow"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"card_white_3"</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_spriteSayTime">
+              <value name="SPRITE">
+                <block type="gamelab_allSpritesWithAnimation">
+                  <field name="ANIMATION">"emoji_19"</field>
+                </block>
+              </value>
+              <value name="TEXT1">
+                <block type="text">
+                  <field name="TEXT">Correct!</field>
+                </block>
+              </value>
+              <value name="NUM">
+                <block type="math_number">
+                  <field name="NUM">2</field>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_checkTouching" x="446" y="1957">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"square_white"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"card_white_3"</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_spriteSayTime">
+              <value name="SPRITE">
+                <block type="gamelab_allSpritesWithAnimation">
+                  <field name="ANIMATION">"emoji_19"</field>
+                </block>
+              </value>
+              <value name="TEXT1">
+                <block type="text">
+                  <field name="TEXT">Not quite!</field>
+                </block>
+              </value>
+              <value name="NUM">
+                <block type="math_number">
+                  <field name="NUM">2</field>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_checkTouching" x="915" y="1948">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"circle_red_blue_outline"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"card_white_2"</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_spriteSayTime">
+              <value name="SPRITE">
+                <block type="gamelab_allSpritesWithAnimation">
+                  <field name="ANIMATION">"emoji_19"</field>
+                </block>
+              </value>
+              <value name="TEXT1">
+                <block type="text">
+                  <field name="TEXT">Correct!</field>
+                </block>
+              </value>
+              <value name="NUM">
+                <block type="math_number">
+                  <field name="NUM">2</field>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_checkTouching" x="1389" y="1932">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"triangle_yellow_red_outline"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"card_white"</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_spriteSayTime">
+              <value name="SPRITE">
+                <block type="gamelab_allSpritesWithAnimation">
+                  <field name="ANIMATION">"emoji_19"</field>
+                </block>
+              </value>
+              <value name="TEXT1">
+                <block type="text">
+                  <field name="TEXT">Not quite!</field>
+                </block>
+              </value>
+              <value name="NUM">
+                <block type="math_number">
+                  <field name="NUM">2</field>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_checkTouching" x="903" y="2103">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"circle_red"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"card_white"</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_spriteSayTime">
+              <value name="SPRITE">
+                <block type="gamelab_allSpritesWithAnimation">
+                  <field name="ANIMATION">"emoji_19"</field>
+                </block>
+              </value>
+              <value name="TEXT1">
+                <block type="text">
+                  <field name="TEXT">Not quite!</field>
+                </block>
+              </value>
+              <value name="NUM">
+                <block type="math_number">
+                  <field name="NUM">2</field>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_checkTouching" x="1387" y="2085">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"triangle_yellow_red_outline"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"card_white_2"</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_spriteSayTime">
+              <value name="SPRITE">
+                <block type="gamelab_allSpritesWithAnimation">
+                  <field name="ANIMATION">"emoji_19"</field>
+                </block>
+              </value>
+              <value name="TEXT1">
+                <block type="text">
+                  <field name="TEXT">Not quite!</field>
+                </block>
+              </value>
+              <value name="NUM">
+                <block type="math_number">
+                  <field name="NUM">2</field>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_checkTouching" x="904" y="2256">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"circle_red"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"card_white_3"</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_spriteSayTime">
+              <value name="SPRITE">
+                <block type="gamelab_allSpritesWithAnimation">
+                  <field name="ANIMATION">"emoji_19"</field>
+                </block>
+              </value>
+              <value name="TEXT1">
+                <block type="text">
+                  <field name="TEXT">Not quite!</field>
+                </block>
+              </value>
+              <value name="NUM">
+                <block type="math_number">
+                  <field name="NUM">2</field>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_checkTouching" x="1412" y="2273">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"square_yellow"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"card_white"</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_spriteSayTime">
+              <value name="SPRITE">
+                <block type="gamelab_allSpritesWithAnimation">
+                  <field name="ANIMATION">"emoji_19"</field>
+                </block>
+              </value>
+              <value name="TEXT1">
+                <block type="text">
+                  <field name="TEXT">Not quite!</field>
+                </block>
+              </value>
+              <value name="NUM">
+                <block type="math_number">
+                  <field name="NUM">2</field>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_checkTouching" x="900" y="2424">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"triangle_red_black_outline"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"card_white"</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_spriteSayTime">
+              <value name="SPRITE">
+                <block type="gamelab_allSpritesWithAnimation">
+                  <field name="ANIMATION">"emoji_19"</field>
+                </block>
+              </value>
+              <value name="TEXT1">
+                <block type="text">
+                  <field name="TEXT">Not quite!</field>
+                </block>
+              </value>
+              <value name="NUM">
+                <block type="math_number">
+                  <field name="NUM">2</field>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_checkTouching" x="1412" y="2446">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"square_yellow"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"card_white_2"</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_spriteSayTime">
+              <value name="SPRITE">
+                <block type="gamelab_allSpritesWithAnimation">
+                  <field name="ANIMATION">"emoji_19"</field>
+                </block>
+              </value>
+              <value name="TEXT1">
+                <block type="text">
+                  <field name="TEXT">Not quite!</field>
+                </block>
+              </value>
+              <value name="NUM">
+                <block type="math_number">
+                  <field name="NUM">2</field>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_checkTouching" x="904" y="2586">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"triangle_red_black_outline"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"card_white_3"</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_spriteSayTime">
+              <value name="SPRITE">
+                <block type="gamelab_allSpritesWithAnimation">
+                  <field name="ANIMATION">"emoji_19"</field>
+                </block>
+              </value>
+              <value name="TEXT1">
+                <block type="text">
+                  <field name="TEXT">Not quite!</field>
+                </block>
+              </value>
+              <value name="NUM">
+                <block type="math_number">
+                  <field name="NUM">2</field>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_checkTouching" x="912" y="2756">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"circle_red_blue_outline"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"card_white"</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_spriteSayTime">
+              <value name="SPRITE">
+                <block type="gamelab_allSpritesWithAnimation">
+                  <field name="ANIMATION">"emoji_19"</field>
+                </block>
+              </value>
+              <value name="TEXT1">
+                <block type="text">
+                  <field name="TEXT">Not quite!</field>
+                </block>
+              </value>
+              <value name="NUM">
+                <block type="math_number">
+                  <field name="NUM">2</field>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_checkTouching" x="912" y="2913">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"circle_red_blue_outline"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"card_white_3"</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_spriteSayTime">
+              <value name="SPRITE">
+                <block type="gamelab_allSpritesWithAnimation">
+                  <field name="ANIMATION">"emoji_19"</field>
+                </block>
+              </value>
+              <value name="TEXT1">
+                <block type="text">
+                  <field name="TEXT">Not quite!</field>
+                </block>
+              </value>
+              <value name="NUM">
+                <block type="math_number">
+                  <field name="NUM">2</field>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_spriteSayTime" x="1906" y="3570">
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"emoji_19"</field>
+            </block>
+          </value>
+          <value name="TEXT1">
+            <block type="text">
+              <field name="TEXT">Correct!</field>
+            </block>
+          </value>
+          <value name="NUM">
+            <block type="math_number">
+              <field name="NUM">2</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_spriteSayTime" x="1856" y="5146">
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"emoji_19"</field>
+            </block>
+          </value>
+          <value name="TEXT1">
+            <block type="text">
+              <field name="TEXT">Not quite!</field>
+            </block>
+          </value>
+          <value name="NUM">
+            <block type="math_number">
+              <field name="NUM">2</field>
+            </block>
+          </value>
         </block>
         <block type="behavior_definition" deletable="false" x="0" y="0">
           <mutation behaviorId="wandering"/>

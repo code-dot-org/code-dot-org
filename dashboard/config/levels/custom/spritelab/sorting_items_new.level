@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2024-05-09T22:59:40.000Z",
   "level_num": "custom",
@@ -40,7 +41,7 @@
     "parent_level_id": 28361,
     "short_instructions": "New items ",
     "mini_rubric": "false",
-    "long_instructions": "**Click Run. Then click and drag each item into a box.**\r\n\r\n<img src=\"https://images.code.org/69fb051968f0ad564ea17fec85b4db3f-image-1709317832722.gif\" width=30% style=\"padding-left: 100px\" >\r\n\r\n",
+    "long_instructions": "**Now these items are sorted in a new way! Click Run. Then click and drag each item into a box.**\r\n\r\n<img src=\"\" width=30% style=\"padding-left: 100px\" >\r\n\r\n",
     "encrypted": "false",
     "auto_run_setup": "DRAW_LOOP",
     "encrypted_examples": "tGFXRCNeWDteZg5u4M4A1KCdvfpeYyQH41d7WkgAIFioUX0eyiXX4QwJs1oy\nqrOki4I9UPG8Dyzh1PRFgln4Gpco4MT+RjJ2crhcGYfzj6hKvZV9PgCIQO0M\nrNGbWavp8GvlC52njY848WC0vWZYjg==\n",
@@ -57,9 +58,8 @@
     "standalone_app_name": "spritelab",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-05-09T22:59:40.658+00:00\",\"changed\":[\"cloned from \\\"k5_ai_pilot_sorting_items\\\"\"],\"cloned_from\":\"k5_ai_pilot_sorting_items\"},{\"changed_at\":\"2024-05-09 23:00:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"encrypted_examples\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-05-09 23:01:36 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-05-09 23:02:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"callout_json\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-05-09 23:02:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-05-09 23:06:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-05-14 20:46:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 20:49:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 20:52:32 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 20:55:47 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:04:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:07:56 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:12:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:13:37 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:14:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:16:33 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:16:57 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:18:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:21:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-14 21:23:15 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-14 21:24:36 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-14 21:25:03 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-14 22:16:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:18:07 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:19:19 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:20:30 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:21:39 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:23:31 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:24:46 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:26:38 +0000\",\"changed\":[\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:26:51 +0000\",\"changed\":[\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:30:02 +0000\",\"changed\":[\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:31:19 +0000\",\"changed\":[\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:32:56 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:34:35 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:37:21 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:39:43 +0000\",\"changed\":[\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 16:41:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 16:41:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 16:44:35 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 16:45:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 19:16:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"free_play\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 19:21:55 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 19:24:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 19:25:36 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 19:27:04 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-09T22:59:40.658+00:00\",\"changed\":[\"cloned from \\\"k5_ai_pilot_sorting_items\\\"\"],\"cloned_from\":\"k5_ai_pilot_sorting_items\"},{\"changed_at\":\"2024-05-09 23:00:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"encrypted_examples\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-05-09 23:01:36 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-05-09 23:02:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"callout_json\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-05-09 23:02:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-05-09 23:06:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-05-14 20:46:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 20:49:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 20:52:32 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 20:55:47 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:04:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:07:56 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:12:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:13:37 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:14:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:16:33 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:16:57 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:18:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:21:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-14 21:23:15 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-14 21:24:36 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-14 21:25:03 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-14 22:16:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:18:07 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:19:19 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:20:30 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:21:39 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:23:31 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:24:46 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:26:38 +0000\",\"changed\":[\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:26:51 +0000\",\"changed\":[\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:30:02 +0000\",\"changed\":[\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:31:19 +0000\",\"changed\":[\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:32:56 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:34:35 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:37:21 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:39:43 +0000\",\"changed\":[\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 16:41:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 16:41:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 16:44:35 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 16:45:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 19:16:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"free_play\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 19:21:55 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 19:24:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 19:25:36 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 19:27:04 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 22:06:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 22:10:18 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 22:11:06 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 23:02:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -133,7 +133,7 @@
                     <block type="gamelab_isTouchingSprite">
                       <value name="SPRITE">
                         <block type="gamelab_allSpritesWithAnimation">
-                          <field name="ANIMATION">"circle_red_blue_outline"</field>
+                          <field name="ANIMATION">"triangle_red_black_outline"</field>
                         </block>
                       </value>
                       <value name="TARGET">
@@ -170,7 +170,7 @@
                         <block type="gamelab_isTouchingSprite">
                           <value name="SPRITE">
                             <block type="gamelab_allSpritesWithAnimation">
-                              <field name="ANIMATION">"circle_white_blue_outline"</field>
+                              <field name="ANIMATION">"square_red"</field>
                             </block>
                           </value>
                           <value name="TARGET">
@@ -207,7 +207,7 @@
                             <block type="gamelab_isTouchingSprite">
                               <value name="SPRITE">
                                 <block type="gamelab_allSpritesWithAnimation">
-                                  <field name="ANIMATION">"circle_white_red_outline"</field>
+                                  <field name="ANIMATION">"square_yellow"</field>
                                 </block>
                               </value>
                               <value name="TARGET">
@@ -244,7 +244,7 @@
                                 <block type="gamelab_isTouchingSprite">
                                   <value name="SPRITE">
                                     <block type="gamelab_allSpritesWithAnimation">
-                                      <field name="ANIMATION">"triangle_red_black_outline"</field>
+                                      <field name="ANIMATION">"triangle_yellow_blue_outline"</field>
                                     </block>
                                   </value>
                                   <value name="TARGET">
@@ -281,7 +281,7 @@
                                     <block type="gamelab_isTouchingSprite">
                                       <value name="SPRITE">
                                         <block type="gamelab_allSpritesWithAnimation">
-                                          <field name="ANIMATION">"triangle_yellow_blue_outline"</field>
+                                          <field name="ANIMATION">"circle_red_blue_outline"</field>
                                         </block>
                                       </value>
                                       <value name="TARGET">
@@ -318,7 +318,7 @@
                                         <block type="gamelab_isTouchingSprite">
                                           <value name="SPRITE">
                                             <block type="gamelab_allSpritesWithAnimation">
-                                              <field name="ANIMATION">"triangle_yellow_red_outline"</field>
+                                              <field name="ANIMATION">"circle_white_blue_outline"</field>
                                             </block>
                                           </value>
                                           <value name="TARGET">
@@ -355,7 +355,7 @@
                                             <block type="gamelab_isTouchingSprite">
                                               <value name="SPRITE">
                                                 <block type="gamelab_allSpritesWithAnimation">
-                                                  <field name="ANIMATION">"square_red"</field>
+                                                  <field name="ANIMATION">"triangle_yellow_red_outline"</field>
                                                 </block>
                                               </value>
                                               <value name="TARGET">
@@ -429,7 +429,7 @@
                                                     <block type="gamelab_isTouchingSprite">
                                                       <value name="SPRITE">
                                                         <block type="gamelab_allSpritesWithAnimation">
-                                                          <field name="ANIMATION">"square_yellow"</field>
+                                                          <field name="ANIMATION">"circle_white_red_outline"</field>
                                                         </block>
                                                       </value>
                                                       <value name="TARGET">
@@ -1176,7 +1176,7 @@
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"triangle_red_black_outline"</field>
+              <field name="ANIMATION">"circle_white_blue_outline"</field>
             </block>
           </value>
           <value name="SPRITE2">
@@ -1208,7 +1208,7 @@
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"square_red"</field>
+              <field name="ANIMATION">"triangle_yellow_red_outline"</field>
             </block>
           </value>
           <value name="SPRITE2">
@@ -1240,7 +1240,7 @@
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"circle_red_blue_outline"</field>
+              <field name="ANIMATION">"triangle_red_black_outline"</field>
             </block>
           </value>
           <value name="SPRITE2">
@@ -1336,7 +1336,7 @@
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"circle_white_blue_outline"</field>
+              <field name="ANIMATION">"square_red"</field>
             </block>
           </value>
           <value name="SPRITE2">
@@ -1368,7 +1368,7 @@
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"triangle_yellow_red_outline"</field>
+              <field name="ANIMATION">"circle_red_blue_outline"</field>
             </block>
           </value>
           <value name="SPRITE2">
@@ -1400,7 +1400,7 @@
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"square_yellow"</field>
+              <field name="ANIMATION">"circle_white_red_outline"</field>
             </block>
           </value>
           <value name="SPRITE2">
@@ -1432,7 +1432,7 @@
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"circle_white_red_outline"</field>
+              <field name="ANIMATION">"square_yellow"</field>
             </block>
           </value>
           <value name="SPRITE2">
@@ -1464,7 +1464,7 @@
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"square_red"</field>
+              <field name="ANIMATION">"triangle_yellow_red_outline"</field>
             </block>
           </value>
           <value name="SPRITE2">
@@ -1496,7 +1496,7 @@
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"triangle_red_black_outline"</field>
+              <field name="ANIMATION">"circle_white_blue_outline"</field>
             </block>
           </value>
           <value name="SPRITE2">
@@ -1560,7 +1560,7 @@
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"triangle_red_black_outline"</field>
+              <field name="ANIMATION">"circle_white_blue_outline"</field>
             </block>
           </value>
           <value name="SPRITE2">
@@ -1592,7 +1592,7 @@
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"square_red"</field>
+              <field name="ANIMATION">"triangle_yellow_red_outline"</field>
             </block>
           </value>
           <value name="SPRITE2">
@@ -1720,7 +1720,7 @@
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"circle_red_blue_outline"</field>
+              <field name="ANIMATION">"triangle_red_black_outline"</field>
             </block>
           </value>
           <value name="SPRITE2">
@@ -1816,7 +1816,7 @@
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"circle_red_blue_outline"</field>
+              <field name="ANIMATION">"triangle_red_black_outline"</field>
             </block>
           </value>
           <value name="SPRITE2">
@@ -1848,7 +1848,7 @@
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"triangle_yellow_red_outline"</field>
+              <field name="ANIMATION">"circle_red_blue_outline"</field>
             </block>
           </value>
           <value name="SPRITE2">
@@ -1880,7 +1880,7 @@
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"circle_white_blue_outline"</field>
+              <field name="ANIMATION">"square_red"</field>
             </block>
           </value>
           <value name="SPRITE2">
@@ -1912,7 +1912,7 @@
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"square_yellow"</field>
+              <field name="ANIMATION">"circle_white_red_outline"</field>
             </block>
           </value>
           <value name="SPRITE2">
@@ -1944,7 +1944,7 @@
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"circle_white_blue_outline"</field>
+              <field name="ANIMATION">"square_red"</field>
             </block>
           </value>
           <value name="SPRITE2">
@@ -1976,7 +1976,7 @@
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"triangle_yellow_red_outline"</field>
+              <field name="ANIMATION">"circle_red_blue_outline"</field>
             </block>
           </value>
           <value name="SPRITE2">
@@ -2008,7 +2008,7 @@
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"square_yellow"</field>
+              <field name="ANIMATION">"circle_white_red_outline"</field>
             </block>
           </value>
           <value name="SPRITE2">
@@ -2040,7 +2040,7 @@
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"circle_white_red_outline"</field>
+              <field name="ANIMATION">"square_yellow"</field>
             </block>
           </value>
           <value name="SPRITE2">
@@ -2072,7 +2072,7 @@
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"circle_white_red_outline"</field>
+              <field name="ANIMATION">"square_yellow"</field>
             </block>
           </value>
           <value name="SPRITE2">
