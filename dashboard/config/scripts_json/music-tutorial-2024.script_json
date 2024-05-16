@@ -11,7 +11,7 @@
     "new_name": null,
     "family_name": "music-tutorial-2024",
     "serialized_at": "2024-05-14 21:00:37 UTC",
-    "published_state": "beta",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
