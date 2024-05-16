@@ -66,6 +66,10 @@ export interface MusicState {
     id?: string;
     index: number;
   };
+  /** A unique identifier for the current set of code that is executing.  This is
+   * used to help give React unique key values when rendering the Timeline.
+   */
+  uniqueExecutionId: number;
 
   // State used by advanced controls (currently internal-only) with the ToneJS player
   loopEnabled: boolean;
@@ -101,6 +105,7 @@ const initialState: MusicState = {
     id: undefined,
     index: 0,
   },
+  uniqueExecutionId: 0,
   loopEnabled: false,
   loopStart: 1,
   loopEnd: 5,
@@ -235,6 +240,9 @@ const musicSlice = createSlice({
     clearCallout: state => {
       state.currentCallout.id = undefined;
     },
+    updateUniqueExecutionId: state => {
+      state.uniqueExecutionId++;
+    },
     setLoopEnabled: (state, action: PayloadAction<boolean>) => {
       state.loopEnabled = action.payload;
     },
@@ -327,6 +335,7 @@ export const {
   setUndoStatus,
   showCallout,
   clearCallout,
+  updateUniqueExecutionId,
   setLoopEnabled,
   setLoopStart,
   setLoopEnd,
