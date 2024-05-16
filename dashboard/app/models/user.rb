@@ -2737,20 +2737,6 @@ class User < ApplicationRecord
     id && Digest::UUID.uuid_v5(Dashboard::Application.config.secret_key_base, id.to_s)
   end
 
-  # @return [String, nil] the user's US state code in the ISO 3166-2:US standard
-  def us_state_code
-    state = student? ? us_state : school_info&.state
-    return if state.blank?
-
-    # {CO: 'Colorado', DC: 'District Of Columbia', ...}
-    state_code_to_name_map = CS.states(:US)
-    # Returns `state` if it is a US state code
-    return state.upcase if state_code_to_name_map.key?(state.upcase.to_sym)
-
-    # Returns the code of `state` if it is a US state name
-    state_code_to_name_map.transform_values(&:downcase).key(state.downcase)&.to_s
-  end
-
   private def account_age_in_years
     ((Time.now - created_at.to_time) / 1.year).round
   end

@@ -42,8 +42,6 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         has_seen_progress_table_v2_invitation: current_user.has_seen_progress_table_v2_invitation?,
         date_progress_table_invitation_last_delayed: current_user.date_progress_table_invitation_last_delayed,
         child_account_compliance_state: current_user.child_account_compliance_state,
-        country_code: helpers.country_code(current_user, request),
-        us_state_code: current_user.us_state_code,
       }
     else
       render json: {
