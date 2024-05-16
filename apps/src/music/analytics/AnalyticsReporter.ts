@@ -16,6 +16,7 @@ import {
 import {Block} from 'blockly';
 import {BlockTypes} from '../blockly/blockTypes';
 import {FIELD_SOUNDS_NAME} from '../blockly/constants';
+import DCDO from '@cdo/apps/dcdo';
 
 const API_KEY_ENDPOINT = '/musiclab/analytics_key';
 
@@ -169,6 +170,10 @@ export default class AnalyticsReporter {
   }
 
   onSoundsPlayed(id: string) {
+    const shouldReport = DCDO.get('music-lab-samples-report', true);
+    if (!shouldReport) {
+      return;
+    }
     if (!this.sessionInProgress) {
       this.log('No session in progress');
       return;
