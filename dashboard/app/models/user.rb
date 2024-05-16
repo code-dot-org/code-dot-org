@@ -2740,7 +2740,7 @@ class User < ApplicationRecord
 
   # @return [String, nil] the user's US state code in the ISO 3166-2:US standard
   def us_state_code
-    state = student? ? us_state : school_info&.state
+    state = student? ? us_state : school_info&.usa? && school_info&.state
     return if state.blank?
 
     # Returns `state` if it is a US state code

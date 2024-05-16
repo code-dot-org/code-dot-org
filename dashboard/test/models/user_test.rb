@@ -13,19 +13,29 @@ class UserTest < ActiveSupport::TestCase
       assert_equal 'CO', student.us_state_code
     end
 
-    test 'returns nil if student us_state is "??"' do
+    test 'returns nil if student us_state is unknown' do
       student = create(:student, :unknown_us_region)
       assert_nil student.us_state_code
     end
 
     test 'returns teacher school US state code' do
-      teacher = create(:teacher, school_info: create(:school_info, state: 'ny'))
+      teacher = create(:teacher, school_info: create(:school_info, country: 'US', state: 'ny'))
       assert_equal 'NY', teacher.us_state_code
     end
 
     test 'returns teacher school US state code when state is name' do
-      teacher = create(:teacher, school_info: create(:school_info, state: 'washington dc'))
+      teacher = create(:teacher, school_info: create(:school_info, country: 'USA', state: 'washington dc'))
       assert_equal 'DC', teacher.us_state_code
+    end
+
+    test 'returns nil if teacher school state is not set' do
+      teacher = create(:teacher, school_info: create(:school_info, :skip_validation, state: ''))
+      assert_nil teacher.us_state_code
+    end
+
+    test 'returns nil if teacher school is not in USA' do
+      teacher = create(:teacher, school_info: create(:school_info, :skip_validation, country: 'CA', state: 'AL')) # Alberta, Canada
+      assert_nil teacher.us_state_code
     end
   end
 
