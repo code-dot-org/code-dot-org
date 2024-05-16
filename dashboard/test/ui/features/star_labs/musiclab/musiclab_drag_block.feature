@@ -6,7 +6,6 @@ Feature: Music Lab block can be dragged
 
 Scenario Outline: Dragging play sound block
   Given I am on "<url>"
-  Then I wait until I am on "<url>"
   And I rotate to landscape
 
   # Wait until we see the first category.
@@ -45,4 +44,4 @@ Scenario Outline: Dragging play sound block
 Examples:
   | url                                                       | test_name               |
   | http://studio.code.org/s/allthethings/lessons/46/levels/4 | music lab script level  |
-  | http://studio.code.org/projectbeats                       | music lab incubator     |
+  | http://studio.code.org/projects/music/new                 | music lab incubator     |
