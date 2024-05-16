@@ -115,6 +115,7 @@ class Policies::ChildAccount
   # Child Account Policy.
   private_class_method def self.parent_permission_required?(user)
     return false unless user.student?
+    return false unless user.birthday
 
     policy = state_policy(user)
     return false unless policy

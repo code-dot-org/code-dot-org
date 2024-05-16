@@ -1,5 +1,5 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import {assert} from 'chai';
 import {Factory} from 'rosie';
 import {Workshop} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshop';

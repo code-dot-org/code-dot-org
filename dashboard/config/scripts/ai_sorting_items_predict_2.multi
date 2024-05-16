@@ -1,0 +1,9 @@
+name 'ai_sorting_items_predict_2'
+question 'Look closely at the items on the left. How are they sorted?'
+wrong 'By shape', feedback: 'These items could be sorted by shape or inside color. We need more data to know.'
+wrong 'By border color', feedback: 'Incorrect. Try again.'
+wrong 'By inside color', feedback: 'These items could be sorted by shape or inside color. We need more data to know.'
+right 'We need more data to know', feedback: 'Correct! These items could be sorted by shape or inside color. We need more data to know.'
+
+
+allow_multiple_attempts true
