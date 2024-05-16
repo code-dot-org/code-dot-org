@@ -39,6 +39,7 @@ gem 'sinatra', '2.2.3', require: 'sinatra/base'
 
 gem 'mysql2', '>= 0.4.1'
 
+gem 'city-state', '~> 1.1.0'
 gem 'dalli' # memcached
 gem 'dalli-elasticache' # ElastiCache Auto Discovery memcached nodes
 gem 'google_drive'
