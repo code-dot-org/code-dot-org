@@ -20,7 +20,7 @@ module RegistrationsControllerTests
       assert_equal 'US', student.country_code
 
       sign_in student
-      patch '/users/set_student_information', params: {user: {age: '20', us_state: 'AK', gender_student_input: 'They'}}
+      patch '/users/set_student_information', params: {user: {age: '20', us_state: 'AK', gender_student_input: 'They', country_code: 'CO'}}
       assert_response :success
 
       student.reload
