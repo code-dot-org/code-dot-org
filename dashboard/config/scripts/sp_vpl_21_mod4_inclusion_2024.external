@@ -5,18 +5,13 @@ description 'description here'
 markdown <<MARKDOWN
 # Inclusion
 
-<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
-
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">
-Inclusion is creating learning environments as well as using curricula and resources that are accessible, welcoming, and reflective of all students’ identities, backgrounds, differences, and perspectives.
- </p>
-</div>
+<div style="background-color: #C6E3E7; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;"><b>Inclusion</b> is creating learning environments as well as using curricula and resources that are accessible, welcoming, and reflective of all students’ identities, backgrounds, differences, and perspectives.</p></div>
 
 <img src="https://images.code.org/99f1b43cfbddb89ca53f2a12912f159e-image-1628540543391.jpg" alt="Five students posing together and smiling. The middle student is holding a laptop." width="300px" style="border-radius:10px; float:right; margin:25px;">
 
 ## What is my role as the teacher? 
 
-##### Your role as the teacher is to create a culture within your classroom where all students regardless of race, gender, language, ability, or socioeconomic background feel like they belong.  
+#### Your role as the teacher is to create a culture within your classroom where all students regardless of race, gender, language, ability, or socioeconomic background feel like they belong.  
 
 <div style="clear:both">
 
@@ -25,16 +20,16 @@ Inclusion is creating learning environments as well as using curricula and resou
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
-##### The CS Discoveries curriculum is intentionally designed to avoid privileging prior knowledge while honoring student voice and choice. This shows up in the curriculum in the following ways: 
+#### The CS Discoveries curriculum is intentionally designed to avoid privileging prior knowledge while honoring student voice and choice. This shows up in the curriculum in the following ways: 
+<br>
 
-
-* ##### The course begins with a unit focused on the problem solving process instead of jumping straight into programming. 
-* ##### Warm up prompts provide students the opportunity to bring in outside experiences.
-* ##### Lessons include scaffolding to support new to CS learners. 
-* ##### Programming lessons include choice levels that provide additional practice or challenge based on students' needs. 
-* ##### Videos include a diverse set of voices so students can see themselves represented in CS roles. 
-* ##### Projects incorporate student choice and opportunities for self-expression. 
-* ##### An emphasis is placed on students using resources to solve problems. 
+* #### The course begins with a unit focused on the problem solving process instead of jumping straight into programming. 
+* #### Warm up prompts provide students the opportunity to bring in outside experiences.
+* #### Lessons include scaffolding to support new to CS learners. 
+* #### Programming lessons include choice levels that provide additional practice or challenge based on students' needs. 
+* #### Videos include a diverse set of voices so students can see themselves represented in CS roles. 
+* #### Projects incorporate student choice and opportunities for self-expression. 
+* #### An emphasis is placed on students using resources to solve problems. 
 
 </p></div></details>
 
@@ -47,7 +42,7 @@ Inclusion is creating learning environments as well as using curricula and resou
 <details style="margin-bottom:2px;">
 <summary style="font-size: 1.3em; font-weight: bold; margin-bottom:5px;"><strong>Be a lead learner</strong></summary>
 
-Students will encounter bugs in their code and run into problems that are challenging to solve. Normalizing failure and promoting a growth mindset within your classroom will help students know how to respond to and overcome these challenges. 
+#### Students will encounter bugs in their code and run into problems that are challenging to solve. Normalizing failure and promoting a growth mindset within your classroom will help students know how to respond to and overcome these challenges. 
 
 </details>
 
@@ -56,7 +51,7 @@ Students will encounter bugs in their code and run into problems that are challe
 <details style="margin-bottom:2px;">
 <summary style="font-size: 1.3em; font-weight: bold; margin-bottom:5px;"><strong>Provide multiple opportunities for students to showcase their knowledge</strong></summary>
 
-Students will likely excel in different ways. Providing multiples ways for students to showcase their knowledge creates new opportunities for students to feel successful in CS. 
+#### Students will likely excel in different ways. Providing multiples ways for students to showcase their knowledge creates new opportunities for students to feel successful in CS. 
 
 </details>
 
@@ -65,7 +60,7 @@ Students will likely excel in different ways. Providing multiples ways for stude
 <details style="margin-bottom:2px;">
 <summary style="font-size: 1.3em; font-weight: bold; margin-bottom:5px;"><strong>Consider your classroom environment</strong></summary>
 
-What story does your classroom tell about who belongs in CS? Do all students see themselves represented in the images on your walls? Do the projects displayed on your walls feel approachable to new to CS students? Are there aspects of your classroom that promote a growth mindset? 
+#### What story does your classroom tell about who belongs in CS? Do all students see themselves represented in the images on your walls? Do the projects displayed on your walls feel approachable to new to CS students? Are there aspects of your classroom that promote a growth mindset? 
 
 </details>
 
@@ -74,7 +69,7 @@ What story does your classroom tell about who belongs in CS? Do all students see
 <details style="margin-bottom:2px;">
 <summary style="font-size: 1.3em; font-weight: bold; margin-bottom:5px;"><strong>Pay attention to student groupings</strong></summary>
 
-The curriculum includes many opportunities for students to collaborate and work together. Student groupings can have a big impact on whether or not a student feels like they belong in CS. Consider student personalities, prior knowledge, and needs when selecting groups of students to work together. 
+#### The curriculum includes many opportunities for students to collaborate and work together. Student groupings can have a big impact on whether or not a student feels like they belong in CS. Consider student personalities, prior knowledge, and needs when selecting groups of students to work together. 
 </details>
 
 <div style="clear:both"/>
@@ -82,14 +77,14 @@ The curriculum includes many opportunities for students to collaborate and work 
 <details style="margin-bottom:2px;">
 <summary style="font-size: 1.3em; font-weight: bold; margin-bottom:5px;"><strong>Incorporate multiple student voices into class discussions</strong></summary>
 
-When students are engaging in whole group discussions, look for ways to draw in participation from students who might be more hesitant to contribute. You may even choose to highlight examples of something you observed during a time when students were working independently or in groups. 
+#### When students are engaging in whole group discussions, look for ways to draw in participation from students who might be more hesitant to contribute. You may even choose to highlight examples of something you observed during a time when students were working independently or in groups. 
 
 </details>
 </p>
 </div></details>
 <div style="clear:both"/>
 
-## Additional resource
+## Additional Resource
 
-##### The Microsoft Guide to Inclusive CS Education is a great resource for learning more about access, diversity, and inclusion in CS education. <a href="https://csteachers.org/documents/en-us/2730df36-1cb1-422b-ba2f-afe033750b2e/1/" target="blank" rel="noopener noreferrer">Click here</a> to read the guide.
+#### The Microsoft Guide to Inclusive CS Education is a great resource for learning more about access, diversity, and inclusion in CS education. <a href="https://ncwit.org/resource/csedguide/" target="blank" rel="noopener noreferrer">Click here</a> to read the guide.
 MARKDOWN

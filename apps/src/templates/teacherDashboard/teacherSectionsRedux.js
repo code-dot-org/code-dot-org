@@ -31,6 +31,7 @@ const USER_EDITABLE_SECTION_PROPS = [
   'hidden',
   'restrictSection',
   'codeReviewExpiresAt',
+  'aiTutorEnabled',
 ];
 
 /** @const {number} ID for a new section that has not been saved */
@@ -114,6 +115,9 @@ const IMPORT_ROSTER_REQUEST = 'teacherSections/IMPORT_ROSTER_REQUEST';
 /** Reports request to import a roster has succeeded */
 const IMPORT_ROSTER_SUCCESS = 'teacherSections/IMPORT_ROSTER_SUCCESS';
 const IMPORT_LTI_ROSTER_SUCCESS = 'teacherSections/IMPORT_LTI_ROSTER_SUCCESS';
+/** Sets section aiTutorEnabled */
+const UPDATE_SECTION_AI_TUTOR_ENABLED =
+  'teacherSections/UPDATE_SECTION_AI_TUTOR_ENABLED';
 
 /** @const A few constants exposed for unit test setup */
 export const __testInterface__ = {
@@ -170,6 +174,14 @@ export const setSectionCodeReviewExpiresAt = (
     type: SET_SECTION_CODE_REVIEW_EXPIRES_AT,
     sectionId,
     codeReviewExpiresAt,
+  };
+};
+
+export const updateSectionAiTutorEnabled = (sectionId, aiTutorEnabled) => {
+  return {
+    type: UPDATE_SECTION_AI_TUTOR_ENABLED,
+    sectionId,
+    aiTutorEnabled,
   };
 };
 
@@ -690,6 +702,7 @@ function newSectionData(participantType) {
     unitId: null,
     hidden: false,
     restrictSection: false,
+    aiTutorEnabled: false,
   };
 }
 
@@ -1210,6 +1223,25 @@ export default function teacherSections(state = initialState, action) {
     };
   }
 
+  if (action.type === UPDATE_SECTION_AI_TUTOR_ENABLED) {
+    const {sectionId, aiTutorEnabled} = action;
+    const section = state.sections[sectionId];
+    if (!section) {
+      throw new Error('section does not exist');
+    }
+
+    return {
+      ...state,
+      sections: {
+        ...state.sections,
+        [sectionId]: {
+          ...state.sections[sectionId],
+          aiTutorEnabled: aiTutorEnabled,
+        },
+      },
+    };
+  }
+
   return state;
 }
 
@@ -1357,6 +1389,7 @@ export const sectionFromServerSection = serverSection => ({
   participantType: serverSection.participant_type,
   sectionInstructors: serverSection.section_instructors,
   syncEnabled: serverSection.sync_enabled,
+  aiTutorEnabled: serverSection.ai_tutor_enabled,
 });
 
 /**
@@ -1396,6 +1429,7 @@ export function serverSectionFromSection(section) {
     course_id: section.courseId,
     restrict_section: section.restrictSection,
     participant_type: section.participantType,
+    ai_tutor_enabled: section.aiTutorEnabled,
   };
 }
 

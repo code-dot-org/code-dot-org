@@ -36,9 +36,8 @@ export async function postAichatCompletionMessage(
     aichatContext,
     ...(sessionId ? {sessionId} : {}),
   };
-  let response;
   try {
-    response = await HttpClient.post(
+    const response = await HttpClient.post(
       CHAT_COMPLETION_URL,
       JSON.stringify(payload),
       true,
@@ -63,7 +62,11 @@ const formatMessagesForAichatCompletion = (
   chatMessages: ChatCompletionMessage[]
 ): AichatCompletionMessage[] => {
   return chatMessages.map(message => {
-    return {role: message.role, content: message.chatMessageText};
+    return {
+      role: message.role,
+      content: message.chatMessageText,
+      status: message.status,
+    };
   });
 };
 

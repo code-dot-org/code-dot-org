@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "coursec-maker",
-    "serialized_at": "2024-04-24 02:42:04 UTC",
+    "serialized_at": "2024-05-07 20:24:02 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -25,7 +25,7 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Beginner: Events"
+        "display_name": "Emotion Badge with micro:bit - Events"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-2",
@@ -37,7 +37,7 @@
       "user_facing": true,
       "position": 2,
       "properties": {
-        "display_name": "Intermediate: Sequencing and Loops"
+        "display_name": "Calming LEDs with micro:bit - Sequencing and Loops"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
@@ -49,7 +49,7 @@
       "user_facing": true,
       "position": 3,
       "properties": {
-        "display_name": "Stretch: Data and Variables"
+        "display_name": "Counter with micro:bit - Data and Variables"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-4",
@@ -100,7 +100,7 @@
     },
     {
       "key": "lesson-7",
-      "name": "Cristina - Meet your micro:bit",
+      "name": "Meet your micro:bit",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -119,7 +119,7 @@
     },
     {
       "key": "lesson-8",
-      "name": "Cristina - Emotion badge with micro:bit",
+      "name": "Emotion badge with micro:bit",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -183,8 +183,8 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "In today's skill-building lesson, the goal is to program the micro:bit to make a timed animation. This could be used to help regulate your breathing and relax. The key concepts are: sequencing and loops.",
-        "preparation": "Make sure students have completed the **<a href=\"https://studio.code.org/s/coursec-maker-2024/lessons/3\" target=\"_blank\">Meet your micro:bit exploration lesson.</a>** ",
+        "overview": "In today's skill-building lesson, the goal is to program the micro:bit to make a timed animation. This could be used to help regulate your breathing and relax. The key concepts are: **sequencing** and **loops**.",
+        "preparation": "- Make sure students have completed the **Meet your micro:bit** exploration lesson.\n\n- Make sure you know how to create **<a href=\"https://www.youtube.com/watch?v=QD8kpuSC0Vc\" target=\"_blank\">a new classroom section </a>** where students will code their micro:bit project.",
         "student_overview": "Today you will program a timed animation to help you regulate your breathing and relax. "
       },
       "seeding_key": {
@@ -241,7 +241,7 @@
       "relative_position": 10,
       "properties": {
         "overview": "In today's **skill-building** lesson, the goal is to make a clicker you can use to count anything around you - like wildlife, traffic, or trash - as part of a data study. The key concepts are: **data** and **variables**.",
-        "preparation": "Make sure students have completed the **<a href=\"https://studio.code.org/s/coursec-maker-2024/lessons/3\" target=\"_blank\">Meet your micro:bit exploration lesson.</a>** "
+        "preparation": "- Make sure students have completed the **Meet your micro:bit** exploration lesson.\n- Make sure you know how to create **<a href=\"https://www.youtube.com/watch?v=QD8kpuSC0Vc\" target=\"_blank\">a new classroom section </a>** where students will code their micro:bit project."
       },
       "seeding_key": {
         "lesson.key": "lesson-9",
@@ -1608,6 +1608,7 @@
       "key": "bfa71cc7-e457-41a5-885f-57f0d0d1acc3",
       "position": 2,
       "properties": {
+        "progression_name": "Calming LEDs with micro:bit"
       },
       "seeding_key": {
         "activity_section.key": "bfa71cc7-e457-41a5-885f-57f0d0d1acc3",
@@ -1988,7 +1989,6 @@
       "position": 1,
       "properties": {
         "description": "**Say**: Today's aim is to make a clicker to count anything around you - like wildlife, traffic, or trash - as part of a data study.\n\n[Option 1] **Do this**: Watch the **<a href=\"https://mbit.io/csf-c4-intro\" target=\"_blank\">introduction video.</a>**  \n\n[Option 2] **Do this:** Explore the **<a href=\"https://mbit.io/csf-c4-project\" target=\"_blank\">project</a>** uploaded onto micro:bits prior to the lesson. \n\n**Discuss** where these concepts are being used and where students may have used them before:\n- **Data**: a collection of information (e.g., different things you can count with the micro:bit)\n- **Variable**: a label for a piece of information used in a program (e.g., the \"count\" variable used to track what you're counting)\n\n**Do this:** Share the **<a href=\"https://mbit.io/csf-c4-project\" target=\"_blank\">project</a>** working in the simulator with your students and look at the code together prior to students coding the main activity.",
-        "duration": "10",
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -2001,7 +2001,6 @@
       "position": 1,
       "properties": {
         "description": "Students will make the project themselves using the MakeCode editor and micro:bit simulator. Once they have tested their code in the simulator, they will download their code onto the micro:bits.\n\nPick one:\n\n- Step by step coding **<a href=\"https://mbit.io/csf-c4-coding\" target=\"_blank\">video.</a>**  \n- Live micro:bit **<a href=\"https://mbit.io/csf-c4-classroom\" target=\"_blank\">classroom session.</a>**  ",
-        "duration": "30",
         "name": "Student Coding"
       },
       "seeding_key": {
@@ -2013,6 +2012,7 @@
       "key": "ba873947-617b-47d4-87d5-37a75c6a007b",
       "position": 2,
       "properties": {
+        "progression_name": "Counter with micro:bit"
       },
       "seeding_key": {
         "activity_section.key": "ba873947-617b-47d4-87d5-37a75c6a007b",
@@ -2024,7 +2024,6 @@
       "position": 1,
       "properties": {
         "description": "Share student work, revisit key concepts used, and explore ideas for extended learning.",
-        "duration": "5",
         "name": "Discussion"
       },
       "seeding_key": {
@@ -2778,7 +2777,8 @@
       "properties": {
         "level_keys": [
           "course_c_maker_calming_leds"
-        ]
+        ],
+        "progression": "Calming LEDs with micro:bit"
       },
       "bonus": false,
       "seeding_key": {
@@ -3102,7 +3102,8 @@
       "properties": {
         "level_keys": [
           "course_c_maker_counter"
-        ]
+        ],
+        "progression": "Counter with micro:bit"
       },
       "bonus": false,
       "seeding_key": {

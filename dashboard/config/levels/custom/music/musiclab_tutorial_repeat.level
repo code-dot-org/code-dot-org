@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2024-04-26T04:03:10.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "background": "music-black",
-    "long_instructions": "#### Repeat\r\n\r\nSave time by using a loop to play the same sounds over and over.\r\n\r\n1 Click [Control](#clickable=toolbox-first-row) to find the repeat block. \r\n\r\n2 Use the [repeat](#clickable=repeat-block) block to play the same sound [3](#clickable=repeat-block-field-workspace) times.",
+    "long_instructions": "#### Repeat\r\n\r\nSave time by using repeat to play the same sounds over and over.\r\n\r\n1. Click [Control](#clickable=toolbox-second-block) to find the repeat block. \r\n2. Use the [repeat](#clickable=repeat-block) block to play the same sound [3](#clickable=repeat-block-field-workspace) times.",
     "level_data": {
       "startSources": {
         "blocks": {
@@ -83,8 +84,7 @@
     ],
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-04-26T04:03:10.210+00:00\",\"changed\":[\"cloned from \\\"musiclab_intro_repeat_v2\\\"\"],\"cloned_from\":\"musiclab_intro_repeat_v2\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-04-26T04:03:10.210+00:00\",\"changed\":[\"cloned from \\\"musiclab_intro_repeat_v2\\\"\"],\"cloned_from\":\"musiclab_intro_repeat_v2\"},{\"changed_at\":\"2024-04-26 22:01:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-26 22:06:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-26 22:08:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-26 22:52:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-29 15:16:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-14 16:13:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-05-14 16:15:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

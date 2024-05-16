@@ -11,6 +11,12 @@ import {
 import {registerReducers} from '@cdo/apps/redux';
 import {RootState} from '@cdo/apps/types/redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {
+  AiInteractionStatus as Status,
+  AichatErrorType,
+} from '@cdo/generated-scripts/sharedConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 import {
   AI_CUSTOMIZATIONS_LABELS,
@@ -20,7 +26,7 @@ import {
 import {postAichatCompletionMessage} from '../aichatCompletionApi';
 import {
   AiCustomizations,
-  AichatInteractionStatus as Status,
+  AichatInteractionStatusValue,
   ChatCompletionMessage,
   AichatContext,
   LevelAichatSettings,
@@ -101,14 +107,13 @@ export const updateAiCustomization = createAsyncThunk(
   'aichat/updateAiCustomization',
   async (_, thunkAPI) => {
     const rootState = (await thunkAPI.getState()) as RootState;
-    const {currentAiCustomizations, savedAiCustomizations, chatMessages} =
-      rootState.aichat;
+    const {currentAiCustomizations, savedAiCustomizations} = rootState.aichat;
     const {dispatch} = thunkAPI;
 
     await saveAiCustomization(
       currentAiCustomizations,
       savedAiCustomizations,
-      chatMessages,
+      EVENTS.UPDATE_CHATBOT,
       dispatch
     );
   }
@@ -124,12 +129,11 @@ export const publishModel = createAsyncThunk(
     dispatch(setModelCardProperty({property: 'isPublished', value: true}));
 
     const rootState = thunkAPI.getState() as RootState;
-    const {currentAiCustomizations, savedAiCustomizations, chatMessages} =
-      rootState.aichat;
+    const {currentAiCustomizations, savedAiCustomizations} = rootState.aichat;
     await saveAiCustomization(
       currentAiCustomizations,
       savedAiCustomizations,
-      chatMessages,
+      EVENTS.PUBLISH_MODEL_CARD_INFO,
       dispatch
     );
     dispatch(setViewMode(ViewMode.PRESENTATION));
@@ -142,19 +146,20 @@ export const saveModelCard = createAsyncThunk(
   'aichat/saveModelCard',
   async (_, thunkAPI) => {
     const {dispatch} = thunkAPI;
-    const modelCardInfo = (thunkAPI.getState() as RootState).aichat
-      .currentAiCustomizations.modelCardInfo;
+    const rootState = (await thunkAPI.getState()) as RootState;
+    const modelCardInfo =
+      rootState.aichat.currentAiCustomizations.modelCardInfo;
     if (!hasFilledOutModelCard(modelCardInfo)) {
       dispatch(setModelCardProperty({property: 'isPublished', value: false}));
     }
 
-    const {currentAiCustomizations, savedAiCustomizations, chatMessages} = (
+    const {currentAiCustomizations, savedAiCustomizations} = (
       thunkAPI.getState() as RootState
     ).aichat;
     await saveAiCustomization(
       currentAiCustomizations,
       savedAiCustomizations,
-      chatMessages,
+      EVENTS.SAVE_MODEL_CARD_INFO,
       dispatch
     );
   }
@@ -173,7 +178,7 @@ const getNewMessageId = () => {
 const saveAiCustomization = async (
   currentAiCustomizations: AiCustomizations,
   savedAiCustomizations: AiCustomizations,
-  storedMessages: ChatCompletionMessage[],
+  eventDescription: string,
   dispatch: ThunkDispatch<unknown, unknown, AnyAction>
 ) => {
   // Remove any empty example topics on save
@@ -206,7 +211,6 @@ const saveAiCustomization = async (
     savedAiCustomizations,
     trimmedCurrentAiCustomizations
   );
-
   if (
     changedProperties.some(property =>
       [
@@ -231,6 +235,16 @@ const saveAiCustomization = async (
         timestamp: getCurrentTime(),
       })
     );
+    if (eventDescription) {
+      analyticsReporter.sendEvent(
+        eventDescription,
+        {
+          propertyUpdated: property,
+          levelPath: window.location.pathname,
+        },
+        PLATFORMS.BOTH
+      );
+    }
   });
 };
 
@@ -256,7 +270,7 @@ export const submitChatContents = createAsyncThunk(
     const newMessage: ChatCompletionMessage = {
       id: getNewMessageId(),
       role: Role.USER,
-      status: Status.OK,
+      status: Status.UNKNOWN,
       chatMessageText: newUserMessageText,
       timestamp: getCurrentTimestamp(),
       sessionId: currentSessionId,
@@ -264,7 +278,7 @@ export const submitChatContents = createAsyncThunk(
     thunkAPI.dispatch(addChatMessage(newMessage));
 
     // Post user content and messages to backend and retrieve assistant response.
-
+    const startTime = Date.now();
     const chatApiResponse = await postAichatCompletionMessage(
       newUserMessageText,
       currentSessionId
@@ -276,33 +290,75 @@ export const submitChatContents = createAsyncThunk(
       aichatContext,
       currentSessionId
     );
-    console.log('chatApiResponse', chatApiResponse);
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .reportLoadTime('AichatModelResponseTime', Date.now() - startTime, [
+        {
+          name: 'ModelId',
+          value: aiCustomizations.selectedModelId,
+        },
+      ]);
 
-    // TODO: error handling
-    thunkAPI.dispatch(setChatSessionId(chatApiResponse.sessionId));
-    thunkAPI.dispatch(
-      updateChatMessageSession({
-        id: newMessage.id,
-        sessionId: chatApiResponse.sessionId,
-      })
-    );
+    // Regardless of response type,
+    // assign last user message to session.
+    if (chatApiResponse.session_id) {
+      thunkAPI.dispatch(setChatSessionId(chatApiResponse.session_id));
+      thunkAPI.dispatch(
+        updateChatMessageSession({
+          id: newMessage.id,
+          sessionId: chatApiResponse.session_id,
+        })
+      );
+    }
 
+    // success state: received response from model ("assistant")
     if (chatApiResponse?.role === Role.ASSISTANT) {
       const assistantChatMessage: ChatCompletionMessage = {
         id: getNewMessageId(),
         role: Role.ASSISTANT,
         status: Status.OK,
         chatMessageText: chatApiResponse.content,
-        // The accuracy of this timestamp is debatable since it's not when our backend
-        // issued the message, but it's good enough for user testing.
         timestamp: getCurrentTimestamp(),
-        sessionId: chatApiResponse.sessionId,
+        sessionId: chatApiResponse.session_id,
       };
       thunkAPI.dispatch(addChatMessage(assistantChatMessage));
-    } else {
-      // TODO: Update most recent user message's status if PII or profanity violation.
-      // latest message's id is stored at `newMessageId`.
-      console.log('Did not receive assistant response.');
+
+      thunkAPI.dispatch(
+        updateUserChatMessageStatus({
+          id: newMessage.id,
+          status: Status.OK,
+        })
+      );
+
+      // error state #1: model generated profanity
+    } else if (chatApiResponse?.status === AichatErrorType.PROFANITY_MODEL) {
+      const assistantChatMessage: ChatCompletionMessage = {
+        id: getNewMessageId(),
+        role: Role.ASSISTANT,
+        status: Status.ERROR,
+        chatMessageText: 'error',
+        timestamp: getCurrentTimestamp(),
+      };
+      thunkAPI.dispatch(addChatMessage(assistantChatMessage));
+
+      thunkAPI.dispatch(
+        updateUserChatMessageStatus({
+          id: newMessage.id,
+          status: Status.ERROR,
+        })
+      );
+
+      // error state #2: user message contained profanity
+    } else if (chatApiResponse?.status === AichatErrorType.PROFANITY_USER) {
+      // Logging to allow visibility into flagged content.
+      console.log(chatApiResponse);
+
+      thunkAPI.dispatch(
+        updateUserChatMessageStatus({
+          id: newMessage.id,
+          status: Status.PROFANITY_VIOLATION,
+        })
+      );
     }
   }
 );
@@ -351,13 +407,13 @@ const aichatSlice = createSlice({
     setShowWarningModal: (state, action: PayloadAction<boolean>) => {
       state.showWarningModal = action.payload;
     },
-    updateChatMessageStatus: (
+    updateUserChatMessageStatus: (
       state,
-      action: PayloadAction<{id: number; status: Status}>
+      action: PayloadAction<{id: number; status: AichatInteractionStatusValue}>
     ) => {
       const {id, status} = action.payload;
       const chatMessage = state.chatMessages.find(msg => msg.id === id);
-      if (chatMessage) {
+      if (chatMessage && chatMessage.role === Role.USER) {
         chatMessage.status = status;
       }
     },
@@ -503,7 +559,7 @@ export const {
   clearChatMessages,
   setIsWaitingForChatResponse,
   setShowWarningModal,
-  updateChatMessageStatus,
+  updateUserChatMessageStatus,
   updateChatMessageSession,
   setViewMode,
   setStartingAiCustomizations,

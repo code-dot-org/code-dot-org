@@ -1,0 +1,186 @@
+@import "color.scss";
+
+.soundsPanel {
+  user-select: none;
+  width: 600px;
+  height: 340px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &Top {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+    user-select: none;
+
+    .segmentedButtons {
+      span {
+        font-size: 12px !important;
+      }
+    }
+  }
+
+  &Body {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    flex: 1;
+    gap: 5px;
+
+    .leftColumn {
+      background-color: $neutral_dark;
+      width: calc(40%);
+      overflow-y: scroll;
+    }
+
+    .rightColumn {
+      background-color: $neutral_dark;
+      width: calc(100% * 2 / 3);
+      overflow-y: scroll;
+      display: grid;
+      grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
+      position: relative;
+
+      &FullWidth {
+        width: 100%;
+        grid-template-columns: 20% 20% 20% 20% 20%
+      }
+    }
+  }
+
+  .folderRow {
+    padding: 6px 0;
+    margin: 1px 1px 6px 1px;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+
+    &:hover {
+      background-color: $neutral_dark90;
+    }
+
+    &Selected, &Selected:hover {
+      background-color: $neutral_dark70;
+    }
+
+    &:focus-visible {
+      outline: $neutral_light solid 1px;
+    }
+
+    &:first-child {
+      margin-top: 1px;
+    }
+    &:not(:first-child) {
+      margin-top: 14px;
+    }
+
+    &Left {
+      width: 55px;
+      height: 55px;
+      margin: 0 6px 0 4px;
+    }
+
+    &Middle {
+      flex: 1;
+
+      &Name {
+        font-size: 16px;
+      }
+
+      &SubTitle {
+        font-size: 11px;
+        line-height: 1.2em;
+      }
+    }
+
+    &Right {
+      margin-right: 8px;
+    }
+  }
+
+  .soundEntry {
+    overflow: hidden;
+    height: 110px;
+    font-size: 14px;
+    margin: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    flex-direction: column;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: $neutral_dark90;
+    }
+
+    &Selected, &Selected:hover {
+      background-color: $neutral_dark70;
+    }
+
+    &:focus-visible {
+      outline: $neutral_light solid 1px;
+    }
+
+    &Main {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+
+      .iconContainer {
+        width: 70%;
+        border-width: 2px;
+        border-radius: 5px;
+        border-style: solid;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-top: 8px;
+        transform: scale(1, 1);
+        transition: 0.1s ease-in-out;
+
+        &:hover, &Selected {
+          transform: scale(1.05, 1.05);
+          transition: 0.1s ease-in-out;
+        }
+      }
+
+      .typeIcon {
+        font-size: 30px;
+      }
+
+      .name {
+        width: 90%;
+        font-size: 13px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-top: 5px;
+        text-align: center;
+
+        &Vocal {
+          font-style: italic;
+        }
+      }
+    }
+  }
+
+  .previewContainer {
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  .preview {
+    color: $neutral_dark40;
+
+    &Playing {
+      color: $neutral_dark50;
+      cursor: default;
+    }
+  }
+}

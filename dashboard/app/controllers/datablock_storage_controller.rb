@@ -26,7 +26,6 @@
 class DatablockStorageController < ApplicationController
   before_action :validate_channel_id
   before_action :authenticate_user!
-  skip_before_action :verify_authenticity_token
 
   StudentFacingError = DatablockStorageTable::StudentFacingError
 
@@ -62,7 +61,6 @@ class DatablockStorageController < ApplicationController
   ##########################################################
 
   def set_key_value
-    raise StudentFacingError, "The value is too large. The maximum allowable size is #{DatablockStorageKvp::MAX_VALUE_LENGTH} bytes" if params[:value].length > DatablockStorageKvp::MAX_VALUE_LENGTH
     value = JSON.parse params[:value]
     DatablockStorageKvp.set_kvp @project_id, params[:key], value
     render json: {key: params[:key], value: value}
@@ -117,9 +115,6 @@ class DatablockStorageController < ApplicationController
 
   def import_csv
     table = table_or_create
-
-    # import_csv should overwrite existing data:
-    table.records.delete_all
 
     table.import_csv params[:table_data_csv]
     table.save!
@@ -223,12 +218,13 @@ class DatablockStorageController < ApplicationController
   ##########################################################
 
   def create_record
-    raise StudentFacingError, "The record is too large. The maximum allowable size is #{DatablockStorageRecord::MAX_RECORD_LENGTH} bytes" if params[:record_json].length > DatablockStorageRecord::MAX_RECORD_LENGTH
     record_json = JSON.parse params[:record_json]
     raise "record must be a hash" unless record_json.is_a? Hash
 
     table = table_or_create
-    table.create_records [record_json]
+    Retryable.retryable(tries: 1, on: [ActiveRecord::RecordNotUnique]) do
+      table.create_records [record_json]
+    end
     table.save!
 
     render json: record_json
@@ -237,12 +233,10 @@ class DatablockStorageController < ApplicationController
   def read_records
     table = find_table_or_shared_table
 
-    render json: table.read_records.map(&:record_json)
+    render json: table.read_records
   end
 
   def update_record
-    raise StudentFacingError, "The record is too large. The maximum allowable size is #{DatablockStorageRecord::MAX_RECORD_LENGTH} bytes" if params[:record_json].length > DatablockStorageRecord::MAX_RECORD_LENGTH
-
     table = find_table
     record_json = table.update_record params[:record_id], JSON.parse(params[:record_json])
     table.save!
@@ -330,7 +324,11 @@ class DatablockStorageController < ApplicationController
   end
 
   private def where_table
-    DatablockStorageTable.where(project_id: @project_id, table_name: params[:table_name])
+    if params[:table_name]
+      DatablockStorageTable.where(project_id: @project_id, table_name: params[:table_name])
+    else
+      raise StudentFacingError, "You must specify a table"
+    end
   end
 
   private def table_or_create

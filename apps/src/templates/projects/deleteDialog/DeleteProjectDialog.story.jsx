@@ -1,8 +1,10 @@
-import React from 'react';
-import {UnconnectedDeleteProjectDialog as DeleteProjectDialog} from './DeleteProjectDialog';
 import {action} from '@storybook/addon-actions';
-import {reduxStore} from '../../../../.storybook/decorators';
+import React from 'react';
 import {Provider} from 'react-redux';
+
+import {reduxStore} from '../../../../.storybook/decorators';
+
+import {UnconnectedDeleteProjectDialog as DeleteProjectDialog} from './DeleteProjectDialog';
 
 export default {
   component: DeleteProjectDialog,

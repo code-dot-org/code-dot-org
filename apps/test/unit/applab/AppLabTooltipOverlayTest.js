@@ -1,7 +1,7 @@
 import {expect} from '../../util/reconfiguredChai';
 import sinon from 'sinon';
 import React from 'react';
-import {mount, shallow} from 'enzyme';
+import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import {AppLabTooltipOverlay} from '@cdo/apps/applab/AppLabTooltipOverlay';
 // ES5-style require necessary to stub gridUtils.draggedElementDropPoint
 var gridUtils = require('@cdo/apps/applab/gridUtils');

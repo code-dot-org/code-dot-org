@@ -18,20 +18,24 @@
 |Ecuador, Mexico|Progracademy|Angelica Rodriguez|angelica.rodriguez@progracademy.org<br>www.progracademy.org|
 |Georgia|Educare Georgia|George Jibladze <br> Razmik Badalyan|gjibladze@educaregeorgia.com <br> rbadalyan@educaregeorgia.com<br>http://www.educaregeorgia.org|
 |Ghana|Ghana Code Club|Ernestina Edem Appiah|tinasupport@gmail.com<br>http://www.ghanacodeclub.org|
+|Hong Kong|Hong Kong Programming Society|Peter Cheung|peter@hkprog.org<br>https://www.hkprog.org/|
 |India|Asha for Education, Chennai Chapter|Rajaraman Krishnan|chennai@ashanet.org<br>https://chennai.ashanet.org/|
 |India|Aveti Learning|Sibabrata Choudhury|siba@shikhya.org<br>https://avetilearning.com/|
+|India|Code to Enhance Learning|Irfan Lalani|irf.lalani@gmail.com|<br>https://codetoenhancelearning.org/|
 |India|CodeTigers|Sandeep Sheokand|sandeep@codetigers.com<br>https://www.codetigers.com|
 |India|Developer Circle Indore|Mrinal Jain|jain.mrinal140@gmail.com<br>https://www.facebook.com/groups/DevCIndore/|
 |India|Leadership for Equity|Mayuresh Bhoyte|mayuresh.bhoyte@leadershipforequity.org<br>https://www.leadershipforequity.org/|
 |India|Literacy India|Indraani Singh|indraani@literacyindia.org<br>https://literacyindia.org/|
-|India|Nirmaan|Swati Vempati|contact@nirmaan.org<br>https://www.nirmaan.org|
+|India|Nirvana|Swati Vempati|contact@nirmaan.org<br>https://www.nirmaan.org|
 |India|Pi Jam Foundation|Shoaib Dar|shoaib.dar@thepijam.org<br>http://www.thepijam.org|
+|India|Sri Sakthi Trust|Karthi Jayarajan|karthi.jayarajan@sakthitrust.org<br>https://sakthitrust.org/|
 |India|upEducators|Ankush Bhandari|ankushb@upeducators.com<br>https://www.upeducators.com/|
 |Indonesia|Coding Bee Academy|Eko Haripin|hello@codingbee.org<br>http://www.codingbee.org|
 |Indonesia|Diginusa Kompas Gramedia||marketingdiginusa@gmail.com<br>www.diginusa.com|
 |Indonesia|KodeKiddo|Meilani|meilani@kodekiddo.com<br>www.kodekiddo.com|
 |Indonesia|Koding Next||contact@kodingnext.com<br>https://kodingnext.com/|
 |Indonesia|Optima Tech Academy|Klara Widya Astuti|info@techacademy.id<br>https://techacademy.id/|
+|Indonesia|Prestasi Junior Indonesia|Retna Widiyasrini|retno@prestasijunior.org<br>https://www.prestasijunior.org/|
 |Iraq|ABCode|Batool Hussain|ABcode.global@gmail.com|
 |Israel|Wix|Hour of Code Israel Team|connect@hourofcode.com<br>https://www.hourofcode.co.il|
 |Italy|Programma il Futuro|Enrico Nardelli|didattica@programmailfuturo.it<br>https://programmailfuturo.it|
@@ -62,13 +66,14 @@
 |Peru|Code en mi Cole|Renzo Sousa|http://codenmicole.com|
 |Perú|Instituto San Agustín - ISAT|Mariano Rojas Erazo|mrojas@isat.edu.pe<br>comunicaciones@isat.edu.pe, www.isat.edu.pe|
 |Philippines|UP System Information Technology Foundation, Inc.|Noel Feria|https://upsitf.org|
+|Philippines|Devcon Kids|Pam Ros Damarillo|info@devconkids.org<br>
 |Poland|Warsaw School of Computer Science|Maciej M. Sysło|syslo@ii.uni.wroc.pl<br>https://mmsyslo.pl|
 |Portugal|Associação Nacional de Professores de Informática (ANPRI)|Fernanda Ledesma|geral@anpri.pt<br>http://www.anpri.pt/|
 |Portugal|Gabinete de Modernização das Tecnologias Educativas|Rodolfo Pinto|http://www02.madeira-edu.pt/dre/main.aspx|
 |Romania|ADFABER|Alin Chiriac|alin@adfaber.org<br>https://adfaber.org|
 |Rwanda|Creativity Lab|Ildephonse Mungwarakarama|ildephonse@creativity.rw<br>https://creativity.rw|
 |Singapore|Infocomm Media Development Authority of Singapore||https://www.imda.gov.sg|
-|Slovakia|Accenture|Soňa Dunčková|sona.dunckova@accenture.com|
+|Slovakia|Accenture|Soňa Dunčková|sona.dunckova@accenture.com|http://www.devconkids.org|
 |Slovakia|Informatika 2.0||servus@informatika20.sk<br>www.informatika20.sk|
 |South Africa|Code for Change|Sibusiso Khoza|sibusiso@codejika.com<br>https://codeforchange.org.za/|
 |South Africa|ITC CLUB Mpumalanga|Nomusa Keninda|http://mpumalangaictclub.blogspot.com|
@@ -76,6 +81,7 @@
 |South Korea|Future Class Network|Chanpil Jung|malgu@futureclass.net<br>https://www.futureclassnet.org/index.do|
 |South Korea|KOFAC|Sewon Chun|sewon@kofac.re.kr<br>https://kofac.re.kr/main|
 |South Korea|Korea Information Science Education Federation|Soohwan Kim|hwankim92@gmail.com<br>http://kcode.kr|
+|South Korea|Korea National University of Education|Kwihoon Kim|kimkh@knue.ac.kr<br>https://en.knue.ac.kr/smain.html|
 |Spain|Asociación Andaluza de Profesores de Informática|Santiago Fernández-Cabaleiro|santiagocabaleiro@gmail.com<br>http://www.aapri.es|
 |Spain|Informatics Faculty - University of the Basque Country (UPV/EHU)|Edurne Larraza Mendiluze|edurne.larraza@ehu.eus<br>https://www.ehu.eus/en/web/informatika-fakultatea/home|
 |Sri Lanka|Shilpa Sayura Foundation|Niranjan Meegammana|niranjan.meegammana@gmail.com<br>http://shilpasayura.org|

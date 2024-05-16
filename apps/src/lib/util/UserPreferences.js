@@ -60,6 +60,16 @@ export default class UserPreferences extends Record({userId: 'me'}) {
   }
 
   /**
+   * Save the preference to opt-out of AI Rubrics (AI TA).
+   * @param {boolean} aiRubricsDisabled: True if disabling AI rubric features, false otherwise.
+   */
+  setAiRubricsDisabled(aiRubricsDisabled) {
+    return $.post(`/api/v1/users/ai_rubrics_disabled`, {
+      ai_rubrics_disabled: aiRubricsDisabled,
+    });
+  }
+
+  /**
    * Save the background music user preference
    * @param {boolean} muteMusic: True if background music muted
    */

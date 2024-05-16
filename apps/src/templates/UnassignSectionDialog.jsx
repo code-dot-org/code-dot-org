@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import Button from '@cdo/apps/templates/Button';
+import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import i18n from '@cdo/locale';
 
 class UnassignSectionDialog extends Component {

@@ -6,7 +6,6 @@ module AichatSagemakerHelper
   SENTENCE_BEGIN_TOKEN = "<s>"
   SENTENCE_END_TOKEN = "</s>"
   MAX_NEW_TOKENS = 512
-  SAGEMAKER_MODEL_ENDPOINT = "gen-ai-mistral-7b-inst-v01"
   TOP_P = 0.9
 
   def self.create_sagemaker_client
@@ -18,7 +17,7 @@ module AichatSagemakerHelper
   # Mistral-7B-Instruction LLM instruction format doc at https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.1.
   def self.format_inputs_for_sagemaker_request(aichat_params, stored_messages, new_message)
     all_messages = [*stored_messages, {role: USER, content: new_message}]
-    inputs = aichat_params[:systemPrompt]
+    inputs = aichat_params[:systemPrompt] + " "
     inputs += aichat_params[:retrievalContexts].join(" ") if aichat_params[:retrievalContexts]
     inputs = SENTENCE_BEGIN_TOKEN + wrap_as_instructions(inputs)
     all_messages.each do |msg|
@@ -30,6 +29,7 @@ module AichatSagemakerHelper
         inputs += msg[:content] + SENTENCE_END_TOKEN
       end
     end
+
     {
       inputs: inputs,
       parameters: {
@@ -40,10 +40,10 @@ module AichatSagemakerHelper
     }
   end
 
-  def self.request_sagemaker_chat_completion(input_json)
+  def self.request_sagemaker_chat_completion(input, endpoint_name)
     create_sagemaker_client.invoke_endpoint(
-      endpoint_name: SAGEMAKER_MODEL_ENDPOINT, # required
-      body: input_json.to_json, # required
+      endpoint_name: endpoint_name, # required
+      body: input.to_json, # required
       content_type: "application/json"
     )
   end

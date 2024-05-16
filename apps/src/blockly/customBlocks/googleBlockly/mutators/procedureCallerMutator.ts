@@ -6,6 +6,7 @@
 // Blockly is fixing this issue, so we should be able to remove this file
 // once we upgrade to Blockly v10.
 import {ProcedureBlock} from '@cdo/apps/blockly/types';
+
 import {commonFunctions} from './commonProcedureCallerMutator';
 
 const procedureCallerMutator = {

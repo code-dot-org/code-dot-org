@@ -6,6 +6,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import style from './ai-tutor.module.scss';
 import AssistantMessage from './AssistantMessage';
 import UserMessage from './UserMessage';
+import WarningModal from './WarningModal';
 
 const AITutorChatWorkspace: React.FunctionComponent = () => {
   const storedMessages = useAppSelector(state => state.aiTutor.chatMessages);
@@ -35,6 +36,7 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
         )
       )}
       {showWaitingAnimation()}
+      <WarningModal />
     </div>
   );
 };

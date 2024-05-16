@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import Lightbulb from './Lightbulb';
-
 import {connect} from 'react-redux';
+
+import Lightbulb from './Lightbulb';
 
 class HintDisplayLightbulb extends React.Component {
   static propTypes = {

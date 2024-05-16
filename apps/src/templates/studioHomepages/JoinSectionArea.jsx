@@ -23,6 +23,7 @@ export default function JoinSectionArea({
     resultName: null,
     resultId: null,
     sectionCapacity: null,
+    joiningPlSection: false,
   });
   const [joinedPlSections, setJoinedPlSections] = useState(
     initialJoinedPlSections
@@ -35,7 +36,8 @@ export default function JoinSectionArea({
     result,
     name,
     id,
-    sectionCapacity = null
+    sectionCapacity = null,
+    joiningPlSection = false
   ) => {
     setSectionResults({
       action: action,
@@ -43,6 +45,7 @@ export default function JoinSectionArea({
       resultName: name,
       resultId: id,
       sectionCapacity: sectionCapacity,
+      joiningPlSection: joiningPlSection,
     });
   };
 
@@ -60,6 +63,8 @@ export default function JoinSectionArea({
           name={sectionResults.resultName}
           id={sectionResults.resultId}
           sectionCapacity={sectionResults.sectionCapacity}
+          showingPlSections={isPlSections}
+          joiningPlSection={sectionResults.joiningPlSection}
         />
         <JoinSection
           enrolledInASection={true}
@@ -90,12 +95,10 @@ export default function JoinSectionArea({
 
   return isPlSections ? (
     <>
-      <section>
-        <Heading2>
-          {i18n.joinedProfessionalLearningSectionsHomepageTitle()}
-        </Heading2>
-        {renderSectionContent()}
-      </section>
+      <Heading2>
+        {i18n.joinedProfessionalLearningSectionsHomepageTitle()}
+      </Heading2>
+      {renderSectionContent()}
     </>
   ) : (
     <ContentContainer heading={i18n.joinASection()}>

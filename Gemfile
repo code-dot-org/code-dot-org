@@ -39,6 +39,7 @@ gem 'sinatra', '2.2.3', require: 'sinatra/base'
 
 gem 'mysql2', '>= 0.4.1'
 
+gem 'city-state', '~> 1.1.0'
 gem 'dalli' # memcached
 gem 'dalli-elasticache' # ElastiCache Auto Discovery memcached nodes
 gem 'google_drive'
@@ -46,6 +47,7 @@ gem 'jumphash'
 gem 'os'
 gem 'parallel'
 gem 'redis', '~> 4.8.1'
+gem 'redis-actionpack', '~> 5.4.0'
 # Using commit ref on fork until maintainer publishes a new version.
 gem 'redis-slave-read', require: false, github: 'code-dot-org/redis-slave-read', ref: 'cfe1bd0f5cf65eee5b52560139cab133f22cb880'
 gem 'xxhash'
@@ -91,7 +93,7 @@ group :development, :test do
   gem 'brakeman'
   gem 'database_cleaner-active_record', '~> 2.1.0'
   gem 'haml-rails' # haml (instead of erb) generators
-  gem 'ruby-prof'
+  gem 'ruby-prof', '>= 1.7.0'
   gem 'vcr', require: false
   # For unit testing.
   gem 'webmock', '~> 3.8', require: false
@@ -362,4 +364,5 @@ gem 'http', '~> 5.0'
 
 gem 'statsig', '~> 1.33'
 
+gem 'mailgun-ruby', '~>1.2.14'
 gem 'mailjet', '~> 1.7.3'

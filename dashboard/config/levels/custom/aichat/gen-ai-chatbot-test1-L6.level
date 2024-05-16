@@ -14,12 +14,14 @@
     "disable_projects": true,
     "aichat_settings": {
       "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
         "temperature": "0.8",
         "systemPrompt": "Act as an expert in basketball. Your goal is to explain the rules to someone who is unfamiliar with the sport. Only answer questions related to basketball.",
         "retrievalContexts": [
 
         ],
         "modelCardInfo": {
+          "botName": "",
           "description": "",
           "intendedUse": "",
           "limitationsAndWarnings": "",
@@ -27,18 +29,22 @@
           "exampleTopics": [
 
           ],
-          "botName": ""
+          "isPublished": false
         }
       },
       "visibilities": {
+        "selectedModelId": "readonly",
         "temperature": "hidden",
         "systemPrompt": "editable",
         "retrievalContexts": "hidden",
         "modelCardInfo": "hidden"
       },
-      "hidePresentationPanel": true
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+
+      ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2024-04-17T20:54:53.994+00:00\",\"changed\":[\"cloned from \\\"gen-ai-chatbot-test1-L5\\\"\"],\"cloned_from\":\"gen-ai-chatbot-test1-L5\"},{\"changed_at\":\"2024-04-17 20:54:56 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-04-17 23:07:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-04-17 23:08:13 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-04-17T20:54:53.994+00:00\",\"changed\":[\"cloned from \\\"gen-ai-chatbot-test1-L5\\\"\"],\"cloned_from\":\"gen-ai-chatbot-test1-L5\"},{\"changed_at\":\"2024-04-17 20:54:56 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-04-17 23:07:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-04-17 23:08:13 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-03 17:34:15 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>
