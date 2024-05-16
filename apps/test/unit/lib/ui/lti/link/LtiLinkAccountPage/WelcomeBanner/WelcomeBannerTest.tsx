@@ -8,13 +8,14 @@ import i18n from '@cdo/locale';
 const getContext = (ltiProvider: LtiProvider) => {
   return {
     ltiProvider,
+    ltiProviderName: 'LMS',
     newAccountUrl: '/new-account',
     existingAccountUrl: '/existing-account',
   };
 };
 
 describe('LTI Link Account Welcome Banner Tests', () => {
-  (['Canvas', 'Schoology'] as LtiProvider[]).forEach(providerName => {
+  (['canvas_cloud', 'schoology'] as LtiProvider[]).forEach(providerName => {
     describe(`Welcome Banner Tests for ${providerName}`, () => {
       it('should render an icon exchange', () => {
         render(
@@ -23,7 +24,7 @@ describe('LTI Link Account Welcome Banner Tests', () => {
           </LtiProviderContext.Provider>
         );
         // Should render provider image
-        screen.getByAltText(providerName);
+        screen.getByAltText('LMS');
         // Should render code.org logo
         screen.getByAltText(i18n.codeLogo());
       });
@@ -45,7 +46,7 @@ describe('LTI Link Account Welcome Banner Tests', () => {
           </LtiProviderContext.Provider>
         );
         screen.getByText(
-          i18n.ltiLinkAccountWelcomeBannerContent({providerName})
+          i18n.ltiLinkAccountWelcomeBannerContent({providerName: 'LMS'})
         );
       });
     });

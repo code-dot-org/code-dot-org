@@ -9,7 +9,8 @@ import {expect} from '../../../../../../util/reconfiguredChai';
 import LtiLinkAccountPage from '@cdo/apps/lib/ui/lti/link/LtiLinkAccountPage';
 
 const DEFAULT_CONTEXT: LtiProviderContextProps = {
-  ltiProvider: 'Canvas',
+  ltiProvider: 'canvas_cloud',
+  ltiProviderName: 'Canvas',
   newAccountUrl: '/new-account',
   existingAccountUrl: '/existing-account',
 };

@@ -10,13 +10,15 @@ import codeLogo from '../../../assets/codeLogo.svg';
 import {LtiProviderContext} from '../context';
 
 const WelcomeBanner = () => {
-  const {ltiProvider} = useContext(LtiProviderContext)!;
+  const {ltiProvider, ltiProviderName} = useContext(LtiProviderContext)!;
 
   const getLtiProviderIcon = useCallback(() => {
     switch (ltiProvider) {
-      case 'Canvas':
+      case 'canvas_cloud':
+      case 'canvas_beta_cloud':
+      case 'canvas_test_cloud':
         return canvas;
-      case 'Schoology':
+      case 'schoology':
         return schoology;
       default:
         return undefined;
@@ -29,7 +31,7 @@ const WelcomeBanner = () => {
     <div className={styles.welcomeContainer}>
       {ltiProviderIcon && (
         <div className={styles.welcomeBannerContainer}>
-          <img src={ltiProviderIcon} alt={ltiProvider} />
+          <img src={ltiProviderIcon} alt={ltiProviderName} />
           <FontAwesomeV6Icon
             className={styles.exchangeIcon}
             iconName={'exchange'}
@@ -43,7 +45,9 @@ const WelcomeBanner = () => {
       </Typography>
 
       <Typography semanticTag={'p'} visualAppearance={'body-two'}>
-        {i18n.ltiLinkAccountWelcomeBannerContent({providerName: ltiProvider})}
+        {i18n.ltiLinkAccountWelcomeBannerContent({
+          providerName: ltiProviderName,
+        })}
       </Typography>
     </div>
   );

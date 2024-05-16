@@ -14,11 +14,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const mountPoint = document.getElementById('mount-point');
   const scriptData = getScriptData('json');
   const ltiProvider = scriptData['lti_provider'];
+  const ltiProviderName = scriptData['lti_provider_name'];
   const newAccountUrl = scriptData['new_account_url'];
   const existingAccountUrl = scriptData['existing_account_url'];
 
   const ltiProviderContext = {
     ltiProvider,
+    ltiProviderName,
     newAccountUrl,
     existingAccountUrl,
   };

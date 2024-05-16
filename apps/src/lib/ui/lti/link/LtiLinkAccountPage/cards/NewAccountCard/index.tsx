@@ -13,7 +13,7 @@ import i18n from '@cdo/locale';
 import {LtiProviderContext} from '../../context';
 
 const NewAccountCard = () => {
-  const {ltiProvider, newAccountUrl} = useContext(LtiProviderContext)!;
+  const {ltiProviderName, newAccountUrl} = useContext(LtiProviderContext)!;
   return (
     <Card data-testid={'new-account-card'}>
       <CardHeader
@@ -26,7 +26,9 @@ const NewAccountCard = () => {
         }
       />
       <CardContent>
-        {i18n.ltiLinkAccountNewAccountCardContent({providerName: ltiProvider})}
+        {i18n.ltiLinkAccountNewAccountCardContent({
+          providerName: ltiProviderName,
+        })}
       </CardContent>
       <CardActions>
         <LinkButton
