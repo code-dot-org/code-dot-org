@@ -174,11 +174,7 @@ export default class AnalyticsReporter {
       return;
     }
 
-    if (!this.soundsPlayed[id]) {
-      this.soundsPlayed[id] = 1;
-    } else {
-      this.soundsPlayed[id]++;
-    }
+    this.soundsPlayed[id] = 1 + (this.soundsPlayed[id] ?? 0);
   }
 
   onBlocksUpdated(blocks: Block[]) {
