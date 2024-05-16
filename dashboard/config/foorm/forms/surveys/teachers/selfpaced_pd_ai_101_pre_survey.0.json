@@ -58,15 +58,6 @@
         },
         {
           "type": "rating",
-          "name": "use_ai_school_classroom",
-          "title": "How interested are you in using Artificial Intelligence (AI) in your school or classroom; either with students or to support your role as a teacher/administrator?",
-          "rateCount": 7,
-          "rateMax": 7,
-          "minRateDescription": "Not interested at all",
-          "maxRateDescription": "Very interested"
-        },
-        {
-          "type": "rating",
           "name": "perception_students_need_learn_ai",
           "title": "How necessary do you think it is for students to learn about Artificial Intelligence (AI)?",
           "rateCount": 7,

@@ -30,7 +30,7 @@
         {
           "type": "rating",
           "name": "nps_self_paced_pd_ai_101",
-          "title": "How likely are you to recommend the AI 101 Self-Paced Professional Learning series to other educators?",
+          "title": "How likely are you to recommend the AI 101 Self-Paced Professional Learning experience to other educators?",
           "rateCount": 11,
           "rateMin": 0,
           "rateMax": 10,
