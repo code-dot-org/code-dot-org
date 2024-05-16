@@ -105,8 +105,8 @@ GroupOfColorsOfButtons.args = {
       onClick: () => null,
     },
     {
-      text: 'Button Secondary Grey',
-      color: buttonColors.grey,
+      text: 'Button Secondary Gray',
+      color: buttonColors.gray,
       type: 'secondary',
       size: 'm',
       onClick: () => null,
@@ -173,7 +173,7 @@ GroupOfColorsOfButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
-      color: buttonColors.grey,
+      color: buttonColors.gray,
       type: 'secondary',
       isIconOnly: true,
       size: 'm',

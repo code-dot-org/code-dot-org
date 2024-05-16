@@ -9,7 +9,7 @@ import {ButtonColor} from './types';
 export const buttonColors: {[key in ButtonColor]: ButtonColor} = {
   purple: 'purple',
   black: 'black',
-  grey: 'grey',
+  gray: 'gray',
   white: 'white',
 };
 

@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 ## [0.4.0]()
 
 * added background fill color to secondary black and white buttons
-* added ```grey``` secondary button
+* added ```gray``` secondary button
 * removed ```purple``` secondary button
 
 ## [0.3.0](https://github.com/code-dot-org/code-dot-org/pull/58469)

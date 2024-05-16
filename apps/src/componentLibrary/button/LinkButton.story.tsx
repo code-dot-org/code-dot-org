@@ -111,8 +111,8 @@ GroupOfColorsOfLinkButtons.args = {
       href: 'https://www.google.com',
     },
     {
-      text: 'Button Secondary Grey',
-      color: buttonColors.grey,
+      text: 'Button Secondary Gray',
+      color: buttonColors.gray,
       type: 'secondary',
       size: 'm',
       href: 'https://www.google.com',
@@ -179,7 +179,7 @@ GroupOfColorsOfLinkButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
-      color: buttonColors.grey,
+      color: buttonColors.gray,
       type: 'secondary',
       isIconOnly: true,
       size: 'm',
