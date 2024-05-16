@@ -2160,7 +2160,9 @@ class UnitTest < ActiveSupport::TestCase
       @deeper_learning_unit = create :script, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, professional_learning_course: 'DLP 2021'
 
       @unit_group = create :unit_group
-      create :course_version, content_root: @unit_group
+      @ug_course_version = create :course_version, content_root: @unit_group
+      create :reference_guide, course_version: @ug_course_version
+
       @unit_in_course = create :script, is_migrated: true, name: 'coursename1-2021'
       create :unit_group_unit, unit_group: @unit_group, script: @unit_in_course, position: 1
       @unit_group.reload
