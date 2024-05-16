@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "elem-game-design",
-    "serialized_at": "2024-05-13 19:04:51 UTC",
+    "serialized_at": "2024-05-15 18:23:21 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -876,6 +876,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_design_panel_events"
+        ],
         "progression": "Events"
       },
       "bonus": false,
