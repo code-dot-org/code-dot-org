@@ -30,7 +30,10 @@ const WelcomeBanner = () => {
       {ltiProviderIcon && (
         <div className={styles.welcomeBannerContainer}>
           <img src={ltiProviderIcon} alt={ltiProvider} />
-          <FontAwesomeV6Icon iconName={'exchange'} />
+          <FontAwesomeV6Icon
+            className={styles.exchangeIcon}
+            iconName={'exchange'}
+          />
           <img src={codeLogo} alt={i18n.codeLogo()} />
         </div>
       )}
