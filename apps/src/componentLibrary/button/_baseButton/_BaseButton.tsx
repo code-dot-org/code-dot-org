@@ -109,6 +109,12 @@ const checkButtonPropsForErrors = ({
     throw new Error('Expect type prop to be secondary when color is grey');
   }
 
+  if (color === 'purple' && type === 'secondary') {
+    throw new Error(
+      'Expect type prop not to be secondary when color is purple'
+    );
+  }
+
   if (useAsLink) {
     if (!href) {
       throw new Error('Expect href prop when useAsLink is true');
