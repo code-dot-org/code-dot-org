@@ -179,7 +179,6 @@ export default class AnalyticsReporter {
     } else {
       this.soundsPlayed[id]++;
     }
-    console.log('soundsPlayed', this.soundsPlayed);
   }
 
   onBlocksUpdated(blocks: Block[]) {

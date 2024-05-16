@@ -184,7 +184,6 @@ export default class MusicPlayer {
       blockId: 'preview',
       soundType: 'beat',
     };
-    console.log('audioPlayer.playSampleImmediately in MusicPlayer');
     this.analyticsReporter?.onSoundsPlayed(id);
     this.audioPlayer.playSampleImmediately(
       this.convertEventToSamples(preview)[0],
