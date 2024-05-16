@@ -7,7 +7,7 @@
     "/standards/ccmath.json": "8c66d457ae9a644b11310212ba421f3f",
     "/standards/csa.json": "8c66d457ae9a644b11310212ba421f3f",
     "/standards/csp2021.json": "8c66d457ae9a644b11310212ba421f3f",
-    "/standards/csta.json": "8c66d457ae9a644b11310212ba421f3f",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "8c66d457ae9a644b11310212ba421f3f",
     "/standards/iste.json": "8c66d457ae9a644b11310212ba421f3f",
     "/standards/ngss.json": "8c66d457ae9a644b11310212ba421f3f"
@@ -20,23 +20,23 @@
     "/standards/ccmath.json": "38d50c9ecc1574ab067eedfdec539c30",
     "/standards/csa.json": "38d50c9ecc1574ab067eedfdec539c30",
     "/standards/csp2021.json": "38d50c9ecc1574ab067eedfdec539c30",
-    "/standards/csta.json": "38d50c9ecc1574ab067eedfdec539c30",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "38d50c9ecc1574ab067eedfdec539c30",
     "/standards/iste.json": "38d50c9ecc1574ab067eedfdec539c30",
     "/standards/ngss.json": "38d50c9ecc1574ab067eedfdec539c30"
   },
   "bg-BG": {
-    "/standards/ai4k12-2021.json": "52364d3ee4bc1004fc76cb51accd0569",
-    "/standards/ai4k12-2023.json": "ae18568798fa34ce9463dccfaab306e0",
-    "/standards/c3ss.json": "52364d3ee4bc1004fc76cb51accd0569",
-    "/standards/ccela.json": "52364d3ee4bc1004fc76cb51accd0569",
-    "/standards/ccmath.json": "52364d3ee4bc1004fc76cb51accd0569",
-    "/standards/csa.json": "52364d3ee4bc1004fc76cb51accd0569",
-    "/standards/csp2021.json": "52364d3ee4bc1004fc76cb51accd0569",
-    "/standards/csta.json": "52364d3ee4bc1004fc76cb51accd0569",
-    "/standards/csta2011.json": "52364d3ee4bc1004fc76cb51accd0569",
-    "/standards/iste.json": "52364d3ee4bc1004fc76cb51accd0569",
-    "/standards/ngss.json": "52364d3ee4bc1004fc76cb51accd0569"
+    "/standards/ai4k12-2021.json": "362d34775dc555edda164136b7e4137e",
+    "/standards/ai4k12-2023.json": "604fd749ba06be2eac3611a06de0bc75",
+    "/standards/c3ss.json": "896da3c6a1ea910ee4d7e1a422ffe0d4",
+    "/standards/ccela.json": "362d34775dc555edda164136b7e4137e",
+    "/standards/ccmath.json": "463923436752274d1d9021d4d39a58c7",
+    "/standards/csa.json": "463923436752274d1d9021d4d39a58c7",
+    "/standards/csp2021.json": "362d34775dc555edda164136b7e4137e",
+    "/standards/csta.json": "463923436752274d1d9021d4d39a58c7",
+    "/standards/csta2011.json": "362d34775dc555edda164136b7e4137e",
+    "/standards/iste.json": "463923436752274d1d9021d4d39a58c7",
+    "/standards/ngss.json": "362d34775dc555edda164136b7e4137e"
   },
   "bn-BD": {
     "/standards/ai4k12-2021.json": "1493a3cb7bf20a108e24d6303cafff4e",
@@ -59,7 +59,7 @@
     "/standards/ccmath.json": "2c7c3a5151054ad1acf2b10b7c442cfa",
     "/standards/csa.json": "2c7c3a5151054ad1acf2b10b7c442cfa",
     "/standards/csp2021.json": "2c7c3a5151054ad1acf2b10b7c442cfa",
-    "/standards/csta.json": "2c7c3a5151054ad1acf2b10b7c442cfa",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "2c7c3a5151054ad1acf2b10b7c442cfa",
     "/standards/iste.json": "2c7c3a5151054ad1acf2b10b7c442cfa",
     "/standards/ngss.json": "2c7c3a5151054ad1acf2b10b7c442cfa"
@@ -72,7 +72,7 @@
     "/standards/ccmath.json": "97e7c0b0e79de674b2d4fa384d9ed275",
     "/standards/csa.json": "97e7c0b0e79de674b2d4fa384d9ed275",
     "/standards/csp2021.json": "97e7c0b0e79de674b2d4fa384d9ed275",
-    "/standards/csta.json": "97e7c0b0e79de674b2d4fa384d9ed275",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "97e7c0b0e79de674b2d4fa384d9ed275",
     "/standards/iste.json": "97e7c0b0e79de674b2d4fa384d9ed275",
     "/standards/ngss.json": "97e7c0b0e79de674b2d4fa384d9ed275"
@@ -98,7 +98,7 @@
     "/standards/ccmath.json": "8e1615ab8b1f82db7851a67b146af682",
     "/standards/csa.json": "8e1615ab8b1f82db7851a67b146af682",
     "/standards/csp2021.json": "8e1615ab8b1f82db7851a67b146af682",
-    "/standards/csta.json": "8e1615ab8b1f82db7851a67b146af682",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "8e1615ab8b1f82db7851a67b146af682",
     "/standards/iste.json": "8e1615ab8b1f82db7851a67b146af682",
     "/standards/ngss.json": "8e1615ab8b1f82db7851a67b146af682"
@@ -111,7 +111,7 @@
     "/standards/ccmath.json": "771ef2ae452b77f55c5de250521608db",
     "/standards/csa.json": "771ef2ae452b77f55c5de250521608db",
     "/standards/csp2021.json": "771ef2ae452b77f55c5de250521608db",
-    "/standards/csta.json": "771ef2ae452b77f55c5de250521608db",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "771ef2ae452b77f55c5de250521608db",
     "/standards/iste.json": "771ef2ae452b77f55c5de250521608db",
     "/standards/ngss.json": "771ef2ae452b77f55c5de250521608db"
@@ -124,7 +124,7 @@
     "/standards/ccmath.json": "59bf6a317e688adbc6a54103135496ad",
     "/standards/csa.json": "59bf6a317e688adbc6a54103135496ad",
     "/standards/csp2021.json": "59bf6a317e688adbc6a54103135496ad",
-    "/standards/csta.json": "59bf6a317e688adbc6a54103135496ad",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "59bf6a317e688adbc6a54103135496ad",
     "/standards/iste.json": "59bf6a317e688adbc6a54103135496ad",
     "/standards/ngss.json": "59bf6a317e688adbc6a54103135496ad"
@@ -137,7 +137,7 @@
     "/standards/ccmath.json": "2e13a54141f7c2e7b7765e579bca1fac",
     "/standards/csa.json": "2e13a54141f7c2e7b7765e579bca1fac",
     "/standards/csp2021.json": "2e13a54141f7c2e7b7765e579bca1fac",
-    "/standards/csta.json": "2e13a54141f7c2e7b7765e579bca1fac",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "2e13a54141f7c2e7b7765e579bca1fac",
     "/standards/iste.json": "2e13a54141f7c2e7b7765e579bca1fac",
     "/standards/ngss.json": "2e13a54141f7c2e7b7765e579bca1fac"
@@ -150,7 +150,7 @@
     "/standards/ccmath.json": "bb8fe49aa6327bd9a1e9535e2d410cc2",
     "/standards/csa.json": "bb8fe49aa6327bd9a1e9535e2d410cc2",
     "/standards/csp2021.json": "bb8fe49aa6327bd9a1e9535e2d410cc2",
-    "/standards/csta.json": "bb8fe49aa6327bd9a1e9535e2d410cc2",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "bb8fe49aa6327bd9a1e9535e2d410cc2",
     "/standards/iste.json": "bb8fe49aa6327bd9a1e9535e2d410cc2",
     "/standards/ngss.json": "bb8fe49aa6327bd9a1e9535e2d410cc2"
@@ -163,7 +163,7 @@
     "/standards/ccmath.json": "b54991ace9ca16461ae8a5dc8b7f976f",
     "/standards/csa.json": "b54991ace9ca16461ae8a5dc8b7f976f",
     "/standards/csp2021.json": "b54991ace9ca16461ae8a5dc8b7f976f",
-    "/standards/csta.json": "b54991ace9ca16461ae8a5dc8b7f976f",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "b54991ace9ca16461ae8a5dc8b7f976f",
     "/standards/iste.json": "b54991ace9ca16461ae8a5dc8b7f976f",
     "/standards/ngss.json": "b54991ace9ca16461ae8a5dc8b7f976f"
@@ -176,7 +176,7 @@
     "/standards/ccmath.json": "9f8581da801631b2e74ae132c5a393bc",
     "/standards/csa.json": "9f8581da801631b2e74ae132c5a393bc",
     "/standards/csp2021.json": "9f8581da801631b2e74ae132c5a393bc",
-    "/standards/csta.json": "9f8581da801631b2e74ae132c5a393bc",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "9f8581da801631b2e74ae132c5a393bc",
     "/standards/iste.json": "9f8581da801631b2e74ae132c5a393bc",
     "/standards/ngss.json": "9f8581da801631b2e74ae132c5a393bc"
@@ -189,7 +189,7 @@
     "/standards/ccmath.json": "65bcdd0e6998827b8f3f002775fe9394",
     "/standards/csa.json": "65bcdd0e6998827b8f3f002775fe9394",
     "/standards/csp2021.json": "65bcdd0e6998827b8f3f002775fe9394",
-    "/standards/csta.json": "af46df60643b7cd56f4e92800d50ff3b",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "65bcdd0e6998827b8f3f002775fe9394",
     "/standards/iste.json": "af46df60643b7cd56f4e92800d50ff3b",
     "/standards/ngss.json": "65bcdd0e6998827b8f3f002775fe9394"
@@ -202,7 +202,7 @@
     "/standards/ccmath.json": "b6ef7e9a40af5170f149fba92e3b0d88",
     "/standards/csa.json": "b6ef7e9a40af5170f149fba92e3b0d88",
     "/standards/csp2021.json": "b6ef7e9a40af5170f149fba92e3b0d88",
-    "/standards/csta.json": "b6ef7e9a40af5170f149fba92e3b0d88",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "b6ef7e9a40af5170f149fba92e3b0d88",
     "/standards/iste.json": "b6ef7e9a40af5170f149fba92e3b0d88",
     "/standards/ngss.json": "b6ef7e9a40af5170f149fba92e3b0d88"
@@ -215,7 +215,7 @@
     "/standards/ccmath.json": "30fac531fe06158f43071eb5c9c5d427",
     "/standards/csa.json": "30fac531fe06158f43071eb5c9c5d427",
     "/standards/csp2021.json": "30fac531fe06158f43071eb5c9c5d427",
-    "/standards/csta.json": "30fac531fe06158f43071eb5c9c5d427",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "30fac531fe06158f43071eb5c9c5d427",
     "/standards/iste.json": "30fac531fe06158f43071eb5c9c5d427",
     "/standards/ngss.json": "30fac531fe06158f43071eb5c9c5d427"
@@ -241,7 +241,7 @@
     "/standards/ccmath.json": "5121440a9d76e14dd45c5eca0e1b2e74",
     "/standards/csa.json": "70c92192008b06abfb702004c583cf80",
     "/standards/csp2021.json": "70c92192008b06abfb702004c583cf80",
-    "/standards/csta.json": "5121440a9d76e14dd45c5eca0e1b2e74",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "70c92192008b06abfb702004c583cf80",
     "/standards/iste.json": "5121440a9d76e14dd45c5eca0e1b2e74",
     "/standards/ngss.json": "70c92192008b06abfb702004c583cf80"
@@ -254,7 +254,7 @@
     "/standards/ccmath.json": "0fdd7570e41b03b544916fc59f6ff34d",
     "/standards/csa.json": "0fdd7570e41b03b544916fc59f6ff34d",
     "/standards/csp2021.json": "0fdd7570e41b03b544916fc59f6ff34d",
-    "/standards/csta.json": "0fdd7570e41b03b544916fc59f6ff34d",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "0fdd7570e41b03b544916fc59f6ff34d",
     "/standards/iste.json": "0fdd7570e41b03b544916fc59f6ff34d",
     "/standards/ngss.json": "0fdd7570e41b03b544916fc59f6ff34d"
@@ -267,7 +267,7 @@
     "/standards/ccmath.json": "8c75b47ea47c466feada1e13c624b5cc",
     "/standards/csa.json": "8c75b47ea47c466feada1e13c624b5cc",
     "/standards/csp2021.json": "8c75b47ea47c466feada1e13c624b5cc",
-    "/standards/csta.json": "8c75b47ea47c466feada1e13c624b5cc",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "8c75b47ea47c466feada1e13c624b5cc",
     "/standards/iste.json": "8c75b47ea47c466feada1e13c624b5cc",
     "/standards/ngss.json": "8c75b47ea47c466feada1e13c624b5cc"
@@ -280,7 +280,7 @@
     "/standards/ccmath.json": "8b1698d9eaea5f10bc4165d0fecfa173",
     "/standards/csa.json": "3367eb7d6b6d28408b73241e4b6d53a1",
     "/standards/csp2021.json": "3367eb7d6b6d28408b73241e4b6d53a1",
-    "/standards/csta.json": "8b1698d9eaea5f10bc4165d0fecfa173",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "3367eb7d6b6d28408b73241e4b6d53a1",
     "/standards/iste.json": "8b1698d9eaea5f10bc4165d0fecfa173",
     "/standards/ngss.json": "3367eb7d6b6d28408b73241e4b6d53a1"
@@ -293,7 +293,7 @@
     "/standards/ccmath.json": "20bdcec209082132b1fa281f9c65c944",
     "/standards/csa.json": "20bdcec209082132b1fa281f9c65c944",
     "/standards/csp2021.json": "20bdcec209082132b1fa281f9c65c944",
-    "/standards/csta.json": "2d11d00a5ef1b7fc7192116530a25f24",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "20bdcec209082132b1fa281f9c65c944",
     "/standards/iste.json": "2d11d00a5ef1b7fc7192116530a25f24",
     "/standards/ngss.json": "20bdcec209082132b1fa281f9c65c944"
@@ -306,7 +306,7 @@
     "/standards/ccmath.json": "557a83f47c1c6fee34ab789c7e7c2ba0",
     "/standards/csa.json": "557a83f47c1c6fee34ab789c7e7c2ba0",
     "/standards/csp2021.json": "557a83f47c1c6fee34ab789c7e7c2ba0",
-    "/standards/csta.json": "557a83f47c1c6fee34ab789c7e7c2ba0",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "557a83f47c1c6fee34ab789c7e7c2ba0",
     "/standards/iste.json": "557a83f47c1c6fee34ab789c7e7c2ba0",
     "/standards/ngss.json": "557a83f47c1c6fee34ab789c7e7c2ba0"
@@ -319,7 +319,7 @@
     "/standards/ccmath.json": "8e40d42071ece2992448d5978e2651e0",
     "/standards/csa.json": "8e40d42071ece2992448d5978e2651e0",
     "/standards/csp2021.json": "8e40d42071ece2992448d5978e2651e0",
-    "/standards/csta.json": "88f37173646eb6f3fe8f528c23bca005",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "8e40d42071ece2992448d5978e2651e0",
     "/standards/iste.json": "88f37173646eb6f3fe8f528c23bca005",
     "/standards/ngss.json": "8e40d42071ece2992448d5978e2651e0"
@@ -332,7 +332,7 @@
     "/standards/ccmath.json": "4778716806b7d3f686ad397647f1feab",
     "/standards/csa.json": "4778716806b7d3f686ad397647f1feab",
     "/standards/csp2021.json": "4778716806b7d3f686ad397647f1feab",
-    "/standards/csta.json": "4778716806b7d3f686ad397647f1feab",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "4778716806b7d3f686ad397647f1feab",
     "/standards/iste.json": "4778716806b7d3f686ad397647f1feab",
     "/standards/ngss.json": "4778716806b7d3f686ad397647f1feab"
@@ -345,7 +345,7 @@
     "/standards/ccmath.json": "61fc199abf53f9199c0cc49e893fc159",
     "/standards/csa.json": "61fc199abf53f9199c0cc49e893fc159",
     "/standards/csp2021.json": "61fc199abf53f9199c0cc49e893fc159",
-    "/standards/csta.json": "8445f31965825d52d6b84675e5735eb7",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "61fc199abf53f9199c0cc49e893fc159",
     "/standards/iste.json": "8445f31965825d52d6b84675e5735eb7",
     "/standards/ngss.json": "61fc199abf53f9199c0cc49e893fc159"
@@ -358,7 +358,7 @@
     "/standards/ccmath.json": "d967cc784b012ad1992942b4297750fd",
     "/standards/csa.json": "d967cc784b012ad1992942b4297750fd",
     "/standards/csp2021.json": "d967cc784b012ad1992942b4297750fd",
-    "/standards/csta.json": "d967cc784b012ad1992942b4297750fd",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "d967cc784b012ad1992942b4297750fd",
     "/standards/iste.json": "d967cc784b012ad1992942b4297750fd",
     "/standards/ngss.json": "d967cc784b012ad1992942b4297750fd"
@@ -371,7 +371,7 @@
     "/standards/ccmath.json": "cb5f69b4ffd2b8538eaf2b2a0df772a5",
     "/standards/csa.json": "cb5f69b4ffd2b8538eaf2b2a0df772a5",
     "/standards/csp2021.json": "cb5f69b4ffd2b8538eaf2b2a0df772a5",
-    "/standards/csta.json": "cb5f69b4ffd2b8538eaf2b2a0df772a5",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "cb5f69b4ffd2b8538eaf2b2a0df772a5",
     "/standards/iste.json": "cb5f69b4ffd2b8538eaf2b2a0df772a5",
     "/standards/ngss.json": "cb5f69b4ffd2b8538eaf2b2a0df772a5"
@@ -384,7 +384,7 @@
     "/standards/ccmath.json": "e601664c49e8884be27cebfcbc19ad9f",
     "/standards/csa.json": "e601664c49e8884be27cebfcbc19ad9f",
     "/standards/csp2021.json": "e601664c49e8884be27cebfcbc19ad9f",
-    "/standards/csta.json": "a900ee1320b93613c099ae63f2f9c321",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "e601664c49e8884be27cebfcbc19ad9f",
     "/standards/iste.json": "a900ee1320b93613c099ae63f2f9c321",
     "/standards/ngss.json": "e601664c49e8884be27cebfcbc19ad9f"
@@ -397,7 +397,7 @@
     "/standards/ccmath.json": "9129d1ca962f42317122d4a7241e0ad3",
     "/standards/csa.json": "9129d1ca962f42317122d4a7241e0ad3",
     "/standards/csp2021.json": "9129d1ca962f42317122d4a7241e0ad3",
-    "/standards/csta.json": "9129d1ca962f42317122d4a7241e0ad3",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "9129d1ca962f42317122d4a7241e0ad3",
     "/standards/iste.json": "9129d1ca962f42317122d4a7241e0ad3",
     "/standards/ngss.json": "9129d1ca962f42317122d4a7241e0ad3"
@@ -410,7 +410,7 @@
     "/standards/ccmath.json": "44cd3843edf3f61efda1bdc93de8c3fb",
     "/standards/csa.json": "44cd3843edf3f61efda1bdc93de8c3fb",
     "/standards/csp2021.json": "853fb1c1e8fc61fd0f90b7e3002dc8d2",
-    "/standards/csta.json": "44cd3843edf3f61efda1bdc93de8c3fb",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "44cd3843edf3f61efda1bdc93de8c3fb",
     "/standards/iste.json": "44cd3843edf3f61efda1bdc93de8c3fb",
     "/standards/ngss.json": "44cd3843edf3f61efda1bdc93de8c3fb"
@@ -423,7 +423,7 @@
     "/standards/ccmath.json": "3faa3364b8d5be8b86d70aec855e3a78",
     "/standards/csa.json": "3faa3364b8d5be8b86d70aec855e3a78",
     "/standards/csp2021.json": "02942ad9c2c1e22213be98cb4d631647",
-    "/standards/csta.json": "3faa3364b8d5be8b86d70aec855e3a78",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "02942ad9c2c1e22213be98cb4d631647",
     "/standards/iste.json": "3faa3364b8d5be8b86d70aec855e3a78",
     "/standards/ngss.json": "3faa3364b8d5be8b86d70aec855e3a78"
@@ -436,7 +436,7 @@
     "/standards/ccmath.json": "5ceb3237621e9b8c4362406b7f40734f",
     "/standards/csa.json": "5ceb3237621e9b8c4362406b7f40734f",
     "/standards/csp2021.json": "5ceb3237621e9b8c4362406b7f40734f",
-    "/standards/csta.json": "5ceb3237621e9b8c4362406b7f40734f",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "5ceb3237621e9b8c4362406b7f40734f",
     "/standards/iste.json": "5ceb3237621e9b8c4362406b7f40734f",
     "/standards/ngss.json": "5ceb3237621e9b8c4362406b7f40734f"
@@ -449,7 +449,7 @@
     "/standards/ccmath.json": "eb8f1c1284ae07c5efa62f478d2fd6f2",
     "/standards/csa.json": "eb8f1c1284ae07c5efa62f478d2fd6f2",
     "/standards/csp2021.json": "eb8f1c1284ae07c5efa62f478d2fd6f2",
-    "/standards/csta.json": "eb8f1c1284ae07c5efa62f478d2fd6f2",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "eb8f1c1284ae07c5efa62f478d2fd6f2",
     "/standards/iste.json": "eb8f1c1284ae07c5efa62f478d2fd6f2",
     "/standards/ngss.json": "eb8f1c1284ae07c5efa62f478d2fd6f2"
@@ -462,7 +462,7 @@
     "/standards/ccmath.json": "3c5a011cc9a2a4b2c05d6f2056d00405",
     "/standards/csa.json": "3c5a011cc9a2a4b2c05d6f2056d00405",
     "/standards/csp2021.json": "3c5a011cc9a2a4b2c05d6f2056d00405",
-    "/standards/csta.json": "3c5a011cc9a2a4b2c05d6f2056d00405",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "3c5a011cc9a2a4b2c05d6f2056d00405",
     "/standards/iste.json": "3c5a011cc9a2a4b2c05d6f2056d00405",
     "/standards/ngss.json": "3c5a011cc9a2a4b2c05d6f2056d00405"
@@ -475,7 +475,7 @@
     "/standards/ccmath.json": "d08a1eef1a3769449e380ada734dfd0b",
     "/standards/csa.json": "d08a1eef1a3769449e380ada734dfd0b",
     "/standards/csp2021.json": "d08a1eef1a3769449e380ada734dfd0b",
-    "/standards/csta.json": "d08a1eef1a3769449e380ada734dfd0b",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "d08a1eef1a3769449e380ada734dfd0b",
     "/standards/iste.json": "d08a1eef1a3769449e380ada734dfd0b",
     "/standards/ngss.json": "d08a1eef1a3769449e380ada734dfd0b"
@@ -488,7 +488,7 @@
     "/standards/ccmath.json": "620f56d385422a47d8da3c90476d7a71",
     "/standards/csa.json": "620f56d385422a47d8da3c90476d7a71",
     "/standards/csp2021.json": "620f56d385422a47d8da3c90476d7a71",
-    "/standards/csta.json": "620f56d385422a47d8da3c90476d7a71",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "620f56d385422a47d8da3c90476d7a71",
     "/standards/iste.json": "620f56d385422a47d8da3c90476d7a71",
     "/standards/ngss.json": "620f56d385422a47d8da3c90476d7a71"
@@ -501,7 +501,7 @@
     "/standards/ccmath.json": "7a3b939a242627982ad7e19cca872fbf",
     "/standards/csa.json": "7a3b939a242627982ad7e19cca872fbf",
     "/standards/csp2021.json": "7a3b939a242627982ad7e19cca872fbf",
-    "/standards/csta.json": "7a3b939a242627982ad7e19cca872fbf",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "7a3b939a242627982ad7e19cca872fbf",
     "/standards/iste.json": "7a3b939a242627982ad7e19cca872fbf",
     "/standards/ngss.json": "7a3b939a242627982ad7e19cca872fbf"
@@ -514,7 +514,7 @@
     "/standards/ccmath.json": "b897fc669ff9e93a29e0624145e1b047",
     "/standards/csa.json": "b897fc669ff9e93a29e0624145e1b047",
     "/standards/csp2021.json": "b897fc669ff9e93a29e0624145e1b047",
-    "/standards/csta.json": "b897fc669ff9e93a29e0624145e1b047",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "b897fc669ff9e93a29e0624145e1b047",
     "/standards/iste.json": "b897fc669ff9e93a29e0624145e1b047",
     "/standards/ngss.json": "b897fc669ff9e93a29e0624145e1b047"
@@ -540,7 +540,7 @@
     "/standards/ccmath.json": "3dae3e854e59a359986a2e3bd034a1a7",
     "/standards/csa.json": "3dae3e854e59a359986a2e3bd034a1a7",
     "/standards/csp2021.json": "3dae3e854e59a359986a2e3bd034a1a7",
-    "/standards/csta.json": "3dae3e854e59a359986a2e3bd034a1a7",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "3dae3e854e59a359986a2e3bd034a1a7",
     "/standards/iste.json": "3dae3e854e59a359986a2e3bd034a1a7",
     "/standards/ngss.json": "3dae3e854e59a359986a2e3bd034a1a7"
@@ -553,7 +553,7 @@
     "/standards/ccmath.json": "62f2587e487f4e5a6b9b7478e93157a6",
     "/standards/csa.json": "62f2587e487f4e5a6b9b7478e93157a6",
     "/standards/csp2021.json": "62f2587e487f4e5a6b9b7478e93157a6",
-    "/standards/csta.json": "62f2587e487f4e5a6b9b7478e93157a6",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "62f2587e487f4e5a6b9b7478e93157a6",
     "/standards/iste.json": "62f2587e487f4e5a6b9b7478e93157a6",
     "/standards/ngss.json": "62f2587e487f4e5a6b9b7478e93157a6"
@@ -566,7 +566,7 @@
     "/standards/ccmath.json": "8119324c4fa35e4026ef201b231407a4",
     "/standards/csa.json": "8119324c4fa35e4026ef201b231407a4",
     "/standards/csp2021.json": "8119324c4fa35e4026ef201b231407a4",
-    "/standards/csta.json": "8119324c4fa35e4026ef201b231407a4",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "8119324c4fa35e4026ef201b231407a4",
     "/standards/iste.json": "8119324c4fa35e4026ef201b231407a4",
     "/standards/ngss.json": "8119324c4fa35e4026ef201b231407a4"
@@ -579,7 +579,7 @@
     "/standards/ccmath.json": "c712f8afadcccd19b53f718ae6ec44b1",
     "/standards/csa.json": "c712f8afadcccd19b53f718ae6ec44b1",
     "/standards/csp2021.json": "c712f8afadcccd19b53f718ae6ec44b1",
-    "/standards/csta.json": "c712f8afadcccd19b53f718ae6ec44b1",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "c712f8afadcccd19b53f718ae6ec44b1",
     "/standards/iste.json": "c712f8afadcccd19b53f718ae6ec44b1",
     "/standards/ngss.json": "c712f8afadcccd19b53f718ae6ec44b1"
@@ -592,7 +592,7 @@
     "/standards/ccmath.json": "680cb4a19afbb94cf0494ab2008e6fe7",
     "/standards/csa.json": "680cb4a19afbb94cf0494ab2008e6fe7",
     "/standards/csp2021.json": "680cb4a19afbb94cf0494ab2008e6fe7",
-    "/standards/csta.json": "680cb4a19afbb94cf0494ab2008e6fe7",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "680cb4a19afbb94cf0494ab2008e6fe7",
     "/standards/iste.json": "680cb4a19afbb94cf0494ab2008e6fe7",
     "/standards/ngss.json": "680cb4a19afbb94cf0494ab2008e6fe7"
@@ -605,7 +605,7 @@
     "/standards/ccmath.json": "b56f2eeec7790e2f4522a9bd3e180031",
     "/standards/csa.json": "b56f2eeec7790e2f4522a9bd3e180031",
     "/standards/csp2021.json": "b56f2eeec7790e2f4522a9bd3e180031",
-    "/standards/csta.json": "b56f2eeec7790e2f4522a9bd3e180031",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "b56f2eeec7790e2f4522a9bd3e180031",
     "/standards/iste.json": "b56f2eeec7790e2f4522a9bd3e180031",
     "/standards/ngss.json": "b56f2eeec7790e2f4522a9bd3e180031"
@@ -618,7 +618,7 @@
     "/standards/ccmath.json": "8688a347586c7d422b4fe161a465630b",
     "/standards/csa.json": "8688a347586c7d422b4fe161a465630b",
     "/standards/csp2021.json": "8688a347586c7d422b4fe161a465630b",
-    "/standards/csta.json": "8688a347586c7d422b4fe161a465630b",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "8688a347586c7d422b4fe161a465630b",
     "/standards/iste.json": "8688a347586c7d422b4fe161a465630b",
     "/standards/ngss.json": "8688a347586c7d422b4fe161a465630b"
@@ -631,7 +631,7 @@
     "/standards/ccmath.json": "0b69ac6b0a734885620debdd57459683",
     "/standards/csa.json": "dc90f1621087020ecfbc3f62b29903d4",
     "/standards/csp2021.json": "dc90f1621087020ecfbc3f62b29903d4",
-    "/standards/csta.json": "0b69ac6b0a734885620debdd57459683",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "dc90f1621087020ecfbc3f62b29903d4",
     "/standards/iste.json": "0b69ac6b0a734885620debdd57459683",
     "/standards/ngss.json": "dc90f1621087020ecfbc3f62b29903d4"
@@ -644,7 +644,7 @@
     "/standards/ccmath.json": "8d885af525629ccd3dd4321e03eb2798",
     "/standards/csa.json": "8d885af525629ccd3dd4321e03eb2798",
     "/standards/csp2021.json": "8d885af525629ccd3dd4321e03eb2798",
-    "/standards/csta.json": "8d885af525629ccd3dd4321e03eb2798",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "8d885af525629ccd3dd4321e03eb2798",
     "/standards/iste.json": "8d885af525629ccd3dd4321e03eb2798",
     "/standards/ngss.json": "8d885af525629ccd3dd4321e03eb2798"
@@ -657,7 +657,7 @@
     "/standards/ccmath.json": "6169b594b1cda2936ab17b11a15abf3b",
     "/standards/csa.json": "6169b594b1cda2936ab17b11a15abf3b",
     "/standards/csp2021.json": "6169b594b1cda2936ab17b11a15abf3b",
-    "/standards/csta.json": "6169b594b1cda2936ab17b11a15abf3b",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "6169b594b1cda2936ab17b11a15abf3b",
     "/standards/iste.json": "6169b594b1cda2936ab17b11a15abf3b",
     "/standards/ngss.json": "6169b594b1cda2936ab17b11a15abf3b"
@@ -670,7 +670,7 @@
     "/standards/ccmath.json": "e57e55f2e972a5556ee521ac292f1958",
     "/standards/csa.json": "e57e55f2e972a5556ee521ac292f1958",
     "/standards/csp2021.json": "6ddf7a05a7c1a58a7bb16e67eb9ff6b1",
-    "/standards/csta.json": "e57e55f2e972a5556ee521ac292f1958",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "e57e55f2e972a5556ee521ac292f1958",
     "/standards/iste.json": "e57e55f2e972a5556ee521ac292f1958",
     "/standards/ngss.json": "e57e55f2e972a5556ee521ac292f1958"
@@ -683,7 +683,7 @@
     "/standards/ccmath.json": "c8c0c6699af64e6464b5f0312af65543",
     "/standards/csa.json": "c8c0c6699af64e6464b5f0312af65543",
     "/standards/csp2021.json": "c8c0c6699af64e6464b5f0312af65543",
-    "/standards/csta.json": "c8c0c6699af64e6464b5f0312af65543",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "c8c0c6699af64e6464b5f0312af65543",
     "/standards/iste.json": "c8c0c6699af64e6464b5f0312af65543",
     "/standards/ngss.json": "c8c0c6699af64e6464b5f0312af65543"
@@ -696,7 +696,7 @@
     "/standards/ccmath.json": "0e23adffd62e35ef874d2ca1f1d80628",
     "/standards/csa.json": "0e23adffd62e35ef874d2ca1f1d80628",
     "/standards/csp2021.json": "0e23adffd62e35ef874d2ca1f1d80628",
-    "/standards/csta.json": "0e23adffd62e35ef874d2ca1f1d80628",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "0e23adffd62e35ef874d2ca1f1d80628",
     "/standards/iste.json": "0e23adffd62e35ef874d2ca1f1d80628",
     "/standards/ngss.json": "0e23adffd62e35ef874d2ca1f1d80628"
@@ -709,7 +709,7 @@
     "/standards/ccmath.json": "91484ecf68c2003e67b53a6a83a40ea0",
     "/standards/csa.json": "91484ecf68c2003e67b53a6a83a40ea0",
     "/standards/csp2021.json": "e930acc8381c9edb65e775c9af3c5b7d",
-    "/standards/csta.json": "91484ecf68c2003e67b53a6a83a40ea0",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "91484ecf68c2003e67b53a6a83a40ea0",
     "/standards/iste.json": "91484ecf68c2003e67b53a6a83a40ea0",
     "/standards/ngss.json": "91484ecf68c2003e67b53a6a83a40ea0"
@@ -735,7 +735,7 @@
     "/standards/ccmath.json": "88eaaae45fd96c8612c5474035f9a1f6",
     "/standards/csa.json": "88eaaae45fd96c8612c5474035f9a1f6",
     "/standards/csp2021.json": "88eaaae45fd96c8612c5474035f9a1f6",
-    "/standards/csta.json": "88eaaae45fd96c8612c5474035f9a1f6",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "88eaaae45fd96c8612c5474035f9a1f6",
     "/standards/iste.json": "88eaaae45fd96c8612c5474035f9a1f6",
     "/standards/ngss.json": "88eaaae45fd96c8612c5474035f9a1f6"
@@ -748,7 +748,7 @@
     "/standards/ccmath.json": "ef608aec72ecc21ff99876f1312caea7",
     "/standards/csa.json": "ef608aec72ecc21ff99876f1312caea7",
     "/standards/csp2021.json": "ef608aec72ecc21ff99876f1312caea7",
-    "/standards/csta.json": "ef608aec72ecc21ff99876f1312caea7",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "ef608aec72ecc21ff99876f1312caea7",
     "/standards/iste.json": "ef608aec72ecc21ff99876f1312caea7",
     "/standards/ngss.json": "ef608aec72ecc21ff99876f1312caea7"
@@ -761,7 +761,7 @@
     "/standards/ccmath.json": "8a0ba4dd04d965ec50354f3b02e7935b",
     "/standards/csa.json": "8a0ba4dd04d965ec50354f3b02e7935b",
     "/standards/csp2021.json": "8a0ba4dd04d965ec50354f3b02e7935b",
-    "/standards/csta.json": "8a0ba4dd04d965ec50354f3b02e7935b",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "8a0ba4dd04d965ec50354f3b02e7935b",
     "/standards/iste.json": "8a0ba4dd04d965ec50354f3b02e7935b",
     "/standards/ngss.json": "8a0ba4dd04d965ec50354f3b02e7935b"
@@ -774,7 +774,7 @@
     "/standards/ccmath.json": "3d9e65e76eb482fc5d1ca1e99da403e4",
     "/standards/csa.json": "3d9e65e76eb482fc5d1ca1e99da403e4",
     "/standards/csp2021.json": "3d9e65e76eb482fc5d1ca1e99da403e4",
-    "/standards/csta.json": "3d9e65e76eb482fc5d1ca1e99da403e4",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "3d9e65e76eb482fc5d1ca1e99da403e4",
     "/standards/iste.json": "3d9e65e76eb482fc5d1ca1e99da403e4",
     "/standards/ngss.json": "3d9e65e76eb482fc5d1ca1e99da403e4"
@@ -787,7 +787,7 @@
     "/standards/ccmath.json": "cdb60356a2392f8859192947e2db8644",
     "/standards/csa.json": "cdb60356a2392f8859192947e2db8644",
     "/standards/csp2021.json": "cdb60356a2392f8859192947e2db8644",
-    "/standards/csta.json": "cdb60356a2392f8859192947e2db8644",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "cdb60356a2392f8859192947e2db8644",
     "/standards/iste.json": "cdb60356a2392f8859192947e2db8644",
     "/standards/ngss.json": "cdb60356a2392f8859192947e2db8644"
@@ -800,7 +800,7 @@
     "/standards/ccmath.json": "c9d6adc08db744c103f21ad616ed27cb",
     "/standards/csa.json": "c9d6adc08db744c103f21ad616ed27cb",
     "/standards/csp2021.json": "c9d6adc08db744c103f21ad616ed27cb",
-    "/standards/csta.json": "c9d6adc08db744c103f21ad616ed27cb",
+    "/standards/csta.json": "d4d4a784404d848c288586b3600e0e89",
     "/standards/csta2011.json": "c9d6adc08db744c103f21ad616ed27cb",
     "/standards/iste.json": "c9d6adc08db744c103f21ad616ed27cb",
     "/standards/ngss.json": "c9d6adc08db744c103f21ad616ed27cb"
@@ -813,7 +813,7 @@
     "/standards/ccmath.json": "3de25a9c623b27f3b9712e5b61d4aac7",
     "/standards/csa.json": "3de25a9c623b27f3b9712e5b61d4aac7",
     "/standards/csp2021.json": "3de25a9c623b27f3b9712e5b61d4aac7",
-    "/standards/csta.json": "3de25a9c623b27f3b9712e5b61d4aac7",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "3de25a9c623b27f3b9712e5b61d4aac7",
     "/standards/iste.json": "3de25a9c623b27f3b9712e5b61d4aac7",
     "/standards/ngss.json": "3de25a9c623b27f3b9712e5b61d4aac7"
@@ -826,7 +826,7 @@
     "/standards/ccmath.json": "4fdb5f2e7607282c31fa86d94ffd6b07",
     "/standards/csa.json": "5bd54ac39b054991e972b8d0e207de6d",
     "/standards/csp2021.json": "5bd54ac39b054991e972b8d0e207de6d",
-    "/standards/csta.json": "4fdb5f2e7607282c31fa86d94ffd6b07",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "5bd54ac39b054991e972b8d0e207de6d",
     "/standards/iste.json": "4fdb5f2e7607282c31fa86d94ffd6b07",
     "/standards/ngss.json": "5bd54ac39b054991e972b8d0e207de6d"
@@ -839,7 +839,7 @@
     "/standards/ccmath.json": "d376dc2825ff5080edad81153c8414a0",
     "/standards/csa.json": "d376dc2825ff5080edad81153c8414a0",
     "/standards/csp2021.json": "d376dc2825ff5080edad81153c8414a0",
-    "/standards/csta.json": "d376dc2825ff5080edad81153c8414a0",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "d376dc2825ff5080edad81153c8414a0",
     "/standards/iste.json": "d376dc2825ff5080edad81153c8414a0",
     "/standards/ngss.json": "d376dc2825ff5080edad81153c8414a0"
@@ -848,11 +848,11 @@
     "/standards/ai4k12-2021.json": "564106551ade22fd52a1c170aafd6418",
     "/standards/ai4k12-2023.json": "e2c6b899b5c50092f17bb7d9117a9d30",
     "/standards/c3ss.json": "564106551ade22fd52a1c170aafd6418",
-    "/standards/ccela.json": "564106551ade22fd52a1c170aafd6418",
+    "/standards/ccela.json": "a5232d8c5c49b0c48d2125359a5771b8",
     "/standards/ccmath.json": "564106551ade22fd52a1c170aafd6418",
     "/standards/csa.json": "564106551ade22fd52a1c170aafd6418",
     "/standards/csp2021.json": "564106551ade22fd52a1c170aafd6418",
-    "/standards/csta.json": "564106551ade22fd52a1c170aafd6418",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "564106551ade22fd52a1c170aafd6418",
     "/standards/iste.json": "564106551ade22fd52a1c170aafd6418",
     "/standards/ngss.json": "564106551ade22fd52a1c170aafd6418"
@@ -865,7 +865,7 @@
     "/standards/ccmath.json": "0aa38cb544da68e5980fdee2d8f07ee0",
     "/standards/csa.json": "0aa38cb544da68e5980fdee2d8f07ee0",
     "/standards/csp2021.json": "0aa38cb544da68e5980fdee2d8f07ee0",
-    "/standards/csta.json": "0aa38cb544da68e5980fdee2d8f07ee0",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "0aa38cb544da68e5980fdee2d8f07ee0",
     "/standards/iste.json": "0aa38cb544da68e5980fdee2d8f07ee0",
     "/standards/ngss.json": "0aa38cb544da68e5980fdee2d8f07ee0"
@@ -878,7 +878,7 @@
     "/standards/ccmath.json": "b029603addbecf931c06d28b7a543ec3",
     "/standards/csa.json": "b029603addbecf931c06d28b7a543ec3",
     "/standards/csp2021.json": "b029603addbecf931c06d28b7a543ec3",
-    "/standards/csta.json": "b029603addbecf931c06d28b7a543ec3",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "b029603addbecf931c06d28b7a543ec3",
     "/standards/iste.json": "b029603addbecf931c06d28b7a543ec3",
     "/standards/ngss.json": "b029603addbecf931c06d28b7a543ec3"
@@ -891,7 +891,7 @@
     "/standards/ccmath.json": "e95db890c8fee406a08cbbd9dc0fca24",
     "/standards/csa.json": "e95db890c8fee406a08cbbd9dc0fca24",
     "/standards/csp2021.json": "e95db890c8fee406a08cbbd9dc0fca24",
-    "/standards/csta.json": "e95db890c8fee406a08cbbd9dc0fca24",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "e95db890c8fee406a08cbbd9dc0fca24",
     "/standards/iste.json": "e95db890c8fee406a08cbbd9dc0fca24",
     "/standards/ngss.json": "e95db890c8fee406a08cbbd9dc0fca24"
@@ -904,7 +904,7 @@
     "/standards/ccmath.json": "0bb40d22efa1c1c996149c7974b9d687",
     "/standards/csa.json": "0bb40d22efa1c1c996149c7974b9d687",
     "/standards/csp2021.json": "0bb40d22efa1c1c996149c7974b9d687",
-    "/standards/csta.json": "0bb40d22efa1c1c996149c7974b9d687",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "0bb40d22efa1c1c996149c7974b9d687",
     "/standards/iste.json": "0bb40d22efa1c1c996149c7974b9d687",
     "/standards/ngss.json": "0bb40d22efa1c1c996149c7974b9d687"
@@ -930,7 +930,7 @@
     "/standards/ccmath.json": "db853a4b9b0fae8e746c78d914f95264",
     "/standards/csa.json": "db853a4b9b0fae8e746c78d914f95264",
     "/standards/csp2021.json": "db853a4b9b0fae8e746c78d914f95264",
-    "/standards/csta.json": "db853a4b9b0fae8e746c78d914f95264",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "db853a4b9b0fae8e746c78d914f95264",
     "/standards/iste.json": "db853a4b9b0fae8e746c78d914f95264",
     "/standards/ngss.json": "db853a4b9b0fae8e746c78d914f95264"
@@ -943,7 +943,7 @@
     "/standards/ccmath.json": "c850b6b342fe9a527781f308a73a159f",
     "/standards/csa.json": "c850b6b342fe9a527781f308a73a159f",
     "/standards/csp2021.json": "c850b6b342fe9a527781f308a73a159f",
-    "/standards/csta.json": "c850b6b342fe9a527781f308a73a159f",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "c850b6b342fe9a527781f308a73a159f",
     "/standards/iste.json": "c850b6b342fe9a527781f308a73a159f",
     "/standards/ngss.json": "c850b6b342fe9a527781f308a73a159f"
@@ -956,7 +956,7 @@
     "/standards/ccmath.json": "d5b0060277e266c833f8cf867c9f8c85",
     "/standards/csa.json": "d5b0060277e266c833f8cf867c9f8c85",
     "/standards/csp2021.json": "d5b0060277e266c833f8cf867c9f8c85",
-    "/standards/csta.json": "d5b0060277e266c833f8cf867c9f8c85",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "d5b0060277e266c833f8cf867c9f8c85",
     "/standards/iste.json": "d5b0060277e266c833f8cf867c9f8c85",
     "/standards/ngss.json": "d5b0060277e266c833f8cf867c9f8c85"
@@ -969,7 +969,7 @@
     "/standards/ccmath.json": "d9d268073a5fc767c7753399fcbdb31c",
     "/standards/csa.json": "d9d268073a5fc767c7753399fcbdb31c",
     "/standards/csp2021.json": "d9d268073a5fc767c7753399fcbdb31c",
-    "/standards/csta.json": "d9d268073a5fc767c7753399fcbdb31c",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "d9d268073a5fc767c7753399fcbdb31c",
     "/standards/iste.json": "d9d268073a5fc767c7753399fcbdb31c",
     "/standards/ngss.json": "d9d268073a5fc767c7753399fcbdb31c"
@@ -982,7 +982,7 @@
     "/standards/ccmath.json": "bc585d4133ff4b810b8404de9d262831",
     "/standards/csa.json": "bc585d4133ff4b810b8404de9d262831",
     "/standards/csp2021.json": "bc585d4133ff4b810b8404de9d262831",
-    "/standards/csta.json": "bc585d4133ff4b810b8404de9d262831",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "bc585d4133ff4b810b8404de9d262831",
     "/standards/iste.json": "bc585d4133ff4b810b8404de9d262831",
     "/standards/ngss.json": "bc585d4133ff4b810b8404de9d262831"
@@ -995,7 +995,7 @@
     "/standards/ccmath.json": "8afa50f33d4f737ed51bfbb6b1c0be1c",
     "/standards/csa.json": "8afa50f33d4f737ed51bfbb6b1c0be1c",
     "/standards/csp2021.json": "8afa50f33d4f737ed51bfbb6b1c0be1c",
-    "/standards/csta.json": "8afa50f33d4f737ed51bfbb6b1c0be1c",
+    "/standards/csta.json": "d4d4a784404d848c288586b3600e0e89",
     "/standards/csta2011.json": "8afa50f33d4f737ed51bfbb6b1c0be1c",
     "/standards/iste.json": "8afa50f33d4f737ed51bfbb6b1c0be1c",
     "/standards/ngss.json": "8afa50f33d4f737ed51bfbb6b1c0be1c"
@@ -1008,7 +1008,7 @@
     "/standards/ccmath.json": "da7f87bda0e28f264cd12b07635c0a63",
     "/standards/csa.json": "da7f87bda0e28f264cd12b07635c0a63",
     "/standards/csp2021.json": "da7f87bda0e28f264cd12b07635c0a63",
-    "/standards/csta.json": "da7f87bda0e28f264cd12b07635c0a63",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "da7f87bda0e28f264cd12b07635c0a63",
     "/standards/iste.json": "da7f87bda0e28f264cd12b07635c0a63",
     "/standards/ngss.json": "da7f87bda0e28f264cd12b07635c0a63"
@@ -1021,7 +1021,7 @@
     "/standards/ccmath.json": "99eb4e4b4b878c7d52a06bd65ff4a3ea",
     "/standards/csa.json": "99eb4e4b4b878c7d52a06bd65ff4a3ea",
     "/standards/csp2021.json": "99eb4e4b4b878c7d52a06bd65ff4a3ea",
-    "/standards/csta.json": "99eb4e4b4b878c7d52a06bd65ff4a3ea",
+    "/standards/csta.json": "1be23d4cbeac29531ab0fcdcd7a70bd7",
     "/standards/csta2011.json": "99eb4e4b4b878c7d52a06bd65ff4a3ea",
     "/standards/iste.json": "99eb4e4b4b878c7d52a06bd65ff4a3ea",
     "/standards/ngss.json": "99eb4e4b4b878c7d52a06bd65ff4a3ea"
