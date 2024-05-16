@@ -160,39 +160,35 @@ class DatablockStorageTable < ApplicationRecord
       raise StudentFacingError.new(:MAX_ROWS_EXCEEDED), "Cannot add more than #{MAX_TABLE_ROW_COUNT} rows to a table"
     end
 
+    # We want to do as much work as possible outside of the transaction, so validate and find new columns first
+    cols_in_records = Set.new
+    record_jsons.each do |record_json|
+      raise StudentFacingError.new(:INVALID_RECORD), 'Invalid record: nested objects and arrays are not permitted' if record_json.values.any? {|v| v.is_a?(Hash) || v.is_a?(Array)}
+      raise StudentFacingError.new(:INVALID_RECORD), 'Invalid record' unless DatablockStorageRecord.new(record_json: record_json).valid?
+      cols_in_records.merge(record_json.keys)
+    end
+
     DatablockStorageRecord.transaction do
       # Because we're using a composite primary key for records: (project_id, table_name, record_id)
       # and we want an incrementing record_id unique to that (project_id, table_name), we lock
-      # the first record in a DatablockStorageTable when we begin to insert new records,
-      # and release it once we close the transaction.
-      DatablockStorageRecord.where(project_id: project_id, table_name: table_name).lock.minimum(:record_id)
+      # the table for the transaction, compute the next record_id and insert our records
+      lock!
 
-      max_record_id = DatablockStorageRecord.where(project_id: project_id, table_name: table_name).maximum(:record_id)
-      next_record_id = (max_record_id || 0) + 1
+      max_record_id = DatablockStorageRecord.where(project_id: project_id, table_name: table_name).maximum(:record_id) || 0
 
-      cols_in_records = Set.new
-      record_jsons.each do |record_json|
-        record_json.each do |_key, json_value|
-          raise StudentFacingError.new(:INVALID_RECORD), 'Invalid record: nested objects and arrays are not permitted' if json_value.is_a?(Hash) || json_value.is_a?(Array)
+      records.insert_all(
+        record_jsons.map.with_index(max_record_id + 1) do |record_json, record_id|
+          record_json['id'] = record_id
+          {project_id: project_id, table_name: table_name, record_id: record_id, record_json: record_json}
         end
-
-        # We write the record_id into the JSON as well as storing it in its own column
-        # only create_record and update_record should be at risk of modifying this
-        record_json['id'] = next_record_id
-
-        DatablockStorageRecord.create(project_id: project_id, table_name: table_name, record_id: next_record_id, record_json: record_json)
-
-        cols_in_records.merge(record_json.keys)
-        next_record_id += 1
-      end
+      )
 
       # Preserve the old column's order while adding any new columns
       self.columns += (cols_in_records - columns).to_a
       save!
-
-      # Reload association because we didn't modify records thru it
-      records.reload
     end
+
+    record_jsons
   end
 
   def update_record(record_id, record_json)
@@ -220,6 +216,11 @@ class DatablockStorageTable < ApplicationRecord
   def import_csv(table_data_csv)
     if_shared_table_copy_on_write
 
+    max_csv_size = MAX_TABLE_ROW_COUNT * DatablockStorageRecord::MAX_RECORD_LENGTH
+    if table_data_csv.bytesize > max_csv_size
+      raise StudentFacingError.new(:CSV_TOO_LARGE), "CSV is too large to import, max CSV size is #{(max_csv_size.to_f / (1024 * 1024)).round} MB"
+    end
+
     new_records = CSV.parse(table_data_csv, headers: true).map(&:to_h)
 
     # Auto-cast CSV strings on import, e.g. "5.0" => 5.0
@@ -240,6 +241,7 @@ class DatablockStorageTable < ApplicationRecord
     # import_csv should overwrite existing data:
     records.delete_all
     self.columns = ['id']
+    save!
 
     create_records(new_records)
   rescue CSV::MalformedCSVError => exception
@@ -269,7 +271,7 @@ class DatablockStorageTable < ApplicationRecord
 
     # First rename the column in all the JSON records
     records.each do |record|
-      record.record_json[new_column_name] = record.record_json.delete(old_column_name)
+      record.record_json[new_column_name] = record.record_json.delete(old_column_name) if record.record_json.key?(old_column_name)
     end
 
     # Second rename the column in the table definition
