@@ -2,12 +2,17 @@ require 'test_helper'
 
 class Services::ChildAccount::EventLoggerTest < ActiveSupport::TestCase
   setup do
-    @user = create(:non_compliant_child)
+    @user = create(:non_compliant_child, child_account_compliance_state: 'l')
   end
 
   test 'call - creates CAP user event' do
     event_name = CAP::UserEvent::ACCOUNT_LOCKING
 
+    # Simulate updating the state to 'granted'
+    @user.child_account_compliance_state = 'g'
+    @user.save
+
+    # Should record the prior and current state
     assert_creates 'CAP::UserEvent' do
       assert_attributes Services::ChildAccount::EventLogger.call(user: @user, event_name: event_name), {
         id: :not_nil,
@@ -15,6 +20,8 @@ class Services::ChildAccount::EventLoggerTest < ActiveSupport::TestCase
         name: event_name,
         policy: 'cpa',
         created_at: :not_nil,
+        state_before: 'l',
+        state_after: 'g',
       }
     end
   end
