@@ -2,6 +2,10 @@ require 'cdo/activity_constants'
 require 'policies/child_account'
 
 FactoryBot.define do
+  trait :skip_validation do
+    to_create {|instance| instance.save(validate: false)}
+  end
+
   factory :course_offering do
     sequence(:key, 'a') {|c| "bogus-course-offering-#{c}"}
     sequence(:display_name, 'a') {|c| "bogus-course-offering-#{c}"}
