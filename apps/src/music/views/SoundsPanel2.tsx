@@ -253,8 +253,9 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
     useRef(null);
 
   // Capture whether the initially-selected sound is the default sound, in which
-  // case we will do a smooth scroll into view, rather than scroll directly
-  // to the current sound.
+  // case we will do a smooth ease into view, rather than scroll directly
+  // to the current sound.  Uses useRef so that changes to this value don't trigger
+  // additional executions of the "Initial render" useEffect, below.
   const isDefaultSoundSelected = useRef(
     currentValue === library.getDefaultSound()
   );
