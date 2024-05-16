@@ -184,11 +184,16 @@ export default class MusicPlayer {
       blockId: 'preview',
       soundType: 'beat',
     };
-    this.analyticsReporter?.onSoundsPlayed(id);
-    this.audioPlayer.playSampleImmediately(
-      this.convertEventToSamples(preview)[0],
-      onStop
+    const sampleEvent = this.convertEventToSamples(preview)[0];
+    const library = MusicLibrary.getInstance();
+    if (!library) {
+      this.metricsReporter.logWarning('Library not set. Cannot play sounds.');
+      return [];
+    }
+    this.analyticsReporter?.onSoundsPlayed(
+      library.getSoundIdFromUrl(sampleEvent.sampleUrl)
     );
+    this.audioPlayer.playSampleImmediately(sampleEvent, onStop);
   }
 
   previewChord(chordValue: ChordEventValue, onStop?: () => void) {

@@ -188,11 +188,13 @@ export default class MusicLibrary {
     return `${baseUrl}${this.libraryJson.path}/${folder.path}/${optionalSoundPath}${soundData.src}.mp3`;
   }
 
+  // Return the sound ID from a sound URL, i.e., the <folder.path>/<optionalSoundPath>/soundData.src>
   getSoundIdFromUrl(soundUrl: string): string {
-    const soundUrlParts = soundUrl.split('/');
-    const source = soundUrlParts[soundUrlParts.length - 1].slice(0, -4);
-    const folder = soundUrlParts[soundUrlParts.length - 2];
-    return `${folder}/${source}`;
+    // The sound URL's libraryJson.path ends with 'packs'.
+    const packs = 'packs/';
+    const folderIndex = soundUrl.indexOf(packs) + packs.length;
+    // Also remove the '.mp3' at the end of the URL.
+    return soundUrl.substring(folderIndex, soundUrl.length - 4);
   }
 
   getAvailableSounds() {

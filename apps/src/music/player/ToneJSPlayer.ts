@@ -233,7 +233,7 @@ class ToneJSPlayer implements AudioPlayer {
     this.generateEffectBusses();
   }
 
-  scheduleSample(sample: SampleEvent, reportCallback: (id: string) => void) {
+  scheduleSample(sample: SampleEvent, onSampleStart: (id: string) => void) {
     const buffer = this.soundCache.getSound(sample.sampleUrl);
     if (!buffer) {
       this.metricsReporter.logWarning(
@@ -262,11 +262,11 @@ class ToneJSPlayer implements AudioPlayer {
     this.activePlayers.push(player);
     const library = MusicLibrary.getInstance();
     if (!library) {
-      return null;
+      return;
     }
     // Schedule a callback to report the sound ID after the sound has been played.
     Transport.scheduleOnce(() => {
-      reportCallback(library.getSoundIdFromUrl(sample.sampleUrl));
+      onSampleStart(library.getSoundIdFromUrl(sample.sampleUrl));
     }, this.playbackTimeToTransportTime(sample.playbackPosition));
   }
 

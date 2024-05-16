@@ -52,7 +52,10 @@ export interface AudioPlayer {
   cancelPreviews(): void;
 
   /** Schedule a sample to played */
-  scheduleSample(sample: SampleEvent, callback: (id: string) => void): void;
+  scheduleSample(
+    sample: SampleEvent,
+    onSampleStart: (id: string) => void
+  ): void;
 
   /** Schedule a sampler sequence to be played */
   scheduleSamplerSequence(sequence: SamplerSequence): void;
