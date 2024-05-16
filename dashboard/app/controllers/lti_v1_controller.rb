@@ -197,7 +197,7 @@ class LtiV1Controller < ApplicationController
         PartialRegistration.persist_attributes(session, user)
         session[:user_return_to] = destination_url
         if DCDO.get('lti_account_linking_enabled', false)
-          redirect_to lti_v1_account_linking_landing_path, lti_provider: integration[:platform_name] and return
+          redirect_to lti_v1_account_linking_landing_path lti_provider: integration[:platform_name] and return
         end
         redirect_to new_user_registration_url
       end
