@@ -44,4 +44,4 @@ Scenario Outline: Dragging play sound block
 Examples:
   | url                                                       | test_name               |
   | http://studio.code.org/s/allthethings/lessons/46/levels/4 | music lab script level  |
-  | http://studio.code.org/projects/music/new                 | music lab incubator     |
+  | http://studio.code.org/projects/music/new                 | music lab project       |
