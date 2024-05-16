@@ -86,7 +86,6 @@ const FunctionExtentsSimple2: React.FunctionComponent<
 
   return (
     <div
-      key={index}
       style={{
         position: 'absolute',
         backgroundColor:
