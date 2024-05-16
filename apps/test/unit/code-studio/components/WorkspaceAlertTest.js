@@ -1,6 +1,6 @@
 import React from 'react';
 import {expect} from '../../../util/reconfiguredChai';
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
 import $ from 'jquery';
 import sinon from 'sinon';

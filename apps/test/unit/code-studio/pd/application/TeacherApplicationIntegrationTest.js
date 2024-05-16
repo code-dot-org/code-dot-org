@@ -1,6 +1,6 @@
 import React from 'react';
 import {expect} from 'chai';
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import sinon from 'sinon';
 import {PageLabels} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import TeacherApplication from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplication';
