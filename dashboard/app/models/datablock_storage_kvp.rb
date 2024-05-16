@@ -46,7 +46,7 @@ class DatablockStorageKvp < ApplicationRecord
       DatablockStorageKvp.insert_all(kvps)
     end
   rescue ActiveRecord::ValueTooLong
-    raise StudentFacingError.new(:MAX_KEY_LENGTH_EXCEEDED), "The key is too large, it must be shorter than #{columns_hash['key'].limit} characters ('bytes')"
+    raise StudentFacingError.new(:MAX_KEY_LENGTH_EXCEEDED), "The key is too large, it must be shorter than #{columns_hash['key'].limit} bytes ('characters')"
   end
 
   def self.set_kvp(project_id, key, value)
@@ -67,7 +67,7 @@ class DatablockStorageKvp < ApplicationRecord
 
   private def max_value_length
     if value.to_json.bytesize > MAX_VALUE_LENGTH
-      raise StudentFacingError.new(:MAX_VALUE_LENGTH_EXCEEDED), "The value is too large, it must be shorter than #{MAX_VALUE_LENGTH} characters ('bytes')"
+      raise StudentFacingError.new(:MAX_VALUE_LENGTH_EXCEEDED), "The value is too large, it must be shorter than #{MAX_VALUE_LENGTH} bytes ('characters')"
     end
   end
 end
