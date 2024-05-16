@@ -86,6 +86,7 @@ const FunctionExtentsSimple2: React.FunctionComponent<
 
   return (
     <div
+      key={index}
       style={{
         position: 'absolute',
         backgroundColor:
@@ -116,9 +117,6 @@ interface TimelineSimple2EventsProps {
 const TimelineSimple2Events: React.FunctionComponent<
   TimelineSimple2EventsProps
 > = ({paddingOffset, barWidth, eventVerticalSpace, getEventHeight}) => {
-  const uniqueExecutionId = useMusicSelector(
-    state => state.music.uniqueExecutionId
-  );
   const soundEvents = useMusicSelector(state => state.music.playbackEvents);
   const orderedFunctions = useMusicSelector(
     state => state.music.orderedFunctions
@@ -175,7 +173,7 @@ const TimelineSimple2Events: React.FunctionComponent<
       <div id="timeline-events-function-extents">
         {uniqueFunctionExtentsArray.map((functionExtents, index) => (
           <FunctionExtentsSimple2
-            key={uniqueExecutionId + '-' + index}
+            key={index}
             index={index}
             paddingOffset={paddingOffset}
             barWidth={barWidth}
@@ -187,7 +185,7 @@ const TimelineSimple2Events: React.FunctionComponent<
       <div id="timeline-events-sound-events">
         {soundEvents.map((eventData, index) => (
           <TimelineElement
-            key={uniqueExecutionId + '-' + index}
+            key={index}
             eventData={eventData}
             barWidth={barWidth}
             height={eventHeight - eventVerticalSpace - 1}

@@ -30,7 +30,6 @@ import {
   setUndoStatus,
   showCallout,
   clearCallout,
-  updateUniqueExecutionId,
   setSelectedTriggerId,
   clearSelectedTriggerId,
 } from '../redux/musicRedux';
@@ -108,7 +107,6 @@ class UnconnectedMusicView extends React.Component {
     setUndoStatus: PropTypes.func,
     showCallout: PropTypes.func,
     clearCallout: PropTypes.func,
-    updateUniqueExecutionId: PropTypes.func,
     isPlayView: PropTypes.bool,
   };
 
@@ -453,8 +451,6 @@ class UnconnectedMusicView extends React.Component {
           this.musicBlocklyWorkspace.getAllBlocks()
         );
       }
-
-      this.props.updateUniqueExecutionId();
     }
 
     if (e.type === Blockly.Events.SELECTED) {
@@ -742,7 +738,6 @@ const MusicView = connect(
     setUndoStatus: value => dispatch(setUndoStatus(value)),
     showCallout: id => dispatch(showCallout(id)),
     clearCallout: id => dispatch(clearCallout()),
-    updateUniqueExecutionId: () => dispatch(updateUniqueExecutionId()),
   })
 )(UnconnectedMusicView);
 
