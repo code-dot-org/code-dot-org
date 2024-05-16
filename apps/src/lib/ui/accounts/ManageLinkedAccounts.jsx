@@ -75,10 +75,14 @@ class ManageLinkedAccounts extends React.Component {
     return true;
   };
 
+  // Disable the connect button when all conditions apply:
+  // - We consider the login type a 'personal login'
+  // - It isn't already connected (it doesn't have an id/email assigned)
+  // - We have personal account linking disabled
   shouldDisableConnectButton = authOption => {
     return (
       PERSONAL_LOGIN_TYPES.includes(authOption.credentialType) &&
-      !this.formatEmail(authOption) &&
+      !authOption.id &&
       !this.props.personalAccountLinkingEnabled
     );
   };
@@ -108,6 +112,12 @@ class ManageLinkedAccounts extends React.Component {
     if (this.shouldDisableConnectButton(authOption)) {
       return CONNECT_DISABLED_STATUS.PARENTAL_PERMISSION_REQUIRED;
     }
+  };
+
+  disabledStatus = authOption => {
+    return authOption.id
+      ? this.disconnectDisabledStatus(authOption)
+      : this.connectDisabledStatus(authOption);
   };
 
   getDisplayName = provider => {
@@ -161,11 +171,7 @@ class ManageLinkedAccounts extends React.Component {
         id={authOption.id}
         email={this.formatEmail(authOption)}
         credentialType={authOption.credentialType}
-        disabledStatus={
-          authOption.id
-            ? this.disconnectDisabledStatus(authOption)
-            : this.connectDisabledStatus(authOption)
-        }
+        disabledStatus={this.disabledStatus(authOption)}
         error={authOption.error}
         personalAccountLinkingEnabled={this.props.personalAccountLinkingEnabled}
       />
@@ -173,9 +179,10 @@ class ManageLinkedAccounts extends React.Component {
   };
 
   render() {
-    const lockedOptions = this.formatAuthOptions().filter(option => {
-      return this.shouldDisableConnectButton(option);
-    });
+    const [lockedOptions, unlockedOptions] = _.partition(
+      this.formatAuthOptions(),
+      this.shouldDisableConnectButton
+    );
     return (
       <div style={styles.container}>
         <hr />
@@ -196,11 +203,7 @@ class ManageLinkedAccounts extends React.Component {
           </thead>
           <tbody>
             {/* The options that are always available. */}
-            {this.formatAuthOptions()
-              .filter(option => {
-                return !this.shouldDisableConnectButton(option);
-              })
-              .map(this.renderAuthOption)}
+            {unlockedOptions.map(this.renderAuthOption)}
           </tbody>
         </table>
         {lockedOptions.length > 0 && (
