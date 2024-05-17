@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.5.2](https://github.com/code-dot-org/code-dot-org/pull/58469)
+* added support of all `aria-` attributes by `SimpleDropdown` component
+
 ## [0.5.1](https://github.com/code-dot-org/code-dot-org/pull/58209)
 * minor story update
 

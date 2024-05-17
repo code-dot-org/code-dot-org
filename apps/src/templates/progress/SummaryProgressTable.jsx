@@ -1,11 +1,13 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
+
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
+
+import {lessonIsVisible} from './progressHelpers';
 import {groupedLessonsType} from './progressTypes';
 import SummaryProgressRow, {styles as rowStyles} from './SummaryProgressRow';
-import {connect} from 'react-redux';
-import {lessonIsVisible} from './progressHelpers';
 
 class SummaryProgressTable extends React.Component {
   static propTypes = {

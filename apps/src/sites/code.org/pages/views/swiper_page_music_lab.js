@@ -8,12 +8,6 @@ import {register} from 'swiper/element/bundle';
 // register Swiper custom elements
 register();
 
-const swiperQuotes = document.querySelector(
-  'swiper-container.music-lab-quotes'
-);
-// TODO - Show this when the video section is added to the page
-// const swiperVideos = document.querySelector('swiper-container.music-lab-videos');
-
 const commonParams = {
   pagination: {
     clickable: true,
@@ -42,19 +36,18 @@ const quotesParams = {
   },
 };
 
-// TODO - Show this when the video section is added to the page
-// const videosParams = {
-//   ...commonParams,
-//   autoHeight: false,
-//   // Responsive breakpoints
-//   breakpoints: {
-//     // when window width is >= 768px
-//     768: {
-//       slidesPerView: 2,
-//       slidesPerGroup: 2,
-//     },
-//   },
-// };
+const videosParams = {
+  ...commonParams,
+  autoHeight: false,
+  // Responsive breakpoints
+  breakpoints: {
+    // when window width is >= 768px
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+    },
+  },
+};
 
 const setSwiperParams = (swiper, params) => {
   Object.assign(swiper, params);
@@ -62,9 +55,14 @@ const setSwiperParams = (swiper, params) => {
 };
 
 const swipers = [
-  {swiper: swiperQuotes, params: quotesParams},
-  // TODO - Show this when the video section is added to the page
-  // {swiper: swiperVideos, params: videosParams},
+  {
+    swiper: document.querySelector('swiper-container.music-lab-quotes'),
+    params: quotesParams,
+  },
+  {
+    swiper: document.querySelector('swiper-container.music-lab-videos'),
+    params: videosParams,
+  },
 ];
 
 swipers.forEach(({swiper, params}) => setSwiperParams(swiper, params));

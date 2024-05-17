@@ -45,8 +45,16 @@ export interface AudioPlayer {
     onStop?: () => void
   ): Promise<void>;
 
-  /** Play a sequence of notes immediately (used for previews) */
-  playSequenceImmediately(sequence: SamplerSequence): Promise<void>;
+  /**
+   * Play a sequence of notes immediately (used for previews)
+   * @param onTick Callback to call each interval of the sequence (assumed to be a 16th note)
+   * @param onStop Callback to call when the sequence is done playing
+   */
+  playSequenceImmediately(
+    sequence: SamplerSequence,
+    onTick?: (tick: number) => void,
+    onStop?: () => void
+  ): Promise<void>;
 
   /** Cancel active previews */
   cancelPreviews(): void;

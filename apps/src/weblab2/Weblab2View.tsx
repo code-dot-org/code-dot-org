@@ -7,7 +7,6 @@ import {Config} from './Config';
 import {Codebridge} from '@codebridge/Codebridge';
 import {ConfigType, ProjectType} from '@codebridge/types';
 
-import {Editor as CDOEditor} from '@codebridge/Editor';
 import {html} from '@codemirror/lang-html';
 import {LanguageSupport} from '@codemirror/language';
 import {css} from '@codemirror/lang-css';
@@ -19,31 +18,25 @@ const weblabLangMapping: {[key: string]: LanguageSupport} = {
   css: css(),
 };
 
-const DefaultEditorComponent = () =>
-  CDOEditor(weblabLangMapping, ['html', 'css']);
-
 const horizontalLayout = {
-  gridLayoutRows: '32px 300px auto',
+  gridLayoutRows: '300px auto',
   gridLayoutColumns: '300px auto auto',
-  gridLayout: `    "instructions file-tabs preview-container"
-      "instructions editor preview-container"
-      "file-browser editor preview-container"`,
+  gridLayout: `    "instructions workspace preview-container"
+      "file-browser workspace preview-container"`,
 };
 
 const verticalLayout = {
-  gridLayoutRows: '32px 300px auto auto',
+  gridLayoutRows: '300px auto auto',
   gridLayoutColumns: '300px auto',
-  gridLayout: `    "instructions file-tabs file-tabs"
-      "instructions editor editor"
-      "file-browser editor editor"
+  gridLayout: `    "instructions workspace workspace"
+      "file-browser workspace workspace"
       "file-browser preview-container preview-container"`,
 };
 
 const defaultConfig: ConfigType = {
   activeLeftNav: 'Files',
-  EditorComponent: DefaultEditorComponent,
-  // editableFileTypes: ["html"],
-  // previewFileTypes: ["html"],
+  languageMapping: weblabLangMapping,
+  editableFileTypes: ['html', 'css'],
   leftNav: [
     {
       icon: 'fa-square-check',
@@ -152,7 +145,7 @@ const defaultProject: ProjectSources = {source: defaultSource};
 
 const Weblab2View = () => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const {source, setSource} = useSource(defaultProject);
+  const {source, setSource, resetToStartSource} = useSource(defaultProject);
   const [showConfig, setShowConfig] = useState<
     'project' | 'config' | 'layout' | ''
   >('');
@@ -195,6 +188,7 @@ const Weblab2View = () => {
             config={config}
             setProject={setSource}
             setConfig={setConfig}
+            resetProject={resetToStartSource}
           />
         )}
 
@@ -208,8 +202,6 @@ const Weblab2View = () => {
               if (configName === 'project') {
                 setSource(newConfig as ProjectType);
               } else if (configName === 'config' || configName === 'layout') {
-                (newConfig as ConfigType).EditorComponent =
-                  DefaultEditorComponent;
                 setConfig(newConfig as ConfigType);
               }
               setShowConfig('');

@@ -45,6 +45,7 @@ const lessonData = [
     lockable: false,
     levels: [
       {
+        id: '101',
         ids: ['2106'],
         activeId: '2106',
         position: 1,
@@ -63,6 +64,7 @@ const lessonData = [
         path: '/s/course3/lessons/1/levels/1',
       },
       {
+        id: '102',
         ids: ['323'],
         activeId: '323',
         position: 2,
@@ -81,6 +83,7 @@ const lessonData = [
         path: '/s/course3/lessons/1/levels/2',
       },
       {
+        id: '103',
         ids: ['322'],
         activeId: '322',
         position: 3,
@@ -93,11 +96,32 @@ const lessonData = [
         is_concept_level: false,
         bonus: true,
         display_as_unplugged: false,
-        sublevels: [],
         app: 'maze',
         uses_lab2: false,
         is_validated: false,
         path: '/s/course3/lessons/1/levels/3',
+        sublevels: [
+          {
+            id: '10301',
+            position: 1,
+            icon: null,
+            url: 'http://localhost-studio.code.org:3000/s/course3/lessons/1/levels/3/sublevel/1',
+            path: 's/course3/lessons/1/levels/3/sublevel/1',
+            uses_lab2: false,
+            type: 'maze',
+            letter: 'a',
+          },
+          {
+            id: '10302',
+            position: 2,
+            icon: null,
+            url: 'http://localhost-studio.code.org:3000/s/course3/lessons/1/levels/3/sublevel/2',
+            path: 's/course3/lessons/1/levels/3/sublevel/2',
+            uses_lab2: false,
+            type: 'maze',
+            letter: 'b',
+          },
+        ],
       },
     ],
     lesson_plan_html_url:
@@ -120,6 +144,7 @@ const lessonData = [
     lockable: false,
     levels: [
       {
+        id: '201',
         ids: ['330'],
         activeId: '330',
         position: 1,
@@ -138,6 +163,7 @@ const lessonData = [
         path: '/s/course3/lessons/2/levels/1',
       },
       {
+        id: '202',
         ids: ['339'],
         activeId: '339',
         position: 2,
@@ -155,6 +181,7 @@ const lessonData = [
         path: '/s/course3/lessons/2/levels/2',
       },
       {
+        id: '203',
         ids: ['341'],
         activeId: '341',
         position: 3,
@@ -619,6 +646,8 @@ describe('progressReduxTest', () => {
             isValidated: true,
             canHaveFeedback: undefined,
             path: '/s/course3/lessons/1/levels/1',
+            scriptLevelId: '101',
+            parentLevelId: undefined,
           },
           {
             id: '323',
@@ -645,6 +674,8 @@ describe('progressReduxTest', () => {
             isValidated: true,
             canHaveFeedback: undefined,
             path: '/s/course3/lessons/1/levels/2',
+            scriptLevelId: '102',
+            parentLevelId: undefined,
           },
           {
             id: '322',
@@ -664,13 +695,72 @@ describe('progressReduxTest', () => {
             paired: undefined,
             isLocked: false,
             bonus: true,
-            sublevels: [],
             teacherFeedbackReviewState: null,
             app: 'maze',
             usesLab2: false,
             isValidated: false,
             canHaveFeedback: undefined,
             path: '/s/course3/lessons/1/levels/3',
+            scriptLevelId: '103',
+            parentLevelId: undefined,
+            sublevels: [
+              {
+                id: '10301',
+                url: 'http://localhost-studio.code.org:3000/s/course3/lessons/1/levels/3/sublevel/1',
+                name: undefined,
+                app: undefined,
+                usesLab2: false,
+                progression: undefined,
+                progressionDisplayName: undefined,
+                kind: undefined,
+                icon: null,
+                isCurrentLevel: false,
+                isLocked: false,
+                isUnplugged: undefined,
+                levelNumber: 1,
+                bubbleText: 'a',
+                isConceptLevel: undefined,
+                isValidated: undefined,
+                canHaveFeedback: undefined,
+                bonus: undefined,
+                pageNumber: -1,
+                paired: undefined,
+                status: 'not_tried',
+                scriptLevelId: undefined,
+                sublevels: undefined,
+                teacherFeedbackReviewState: null,
+                path: 's/course3/lessons/1/levels/3/sublevel/1',
+                parentLevelId: '322',
+              },
+              {
+                id: '10302',
+                url: 'http://localhost-studio.code.org:3000/s/course3/lessons/1/levels/3/sublevel/2',
+                name: undefined,
+                app: undefined,
+                usesLab2: false,
+                progression: undefined,
+                progressionDisplayName: undefined,
+                kind: undefined,
+                icon: null,
+                isCurrentLevel: false,
+                isLocked: false,
+                isUnplugged: undefined,
+                levelNumber: 2,
+                bubbleText: 'b',
+                isConceptLevel: undefined,
+                isValidated: undefined,
+                canHaveFeedback: undefined,
+                bonus: undefined,
+                pageNumber: -1,
+                paired: undefined,
+                status: 'not_tried',
+                scriptLevelId: undefined,
+                sublevels: undefined,
+                teacherFeedbackReviewState: null,
+                path: 's/course3/lessons/1/levels/3/sublevel/2',
+                parentLevelId: '322',
+              },
+            ],
           },
         ],
         [
@@ -699,6 +789,8 @@ describe('progressReduxTest', () => {
             isValidated: true,
             canHaveFeedback: undefined,
             path: '/s/course3/lessons/2/levels/1',
+            scriptLevelId: '201',
+            parentLevelId: undefined,
           },
           {
             id: '339',
@@ -725,6 +817,8 @@ describe('progressReduxTest', () => {
             isValidated: false,
             canHaveFeedback: undefined,
             path: '/s/course3/lessons/2/levels/2',
+            scriptLevelId: '202',
+            parentLevelId: undefined,
           },
           {
             id: '341',
@@ -751,6 +845,8 @@ describe('progressReduxTest', () => {
             isValidated: false,
             canHaveFeedback: undefined,
             path: '/s/course3/lessons/2/levels/3',
+            scriptLevelId: '203',
+            parentLevelId: undefined,
           },
         ],
       ];
@@ -846,6 +942,42 @@ describe('progressReduxTest', () => {
         'third level is not current'
       );
     });
+  });
+
+  it('correctly sets isCurrentLevel if current level is a sublevel', () => {
+    const initializedState = {
+      ...reducer(undefined, initProgress(initialUnitOverviewProgress)),
+      currentLevelId: lessonData[0].levels[2].sublevels[0].id,
+    };
+
+    const lessonId = lessonData[0].id;
+    const levels = levelsForLessonId(initializedState, lessonId);
+
+    assert.strictEqual(
+      levels[0].isCurrentLevel,
+      false,
+      'first level is not current'
+    );
+    assert.strictEqual(
+      levels[1].isCurrentLevel,
+      false,
+      'second level is not current'
+    );
+    assert.strictEqual(
+      levels[2].isCurrentLevel,
+      false,
+      'third level is not current'
+    );
+    assert.strictEqual(
+      levels[2].sublevels[0].isCurrentLevel,
+      true,
+      'first sublevel of first level is current'
+    );
+    assert.strictEqual(
+      levels[2].sublevels[1].isCurrentLevel,
+      false,
+      'second sublevel of first level is not current'
+    );
   });
 
   describe('progressionsFromLevels', () => {
@@ -1390,7 +1522,7 @@ describe('progressReduxTest', () => {
       });
     });
 
-    it('requests user progress and dispatches appropriate actions', () => {
+    it('requests user progress and dispatches appropriate actions (default)', () => {
       const responseData = {
         isVerifiedInstructor: true,
         teacherViewingStudent: true,
@@ -1403,7 +1535,7 @@ describe('progressReduxTest', () => {
         current_lesson: 1,
       };
       serverResponse(responseData);
-      const promise = userProgressFromServer(state, dispatch, 1);
+      const promise = userProgressFromServer(state, dispatch, 1, true);
       server.respond();
 
       const expectedDispatchActions = [
@@ -1415,6 +1547,39 @@ describe('progressReduxTest', () => {
         'progress/setScriptCompleted',
         'progress/setScriptProgress',
         'progress/mergeResults',
+        'progress/mergePeerReviewProgress',
+        'progress/setCurrentLessonId',
+      ];
+      return promise.then(serverResponseData => {
+        assert.deepEqual(expectedDispatchActions, getDispatchActions());
+        assert.deepEqual(responseData, serverResponseData);
+      });
+    });
+
+    it('requests user progress and dispatches appropriate actions (no merge)', () => {
+      const responseData = {
+        isVerifiedInstructor: true,
+        teacherViewingStudent: true,
+        deeperLearningCourse: false,
+        focusAreaLessonIds: [1, 2],
+        lockableAuthorized: true,
+        completed: true,
+        progress: {},
+        peerReviewsPerformed: true,
+        current_lesson: 1,
+      };
+      serverResponse(responseData);
+      const promise = userProgressFromServer(state, dispatch, 1, false);
+      server.respond();
+
+      const expectedDispatchActions = [
+        'progress/clearResults',
+        'verifiedInstructor/SET_VERIFIED',
+        'progress/setIsSummaryView',
+        'progress/updateFocusArea',
+        'lessonLock/AUTHORIZE_LOCKABLE',
+        'progress/setScriptCompleted',
+        'progress/setScriptProgress',
         'progress/mergePeerReviewProgress',
         'progress/setCurrentLessonId',
       ];

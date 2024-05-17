@@ -65,8 +65,8 @@
             {
               "type": "rating",
               "name": "teaching_with_ai_pl_tutor_teaching_cs",
-              "title": "How likely are you to use an AI-assisted tool to enhance your computer science teaching practices?",
-              "description": "This AI-assisted tool would assist with lesson planning, offer guidance for differentiation, and suggest activities and assessments relevant to the computer science concepts you are teaching.",
+              "title": "How likely are you to use an AI-assisted professional learning coaching tool to support and guide your professional development and ultimately enhance your computer science teaching practices?",
+              "description": "This AI-assisted professional learning coaching tool would support your professional development by offering customized guidance for lesson planning, differentiation, and suggesting activities and assessments relevant to the computer science concepts you are teaching.",
               "rateCount": 7,
               "rateMax": 7,
               "minRateDescription": "Not Likely At All",
@@ -76,7 +76,7 @@
               "type": "checkbox",
               "name": "teaching_with_ai_pl_tutor_teaching_cs_reasons",
               "visibleIf": "{teaching_with_ai_pl_tutor_teaching_cs} < 5",
-              "title": "Please share the reasons why you wouldn't use an AI-assisted tool to enhance your computer science teaching practices.",
+              "title": "Please share the reasons why you wouldn't use an AI-assisted professional learning coaching tool to enhance your computer science teaching practices.",
               "description": "(Please select all that apply)",
               "choices": [
                 {
@@ -105,13 +105,13 @@
               "type": "text",
               "name": "teaching_with_ai_pl_tutor_teaching_cs_reasons_other_comment",
               "visibleIf": "{teaching_with_ai_pl_tutor_teaching_cs_reasons} contains 'other'",
-              "title": "Please share what are some other reasons why you wouldn't use an AI-assisted tool to enhance your computer science teaching practices."
+              "title": "Please share what are some other reasons why you wouldn't use an AI-assisted professional learning coaching tool to enhance your computer science teaching practices."
             },
             {
               "type": "rating",
               "name": "teaching_with_ai_pl_tutor_learn_cs",
-              "title": "How likely are you to use an AI-assisted tool to guide and support your learning of computer science while you teach?",
-              "description": "This would be an AI-assisted tool to enhance your learning and understanding of the computer science concepts you are teaching.",
+              "title": "How likely are you to use an AI-assisted professional learning coaching tool to guide and support your learning of computer science while you teach?",
+              "description": "This would be an AI-assisted professional learning coaching tool to enhance your learning and understanding of the computer science concepts you are teaching.",
               "rateCount": 7,
               "rateMax": 7,
               "minRateDescription": "Not Likely At All",
@@ -121,7 +121,7 @@
               "type": "checkbox",
               "name": "teaching_with_ai_pl_tutor_learn_cs_reasons",
               "visibleIf": "{teaching_with_ai_pl_tutor_learn_cs} < 5",
-              "title": "Please share the reasons why you wouldn't use an AI-assisted tool to enhance your learning and understanding of the computer science concepts you are teaching.",
+              "title": "Please share the reasons why you wouldn't use an AI-assisted professional learning coaching tool to support your computer science learning.",
               "description": "(Please select all that apply)",
               "choices": [
                 {
@@ -150,7 +150,7 @@
               "type": "text",
               "name": "teaching_with_ai_pl_tutor_learn_cs_reasons_other_comment",
               "visibleIf": "{teaching_with_ai_pl_tutor_learn_cs_reasons} contains 'other'",
-              "title": "Please share what are some other reasons why you wouldn't use an AI-assisted tool to enhance your learning and understanding of the computer science concepts you are teaching."
+              "title": "Please share what are some other reasons why you wouldn't use an AI-assisted professional learning coaching tool to enhance your learning and understanding of the computer science concepts you are teaching."
             },
             {
               "type": "rating",

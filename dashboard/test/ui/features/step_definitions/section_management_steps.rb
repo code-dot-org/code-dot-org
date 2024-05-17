@@ -344,9 +344,9 @@ Then /^I create a new code review group for the section I saved$/ do
   GHERKIN
 end
 
-And /^I navigate to the V2 progress dashboard$/ do
+And /^I navigate to the V2 progress dashboard for "([^"]+)"$/ do |section_name|
   steps <<-GHERKIN
-    When I click selector "a:contains(Untitled Section)" once I see it to load a new page
+    When I click selector "a:contains(#{section_name})" once I see it to load a new page
     And I wait until element "#uitest-teacher-dashboard-nav" is visible
     And check that the URL contains "/teacher_dashboard/sections/"
     And I wait until element "#uitest-course-dropdown" is visible

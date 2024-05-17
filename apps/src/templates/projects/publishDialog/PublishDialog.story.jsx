@@ -1,5 +1,6 @@
-import React from 'react';
 import {action} from '@storybook/addon-actions';
+import React from 'react';
+
 import {UnconnectedPublishDialog as PublishDialog} from './PublishDialog';
 
 const PROJECT_ID = 'MY_PROJECT_ID';
