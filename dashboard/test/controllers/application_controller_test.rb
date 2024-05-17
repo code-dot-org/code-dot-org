@@ -40,6 +40,9 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
       [:non_compliant_child, :with_interpolated_co],
       [:non_compliant_child, :with_interpolated_colorado],
       [:non_compliant_child, :with_interpolated_wa],
+      # P20-939 - regression where accounts were allowed to be created without
+      # setting a US State
+      [:non_compliant_child, {us_state: nil}],
     ].each do |traits|
       user = create(*traits)
       sign_in user
