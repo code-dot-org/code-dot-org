@@ -2073,6 +2073,7 @@
       heading: "Teach Music Lab in your Classroom"
       desc: "Use our Music Lab tutorial to unleash your students' musical creativity, combining the joy of music with the principles of coding."
       button: "Start tutorial"
+      english_only: "Available in English only"
     additional_resources:
       heading: "Additional resources"
       catalog:
