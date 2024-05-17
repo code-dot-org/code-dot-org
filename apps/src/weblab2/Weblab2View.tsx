@@ -1,3 +1,5 @@
+// Making sure that css is first so that it is imported for other classes.
+// This might not be necessary.
 import './styles/Weblab2View.css'; // eslint-disable-line import/order
 
 import {Codebridge} from '@codebridge/Codebridge';
