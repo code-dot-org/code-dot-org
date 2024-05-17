@@ -5,6 +5,7 @@ description 'Pick a level and sort the items on screen. Then, find a partner who
 sublevels
 level 'sorting_items_free_play'
 level 'sorting_items_free_play_2'
+level 'sorting_items_free_play_3'
 
 
 
