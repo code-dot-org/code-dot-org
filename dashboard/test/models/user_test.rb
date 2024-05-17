@@ -5339,7 +5339,7 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 'WA', student.us_state
   end
 
-  test 'bad state value does not prevent other updates' do
+  test 'invalid state value does not prevent other updates' do
     student = create :student, country_code: 'US', us_state: 'DC', age: 10
     student.update_attribute(:us_state, 'Washington D.C.') # bypass validation
 
