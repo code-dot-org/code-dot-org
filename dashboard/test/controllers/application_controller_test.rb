@@ -37,6 +37,9 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
       [:non_compliant_child, :not_U13],
       [:non_compliant_child, :without_parent_permission, :google_sso_provider],
       [:non_compliant_child, :migrated_imported_from_clever, :with_google_authentication_option],
+      [:non_compliant_child, :with_interpolated_co],
+      [:non_compliant_child, :with_interpolated_colorado],
+      [:non_compliant_child, :with_interpolated_wa],
     ].each do |traits|
       user = create(*traits)
       sign_in user

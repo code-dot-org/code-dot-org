@@ -41,6 +41,9 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       [[:non_compliant_child, :with_pending_parent_permission, {created_at: '2023-07-01T00:00:00Z'}], true],
       [[:non_compliant_child, :with_pending_parent_permission, {created_at: '2024-05-18T00:00:00Z'}], false],
       [[:non_compliant_child, :skip_validation, {birthday: nil}], true],
+      [[:non_compliant_child, :with_interpolated_co], true],
+      [[:non_compliant_child, :with_interpolated_colorado], true],
+      [[:non_compliant_child, :with_interpolated_wa], true],
     ]
     test_matrix.each do |traits, compliance|
       user = create(*traits)

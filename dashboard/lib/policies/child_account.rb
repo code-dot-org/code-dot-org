@@ -100,6 +100,9 @@ class Policies::ChildAccount
   end
 
   private_class_method def self.state_policy(user)
+    # If the country_code is not set, then us_state value was inherited
+    # from the teacher and we don't trust it.
+    return unless user.country_code
     return unless user.us_state
     STATE_POLICY[user.us_state]
   end

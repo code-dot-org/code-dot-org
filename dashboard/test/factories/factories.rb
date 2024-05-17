@@ -411,6 +411,21 @@ FactoryBot.define do
         birthday {Time.zone.today - 13.years}
       end
 
+      trait :with_interpolated_co do
+        us_state {'CO'}
+        country_code {nil}
+      end
+
+      trait :with_interpolated_wa do
+        us_state {'wa'}
+        country_code {nil}
+      end
+
+      trait :with_interpolated_colorado do
+        us_state {'Colorado'}
+        country_code {nil}
+      end
+
       trait :with_parent_permission do
         child_account_compliance_state {Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED}
         child_account_compliance_state_last_updated {DateTime.now}
