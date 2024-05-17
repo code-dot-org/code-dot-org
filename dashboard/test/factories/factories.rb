@@ -441,8 +441,15 @@ FactoryBot.define do
         child_account_compliance_state_last_updated {DateTime.now}
       end
 
-      factory :non_compliant_child, traits: [:U13, :in_colorado] do
-        created_at {'2024-05-18T00:00:00Z'}
+      trait :before_p20_937_exception_date do
+        created_at {Policies::ChildAccount::CPA_CREATED_AT_EXCEPTION_DATE - 1.second}
+      end
+
+      trait :p20_937_exception_date do
+        created_at {Policies::ChildAccount::CPA_CREATED_AT_EXCEPTION_DATE}
+      end
+
+      factory :non_compliant_child, traits: [:U13, :in_colorado, :p20_937_exception_date] do
         factory :locked_out_child do
           child_account_compliance_state {Policies::ChildAccount::ComplianceState::LOCKED_OUT}
           child_account_compliance_state_last_updated {DateTime.now}

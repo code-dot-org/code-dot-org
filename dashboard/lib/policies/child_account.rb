@@ -24,6 +24,11 @@ class Policies::ChildAccount
     end
   end
 
+  # P20-937 - We had a regression which we have chosen to mitigate by allowing
+  # accounts created before the below date to have their lock-out delayed until
+  # the CAP policy is set to lockout all users.
+  CPA_CREATED_AT_EXCEPTION_DATE = Date.parse('2024-05-21T00:00:00Z')
+
   # The individual US State child account policy configuration
   # max_age: the oldest age of the child at which this policy applies.
   # start_date: the date on which this policy first went into effect.
@@ -78,19 +83,8 @@ class Policies::ChildAccount
     policy_start_date = state_policy(user)[:start_date]
 
     user.created_at < policy_start_date ||
-      user.authentication_options.any?(&:google?) ||
-      # [P20-937] CPA students created after the policy came into effect but
-      # before '2024/05/18' might have had their us_state field not managed
-      # properly, so we will allow them to be treated the same as users who
-      # predate CPA starting in 2023/07/1.
-      (
-        user.created_at < Date.parse('2024-05-18T00:00:00Z') &&
-        user.authentication_options.any? do |ao|
-          [AuthenticationOption::EMAIL,
-           AuthenticationOption::MICROSOFT,
-           AuthenticationOption::FACEBOOK].include?(ao.credential_type)
-        end
-      )
+      user.created_at < CPA_CREATED_AT_EXCEPTION_DATE ||
+      user.authentication_options.any?(&:google?)
   end
 
   # The date on which the student's account will be locked if the account is not compliant.
