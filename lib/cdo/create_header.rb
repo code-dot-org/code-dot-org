@@ -31,6 +31,9 @@ class CreateHeader
     poetry_hoc: {
       image: "logo_poetry.png"
     },
+    music: {
+      url: CDO.studio_url("/s/music-intro-2024/reset")
+    },
   }.freeze
 
   # project info data can be inferred from the key, except when otherwise
