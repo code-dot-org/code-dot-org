@@ -76,7 +76,10 @@ class Policies::ChildAccount
   # Checks if a user is affected by a state policy but was created prior to the
   # policy going into effect.
   def self.user_predates_policy?(user)
-    parent_permission_required?(user) && user.created_at < STATE_POLICY[user.us_state][:start_date]
+    parent_permission_required?(user) && (
+      user.created_at < STATE_POLICY[user.us_state][:start_date] ||
+      user.authentication_options.any?(&:google?)
+    )
   end
 
   # The date on which the student's account will be locked if the account is not compliant.
@@ -94,6 +97,7 @@ class Policies::ChildAccount
   # Child Account Policy.
   private_class_method def self.parent_permission_required?(user)
     return false unless user.student?
+    return false unless user.birthday
 
     policy = state_policy(user)
     return false unless policy

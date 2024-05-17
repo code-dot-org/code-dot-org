@@ -91,6 +91,7 @@ const CODE_STUDIO_ENTRIES = {
   'levels/show': './src/sites/studio/pages/levels/show.js',
   'lti/v1/_early_access_banner': './src/sites/studio/pages/lti/v1/_early_access_banner.js',
   'lti/v1/iframe': './src/sites/studio/pages/lti/v1/iframe.js',
+  'lti/v1/account_linking/landing': './src/sites/studio/pages/lti/v1/account_linking/landing.js',
   'lti/v1/sync_course': './src/sites/studio/pages/lti/v1/sync_course.js',
   'lti/v1/upgrade_account': './src/sites/studio/pages/lti/v1/upgrade_account.js',
   'maker/home': './src/sites/studio/pages/maker/home.js',
@@ -209,6 +210,8 @@ const PEGASUS_ENTRIES = {
   'hourofcode.com/views/theme_common_head_after': './src/sites/hourofcode.com/pages/views/theme_common_head_after.js',
   'hourofcode.com/views/hoc_events_map': './src/sites/hourofcode.com/pages/views/hoc_events_map.js',
   'hourofcode.com/views/theme_google_analytics': './src/sites/hourofcode.com/pages/views/theme_google_analytics.js',
+  'hourofcode.com/views/swiper_page_ai': './src/sites/hourofcode.com/pages/views/swiper_page_ai.js',
+  'hourofcode.com/views/swiper_page_beyond': './src/sites/hourofcode.com/pages/views/swiper_page_beyond.js',
 
   // shared between code.org and hourofcode.com
   'tutorialExplorer': './src/tutorialExplorer/tutorialExplorer.js',

@@ -7,6 +7,38 @@ class UserTest < ActiveSupport::TestCase
   include ProjectsTestUtils
   self.use_transactional_test_case = true
 
+  class UsStateCodeTest < ActiveSupport::TestCase
+    test 'returns student us_state if present' do
+      student = create(:student, :in_colorado)
+      assert_equal 'CO', student.us_state_code
+    end
+
+    test 'returns nil if student us_state is unknown' do
+      student = create(:student, :unknown_us_region)
+      assert_nil student.us_state_code
+    end
+
+    test 'returns teacher school US state code' do
+      teacher = create(:teacher, school_info: create(:school_info, country: 'US', state: 'ny'))
+      assert_equal 'NY', teacher.us_state_code
+    end
+
+    test 'returns teacher school US state code when state is name' do
+      teacher = create(:teacher, school_info: create(:school_info, country: 'USA', state: 'washington dc'))
+      assert_equal 'DC', teacher.us_state_code
+    end
+
+    test 'returns nil if teacher school state is not set' do
+      teacher = create(:teacher, school_info: create(:school_info, :skip_validation, state: ''))
+      assert_nil teacher.us_state_code
+    end
+
+    test 'returns nil if teacher school is not in USA' do
+      teacher = create(:teacher, school_info: create(:school_info, :skip_validation, country: 'CA', state: 'AL')) # Alberta, Canada
+      assert_nil teacher.us_state_code
+    end
+  end
+
   setup_all do
     @good_data = {
       email: 'foo@bar.com',
@@ -5265,5 +5297,25 @@ class UserTest < ActiveSupport::TestCase
 
     pl_units_started = user.pl_units_started
     assert_equal 100, pl_units_started[0][:percent_completed]
+  end
+
+  test "username characters are only validated when changed" do
+    student = create :student
+    # White spaces are not allowed in usernames
+    student.username = "big husky"
+    student.save!(validate: false)
+
+    # We only want to validate the username if it changes.
+    # An invalid username should not block other attributes of the user from
+    # changing.
+    # This is a temporary behavior while we investigate why users have invalid
+    # usernames.
+    student.update!(name: "#{student.name} Jr.")
+
+    # The username has changed to a new invalid value, so we expected validation
+    # to fail.
+    assert_raises(ActiveRecord::RecordInvalid) do
+      student.update!(username: "very big husky")
+    end
   end
 end

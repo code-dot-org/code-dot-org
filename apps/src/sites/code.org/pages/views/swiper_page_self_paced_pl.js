@@ -9,8 +9,9 @@ import {register} from 'swiper/element/bundle';
 register();
 
 const swipers = [
-  document.querySelector('swiper-container.swiper-01'),
-  document.querySelector('swiper-container.swiper-02'),
+  document.querySelector('swiper-container.swiper-elementary'),
+  document.querySelector('swiper-container.swiper-middle'),
+  document.querySelector('swiper-container.swiper-high'),
 ];
 
 const swiperParams = {

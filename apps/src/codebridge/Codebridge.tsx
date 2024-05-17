@@ -1,7 +1,5 @@
 import {CodebridgeContextProvider} from '@codebridge/codebridgeContext';
-import DisabledEditor from '@codebridge/Editor/DisabledEditor';
 import {FileBrowser} from '@codebridge/FileBrowser';
-import {FileTabs} from '@codebridge/FileTabs';
 import {useSynchronizedProject} from '@codebridge/hooks';
 import {Instructions} from '@codebridge/Instructions';
 import {PreviewContainer} from '@codebridge/PreviewContainer';
@@ -11,19 +9,33 @@ import {
   ConfigType,
   SetProjectFunction,
   SetConfigFunction,
+  OnRunFunction,
+  ResetProjectFunction,
 } from '@codebridge/types';
 import React from 'react';
+
 import './styles/cdoIDE.css';
+import Console from './Console';
+import Workspace from './Workspace';
 
 type CodebridgeProps = {
   project: ProjectType;
   config: ConfigType;
   setProject: SetProjectFunction;
   setConfig: SetConfigFunction;
+  resetProject: ResetProjectFunction;
+  onRun?: OnRunFunction;
 };
 
 export const Codebridge = React.memo(
-  ({project, config, setProject, setConfig}: CodebridgeProps) => {
+  ({
+    project,
+    config,
+    setProject,
+    setConfig,
+    resetProject,
+    onRun,
+  }: CodebridgeProps) => {
     // keep our internal reducer backed copy synced up with our external whatever backed copy
     // see useSynchronizedProject for more info.
     const [internalProject, projectUtilities] = useSynchronizedProject(
@@ -31,15 +43,13 @@ export const Codebridge = React.memo(
       setProject
     );
 
-    const EditorComponent = config.EditorComponent || DisabledEditor;
-
     const ComponentMap = {
       'file-browser': FileBrowser,
       'side-bar': SideBar,
-      editor: EditorComponent,
       'preview-container': PreviewContainer,
       instructions: config.Instructions || Instructions,
-      'file-tabs': FileTabs,
+      workspace: Workspace,
+      console: Console,
     };
 
     return (
@@ -49,6 +59,8 @@ export const Codebridge = React.memo(
           config,
           setProject,
           setConfig,
+          resetProject,
+          onRun,
           ...projectUtilities,
         }}
       >

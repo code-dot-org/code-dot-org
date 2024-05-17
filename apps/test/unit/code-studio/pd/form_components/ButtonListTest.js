@@ -1,7 +1,7 @@
 import ButtonList from '@cdo/apps/code-studio/pd/form_components/ButtonList';
 import React from 'react';
 import {expect} from '../../../../util/reconfiguredChai';
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import sinon from 'sinon';
 /* eslint-disable no-restricted-imports */
 import {

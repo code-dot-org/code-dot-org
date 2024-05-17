@@ -11,6 +11,7 @@ import {
   LevelResults,
   ViewType,
   PeerReviewLevelInfo,
+  LevelWithProgress,
 } from '@cdo/apps/types/progressTypes';
 import {
   AnyAction,
@@ -22,7 +23,6 @@ import {
 import {
   processServerStudentProgress,
   getLevelResult,
-  processedLevel,
 } from '@cdo/apps/templates/progress/progressHelpers';
 import {mergeActivityResult} from './activityUtils';
 import {SET_VIEW_TYPE} from './viewAsRedux';
@@ -33,7 +33,12 @@ import {
   updateBrowserForLevelNavigation,
 } from './browserNavigation';
 import {TestResults} from '@cdo/apps/constants';
-import {nextLevelId} from './progressReduxSelectors';
+import {
+  getCurrentLevel,
+  getCurrentLevels,
+  levelById,
+  nextLevelId,
+} from './progressReduxSelectors';
 import {getBubbleUrl} from '../templates/progress/BubbleFactory';
 import {navigateToHref} from '../utils';
 
@@ -297,16 +302,12 @@ export function navigateToLevelId(levelId: string): ProgressThunkAction {
     if (!state.currentLessonId || !state.currentLevelId) {
       return;
     }
-    const newLevel = processedLevel(
-      getLevelById(state.lessons, state.currentLessonId, levelId)
-    );
+    const newLevel = levelById(state, state.currentLessonId, levelId);
     if (!newLevel) {
       return;
     }
 
-    const currentLevel = processedLevel(
-      getLevelById(state.lessons, state.currentLessonId, state.currentLevelId)
-    );
+    const currentLevel = getCurrentLevel(getState());
 
     if (canChangeLevelInPage(currentLevel, newLevel)) {
       updateBrowserForLevelNavigation(state, newLevel.path, levelId);
@@ -314,6 +315,35 @@ export function navigateToLevelId(levelId: string): ProgressThunkAction {
     } else {
       const url = getBubbleUrl(newLevel.path, undefined, undefined, true);
       navigateToHref(url);
+    }
+  };
+}
+
+// Updates the current level ID in the store when the level
+// (and possibly sublevel) index changes.
+// Typically happens when the user presses the browser back/forward button
+// in a level progression that doesn't require page reloads.
+export function onLevelIndexChange(
+  levelIndex: number,
+  sublevelIndex?: number
+): ProgressThunkAction {
+  return (dispatch, getState) => {
+    const levels: LevelWithProgress[] = getCurrentLevels(getState());
+    if (!levels || levels.length === 0) {
+      return;
+    }
+
+    const level = levels[levelIndex];
+    if (
+      sublevelIndex !== undefined &&
+      level.sublevels &&
+      sublevelIndex < level.sublevels.length
+    ) {
+      const newLevelId = level.sublevels[sublevelIndex].id;
+      dispatch(setCurrentLevelId(newLevelId));
+    } else {
+      const newLevelId = level.id;
+      dispatch(setCurrentLevelId(newLevelId));
     }
   };
 }
@@ -330,7 +360,7 @@ export function navigateToNextLevel(): ProgressThunkAction {
 }
 
 // The user has successfully completed the level and the page
-// will not be reloading.
+// will not be reloading. Currently only used by Lab2 labs.
 export function sendSuccessReport(appType: string): ProgressThunkAction {
   return (dispatch, getState) => {
     const state = getState().progress;
@@ -338,15 +368,22 @@ export function sendSuccessReport(appType: string): ProgressThunkAction {
     if (!state.currentLessonId || !levelId) {
       return;
     }
-    const currentLevel = getLevelById(
-      state.lessons,
-      state.currentLessonId,
-      levelId
-    );
+    const currentLevel = getCurrentLevel(getState());
     if (!currentLevel) {
       return;
     }
-    const scriptLevelId = currentLevel.id;
+
+    let scriptLevelId;
+    if (currentLevel.parentLevelId) {
+      const parentLevel = levelById(
+        state,
+        state.currentLessonId,
+        currentLevel.parentLevelId
+      );
+      scriptLevelId = parentLevel.scriptLevelId;
+    } else {
+      scriptLevelId = currentLevel.scriptLevelId;
+    }
 
     // The server does not appear to use the user ID parameter,
     // so just pass 0, like some other milestone posts do.
@@ -460,21 +497,6 @@ const userProgressFromServer = (
     }
   });
 };
-
-/**
- * Given an array of lessons, a lesson ID, and a level ID, returns
- * the requested level.
- */
-function getLevelById(
-  lessons: Lesson[] | null,
-  lessonId: number,
-  levelId: string
-) {
-  const lesson = lessons?.find(lesson => lesson.id === lessonId);
-  if (lesson) {
-    return lesson.levels.find(level => level.ids.find(id => id === levelId));
-  }
-}
 
 /**
  * Does some processing of our passed in lesson, namely

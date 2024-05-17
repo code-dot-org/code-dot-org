@@ -1,5 +1,5 @@
 import React from 'react';
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import {assert, expect} from 'chai';
 import {Factory} from 'rosie';
 import {FormControl} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports

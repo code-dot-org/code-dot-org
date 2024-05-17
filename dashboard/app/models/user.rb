@@ -70,6 +70,7 @@
 #
 
 require 'digest/md5'
+require 'state_abbr'
 require 'cdo/aws/metrics'
 require 'cdo/shared_constants'
 require_relative '../../legacy/middleware/helpers/user_helpers'
@@ -553,7 +554,7 @@ class User < ApplicationRecord
 
   USERNAME_REGEX = /\A#{UserHelpers::USERNAME_ALLOWED_CHARACTERS.source}+\z/i
   validates_length_of :username, within: 5..20, allow_blank: true
-  validates_format_of :username, with: USERNAME_REGEX, allow_blank: true
+  validates_format_of :username, if: :username_changed?, with: USERNAME_REGEX, allow_blank: true
   validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :create, if: -> {errors.blank?}
   validates_uniqueness_of :username, case_sensitive: false, on: :update, if: -> {errors.blank? && username_changed?}
   validates_presence_of :username, if: :username_required?
@@ -2735,6 +2736,18 @@ class User < ApplicationRecord
   # Can be used to identify users in cases where integer IDs may be vulnerable to abuse
   def uuid
     id && Digest::UUID.uuid_v5(Dashboard::Application.config.secret_key_base, id.to_s)
+  end
+
+  # @return [String, nil] the user's US state code in the ISO 3166-2:US standard
+  def us_state_code
+    state = student? ? us_state : school_info&.usa? && school_info&.state
+    return if state.blank?
+
+    # Returns `state` if it is a US state code
+    return state.upcase if us_state_abbr?(state, include_dc: true)
+
+    # Returns the code of `state` if it is a US state name
+    get_us_state_abbr_from_name(state, include_dc: true)
   end
 
   private def account_age_in_years
