@@ -153,7 +153,7 @@ Feature: Policy Compliance and Parental Permission
     Given I create an old account for a young student in Colorado who has never signed in named "Coco Student" and go home
 
     # Find the locked buttons to connect an account
-    Given I am on "http://studio.code.org/users/edit?cpa-partial-lockout=1&cpa_schedule={%22cpa_new_user_lockout%22:%222023-07-05T23:15:00%2B00:00%22,%22cpa_all_user_lockout_warning%22:%222024-07-01T00:00:00%2B00:00%22},%22cpa_all_user_lockout%22:%222024-07-01T00:00:00%2B00:00%22}"
+    Given I am on "http://studio.code.org/users/edit?cpa-partial-lockout=1&cpa_schedule={%22cpa_new_user_lockout%22:%222023-07-05T23:15:00%2B00:00%22,%22cpa_all_user_lockout_warning%22:%222024-07-01T00:00:00%2B00:00%22,%22cpa_all_user_lockout%22:%222024-07-01T00:00:00%2B00:00%22}"
     Then I wait to see "#manage-linked-accounts"
     Then I wait until "form[action=\'/users/auth/google_oauth2?action=connect\'] button" is disabled
 
@@ -173,7 +173,7 @@ Feature: Policy Compliance and Parental Permission
     Then My parent permits my parental request
 
     # Find the now unlocked buttons to connect an account
-    Given I am on "http://studio.code.org/users/edit?cpa-partial-lockout=1&cpa_schedule={%22cpa_new_user_lockout%22:%222023-07-05T23:15:00%2B00:00%22,%22cpa_all_user_lockout_warning%22:%222024-07-01T00:00:00%2B00:00%22},%22cpa_all_user_lockout%22:%222024-07-01T00:00:00%2B00:00%22}"
+    Given I am on "http://studio.code.org/users/edit?cpa-partial-lockout=1&cpa_schedule={%22cpa_new_user_lockout%22:%222023-07-05T23:15:00%2B00:00%22,%22cpa_all_user_lockout_warning%22:%222024-07-01T00:00:00%2B00:00%22,%22cpa_all_user_lockout%22:%222024-07-01T00:00:00%2B00:00%22}"
     Then I wait to see "#manage-linked-accounts"
     Then I wait until "form[action=\'/users/auth/google_oauth2?action=connect\'] button" is not disabled
 
@@ -181,6 +181,6 @@ Feature: Policy Compliance and Parental Permission
     Given I create an authorized teacher-associated under-13 old account sponsored student in Colorado named "Tandy"
 
     # Find the disabled region to provide a personal login
-    Given I am on "http://studio.code.org/users/edit?cpa-partial-lockout=1&cpa_schedule={%22cpa_new_user_lockout%22:%222023-07-05T23:15:00%2B00:00%22,%22cpa_all_user_lockout_warning%22:%222024-07-01T00:00:00%2B00:00%22},%22cpa_all_user_lockout%22:%222024-07-01T00:00:00%2B00:00%22}"
+    Given I am on "http://studio.code.org/users/edit?cpa-partial-lockout=1&cpa_schedule={%22cpa_new_user_lockout%22:%222023-07-05T23:15:00%2B00:00%22,%22cpa_all_user_lockout_warning%22:%222024-07-01T00:00:00%2B00:00%22,%22cpa_all_user_lockout%22:%222024-07-01T00:00:00%2B00:00%22}"
     Then I wait to see "#edit_user_create_personal_account"
     Then I wait until "#edit_user_create_personal_account input[type=\'password\']" is disabled
