@@ -1,3 +1,5 @@
+import {CodeBridgeConsoleState} from '@codebridge/redux/consoleRedux';
+
 import {AichatState} from '@cdo/apps/aichat/redux/aichatRedux';
 import {AITutorState} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {HeaderReduxState} from '@cdo/apps/code-studio/headerRedux';
@@ -7,15 +9,14 @@ import {JavalabEditorState} from '@cdo/apps/javalab/redux/editorRedux';
 import {JavalabState} from '@cdo/apps/javalab/redux/javalabRedux';
 import {JavalabViewState} from '@cdo/apps/javalab/redux/viewRedux';
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
+import {Lab2ProjectState} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {MazeState} from '@cdo/apps/maze/redux';
 import {MusicState} from '@cdo/apps/music/redux/musicRedux';
-import {PythonlabState} from '@cdo/apps/pythonlab/pythonlabRedux';
 import {LayoutState} from '@cdo/apps/redux/layout';
 import {LocaleState} from '@cdo/apps/redux/localesRedux';
 import {MapboxState} from '@cdo/apps/redux/mapbox';
 import {CurrentUserState} from '@cdo/apps/templates/CurrentUserState';
 
-import {Lab2ProjectState} from '../lab2/redux/lab2ProjectRedux';
 import {BlocklyState} from '../redux/blockly';
 
 // The type for our global redux store. This is incomplete until we type every slice
@@ -27,6 +28,7 @@ export interface RootState {
   aiTutor: AITutorState;
   aichat: AichatState;
   blockly: BlocklyState;
+  codebridgeConsole: CodeBridgeConsoleState;
   currentUser: CurrentUserState;
   header: HeaderReduxState;
   javalab: JavalabState;
@@ -41,5 +43,4 @@ export interface RootState {
   maze: MazeState;
   music: MusicState;
   progress: ProgressState;
-  pythonlab: PythonlabState;
 }

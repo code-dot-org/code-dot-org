@@ -86,7 +86,6 @@ const FunctionExtentsSimple2: React.FunctionComponent<
 
   return (
     <div
-      key={index}
       style={{
         position: 'absolute',
         backgroundColor:
@@ -173,6 +172,7 @@ const TimelineSimple2Events: React.FunctionComponent<
       <div id="timeline-events-function-extents">
         {uniqueFunctionExtentsArray.map((functionExtents, index) => (
           <FunctionExtentsSimple2
+            key={index}
             index={index}
             paddingOffset={paddingOffset}
             barWidth={barWidth}

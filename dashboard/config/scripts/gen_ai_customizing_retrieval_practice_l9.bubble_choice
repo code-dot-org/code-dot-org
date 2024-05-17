@@ -7,8 +7,8 @@ sublevels
 level 'gen-ai-customizing-retrieval-practice-L9A'
 level 'gen-ai-customizing-retrieval-practice-L9B'
 level 'gen-ai-customizing-retrieval-practice-L9C'
-level 'gen-ai-customizing-retrieval-practice-L9D'
+# level 'gen-ai-customizing-retrieval-practice-L9D'
 
 markdown <<MARKDOWN
-[Use the description field above instead of these]
+
 MARKDOWN

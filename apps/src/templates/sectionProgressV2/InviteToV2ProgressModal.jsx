@@ -24,7 +24,7 @@ const MILLISECONDS_IN_ONE_DAY = 1000 * 3600 * 24;
 
 function InviteToV2ProgressModal({
   sectionId,
-  onShowProgressTableV2Change,
+  setHasJustSwitchedToV2,
 
   // from redux
   dateProgressTableInvitationDelayed,
@@ -80,7 +80,7 @@ function InviteToV2ProgressModal({
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_DISMISS_INVITATION, {
       sectionId,
     });
-    setHasSeenProgressTableInviteData();
+    setHasSeenProgressTableInviteData(false);
     setHasSeenProgressTableInvite(true);
     setInvitationOpen(false);
   }, [sectionId, setHasSeenProgressTableInvite]);
@@ -89,15 +89,15 @@ function InviteToV2ProgressModal({
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_ACCEPT_INVITATION, {
       sectionId,
     });
-    setHasSeenProgressTableInviteData();
+    setHasSeenProgressTableInviteData(true);
     setHasSeenProgressTableInvite(true);
-    onShowProgressTableV2Change();
     setShowProgressTableV2(true);
+    setHasJustSwitchedToV2(true);
   }, [
     sectionId,
     setHasSeenProgressTableInvite,
     setShowProgressTableV2,
-    onShowProgressTableV2Change,
+    setHasJustSwitchedToV2,
   ]);
 
   const handleDelayInvitation = React.useCallback(() => {
@@ -115,9 +115,10 @@ function InviteToV2ProgressModal({
     });
   };
 
-  const setHasSeenProgressTableInviteData = () => {
+  const setHasSeenProgressTableInviteData = acceptedInvitation => {
     return $.post(`/api/v1/users/has_seen_progress_table_v2_invitation`, {
       has_seen_progress_table_v2_invitation: true,
+      show_progress_table_v2: acceptedInvitation,
     });
   };
 
@@ -170,7 +171,7 @@ function InviteToV2ProgressModal({
 InviteToV2ProgressModal.propTypes = {
   setHasSeenProgressTableInvite: PropTypes.func.isRequired,
   sectionId: PropTypes.number,
-  onShowProgressTableV2Change: PropTypes.func.isRequired,
+  setHasJustSwitchedToV2: PropTypes.func.isRequired,
   dateProgressTableInvitationDelayed: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,

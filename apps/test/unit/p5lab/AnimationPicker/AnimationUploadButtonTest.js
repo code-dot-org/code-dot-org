@@ -1,5 +1,5 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedAnimationUploadButton as AnimationUploadButton} from '@cdo/apps/p5lab/AnimationPicker/AnimationUploadButton';
 import AnimationPickerListItem from '../../../../src/p5lab/AnimationPicker/AnimationPickerListItem';

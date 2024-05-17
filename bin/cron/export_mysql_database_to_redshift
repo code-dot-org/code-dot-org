@@ -17,7 +17,7 @@ DAILY_TASK_MAX_EXECUTION_TIME = 16.hours
 # As of early 2020, the Task that exports 'level_sources' takes about 30 hours to complete.
 WEEKLY_TASK_MAX_EXECUTION_TIME = 40.hours
 # We want to notify the RED team about the export status.
-NOTIFICATION_CHANNEL = 'ask-data'
+NOTIFICATION_CHANNEL = 'data-alerts'
 
 def main
   ChatClient.message NOTIFICATION_CHANNEL, 'Beginning daily export from Aurora MySQL database to Redshift.'
