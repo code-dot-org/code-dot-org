@@ -50,10 +50,7 @@ class Policies::ChildAccount
   # parent permission before the student can start using their account.
   def self.compliant?(user)
     return true unless parent_permission_required?(user)
-    # CPA Part 2: unlock students created before the policy went into effect
-    # who have requested parental permission but have not yet received approval.
-    return true if ComplianceState.request_sent?(user) && user_predates_policy?(user)
-
+    return true if user_predates_policy?(user)
     ComplianceState.permission_granted?(user)
   end
 
@@ -76,10 +73,24 @@ class Policies::ChildAccount
   # Checks if a user is affected by a state policy but was created prior to the
   # policy going into effect.
   def self.user_predates_policy?(user)
-    parent_permission_required?(user) && (
-      user.created_at < STATE_POLICY[user.us_state][:start_date] ||
-      user.authentication_options.any?(&:google?)
-    )
+    return false unless parent_permission_required?(user)
+    return false unless state_policy(user)
+    policy_start_date = state_policy(user)[:start_date]
+
+    user.created_at < policy_start_date ||
+      user.authentication_options.any?(&:google?) ||
+      # [P20-937] CPA students created after the policy came into effect but
+      # before '2024/05/18' might have had their us_state field not managed
+      # properly, so we will allow them to be treated the same as users who
+      # predate CPA starting in 2023/07/1.
+      (
+        user.created_at < Date.parse('2024-05-18T00:00:00Z') &&
+        user.authentication_options.any? do |ao|
+          [AuthenticationOption::EMAIL,
+           AuthenticationOption::MICROSOFT,
+           AuthenticationOption::FACEBOOK].include?(ao.credential_type)
+        end
+      )
   end
 
   # The date on which the student's account will be locked if the account is not compliant.

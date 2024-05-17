@@ -38,7 +38,8 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       [[:non_compliant_child, :migrated_imported_from_clever], true],
       [[:non_compliant_child, :with_lti_auth], true],
       [[:non_compliant_child, :with_pending_parent_permission, {created_at: '2023-06-30T23:59:59Z'}], true],
-      [[:non_compliant_child, :with_pending_parent_permission, {created_at: '2023-07-01T00:00:00Z'}], false],
+      [[:non_compliant_child, :with_pending_parent_permission, {created_at: '2023-07-01T00:00:00Z'}], true],
+      [[:non_compliant_child, :with_pending_parent_permission, {created_at: '2024-05-18T00:00:00Z'}], false],
       [[:non_compliant_child, :skip_validation, {birthday: nil}], true],
     ]
     test_matrix.each do |traits, compliance|
@@ -77,19 +78,27 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       [[:student, :U13], false],
       [[:student, :U13, :unknown_us_region], false],
       [[:non_compliant_child, {created_at: '2023-06-29T23:59:59Z'}], true],
-      [[:non_compliant_child, {created_at: '2023-07-01T00:00:00Z'}], false],
       [[:non_compliant_child, {created_at: '2024-06-29T23:59:59Z'}], false],
       [[:non_compliant_child, :migrated_imported_from_clever, {created_at: '2023-06-29T23:59:59Z'}], false],
       [[:non_compliant_child, :migrated_imported_from_clever, {created_at: '2024-06-29T23:59:59Z'}], false],
       [[:non_compliant_child, :migrated_imported_from_google_classroom, {created_at: '2023-06-29T23:59:59Z'}], true],
       [[:non_compliant_child, :migrated_imported_from_google_classroom, {created_at: '2024-06-29T23:59:59Z'}], true],
       [[:non_compliant_child, :with_google_authentication_option, {created_at: '2024-06-29T23:59:59Z'}], true],
+      # The following test cases address P20-937
+      [[:non_compliant_child, {created_at: '2023-07-01T00:00:00Z'}], true],
+      [[:non_compliant_child, :microsoft_v2_sso_provider, {created_at: '2024-01-01T00:00:00Z'}], true],
+      [[:non_compliant_child, :facebook_sso_provider, {created_at: '2024-01-01T00:00:00Z'}], true],
+      [[:non_compliant_child, {created_at: '2024-07-01T00:00:00Z'}], false],
+      [[:non_compliant_child, :microsoft_v2_sso_provider, {created_at: '2024-07-01T00:00:00Z'}], false],
+      [[:non_compliant_child, :facebook_sso_provider, {created_at: '2024-07-01T00:00:00Z'}], false],
     ]
+    failures = []
     test_matrix.each do |traits, compliance|
       user = create(*traits)
       actual = Policies::ChildAccount.user_predates_policy?(user)
       failure_msg = "Expected user_predates_policy?(#{traits}) to be #{compliance} but it was #{actual}"
-      assert_equal compliance, actual, failure_msg
+      failures << failure_msg if actual != compliance
     end
+    assert failures.empty?, failures.join("\n")
   end
 end

@@ -10,9 +10,10 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
   test "accounts needing permission should be locked out" do
     # Test matrix for the user states which require parent permission.
     [
-      [:U13, :in_colorado, :without_parent_permission],
+      [:non_compliant_child, :without_parent_permission],
+      [:non_compliant_child, :with_pending_parent_permission],
     ].each do |traits|
-      user = create(:student, *traits)
+      user = create(*traits)
       sign_in user
       get '/home'
       assert_redirected_to '/lockout', "failed to redirect to /lockout for user with traits #{traits}"
@@ -31,11 +32,11 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
     [
       [:student_in_word_section, :U13, :in_colorado],
       [:student_in_picture_section, :U13, :in_colorado],
-      [:student, :U13, :in_colorado, :migrated_imported_from_clever],
-      [:student, :U13, :unknown_us_region],
-      [:student, :not_U13, :in_colorado],
-      [:student, :U13, :in_colorado, :without_parent_permission, :google_sso_provider],
-      [:student, :U13, :in_colorado, :migrated_imported_from_clever, :with_google_authentication_option],
+      [:non_compliant_child, :migrated_imported_from_clever],
+      [:non_compliant_child, :unknown_us_region],
+      [:non_compliant_child, :not_U13],
+      [:non_compliant_child, :without_parent_permission, :google_sso_provider],
+      [:non_compliant_child, :migrated_imported_from_clever, :with_google_authentication_option],
     ].each do |traits|
       user = create(*traits)
       sign_in user
