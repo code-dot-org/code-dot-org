@@ -11,8 +11,6 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
     # Test matrix for the user states which require parent permission.
     [
       [:U13, :in_colorado, :without_parent_permission],
-      [:U13, :in_colorado, :without_parent_permission, :google_sso_provider],
-      [:U13, :in_colorado, :migrated_imported_from_clever, :with_google_authentication_option],
     ].each do |traits|
       user = create(:student, *traits)
       sign_in user
@@ -36,6 +34,8 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
       [:student, :U13, :in_colorado, :migrated_imported_from_clever],
       [:student, :U13, :unknown_us_region],
       [:student, :not_U13, :in_colorado],
+      [:student, :U13, :in_colorado, :without_parent_permission, :google_sso_provider],
+      [:student, :U13, :in_colorado, :migrated_imported_from_clever, :with_google_authentication_option],
     ].each do |traits|
       user = create(*traits)
       sign_in user
