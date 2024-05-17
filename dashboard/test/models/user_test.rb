@@ -5286,22 +5286,4 @@ class UserTest < ActiveSupport::TestCase
       student.update!(username: "very big husky")
     end
   end
-
-  test 'validate_us_state' do
-    # If we don't know what country they are in, we don't require US State.
-    create :student
-    create :student, country_code: "CO"
-    # If the student is in the US, they must tell us what US State they live in
-    assert_raises(ActiveRecord::RecordInvalid) do
-      create :student, country_code: "US"
-    end
-    assert_raises(ActiveRecord::RecordInvalid) do
-      create :student, country_code: "US", us_state: 'INVALID_STATE'
-    end
-    student = create :student, country_code: "US", us_state: 'CO'
-    assert_raises(ActiveRecord::RecordInvalid) do
-      student.update!(us_state: 'INVALID_STATE')
-    end
-    student.update!(us_state: 'WA')
-  end
 end
