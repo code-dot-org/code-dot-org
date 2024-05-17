@@ -6,13 +6,13 @@ import {BANNER_STATUS} from '@cdo/apps/lib/ui/feedback/FeedbackBanner';
 import ComingSoonBanner from './ComingSoonBanner';
 import ProgressFeedbackBanner from './ProgressFeedbackBanner';
 
-export default function ProgressBanners({toggleUsed}) {
+export default function ProgressBanners({hasJustSwitchedToV2}) {
   const [showComingSoon, setShowComingSoon] = React.useState(false);
 
   const bannerStatusCallback = bannerStatus => {
     // Show the coming soon banner if the feedback banner was already completed or the toggle was used.
     setShowComingSoon(
-      bannerStatus === BANNER_STATUS.PREVIOUSLY_ANSWERED || toggleUsed
+      bannerStatus === BANNER_STATUS.PREVIOUSLY_ANSWERED || hasJustSwitchedToV2
     );
   };
 
@@ -21,7 +21,7 @@ export default function ProgressBanners({toggleUsed}) {
   return (
     <>
       <ProgressFeedbackBanner
-        canShow={!toggleUsed}
+        canShow={!hasJustSwitchedToV2}
         bannerStatusCallback={bannerStatusCallback}
       />
       <ComingSoonBanner canShow={showComingSoon} />
@@ -30,5 +30,5 @@ export default function ProgressBanners({toggleUsed}) {
 }
 
 ProgressBanners.propTypes = {
-  toggleUsed: PropTypes.bool,
+  hasJustSwitchedToV2: PropTypes.bool,
 };

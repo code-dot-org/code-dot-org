@@ -1,6 +1,6 @@
 import {expect, assert} from '../../../../util/reconfiguredChai';
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import sinon from 'sinon';
 import LibraryManagerDialog, {
   mapUserNameToProjectLibraries,

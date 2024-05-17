@@ -1,6 +1,6 @@
 // react testing library import
 import {render, fireEvent, act, waitFor} from '@testing-library/react';
-import {mount, shallow} from 'enzyme';
+import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -327,6 +327,29 @@ describe('RubricContainer', () => {
     expect(wrapper.find('Button').first().props().text).to.equal(
       i18n.runAiAssessment()
     );
+  });
+
+  it('does not show a button for running analysis if AI is not enabled for level', async () => {
+    stubFetchEvalStatusForUser({});
+    stubFetchEvalStatusForAll({});
+    stubFetchAiEvaluations({});
+    stubFetchTeacherEvaluations(noEvals);
+    stubFetchTourStatus({seen: true});
+
+    const {queryByText} = render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={defaultStudentInfo}
+          teacherHasEnabledAi={false}
+          currentLevelName={'test_level'}
+          reportingData={{}}
+          open
+        />
+      </Provider>
+    );
+    await wait();
+    expect(queryByText(i18n.runAiAssessment())).to.not.exist;
   });
 
   it('shows status text when student has not attempted level', async () => {
@@ -868,6 +891,31 @@ describe('RubricContainer', () => {
           studentLevelInfo={defaultStudentInfo}
           teacherHasEnabledAi={true}
           currentLevelName={'non-assessment-level'}
+          reportingData={{}}
+          open
+        />
+      </Provider>
+    );
+
+    await wait();
+    expect(queryByText('Getting Started with Your AI Teaching Assistant')).to
+      .not.exist;
+  });
+
+  it('does not display product tour when on non-AI level', async function () {
+    stubFetchEvalStatusForUser(readyJson);
+    stubFetchEvalStatusForAll(readyJsonAll);
+    stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetchTeacherEvaluations(noEvals);
+    stubFetchTourStatus({seen: null});
+
+    const {queryByText} = render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={defaultStudentInfo}
+          teacherHasEnabledAi={false}
+          currentLevelName={'test-level'}
           reportingData={{}}
           open
         />
