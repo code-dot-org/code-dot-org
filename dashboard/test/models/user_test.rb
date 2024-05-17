@@ -5327,6 +5327,7 @@ class UserTest < ActiveSupport::TestCase
     assert_raises(ActiveRecord::RecordInvalid) do
       create :student, country_code: "US"
     end
+    # If us_state is invalid, error should be raised
     assert_raises(ActiveRecord::RecordInvalid) do
       create :student, country_code: "US", us_state: 'INVALID_STATE'
     end
