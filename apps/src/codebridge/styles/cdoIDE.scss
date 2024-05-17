@@ -1,7 +1,10 @@
+@import 'color.scss';
+
 .cdoide-container {
   display: grid;
   width: 100%;
   height: 100%;
+  scrollbar-color: $neutral_dark70 $darkest_gray;
 }
 
 .cdo-ide-outer {

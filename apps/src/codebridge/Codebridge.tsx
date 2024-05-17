@@ -14,7 +14,7 @@ import {
 } from '@codebridge/types';
 import React from 'react';
 
-import './styles/cdoIDE.css';
+import './styles/cdoIDE.scss';
 import Console from './Console';
 import Workspace from './Workspace';
 
