@@ -49,6 +49,7 @@ class DCDOBase < DynamicConfigBase
       'incubator-canvas-block-enabled': DCDO.get('incubator-canvas-block-enabled', true),
       'progress-table-v2-metadata-enabled': DCDO.get('progress-table-v2-metadata-enabled', false),
       'music-lab-launch-2024': DCDO.get('music-lab-launch-2024', false),
+      'music-lab-use-sounds-panel-1': DCDO.get('music-lab-use-sounds-panel-1', false),
     }
   end
 end

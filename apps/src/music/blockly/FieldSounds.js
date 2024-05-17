@@ -7,9 +7,16 @@ import experiments from '@cdo/apps/util/experiments';
 import color from '@cdo/apps/util/color';
 import SoundStyle from '../utils/SoundStyle';
 import AppConfig from '../appConfig';
+import DCDO from '@cdo/apps/dcdo';
 
 const FIELD_HEIGHT = 20;
 const FIELD_PADDING = 2;
+
+// Default to using SoundsPanel2, unless a URL parameter or a DCDO flag
+// forces the use of the older SoundsPanel.
+const useSoundsPanel1 =
+  AppConfig.getValue('sounds-panel-2') === 'false' ||
+  DCDO.get('music-lab-use-sounds-panel-1', false);
 
 /**
  * A custom field that renders the sample previewing and choosing UI, used in
@@ -113,10 +120,7 @@ class FieldSounds extends GoogleBlockly.Field {
       return;
     }
 
-    const CurrentSoundsPanel =
-      AppConfig.getValue('sounds-panel-2') === 'true'
-        ? SoundsPanel2
-        : SoundsPanel;
+    const CurrentSoundsPanel = useSoundsPanel1 ? SoundsPanel : SoundsPanel2;
 
     ReactDOM.render(
       <CurrentSoundsPanel
@@ -143,7 +147,7 @@ class FieldSounds extends GoogleBlockly.Field {
         }}
         onSelect={value => {
           this.setValue(value);
-          if (AppConfig.getValue('sounds-panel-2') !== 'true') {
+          if (useSoundsPanel1) {
             this.hide_();
           }
         }}
