@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-04-02 18:21:44 UTC",
+    "serialized_at": "2024-05-17 07:20:02 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -7402,11 +7402,14 @@
       ]
     },
     {
-      "chapter": 87,
-      "position": 6,
+      "chapter": 86,
+      "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L6_-modular"
+        ],
         "progression": "Practice: Implementing String Algorithms"
       },
       "bonus": false,
@@ -7424,7 +7427,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 87,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7449,7 +7452,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 88,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7474,7 +7477,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 89,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -7499,7 +7502,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 90,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -7524,7 +7527,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 91,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -7549,7 +7552,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 92,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -7574,7 +7577,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 93,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7598,7 +7601,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 94,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7623,7 +7626,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 95,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,

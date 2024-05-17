@@ -1,0 +1,22 @@
+name 'k5_ai_matching_sort_data'
+title 'How are these items sorted?'
+height '200'
+width '200'
+question '![](https://images.code.org/4e35f670bc113a6a647a8575d7887dbd-image-1715898341945.png)'
+answer 'Sorted by **shape** ![](https://images.code.org/836f9438de4130a178358db6c443bf2d-image-1715902764893.38.45 PM.png)'
+question '![](https://images.code.org/034ca31e19d9e0aa72f6b5355c6a7168-image-1715898395425.png)'
+answer ' Sorted by **inside color** ![](https://images.code.org/54a91f2370194cf3285895770139b29c-image-1715902772506.38.53 PM.png)' 
+question '![](https://images.code.org/8d4b0514fee6879b9e7a2fa2b0d7248f-image-1715898407377.png)'
+answer 'Sorted by **border color** ![](https://images.code.org/dcd7a368a5a823c5a1d3582e94ed8b23-image-1715902792751.38.58 PM.png)'
+
+markdown <<MARKDOWN
+These items can be sorted in different ways. Match each way of sorting to the correct label.
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+allow_multiple_attempts true
