@@ -5303,5 +5303,16 @@ class UserTest < ActiveSupport::TestCase
       student.update!(us_state: 'INVALID_STATE')
     end
     student.update!(us_state: 'WA')
+    assert_equal 'WA', student.us_state
+  end
+
+  test 'bad state value does not prevent other updates' do
+    student = create :student, country_code: 'US', us_state: 'DC', age: 10
+    student.update_attribute(:us_state, 'Washington D.C.') # bypass validation
+
+    assert_equal 'Washington D.C.', student.us_state
+    # Updating age should not trigger us_state validation
+    student.update!(age: 12)
+    assert_equal 12, student.age
   end
 end
