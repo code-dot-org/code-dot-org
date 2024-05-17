@@ -7,7 +7,7 @@ import {navigateToNextLevel} from '@cdo/apps/code-studio/progressRedux';
 import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
-import {LabState, isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
+import {LabState} from '@cdo/apps/lab2/lab2Redux';
 import {ProjectLevelData} from '../../types';
 import {ThemeContext} from '../ThemeWrapper';
 const commonI18n = require('@cdo/locale');
@@ -59,7 +59,6 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   const {hasConditions, message, satisfied, index} = useSelector(
     (state: {lab: LabState}) => state.lab.validationState
   );
-  const readOnlyWorkspace: boolean = useSelector(isReadOnlyWorkspace);
 
   // If there are no validation conditions, we can show the continue button so long as
   // there is another level. If validation is present, also check that conditions are satisfied.
@@ -96,7 +95,6 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       beforeFinish={beforeNextLevel}
       onNextPanel={onNextPanel}
       theme={theme}
-      isReadOnlyWorkspace={readOnlyWorkspace}
       {...{baseUrl, layout, imagePopOutDirection, handleInstructionsTextClick}}
     />
   );
@@ -121,7 +119,6 @@ interface InstructionsPanelProps {
   onNextPanel?: () => void;
   /** If the instructions panel should be rendered vertically or horizontally. Defaults to vertical. */
   layout?: 'vertical' | 'horizontal';
-  isReadOnlyWorkspace?: boolean;
   /**
    * If the image should pop out to the right of the panel or to the left when clicked. Note: instructions images
    * are currently unsupported. Defaults to right.
@@ -152,7 +149,6 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   imagePopOutDirection = 'right',
   theme = 'dark',
   handleInstructionsTextClick,
-  isReadOnlyWorkspace = false,
 }) => {
   const [showBigImage, setShowBigImage] = useState(false);
   const [isFinished, setIsFinished] = useState(false);
@@ -270,7 +266,6 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                   type="button"
                   onClick={onNextPanel}
                   className={moduleStyles.buttonInstruction}
-                  disabled={isReadOnlyWorkspace}
                 >
                   {commonI18n.continue()}
                 </button>
@@ -281,7 +276,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                     id="instructions-finish-button"
                     type="button"
                     onClick={onFinish}
-                    disabled={isFinished || isReadOnlyWorkspace}
+                    disabled={isFinished}
                     className={moduleStyles.buttonInstruction}
                   >
                     {commonI18n.finish()}
