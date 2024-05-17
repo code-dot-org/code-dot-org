@@ -50,6 +50,7 @@ class DCDOBase < DynamicConfigBase
       'progress-table-v2-metadata-enabled': DCDO.get('progress-table-v2-metadata-enabled', false),
       'music-lab-launch-2024': DCDO.get('music-lab-launch-2024', false),
       'music-lab-use-sounds-panel-1': DCDO.get('music-lab-use-sounds-panel-1', false),
+      'music-lab-samples-report': DCDO.get('music-lab-samples-report', true),
     }
   end
 end
