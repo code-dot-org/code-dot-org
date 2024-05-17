@@ -1088,26 +1088,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "k5_ai_sorting_markdown_level",
+        "level.key": "sorting_items_wings",
         "script_level.level_keys": [
-          "k5_ai_sorting_markdown_level"
+          "sorting_items_wings"
         ],
         "lesson.key": "Sorting Data",
         "lesson_group.key": "",
         "script.name": "k5-ai-data-2024",
-        "activity_section.key": "4d4a5dd9-6bae-44b3-8137-b6a76d67fbe3"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "k5_ai_sorting_choice_level",
-        "script_level.level_keys": [
-          "k5_ai_sorting_choice_level"
-        ],
-        "lesson.key": "Sorting Data",
-        "lesson_group.key": "",
-        "script.name": "k5-ai-data-2024",
-        "activity_section.key": "e5b0e9d8-a9af-4ebe-aea8-1ed630257a0d"
+        "activity_section.key": "dc798ba9-8a3f-4eac-9fea-9bf01b5fa054"
       }
     },
     {
