@@ -39,9 +39,9 @@ $(document).ready(initPage);
 function initPage() {
   const script = document.querySelector('script[data-scriptoverview]');
   const config = JSON.parse(script.dataset.scriptoverview);
-  const parentalPermissionBannerData =
-    script.dataset.parentalPermissionBanner &&
-    JSON.parse(script.dataset.parentalPermissionBanner);
+  const parentalPermissionBannerData = JSON.parse(
+    script.dataset.parentalPermissionBanner
+  );
 
   const {scriptData, plcBreadcrumb} = config;
   const store = getStore();
