@@ -363,10 +363,7 @@ export default class ProjectManager {
       // We set forceReloading to true so the client can skip
       // showing the user a dialog before reload.
       this.forceReloading = true;
-      this.metricsReporter.logWarning({
-        event: 'Conflict on save, reloading page',
-        details: error.message,
-      });
+      this.metricsReporter.logWarning(`${error.message}. Reloading page.`);
       reload();
     } else {
       // Otherwise, we log the error.
