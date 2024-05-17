@@ -120,6 +120,7 @@ const PROJECT_INFO = {
   music: {
     label: i18n.projectTypeMusic(),
     thumbnail: '/shared/images/fill-70x70/courses/logo_music.png',
+    urlOverride: '/s/music-intro-2024/reset',
   },
 };
 
@@ -143,7 +144,13 @@ class NewProjectButtons extends React.Component {
           (projectTypesRow, rowIndex) => (
             <div style={styles.row} key={rowIndex}>
               {projectTypesRow.map((projectType, index) => (
-                <a key={index} href={'/projects/' + projectType + '/new'}>
+                <a
+                  key={index}
+                  href={
+                    PROJECT_INFO[projectType].urlOverride ||
+                    '/projects/' + projectType + '/new'
+                  }
+                >
                   <div
                     className="newProject-button-tile"
                     style={[
