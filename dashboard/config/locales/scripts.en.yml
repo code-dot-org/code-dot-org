@@ -16501,7 +16501,7 @@ en:
             csf_sprites:
               display_name: Sprites
             ramp_up:
-              display_name: Nested Loops
+              display_name: Variables & Data Analysis
             csf_functions:
               display_name: Functions
             csf_nested_loops:
@@ -16936,9 +16936,9 @@ en:
           name: music-tutorial-2024
           title: Music Lab Tutorial
           description_audience: ''
-          description_short: ''
-          description: ''
-          student_description: ''
+          description_short: In this engaging lesson, students use Music Lab to develop coding skills, compose songs, and connect technology with creativity.
+          description: In this engaging and interactive lesson, students will dive into the world of music creation through coding. Using Music Lab, a block-based integrated development environment (IDE), learners will discover the power of programming to make their own unique sounds, compose songs, and perform live music. By the end of this lesson, students will not only have developed foundational coding skills but also an appreciation for the interdisciplinary connection between music and technology. All the skills they learn in this tutorial will set them up for success when they get to the [Music Lab project](https://studio.code.org/projects/music/new), which is an open space for students to create any song they'd like!
+          student_description: In this engaging lesson, students use Music Lab to develop coding skills, compose songs, and connect technology with creativity.
         sandbox-pl-cv:
           lessons:
             lesson-1:
