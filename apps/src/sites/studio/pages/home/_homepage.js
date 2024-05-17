@@ -83,7 +83,7 @@ function showHomepage() {
   const announcement = getTeacherAnnouncement(announcementOverride);
   const parentalPermissionBanner = homepageData.parentalPermissionBanner && (
     <ParentalPermissionBanner
-      key="parentla-permission-bnner"
+      key="parental-permission-banner"
       {...homepageData.parentalPermissionBanner}
     />
   );

@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const inSection = getScriptData('inSection');
 
     const reportEvent = (eventName, payload = {}) => {
-      payload.isSection = inSection;
+      payload.inSection = inSection;
       analyticsReporter.sendEvent(eventName, payload, PLATFORMS.AMPLITUDE);
     };
 
