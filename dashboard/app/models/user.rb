@@ -2855,6 +2855,8 @@ class User < ApplicationRecord
   # Verifies that the serialized attribute "us_state" is a 2 character string
   # representing a US State or "??" which represents a "N/A" kind of response.
   private def validate_us_state
+    # Check if us_state value will change
+    return unless will_save_change_to_properties? && properties_change&.any? {|old, new| old[:us_state] != new[:us_state]}
     # tracking a user's US State is currently limited to students.
     return unless user_type == TYPE_STUDENT
     # us_state is only a required field if the User lives in the US.
