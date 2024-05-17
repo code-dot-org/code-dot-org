@@ -8,7 +8,9 @@ import moduleStyles from './chatWorkspace.module.scss';
 import {
   AichatState,
   setShowWarningModal,
+  clearChatMessages,
 } from '@cdo/apps/aichat/redux/aichatRedux';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 
 /**
  * Renders the AI Chat Lab main chat workspace component.
@@ -26,6 +28,8 @@ const ChatWorkspace: React.FunctionComponent = () => {
     (state: {aichat: AichatState}) => state.aichat.isWaitingForChatResponse
   );
 
+  const readOnlyWorkspace: boolean = useSelector(isReadOnlyWorkspace);
+
   const conversationContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -38,6 +42,12 @@ const ChatWorkspace: React.FunctionComponent = () => {
   }, [conversationContainerRef, storedMessages, isWaitingForChatResponse]);
 
   const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    if (readOnlyWorkspace) {
+      dispatch(clearChatMessages());
+    }
+  }, [dispatch, readOnlyWorkspace]);
 
   const onCloseWarningModal = useCallback(
     () => dispatch(setShowWarningModal(false)),

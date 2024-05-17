@@ -11,6 +11,8 @@ import {
   setAiCustomizationProperty,
   updateAiCustomization,
 } from '@cdo/apps/aichat/redux/aichatRedux';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
+import {useSelector} from 'react-redux';
 
 const RetrievalCustomization: React.FunctionComponent = () => {
   const [newRetrievalContext, setNewRetrievalContext] = useState('');
@@ -22,6 +24,8 @@ const RetrievalCustomization: React.FunctionComponent = () => {
   const {retrievalContexts} = useAppSelector(
     state => state.aichat.currentAiCustomizations
   );
+
+  const readOnlyWorkspace: boolean = useSelector(isReadOnlyWorkspace);
 
   const onUpdate = useCallback(
     () => dispatch(updateAiCustomization()),
@@ -69,7 +73,7 @@ const RetrievalCustomization: React.FunctionComponent = () => {
             id="retrieval-input"
             onChange={event => setNewRetrievalContext(event.target.value)}
             value={newRetrievalContext}
-            disabled={isDisabled(visibility)}
+            disabled={isDisabled(visibility) || readOnlyWorkspace}
           />
         </div>
         <div className={styles.addItemContainer}>
@@ -78,7 +82,11 @@ const RetrievalCustomization: React.FunctionComponent = () => {
             type="secondary"
             onClick={onAdd}
             iconLeft={{iconName: 'plus'}}
-            disabled={!newRetrievalContext || isDisabled(visibility)}
+            disabled={
+              !newRetrievalContext ||
+              isDisabled(visibility) ||
+              readOnlyWorkspace
+            }
           />
         </div>
         <div className={styles.addedItemsHeaderContainer}>
@@ -92,7 +100,7 @@ const RetrievalCustomization: React.FunctionComponent = () => {
                 type="button"
                 onClick={() => onRemove(index)}
                 className={styles.removeItemButton}
-                disabled={isDisabled(visibility)}
+                disabled={isDisabled(visibility) || readOnlyWorkspace}
               >
                 <FontAwesomeV6Icon
                   iconName="circle-xmark"
@@ -109,7 +117,7 @@ const RetrievalCustomization: React.FunctionComponent = () => {
           onClick={onUpdate}
           iconLeft={{iconName: 'edit'}}
           className={modelCustomizationStyles.updateButton}
-          disabled={isDisabled(visibility)}
+          disabled={isDisabled(visibility) || readOnlyWorkspace}
         />
       </div>
     </div>

@@ -18,6 +18,8 @@ import PublishStatus from './PublishStatus';
 import moduleStyles from './publish-notes.module.scss';
 import modelCustomizationStyles from '../model-customization-workspace.module.scss';
 import {ModelCardInfo} from '../../types';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
+import {useSelector} from 'react-redux';
 
 const PublishNotes: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
@@ -30,6 +32,8 @@ const PublishNotes: React.FunctionComponent = () => {
   );
   const hasFilledOutModelCard = useAppSelector(selectHasFilledOutModelCard);
 
+  const readOnlyWorkspace: boolean = useSelector(isReadOnlyWorkspace);
+
   const onSave = useCallback(() => {
     dispatch(saveModelCard());
   }, [dispatch]);
@@ -41,7 +45,7 @@ const PublishNotes: React.FunctionComponent = () => {
   return (
     <div className={modelCustomizationStyles.verticalFlexContainer}>
       <div>
-        {!isDisabled(visibility)
+        {!isDisabled(visibility) || !readOnlyWorkspace
           ? hasFilledOutModelCard
             ? PublishOkNotification
             : CompleteToPublishNotification
@@ -61,14 +65,14 @@ const PublishNotes: React.FunctionComponent = () => {
                 {property === 'exampleTopics' && (
                   <ExampleTopicsInputs
                     topics={modelCardInfo.exampleTopics}
-                    readOnly={isDisabled(visibility)}
+                    readOnly={isDisabled(visibility) || readOnlyWorkspace}
                   />
                 )}
                 {property !== 'exampleTopics' && property !== 'isPublished' && (
                   <InputTag
                     id={property}
                     type="text"
-                    disabled={isDisabled(visibility)}
+                    disabled={isDisabled(visibility) || readOnlyWorkspace}
                     value={modelCardInfo[property]}
                     onChange={event =>
                       dispatch(
@@ -91,14 +95,18 @@ const PublishNotes: React.FunctionComponent = () => {
           iconLeft={{iconName: 'download'}}
           type="secondary"
           color="black"
-          disabled={isDisabled(visibility)}
+          disabled={isDisabled(visibility) || readOnlyWorkspace}
           onClick={onSave}
           className={modelCustomizationStyles.updateButton}
         />
         <Button
           text="Publish"
           iconLeft={{iconName: 'upload'}}
-          disabled={isDisabled(visibility) || !hasFilledOutModelCard}
+          disabled={
+            isDisabled(visibility) ||
+            !hasFilledOutModelCard ||
+            readOnlyWorkspace
+          }
           onClick={onPublish}
           className={modelCustomizationStyles.updateButton}
         />
