@@ -1,7 +1,16 @@
--# FontAwesome icon
-- icon_check = "fa-solid fa-check-circle"
-- embed_src = CDO.studio_url("/musiclab/embed?channels=#{request.params['channels']}&library=#{request.params['library']}", CDO.default_scheme)
-- list_items = [hoc_s("music_lab.student_projects.list_create"), hoc_s("music_lab.student_projects.list_artist"),  hoc_s("music_lab.student_projects.list_share")]
+:ruby
+  # FontAwesome icon
+  icon_check = "fa-solid fa-check-circle"
+  channels = [
+    'i30-h2FOVAnmvbkRwjQ9k6vsWK0FrZixaG6uTpfNEHg',
+    "syBuoFelbGB3eOmNVoQGrWMXEk0l1EhkIX6c08ujq6s",
+    'WyHI9mRmbyvPVnlGayCNCx69agZSU-8jv3FlP2BDcrI',
+    '_ClG-r60TewpyqUVPj1lCbHaqwmSUG-RXCqHoZtepyE',
+    '9pY3YPKnihVJOnw-ck31G5GXEBjXmGMFj5RAouTRh1g',
+    'XJNH7hTfbtKRTqp4brJ4epCX-nbAD1VjOhE_URAWJxY'
+  ].join(',')
+  embed_src = CDO.studio_url("/musiclab/embed?channels=#{request.params['channels'] || channels}&library=#{request.params['library']}", CDO.default_scheme)
+  list_items = [hoc_s("music_lab.student_projects.list_create"), hoc_s("music_lab.student_projects.list_artist"),  hoc_s("music_lab.student_projects.list_share")]
 
 .grid-container.gap-2
   %iframe.rounded-corners.box-shadow-primary{width: "100%", height: 300, src: embed_src}
