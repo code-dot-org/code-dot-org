@@ -14,6 +14,11 @@ enum Panels {
   HelpAndTips = 'Help and Tips',
 }
 
+const panelMap = {
+  [Panels.Instructions]: InstructionsView,
+  [Panels.HelpAndTips]: HelpAndTips,
+};
+
 export const InfoPanel = React.memo(() => {
   const mapReference = useAppSelector(
     state => state.lab.levelProperties?.mapReference
@@ -52,19 +57,12 @@ export const InfoPanel = React.memo(() => {
     return panelOptions;
   };
 
-  const showCurrentPanel = () => {
-    switch (currentPanel) {
-      case Panels.Instructions:
-        return <InstructionsView />;
-      case Panels.HelpAndTips:
-        return <HelpAndTips />;
-    }
-  };
-
   const changePanel = (panel: Panels) => {
     setCurrentPanel(panel);
     setIsDropdownOpen(false);
   };
+
+  const CurrentPanelView = panelMap[currentPanel];
 
   return (
     <PanelContainer
@@ -93,7 +91,7 @@ export const InfoPanel = React.memo(() => {
           </ul>
         </form>
       )}
-      {showCurrentPanel()}
+      <CurrentPanelView />
     </PanelContainer>
   );
 });
