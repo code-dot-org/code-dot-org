@@ -184,16 +184,11 @@ export default class MusicPlayer {
       blockId: 'preview',
       soundType: 'beat',
     };
-    const sampleEvent = this.convertEventToSamples(preview)[0];
-    const library = MusicLibrary.getInstance();
-    if (!library) {
-      this.metricsReporter.logWarning('Library not set. Cannot play sounds.');
-      return [];
-    }
-    this.analyticsReporter?.onSoundsPlayed(
-      library.getSoundIdFromUrl(sampleEvent.sampleUrl)
+    this.analyticsReporter?.onSoundPlayed(id);
+    this.audioPlayer.playSampleImmediately(
+      this.convertEventToSamples(preview)[0],
+      onStop
     );
-    this.audioPlayer.playSampleImmediately(sampleEvent, onStop);
   }
 
   previewChord(chordValue: ChordEventValue, onStop?: () => void) {
@@ -290,7 +285,7 @@ export default class MusicPlayer {
     for (const event of events) {
       if (event.type === 'sound' || !this.audioPlayer.supportsSamplers()) {
         const reportCallback = (soundId: string) => {
-          this.analyticsReporter?.onSoundsPlayed(soundId);
+          this.analyticsReporter?.onSoundPlayed(soundId);
         };
         for (const sample of this.convertEventToSamples(event)) {
           this.audioPlayer.scheduleSample(sample, reportCallback);
@@ -359,6 +354,7 @@ export default class MusicPlayer {
 
       return [
         {
+          id: soundEvent.id,
           sampleUrl: library.generateSoundUrl(folder, soundData),
           playbackPosition: event.when,
           triggered: soundEvent.triggered,
@@ -389,6 +385,7 @@ export default class MusicPlayer {
         }
 
         const resultEvent = {
+          id: `${folder.id}/${event.src}`,
           sampleUrl: library.generateSoundUrl(folder, soundData),
           playbackPosition: patternEvent.when + (event.tick - 1) / 16,
           triggered: patternEvent.triggered,
@@ -482,6 +479,7 @@ export default class MusicPlayer {
       if (sampleUrl !== null) {
         const eventWhen = eventStart + (event.position - 1) / 16;
         samples.push({
+          id: sampleUrl,
           sampleUrl,
           playbackPosition: eventWhen,
           length: event.length,

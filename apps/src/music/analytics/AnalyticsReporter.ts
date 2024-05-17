@@ -169,7 +169,7 @@ export default class AnalyticsReporter {
     track(eventType, payload).promise;
   }
 
-  onSoundsPlayed(id: string) {
+  onSoundPlayed(id: string) {
     const shouldReport = DCDO.get('music-lab-samples-report', true);
     if (!shouldReport) {
       return;
