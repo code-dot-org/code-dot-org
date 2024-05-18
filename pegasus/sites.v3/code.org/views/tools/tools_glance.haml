@@ -15,9 +15,10 @@
 .at-a-glance{style: "margin-block: 2rem"}
   %ul.two-col
     - items_index.times do |index|
-      %li
-        %i{class: "#{icons[index]}"}
-        %p
-          %strong
-            = labels[index]
-          #{descriptions[index]}
+      - unless descriptions[index].nil?
+        %li
+          %i{class: "#{icons[index]}"}
+          %p
+            %strong
+              = labels[index]
+            #{descriptions[index]}
