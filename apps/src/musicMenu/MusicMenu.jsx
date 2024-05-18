@@ -55,8 +55,8 @@ const optionsList = [
     name: 'sounds-panel-2',
     type: 'radio',
     values: [
-      {value: 'false', description: 'Use original sounds panel.'},
-      {value: 'true', description: 'Use new sounds panel (default).'},
+      {value: 'false', description: 'Use original sounds panel (default).'},
+      {value: 'true', description: 'Use new sounds panel.'},
     ],
   },
   {
