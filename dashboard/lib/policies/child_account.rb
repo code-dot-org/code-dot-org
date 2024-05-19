@@ -30,8 +30,8 @@ class Policies::ChildAccount
   STATE_POLICY = {
     'CO' => {
       max_age: 12,
-      lockout_date: DateTime.parse(DCDO.get('cpa_schedule', {Cpa::ALL_USER_LOCKOUT => '2024-07-01T00:00:00MST'})[Cpa::ALL_USER_LOCKOUT]),
-      start_date: DateTime.parse(DCDO.get('cpa_schedule', {Cpa::NEW_USER_LOCKOUT => '2023-07-01T00:00:00Z'})[Cpa::NEW_USER_LOCKOUT])
+      lockout_date: DateTime.parse(DCDO.get('cpa_schedule', {Cpa::ALL_USER_LOCKOUT => Cpa::ALL_USER_LOCKOUT_DATE.iso8601})[Cpa::ALL_USER_LOCKOUT]),
+      start_date: DateTime.parse(DCDO.get('cpa_schedule', {Cpa::NEW_USER_LOCKOUT => Cpa::NEW_USER_LOCKOUT_DATE.iso8601})[Cpa::NEW_USER_LOCKOUT])
     }
   }.freeze
 
