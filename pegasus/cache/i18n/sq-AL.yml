@@ -109,7 +109,7 @@ sq-AL:
   cargobot_beyond_shortdescription: Programo një krah roboti në iPad-in tënd
   carousel_heading_apps_games: Bëj aplikacionet ose lojrat e tua
   carousel_heading_beginners: Tutoriale për Fillestarët
-  carousel_heading_beyond_devices: Aplikacione me tutoriale për telefona dhe tableta
+  carousel_heading_beyond_devices: Aplikacione për telefona dhe tableta
   carousel_heading_beyond_javascript: Mësoni JavaScript
   carousel_heading_beyond_languages: Tutoriale në gjuhë të tjera programimi
   carousel_heading_devices: Aplikacione me tutoriale për telefona dhe tableta
@@ -823,6 +823,7 @@ sq-AL:
   header_course_catalog: Katalogu i kurseve
   header_courses: Kurset
   header_districts: Rrethet
+  header_documentation: Dokumentacioni
   header_educate_beyond: Përtej Code.org
   header_educate_community: Komuniteti Online
   header_educate_elementary: Shkollë Fillore
@@ -846,6 +847,7 @@ sq-AL:
   header_project_gallery: Projekte
   header_report_abuse: Raporto abuzim
   header_report_bug: Raporto një problem
+  header_schools: Shkollat
   header_sections: Sesionet
   header_stats: statistikat
   header_teach: Mësoni
@@ -1651,6 +1653,7 @@ sq-AL:
   touchdevelop_shortdescription: 'Zgjidh formueset, krijo lojëra dhe mëso të kodosh
     gjithçka në telefonin tënd. '
   try_an_activity: Provoni një aktivitet
+  try_hoc_num_served: "<h1>Provo</h1><h2>Orën e Kodimit</h2><h3>%{num} të shërbyer</h3>"
   try_hoc_num_served_markdown: |-
     # Provo\
     \
@@ -1818,6 +1821,14 @@ sq-AL:
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} e mësuesve kanë
     nevojë për vullnetarë.<br>%{num_volunteers} vullnetarë janë regjistruar. Bashkoju
     atyre."
+  volunteer_engineer_submission_thankyou: Faleminderit! Informacioni juaj vullnetar
+    është dorëzuar me sukses. Mësuesit do të përdorin <a href="%{url}">këtë hartë</a>
+    për të kërkuar dhe kontaktuar vullnetarë si ju. Ju lutemi lejoni 48 orë që informacioni
+    juaj të shfaqet saktësisht në hartë.
+  volunteer_engineer_submission_thankyou_markdown: Faleminderit! Informacioni juaj
+    vullnetar është dorëzuar me sukses. Mësuesit do të përdorin <a href="%{url}">këtë
+    hartë</a> për të kërkuar dhe kontaktuar vullnetarë si ju. Ju lutemi lejoni 48
+    orë që informacioni juaj të shfaqet saktësisht në hartë.
   volunteer_engineer_submission_title: Frymëzo nxënësit dhe vullnetarizo
   volunteer_engineer_submission_type_task_mentor: Jam duke kërkuar një mentor për
     të më ndihmuar me kodimin me studentët e mij
