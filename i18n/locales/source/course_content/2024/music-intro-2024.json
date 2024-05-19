@@ -35,7 +35,7 @@
       "musiclab_intro_repeat_eaf348ed-21a0-499e-89a8-2f5beff52dd7": "Nice work.  You successfully played three sounds.",
       "musiclab_intro_repeat_28936cc0-3bfc-4c00-8319-5886b587b29c": "It's good that you've played a sound twice.  Please play it three times.",
       "musiclab_intro_repeat_41276380-4fc4-48cb-be28-b6be5dfb8dd5": "You've played a sound once.  Please play it three times by using the [repeat][0] block.",
-      "musiclab_intro_repeat_b2a9ed31-f16f-45ac-9aaa-ab45620d6cd6": "Please play a sound three times.  Attached a [repeat][0] block to [when run][1]. Then put a [play][2] block inside of it."
+      "musiclab_intro_repeat_b2a9ed31-f16f-45ac-9aaa-ab45620d6cd6": "Please play a sound three times.  Attach a [repeat][0] block to [when run][1]. Then put a [play][2] block inside of it."
     }
   },
   "https://studio.code.org/s/music-intro-2024/lessons/1/levels/6": {
