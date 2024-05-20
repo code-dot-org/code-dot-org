@@ -12,6 +12,7 @@ import {State} from 'blockly/core/serialization/blocks';
 
 import {flyoutCategory as behaviorsFlyoutCategory} from '@cdo/apps/blockly/customBlocks/googleBlockly/behaviorBlocks';
 import {flyoutCategory as functionsFlyoutCategory} from '@cdo/apps/blockly/customBlocks/googleBlockly/proceduresBlocks';
+import {flyoutCategory as variablesFlyoutCategory} from '@cdo/apps/blockly/customBlocks/googleBlockly/variableBlocks';
 import {disableOrphans} from '@cdo/apps/blockly/eventHandlers';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getAlphanumericId} from '@cdo/apps/utils';
@@ -60,6 +61,11 @@ export default class FunctionEditor {
     this.dom = modalEditor;
     this.isReadOnly = options.readOnly || false;
 
+    // Remove the block ids from the toolbox. Otherwise, it would be possible
+    // to add a block with the same id to multiple different procedure definitions.
+    // Because we mirror block creation onto the hidden workspace, we need to avoid
+    // trying to create blocks with ids that are already used in other definitions.
+    const toolbox = Blockly.cdoUtils.toolboxWithoutIds(options.toolbox);
     this.primaryWorkspace = Blockly.getMainWorkspace() as WorkspaceSvg;
     // Customize auto-populated Functions toolbox category.
     this.editorWorkspace = Blockly.blockly_.inject(modalEditor, {
@@ -82,10 +88,14 @@ export default class FunctionEditor {
       renderer: options.renderer,
       rtl: options.rtl,
       theme: Blockly.cdoUtils.getUserTheme(options.theme),
-      toolbox: options.toolbox,
+      toolbox,
       trashcan: false, // Don't use default trashcan.
       modalInputs: false,
     }) as EditorWorkspaceSvg;
+    this.editorWorkspace.registerToolboxCategoryCallback(
+      'VARIABLE',
+      variablesFlyoutCategory
+    );
     const scrollOptionsPlugin = new ScrollOptions(this.editorWorkspace);
     scrollOptionsPlugin.init();
     initializeScrollbarPair(this.editorWorkspace);
@@ -457,13 +467,13 @@ export default class FunctionEditor {
   }
 
   setUpEditorWorkspaceChangeListeners() {
-    // Mirror procedure events from editor workspace to main workspace.
+    // Mirror procedure and variable events from editor workspace to main workspace.
     // This allows updates for things like procedure name to propogate to the main
-    // workspace.
+    // workspace, as well as variables being created/renamed/deleted.
     this.editorWorkspace?.addChangeListener(e => {
       // If the main workspace hasn't been initialized yet, don't do anything
       if (!Blockly.mainBlockSpace) return;
-      if (e instanceof ProcedureBase) {
+      if (e instanceof ProcedureBase || e instanceof Blockly.Events.VarBase) {
         let event;
         try {
           event = Blockly.Events.fromJson(e.toJson(), Blockly.mainBlockSpace);
@@ -478,6 +488,40 @@ export default class FunctionEditor {
         // Update the toolbox in case this change is happening
         // while the flyout is open.
         Blockly.mainBlockSpace?.getToolbox()?.refreshSelection();
+      }
+    });
+
+    // Mirror variable events from main workspace to editor workspace.
+    // This is allows newly created/renamed/deleted variables to propogate
+    // to the modal function editor workspace.
+    this.primaryWorkspace?.addChangeListener(e => {
+      if (!this.editorWorkspace) {
+        return;
+      }
+      if (e instanceof Blockly.Events.VarBase) {
+        let newEditorWorkspaceEvent;
+        let newHiddenWorkspaceEvent;
+        try {
+          newEditorWorkspaceEvent = Blockly.Events.fromJson(
+            e.toJson(),
+            this.editorWorkspace
+          );
+          newHiddenWorkspaceEvent = Blockly.Events.fromJson(
+            e.toJson(),
+            Blockly.getHiddenDefinitionWorkspace()
+          );
+        } catch (err) {
+          // Could not deserialize event. This is expected to happen. E.g. When
+          // round-tripping parameter deletes, the delete in the secondary workspace
+          // cannot be deserialized into the original workspace.
+          return;
+        }
+        newEditorWorkspaceEvent.run(true);
+        newHiddenWorkspaceEvent.run(true);
+
+        // Update the toolbox in case this change is happening
+        // while the flyout is open.
+        this.editorWorkspace?.getToolbox()?.refreshSelection();
       }
     });
 
@@ -580,6 +624,19 @@ export default class FunctionEditor {
     // procedure definition.
     Blockly.Events.disable();
     this.editorWorkspace.clear();
+    const primaryVariableMap = this.primaryWorkspace?.getVariableMap();
+    const modalVariableMap = this.editorWorkspace.getVariableMap();
+    if (primaryVariableMap) {
+      const variables = primaryVariableMap.getAllVariables();
+
+      variables.forEach(variable => {
+        modalVariableMap.createVariable(
+          variable.name,
+          variable.type,
+          variable.getId()
+        );
+      });
+    }
     Blockly.Events.enable();
   }
 }
