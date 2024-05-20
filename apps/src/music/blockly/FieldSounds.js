@@ -11,6 +11,10 @@ import AppConfig from '../appConfig';
 const FIELD_HEIGHT = 20;
 const FIELD_PADDING = 2;
 
+// A variant for SoundsPanel that plays previews as sounds are selected.
+const useSoundsPanelPreview =
+  AppConfig.getValue('sounds-panel-1-preview') === 'true';
+
 // Default to using SoundsPanel, unless a URL parameter forces the use of
 // the newer SoundsPanel2.
 const useSoundsPanel2 = AppConfig.getValue('sounds-panel-2') === 'true';
@@ -144,7 +148,7 @@ class FieldSounds extends GoogleBlockly.Field {
         }}
         onSelect={value => {
           this.setValue(value);
-          if (!useSoundsPanel2) {
+          if (!useSoundsPanelPreview && !useSoundsPanel2) {
             this.hide_();
           }
         }}
