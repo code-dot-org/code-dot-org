@@ -30,7 +30,6 @@ const ChatWorkspace: React.FunctionComponent = () => {
   const conversationContainerRef = useRef<HTMLDivElement>(null);
 
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
-  console.log('viewAsUserId', viewAsUserId);
 
   useEffect(() => {
     if (conversationContainerRef.current) {
