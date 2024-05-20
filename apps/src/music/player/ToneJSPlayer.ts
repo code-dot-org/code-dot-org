@@ -259,7 +259,7 @@ class ToneJSPlayer implements AudioPlayer {
     this.generateEffectBusses();
   }
 
-  scheduleSample(sample: SampleEvent) {
+  scheduleSample(sample: SampleEvent, onSampleStart: (id: string) => void) {
     const buffer = this.soundCache.getSound(sample.sampleUrl);
     if (!buffer) {
       this.metricsReporter.logWarning(
@@ -286,6 +286,12 @@ class ToneJSPlayer implements AudioPlayer {
       .start(this.playbackTimeToTransportTime(sample.playbackPosition));
 
     this.activePlayers.push(player);
+
+    // Schedule a callback to report the sound ID after the sound has been played.
+    Transport.scheduleOnce(
+      () => onSampleStart(sample.id),
+      this.playbackTimeToTransportTime(sample.playbackPosition)
+    );
   }
 
   scheduleSamplerSequence({instrument, events, effects}: SamplerSequence) {
