@@ -208,8 +208,8 @@ export class ImportScreensDialog extends React.Component {
                 <h2 style={multiCheckboxStyles.header}>Cannot Import</h2>
                 <p style={styles.subtext}>
                   Cannot import the following screens because their IDs or
-                  contained design elements IDs are already used in your
-                  existing project. Fix the IDs in either project so they aren't
+                  contained design element IDs are already used in your existing
+                  project. Fix the IDs in either project so they aren't
                   duplicated across different screens before trying to import
                   the following.
                 </p>
