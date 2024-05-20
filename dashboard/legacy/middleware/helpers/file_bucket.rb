@@ -21,7 +21,6 @@ class FileBucket < BucketHelper
       "video/",
       "application/json",
       "application/ld+json",
-      "application/gzip",
       "application/pdf",
       "application/rtf",
     ]
