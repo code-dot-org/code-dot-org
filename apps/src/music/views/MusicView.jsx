@@ -55,6 +55,7 @@ import {isEqual} from 'lodash';
 import MusicLibrary from '../player/MusicLibrary';
 import {TRIGGER_FIELD} from '../blockly/constants';
 import MusicLabView from './MusicLabView';
+import DCDO from '@cdo/apps/dcdo';
 
 const BLOCKLY_DIV_ID = 'blockly-div';
 
@@ -305,9 +306,16 @@ class UnconnectedMusicView extends React.Component {
     // specifically to handle the case where a user starts a project on a library
     // that does not have restricted packs (and is therefore using default),
     // and then later opens their project with a library that does have restricted packs.
-    if (codeChangedOnProjectLevel && !packId) {
+    if (
+      DCDO.get('music-lab-existing-projects-default-sounds', true) &&
+      codeChangedOnProjectLevel &&
+      !packId
+    ) {
       this.library.setCurrentPackId(DEFAULT_PACK);
       this.props.setPackId(DEFAULT_PACK);
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .logInfo('Setting existing project to default pack');
     }
 
     // Go ahead and compile and execute the initial song once code is loaded.
