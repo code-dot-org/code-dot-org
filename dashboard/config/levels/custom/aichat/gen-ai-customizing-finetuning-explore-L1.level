@@ -14,8 +14,8 @@
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gen-ai-mistral-7b-inst-v01",
-        "temperature": "0.8",
-        "systemPrompt": "",
+        "temperature": "0.2",
+        "systemPrompt": "You are a chatbot designed to help explain medical and anatomy terms. Answer questions clearly and concisely. Responses should be one paragraph.",
         "retrievalContexts": [
 
         ],
@@ -32,20 +32,20 @@
         }
       },
       "visibilities": {
-        "selectedModelId": "editable",
+        "selectedModelId": "hidden",
         "temperature": "hidden",
-        "systemPrompt": "editable",
+        "systemPrompt": "readonly",
         "retrievalContexts": "hidden",
         "modelCardInfo": "hidden"
       },
       "hidePresentationPanel": true,
       "availableModelIds": [
         "gen-ai-biomistral-7b",
-        "gen-ai-mental-health-mistral-7b",
         "gen-ai-mistral-7b-inst-v01"
       ]
-    }
+    },
+    "long_instructions": "## Medical Explanation Chatbot\r\n\r\nThis chatbot is designed to explain medical and anatomy terms. It could be used by someone studying for an exam or wanting to learn more about how their biology works.\r\n\r\nWe've been asked to evaluate how approachable the chatbot is - will it work for a student in a middle school biology and health class? Or is it better for advanced medical students becoming doctors?\r\n\r\n### Do This\r\n\r\n1) Test at least 4 prompts asking the chatbot to describe how one of your organs or muscles work in your body. For example:\r\n    - \"Describe the gall bladder and what it does in your body\"\r\n    - \"Describe the Circle of Willis and what it does in your body\"\r\n    - \"Describe the  liver and what it does in your body\"\r\n    - \"Describe the Choroid Plexus and what it does in your body\"\r\n2) Read over the responses and rate how understandable they are:\r\n    - (1) A small child could understand these responses\r\n    - (2) A high school student could understand these responses\r\n    - (3) A college student could understand these responses\r\n    - (4) Someone training to become a doctor could understand these responses\r\n    - (5) Only experts, like doctors, can understand these responses"
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-04T02:58:18.528+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-finetuning-template\\\"\"],\"cloned_from\":\"gen-ai-customizing-finetuning-template\"},{\"changed_at\":\"2024-05-13 07:24:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-13 07:24:16 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-04T02:58:18.528+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-finetuning-template\\\"\"],\"cloned_from\":\"gen-ai-customizing-finetuning-template\"},{\"changed_at\":\"2024-05-13 07:24:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-13 07:24:16 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-17 22:04:58 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-17 23:53:27 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-17 23:59:20 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>

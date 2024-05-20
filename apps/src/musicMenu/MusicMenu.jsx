@@ -1,5 +1,4 @@
 import React from 'react';
-const baseUrl = window.location.origin + '/projectbeats';
 
 const optionsList = [
   {
@@ -52,11 +51,19 @@ const optionsList = [
     ],
   },
   {
+    name: 'sounds-panel-1-preview',
+    type: 'radio',
+    values: [
+      {value: 'false', description: 'Use original sounds panel (default).'},
+      {value: 'true', description: 'Use original sounds panel with preview.'},
+    ],
+  },
+  {
     name: 'sounds-panel-2',
     type: 'radio',
     values: [
-      {value: 'false', description: 'Use original sounds panel.'},
-      {value: 'true', description: 'Use new sounds panel (default).'},
+      {value: 'false', description: 'Use original sounds panel (default).'},
+      {value: 'true', description: 'Use new sounds panel.'},
     ],
   },
   {
@@ -199,7 +206,7 @@ export default class MusicMenu extends React.Component {
           userSelect: 'all',
         }}
       >
-        {baseUrl}?
+        ?
         {optionsList
           .map(option => {
             return (

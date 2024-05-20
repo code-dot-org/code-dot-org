@@ -4,13 +4,13 @@ Whenever the mainline `blockly` package version is being upgraded or updates are
 The following is a manual test checklist to follow and is not exhaustive. The estimated time to complete the following checklist is 15-20 minutes.
 
 # For All Mainline Blockly Labs
-Currently, the mainline Blockly labs are: Dance, Poetry, Music (Project Beats), Flappy, Bounce.
+Currently, the mainline Blockly labs are: Dance, Poetry, Music, Flappy, Bounce.
 - Page loads - check for errors and unexpected warnings in console - keep console open throughout manual testing process. Look out for deprecation warnings.
-- Context menu works. 
+- Context menu works.
     - Right-click anywhere on workspace to open context menu menu (Paste, Undo, Redo, Enable Keyboard Navigation, Turn on dark mode, Modern Theme, Enable High Contrast Theme, etc).
     - Right-click on a block to open a different context menu (Copy, Duplicate, Collapse Block, Disable Block, Delete Block).
 - The different themes are rendered properly (Modern, High Contrast, Protanopia, Deuteranopia, Tritanopia, and each of these can be combined with dark mode). There are 10 different themes in all.
-    - In particular, check High Contrast since font size changes and pay particular attention to custom fields such as the location picker field in the 'make new_sprite at_' in Poetry Lab or the patterns field in the 'play drums' block in music lab. 
+    - In particular, check High Contrast since font size changes and pay particular attention to custom fields such as the location picker field in the 'make new_sprite at_' in Poetry Lab or the patterns field in the 'play drums' block in music lab.
 - Drag any block from toolbox. Block connects to other blocks. When you delete the block, the trashcan animates. Note that custom fields to look at for are included in specific lab sections below.
 - Click on the 'Show Code' button and confirm generated code looks correct (modal).
 - Click and drag a block to replace a ['shadow block'](https://developers.google.com/blockly/guides/configure/web/toolbox#shadow_blocks). Then remove the block and the shadow block is displayed.
@@ -50,15 +50,15 @@ Create a new Poetry project: [[local_poetry]](http://localhost-studio.code.org:3
 Create a new Poetry HOC project: [[local_poetry_hoc]](http://localhost-studio.code.org:3000/projects/poetry_hoc/new) [[production_poetry_hoc]](https://studio.code.org/projects/poetry_hoc/new)
 - Check 2 versions of Poetry lab - poetry and poetry_hoc
 - Check shadow blocks, for example, 'set title' block. Most blocks that accept text have shadow blocks. You will have to remove an actual block that is covering the shadow block to see the shadow block.
-- Check variables - variable picker (purple block with '???') with customized options - look for custom modals to rename variables. 
+- Check variables - variable picker (purple block with '???') with customized options - look for custom modals to rename variables.
 - Under 'Effects', check the 'set background to' block. Its dropdown field is grid and includes a 'More' link. When 'More is clicked, modal opens to choose background to add to assets. Note that in July 2023, the 'More' button will change to 'Backgrounds'.
 - Check 'make new_sprite at_' block.
     - Click on the animation dropdown, then click on Costumes button which should take you to Costumes tab.
     - Click on location field, then confirm you can select new location of animation.
 
 
-# Project Beats / Music Lab
-Go to Project Beats: [[local]](http://localhost-studio.code.org:3000/projectbeats) [[production]](https://studio.code.org/projectbeats)
+# Music Lab
+Create a new Music Lab project: [[local]](http://localhost-studio.code.org:3000/projects/music/new) [[production]](https://studio.code.org/projects/music/new)
 - Note that functions in music lab DO NOT have svg frames - check that function call ('do something') is added to toolbox once a function is defined.
 - Check the three Play blocks which contain customized fields - fieldSounds, fieldChords, and fieldPattern.
 
@@ -66,7 +66,7 @@ Go to Project Beats: [[local]](http://localhost-studio.code.org:3000/projectbeat
 Check pools for Dancelab, Poetry at [[local]](http://localhost-studio.code.org:3000/pools) [[levelbuilder]](https://levelbuilder-studio.code.org/pools)
 - Click on Dancelab and Poetry pools
     - Scroll down each pool page and make sure all blocks are rendered.
-- Check at least one block link under 'Edit an existing block'. You should see a read-only workspace for each block - config and generated code. 
+- Check at least one block link under 'Edit an existing block'. You should see a read-only workspace for each block - config and generated code.
 - To be able to click on a block edit link, you need levelbuilder permission. Instructions to add levelbuilder permissions - [[local]](https://docs.google.com/presentation/d/1mEcbvOkACycBl9-yj5O8YoE6a7LuuinG4iYg0AWKgnc/edit#slide=id.g1029aa55fcd_0_28) [[levelbuilder]](https://docs.google.com/presentation/d/1mEcbvOkACycBl9-yj5O8YoE6a7LuuinG4iYg0AWKgnc/edit#slide=id.g1029aa55fcd_0_37)
 
 # Instructions in Levels
@@ -78,5 +78,5 @@ Check that blocks are rendered as expected and check with different themes.
     - This level includes embedded blocks in instructions.
 - First level in poem art: [[local]](http://localhost-studio.code.org:3000/s/poem-art-2021/lessons/1/levels/1) [[production]](https://studio.code.org/s/poem-art-2021/lessons/1/levels/1)
     - This level includes blocks in hint
-- First level in flappy: [[local]](http://localhost-studio.code.org:3000/s/flappy/1) [[production]](https://studio.code.org/s/flappy/1) 
+- First level in flappy: [[local]](http://localhost-studio.code.org:3000/s/flappy/1) [[production]](https://studio.code.org/s/flappy/1)
     - First fail the level, then you should get a hint which includes a block.
