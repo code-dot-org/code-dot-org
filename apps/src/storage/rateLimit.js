@@ -11,7 +11,7 @@ const blockIOQueue = new PQueue({concurrency: MAX_CONCURRENT_BLOCK_IOPS});
 let rateLimitAccessLog = [];
 export const RATE_LIMIT = 600;
 export const RATE_LIMIT_INTERVAL_MS = 60000;
-export function rateLimit(operation = () => undefined, now = Date.now()) {
+export async function rateLimit(operation = () => undefined, now = Date.now()) {
   const timeSinceEarliestLog = () => now - rateLimitAccessLog[0];
 
   // Drop log entries older than RATE_LIMIT_INTERVAL_MS
