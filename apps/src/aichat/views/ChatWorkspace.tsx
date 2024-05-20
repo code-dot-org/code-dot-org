@@ -1,5 +1,5 @@
 import React, {useCallback, useRef, useEffect} from 'react';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {useSelector} from 'react-redux';
 import ChatWarningModal from '@cdo/apps/aichat/views/ChatWarningModal';
 import ChatMessage from './ChatMessage';
@@ -7,6 +7,7 @@ import UserChatMessageEditor from './UserChatMessageEditor';
 import moduleStyles from './chatWorkspace.module.scss';
 import {
   AichatState,
+  clearChatMessages,
   setShowWarningModal,
 } from '@cdo/apps/aichat/redux/aichatRedux';
 
@@ -28,6 +29,8 @@ const ChatWorkspace: React.FunctionComponent = () => {
 
   const conversationContainerRef = useRef<HTMLDivElement>(null);
 
+  const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
+
   useEffect(() => {
     if (conversationContainerRef.current) {
       conversationContainerRef.current.scrollTo({
@@ -38,6 +41,11 @@ const ChatWorkspace: React.FunctionComponent = () => {
   }, [conversationContainerRef, storedMessages, isWaitingForChatResponse]);
 
   const dispatch = useAppDispatch();
+
+  // Clear chat history if we are viewing aichat level as a different user (e.g., teacher viewing student work)
+  useEffect(() => {
+    dispatch(clearChatMessages());
+  }, [dispatch, viewAsUserId]);
 
   const onCloseWarningModal = useCallback(
     () => dispatch(setShowWarningModal(false)),
