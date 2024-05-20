@@ -1763,12 +1763,11 @@ applabCommands.createRecord = function (opts) {
   }
   var onSuccess = applabCommands.handleCreateRecord.bind(this, opts);
   var onError = opts.onError || getAsyncOutputWarning();
-  try {
-    rateLimit();
-    Applab.storage.createRecord(opts.table, opts.record, onSuccess, onError);
-  } catch (e) {
+  rateLimit(() =>
+    Applab.storage.createRecord(opts.table, opts.record, onSuccess, onError)
+  ).catch(e => {
     outputError(e.message);
-  }
+  });
 };
 
 applabCommands.handleCreateRecord = function (opts, record) {
@@ -1791,12 +1790,12 @@ applabCommands.getKeyValue = function (opts) {
   );
   var onSuccess = applabCommands.handleReadValue.bind(this, opts);
   var onError = opts.onError || getAsyncOutputWarning();
-  try {
-    rateLimit();
-    Applab.storage.getKeyValue(opts.key, onSuccess, onError);
-  } catch (e) {
+
+  rateLimit(() =>
+    Applab.storage.getKeyValue(opts.key, onSuccess, onError)
+  ).catch(e => {
     outputError(e.message);
-  }
+  });
 };
 
 applabCommands.handleReadValue = function (opts, value) {
@@ -1809,12 +1808,12 @@ applabCommands.getKeyValueSync = function (opts) {
   apiValidateType(opts, 'getKeyValueSync', 'key', opts.key, 'string');
   var onSuccess = handleGetKeyValueSync.bind(this, opts);
   var onError = handleGetKeyValueSyncError.bind(this, opts);
-  try {
-    rateLimit();
-    Applab.storage.getKeyValue(opts.key, onSuccess, onError);
-  } catch (e) {
+
+  rateLimit(() =>
+    Applab.storage.getKeyValue(opts.key, onSuccess, onError)
+  ).catch(e => {
     outputError(e.message);
-  }
+  });
 };
 
 var handleGetKeyValueSync = function (opts, value) {
@@ -1849,12 +1848,12 @@ applabCommands.setKeyValue = function (opts) {
   );
   var onSuccess = applabCommands.handleSetKeyValue.bind(this, opts);
   var onError = opts.onError || getAsyncOutputWarning();
-  try {
-    rateLimit();
-    Applab.storage.setKeyValue(opts.key, opts.value, onSuccess, onError);
-  } catch (e) {
+
+  rateLimit(() =>
+    Applab.storage.setKeyValue(opts.key, opts.value, onSuccess, onError)
+  ).catch(e => {
     outputError(e.message);
-  }
+  });
 };
 
 applabCommands.handleSetKeyValue = function (opts) {
@@ -1868,12 +1867,12 @@ applabCommands.setKeyValueSync = function (opts) {
   apiValidateType(opts, 'setKeyValueSync', 'value', opts.value, 'primitive');
   var onSuccess = handleSetKeyValueSync.bind(this, opts);
   var onError = handleSetKeyValueSyncError.bind(this, opts);
-  try {
-    rateLimit();
-    Applab.storage.setKeyValue(opts.key, opts.value, onSuccess, onError);
-  } catch (e) {
+
+  rateLimit(() =>
+    Applab.storage.setKeyValue(opts.key, opts.value, onSuccess, onError)
+  ).catch(e => {
     outputError(e.message);
-  }
+  });
 };
 
 var handleSetKeyValueSync = function (opts) {
@@ -1890,17 +1889,17 @@ var handleSetKeyValueSyncError = function (opts, message) {
 applabCommands.getColumn = function (opts) {
   apiValidateType(opts, 'getColumn', 'table', opts.table, 'string');
   apiValidateType(opts, 'getColumn', 'column', opts.column, 'string');
-  try {
-    rateLimit();
+
+  rateLimit(() =>
     Applab.storage.getColumn(
       opts.table,
       opts.column,
       handleGetColumn.bind(this, opts),
       handleGetColumnError.bind(this, opts)
-    );
-  } catch (e) {
+    )
+  ).catch(e => {
     outputError(e.message);
-  }
+  });
 };
 
 var handleGetColumn = function (opts, columnValues) {
@@ -1949,17 +1948,17 @@ applabCommands.readRecords = function (opts) {
   }
   var onSuccess = applabCommands.handleReadRecords.bind(this, opts);
   var onError = opts.onError || getAsyncOutputWarning();
-  try {
-    rateLimit();
+
+  rateLimit(() =>
     Applab.storage.readRecords(
       opts.table,
       opts.searchParams,
       onSuccess,
       onError
-    );
-  } catch (e) {
+    )
+  ).catch(e => {
     outputError(e.message);
-  }
+  });
 };
 
 applabCommands.handleReadRecords = function (opts, records) {
@@ -2024,12 +2023,11 @@ applabCommands.updateRecord = function (opts) {
     getAsyncOutputWarning()(error);
     onComplete(null, false);
   };
-  try {
-    rateLimit();
-    Applab.storage.updateRecord(opts.table, opts.record, onComplete, onError);
-  } catch (e) {
+  rateLimit(() =>
+    Applab.storage.updateRecord(opts.table, opts.record, onComplete, onError)
+  ).catch(e => {
     outputError(e.message);
-  }
+  });
 };
 
 applabCommands.handleUpdateRecord = function (opts, record, success) {
@@ -2090,12 +2088,11 @@ applabCommands.deleteRecord = function (opts) {
     getAsyncOutputWarning()(error);
     onComplete(false);
   };
-  try {
-    rateLimit();
-    Applab.storage.deleteRecord(opts.table, opts.record, onComplete, onError);
-  } catch (e) {
+  rateLimit(() =>
+    Applab.storage.deleteRecord(opts.table, opts.record, onComplete, onError)
+  ).catch(e => {
     outputError(e.message);
-  }
+  });
 };
 
 applabCommands.handleDeleteRecord = function (opts, success) {
@@ -2287,9 +2284,9 @@ applabCommands.drawChartFromRecords = function (opts) {
     outputError(error.message);
   };
 
-  try {
-    rateLimit();
-    startLoadingSpinnerFor(opts.chartId);
+  startLoadingSpinnerFor(opts.chartId);
+
+  rateLimit(() =>
     chartApi
       .drawChartFromRecords(
         opts.chartId,
@@ -2298,10 +2295,10 @@ applabCommands.drawChartFromRecords = function (opts) {
         opts.columns,
         opts.options
       )
-      .then(onSuccess, onError);
-  } catch (e) {
+      .then(onSuccess, onError)
+  ).catch(e => {
     outputError(e.message);
-  }
+  });
 };
 
 /**
