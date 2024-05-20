@@ -113,7 +113,7 @@ namespace :build do
         ChatClient.log 'Restarting <b>dashboard</b> Active Job worker(s).'
         # Issue a stop command to all workers. Will kill if not stopped within ~20 seconds.
         RakeUtils.system 'bin/delayed_job', 'stop'
-        # Start new workers in non-development environments
+        # Start new workers
         if rack_env?(:production)
           RakeUtils.system 'bin/delayed_job', '-n', '10', 'start'
         elsif !rack_env?(:development)
