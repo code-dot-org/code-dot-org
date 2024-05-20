@@ -491,9 +491,10 @@ export default class FunctionEditor {
       }
     });
 
-    // Mirror variable events from main workspace to editor workspace.
+    // Mirror variable events from main workspace to editor workspace and the
+    // hidden procedure definition workspace.
     // This is allows newly created/renamed/deleted variables to propogate
-    // to the modal function editor workspace.
+    // to the other workspaces.
     this.primaryWorkspace?.addChangeListener(e => {
       if (!this.editorWorkspace) {
         return;
@@ -624,13 +625,13 @@ export default class FunctionEditor {
     // procedure definition.
     Blockly.Events.disable();
     this.editorWorkspace.clear();
-    const primaryVariableMap = this.primaryWorkspace?.getVariableMap();
-    const modalVariableMap = this.editorWorkspace.getVariableMap();
-    if (primaryVariableMap) {
-      const variables = primaryVariableMap.getAllVariables();
+    const primaryWorkspaceVariableMap = this.primaryWorkspace?.getVariableMap();
+    const functionEditorVariableMap = this.editorWorkspace.getVariableMap();
+    if (primaryWorkspaceVariableMap) {
+      const variables = primaryWorkspaceVariableMap.getAllVariables();
 
       variables.forEach(variable => {
-        modalVariableMap.createVariable(
+        functionEditorVariableMap.createVariable(
           variable.name,
           variable.type,
           variable.getId()
