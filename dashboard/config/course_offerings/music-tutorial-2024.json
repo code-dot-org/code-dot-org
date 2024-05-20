@@ -11,7 +11,7 @@
   "image": "https://images.code.org/846388521fe0f07f2577b346a7ba51d9-musiclab-big-banner-image.png",
   "cs_topic": "art_and_design,programming",
   "school_subject": null,
-  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"\",\"no_device\":\"\"}",
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",
   "description": "In this engaging lesson, students use Music Lab to develop coding skills, compose songs, and connect technology with creativity.",
   "professional_learning_program": null,
   "video": "https://www.youtube-nocookie.com/embed/GqlP5s7KTl4/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=GqlP5s7KTl4&wmode=transparent",
