@@ -2,24 +2,24 @@ import React, {useEffect, useRef} from 'react';
 
 const animationFramesPerSecond = 60;
 
-// ScrollIntoView: This component does an eased scroll of the container's content,
+// EaseIntoView: This component does an eased scroll of the container's content,
 // starting from a distance below the top, and scrolling to the top.  It's useful
 // to show the user that some new content is scrollable.
 
-interface ScrollIntoViewProps {
+interface EaseIntoViewProps {
   id?: string;
   className?: string;
-  doScroll: boolean;
+  doEase: boolean;
   delay: number;
   frames: number;
   distanceY: number;
   children: React.ReactNode;
 }
 
-const ScrollIntoView: React.FunctionComponent<ScrollIntoViewProps> = ({
+const EaseIntoView: React.FunctionComponent<EaseIntoViewProps> = ({
   id,
   className,
-  doScroll,
+  doEase,
   delay,
   frames,
   distanceY,
@@ -40,7 +40,7 @@ const ScrollIntoView: React.FunctionComponent<ScrollIntoViewProps> = ({
 
   // Initial render.
   useEffect(() => {
-    if (!doScroll) {
+    if (!doEase) {
       return;
     }
 
@@ -75,7 +75,7 @@ const ScrollIntoView: React.FunctionComponent<ScrollIntoViewProps> = ({
         }
       }
     }, 1000 / animationFramesPerSecond);
-  }, [delay, distanceY, doScroll, frames]);
+  }, [delay, distanceY, doEase, frames]);
 
   return (
     <div id={id} className={className} ref={containerRefCallback}>
@@ -84,4 +84,4 @@ const ScrollIntoView: React.FunctionComponent<ScrollIntoViewProps> = ({
   );
 };
 
-export default ScrollIntoView;
+export default EaseIntoView;

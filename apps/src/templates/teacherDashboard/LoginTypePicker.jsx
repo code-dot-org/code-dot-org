@@ -12,6 +12,7 @@ import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import fontConstants from '@cdo/apps/fontConstants';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {getStore} from '@cdo/apps/redux';
 import color from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
@@ -88,6 +89,13 @@ class LoginTypePicker extends Component {
     const withClever =
       providers && providers.includes(OAuthSectionTypes.clever);
     const hasThirdParty = withGoogle | withMicrosoft | withClever;
+    const currentUser = getStore().getState().currentUser;
+    const inUSA =
+      ['US', 'RD'].includes(currentUser.countryCode) ||
+      !!currentUser.usStateCode;
+    const showStudentsToSectionPermissionWarning =
+      (inUSA && currentUser.isTeacher) ||
+      experiments.isEnabledAllowingQueryString(experiments.CPA_EXPERIENCE);
 
     const style = {
       container: {
@@ -137,9 +145,7 @@ class LoginTypePicker extends Component {
       <div style={style.container}>
         <Heading3 isRebranded>{title}</Heading3>
         <p>{i18n.addStudentsToSectionInstructionsUpdated()}</p>
-        {experiments.isEnabledAllowingQueryString(
-          experiments.CPA_EXPERIENCE
-        ) && (
+        {showStudentsToSectionPermissionWarning && (
           <p>
             <span
               className="fa fa-exclamation-triangle"
