@@ -1,5 +1,5 @@
 import React, {useCallback, useRef, useEffect} from 'react';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {useSelector} from 'react-redux';
 import ChatWarningModal from '@cdo/apps/aichat/views/ChatWarningModal';
 import ChatMessage from './ChatMessage';
@@ -10,7 +10,6 @@ import {
   setShowWarningModal,
   clearChatMessages,
 } from '@cdo/apps/aichat/redux/aichatRedux';
-import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 
 /**
  * Renders the AI Chat Lab main chat workspace component.
@@ -28,9 +27,10 @@ const ChatWorkspace: React.FunctionComponent = () => {
     (state: {aichat: AichatState}) => state.aichat.isWaitingForChatResponse
   );
 
-  const readOnlyWorkspace: boolean = useSelector(isReadOnlyWorkspace);
-
   const conversationContainerRef = useRef<HTMLDivElement>(null);
+
+  const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
+  console.log('viewAsUserId', viewAsUserId);
 
   useEffect(() => {
     if (conversationContainerRef.current) {
@@ -44,10 +44,8 @@ const ChatWorkspace: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    if (readOnlyWorkspace) {
-      dispatch(clearChatMessages());
-    }
-  }, [dispatch, readOnlyWorkspace]);
+    dispatch(clearChatMessages());
+  }, [dispatch, viewAsUserId]);
 
   const onCloseWarningModal = useCallback(
     () => dispatch(setShowWarningModal(false)),
