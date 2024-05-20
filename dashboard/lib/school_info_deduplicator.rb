@@ -19,7 +19,7 @@ module SchoolInfoDeduplicator
 
     final_attr = process_school_info_attributes(school_info_attr)
 
-    return false unless SchoolInfo.new(final_attr).valid?
+    return nil unless SchoolInfo.new(final_attr).valid?
 
     SchoolInfo.where(final_attr).first
   end
