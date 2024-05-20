@@ -156,6 +156,8 @@ class DatablockStorageTable < ApplicationRecord
   def create_records(record_jsons)
     if_shared_table_copy_on_write
 
+    return [] if record_jsons.empty?
+
     if records.count + record_jsons.count > MAX_TABLE_ROW_COUNT
       raise StudentFacingError.new(:MAX_ROWS_EXCEEDED), "Cannot add more than #{MAX_TABLE_ROW_COUNT} rows to a table"
     end
