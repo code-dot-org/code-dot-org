@@ -11,6 +11,7 @@ const getContext = (ltiProvider: LtiProvider) => {
     ltiProviderName: 'LMS',
     newAccountUrl: '/new-account',
     existingAccountUrl: '/existing-account',
+    emailAddress: 'test@code.org',
   };
 };
 

@@ -13,6 +13,7 @@ const DEFAULT_CONTEXT: LtiProviderContextProps = {
   ltiProviderName: 'Canvas',
   newAccountUrl: '/new-account',
   existingAccountUrl: '/existing-account',
+  emailAddress: 'test@code.org',
 };
 
 describe('LTI Link Account Page Tests', () => {

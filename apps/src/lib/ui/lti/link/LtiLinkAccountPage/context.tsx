@@ -6,6 +6,7 @@ export interface LtiProviderContextProps {
   ltiProviderName: string;
   newAccountUrl: string;
   existingAccountUrl: string;
+  emailAddress: string;
 }
 
 export const LtiProviderContext = createContext<

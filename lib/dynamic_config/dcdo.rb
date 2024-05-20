@@ -51,6 +51,7 @@ class DCDOBase < DynamicConfigBase
       'music-lab-launch-2024': DCDO.get('music-lab-launch-2024', false),
       'music-lab-samples-report': DCDO.get('music-lab-samples-report', true),
       'music-lab-existing-projects-default-sounds': DCDO.get('music-lab-existing-projects-default-sounds', true),
+      'student-email-post-enabled': DCDO.get('student-email-post-enabled', false),
     }
   end
 end
