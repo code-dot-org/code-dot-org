@@ -2878,7 +2878,7 @@ class User < ApplicationRecord
       return
     end
     # Check if us_state value will change, check after making sure us_state is not blank
-    return unless will_save_change_to_properties? && properties_change.last[:us_state] != us_state
+    return unless will_save_change_to_properties? && properties_change&.first&.[]("us_state") != us_state
     # Report an error if an invalid value was submitted (probably tampering).
     unless User.us_state_dropdown_options.include?(us_state)
       errors.add(:us_state, :invalid)
