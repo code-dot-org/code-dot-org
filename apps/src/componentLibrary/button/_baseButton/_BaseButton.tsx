@@ -110,8 +110,8 @@ const checkButtonPropsForErrors = ({
   }
 
   if (color === 'purple' && type === 'secondary') {
-    throw new Error(
-      'Expect type prop not to be secondary when color is purple'
+    console.warn(
+      'Warning: Button - Secondary Purple color is now deprecated. Please use different color or type. Secondary purple combination will be removed very soon.'
     );
   }
 
