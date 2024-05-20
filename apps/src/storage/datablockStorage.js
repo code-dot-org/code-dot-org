@@ -21,7 +21,11 @@ function urlFor(func_name) {
   return `/datablock_storage/${channelId}/` + func_name;
 }
 
-async function _fetch(path, method, params) {
+DatablockStorage.DatablockStorage._fetch = async function (
+  path,
+  method,
+  params
+) {
   let response;
   if (method.toUpperCase() === 'GET') {
     response = await fetch(urlFor(path) + '?' + new URLSearchParams(params), {
@@ -43,10 +47,10 @@ async function _fetch(path, method, params) {
     throw await response.json();
   }
   return response;
-}
+};
 
 async function getKeyValue(key) {
-  const response = await _fetch('get_key_value', 'GET', {key});
+  const response = await DatablockStorage._fetch('get_key_value', 'GET', {key});
   const json = await response.json();
   return json === null ? undefined : json;
 }
@@ -57,14 +61,14 @@ DatablockStorage.getKeyValue = function (key, onSuccess, onError) {
 
 DatablockStorage.setKeyValue = function (key, value, onSuccess, onError) {
   value = value === undefined ? null : value;
-  _fetch('set_key_value', 'POST', {
+  DatablockStorage._fetch('set_key_value', 'POST', {
     key,
     value: JSON.stringify(value),
   }).then(onSuccess, onError);
 };
 
 async function createRecord(tableName, record) {
-  const response = await _fetch('create_record', 'POST', {
+  const response = await DatablockStorage._fetch('create_record', 'POST', {
     table_name: tableName,
     record_json: JSON.stringify(record),
   });
@@ -86,7 +90,7 @@ DatablockStorage.updateRecord = function (
   onSuccess,
   onError
 ) {
-  _fetch('update_record', 'PUT', {
+  DatablockStorage._fetch('update_record', 'PUT', {
     table_name: tableName,
     record_id: record.id,
     record_json: JSON.stringify(record),
@@ -120,7 +124,7 @@ async function readRecords({
   searchParams = false,
   isSharedTable = false,
 }) {
-  const response = await _fetch('read_records', 'GET', {
+  const response = await DatablockStorage._fetch('read_records', 'GET', {
     table_name: tableName,
     is_shared_table: isSharedTable,
   });
@@ -143,14 +147,14 @@ DatablockStorage.deleteRecord = function (
   onSuccess,
   onError
 ) {
-  _fetch('delete_record', 'DELETE', {
+  DatablockStorage._fetch('delete_record', 'DELETE', {
     table_name: tableName,
     record_id: record.id,
   }).then(onSuccess, onError);
 };
 
 async function getTableNames({isSharedTable = false} = {}) {
-  const response = await _fetch('get_table_names', 'GET', {
+  const response = await DatablockStorage._fetch('get_table_names', 'GET', {
     is_shared_table: isSharedTable,
   });
   return await response.json();
@@ -195,7 +199,7 @@ DatablockStorage.loadTable = function (
 };
 
 DatablockStorage.getKeyValuePairs = function (onKeyValuePairsChanged) {
-  _fetch('get_key_values', 'GET', {})
+  DatablockStorage._fetch('get_key_values', 'GET', {})
     .then(response => response.json())
     .then(json => {
       onKeyValuePairsChanged(_.mapValues(json, value => JSON.stringify(value)));
@@ -216,19 +220,19 @@ DatablockStorage.previewSharedTable = function (
 };
 
 DatablockStorage.createTable = function (tableName, onSuccess, onError) {
-  _fetch('create_table', 'POST', {
+  DatablockStorage._fetch('create_table', 'POST', {
     table_name: tableName,
   }).then(onSuccess, onError);
 };
 
 DatablockStorage.deleteTable = function (tableName, onSuccess, onError) {
-  _fetch('delete_table', 'DELETE', {
+  DatablockStorage._fetch('delete_table', 'DELETE', {
     table_name: tableName,
   }).then(onSuccess, onError);
 };
 
 DatablockStorage.clearTable = function (tableName, onSuccess, onError) {
-  _fetch('clear_table', 'DELETE', {
+  DatablockStorage._fetch('clear_table', 'DELETE', {
     table_name: tableName,
   }).then(onSuccess, onError);
 };
@@ -239,7 +243,7 @@ DatablockStorage.importCsv = function (
   onSuccess,
   onError
 ) {
-  _fetch('import_csv', 'POST', {
+  DatablockStorage._fetch('import_csv', 'POST', {
     table_name: tableName,
     table_data_csv: tableDataCsv,
   }).then(onSuccess, onError);
@@ -257,7 +261,7 @@ DatablockStorage.addColumn = function (
   onSuccess,
   onError
 ) {
-  _fetch('add_column', 'POST', {
+  DatablockStorage._fetch('add_column', 'POST', {
     table_name: tableName,
     column_name: columnName,
   }).then(onSuccess, onError);
@@ -270,7 +274,7 @@ DatablockStorage.deleteColumn = function (
   onSuccess,
   onError
 ) {
-  _fetch('delete_column', 'DELETE', {
+  DatablockStorage._fetch('delete_column', 'DELETE', {
     table_name: tableName,
     column_name: columnName,
   }).then(onSuccess, onError);
@@ -283,7 +287,7 @@ DatablockStorage.renameColumn = function (
   onSuccess,
   onError
 ) {
-  _fetch('rename_column', 'PUT', {
+  DatablockStorage._fetch('rename_column', 'PUT', {
     table_name: tableName,
     old_column_name: oldName,
     new_column_name: newName,
@@ -297,7 +301,7 @@ DatablockStorage.coerceColumn = function (
   onSuccess,
   onError
 ) {
-  _fetch('coerce_column', 'PUT', {
+  DatablockStorage._fetch('coerce_column', 'PUT', {
     table_name: tableName,
     column_name: columnName,
     column_type: columnType,
@@ -305,7 +309,7 @@ DatablockStorage.coerceColumn = function (
 };
 
 async function getColumn({tableName, columnName}) {
-  const response = await _fetch('get_column', 'GET', {
+  const response = await DatablockStorage._fetch('get_column', 'GET', {
     table_name: tableName,
     column_name: columnName,
   });
@@ -322,7 +326,7 @@ DatablockStorage.getColumn = function (
 };
 
 DatablockStorage.deleteKeyValue = function (key, onSuccess, onError) {
-  _fetch('delete_key_value', 'DELETE', {
+  DatablockStorage._fetch('delete_key_value', 'DELETE', {
     key,
   }).then(onSuccess, onError);
 };
@@ -338,14 +342,14 @@ DatablockStorage.deleteKeyValue = function (key, onSuccess, onError) {
  * @returns {Promise} which resolves when all table data has been written
  */
 DatablockStorage.populateTable = function (jsonData) {
-  return _fetch('populate_tables', 'PUT', {
+  return DatablockStorage._fetch('populate_tables', 'PUT', {
     tables_json:
       typeof jsonData === 'string' ? jsonData : JSON.stringify(jsonData),
   });
 };
 
 DatablockStorage.populateKeyValue = function (jsonData, onSuccess, onError) {
-  _fetch('populate_key_values', 'PUT', {
+  DatablockStorage._fetch('populate_key_values', 'PUT', {
     key_values_json: JSON.stringify(jsonData),
   }).then(onSuccess, onError);
 };
@@ -353,16 +357,20 @@ DatablockStorage.populateKeyValue = function (jsonData, onSuccess, onError) {
 // fetch the library manifest used to populate the "Data Library" browser
 // see: datablock_storage_library_manifest.rb
 DatablockStorage.getLibraryManifest = function () {
-  return _fetch('get_library_manifest', 'GET').then(response =>
+  return DatablockStorage._fetch('get_library_manifest', 'GET').then(response =>
     response.json()
   );
 };
 
 async function getColumnsForTable({tableName, isSharedTable = false}) {
-  const response = await _fetch('get_columns_for_table', 'GET', {
-    table_name: tableName,
-    is_shared_table: isSharedTable,
-  });
+  const response = await DatablockStorage._fetch(
+    'get_columns_for_table',
+    'GET',
+    {
+      table_name: tableName,
+      is_shared_table: isSharedTable,
+    }
+  );
   const json = await response.json();
   return json;
 }
@@ -376,7 +384,7 @@ DatablockStorage.getColumnsForTable = function (tableName) {
 
 // @return {Promise<boolean>} whether the project has any data in it
 DatablockStorage.projectHasData = function () {
-  return _fetch('project_has_data', 'GET', {}).then(response =>
+  return DatablockStorage._fetch('project_has_data', 'GET', {}).then(response =>
     response.json()
   );
 };
@@ -384,12 +392,15 @@ DatablockStorage.projectHasData = function () {
 // deletes all datablock storage data for this project,
 // used only one place, applab.js config.afterClearPuzzle()
 DatablockStorage.clearAllData = function (onSuccess, onError) {
-  _fetch('clear_all_data', 'DELETE', {}).then(onSuccess, onError);
+  DatablockStorage._fetch('clear_all_data', 'DELETE', {}).then(
+    onSuccess,
+    onError
+  );
 };
 
 // This is a new method for DatablockStorage which replaces the above APIs
 DatablockStorage.addSharedTable = function (tableName, onSuccess, onError) {
-  _fetch('add_shared_table', 'POST', {
+  DatablockStorage._fetch('add_shared_table', 'POST', {
     table_name: tableName,
   }).then(onSuccess, onError);
 };
@@ -398,7 +409,7 @@ DatablockStorage.addSharedTable = function (tableName, onSuccess, onError) {
 
 // Deletes the entire database for the project, including data and config
 DatablockStorage.resetForTesting = function () {
-  return _fetch('clear_all_data', 'DELETE', {});
+  return DatablockStorage._fetch('clear_all_data', 'DELETE', {});
 };
 
 DatablockStorage.resetRecordListener = function () {};

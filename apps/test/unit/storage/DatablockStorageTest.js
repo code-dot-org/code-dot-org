@@ -6,6 +6,10 @@ import {
   RATE_LIMIT_INTERVAL_MS,
 } from '../../../src/storage/rateLimit';
 
+import sinon from 'sinon';
+import commands from '../../../src/applab/commands';
+import storage from '../../../src/storage/datablockStorage';
+
 describe('DatablockStorage', () => {
   beforeEach(() => {
     resetRateLimit();
@@ -52,6 +56,27 @@ describe('DatablockStorage', () => {
         rateLimit(time);
       }
       done();
+    });
+  });
+
+  describe('applab storage commands', () => {
+    let _fetch;
+
+    beforeEach(() => {
+      _fetch = sinon.stub(storage, '_fetch').returns(true);
+    });
+
+    afterEach(() => {
+      _fetch.restore();
+    });
+
+    it('calls createRecord', async () => {
+      const params = {table: 'test', record: {col1: 'success'}};
+      commands.createRecord(params);
+      sinon.assert.calledOnceWithExactly(
+        _fetch,
+        ...['create_record', 'PUT', params]
+      );
     });
   });
 });
