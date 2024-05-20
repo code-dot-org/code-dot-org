@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-17 07:59:47 UTC",
+    "serialized_at": "2024-05-17 20:28:20 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5220,7 +5220,7 @@
       "key": "fbbaa320-6278-433b-9541-86e86f0a89bd",
       "position": 1,
       "properties": {
-        "description": "Software engineers use nested loops to solve a wide variety of problems. Many of these problems use the same types of loops we wrote today. We have done a lot today to grow our programming abilities!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Click through the animated slide to display the prompts.\n\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students highlight the concepts and syntax they learned in this lesson, such as how a nested `for` loop can be used to repeat a series of actions within other actions. They should realizedd that nested `for` loops can be used for tasks that are highly repetitive. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the question of the day\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "description": "Software engineers use nested loops to solve a wide variety of problems. Many of these problems use the same types of loops we wrote today. We have done a lot today to grow our programming abilities!",
         "name": "Three W’s",
         "remarks": true
       },
@@ -5230,8 +5230,19 @@
       }
     },
     {
-      "key": "230aaa0c-7742-473e-befd-89c35780385a",
+      "key": "9d8088da-8611-408e-9e5f-b2fcc28e4281",
       "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Click through the animated slide to display the prompts.\n\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students highlight the concepts and syntax they learned in this lesson, such as how a nested `for` loop can be used to repeat a series of actions within other actions. They should realizedd that nested `for` loops can be used for tasks that are highly repetitive. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the question of the day\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "9d8088da-8611-408e-9e5f-b2fcc28e4281",
+        "lesson_activity.key": "8d15bd13-d5a9-40ab-813b-aa21151afd53"
+      }
+    },
+    {
+      "key": "230aaa0c-7742-473e-befd-89c35780385a",
+      "position": 3,
       "properties": {
         "description": "Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.\n",
         "name": "Assessment: Check for Understanding",
