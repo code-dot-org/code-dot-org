@@ -32,9 +32,7 @@ const PublishNotes: React.FunctionComponent = () => {
   );
   const hasFilledOutModelCard = useAppSelector(selectHasFilledOutModelCard);
 
-  const readOnlyWorkspace: boolean = useSelector(isReadOnlyWorkspace);
-
-  const isReadOnly = isDisabled(visibility) || readOnlyWorkspace;
+  const isReadOnly = useSelector(isReadOnlyWorkspace) || isDisabled(visibility);
 
   const onSave = useCallback(() => {
     dispatch(saveModelCard());

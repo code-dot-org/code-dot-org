@@ -25,9 +25,7 @@ const RetrievalCustomization: React.FunctionComponent = () => {
     state => state.aichat.currentAiCustomizations
   );
 
-  const readOnlyWorkspace: boolean = useSelector(isReadOnlyWorkspace);
-
-  const isReadOnly = readOnlyWorkspace || isDisabled(visibility);
+  const isReadOnly = useSelector(isReadOnlyWorkspace) || isDisabled(visibility);
 
   const onUpdate = useCallback(
     () => dispatch(updateAiCustomization()),
