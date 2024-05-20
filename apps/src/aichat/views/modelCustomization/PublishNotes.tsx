@@ -34,6 +34,8 @@ const PublishNotes: React.FunctionComponent = () => {
 
   const readOnlyWorkspace: boolean = useSelector(isReadOnlyWorkspace);
 
+  const isReadOnly = isDisabled(visibility) || readOnlyWorkspace;
+
   const onSave = useCallback(() => {
     dispatch(saveModelCard());
   }, [dispatch]);
@@ -45,7 +47,7 @@ const PublishNotes: React.FunctionComponent = () => {
   return (
     <div className={modelCustomizationStyles.verticalFlexContainer}>
       <div>
-        {!isDisabled(visibility) || !readOnlyWorkspace
+        {!isReadOnly
           ? hasFilledOutModelCard
             ? PublishOkNotification
             : CompleteToPublishNotification
@@ -65,14 +67,14 @@ const PublishNotes: React.FunctionComponent = () => {
                 {property === 'exampleTopics' && (
                   <ExampleTopicsInputs
                     topics={modelCardInfo.exampleTopics}
-                    readOnly={isDisabled(visibility) || readOnlyWorkspace}
+                    readOnly={isReadOnly}
                   />
                 )}
                 {property !== 'exampleTopics' && property !== 'isPublished' && (
                   <InputTag
                     id={property}
                     type="text"
-                    disabled={isDisabled(visibility) || readOnlyWorkspace}
+                    disabled={isReadOnly}
                     value={modelCardInfo[property]}
                     onChange={event =>
                       dispatch(
@@ -95,18 +97,14 @@ const PublishNotes: React.FunctionComponent = () => {
           iconLeft={{iconName: 'download'}}
           type="secondary"
           color="black"
-          disabled={isDisabled(visibility) || readOnlyWorkspace}
+          disabled={isReadOnly}
           onClick={onSave}
           className={modelCustomizationStyles.updateButton}
         />
         <Button
           text="Publish"
           iconLeft={{iconName: 'upload'}}
-          disabled={
-            isDisabled(visibility) ||
-            !hasFilledOutModelCard ||
-            readOnlyWorkspace
-          }
+          disabled={isReadOnly || !hasFilledOutModelCard}
           onClick={onPublish}
           className={modelCustomizationStyles.updateButton}
         />

@@ -42,6 +42,7 @@ const ChatWorkspace: React.FunctionComponent = () => {
 
   const dispatch = useAppDispatch();
 
+  // Clear chat history if we are viewing aichat level as a different user (e.g., teacher viewing student work)
   useEffect(() => {
     dispatch(clearChatMessages());
   }, [dispatch, viewAsUserId]);
