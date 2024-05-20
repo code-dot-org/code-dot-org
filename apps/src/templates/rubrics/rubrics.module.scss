@@ -571,19 +571,18 @@ p.errorMessage {
   border: 1px solid $neutral_dark20;
   background: $neutral_white;
   position: relative;
+}
 
-  &::after {
-    content: '';
-    position: absolute;
-    top: calc(-0.5rem * sqrt(2) + 0.125rem);
-    left: calc(50% - 0.5rem);
-    width: 1rem;
-    height: 1rem;
-    background: $neutral_white;
-    transform: rotate(45deg);
-    border-top: 1px solid $neutral_dark20;
-    border-left: 1px solid $neutral_dark20;
-  }
+.aiAssessmentArrow {
+  position: absolute;
+  top: calc(-0.5rem * sqrt(2) + 0.125rem);
+  left: calc(50% - 0.5rem);
+  width: 1rem;
+  height: 1rem;
+  background: $neutral_white;
+  transform: rotate(45deg);
+  border-top: 1px solid $neutral_dark20;
+  border-left: 1px solid $neutral_dark20;
 }
 
 .aiAssessmentBlock {
