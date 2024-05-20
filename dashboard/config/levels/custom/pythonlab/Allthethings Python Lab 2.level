@@ -2,13 +2,34 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 72,
-  "created_at": "2024-03-08T08:07:49.000Z",
+  "created_at": "2024-04-30T03:00:53.000Z",
   "level_num": "custom",
   "user_id": 6959,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Python Lab Basics\r\n\r\nTry adding some new code."
+    "long_instructions": "## Python Lab Basics\r\n\r\nTry adding some new code.",
+    "source": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "print(\"Hello from level 2!\")\nprint(\"more content\")",
+          "folderId": "1",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "src",
+          "parentId": "0"
+        }
+      }
+    },
+    "hide_share_and_remix": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2024-03-07T16:07:49.125-08:00\",\"changed\":[\"cloned from \\\"Allthethings Python Lab 1\\\"\"],\"cloned_from\":\"Allthethings Python Lab 1\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-03-07T16:07:49.125-08:00\",\"changed\":[\"cloned from \\\"Allthethings Python Lab 1\\\"\"],\"cloned_from\":\"Allthethings Python Lab 1\"},{\"changed_at\":\"2024-05-06 14:17:53 -0700\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-06 14:20:04 -0700\",\"changed\":[\"source\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-06 14:23:46 -0700\",\"changed\":[\"source\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 11:53:57 -0700\",\"changed\":[\"source\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 12:22:29 -0700\",\"changed\":[\"source\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-20 13:52:52 -0700\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>
