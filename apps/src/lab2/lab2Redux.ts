@@ -196,8 +196,8 @@ export const setUpWithLevel = createAsyncThunk(
 // Given a channel id and app name as the payload, set up the lab for that channel id.
 // This consists of cleaning up the existing project manager (if applicable), then
 // creating a project manager and loading the project data.
-// This method is used for loading a lab that is not associated with a level
-// (e.g., /projectbeats).
+// This method is used for loading a lab that is not associated with a level.
+// (This was previously used for /projectbeats).
 // If we get an aborted signal, we will exit early.
 export const setUpWithoutLevel = createAsyncThunk(
   'lab/setUpWithoutLevel',
