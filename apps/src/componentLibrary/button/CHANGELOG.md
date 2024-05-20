@@ -6,7 +6,7 @@ All notable changes to this project will be documented in this file.
 
 * added background fill color to secondary black and white buttons
 * added ```gray``` secondary button
-* removed ```purple``` secondary button
+* deprecated ```purple``` secondary button
 
 ## [0.3.0](https://github.com/code-dot-org/code-dot-org/pull/58469)
 
