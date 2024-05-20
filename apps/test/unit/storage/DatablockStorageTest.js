@@ -7,8 +7,10 @@ import {
 } from '../../../src/storage/rateLimit';
 
 import sinon from 'sinon';
-import commands from '../../../src/applab/commands';
-import storage from '../../../src/storage/datablockStorage';
+import commands from '@cdo/apps/applab/commands';
+import storage from '@cdo/apps/storage/datablockStorage';
+import Applab from '@cdo/apps/applab/applab';
+import setupBlocklyGlobal from '../../util/setupBlocklyGlobal';
 
 describe('DatablockStorage', () => {
   beforeEach(() => {
@@ -59,11 +61,23 @@ describe('DatablockStorage', () => {
     });
   });
 
-  describe('applab storage commands', () => {
+  describe('applab commands.js', () => {
     let _fetch;
 
     beforeEach(() => {
       _fetch = sinon.stub(storage, '_fetch').returns(true);
+
+      setupBlocklyGlobal();
+
+      Applab.init({
+        useDatablockStorage: true,
+        channel: 'bar',
+        baseUrl: 'foo',
+        skin: {},
+        level: {
+          editCode: 'foo',
+        },
+      });
     });
 
     afterEach(() => {
