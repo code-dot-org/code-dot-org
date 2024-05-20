@@ -96,7 +96,7 @@ namespace :build do
           RakeUtils.rake_stream_output 'seed:default', (rack_env?(:test) ? '--trace' : nil)
         end
 
-        # Restart Active Job workers before restarting dashboard server so that:
+        # Restart ActiveJob workers before restarting dashboard server so that:
         # 1. the order of the restarts will be consistent between production and
         # other environments, and
         # 2. the server code which is queueing new jobs does not need to be
@@ -110,7 +110,7 @@ namespace :build do
         #
         # The sequencing described here is the best for mitigating any issues
         # that may arise when that best practice is not followed.
-        ChatClient.log 'Restarting <b>dashboard</b> Active Job worker(s).'
+        ChatClient.log 'Restarting <b>dashboard</b> ActiveJob worker(s).'
         # Issue a stop command to all workers. Will kill if not stopped within ~20 seconds.
         RakeUtils.system 'bin/delayed_job', 'stop'
         # Start new workers

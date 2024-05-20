@@ -1,5 +1,5 @@
-# This is a placeholder mailer initially used to test out active job.
-# Once we are using active job for real features we can delete this file.
+# This is a placeholder mailer initially used to test out ActiveJob.
+# Once we are using ActiveJob for real features we can delete this file.
 
 class PlaceholderMailer < ApplicationMailer
   def placeholder_email(user)
