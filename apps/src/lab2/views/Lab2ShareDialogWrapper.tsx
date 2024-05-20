@@ -51,7 +51,7 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
     return null;
   }
 
-  if (appType === 'music') {
+  if (appType === 'music' || appType === 'pythonlab') {
     if (!isOpen) {
       return null;
     }
