@@ -43,7 +43,12 @@ import {
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
 import AdvancedSequencer from '../player/sequencer/AdvancedSequencer';
 import MusicPlayerStubSequencer from '../player/sequencer/MusicPlayerStubSequencer';
-import {BlockMode, LEGACY_DEFAULT_LIBRARY, DEFAULT_LIBRARY} from '../constants';
+import {
+  BlockMode,
+  LEGACY_DEFAULT_LIBRARY,
+  DEFAULT_LIBRARY,
+  DEFAULT_PACK,
+} from '../constants';
 import {Key} from '../utils/Notes';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {isEqual} from 'lodash';
@@ -281,12 +286,28 @@ class UnconnectedMusicView extends React.Component {
     this.library.setCurrentPackId(packId);
     this.props.setPackId(packId);
 
+    // Check if the user has already made changes to the code on the project level.
+    let codeChangedOnProjectLevel = false;
     if (this.getStartSources() || initialSources) {
-      let codeToLoad = this.getStartSources();
+      const startSources = this.getStartSources();
+      let codeToLoad = startSources;
       if (initialSources?.source) {
         codeToLoad = JSON.parse(initialSources.source);
+        codeChangedOnProjectLevel =
+          this.props.isProjectLevel &&
+          !isEqual(codeToLoad?.blocks, startSources?.blocks);
       }
       this.loadCode(codeToLoad);
+    }
+
+    // If the user has made changes to the code on the project level but does
+    // not have a pack ID set, assume they are using the default pack. This is
+    // specifically to handle the case where a user starts a project on a library
+    // that does not have restricted packs (and is therefore using default),
+    // and then later opens their project with a library that does have restricted packs.
+    if (codeChangedOnProjectLevel && !packId) {
+      this.library.setCurrentPackId(DEFAULT_PACK);
+      this.props.setPackId(DEFAULT_PACK);
     }
 
     // Go ahead and compile and execute the initial song once code is loaded.
