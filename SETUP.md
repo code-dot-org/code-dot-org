@@ -9,6 +9,28 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
 
 1. Request and Configure AWS access (code.org staff) or configure local secrets (open source contributors). See [Configure AWS Access or Secrets](#configure-aws-access-or-secrets) below. This step is not required until rake is first run below, but staff may wish to submit the request first so its ready when rake is.
 
+1. MacOS only
+    <details>
+      <summary>Create a case-sensitive volume</summary>
+
+
+    * Open Disk Utility
+    
+    * Select any hard drive
+    
+    * Hit `+` Volume in top right
+    
+      * Name - name you want for volume (e.g. git or projects or code)
+    
+      * Format: APFS (Case-sensitive)
+    
+      * Size options: Repo size is currently ~35gb. Set reserve size to anything >35gb
+    
+      * Add
+    * Make sure you clone into this new volume
+
+</details>
+
 1. Clone the repo:
     - Via SSH (simpler): `git clone git@github.com:code-dot-org/code-dot-org.git`
     - OR via HTTP (faster): `git clone https://github.com/code-dot-org/code-dot-org.git`.
