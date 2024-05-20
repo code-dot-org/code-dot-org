@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import Button from '@cdo/apps/componentLibrary/button';
 import InstructionsView from '@cdo/apps/lab2/views/components/Instructions';
@@ -28,9 +28,32 @@ export const InfoPanel = React.memo(() => {
   );
   const [currentPanel, setCurrentPanel] = useState(Panels.Instructions);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [panelOptions, setPanelOptions] = useState<Panels[]>([
+    Panels.Instructions,
+  ]);
+
+  useEffect(() => {
+    // For now, always include Instructions panel.
+    // TODO: support hiding this panel completely if there are no instructions.
+    const options = [Panels.Instructions];
+    if (mapReference || referenceLinks) {
+      options.push(Panels.HelpAndTips);
+    }
+    setPanelOptions(options);
+    // Close the dropdown if we change levels.
+    setIsDropdownOpen(false);
+  }, [mapReference, referenceLinks]);
+
+  useEffect(() => {
+    // If we change levels and were on a panel that no longer exists,
+    // switch to the first panel that does exist.
+    if (!panelOptions.includes(currentPanel)) {
+      setCurrentPanel(panelOptions[0]);
+    }
+  }, [currentPanel, panelOptions]);
 
   const renderHeaderButton = () => {
-    return panelOptions().length > 1 ? (
+    return panelOptions.length > 1 ? (
       <div>
         <Button
           icon={{
@@ -45,16 +68,6 @@ export const InfoPanel = React.memo(() => {
         />
       </div>
     ) : null;
-  };
-
-  const panelOptions = () => {
-    // For now, always include Instructions panel.
-    // TODO: support hiding this panel completely if there are no instructions.
-    const panelOptions = [Panels.Instructions];
-    if (mapReference || referenceLinks) {
-      panelOptions.push(Panels.HelpAndTips);
-    }
-    return panelOptions;
   };
 
   const changePanel = (panel: Panels) => {
@@ -74,20 +87,18 @@ export const InfoPanel = React.memo(() => {
       {isDropdownOpen && (
         <form className={moduleStyles.dropdownContainer}>
           <ul>
-            {panelOptions().map(panel => {
-              return (
-                <li key={panel}>
-                  <Button
-                    color={'black'}
-                    onClick={() => changePanel(panel)}
-                    ariaLabel={panel}
-                    size={'xs'}
-                    text={panel}
-                    className={moduleStyles.dropdownItem}
-                  />
-                </li>
-              );
-            })}
+            {panelOptions.map(panel => (
+              <li key={panel}>
+                <Button
+                  color={'black'}
+                  onClick={() => changePanel(panel)}
+                  ariaLabel={panel}
+                  size={'xs'}
+                  text={panel}
+                  className={moduleStyles.dropdownItem}
+                />
+              </li>
+            ))}
           </ul>
         </form>
       )}
