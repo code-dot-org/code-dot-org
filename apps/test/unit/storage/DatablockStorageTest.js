@@ -6,6 +6,8 @@ import {
 } from '../../../src/storage/rateLimit';
 import {expect} from '../../util/reconfiguredChai';
 
+const NO_OP = () => undefined;
+
 describe('DatablockStorage', () => {
   beforeEach(() => {
     resetRateLimit();
@@ -20,7 +22,7 @@ describe('DatablockStorage', () => {
 
       for (let i = 0; i < RATE_LIMIT; i++) {
         const time = now + i;
-        rateLimit(time);
+        rateLimit(NO_OP, time);
       }
 
       done();
@@ -30,11 +32,11 @@ describe('DatablockStorage', () => {
 
       for (let i = 0; i < RATE_LIMIT; i++) {
         const time = now + i;
-        rateLimit(time);
+        rateLimit(NO_OP, time);
       }
 
       // This should be over the rate limit
-      expect(() => rateLimit(now + RATE_LIMIT)).to.throw(Error);
+      expect(() => rateLimit(NO_OP, now + RATE_LIMIT)).to.throw(Error);
 
       done();
     });
@@ -43,13 +45,13 @@ describe('DatablockStorage', () => {
 
       for (let i = 0; i < RATE_LIMIT; i++) {
         const time = now + i;
-        rateLimit(time);
+        rateLimit(NO_OP, time);
       }
 
       now += RATE_LIMIT_INTERVAL_MS;
       for (let i = 0; i < RATE_LIMIT; i++) {
         const time = now + i;
-        rateLimit(time);
+        rateLimit(NO_OP, time);
       }
       done();
     });
