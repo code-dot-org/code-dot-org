@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "gen-ai-customizing-pilot-v1",
-    "serialized_at": "2024-05-13 15:41:11 UTC",
+    "serialized_at": "2024-05-21 05:18:55 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -188,7 +188,7 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "overview": "This lesson will be available the week of 5/14"
+        "overview": "In this lesson, students are introduced to the process of fine-tuning as a process for altering the core behavior of a language model. The lesson starts with students reflecting on how inside jokes or slang expressions create connections that are difficult to explain to folks outside the group - they must be experienced to be understood. This idea ties into the lesson as we explore a new chatbot that has been specifically designed to act as a medical expert. Students observe how speaking to the medical expert chatbot is different from the typical chatbot due to how the both has been fine-tuned on additional medical data. Students learn about the fine-tuning process, then explore additional models on the Hugging Face website to see additional fine-tuned examples."
       },
       "seeding_key": {
         "lesson.key": "lesson-9",
@@ -567,6 +567,7 @@
       "key": "c423ccff-a113-46fb-bd4e-4d100fc90895",
       "position": 2,
       "properties": {
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -580,6 +581,7 @@
       "key": "2b84c505-a74d-4aae-9eba-a1ad1c419834",
       "position": 3,
       "properties": {
+        "duration": 5,
         "name": "Wrap-Up"
       },
       "seeding_key": {
@@ -661,6 +663,7 @@
       "key": "a1ed96a2-1fed-4274-9570-8d63f2eb426d",
       "position": 1,
       "properties": {
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -674,6 +677,7 @@
       "key": "602f158b-42e1-4e5d-a199-4754b6fa7f16",
       "position": 2,
       "properties": {
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -687,6 +691,7 @@
       "key": "bb310607-de62-49c3-8053-d5482b99e6ca",
       "position": 3,
       "properties": {
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -2202,6 +2207,7 @@
       "key": "a37385a8-e1af-4d6c-930c-922684127c53",
       "position": 1,
       "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2b5b268c506_0_173\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What’s an example of an inside-joke or slang expression or a family phrase you only hear or say with certain people? Think of phrases that are difficult to explain to others outside this group of people. For Example: “Semper Fi” is a phrase with a specific meaning to Marine Corps veterans with deep meaning that is hard to explain to folks outside the Marine Corps.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Help students come up with examples of these. A good example can also come from your classroom, if there’s a specific inside-joke or phrase that only students in your class would understand. Also encourage students to consider phrases that the elders in their family say which may have additional meaning, especially phrases they would use when they were younger and would get in trouble or would celebrate.\n\t\t<br />\n\t\t<br />Do not regroup for a class discussion yet - instead, continue to the next slide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2deab977afa_0_0\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What would it take to get a chatbot to understand this phrase? Or, do you think it’s impossible?\n\t\t<br />\n\t\t<br />Let students discuss in small groups before having a full-group shareout.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should call out how difficult it is to understand the complex history of phrases like this. In the case of an inside joke, it would mean explaining not only the situation that led to the joke, but all of the ways the joke has been built-up over time. Or in the case of a phrase like “Semper Fi”, it may seem impossible because the chatbot is unable to “live through” the experiences required to relate to other marine corps veterans who use the phrase. Emphasize that even if this were possible, it would require more than just the system prompting and retrieval we’ve been using.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2b5b268c506_0_197\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Getting a chatbot to understand these phrases at a deep level may seem difficult, and will definitely require more than just system prompting and retrieval. This will be our focus today - exploring ways to change the core behaviors of a chatbot after it’s been trained.\n\t\t<br />\n\t\t<br /><strong>Question of the Day:</strong> How can we make deep changes to chatbots that affect it’s core behavior?\n    </td>\n  </tr>\n\n</table>    \n    "
       },
       "seeding_key": {
         "activity_section.key": "a37385a8-e1af-4d6c-930c-922684127c53",
@@ -2209,8 +2215,20 @@
       }
     },
     {
-      "key": "2cdfa28b-4c87-40e0-85b1-a4a0a21f6389",
+      "key": "c86e9e0f-3479-43e7-8de7-58676484b809",
       "position": 1,
+      "properties": {
+        "description": "**Getting Familiar:** These are the levels students will complete throughout the lesson. We recommend briefly exploring the levels yourself before reading the rest of the lesson plan. Some levels are meant to be completed independently by students, but others are meant to motivate class discussion or lead to moments of direct instruction in the slides. Very rarely should students be working through levels completely self-paced.\n\n**Teaching with Student Responses:** Certain level types are designed to be leveraged with our [Student Summary feature](https://support.code.org/hc/en-us/articles/14544890300301-Can-I-see-a-summary-of-all-my-students-responses-for-question-based-levels), specifically: _Predict & Discuss_ and _Mid-Lesson Check-In_ levels. You can read more about how to leverage student voices during these levels in the \n[r teaching_guide_-_incorporating_student_responses_in_lessons/gen-ai-customizing-pilot-v1/unversioned]",
+        "name": "Student Levels"
+      },
+      "seeding_key": {
+        "activity_section.key": "c86e9e0f-3479-43e7-8de7-58676484b809",
+        "lesson_activity.key": "602f158b-42e1-4e5d-a199-4754b6fa7f16"
+      }
+    },
+    {
+      "key": "2cdfa28b-4c87-40e0-85b1-a4a0a21f6389",
+      "position": 2,
       "properties": {
         "progression_name": "Explore"
       },
@@ -2221,7 +2239,7 @@
     },
     {
       "key": "36bc2bd7-f2fa-40fe-b90b-c2d70d93ef93",
-      "position": 2,
+      "position": 3,
       "properties": {
         "progression_name": "Predict"
       },
@@ -2232,7 +2250,7 @@
     },
     {
       "key": "dc7280e0-9705-4a48-a18b-dc5f1e28b149",
-      "position": 3,
+      "position": 4,
       "properties": {
         "progression_name": "Investigate"
       },
@@ -2243,7 +2261,7 @@
     },
     {
       "key": "4bfd4fa8-fcda-4936-8007-b34bb5209b19",
-      "position": 4,
+      "position": 5,
       "properties": {
         "progression_name": "Check-In"
       },
@@ -2253,9 +2271,89 @@
       }
     },
     {
+      "key": "368b7889-e2c4-4bfb-8081-794dd6628304",
+      "position": 6,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2deab977afa_0_13\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> We’re going to watch a video of an expert attempt to explain a complex topic to a group of people. Right now, we’re only going to watch the Level 1 and Level 2 explanations. After the video, you should rate how well you understand the topic.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> <strong>Video:</strong> Watch the <a href=\"https://www.youtube.com/watch?v=opqIa5Jiwuw\" target=\"_blank\">5 Levels: Connectome video</a> up until 2:40 (the video in the slide should stop here automatically)\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> From 1-5: How well do you feel like you understand this topic after watching the first part of the video?\n\t\t<br />\n\t\t<br />Have students show you their fingers. Students should mostly be in the 4-5 range for these initial explanations.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "name": "Teaching Guide",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip: Choosing the Video** - There are several versions of these <a href=\"https://www.wired.com/video/series/5-levels\" target=\"_blank\">5 Levels videos from Wired</a>, each explaining a different topic. We chose this one for the lesson because (1) it’s short, and (2) it’s a topic students are probably unfamiliar with, which helps emphasize the goal of this progression: demonstrating that the same topic can be discussed in different ways depending on who is having the conversation. In your classroom, you may decide to swap this out with another 5 Levels video that you think will be more engaging to students. Just ensure you have enough time to complete the rest of the activity, and you don’t choose something that privileges students who may have prior knowledge from other experiences - it should be something everyone is unfamiliar with."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "368b7889-e2c4-4bfb-8081-794dd6628304",
+        "lesson_activity.key": "602f158b-42e1-4e5d-a199-4754b6fa7f16"
+      }
+    },
+    {
+      "key": "9b5c96dc-5599-42cf-b857-78611af01744",
+      "position": 7,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2deab977afa_0_24\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Now we’re going to skip ahead and listen to conversation between these two experts. As you watch, count how many times you get lost in the conversation or hear a word you do not understand. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> <strong>Video:</strong> Watch the <a href=\"https://www.youtube.com/watch?v=opqIa5Jiwuw\" target=\"_blank\">5 Levels: Connectome video</a>  for a minute from 6:39-7:39 (the video in the slide should automatically play this section)\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> How many times did you get lost in the conversation?\n\t\t<br />\n\t\t<br />Students should enthusiastically respond that they didn’t understand large portions of the conversation. However, also point out that the two people in the video seemed to be completely comfortable with the conversation and were able to go back-and-forth in their dialogue as though they spoke the same language from the same experience.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2deab977afa_0_33\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> In many ways, the chatbots we’ve been making are like the host of this show - we can use system prompting to get it to “explain to a five-year old” or “explain to student”, which works most of the time.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> But what about situations where we need to make chatbots that talk to an expert, like the last conversation we saw? How well can our chatbot handle those kinds of interactions?\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g28f631e6845_0_0\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson 9 Level 1.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Follow the instructions on the level\n\t\t<br />1) Test at least 4 prompts asking the chatbot to describe how one of your organs or muscles work in your body. \n\t\t<br />2) Read over the responses and rate how understandable they are\n\t\t<br />\n\t\t<br />You may decide to do this level as a class, or have students complete it independently.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g28f631e6845_0_200\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson 9 Level 2. In this Predict & Discuss level, students see a screenshot of a new model, BioMistral, and are asked what they notice and what they wonder about the prompt.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Here is another new feature for our chatbots: we can now change the base model we use in our chat. This is like changing the chatbot we’re talking to. We’ll learn more about this as the lesson progresses, but for right now, I just want you to look at this and write down one thing you Notice and one thing you Wonder. There is no right or wrong answer here - it’s a deliberately open-ended question!\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Once you type in your answer, press the Run button to lock it in. This will also change your screen to green. Once most people have their answers locked in, we’ll discuss as a class.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Make sure students are answering the questions. If you plan to share student responses using one of the teaching strategies in the <a href=\"https://docs.google.com/document/d/1wESWwYm7Ty46eEK9qFcYfYI7NfG9mqodD12YOmuUcrs/edit#heading=h.9hdpc4hbmimr\" target=\"_blank\">Guide to Incorporating Student Responses</a>, then you should be monitoring responses via the <a href=\"https://support.code.org/hc/en-us/articles/14544890300301-Can-I-see-a-summary-of-all-my-students-responses-for-question-based-levels\" target=\"_blank\">Student Summary</a> feature on this level.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2deab977afa_0_76\"></td>\n    <td style=\"width: 75%\">\n      (Optional) Display: This slide is provided if you would like to display student responses as part of the discussion. If you decide to use this strategy, paste in student responses from the summary page and unhide this slide once you are ready. If you are skipping this strategy, then ignore this and continue to the next slide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2deab977afa_0_212\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What do you notice? What do you wonder?\n\t\t<br />\n\t\t<br />Ask a few students to share what they wrote in their level.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This is a purposefully low-floor, open-ended prompt designed to activate student thinking and pay explicit attention to this new feature. Some students may not really know how to respond and will say very obvious things - this is fine and can still be celebrated. Some students may use this as an opportunity to make some interesting observations, such as:\n\t\t<br />- The model seems specialized in healthcare and medicine\n\t\t<br />- It seems to use new data from medical sources\n\t\t<br />\n\t\t<br />As students share responses, encourage students to respond non-verbally if they had a similar thought (for example, by snapping their fingers or shaking their hands). After hearing from a few students, continue to the next slide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2deab977afa_0_57\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson 9 Level 3. In this Predict & Discuss level, students are asked to make a prediction of what will happen.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This is the same image from before, but this time I’m asking you to make a formal prediction - what do you think will happen when we interact with this chatbot? What’s a question you might try asking it, and what do you think the response will be?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> This question is all about students planting their feet and making a prediction that they can test in the next few levels. Make sure students come up with at least one question that they can test. If you plan to share student responses using one of the teaching strategies in the <a href=\"https://docs.google.com/document/d/1wESWwYm7Ty46eEK9qFcYfYI7NfG9mqodD12YOmuUcrs/edit#heading=h.9hdpc4hbmimr\" target=\"_blank\">Guide to Incorporating Student Responses</a>, then you should be monitoring responses via the <a href=\"https://support.code.org/hc/en-us/articles/14544890300301-Can-I-see-a-summary-of-all-my-students-responses-for-question-based-levels\" target=\"_blank\">Student Summary</a> feature on this level.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2deab977afa_0_236\"></td>\n    <td style=\"width: 75%\">\n      (Optional) Display: This slide is provided if you would like to display student responses as part of the discussion. If you decide to use this strategy, paste in student responses from the summary page and unhide this slide once you are ready. If you are skipping this strategy, then ignore this and continue to the next slide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2deab977afa_0_272\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Try to predict how this chatbot will behave when you ask it questions. What's a question you might ask, and what answer would you expect?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> There is still no right-or-wrong answer here, since students are just making predictions based on their intuition. What’s more important is that students lock-in an expectation that they can test in the next few levels. When listening to responses, try not to give anything away or validate responses as “on the right track” - letting students discover if their prediction is right-or-wrong in the next levels is an engagement strategy that hooks students into the lesson.\n\t\t<br />\n\t\t<br />As students share responses, encourage students to respond non-verbally if they had a similar thought (for example, by snapping their fingers or shaking their hands). After hearing from a few students, continue to the next slide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2deab977afa_0_288\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson 9 Level 4. In this Investigate level, students can now interact with the chatbot they’ve seen screenshots of in the last few levels\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Follow the instructions on the level.\n\t\t<br />1) Test the same prompts from before in this chatbot.\n\t\t<br />2) Read over the responses and rate how understandable they are\n\t\t<br />\n\t\t<br />Students can complete this level with a neighbor and have the discussion as a small group rather than a full class.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Listen for students comparing the results of their investigation to their predictions, or the predictions of classmates.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> How would you rate how understandable the responses are?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should notice that the responses from this chatbot are more technical and contain additional jargon than the previous chatbot. This should be relatable to the experience with the last conversation in the 5 Levels video, where it was harder to follow the specific language used in the responses.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This level uses a different base chatbot in its conversations. This chatbot has been especially designed to speak as an expert on medical issues. You could imagine a doctor using a chatbot like this to have a more technical conversation than we would want to have.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g28f631e6845_0_237\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson 9 Level 5. In this Investigate level, students can switch back and forth between chatbots.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> In this level, you can decide which chatbot you would like to interact with. Use the “Compare Models” button to decide between chatbots and test out their responses.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Have students use the dropdown to update their chatbot and test different prompts with each chatbot.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip: Special Note for the Pilot** - We want to be honest and transparent: this level isn’t very engaging for the pilot. Once students know how to use the dropdown and “Compare Models” button, you may want to move past it quickly. That’s because, for the pilot, we only have 2 choices in the dropdown: the base model students have been using all along (Mistral 7B), and the medically-trained one they just experimented with (BioMistral). This means, for the pilot, there really isn’t anything “new” to explore. By the time we launch, we hope to have 5 or 6 different choices so students can spend some time in this level comparing the different models and seeing how the responses differ. But unfortunately for this pilot, we just have these two (which students have already seen)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9b5c96dc-5599-42cf-b857-78611af01744",
+        "lesson_activity.key": "602f158b-42e1-4e5d-a199-4754b6fa7f16"
+      }
+    },
+    {
+      "key": "6c090dc9-301c-4641-a4c8-51a4a450beae",
+      "position": 8,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2d216853e75_0_6\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> In the last level, you could change which model was being used by your chatbot. Each model is designed to perform well on certain things\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> The Mistral 7B model is like the generalist chatbot we’ve been using this whole time. It’s like the host of the show, able to talk to different audiences with all of the information it’s been trained on.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> BioMistral is a specialized chatbot - it’s like talking to the expert in the video, who can only speak with very complex, deep knowledge of the subject.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> That’s because we gave this model a specific set of additional data to look at: new text and articles from special biomedical journals. This is like giving the model a new set of experiences to rely on, and changing its core behavior with new data sources.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2deab977afa_0_320\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This happens with a process called Fine-Tuning. This is where you re-train a model with additional data to help it solve certain problems, like chatting with advanced medical students.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Behind the scenes, fine-tuning impacts the Processing layer of a large language model. This is where a model stores how it represents language and the relationships between certain topics. With fine-tuning, we’re able to adjust these relationships and tweak the underlying neural networks.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2deab977afa_0_340\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> With our models, you may have noticed they both have similar names\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> They both have “Mistral 7B” in the title.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> That’s because the original model is called Mistral, and is the one we’ve been using throughout this class.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> In order to create BioMistral, this model was fine-tuned by providing lots and lots of additional data sources from biomedical journals and other sources.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> And when it was done, the underlying model itself had changed into what we call BioMistral.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2deab977afa_0_366\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Open up the <a href=\"https://huggingface.co/models?pipeline_tag=text-generation&library=transformers&sort=trending\" target=\"_blank\">HuggingFace link</a>. It should link to a page pre-filtered to text-based generative models. HuggingFace is an AI community where companies host their AI models for others to use and build on. \n\t\t<br />\n\t\t<br /><strong>Model:</strong> As a class, explore at least 3 models on the Hugging Face website. Click into the model and skim the description, focusing on the type of data used to create the model. The goal is to emphasize that there are many different kinds of base models you could use in a chatbot, and also emphasize how many models are fine-tuned versions of existing models using different data. For example:\n<br />\n\t\t<br />- Try to find a model that has been fine-tuned to use data in a different language, such as having a conversation in Chinese or Korean.\n\t\t<br />- Try to find a model from a major company students may recognize. Companies like Meta, Google, and Microsoft all host their models in this community.\n\t\t<br />- Try to find a model that has been fine-tuned for a specific purpose, like additional medical chatbots. Finance chatbots are also popular.\n\t\t<br />\n\t\t<br />The lesson doesn’t include specific models to look for because the landscape changes so rapidly. Instead, browse around whichever models are popular on the list generated on the website.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip: Real-World Connections** - Consider using this exploration of Hugging Face as an opportunity to make real-world connections to what students have been doing in this class. The base model used - Mistral - is a model they can find on this website and explore how to use it outside of the lab. They can also see the variety of models that people produce for different tasks, related to some of their own ideas they may have had in this class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6c090dc9-301c-4641-a4c8-51a4a450beae",
+        "lesson_activity.key": "602f158b-42e1-4e5d-a199-4754b6fa7f16"
+      }
+    },
+    {
+      "key": "32fb10c7-b6ad-464f-9f21-84dfa153eceb",
+      "position": 9,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2deab977afa_0_375\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> This graphic is from a model on HuggingFace used to improve answers to law-related questions. How do you think fine-tuning was used to create this model?\n\t\t<br />\n\t\t<br />Have students discuss in pairs before sharing as a full group.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This is an opportunity for formative assessment, based on the class exploration of other models on Hugging Face. Based on those examples, students should say that additional data sources were required to make the model - probably legal and law-related data or articles. Students should also say there needed to be a base model to start with, and the data was used to adjust the model to act more like a finance chatbot than a typical chatbot.\n\t\t<br />\n\t\t<br />Once students have answered, you can visit the model to check: <a href=\"https://huggingface.co/AdaptLLM/law-LLM\" target=\"_blank\">https://huggingface.co/AdaptLLM/law-LLM</a>. This is one of three models fine-tuned to answer law-related questions.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    "
+      },
+      "seeding_key": {
+        "activity_section.key": "32fb10c7-b6ad-464f-9f21-84dfa153eceb",
+        "lesson_activity.key": "602f158b-42e1-4e5d-a199-4754b6fa7f16"
+      }
+    },
+    {
+      "key": "23323ef2-0260-43c5-bd80-19ee867b4c7e",
+      "position": 10,
+      "properties": {
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Assessment Opportunity: Formative Assessment** - Consider using this prompt as a formative assessment to see how well students can discuss how data and a base-model are involved in fine-tuning a new model."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "23323ef2-0260-43c5-bd80-19ee867b4c7e",
+        "lesson_activity.key": "602f158b-42e1-4e5d-a199-4754b6fa7f16"
+      }
+    },
+    {
       "key": "fcf383dd-1c98-42c3-a8c5-678dd4470834",
       "position": 1,
       "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g1b0012b9552_0_972\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson 9 Level 6.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Complete the reflection question at the end of the lesson.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g1b0012b9552_0_737\"></td>\n    <td style=\"width: 75%\">\n      <strong>Question of the Day:</strong>\n\t\t<br />\n\t\t<br />Pilot Survey Feedback: Please encourage students to submit feedback to the Code.org Curriculum Writers via the QR code on the slide. Alternatively, you can provide students with the pre-filled link <a href=\"https://bit.ly/customizing-llms-student-survey-lesson-9\" target=\"_blank\">https://bit.ly/customizing-llms-student-survey-lesson-9</a>\n    </td>\n  </tr>\n\n</table>    \n    "
       },
       "seeding_key": {
         "activity_section.key": "fcf383dd-1c98-42c3-a8c5-678dd4470834",
@@ -2266,6 +2364,7 @@
       "key": "d1c0ef6b-d572-4abf-a458-6e9704764f4b",
       "position": 1,
       "properties": {
+        "description": "Please let us know how this lesson went!\n- [Report a Typo / Bug / Unclear Directions](https://docs.google.com/forms/d/e/1FAIpQLScERCG76MbaK7SFjHgSAeaMKl5a3B8JaUTPkQlQIMKThKSglA/viewform)\n- [Submit Feedback on the Lesson](https://docs.google.com/forms/d/e/1FAIpQLSevew-9Arb6tEGRQfHxmPLTdUsL4mHNWoPIE9DRXJpf_d2C5g/viewform) (required for Amazon Gift Card!)\n- [Share Takeaways and Experiences in the Forum!](https://forum.code.org/c/generative-ai-pilot/460)\n"
       },
       "seeding_key": {
         "activity_section.key": "d1c0ef6b-d572-4abf-a458-6e9704764f4b",
@@ -5548,6 +5647,18 @@
   ],
   "resources": [
     {
+      "name": "5 Levels - Connectome",
+      "url": "https://www.youtube.com/watch?v=opqIa5Jiwuw",
+      "key": "5_levels_-_connectome",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "5_levels_-_connectome"
+      }
+    },
+    {
       "name": "[KEY] Level Guide: Retrieval - Exploration",
       "url": "https://docs.google.com/document/d/1zwZySU9dN42z1HgG1vXxYd8tTKXvRBowfiSh66AqYkI/edit",
       "key": "_key_level_guide_retrieval_-_exploration",
@@ -5651,6 +5762,29 @@
       },
       "seeding_key": {
         "resource.key": "chatbots_in_society"
+      }
+    },
+    {
+      "name": "Fine Tuning - Exploration",
+      "url": "https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/template/preview",
+      "key": "fine_tuning_-_exploration",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "fine_tuning_-_exploration"
+      }
+    },
+    {
+      "name": "Hugging Face Model Explorer",
+      "url": "https://huggingface.co/models?pipeline_tag=text-generation&library=transformers&sort=trending",
+      "key": "hugging_face_model_explorer",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "hugging_face_model_explorer"
       }
     },
     {
@@ -5906,6 +6040,24 @@
       "seeding_key": {
         "lesson.key": "lesson-8",
         "resource.key": "retrieval_-_synthesis"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "5_levels_-_connectome"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "fine_tuning_-_exploration"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "hugging_face_model_explorer"
       }
     }
   ],
