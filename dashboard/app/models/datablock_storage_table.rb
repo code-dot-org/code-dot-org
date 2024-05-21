@@ -225,6 +225,10 @@ class DatablockStorageTable < ApplicationRecord
 
     new_records = CSV.parse(table_data_csv, headers: true).map(&:to_h)
 
+    if new_records.empty?
+      raise StudentFacingError.new(:IMPORT_FAILED), "Could not import CSV as it was empty"
+    end
+
     # Auto-cast CSV strings on import, e.g. "5.0" => 5.0
     same_as_undefined = ['', 'undefined']
     new_records.map! do |record|
