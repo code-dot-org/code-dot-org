@@ -1,3 +1,5 @@
+@import 'color';
+
 #linking-page-header {
   text-align: center;
   margin-bottom: 10px;
@@ -19,8 +21,8 @@
 }
 
 #signin-connect-button {
-  background: #8C52BA;
-  color: white;
+  background: $purple;
+  color: $white;
 }
 
 .go-back-link {
