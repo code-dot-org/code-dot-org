@@ -1,4 +1,4 @@
-@as_student
+@as_student @no_phone
 Feature: Fun-O-Meter
 
 Scenario: Rate a Puzzle

@@ -220,7 +220,7 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
           <div className={styles.buttonContainer}>
             <button
               onClick={setPackToDefault}
-              className={styles.skip}
+              className={classNames('skip-button', styles.skip)}
               type="button"
             >
               Skip
