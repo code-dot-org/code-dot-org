@@ -6,10 +6,12 @@ Feature: Music Lab block can be dragged
 
 Scenario Outline: Dragging play sound block
   Given I am on "<url>"
-  And I rotate to landscape
 
-  # Skip the pack dialog if it is showing.
-  Then I click selector ".skip-button" if it exists
+  # Ensure that the pack dialog doesn't show by using a library with no restricted packs.
+  Then I append "?library=intro2024" to the URL
+
+  # Rotate to landscape.
+  And I rotate to landscape
 
   # Wait until we see the first category.
   And I wait until element ".blocklyTreeRow" is visible
