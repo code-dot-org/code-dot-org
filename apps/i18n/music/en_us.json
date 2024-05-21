@@ -20,6 +20,7 @@
   "blockly_blockPlayPattern": "play drums {pattern}",
   "blockly_blockPlayPatternTooltip": "play drums",
   "blockly_blockRepeat": "repeat {num} times",
+  "blockly_blockRepeatDo": "do",
   "blockly_blockRepeatTooltip": "repeat",
   "blockly_blockRest": "rest for {duration}",
   "blockly_blockRestTooltip": "rest",
