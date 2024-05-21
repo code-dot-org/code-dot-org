@@ -160,6 +160,8 @@ def main
 
         # Schedule a reminder for the dotd to check Zendesk in 2 hours
         Slack.remind(Slack.user_id(DevelopersTopic.dotd), Time.now.to_i + 7200, 'Reminder: check <https://codeorg.zendesk.com/agent/filters/44863373|Zendesk>')
+        # Remind dotd to update the flaky test tracker on DTP as a once-ish a day reminder.
+        Slack.remind(Slack.user_id(DevelopersTopic.dotd), Time.now.to_i, 'Please update the <https://docs.google.com/spreadsheets/d/1DD6ebHM-2fsiMxxYCzhJYd1DzA69Z20qrCItaER9vto|Flaky Test Tracker>')
 
         # Check hoc_mode and hoc_launch only on successful DTPs, so that we get about 1 reminder per
         # day to bring staging, test and production to the same hoc_mode and hoc_launch after a
@@ -179,6 +181,7 @@ def main
       if CDO.test_system?
         DevelopersTopic.set_dtt 'no (robo-DTT failed)'
         ChatClient.log "*** Before you manually re-run a test, please ensure that the team who owns that test is actively tracking de-flaking. ***", color: 'yellow'
+        ChatClient.log "*** Please update the <https://docs.google.com/spreadsheets/d/1DD6ebHM-2fsiMxxYCzhJYd1DzA69Z20qrCItaER9vto|Flaky Test Tracker> ***", color: 'red'
       end
     end
 
