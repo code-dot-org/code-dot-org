@@ -1238,7 +1238,7 @@ class Unit < ApplicationRecord
         end
 
         source_course_version&.reference_guides&.each do |reference_guide|
-          reference_guide.copy_to_course_version(destination_unit_group.course_version)
+          reference_guide.copy_to_course_version(copied_unit.get_course_version)
         end
 
         if destination_professional_learning_course.nil?
