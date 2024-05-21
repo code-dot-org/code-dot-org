@@ -348,8 +348,10 @@ export function getProjectSerialization(workspace: WorkspaceSvg) {
   const workspaceSerialization = Blockly.serialization.workspaces.save(
     workspace
   ) as WorkspaceSerialization;
-
-  if (shouldSkipHiddenWorkspace(workspace)) {
+  console.log('workspaceSerialization', workspaceSerialization);
+  const testing = true;
+  console.log('shouldSkipHiddneWorkspace', shouldSkipHiddenWorkspace(workspace));
+  if (shouldSkipHiddenWorkspace(workspace) || testing) {
     return workspaceSerialization;
   }
   const hiddenDefinitionWorkspace = Blockly.getHiddenDefinitionWorkspace();

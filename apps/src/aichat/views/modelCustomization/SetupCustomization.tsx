@@ -110,6 +110,7 @@ const SetupCustomization: React.FunctionComponent = () => {
               styles.updateButton,
               styles.compareModelsButton
             )}
+            disabled={readOnlyWorkspace}
           />
         )}
         {isShowingModelDialog && (

@@ -718,8 +718,10 @@ var projects = (module.exports = {
       }
 
       if (isEditing) {
+        console.log('isEditing - current', current);
         if (current) {
           if (currentSources.source) {
+            console.log('currentSources.source', currentSources.source);
             sourceHandler.setInitialLevelSource(currentSources.source);
           }
         } else {
@@ -925,6 +927,8 @@ var projects = (module.exports = {
   },
 
   canServerSideRemix() {
+    console.log('canServerSideRemix');
+    console.log(!['artist', 'playlab'].includes(projects.getStandaloneApp()));
     // The excluded app types need to make modifications to the project that
     // apply to the remixed project, but should not be saved on the original
     // project. See (Turtle|Studio).prepareForRemix().

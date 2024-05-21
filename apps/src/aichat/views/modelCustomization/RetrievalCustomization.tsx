@@ -92,17 +92,18 @@ const RetrievalCustomization: React.FunctionComponent = () => {
           return (
             <div key={index} className={styles.itemContainer}>
               <span>{message}</span>
-              <button
-                type="button"
-                onClick={() => onRemove(index)}
-                className={styles.removeItemButton}
-                disabled={isReadOnly}
-              >
-                <FontAwesomeV6Icon
-                  iconName="circle-xmark"
-                  className={styles.removeItemIcon}
-                />
-              </button>
+              {!isReadOnly && (
+                <button
+                  type="button"
+                  onClick={() => onRemove(index)}
+                  className={styles.removeItemButton}
+                >
+                  <FontAwesomeV6Icon
+                    iconName="circle-xmark"
+                    className={styles.removeItemIcon}
+                  />
+                </button>
+              )}
             </div>
           );
         })}
