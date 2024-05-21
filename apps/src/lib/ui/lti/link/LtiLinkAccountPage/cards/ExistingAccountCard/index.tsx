@@ -14,7 +14,12 @@ import i18n from '@cdo/locale';
 import {LtiProviderContext} from '../../context';
 
 const ExistingAccountCard = () => {
-  const {ltiProviderName, existingAccountUrl} = useContext(LtiProviderContext)!;
+  const {ltiProvider, ltiProviderName, existingAccountUrl} =
+    useContext(LtiProviderContext)!;
+  const urlParams = new URLSearchParams({
+    lms_name: ltiProviderName,
+    lti_provider: ltiProvider,
+  });
 
   return (
     <Card data-testid={'existing-account-card'}>
@@ -38,7 +43,7 @@ const ExistingAccountCard = () => {
           color={buttonColors.purple}
           type={'primary'}
           size="l"
-          href={existingAccountUrl}
+          href={`${existingAccountUrl}?${urlParams.toString()}`}
           text={i18n.ltiLinkAccountExistingAccountCardActionLabel()}
         />
       </CardActions>
