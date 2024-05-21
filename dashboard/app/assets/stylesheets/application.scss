@@ -1927,6 +1927,19 @@ a.download-video {
   display: flex;
   flex-wrap: wrap;
 
+  .required {
+    font-weight: 600;
+
+    & > * {
+      font-weight: 600;
+    }
+
+    &::after {
+      content: "*";
+      display: inline;
+    }
+  }
+
   .header {
     display: flex;
     flex-wrap: wrap;
