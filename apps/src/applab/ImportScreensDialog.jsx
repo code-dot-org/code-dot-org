@@ -25,6 +25,13 @@ const SCALE = 0.1;
 const MARGIN = 10;
 const ICON_HEIGHT = applabConstants.APP_HEIGHT * SCALE;
 
+export const IMPORT_FAILURE_MESSAGE = `
+  Cannot import the following screens because their IDs or
+  contained design element IDs are already used in your existing
+  project. Fix the IDs in either project so they aren't
+  duplicated between the two projects before trying to import the following.
+`;
+
 // TODO: possibly refactor AssetRow to make it work here instead of
 // or with this component
 class AssetListItemUnwrapped extends React.Component {
@@ -206,13 +213,7 @@ export class ImportScreensDialog extends React.Component {
             {nonImportableScreens.length > 0 && (
               <div style={styles.section}>
                 <h2 style={multiCheckboxStyles.header}>Cannot Import</h2>
-                <p style={styles.subtext}>
-                  Cannot import the following screens because their IDs or
-                  contained design element IDs are already used in your existing
-                  project. Fix the IDs in either project so they aren't
-                  duplicated across different screens before trying to import
-                  the following.
-                </p>
+                <p style={styles.subtext}>{IMPORT_FAILURE_MESSAGE}</p>
                 <ul style={multiCheckboxStyles.list}>
                   {nonImportableScreens.map(screen => (
                     <li key={screen.id} style={multiCheckboxStyles.listItem}>

@@ -39,7 +39,7 @@ function getImportableScreen(dom) {
   const willReplace = designMode.getAllScreenIds().includes(id);
   const conflictingIds = [];
 
-  // Catch edge case where the to be imported screen ID
+  // Catch edge case where the ID of the imported screen
   // conflicts with an existing element ID.
   if (!willReplace && !elementUtils.isIdAvailable(id)) {
     conflictingIds.push(id);
@@ -47,7 +47,7 @@ function getImportableScreen(dom) {
 
   Array.from(dom.children).forEach(child => {
     if (!elementUtils.isIdAvailable(child.id)) {
-      var existingElement = elementUtils.getPrefixedElementById(child.id);
+      const existingElement = elementUtils.getPrefixedElementById(child.id);
       if (existingElement) {
         let existingElementScreen = $(existingElement).parents('.screen')[0];
 

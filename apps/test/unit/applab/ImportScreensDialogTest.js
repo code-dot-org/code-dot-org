@@ -13,6 +13,7 @@ import {
   ImportScreensDialog,
   ScreenListItem,
   AssetListItem,
+  IMPORT_FAILURE_MESSAGE,
 } from '@cdo/apps/applab/ImportScreensDialog';
 import AssetThumbnail from '@cdo/apps/code-studio/components/AssetThumbnail';
 
@@ -350,13 +351,7 @@ describe('ImportScreensDialog', () => {
               <div>
                 <div>
                   <h2>Cannot Import</h2>
-                  <p>
-                    Cannot import the following screens because their IDs or
-                    contained design element IDs are already used in your
-                    existing project. Fix the IDs in either project so they
-                    aren't duplicated across different screens before trying to
-                    import the following.
-                  </p>
+                  <p>{IMPORT_FAILURE_MESSAGE}</p>
                   <ul>
                     <li>
                       <ScreenListItem
