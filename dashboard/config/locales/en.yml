@@ -1489,3 +1489,4 @@ en:
         invalid_parent_email: The parent/guardian's email address is invalid
         parent_email_is_own: A request cannot be sent to your own email address
         resend_limit_reached: The limit for resend requests has been reached
+  not_applicable_abbreviation: "N/A"
