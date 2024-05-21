@@ -32,7 +32,7 @@ export interface SimpleDropdownProps extends AriaAttributes {
   /** SimpleDropdown color. Sets the color of dropdown arrow, text, label and border color.
    * White stands for 'white' dropdown that'll be rendered on dark background,
    * 'black' stands for black dropdown that'll be rendered on the white/light background. */
-  color?: 'white' | 'black';
+  color?: 'white' | 'black' | 'gray';
   /** SimpleDropdown size */
   size: ComponentSizeXSToL;
 }

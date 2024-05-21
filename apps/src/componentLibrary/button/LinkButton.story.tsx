@@ -104,15 +104,15 @@ GroupOfColorsOfLinkButtons.args = {
       href: 'https://www.google.com',
     },
     {
-      text: 'Button Secondary Purple',
-      color: buttonColors.purple,
+      text: 'Button Secondary Black',
+      color: buttonColors.black,
       type: 'secondary',
       size: 'm',
       href: 'https://www.google.com',
     },
     {
-      text: 'Button Secondary Black',
-      color: buttonColors.black,
+      text: 'Button Secondary Gray',
+      color: buttonColors.gray,
       type: 'secondary',
       size: 'm',
       href: 'https://www.google.com',
@@ -171,7 +171,7 @@ GroupOfColorsOfLinkButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
-      color: buttonColors.purple,
+      color: buttonColors.black,
       type: 'secondary',
       isIconOnly: true,
       size: 'm',
@@ -179,7 +179,7 @@ GroupOfColorsOfLinkButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
-      color: buttonColors.black,
+      color: buttonColors.gray,
       type: 'secondary',
       isIconOnly: true,
       size: 'm',
