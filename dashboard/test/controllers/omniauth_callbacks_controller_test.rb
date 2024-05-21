@@ -1601,7 +1601,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
     # Pre-existing Google account that we want the new LTI auth option to be linked to
     existing_user = create :teacher, :with_google_authentication_option
-    puts existing_user.authentication_options.inspect
     auth = generate_auth_user_hash provider: AuthenticationOption::GOOGLE, uid: existing_user.authentication_options[1].authentication_id
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
