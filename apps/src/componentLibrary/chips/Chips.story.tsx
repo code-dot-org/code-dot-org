@@ -75,7 +75,7 @@ ThickAndThinChips.args = {
     {
       label: 'Thick Chips',
       name: 'thick-chips1',
-      textType: 'thick',
+      textThickness: 'thick',
       options: [
         {value: 'ThickChip1', label: 'Chip1'},
         {value: 'ThickChip2', label: 'Chip2'},
@@ -89,7 +89,7 @@ ThickAndThinChips.args = {
     {
       label: 'Thin Chips',
       name: 'thin-chips1',
-      textType: 'thin',
+      textThickness: 'thin',
       options: [
         {value: 'ThinChip1', label: 'Chip1'},
         {value: 'ThinChip2', label: 'Chip2'},

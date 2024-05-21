@@ -18,7 +18,7 @@ export interface ChipsProps {
   /** Chips disabled state */
   disabled?: boolean;
   /** Chips text type (thickness) */
-  textType?: 'thick' | 'thin';
+  textThickness?: 'thick' | 'thin';
   /** List of chips to render */
   options: {value: string; label: string}[];
   /** List of selected chips values */
@@ -54,7 +54,7 @@ const Chips: React.FunctionComponent<ChipsProps> = ({
   options,
   values,
   setValues,
-  textType = 'thin',
+  textThickness = 'thin',
   color = 'black',
   size = 'm',
   className,
@@ -85,7 +85,7 @@ const Chips: React.FunctionComponent<ChipsProps> = ({
               name={inputName}
               value={option.value}
               key={option.value}
-              textThickness={textType}
+              textThickness={textThickness}
               checked={values.includes(option.value)}
               // The child's `required` prop will be set to `false` if the
               // Group's `required` prop is falsy. It will be set to `true` if
