@@ -2,5 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.0]()
+
+* Added `gray` color
+* Added `thick` and `thin` options (chips text type)
+
 ## [0.1.0](https://github.com/code-dot-org/code-dot-org/pull/54064)
+
 * Initial release
