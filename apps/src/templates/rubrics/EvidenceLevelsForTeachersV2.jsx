@@ -1,22 +1,27 @@
-import React, {useMemo, useState} from 'react';
-import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
 import classnames from 'classnames';
-import style from './rubrics.module.scss';
-import {aiEvaluationShape, evidenceLevelShape} from './rubricShapes';
+import PropTypes from 'prop-types';
+import React, {useMemo, useState, useEffect} from 'react';
+
 import {
   BodyThreeText,
   BodyFourText,
   StrongText,
 } from '@cdo/apps/componentLibrary/typography';
+import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
+
 import {
   UNDERSTANDING_LEVEL_STRINGS,
   UNDERSTANDING_LEVEL_STRINGS_V2,
 } from './rubricHelpers';
+import {aiEvaluationShape, evidenceLevelShape} from './rubricShapes';
+
+import style from './rubrics.module.scss';
 
 const INVALID_UNDERSTANDING = -1;
 
 export default function EvidenceLevelsForTeachersV2({
+  productTour,
   evidenceLevels,
   understanding,
   radioButtonCallback,
@@ -25,19 +30,29 @@ export default function EvidenceLevelsForTeachersV2({
   isAiAssessed,
   aiEvalInfo,
 }) {
-  // Generates a list based on whether the AI understanding level falls in the pass
-  // (Extensive / Convincing) or fail (Limited / None) range. Used to display AI bubble
-  // around evidence level.
-  const passFail = useMemo(() => {
+  // Generates a list of evidence levels to highlight, indicating the AI
+  // recommendation. Using the precomputed value showExactMatch, decides whether
+  // to highlight a single evidence level (exact match) or a range of two
+  // evidence levels (pass / fail).
+  const suggestedEvidenceLevels = useMemo(() => {
     if (!!aiEvalInfo) {
       // If a teacher set an understanding, or no AI assessment, then bail
       if (understanding !== INVALID_UNDERSTANDING || !isAiAssessed) {
         return [];
       }
-      if (aiEvalInfo.understanding > 1) {
-        return [2, 3];
-      } else if (aiEvalInfo.understanding >= 0) {
-        return [0, 1];
+      if (aiEvalInfo.showExactMatch) {
+        return [aiEvalInfo.understanding];
+      }
+      if (aiEvalInfo.understanding > RubricUnderstandingLevels.LIMITED) {
+        return [
+          RubricUnderstandingLevels.CONVINCING,
+          RubricUnderstandingLevels.EXTENSIVE,
+        ];
+      } else if (aiEvalInfo.understanding >= RubricUnderstandingLevels.NONE) {
+        return [
+          RubricUnderstandingLevels.LIMITED,
+          RubricUnderstandingLevels.NONE,
+        ];
       }
     } else return [];
   }, [aiEvalInfo, isAiAssessed, understanding]);
@@ -52,9 +67,17 @@ export default function EvidenceLevelsForTeachersV2({
     setShowDescription(INVALID_UNDERSTANDING);
   };
 
+  useEffect(() => {
+    if (productTour) {
+      setShowDescription(3);
+    } else {
+      setShowDescription(INVALID_UNDERSTANDING);
+    }
+  }, [productTour]);
+
   if (canProvideFeedback) {
     return (
-      <div>
+      <div id="tour-evidence-levels">
         <BodyThreeText className={style.evidenceLevelHeaderText}>
           <StrongText>{i18n.assignARubricScore()}</StrongText>
         </BodyThreeText>
@@ -72,8 +95,11 @@ export default function EvidenceLevelsForTeachersV2({
                 [
                   understanding === evidenceLevel.understanding
                     ? style.evidenceLevelSelected
-                    : passFail.includes(evidenceLevel.understanding)
+                    : suggestedEvidenceLevels.includes(
+                        evidenceLevel.understanding
+                      )
                     ? classnames(
+                        'unittest-evidence-level-suggested',
                         style.evidenceLevelSuggested,
                         style.evidenceLevelUnselected
                       )
@@ -119,6 +145,7 @@ export default function EvidenceLevelsForTeachersV2({
 }
 
 EvidenceLevelsForTeachersV2.propTypes = {
+  productTour: PropTypes.bool,
   evidenceLevels: PropTypes.arrayOf(evidenceLevelShape).isRequired,
   learningGoalKey: PropTypes.string,
   understanding: PropTypes.number,

@@ -1,8 +1,10 @@
-import {assert} from '../../../util/reconfiguredChai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
+
 import LessonExtrasFlagIcon from '@cdo/apps/templates/progress/LessonExtrasFlagIcon';
 import color from '@cdo/apps/util/color';
+
+import {assert} from '../../../util/reconfiguredChai';
 
 describe('LessonExtrasFlagIcon', () => {
   it('has a grey flag icon when not selected, not perfect', () => {

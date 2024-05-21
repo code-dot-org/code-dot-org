@@ -26,6 +26,7 @@ import {actions, REDIRECT_RESPONSE} from './redux/applab';
 import {getStore} from '../redux';
 import $ from 'jquery';
 import i18n from '@cdo/applab/locale';
+import {rateLimit} from '@cdo/apps/storage/rateLimit';
 
 // For proxying non-https xhr requests
 var XHR_PROXY_PATH = '//' + location.host + '/xhr';
@@ -1760,7 +1761,12 @@ applabCommands.createRecord = function (opts) {
   }
   var onSuccess = applabCommands.handleCreateRecord.bind(this, opts);
   var onError = opts.onError || getAsyncOutputWarning();
-  Applab.storage.createRecord(opts.table, opts.record, onSuccess, onError);
+  try {
+    rateLimit();
+    Applab.storage.createRecord(opts.table, opts.record, onSuccess, onError);
+  } catch (e) {
+    outputError(e.message);
+  }
 };
 
 applabCommands.handleCreateRecord = function (opts, record) {
@@ -1783,7 +1789,12 @@ applabCommands.getKeyValue = function (opts) {
   );
   var onSuccess = applabCommands.handleReadValue.bind(this, opts);
   var onError = opts.onError || getAsyncOutputWarning();
-  Applab.storage.getKeyValue(opts.key, onSuccess, onError);
+  try {
+    rateLimit();
+    Applab.storage.getKeyValue(opts.key, onSuccess, onError);
+  } catch (e) {
+    outputError(e.message);
+  }
 };
 
 applabCommands.handleReadValue = function (opts, value) {
@@ -1796,7 +1807,12 @@ applabCommands.getKeyValueSync = function (opts) {
   apiValidateType(opts, 'getKeyValueSync', 'key', opts.key, 'string');
   var onSuccess = handleGetKeyValueSync.bind(this, opts);
   var onError = handleGetKeyValueSyncError.bind(this, opts);
-  Applab.storage.getKeyValue(opts.key, onSuccess, onError);
+  try {
+    rateLimit();
+    Applab.storage.getKeyValue(opts.key, onSuccess, onError);
+  } catch (e) {
+    outputError(e.message);
+  }
 };
 
 var handleGetKeyValueSync = function (opts, value) {
@@ -1831,7 +1847,12 @@ applabCommands.setKeyValue = function (opts) {
   );
   var onSuccess = applabCommands.handleSetKeyValue.bind(this, opts);
   var onError = opts.onError || getAsyncOutputWarning();
-  Applab.storage.setKeyValue(opts.key, opts.value, onSuccess, onError);
+  try {
+    rateLimit();
+    Applab.storage.setKeyValue(opts.key, opts.value, onSuccess, onError);
+  } catch (e) {
+    outputError(e.message);
+  }
 };
 
 applabCommands.handleSetKeyValue = function (opts) {
@@ -1845,7 +1866,12 @@ applabCommands.setKeyValueSync = function (opts) {
   apiValidateType(opts, 'setKeyValueSync', 'value', opts.value, 'primitive');
   var onSuccess = handleSetKeyValueSync.bind(this, opts);
   var onError = handleSetKeyValueSyncError.bind(this, opts);
-  Applab.storage.setKeyValue(opts.key, opts.value, onSuccess, onError);
+  try {
+    rateLimit();
+    Applab.storage.setKeyValue(opts.key, opts.value, onSuccess, onError);
+  } catch (e) {
+    outputError(e.message);
+  }
 };
 
 var handleSetKeyValueSync = function (opts) {
@@ -1862,28 +1888,31 @@ var handleSetKeyValueSyncError = function (opts, message) {
 applabCommands.getColumn = function (opts) {
   apiValidateType(opts, 'getColumn', 'table', opts.table, 'string');
   apiValidateType(opts, 'getColumn', 'column', opts.column, 'string');
-
-  Applab.storage.readRecords(
-    opts.table,
-    {},
-    handleGetColumn.bind(this, opts),
-    handleGetColumnError.bind(this, opts)
-  );
+  try {
+    rateLimit();
+    Applab.storage.getColumn(
+      opts.table,
+      opts.column,
+      handleGetColumn.bind(this, opts),
+      handleGetColumnError.bind(this, opts)
+    );
+  } catch (e) {
+    outputError(e.message);
+  }
 };
 
-var handleGetColumn = function (opts, records) {
-  let columnList = [];
+var handleGetColumn = function (opts, columnValues) {
   let columnName = opts.column;
   let tableName = opts.table;
-  if (records === null) {
+  if (columnValues === null) {
     outputError(i18n.tableDoesNotExistError({tableName}));
   } else {
-    records.forEach(row => columnList.push(row[opts.column]));
-    if (columnList.every(element => element === undefined)) {
+    if (columnValues.every(element => element === undefined)) {
       outputError(i18n.columnDoesNotExistError({columnName, tableName}));
     }
   }
-  opts.callback(columnList);
+
+  opts.callback(columnValues);
 };
 
 var handleGetColumnError = function (opts, message) {
@@ -1918,7 +1947,17 @@ applabCommands.readRecords = function (opts) {
   }
   var onSuccess = applabCommands.handleReadRecords.bind(this, opts);
   var onError = opts.onError || getAsyncOutputWarning();
-  Applab.storage.readRecords(opts.table, opts.searchParams, onSuccess, onError);
+  try {
+    rateLimit();
+    Applab.storage.readRecords(
+      opts.table,
+      opts.searchParams,
+      onSuccess,
+      onError
+    );
+  } catch (e) {
+    outputError(e.message);
+  }
 };
 
 applabCommands.handleReadRecords = function (opts, records) {
@@ -1980,7 +2019,12 @@ applabCommands.updateRecord = function (opts) {
   }
   var onComplete = applabCommands.handleUpdateRecord.bind(this, opts);
   var onError = opts.onError || getAsyncOutputWarning();
-  Applab.storage.updateRecord(opts.table, opts.record, onComplete, onError);
+  try {
+    rateLimit();
+    Applab.storage.updateRecord(opts.table, opts.record, onComplete, onError);
+  } catch (e) {
+    outputError(e.message);
+  }
 };
 
 applabCommands.handleUpdateRecord = function (opts, record, success) {
@@ -2038,32 +2082,18 @@ applabCommands.deleteRecord = function (opts) {
   }
   var onComplete = applabCommands.handleDeleteRecord.bind(this, opts);
   var onError = opts.onError || getAsyncOutputWarning();
-  Applab.storage.deleteRecord(opts.table, opts.record, onComplete, onError);
+  try {
+    rateLimit();
+    Applab.storage.deleteRecord(opts.table, opts.record, onComplete, onError);
+  } catch (e) {
+    outputError(e.message);
+  }
 };
 
 applabCommands.handleDeleteRecord = function (opts, success) {
   if (opts.onComplete) {
     opts.onComplete.call(null, success);
   }
-};
-
-applabCommands.onRecordEvent = function (opts) {
-  apiValidateType(opts, 'onRecordEvent', 'table', opts.table, 'string');
-  apiValidateType(opts, 'onRecordEvent', 'callback', opts.onRecord, 'function');
-  apiValidateType(
-    opts,
-    'onRecordEvent',
-    'includeAll',
-    opts.includeAll,
-    'boolean',
-    OPTIONAL
-  );
-  Applab.storage.onRecordEvent(
-    opts.table,
-    opts.onRecord,
-    getAsyncOutputWarning(),
-    opts.includeAll
-  );
 };
 
 applabCommands.getUserId = function (opts) {
@@ -2249,16 +2279,21 @@ applabCommands.drawChartFromRecords = function (opts) {
     outputError(error.message);
   };
 
-  startLoadingSpinnerFor(opts.chartId);
-  chartApi
-    .drawChartFromRecords(
-      opts.chartId,
-      opts.chartType,
-      opts.tableName,
-      opts.columns,
-      opts.options
-    )
-    .then(onSuccess, onError);
+  try {
+    rateLimit();
+    startLoadingSpinnerFor(opts.chartId);
+    chartApi
+      .drawChartFromRecords(
+        opts.chartId,
+        opts.chartType,
+        opts.tableName,
+        opts.columns,
+        opts.options
+      )
+      .then(onSuccess, onError);
+  } catch (e) {
+    outputError(e.message);
+  }
 };
 
 /**

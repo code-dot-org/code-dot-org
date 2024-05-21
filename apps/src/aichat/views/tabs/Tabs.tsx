@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import classNames from 'classnames';
 
 import styles from './tabs.module.scss';
 import TabPanel from './TabPanel';
 
-type Tab = {
+export type Tab = {
   title: string;
   content: React.ReactNode;
 };
@@ -27,6 +27,13 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
       ? initialActiveIndex
       : 0
   );
+
+  // Check to make sure active index is always within bounds whenever tabs or activeIndex update
+  useEffect(() => {
+    if (tabs.length <= activeIndex && tabs.length > 0) {
+      setActiveIndex(0);
+    }
+  }, [tabs, activeIndex, setActiveIndex]);
 
   const handleTabClick = (index: number) => {
     setActiveIndex(index);

@@ -1,5 +1,8 @@
-import {getProjectDatabase, getPathRef} from './firebaseUtils';
+// TODO: post-firebase-cleanup, remove this file #56994
+
 import _ from 'lodash';
+
+import {getProjectDatabase, getPathRef} from './firebaseUtils';
 
 export function getColumnsRef(database, tableName) {
   return getPathRef(database, `metadata/tables/${tableName}/columns`);

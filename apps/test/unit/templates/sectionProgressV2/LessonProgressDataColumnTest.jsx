@@ -1,15 +1,15 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-
-import {UnconnectedLessonProgressDataColumn} from '@cdo/apps/templates/sectionProgressV2/LessonProgressDataColumn.jsx';
-import LessonProgressColumnHeader from '@cdo/apps/templates/sectionProgressV2/LessonProgressColumnHeader.jsx';
-import LessonDataCell from '@cdo/apps/templates/sectionProgressV2/LessonDataCell.jsx';
 
 import {
   fakeLessonWithLevels,
   fakeLesson,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
+import LessonDataCell from '@cdo/apps/templates/sectionProgressV2/LessonDataCell.jsx';
+import LessonProgressColumnHeader from '@cdo/apps/templates/sectionProgressV2/LessonProgressColumnHeader.jsx';
+import {UnconnectedLessonProgressDataColumn} from '@cdo/apps/templates/sectionProgressV2/LessonProgressDataColumn.jsx';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const STUDENT_1 = {id: 1, name: 'Student 1', familyName: 'FamNameB'};
 const STUDENT_2 = {id: 2, name: 'Student 2', familyName: 'FamNameA'};

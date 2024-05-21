@@ -3,6 +3,7 @@
  */
 
 import {VisualAppearance} from '@cdo/apps/componentLibrary/typography/types';
+
 import {ComponentSizeXSToL, DropdownColor} from './types';
 
 /**
@@ -20,4 +21,5 @@ export const componentSizeToBodyTextSizeMap: {
 export const dropdownColors: {[key in DropdownColor]: DropdownColor} = {
   white: 'white',
   black: 'black',
+  gray: 'gray',
 };

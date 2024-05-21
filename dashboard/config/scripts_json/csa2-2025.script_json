@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-11 07:29:44 UTC",
+    "serialized_at": "2024-05-17 20:28:20 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -377,10 +377,9 @@
       "has_lesson_plan": true,
       "relative_position": 16,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.6\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "overview": "**Question of the Day**\n\nTeacher-facing overview.",
+        "overview": "**What methods can I use to write algorithms for parsing String objects?**\n\nIn this lesson, students are exposed to the `String` class and learn how to implement standard `String` algorithms using the `substring()` method. Students first investigate reversing a `String` object in order to determine if a sentence is a palindrome. Then, students practice using the `substring()` method and conditional expressions to determine if a `String` object meets a certain criteria. Finally, they practice creating algorithms to count how many `String` objects meet a certain criteria.\n",
         "preparation": "* **(Optional)** Print copies of the Guided Notes (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-6-2-substrings/37923) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
-        "student_overview": "**Question of the Day**\n\nStudent-facing overview"
+        "student_overview": "**How can I implement algorithms for parsing String objects?**\n\nIn this lesson, you will be introduced to the `String` class and learn how to implement standard `String` algorithms using the `substring()` method. You will start by exploring how to reverse a `String` object to determine if a sentence is a palindrome. Next, you will practice using the `substring()` method along with conditional expressions to evaluate whether a `String` object meets a specific criteria. Finally, you will develop algorithms to count the occurrences of `String` objects that meet certain criteria.\n"
       },
       "seeding_key": {
         "lesson.key": "Substrings",
@@ -389,12 +388,30 @@
       }
     },
     {
-      "key": "Sandbox: Console",
-      "name": "Sandbox: Console",
+      "key": "lesson-3",
+      "name": "Nested Iteration",
       "absolute_position": 17,
       "lockable": false,
-      "has_lesson_plan": false,
+      "has_lesson_plan": true,
       "relative_position": 17,
+      "properties": {
+        "overview": "**How can I adjust loop control variables of nested loops to produce different output?**\n\nStudents have already been exposed to loops, and will now discover nested iteration through nested `for` loops. Students explore a hands-on activity to recognize similarities between nested `for` loops and the movement of hands on a clock. Students then investigate different ways nested iteration can be used to produce printed patterns and then practice tracing nested loops. Finally, they automate repetitive programming tasks by writing their own nested `for` loops. ",
+        "preparation": "* **(Optional)** Print copies of the Nested Iteration Guided Notes (one for each student)\n* Choose to use the clock face cutouts or the online version\n* Preview the *Nested Iteration* video",
+        "student_overview": "**How can I adjust loop control variables of nested loops to produce different output?**\n\nYou have already seen and used `for` loops. Now, you will discover nested iteration through nested `for` loops. You explore a hands-on activity wherein you will recognize similarities between nested `for` loops and the movement of hands on a clock. You’ll then investigate different ways nested iteration can be used to produce printed patterns and then practice tracing nested loops. Finally, you will automate repetitive programming tasks by writing your own nested `for` loops. \n"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025"
+      }
+    },
+    {
+      "key": "Sandbox: Console",
+      "name": "Sandbox: Console",
+      "absolute_position": 18,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 18,
       "properties": {
       },
       "seeding_key": {
@@ -406,10 +423,10 @@
     {
       "key": "Sandbox: The Neighborhood",
       "name": "Sandbox: The Neighborhood",
-      "absolute_position": 18,
+      "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 18,
+      "relative_position": 19,
       "properties": {
       },
       "seeding_key": {
@@ -1056,6 +1073,48 @@
       "seeding_key": {
         "lesson_activity.key": "cc53851c-af76-48ac-8c45-967351db8bf7",
         "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025"
+      }
+    },
+    {
+      "key": "ddb691f6-7f84-490a-ac5f-6cbdcd9cc04d",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ddb691f6-7f84-490a-ac5f-6cbdcd9cc04d",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025"
+      }
+    },
+    {
+      "key": "e0189af7-daf7-47be-8ff9-2288c1e54d99",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e0189af7-daf7-47be-8ff9-2288c1e54d99",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025"
+      }
+    },
+    {
+      "key": "8d15bd13-d5a9-40ab-813b-aa21151afd53",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8d15bd13-d5a9-40ab-813b-aa21151afd53",
+        "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa2-2025"
       }
@@ -4811,6 +4870,8 @@
       "key": "b535d28b-119d-4b46-9c79-3a81dda42e2b",
       "position": 1,
       "properties": {
+        "description": "You all have used search engines like Google before. These search engines use a technology called “Natural Language Processing,” or NLP for short, to return relevant results. NLP helps the search engine determine, no matter how your words are spelled or combined, what helpful information should be surfaced.",
+        "name": "Search Engines",
         "remarks": true
       },
       "seeding_key": {
@@ -4822,7 +4883,7 @@
       "key": "22c1c981-3be4-47df-8637-82e802417b7f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *When we ask Siri questions, it performs a specific task or gives a response based on our question or statement. But how does it know what task to perform or how to respond?*\n\n**Discussion Goal:** Students suggest that it identifies keywords in the question or statement to determine what action to perform or how it should respond. For example, if it finds the word \"weather\", then it knows it needs to respond with weather information.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *When we use search engines like Google, they use Natural Language Processing to return relevant results. How do they know what we are looking for?  How might algorithms to identify key words or phrases in our searches work?*\n\n**Discussion Goal:** Students should recognize that search engines are able to parse the text of what has been searched for in order to extract keywords or phrases. Students should offer suggestions for how a keyword or phrase is found, such as looping through each word in the search query.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4852,7 +4913,7 @@
       "key": "e3dceaae-972c-449f-9d29-ba6c7fe5fb92",
       "position": 2,
       "properties": {
-        "description": "We previously learned about the `String` class and some of its methods we can use to find the location of specific characters in a `String` object or its length. Today, we'll learn about another useful method in the `String` class that allows us to retrieve a portion of a `String`.",
+        "description": "You’ve seen `String` objects in the past. Today, we will learn about the `substring()` method in the `String` class, and how that method can be used in a variety of standard `String` algorithms. ",
         "remarks": true
       },
       "seeding_key": {
@@ -4865,7 +4926,7 @@
       "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
-        "progression_name": "Predict and Run: The substring() Method"
+        "progression_name": "Predict and Run: A Standard String Algorithm"
       },
       "seeding_key": {
         "activity_section.key": "a7c9530a-a7da-4ed0-99f9-21fdcc4bb91b",
@@ -4876,7 +4937,7 @@
       "key": "0663d22b-5794-44b5-979f-1d664efb35c7",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that there are two versions of the `substring()` method. They realize that the two-parameter version of the `substring()` method returns the characters between the specified index values and that the one-parameter version returns the characters starting at the specified index values to the end of the `String`."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students should notice that the program iterates through the characters of a `String` using a `for` loop. This should lead to a discussion about what the `String` variable `forward` looks like at the end of the loop. "
       },
       "seeding_key": {
         "activity_section.key": "0663d22b-5794-44b5-979f-1d664efb35c7",
@@ -4887,10 +4948,9 @@
       "key": "c0918877-8cfe-4de3-9eb8-2a0f6081dea7",
       "position": 5,
       "properties": {
-        "description": "When we use the `substring()` method, we can get the characters between a starting and ending index in a `String` object or from a starting index to the end of the `String` object.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is the difference between the way the substring() method is used in each line?*\n\n**Discussion Goal:** Students should recall that the substring() method can get the characters between a starting and ending index in a String object or from a starting index to the end of the String object.\n",
         "duration": "15",
-        "name": "The substring() Method",
-        "remarks": true
+        "name": "Reversing a String"
       },
       "seeding_key": {
         "activity_section.key": "c0918877-8cfe-4de3-9eb8-2a0f6081dea7",
@@ -4898,11 +4958,40 @@
       }
     },
     {
-      "key": "f7c966a9-a933-4d4b-8bf1-98221cdd88a3",
+      "key": "0248c84c-1083-4d4a-af4c-5d859ccd8e14",
       "position": 6,
       "properties": {
+        "description": "When we use the `substring()` method, we can get the characters between a starting and ending index in a `String` object or from a starting index to the end of the `String` object.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0248c84c-1083-4d4a-af4c-5d859ccd8e14",
+        "lesson_activity.key": "f79c047c-9100-4a53-a9b9-3983e178209d"
+      }
+    },
+    {
+      "key": "70a18327-7015-4ced-ab4f-d4f089b9c8b4",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n\n- *What is the purpose of the `current` variable in this code?*\n- *What happens to the `forward` variable each time the loop executes?*\n- *What modifications would you need to make to print the `palindrome` variable backward?*\n\n\n**Discussion Goal:** Students should recognize that the current variable is “looking at” a single character each time the loop iterates. This should allow them to build the forward variable piece by piece and see that the word is being “constructed”. This should lead students to speculate about how one might build the string backwards. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "In the next few Investigate and Modify levels, students will walk through, step by step, how to “construct” the palindrome backwards, so it is okay if they don’t land on the “correct” algorithm in this discussion. Instead, use this as an opportunity to celebrate critical thinking and problem solving skills, and encourage many different ideas. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "70a18327-7015-4ced-ab4f-d4f089b9c8b4",
+        "lesson_activity.key": "f79c047c-9100-4a53-a9b9-3983e178209d"
+      }
+    },
+    {
+      "key": "f7c966a9-a933-4d4b-8bf1-98221cdd88a3",
+      "position": 8,
+      "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
-        "progression_name": "Investigate and Modify: The substring() Method"
+        "progression_name": "Investigate and Modify: Reversing a String"
       },
       "seeding_key": {
         "activity_section.key": "f7c966a9-a933-4d4b-8bf1-98221cdd88a3",
@@ -4911,9 +5000,9 @@
     },
     {
       "key": "6b652d27-4858-4594-9cd9-fb6ff9d847e9",
-      "position": 7,
+      "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the one parameter `substring()` method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the two parameter `substring()` method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate using the `substring()` method to obtain a single element in a `String`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate that `String` objects are immutable and that `String` methods do not change the `String` object."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code."
       },
       "seeding_key": {
         "activity_section.key": "6b652d27-4858-4594-9cd9-fb6ff9d847e9",
@@ -4921,22 +5010,16 @@
       }
     },
     {
-      "key": "345f5975-d8f2-4082-a30d-f9361dee45ff",
-      "position": 8,
+      "key": "c87aded0-c376-4a71-8c33-d44ceadf1d96",
+      "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5 through 8. Students complete a Check for Understanding on Level 5, then continue to Level 6 to complete a choice level on Levels 6 and 7 to practice using the `substring()` method to retrieve characters between a starting and ending index and from a starting index to the end of a `String` object. On Level 8, students complete a choice level to use the `indexOf()` and `substring()` methods.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Direct students to Level 5 on Code Studio to complete Levels 5 and 6. Students complete a choice level on Level 5 to practice using the `substring()` method to find if one or more `substrings` have a particular property. On Level 6, students complete a choice level using the substring() method and conditional expressions to determine the number of substrings that meet specific criteria. \n",
         "duration": "15",
-        "name": "Using the substring() Method",
-        "progression_name": "Practice: The substring() Method",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "The Check for Understanding is an AP-style multiple choice question that can be used as a formative assessment to gauge understanding of using the `substring()` method.\n\nThe practice level can be used as a formative assessment to gauge understanding of using the `substring()` and `indexOf()` methods."
-          }
-        ]
+        "name": "Implementing String Algorithms",
+        "progression_name": "Practice: Implementing String Algorithms"
       },
       "seeding_key": {
-        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff",
+        "activity_section.key": "c87aded0-c376-4a71-8c33-d44ceadf1d96",
         "lesson_activity.key": "f79c047c-9100-4a53-a9b9-3983e178209d"
       }
     },
@@ -4944,9 +5027,8 @@
       "key": "723e55ad-64a7-4fc4-b161-28b94ab10212",
       "position": 1,
       "properties": {
-        "description": "Natural language processing often uses similar methods and techniques to identify the important parts of a phrase and decide how to respond. For our Natural Language Processing Project, we might use these methods to analyze text to determine what to do next or how we should respond to the user.",
-        "name": "Using String Methods",
-        "remarks": true
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How can the standard algorithms we learned about today be applied to search engine results to improve functionality and provide more relevant results to users?*\n\n**Discussion Goal:** Students should begin brainstorming and suggesting ideas about applying the algorithms they learned in today’s lesson in order to improve the functionality of search engine results. ",
+        "name": "Implementing String Algorithms"
       },
       "seeding_key": {
         "activity_section.key": "723e55ad-64a7-4fc4-b161-28b94ab10212",
@@ -4957,13 +5039,7 @@
       "key": "0cef5b3f-3ee2-4d60-ad35-f0e2e3743b12",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How might we use methods in the `String` class to analyze text and data in our upcoming project?*\n\n**Discussion Goal:** Students will likely have several different ideas for using these methods, such as using the `indexOf()` and `substring()` methods to break a sentence up into words or using the `indexOf()` method to check if a sentence or phrase contains specific characters and provide a response based on the result.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class.\n\nHave students consider how smart assistants like Siri or Google Assistant might use similar methods and techniques. For example:\n* *When you ask Siri about the meaning of a word, how does it know how to respond? What about when you ask it to set a timer for a certain number of minutes?*"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How might we use methods in the `String` class to analyze text and data in our upcoming project?*\n\n**Discussion Goal:** Students will likely have several different ideas for using these methods, such as using the `indexOf()` and `substring()` methods to break a sentence up into words or using the `indexOf()` method to check if a sentence or phrase contains specific characters and provide a response based on the result."
       },
       "seeding_key": {
         "activity_section.key": "0cef5b3f-3ee2-4d60-ad35-f0e2e3743b12",
@@ -4982,27 +5058,199 @@
       }
     },
     {
-      "key": "b72c95ea-01d6-4880-9fbb-ac1f7abe472b",
-      "position": 4,
+      "key": "416d1d0c-c9cc-4385-9fbd-b6bbfcd8d83d",
+      "position": 1,
       "properties": {
-        "description": "---"
+        "description": "You’ve all probably seen the hands moving on a clock, but have you ever stopped to consider how you might use a loop to simulate moving these clock hands in Java?",
+        "name": "Clock Hands",
+        "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "b72c95ea-01d6-4880-9fbb-ac1f7abe472b",
-        "lesson_activity.key": "cc53851c-af76-48ac-8c45-967351db8bf7"
+        "activity_section.key": "416d1d0c-c9cc-4385-9fbd-b6bbfcd8d83d",
+        "lesson_activity.key": "ddb691f6-7f84-490a-ac5f-6cbdcd9cc04d"
       }
     },
     {
-      "key": "24831753-a936-492a-a6ad-44b0b83f6b61",
+      "key": "1d39681e-8d4c-45ff-98fa-370a492be260",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How many times did the second hand “tick” before the minute hand “ticked”? \nHow could you use iteration statements to represent the ticking of a clock?*\n\n**Discussion Goal:** Students should recognize that two loops, one for the ticking of the minutes and one for the ticking of the seconds, would be required.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students will likely have varying comfort levels with constructing these for loops prior to the lesson. Teachers should celebrate a wide variety of ideas and not linger overlong on this warm up. This will ensure that the problem-solving and prior knowledge of some students is honored, but that all students are given the opportunity to move up to speed. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1d39681e-8d4c-45ff-98fa-370a492be260",
+        "lesson_activity.key": "ddb691f6-7f84-490a-ac5f-6cbdcd9cc04d"
+      }
+    },
+    {
+      "key": "2894a5fc-ac10-4e3a-ac3f-e42cc07587a8",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "duration": "10",
+        "name": "Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "2894a5fc-ac10-4e3a-ac3f-e42cc07587a8",
+        "lesson_activity.key": "e0189af7-daf7-47be-8ff9-2288c1e54d99"
+      }
+    },
+    {
+      "key": "12dd0a16-a578-4265-8df0-a096a8d574f8",
+      "position": 2,
+      "properties": {
+        "description": "Now that we have explored nested loops using the hands of a clock, let’s see other ways we can apply nested loops to Java programs. ",
+        "progression_name": "Predict and Run: Nested Loops",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "12dd0a16-a578-4265-8df0-a096a8d574f8",
+        "lesson_activity.key": "e0189af7-daf7-47be-8ff9-2288c1e54d99"
+      }
+    },
+    {
+      "key": "4bbf9786-5bce-490c-9b00-4f7aa5f37a14",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Click through the animated slide to display the prompts.*\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students recognize the nested loops allow them to simulate the same clock movements they explored in the warm up. They should notice the different variables used in the loop headers and discuss the roles each variable plays in the program."
+      },
+      "seeding_key": {
+        "activity_section.key": "4bbf9786-5bce-490c-9b00-4f7aa5f37a14",
+        "lesson_activity.key": "e0189af7-daf7-47be-8ff9-2288c1e54d99"
+      }
+    },
+    {
+      "key": "6ba70380-d817-4e18-957e-b370680093f7",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video - *Nested Loops.*",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the Guide to Curriculum Videos."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6ba70380-d817-4e18-957e-b370680093f7",
+        "lesson_activity.key": "e0189af7-daf7-47be-8ff9-2288c1e54d99"
+      }
+    },
+    {
+      "key": "a8f350e3-b8bf-4a2e-89c8-3fd0650311a2",
       "position": 5,
       "properties": {
-        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "description": "Nested loops are like building blocks in programming, letting us create complex patterns by repeating actions within each other. Just like laying bricks to form a wall, nested loops offer a structured approach to handling repetitive tasks. Let’s look more carefully at the syntax and logic for using nested loops. ",
+        "duration": "10",
+        "name": "Syntax and Logic",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a8f350e3-b8bf-4a2e-89c8-3fd0650311a2",
+        "lesson_activity.key": "e0189af7-daf7-47be-8ff9-2288c1e54d99"
+      }
+    },
+    {
+      "key": "ea52f335-99b1-46dc-8f2d-1a436e2d1401",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Direct students to Level 2 on Code Studio to complete Levels 2 and 3. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "progression_name": "Investigate & Modify: Nested Iteration"
+      },
+      "seeding_key": {
+        "activity_section.key": "ea52f335-99b1-46dc-8f2d-1a436e2d1401",
+        "lesson_activity.key": "e0189af7-daf7-47be-8ff9-2288c1e54d99"
+      }
+    },
+    {
+      "key": "bb975541-aedb-4e69-b136-f2f6c6051a5c",
+      "position": 7,
+      "properties": {
+        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Define nested loop and explain that when a loop is nested inside another loop, the inner loop must complete all its iterations before the outer loop can continue.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Click through the animated slide to demonstrate tracing a nested loop.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Model tracing the first two iterations of the loop, then ask students to assist in completing the rest of the trace table."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bb975541-aedb-4e69-b136-f2f6c6051a5c",
+        "lesson_activity.key": "e0189af7-daf7-47be-8ff9-2288c1e54d99"
+      }
+    },
+    {
+      "key": "9023f2b4-7105-43e4-bd8a-9c23e7bb9f16",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Have students trace the code segment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Click through the animated slide to explain the solution.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "9023f2b4-7105-43e4-bd8a-9c23e7bb9f16",
+        "lesson_activity.key": "e0189af7-daf7-47be-8ff9-2288c1e54d99"
+      }
+    },
+    {
+      "key": "9a5647bb-0714-4b81-acee-3db21eb0590a",
+      "position": 9,
+      "properties": {
+        "description": "Now we know how to handle two important parts of using nested iteration in a Java program — the syntax for the loops and the way trace tables are used to check the logic of those loops. These are both important steps in helping us use nested iteration successfully.",
+        "duration": "15",
+        "name": "Nested Iteration",
+        "progression_name": "Practice: Nested Iteration",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Check for Understanding and practice levels can be used as formative assessments to gauge understanding of tracing and writing nested loops."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9a5647bb-0714-4b81-acee-3db21eb0590a",
+        "lesson_activity.key": "e0189af7-daf7-47be-8ff9-2288c1e54d99"
+      }
+    },
+    {
+      "key": "fbbaa320-6278-433b-9541-86e86f0a89bd",
+      "position": 1,
+      "properties": {
+        "description": "Software engineers use nested loops to solve a wide variety of problems. Many of these problems use the same types of loops we wrote today. We have done a lot today to grow our programming abilities!",
+        "name": "Three W’s",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "fbbaa320-6278-433b-9541-86e86f0a89bd",
+        "lesson_activity.key": "8d15bd13-d5a9-40ab-813b-aa21151afd53"
+      }
+    },
+    {
+      "key": "9d8088da-8611-408e-9e5f-b2fcc28e4281",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Click through the animated slide to display the prompts.\n\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students highlight the concepts and syntax they learned in this lesson, such as how a nested `for` loop can be used to repeat a series of actions within other actions. They should realizedd that nested `for` loops can be used for tasks that are highly repetitive. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the question of the day\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "9d8088da-8611-408e-9e5f-b2fcc28e4281",
+        "lesson_activity.key": "8d15bd13-d5a9-40ab-813b-aa21151afd53"
+      }
+    },
+    {
+      "key": "230aaa0c-7742-473e-befd-89c35780385a",
+      "position": 3,
+      "properties": {
+        "description": "Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.\n",
         "name": "Assessment: Check for Understanding",
         "progression_name": "Check for Understanding"
       },
       "seeding_key": {
-        "activity_section.key": "24831753-a936-492a-a6ad-44b0b83f6b61",
-        "lesson_activity.key": "cc53851c-af76-48ac-8c45-967351db8bf7"
+        "activity_section.key": "230aaa0c-7742-473e-befd-89c35780385a",
+        "lesson_activity.key": "8d15bd13-d5a9-40ab-813b-aa21151afd53"
       }
     },
     {
@@ -7073,7 +7321,7 @@
         "level_keys": [
           "CSA U6L2-L1_-modular"
         ],
-        "progression": "Predict and Run: The substring() Method"
+        "progression": "Predict and Run: A Standard String Algorithm"
       },
       "bonus": false,
       "seeding_key": {
@@ -7098,7 +7346,7 @@
         "level_keys": [
           "CSA U6L2-L2_-modular"
         ],
-        "progression": "Investigate and Modify: The substring() Method"
+        "progression": "Investigate and Modify: Reversing a String"
       },
       "bonus": false,
       "seeding_key": {
@@ -7123,7 +7371,7 @@
         "level_keys": [
           "CSA U6L2-L3_-modular"
         ],
-        "progression": "Investigate and Modify: The substring() Method"
+        "progression": "Investigate and Modify: Reversing a String"
       },
       "bonus": false,
       "seeding_key": {
@@ -7148,7 +7396,7 @@
         "level_keys": [
           "CSA U6L2-L4_-modular"
         ],
-        "progression": "Investigate and Modify: The substring() Method"
+        "progression": "Investigate and Modify: Reversing a String"
       },
       "bonus": false,
       "seeding_key": {
@@ -7167,38 +7415,13 @@
     {
       "chapter": 86,
       "position": 5,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "CSA U6L2-L5_-modular"
-        ],
-        "progression": "Practice: The substring() Method"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U6L2-L5_-modular"
-        ],
-        "lesson.key": "Substrings",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa2-2025",
-        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff"
-      },
-      "level_keys": [
-        "CSA U6L2-L5_-modular"
-      ]
-    },
-    {
-      "chapter": 87,
-      "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSA U6L2-L6_-modular"
         ],
-        "progression": "Practice: The substring() Method"
+        "progression": "Practice: Implementing String Algorithms"
       },
       "bonus": false,
       "seeding_key": {
@@ -7208,64 +7431,164 @@
         "lesson.key": "Substrings",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa2-2025",
-        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff"
+        "activity_section.key": "c87aded0-c376-4a71-8c33-d44ceadf1d96"
       },
       "level_keys": [
         "CSA U6L2-L6_-modular"
       ]
     },
     {
-      "chapter": 88,
-      "position": 7,
-      "activity_section_position": 3,
+      "chapter": 87,
+      "position": 1,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSA U6L2-L7_-modular"
+          "CSA U2 Nested Iteration-L1 _2025"
         ],
-        "progression": "Practice: The substring() Method"
+        "progression": "Predict and Run: Nested Loops"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U6L2-L7_-modular"
+          "CSA U2 Nested Iteration-L1 _2025"
         ],
-        "lesson.key": "Substrings",
+        "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa2-2025",
-        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff"
+        "activity_section.key": "12dd0a16-a578-4265-8df0-a096a8d574f8"
       },
       "level_keys": [
-        "CSA U6L2-L7_-modular"
+        "CSA U2 Nested Iteration-L1 _2025"
+      ]
+    },
+    {
+      "chapter": 88,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U2 Nested Iteration-L2_2025"
+        ],
+        "progression": "Investigate & Modify: Nested Iteration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2 Nested Iteration-L2_2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025",
+        "activity_section.key": "ea52f335-99b1-46dc-8f2d-1a436e2d1401"
+      },
+      "level_keys": [
+        "CSA U2 Nested Iteration-L2_2025"
       ]
     },
     {
       "chapter": 89,
-      "position": 8,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U2 Nested Iteration-L3_2025"
+        ],
+        "progression": "Investigate & Modify: Nested Iteration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2 Nested Iteration-L3_2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025",
+        "activity_section.key": "ea52f335-99b1-46dc-8f2d-1a436e2d1401"
+      },
+      "level_keys": [
+        "CSA U2 Nested Iteration-L3_2025"
+      ]
+    },
+    {
+      "chapter": 90,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
-          "CSA U6L2-L9_-modular"
+          "CSA U2L-NestedIteration_L4_2025"
+        ],
+        "progression": "Practice: Nested Iteration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L-NestedIteration_L4_2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025",
+        "activity_section.key": "9a5647bb-0714-4b81-acee-3db21eb0590a"
+      },
+      "level_keys": [
+        "CSA U2L-NestedIteration_L4_2025"
+      ]
+    },
+    {
+      "chapter": 91,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U2 Nested Iteration-L5_2025"
+        ],
+        "progression": "Practice: Nested Iteration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2 Nested Iteration-L5_2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025",
+        "activity_section.key": "9a5647bb-0714-4b81-acee-3db21eb0590a"
+      },
+      "level_keys": [
+        "CSA U2 Nested Iteration-L5_2025"
+      ]
+    },
+    {
+      "chapter": 92,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U2L-NestedIteration_L6_2025"
         ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U6L2-L9_-modular"
+          "CSA U2L-NestedIteration_L6_2025"
         ],
-        "lesson.key": "Substrings",
+        "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa2-2025",
-        "activity_section.key": "24831753-a936-492a-a6ad-44b0b83f6b61"
+        "activity_section.key": "230aaa0c-7742-473e-befd-89c35780385a"
       },
       "level_keys": [
-        "CSA U6L2-L9_-modular"
+        "CSA U2L-NestedIteration_L6_2025"
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 93,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7289,7 +7612,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 94,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7314,7 +7637,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 95,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8362,18 +8685,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U6L2-L5_-modular",
-        "script_level.level_keys": [
-          "CSA U6L2-L5_-modular"
-        ],
-        "lesson.key": "Substrings",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa2-2025",
-        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "CSA U6L2-L6_-modular",
         "script_level.level_keys": [
           "CSA U6L2-L6_-modular"
@@ -8381,31 +8692,79 @@
         "lesson.key": "Substrings",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa2-2025",
-        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff"
+        "activity_section.key": "c87aded0-c376-4a71-8c33-d44ceadf1d96"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSA U6L2-L7_-modular",
+        "level.key": "CSA U2 Nested Iteration-L1 _2025",
         "script_level.level_keys": [
-          "CSA U6L2-L7_-modular"
+          "CSA U2 Nested Iteration-L1 _2025"
         ],
-        "lesson.key": "Substrings",
+        "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa2-2025",
-        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff"
+        "activity_section.key": "12dd0a16-a578-4265-8df0-a096a8d574f8"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSA U6L2-L9_-modular",
+        "level.key": "CSA U2 Nested Iteration-L2_2025",
         "script_level.level_keys": [
-          "CSA U6L2-L9_-modular"
+          "CSA U2 Nested Iteration-L2_2025"
         ],
-        "lesson.key": "Substrings",
+        "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa2-2025",
-        "activity_section.key": "24831753-a936-492a-a6ad-44b0b83f6b61"
+        "activity_section.key": "ea52f335-99b1-46dc-8f2d-1a436e2d1401"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2 Nested Iteration-L3_2025",
+        "script_level.level_keys": [
+          "CSA U2 Nested Iteration-L3_2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025",
+        "activity_section.key": "ea52f335-99b1-46dc-8f2d-1a436e2d1401"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L-NestedIteration_L4_2025",
+        "script_level.level_keys": [
+          "CSA U2L-NestedIteration_L4_2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025",
+        "activity_section.key": "9a5647bb-0714-4b81-acee-3db21eb0590a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2 Nested Iteration-L5_2025",
+        "script_level.level_keys": [
+          "CSA U2 Nested Iteration-L5_2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025",
+        "activity_section.key": "9a5647bb-0714-4b81-acee-3db21eb0590a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L-NestedIteration_L6_2025",
+        "script_level.level_keys": [
+          "CSA U2L-NestedIteration_L6_2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025",
+        "activity_section.key": "230aaa0c-7742-473e-befd-89c35780385a"
       }
     },
     {
@@ -8446,6 +8805,42 @@
     }
   ],
   "resources": [
+    {
+      "name": "[EXEMPLAR] CSA Implementing String Algorithms Extra Practice",
+      "url": "https://docs.google.com/document/d/10UB1f08trGZmaZ4jE9gMsUvfV8960mxKcaG_03QZ-ao/edit?usp=sharing",
+      "key": "_exemplar_csa_implementing_string_algorithms_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_csa_implementing_string_algorithms_extra_practice"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] Guided Notes: Implementing String Algorithms",
+      "url": "https://docs.google.com/document/d/1bSS-wlPQH-KxpIVm1lrfpP9o6VqDQvDJ2W2xZGS5RvM/edit?usp=sharing",
+      "key": "_exemplar_guided_notes_implementing_string_algorithms",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_guided_notes_implementing_string_algorithms"
+      }
+    },
+    {
+      "name": "[Exemplar] Nested Iteration Guided Notes",
+      "url": "https://docs.google.com/document/d/1cTpq3R5lUfFd0XgBECZUxVsc03GVuMdrXFFCnez_ZQo/edit?usp=drive_link",
+      "key": "_exemplar_nested_iteration_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_nested_iteration_guided_notes"
+      }
+    },
     {
       "name": "[EXEMPLAR] Store Management Project Planning Guide",
       "url": "https://docs.google.com/document/d/1_QJOqx8_GlvSo30yUv8AeJOU3v8SJhUAOUv5_zPcSrQ/edit?usp=sharing",
@@ -8588,18 +8983,6 @@
       },
       "seeding_key": {
         "resource.key": "_exemplar_u2l9_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] U6L2 Guided Notes",
-      "url": "https://docs.google.com/document/d/1xVs_eiJcMO5qV60HmZ2_36wrFJ8C7ZpOMxsJDszkOEo/edit?usp=sharing",
-      "key": "_exemplar_u6l2_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u6l2_guided_notes"
       }
     },
     {
@@ -8768,18 +9151,6 @@
       },
       "seeding_key": {
         "resource.key": "_key_u2l9_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U6L2 Extra Practice",
-      "url": "https://docs.google.com/document/d/1IFS1PvC5jeLrIASoDm2--K6lxiHwrCrKk5SzwmeKrY8/edit?usp=share_link",
-      "key": "_key_u6l2_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u6l2_extra_practice"
       }
     },
     {
@@ -8976,6 +9347,18 @@
       }
     },
     {
+      "name": "CSA Implementing String Algorithms Extra Practice",
+      "url": "https://docs.google.com/document/d/18whzRMSzGaTc_y_zAwJGtaVW9FNI9zL5NA-yKa0C03k/edit?usp=sharing",
+      "key": "csa_implementing_string_algorithms_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "csa_implementing_string_algorithms_extra_practice"
+      }
+    },
+    {
       "name": "CSA Unit 2 Slides",
       "url": "https://docs.google.com/presentation/d/1nhCPN0RoHtQMdQ0jgJndUrMPejom-2w5vhGbVFTf3i8/edit?usp=sharing",
       "key": "csa_unit_2_slides",
@@ -9021,6 +9404,30 @@
       },
       "seeding_key": {
         "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "name": "Guided Notes: Implementing String Algorithms",
+      "url": "https://docs.google.com/document/d/1SA4P-qcqKoZAV2nnSFITKF18Y3PL9M-WnTcUBFf2IxM/edit?usp=sharing",
+      "key": "guided_notes_implementing_string_algorithms",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "guided_notes_implementing_string_algorithms"
+      }
+    },
+    {
+      "name": "Implementing String Algorithms",
+      "url": "https://docs.google.com/presentation/d/1_prRAs3i5cr5t0AxPGRFJP9Ps6eZbeuT6PetgfqSmx4/edit?usp=sharing",
+      "key": "implementing_string_algorithms",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "implementing_string_algorithms"
       }
     },
     {
@@ -9070,6 +9477,42 @@
       },
       "seeding_key": {
         "resource.key": "mutator_methods_1"
+      }
+    },
+    {
+      "name": "Nested Iteration",
+      "url": "https://docs.google.com/presentation/d/1rhcMwM5-4IHiS-hJY2Ah-5AtwKBBB4DZsug--KmReh0/edit#slide=id.gca418c6afa_0_1070",
+      "key": "nested_iteration",
+      "properties": {
+        "audience": "Student",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "nested_iteration"
+      }
+    },
+    {
+      "name": "Nested Iteration Guided Notes",
+      "url": "https://docs.google.com/document/d/1A0gRMtYFIwERoZZWm10ijQYm5Sw3_GnRen5C5608uRw/edit?usp=drive_link",
+      "key": "nested_iteration_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "nested_iteration_guided_notes"
+      }
+    },
+    {
+      "name": "Nested Loops",
+      "url": "https://youtu.be/xFJoqfqVEbg",
+      "key": "nested_loops",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "nested_loops"
       }
     },
     {
@@ -9191,18 +9634,6 @@
       },
       "seeding_key": {
         "resource.key": "store_management_project_planning_guide_1"
-      }
-    },
-    {
-      "name": "Substrings",
-      "url": "https://docs.google.com/presentation/d/1IPi8lcAecPmMUhj4Y8BjySTZl9FFah7wv-jDb5rx7MM/edit?usp=sharing",
-      "key": "substrings",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "substrings"
       }
     },
     {
@@ -9499,32 +9930,6 @@
       },
       "seeding_key": {
         "resource.key": "u2l9_guided_notes"
-      }
-    },
-    {
-      "name": "U6L2 Extra Practice",
-      "url": "https://docs.google.com/document/d/1S8npMPq0suee4tC4pFBKBplmDv3j_yhL5qalzTIEu4U/edit?usp=share_link",
-      "key": "u6l2_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u6l2_extra_practice"
-      }
-    },
-    {
-      "name": "U6L2 Guided Notes",
-      "url": "https://docs.google.com/document/d/1PWIxX6EeYsAPyd4mIKYxJWDvct5xFdJy7vCnJ0eTWpg/edit?usp=sharing",
-      "key": "u6l2_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u6l2_guided_notes"
       }
     },
     {
@@ -10026,13 +10431,19 @@
     {
       "seeding_key": {
         "lesson.key": "Substrings",
-        "resource.key": "_exemplar_u6l2_guided_notes"
+        "resource.key": "_exemplar_csa_implementing_string_algorithms_extra_practice"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Substrings",
-        "resource.key": "_key_u6l2_extra_practice"
+        "resource.key": "_exemplar_guided_notes_implementing_string_algorithms"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Substrings",
+        "resource.key": "csa_implementing_string_algorithms_extra_practice"
       }
     },
     {
@@ -10044,19 +10455,13 @@
     {
       "seeding_key": {
         "lesson.key": "Substrings",
-        "resource.key": "substrings"
+        "resource.key": "guided_notes_implementing_string_algorithms"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Substrings",
-        "resource.key": "u6l2_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Substrings",
-        "resource.key": "u6l2_guided_notes"
+        "resource.key": "implementing_string_algorithms"
       }
     },
     {
@@ -10171,6 +10576,30 @@
       "seeding_key": {
         "lesson.key": "Variables",
         "resource.key": "variables"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "_exemplar_nested_iteration_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "nested_iteration"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "nested_iteration_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "nested_loops"
       }
     }
   ],
@@ -10474,6 +10903,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "mutator_method"
+      }
+    },
+    {
+      "key": "nested_loop",
+      "word": "nested loop",
+      "definition": "a loop inside of another loop",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "nested_loop"
       }
     },
     {
@@ -10823,6 +11262,12 @@
         "lesson.key": "Variables",
         "vocabulary.key": "reference_type"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "nested_loop"
+      }
     }
   ],
   "lessons_programming_expressions": [
@@ -10870,6 +11315,16 @@
       }
     },
     {
+      "key": "12195f70-3588-4cdd-90cc-2bfc4470eac1",
+      "properties": {
+        "description": "Explore the functionality of nested loops"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "12195f70-3588-4cdd-90cc-2bfc4470eac1"
+      }
+    },
+    {
       "key": "19796383-31e1-43e1-bdf3-2ee511ecbe93",
       "properties": {
         "description": "Write a `toString()` method to display information about the state of an object to the console"
@@ -10900,6 +11355,16 @@
       }
     },
     {
+      "key": "20b6b9a0-7b30-4ec1-8a0a-8aa272f58381",
+      "properties": {
+        "description": "Trace nested loops in order to determine what will be output"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "20b6b9a0-7b30-4ec1-8a0a-8aa272f58381"
+      }
+    },
+    {
       "key": "2ab1bfc7-6bdb-4cc5-bd39-c6ac53f0fb39",
       "properties": {
         "description": "Write a parameterized constructor to specify formal parameters"
@@ -10917,6 +11382,16 @@
       "seeding_key": {
         "lesson.key": "Constructors and Inheritance",
         "objective.key": "2ff24dc0-ef4a-485e-87dc-de7f1108b699"
+      }
+    },
+    {
+      "key": "38b5abcf-d4f3-4ff7-9144-55a20d00d9e4",
+      "properties": {
+        "description": "Modify loop control variables in nested loops to produce different output"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "38b5abcf-d4f3-4ff7-9144-55a20d00d9e4"
       }
     },
     {
@@ -11062,7 +11537,7 @@
     {
       "key": "ccb219a4-4d3f-433d-a286-59c742172009",
       "properties": {
-        "description": "Use the `indexOf()` and `substring()` methods in the `String` class to find and replace specific characters"
+        "description": "use `String` methods in order to check for a certain criteria in a `String` object "
       },
       "seeding_key": {
         "lesson.key": "Substrings",
@@ -11077,6 +11552,16 @@
       "seeding_key": {
         "lesson.key": "Operators and Expressions",
         "objective.key": "dd0584e0-07c6-43c7-a9d9-565737f1a37a"
+      }
+    },
+    {
+      "key": "de5e939e-e00c-4a3b-880a-ff48ef929065",
+      "properties": {
+        "description": "process and return a reversed version of a `String` object"
+      },
+      "seeding_key": {
+        "lesson.key": "Substrings",
+        "objective.key": "de5e939e-e00c-4a3b-880a-ff48ef929065"
       }
     },
     {
@@ -11102,7 +11587,7 @@
     {
       "key": "ed95d1a4-cc01-4678-9d6a-ed682f6e3d7d",
       "properties": {
-        "description": "Use the `substring()` method in the `String` class to retrieve a substring of a `String` object"
+        "description": "create algorithms to count how many `String` objects meet a certain criteria"
       },
       "seeding_key": {
         "lesson.key": "Substrings",

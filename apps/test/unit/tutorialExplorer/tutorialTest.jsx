@@ -1,10 +1,12 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../util/reconfiguredChai';
-import Tutorial from '@cdo/apps/tutorialExplorer/tutorial';
-import Image from '@cdo/apps/tutorialExplorer/image';
 import LazyLoad from 'react-lazy-load';
 import sinon from 'sinon';
+
+import Image from '@cdo/apps/tutorialExplorer/image';
+import Tutorial from '@cdo/apps/tutorialExplorer/tutorial';
+
+import {expect} from '../../util/reconfiguredChai';
 
 const CALLBACK = () => {};
 const FAKE_TUTORIAL = {

@@ -1,7 +1,9 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+
 import StandardsReportHeader from '@cdo/apps/templates/sectionProgress/standards/StandardsReportHeader';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('StandardsReportHeader', () => {
   let DEFAULT_PROPS;

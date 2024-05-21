@@ -1,5 +1,6 @@
 import _ from 'lodash';
-import {FeaturedProjectStatus} from '@cdo/apps/util/sharedConstants';
+
+import {FeaturedProjectStatus} from '@cdo/generated-scripts/sharedConstants';
 
 // Generate n fake personal projects for the project widget.
 // updatedAt data is normally a timestamp, but for storybook
@@ -20,6 +21,7 @@ export const stubFakePersonalProjectData = [
     type: 'gamelab',
     channel: 'abcd1',
     publishedAt: '2015-12-31T23:59:59.999-08:00',
+    frozen: true,
   },
   {
     name: 'Personal Project 2',

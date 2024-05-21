@@ -1,8 +1,9 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {expect} from '../../../util/reconfiguredChai';
-import {shallow} from 'enzyme';
+
 import EvidenceLevels from '@cdo/apps/templates/rubrics/EvidenceLevels';
-import experiments from '@cdo/apps/util/experiments';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   evidenceLevels: [
@@ -33,7 +34,6 @@ describe('EvidenceLevels', () => {
   });
 
   it('renders teachers view of evidence levels when the user can provide feedback', () => {
-    experiments.setEnabled('ai-rubrics-redesign', true);
     const wrapper = shallow(
       <EvidenceLevels {...DEFAULT_PROPS} canProvideFeedback={true} />
     );
@@ -41,7 +41,6 @@ describe('EvidenceLevels', () => {
     expect(
       wrapper.find('EvidenceLevelsForTeachersV2').props().canProvideFeedback
     ).to.equal(true);
-    experiments.setEnabled('ai-rubrics-redesign', false);
   });
 
   it('renders student view of evidence levels when student is viewing the rubric', () => {

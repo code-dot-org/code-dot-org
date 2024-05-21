@@ -1,0 +1,29 @@
+name 'SP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5PLPL'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Variables as Score
+
+##### So far, you have learned about players, background, and behaviors. In this lesson, you will learn how to use variables in game design. 
+
+
+<img src="https://images.code.org/1cd0ec71458414495502b9598efd2028-image-1639773441510.37.01 PM.png" alt="Image of AI bot and a model card" style="border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;">
+
+
+## In this lesson, you will:
+
+* ##### Learn about how variables can be used in games. 
+* ##### Practice using variables.
+* ##### Create programs using variables.
+
+
+### **Suggested time:** ??? minutes
+
+
+## Let's get started!
+
+<div style="clear:both"/>
+
+
+MARKDOWN

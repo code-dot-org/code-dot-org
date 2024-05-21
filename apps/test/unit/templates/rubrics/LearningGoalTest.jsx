@@ -1,11 +1,13 @@
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {expect} from '../../../util/reconfiguredChai';
-import {shallow, mount} from 'enzyme';
 import sinon from 'sinon';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import LearningGoal from '@cdo/apps/templates/rubrics/LearningGoal';
+import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('LearningGoal', () => {
   const studentLevelInfo = {name: 'Grace Hopper', timeSpent: 706};
@@ -44,7 +46,7 @@ describe('LearningGoal', () => {
           id: 2,
           learning_goal_id: 2,
           understanding: 2,
-          ai_confidence: 2,
+          aiConfidencePassFail: 2,
         }}
       />
     );

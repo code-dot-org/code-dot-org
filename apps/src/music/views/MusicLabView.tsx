@@ -17,6 +17,11 @@ import Controls from './Controls';
 import Timeline from './Timeline';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import usePlaybackUpdate from './hooks/usePlaybackUpdate';
+import MusicPlayer from '../player/MusicPlayer';
+import useUpdatePlayer from './hooks/useUpdatePlayer';
+import AdvancedControls from './AdvancedControls';
+import PackDialog from './PackDialog';
+import MusicPlayView from './MusicPlayView';
 
 interface MusicLabViewProps {
   blocklyDivId: string;
@@ -29,6 +34,8 @@ interface MusicLabViewProps {
   redo: () => void;
   clearCode: () => void;
   validator: MusicValidator;
+  player: MusicPlayer;
+  allowPackSelection: boolean;
 }
 
 const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
@@ -42,7 +49,10 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   redo,
   clearCode,
   validator,
+  player,
+  allowPackSelection,
 }) => {
+  useUpdatePlayer(player);
   const dispatch = useAppDispatch();
   const showInstructions = useAppSelector(
     state => state.music.showInstructions
@@ -53,6 +63,8 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const timelineAtTop = useAppSelector(state => state.music.timelineAtTop);
   const hideHeaders = useAppSelector(state => state.music.hideHeaders);
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+  const skipUrl = useAppSelector(state => state.lab.levelProperties?.skipUrl);
+  const isPlayView = useAppSelector(state => state.lab.isShareView);
 
   const progressManager = useContext(ProgressManagerContext);
 
@@ -102,7 +114,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
         >
           <PanelContainer
             id="instructions-panel"
-            headerText={musicI18n.panelHeaderInstructions()}
+            headerContent={musicI18n.panelHeaderInstructions()}
             hideHeaders={hideHeaders}
           >
             <Instructions
@@ -136,7 +148,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
           <div id="controls-area" className={moduleStyles.controlsArea}>
             <PanelContainer
               id="controls-panel"
-              headerText={musicI18n.panelHeaderControls()}
+              headerContent={musicI18n.panelHeaderControls()}
               hideHeaders={hideHeaders}
             >
               <Controls
@@ -150,10 +162,14 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
             </PanelContainer>
           </div>
 
-          <div id="timeline-area" className={moduleStyles.timelineArea}>
+          <div
+            dir="ltr"
+            id="timeline-area"
+            className={moduleStyles.timelineArea}
+          >
             <PanelContainer
               id="timeline-panel"
-              headerText={musicI18n.panelHeaderTimeline()}
+              headerContent={musicI18n.panelHeaderTimeline()}
               hideHeaders={hideHeaders}
             >
               <Timeline />
@@ -165,8 +181,18 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     [setPlaying, playTrigger, hasTrigger, hideHeaders]
   );
 
+  const showAdvancedControls =
+    AppConfig.getValue('player') === 'tonejs' &&
+    AppConfig.getValue('advanced-controls-enabled') === 'true';
+
+  if (isPlayView) {
+    return <MusicPlayView setPlaying={setPlaying} />;
+  }
+
   return (
     <div id="music-lab" className={moduleStyles.musicLab}>
+      {allowPackSelection && <PackDialog player={player} />}
+
       {showInstructions &&
         instructionsPosition === InstructionsPosition.TOP &&
         renderInstructions(InstructionsPosition.TOP)}
@@ -181,17 +207,24 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
         <div id="blockly-area" className={moduleStyles.blocklyArea}>
           <PanelContainer
             id="workspace-panel"
-            headerText={musicI18n.panelHeaderWorkspace()}
+            headerContent={musicI18n.panelHeaderWorkspace()}
             hideHeaders={hideHeaders}
             rightHeaderContent={
               <HeaderButtons
                 onClickUndo={undo}
                 onClickRedo={redo}
                 clearCode={clearCode}
+                allowPackSelection={allowPackSelection}
+                skipUrl={skipUrl}
               />
             }
           >
             <div id={blocklyDivId} />
+            {showAdvancedControls && (
+              <div className={moduleStyles.advancedControlsContainer}>
+                <AdvancedControls />
+              </div>
+            )}
           </PanelContainer>
         </div>
 

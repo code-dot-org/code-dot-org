@@ -1,21 +1,23 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import _ from 'lodash';
 import React from 'react';
-import {shallow} from 'enzyme';
-import {assert, expect} from '../../../util/reconfiguredChai';
-import {UnconnectedLessonOverview as LessonOverview} from '@cdo/apps/templates/lessonOverview/LessonOverview';
-import {sampleActivities} from '../../lib/levelbuilder/lesson-editor/activitiesTestData';
+import sinon from 'sinon';
+
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
+import {UnconnectedLessonOverview as LessonOverview} from '@cdo/apps/templates/lessonOverview/LessonOverview';
+
+import {assert, expect} from '../../../util/reconfiguredChai';
 import {
   fakeStudentAnnouncement,
   fakeTeacherAndStudentAnnouncement,
   fakeTeacherAnnouncement,
 } from '../../code-studio/components/progress/FakeAnnouncementsTestData';
-import _ from 'lodash';
-import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
-import sinon from 'sinon';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {sampleActivities} from '../../lib/levelbuilder/lesson-editor/activitiesTestData';
 
 describe('LessonOverview', () => {
   let defaultProps;

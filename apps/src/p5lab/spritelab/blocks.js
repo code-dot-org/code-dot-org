@@ -197,7 +197,7 @@ const customInputTypes = {
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(
-          new Blockly.FieldImageDropdown(costumeList, 32, 32, buttons),
+          new Blockly.FieldAnimationDropdown(costumeList, 32, 32, buttons),
           inputConfig.name
         );
     },
@@ -226,7 +226,7 @@ const customInputTypes = {
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(
-          new Blockly.FieldImageDropdown(backgroundList, 40, 40, buttons),
+          new Blockly.FieldAnimationDropdown(backgroundList, 40, 40, buttons),
           inputConfig.name
         );
     },
@@ -333,7 +333,7 @@ const customInputTypes = {
   },
   behaviorPicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
-      const dropdownField = new Blockly.FieldDropdown(
+      const dropdownField = new Blockly.FieldBehaviorPicker(
         Blockly.customBlocks.getAllBehaviorOptions
       );
       currentInputRow
@@ -434,6 +434,8 @@ const customInputTypes = {
       const config = {
         height: 8,
         width: 8,
+        fieldHeight: 42,
+        buttons: {randomize: false},
       };
       currentInputRow
         .appendField(inputConfig.label)

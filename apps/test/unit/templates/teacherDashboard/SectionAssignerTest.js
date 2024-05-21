@@ -1,8 +1,10 @@
+import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount, shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+
 import {UnconnectedSectionAssigner as SectionAssigner} from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
 import {fakeTeacherSectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/sectionAssignmentTestHelper';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('SectionAssigner', () => {
   // const store = createStore(combineReducers())

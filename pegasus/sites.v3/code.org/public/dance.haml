@@ -20,7 +20,7 @@ theme: responsive_full_width
 %section.hero-banner-basic.overlay
   .wrapper.flex-container.justify-space-between.align-items-center.wrap
     .text-wrapper
-      %h1{style: "color: white"}
+      %h1.white
         =hoc_s(:dance_hero_heading)
     %figure
       %img{src: "/images/dance-hoc/dance-party-characters-banner.png", alt: ""}
@@ -28,7 +28,7 @@ theme: responsive_full_width
 %section.bg-neutral-light
   .wrapper.centered
     %h2=hoc_s(:dance_featuring_songs_by_short)
-    = view :"dance/featured_artists"
+    = view :"dance/dance_party_featured_artists"
 
 %section
   .wrapper

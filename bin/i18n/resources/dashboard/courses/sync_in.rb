@@ -18,9 +18,7 @@ module I18n
             redact
           end
 
-          private
-
-          def resources_i18n_data
+          private def resources_i18n_data
             Dir.glob(CDO.dir('dashboard/config/courses/*.course')).each_with_object({}) do |file_path, i18n_data|
               course_data = JSON.load_file(file_path)
               next if course_data['resources'].nil? || course_data['resources'].empty?
@@ -48,7 +46,7 @@ module I18n
           # https://studio.code.org/courses/csd-2021
           # All other resources used in Unit come from scrip_json files (used in the landing pages for each Unit).
           # https://studio.code.org/s/csd1-2021
-          def prepare
+          private def prepare
             i18n_data = YAML.load_file(ORIGIN_I18N_FILE_PATH)
 
             courses_data = i18n_data.dig('en', 'data')
@@ -58,13 +56,13 @@ module I18n
             I18nScriptUtils.write_file(I18N_SOURCE_FILE_PATH, I18nScriptUtils.to_crowdin_yaml(i18n_data))
           end
 
-          def redact
+          private def redact
             # Save the original data, for restoration
             I18nScriptUtils.copy_file(I18N_SOURCE_FILE_PATH, I18N_BACKUP_FILE_PATH)
 
             i18n_data = YAML.load_file(I18N_SOURCE_FILE_PATH)
             # Redact the specific subset of fields within each script that we care about.
-            i18n_data.dig('en', 'data', 'course', 'name').values.each do |course_data|
+            i18n_data.dig('en', 'data', 'course', 'name').each_value do |course_data|
               markdown_data = course_data.slice('description', 'student_description', 'description_student', 'description_teacher')
               redacted_data = RedactRestoreUtils.redact_data(markdown_data, REDACT_PLUGINS, REDACT_FORMAT)
               course_data.merge!(redacted_data)

@@ -1,9 +1,11 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/deprecatedChai';
-import {UnconnectedManageStudentsSharingCell as ManageStudentsSharingCell} from '@cdo/apps/templates/manageStudents/ManageStudentsSharingCell';
 import {Checkbox} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {UnconnectedManageStudentsSharingCell as ManageStudentsSharingCell} from '@cdo/apps/templates/manageStudents/ManageStudentsSharingCell';
+
+import {expect} from '../../../util/deprecatedChai';
 
 describe('ManageStudentsSharingCell', () => {
   it('renders a checked Checkbox if editing and can share', () => {

@@ -1,10 +1,12 @@
-import {expect} from '../../../util/reconfiguredChai';
-import sinon from 'sinon';
 import _ from 'lodash';
+import sinon from 'sinon';
+
+import * as redux from '@cdo/apps/redux';
+import * as progressHelpers from '@cdo/apps/templates/progress/progressHelpers';
 import {loadUnitProgress} from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
 import * as sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import * as progressHelpers from '@cdo/apps/templates/progress/progressHelpers';
-import * as redux from '@cdo/apps/redux';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const serverScriptResponse = {
   csf: true,
@@ -152,6 +154,7 @@ const fullExpectedResult = {
           timeSpent: undefined,
           teacherFeedbackReviewState: undefined,
           teacherFeedbackNew: false,
+          teacherFeedbackCommented: false,
           lastTimestamp: 12345,
         },
         2001: {
@@ -163,6 +166,7 @@ const fullExpectedResult = {
           timeSpent: 12345,
           teacherFeedbackReviewState: undefined,
           teacherFeedbackNew: false,
+          teacherFeedbackCommented: false,
           lastTimestamp: 12345,
         },
       },
@@ -176,6 +180,7 @@ const fullExpectedResult = {
           timeSpent: 6789,
           teacherFeedbackReviewState: undefined,
           teacherFeedbackNew: false,
+          teacherFeedbackCommented: false,
           lastTimestamp: 6789,
         },
       },

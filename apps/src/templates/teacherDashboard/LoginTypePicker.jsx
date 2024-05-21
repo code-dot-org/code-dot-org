@@ -7,18 +7,22 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
-import {Heading3} from '../../lib/ui/Headings';
+
 import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
-import CardContainer from './CardContainer';
-import LoginTypeCard from './LoginTypeCard';
-import Button from '../Button';
+import fontConstants from '@cdo/apps/fontConstants';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
-import styleConstants from '../../styleConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {getStore} from '@cdo/apps/redux';
 import color from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
-import fontConstants from '@cdo/apps/fontConstants';
+import i18n from '@cdo/locale';
+
+import {Heading3} from '../../lib/ui/Headings';
+import styleConstants from '../../styleConstants';
+import Button from '../Button';
+
+import CardContainer from './CardContainer';
+import LoginTypeCard from './LoginTypeCard';
 
 const LOGIN_TYPE_SELECTED_EVENT = 'Login Type Selected';
 const CANCELLED_EVENT = 'Section Setup Cancelled';
@@ -85,6 +89,13 @@ class LoginTypePicker extends Component {
     const withClever =
       providers && providers.includes(OAuthSectionTypes.clever);
     const hasThirdParty = withGoogle | withMicrosoft | withClever;
+    const currentUser = getStore().getState().currentUser;
+    const inUSA =
+      ['US', 'RD'].includes(currentUser.countryCode) ||
+      !!currentUser.usStateCode;
+    const showStudentsToSectionPermissionWarning =
+      (inUSA && currentUser.isTeacher) ||
+      experiments.isEnabledAllowingQueryString(experiments.CPA_EXPERIENCE);
 
     const style = {
       container: {
@@ -134,9 +145,7 @@ class LoginTypePicker extends Component {
       <div style={style.container}>
         <Heading3 isRebranded>{title}</Heading3>
         <p>{i18n.addStudentsToSectionInstructionsUpdated()}</p>
-        {experiments.isEnabledAllowingQueryString(
-          experiments.CPA_EXPERIENCE
-        ) && (
+        {showStudentsToSectionPermissionWarning && (
           <p>
             <span
               className="fa fa-exclamation-triangle"
@@ -195,7 +204,7 @@ class LoginTypePicker extends Component {
           <p style={{...style.mediumText, ...style.emailPolicyNote}}>
             {i18n.note()}
             {' ' + i18n.emailAddressPolicy() + ' '}
-            <a href="https://code.org/privacy">]{i18n.moreInfo()}</a>
+            <a href="https://code.org/privacy">{i18n.moreInfo()}</a>
           </p>
           <Button
             onClick={this.cancel}

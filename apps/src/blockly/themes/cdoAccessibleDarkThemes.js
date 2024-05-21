@@ -1,5 +1,7 @@
 import GoogleBlockly from 'blockly/core';
+
 import {Themes} from '../constants';
+
 import {
   deuteranopiaBlockStyles,
   protanopiaBlockStyles,

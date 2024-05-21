@@ -1,7 +1,14 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
-import {MIN_NUM_MEASURES} from '../constants';
+import {
+  DEFAULT_BPM,
+  DEFAULT_KEY,
+  MAX_BPM,
+  MIN_BPM,
+  MIN_NUM_MEASURES,
+} from '../constants';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 import {FunctionEvents} from '../player/interfaces/FunctionEvents';
+import {Key} from '../utils/Notes';
 
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 
@@ -16,6 +23,10 @@ export enum InstructionsPosition {
 }
 
 export interface MusicState {
+  /** Current music library name */
+  libraryName: string | null;
+  /** Current pack ID, if a specific restricted pack from the current music library is selected */
+  packId: string | null;
   /** If the song is currently playing */
   isPlaying: boolean;
   /** The current 1-based playhead position, scaled to measures */
@@ -55,9 +66,18 @@ export interface MusicState {
     id?: string;
     index: number;
   };
+
+  // State used by advanced controls (currently internal-only) with the ToneJS player
+  loopEnabled: boolean;
+  loopStart: number;
+  loopEnd: number;
+  key: Key;
+  bpm: number;
 }
 
 const initialState: MusicState = {
+  libraryName: null,
+  packId: null,
   isPlaying: false,
   currentPlayheadPosition: 0,
   selectedBlockId: undefined,
@@ -81,12 +101,23 @@ const initialState: MusicState = {
     id: undefined,
     index: 0,
   },
+  loopEnabled: false,
+  loopStart: 1,
+  loopEnd: 5,
+  key: DEFAULT_KEY,
+  bpm: DEFAULT_BPM,
 };
 
 const musicSlice = createSlice({
   name: 'music',
   initialState,
   reducers: {
+    setLibraryName: (state, action: PayloadAction<string>) => {
+      state.libraryName = action.payload;
+    },
+    setPackId: (state, action: PayloadAction<string>) => {
+      state.packId = action.payload;
+    },
     setIsPlaying: (state, action: PayloadAction<boolean>) => {
       state.isPlaying = action.payload;
     },
@@ -204,6 +235,33 @@ const musicSlice = createSlice({
     clearCallout: state => {
       state.currentCallout.id = undefined;
     },
+    setLoopEnabled: (state, action: PayloadAction<boolean>) => {
+      state.loopEnabled = action.payload;
+    },
+    setLoopStart: (state, action: PayloadAction<number>) => {
+      state.loopStart = action.payload;
+    },
+    setLoopEnd: (state, action: PayloadAction<number>) => {
+      state.loopEnd = action.payload;
+    },
+    setKey: (state, action: PayloadAction<Key>) => {
+      let key = action.payload;
+      if (Key[key] === undefined) {
+        console.warn('Invalid key. Defaulting to C');
+        key = Key.C;
+      }
+
+      state.key = key;
+    },
+    setBpm: (state, action: PayloadAction<number>) => {
+      let bpm = action.payload;
+      if (bpm < MIN_BPM || bpm > MAX_BPM) {
+        console.warn('Invalid BPM. Defaulting to 120');
+        bpm = DEFAULT_BPM;
+      }
+
+      state.bpm = bpm;
+    },
   },
 });
 
@@ -242,6 +300,8 @@ export const getCurrentlyPlayingBlockIds = (state: {
 registerReducers({music: musicSlice.reducer});
 
 export const {
+  setLibraryName,
+  setPackId,
   setIsPlaying,
   setCurrentPlayheadPosition,
   selectBlockId,
@@ -267,4 +327,9 @@ export const {
   setUndoStatus,
   showCallout,
   clearCallout,
+  setLoopEnabled,
+  setLoopStart,
+  setLoopEnd,
+  setKey,
+  setBpm,
 } = musicSlice.actions;

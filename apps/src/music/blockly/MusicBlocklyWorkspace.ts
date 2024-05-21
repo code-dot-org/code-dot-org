@@ -58,7 +58,8 @@ export default class MusicBlocklyWorkspace {
     container: HTMLElement,
     onBlockSpaceChange: (e: Abstract) => void,
     isReadOnlyWorkspace: boolean,
-    toolbox: {[key: string]: string[]}
+    toolbox: {[key: string]: string[]},
+    isRtl: boolean
   ) {
     if (this.workspace) {
       this.workspace.dispose();
@@ -81,20 +82,14 @@ export default class MusicBlocklyWorkspace {
         startScale: experiments.isEnabled('zelos') ? 0.9 : 1,
       },
       readOnly: isReadOnlyWorkspace,
+      useBlocklyDynamicCategories: true,
+      rtl: isRtl,
     } as BlocklyOptions);
 
     this.resizeBlockly();
 
     this.workspace.addChangeListener(onBlockSpaceChange);
 
-    (this.workspace as WorkspaceSvg).registerButtonCallback(
-      'createVariableHandler',
-      button => {
-        Blockly.Variables.createVariableButtonHandler(
-          button.getTargetWorkspace()
-        );
-      }
-    );
     this.headlessMode = false;
   }
 
@@ -347,6 +342,11 @@ export default class MusicBlocklyWorkspace {
    */
   getTriggerStartPosition(id: string, currentPosition: number) {
     const triggerStart = this.triggerIdToStartType[triggerIdToEvent(id)];
+
+    if (getBlockMode() === BlockMode.ADVANCED) {
+      return currentPosition;
+    }
+
     if (!triggerStart) {
       console.warn('No compiled trigger with ID: ' + id);
       return;
@@ -383,7 +383,10 @@ export default class MusicBlocklyWorkspace {
   }
 
   updateHighlightedBlocks(playingBlockIds: string[]) {
-    if (this.headlessMode || !this.workspace) {
+    if (this.headlessMode) {
+      return;
+    }
+    if (!this.workspace) {
       this.metricsReporter.logWarning(
         'updateHighlightedBlocks called before workspace initialized.'
       );

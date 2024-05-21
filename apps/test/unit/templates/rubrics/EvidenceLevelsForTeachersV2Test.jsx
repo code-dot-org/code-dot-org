@@ -1,12 +1,14 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {expect} from '../../../util/reconfiguredChai';
-import {mount} from 'enzyme';
 import sinon from 'sinon';
+
 import EvidenceLevelsForTeachersV2 from '@cdo/apps/templates/rubrics/EvidenceLevelsForTeachersV2';
 import {
   UNDERSTANDING_LEVEL_STRINGS_V2,
   UNDERSTANDING_LEVEL_STRINGS,
 } from '@cdo/apps/templates/rubrics/rubricHelpers';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   isAiAssessed: false,

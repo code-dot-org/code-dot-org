@@ -1,19 +1,25 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
 import Select from 'react-select';
-import i18n from '@cdo/locale';
-import {updateQueryParam} from '@cdo/apps/code-studio/utils';
-import {reload} from '@cdo/apps/utils';
-import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
+
 import {levelWithProgress} from '@cdo/apps/code-studio/components/progress/teacherPanel/types';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
-import style from './rubrics.module.scss';
+import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
+import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {
   BodyThreeText,
   EmText,
   OverlineThreeText,
 } from '@cdo/apps/componentLibrary/typography';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {reload} from '@cdo/apps/utils';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
+
+import {reportingDataShape} from './rubricShapes';
+
+import style from './rubrics.module.scss';
 
 const NO_SELECTED_SECTION_VALUE = '';
 
@@ -21,6 +27,8 @@ function StudentSelector({
   styleName,
   selectedUserId,
   reloadOnChange,
+  reportingData,
+  sectionId,
 
   //from redux
   students,
@@ -33,6 +41,11 @@ function StudentSelector({
       'user_id',
       newUserId === NO_SELECTED_SECTION_VALUE ? undefined : newUserId
     );
+    analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_DROPDOWN_STUDENT_SELECTED, {
+      ...(reportingData || {}),
+      studentId: newUserId,
+      sectionId: sectionId,
+    });
     if (reloadOnChange) {
       reload();
     } else {
@@ -94,6 +107,8 @@ StudentSelector.propTypes = {
   styleName: PropTypes.string,
   selectedUserId: PropTypes.number,
   reloadOnChange: PropTypes.bool,
+  sectionId: PropTypes.number,
+  reportingData: reportingDataShape,
 
   //from redux
   students: PropTypes.arrayOf(

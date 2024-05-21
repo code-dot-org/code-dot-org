@@ -1,28 +1,44 @@
+// Making sure that css is first so that it is imported for other classes.
+// This might not be necessary.
+import './styles/Weblab2View.css'; // eslint-disable-line import/order
+
+import {Codebridge} from '@codebridge/Codebridge';
+import {ConfigType, ProjectType} from '@codebridge/types';
+import {css} from '@codemirror/lang-css';
+import {html} from '@codemirror/lang-html';
+import {LanguageSupport} from '@codemirror/language';
 import React, {useState} from 'react';
 
-import './styles/Weblab2View.css';
+import {ProjectSources} from '@cdo/apps/lab2/types';
+
+import {useSource} from '../codebridge/hooks/useSource';
 
 import {Config} from './Config';
 
-import {CDOIDE, ConfigType, ProjectType} from 'cdo-ide-poc';
+const weblabLangMapping: {[key: string]: LanguageSupport} = {
+  html: html(),
+  css: css(),
+};
 
-import CDOEditor from './Editor';
+const horizontalLayout = {
+  gridLayoutRows: '300px minmax(0, 1fr)',
+  gridLayoutColumns: '300px minmax(0, 1fr) 1fr',
+  gridLayout: `    "info-panel workspace preview-container"
+      "file-browser workspace preview-container"`,
+};
 
-const instructions = `Add html pages and preview them in the right pane.
-
-Add css pages (and link them to your html).
-
-Add javascript files (ending in .js) and execute javascript code in the right pane.
-
-Use the file browser to add/rename/delete files, or to add/rename/delete folders (including hierarchically!)`;
+const verticalLayout = {
+  gridLayoutRows: '300px 1fr 1fr',
+  gridLayoutColumns: '300px minmax(0, 1fr)',
+  gridLayout: `    "info-panel workspace workspace"
+      "file-browser workspace workspace"
+      "file-browser preview-container preview-container"`,
+};
 
 const defaultConfig: ConfigType = {
-  showSideBar: true,
-  showPreview: true,
-  showRunBar: true,
-  showDebug: true,
   activeLeftNav: 'Files',
-  EditorComponent: CDOEditor,
+  languageMapping: weblabLangMapping,
+  editableFileTypes: ['html', 'css'],
   leftNav: [
     {
       icon: 'fa-square-check',
@@ -37,11 +53,23 @@ const defaultConfig: ConfigType = {
       component: 'Search',
     },
   ],
-  sideBar: ['fa-circle-question', 'fa-folder'],
-  instructions,
+  sideBar: [
+    {
+      icon: 'fa-circle-question',
+      label: 'Help',
+      action: () => window.alert('Help is not currently implemented'),
+    },
+    {
+      icon: 'fa-folder',
+      label: 'Files',
+      action: () => window.alert('You are already on the file browser'),
+    },
+  ],
+  ...horizontalLayout,
 };
 
-const defaultProject: ProjectType = {
+const defaultSource: ProjectType = {
+  // folders: {},
   folders: {
     '1': {id: '1', name: 'foo', parentId: '0'},
     '2': {id: '2', name: 'bar', parentId: '1'},
@@ -50,6 +78,7 @@ const defaultProject: ProjectType = {
     '5': {id: '5', name: 'f2', parentId: '1'},
     '6': {id: '6', name: 'b1', parentId: '2'},
   },
+
   files: {
     '1': {
       id: '1',
@@ -59,7 +88,7 @@ const defaultProject: ProjectType = {
   <link rel="stylesheet" href="styles.css"/>
   <body>
     Content goes here!
-    <div class="foo">Foo class!</div>
+    <div class="foo">[DEFAULT] Foo class!</div>
   </body>
 </html>
 `,
@@ -114,10 +143,20 @@ const defaultProject: ProjectType = {
   },
 };
 
-const App = () => {
-  const [project, setProject] = useState<ProjectType>(defaultProject);
+const defaultProject: ProjectSources = {source: defaultSource};
+
+const Weblab2View = () => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const [showConfig, setShowConfig] = useState<'project' | 'config' | ''>('');
+  const {source, setSource, resetToStartSource} = useSource(defaultProject);
+  const [showConfig, setShowConfig] = useState<
+    'project' | 'config' | 'layout' | ''
+  >('');
+
+  const configKey = {
+    project: source || defaultProject,
+    config: config,
+    layout: config,
+  };
 
   return (
     <div className="app-wrapper">
@@ -128,35 +167,54 @@ const App = () => {
         <button type="button" onClick={() => setShowConfig('config')}>
           Edit config
         </button>
+        <button type="button" onClick={() => setShowConfig('layout')}>
+          Edit layout
+        </button>
+        <button
+          type="button"
+          onClick={() => setConfig({...config, ...horizontalLayout})}
+        >
+          Use horizontal layout
+        </button>
+        <button
+          type="button"
+          onClick={() => setConfig({...config, ...verticalLayout})}
+        >
+          Use vertical layout
+        </button>
       </div>
       <div className="app-ide">
-        <CDOIDE
-          project={project}
-          config={config}
-          setProject={setProject}
-          setConfig={setConfig}
-        />
+        {source && (
+          <Codebridge
+            project={source}
+            config={config}
+            setProject={setSource}
+            setConfig={setConfig}
+            resetProject={resetToStartSource}
+          />
+        )}
+
+        {showConfig && (
+          <Config
+            config={configKey[showConfig]}
+            setConfig={(
+              configName: string,
+              newConfig: ProjectType | ConfigType | string
+            ) => {
+              if (configName === 'project') {
+                setSource(newConfig as ProjectType);
+              } else if (configName === 'config' || configName === 'layout') {
+                setConfig(newConfig as ConfigType);
+              }
+              setShowConfig('');
+            }}
+            cancelConfig={() => setShowConfig('')}
+            configName={showConfig}
+          />
+        )}
       </div>
-      {showConfig && (
-        <Config
-          config={showConfig === 'project' ? project : config}
-          setConfig={(
-            configName: string,
-            newConfig: ProjectType | ConfigType
-          ) => {
-            if (configName === 'project') {
-              setProject(newConfig as ProjectType);
-            } else if (configName === 'config') {
-              setConfig(newConfig as ConfigType);
-            }
-            setShowConfig('');
-          }}
-          cancelConfig={() => setShowConfig('')}
-          configName={showConfig}
-        />
-      )}
     </div>
   );
 };
 
-export default App;
+export default Weblab2View;

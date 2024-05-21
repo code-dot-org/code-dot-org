@@ -337,8 +337,8 @@ class I18nScriptUtils
     ProgressBar.create(format: PROGRESS_BAR_FORMAT, **args)
   end
 
-  def self.process_in_threads(data_array, **args)
-    Parallel.each(data_array, in_threads: PARALLEL_PROCESSES, **args) {|data| yield(data)}
+  def self.process_in_threads(data_array, **args, &block)
+    Parallel.each(data_array, in_threads: PARALLEL_PROCESSES, **args, &block)
   end
 
   # Writes file

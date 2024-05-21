@@ -1,7 +1,9 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+
 import {UnconnectedStatsTable as StatsTable} from '@cdo/apps/templates/teacherDashboard/StatsTable';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const students = [
   {id: 3, name: 'Student C', familyName: 'Lastname A'},

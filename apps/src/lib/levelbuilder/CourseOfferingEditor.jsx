@@ -15,7 +15,7 @@ import {
   DeviceTypes,
   DeviceCompatibilityLevels,
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
-import {StudentGradeLevels} from '@cdo/apps/util/sharedConstants';
+import {StudentGradeLevels} from '@cdo/generated-scripts/sharedConstants';
 import {translatedCourseOfferingCategories} from '@cdo/apps/templates/teacherDashboard/AssignmentSelectorHelpers';
 import {
   translatedCourseOfferingCsTopics,

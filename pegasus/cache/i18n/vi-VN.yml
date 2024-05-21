@@ -9,7 +9,7 @@ vi-VN:
     hộ hợp pháp cho phép sử dụng dịch vụ Code.org.
   account_sign_up_email_opt_in: Chúng tôi có thể gửi email cho bạn thông tin cập nhật
     về các khóa học của chúng tôi, các cơ hội ở địa phương hay tin tức về khoa học
-    máy tính khác không?
+    máy tính khác không? (khoảng một tháng một lần)
   ai_activity: Hoạt động
   ai_aiedu_intro: 'AiEdu: Giới thiệu về trí tuệ nhân tạo'
   ai_aiedu_intro_description: Giới thiệu về AI là một chương trình giảng dạy miễn
@@ -1200,6 +1200,7 @@ vi-VN:
   header_about_us: Giới thiệu về chúng tôi
   header_course_catalog: Danh mục khóa học
   header_courses: Các khóa học
+  header_districts: Quận
   header_documentation: Tài liệu
   header_educate_beyond: Đằng sau Code.org
   header_educate_community: Cộng đồng trực tuyến

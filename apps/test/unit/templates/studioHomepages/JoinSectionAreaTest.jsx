@@ -1,17 +1,21 @@
-import {expect} from '../../../util/reconfiguredChai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+
 import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
+
+import {expect} from '../../../util/reconfiguredChai';
+
 import {joinedSections, joinedPlSections} from './homepagesTestData';
-import {shallow} from 'enzyme';
 
 const defaultProps = {
   initialJoinedPlSections: [],
   initialJoinedStudentSections: [],
   isTeacher: false,
+  isPlSections: false,
 };
 
 describe('JoinSectionArea', () => {
-  it('shows student sections if has joined student sections', () => {
+  it('shows student sections if isPlSections is false and has joined student sections', () => {
     const wrapper = shallow(
       <JoinSectionArea
         {...defaultProps}
@@ -24,12 +28,13 @@ describe('JoinSectionArea', () => {
       false
     );
   });
-  it('shows participant sections for pl if has joined pl sections', () => {
+  it('shows participant sections for pl if isPlSections is true and has joined pl sections', () => {
     const wrapper = shallow(
       <JoinSectionArea
         {...defaultProps}
         isTeacher={true}
         initialJoinedPlSections={joinedPlSections}
+        isPlSections={true}
       />
     );
     expect(wrapper.find('Connect(JoinSection)').length).to.equal(1);

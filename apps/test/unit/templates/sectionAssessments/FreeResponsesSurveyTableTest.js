@@ -1,11 +1,13 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import FreeResponsesSurveyTable from '@cdo/apps/templates/sectionAssessments/FreeResponsesSurveyTable';
+
 import {
   surveyOne,
   surveyTwo,
 } from '@cdo/apps/templates/sectionAssessments/assessmentsTestHelpers';
+import FreeResponsesSurveyTable from '@cdo/apps/templates/sectionAssessments/FreeResponsesSurveyTable';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('FreeResponsesSurveyTable', () => {
   it('renders a table', () => {

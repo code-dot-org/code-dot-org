@@ -1,11 +1,14 @@
 import React from 'react';
-import ProgressTableDetailCell from './ProgressTableDetailCell';
+
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
+
 import {
   fakeLevels,
   fakeLevel,
   fakeProgressForLevels,
 } from '../../progress/progressTestHelpers';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+
+import ProgressTableDetailCell from './ProgressTableDetailCell';
 
 const statusForLevel = [
   LevelStatus.perfect,

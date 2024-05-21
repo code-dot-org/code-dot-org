@@ -1,6 +1,7 @@
 import {Block} from 'blockly';
-import {BlocklyWrapperType} from '../types';
+
 import {VARIABLE_BLOCK_TYPES} from '../constants';
+import {BlocklyWrapperType} from '../types';
 
 export default function initializeVariables(
   blocklyWrapper: BlocklyWrapperType

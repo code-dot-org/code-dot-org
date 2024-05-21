@@ -1,9 +1,11 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
 import React from 'react';
-import {mount} from 'enzyme';
-import {expect} from '../../util/reconfiguredChai';
-import {UnconnectedSortByNameDropdown} from '@cdo/apps/templates/SortByNameDropdown';
 import sinon from 'sinon';
+
+import {UnconnectedSortByNameDropdown} from '@cdo/apps/templates/SortByNameDropdown';
+
+import {expect} from '../../util/reconfiguredChai';
 
 describe('SortByNameDropdown', () => {
   it('renders dropdown', () => {

@@ -1,12 +1,14 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
-import {mount} from 'enzyme';
-import {expect} from '../../util/reconfiguredChai';
-import Notification from '@cdo/apps/templates/Notification';
+import {combineReducers, createStore} from 'redux';
+
+import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import Button from '@cdo/apps/templates//Button';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {combineReducers, createStore} from 'redux';
-import isRtl from '@cdo/apps/code-studio/isRtlRedux';
+import Notification from '@cdo/apps/templates/Notification';
+
+import {expect} from '../../util/reconfiguredChai';
 
 const announcement = {
   heading: 'Go beyond an Hour of Code',

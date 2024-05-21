@@ -1,9 +1,10 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 
 import AddCoteacher from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/AddCoteacher';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   numCoteachers: 3,
@@ -69,6 +70,14 @@ describe('AddCoteacher', () => {
       <AddCoteacher {...DEFAULT_PROPS} numCoteachers={5} />
     );
     expect(wrapper.find('Button').first().props().disabled).to.be.true;
+  });
+
+  it('disables email input and add button when disabled', () => {
+    const wrapper = shallow(<AddCoteacher {...DEFAULT_PROPS} disabled />);
+
+    expect(wrapper.find('input').first().props().disabled).to.be.true;
+    expect(wrapper.find('Button').first().props().disabled).to.be.true;
+    expect(wrapper.find('Figcaption')).to.have.lengthOf(0);
   });
 
   it('adds coteacher when valid email is added', done => {

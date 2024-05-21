@@ -1,5 +1,6 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
+
 import MakerLanding from '@cdo/apps/templates/MakerLanding';
 
 describe('MakerLanding', () => {

@@ -1,6 +1,7 @@
+import {Meta, StoryFn} from '@storybook/react';
 import React, {useState} from 'react';
+
 import SegmentedButtons, {SegmentedButtonsProps} from './index';
-import {Meta, Story} from '@storybook/react';
 
 export default {
   title: 'DesignSystem/Segmented Buttons', // eslint-disable-line storybook/no-title-property-in-meta
@@ -10,7 +11,7 @@ export default {
 //
 // TEMPLATE
 //
-const SingleTemplate: Story<SegmentedButtonsProps> = args => {
+const SingleTemplate: StoryFn<SegmentedButtonsProps> = args => {
   const [value, setValues] = useState('');
 
   return (
@@ -25,7 +26,7 @@ const SingleTemplate: Story<SegmentedButtonsProps> = args => {
   );
 };
 
-const MultipleTemplate: Story<{
+const MultipleTemplate: StoryFn<{
   components: SegmentedButtonsProps[];
 }> = args => {
   const [value, setValues] = useState({} as Record<string, string>);

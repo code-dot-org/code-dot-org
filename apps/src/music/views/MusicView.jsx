@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import MusicPlayer from '../player/MusicPlayer';
-import AnalyticsReporter from '../analytics/AnalyticsReporter';
+import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {AnalyticsContext} from '../context';
 import Globals from '../globals';
@@ -13,6 +13,8 @@ import SoundUploader from '../utils/SoundUploader';
 import {loadLibrary} from '../utils/Loader';
 import MusicValidator from '../progress/MusicValidator';
 import {
+  setLibraryName,
+  setPackId,
   setIsPlaying,
   setCurrentPlayheadPosition,
   clearSelectedBlockId,
@@ -33,22 +35,27 @@ import {
 } from '../redux/musicRedux';
 import KeyHandler from './KeyHandler';
 import Callouts from './Callouts';
-import {currentLevelIndex} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {
   isReadOnlyWorkspace,
   setIsLoading,
   setPageError,
 } from '@cdo/apps/lab2/lab2Redux';
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
+import AdvancedSequencer from '../player/sequencer/AdvancedSequencer';
 import MusicPlayerStubSequencer from '../player/sequencer/MusicPlayerStubSequencer';
-import {BlockMode, LEGACY_DEFAULT_LIBRARY, DEFAULT_LIBRARY} from '../constants';
+import {
+  BlockMode,
+  LEGACY_DEFAULT_LIBRARY,
+  DEFAULT_LIBRARY,
+  DEFAULT_PACK,
+} from '../constants';
 import {Key} from '../utils/Notes';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {isEqual} from 'lodash';
 import MusicLibrary from '../player/MusicLibrary';
-import {setUpBlocklyForMusicLab} from '../blockly/setup';
 import {TRIGGER_FIELD} from '../blockly/constants';
 import MusicLabView from './MusicLabView';
+import DCDO from '@cdo/apps/dcdo';
 
 const BLOCKLY_DIV_ID = 'blockly-div';
 
@@ -61,17 +68,16 @@ const BLOCKLY_DIV_ID = 'blockly-div';
  */
 class UnconnectedMusicView extends React.Component {
   static propTypes = {
-    /**
-     * True if Music Lab is being presented from the /projectbeats page,
-     * false/undefined if as part of a script or single level.
-     * */
-    onProjectBeats: PropTypes.bool,
-
     // populated by Redux
-    currentLevelIndex: PropTypes.number,
+    currentLevelId: PropTypes.string,
     userId: PropTypes.number,
     userType: PropTypes.string,
     signInState: PropTypes.oneOf(Object.values(SignInState)),
+    isRtl: PropTypes.bool,
+    libraryName: PropTypes.string,
+    setLibraryName: PropTypes.func,
+    packId: PropTypes.string,
+    setPackId: PropTypes.func,
     isPlaying: PropTypes.bool,
     setIsPlaying: PropTypes.func,
     setCurrentPlayheadPosition: PropTypes.func,
@@ -91,15 +97,16 @@ class UnconnectedMusicView extends React.Component {
     setIsLoading: PropTypes.func,
     setPageError: PropTypes.func,
     initialSources: PropTypes.object,
-    levelData: PropTypes.object,
+    levelProperties: PropTypes.object,
     longInstructions: PropTypes.string,
     startingPlayheadPosition: PropTypes.number,
+    isProjectLevel: PropTypes.bool,
     isReadOnlyWorkspace: PropTypes.bool,
     updateLoadProgress: PropTypes.func,
-    appName: PropTypes.string,
     setUndoStatus: PropTypes.func,
     showCallout: PropTypes.func,
     clearCallout: PropTypes.func,
+    isPlayView: PropTypes.bool,
   };
 
   constructor(props) {
@@ -107,16 +114,20 @@ class UnconnectedMusicView extends React.Component {
 
     const bpm = AppConfig.getValue('bpm');
     const key = AppConfig.getValue('key');
-
-    this.player = new MusicPlayer(bpm, key && Key[key.toUpperCase()]);
-    Globals.setPlayer(this.player);
     this.analyticsReporter = new AnalyticsReporter();
+    this.player = new MusicPlayer(
+      bpm,
+      key && Key[key.toUpperCase()],
+      this.analyticsReporter
+    );
+    Globals.setPlayer(this.player);
     this.musicBlocklyWorkspace = new MusicBlocklyWorkspace();
     this.soundUploader = new SoundUploader(this.player);
     this.playingTriggers = [];
     this.musicValidator = new MusicValidator(
       this.getIsPlaying,
       this.getPlaybackEvents,
+      this.getValidationTimeout,
       this.player
     );
 
@@ -130,20 +141,13 @@ class UnconnectedMusicView extends React.Component {
 
     this.state = {
       loadedLibrary: false,
-      currentLibraryName: null,
       hasLoadedInitialSounds: false,
     };
-
-    // If on /projectbeats, we need to manually setup Blockly for Music Lab.
-    // Otherwise, this is handled by Lab2.
-    if (props.onProjectBeats) {
-      setUpBlocklyForMusicLab();
-    }
   }
 
   componentDidMount() {
-    // Only record Amplitude analytics events on /projectbeats
-    if (this.props.onProjectBeats) {
+    // Only record Amplitude analytics events on standalone projects
+    if (this.props.isProjectLevel) {
       this.analyticsReporter.startSession().then(() => {
         this.analyticsReporter.setUserProperties(
           this.props.userId,
@@ -156,13 +160,16 @@ class UnconnectedMusicView extends React.Component {
     // we need a way of reporting analytics when the user navigates away from the page. Check with Amplitude for the
     // correct approach.
     window.addEventListener('beforeunload', event => {
-      if (this.props.onProjectBeats) {
+      if (this.props.isProjectLevel) {
         this.analyticsReporter.endSession();
       }
     });
 
-    if (this.props.appName === 'music') {
-      this.onLevelLoad(this.props.levelData, this.props.initialSources);
+    if (this.props.levelProperties?.appName === 'music') {
+      this.onLevelLoad(
+        this.props.levelProperties?.levelData,
+        this.props.initialSources
+      );
     }
     this.player.setUpdateLoadProgress(this.props.updateLoadProgress);
   }
@@ -171,7 +178,7 @@ class UnconnectedMusicView extends React.Component {
     this.musicBlocklyWorkspace.resizeBlockly();
 
     if (
-      this.props.onProjectBeats &&
+      this.props.isProjectLevel &&
       (prevProps.userId !== this.props.userId ||
         prevProps.userType !== this.props.userType ||
         prevProps.signInState !== this.props.signInState)
@@ -187,9 +194,13 @@ class UnconnectedMusicView extends React.Component {
     // since a new set of sounds will be loaded on the next level.  Also clear the
     // callout that might be showing, and dispose of the Blockly workspace so that
     // any lingering UI is removed.
+    //
+    // Note that the current level ID updates before the app name has changed.
+    // Therefore, this code will run when we are transitioning away from a music level
+    // to another level (music or not).
     if (
-      prevProps.currentLevelIndex !== this.props.currentLevelIndex &&
-      this.props.appName === 'music'
+      prevProps.currentLevelId !== this.props.currentLevelId &&
+      this.props.levelProperties?.appName === 'music'
     ) {
       this.stopSong();
       this.setState({
@@ -226,11 +237,17 @@ class UnconnectedMusicView extends React.Component {
     // Update components with new level data and new initial sources when
     // the level changes.
     if (
-      (!isEqual(prevProps.levelData, this.props.levelData) ||
-        !isEqual(prevProps.initialSources, this.props.initialSources)) &&
-      this.props.appName === 'music'
+      (!isEqual(prevProps.levelProperties, this.props.levelProperties) ||
+        !isEqual(prevProps.initialSources, this.props.initialSources) ||
+        prevProps.isReadOnlyWorkspace !== this.props.isReadOnlyWorkspace) &&
+      this.props.levelProperties?.appName === 'music'
     ) {
-      this.onLevelLoad(this.props.levelData, this.props.initialSources);
+      if (this.props.levelProperties?.appName === 'music') {
+        this.onLevelLoad(
+          this.props.levelProperties?.levelData,
+          this.props.initialSources
+        );
+      }
     }
   }
 
@@ -251,30 +268,70 @@ class UnconnectedMusicView extends React.Component {
     }
     await this.loadAndInitializePlayer(libraryName || DEFAULT_LIBRARY);
 
-    this.musicBlocklyWorkspace.init(
-      document.getElementById(BLOCKLY_DIV_ID),
-      this.onBlockSpaceChange,
-      this.props.isReadOnlyWorkspace,
-      levelData?.toolbox
-    );
+    this.props.isPlayView
+      ? this.musicBlocklyWorkspace.initHeadless()
+      : this.musicBlocklyWorkspace.init(
+          document.getElementById(BLOCKLY_DIV_ID),
+          this.onBlockSpaceChange,
+          this.props.isReadOnlyWorkspace,
+          levelData?.toolbox,
+          this.props.isRtl
+        );
 
     this.library.setAllowedSounds(levelData?.sounds);
     this.props.setShowInstructions(
       !!levelData?.text || !!this.props.longInstructions
     );
 
+    let packId = levelData?.packId || initialSources?.labConfig?.music.packId;
+    this.library.setCurrentPackId(packId);
+    this.props.setPackId(packId);
+
+    // Check if the user has already made changes to the code on the project level.
+    let codeChangedOnProjectLevel = false;
     if (this.getStartSources() || initialSources) {
-      let codeToLoad = this.getStartSources();
+      const startSources = this.getStartSources();
+      let codeToLoad = startSources;
       if (initialSources?.source) {
         codeToLoad = JSON.parse(initialSources.source);
+        codeChangedOnProjectLevel =
+          this.props.isProjectLevel &&
+          !isEqual(codeToLoad?.blocks, startSources?.blocks);
       }
       this.loadCode(codeToLoad);
     }
+
+    // If the user has made changes to the code on the project level but does
+    // not have a pack ID set, assume they are using the default pack. This is
+    // specifically to handle the case where a user starts a project on a library
+    // that does not have restricted packs (and is therefore using default),
+    // and then later opens their project with a library that does have restricted packs.
+    if (
+      DCDO.get('music-lab-existing-projects-default-sounds', true) &&
+      codeChangedOnProjectLevel &&
+      !packId
+    ) {
+      this.library.setCurrentPackId(DEFAULT_PACK);
+      this.props.setPackId(DEFAULT_PACK);
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .logInfo('Setting existing project to default pack');
+    }
+
+    // Go ahead and compile and execute the initial song once code is loaded.
+    this.compileSong();
+    this.executeCompiledSong();
+
+    Globals.setShowSoundFilters(
+      AppConfig.getValue('show-sound-filters') !== 'false' &&
+        (AppConfig.getValue('show-sound-filters') === 'true' ||
+          levelData?.showSoundFilters)
+    );
   }
 
   // Load the library and initialize the music player, if not already loaded.
   loadAndInitializePlayer = async libraryName => {
-    if (this.state.currentLibraryName === libraryName) {
+    if (this.props.libraryName === libraryName) {
       // Already loaded this library, no need to load again.
       return;
     }
@@ -295,6 +352,8 @@ class UnconnectedMusicView extends React.Component {
 
     if (getBlockMode() === BlockMode.SIMPLE2) {
       this.sequencer = new Simple2Sequencer();
+    } else if (getBlockMode() === BlockMode.ADVANCED) {
+      this.sequencer = new AdvancedSequencer();
     } else {
       this.sequencer = new MusicPlayerStubSequencer();
     }
@@ -304,18 +363,28 @@ class UnconnectedMusicView extends React.Component {
       this.library.getKey()
     );
 
-    // Temporarily loading all instruments for ToneJS player.
-    this.player.loadAllInstruments();
-
-    this.setState({
-      currentLibraryName: libraryName,
-    });
+    this.props.setLibraryName(libraryName);
 
     this.props.setIsLoading(false);
   };
 
   getIsPlaying = () => {
     return this.props.isPlaying;
+  };
+
+  getValidationTimeout = () => {
+    // The level can specify a desired timeout, in measures, when we can start showing
+    // non-success validation messages.  That said, if we've just completed playing the
+    // last measure before reaching that specified value, we can start showing the
+    // messages.
+    // If no timeout is specified, then we can starting showing the non-success messages
+    // at measure 2.
+    return this.props.levelProperties?.levelData?.validationTimeout
+      ? Math.min(
+          this.props.levelProperties?.levelData?.validationTimeout,
+          this.sequencer.getLastMeasure()
+        )
+      : 2;
   };
 
   getPlaybackEvents = () => {
@@ -333,13 +402,19 @@ class UnconnectedMusicView extends React.Component {
   };
 
   clearCode = () => {
+    // Clear the pack, unless it came from the level data itself.
+    if (!this.props.levelProperties?.levelData?.packId) {
+      this.props.setPackId(null);
+      this.library.setCurrentPackId(null);
+    }
+
     this.loadCode(this.getStartSources());
     this.setPlaying(false);
   };
 
   getStartSources = () => {
-    if (!this.props.onProjectBeats && this.props.levelData?.startSources) {
-      return this.props.levelData.startSources;
+    if (this.props.levelProperties?.levelData?.startSources) {
+      return this.props.levelProperties?.levelData.startSources;
     } else {
       const startSourcesFilename = 'startSources' + getBlockMode();
       return require(`@cdo/static/music/${startSourcesFilename}.json`);
@@ -387,7 +462,7 @@ class UnconnectedMusicView extends React.Component {
         }
       });
 
-      if (this.props.onProjectBeats) {
+      if (this.props.isProjectLevel) {
         this.analyticsReporter.onBlocksUpdated(
           this.musicBlocklyWorkspace.getAllBlocks()
         );
@@ -410,7 +485,7 @@ class UnconnectedMusicView extends React.Component {
   setPlaying = play => {
     if (play) {
       this.playSong();
-      if (this.props.onProjectBeats) {
+      if (this.props.isProjectLevel) {
         this.analyticsReporter.onButtonClicked('play');
       }
     } else {
@@ -426,9 +501,10 @@ class UnconnectedMusicView extends React.Component {
     if (!this.props.isPlaying) {
       return;
     }
-    if (this.props.onProjectBeats) {
+    if (this.props.isProjectLevel) {
       this.analyticsReporter.onButtonClicked('trigger', {id});
     }
+
     const triggerStartPosition =
       this.musicBlocklyWorkspace.getTriggerStartPosition(
         id,
@@ -446,7 +522,7 @@ class UnconnectedMusicView extends React.Component {
       lastMeasure: this.sequencer.getLastMeasure(),
     });
     this.props.addOrderedFunctions({
-      orderedFunctions: this.sequencer.getOrderedFunctions(),
+      orderedFunctions: this.sequencer.getOrderedFunctions?.() || [],
     });
     this.player.playEvents(playbackEvents);
 
@@ -480,7 +556,7 @@ class UnconnectedMusicView extends React.Component {
       lastMeasure: this.sequencer.getLastMeasure(),
     });
     this.props.addOrderedFunctions({
-      orderedFunctions: this.sequencer.getOrderedFunctions(),
+      orderedFunctions: this.sequencer.getOrderedFunctions?.() || [],
     });
 
     return this.player.preloadSounds(
@@ -525,12 +601,19 @@ class UnconnectedMusicView extends React.Component {
     };
 
     // Save the current library to sources as part of labConfig if present
-    if (this.state.currentLibraryName) {
+    if (this.props.libraryName) {
       sourcesToSave.labConfig = {
         music: {
-          library: this.state.currentLibraryName,
+          library: this.props.libraryName,
         },
       };
+    }
+
+    // Also save the current pack to sources as part of labConfig.
+    if (this.props.packId) {
+      sourcesToSave.labConfig ??= {};
+      sourcesToSave.labConfig.music ??= {};
+      sourcesToSave.labConfig.music.packId = this.props.packId;
     }
 
     Lab2Registry.getInstance()
@@ -571,6 +654,7 @@ class UnconnectedMusicView extends React.Component {
     this.player.stopSong();
     this.playingTriggers = [];
 
+    // Clear the timeline of triggered events when song is stopped.
     this.executeCompiledSong();
 
     this.props.setIsPlaying(false);
@@ -588,7 +672,7 @@ class UnconnectedMusicView extends React.Component {
   render() {
     return (
       <AnalyticsContext.Provider
-        value={this.props.onProjectBeats ? this.analyticsReporter : null}
+        value={this.props.isProjectLevel ? this.analyticsReporter : null}
       >
         <KeyHandler
           togglePlaying={this.togglePlaying}
@@ -608,6 +692,12 @@ class UnconnectedMusicView extends React.Component {
           redo={this.redo}
           clearCode={this.clearCode}
           validator={this.musicValidator}
+          player={this.player}
+          allowPackSelection={
+            this.library?.getHasRestrictedPacks() &&
+            !this.props.levelProperties?.levelData?.packId &&
+            this.props.isProjectLevel
+          }
         />
         <Callouts />
       </AnalyticsContext.Provider>
@@ -617,24 +707,31 @@ class UnconnectedMusicView extends React.Component {
 
 const MusicView = connect(
   state => ({
-    currentLevelIndex: currentLevelIndex(state),
+    currentLevelId: state.progress.currentLevelId,
 
     userId: state.currentUser.userId,
     userType: state.currentUser.userType,
     signInState: state.currentUser.signInState,
 
+    isRtl: state.isRtl,
+
+    libraryName: state.music.libraryName,
+    packId: state.music.packId,
     isPlaying: state.music.isPlaying,
     selectedBlockId: state.music.selectedBlockId,
     showInstructions: state.music.showInstructions,
     currentlyPlayingBlockIds: getCurrentlyPlayingBlockIds(state),
     initialSources: state.lab.initialSources,
-    levelData: state.lab.levelProperties?.levelData,
+    levelProperties: state.lab.levelProperties,
     longInstructions: state.lab.levelProperties?.longInstructions,
+    isProjectLevel: state.lab.levelProperties?.isProjectLevel,
     isReadOnlyWorkspace: isReadOnlyWorkspace(state),
-    appName: state.lab.levelProperties?.appName,
     startingPlayheadPosition: state.music.startingPlayheadPosition,
+    isPlayView: state.lab.isShareView,
   }),
   dispatch => ({
+    setLibraryName: libraryName => dispatch(setLibraryName(libraryName)),
+    setPackId: packId => dispatch(setPackId(packId)),
     setIsPlaying: isPlaying => dispatch(setIsPlaying(isPlaying)),
     setCurrentPlayheadPosition: currentPlayheadPosition =>
       dispatch(setCurrentPlayheadPosition(currentPlayheadPosition)),

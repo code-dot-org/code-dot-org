@@ -1,11 +1,13 @@
+import moment from 'moment';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
-import moment from 'moment';
-import firehoseClient from '../../../lib/util/firehose';
-import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
+
 import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
+import firehoseClient from '../../../lib/util/firehose';
 
 export default class ProgressTableStudentName extends React.PureComponent {
   static propTypes = {

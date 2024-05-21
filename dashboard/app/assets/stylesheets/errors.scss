@@ -1,7 +1,7 @@
 @import "color";
 @import "font";
 
-.not-found-page {
+.error-page, .not-found-page {
   body {
     @include main-font-regular;
     font-size: 14px;
@@ -100,5 +100,18 @@
     margin-bottom: 30px;
     font-size: 28px;
     line-height: 1.2em;
+  }
+
+  a {
+    &.design-system-btn {
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+  }
+}
+
+#lti-unsupported-message-type.error-page {
+  & .error-child {
+    max-width: 450px;
   }
 }

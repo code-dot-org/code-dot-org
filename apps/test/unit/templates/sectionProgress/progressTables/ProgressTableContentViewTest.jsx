@@ -1,22 +1,25 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {expect} from '../../../../util/reconfiguredChai';
-import {mount} from 'enzyme';
-import ProgressTableContentView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContentView';
-import ProgressTableLessonNumber from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLessonNumber';
-import progressTableStyleConstants from '@cdo/apps/templates/sectionProgress/progressTables/progress-table-constants.module.scss';
 import * as Virtualized from 'reactabular-virtualized';
+import sinon from 'sinon';
+
 import {
   fakeLevel,
   fakeLessonWithLevels,
   fakeStudents,
   fakeStudentLevelProgress,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
+import ProgressTableContentView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContentView';
+import ProgressTableLessonNumber from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLessonNumber';
 import {
   fakeRowsForStudents,
   fakeDetailRowsForStudent,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressTestHelpers';
-import sinon from 'sinon';
+
+import {expect} from '../../../../util/reconfiguredChai';
 import {allowConsoleWarnings} from '../../../../util/testUtils';
+
+import progressTableStyleConstants from '@cdo/apps/templates/sectionProgress/progressTables/progress-table-constants.module.scss';
 
 const STUDENTS = fakeStudents(3);
 const LESSON_1 = fakeLessonWithLevels({position: 1});

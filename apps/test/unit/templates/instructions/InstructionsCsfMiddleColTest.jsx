@@ -1,13 +1,15 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
 import sinon from 'sinon';
-import {UnconnectedInstructionsCsfMiddleCol as InstructionsCsfMiddleCol} from '@cdo/apps/templates/instructions/InstructionsCsfMiddleCol';
-import Instructions from '@cdo/apps/templates/instructions/Instructions';
-import LegacyButton from '@cdo/apps/templates/LegacyButton';
-import InlineHint from '@cdo/apps/templates/instructions/InlineHint';
-import InlineFeedback from '@cdo/apps/templates/instructions/InlineFeedback';
+
 import HintPrompt from '@cdo/apps/templates/instructions/HintPrompt';
+import InlineFeedback from '@cdo/apps/templates/instructions/InlineFeedback';
+import InlineHint from '@cdo/apps/templates/instructions/InlineHint';
+import Instructions from '@cdo/apps/templates/instructions/Instructions';
+import {UnconnectedInstructionsCsfMiddleCol as InstructionsCsfMiddleCol} from '@cdo/apps/templates/instructions/InstructionsCsfMiddleCol';
+import LegacyButton from '@cdo/apps/templates/LegacyButton';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   dismissHintPrompt: () => {},

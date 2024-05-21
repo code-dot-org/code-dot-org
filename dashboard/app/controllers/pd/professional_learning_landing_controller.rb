@@ -5,10 +5,6 @@ class Pd::ProfessionalLearningLandingController < ApplicationController
 
   def index
     view_options(full_width: true, responsive_content: true, no_padding_container: true)
-    if Pd::Enrollment.for_user(current_user).empty? && Plc::UserCourseEnrollment.where(user: current_user).empty?
-      redirect_to CDO.code_org_url('educate/professional-learning', CDO.default_scheme)
-      return
-    end
 
     enrollments_with_pending_surveys = Pd::Enrollment.filter_for_survey_completion(
       Pd::Enrollment.for_user(current_user).with_surveys,
@@ -46,6 +42,8 @@ class Pd::ProfessionalLearningLandingController < ApplicationController
       workshops_for_regional_partner: workshops_for_regional_partner_data,
       pl_courses_started: current_user.pl_units_started,
       user_permissions: current_user.permissions.map(&:permission),
+      joined_student_sections: current_user.sections_as_student_participant&.map(&:summarize_without_students),
+      joined_pl_sections: current_user.sections_as_pl_participant&.map(&:summarize_without_students),
       courses_as_facilitator: Pd::CourseFacilitator.where(facilitator: current_user).map(&:course).uniq,
     }.compact
   end

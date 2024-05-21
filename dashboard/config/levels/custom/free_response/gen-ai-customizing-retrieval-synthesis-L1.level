@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-05-04T02:53:07.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "<img style=\"width: 20%; float: right; margin: 10px\" src=\"https://images.code.org/bc95d99932581c8db079cef3e8cb6221-image-1715382614383.png\" />\r\n\r\n## User Story 1: Sarah Thompson\r\n\r\n### Introduction\r\nMy name is Sarah Thompson, I am 34 years old, and I serve as the Public Relations Manager for the city environmental office. My job involves spreading awareness about environmental issues and coordinating community involvement in our local initiatives. It's all about communication—crafting messages that resonate with people and organizing events that bring our community together for a good cause.\r\n\r\n### Why I'm Here\r\nI'm leading a project to get more people involved in our local cleanup efforts. Litter is a big issue in our city, ruining the look of our public spaces and harming our environment. I think using technology could really help make our cleanup events more fun and easy to join, especially if people can use it to find upcoming events. A chatbot could be a real game-changer, giving us a direct way to teach people about the bad effects of litter and empowering them to do something about it. By using this chatbot in our campaigns, I want to change the way our community gets involved with our environmental programs, making it simpler and more interesting for everyone to help make our city healthier and more sustainable.\r\n\r\n**Defining the Problem:** There is low community engagement in environmental initiatives, and people are not well-informed about the negative impacts of littering.\r\n\r\n> We've been asked to help develop a chatbot for this person. Before diving in, let's take a moment to **Prepare** and plan how we can develop this chatbot\r\n> \r\n> 1) How could we use a **System Prompt** when making the chatbot? What parts of this problem is a System Prompt most helpful for?\r\n> 1) How could we use **Retrieval** when making the chatbot? What parts of this problem is Retrieval most helpful for?",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19018,
+    "name_suffix": "2022",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "placeholder": "Write your response here!"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-05-04T02:53:07.074+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L8\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L8\"},{\"changed_at\":\"2024-05-10 23:15:40 +0000\",\"changed\":[\"long_instructions\",\"optional\",\"title\",\"placeholder\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-10 23:19:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-10 23:20:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-11 04:34:41 +0000\",\"changed\":[\"long_instructions\",\"title\",\"teacher_markdown\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-11 04:35:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-11 04:36:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-11 05:30:16 +0000\",\"changed\":[\"placeholder\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

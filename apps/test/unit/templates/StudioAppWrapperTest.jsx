@@ -1,11 +1,13 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../util/reconfiguredChai';
-import {UnconnectedStudioAppWrapper as StudioAppWrapper} from '@cdo/apps/templates/StudioAppWrapper';
+
 import FixZoomHelper from '@cdo/apps/templates/FixZoomHelper';
 import HideToolbarHelper from '@cdo/apps/templates/HideToolbarHelper';
 import RotateContainer from '@cdo/apps/templates/RotateContainer';
 import StudioAppIdleTimer from '@cdo/apps/templates/StudioAppIdleTimer';
+import {UnconnectedStudioAppWrapper as StudioAppWrapper} from '@cdo/apps/templates/StudioAppWrapper';
+
+import {expect} from '../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   assetUrl: () => '/',

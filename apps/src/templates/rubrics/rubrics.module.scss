@@ -1,24 +1,65 @@
-@import 'color.scss';
-@import 'font.scss';
+@import 'color';
+@import 'font';
+@import '@cdo/apps/componentLibrary/common/styles/mixins';
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 50px rgba(90 153 212 / 0);
+  }
+  100% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(90 153 212 / 0);
+  }
+}
 
 .floatingActionButton {
   position: fixed;
   left: 10px;
   bottom: 48px;
 
-  height: 60px;
-  width: 60px;
-  background-size: 60px;
+  height: 55px;
+  width: 55px;
+  background-size: 55px;
   padding: 0;
 
   border-width: 0;
   border-radius: 30px;
+
+  img {
+    opacity: 1;
+    border-radius: 30px;
+  }
+}
+
+.pulse {
+  animation: pulse 1.5s 1.7;
+  box-shadow: 0 0 0 0 rgba(90 153 212 / 0.5);
+}
+
+.taOverlay {
+  position: fixed;
+  left: 51px;
+  bottom: 97px;
+
+  height: 18px;
+  width: 28px;
+  background-size: 28px;
+  padding: 0;
+
+  border-width: 2px;
+  border-color: $background_gray;
+  border-radius: 15px;
+  border-style: solid;
 }
 
 .rubricContainer {
   position: fixed;
   left: 10px;
-  bottom: 116px;
+  bottom: 120px;
   z-index: 2000;
   width: 760px;
 }
@@ -70,19 +111,19 @@
 }
 
 .rubricContent {
-  border-radius: 0 0 4px 4px;
   border-right: 2px solid $neutral_dark;
   border-left: 2px solid $neutral_dark;
-  border-bottom: 2px solid $neutral_dark;
   background: $neutral_light;
-  box-shadow: 4px 4px 6px 0 rgba(0 0 0 / 0.25);
-
+  box-shadow: 0.25rem 0.25rem 0.375rem 0 rgba(0 0 0 / 0.25);
   height: 408px;
-
   overflow-x: hidden;
   overflow-y: auto;
-
   padding: 16px;
+
+  &:last-child {
+    border-radius: 0 0 4px 4px;
+    border-bottom: 2px solid $neutral_dark;
+  }
 }
 
 .visibleRubricContent {
@@ -96,18 +137,55 @@
   display: none;
 }
 
-.rubricContainerFooter {
+.rubricFooter {
+  background: $neutral_dark;
+  border-radius: 0 0 4px 4px;
+  border-bottom: 2px solid $neutral_dark;
+  color: $neutral_white;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  align-self: stretch;
+  flex-direction: row;
+  gap: 0.5rem;
+  padding: 0.5rem 2rem 0.5rem 1rem;
+}
+
+.rubricFooterContent {
+  flex: 1 1 100%;
+  padding: 0.25rem 0;
+
+  input[type='checkbox'] {
+    & + i::before {
+      background: $neutral_white;
+    }
+
+    & ~ span {
+      color: $neutral_white;
+    }
+  }
 }
 
 .submitToStudentButtonAndError {
   display: flex;
+  flex: 0 0 auto;
   flex-direction: column;
   align-items: flex-end;
-  gap: 0.5rem;
+  gap: 0.25rem;
+  align-self: stretch;
+
+  p {
+    color: $neutral_white;
+    line-height: 0.75rem;
+    margin: 0;
+    min-height: 0.75rem;
+    position: relative;
+    top: 0.1875rem;
+    font-size: 0.6875rem;
+  }
+}
+
+.rubricContainerFooter {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   align-self: stretch;
 }
 
@@ -181,6 +259,8 @@
   border-right: 2px solid $neutral_dark;
   border-left: 2px solid $neutral_dark;
 
+  padding-inline-start: 0.75rem;
+
   display: flex;
   height: 40px;
   justify-content: space-between;
@@ -190,11 +270,18 @@
 
 .rubricHeaderLeftSide {
   display: flex;
-  gap: 4px;
-  align-items: flex-start;
-  margin-left: 20px;
-  font-size: 14px;
-  font-weight: 600;
+  gap: 0.25rem;
+  align-items: center;
+
+  .aiBotOutlineIcon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  span {
+    @include label-two;
+    margin: 0;
+  }
 }
 
 .rubricHeaderRightSide {
@@ -356,6 +443,14 @@ h2.studentName {
   flex-direction: column;
   gap: 1rem;
   align-self: stretch;
+
+  .tipsDetailsSummary {
+    font-size: 0.875rem;
+
+    &:hover {
+      background-color: unset;
+    }
+  }
 }
 
 .learningGoalTips {
@@ -379,7 +474,9 @@ h2.studentName {
   display: flex;
   flex-direction: row;
   width: 100%;
+  height: 100px;
   gap: 8px;
+  min-height: 92px;
 }
 
 .evidenceLevelInnerDiv:first-child {
@@ -514,7 +611,7 @@ p.errorMessage {
   }
 }
 
-.aiAssessmentScoreText {
+p.aiAssessmentScoreText {
   strong::after {
     content: ' ';
   }
@@ -522,6 +619,10 @@ p.errorMessage {
 
 p.aiAssessmentEvidenceBlock {
   margin: 0;
+
+  + ul li p {
+    margin: 0;
+  }
 }
 
 .aiConfidenceBox {
@@ -538,7 +639,8 @@ p.aiAssessmentEvidenceBlock {
 }
 
 .aiConfidenceBoxText {
-  p {
+  p.labelThree {
+    @include label-three;
     white-space: nowrap;
     margin: 0;
   }
@@ -647,6 +749,7 @@ i.infoAlertIcon {
 }
 
 p.aiFeedbackRadioBoxText {
+  @include label-three;
   margin: 0;
   white-space: nowrap;
 }
@@ -719,7 +822,7 @@ p.aiFeedbackRadioBoxText {
   gap: 0.5rem;
 }
 
-.aiFeedbackReceived {
+em.aiFeedbackReceived {
   i {
     margin-right: 0.5rem;
   }
@@ -740,6 +843,11 @@ p.aiFeedbackRadioBoxText {
   justify-content: space-around;
   flex-direction: column;
   text-align: center;
+  gap: 0.75rem;
+
+  h3 {
+    margin: 0;
+  }
 }
 
 .learningGoalsWrapper {
@@ -763,35 +871,35 @@ p.aiFeedbackRadioBoxText {
   min-width: 100%;
 }
 
-.learningGoalButton {
-  background: none;
-  border: none;
-  align-self: center;
-  flex: 0 0 auto;
-}
-
 .learningGoalRing {
   flex: 0 0 auto;
 }
 
 button.learningGoalButton {
+  align-self: center;
+  background: none;
+  border: none;
   box-shadow: none;
-  border: 1px solid transparent;
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0.5rem;
 
   &:active,
   &:hover {
     box-shadow: none;
+    // The important is needed here to override the common button:active style
+    border: none !important;
   }
 }
 
-.learningGoalButtonLeft {
-  margin: 0 0.625rem 0 0;
-  padding: 0 0.5rem 0 0;
+button.learningGoalButtonLeft {
+  margin-left: 0.5rem;
+  margin-right: 0.625rem;
 }
 
-.learningGoalButtonRight {
-  margin: 0 0 0 0.625rem;
-  padding: 0 0 0 0.5rem;
+button.learningGoalButtonRight {
+  margin-left: 0.625rem;
+  margin-right: 0.5rem;
 }
 
 .learningGoalsHeader {
@@ -802,7 +910,7 @@ button.learningGoalButton {
   align-self: stretch;
   line-height: 154%;
   position: relative;
-  margin: 1rem 1rem 0 1rem;
+  margin: 1rem 0 0 0;
   padding: 0 0 0.75rem 0;
   border-bottom: 1px $light_gray_100 solid;
   overflow: hidden;
@@ -857,6 +965,16 @@ h5.learningGoalsHeaderTextBody {
     text-overflow: ellipsis;
     overflow: hidden;
   }
+}
+
+.learningGoalSummary {
+  display: flex;
+  flex-direction: row;
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: space-between;
+  border-bottom: 1px $light_gray_100 solid;
+  margin: 1rem 1rem 0 1rem;
 }
 
 .aiTokenContainer {
@@ -945,6 +1063,11 @@ p.evidenceLevelHeaderText {
     box-shadow: none;
     background-color: $light_gray_100;
   }
+
+  &:disabled {
+    border-color: $light_black;
+    background: $neutral_white;
+  }
 }
 
 .evidenceLevelSelected {
@@ -955,6 +1078,12 @@ p.evidenceLevelHeaderText {
   &:hover {
     box-shadow: none;
     background-color: $light_primary_700;
+  }
+
+  &:disabled {
+    border-color: $light_primary_500;
+    background: $light_primary_500;
+    color: $light_white;
   }
 }
 
@@ -972,24 +1101,37 @@ p.evidenceLevelHeaderText {
     box-shadow: 0 0 0 0.125rem $ai_rubric_cyan;
     background-color: $light_gray_100;
   }
+
+  &:disabled {
+    border-radius: 100px;
+    border: 1px solid $light_black;
+    background: $neutral_white;
+    gap: 10px;
+    padding: 3px 16px 0;
+    font-size: 0.875rem;
+    height: 32px;
+    box-shadow: 0 0 0 0.125rem $ai_rubric_cyan;
+  }
 }
 
 .fabBackground {
   display: flex;
   flex-direction: column;
   gap: 28px;
-  width: 724px;
-  padding: 16px 16px 32px 16px;
-  border-radius: 0 0 4px 4px;
-  border-right: 2px solid $neutral_dark;
-  border-bottom: 2px solid $neutral_dark;
-  border-left: 2px solid $neutral_dark;
+  padding: 1rem;
+  border-right: 0.125rem solid $neutral_dark;
+  border-left: 0.125rem solid $neutral_dark;
   background: $neutral_white;
-  box-shadow: 4px 4px 6px 0 rgb(0 0 0 / 0.25);
+  box-shadow: 0.25rem 0.25rem 0.375rem 0 rgba(0 0 0 / 0.25);
   height: 408px;
-
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: scroll;
+
+  &:last-child {
+    border-radius: 0 0 0.25rem 0.25rem;
+    border-bottom: 0.125rem solid $neutral_dark;
+  }
+
   h2 {
     margin-bottom: 0;
   }
@@ -1015,7 +1157,7 @@ p.evidenceLevelHeaderText {
 
 .infoAlertLeft {
   display: flex;
-  gap: 10px
+  gap: 10px;
 }
 
 .infoAlertRight {
@@ -1041,6 +1183,13 @@ button.infoAlertRight {
   align-self: stretch;
 }
 
+.settingsContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
 .settingsContainers {
   display: flex;
   flex-direction: column;
@@ -1058,6 +1207,10 @@ button.infoAlertRight {
   }
 }
 
+.aiSettingsContainer {
+  align-items: unset;
+}
+
 .runAiAllStatuses {
   display: flex;
   flex-direction: column;
@@ -1069,12 +1222,12 @@ button.infoAlertRight {
   gap: 1rem;
 }
 
-.detailsVisible {
+p.detailsVisible {
   display: inline;
   padding-inline-end: 1rem;
 }
 
-.detailsHidden {
+p.detailsHidden {
   display: none;
 }
 
@@ -1097,7 +1250,7 @@ button.infoAlertRight {
   border-radius: 20px;
   padding: 4px 10px 0;
   height: 22px;
-  display:inline;
+  display: inline;
   p {
     margin-bottom: 0;
   }
@@ -1108,9 +1261,9 @@ button.infoAlertRight {
   border-radius: 20px;
   padding: 5px 10px 0;
   height: 22px;
-  display:inline;
+  display: inline;
   p {
-    margin: 0,0,0,0;
+    margin: 0, 0, 0, 0;
   }
 }
 
@@ -1119,14 +1272,14 @@ button.infoAlertRight {
   border-radius: 20px;
   padding: 5px 10px 0;
   height: 22px;
-  display:inline;
+  display: inline;
   p {
-    margin: 0,0,0,0;
+    margin: 0, 0, 0, 0;
   }
 }
 
 .submitStatusText {
-  display:inline;
+  display: inline;
   padding-top: 3px;
   p {
     margin-bottom: 0;

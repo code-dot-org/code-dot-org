@@ -101,7 +101,7 @@ export const commands = {
             x: scale / 2 + scale * i,
             y: scale / 2 + scale * j,
           };
-          this.addSprite({animation, group, location, scale});
+          this.addSprite({animation, group, location, scale, minimumScale: 1});
         }
       }
     }
@@ -178,6 +178,7 @@ export const commands = {
         }
         default:
       }
+      spriteOptions.group = 'effects';
       const spriteId = this.addSprite(spriteOptions);
       const sprite = this.getSpriteArray({id: spriteId})[0];
       this.addBehavior(sprite, {

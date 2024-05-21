@@ -233,7 +233,8 @@ class Game < ApplicationRecord
       WEBLAB,
       DANCE,
       SPRITELAB,
-      POETRY
+      POETRY,
+      MUSIC
     ].include? app
   end
 
@@ -266,16 +267,12 @@ class Game < ApplicationRecord
     !([NETSIM].include? app)
   end
 
-  def use_firebase?
-    [APPLAB, GAMELAB].include? app
-  end
-
   def use_azure_speech_service?
     [APPLAB, GAMELAB, SPRITELAB].include? app
   end
 
   def channel_backed?
-    [APPLAB, GAMELAB, WEBLAB, PIXELATION, SPRITELAB, JAVALAB, POETRY, MUSIC].include? app
+    [APPLAB, GAMELAB, WEBLAB, PIXELATION, SPRITELAB, JAVALAB, POETRY, MUSIC, PYTHONLAB, WEBLAB2, AICHAT].include? app
   end
 
   def use_restricted_songs?

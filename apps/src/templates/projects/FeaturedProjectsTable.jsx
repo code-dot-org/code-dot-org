@@ -1,22 +1,25 @@
+import orderBy from 'lodash/orderBy';
 import PropTypes from 'prop-types';
 import React from 'react';
-import i18n from '@cdo/locale';
-import color from '../../util/color';
-import {ImageWithStatus} from '../ImageWithStatus';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
-import wrappedSortable from '../tables/wrapped_sortable';
-import orderBy from 'lodash/orderBy';
-import {featuredProjectDataPropType} from './projectConstants';
-import {FeaturedProjectStatus} from '@cdo/apps/util/sharedConstants';
-import {FEATURED_PROJECT_TYPE_MAP} from './projectTypeMap';
+
+import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
+import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
+import experiments from '@cdo/apps/util/experiments';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
+import {FeaturedProjectStatus} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
+
+import color from '../../util/color';
+import {ImageWithStatus} from '../ImageWithStatus';
 import QuickActionsCell from '../tables/QuickActionsCell';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
-import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
-import HttpClient from '@cdo/apps/util/HttpClient';
-import experiments from '@cdo/apps/util/experiments';
-import SimpleDropdown from '@cdo/apps/componentLibrary/simpleDropdown/SimpleDropdown';
-import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
+import wrappedSortable from '../tables/wrapped_sortable';
+
+import {featuredProjectDataPropType} from './projectConstants';
+import {FEATURED_PROJECT_TYPE_MAP} from './projectTypeMap';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 

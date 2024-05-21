@@ -18,6 +18,7 @@
  * Application assets
  *= require_self
  *= require_directory .
+ *= require_directory ./lti
  *
  * Shared
  *= require barlow-semi-condensed-font
@@ -896,6 +897,10 @@ $small-footer-standard-width: 400px;
       background-color: $neutral_dark;
       color: $neutral_light;
     }
+  }
+
+  .blocklyDropDownContent {
+    max-height: initial;
   }
 }
 
@@ -4084,6 +4089,10 @@ a {
   }
 }
 
+#teacher-dashboard {
+  overflow: auto;
+}
+
 #lti-integration-portal {
   $signup-info-background: #f7f7f7;
   $signup-info-border-color: #e5e5e5;
@@ -4182,3 +4191,20 @@ a {
 }
 
 @import "NpsSurveyBlock";
+
+// cm prefixed classes are from codemirror
+.cm-gutters {
+  margin: 1px;
+}
+
+.cm-scroller {
+  overflow: auto;
+}
+
+.cm-wrap {
+  height: 100%;
+}
+
+.cm-editor {
+  height: 100%;
+}

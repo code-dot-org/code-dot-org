@@ -1,13 +1,16 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import RollupLessonEntrySection from '@cdo/apps/templates/courseRollupPages/RollupLessonEntrySection';
-import {courseData} from './rollupTestData';
-import i18n from '@cdo/locale';
 import {Provider} from 'react-redux';
+
 import {getStore} from '@cdo/apps/redux';
+import RollupLessonEntrySection from '@cdo/apps/templates/courseRollupPages/RollupLessonEntrySection';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import LessonStandards from '@cdo/apps/templates/lessonOverview/LessonStandards';
+import i18n from '@cdo/locale';
+
+import {expect} from '../../../util/reconfiguredChai';
+
+import {courseData} from './rollupTestData';
 
 describe('RollupLessonEntrySection', () => {
   let defaultProps;

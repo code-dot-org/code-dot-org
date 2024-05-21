@@ -89,24 +89,7 @@ class SchoolInfo < ApplicationRecord
 
   def sync_from_schools
     # If a SchoolInfo is linked to a School then the SchoolInfo pulls its data from the School
-    # It seems like there is some code that is passing in mismatched data at times.
-    # As of Nov. 2, 2017 there were 7 rows in school_infos with non-null school_id and conflicting
-    # data between schools and school_infos. Until we better understand what is causing that we don't want
-    # to flat out fail if we get conflicting inputs. Instead we overwrite the passed in fields with what
-    # is on the School and report the mismatch to HoneyBadger.
     unless school.nil? && school_id.nil?
-      original = {}
-      original[:country] = country
-      original[:school_type] = school_type
-      original[:state] = state
-      original[:zip] = zip
-      original[:school_district_id] = school_district_id
-      original[:school_district_other] = school_district_other
-      original[:school_district_name] = school_district_name
-      original[:school_other] = school_other
-      original[:school_name] = school_name
-      original[:full_address] = full_address
-
       self.country = 'US' # Everything in SCHOOLS is a US school
       self.school_type = school.school_type
       self.state = school.state
@@ -118,21 +101,6 @@ class SchoolInfo < ApplicationRecord
       self.school_name = nil
       self.full_address = nil
       self.validation_type = VALIDATION_FULL
-
-      # Report if we are overriding a non-nil value that was originally passed in
-      something_overwritten = original.map {|key, value| value && value != self[key]}.reduce {|acc, b| acc || b}
-      if something_overwritten
-        Honeybadger.notify(
-          error_message: "Overwriting passed in data for new SchoolInfo",
-          error_class: "SchoolInfo.sync_from_schools",
-          context: {
-            original_input: original,
-            school_id: school.id
-          }
-        )
-        # Don't interrupt callback chain by returning false
-        return nil
-      end
     end
   end
 

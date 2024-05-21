@@ -964,7 +964,7 @@
   },
   "https://studio.code.org/s/coursed-2023/lessons/14/levels/14": {
     "short_instructions": "Collect all the nectar and make all the honey.",
-    "long_instructions": "Collect all of the nectar and make all of the honey. You can only collect nectar from flowers and make honey from honeycombs. Check every space to see if there is a flower or honeycomb.",
+    "long_instructions": "Collect all of the nectar and make all of the honey. You can only collect nectar from flowers and make honey from honeycombs. Check every space to see if there is a flower or honeycomb.\n\nHint: The light green squares represent obstacles that the bee must move around.",
     "authored_hints": {
       "courseD_bee_conditionals_challenge1_a": "Can you find a path that reaches every flower and honeycomb without hitting any trees? The best path is a spiral.",
       "courseD_bee_conditionals_challenge1_b": "In this puzzle, each space could have a flower, a honey comb, or nothing.  That means you can repeat your `if/else` conditional at each square."

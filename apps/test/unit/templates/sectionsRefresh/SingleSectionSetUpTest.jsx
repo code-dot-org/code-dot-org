@@ -1,9 +1,11 @@
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow, mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import SingleSectionSetUp from '@cdo/apps/templates/sectionsRefresh/SingleSectionSetUp';
 import sinon from 'sinon';
+
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import SingleSectionSetUp from '@cdo/apps/templates/sectionsRefresh/SingleSectionSetUp';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('SingleSectionSetUp', () => {
   it('calls updateSection when name is updated', () => {

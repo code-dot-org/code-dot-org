@@ -1,14 +1,16 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import Button from '@cdo/apps/templates/Button';
+
 import {
   Heading2,
   BodyOneText,
   BodyThreeText,
   BodyFourText,
 } from '@cdo/apps/componentLibrary/typography';
+import Button from '@cdo/apps/templates/Button';
+
 import styles from './twoColumnActionBlock.module.scss';
-import classNames from 'classnames';
 
 export default function TwoColumnActionBlock({
   id,
@@ -20,13 +22,22 @@ export default function TwoColumnActionBlock({
   marginBottom = '64px',
 }) {
   return (
-    <div id={id} className={styles.container}>
+    <div
+      id={id}
+      className={styles.container}
+      data-testid="two-column-action-block"
+    >
       {heading && <Heading2>{heading}</Heading2>}
       <div
         className={styles.actionBlockWrapper}
         style={{marginBottom: marginBottom}}
       >
-        <img src={imageUrl} alt="" className={styles.image} />
+        <img
+          src={imageUrl}
+          alt=""
+          className={styles.image}
+          data-testid="two-column-action-block-img"
+        />
         <div className={styles.contentWrapper}>
           {subHeading && (
             <BodyOneText

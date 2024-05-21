@@ -64,7 +64,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-14T20:47:51.386+00:00\",\"changed\":[\"cloned from \\\"courseA_EOC_playlab_fantasy2022\\\"\"],\"cloned_from\":\"courseA_EOC_playlab_fantasy2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-14T20:47:51.386+00:00\",\"changed\":[\"cloned from \\\"courseA_EOC_playlab_fantasy2022\\\"\"],\"cloned_from\":\"courseA_EOC_playlab_fantasy2022\"},{\"changed_at\":\"2024-05-01 17:45:36 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]"
 }]]></config>
   <blocks>
     <initialization_blocks>
@@ -109,12 +109,15 @@
           <field name="SPRITE">0</field>
           <field name="DIR">1</field>
         </block>
-        <block type="studio_playSound">
-          <field name="SOUND">random</field>
-        </block>
         <block type="studio_saySpriteChoices">
           <field name="SPRITE">0</field>
           <field name="VALUE">Hi there.</field>
+        </block>
+        <block type="studio_playSound">
+          <field name="SOUND">random</field>
+        </block>
+        <block type="studio_wait">
+          <field name="VALUE">1000</field>
         </block>
         <block type="studio_setBackground">
           <field name="VALUE">"city"</field>

@@ -3,23 +3,27 @@ title 'Making Counters'
 
 
 markdown <<MARKDOWN
-##Planning Your AI Poster
+##Using AI Tools in School
 
 <div>
 <img style=" float: left; width:25%; padding-top:10px" src="https://images.code.org/dfa6afa75c3ed875d9f83a42e6452bbc-image-1709763830890.png" />
 
 <div style="float: left; width: 70%; padding-left:20px">
 <h4>
-<strong>It's time to make your plan!</strong>
+<strong>It's time to explore the data!</strong>
 </h4>
 
->You should include:
-> - The person you chose
-> - The decision they have to make
-> - What data their AI tool should be trained on 
-> - One to two sentences on what this person should know about AI 
+**Step 1. Check out the student dataset:**  <a href="https://docs.google.com/spreadsheets/d/1t44C0ScGvgajfOEE6VE8sl7OQEJbgT1kvGDCnDgOPys/preview
+" target="_blank"> Student Dataset</a>.
 
-**Here is a planning guide you can copy and fill out yourself:**  <a href="https://docs.google.com/document/d/1BJxKijkXrff8jm37xkPNYY7Lcx0QQjKGLJqoFPQggU8/template/preview" target="_blank"> Planning Your AI Poster Guide</a>.
+**Step 2. Answer the questions in the handout:**  <a href="https://docs.google.com/document/d/1geTnFqtszszfH7Q4_8ZORTAxvh38b-HuLpV1ezy7mgI/preview" target="_blank"> Using AI Tools in School</a>.
 
+>Make sure to answer:
+> - Which categories in the dataset do you think are the most important to consider? Why?
+> - What other data would you want to train the AI tool on? How would you collect that data?
+> - What data would you want to remove or ignore from the dataset? Why?
+> - How will you know if the tool was successful?
+
+**Step 3. When you're done answering the questions above, go to the second page of the handout. Write a letter to your principal explaining why you think AI tools should or shouldn't be used to make decisions in school.** 
 </div>
 MARKDOWN

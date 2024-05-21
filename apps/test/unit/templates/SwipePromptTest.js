@@ -1,9 +1,11 @@
-import {expect} from '../../util/reconfiguredChai';
-import React from 'react';
-import {shallow} from 'enzyme';
-import {UnconnectedSwipePrompt as SwipePrompt} from '@cdo/apps/templates/SwipePrompt';
-import sinon from 'sinon';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import cookies from 'js-cookie';
+import React from 'react';
+import sinon from 'sinon';
+
+import {UnconnectedSwipePrompt as SwipePrompt} from '@cdo/apps/templates/SwipePrompt';
+
+import {expect} from '../../util/reconfiguredChai';
 
 const visibleOverlayProps = {
   buttonsAreVisible: true,

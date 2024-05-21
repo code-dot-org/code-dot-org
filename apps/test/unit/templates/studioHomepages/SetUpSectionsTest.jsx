@@ -1,11 +1,12 @@
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow, mount} from 'enzyme';
 import sinon from 'sinon';
-import {expect} from '../../../util/reconfiguredChai';
-import Button from '@cdo/apps/templates/Button';
+
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
 import {UnconnectedSetUpSections as SetUpSections} from '@cdo/apps/templates/studioHomepages/SetUpSections';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('SetUpSections', () => {
   it('renders as expected', () => {
@@ -30,7 +31,7 @@ describe('SetUpSections', () => {
     const wrapper = mount(<SetUpSections beginEditingSection={spy} />);
     expect(spy).not.to.have.been.called;
 
-    wrapper.find(Button).simulate('click', {fake: 'event'});
+    wrapper.find('button').simulate('click', {fake: 'event'});
     expect(spy).to.have.been.calledOnce;
     expect(spy.firstCall.args).to.be.empty;
   });
@@ -39,7 +40,7 @@ describe('SetUpSections', () => {
     const wrapper = mount(<SetUpSections beginEditingSection={() => {}} />);
     const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
 
-    wrapper.find(Button).simulate('click', {fake: 'event'});
+    wrapper.find('button').simulate('click', {fake: 'event'});
     expect(analyticsSpy).to.have.been.calledOnce;
     expect(analyticsSpy.firstCall.args).to.deep.eq([
       'Section Setup Started',

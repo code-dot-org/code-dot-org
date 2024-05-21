@@ -1,9 +1,11 @@
-import {assert} from '../../../util/reconfiguredChai';
-import React from 'react';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import Immutable from 'immutable';
-import {shallow} from 'enzyme';
+import React from 'react';
+
 import {UnconnectedProgressLessonTeacherInfo as ProgressLessonTeacherInfo} from '@cdo/apps/templates/progress/ProgressLessonTeacherInfo';
 import {fakeLesson} from '@cdo/apps/templates/progress/progressTestHelpers';
+
+import {assert} from '../../../util/reconfiguredChai';
 
 const MOCK_SECTION = {
   id: 2,

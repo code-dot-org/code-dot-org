@@ -1,8 +1,10 @@
-import {assert} from '../../util/reconfiguredChai';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
-import i18n from '@cdo/locale';
+
 import {UnconnectedUnassignSectionButton as UnassignSectionButton} from '@cdo/apps/templates/UnassignSectionButton';
+import i18n from '@cdo/locale';
+
+import {assert} from '../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   sectionId: 1,

@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-12 21:54:40 UTC",
+    "serialized_at": "2024-05-09 18:18:32 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -123,8 +123,8 @@
       "relative_position": 4,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "Students explore the limits of what algorithms are able to compute. First they use a widget that exposes students to the Traveling Salesman Problem. After recognizing this problem can only be solved using an unreasonable time algorithm the develop their own good enough solutions that run more efficiently. Later in the lesson students watch a video about undecidable problems for which no algorithm can ever be developed to solve them.",
-        "preparation": "* Read through the slides\n* Preview the Traveling Salesman widgets\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-algorithms-lessons-1-5/36483) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/18GA3yy-ErT85wnWSl1bwhL-1Xh7N8FzTcFNR7Oa0W8k/edit?usp=sharing)",
+        "overview": "Students explore the limits of what algorithms are able to compute. First they use a widget that exposes students to the Traveling Salesperson Problem. After recognizing this problem can only be solved using an unreasonable time algorithm the develop their own good enough solutions that run more efficiently. Later in the lesson students watch a video about undecidable problems for which no algorithm can ever be developed to solve them.",
+        "preparation": "* Read through the slides\n* Preview the Traveling Salesperson widgets\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-algorithms-lessons-1-5/36483) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/18GA3yy-ErT85wnWSl1bwhL-1Xh7N8FzTcFNR7Oa0W8k/edit?usp=sharing)",
         "student_overview": "Explore two different kinds of problems at the limits of what a computer is capable of solving and learn the difference in how computer scientists respond."
       },
       "seeding_key": {
@@ -1347,9 +1347,9 @@
       "key": "d986e110-d8e2-47bc-8836-3fcd5641164e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Set Up:** Each student needs to have their journals and a pen or pencil. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Use the activity slides for this lesson to guide the activity on the limits of algorithms.\t\n\n| Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\n|---|---|\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms.svg) |**Say:** Today we are going to explore the Traveling Salesman Problem. |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms1_zZJMEDG.svg) |**Discuss:** How many different paths can you find to visit all of your friends' houses?<br><br> **Do This:** Students should sketch out different paths in their journals. Read through the rules together as a class. <br><br>**Rules:**<br><ul><li>You must start and end at your own house.</li><li>You can only visit each house once.</li></ul><br><br>**Discuss:** Students share their paths with a partner before discussing as a class. |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms2.svg) | **Say:** Take a look at some of these paths on the screen. You may have similar ones in your journal. <br><br> **Discuss:** What do you need to know to determine the best path?   |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms3.svg) | **Say:** Distance! If we know the distance between each house, we can make a better decision about which path to take. In this example, the first option is shortest, so that's the path we would choose. |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms4.svg) | **Discuss:** What if we had a lot more places to visit? How would we determine the best path? <br><br> **Discussion Goal:** The goal here is for students to come to the realization that they would need to explore all possible paths in order to determine which one is the best.   |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms5.svg) | **Say:** This is known as the Traveling Salesman Problem. For each new place to visit, the number of options for possible paths increases factorialy.  |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms6.svg) | **Say:** A factorial function is written with the letter \"n\" followed by an explanation point. Here's how n! works: Multiply all whole numbers from the given number down to the number 1.<br><br>**Note:** Talk through the examples and the table. The goal here isn't for students to memorize the math, but to understand that with each new house added, the number of potential paths that have to be checked expands very quickly.  | \n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---AlgorithmsDecisions.svg) | **Say:** The Traveling Salesman is an Optimization Problem. It's not a Decision Problem. We know there is a path. Now we must determine which is the shortest or most efficient path. |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms7.svg) | **Say:** The Traveling Salesman Problem can be solved with an algorithm, which checks each possible option. <br><br> BUT, it would take massive amounts of computing power to compare every single option, especially as the number of homes to visit (otherwise known as nodes) increases. <br><br> Therefore, it would take an **unreasonable** amount of time for the solution to be calculated for most instances of the problem. \n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms8.svg) | **Say:** Welcome to **heuristics**! Heuristics provide a good enough solution to a problem when an actual solution is impractical or impossible. |\n\n<br><br>\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students now navigate to Level 1 on Code Studio where they will use the Traveling Salesman Widget to find the \"best\" path to visit all nodes. \n\n* In their journal, students should write down a plan or **heuristic** for choosing a good path. \n\n**Discuss:** In pairs, students should share their heuristics and make adjustments to their own as needed. \n",
-        "name": "Traveling Salesman    \r",
-        "progression_name": "Widget: Traveling Salesman"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Set Up:** Each student needs to have their journals and a pen or pencil. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Use the activity slides for this lesson to guide the activity on the limits of algorithms.\t\n\n| Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\n|---|---|\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms.svg) |**Say:** Today we are going to explore the Traveling Salesperson Problem. |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms1_zZJMEDG.svg) |**Discuss:** How many different paths can you find to visit all of your friends' houses?<br><br> **Do This:** Students should sketch out different paths in their journals. Read through the rules together as a class. <br><br>**Rules:**<br><ul><li>You must start and end at your own house.</li><li>You can only visit each house once.</li></ul><br><br>**Discuss:** Students share their paths with a partner before discussing as a class. |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms2.svg) | **Say:** Take a look at some of these paths on the screen. You may have similar ones in your journal. <br><br> **Discuss:** What do you need to know to determine the best path?   |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms3.svg) | **Say:** Distance! If we know the distance between each house, we can make a better decision about which path to take. In this example, the first option is shortest, so that's the path we would choose. |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms4.svg) | **Discuss:** What if we had a lot more places to visit? How would we determine the best path? <br><br> **Discussion Goal:** The goal here is for students to come to the realization that they would need to explore all possible paths in order to determine which one is the best.   |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms5.svg) | **Say:** This is known as the Traveling Salesperson Problem. For each new place to visit, the number of options for possible paths increases factorialy.  |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms6.svg) | **Say:** A factorial function is written with the letter \"n\" followed by an explanation point. Here's how n! works: Multiply all whole numbers from the given number down to the number 1.<br><br>**Note:** Talk through the examples and the table. The goal here isn't for students to memorize the math, but to understand that with each new house added, the number of potential paths that have to be checked expands very quickly.  | \n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---AlgorithmsDecisions.svg) | **Say:** The Traveling Salesperson is an Optimization Problem. It's not a Decision Problem. We know there is a path. Now we must determine which is the shortest or most efficient path. |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms7.svg) | **Say:** The Traveling Salesperson Problem can be solved with an algorithm, which checks each possible option. <br><br> BUT, it would take massive amounts of computing power to compare every single option, especially as the number of homes to visit (otherwise known as nodes) increases. <br><br> Therefore, it would take an **unreasonable** amount of time for the solution to be calculated for most instances of the problem. \n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms8.svg) | **Say:** Welcome to **heuristics**! Heuristics provide a good enough solution to a problem when an actual solution is impractical or impossible. |\n\n<br><br>\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students now navigate to Level 1 on Code Studio where they will use the Traveling Salesperson Widget to find the \"best\" path to visit all nodes. \n\n* In their journal, students should write down a plan or **heuristic** for choosing a good path. \n\n**Discuss:** In pairs, students should share their heuristics and make adjustments to their own as needed. \n",
+        "name": "Traveling Salesperson",
+        "progression_name": "Widget: Traveling Salesperson "
       },
       "seeding_key": {
         "activity_section.key": "d986e110-d8e2-47bc-8836-3fcd5641164e",
@@ -1360,8 +1360,8 @@
       "key": "2021f6b7-ac80-4a94-854d-f61dd58b9c11",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Now students navigate to Level 2 and use the Widget: Traveling Salesman with Random Nodes. Students test their heuristic on this widget, keeping a log in their journal of the distance for the path their heuristic finds and the best distance the student finds not using the stated heuristic (i.e. clicking around, or \"brute force\"). \n\n* Note: Click reset to try different paths on the same level. Click \"New Level\" to generate at new random assortment of nodes.",
-        "progression_name": "Widget: Traveling Salesman - Random Nodes"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Now students navigate to Level 2 and use the Widget: Traveling Salesperson with Random Nodes. Students test their heuristic on this widget, keeping a log in their journal of the distance for the path their heuristic finds and the best distance the student finds not using the stated heuristic (i.e. clicking around, or \"brute force\"). \n\n* Note: Click reset to try different paths on the same level. Click \"New Level\" to generate at new random assortment of nodes.",
+        "progression_name": "Widget: Traveling Salesperson - Random Nodes"
       },
       "seeding_key": {
         "activity_section.key": "2021f6b7-ac80-4a94-854d-f61dd58b9c11",
@@ -1405,7 +1405,7 @@
       "key": "313e0085-21f3-484e-b247-2b6f4aad746b",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The Traveling Salesman Problem is an optimization problem. We are attempting to find the best path. \r\n\r\nIt's also unreasonable because there is not an algorithm that can solve the problem in a reasonable amount of time.\r\n\r\nWe need to use a heuristic to come up wtih a solution that is \"good enough\" for most instances of the problem.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The Traveling Salesperson Problem is an optimization problem. We are attempting to find the best path. \n\nIt's also unreasonable because there is not an algorithm that can solve the problem in a reasonable amount of time.\n\nWe need to use a heuristic to come up wtih a solution that is \"good enough\" for most instances of the problem.",
         "remarks": true
       },
       "seeding_key": {
@@ -1853,6 +1853,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Pre-Unit Pulse - Algorithms Q1_2024"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -1875,6 +1878,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Pre-Unit Pulse - Algorithms Q2_2024"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -1897,6 +1903,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U6 L01 Algorithms vs Problems_2024"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -1919,6 +1928,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U6L2 Ticket Generator_2024"
+        ],
         "progression": "Widget: Ticket Generator"
       },
       "bonus": false,
@@ -1941,6 +1953,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U6L2 CFU Binary Search Steps2022_2024"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -1963,6 +1978,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U6L2 CFU Efficiency and Algorithms2022_2024"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -1985,6 +2003,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U6L3 BigO Widget_2024"
+        ],
         "progression": "Widget: Reasonable or Unreasonable?"
       },
       "bonus": false,
@@ -2007,6 +2028,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U6L3 CFU Reasonable vs Unreasonable2022_2024"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2029,6 +2053,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U6 L03 Evaluate Reasonable or Not_2024"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2051,7 +2078,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Widget: Traveling Salesman"
+        "level_keys": [
+          "CSP U6L4 Traveling Salesman_2024"
+        ],
+        "progression": "Widget: Traveling Salesperson "
       },
       "bonus": false,
       "seeding_key": {
@@ -2073,7 +2103,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Widget: Traveling Salesman - Random Nodes"
+        "level_keys": [
+          "CSP U6L4 Random Traveling Salesman_2024"
+        ],
+        "progression": "Widget: Traveling Salesperson - Random Nodes"
       },
       "bonus": false,
       "seeding_key": {
@@ -2095,6 +2128,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U6L4 CFU Reason for Heuristics2022_2024"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2117,6 +2153,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U6 L04 Unreasonable vs Undecidable_2024"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2139,6 +2178,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U6L5 CFU Calculate Speedup2022_2024"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2161,6 +2203,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U6 L05 Speedup Forever_2024"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2183,6 +2228,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csp6_2024"
+        ],
         "progression": "End-of-Unit Survey"
       },
       "bonus": false,
@@ -2205,6 +2253,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 6 AP-Style Assessment 2022_2024"
+        ],
         "progression": "Unit Exam - Algorithms"
       },
       "bonus": false,
@@ -2227,6 +2278,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey_csp10_2024"
+        ],
         "progression": "Post-Course Survey Instructions"
       },
       "bonus": false,
@@ -2465,7 +2519,7 @@
   "resources": [
     {
       "name": "Algorithmic Efficiency",
-      "url": "https://docs.google.com/presentation/d/1veCmcrjJbloASd7zMXOvmUt6QxuWFik_EwjC41U-h60/template/preview",
+      "url": "https://docs.google.com/presentation/d/1dkeXRI7h444exZ-NxeM0wxcs26jMTYeh8bfCiQEQeuk/template/preview",
       "key": "algorithmic_efficiency",
       "properties": {
         "audience": "Teacher",
@@ -2477,7 +2531,7 @@
     },
     {
       "name": "Algorithms Solve Problems",
-      "url": "https://docs.google.com/presentation/d/1m-AeFFpQ6oNfVzHNL9OqDmn3ocoZw8rj6ZanCFlgq_Q/template/preview",
+      "url": "https://docs.google.com/presentation/d/1Q7XAfpV8TyupvayMkhCz9V1-NOthun-I63FpoP17Y60/template/preview",
       "key": "algorithms_solve_problems",
       "properties": {
         "audience": "Teacher",
@@ -2489,7 +2543,7 @@
     },
     {
       "name": "Algorithms (Unit Slides)",
-      "url": "https://docs.google.com/presentation/d/1bJ1adhM_5CfPlIHdlEZbhPITohq2PrE_byGwSZM2XqM/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1R9n57GGvVd8HAbHqU77N86FDGBUaMjkmYyY11vPL6tg/template/preview",
       "key": "algorithms_unit_slides_",
       "properties": {
         "audience": "Teacher",
@@ -2567,12 +2621,11 @@
       }
     },
     {
-      "name": "CSP Unit 10 - Lesson 4 - The Limits of Algorithms",
-      "url": "https://docs.google.com/presentation/d/1PCnIYmmx_CIXXbiDaXwmTEqVluv8CKI33LY8x5THPWo/copy",
+      "name": "The Limits of Algorithms",
+      "url": "https://docs.google.com/presentation/d/1KrS64CEchE0WBOGo3sp-cvs3yDDxjRylky7H0mIxxV4/template/preview",
       "key": "csp_unit_10_-_lesson_4_-_the_limits_of_algorithms",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1PCnIYmmx_CIXXbiDaXwmTEqVluv8CKI33LY8x5THPWo/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -2580,12 +2633,11 @@
       }
     },
     {
-      "name": "CSP Unit 10 - Lesson 5 - Distributed Algorithms",
-      "url": "https://docs.google.com/presentation/d/13eO3OhjnXLrb3KXz0Lld_fi0EDqdC8h2hNAZhe50Sc8/copy",
+      "name": "Distributed Algorithms",
+      "url": "https://docs.google.com/presentation/d/16APZqf7GCRmOeoDvp3x9Y_mgArzomlxECbPUZocgcr8/template/preview",
       "key": "csp_unit_10_-_lesson_5_-_distributed_algorithms",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/13eO3OhjnXLrb3KXz0Lld_fi0EDqdC8h2hNAZhe50Sc8/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -2593,12 +2645,11 @@
       }
     },
     {
-      "name": "CSP Unit 10 - Lesson 6 - Assessment Day",
-      "url": "https://docs.google.com/presentation/d/1gQvfTP1M4G32E4kPG3GuEzPqkX_IC0DU3EHiY5Jod4o/copy",
+      "name": "Assessment Day",
+      "url": "https://docs.google.com/presentation/d/1j_uVygDdLBf9JRCxspJf8m-gyBmshhVsYA7DARwHE5w/template/preview",
       "key": "csp_unit_10_-_lesson_6_-_assessment_day",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1gQvfTP1M4G32E4kPG3GuEzPqkX_IC0DU3EHiY5Jod4o/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -2704,7 +2755,7 @@
     },
     {
       "name": "Unreasonable Time",
-      "url": "https://docs.google.com/presentation/d/17cWIyCFMJIuGcUoI8eRAkWAK9uP1iAeFJyAhEvCMtG0/template/preview",
+      "url": "https://docs.google.com/presentation/d/1lsU9GaOZBxtt8LueQnhJUcI5Rq8RtoNWcy7pkDGmy58/template/preview",
       "key": "unreasonable_time_1",
       "properties": {
         "audience": "Teacher",

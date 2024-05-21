@@ -1,7 +1,10 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+
 import RollupLessonEntry from '@cdo/apps/templates/courseRollupPages/RollupLessonEntry';
+
+import {expect} from '../../../util/reconfiguredChai';
+
 import {courseData} from './rollupTestData';
 
 describe('RollupLessonEntry', () => {

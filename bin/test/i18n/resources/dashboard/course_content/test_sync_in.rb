@@ -595,6 +595,74 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
     assert_equal expected_result, sync_in_instance.send(:get_i18n_strings, level)
   end
 
+  def test_i18n_strings_collection_for_level_validations
+    sync_in_instance = I18n::Resources::Dashboard::CourseContent::SyncIn.new
+
+    level = FactoryBot.build(:music)
+
+    level.validations = [
+      {
+        'conditions' => [{'name' => 'condition-1', 'value' => 1}],
+        'message' => 'message-1',
+        'next' => true,
+        'key' => 'validation-1'
+      },
+      {
+        'conditions' => [],
+        'message' => 'message-2',
+        'next' => false,
+        'key' => 'validation-2',
+      }
+    ]
+
+    expected_result = {
+      'validations' => {
+        'validation-1' => 'message-1',
+        'validation-2' => 'message-2'
+      }
+    }
+
+    assert_equal expected_result, sync_in_instance.send(:get_i18n_strings, level)
+
+    level.validations = []
+    expected_result = {}
+    assert_equal expected_result, sync_in_instance.send(:get_i18n_strings, level)
+  end
+
+  def test_i18n_strings_collection_for_level_panels
+    sync_in_instance = I18n::Resources::Dashboard::CourseContent::SyncIn.new
+
+    level = FactoryBot.build(:panels)
+
+    level.panels = [
+      {
+        'text' => 'text-1',
+        'imageUrl' => 'imageUrl-1',
+        'key' => 'panel-1',
+        'layout' => 'text-bottom-left'
+      },
+      {
+        'text' => 'text-2',
+        'imageUrl' => 'imageUrl-2',
+        'key' => 'panel-2',
+        'nextUrl' => 'nextUrl-2'
+      },
+    ]
+
+    expected_result = {
+      'panels' => {
+        'panel-1' => 'text-1',
+        'panel-2' => 'text-2'
+      }
+    }
+
+    assert_equal expected_result, sync_in_instance.send(:get_i18n_strings, level)
+
+    level.panels = []
+    expected_result = {}
+    assert_equal expected_result, sync_in_instance.send(:get_i18n_strings, level)
+  end
+
   def test_yml_file_writting
     sync_in_instance = I18n::Resources::Dashboard::CourseContent::SyncIn.new
 
@@ -629,6 +697,8 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
       'long_instructions'  => 'expected_long_instructions',
       'teacher_markdown'   => 'expected_teacher_markdown',
       'authored_hints'     => 'expected_authored_hints',
+      'validations'        => 'expected_validations',
+      'panels'             => 'expected_panels',
       'contained levels'   => [
         {
           'unexpected_key'     => 'unexpected_value',
@@ -648,6 +718,8 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
       'long_instructions'  => 'expected_long_instructions',
       'teacher_markdown'   => 'expected_teacher_markdown',
       'authored_hints'     => 'expected_authored_hints',
+      'validations'        => 'expected_validations',
+      'panels'             => 'expected_panels',
       'contained levels'   => [
         {
           'short_instructions' => 'expected_short_instructions',

@@ -1,12 +1,15 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {assert, expect} from '../../../util/reconfiguredChai';
-import RecentCourses from '@cdo/apps/templates/studioHomepages/RecentCourses';
+
 import ContentContainer from '@cdo/apps/templates/ContentContainer';
-import SetUpCourses from '@cdo/apps/templates/studioHomepages/SetUpCourses';
 import CourseCard from '@cdo/apps/templates/studioHomepages/CourseCard';
+import RecentCourses from '@cdo/apps/templates/studioHomepages/RecentCourses';
 import SeeMoreCourses from '@cdo/apps/templates/studioHomepages/SeeMoreCourses';
+import SetUpCourses from '@cdo/apps/templates/studioHomepages/SetUpCourses';
 import TopCourse from '@cdo/apps/templates/studioHomepages/TopCourse';
+
+import {assert, expect} from '../../../util/reconfiguredChai';
+
 import {
   courses,
   moreCourses,

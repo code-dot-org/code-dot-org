@@ -3,9 +3,11 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
+
+import i18n from '@cdo/tutorialExplorer/locale';
+
 import FilterGroupContainer from './filterGroupContainer';
 import {TutorialsOrgName} from './util';
-import i18n from '@cdo/tutorialExplorer/locale';
 
 export default class FilterGroupOrgNames extends React.Component {
   static propTypes = {

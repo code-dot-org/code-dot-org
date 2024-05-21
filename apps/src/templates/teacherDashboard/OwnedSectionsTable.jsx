@@ -1,24 +1,28 @@
+import {orderBy, sortBy, random} from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import color from '@cdo/apps/util/color';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
-import i18n from '@cdo/locale';
-import wrappedSortable from '../tables/wrapped_sortable';
-import {orderBy, sortBy, random} from 'lodash';
-import {getSectionRows} from './teacherSectionsRedux';
-import {sortableSectionShape} from './shapes';
+
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
-import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
-import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
-import SectionActionDropdown from './SectionActionDropdown';
 import Button from '@cdo/apps/templates/Button';
-import {stringifyQueryParams} from '../../utils';
+import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import color from '@cdo/apps/util/color';
 import {
   StudentGradeLevels,
   SectionLoginType,
-} from '@cdo/apps/util/sharedConstants';
+} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
+
+import {stringifyQueryParams} from '../../utils';
+import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
+import wrappedSortable from '../tables/wrapped_sortable';
+
+import SectionActionDropdown from './SectionActionDropdown';
+import {sortableSectionShape} from './shapes';
+import {getSectionRows} from './teacherSectionsRedux';
+
 import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
 
 /** @enum {number} */
@@ -30,11 +34,6 @@ export const COLUMNS = {
   STUDENTS: 4,
   LOGIN_INFO: 5,
   EDIT_DELETE: 6,
-};
-
-const participantNames = {
-  facilitator: i18n.participantTypeFacilitatorTitle(),
-  teacher: i18n.participantTypeTeacherTitle(),
 };
 
 // Cell formatters for sortable OwnedSectionsTable.
@@ -101,7 +100,7 @@ export const loginInfoFormatter = function (loginType, {rowData}) {
   } else if (rowData.loginType === OAuthSectionTypes.google_classroom) {
     sectionCode = i18n.loginTypeGoogleClassroom();
   } else if (rowData.loginType === SectionLoginType.lti_v1) {
-    sectionCode = i18n.loginTypeLti();
+    sectionCode = rowData.loginTypeName;
   } else {
     sectionCode = rowData.code;
   }
@@ -160,7 +159,6 @@ class OwnedSectionsTable extends Component {
   static propTypes = {
     sectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     onEdit: PropTypes.func.isRequired,
-    isPlSections: PropTypes.bool,
 
     //Provided by redux
     sectionRows: PropTypes.arrayOf(sortableSectionShape).isRequired,
@@ -179,7 +177,7 @@ class OwnedSectionsTable extends Component {
   determineSorter = (data, activeColumn, directionArray) => {
     // If we are sorting on grade
     const gradeCol = COLUMNS.GRADE.toString();
-    if (this.state.sortingColumns[gradeCol] && !this.props.isPlSections) {
+    if (this.state.sortingColumns[gradeCol]) {
       const mult = directionArray[0] === 'asc' ? 1 : -1;
       return sortBy(data, function (obj) {
         return (
@@ -196,13 +194,7 @@ class OwnedSectionsTable extends Component {
 
   gradeFormatter = (grades, {rowData}) => {
     const formattedGrades = rowData.grades ? rowData.grades.join(', ') : null;
-    return (
-      <div>
-        {this.props.isPlSections
-          ? participantNames[rowData.participantType]
-          : formattedGrades}
-      </div>
-    );
+    return <div>{formattedGrades}</div>;
   };
 
   actionCellFormatter = (temp, {rowData}) => {
@@ -264,13 +256,11 @@ class OwnedSectionsTable extends Component {
         },
       },
       {
-        property: this.props.isPlSections ? 'participantType' : 'grades',
+        property: 'grades',
         header: {
-          label: this.props.isPlSections ? i18n.participants() : i18n.grade(),
+          label: i18n.grade(),
           props: {
-            className: this.props.isPlSections
-              ? 'uitest-participant-type-header'
-              : 'uitest-grade-header',
+            className: 'uitest-grade-header',
             style: tableLayoutStyles.headerCell,
           },
           transforms: [sortable],

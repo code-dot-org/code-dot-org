@@ -1,21 +1,20 @@
+import {Meta, StoryFn} from '@storybook/react';
 import React, {useState, useCallback} from 'react';
-import CheckboxDropdown, {CheckboxDropdownProps} from './index';
-import {Meta, Story} from '@storybook/react';
 
 import {dropdownColors} from '@cdo/apps/componentLibrary/dropdown';
 
+import CheckboxDropdown, {CheckboxDropdownProps} from './index';
+
 export default {
   title: 'DesignSystem/Dropdown/Checkbox Dropdown', // eslint-disable-line storybook/no-title-property-in-meta
-  component: CheckboxDropdown,
+  component: CheckboxDropdown.type,
 } as Meta;
 
 //
 // TEMPLATE
 //
-const SingleTemplate: Story<CheckboxDropdownProps> = args => {
-  const [selectedValues, setValues] = useState(
-    (args.checkedOptions = [] as string[])
-  );
+const SingleTemplate: StoryFn<CheckboxDropdownProps> = args => {
+  const [selectedValues, setValues] = useState(args.checkedOptions as string[]);
   const onChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
       if (e.target.checked) {
@@ -53,7 +52,7 @@ const SingleTemplate: Story<CheckboxDropdownProps> = args => {
   );
 };
 
-const MultipleTemplate: Story<{
+const MultipleTemplate: StoryFn<{
   components: CheckboxDropdownProps[];
 }> = args => {
   const [values, setValues] = useState({} as Record<string, string[]>);
@@ -107,18 +106,7 @@ const MultipleTemplate: Story<{
             componentArg.onClearAll(e);
           };
 
-          return componentArg.color === 'white' ? (
-            <div style={{background: 'black', padding: 10}}>
-              <CheckboxDropdown
-                key={`${componentArg.name}`}
-                {...componentArg}
-                checkedOptions={values[componentArg.name]}
-                onChange={onChange}
-                onSelectAll={onSelectAll}
-                onClearAll={onClearAll}
-              />
-            </div>
-          ) : (
+          return (
             <CheckboxDropdown
               key={`${componentArg.name}`}
               {...componentArg}
@@ -155,7 +143,7 @@ DefaultCheckboxDropdown.args = {
 
 export const DisabledCheckboxDropdown = SingleTemplate.bind({});
 DisabledCheckboxDropdown.args = {
-  name: 'default-dropdown',
+  name: 'disabled-dropdown',
   allOptions: [
     {value: 'option-1', label: 'Option 1'},
     {value: 'option-2', label: 'Option 2'},
@@ -172,7 +160,7 @@ DisabledCheckboxDropdown.args = {
 
 export const WithDisabledOptionCheckboxDropdown = SingleTemplate.bind({});
 WithDisabledOptionCheckboxDropdown.args = {
-  name: 'default-dropdown',
+  name: 'withDisabledOption-dropdown',
   allOptions: [
     {value: 'option-1', label: 'Option 1', isOptionDisabled: true},
     {value: 'option-2', label: 'Option 2'},
@@ -186,6 +174,42 @@ WithDisabledOptionCheckboxDropdown.args = {
   onSelectAll: args => null,
   onClearAll: args => null,
   size: 'm',
+};
+
+export const ThickAndThinCheckboxDropdowns = MultipleTemplate.bind({});
+ThickAndThinCheckboxDropdowns.args = {
+  components: [
+    {
+      name: 'thick-dropdown',
+      allOptions: [
+        {value: 'option-1', label: 'Option 1'},
+        {value: 'option-2', label: 'Option 2'},
+      ],
+      checkedOptions: ['option-1'],
+      labelText: 'Thick Dropdown',
+      labelType: 'thick',
+      onChange: args => null,
+      onSelectAll: args => null,
+      onClearAll: args => null,
+      size: 'm',
+      disabled: false,
+    },
+    {
+      name: 'thin-dropdown',
+      allOptions: [
+        {value: 'option-1', label: 'Option 1'},
+        {value: 'option-2', label: 'Option 2'},
+      ],
+      checkedOptions: ['option-1'],
+      labelText: 'Thin Dropdown',
+      labelType: 'thin',
+      onChange: args => null,
+      onSelectAll: args => null,
+      onClearAll: args => null,
+      size: 'm',
+      disabled: false,
+    },
+  ],
 };
 
 export const GroupOfCheckboxDropdownColors = MultipleTemplate.bind({});
@@ -221,8 +245,24 @@ GroupOfCheckboxDropdownColors.args = {
       color: dropdownColors.black,
       disabled: false,
     },
+    {
+      name: 'default-dropdown-gray',
+      allOptions: [
+        {value: 'option-1', label: 'Option 1'},
+        {value: 'option-2', label: 'Option 2'},
+      ],
+      checkedOptions: ['option-1'],
+      labelText: 'Gray Dropdown',
+      onChange: args => null,
+      onSelectAll: args => null,
+      onClearAll: args => null,
+      size: 'm',
+      color: dropdownColors.gray,
+      disabled: false,
+    },
   ],
 };
+
 export const GroupOfSizesOfCheckboxDropdown = MultipleTemplate.bind({});
 GroupOfSizesOfCheckboxDropdown.args = {
   components: [

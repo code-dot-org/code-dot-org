@@ -1,10 +1,12 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/deprecatedChai';
-import LevelFeedback from '@cdo/apps/templates/feedback/LevelFeedback';
-import i18n from '@cdo/locale';
-import LevelFeedbackEntry from '@cdo/apps/templates/feedback/LevelFeedbackEntry';
+
 import Button from '@cdo/apps/templates/Button';
+import LevelFeedback from '@cdo/apps/templates/feedback/LevelFeedback';
+import LevelFeedbackEntry from '@cdo/apps/templates/feedback/LevelFeedbackEntry';
+import i18n from '@cdo/locale';
+
+import {expect} from '../../../util/deprecatedChai';
 
 const feedback = {
   id: 1,

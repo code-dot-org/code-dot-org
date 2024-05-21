@@ -1,8 +1,10 @@
-import {expect} from '../../util/reconfiguredChai';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
 import sinon from 'sinon';
+
 import CachedElement, {unitTestExports} from '@cdo/apps/util/CachedElement';
+
+import {expect} from '../../util/reconfiguredChai';
 
 const cache = unitTestExports.elementsHtmlCache;
 const defaultType = 'div';

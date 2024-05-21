@@ -1,15 +1,17 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import sinon from 'sinon';
 import {act} from 'react-dom/test-utils';
+import sinon from 'sinon';
+
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {
   UnconnectedTopInstructions as TopInstructions,
   TabType,
 } from '@cdo/apps/templates/instructions/TopInstructions';
-import TopInstructionsHeader from '@cdo/apps/templates/instructions/TopInstructionsHeader';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import * as TopInstructionsDataApi from '@cdo/apps/templates/instructions/topInstructionsDataApi';
+import TopInstructionsHeader from '@cdo/apps/templates/instructions/TopInstructionsHeader';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   isEmbedView: false,

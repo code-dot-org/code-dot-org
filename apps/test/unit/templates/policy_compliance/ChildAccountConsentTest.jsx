@@ -1,7 +1,9 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+
 import ChildAccountConsent from '@cdo/apps/templates/policy_compliance/ChildAccountConsent';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('ChildAccountConsent', () => {
   it('given no permission, shows the link expired message', () => {

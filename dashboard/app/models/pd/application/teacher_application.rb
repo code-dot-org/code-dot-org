@@ -917,7 +917,7 @@ module Pd::Application
       }
       labels_to_remove = columns_to_remove(course)
 
-      CSV_COLUMNS.keys.each do |source|
+      CSV_COLUMNS.each_key do |source|
         CSV_COLUMNS[source].each do |k|
           unless labels_to_remove[source]&.include? k.to_sym
             labels[source][k] = CSV_LABELS[source][k] || ALL_LABELS_WITH_OVERRIDES[k]
@@ -931,8 +931,8 @@ module Pd::Application
       labels = csv_filtered_labels(course)
       CSV.generate do |csv|
         columns = []
-        labels.keys.each do |source|
-          labels[source].keys.each do |k|
+        labels.each_key do |source|
+          labels[source].each_key do |k|
             columns.push(labels[source][k])
           end
         end
@@ -1197,9 +1197,7 @@ module Pd::Application
       }
     end
 
-    protected
-
-    def school
+    protected def school
       school_id = self.school_id
       return nil unless school_id
 

@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "csa-software-engineering",
-    "serialized_at": "2024-03-08 19:35:35 UTC",
+    "serialized_at": "2024-04-17 16:45:23 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -3903,7 +3903,7 @@
     },
     {
       "name": "Frame of Reference: Teamwork and Collaboration",
-      "url": "https://docs.google.com/document/d/1MNTpgngHWVlkWkQR\\_Vg1xgDV2j96XQ39X33INECIYfc/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1MNTpgngHWVlkWkQR_Vg1xgDV2j96XQ39X33INECIYfc/edit?usp=sharing",
       "key": "frame_of_reference_teamwork_and_collaboration",
       "properties": {
         "audience": "Student",
@@ -3929,7 +3929,7 @@
     },
     {
       "name": "Getting Started on GitHub (Teachers)",
-      "url": "https://docs.google.com/document/d/16qrRG9ez9Yn\\_ZL44vM54dQb4EzKMtHSWvtKllFNRa6Y/edit?usp=share\\_link",
+      "url": "https://docs.google.com/document/d/16qrRG9ez9Yn_ZL44vM54dQb4EzKMtHSWvtKllFNRa6Y/edit?usp=sharing",
       "key": "getting_started_on_github_teachers_",
       "properties": {
         "audience": "Verified Teacher",
@@ -4173,7 +4173,7 @@
     },
     {
       "name": "Submitting an Assignment on GitHub Classroom",
-      "url": "https://docs.google.com/document/d/1eOlMx2YW3qRI5DJzpInnN10dSGEupIRa-qOfL\\_xNMR0/edit?usp=share\\_link",
+      "url": "https://docs.google.com/document/d/1eOlMx2YW3qRI5DJzpInnN10dSGEupIRa-qOfL_xNMR0/edit?usp=drive_link",
       "key": "submitting_an_assignment_on_github_classroom",
       "properties": {
         "audience": "Student",

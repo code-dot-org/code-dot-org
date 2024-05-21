@@ -1,5 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 
 /**
  * Utility wrapper component that calls a close function when the Escape key is pressed

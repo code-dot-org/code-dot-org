@@ -1,67 +1,116 @@
 import React, {useState, useCallback} from 'react';
 
+import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+import Button from '@cdo/apps/componentLibrary/button/Button';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
 import modelCustomizationStyles from '../model-customization-workspace.module.scss';
 import styles from './retrieval-customization.module.scss';
+import {isDisabled} from './utils';
+import {
+  setAiCustomizationProperty,
+  updateAiCustomization,
+} from '@cdo/apps/aichat/redux/aichatRedux';
 
 const RetrievalCustomization: React.FunctionComponent = () => {
-  const [messages, setMessages] = useState<string[]>([]);
-  const [newMessage, setNewMessage] = useState('');
+  const [newRetrievalContext, setNewRetrievalContext] = useState('');
+
+  const dispatch = useAppDispatch();
+  const visibility = useAppSelector(
+    state => state.aichat.fieldVisibilities.retrievalContexts
+  );
+  const {retrievalContexts} = useAppSelector(
+    state => state.aichat.currentAiCustomizations
+  );
+
+  const onUpdate = useCallback(
+    () => dispatch(updateAiCustomization()),
+    [dispatch]
+  );
 
   const onAdd = useCallback(() => {
-    setMessages([...messages, newMessage]);
-    setNewMessage('');
+    dispatch(
+      setAiCustomizationProperty({
+        property: 'retrievalContexts',
+        value: [newRetrievalContext, ...retrievalContexts],
+      })
+    );
+    setNewRetrievalContext('');
     document.getElementById('retrieval-input')?.focus();
-  }, [messages, setMessages, newMessage, setNewMessage]);
+  }, [
+    dispatch,
+    retrievalContexts,
+    newRetrievalContext,
+    setNewRetrievalContext,
+  ]);
 
   const onRemove = useCallback(
     (index: number) => {
-      const messagesCopy = [...messages];
-      messagesCopy.splice(index, 1);
-      setMessages(messagesCopy);
+      const newRetrievalContexts = [...retrievalContexts];
+      newRetrievalContexts.splice(index, 1);
+      dispatch(
+        setAiCustomizationProperty({
+          property: 'retrievalContexts',
+          value: newRetrievalContexts,
+        })
+      );
     },
-    [messages, setMessages]
+    [dispatch, retrievalContexts]
   );
 
   return (
     <div className={modelCustomizationStyles.verticalFlexContainer}>
-      <div>
+      <div className={modelCustomizationStyles.customizationContainer}>
         <div className={modelCustomizationStyles.inputContainer}>
           <label htmlFor="system-prompt">
             <StrongText>Retrieval</StrongText>
           </label>
           <textarea
             id="retrieval-input"
-            onChange={event => setNewMessage(event.target.value)}
-            value={newMessage}
+            onChange={event => setNewRetrievalContext(event.target.value)}
+            value={newRetrievalContext}
+            disabled={isDisabled(visibility)}
           />
         </div>
         <div className={styles.addItemContainer}>
-          <button type="button" onClick={onAdd} disabled={!newMessage}>
-            Add
-          </button>
+          <Button
+            text="Add"
+            type="secondary"
+            onClick={onAdd}
+            iconLeft={{iconName: 'plus'}}
+            disabled={!newRetrievalContext || isDisabled(visibility)}
+          />
         </div>
-        {messages.map((message, index) => {
+        <div className={styles.addedItemsHeaderContainer}>
+          <StrongText>Added</StrongText>
+        </div>
+        {retrievalContexts.map((message, index) => {
           return (
             <div key={index} className={styles.itemContainer}>
+              <span>{message}</span>
               <button
                 type="button"
                 onClick={() => onRemove(index)}
                 className={styles.removeItemButton}
+                disabled={isDisabled(visibility)}
               >
                 <FontAwesomeV6Icon
                   iconName="circle-xmark"
                   className={styles.removeItemIcon}
                 />
               </button>
-              <span className={styles.itemText}>{message}</span>
             </div>
           );
         })}
       </div>
       <div className={modelCustomizationStyles.footerButtonContainer}>
-        <button type="button">Update</button>
+        <Button
+          text="Update"
+          onClick={onUpdate}
+          iconLeft={{iconName: 'edit'}}
+          className={modelCustomizationStyles.updateButton}
+          disabled={isDisabled(visibility)}
+        />
       </div>
     </div>
   );

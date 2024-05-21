@@ -1,8 +1,10 @@
-import {assert} from '../../../util/reconfiguredChai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
+
 import {UnconnectedProgressBubbleSet as ProgressBubbleSet} from '@cdo/apps/templates/progress/ProgressBubbleSet';
 import {fakeLevels} from '@cdo/apps/templates/progress/progressTestHelpers';
+
+import {assert} from '../../../util/reconfiguredChai';
 
 const defaultProps = {
   levels: fakeLevels(5),

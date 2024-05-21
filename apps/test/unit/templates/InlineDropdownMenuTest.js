@@ -1,9 +1,11 @@
-import {expect} from '../../util/reconfiguredChai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import {InlineDropdownMenu} from '@cdo/apps/templates/InlineDropdownMenu';
+
 import {KeyCodes} from '@cdo/apps/constants';
+import {InlineDropdownMenu} from '@cdo/apps/templates/InlineDropdownMenu';
+
+import {expect} from '../../util/reconfiguredChai';
 
 const clickSpy = sinon.spy();
 

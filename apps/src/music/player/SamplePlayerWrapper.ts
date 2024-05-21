@@ -1,7 +1,7 @@
 import {DEFAULT_BEATS_PER_MEASURE, DEFAULT_BPM} from '../constants';
 import {SoundLoadCallbacks} from '../types';
 import SamplePlayer from './SamplePlayer';
-import {AudioPlayer, SampleEvent} from './types';
+import {AudioPlayer, InstrumentData, SampleEvent} from './types';
 
 /**
  * An {@link AudioPlayer} implementation that wraps the {@link SamplePlayer}.
@@ -33,17 +33,24 @@ class SamplePlayerWrapper implements AudioPlayer {
 
   async loadSounds(
     sampleUrls: string[],
+    instruments: InstrumentData[],
     callbacks?: SoundLoadCallbacks
   ): Promise<void> {
     return this.samplePlayer.loadSounds(sampleUrls, callbacks);
   }
 
   async loadInstrument(): Promise<void> {
-    console.log('Not supported');
+    console.warn('loadInstrument not supported');
+  }
+
+  isInstrumentLoading(): boolean {
+    // Assume instruments are always loaded since samples will be loaded directly
+    return false;
   }
 
   isInstrumentLoaded(): boolean {
-    return false;
+    // Assume instruments are always loaded since samples will be loaded directly
+    return true;
   }
 
   async playSampleImmediately(
@@ -64,7 +71,7 @@ class SamplePlayerWrapper implements AudioPlayer {
   }
 
   async playSequenceImmediately(): Promise<void> {
-    console.log('Not supported');
+    console.warn('playSequenceImmediately not supported');
   }
 
   cancelPreviews(): void {
@@ -80,7 +87,7 @@ class SamplePlayerWrapper implements AudioPlayer {
   }
 
   scheduleSamplerSequence(): void {
-    console.log('Not supported');
+    console.warn('scheduleSamplerSequence not supported');
   }
 
   async start(startPosition = 1) {
@@ -98,6 +105,26 @@ class SamplePlayerWrapper implements AudioPlayer {
 
   cancelPendingEvents(): void {
     this.samplePlayer.stopAllSamplesStillToPlay();
+  }
+
+  setLoopEnabled(): void {
+    console.warn('setLoopEnabled not supported');
+  }
+
+  setLoopStart() {
+    console.warn('setLoopStart not supported');
+  }
+
+  setLoopEnd() {
+    console.warn('setLoopEnd not supported');
+  }
+
+  jumpToPosition() {
+    console.warn('jumpToPosition not supported');
+  }
+
+  registerCallback(): void {
+    // No events are currently supported; ignore.
   }
 
   // Converts actual seconds used by the audio system into a playhead

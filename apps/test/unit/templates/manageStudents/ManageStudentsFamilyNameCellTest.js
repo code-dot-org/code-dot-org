@@ -1,9 +1,11 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
-import {expect} from '../../../util/deprecatedChai';
 import {Provider} from 'react-redux';
+
 import {getStore} from '@cdo/apps/redux';
 import ManageStudentFamilyNameCell from '@cdo/apps/templates/manageStudents/ManageStudentsFamilyNameCell';
+
+import {expect} from '../../../util/deprecatedChai';
 
 const DEFAULT_PROPS = {
   id: 2,

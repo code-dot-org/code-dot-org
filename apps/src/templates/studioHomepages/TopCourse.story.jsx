@@ -1,7 +1,9 @@
 import React from 'react';
-import TopCourse from './TopCourse';
 import {Provider} from 'react-redux';
+
 import {reduxStore} from '@cdo/storybook/decorators';
+
+import TopCourse from './TopCourse';
 
 export default {
   component: TopCourse,

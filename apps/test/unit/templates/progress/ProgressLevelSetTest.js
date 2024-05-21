@@ -1,11 +1,13 @@
-import {assert} from '../../../util/reconfiguredChai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
+
 import {UnconnectedProgressLevelSet as ProgressLevelSet} from '@cdo/apps/templates/progress/ProgressLevelSet';
 import {
   fakeLevels,
   fakeLevel,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
+
+import {assert} from '../../../util/reconfiguredChai';
 
 describe('ProgressLevelSet', function () {
   it('has a pill and no bubbles for a single level', () => {

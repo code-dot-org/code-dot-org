@@ -164,9 +164,7 @@ module RegistrationsControllerTests
       end
     end
 
-    private
-
-    def generate_auth_user_hash(args)
+    private def generate_auth_user_hash(args)
       OmniAuth::AuthHash.new(
         uid: args[:uid] || DEFAULT_UID,
         provider: args[:provider] || 'facebook',

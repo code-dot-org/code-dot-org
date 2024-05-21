@@ -1,7 +1,9 @@
-import React from 'react';
 import classNames from 'classnames';
+import React, {AriaAttributes} from 'react';
 
-export interface FontAwesomeV6IconProps {
+import {getAriaPropsFromProps} from '@cdo/apps/componentLibrary/common/helpers';
+
+export interface FontAwesomeV6IconProps extends AriaAttributes {
   /**
    * Icon style.
    * Style vs Figma font-weight:
@@ -13,6 +15,16 @@ export interface FontAwesomeV6IconProps {
   iconStyle?: 'solid' | 'regular' | 'light' | 'thin';
   /** Icon name */
   iconName: string;
+  /** FontAwesome V6 Animation type to use (use it if we want/need to animate icon)*/
+  animationType?:
+    | 'beat'
+    | 'beat-fade'
+    | 'bounce'
+    | 'fade'
+    | 'flip'
+    | 'shake'
+    | 'spin'
+    | 'spin-pulse';
   /**
    *  Icon title.
    *  Title should be used for semantic icons. If not given, the screenreader will not read the icon
@@ -42,16 +54,22 @@ const FontAwesomeV6Icon: React.FunctionComponent<FontAwesomeV6IconProps> = ({
   iconName,
   className,
   title,
+  animationType,
+  ...rest
 }) => {
+  const ariaProps = getAriaPropsFromProps(rest);
+
   return (
     <i
       data-testid="font-awesome-v6-icon"
       className={classNames(
         iconStyle && `fa-${iconStyle}`,
         iconName && `fa-${iconName}`,
+        animationType && `fa-${animationType}`,
         className
       )}
       title={title}
+      {...ariaProps}
     />
   );
 };

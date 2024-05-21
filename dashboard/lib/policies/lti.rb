@@ -7,6 +7,13 @@ class Policies::Lti
     CONTEXT_MEMBERSHIP = 'https://purl.imsglobal.org/spec/lti-nrps/scope/contextmembership.readonly'.freeze
   end
 
+  module MessageType
+    CLAIM = :'https://purl.imsglobal.org/spec/lti/claim/message_type'
+    SUPPORTED = [
+      RESOURCE_LINK_REQUEST = 'LtiResourceLinkRequest'.freeze,
+    ].freeze
+  end
+
   ALL_SCOPES = AccessTokenScopes.constants.map do |scope|
     AccessTokenScopes.const_get(scope)
   end
@@ -14,23 +21,29 @@ class Policies::Lti
   NAMESPACE = 'lti_v1_controller'.freeze
   JWT_CLIENT_ASSERTION_TYPE = 'urn:ietf:params:oauth:client-assertion-type:jwt-bearer'.freeze
   JWT_ISSUER = CDO.studio_url('', CDO.default_scheme).freeze
+
   MEMBERSHIP_CONTAINER_CONTENT_TYPE = 'application/vnd.ims.lti-nrps.v2.membershipcontainer+json'.freeze
-  TEACHER_ROLES = Set.new(
+  TEACHER_ROLES = Set.new(['http://purl.imsglobal.org/vocab/lis/v1/institution/person#Instructor',
+                           'http://purl.imsglobal.org/vocab/lis/v2/membership#Instructor']
+).freeze
+  STAFF_ROLES = Set.new(
     [
+      *TEACHER_ROLES,
       'http://purl.imsglobal.org/vocab/lis/v2/institution/person#Administrator',
-      'http://purl.imsglobal.org/vocab/lis/v2/institution/person#Instructor',
       'http://purl.imsglobal.org/vocab/lis/v2/membership#Administrator',
-      'http://purl.imsglobal.org/vocab/lis/v2/membership#Instructor',
       'http://purl.imsglobal.org/vocab/lis/v2/system/person#Administrator',
     ]
 ).freeze
   CONTEXT_LEARNER_ROLE = 'http://purl.imsglobal.org/vocab/lis/v2/membership#Learner'.freeze
+  CONTEXT_MENTOR_ROLE = 'http://purl.imsglobal.org/vocab/lis/v2/membership#Mentor'.freeze
   LTI_ROLES_KEY = 'https://purl.imsglobal.org/spec/lti/claim/roles'.freeze
   LTI_CUSTOM_CLAIMS = "https://purl.imsglobal.org/spec/lti/claim/custom".freeze
   LTI_CONTEXT_CLAIM = "https://purl.imsglobal.org/spec/lti/claim/context".freeze
   LTI_RESOURCE_LINK_CLAIM = "https://purl.imsglobal.org/spec/lti/claim/resource_link".freeze
   LTI_DEPLOYMENT_ID_CLAIM = "https://purl.imsglobal.org/spec/lti/claim/deployment_id".freeze
   LTI_NRPS_CLAIM = "https://purl.imsglobal.org/spec/lti-nrps/claim/namesroleservice".freeze
+  LTI_PLATFORM_CONFIGURATION = "https://purl.imsglobal.org/spec/lti-platform-configuration".freeze
+  CANVAS_ACCOUNT_NAME = "https://canvas.instructure.com/lti/account_name".freeze
 
   # Prioritized lists for looking up a user's name from custom LTI variable claims.
   TEACHER_NAME_KEYS = [:name, :display_name, :full_name, :family_name, :given_name].freeze
@@ -67,17 +80,83 @@ class Policies::Lti
     },
   }
 
+  DYNAMIC_REGISTRATION_CONFIG = {
+    application_type: "web",
+    response_types: ["id_token"],
+    grant_types: ["client_credentials", "implicit"],
+    initiate_login_uri: CDO.studio_url('/lti/v1/login', CDO.default_scheme),
+    redirect_uris: [CDO.studio_url('/lti/v1/authenticate', CDO.default_scheme)],
+    client_name: "Code.org",
+    jwks_uri: CDO.studio_url('/oauth/jwks', CDO.default_scheme),
+    token_endpoint_auth_method: "private_key_jwt",
+    contacts: ["platform@code.org"],
+    scope: "https://purl.imsglobal.org/spec/lti-ags/scope/score https://purl.imsglobal.org/spec/lti-nrps/scope/contextmembership.readonly",
+    "https://purl.imsglobal.org/spec/lti-tool-configuration" => {
+      domain: "studio.code.org",
+      description: "Code.org",
+      target_link_uri: "https://studio.code.org/lti/v1/sync_course",
+      custom_parameters: {
+        email: "$Person.email.primary",
+        full_name: "$Person.name.full",
+        given_name: "$Person.name.given",
+        family_name: "$Person.name.family",
+        display_name: "$Person.name.display",
+        section_ids: "$Canvas.course.sectionIds",
+        section_names: "$com.instructure.User.sectionNames"
+      },
+      claims: %w[sub iss name given_name family_name nickname picture email locale],
+      messages: [
+        {
+          type: "LtiResourceLinkRequest",
+          label: "Launch Code.org",
+          placements: ["course_navigation"],
+        },
+        {
+          type: "LtiResourceLinkRequest",
+          label: "Launch Code.org",
+          placements: ["account_navigation"],
+        },
+        {
+          type: "LtiResourceLinkRequest",
+          label: "Launch Code.org",
+          placements: ["link_selection"],
+        },
+        {
+          type: "LtiResourceLinkRequest",
+          label: "Launch Code.org",
+          placements: ["assignment_selection"],
+        },
+        {
+          type: "LtiResourceLinkRequest",
+          label: "Launch Code.org",
+          placements: ["assignment_menu"],
+        },
+        {
+          type: "LtiResourceLinkRequest",
+          label: "Launch Code.org",
+          placements: ["assignment_view"],
+        },
+        {
+          type: "LtiResourceLinkRequest",
+          label: "Launch Code.org",
+          placements: ["submission_type_selection"],
+        }
+      ]
+    }
+  }.freeze
+
   MAX_COURSE_MEMBERSHIP = 650
 
   def self.get_account_type(roles)
     roles.each do |role|
-      return User::TYPE_TEACHER if TEACHER_ROLES.include? role
+      return User::TYPE_TEACHER if STAFF_ROLES.include? role
     end
     return User::TYPE_STUDENT
   end
 
-  def self.generate_auth_id(id_token)
-    "#{id_token[:iss]}|#{id_token[:aud]}|#{id_token[:sub]}"
+  # Returns true if any of the user's roles is the LTI instructor role
+  def self.lti_teacher?(roles)
+    (Set.new(roles) & TEACHER_ROLES).any?
   end
 
   def self.lti?(user)
@@ -99,6 +178,10 @@ class Policies::Lti
     return 'Canvas' if /canvas/.match?(issuer)
     return 'Schoology' if /schoology/.match?(issuer)
     I18n.t(:lti_v1, scope: [:section, :type])
+  end
+
+  def self.find_platform_by_issuer(issuer)
+    LMS_PLATFORMS.values.find {|platform| platform[:issuer] == issuer}
   end
 
   # Returns the email provided by the LMS when creating the User through LTI
@@ -131,8 +214,21 @@ class Policies::Lti
     LtiIntegration.count >= lti_early_access_limit
   end
 
+  def self.early_access_banner_available?(user)
+    user.teacher? && early_access? && lti?(user)
+  end
+
   # Returns if the issuer accepts a Resource Link level membership service when retrieving membership for a context.
   def self.issuer_accepts_resource_link?(issuer)
     ['Canvas'].include?(issuer_name(issuer))
+  end
+
+  # Force Schoology through iframe mitigation flow
+  def self.force_iframe_launch?(issuer)
+    ['Schoology'].include?(issuer_name(issuer))
+  end
+
+  def self.feedback_available?(user)
+    user.teacher? && lti?(user) && user.created_at <= 2.days.ago
   end
 end

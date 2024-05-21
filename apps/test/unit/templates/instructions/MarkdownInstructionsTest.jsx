@@ -1,8 +1,10 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
+
+import MarkdownInstructions from '@cdo/apps/templates/instructions/MarkdownInstructions';
+
 import {expect} from '../../../util/reconfiguredChai';
 import {setExternalGlobals} from '../../../util/testUtils';
-import MarkdownInstructions from '@cdo/apps/templates/instructions/MarkdownInstructions';
 
 describe('MarkdownInstructions', function () {
   before(setExternalGlobals);

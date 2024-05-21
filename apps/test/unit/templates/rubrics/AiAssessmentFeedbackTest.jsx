@@ -1,15 +1,17 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {expect} from '../../../util/reconfiguredChai';
-import {mount} from 'enzyme';
-import AiAssessmentFeedbackContext from '@cdo/apps/templates/rubrics/AiAssessmentFeedbackContext';
+
 import AiAssessmentFeedback from '@cdo/apps/templates/rubrics/AiAssessmentFeedback';
+import AiAssessmentFeedbackContext from '@cdo/apps/templates/rubrics/AiAssessmentFeedbackContext';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('AiAssessmentFeedback', () => {
   const mockAiInfo = {
     id: 2,
     learning_goal_id: 2,
     understanding: 2,
-    ai_confidence: 2,
+    aiConfidencePassFail: 2,
   };
   const props = {
     aiEvalInfo: mockAiInfo,

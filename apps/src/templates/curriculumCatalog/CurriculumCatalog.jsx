@@ -12,7 +12,11 @@ import CurriculumCatalogFilters from './CurriculumCatalogFilters';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import {getSimilarRecommendations} from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
+import {
+  getSimilarRecommendations,
+  getStretchRecommendations,
+} from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
+import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 
 const CurriculumCatalog = ({
   curriculaData,
@@ -21,6 +25,7 @@ const CurriculumCatalog = ({
   isInUS,
   isSignedOut,
   isTeacher,
+  curriculaTaught,
   ...props
 }) => {
   const [filteredCurricula, setFilteredCurricula] = useState(curriculaData);
@@ -28,6 +33,10 @@ const CurriculumCatalog = ({
   const [showAssignSuccessMessage, setShowAssignSuccessMessage] =
     useState(false);
   const [expandedCardKey, setExpandedCardKey] = useState(null);
+  const [recommendedSimilarCurriculum, setRecommendedSimilarCurriculum] =
+    useState(null);
+  const [recommendedStretchCurriculum, setRecommendedStretchCurriculum] =
+    useState(null);
 
   useEffect(() => {
     const expandedCardFound = filteredCurricula.some(
@@ -36,6 +45,8 @@ const CurriculumCatalog = ({
 
     if (!expandedCardFound) {
       setExpandedCardKey(null);
+      setRecommendedSimilarCurriculum(null);
+      setRecommendedStretchCurriculum(null);
     }
   }, [expandedCardKey, filteredCurricula]);
 
@@ -60,26 +71,109 @@ const CurriculumCatalog = ({
     setAssignSuccessMessage('');
   };
 
-  const handleExpandedCardChange = key => {
-    if (expandedCardKey !== key) {
+  const handleQuickViewClicked = key => {
+    if (expandedCardKey === key) {
+      // If Quick View is clicked again to close the card (or the 'X' on the expanded card is clicked)
+      setExpandedCardKey(null);
+      setRecommendedSimilarCurriculum(null);
+      setRecommendedStretchCurriculum(null);
+    } else {
       analyticsReporter.sendEvent(
         EVENTS.CURRICULUM_CATALOG_QUICK_VIEW_CLICKED_EVENT,
         {
           curriculum_offering: key,
         }
       );
+      handleSetExpandedCardKey(key);
     }
-    setExpandedCardKey(expandedCardKey === key ? null : key);
+  };
+
+  const handleSetExpandedCardKey = key => {
+    const newRecommendedSimilarCurriculum =
+      getRecommendedSimilarCurriculum(key);
+    const newRecommendedStretchCurriculum = getRecommendedStretchCurriculum(
+      key,
+      newRecommendedSimilarCurriculum.key
+    );
+
+    analyticsReporter.sendEvent(EVENTS.RECOMMENDED_CATALOG_CURRICULUM_SHOWN, {
+      current_curriculum_offering: key,
+      recommended_similar_curriculum_offering:
+        newRecommendedSimilarCurriculum.key,
+      recommended_stretch_curriculum_offering:
+        newRecommendedStretchCurriculum.key,
+    });
+
+    setRecommendedSimilarCurriculum(newRecommendedSimilarCurriculum);
+    setRecommendedStretchCurriculum(newRecommendedStretchCurriculum);
+    setExpandedCardKey(key);
   };
 
   // Get the top recommended similar curriculum based on the curriculum with the given
   // curriculumKey
   const getRecommendedSimilarCurriculum = curriculumKey => {
+    // Check if Similar Curriculum Recommender has already been run with this curriculumKey and cached in sessionStorage
+    const similarRecommenderResults =
+      JSON.parse(tryGetSessionStorage('similarRecommenderResults', '{}')) || {};
+    const similarRecommenderCurrKeyResult =
+      similarRecommenderResults[curriculumKey];
+    if (similarRecommenderCurrKeyResult) {
+      return similarRecommenderCurrKeyResult;
+    }
+
+    // Get top recommended similar curriculum
     const recommendations = getSimilarRecommendations(
       curriculaData,
-      curriculumKey
+      curriculumKey,
+      curriculaTaught
     );
-    return recommendations[0];
+    const recommendedCurriculum = recommendations[0];
+
+    // Update sessionStorage with new recommendation result
+    similarRecommenderResults[curriculumKey] = recommendedCurriculum;
+    trySetSessionStorage(
+      'similarRecommenderResults',
+      JSON.stringify(similarRecommenderResults)
+    );
+
+    return recommendedCurriculum;
+  };
+
+  // Get the top recommended stretch curriculum based on the curriculum with the given
+  // curriculumKey. If the top result is the same as the similar curriculum, show the
+  // second result.
+  const getRecommendedStretchCurriculum = (
+    curriculumKey,
+    similarCurriculumKey
+  ) => {
+    // Check if Stretch Curriculum Recommender has already been run with this curriculumKey and cached in sessionStorage
+    const stretchRecommenderResults =
+      JSON.parse(tryGetSessionStorage('stretchRecommenderResults', '{}')) || {};
+    const stretchRecommenderCurrKeyResult =
+      stretchRecommenderResults[curriculumKey];
+    if (stretchRecommenderCurrKeyResult) {
+      return stretchRecommenderCurrKeyResult;
+    }
+
+    // Get top recommended stretch curriculum
+    const recommendations = getStretchRecommendations(
+      curriculaData,
+      curriculumKey,
+      curriculaTaught
+    );
+    const recommendedCurriculum =
+      similarCurriculumKey === recommendations[0].key
+        ? recommendations[1]
+        : recommendations[0];
+
+    // Update sessionStorage with new recommendation result
+    stretchRecommenderResults[curriculumKey] = recommendedCurriculum;
+    trySetSessionStorage(
+      'stretchRecommenderResults',
+      JSON.stringify(stretchRecommenderResults)
+    );
+
+    return recommendedCurriculum;
   };
 
   // Renders search results based on the applied filters (or shows the No matching curriculums
@@ -149,15 +243,14 @@ const CurriculumCatalog = ({
                     self_paced_pl_course_offering_path
                   }
                   isExpanded={expandedCardKey === key}
-                  setExpandedCardKey={setExpandedCardKey}
-                  onQuickViewClick={() => handleExpandedCardChange(key)}
+                  handleSetExpandedCardKey={handleSetExpandedCardKey}
+                  onQuickViewClick={() => handleQuickViewClicked(key)}
                   isInUS={isInUS}
                   availableResources={available_resources}
                   isSignedOut={isSignedOut}
                   isTeacher={isTeacher}
-                  getRecommendedSimilarCurriculum={
-                    getRecommendedSimilarCurriculum
-                  }
+                  recommendedSimilarCurriculum={recommendedSimilarCurriculum}
+                  recommendedStretchCurriculum={recommendedStretchCurriculum}
                   {...props}
                 />
               )
@@ -167,17 +260,9 @@ const CurriculumCatalog = ({
     } else {
       return (
         <div className={style.catalogContentNoResults}>
-          <img
-            className={style.noResultsImage}
-            src={CourseCatalogNoSearchResultPenguin}
-            alt=""
-          />
-          <Heading5 className={style.noResultsHeading}>
-            {i18n.noCurriculumSearchResultsHeader()}
-          </Heading5>
-          <BodyTwoText className={style.noResultsBody}>
-            {i18n.noCurriculumSearchResultsBody()}
-          </BodyTwoText>
+          <img src={CourseCatalogNoSearchResultPenguin} alt="" />
+          <Heading5>{i18n.noCurriculumSearchResultsHeader()}</Heading5>
+          <BodyTwoText>{i18n.noCurriculumSearchResultsBody()}</BodyTwoText>
         </div>
       );
     }
@@ -194,9 +279,7 @@ const CurriculumCatalog = ({
       {showAssignSuccessMessage && (
         <div className={style.assignSuccessMessageCenter}>
           <div className={style.assignSuccessMessageContainer}>
-            <BodyTwoText className={style.assignSuccessMessage}>
-              {assignSuccessMessage}
-            </BodyTwoText>
+            <BodyTwoText>{assignSuccessMessage}</BodyTwoText>
             <button
               aria-label="close success message"
               onClick={handleCloseAssignSuccessMessage}
@@ -228,6 +311,7 @@ CurriculumCatalog.propTypes = {
   isInUS: PropTypes.bool.isRequired,
   isSignedOut: PropTypes.bool.isRequired,
   isTeacher: PropTypes.bool.isRequired,
+  curriculaTaught: PropTypes.arrayOf(PropTypes.number),
 };
 
 export default CurriculumCatalog;

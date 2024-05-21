@@ -18,8 +18,8 @@ Scenario: Signed out user in English should see 7 header links
   And element "#header-about" contains text "About"
   And I see "#header-incubator"
   And element "#header-incubator" contains text "Incubator"
-  And I see "#header-projects"
-  And element "#header-projects" contains text "Projects"
+  And I see "#header-districts"
+  And element "#header-districts" contains text "Districts"
 
 Scenario: Student in English should see 4 header links
   Given I create a student named "Sally Student" and go home
@@ -51,7 +51,7 @@ Scenario: Signed out user in Spanish should see 7 header links
   Given I am on "http://code.org/lang/es"
   Then check that I am on "http://code.org/"
   And I dismiss the language selector
-  Given I am on "http://studio.code.org/courses"
+  Given I am on "http://studio.code.org/home"
   And I wait to see ".headerlinks"
   And I see "#header-learn"
   And element "#header-learn" has "es" text from key "nav.header.learn"
@@ -61,8 +61,8 @@ Scenario: Signed out user in Spanish should see 7 header links
   And element "#header-stats" has "es" text from key "nav.header.stats"
   And I see "#header-help"
   And element "#header-help" has "es" text from key "nav.header.help_us"
-  And I see "#header-projects"
-  And element "#header-projects" has "es" text from key "nav.header.project_gallery"
+  And I see "#header-districts"
+  And element "#header-districts" has "es" text from key "nav.header.districts"
   And I see "#header-incubator"
   And element "#header-incubator" has "es" text from key "nav.header.incubator"
   And I see "#header-about"
@@ -70,8 +70,8 @@ Scenario: Signed out user in Spanish should see 7 header links
 
 Scenario: Student in Spanish should see 4 header links
   Given I create a student named "Eva Estudiante"
-  Given I am on "http://studio.code.org/courses/lang/es"
-  Then check that I am on "http://studio.code.org/courses?lang=es"
+  Given I am on "http://studio.code.org/home/lang/es"
+  Then check that I am on "http://studio.code.org/home?lang=es"
   And I wait to see ".headerlinks"
   And I see "#header-student-home"
   And element "#header-student-home" has "es" text from key "nav.header.my_dashboard"
@@ -97,4 +97,4 @@ Scenario: Teacher in Spanish should see 5 header links
   And element "#header-teacher-professional-learning" has "es" text from key "nav.header.professional_learning"
   And I see "#header-teacher-incubator"
   And element "#header-teacher-incubator" has "es" text from key "nav.header.incubator"
-  
+

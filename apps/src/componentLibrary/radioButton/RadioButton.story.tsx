@@ -1,5 +1,5 @@
+import {Meta, StoryFn} from '@storybook/react';
 import React from 'react';
-import {Meta, Story} from '@storybook/react';
 
 import {
   RadioButton,
@@ -26,9 +26,11 @@ export default {
 //
 // This is needed to fix children type error (passing string instead of React.ReactNode type)
 // eslint-disable-next-line
-const SingleTemplate:Story<RadioButtonProps> = (args) => <RadioButton {...args} />;
+const SingleTemplate: StoryFn<RadioButtonProps> = args => (
+  <RadioButton {...args} />
+);
 
-const MultipleTemplate: Story<RadioButtonsGroupProps> = args => (
+const MultipleTemplate: StoryFn<RadioButtonsGroupProps> = args => (
   <>
     <RadioButtonsGroup {...args} />
   </>

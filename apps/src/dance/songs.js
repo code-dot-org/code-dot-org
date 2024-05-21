@@ -1,6 +1,6 @@
 import Sounds from '../Sounds';
 import {ageDialogSelectedOver13, songFilterOn} from '../templates/AgeDialog';
-import {DanceSongManifestFilename} from '../util/sharedConstants';
+import {DanceSongManifestFilename} from '@cdo/generated-scripts/sharedConstants';
 import {fetchSignedCookies} from '../utils';
 
 const DEPRECATED_SONGS = [
@@ -18,6 +18,7 @@ const DEPRECATED_SONGS = [
   'showdaspoderosas_anitta',
   'savagelove_jasonderulo',
   'astronautintheocean_maskedwolf',
+  'dernieredanse_indila',
 ];
 
 /**

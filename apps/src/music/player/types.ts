@@ -17,15 +17,19 @@ export interface AudioPlayer {
   /** Load sounds into the cache */
   loadSounds(
     sampleUrls: string[],
+    instruments: InstrumentData[],
     callbacks?: SoundLoadCallbacks
   ): Promise<void>;
 
   /** Load instrument into the cache */
   loadInstrument(
     instrumentName: string,
-    sampleMap: {[note: number]: string},
+    sampleMap: SampleMap,
     callbacks?: SoundLoadCallbacks
   ): Promise<void>;
+
+  /** If the given instrument is currently loading */
+  isInstrumentLoading(instrumentName: string): boolean;
 
   /** If the given instrument has been loaded */
   isInstrumentLoaded(instrumentName: string): boolean;
@@ -41,14 +45,25 @@ export interface AudioPlayer {
     onStop?: () => void
   ): Promise<void>;
 
-  /** Play a sequence of notes immediately (used for previews) */
-  playSequenceImmediately(sequence: SamplerSequence): Promise<void>;
+  /**
+   * Play a sequence of notes immediately (used for previews)
+   * @param onTick Callback to call each interval of the sequence (assumed to be a 16th note)
+   * @param onStop Callback to call when the sequence is done playing
+   */
+  playSequenceImmediately(
+    sequence: SamplerSequence,
+    onTick?: (tick: number) => void,
+    onStop?: () => void
+  ): Promise<void>;
 
   /** Cancel active previews */
   cancelPreviews(): void;
 
   /** Schedule a sample to played */
-  scheduleSample(sample: SampleEvent): void;
+  scheduleSample(
+    sample: SampleEvent,
+    onSampleStart: (id: string) => void
+  ): void;
 
   /** Schedule a sampler sequence to be played */
   scheduleSamplerSequence(sequence: SamplerSequence): void;
@@ -61,12 +76,31 @@ export interface AudioPlayer {
 
   /** Cancel pending audio events */
   cancelPendingEvents(): void;
+
+  /** Enable/disable looping */
+  setLoopEnabled(enabled: boolean): void;
+
+  /** Set the loop start point */
+  setLoopStart(loopStart: number): void;
+
+  /** Set the loop end point */
+  setLoopEnd(loopEnd: number): void;
+
+  /** Jump to the given playback position */
+  jumpToPosition(position: number): void;
+
+  registerCallback(
+    event: PlayerEvent,
+    callback: (payload?: string) => void
+  ): void;
 }
 
 /** A single sound played on the timeline */
 export interface SampleEvent {
   // 1-based playback position in measures
   playbackPosition: number;
+  // ID of the sound
+  id: string;
   // URL of the sample
   sampleUrl: string;
   // Whether the sound was triggered
@@ -79,6 +113,8 @@ export interface SampleEvent {
   effects?: Effects;
   // Length in measures to play the sample for
   length?: number;
+  // Whether tempo should not be adjusted.
+  disableTempoAdjustment?: boolean;
 }
 
 /** A sequence of notes played on a sampler instrument */
@@ -87,4 +123,14 @@ export interface SamplerSequence {
   instrument: string;
   // Notes to play
   events: {notes: string[]; playbackPosition: number}[];
+  effects?: Effects;
 }
+
+export type SampleMap = {[note: number]: string};
+
+export interface InstrumentData {
+  instrumentName: string;
+  sampleMap: SampleMap;
+}
+
+export type PlayerEvent = 'InstrumentLoaded'; // Add more as needed

@@ -1,14 +1,17 @@
-import React from 'react';
 import {assert} from 'chai';
-import {shallow} from 'enzyme';
-import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';
-import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
-import {courses, topCourse, joinedSections} from './homepagesTestData';
-import Notification from '@cdo/apps/templates/Notification';
-import i18n from '@cdo/locale';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import React from 'react';
 import sinon from 'sinon';
+
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
+import Notification from '@cdo/apps/templates/Notification';
+import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';
+import i18n from '@cdo/locale';
+
 import {expect} from '../../../util/reconfiguredChai';
+
+import {courses, topCourse, joinedSections} from './homepagesTestData';
 
 describe('StudentHomepage', () => {
   const TEST_PROPS = {
