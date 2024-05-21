@@ -1930,6 +1930,10 @@ a.download-video {
   .required {
     font-weight: 600;
 
+    &.not-bold {
+      font-weight: normal;
+    }
+
     & > * {
       font-weight: 600;
     }
