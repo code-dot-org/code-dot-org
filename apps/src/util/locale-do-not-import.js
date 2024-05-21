@@ -8,8 +8,8 @@
  */
 // base locale
 
-import safeLoadLocale from '@cdo/apps/util/safeLoadLocale';
 import localeWithI18nStringTracker from '@cdo/apps/util/i18nStringTracker';
+import safeLoadLocale from '@cdo/apps/util/safeLoadLocale';
 
 let locale = safeLoadLocale('common_locale');
 locale = localeWithI18nStringTracker(locale, 'common');

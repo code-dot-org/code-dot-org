@@ -4191,3 +4191,20 @@ a {
 }
 
 @import "NpsSurveyBlock";
+
+// cm prefixed classes are from codemirror
+.cm-gutters {
+  margin: 1px;
+}
+
+.cm-scroller {
+  overflow: auto;
+}
+
+.cm-wrap {
+  height: 100%;
+}
+
+.cm-editor {
+  height: 100%;
+}
