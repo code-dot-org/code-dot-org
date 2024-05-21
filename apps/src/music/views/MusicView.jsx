@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import MusicPlayer from '../player/MusicPlayer';
-import AnalyticsReporter from '../analytics/AnalyticsReporter';
+import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {AnalyticsContext} from '../context';
 import Globals from '../globals';
@@ -48,7 +48,6 @@ import {Key} from '../utils/Notes';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {isEqual} from 'lodash';
 import MusicLibrary from '../player/MusicLibrary';
-import {setUpBlocklyForMusicLab} from '../blockly/setup';
 import {TRIGGER_FIELD} from '../blockly/constants';
 import MusicLabView from './MusicLabView';
 
@@ -63,12 +62,6 @@ const BLOCKLY_DIV_ID = 'blockly-div';
  */
 class UnconnectedMusicView extends React.Component {
   static propTypes = {
-    /**
-     * True if Music Lab is being presented from the /projectbeats page,
-     * false/undefined if as part of a script or single level.
-     * */
-    onProjectBeats: PropTypes.bool,
-
     // populated by Redux
     currentLevelId: PropTypes.string,
     userId: PropTypes.number,
@@ -115,10 +108,13 @@ class UnconnectedMusicView extends React.Component {
 
     const bpm = AppConfig.getValue('bpm');
     const key = AppConfig.getValue('key');
-
-    this.player = new MusicPlayer(bpm, key && Key[key.toUpperCase()]);
-    Globals.setPlayer(this.player);
     this.analyticsReporter = new AnalyticsReporter();
+    this.player = new MusicPlayer(
+      bpm,
+      key && Key[key.toUpperCase()],
+      this.analyticsReporter
+    );
+    Globals.setPlayer(this.player);
     this.musicBlocklyWorkspace = new MusicBlocklyWorkspace();
     this.soundUploader = new SoundUploader(this.player);
     this.playingTriggers = [];
@@ -141,12 +137,6 @@ class UnconnectedMusicView extends React.Component {
       loadedLibrary: false,
       hasLoadedInitialSounds: false,
     };
-
-    // If on /projectbeats, we need to manually setup Blockly for Music Lab.
-    // Otherwise, this is handled by Lab2.
-    if (props.onProjectBeats) {
-      setUpBlocklyForMusicLab();
-    }
   }
 
   componentDidMount() {
@@ -394,10 +384,7 @@ class UnconnectedMusicView extends React.Component {
   };
 
   getStartSources = () => {
-    if (
-      !this.props.onProjectBeats &&
-      this.props.levelProperties?.levelData?.startSources
-    ) {
+    if (this.props.levelProperties?.levelData?.startSources) {
       return this.props.levelProperties?.levelData.startSources;
     } else {
       const startSourcesFilename = 'startSources' + getBlockMode();
@@ -638,6 +625,7 @@ class UnconnectedMusicView extends React.Component {
     this.player.stopSong();
     this.playingTriggers = [];
 
+    // Clear the timeline of triggered events when song is stopped.
     this.executeCompiledSong();
 
     this.props.setIsPlaying(false);

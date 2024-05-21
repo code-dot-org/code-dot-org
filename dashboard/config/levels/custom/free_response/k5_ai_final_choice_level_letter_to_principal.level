@@ -20,7 +20,7 @@
     "thumbnail_url": "https://images.code.org/abba8ce982bcffb7702deca5749325ea-laptop.jpg",
     "bubble_choice_description": "🌶️ Share your thoughts on AI by writing a letter to your principal."
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-13T21:03:18.781+00:00\",\"changed\":[\"cloned from \\\"CSP U2InterestInventoryQ2_emmatest\\\"\"],\"cloned_from\":\"CSP U2InterestInventoryQ2_emmatest\"},{\"changed_at\":\"2024-05-13 21:03:22 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-13T21:03:18.781+00:00\",\"changed\":[\"cloned from \\\"CSP U2InterestInventoryQ2_emmatest\\\"\"],\"cloned_from\":\"CSP U2InterestInventoryQ2_emmatest\"},{\"changed_at\":\"2024-05-13 21:03:22 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-17 17:38:29 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-05-17 17:40:08 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

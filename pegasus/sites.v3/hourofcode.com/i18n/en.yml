@@ -1502,7 +1502,6 @@
   csd_page_curriculum_glance_devices: "Laptop, Chromebook"
   csd_page_curriculum_glance_tools: "App Lab, Game Lab, AI Lab, Web Lab"
   csd_page_curriculum_glance_professional_learning: "Facilitator-led Workshops, Self-paced Modules"
-  csd_page_curriculum_glance_professional_languages: "English"
   csd_page_curriculum_glance_professional_accessibility_features: "Text-to-speech, Closed captioning, Immersive reader"
   csd_page_pick_a_course_heading: "Picking the right CS Discoveries&reg; course for your classroom"
   csd_page_pick_a_course_heading_non_en: "Picking the right %{cs_discoveries} (CS Discoveries) course for your classroom"
@@ -1578,7 +1577,6 @@
   csf_page_curriculum_glance_devices: "Laptop, Chromebook, Tablet"
   csf_page_curriculum_glance_tools: "Sprite Lab, Play Lab"
   csf_page_curriculum_glance_professional_learning: "Facilitator-led Workshops, Self-paced Modules"
-  csf_page_curriculum_glance_languages: "Arabic, Bahasa Indonesian, Catalán, Chinese Simplified, Chinese Traditional, Czech, French, German, Hindi, Italian, Japanese, Korean, Kannada, Malay, Marathi, Mongolian, Polish, Portuguese-BR, Romanian, Russian, Slovak, Tagalog, Tamil, Thai, Turkish, Ukrainian, Spanish Latam, Urdu, Spanish-ES, Uzbek, Vietnamese"
   csf_page_curriculum_glance_accessibility_features: "Text-to-speech, Closed captioning, Immersive reader"
   csf_page_pick_a_course_heading: "Picking the right CS Fundamentals course for your classroom"
   csf_page_pick_a_course_desc: "With the diverse set of options offered for CS Fundamentals, there is a course for all different needs."
@@ -2073,6 +2071,7 @@
       heading: "Teach Music Lab in your Classroom"
       desc: "Use our Music Lab tutorial to unleash your students' musical creativity, combining the joy of music with the principles of coding."
       button: "Start tutorial"
+      english_only: "Available in English only"
     additional_resources:
       heading: "Additional resources"
       catalog:

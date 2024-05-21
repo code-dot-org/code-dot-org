@@ -1,15 +1,18 @@
-import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
-import React from 'react';
-import FontAwesome from '../../templates/FontAwesome';
-import msg from '@cdo/locale';
-import color from '../../util/color';
-import {showPreview} from '../redux/data';
-import {getDatasetInfo} from './dataUtils';
-import experiments from '../../util/experiments';
 import moment from 'moment/moment';
-import TableDescription from './TableDescription';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {connect} from 'react-redux';
+
 import fontConstants from '@cdo/apps/fontConstants';
+import msg from '@cdo/locale';
+
+import FontAwesome from '../../templates/FontAwesome';
+import color from '../../util/color';
+import experiments from '../../util/experiments';
+import {showPreview} from '../redux/data';
+
+import {getDatasetInfo} from './dataUtils';
+import TableDescription from './TableDescription';
 
 class LibraryTable extends React.Component {
   static propTypes = {
