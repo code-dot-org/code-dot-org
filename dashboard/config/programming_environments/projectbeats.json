@@ -1,6 +1,6 @@
 {
   "name": "projectbeats",
-  "published": true,
+  "published": false,
   "description": "Make music with code! Try mixing and matching beats, bass, and other sounds to make your own songs.",
   "image_url": "https://images.code.org/2e54e1dd494dc6999f4f9f700ac60ec7-incubator-projectbeats.png",
   "project_url": "https://studio.code.org/projectbeats",
