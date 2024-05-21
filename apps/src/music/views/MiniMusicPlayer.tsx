@@ -73,8 +73,8 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
 
     // If there is a pack ID, give the player its BPM and key.
     const currentLibrary = MusicLibrary.getInstance();
-    const packId = project.labConfig?.music.packId;
-    if (currentLibrary && packId) {
+    const packId = project.labConfig?.music.packId || null;
+    if (currentLibrary) {
       currentLibrary.setCurrentPackId(packId);
       playerRef.current.updateConfiguration(
         currentLibrary.getBPM(),
