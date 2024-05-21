@@ -683,6 +683,7 @@ class Pd::Workshop < ApplicationRecord
   end
 
   def workshop_date_range_string
+    return "N/A" if sessions.empty?
     if workshop_starting_date == workshop_ending_date
       workshop_starting_date.strftime('%B %e, %Y')
     else
