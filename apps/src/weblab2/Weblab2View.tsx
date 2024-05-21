@@ -1,17 +1,19 @@
-import React, {useState} from 'react';
-
-import './styles/Weblab2View.css';
-
-import {Config} from './Config';
+// Making sure that css is first so that it is imported for other classes.
+// This might not be necessary.
+import './styles/Weblab2View.css'; // eslint-disable-line import/order
 
 import {Codebridge} from '@codebridge/Codebridge';
 import {ConfigType, ProjectType} from '@codebridge/types';
-
+import {css} from '@codemirror/lang-css';
 import {html} from '@codemirror/lang-html';
 import {LanguageSupport} from '@codemirror/language';
-import {css} from '@codemirror/lang-css';
-import {useSource} from '../codebridge/hooks/useSource';
+import React, {useState} from 'react';
+
 import {ProjectSources} from '@cdo/apps/lab2/types';
+
+import {useSource} from '../codebridge/hooks/useSource';
+
+import {Config} from './Config';
 
 const weblabLangMapping: {[key: string]: LanguageSupport} = {
   html: html(),
@@ -21,14 +23,14 @@ const weblabLangMapping: {[key: string]: LanguageSupport} = {
 const horizontalLayout = {
   gridLayoutRows: '300px auto',
   gridLayoutColumns: '300px auto auto',
-  gridLayout: `    "instructions workspace preview-container"
+  gridLayout: `    "info-panel workspace preview-container"
       "file-browser workspace preview-container"`,
 };
 
 const verticalLayout = {
   gridLayoutRows: '300px auto auto',
   gridLayoutColumns: '300px auto',
-  gridLayout: `    "instructions workspace workspace"
+  gridLayout: `    "info-panel workspace workspace"
       "file-browser workspace workspace"
       "file-browser preview-container preview-container"`,
 };

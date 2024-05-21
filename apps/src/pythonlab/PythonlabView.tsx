@@ -44,7 +44,7 @@ const defaultConfig: ConfigType = {
   leftNav: [
     {
       icon: 'fa-square-check',
-      component: 'Instructions',
+      component: 'info-panel',
     },
     {
       icon: 'fa-file',
@@ -70,7 +70,7 @@ const defaultConfig: ConfigType = {
   gridLayoutRows: '1fr 1fr 1fr',
   gridLayoutColumns: '300px auto',
   gridLayout: `
-    "instructions workspace"
+    "info-panel workspace"
     "file-browser workspace"
     "file-browser console"
   `,
