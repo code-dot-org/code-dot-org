@@ -24,11 +24,7 @@ def main
 
   # Set the new developers room topic
   new_topic = current_topic.sub(/^.+?;/, "DOTD: @#{primary_dotd_user};")
-  unless new_topic == current_topic
-    Slack.update_topic('developers', new_topic)
-
-    Slack.remind(Slack.user_id(DevelopersTopic.dotd), Time.now.to_i + 3600, msg)
-  end
+  Slack.update_topic('developers', new_topic) unless new_topic == current_topic
 end
 
 main
