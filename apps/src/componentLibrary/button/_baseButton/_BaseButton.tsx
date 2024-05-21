@@ -102,7 +102,19 @@ const checkButtonPropsForErrors = ({
   download,
   text,
   isIconOnly,
+  color,
+  type,
 }: _BaseButtonProps) => {
+  if (color === 'gray' && type !== 'secondary') {
+    throw new Error('Expect type prop to be secondary when color is gray');
+  }
+
+  if (color === 'purple' && type === 'secondary') {
+    console.warn(
+      'Warning: Button - Secondary Purple color is now deprecated. Please use different color or type. Secondary purple combination will be removed very soon.'
+    );
+  }
+
   if (useAsLink) {
     if (!href) {
       throw new Error('Expect href prop when useAsLink is true');
@@ -169,7 +181,6 @@ const BaseButton: React.FunctionComponent<_BaseButtonProps> = ({
   disabled = false,
   isPending = false,
   ariaLabel,
-
   size = 'm',
   type = 'primary',
   color = 'purple',
@@ -225,8 +236,9 @@ const BaseButton: React.FunctionComponent<_BaseButtonProps> = ({
         download,
         text,
         isIconOnly,
+        color,
       }),
-    [type, icon, useAsLink, onClick, href, download, text, isIconOnly]
+    [type, icon, useAsLink, onClick, href, download, text, isIconOnly, color]
   );
 
   /** Handling isPending state content & spinner show logic here.
