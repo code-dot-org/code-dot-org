@@ -6,19 +6,29 @@ require_relative '../../dashboard/config/environment'
 def main
   CSV.open("output.csv", "w") do |csv|
     headers = %w[
-      id user_id level_id script_id project_id created_at
+      id user_id username name level_id script_id project_id created_at
       updated_at selectedModelId temperature systemPrompt retrievalContexts
       status role content
     ]
     csv << headers
 
-    AichatSession.last(10).each do |session|
+    student_users_in_section = Section.find(ARGV[0]).followers.map(&:student_user)
+    date = Date.parse(ARGV[1])
+    sessions = AichatSession.where(
+      user: student_users_in_section,
+      created_at: date.beginning_of_day..date.end_of_day
+    )
+
+    sessions.each do |session|
       model_customizations = JSON.parse(session.model_customizations)
       messages = JSON.parse(session.messages)
+      user = session.user
 
       base_row = [
         session.id,
         session.user_id,
+        user.username,
+        user.name,
         session.level_id,
         session.script_id,
         session.project_id,
