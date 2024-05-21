@@ -625,6 +625,8 @@ export default class FunctionEditor {
     // procedure definition.
     Blockly.Events.disable();
     this.editorWorkspace.clear();
+    // The previous line also clears the variable map. We need to manually rebuild it
+    // so that student variables continue to be defined on the editor workspace.
     const primaryWorkspaceVariableMap = this.primaryWorkspace?.getVariableMap();
     const functionEditorVariableMap = this.editorWorkspace.getVariableMap();
     if (primaryWorkspaceVariableMap) {
