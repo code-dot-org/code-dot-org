@@ -34,6 +34,8 @@ import moduleStyles from './aichatView.module.scss';
 const AichatView: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
 
+  const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
+
   const beforeNextLevel = useCallback(() => {
     dispatch(sendSuccessReport('aichat'));
   }, [dispatch]);
@@ -69,10 +71,11 @@ const AichatView: React.FunctionComponent = () => {
     );
   }, [dispatch, initialSources, levelAichatSettings]);
 
-  // When the level changes, clear the chat message history and start a new session.
+  // When the level changes or if we are viewing aichat level as a different user
+  // (e.g., teacher viewing student work), clear the chat message history and start a new session.
   useEffect(() => {
     dispatch(clearChatMessages());
-  }, [currentLevelId, dispatch]);
+  }, [currentLevelId, viewAsUserId, dispatch]);
 
   // Showing presentation view when:
   // 1) levelbuilder hasn't explicitly configured the toggle to be hidden, and

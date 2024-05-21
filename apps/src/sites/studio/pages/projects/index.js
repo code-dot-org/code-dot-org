@@ -47,9 +47,6 @@ $(document).ready(() => {
         <ProjectHeader
           canViewAdvancedTools={projectsData.canViewAdvancedTools}
           projectCount={projectsData.projectCount}
-          showPublicGalleryUpdatedInfo={
-            projectsData.showPublicGalleryUpdatedInfo
-          }
         />
         <div className={'main container'}>
           <ProjectsGallery

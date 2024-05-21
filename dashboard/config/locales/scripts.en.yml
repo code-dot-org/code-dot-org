@@ -17027,6 +17027,8 @@ en:
               name: Performance Tasks
             lesson-2:
               name: 'Lesson 2: Making Sense of Data'
+            lesson-3:
+              name: Crafting Effective Questions From Data
           lesson_groups: {}
           name: data-science-playground
           title: Data Science Playground!
@@ -17157,3 +17159,25 @@ en:
             **Looking to teach this unit?** [Click here to view the lesson plans for these lessons](/s/aiml-2023?viewAs=Instructor)
           description_short: Learn to about Artificial Intelligence and Machine Learning.
           description_audience: ''
+        fcs1c-beta-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Survey
+            lessonGroup-2:
+              display_name: 'Chapter 1: The Problem Solving Process'
+            lessonGroup-3:
+              display_name: 'Chapter 2: Computers and Problem Solving'
+            lessonGroup-4:
+              display_name: Alternative Lessons
+          title: Unit 1C - (Option C) Problem Solving and Computing
+          description: |-
+            This unit is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. Students practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, they learn how computers input, output, store, and process information to help humans solve problems. The unit concludes with a project in which they design an application that helps solve a problem of their choosing.
+
+            ⚠️ This unit is a non-device alternative to Options A and B. If you are unable to obtain micro:bits or Circuit Playgrounds, you can use this unit to introduce the same concepts.
+          student_description: 'This unit is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems. The unit concludes with a project in which you design an application that helps solve a problem of your choosing.
+
+            '
+          description_short: ''
+          description_audience: ''
+          lessons: {}
+          name: fcs1c-beta-2024

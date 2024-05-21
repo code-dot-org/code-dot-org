@@ -245,8 +245,24 @@ GroupOfCheckboxDropdownColors.args = {
       color: dropdownColors.black,
       disabled: false,
     },
+    {
+      name: 'default-dropdown-gray',
+      allOptions: [
+        {value: 'option-1', label: 'Option 1'},
+        {value: 'option-2', label: 'Option 2'},
+      ],
+      checkedOptions: ['option-1'],
+      labelText: 'Gray Dropdown',
+      onChange: args => null,
+      onSelectAll: args => null,
+      onClearAll: args => null,
+      size: 'm',
+      color: dropdownColors.gray,
+      disabled: false,
+    },
   ],
 };
+
 export const GroupOfSizesOfCheckboxDropdown = MultipleTemplate.bind({});
 GroupOfSizesOfCheckboxDropdown.args = {
   components: [
