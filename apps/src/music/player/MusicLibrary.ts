@@ -71,7 +71,7 @@ export default class MusicLibrary {
     return this.libraryJson.path;
   }
 
-  setCurrentPackId(packId: string) {
+  setCurrentPackId(packId: string | null) {
     this.currentPackId = packId;
   }
 
