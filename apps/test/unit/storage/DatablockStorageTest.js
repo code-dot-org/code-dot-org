@@ -6,11 +6,19 @@ import {
   RATE_LIMIT_INTERVAL_MS,
 } from '../../../src/storage/rateLimit';
 
+import commonMsg from '@cdo/locale';
+import applabMsg from '@cdo/applab/locale';
 import sinon from 'sinon';
 import commands from '@cdo/apps/applab/commands';
 import storage from '@cdo/apps/storage/datablockStorage';
 import Applab from '@cdo/apps/applab/applab';
 import setupBlocklyGlobal from '../../util/setupBlocklyGlobal';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux,
+} from '@cdo/apps/redux';
 
 describe('DatablockStorage', () => {
   beforeEach(() => {
@@ -67,7 +75,7 @@ describe('DatablockStorage', () => {
     beforeEach(() => {
       _fetch = sinon.stub(storage, '_fetch').returns(true);
 
-      setupBlocklyGlobal();
+      stubRedux();
 
       Applab.init({
         useDatablockStorage: true,

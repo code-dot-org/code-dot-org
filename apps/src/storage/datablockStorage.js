@@ -21,7 +21,7 @@ function urlFor(func_name) {
   return `/datablock_storage/${channelId}/` + func_name;
 }
 
-DatablockStorage.DatablockStorage._fetch = async function (
+DatablockStorage._fetch = async function (
   path,
   method,
   params
