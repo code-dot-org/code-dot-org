@@ -24,10 +24,15 @@ def main
 
   # Set the new developers room topic
   new_topic = current_topic.sub(/^.+?;/, "DOTD: @#{primary_dotd_user};")
-  Slack.update_topic('developers', new_topic) unless new_topic == current_topic
+  unless new_topic == current_topic
+    Slack.update_topic('developers', new_topic)
 
-  # Remind dotd to update the flaky test tracker at 8am PST.
-  Slack.remind(Slack.user_id(DevelopersTopic.dotd), Time.now.to_i + 3600, 'Please update the <https://docs.google.com/spreadsheets/d/1DD6ebHM-2fsiMxxYCzhJYd1DzA69Z20qrCItaER9vto|Flaky Test Tracker>')
+    # Remind dotd to update the flaky test tracker at 8am PST.
+    msg = "Please update the " \
+      "<https://docs.google.com/spreadsheets/d/1DD6ebHM-2fsiMxxYCzhJYd1DzA69Z20qrCItaER9vto|Flaky Test Tracker> " \
+      "See instructions in the tracker for more info."
+    Slack.remind(Slack.user_id(DevelopersTopic.dotd), Time.now.to_i + 3600, msg)
+  end
 end
 
 main
