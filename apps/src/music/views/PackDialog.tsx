@@ -223,7 +223,7 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
               className={styles.skip}
               type="button"
             >
-              Skip
+              {musicI18n.skip()}
             </button>
             <button
               onClick={setPackToSelectedFolder}
@@ -235,7 +235,7 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
               disabled={!selectedFolderId}
               type="button"
             >
-              Continue
+              {musicI18n.continue()}
             </button>
           </div>
         </div>
