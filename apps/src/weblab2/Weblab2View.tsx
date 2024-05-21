@@ -23,14 +23,14 @@ const weblabLangMapping: {[key: string]: LanguageSupport} = {
 const horizontalLayout = {
   gridLayoutRows: '300px auto',
   gridLayoutColumns: '300px auto auto',
-  gridLayout: `    "instructions workspace preview-container"
+  gridLayout: `    "info-panel workspace preview-container"
       "file-browser workspace preview-container"`,
 };
 
 const verticalLayout = {
   gridLayoutRows: '300px auto auto',
   gridLayoutColumns: '300px auto',
-  gridLayout: `    "instructions workspace workspace"
+  gridLayout: `    "info-panel workspace workspace"
       "file-browser workspace workspace"
       "file-browser preview-container preview-container"`,
 };

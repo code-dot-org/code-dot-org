@@ -84,7 +84,7 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
 
   return (
     <div id="code-editor">
-      <div ref={editorRef} className={classNames('codemirror-container')} />;
+      <div ref={editorRef} className={classNames('codemirror-container')} />
     </div>
   );
 };
