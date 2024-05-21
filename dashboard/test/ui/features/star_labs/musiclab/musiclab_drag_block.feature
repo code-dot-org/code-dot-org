@@ -8,6 +8,9 @@ Scenario Outline: Dragging play sound block
   Given I am on "<url>"
   And I rotate to landscape
 
+  # Skip the pack dialog if it is showing.
+  Then I click selector ".skip-button" if it exists
+
   # Wait until we see the first category.
   And I wait until element ".blocklyTreeRow" is visible
 
