@@ -1,12 +1,17 @@
 import {unregisterProcedureBlocks} from '@blockly/block-shareable-procedures';
 import {Block, BlockSvg, Field, Theme, WorkspaceSvg} from 'blockly';
-import {ToolboxItemInfo, BlockInfo} from 'blockly/core/utils/toolbox';
+import {
+  ToolboxItemInfo,
+  BlockInfo,
+  ToolboxDefinition,
+} from 'blockly/core/utils/toolbox';
 import _ from 'lodash';
 
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
 import {
   getProjectXml,
   processIndividualBlock,
+  removeIdsFromBlocks,
 } from '@cdo/apps/blockly/addons/cdoXml';
 import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
 import experiments from '@cdo/apps/util/experiments';
@@ -712,4 +717,16 @@ export function highlightBlock(id: string, spotlight: boolean) {
     Blockly.selected.unselect();
   }
   Blockly.getMainWorkspace().highlightBlock(id, spotlight);
+}
+
+// Removes block ids from an XML string toolbox
+export function toolboxWithoutIds(
+  toolbox: string | Element | ToolboxDefinition | undefined
+) {
+  if (typeof toolbox !== 'string') {
+    return toolbox;
+  }
+  const toolboxDom = Blockly.Xml.textToDom(toolbox);
+  removeIdsFromBlocks(toolboxDom);
+  return Blockly.Xml.domToText(toolboxDom);
 }
