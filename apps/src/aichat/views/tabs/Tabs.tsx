@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import classNames from 'classnames';
+import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 
 import styles from './tabs.module.scss';
 import TabPanel from './TabPanel';
@@ -67,6 +68,11 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
                   className={classNames(index === activeIndex && styles.active)}
                 >
                   {tab.title}
+                  <FontAwesomeV6Icon
+                    iconName="lock"
+                    iconStyle="solid"
+                    className={styles.tabIcon}
+                  />
                 </button>
               </li>
             );
