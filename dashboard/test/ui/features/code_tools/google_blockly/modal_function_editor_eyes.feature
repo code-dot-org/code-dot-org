@@ -17,7 +17,7 @@ Scenario: Edit a function
   And element "#modalFunctionEditor" is visible
   # Open Sprites flyout
   And I press "blockly-d"
-  # Drag block to top of function
+  # Drag new sprite block to top of function
   And I drag block number 3 to offset "40, 100"
   And I see no difference for "add a new block to the function"
   # Close function
