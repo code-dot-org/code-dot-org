@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "k5-ai-data",
-    "serialized_at": "2024-05-21 19:20:43 UTC",
+    "serialized_at": "2024-05-22 15:46:20 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1084,6 +1084,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "k5_ai_data_survey_level"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -1526,16 +1529,6 @@
       }
     },
     {
-      "key": "classification",
-      "word": "Classification ",
-      "definition": "Sorting items into categories based on their features",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "classification"
-      }
-    },
-    {
       "key": "data",
       "word": "Data",
       "definition": "Information that we collect about the world",
@@ -1546,19 +1539,9 @@
       }
     },
     {
-      "key": "delete",
-      "word": "Delete",
-      "definition": "To remove or take something away",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "delete"
-      }
-    },
-    {
       "key": "feature_vector",
       "word": "Feature Vector",
-      "definition": "A numerical representation of certain features of an object",
+      "definition": "Assigning a number value to certain features of an object so that a machine can find patterns in the data",
       "properties": {
       },
       "seeding_key": {
@@ -1576,43 +1559,23 @@
       }
     },
     {
-      "key": "modify",
-      "word": "Modify",
-      "definition": "To change or make something different",
+      "key": "predict",
+      "word": "Predict",
+      "definition": "To make a guess based on patterns in the data",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "modify"
-      }
-    },
-    {
-      "key": "retrieve",
-      "word": "Retrieve",
-      "definition": "To get back something you stored or put away",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "retrieve"
+        "vocabulary.key": "predict"
       }
     },
     {
       "key": "sort",
       "word": "Sort",
-      "definition": "To put things in groups",
+      "definition": "To put items into groups based on their features ",
       "properties": {
       },
       "seeding_key": {
         "vocabulary.key": "sort"
-      }
-    },
-    {
-      "key": "store",
-      "word": "Store",
-      "definition": "To keep something in a computer’s memory",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "store"
       }
     },
     {
@@ -1623,6 +1586,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "training"
+      }
+    },
+    {
+      "key": "training_data",
+      "word": "Training data",
+      "definition": "Information that gets sorted, then given to a computer so it can make predictions",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "training_data"
       }
     }
   ],
@@ -1654,19 +1627,13 @@
     {
       "seeding_key": {
         "lesson.key": "Sorting Data",
-        "vocabulary.key": "classification"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sorting Data",
         "vocabulary.key": "data"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Sorting Data",
-        "vocabulary.key": "modify"
+        "vocabulary.key": "predict"
       }
     },
     {
@@ -1678,7 +1645,7 @@
     {
       "seeding_key": {
         "lesson.key": "Sorting Data",
-        "vocabulary.key": "training"
+        "vocabulary.key": "training_data"
       }
     },
     {
@@ -1702,25 +1669,25 @@
     {
       "seeding_key": {
         "lesson.key": "Training AI",
-        "vocabulary.key": "delete"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Training AI",
         "vocabulary.key": "machine_learning"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Training AI",
-        "vocabulary.key": "retrieve"
+        "vocabulary.key": "predict"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Training AI",
-        "vocabulary.key": "store"
+        "vocabulary.key": "training"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Training AI",
+        "vocabulary.key": "training_data"
       }
     },
     {
@@ -1738,6 +1705,36 @@
     {
       "seeding_key": {
         "lesson.key": "Using AI Tools in School",
+        "vocabulary.key": "training"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using AI Tools in School",
+        "vocabulary.key": "training_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "artificial_intelligence_a_i_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "bias"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
         "vocabulary.key": "training"
       }
     }
