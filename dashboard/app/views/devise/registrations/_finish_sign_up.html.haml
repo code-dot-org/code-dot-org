@@ -115,7 +115,7 @@
         - if ao_form.object.lti?
           .row
             .span3.signup-field-label
-              #teacher-email-label
+              #teacher-email-label.required
                 = ao_form.label :email, User.human_attribute_name(:email)
               - if @user.errors[:email].present?
                 %p.error= @user.errors[:email].join('\n')
