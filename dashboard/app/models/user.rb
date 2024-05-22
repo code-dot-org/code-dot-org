@@ -300,7 +300,7 @@ class User < ApplicationRecord
     self.gender = Policies::Gender.normalize gender
   end
 
-  validate :validate_us_state
+  validate :validate_us_state, if: :should_validate_us_state?
 
   before_create unless: -> {Policies::ChildAccount.compliant?(self)} do
     Services::ChildAccount.lock_out(self)
@@ -2868,20 +2868,27 @@ class User < ApplicationRecord
   # Verifies that the serialized attribute "us_state" is a 2 character string
   # representing a US State or "??" which represents a "N/A" kind of response.
   private def validate_us_state
-    # tracking a user's US State is currently limited to students.
-    return unless user_type == TYPE_STUDENT
-    # us_state is only a required field if the User lives in the US.
-    return unless %w[US RD].include? country_code
     # us_state must be selected.
     if us_state.blank?
       errors.add(:us_state, :blank)
       return
     end
-    # Check if us_state value will change, check after making sure us_state is not blank
-    return unless will_save_change_to_properties? && properties_change&.first&.[]("us_state") != us_state
     # Report an error if an invalid value was submitted (probably tampering).
     unless User.us_state_dropdown_options.include?(us_state)
       errors.add(:us_state, :invalid)
     end
+  end
+
+  def us_state_changed?
+    # Check if us_state value will change
+    will_save_change_to_properties? && properties_change&.first&.[]("us_state") != us_state
+  end
+
+  def should_validate_us_state?
+    # tracking a user's US State is currently limited to students.
+    return false unless user_type == TYPE_STUDENT
+    # us_state is only a required field if the User lives in the US.
+    return false unless %w[US RD].include? country_code
+    new_record? || us_state_changed?
   end
 end
