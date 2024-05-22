@@ -10,7 +10,9 @@ markdown <<MARKDOWN
 
 ## Defining Computer Vision:
 
-#### Computer vision is a field of artificial intelligence that enables computers and systems to derive meaningful information from digital images, videos, and other visual inputs. It is commonly seen in everyday applications such as facial recognition, autonomous vehicles, and image processing software.
+#### Computer vision is a field of artificial intelligence that enables computers and systems to **derive meaningful information** from digital images, videos, and other visual inputs. 
+
+#### It is commonly seen in everyday applications such as facial recognition, autonomous vehicles, and image processing software.
 
 
 <br>
@@ -18,9 +20,9 @@ markdown <<MARKDOWN
 
 ## Why Students Should Learn It:
 
-#### Learning computer vision equips students with cutting-edge skills relevant in numerous industries, fostering a blend of technical proficiency and critical thinking. This knowledge not only prepares them for future careers in technology but also helps them understand and ethically engage with the increasingly digital world around them.
+#### Learning computer vision equips students with cutting-edge skills relevant in numerous industries, fostering a blend of technical proficiency and critical thinking. 
 
-![]()
+#### This knowledge not only prepares them for future careers in technology but also helps them **understand and ethically engage** with the increasingly digital world around them.
 
-![]()
+
 MARKDOWN
