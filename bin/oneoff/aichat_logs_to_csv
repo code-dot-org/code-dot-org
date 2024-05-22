@@ -4,19 +4,28 @@ require 'csv'
 require_relative '../../dashboard/config/environment'
 
 def main
-  CSV.open("output.csv", "w") do |csv|
+  options = {}
+  OptionParser.new do |opts|
+    opts.on('--section_id SECTION_ID') do |section_id|
+      options[:section_id] = Integer(section_id)
+    end
+    opts.on('--date DATE') do |date|
+      options[:date] = Date.parse(date)
+    end
+  end.parse!
+
+  CSV.open("aichat_logs_#{options[:section_id]}_#{options[:date]}.csv", "w") do |csv|
     headers = %w[
-      id user_id username name level_id script_id project_id created_at
+      session_id user_id username name level_id script_id project_id created_at
       updated_at selectedModelId temperature systemPrompt retrievalContexts
       status role content
     ]
     csv << headers
 
-    student_users_in_section = Section.find(ARGV[0]).followers.map(&:student_user)
-    date = Date.parse(ARGV[1])
+    student_users_in_section = Section.find(options[:section_id]).followers.map(&:student_user)
     sessions = AichatSession.where(
       user: student_users_in_section,
-      created_at: date.beginning_of_day..date.end_of_day
+      created_at: options[:date].beginning_of_day..options[:date].end_of_day
     )
 
     sessions.each do |session|
