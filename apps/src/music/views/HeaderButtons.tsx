@@ -30,7 +30,7 @@ const CurrentPack: React.FunctionComponent<CurrentPackProps> = ({
   let packImageSrc = null;
 
   if (library && packFolder) {
-    const libraryGroupPath = library.libraryJson.path;
+    const libraryGroupPath = library.getPath();
     packImageSrc =
       packFolder.imageSrc &&
       `${getBaseAssetUrl()}${libraryGroupPath}/${packFolder.path}/${
@@ -39,7 +39,7 @@ const CurrentPack: React.FunctionComponent<CurrentPackProps> = ({
   }
 
   return (
-    <span>
+    <span className={moduleStyles.currentPack}>
       {packImageSrc && (
         <img
           src={packImageSrc}
@@ -90,7 +90,7 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
   let packFolder = null;
 
   if (library && currentPackId) {
-    packFolder = library.getAllowedFolderForFolderId(undefined, currentPackId);
+    packFolder = library.getAllowedFolderForFolderId(currentPackId);
   }
 
   const onClickUndoRedo = useCallback(
@@ -223,9 +223,7 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
           type="button"
           className={classNames(moduleStyles.button, moduleStyles.buttonSkip)}
         >
-          <span className={moduleStyles.buttonSkipContent}>
-            {commonI18n.skipToProject()}
-          </span>
+          {commonI18n.skipToProject()}
           <FontAwesome
             title={commonI18n.skipToProject()}
             icon="arrow-right"

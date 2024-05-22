@@ -97,6 +97,16 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
   end
 
   class GrantPermissionRequest < ActionDispatch::IntegrationTest
+    def assert_enqueued_parent_permission_confirm_mail(permission, &block)
+      assert_enqueued_with(
+        job: ParentMailer.delivery_job,
+        args: ['ParentMailer', 'parent_permission_confirmation', 'deliver_now', {args: [permission.parent_email]}],
+        queue: 'mailers',
+        at: 24.hours.from_now,
+        &block
+      )
+    end
+
     teardown do
       Timecop.return
     end
@@ -108,7 +118,7 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
     test 'given permission request it should update user and send email' do
       permission = create :parental_permission_request
       user = permission.user
-      assert_emails 1 do
+      assert_enqueued_parent_permission_confirm_mail(permission) do
         Services::ChildAccount.grant_permission_request! permission
       end
       user.reload
@@ -119,7 +129,7 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
     test 'granting permission twice only makes changes once' do
       permission = create :parental_permission_request
       user = permission.user
-      assert_emails 1 do
+      assert_enqueued_parent_permission_confirm_mail(permission) do
         Services::ChildAccount.grant_permission_request! permission
       end
       user.reload
@@ -129,7 +139,7 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
       refute_empty last_updated
 
       # No emails should be sent
-      assert_emails 0 do
+      assert_no_enqueued_emails do
         Services::ChildAccount.grant_permission_request! permission
       end
       user.reload

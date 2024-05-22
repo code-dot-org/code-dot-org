@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import i18n from '@cdo/locale';
 import Toggle from '@cdo/apps/componentLibrary/toggle';
-import {LmsLinks} from '@cdo/apps/util/sharedConstants';
+import {LmsLinks} from '@cdo/generated-scripts/sharedConstants';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';

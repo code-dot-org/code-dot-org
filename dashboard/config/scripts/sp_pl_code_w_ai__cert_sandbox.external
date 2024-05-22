@@ -3,23 +3,6 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Certificate Overview
-
-#### Certificates are available to users at a module/unit level for those who complete _every_ level in a module/unit. This means that every level must be "turned green" by clicking "Complete" or "Finish".
-
-## Setting Up a Module for Certificates
-
-* #### Manage user expectations by messaging clearly what needs to be completed for a certificate and where they can be accessed. See the exemplar below.
-* #### Include multiple opportunities for users to check their understanding of module/unit concepts throughout their learning experience. 
-	* #### Check for understanding (CFU) levels **will** need to be completed correctly for a user to "pass" or complete a level.
-    * #### Similarly, reflection boxes will need to have a certain number of characters.
-* #### You **must** provide timing for each module/unit within a script. This will calculate the total amount of time a user spent on a module/unit and will be reflected on the certificate. This can be an estimate.
-
-<img src="https://images.code.org/56949d1964a71b6b9ddc2c241789d36d-image-1710872731236.25.18 AM.png" alt="A purple circle shows where to add module/unit timing for a script.">
-
-___
-
-## Exemplar
 
 # Receiving a Certificate for this Module
 

@@ -3,12 +3,7 @@ import React from 'react';
 import {Provider} from 'react-redux';
 
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
-import {
-  getStore,
-  registerReducers,
-  stubRedux,
-  restoreRedux,
-} from '@cdo/apps/redux';
+import {getStore, registerReducers} from '@cdo/apps/redux';
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import manageStudents, {
   RowType,
@@ -20,10 +15,9 @@ import teacherSections, {
   setSections,
   selectSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../util/reconfiguredChai';
 
 interface FakeStudent {
   id: number;
@@ -47,7 +41,7 @@ describe('AgeGatedStudentsModal', () => {
     sectionId: 101,
     hasEverSignedIn: false,
     dependsOnThisSectionForLogin: true,
-    loginType: 'picture',
+    loginType: 'google_oauth2',
     rowType: RowType.STUDENT,
     age: 10,
     atRiskAgeGatedStudent: true,
@@ -60,7 +54,7 @@ describe('AgeGatedStudentsModal', () => {
     sectionId: 101,
     hasEverSignedIn: false,
     dependsOnThisSectionForLogin: true,
-    loginType: 'picture',
+    loginType: 'google_oauth2',
     rowType: RowType.STUDENT,
     age: 10,
     atRiskAgeGatedStudent: false,
@@ -73,7 +67,7 @@ describe('AgeGatedStudentsModal', () => {
     sectionId: 101,
     hasEverSignedIn: false,
     dependsOnThisSectionForLogin: true,
-    loginType: 'picture',
+    loginType: 'google_oauth2',
     rowType: RowType.STUDENT,
     age: 10,
     atRiskAgeGatedStudent: true,
@@ -86,7 +80,7 @@ describe('AgeGatedStudentsModal', () => {
     sectionId: 101,
     hasEverSignedIn: false,
     dependsOnThisSectionForLogin: true,
-    loginType: 'picture',
+    loginType: 'google_oauth2',
     rowType: RowType.STUDENT,
     age: 10,
     atRiskAgeGatedStudent: true,
@@ -99,7 +93,7 @@ describe('AgeGatedStudentsModal', () => {
     sectionId: 101,
     hasEverSignedIn: false,
     dependsOnThisSectionForLogin: true,
-    loginType: 'picture',
+    loginType: 'google_oauth2',
     rowType: RowType.STUDENT,
     age: 10,
     atRiskAgeGatedStudent: true,
@@ -116,7 +110,7 @@ describe('AgeGatedStudentsModal', () => {
     id: 101,
     location: '/v2/sections/101',
     name: 'My Section',
-    login_type: SectionLoginType.picture,
+    login_type: 'google_oauth2',
     participant_type: 'student',
     grade: '2',
     code: 'PMTKVH',
@@ -143,7 +137,6 @@ describe('AgeGatedStudentsModal', () => {
     }
   };
   beforeEach(() => {
-    stubRedux();
     const store = getStore();
     registerReducers({
       teacherSections,
@@ -155,10 +148,6 @@ describe('AgeGatedStudentsModal', () => {
     store.dispatch(setSections([fakeSection]));
     store.dispatch(selectSection(fakeSection.id));
     store.dispatch(setStudents(fakeStudents));
-  });
-
-  afterEach(() => {
-    restoreRedux();
   });
 
   it('should show table with students', () => {

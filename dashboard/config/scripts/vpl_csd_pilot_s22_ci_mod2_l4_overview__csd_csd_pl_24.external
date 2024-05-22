@@ -1,0 +1,20 @@
+name 'VPL-CSD-PILOT-S22-CI-mod2-L4-overview_-csd_CSD-PL-24'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Consider Roles and Responsibilities in Digital Media
+
+<img src="https://images.code.org/6f2ec5e7ae0a7b296aa917cca7cedca8-image-1711646671922.24.27 AM.png" alt="Three students with laptops look at each other and laugh while they walk down a hallway." style="border-radius:40px; float: right; padding-right: 10px; height: 250px; clear: both; margin: 20px 20px 0px 20px;">
+<br>
+
+#### While students are learning how to build websites in Code.org's Web Development unit, they are also learning about their roles and responsibilities as both creators and consumers of digital media. In the next section of this professional learning module, you will be introduced to aspects of the Web Development unit that focus on how students will consider the real world impacts of web development. 
+
+### **You will**:
+
+* #### Explore how students will work to understand their roles and responsibilities as creators and consumers of digital media.
+* #### Review key lesson materials to prepare to teach students about their roles and responsibilities on the internet.
+<br>
+
+#### **Suggested time:** 15 minutes
+MARKDOWN

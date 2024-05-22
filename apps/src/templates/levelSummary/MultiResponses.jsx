@@ -1,8 +1,10 @@
-import React, {useMemo} from 'react';
 import PropTypes from 'prop-types';
-import styles from './summary.module.scss';
+import React, {useMemo} from 'react';
 import {Chart} from 'react-google-charts';
+
 import color from '@cdo/apps/util/color';
+
+import styles from './summary.module.scss';
 
 const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 

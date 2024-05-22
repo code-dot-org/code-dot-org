@@ -1,30 +1,47 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 
 import './styles/Weblab2View.css';
 
 import {Config} from './Config';
 
-import {CDOIDE} from '@cdoide/CDOIDE';
-import {ConfigType, ProjectType} from '@cdoide/types';
+import {Codebridge} from '@codebridge/Codebridge';
+import {ConfigType, ProjectType} from '@codebridge/types';
 
-import CDOEditor from './Editor';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {MultiFileSource} from '@cdo/apps/lab2/types';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {Editor as CDOEditor} from '@codebridge/Editor';
+import {html} from '@codemirror/lang-html';
+import {LanguageSupport} from '@codemirror/language';
+import {css} from '@codemirror/lang-css';
+import {useSource} from '../codebridge/hooks/useSource';
+import {ProjectSources} from '@cdo/apps/lab2/types';
 
-const instructions = `Add html pages and preview them in the right pane.
+const weblabLangMapping: {[key: string]: LanguageSupport} = {
+  html: html(),
+  css: css(),
+};
 
-Add css pages (and link them to your html).
+const DefaultEditorComponent = () =>
+  CDOEditor(weblabLangMapping, ['html', 'css']);
 
-Use the file browser to add/rename/delete files, or to add/rename/delete folders (including hierarchically!)`;
+const horizontalLayout = {
+  gridLayoutRows: '32px 300px auto',
+  gridLayoutColumns: '300px auto auto',
+  gridLayout: `    "instructions file-tabs preview-container"
+      "instructions editor preview-container"
+      "file-browser editor preview-container"`,
+};
+
+const verticalLayout = {
+  gridLayoutRows: '32px 300px auto auto',
+  gridLayoutColumns: '300px auto',
+  gridLayout: `    "instructions file-tabs file-tabs"
+      "instructions editor editor"
+      "file-browser editor editor"
+      "file-browser preview-container preview-container"`,
+};
 
 const defaultConfig: ConfigType = {
-  //showSideBar: true,
-  // showLeftNav: false,
-  // showEditor: false,
-  // showPreview: false,
   activeLeftNav: 'Files',
-  EditorComponent: CDOEditor,
+  EditorComponent: DefaultEditorComponent,
   // editableFileTypes: ["html"],
   // previewFileTypes: ["html"],
   leftNav: [
@@ -53,17 +70,10 @@ const defaultConfig: ConfigType = {
       action: () => window.alert('You are already on the file browser'),
     },
   ],
-  instructions,
-  //editableFileTypes: ["html", "css"],
-  //previewFileTypes: ["html"],
-  /* PreviewComponents: {
-    html: () => <div>I am previewing HTML</div>,
-  }, */
-  //blankEmptyEditor: true,
-  //EmptyEditorComponent: () => <div>Nothing is open.</div>,
+  ...horizontalLayout,
 };
 
-const defaultProject: ProjectType = {
+const defaultSource: ProjectType = {
   // folders: {},
   folders: {
     '1': {id: '1', name: 'foo', parentId: '0'},
@@ -83,7 +93,7 @@ const defaultProject: ProjectType = {
   <link rel="stylesheet" href="styles.css"/>
   <body>
     Content goes here!
-    <div class="foo">Foo class!</div>
+    <div class="foo">[DEFAULT] Foo class!</div>
   </body>
 </html>
 `,
@@ -138,30 +148,20 @@ const defaultProject: ProjectType = {
   },
 };
 
+const defaultProject: ProjectSources = {source: defaultSource};
+
 const Weblab2View = () => {
-  const [currentProject, setCurrentProject] =
-    useState<ProjectType>(defaultProject);
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const [showConfig, setShowConfig] = useState<'project' | 'config' | ''>('');
-  const initialSources = useAppSelector(state => state.lab.initialSources);
-  const channelId = useAppSelector(state => state.lab.channel?.id);
+  const {source, setSource} = useSource(defaultProject);
+  const [showConfig, setShowConfig] = useState<
+    'project' | 'config' | 'layout' | ''
+  >('');
 
-  const setProject = (newProject: MultiFileSource) => {
-    setCurrentProject(newProject);
-    if (Lab2Registry.getInstance().getProjectManager()) {
-      const projectSources = {
-        source: newProject,
-      };
-      Lab2Registry.getInstance().getProjectManager()?.save(projectSources);
-    }
+  const configKey = {
+    project: source || defaultProject,
+    config: config,
+    layout: config,
   };
-
-  useEffect(() => {
-    // We reset the project when the channelId changes, as this means we are on a new level.
-    setCurrentProject(
-      (initialSources?.source as MultiFileSource) || defaultProject
-    );
-  }, [channelId, initialSources]);
 
   return (
     <div className="app-wrapper">
@@ -172,33 +172,53 @@ const Weblab2View = () => {
         <button type="button" onClick={() => setShowConfig('config')}>
           Edit config
         </button>
+        <button type="button" onClick={() => setShowConfig('layout')}>
+          Edit layout
+        </button>
+        <button
+          type="button"
+          onClick={() => setConfig({...config, ...horizontalLayout})}
+        >
+          Use horizontal layout
+        </button>
+        <button
+          type="button"
+          onClick={() => setConfig({...config, ...verticalLayout})}
+        >
+          Use vertical layout
+        </button>
       </div>
       <div className="app-ide">
-        <CDOIDE
-          project={currentProject}
-          config={config}
-          setProject={setProject}
-          setConfig={setConfig}
-        />
+        {source && (
+          <Codebridge
+            project={source}
+            config={config}
+            setProject={setSource}
+            setConfig={setConfig}
+          />
+        )}
+
+        {showConfig && (
+          <Config
+            config={configKey[showConfig]}
+            setConfig={(
+              configName: string,
+              newConfig: ProjectType | ConfigType | string
+            ) => {
+              if (configName === 'project') {
+                setSource(newConfig as ProjectType);
+              } else if (configName === 'config' || configName === 'layout') {
+                (newConfig as ConfigType).EditorComponent =
+                  DefaultEditorComponent;
+                setConfig(newConfig as ConfigType);
+              }
+              setShowConfig('');
+            }}
+            cancelConfig={() => setShowConfig('')}
+            configName={showConfig}
+          />
+        )}
       </div>
-      {showConfig && (
-        <Config
-          config={showConfig === 'project' ? currentProject : config}
-          setConfig={(
-            configName: string,
-            newConfig: ProjectType | ConfigType
-          ) => {
-            if (configName === 'project') {
-              setProject(newConfig as ProjectType);
-            } else if (configName === 'config') {
-              setConfig(newConfig as ConfigType);
-            }
-            setShowConfig('');
-          }}
-          cancelConfig={() => setShowConfig('')}
-          configName={showConfig}
-        />
-      )}
     </div>
   );
 };

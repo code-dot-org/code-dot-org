@@ -11,7 +11,7 @@ import BubbleBadge, {BadgeType} from './BubbleBadge';
 import {defaultBubbleIcon} from './progressHelpers';
 import {levelProgressStyle} from './progressStyles';
 import FontAwesome from '../FontAwesome';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import _ from 'lodash';
 import './styles.scss';
 

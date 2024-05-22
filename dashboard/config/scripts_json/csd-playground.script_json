@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csd-playground",
-    "serialized_at": "2024-04-05 04:46:27 UTC",
+    "serialized_at": "2024-04-10 19:04:12 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -300,7 +300,7 @@
     },
     {
       "key": "lesson-17",
-      "name": "Showin Emma How Cool I Am",
+      "name": "Emma showin Dan how cool she is",
       "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
@@ -892,26 +892,39 @@
       }
     },
     {
-      "key": "f72a48fd-ef04-4b92-af6f-fd2f66b73942",
+      "key": "8a04ae0f-b057-43ef-84cb-6f5d1d7ff2c6",
       "position": 1,
       "properties": {
-        "name": "Teaching Guide"
+        "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "f72a48fd-ef04-4b92-af6f-fd2f66b73942",
+        "lesson_activity.key": "8a04ae0f-b057-43ef-84cb-6f5d1d7ff2c6",
         "lesson.key": "lesson-17",
         "lesson_group.key": "",
         "script.name": "csd-playground"
       }
     },
     {
-      "key": "feeb36e7-5618-4bfc-948f-f65c272ade97",
+      "key": "1b394e98-43ac-4838-9768-efa56734a820",
       "position": 2,
       "properties": {
-        "name": "Warm Up"
+        "name": "Activity"
       },
       "seeding_key": {
-        "lesson_activity.key": "feeb36e7-5618-4bfc-948f-f65c272ade97",
+        "lesson_activity.key": "1b394e98-43ac-4838-9768-efa56734a820",
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "678eb76b-770f-4b09-95cb-1f604ef22440",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "678eb76b-770f-4b09-95cb-1f604ef22440",
         "lesson.key": "lesson-17",
         "lesson_group.key": "",
         "script.name": "csd-playground"
@@ -2435,25 +2448,48 @@
       }
     },
     {
-      "key": "6ba80c00-3fd2-4544-80bd-998312a79bd8",
+      "key": "a59df75f-f8d1-4958-b6af-9ff7402c2b7d",
       "position": 1,
       "properties": {
-        "description": "<table>\n        <tr>\n          <td style=\"width: 25%\">Slide</td>\n          <td style=\"width: 75%\">Lesson Guide</td>\n        </tr>\n  \n          <tr>\n            <td style=\"width: 25%\"><a href=\"https://dancodedotorg.github.io/testing-slides/1FFfEhrNW-oNuq5dAk-yYxT6cxuPYxz19QdXr97T1PiI/slide0.png\" target=\"_blank\"><img src=\"https://dancodedotorg.github.io/testing-slides/1FFfEhrNW-oNuq5dAk-yYxT6cxuPYxz19QdXr97T1PiI/slide0.png\"></a></td>\n            <td style=\"width: 75%\">\n              Lesson 2 - Inputs & Training Data\n            </td>\n          </tr>\n    \n          <tr>\n            <td style=\"width: 25%\"><a href=\"https://dancodedotorg.github.io/testing-slides/1FFfEhrNW-oNuq5dAk-yYxT6cxuPYxz19QdXr97T1PiI/slide1.png\" target=\"_blank\"><img src=\"https://dancodedotorg.github.io/testing-slides/1FFfEhrNW-oNuq5dAk-yYxT6cxuPYxz19QdXr97T1PiI/slide1.png\"></a></td>\n            <td style=\"width: 75%\">\n              Teacher Resources\n\t\t<br />\n\t\t<br />Prep\n            </td>\n          </tr>\n    \n          </table>"
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1SfdvxjJSDsdlDSca-wZ6wbCIhfX4uRl2X09VQyzR66s/export/png?id=1SfdvxjJSDsdlDSca-wZ6wbCIhfX4uRl2X09VQyzR66s&pageid=g2b5b268c506_0_104\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Do some stuff!~\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Discuss some stuff\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Some stuff!\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip: Consider Some stuff** - This is all worth considering!"
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "6ba80c00-3fd2-4544-80bd-998312a79bd8",
-        "lesson_activity.key": "f72a48fd-ef04-4b92-af6f-fd2f66b73942"
+        "activity_section.key": "a59df75f-f8d1-4958-b6af-9ff7402c2b7d",
+        "lesson_activity.key": "8a04ae0f-b057-43ef-84cb-6f5d1d7ff2c6"
       }
     },
     {
-      "key": "cb1973b0-949a-4da0-984c-7f24da65ba50",
+      "key": "91bd315b-4d4b-4e45-bb94-05a65c8a5b1c",
       "position": 1,
       "properties": {
-        "description": "<table>\n            <tr>\n              <td style=\"width: 25%\"><strong>Slide</strong></td>\n              <td style=\"width: 75%\"><strong>Lesson Guide</strong></td>\n            </tr>\n      \n          <tr>\n            <td style=\"width: 25%\"><a href=\"https://dancodedotorg.github.io/testing-slides/1FFfEhrNW-oNuq5dAk-yYxT6cxuPYxz19QdXr97T1PiI/slide2.png\" target=\"_blank\"><img src=\"https://dancodedotorg.github.io/testing-slides/1FFfEhrNW-oNuq5dAk-yYxT6cxuPYxz19QdXr97T1PiI/slide2.png\"></a></td>\n            <td style=\"width: 75%\">\n              Warm Up\n            </td>\n          </tr>\n    \n          <tr>\n            <td style=\"width: 25%\"><a href=\"https://dancodedotorg.github.io/testing-slides/1FFfEhrNW-oNuq5dAk-yYxT6cxuPYxz19QdXr97T1PiI/slide3.png\" target=\"_blank\"><img src=\"https://dancodedotorg.github.io/testing-slides/1FFfEhrNW-oNuq5dAk-yYxT6cxuPYxz19QdXr97T1PiI/slide3.png\"></a></td>\n            <td style=\"width: 75%\">\n              <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> In this comic, Calvin and Hobbes are playing Scrabble - a game where you score points based on the words you can create with random letters. On the next screen, you will see a list of “words”. Decide which ones are truly words like you can play in Scrabble and which are not.\n\t\t<br />\n\t\t<br />Teaching Tip: Classroom Prep\n\t\t<br />Before beginning this warmup, consider how you will manage the discussion on the next slide where students are sorting terms into “words” or “not words”. Consider having two sheets of poster paper that you can write on as the class sorts, or consider making a table on a whiteboard and writing the results there. You could also consider presenting these slides in “edit” mode so you can move the text boxes around on the screen, but make sure you are able to reset the choices between class periods if you teach this lesson to multiple classes in the same day.\n            </td>\n          </tr>\n    \n          <tr>\n            <td style=\"width: 25%\"><a href=\"https://dancodedotorg.github.io/testing-slides/1FFfEhrNW-oNuq5dAk-yYxT6cxuPYxz19QdXr97T1PiI/slide4.png\" target=\"_blank\"><img src=\"https://dancodedotorg.github.io/testing-slides/1FFfEhrNW-oNuq5dAk-yYxT6cxuPYxz19QdXr97T1PiI/slide4.png\"></a></td>\n            <td style=\"width: 75%\">\n              <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Have students discuss in groups before sharing out as a full class. Instead of going line-by-line through these words, ask students which decisions they are “most confident” about and sharing their classification for those words first. Using this strategy, students will likely sort “1) banana” and “6) shirt” as words, and “2) aka7sj23ksw” and “7) @&!*@^#” as not words. The remaining words are deliberately chosen to motivate certain discussions and create moments of cognitive dissonance and curiosity, hopefully allowing students to lead the discussion by asking questions or respectfully challenging ideas. Let students know they will likely change their minds as the discussion continues and that’s okay, and allowing students to state their confidence level for their initial thoughts can make them more comfortable speaking up since it feels less “high-stakes”. Be prepared to address the following situations in this discussion:\n\t\t<br />\n\t\t<br />3) cherimoya is a fruit common to South America, but may not be a common fruit your students have heard of. It’s possible many students may say “this isn’t a word”, but one or two students may speak up because they’re familiar with this fruit. Be sure to elevate those voices and highlight how our own knowledge is sometimes limited by lack of exposure to different words or phrases. Or, if no one raises this point, be sure to point this out to students explicitly such as showing them the Wikipedia page. In either case, make sure cherimoya is classified as a “word” before leaving the discussion\n\t\t<br />\n\t\t<br />8) ullaakkut and 10) yá'át'ééh are both words in other languages - ullaakkut means hello in Inuktitut, a language spoken by Inuit peoples in Canada and Greenland; and yá'át'ééh means “hello” in the Navajo / Diné language. Similar to above, students may initially classify these as not words because they are unfamiliar with them, but it is important to surface the meaning and use of these words to students either with a quick google search or elevating the voice of a student in class who is already familiar with these words. As a result, make sure these terms don’t end up in the “Not Words” category by the end of the discussion.\n\t\t<br />\n\t\t<br />4) wierd is a misspelling of either the word “weird” or the word “wired”. Students may initially say that this is “not a word”, but another student or yourself should challenge them by pointing out that if this is typed into a device with autocorrect, it will automatically correct it to one of these other words. Even in this slide deck, the word has a red squiggly underline representing that the computer recognizes it as something, even if it’s not a correctly spelled word. This may inspire the class to create a new category to represent this term - it’s not a correctly spelled word, but it’s also not a made-up word, so maybe there’s a new category for “misspelled words” or “important terms that aren’t words”. Let students guide how they want to handle this situation, even if they decide not to make a new category and it remains in “not word”.\n\t\t<br />\n\t\t<br />At some point, students who are more familiar with the Scrabble game may try to invoke the “rules of Scrabble” which restrict words in other languages, proper nouns, or abbreviations. From this perspective, words (8) and (10) above would be restricted, as would 5) Reykjavik (the capital of Iceland) and 9) ATM (since it is an abbreviation for Automatic Teller Machine). If this comes up, use this as an opportunity to question the effect that arbitrary rules have on what we consider valid language, since these are all definitely words that are used in society even if not officially allowed in Scrabble. You could consider creating new categories to represent these phrases, such as “Still words but not allowed in Scrabble” or “Part of language, but not allowed in Scrabble”. Or, the class could decide these belong in the Words category, regardless of what Scrabble thinks, and that’s the end of the story.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Ultimately, this is an exercise to surface that the way we identify words versus nonsense - much like Calvin and Hobbes in the comic panel - can be contextual to our lived experiences and influences what we consider important information versus random noise that can be ignored. It’s okay if the discussion ends without closure, so long as students have wrestled with how what they initially considered “words” may have been expanded as they were exposed to new contexts in the discussion. However, be very intentional that the discussion ends with very few items in the “Not Words” category, especially making sure ullaakkut and yá'át'ééh are not in this category and are instead classified as either a Word or a new category the class has created.\n            </td>\n          </tr>\n    \n          <tr>\n            <td style=\"width: 25%\"><a href=\"https://dancodedotorg.github.io/testing-slides/1FFfEhrNW-oNuq5dAk-yYxT6cxuPYxz19QdXr97T1PiI/slide5.png\" target=\"_blank\"><img src=\"https://dancodedotorg.github.io/testing-slides/1FFfEhrNW-oNuq5dAk-yYxT6cxuPYxz19QdXr97T1PiI/slide5.png\"></a></td>\n            <td style=\"width: 75%\">\n              <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Just from this warm-up, we’ve already seen that it can be tricky trying to recognize “words” from non-words. For a large-language model, those words are the inputs it uses to start generating it’s response. Today, we’re going to explore how a computer is able to recognize words used in language. This is the first step in understanding how a large-language model words - by looking at the inputs it uses!\n            </td>\n          </tr>\n    \n          </table>"
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1SfdvxjJSDsdlDSca-wZ6wbCIhfX4uRl2X09VQyzR66s/export/png?id=1SfdvxjJSDsdlDSca-wZ6wbCIhfX4uRl2X09VQyzR66s&pageid=g1413e1213c5_0_216\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> \n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Assessment Opportunity: Consider More Stuff!** - Even more assessment stuff!"
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "cb1973b0-949a-4da0-984c-7f24da65ba50",
-        "lesson_activity.key": "feeb36e7-5618-4bfc-948f-f65c272ade97"
+        "activity_section.key": "91bd315b-4d4b-4e45-bb94-05a65c8a5b1c",
+        "lesson_activity.key": "1b394e98-43ac-4838-9768-efa56734a820"
+      }
+    },
+    {
+      "key": "69e5e679-1d3d-42f4-901f-008bd1f62d17",
+      "position": 1,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1SfdvxjJSDsdlDSca-wZ6wbCIhfX4uRl2X09VQyzR66s/export/png?id=1SfdvxjJSDsdlDSca-wZ6wbCIhfX4uRl2X09VQyzR66s&pageid=g2b5b268c506_0_44\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Stuff\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong>  More stuff!\n    </td>\n  </tr>\n\n</table>    \n    "
+      },
+      "seeding_key": {
+        "activity_section.key": "69e5e679-1d3d-42f4-901f-008bd1f62d17",
+        "lesson_activity.key": "678eb76b-770f-4b09-95cb-1f604ef22440"
       }
     },
     {

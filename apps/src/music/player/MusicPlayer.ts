@@ -52,13 +52,13 @@ export default class MusicPlayer {
     audioPlayer?: AudioPlayer,
     metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
   ) {
-    if (appConfig.getValue('player') === 'tonejs') {
-      console.log('[MusicPlayer] Using ToneJSPlayer');
-      this.audioPlayer = new ToneJSPlayer() || audioPlayer;
-    } else {
+    if (appConfig.getValue('player') === 'sample') {
       console.log('[MusicPlayer] Using SamplePlayer');
       this.audioPlayer =
         new SamplePlayerWrapper(new SamplePlayer()) || audioPlayer;
+    } else {
+      console.log('[MusicPlayer] Using ToneJSPlayer');
+      this.audioPlayer = new ToneJSPlayer() || audioPlayer;
     }
     this.metricsReporter = metricsReporter;
     this.updateConfiguration(bpm, key);
@@ -550,7 +550,17 @@ export default class MusicPlayer {
   }
 
   private calculatePitchShift(soundData: SoundData) {
-    return soundData.type === 'beat' ? 0 : this.key - (soundData.key || Key.C);
+    if (soundData.type === 'beat') {
+      return 0;
+    }
+    const diff = this.key - (soundData.key || Key.C);
+    if (diff > 6) {
+      return diff - 12;
+    }
+    if (diff < -6) {
+      return diff + 12;
+    }
+    return diff;
   }
 
   isInstrumentLoading(instrument: string): boolean {

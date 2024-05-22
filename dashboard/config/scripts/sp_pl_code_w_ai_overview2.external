@@ -3,33 +3,24 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Teaching AI and Machine Learning
+# Teaching Coding with AI
 
-##### Welcome! This free self-paced professional learning module is designed help you prepare to teach Code.org's Artificial Intelligence and Machine Learning unit. 
-
-
-<img src="https://images.code.org/1cd0ec71458414495502b9598efd2028-image-1639773441510.37.01 PM.png" alt="Image of AI bot and a model card" style="border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;">
+#### This unit empowers students to become confident, ethical coders. Students learn how to leverage generative AI tools to help **explain code, tackle problems, and even generate code.** More than just coding, this unit emphasizes **ethical considerations and responsible use of AI**, preparing students for the ever-evolving tech landscape.
+ 
 
 
-## In this module, you will:
-
-* ##### Get an introduction to artificial intelligence and machine learning.
-* ##### Practice key concepts included in the unit.
-* ##### Engage with AI Lab and App Lab.
-* ##### Explore end of chapter projects.
-* ##### Make a plan for implementing the unit with your students.
-
-### **Suggested time:** 100 minutes
-
-## Take the pre-survey
-
-##### Code.org values and is responsive to feedback. Please fill out <a href="https://studio.code.org/form/csd_selfpaced_pl_presurvey" target="blank" rel="noopener noreferrer">this short pre-survey</a> to  tell us about who you are and how we can best support you.
-
-<a class="btn btn-large btn-primary" href="https://studio.code.org/form/csd_selfpaced_pl_presurvey" target="blank" rel="noopener noreferrer">Take the pre-survey</a>
-
-## Let's get started!
-
-<div style="clear:both"/>
+<img src="https://images.code.org/253b0e26c460cbe7c84792effee1a70e-image-1712672034629.png" alt="Image of AI bot and a model card" style="border-radius:10px; float: right; ; height: 175px; margin: 20px 50px 50px 0px; ">
 
 
+## In this module, students will:
+
+- #### Understand the ethical implications of the learner-AI relationship
+- #### Utilize AI tooling strategies useful during the initial stages of the programming process
+- #### Plan algorithms with the assistance of AI tooling strategies
+- #### Debug code with the assistance of AI tooling strategies
+- #### Analyze and expand their finished programs with the assistance of AI tooling strategies.
+
+## Let's start learning! 
+
+![]()
 MARKDOWN

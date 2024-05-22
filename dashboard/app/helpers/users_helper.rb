@@ -501,4 +501,30 @@ module UsersHelper
     end
     (100.0 * completed / levels.count).round(2)
   end
+
+  def usa?(country_code)
+    %w[US RD].include?(country_code.to_s.upcase)
+  end
+
+  def cap_user_info_required?(user, country_code)
+    return false unless user.student?
+    # We only need to collect the us_state for students living in the USA.
+    return false unless country_code.nil? || usa?(country_code)
+    # If user_provided_us_state is true, then the us_state field has been set
+    # from a trusted source. Therefore we should not show the cap_user_info modal.
+    return false if user.user_provided_us_state
+    # If this account has the us_state field and the account was created after
+    # CPA started, then the us_state must have come from a trusted source.
+    # Therefore, we don't need to show the cap_user_info modal.
+    return false if !Policies::ChildAccount.user_predates_state_collection?(user) && user.us_state.present?
+    # Is the student a child and using a personal account to access code.org?
+    Policies::ChildAccount.show_cap_state_modal?(user) && user.under_13? && Policies::ChildAccount.personal_account?(user)
+  end
+
+  def lti_user_info_required?(user)
+    return false unless user.student?
+    return false unless user.us_state.nil?
+
+    Policies::Lti.lti?(current_user)
+  end
 end

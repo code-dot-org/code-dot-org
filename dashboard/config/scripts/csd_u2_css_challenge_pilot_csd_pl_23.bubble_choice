@@ -1,0 +1,11 @@
+name 'CSD U2 CSS challenge_pilot_CSD-PL-23'
+display_name 'Challenges and Extra Code'
+description 'There are lots of different ways to style text.  Use the challenges below to get new ideas for your web page.'
+
+sublevels
+level 'CSD U2 text style font family_CSD-PL-23'
+level 'CSD U2 text style decoration_CSD-PL-23'
+level 'CSD U2 text style text align_CSD-PL-23'
+level 'CSD U2 text style letter spacing_CSD-PL-23'
+level 'CSD U2 text style text shadow_CSD-PL-23'
+level 'CSD U2 text style freeplay_CSD-PL-23'

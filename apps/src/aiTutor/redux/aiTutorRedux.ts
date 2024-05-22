@@ -1,10 +1,7 @@
-import {getChatCompletionMessage} from '@cdo/apps/aichat/chatApi';
+import _ from 'lodash';
+import {getChatCompletionMessage} from '@cdo/apps/aiTutor/chatApi';
 import {createSlice, PayloadAction, createAsyncThunk} from '@reduxjs/toolkit';
-import {
-  compilationSystemPrompt,
-  generalChatSystemPrompt,
-  validationSystemPrompt,
-} from '@cdo/apps/aiTutor/constants';
+import {systemPrompt as baseSystemPrompt} from '@cdo/apps/aiTutor/constants';
 import {savePromptAndResponse} from '../interactionsApi';
 import {
   Role,
@@ -12,21 +9,19 @@ import {
   ChatCompletionMessage,
   Level,
   ChatContext,
-  AITutorTypesValue,
-  AITutorTypes as TutorTypes,
-  AITutorInteractionStatusValue,
+  AITutorTypes,
 } from '../types';
 
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 
 export interface AITutorState {
-  selectedTutorType: AITutorTypesValue | undefined;
   level: Level | undefined;
   scriptId: number | undefined;
   aiResponse: string | undefined;
   chatMessages: ChatCompletionMessage[];
   isWaitingForChatResponse: boolean;
   chatMessageError: boolean;
+  isChatOpen: boolean;
 }
 
 export interface InstructionsState {
@@ -35,7 +30,6 @@ export interface InstructionsState {
 
 const initialChatMessages: ChatCompletionMessage[] = [
   {
-    id: 0,
     role: Role.ASSISTANT,
     chatMessageText: "Hi! I'm your AI Tutor.",
     status: Status.OK,
@@ -43,13 +37,26 @@ const initialChatMessages: ChatCompletionMessage[] = [
 ];
 
 const initialState: AITutorState = {
-  selectedTutorType: undefined,
   level: undefined,
   scriptId: undefined,
   aiResponse: '',
   chatMessages: initialChatMessages,
   isWaitingForChatResponse: false,
   chatMessageError: false,
+  isChatOpen: false,
+};
+
+const formatQuestionForAITutor = (chatContext: ChatContext) => {
+  if (chatContext.actionType === AITutorTypes.GENERAL_CHAT) {
+    return chatContext.studentInput;
+  }
+
+  const separator = '\n\n---\n\n';
+  const codePrefix = "Here is the student's code:\n\n```\n";
+  const codePostfix = '\n```';
+
+  const formattedQuestion = `${chatContext.studentInput}${separator}${codePrefix}${chatContext.studentCode}${codePostfix}`;
+  return formattedQuestion;
 };
 
 // THUNKS
@@ -65,20 +72,7 @@ export const askAITutor = createAsyncThunk(
       scriptId: aiTutorState.aiTutor.scriptId,
     };
 
-    const tutorType = chatContext.tutorType;
-    const generalChat = tutorType === TutorTypes.GENERAL_CHAT;
-    const compilation = tutorType === TutorTypes.COMPILATION;
-    const validation = tutorType === TutorTypes.VALIDATION;
-
-    let systemPrompt;
-    if (validation) {
-      systemPrompt = validationSystemPrompt;
-    } else if (compilation) {
-      systemPrompt = compilationSystemPrompt;
-    } else {
-      systemPrompt = generalChatSystemPrompt;
-    }
-
+    let systemPrompt = baseSystemPrompt;
     const levelInstructions = instructionsState.instructions.longInstructions;
 
     if (levelInstructions.length > 0) {
@@ -88,40 +82,31 @@ export const askAITutor = createAsyncThunk(
     }
 
     const storedMessages = aiTutorState.aiTutor.chatMessages;
+    const newMessage: ChatCompletionMessage = {
+      role: Role.USER,
+      status: Status.UNKNOWN,
+      chatMessageText: chatContext.studentInput,
+    };
+    thunkAPI.dispatch(addChatMessage(newMessage));
 
-    const newMessageId = storedMessages[storedMessages.length - 1].id + 1;
-
-    if (generalChat) {
-      const newMessage: ChatCompletionMessage = {
-        id: newMessageId,
-        role: Role.USER,
-        status: Status.UNKNOWN,
-        chatMessageText: chatContext.studentInput,
-      };
-      thunkAPI.dispatch(addChatMessage(newMessage));
-    }
-
+    const formattedQuestion = formatQuestionForAITutor(chatContext);
     const chatApiResponse = await getChatCompletionMessage(
       systemPrompt,
-      newMessageId,
-      chatContext.studentInput,
+      formattedQuestion,
       storedMessages,
       levelContext.levelId,
-      chatContext.tutorType
+      chatContext.actionType
     );
-
     thunkAPI.dispatch(
-      updateChatMessageStatus({
-        id: chatApiResponse.id,
+      updateLastChatMessage({
         status: chatApiResponse.status,
       })
     );
 
     if (chatApiResponse.assistantResponse) {
       const assistantChatMessage: ChatCompletionMessage = {
-        id: newMessageId,
         role: Role.ASSISTANT,
-        status: Status.OK,
+        status: chatApiResponse.status,
         chatMessageText: chatApiResponse.assistantResponse,
       };
       thunkAPI.dispatch(addChatMessage(assistantChatMessage));
@@ -129,13 +114,14 @@ export const askAITutor = createAsyncThunk(
 
     const interactionData = {
       ...levelContext,
-      type: chatContext.tutorType,
+      type: chatContext.actionType,
       prompt: JSON.stringify(chatContext.studentInput),
       status: chatApiResponse?.status,
       aiResponse: chatApiResponse?.assistantResponse,
     };
 
-    await savePromptAndResponse(interactionData);
+    const savedInteraction = await savePromptAndResponse(interactionData);
+    thunkAPI.dispatch(updateLastChatMessage({id: savedInteraction.id}));
   }
 );
 
@@ -143,12 +129,6 @@ const aiTutorSlice = createSlice({
   name: 'aiTutor',
   initialState,
   reducers: {
-    setSelectedTutorType: (
-      state,
-      action: PayloadAction<AITutorTypesValue | undefined>
-    ) => {
-      state.selectedTutorType = action.payload;
-    },
     addAIResponse: (state, action: PayloadAction<string | undefined>) => {
       state.aiResponse = action.payload;
     },
@@ -158,14 +138,11 @@ const aiTutorSlice = createSlice({
     setScriptId: (state, action: PayloadAction<number | undefined>) => {
       state.scriptId = action.payload;
     },
-    addChatMessage: (state, action: PayloadAction<ChatCompletionMessage>) => {
-      const newMessageId =
-        state.chatMessages[state.chatMessages.length - 1].id + 1;
-      const newMessage = {
-        ...action.payload,
-        id: newMessageId,
-      };
-      state.chatMessages.push(newMessage);
+    addChatMessage: (
+      state,
+      {payload}: PayloadAction<ChatCompletionMessage>
+    ) => {
+      state.chatMessages.push(payload);
     },
     clearChatMessages: state => {
       state.chatMessages = initialChatMessages;
@@ -173,15 +150,18 @@ const aiTutorSlice = createSlice({
     setIsWaitingForChatResponse: (state, action: PayloadAction<boolean>) => {
       state.isWaitingForChatResponse = action.payload;
     },
-    updateChatMessageStatus: (
+    updateLastChatMessage: (
       state,
-      action: PayloadAction<{id: number; status: AITutorInteractionStatusValue}>
+      action: PayloadAction<Partial<ChatCompletionMessage>>
     ) => {
-      const {id, status} = action.payload;
-      const chatMessage = state.chatMessages.find(msg => msg.id === id);
-      if (chatMessage) {
-        chatMessage.status = status;
+      if (state.chatMessages.length > 0) {
+        const index = state.chatMessages.length - 1;
+        const lastMessage = state.chatMessages[index];
+        state.chatMessages[index] = _.merge({}, lastMessage, action.payload);
       }
+    },
+    setIsChatOpen: (state, action: PayloadAction<boolean>) => {
+      state.isChatOpen = action.payload;
     },
   },
   extraReducers: builder => {
@@ -200,12 +180,12 @@ const aiTutorSlice = createSlice({
 
 registerReducers({aiTutor: aiTutorSlice.reducer});
 export const {
-  setSelectedTutorType,
   setLevel,
   setScriptId,
   addAIResponse,
   addChatMessage,
   clearChatMessages,
   setIsWaitingForChatResponse,
-  updateChatMessageStatus,
+  updateLastChatMessage,
+  setIsChatOpen,
 } = aiTutorSlice.actions;

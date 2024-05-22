@@ -4,14 +4,16 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "curriculum_umbrella": "PD Workshop Activity CSA",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-16 15:02:53 UTC",
+    "serialized_at": "2024-05-09 19:00:38 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -88,7 +90,7 @@
       "name": "Introduction",
       "absolute_position": 1,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
         "overview": "**Purpose:**\nThe CSA Local Summer Workshop is part of the year-long professional learning program to prepare teachers to teach CSA. It focuses on the first three units of the course.\nThe Local Summer Workshop is designed to uphold Code.org's Professional Learning Values, including the value that educators are the experts. During the workshop, you will bring your valuable classroom experiences and expertise to discussions and collaborative activities. Upon its completion, you will be equipped and motivated to successfully begin teaching the CSA curriculum to your students.\n\n**Objectives:**\nIn this session, you will… \n\n* Understand the curriculum\n* Transform practice\n* Develop empathy with the student experience\n* Become part of a network of teachers who are doing similar work\n\n\n\n\n\n**What to Expect:**\nThis workshop experience will be a combination of synchronous and asynchronous sessions.\n* Synchronous sessions will be delivered by your facilitator(s) using video conferencing software. During these types of sessions, you will work with both your full cohort and table groups.\n* Asynchronous session activities appear on the Code.org platform and, though you will typically work on your own, are scheduled experiences that need to be completed in a timely manner.\n\nA typical workshop day in the in-person summer workshops is treated as a module in the virtual version. A typical workshop module consists of 4 sessions that follow the pattern of synchronous, asynchronous, synchronous, and asynchronous. You can expand any of the sessions below to see an at-a-glance agenda. Your facilitator(s) will guide you through the experience and transitions based on how they’ve chosen to implement the workshop. They will also provide a variety of types of support, including being available for \"office hours\" when you are working on your own. You will need to dedicate approximately 32.5 hours to complete the workshop.\n",
@@ -105,7 +107,7 @@
       "name": "Workshop Opener",
       "absolute_position": 2,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
         "overview": "**Purpose:**\nKick off the week! Get to know the people you are with and understand what will happen during the week.\n\n**Objectives**\n* Participants have started to get to know others at the workshop.\n* Participants know what we’re doing this week.\n\n**Suggested time:** 45 minutes\n",
@@ -122,7 +124,7 @@
       "name": "Access and Diversity in CSA",
       "absolute_position": 3,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
         "overview": "**Purpose:**\nTo put equity at the center of our workshop, we want participants to understand the current landscape of access and diversity in CSA and how that reality led to the development of this course.   This also serves as a space to give participants a better idea of what the course is about.  The goal of putting these two topics together (equity and CSA content) is to model for participants our belief that equity and CSA content are equally as important to keep in mind in this workshop. \n\n\n**Objectives**\n* Participants can explain how the curriculum framework is organized (i.e., big ideas, enduring understandings, learning objectives, essential knowledge, practices / skills)\n* Participants can describe the skills and the “big ideas” of the course (as provided by the College Board) .\n* Participants are aware that this professional development is NOT a College Board sponsored AP workshop.  Make participants aware that the College Board offers AP Summer Institutes and 1-day workshops that support teaching and pedagogy.\n* Teachers are informed that Code.org is  one of several College Board endorsed providers.\n* Teachers can describe the College Board’s recommendation of open enrollment policy for willing and academically prepared students\n* Participants can recognize disparities by race and gender in access, diversity, and inclusion in CS education nationally \n\n**Suggested time:** 40 minutes\n",
@@ -139,7 +141,7 @@
       "name": "High-level Overview: Starting Unit 1",
       "absolute_position": 4,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
         "overview": "**Purpose:**\nThis session will help participants be ready to engage in the model lesson that follows this session.  It will also give them an idea of how the course starts. \n\n\n**Objectives**\n* Participants have experience working with Java Lab\n* Participants can describe a class and object relationship\n\n**Suggested Time:** 40 minutes\n",
@@ -156,7 +158,7 @@
       "name": "Model Lesson 1: Instantiating Objects ",
       "absolute_position": 5,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 5,
       "properties": {
         "overview": "**Purpose:**\nFor participants who did not do the pre-work, this will be their first introduction to The Neighborhood.  A primary goal of this lesson is to show the curriculum as approachable for learners and to model using vocabulary techniques during the lesson.\n\n\n**Objectives**\n\n**Content objectives:*\n* Participants can create an object from an existing class\n\n\n**Pedagogy objectives:*\n* Participants are able to support students in reading and comprehension in the course.\n\n**Suggested time:** 60 minutes\n",
@@ -173,7 +175,7 @@
       "name": "Intro to Async",
       "absolute_position": 6,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 6,
       "properties": {
         "overview": "**Purpose:**\nThis transition prepares participants for a set of asynchronous activities, providing them with information about the assignment, their role, and the support available to them.\n\n**Objectives**\n\n* Participants are prepared to complete asynchronous activities on their own.\n\n**Suggested time:** 15 minutes\n",
@@ -190,7 +192,7 @@
       "name": "Asynchronous Part 1",
       "absolute_position": 7,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 7,
       "properties": {
       },
@@ -205,7 +207,7 @@
       "name": "Async Debrief",
       "absolute_position": 8,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 8,
       "properties": {
         "overview": "**Purpose:**\nIn this section, facilitators debrief the asynchronous activity, going through the slides participants worked on and highlighting important points.\n\n\n**Objectives**\n\n* Participants can recognize disparities by race and gender in access, diversity, and inclusion in CS education nationally. \n\n**Suggested Time:** 10 minutes \n",
@@ -222,7 +224,7 @@
       "name": "Model Lesson 2: Methods and Parameters",
       "absolute_position": 9,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 9,
       "properties": {
         "overview": "**Purpose:**\nParticipants who did not do the pre-work received their first exposure to The Neighborhood during the previous asynchronous session. This lesson is meant to further expose them to the environment and continue to build comfort.\n\n\n**Objectives**\n\n*Content objectives:*\n\n* Call methods with arguments\n* Differentiate between parameters and arguments\n\n\n*Pedagogy objectives:*\n* Participants are able to support students in reading and comprehension in the course.\n\n**Suggested time:** 60 minutes ",
@@ -239,7 +241,7 @@
       "name": "Asynchronous Part 2",
       "absolute_position": 10,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 10,
       "properties": {
       },
@@ -327,6 +329,7 @@
       "key": "46339b00-8e5d-453b-a859-defcad6e872d",
       "position": 1,
       "properties": {
+        "duration": 75
       },
       "seeding_key": {
         "lesson_activity.key": "46339b00-8e5d-453b-a859-defcad6e872d",
@@ -363,6 +366,7 @@
       "key": "1e1d01a6-9241-419c-a799-c3299324324d",
       "position": 1,
       "properties": {
+        "duration": 80
       },
       "seeding_key": {
         "lesson_activity.key": "1e1d01a6-9241-419c-a799-c3299324324d",

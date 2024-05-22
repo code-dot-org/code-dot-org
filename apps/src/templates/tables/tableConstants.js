@@ -6,6 +6,43 @@ import color from '../../util/color';
 // Constants for React tables
 
 // Styles for a reacttabular table
+/**
+ * @type {{
+ *   tableText: {
+ *     textOverflow?: string;
+ *     overflow?: string;
+ *     whiteSpace?: "normal" | "nowrap" | "pre" | "pre-line" | "pre-wrap";
+ *   };
+ *   table: {
+ *     borderWidth?: string;
+ *     borderStyle?: string;
+ *     borderColor?: string;
+ *     width?: string;
+ *     backgroundColor?: string,
+ *   };
+ *   cell: {
+ *     maxWidth?: number;
+ *     border?: string;
+ *     borderColor?: string;
+ *     padding?: number;
+ *     fontSize?: number;
+ *   };
+ *   headerCell: {
+ *     backgroundColor?: string;
+ *     fontWeight?: string;
+ *     borderColor?: string;
+ *     borderStyle?: string;
+ *     borderBottomWidth?: number;
+ *     borderTopWidth?: number;
+ *     borderLeftWidth?: number;
+ *     borderRightWidth?: number;
+ *     paddingTop?: number;
+ *     paddingBottom?: number;
+ *     color?: string;
+ *     textAlign?: string;
+ *   };
+ * }}
+ */
 export const tableLayoutStyles = {
   tableText: {
     textOverflow: 'ellipsis',
@@ -50,6 +87,36 @@ export const tableLayoutStyles = {
   },
   unsortableHeaderRTL: {
     paddingRight: 25,
+  },
+};
+
+export const plTableLayoutStyles = {
+  link: {
+    ...fontConstants['main-font-semi-bold'],
+    fontSize: 14,
+    color: color.neutral_dark,
+    textDecoration: 'underline',
+  },
+  sectionCodeLink: {
+    ...fontConstants['main-font-semi-bold'],
+    fontSize: 14,
+    color: color.brand_secondary_default,
+  },
+  currentUnit: {
+    marginTop: 10,
+    fontSize: 14,
+  },
+  colButton: {
+    paddingTop: 20,
+    paddingLeft: 20,
+    paddingBottom: 20,
+    width: 40,
+  },
+  participantTypeCell: {
+    fontSize: 14,
+  },
+  leaveButton: {
+    fontSize: 14,
   },
 };
 
