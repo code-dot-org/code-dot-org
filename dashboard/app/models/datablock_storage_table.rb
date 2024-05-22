@@ -156,6 +156,8 @@ class DatablockStorageTable < ApplicationRecord
   def create_records(record_jsons)
     if_shared_table_copy_on_write
 
+    return [] if record_jsons.empty?
+
     if records.count + record_jsons.count > MAX_TABLE_ROW_COUNT
       raise StudentFacingError.new(:MAX_ROWS_EXCEEDED), "Cannot add more than #{MAX_TABLE_ROW_COUNT} rows to a table"
     end
@@ -222,6 +224,10 @@ class DatablockStorageTable < ApplicationRecord
     end
 
     new_records = CSV.parse(table_data_csv, headers: true).map(&:to_h)
+
+    if new_records.empty?
+      raise StudentFacingError.new(:IMPORT_FAILED), "Could not import CSV as it was empty"
+    end
 
     # Auto-cast CSV strings on import, e.g. "5.0" => 5.0
     same_as_undefined = ['', 'undefined']
