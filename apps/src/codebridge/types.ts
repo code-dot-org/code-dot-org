@@ -8,6 +8,8 @@ export type {
   FolderId,
   ProjectFolder,
   ProjectFile,
+  KeyedFolderRecord,
+  KeyedFileRecord,
 } from '@cdo/apps/lab2/types';
 
 export type LeftNavElement = {

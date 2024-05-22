@@ -3,5 +3,7 @@ export * from './findFolder';
 export * from './getEmptyEditor';
 export * from './getEmptyProject';
 export * from './getErrorMessage';
+export * from './getFullFilePath';
 export * from './previewFileType';
+export * from './registerServiceWorker';
 export * from './sortFilesByName';

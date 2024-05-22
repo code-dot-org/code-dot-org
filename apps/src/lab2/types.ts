@@ -62,14 +62,17 @@ export interface BlocklySource {
 export type FileId = string;
 export type FolderId = string;
 
+export type KeyedFolderRecord = Record<FolderId, ProjectFolder>;
+export type KeyedFileRecord = Record<FileId, ProjectFile>;
+
 // This structure (as well as ProjectFolder and ProjectFile) is still in flux
 // and may change going forward. It should only be used for labs that are not released
 // yet.
 // Note that if it changes files_api.has_valid_encoding? may need to be updated to correctly validate
 // the new structure.
 export interface MultiFileSource {
-  folders: Record<FolderId, ProjectFolder>;
-  files: Record<FileId, ProjectFile>;
+  folders: KeyedFolderRecord;
+  files: KeyedFileRecord;
 }
 
 export interface ProjectFile {

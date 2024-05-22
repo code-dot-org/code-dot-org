@@ -1,17 +1,70 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
-import {ProjectFile} from '@codebridge/types';
-import {findFolder} from '@codebridge/utils';
-import React, {useRef, useMemo} from 'react';
+import {
+  ProjectFile,
+  KeyedFileRecord,
+  KeyedFolderRecord,
+} from '@codebridge/types';
+import {
+  findFolder,
+  getFullFilePath,
+  registerServiceWorker,
+} from '@codebridge/utils';
+import React, {useRef, useMemo, useEffect} from 'react';
 
 type HTMLPreviewProps = {
   file: ProjectFile;
 };
 
+const getMappedFiles = (files: KeyedFileRecord, folders: KeyedFolderRecord) =>
+  Object.values(files).reduce(
+    (bucket, file) => ({
+      ...bucket,
+      [getFullFilePath(file, folders)]: file,
+    }),
+    {}
+  );
+
 export const HTMLPreview = ({file}: HTMLPreviewProps) => {
-  const iframeRef = useRef(null);
+  const iframeRef = useRef<HTMLIFrameElement>();
+  const serviceWorker = useRef<ServiceWorkerRegistration>();
+
   const {
     project: {files, folders},
   } = useCodebridgeContext();
+
+  useEffect(() => {
+    const asyncRegisterServiceWorker = async () => {
+      const worker =
+        (await registerServiceWorker()) as ServiceWorkerRegistration;
+      if (!worker) {
+        return;
+      }
+      console.log('GOT WORKER : ', worker);
+      serviceWorker.current = worker;
+      const mappedFiles = getMappedFiles(files, folders);
+      console.log('M1');
+      serviceWorker?.current?.active?.postMessage(mappedFiles);
+      iframeRef.current?.contentWindow?.location?.reload();
+    };
+    asyncRegisterServiceWorker();
+
+    return () => {
+      if (serviceWorker.current) {
+        console.log('UNREGISTERS');
+        serviceWorker.current.unregister();
+      }
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    const mappedFiles = getMappedFiles(files, folders);
+    console.log('should fire message');
+    console.log('MF : ', mappedFiles);
+    console.log('RELOAD');
+    serviceWorker?.current?.active?.postMessage(mappedFiles);
+    iframeRef.current?.contentWindow?.location?.reload();
+  }, [files, folders]);
 
   const srcdoc = useMemo(() => {
     if (!file) {
