@@ -1,6 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "published": true,
   "game_id": 64,
   "created_at": "2024-05-17T16:35:15.000Z",
   "level_num": "custom",
@@ -77,8 +76,9 @@
     "tts_short_instructions_override": "Change the behavior of many sprites.",
     "preload_asset_list": null
   },
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-05-17T16:35:15.617+00:00\",\"changed\":[\"cloned from \\\"game_design_behavior_grid_2024\\\"\"],\"cloned_from\":\"game_design_behavior_grid_2024\"},{\"changed_at\":\"2024-05-17 16:53:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-17T16:35:15.617+00:00\",\"changed\":[\"cloned from \\\"game_design_behavior_grid_2024\\\"\"],\"cloned_from\":\"game_design_behavior_grid_2024\"},{\"changed_at\":\"2024-05-17 16:53:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-21 20:46:05 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -1314,7 +1314,10 @@
             </block>
           </value>
         </block>
-        <block type="gamelab_makeSpritesGridInput" id="a*D|.Rkz(W3s$=E_]-Qo" x="85" y="124">
+        <block type="gamelab_setBackgroundImageAs" id="wP{r?J3iYo$$8Gj/_yfg" x="32" y="117">
+          <field name="IMG">"gradient_08"</field>
+        </block>
+        <block type="gamelab_makeSpritesGridInput" id="a*D|.Rkz(W3s$=E_]-Qo" x="32" y="218">
           <field name="ANIMATION_NAME">"game_fire"</field>
           <value name="GRID">
             <shadow type="gamelab_bitmap" id="9fHWmy74vz+@eR!aSjL]">
@@ -1324,9 +1327,6 @@
               <field name="GRID">[[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]]</field>
             </block>
           </value>
-        </block>
-        <block type="gamelab_setBackgroundImageAs" id="wP{r?J3iYo$$8Gj/_yfg" x="18" y="215">
-          <field name="IMG">"gradient_08"</field>
         </block>
       </xml>
     </toolbox_blocks>

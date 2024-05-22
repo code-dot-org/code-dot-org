@@ -6,10 +6,13 @@
  * Experiment state is persisted across page loads using local storage.  Note
  * that it's only written when isEnabled is called for the key in question.
  */
-import {trySetLocalStorage} from '../utils';
 import Cookie from 'js-cookie';
-import trackEvent from './trackEvent';
+
 import DCDO from '@cdo/apps/dcdo';
+
+import {trySetLocalStorage} from '../utils';
+
+import trackEvent from './trackEvent';
 
 const queryString = require('query-string');
 

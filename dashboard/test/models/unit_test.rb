@@ -2160,7 +2160,9 @@ class UnitTest < ActiveSupport::TestCase
       @deeper_learning_unit = create :script, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, professional_learning_course: 'DLP 2021'
 
       @unit_group = create :unit_group
-      create :course_version, content_root: @unit_group
+      @ug_course_version = create :course_version, content_root: @unit_group
+      create :reference_guide, course_version: @ug_course_version
+
       @unit_in_course = create :script, is_migrated: true, name: 'coursename1-2021'
       create :unit_group_unit, unit_group: @unit_group, script: @unit_in_course, position: 1
       @unit_group.reload
@@ -2324,14 +2326,31 @@ class UnitTest < ActiveSupport::TestCase
       assert_equal @unit_in_course.student_resources[0], cloned_unit.student_resources[0]
     end
 
-    test 'can copy reference guides' do
+    test 'can copy reference guides when cloning unit in unit group' do
       Rails.application.config.stubs(:levelbuilder_mode).returns true
       ReferenceGuide.any_instance.expects(:write_serialization).once
       File.stubs(:write)
-      @unit_in_course.unit_group.course_version.reference_guides = [create(:reference_guide)]
-      cloned_unit = @unit_in_course.clone_migrated_unit('coursename3-2021', destination_unit_group_name: @unit_group.name)
+      cloned_unit = @unit_in_course.clone_migrated_unit('refguidetest-ug-coursename-2021', destination_unit_group_name: @unit_group.name)
       assert_equal cloned_unit.unit_group, @unit_group
-      assert_equal 1, @unit_group.course_version.reference_guides.count
+      assert_equal 1, cloned_unit.get_course_version.reference_guides.count
+    end
+
+    test 'can copy reference guides when cloning unit from unit group to stand alone' do
+      Rails.application.config.stubs(:levelbuilder_mode).returns true
+      ReferenceGuide.any_instance.expects(:write_serialization).once
+      File.stubs(:write)
+      cloned_unit = @unit_in_course.clone_migrated_unit('refguidetest-ugsa-coursename-2021', version_year: '2021', family_name: 'csf')
+      assert_equal 1, cloned_unit.get_course_version.reference_guides.count
+    end
+
+    test 'can copy reference guides when cloning stand alone' do
+      Rails.application.config.stubs(:levelbuilder_mode).returns true
+      ReferenceGuide.any_instance.expects(:write_serialization).once
+      File.stubs(:write)
+      @standalone_unit.course_version.reference_guides = [create(:reference_guide)]
+
+      cloned_unit = @standalone_unit.clone_migrated_unit('refguidetest-sa-coursename-2022', version_year: '2022', family_name: 'csf')
+      assert_equal 1, cloned_unit.get_course_version.reference_guides.count
     end
 
     test 'can copy a script without a course version' do

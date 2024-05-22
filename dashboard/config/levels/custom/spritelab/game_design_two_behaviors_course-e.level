@@ -51,10 +51,11 @@
     "validation_code": "if (World.frameCount == 1) {\r\n  addCriteria(function() {\r\n    return minimumSprites(2); // Check whether or not the student created a sprite.\r\n  }, \"spritelabFeedbackCreateTwoDifferentSprites\");  // Failure message: \"You need two sprites with different costumes.\"\r\n\r\n  addCriteria(function() {\r\n    return minimumMatchingBehaviors(\"moving_with_arrow_keys\", 1); // Check if second sprite is moving with arrow keys\r\n  }, \"oneArrowKeysSprite\");  // Failure message: \"Make sure one sprite has the behavior that makes it move with your arrow keys.\"\r\n  \r\n}\r\ncheck();\r\n",
     "encrypted_examples": "JnBfsZlxvTe+uVUiIKuLIm+VUcBWhV6wtFpnQJqjtPVXUDDXSyXH//OxrgBA\nvVvOUHI4nPVb5s+bR+SdDSRllg==\n",
     "instructions_icon": "fox",
+    "hint_prompt_attempts_threshold": "1",
     "preload_asset_list": null,
-    "hint_prompt_attempts_threshold": "1"
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"arrows\",\r\n  \"callout_text\": \"Move the sprite with the arrows!\",\r\n  \"element_id\": \"[id = \\\"soft-buttons\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 20\r\n    }\r\n   }\r\n  }\r\n }\r\n]"
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-17T16:35:15.272+00:00\",\"changed\":[\"cloned from \\\"game_design_two_behaviors_2024\\\"\"],\"cloned_from\":\"game_design_two_behaviors_2024\"},{\"changed_at\":\"2024-05-17 16:49:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-17T16:35:15.272+00:00\",\"changed\":[\"cloned from \\\"game_design_two_behaviors_2024\\\"\"],\"cloned_from\":\"game_design_two_behaviors_2024\"},{\"changed_at\":\"2024-05-17 16:49:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-21 20:35:44 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-21 23:02:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-21 23:10:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"callout_json\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-21 23:11:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"callout_json\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-21 23:11:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"callout_json\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-21 23:12:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"callout_json\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-21 23:13:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"callout_json\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -1237,16 +1238,16 @@
             </block>
           </value>
         </block>
-        <block type="gamelab_makeNewSpriteAnon" id="V-|A(r|A!%-x`fk;2urc" x="302" y="196">
+        <block type="gamelab_setBackgroundImageAs" id="$)4_hd{uTsUZsDDzN-WO" x="133" y="232">
+          <field name="IMG">"gradient_11"</field>
+        </block>
+        <block type="gamelab_makeNewSpriteAnon" id="V-|A(r|A!%-x`fk;2urc" x="134" y="344">
           <field name="ANIMATION_NAME">"game_dragon"</field>
           <value name="LOCATION">
             <block type="gamelab_location_picker" id="+,.@(#6Swh4ztV%L$6o{">
               <field name="LOCATION">{"x":200,"y":200}</field>
             </block>
           </value>
-        </block>
-        <block type="gamelab_setBackgroundImageAs" id="$)4_hd{uTsUZsDDzN-WO" x="68" y="330">
-          <field name="IMG">"gradient_11"</field>
         </block>
       </xml>
     </toolbox_blocks>
