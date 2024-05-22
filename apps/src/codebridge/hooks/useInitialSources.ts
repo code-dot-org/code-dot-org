@@ -1,7 +1,11 @@
 import {useMemo} from 'react';
 
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
-import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import {
+  getAppOptionsEditBlocks,
+  getAppOptionsEditingExemplar,
+  getAppOptionsViewingExemplar,
+} from '@cdo/apps/lab2/projects/utils';
 import {ProjectSources} from '@cdo/apps/lab2/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -21,6 +25,8 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
     [levelStartSource]
   );
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+  const isEditingExemplarMode = getAppOptionsEditingExemplar();
+  const isViewingExemplarMode = getAppOptionsViewingExemplar();
 
   const initialSources = useMemo(() => {
     const startSources = projectStartSource || defaultSources;

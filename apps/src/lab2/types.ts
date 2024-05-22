@@ -148,6 +148,8 @@ export interface LevelProperties {
   // Help and Tips values
   mapReference?: string;
   referenceLinks?: string[];
+  // Exemplars
+  exampleSolutions?: string[];
 }
 
 // Level configuration data used by project-backed labs that don't require

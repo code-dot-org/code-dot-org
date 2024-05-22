@@ -691,7 +691,7 @@ class ScriptLevel < ApplicationRecord
 
     return [] if !Policies::InlineAnswer.visible_for_script_level?(current_user, self) || CDO.properties_encryption_key.blank?
 
-    # exemplar_sources is used by Javalab levels to store level solutions
+    # exemplar_sources is used by Javalab and Code Bridge levels to store level solutions
     if level.try(:exemplar_sources).present? && current_user&.verified_instructor?
       if oldest_active_level.is_a? BubbleChoice
         # If the script level has sublevels, get a link for the sublevel that looks like

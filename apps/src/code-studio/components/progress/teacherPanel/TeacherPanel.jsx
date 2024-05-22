@@ -80,6 +80,7 @@ class TeacherPanel extends React.Component {
     selectSection: PropTypes.func.isRequired,
     setViewType: PropTypes.func.isRequired,
     isCurrentLevelLab2: PropTypes.bool.isRequired,
+    lab2ExampleSolutions: PropTypes.array,
   };
 
   componentDidMount() {
@@ -172,6 +173,8 @@ class TeacherPanel extends React.Component {
       pageType,
       teacherId,
       exampleSolutions,
+      isCurrentLevelLab2,
+      lab2ExampleSolutions,
     } = this.props;
 
     const selectedUserId = this.getSelectedUserId();
@@ -183,8 +186,12 @@ class TeacherPanel extends React.Component {
       !!students?.length &&
       pageType !== pageTypes.scriptOverview;
 
+    const exampleSolutionsToParse = isCurrentLevelLab2
+      ? lab2ExampleSolutions
+      : exampleSolutions;
+
     const displayLevelExamples =
-      viewAs === ViewType.Instructor && exampleSolutions?.length > 0;
+      viewAs === ViewType.Instructor && exampleSolutionsToParse?.length > 0;
 
     const displayLockInfo =
       hasSections && unitHasLockableLessons && viewAs === ViewType.Instructor;
@@ -208,7 +215,7 @@ class TeacherPanel extends React.Component {
           )}
           {displayLevelExamples && (
             <div style={styles.exampleSolutions}>
-              {exampleSolutions.map((example, index) => (
+              {exampleSolutionsToParse.map((example, index) => (
                 <Button
                   __useDeprecatedTag
                   key={index}
@@ -382,6 +389,7 @@ export default connect(
       currentLevelId: state.progress.currentLevelId,
       levels,
       isCurrentLevelLab2,
+      lab2ExampleSolutions: state.lab?.levelProperties?.exampleSolutions,
     };
   },
   dispatch => ({
