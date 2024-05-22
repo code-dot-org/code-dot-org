@@ -16,12 +16,11 @@ import {LtiProviderContext} from '../../context';
 const ExistingAccountCard = () => {
   const {ltiProvider, ltiProviderName, existingAccountUrl} =
     useContext(LtiProviderContext)!;
-  const callToActionUrl = new URL(existingAccountUrl);
   const urlParams = new URLSearchParams({
     lms_name: ltiProviderName,
     lti_provider: ltiProvider,
   });
-  callToActionUrl.search = urlParams.toString();
+  existingAccountUrl.search = urlParams.toString();
 
   return (
     <Card data-testid={'existing-account-card'}>
@@ -45,7 +44,7 @@ const ExistingAccountCard = () => {
           color={buttonColors.purple}
           type={'primary'}
           size="l"
-          href={callToActionUrl.href}
+          href={existingAccountUrl.href}
           text={i18n.ltiLinkAccountExistingAccountCardActionLabel()}
         />
       </CardActions>

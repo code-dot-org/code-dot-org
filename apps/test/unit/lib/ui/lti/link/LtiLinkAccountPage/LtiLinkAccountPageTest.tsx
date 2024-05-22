@@ -12,7 +12,7 @@ const DEFAULT_CONTEXT: LtiProviderContextProps = {
   ltiProvider: 'canvas_cloud',
   ltiProviderName: 'Canvas',
   newAccountUrl: '/new-account',
-  existingAccountUrl: 'https://example.com/existing-account',
+  existingAccountUrl: new URL('https://example.com/existing-account'),
 };
 
 describe('LTI Link Account Page Tests', () => {
