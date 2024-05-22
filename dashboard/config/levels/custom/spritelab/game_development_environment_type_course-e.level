@@ -1,6 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "published": true,
   "game_id": 64,
   "created_at": "2024-05-17T16:38:02.000Z",
   "level_num": "custom",
@@ -75,8 +74,9 @@
     "encrypted_examples": "vCTZHzdeu9zC7at4wEmlqTPIIvhlO4wLtO0V1wg/WqHKR8ocs98nzntpTv5r\ngqfJocd9fRNi3tcDaYPP/tMSXA==\n",
     "preload_asset_list": null
   },
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-05-17T16:38:02.353+00:00\",\"changed\":[\"cloned from \\\"game_development_environment_type_2024\\\"\"],\"cloned_from\":\"game_development_environment_type_2024\"},{\"changed_at\":\"2024-05-17 16:46:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-17 20:54:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-17T16:38:02.353+00:00\",\"changed\":[\"cloned from \\\"game_development_environment_type_2024\\\"\"],\"cloned_from\":\"game_development_environment_type_2024\"},{\"changed_at\":\"2024-05-17 16:46:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-17 20:54:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-21 20:54:33 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -1327,21 +1327,7 @@
             </block>
           </value>
         </block>
-        <block type="gamelab_toggleBehaviorSimple" id="m~(X1v!3H`(mn![kJdoH" x="21" y="236">
-          <field name="TOGGLE">"begins"</field>
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" id="$C,HF=WY/5tDhl[.OjK!">
-              <field name="ANIMATION">"alien_01"</field>
-            </block>
-          </value>
-          <value name="BEHAVIOR">
-            <block type="gamelab_behavior_get" id=").+L6+1*2D**gF7P/)pL">
-              <mutation behaviorId="moving with arrow keys" name="moving with arrow keys"/>
-              <field name="NAME">moving with arrow keys</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_makeSpritesGridInput" id="FWg!@11KScQ13=#Tg/(-" x="24" y="347">
+        <block type="gamelab_makeSpritesGridInput" id="FWg!@11KScQ13=#Tg/(-" x="25" y="255">
           <field name="ANIMATION_NAME">"brick_grey"</field>
           <value name="GRID">
             <shadow type="gamelab_bitmap" id="gDzDdeF11M!t=xm$w#e(">
@@ -1352,11 +1338,25 @@
             </block>
           </value>
         </block>
-        <block type="gamelab_makeNewSpriteAnon" id="IM+:ZqBn5NT-ZZL!04b:" x="24" y="443">
+        <block type="gamelab_makeNewSpriteAnon" id="IM+:ZqBn5NT-ZZL!04b:" x="21" y="342">
           <field name="ANIMATION_NAME">"alien_03"</field>
           <value name="LOCATION">
             <block type="gamelab_location_picker" id="F?XC]y8q1%kx{{EEm5oq">
               <field name="LOCATION">{"x":349,"y":363}</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_toggleBehaviorSimple" id="m~(X1v!3H`(mn![kJdoH" x="30" y="447">
+          <field name="TOGGLE">"begins"</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation" id="$C,HF=WY/5tDhl[.OjK!">
+              <field name="ANIMATION">"alien_01"</field>
+            </block>
+          </value>
+          <value name="BEHAVIOR">
+            <block type="gamelab_behavior_get" id=").+L6+1*2D**gF7P/)pL">
+              <mutation behaviorId="moving with arrow keys" name="moving with arrow keys"/>
+              <field name="NAME">moving with arrow keys</field>
             </block>
           </value>
         </block>

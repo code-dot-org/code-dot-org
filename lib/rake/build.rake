@@ -111,17 +111,13 @@ namespace :build do
         # The sequencing described here is the best for mitigating any issues
         # that may arise when that best practice is not followed.
         ChatClient.log 'Restarting <b>dashboard</b> Active Job worker(s).'
+        # Issue a stop command to all workers. Will kill if not stopped within ~20 seconds.
+        RakeUtils.system 'bin/delayed_job', 'stop'
+        # Start new workers
         if rack_env?(:production)
-          # WARNING: the number of workers in production is safe to increase,
-          # but is not safe to lower without additional steps. specifically, if
-          # you lower the number of jobs from 10 to 8 (for example), you'll need
-          # to manually kill workers 8 and 9 (zero-based). otherwise, those
-          # workers will continue to run jobs using older code indefinitely.
-          RakeUtils.system 'bin/delayed_job', '-n', '10', 'restart'
+          RakeUtils.system 'bin/delayed_job', '-n', '10', 'start'
         elsif !rack_env?(:development)
-          # development environment does not use delayed_job by default.
-          # all other non-production daemons should run one worker.
-          RakeUtils.system 'bin/delayed_job', 'restart'
+          RakeUtils.system 'bin/delayed_job', 'start'
         end
 
         # Commit dsls.en.yml changes on staging

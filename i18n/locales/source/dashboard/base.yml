@@ -387,10 +387,10 @@ en:
       app_lab_tutorials: "App Lab Tutorials"
       game_lab_documentation: "Game Lab Documentation"
       game_lab_tutorials: "Game Lab Tutorials"
+      music_lab_documentation: "Music Lab Documentation"
       sprite_lab_documentation: "Sprite Lab Documentation"
       sprite_lab_tutorials: "Sprite Lab Tutorials"
       web_lab_documentation: "Web Lab Documentation"
-      project_beats_documentation: "Project Beats Documentation"
       educate_overview: "Educator Overview"
       educate_elementary: "Elementary School"
       educate_middle: "Middle School"
@@ -463,7 +463,7 @@ en:
       minecraft_codebuilder: 'Minecraft: Code Connection'
       minecraft_designer: 'Minecraft'
       minecraft_hero: 'Minecraft Hero'
-      music: 'Project Beats'
+      music: 'Music Lab'
       playlab: 'Play Lab'
       playlab_k1: 'Play Lab (Pre-reader)'
       poetry: 'Poetry'
@@ -1481,3 +1481,11 @@ en:
     alt_text_with_name: "Certificate for %{student_name} for completion of %{course_name}"
     alt_text_no_name: "Certificate for completion of %{course_name}"
     one_hour_of_code: "One Hour of Code"
+  child_account:
+    parental_permission_request:
+      errors:
+        already_granted: Parental permission has already been granted
+        daily_limit_reached: The daily request limit has been reached
+        invalid_parent_email: The parent/guardian's email address is invalid
+        parent_email_is_own: A request cannot be sent to your own email address
+        resend_limit_reached: The limit for resend requests has been reached

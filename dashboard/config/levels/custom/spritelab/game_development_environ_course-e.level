@@ -35,7 +35,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "disable_if_else_editing": "false",
     "free_play": "false",
     "hide_view_data_button": "false",
@@ -72,14 +72,14 @@
     "long_instructions": "##Debugging Practice\r\n**Problem:** The maze of clouds falls down!\r\n\r\n**Fix:** Make sure the sprites are all set to the correct type.\r\n",
     "validation_code": "if (World.frameCount == 1) {\r\n  \r\n  setFailTime(150);\r\n  setDelayTime(800);\r\n  \r\n   addCriteria(function() {\r\n  return minimumCostumeCount(3);\r\n   }, \"starterSprites\"); //It looks like you removed a sprite. You can add it back or reset your program using the Version History button below.\r\n  \r\n  addCriteria(function() {\r\n    return playerSpriteFound(); // Check whether or not the student created a player sprite.\r\n  }, \"gameDesignNoPlayerSprite\");  // Failure message: \"You need to make a player sprite.\"\r\n\r\n  addCriteria(function() {\r\n  return minimumCostumesForGroup(\"walls\", 1);\r\n   }, \"gameDesignSetSpriteTypeToEnvironment\"); //Failure message: You need to set a sprite's type to environment.\r\n\r\n  \r\n}\r\ncheck();\r\n\r\n",
     "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"The clouds are falling like player sprites. Set the clouds type to environment instead. \\n<xml>\\n<block xmlns=\\\"https://developers.google.com/blockly/xml\\\" type=\\\"GameDev_setGroup\\\" id=\\\"s0~~e0!}K[fm;ShKs2sG\\\">\\n  <field name=\\\"GROUP\\\">\\\"walls\\\"</field>\\n  <value name=\\\"SPRITE\\\">\\n    <block type=\\\"gamelab_allSpritesWithAnimation\\\" id=\\\"x,sMj}}CfvGtzA+U2wfm\\\">\\n      <field name=\\\"ANIMATION\\\">\\\"ground_grass\\\"</field>\\n    </block>\\n  </value>\\n</block>\\n</xml>\",\"hint_id\":\"Hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5ab7875df2543fc80a6321d96314810c/game_development_environ_2024.mp3\"}]",
-    "encrypted_examples": "vtbeyFYUGNwvtm7i2pobQct14naRrBekkc5c3tinE6T4Ezb8PvipilJ4I4Xi\nvb8+cSx8hN/lNe6r05afp85ctQ==\n",
+    "encrypted_examples": "hJYmbKUrhHn2+rhM3KsgwXoyjkWgZUZId3MJq03vvvmHPutoJxcv2W0bARMg\nMxy1mfoIAQPMqLo5RQpggx98Jg==\n",
     "display_name": "Air Time",
     "bubble_choice_description": "**Difficulty:** 🌶️🌶️\r\n\r\n**Problem:** The maze of clouds keeps falling away!",
     "thumbnail_url": "https://images.code.org/d3d266c5a60e1f6a9dd5b18ded8daca1-debug b.jpg",
     "preload_asset_list": null
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-05-17T16:38:05.441+00:00\",\"changed\":[\"cloned from \\\"game_development_environ_2024\\\"\"],\"cloned_from\":\"game_development_environ_2024\"},{\"changed_at\":\"2024-05-17 16:50:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-17T16:38:05.441+00:00\",\"changed\":[\"cloned from \\\"game_development_environ_2024\\\"\"],\"cloned_from\":\"game_development_environ_2024\"},{\"changed_at\":\"2024-05-17 16:50:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-21 15:43:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
