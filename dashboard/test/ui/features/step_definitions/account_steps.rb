@@ -18,12 +18,7 @@ end
 
 Given(/^I sign in as "([^"]*)"( and go home)?$/) do |name, home|
   navigate_to replace_hostname('http://studio.code.org/reset_session')
-  user = @users[name]
-  email = user[:email]
-  password = user[:password]
-  url = "/users/sign_in"
-  browser_request(url: url, method: 'POST', body: {user: {login: email, password: password}})
-
+  sign_in name
   redirect = 'http://studio.code.org/home'
   navigate_to replace_hostname(redirect) if home
 end
@@ -62,6 +57,14 @@ def find_test_user_by_name(name)
   User.find_by(email: @users[name][:email])
 end
 
+def sign_in(name)
+  user = @users[name]
+  email = user[:email]
+  password = user[:password]
+  url = "/users/sign_in"
+  browser_request(url: url, method: 'POST', body: {user: {login: email, password: password}})
+end
+
 def sign_up(name)
   wait_proc = proc do
     opacity = @browser.execute_script <<~JS
@@ -84,6 +87,7 @@ rescue RSpec::Expectations::ExpectationNotMetError
 end
 
 def create_user(name, url: '/users.json', code: 201, **user_opts)
+  require_rails_env
   navigate_to replace_hostname('http://studio.code.org/reset_session')
   Retryable.retryable(on: RSpec::Expectations::ExpectationNotMetError, tries: 3) do
     # Generate the user
@@ -93,34 +97,32 @@ def create_user(name, url: '/users.json', code: 201, **user_opts)
     # in the user options (we generate the email, here)
     if user_opts.key? :parent_email_preference_email
       user_opts[:parent_email_preference_email] = email
+      user_opts[:parent_email_preference_request_ip] = '127.0.0.1'
+      user_opts[:parent_email_preference_source] = 'ACCOUNT_SIGN_UP'
     end
 
-    # Issue the update request for the user
-    browser_request(
-      url: url,
-      method: 'POST',
-      body: {
-        user: {
-          user_type: 'student',
-          email: email,
-          password: password,
-          password_confirmation: password,
-          name: name,
-          age: '16',
-          terms_of_service_version: '1',
-          sign_in_count: 2
-        }.merge(user_opts)
-      },
-      code: code
-    )
+    opts = {
+      user_type: 'student',
+      email: email,
+      password: password,
+      password_confirmation: password,
+      name: name,
+      age: '16',
+      terms_of_service_version: '1',
+      sign_in_count: 2
+    }.merge(user_opts)
+    User.create!(**opts)
+    sign_in name
   end
 end
 
-And(/^I create( as a parent)? a (young )?student( in Colorado)?( who has never signed in)? named "([^"]*)"( and go home)?$/) do |parent_created, young, locked, new_account, name, home|
+And(/^I create( as a parent)? a (young )?student( in Colorado)?( who has never signed in)? named "([^"]*)"( after CPA exception)?( before CPA exception)?( and go home)?$/) do |parent_created, young, locked, new_account, name, after_cpa_exception, before_cpa_exception, home|
+  require_rails_env
   age = young ? '10' : '16'
   sign_in_count = new_account ? 0 : 2
 
   user_opts = {
+    user_type: 'student',
     age: age,
     sign_in_count: sign_in_count,
   }
@@ -129,6 +131,14 @@ And(/^I create( as a parent)? a (young )?student( in Colorado)?( who has never s
     user_opts[:country_code] = "US"
     user_opts[:us_state] = "CO"
     user_opts[:user_provided_us_state] = true
+  end
+
+  if after_cpa_exception
+    user_opts[:created_at] = Policies::ChildAccount::CPA_CREATED_AT_EXCEPTION_DATE
+  end
+
+  if before_cpa_exception
+    user_opts[:created_at] = Policies::ChildAccount::CPA_CREATED_AT_EXCEPTION_DATE - 1.second
   end
 
   if parent_created
