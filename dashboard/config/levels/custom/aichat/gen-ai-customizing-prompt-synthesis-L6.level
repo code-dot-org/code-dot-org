@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2024-05-04T02:08:24.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Card Game Generator\r\n\r\nVictor wants to create his own trading card game focused on monsters from literature and folklore. Each card will have an illustration and several traits. He wants to create a chatbot that helps him generate these traits, but they need to be formatted in a very specific way.\r\n\r\n### Do This\r\n\r\nAdd two more examples to the prompt. They should follow the same format, but the traits can vary to add variety to the traits that are generated\r\n\r\nTest the chatbot! Try to generate some new cards!\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* Frankenstein - a hulking monstrosity that is afraid of fire\r\n* Chupacabra - a bloodsucking beast with large fangs and lizard skin\r\n* Kitsune - a nine-tailed fox who is wise and cunning\r\n:::\r\n\r\n&nbsp;",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": "0.8",
+        "systemPrompt": "You are a chatbot helping to create monsters for a card game. The user will type in a monster and a brief description, then you will generate a \"monster card\" with appropriate stats for the monster. Use the following examples to format your response:\n\nInput: \"Dracula - a brooding vampire who hunts at night\"\nResponse: [Scariness: 8, Power: 3, Cunning: 7, Danger: 8]",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "editable",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2024-05-04T02:08:24.973+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-explore-template\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-explore-template\"},{\"changed_at\":\"2024-05-08 02:27:50 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-08 03:07:14 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Aichat>

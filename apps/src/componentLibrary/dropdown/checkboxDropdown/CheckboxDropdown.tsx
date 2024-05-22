@@ -1,4 +1,4 @@
-import React, {memo} from 'react';
+import React, {AriaAttributes, memo} from 'react';
 
 import Checkbox from '@cdo/apps/componentLibrary/checkbox';
 import {dropdownColors} from '@cdo/apps/componentLibrary/common/constants';
@@ -21,7 +21,7 @@ export interface CheckboxOption {
   isOptionDisabled?: boolean;
 }
 
-export interface CheckboxDropdownProps {
+export interface CheckboxDropdownProps extends AriaAttributes {
   /** CheckboxDropdown name.
    * Name of the dropdown, used as unique identifier of the dropdown's HTML element */
   name: string;
@@ -63,6 +63,7 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   disabled = false,
   color = dropdownColors.black,
   size = 'm',
+  ...rest
 }) => {
   return (
     <CustomDropdown
@@ -74,6 +75,7 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
       disabled={disabled}
       size={size}
       isSomeValueSelected={checkedOptions.length > 0}
+      {...rest}
     >
       <form className={moduleStyles.dropdownMenuContainer}>
         <ul>

@@ -1,11 +1,12 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, {AriaAttributes} from 'react';
 
+import {getAriaPropsFromProps} from '@cdo/apps/componentLibrary/common/helpers';
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 
 import moduleStyles from './simpleDropdown.module.scss';
 
-export interface SimpleDropdownProps {
+export interface SimpleDropdownProps extends AriaAttributes {
   /** SimpleDropdown items list */
   items?: {value: string; text: string}[];
   /** SimpleDropdown grouped list of items */
@@ -31,7 +32,7 @@ export interface SimpleDropdownProps {
   /** SimpleDropdown color. Sets the color of dropdown arrow, text, label and border color.
    * White stands for 'white' dropdown that'll be rendered on dark background,
    * 'black' stands for black dropdown that'll be rendered on the white/light background. */
-  color?: 'white' | 'black';
+  color?: 'white' | 'black' | 'gray';
   /** SimpleDropdown size */
   size: ComponentSizeXSToL;
 }
@@ -64,7 +65,10 @@ const SimpleDropdown: React.FunctionComponent<SimpleDropdownProps> = ({
   disabled = false,
   color = 'black',
   size = 'm',
+  ...rest
 }) => {
+  const ariaProps = getAriaPropsFromProps(rest);
+
   return (
     <label
       className={classNames(
@@ -74,6 +78,7 @@ const SimpleDropdown: React.FunctionComponent<SimpleDropdownProps> = ({
         moduleStyles[`dropdownContainer-${dropdownTextThickness}`],
         className
       )}
+      aria-describedby={ariaProps['aria-describedby']}
     >
       {isLabelVisible && (
         <span className={moduleStyles.dropdownLabel}>{labelText}</span>
@@ -87,6 +92,7 @@ const SimpleDropdown: React.FunctionComponent<SimpleDropdownProps> = ({
           value={selectedValue}
           id={id}
           disabled={disabled}
+          {...ariaProps}
         >
           {itemGroups.length > 0
             ? itemGroups.map(({label, groupItems}, index) => (

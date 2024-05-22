@@ -1,15 +1,18 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import i18n from '@cdo/locale';
-import style from './rubrics.module.scss';
-import {evidenceLevelShape, submittedEvaluationShape} from './rubricShapes';
+import PropTypes from 'prop-types';
+import React from 'react';
+
 import {
   BodyThreeText,
   Heading6,
   StrongText,
 } from '@cdo/apps/componentLibrary/typography';
+import i18n from '@cdo/locale';
+
 import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
+import {evidenceLevelShape, submittedEvaluationShape} from './rubricShapes';
+
+import style from './rubrics.module.scss';
 
 export default function EvidenceLevelsForStudents({
   evidenceLevels,

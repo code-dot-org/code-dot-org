@@ -6,4 +6,4 @@ export type ComponentSizeXSToL = 'xs' | 's' | 'm' | 'l';
 /**
  * Possible colors for the dropdown components
  */
-export type DropdownColor = 'white' | 'black';
+export type DropdownColor = 'white' | 'black' | 'gray';

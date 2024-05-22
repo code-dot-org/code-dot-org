@@ -14,12 +14,14 @@
     "disable_projects": true,
     "aichat_settings": {
       "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
         "temperature": "0.8",
         "systemPrompt": "",
         "retrievalContexts": [
 
         ],
         "modelCardInfo": {
+          "botName": "",
           "description": "",
           "intendedUse": "",
           "limitationsAndWarnings": "",
@@ -29,19 +31,23 @@
             "",
             ""
           ],
-          "botName": ""
+          "isPublished": false
         }
       },
       "visibilities": {
+        "selectedModelId": "readonly",
         "temperature": "editable",
         "systemPrompt": "editable",
         "retrievalContexts": "editable",
         "modelCardInfo": "editable"
       },
-      "hidePresentationPanel": false
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+
+      ]
     },
     "project_template_level_name": "baruch-test-base1"
   },
-  "audit_log": "[{\"changed_at\":\"2024-04-25T01:41:52.181+00:00\",\"changed\":[\"cloned from \\\"baruch-test-1\\\"\"],\"cloned_from\":\"baruch-test-1\"},{\"changed_at\":\"2024-04-25 01:55:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18972,\"changed_by_email\":\"sarah.judd@code.org\"},{\"changed_at\":\"2024-04-25 01:59:19 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18972,\"changed_by_email\":\"sarah.judd@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-04-25T01:41:52.181+00:00\",\"changed\":[\"cloned from \\\"baruch-test-1\\\"\"],\"cloned_from\":\"baruch-test-1\"},{\"changed_at\":\"2024-04-25 01:55:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18972,\"changed_by_email\":\"sarah.judd@code.org\"},{\"changed_at\":\"2024-04-25 01:59:19 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18972,\"changed_by_email\":\"sarah.judd@code.org\"},{\"changed_at\":\"2024-05-03 17:32:51 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>

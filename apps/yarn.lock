@@ -3042,12 +3042,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@blockly/field-bitmap@npm:^4.0.13":
-  version: 4.0.13
-  resolution: "@blockly/field-bitmap@npm:4.0.13"
+"@blockly/field-bitmap@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "@blockly/field-bitmap@npm:4.1.0"
   peerDependencies:
     blockly: ^10.0.0
-  checksum: e66329f66b4f53024143b1570c788bab8e8d50360aa23e8e67f2132134fc36afaf70d4a1169dfb2bcd693b3be144f3361164b42a345ac1d4a26f1e845dac2466
+  checksum: 0e1daf5180f54e1d65e7834bee8c5cf95a85a6edbaa15fe283bead84efe10f181107740df425c6bd9179a2ab40248e4aa91229ce3c91221f53f5733f7d0eac8a
   languageName: node
   linkType: hard
 
@@ -5735,6 +5735,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/js-cookie@npm:^3.0.6":
+  version: 3.0.6
+  resolution: "@types/js-cookie@npm:3.0.6"
+  checksum: 272d551687547445cb210213c73e72e0e5d58ad73e2e444a65d688b8ff9425529779ee0cd6492aaa1f070161916d4254ef2b1a76d64179100437f60749d094ef
+  languageName: node
+  linkType: hard
+
 "@types/json-schema@npm:*, @types/json-schema@npm:^7.0.5, @types/json-schema@npm:^7.0.8, @types/json-schema@npm:^7.0.9":
   version: 7.0.11
   resolution: "@types/json-schema@npm:7.0.11"
@@ -5960,6 +5967,15 @@ __metadata:
     "@types/scheduler": "*"
     csstype: ^3.0.2
   checksum: e752df961105e5127652460504785897ca6e77259e0da8f233f694f9e8f451cde7fa0709d4456ade0ff600c8ce909cfe29f9b08b9c247fa9b734e126ec53edd7
+  languageName: node
+  linkType: hard
+
+"@types/reactabular-table@npm:^8.14.6":
+  version: 8.14.6
+  resolution: "@types/reactabular-table@npm:8.14.6"
+  dependencies:
+    "@types/react": "*"
+  checksum: 0e01a7c36ba8bdfd4229a6e690b1d915018e521672a58ba78ea4cd0295045d3376d15095dbcfc43a2ff8e543113a91c10235c313372b50b63571b6131af3932d
   languageName: node
   linkType: hard
 
@@ -8025,7 +8041,7 @@ __metadata:
     "@babel/preset-react": ^7.24.1
     "@blockly/block-shareable-procedures": ~4.0.5
     "@blockly/field-angle": ^4.0.0
-    "@blockly/field-bitmap": ^4.0.13
+    "@blockly/field-bitmap": ^4.1.0
     "@blockly/field-colour": ^4.0.0
     "@blockly/field-grid-dropdown": ~4.0.9
     "@blockly/keyboard-navigation": ~0.5.6
@@ -8078,11 +8094,13 @@ __metadata:
     "@types/chai": ^4.3.5
     "@types/htmlhint": ^1.1.5
     "@types/jquery": ^3.5.16
+    "@types/js-cookie": ^3.0.6
     "@types/mocha": ^10.0.1
     "@types/qrcode.react": ^1.0.5
     "@types/react": ^18.0.28
     "@types/react-bootstrap": ^0.32.36
     "@types/react-dom": ^18.0.11
+    "@types/reactabular-table": ^8.14.6
     "@types/sinon": ^10.0.14
     "@typescript-eslint/eslint-plugin": ^7.0.2
     "@typescript-eslint/parser": ^7.0.2

@@ -1,6 +1,8 @@
-import {ProcedureBlock} from '@cdo/apps/blockly/types';
-import {commonFunctions} from './commonProcedureCallerMutator';
 import GoogleBlockly from 'blockly/core';
+
+import {ProcedureBlock} from '@cdo/apps/blockly/types';
+
+import {commonFunctions} from './commonProcedureCallerMutator';
 
 export const behaviorGetMutator = {
   previousEnabledState_: true,

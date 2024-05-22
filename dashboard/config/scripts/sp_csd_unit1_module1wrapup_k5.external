@@ -1,0 +1,11 @@
+name 'SP-CSD-Unit1-Module1WrapUp_k5'
+title 'Navigating this Professional Learning Course'
+description 'description here'
+
+markdown <<MARKDOWN
+# Let's Keep Learning!
+
+#### You are finished with the section of the professional learning experience focused on getting started with Code.org. **Now it's time to learn more about CS Discoveries**.
+
+#### Click on the "Continue" button to move directly to the next topic.
+MARKDOWN

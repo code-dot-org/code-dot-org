@@ -1,7 +1,10 @@
 import React, {useState} from 'react';
 import classNames from 'classnames';
 
-import {ChatCompletionMessage} from '@cdo/apps/aiTutor/types';
+import {
+  ChatCompletionMessage,
+  AITutorInteractionStatus as Status,
+} from '@cdo/apps/aiTutor/types';
 import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -42,6 +45,12 @@ const AssistantMessage: React.FC<AssistantMessageProps> = ({message}) => {
     }
   };
 
+  const shouldRenderFeedbackButtons =
+    message.id &&
+    message.status !== Status.ERROR &&
+    message.status !== Status.PROFANITY_VIOLATION &&
+    message.status !== Status.PII_VIOLATION;
+
   return (
     <div className={style.assistantMessageContainer}>
       <Typography semanticTag="h5" visualAppearance="heading-xs">
@@ -52,9 +61,12 @@ const AssistantMessage: React.FC<AssistantMessageProps> = ({message}) => {
           id={'chat-workspace-message-body'}
           className={classNames(style.message, style.assistantMessage)}
         >
-          <SafeMarkdown markdown={message.chatMessageText} />
+          <SafeMarkdown
+            markdown={message.chatMessageText}
+            className={style.aiTutorMarkdown}
+          />
         </div>
-        {message.id && (
+        {shouldRenderFeedbackButtons && (
           <>
             <Button
               className={style.hamburgerMenuButton}

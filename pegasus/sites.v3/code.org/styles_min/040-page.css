@@ -679,6 +679,7 @@ aside.top-skinny-banner {
 /* Start carousel styles ------------------------ */
 .carousel-wrapper {
   position: relative;
+  margin: 2rem 0 0;
 }
 
 /* Sets the font-family for text/image carousels */
@@ -701,7 +702,7 @@ swiper-slide {
 .carousel-wrapper .swiper-nav-prev,
 .carousel-wrapper .swiper-nav-next {
   position: absolute;
-  top: 42%;
+  top: 40%;
   border: 0;
   height: 48px;
 }
@@ -824,19 +825,6 @@ a.about_list_item:hover {
 .dropdown {
   border-color: rgb(204, 204, 204);
   border-radius: 5px;
-}
-
-#stats-carousel .slide-prev > span {
-  border-right-color: #b9bf15;
-}
-#stats-carousel .slide-next > span {
-  border-left-color: #b9bf15;
-}
-.carousel-wrapper .pagination a {
-  background: var(--brand_primary_light);
-}
-.carousel-wrapper .pagination a.selected {
-  background: var(--brand_primary_default);
 }
 
 @media screen and (max-width: 450px) {

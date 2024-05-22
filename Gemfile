@@ -46,6 +46,7 @@ gem 'jumphash'
 gem 'os'
 gem 'parallel'
 gem 'redis', '~> 4.8.1'
+gem 'redis-actionpack', '~> 5.4.0'
 # Using commit ref on fork until maintainer publishes a new version.
 gem 'redis-slave-read', require: false, github: 'code-dot-org/redis-slave-read', ref: 'cfe1bd0f5cf65eee5b52560139cab133f22cb880'
 gem 'xxhash'
@@ -265,7 +266,7 @@ gem 'pusher', '~> 1.3.1', require: false
 
 gem 'youtube-dl.rb', group: [:development, :staging, :levelbuilder]
 
-gem 'daemons'
+gem 'daemons', '1.1.9' # Pinned to old version, see PR 57938
 gem 'httparty'
 gem 'net-scp'
 gem 'net-ssh'

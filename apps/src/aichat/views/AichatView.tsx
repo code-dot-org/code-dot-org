@@ -12,6 +12,8 @@ import SegmentedButtons, {
 } from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import ProjectTemplateWorkspaceIcon from '@cdo/apps/templates/ProjectTemplateWorkspaceIcon';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 const commonI18n = require('@cdo/locale');
 const aichatI18n = require('@cdo/aichat/locale');
 
@@ -31,6 +33,8 @@ import moduleStyles from './aichatView.module.scss';
 
 const AichatView: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
+
+  const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
 
   const beforeNextLevel = useCallback(() => {
     dispatch(sendSuccessReport('aichat'));
@@ -67,10 +71,11 @@ const AichatView: React.FunctionComponent = () => {
     );
   }, [dispatch, initialSources, levelAichatSettings]);
 
-  // When the level changes, clear the chat message history and start a new session.
+  // When the level changes or if we are viewing aichat level as a different user
+  // (e.g., teacher viewing student work), clear the chat message history and start a new session.
   useEffect(() => {
     dispatch(clearChatMessages());
-  }, [currentLevelId, dispatch]);
+  }, [currentLevelId, viewAsUserId, dispatch]);
 
   // Showing presentation view when:
   // 1) levelbuilder hasn't explicitly configured the toggle to be hidden, and
@@ -163,6 +168,13 @@ const AichatView: React.FunctionComponent = () => {
             headerContent={chatWorkspaceHeader}
             rightHeaderContent={renderChatWorkspaceHeaderRight(() => {
               dispatch(clearChatMessages());
+              analyticsReporter.sendEvent(
+                EVENTS.CHAT_ACTION,
+                {
+                  action: 'Clear chat history',
+                },
+                PLATFORMS.BOTH
+              );
             })}
           >
             <ChatWorkspace />

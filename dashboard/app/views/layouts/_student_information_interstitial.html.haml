@@ -29,5 +29,5 @@
         - haml_tag :hr, class: 'header-divider'
         .form-group#information_form_buttons
           = link_to t('nav.user.logout'), destroy_user_session_url, class: 'btn primary-button', id: 'sign-out-btn'
-          = f.submit t('continue'), class: 'btn primary-button', id: 'submit-btn'
-%script{src: webpack_asset_path('js/layouts/_student_information_interstitial.js'), data: {retrieveInfoForCap: cap_user_info_required?(student, country).to_json, userId: student.id.to_json, inSection: (!student.sections_as_student.empty?).to_json, currentUsState: student.us_state.to_json}}
+          = f.submit I18n.locale == :'en-US' ? t('submit') : t('continue'), class: 'btn primary-button', id: 'submit-btn'
+%script{src: webpack_asset_path('js/layouts/_student_information_interstitial.js'), data: {retrieveInfoForCap: cap_user_info_required?(student, country).to_json, userId: student.id.to_json, inSection: (!student.sections_as_student.empty?).to_json, currentUsState: student.us_state.to_json, selectedLanguage: request.locale.to_json, studentAge: student.age.to_json}}

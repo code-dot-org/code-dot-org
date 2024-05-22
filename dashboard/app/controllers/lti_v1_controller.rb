@@ -4,8 +4,10 @@ require "services/lti"
 require "policies/lti"
 require "concerns/partial_registration"
 require "clients/lti_advantage_client"
+require 'clients/lti_dynamic_registration_client'
 require "cdo/honeybadger"
 require 'metrics/events'
+require 'securerandom'
 
 class LtiV1Controller < ApplicationController
   before_action -> {redirect_to lti_v1_integrations_path, alert: I18n.t('lti.integration.early_access.closed')},
@@ -196,6 +198,9 @@ class LtiV1Controller < ApplicationController
         user = Services::Lti.initialize_lti_user(decoded_jwt)
         PartialRegistration.persist_attributes(session, user)
         session[:user_return_to] = destination_url
+        if DCDO.get('lti_account_linking_enabled', false)
+          redirect_to lti_v1_account_linking_landing_path lti_provider: integration[:platform_name] and return
+        end
         redirect_to new_user_registration_url
       end
     else

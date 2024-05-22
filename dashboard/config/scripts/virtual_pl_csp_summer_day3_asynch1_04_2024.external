@@ -1,0 +1,26 @@
+name 'virtual-pl-csp-summer-day3-asynch1-04-2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Assessments in Unit 1
+<br>
+<img src="https://images.code.org/9df1a7b659aba5907457cec20dd907a8-Screenshot 2023-10-19 at 12.26.39 PM.png" alt="A clipboard with the words TO DO on it. This icon is used to signal an action item for participants." width="30px" style="border-radius:10px; float:left; margin: 0px 10px 5px 0px;">
+
+#### In this activity, you will explore the 2-day project and a multiple choice assessment at the end of Unit 1, which are designed to work in tandem.
+
+---
+## To Do:
+#### **Step 1:** Look at the Project Assessment. Navigate to the lesson plan for <a href="https://studio.code.org/s/csp1-2024/lessons/12">Unit 1 Lesson 12: Digital Information Dilemmas</a>:
+#### - Skim the U1L12 lesson plan.
+#### - Skim 1-2 of the articles listed.
+#### - Look at the slides for lesson 12.
+#### - Review the rubric provided in lesson 12.
+#### - Review the exemplar in Code Studio Lesson 12.
+
+#### **Step 2:** Look at the  in <a href="https://studio.code.org/s/csp1-2024/lessons/13/levels/1/page/1?no_redirect=1">Multiple Choice Assessment</a> Lesson 13. Since we did not do all of the lessons, you may not know all the answers. That’s okay. The goal is to see what’s in the assessment at a high level.
+
+---
+
+![](https://images.code.org/a7b2a96bc7efde891a795e3f7c657f4d-Screenshot 2023-10-19 at 1.07.28 PM.png)
+MARKDOWN

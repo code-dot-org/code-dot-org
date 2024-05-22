@@ -28,6 +28,10 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
   const currentLevelId = useSelector(
     (state: {progress: ProgressState}) => state.progress.currentLevelId
   );
+  const userId = useSelector(
+    (state: {progress: ProgressState}) =>
+      state.progress.viewAsUserId || undefined
+  );
   const scriptId = useSelector(
     (state: {progress: ProgressState}) => state.progress.scriptId || undefined
   );
@@ -62,6 +66,7 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
       promise = dispatch(
         setUpWithLevel({
           levelId: parseInt(currentLevelId),
+          userId,
           scriptId,
           levelPropertiesPath,
           channelId,
@@ -70,7 +75,7 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
     } else if (channelId && appName) {
       // Otherwise, if we have a channel id, set up the lab using the channel id.
       // This path should only be used for lab pages that don't have a level, such as
-      // /projectbeats. App name also must be provided if using this path.
+      // /projectbeats previously. App name also must be provided if using this path.
       promise = dispatch(setUpWithoutLevel({channelId, appName}));
     } else if (channelId || appName) {
       console.warn(
@@ -89,6 +94,7 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
     scriptId,
     levelPropertiesPath,
     dispatch,
+    userId,
   ]);
 
   useEffect(() => {

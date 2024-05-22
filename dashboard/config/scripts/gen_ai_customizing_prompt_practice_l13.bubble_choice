@@ -1,0 +1,14 @@
+name 'gen-ai-customizing-prompt-practice-L13'
+editor_experiment ''
+display_name 'Bubble Choice: All the Choices'
+description 'Try These Levels!'
+
+sublevels
+level 'gen-ai-customizing-prompt-practice-L13A'
+level 'gen-ai-customizing-prompt-practice-L13B'
+level 'gen-ai-customizing-prompt-practice-L13C'
+level 'gen-ai-customizing-prompt-practice-L13D'
+
+markdown <<MARKDOWN
+[Use the description field above instead of these]
+MARKDOWN
