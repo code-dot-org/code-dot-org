@@ -12,6 +12,7 @@ import {
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
 import {setAndSaveProjectSource} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import {parseErrorMessage} from './pythonHelpers/messageHelpers';
 
 // This syntax doesn't work with typescript, so this file is in js.
 const pyodideWorker = new Worker(
@@ -22,6 +23,7 @@ const callbacks = {};
 
 pyodideWorker.onmessage = event => {
   const {type, id, message} = event.data;
+  console.log({event});
   if (type === 'sysout' || type === 'syserr') {
     if (message.startsWith(MATPLOTLIB_IMG_TAG)) {
       // This is a matplotlib image, so we need to append it to the output
@@ -37,6 +39,7 @@ pyodideWorker.onmessage = event => {
     getStore().dispatch(setAndSaveProjectSource({source: message}));
     return;
   } else if (type === 'error') {
+    parseErrorMessage(message);
     getStore().dispatch(appendSystemMessage(`Error: ${message}`));
     return;
   } else if (type === 'internal_error') {
