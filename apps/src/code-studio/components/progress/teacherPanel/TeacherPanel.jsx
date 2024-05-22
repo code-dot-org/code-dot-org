@@ -54,6 +54,7 @@ class TeacherPanel extends React.Component {
       pageTypes.scriptOverview,
       pageTypes.lessonExtras,
     ]),
+    hasBottomMargin: PropTypes.bool,
 
     // Provided by redux.
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
@@ -172,6 +173,7 @@ class TeacherPanel extends React.Component {
       pageType,
       teacherId,
       exampleSolutions,
+      hasBottomMargin,
     } = this.props;
 
     const selectedUserId = this.getSelectedUserId();
@@ -190,7 +192,10 @@ class TeacherPanel extends React.Component {
       hasSections && unitHasLockableLessons && viewAs === ViewType.Instructor;
 
     return (
-      <TeacherPanelContainer logToFirehose={this.logToFirehose}>
+      <TeacherPanelContainer
+        logToFirehose={this.logToFirehose}
+        hasBottomMargin={hasBottomMargin}
+      >
         <h3>{i18n.teacherPanel()}</h3>
         <div style={styles.scrollable}>
           <ViewAsToggle

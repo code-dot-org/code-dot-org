@@ -8,6 +8,7 @@ export default class TeacherPanelContainer extends React.Component {
   static propTypes = {
     children: PropTypes.node,
     logToFirehose: PropTypes.func,
+    hasBottomMargin: PropTypes.bool,
   };
 
   state = {open: tryGetLocalStorage('teacher-panel', 'open') !== 'closed'};
@@ -30,8 +31,12 @@ export default class TeacherPanelContainer extends React.Component {
   };
 
   render() {
+    let classList = classNames('teacher-panel', {hidden: !this.state.open});
+    if (this.props.hasBottomMargin) {
+      classList += ' bottom-margin';
+    }
     return (
-      <div className={classNames('teacher-panel', {hidden: !this.state.open})}>
+      <div className={classList}>
         <div className="hide-handle">
           <FontAwesome icon="chevron-right" onClick={this.hide} />
         </div>

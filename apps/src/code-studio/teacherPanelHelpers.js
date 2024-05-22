@@ -11,7 +11,8 @@ export function renderTeacherPanel(
   store,
   scriptId,
   scriptName,
-  pageType = null
+  pageType = null,
+  hasBottomMargin = false
 ) {
   const div = document.createElement('div');
   div.setAttribute('id', 'teacher-panel-container');
@@ -23,6 +24,7 @@ export function renderTeacherPanel(
           unitName={scriptName}
           pageType={pageType}
           scriptId={scriptId}
+          hasBottomMargin={hasBottomMargin}
         />
       </InstructorsOnly>
     </Provider>,

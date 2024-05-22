@@ -50,7 +50,8 @@ function initPage() {
       store,
       teacherPanelData.script_id,
       teacherPanelData.script_name,
-      teacherPanelData.page_type
+      teacherPanelData.page_type,
+      teacherPanelData.has_bottom_margin
     );
   }
 }
