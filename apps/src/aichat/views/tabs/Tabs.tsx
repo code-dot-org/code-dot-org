@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import classNames from 'classnames';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
-
+import Tooltip, {TooltipOverlay} from '@cdo/apps/componentLibrary/tooltip';
+import {TooltipProps} from '@cdo/apps/componentLibrary/tooltip/Tooltip';
 import styles from './tabs.module.scss';
 import TabPanel from './TabPanel';
 
@@ -44,13 +45,17 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
   const nameStripped = name.replace(' ', '-');
   const getTabButtonId = (index: number) => `${nameStripped}-tab-${index}`;
   const getTabPanelId = (index: number) => `${nameStripped}-panel-${index}`;
+  const tooltipArgs: TooltipProps = {
+    text: 'View only',
+    direction: 'onRight',
+    tooltipId: 'tooltipId',
+  };
 
   return (
     <>
       <div className={styles.tabsContainer}>
         <ul role="tablist" className={styles.tabsList}>
           {tabs.map((tab, index) => {
-            console.log('tab', tab);
             return (
               <li
                 role="presentation"
@@ -60,24 +65,30 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
                 )}
                 key={index}
               >
-                <button
-                  type="button"
-                  role="tab"
-                  aria-selected={activeIndex === index}
-                  aria-controls={getTabPanelId(index)}
-                  id={getTabButtonId(index)}
-                  onClick={() => handleTabClick(index)}
-                  className={classNames(index === activeIndex && styles.active)}
-                >
-                  {tab.title}
-                  {tab.isReadOnly && (
-                    <FontAwesomeV6Icon
-                      iconName="lock"
-                      iconStyle="solid"
-                      className={styles.tabIcon}
-                    />
-                  )}
-                </button>
+                <TooltipOverlay key={tooltipArgs.tooltipId}>
+                  <button
+                    type="button"
+                    role="tab"
+                    aria-describedby={tooltipArgs.tooltipId}
+                    aria-selected={activeIndex === index}
+                    aria-controls={getTabPanelId(index)}
+                    id={getTabButtonId(index)}
+                    onClick={() => handleTabClick(index)}
+                    className={classNames(
+                      index === activeIndex && styles.active
+                    )}
+                  >
+                    {tab.title}
+                    {tab.isReadOnly && (
+                      <FontAwesomeV6Icon
+                        iconName="lock"
+                        iconStyle="solid"
+                        className={styles.tabIcon}
+                      />
+                    )}
+                  </button>
+                  {tab.isReadOnly && <Tooltip {...tooltipArgs} />}
+                </TooltipOverlay>
               </li>
             );
           })}
