@@ -12,7 +12,7 @@ const DEFAULT_CONTEXT: LtiProviderContextProps = {
   ltiProvider: 'canvas_cloud',
   ltiProviderName: 'Canvas',
   newAccountUrl: '/new-account',
-  existingAccountUrl: '/existing-account',
+  existingAccountUrl: 'https://example.com/existing-account',
 };
 
 describe('LTI Link Account Page Tests', () => {
@@ -41,7 +41,7 @@ describe('LTI Link Account Page Tests', () => {
           .getByText(i18n.ltiLinkAccountExistingAccountCardActionLabel())
           .closest('a')!
           .getAttribute('href')
-      ).to.equal('/existing-account?lms_name=Canvas&lti_provider=canvas_cloud');
+      ).to.equal('https://example.com/existing-account?lms_name=Canvas&lti_provider=canvas_cloud');
     });
   });
 
