@@ -390,11 +390,6 @@ class RegistrationsController < Devise::RegistrationsController
     @permission_status = current_user.child_account_compliance_state
     @personal_account_linking_enabled = true
 
-    # Backfill us_state for pre-CPA students
-    if current_user.student? && current_user.us_state.nil?
-      Services::ChildAccount.update_us_state_from_teacher!(current_user)
-    end
-
     # Handle users who aren't locked out, but still need parent permission to link personal accounts.
     if Policies::ChildAccount.user_predates_policy?(current_user)
       permission_request = Queries::ChildAccount.latest_permission_request(current_user)

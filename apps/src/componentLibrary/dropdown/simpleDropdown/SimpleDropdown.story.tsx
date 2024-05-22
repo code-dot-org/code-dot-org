@@ -169,6 +169,18 @@ GroupOfDropdownColors.args = {
       size: 'm',
       color: 'black',
     },
+    {
+      name: 'default-dropdown-gray',
+      items: [
+        {value: 'option-1', text: 'Option 1'},
+        {value: 'option-2', text: 'Option 2'},
+      ],
+      selectedValue: 'option-1',
+      labelText: 'Gray Dropdown',
+      onChange: args => console.log(args),
+      size: 'm',
+      color: 'gray',
+    },
   ],
 };
 export const GroupOfSizesOfDropdown = MultipleTemplate.bind({});
