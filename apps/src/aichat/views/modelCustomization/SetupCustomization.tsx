@@ -20,6 +20,8 @@ import {isVisible, isDisabled, isEditable} from './utils';
 import CompareModelsDialog from './CompareModelsDialog';
 import {modelDescriptions} from '../../constants';
 import {AichatLevelProperties, ModelDescription} from '@cdo/apps/aichat/types';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
+import {useSelector} from 'react-redux';
 
 const SetupCustomization: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
@@ -64,10 +66,13 @@ const SetupCustomization: React.FunctionComponent = () => {
     );
   }, [aiCustomizations.selectedModelId, availableModels]);
 
+  const readOnlyWorkspace: boolean = useSelector(isReadOnlyWorkspace);
+
   const allFieldsDisabled =
-    isDisabled(temperature) &&
-    isDisabled(systemPrompt) &&
-    isDisabled(selectedModelId);
+    (isDisabled(temperature) &&
+      isDisabled(systemPrompt) &&
+      isDisabled(selectedModelId)) ||
+    readOnlyWorkspace;
 
   const onUpdate = useCallback(
     () => dispatch(updateAiCustomization()),
@@ -94,7 +99,7 @@ const SetupCustomization: React.FunctionComponent = () => {
           name="model"
           size="s"
           className={styles.selectedModelDropdown}
-          disabled={isDisabled(selectedModelId)}
+          disabled={isDisabled(selectedModelId) || readOnlyWorkspace}
         />
         {isEditable(selectedModelId) && (
           <Button
@@ -105,6 +110,7 @@ const SetupCustomization: React.FunctionComponent = () => {
               styles.updateButton,
               styles.compareModelsButton
             )}
+            disabled={readOnlyWorkspace}
           />
         )}
         {isShowingModelDialog && (
@@ -135,7 +141,7 @@ const SetupCustomization: React.FunctionComponent = () => {
               max={MAX_TEMPERATURE}
               step={SET_TEMPERATURE_STEP}
               value={aiCustomizations.temperature}
-              disabled={isDisabled(temperature)}
+              disabled={isDisabled(temperature) || readOnlyWorkspace}
               onChange={event =>
                 dispatch(
                   setAiCustomizationProperty({
@@ -155,7 +161,7 @@ const SetupCustomization: React.FunctionComponent = () => {
             <textarea
               id="system-prompt"
               value={aiCustomizations.systemPrompt}
-              disabled={isDisabled(systemPrompt)}
+              disabled={isDisabled(systemPrompt) || readOnlyWorkspace}
               onChange={event =>
                 dispatch(
                   setAiCustomizationProperty({
