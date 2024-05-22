@@ -48,7 +48,7 @@ export const useSource = (defaultSources: ProjectSources) => {
       });
     } else if (isEditingExemplarMode) {
       header.showLevelBuilderSaveButton(
-        () => ({source}),
+        () => ({exemplar_sources: source}),
         'Levelbuilder: Edit Exemplar',
         `/levels/${levelId}/update_exemplar_code`
       );
