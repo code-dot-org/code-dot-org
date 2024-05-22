@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const ltiProvider = scriptData['lti_provider'];
   const ltiProviderName = scriptData['lti_provider_name'];
   const newAccountUrl = scriptData['new_account_url'];
-  const existingAccountUrl = scriptData['existing_account_url'];
+  const existingAccountUrl = new URL(scriptData['existing_account_url']);
 
   const ltiProviderContext = {
     ltiProvider,

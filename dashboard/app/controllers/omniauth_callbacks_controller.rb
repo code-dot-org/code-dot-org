@@ -1,5 +1,7 @@
 require 'cdo/shared_cache'
 require 'honeybadger/ruby'
+require 'services/lti'
+require 'policies/lti'
 
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   include UsersHelper
@@ -26,6 +28,12 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def google_oauth2
     user = find_user_by_credential
     user&.update_oauth_credential_tokens auth_hash
+
+    # If the user is in the LTI account linking flow, link the account before signing in.
+    if DCDO.get('lti_account_linking_enabled', false) && user && Policies::Lti.lti_registration_in_progress?(session)
+      Services::Lti::AccountLinker.call(user: user, session: session)
+      sign_in_and_redirect user and return
+    end
 
     # Redirect to open roster dialog on home page if user just authorized access
     # to Google Classroom courses and rosters
