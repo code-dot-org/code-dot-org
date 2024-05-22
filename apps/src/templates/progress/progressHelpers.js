@@ -1,13 +1,15 @@
-import {fullyLockedLessonMapping} from '@cdo/apps/code-studio/lessonLockRedux';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {isLessonHiddenForSection} from '@cdo/apps/code-studio/hiddenLessonRedux';
-import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
-import {PUZZLE_PAGE_NONE} from './progressTypes';
+import _ from 'lodash';
+
 import {
   activityCssClass,
   resultFromStatus,
 } from '@cdo/apps/code-studio/activityUtils';
-import _ from 'lodash';
+import {isLessonHiddenForSection} from '@cdo/apps/code-studio/hiddenLessonRedux';
+import {fullyLockedLessonMapping} from '@cdo/apps/code-studio/lessonLockRedux';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';
+
+import {PUZZLE_PAGE_NONE} from './progressTypes';
 
 /**
  * This is conceptually similar to being a selector, except that it operates on
@@ -267,9 +269,10 @@ export function lessonProgressForSection(sectionLevelProgress, lessons) {
  * script.lessons.levels) contains more data than we need. This parses the parts
  * we care about to conform to our `levelType` object.
  */
-export const processedLevel = level => {
+export const processedLevel = (level, parentLevelId) => {
+  const id = level.activeId || level.id;
   return {
-    id: level.activeId || level.id,
+    id,
     url: level.url,
     name: level.name,
     app: level.app,
@@ -279,7 +282,10 @@ export const processedLevel = level => {
     kind: level.kind,
     icon: level.icon,
     isUnplugged: level.display_as_unplugged,
-    levelNumber: level.kind === LevelKind.unplugged ? undefined : level.title,
+    levelNumber:
+      level.kind === LevelKind.unplugged
+        ? undefined
+        : level.title || level.position,
     bubbleText:
       level.kind === LevelKind.unplugged
         ? undefined
@@ -292,9 +298,13 @@ export const processedLevel = level => {
       typeof level.page_number !== 'undefined'
         ? level.page_number
         : PUZZLE_PAGE_NONE,
+    // Script level ID doesn't apply for sublevels. Set to undefined if we have a parent level.
+    scriptLevelId: parentLevelId ? undefined : level.id,
     sublevels:
-      level.sublevels && level.sublevels.map(level => processedLevel(level)),
+      level.sublevels &&
+      level.sublevels.map(sublevel => processedLevel(sublevel, id)),
     path: level.path,
+    parentLevelId,
   };
 };
 

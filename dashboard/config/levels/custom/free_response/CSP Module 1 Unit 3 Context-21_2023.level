@@ -22,7 +22,7 @@
     "allow_multiple_attempts": "true"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-07-28T16:36:47.262+00:00\",\"changed\":[\"cloned from \\\"CSP Module 1 Unit 3 Context-21_2022\\\"\"],\"cloned_from\":\"CSP Module 1 Unit 3 Context-21_2022\"},{\"changed_at\":\"2023-08-01 23:13:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2023-08-01 23:15:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2023-08-01 23:19:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-07-28T16:36:47.262+00:00\",\"changed\":[\"cloned from \\\"CSP Module 1 Unit 3 Context-21_2022\\\"\"],\"cloned_from\":\"CSP Module 1 Unit 3 Context-21_2022\"},{\"changed_at\":\"2023-08-01 23:13:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2023-08-01 23:15:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2023-08-01 23:19:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2024-05-02 18:02:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-02 18:17:32 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

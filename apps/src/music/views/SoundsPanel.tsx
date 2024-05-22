@@ -1,6 +1,6 @@
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 import classNames from 'classnames';
-import {getBaseAssetUrl} from '../appConfig';
+import AppConfig, {getBaseAssetUrl} from '../appConfig';
 import styles from './soundsPanel.module.scss';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
@@ -12,6 +12,11 @@ import MusicLibrary, {
 import SoundStyle from '../utils/SoundStyle';
 import FocusLock from 'react-focus-lock';
 import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons';
+import musicI18n from '../locale';
+
+// A variant for SoundsPanel that plays previews as sounds are selected.
+const useSoundsPanelPreview =
+  AppConfig.getValue('sounds-panel-1-preview') === 'true';
 
 /*
  * Renders a UI for previewing and choosing samples. This is currently used within a
@@ -144,6 +149,24 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
   const soundPath = folder.id + '/' + sound.src;
   const isSelected = soundPath === currentValue;
   const isPlayingPreview = playingPreview === soundPath;
+
+  const onSoundSelect = useCallback(() => {
+    if (useSoundsPanelPreview) {
+      if (!isPlayingPreview) {
+        onPreview(soundPath);
+      }
+    }
+    onSelect(soundPath);
+  }, [isPlayingPreview, onPreview, onSelect, soundPath]);
+
+  const onSoundClick = useCallback(
+    (e: React.MouseEvent<HTMLDivElement>) => {
+      e.stopPropagation();
+      onSoundSelect();
+    },
+    [onSoundSelect]
+  );
+
   const onPreviewClick = useCallback(
     (e: Event) => {
       if (!isPlayingPreview) {
@@ -161,10 +184,10 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
         styles.soundRow,
         isSelected && styles.soundRowSelected
       )}
-      onClick={() => onSelect(folder.id + '/' + sound.src)}
+      onClick={onSoundClick}
       onKeyDown={event => {
         if (event.key === 'Enter') {
-          onSelect(folder.id + '/' + sound.src);
+          onSoundSelect();
         }
       }}
       ref={isSelected ? currentSoundRefCallback : null}
@@ -231,11 +254,11 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   onSelect,
   onPreview,
 }) => {
-  const folders = library.getAllowedSounds(undefined, false);
-  const libraryGroupPath = library.libraryJson.path;
+  const folders = library.getAvailableSounds();
+  const libraryGroupPath = library.getPath();
 
   const [selectedFolder, setSelectedFolder] = useState<SoundFolder>(
-    library.getAllowedFolderForSoundId(undefined, currentValue) || folders[0]
+    library.getAllowedFolderForSoundId(currentValue) || folders[0]
   );
   const [mode, setMode] = useState<Mode>('packs');
   const [filter, setFilter] = useState<Filter>('all');
@@ -306,12 +329,12 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   };
 
   const allFilterButtons = [
-    {label: 'All', value: 'all'},
-    {label: 'Beats', value: 'beat'},
-    {label: 'Bass', value: 'bass'},
-    {label: 'Leads', value: 'lead'},
-    {label: 'Effects', value: 'fx'},
-    {label: 'Vocals', value: 'vocal'},
+    {label: musicI18n.soundsFilterAll(), value: 'all'},
+    {label: musicI18n.soundsFilterBeats(), value: 'beat'},
+    {label: musicI18n.soundsFilterBass(), value: 'bass'},
+    {label: musicI18n.soundsFilterLeads(), value: 'lead'},
+    {label: musicI18n.soundsFilterEffects(), value: 'fx'},
+    {label: musicI18n.soundsFilterVocals(), value: 'vocal'},
   ];
 
   const filterButtons = allFilterButtons.filter(
@@ -327,8 +350,8 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
             <SegmentedButtons
               selectedButtonValue={mode}
               buttons={[
-                {label: 'Packs', value: 'packs'},
-                {label: 'Sounds', value: 'sounds'},
+                {label: musicI18n.soundsFilterPacks(), value: 'packs'},
+                {label: musicI18n.soundsFilterSounds(), value: 'sounds'},
               ]}
               onChange={value => onModeChange(value as Mode)}
               className={styles.segmentedButtons}

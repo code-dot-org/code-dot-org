@@ -123,6 +123,10 @@ When /^I go to a new tab$/ do
   end
 end
 
+When /^I go back$/ do
+  @browser.execute_script('window.history.back();')
+end
+
 When /^I close the current tab$/ do
   @browser.close
   tabs = @browser.window_handles
@@ -311,7 +315,13 @@ end
 
 Then /^I wait until I am on "([^"]*)"$/ do |url|
   url = replace_hostname(url)
-  wait_until {@browser.current_url == url}
+  begin
+    wait_until {@browser.current_url == url}
+  rescue Selenium::WebDriver::Error::TimeoutError => exception
+    puts "Timeout: I am not on #{url} like I want."
+    puts "         I am on #{@browser.current_url} instead."
+    raise exception
+  end
 end
 
 Then /^check that the URL contains "([^"]*)"$/i do |url|
@@ -604,8 +614,10 @@ Then /^evaluate JavaScript expression "([^"]*)"$/ do |expression|
   expect(@browser.execute_script("return #{expression}")).to eq(true)
 end
 
-Then /^execute JavaScript expression "([^"]*)"$/ do |expression|
-  @browser.execute_script("return #{expression}")
+Then /^execute JavaScript expression "([^"]*)"( to load a new page)?$/ do |expression, load|
+  page_load(load) do
+    @browser.execute_script("return #{expression}")
+  end
 end
 
 Then /^I navigate to the course page for "([^"]*)"$/ do |course|
@@ -1006,10 +1018,10 @@ Then /^element "([^"]*)" is a child of element "([^"]*)"$/ do |child_id, parent_
   expect(actual_parent_id).to eq(parent_id)
 end
 
-And(/^I set the language cookie$/) do
+def set_cookie(key, value)
   params = {
-    name: "_language",
-    value: 'en'
+    name: key,
+    value: value,
   }
 
   if ENV['DASHBOARD_TEST_DOMAIN'] && ENV['DASHBOARD_TEST_DOMAIN'] =~ /\.code.org/ &&
@@ -1020,18 +1032,16 @@ And(/^I set the language cookie$/) do
   @browser.manage.add_cookie params
 end
 
+And(/^I set the language cookie$/) do
+  set_cookie '_language', 'en'
+end
+
 And(/^I set the pagemode cookie to "([^"]*)"$/) do |cookie_value|
-  params = {
-    name: "pm",
-    value: cookie_value
-  }
+  set_cookie 'pm', cookie_value
+end
 
-  if ENV['DASHBOARD_TEST_DOMAIN'] && ENV['DASHBOARD_TEST_DOMAIN'] =~ /\.code.org/ &&
-      ENV['PEGASUS_TEST_DOMAIN'] && ENV['PEGASUS_TEST_DOMAIN'] =~ /\.code.org/
-    params[:domain] = '.code.org' # top level domain cookie
-  end
-
-  @browser.manage.add_cookie params
+And(/^I set the cookie named "([^"]*)" to "([^"]*)"$/) do |key, value|
+  set_cookie key, value
 end
 
 Given(/^I am enrolled in a plc course$/) do

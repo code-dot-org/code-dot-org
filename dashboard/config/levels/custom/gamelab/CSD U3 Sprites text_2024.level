@@ -73,14 +73,14 @@
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/sprites",
-      "/courses/csd-2022/guides/animation-tab",
-      "/courses/csd-2022/guides/sprite-properties",
-      "/courses/csd-2022/guides/random-numbers",
-      "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/naming-variables",
-      "/courses/csd-2022/guides/drawing-shapes",
-      "/courses/csd-2022/guides/shapes-and-parameters"
+      "/courses/csd-2024/guides/sprites",
+      "/courses/csd-2024/guides/animation-tab",
+      "/courses/csd-2024/guides/sprite-properties",
+      "/courses/csd-2024/guides/random-numbers",
+      "/courses/csd-2024/guides/variables",
+      "/courses/csd-2024/guides/naming-variables",
+      "/courses/csd-2024/guides/drawing-shapes",
+      "/courses/csd-2024/guides/shapes-and-parameters"
     ],
     "long_instructions": "# Text\r\n\r\nYou can put text anywhere you'd like on the screen using the [`text`(#4dd0e1)](/docs/ide/gamelab/expressions/text) block.  **Read the documentation by clicking on the block in the toolbox** to see how to change the size and color of your text.\r\n\r\n# Do This\r\n1) Change the displayed text in the provided code.\r\n   - Replace the text in the [`text`(#4dd0e1)](/docs/ide/gamelab/expressions/text) block that says \"Change me and add another text block!\"\r\n2) Add another sentence in a different part of the screen.\r\n   - Add a second [`text`(#4dd0e1)](/docs/ide/gamelab/expressions/text) block and change the `x` and `y` location in the block.",
     "encrypted": "false",

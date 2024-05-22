@@ -3,33 +3,28 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Closing a Lesson 
-
-#### This page should include: 
-
-* #### A congratulations for the Learner
-* #### A review of the objectives
-* #### What's up next for the learner
-
-___
-
-## Exemplar: 
-
-# Wrap Up: Create a Scene
+# Wrap Up
 
 ## Great job! 🎉
 
-#### So far, you've learned the basics of Game Lab and how to create and customize shapes. The skills you've learned thus far will take you through Unit 3, Lesson 7. You learned how to:
+#### In this module you explored how to bring AI to the students in your classroom. You...
 
-* #### Use the coordinate grid in Game Lab to draw colorful shapes.
-* #### Customize shapes by adjusting multiple parameters.
-* #### Use variables to store information that is used multiple times in a program.
+* #### Critically evaluated AI tools and resources for their applicability and effectiveness in the classroom.
+* #### Reflected on AI implementation strategies through the lens of Universal Design for Learning and Culturally Responsive Teaching.
+* #### Explored how you could introduce and integrate AI technologies into your own classroom settings, taking into consideration your specific educational contexts and student needs.
+* #### Learned about the resources available to teach about AI in your classroom.
+
+## Take the Post-survey
+
+#### Code.org values and is responsive to feedback. Please fill out this short survey to tell us what you thought of this module.
+
+<a class="btn btn-large btn-primary" href="https://studio.code.org/form/ai_101_selfpaced_pl_postsurvey" target="blank" rel="noopener noreferrer">Take the Post-survey</a>
 
 ## Up Next
 
-#### In the next section of this professional learning module, you'll learn more about **sprites**, which will allow you to make creative and exciting scenes and games in Game Lab.
+#### In the next section of this professional learning module, you’ll learn how to ensure you and your students are using AI responsibly.
 
-#### Click continue to keep going!
+## Click continue to keep going!
 
 
 

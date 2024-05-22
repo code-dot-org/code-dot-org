@@ -1,9 +1,23 @@
-import _ from 'lodash';
 import {unregisterProcedureBlocks} from '@blockly/block-shareable-procedures';
-import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
+import {Block, BlockSvg, Field, Theme, WorkspaceSvg} from 'blockly';
+import {
+  ToolboxItemInfo,
+  BlockInfo,
+  ToolboxDefinition,
+} from 'blockly/core/utils/toolbox';
+import _ from 'lodash';
+
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
-import cdoTheme from '../themes/cdoTheme';
-import {blocks as procedureBlocks} from '../customBlocks/googleBlockly/proceduresBlocks';
+import {
+  getProjectXml,
+  processIndividualBlock,
+  removeIdsFromBlocks,
+} from '@cdo/apps/blockly/addons/cdoXml';
+import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
+import experiments from '@cdo/apps/util/experiments';
+
+import * as blockUtils from '../../block_utils';
+import {parseElement as parseXmlElement} from '../../xml';
 import {
   BLOCK_TYPES,
   CLAMPED_NUMBER_REGEX,
@@ -13,6 +27,16 @@ import {
   Themes,
   ToolboxType,
 } from '../constants';
+import {blocks as procedureBlocks} from '../customBlocks/googleBlockly/proceduresBlocks';
+import cdoTheme from '../themes/cdoTheme';
+import {
+  BlockColor,
+  JsonBlockConfig,
+  SerializedFields,
+  WorkspaceSerialization,
+} from '../types';
+import {getBaseName} from '../utils';
+
 import {
   appendProceduresToState,
   convertFunctionsXmlToJson,
@@ -21,22 +45,6 @@ import {
   hasBlocks,
   positionBlocksOnWorkspace,
 } from './cdoSerializationHelpers';
-import {parseElement as parseXmlElement} from '../../xml';
-import * as blockUtils from '../../block_utils';
-import {
-  getProjectXml,
-  processIndividualBlock,
-} from '@cdo/apps/blockly/addons/cdoXml';
-import {Block, BlockSvg, Field, Theme, WorkspaceSvg} from 'blockly';
-import {
-  BlockColor,
-  JsonBlockConfig,
-  SerializedFields,
-  WorkspaceSerialization,
-} from '../types';
-import experiments from '@cdo/apps/util/experiments';
-import {getBaseName} from '../utils';
-import {ToolboxItemInfo, BlockInfo} from 'blockly/core/utils/toolbox';
 
 /**
  * Loads blocks to a workspace.
@@ -317,13 +325,40 @@ export function bindBrowserEvent(
 export function isWorkspaceReadOnly() {
   return false; // TODO - used for feedback
 }
+/**
+ * Checks if any block type's usage count exceeds its defined limit and returns
+ * the type of the first block found to exceed.
+ * @returns {string | null} The type of the first block that exceeds its limit,
+ * or null if no block exceeds the limit.
+ */
+export function blockLimitExceeded(): string | null {
+  const {blockLimitMap, blockCountMap} = Blockly;
 
-export function blockLimitExceeded() {
-  return false;
+  // Ensure both maps are defined
+  if (!blockLimitMap || !blockCountMap) {
+    return null;
+  }
+
+  // Find the first instance where the limit is exceeded for a block type.
+  for (const [type, count] of blockCountMap) {
+    const limit = blockLimitMap.get(type);
+    if (limit !== undefined && count > limit) {
+      return type;
+    }
+  }
+
+  // If no count exceeds the limit, return null.
+  return null;
 }
 
-export function getBlockLimit() {
-  return 0;
+/**
+ * Retrieves the block limit for a given block type from the block limit map.
+ * @param {string} type The type of the block to check the limit for.
+ * @returns {number | null} The limit for the specified block type, or null if not found.
+ */
+export function getBlockLimit(type: string): number | null {
+  const limit = Blockly.blockLimitMap?.get(type);
+  return limit !== undefined ? limit : null;
 }
 
 /**
@@ -504,6 +539,40 @@ export function getLevelToolboxBlocks(customCategory: string) {
 }
 
 /**
+ * Creates a map of block types and limits, based on limit attributes found
+ * in the block XML for the current toolbox.
+ * @returns {Map<string, number>} A map of block limits
+ */
+export function createBlockLimitMap() {
+  const parser = new DOMParser();
+  // This method only works for string toolboxes.
+  if (!Blockly.toolboxBlocks || typeof Blockly.toolboxBlocks !== 'string') {
+    return;
+  }
+
+  const xmlDoc = parser.parseFromString(Blockly.toolboxBlocks, 'text/xml');
+  // Define blockLimitMap
+  const blockLimitMap = new Map<string, number>();
+
+  // Select all block elements and convert NodeList to array
+  const toolboxBlockElements = Array.from(xmlDoc.querySelectorAll('block'));
+
+  // Iterate over each block element using forEach
+  toolboxBlockElements.forEach(blockElement => {
+    const limit = parseInt(blockElement.getAttribute('limit') ?? '');
+
+    if (!isNaN(limit)) {
+      // Extract type and add to blockLimitMap
+      const type = blockElement.getAttribute('type');
+      if (type !== null) {
+        blockLimitMap.set(type, limit);
+      }
+    }
+  });
+  return blockLimitMap;
+}
+
+/**
  * Simplifies the state of blocks for a flyout by removing properties like x/y and id.
  * Also replaces variable IDs with variable names derived from the serialied variable map.
  * @param {object} serialization The serialized block state.
@@ -639,4 +708,25 @@ export function processToolboxXml(toolboxString: string) {
   // Convert the modified XML document back to a string
   const modifiedXmlString = new XMLSerializer().serializeToString(xmlDoc);
   return modifiedXmlString;
+}
+
+export function highlightBlock(id: string, spotlight: boolean) {
+  // Google Blockly doesn't consider the selected block to be a highlighted block,
+  // so we unselect it first.
+  if (Blockly.selected) {
+    Blockly.selected.unselect();
+  }
+  Blockly.getMainWorkspace().highlightBlock(id, spotlight);
+}
+
+// Removes block ids from an XML string toolbox
+export function toolboxWithoutIds(
+  toolbox: string | Element | ToolboxDefinition | undefined
+) {
+  if (typeof toolbox !== 'string') {
+    return toolbox;
+  }
+  const toolboxDom = Blockly.Xml.textToDom(toolbox);
+  removeIdsFromBlocks(toolboxDom);
+  return Blockly.Xml.domToText(toolboxDom);
 }

@@ -6,8 +6,6 @@
 # comments near `config.active_job.queue_adapter` for more detail.
 
 class SampleJob < ApplicationJob
-  queue_as :default
-
   # Event Callbacks
   before_enqueue do |job|
     puts "In #{job.class.name} - before_enqueue"

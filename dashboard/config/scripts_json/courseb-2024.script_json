@@ -19,8 +19,8 @@
     },
     "new_name": null,
     "family_name": "courseb",
-    "serialized_at": "2024-04-08 21:58:54 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2024-05-10 19:10:31 UTC",
+    "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -295,10 +295,10 @@
       "relative_position": 10,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this **exploratory** lesson, students empathize with several fictional smartphone users to help them find the “right app” that addresses their needs.",
-        "preparation": "* Read through the speaker notes in the ***slide deck**. \n* Prepare enough sketching/drawing supplies for all students.\n* Make sure each student has a reflection journal.",
+        "overview": "In this **exploratory** lesson, students learn about different computing technologies that exist. They also compare how people lived before the invention of apps and computers with how people live now. The lesson concludes with an activity where students empathize with several fictional smartphone users to help them design the “right app” that addresses their needs.",
+        "preparation": "* Read through the speaker notes in the ***slide deck**. \n* Cut out the Stations Activities resources in advance\n* Prepare enough sketching/drawing supplies for all students.\n* Make sure each student has a reflection journal.",
         "purpose": "Today, computing is more accessible than ever before. People from all walks of life use software on many different devices, particularly smartphones, for information, communication, and entertainment. Because people have such diverse experiences and needs, it is important for budding computer scientists to empathize with people and identify solutions with them in mind. ",
-        "student_overview": "Sketch your own smartphone app.",
+        "student_overview": "Let's learn about apps!",
         "unplugged": true
       },
       "seeding_key": {
@@ -989,7 +989,7 @@
       "key": "09f1f11e-b8c0-405e-a15a-73b15a6884cc",
       "position": 1,
       "properties": {
-        "duration": 5,
+        "duration": 10,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -1003,7 +1003,7 @@
       "key": "89ea6cf6-7b91-4853-afe6-a237e3d509ff",
       "position": 2,
       "properties": {
-        "duration": 35,
+        "duration": 30,
         "name": "Activity"
       },
       "seeding_key": {
@@ -1334,7 +1334,7 @@
       "key": "09bc3af5-14e9-4f84-9da0-dde6fae8ea51",
       "position": 2,
       "properties": {
-        "description": "**Display:** Display the image below so that everyone can see it.\n\n![expandable](https://curriculum.code.org/media/uploads/Screenshot-2018-04-17-19.48.23.png)\n\n**Discuss:** Get the attention of the class and let them know that you are stuck!  You have this challenge, and you thought you had solved it, but it doesn't seem to be working.  Your program has a bug, can they help you fix it?\n\nTake a moment to walk them through the rules:\n\n- Start at the compass rose\n- Follow the instructions step-by-step\n- End at the treasure\n\n(*Optional:*  Walk through your program using your fingers on top of the map, under the document camera.  Express frustration when your fingers end up off the map, instead of at the treasure.)\n\n**Think:** _My program says \"East, East, North\"._ *Can you figure out why my program doesn't work?*\n\n**Pair:** Let students work together to see if they can figure out what the program is supposed to say.\n\n**Share:** Ask students if anyone was able to figure out a way to solve the problem.  When you get a correct answer, let the students know that they are great at debugging!"
+        "description": "**Display:** Display the image below so that everyone can see it.\n\n![expandable](https://images.code.org/4ae475692eb39eb32cb158273834fe94-Screenshot 2024-04-11 at 4.51.33 PM.png)\n\n**Discuss:** Get the attention of the class and let them know that you are stuck!  You have this challenge, and you thought you had solved it, but it doesn't seem to be working. You want to walk to your desk but your program has a bug. Can your students help you fix it?\n\nTake a moment to walk them through the rules:\n\n- Start at the compass rose\n- Follow the instructions step-by-step\n- End at the desk\n\n**Do This:** Before students give you any instructions, ask them to describe the **goal** of the program (\"Walk from the starting point to the desk\") and the **expected outcome** (\"Arrive at the desk\"). Remind students that it is good practice to articulate the goal and outcome of the programs they will create before beginning to write their algorithms.    \n\n(*Optional:*  Walk through your program using your fingers on top of the map, under the document camera.  Express frustration when your fingers end up off the map, instead of at the treasure.)\n\n**Think:** _My program says \"East, East, North\"._ *Can you figure out why my program doesn't work?*\n\n**Pair:** Let students work together to see if they can figure out what the program is supposed to say.\n\n**Share:** Ask students if anyone was able to figure out a way to solve the problem.  When you get a correct answer, let the students know that they are great at debugging!"
       },
       "seeding_key": {
         "activity_section.key": "09bc3af5-14e9-4f84-9da0-dde6fae8ea51",
@@ -1384,7 +1384,7 @@
       "key": "4681e4ae-ef1f-4790-98ec-439e2ea8075e",
       "position": 2,
       "properties": {
-        "description": "**Distribute:** Hand each group of 2-3 students a ***Map Activity**, as well as the blank papers for the grid on the ground.  Allow students to either cut the halves of each map apart, or fold the sheets in half so that each map is clearly visible (without distraction.)\n\n**Set-Up:** In each group, each player will get a task.\n\n- Player 1: Choose/set-up the map to play\n- Player 2: Programmer\n- Player 3: Walking Machine\n\n\n**Directions for Class:**\n1) Decide who will take each job.\n\n2) Have player 1 set a grid on the floor made up of pieces of paper (as shown on one of the Move It Maps) except with the gem paper facing the ground.\n\n3) Player 3 will start by standing on the page with the compass rose.\n\n4) Player 2 will then guide player 3 step-by-step through the paper maze using the provided arm signals.\n\n5) When player 2 gives the signal to “STOP”, player 3 will flip over the page that they are on. If that page is a gem, then the maze was a success!\n\n6) If there is time, let everyone rotate positions and go again!\n\nNote that the rules are not the most important thing here. Feel free to clarify if the students have questions, but if the students are playing a bit differently than described, you don't need to hold them to the letter of the game. The crucial bit is that they are moving from immediate instructions to giving two or three instructions before the Walking Machine moves.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Map Activity” slide\n\n**Distribute:** Hand each group of 2-3 students a ***Map Activity**, as well as the blank papers for the grid on the ground.  Allow students to either cut the halves of each map apart, or fold the sheets in half so that each map is clearly visible (without distraction.)\n\n**Set-Up:** In each group, each player will get a task.\n\n- Player 1: Choose/set-up the map to play\n- Player 2: Programmer\n- Player 3: Walking Machine\n\n**Directions for Class:**\n1) Decide who will take each job.\n\n2) Have player 1 set a grid on the floor made up of pieces of paper (as shown on one of the Move It Maps) except with the gem paper facing the ground.\n\n3) Player 3 will start by standing on the page with the compass rose.\n\n4) Player 2 will then guide player 3 step-by-step through the paper maze using the provided arm signals.\n\n5) When player 2 gives the signal to “STOP”, player 3 will flip over the page that they are on. If that page is a gem, then the maze was a success!\n\n6) If there is time, let everyone rotate positions and go again!\n\nNote that the rules are not the most important thing here. Feel free to clarify if the students have questions, but if the students are playing a bit differently than described, you don't need to hold them to the letter of the game. The crucial bit is that they are moving from immediate instructions to giving two or three instructions before the Walking Machine moves.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n",
         "name": "Move It, Move It"
       },
       "seeding_key": {
@@ -1527,6 +1527,7 @@
       "key": "1c9cf0c4-815e-406a-b27b-f25d0379bf28",
       "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video - Maze Intro: Programming with Blocks” slide",
         "progression_name": "Video - Maze Intro: Programming with Blocks"
       },
       "seeding_key": {
@@ -1546,9 +1547,21 @@
       }
     },
     {
-      "key": "f479ba66-694e-4760-9189-31abdf64a170",
+      "key": "e6888a2e-346a-461a-964d-9804f2168ecd",
       "position": 5,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to try coding one block at a time. Make sure they press “Run” frequently in order to break the following challenges down into small steps. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "e6888a2e-346a-461a-964d-9804f2168ecd",
+        "lesson_activity.key": "86a467d4-8a22-4a5e-82ee-d934197f5360"
+      }
+    },
+    {
+      "key": "f479ba66-694e-4760-9189-31abdf64a170",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-7: Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -1681,6 +1694,7 @@
       "key": "abb5c2f2-d757-4c34-bf52-04cb0721b754",
       "position": 2,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: Pair Programming” slide",
         "progression_name": "Video: Pair Programming"
       },
       "seeding_key": {
@@ -1692,6 +1706,7 @@
       "key": "c21833c9-1bd1-406d-b2f1-ca32b2625b47",
       "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to try coding one block at a time. Make sure they press “Run” frequently in order to break the following challenges down into small steps. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Skill Building: Levels 2-6” slide\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -1703,6 +1718,7 @@
       "key": "30ce48fa-aa1a-4b3c-abb9-d07376de4961",
       "position": 4,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 7: Challenge” slide",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -1714,6 +1730,7 @@
       "key": "ccbef390-614a-425b-82b9-cd116e3d0c97",
       "position": 5,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8-10: Practice” slide",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -1848,6 +1865,7 @@
       "key": "65a922cd-c4b7-49ea-a07b-b096549d047b",
       "position": 4,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: The Harvester” slide",
         "progression_name": "Video: The Harvester"
       },
       "seeding_key": {
@@ -1859,6 +1877,7 @@
       "key": "335239d8-5a13-41ed-93cd-e44d0acfb694",
       "position": 5,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to try coding one block at a time. Make sure they press “Run” frequently in order to break the following challenges down into small steps. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 2-4: Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -1870,6 +1889,7 @@
       "key": "17c5d82b-eb88-45f5-afcf-5d83a4b67123",
       "position": 6,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: Debugging with the Step Button” slide",
         "progression_name": "Video: Debugging with the Step Button"
       },
       "seeding_key": {
@@ -1881,6 +1901,7 @@
       "key": "94ffa6ed-7ca2-45fd-8a4d-7e0f060c4a20",
       "position": 7,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 6-11: Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -1892,6 +1913,7 @@
       "key": "ac240afc-6bd7-4165-9564-ac2ea3046e4f",
       "position": 8,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 12: Challenge” slide",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -1903,6 +1925,7 @@
       "key": "4fe6d2f6-49e2-4700-90c6-8691148bd2d2",
       "position": 9,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 13-15: Practice” slide",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -1926,7 +1949,7 @@
       "key": "8de6dfb9-9222-4eb2-a5d1-6e20266a0d93",
       "position": 1,
       "properties": {
-        "description": "**Model:** Ask for a volunteer and have them stand.\n\n- Instruct your volunteer to walk around the table (or their chair, or a friend).\n- When they finish, instruct them to do it again, using the exact same words you did before.\n- When they finish, instruct again.\n- Then again.\n\n**Prompt:** _Would it have been easier for me to just ask you to go around the table four times?_ \n\n**Think:** _What if I wanted you to do it ten times? How would you reword my instructions so that they were more efficient and I didn't have to repeat myself so much? Feel free to write your instructions down on a piece of scrap paper._\n\n**Share:** Ask a few students to share their instructions with the class, pointing out how each approach has simplified the overall approach to giving instructions.",
+        "description": "**Model:** Ask for a volunteer and have them stand.\n\n- Instruct your volunteer to walk around the table (or their chair, or a friend).\n- When they finish, instruct them to do it again, using the exact same words you did before.\n- When they finish, instruct again.\n- Then again.\n\n**Prompt:** _Would it have been easier for me to just ask you to go around the table four times?_ \n\n**Think:** \n- _What if I wanted you to do it ten times?_ \n- _How would you reword my instructions so that they were more efficient and I didn't have to repeat myself so much?_ \n\nFeel free to write your instructions down on a piece of scrap paper.\n\n**Share:** Ask a few students to share their instructions with the class, pointing out how each approach has simplified the overall approach to giving instructions.",
         "name": "Repeat After Me\r"
       },
       "seeding_key": {
@@ -1950,6 +1973,7 @@
       "key": "5c23f0fb-81a9-4148-9562-06cf42cdda70",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: Getting Loopy” slide",
         "progression_name": "Video: Getting Loopy"
       },
       "seeding_key": {
@@ -1961,6 +1985,7 @@
       "key": "c49fb4d7-4b31-4a44-82b2-e4fb8dc7b69c",
       "position": 2,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each section down into smaller steps.",
         "name": "Getting Loopy"
       },
       "seeding_key": {
@@ -1972,7 +1997,7 @@
       "key": "46d66661-4488-4fe4-83cf-aefc09a1056c",
       "position": 3,
       "properties": {
-        "description": "Introduce the main activity by letting the class know that we will be having a dance party. In order to have that party, we'll need to know what all of the steps in the dance are, and how many times we should do them.\n\n**Display:** Show the ***Worksheet** so that all students can see it. Talk through the different sections of the dance as a class. Point out the section that repeats, in particular.\n\n![](https://code.org/curriculum/course1/12/iteration.png)\n\n**Model:** Show the class what the entire dance looks like done at full-speed. Then run through the dance slowly, asking a different student to call out each line of instructions. Next, have the students perform the dance along with you, saying the instructions aloud as they get to each move.\n\n**Prompt:** Ask students to work with a neighbor to find all of the sections of the dance that repeat.\n\n**Share:** Ask a few students to share the repeating patterns that they found. As a class, talk through how you might rework the instructions to be even shorter by repeating those patterns.\n\nFinally, help them understand a symbology for capturing these loops on their picture program, since the assessment will utilize this same method.  Here is an example:\n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-23-13.49.35_YU3IUIc.png)",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Dance Party” slide\n\nIntroduce the main activity by letting the class know that we will be having a dance party. In order to have that party, we'll need to know what all of the steps in the dance are, and how many times we should do them.\n\n**Display:** Show the ***Worksheet** so that all students can see it. Talk through the different sections of the dance as a class. Point out the section that repeats, in particular.\n\n![](https://code.org/curriculum/course1/12/iteration.png)\n\n**Model:** Show the class what the entire dance looks like done at full-speed. Then run through the dance slowly, asking a different student to call out each line of instructions. Next, have the students perform the dance along with you, saying the instructions aloud as they get to each move.\n\n**Prompt:** Ask students to work with a neighbor to find all of the sections of the dance that repeat.\n\n**Share:** Ask a few students to share the repeating patterns that they found. As a class, talk through how you might rework the instructions to be even shorter by repeating those patterns.\n\nFinally, help them understand a symbology for capturing these loops on their picture program, since the assessment will utilize this same method.  Here is an example:\n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-23-13.49.35_YU3IUIc.png)",
         "tips": [
           {
             "type": "teachingTip",
@@ -2126,6 +2151,7 @@
       "key": "a5f56165-d518-4765-b12a-2555b829a74d",
       "position": 2,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to try coding one block at a time. Make sure they press “Run” frequently in order to break the following challenges down into small steps. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 1-2: Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2137,6 +2163,7 @@
       "key": "0def5584-cbf4-408d-8d71-2698fe411b8b",
       "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: Repeat Blocks” slide",
         "progression_name": "Video: Repeat Blocks"
       },
       "seeding_key": {
@@ -2148,6 +2175,7 @@
       "key": "a18fb36b-fa5b-44fb-8959-8b0ad8e77520",
       "position": 4,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 4-10: Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2159,6 +2187,7 @@
       "key": "85581e9d-aa3d-4bb4-b693-b3793577b208",
       "position": 5,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 4-10: Challenge” slide",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -2170,6 +2199,7 @@
       "key": "aed9e7f5-354e-4a14-b289-dfa2d09e4eac",
       "position": 6,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 12-13: Practice” slide",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2238,7 +2268,7 @@
       "key": "8dde76dd-10e3-4428-80f2-18a1492f6d8b",
       "position": 1,
       "properties": {
-        "description": "We've included a multiple choice prediction level that could be difficult for non-readers. These levels are optional for you to review with your class to help prepare for the puzzles to come. Alternatively, these could be used after finishing the stage as a review for the class.\n\nPrediction Level:\n\n - [Course B, Loops in Collector](https://studio.code.org/levels/8746)",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Predict” slide\n\nWe've included a multiple choice prediction level that could be difficult for non-readers. These levels are optional for you to review with your class to help prepare for the puzzles to come. Alternatively, these could be used after finishing the stage as a review for the class.\n\nPrediction Level:\n\n - [Course B, Loops in Collector](https://studio.code.org/levels/8746)",
         "name": "Teacher Demonstration"
       },
       "seeding_key": {
@@ -2250,6 +2280,7 @@
       "key": "c1a25ca0-440c-4705-8046-b330543c1ad5",
       "position": 2,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: The Collector” slide",
         "progression_name": "Video: The Collector"
       },
       "seeding_key": {
@@ -2261,6 +2292,7 @@
       "key": "f3bfbaeb-3f72-4eba-8d4f-1ae2fe593f4d",
       "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 2-3: Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2272,6 +2304,7 @@
       "key": "f8064942-3ee5-4944-b822-b2f703e1dba8",
       "position": 4,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: Using the Repeat Block” slide",
         "progression_name": "Video: Using the Repeat Block"
       },
       "seeding_key": {
@@ -2283,6 +2316,7 @@
       "key": "02a7e8f0-6d17-4fad-82f1-1fd9c8e3e1b2",
       "position": 5,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 5-9: Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2294,6 +2328,7 @@
       "key": "d858a672-ca64-4b8e-ac00-1a15661f6c7e",
       "position": 6,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 10: Challenge” slide",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -2305,6 +2340,7 @@
       "key": "e8466175-fa57-41eb-9098-bfb4e4245167",
       "position": 7,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 11-13: Practice” slide",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2400,6 +2436,7 @@
       "key": "7badb4ac-13dd-4cfb-85d6-652a2223ec59",
       "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: The Artist in Code Studio” slide",
         "progression_name": "Video: The Artist in Code Studio"
       },
       "seeding_key": {
@@ -2411,6 +2448,7 @@
       "key": "15bb2bc6-691d-4811-8b3a-262b079c3d66",
       "position": 4,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2: Skill Building” slide\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2422,6 +2460,7 @@
       "key": "2412a5ef-c549-4cb8-a8f2-d51d086f48f1",
       "position": 5,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: Repeat Blocks with the Artist” slide",
         "progression_name": "Video: Repeat Blocks with the Artist"
       },
       "seeding_key": {
@@ -2433,6 +2472,7 @@
       "key": "d12fcc5a-ec4f-45c2-9911-d7ac414a41a2",
       "position": 6,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 4-8: Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2444,6 +2484,7 @@
       "key": "7b748d0d-5f6e-42d6-9863-8a4310c4eeb8",
       "position": 7,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9: Challenge” slide",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -2455,6 +2496,7 @@
       "key": "eee8d548-5d29-404c-819d-97c055476fa0",
       "position": 8,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 10-11: Skill Building” slide",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2466,6 +2508,7 @@
       "key": "004e622d-7b6e-4ea4-8b3a-84e6804121ce",
       "position": 9,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 12: Free Play” slide",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -2508,36 +2551,41 @@
       }
     },
     {
-      "key": "eb87343f-ad83-489c-800f-12e8a2df90b9",
+      "key": "1d4ec210-3c97-4216-83b9-97532d9c26fa",
       "position": 1,
       "properties": {
-        "description": "**Discuss**: Ask students if they have ever played a game on a smartphone. If you have a smartphone of your own, show a few examples, or show screenshots of smartphone games on the web. \r\n\r\n**Discuss**: Ask students what else they can do on a smartphone. \r\n\r\nExamples to add to students' responses. Provide screenshots or live examples if available: \r\n\r\n- search the web for information\r\n- do math with a calculator\r\n- talk to friends and family\r\n- listen to music\r\n- watch videos\r\n- get directions using a map\r\n\r\n**Say**: \r\n\r\n- You might notice that many of the things you can do on a smartphone you can also do on a computer. This is because smartphones are actually computers, just smaller than those we use in computer science class. \r\n- Smartphone programs are usually called \"apps\". Apps allow us to do all the things we just mentioned, along with many others.\r\n- Smartphones are small and easy to take with us wherever we go, making it convenient to do things that would be difficult otherwise. \r\n\r\n**Discuss**: Ask students if they have ever gotten frustrated while using an app. For example, have they ever played a game that was too hard, or the buttons didn't work, or other problems prevented them from having fun? Have they ever tried going to a website and couldn't because it was too hard to figure out how? Allow students to present an anecdote or two of their own about apps that caused them problems.",
-        "name": "What's an app?\r"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n",
+        "duration": "1",
+        "name": "Vocabulary"
       },
       "seeding_key": {
-        "activity_section.key": "eb87343f-ad83-489c-800f-12e8a2df90b9",
+        "activity_section.key": "1d4ec210-3c97-4216-83b9-97532d9c26fa",
         "lesson_activity.key": "09f1f11e-b8c0-405e-a15a-73b15a6884cc"
       }
     },
     {
-      "key": "9f3cfea8-eaac-49c4-aecb-ca65b7a35f44",
+      "key": "34b1bb4b-873b-47a3-b0db-55323b4edbed",
       "position": 2,
       "properties": {
-        "remarks": true
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Question of the Day” slide\n\n**Say:** _What was life like before and after the invention of different types of computers?_ We will revisit this question at the end of the lesson. \n",
+        "duration": "1",
+        "name": "Question of the Day"
       },
       "seeding_key": {
-        "activity_section.key": "9f3cfea8-eaac-49c4-aecb-ca65b7a35f44",
+        "activity_section.key": "34b1bb4b-873b-47a3-b0db-55323b4edbed",
         "lesson_activity.key": "09f1f11e-b8c0-405e-a15a-73b15a6884cc"
       }
     },
     {
-      "key": "8c8df02c-d513-4f43-9cce-0f314031c312",
+      "key": "66991923-7918-4981-aae7-34ec629875e4",
       "position": 3,
       "properties": {
-        "description": "- Apps are made for people to use, just as food is made for people to eat. \r\n- So, just like cooking, it’s important to know what people want when making an app. \r\n- An app that is made with no one in mind is probably going to have lots of problems!\r\n\r\nRemark that there are many questions we can ask when suggesting or making an app for someone. Ideally, we want to ask questions that can help us \"walk in a user's shoes\": \r\n\r\n- What do they want to do? \r\n- What do they like? \r\n- What is their personality? \r\n- What kind of computer do they have?\r\n\r\n**Transition:** Tell students that there are a few code.org friends who are struggling to find the apps that are \"just right\" for them. Ask if they are ready to put their expert skills to use and help their friends."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Fill-in-the-blank” slide\n \n**Say:** Look at the two pictures on the top of the screen. Which of the three computing technologies at the bottom would come next in the timeline. Fill in the blank: a self-driving car, a robot dog, or a laptop? Explain your answer. \n\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Think about it” slide\n\n**Say:** These pictures in the timeline represent different forms of transportation. People used to travel by horse and carriage before the invention of the car. Now people mostly travel in cars. Did you know some car companies just invented a car that can drive itself? It’s called a self-driving car or autonomous vehicle.\n\n**Discuss:** What problem did each of these inventions solve?\n\n**Discussion Goal:** Students should understand that each of these images represents a technological advancement in travel. As our technology advances, we are able to create more efficient means of transportation. The horse and carriage replaced walking or traveling on horseback and being exposed to the elements. Cars replaced having to rely on animals for transportation. Self-driving cars replace the need for a human driver with the goal to be safer than human-driven cars.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Fill-in-the-blank” slide\n\n**Say:** Look at the two pictures on the top of the screen and see if you can figure out which of the 3 apps at the bottom would come next. Would it make sense to fill in the blank with a texting app, a maps app, or a music app?\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Think about it” slide\n\n**Discuss:** What can a music app do that a radio or piano can't do? Why might someone choose to play music on a piano and not a music app?\n\n**Discussion Goal:** Students should understand that a music app represents an advancement in computing technology. We now have the ability to play any song we want on demand from our phone or computer. A radio can only play stations that are currently broadcasting. And a piano can only play piano music (and only if the person knows how to play).\n\nSomeone might choose to play music from a piano when they want to play music themselves or for a live audience. They also might prefer the sound of piano music or wish to learn a new instrument.\n\n",
+        "duration": "8",
+        "name": "Fill in the Blank"
       },
       "seeding_key": {
-        "activity_section.key": "8c8df02c-d513-4f43-9cce-0f314031c312",
+        "activity_section.key": "66991923-7918-4981-aae7-34ec629875e4",
         "lesson_activity.key": "09f1f11e-b8c0-405e-a15a-73b15a6884cc"
       }
     },
@@ -2553,38 +2601,54 @@
       }
     },
     {
-      "key": "37d97cd2-d792-4f94-b379-f892cd6a6619",
+      "key": "26b9b7fe-0212-4602-a162-55bcfbc3c6f2",
       "position": 2,
       "properties": {
-        "description": "**Display**: Display each scenario from the ***Slide Deck**. While displaying a scenario image, read its accompanying script to the class (see below, or the notes beneath each slide in the deck). After each scenario, ask students to vote on which app they would choose for their friend, then discuss their reasons why. \n\n\n\n[slides]\n\n#### The Right App Scenarios\n\n##### Scenario 1: Daisy the Dragon\n\n**Slide 1:** Help! Daisy the Dragon wants to play with her penguin classmates. However, when Daisy talks, her hot breath warms up anyone she is near, and penguins don’t enjoy that AT ALL. So Daisy wants an app that can help her with this problem. \n\n**Slide 2:** Which is the right app for Daisy?\n\n* *Dance Master*: an app that teaches you cool dance moves.\n* *Am I Too Close?!*: an app that shouts “too close!” if you are too close to someone.\n\n**Slide 3:** Daisy decides to use “Am I Too Close?!”, which makes it easier for her to play with her penguin friends! When they get too close, the app warns her with a friendly shout, “Too close!” Daisy and the penguins are happy! “Am I Too Close?!” is the right app for Daisy!\n\n---\n\n##### Scenario 2: Sam the Bat\n\n**Slide 4:** Help! Sam the Bat wants to listen to his favorite music on his phone while he flies through the night sky. He’s considering two different music apps, but he doesn’t know which one is best for him. As a bat, Sam has poor eyesight but excellent hearing. He also happens to sing very well!\n\n**Slide 5:** Which is the right app for Sam? \n\n* *Eyes ‘n Ears*: a music app that has a lot of tiny buttons.\n* *Sing ‘n Play*: a music app that lets you press a BIG green button to record your voice. You sing a part of any song you want to hear, and it’ll play it for you.\n\n**Slide 6:** Sam decides to use “Sing ‘n Play”. He simply presses the BIG green button, sings the first part of a song he likes, then the app plays the entire song for him! It’s that easy! And that’s why “Sing ‘n Play” is the right app for Sam!\n\n---\n\n##### Scenario 3: Codella the Witch\n\n**Slide 7:** Help! Codella the Witch is a serious gamer, and she’s looking for a new game to play. Codella has many different kinds of computers, including a desktop, a laptop, a tablet, and a smartphone. Her favorite games are those she can play on all of her computers, including her smartphone.\n\n**Slide 8:** Which is the right app for Codella? \n\n* *Sort Knight*: a game where you play as a knight who travels around sorting everything. Also has cool dance moves. You can play it on many different kinds of computers!\n* *Mobo-Robo*: a game that lets you build cool robots and make them do whatever you want. You can only play it on smartphones and tablets, though.\n\n**Slide 9:** Codella decides to play “Sort Knight”. At first she’s not sure if she’ll like it (she doesn’t really like sorting things), but she loves that she can play it on any of her computers, and that’s really important to her as a serious gamer. The more Codella plays “Sort Knight”, the more she loves it. “Sort Knight” is the right app for her!\n\n[/slides]",
-        "name": "\"The Right App\" Scenarios (15 min)\r"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “What’s an app?” slide\n\n**Discuss:** Which apps do you recognize? What do people use these apps for?\n\n**Discussion Goal:** Students should be able to identify some of the following apps: Calendar, Weather, Maps, Photos, Clock, YouTube, Safari, Camera, Calculator, Messages, Music, FaceTime/video calls.\n\nHave students choose one app to explain how it works or when people might use it. For example, people would use a calendar app to keep track of important events, such as going on a trip or meeting up with a friend. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Different examples of apps” slide\n\n**Say:** Here are some more examples of apps that you might recognize. It will be important to know how these apps work for the first station. Are there any apps that you have a question about?\n\n**Do this:** Answer any questions students might have about apps before moving on.\n",
+        "duration": "5",
+        "name": "What is an App? "
       },
       "seeding_key": {
-        "activity_section.key": "37d97cd2-d792-4f94-b379-f892cd6a6619",
+        "activity_section.key": "26b9b7fe-0212-4602-a162-55bcfbc3c6f2",
         "lesson_activity.key": "89ea6cf6-7b91-4853-afe6-a237e3d509ff"
       }
     },
     {
-      "key": "bf22cad1-820a-4749-88bd-be73ba7975a0",
+      "key": "1c54fbc2-9d69-473f-a143-40494539141f",
       "position": 3,
       "properties": {
-        "description": "The final scenario allows students to sketch their own app design. \n\n[slides]\n\n#### The Right App Design\n\n##### Scenario 4: Anton the Alien\n\n**Slide 10:** Help! Anton the Alien has crash-landed on Earth and is waiting for his fellow aliens to come rescue him. Until then, he has nothing to do, so he heads to a local library to find a book to read (Anton LOVES reading books). Unfortunately, all the books at the library are written in Earthling languages like English, Chinese, Spanish, and many others. So Anton is out of luck! Or is he?\n\n**Slide 11:** As an alien, Anton is very good with technology! He immediately opens his super-powered smartphone to look for an app that can help him solve his problem at the library, but he can’t find anything he likes! So let’s each design our own app for Anton! \n\n[/slides]\n\n**Distribute**: Pass out crayons/pencils/etc to each student as they open their reflection journals. In their journals, students design the home screen of the app they believe best suits Anton’s needs. They can refer to the previous activity for inspiration.  \n\n**Share**: After designing, students share their app design with a neighbor, or if there is time, some students can share with the whole class. Each student should answer how their app design is \"right\" for Anton, given his situation.",
-        "name": "App Design Activity (20 min)\r"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Station 1: Matching” slide\n\n**Say:** At Station One, you’ll be playing a matching game. Look at the pictures on the left and figure out what they represent. Then look at the apps on the right and find the app that has replaced the activity on the left.\n\n**[Optional] Do This:** In the teacher resources section, there is a set of matching cards with words instead of images. If students are older and would like more practice reading, use the word matching cards instead.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Station 2: Sorting” slide\n\n**Say:** At Station Two, you’ll be sorting the images on the right into one of two categories: Computer or Not a computer. Make sure to look at the definition of computer at the bottom of the screen.\n\n**Do This:** Do an example as a class by asking students to classify one of the images on the right. Then drag it under the corresponding category on the left. \n\n**Discussion Goal:** Some items might be easily sorted, whereas others like the calculator might inspire some discussion among students.\n\n**Do This:** If students have extra time at this station, encourage them to play a game of charades where they have to act out one of the images and have their classmates guess what they’re acting out.\n",
+        "duration": "10",
+        "name": "Station Activities "
       },
       "seeding_key": {
-        "activity_section.key": "bf22cad1-820a-4749-88bd-be73ba7975a0",
+        "activity_section.key": "1c54fbc2-9d69-473f-a143-40494539141f",
         "lesson_activity.key": "89ea6cf6-7b91-4853-afe6-a237e3d509ff"
       }
     },
     {
-      "key": "aa2c9883-2a51-40c2-8a31-bec7b26d3ef2",
+      "key": "fd21eec3-989f-4000-89eb-e4f8cad78446",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Choose a character and design their app” slide\n\n**Say:** The final activity will be done in your student guide. Choose one of the following characters and design an app for them. Here are the characters: \n- **Adventurous Hedgehog** wants a Travel App to keep track of all the countries they visit\n- **Peaceful Turtle** wants a Yoga App to learn new yoga poses\n- **Reader Rabbit** wants a Book App to choose a new book to read \n- **Daydreamer Fox** wants a Dream App with a place to write down dreams\n",
+        "duration": "15",
+        "name": "Design an App"
+      },
+      "seeding_key": {
+        "activity_section.key": "fd21eec3-989f-4000-89eb-e4f8cad78446",
+        "lesson_activity.key": "89ea6cf6-7b91-4853-afe6-a237e3d509ff"
+      }
+    },
+    {
+      "key": "e3ca5503-2792-449b-8afa-0f4ec498a810",
       "position": 1,
       "properties": {
-        "description": "**Discuss**: Discuss real-world examples of how apps can help people solve problems.\n\nReiterate the importance of empathizing with users when recommending or designing apps.\n\n**Prompts:**\n\n* Who is this app made for? \n* What does the user like? \n* What problem do they have, or what do they want?\n* Is this \"the right app\" for them? Why or why not?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflection” slide\n\n**Discuss:** Choose one:\nThink about an app you use. What would you use instead if this app didn’t exist?\nWhat type of app or computer technology do you wish existed?\n\n**Discussion goal:** Have students consider what their lives would be like if they didn’t have access to an app (or other computing technology) that they use on a regular basis. Get them to consider how different their life might be. Then have them brainstorm a computing technology or app they wish existed. Encourage them to think of ways that an app could make their life easier.\n",
+        "duration": "5",
         "name": "Reflection"
       },
       "seeding_key": {
-        "activity_section.key": "aa2c9883-2a51-40c2-8a31-bec7b26d3ef2",
+        "activity_section.key": "e3ca5503-2792-449b-8afa-0f4ec498a810",
         "lesson_activity.key": "b480ae70-11f0-479e-bd28-01f3bdd83692"
       }
     },
@@ -2643,7 +2707,7 @@
       "key": "b9da5453-84fd-4933-92ef-c014ac09abe6",
       "position": 2,
       "properties": {
-        "description": "**Discuss**: Prepare students for today's activity by recalling previous work they have done. \n\n- Do you remember helping _Angry Bird_ find the pig?\n\t- In that exercise, you knew in advance exactly where you wanted Red to end up, so you could make a program that took the bird from start to finish without any interruptions.\n\t- In most real programs, we can't do that because we want to have options, depending on what the user needs.\n\t\t- I only want my character to move when my finger is on the screen of my phone. I would need to program the character to only move when I put my finger on the screen of my phone.\n\t\t- Putting my finger on the screen would then become an \"event\" that tells my character to move.\n\n**Say**: _In earlier lessons, we created algorithms that allowed us to control a friend or bird for several steps at a time. It was fun and useful, but what happens when you don’t know everything that you want your friend to do in advance? This is where events come in!_\n\n\n**Directions:**\n\n- Project the ***Controller Image** onto your classroom screen.\n\n ![](https://code.org/curriculum/docs/csf/c1_TheBigEvent1.png)\n\n- Decide with your class what each button does. We suggest:\n\t- Pink Button -> Say “Wooooo!”\n\t- Teal Button -> “Yeah!”\n\t- Purple Dial -> “Boom!”\n- Practice tapping the buttons on the overhead and having your class react.\n- Add some button sequences into the mix and have the students try to keep up with their sounds.\n- Let your class know that every time you push a button, it is an “event” that lets them know what they are expected to do next.\n- Get the class started on a planned task before interrupting them again with the buttons. We suggest:\n\t- Counting to 10\n\t- Singing “Old MacDonald”\n- Once their plan is underway, interject button presses sporadically.\n- Continue the blend until they understand the difference between actions that are guided by a plan and those that are event driven."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: The Big Event” slide\n\n**Discuss**: Prepare students for today's activity by recalling previous work they have done. \n\n- Do you remember helping _Angry Bird_ find the pig?\n\t- In that exercise, you knew in advance exactly where you wanted Red to end up, so you could make a program that took the bird from start to finish without any interruptions.\n\t- In most real programs, we can't do that because we want to have options, depending on what the user needs.\n\t\t- I only want my character to move when my finger is on the screen of my phone. I would need to program the character to only move when I put my finger on the screen of my phone.\n\t\t- Putting my finger on the screen would then become an \"event\" that tells my character to move.\n\n**Say**: _In earlier lessons, we created algorithms that allowed us to control a friend or bird for several steps at a time. It was fun and useful, but what happens when you don’t know everything that you want your friend to do in advance? This is where events come in!_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each set of actions down into smaller steps.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Project the ***Controller Image** onto your classroom screen.\n\n ![](https://code.org/curriculum/docs/csf/c1_TheBigEvent1.png)\n\n**Directions:**\n- Decide with your class what each button does. We suggest:\n\t- Pink Button -> Say “Wooooo!”\n\t- Teal Button -> “Yeah!”\n\t- Purple Dial -> “Boom!”\n- Practice tapping the buttons on the overhead and having your class react.\n- Add some button sequences into the mix and have the students try to keep up with their sounds.\n- Let your class know that every time you push a button, it is an “event” that lets them know what they are expected to do next.\n- Have students practice working backwards. Give them 3-4 sounds and ask what buttons they would need to press to get the sounds to play in that order. For example:\n\t- What buttons would you need to press to get \"Boom! Boom! Yeah!\"?\n- Get the class started on a planned task before interrupting them again with the buttons. We suggest:\n\t- Counting to 10\n\t- Singing “Old MacDonald”\n- Once their plan is underway, interject button presses sporadically.\n- Continue the blend until they understand the difference between actions that are guided by a plan and those that are event driven.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "b9da5453-84fd-4933-92ef-c014ac09abe6",
@@ -2773,6 +2837,7 @@
       "key": "5044af9f-1cfa-4112-99e3-7509cca2fe5c",
       "position": 2,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: Introduction to Play Lab” slide",
         "progression_name": "Video: Introduction to Play Lab"
       },
       "seeding_key": {
@@ -2784,6 +2849,7 @@
       "key": "56c1c666-8fff-433a-bf3a-4b9c51924b7b",
       "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2: Free Play” slide\n",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -2795,6 +2861,7 @@
       "key": "abd754ea-74c4-43cd-9405-46bb05c665d1",
       "position": 4,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 3-8: Mini-project” slide",
         "progression_name": "Mini-Project: Royal Battle"
       },
       "seeding_key": {
@@ -2806,6 +2873,7 @@
       "key": "6787f189-ee47-4005-b0dc-31183247c933",
       "position": 5,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9: Free Play” slide\n",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -2814,8 +2882,19 @@
       }
     },
     {
-      "key": "25b558e7-d5a6-4863-98a9-ae495fabbc4b",
+      "key": "da9285f5-7b01-49eb-b25f-ba0eda9bb774",
       "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Give credit!” slide\n\n**Say:** Sometimes when we create our own projects we find inspiration from other people’s projects. \n\nIf you have gotten permission to remix a project, make sure to give credit to the original coder.\n\n_**If you remix a Code.org project:**_\n 1. Add a comment block that explains where you remixed from.\n 2. You might also keep the word “Remix” in the title of your project to tell others that this project originally came from someone else.\n\n_**If you want to remix a friend’s project:**_\n\nMake sure you get their permission first. Once you get permission, follow the steps above to give them credit.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “How do I remix a project?” slide\n\n1. Click **Run**\n2. When you see the **Finish** button click on it\n3. Click **Copy link to project**\n4. Open the new link, click **How It Works**\n5. Click **Remix**\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "da9285f5-7b01-49eb-b25f-ba0eda9bb774",
+        "lesson_activity.key": "1a4e4a9a-2793-4c40-8f9d-08f1083ebe0a"
+      }
+    },
+    {
+      "key": "25b558e7-d5a6-4863-98a9-ae495fabbc4b",
+      "position": 7,
       "properties": {
         "progression_name": "Lesson Extras"
       },
@@ -6411,8 +6490,34 @@
       }
     },
     {
+      "name": "[KEY] The Right App - Student Guide",
+      "url": "https://docs.google.com/document/d/1qmd66rx4ynS6r-NFC1x6dY2pCGfJ7Q_gAgHrf6VUQ6A/template/preview",
+      "key": "_key_the_right_app_-_student_guide",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/document/d/1qmd66rx4ynS6r-NFC1x6dY2pCGfJ7Q_gAgHrf6VUQ6A/export/pdf",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_the_right_app_-_student_guide"
+      }
+    },
+    {
+      "name": "[Optional] The Right App - Stations Activities - Words",
+      "url": "https://docs.google.com/document/d/1zAV04r0zi5JTH2aD98MjwVe_m2J0K6CIr7MrMNTOV7Q/template/preview",
+      "key": "_optional_the_right_app_-_stations_activities_-_words",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/document/d/1zAV04r0zi5JTH2aD98MjwVe_m2J0K6CIr7MrMNTOV7Q/export/pdf",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "_optional_the_right_app_-_stations_activities_-_words"
+      }
+    },
+    {
       "name": "All Resources",
-      "url": "/s/courseb-2023/resources",
+      "url": "/s/courseb-2024/resources",
       "key": "all_resources",
       "properties": {
         "is_rollup": true
@@ -6423,7 +6528,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/courseb-2023/standards",
+      "url": "/s/courseb-2024/standards",
       "key": "all_standards",
       "properties": {
         "is_rollup": true
@@ -6434,7 +6539,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/courseb-2023/vocab",
+      "url": "/s/courseb-2024/vocab",
       "key": "all_vocabulary",
       "properties": {
         "is_rollup": true
@@ -6916,15 +7021,29 @@
       }
     },
     {
-      "name": "The Right App Scenarios",
-      "url": "https://docs.google.com/presentation/d/1WzO71WwSTbn2XhkWjG3tvD7vnQbsCSb58rhSBpurQjw/edit#slide=id.g45fb8e6318_0_0",
-      "key": "the_right_app_scenarios",
+      "name": "The Right App - Stations Activities",
+      "url": "https://docs.google.com/document/d/1HyVecgHbM1Q9QS07JHl9A5CVsUu_K5tuI7IFSJ-fopA/template/preview",
+      "key": "the_right_app_-_stations_activities",
       "properties": {
-        "audience": "Student",
-        "type": "Slide Deck"
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/document/d/1HyVecgHbM1Q9QS07JHl9A5CVsUu_K5tuI7IFSJ-fopA/export/pdf",
+        "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "the_right_app_scenarios"
+        "resource.key": "the_right_app_-_stations_activities"
+      }
+    },
+    {
+      "name": "The Right App - Student Guide",
+      "url": "https://docs.google.com/document/d/17fqp-Mt--NIgZq7HXGVNxF8np_frdrCNID3bqkNaiWk/template/preview",
+      "key": "the_right_app_-_student_guide",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://docs.google.com/document/d/17fqp-Mt--NIgZq7HXGVNxF8np_frdrCNID3bqkNaiWk/export/pdf",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "the_right_app_-_student_guide"
       }
     },
     {
@@ -7344,13 +7463,31 @@
     {
       "seeding_key": {
         "lesson.key": "The Right App",
+        "resource.key": "_key_the_right_app_-_student_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Right App",
+        "resource.key": "_optional_the_right_app_-_stations_activities_-_words"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Right App",
         "resource.key": "csf_course_b_lesson_slides"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "The Right App",
-        "resource.key": "the_right_app_scenarios"
+        "resource.key": "the_right_app_-_stations_activities"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Right App",
+        "resource.key": "the_right_app_-_student_guide"
       }
     }
   ],
@@ -7443,6 +7580,16 @@
       }
     },
     {
+      "key": "app",
+      "word": "App",
+      "definition": "An application that a person downloads to a phone or tablet.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "app"
+      }
+    },
+    {
       "key": "bug",
       "word": "Bug",
       "definition": "Part of a program that does not work correctly.",
@@ -7460,6 +7607,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "click"
+      }
+    },
+    {
+      "key": "computer",
+      "word": "Computer",
+      "definition": "An electronic device that can input, output, store, and process information",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "computer"
       }
     },
     {
@@ -7567,6 +7724,12 @@
     {
       "seeding_key": {
         "lesson.key": "Drawing Gardens with Loops",
+        "vocabulary.key": "debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Drawing Gardens with Loops",
         "vocabulary.key": "loop"
       }
     },
@@ -7591,6 +7754,12 @@
     {
       "seeding_key": {
         "lesson.key": "Loops with Harvester",
+        "vocabulary.key": "debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Harvester",
         "vocabulary.key": "loop"
       }
     },
@@ -7598,6 +7767,12 @@
       "seeding_key": {
         "lesson.key": "Loops with Harvester",
         "vocabulary.key": "repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Laurel",
+        "vocabulary.key": "debugging"
       }
     },
     {
@@ -7717,7 +7892,25 @@
     {
       "seeding_key": {
         "lesson.key": "The Big Event Jr",
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Big Event Jr",
         "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Right App",
+        "vocabulary.key": "app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Right App",
+        "vocabulary.key": "computer"
       }
     }
   ],
@@ -7746,6 +7939,16 @@
       }
     },
     {
+      "key": "12b900ed-f391-421b-9582-60b8ba3a4831",
+      "properties": {
+        "description": " Compare daily life before and after the invention of certain technologies"
+      },
+      "seeding_key": {
+        "lesson.key": "The Right App",
+        "objective.key": "12b900ed-f391-421b-9582-60b8ba3a4831"
+      }
+    },
+    {
       "key": "19602e0c-00b1-4ecc-ab94-1d67a6cb5488",
       "properties": {
         "description": "Identify the benefits of using a loop structure instead of manual repetition."
@@ -7753,6 +7956,16 @@
       "seeding_key": {
         "lesson.key": "Loops with Harvester",
         "objective.key": "19602e0c-00b1-4ecc-ab94-1d67a6cb5488"
+      }
+    },
+    {
+      "key": "2463f52a-9012-433a-b9ff-e9bcc9e395b4",
+      "properties": {
+        "description": "Give examples of being responsible sharing information online."
+      },
+      "seeding_key": {
+        "lesson.key": "Digital Trails",
+        "objective.key": "2463f52a-9012-433a-b9ff-e9bcc9e395b4"
       }
     },
     {
@@ -7773,6 +7986,26 @@
       "seeding_key": {
         "lesson.key": "Programming with Angry Birds",
         "objective.key": "35afcbd0-e928-4e25-a812-2bf9592acd48"
+      }
+    },
+    {
+      "key": "388de265-234a-4eb3-913b-296738a93304",
+      "properties": {
+        "description": "Identify bugs in an existing program and assess how to correct them."
+      },
+      "seeding_key": {
+        "lesson.key": "Loops with Laurel",
+        "objective.key": "388de265-234a-4eb3-913b-296738a93304"
+      }
+    },
+    {
+      "key": "3b52e99e-fbdf-4d70-a611-7efea2e4ea0c",
+      "properties": {
+        "description": "List several different examples of smartphone apps and computing technologies."
+      },
+      "seeding_key": {
+        "lesson.key": "The Right App",
+        "objective.key": "3b52e99e-fbdf-4d70-a611-7efea2e4ea0c"
       }
     },
     {
@@ -7886,6 +8119,16 @@
       }
     },
     {
+      "key": "6bbfb123-086c-4faf-b8c1-99fa69d1f168",
+      "properties": {
+        "description": "Identify bugs in an existing program and assess how to correct them."
+      },
+      "seeding_key": {
+        "lesson.key": "Loops with Harvester",
+        "objective.key": "6bbfb123-086c-4faf-b8c1-99fa69d1f168"
+      }
+    },
+    {
       "key": "736c7982-4e56-4aeb-8922-24e07ab0bd0a",
       "properties": {
         "description": "Identify actions that correlate to input events."
@@ -7936,13 +8179,13 @@
       }
     },
     {
-      "key": "b937c374-0e28-4975-a553-05ac75a39dc8",
+      "key": "b8f4248a-e962-4132-b417-233fcdf93612",
       "properties": {
-        "description": "Recommend technology to others based on their unique needs. "
+        "description": "Determine a sequence of movements necessary to solve a puzzle."
       },
       "seeding_key": {
-        "lesson.key": "The Right App",
-        "objective.key": "b937c374-0e28-4975-a553-05ac75a39dc8"
+        "lesson.key": "Programming with Harvester",
+        "objective.key": "b8f4248a-e962-4132-b417-233fcdf93612"
       }
     },
     {
@@ -7983,6 +8226,16 @@
       "seeding_key": {
         "lesson.key": "Mini-Project: A Royal Battle with Events",
         "objective.key": "ce5a8002-04b9-4592-8c51-deda92626191"
+      }
+    },
+    {
+      "key": "d4dd01b8-c623-4ec1-b71d-74d82b2ed160",
+      "properties": {
+        "description": "Identify how to debug a program so that it will solve a puzzle."
+      },
+      "seeding_key": {
+        "lesson.key": "Drawing Gardens with Loops",
+        "objective.key": "d4dd01b8-c623-4ec1-b71d-74d82b2ed160"
       }
     },
     {
@@ -8036,26 +8289,6 @@
       }
     },
     {
-      "key": "e83d1b9c-cfb2-445e-af65-419ef88994ca",
-      "properties": {
-        "description": "List several different examples of smartphone apps."
-      },
-      "seeding_key": {
-        "lesson.key": "The Right App",
-        "objective.key": "e83d1b9c-cfb2-445e-af65-419ef88994ca"
-      }
-    },
-    {
-      "key": "ee603e85-7a68-4fca-bfca-71dae9041faf",
-      "properties": {
-        "description": "Apply empathy and creativity to design technology for others. "
-      },
-      "seeding_key": {
-        "lesson.key": "The Right App",
-        "objective.key": "ee603e85-7a68-4fca-bfca-71dae9041faf"
-      }
-    },
-    {
       "key": "fc270122-07f7-46b6-abcb-a4f7a880e082",
       "properties": {
         "description": "Explore what information is OK to be shared online."
@@ -8077,13 +8310,6 @@
     }
   ],
   "lessons_standards": [
-    {
-      "seeding_key": {
-        "lesson.key": "Digital Trails",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-IC-16"
-      }
-    },
     {
       "seeding_key": {
         "lesson.key": "Digital Trails",
@@ -8138,6 +8364,13 @@
         "lesson.key": "End of Course Project",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Getting Loopy",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-08"
       }
     },
     {

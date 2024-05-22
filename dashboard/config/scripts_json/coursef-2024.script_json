@@ -18,8 +18,8 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2024-04-09 22:16:38 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2024-05-10 19:11:21 UTC",
+    "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -1954,8 +1954,19 @@
       }
     },
     {
-      "key": "31a68717-2e94-4313-8b16-0a0c6a4326f6",
+      "key": "1cd1c81e-3621-4e16-ab71-232737da8f4a",
       "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Give credit!” slide\n\n**Say:** Sometimes when we create our own projects we find inspiration from other people’s projects. \n\nIf you have gotten permission to remix a project, make sure to give credit to the original coder.\n\n_**If you remix a Code.org project:**_\n 1. Add a comment block that explains where you remixed from.\n 2. You might also keep the word “Remix” in the title of your project to tell others that this project originally came from someone else.\n\n_**If you want to remix a friend’s project:**_\n\nMake sure you get their permission first. Once you get permission, follow the steps above to give them credit.\n\nWhen you don’t have direct permission to remix someone’s project or upload their images into your project, look for publicly available materials instead.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 6 - Project Feedback” slide\n\n**Do This:** Have students meet in pairs to share their Virtual Pet project. Guide them to ask the questions on the slide and then reflect on modifications they will make based on the feedback they receive. "
+      },
+      "seeding_key": {
+        "activity_section.key": "1cd1c81e-3621-4e16-ab71-232737da8f4a",
+        "lesson_activity.key": "ea6e4559-19a0-466e-b443-60d67f31d056"
+      }
+    },
+    {
+      "key": "31a68717-2e94-4313-8b16-0a0c6a4326f6",
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 7 - Free Play” slide\n",
         "progression_name": "Free Play"
@@ -2592,7 +2603,7 @@
       "key": "b6738cd7-6279-4c8c-a685-59150ab74f40",
       "position": 13,
       "properties": {
-        "description": "###Mini-Project (20 mins)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 4 - On Code Studio…” slide \n\nFor each of the project choices, there are two sub-levels. To begin, pick one of the levels marked \"Part 1\". Once you finish that level, return here and select \"Part 2\" of the same project. \n\nThe first level for each choice will provide students with feedback as they put the basic components of their project together. The second level is a \"free play\" which is intended to allow students to make any changes to their code that they like.\n\nEquipped with their completed planning guides, students are now ready to bring their projects to life. Transition students to their computers and ask them to start “Part 1” of their chosen project.",
+        "description": "###Mini-Project (20 mins)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 4 - On Code Studio…” slide \n\nFor each of the project choices, there are two sub-levels. To begin, pick one of the levels marked \"Part 1\". Once you finish that level, return here and select \"Part 2\" of the same project. \n\nThe first level for each choice will provide students with feedback as they put the basic components of their project together. The second level is a \"free play\" which is intended to allow students to make any changes to their code that they like.\n\nEquipped with their completed planning guides, students are now ready to bring their projects to life. Transition students to their computers and ask them to start “Part 1” of their chosen project.\n\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Give credit!” slide\n\n**Say:** Sometimes when we create our own projects we find inspiration from other people’s projects. \n\nIf you have gotten permission to remix a project, make sure to give credit to the original coder.\n\n_**If you remix a Code.org project:**_\n 1. Add a comment block that explains where you remixed from.\n 2. You might also keep the word “Remix” in the title of your project to tell others that this project originally came from someone else.\n\n_**If you want to remix a friend’s project:**_\n\nMake sure you get their permission first. Once you get permission, follow the steps above to give them credit.\n\nWhen you don’t have direct permission to remix someone’s project or upload their images into your project, look for publicly available materials instead.\n",
         "progression_name": "Mini-Project: User Input Programs",
         "tips": [
           {
@@ -4026,7 +4037,7 @@
       "key": "49dbf274-3577-4744-8e62-db9370e4154f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Day 3: Try” slide\n\n**Goal:** Students will use this day to build an initial version of their project.\n\nEquipped with their ***Final Project Design Worksheet**, students should head to the computers to start bringing their projects to life. \n\nThis process will come complete with plenty of trial and error. Projects are likely to become truncated versions of the original scope (if not morphed altogether).  Remind students that this kind of compromise is common in software design, but they need to be sure to document the reasons for the changes in their product.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Handout: Try” slide\n\nRemind the class forget to fill out the **Try** section of their ***Final Project Guide**  as they go.  It might be helpful to suggest that pairs/groups take a worksheet break to begin discussing these questions about halfway through their lab time.  Alternatively, the navigator can keep their eyes open for pertinent answers while the driver codes.  \n\nBe sure that each team member has their own ***Final Project Design Worksheet**, as there are questions about each student’s own individual thoughts and behaviors that need to get captured along the way.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Day 3: Try” slide\n\n**Goal:** Students will use this day to build an initial version of their project.\n\nEquipped with their ***Final Project Design Worksheet**, students should head to the computers to start bringing their projects to life. \n\nThis process will come complete with plenty of trial and error. Projects are likely to become truncated versions of the original scope (if not morphed altogether).  Remind students that this kind of compromise is common in software design, but they need to be sure to document the reasons for the changes in their product.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Give credit!” slide\n\n**Say:** Sometimes when we create our own projects we find inspiration from other people’s projects. \n\nIf you have gotten permission to remix a project, make sure to give credit to the original coder.\n\n_**If you remix a Code.org project:**_\n 1. Add a comment block that explains where you remixed from.\n 2. You might also keep the word “Remix” in the title of your project to tell others that this project originally came from someone else.\n\n_**If you want to remix a friend’s project:**_\n\nMake sure you get their permission first. Once you get permission, follow the steps above to give them credit.\n\nWhen you don’t have direct permission to remix someone’s project or upload their images into your project, look for publicly available materials instead.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Handout: Try” slide\n\nRemind the class forget to fill out the **Try** section of their ***Final Project Guide**  as they go.  It might be helpful to suggest that pairs/groups take a worksheet break to begin discussing these questions about halfway through their lab time.  Alternatively, the navigator can keep their eyes open for pertinent answers while the driver codes.  \n\nBe sure that each team member has their own ***Final Project Design Worksheet**, as there are questions about each student’s own individual thoughts and behaviors that need to get captured along the way.",
         "name": "Try\r"
       },
       "seeding_key": {
@@ -7901,7 +7912,7 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/coursef-2023/resources",
+      "url": "/s/coursef-2024/resources",
       "key": "all_resources",
       "properties": {
         "is_rollup": true
@@ -7912,7 +7923,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/coursef-2023/standards",
+      "url": "/s/coursef-2024/standards",
       "key": "all_standards",
       "properties": {
         "is_rollup": true
@@ -7923,7 +7934,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/coursef-2023/vocab",
+      "url": "/s/coursef-2024/vocab",
       "key": "all_vocabulary",
       "properties": {
         "is_rollup": true
@@ -9541,6 +9552,13 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Blank Space Stories",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Counting with Variables",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-09"
@@ -9551,6 +9569,13 @@
         "lesson.key": "Counting with Variables",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Counting with Variables",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
       }
     },
     {
@@ -9662,13 +9687,6 @@
       "seeding_key": {
         "lesson.key": "Lots of Sprites",
         "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-08"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lots of Sprites",
-        "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-10"
       }
     },
@@ -9737,6 +9755,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Mini-Project: Collector Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Collector Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Mini-Project: User Input Programs",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-11"
@@ -9789,6 +9821,27 @@
         "lesson.key": "Mini-Project: Virtual Pet",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Outbreak",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Outbreak",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Outbreak",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
       }
     },
     {

@@ -106,7 +106,6 @@ class FieldPattern extends GoogleBlockly.Field {
       <PatternPanel
         library={this.options.getLibrary()}
         initValue={this.getValue()}
-        bpm={this.options.getBPM()}
         onChange={value => {
           this.setValue(value);
         }}

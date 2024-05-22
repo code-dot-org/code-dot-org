@@ -406,7 +406,7 @@ export function showUnusedBlockQtip(targetElement) {
 /**
  * @param {string} key
  * @param {string} defaultValue
- * @return {string}
+ * @return {string} returns the value of the key in localStorage, null if not set or the defaultValue if there is an error
  */
 export function tryGetLocalStorage(key, defaultValue) {
   if (defaultValue === undefined) {

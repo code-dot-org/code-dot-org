@@ -11,7 +11,7 @@ import SignInInstructions from '@cdo/apps/templates/teacherDashboard/SignInInstr
 import {sectionProviderName} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import color from '@cdo/apps/util/color';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import DownloadParentLetter from './DownloadParentLetter';
@@ -38,6 +38,7 @@ class ManageStudentsLoginInfo extends Component {
 
     return (
       <div style={styles.explanation}>
+        <p>{i18n.setUpClass_childAccountPolicyNotice()}</p>
         {loginType !== SectionLoginType.lti_v1 && (
           <h2 style={styles.heading}>{i18n.setUpClass()}</h2>
         )}

@@ -1,4 +1,4 @@
-import {shallow, mount} from 'enzyme';
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon';
 
@@ -12,8 +12,8 @@ import {
 } from '@cdo/apps/templates/progress/BubbleFactory';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import color from '@cdo/apps/util/color';
-import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import * as utils from '@cdo/apps/utils';
+import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';
 
 import {assert, expect} from '../../../util/reconfiguredChai';
 

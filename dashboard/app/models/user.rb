@@ -70,6 +70,7 @@
 #
 
 require 'digest/md5'
+require 'state_abbr'
 require 'cdo/aws/metrics'
 require 'cdo/shared_constants'
 require_relative '../../legacy/middleware/helpers/user_helpers'
@@ -110,6 +111,7 @@ class User < ApplicationRecord
   #   ai_rubrics_disabled: Turns off AI assessment for a User.
   #   ai_rubrics_tour_seen: Tracks whether user has viewed the AI rubric product tour.
   #   lti_roster_sync_enabled: Enable/disable LTI roster syncing for a User.
+  #   user_provided_us_state: Indicates if the us_state was provided by the user as opposed to being interpolated.
   serialized_attrs %w(
     ops_first_name
     ops_last_name
@@ -153,6 +155,11 @@ class User < ApplicationRecord
     progress_table_v2_closed_beta
     lti_roster_sync_enabled
     ai_tutor_access_denied
+    progress_table_v2_timestamp
+    progress_table_v1_timestamp
+    has_seen_progress_table_v2_invitation
+    date_progress_table_invitation_last_delayed
+    user_provided_us_state
   )
 
   attr_accessor(
@@ -284,6 +291,8 @@ class User < ApplicationRecord
   after_create if: -> {Policies::Lti.lti? self} do
     Services::Lti.create_lti_user_identity(self)
   end
+
+  after_create :verify_teacher!, if: -> {teacher? && Policies::Lti.lti?(self)}
 
   before_destroy :soft_delete_channels
 
@@ -545,7 +554,7 @@ class User < ApplicationRecord
 
   USERNAME_REGEX = /\A#{UserHelpers::USERNAME_ALLOWED_CHARACTERS.source}+\z/i
   validates_length_of :username, within: 5..20, allow_blank: true
-  validates_format_of :username, with: USERNAME_REGEX, allow_blank: true
+  validates_format_of :username, if: :username_changed?, with: USERNAME_REGEX, allow_blank: true
   validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :create, if: -> {errors.blank?}
   validates_uniqueness_of :username, case_sensitive: false, on: :update, if: -> {errors.blank? && username_changed?}
   validates_presence_of :username, if: :username_required?
@@ -1106,6 +1115,9 @@ class User < ApplicationRecord
     self.parent_email = nil
 
     new_attributes = email_preference.nil? ? {} : email_preference
+    if Policies::Lti.lti? self
+      self.lti_roster_sync_enabled = true
+    end
 
     transaction do
       if migrated?
@@ -1492,6 +1504,10 @@ class User < ApplicationRecord
     user_type == TYPE_TEACHER
   end
 
+  def verify_teacher!
+    self.permission = UserPermission::AUTHORIZED_TEACHER
+  end
+
   # This method just checks if a user has the authorized teacher permission
   # if you are hoping to know if someone can access content for verified instructors
   # you should use the verified_instructor? method instead which includes checks for a
@@ -1571,7 +1587,11 @@ class User < ApplicationRecord
 
   def age=(val)
     @age = val
-    val = val.to_i rescue 0 # sometimes we get age: {"Pr" => nil}
+    val = begin
+      val.to_i
+    rescue
+      0 # sometimes we get age: {"Pr" => nil}
+    end
     return unless val > 0
     return unless val < 200
     return if birthday && val == age # don't change birthday if we want to stay the same age
@@ -1923,7 +1943,13 @@ class User < ApplicationRecord
     pl_user_scripts = user_scripts.select {|us| us.script.pl_course?}
     pl_scripts = pl_user_scripts.map(&:script)
 
-    user_levels = UserLevel.where(user: self, script: pl_scripts)
+    levels = pl_scripts.map(&:levels).flatten
+    level_ids = levels.map(&:id)
+
+    # Handle levels-within-levels
+    levels.each {|l| level_ids << l.contained_levels.first&.id unless l.contained_levels.empty?}
+
+    user_levels = UserLevel.where(user: self, script: pl_scripts, level_id: level_ids)
     return [] if user_levels.empty?
     user_levels_by_script = user_levels.group_by(&:script_id)
     percent_completed_by_script = {}
@@ -2705,6 +2731,23 @@ class User < ApplicationRecord
 
   def code_review_groups
     followeds.filter_map(&:code_review_group)
+  end
+
+  # Can be used to identify users in cases where integer IDs may be vulnerable to abuse
+  def uuid
+    id && Digest::UUID.uuid_v5(Dashboard::Application.config.secret_key_base, id.to_s)
+  end
+
+  # @return [String, nil] the user's US state code in the ISO 3166-2:US standard
+  def us_state_code
+    state = student? ? us_state : school_info&.usa? && school_info&.state
+    return if state.blank?
+
+    # Returns `state` if it is a US state code
+    return state.upcase if us_state_abbr?(state, include_dc: true)
+
+    # Returns the code of `state` if it is a US state name
+    get_us_state_abbr_from_name(state, include_dc: true)
   end
 
   private def account_age_in_years

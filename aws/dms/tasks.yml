@@ -48,6 +48,9 @@ cron-pii:
 - dashboard.projects
 - dashboard.foorm_%
 - dashboard.potential_teachers
+- dashboard.learning_goal_ai_evaluations
+- dashboard.learning_goal_teacher_evaluations
+- dashboard.learning_goal_ai_evaluation_feedbacks
 cron:
 - dashboard.experiments
 - dashboard.authored_hint_view_requests

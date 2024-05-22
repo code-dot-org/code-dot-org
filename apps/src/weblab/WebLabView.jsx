@@ -2,15 +2,17 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import StudioAppWrapper from '../templates/StudioAppWrapper';
-import InstructionsWithWorkspace from '../templates/instructions/InstructionsWithWorkspace';
+
+import Meter from '@cdo/apps/templates/Meter';
 import msg from '@cdo/locale';
 import weblabMsg from '@cdo/weblab/locale';
-import PaneHeader, {PaneSection, PaneButton} from '../templates/PaneHeader';
-import CompletionButton from '../templates/CompletionButton';
-import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
+
 import styleConstants from '../styleConstants';
-import Meter from '@cdo/apps/templates/Meter';
+import CompletionButton from '../templates/CompletionButton';
+import InstructionsWithWorkspace from '../templates/instructions/InstructionsWithWorkspace';
+import PaneHeader, {PaneSection, PaneButton} from '../templates/PaneHeader';
+import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
+import StudioAppWrapper from '../templates/StudioAppWrapper';
 
 // Helper for converting bytes to megabytes.
 const bytesToMegabytes = bytes => {

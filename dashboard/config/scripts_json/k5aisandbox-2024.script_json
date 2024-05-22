@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "k5aisandbox",
-    "serialized_at": "2024-04-09 20:08:41 UTC",
+    "serialized_at": "2024-04-16 16:06:08 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -897,6 +897,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Begin_2023_K5CSConcepts_TextPageAI"
+        ],
         "progression": "What is AI?"
       },
       "bonus": false,
@@ -919,15 +922,12 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-CSD-mod5-UnitOverview-AIML_-22_23K5"
-        ],
         "progression": "What is AI?"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-VPL-21-CSD-mod5-UnitOverview-AIML_-22_23K5"
+          "self-paced-pl-ai-101-mod2-intro_03_2024K5"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
@@ -935,7 +935,7 @@
         "activity_section.key": "8d66224c-c660-416d-ba1d-7e0341db21bb"
       },
       "level_keys": [
-        "SP-VPL-21-CSD-mod5-UnitOverview-AIML_-22_23K5"
+        "self-paced-pl-ai-101-mod2-intro_03_2024K5"
       ]
     },
     {
@@ -1094,6 +1094,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-k5-2-behaviors -intro_2024_K5blockAI"
+        ],
         "progression": "Big Ideas + Vocab"
       },
       "bonus": false,
@@ -1116,6 +1119,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Begin_2023_K5CSConcepts1AI"
+        ],
         "progression": "Big Ideas + Vocab"
       },
       "bonus": false,
@@ -1138,6 +1144,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-k5-2-behaviors -intro_2024_K5Intro1"
+        ],
         "progression": "Sorting Data"
       },
       "bonus": false,
@@ -1160,6 +1169,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "k5_ai_pilot_sorting_itemsAI"
+        ],
         "progression": "Sorting Data"
       },
       "bonus": false,
@@ -1182,6 +1194,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Video_Machine_Learning_k5pilotAI"
+        ],
         "progression": "Training AI"
       },
       "bonus": false,
@@ -1204,6 +1219,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_FishVTrash_k5pilotAI"
+        ],
         "progression": "Training AI"
       },
       "bonus": false,
@@ -1226,6 +1244,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_CreaturesVTrashDemo_k5pilotAI"
+        ],
         "progression": "Training AI"
       },
       "bonus": false,
@@ -1248,6 +1269,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_CreaturesVTrash_k5pilotAI"
+        ],
         "progression": "Training AI"
       },
       "bonus": false,
@@ -1270,6 +1294,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Long_k5pilotAI"
+        ],
         "progression": "Training AI"
       },
       "bonus": false,
@@ -1292,6 +1319,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "k5_ai_pilot_sorting_fruit_vegetablesAI"
+        ],
         "progression": "How AI Makes Decisions"
       },
       "bonus": false,
@@ -1314,6 +1344,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dance_ai_customize_effect_-k5pilotAI"
+        ],
         "progression": "How AI Makes Decisions"
       },
       "bonus": false,
@@ -1336,6 +1369,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "k5_ai_plan_your_poster_pilotAI"
+        ],
         "progression": "Using AI Tools in School"
       },
       "bonus": false,
@@ -1794,9 +1830,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-21-CSD-mod5-UnitOverview-AIML_-22_23K5",
+        "level.key": "self-paced-pl-ai-101-mod2-intro_03_2024K5",
         "script_level.level_keys": [
-          "SP-VPL-21-CSD-mod5-UnitOverview-AIML_-22_23K5"
+          "self-paced-pl-ai-101-mod2-intro_03_2024K5"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "",

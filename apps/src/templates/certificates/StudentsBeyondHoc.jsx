@@ -1,13 +1,16 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import i18n from '@cdo/locale';
 import {connect} from 'react-redux';
-import VerticalImageResourceCardRow from '../VerticalImageResourceCardRow';
-import {tutorialTypes} from '../tutorialTypes.js';
-import {cardSets} from './congratsBeyondHocActivityCards';
+
 import {ResponsiveSize} from '@cdo/apps/code-studio/responsiveRedux';
 import CourseBlocksWrapper from '@cdo/apps/templates/studioHomepages/CourseBlocksWrapper';
 import {StudentGradeBandCards} from '@cdo/apps/util/courseBlockCardsConstants';
+import i18n from '@cdo/locale';
+
+import {tutorialTypes} from '../tutorialTypes.js';
+import VerticalImageResourceCardRow from '../VerticalImageResourceCardRow';
+
+import {cardSets} from './congratsBeyondHocActivityCards';
 
 class StudentsBeyondHoc extends Component {
   static propTypes = {

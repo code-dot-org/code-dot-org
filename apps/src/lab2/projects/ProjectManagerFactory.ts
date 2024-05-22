@@ -34,23 +34,32 @@ export default class ProjectManagerFactory {
    * throw an error if the channel request fails.
    * @param projectManagerStorageType The storage type for the project manager.
    * @param levelId The identifier for the level.
+   * @param userId The user ID of the creator.  Can be undefined if the user is looking at their own work.
    * @param scriptId The id of the script. Can be undefined if the level is not in the context of a script.
    * @returns A project manager
    */
   static async getProjectManagerForLevel(
     projectManagerStorageType: ProjectManagerStorageType,
     levelId: number,
+    userId?: string,
     scriptId?: number
-  ): Promise<ProjectManager> {
+  ): Promise<ProjectManager | null> {
     const channelsStore = this.getChannelsStore(projectManagerStorageType);
     let channelId: string | undefined = undefined;
     let reduceChannelUpdates = false;
-    const response = await channelsStore.loadForLevel(levelId, scriptId);
+    const response = await channelsStore.loadForLevel(
+      levelId,
+      scriptId,
+      userId
+    );
     if (response.ok) {
       const responseBody = await response.json();
       if (responseBody && responseBody.channel) {
         channelId = responseBody.channel;
         reduceChannelUpdates = responseBody.reduceChannelUpdates;
+      } else if (responseBody && responseBody.started === false) {
+        // A teacher is attenpting to view a student's work, but the student has not yet started.
+        return null;
       }
     }
     if (!channelId) {

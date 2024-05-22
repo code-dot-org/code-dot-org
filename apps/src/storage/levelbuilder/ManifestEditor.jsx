@@ -1,9 +1,11 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
+
+import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
-import Button from '@cdo/apps/templates/Button';
+
 import LibraryCategory from '../dataBrowser/LibraryCategory';
 
 class ManifestEditor extends React.Component {

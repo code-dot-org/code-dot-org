@@ -1,25 +1,31 @@
+import orderBy from 'lodash/orderBy';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
-import color from '../../util/color';
-import {ImageWithStatus} from '../ImageWithStatus';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
-import wrappedSortable from '../tables/wrapped_sortable';
-import orderBy from 'lodash/orderBy';
-import {personalProjectDataPropType} from './projectConstants';
-import {PROJECT_TYPE_MAP} from './projectTypeMap';
-import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
-import PersonalProjectsTableActionsCell from './PersonalProjectsTableActionsCell';
-import PersonalProjectsNameCell from './PersonalProjectsNameCell';
+
+import {DEPRECATED_PROJECT_TYPES} from '@cdo/apps/constants';
+import {isSignedIn} from '@cdo/apps/templates/currentUserRedux';
 import DeleteProjectDialog from '@cdo/apps/templates/projects/deleteDialog/DeleteProjectDialog';
 import FrozenProjectInfoDialog from '@cdo/apps/templates/projects/frozenProjectInfoDialog/FrozenProjectInfoDialog';
-import {isSignedIn} from '@cdo/apps/templates/currentUserRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import {DEPRECATED_LABS} from '@cdo/apps/constants';
+import i18n from '@cdo/locale';
+
+import color from '../../util/color';
+import {ImageWithStatus} from '../ImageWithStatus';
+import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
+import wrappedSortable from '../tables/wrapped_sortable';
+
+import PersonalProjectsNameCell from './PersonalProjectsNameCell';
+import PersonalProjectsTableActionsCell from './PersonalProjectsTableActionsCell';
+import {personalProjectDataPropType} from './projectConstants';
+import {PROJECT_TYPE_MAP} from './projectTypeMap';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
+const PROJECT_DEFAULT_IMAGE_OVERRIDE = {
+  music: '/shared/images/fill-70x70/courses/logo_music.png',
+};
 
 const THUMBNAIL_SIZE = 65;
 
@@ -189,7 +195,7 @@ class PersonalProjectsTable extends React.Component {
 
     // Filter out projects of deprecated labs, like Calc and Eval.
     const supportedPersonalProjectsList = personalProjectsList.filter(
-      project => !DEPRECATED_LABS.includes(project.type)
+      project => !DEPRECATED_PROJECT_TYPES.includes(project.type)
     );
 
     // Define a sorting transform that can be applied to each column
@@ -305,7 +311,10 @@ export const styles = {
 // Cell formatters.
 const thumbnailFormatter = function (thumbnailUrl, {rowData}) {
   const projectUrl = `/projects/${rowData.type}/${rowData.channel}/edit`;
-  thumbnailUrl = thumbnailUrl || PROJECT_DEFAULT_IMAGE;
+  thumbnailUrl =
+    thumbnailUrl ||
+    PROJECT_DEFAULT_IMAGE_OVERRIDE[rowData.type] ||
+    PROJECT_DEFAULT_IMAGE;
   return (
     <a
       style={tableLayoutStyles.link}
