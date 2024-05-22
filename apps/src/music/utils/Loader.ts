@@ -8,6 +8,10 @@ import MusicLibrary, {
 const AppConfig = require('../appConfig').default;
 import {getBaseAssetUrl} from '../appConfig';
 
+// This value can be modifed each time we know that there is an important new version
+// of the library on S3, to help bypass any caching of an older version.
+const requestVersion = 'launch2024-0';
+
 /**
  * Loads a sound library JSON file.
  *
@@ -29,7 +33,10 @@ export const loadLibrary = async (
     );
   } else {
     const libraryJsonResponse = await HttpClient.fetchJson<LibraryJson>(
-      getBaseAssetUrl() + libraryFilename + '.json',
+      getBaseAssetUrl() +
+        libraryFilename +
+        '.json' +
+        (requestVersion ? `?version=${requestVersion}` : ''),
       {},
       LibraryValidator
     );
