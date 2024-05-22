@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
+import {ChildAccountComplianceStates} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {tableLayoutStyles} from '../tables/tableConstants';
@@ -18,11 +19,11 @@ class AgeGatedTableConsentStatusCell extends Component<Props> {
 
   getConsentStatus = () => {
     switch (this.props.consentStatus) {
-      case 'l':
+      case ChildAccountComplianceStates.LOCKED_OUT:
         return i18n.childAccountPolicy_lockedOut();
-      case 's':
+      case ChildAccountComplianceStates.REQUEST_SENT:
         return i18n.childAccountPolicy_requestSent();
-      case 'p':
+      case ChildAccountComplianceStates.PERMISSION_GRANTED:
         return i18n.childAccountPolicy_permissionGranted();
       default:
         return i18n.childAccountPolicy_notStarted();
