@@ -214,6 +214,19 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     assert_equal ['👁️👄👁️'], JSON.parse(@response.body)
   end
 
+  test "create_table enforces max table_name length" do
+    max_table_name_length = 700
+    not_too_many_bees = 'b' * (max_table_name_length - 1) # 1 less 'b' chars than max
+    post _url(:create_table), params: {table_name: not_too_many_bees}
+    assert_response :success
+
+    too_many_bees = 'b' * (max_table_name_length + 1) # 1 more 'b' char than max
+    post _url(:create_table), params: {table_name: too_many_bees}
+    assert_response :bad_request
+
+    assert_equal 'TABLE_NAME_INVALID', JSON.parse(@response.body)['type']
+  end
+
   test "get_key_values" do
     post _url(:set_key_value), params: {
       key: 'name',

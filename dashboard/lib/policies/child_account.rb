@@ -27,7 +27,7 @@ class Policies::ChildAccount
   # P20-937 - We had a regression which we have chosen to mitigate by allowing
   # accounts created before the below date to have their lock-out delayed until
   # the CAP policy is set to lockout all users.
-  CPA_CREATED_AT_EXCEPTION_DATE = Date.parse('2024-05-24T00:00:00Z')
+  CPA_CREATED_AT_EXCEPTION_DATE = Date.parse('2024-05-24T00:00:00MST')
 
   # The individual US State child account policy configuration
   # max_age: the oldest age of the child at which this policy applies.
@@ -35,8 +35,8 @@ class Policies::ChildAccount
   STATE_POLICY = {
     'CO' => {
       max_age: 12,
-      lockout_date: DateTime.parse(DCDO.get('cpa_schedule', {Cpa::ALL_USER_LOCKOUT => '2024-07-01T00:00:00MST'})[Cpa::ALL_USER_LOCKOUT]),
-      start_date: DateTime.parse(DCDO.get('cpa_schedule', {Cpa::NEW_USER_LOCKOUT => '2023-07-01T00:00:00Z'})[Cpa::NEW_USER_LOCKOUT])
+      lockout_date: DateTime.parse(DCDO.get('cpa_schedule', {Cpa::ALL_USER_LOCKOUT => Cpa::ALL_USER_LOCKOUT_DATE.iso8601})[Cpa::ALL_USER_LOCKOUT]),
+      start_date: DateTime.parse(DCDO.get('cpa_schedule', {Cpa::NEW_USER_LOCKOUT => Cpa::NEW_USER_LOCKOUT_DATE.iso8601})[Cpa::NEW_USER_LOCKOUT])
     }
   }.freeze
 
