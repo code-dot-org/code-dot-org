@@ -41,7 +41,9 @@ describe('LTI Link Account Page Tests', () => {
           .getByText(i18n.ltiLinkAccountExistingAccountCardActionLabel())
           .closest('a')!
           .getAttribute('href')
-      ).to.equal('https://example.com/existing-account?lms_name=Canvas&lti_provider=canvas_cloud');
+      ).to.equal(
+        'https://example.com/existing-account?lms_name=Canvas&lti_provider=canvas_cloud'
+      );
     });
   });
 
