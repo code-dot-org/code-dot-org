@@ -61,7 +61,7 @@ const defaultConfig: ConfigType = {
       action: () => window.alert('You are already on the file browser'),
     },
   ],
-  gridLayoutRows: '1fr 1fr 1fr 50px',
+  gridLayoutRows: '1fr 1fr 1fr 48px',
   gridLayoutColumns: '300px minmax(0, 1fr)',
   gridLayout: `
     "info-panel workspace"

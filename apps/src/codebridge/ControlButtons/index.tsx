@@ -3,8 +3,8 @@ import {appendSystemMessage} from '@codebridge/redux/consoleRedux';
 import React from 'react';
 import {useDispatch} from 'react-redux';
 
+import Button from '@cdo/apps/componentLibrary/button';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
-import Button from '@cdo/apps/templates/Button';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {useFetch} from '@cdo/apps/util/useFetch';
 
@@ -37,16 +37,21 @@ const ControlButtons: React.FunctionComponent = () => {
   return (
     <div className={moduleStyles.controlButtonsContainer}>
       <Button
-        type={'button'}
         text="Run"
         onClick={() => handleRun(false)}
         disabled={loading}
+        iconLeft={{iconStyle: 'solid', iconName: 'play'}}
+        className={moduleStyles.controlButton}
+        size={'s'}
       />
       <Button
-        type={'button'}
         text="Test"
         onClick={() => handleRun(true)}
         disabled={loading}
+        iconLeft={{iconStyle: 'solid', iconName: 'flask'}}
+        color={'black'}
+        className={moduleStyles.controlButton}
+        size={'s'}
       />
     </div>
   );

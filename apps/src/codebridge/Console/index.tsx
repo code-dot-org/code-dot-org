@@ -2,7 +2,8 @@ import {resetOutput} from '@codebridge/redux/consoleRedux';
 import React from 'react';
 import {useDispatch} from 'react-redux';
 
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/componentLibrary/button';
+import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from './console.module.scss';
@@ -15,12 +16,27 @@ const Console: React.FunctionComponent = () => {
     dispatch(resetOutput());
   };
 
+  const headerButton = () => {
+    return (
+      <Button
+        isIconOnly
+        color={'black'}
+        icon={{iconStyle: 'solid', iconName: 'broom'}}
+        ariaLabel="clear console"
+        onClick={clearOutput}
+        size={'xs'}
+      />
+    );
+  };
+
   return (
-    <div className={moduleStyles.consoleContainer}>
-      <div>
-        <Button type={'button'} text="Clear output" onClick={clearOutput} />
-      </div>
-      <div>
+    <PanelContainer
+      id="codebridge-console"
+      className={moduleStyles.consoleContainer}
+      headerContent={'Console'}
+      rightHeaderContent={headerButton()}
+    >
+      <div className={moduleStyles.console}>
         {codeOutput.map((outputLine, index) => {
           if (outputLine.type === 'img') {
             return (
@@ -40,7 +56,7 @@ const Console: React.FunctionComponent = () => {
           }
         })}
       </div>
-    </div>
+    </PanelContainer>
   );
 };
 
