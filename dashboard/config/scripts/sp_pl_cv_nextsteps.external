@@ -57,14 +57,14 @@ markdown <<MARKDOWN
 
 <table width="1000px">
 	<tr> 
-    	<th style="font-size: 14px; padding-right: 10px;"> <b>Hold for new AI </b> </th>
-        <th style="font-size: 14px; padding-right: 10px;"> <b>AI 101 for Teachers  </b>  </th>
-        <th style="font-size: 14px; padding-right: 10px;"> <b>Teaching AI and Machine Learning</b> </th>
+    	<th width="33.3%"style="font-size: 14px; padding-right: 10px;"> <b>AI 101 Self-Paced PL </b> </th>
+        <th width="33.3%" style="font-size: 14px; padding-right: 10px;"> <b>AI 101 for Teachers  </b>  </th>
+        <th width="33.3%" style="font-size: 14px; padding-right: 10px;"> <b>Teaching AI and Machine Learning</b> </th>
         
     </tr>
     <tr>
     	<td style = "padding-right: 20px;">
-         <p> This course provides a brief introduction of how AI..... hold for new description.This course provides a brief introduction of how AI..... hold for new description.</p>
+         <p> This five part, foundational online learning series for any teacher or educator interested in the groundbreaking world of artificial intelligence (AI) and its transformative potential in education.</p>
         </td>
     	<td style = "padding-right: 20px;">
         <p>
@@ -79,14 +79,16 @@ markdown <<MARKDOWN
         
       </tr>
      <tr>
-    	<td> <img src= "https://images.code.org/24241dd58f1cacb369c3ffd5f06c0a18-image-1708448368069.png" alt="thumbnail for the CS Fundamentals self-paced professional learniing module" width="310" style="border-radius:10px;  margin: 0px 0px 10px 0px;"></td>
-    	<td><img src="https://images.code.org/f65ed33537cc1319f101902479a21f50-image-1712950126755.png" alt="thumbnail for AI 101" width="300" style="border-radius:10px;  margin: 0px 0px 10px 0px;"></td>
-        <td><img src="https://images.code.org/874607855273e71341babc00d4dbc8df-image-1712949845614.png" alt="thumbnail for teaching AI and Machine learning" width="275" style="border-radius:10px;  margin: 0px 0px 10px 0px;"></td>
+    	<td> <img src= "https://images.code.org/6b3fa240c139dd6e10b453c67f17fc58-image-1716322075536.png" alt="thumbnail for the AI 101 self-paced professional learniing module" width="315" style="border-radius:10px;  margin: 0px 0px 10px 0px;"></td>
+        
+    	<td><img src="https://images.code.org/f65ed33537cc1319f101902479a21f50-image-1712950126755.png" alt="thumbnail for AI 101" width="325" style="border-radius:10px;  margin: 0px 0px 10px 0px;"></td>
+        
+        <td><img src="https://images.code.org/874607855273e71341babc00d4dbc8df-image-1712949845614.png" alt="thumbnail for teaching AI and Machine learning" width="290" style="border-radius:10px;  margin: 0px 0px 10px 0px;"></td>
       </tr>
       
       
       <tr>
-      		<td><a href="https://studio.code.org/s/k5-onlinepd-2023" target="blank" rel="noopener noreferrer">Teaching CS Fundamentals </a></td>
+      		<td><a href="https://studio.code.org/courses/self-paced-pl-ai-101-2024" target="blank" rel="noopener noreferrer">AI 101 Self-Paced PL </a></td>
         	<td><a href="https://code.org/ai/pl/101" target="blank" rel="noopener noreferrer">AI 101 for Teachers </a></td>
          	 <td><a href="https://studio.code.org/courses/self-paced-pl-aiml-2023" target="blank" rel="noopener noreferrer">Teaching AI and Machine Learning </a></td>
       </tr>
@@ -106,4 +108,5 @@ markdown <<MARKDOWN
 <br>
 </p>
 
+![]()
 MARKDOWN

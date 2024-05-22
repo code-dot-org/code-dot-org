@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "data-science-playground",
-    "serialized_at": "2024-05-20 22:11:23 UTC",
+    "serialized_at": "2024-05-21 20:57:49 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -214,15 +214,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Data Science Ch1 L2 Answering a Data Question"
-        ],
         "progression": "Answering A Data Question"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Data Science Ch1 L2 Answering a Data Question"
+          "Data Science - Pizza Slice Dataset"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -230,7 +227,7 @@
         "activity_section.key": "83b7d3ea-0aa3-4db9-9bef-1e24a2f2157b"
       },
       "level_keys": [
-        "Data Science Ch1 L2 Answering a Data Question"
+        "Data Science - Pizza Slice Dataset"
       ]
     },
     {
@@ -239,6 +236,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Data Science Ch1 L5 Three Reads of Data - School Party"
+        ],
         "progression": "Three Reads of Data"
       },
       "bonus": false,
@@ -261,6 +261,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Data Sci - Ch1L5 match criteria"
+        ],
         "progression": "CFU"
       },
       "bonus": false,
@@ -343,9 +346,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "Data Science Ch1 L2 Answering a Data Question",
+        "level.key": "Data Science - Pizza Slice Dataset",
         "script_level.level_keys": [
-          "Data Science Ch1 L2 Answering a Data Question"
+          "Data Science - Pizza Slice Dataset"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",

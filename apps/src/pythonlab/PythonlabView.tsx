@@ -68,7 +68,7 @@ const defaultConfig: ConfigType = {
     },
   ],
   gridLayoutRows: '1fr 1fr 1fr',
-  gridLayoutColumns: '300px auto',
+  gridLayoutColumns: '300px minmax(0, 1fr)',
   gridLayout: `
     "info-panel workspace"
     "file-browser workspace"

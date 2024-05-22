@@ -21,15 +21,15 @@ const weblabLangMapping: {[key: string]: LanguageSupport} = {
 };
 
 const horizontalLayout = {
-  gridLayoutRows: '300px auto',
-  gridLayoutColumns: '300px auto auto',
+  gridLayoutRows: '300px minmax(0, 1fr)',
+  gridLayoutColumns: '300px minmax(0, 1fr) 1fr',
   gridLayout: `    "info-panel workspace preview-container"
       "file-browser workspace preview-container"`,
 };
 
 const verticalLayout = {
-  gridLayoutRows: '300px auto auto',
-  gridLayoutColumns: '300px auto',
+  gridLayoutRows: '300px 1fr 1fr',
+  gridLayoutColumns: '300px minmax(0, 1fr)',
   gridLayout: `    "info-panel workspace workspace"
       "file-browser workspace workspace"
       "file-browser preview-container preview-container"`,

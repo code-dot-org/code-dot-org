@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "k5-ai-data",
-    "serialized_at": "2024-05-20 20:28:59 UTC",
+    "serialized_at": "2024-05-21 19:20:43 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -602,8 +602,19 @@
       }
     },
     {
-      "key": "07c28396-fa22-4a41-8d8a-c93681489785",
+      "key": "54ef70f1-7caa-4500-8fcb-10faa747ec75",
       "position": 1,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "54ef70f1-7caa-4500-8fcb-10faa747ec75",
+        "lesson_activity.key": "7abfdbb7-92d5-42ed-97d5-2da44b710690"
+      }
+    },
+    {
+      "key": "07c28396-fa22-4a41-8d8a-c93681489785",
+      "position": 2,
       "properties": {
         "progression_name": "Using AI Tools in School"
       },
@@ -614,7 +625,7 @@
     },
     {
       "key": "e8989af7-5ced-409b-959c-93c9b6659f75",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "| Slide                                                                                                        | Lesson Guide                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |\n| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide89.png) | <p><br></p>|\n| ![](https://docs.google.com/presentation/d/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/export/png?id=1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI&pageid=g2bd4a6cb5fd_0_637) | <p><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong>  Now it's your turn to investigate ways AI can help us in the real world. At the end of this activity, you'll write a letter or create a poster to the principal telling them your own opinion on whether or not AI tools should be used to help make a decision in school.<br><br>First, you’re going to look at some more student data. You’ll think about what data will be most important to include to help AI make a decision, what data you would add to the dataset, and what data you would remove or ignore. Then you’ll think about how to tell if the AI tool was successful at making a decision.<br><br>Once you fill out your chart, you’ll create an artifact explaining to the principal about whether or not AI tools should be used to make decisions in school.<br><br><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Hand out one <a href=\"https://docs.google.com/document/d/1geTnFqtszszfH7Q4_8ZORTAxvh38b-HuLpV1ezy7mgI/template/preview\" target=\"_blank\">Using AI Tools in School</a> guide to each student.<br><br><details style=\"background-color: #FFA400; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px; color: white\"><summary style=\"font-size: 1.2em; font-weight: bold;\"><i class=\"fa fa-lightbulb-o \"></i> Teaching Tip: Before students start filling out their handout, consider previewing the dataset for the class</summary><br>The dataset can be found in the link in <a href=\"http://studio.code.org/s/pilot-k5-ai/lessons/4/levels/1\" target=\"_blank\">Level 1</a>. Preview the link for students <a href=\"https://docs.google.com/spreadsheets/d/1t44C0ScGvgajfOEE6VE8sl7OQEJbgT1kvGDCnDgOPys/preview\" target=\"_blank\">here</a> and point out the different rows and columns.</details></p>|\n"
       },
@@ -1023,6 +1034,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dance_customize_effect_2024"
+        ],
         "progression": "Choose Your Effects"
       },
       "bonus": false,
@@ -1068,6 +1082,28 @@
       "chapter": 17,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "k5_ai_data_survey_level"
+        ],
+        "lesson.key": "Using AI Tools in School",
+        "lesson_group.key": "",
+        "script.name": "k5-ai-data-2024",
+        "activity_section.key": "54ef70f1-7caa-4500-8fcb-10faa747ec75"
+      },
+      "level_keys": [
+        "k5_ai_data_survey_level"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1090,7 +1126,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1306,6 +1342,18 @@
         "lesson_group.key": "",
         "script.name": "k5-ai-data-2024",
         "activity_section.key": "7f8890c5-c4bf-4da2-976a-bba3d45a3009"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "k5_ai_data_survey_level",
+        "script_level.level_keys": [
+          "k5_ai_data_survey_level"
+        ],
+        "lesson.key": "Using AI Tools in School",
+        "lesson_group.key": "",
+        "script.name": "k5-ai-data-2024",
+        "activity_section.key": "54ef70f1-7caa-4500-8fcb-10faa747ec75"
       }
     },
     {
