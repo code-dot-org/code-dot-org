@@ -2,7 +2,11 @@ import classnames from 'classnames';
 import React, {ChangeEvent, AriaAttributes} from 'react';
 
 import {componentSizeToBodyTextSizeMap} from '@cdo/apps/componentLibrary/common/constants';
+import {getAriaPropsFromProps} from '@cdo/apps/componentLibrary/common/helpers';
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
+import FontAwesomeV6Icon, {
+  FontAwesomeV6IconProps,
+} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import Typography from '@cdo/apps/componentLibrary/typography';
 
 import moduleStyles from './textfield.module.scss';
@@ -21,11 +25,20 @@ export interface TextFieldProps extends AriaAttributes {
   value?: string;
   /** TextField label */
   label?: string;
+  /** TextField helper message */
+  helperMessage?: string;
+  /** TextField helper icon */
+  helperIcon?: FontAwesomeV6IconProps;
+  /** TextField placeholder */
+  placeholder?: string;
+  /** Is TextField readOnly */
+  readonly?: boolean;
   /** Is TextField disabled */
   disabled?: boolean;
-  /** Is TextField indeterminate */
-  readonly?: boolean;
+  /** TextField Error */
   error?: {message: string; hasError: boolean};
+  /** TextField color */
+  color?: 'black' | 'gray' | 'white';
   /** Size of TextField */
   size?: ComponentSizeXSToL;
 }
@@ -49,17 +62,26 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
   onChange,
   name,
   value,
+  placeholder,
   disabled = false,
   readonly = false,
+  helperMessage,
+  helperIcon,
   error,
+  color,
   size = 'm',
   ...rest
 }) => {
   const bodyTextSize = componentSizeToBodyTextSizeMap[size];
+  const ariaProps = getAriaPropsFromProps(rest);
 
   return (
     <label
-      className={classnames(moduleStyles.label, moduleStyles[`label-${size}`])}
+      className={classnames(
+        moduleStyles.label,
+        moduleStyles[`label-${color}`],
+        moduleStyles[`label-${size}`]
+      )}
       aria-describedby={rest['aria-describedby']}
     >
       {label && (
@@ -71,9 +93,25 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
         type="text"
         name={name}
         value={value}
+        placeholder={placeholder}
+        readOnly={readonly}
         disabled={disabled}
         onChange={onChange}
+        {...ariaProps}
+        aria-disabled={disabled || ariaProps['aria-disabled']}
       />
+      {error && !error.hasError && (
+        <div>
+          {helperIcon && <FontAwesomeV6Icon {...helperIcon} />}
+          {helperMessage && <span>{helperMessage}</span>}
+        </div>
+      )}
+      {error && error.hasError && (
+        <div>
+          <FontAwesomeV6Icon iconName={'circle-exclamation'} />
+          <span>{error.message}</span>
+        </div>
+      )}
     </label>
   );
 };

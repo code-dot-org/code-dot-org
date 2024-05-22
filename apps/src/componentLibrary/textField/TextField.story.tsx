@@ -1,4 +1,3 @@
-// TODO: Uncomment and update once working on the full implementation of the component
 import {Meta, StoryFn} from '@storybook/react';
 import React from 'react';
 
@@ -28,6 +27,33 @@ export const DefaultTextField = SingleTemplate.bind({});
 DefaultTextField.args = {
   name: 'textfield_default',
   label: 'TextField Label',
+};
+
+export const WithErrorTextField = SingleTemplate.bind({});
+WithErrorTextField.args = {
+  name: 'textfield_error',
+  label: 'TextField Label',
+  error: {
+    hasError: true,
+    message: 'Error message',
+  },
+};
+
+export const WithHelperMessageTextField = SingleTemplate.bind({});
+WithHelperMessageTextField.args = {
+  name: 'textfield_helper_message',
+  label: 'TextField Label',
+  helperMessage: 'Helper message',
+};
+
+export const WithHelperMessageAndIconTextField = SingleTemplate.bind({});
+WithHelperMessageAndIconTextField.args = {
+  name: 'textfield_helper_icon',
+  label: 'TextField Label',
+  helperIcon: {
+    iconName: 'info-circle',
+  },
+  helperMessage: 'Helper message',
 };
 //
 // export const GroupOfDefaultCheckboxes = MultipleTemplate.bind({});
