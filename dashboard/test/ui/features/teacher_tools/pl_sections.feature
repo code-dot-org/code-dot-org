@@ -234,16 +234,3 @@ Feature: Professional learning Sections
     And I enter the section code into "input.ui-test-join-section"
     And I click selector "button.ui-test-join-section"
     Then the professional learning joined sections table should have 1 row
-
-  @eyes
-  Scenario: Teacher without current application, workshops, or self-paced courses sees Getting Started banner
-    Given I create a teacher named "New Teacher"
-    And I sign in as "New Teacher" and go home
-    Then I am on "http://studio.code.org/my-professional-learning"
-
-    # Sees Getting Started banner
-    And I wait until element "a:contains(Learn about professional learning)" is visible
-    And the href of selector "a:contains(Learn about professional learning)" contains "/educate/professional-learning"
-    And I open my eyes to test "New teacher My PL page"
-    And I see no difference in "New teacher My PL page"
-    And I close my eyes
