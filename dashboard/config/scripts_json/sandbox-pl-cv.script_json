@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "sandbox-pl-cv",
-    "serialized_at": "2024-05-21 15:35:50 UTC",
+    "serialized_at": "2024-05-22 15:19:44 UTC",
     "published_state": "in_development",
     "instruction_type": "self_paced",
     "instructor_audience": "facilitator",
@@ -41,8 +41,8 @@
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
-        "overview": "##### In this module, you will: \n- #####Get an introduction to Teaching Computer Vision\n- #####Define and identify different uses of computer vision\n- #####Utilize the design process to solve problems\n- #####Explore Computer Vision lessons\n\n#####**Suggested Time:** 25 minutes\n",
-        "student_overview": "##### In this module, you will: \n- #####Get an introduction to Teaching Computer Vision\n- #####Define and identify different uses of computer vision\n- #####Utilize the design process to solve problems\n- #####Explore Computer Vision lessons\n\n#####**Suggested Time:** 25 minutes\n"
+        "overview": "##### In this lesson, you will: \n- #####Get an introduction to Teaching Computer Vision\n- #####Define and identify different uses of computer vision\n- #####Utilize the design process to solve problems\n- #####Explore Computer Vision lessons\n\n#####**Suggested Time:** 20 minutes\n",
+        "student_overview": "##### In this lesson, you will: \n- #####Get an introduction to Teaching Computer Vision\n- #####Define and identify different uses of computer vision\n- #####Utilize the design process to solve problems\n- #####Explore Computer Vision lessons\n\n#####**Suggested Time:** 20 minutes\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -58,8 +58,8 @@
       "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
-        "overview": "##### In this lesson you will: \n- ##### Review the content of each lesson \n\n- ##### Preview activities in the lessons \n\n##### **Suggested time:** 75 minutes \n",
-        "student_overview": "##### In this lesson you will: \n- ##### Review the content of each lesson \n\n- ##### Preview activities in the lessons \n\n##### **Suggested time:** 75 minutes "
+        "overview": "##### In this lesson, you will: \n- ##### Review the content of each lesson \n\n- ##### Preview activities in the lessons \n\n##### **Suggested time:** 60 minutes \n",
+        "student_overview": "##### In this lesson, you will: \n- ##### Review the content of each lesson \n\n- ##### Preview activities in the lessons \n\n##### **Suggested time:** 60 minutes "
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -75,6 +75,8 @@
       "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
+        "overview": "##### In this lesson, you will: \n\n- ##### Explore best practices for teaching Computer Vision\n\n-  ##### Identify next steps to learn more about AI in the classroom\n\n##### **Suggested time:** 10 minutes",
+        "student_overview": "##### In this lesson, you will: \n\n- ##### Explore best practices for teaching Computer Vision\n\n-  ##### Identify next steps to learn more about AI in the classroom\n\n##### **Suggested time:** 10 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -88,7 +90,7 @@
       "key": "4259c405-ab3e-44f1-8212-a55ff7258ad2",
       "position": 1,
       "properties": {
-        "duration": 60
+        "duration": 20
       },
       "seeding_key": {
         "lesson_activity.key": "4259c405-ab3e-44f1-8212-a55ff7258ad2",
@@ -101,7 +103,7 @@
       "key": "6e061ef2-2e3c-4bdb-a4e3-5e0490543250",
       "position": 1,
       "properties": {
-        "duration": 75
+        "duration": 60
       },
       "seeding_key": {
         "lesson_activity.key": "6e061ef2-2e3c-4bdb-a4e3-5e0490543250",
@@ -114,7 +116,7 @@
       "key": "31b74822-cad6-4c88-9ef7-e5e79abf3912",
       "position": 1,
       "properties": {
-        "duration": 15
+        "duration": 10
       },
       "seeding_key": {
         "lesson_activity.key": "31b74822-cad6-4c88-9ef7-e5e79abf3912",
@@ -532,6 +534,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp_PL_CV_check_introCV_Pixel"
+        ],
         "progression": "Introduction to Computer Vision"
       },
       "bonus": false,
@@ -779,6 +784,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp_PL_CV_Check_Empaty_Define"
+        ],
         "progression": "Defining"
       },
       "bonus": false,
@@ -951,6 +959,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp_PL_CV_check_ideaing_bias"
+        ],
         "progression": "Ideating"
       },
       "bonus": false,
@@ -1198,6 +1209,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp_PL_CV_check_design_process"
+        ],
         "progression": "Final Project"
       },
       "bonus": false,
