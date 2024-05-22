@@ -8,6 +8,7 @@ import TabPanel from './TabPanel';
 export type Tab = {
   title: string;
   content: React.ReactNode;
+  isReadOnly: boolean;
 };
 
 interface TabsProps {
@@ -49,6 +50,7 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
       <div className={styles.tabsContainer}>
         <ul role="tablist" className={styles.tabsList}>
           {tabs.map((tab, index) => {
+            console.log('tab', tab);
             return (
               <li
                 role="presentation"
@@ -68,11 +70,13 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
                   className={classNames(index === activeIndex && styles.active)}
                 >
                   {tab.title}
-                  <FontAwesomeV6Icon
-                    iconName="lock"
-                    iconStyle="solid"
-                    className={styles.tabIcon}
-                  />
+                  {tab.isReadOnly && (
+                    <FontAwesomeV6Icon
+                      iconName="lock"
+                      iconStyle="solid"
+                      className={styles.tabIcon}
+                    />
+                  )}
                 </button>
               </li>
             );
