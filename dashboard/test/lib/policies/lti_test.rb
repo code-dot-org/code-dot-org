@@ -228,4 +228,31 @@ class Policies::LtiTest < ActiveSupport::TestCase
       refute Policies::Lti.feedback_available?(user)
     end
   end
+
+  class InProgressRegistrationTest < ActiveSupport::TestCase
+    test 'returns true for a partial LTI registration' do
+      session = {}
+      partial_lti_teacher = create :teacher
+      lti_integration = create :lti_integration
+      fake_id_token = {iss: lti_integration.issuer, aud: lti_integration.client_id, sub: 'foo'}
+      auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
+      ao = AuthenticationOption.new(
+        authentication_id: auth_id,
+        credential_type: AuthenticationOption::LTI_V1,
+        email: partial_lti_teacher.email,
+      )
+      partial_lti_teacher.authentication_options = [ao]
+      PartialRegistration.persist_attributes session, partial_lti_teacher
+
+      assert Policies::Lti.lti_registration_in_progress?(session)
+    end
+
+    test 'returns false for a partial non-LTI registration' do
+      session = {}
+      partial_teacher = create :teacher, :with_google_authentication_option
+      PartialRegistration.persist_attributes session, partial_teacher
+
+      refute Policies::Lti.lti_registration_in_progress?(session)
+    end
+  end
 end
