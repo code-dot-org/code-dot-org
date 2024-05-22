@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_05_14_181513) do
+ActiveRecord::Schema.define(version: 2024_05_22_163806) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1146,6 +1146,7 @@ ActiveRecord::Schema.define(version: 2024_05_14_181513) do
     t.index ["code"], name: "index_pd_enrollments_on_code", unique: true
     t.index ["email"], name: "index_pd_enrollments_on_email"
     t.index ["pd_workshop_id"], name: "index_pd_enrollments_on_pd_workshop_id"
+    t.index ["user_id"], name: "index_pd_enrollments_on_user_id"
   end
 
   create_table "pd_facilitator_program_registrations", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
