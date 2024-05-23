@@ -77,6 +77,16 @@ function RubricFloatingActionButton({
   }, [eventData, studentLevelInfo]); // Neither of these should change, so this should run once
 
   useEffect(() => {
+    analyticsReporter.sendEvent(
+      isOpen
+        ? EVENTS.TA_RUBRIC_OPEN_ON_PAGE_LOAD
+        : EVENTS.TA_RUBRIC_CLOSED_ON_PAGE_LOAD,
+      eventData
+    );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // disabling isOpen dependency because we only want this to report the initial open state once
+
+  useEffect(() => {
     trySetSessionStorage(sessionStorageKey, isOpen);
   }, [isOpen]);
 
