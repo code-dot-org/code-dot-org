@@ -30,6 +30,10 @@ module ActionDispatch
       # If the cookie does not contain any existing session data, do nothing
       # and return nothing.
       private def migrate_session_data(request)
+        # In preparation for eventually removing this module entirely and
+        # switching to use an unmodified RedisStore instance, add a DCDO flag
+        # to dynamically disable the custom functionality this module provides.
+        return if DCDO.get('disable-migrate_session_data', false)
         stale_session_check! do
           session_data = unpacked_cookie_data(request)
           if session_data.is_a?(Hash) && !session_data.empty?
