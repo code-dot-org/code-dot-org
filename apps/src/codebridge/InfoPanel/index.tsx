@@ -32,6 +32,7 @@ export const InfoPanel = React.memo(() => {
   const teacherMarkdown = useAppSelector(
     state => state.lab.levelProperties?.teacherMarkdown
   );
+  const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
   const [currentPanel, setCurrentPanel] = useState(Panels.Instructions);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [panelOptions, setPanelOptions] = useState<Panels[]>([
@@ -42,7 +43,7 @@ export const InfoPanel = React.memo(() => {
     // For now, always include Instructions panel.
     // TODO: support hiding this panel completely if there are no instructions.
     const options = [Panels.Instructions];
-    if (teacherMarkdown) {
+    if (isUserTeacher && teacherMarkdown) {
       options.push(Panels.ForTeachersOnly);
     }
     if (mapReference || referenceLinks) {
@@ -51,7 +52,7 @@ export const InfoPanel = React.memo(() => {
     setPanelOptions(options);
     // Close the dropdown if we change levels.
     setIsDropdownOpen(false);
-  }, [mapReference, referenceLinks, teacherMarkdown]);
+  }, [isUserTeacher, mapReference, referenceLinks, teacherMarkdown]);
 
   useEffect(() => {
     // If we change levels and were on a panel that no longer exists,
