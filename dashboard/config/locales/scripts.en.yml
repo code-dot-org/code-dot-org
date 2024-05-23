@@ -17181,3 +17181,68 @@ en:
           description_audience: ''
           lessons: {}
           name: fcs1c-beta-2024
+        data-science-2024-pilot:
+          lessons:
+            lesson-13:
+              name: Chapter 1 Pre-Assessment
+            lesson-1:
+              name: Introduction to Data Science
+            lesson-2:
+              name: Data Organization and Storage
+            lesson-3:
+              name: Ethical Data Collection
+            lesson-4:
+              name: Data Rights
+            lesson-5:
+              name: Formulating Questions for Data Analysis
+            lesson-6:
+              name: Data Storytelling
+            lesson-7:
+              name: Data Interpretation
+            lesson-8:
+              name: Data Cleaning and Analysis Techniques
+            lesson-9:
+              name: Introduction to Data Visualization
+            lesson-10:
+              name: Data Visualizations and Filtering
+            lesson-11:
+              name: Project
+            lesson-12:
+              name: Assessment Day
+            lesson-14:
+              name: Chapter 2 Pre-Assessment
+            lesson-15:
+              name: Project Kickoff
+            lesson-16:
+              name: Introduction to Python
+            lesson-17:
+              name: Introduction to Pandas
+            lesson-18:
+              name: Getting to Know Your Data
+            lesson-19:
+              name: Accessing and Grouping Values
+            lesson-20:
+              name: Cleaning Data
+            lesson-21:
+              name: Introduction to Matplotlib
+            lesson-22:
+              name: More Visualization Types
+            lesson-23:
+              name: Exploratory Data Analysis
+            lesson-24:
+              name: Querying Your Data
+            lesson-25:
+              name: Project
+            lesson-26:
+              name: Assessment Day
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chapter 1
+            lessonGroup-3:
+              display_name: Chapter 2
+          name: data-science-2024-pilot
+          title: Data Science
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
