@@ -16,8 +16,8 @@ def main
 
   CSV.open("aichat_logs_#{options[:section_id]}_#{options[:date]}.csv", "w") do |csv|
     headers = %w[
-      session_id user_id username name level_id script_id project_id created_at
-      updated_at selectedModelId temperature systemPrompt retrievalContexts
+      session_id user_id username name path created_at updated_at
+      selectedModelId temperature systemPrompt retrievalContexts
       status role content
     ]
     csv << headers
@@ -33,14 +33,16 @@ def main
       messages = JSON.parse(session.messages)
       user = session.user
 
+      level = Level.find(session.level_id)
+      script_level = level.script_levels.find_by_script_id(session.script_id)
+      path = script_level.path
+
       base_row = [
         session.id,
         session.user_id,
         user.username,
         user.name,
-        session.level_id,
-        session.script_id,
-        session.project_id,
+        path,
         session.created_at,
         session.updated_at,
         model_customizations["selectedModelId"],
