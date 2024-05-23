@@ -1,15 +1,19 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
+
 import msg from '@cdo/locale';
+
+import {DataView} from '../constants';
+import {changeView, showWarning} from '../redux/data';
+
 import AddTableListRow from './AddTableListRow';
 import EditTableListRow from './EditTableListRow';
 import KVPairs from './KVPairs';
-import dataStyles from './data-styles.module.scss';
-import {connect} from 'react-redux';
-import {changeView, showWarning} from '../redux/data';
-import {DataView} from '../constants';
+
 import style from './data-browser.module.scss';
-import classNames from 'classnames';
+import dataStyles from './data-styles.module.scss';
 
 const tableWidth = 400;
 const buttonColumnWidth = 124;
