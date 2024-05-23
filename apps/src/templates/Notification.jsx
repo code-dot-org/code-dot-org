@@ -14,6 +14,7 @@ import trackEvent from '../util/trackEvent';
 import Button from './Button';
 
 export const NotificationType = {
+  default: 'default',
   information: 'information',
   success: 'success',
   failure: 'failure',
@@ -50,6 +51,7 @@ const Notification = ({
   type,
   tooltipText,
   width,
+  colors,
 }) => {
   const [open, setOpen] = useState(true);
 
@@ -127,7 +129,7 @@ const Notification = ({
     return null;
   }
 
-  const colorStyles = styles.colors[type];
+  const colorStyles = {...styles.colors[type], ...colors};
 
   const tooltipId = _.uniqueId();
 
@@ -136,7 +138,9 @@ const Notification = ({
       <div style={{...colorStyles, ...mainStyle}}>
         {type !== NotificationType.course && (
           <div style={{...styles.iconBox, ...colorStyles, ...iconStyles}}>
-            <FontAwesome icon={icons[type]} style={styles.icon} />
+            {icons[type] && (
+              <FontAwesome icon={icons[type]} style={styles.icon} />
+            )}
           </div>
         )}
         <div style={styles.contentBox}>
@@ -258,6 +262,17 @@ Notification.propTypes = {
 
   // Can be specified to override default width
   width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+
+  colors: PropTypes.shape({
+    backgroundColor: PropTypes.string,
+    borderColor: PropTypes.string,
+    color: PropTypes.string,
+  }),
+};
+
+Notification.defaultProps = {
+  type: NotificationType.default,
+  colors: {},
 };
 
 const styles = {
@@ -333,6 +348,10 @@ const styles = {
     marginBottom: 18,
   },
   colors: {
+    [NotificationType.default]: {
+      borderColor: color.teal,
+      backgroundColor: color.teal,
+    },
     [NotificationType.information]: {
       borderColor: color.teal,
       color: color.teal,

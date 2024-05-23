@@ -195,7 +195,7 @@ Scenario: Teacher can view choice levels
   And I see no difference for "unexpanded choice level - closed"
 
 # The test requires java-lab which does not run on correctly on drone
-@eyes @no_circle
+@eyes @no_circle @skip
 Scenario: Teacher can view validated level
   And I open my eyes to test "V2 Progress - Validated Levels"
 
@@ -228,13 +228,18 @@ Scenario: Teacher can view validated level
   And I get levelbuilder access
   And I navigate to the V2 progress dashboard for "New Section"
 
+  # Navigate to the right course on the progress page
+  And I wait until element "#unit-selector-v2" is visible
+  And I click selector "#unit-selector-v2"
+  And I click selector "option:contains(All the Things!)"
+
   # eyes test for unexpanded lessons
   And I wait until element "#ui-test-lesson-header-1" is visible
   And I scroll to "#ui-test-lesson-header-44"
   And I see no difference for "unexpanded lessons"
 
   # eyes test for expanded lessons with in progress and completed validated levels
-  And I click selector g"#ui-test-lesson-header-44"
+  And I click selector "#ui-test-lesson-header-44"
   And I wait until I see selector "div:contains('44.12')"
   And I scroll to "#ui-test-lesson-header-45"
   And I see no difference for "expanded lesson"

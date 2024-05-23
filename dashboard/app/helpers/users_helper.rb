@@ -277,6 +277,12 @@ module UsersHelper
     Policies::Lti.lti?(current_user)
   end
 
+  def country_code(user, request)
+    return user.country_code if user.student?
+
+    user.country_code.presence || request.country.to_s.upcase
+  end
+
   # Merges and summarizes a user's level progress for a particular unit.
   # @param [Unit] unit
   # @param [User] user

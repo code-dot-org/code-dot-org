@@ -991,6 +991,7 @@ bg-BG:
   header_legal_privacy: Защита на личните данни
   header_legal_tos: Термини
   header_my_dashboard: Моето табло
+  header_professional_learning: Професионално обучение
   header_project_gallery: Проекти
   header_report_abuse: Съобщете за злоупотреба
   header_report_bug: Съобщи за бъгове
@@ -2129,7 +2130,7 @@ bg-BG:
   volunteer_engineer_submission_field_email_placeholder: Имейл адрес
   volunteer_engineer_submission_field_email_preference_no: Не
   volunteer_engineer_submission_field_email_preference_privacy: "(Вижте нашата политика
-    за поверителност)"
+    за поверителността)"
   volunteer_engineer_submission_field_email_preference_yes: Да
   volunteer_engineer_submission_field_experience_level: Ниво на опит
   volunteer_engineer_submission_field_facebook: Facebook профил

@@ -30,8 +30,8 @@ class Policies::ChildAccount
   STATE_POLICY = {
     'CO' => {
       max_age: 12,
-      lockout_date: DateTime.parse(DCDO.get('cpa_schedule', {Cpa::ALL_USER_LOCKOUT => '2024-07-01T00:00:00MST'})[Cpa::ALL_USER_LOCKOUT]),
-      start_date: DateTime.parse(DCDO.get('cpa_schedule', {Cpa::NEW_USER_LOCKOUT => '2023-07-01T00:00:00Z'})[Cpa::NEW_USER_LOCKOUT])
+      lockout_date: DateTime.parse(DCDO.get('cpa_schedule', {Cpa::ALL_USER_LOCKOUT => Cpa::ALL_USER_LOCKOUT_DATE.iso8601})[Cpa::ALL_USER_LOCKOUT]),
+      start_date: DateTime.parse(DCDO.get('cpa_schedule', {Cpa::NEW_USER_LOCKOUT => Cpa::NEW_USER_LOCKOUT_DATE.iso8601})[Cpa::NEW_USER_LOCKOUT])
     }
   }.freeze
 
@@ -76,7 +76,10 @@ class Policies::ChildAccount
   # Checks if a user is affected by a state policy but was created prior to the
   # policy going into effect.
   def self.user_predates_policy?(user)
-    parent_permission_required?(user) && user.created_at < STATE_POLICY[user.us_state][:start_date]
+    parent_permission_required?(user) && (
+      user.created_at < STATE_POLICY[user.us_state][:start_date] ||
+      user.authentication_options.any?(&:google?)
+    )
   end
 
   # The date on which the student's account will be locked if the account is not compliant.

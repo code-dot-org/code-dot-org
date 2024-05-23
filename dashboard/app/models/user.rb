@@ -70,6 +70,7 @@
 #
 
 require 'digest/md5'
+require 'state_abbr'
 require 'cdo/aws/metrics'
 require 'cdo/shared_constants'
 require_relative '../../legacy/middleware/helpers/user_helpers'
@@ -299,7 +300,7 @@ class User < ApplicationRecord
     self.gender = Policies::Gender.normalize gender
   end
 
-  validate :validate_us_state, if: -> {us_state.present?}
+  validate :validate_us_state, if: :should_validate_us_state?
 
   before_create unless: -> {Policies::ChildAccount.compliant?(self)} do
     Services::ChildAccount.lock_out(self)
@@ -2705,6 +2706,18 @@ class User < ApplicationRecord
     id && Digest::UUID.uuid_v5(Dashboard::Application.config.secret_key_base, id.to_s)
   end
 
+  # @return [String, nil] the user's US state code in the ISO 3166-2:US standard
+  def us_state_code
+    state = student? ? us_state : school_info&.usa? && school_info&.state
+    return if state.blank?
+
+    # Returns `state` if it is a US state code
+    return state.upcase if us_state_abbr?(state, include_dc: true)
+
+    # Returns the code of `state` if it is a US state name
+    get_us_state_abbr_from_name(state, include_dc: true)
+  end
+
   US_STATE_DROPDOWN_OPTIONS = {
     'AL' => 'Alabama', 'AK' => 'Alaska', 'AZ' => 'Arizona', 'AR' => 'Arkansas',
     'CA' => 'California', 'CO' => 'Colorado', 'CT' => 'Connecticut',
@@ -2730,6 +2743,19 @@ class User < ApplicationRecord
   def self.us_state_dropdown_options
     {'??' => I18n.t('signup_form.us_state_dropdown_options.other')}.
       merge(US_STATE_DROPDOWN_OPTIONS)
+  end
+
+  def us_state_changed?
+    # Check if us_state value will change
+    will_save_change_to_properties? && properties_change&.first&.[]("us_state") != us_state
+  end
+
+  def should_validate_us_state?
+    # tracking a user's US State is currently limited to students.
+    return false unless user_type == TYPE_STUDENT
+    # us_state is only a required field if the User lives in the US.
+    return false unless %w[US RD].include? country_code
+    new_record? || us_state_changed?
   end
 
   private def ai_tutor_feature_globally_disabled?
@@ -2855,10 +2881,6 @@ class User < ApplicationRecord
   # Verifies that the serialized attribute "us_state" is a 2 character string
   # representing a US State or "??" which represents a "N/A" kind of response.
   private def validate_us_state
-    # tracking a user's US State is currently limited to students.
-    return unless user_type == TYPE_STUDENT
-    # us_state is only a required field if the User lives in the US.
-    return unless %w[US RD].include? country_code
     # us_state must be selected.
     if us_state.blank?
       errors.add(:us_state, :blank)
