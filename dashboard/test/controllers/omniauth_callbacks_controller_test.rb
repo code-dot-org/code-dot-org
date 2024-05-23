@@ -9,6 +9,8 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     @request.env["devise.mapping"] = Devise.mappings[:user]
     @request.host = CDO.dashboard_hostname
     CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
+    DCDO.stubs(:get)
+    DCDO.stubs(:get).with('sign_up_split_test', 0).returns(0)
   end
 
   test "login: authorizing with known facebook account signs in" do
@@ -1591,6 +1593,35 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal 1, account.authentication_options.count
 
     assert_nil signed_in_user_id
+  end
+
+  test 'Google SSO: links an LTI auth option to an existing account' do
+    DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(true)
+    lti_integration = create :lti_integration
+
+    # Pre-existing Google account that we want the new LTI auth option to be linked to
+    existing_user = create :teacher, :with_google_authentication_option
+    auth = generate_auth_user_hash provider: AuthenticationOption::GOOGLE, uid: existing_user.authentication_options[1].authentication_id
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    # Teacher that is going through the account linking flow
+    partial_lti_teacher = create :teacher
+    fake_id_token = {iss: lti_integration.issuer, aud: lti_integration.client_id, sub: 'foo'}
+    auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
+    ao = AuthenticationOption.new(
+      authentication_id: auth_id,
+      credential_type: AuthenticationOption::LTI_V1,
+      email: existing_user.email,
+    )
+    partial_lti_teacher.authentication_options = [ao]
+    PartialRegistration.persist_attributes session, partial_lti_teacher
+
+    get :google_oauth2
+    # The user factory automatically creates an email auth option,
+    # so this includes 1 email, 1 google, and 1 LTI auth option
+    assert_equal 3, existing_user.reload.authentication_options.count
+    assert_includes existing_user.authentication_options, ao
   end
 
   # Try to link a credential to the provided user
