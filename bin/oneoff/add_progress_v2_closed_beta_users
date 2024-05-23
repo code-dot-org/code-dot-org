@@ -30,7 +30,6 @@ CSV.table(teacher_id_csv, encoding: 'iso-8859-1:utf-8').by_col[:id].each do |id|
     count += 1
   rescue ActiveRecord::RecordInvalid
     puts "RecordInvalid error #{id}"
-    next
   end
 end
 
