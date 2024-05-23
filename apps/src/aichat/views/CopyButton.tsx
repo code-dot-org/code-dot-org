@@ -6,6 +6,7 @@ import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {AichatState} from '@cdo/apps/aichat/redux/aichatRedux';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
 const CopyButton: React.FunctionComponent = () => {
   const storedMessages = useSelector(
@@ -17,7 +18,9 @@ const CopyButton: React.FunctionComponent = () => {
       .map(
         message =>
           `[${message.timestamp || 'XXXX-XX-XX XX:XX'} - ${message.role}] ${
-            message.chatMessageText
+            message.status === Status.PROFANITY_VIOLATION
+              ? '[FLAGGED AS PROFANITY]'
+              : message.chatMessageText
           }`
       )
       .join('\n');

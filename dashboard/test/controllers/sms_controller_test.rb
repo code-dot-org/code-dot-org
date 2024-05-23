@@ -77,7 +77,7 @@ class SmsControllerTest < ActionController::TestCase
   end
 
   test "send to phone with project pretends to succeed when twilio is disabled by gatekeeper flag" do
-    Gatekeeper.set('twilio', where: {}, value: false)
+    Gatekeeper.stubs(:allows).with('twilio', default: true).returns(false)
 
     channel_id = "xxproject_channelxx"
 

@@ -116,6 +116,7 @@ const initialState = {
   childAccountComplianceState: null,
   countryCode: null,
   usStateCode: null,
+  inSection: null,
 };
 
 export default function currentUser(state = initialState, action) {
@@ -234,6 +235,7 @@ export default function currentUser(state = initialState, action) {
       child_account_compliance_state,
       country_code,
       us_state_code,
+      in_section,
     } = action.serverUser;
     analyticsReport.setUserProperties(
       id,
@@ -268,6 +270,7 @@ export default function currentUser(state = initialState, action) {
       childAccountComplianceState: child_account_compliance_state,
       countryCode: country_code,
       usStateCode: us_state_code,
+      inSection: in_section,
     };
   }
 

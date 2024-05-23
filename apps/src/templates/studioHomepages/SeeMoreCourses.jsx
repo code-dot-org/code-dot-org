@@ -51,13 +51,15 @@ export default class SeeMoreCourses extends Component {
           </ContentContainer>
         )}
         {!this.state.open && (
-          <Button
-            onClick={this.showMoreCourses.bind(this)}
-            color={Button.ButtonColor.neutralDark}
-            icon="caret-down"
-            text={i18n.viewMore()}
-            style={styles.button}
-          />
+          <div style={styles.viewMoreContainer}>
+            <Button
+              onClick={this.showMoreCourses.bind(this)}
+              color={Button.ButtonColor.neutralDark}
+              icon="caret-down"
+              text={i18n.viewMore()}
+              style={styles.button}
+            />
+          </div>
         )}
       </div>
     );
@@ -65,6 +67,10 @@ export default class SeeMoreCourses extends Component {
 }
 
 const styles = {
+  viewMoreContainer: {
+    display: 'flex',
+    justifyContent: 'end',
+  },
   spacer: {
     width: 20,
     float: 'left',

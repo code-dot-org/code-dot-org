@@ -1,0 +1,504 @@
+{
+  "script": {
+    "name": "data-science-2024-pilot",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "curriculum_umbrella": "Foundations of CS",
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
+      "is_course": true,
+      "is_migrated": true,
+      "project_sharing": true,
+      "show_calendar": true,
+      "student_detail_progress_view": true,
+      "version_year": "unversioned",
+      "weekly_instructional_minutes": 225
+    },
+    "new_name": null,
+    "family_name": "data-science-2024-pilot",
+    "serialized_at": "2024-05-22 21:28:42 UTC",
+    "published_state": "in_development",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "data-science-2024-pilot"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Chapter 1"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-2024-pilot"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Chapter 2"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "data-science-2024-pilot"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-13",
+      "name": "Chapter 1 Pre-Assessment",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-2024-pilot"
+      }
+    },
+    {
+      "key": "lesson-1",
+      "name": "Introduction to Data Science",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-2024-pilot"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Data Organization and Storage",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-2024-pilot"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Ethical Data Collection",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-2024-pilot"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Data Rights",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-2024-pilot"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Formulating Questions for Data Analysis",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-2024-pilot"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Data Storytelling",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-2024-pilot"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Data Interpretation",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-2024-pilot"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Data Cleaning and Analysis Techniques",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-2024-pilot"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "Introduction to Data Visualization",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-2024-pilot"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "Data Visualizations and Filtering",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-2024-pilot"
+      }
+    },
+    {
+      "key": "lesson-11",
+      "name": "Project",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-2024-pilot"
+      }
+    },
+    {
+      "key": "lesson-12",
+      "name": "Assessment Day",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-2024-pilot"
+      }
+    },
+    {
+      "key": "lesson-15",
+      "name": "Pre-Assessment & Project Kickoff",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "data-science-2024-pilot"
+      }
+    },
+    {
+      "key": "lesson-16",
+      "name": "Introduction to Python",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "data-science-2024-pilot"
+      }
+    },
+    {
+      "key": "lesson-17",
+      "name": "Introduction to Pandas",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "data-science-2024-pilot"
+      }
+    },
+    {
+      "key": "lesson-18",
+      "name": "Getting to Know Your Data",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "data-science-2024-pilot"
+      }
+    },
+    {
+      "key": "lesson-19",
+      "name": "Accessing and Grouping Values",
+      "absolute_position": 18,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 18,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "data-science-2024-pilot"
+      }
+    },
+    {
+      "key": "lesson-20",
+      "name": "Cleaning Data",
+      "absolute_position": 19,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 19,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "data-science-2024-pilot"
+      }
+    },
+    {
+      "key": "lesson-21",
+      "name": "Introduction to Matplotlib",
+      "absolute_position": 20,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 20,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "data-science-2024-pilot"
+      }
+    },
+    {
+      "key": "lesson-22",
+      "name": "More Visualization Types",
+      "absolute_position": 21,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 21,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "data-science-2024-pilot"
+      }
+    },
+    {
+      "key": "lesson-23",
+      "name": "Exploratory Data Analysis",
+      "absolute_position": 22,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 22,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "data-science-2024-pilot"
+      }
+    },
+    {
+      "key": "lesson-24",
+      "name": "Querying Your Data",
+      "absolute_position": 23,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 23,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-24",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "data-science-2024-pilot"
+      }
+    },
+    {
+      "key": "lesson-25",
+      "name": "Project",
+      "absolute_position": 24,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 24,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-25",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "data-science-2024-pilot"
+      }
+    },
+    {
+      "key": "lesson-26",
+      "name": "Assessment Day",
+      "absolute_position": 25,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 25,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-26",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "data-science-2024-pilot"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "7f7056a0-33ec-48b6-9516-36370be351dc",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7f7056a0-33ec-48b6-9516-36370be351dc",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "data-science-2024-pilot"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "53281b5a-1cfa-45cb-a1c5-f315240ca2d7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "53281b5a-1cfa-45cb-a1c5-f315240ca2d7",
+        "lesson_activity.key": "7f7056a0-33ec-48b6-9516-36370be351dc"
+      }
+    }
+  ],
+  "script_levels": [
+
+  ],
+  "levels_script_levels": [
+
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

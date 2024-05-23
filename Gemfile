@@ -39,7 +39,6 @@ gem 'sinatra', '2.2.3', require: 'sinatra/base'
 
 gem 'mysql2', '>= 0.4.1'
 
-gem 'city-state', '~> 1.1.0'
 gem 'dalli' # memcached
 gem 'dalli-elasticache' # ElastiCache Auto Discovery memcached nodes
 gem 'google_drive'
@@ -267,7 +266,7 @@ gem 'pusher', '~> 1.3.1', require: false
 
 gem 'youtube-dl.rb', group: [:development, :staging, :levelbuilder]
 
-gem 'daemons'
+gem 'daemons', '1.1.9' # Pinned to old version, see PR 57938
 gem 'httparty'
 gem 'net-scp'
 gem 'net-ssh'

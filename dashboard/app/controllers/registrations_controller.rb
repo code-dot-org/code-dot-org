@@ -257,6 +257,7 @@ class RegistrationsController < Devise::RegistrationsController
     student_information[:us_state] = params[:user][:us_state] unless current_user.user_provided_us_state
     student_information[:user_provided_us_state] = params[:user][:us_state].present? unless current_user.user_provided_us_state
     student_information[:gender_student_input] = params[:user][:gender_student_input] if current_user.gender.blank?
+    student_information[:country_code] = params[:user][:country_code] if current_user.country_code.blank?
 
     current_user.update(student_information) unless student_information.empty?
   end
@@ -389,11 +390,6 @@ class RegistrationsController < Devise::RegistrationsController
   def edit
     @permission_status = current_user.child_account_compliance_state
     @personal_account_linking_enabled = true
-
-    # Backfill us_state for pre-CPA students
-    if current_user.student? && current_user.us_state.nil?
-      Services::ChildAccount.update_us_state_from_teacher!(current_user)
-    end
 
     # Handle users who aren't locked out, but still need parent permission to link personal accounts.
     if Policies::ChildAccount.user_predates_policy?(current_user)

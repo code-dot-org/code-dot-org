@@ -1,0 +1,15 @@
+name 'CSD U1 MC Q4_2024b'
+type 'multi2'
+question 'Which problems *cannot* be solved with computing? (Select all that apply)'
+wrong 'Counting and measuring rise of the sea level'
+wrong 'Finding the city with the most air pollution'
+wrong 'Comparing the amount of greenhouse gasses emitted by each country'
+right 'Take actions to reverse climate change'
+right 'Passing laws to reduce fossil fuels'
+teacher_markdown <<MARKDOWN
+**Content: Unit 1 Lesson 4**
+
+Using just computers that work with information cannot solve the problem of climate change, nor can computers pass laws.
+MARKDOWN
+
+allow_multiple_attempts true

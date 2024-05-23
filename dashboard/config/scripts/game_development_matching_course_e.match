@@ -1,0 +1,19 @@
+name 'game_development_matching_course-e'
+title 'Match the code to the animation'
+height '200'
+question '![](https://images.code.org/05437fe2286b685f2189d7c257c42e90-image-1715212532562.gif)'
+answer '![](https://images.code.org/a1e5d5a9143348f2c5112eac432b9ff1-image-1715802833266.jpg)'
+question '![](https://images.code.org/d5319a0c592f8f983f40d52a49ebddcc-image-1715212582221.gif)'
+answer '![](https://images.code.org/ca4ccc51afff0f819676b21edd326b7c-image-1715802855383.jpg)'
+
+markdown <<MARKDOWN
+Look at these coding blocks using variables. Match the correct code to the animation.
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+allow_multiple_attempts true

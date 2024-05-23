@@ -70,6 +70,7 @@
 #
 
 require 'digest/md5'
+require 'state_abbr'
 require 'cdo/aws/metrics'
 require 'cdo/shared_constants'
 require_relative '../../legacy/middleware/helpers/user_helpers'
@@ -299,7 +300,7 @@ class User < ApplicationRecord
     self.gender = Policies::Gender.normalize gender
   end
 
-  validate :validate_us_state, if: -> {us_state.present?}
+  validate :validate_us_state, if: :should_validate_us_state?
 
   before_create unless: -> {Policies::ChildAccount.compliant?(self)} do
     Services::ChildAccount.lock_out(self)
@@ -2739,16 +2740,14 @@ class User < ApplicationRecord
 
   # @return [String, nil] the user's US state code in the ISO 3166-2:US standard
   def us_state_code
-    state = student? ? us_state : school_info&.state
+    state = student? ? us_state : school_info&.usa? && school_info&.state
     return if state.blank?
 
-    # {CO: 'Colorado', DC: 'District Of Columbia', ...}
-    state_code_to_name_map = CS.states(:US)
     # Returns `state` if it is a US state code
-    return state.upcase if state_code_to_name_map.key?(state.upcase.to_sym)
+    return state.upcase if us_state_abbr?(state, include_dc: true)
 
     # Returns the code of `state` if it is a US state name
-    state_code_to_name_map.transform_values(&:downcase).key(state.downcase)&.to_s
+    get_us_state_abbr_from_name(state, include_dc: true)
   end
 
   private def account_age_in_years
@@ -2869,10 +2868,6 @@ class User < ApplicationRecord
   # Verifies that the serialized attribute "us_state" is a 2 character string
   # representing a US State or "??" which represents a "N/A" kind of response.
   private def validate_us_state
-    # tracking a user's US State is currently limited to students.
-    return unless user_type == TYPE_STUDENT
-    # us_state is only a required field if the User lives in the US.
-    return unless %w[US RD].include? country_code
     # us_state must be selected.
     if us_state.blank?
       errors.add(:us_state, :blank)
@@ -2882,5 +2877,18 @@ class User < ApplicationRecord
     unless User.us_state_dropdown_options.include?(us_state)
       errors.add(:us_state, :invalid)
     end
+  end
+
+  def us_state_changed?
+    # Check if us_state value will change
+    will_save_change_to_properties? && properties_change&.first&.[]("us_state") != us_state
+  end
+
+  def should_validate_us_state?
+    # tracking a user's US State is currently limited to students.
+    return false unless user_type == TYPE_STUDENT
+    # us_state is only a required field if the User lives in the US.
+    return false unless %w[US RD].include? country_code
+    new_record? || us_state_changed?
   end
 end

@@ -180,6 +180,9 @@ class ProjectsController < ApplicationController
     },
     game_design: {
       name: 'New Game Design Project'
+    },
+    pythonlab: {
+      name: 'New Python Lab Project'
     }
   }.with_indifferent_access.freeze
 
