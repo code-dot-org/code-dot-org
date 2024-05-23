@@ -356,7 +356,7 @@
   "variableSetValue": "You need to set the value of your variable.",
   "variableChangeValue": "The value of your variable didn't change.",
   "variableIncreaseValue": "The value of your variable didn't increase.",
-  "gameDesignMissingDoEffectConditional": "Be sure to add a `do effect` block inside the condition if score = 3`.",
+  "gameDesignMissingDoEffectConditional": "Be sure to add a `do effect` block inside the condition `if score = 3`.",
   "gameDesignEffectInsideConditional": "The effect happened every time you clicked. Make sure to nest the `do effect` block inside an if block that checks for a changing score.",
   "variableBubblesTwo": "Make sure to display two variables on screen.",
   "variableSetValueTwo": "You need to set the value of both your variables.",
