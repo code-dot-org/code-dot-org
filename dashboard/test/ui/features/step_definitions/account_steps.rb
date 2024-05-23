@@ -130,7 +130,6 @@ def create_user(name, url: '/api/test/create_user', **user_opts)
 end
 
 And(/^I create( as a parent)? a (young )?student( in Colorado)?( who has never signed in)? named "([^"]*)"( after CPA exception)?( before CPA exception)?( and go home)?$/) do |parent_created, young, locked, new_account, name, after_cpa_exception, before_cpa_exception, home|
-  require_rails_env
   age = young ? '10' : '16'
   sign_in_count = new_account ? 0 : 2
 
@@ -146,12 +145,15 @@ And(/^I create( as a parent)? a (young )?student( in Colorado)?( who has never s
     user_opts[:user_provided_us_state] = true
   end
 
+  # See Policies::ChildAccount::CPA_CREATED_AT_EXCEPTION_DATE
+  cpa_exception_date = Date.parse('2024-05-26T00:00:00MST')
+
   if after_cpa_exception
-    user_opts[:created_at] = Policies::ChildAccount::CPA_CREATED_AT_EXCEPTION_DATE
+    user_opts[:created_at] = cpa_exception_date
   end
 
   if before_cpa_exception
-    user_opts[:created_at] = Policies::ChildAccount::CPA_CREATED_AT_EXCEPTION_DATE - 1.second
+    user_opts[:created_at] = cpa_exception_date - 1.second
   end
 
   if parent_created
