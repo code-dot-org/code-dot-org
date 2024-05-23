@@ -526,6 +526,23 @@ FactoryBot.define do
       provider {'windowslive'}
     end
 
+    trait :with_facebook_authentication_option do
+      after(:create) do |user|
+        create(:authentication_option,
+          user: user,
+          email: user.email,
+          hashed_email: user.hashed_email,
+          credential_type: AuthenticationOption::FACEBOOK,
+          authentication_id: SecureRandom.uuid,
+          data: {
+            oauth_token: 'some-facebook-token',
+            oauth_refresh_token: 'some-facebook-refresh-token',
+            oauth_token_expiration: '999999'
+          }.to_json
+        )
+      end
+    end
+
     trait :with_google_authentication_option do
       after(:create) do |user|
         create(:authentication_option,
