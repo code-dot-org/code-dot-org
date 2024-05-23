@@ -510,15 +510,6 @@ def create_facilitator(course)
   facilitator
 end
 
-# workshop = Retryable.retryable(on: [ActiveRecord::RecordNotUnique, ActiveRecord::RecordInvalid], tries: 5) do
-#   FactoryBot.create(:workshop, :self_paced,
-#     title: course,
-#     current_lesson_name: current_lesson_name,
-#     percent_completed: percent_completed
-#     finish_url:
-#   )
-# end
-
 And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) (people|facilitators)(.*)$/) do |course, role, name, number, number_type, post_create_actions|
   # Organizer
   organizer =

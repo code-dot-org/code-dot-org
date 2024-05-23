@@ -95,3 +95,28 @@ Feature: Professional Learning landing page
 
     # Sees Workshops table
     And I wait until element "button:contains(Workshop Details)" is visible
+
+  Scenario: Teacher with self-paced PL courses sees relevant content sections
+    Given I create a teacher named "Self-paced Teacher"
+    And I sign in as "Self-paced Teacher" and go home
+    Then I am on "http://studio.code.org/my-professional-learning"
+
+    # Sees Joined Professional Learning Sections section
+    And element "button.ui-test-join-section" is visible
+
+    # Sees Recommended for you section
+    And element "a:contains(Learn more about workshops)" is visible
+    And the href of selector "a:contains(Learn more about workshops)" contains "/professional-learning/middle-high"
+    And element "a:contains(Start professional learning courses)" is visible
+    And the href of selector "a:contains(Start professional learning courses)" contains "/educate/professional-development-online"
+
+    # Starts a self-paced PL course
+    Then I am on "http://studio.code.org/s/self-paced-pl-csd-unit2-1-2024"
+    And I wait until element "a:contains(Try Now)" is visible
+    Then I click selector "a:contains(Try Now)"
+    Then I am on "http://studio.code.org/s/self-paced-pl-csd-unit2-1-2024/lessons/1/levels/1"
+    Then I click selector "button:contains(Continue)"
+    Then I am on "http://studio.code.org/my-professional-learning"
+
+    # Sees Self-Paced Professional Learning Courses table
+    And I wait until element "a:contains(Continue course)" is visible
