@@ -115,6 +115,7 @@ Feature: Professional Learning landing page
     And I wait until element "a:contains(Try Now)" is visible
     Then I click selector "a:contains(Try Now)"
     Then I am on "http://studio.code.org/s/self-paced-pl-csd-unit2-1-2024/lessons/1/levels/1"
+    And I wait until element "button:contains(Continue)" is visible
     Then I click selector "button:contains(Continue)"
     Then I am on "http://studio.code.org/my-professional-learning"
 
