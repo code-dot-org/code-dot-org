@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "k5-ai-data",
-    "serialized_at": "2024-05-23 16:13:28 UTC",
+    "serialized_at": "2024-05-23 21:16:11 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -35,13 +35,13 @@
   "lessons": [
     {
       "key": "Sorting Data",
-      "name": "Sorting Data",
+      "name": "Making Predictions",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "This lesson will introduce students to the fundamentals of Artificial Intelligence (AI) and machine learning by focusing on predictive data models. Starting with a teacher-led demonstration (“we do”) on sorting items by their features using a widget, students will then partner up (“you do”) to apply these concepts by training a model on data they have categorized, in order to understand how AI makes predictions. This hands-on experience will be complemented by discussions on the significance of data categorization and the challenges posed by limited datasets. Students will explore a real-world example where AI predictions have been used to help humans. The lesson aims to demystify AI technology, emphasizing its pattern-based logic rather than perceiving it as magical or random."
+        "overview": "This lesson will introduce students to the fundamentals of Artificial Intelligence (AI) and machine learning by focusing on predictive data models. Students will get hands-on practice with reinforcement learning starting with data that has already been sorted and progressing to making predictions on their own of how to sort items on screen. In the final level, students will try their hand at sorting data on their own and will enlist a partner to predict how the items have been categorized.\n\nThis hands-on experience will be complemented by discussions on the significance of data categorization and the challenges posed by limited datasets. Students will explore a real-world example where AI predictions have been used to help humans. The lesson aims to demystify AI technology, emphasizing its pattern-based logic rather than perceiving it as magical or random.\n"
       },
       "seeding_key": {
         "lesson.key": "Sorting Data",

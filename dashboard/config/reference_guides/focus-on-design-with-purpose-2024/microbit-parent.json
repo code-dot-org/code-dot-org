@@ -1,0 +1,9 @@
+{
+  "key": "microbit-parent",
+  "course_version_key": "2024",
+  "course_offering_key": "focus-on-design-with-purpose",
+  "parent_reference_guide_key": "maker-toolkit",
+  "display_name": "The BBC micro:bit",
+  "content": "These resources reference features specifically on the [BBC micro:bit](https://code.org/maker/microbit)",
+  "position": 21
+}
