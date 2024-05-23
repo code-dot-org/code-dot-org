@@ -24,6 +24,11 @@ class Policies::ChildAccount
     end
   end
 
+  # P20-937 - We had a regression which we have chosen to mitigate by allowing
+  # accounts created before the below date to have their lock-out delayed until
+  # the CAP policy is set to lockout all users.
+  CPA_CREATED_AT_EXCEPTION_DATE = Date.parse('2024-05-26T00:00:00MST')
+
   # The individual US State child account policy configuration
   # max_age: the oldest age of the child at which this policy applies.
   # start_date: the date on which this policy first went into effect.
@@ -50,10 +55,7 @@ class Policies::ChildAccount
   # parent permission before the student can start using their account.
   def self.compliant?(user)
     return true unless parent_permission_required?(user)
-    # CPA Part 2: unlock students created before the policy went into effect
-    # who have requested parental permission but have not yet received approval.
-    return true if ComplianceState.request_sent?(user) && user_predates_policy?(user)
-
+    return true if user_predates_policy?(user)
     ComplianceState.permission_granted?(user)
   end
 
@@ -76,10 +78,13 @@ class Policies::ChildAccount
   # Checks if a user is affected by a state policy but was created prior to the
   # policy going into effect.
   def self.user_predates_policy?(user)
-    parent_permission_required?(user) && (
-      user.created_at < STATE_POLICY[user.us_state][:start_date] ||
+    return false unless parent_permission_required?(user)
+    return false unless state_policy(user)
+    policy_start_date = state_policy(user)[:start_date]
+
+    user.created_at < policy_start_date ||
+      user.created_at < CPA_CREATED_AT_EXCEPTION_DATE ||
       user.authentication_options.any?(&:google?)
-    )
   end
 
   # The date on which the student's account will be locked if the account is not compliant.
@@ -110,6 +115,9 @@ class Policies::ChildAccount
   end
 
   private_class_method def self.state_policy(user)
+    # If the country_code is not set, then us_state value was inherited
+    # from the teacher and we don't trust it.
+    return unless user.country_code
     return unless user.us_state
     STATE_POLICY[user.us_state]
   end

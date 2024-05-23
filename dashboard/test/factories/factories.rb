@@ -411,6 +411,21 @@ FactoryBot.define do
         birthday {Time.zone.today - 13.years}
       end
 
+      trait :with_interpolated_co do
+        us_state {'CO'}
+        country_code {nil}
+      end
+
+      trait :with_interpolated_wa do
+        us_state {'wa'}
+        country_code {nil}
+      end
+
+      trait :with_interpolated_colorado do
+        us_state {'Colorado'}
+        country_code {nil}
+      end
+
       trait :with_parent_permission do
         child_account_compliance_state {Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED}
         child_account_compliance_state_last_updated {DateTime.now}
@@ -426,7 +441,15 @@ FactoryBot.define do
         child_account_compliance_state_last_updated {DateTime.now}
       end
 
-      factory :non_compliant_child, traits: [:U13, :in_colorado] do
+      trait :before_p20_937_exception_date do
+        created_at {Policies::ChildAccount::CPA_CREATED_AT_EXCEPTION_DATE - 1.second}
+      end
+
+      trait :p20_937_exception_date do
+        created_at {Policies::ChildAccount::CPA_CREATED_AT_EXCEPTION_DATE}
+      end
+
+      factory :non_compliant_child, traits: [:U13, :in_colorado, :p20_937_exception_date] do
         factory :locked_out_child do
           child_account_compliance_state {Policies::ChildAccount::ComplianceState::LOCKED_OUT}
           child_account_compliance_state_last_updated {DateTime.now}
