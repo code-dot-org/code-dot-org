@@ -16,6 +16,7 @@ import React from 'react';
 
 import './styles/cdoIDE.scss';
 import Console from './Console';
+import ControlButtons from './ControlButtons';
 import Workspace from './Workspace';
 
 type CodebridgeProps = {
@@ -50,6 +51,7 @@ export const Codebridge = React.memo(
       'info-panel': config.Instructions || InfoPanel,
       workspace: Workspace,
       console: Console,
+      'control-buttons': ControlButtons,
     };
 
     return (
