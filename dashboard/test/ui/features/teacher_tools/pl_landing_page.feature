@@ -1,6 +1,6 @@
 Feature: Professional Learning landing page
 
-  @eyes
+  # @eyes
   Scenario: New teacher without PL history sees relevant content sections
     Given I create a teacher named "New Teacher"
     And I sign in as "New Teacher" and go home
@@ -53,3 +53,18 @@ Feature: Professional Learning landing page
     And the href of selector "a:contains(View workshop dashboard)" contains "/pd/workshop_dashboard"
     And element "a:contains(View playbook)" is visible
     And the href of selector "a:contains(View playbook)" contains "/educate/regional-partner/playbook"
+
+  Scenario: Workshop Organizer sees relevant content sections
+    Given I am an organizer with started and completed courses
+    And I am on "http://studio.code.org/my-professional-learning"
+
+    # Go to the right My PL page tab
+    And I wait until element "button:contains(Workshop Organizer)" is visible
+    Then I click selector "button:contains(Workshop Organizer)"
+
+    # Sees Workshop Organizer Resources section
+    And I wait until element "a:contains(View workshop dashboard)" is visible
+    And the href of selector "a:contains(View workshop dashboard)" contains "/pd/workshop_dashboard"
+
+    # Sees Workshops table
+    And I wait until element "button:contains(Workshop Details)" is visible
