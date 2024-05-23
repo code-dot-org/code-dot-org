@@ -14,7 +14,6 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "focus-on-coding",
-    "has_numbered_units": true,
     "version_year": "2024"
   },
   "resources": [
