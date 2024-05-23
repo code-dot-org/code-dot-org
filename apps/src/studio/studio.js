@@ -3098,8 +3098,9 @@ Studio.displayFeedback = function () {
         !level.projectTemplateLevelName,
       feedbackImage: Studio.feedbackImage,
       twitter: skin.twitterOptions || twitterOptions,
-      // save to the project gallery
-      saveToProjectGallery: saveToProjectGallery,
+      // Do not save to the project gallery because converting Play Lab level to
+      // standalone project is problematic.
+      saveToProjectGallery: false,
       disableSaveToGallery: !isSignedIn,
       message: Studio.message,
       appStrings: appStrings,

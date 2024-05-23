@@ -575,13 +575,16 @@ var projects = (module.exports = {
 
   // Students should not be able to easily see source for embedded applab or
   // gamelab levels.
+  // Hide Share/Remix for Play Lab because converting Play Lab level to standalone project
+  // is problematic.
   shouldHideShareAndRemix() {
     return (
       (appOptions.level && appOptions.level.hideShareAndRemix) ||
       (appOptions.embed &&
         (appOptions.app === 'applab' ||
           appOptions.app === 'gamelab' ||
-          appOptions.app === 'spritelab'))
+          appOptions.app === 'spritelab')) ||
+      appOptions.app === 'studio'
     );
   },
 
