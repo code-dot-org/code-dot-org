@@ -23,6 +23,9 @@ import {personalProjectDataPropType} from './projectConstants';
 import {PROJECT_TYPE_MAP} from './projectTypeMap';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
+const PROJECT_DEFAULT_IMAGE_OVERRIDE = {
+  music: '/shared/images/fill-70x70/courses/logo_music.png',
+};
 
 const THUMBNAIL_SIZE = 65;
 
@@ -308,7 +311,10 @@ export const styles = {
 // Cell formatters.
 const thumbnailFormatter = function (thumbnailUrl, {rowData}) {
   const projectUrl = `/projects/${rowData.type}/${rowData.channel}/edit`;
-  thumbnailUrl = thumbnailUrl || PROJECT_DEFAULT_IMAGE;
+  thumbnailUrl =
+    thumbnailUrl ||
+    PROJECT_DEFAULT_IMAGE_OVERRIDE[rowData.type] ||
+    PROJECT_DEFAULT_IMAGE;
   return (
     <a
       style={tableLayoutStyles.link}

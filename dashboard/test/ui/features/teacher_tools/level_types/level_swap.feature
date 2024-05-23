@@ -17,7 +17,7 @@ Feature: Swapped levels
     Then I wait until element ".instructions-markdown" contains text "Now use a repeat block to make the cell a shell."
 
   @as_student
-  @no_phone
+  @no_mobile
   Scenario: Student with progress sees old version
     Given I complete the level on "http://studio.code.org/s/allthethings/lessons/29/levels/1?level_name=2-3 Maze 1"
     And I complete the level on "http://studio.code.org/s/allthethings/lessons/29/levels/4?level_name=2-3 Artist 1 new"
