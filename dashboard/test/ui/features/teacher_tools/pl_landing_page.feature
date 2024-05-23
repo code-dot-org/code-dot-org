@@ -1,6 +1,6 @@
 Feature: Professional Learning landing page
 
-  # @eyes
+  @eyes
   Scenario: New teacher without PL history sees relevant content sections
     Given I create a teacher named "New Teacher"
     And I sign in as "New Teacher" and go home
@@ -14,7 +14,7 @@ Feature: Professional Learning landing page
 
     # Sees Joined Professional Learning Sections section
     And element "button.ui-test-join-section" is visible
-    And I see no difference for "Joined PL Sections without sections"
+    And I see no difference for "Joined PL Sections section"
 
     # Sees Recommended for you section
     And element "a:contains(Learn more about workshops)" is visible
@@ -22,6 +22,29 @@ Feature: Professional Learning landing page
     And element "a:contains(Start professional learning courses)" is visible
     And the href of selector "a:contains(Start professional learning courses)" contains "/educate/professional-development-online"
     And I see no difference for "PL Recommended for you section"
+    And I close my eyes
+
+  @eyes
+  Scenario: Facilitator sees relevant content sections
+    Given I am a facilitator with started and completed courses
+    And I am on "http://studio.code.org/my-professional-learning"
+    And I open my eyes to test "Facilitator Professional Learning page"
+
+    # Go to the right My PL page tab
+    And I wait until element "button:contains(Facilitator Center)" is visible
+    Then I click selector "button:contains(Facilitator Center)"
+    And I see no difference for "Facilitator Center tab"
+
+    # # Sees Facilitator Resources section
+    And I wait until element "a:contains(View workshop dashboard)" is visible
+    And the href of selector "a:contains(View workshop dashboard)" contains "/pd/workshop_dashboard"
+    And I wait until element "a:contains(View CSF Facilitator Landing page)" is visible
+    And the href of selector "a:contains(View CSF Facilitator Landing page)" contains "/educate/facilitator-landing/CSF"
+    And I see no difference for "Facilitator Resources section"
+
+    # Sees Workshops table
+    And I wait until element "button:contains(Workshop Details)" is visible
+    And I see no difference for "Facilitator workshops table"
     And I close my eyes
 
   Scenario: Instructor sees relevant content sections
