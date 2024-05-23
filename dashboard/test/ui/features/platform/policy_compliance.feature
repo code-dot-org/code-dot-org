@@ -20,8 +20,6 @@ Feature: Policy Compliance and Parental Permission
     Then I wait to see "#lockout-panel-form"
     And element "#permission-status" contains text "Pending"
 
-  # Skipping until P20-939 is fixed.
-  @skip
   Scenario: New under 13 account should be able to provide state and see lockout page to send parental request.
     Given I create a young student who has never signed in named "Sally Student" after CPA exception
     Given I am on "http://studio.code.org/home?forceStudentInterstitial=true"
