@@ -86,8 +86,8 @@ rescue RSpec::Expectations::ExpectationNotMetError
   retry
 end
 
-def create_user(name, url: '/users.json', code: 201, **user_opts)
-  require_rails_env
+# Creates the user and signs them in.
+def create_user(name, url: '/api/test/create_user', **user_opts)
   navigate_to replace_hostname('http://studio.code.org/reset_session')
   Retryable.retryable(on: RSpec::Expectations::ExpectationNotMetError, tries: 3) do
     # Generate the user
@@ -96,23 +96,36 @@ def create_user(name, url: '/users.json', code: 201, **user_opts)
     # Set the parent email to the user email, if we see it
     # in the user options (we generate the email, here)
     if user_opts.key? :parent_email_preference_email
+      user_opts[:parent_email_preference_opt_in_required] = '1'
+      user_opts[:parent_email_preference_opt_in] = 'no'
       user_opts[:parent_email_preference_email] = email
       user_opts[:parent_email_preference_request_ip] = '127.0.0.1'
       user_opts[:parent_email_preference_source] = 'ACCOUNT_SIGN_UP'
     end
 
-    opts = {
-      user_type: 'student',
-      email: email,
-      password: password,
-      password_confirmation: password,
-      name: name,
-      age: '16',
-      terms_of_service_version: '1',
-      sign_in_count: 2
-    }.merge(user_opts)
-    User.create!(**opts)
-    sign_in name
+    if user_opts[:email_preference_opt_in] == 'yes'
+      user_opts[:email_preference_form_kind] = email
+      user_opts[:email_preference_request_ip] = '127.0.0.1'
+      user_opts[:email_preference_source] = 'ACCOUNT_SIGN_UP'
+    end
+
+    browser_request(
+      url: url,
+      method: 'POST',
+      body: {
+        user: {
+          user_type: 'student',
+          email: email,
+          password: password,
+          password_confirmation: password,
+          name: name,
+          age: '16',
+          terms_of_service_version: '1',
+          sign_in_count: 2
+        }.merge(user_opts)
+      },
+      code: 200
+    )
   end
 end
 
@@ -142,8 +155,6 @@ And(/^I create( as a parent)? a (young )?student( in Colorado)?( who has never s
   end
 
   if parent_created
-    user_opts[:parent_email_preference_opt_in_required] = "1"
-    user_opts[:parent_email_preference_opt_in] = "no"
     user_opts[:parent_email_preference_email] = "[user-email]"
   end
 

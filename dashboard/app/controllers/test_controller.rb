@@ -361,4 +361,35 @@ class TestController < ApplicationController
     UserScript.create!(user: current_user, script: unit, completed_at: Time.now)
     head :ok
   end
+
+  # Creates the user and signs them in.
+  def create_user
+    user_opts = params.require(:user).permit(
+      :user_type,
+      :email,
+      :password,
+      :password_confirmation,
+      :name,
+      :age,
+      :username,
+      :terms_of_service_version,
+      :sign_in_count,
+      :parent_email_preference_opt_in_required,
+      :parent_email_preference_opt_in,
+      :parent_email_preference_email,
+      :parent_email_preference_request_ip,
+      :parent_email_preference_source,
+      :email_preference_opt_in,
+      :email_preference_form_kind,
+      :email_preference_request_ip,
+      :email_preference_source,
+      :created_at,
+      :country_code,
+      :us_state,
+      :user_provided_us_state,
+    )
+    user = User.create!(**user_opts)
+    sign_in user
+    head :ok
+  end
 end
