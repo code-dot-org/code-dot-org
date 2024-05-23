@@ -178,8 +178,11 @@ end
 
 And(/^I create a student in the eu named "([^"]*)"$/) do |name|
   create_user(name,
-    data_transfer_agreement_required: '1',
-    data_transfer_agreement_accepted: '1'
+              data_transfer_agreement_accepted: true,
+              data_transfer_agreement_request_ip: '127.0.0.1',
+              data_transfer_agreement_kind: '0',
+              data_transfer_agreement_source: 'ACCOUNT_SIGN_UP',
+              data_transfer_agreement_at: DateTime.now,
   )
 end
 

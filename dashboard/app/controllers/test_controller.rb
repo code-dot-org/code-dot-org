@@ -387,6 +387,11 @@ class TestController < ApplicationController
       :country_code,
       :us_state,
       :user_provided_us_state,
+      :data_transfer_agreement_accepted,
+      :data_transfer_agreement_request_ip,
+      :data_transfer_agreement_kind,
+      :data_transfer_agreement_source,
+      :data_transfer_agreement_at,
     )
     user = User.create!(**user_opts)
     sign_in user
