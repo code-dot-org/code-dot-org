@@ -578,13 +578,14 @@ var projects = (module.exports = {
   // Hide Share/Remix for Play Lab because converting Play Lab level to standalone project
   // is problematic.
   shouldHideShareAndRemix() {
+    const appType = appOptions.app;
     return (
       (appOptions.level && appOptions.level.hideShareAndRemix) ||
       (appOptions.embed &&
-        (appOptions.app === 'applab' ||
-          appOptions.app === 'gamelab' ||
-          appOptions.app === 'spritelab')) ||
-      appOptions.app === 'studio'
+        (appType === 'applab' ||
+          appType === 'gamelab' ||
+          appType === 'spritelab')) ||
+      (appType === 'studio' && appOptions.skinId === 'studio')
     );
   },
 

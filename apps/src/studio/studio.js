@@ -118,13 +118,7 @@ let level;
 let skin;
 
 // These skins can be published as projects.
-const PUBLISHABLE_SKINS = [
-  'gumball',
-  'studio',
-  'iceage',
-  'infinity',
-  'hoc2015',
-];
+const PUBLISHABLE_SKINS = ['gumball', 'iceage', 'infinity', 'hoc2015'];
 
 //TODO: Make configurable.
 studioApp().setCheckForEmptyBlocks(true);
@@ -3081,6 +3075,7 @@ Studio.displayFeedback = function () {
   };
 
   if (!Studio.waitingForReport) {
+    const saveToProjectGallery = PUBLISHABLE_SKINS.includes(skin.id);
     const isSignedIn =
       getStore().getState().currentUser.signInState === SignInState.SignedIn;
     studioApp().displayFeedback({
@@ -3097,13 +3092,12 @@ Studio.displayFeedback = function () {
         !level.projectTemplateLevelName,
       feedbackImage: Studio.feedbackImage,
       twitter: skin.twitterOptions || twitterOptions,
-      // Do not save to the project gallery because converting Play Lab level to
-      // standalone project is problematic.
-      saveToProjectGallery: false,
+      // Save to the project gallery unless 'studio' skin.
+      saveToProjectGallery: saveToProjectGallery,
       disableSaveToGallery: !isSignedIn,
       message: Studio.message,
       appStrings: appStrings,
-      // Currently only true for Artist levels
+      // Currently only true for Artist levels.
       enablePrinting: level.enablePrinting,
     });
   }
