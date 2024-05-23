@@ -283,6 +283,64 @@ module UsersHelper
     user.country_code.presence || request.country.to_s.upcase
   end
 
+  # Retrieve all teacher feedback for the designated set of users in the given
+  # unit, with a single query.
+  # @param [Enumerable<User>] users
+  # @param [Unit] unit
+  # @return [Hash] TeacherFeedbacks by user id by level id
+  # Example return value (where 1,2,3 are user ids and 101, 102 are level ids):
+  # {
+  #   1: {
+  #     101: <TeacherFeedback ...>,
+  #     102: <TeacherFeedback ...>
+  #   },
+  #   2: {
+  #     101: <TeacherFeedback ...>,
+  #     102: <TeacherFeedback ...>
+  #   },
+  #   3: {}
+  # }
+  private def teacher_feedbacks_by_student_by_level(users, unit, teacher_id = nil)
+    initial_hash = users.map {|user| [user.id, {}]}.to_h
+    TeacherFeedback.
+      get_latest_feedbacks_received(users.map(&:id), nil, unit.id, teacher_id).
+      group_by(&:student_id).
+      inject(initial_hash) do |memo, (student_id, teacher_feedbacks)|
+        memo[student_id] = teacher_feedbacks.index_by(&:level_id)
+        memo
+      end
+  end
+
+  # Merge the progress for the specified unit and user into the user_data result hash.
+  private def merge_unit_progress(user_data, user, unit, exclude_level_progress = false)
+    return user_data unless user
+
+    if unit.old_professional_learning_course?
+      user_data[:deeperLearningCourse] = true
+      unit_assignment = Plc::EnrollmentUnitAssignment.find_by(user: user, plc_course_unit: unit.plc_course_unit)
+      if unit_assignment
+        user_data[:focusAreaLessonIds] = unit_assignment.focus_area_lesson_ids
+        user_data[:changeFocusAreaPath] = script_preview_assignments_path unit
+      end
+    end
+
+    unless exclude_level_progress
+      user_levels_by_level = user.user_levels_by_level(unit)
+      teacher_feedback_by_level = teacher_feedbacks_by_student_by_level([user], unit)
+      paired_user_levels = PairedUserLevel.pairs(user_levels_by_level.values.map(&:id))
+      user_data[:completed] = Policies::ScriptActivity.completed?(user, unit)
+      user_data[:progress] = merge_user_progress_by_level(
+        script: unit,
+        user: user,
+        user_levels_by_level: user_levels_by_level,
+        teacher_feedback_by_level: teacher_feedback_by_level[user.id],
+        paired_user_levels: paired_user_levels
+      )
+    end
+
+    user_data
+  end
+
   # Merges and summarizes a user's level progress for a particular unit.
   # @param [Unit] unit
   # @param [User] user
@@ -474,63 +532,5 @@ module UsersHelper
     progress[level.id][:time_spent] = time_sum if time_sum > 0
 
     progress
-  end
-
-  # Retrieve all teacher feedback for the designated set of users in the given
-  # unit, with a single query.
-  # @param [Enumerable<User>] users
-  # @param [Unit] unit
-  # @return [Hash] TeacherFeedbacks by user id by level id
-  # Example return value (where 1,2,3 are user ids and 101, 102 are level ids):
-  # {
-  #   1: {
-  #     101: <TeacherFeedback ...>,
-  #     102: <TeacherFeedback ...>
-  #   },
-  #   2: {
-  #     101: <TeacherFeedback ...>,
-  #     102: <TeacherFeedback ...>
-  #   },
-  #   3: {}
-  # }
-  private def teacher_feedbacks_by_student_by_level(users, unit, teacher_id = nil)
-    initial_hash = users.map {|user| [user.id, {}]}.to_h
-    TeacherFeedback.
-      get_latest_feedbacks_received(users.map(&:id), nil, unit.id, teacher_id).
-      group_by(&:student_id).
-      inject(initial_hash) do |memo, (student_id, teacher_feedbacks)|
-        memo[student_id] = teacher_feedbacks.index_by(&:level_id)
-        memo
-      end
-  end
-
-  # Merge the progress for the specified unit and user into the user_data result hash.
-  private def merge_unit_progress(user_data, user, unit, exclude_level_progress = false)
-    return user_data unless user
-
-    if unit.old_professional_learning_course?
-      user_data[:deeperLearningCourse] = true
-      unit_assignment = Plc::EnrollmentUnitAssignment.find_by(user: user, plc_course_unit: unit.plc_course_unit)
-      if unit_assignment
-        user_data[:focusAreaLessonIds] = unit_assignment.focus_area_lesson_ids
-        user_data[:changeFocusAreaPath] = script_preview_assignments_path unit
-      end
-    end
-
-    unless exclude_level_progress
-      user_levels_by_level = user.user_levels_by_level(unit)
-      teacher_feedback_by_level = teacher_feedbacks_by_student_by_level([user], unit)
-      paired_user_levels = PairedUserLevel.pairs(user_levels_by_level.values.map(&:id))
-      user_data[:completed] = Policies::ScriptActivity.completed?(user, unit)
-      user_data[:progress] = merge_user_progress_by_level(
-        script: unit,
-        user: user,
-        user_levels_by_level: user_levels_by_level,
-        teacher_feedback_by_level: teacher_feedback_by_level[user.id],
-        paired_user_levels: paired_user_levels
-      )
-    end
-
-    user_data
   end
 end
