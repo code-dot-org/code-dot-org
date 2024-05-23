@@ -1,6 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
 import applabMsg from '@cdo/applab/locale';
+
 import EnumPropertyRow from './EnumPropertyRow';
 
 export const TEXT_ALIGNMENT_LEFT = 'left';

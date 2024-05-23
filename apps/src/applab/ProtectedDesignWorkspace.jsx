@@ -1,7 +1,8 @@
-import {ApplabInterfaceMode} from './constants';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
+
+import {ApplabInterfaceMode} from './constants';
 
 class ProtectedDesignWorkspace extends React.Component {
   static propTypes = {

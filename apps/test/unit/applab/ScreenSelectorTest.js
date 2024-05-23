@@ -1,17 +1,19 @@
-import {expect} from '../../util/reconfiguredChai';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
-import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+
+import {reducers} from '@cdo/apps/applab/redux/applab';
+import ScreenSelector from '@cdo/apps/applab/ScreenSelector';
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
-import ScreenSelector from '@cdo/apps/applab/ScreenSelector';
-import {reducers} from '@cdo/apps/applab/redux/applab';
-import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import commonReducers from '@cdo/apps/redux/commonReducers';
+import {setPageConstants} from '@cdo/apps/redux/pageConstants';
+
+import {expect} from '../../util/reconfiguredChai';
 
 describe('The ScreenSelector component', () => {
   beforeEach(() => {

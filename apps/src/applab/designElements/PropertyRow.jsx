@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import color from '../../util/color';
-import * as rowStyle from './rowStyle';
-import * as elementUtils from './elementUtils';
 import * as utils from '../../utils';
+
+import * as elementUtils from './elementUtils';
+import * as rowStyle from './rowStyle';
 
 const LockState = utils.makeEnum('LOCKED', 'UNLOCKED');
 

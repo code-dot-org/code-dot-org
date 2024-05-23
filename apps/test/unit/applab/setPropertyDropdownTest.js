@@ -1,8 +1,10 @@
-import {assert} from '../../util/reconfiguredChai';
 import photoSelect from '@cdo/apps/applab/designElements/photoSelect';
-var testUtils = require('../../util/testUtils');
+
+import {assert} from '../../util/reconfiguredChai';
 
 var setPropertyDropdown = require('@cdo/apps/applab/setPropertyDropdown');
+
+var testUtils = require('../../util/testUtils');
 
 describe('setPropertyDropdown', function () {
   var stripQuotes = setPropertyDropdown.__TestInterface.stripQuotes;

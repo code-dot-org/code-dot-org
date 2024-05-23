@@ -1,8 +1,9 @@
 import RGBColor from 'rgbcolor';
-import {expect} from '../../../util/reconfiguredChai';
 
-import library from '@cdo/apps/applab/designElements/library';
 import {themeOptions, fontFamilyOptions} from '@cdo/apps/applab/constants';
+import library from '@cdo/apps/applab/designElements/library';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('Applab designElements/elementThemes', () => {
   function expectValidFontFamilyThemeValue(element) {

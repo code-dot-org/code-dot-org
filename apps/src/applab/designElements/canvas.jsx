@@ -1,13 +1,15 @@
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import applabMsg from '@cdo/applab/locale';
-import PropertyRow from './PropertyRow';
+
 import BooleanPropertyRow from './BooleanPropertyRow';
-import ZOrderRow from './ZOrderRow';
+import * as elementUtils from './elementUtils';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
-import * as elementUtils from './elementUtils';
-import $ from 'jquery';
+import PropertyRow from './PropertyRow';
+import ZOrderRow from './ZOrderRow';
 
 class CanvasProperties extends React.Component {
   static propTypes = {

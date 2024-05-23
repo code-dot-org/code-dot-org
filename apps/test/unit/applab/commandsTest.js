@@ -1,8 +1,10 @@
-import {expect} from '../../util/reconfiguredChai';
+import $ from 'jquery';
 import sinon from 'sinon';
+
 import {rgb, setSelectionRange, openUrl} from '@cdo/apps/applab/commands';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
-import $ from 'jquery';
+
+import {expect} from '../../util/reconfiguredChai';
 
 describe('rgb command', () => {
   it('returns an rgba string with no alpha', function () {

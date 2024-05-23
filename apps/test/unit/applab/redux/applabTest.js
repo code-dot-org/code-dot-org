@@ -1,14 +1,15 @@
 /** @file Tests for App Lab redux module */
-import {expect, assert} from '../../../util/reconfiguredChai';
+import {ApplabInterfaceMode} from '@cdo/apps/applab/constants';
+import {reducers, actions} from '@cdo/apps/applab/redux/applab';
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
-import {ApplabInterfaceMode} from '@cdo/apps/applab/constants';
-import {reducers, actions} from '@cdo/apps/applab/redux/applab';
+
 import {REDIRECT_RESPONSE} from '../../../../src/applab/redux/applab';
+import {expect, assert} from '../../../util/reconfiguredChai';
 
 describe('App Lab redux module', () => {
   let store;

@@ -1,5 +1,6 @@
 import Immutable from 'immutable';
 import $ from 'jquery';
+
 import {
   sources as sourcesApi,
   channels as channelsApi,

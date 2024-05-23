@@ -1,18 +1,21 @@
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
-import PropertyRow from './PropertyRow';
+
+import i18n from '@cdo/applab/locale';
+
+import designMode from '../designMode';
+import themeValues from '../themeValues';
+
 import BooleanPropertyRow from './BooleanPropertyRow';
+import BorderProperties from './BorderProperties';
 import ColorPickerPropertyRow from './ColorPickerPropertyRow';
-import ZOrderRow from './ZOrderRow';
+import * as elementUtils from './elementUtils';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
-import BorderProperties from './BorderProperties';
-import themeValues from '../themeValues';
-import * as elementUtils from './elementUtils';
-import designMode from '../designMode';
 import elementLibrary from './library';
-import i18n from '@cdo/applab/locale';
+import PropertyRow from './PropertyRow';
+import ZOrderRow from './ZOrderRow';
 
 class PhotoChooserProperties extends React.Component {
   static propTypes = {

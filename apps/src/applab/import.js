@@ -1,9 +1,11 @@
-import PropTypes from 'prop-types';
 import $ from 'jquery';
-import designMode from './designMode';
-import * as elementUtils from './designElements/elementUtils';
-import * as applabConstants from './constants';
+import PropTypes from 'prop-types';
+
 import {assets as assetsApi} from '../clientApi';
+
+import * as applabConstants from './constants';
+import * as elementUtils from './designElements/elementUtils';
+import designMode from './designMode';
 
 let DATA_PREFIX_REGEX = applabConstants.DATA_URL_PREFIX_REGEX;
 

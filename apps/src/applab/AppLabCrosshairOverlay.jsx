@@ -2,7 +2,9 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import CrosshairOverlay from '../templates/CrosshairOverlay';
+
 import {draggedElementDropPoint} from './gridUtils';
 
 export default class AppLabCrosshairOverlay extends React.Component {
