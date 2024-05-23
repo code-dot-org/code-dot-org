@@ -16,7 +16,7 @@ def main
 
   CSV.open("aichat_logs_#{options[:section_id]}_#{options[:date]}.csv", "w") do |csv|
     headers = %w[
-      session_id user_id username name path created_at updated_at
+      session_id user_id username name path level_name created_at updated_at
       selectedModelId temperature systemPrompt retrievalContexts
       status role content
     ]
@@ -35,7 +35,11 @@ def main
 
       level = Level.find(session.level_id)
       script_level = level.script_levels.find_by_script_id(session.script_id)
-      path = script_level.path
+      path = ""
+      if script_level
+        path = script_level.path
+      end
+      level_name = level.name
 
       base_row = [
         session.id,
@@ -43,6 +47,7 @@ def main
         user.username,
         user.name,
         path,
+        level_name,
         session.created_at,
         session.updated_at,
         model_customizations["selectedModelId"],
