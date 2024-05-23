@@ -112,6 +112,18 @@ class Api::V1::AssessmentsController < Api::V1::JSONApiController
     render json: responses_by_student
   end
 
+  # Return results for surveys, which are long-assessment LevelGroup levels with the anonymous property.
+  # At least five students in the section must have submitted answers.  The answers for each contained
+  # sublevel are shuffled randomly.
+  # GET '/dashboardapi/assessments/section_surveys'
+  def section_surveys
+    render json: LevelGroup.get_summarized_survey_results(@script, @section)
+  end
+
+  def section_feedback
+    render json: @script.get_feedback_for_section(@section)
+  end
+
   # Retrieve UserLevel and associated LevelSource objects associated with the
   # given students and assessment script levels. The return value is a nested
   # hash with the following structure:
@@ -263,17 +275,5 @@ class Api::V1::AssessmentsController < Api::V1::JSONApiController
     end
 
     level_result
-  end
-
-  # Return results for surveys, which are long-assessment LevelGroup levels with the anonymous property.
-  # At least five students in the section must have submitted answers.  The answers for each contained
-  # sublevel are shuffled randomly.
-  # GET '/dashboardapi/assessments/section_surveys'
-  def section_surveys
-    render json: LevelGroup.get_summarized_survey_results(@script, @section)
-  end
-
-  def section_feedback
-    render json: @script.get_feedback_for_section(@section)
   end
 end

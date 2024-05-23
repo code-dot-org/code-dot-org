@@ -88,6 +88,27 @@ class Policies::ChildAccount
     state_policy(user).try(:[], :lockout_date)
   end
 
+  # Authentication option types which we consider to be "owned" by the school
+  # the student attends because the school has admin control of the account.
+  SCHOOL_OWNED_TYPES = [AuthenticationOption::CLEVER, AuthenticationOption::LTI_V1].freeze
+
+  # Does the user login using credentials they personally control?
+  # For example, some accounts are created and owned by schools (Clever).
+  def self.personal_account?(user)
+    return false if user.sponsored?
+    # List of credential types which we believe schools have ownership of.
+    # Does the user have an authentication method which is not controlled by
+    # their school? The presence of at least one authentication method which
+    # is owned by the student/parent means this is a "personal account".
+    if user.migrated?
+      user.authentication_options.any? do |option|
+        SCHOOL_OWNED_TYPES.exclude?(option.credential_type)
+      end
+    else
+      SCHOOL_OWNED_TYPES.exclude?(user.provider)
+    end
+  end
+
   private_class_method def self.state_policy(user)
     return unless user.us_state
     STATE_POLICY[user.us_state]
@@ -109,26 +130,5 @@ class Policies::ChildAccount
     return false if student_birthday.since(min_required_age) <= lockout_date
 
     personal_account?(user)
-  end
-
-  # Authentication option types which we consider to be "owned" by the school
-  # the student attends because the school has admin control of the account.
-  SCHOOL_OWNED_TYPES = [AuthenticationOption::CLEVER, AuthenticationOption::LTI_V1].freeze
-
-  # Does the user login using credentials they personally control?
-  # For example, some accounts are created and owned by schools (Clever).
-  def self.personal_account?(user)
-    return false if user.sponsored?
-    # List of credential types which we believe schools have ownership of.
-    # Does the user have an authentication method which is not controlled by
-    # their school? The presence of at least one authentication method which
-    # is owned by the student/parent means this is a "personal account".
-    if user.migrated?
-      user.authentication_options.any? do |option|
-        SCHOOL_OWNED_TYPES.exclude?(option.credential_type)
-      end
-    else
-      SCHOOL_OWNED_TYPES.exclude?(user.provider)
-    end
   end
 end

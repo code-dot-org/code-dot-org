@@ -5,6 +5,82 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   include UsersHelper
   STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
 
+  # This is a sample AuthHash provided by omniauth-clever plugin
+  TEST_CLEVER_STUDENT_DATA = OmniAuth::AuthHash.new(JSON.parse(<<~JSON
+    {
+      "provider": "clever",
+      "uid": "5966ed736b21538e3c000006",
+      "info": {
+        "name": "Elizabeth Smith",
+        "first_name": "Elizabeth",
+        "last_name": "Smith",
+        "user_type": "student"
+      },
+      "credentials": {
+        "token": "faketoken123455678",
+        "expires": false
+      },
+      "extra": {
+        "raw_info": {
+          "me": {
+            "type": "student",
+            "data": {
+              "id": "5966ed736b21538e3c000006",
+              "district": "59484d29ae5dee0001fd3291",
+              "type": "student",
+              "authorized_by": "district"
+            },
+            "links": [
+              {
+                "rel": "self",
+                "uri": "/me"
+              },
+              {
+                "rel": "canonical",
+                "uri": "/v2.1/students/5966ed736b21538e3c000006"
+              },
+              {
+                "rel": "district",
+                "uri": "/v2.1/districts/59484d29ae5dee0001fd3291"
+              }
+            ]
+          },
+          "canonical": {
+            "data": {
+              "created": "2017-07-13T03:48:03.512Z",
+              "district": "59484d29ae5dee0001fd3291",
+              "dob": "2000-05-21T00:00:00.000Z",
+              "enrollments": [],
+              "gender": "M",
+              "hispanic_ethnicity": "",
+              "last_modified": "2017-11-02T00:49:40.504Z",
+              "name": {
+                "first": "Elizabeth",
+                "last": "Smith",
+                "middle": ""
+              },
+              "race": "",
+              "school": "5966ed6cf9d478523c000004",
+              "schools": [
+                "5966ed6cf9d478523c000004"
+              ],
+              "sis_id": "202",
+              "id": "5966ed736b21538e3c000006"
+            },
+            "links": [
+              {
+                "rel": "self",
+                "uri": "/v2.1/students/5966ed736b21538e3c000006"
+              }
+            ]
+          }
+        }
+      }
+    }
+  JSON
+  )
+  )
+
   setup do
     @request.env["devise.mapping"] = Devise.mappings[:user]
     @request.host = CDO.dashboard_hostname
@@ -1673,80 +1749,4 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
         oauth_refresh_token: oauth_hash.credentials.refresh_token
       }
   end
-
-  # This is a sample AuthHash provided by omniauth-clever plugin
-  TEST_CLEVER_STUDENT_DATA = OmniAuth::AuthHash.new(JSON.parse('
-{
-  "provider": "clever",
-  "uid": "5966ed736b21538e3c000006",
-  "info": {
-    "name": "Elizabeth Smith",
-    "first_name": "Elizabeth",
-    "last_name": "Smith",
-    "user_type": "student"
-  },
-  "credentials": {
-    "token": "faketoken123455678",
-    "expires": false
-  },
-  "extra": {
-    "raw_info": {
-      "me": {
-        "type": "student",
-        "data": {
-          "id": "5966ed736b21538e3c000006",
-          "district": "59484d29ae5dee0001fd3291",
-          "type": "student",
-          "authorized_by": "district"
-        },
-        "links": [
-          {
-            "rel": "self",
-            "uri": "/me"
-          },
-          {
-            "rel": "canonical",
-            "uri": "/v2.1/students/5966ed736b21538e3c000006"
-          },
-          {
-            "rel": "district",
-            "uri": "/v2.1/districts/59484d29ae5dee0001fd3291"
-          }
-        ]
-      },
-      "canonical": {
-        "data": {
-          "created": "2017-07-13T03:48:03.512Z",
-          "district": "59484d29ae5dee0001fd3291",
-          "dob": "2000-05-21T00:00:00.000Z",
-          "enrollments": [],
-          "gender": "M",
-          "hispanic_ethnicity": "",
-          "last_modified": "2017-11-02T00:49:40.504Z",
-          "name": {
-            "first": "Elizabeth",
-            "last": "Smith",
-            "middle": ""
-          },
-          "race": "",
-          "school": "5966ed6cf9d478523c000004",
-          "schools": [
-            "5966ed6cf9d478523c000004"
-          ],
-          "sis_id": "202",
-          "id": "5966ed736b21538e3c000006"
-        },
-        "links": [
-          {
-            "rel": "self",
-            "uri": "/v2.1/students/5966ed736b21538e3c000006"
-          }
-        ]
-      }
-    }
-  }
-}
-'
-  )
-  )
 end

@@ -8,6 +8,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   skip_before_action :clear_sign_up_session_vars
 
+  # TODO: figure out how to avoid skipping CSRF verification for Powerschool
+  skip_before_action :verify_authenticity_token, only: :powerschool
+
   # Note: We can probably remove these once we've broken out all providers
   BROKEN_OUT_TYPES = [AuthenticationOption::CLEVER, AuthenticationOption::GOOGLE]
   TYPES_ROUTED_TO_ALL = AuthenticationOption::OAUTH_CREDENTIAL_TYPES - BROKEN_OUT_TYPES
@@ -300,9 +303,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       redirect_to new_user_registration_url
     end
   end
-
-  # TODO: figure out how to avoid skipping CSRF verification for Powerschool
-  skip_before_action :verify_authenticity_token, only: :powerschool
 
   private def extract_powerschool_data(auth)
     # OpenID 2.0 data comes back in a different format compared to most of our other oauth data.
