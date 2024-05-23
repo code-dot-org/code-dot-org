@@ -19,14 +19,17 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
   const levelStartSource = useAppSelector(
     state => state.lab.levelProperties?.source
   );
+  const exemplarSources = useAppSelector(
+    state => state.lab.levelProperties?.exemplarSources
+  );
   // We memoize this object so that it doesn't cause an unexpected re-render.
   const projectStartSource: ProjectSources | undefined = useMemo(
     () => (levelStartSource ? {source: levelStartSource} : undefined),
     [levelStartSource]
   );
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-  const isEditingExemplarMode = getAppOptionsEditingExemplar();
-  const isViewingExemplarMode = getAppOptionsViewingExemplar();
+  const isEditingExemplar = getAppOptionsEditingExemplar();
+  const isViewingExemplar = getAppOptionsViewingExemplar();
 
   const initialSources = useMemo(() => {
     const startSources = projectStartSource || defaultSources;
@@ -34,10 +37,21 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
     if (isStartMode) {
       return startSources;
     }
+    if (isEditingExemplar || isViewingExemplar) {
+      return exemplarSources ? {source: exemplarSources} : startSources;
+    }
 
     const projectSources = labInitialSources;
     return projectSources || startSources;
-  }, [labInitialSources, projectStartSource, defaultSources, isStartMode]);
+  }, [
+    projectStartSource,
+    defaultSources,
+    isStartMode,
+    isEditingExemplar,
+    isViewingExemplar,
+    labInitialSources,
+    exemplarSources,
+  ]);
 
   return initialSources;
 };

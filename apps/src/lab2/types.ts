@@ -150,6 +150,7 @@ export interface LevelProperties {
   referenceLinks?: string[];
   // Exemplars
   exampleSolutions?: string[];
+  exemplarSources?: MultiFileSource;
 }
 
 // Level configuration data used by project-backed labs that don't require

@@ -838,7 +838,7 @@ class Level < ApplicationRecord
   # These properties are usually just the serialized properties for
   # the level, which usually include levelData.  If this level is a
   # StandaloneVideo then we put its properties into levelData.
-  def summarize_for_lab2_properties(script, script_level, current_user)
+  def summarize_for_lab2_properties(script, script_level, current_user, include_exemplar)
     video = specified_autoplay_video&.summarize(false)&.camelize_keys
     properties_camelized = properties.camelize_keys
     properties_camelized[:id] = id
@@ -853,6 +853,9 @@ class Level < ApplicationRecord
     properties_camelized["longInstructions"] = (get_localized_property("long_instructions") || long_instructions) if properties_camelized["longInstructions"]
     if script_level
       properties_camelized[:exampleSolutions] = script_level.get_example_solutions(self, current_user, nil)
+    end
+    if include_exemplar && (current_user&.verified_instructor? || current_user&.permission?(UserPermission::LEVELBUILDER))
+      properties_camelized[:exemplarSources] = try(:exemplar_sources)
     end
     properties_camelized
   end
