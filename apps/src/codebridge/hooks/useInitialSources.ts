@@ -38,6 +38,8 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
       return startSources;
     }
     if (isEditingExemplar || isViewingExemplar) {
+      // If we are viewing exemplars sources and have no exemplar, we show a fallback
+      // page from LabViewsRenderer. We fall back to start sources for editing.
       return exemplarSources ? {source: exemplarSources} : startSources;
     }
 

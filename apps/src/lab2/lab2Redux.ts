@@ -134,8 +134,9 @@ export const setUpWithLevel = createAsyncThunk(
         return;
       }
 
-      // Start mode and editing and viewing exemplars don't use channel id
-      // so we can skip creating a project manager and just set the level data.
+      // If we are in start mode or are editing or viewing exemplars,
+      // we don't use a channel id.
+      // We can skip creating a project manager and just set the level data.
       const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
       if (isStartMode || isViewingExemplar || isEditingExemplar) {
         setProjectAndLevelData(

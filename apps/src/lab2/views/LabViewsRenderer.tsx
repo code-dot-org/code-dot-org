@@ -158,6 +158,8 @@ const LabViewsRenderer: React.FunctionComponent = () => {
           console.warn("Don't know how to render app: " + appName);
           return null;
         }
+        // Show a fallback no exemplar page if we are  trying to view
+        // exemplar but there is not exemplar for this level.
         if (isViewingExemplar && !exemplarSources) {
           return <NoExemplarPage />;
         }
