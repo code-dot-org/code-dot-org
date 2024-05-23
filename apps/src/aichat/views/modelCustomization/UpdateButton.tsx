@@ -1,0 +1,36 @@
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import React, {useCallback} from 'react';
+import {updateAiCustomization} from '../../redux/aichatRedux';
+import {Button} from '@cdo/apps/componentLibrary/button';
+import styles from '../model-customization-workspace.module.scss';
+
+interface UpdateButtonProps {
+  allFieldsDisabled: boolean;
+}
+
+const UpdateButton: React.FunctionComponent<UpdateButtonProps> = ({
+  allFieldsDisabled,
+}) => {
+  const dispatch = useAppDispatch();
+  const onUpdate = useCallback(
+    () => dispatch(updateAiCustomization()),
+    [dispatch]
+  );
+  const saveInProgress = useAppSelector(state => state.aichat.saveInProgress);
+
+  return (
+    <Button
+      text="Update"
+      disabled={allFieldsDisabled || saveInProgress}
+      iconLeft={
+        saveInProgress
+          ? {iconName: 'spinner', animationType: 'spin'}
+          : {iconName: 'edit'}
+      }
+      onClick={onUpdate}
+      className={styles.updateButton}
+    />
+  );
+};
+
+export default UpdateButton;

@@ -36,6 +36,7 @@ import {
   Visibility,
 } from '../types';
 import {getTypedKeys} from '@cdo/apps/types/utils';
+import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 
 const haveDifferentValues = (
   value1: AiCustomizations[keyof AiCustomizations],
@@ -85,6 +86,10 @@ export interface AichatState {
   fieldVisibilities: {[key in keyof AiCustomizations]: Visibility};
   viewMode: ViewMode;
   currentSessionId?: number;
+  // If a save is currently in progress
+  saveInProgress: boolean;
+  // The type of save action being performed (customization update, publish, model card save, etc).
+  currentSaveType: string | undefined;
 }
 
 const initialState: AichatState = {
@@ -96,6 +101,8 @@ const initialState: AichatState = {
   savedAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
   fieldVisibilities: DEFAULT_VISIBILITIES,
   viewMode: ViewMode.EDIT,
+  saveInProgress: false,
+  currentSaveType: undefined,
 };
 
 // THUNKS
@@ -105,14 +112,9 @@ const initialState: AichatState = {
 // output a message to the chat window with the list of customizations that were updated.
 export const updateAiCustomization = createAsyncThunk(
   'aichat/updateAiCustomization',
-  async (_, thunkAPI) => {
-    const rootState = (await thunkAPI.getState()) as RootState;
-    const {currentAiCustomizations, savedAiCustomizations} = rootState.aichat;
-    const {dispatch} = thunkAPI;
-
+  async (_, {dispatch, getState}) => {
     await saveAiCustomization(
-      currentAiCustomizations,
-      savedAiCustomizations,
+      (getState() as RootState).aichat.currentAiCustomizations,
       EVENTS.UPDATE_CHATBOT,
       dispatch
     );
@@ -124,15 +126,10 @@ export const updateAiCustomization = createAsyncThunk(
 // and view its details (temperature, system prompt, etc) in a summary view.
 export const publishModel = createAsyncThunk(
   'aichat/publishModelCard',
-  async (_, thunkAPI) => {
-    const {dispatch} = thunkAPI;
+  async (_, {dispatch, getState}) => {
     dispatch(setModelCardProperty({property: 'isPublished', value: true}));
-
-    const rootState = thunkAPI.getState() as RootState;
-    const {currentAiCustomizations, savedAiCustomizations} = rootState.aichat;
     await saveAiCustomization(
-      currentAiCustomizations,
-      savedAiCustomizations,
+      (getState() as RootState).aichat.currentAiCustomizations,
       EVENTS.PUBLISH_MODEL_CARD_INFO,
       dispatch
     );
@@ -144,21 +141,15 @@ export const publishModel = createAsyncThunk(
 // in the "Publish" tab.
 export const saveModelCard = createAsyncThunk(
   'aichat/saveModelCard',
-  async (_, thunkAPI) => {
-    const {dispatch} = thunkAPI;
-    const rootState = (await thunkAPI.getState()) as RootState;
-    const modelCardInfo =
-      rootState.aichat.currentAiCustomizations.modelCardInfo;
+  async (_, {dispatch, getState}) => {
+    const {currentAiCustomizations} = (getState() as RootState).aichat;
+    const modelCardInfo = currentAiCustomizations.modelCardInfo;
     if (!hasFilledOutModelCard(modelCardInfo)) {
       dispatch(setModelCardProperty({property: 'isPublished', value: false}));
     }
 
-    const {currentAiCustomizations, savedAiCustomizations} = (
-      thunkAPI.getState() as RootState
-    ).aichat;
     await saveAiCustomization(
       currentAiCustomizations,
-      savedAiCustomizations,
       EVENTS.SAVE_MODEL_CARD_INFO,
       dispatch
     );
@@ -177,7 +168,6 @@ const getNewMessageId = () => {
 // model customizations (setup, retrieval, and "publish" tab)
 const saveAiCustomization = async (
   currentAiCustomizations: AiCustomizations,
-  savedAiCustomizations: AiCustomizations,
   eventDescription: string,
   dispatch: ThunkDispatch<unknown, unknown, AnyAction>
 ) => {
@@ -201,51 +191,81 @@ const saveAiCustomization = async (
     },
   };
 
+  // Notify the UI that a save is in progress.
+  dispatch(startSave(eventDescription));
+
   await Lab2Registry.getInstance()
     .getProjectManager()
     ?.save({source: JSON.stringify(trimmedCurrentAiCustomizations)}, true);
+};
 
-  dispatch(setSavedAiCustomizations(trimmedCurrentAiCustomizations));
+// Thunk called after a save has completed successfully.
+// Updates the chat window and reports analytics as necessary.
+export const onSaveComplete =
+  () => (dispatch: AppDispatch, getState: () => RootState) => {
+    const {savedAiCustomizations, currentAiCustomizations, currentSaveType} =
+      getState().aichat;
 
-  const changedProperties = findChangedProperties(
-    savedAiCustomizations,
-    trimmedCurrentAiCustomizations
-  );
-  if (
-    changedProperties.some(property =>
-      [
-        'selectedModelId',
-        'temperature',
-        'systemPrompt',
-        'retrievalContexts',
-      ].includes(property)
-    )
-  ) {
-    dispatch(setNewChatSession());
-  }
-
-  changedProperties.forEach(property => {
-    dispatch(
-      addChatMessage({
-        id: getNewMessageId(),
-        role: Role.MODEL_UPDATE,
-        chatMessageText:
-          AI_CUSTOMIZATIONS_LABELS[property as keyof AiCustomizations],
-        status: Status.OK,
-        timestamp: getCurrentTime(),
-      })
+    const changedProperties = findChangedProperties(
+      savedAiCustomizations,
+      currentAiCustomizations
     );
-    if (eventDescription) {
-      analyticsReporter.sendEvent(
-        eventDescription,
-        {
-          propertyUpdated: property,
-          levelPath: window.location.pathname,
-        },
-        PLATFORMS.BOTH
-      );
+    if (
+      changedProperties.some(property =>
+        [
+          'selectedModelId',
+          'temperature',
+          'systemPrompt',
+          'retrievalContexts',
+        ].includes(property)
+      )
+    ) {
+      dispatch(setNewChatSession());
     }
-  });
+
+    changedProperties.forEach(property => {
+      dispatch(
+        addChatMessage({
+          id: getNewMessageId(),
+          role: Role.MODEL_UPDATE,
+          chatMessageText:
+            AI_CUSTOMIZATIONS_LABELS[property as keyof AiCustomizations],
+          status: Status.OK,
+          timestamp: getCurrentTime(),
+        })
+      );
+
+      if (currentSaveType) {
+        analyticsReporter.sendEvent(
+          currentSaveType,
+          {
+            propertyUpdated: property,
+            levelPath: window.location.pathname,
+          },
+          PLATFORMS.BOTH
+        );
+      }
+    });
+
+    // Update our last saved customizations to match the current customizations
+    dispatch(setSavedAiCustomizations(currentAiCustomizations));
+    // Notify the UI that the save is complete.
+    dispatch(endSave());
+  };
+
+// Thunk called when a save has failed.
+export const onSaveFail = () => (dispatch: AppDispatch) => {
+  dispatch(
+    addChatMessage({
+      id: getNewMessageId(),
+      role: Role.ERROR,
+      chatMessageText: 'Error updating project. Please try again.',
+      status: Status.ERROR,
+      timestamp: getCurrentTime(),
+    })
+  );
+  // Notify the UI that the save is complete.
+  dispatch(endSave());
 };
 
 // This thunk's callback function submits a user's chat content and AI customizations to
@@ -383,7 +403,8 @@ const aichatSlice = createSlice({
       // and start a new session, see clearChatMessages.
       if (
         messageToRemovePosition < 0 ||
-        updatedMessages[messageToRemovePosition].role !== Role.MODEL_UPDATE
+        (updatedMessages[messageToRemovePosition].role !== Role.MODEL_UPDATE &&
+          updatedMessages[messageToRemovePosition].role !== Role.ERROR)
       ) {
         return;
       }
@@ -500,6 +521,14 @@ const aichatSlice = createSlice({
       };
       state.currentAiCustomizations.modelCardInfo = updatedModelCardInfo;
     },
+    startSave(state, action: PayloadAction<string>) {
+      state.saveInProgress = true;
+      state.currentSaveType = action.payload;
+    },
+    endSave(state) {
+      state.saveInProgress = false;
+      state.currentSaveType = undefined;
+    },
   },
   extraReducers: builder => {
     builder.addCase(submitChatContents.fulfilled, state => {
@@ -550,6 +579,9 @@ export const selectAllFieldsHidden = createSelector(
   allFieldsHidden
 );
 
+// Actions not to be used outside of this file
+const {startSave} = aichatSlice.actions;
+
 registerReducers({aichat: aichatSlice.reducer});
 export const {
   addChatMessage,
@@ -566,4 +598,5 @@ export const {
   setSavedAiCustomizations,
   setAiCustomizationProperty,
   setModelCardProperty,
+  endSave,
 } = aichatSlice.actions;
