@@ -16,8 +16,8 @@ export class DCDO {
    * due to the caching behavior of the page. Analyze the HTTP headers of the pages you are
    * interested in to understand what kind of caching they use and if that will be a concern.
    * @param {string} key The key for the DCDO config to lookup.
-   * @param {object} defaultValue The value to return if the given key is not defined in DCDO.
-   * @return {object} The value for the given key. Uses the defaultValue if no key found.
+   * @param {object | boolean} defaultValue The value to return if the given key is not defined in DCDO.
+   * @return {object | boolean} The value for the given key. Uses the defaultValue if no key found.
    */
   get(key, defaultValue = undefined) {
     if (key && key in this.configs) {

@@ -23,7 +23,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
   end
 
   test "job succeeds on ai-enabled level with tsv response type" do
-    EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
+    AiRubricConfig.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
 
     # create a project
     channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
@@ -45,7 +45,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
   end
 
   test "job succeeds on ai-enabled level with json response type" do
-    EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
+    AiRubricConfig.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
 
     # create a project
     channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
@@ -67,7 +67,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
   end
 
   test "job succeeds on ai-enabled level without confidence exact json" do
-    EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
+    AiRubricConfig.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
 
     # create a project
     channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
@@ -89,7 +89,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
   end
 
   test "job fails on non-ai level" do
-    EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns(nil)
+    AiRubricConfig.stubs(:get_lesson_s3_name).with(@script_level).returns(nil)
 
     # create a project (we still build a rubric evaluation record first, which means that check is first)
     channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
@@ -104,7 +104,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
   end
 
   test "job fails if channel token does not exist" do
-    EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
+    AiRubricConfig.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
 
     exception = assert_raises RuntimeError do
       EvaluateRubricJob.perform_now(user_id: @student.id, requester_id: @student.id, script_level_id: @script_level.id)
@@ -113,7 +113,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
   end
 
   test "job fails if project source code not found" do
-    EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
+    AiRubricConfig.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
 
     # create a project
     channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
@@ -129,7 +129,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
   end
 
   test "job fails if rubric not found" do
-    EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
+    AiRubricConfig.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
     @rubric.learning_goals.each do |lg|
       LearningGoalAiEvaluation.where(learning_goal_id: lg.id).map(&:destroy)
     end
@@ -150,7 +150,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
   end
 
   test "job fails when the code contains profanity" do
-    EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
+    AiRubricConfig.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
 
     # create a project
     channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
@@ -180,7 +180,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
   end
 
   test "job fails when the code contains PII violations" do
-    EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
+    AiRubricConfig.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
 
     # create a project
     channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
@@ -211,7 +211,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
 
   test "job is retried when the proxy server returns a 429" do
     # Perform an otherwise successful run
-    EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
+    AiRubricConfig.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
 
     # Create a project
     channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
@@ -223,8 +223,32 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
 
     stub_get_openai_evaluations(status: 429)
 
+    # The superclass, ApplicationJob, logs metrics around all jobs.
+    # Those calls must be stubbed to test metrics for this job.
+    Cdo::Metrics.stubs(:push).with(
+      ApplicationJob::METRICS_NAMESPACE,
+      anything
+    )
+
+    # ensure RateLimit metric is logged
+    Cdo::Metrics.expects(:push).with(
+      AiRubricMetrics::AI_RUBRIC_METRICS_NAMESPACE,
+      all_of(
+        includes_metrics(RateLimit: 1),
+        includes_dimensions(:RateLimit, Environment: CDO.rack_env)
+      )
+    )
+
+    # ensure firehose event is logged
+    FirehoseClient.instance.expects(:put_record).with do |stream, data|
+      data[:study] == AiRubricMetrics::AI_RUBRICS_FIREHOSE_STUDY &&
+        data[:event] == 'rate-limit' &&
+        JSON.parse(data[:data_json])['agent'].nil? &&
+        stream == :analysis
+    end
+
     # Run the job (and track attempts)
-    assert_performed_jobs EvaluateRubricJob::RETRIES_ON_RATE_LIMIT do
+    assert_performed_jobs EvaluateRubricJob::ATTEMPTS_ON_RATE_LIMIT do
       perform_enqueued_jobs do
         EvaluateRubricJob.perform_later(
           user_id: @student.id,
@@ -237,7 +261,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
 
   test "job is retried when the proxy server times out" do
     # Perform an otherwise successful run
-    EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
+    AiRubricConfig.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
 
     # Create a project
     channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
@@ -247,10 +271,140 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
 
     stub_lesson_s3_data
 
-    stub_get_openai_evaluations(status: 429, raises: Net::ReadTimeout)
+    stub_get_openai_evaluations(raises: Net::ReadTimeout)
+
+    # The superclass, ApplicationJob, logs metrics around all jobs.
+    # Those calls must be stubbed to test metrics for this job.
+    Cdo::Metrics.stubs(:push).with(
+      ApplicationJob::METRICS_NAMESPACE,
+      anything
+    )
+
+    # ensure TimeoutError metric is logged
+    Cdo::Metrics.expects(:push).with(
+      AiRubricMetrics::AI_RUBRIC_METRICS_NAMESPACE,
+      all_of(
+        includes_metrics(TimeoutError: 1),
+        includes_dimensions(:TimeoutError, Environment: CDO.rack_env)
+      )
+    )
+
+    # ensure firehose event is logged
+    FirehoseClient.instance.expects(:put_record).with do |stream, data|
+      data[:study] == AiRubricMetrics::AI_RUBRICS_FIREHOSE_STUDY &&
+        data[:event] == 'timeout-error' &&
+        JSON.parse(data[:data_json])['agent'].nil? &&
+        stream == :analysis
+    end
 
     # Run the job (and track attempts)
-    assert_performed_jobs EvaluateRubricJob::RETRIES_ON_TIMEOUT do
+    assert_performed_jobs EvaluateRubricJob::ATTEMPTS_ON_TIMEOUT_ERROR do
+      perform_enqueued_jobs do
+        EvaluateRubricJob.perform_later(
+          user_id: @student.id,
+          requester_id: @student.id,
+          script_level_id: @script_level.id
+        )
+      end
+    end
+  end
+
+  test 'job is retried when proxy server returns 503' do
+    # Perform an otherwise successful run
+    AiRubricConfig.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
+
+    # Create a project
+    channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
+    channel_id = channel_token.channel
+
+    stub_project_source_data(channel_id)
+
+    stub_lesson_s3_data
+
+    # the stub response currently returns a json object, so just make sure that
+    # response contains "openai" rather than going through the trouble of composing
+    # a more accurate response representing a 503 error.
+    stub_get_openai_evaluations(status: 503, message: 'OpenAI')
+
+    # The superclass, ApplicationJob, logs metrics around all jobs.
+    # Those calls must be stubbed to test metrics for this job.
+    Cdo::Metrics.stubs(:push).with(
+      ApplicationJob::METRICS_NAMESPACE,
+      anything
+    )
+
+    # ensure ServiceUnavailable metric is logged
+    Cdo::Metrics.expects(:push).with(
+      AiRubricMetrics::AI_RUBRIC_METRICS_NAMESPACE,
+      all_of(
+        includes_metrics(ServiceUnavailable: 1),
+        includes_dimensions(:ServiceUnavailable, Environment: CDO.rack_env, Agent: 'openai')
+      )
+    )
+
+    # ensure firehose event is logged
+    FirehoseClient.instance.expects(:put_record).with do |stream, data|
+      data[:study] == AiRubricMetrics::AI_RUBRICS_FIREHOSE_STUDY &&
+        data[:event] == 'service-unavailable' &&
+        JSON.parse(data[:data_json])['agent'] == 'openai' &&
+        stream == :analysis
+    end
+
+    # Run the job (and track attempts)
+    assert_performed_jobs EvaluateRubricJob::ATTEMPTS_ON_SERVICE_UNAVAILABLE do
+      perform_enqueued_jobs do
+        EvaluateRubricJob.perform_later(
+          user_id: @student.id,
+          requester_id: @student.id,
+          script_level_id: @script_level.id
+        )
+      end
+    end
+  end
+
+  test 'job is retried when proxy server returns 504' do
+    # Perform an otherwise successful run
+    AiRubricConfig.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
+
+    # Create a project
+    channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
+    channel_id = channel_token.channel
+
+    stub_project_source_data(channel_id)
+
+    stub_lesson_s3_data
+
+    # the stub response currently returns a json object, so just make sure that
+    # response contains "openai" rather than going through the trouble of composing
+    # a more accurate response representing a 504 error.
+    stub_get_openai_evaluations(status: 504, message: 'OpenAI')
+
+    # The superclass, ApplicationJob, logs metrics around all jobs.
+    # Those calls must be stubbed to test metrics for this job.
+    Cdo::Metrics.stubs(:push).with(
+      ApplicationJob::METRICS_NAMESPACE,
+      anything
+    )
+
+    # ensure GatewayTimeout metric is logged
+    Cdo::Metrics.expects(:push).with(
+      AiRubricMetrics::AI_RUBRIC_METRICS_NAMESPACE,
+      all_of(
+        includes_metrics(GatewayTimeout: 1),
+        includes_dimensions(:GatewayTimeout, Environment: CDO.rack_env, Agent: 'openai')
+      )
+    )
+
+    # ensure firehose event is logged
+    FirehoseClient.instance.expects(:put_record).with do |stream, data|
+      data[:study] == AiRubricMetrics::AI_RUBRICS_FIREHOSE_STUDY &&
+        data[:event] == 'gateway-timeout' &&
+        JSON.parse(data[:data_json])['agent'] == 'openai' &&
+        stream == :analysis
+    end
+
+    # Run the job (and track attempts)
+    assert_performed_jobs EvaluateRubricJob::ATTEMPTS_ON_GATEWAY_TIMEOUT do
       perform_enqueued_jobs do
         EvaluateRubricJob.perform_later(
           user_id: @student.id,
@@ -262,7 +416,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
   end
 
   test "job records REQUEST_TOO_LARGE on http status 413" do
-    EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
+    AiRubricConfig.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
 
     # create a project
     channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
@@ -284,7 +438,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
 
   test "metrics for tokens used are logged" do
     # Perform an otherwise successful run
-    EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
+    AiRubricConfig.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
 
     # Create a project
     channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
@@ -313,7 +467,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
 
     # Expect metrics to be logged for the AI evaluation
     Cdo::Metrics.expects(:push).with(
-      EvaluateRubricJob::AI_RUBRIC_METRICS_NAMESPACE,
+      AiRubricMetrics::AI_RUBRIC_METRICS_NAMESPACE,
       all_of(
         includes_metrics(TotalTokens: 123),
         includes_dimensions(:TotalTokens, Environment: CDO.rack_env, Agent: 'openai')
@@ -321,7 +475,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     )
 
     Cdo::Metrics.expects(:push).with(
-      EvaluateRubricJob::AI_RUBRIC_METRICS_NAMESPACE,
+      AiRubricMetrics::AI_RUBRIC_METRICS_NAMESPACE,
       all_of(
         includes_metrics(CompletionTokens: 100),
         includes_dimensions(:CompletionTokens, Environment: CDO.rack_env, Agent: 'openai')
@@ -329,7 +483,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     )
 
     Cdo::Metrics.expects(:push).with(
-      EvaluateRubricJob::AI_RUBRIC_METRICS_NAMESPACE,
+      AiRubricMetrics::AI_RUBRIC_METRICS_NAMESPACE,
       all_of(
         includes_metrics(PromptTokens: 23),
         includes_dimensions(:PromptTokens, Environment: CDO.rack_env, Agent: 'openai')
@@ -387,7 +541,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       'temperature' => '0.2',
       'response-type' => response_type,
     }.to_json
-    path_prefix = EvaluateRubricJob::S3_AI_RELEASE_PATH
+    path_prefix = AiRubricConfig::S3_AI_RELEASE_PATH
     bucket = {
       "#{path_prefix}fake-lesson-s3-name/system_prompt.txt" => 'fake-system-prompt',
       "#{path_prefix}fake-lesson-s3-name/standard_rubric.csv" => 'fake-standard-rubric',
@@ -407,7 +561,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       ->(context) do
         key = context.params[:key]
         obj = bucket[key]
-        raise EvaluateRubricJob::StubNoSuchKey.new(key) unless obj
+        raise AiRubricConfig::StubNoSuchKey.new(key) unless obj
         {body: StringIO.new(obj)}
       end
     )
@@ -419,10 +573,10 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       }
     )
 
-    EvaluateRubricJob.any_instance.stubs(:s3_client).returns(s3_client)
+    AiRubricConfig.stubs(:s3_client).returns(s3_client)
   end
 
-  private def stub_get_openai_evaluations(code: 'fake-code', status: 200, raises: nil, metadata: {}, response_type: 'tsv')
+  private def stub_get_openai_evaluations(code: 'fake-code', status: 200, raises: nil, metadata: {}, response_type: 'tsv', message: 'message')
     raise "invalid response type #{response_type}" unless ['tsv', 'json'].include? response_type
     expected_examples = [
       ['fake-code-1', 'fake-response-1'],
@@ -465,7 +619,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     response = stub(
       body: {metadata: metadata, data: fake_ai_evaluations}.to_json,
       code: status,
-      message: 'message',
+      message: message,
       request: request,
       success?: status == 200
     )
@@ -475,7 +629,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       uri,
       body: URI.encode_www_form(expected_form_data),
       headers: {'Content-Type' => 'application/x-www-form-urlencoded'},
-      timeout: 120
+      timeout: EvaluateRubricJob::AIPROXY_API_TIMEOUT
     )
 
     if raises

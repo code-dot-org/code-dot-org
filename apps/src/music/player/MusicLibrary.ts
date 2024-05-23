@@ -71,7 +71,7 @@ export default class MusicLibrary {
     return this.libraryJson.path;
   }
 
-  setCurrentPackId(packId: string) {
+  setCurrentPackId(packId: string | null) {
     this.currentPackId = packId;
   }
 
@@ -245,7 +245,7 @@ export default class MusicLibrary {
     const folder = this.getFolderForFolderId(this.currentPackId);
     // Read key from the folder, or the first sound that has a key if not present on the folder.
     return (
-      folder?.key || folder?.sounds.find(sound => sound.key !== undefined)?.key
+      folder?.key ?? folder?.sounds.find(sound => sound.key !== undefined)?.key
     );
   }
 }
@@ -306,6 +306,7 @@ export interface SoundFolder {
   type?: SoundFolderType;
   path: string;
   imageSrc: string;
+  color?: string;
   restricted?: boolean;
   sounds: SoundData[];
   bpm?: number;

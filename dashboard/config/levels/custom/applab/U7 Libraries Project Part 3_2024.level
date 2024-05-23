@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2024-01-12T21:40:50.000Z",
   "level_num": "custom",
@@ -78,7 +79,7 @@
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
     "beginner_mode": "false",
-    "fail_on_lint_errors": "true",
+    "fail_on_lint_errors": "false",
     "long_instructions": "Use this level to write your library.",
     "parent_level_id": 19901,
     "mini_rubric": "false",
@@ -91,9 +92,8 @@
     "ai_enabled": "false",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-01-12T21:40:50.184+00:00\",\"changed\":[\"cloned from \\\"U7 Libraries Project Part 3_2023\\\"\"],\"cloned_from\":\"U7 Libraries Project Part 3_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-01-12T21:40:50.184+00:00\",\"changed\":[\"cloned from \\\"U7 Libraries Project Part 3_2023\\\"\"],\"cloned_from\":\"U7 Libraries Project Part 3_2023\"},{\"changed_at\":\"2024-05-14 20:44:31 +0000\",\"changed\":[\"code_functions\",\"fail_on_lint_errors\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

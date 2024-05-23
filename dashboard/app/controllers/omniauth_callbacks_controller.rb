@@ -1,13 +1,18 @@
 require 'cdo/shared_cache'
 require 'honeybadger/ruby'
+require 'services/lti'
+require 'policies/lti'
 
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   include UsersHelper
 
   skip_before_action :clear_sign_up_session_vars
 
+  # TODO: figure out how to avoid skipping CSRF verification for Powerschool
+  skip_before_action :verify_authenticity_token, only: :powerschool
+
   # Note: We can probably remove these once we've broken out all providers
-  BROKEN_OUT_TYPES = [AuthenticationOption::CLEVER, AuthenticationOption::GOOGLE]
+  BROKEN_OUT_TYPES = [AuthenticationOption::CLEVER, AuthenticationOption::GOOGLE, AuthenticationOption::FACEBOOK]
   TYPES_ROUTED_TO_ALL = AuthenticationOption::OAUTH_CREDENTIAL_TYPES - BROKEN_OUT_TYPES
 
   # GET /users/auth/clever/callback
@@ -22,10 +27,30 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
   end
 
+  # GET /users/auth/facebook/callback
+  def facebook
+    user = find_user_by_credential
+    # If the user is in the LTI account linking flow, link the account before signing in.
+    if DCDO.get('lti_account_linking_enabled', false) && user && Policies::Lti.lti_registration_in_progress?(session)
+      user&.update_oauth_credential_tokens auth_hash
+      Services::Lti::AccountLinker.call(user: user, session: session)
+      sign_in_and_redirect user and return
+    end
+
+    return connect_provider if should_connect_provider?
+    login
+  end
+
   # GET /users/auth/google_oauth2/callback
   def google_oauth2
     user = find_user_by_credential
     user&.update_oauth_credential_tokens auth_hash
+
+    # If the user is in the LTI account linking flow, link the account before signing in.
+    if DCDO.get('lti_account_linking_enabled', false) && user && Policies::Lti.lti_registration_in_progress?(session)
+      Services::Lti::AccountLinker.call(user: user, session: session)
+      sign_in_and_redirect user and return
+    end
 
     # Redirect to open roster dialog on home page if user just authorized access
     # to Google Classroom courses and rosters
@@ -281,11 +306,17 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   private def register_new_user(user)
     PartialRegistration.persist_attributes(session, user)
-    redirect_to new_user_registration_url
-  end
 
-  # TODO: figure out how to avoid skipping CSRF verification for Powerschool
-  skip_before_action :verify_authenticity_token, only: :powerschool
+    if DCDO.get('student-email-post-enabled', false)
+      @form_data = {
+        email: user.email
+      }
+
+      render 'omniauth/redirect', {layout: false}
+    else
+      redirect_to new_user_registration_url
+    end
+  end
 
   private def extract_powerschool_data(auth)
     # OpenID 2.0 data comes back in a different format compared to most of our other oauth data.

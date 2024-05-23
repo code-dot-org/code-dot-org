@@ -8,14 +8,15 @@ import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
 import Lab2Registry from '../Lab2Registry';
 import {
-  LabState,
   setUpWithLevel,
   setUpWithoutLevel,
   shouldHideShareAndRemix,
 } from '../lab2Redux';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import {getLevelPropertiesPath} from '@cdo/apps/code-studio/progressReduxSelectors';
-import {ProgressState} from '@cdo/apps/code-studio/progressRedux';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {
+  getCurrentScriptLevelId,
+  getLevelPropertiesPath,
+} from '@cdo/apps/code-studio/progressReduxSelectors';
 import header from '@cdo/apps/code-studio/header';
 import {clearHeader} from '@cdo/apps/code-studio/headerRedux';
 import {AppName} from '../types';
@@ -25,22 +26,24 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
   channelId,
   appName,
 }) => {
-  const currentLevelId = useSelector(
-    (state: {progress: ProgressState}) => state.progress.currentLevelId
+  const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
+  const userId = useAppSelector(
+    state => state.progress.viewAsUserId || undefined
   );
-  const scriptId = useSelector(
-    (state: {progress: ProgressState}) => state.progress.scriptId || undefined
+  const scriptId = useAppSelector(
+    state => state.progress.scriptId || undefined
   );
+  const scriptLevelId = useSelector(getCurrentScriptLevelId);
 
-  const isStandaloneProjectLevel = useSelector(
-    (state: {lab: LabState}) => state.lab.levelProperties?.isProjectLevel
+  const isStandaloneProjectLevel = useAppSelector(
+    state => state.lab.levelProperties?.isProjectLevel
   );
   const hideShareAndRemix = useSelector(shouldHideShareAndRemix);
-  const loadedChannelId = useSelector(
-    (state: {lab: LabState}) => state.lab.channel && state.lab.channel.id
+  const loadedChannelId = useAppSelector(
+    state => state.lab.channel && state.lab.channel.id
   );
-  const isOwnerOfChannel = useSelector(
-    (state: {lab: LabState}) => state.lab.channel && state.lab.channel.isOwner
+  const isOwnerOfChannel = useAppSelector(
+    state => state.lab.channel && state.lab.channel.isOwner
   );
 
   const levelPropertiesPath = useSelector(getLevelPropertiesPath);
@@ -62,7 +65,9 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
       promise = dispatch(
         setUpWithLevel({
           levelId: parseInt(currentLevelId),
+          userId,
           scriptId,
+          scriptLevelId,
           levelPropertiesPath,
           channelId,
         })
@@ -70,7 +75,7 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
     } else if (channelId && appName) {
       // Otherwise, if we have a channel id, set up the lab using the channel id.
       // This path should only be used for lab pages that don't have a level, such as
-      // /projectbeats. App name also must be provided if using this path.
+      // /projectbeats previously. App name also must be provided if using this path.
       promise = dispatch(setUpWithoutLevel({channelId, appName}));
     } else if (channelId || appName) {
       console.warn(
@@ -87,8 +92,10 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
     appName,
     currentLevelId,
     scriptId,
+    scriptLevelId,
     levelPropertiesPath,
     dispatch,
+    userId,
   ]);
 
   useEffect(() => {

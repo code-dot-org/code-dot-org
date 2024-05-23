@@ -5,33 +5,26 @@ description 'description here'
 markdown <<MARKDOWN
 # Teaching Interactive Animations and Games
 
-
-
 #### Welcome! This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. 
-
 
 <img src="https://images.code.org/3297ca57e23d5349eff36b91b811901e-image-1700511533861.18.48 PM.png" alt="Image of an Alien Game made in Game Lab" style="border-radius:0px; float: right; height: 250px; clear: both; margin: 20px 20px 20px 0;">
 
+## **Take the Pre-Survey**
 
-## In this module, you will:
+#### Code.org values and is responsive to feedback. Please fill out this short pre-survey to  tell us about who you are and how we can best support you.
 
-* ##### Get an introduction to Interactive Animations and Games.
-* ##### Practice key concepts included in the unit.
-* ##### Engage with App Lab.
-* ##### Explore end of chapter projects.
+<a class="btn btn-large btn-primary" href="https://studio.code.org/form/csd_selfpaced_pl_presurvey" target="blank" rel="noopener noreferrer">Take the Pre-Survey</a>
+<br> 
 
-## Take the pre-survey
+### **In this module, you will:**
 
-##### Code.org values and is responsive to feedback. Please fill out <a href="https://studio.code.org/form/csd_selfpaced_pl_presurvey" target="blank" rel="noopener noreferrer">this short pre-survey</a> to  tell us about who you are and how we can best support you.
+* #### Get an introduction to Interactive Animations and Games.
+* #### Practice key concepts included in the unit.
+* #### Engage with App Lab.
+* #### Explore end-of-chapter projects.
+<br>
 
-<a class="btn btn-large btn-primary" href="https://studio.code.org/form/csd_selfpaced_pl_presurvey" target="blank" rel="noopener noreferrer">Take the pre-survey</a>
-
-
-### **Suggested time:** 120 minutes
-
-## Let's get started!
-
-<div style="clear:both"/>
+#### **Suggested time:** 120 minutes
 
 
 MARKDOWN

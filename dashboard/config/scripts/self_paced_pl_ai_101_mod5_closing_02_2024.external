@@ -5,5 +5,17 @@ description 'description here'
 markdown <<MARKDOWN
 # Additional Practice and Resources
 
-#### This section is not available for the pilot.
+* #### <a href="http://bit.ly/AIRespUse" target="_blank">Guide to Ensuring a Responsible Approach to AI</a> from Code.org.
+* #### <a href="https://docs.google.com/document/d/1N2C5ymAYQ2JR0NKoPQ2v5IK9Ig77t-1-juVfnWMpNYw/edit#heading=h.347m63z77ukz" target="_blank">Scripts to Talk About Bias in AI</a> from Code.org.
+* #### <a href="https://www.ajl.org/" target="_blank">Algorithmic Justice League</a> Leaders of a cultural movement towards equitable and accountable AI.
+* #### <a href="https://www.cip.uw.edu/misinfoday/" target="_blank">MisinfoDay</a> An annual media literacy educational event.
+* #### <a href="https://www.survivalofthebestfit.com/" target="_blank">Survival of the Best Fit</a> An AI hiring algorithm simulation.
+* #### <a href="http://gendershades.org/overview.html" target="_blank">The Gender Shades Project</a> A project that evaluates the accuracy of AI powered gender classification products.
+* #### <a href="https://www.youtube.com/watch?time_continue=3&v=AmUC4m6w1wo" target="_blank">Fake Obama Created Using AI Video Tool</a> from Youtube.
+* #### <a href="https://iste.org/ai " target="_blank">ISTE</a> for additional information about AI in education.
+
+## Take it Further
+#### Write an AI Policy for your classroom or school, or modify an existing technology policy to include guidance on AI tools. Check out <a href="https://www.teachai.org/" target="_blank">Teach AI</a> for an example student agreement on the use of AI as well as sample guidance on the use of AI.
+
+#### Share the draft policy with other staff or administrators to get feedback.
 MARKDOWN

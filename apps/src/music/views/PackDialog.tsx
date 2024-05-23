@@ -200,28 +200,30 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
 
           <div className={styles.body}>{musicI18n.packDialogBody()}</div>
 
-          <div className={styles.packs}>
-            {folders.map((folder, folderIndex) => {
-              return (
-                <PackEntry
-                  key={folderIndex}
-                  playingPreview={playingPreviewState}
-                  folder={folder}
-                  isSelected={folder.id === selectedFolderId}
-                  onSelect={handleSelectFolder}
-                  onPreview={onPreview}
-                />
-              );
-            })}
+          <div className={styles.packsContainer}>
+            <div className={styles.packs}>
+              {folders.map((folder, folderIndex) => {
+                return (
+                  <PackEntry
+                    key={folderIndex}
+                    playingPreview={playingPreviewState}
+                    folder={folder}
+                    isSelected={folder.id === selectedFolderId}
+                    onSelect={handleSelectFolder}
+                    onPreview={onPreview}
+                  />
+                );
+              })}
+            </div>
           </div>
 
           <div className={styles.buttonContainer}>
             <button
               onClick={setPackToDefault}
-              className={styles.skip}
+              className={classNames('skip-button', styles.skip)}
               type="button"
             >
-              Skip
+              {musicI18n.skip()}
             </button>
             <button
               onClick={setPackToSelectedFolder}
@@ -233,7 +235,7 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
               disabled={!selectedFolderId}
               type="button"
             >
-              Continue
+              {musicI18n.continue()}
             </button>
           </div>
         </div>

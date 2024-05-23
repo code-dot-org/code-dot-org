@@ -1,5 +1,5 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import {assert, expect} from '../../../util/reconfiguredChai';
 import LessonExtras from '@cdo/apps/code-studio/components/lessonExtras/LessonExtras';
 import {bonusLevels} from './lessonExtrasTestHelpers';

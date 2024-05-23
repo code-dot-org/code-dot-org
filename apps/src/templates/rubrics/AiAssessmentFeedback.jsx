@@ -1,17 +1,20 @@
 import React, {useContext, useState} from 'react';
-import i18n from '@cdo/locale';
-import style from './rubrics.module.scss';
-import {aiEvaluationShape} from './rubricShapes';
-import HttpClient from '@cdo/apps/util/HttpClient';
+
+import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {
   BodyFourText,
   StrongText,
   EmText,
 } from '@cdo/apps/componentLibrary/typography';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import Button from '@cdo/apps/templates/Button';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import i18n from '@cdo/locale';
+
 import AiAssessmentFeedbackContext from './AiAssessmentFeedbackContext';
+import {aiEvaluationShape} from './rubricShapes';
+
+import style from './rubrics.module.scss';
 
 export function submitAiFeedback(values) {
   const baseUrl = '/learning_goal_ai_evaluation_feedbacks';

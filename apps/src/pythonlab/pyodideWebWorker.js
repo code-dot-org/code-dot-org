@@ -3,7 +3,7 @@ import {
   importPackagesFromFiles,
   writeSource,
 } from './pythonHelpers/pythonScriptUtils';
-import {DEFAULT_FOLDER_ID} from '../weblab2/CDOIDE/constants';
+import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {loadPyodide, version} from 'pyodide';
 
 async function loadPyodideAndPackages() {
