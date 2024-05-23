@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import dataStyles from './data-styles.module.scss';
 
 class EditLink extends React.Component {

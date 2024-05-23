@@ -13,9 +13,10 @@ export class CdoFieldBitmap extends FieldBitmap {
   constructor(
     value?: number[][] | null,
     options?: object | null,
-    config?: object | null
+    config?: {fieldHeight?: number} | null
   ) {
     super(value, options, config);
+    this.fieldHeight = config?.fieldHeight;
   }
 
   /**
@@ -36,5 +37,12 @@ export class CdoFieldBitmap extends FieldBitmap {
   fromXml(fieldElement: Element): void {
     const bitmap = JSON.parse(fieldElement.textContent || '[]');
     this.setValue(bitmap);
+  }
+
+  setValue(newValue: number[][], fireChangeEvent = true) {
+    super.setValue(newValue, fireChangeEvent);
+    if (newValue?.length) {
+      this.pixelSize = this.fieldHeight / newValue.length;
+    }
   }
 }

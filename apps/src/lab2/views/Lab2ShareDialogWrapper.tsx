@@ -5,6 +5,7 @@ import {useSelector} from 'react-redux';
 import {LabState} from '../lab2Redux';
 import {isSignedIn as getIsSignedIn} from '@cdo/apps/templates/currentUserRedux';
 import popupWindow from '@cdo/apps/code-studio/popup-window';
+import {LABS_USING_NEW_SHARE_DIALOG} from '@cdo/apps/lab2/constants';
 
 /**
  * Wrapper around ShareDialog that plumbs in the necessary props for a Lab2 project.
@@ -51,7 +52,7 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
     return null;
   }
 
-  if (appType === 'music') {
+  if (LABS_USING_NEW_SHARE_DIALOG.includes(appType)) {
     if (!isOpen) {
       return null;
     }

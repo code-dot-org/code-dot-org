@@ -27,3 +27,5 @@ export enum PERMISSIONS {
 }
 
 export const START_SOURCES = 'start_sources';
+
+export const LABS_USING_NEW_SHARE_DIALOG = ['music', 'pythonlab'];
