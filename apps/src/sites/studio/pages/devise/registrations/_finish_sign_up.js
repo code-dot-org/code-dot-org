@@ -268,7 +268,7 @@ $(document).ready(() => {
       if (isInSchoolAssociationExperiment) {
         ReactDOM.render(
           <div style={{padding: 10}}>
-            <SchoolDataInputs />
+            <SchoolDataInputs usIp={usIp} />
           </div>,
           schoolInfoMountPoint
         );

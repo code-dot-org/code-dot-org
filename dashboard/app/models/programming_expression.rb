@@ -179,7 +179,7 @@ class ProgrammingExpression < ApplicationRecord
       blockName: block_name,
       categoryKey: programming_environment_category&.key,
       programmingEnvironmentName: programming_environment.name,
-      environmentEditorLanguage: programming_environment.editor_language,
+      environmentLanguageType: programming_environment.editor_language,
       imageUrl: image_url,
       videoKey: video_key,
       shortDescription: short_description || '',

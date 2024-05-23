@@ -29,6 +29,7 @@
       }
     },
     "long_instructions": "## Welcome to Python Lab\r\n\r\nPress the Run button and see what happens.",
+    "hide_share_and_remix": "true",
     "reference_links": [
       "/courses/csa-2023/guides/instantiating-objects"
     ],

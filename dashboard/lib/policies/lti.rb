@@ -231,4 +231,9 @@ class Policies::Lti
   def self.feedback_available?(user)
     user.teacher? && lti?(user) && user.created_at <= 2.days.ago
   end
+
+  # Check if a partial registration is in progress for an LTI user.
+  def self.lti_registration_in_progress?(session)
+    PartialRegistration.in_progress?(session) && PartialRegistration.get_provider(session) == AuthenticationOption::LTI_V1
+  end
 end

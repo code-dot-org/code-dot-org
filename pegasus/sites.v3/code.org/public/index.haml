@@ -16,8 +16,9 @@ style_min: true
 =inline_css 'homepage.css'
 -# Comment this out when we are out of HoC season
 -# =inline_css '/generated/hoc-banner.css'
--# Comment this out when 'pl-launch-hero-banner' is set to 'false'
-=inline_css '/generated/pl-hero-banner.css'
+-# Apply this stylesheet when 'pl-launch-hero-banner' is set to 'true'
+- if !!DCDO.get('pl-launch-hero-banner', false)
+  =inline_css '/generated/pl-hero-banner.css'
 -# TODO: Remove this after the Music Lab launch is over
 =inline_css '/generated/music-lab-hero-banner.css'
 

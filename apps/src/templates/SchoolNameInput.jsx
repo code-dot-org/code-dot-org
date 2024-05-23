@@ -6,8 +6,10 @@ import i18n from '@cdo/locale';
 
 import style from './school-association.module.scss';
 
+const SCHOOL_NAME = 'schoolName';
 export default function SchoolNameInput({fieldNames}) {
-  const [schoolName, setSchoolName] = useState('');
+  const detectedName = sessionStorage.getItem(SCHOOL_NAME) || '';
+  const [schoolName, setSchoolName] = useState(detectedName);
 
   return (
     <label>
@@ -19,6 +21,7 @@ export default function SchoolNameInput({fieldNames}) {
         name={fieldNames.schoolName}
         onChange={e => {
           setSchoolName(e.target.value);
+          sessionStorage.setItem(SCHOOL_NAME, e.target.value);
         }}
         value={schoolName}
       />
