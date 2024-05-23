@@ -84,6 +84,19 @@ Feature: BubbleChoice
     And I wait for 4 seconds
     Then I verify progress for the sublevel with selector ".uitest-bubble-choice:eq(0) .progress-bubble:first" is "perfect"
 
+    # View progress from BubbleChoice sublevel activity page
+    Given I am on "http://studio.code.org/s/allthethings/lessons/52/levels/8/sublevel/1"
+    
+    # Dismiss the dialog
+    And I click selector "#x-close" once I see it
+    And I wait until element "#x-close" is not visible
+    
+    # Teacher has not completed level, so make sure it is not shown as complete
+    Then I verify progress for the sublevel with selector ".teacher-panel .progress-bubble:first" is "not_tried"
+    When I click selector ".teacher-panel table td:contains(Alice)" once I see it
+    And I wait until element "#lab2-aichat" is visible
+    Then I verify progress for the sublevel with selector ".teacher-panel .progress-bubble:first" is "perfect"
+
   Scenario: Navigating between a Lab2 sublevel and another Lab2 level
     Given I create a teacher-associated student named "Alice"
     
