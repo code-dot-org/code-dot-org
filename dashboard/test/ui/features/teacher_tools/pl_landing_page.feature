@@ -36,7 +36,7 @@ Feature: Professional Learning landing page
     Then I click selector "button:contains(Facilitator Center)"
     And I see no difference for "Facilitator Center tab"
 
-    # # Sees Facilitator Resources section
+    # Sees Facilitator Resources section
     And I wait until element "a:contains(View workshop dashboard)" is visible
     And the href of selector "a:contains(View workshop dashboard)" contains "/pd/workshop_dashboard"
     And I wait until element "a:contains(View CSF Facilitator Landing page)" is visible
@@ -78,7 +78,7 @@ Feature: Professional Learning landing page
     And element "a:contains(View playbook)" is visible
     And the href of selector "a:contains(View playbook)" contains "/educate/regional-partner/playbook"
 
-    # # Sees Workshops table
+    # Sees Workshops table
     And I wait until element "button:contains(Workshop Details)" is visible
 
   Scenario: Workshop Organizer sees relevant content sections
@@ -96,7 +96,7 @@ Feature: Professional Learning landing page
     # Sees Workshops table
     And I wait until element "button:contains(Workshop Details)" is visible
 
-  Scenario: Teacher with self-paced PL courses sees relevant content sections
+  Scenario: Teacher with Self-paced PL courses sees relevant content sections
     Given I create a teacher named "Self-paced Teacher"
     And I sign in as "Self-paced Teacher" and go home
     Then I am on "http://studio.code.org/my-professional-learning"
