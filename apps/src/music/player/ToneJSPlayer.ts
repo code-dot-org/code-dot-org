@@ -281,20 +281,6 @@ class ToneJSPlayer implements AudioPlayer {
       player.toDestination();
     }
 
-    const startPosition = sample.playbackPosition;
-    const currentTime = this.getCurrentPlaybackPosition();
-    if (startPosition < currentTime && startPosition - currentTime > -0.01) {
-      console.log(`Offset: ${startPosition - currentTime}`);
-      console.log(
-        `Sample time ${startPosition}; Current time ${currentTime}. Adjusting start time.`
-      );
-      console.log(
-        `start transport time: ${this.playbackTimeToTransportTime(
-          startPosition
-        )}`
-      );
-      console.log(`current transport time: ${Transport.position}`);
-    }
     player
       .sync()
       .start(this.playbackTimeToTransportTime(sample.playbackPosition));
