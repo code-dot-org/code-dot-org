@@ -119,6 +119,16 @@ Given(/^I am an organizer with started and completed courses$/) do
   GHERKIN
 end
 
+Given(/^I am a program manager with started and completed courses$/) do
+  random_name = "TestProgramManager" + SecureRandom.hex[0..9]
+  steps <<~GHERKIN
+    And I am a program manager named "#{random_name}" for regional partner "Test Partner"
+    And I create a workshop for course "CS Fundamentals" organized by "#{random_name}" with 5 people and start it
+    And I create a workshop for course "CS Fundamentals" organized by "#{random_name}" with 5 people and end it
+    And I create a workshop for course "CS Fundamentals" organized by "#{random_name}" with 5 people
+  GHERKIN
+end
+
 Given(/^I am a teacher who has just followed a workshop certificate link$/) do
   test_teacher_name = "TestTeacher - Certificate Test"
   require_rails_env
@@ -499,6 +509,15 @@ def create_facilitator(course)
 
   facilitator
 end
+
+# workshop = Retryable.retryable(on: [ActiveRecord::RecordNotUnique, ActiveRecord::RecordInvalid], tries: 5) do
+#   FactoryBot.create(:workshop, :self_paced,
+#     title: course,
+#     current_lesson_name: current_lesson_name,
+#     percent_completed: percent_completed
+#     finish_url:
+#   )
+# end
 
 And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) (people|facilitators)(.*)$/) do |course, role, name, number, number_type, post_create_actions|
   # Organizer

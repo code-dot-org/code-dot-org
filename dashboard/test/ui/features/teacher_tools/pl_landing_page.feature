@@ -1,3 +1,4 @@
+@no_mobile
 Feature: Professional Learning landing page
 
   @eyes
@@ -62,7 +63,7 @@ Feature: Professional Learning landing page
     And I wait until element "button:contains(Create a section)" is visible
 
   Scenario: Regional Partner sees relevant content sections
-    Given I am a program manager
+    Given I am a program manager with started and completed courses
     And I am on "http://studio.code.org/my-professional-learning"
 
     # Go to the right My PL page tab
@@ -76,6 +77,9 @@ Feature: Professional Learning landing page
     And the href of selector "a:contains(View workshop dashboard)" contains "/pd/workshop_dashboard"
     And element "a:contains(View playbook)" is visible
     And the href of selector "a:contains(View playbook)" contains "/educate/regional-partner/playbook"
+
+    # # Sees Workshops table
+    And I wait until element "button:contains(Workshop Details)" is visible
 
   Scenario: Workshop Organizer sees relevant content sections
     Given I am an organizer with started and completed courses
