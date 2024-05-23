@@ -12,7 +12,12 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   skip_before_action :verify_authenticity_token, only: :powerschool
 
   # Note: We can probably remove these once we've broken out all providers
-  BROKEN_OUT_TYPES = [AuthenticationOption::CLEVER, AuthenticationOption::GOOGLE, AuthenticationOption::FACEBOOK]
+  BROKEN_OUT_TYPES = [
+    AuthenticationOption::CLEVER,
+    AuthenticationOption::GOOGLE,
+    AuthenticationOption::FACEBOOK,
+    AuthenticationOption::MICROSOFT,
+  ]
   TYPES_ROUTED_TO_ALL = AuthenticationOption::OAUTH_CREDENTIAL_TYPES - BROKEN_OUT_TYPES
 
   # GET /users/auth/clever/callback
@@ -30,13 +35,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # GET /users/auth/facebook/callback
   def facebook
     user = find_user_by_credential
-    # If the user is in the LTI account linking flow, link the account before signing in.
-    if DCDO.get('lti_account_linking_enabled', false) && user && Policies::Lti.lti_registration_in_progress?(session)
-      user&.update_oauth_credential_tokens auth_hash
-      Services::Lti::AccountLinker.call(user: user, session: session)
-      sign_in_and_redirect user and return
-    end
+    user&.update_oauth_credential_tokens auth_hash
 
+    return link_accounts user if user && should_link_accounts?
     return connect_provider if should_connect_provider?
     login
   end
@@ -46,11 +47,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     user = find_user_by_credential
     user&.update_oauth_credential_tokens auth_hash
 
-    # If the user is in the LTI account linking flow, link the account before signing in.
-    if DCDO.get('lti_account_linking_enabled', false) && user && Policies::Lti.lti_registration_in_progress?(session)
-      Services::Lti::AccountLinker.call(user: user, session: session)
-      sign_in_and_redirect user and return
-    end
+    return link_accounts user if user && should_link_accounts?
 
     # Redirect to open roster dialog on home page if user just authorized access
     # to Google Classroom courses and rosters
@@ -62,6 +59,16 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     else
       sign_up_google_oauth2
     end
+  end
+
+  # GET /users/auth/microsoft_v2_auth/callback
+  def microsoft_v2_auth
+    user = find_user_by_credential
+    user&.update_oauth_credential_tokens auth_hash
+
+    return link_accounts user if user && should_link_accounts?
+    return connect_provider if should_connect_provider?
+    login
   end
 
   # All remaining providers
@@ -518,5 +525,17 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     return errors.first unless errors.empty?
     I18n.t('auth.unable_to_connect_provider', provider: I18n.t("auth.#{auth_option.credential_type}"))
+  end
+
+  # Determine whether to link a new LTI auth option to an existing account
+  # Not to be confused with the connect_provider flow
+  private def should_link_accounts?
+    DCDO.get('lti_account_linking_enabled', false) && Policies::Lti.lti_registration_in_progress?(session)
+  end
+
+  # For linking new LTI auth options to existing accounts
+  private def link_accounts(user)
+    Services::Lti::AccountLinker.call(user: user, session: session)
+    sign_in_and_redirect user and return
   end
 end

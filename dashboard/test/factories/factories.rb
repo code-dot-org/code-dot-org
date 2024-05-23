@@ -583,6 +583,23 @@ FactoryBot.define do
       end
     end
 
+    trait :with_microsoft_authentication_option do
+      after(:create) do |user|
+        create(:authentication_option,
+          user: user,
+          email: user.email,
+          hashed_email: user.hashed_email,
+          credential_type: AuthenticationOption::MICROSOFT,
+          authentication_id: SecureRandom.uuid,
+          data: {
+            oauth_token: 'some-microsoft-token',
+            oauth_refresh_token: 'some-microsoft-refresh-token',
+            oauth_token_expiration: '999999'
+          }.to_json
+        )
+      end
+    end
+
     trait :with_clever_authentication_option do
       after(:create) do |user|
         create(:authentication_option,
