@@ -30,7 +30,6 @@ module Metrics
         event_value = event_name if event_value.nil?
         enabled_experiments = get_enabled_experiments && user.present? ? user.get_active_experiment_names : nil
         managed_test_environment = CDO.running_web_application? && CDO.test_system?
-        user = '' if user.nil?
 
         if CDO.rack_env?(:development)
           log_event_to_stdout(user: user, event_name: event_name, event_value: event_value, metadata: metadata, enabled_experiments: enabled_experiments)
