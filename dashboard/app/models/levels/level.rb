@@ -203,16 +203,13 @@ class Level < ApplicationRecord
   def available_callouts(script_level)
     if custom?
       if callout_json.present?
-        return JSON.parse(callout_json).map do |callout_definition|
-          i18n_key = "data.callouts.#{name}.#{callout_definition['localization_key']}"
-          callout_text = (should_localize? &&
-            I18n.t(i18n_key, default: nil)) ||
-              callout_definition['callout_text']
+        callouts_i18n = should_localize? ? I18n.t(name, scope: %i[data callouts], default: {}).with_indifferent_access : {}
 
+        return JSON.parse(callout_json).map do |callout_definition|
           Callout.new(
             element_id: callout_definition['element_id'],
             localization_key: callout_definition['localization_key'],
-            callout_text: callout_text,
+            callout_text: callouts_i18n[callout_definition['localization_key']] || callout_definition['callout_text'],
             qtip_config: callout_definition['qtip_config'].try(:to_json),
             on: callout_definition['on']
           )
