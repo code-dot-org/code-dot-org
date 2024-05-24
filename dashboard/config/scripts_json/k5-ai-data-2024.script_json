@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "k5-ai-data",
-    "serialized_at": "2024-05-23 21:16:11 UTC",
+    "serialized_at": "2024-05-23 22:49:15 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1602,6 +1602,16 @@
   ],
   "vocabularies": [
     {
+      "key": "accurate",
+      "word": "Accurate",
+      "definition": "Another way to say \"correct\"",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "accurate"
+      }
+    },
+    {
       "key": "artificial_intelligence_a_i_",
       "word": "Artificial Intelligence (A.I.) ",
       "definition": "A way to make computers and machines learn and make decisions by themselves",
@@ -1755,6 +1765,12 @@
       "seeding_key": {
         "lesson.key": "Sorting Data",
         "vocabulary.key": "training_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Training AI",
+        "vocabulary.key": "accurate"
       }
     },
     {

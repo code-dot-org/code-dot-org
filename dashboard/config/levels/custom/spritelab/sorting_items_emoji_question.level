@@ -60,7 +60,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-05-23T16:03:45.933+00:00\",\"changed\":[\"cloned from \\\"sorting_items_emoji\\\"\"],\"cloned_from\":\"sorting_items_emoji\"},{\"changed_at\":\"2024-05-23 16:03:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-23 16:09:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-23 16:11:33 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-23T16:03:45.933+00:00\",\"changed\":[\"cloned from \\\"sorting_items_emoji\\\"\"],\"cloned_from\":\"sorting_items_emoji\"},{\"changed_at\":\"2024-05-23 16:03:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-23 16:09:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-23 16:11:33 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-23 22:49:03 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -84,7 +84,7 @@
                       <field name="ANIMATION_NAME">"emoji-disco"</field>
                       <value name="LOCATION">
                         <block type="gamelab_location_picker">
-                          <field name="LOCATION">{"x":264,"y":316}</field>
+                          <field name="LOCATION">{"x":317,"y":259}</field>
                         </block>
                       </value>
                       <next>
@@ -108,7 +108,7 @@
                                   <field name="ANIMATION_NAME">"emoji-fire"</field>
                                   <value name="LOCATION">
                                     <block type="gamelab_location_picker">
-                                      <field name="LOCATION">{"x":209,"y":261}</field>
+                                      <field name="LOCATION">{"x":204,"y":226}</field>
                                     </block>
                                   </value>
                                   <next>
@@ -124,7 +124,7 @@
                                           <field name="ANIMATION_NAME">"emoji-happy"</field>
                                           <value name="LOCATION">
                                             <block type="gamelab_location_picker">
-                                              <field name="LOCATION">{"x":319,"y":259}</field>
+                                              <field name="LOCATION">{"x":318,"y":205}</field>
                                             </block>
                                           </value>
                                           <next>

@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2024-05-20 20:50:36 UTC",
+    "serialized_at": "2024-05-23 22:15:20 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2173,7 +2173,8 @@
       "key": "2e40f91f-6032-45f0-8916-a71ced24020b",
       "position": 1,
       "properties": {
-        "description": " | Slide                                                                                                        | Lesson Guide                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |\n| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide0.png)   | <p><a href=\"https://docs.google.com/presentation/d/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/template/preview\" target=\"_blank\">Click here to access slides<br></a></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide1.png)   | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide2.png)   | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide3.png)   | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide4.png)   | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide5.png)   | <p><i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> <strong>Vocabulary:</strong> Read aloud the vocabulary words written in the slide.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide6.png)   | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read aloud the objectives written on the slide<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide7.png)   | <p><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Sprites are objects that have different attributes or properties. The object is like a car that has different properties like size, color, make, model, and year. Or it’s like a dog that has a size, breed, age, color. Each sprite can be a little different and you can set the properties with code.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide8.png)   | <p><i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> <strong>Vocabulary:</strong> You will choose the costume the sprite starts with and you can code the costume to change whenever you want in the program or game.<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide9.png)   | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> How would you describe this sprite scene? If you wanted someone to create this scene for you on a computer what instructions would they need?<br></p><p><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should identify both sprites in this project, describe their behaviors (movements), and also notice there is a background. Give students time to brainstorm ideas. If they aren’t sure what to say, clarify that you are just asking them to state observations about what they see.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide10.png)  | <p><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Let’s look at these instructions line by line<br></p><p><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation to reveal each new line of the instructions<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide11.png)  | <p><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This is the code that was used to make this scene. Let’s read through it together. The computer always reads code in the sequence (order) it is written from top to bottom.<br><br><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the code one block at a time starting at the top. Point to each block and each image as you go. Make a note about sequence and how we couldn't put the behavior block before the make sprite block because the computer reads code form top to bottom accentuating the remark above.<br><br><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What is the same or different about our instructions and this code?<br></p><p><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students will notice the code sequence was similar to the instructions. They will see each part was specifically mentioned (background, penguin, fire box, and the penguin’s movement). They will also see how the coding blocks describe what the code will do, for example “sprite begins patrolling” makes it clear that this sprite will start a “patrolling” behavior.<br><br></p>|"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Key Vocabulary slide\n\n**Vocabulary:** Read aloud the vocabulary words written in the slide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**:Lesson Objectives slide\n\n**Do This:** Read aloud the objectives written on the slide",
+        "name": "Lesson Introduction"
       },
       "seeding_key": {
         "activity_section.key": "2e40f91f-6032-45f0-8916-a71ced24020b",
@@ -2181,9 +2182,80 @@
       }
     },
     {
+      "key": "27e914b0-15df-45b4-ac75-ab0c6843b7c0",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Key Vocabulary slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "27e914b0-15df-45b4-ac75-ab0c6843b7c0",
+        "lesson_activity.key": "c1704535-76ab-45c6-a17a-72238efa9f2a"
+      }
+    },
+    {
+      "key": "72c8c5f2-5bec-44b2-9fb6-12a7501c526e",
+      "position": 3,
+      "properties": {
+        "description": "\n\nSprites are objects that have different attributes or properties. The object is like a car that has different properties like size, color, make, model, and year. Or it’s like a dog that has a size, breed, age, color. Each sprite can be a little different and you can set the properties with code.",
+        "name": "Sprite Review",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "72c8c5f2-5bec-44b2-9fb6-12a7501c526e",
+        "lesson_activity.key": "c1704535-76ab-45c6-a17a-72238efa9f2a"
+      }
+    },
+    {
+      "key": "1c505748-e699-4fc0-b464-70f02437b1f0",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Key Vocabulary slide\n\n\n**Vocabulary:** You will choose the costume the sprite starts with and you can code the costume to change whenever you want in the program or game.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Discuss slide\n\n**Discuss:** How would you describe this sprite scene? If you wanted someone to create this scene for you on a computer what instructions would they need?\n\n**Discussion Goal:** Students should identify both sprites in this project, describe their behaviors (movements), and also notice there is a background. Give students time to brainstorm ideas. If they aren’t sure what to say, clarify that you are just asking them to state observations about what they see.\n\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "1c505748-e699-4fc0-b464-70f02437b1f0",
+        "lesson_activity.key": "c1704535-76ab-45c6-a17a-72238efa9f2a"
+      }
+    },
+    {
+      "key": "a9cda988-5341-47e5-8118-f11502daaa5e",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Reflect slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "a9cda988-5341-47e5-8118-f11502daaa5e",
+        "lesson_activity.key": "c1704535-76ab-45c6-a17a-72238efa9f2a"
+      }
+    },
+    {
+      "key": "9ccb066c-350f-483c-abdb-5b2ab575e394",
+      "position": 6,
+      "properties": {
+        "description": "Let’s look at these instructions line by line.\n\nThis is the code that was used to make this scene. Let’s read through it together. The computer always reads code in the sequence (order) it is written from top to bottom.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9ccb066c-350f-483c-abdb-5b2ab575e394",
+        "lesson_activity.key": "c1704535-76ab-45c6-a17a-72238efa9f2a"
+      }
+    },
+    {
+      "key": "72453013-8c98-4edb-8bd0-4365fc691037",
+      "position": 7,
+      "properties": {
+        "description": "**Do This:** Read the code one block at a time starting at the top. Point to each block and each image as you go. Make a note about sequence and how we couldn't put the behavior block before the make sprite block because the computer reads code form top to bottom accentuating the remark above.\n\n**Discuss:** What is the same or different about our instructions and this code?\n\n**Discussion Goal:** Students will notice the code sequence was similar to the instructions. They will see each part was specifically mentioned (background, penguin, fire box, and the penguin’s movement). They will also see how the coding blocks describe what the code will do, for example “sprite begins patrolling” makes it clear that this sprite will start a “patrolling” behavior.",
+        "name": "Code Review"
+      },
+      "seeding_key": {
+        "activity_section.key": "72453013-8c98-4edb-8bd0-4365fc691037",
+        "lesson_activity.key": "c1704535-76ab-45c6-a17a-72238efa9f2a"
+      }
+    },
+    {
       "key": "f521469e-438f-434d-9679-26c753a00050",
       "position": 1,
       "properties": {
+        "name": "Game Design Setup",
         "progression_name": "Game Design Setup"
       },
       "seeding_key": {
@@ -2192,9 +2264,38 @@
       }
     },
     {
-      "key": "0bd377da-15e0-4060-a106-80f84280ca13",
+      "key": "92dbd97e-e6ee-452d-b374-e80f48548159",
       "position": 2,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Level 1 Video slide\n\n**Do This:** Play the video for students full group.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "In Levels 2-16, students will be following instructions and working at their own pace. Here are a few tips that should help students while they're working through the levels."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "92dbd97e-e6ee-452d-b374-e80f48548159",
+        "lesson_activity.key": "296ca1ae-ccf6-40e3-acb4-d2b3b1f6d424"
+      }
+    },
+    {
+      "key": "60fdefc7-032b-45ba-ae7d-08b19bf85a76",
+      "position": 3,
+      "properties": {
+        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Levels 2-7 Skill Building slide\n\n**Do This:** Transition students to their devices. Have them go to Level 2. Remind them to follow the instructions on each level, click on the light bulb for hints and read the feedback in the yellow box under the instructions if something is not quite right in their code.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "60fdefc7-032b-45ba-ae7d-08b19bf85a76",
+        "lesson_activity.key": "296ca1ae-ccf6-40e3-acb4-d2b3b1f6d424"
+      }
+    },
+    {
+      "key": "0bd377da-15e0-4060-a106-80f84280ca13",
+      "position": 4,
+      "properties": {
+        "name": "Sprite Behaviors",
         "progression_name": "Sprite Behaviors"
       },
       "seeding_key": {
@@ -2204,8 +2305,9 @@
     },
     {
       "key": "c9debd6e-bc5a-4a92-aebc-45c92ade71ae",
-      "position": 3,
+      "position": 5,
       "properties": {
+        "name": "Events",
         "progression_name": "Events"
       },
       "seeding_key": {
@@ -2214,10 +2316,50 @@
       }
     },
     {
-      "key": "29318d11-d3c9-47b7-8ae4-7b9733423dba",
-      "position": 4,
+      "key": "e85b4e3a-5ac7-4da6-a585-b8076fbf0bc7",
+      "position": 6,
       "properties": {
-        "progression_name": "Practice"
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Events can be a very tricky concept for students to grasp. It may be very helpful to pull the class together at this point in the lesson to preview and discuss how events work before they continue independently. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e85b4e3a-5ac7-4da6-a585-b8076fbf0bc7",
+        "lesson_activity.key": "296ca1ae-ccf6-40e3-acb4-d2b3b1f6d424"
+      }
+    },
+    {
+      "key": "d5b7461e-72fa-4043-ad23-277413d24785",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Level 8 Video slide\n\n**Do This:** Pause students’ independent work when several students have finished level 7 in order to give an overview of using groups of sprites. It’s okay if the whole class is not yet finished with level 7 to preview the Lots of Sprites video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Events slide\n\nExplain how events work with the four part diagram on this slide. 1. The user presses a key on the keyboard. 2. The keyboard sends a signal to the computer. 3. The computer makes a decision based on the code. 4. The computer updates the display.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: (next) Events slide\n\n**Do This:** Explain that arrow keys are one type of event that can make a program interactive.\n\n**Discuss:** What other ways could we give a user control over what happens in an app or game?\n\n**Discussion Goal:** Students will start to recognize that events trigger actions to happen on the computer. Some other examples might include: pushing the power button, moving the mouse, clicking on an button on the screen, pressing buttons on the keyboard\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: (next) Events slide\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "d5b7461e-72fa-4043-ad23-277413d24785",
+        "lesson_activity.key": "296ca1ae-ccf6-40e3-acb4-d2b3b1f6d424"
+      }
+    },
+    {
+      "key": "ab694790-4b62-46cb-bf92-7a4e162c2db0",
+      "position": 8,
+      "properties": {
+        "description": "When you’re working with groups of sprites, sometimes you will only want to give instructions to one sprite at a time. To help achieve this, events have a mini-toolbox that opens when you click the +.\nInside the toolbox are subject and object sprites that you can drag into other coding blocks for more precise control.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ab694790-4b62-46cb-bf92-7a4e162c2db0",
+        "lesson_activity.key": "296ca1ae-ccf6-40e3-acb4-d2b3b1f6d424"
+      }
+    },
+    {
+      "key": "29318d11-d3c9-47b7-8ae4-7b9733423dba",
+      "position": 9,
+      "properties": {
+        "name": "Practice",
+        "progression_name": "Practice Choices"
       },
       "seeding_key": {
         "activity_section.key": "29318d11-d3c9-47b7-8ae4-7b9733423dba",
@@ -2225,13 +2367,13 @@
       }
     },
     {
-      "key": "60fdefc7-032b-45ba-ae7d-08b19bf85a76",
-      "position": 5,
+      "key": "03d27db7-3550-4eb8-9bf3-9d90a664f4c0",
+      "position": 10,
       "properties": {
-        "description": " | Slide                                                                                                        | Lesson Guide                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |\n| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide12.png)  | <p><br></p>|\n| ![](https://docs.google.com/presentation/d/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/export/png?id=1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo&pageid=g26883921e75_0_44)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Play the video for students.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide14.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Transition students to their devices. Have them go to <a href=\"https://studio.code.org/s/pilot-k5-game-design/lessons/1/levels/2\" target=\"_blank\">Level 2</a>. Remind them to follow the instructions on each level, click on the light bulb for hints and read the feedback in the yellow box under the instructions if something is not quite right in their code.<br><br><details style=\"background-color: #FFA400; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px; color: white\"><summary style=\"font-size: 1.2em; font-weight: bold;\"><i class=\"fa fa-lightbulb-o \"></i> Teaching Tip: Independent Work Time</summary><br>In Levels 2-16, students will be following instructions and working at their own pace. Here are a few tips that should help students while they're working through the levels:</details></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide15.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> When several students have reached level 6, pause students’ independent work in order to give an overview of events. It’s okay if the whole class is not quite finished with Level 5 to preview events.<br><br>Explain how events work with the four part diagram on this slide. 1. The user presses a key on the keyboard. 2. The keyboard sends a signal to the computer. 3. The computer makes a decision based on the code. 4. The computer updates the display.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide16.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Explain that arrow keys are one type of event that can make a program interactive.<br><br><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What other ways could we give a user control over what happens in an app or game?<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students will start to recognize that events trigger actions to happen on the computer. Some other examples might include: pushing the power button, moving the mouse, clicking on an button on the screen, pressing buttons on the keyboard<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide17.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the slide aloud to the class. This is a very common misconception in coding events in Sprite Lab.<br><br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide18.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Transition students back to their devices. Have them resume where they left off and work up to level 9.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide19.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Pause students’ independent work when several students have finished level 9 in order to give an overview of using groups of sprites. It’s okay if the whole class is not yet finished with level 9 to preview the Lots of Sprites video.<br><br>Play the video for students as a whole class.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide20.png)  | <p><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> When you’re working with groups of sprites, sometimes you will only want to give instructions to one sprite at a time. To help achieve this, events have a mini-toolbox that opens when you click the +.<br>Inside the toolbox are subject and object sprites that you can drag into other coding blocks for more precise control.<br><br><br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide21.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Transition students back to their devices. Have them resume where they left off for the remainder of the levels.<br><br></p>|\n"
+        "description": "Choice levels offer students the chance to pick what is most interesting to them. All of the choices here practice the same skills with different themes. "
       },
       "seeding_key": {
-        "activity_section.key": "60fdefc7-032b-45ba-ae7d-08b19bf85a76",
+        "activity_section.key": "03d27db7-3550-4eb8-9bf3-9d90a664f4c0",
         "lesson_activity.key": "296ca1ae-ccf6-40e3-acb4-d2b3b1f6d424"
       }
     },
@@ -2239,10 +2381,22 @@
       "key": "542ec564-b868-4bdf-a97b-faf0e4fc7f1d",
       "position": 1,
       "properties": {
-        "description": " | Slide                                                                                                        | Lesson Guide                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |\n| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide22.png)  | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide23.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Review the day’s learning objectives and have students reflect on how they accomplished each of these during the activity.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide24.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Look over and read aloud the 3 code snippets together as a class.<br><br><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click on the slide to reveal the first scenario<br><br><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students write down which code they think would be best. After everyone has an answer, discuss as a class. Repeat for all three scenarios.<br><br>…to arrange 8 enemies in a perfect line? [Answer: Code C because with the grid block you can easily place multiple sprites exactly where you want them to go]<br><br>… to make a game with 100 randomly placed gems to collect? [Answer: Code B because with this block you can choose the number of sprites and they will be randomly placed on screen]<br><br>…to set the location of one player at the beginning of the game? [Answer: Code A because with this block you are placing just one sprite at a time and setting the location with x,y coordinates]<br><br><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> When we are coding there are often many different ways to program the same thing. The best solution is the one that creates the shortest, most efficient program.<br><br><br><br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide25.png)  | <p><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Great job today, coders! In the next lesson we will learn how to use variables to keep track of score in a game.<br><br><br><br><br></p>|"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Today you learned... slide\n\n**Do This:** Review the day’s learning objectives and have students reflect on how they accomplished each of these during the activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Review slide\n(Click on the slide to reveal the first scenario)\n\n**Do This:** Look over and read aloud the 3 code snippets together as a class.\n\nHave students write down which code they think would be best. After everyone has an answer, discuss as a class. Repeat for all three scenarios.\n\n**…to arrange 8 enemies in a perfect line?** [Answer: Code C because with the grid block you can easily place multiple sprites exactly where you want them to go]\n\n**… to make a game with 100 randomly placed gems to collect?** [Answer: Code B because with this block you can choose the number of sprites and they will be randomly placed on screen]\n\n**…to set the location of one player at the beginning of the game?** [Answer: Code A because with this block you are placing just one sprite at a time and setting the location with x,y coordinates]\n\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "542ec564-b868-4bdf-a97b-faf0e4fc7f1d",
+        "lesson_activity.key": "c10d8d37-4071-4735-80ff-ad50cdbd861e"
+      }
+    },
+    {
+      "key": "c14f350a-aa79-4698-8ba7-d1c9c06aca38",
+      "position": 2,
+      "properties": {
+        "description": "When we are coding there are often many different ways to program the same thing. The best solution is the one that creates the shortest, most efficient program.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c14f350a-aa79-4698-8ba7-d1c9c06aca38",
         "lesson_activity.key": "c10d8d37-4071-4735-80ff-ad50cdbd861e"
       }
     },
@@ -4931,7 +5085,7 @@
         "level_keys": [
           "game_design_practice_lots_choice_course-e"
         ],
-        "progression": "Practice"
+        "progression": "Practice Choices"
       },
       "bonus": false,
       "seeding_key": {
@@ -10002,7 +10156,7 @@
     {
       "seeding_key": {
         "lesson.key": "Game Design",
-        "resource.key": "game_design_slides"
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
       }
     },
     {
