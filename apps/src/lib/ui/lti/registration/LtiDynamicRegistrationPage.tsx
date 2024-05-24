@@ -37,7 +37,6 @@ export const LtiDynamicRegistrationPage = ({
         window.parent.postMessage({subject: 'org.imsglobal.lti.close'}, '*');
       },
       error: xhr => {
-        console.log(JSON.stringify(xhr));
         setHasError(true);
         setErrorMsg(JSON.parse(xhr.responseText).error);
       },
