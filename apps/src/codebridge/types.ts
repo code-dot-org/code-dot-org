@@ -51,7 +51,8 @@ export type OnRunFunction = (
   runTexts: boolean,
   dispatch: Dispatch<AnyAction>,
   permissions: string[],
-  source: MultiFileSource | undefined
+  source: MultiFileSource | undefined,
+  channelId: string
 ) => void;
 
 export type ReducerAction = {

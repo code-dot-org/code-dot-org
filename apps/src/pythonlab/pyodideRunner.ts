@@ -10,7 +10,8 @@ export function handleRunClick(
   runTests: boolean,
   dispatch: Dispatch<AnyAction>,
   permissions: string[],
-  source: MultiFileSource | undefined
+  source: MultiFileSource | undefined,
+  channelId: string
 ) {
   // For now, restrict running python code to levelbuilders.
   if (!permissions.includes('levelbuilder')) {
@@ -25,7 +26,7 @@ export function handleRunClick(
   }
   if (runTests) {
     dispatch(appendSystemMessage('Running tests...'));
-    runAllTests(source);
+    runAllTests(source, channelId);
   } else {
     // Run main.py
     const code = getFileByName(source.files, MAIN_PYTHON_FILE)?.contents;
@@ -34,7 +35,7 @@ export function handleRunClick(
       return;
     }
     dispatch(appendSystemMessage('Running program...'));
-    runPythonCode(code, source);
+    runPythonCode(code, source, channelId);
   }
 }
 
