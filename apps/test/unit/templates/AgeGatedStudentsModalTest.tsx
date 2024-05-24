@@ -70,11 +70,7 @@ describe('AgeGatedStudentsModal', () => {
   it('should show a sync results view', () => {
     const {getByTestId} = render(
       <Provider store={getStore()}>
-        <AgeGatedStudentsModal
-          manageStudents={{isLoadingStudents: false}}
-          onClose={() => {}}
-          isOpen={true}
-        />
+        <AgeGatedStudentsModal onClose={() => {}} isOpen={true} />
       </Provider>
     );
     expect(getByTestId('age-gated-students-modal'));
@@ -86,7 +82,6 @@ describe('AgeGatedStudentsModal', () => {
       return (
         <div>
           <AgeGatedStudentsModal
-            manageStudents={{isLoadingStudents: false}}
             onClose={() => setIsOpen(false)}
             isOpen={isOpen}
           />

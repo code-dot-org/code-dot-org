@@ -15,6 +15,7 @@ import teacherSections, {
   setSections,
   selectSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {ChildAccountComplianceStates} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {expect} from '../../util/reconfiguredChai';
@@ -126,16 +127,17 @@ describe('AgeGatedStudentsModal', () => {
 
   const getConsentStatus = (consentStatus: string) => {
     switch (consentStatus) {
-      case 'l':
+      case ChildAccountComplianceStates.LOCKED_OUT:
         return i18n.childAccountPolicy_lockedOut();
-      case 's':
+      case ChildAccountComplianceStates.REQUEST_SENT:
         return i18n.childAccountPolicy_requestSent();
-      case 'p':
+      case ChildAccountComplianceStates.PERMISSION_GRANTED:
         return i18n.childAccountPolicy_permissionGranted();
       default:
         return i18n.childAccountPolicy_notStarted();
     }
   };
+
   beforeEach(() => {
     const store = getStore();
     registerReducers({
