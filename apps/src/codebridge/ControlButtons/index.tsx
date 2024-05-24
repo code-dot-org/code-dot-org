@@ -25,10 +25,6 @@ const ControlButtons: React.FunctionComponent = () => {
   const channelId = useAppSelector(state => state.lab.channel?.id);
 
   const handleRun = (runTests: boolean) => {
-    if (!source) {
-      dispatch(appendSystemMessage('You have no code to run.'));
-      return;
-    }
     if (onRun) {
       const parsedPermissions = data
         ? (data as PermissionResponse)

@@ -17,7 +17,7 @@ async function loadPyodideAndPackages() {
   await self.pyodide.loadPackage('micropip');
   const micropip = self.pyodide.pyimport('micropip');
   await micropip.install(
-    'http://localhost-studio.code.org:9000/assets/js/pyodide/0.25.1/pythonlab_setup-0.0.1-py3-none-any.whl'
+    '/blockly/js/pyodide/0.25.1/pythonlab_setup-0.0.1-py3-none-any.whl'
   );
   console.log(micropip.list());
   self.pyodide.setStdout(getStreamHandlerOptions('sysout'));
