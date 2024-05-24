@@ -10,10 +10,10 @@ require 'cdo/statsig'
 #   fizz: 'buzz',
 # }
 #
-# Metrics::Events.log_event('some_event_name')
-# Metrics::Events.log_event(current_user, 'some_event_name', metadata)
-# Metrics::Events.log_event(current_user, 'some_event_name', 'some_event_value', metadata)
-# Metrics::Events.log_event(current_user, 'some_event_name', true)
+# Metrics::Events.log_event(event_name: 'some_event_name')
+# Metrics::Events.log_event(user: current_user, event_name: 'some_event_name', metadata: metadata)
+# Metrics::Events.log_event(user: current_user, event_name: 'some_event_name', event_value: 'some_event_value', metadata: metadata)
+# Metrics::Events.log_event(user: current_user, event_name: 'some_event_name', get_enabled_experiments: true)
 
 module Metrics
   module Events
