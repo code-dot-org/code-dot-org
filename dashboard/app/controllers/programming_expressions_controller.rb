@@ -111,7 +111,7 @@ class ProgrammingExpressionsController < ApplicationController
   def destroy
     return render :not_found unless @programming_expression
     begin
-      @programming_expression.destroy
+      @programming_expression.destroy!
       render(status: :ok, plain: "Destroyed #{@programming_expression.name}")
     rescue
       render(status: :not_acceptable, plain: @programming_expression.errors.full_messages.join('. '))
