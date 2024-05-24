@@ -16,15 +16,14 @@ interface ReduxState {
     isLoadingStudents?: boolean;
   };
 }
-interface AgeGatedStudentsProps {
+interface Props {
   onClose: () => void;
   isOpen: boolean;
+  isLoadingStudents: boolean;
 }
 
-type Props = ReduxState & AgeGatedStudentsProps;
-
 const AgeGatedStudentsModal: React.FC<Props> = ({
-  manageStudents: isLoadingStudents,
+  isLoadingStudents,
   isOpen,
   onClose,
 }) => {
@@ -66,9 +65,6 @@ const AgeGatedStudentsModal: React.FC<Props> = ({
 };
 export const UnconnectedAgeGatedStudentsModal = AgeGatedStudentsModal;
 
-export default connect(
-  (state: ReduxState) => ({
-    isLoadingStudents: state.manageStudents.isLoadingStudents,
-  }),
-  {}
-)(AgeGatedStudentsModal);
+export default connect((state: ReduxState) => ({
+  isLoadingStudents: state.manageStudents.isLoadingStudents || false,
+}))(AgeGatedStudentsModal);
