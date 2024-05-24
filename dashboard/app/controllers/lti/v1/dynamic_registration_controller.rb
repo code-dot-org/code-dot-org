@@ -91,11 +91,9 @@ module Lti
           metadata = {
             lms_name: platform[:name],
           }
-          fake_user = {id: 1234, user_type: 'teacher'}
           Metrics::Events.log_event(
-            fake_user,
-            'lti_dynamic_registration_completed',
-            metadata
+            event_name: 'lti_dynamic_registration_completed',
+            metadata: metadata,
           )
 
           return render status: :created, json: {}

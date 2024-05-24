@@ -71,10 +71,11 @@ module Metrics
       # Logs an event to stdout, useful for development and debugging
       private def log_event_to_stdout(user:, event_name:, event_value:, metadata:, enabled_experiments:)
         user_id = user.present? ? user.id : ''
+        user_type = user.present? ? user.user_type : ''
         event_details = {
           user_id: user_id,
           custom_ids: {
-            user_type: user.user_type,
+            user_type: user_type,
             enabled_experiments: enabled_experiments,
           }.compact,
           event_name: event_name,
