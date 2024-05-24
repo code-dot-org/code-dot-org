@@ -111,12 +111,12 @@ Feature: Professional Learning landing page
     And the href of selector "a:contains(Start professional learning courses)" contains "/educate/professional-development-online"
 
     # Starts a self-paced PL course
-    Then I am on "http://studio.code.org/s/self-paced-pl-csd-unit2-1-2024"
-    And I wait until element "span:contains(Try Now)" is visible
-    Then I click selector "span:contains(Try Now)"
-    Then I am on "http://studio.code.org/s/self-paced-pl-csd-unit2-1-2024/lessons/1/levels/1"
-    And I wait until element "button:contains(Continue)" is visible
-    Then I click selector "button:contains(Continue)"
+    Then I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/1"
+    And I wait until element "a[aria-label='Level 3 Lesson Instructor In Training Levels']" is visible
+    Then I click selector "a[aria-label='Level 3 Lesson Instructor In Training Levels']"
+    Then I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/3"
+    And I wait until element "a:contains(Submit)" is visible
+    Then I click selector "a:contains(Submit)"
     Then I am on "http://studio.code.org/my-professional-learning"
 
     # Sees Self-Paced Professional Learning Courses table
