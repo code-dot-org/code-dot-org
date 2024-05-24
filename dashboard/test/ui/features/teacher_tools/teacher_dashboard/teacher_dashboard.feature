@@ -208,7 +208,6 @@ Feature: Using the teacher dashboard
     And I wait until the image within element "tr:eq(2)" has loaded
     And I wait until the image within element "tr:eq(3)" has loaded
     And I wait until the image within element "tr:eq(4)" has loaded
-    And I wait until the image within element "tr:eq(5)" has loaded
 
     Then I see no difference for "projects list view"
     And I close my eyes
