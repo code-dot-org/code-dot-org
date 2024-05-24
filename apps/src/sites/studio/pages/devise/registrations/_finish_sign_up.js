@@ -5,9 +5,15 @@ import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import statsigReporter from '@cdo/apps/lib/util/StatsigReporter';
 import experiments from '@cdo/apps/util/experiments';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {
+  SELECT_A_SCHOOL,
+  CLICK_TO_ADD,
+  NO_SCHOOL_SETTING,
+} from '@cdo/apps/templates/SchoolZipSearch';
 
 const TEACHER_ONLY_FIELDS = [
   '#teacher-name-label',
@@ -50,6 +56,7 @@ let userInRegionalPartnerVariant = experiments.isEnabled(
 $(document).ready(() => {
   const schoolInfoMountPoint = document.getElementById('school-info-inputs');
   let user_type = $('#user_user_type').val();
+  let isInSchoolAssociationExperiment = false;
   init();
 
   function init() {
@@ -63,7 +70,6 @@ $(document).ready(() => {
         'width:135px;';
     }
     setUserType(user_type);
-    renderSchoolInfo();
     renderParentSignUpSection();
   }
 
@@ -79,14 +85,34 @@ $(document).ready(() => {
 
     alreadySubmitted = true;
     // Clean up school data and set age for teachers.
+    let has_school = false;
+    let has_marketing_value = false;
+    const has_display_name = $('input[name="user[name]"]')?.val() !== '';
     if (user_type === 'teacher') {
       cleanSchoolInfo();
       $('#user_age').val('21+');
+      // If the new or old school association flow has a school, update to true
+      if (
+        $('select[name="user[school_info_attributes][school_id]"]')?.val() ||
+        $('input[name="user[school_info_attributes][school_id]"]')?.val()
+      ) {
+        has_school = true;
+      }
+      // Check if either of the marketing opt in/out radio buttons are selected
+      if (
+        $('input[id="user_email_preference_opt_in_yes"]')?.is(':checked') ||
+        $('input[id="user_email_preference_opt_in_no"]')?.is(':checked')
+      ) {
+        has_marketing_value = true;
+      }
     }
     analyticsReporter.sendEvent(
       EVENTS.SIGN_UP_FINISHED_EVENT,
       {
         'user type': user_type,
+        'has school': has_school,
+        'has marketing value selected': has_marketing_value,
+        'has display name': has_display_name,
       },
       PLATFORMS.BOTH
     );
@@ -101,6 +127,20 @@ $(document).ready(() => {
     countryInputEl.val(schoolData.countryCode);
 
     // Clear school_id if the searched school is not found.
+    // New school search flow
+    const newSchoolIdEl = $(
+      'select[name="user[school_info_attributes][school_id]"]'
+    );
+    if (
+      [NO_SCHOOL_SETTING, CLICK_TO_ADD, SELECT_A_SCHOOL].includes(
+        newSchoolIdEl.val()
+      )
+    ) {
+      newSchoolIdEl.val('');
+      // Clear out zip before saving as well
+      $('input[name="user[school_info_attributes][school_zip]"]').val('');
+    }
+    // Old school search flow
     if (schoolData.ncesSchoolId === '-1') {
       const schoolIdEl = $(
         'input[name="user[school_info_attributes][school_id]"]'
@@ -175,6 +215,12 @@ $(document).ready(() => {
     fadeInFields(TEACHER_ONLY_FIELDS);
     hideFields(STUDENT_ONLY_FIELDS);
     toggleVisShareEmailRegPartner(isInUnitedStates);
+    isInSchoolAssociationExperiment = statsigReporter.getIsInExperiment(
+      'school_association_update_2024',
+      'showNewFlow',
+      false
+    );
+    renderSchoolInfo();
   }
 
   function switchToStudent() {
@@ -219,10 +265,10 @@ $(document).ready(() => {
 
   function renderSchoolInfo() {
     if (schoolInfoMountPoint) {
-      if (experiments.isEnabled(experiments.SCHOOL_ASSOCIATION_V2)) {
+      if (isInSchoolAssociationExperiment) {
         ReactDOM.render(
           <div style={{padding: 10}}>
-            <SchoolDataInputs />
+            <SchoolDataInputs usIp={usIp} />
           </div>,
           schoolInfoMountPoint
         );

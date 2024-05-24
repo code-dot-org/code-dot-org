@@ -11,6 +11,8 @@ import {
   setAiCustomizationProperty,
   updateAiCustomization,
 } from '@cdo/apps/aichat/redux/aichatRedux';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
+import {useSelector} from 'react-redux';
 
 const RetrievalCustomization: React.FunctionComponent = () => {
   const [newRetrievalContext, setNewRetrievalContext] = useState('');
@@ -22,6 +24,8 @@ const RetrievalCustomization: React.FunctionComponent = () => {
   const {retrievalContexts} = useAppSelector(
     state => state.aichat.currentAiCustomizations
   );
+
+  const isReadOnly = useSelector(isReadOnlyWorkspace) || isDisabled(visibility);
 
   const onUpdate = useCallback(
     () => dispatch(updateAiCustomization()),
@@ -69,7 +73,7 @@ const RetrievalCustomization: React.FunctionComponent = () => {
             id="retrieval-input"
             onChange={event => setNewRetrievalContext(event.target.value)}
             value={newRetrievalContext}
-            disabled={isDisabled(visibility)}
+            disabled={isReadOnly}
           />
         </div>
         <div className={styles.addItemContainer}>
@@ -78,24 +82,29 @@ const RetrievalCustomization: React.FunctionComponent = () => {
             type="secondary"
             onClick={onAdd}
             iconLeft={{iconName: 'plus'}}
-            disabled={!newRetrievalContext || isDisabled(visibility)}
+            disabled={!newRetrievalContext || isReadOnly}
           />
+        </div>
+        <div className={styles.addedItemsHeaderContainer}>
+          <StrongText>Added</StrongText>
         </div>
         {retrievalContexts.map((message, index) => {
           return (
             <div key={index} className={styles.itemContainer}>
-              <button
-                type="button"
-                onClick={() => onRemove(index)}
-                className={styles.removeItemButton}
-                disabled={isDisabled(visibility)}
-              >
-                <FontAwesomeV6Icon
-                  iconName="circle-xmark"
-                  className={styles.removeItemIcon}
-                />
-              </button>
-              <span className={styles.itemText}>{message}</span>
+              <span>{message}</span>
+              {!isReadOnly && (
+                <button
+                  type="button"
+                  onClick={() => onRemove(index)}
+                  className={styles.removeItemButton}
+                  disabled={isDisabled(visibility)}
+                >
+                  <FontAwesomeV6Icon
+                    iconName="circle-xmark"
+                    className={styles.removeItemIcon}
+                  />
+                </button>
+              )}
             </div>
           );
         })}
@@ -106,7 +115,7 @@ const RetrievalCustomization: React.FunctionComponent = () => {
           onClick={onUpdate}
           iconLeft={{iconName: 'edit'}}
           className={modelCustomizationStyles.updateButton}
-          disabled={isDisabled(visibility)}
+          disabled={isReadOnly}
         />
       </div>
     </div>

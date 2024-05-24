@@ -1,16 +1,23 @@
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon';
 
 import EditorAnnotator from '@cdo/apps/EditorAnnotator';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import AiAssessmentBox from '@cdo/apps/templates/rubrics/AiAssessmentBox';
 import AiAssessmentFeedbackContext from '@cdo/apps/templates/rubrics/AiAssessmentFeedbackContext';
-import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
+import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {expect} from '../../../util/reconfiguredChai';
 
 describe('AiAssessmentBox', () => {
+  const reportingData = {
+    unitName: 'test-2023',
+    courseName: 'course-2023',
+    levelName: 'Test Blah Blah Blah',
+  };
   const mockAiInfo = {
     id: 2,
     learning_goal_id: 2,
@@ -43,10 +50,14 @@ describe('AiAssessmentBox', () => {
   const props = {
     isAiAssessed: true,
     studentName: 'Jane Doe',
+    learningGoals: [{key: 'key', learningGoal: 'goal'}],
+    currentLearningGoal: 0,
+    reportingData: reportingData,
     aiUnderstandingLevel: RubricUnderstandingLevels.CONVINCING,
     aiConfidence: 70,
     aiEvalInfo: mockAiInfo,
     aiEvidence: mockEvidence,
+    studentLevelInfo: {name: 'student', user_id: 42},
   };
 
   it('renders AiAssessmentBox with student information if it is assessed by AI', () => {
@@ -203,5 +214,35 @@ describe('AiAssessmentBox', () => {
 
     // Restore stubs
     scrollToLineStub.restore();
+  });
+
+  it('should send an event when the evidence link is clicked', () => {
+    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    const eventName = EVENTS.TA_RUBRIC_EVIDENCE_GOTO_CLICKED;
+    const scrollToLineStub = sinon.stub(EditorAnnotator, 'scrollToLine');
+
+    const wrapper = mount(
+      <AiAssessmentFeedbackContext.Provider value={[-1, () => {}]}>
+        <AiAssessmentBox {...props} />
+      </AiAssessmentFeedbackContext.Provider>
+    );
+
+    // Find the links and expect clicking on them actives scrolling
+    const link = wrapper.find('ul li p a').first();
+
+    // Click on it
+    link.simulate('click');
+
+    // Check that we sent the event
+    expect(sendEventSpy).to.have.been.calledWith(eventName, {
+      ...reportingData,
+      learningGoalKey: props.learningGoals[props.currentLearningGoal].key,
+      learningGoal: props.learningGoals[props.currentLearningGoal].learningGoal,
+      studentId: 42,
+    });
+
+    // Restore stubs
+    scrollToLineStub.restore();
+    sendEventSpy.restore();
   });
 });

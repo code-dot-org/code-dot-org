@@ -186,7 +186,7 @@ class ProgrammingExpression < ApplicationRecord
       blockName: block_name,
       categoryKey: programming_environment_category&.key,
       programmingEnvironmentName: programming_environment.name,
-      environmentEditorLanguage: programming_environment.editor_language,
+      environmentLanguageType: programming_environment.editor_language,
       imageUrl: image_url,
       videoKey: video_key,
       shortDescription: short_description || '',
@@ -312,10 +312,10 @@ class ProgrammingExpression < ApplicationRecord
     i18n_params = I18n.t(
       :palette_params,
       scope: expression_scope,
-      default: palette_params,
+      default: nil,
       smart: true
     )
-    if i18n_params != localized_params
+    unless i18n_params.nil?
       localized_params&.each do |param|
         param_key = param['name'].to_sym
         unless i18n_params[param_key].nil?

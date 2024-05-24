@@ -123,6 +123,7 @@ class Api::V1::AssessmentsController < Api::V1::JSONApiController
   def section_feedback
     render json: @script.get_feedback_for_section(@section)
   end
+
   # Retrieve UserLevel and associated LevelSource objects associated with the
   # given students and assessment script levels. The return value is a nested
   # hash with the following structure:

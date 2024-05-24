@@ -13,6 +13,7 @@ $default-spacing: 2px;
   overflow: hidden;
   user-select: none;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: $default-spacing;
 }
+

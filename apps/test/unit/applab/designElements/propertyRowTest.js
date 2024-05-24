@@ -1,7 +1,7 @@
 import React from 'react';
 import {expect} from '../../../util/reconfiguredChai';
 import PropertyRow from '@cdo/apps/applab/designElements/PropertyRow';
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 
 describe('applab property row', function () {
   it('does not change an id row when a space is added', () => {

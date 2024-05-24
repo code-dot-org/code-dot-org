@@ -6,6 +6,7 @@ class TestFlakiness
   NUM_REQUESTS = 50 # rate limit: 15 request/s with 300 request burst https://wiki.saucelabs.com/display/DOCS/Rate+Limits+for+the+Sauce+Labs+REST+API
   MIN_SAMPLES = 10
   TEST_ACCOUNT_USERNAME = 'testcodeorg'.freeze
+
   # Each feature should be retried until the chance of flaky failure is less than this amount.
   MAX_FAILURE_RATE = 0.001 # 0.1%
 

@@ -324,7 +324,8 @@ class Game < ApplicationRecord
       WEBLAB,
       DANCE,
       SPRITELAB,
-      POETRY
+      POETRY,
+      MUSIC
     ].include? app
   end
 

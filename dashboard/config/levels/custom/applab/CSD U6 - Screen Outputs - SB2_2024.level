@@ -1,6 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 41,
   "created_at": "2023-11-28T21:21:10.000Z",
   "level_num": "custom",
@@ -55,7 +54,7 @@
     "parent_level_id": 20377,
     "name_suffix": "_2024",
     "show_type_hints": "false",
-    "map_reference": "/courses/csd-2022/guides/designing-screens-with-code",
+    "map_reference": "/courses/csd-2024/guides/designing-screens-with-code",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",
@@ -69,6 +68,7 @@
     "ai_enabled": "false",
     "preload_asset_list": null
   },
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2023-11-28T21:21:10.801+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Screen Outputs - SB2_2023\\\"\"],\"cloned_from\":\"CSD U6 - Screen Outputs - SB2_2023\"},{\"changed_at\":\"2024-03-28 18:46:49 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-28 18:47:23 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-28 18:47:38 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"hide_design_mode\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>

@@ -18,7 +18,6 @@ module Api::V1::Pd
       csp_teachers: TEACHER_APPLICATION_CLASS,
       csa_teachers: TEACHER_APPLICATION_CLASS
     }
-
     ROLES = TYPES_BY_ROLE.keys
     TEACHER_ROLES = ROLES.select {|role| role.to_s.include?('teachers')}
 

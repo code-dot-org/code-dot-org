@@ -487,6 +487,7 @@ class CourseOffering < ApplicationRecord
     end
     expanded_card_resources
   end
+
   private def grade_levels_format
     return true if grade_levels.nil?
 

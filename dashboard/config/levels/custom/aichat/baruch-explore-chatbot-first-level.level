@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2024-04-24T23:03:31.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Instructions\r\n\r\nExplore this chatbot. A system prompt has already been entered for you - how does the system prompt help?\r\n\r\n### Do This\r\n\r\nType in a question and press the send button. Can you get the chatbot off topic?",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": "0.6",
+        "systemPrompt": "You are a business college professor. One of your students wants to talk out a business idea with you. Ask questions about and provide feedback on the clarity of their concept, the value proposition, target audience, revenue model, and scalability. Ask questions that push the students thinking",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "Business school prof",
+          "description": "This chatbot should help you clarify a business proposition you are ",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "readonly",
+        "temperature": "hidden",
+        "systemPrompt": "readonly",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2024-04-24T23:03:31.841+00:00\",\"changed\":[\"cloned from \\\"gen-ai-chatbot-all-features\\\"\"],\"cloned_from\":\"gen-ai-chatbot-all-features\"},{\"changed_at\":\"2024-04-24 23:18:59 +0000\",\"changed\":[\"name\",\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18972,\"changed_by_email\":\"sarah.judd@code.org\"},{\"changed_at\":\"2024-04-24 23:22:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18972,\"changed_by_email\":\"sarah.judd@code.org\"},{\"changed_at\":\"2024-04-25 01:27:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18972,\"changed_by_email\":\"sarah.judd@code.org\"},{\"changed_at\":\"2024-04-25 01:28:08 +0000\",\"changed\":[],\"changed_by_id\":18972,\"changed_by_email\":\"sarah.judd@code.org\"},{\"changed_at\":\"2024-04-25 01:29:16 +0000\",\"changed\":[],\"changed_by_id\":18972,\"changed_by_email\":\"sarah.judd@code.org\"},{\"changed_at\":\"2024-05-03 17:32:44 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Aichat>

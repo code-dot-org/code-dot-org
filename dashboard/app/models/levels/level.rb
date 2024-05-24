@@ -619,6 +619,10 @@ class Level < ApplicationRecord
     false
   end
 
+  def deprecated?
+    false
+  end
+
   # Create a copy of this level named new_name
   # @param [String] new_name
   # @param [String] editor_experiment
@@ -780,6 +784,18 @@ class Level < ApplicationRecord
     end
   end
 
+  # FND-985 Create shared API to get localized level properties.
+  def get_localized_property(property_name)
+    if should_localize? && try(property_name)
+      I18n.t(
+        name,
+        scope: [:data, property_name],
+        default: nil,
+        smart: true
+      )
+    end
+  end
+
   # There's a bit of trickery here. We consider a level to be
   # hint_prompt_enabled for the sake of the level editing experience if any of
   # the scripts associated with the level are hint_prompt_enabled.
@@ -831,6 +847,7 @@ class Level < ApplicationRecord
     # Localized properties
     properties_camelized["validations"] = localized_validations if properties_camelized["validations"]
     properties_camelized["panels"] = localized_panels if properties_camelized["panels"]
+    properties_camelized["longInstructions"] = (get_localized_property("long_instructions") || long_instructions) if properties_camelized["longInstructions"]
     properties_camelized
   end
 

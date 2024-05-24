@@ -83,6 +83,7 @@ class Api::V1::SectionInstructorsController < Api::V1::JSONApiController
 
     head :no_content
   end
+
   private def resolve_invitation(new_status)
     return head :bad_request unless @section_instructor.status == 'invited'
 

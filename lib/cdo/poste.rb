@@ -190,13 +190,6 @@ module Poste
 end
 
 class Deliverer
-  POSTE_BASE_URL = (rack_env?(:production) ? 'https://' : 'http://') + CDO.poste_host
-  # lazily-populate this constant so we aren't trying to make database queries
-  # whenever this file gets required, just once it starts to get used.
-  MESSAGE_TEMPLATES = Hash.new do |h, key|
-    h[key] = POSTE_DB[:poste_messages].where(id: key).first
-  end
-
   # Attempt SMTP connections up to 5 times, retrying on the following error types AND message match.
   CONNECTION_ATTEMPTS = 5
   RETRYABLE_ERROR_TYPES = [
@@ -210,6 +203,13 @@ class Deliverer
     'end of file reached'
   ].map(&:freeze).freeze
   RETRYABLE_ERROR_MESSAGE_MATCH = Regexp.new RETRYABLE_ERROR_MESSAGES.map {|m| "(#{m})"}.join('|')
+  POSTE_BASE_URL = (rack_env?(:production) ? 'https://' : 'http://') + CDO.poste_host
+
+  # lazily-populate this constant so we aren't trying to make database queries
+  # whenever this file gets required, just once it starts to get used.
+  MESSAGE_TEMPLATES = Hash.new do |h, key|
+    h[key] = POSTE_DB[:poste_messages].where(id: key).first
+  end
 
   def initialize(params)
     @params = params.dup

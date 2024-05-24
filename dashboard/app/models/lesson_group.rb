@@ -19,8 +19,6 @@
 class LessonGroup < ApplicationRecord
   include SerializedProperties
 
-  Counters = Struct.new(:numbered_lesson_count, :unnumbered_lesson_count, :lesson_position, :chapter)
-
   belongs_to :script, class_name: 'Unit', optional: true
 
   has_many :lessons, -> {order(:absolute_position)}, dependent: :destroy
@@ -42,6 +40,8 @@ class LessonGroup < ApplicationRecord
     description
     big_questions
   )
+
+  Counters = Struct.new(:numbered_lesson_count, :unnumbered_lesson_count, :lesson_position, :chapter)
 
   # Finds or creates Lesson Groups with the correct position.
   # In addition it check for 3 things:

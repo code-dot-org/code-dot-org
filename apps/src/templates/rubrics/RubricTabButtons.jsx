@@ -1,12 +1,15 @@
-import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import style from './rubrics.module.scss';
-import i18n from '@cdo/locale';
+import React, {useState} from 'react';
+
 import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
-import RunAIAssessmentButton, {STATUS} from './RunAIAssessmentButton';
-import {reportingDataShape, rubricShape} from './rubricShapes';
+import i18n from '@cdo/locale';
+
 import {InfoAlert} from './RubricContent';
 import {TAB_NAMES} from './rubricHelpers';
+import {reportingDataShape, rubricShape} from './rubricShapes';
+import RunAIAssessmentButton, {STATUS} from './RunAIAssessmentButton';
+
+import style from './rubrics.module.scss';
 
 export default function RubricTabButtons({
   tabSelectCallback,
@@ -44,6 +47,8 @@ export default function RubricTabButtons({
         return i18n.aiEvaluationStatus_pii_error();
       case STATUS.PROFANITY_ERROR:
         return i18n.aiEvaluationStatus_profanity_error();
+      case STATUS.REQUEST_TOO_LARGE:
+        return i18n.aiEvaluationStatus_request_too_large();
     }
   };
 
@@ -64,7 +69,7 @@ export default function RubricTabButtons({
           ]}
           onChange={value => tabSelectCallback(value)}
         />
-        {selectedTab === TAB_NAMES.RUBRIC && (
+        {selectedTab === TAB_NAMES.RUBRIC && teacherHasEnabledAi && (
           <div>
             <RunAIAssessmentButton
               canProvideFeedback={canProvideFeedback}
@@ -82,6 +87,7 @@ export default function RubricTabButtons({
       </div>
       {selectedTab === TAB_NAMES.RUBRIC &&
         canProvideFeedback &&
+        teacherHasEnabledAi &&
         !!statusText() && (
           <InfoAlert
             className={'uitest-eval-status-text'}

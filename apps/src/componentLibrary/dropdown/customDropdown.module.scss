@@ -188,6 +188,7 @@
   .dropdownButton {
     color: $light_black;
     border-color: $light_black;
+    background-color: $light_white;
   }
 
   &:has(.dropdownButton:hover) {
@@ -200,7 +201,7 @@
   &:has(.dropdownButton:active) {
     .dropdownButton:not(:disabled) {
       color: $light_black;
-      background-color: unset;
+      background-color: $light_white;
     }
   }
 
@@ -209,6 +210,52 @@
       color: $light_gray_200;
       border-color: $light_gray_200 !important;
       cursor: not-allowed;
+
+      .dropdownLabel {
+        color: $light_gray_200;
+      }
+    }
+
+    .dropdownLabel {
+      color: $light_gray_200;
+    }
+  }
+}
+
+.dropdownContainer-gray {
+  .dropdownLabel {
+    color: $light_black;
+  }
+
+  .dropdownButton {
+    color: $light_black;
+    border-color: $light_gray_400;
+    background-color: $light_white;
+  }
+
+  &:has(.dropdownButton:hover) {
+    .dropdownButton:not(:disabled) {
+      color: $light_black;
+      background-color: $light_gray_100;
+    }
+  }
+
+  &:has(.dropdownButton:active) {
+    .dropdownButton:not(:disabled) {
+      color: $light_black;
+      background-color: $light_white;
+    }
+  }
+
+  &:has(.dropdownButton:disabled) {
+    .dropdownButton {
+      color: $light_gray_200;
+      border-color: $light_gray_200 !important;
+      cursor: not-allowed;
+
+      .dropdownLabel {
+        color: $light_gray_200;
+      }
     }
 
     .dropdownLabel {
@@ -225,6 +272,11 @@
   .dropdownButton {
     color: $light_white;
     border-color: $light_white;
+    background-color: $light_black;
+
+    span {
+      color: $light_white;
+    }
   }
 
   &:has(.dropdownButton:hover) {
@@ -237,7 +289,6 @@
   &:has(.dropdownButton:active) {
     .dropdownButton:not(:disabled) {
       color: $light_white;
-      background-color: unset;
     }
   }
 
@@ -245,14 +296,24 @@
     .dropdownButton {
       color: $light_gray_900;
       border-color: $light_gray_900;
+      cursor: not-allowed;
+
+      .dropdownLabel {
+        color: $light_gray_900;
+      }
     }
   }
 }
 
 // Sizes
 .dropdownContainer-l {
-  .dropdownLabel {
-    @include label-one;
+  .dropdownLabel-thick {
+    @include button-one-text;
+    margin-bottom: 0;
+  }
+
+  .dropdownLabel-thin {
+    @include body-one;
     margin-bottom: 0;
   }
 
@@ -306,8 +367,13 @@
 }
 
 .dropdownContainer-m {
-  .dropdownLabel {
-    @include label-two;
+  .dropdownLabel-thick {
+    @include button-two-text;
+    margin-bottom: 0;
+  }
+
+  .dropdownLabel-thin {
+    @include body-two;
     margin-bottom: 0;
   }
 
@@ -361,8 +427,13 @@
 }
 
 .dropdownContainer-s {
-  .dropdownLabel {
-    @include label-three;
+  .dropdownLabel-thick {
+    @include button-three-text;
+    margin-bottom: 0;
+  }
+
+  .dropdownLabel-thin {
+    @include body-three;
     margin-bottom: 0;
   }
 
@@ -416,8 +487,13 @@
 }
 
 .dropdownContainer-xs {
-  .dropdownLabel {
-    @include label-four;
+  .dropdownLabel-thick {
+    @include button-four-text;
+    margin-bottom: 0;
+  }
+
+  .dropdownLabel-thin {
+    @include body-four;
     margin-bottom: 0;
   }
 

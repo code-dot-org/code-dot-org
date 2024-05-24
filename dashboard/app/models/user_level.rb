@@ -236,6 +236,7 @@ class UserLevel < ApplicationRecord
     s = Unit.get_from_cache(script_id)
     s.script_levels.detect {|sl| sl.level_ids.include? level_id}
   end
+
   # Retrieves and memoizes the latest PairedUserLevel that's associated with
   # this UserLevel for internal callers. External callers should call one of
   # the higher-level pairing-related methods below.

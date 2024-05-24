@@ -44,114 +44,6 @@ class ApiControllerTest < ActionController::TestCase
     sign_in @teacher
   end
 
-  # Helper for setting up student lock tests
-  def get_student_response(script, level, lesson, student_number)
-    get :lockable_state, params: {script_id: script.id}
-    assert_response :success
-    body = JSON.parse(response.body)
-
-    student_responses = body[@section.id.to_s]['lessons'][lesson.id.to_s]
-    if student_responses
-      return student_responses[student_number - 1]
-    else
-      return nil
-    end
-  end
-
-  #
-  # Given two arrays, checks that they represent equivalent bags (or multisets)
-  # of elements.
-  #
-  # Equivalent:     [1, 1, 2], [1, 2, 1]
-  # Not equivalent: [1, 1, 2], [1, 2, 2]
-  #
-  # Optionally takes a comparator block.  If omitted, == comparison is used.
-  #
-  # equivalent_bags?([2, 3, 4], [12, 13, 14]) {|a,b| a%10 == b%10}
-  #
-  # @param [Array] bag_a
-  # @param [Array] bag_b
-  # @param [Block] (optional) comparator
-  # @return [Boolean] true if sets are equivalent, false if not
-  #
-  def equivalent_bags?(bag_a, bag_b)
-    bag_b_remaining = bag_b.clone
-    bag_a.each do |a|
-      match_index = bag_b_remaining.find_index do |b|
-        if block_given?
-          yield a, b
-        else
-          a == b
-        end
-      end
-      if match_index.nil?
-        return false
-      else
-        bag_b_remaining.delete_at match_index
-      end
-    end
-    bag_b_remaining.empty?
-  end
-
-  def assert_levelgroup_results_match(expected_results, actual_results)
-    match = equivalent_bags?(expected_results, actual_results) do |expected, actual|
-      expected['type'] == actual['type'] &&
-        expected['question'] == actual['question'] &&
-        expected['answer_texts'] == actual['answer_texts'] &&
-        equivalent_bags?(expected['results'], actual['results'])
-    end
-    assert match, <<~MESSAGE
-      Mismatched results:
-
-      Expected:
-
-      #{expected_results.join("\n")}
-
-      Actual:
-
-      #{actual_results.join("\n")}
-
-    MESSAGE
-  end
-  private def create_script_with_bonus_levels
-    script = create :script
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, script: script, lesson_group: lesson_group
-
-    regular_level = create :maze
-    create :script_level, script: script, levels: [regular_level], lesson: lesson
-
-    bonus_level = create :maze
-    create :script_level, script: script, levels: [bonus_level], lesson: lesson, bonus: true
-
-    [script, lesson, regular_level, bonus_level]
-  end
-
-  private def create_script_with_lockable_lesson
-    script = create :script
-    lesson_group = create :lesson_group, script: script
-
-    # Create a LevelGroup level.
-    level = create :level_group, :with_sublevels, name: 'LevelGroupLevel1'
-    level.properties['title'] =  'Long assessment 1'
-    level.properties['submittable'] = true
-    level.save!
-
-    lesson = create :lesson, name: 'Lesson1', script: script, lockable: true, lesson_group: lesson_group
-
-    # Create a ScriptLevel joining this level to the script.
-    create :script_level, script: script, levels: [level], assessment: true, lesson: lesson
-
-    [script, level, lesson]
-  end
-
-  private def make_text_progress_in_script(script, student)
-    level = script.script_levels.map(&:oldest_active_level).find {|l| l.is_a? TextMatch}
-    level_source = create :level_source
-    create :user_level, level: level, user: student, script: script, level_source: level_source
-    # UserLevel.create!(level_id: level.id, user_id: student.id, script_id: script.id, level_source: level_source)
-  end
-
   test "example_solutions should return expected example solutions" do
     STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
     CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
@@ -392,6 +284,20 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal @flappy_section.id, flappy_section_response['section_id']
     assert_equal 1, flappy_section_response['lessons'][lesson.id.to_s].length
     assert_equal @student_flappy_1.name, flappy_section_response['lessons'][lesson.id.to_s][0]['name']
+  end
+
+  # Helper for setting up student lock tests
+  def get_student_response(script, level, lesson, student_number)
+    get :lockable_state, params: {script_id: script.id}
+    assert_response :success
+    body = JSON.parse(response.body)
+
+    student_responses = body[@section.id.to_s]['lessons'][lesson.id.to_s]
+    if student_responses
+      return student_responses[student_number - 1]
+    else
+      return nil
+    end
   end
 
   test "student should show unlocked and not readonly" do
@@ -1761,12 +1667,68 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
+  #
+  # Given two arrays, checks that they represent equivalent bags (or multisets)
+  # of elements.
+  #
+  # Equivalent:     [1, 1, 2], [1, 2, 1]
+  # Not equivalent: [1, 1, 2], [1, 2, 2]
+  #
+  # Optionally takes a comparator block.  If omitted, == comparison is used.
+  #
+  # equivalent_bags?([2, 3, 4], [12, 13, 14]) {|a,b| a%10 == b%10}
+  #
+  # @param [Array] bag_a
+  # @param [Array] bag_b
+  # @param [Block] (optional) comparator
+  # @return [Boolean] true if sets are equivalent, false if not
+  #
+  def equivalent_bags?(bag_a, bag_b)
+    bag_b_remaining = bag_b.clone
+    bag_a.each do |a|
+      match_index = bag_b_remaining.find_index do |b|
+        if block_given?
+          yield a, b
+        else
+          a == b
+        end
+      end
+      if match_index.nil?
+        return false
+      else
+        bag_b_remaining.delete_at match_index
+      end
+    end
+    bag_b_remaining.empty?
+  end
+
   test 'equivalent_bags? helper' do
     assert equivalent_bags? [], []
     assert equivalent_bags? [1, 1, 1, 2, 2], [2, 1, 2, 1, 1]
     refute equivalent_bags? [1, 1, 1, 2, 2], [1, 1, 2, 2, 2]
     assert equivalent_bags?([2, 3, 4], [12, 13, 14]) {|a, b| a % 10 == b % 10}
     refute equivalent_bags?([2, 3, 4], [11, 12, 13]) {|a, b| a % 10 == b % 10}
+  end
+
+  def assert_levelgroup_results_match(expected_results, actual_results)
+    match = equivalent_bags?(expected_results, actual_results) do |expected, actual|
+      expected['type'] == actual['type'] &&
+        expected['question'] == actual['question'] &&
+        expected['answer_texts'] == actual['answer_texts'] &&
+        equivalent_bags?(expected['results'], actual['results'])
+    end
+    assert match, <<~MESSAGE
+      Mismatched results:
+
+      Expected:
+
+      #{expected_results.join("\n")}
+
+      Actual:
+
+      #{actual_results.join("\n")}
+
+    MESSAGE
   end
 
   test 'sign_cookies' do
@@ -1783,5 +1745,44 @@ class ApiControllerTest < ActionController::TestCase
     assert_nil @response.cookies['CloudFront-Expires']
 
     assert_equal "max-age=3600, private", @response.headers["Cache-Control"]
+  end
+
+  private def create_script_with_bonus_levels
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
+
+    regular_level = create :maze
+    create :script_level, script: script, levels: [regular_level], lesson: lesson
+
+    bonus_level = create :maze
+    create :script_level, script: script, levels: [bonus_level], lesson: lesson, bonus: true
+
+    [script, lesson, regular_level, bonus_level]
+  end
+
+  private def create_script_with_lockable_lesson
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+
+    # Create a LevelGroup level.
+    level = create :level_group, :with_sublevels, name: 'LevelGroupLevel1'
+    level.properties['title'] =  'Long assessment 1'
+    level.properties['submittable'] = true
+    level.save!
+
+    lesson = create :lesson, name: 'Lesson1', script: script, lockable: true, lesson_group: lesson_group
+
+    # Create a ScriptLevel joining this level to the script.
+    create :script_level, script: script, levels: [level], assessment: true, lesson: lesson
+
+    [script, level, lesson]
+  end
+
+  private def make_text_progress_in_script(script, student)
+    level = script.script_levels.map(&:oldest_active_level).find {|l| l.is_a? TextMatch}
+    level_source = create :level_source
+    create :user_level, level: level, user: student, script: script, level_source: level_source
+    # UserLevel.create!(level_id: level.id, user_id: student.id, script_id: script.id, level_source: level_source)
   end
 end

@@ -1,4 +1,5 @@
 import {Direction, KeyCodes} from '../constants';
+
 import CustomGameLogic from './customGameLogic';
 import '@cdo/apps/utils'; // Provides Function.prototype.inherits
 

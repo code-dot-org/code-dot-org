@@ -6,10 +6,13 @@
  * Experiment state is persisted across page loads using local storage.  Note
  * that it's only written when isEnabled is called for the key in question.
  */
-import {trySetLocalStorage} from '../utils';
 import Cookie from 'js-cookie';
-import trackEvent from './trackEvent';
+
 import DCDO from '@cdo/apps/dcdo';
+
+import {trySetLocalStorage} from '../utils';
+
+import trackEvent from './trackEvent';
 
 const queryString = require('query-string');
 
@@ -39,8 +42,6 @@ experiments.OPT_IN_EMAIL_REG_PARTNER = 'optInEmailRegPartner';
 // for Sprite Lab animations
 experiments.BACKGROUNDS_AND_UPLOAD = 'backgroundsTab';
 experiments.SECTION_SETUP_REFRESH = 'sectionSetupRefresh';
-// Experiment for testing Blockly workspace serialization with the JSON system.
-experiments.BLOCKLY_JSON = 'blocklyJson';
 // Experiment for showing the gender field
 experiments.GENDER_FEATURE_ENABLED = 'gender';
 // Experiment for enabling the CPA lockout

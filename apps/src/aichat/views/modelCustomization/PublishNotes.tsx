@@ -1,18 +1,25 @@
 import React, {useCallback} from 'react';
+import classNames from 'classnames';
 
 import {
   setModelCardProperty,
-  updateAiCustomization,
+  saveModelCard,
+  publishModel,
+  selectHasFilledOutModelCard,
 } from '@cdo/apps/aichat/redux/aichatRedux';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 
 import {MODEL_CARD_FIELDS_LABELS_ICONS} from './constants';
-import {isVisible, isDisabled} from './utils';
+import {isDisabled} from './utils';
 import ExampleTopicsInputs from './ExampleTopicsInputs';
-import styles from '../model-customization-workspace.module.scss';
+import PublishStatus from './PublishStatus';
+import moduleStyles from './publish-notes.module.scss';
+import modelCustomizationStyles from '../model-customization-workspace.module.scss';
 import {ModelCardInfo} from '../../types';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
+import {useSelector} from 'react-redux';
 
 const PublishNotes: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
@@ -23,38 +30,49 @@ const PublishNotes: React.FunctionComponent = () => {
   const {modelCardInfo} = useAppSelector(
     state => state.aichat.currentAiCustomizations
   );
+  const hasFilledOutModelCard = useAppSelector(selectHasFilledOutModelCard);
 
-  const onUpdate = useCallback(
-    () => dispatch(updateAiCustomization()),
-    [dispatch]
-  );
+  const isReadOnly = useSelector(isReadOnlyWorkspace) || isDisabled(visibility);
 
-  const getInputTag = (property: keyof ModelCardInfo) => {
-    return property === 'botName' ? 'input' : 'textarea';
-  };
+  const onSave = useCallback(() => {
+    dispatch(saveModelCard());
+  }, [dispatch]);
+
+  const onPublish = useCallback(() => {
+    dispatch(publishModel());
+  }, [dispatch]);
 
   return (
-    <div className={styles.verticalFlexContainer}>
-      {isVisible(visibility) && (
-        <div className={styles.customizationContainer}>
+    <div className={modelCustomizationStyles.verticalFlexContainer}>
+      <div>
+        {!isReadOnly
+          ? hasFilledOutModelCard
+            ? PublishOkNotification
+            : CompleteToPublishNotification
+          : null}
+        <div className={modelCustomizationStyles.customizationContainer}>
           {MODEL_CARD_FIELDS_LABELS_ICONS.map(([property, label, _]) => {
             const InputTag = getInputTag(property);
 
             return (
-              <div className={styles.inputContainer} key={property}>
+              <div
+                className={modelCustomizationStyles.inputContainer}
+                key={property}
+              >
                 <label htmlFor={property}>
                   <StrongText>{label}</StrongText>
                 </label>
                 {property === 'exampleTopics' && (
                   <ExampleTopicsInputs
                     topics={modelCardInfo.exampleTopics}
-                    readOnly={isDisabled(visibility)}
+                    readOnly={isReadOnly}
                   />
                 )}
-                {property !== 'exampleTopics' && (
+                {property !== 'exampleTopics' && property !== 'isPublished' && (
                   <InputTag
                     id={property}
-                    disabled={isDisabled(visibility)}
+                    type="text"
+                    disabled={isReadOnly}
                     value={modelCardInfo[property]}
                     onChange={event =>
                       dispatch(
@@ -70,18 +88,56 @@ const PublishNotes: React.FunctionComponent = () => {
             );
           })}
         </div>
-      )}
-      <div className={styles.footerButtonContainer}>
+      </div>
+      <div className={modelCustomizationStyles.footerButtonContainer}>
+        <Button
+          text="Save"
+          iconLeft={{iconName: 'download'}}
+          type="secondary"
+          color="black"
+          disabled={isReadOnly}
+          onClick={onSave}
+          className={modelCustomizationStyles.updateButton}
+        />
         <Button
           text="Publish"
           iconLeft={{iconName: 'upload'}}
-          disabled={isDisabled(visibility)}
-          onClick={onUpdate}
-          className={styles.updateButton}
+          disabled={isReadOnly || !hasFilledOutModelCard}
+          onClick={onPublish}
+          className={modelCustomizationStyles.updateButton}
         />
       </div>
     </div>
   );
 };
+
+const getInputTag = (property: keyof ModelCardInfo) => {
+  return property === 'botName' ? 'input' : 'textarea';
+};
+
+const PublishOkNotification = (
+  <PublishStatus
+    iconName="check"
+    iconStyle={moduleStyles.check}
+    content="Ready to publish"
+    contentStyle={moduleStyles.messageTextContainer}
+    containerStyle={moduleStyles.messageContainerPublishOk}
+  />
+);
+
+const CompleteToPublishNotification = (
+  <PublishStatus
+    iconName="triangle-exclamation"
+    iconStyle={moduleStyles.alert}
+    content={
+      <>
+        In order to publish, you <StrongText>must</StrongText> fill out a model
+        card
+      </>
+    }
+    contentStyle={moduleStyles.messageTextContainer}
+    containerStyle={classNames(moduleStyles.messageContainerAlert)}
+  />
+);
 
 export default PublishNotes;

@@ -1,5 +1,5 @@
 module SurveyResultsHelper
-  DIVERSITY_SURVEY_ENABLED = false
+  DIVERSITY_SURVEY_ENABLED = true
 
   def show_diversity_survey?(kind)
     return false unless SurveyResultsHelper::DIVERSITY_SURVEY_ENABLED
@@ -12,6 +12,11 @@ module SurveyResultsHelper
     return false unless current_user.teacher?
     return false unless has_any_students?
     return false unless has_any_student_under_13?
+
+    diversity_audience = DCDO.get('diversity_audience', 'all')
+    return false if diversity_audience == 'none'
+    return false if diversity_audience == 'odd' && current_user.id.even?
+    return false if diversity_audience == 'even' && current_user.id.odd?
 
     # There is no reason not to show the survey, so show the survey.
     return true

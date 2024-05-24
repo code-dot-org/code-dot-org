@@ -11,7 +11,6 @@ const DEFAULT_PROPS = {
     ncesSchoolId: 'ncesSchoolId',
     schoolName: 'schoolName',
   },
-  zip: '10024',
 };
 
 const fakeSchools = [

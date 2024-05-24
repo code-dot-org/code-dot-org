@@ -1,4 +1,5 @@
 import React from 'react';
+
 import PaginationWrapper from './PaginationWrapper';
 
 class StorybookHarness extends React.Component {

@@ -53,6 +53,36 @@ export const tableLayoutStyles = {
   },
 };
 
+export const plTableLayoutStyles = {
+  link: {
+    ...fontConstants['main-font-semi-bold'],
+    fontSize: 14,
+    color: color.neutral_dark,
+    textDecoration: 'underline',
+  },
+  sectionCodeLink: {
+    ...fontConstants['main-font-semi-bold'],
+    fontSize: 14,
+    color: color.brand_secondary_default,
+  },
+  currentUnit: {
+    marginTop: 10,
+    fontSize: 14,
+  },
+  colButton: {
+    paddingTop: 20,
+    paddingLeft: 20,
+    paddingBottom: 20,
+    width: 40,
+  },
+  participantTypeCell: {
+    fontSize: 14,
+  },
+  leaveButton: {
+    fontSize: 14,
+  },
+};
+
 // Settings for WrappedSortable
 export const sortableOptions = {
   // Dim inactive sorting icons in the column headers

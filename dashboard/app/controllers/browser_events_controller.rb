@@ -66,6 +66,7 @@ class BrowserEventsController < ApplicationController
     return render status: :unauthorized, json: {error: "Browser Cloudwatch logging is currently disabled"} unless
       Gatekeeper.allows(EXPERIMENT_FLAG_NAME, default: true) && DCDO.get(EXPERIMENT_FLAG_NAME, true)
   end
+
   private def convert_metric_datum(metric_datum)
     return nil unless metric_datum["name"]
 

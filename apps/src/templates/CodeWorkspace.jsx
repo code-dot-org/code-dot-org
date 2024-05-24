@@ -1,25 +1,28 @@
+import classNames from 'classnames';
 import $ from 'jquery';
-import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
+import React from 'react';
 import {connect} from 'react-redux';
-import ProtectedStatefulDiv from './ProtectedStatefulDiv';
-import JsDebugger from '@cdo/apps/lib/tools/jsdebugger/JsDebugger';
-import PaneHeader, {PaneSection, PaneButton} from './PaneHeader';
-import i18n from '@cdo/locale';
-import commonStyles from '../commonStyles';
-import color from '../util/color';
-import * as utils from '@cdo/apps/utils';
-import {shouldUseRunModeIndicators} from '../redux/selectors';
-import SettingsCog from '../lib/ui/SettingsCog';
-import ShowCodeToggle from './ShowCodeToggle';
-import {singleton as studioApp} from '../StudioApp';
-import ProjectTemplateWorkspaceIcon from './ProjectTemplateWorkspaceIcon';
-import {queryParams} from '../code-studio/utils';
+
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
-import {closeWorkspaceAlert} from '../code-studio/projectRedux';
+import JsDebugger from '@cdo/apps/lib/tools/jsdebugger/JsDebugger';
 import styleConstants from '@cdo/apps/styleConstants';
-import classNames from 'classnames';
+import * as utils from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
+
+import {closeWorkspaceAlert} from '../code-studio/projectRedux';
+import {queryParams} from '../code-studio/utils';
+import commonStyles from '../commonStyles';
+import SettingsCog from '../lib/ui/SettingsCog';
+import {shouldUseRunModeIndicators} from '../redux/selectors';
+import {singleton as studioApp} from '../StudioApp';
+import color from '../util/color';
+
+import PaneHeader, {PaneSection, PaneButton} from './PaneHeader';
+import ProjectTemplateWorkspaceIcon from './ProjectTemplateWorkspaceIcon';
+import ProtectedStatefulDiv from './ProtectedStatefulDiv';
+import ShowCodeToggle from './ShowCodeToggle';
 
 class CodeWorkspace extends React.Component {
   static propTypes = {

@@ -32,6 +32,22 @@ const EVENTS = {
   SCHOOL_INTERSTITIAL_SAVE_FAILURE: 'School Interstitial Save Failure',
   SCHOOL_INTERSTITIAL_DISMISS: 'School Interstitial Dismissed',
 
+  // Child Account Policy
+  CAP_STATE_FORM_SHOW: 'CAP State Form Shown',
+  CAP_STATE_FORM_PROVIDED: 'CAP State Form Submitted',
+  CAP_STATE_FORM_DISMISSED: 'CAP State Form Sign Out Button Clicked',
+  CPA_PARENT_EMAIL_BANNER_SHOWN: 'cpa_parent_email_banner_shown',
+  CPA_PARENT_EMAIL_BANNER_CLICKED: 'cpa_parent_email_banner_clicked',
+  CPA_PARENT_EMAIL_BANNER_SUBMITTED: 'cpa_parent_email_banner_submitted',
+  CPA_PARENT_EMAIL_BANNER_UPDATED: 'cpa_parent_email_banner_updated',
+  CPA_PARENT_EMAIL_BANNER_RESEND: 'cpa_parent_email_banner_resend',
+  CPA_PARENT_EMAIL_BANNER_CLOSED: 'cpa_parent_email_banner_closed',
+  CPA_PARENT_EMAIL_MODAL_SHOWN: 'cpa_parent_email_modal_shown',
+  CPA_PARENT_EMAIL_MODAL_SUBMITTED: 'cpa_parent_email_modal_submitted',
+  CPA_PARENT_EMAIL_MODAL_UPDATED: 'cpa_parent_email_modal_updated',
+  CPA_PARENT_EMAIL_MODAL_RESEND: 'cpa_parent_email_modal_resend',
+  CPA_PARENT_EMAIL_MODAL_CLOSED: 'cpa_parent_email_modal_closed',
+
   // School Selection Component
   COUNTRY_SELECTED: 'User Selects Country',
   ZIP_CODE_ENTERED: 'Valid Zip Code Entered',
@@ -85,6 +101,7 @@ const EVENTS = {
   COMPLETED_EVENT: 'Section Setup Completed',
   CURRICULUM_ASSIGNED: 'Section Curriculum Assigned',
   PROGRESS_VIEWED: 'Section Progress Viewed',
+  PROGRESS_VIEWED_FIXED: 'Accurate V1 Section Progress Viewed',
   PROGRESS_TOGGLE: 'Section Progress Toggled',
   PROGRESS_CHANGE_UNIT: 'Section Progress Unit Changed',
   PROGRESS_JUMP_TO_LESSON: 'Section Progress Jump to Lesson',
@@ -104,6 +121,11 @@ const EVENTS = {
   PROGRESS_V2_COLLAPSE_ICON_KEY: 'Section New Progress Icon Key Collapse',
   PROGRESS_V2_VIEW_MORE_DETAILS: 'Section New Progress More Details',
   PROGRESS_V2_VIEW_LEVEL_DETAILS: 'Section New Progress Level Details',
+  PROGRESS_V2_ACCEPT_INVITATION: 'Section Progress Invitation Modal Accept',
+  PROGRESS_V2_DISMISS_INVITATION: 'Section Progress Invitation Modal Dismiss',
+  PROGRESS_V2_DELAY_INVITATION:
+    'Section Progress Invitation Modal Remind Later',
+  PROGRESS_V2_SEEN_INVITATION: 'Section Progress Invitation Modal seen by user',
 
   // Levels
   FEEDBACK_SUBMITTED: 'Level Feedback Submitted',
@@ -156,6 +178,14 @@ const EVENTS = {
     'TA Rubric AI Eval started from section request',
   TA_RUBRIC_WINDOW_MOVE_START: 'TA Rubric window move start',
   TA_RUBRIC_WINDOW_MOVE_END: 'TA Rubric window move end',
+  TA_RUBRIC_TOUR_STARTED: 'First view of TA Rubric product tour',
+  TA_RUBRIC_TOUR_RESTARTED: 'TA Rubric product tour restart from ? button',
+  TA_RUBRIC_TOUR_NEXT: 'TA Rubric product tour next button clicked',
+  TA_RUBRIC_TOUR_BACK: 'TA Rubric product tour back button clicked',
+  TA_RUBRIC_TOUR_CLOSED: 'TA Rubric product tour closed',
+  TA_RUBRIC_TOUR_COMPLETE: 'User viewed all of TA Rubric product tour',
+  TA_RUBRIC_EVIDENCE_TOOLTIP_HOVERED: 'TA Rubric Evidence Tooltip Hovered',
+  TA_RUBRIC_EVIDENCE_GOTO_CLICKED: 'TA Rubric Evidence Line Number Clicked',
 
   // AI Tutor
   AI_TUTOR_PANEL_OPENED: 'AI Tutor Panel Opened',
@@ -246,6 +276,16 @@ const EVENTS = {
   // LTI Incubator
   LTI_INCUBATOR_SIGNUP_CLICK: 'lti_incubator_signup_click',
   LTI_INCUBATOR_GUIDES_CLICK: 'lti_incubator_guides_click',
+
+  // Teacher Homepage
+  TEACHER_HOMEPAGE_VISITED: 'Teacher Homepage Visited',
+
+  // Aichat
+  UPDATE_CHATBOT: 'Student updates their aichat bot',
+  AICHAT_VALIDATION: 'Student passes/fails validation on an aichat level',
+  CHAT_ACTION: 'Student takes a chat action',
+  SAVE_MODEL_CARD_INFO: 'Student saves their model card info',
+  PUBLISH_MODEL_CARD_INFO: 'Student publishes their model card info',
 };
 
 const EVENT_GROUP_NAMES = {

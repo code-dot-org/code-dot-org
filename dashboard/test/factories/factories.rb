@@ -2,6 +2,10 @@ require 'cdo/activity_constants'
 require 'policies/child_account'
 
 FactoryBot.define do
+  trait :skip_validation do
+    to_create {|instance| instance.save(validate: false)}
+  end
+
   factory :course_offering do
     sequence(:key, 'a') {|c| "bogus-course-offering-#{c}"}
     sequence(:display_name, 'a') {|c| "bogus-course-offering-#{c}"}
@@ -1821,6 +1825,13 @@ FactoryBot.define do
     lti_course {create :lti_course}
     section {create :section}
     lms_section_id {SecureRandom.uuid}
+  end
+
+  factory :new_feature_feedback do
+    association :user, factory: :teacher
+
+    form_key {'progress_v2'}
+    satisfied {true}
   end
 
   factory :parental_permission_request do

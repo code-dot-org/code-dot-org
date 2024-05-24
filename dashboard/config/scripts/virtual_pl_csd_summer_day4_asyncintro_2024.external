@@ -5,21 +5,18 @@ description 'description here'
 markdown <<MARKDOWN
 # Day 4, Asynchronous Part 2
 
-##### Welcome! In this asynchronous module, you will learn more about differentiation in the CS Discoveries curriculum. You will also have the opportunity to pause and process all of the CS content learning you've done so far.
+#### Welcome! In this asynchronous module, you will learn more about differentiation in the CS Discoveries curriculum. You will also have the opportunity to pause and process all of the CS content learning you've done so far.
 
 <img src="https://images.code.org/5645d21d4ae10bcb8b11ebe86869444c-image-1684375389181.03.05 PM.png" alt="A student points two finger guns jokingly at their computer. Two students and a teacher look on with them." style="border-radius:10px; float: right; height: 200px; clear: both; margin: 0 20px 20px 20px;">
 
-## In this module, you will:
+### **In this module, you will:**
 
-* ##### Learn more about differentiation in the CS Discoveries platform
-* ##### Commit to trying one strategy for differentiation with your students
-* ##### Process the computer science learning you've done to celebrate and consider your next steps.
-* ##### Complete any remaining challenges from the TLO.
+* #### Learn more about differentiation in the CS Discoveries platform
+* #### Commit to trying one strategy for differentiation with your students
+* #### Process the computer science learning you've done to celebrate and consider your next steps.
+* #### Complete any remaining challenges from the TLO.
+<br>
 
-### **Suggested time:** 60 minutes
-
-
-## Let's get started!
-
-<div style="clear:both"/>
+#### **Suggested time:** 60 minutes
+<br><br>
 MARKDOWN

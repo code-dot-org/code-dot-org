@@ -1,4 +1,4 @@
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon';
 
@@ -8,7 +8,7 @@ import {
   TransferStatus,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import {UnconnectedMoveStudents as MoveStudents} from '@cdo/apps/templates/manageStudents/MoveStudents';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 
 import {expect} from '../../../util/reconfiguredChai';
 

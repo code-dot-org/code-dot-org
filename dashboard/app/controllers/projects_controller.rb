@@ -180,6 +180,9 @@ class ProjectsController < ApplicationController
     },
     game_design: {
       name: 'New Game Design Project'
+    },
+    pythonlab: {
+      name: 'New Python Lab Project'
     }
   }.with_indifferent_access.freeze
 
@@ -310,26 +313,55 @@ class ProjectsController < ApplicationController
     )
   end
 
-  # GET /projects(/script/:script_id)/level/:level_id
+  # GET /projects(/script/:script_id)/level/:level_id(/user/:user_id)
   # Given a level_id and the current user (or signed out user), get the existing project
   # or create a new project for that level and user. If a script_id is provided, get or
-  # create the project for that level, script and user
+  # create the project for that level, script and user.
+  # If a user_id is provided, get but do not create the project for that level, script and
+  # user_id; this is used for Lab2 levels when a teacher views a student's work, and the
+  # relevant permission is verified here.
   # Returns json: {channel: <encrypted-channel-token>}
   def get_or_create_for_level
     script_id = params[:script_id]
     level = Level.find(params[:level_id])
+    user_id = params[:user_id]
+
     error_message = under_13_without_tos_teacher?(level)
     return render(status: :forbidden, json: {error: error_message}) if error_message
-    # get_storage_id works for signed out users as well, it uses the cookie to determine
-    # the storage id.
-    user_storage_id = get_storage_id
-    # Find the channel for the user and level if it exists, or create a new one.
-    channel_token = ChannelToken.find_or_create_channel_token(level, request.ip, user_storage_id, script_id, {hidden: true})
-    script_name = !script_id.nil? && Unit.find(script_id)&.name
+
+    if user_id
+      # If viewing another user's work, ensure that we have permission.
+      script_level = level.script_levels.find_by_script_id(script_id)
+      user = User.find(user_id)
+      unless can?(:view_as_user, script_level, user)
+        return render(status: :forbidden, json: {error: "Access denied."})
+      end
+
+      # And return early if the level has not been started.
+      script = Unit.get_from_cache(script_id)
+      unless level_started?(level, script, user)
+        return render(status: :ok, json: {started: false})
+      end
+
+      user_storage_id = storage_id_for_user_id(user_id)
+
+      # Find the channel for the user and level, if it exists.
+      channel_token = ChannelToken.find_channel_token(level, user_storage_id, script_id)
+    else
+      # get_storage_id works for signed out users as well; it uses the cookie to determine
+      # the storage id.
+      user_storage_id = get_storage_id
+
+      # Find the channel for the user and level if it exists, or create a new one.
+      channel_token = ChannelToken.find_or_create_channel_token(level, request.ip, user_storage_id, script_id, {hidden: true})
+    end
+
     # We can limit channel updates during periods of high use using the updateChannelOnSave flag.
+    script_name = !script_id.nil? && Unit.find(script_id)&.name
     reduce_channel_updates = script_name ?
                               !Gatekeeper.allows("updateChannelOnSave", where: {script_name: script_name}, default: true) :
                               false
+
     render(status: :ok, json: {channel: channel_token.channel, reduceChannelUpdates: reduce_channel_updates})
   end
 
@@ -338,6 +370,10 @@ class ProjectsController < ApplicationController
   end
 
   def show
+    if @level.deprecated?
+      return render 'errors/deprecated_course'
+    end
+
     if params.key?(:nosource)
       # projects can optionally be embedded without making their source
       # available. to keep people from just twiddling the url to get to the
@@ -357,6 +393,7 @@ class ProjectsController < ApplicationController
     iframe_embed = params[:iframe_embed] == true
     iframe_embed_app_and_code = params[:iframe_embed_app_and_code] == true
     sharing = iframe_embed || params[:share] == true
+    set_lab2_responsive_view_options(sharing)
     readonly = params[:readonly] == true
     if iframe_embed || iframe_embed_app_and_code
       # explicitly set security related headers so that this page can actually
@@ -524,6 +561,21 @@ class ProjectsController < ApplicationController
     project_validator = current_user&.permission? UserPermission::PROJECT_VALIDATOR
     !project_validator && limited_project_gallery
   end
+
+  # Automatically catch authorization exceptions on any methods in this controller
+  # Overrides handler defined in application_controller.rb.
+  # Special for projects controller - when forbidden, redirect to home instead
+  # of returning a 403.
+  rescue_from CanCan::AccessDenied do
+    if current_user
+      # Logged in and trying to reach a forbidden page - redirect to home.
+      redirect_to '/'
+    else
+      # Not logged in and trying to reach a forbidden page - redirect to sign in.
+      authenticate_user!
+    end
+  end
+
   private def initial_data
     data = {
       name: 'Untitled Project',
@@ -584,30 +636,22 @@ class ProjectsController < ApplicationController
   # Redirect to the correct view/edit page for Lab2 projects. If a project owner is on a /view
   # page, redirect to /edit. If a non-owner is on an /edit page, redirect to /view.
   # For legacy (non-Lab2) labs, this is handled on the front-end.
-  # We will also redirect away from share URLs to the correct view/edit page as Lab2 does not
-  # yet support separate share pages.
   private def redirect_edit_view_for_lab2
     return nil unless @level.uses_lab2?
 
     project = Projects.new(get_storage_id).get(params[:channel_id])
     is_owner = project[:isOwner]
-    sharing = params[:iframe_embed] == true || params[:share] == true
 
-    return redirect_to "/projects/#{params[:key]}/#{params[:channel_id]}/edit" if is_owner && (sharing || request.path.ends_with?('/view'))
-    return redirect_to "/projects/#{params[:key]}/#{params[:channel_id]}/view" if !is_owner && (sharing || request.path.ends_with?('/edit'))
+    return redirect_to "/projects/#{params[:key]}/#{params[:channel_id]}/edit" if is_owner && request.path.ends_with?('/view')
+    return redirect_to "/projects/#{params[:key]}/#{params[:channel_id]}/view" if !is_owner && request.path.ends_with?('/edit')
   end
 
-  # Automatically catch authorization exceptions on any methods in this controller
-  # Overrides handler defined in application_controller.rb.
-  # Special for projects controller - when forbidden, redirect to home instead
-  # of returning a 403.
-  rescue_from CanCan::AccessDenied do
-    if current_user
-      # Logged in and trying to reach a forbidden page - redirect to home.
-      redirect_to '/'
-    else
-      # Not logged in and trying to reach a forbidden page - redirect to sign in.
-      authenticate_user!
+  private def set_lab2_responsive_view_options(sharing)
+    return nil unless @level.uses_lab2?
+
+    # If the user is on the play view '/projects/channel_id', set `response_content`.`
+    if sharing == true
+      view_options(responsive_content: true)
     end
   end
 end

@@ -58,14 +58,6 @@ class RedisTable
     key.split('_')[0]
   end
 
-  # Given a row key, return the id of the row that it corresponds to.
-  # @param [String] key
-  # @return [Integer] the row id.
-  # TODO(asher): Remove the need for the rubocop disable.
-  def self.id_from_row_key(key)
-    key.split('_')[1].to_i
-  end
-
   # Makes a row object by parsing the JSON value.
   #
   # @param [String] value The JSON-encoded value.
@@ -81,6 +73,14 @@ class RedisTable
   # TODO(asher): Remove the need for the rubocop disable.
   def self.internal_key?(k)
     k.end_with?(ROW_ID_SUFFIX)
+  end
+
+  # Given a row key, return the id of the row that it corresponds to.
+  # @param [String] key
+  # @return [Integer] the row id.
+  # TODO(asher): Remove the need for the rubocop disable.
+  def self.id_from_row_key(key)
+    key.split('_')[1].to_i
   end
 
   # Constructs the redis table.

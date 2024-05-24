@@ -36,6 +36,7 @@ class ScaryChangeDetector
     detect_dropbox_conflicts
     detect_changed_feature_files
   end
+
   private def detect_new_models
     changes = @added.grep(/^dashboard\/app\/models\/levels\//)
     return if changes.empty?

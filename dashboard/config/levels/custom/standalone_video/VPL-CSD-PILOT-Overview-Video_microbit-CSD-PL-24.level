@@ -1,0 +1,24 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 54,
+  "created_at": "2024-05-06T02:52:10.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "encrypted": "false",
+    "video_key": "PL_CSD_MicroBit_Intro",
+    "instructions_important": "false",
+    "display_name": "Video: Functions",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 20862,
+    "name_suffix": "_2023",
+    "long_instructions": "## Getting Started with the Micro:bit\r\n\r\n#### In the Creating Apps with Devices unit, students use the micro:bit tethered via USB to their computers to create apps with physical inputs and outputs.\r\n* #### Watch this video to learn more about the micro:bit.\r\n* #### <a href=\"https://studio.code.org/maker/setup\" target=\"blank\" rel=\"noopener noreferrer\">Click here</a> to visit the micro:bit setup page. \r\n\r\n## Where do I go if I have additional questions?\r\n\r\n#### Visit the <a href=\"https://support.code.org/hc/en-us/articles/13937009908877-Installing-BBC-micro-bit-software-for-Code-org\" target=\"blank\" rel=\"noopener noreferrer\">Installing micro:bit software support page</a> for additional support. \r\n"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-05-06T02:52:10.623+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-PILOT-S22-CI-CP-Overview-Video_setup_2023\\\"\"],\"cloned_from\":\"VPL-CSD-PILOT-S22-CI-CP-Overview-Video_setup_2023\"},{\"changed_at\":\"2024-05-06 02:53:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

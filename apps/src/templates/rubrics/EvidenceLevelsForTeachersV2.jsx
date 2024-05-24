@@ -1,19 +1,22 @@
-import React, {useMemo, useState, useEffect} from 'react';
-import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
 import classnames from 'classnames';
-import style from './rubrics.module.scss';
-import {aiEvaluationShape, evidenceLevelShape} from './rubricShapes';
+import PropTypes from 'prop-types';
+import React, {useMemo, useState, useEffect} from 'react';
+
 import {
   BodyThreeText,
   BodyFourText,
   StrongText,
 } from '@cdo/apps/componentLibrary/typography';
+import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
+
 import {
   UNDERSTANDING_LEVEL_STRINGS,
   UNDERSTANDING_LEVEL_STRINGS_V2,
 } from './rubricHelpers';
-import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
+import {aiEvaluationShape, evidenceLevelShape} from './rubricShapes';
+
+import style from './rubrics.module.scss';
 
 const INVALID_UNDERSTANDING = -1;
 

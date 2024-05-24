@@ -13,6 +13,12 @@ const availableCallouts: {
   'play-sound-block': {
     selector: `.blocklyFlyout g[data-id="${BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2}"]`,
   },
+  'play-notes-block': {
+    selector: `.blocklyFlyout g[data-id="${BlockTypes.PLAY_CHORD_AT_CURRENT_LOCATION_SIMPLE2}"]`,
+  },
+  'play-drums-block': {
+    selector: `.blocklyFlyout g[data-id="${BlockTypes.PLAY_PATTERN_AT_CURRENT_LOCATION_SIMPLE2}"]`,
+  },
   'play-sounds-together-block': {
     selector: `.blocklyFlyout g[data-id="${BlockTypes.PLAY_SOUNDS_TOGETHER}"]`,
   },
@@ -71,6 +77,10 @@ const Callouts: React.FunctionComponent = () => {
   const elementWidth = elementRect.right - elementRect.left + 1;
   const elementLeft = elementRect.left + elementWidth / 2;
   const elementTop = elementRect.bottom + 4;
+
+  if (elementRect.width === 0) {
+    return null;
+  }
 
   return (
     <div

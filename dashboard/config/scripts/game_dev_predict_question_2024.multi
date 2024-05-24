@@ -1,0 +1,11 @@
+name 'game_dev_predict_question_2024'
+
+wrong 'The Health variable increases by 1 when the touches a bomb.', feedback: 'Incorrect. Look for the `if Health = 0` condition.'
+wrong 'The Health variable decreases by 1 when the bear jumps.', feedback: 'Incorrect. Look for the `if Health = 0` condition.'
+wrong 'Only the background will change when Health equals 0.', feedback: 'Incorrect! There are three blocks inside the `if Health = 0` condition.'
+right 'The background will change, all the sprites will stop, and the panda will say "Game Over!.', feedback: 'Correct. The code inside the `if Health = 0` condition will run.'
+allow_multiple_attempts true
+markdown <<MARKDOWN
+##Predict what this code will do!
+Take a look at this code. Scroll down to select an answer: What will happen when the **variable Health equals 0**?
+MARKDOWN

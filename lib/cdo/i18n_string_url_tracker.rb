@@ -48,7 +48,11 @@ class I18nStringUrlTracker
         # raise error if translation is missing
         raise: true
       }
-      source_string = I18n.t(string_key, **options) rescue nil
+      source_string = begin
+        I18n.t(string_key, **options)
+      rescue
+        nil
+      end
       !source_string.nil?
     end
   end
@@ -281,6 +285,7 @@ class I18nStringUrlTracker
   def set_buffer_size_max(max)
     @buffer_size_max = max
   end
+
   # Records the log data to a buffer which will eventually be flushed
   private def add_to_buffer(normalized_key, url, source, string_key, scope, separator)
     # make sure this is the only thread modifying @buffer

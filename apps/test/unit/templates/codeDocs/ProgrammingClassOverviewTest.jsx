@@ -1,4 +1,4 @@
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import ProgrammingClassOverview from '@cdo/apps/templates/codeDocs/ProgrammingClassOverview';

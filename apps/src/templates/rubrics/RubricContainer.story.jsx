@@ -1,10 +1,13 @@
 import React from 'react';
-import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
-import RubricContainer from './RubricContainer';
 import {Provider} from 'react-redux';
-import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
+
 import teacherPanel from '@cdo/apps/code-studio/teacherPanelRedux';
+import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
+import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
+
 import teacherSections from '../teacherDashboard/teacherSectionsRedux';
+
+import RubricContainer from './RubricContainer';
 
 export default {
   component: RubricContainer,

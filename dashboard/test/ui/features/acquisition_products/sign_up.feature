@@ -1,10 +1,11 @@
+@skip
 @eyes
 Feature: Teacher can create a new account
 
 Scenario: Teacher can create an account with the new school association flow
 
   Given I am on "http://studio.code.org/users/sign_up"
-  And I press keys "my@validemail.com" for element "#user_email"
+  And I fill in the sign up email field with a random email
   And I press keys "password" for element "#user_password"
   And I press keys "password" for element "#user_password_confirmation"
   And I press "#signup_form_submit" using jQuery

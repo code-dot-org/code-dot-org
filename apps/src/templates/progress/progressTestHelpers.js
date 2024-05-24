@@ -5,14 +5,15 @@
  * into test.
  */
 
+import Immutable from 'immutable';
 import _ from 'lodash';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {createStore} from 'redux';
+
 import {
   levelProgressFromServer,
   lessonProgressForSection,
 } from '@cdo/apps/templates/progress/progressHelpers';
-import {createStore} from 'redux';
-import Immutable from 'immutable';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 export const fakeLesson = (
   name,

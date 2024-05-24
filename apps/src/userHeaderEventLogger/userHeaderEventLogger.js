@@ -1,7 +1,8 @@
 import $ from 'jquery';
-import getScriptData from '@cdo/apps/util/getScriptData';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(function () {
   const headerCreateMenu = document.getElementById('header_create_menu');

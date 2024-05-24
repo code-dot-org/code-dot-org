@@ -44,6 +44,7 @@ class PotentialTeachersController < ApplicationController
     @potential_teacher = PotentialTeacher.find_by(id: params[:id])
     return render :not_found unless @potential_teacher
   end
+
   private def potential_teacher_params
     params.permit([:name, :email, :script_id, :receives_marketing]).to_h
   end

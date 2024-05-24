@@ -36,11 +36,11 @@
     "disable_procedure_autopopulate": "true",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-25 23:38:32 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-07-25 23:39:11 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-07-25 23:40:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-07-25 23:41:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-07-28 05:14:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"use_modal_function_editor\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-28 05:15:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_direction\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-28 05:16:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_direction\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-28 05:17:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-28 05:19:58 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-28 05:21:21 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-07-25 23:38:32 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-07-25 23:39:11 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-07-25 23:40:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-07-25 23:41:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-07-28 05:14:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"use_modal_function_editor\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-28 05:15:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_direction\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-28 05:16:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_direction\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-28 05:17:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-28 05:19:58 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-28 05:21:21 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2024-04-11 20:28:10 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -53,140 +53,145 @@
     <toolbox_blocks>
       <xml>
         <category name="Actions">
-          <block type="draw_move" inline="true">
-            <title name="DIR">moveForward</title>
+          <block type="draw_move">
+            <field name="DIR">moveForward</field>
             <value name="VALUE">
               <block type="math_number">
-                <title name="NUM">100</title>
+                <field name="NUM">100</field>
               </block>
             </value>
           </block>
-          <block type="draw_turn" inline="true">
-            <title name="DIR">turnRight</title>
+          <block type="draw_turn">
+            <field name="DIR">turnRight</field>
             <value name="VALUE">
               <block type="math_number">
-                <title name="NUM">90</title>
+                <field name="NUM">90</field>
               </block>
             </value>
           </block>
-          <block type="draw_turn" inline="true">
-            <title name="DIR">turnLeft</title>
+          <block type="draw_turn">
+            <field name="DIR">turnLeft</field>
             <value name="VALUE">
               <block type="math_number">
-                <title name="NUM">90</title>
+                <field name="NUM">90</field>
               </block>
             </value>
           </block>
-          <block type="jump" inline="true">
-            <title name="DIR">jumpForward</title>
+          <block type="jump">
+            <field name="DIR">jumpForward</field>
             <value name="VALUE">
               <block type="math_number">
-                <title name="NUM">100</title>
+                <field name="NUM">100</field>
               </block>
             </value>
           </block>
           <block type="jump_to_xy">
-            <title name="XPOS">0</title>
-            <title name="YPOS">0</title>
+            <field name="XPOS">0</field>
+            <field name="YPOS">0</field>
           </block>
           <block type="jump_to">
-            <title name="VALUE">7</title>
+            <field name="VALUE">7</field>
           </block>
           <block type="turtle_setArtist">
-            <title name="VALUE">anna</title>
+            <field name="VALUE">anna</field>
           </block>
-          <block type="draw_colour" inline="true">
+          <block type="draw_colour">
             <value name="COLOUR">
               <block type="colour_picker">
-                <title name="COLOUR">#ffffff</title>
+                <field name="COLOUR">#ffffff</field>
               </block>
             </value>
           </block>
-          <block type="draw_colour" inline="true">
+          <block type="draw_colour">
             <value name="COLOUR">
               <block type="colour_random"/>
             </value>
           </block>
         </category>
         <category name="Loops">
-          <block type="controls_repeat_ext" inline="true">
+          <block type="controls_repeat_ext">
             <value name="TIMES">
               <block type="math_number">
-                <title name="NUM">4</title>
+                <field name="NUM">4</field>
               </block>
             </value>
           </block>
-          <block type="controls_for_counter" inline="true">
+          <block type="controls_for_counter">
             <value name="FROM">
               <block type="math_number">
-                <title name="NUM">1</title>
+                <field name="NUM">1</field>
               </block>
             </value>
             <value name="TO">
               <block type="math_number">
-                <title name="NUM">100</title>
+                <field name="NUM">100</field>
               </block>
             </value>
             <value name="BY">
               <block type="math_number">
-                <title name="NUM">10</title>
+                <field name="NUM">10</field>
               </block>
             </value>
           </block>
         </category>
         <category name="Math">
           <block type="math_number">
-            <title name="NUM">0</title>
+            <field name="NUM">0</field>
           </block>
-          <block type="math_arithmetic" inline="true">
-            <title name="OP">ADD</title>
+          <block type="math_arithmetic">
+            <field name="OP">ADD</field>
           </block>
-          <block type="math_random_int" inline="true">
+          <block type="math_random_int">
             <value name="FROM">
               <block type="math_number">
-                <title name="NUM">1</title>
+                <field name="NUM">1</field>
               </block>
             </value>
             <value name="TO">
               <block type="math_number">
-                <title name="NUM">100</title>
+                <field name="NUM">100</field>
               </block>
             </value>
           </block>
         </category>
         <category name="Logic">
-          <block type="controls_if" inline="false">
+          <block type="controls_if">
             <value name="IF0">
-              <block type="logic_compare" inline="true">
-                <title name="OP">EQ</title>
+              <block type="logic_compare">
+                <field name="OP">EQ</field>
               </block>
             </value>
           </block>
         </category>
         <category name="Functions" custom="PROCEDURE">
-          <block type="create_a_circle_size" inline="false">
+          <block type="create_a_circle_size">
             <value name="VALUE">
               <block type="math_number">
-                <title name="NUM">0</title>
+                <field name="NUM">0</field>
               </block>
             </value>
           </block>
           <block type="create_snowflake_dropdown" id="create_snowflake_qtip">
-            <title name="TYPE">square</title>
+            <field name="TYPE">square</field>
           </block>
         </category>
         <category name="Variables" custom="VARIABLE">
-          <block type="variables_set" inline="false">
-            <title name="VAR">i</title>
+          <block type="variables_set">
+            <field name="VAR">i</field>
           </block>
           <block type="variables_get">
-            <title name="VAR">i</title>
+            <field name="VAR">i</field>
           </block>
-          <block type="variables_set" inline="false">
-            <title name="VAR">counter</title>
+          <block type="variables_set">
+            <field name="VAR">counter</field>
           </block>
           <block type="variables_get">
-            <title name="VAR">counter</title>
+            <field name="VAR">counter</field>
+          </block>
+        </category>
+        <category name="Comments">
+          <block type="comment">
+            <field name="TEXT"/>
           </block>
         </category>
       </xml>

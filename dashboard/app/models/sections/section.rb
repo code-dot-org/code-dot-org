@@ -60,43 +60,6 @@ class Section < ApplicationRecord
   @@section_capacity = 500
 
   include Rails.application.routes.url_helpers
-
-  # This list is duplicated as SECTION_LOGIN_TYPE in shared_constants.rb and should be kept in sync.
-  LOGIN_TYPES = [
-    LOGIN_TYPE_EMAIL = 'email'.freeze,
-    LOGIN_TYPE_PICTURE = 'picture'.freeze,
-    LOGIN_TYPE_WORD = 'word'.freeze,
-    LOGIN_TYPE_GOOGLE_CLASSROOM = 'google_classroom'.freeze,
-    LOGIN_TYPE_CLEVER = 'clever'.freeze,
-    LOGIN_TYPE_LTI_V1 = 'lti_v1'.freeze
-  ]
-  LOGIN_TYPES_OAUTH = [
-    LOGIN_TYPE_GOOGLE_CLASSROOM,
-    LOGIN_TYPE_CLEVER
-  ]
-
-  TYPES = [
-    # Insert non-workshop section types here.
-  ].concat(Pd::Workshop::SECTION_TYPES).freeze
-
-  VALID_GRADES = [
-    SharedConstants::STUDENT_GRADE_LEVELS,
-    SharedConstants::PL_GRADE_VALUE
-  ].flatten.freeze
-
-  ADD_STUDENT_EXISTS = 'exists'.freeze
-  ADD_STUDENT_SUCCESS = 'success'.freeze
-  ADD_STUDENT_FAILURE = 'failure'.freeze
-  ADD_STUDENT_FORBIDDEN = 'forbidden'.freeze
-  ADD_STUDENT_FULL = 'full'.freeze
-  ADD_STUDENT_RESTRICTED = 'restricted'.freeze
-
-  CSA = 'csa'.freeze
-  CSA_PILOT_FACILITATOR = 'csa-pilot-facilitator'.freeze
-
-  # A section can have five co-teachers, plus the owner, for a total of 6
-  INSTRUCTOR_LIMIT = 6
-
   acts_as_paranoid
 
   belongs_to :user, optional: true
@@ -141,7 +104,44 @@ class Section < ApplicationRecord
   validate :pl_sections_must_use_pl_grade
   validate :participant_type_not_changed
 
+  before_validation :strip_emoji_from_name
+
+  # This list is duplicated as SECTION_LOGIN_TYPE in shared_constants.rb and should be kept in sync.
+  LOGIN_TYPES = [
+    LOGIN_TYPE_EMAIL = 'email'.freeze,
+    LOGIN_TYPE_PICTURE = 'picture'.freeze,
+    LOGIN_TYPE_WORD = 'word'.freeze,
+    LOGIN_TYPE_GOOGLE_CLASSROOM = 'google_classroom'.freeze,
+    LOGIN_TYPE_CLEVER = 'clever'.freeze,
+    LOGIN_TYPE_LTI_V1 = 'lti_v1'.freeze
+  ]
+  LOGIN_TYPES_OAUTH = [
+    LOGIN_TYPE_GOOGLE_CLASSROOM,
+    LOGIN_TYPE_CLEVER
+  ]
+
+  TYPES = [
+    # Insert non-workshop section types here.
+  ].concat(Pd::Workshop::SECTION_TYPES).freeze
   validates_inclusion_of :section_type, in: TYPES, allow_nil: true
+
+  VALID_GRADES = [
+    SharedConstants::STUDENT_GRADE_LEVELS,
+    SharedConstants::PL_GRADE_VALUE
+  ].flatten.freeze
+
+  ADD_STUDENT_EXISTS = 'exists'.freeze
+  ADD_STUDENT_SUCCESS = 'success'.freeze
+  ADD_STUDENT_FAILURE = 'failure'.freeze
+  ADD_STUDENT_FORBIDDEN = 'forbidden'.freeze
+  ADD_STUDENT_FULL = 'full'.freeze
+  ADD_STUDENT_RESTRICTED = 'restricted'.freeze
+
+  CSA = 'csa'.freeze
+  CSA_PILOT_FACILITATOR = 'csa-pilot-facilitator'.freeze
+
+  # A section can have five co-teachers, plus the owner, for a total of 6
+  INSTRUCTOR_LIMIT = 6
 
   def self.valid_login_type?(type)
     LOGIN_TYPES.include? type
@@ -405,6 +405,7 @@ class Section < ApplicationRecord
         participant_type: participant_type,
         sectionInstructors: serialized_section_instructors,
         sync_enabled: Policies::Lti.roster_sync_enabled?(teacher),
+        ai_tutor_enabled: ai_tutor_enabled,
       }
     end
   end
@@ -517,6 +518,7 @@ class Section < ApplicationRecord
         post_milestone_disabled: !!script && !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true),
         code_review_expires_at: code_review_expires_at,
         sync_enabled: Policies::Lti.roster_sync_enabled?(teacher),
+        ai_tutor_enabled: ai_tutor_enabled,
       }
     end
   end
@@ -646,8 +648,9 @@ class Section < ApplicationRecord
       invited_by: current_user
     )
   end
+
   # Validates instructor can be added to the section, returns soft-deleted section instructor (if any)
-  public def validate_instructor(instructor)
+  def validate_instructor(instructor)
     if section_instructors.count >= INSTRUCTOR_LIMIT
       raise ArgumentError.new('section full')
     end
@@ -687,5 +690,4 @@ class Section < ApplicationRecord
     # If dropping emoji resulted in a blank name, use a default
     self.name = I18n.t('sections.default_name', default: 'Untitled Section') if name.blank?
   end
-  before_validation :strip_emoji_from_name
 end

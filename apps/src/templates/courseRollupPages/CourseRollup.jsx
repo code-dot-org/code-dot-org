@@ -1,10 +1,12 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import RollupUnitEntry from './RollupUnitEntry';
+
 import color from '@cdo/apps/util/color';
-import i18n from '@cdo/locale';
 import {linkWithQueryParams} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
+
 import {courseShape} from './rollupShapes';
+import RollupUnitEntry from './RollupUnitEntry';
 
 export default class CourseRollup extends Component {
   static propTypes = {

@@ -1,13 +1,30 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
-  "created_at": "2024-03-08T08:07:49.000Z",
+  "created_at": "2024-05-21T06:04:01.000Z",
   "level_num": "custom",
-  "user_id": 6959,
+  "user_id": 2,
   "properties": {
-    "encrypted": "false"
+    "encrypted": "false",
+    "long_instructions": "## Python Lab Basics\r\n\r\nTry adding some new code.",
+    "hide_share_and_remix": "false",
+    "source": {
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "main.py",
+          "language": "py",
+          "contents": "print(\"Hello from level 2!\")",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    }
   },
-  "audit_log": "[{\"changed_at\":\"2024-03-07T16:07:49.125-08:00\",\"changed\":[\"cloned from \\\"Allthethings Python Lab 1\\\"\"],\"cloned_from\":\"Allthethings Python Lab 1\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-05-20 16:17:34 -0700\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-20 16:31:46 -0700\",\"changed\":[\"source\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-20 16:41:01 -0700\",\"changed\":[\"source\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

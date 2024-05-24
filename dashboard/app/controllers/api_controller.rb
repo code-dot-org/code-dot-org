@@ -174,6 +174,8 @@ class ApiController < ApplicationController
     render json: {}
   end
 
+  use_reader_connection_for_route(:lockable_state)
+
   # For a given user, gets the lockable state for each student in each of their sections
   def lockable_state
     prevent_caching
@@ -198,6 +200,8 @@ class ApiController < ApplicationController
 
     render json: data
   end
+
+  use_reader_connection_for_route(:section_progress)
 
   def section_progress
     prevent_caching
@@ -273,6 +277,8 @@ class ApiController < ApplicationController
 
     render json: data
   end
+
+  use_reader_connection_for_route(:section_level_progress)
 
   # This API returns data similar to user_progress, but aggregated for all users
   # in the section. It also only returns the "levels" portion
@@ -390,6 +396,8 @@ class ApiController < ApplicationController
     render json: standards
   end
 
+  use_reader_connection_for_route(:user_progress)
+
   # Return a JSON summary of the user's progress for params[:script].
   def user_progress
     prevent_caching
@@ -413,6 +421,8 @@ class ApiController < ApplicationController
       render json: {signedIn: false}
     end
   end
+
+  use_reader_connection_for_route(:user_app_options)
 
   # Returns app_options values that are user-specific. This is used on cached
   # levels.
@@ -573,16 +583,6 @@ class ApiController < ApplicationController
       render status: :forbidden, json: {error: exception}
     end
   end
-
-  use_reader_connection_for_route(:lockable_state)
-
-  use_reader_connection_for_route(:section_progress)
-
-  use_reader_connection_for_route(:section_level_progress)
-
-  use_reader_connection_for_route(:user_progress)
-
-  use_reader_connection_for_route(:user_app_options)
 
   # Gets progress-related app_options for the given script and level for the
   # given user. This code is analogous to parts of LevelsHelper#app_options.
