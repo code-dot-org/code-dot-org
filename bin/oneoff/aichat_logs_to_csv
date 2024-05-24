@@ -16,7 +16,7 @@ def main
 
   CSV.open("aichat_logs_#{options[:section_id]}_#{options[:date]}.csv", "w") do |csv|
     headers = %w[
-      session_id user_id username name path level_name created_at updated_at
+      session_id user_id username name path created_at updated_at
       selectedModelId temperature systemPrompt retrievalContexts
       status role content
     ]
@@ -63,7 +63,6 @@ def main
         user.username,
         user.name,
         path,
-        level.name,
         session.created_at,
         session.updated_at,
         model_customizations["selectedModelId"],
