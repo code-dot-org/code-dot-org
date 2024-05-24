@@ -33,6 +33,7 @@ import {updateQueryParam, queryParams} from '@cdo/apps/code-studio/utils';
 import ParentalPermissionBanner from '@cdo/apps/templates/policy_compliance/ParentalPermissionBanner';
 
 import locales, {setLocaleCode} from '../../../../redux/localesRedux';
+import Bootstrap from '@cdo/apps/common/Bootstrap';
 
 $(document).ready(initPage);
 
@@ -107,50 +108,52 @@ function initPage() {
   );
 
   ReactDOM.render(
-    <Provider store={store}>
-      {parentalPermissionBannerData && (
-        <ParentalPermissionBanner {...parentalPermissionBannerData} />
-      )}
+    <Bootstrap>
+      <Provider store={store}>
+        {parentalPermissionBannerData && (
+          <ParentalPermissionBanner {...parentalPermissionBannerData} />
+        )}
 
-      <UnitOverview
-        id={scriptData.id}
-        courseId={scriptData.course_id}
-        courseOfferingId={scriptData.courseOfferingId}
-        courseVersionId={scriptData.courseVersionId}
-        courseTitle={scriptData.course_title}
-        courseLink={scriptData.course_link}
-        excludeCsfColumnInLegend={!scriptData.csf}
-        teacherResources={scriptData.teacher_resources}
-        studentResources={scriptData.student_resources || []}
-        showCourseUnitVersionWarning={
-          scriptData.show_course_unit_version_warning
-        }
-        showScriptVersionWarning={scriptData.show_script_version_warning}
-        showRedirectWarning={scriptData.show_redirect_warning}
-        redirectScriptUrl={scriptData.redirect_script_url}
-        versions={scriptData.course_versions}
-        courseName={scriptData.course_name}
-        showAssignButton={scriptData.show_assign_button}
-        isProfessionalLearningCourse={scriptData.isPlCourse}
-        userId={scriptData.user_id}
-        userType={scriptData.user_type}
-        assignedSectionId={scriptData.assigned_section_id}
-        showCalendar={scriptData.showCalendar}
-        weeklyInstructionalMinutes={scriptData.weeklyInstructionalMinutes}
-        unitCalendarLessons={scriptData.calendarLessons}
-        unitHasLevels={unitHasLevels}
-        isMigrated={scriptData.is_migrated}
-        scriptOverviewPdfUrl={scriptData.scriptOverviewPdfUrl}
-        scriptResourcesPdfUrl={scriptData.scriptResourcesPdfUrl}
-        showUnversionedRedirectWarning={
-          scriptData.show_unversioned_redirect_warning
-        }
-        isCsdOrCsp={scriptData.isCsd || scriptData.isCsp}
-        completedLessonNumber={completedLessonNumber}
-        publishedState={scriptData.publishedState}
-        participantAudience={scriptData.participantAudience}
-      />
-    </Provider>,
+        <UnitOverview
+          id={scriptData.id}
+          courseId={scriptData.course_id}
+          courseOfferingId={scriptData.courseOfferingId}
+          courseVersionId={scriptData.courseVersionId}
+          courseTitle={scriptData.course_title}
+          courseLink={scriptData.course_link}
+          excludeCsfColumnInLegend={!scriptData.csf}
+          teacherResources={scriptData.teacher_resources}
+          studentResources={scriptData.student_resources || []}
+          showCourseUnitVersionWarning={
+            scriptData.show_course_unit_version_warning
+          }
+          showScriptVersionWarning={scriptData.show_script_version_warning}
+          showRedirectWarning={scriptData.show_redirect_warning}
+          redirectScriptUrl={scriptData.redirect_script_url}
+          versions={scriptData.course_versions}
+          courseName={scriptData.course_name}
+          showAssignButton={scriptData.show_assign_button}
+          isProfessionalLearningCourse={scriptData.isPlCourse}
+          userId={scriptData.user_id}
+          userType={scriptData.user_type}
+          assignedSectionId={scriptData.assigned_section_id}
+          showCalendar={scriptData.showCalendar}
+          weeklyInstructionalMinutes={scriptData.weeklyInstructionalMinutes}
+          unitCalendarLessons={scriptData.calendarLessons}
+          unitHasLevels={unitHasLevels}
+          isMigrated={scriptData.is_migrated}
+          scriptOverviewPdfUrl={scriptData.scriptOverviewPdfUrl}
+          scriptResourcesPdfUrl={scriptData.scriptResourcesPdfUrl}
+          showUnversionedRedirectWarning={
+            scriptData.show_unversioned_redirect_warning
+          }
+          isCsdOrCsp={scriptData.isCsd || scriptData.isCsp}
+          completedLessonNumber={completedLessonNumber}
+          publishedState={scriptData.publishedState}
+          participantAudience={scriptData.participantAudience}
+        />
+      </Provider>
+    </Bootstrap>,
     mountPoint
   );
 

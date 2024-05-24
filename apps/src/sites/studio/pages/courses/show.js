@@ -28,6 +28,7 @@ import {
 } from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {tooltipifyVocabulary} from '@cdo/apps/utils';
+import Bootstrap from '@cdo/apps/common/Bootstrap';
 
 $(document).ready(showCourseOverview);
 
@@ -79,33 +80,35 @@ function showCourseOverview() {
 
   // Eventually we want to do this all via redux
   ReactDOM.render(
-    <Provider store={store}>
-      <CourseOverview
-        name={courseSummary.name}
-        title={courseSummary.title}
-        assignmentFamilyTitle={courseSummary.assignment_family_title}
-        id={courseSummary.id}
-        courseOfferingId={courseSummary.course_offering_id}
-        courseVersionId={courseSummary.course_version_id}
-        descriptionStudent={courseSummary.description_student}
-        descriptionTeacher={courseSummary.description_teacher}
-        sectionsInfo={scriptData.sections}
-        teacherResources={courseSummary.teacher_resources}
-        studentResources={courseSummary.student_resources}
-        scripts={courseSummary.scripts}
-        versions={versions}
-        showVersionWarning={
-          !!scriptData.show_version_warning &&
-          Object.values(versions).length > 1
-        }
-        showRedirectWarning={scriptData.show_redirect_warning}
-        redirectToCourseUrl={scriptData.redirect_to_course_url}
-        showAssignButton={courseSummary.show_assign_button}
-        userId={userId}
-        userType={scriptData.user_type}
-        participantAudience={courseSummary.participant_audience}
-      />
-    </Provider>,
+    <Bootstrap>
+      <Provider store={store}>
+        <CourseOverview
+          name={courseSummary.name}
+          title={courseSummary.title}
+          assignmentFamilyTitle={courseSummary.assignment_family_title}
+          id={courseSummary.id}
+          courseOfferingId={courseSummary.course_offering_id}
+          courseVersionId={courseSummary.course_version_id}
+          descriptionStudent={courseSummary.description_student}
+          descriptionTeacher={courseSummary.description_teacher}
+          sectionsInfo={scriptData.sections}
+          teacherResources={courseSummary.teacher_resources}
+          studentResources={courseSummary.student_resources}
+          scripts={courseSummary.scripts}
+          versions={versions}
+          showVersionWarning={
+            !!scriptData.show_version_warning &&
+            Object.values(versions).length > 1
+          }
+          showRedirectWarning={scriptData.show_redirect_warning}
+          redirectToCourseUrl={scriptData.redirect_to_course_url}
+          showAssignButton={courseSummary.show_assign_button}
+          userId={userId}
+          userType={scriptData.user_type}
+          participantAudience={courseSummary.participant_audience}
+        />
+      </Provider>
+    </Bootstrap>,
     document.getElementById('course_overview')
   );
   tooltipifyVocabulary();

@@ -8,6 +8,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import LtiIframePage from '@cdo/apps/lib/ui/lti/iframe/LtiIframePage';
 import getScriptData from '@cdo/apps/util/getScriptData';
+import Bootstrap from '@cdo/apps/common/Bootstrap';
 
 document.addEventListener('DOMContentLoaded', () => {
   const mountPoint = document.createElement('div');
@@ -22,7 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   ReactDOM.render(
-    <LtiIframePage logoUrl={logoUrl} authUrl={authUrl} />,
+    <Bootstrap>
+      <LtiIframePage logoUrl={logoUrl} authUrl={authUrl} />
+    </Bootstrap>,
     mountPoint
   );
 });
