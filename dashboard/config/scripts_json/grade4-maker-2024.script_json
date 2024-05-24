@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "grade4-maker",
-    "serialized_at": "2024-05-15 01:26:59 UTC",
+    "serialized_at": "2024-05-23 20:13:31 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -541,8 +541,21 @@
       }
     },
     {
-      "key": "981706cd-b1f7-40cf-b5fe-160f976e8457",
+      "key": "8d2478cc-cf63-4259-9f11-bcb9c9179734",
       "position": 4,
+      "properties": {
+        "name": "[Optional] Extension Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8d2478cc-cf63-4259-9f11-bcb9c9179734",
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "grade4-maker-2024"
+      }
+    },
+    {
+      "key": "981706cd-b1f7-40cf-b5fe-160f976e8457",
+      "position": 5,
       "properties": {
         "name": "[Optional] Extended Learning"
       },
@@ -1592,6 +1605,18 @@
       "seeding_key": {
         "activity_section.key": "097ed850-442b-4731-a43f-de951d638584",
         "lesson_activity.key": "6965fcf1-344e-4b23-8f40-cb5d41ef7175"
+      }
+    },
+    {
+      "key": "851d89ff-b010-4711-b323-697bf8ba7f2e",
+      "position": 1,
+      "properties": {
+        "description": "After students have created a sensory toy this concept can be expanded to further teach students about the importance of accessibility and how technology can help support people in different ways. For individuals with physical limitations that make speaking or writing difficult, sensory apps can provide alternative communication channels. This fosters independence and allows them to participate more actively in daily life.\n\nThese devices are called Augmentative and Alternative communication devices and are frequently used by non-verbal students in schools. Here is a <a href=\"https://youtu.be/qB2Fk0KdUuo?si=OmiaPxGRFkbUYFwm\" target=\"_blank\">video</a> of students using an AAC device in the classroom. \n\n**Find the code for this project <a href=\"https://makecode.microbit.org/81839-69759-10729-78574\" target=\"_blank\">here.</a>**",
+        "name": "Sensory Communication Device"
+      },
+      "seeding_key": {
+        "activity_section.key": "851d89ff-b010-4711-b323-697bf8ba7f2e",
+        "lesson_activity.key": "8d2478cc-cf63-4259-9f11-bcb9c9179734"
       }
     },
     {
@@ -3551,6 +3576,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_e_maker_simple_door_alarm_grade4"
+        ],
         "progression": "Simple door alarm coding"
       },
       "bonus": false,
@@ -4298,6 +4326,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_e_maker_tilt_alarm_grade4"
+        ],
         "progression": "Tilt alarm with micro:bit"
       },
       "bonus": false,
