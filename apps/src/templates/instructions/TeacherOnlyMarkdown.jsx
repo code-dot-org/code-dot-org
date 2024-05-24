@@ -13,6 +13,15 @@ export default class TeacherOnlyMarkdown extends Component {
     hideContainer: PropTypes.bool,
   };
 
+  renderMarkdownContent() {
+    const {content} = this.props;
+    return (
+      <div style={styles.content}>
+        <SafeMarkdown markdown={content} />
+      </div>
+    );
+  }
+
   render() {
     const {content, hideContainer} = this.props;
 
@@ -22,19 +31,13 @@ export default class TeacherOnlyMarkdown extends Component {
 
     // CodeBridge does not use the teal container/header, so we just render the content.
     if (hideContainer) {
-      return (
-        <div style={styles.content}>
-          <SafeMarkdown markdown={content} />
-        </div>
-      );
+      return this.renderMarkdownContent();
     }
 
     return (
       <div style={styles.container}>
         <div style={styles.header}>{i18n.forTeachersOnly()}</div>
-        <div style={styles.content}>
-          <SafeMarkdown markdown={content} />
-        </div>
+        {this.renderMarkdownContent()}
       </div>
     );
   }
