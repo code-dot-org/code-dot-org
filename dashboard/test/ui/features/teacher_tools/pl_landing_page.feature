@@ -48,7 +48,7 @@ Feature: Professional Learning landing page
     And I see no difference for "Facilitator workshops table"
     And I close my eyes
 
-  Scenario: Instructor sees relevant content sections
+  Scenario: Universal Instructor sees relevant content sections
     Given I create a teacher named "PL Instructor"
     And I sign in as "PL Instructor" and go home
     And I get universal instructor access
