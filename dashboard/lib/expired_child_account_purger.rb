@@ -53,8 +53,9 @@ class ExpiredChildAccountPurger
     check_constraints accounts
 
     account_purger = AccountPurger.new dry_run: @dry_run, log: @log
-    accounts.each do |account|
+    accounts.find_each do |account|
       account_purger.purge_data_for_account account
+      Services::ChildAccount::EventLogger.log_account_purging(account)
       @num_accounts_purged += 1
     rescue StandardError => exception
       # If we failed to purge the account, add it to our manual review queue.
