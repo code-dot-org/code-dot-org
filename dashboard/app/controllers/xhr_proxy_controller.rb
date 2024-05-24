@@ -140,6 +140,7 @@ class XhrProxyController < ApplicationController
   def get
     channel_id = params[:c]
     url = params[:u]
+    puts current_user
 
     begin
       owner_storage_id, _ = storage_decrypt_channel_id(channel_id)

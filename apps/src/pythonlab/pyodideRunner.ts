@@ -11,7 +11,7 @@ export function handleRunClick(
   dispatch: Dispatch<AnyAction>,
   permissions: string[],
   source: MultiFileSource | undefined,
-  channelId: string
+  channelId: string | undefined
 ) {
   // For now, restrict running python code to levelbuilders.
   if (!permissions.includes('levelbuilder')) {
@@ -42,7 +42,7 @@ export function handleRunClick(
 export async function runPythonCode(
   mainFile: string,
   source: MultiFileSource,
-  channelId: string
+  channelId: string | undefined
 ) {
   try {
     const {results, error} = await asyncRun(mainFile, source, channelId);
@@ -59,7 +59,10 @@ export async function runPythonCode(
   }
 }
 
-export async function runAllTests(source: MultiFileSource, channelId: string) {
+export async function runAllTests(
+  source: MultiFileSource,
+  channelId: string | undefined
+) {
   // To run all tests in the project, we look for files that follow the regex 'test*.py'
   await runPythonCode(getTestRunnerScript('test*.py'), source, channelId);
 }

@@ -52,7 +52,7 @@ export type OnRunFunction = (
   dispatch: Dispatch<AnyAction>,
   permissions: string[],
   source: MultiFileSource | undefined,
-  channelId: string
+  channelId: string | undefined
 ) => void;
 
 export type ReducerAction = {
