@@ -15,10 +15,10 @@ import teacherSections, {
   setSections,
   selectSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {ChildAccountComplianceStates} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {expect} from '../../util/reconfiguredChai';
-import {ChildAccountComplianceStates} from '@cdo/generated-scripts/sharedConstants';
 
 interface FakeStudent {
   id: number;
