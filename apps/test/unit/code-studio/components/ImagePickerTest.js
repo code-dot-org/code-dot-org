@@ -1,6 +1,6 @@
 import {assert} from '../../../util/reconfiguredChai';
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import ImagePicker from '@cdo/apps/code-studio/components/ImagePicker';
 import IconLibrary from '@cdo/apps/code-studio/components/IconLibrary';
 import AssetManager from '@cdo/apps/code-studio/components/AssetManager';

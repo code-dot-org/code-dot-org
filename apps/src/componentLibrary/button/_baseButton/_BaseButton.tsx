@@ -1,7 +1,8 @@
 import classNames from 'classnames';
-import React, {memo, useMemo} from 'react';
+import React, {memo, useMemo, AriaAttributes} from 'react';
 
 import {ButtonType, ButtonColor} from '@cdo/apps/componentLibrary/button';
+import {getAriaPropsFromProps} from '@cdo/apps/componentLibrary/common/helpers';
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
@@ -27,7 +28,8 @@ export interface IconOnlyButtonSpecificProps {
 
 export interface CoreButtonProps
   extends TextButtonSpecificProps,
-    IconOnlyButtonSpecificProps {
+    IconOnlyButtonSpecificProps,
+    AriaAttributes {
   /** Button Component type */
   type?: ButtonType;
   /** Custom class name */
@@ -93,7 +95,6 @@ export interface _BaseButtonProps
     ButtonSpecificProps {}
 
 const checkButtonPropsForErrors = ({
-  type,
   icon,
   useAsLink,
   onClick,
@@ -101,7 +102,19 @@ const checkButtonPropsForErrors = ({
   download,
   text,
   isIconOnly,
+  color,
+  type,
 }: _BaseButtonProps) => {
+  if (color === 'gray' && type !== 'secondary') {
+    throw new Error('Expect type prop to be secondary when color is gray');
+  }
+
+  if (color === 'purple' && type === 'secondary') {
+    console.warn(
+      'Warning: Button - Secondary Purple color is now deprecated. Please use different color or type. Secondary purple combination will be removed very soon.'
+    );
+  }
+
   if (useAsLink) {
     if (!href) {
       throw new Error('Expect href prop when useAsLink is true');
@@ -168,7 +181,6 @@ const BaseButton: React.FunctionComponent<_BaseButtonProps> = ({
   disabled = false,
   isPending = false,
   ariaLabel,
-
   size = 'm',
   type = 'primary',
   color = 'purple',
@@ -190,9 +202,11 @@ const BaseButton: React.FunctionComponent<_BaseButtonProps> = ({
   onClick,
   value,
   name,
+  ...rest
 }) => {
   const ButtonTag = useAsLink ? 'a' : 'button';
 
+  const ariaProps = getAriaPropsFromProps(rest);
   const tagSpecificProps =
     ButtonTag === 'a'
       ? {
@@ -222,8 +236,9 @@ const BaseButton: React.FunctionComponent<_BaseButtonProps> = ({
         download,
         text,
         isIconOnly,
+        color,
       }),
-    [type, icon, useAsLink, onClick, href, download, text, isIconOnly]
+    [type, icon, useAsLink, onClick, href, download, text, isIconOnly, color]
   );
 
   /** Handling isPending state content & spinner show logic here.
@@ -254,8 +269,9 @@ const BaseButton: React.FunctionComponent<_BaseButtonProps> = ({
       )}
       id={id}
       disabled={disabled}
-      aria-disabled={disabled}
-      aria-label={ariaLabel}
+      {...ariaProps}
+      aria-disabled={disabled || ariaProps['aria-disabled']}
+      aria-label={ariaLabel || ariaProps['aria-label']}
       {...tagSpecificProps}
     >
       {isPending && spinnerPosition === 'left' && (

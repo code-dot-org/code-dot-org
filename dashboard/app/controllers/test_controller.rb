@@ -351,7 +351,7 @@ class TestController < ApplicationController
   end
 
   def get_validate_rubric_ai_config
-    EvaluateRubricJob.new.validate_ai_config
+    AiRubricConfig.validate_ai_config
     render plain: 'OK'
   end
 
@@ -359,6 +359,42 @@ class TestController < ApplicationController
     unit_name = params.require(:unit_name)
     unit = Unit.find_by!(name: unit_name)
     UserScript.create!(user: current_user, script: unit, completed_at: Time.now)
+    head :ok
+  end
+
+  # Creates the user and signs them in.
+  def create_user
+    user_opts = params.require(:user).permit(
+      :user_type,
+      :email,
+      :password,
+      :password_confirmation,
+      :name,
+      :age,
+      :username,
+      :terms_of_service_version,
+      :sign_in_count,
+      :parent_email_preference_opt_in_required,
+      :parent_email_preference_opt_in,
+      :parent_email_preference_email,
+      :parent_email_preference_request_ip,
+      :parent_email_preference_source,
+      :email_preference_opt_in,
+      :email_preference_form_kind,
+      :email_preference_request_ip,
+      :email_preference_source,
+      :created_at,
+      :country_code,
+      :us_state,
+      :user_provided_us_state,
+      :data_transfer_agreement_accepted,
+      :data_transfer_agreement_request_ip,
+      :data_transfer_agreement_kind,
+      :data_transfer_agreement_source,
+      :data_transfer_agreement_at,
+    )
+    user = User.create!(**user_opts)
+    sign_in user
     head :ok
   end
 end

@@ -146,7 +146,7 @@
       #{lesson_group_data.to_json},
       #{lesson_data.to_json},
       #{user_progress},
-      "#{script_level&.level_id || -1}",
+      "#{@level&.id || script_level&.level_id || -1}",
       #{puzzle_page},
       #{signed_in},
       #{lesson_extras_enabled || 'null'},

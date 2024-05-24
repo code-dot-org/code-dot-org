@@ -3,11 +3,13 @@ import GoogleBlockly, {
   FieldDropdownValidator,
   MenuGeneratorFunction,
 } from 'blockly/core';
-import {EMPTY_OPTION} from '../constants';
+
 import {
   printerStyleNumberRangeToList,
   numberListToString,
 } from '@cdo/apps/blockly/utils';
+
+import {EMPTY_OPTION} from '../constants';
 
 type CustomMenuGenerator = CustomMenuOption[] | MenuGeneratorFunction;
 // Blockly's MenuOption can either be [string, string] or [ImageProperties, string]. We

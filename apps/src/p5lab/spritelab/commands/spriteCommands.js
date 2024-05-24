@@ -101,7 +101,7 @@ export const commands = {
             x: scale / 2 + scale * i,
             y: scale / 2 + scale * j,
           };
-          this.addSprite({animation, group, location, scale});
+          this.addSprite({animation, group, location, scale, minimumScale: 1});
         }
       }
     }

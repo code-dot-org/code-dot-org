@@ -1,9 +1,12 @@
-import React, {useEffect, useState} from 'react';
-import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
-import style from './rubrics.module.scss';
 import classnames from 'classnames';
-import i18n from '@cdo/locale';
+import _ from 'lodash';
+import PropTypes from 'prop-types';
+import React, {useEffect, useState} from 'react';
+import {CSVLink} from 'react-csv';
+import {connect} from 'react-redux';
+
+import Link from '@cdo/apps/componentLibrary/link/Link';
+import Toggle from '@cdo/apps/componentLibrary/toggle/Toggle';
 import {
   BodyTwoText,
   BodyThreeText,
@@ -11,18 +14,18 @@ import {
   Heading4,
   StrongText,
 } from '@cdo/apps/componentLibrary/typography';
-import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
-import {setAiRubricsDisabled} from '@cdo/apps/templates/currentUserRedux';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import {reportingDataShape, rubricShape} from './rubricShapes';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import Button from '@cdo/apps/templates/Button';
-import SectionSelector from './SectionSelector';
-import Toggle from '@cdo/apps/componentLibrary/toggle/Toggle';
-import Link from '@cdo/apps/componentLibrary/link/Link';
+import {setAiRubricsDisabled} from '@cdo/apps/templates/currentUserRedux';
+import i18n from '@cdo/locale';
+
 import {UNDERSTANDING_LEVEL_STRINGS_V2, TAB_NAMES} from './rubricHelpers';
-import {CSVLink} from 'react-csv';
-import _ from 'lodash';
+import {reportingDataShape, rubricShape} from './rubricShapes';
+import SectionSelector from './SectionSelector';
+
+import style from './rubrics.module.scss';
 
 const STATUS_ALL = {
   // we are waiting for initial status from the server

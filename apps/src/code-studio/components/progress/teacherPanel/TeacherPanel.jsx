@@ -23,8 +23,14 @@ import SelectedStudentInfo from '@cdo/apps/code-studio/components/progress/teach
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
-import {hasLockableLessons} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {
+  queryUserProgress,
+  setViewAsUserId,
+} from '@cdo/apps/code-studio/progressRedux';
+import {
+  getCurrentLevel,
+  hasLockableLessons,
+} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {reload} from '@cdo/apps/utils';
 import {updateQueryParam, queryParams} from '@cdo/apps/code-studio/utils';
 import {studentShape, levelWithProgress} from './types';
@@ -63,19 +69,26 @@ class TeacherPanel extends React.Component {
     loadLevelsWithProgress: PropTypes.func.isRequired,
     teacherId: PropTypes.number,
     exampleSolutions: PropTypes.array,
+    currentLevelId: PropTypes.string,
     selectUser: PropTypes.func.isRequired,
+    setViewAsUserId: PropTypes.func.isRequired,
     setStudentsForCurrentSection: PropTypes.func.isRequired,
     setSections: PropTypes.func.isRequired,
     setSectionLockStatus: PropTypes.func.isRequired,
     selectSection: PropTypes.func.isRequired,
     setViewType: PropTypes.func.isRequired,
+    isCurrentLevelLab2: PropTypes.bool.isRequired,
   };
 
   componentDidMount() {
     const initialViewAs = queryParams('viewAs') || ViewType.Instructor;
-
     if (this.props.viewAs !== initialViewAs) {
       this.props.setViewType(initialViewAs);
+    }
+
+    const initialUserId = this.getSelectedUserId();
+    if (initialUserId) {
+      this.props.setViewAsUserId(initialUserId);
     }
 
     this.loadInitialData();
@@ -84,7 +97,8 @@ class TeacherPanel extends React.Component {
   UNSAFE_componentWillReceiveProps(nextProps) {
     if (
       this.props.pageType !== pageTypes.scriptOverview && // no progress is shown on script overview page in teacher panel
-      nextProps.selectedSection?.id !== this.props.selectedSection?.id
+      (nextProps.selectedSection?.id !== this.props.selectedSection?.id ||
+        nextProps.currentLevelId !== this.props.currentLevelId)
     ) {
       this.props.loadLevelsWithProgress();
     }
@@ -130,7 +144,10 @@ class TeacherPanel extends React.Component {
 
   onSelectUser = (id, selectType) => {
     this.logToFirehose('select_student', {select_type: selectType});
-    const isAsync = this.props.pageType === pageTypes.scriptOverview;
+
+    const isAsync =
+      this.props.isCurrentLevelLab2 ||
+      this.props.pageType === pageTypes.scriptOverview;
     this.props.selectUser(id, isAsync);
   };
 
@@ -174,7 +191,10 @@ class TeacherPanel extends React.Component {
       <TeacherPanelContainer logToFirehose={this.logToFirehose}>
         <h3>{i18n.teacherPanel()}</h3>
         <div style={styles.scrollable}>
-          <ViewAsToggle logToFirehose={this.logToFirehose} />
+          <ViewAsToggle
+            isAsync={this.props.isCurrentLevelLab2}
+            logToFirehose={this.logToFirehose}
+          />
           {displaySelectedStudentInfo && (
             <SelectedStudentInfo
               students={students}
@@ -348,6 +368,8 @@ export default connect(
         state.teacherPanel.isLoadingLevelsWithProgress,
       teacherId: state.currentUser.userId,
       exampleSolutions: state.pageConstants?.exampleSolutions,
+      currentLevelId: state.progress.currentLevelId,
+      isCurrentLevelLab2: getCurrentLevel(state)?.usesLab2,
     };
   },
   dispatch => ({
@@ -355,7 +377,15 @@ export default connect(
     selectUser: (userId, isAsync = false) => {
       updateQueryParam('user_id', userId);
       updateQueryParam('version');
-      isAsync ? dispatch(queryUserProgress(userId)) : reload();
+      if (isAsync) {
+        dispatch(queryUserProgress(userId, false));
+        dispatch(setViewAsUserId(userId));
+      } else {
+        reload();
+      }
+    },
+    setViewAsUserId: viewAsUserId => {
+      dispatch(setViewAsUserId(viewAsUserId));
     },
     setStudentsForCurrentSection: (sectionId, students) => {
       dispatch(setStudentsForCurrentSection(sectionId, students));

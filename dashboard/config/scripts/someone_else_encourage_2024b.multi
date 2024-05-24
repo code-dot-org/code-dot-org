@@ -1,0 +1,6 @@
+name 'someone_else_encourage_2024b'
+type 'multi'
+question 'Did someone else at school encourage you to take this class?'
+right 'yes'
+right 'no'
+allow_multiple_attempts true

@@ -1,11 +1,14 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import fontConstants from '@cdo/apps/fontConstants';
-import styleConstants from '../styleConstants';
-import FontAwesome from './FontAwesome';
-import color from '../util/color';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+
+import fontConstants from '@cdo/apps/fontConstants';
+
+import styleConstants from '../styleConstants';
+import color from '../util/color';
+
+import FontAwesome from './FontAwesome';
 
 import moduleStyles from './content-container.module.scss';
 

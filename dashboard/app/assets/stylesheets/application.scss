@@ -1927,6 +1927,22 @@ a.download-video {
   display: flex;
   flex-wrap: wrap;
 
+  .required {
+    font-weight: 600;
+
+    &.not-bold {
+      font-weight: normal;
+    }
+
+    & > * {
+      font-weight: 600;
+    }
+
+    &::after {
+      content: "*";
+    }
+  }
+
   .header {
     display: flex;
     flex-wrap: wrap;
@@ -4191,3 +4207,20 @@ a {
 }
 
 @import "NpsSurveyBlock";
+
+// cm prefixed classes are from codemirror
+.cm-gutters {
+  margin: 1px;
+}
+
+.cm-scroller {
+  overflow: auto;
+}
+
+.cm-wrap {
+  height: 100%;
+}
+
+.cm-editor {
+  height: 100%;
+}
