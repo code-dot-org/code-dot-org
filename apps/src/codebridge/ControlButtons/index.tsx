@@ -22,20 +22,13 @@ const ControlButtons: React.FunctionComponent = () => {
   const source = useAppSelector(
     state => state.lab2Project.projectSource?.source
   ) as MultiFileSource | undefined;
-  const channelId = useAppSelector(state => state.lab.channel?.id);
 
   const handleRun = (runTests: boolean) => {
     if (onRun) {
       const parsedPermissions = data
         ? (data as PermissionResponse)
         : {permissions: []};
-      onRun(
-        runTests,
-        dispatch,
-        parsedPermissions.permissions,
-        source,
-        channelId
-      );
+      onRun(runTests, dispatch, parsedPermissions.permissions, source);
     } else {
       dispatch(appendSystemMessage("We don't know how to run your code."));
     }

@@ -58,12 +58,12 @@ pyodideWorker.onmessage = event => {
 
 const asyncRun = (() => {
   let id = 0; // identify a Promise
-  return (script, source, channelId) => {
+  return (script, source) => {
     // the id could be generated more carefully
     id = (id + 1) % Number.MAX_SAFE_INTEGER;
     return new Promise(onSuccess => {
       callbacks[id] = onSuccess;
-      let wrappedScript = applyPatches(script, channelId);
+      let wrappedScript = applyPatches(script);
       wrappedScript =
         wrappedScript + deleteCachedUserModules(source, MAIN_PYTHON_FILE);
       const messageData = {

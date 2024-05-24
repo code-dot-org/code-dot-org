@@ -10,8 +10,7 @@ export function handleRunClick(
   runTests: boolean,
   dispatch: Dispatch<AnyAction>,
   permissions: string[],
-  source: MultiFileSource | undefined,
-  channelId: string | undefined
+  source: MultiFileSource | undefined
 ) {
   // For now, restrict running python code to levelbuilders.
   if (!permissions.includes('levelbuilder')) {
@@ -26,7 +25,7 @@ export function handleRunClick(
   }
   if (runTests) {
     dispatch(appendSystemMessage('Running tests...'));
-    runAllTests(source, channelId);
+    runAllTests(source);
   } else {
     // Run main.py
     const code = getFileByName(source.files, MAIN_PYTHON_FILE)?.contents;
@@ -35,17 +34,13 @@ export function handleRunClick(
       return;
     }
     dispatch(appendSystemMessage('Running program...'));
-    runPythonCode(code, source, channelId);
+    runPythonCode(code, source);
   }
 }
 
-export async function runPythonCode(
-  mainFile: string,
-  source: MultiFileSource,
-  channelId: string | undefined
-) {
+export async function runPythonCode(mainFile: string, source: MultiFileSource) {
   try {
-    const {results, error} = await asyncRun(mainFile, source, channelId);
+    const {results, error} = await asyncRun(mainFile, source);
     if (results) {
       console.log('pyodideWorker return results: ', results);
     } else if (error) {
@@ -59,10 +54,7 @@ export async function runPythonCode(
   }
 }
 
-export async function runAllTests(
-  source: MultiFileSource,
-  channelId: string | undefined
-) {
+export async function runAllTests(source: MultiFileSource) {
   // To run all tests in the project, we look for files that follow the regex 'test*.py'
-  await runPythonCode(getTestRunnerScript('test*.py'), source, channelId);
+  await runPythonCode(getTestRunnerScript('test*.py'), source);
 }

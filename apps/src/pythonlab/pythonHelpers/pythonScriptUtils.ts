@@ -13,10 +13,7 @@ import {PyodideMessage, PyodidePathContent} from '../types';
 import {HIDDEN_FOLDERS} from './constants';
 import {ALL_PATCHES, getSetupCode} from './patches';
 
-export function applyPatches(
-  originalCode: string,
-  channelId: string | undefined
-) {
+export function applyPatches(originalCode: string) {
   let finalCode = originalCode;
 
   for (const patch of ALL_PATCHES) {
@@ -24,7 +21,7 @@ export function applyPatches(
       ? patch.contents + '\n' + finalCode
       : finalCode + '\n' + patch.contents;
   }
-  finalCode = getSetupCode(location.host, channelId) + finalCode;
+  finalCode = getSetupCode() + finalCode;
   return finalCode;
 }
 
