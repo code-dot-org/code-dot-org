@@ -1,187 +1,131 @@
 @import "color";
+@import "@cdo/apps/componentLibrary/common/styles/mixins";
+@import "@cdo/apps/componentLibrary/typography/typography.module";
 
-// Checkbox common styles
-.label {
-  display: flex;
-  gap: 8px;
-  align-items: center;
+// TextField common styles
+.textField {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.125rem;
+  min-width: 18.75rem;
+  margin: 0;
 
-  i {
-    vertical-align: bottom;
+  input {
+    margin-bottom: 0;
+    border-radius: 0.25rem;
+    border: 1px solid unset;
 
-    &::before {
-      display: inline-block;
-      content: ' ';
-      text-align: center;
-      border: 2px solid $neutral_dark;
-      border-radius: 4px;
+    &:focus-visible {
+      outline: 2px solid $light_primary_500;
+      outline-offset: 2px;
+      box-shadow: none;
     }
   }
 
+  .textFieldHelperSection {
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+  }
+}
+
+// TextField colors
+.textField-black, .textField-gray {
+  .textFieldLabel {
+    color: $light-black;
+  }
+
+  input {
+    border-color: $light_black;
+    background: $light_white;
+
+    &:focus-visible {
+      border-color: $light_black;
+    }
+  }
+
+  .textFieldHelperSection {
+    color: $light_black;
+  }
+
+  .textFieldErrorSection {
+    color: $light_negative_500;
+  }
+}
+
+.textField-gray {
+  input {
+    border-color: $light_gray_400;
+
+    &:focus-visible {
+      border-color: $light_gray_400;
+    }
+  }
+}
+
+.textField-white {
+  .textFieldLabel {
+    color: $light_white;
+  }
+
+  input {
+    border-color: $light_white;
+    background: $light_black;
+    color: $light_white;
+
+    &:focus-visible {
+      border-color: $light_white;
+    }
+  }
+
+  .textFieldHelperSection, .textFieldErrorSection {
+    color: $light_white;
+  }
+}
+
+// TextField sizes
+.textField-l {
   span {
+    @include label-one;
     margin-bottom: 0;
   }
 
-  input[type="checkbox"] {
-    position: absolute;
-    opacity: 0;
-
-    &:checked + i::before {
-      content: "\f00c";
-      color: $neutral_white;
-      background: $light_primary_500;
-      border: 2px solid $light_primary_500;
-      border-radius: 4px;
-    }
-
-    &:indeterminate + i::before {
-      content: "\e404";
-      color: $neutral_white;
-      background: $light_primary_500;
-      border: 2px solid $light_primary_500;
-      border-radius: 4px;
-    }
-
-    // Focus styles
-    &:focus-visible {
-      + i::before {
-        outline: 2px solid $light_primary_500;
-        outline-offset: 2px;
-        border-radius: 4px;
-      }
-      &:indeterminate + i::before {
-        color: $neutral_white;
-        background: $light_primary_500;
-        border: 2px solid $light_primary_500;
-      }
-    }
-  }
-
-  // Hover styles
-  &:hover {
-    cursor: pointer;
-
-    i {
-      &::before {
-        background-color: $brand_primary_light;
-      }
-    }
-
-    input[type="checkbox"] {
-      &:checked + i::before,
-      &:indeterminate + i::before {
-        color: $neutral_white;
-        background: $light_primary_700;
-        border-color: $light_primary_700;
-      }
-    }
-  }
-
-  // Pressed styles
-  &:active {
-    i {
-      &::before {
-        background-color: $brand_primary_light;
-        border-color: $light_primary_500;
-      }
-    }
-
-    input[type="checkbox"] {
-      &:checked + i::before,
-      &:indeterminate + i::before {
-        color: $neutral_white;
-        background: $light_primary_700;
-        border-color: $light_primary_500;
-      }
-    }
-  }
-
-  // Disabled styles
-  &:has(input[type="checkbox"]:disabled) {
-    span {
-      color: $neutral_dark20;
-    }
-
-    i::before {
-      border-color: $neutral_dark20;
-    }
-
-    input[type="checkbox"] {
-      &:checked + i::before,
-      &:indeterminate + i::before {
-        background: $neutral_dark20;
-        color: $neutral_white;
-      }
-    }
-
-    &:hover {
-      cursor: not-allowed;
-      i::before {
-        background: $neutral_white;
-      }
-
-      input[type="checkbox"]:checked + i::before,
-      input[type="checkbox"]:indeterminate + i::before {
-        background: $neutral_dark20;
-        border-color: $neutral_dark20;
-      }
-    }
+  .textFieldHelperSection {
+    @include
+    gap: 0.375rem;
   }
 }
 
-// Sizes
-.label-xs {
-  i {
-    width: 16px;
-    height: 16px;
+.textField-m {
+  .textFieldLabel {
+    @include label-two;
+    margin-bottom: 0;
   }
 
-  i::before {
-    font-size: 8px;
-    width: 12px;
-    height: 12px;
-    line-height: 12px;
+  .textFieldHelperSection {
+    gap: 0.375rem;
   }
 }
 
-.label-s {
-  i {
-    width: 18px;
-    height: 18px;
+.textField-s {
+  span {
+    @include label-three;
+    margin-bottom: 0;
   }
 
-  i::before {
-    font-size: 9.5px;
-    width: 14px;
-    height: 14px;
-    line-height: 14px;
+  .textFieldHelperSection {
+    gap: 0.25rem;
   }
 }
 
-.label-m {
-  i {
-    width: 20px;
-    height: 20px;
+.textField-xs {
+  span {
+    @include label-four;
+    margin-bottom: 0;
   }
 
-  i::before {
-    font-size: 11px;
-    width: 16px;
-    height: 16px;
-    line-height: 16px;
-  }
-}
-
-.label-l {
-  i {
-    width: 24px;
-    height: 24px;
-  }
-
-  i::before {
-    font-size: 13px;
-    width: 20px;
-    height: 20px;
-    line-height: 20px;
+  .textFieldHelperSection {
+    gap: 0.25rem;
   }
 }
