@@ -11,12 +11,7 @@ namespace :build do
   desc 'Builds apps.'
   timed_task_with_logging :apps do
     Dir.chdir(apps_dir) do
-      # Only rebuild if any of the apps_build_trigger_paths have changed since last build.
-      commit_hash = apps_dir('build/commit_hash')
-      if !RakeUtils.git_staged_changes?(*apps_build_trigger_paths) &&
-          File.exist?(commit_hash) &&
-          File.read(commit_hash) == calculate_apps_commit_hash
-
+      if apps_unchanged?
         ChatClient.log '<b>apps</b> unchanged since last build, skipping.'
         next
       end
@@ -33,6 +28,14 @@ namespace :build do
         ChatClient.log 'Deploying <b>storybook</b>...'
         RakeUtils.system 'npm run storybook:deploy'
       end
+    end
+  end
+
+  desc 'Builds storybook.'
+  timed_task_with_logging :storybook do
+    if rack_env?(:staging) && DCDO.get('deploy_storybook', true)
+      ChatClient.log 'Deploying <b>storybook</b>...'
+      RakeUtils.system 'npm run storybook:deploy'
     end
   end
 
@@ -192,6 +195,7 @@ namespace :build do
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
   tasks << :tools if rack_env?(:staging)
+  tasks << :storybook if rack_env?(:staging) && !apps_unchanged?
   tasks << :i18n if CDO.build_i18n
   timed_task_with_logging all: tasks
 end
@@ -214,4 +218,12 @@ end
 
 def calculate_apps_commit_hash
   RakeUtils.git_folder_hash(*apps_build_trigger_paths)
+end
+
+# Only rebuild or deploy storybook if any of the apps_build_trigger_paths have changed since last build.
+def apps_unchanged?
+  commit_hash = apps_dir('build/commit_hash')
+  !RakeUtils.git_staged_changes?(*apps_build_trigger_paths) &&
+    File.exist?(commit_hash) &&
+    File.read(commit_hash) == calculate_apps_commit_hash
 end
