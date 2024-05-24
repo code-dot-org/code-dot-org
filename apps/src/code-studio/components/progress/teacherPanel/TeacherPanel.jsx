@@ -20,7 +20,6 @@ import {
 import StudentTable from '@cdo/apps/code-studio/components/progress/teacherPanel/StudentTable';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import SelectedStudentInfo from '@cdo/apps/code-studio/components/progress/teacherPanel/SelectedStudentInfo';
-import {levelWithProgressType} from '@cdo/apps/templates/progress/progressTypes';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
@@ -29,8 +28,8 @@ import {
   setViewAsUserId,
 } from '@cdo/apps/code-studio/progressRedux';
 import {
+  getCurrentLevel,
   hasLockableLessons,
-  levelsForLessonId,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import {reload} from '@cdo/apps/utils';
 import {updateQueryParam, queryParams} from '@cdo/apps/code-studio/utils';
@@ -71,7 +70,6 @@ class TeacherPanel extends React.Component {
     teacherId: PropTypes.number,
     exampleSolutions: PropTypes.array,
     currentLevelId: PropTypes.string,
-    levels: PropTypes.arrayOf(levelWithProgressType),
     selectUser: PropTypes.func.isRequired,
     setViewAsUserId: PropTypes.func.isRequired,
     setStudentsForCurrentSection: PropTypes.func.isRequired,
@@ -357,15 +355,6 @@ export default connect(
       lockableAuthorized &&
       hasLockableLessons(state.progress);
 
-    const levels = levelsForLessonId(
-      state.progress,
-      state.progress.currentLessonId
-    );
-
-    const isCurrentLevelLab2 = levels?.find(
-      level => level.isCurrentLevel
-    )?.usesLab2;
-
     return {
       viewAs: state.viewAs,
       hasSections: sectionIds.length > 0,
@@ -380,8 +369,7 @@ export default connect(
       teacherId: state.currentUser.userId,
       exampleSolutions: state.pageConstants?.exampleSolutions,
       currentLevelId: state.progress.currentLevelId,
-      levels,
-      isCurrentLevelLab2,
+      isCurrentLevelLab2: getCurrentLevel(state)?.usesLab2,
     };
   },
   dispatch => ({

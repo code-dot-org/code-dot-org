@@ -1547,19 +1547,6 @@ class User < ApplicationRecord
     permission_for_ai_tutor? || in_ai_tutor_experiment_with_enabled_section?
   end
 
-  private def ai_tutor_feature_globally_disabled?
-    DCDO.get('ai-tutor-disabled', false)
-  end
-
-  private def permission_for_ai_tutor?
-    permission?(UserPermission::AI_TUTOR_ACCESS)
-  end
-
-  private def in_ai_tutor_experiment_with_enabled_section?
-    get_active_experiment_names_by_teachers.include?(AI_TUTOR_EXPERIMENT_NAME) &&
-      sections_as_student.any?(&:ai_tutor_enabled)
-  end
-
   def student_of_verified_instructor?
     teachers.any?(&:verified_instructor?)
   end
@@ -2606,25 +2593,6 @@ class User < ApplicationRecord
     SingleUserExperiment.enabled?(user: self, experiment_name: pilot_name)
   end
 
-  # Called before_destroy.
-  # Soft-deletes any projects and other channel-backed progress belonging to
-  # this user.  Unfeatures any featured projects belonging to this user.
-  private def soft_delete_channels
-    return unless user_storage_id
-
-    project = Projects.new(user_storage_id)
-    project_ids = project.get_all_project_ids
-
-    # Unfeature any featured projects owned by the user
-    FeaturedProject.
-      where(project_id: project_ids, unfeatured_at: nil).
-      where.not(featured_at: nil).
-      update_all(unfeatured_at: Time.now)
-
-    # Soft-delete all of the user's projects
-    project.soft_delete_all
-  end
-
   def user_storage_id
     @user_storage_id ||= storage_id_for_user_id(id)
   end
@@ -2750,6 +2718,78 @@ class User < ApplicationRecord
     get_us_state_abbr_from_name(state, include_dc: true)
   end
 
+  US_STATE_DROPDOWN_OPTIONS = {
+    'AL' => 'Alabama', 'AK' => 'Alaska', 'AZ' => 'Arizona', 'AR' => 'Arkansas',
+    'CA' => 'California', 'CO' => 'Colorado', 'CT' => 'Connecticut',
+    'DE' => 'Delaware', 'FL' => 'Florida', 'GA' => 'Georgia', 'HI' => 'Hawaii',
+    'ID' => 'Idaho', 'IL' => 'Illinois', 'IN' => 'Indiana', 'IA' => 'Iowa',
+    'KS' => 'Kansas', 'KY' => 'Kentucky', 'LA' => 'Louisiana', 'ME' => 'Maine',
+    'MD' => 'Maryland', 'MA' => 'Massachusetts', 'MI' => 'Michigan',
+    'MN' => 'Minnesota', 'MS' => 'Mississippi', 'MO' => 'Missouri',
+    'MT' => 'Montana', 'NE' => 'Nebraska', 'NV' => 'Nevada',
+    'NH' => 'New Hampshire', 'NJ' => 'New Jersey', 'NM' => 'New Mexico',
+    'NY' => 'New York', 'NC' => 'North Carolina', 'ND' => 'North Dakota',
+    'OH' => 'Ohio', 'OK' => 'Oklahoma', 'OR' => 'Oregon',
+    'PA' => 'Pennsylvania', 'RI' => 'Rhode Island', 'SC' => 'South Carolina',
+    'SD' => 'South Dakota', 'TN' => 'Tennessee', 'TX' => 'Texas',
+    'UT' => 'Utah', 'VT' => 'Vermont', 'VA' => 'Virginia', 'WA' => 'Washington',
+    'DC' => 'Washington D.C.', 'WV' => 'West Virginia', 'WI' => 'Wisconsin',
+    'WY' => 'Wyoming'
+  }.freeze
+
+  # Returns a Hash of US state codes to state names meant for use in dropdown
+  # selection inputs for User accounts.
+  # Includes a '??' state code for a location not listed.
+  def self.us_state_dropdown_options
+    {'??' => I18n.t('signup_form.us_state_dropdown_options.other')}.
+      merge(US_STATE_DROPDOWN_OPTIONS)
+  end
+
+  def us_state_changed?
+    # Check if us_state value will change
+    will_save_change_to_properties? && properties_change&.first&.[]("us_state") != us_state
+  end
+
+  def should_validate_us_state?
+    # tracking a user's US State is currently limited to students.
+    return false unless user_type == TYPE_STUDENT
+    # us_state is only a required field if the User lives in the US.
+    return false unless %w[US RD].include? country_code
+    new_record? || us_state_changed?
+  end
+
+  private def ai_tutor_feature_globally_disabled?
+    DCDO.get('ai-tutor-disabled', false)
+  end
+
+  private def permission_for_ai_tutor?
+    permission?(UserPermission::AI_TUTOR_ACCESS)
+  end
+
+  private def in_ai_tutor_experiment_with_enabled_section?
+    get_active_experiment_names_by_teachers.include?(AI_TUTOR_EXPERIMENT_NAME) &&
+      sections_as_student.any?(&:ai_tutor_enabled)
+  end
+
+  # Called before_destroy.
+  # Soft-deletes any projects and other channel-backed progress belonging to
+  # this user.  Unfeatures any featured projects belonging to this user.
+  private def soft_delete_channels
+    return unless user_storage_id
+
+    project = Projects.new(user_storage_id)
+    project_ids = project.get_all_project_ids
+
+    # Unfeature any featured projects owned by the user
+    FeaturedProject.
+      where(project_id: project_ids, unfeatured_at: nil).
+      where.not(featured_at: nil).
+      update_all(unfeatured_at: Time.now)
+
+    # Soft-delete all of the user's projects
+    project.soft_delete_all
+  end
+
   private def account_age_in_years
     ((Time.now - created_at.to_time) / 1.year).round
   end
@@ -2838,33 +2878,6 @@ class User < ApplicationRecord
       Cdo::EmailValidator.email_address?(parent_email)
   end
 
-  US_STATE_DROPDOWN_OPTIONS = {
-    'AL' => 'Alabama', 'AK' => 'Alaska', 'AZ' => 'Arizona', 'AR' => 'Arkansas',
-    'CA' => 'California', 'CO' => 'Colorado', 'CT' => 'Connecticut',
-    'DE' => 'Delaware', 'FL' => 'Florida', 'GA' => 'Georgia', 'HI' => 'Hawaii',
-    'ID' => 'Idaho', 'IL' => 'Illinois', 'IN' => 'Indiana', 'IA' => 'Iowa',
-    'KS' => 'Kansas', 'KY' => 'Kentucky', 'LA' => 'Louisiana', 'ME' => 'Maine',
-    'MD' => 'Maryland', 'MA' => 'Massachusetts', 'MI' => 'Michigan',
-    'MN' => 'Minnesota', 'MS' => 'Mississippi', 'MO' => 'Missouri',
-    'MT' => 'Montana', 'NE' => 'Nebraska', 'NV' => 'Nevada',
-    'NH' => 'New Hampshire', 'NJ' => 'New Jersey', 'NM' => 'New Mexico',
-    'NY' => 'New York', 'NC' => 'North Carolina', 'ND' => 'North Dakota',
-    'OH' => 'Ohio', 'OK' => 'Oklahoma', 'OR' => 'Oregon',
-    'PA' => 'Pennsylvania', 'RI' => 'Rhode Island', 'SC' => 'South Carolina',
-    'SD' => 'South Dakota', 'TN' => 'Tennessee', 'TX' => 'Texas',
-    'UT' => 'Utah', 'VT' => 'Vermont', 'VA' => 'Virginia', 'WA' => 'Washington',
-    'DC' => 'Washington D.C.', 'WV' => 'West Virginia', 'WI' => 'Wisconsin',
-    'WY' => 'Wyoming'
-  }.freeze
-
-  # Returns a Hash of US state codes to state names meant for use in dropdown
-  # selection inputs for User accounts.
-  # Includes a '??' state code for a location not listed.
-  def self.us_state_dropdown_options
-    {'??' => I18n.t('signup_form.us_state_dropdown_options.other')}.
-      merge(US_STATE_DROPDOWN_OPTIONS)
-  end
-
   # Verifies that the serialized attribute "us_state" is a 2 character string
   # representing a US State or "??" which represents a "N/A" kind of response.
   private def validate_us_state
@@ -2877,18 +2890,5 @@ class User < ApplicationRecord
     unless User.us_state_dropdown_options.include?(us_state)
       errors.add(:us_state, :invalid)
     end
-  end
-
-  def us_state_changed?
-    # Check if us_state value will change
-    will_save_change_to_properties? && properties_change&.first&.[]("us_state") != us_state
-  end
-
-  def should_validate_us_state?
-    # tracking a user's US State is currently limited to students.
-    return false unless user_type == TYPE_STUDENT
-    # us_state is only a required field if the User lives in the US.
-    return false unless %w[US RD].include? country_code
-    new_record? || us_state_changed?
   end
 end
