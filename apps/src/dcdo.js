@@ -29,7 +29,7 @@ export class DCDO {
   /**
    * Sets the DCDO configs. Tests only! This has no affect on the backend.
    * @param {string} key The key for the DCDO config to set.
-   * @param {object} value The value to store for the given key.
+   * @param {object | boolean} value The value to store for the given key.
    */
   set(key, value) {
     if (key) {

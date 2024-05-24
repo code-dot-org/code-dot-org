@@ -1,0 +1,9 @@
+{
+  "key": "changing-screens",
+  "course_version_key": "2024",
+  "course_offering_key": "web-development",
+  "parent_reference_guide_key": "app-lab",
+  "display_name": "Changing Screens",
+  "content": "## Using the *setScreen* command to change screens with code\n\nThe [`setScreen`(#fff176)](/docs/applab/setScreen/) command changes the screen to show whatever screen you want.  You specify the screen by its ID.\n\n![](https://images.code.org/005222ed01ade7940963ce149d637286-image-1477168080948.png)\n\n[diagram_nums]\n\n1. Find [`setScreen`(#fff176)](/docs/applab/setScreen/) in the UI Elements toolbox and drag it into the code workspace.\n2. Most of the time you change the screen in response to some user-event. In this case [`setScreen`(#fff176)](/docs/applab/setScreen/) is being added to a \"click\" event handler for the image with ID \"smileyFace\"\n3. Select the ID of the screen you want to change to. In this case, when smiley face is clicked on the screen that says \"hello\" we want to change to the screen that says \"goodbye.\"\n4. **Key idea: Multiple Screens - One Coding Workspace.** This is the code that handles a \"click\" event for an _image that is on a different screen_ - the \"goodbyeScreen\". You can't see that image right now, or that screen, because the screen isn't selected.  However, the code for it still goes here.\n\n[/diagram_nums]",
+  "position": 4
+}

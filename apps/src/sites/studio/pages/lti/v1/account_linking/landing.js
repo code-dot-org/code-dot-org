@@ -17,12 +17,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const ltiProviderName = scriptData['lti_provider_name'];
   const newAccountUrl = scriptData['new_account_url'];
   const existingAccountUrl = new URL(scriptData['existing_account_url']);
+  const emailAddress = scriptData['email'];
 
   const ltiProviderContext = {
     ltiProvider,
     ltiProviderName,
     newAccountUrl,
     existingAccountUrl,
+    emailAddress,
   };
 
   ReactDOM.render(
