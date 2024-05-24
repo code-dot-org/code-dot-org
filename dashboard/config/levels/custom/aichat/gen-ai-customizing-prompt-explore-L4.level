@@ -7,7 +7,7 @@
   "user_id": 4,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Driving Chatbot Version 2\r\n\r\nHere is an updated version of the chatbot. Test out some of the same questions from before and notice how the responses are different.\r\n\r\n### Do This\r\n\r\n1) **Investigate:** Test the chatbot with at least 4 different prompts. You can use the same ones as before.\r\n2) **Discuss:** How are the responses different? How do you think the new system prompt is updating the responses?\r\n\r\nOnce you're finished, press the `Continue`(#7435b2) button!\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* What are the requirements to get a driving permit?\r\n* What happens if you run a red light?\r\n:::\r\n\r\n&nbsp;",
+    "long_instructions": "## Driving Chatbot Version 2\r\n\r\nHere is an updated version of the chatbot. Test out some of the same questions from before and notice how the responses are different.\r\n\r\n### Do This\r\n\r\n1) **Investigate:** Test the chatbot with at least 4 different prompts. You can use the same ones as before.\r\n2) **Discuss:** How are the responses different? How do you think the new system prompt is updating the responses?\r\n\r\nOnce you're finished, press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* What are the requirements to get a driving permit?\r\n* What happens if you run a red light?\r\n:::\r\n\r\n&nbsp;",
     "system_prompt": "deprecated",
     "bot_title": "deprecated",
     "bot_description": "deprecated",
@@ -45,6 +45,6 @@
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-03T23:12:51.942+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-explore-template\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-explore-template\"},{\"changed_at\":\"2024-05-06 03:56:00 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-06 03:57:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-03T23:12:51.942+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-explore-template\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-explore-template\"},{\"changed_at\":\"2024-05-06 03:56:00 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-06 03:57:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-21 17:28:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>

@@ -5318,4 +5318,59 @@ class UserTest < ActiveSupport::TestCase
       student.update!(username: "very big husky")
     end
   end
+
+  test "validate_us_state" do
+    # If we don't know what country they are in, we don't require US State.
+    student = create :student
+    student.update!(name: 'test_coder')
+    assert_equal 'test_coder', student.name
+
+    # If the student is not in the US, we don't require US State
+    student = create :student, country_code: "JP"
+    student.update!(name: 'test_coder')
+    assert_equal 'test_coder', student.name
+
+    # If the student is in the US, they must tell us what US State they live in
+    assert_raises(ActiveRecord::RecordInvalid) do
+      create :student, country_code: "US"
+    end
+    # If us_state is invalid, error should be raised
+    assert_raises(ActiveRecord::RecordInvalid) do
+      create :student, country_code: "US", us_state: 'INVALID_STATE'
+    end
+    # Can create student with valid country_code and valid us_state
+    student = create :student, country_code: "US", us_state: 'CO'
+    # Updating to an invalid us_state should raise an error
+    assert_raises(ActiveRecord::RecordInvalid) do
+      student.update!(us_state: 'INVALID_STATE')
+    end
+    # Can update us_state to valid us_state
+    student.update!(us_state: 'WA')
+    assert_equal 'WA', student.us_state
+
+    # country_code set, us_state nil
+    student = create :student, country_code: "US", us_state: 'CO'
+    # set us_state to invalid value, some of our current users have nil us_state and no country_code
+    # Jira P20-939: On account creation, students in the US were allowed to sign up without providing us_state.
+    # Users should still be able to update other attributes even thought they have a nil us_state.
+    student.update_attribute(:us_state, nil) # bypass validation
+    student.update!(name: 'test_coder')
+    assert_equal 'test_coder', student.name
+
+    # country_code nil, us_state set
+    student = create :student
+    # set us_state to invalid value, some of our current users have invalid us_state and no country_code
+    # Jira P20-939: We had a feature where we automatically filled the us_state but sometimes it put in the full state name instead of
+    # the two letter code. Users should still be able to update other attributes even thought they have an invalid us_state value
+    student.update_attribute(:us_state, 'Washington D.C.') # bypass validation
+    student.update!(name: 'test_coder')
+    assert_equal 'test_coder', student.name
+  end
+
+  test "us_state_changed?" do
+    student = create :student, country_code: "US", us_state: 'CO'
+    refute student.us_state_changed?
+    student.us_state = 'WA'
+    assert student.us_state_changed?
+  end
 end

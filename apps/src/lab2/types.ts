@@ -145,6 +145,11 @@ export interface LevelProperties {
   skipUrl?: string;
   // Project Template level name for the level if it exists.
   projectTemplateLevelName?: string;
+  // Help and Tips values
+  mapReference?: string;
+  referenceLinks?: string[];
+  // For Teachers Only value
+  teacherMarkdown?: string;
 }
 
 // Level configuration data used by project-backed labs that don't require

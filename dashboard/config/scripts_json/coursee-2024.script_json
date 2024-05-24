@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2024-05-17 22:19:35 UTC",
+    "serialized_at": "2024-05-23 22:15:20 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2173,7 +2173,8 @@
       "key": "2e40f91f-6032-45f0-8916-a71ced24020b",
       "position": 1,
       "properties": {
-        "description": " | Slide                                                                                                        | Lesson Guide                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |\n| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide0.png)   | <p><a href=\"https://docs.google.com/presentation/d/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/template/preview\" target=\"_blank\">Click here to access slides<br></a></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide1.png)   | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide2.png)   | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide3.png)   | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide4.png)   | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide5.png)   | <p><i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> <strong>Vocabulary:</strong> Read aloud the vocabulary words written in the slide.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide6.png)   | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read aloud the objectives written on the slide<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide7.png)   | <p><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Sprites are objects that have different attributes or properties. The object is like a car that has different properties like size, color, make, model, and year. Or it’s like a dog that has a size, breed, age, color. Each sprite can be a little different and you can set the properties with code.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide8.png)   | <p><i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> <strong>Vocabulary:</strong> You will choose the costume the sprite starts with and you can code the costume to change whenever you want in the program or game.<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide9.png)   | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> How would you describe this sprite scene? If you wanted someone to create this scene for you on a computer what instructions would they need?<br></p><p><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should identify both sprites in this project, describe their behaviors (movements), and also notice there is a background. Give students time to brainstorm ideas. If they aren’t sure what to say, clarify that you are just asking them to state observations about what they see.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide10.png)  | <p><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Let’s look at these instructions line by line<br></p><p><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation to reveal each new line of the instructions<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide11.png)  | <p><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This is the code that was used to make this scene. Let’s read through it together. The computer always reads code in the sequence (order) it is written from top to bottom.<br><br><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the code one block at a time starting at the top. Point to each block and each image as you go. Make a note about sequence and how we couldn't put the behavior block before the make sprite block because the computer reads code form top to bottom accentuating the remark above.<br><br><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What is the same or different about our instructions and this code?<br></p><p><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students will notice the code sequence was similar to the instructions. They will see each part was specifically mentioned (background, penguin, fire box, and the penguin’s movement). They will also see how the coding blocks describe what the code will do, for example “sprite begins patrolling” makes it clear that this sprite will start a “patrolling” behavior.<br><br></p>|"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Key Vocabulary slide\n\n**Vocabulary:** Read aloud the vocabulary words written in the slide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**:Lesson Objectives slide\n\n**Do This:** Read aloud the objectives written on the slide",
+        "name": "Lesson Introduction"
       },
       "seeding_key": {
         "activity_section.key": "2e40f91f-6032-45f0-8916-a71ced24020b",
@@ -2181,9 +2182,80 @@
       }
     },
     {
+      "key": "27e914b0-15df-45b4-ac75-ab0c6843b7c0",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Key Vocabulary slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "27e914b0-15df-45b4-ac75-ab0c6843b7c0",
+        "lesson_activity.key": "c1704535-76ab-45c6-a17a-72238efa9f2a"
+      }
+    },
+    {
+      "key": "72c8c5f2-5bec-44b2-9fb6-12a7501c526e",
+      "position": 3,
+      "properties": {
+        "description": "\n\nSprites are objects that have different attributes or properties. The object is like a car that has different properties like size, color, make, model, and year. Or it’s like a dog that has a size, breed, age, color. Each sprite can be a little different and you can set the properties with code.",
+        "name": "Sprite Review",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "72c8c5f2-5bec-44b2-9fb6-12a7501c526e",
+        "lesson_activity.key": "c1704535-76ab-45c6-a17a-72238efa9f2a"
+      }
+    },
+    {
+      "key": "1c505748-e699-4fc0-b464-70f02437b1f0",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Key Vocabulary slide\n\n\n**Vocabulary:** You will choose the costume the sprite starts with and you can code the costume to change whenever you want in the program or game.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Discuss slide\n\n**Discuss:** How would you describe this sprite scene? If you wanted someone to create this scene for you on a computer what instructions would they need?\n\n**Discussion Goal:** Students should identify both sprites in this project, describe their behaviors (movements), and also notice there is a background. Give students time to brainstorm ideas. If they aren’t sure what to say, clarify that you are just asking them to state observations about what they see.\n\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "1c505748-e699-4fc0-b464-70f02437b1f0",
+        "lesson_activity.key": "c1704535-76ab-45c6-a17a-72238efa9f2a"
+      }
+    },
+    {
+      "key": "a9cda988-5341-47e5-8118-f11502daaa5e",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Reflect slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "a9cda988-5341-47e5-8118-f11502daaa5e",
+        "lesson_activity.key": "c1704535-76ab-45c6-a17a-72238efa9f2a"
+      }
+    },
+    {
+      "key": "9ccb066c-350f-483c-abdb-5b2ab575e394",
+      "position": 6,
+      "properties": {
+        "description": "Let’s look at these instructions line by line.\n\nThis is the code that was used to make this scene. Let’s read through it together. The computer always reads code in the sequence (order) it is written from top to bottom.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9ccb066c-350f-483c-abdb-5b2ab575e394",
+        "lesson_activity.key": "c1704535-76ab-45c6-a17a-72238efa9f2a"
+      }
+    },
+    {
+      "key": "72453013-8c98-4edb-8bd0-4365fc691037",
+      "position": 7,
+      "properties": {
+        "description": "**Do This:** Read the code one block at a time starting at the top. Point to each block and each image as you go. Make a note about sequence and how we couldn't put the behavior block before the make sprite block because the computer reads code form top to bottom accentuating the remark above.\n\n**Discuss:** What is the same or different about our instructions and this code?\n\n**Discussion Goal:** Students will notice the code sequence was similar to the instructions. They will see each part was specifically mentioned (background, penguin, fire box, and the penguin’s movement). They will also see how the coding blocks describe what the code will do, for example “sprite begins patrolling” makes it clear that this sprite will start a “patrolling” behavior.",
+        "name": "Code Review"
+      },
+      "seeding_key": {
+        "activity_section.key": "72453013-8c98-4edb-8bd0-4365fc691037",
+        "lesson_activity.key": "c1704535-76ab-45c6-a17a-72238efa9f2a"
+      }
+    },
+    {
       "key": "f521469e-438f-434d-9679-26c753a00050",
       "position": 1,
       "properties": {
+        "name": "Game Design Setup",
         "progression_name": "Game Design Setup"
       },
       "seeding_key": {
@@ -2192,9 +2264,38 @@
       }
     },
     {
-      "key": "0bd377da-15e0-4060-a106-80f84280ca13",
+      "key": "92dbd97e-e6ee-452d-b374-e80f48548159",
       "position": 2,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Level 1 Video slide\n\n**Do This:** Play the video for students full group.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "In Levels 2-16, students will be following instructions and working at their own pace. Here are a few tips that should help students while they're working through the levels."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "92dbd97e-e6ee-452d-b374-e80f48548159",
+        "lesson_activity.key": "296ca1ae-ccf6-40e3-acb4-d2b3b1f6d424"
+      }
+    },
+    {
+      "key": "60fdefc7-032b-45ba-ae7d-08b19bf85a76",
+      "position": 3,
+      "properties": {
+        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Levels 2-7 Skill Building slide\n\n**Do This:** Transition students to their devices. Have them go to Level 2. Remind them to follow the instructions on each level, click on the light bulb for hints and read the feedback in the yellow box under the instructions if something is not quite right in their code.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "60fdefc7-032b-45ba-ae7d-08b19bf85a76",
+        "lesson_activity.key": "296ca1ae-ccf6-40e3-acb4-d2b3b1f6d424"
+      }
+    },
+    {
+      "key": "0bd377da-15e0-4060-a106-80f84280ca13",
+      "position": 4,
+      "properties": {
+        "name": "Sprite Behaviors",
         "progression_name": "Sprite Behaviors"
       },
       "seeding_key": {
@@ -2204,8 +2305,9 @@
     },
     {
       "key": "c9debd6e-bc5a-4a92-aebc-45c92ade71ae",
-      "position": 3,
+      "position": 5,
       "properties": {
+        "name": "Events",
         "progression_name": "Events"
       },
       "seeding_key": {
@@ -2214,10 +2316,50 @@
       }
     },
     {
-      "key": "29318d11-d3c9-47b7-8ae4-7b9733423dba",
-      "position": 4,
+      "key": "e85b4e3a-5ac7-4da6-a585-b8076fbf0bc7",
+      "position": 6,
       "properties": {
-        "progression_name": "Practice"
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Events can be a very tricky concept for students to grasp. It may be very helpful to pull the class together at this point in the lesson to preview and discuss how events work before they continue independently. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e85b4e3a-5ac7-4da6-a585-b8076fbf0bc7",
+        "lesson_activity.key": "296ca1ae-ccf6-40e3-acb4-d2b3b1f6d424"
+      }
+    },
+    {
+      "key": "d5b7461e-72fa-4043-ad23-277413d24785",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Level 8 Video slide\n\n**Do This:** Pause students’ independent work when several students have finished level 7 in order to give an overview of using groups of sprites. It’s okay if the whole class is not yet finished with level 7 to preview the Lots of Sprites video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Events slide\n\nExplain how events work with the four part diagram on this slide. 1. The user presses a key on the keyboard. 2. The keyboard sends a signal to the computer. 3. The computer makes a decision based on the code. 4. The computer updates the display.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: (next) Events slide\n\n**Do This:** Explain that arrow keys are one type of event that can make a program interactive.\n\n**Discuss:** What other ways could we give a user control over what happens in an app or game?\n\n**Discussion Goal:** Students will start to recognize that events trigger actions to happen on the computer. Some other examples might include: pushing the power button, moving the mouse, clicking on an button on the screen, pressing buttons on the keyboard\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: (next) Events slide\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "d5b7461e-72fa-4043-ad23-277413d24785",
+        "lesson_activity.key": "296ca1ae-ccf6-40e3-acb4-d2b3b1f6d424"
+      }
+    },
+    {
+      "key": "ab694790-4b62-46cb-bf92-7a4e162c2db0",
+      "position": 8,
+      "properties": {
+        "description": "When you’re working with groups of sprites, sometimes you will only want to give instructions to one sprite at a time. To help achieve this, events have a mini-toolbox that opens when you click the +.\nInside the toolbox are subject and object sprites that you can drag into other coding blocks for more precise control.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ab694790-4b62-46cb-bf92-7a4e162c2db0",
+        "lesson_activity.key": "296ca1ae-ccf6-40e3-acb4-d2b3b1f6d424"
+      }
+    },
+    {
+      "key": "29318d11-d3c9-47b7-8ae4-7b9733423dba",
+      "position": 9,
+      "properties": {
+        "name": "Practice",
+        "progression_name": "Practice Choices"
       },
       "seeding_key": {
         "activity_section.key": "29318d11-d3c9-47b7-8ae4-7b9733423dba",
@@ -2225,13 +2367,13 @@
       }
     },
     {
-      "key": "60fdefc7-032b-45ba-ae7d-08b19bf85a76",
-      "position": 5,
+      "key": "03d27db7-3550-4eb8-9bf3-9d90a664f4c0",
+      "position": 10,
       "properties": {
-        "description": " | Slide                                                                                                        | Lesson Guide                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |\n| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide12.png)  | <p><br></p>|\n| ![](https://docs.google.com/presentation/d/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/export/png?id=1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo&pageid=g26883921e75_0_44)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Play the video for students.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide14.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Transition students to their devices. Have them go to <a href=\"https://studio.code.org/s/pilot-k5-game-design/lessons/1/levels/2\" target=\"_blank\">Level 2</a>. Remind them to follow the instructions on each level, click on the light bulb for hints and read the feedback in the yellow box under the instructions if something is not quite right in their code.<br><br><details style=\"background-color: #FFA400; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px; color: white\"><summary style=\"font-size: 1.2em; font-weight: bold;\"><i class=\"fa fa-lightbulb-o \"></i> Teaching Tip: Independent Work Time</summary><br>In Levels 2-16, students will be following instructions and working at their own pace. Here are a few tips that should help students while they're working through the levels:</details></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide15.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> When several students have reached level 6, pause students’ independent work in order to give an overview of events. It’s okay if the whole class is not quite finished with Level 5 to preview events.<br><br>Explain how events work with the four part diagram on this slide. 1. The user presses a key on the keyboard. 2. The keyboard sends a signal to the computer. 3. The computer makes a decision based on the code. 4. The computer updates the display.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide16.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Explain that arrow keys are one type of event that can make a program interactive.<br><br><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What other ways could we give a user control over what happens in an app or game?<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students will start to recognize that events trigger actions to happen on the computer. Some other examples might include: pushing the power button, moving the mouse, clicking on an button on the screen, pressing buttons on the keyboard<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide17.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the slide aloud to the class. This is a very common misconception in coding events in Sprite Lab.<br><br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide18.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Transition students back to their devices. Have them resume where they left off and work up to level 9.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide19.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Pause students’ independent work when several students have finished level 9 in order to give an overview of using groups of sprites. It’s okay if the whole class is not yet finished with level 9 to preview the Lots of Sprites video.<br><br>Play the video for students as a whole class.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide20.png)  | <p><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> When you’re working with groups of sprites, sometimes you will only want to give instructions to one sprite at a time. To help achieve this, events have a mini-toolbox that opens when you click the +.<br>Inside the toolbox are subject and object sprites that you can drag into other coding blocks for more precise control.<br><br><br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide21.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Transition students back to their devices. Have them resume where they left off for the remainder of the levels.<br><br></p>|\n"
+        "description": "Choice levels offer students the chance to pick what is most interesting to them. All of the choices here practice the same skills with different themes. "
       },
       "seeding_key": {
-        "activity_section.key": "60fdefc7-032b-45ba-ae7d-08b19bf85a76",
+        "activity_section.key": "03d27db7-3550-4eb8-9bf3-9d90a664f4c0",
         "lesson_activity.key": "296ca1ae-ccf6-40e3-acb4-d2b3b1f6d424"
       }
     },
@@ -2239,10 +2381,22 @@
       "key": "542ec564-b868-4bdf-a97b-faf0e4fc7f1d",
       "position": 1,
       "properties": {
-        "description": " | Slide                                                                                                        | Lesson Guide                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |\n| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide22.png)  | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide23.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Review the day’s learning objectives and have students reflect on how they accomplished each of these during the activity.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide24.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Look over and read aloud the 3 code snippets together as a class.<br><br><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click on the slide to reveal the first scenario<br><br><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students write down which code they think would be best. After everyone has an answer, discuss as a class. Repeat for all three scenarios.<br><br>…to arrange 8 enemies in a perfect line? [Answer: Code C because with the grid block you can easily place multiple sprites exactly where you want them to go]<br><br>… to make a game with 100 randomly placed gems to collect? [Answer: Code B because with this block you can choose the number of sprites and they will be randomly placed on screen]<br><br>…to set the location of one player at the beginning of the game? [Answer: Code A because with this block you are placing just one sprite at a time and setting the location with x,y coordinates]<br><br><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> When we are coding there are often many different ways to program the same thing. The best solution is the one that creates the shortest, most efficient program.<br><br><br><br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide25.png)  | <p><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Great job today, coders! In the next lesson we will learn how to use variables to keep track of score in a game.<br><br><br><br><br></p>|"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Today you learned... slide\n\n**Do This:** Review the day’s learning objectives and have students reflect on how they accomplished each of these during the activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Review slide\n(Click on the slide to reveal the first scenario)\n\n**Do This:** Look over and read aloud the 3 code snippets together as a class.\n\nHave students write down which code they think would be best. After everyone has an answer, discuss as a class. Repeat for all three scenarios.\n\n**…to arrange 8 enemies in a perfect line?** [Answer: Code C because with the grid block you can easily place multiple sprites exactly where you want them to go]\n\n**… to make a game with 100 randomly placed gems to collect?** [Answer: Code B because with this block you can choose the number of sprites and they will be randomly placed on screen]\n\n**…to set the location of one player at the beginning of the game?** [Answer: Code A because with this block you are placing just one sprite at a time and setting the location with x,y coordinates]\n\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "542ec564-b868-4bdf-a97b-faf0e4fc7f1d",
+        "lesson_activity.key": "c10d8d37-4071-4735-80ff-ad50cdbd861e"
+      }
+    },
+    {
+      "key": "c14f350a-aa79-4698-8ba7-d1c9c06aca38",
+      "position": 2,
+      "properties": {
+        "description": "When we are coding there are often many different ways to program the same thing. The best solution is the one that creates the shortest, most efficient program.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c14f350a-aa79-4698-8ba7-d1c9c06aca38",
         "lesson_activity.key": "c10d8d37-4071-4735-80ff-ad50cdbd861e"
       }
     },
@@ -4579,6 +4733,1031 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "game_design_video_sprites_course-e"
+        ],
+        "progression": "Game Design Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_video_sprites_course-e"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "f521469e-438f-434d-9679-26c753a00050"
+      },
+      "level_keys": [
+        "game_design_video_sprites_course-e"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_design_player_course-e"
+        ],
+        "progression": "Game Design Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_player_course-e"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "f521469e-438f-434d-9679-26c753a00050"
+      },
+      "level_keys": [
+        "game_design_player_course-e"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_design_location_course-e"
+        ],
+        "progression": "Game Design Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_location_course-e"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "f521469e-438f-434d-9679-26c753a00050"
+      },
+      "level_keys": [
+        "game_design_location_course-e"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_design_make_grid_course-e"
+        ],
+        "progression": "Game Design Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_make_grid_course-e"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "f521469e-438f-434d-9679-26c753a00050"
+      },
+      "level_keys": [
+        "game_design_make_grid_course-e"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_design_behavior_course-e"
+        ],
+        "progression": "Sprite Behaviors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_behavior_course-e"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "0bd377da-15e0-4060-a106-80f84280ca13"
+      },
+      "level_keys": [
+        "game_design_behavior_course-e"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_design_two_behaviors_course-e"
+        ],
+        "progression": "Sprite Behaviors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_two_behaviors_course-e"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "0bd377da-15e0-4060-a106-80f84280ca13"
+      },
+      "level_keys": [
+        "game_design_two_behaviors_course-e"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_design_behavior_grid_course-e"
+        ],
+        "progression": "Sprite Behaviors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_behavior_grid_course-e"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "0bd377da-15e0-4060-a106-80f84280ca13"
+      },
+      "level_keys": [
+        "game_design_behavior_grid_course-e"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_design_video_lots_course-e"
+        ],
+        "progression": "Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_video_lots_course-e"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "c9debd6e-bc5a-4a92-aebc-45c92ade71ae"
+      },
+      "level_keys": [
+        "game_design_video_lots_course-e"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_design_panel_events_course-e"
+        ],
+        "progression": "Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_panel_events_course-e"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "c9debd6e-bc5a-4a92-aebc-45c92ade71ae"
+      },
+      "level_keys": [
+        "game_design_panel_events_course-e"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 10,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_design_event_click_course-e"
+        ],
+        "progression": "Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_event_click_course-e"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "c9debd6e-bc5a-4a92-aebc-45c92ade71ae"
+      },
+      "level_keys": [
+        "game_design_event_click_course-e"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 11,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_design_toolbox_object_course-e"
+        ],
+        "progression": "Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_toolbox_object_course-e"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "c9debd6e-bc5a-4a92-aebc-45c92ade71ae"
+      },
+      "level_keys": [
+        "game_design_toolbox_object_course-e"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 12,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_design_remove_object_course-e"
+        ],
+        "progression": "Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_remove_object_course-e"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "c9debd6e-bc5a-4a92-aebc-45c92ade71ae"
+      },
+      "level_keys": [
+        "game_design_remove_object_course-e"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 13,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_design_event_touch_course-e"
+        ],
+        "progression": "Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_event_touch_course-e"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "c9debd6e-bc5a-4a92-aebc-45c92ade71ae"
+      },
+      "level_keys": [
+        "game_design_event_touch_course-e"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 14,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_design_change_costume_course-e"
+        ],
+        "progression": "Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_change_costume_course-e"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "c9debd6e-bc5a-4a92-aebc-45c92ade71ae"
+      },
+      "level_keys": [
+        "game_design_change_costume_course-e"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 15,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_design_practice_lots_choice_course-e"
+        ],
+        "progression": "Practice Choices"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_practice_lots_choice_course-e"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "29318d11-d3c9-47b7-8ae4-7b9733423dba"
+      },
+      "level_keys": [
+        "game_design_practice_lots_choice_course-e"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_variables_intro_choices_course-e"
+        ],
+        "progression": "Intro to Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_intro_choices_course-e"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "91def984-be39-4eef-a9c4-a4312871e1a0"
+      },
+      "level_keys": [
+        "game_variables_intro_choices_course-e"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_variables_video_intro_course-e"
+        ],
+        "progression": "Intro to Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_video_intro_course-e"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "91def984-be39-4eef-a9c4-a4312871e1a0"
+      },
+      "level_keys": [
+        "game_variables_video_intro_course-e"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_variables_about_panel_course-e"
+        ],
+        "progression": "Intro to Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_about_panel_course-e"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "91def984-be39-4eef-a9c4-a4312871e1a0"
+      },
+      "level_keys": [
+        "game_variables_about_panel_course-e"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_variables_show_course-e"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_show_course-e"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "c8d39ae9-0e53-42a5-9f3f-1c56e883ae79"
+      },
+      "level_keys": [
+        "game_variables_show_course-e"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_variables_increase_course-e"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_increase_course-e"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "c8d39ae9-0e53-42a5-9f3f-1c56e883ae79"
+      },
+      "level_keys": [
+        "game_variables_increase_course-e"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_variables_decrease_course-e"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_decrease_course-e"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "c8d39ae9-0e53-42a5-9f3f-1c56e883ae79"
+      },
+      "level_keys": [
+        "game_variables_decrease_course-e"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 7,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_variables_match_course-e"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_match_course-e"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "c8d39ae9-0e53-42a5-9f3f-1c56e883ae79"
+      },
+      "level_keys": [
+        "game_variables_match_course-e"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 8,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_conditional_about_panel_course-e"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_conditional_about_panel_course-e"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "c8d39ae9-0e53-42a5-9f3f-1c56e883ae79"
+      },
+      "level_keys": [
+        "game_conditional_about_panel_course-e"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 9,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_variables_conditional_course-e"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_conditional_course-e"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "c8d39ae9-0e53-42a5-9f3f-1c56e883ae79"
+      },
+      "level_keys": [
+        "game_variables_conditional_course-e"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 10,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_variables_match_condition_course-e"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_match_condition_course-e"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "c8d39ae9-0e53-42a5-9f3f-1c56e883ae79"
+      },
+      "level_keys": [
+        "game_variables_match_condition_course-e"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_variables_fix_choices_course-e"
+        ],
+        "progression": "Practice & Free Play"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_fix_choices_course-e"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "bfdc94f4-d4b2-44b1-8ce3-2cfcbfe983a4"
+      },
+      "level_keys": [
+        "game_variables_fix_choices_course-e"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 12,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_variables_freeplay_course-e"
+        ],
+        "progression": "Practice & Free Play"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_freeplay_course-e"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "bfdc94f4-d4b2-44b1-8ce3-2cfcbfe983a4"
+      },
+      "level_keys": [
+        "game_variables_freeplay_course-e"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_development_environment_choices_course-e"
+        ],
+        "progression": "Sprite Type: Environment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_environment_choices_course-e"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "377a97e2-c61f-4f4b-a955-e02cbe31e712"
+      },
+      "level_keys": [
+        "game_development_environment_choices_course-e"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_development_sprites_type_panel_course-e"
+        ],
+        "progression": "Sprite Type: Environment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_sprites_type_panel_course-e"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "377a97e2-c61f-4f4b-a955-e02cbe31e712"
+      },
+      "level_keys": [
+        "game_development_sprites_type_panel_course-e"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_development_environment_type_course-e"
+        ],
+        "progression": "Sprite Type: Environment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_environment_type_course-e"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "377a97e2-c61f-4f4b-a955-e02cbe31e712"
+      },
+      "level_keys": [
+        "game_development_environment_type_course-e"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_development_environment_type2_course-e"
+        ],
+        "progression": "Sprite Type: Environment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_environment_type2_course-e"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "377a97e2-c61f-4f4b-a955-e02cbe31e712"
+      },
+      "level_keys": [
+        "game_development_environment_type2_course-e"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_development_player_type_panel_course-e"
+        ],
+        "progression": "Sprite Type: Player"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_player_type_panel_course-e"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "2f63cb6e-121d-4292-a136-dbc486163639"
+      },
+      "level_keys": [
+        "game_development_player_type_panel_course-e"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_development_player_type_course-e"
+        ],
+        "progression": "Sprite Type: Player"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_player_type_course-e"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "2f63cb6e-121d-4292-a136-dbc486163639"
+      },
+      "level_keys": [
+        "game_development_player_type_course-e"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_development_jump_course-e"
+        ],
+        "progression": "Sprite Type: Player"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_jump_course-e"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "2f63cb6e-121d-4292-a136-dbc486163639"
+      },
+      "level_keys": [
+        "game_development_jump_course-e"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_development_types_course-e"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_types_course-e"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "6f098808-79a7-4839-8a16-e5a1556513e6"
+      },
+      "level_keys": [
+        "game_development_types_course-e"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_development_matching_course-e"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_matching_course-e"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "6f098808-79a7-4839-8a16-e5a1556513e6"
+      },
+      "level_keys": [
+        "game_development_matching_course-e"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 10,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_development_debug_choices_course-e"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_debug_choices_course-e"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "6f098808-79a7-4839-8a16-e5a1556513e6"
+      },
+      "level_keys": [
+        "game_development_debug_choices_course-e"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_jam_theme_generator_course-e"
+        ],
+        "progression": "Game Jam Theme Generator"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_jam_theme_generator_course-e"
+        ],
+        "lesson.key": "Game Jam Day 1: Create",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "2f13c2bf-b436-40e5-b951-f8ef059324f6"
+      },
+      "level_keys": [
+        "game_jam_theme_generator_course-e"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_jam_create_plan_course-e"
+        ],
+        "progression": "Plan"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_jam_create_plan_course-e"
+        ],
+        "lesson.key": "Game Jam Day 1: Create",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "1e4314cf-7072-40b2-82c4-f9649b473a27"
+      },
+      "level_keys": [
+        "game_jam_create_plan_course-e"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_jam_create_game_course-e"
+        ],
+        "progression": "Create"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_jam_create_game_course-e"
+        ],
+        "lesson.key": "Game Jam Day 1: Create",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "e306bd83-340d-4181-9301-1d09bc5363ca"
+      },
+      "level_keys": [
+        "game_jam_create_game_course-e"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_jam_play_course-e"
+        ],
+        "progression": "Game Jam: Play"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_jam_play_course-e"
+        ],
+        "lesson.key": "Game Jam Day 2: Play",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "0102003f-6fc9-4a42-af62-703b3a0afe76"
+      },
+      "level_keys": [
+        "game_jam_play_course-e"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "Songwriting-Unplugged2022_2024"
         ],
         "progression": "Songwriting - Functions Unplugged Activity"
@@ -4598,7 +5777,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 74,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4623,7 +5802,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 75,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4648,7 +5827,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 76,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4673,7 +5852,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 77,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4698,7 +5877,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 78,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4723,7 +5902,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 79,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -4748,7 +5927,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 80,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -4773,7 +5952,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 81,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -4798,7 +5977,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 82,
       "position": 9,
       "activity_section_position": 5,
       "assessment": false,
@@ -4823,7 +6002,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 83,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -4848,7 +6027,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 84,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -4873,7 +6052,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 85,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -4898,7 +6077,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 86,
       "position": 13,
       "activity_section_position": 3,
       "assessment": false,
@@ -4923,7 +6102,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 87,
       "position": 14,
       "activity_section_position": 4,
       "assessment": false,
@@ -4948,7 +6127,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 88,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
@@ -4973,7 +6152,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 89,
       "position": 16,
       "activity_section_position": 1,
       "assessment": false,
@@ -4998,7 +6177,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 90,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5023,7 +6202,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 91,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5048,7 +6227,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 92,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5073,7 +6252,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 93,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5098,7 +6277,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 94,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -5123,7 +6302,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 95,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -5148,7 +6327,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 96,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -5173,7 +6352,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 97,
       "position": 8,
       "activity_section_position": 7,
       "assessment": false,
@@ -5198,7 +6377,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 98,
       "position": 9,
       "activity_section_position": 8,
       "assessment": false,
@@ -5223,7 +6402,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 99,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -5248,7 +6427,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 100,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -5273,7 +6452,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 101,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -5298,7 +6477,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 102,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5323,7 +6502,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 103,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5348,7 +6527,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 104,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5373,7 +6552,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 105,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5398,7 +6577,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 106,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5423,7 +6602,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 107,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5448,7 +6627,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 108,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -5473,7 +6652,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 109,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -5498,7 +6677,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 110,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -5523,7 +6702,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 111,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -5548,7 +6727,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 112,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
@@ -5573,7 +6752,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 113,
       "position": 12,
       "activity_section_position": 3,
       "assessment": false,
@@ -5598,7 +6777,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 114,
       "position": 13,
       "activity_section_position": 4,
       "assessment": false,
@@ -5623,7 +6802,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 115,
       "position": 14,
       "activity_section_position": 5,
       "assessment": false,
@@ -5648,7 +6827,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 116,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
@@ -5673,7 +6852,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 117,
       "position": 16,
       "activity_section_position": 1,
       "assessment": false,
@@ -5698,7 +6877,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 118,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5723,7 +6902,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 119,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5748,7 +6927,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 120,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5773,7 +6952,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 121,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5798,7 +6977,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 122,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5823,7 +7002,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 123,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5848,7 +7027,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 124,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -5873,7 +7052,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 125,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -5898,7 +7077,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 126,
       "position": 9,
       "activity_section_position": 4,
       "assessment": false,
@@ -5923,7 +7102,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 127,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -5948,7 +7127,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 128,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -5973,7 +7152,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 129,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -5998,7 +7177,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 130,
       "position": 13,
       "activity_section_position": 3,
       "assessment": false,
@@ -6023,7 +7202,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 131,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -6048,7 +7227,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 132,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
@@ -6074,7 +7253,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 133,
       "position": 16,
       "activity_section_position": 1,
       "assessment": false,
@@ -6099,7 +7278,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 134,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6124,7 +7303,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 135,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6149,7 +7328,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 136,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6174,7 +7353,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 137,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -6199,7 +7378,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 138,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -6224,7 +7403,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 139,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -6249,7 +7428,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 140,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -6274,7 +7453,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 141,
       "position": 8,
       "activity_section_position": 7,
       "assessment": false,
@@ -6299,7 +7478,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 142,
       "position": 9,
       "activity_section_position": 8,
       "assessment": false,
@@ -6324,7 +7503,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 143,
       "position": 10,
       "activity_section_position": 9,
       "assessment": false,
@@ -6349,7 +7528,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 144,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -6375,7 +7554,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 145,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -6400,7 +7579,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 146,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -6425,7 +7604,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 147,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6450,7 +7629,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 148,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6475,7 +7654,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 149,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6500,7 +7679,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 150,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6522,908 +7701,6 @@
       },
       "level_keys": [
         "courseE_EOC2022_2024"
-      ]
-    },
-    {
-      "chapter": 110,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Game Design Setup"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_design_video_sprites_course-e"
-        ],
-        "lesson.key": "Game Design",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "f521469e-438f-434d-9679-26c753a00050"
-      },
-      "level_keys": [
-        "game_design_video_sprites_course-e"
-      ]
-    },
-    {
-      "chapter": 111,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Game Design Setup"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_design_player_course-e"
-        ],
-        "lesson.key": "Game Design",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "f521469e-438f-434d-9679-26c753a00050"
-      },
-      "level_keys": [
-        "game_design_player_course-e"
-      ]
-    },
-    {
-      "chapter": 112,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Game Design Setup"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_design_location_course-e"
-        ],
-        "lesson.key": "Game Design",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "f521469e-438f-434d-9679-26c753a00050"
-      },
-      "level_keys": [
-        "game_design_location_course-e"
-      ]
-    },
-    {
-      "chapter": 113,
-      "position": 4,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "progression": "Game Design Setup"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_design_make_grid_course-e"
-        ],
-        "lesson.key": "Game Design",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "f521469e-438f-434d-9679-26c753a00050"
-      },
-      "level_keys": [
-        "game_design_make_grid_course-e"
-      ]
-    },
-    {
-      "chapter": 114,
-      "position": 5,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Sprite Behaviors"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_design_behavior_course-e"
-        ],
-        "lesson.key": "Game Design",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "0bd377da-15e0-4060-a106-80f84280ca13"
-      },
-      "level_keys": [
-        "game_design_behavior_course-e"
-      ]
-    },
-    {
-      "chapter": 115,
-      "position": 6,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Sprite Behaviors"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_design_two_behaviors_course-e"
-        ],
-        "lesson.key": "Game Design",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "0bd377da-15e0-4060-a106-80f84280ca13"
-      },
-      "level_keys": [
-        "game_design_two_behaviors_course-e"
-      ]
-    },
-    {
-      "chapter": 116,
-      "position": 7,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Sprite Behaviors"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_design_behavior_grid_course-e"
-        ],
-        "lesson.key": "Game Design",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "0bd377da-15e0-4060-a106-80f84280ca13"
-      },
-      "level_keys": [
-        "game_design_behavior_grid_course-e"
-      ]
-    },
-    {
-      "chapter": 117,
-      "position": 8,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Events"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_design_video_lots_course-e"
-        ],
-        "lesson.key": "Game Design",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "c9debd6e-bc5a-4a92-aebc-45c92ade71ae"
-      },
-      "level_keys": [
-        "game_design_video_lots_course-e"
-      ]
-    },
-    {
-      "chapter": 118,
-      "position": 9,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Events"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_design_panel_events_course-e"
-        ],
-        "lesson.key": "Game Design",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "c9debd6e-bc5a-4a92-aebc-45c92ade71ae"
-      },
-      "level_keys": [
-        "game_design_panel_events_course-e"
-      ]
-    },
-    {
-      "chapter": 119,
-      "position": 10,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Events"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_design_event_click_course-e"
-        ],
-        "lesson.key": "Game Design",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "c9debd6e-bc5a-4a92-aebc-45c92ade71ae"
-      },
-      "level_keys": [
-        "game_design_event_click_course-e"
-      ]
-    },
-    {
-      "chapter": 120,
-      "position": 11,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "progression": "Events"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_design_toolbox_object_course-e"
-        ],
-        "lesson.key": "Game Design",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "c9debd6e-bc5a-4a92-aebc-45c92ade71ae"
-      },
-      "level_keys": [
-        "game_design_toolbox_object_course-e"
-      ]
-    },
-    {
-      "chapter": 121,
-      "position": 12,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "progression": "Events"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_design_remove_object_course-e"
-        ],
-        "lesson.key": "Game Design",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "c9debd6e-bc5a-4a92-aebc-45c92ade71ae"
-      },
-      "level_keys": [
-        "game_design_remove_object_course-e"
-      ]
-    },
-    {
-      "chapter": 122,
-      "position": 13,
-      "activity_section_position": 6,
-      "assessment": false,
-      "properties": {
-        "progression": "Events"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_design_event_touch_course-e"
-        ],
-        "lesson.key": "Game Design",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "c9debd6e-bc5a-4a92-aebc-45c92ade71ae"
-      },
-      "level_keys": [
-        "game_design_event_touch_course-e"
-      ]
-    },
-    {
-      "chapter": 123,
-      "position": 14,
-      "activity_section_position": 7,
-      "assessment": false,
-      "properties": {
-        "progression": "Events"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_design_change_costume_course-e"
-        ],
-        "lesson.key": "Game Design",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "c9debd6e-bc5a-4a92-aebc-45c92ade71ae"
-      },
-      "level_keys": [
-        "game_design_change_costume_course-e"
-      ]
-    },
-    {
-      "chapter": 124,
-      "position": 15,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Practice"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_design_practice_lots_choice_course-e"
-        ],
-        "lesson.key": "Game Design",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "29318d11-d3c9-47b7-8ae4-7b9733423dba"
-      },
-      "level_keys": [
-        "game_design_practice_lots_choice_course-e"
-      ]
-    },
-    {
-      "chapter": 125,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Intro to Variables"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_variables_intro_choices_course-e"
-        ],
-        "lesson.key": "Variables as Score",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "91def984-be39-4eef-a9c4-a4312871e1a0"
-      },
-      "level_keys": [
-        "game_variables_intro_choices_course-e"
-      ]
-    },
-    {
-      "chapter": 126,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Intro to Variables"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_variables_video_intro_course-e"
-        ],
-        "lesson.key": "Variables as Score",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "91def984-be39-4eef-a9c4-a4312871e1a0"
-      },
-      "level_keys": [
-        "game_variables_video_intro_course-e"
-      ]
-    },
-    {
-      "chapter": 127,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Intro to Variables"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_variables_about_panel_course-e"
-        ],
-        "lesson.key": "Variables as Score",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "91def984-be39-4eef-a9c4-a4312871e1a0"
-      },
-      "level_keys": [
-        "game_variables_about_panel_course-e"
-      ]
-    },
-    {
-      "chapter": 128,
-      "position": 4,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_variables_show_course-e"
-        ],
-        "lesson.key": "Variables as Score",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "c8d39ae9-0e53-42a5-9f3f-1c56e883ae79"
-      },
-      "level_keys": [
-        "game_variables_show_course-e"
-      ]
-    },
-    {
-      "chapter": 129,
-      "position": 5,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_variables_increase_course-e"
-        ],
-        "lesson.key": "Variables as Score",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "c8d39ae9-0e53-42a5-9f3f-1c56e883ae79"
-      },
-      "level_keys": [
-        "game_variables_increase_course-e"
-      ]
-    },
-    {
-      "chapter": 130,
-      "position": 6,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_variables_decrease_course-e"
-        ],
-        "lesson.key": "Variables as Score",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "c8d39ae9-0e53-42a5-9f3f-1c56e883ae79"
-      },
-      "level_keys": [
-        "game_variables_decrease_course-e"
-      ]
-    },
-    {
-      "chapter": 131,
-      "position": 7,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_variables_match_course-e"
-        ],
-        "lesson.key": "Variables as Score",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "c8d39ae9-0e53-42a5-9f3f-1c56e883ae79"
-      },
-      "level_keys": [
-        "game_variables_match_course-e"
-      ]
-    },
-    {
-      "chapter": 132,
-      "position": 8,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_conditional_about_panel_course-e"
-        ],
-        "lesson.key": "Variables as Score",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "c8d39ae9-0e53-42a5-9f3f-1c56e883ae79"
-      },
-      "level_keys": [
-        "game_conditional_about_panel_course-e"
-      ]
-    },
-    {
-      "chapter": 133,
-      "position": 9,
-      "activity_section_position": 6,
-      "assessment": false,
-      "properties": {
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_variables_conditional_course-e"
-        ],
-        "lesson.key": "Variables as Score",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "c8d39ae9-0e53-42a5-9f3f-1c56e883ae79"
-      },
-      "level_keys": [
-        "game_variables_conditional_course-e"
-      ]
-    },
-    {
-      "chapter": 134,
-      "position": 10,
-      "activity_section_position": 7,
-      "assessment": false,
-      "properties": {
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_variables_match_condition_course-e"
-        ],
-        "lesson.key": "Variables as Score",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "c8d39ae9-0e53-42a5-9f3f-1c56e883ae79"
-      },
-      "level_keys": [
-        "game_variables_match_condition_course-e"
-      ]
-    },
-    {
-      "chapter": 135,
-      "position": 11,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Practice & Free Play"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_variables_fix_choices_course-e"
-        ],
-        "lesson.key": "Variables as Score",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "bfdc94f4-d4b2-44b1-8ce3-2cfcbfe983a4"
-      },
-      "level_keys": [
-        "game_variables_fix_choices_course-e"
-      ]
-    },
-    {
-      "chapter": 136,
-      "position": 12,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Practice & Free Play"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_variables_freeplay_course-e"
-        ],
-        "lesson.key": "Variables as Score",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "bfdc94f4-d4b2-44b1-8ce3-2cfcbfe983a4"
-      },
-      "level_keys": [
-        "game_variables_freeplay_course-e"
-      ]
-    },
-    {
-      "chapter": 137,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Sprite Type: Environment"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_development_environment_choices_course-e"
-        ],
-        "lesson.key": "Environment and Players",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "377a97e2-c61f-4f4b-a955-e02cbe31e712"
-      },
-      "level_keys": [
-        "game_development_environment_choices_course-e"
-      ]
-    },
-    {
-      "chapter": 138,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Sprite Type: Environment"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_development_sprites_type_panel_course-e"
-        ],
-        "lesson.key": "Environment and Players",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "377a97e2-c61f-4f4b-a955-e02cbe31e712"
-      },
-      "level_keys": [
-        "game_development_sprites_type_panel_course-e"
-      ]
-    },
-    {
-      "chapter": 139,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Sprite Type: Environment"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_development_environment_type_course-e"
-        ],
-        "lesson.key": "Environment and Players",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "377a97e2-c61f-4f4b-a955-e02cbe31e712"
-      },
-      "level_keys": [
-        "game_development_environment_type_course-e"
-      ]
-    },
-    {
-      "chapter": 140,
-      "position": 4,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "progression": "Sprite Type: Environment"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_development_environment_type2_course-e"
-        ],
-        "lesson.key": "Environment and Players",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "377a97e2-c61f-4f4b-a955-e02cbe31e712"
-      },
-      "level_keys": [
-        "game_development_environment_type2_course-e"
-      ]
-    },
-    {
-      "chapter": 141,
-      "position": 5,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Sprite Type: Player"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_development_player_type_panel_course-e"
-        ],
-        "lesson.key": "Environment and Players",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "2f63cb6e-121d-4292-a136-dbc486163639"
-      },
-      "level_keys": [
-        "game_development_player_type_panel_course-e"
-      ]
-    },
-    {
-      "chapter": 142,
-      "position": 6,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Sprite Type: Player"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_development_player_type_course-e"
-        ],
-        "lesson.key": "Environment and Players",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "2f63cb6e-121d-4292-a136-dbc486163639"
-      },
-      "level_keys": [
-        "game_development_player_type_course-e"
-      ]
-    },
-    {
-      "chapter": 143,
-      "position": 7,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Sprite Type: Player"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_development_jump_course-e"
-        ],
-        "lesson.key": "Environment and Players",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "2f63cb6e-121d-4292-a136-dbc486163639"
-      },
-      "level_keys": [
-        "game_development_jump_course-e"
-      ]
-    },
-    {
-      "chapter": 144,
-      "position": 8,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Practice"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_development_types_course-e"
-        ],
-        "lesson.key": "Environment and Players",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "6f098808-79a7-4839-8a16-e5a1556513e6"
-      },
-      "level_keys": [
-        "game_development_types_course-e"
-      ]
-    },
-    {
-      "chapter": 145,
-      "position": 9,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Practice"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_development_matching_course-e"
-        ],
-        "lesson.key": "Environment and Players",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "6f098808-79a7-4839-8a16-e5a1556513e6"
-      },
-      "level_keys": [
-        "game_development_matching_course-e"
-      ]
-    },
-    {
-      "chapter": 146,
-      "position": 10,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Practice"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_development_debug_choices_course-e"
-        ],
-        "lesson.key": "Environment and Players",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "6f098808-79a7-4839-8a16-e5a1556513e6"
-      },
-      "level_keys": [
-        "game_development_debug_choices_course-e"
-      ]
-    },
-    {
-      "chapter": 147,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Game Jam Theme Generator"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_jam_theme_generator_course-e"
-        ],
-        "lesson.key": "Game Jam Day 1: Create",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "2f13c2bf-b436-40e5-b951-f8ef059324f6"
-      },
-      "level_keys": [
-        "game_jam_theme_generator_course-e"
-      ]
-    },
-    {
-      "chapter": 148,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Plan"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_jam_create_plan_course-e"
-        ],
-        "lesson.key": "Game Jam Day 1: Create",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "1e4314cf-7072-40b2-82c4-f9649b473a27"
-      },
-      "level_keys": [
-        "game_jam_create_plan_course-e"
-      ]
-    },
-    {
-      "chapter": 149,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Create"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_jam_create_game_course-e"
-        ],
-        "lesson.key": "Game Jam Day 1: Create",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "e306bd83-340d-4181-9301-1d09bc5363ca"
-      },
-      "level_keys": [
-        "game_jam_create_game_course-e"
-      ]
-    },
-    {
-      "chapter": 150,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Game Jam: Play"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_jam_play_course-e"
-        ],
-        "lesson.key": "Game Jam Day 2: Play",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "0102003f-6fc9-4a42-af62-703b3a0afe76"
-      },
-      "level_keys": [
-        "game_jam_play_course-e"
       ]
     }
   ],
@@ -7798,6 +8075,498 @@
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2024",
         "activity_section.key": "c61e49d4-e692-40fd-a803-5c6bbfe2ca91"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_video_sprites_course-e",
+        "script_level.level_keys": [
+          "game_design_video_sprites_course-e"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "f521469e-438f-434d-9679-26c753a00050"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_player_course-e",
+        "script_level.level_keys": [
+          "game_design_player_course-e"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "f521469e-438f-434d-9679-26c753a00050"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_location_course-e",
+        "script_level.level_keys": [
+          "game_design_location_course-e"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "f521469e-438f-434d-9679-26c753a00050"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_make_grid_course-e",
+        "script_level.level_keys": [
+          "game_design_make_grid_course-e"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "f521469e-438f-434d-9679-26c753a00050"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_behavior_course-e",
+        "script_level.level_keys": [
+          "game_design_behavior_course-e"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "0bd377da-15e0-4060-a106-80f84280ca13"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_two_behaviors_course-e",
+        "script_level.level_keys": [
+          "game_design_two_behaviors_course-e"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "0bd377da-15e0-4060-a106-80f84280ca13"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_behavior_grid_course-e",
+        "script_level.level_keys": [
+          "game_design_behavior_grid_course-e"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "0bd377da-15e0-4060-a106-80f84280ca13"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_video_lots_course-e",
+        "script_level.level_keys": [
+          "game_design_video_lots_course-e"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "c9debd6e-bc5a-4a92-aebc-45c92ade71ae"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_panel_events_course-e",
+        "script_level.level_keys": [
+          "game_design_panel_events_course-e"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "c9debd6e-bc5a-4a92-aebc-45c92ade71ae"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_event_click_course-e",
+        "script_level.level_keys": [
+          "game_design_event_click_course-e"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "c9debd6e-bc5a-4a92-aebc-45c92ade71ae"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_toolbox_object_course-e",
+        "script_level.level_keys": [
+          "game_design_toolbox_object_course-e"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "c9debd6e-bc5a-4a92-aebc-45c92ade71ae"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_remove_object_course-e",
+        "script_level.level_keys": [
+          "game_design_remove_object_course-e"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "c9debd6e-bc5a-4a92-aebc-45c92ade71ae"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_event_touch_course-e",
+        "script_level.level_keys": [
+          "game_design_event_touch_course-e"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "c9debd6e-bc5a-4a92-aebc-45c92ade71ae"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_change_costume_course-e",
+        "script_level.level_keys": [
+          "game_design_change_costume_course-e"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "c9debd6e-bc5a-4a92-aebc-45c92ade71ae"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_practice_lots_choice_course-e",
+        "script_level.level_keys": [
+          "game_design_practice_lots_choice_course-e"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "29318d11-d3c9-47b7-8ae4-7b9733423dba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_intro_choices_course-e",
+        "script_level.level_keys": [
+          "game_variables_intro_choices_course-e"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "91def984-be39-4eef-a9c4-a4312871e1a0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_video_intro_course-e",
+        "script_level.level_keys": [
+          "game_variables_video_intro_course-e"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "91def984-be39-4eef-a9c4-a4312871e1a0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_about_panel_course-e",
+        "script_level.level_keys": [
+          "game_variables_about_panel_course-e"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "91def984-be39-4eef-a9c4-a4312871e1a0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_show_course-e",
+        "script_level.level_keys": [
+          "game_variables_show_course-e"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "c8d39ae9-0e53-42a5-9f3f-1c56e883ae79"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_increase_course-e",
+        "script_level.level_keys": [
+          "game_variables_increase_course-e"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "c8d39ae9-0e53-42a5-9f3f-1c56e883ae79"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_decrease_course-e",
+        "script_level.level_keys": [
+          "game_variables_decrease_course-e"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "c8d39ae9-0e53-42a5-9f3f-1c56e883ae79"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_match_course-e",
+        "script_level.level_keys": [
+          "game_variables_match_course-e"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "c8d39ae9-0e53-42a5-9f3f-1c56e883ae79"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_conditional_about_panel_course-e",
+        "script_level.level_keys": [
+          "game_conditional_about_panel_course-e"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "c8d39ae9-0e53-42a5-9f3f-1c56e883ae79"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_conditional_course-e",
+        "script_level.level_keys": [
+          "game_variables_conditional_course-e"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "c8d39ae9-0e53-42a5-9f3f-1c56e883ae79"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_match_condition_course-e",
+        "script_level.level_keys": [
+          "game_variables_match_condition_course-e"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "c8d39ae9-0e53-42a5-9f3f-1c56e883ae79"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_fix_choices_course-e",
+        "script_level.level_keys": [
+          "game_variables_fix_choices_course-e"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "bfdc94f4-d4b2-44b1-8ce3-2cfcbfe983a4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_freeplay_course-e",
+        "script_level.level_keys": [
+          "game_variables_freeplay_course-e"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "bfdc94f4-d4b2-44b1-8ce3-2cfcbfe983a4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_environment_choices_course-e",
+        "script_level.level_keys": [
+          "game_development_environment_choices_course-e"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "377a97e2-c61f-4f4b-a955-e02cbe31e712"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_sprites_type_panel_course-e",
+        "script_level.level_keys": [
+          "game_development_sprites_type_panel_course-e"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "377a97e2-c61f-4f4b-a955-e02cbe31e712"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_environment_type_course-e",
+        "script_level.level_keys": [
+          "game_development_environment_type_course-e"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "377a97e2-c61f-4f4b-a955-e02cbe31e712"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_environment_type2_course-e",
+        "script_level.level_keys": [
+          "game_development_environment_type2_course-e"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "377a97e2-c61f-4f4b-a955-e02cbe31e712"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_player_type_panel_course-e",
+        "script_level.level_keys": [
+          "game_development_player_type_panel_course-e"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "2f63cb6e-121d-4292-a136-dbc486163639"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_player_type_course-e",
+        "script_level.level_keys": [
+          "game_development_player_type_course-e"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "2f63cb6e-121d-4292-a136-dbc486163639"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_jump_course-e",
+        "script_level.level_keys": [
+          "game_development_jump_course-e"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "2f63cb6e-121d-4292-a136-dbc486163639"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_types_course-e",
+        "script_level.level_keys": [
+          "game_development_types_course-e"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "6f098808-79a7-4839-8a16-e5a1556513e6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_matching_course-e",
+        "script_level.level_keys": [
+          "game_development_matching_course-e"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "6f098808-79a7-4839-8a16-e5a1556513e6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_debug_choices_course-e",
+        "script_level.level_keys": [
+          "game_development_debug_choices_course-e"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "6f098808-79a7-4839-8a16-e5a1556513e6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_jam_theme_generator_course-e",
+        "script_level.level_keys": [
+          "game_jam_theme_generator_course-e"
+        ],
+        "lesson.key": "Game Jam Day 1: Create",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "2f13c2bf-b436-40e5-b951-f8ef059324f6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_jam_create_plan_course-e",
+        "script_level.level_keys": [
+          "game_jam_create_plan_course-e"
+        ],
+        "lesson.key": "Game Jam Day 1: Create",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "1e4314cf-7072-40b2-82c4-f9649b473a27"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_jam_create_game_course-e",
+        "script_level.level_keys": [
+          "game_jam_create_game_course-e"
+        ],
+        "lesson.key": "Game Jam Day 1: Create",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "e306bd83-340d-4181-9301-1d09bc5363ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_jam_play_course-e",
+        "script_level.level_keys": [
+          "game_jam_play_course-e"
+        ],
+        "lesson.key": "Game Jam Day 2: Play",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2024",
+        "activity_section.key": "0102003f-6fc9-4a42-af62-703b3a0afe76"
       }
     },
     {
@@ -8735,498 +9504,6 @@
         "script.name": "coursee-2024",
         "activity_section.key": "1300f96e-ed28-4a67-962e-62316af238fa"
       }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_design_video_sprites_course-e",
-        "script_level.level_keys": [
-          "game_design_video_sprites_course-e"
-        ],
-        "lesson.key": "Game Design",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "f521469e-438f-434d-9679-26c753a00050"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_design_player_course-e",
-        "script_level.level_keys": [
-          "game_design_player_course-e"
-        ],
-        "lesson.key": "Game Design",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "f521469e-438f-434d-9679-26c753a00050"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_design_location_course-e",
-        "script_level.level_keys": [
-          "game_design_location_course-e"
-        ],
-        "lesson.key": "Game Design",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "f521469e-438f-434d-9679-26c753a00050"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_design_make_grid_course-e",
-        "script_level.level_keys": [
-          "game_design_make_grid_course-e"
-        ],
-        "lesson.key": "Game Design",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "f521469e-438f-434d-9679-26c753a00050"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_design_behavior_course-e",
-        "script_level.level_keys": [
-          "game_design_behavior_course-e"
-        ],
-        "lesson.key": "Game Design",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "0bd377da-15e0-4060-a106-80f84280ca13"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_design_two_behaviors_course-e",
-        "script_level.level_keys": [
-          "game_design_two_behaviors_course-e"
-        ],
-        "lesson.key": "Game Design",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "0bd377da-15e0-4060-a106-80f84280ca13"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_design_behavior_grid_course-e",
-        "script_level.level_keys": [
-          "game_design_behavior_grid_course-e"
-        ],
-        "lesson.key": "Game Design",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "0bd377da-15e0-4060-a106-80f84280ca13"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_design_video_lots_course-e",
-        "script_level.level_keys": [
-          "game_design_video_lots_course-e"
-        ],
-        "lesson.key": "Game Design",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "c9debd6e-bc5a-4a92-aebc-45c92ade71ae"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_design_panel_events_course-e",
-        "script_level.level_keys": [
-          "game_design_panel_events_course-e"
-        ],
-        "lesson.key": "Game Design",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "c9debd6e-bc5a-4a92-aebc-45c92ade71ae"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_design_event_click_course-e",
-        "script_level.level_keys": [
-          "game_design_event_click_course-e"
-        ],
-        "lesson.key": "Game Design",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "c9debd6e-bc5a-4a92-aebc-45c92ade71ae"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_design_toolbox_object_course-e",
-        "script_level.level_keys": [
-          "game_design_toolbox_object_course-e"
-        ],
-        "lesson.key": "Game Design",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "c9debd6e-bc5a-4a92-aebc-45c92ade71ae"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_design_remove_object_course-e",
-        "script_level.level_keys": [
-          "game_design_remove_object_course-e"
-        ],
-        "lesson.key": "Game Design",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "c9debd6e-bc5a-4a92-aebc-45c92ade71ae"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_design_event_touch_course-e",
-        "script_level.level_keys": [
-          "game_design_event_touch_course-e"
-        ],
-        "lesson.key": "Game Design",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "c9debd6e-bc5a-4a92-aebc-45c92ade71ae"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_design_change_costume_course-e",
-        "script_level.level_keys": [
-          "game_design_change_costume_course-e"
-        ],
-        "lesson.key": "Game Design",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "c9debd6e-bc5a-4a92-aebc-45c92ade71ae"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_design_practice_lots_choice_course-e",
-        "script_level.level_keys": [
-          "game_design_practice_lots_choice_course-e"
-        ],
-        "lesson.key": "Game Design",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "29318d11-d3c9-47b7-8ae4-7b9733423dba"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_variables_intro_choices_course-e",
-        "script_level.level_keys": [
-          "game_variables_intro_choices_course-e"
-        ],
-        "lesson.key": "Variables as Score",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "91def984-be39-4eef-a9c4-a4312871e1a0"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_variables_video_intro_course-e",
-        "script_level.level_keys": [
-          "game_variables_video_intro_course-e"
-        ],
-        "lesson.key": "Variables as Score",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "91def984-be39-4eef-a9c4-a4312871e1a0"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_variables_about_panel_course-e",
-        "script_level.level_keys": [
-          "game_variables_about_panel_course-e"
-        ],
-        "lesson.key": "Variables as Score",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "91def984-be39-4eef-a9c4-a4312871e1a0"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_variables_show_course-e",
-        "script_level.level_keys": [
-          "game_variables_show_course-e"
-        ],
-        "lesson.key": "Variables as Score",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "c8d39ae9-0e53-42a5-9f3f-1c56e883ae79"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_variables_increase_course-e",
-        "script_level.level_keys": [
-          "game_variables_increase_course-e"
-        ],
-        "lesson.key": "Variables as Score",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "c8d39ae9-0e53-42a5-9f3f-1c56e883ae79"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_variables_decrease_course-e",
-        "script_level.level_keys": [
-          "game_variables_decrease_course-e"
-        ],
-        "lesson.key": "Variables as Score",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "c8d39ae9-0e53-42a5-9f3f-1c56e883ae79"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_variables_match_course-e",
-        "script_level.level_keys": [
-          "game_variables_match_course-e"
-        ],
-        "lesson.key": "Variables as Score",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "c8d39ae9-0e53-42a5-9f3f-1c56e883ae79"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_conditional_about_panel_course-e",
-        "script_level.level_keys": [
-          "game_conditional_about_panel_course-e"
-        ],
-        "lesson.key": "Variables as Score",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "c8d39ae9-0e53-42a5-9f3f-1c56e883ae79"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_variables_conditional_course-e",
-        "script_level.level_keys": [
-          "game_variables_conditional_course-e"
-        ],
-        "lesson.key": "Variables as Score",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "c8d39ae9-0e53-42a5-9f3f-1c56e883ae79"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_variables_match_condition_course-e",
-        "script_level.level_keys": [
-          "game_variables_match_condition_course-e"
-        ],
-        "lesson.key": "Variables as Score",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "c8d39ae9-0e53-42a5-9f3f-1c56e883ae79"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_variables_fix_choices_course-e",
-        "script_level.level_keys": [
-          "game_variables_fix_choices_course-e"
-        ],
-        "lesson.key": "Variables as Score",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "bfdc94f4-d4b2-44b1-8ce3-2cfcbfe983a4"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_variables_freeplay_course-e",
-        "script_level.level_keys": [
-          "game_variables_freeplay_course-e"
-        ],
-        "lesson.key": "Variables as Score",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "bfdc94f4-d4b2-44b1-8ce3-2cfcbfe983a4"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_development_environment_choices_course-e",
-        "script_level.level_keys": [
-          "game_development_environment_choices_course-e"
-        ],
-        "lesson.key": "Environment and Players",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "377a97e2-c61f-4f4b-a955-e02cbe31e712"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_development_sprites_type_panel_course-e",
-        "script_level.level_keys": [
-          "game_development_sprites_type_panel_course-e"
-        ],
-        "lesson.key": "Environment and Players",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "377a97e2-c61f-4f4b-a955-e02cbe31e712"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_development_environment_type_course-e",
-        "script_level.level_keys": [
-          "game_development_environment_type_course-e"
-        ],
-        "lesson.key": "Environment and Players",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "377a97e2-c61f-4f4b-a955-e02cbe31e712"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_development_environment_type2_course-e",
-        "script_level.level_keys": [
-          "game_development_environment_type2_course-e"
-        ],
-        "lesson.key": "Environment and Players",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "377a97e2-c61f-4f4b-a955-e02cbe31e712"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_development_player_type_panel_course-e",
-        "script_level.level_keys": [
-          "game_development_player_type_panel_course-e"
-        ],
-        "lesson.key": "Environment and Players",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "2f63cb6e-121d-4292-a136-dbc486163639"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_development_player_type_course-e",
-        "script_level.level_keys": [
-          "game_development_player_type_course-e"
-        ],
-        "lesson.key": "Environment and Players",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "2f63cb6e-121d-4292-a136-dbc486163639"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_development_jump_course-e",
-        "script_level.level_keys": [
-          "game_development_jump_course-e"
-        ],
-        "lesson.key": "Environment and Players",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "2f63cb6e-121d-4292-a136-dbc486163639"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_development_types_course-e",
-        "script_level.level_keys": [
-          "game_development_types_course-e"
-        ],
-        "lesson.key": "Environment and Players",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "6f098808-79a7-4839-8a16-e5a1556513e6"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_development_matching_course-e",
-        "script_level.level_keys": [
-          "game_development_matching_course-e"
-        ],
-        "lesson.key": "Environment and Players",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "6f098808-79a7-4839-8a16-e5a1556513e6"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_development_debug_choices_course-e",
-        "script_level.level_keys": [
-          "game_development_debug_choices_course-e"
-        ],
-        "lesson.key": "Environment and Players",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "6f098808-79a7-4839-8a16-e5a1556513e6"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_jam_theme_generator_course-e",
-        "script_level.level_keys": [
-          "game_jam_theme_generator_course-e"
-        ],
-        "lesson.key": "Game Jam Day 1: Create",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "2f13c2bf-b436-40e5-b951-f8ef059324f6"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_jam_create_plan_course-e",
-        "script_level.level_keys": [
-          "game_jam_create_plan_course-e"
-        ],
-        "lesson.key": "Game Jam Day 1: Create",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "1e4314cf-7072-40b2-82c4-f9649b473a27"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_jam_create_game_course-e",
-        "script_level.level_keys": [
-          "game_jam_create_game_course-e"
-        ],
-        "lesson.key": "Game Jam Day 1: Create",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "e306bd83-340d-4181-9301-1d09bc5363ca"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_jam_play_course-e",
-        "script_level.level_keys": [
-          "game_jam_play_course-e"
-        ],
-        "lesson.key": "Game Jam Day 2: Play",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2024",
-        "activity_section.key": "0102003f-6fc9-4a42-af62-703b3a0afe76"
-      }
     }
   ],
   "resources": [
@@ -9879,7 +10156,7 @@
     {
       "seeding_key": {
         "lesson.key": "Game Design",
-        "resource.key": "game_design_slides"
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
       }
     },
     {
@@ -10908,6 +11185,16 @@
       "seeding_key": {
         "lesson.key": "Private and Personal Information",
         "objective.key": "7dc2baf7-fdce-4d14-8594-325e0596537a"
+      }
+    },
+    {
+      "key": "8edb76d0-8c6b-4d5c-9c1a-32434acf3790",
+      "properties": {
+        "description": "Use a variable that stores information and changes over time"
+      },
+      "seeding_key": {
+        "lesson.key": "Variables as Score",
+        "objective.key": "8edb76d0-8c6b-4d5c-9c1a-32434acf3790"
       }
     },
     {

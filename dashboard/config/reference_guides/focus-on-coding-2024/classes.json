@@ -1,0 +1,9 @@
+{
+  "key": "classes",
+  "course_version_key": "2024",
+  "course_offering_key": "focus-on-coding",
+  "parent_reference_guide_key": "css",
+  "display_name": "Classes",
+  "content": "Sometimes you only want to style some specific elements of a type instead of all elements of one type. **Classes allow for a group of elements to have their own unique style.** This applies to elements on the same page or on separate pages, as long as all the pages link to the same style sheet.\n\nTo style using classes:\n\n1. First, you need to mark the elements in HTML that will be in that class.\n2. Second, you need to write a style rule-set for that class. To write a rule for a class of elements, the selector for the rule-set has a `.` before the class name. \n\n\nFor example, the code below would style the fancy class which has been set up for a paragraph element:\n\n\n| HTML file | CSS File | Result |\n| --------- | -------- | ------ |\n| <pre> &lt;p class=\"fancy\"&gt;Good Day&lt;/p&gt; <br> &lt;p&gt;Bad Day&lt;/p&gt;</pre> |<pre>.fancy {<br>  color: darkblue;<br>  font-family: cursive;<br>} </pre>|<img src=\"https://images.code.org/27181e31f4e697a85f1794f28070ba14-image-1481648310560.58.03 AM.png\" alt=\"result image\"> | \n\n<br>\n\n\n##FAQ\n\n1) **Why would a web developer use classes?**\n   - A web developer uses classes when some elements should be styled differently than others, even if they are the same tag. Classes can also be used to give elements that have different tags the same style.\n\n\n**W3 Schools Links**\n\n* [CSS Syntax (Classes)](https://www.w3schools.com/css/css_syntax.asp)",
+  "position": 8
+}

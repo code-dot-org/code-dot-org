@@ -70,17 +70,6 @@ class S3Packaging
     @logger.info "Decompressed"
   end
 
-  private def s3_key
-    "#{@package_name}/#{@commit_hash}.tar.gz"
-  end
-
-  # The hash of the package at the given location (or nil if there is no package there)
-  private def target_commit_hash(location)
-    filename = "#{location}/commit_hash"
-    return nil unless File.exist?(filename)
-    File.read(filename)
-  end
-
   # Creates a zipped package of the provided assets folder
   # @param sub_path [String] Path to built assets, relative to source_location
   # @param expected_commit_hash [String] optional, when specified an error will be raised
@@ -124,6 +113,17 @@ class S3Packaging
     warn 'Failed to log bundle size with error:'
     warn exception
     warn 'Proceeding with build...'
+  end
+
+  private def s3_key
+    "#{@package_name}/#{@commit_hash}.tar.gz"
+  end
+
+  # The hash of the package at the given location (or nil if there is no package there)
+  private def target_commit_hash(location)
+    filename = "#{location}/commit_hash"
+    return nil unless File.exist?(filename)
+    File.read(filename)
   end
 
   private def ensure_updated_package

@@ -323,7 +323,7 @@ GEM
     cucumber-expressions (6.0.1)
     cucumber-tag_expressions (1.1.1)
     cucumber-wire (0.0.1)
-    daemons (1.4.1)
+    daemons (1.1.9)
     dalli (2.7.6)
     dalli-elasticache (1.0.1)
       dalli (>= 2.0.0)
@@ -1017,7 +1017,7 @@ DEPENDENCIES
   composite_primary_keys (~> 13.0)
   crowdin-api (~> 1.10.0)
   cucumber
-  daemons
+  daemons (= 1.1.9)
   dalli
   dalli-elasticache
   database_cleaner-active_record (~> 2.1.0)

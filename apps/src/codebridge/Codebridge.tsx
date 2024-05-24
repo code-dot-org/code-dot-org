@@ -1,7 +1,7 @@
 import {CodebridgeContextProvider} from '@codebridge/codebridgeContext';
 import {FileBrowser} from '@codebridge/FileBrowser';
 import {useSynchronizedProject} from '@codebridge/hooks';
-import {Instructions} from '@codebridge/Instructions';
+import {InfoPanel} from '@codebridge/InfoPanel';
 import {PreviewContainer} from '@codebridge/PreviewContainer';
 import {SideBar} from '@codebridge/SideBar';
 import {
@@ -14,8 +14,9 @@ import {
 } from '@codebridge/types';
 import React from 'react';
 
-import './styles/cdoIDE.css';
+import './styles/cdoIDE.scss';
 import Console from './Console';
+import ControlButtons from './ControlButtons';
 import Workspace from './Workspace';
 
 type CodebridgeProps = {
@@ -47,9 +48,10 @@ export const Codebridge = React.memo(
       'file-browser': FileBrowser,
       'side-bar': SideBar,
       'preview-container': PreviewContainer,
-      instructions: config.Instructions || Instructions,
+      'info-panel': config.Instructions || InfoPanel,
       workspace: Workspace,
       console: Console,
+      'control-buttons': ControlButtons,
     };
 
     return (
