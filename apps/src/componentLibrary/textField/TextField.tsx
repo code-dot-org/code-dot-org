@@ -12,8 +12,6 @@ import Typography from '@cdo/apps/componentLibrary/typography';
 import moduleStyles from './textfield.module.scss';
 
 export interface TextFieldProps extends AriaAttributes {
-  /** TextField checked state */
-  checked: boolean;
   /** TextField onChange handler*/
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
   /** The name attribute specifies the name of an input element.
@@ -37,6 +35,8 @@ export interface TextFieldProps extends AriaAttributes {
   disabled?: boolean;
   /** TextField Error */
   error?: {message: string; hasError: boolean};
+  /** TextField custom className */
+  className?: string;
   /** TextField color */
   color?: 'black' | 'gray' | 'white';
   /** Size of TextField */
@@ -58,7 +58,6 @@ export interface TextFieldProps extends AriaAttributes {
  */
 const TextField: React.FunctionComponent<TextFieldProps> = ({
   label,
-  checked,
   onChange,
   name,
   value,
@@ -68,6 +67,7 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
   helperMessage,
   helperIcon,
   error,
+  className,
   color,
   size = 'm',
   ...rest
@@ -78,9 +78,10 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
   return (
     <label
       className={classnames(
-        moduleStyles.label,
-        moduleStyles[`label-${color}`],
-        moduleStyles[`label-${size}`]
+        moduleStyles.textField,
+        moduleStyles[`textField-${color}`],
+        moduleStyles[`textField-${size}`],
+        className
       )}
       aria-describedby={rest['aria-describedby']}
     >
@@ -100,7 +101,7 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
         {...ariaProps}
         aria-disabled={disabled || ariaProps['aria-disabled']}
       />
-      {error && !error.hasError && (
+      {(!error || !error.hasError) && (
         <div>
           {helperIcon && <FontAwesomeV6Icon {...helperIcon} />}
           {helperMessage && <span>{helperMessage}</span>}
