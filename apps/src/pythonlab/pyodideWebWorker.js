@@ -12,14 +12,13 @@ async function loadPyodideAndPackages() {
     // which does serve the unhashed files. We need to serve the unhashed files because
     // pyodide controls adding the filenames to the url we provide here.
     indexURL: `/blockly/js/pyodide/${version}/`,
-    // pre-load numpy as it will frequently be used, and matplotlib as we patch it.
-    packages: ['numpy', 'matplotlib'],
+    // pre-load numpy as it will frequently be used, and our custom setup package.
+    packages: [
+      'numpy',
+      'matplotlib',
+      `/blockly/js/pyodide/${version}/pythonlab_setup-0.0.1-py3-none-any.whl`,
+    ],
   });
-  await self.pyodide.loadPackage('micropip');
-  const micropip = self.pyodide.pyimport('micropip');
-  await micropip.install(
-    '/blockly/js/pyodide/0.25.1/pythonlab_setup-0.0.1-py3-none-any.whl'
-  );
   self.pyodide.setStdout(getStreamHandlerOptions('sysout'));
   self.pyodide.setStderr(getStreamHandlerOptions('syserr'));
 }
