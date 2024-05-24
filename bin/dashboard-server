@@ -19,7 +19,7 @@ def main
   thin_args += " --ssl" if CDO.rack_env == :development && CDO.https_development
 
   Dir.chdir(dashboard_dir) do
-    system "RAILS_ENV=#{CDO.rack_env} bundle exec #{rerun} thin start #{thin_args}"
+    system "RAILS_ENV=#{CDO.rack_env} OTEL_TRACES_EXPORTER=console bundle exec #{rerun} thin start #{thin_args}"
   end
 
   pids.each do |pid|
