@@ -13,15 +13,15 @@ export default {
 //
 const SingleTemplate: StoryFn<TextFieldProps> = args => <TextField {...args} />;
 //
-// const MultipleTemplate: StoryFn<{
-//   components: TextFieldProps[];
-// }> = args => (
-//   <>
-//     {args.components?.map(componentArg => (
-//       <TextField key={componentArg.name} {...componentArg} />
-//     ))}
-//   </>
-// );
+const MultipleTemplate: StoryFn<{
+  components: TextFieldProps[];
+}> = args => (
+  <>
+    {args.components?.map(componentArg => (
+      <TextField key={componentArg.name} {...componentArg} />
+    ))}
+  </>
+);
 
 export const DefaultTextField = SingleTemplate.bind({});
 DefaultTextField.args = {
@@ -55,352 +55,71 @@ WithHelperMessageAndIconTextField.args = {
   },
   helperMessage: 'Helper message',
 };
-//
-// export const GroupOfDefaultCheckboxes = MultipleTemplate.bind({});
-// GroupOfDefaultCheckboxes.args = {
-//   components: [
-//     {
-//       name: 'test',
-//       label: 'Label',
-//       onChange: () => null,
-//       checked: false,
-//     },
-//     {
-//       name: 'test-checked',
-//       label: 'Label Checked',
-//       checked: true,
-//       onChange: () => null,
-//     },
-//     {
-//       name: 'test-indeterminate',
-//       label: 'Label Indeterminate',
-//       indeterminate: true,
-//       checked: false,
-//       onChange: () => null,
-//     },
-//   ],
-// };
-//
-// export const GroupOfDisabledCheckboxes = MultipleTemplate.bind({});
-// GroupOfDisabledCheckboxes.args = {
-//   components: [
-//     {
-//       name: 'test-disabled',
-//       label: 'Label',
-//       disabled: true,
-//       checked: false,
-//       onChange: () => null,
-//     },
-//     {
-//       name: 'test-disabled-checked',
-//       label: 'Label Checked',
-//       disabled: true,
-//       checked: true,
-//       onChange: () => null,
-//     },
-//     {
-//       name: 'test-disabled-indeterminate',
-//       label: 'Label Indeterminate',
-//       indeterminate: true,
-//       checked: false,
-//       disabled: true,
-//       onChange: () => null,
-//     },
-//   ],
-// };
-//
-// export const GroupOfSizesOfCheckboxes = MultipleTemplate.bind({});
-// GroupOfSizesOfCheckboxes.args = {
-//   components: [
-//     {
-//       name: 'test-xs',
-//       label: 'Label XS',
-//       size: 'xs',
-//       checked: false,
-//       onChange: () => null,
-//     },
-//     {
-//       name: 'test-s',
-//       label: 'Label S',
-//       size: 's',
-//       checked: false,
-//       onChange: () => null,
-//     },
-//     {
-//       name: 'test-m',
-//       label: 'Label M',
-//       size: 'm',
-//       checked: false,
-//       onChange: () => null,
-//     },
-//     {
-//       name: 'test-xl',
-//       label: 'Label XL',
-//       size: 'l',
-//       checked: false,
-//       onChange: () => null,
-//     },
-//   ],
-// };
-//
-// // -----------------------------------------------------------
-// // Stories under this line are for Supernova Documentation only
-// // -----------------------------------------------------------
-// const SupernovaDefaultMultipleTemplate: StoryFn<{
-//   components: CheckboxProps[];
-// }> = () => (
-//   <>
-//     <div style={{display: 'flex', justifyContent: 'space-around'}}>
-//       {[
-//         {
-//           name: 'test',
-//           label: 'Checkbox',
-//           onChange: () => null,
-//           checked: false,
-//         },
-//         {
-//           name: 'test-checked',
-//           label: 'Checkbox',
-//           checked: true,
-//           onChange: () => null,
-//         },
-//         {
-//           name: 'test-indeterminate',
-//           label: 'Checkbox',
-//           indeterminate: true,
-//           checked: false,
-//           onChange: () => null,
-//         },
-//       ]?.map(componentArg => (
-//         <Checkbox key={componentArg.name} {...componentArg} />
-//       ))}
-//     </div>
-//     <div style={{display: 'flex', justifyContent: 'space-around'}}>
-//       {[
-//         {
-//           name: 'test',
-//           label: 'Checkbox',
-//           onChange: () => null,
-//           checked: false,
-//           disabled: true,
-//         },
-//         {
-//           name: 'test-checked',
-//           label: 'Checkbox',
-//           checked: true,
-//           disabled: true,
-//           onChange: () => null,
-//         },
-//         {
-//           name: 'test-indeterminate',
-//           label: 'Checkbox',
-//           indeterminate: true,
-//           checked: false,
-//           disabled: true,
-//           onChange: () => null,
-//         },
-//       ]?.map(componentArg => (
-//         <Checkbox key={componentArg.name} {...componentArg} />
-//       ))}
-//     </div>
-//   </>
-// );
-//
-// export const SupernovaGroupOfDefaultCheckboxes =
-//   SupernovaDefaultMultipleTemplate.bind({});
-//
-// const SupernovaSizesMultipleTemplate: StoryFn<{
-//   components: CheckboxProps[];
-// }> = () => (
-//   <>
-//     <div style={{display: 'flex', justifyContent: 'space-around'}}>
-//       {[
-//         {
-//           name: 'test',
-//           label: 'Checkbox XS',
-//           onChange: () => null,
-//           checked: false,
-//           size: 'xs' as ComponentSizeXSToL,
-//         },
-//         {
-//           name: 'test-checked',
-//           label: 'Checkbox S',
-//           checked: false,
-//           onChange: () => null,
-//           size: 's' as ComponentSizeXSToL,
-//         },
-//         {
-//           name: 'test-indeterminate',
-//           label: 'Checkbox M',
-//           checked: false,
-//           onChange: () => null,
-//           size: 'm' as ComponentSizeXSToL,
-//         },
-//         {
-//           name: 'test-indeterminate',
-//           label: 'Checkbox L',
-//           checked: false,
-//           onChange: () => null,
-//           size: 'l' as ComponentSizeXSToL,
-//         },
-//       ]?.map(componentArg => (
-//         <Checkbox key={componentArg.name} {...componentArg} />
-//       ))}
-//     </div>
-//     <div style={{display: 'flex', justifyContent: 'space-around'}}>
-//       {[
-//         {
-//           name: 'test',
-//           label: 'Checkbox XS',
-//           onChange: () => null,
-//           checked: true,
-//           size: 'xs' as ComponentSizeXSToL,
-//         },
-//         {
-//           name: 'test-checked',
-//           label: 'Checkbox S',
-//           checked: true,
-//           onChange: () => null,
-//           size: 's' as ComponentSizeXSToL,
-//         },
-//         {
-//           name: 'test-indeterminate',
-//           label: 'Checkbox M',
-//           checked: true,
-//           onChange: () => null,
-//           size: 'm' as ComponentSizeXSToL,
-//         },
-//         {
-//           name: 'test-indeterminate',
-//           label: 'Checkbox L',
-//           checked: true,
-//           onChange: () => null,
-//           size: 'l' as ComponentSizeXSToL,
-//         },
-//       ]?.map(componentArg => (
-//         <Checkbox key={componentArg.name} {...componentArg} />
-//       ))}
-//     </div>
-//     <div style={{display: 'flex', justifyContent: 'space-around'}}>
-//       {[
-//         {
-//           name: 'test',
-//           label: 'Checkbox XS',
-//           onChange: () => null,
-//           checked: false,
-//           indeterminate: true,
-//           size: 'xs' as ComponentSizeXSToL,
-//         },
-//         {
-//           name: 'test-checked',
-//           label: 'Checkbox S',
-//           checked: false,
-//           indeterminate: true,
-//           onChange: () => null,
-//           size: 's' as ComponentSizeXSToL,
-//         },
-//         {
-//           name: 'test-indeterminate',
-//           label: 'Checkbox M',
-//           checked: false,
-//           indeterminate: true,
-//           onChange: () => null,
-//           size: 'm' as ComponentSizeXSToL,
-//         },
-//         {
-//           name: 'test-indeterminate',
-//           label: 'Checkbox L',
-//           checked: false,
-//           indeterminate: true,
-//           onChange: () => null,
-//           size: 'l' as ComponentSizeXSToL,
-//         },
-//       ]?.map(componentArg => (
-//         <Checkbox key={componentArg.name} {...componentArg} />
-//       ))}
-//     </div>
-//     <div style={{display: 'flex', justifyContent: 'space-around'}}>
-//       {[
-//         {
-//           name: 'test',
-//           label: 'Checkbox XS',
-//           onChange: () => null,
-//           checked: true,
-//           disabled: true,
-//           size: 'xs' as ComponentSizeXSToL,
-//         },
-//         {
-//           name: 'test-checked',
-//           label: 'Checkbox S',
-//           checked: true,
-//           disabled: true,
-//           onChange: () => null,
-//           size: 's' as ComponentSizeXSToL,
-//         },
-//         {
-//           name: 'test-indeterminate',
-//           label: 'Checkbox M',
-//           checked: true,
-//           disabled: true,
-//           onChange: () => null,
-//           size: 'm' as ComponentSizeXSToL,
-//         },
-//         {
-//           name: 'test-indeterminate',
-//           label: 'Checkbox L',
-//           checked: true,
-//           disabled: true,
-//           onChange: () => null,
-//           size: 'l' as ComponentSizeXSToL,
-//         },
-//       ]?.map(componentArg => (
-//         <Checkbox key={componentArg.name} {...componentArg} />
-//       ))}
-//     </div>
-//     <div style={{display: 'flex', justifyContent: 'space-around'}}>
-//       {[
-//         {
-//           name: 'test',
-//           label: 'Checkbox XS',
-//           onChange: () => null,
-//           checked: false,
-//           indeterminate: true,
-//           disabled: true,
-//           size: 'xs' as ComponentSizeXSToL,
-//         },
-//         {
-//           name: 'test-checked',
-//           label: 'Checkbox S',
-//           checked: false,
-//           indeterminate: true,
-//           disabled: true,
-//           onChange: () => null,
-//           size: 's' as ComponentSizeXSToL,
-//         },
-//         {
-//           name: 'test-indeterminate',
-//           label: 'Checkbox M',
-//           checked: false,
-//           indeterminate: true,
-//           disabled: true,
-//           onChange: () => null,
-//           size: 'm' as ComponentSizeXSToL,
-//         },
-//         {
-//           name: 'test-indeterminate',
-//           label: 'Checkbox L',
-//           checked: false,
-//           indeterminate: true,
-//           disabled: true,
-//           onChange: () => null,
-//           size: 'l' as ComponentSizeXSToL,
-//         },
-//       ]?.map(componentArg => (
-//         <Checkbox key={componentArg.name} {...componentArg} />
-//       ))}
-//     </div>
-//   </>
-// );
-//
-// export const SupernovaGroupOfCheckboxesSizes =
-//   SupernovaSizesMultipleTemplate.bind({});
+
+export const WithPlaceholderTextField = SingleTemplate.bind({});
+WithPlaceholderTextField.args = {
+  name: 'textfield_placeholder',
+  label: 'TextField Label',
+  placeholder: 'Placeholder',
+};
+
+export const DisabledTextField = SingleTemplate.bind({});
+DisabledTextField.args = {
+  name: 'textfield_disabled',
+  label: 'TextField Label',
+  disabled: true,
+};
+
+export const ReadOnlyTextField = SingleTemplate.bind({});
+ReadOnlyTextField.args = {
+  name: 'textfield_readonly',
+  label: 'TextField Label',
+  readonly: true,
+};
+
+export const GroupOfTextFieldColors = MultipleTemplate.bind({});
+GroupOfTextFieldColors.args = {
+  components: [
+    {
+      name: 'textfield_color_black',
+      label: 'Black TextField',
+      color: 'black',
+    },
+    {
+      name: 'textfield_color_gray',
+      label: 'Gray TextField',
+      color: 'gray',
+    },
+    {
+      name: 'textfield_color_white',
+      label: 'White TextField',
+      color: 'white',
+    },
+  ],
+};
+
+export const GroupOfTextFieldSizes = MultipleTemplate.bind({});
+GroupOfTextFieldSizes.args = {
+  components: [
+    {
+      name: 'textfield_size_l',
+      label: 'L TextField',
+      size: 'l',
+    },
+    {
+      name: 'textfield_size_m',
+      label: 'M TextField',
+      size: 'm',
+    },
+    {
+      name: 'textfield_size_s',
+      label: 'S TextField',
+      size: 's',
+    },
+    {
+      name: 'textfield_size_xs',
+      label: 'XS TextField',
+      size: 'xs',
+    },
+  ],
+};
