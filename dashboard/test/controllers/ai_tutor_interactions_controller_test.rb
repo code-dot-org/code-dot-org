@@ -228,68 +228,67 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
     }
     SourceBucket.any_instance.stubs(:get).with(channel_id, "main.json").returns(fake_source_data)
   end
-end
+  class FindProjectAndVersionIdTest < ActionController::TestCase
+    setup do
+      @controller = AiTutorInteractionsController.new
+      @user = create(:user)
+      @level = create(:level)
+      @script_id = 1
+      sign_in @user
 
-class FindProjectAndVersionIdTest < ActionController::TestCase
-  setup do
-    @controller = AiTutorInteractionsController.new
-    @user = create(:user)
-    @level = create(:level)
-    @script_id = 1
-    sign_in @user
+      @project_id = 'project-id'
+      @version_id = 'version-id'
+      @storage_id = 'storage-id'
+      @channel = 'encrypted-channel'
 
-    @project_id = 'project-id'
-    @version_id = 'version-id'
-    @storage_id = 'storage-id'
-    @channel = 'encrypted-channel'
+      @source_data = {status: 'FOUND', version_id: @version_id}
 
-    @source_data = {status: 'FOUND', version_id: @version_id}
-
-    @controller.stubs(:current_user).returns(@user)
-    @controller.stubs(:storage_id_for_user_id).with(@user.id).returns(@storage_id)
-    Level.stubs(:find).with(@level.id).returns(@level)
-    ChannelToken.stubs(:find_channel_token).with(@level, @storage_id, @script_id).returns(channel_token)
-    @controller.stubs(:storage_decrypt_channel_id).with(@channel).returns([nil, @project_id])
-    SourceBucket.any_instance.stubs(:get).with(@channel, "main.json").returns(@source_data)
-  end
-
-  def channel_token
-    ChannelToken.new.tap do |token|
-      token.stubs(:channel).returns(@channel)
+      @controller.stubs(:current_user).returns(@user)
+      @controller.stubs(:storage_id_for_user_id).with(@user.id).returns(@storage_id)
+      Level.stubs(:find).with(@level.id).returns(@level)
+      ChannelToken.stubs(:find_channel_token).with(@level, @storage_id, @script_id).returns(channel_token)
+      @controller.stubs(:storage_decrypt_channel_id).with(@channel).returns([nil, @project_id])
+      SourceBucket.any_instance.stubs(:get).with(@channel, "main.json").returns(@source_data)
     end
-  end
 
-  test 'returns project_id and version_id when all lookups succeed' do
-    result = @controller.find_project_and_version_id(@level.id, @script_id)
-    assert_equal({project_id: @project_id, version_id: @version_id}, result)
-  end
+    def channel_token
+      ChannelToken.new.tap do |token|
+        token.stubs(:channel).returns(@channel)
+      end
+    end
 
-  test 'returns project_id and nil when source data is not found' do
-    @source_data = {status: 'NOT_FOUND'}
-    SourceBucket.any_instance.stubs(:get).with(@channel, "main.json").returns(@source_data)
+    test 'returns project_id and version_id when all lookups succeed' do
+      result = @controller.find_project_and_version_id(@level.id, @script_id)
+      assert_equal({project_id: @project_id, version_id: @version_id}, result)
+    end
 
-    result = @controller.find_project_and_version_id(@level.id, @script_id)
-    assert_equal({project_id: @project_id, version_id: nil}, result)
-  end
+    test 'returns project_id and nil when source data is not found' do
+      @source_data = {status: 'NOT_FOUND'}
+      SourceBucket.any_instance.stubs(:get).with(@channel, "main.json").returns(@source_data)
 
-  test 'returns nil for project_id and version_id when channel token is not found' do
-    ChannelToken.stubs(:find_channel_token).with(@level, @storage_id, @script_id).returns(nil)
+      result = @controller.find_project_and_version_id(@level.id, @script_id)
+      assert_equal({project_id: @project_id, version_id: nil}, result)
+    end
 
-    result = @controller.find_project_and_version_id(@level.id, @script_id)
-    assert_equal({project_id: nil, version_id: nil}, result)
-  end
+    test 'returns nil for project_id and version_id when channel token is not found' do
+      ChannelToken.stubs(:find_channel_token).with(@level, @storage_id, @script_id).returns(nil)
 
-  test 'returns nil for project_id and version_id when level is not found' do
-    Level.stubs(:find).with(@level.id).returns(nil)
+      result = @controller.find_project_and_version_id(@level.id, @script_id)
+      assert_equal({project_id: nil, version_id: nil}, result)
+    end
 
-    result = @controller.find_project_and_version_id(@level.id, @script_id)
-    assert_equal({project_id: nil, version_id: nil}, result)
-  end
+    test 'returns nil for project_id and version_id when level is not found' do
+      Level.stubs(:find).with(@level.id).returns(nil)
 
-  test 'returns nil for project_id and version_id when user storage ID is not found' do
-    @controller.stubs(:storage_id_for_user_id).with(@user.id).returns(nil)
+      result = @controller.find_project_and_version_id(@level.id, @script_id)
+      assert_equal({project_id: nil, version_id: nil}, result)
+    end
 
-    result = @controller.find_project_and_version_id(@level.id, @script_id)
-    assert_equal({project_id: nil, version_id: nil}, result)
+    test 'returns nil for project_id and version_id when user storage ID is not found' do
+      @controller.stubs(:storage_id_for_user_id).with(@user.id).returns(nil)
+
+      result = @controller.find_project_and_version_id(@level.id, @script_id)
+      assert_equal({project_id: nil, version_id: nil}, result)
+    end
   end
 end
