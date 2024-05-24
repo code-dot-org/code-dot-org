@@ -71,6 +71,14 @@ const findChangedProperties = (
 const getCurrentTimestamp = () => moment(Date.now()).format('YYYY-MM-DD HH:mm');
 const getCurrentTime = () => moment(Date.now()).format('LT');
 
+const saveTypeToAnalyticsEvent: {[key in SaveType]: string} = {
+  updateChatbot: EVENTS.UPDATE_CHATBOT,
+  publishModelCard: EVENTS.PUBLISH_MODEL_CARD_INFO,
+  saveModelCard: EVENTS.SAVE_MODEL_CARD_INFO,
+};
+
+export type SaveType = 'updateChatbot' | 'publishModelCard' | 'saveModelCard';
+
 export interface AichatState {
   // All user and assistant chat messages - includes too personal and inappropriate user messages.
   // Messages will be logged and stored.
@@ -89,7 +97,7 @@ export interface AichatState {
   // If a save is currently in progress
   saveInProgress: boolean;
   // The type of save action being performed (customization update, publish, model card save, etc).
-  currentSaveType: string | undefined;
+  currentSaveType: SaveType | undefined;
 }
 
 const initialState: AichatState = {
@@ -115,7 +123,7 @@ export const updateAiCustomization = createAsyncThunk(
   async (_, {dispatch, getState}) => {
     await saveAiCustomization(
       (getState() as RootState).aichat.currentAiCustomizations,
-      EVENTS.UPDATE_CHATBOT,
+      'updateChatbot',
       dispatch
     );
   }
@@ -130,10 +138,9 @@ export const publishModel = createAsyncThunk(
     dispatch(setModelCardProperty({property: 'isPublished', value: true}));
     await saveAiCustomization(
       (getState() as RootState).aichat.currentAiCustomizations,
-      EVENTS.PUBLISH_MODEL_CARD_INFO,
+      'publishModelCard',
       dispatch
     );
-    dispatch(setViewMode(ViewMode.PRESENTATION));
   }
 );
 
@@ -150,7 +157,7 @@ export const saveModelCard = createAsyncThunk(
 
     await saveAiCustomization(
       currentAiCustomizations,
-      EVENTS.SAVE_MODEL_CARD_INFO,
+      'saveModelCard',
       dispatch
     );
   }
@@ -168,7 +175,7 @@ const getNewMessageId = () => {
 // model customizations (setup, retrieval, and "publish" tab)
 const saveAiCustomization = async (
   currentAiCustomizations: AiCustomizations,
-  eventDescription: string,
+  saveType: SaveType,
   dispatch: ThunkDispatch<unknown, unknown, AnyAction>
 ) => {
   // Remove any empty example topics on save
@@ -192,7 +199,7 @@ const saveAiCustomization = async (
   };
 
   // Notify the UI that a save is in progress.
-  dispatch(startSave(eventDescription));
+  dispatch(startSave(saveType));
 
   await Lab2Registry.getInstance()
     .getProjectManager()
@@ -237,7 +244,7 @@ export const onSaveComplete =
 
       if (currentSaveType) {
         analyticsReporter.sendEvent(
-          currentSaveType,
+          saveTypeToAnalyticsEvent[currentSaveType],
           {
             propertyUpdated: property,
             levelPath: window.location.pathname,
@@ -251,6 +258,10 @@ export const onSaveComplete =
     dispatch(setSavedAiCustomizations(currentAiCustomizations));
     // Notify the UI that the save is complete.
     dispatch(endSave());
+    // Go to the presentation page if we just finished publishing the model card.
+    if (currentSaveType === 'publishModelCard') {
+      dispatch(setViewMode(ViewMode.PRESENTATION));
+    }
   };
 
 // Thunk called when a save has failed.
@@ -521,7 +532,7 @@ const aichatSlice = createSlice({
       };
       state.currentAiCustomizations.modelCardInfo = updatedModelCardInfo;
     },
-    startSave(state, action: PayloadAction<string>) {
+    startSave(state, action: PayloadAction<SaveType>) {
       state.saveInProgress = true;
       state.currentSaveType = action.payload;
     },

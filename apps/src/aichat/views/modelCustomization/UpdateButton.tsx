@@ -17,13 +17,14 @@ const UpdateButton: React.FunctionComponent<UpdateButtonProps> = ({
     [dispatch]
   );
   const saveInProgress = useAppSelector(state => state.aichat.saveInProgress);
+  const currentSaveType = useAppSelector(state => state.aichat.currentSaveType);
 
   return (
     <Button
       text="Update"
       disabled={allFieldsDisabled || saveInProgress}
       iconLeft={
-        saveInProgress
+        saveInProgress && currentSaveType === 'updateChatbot'
           ? {iconName: 'spinner', animationType: 'spin'}
           : {iconName: 'edit'}
       }
