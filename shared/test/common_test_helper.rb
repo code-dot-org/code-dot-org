@@ -17,39 +17,41 @@ require 'cdo/aws/s3'
 
 raise 'Test helper must only be used in `test` environment!' unless rack_env? :test
 
-VCR.configure do |c|
-  c.cassette_library_dir = File.expand_path 'fixtures/vcr', __dir__
-  c.allow_http_connections_when_no_cassette = true
-  c.hook_into :webmock
-  # Filter unnecessary headers from the http interactions.
-  c.before_record do |i|
-    %w(
-      X-Amz-Security-Token
-      X-Amz-Content-Sha256
-      Authorization
-      X-Amz-Date
-      Accept
-      Accept-Encoding
-      User-Agent
-      Host
-      Content-Type
-    ).each {|h| i.request.headers.delete h}
-    %w(
-      X-Amz-Request-Id
-      X-Amz-Id-2
-    ).each {|h| i.response.headers.delete h}
-  end
-end
-
-# Truncate database tables to ensure repeatable tests.
-DASHBOARD_TEST_TABLES = %w(channel_tokens user_project_storage_ids projects project_commits code_review_comments code_reviews).freeze
-DASHBOARD_TEST_TABLES.each do |table|
-  # rubocop:disable CustomCops/DashboardDbUsage
-  DASHBOARD_DB[table.to_sym].truncate
-  # rubocop:enable CustomCops/DashboardDbUsage
-end.freeze
-
 module SetupTest
+  setup_all do
+    # Truncate database tables to ensure repeatable tests.
+    DASHBOARD_TEST_TABLES = %w(channel_tokens user_project_storage_ids projects project_commits code_review_comments code_reviews).freeze
+    DASHBOARD_TEST_TABLES.each do |table|
+      # rubocop:disable CustomCops/DashboardDbUsage
+      DASHBOARD_DB[table.to_sym].truncate
+      # rubocop:enable CustomCops/DashboardDbUsage
+    end.freeze
+
+    VCR.configure do |c|
+      c.cassette_library_dir = File.expand_path 'fixtures/vcr', __dir__
+      c.allow_http_connections_when_no_cassette = true
+      c.hook_into :webmock
+      # Filter unnecessary headers from the http interactions.
+      c.before_record do |i|
+        %w(
+          X-Amz-Security-Token
+          X-Amz-Content-Sha256
+          Authorization
+          X-Amz-Date
+          Accept
+          Accept-Encoding
+          User-Agent
+          Host
+          Content-Type
+        ).each {|h| i.request.headers.delete h}
+        %w(
+          X-Amz-Request-Id
+          X-Amz-Id-2
+        ).each {|h| i.response.headers.delete h}
+      end
+    end
+  end
+
   def around(&block)
     random = Random.new(0)
     # 4 test wrappers:
