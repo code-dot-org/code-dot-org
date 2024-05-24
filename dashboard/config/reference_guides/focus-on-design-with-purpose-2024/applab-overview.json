@@ -1,0 +1,9 @@
+{
+  "key": "applab-overview",
+  "course_version_key": "2024",
+  "course_offering_key": "focus-on-design-with-purpose",
+  "parent_reference_guide_key": "app-lab",
+  "display_name": "Overview",
+  "content": "App Lab is a tool built with [JavaScript](./javascript-overview) that can be used to create apps. Read more about App Lab's commands in the [App Lab documentation](/docs/applab/).",
+  "position": 0
+}
