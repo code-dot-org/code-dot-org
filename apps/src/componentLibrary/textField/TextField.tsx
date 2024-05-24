@@ -1,13 +1,11 @@
-import classnames from 'classnames';
+import classNames from 'classnames';
 import React, {ChangeEvent, AriaAttributes} from 'react';
 
-import {componentSizeToBodyTextSizeMap} from '@cdo/apps/componentLibrary/common/constants';
 import {getAriaPropsFromProps} from '@cdo/apps/componentLibrary/common/helpers';
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
 } from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
-import Typography from '@cdo/apps/componentLibrary/typography';
 
 import moduleStyles from './textfield.module.scss';
 
@@ -68,16 +66,15 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
   helperIcon,
   error,
   className,
-  color,
+  color = 'black',
   size = 'm',
   ...rest
 }) => {
-  const bodyTextSize = componentSizeToBodyTextSizeMap[size];
   const ariaProps = getAriaPropsFromProps(rest);
 
   return (
     <label
-      className={classnames(
+      className={classNames(
         moduleStyles.textField,
         moduleStyles[`textField-${color}`],
         moduleStyles[`textField-${size}`],
@@ -85,11 +82,7 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
       )}
       aria-describedby={rest['aria-describedby']}
     >
-      {label && (
-        <Typography semanticTag="span" visualAppearance={bodyTextSize}>
-          {label}
-        </Typography>
-      )}
+      {label && <span className={moduleStyles.textFieldLabel}>{label}</span>}
       <input
         type="text"
         name={name}
@@ -102,13 +95,18 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
         aria-disabled={disabled || ariaProps['aria-disabled']}
       />
       {(!error || !error.hasError) && (
-        <div>
+        <div className={moduleStyles.textFieldHelperSection}>
           {helperIcon && <FontAwesomeV6Icon {...helperIcon} />}
           {helperMessage && <span>{helperMessage}</span>}
         </div>
       )}
       {error && error.hasError && (
-        <div>
+        <div
+          className={classNames(
+            moduleStyles.textFieldHelperSection,
+            moduleStyles.textFieldErrorSection
+          )}
+        >
           <FontAwesomeV6Icon iconName={'circle-exclamation'} />
           <span>{error.message}</span>
         </div>
