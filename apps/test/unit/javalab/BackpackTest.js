@@ -1,6 +1,6 @@
 import React from 'react';
 import {expect, assert} from '../../util/reconfiguredChai';
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import {registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 import javalab from '@cdo/apps/javalab/redux/javalabRedux';
 import BackpackClientApi from '@cdo/apps/code-studio/components/backpack/BackpackClientApi';

@@ -82,7 +82,6 @@ describe('AgeGatedStudentsModal', () => {
       return (
         <div>
           <AgeGatedStudentsModal
-            //isLoadingStudents={false}
             onClose={() => setIsOpen(false)}
             isOpen={isOpen}
           />

@@ -36,6 +36,17 @@ const EVENTS = {
   CAP_STATE_FORM_SHOW: 'CAP State Form Shown',
   CAP_STATE_FORM_PROVIDED: 'CAP State Form Submitted',
   CAP_STATE_FORM_DISMISSED: 'CAP State Form Sign Out Button Clicked',
+  CAP_PARENT_EMAIL_BANNER_SHOWN: 'CAP Parent Email Banner Shown',
+  CAP_PARENT_EMAIL_BANNER_CLICKED: 'CAP Parent Email Banner Clicked',
+  CAP_PARENT_EMAIL_BANNER_SUBMITTED: 'CAP Parent Email Banner Submitted',
+  CAP_PARENT_EMAIL_BANNER_UPDATED: 'CAP Parent Email Banner Updated',
+  CAP_PARENT_EMAIL_BANNER_RESEND: 'CAP Parent Email Banner Resend',
+  CAP_PARENT_EMAIL_BANNER_CLOSED: 'CAP Parent Email Banner Closed',
+  CAP_PARENT_EMAIL_MODAL_SHOWN: 'CAP Parent Email Modal Shown',
+  CAP_PARENT_EMAIL_MODAL_SUBMITTED: 'CAP Parent Email Modal Submitted',
+  CAP_PARENT_EMAIL_MODAL_UPDATED: 'CAP Parent Email Modal Updated',
+  CAP_PARENT_EMAIL_MODAL_RESEND: 'CAP Parent Email Modal Resend',
+  CAP_PARENT_EMAIL_MODAL_CLOSED: 'CAP Parent Email Modal Closed',
 
   // School Selection Component
   COUNTRY_SELECTED: 'User Selects Country',
@@ -173,6 +184,8 @@ const EVENTS = {
   TA_RUBRIC_TOUR_BACK: 'TA Rubric product tour back button clicked',
   TA_RUBRIC_TOUR_CLOSED: 'TA Rubric product tour closed',
   TA_RUBRIC_TOUR_COMPLETE: 'User viewed all of TA Rubric product tour',
+  TA_RUBRIC_EVIDENCE_TOOLTIP_HOVERED: 'TA Rubric Evidence Tooltip Hovered',
+  TA_RUBRIC_EVIDENCE_GOTO_CLICKED: 'TA Rubric Evidence Line Number Clicked',
 
   // AI Tutor
   AI_TUTOR_PANEL_OPENED: 'AI Tutor Panel Opened',
@@ -273,13 +286,6 @@ const EVENTS = {
   CHAT_ACTION: 'Student takes a chat action',
   SAVE_MODEL_CARD_INFO: 'Student saves their model card info',
   PUBLISH_MODEL_CARD_INFO: 'Student publishes their model card info',
-
-  // CPA
-  CPA_PARENT_EMAIL_MODAL_SHOWN: 'cpa_parent_email_modal_shown',
-  CPA_PARENT_EMAIL_MODAL_SUBMITTED: 'cpa_parent_email_modal_submitted',
-  CPA_PARENT_EMAIL_MODAL_UPDATED: 'cpa_parent_email_modal_updated',
-  CPA_PARENT_EMAIL_MODAL_RESEND: 'cpa_parent_email_modal_resend',
-  CPA_PARENT_EMAIL_MODAL_CLOSED: 'cpa_parent_email_modal_closed',
 };
 
 const EVENT_GROUP_NAMES = {

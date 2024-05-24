@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "elem-game-design",
-    "serialized_at": "2024-05-09 23:00:03 UTC",
+    "serialized_at": "2024-05-16 19:49:58 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -751,6 +751,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_design_make_grid_2024"
+        ],
         "progression": "Game Design Setup"
       },
       "bonus": false,
@@ -823,6 +826,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_design_behavior_grid_2024"
+        ],
         "progression": "Sprite Behaviors"
       },
       "bonus": false,
@@ -845,6 +851,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_design_video_lots_2024"
+        ],
         "progression": "Events"
       },
       "bonus": false,
@@ -868,14 +877,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "game_design_about_events_2024"
+          "game_design_panel_events"
         ],
         "progression": "Events"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "game_design_about_events_2024"
+          "game_design_panel_events"
         ],
         "lesson.key": "Game Design",
         "lesson_group.key": "",
@@ -883,7 +892,7 @@
         "activity_section.key": "94321661-0ae5-49f7-8235-a98501da2a6a"
       },
       "level_keys": [
-        "game_design_about_events_2024"
+        "game_design_panel_events"
       ]
     },
     {
@@ -917,6 +926,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_design_toolbox_object_2024"
+        ],
         "progression": "Events"
       },
       "bonus": false,
@@ -939,6 +951,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_design_remove_object_2024"
+        ],
         "progression": "Events"
       },
       "bonus": false,
@@ -986,6 +1001,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_design_change_costume_2024"
+        ],
         "progression": "Events"
       },
       "bonus": false,
@@ -1159,14 +1177,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "game_variables_conditional_2024"
+          "game_variables_decrease_2024"
         ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "game_variables_conditional_2024"
+          "game_variables_decrease_2024"
         ],
         "lesson.key": "Variables as Score",
         "lesson_group.key": "",
@@ -1174,7 +1192,7 @@
         "activity_section.key": "d043e5ad-0156-402e-8da7-36fde33739e6"
       },
       "level_keys": [
-        "game_variables_conditional_2024"
+        "game_variables_decrease_2024"
       ]
     },
     {
@@ -1208,15 +1226,12 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "game_variables_show_two_2024"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "game_variables_show_two_2024"
+          "game_conditional_about_panel_2024"
         ],
         "lesson.key": "Variables as Score",
         "lesson_group.key": "",
@@ -1224,7 +1239,7 @@
         "activity_section.key": "d043e5ad-0156-402e-8da7-36fde33739e6"
       },
       "level_keys": [
-        "game_variables_show_two_2024"
+        "game_conditional_about_panel_2024"
       ]
     },
     {
@@ -1234,14 +1249,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "game_variables_decrease_2024"
+          "game_variables_conditional_2024"
         ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "game_variables_decrease_2024"
+          "game_variables_conditional_2024"
         ],
         "lesson.key": "Variables as Score",
         "lesson_group.key": "",
@@ -1249,7 +1264,7 @@
         "activity_section.key": "d043e5ad-0156-402e-8da7-36fde33739e6"
       },
       "level_keys": [
-        "game_variables_decrease_2024"
+        "game_variables_conditional_2024"
       ]
     },
     {
@@ -1258,6 +1273,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_variables_match_condition_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1774,9 +1792,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "game_design_about_events_2024",
+        "level.key": "game_design_panel_events",
         "script_level.level_keys": [
-          "game_design_about_events_2024"
+          "game_design_panel_events"
         ],
         "lesson.key": "Game Design",
         "lesson_group.key": "",
@@ -1918,9 +1936,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "game_variables_conditional_2024",
+        "level.key": "game_variables_decrease_2024",
         "script_level.level_keys": [
-          "game_variables_conditional_2024"
+          "game_variables_decrease_2024"
         ],
         "lesson.key": "Variables as Score",
         "lesson_group.key": "",
@@ -1942,9 +1960,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "game_variables_show_two_2024",
+        "level.key": "game_conditional_about_panel_2024",
         "script_level.level_keys": [
-          "game_variables_show_two_2024"
+          "game_conditional_about_panel_2024"
         ],
         "lesson.key": "Variables as Score",
         "lesson_group.key": "",
@@ -1954,9 +1972,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "game_variables_decrease_2024",
+        "level.key": "game_variables_conditional_2024",
         "script_level.level_keys": [
-          "game_variables_decrease_2024"
+          "game_variables_conditional_2024"
         ],
         "lesson.key": "Variables as Score",
         "lesson_group.key": "",
@@ -2198,11 +2216,11 @@
     },
     {
       "name": "Game Design Slides",
-      "url": "https://docs.google.com/presentation/d/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/template/preview",
+      "url": "https://docs.google.com/presentation/d/1oLL-I07CwcEgRu7tFQl4gNCPVH3OFwkU1Zjz6dcxQ4E/template/preview",
       "key": "game_design_slides",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/export/pdf",
+        "download_url": "https://docs.google.com/presentation/d/1oLL-I07CwcEgRu7tFQl4gNCPVH3OFwkU1Zjz6dcxQ4E/export/pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -2729,6 +2747,13 @@
         "lesson.key": "Game Jam Day 1: Create",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Game Jam Day 2: Play",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-13"
       }
     },
     {

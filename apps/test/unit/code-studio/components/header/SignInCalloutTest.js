@@ -1,6 +1,6 @@
 import React from 'react';
 import SignInCalloutWrapper from '@cdo/apps/code-studio/components/header/SignInCalloutWrapper';
-import {shallow, mount} from 'enzyme';
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import {expect} from '../../../../util/reconfiguredChai';
 import i18n from '@cdo/locale';
 import sinon from 'sinon';

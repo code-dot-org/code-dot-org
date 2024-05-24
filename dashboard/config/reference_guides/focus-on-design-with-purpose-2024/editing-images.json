@@ -1,0 +1,9 @@
+{
+  "key": "editing-images",
+  "course_version_key": "2024",
+  "course_offering_key": "focus-on-design-with-purpose",
+  "parent_reference_guide_key": "animation-tab",
+  "display_name": "Editing Images",
+  "content": "In addition to loading and drawing images, the Animation Tab includes several tools to help edit your animation images.\n\n## Copy, Flip, and Rotate\n\nThree useful tools for creating multiple animations to use with the same sprite are _Copy_, _Flip_, and _Rotate_\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/animation_edit.png)\n\n[diagram_nums]\n\n1. The **copy** button creates a duplicate of the current animation. This is useful for creating multiple versions of an animation for a single sprite, such as pointing in different directions, or jumping and walking animations.\n2. The **flip** button flips the current image across the vertical axis. If you hold down the _Alt_ key (or _Option_ on a Mac) while clicking, you can instead flip across the horizontal axis.\n3. The **rotate** button rotates the current image 90 degrees counter-clockwise. If you hold down the _Alt_ key (or _Option_ key on a Mac) while clicking, you can rotate clockwise instead.\n\n[/diagram_nums]",
+  "position": 0
+}

@@ -19,6 +19,7 @@ import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {queryParams, updateQueryParam} from '@cdo/apps/code-studio/utils';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
+import ParentalPermissionBanner from '@cdo/apps/templates/policy_compliance/ParentalPermissionBanner';
 
 $(document).ready(showHomepage);
 
@@ -80,6 +81,12 @@ function showHomepage() {
   }
 
   const announcement = getTeacherAnnouncement(announcementOverride);
+  const parentalPermissionBanner = homepageData.parentalPermissionBanner && (
+    <ParentalPermissionBanner
+      key="parental-permission-banner"
+      {...homepageData.parentalPermissionBanner}
+    />
+  );
 
   ReactDOM.render(
     <Provider store={store}>
@@ -130,6 +137,7 @@ function showHomepage() {
               homepageData.showStudentAsVerifiedTeacherWarning
             }
             specialAnnouncement={studentSpecialAnnouncement}
+            topComponents={[parentalPermissionBanner]}
           />
         )}
       </div>

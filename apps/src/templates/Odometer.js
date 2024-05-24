@@ -1,6 +1,6 @@
-import {Motion, spring} from 'react-motion';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import {Motion, spring} from 'react-motion';
 
 export default class Odometer extends Component {
   static propTypes = {

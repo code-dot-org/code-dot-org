@@ -4,8 +4,10 @@ require "services/lti"
 require "policies/lti"
 require "concerns/partial_registration"
 require "clients/lti_advantage_client"
+require 'clients/lti_dynamic_registration_client'
 require "cdo/honeybadger"
 require 'metrics/events'
+require 'securerandom'
 
 class LtiV1Controller < ApplicationController
   before_action -> {redirect_to lti_v1_integrations_path, alert: I18n.t('lti.integration.early_access.closed')},
@@ -194,12 +196,23 @@ class LtiV1Controller < ApplicationController
         redirect_to destination_url
       else
         user = Services::Lti.initialize_lti_user(decoded_jwt)
+        # PartialRegistration removes the email address, so store it in a local variable first
+        email_address = Services::Lti.get_claim(decoded_jwt, :email)
         PartialRegistration.persist_attributes(session, user)
         session[:user_return_to] = destination_url
         if DCDO.get('lti_account_linking_enabled', false)
-          redirect_to lti_v1_account_linking_landing_path and return
+          render 'lti/v1/account_linking/landing', locals: {lti_provider: integration[:platform_name], email: email_address} and return
         end
-        redirect_to new_user_registration_url
+
+        if DCDO.get('student-email-post-enabled', false)
+          @form_data = {
+            email: email_address
+          }
+
+          render 'omniauth/redirect', {layout: false}
+        else
+          redirect_to new_user_registration_url
+        end
       end
     else
       jwt_error_message = jwt_verifier.errors.empty? ? 'Invalid JWT' : jwt_verifier.errors.join(', ')

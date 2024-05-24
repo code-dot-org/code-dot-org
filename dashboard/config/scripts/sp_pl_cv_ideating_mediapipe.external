@@ -6,13 +6,15 @@ markdown <<MARKDOWN
 # MediaPipe Object Detection
 
 
-#### After watching the video and discussing bias in data sets, students will work with a data set for training and Auto-Doggie Door.
-
-#### In this activity, students will upload a provided set of images to a website called MediaPipe Studio and use its Machine Learning Object Detection feature to analyze the images of the dogs. 
-
+#### After watching a video and discussing bias in data sets, students will use MediaPipe Studio's **Machine Learning Object Detection** to analyze dog images for training an Auto-Doggie Door.
 
 ## MediaPipe Studios
-#### The next level will give you access to a set of dog images and MediaPipe Studios. **Upload the images** one-by-one and examine the results of the object detection algorithm.
+#### The next level will give you access to a set of dog images and MediaPipe Studios.
+
+### **You will:** 
+- #### Save the images to your computer
+- #### Upload the images on the MediaPipe website
+- #### Examine the results of the object detection algorithm
 
 #### As you explore the website, try adjusting the max results and score threshold to change the output of your results. You can also try changing the model / inference type that is being used within the model. If you have extra time at the end of the exploration, see if you can find your own image of a dog and upload it.
 
@@ -44,7 +46,7 @@ markdown <<MARKDOWN
 ## Give it a try.
 
 
-### Explore the activity guide <a href="https://docs.google.com/document/d/122nvyvxl6aLdoSi73SppG6MOU5tgONVbkURwMCIS0Fo/copy" target="blank" rel="noopener noreferrer"><b>Idea Outline</b></a> 
+#### Continue to the next level to analyze the images. After making observations, students will brainstorm on this activity guide <a href="https://docs.google.com/document/d/122nvyvxl6aLdoSi73SppG6MOU5tgONVbkURwMCIS0Fo/copy" target="blank" rel="noopener noreferrer"><b>Idea Outline</b></a> 
 
 
 MARKDOWN

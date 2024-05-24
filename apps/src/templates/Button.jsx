@@ -3,11 +3,13 @@
  * This particular button is designed to operate in contexts where we have a solid
  * background. When we're a button on top of an image, we may want something different.
  */
-import _ from 'lodash';
-import React from 'react';
-import PropTypes from 'prop-types';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import classNames from 'classnames';
+import _ from 'lodash';
+import PropTypes from 'prop-types';
+import React from 'react';
+
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+
 import moduleStyles from './button.module.scss';
 
 // Note: Keep these constants in sync with button.module.scss.

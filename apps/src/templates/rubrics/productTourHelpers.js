@@ -1,5 +1,5 @@
-import evidenceDemo from '@cdo/static/ai-evidence-demo.gif';
 import i18n from '@cdo/locale';
+import evidenceDemo from '@cdo/static/ai-evidence-demo.gif';
 
 export const INITIAL_STEP = 0;
 export const STEPS = [

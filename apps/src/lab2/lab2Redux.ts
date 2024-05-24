@@ -89,6 +89,8 @@ export const setUpWithLevel = createAsyncThunk(
       scriptId?: number;
       levelPropertiesPath: string;
       channelId?: string;
+      userId?: string;
+      scriptLevelId?: string;
     },
     thunkAPI
   ) => {
@@ -148,11 +150,26 @@ export const setUpWithLevel = createAsyncThunk(
           : await ProjectManagerFactory.getProjectManagerForLevel(
               ProjectManagerStorageType.REMOTE,
               payload.levelId,
-              payload.scriptId
+              payload.userId,
+              payload.scriptId,
+              payload.scriptLevelId
             );
+
       // Only set the project manager and initiate load
       // if this request hasn't been cancelled.
       if (thunkAPI.signal.aborted) {
+        return;
+      }
+
+      // We might be a teacher attempting to view a student level that hasn't been
+      // started, and there is no project manager available.
+      if (!projectManager) {
+        // If the level hasn't been started, we can skip loading projects data.
+        setProjectAndLevelData(
+          {levelProperties},
+          thunkAPI.signal.aborted,
+          thunkAPI.dispatch
+        );
         return;
       }
 
@@ -181,8 +198,8 @@ export const setUpWithLevel = createAsyncThunk(
 // Given a channel id and app name as the payload, set up the lab for that channel id.
 // This consists of cleaning up the existing project manager (if applicable), then
 // creating a project manager and loading the project data.
-// This method is used for loading a lab that is not associated with a level
-// (e.g., /projectbeats).
+// This method is used for loading a lab that is not associated with a level.
+// (This was previously used for /projectbeats).
 // If we get an aborted signal, we will exit early.
 export const setUpWithoutLevel = createAsyncThunk(
   'lab/setUpWithoutLevel',
