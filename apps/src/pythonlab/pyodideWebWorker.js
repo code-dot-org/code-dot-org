@@ -12,7 +12,8 @@ async function loadPyodideAndPackages() {
     // which does serve the unhashed files. We need to serve the unhashed files because
     // pyodide controls adding the filenames to the url we provide here.
     indexURL: `/blockly/js/pyodide/${version}/`,
-    // pre-load numpy as it will frequently be used, and our custom setup package.
+    // pre-load numpy as it will frequently be used, our custom setup package, and matplotlib
+    // which our custom setup package patches.
     packages: [
       'numpy',
       'matplotlib',
