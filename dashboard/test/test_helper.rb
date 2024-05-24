@@ -1,5 +1,5 @@
 require 'test_reporter'
-require 'rspec'
+require 'minitest-spec-rails'
 
 if defined? ActiveRecord
   ActiveRecord::Migration&.check_pending!
@@ -54,6 +54,7 @@ require 'testing/setup_all_and_teardown_all'
 require 'testing/lock_thread'
 require 'testing/transactional_test_case'
 require 'testing/capture_queries'
+require 'testing/rspec_mock'
 
 require 'parallel_tests/test/runtime_logger'
 
