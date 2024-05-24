@@ -1357,8 +1357,8 @@ class LevelTest < ActiveSupport::TestCase
     let(:level_is_localizable) {false}
 
     before do
-      allow(level).to receive(:custom?).and_return(level_is_custom)
-      allow(level).to receive(:should_localize?).and_return(level_is_localizable)
+      level.stubs(:custom?).returns(level_is_custom)
+      level.stubs(:should_localize?).returns(level_is_localizable)
 
       script_level.callouts = [script_level_callout] if script_level
     end

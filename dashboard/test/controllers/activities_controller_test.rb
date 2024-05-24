@@ -113,7 +113,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     }.merge options
   end
 
-  test "logged in milestone" do
+  def test_logged_in_milestone
     # do all the logging
     @controller.expects :log_milestone
 
