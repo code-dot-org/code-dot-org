@@ -455,7 +455,6 @@ describe('RubricContainer', () => {
       8. Calls refreshAiEvaluations
     */
     clock = sinon.useFakeTimers();
-    // const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
     stubFetchEvalStatusForUser(readyJson);
     stubFetchEvalStatusForAll(readyJsonAll);
     stubFetchTeacherEvaluations(noEvals);
@@ -535,7 +534,6 @@ describe('RubricContainer', () => {
     expect(wrapper.find('RubricContent').props().aiEvaluations).to.eql(
       mockAiEvaluations
     );
-    // sendEventSpy.restore();
   });
 
   it('shows general error message for status 1000', async () => {
