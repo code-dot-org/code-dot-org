@@ -2,6 +2,7 @@ import {StoryFn} from '@storybook/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 
+// @ts-expect-error Typescript error reduxStore
 import {reduxStore} from '@cdo/storybook/decorators';
 
 import manageStudents from '../manageStudents/manageStudentsRedux';

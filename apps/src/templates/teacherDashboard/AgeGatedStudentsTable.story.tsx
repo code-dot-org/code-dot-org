@@ -6,6 +6,7 @@ import manageStudents, {
   filterAgeGatedStudents,
   RowType,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
+// @ts-expect-error Typescript error reduxStore
 import {reduxStore} from '@cdo/storybook/decorators';
 
 import {UnconnectedAgeGatedStudentsTable} from './AgeGatedStudentsTable';
