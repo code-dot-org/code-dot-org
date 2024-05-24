@@ -57,10 +57,16 @@ export default function ProgrammingExpressionsTable({
           style={{margin: 0}}
         />
         <Button
+          disabled={!rowData.deletable}
           onClick={() => setItemToDelete(rowData)}
           text=""
           icon="trash"
           color="red"
+          title={
+            rowData.deletable
+              ? null
+              : 'Programming expressions referenced from lessons cannot be deleted.'
+          }
           style={{margin: 0}}
         />
       </div>

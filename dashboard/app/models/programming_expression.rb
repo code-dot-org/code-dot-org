@@ -252,6 +252,7 @@ class ProgrammingExpression < ApplicationRecord
       environmentId: programming_environment.id,
       environmentTitle: programming_environment.title,
       categoryName: programming_environment_category&.name,
+      deletable: lessons.empty?,
       editPath: edit_programming_expression_path(self)
     }
   end
