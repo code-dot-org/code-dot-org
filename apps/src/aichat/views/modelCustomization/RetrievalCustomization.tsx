@@ -103,7 +103,7 @@ const RetrievalCustomization: React.FunctionComponent = () => {
         })}
       </div>
       <div className={modelCustomizationStyles.footerButtonContainer}>
-        <UpdateButton allFieldsDisabled={isDisabled(visibility)} />
+        <UpdateButton allFieldsDisabled={isReadOnly} />
       </div>
     </div>
   );

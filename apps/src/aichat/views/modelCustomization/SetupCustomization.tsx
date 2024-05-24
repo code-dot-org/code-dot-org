@@ -67,9 +67,10 @@ const SetupCustomization: React.FunctionComponent = () => {
   const readOnlyWorkspace: boolean = useSelector(isReadOnlyWorkspace);
 
   const allFieldsDisabled =
-    isDisabled(temperature) &&
-    isDisabled(systemPrompt) &&
-    isDisabled(selectedModelId);
+    (isDisabled(temperature) &&
+      isDisabled(systemPrompt) &&
+      isDisabled(selectedModelId)) ||
+    readOnlyWorkspace;
 
   const renderChooseAndCompareModels = () => {
     return (
