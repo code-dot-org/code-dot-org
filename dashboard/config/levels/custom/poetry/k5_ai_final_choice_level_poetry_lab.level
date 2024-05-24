@@ -51,7 +51,7 @@
     ],
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-13T21:04:11.216+00:00\",\"changed\":[\"cloned from \\\"poetry_hoc_freeplay_ai_emmatest\\\"\"],\"cloned_from\":\"poetry_hoc_freeplay_ai_emmatest\"},{\"changed_at\":\"2024-05-13 21:05:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-13T21:04:11.216+00:00\",\"changed\":[\"cloned from \\\"poetry_hoc_freeplay_ai_emmatest\\\"\"],\"cloned_from\":\"poetry_hoc_freeplay_ai_emmatest\"},{\"changed_at\":\"2024-05-13 21:05:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-17 17:39:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\",\"default_poem\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

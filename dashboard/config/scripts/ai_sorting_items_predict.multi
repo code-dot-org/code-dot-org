@@ -3,7 +3,7 @@ question 'Look closely at the items on the left. How are they sorted?'
 wrong 'By shape', feedback: 'Incorrect. These items are sorted by color.'
 wrong 'By size', feedback: 'Incorrect. These items are sorted by color.'
 right 'By color', feedback: 'Correct!'
-wrong 'They are not sorted', feedback: 'Incorrect. These items are sorted by color.'
+wrong 'We need more training data to know.', feedback: 'Incorrect. These items are sorted by color.'
 
 
 allow_multiple_attempts true

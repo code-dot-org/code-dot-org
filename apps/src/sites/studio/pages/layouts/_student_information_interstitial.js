@@ -9,6 +9,7 @@ const userId = getScriptData('userId');
 const inSection = getScriptData('inSection');
 const previousStateValue = getScriptData('currentUsState');
 const selectedLanguage = getScriptData('selectedLanguage');
+const studentAge = getScriptData('studentAge');
 const forceStudentInterstitial = queryParams('forceStudentInterstitial');
 
 $(document).ready(function () {
@@ -23,11 +24,13 @@ $(document).ready(function () {
         user_id: userId,
         in_section: inSection,
         selected_language: selectedLanguage,
+        age: studentAge,
       });
   }
 
   form.on('ajax:success', () => {
     const newStateValue = $('#user_us_state').val();
+    const newAge = $('#user_age').val();
     if (newStateValue && (retrieveInfoForCap || forceStudentInterstitial))
       analyticsReporter.sendEvent(EVENTS.CAP_STATE_FORM_PROVIDED, {
         user_id: userId,
@@ -35,6 +38,7 @@ $(document).ready(function () {
         us_state: newStateValue,
         previous_us_state: previousStateValue,
         selected_language: selectedLanguage,
+        age: newAge ? newAge : studentAge,
       });
 
     retrieveInfoForCap || forceStudentInterstitial
@@ -48,6 +52,7 @@ $(document).ready(function () {
         user_id: userId,
         in_section: inSection,
         selected_language: selectedLanguage,
+        age: studentAge,
       });
   });
 });

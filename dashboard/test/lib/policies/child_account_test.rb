@@ -37,9 +37,14 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       [[:non_compliant_child, :not_U13], true],
       [[:non_compliant_child, :migrated_imported_from_clever], true],
       [[:non_compliant_child, :with_lti_auth], true],
-      [[:non_compliant_child, :with_pending_parent_permission, {created_at: '2023-06-30T23:59:59Z'}], true],
-      [[:non_compliant_child, :with_pending_parent_permission, {created_at: '2023-07-01T00:00:00Z'}], false],
+      [[:non_compliant_child, :with_pending_parent_permission, {created_at: '2023-06-30T23:59:59MST'}], true],
+      [[:non_compliant_child, :with_pending_parent_permission, {created_at: '2023-07-01T00:00:00MST'}], true],
+      [[:non_compliant_child, :with_pending_parent_permission, :before_p20_937_exception_date], true],
+      [[:non_compliant_child, :with_pending_parent_permission, :p20_937_exception_date], false],
       [[:non_compliant_child, :skip_validation, {birthday: nil}], true],
+      [[:non_compliant_child, :with_interpolated_co], true],
+      [[:non_compliant_child, :with_interpolated_colorado], true],
+      [[:non_compliant_child, :with_interpolated_wa], true],
     ]
     test_matrix.each do |traits, compliance|
       user = create(*traits)
@@ -49,7 +54,7 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     end
   end
 
-  test 'show_cap_state_modal??' do
+  test 'show_cap_state_modal?' do
     test_matrix = [
       {rollout: 10, user_id: 9, expected: true},
       {rollout: 10, user_id: 101, expected: true},
@@ -68,5 +73,37 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       actual = Policies::ChildAccount.show_cap_state_modal? user
       assert_equal test_case[:expected], actual, "Testcase #{test_case} failed"
     end
+  end
+
+  test 'user_predates_policy?' do
+    # [User traits, Expected result from compliant?]
+    test_matrix = [
+      [[:student], false],
+      [[:student, :U13], false],
+      [[:student, :U13, :unknown_us_region], false],
+      [[:non_compliant_child, {created_at: '2023-06-29T23:59:59MST'}], true],
+      [[:non_compliant_child, {created_at: '2024-06-29T23:59:59MST'}], false],
+      [[:non_compliant_child, {created_at: '2024-07-01T00:00:00MST'}], false],
+      [[:non_compliant_child, :migrated_imported_from_clever, {created_at: '2023-06-29T23:59:59MST'}], false],
+      [[:non_compliant_child, :migrated_imported_from_clever, {created_at: '2024-06-29T23:59:59MST'}], false],
+      [[:non_compliant_child, :migrated_imported_from_google_classroom, {created_at: '2023-06-29T23:59:59MST'}], true],
+      [[:non_compliant_child, :migrated_imported_from_google_classroom, {created_at: '2024-06-29T23:59:59MST'}], true],
+      [[:non_compliant_child, :with_google_authentication_option, {created_at: '2024-06-29T23:59:59MST'}], true],
+      # The following test cases address P20-937
+      [[:non_compliant_child, :before_p20_937_exception_date], true],
+      [[:non_compliant_child, :microsoft_v2_sso_provider, :before_p20_937_exception_date], true],
+      [[:non_compliant_child, :facebook_sso_provider, :before_p20_937_exception_date], true],
+      [[:non_compliant_child, :p20_937_exception_date], false],
+      [[:non_compliant_child, :microsoft_v2_sso_provider, :p20_937_exception_date], false],
+      [[:non_compliant_child, :facebook_sso_provider, :p20_937_exception_date], false],
+    ]
+    failures = []
+    test_matrix.each do |traits, compliance|
+      user = create(*traits)
+      actual = Policies::ChildAccount.user_predates_policy?(user)
+      failure_msg = "Expected user_predates_policy?(#{traits}) to be #{compliance} but it was #{actual}"
+      failures << failure_msg if actual != compliance
+    end
+    assert failures.empty?, failures.join("\n")
   end
 end

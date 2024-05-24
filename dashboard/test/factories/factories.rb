@@ -411,6 +411,21 @@ FactoryBot.define do
         birthday {Time.zone.today - 13.years}
       end
 
+      trait :with_interpolated_co do
+        us_state {'CO'}
+        country_code {nil}
+      end
+
+      trait :with_interpolated_wa do
+        us_state {'wa'}
+        country_code {nil}
+      end
+
+      trait :with_interpolated_colorado do
+        us_state {'Colorado'}
+        country_code {nil}
+      end
+
       trait :with_parent_permission do
         child_account_compliance_state {Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED}
         child_account_compliance_state_last_updated {DateTime.now}
@@ -426,7 +441,15 @@ FactoryBot.define do
         child_account_compliance_state_last_updated {DateTime.now}
       end
 
-      factory :non_compliant_child, traits: [:U13, :in_colorado] do
+      trait :before_p20_937_exception_date do
+        created_at {Policies::ChildAccount::CPA_CREATED_AT_EXCEPTION_DATE - 1.second}
+      end
+
+      trait :p20_937_exception_date do
+        created_at {Policies::ChildAccount::CPA_CREATED_AT_EXCEPTION_DATE}
+      end
+
+      factory :non_compliant_child, traits: [:U13, :in_colorado, :p20_937_exception_date] do
         factory :locked_out_child do
           child_account_compliance_state {Policies::ChildAccount::ComplianceState::LOCKED_OUT}
           child_account_compliance_state_last_updated {DateTime.now}
@@ -524,6 +547,23 @@ FactoryBot.define do
     trait :windowslive_sso_provider do
       sso_provider_with_token
       provider {'windowslive'}
+    end
+
+    trait :with_facebook_authentication_option do
+      after(:create) do |user|
+        create(:authentication_option,
+          user: user,
+          email: user.email,
+          hashed_email: user.hashed_email,
+          credential_type: AuthenticationOption::FACEBOOK,
+          authentication_id: SecureRandom.uuid,
+          data: {
+            oauth_token: 'some-facebook-token',
+            oauth_refresh_token: 'some-facebook-refresh-token',
+            oauth_token_expiration: '999999'
+          }.to_json
+        )
+      end
     end
 
     trait :with_google_authentication_option do

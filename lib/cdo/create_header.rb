@@ -31,6 +31,9 @@ class CreateHeader
     poetry_hoc: {
       image: "logo_poetry.png"
     },
+    music: {
+      url: CDO.studio_url("/s/music-intro-2024/reset")
+    },
   }.freeze
 
   # project info data can be inferred from the key, except when otherwise
@@ -56,6 +59,7 @@ class CreateHeader
       everyone_entries + applab_gamelab
 
     entries << "dance"
+    entries << "music"
 
     if options[:project_type] && !(entries.include? options[:project_type])
       entries.unshift(options[:project_type])

@@ -6,6 +6,8 @@
 - @page_title = t('activerecord.attributes.user.edit_header')
 - no_email = current_user.no_personal_email? || params[:noEmail] == 'true'
 
+= render_parental_permission_banner(current_user, request)
+
 = link_to :back do
   %i.fa.fa-chevron-left
   %span= t('crud.back')
@@ -155,7 +157,7 @@
             = t('activerecord.attributes.user.ai_rubrics_disabled')
       %div= form.submit t('crud.update'), id: 'edit-ai-settings', class: 'btn btn-warning'
 
-- if current_user.migrated? && !(Policies::Lti.lti? current_user)
+- if current_user.migrated?
   -# Mount point for React ManageLinkedAccounts component.
   %div#manage-linked-accounts
 

@@ -57,15 +57,6 @@ class Api::V1::SectionInstructorsController < Api::V1::JSONApiController
     resolve_invitation :declined
   end
 
-  private def resolve_invitation(new_status)
-    return head :bad_request unless @section_instructor.status == 'invited'
-
-    @section_instructor.status = new_status
-    @section_instructor.save!
-
-    render json: @section_instructor, serializer: Api::V1::SectionInstructorSerializer
-  end
-
   # GET /section_instructors/check
   # Checks if the given email address corresponds to a user that could be added
   # as an instructor. Optional section id parameter can be given to verify that
@@ -91,5 +82,14 @@ class Api::V1::SectionInstructorsController < Api::V1::JSONApiController
     end
 
     head :no_content
+  end
+
+  private def resolve_invitation(new_status)
+    return head :bad_request unless @section_instructor.status == 'invited'
+
+    @section_instructor.status = new_status
+    @section_instructor.save!
+
+    render json: @section_instructor, serializer: Api::V1::SectionInstructorSerializer
   end
 end

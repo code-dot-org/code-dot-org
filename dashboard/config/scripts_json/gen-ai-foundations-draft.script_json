@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "gen-ai-foundations-draft",
-    "serialized_at": "2024-04-18 19:46:35 UTC",
+    "serialized_at": "2024-05-16 22:29:51 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -440,6 +440,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-chatbot-all-features"
+        ],
         "progression": "Chatbot - All Features Available"
       },
       "bonus": false,
@@ -462,6 +465,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-panels-chatbot-overview"
+        ],
         "progression": "Panels Tool Levels"
       },
       "bonus": false,
@@ -484,6 +490,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-panels-retrieval-overview"
+        ],
         "progression": "Panels Tool Levels"
       },
       "bonus": false,
@@ -506,6 +515,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-panels-modelcard-overview"
+        ],
         "progression": "Panels Tool Levels"
       },
       "bonus": false,
@@ -528,6 +540,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-panels-presentation-overview"
+        ],
         "progression": "Panels Tool Levels"
       },
       "bonus": false,

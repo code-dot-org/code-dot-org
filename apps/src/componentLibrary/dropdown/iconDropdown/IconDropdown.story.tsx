@@ -275,6 +275,31 @@ GroupOfIconDropdownColors.args = {
       color: dropdownColors.black,
       disabled: false,
     },
+    {
+      name: 'default-dropdown-gray',
+      options: [
+        {
+          value: 'option-1',
+          label: 'Option 1',
+          icon: {iconName: 'check', iconStyle: 'solid'},
+        },
+        {
+          value: 'option-2',
+          label: 'Option 2',
+          icon: {iconName: 'xmark', iconStyle: 'solid'},
+        },
+      ],
+      selectedOption: {
+        value: 'option-1',
+        label: 'Option 1',
+        icon: {iconName: 'check', iconStyle: 'solid'},
+      },
+      labelText: 'Gray Dropdown',
+      onChange: args => null,
+      size: 'm',
+      color: dropdownColors.gray,
+      disabled: false,
+    },
   ],
 };
 export const GroupOfSizesOfIconDropdown = MultipleTemplate.bind({});

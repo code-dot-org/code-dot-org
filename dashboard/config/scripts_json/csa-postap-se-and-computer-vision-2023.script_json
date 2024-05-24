@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "csa-software-engineering",
-    "serialized_at": "2024-04-17 16:46:25 UTC",
+    "serialized_at": "2024-05-17 14:23:40 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4002,7 +4002,7 @@
     },
     {
       "name": "How AI Works: Chatbots and Large Language Models",
-      "url": "https://youtu.be/T45kEEBzrT8",
+      "url": "https://youtu.be/X-AWdfSFCHQ",
       "key": "how_ai_works_chatbots_and_large_language_models",
       "properties": {
         "audience": "Student",

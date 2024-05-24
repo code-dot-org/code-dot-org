@@ -434,6 +434,8 @@ const customInputTypes = {
       const config = {
         height: 8,
         width: 8,
+        fieldHeight: 42,
+        buttons: {randomize: false},
       };
       currentInputRow
         .appendField(inputConfig.label)
