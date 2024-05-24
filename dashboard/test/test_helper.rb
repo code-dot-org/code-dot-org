@@ -1,4 +1,5 @@
 require 'test_reporter'
+require 'rspec'
 
 if defined? ActiveRecord
   ActiveRecord::Migration&.check_pending!
