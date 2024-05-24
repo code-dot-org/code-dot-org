@@ -94,6 +94,7 @@ export const setUpWithLevel = createAsyncThunk(
       levelPropertiesPath: string;
       channelId?: string;
       userId?: string;
+      scriptLevelId?: string;
     },
     thunkAPI
   ) => {
@@ -159,7 +160,8 @@ export const setUpWithLevel = createAsyncThunk(
               ProjectManagerStorageType.REMOTE,
               payload.levelId,
               payload.userId,
-              payload.scriptId
+              payload.scriptId,
+              payload.scriptLevelId
             );
 
       // Only set the project manager and initiate load

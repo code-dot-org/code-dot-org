@@ -3,6 +3,11 @@ class CalloutsController < ApplicationController
   load_and_authorize_resource
   before_action :set_callout, only: [:show, :edit, :update, :destroy]
 
+  # this is to fix a ForbiddenAttributesError cancan issue
+  prepend_before_action do
+    params[:callout] &&= callout_params
+  end
+
   # GET /callouts
   # GET /callouts.json
   def index
@@ -71,10 +76,5 @@ class CalloutsController < ApplicationController
   # Never trust parameters from the scary internet, only allow the white list through.
   private def callout_params
     params.require(:callout).permit(:element_id, :localization_key)
-  end
-
-  # this is to fix a ForbiddenAttributesError cancan issue
-  prepend_before_action do
-    params[:callout] &&= callout_params
   end
 end

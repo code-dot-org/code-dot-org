@@ -354,10 +354,6 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     refute_equal new_tenure.school_info.school_name, old_tenure.school_info.school_name
   end
 
-  private def assert_same_date(expected, actual)
-    assert_equal expected.utc.to_date, actual.utc.to_date
-  end
-
   test 'confirmation, partial previous, blank, manual' do
     complete_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_COMPLETE})
     assert @teacher.update(school_info: complete_school_info)
@@ -553,6 +549,10 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert_equal 1, @teacher.user_school_infos.count
     assert tenure_d.school_info.complete?
     assert_equal @teacher.school_info.id, school_info.id
+  end
+
+  private def assert_same_date(expected, actual)
+    assert_equal expected.utc.to_date, actual.utc.to_date
   end
 
   private def partial_manual_school_info

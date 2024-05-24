@@ -151,6 +151,8 @@ export interface LevelProperties {
   // Exemplars
   exampleSolutions?: string[];
   exemplarSources?: MultiFileSource;
+  // For Teachers Only value
+  teacherMarkdown?: string;
 }
 
 // Level configuration data used by project-backed labs that don't require

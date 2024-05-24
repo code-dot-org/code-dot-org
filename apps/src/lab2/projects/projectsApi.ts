@@ -8,11 +8,15 @@ const rootUrl = '/projects/';
 export async function getChannelForLevel(
   levelId: number,
   scriptId?: number,
+  scriptLevelId?: string,
   userId?: string
 ): Promise<Response> {
   let requestString = rootUrl;
   if (scriptId !== undefined) {
     requestString += `script/${scriptId}/`;
+  }
+  if (scriptLevelId !== undefined) {
+    requestString += `script_level/${scriptLevelId}/`;
   }
   requestString += `level/${levelId}`;
   if (userId !== undefined) {
