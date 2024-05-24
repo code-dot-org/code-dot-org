@@ -111,7 +111,7 @@ sq-AL:
   carousel_heading_beginners: Tutoriale për Fillestarët
   carousel_heading_beyond_devices: Aplikacione për telefona dhe tableta
   carousel_heading_beyond_javascript: Mësoni JavaScript
-  carousel_heading_beyond_languages: Tutoriale në gjuhë të tjera programimi
+  carousel_heading_beyond_languages: Mësoni gjuhë të tjera programimi
   carousel_heading_devices: Aplikacione me tutoriale për telefona dhe tableta
   carousel_heading_domestic: Tutorialet vetëm në Anglisht
   carousel_heading_ide: Platformat popullore ndërmjet mësuesëve
@@ -119,7 +119,7 @@ sq-AL:
   carousel_heading_javascript: Tutorialet që mësojnë JavaScript
   carousel_heading_languages: Tutoriale në gjuhë të tjera programimi
   carousel_heading_robots: Mëso të programosh me robota
-  carousel_heading_university: Kurse online të universitetit
+  carousel_heading_university: Kurset online dhe shkollat
   carousel_heading_unplugged: Nuk ke pajisje ose internet? Provo shkencën kompjuterike
     'unplugged'
   carousel_heading_webpages: Mëso të bësh faqe interneti
@@ -286,7 +286,7 @@ sq-AL:
     rreth programimit.
   codesters_gradelevel: Moshat 12-14
   codesters_platformtext: Browserat modern të webit
-  compatibility_hide_this_warning: Mbaj të fshehtë këtë paralajmërim
+  compatibility_hide_this_warning: Fshihni këtë paralajmërim
   compatibility_unsupported_browser: Shfletuesi juaj nuk suportohet. Ju lutem përmirësoni
     versionin e shfletuesit në <a href='%{supported_browsers_url}', target='_blank'>
     një nga shfletuesit që suportohen</a>. Ju mund të provoni ta shikoni faqen, por
@@ -896,6 +896,7 @@ sq-AL:
   hoc2018_mc_video_1min: 1 minutë
   hoc2018_mc_video_2min: 2 minutë
   hoc2018_mc_video_5min: 5 minutë
+  hoc2018_mc_video_title_cs_is_everything: Shkenca kompjuterike po ndryshon gjithçka
   hoc2018_mc_video_title_inspire_girl: Frymëzo një vajzë
   hoc2018_mc_video_title_sports: Shtyni veten. Çdokush mund të mësojë.
   hoc2018_mc_videos_more: Më shumë <a href='%{inspiring_videos_playlist}'>video inspiruese</a>duke
@@ -1217,25 +1218,24 @@ sq-AL:
   lynda_beyond_shortdescription: Kurse programimi online me shumicë
   make_app: Bëj një aplikacion
   makeschool_beyond_gradelevel: Shkolla e mesme
-  makeschool_beyond_longdescription: A di pak ObjectiveC? Mëso të bësh një lojë për
-    iPhone në një orë! Ne do t'ju udhëheqim ju drejt procesit, te kodimit, të testimit,
-    dhe për të luajtur lojën tënde në shfletues dhe më pas shpërndaje atë në Facebook
-    për ta provuar shokët e tu! Nuk kërkohet eksperiencë e mëparshme në zhvillimin
-    e kodit të iPhone. Ti duhet të kesh njohuri se çfarë janë variablat, metodat dhe
-    objektet.
+  makeschool_beyond_longdescription: Dini ndonjë objektiveC? Mësoni të bëni një lojë
+    iPhone brenda një ore! Ne do t'ju udhëzojmë përmes procesit, për të koduar, testuar
+    dhe luajtur lojën tuaj tërësisht në shfletues dhe pastaj ta ndajmë atë në Facebook
+    që miqtë të provojnë! Nuk kërkohet asnjë përvojë paraprake e zhvillimit të iPhone.
+    Ju duhet të kuptoni se cilat janë variablat, metodat dhe objektet.
   makeschool_beyond_name: Ndërto një lojë për iPhone në shefletuesin tënd!
   makeschool_beyond_platformtext: Shfletuesit modern të web-it
   makeschool_beyond_shortdescription: Mëso të bësh një lojë për iPhone në një orë
   makeschool_gradelevel: Shkolla e mesme
-  makeschool_longdescription: Mëso të kodosh duke bërë një lojë iPhone duke përdorur
-    një gjuhë programimit të quajtur Swift! Krijo një lojë Pok&eacute;moni dhe shkruaj
-    kod për t'i mësuar përbindëshave të tu lëvizje të reja. Ti do të mësosh si të
-    përdorësh variabla, metoda dhe objekte për të ndihmuar përbindëshin tënd që të
-    fitoj!
+  makeschool_longdescription: Mësoni të kodoni duke bërë një lojë në iPhone duke përdorur
+    një gjuhë programimi krejt të re dhe miqësore për fillestarët të quajtur Swift!
+    Krijoni një lojë veprimi të frymëzuar nga Pok&eacute;mon dhe shkruani kod për
+    të mësuar përbindësit tuaj lëvizje të reja. Ju do të mësoni se si të përdorni
+    variablat, metodat dhe objektet për të ndihmuar përbindësin tuaj të fitojë!
   makeschool_name: Ndërto një lojë për iPhone në shefletuesin tënd!
   makeschool_platformtext: Shfletuesit modern të web-it
-  makeschool_shortdescription: Bëj një lojë për iPhone! Mëso të shkruash kod që t'i
-    mësosh monstrës tuaj lëvizjet e rea!
+  makeschool_shortdescription: Bëni një lojë në iPhone! Mësoni duke shkruar kod për
+    të mësuar përbindësin tuaj lëvizje të reja!
   mc_gradelevel: Moshat 4-104
   mc_longdescription: Përdor blloqe të kodimit t'i dërgosh Steve ose Alex në një aventurë
     nëpër këtë botë Minecraft.
@@ -1744,6 +1744,7 @@ sq-AL:
   video_2min: 2 minutë
   video_5min: 5 minutë
   video_title_chris_bosh: Chris Bosh në Shkencat Kompjuterike
+  video_title_cs_is_everything: Shkenca kompjuterike po ndryshon gjithçka
   video_title_draymond_green: Ora e Kodimit me Draymond Green
   video_title_inspire_girl: Frymëzo një vajzë
   video_title_marco_belinelli: Ora e Koditit me Marco Belinelli
