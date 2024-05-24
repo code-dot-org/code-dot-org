@@ -1,5 +1,10 @@
 import {StoryFn} from '@storybook/react';
 import React from 'react';
+import {Provider} from 'react-redux';
+
+import {reduxStore} from '@cdo/storybook/decorators';
+
+import manageStudents from '../manageStudents/manageStudentsRedux';
 
 import {UnconnectedAgeGatedStudentsModal} from './AgeGatedStudentsModal';
 
@@ -9,12 +14,14 @@ export default {
 };
 
 const Template: StoryFn = args => (
-  <UnconnectedAgeGatedStudentsModal
-    isOpen={true}
-    onClose={() => {}}
-    isLoadingStudents={false}
-    {...args}
-  />
+  <Provider store={reduxStore({manageStudents})}>
+    <UnconnectedAgeGatedStudentsModal
+      isOpen={true}
+      onClose={() => {}}
+      isLoadingStudents={false}
+      {...args}
+    />
+  </Provider>
 );
 export const ModalForAgeGatedStudents = Template.bind({});
 ModalForAgeGatedStudents.args = {

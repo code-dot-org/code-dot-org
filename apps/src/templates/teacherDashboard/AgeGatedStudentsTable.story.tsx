@@ -1,10 +1,12 @@
 import {StoryFn} from '@storybook/react';
 import React from 'react';
+import {Provider} from 'react-redux';
 
-import {
+import manageStudents, {
   filterAgeGatedStudents,
   RowType,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
+import {reduxStore} from '@cdo/storybook/decorators';
 
 import {UnconnectedAgeGatedStudentsTable} from './AgeGatedStudentsTable';
 
@@ -82,7 +84,9 @@ export default {
 };
 
 const Template: StoryFn = args => (
-  <UnconnectedAgeGatedStudentsTable {...args} />
+  <Provider store={reduxStore({manageStudents})}>
+    <UnconnectedAgeGatedStudentsTable {...args} />
+  </Provider>
 );
 export const TableForAgeGatedStudents = Template.bind({});
 TableForAgeGatedStudents.args = {
