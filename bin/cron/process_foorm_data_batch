@@ -1,0 +1,125 @@
+#!/usr/bin/env ruby
+
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
+# require_relative '../../lib/cdo/redshift'
+require_relative '../../dashboard/config/environment'
+require 'cdo/chat_client'
+
+# This script is responsible for reshaping and uploading Foorm data to Redshift.
+# It works via a series of steps:
+#
+# 1. Fetch a batch of data from the database.
+# 2. Reshape the data into a CSV format that is suitable for Redshift.
+# 3. Upload the reshaped data to S3.
+# 4. Import the reshaped data to a temp table in Redshift.
+# 5. Merge the temp table with the main table in Redshift.
+# 6. Cleanup the temp table and the CSV file from S3.
+
+# Batch Config - Approx total submissions is 300,000
+# MOCK_SUBMISSIONS_COUNT = 300000
+BATCH_SIZE = 30000 # aiming for about 10 batches
+BATCHES_PER_LOG = 2 # with progress reported every 2 batches
+
+# AWS Config
+AWS_ACCOUNT_ID = Aws::STS::Client.new.get_caller_identity.account
+REDSHIFT_S3_ACCESS_ROLE_ARN = "arn:aws:iam::#{AWS_ACCOUNT_ID}:role/redshift-s3"
+
+# S3 Config
+S3_BUCKET_NAME = 'cdo-data-sharing-internal'
+SUBMISSIONS_S3_CSV_NAME = 'submissions.csv'
+FORMS_S3_CSV_NAME = 'forms.csv'
+
+# Redshift Config
+SUBMISSIONS_REDSHIFT_TABLE_NAME = 'analysis_pii.foorm_submissions_reshaped'
+FORMS_REDSHIFT_TABLE_NAME = 'analysis.foorm_forms_reshaped'
+
+def main
+  log '*Process Foorm Data*'
+  client = nil #Aws::Redshift::Client.new
+  process_submissions(client)
+  # process_forms(client)
+  log 'Foorm data processing complete.'
+end
+
+def process_submissions(client)
+  # TODO: bad form to access the model here, alternative?
+  submissions_count = Pd::Foorm::Submission.count
+  submissions_count = MOCK_SUBMISSIONS_COUNT
+  log "Processing #{submissions_count} foorm submissions"
+
+  offset = 0
+
+  loop do
+    # reshaped_submissions_csv = mock_csv(offset, BATCH_SIZE, MOCK_SUBMISSIONS_COUNT)
+    reshaped_submissions_csv = Pd::Foorm::SubmissionAnalyticsParser.reshape_submissions_batch_into_csv(offset, BATCH_SIZE)
+    break if reshaped_submissions_csv.nil?
+
+    merge_csv_into_redshift_table(client, reshaped_submissions_csv, SUBMISSIONS_REDSHIFT_TABLE_NAME)
+
+    # log only after N batches to reduce noise
+    if offset % (BATCH_SIZE * BATCHES_PER_LOG) == 0
+      log "Processed #{offset}/#{submissions_count} submissions"
+    end
+
+    offset += BATCH_SIZE
+  rescue => exception
+    log "Error processing submissions #{offset + 1}-#{offset + BATCH_SIZE}: #{exception.message}"
+    break
+  end
+
+  log "Processed #{submissions_count}/#{submissions_count} submissions"
+end
+
+# TODO - remove mock_csv method
+def mock_csv(offset, batch_size, total_count)
+  return nil if offset >= total_count
+
+  csv = "submission_id,item_name,matrix_item_name,response_value,response_text\n"
+  (offset...(offset + batch_size)).each do |i|
+    break if i >= total_count
+    csv += "#{i},item_name,matrix_item_name,response_value,response_text\n"
+  end
+
+  sleep 1
+  csv
+end
+
+def process_forms(client)
+  # TODO: bad form to access the model here, alternative?
+  forms_count = Pd::Foorm::Form.count
+  log "Processing #{forms_count} foorm forms"
+  reshaped_forms_csv = Pd::Foorm::FormAnalyticsParser.reshape_all_forms_into_csv
+  merge_csv_into_redshift_table(reshaped_forms_csv, FORMS_REDSHIFT_TABLE_NAME)
+  log "Processed #{forms_count}/#{forms_count} forms"
+end
+
+def merge_csv_into_redshift_table(client, csv, table_name)
+  log "Pretending to merge CSV into Redshift table #{table_name}..."
+  # wait for 3 seconds
+  sleep 1
+
+  # Upload the reshaped data to S3, timestamped.
+  # TODO
+
+  # Import the reshaped data to a temp table in Redshift.
+  # TODO
+
+  # Merge the temp table with the main table in Redshift.
+  # TODO
+
+  # Cleanup the temp table and the CSV file from S3.
+  # TODO
+end
+
+def log(message)
+  puts message
+  ChatClient.message 'cron-daily', full_message
+end
+
+begin
+  main
+ensure
+  log 'Foorm data processing complete, possibly with errors.'
+end
