@@ -106,4 +106,50 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     end
     assert failures.empty?, failures.join("\n")
   end
+
+  describe '.locked_out?' do
+    let(:locked_out?) {Policies::ChildAccount.locked_out?(user)}
+
+    let(:user) {build_stubbed(:student)}
+
+    let(:user_lockout_date) {DateTime.now}
+    let(:user_predates_policy?) {true}
+
+    around do |test|
+      Timecop.freeze {test.call}
+    end
+
+    before do
+      Policies::ChildAccount.stubs(:lockout_date).with(user).returns(user_lockout_date)
+      Policies::ChildAccount.stubs(:user_predates_policy?).with(user).returns(user_predates_policy?)
+    end
+
+    it 'returns true' do
+      _(locked_out?).must_equal true
+    end
+
+    context 'when user does not have lockout date' do
+      let(:user_lockout_date) {nil}
+
+      it 'returns false' do
+        _(locked_out?).must_equal false
+      end
+    end
+
+    context 'when lockdown has not yet come' do
+      let(:user_lockout_date) {1.second.since}
+
+      it 'returns false' do
+        _(locked_out?).must_equal false
+      end
+
+      context 'if user does not predate policy' do
+        let(:user_predates_policy?) {false}
+
+        it 'returns true' do
+          _(locked_out?).must_equal true
+        end
+      end
+    end
+  end
 end

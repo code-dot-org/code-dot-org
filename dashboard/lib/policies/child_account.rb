@@ -94,6 +94,14 @@ class Policies::ChildAccount
     state_policy(user).try(:[], :lockout_date)
   end
 
+  # Checks if the user is locked out due to non-compliance with CAP.
+  def self.locked_out?(user)
+    user_lockout_date = lockout_date(user)
+    return false unless user_lockout_date
+
+    DateTime.now >= user_lockout_date || !user_predates_policy?(user)
+  end
+
   # Authentication option types which we consider to be "owned" by the school
   # the student attends because the school has admin control of the account.
   SCHOOL_OWNED_TYPES = [AuthenticationOption::CLEVER, AuthenticationOption::LTI_V1].freeze

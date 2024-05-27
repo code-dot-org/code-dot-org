@@ -16,6 +16,7 @@ $(document).ready(function () {
         new Date(Date.parse(element.getAttribute('data-delete-date')))
       }
       disallowedEmail={element.getAttribute('data-disallowed-email')}
+      isPrePolicyUser={JSON.parse(element.getAttribute('data-pre-policy-user'))}
     />,
     element
   );
