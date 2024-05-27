@@ -327,6 +327,23 @@ class UnconnectedMusicView extends React.Component {
         (AppConfig.getValue('show-sound-filters') === 'true' ||
           levelData?.showSoundFilters)
     );
+
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .incrementCounter('LevelLoad', [
+        {
+          name: 'Type',
+          value: this.props.isProjectLevel ? 'Project' : 'Level',
+        },
+        {
+          name: 'Mode',
+          value: this.props.isPlayView
+            ? 'Share'
+            : this.props.isReadOnlyWorkspace
+            ? 'View'
+            : 'Edit',
+        },
+      ]);
   }
 
   // Load the library and initialize the music player, if not already loaded.

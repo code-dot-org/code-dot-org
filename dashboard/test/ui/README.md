@@ -47,6 +47,17 @@ You can find the values for these settings in your saucelabs account settings (`
 
 If you want to run tests on Sauce Labs against localhost you need to set up your tunnel:
 
+#### Latest version of Sauce Connect Proxy CLI (5.1.0)
+1. Login to Sauce Labs and download the [tunnel](https://app.saucelabs.com/tunnels).
+2. Uncomment and fill out the values for the "saucelabs_" properties in `locals.yml`
+   - `saucelabs_tunnel_name` can be an arbitrary name, but it needs to match what you pass as an argument to `sc run...`
+3. (Re)start your dashboard-server `./bin/dashboard-server`.
+4. Start the sauce labs tunnel
+    - `sc run -u <saucelabs_username> -k <saucelabs_authkey> -r us-west --tunnel-name <saucelabs_tunnel_name>`
+5. Run your UI test
+    - `./runner.rb -l -c Chrome --html -f features/platform/policy_compliance.feature`
+        - The log output can be found in `log/*.html`
+#### Older versions of Sauce Connect Proxy CLI
 1. Login to Sauce Labs and download the [tunnel](https://app.saucelabs.com/tunnels).
    - If you work on a Linux EC2 instance:
      - Download the Linux version (will end in .tar.gz)

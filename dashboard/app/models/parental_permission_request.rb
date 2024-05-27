@@ -22,7 +22,17 @@ class ParentalPermissionRequest < ApplicationRecord
 
   before_create :set_uuid
 
+  after_create :log_cap_event
+
   def set_uuid
     self.uuid = SecureRandom.uuid
+  end
+
+  private def log_cap_event
+    if ParentalPermissionRequest.where(user: user).limit(2).count > 1
+      Services::ChildAccount::EventLogger.log_parent_email_update(user)
+    else
+      Services::ChildAccount::EventLogger.log_parent_email_submit(user)
+    end
   end
 end

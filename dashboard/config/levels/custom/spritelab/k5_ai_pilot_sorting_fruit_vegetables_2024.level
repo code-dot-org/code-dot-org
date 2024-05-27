@@ -1,6 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "published": true,
   "game_id": 64,
   "created_at": "2024-05-13T20:58:03.000Z",
   "level_num": "custom",
@@ -55,20 +54,21 @@
     "authored_hints": "[]",
     "skip_autosave": true,
     "standalone_app_name": "spritelab",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": [
+      "k5_ai_sorting_food_question"
+    ],
+    "preload_asset_list": null
   },
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-05-13T20:58:03.330+00:00\",\"changed\":[\"cloned from \\\"k5_ai_pilot_sorting_fruit_vegetables\\\"\"],\"cloned_from\":\"k5_ai_pilot_sorting_fruit_vegetables\"},{\"changed_at\":\"2024-05-14 18:25:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 18:25:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 18:30:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 18:31:46 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 18:39:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 18:40:33 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 18:40:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 19:26:01 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 19:37:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 19:41:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 19:42:57 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 19:43:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-17 17:40:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-20 22:37:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-20 22:40:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-20 22:42:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-20 22:43:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-20 22:44:18 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-20 22:50:49 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-20 22:54:21 +0000\",\"changed\":[\"toolbox_blocks\",\"encrypted_examples\",\"instructions_icon\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-20 22:55:23 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-21 20:40:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"callout_json\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-13T20:58:03.330+00:00\",\"changed\":[\"cloned from \\\"k5_ai_pilot_sorting_fruit_vegetables\\\"\"],\"cloned_from\":\"k5_ai_pilot_sorting_fruit_vegetables\"},{\"changed_at\":\"2024-05-14 18:25:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 18:25:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 18:30:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 18:31:46 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 18:39:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 18:40:33 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 18:40:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 19:26:01 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 19:37:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 19:41:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 19:42:57 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 19:43:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-17 17:40:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-20 22:37:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-20 22:40:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-20 22:42:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-20 22:43:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-20 22:44:18 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-20 22:50:49 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-20 22:54:21 +0000\",\"changed\":[\"toolbox_blocks\",\"encrypted_examples\",\"instructions_icon\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-20 22:55:23 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-21 20:40:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"callout_json\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-22 22:29:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-22 22:39:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-22 22:44:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-22 22:48:05 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml xmlns="https://developers.google.com/blockly/xml">
-        <block type="when_run" x="36" y="17">
+        <block type="when_run" deletable="false" x="36" y="17">
           <next>
             <block type="gamelab_setBackgroundImageAs">
               <field name="IMG">"foodfeaturevector_1"</field>
@@ -77,98 +77,154 @@
                   <field name="ANIMATION_NAME">"face_broc_1"</field>
                   <value name="LOCATION">
                     <block type="gamelab_location_picker">
-                      <field name="LOCATION">{"x":93,"y":42}</field>
+                      <field name="LOCATION">{"x":181,"y":265}</field>
                     </block>
                   </value>
                   <next>
                     <block type="gamelab_makeNewSpriteAnon">
-                      <field name="ANIMATION_NAME">"face_coffee"</field>
+                      <field name="ANIMATION_NAME">"face_broc_1"</field>
                       <value name="LOCATION">
                         <block type="gamelab_location_picker">
-                          <field name="LOCATION">{"x":139,"y":60}</field>
+                          <field name="LOCATION">{"x":141,"y":305}</field>
                         </block>
                       </value>
                       <next>
                         <block type="gamelab_makeNewSpriteAnon">
-                          <field name="ANIMATION_NAME">"face_corn"</field>
+                          <field name="ANIMATION_NAME">"face_broc_1"</field>
                           <value name="LOCATION">
                             <block type="gamelab_location_picker">
-                              <field name="LOCATION">{"x":176,"y":43}</field>
+                              <field name="LOCATION">{"x":148,"y":259}</field>
                             </block>
                           </value>
                           <next>
                             <block type="gamelab_makeNewSpriteAnon">
-                              <field name="ANIMATION_NAME">"face_banana_1"</field>
+                              <field name="ANIMATION_NAME">"face_coffee"</field>
                               <value name="LOCATION">
                                 <block type="gamelab_location_picker">
-                                  <field name="LOCATION">{"x":205,"y":58}</field>
+                                  <field name="LOCATION">{"x":177,"y":312}</field>
                                 </block>
                               </value>
                               <next>
                                 <block type="gamelab_makeNewSpriteAnon">
-                                  <field name="ANIMATION_NAME">"face_strawberry_1"</field>
+                                  <field name="ANIMATION_NAME">"face_coffee"</field>
                                   <value name="LOCATION">
                                     <block type="gamelab_location_picker">
-                                      <field name="LOCATION">{"x":241,"y":38}</field>
+                                      <field name="LOCATION">{"x":149,"y":308}</field>
                                     </block>
                                   </value>
                                   <next>
                                     <block type="gamelab_makeNewSpriteAnon">
-                                      <field name="ANIMATION_NAME">"face_pineapple"</field>
+                                      <field name="ANIMATION_NAME">"face_corn"</field>
                                       <value name="LOCATION">
                                         <block type="gamelab_location_picker">
-                                          <field name="LOCATION">{"x":276,"y":60}</field>
+                                          <field name="LOCATION">{"x":320,"y":139}</field>
                                         </block>
                                       </value>
                                       <next>
                                         <block type="gamelab_makeNewSpriteAnon">
-                                          <field name="ANIMATION_NAME">"face_icecreamcone"</field>
+                                          <field name="ANIMATION_NAME">"face_corn"</field>
                                           <value name="LOCATION">
                                             <block type="gamelab_location_picker">
-                                              <field name="LOCATION">{"x":313,"y":43}</field>
+                                              <field name="LOCATION">{"x":320,"y":139}</field>
                                             </block>
                                           </value>
                                           <next>
                                             <block type="gamelab_makeNewSpriteAnon">
-                                              <field name="ANIMATION_NAME">"face_burger"</field>
+                                              <field name="ANIMATION_NAME">"face_strawberry_1"</field>
                                               <value name="LOCATION">
                                                 <block type="gamelab_location_picker">
-                                                  <field name="LOCATION">{"x":360,"y":38}</field>
+                                                  <field name="LOCATION">{"x":188,"y":132}</field>
                                                 </block>
                                               </value>
                                               <next>
                                                 <block type="gamelab_makeNewSpriteAnon">
-                                                  <field name="ANIMATION_NAME">"face_watermelon"</field>
+                                                  <field name="ANIMATION_NAME">"face_strawberry_1"</field>
                                                   <value name="LOCATION">
                                                     <block type="gamelab_location_picker">
-                                                      <field name="LOCATION">{"x":359,"y":74}</field>
+                                                      <field name="LOCATION">{"x":331,"y":234}</field>
                                                     </block>
                                                   </value>
                                                   <next>
-                                                    <block type="gamelab_setProp">
-                                                      <field name="PROPERTY">"scale"</field>
-                                                      <value name="SPRITE">
-                                                        <block type="gamelab_getAllSprites"/>
-                                                      </value>
-                                                      <value name="VAL">
-                                                        <block type="math_number">
-                                                          <field name="NUM">50</field>
+                                                    <block type="gamelab_makeNewSpriteAnon">
+                                                      <field name="ANIMATION_NAME">"face_strawberry_1"</field>
+                                                      <value name="LOCATION">
+                                                        <block type="gamelab_location_picker">
+                                                          <field name="LOCATION">{"x":244,"y":183}</field>
                                                         </block>
                                                       </value>
                                                       <next>
-                                                        <block type="gamelab_setProp">
-                                                          <field name="PROPERTY">"scale"</field>
-                                                          <value name="SPRITE">
-                                                            <block type="gamelab_allSpritesWithAnimation">
-                                                            <field name="ANIMATION">"face_strawberry_1"</field>
-                                                            </block>
-                                                          </value>
-                                                          <value name="VAL">
-                                                            <block type="math_number">
-                                                            <field name="NUM">40</field>
+                                                        <block type="gamelab_makeNewSpriteAnon">
+                                                          <field name="ANIMATION_NAME">"face_icecreamcone"</field>
+                                                          <value name="LOCATION">
+                                                            <block type="gamelab_location_picker">
+                                                            <field name="LOCATION">{"x":335,"y":171}</field>
                                                             </block>
                                                           </value>
                                                           <next>
+                                                            <block type="gamelab_makeNewSpriteAnon">
+                                                            <field name="ANIMATION_NAME">"face_icecreamcone"</field>
+                                                            <value name="LOCATION">
+                                                            <block type="gamelab_location_picker">
+                                                            <field name="LOCATION">{"x":299,"y":133}</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="gamelab_makeNewSpriteAnon">
+                                                            <field name="ANIMATION_NAME">"face_icecreamcone"</field>
+                                                            <value name="LOCATION">
+                                                            <block type="gamelab_location_picker">
+                                                            <field name="LOCATION">{"x":280,"y":185}</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="gamelab_makeNewSpriteAnon">
+                                                            <field name="ANIMATION_NAME">"face_watermelon"</field>
+                                                            <value name="LOCATION">
+                                                            <block type="gamelab_location_picker">
+                                                            <field name="LOCATION">{"x":330,"y":319}</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="gamelab_makeNewSpriteAnon">
+                                                            <field name="ANIMATION_NAME">"face_watermelon"</field>
+                                                            <value name="LOCATION">
+                                                            <block type="gamelab_location_picker">
+                                                            <field name="LOCATION">{"x":325,"y":268}</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="gamelab_makeNewSpriteAnon">
+                                                            <field name="ANIMATION_NAME">"face_watermelon"</field>
+                                                            <value name="LOCATION">
+                                                            <block type="gamelab_location_picker">
+                                                            <field name="LOCATION">{"x":304,"y":219}</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="gamelab_setProp">
+                                                            <field name="PROPERTY">"scale"</field>
+                                                            <value name="SPRITE">
+                                                            <block type="gamelab_getAllSprites"/>
+                                                            </value>
+                                                            <value name="VAL">
+                                                            <block type="math_number">
+                                                            <field name="NUM">50</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="gamelab_setProp">
+                                                            <field name="PROPERTY">"scale"</field>
+                                                            <value name="SPRITE">
+                                                            <block type="gamelab_allSpritesWithAnimation">
+                                                            <field name="ANIMATION">"face_strawberry_1"</field>
+                                                            </block>
+                                                            </value>
+                                                            <value name="VAL">
+                                                            <block type="math_number">
+                                                            <field name="NUM">40</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
                                                             <block type="gamelab_setProp">
                                                             <field name="PROPERTY">"scale"</field>
                                                             <value name="SPRITE">
@@ -191,6 +247,20 @@
                                                             <field name="BEHAVIOR">draggable()</field>
                                                             </block>
                                                             </value>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
                                                             </block>
                                                             </next>
                                                             </block>

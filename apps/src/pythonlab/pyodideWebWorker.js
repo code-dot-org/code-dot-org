@@ -8,9 +8,10 @@ import {loadPyodide, version} from 'pyodide';
 
 async function loadPyodideAndPackages() {
   self.pyodide = await loadPyodide({
-    indexURL: `https://cdn.jsdelivr.net/pyodide/v${version}/full`,
-    // This URL is not working on prod, so we will use the CDN for now.
-    // indexURL: `/assets/js/pyodide/${version}/`,
+    // /assets does not serve unhashed files, so we load from /blockly instead,
+    // which does serve the unhashed files. We need to serve the unhashed files because
+    // pyodide controls adding the filenames to the url we provide here.
+    indexURL: `/blockly/js/pyodide/${version}/`,
     // pre-load numpy as it will frequently be used, and matplotlib as we patch it.
     packages: ['numpy', 'matplotlib'],
   });

@@ -119,6 +119,16 @@ Given(/^I am an organizer with started and completed courses$/) do
   GHERKIN
 end
 
+Given(/^I am a program manager with started and completed courses$/) do
+  random_name = "TestProgramManager" + SecureRandom.hex[0..9]
+  steps <<~GHERKIN
+    And I am a program manager named "#{random_name}" for regional partner "Test Partner"
+    And I create a workshop for course "CS Fundamentals" organized by "#{random_name}" with 5 people and start it
+    And I create a workshop for course "CS Fundamentals" organized by "#{random_name}" with 5 people and end it
+    And I create a workshop for course "CS Fundamentals" organized by "#{random_name}" with 5 people
+  GHERKIN
+end
+
 Given(/^I am a teacher who has just followed a workshop certificate link$/) do
   test_teacher_name = "TestTeacher - Certificate Test"
   require_rails_env

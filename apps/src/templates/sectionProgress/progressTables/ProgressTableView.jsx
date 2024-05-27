@@ -210,8 +210,12 @@ class ProgressTableView extends React.Component {
   syncScrollTop() {
     clearTimeout(this.timeout);
     this.timeout = setTimeout(() => {
-      this.setScrollState(this.contentView.bodyComponent);
-      this.setScrollState(this.studentList.bodyComponent);
+      if (this.contentView?.bodyComponent) {
+        this.setScrollState(this.contentView.bodyComponent);
+      }
+      if (this.studentList?.bodyComponent) {
+        this.setScrollState(this.studentList.bodyComponent);
+      }
     }, 200);
   }
 
