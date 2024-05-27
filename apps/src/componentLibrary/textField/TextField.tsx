@@ -41,6 +41,13 @@ export interface TextFieldProps extends AriaAttributes {
   size?: ComponentSizeXSToL;
 }
 
+// TODO:
+// * Add tests
+// * Add onChange +++
+// * Add disabled styles +++
+// * Add readonly styles +++
+// * Add captions
+
 /**
  * ### Production-ready Checklist:
  * * (?) implementation of component approved by design team;

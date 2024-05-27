@@ -27,6 +27,7 @@ export const DefaultTextField = SingleTemplate.bind({});
 DefaultTextField.args = {
   name: 'textfield_default',
   label: 'TextField Label',
+  onChange: () => null,
 };
 
 export const WithErrorTextField = SingleTemplate.bind({});
@@ -37,6 +38,7 @@ WithErrorTextField.args = {
     hasError: true,
     message: 'Error message',
   },
+  onChange: () => null,
 };
 
 export const WithHelperMessageTextField = SingleTemplate.bind({});
@@ -44,6 +46,7 @@ WithHelperMessageTextField.args = {
   name: 'textfield_helper_message',
   label: 'TextField Label',
   helperMessage: 'Helper message',
+  onChange: () => null,
 };
 
 export const WithHelperMessageAndIconTextField = SingleTemplate.bind({});
@@ -54,6 +57,7 @@ WithHelperMessageAndIconTextField.args = {
     iconName: 'info-circle',
   },
   helperMessage: 'Helper message',
+  onChange: () => null,
 };
 
 export const WithPlaceholderTextField = SingleTemplate.bind({});
@@ -61,6 +65,7 @@ WithPlaceholderTextField.args = {
   name: 'textfield_placeholder',
   label: 'TextField Label',
   placeholder: 'Placeholder',
+  onChange: () => null,
 };
 
 export const DisabledTextField = SingleTemplate.bind({});
@@ -68,6 +73,7 @@ DisabledTextField.args = {
   name: 'textfield_disabled',
   label: 'TextField Label',
   disabled: true,
+  onChange: () => null,
 };
 
 export const ReadOnlyTextField = SingleTemplate.bind({});
@@ -75,6 +81,7 @@ ReadOnlyTextField.args = {
   name: 'textfield_readonly',
   label: 'TextField Label',
   readonly: true,
+  onChange: () => null,
 };
 
 export const GroupOfTextFieldColors = MultipleTemplate.bind({});
@@ -84,16 +91,19 @@ GroupOfTextFieldColors.args = {
       name: 'textfield_color_black',
       label: 'Black TextField',
       color: 'black',
+      onChange: () => null,
     },
     {
       name: 'textfield_color_gray',
       label: 'Gray TextField',
       color: 'gray',
+      onChange: () => null,
     },
     {
       name: 'textfield_color_white',
       label: 'White TextField',
       color: 'white',
+      onChange: () => null,
     },
   ],
 };
@@ -105,21 +115,25 @@ GroupOfTextFieldSizes.args = {
       name: 'textfield_size_l',
       label: 'L TextField',
       size: 'l',
+      onChange: () => null,
     },
     {
       name: 'textfield_size_m',
       label: 'M TextField',
       size: 'm',
+      onChange: () => null,
     },
     {
       name: 'textfield_size_s',
       label: 'S TextField',
       size: 's',
+      onChange: () => null,
     },
     {
       name: 'textfield_size_xs',
       label: 'XS TextField',
       size: 'xs',
+      onChange: () => null,
     },
   ],
 };
