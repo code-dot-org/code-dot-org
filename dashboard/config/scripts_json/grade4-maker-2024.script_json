@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "grade4-maker",
-    "serialized_at": "2024-05-23 20:13:31 UTC",
+    "serialized_at": "2024-05-25 01:02:53 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -609,8 +609,21 @@
       }
     },
     {
-      "key": "56f634ce-f487-4f2f-aa9f-446ff935bde0",
+      "key": "5a561926-f993-4943-a971-768ef7614563",
       "position": 4,
+      "properties": {
+        "name": "[Optional] Extention"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5a561926-f993-4943-a971-768ef7614563",
+        "lesson.key": "Conditionals with Cards",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade4-maker-2024"
+      }
+    },
+    {
+      "key": "56f634ce-f487-4f2f-aa9f-446ff935bde0",
+      "position": 5,
       "properties": {
         "name": "Extended Learning"
       },
@@ -623,7 +636,7 @@
     },
     {
       "key": "25dd0a1f-5a24-47e0-a002-eab3088cba32",
-      "position": 5,
+      "position": 6,
       "properties": {
         "name": "Cross-Curricular Opportunity"
       },
@@ -745,8 +758,21 @@
       }
     },
     {
-      "key": "baf6109f-29f9-4cff-90ea-0498240582e8",
+      "key": "4a7fabe6-a8ef-4b88-a143-09d499d76ddf",
       "position": 1,
+      "properties": {
+        "name": "[Optional] Pre-requisite"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4a7fabe6-a8ef-4b88-a143-09d499d76ddf",
+        "lesson.key": "Songwriting",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "grade4-maker-2024"
+      }
+    },
+    {
+      "key": "baf6109f-29f9-4cff-90ea-0498240582e8",
+      "position": 2,
       "properties": {
         "duration": 20,
         "name": "Warm Up"
@@ -760,7 +786,7 @@
     },
     {
       "key": "513c22c1-d3f8-4926-830b-83de0d73b2f6",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 20,
         "name": "Main Activity"
@@ -774,7 +800,7 @@
     },
     {
       "key": "1637b8e6-aefe-4163-9e0c-8e04351daa13",
-      "position": 3,
+      "position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -786,7 +812,7 @@
     },
     {
       "key": "9a6d5865-517d-4199-ab72-3bfa130aee8b",
-      "position": 4,
+      "position": 5,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -800,7 +826,7 @@
     },
     {
       "key": "04dc2a5b-1944-47fb-aff6-1976d0fd5d54",
-      "position": 5,
+      "position": 6,
       "properties": {
         "duration": 5,
         "name": "Assessment"
@@ -814,7 +840,7 @@
     },
     {
       "key": "1229f508-cc38-40e0-876a-bfd4b64693b9",
-      "position": 6,
+      "position": 7,
       "properties": {
         "name": "Extended Learning"
       },
@@ -827,7 +853,7 @@
     },
     {
       "key": "31bfb12a-8dce-4e90-9238-187dc1151d6c",
-      "position": 7,
+      "position": 8,
       "properties": {
         "name": "Cross-Curricular Opportunity"
       },
@@ -1743,6 +1769,18 @@
       }
     },
     {
+      "key": "8514ceee-3644-46a5-8ec6-7d858f4473ef",
+      "position": 1,
+      "properties": {
+        "description": "This activity introduces the concepts of If/Then using the familiar fairytale of the Three Little Pigs. The story clearly demonstrates the \"if\" and \"then\" relationship that forms the core of conditional statements. By seeing the pigs make choices (building with different materials) and the resulting consequences (strong house vs. weak house), students grasp the concept in a real-world way. By creating a storyboard students will visualize the \"if\" and \"then\" scenarios. This visual aid helps solidify their understanding and provides a clear reference point when writing their own conditional statements with the micro:bit. It provides a fun and engaging context for them to learn about conditionals. They can connect with the characters and the cause-and-effect nature of the story.\n\n**Find the Three Little Pigs story <a href=\"https://youtu.be/CtP83CWOMwc?si=bVG-sYcYeaBTrAfL\" target=\"_blank\">here.</a>**",
+        "name": "Three Little Pigs"
+      },
+      "seeding_key": {
+        "activity_section.key": "8514ceee-3644-46a5-8ec6-7d858f4473ef",
+        "lesson_activity.key": "5a561926-f993-4943-a971-768ef7614563"
+      }
+    },
+    {
       "key": "00df7a97-5fb1-414c-ab17-118c80e3ed07",
       "position": 1,
       "properties": {
@@ -2015,6 +2053,18 @@
       "seeding_key": {
         "activity_section.key": "0c02ca25-e0c1-4cb7-97e4-a3fa05f1fb31",
         "lesson_activity.key": "13457777-07b5-48e7-ab34-105d4e62c8bd"
+      }
+    },
+    {
+      "key": "58de2e8a-c8ee-48ec-aed3-a915cf8f2b48",
+      "position": 1,
+      "properties": {
+        "description": "This activity helps students understand how physical devices use sensors to track data and solve problems. Students will create a sound meter to gauge the classroom's noise level. Each student will program their micro:bit to react to the volume in the classroom. Once the sound meters are created, you can challenge the whole class to see how long they can stay quiet enough to get all the smiley faces to show up.\n\nThis could also be an opportunity to have students explore the light sensor on the micro:bit and create an alarm clock that shines and plays music when the sun rises but when it is dark it turns into a night light.\n\n**Find the code for the Sound Meter project <a href=\"https://makecode.microbit.org/33947-11529-24623-19370\" target=\"_blank\">here.</a>**\n\n**Find the code for the Alarm Clock project <a href=\"https://makecode.microbit.org/_7x7AdjUL8Awf\" target=\"_blank\">here.</a>**",
+        "name": "Sound Meter and Alarm Clock"
+      },
+      "seeding_key": {
+        "activity_section.key": "58de2e8a-c8ee-48ec-aed3-a915cf8f2b48",
+        "lesson_activity.key": "4a7fabe6-a8ef-4b88-a143-09d499d76ddf"
       }
     },
     {
