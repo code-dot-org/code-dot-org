@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2023-11-28T21:22:08.000Z",
   "level_num": "custom",
@@ -64,7 +65,7 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "circuitPlayground",
     "disable_procedure_autopopulate": "false",
-    "long_instructions": "# Set Scale\r\n\r\nThe sound and light sensors range from 0-1023, but you can also use a [`setScale()`(#f78183)](/docs/applab/soundSensor.setScale/) block to adjust the range of the sensors. These blocks are usually added to the beginning of your code and only need to be used once.\r\n\r\n# Do This\r\n1) Set the range of the `soundSensor` to be between 0 and 100\r\n\t* Add a [`soundSensor.setScale()`(#f78183)](/docs/applab/soundSensor.setScale/) block to the top of your code.\r\n\t* Set the first parameter to `0` and the second parameter to `100`. This represents a range from 0-100\r\n    * ::: details [Show Me How]\r\n![](https://images.code.org/b93bf11fb197bdeb1be9b2911a567fc1-image-1648846423085.png)\r\n:::\r\n\r\n**Run Your Code!** You should notice the values now stay between 0 and 100 no matter how loud it is near the sound sensor.\r\n\r\n",
+    "long_instructions": "# Set Scale\r\n\r\nThe sound and light sensors range from 0-1023, but you can also use a [`setScale()`(#f78183)](/docs/applab/soundSensor.setScale/) block to adjust the range of the sensors. These blocks are usually added to the beginning of your code and only need to be used once.\r\n\r\n# Do This\r\n1) Set the range of the `soundSensor` to be between 0 and 100\r\n\t* Add a [`soundSensor.setScale()`(#f78183)](/docs/applab/soundSensor.setScale/) block to the top of your code.\r\n\t* Set the first parameter to `0` and the second parameter to `100`. This represents a range from 0-100\r\n    * ::: details [Show Me How]\r\n![](https://images.code.org/b93bf11fb197bdeb1be9b2911a567fc1-image-1648846423085.png)\r\n:::\r\n\r\n**Run Your Code!** You should notice the values now stay between 0 and 100.\r\n\r\n",
     "start_blocks": "//Add code for the soundSensor.setScale() block to the top of your code\r\n//Set the first parameter to 0 and the second parameter to 100, representing a range from 0-100\r\n\r\n\r\n// Set the text of \"sound_value\"\r\n// to the current sound sensor value\r\nsetText(\"soundValue\", soundSensor.value);\r\n",
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\" data-theme=\"classic\"><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 33px; overflow: hidden; overflow-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 320px; height: 71px; position: absolute; left: 2.22045e-16px; top: 20px; text-align: center; background-color: rgba(0, 0, 0, 0); text-rendering: optimizespeed; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Arial, Helvetica, sans-serif;\" id=\"soundLabel\">Sound Sensor Reading</label><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 100px; overflow: hidden; overflow-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 320px; height: 105px; position: absolute; left: 0px; top: 190px; text-align: center; background-color: rgba(0, 0, 0, 0); text-rendering: optimizespeed; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Arial, Helvetica, sans-serif;\" id=\"soundValue\">value</label></div></div>",
     "top_level_procedure_autopopulate": "false",
@@ -84,9 +85,8 @@
     "project_template_level_name": "CSD U6 - Sensors - SB - Data Event Template_2024",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T21:22:08.872+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - SB4.1_2023\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - SB4.1_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T21:22:08.872+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - SB4.1_2023\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - SB4.1_2023\"},{\"changed_at\":\"2024-05-24 17:39:39 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
