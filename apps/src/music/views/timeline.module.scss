@@ -16,6 +16,10 @@
     overflow-x: hidden;
   }
 
+  &VerticalScroll {
+    overflow-y: auto;
+  }
+
   .fullWidthOverlay {
     height: 100%;
     position: absolute;

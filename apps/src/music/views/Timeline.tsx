@@ -139,75 +139,82 @@ const Timeline: React.FunctionComponent = () => {
       id="timeline"
       className={classNames(
         moduleStyles.timeline,
-        isPlaying && moduleStyles.timelinePlaying
+        isPlaying && moduleStyles.timelinePlaying,
+        moduleStyles.timelineVerticalScroll
       )}
+      style={{height: 400}}
       onClick={onTimelineClick}
       ref={timelineRef}
     >
       <div
-        id="timeline-measures-background"
-        className={classNames(
-          moduleStyles.measuresBackground,
-          moduleStyles.fullWidthOverlay
-        )}
-        style={{width: paddingOffset + measuresToDisplay * barWidth}}
-        onClick={onMeasuresBackgroundClick}
+        id="timeline-contents"
+        className={classNames(moduleStyles.timelineContents)}
       >
-        &nbsp;
-      </div>
-      <div id="timeline-measures" className={moduleStyles.fullWidthOverlay}>
-        {arrayOfMeasures.map((measure, index) => {
-          return (
-            <div
-              key={index}
-              className={moduleStyles.barLineContainer}
-              style={{left: paddingOffset + index * barWidth}}
-            >
-              <div
-                className={classNames(
-                  moduleStyles.barNumber,
-                  measure === Math.floor(currentPlayheadPosition) &&
-                    moduleStyles.barNumberCurrent
-                )}
-                onClick={() => onMeasureNumberClick(measure)}
-              >
-                {measure}
-              </div>
-              <div
-                className={classNames(
-                  moduleStyles.barLine,
-                  measure === Math.floor(currentPlayheadPosition) &&
-                    moduleStyles.barLineCurrent
-                )}
-              />
-            </div>
-          );
-        })}
-      </div>
-
-      <div id="timeline-soundsarea" className={moduleStyles.soundsArea}>
-        {getBlockMode() === BlockMode.TRACKS ? (
-          <TimelineTrackEvents {...timelineElementProps} />
-        ) : getBlockMode() === BlockMode.SIMPLE2 ? (
-          <TimelineSimple2Events {...timelineElementProps} />
-        ) : (
-          <TimelineSampleEvents {...timelineElementProps} />
-        )}
-      </div>
-
-      <div id="timeline-playhead" className={moduleStyles.fullWidthOverlay}>
         <div
+          id="timeline-measures-background"
           className={classNames(
-            moduleStyles.playhead,
-            isPlaying && moduleStyles.playheadPlaying
+            moduleStyles.measuresBackground,
+            moduleStyles.fullWidthOverlay
           )}
-          style={{left: paddingOffset + playHeadOffsetInPixels}}
-          ref={playheadRef}
+          style={{width: paddingOffset + measuresToDisplay * barWidth}}
+          onClick={onMeasuresBackgroundClick}
         >
           &nbsp;
         </div>
+        <div id="timeline-measures" className={moduleStyles.fullWidthOverlay}>
+          {arrayOfMeasures.map((measure, index) => {
+            return (
+              <div
+                key={index}
+                className={moduleStyles.barLineContainer}
+                style={{left: paddingOffset + index * barWidth}}
+              >
+                <div
+                  className={classNames(
+                    moduleStyles.barNumber,
+                    measure === Math.floor(currentPlayheadPosition) &&
+                      moduleStyles.barNumberCurrent
+                  )}
+                  onClick={() => onMeasureNumberClick(measure)}
+                >
+                  {measure}
+                </div>
+                <div
+                  className={classNames(
+                    moduleStyles.barLine,
+                    measure === Math.floor(currentPlayheadPosition) &&
+                      moduleStyles.barLineCurrent
+                  )}
+                />
+              </div>
+            );
+          })}
+        </div>
+
+        <div id="timeline-soundsarea" className={moduleStyles.soundsArea}>
+          {getBlockMode() === BlockMode.TRACKS ? (
+            <TimelineTrackEvents {...timelineElementProps} />
+          ) : getBlockMode() === BlockMode.SIMPLE2 ? (
+            <TimelineSimple2Events {...timelineElementProps} />
+          ) : (
+            <TimelineSampleEvents {...timelineElementProps} />
+          )}
+        </div>
+
+        <div id="timeline-playhead" className={moduleStyles.fullWidthOverlay}>
+          <div
+            className={classNames(
+              moduleStyles.playhead,
+              isPlaying && moduleStyles.playheadPlaying
+            )}
+            style={{left: paddingOffset + playHeadOffsetInPixels}}
+            ref={playheadRef}
+          >
+            &nbsp;
+          </div>
+        </div>
+        {loopEnabled && <LoopMarkers loopStart={loopStart} loopEnd={loopEnd} />}
       </div>
-      {loopEnabled && <LoopMarkers loopStart={loopStart} loopEnd={loopEnd} />}
     </div>
   );
 };
