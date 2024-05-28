@@ -246,7 +246,6 @@ class CourseOffering < ApplicationRecord
       {
         id: id,
         display_name: any_versions_launched? ? localized_display_name : localized_display_name + ' *',
-        category: category,
         is_featured: is_featured?,
         participant_audience: course_versions.first.content_root.participant_audience,
         course_versions: course_versions.select {|cv| cv.course_assignable?(user)}.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
@@ -417,7 +416,7 @@ class CourseOffering < ApplicationRecord
   end
 
   def hoc?
-    category == 'hoc' || marketing_initiative == Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.hoc
+    marketing_initiative == Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.hoc
   end
 
   def pl_course?
