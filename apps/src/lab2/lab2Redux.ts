@@ -109,12 +109,10 @@ export const setUpWithLevel = createAsyncThunk(
       await cleanUpProjectManager();
       const isViewingExemplar = getAppOptionsViewingExemplar();
       const isEditingExemplar = getAppOptionsEditingExemplar();
-      const includeExemplar = isViewingExemplar || isEditingExemplar || false;
 
       // Load level properties if we have a levelPropertiesPath.
       const levelProperties = await loadLevelProperties(
-        payload.levelPropertiesPath,
-        includeExemplar
+        payload.levelPropertiesPath
       );
 
       Lab2Registry.getInstance()
@@ -449,12 +447,8 @@ function setProjectAndLevelData(
 }
 
 async function loadLevelProperties(
-  levelPropertiesPath: string,
-  includeExemplar: boolean
+  levelPropertiesPath: string
 ): Promise<LevelProperties> {
-  levelPropertiesPath = includeExemplar
-    ? `${levelPropertiesPath}?include_exemplar=true`
-    : levelPropertiesPath;
   const response = await HttpClient.fetchJson<LevelProperties>(
     levelPropertiesPath,
     {},
