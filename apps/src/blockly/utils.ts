@@ -11,8 +11,9 @@ import {DARK_THEME_SUFFIX, Themes} from './constants';
 import {ExtendedBlock} from './types';
 
 type xmlAttribute = string | null;
-type FieldInputType = [string, string | number, string | number];
-type Callback = () => void;
+type InputTuple = [string, string, number];
+type InputCallback = () => void;
+type InputArgs = [...(InputTuple | InputCallback)[], number];
 
 // Considers an attribute true only if it is explicitly set to 'true' (i.e. defaults to false if unset).
 export const FALSEY_DEFAULT = (attributeValue: xmlAttribute) =>
@@ -200,7 +201,7 @@ export function strip(code: string) {
  * Interpolate a message string, creating titles and inputs.
  * @param {string} msg The message string to parse.  %1, %2, etc. are symbols
  *     for value inputs.
- * @param {!Array.<string|number>|number} var_args A series of tuples or
+ * @param {!Array.<string|number>|number} inputArgs A series of tuples or
  *     callbacks that each specify the value inputs to create.  If a callback
  *     is provided, we defer rendering to that method. Otherwise, each tuple has
  *     three values:
@@ -214,36 +215,40 @@ export function strip(code: string) {
 export function interpolateMsg(
   this: ExtendedBlock,
   msg: string,
-  ...var_args: (FieldInputType | Callback | number)[]
+  ...inputArgs: InputArgs
 ): void {
-  const dummyAlign = var_args.pop();
+  // Ensure msg is a string.
+  if (typeof msg !== 'string') {
+    throw new Error('Assertion failed: msg is not a string');
+  }
+  // Remove the dummy alignment from the end of args.
+  const dummyAlign = inputArgs.pop();
   if (typeof dummyAlign !== 'number') {
     throw new Error('Assertion failed: dummyAlign is not a number');
   }
 
   const tokens = msg.split(/(%\d)/);
-  const usedArgs: boolean[] = new Array(var_args.length).fill(false);
-
+  const usedArgs: boolean[] = new Array(inputArgs.length).fill(false);
   for (let i = 0; i < tokens.length; i += 2) {
     const text = tokens[i].trim();
     const symbol = tokens[i + 1];
     if (symbol) {
+      // Value input.
       const digit = parseInt(symbol.charAt(1), 10);
-      const fieldInputType = var_args[digit - 1];
+      const inputArg = inputArgs[digit - 1];
 
-      if (typeof fieldInputType === 'function') {
+      if (typeof inputArg === 'function') {
         this.appendDummyInput().appendField(text);
-        fieldInputType();
-      } else if (Array.isArray(fieldInputType)) {
-        this.appendValueInput(fieldInputType[0])
-          //   .setCheck(fieldInputType[1])
-          //   .setAlign(fieldInputType[2])
+        inputArg();
+      } else if (Array.isArray(inputArg)) {
+        this.appendValueInput(inputArg[0])
+          .setCheck(inputArg[1])
+          .setAlign(inputArg[2])
           .appendField(text);
-      } else {
-        throw new Error(`Unexpected input type for argument ${digit}`);
       }
       usedArgs[digit - 1] = true; // Mark input as used.
     } else if (text) {
+      // Trailing dummy input.
       this.appendDummyInput().setAlign(dummyAlign).appendField(text);
     }
   }

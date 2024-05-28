@@ -203,12 +203,9 @@ export interface ExtendedInput extends Input {
 
 export interface ExtendedBlock extends Block {
   interpolateMsg: (
+    this: ExtendedBlock,
     msg: string,
-    ...var_args: (
-      | number
-      | [string, string | number, string | number]
-      | (() => void)
-    )[]
+    ...inputArgs: [...([string, string, number] | (() => void))[], number]
   ) => void;
   setStrictOutput: (isOutput: boolean, check: string | string[] | null) => void;
   // Blockly uses any for value.
