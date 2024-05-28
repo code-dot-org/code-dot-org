@@ -254,11 +254,12 @@ export function interpolateMsg(
   }
 
   // Verify that all inputs were used.
-  for (let i = 0; i < usedArgs.length; i++) {
-    if (!usedArgs[i]) {
-      const formattedMessage = `Input "${i + 1}" not used in message: "${msg}"`;
-      throw new Error(formattedMessage);
-    }
+  const unusedArgIndex = usedArgs.findIndex(used => !used);
+  if (unusedArgIndex !== -1) {
+    const formattedMessage = `Input "${
+      unusedArgIndex + 1
+    }" not used in message: "${msg}"`;
+    throw new Error(formattedMessage);
   }
 
   // Make the inputs inline unless there is only one input and no text follows it.
