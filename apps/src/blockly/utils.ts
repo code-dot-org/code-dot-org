@@ -198,7 +198,7 @@ export function strip(code: string) {
 }
 
 /**
- * Interpolate a message string, creating titles and inputs.
+ * Interpolate a message string, creating fields and inputs.
  * @param {string} msg The message string to parse.  %1, %2, etc. are symbols
  *     for value inputs.
  * @param {!Array.<string|number>|number} inputArgs A series of tuples or
@@ -207,7 +207,7 @@ export function strip(code: string) {
  *     three values:
  *       the input name
  *       its check type
- *       its title's alignment.
+ *       its field's alignment.
  *     The last parameter is not a tuple, but just an alignment for any trailing
  *     dummy input.  This last parameter is mandatory; there may be any number
  *     of tuples (though the number of tuples must match the symbols in msg).
