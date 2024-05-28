@@ -39,8 +39,8 @@ pyodideWorker.onmessage = event => {
     getStore().dispatch(setAndSaveProjectSource({source: message}));
     return;
   } else if (type === 'error') {
-    parseErrorMessage(message);
-    getStore().dispatch(appendSystemMessage(`Error: ${message}`));
+    let parsedMessage = parseErrorMessage(message);
+    getStore().dispatch(appendSystemMessage(`Error: ${parsedMessage}`));
     return;
   } else if (type === 'internal_error') {
     MetricsReporter.logError({
