@@ -7,13 +7,12 @@
     "focus-on-hardware3b-2024",
     "focus-on-hardware-post-survey-2024"
   ],
-  "published_state": "in_development",
+  "published_state": "preview",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "focus-on-hardware",
-    "has_numbered_units": true,
     "version_year": "2024"
   },
   "resources": [

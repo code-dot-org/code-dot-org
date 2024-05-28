@@ -2,7 +2,7 @@ name 'VPL-CSD-PILOT-S22-CI-CSD U5 test clean multi_CSD_PL_23_2024'
 
 display_name 'Check for Understanding'
 title 'Check for Understanding'
-question 'A class took a survey to decide where to go on a class trip, and they want to make a chart to see how popular each choice was. Will the need to make any changes to the data before creating the chart?'
+question 'A class took a survey to decide where to go on a class trip, and they want to make a chart to see how popular each choice was. Will they need to make any changes to the data before creating the chart?'
 wrong 'No, it is dishonest to change the data before putting it into a chart.'
 right 'Yes, they should correct misspellings and standardize names so the chart is more accurate.'
 wrong 'Yes, they should take out places that they think will not be good for the class trip.'
