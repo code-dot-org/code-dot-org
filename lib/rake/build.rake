@@ -11,6 +11,9 @@ namespace :build do
   desc 'Builds apps.'
   timed_task_with_logging :apps do
     Dir.chdir(apps_dir) do
+      commit_hash = apps_dir('build/commit_hash')
+
+      # This will never be hit in current configuration
       if apps_unchanged?
         ChatClient.log '<b>apps</b> unchanged since last build, skipping.'
         next
@@ -23,11 +26,6 @@ namespace :build do
       npm_target = CDO.optimize_webpack_assets ? 'build:dist' : 'build'
       RakeUtils.system "npm run #{npm_target}"
       File.write(commit_hash, calculate_apps_commit_hash)
-
-      if rack_env?(:staging) && DCDO.get('deploy_storybook', true)
-        ChatClient.log 'Deploying <b>storybook</b>...'
-        RakeUtils.system 'npm run storybook:deploy'
-      end
     end
   end
 
@@ -190,12 +188,14 @@ namespace :build do
     end
   end
 
+  apps_unchanged = apps_unchanged?
+
   tasks = []
-  tasks << :apps if CDO.build_apps
+  tasks << :apps if CDO.build_apps && !apps_unchanged
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
   tasks << :tools if rack_env?(:staging)
-  tasks << :storybook if rack_env?(:staging) && !apps_unchanged?
+  tasks << :storybook if rack_env?(:staging) && !apps_unchanged
   tasks << :i18n if CDO.build_i18n
   timed_task_with_logging all: tasks
 end
@@ -222,8 +222,10 @@ end
 
 # Only rebuild or deploy storybook if any of the apps_build_trigger_paths have changed since last build.
 def apps_unchanged?
-  commit_hash = apps_dir('build/commit_hash')
-  !RakeUtils.git_staged_changes?(*apps_build_trigger_paths) &&
-    File.exist?(commit_hash) &&
-    File.read(commit_hash) == calculate_apps_commit_hash
+  Dir.chdir(apps_dir) do
+    commit_hash = apps_dir('build/commit_hash')
+    return !RakeUtils.git_staged_changes?(*apps_build_trigger_paths) &&
+        File.exist?(commit_hash) &&
+        File.read(commit_hash) == calculate_apps_commit_hash
+  end
 end
