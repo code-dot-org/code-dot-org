@@ -1,11 +1,21 @@
-export function parseErrorMessage(errorMessage: string, ) {
+export function parseErrorMessage(errorMessage: string) {
   const errorLines = errorMessage.trim().split('\n');
   console.log({errorLines});
-  if (errorLines[0].startsWith('Traceback') && errorLines.length >= 8) {
-    const exceptionMessage = errorLines[7];
-    if (errorLines[6].match(/line \d+/)) {
-      const lineNumber = parseInt(errorLines[6].match(/line (\d+)/)![1]);
-      console.log({exceptionMessage, lineNumber});
-    }
+  const mainErrorRegex = /File "<exec>", line \d+, in <module>/;
+  let mainErrorLine = 0;
+  while (
+    mainErrorLine < errorLines.length &&
+    !mainErrorRegex.test(errorLines[mainErrorLine])
+  ) {
+    mainErrorLine++;
   }
+  if (mainErrorLine >= errorLines.length) {
+    return errorMessage;
+  }
+  const mainLineNumber = parseInt(
+    errorLines[mainErrorLine].match(/line (\d+)/)![1]
+  );
+  // TODO: translate message
+  // loop to get the stack trace
+  // then the error message will be after the stack trace
 }
