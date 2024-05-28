@@ -22,13 +22,13 @@ const paddingOffset = 10;
 // Start scrolling the playhead when it's more than this percentage of the way across the timeline area.
 const playheadScrollThreshold = 0.75;
 
-const getEventHeight = (numUniqueRows: number, availableHeight = 110) => {
+const getEventHeight = (numUniqueRows: number, availableHeight = 130) => {
   // While we might not actually have this many rows to show,
   // we will limit each row's height to the size that would allow
   // this many to be shown at once.
   const minVisible = 5;
 
-  const maxVisible = 10;
+  const maxVisible = 26;
 
   // We might not actually have this many rows to show, but
   // we will size the bars so that this many rows would show.
