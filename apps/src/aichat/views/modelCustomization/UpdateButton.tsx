@@ -5,11 +5,11 @@ import {Button} from '@cdo/apps/componentLibrary/button';
 import styles from '../model-customization-workspace.module.scss';
 
 interface UpdateButtonProps {
-  allFieldsDisabled: boolean;
+  isDisabledDefault: boolean;
 }
 
 const UpdateButton: React.FunctionComponent<UpdateButtonProps> = ({
-  allFieldsDisabled,
+  isDisabledDefault,
 }) => {
   const dispatch = useAppDispatch();
   const onUpdate = useCallback(
@@ -22,7 +22,7 @@ const UpdateButton: React.FunctionComponent<UpdateButtonProps> = ({
   return (
     <Button
       text="Update"
-      disabled={allFieldsDisabled || saveInProgress}
+      disabled={isDisabledDefault || saveInProgress}
       iconLeft={
         saveInProgress && currentSaveType === 'updateChatbot'
           ? {iconName: 'spinner', animationType: 'spin'}

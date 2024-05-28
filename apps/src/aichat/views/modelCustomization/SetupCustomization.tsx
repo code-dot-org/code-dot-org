@@ -168,7 +168,7 @@ const SetupCustomization: React.FunctionComponent = () => {
         )}
       </div>
       <div className={styles.footerButtonContainer}>
-        <UpdateButton allFieldsDisabled={allFieldsDisabled} />
+        <UpdateButton isDisabledDefault={allFieldsDisabled} />
       </div>
     </div>
   );

@@ -26,7 +26,7 @@ export enum Role {
   USER = 'user',
   SYSTEM = 'system',
   MODEL_UPDATE = 'update',
-  ERROR = 'error',
+  ERROR_NOTIFICATION = 'error_notification',
 }
 
 export enum ViewMode {

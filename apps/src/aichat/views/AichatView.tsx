@@ -71,10 +71,11 @@ const AichatView: React.FunctionComponent = () => {
     if (!projectManager) {
       return;
     }
+    // No save occurred
     projectManager.addSaveNoopListener(() => {
-      // No save occurred
       dispatch(endSave());
     });
+
     projectManager.addSaveSuccessListener(() => {
       dispatch(onSaveComplete());
     });

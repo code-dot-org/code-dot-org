@@ -77,7 +77,7 @@ const saveTypeToAnalyticsEvent: {[key in SaveType]: string} = {
   saveModelCard: EVENTS.SAVE_MODEL_CARD_INFO,
 };
 
-export type SaveType = 'updateChatbot' | 'publishModelCard' | 'saveModelCard';
+type SaveType = 'updateChatbot' | 'publishModelCard' | 'saveModelCard';
 
 export interface AichatState {
   // All user and assistant chat messages - includes too personal and inappropriate user messages.
@@ -269,7 +269,7 @@ export const onSaveFail = () => (dispatch: AppDispatch) => {
   dispatch(
     addChatMessage({
       id: getNewMessageId(),
-      role: Role.ERROR,
+      role: Role.ERROR_NOTIFICATION,
       chatMessageText: 'Error updating project. Please try again.',
       status: Status.ERROR,
       timestamp: getCurrentTime(),
@@ -401,13 +401,13 @@ const aichatSlice = createSlice({
     addChatMessage: (state, action: PayloadAction<ChatCompletionMessage>) => {
       state.chatMessages.push(action.payload);
     },
-    removeModelUpdateMessage: (state, action: PayloadAction<number>) => {
+    removeUpdateMessage: (state, action: PayloadAction<number>) => {
       const updatedMessages = [...state.chatMessages];
       const messageToRemovePosition = updatedMessages.findIndex(
         message => message.id === action.payload
       );
 
-      // Only allow removing individual messages that are model updates,
+      // Only allow removing individual messages that are model updates and error notifications,
       // as we want to retain user and bot message history
       // when requesting model responses within a chat session.
       // If we want to clear all history
@@ -415,7 +415,8 @@ const aichatSlice = createSlice({
       if (
         messageToRemovePosition < 0 ||
         (updatedMessages[messageToRemovePosition].role !== Role.MODEL_UPDATE &&
-          updatedMessages[messageToRemovePosition].role !== Role.ERROR)
+          updatedMessages[messageToRemovePosition].role !==
+            Role.ERROR_NOTIFICATION)
       ) {
         return;
       }
@@ -596,7 +597,7 @@ const {startSave} = aichatSlice.actions;
 registerReducers({aichat: aichatSlice.reducer});
 export const {
   addChatMessage,
-  removeModelUpdateMessage,
+  removeUpdateMessage,
   setNewChatSession,
   setChatSessionId,
   clearChatMessages,
