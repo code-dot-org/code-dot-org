@@ -8,8 +8,11 @@ import {getStore} from '@cdo/apps/redux';
 import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
 
 import {DARK_THEME_SUFFIX, Themes} from './constants';
+import {ExtendedBlock} from './types';
 
 type xmlAttribute = string | null;
+type FieldInputType = [string, string | number, string | number];
+type Callback = () => void;
 
 // Considers an attribute true only if it is explicitly set to 'true' (i.e. defaults to false if unset).
 export const FALSEY_DEFAULT = (attributeValue: xmlAttribute) =>
@@ -191,4 +194,68 @@ export function strip(code: string) {
       // Trim.
       .replace(/^\s+|\s+$/g, '')
   );
+}
+
+/**
+ * Interpolate a message string, creating titles and inputs.
+ * @param {string} msg The message string to parse.  %1, %2, etc. are symbols
+ *     for value inputs.
+ * @param {!Array.<string|number>|number} var_args A series of tuples or
+ *     callbacks that each specify the value inputs to create.  If a callback
+ *     is provided, we defer rendering to that method. Otherwise, each tuple has
+ *     three values:
+ *       the input name
+ *       its check type
+ *       its title's alignment.
+ *     The last parameter is not a tuple, but just an alignment for any trailing
+ *     dummy input.  This last parameter is mandatory; there may be any number
+ *     of tuples (though the number of tuples must match the symbols in msg).
+ */
+export function interpolateMsg(
+  this: ExtendedBlock,
+  msg: string,
+  ...var_args: (FieldInputType | Callback | number)[]
+): void {
+  const dummyAlign = var_args.pop();
+  if (typeof dummyAlign !== 'number') {
+    throw new Error('Assertion failed: dummyAlign is not a number');
+  }
+
+  const tokens = msg.split(/(%\d)/);
+  const usedArgs: boolean[] = new Array(var_args.length).fill(false);
+
+  for (let i = 0; i < tokens.length; i += 2) {
+    const text = tokens[i].trim();
+    const symbol = tokens[i + 1];
+    if (symbol) {
+      const digit = parseInt(symbol.charAt(1), 10);
+      const fieldInputType = var_args[digit - 1];
+
+      if (typeof fieldInputType === 'function') {
+        this.appendDummyInput().appendField(text);
+        fieldInputType();
+      } else if (Array.isArray(fieldInputType)) {
+        this.appendValueInput(fieldInputType[0])
+          //   .setCheck(fieldInputType[1])
+          //   .setAlign(fieldInputType[2])
+          .appendField(text);
+      } else {
+        throw new Error(`Unexpected input type for argument ${digit}`);
+      }
+      usedArgs[digit - 1] = true; // Mark input as used.
+    } else if (text) {
+      this.appendDummyInput().setAlign(dummyAlign).appendField(text);
+    }
+  }
+
+  // Verify that all inputs were used.
+  for (let i = 0; i < usedArgs.length; i++) {
+    if (!usedArgs[i]) {
+      const formattedMessage = `Input "${i + 1}" not used in message: "${msg}"`;
+      throw new Error(formattedMessage);
+    }
+  }
+
+  // Make the inputs inline unless there is only one input and no text follows it.
+  this.setInputsInline(!msg.match(/%1\s*$/));
 }
