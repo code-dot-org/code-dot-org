@@ -67,10 +67,6 @@ module Pd
     validate :day_for_subject
 
     before_validation :set_workshop_from_session, if: -> {pd_session_id_changed? && !pd_workshop_id_changed?}
-    def set_workshop_from_session
-      self.pd_workshop_id = pd_session&.pd_workshop_id
-    end
-
     # @override
     def self.attribute_mapping
       {
@@ -100,6 +96,10 @@ module Pd
 
     def self.unique_attributes
       [:user_id, :pd_session_id, :facilitator_id]
+    end
+
+    def set_workshop_from_session
+      self.pd_workshop_id = pd_session&.pd_workshop_id
     end
 
     private def day_for_subject

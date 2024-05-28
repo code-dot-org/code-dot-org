@@ -27,6 +27,22 @@ class Standard < ApplicationRecord
   # is deleted
   has_many :lessons_opportunity_standards, dependent: :destroy
 
+  # Loads/merges the data from a CSV into the Standards table.
+  # Can be used to overwrite the description and category of
+  # existing Standards and to create new Standards.
+  # Will not delete existing Standards.
+  def self.seed_all
+    Framework.all.each do |framework|
+      filename = "config/standards/#{framework.shortcode}_standards.csv"
+      CSV.foreach(filename, headers: true) do |row|
+        standard = Standard.find_or_initialize_by(framework: framework, shortcode: row['standard'])
+        standard.category = StandardCategory.find_by!(framework: framework, shortcode: row['category'])
+        standard.description = row['description']
+        standard.save! if standard.changed?
+      end
+    end
+  end
+
   def summarize
     {
       id: id,
@@ -67,21 +83,5 @@ class Standard < ApplicationRecord
 
   def localized_description
     Services::I18n::CurriculumSyncUtils.get_localized_property(self, :description, crowdin_key)
-  end
-
-  # Loads/merges the data from a CSV into the Standards table.
-  # Can be used to overwrite the description and category of
-  # existing Standards and to create new Standards.
-  # Will not delete existing Standards.
-  def self.seed_all
-    Framework.all.each do |framework|
-      filename = "config/standards/#{framework.shortcode}_standards.csv"
-      CSV.foreach(filename, headers: true) do |row|
-        standard = Standard.find_or_initialize_by(framework: framework, shortcode: row['standard'])
-        standard.category = StandardCategory.find_by!(framework: framework, shortcode: row['category'])
-        standard.description = row['description']
-        standard.save! if standard.changed?
-      end
-    end
   end
 end

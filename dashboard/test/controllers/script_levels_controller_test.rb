@@ -7,6 +7,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   include LevelsHelper  # Test the levels helper stuff here because it has to do w/ routes...
   include ScriptLevelsHelper
 
+  STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
+
   self.use_transactional_test_case = true
 
   setup_all do
@@ -1553,8 +1555,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     get_show_script_level_page(@script_level)
     assert_equal POST_MILESTONE_MODE.all, assigns(:view_options)[:post_milestone_mode]
   end
-
-  STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
 
   test "should present single available level for single-level scriptlevels" do
     script = create(:script)

@@ -51,6 +51,10 @@ class Policies::ChildAccount
   # The maximum number of times a student can resend a request to a parent.
   MAX_PARENT_PERMISSION_RESENDS = 3
 
+  # Authentication option types which we consider to be "owned" by the school
+  # the student attends because the school has admin control of the account.
+  SCHOOL_OWNED_TYPES = [AuthenticationOption::CLEVER, AuthenticationOption::LTI_V1].freeze
+
   # Is this user compliant with our Child Account Policy(cap)?
   # For students under-13, in Colorado, with a personal email login: we require
   # parent permission before the student can start using their account.
@@ -93,10 +97,6 @@ class Policies::ChildAccount
     return if compliant?(user)
     state_policy(user).try(:[], :lockout_date)
   end
-
-  # Authentication option types which we consider to be "owned" by the school
-  # the student attends because the school has admin control of the account.
-  SCHOOL_OWNED_TYPES = [AuthenticationOption::CLEVER, AuthenticationOption::LTI_V1].freeze
 
   # Does the user login using credentials they personally control?
   # For example, some accounts are created and owned by schools (Clever).

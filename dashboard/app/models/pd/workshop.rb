@@ -91,52 +91,6 @@ class Pd::Workshop < ApplicationRecord
   auto_strip_attributes :location_name, :location_address
 
   before_save :assign_regional_partner, if: -> {organizer_id_changed? && !regional_partner_id?}
-  def assign_regional_partner
-    self.regional_partner = organizer.try {|o| o.regional_partners.first}
-  end
-
-  def sessions_must_start_on_separate_days
-    if sessions.all(&:valid?)
-      unless sessions.map {|session| session.start.to_datetime.to_date}.uniq.length == sessions.length
-        errors.add(:sessions, 'must start on separate days.')
-      end
-    else
-      errors.add(:sessions, "must each have a valid start and end.")
-    end
-  end
-
-  def subject_must_be_valid_for_course
-    unless SUBJECTS[course]&.include?(subject) || (!SUBJECTS[course] && !subject)
-      errors.add(:subject, 'must be a valid option for the course.')
-    end
-  end
-
-  def not_funded_subjects_must_not_be_funded
-    if NOT_FUNDED_SUBJECTS.include?(subject) && funded?
-      errors.add :properties, 'Admin/Counselor - Welcome workshop must not be funded.'
-    end
-  end
-
-  def friday_institute_workshops_must_be_virtual
-    if friday_institute? && !virtual?
-      errors.add :properties, 'Friday Institute workshops must be virtual'
-    end
-  end
-
-  def virtual_only_subjects_must_be_virtual
-    if VIRTUAL_ONLY_SUBJECTS.include?(subject) && !virtual?
-      errors.add :properties, "Workshops with the subject #{subject} must be virtual"
-    end
-  end
-
-  # Whether enrollment in this workshop requires an application
-  def require_application?
-    courses = [COURSE_CSP, COURSE_CSD, COURSE_CSA]
-    subjects = ACADEMIC_YEAR_SUBJECTS.push(SUBJECT_SUMMER_WORKSHOP)
-    courses.include?(course) && subjects.include?(subject) &&
-      regional_partner && regional_partner.link_to_partner_application.blank?
-  end
-
   def self.organized_by(organizer)
     where(organizer_id: organizer.id)
   end
@@ -189,8 +143,6 @@ class Pd::Workshop < ApplicationRecord
     end
   end
 
-  scope :group_by_id, -> {group('pd_workshops.id')}
-
   # Filters by scheduled start date (date of first session)
   def self.scheduled_start_on_or_before(date)
     joins(:sessions).group_by_id.having('(DATE(MIN(start)) <= ?)', date)
@@ -200,14 +152,6 @@ class Pd::Workshop < ApplicationRecord
   def self.scheduled_start_on_or_after(date)
     joins(:sessions).group_by_id.having('(DATE(MIN(start)) >= ?)', date)
   end
-
-  scope :in_year, ->(year) do
-    scheduled_start_on_or_after(Date.new(year)).
-      scheduled_start_on_or_before(Date.new(year + 1))
-  end
-
-  # Filters to workshops that are scheduled on or after today and have not yet ended
-  scope :future, -> {scheduled_start_on_or_after(Time.zone.today).where(ended_at: nil)}
 
   # Orders by the scheduled start date (date of the first session),
   # @param :desc [Boolean] optional - when true, sort descending
@@ -317,89 +261,6 @@ class Pd::Workshop < ApplicationRecord
     current_scope.enrolled_in_by(teacher).nearest
   end
 
-  def course_name
-    COURSE_NAME_OVERRIDES[course] || course
-  end
-
-  def course_url
-    COURSE_URLS_MAP[course]
-  end
-
-  def course_key
-    COURSE_KEY_MAP[course]
-  end
-
-  def friendly_name
-    start_time = sessions.empty? ? '' : sessions.first.start.strftime('%m/%d/%y')
-    course_subject = subject ? "#{course} #{subject}" : course
-
-    # Limit the friendly name to 255 chars
-    name = "#{course_subject} workshop on #{start_time} at #{location_name}"
-    name += " in #{friendly_location}" if friendly_location.present?
-    name[0...255]
-  end
-
-  def friendly_subject
-    if subject && (subject.downcase.include?("workshop") || subject == SUBJECT_TEACHER_CON)
-      subject
-    elsif subject
-      "#{subject} Workshop"
-    else
-      nil
-    end
-  end
-
-  # E.g. "March 1-3, 2017" or "March 30 - April 2, 2017"
-  # Assume no workshops will span a new year
-  def friendly_date_range
-    sessions.first.start.month == sessions.last.start.month ?
-      "#{sessions.first.start.strftime('%B %-d')}-#{sessions.last.start.strftime('%-d, %Y')}" :
-      "#{sessions.first.start.strftime('%B %-d')} - #{sessions.last.start.strftime('%B %-d, %Y')}"
-  end
-
-  # Friendly location string is determined by:
-  # 1. Known variant of virtual or workshop is marked as virtual: 'Virtual Workshop'
-  # 2. has processed_location: use city, state
-  # 3. known variant of TBA or no location address at all: 'Location TBA'
-  # 4. unprocessable location that is not TBA: use user-entered string
-  def friendly_location
-    return 'Virtual Workshop' if location_address_virtual? || virtual?
-    return "#{location_city} #{location_state}" if processed_location
-    return 'Location TBA' if location_address_tba? || !location_address.presence
-    return location_address
-  end
-
-  # Returns date and location (only date if no location specified)
-  def date_and_location_name
-    date_and_location_string = sessions.any? ? friendly_date_range : 'Dates TBA'
-    date_and_location_string += ", #{friendly_location}" if friendly_location.present?
-    date_and_location_string += ' TeacherCon' if teachercon?
-    date_and_location_string
-  end
-
-  # Puts workshop in 'In Progress' state
-  def start!
-    raise 'Workshop must have at least one session to start.' if sessions.empty?
-
-    sessions.each(&:assign_code)
-    update!(started_at: Time.zone.now)
-
-    # return nil in case any callers are still expecting a section
-    nil
-  end
-
-  # Ends the workshop, or no-op if it's already ended.
-  # The return value is undefined.
-  def end!
-    return unless ended_at.nil?
-    self.ended_at = Time.zone.now
-    save!
-
-    # We want to send exit surveys now, but that needs to be done on the
-    # production-daemon machine, so we'll let the process_pd_workshop_emails
-    # cron job call the process_ends function below on that machine.
-  end
-
   # This is called by the process_pd_workshop_emails cron job which is run
   # on the production-daemon machine, and will send exit surveys to workshops
   # that have been ended in the last two days when they haven't already had
@@ -416,36 +277,6 @@ class Pd::Workshop < ApplicationRecord
       workshop.send_facilitator_post_surveys
       workshop.update!(processed_at: Time.zone.now)
     end
-  end
-
-  def state
-    return STATE_NOT_STARTED if started_at.nil?
-    return STATE_IN_PROGRESS if ended_at.nil?
-    STATE_ENDED
-  end
-
-  def year
-    return nil if sessions.empty?
-    sessions.order(:start).first.start.strftime('%Y')
-  end
-
-  # Returns the school year the summer workshop is preparing for, in
-  # the form "2019-2020", like application_year on Pd Applications.
-  # The school year runs 6/1-5/31.
-  # @see Pd::SharedApplicationConstants::APPLICATION_YEARS
-  def school_year
-    return nil if sessions.empty?
-
-    workshop_year = year
-    sessions.order(:start).first.start.month >= 6 ?
-      "#{workshop_year}-#{workshop_year.to_i + 1}" :
-      "#{workshop_year.to_i - 1}-#{workshop_year}"
-  end
-
-  # Suppress 3 and 10-day reminders for certain workshops
-  # The suppress_email? attribute gets set in the UI
-  def suppress_reminders?
-    (MUST_SUPPRESS_EMAIL_SUBJECTS.include? subject) || suppress_email?
   end
 
   def self.send_reminder_for_upcoming_in_days(days)
@@ -547,6 +378,175 @@ class Pd::Workshop < ApplicationRecord
     send_reminder_to_close
     send_follow_up_after_days(30)
     send_teacher_pre_work_csa
+  end
+
+  def assign_regional_partner
+    self.regional_partner = organizer.try {|o| o.regional_partners.first}
+  end
+
+  def sessions_must_start_on_separate_days
+    if sessions.all(&:valid?)
+      unless sessions.map {|session| session.start.to_datetime.to_date}.uniq.length == sessions.length
+        errors.add(:sessions, 'must start on separate days.')
+      end
+    else
+      errors.add(:sessions, "must each have a valid start and end.")
+    end
+  end
+
+  def subject_must_be_valid_for_course
+    unless SUBJECTS[course]&.include?(subject) || (!SUBJECTS[course] && !subject)
+      errors.add(:subject, 'must be a valid option for the course.')
+    end
+  end
+
+  def not_funded_subjects_must_not_be_funded
+    if NOT_FUNDED_SUBJECTS.include?(subject) && funded?
+      errors.add :properties, 'Admin/Counselor - Welcome workshop must not be funded.'
+    end
+  end
+
+  def friday_institute_workshops_must_be_virtual
+    if friday_institute? && !virtual?
+      errors.add :properties, 'Friday Institute workshops must be virtual'
+    end
+  end
+
+  def virtual_only_subjects_must_be_virtual
+    if VIRTUAL_ONLY_SUBJECTS.include?(subject) && !virtual?
+      errors.add :properties, "Workshops with the subject #{subject} must be virtual"
+    end
+  end
+
+  # Whether enrollment in this workshop requires an application
+  def require_application?
+    courses = [COURSE_CSP, COURSE_CSD, COURSE_CSA]
+    subjects = ACADEMIC_YEAR_SUBJECTS.push(SUBJECT_SUMMER_WORKSHOP)
+    courses.include?(course) && subjects.include?(subject) &&
+      regional_partner && regional_partner.link_to_partner_application.blank?
+  end
+
+  scope :group_by_id, -> {group('pd_workshops.id')}
+
+  scope :in_year, ->(year) do
+    scheduled_start_on_or_after(Date.new(year)).
+      scheduled_start_on_or_before(Date.new(year + 1))
+  end
+
+  # Filters to workshops that are scheduled on or after today and have not yet ended
+  scope :future, -> {scheduled_start_on_or_after(Time.zone.today).where(ended_at: nil)}
+
+  def course_name
+    COURSE_NAME_OVERRIDES[course] || course
+  end
+
+  def course_url
+    COURSE_URLS_MAP[course]
+  end
+
+  def course_key
+    COURSE_KEY_MAP[course]
+  end
+
+  def friendly_name
+    start_time = sessions.empty? ? '' : sessions.first.start.strftime('%m/%d/%y')
+    course_subject = subject ? "#{course} #{subject}" : course
+
+    # Limit the friendly name to 255 chars
+    name = "#{course_subject} workshop on #{start_time} at #{location_name}"
+    name += " in #{friendly_location}" if friendly_location.present?
+    name[0...255]
+  end
+
+  def friendly_subject
+    if subject && (subject.downcase.include?("workshop") || subject == SUBJECT_TEACHER_CON)
+      subject
+    elsif subject
+      "#{subject} Workshop"
+    else
+      nil
+    end
+  end
+
+  # E.g. "March 1-3, 2017" or "March 30 - April 2, 2017"
+  # Assume no workshops will span a new year
+  def friendly_date_range
+    sessions.first.start.month == sessions.last.start.month ?
+      "#{sessions.first.start.strftime('%B %-d')}-#{sessions.last.start.strftime('%-d, %Y')}" :
+      "#{sessions.first.start.strftime('%B %-d')} - #{sessions.last.start.strftime('%B %-d, %Y')}"
+  end
+
+  # Friendly location string is determined by:
+  # 1. Known variant of virtual or workshop is marked as virtual: 'Virtual Workshop'
+  # 2. has processed_location: use city, state
+  # 3. known variant of TBA or no location address at all: 'Location TBA'
+  # 4. unprocessable location that is not TBA: use user-entered string
+  def friendly_location
+    return 'Virtual Workshop' if location_address_virtual? || virtual?
+    return "#{location_city} #{location_state}" if processed_location
+    return 'Location TBA' if location_address_tba? || !location_address.presence
+    return location_address
+  end
+
+  # Returns date and location (only date if no location specified)
+  def date_and_location_name
+    date_and_location_string = sessions.any? ? friendly_date_range : 'Dates TBA'
+    date_and_location_string += ", #{friendly_location}" if friendly_location.present?
+    date_and_location_string += ' TeacherCon' if teachercon?
+    date_and_location_string
+  end
+
+  # Puts workshop in 'In Progress' state
+  def start!
+    raise 'Workshop must have at least one session to start.' if sessions.empty?
+
+    sessions.each(&:assign_code)
+    update!(started_at: Time.zone.now)
+
+    # return nil in case any callers are still expecting a section
+    nil
+  end
+
+  # Ends the workshop, or no-op if it's already ended.
+  # The return value is undefined.
+  def end!
+    return unless ended_at.nil?
+    self.ended_at = Time.zone.now
+    save!
+
+    # We want to send exit surveys now, but that needs to be done on the
+    # production-daemon machine, so we'll let the process_pd_workshop_emails
+    # cron job call the process_ends function below on that machine.
+  end
+
+  def state
+    return STATE_NOT_STARTED if started_at.nil?
+    return STATE_IN_PROGRESS if ended_at.nil?
+    STATE_ENDED
+  end
+
+  def year
+    return nil if sessions.empty?
+    sessions.order(:start).first.start.strftime('%Y')
+  end
+
+  # Returns the school year the summer workshop is preparing for, in
+  # the form "2019-2020", like application_year on Pd Applications.
+  # The school year runs 6/1-5/31.
+  # @see Pd::SharedApplicationConstants::APPLICATION_YEARS
+  def school_year
+    return nil if sessions.empty?
+
+    workshop_year = year
+    sessions.order(:start).first.start.month >= 6 ?
+      "#{workshop_year}-#{workshop_year.to_i + 1}" :
+      "#{workshop_year.to_i - 1}-#{workshop_year}"
+  end
+
+  # Suppress 3 and 10-day reminders for certain workshops
+  # The suppress_email? attribute gets set in the UI
+  def suppress_reminders?
+    (MUST_SUPPRESS_EMAIL_SUBJECTS.include? subject) || suppress_email?
   end
 
   # Updates enrollments with resolved users.

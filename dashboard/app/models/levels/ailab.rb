@@ -45,6 +45,16 @@ class Ailab < Level
     )
   end
 
+  # Attributes that are stored as JSON strings but should be passed through to the app as
+  # actual JSON objects.  You can list attributes in snake_case here for consistency, but this method
+  # returns camelCase properties because of where it's used in the pipeline.
+  def self.json_object_attrs
+    %w(
+      mode
+      dynamic_instructions
+    ).map {|x| x.camelize(:lower)}
+  end
+
   def localized_dynamic_instructions
     default_value = JSONValue.value(properties['dynamic_instructions'].presence)
     return default_value if default_value.nil?
@@ -96,15 +106,5 @@ class Ailab < Level
       level_prop.compact!
     end
     options.freeze
-  end
-
-  # Attributes that are stored as JSON strings but should be passed through to the app as
-  # actual JSON objects.  You can list attributes in snake_case here for consistency, but this method
-  # returns camelCase properties because of where it's used in the pipeline.
-  def self.json_object_attrs
-    %w(
-      mode
-      dynamic_instructions
-    ).map {|x| x.camelize(:lower)}
   end
 end

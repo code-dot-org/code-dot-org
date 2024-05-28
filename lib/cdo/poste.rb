@@ -203,6 +203,13 @@ class Deliverer
     'end of file reached'
   ].map(&:freeze).freeze
   RETRYABLE_ERROR_MESSAGE_MATCH = Regexp.new RETRYABLE_ERROR_MESSAGES.map {|m| "(#{m})"}.join('|')
+  POSTE_BASE_URL = (rack_env?(:production) ? 'https://' : 'http://') + CDO.poste_host
+
+  # lazily-populate this constant so we aren't trying to make database queries
+  # whenever this file gets required, just once it starts to get used.
+  MESSAGE_TEMPLATES = Hash.new do |h, key|
+    h[key] = POSTE_DB[:poste_messages].where(id: key).first
+  end
 
   def initialize(params)
     @params = params.dup
@@ -215,15 +222,8 @@ class Deliverer
     @smtp = smtp_connect unless rack_env?(:development)
   end
 
-  POSTE_BASE_URL = (rack_env?(:production) ? 'https://' : 'http://') + CDO.poste_host
   def poste_url(*parts)
     File.join(POSTE_BASE_URL, *parts)
-  end
-
-  # lazily-populate this constant so we aren't trying to make database queries
-  # whenever this file gets required, just once it starts to get used.
-  MESSAGE_TEMPLATES = Hash.new do |h, key|
-    h[key] = POSTE_DB[:poste_messages].where(id: key).first
   end
 
   def send(delivery)

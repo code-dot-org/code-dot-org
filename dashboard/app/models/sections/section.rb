@@ -106,6 +106,62 @@ class Section < ApplicationRecord
 
   before_validation :strip_emoji_from_name
 
+  # This list is duplicated as SECTION_LOGIN_TYPE in shared_constants.rb and should be kept in sync.
+  LOGIN_TYPES = [
+    LOGIN_TYPE_EMAIL = 'email'.freeze,
+    LOGIN_TYPE_PICTURE = 'picture'.freeze,
+    LOGIN_TYPE_WORD = 'word'.freeze,
+    LOGIN_TYPE_GOOGLE_CLASSROOM = 'google_classroom'.freeze,
+    LOGIN_TYPE_CLEVER = 'clever'.freeze,
+    LOGIN_TYPE_LTI_V1 = 'lti_v1'.freeze
+  ]
+  LOGIN_TYPES_OAUTH = [
+    LOGIN_TYPE_GOOGLE_CLASSROOM,
+    LOGIN_TYPE_CLEVER
+  ]
+
+  TYPES = [
+    # Insert non-workshop section types here.
+  ].concat(Pd::Workshop::SECTION_TYPES).freeze
+  validates_inclusion_of :section_type, in: TYPES, allow_nil: true
+
+  VALID_GRADES = [
+    SharedConstants::STUDENT_GRADE_LEVELS,
+    SharedConstants::PL_GRADE_VALUE
+  ].flatten.freeze
+
+  ADD_STUDENT_EXISTS = 'exists'.freeze
+  ADD_STUDENT_SUCCESS = 'success'.freeze
+  ADD_STUDENT_FAILURE = 'failure'.freeze
+  ADD_STUDENT_FORBIDDEN = 'forbidden'.freeze
+  ADD_STUDENT_FULL = 'full'.freeze
+  ADD_STUDENT_RESTRICTED = 'restricted'.freeze
+
+  CSA = 'csa'.freeze
+  CSA_PILOT_FACILITATOR = 'csa-pilot-facilitator'.freeze
+
+  # A section can have five co-teachers, plus the owner, for a total of 6
+  INSTRUCTOR_LIMIT = 6
+
+  def self.valid_login_type?(type)
+    LOGIN_TYPES.include? type
+  end
+
+  def self.valid_participant_type?(type)
+    Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.value?(type)
+  end
+
+  def self.valid_grades?(grades)
+    return false if grades.empty?
+    (grades - VALID_GRADES).empty?
+  end
+
+  # Sections can not be assigned courses where participants in the section
+  # can not be participants in the course
+  def self.can_be_assigned_course?(participant_audience, participant_type)
+    Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCES_BY_TYPE[participant_type].include? participant_audience
+  end
+
   # PL courses which are run with adults should be set up with teacher accounts so they must use
   # email logins
   def pl_sections_must_use_email_logins
@@ -152,57 +208,6 @@ class Section < ApplicationRecord
   end
 
   serialized_attrs %w(code_review_expires_at)
-
-  # This list is duplicated as SECTION_LOGIN_TYPE in shared_constants.rb and should be kept in sync.
-  LOGIN_TYPES = [
-    LOGIN_TYPE_EMAIL = 'email'.freeze,
-    LOGIN_TYPE_PICTURE = 'picture'.freeze,
-    LOGIN_TYPE_WORD = 'word'.freeze,
-    LOGIN_TYPE_GOOGLE_CLASSROOM = 'google_classroom'.freeze,
-    LOGIN_TYPE_CLEVER = 'clever'.freeze,
-    LOGIN_TYPE_LTI_V1 = 'lti_v1'.freeze
-  ]
-
-  LOGIN_TYPES_OAUTH = [
-    LOGIN_TYPE_GOOGLE_CLASSROOM,
-    LOGIN_TYPE_CLEVER
-  ]
-
-  TYPES = [
-    # Insert non-workshop section types here.
-  ].concat(Pd::Workshop::SECTION_TYPES).freeze
-  validates_inclusion_of :section_type, in: TYPES, allow_nil: true
-
-  VALID_GRADES = [
-    SharedConstants::STUDENT_GRADE_LEVELS,
-    SharedConstants::PL_GRADE_VALUE
-  ].flatten.freeze
-
-  ADD_STUDENT_EXISTS = 'exists'.freeze
-  ADD_STUDENT_SUCCESS = 'success'.freeze
-  ADD_STUDENT_FAILURE = 'failure'.freeze
-  ADD_STUDENT_FORBIDDEN = 'forbidden'.freeze
-  ADD_STUDENT_FULL = 'full'.freeze
-  ADD_STUDENT_RESTRICTED = 'restricted'.freeze
-
-  CSA = 'csa'.freeze
-  CSA_PILOT_FACILITATOR = 'csa-pilot-facilitator'.freeze
-
-  # A section can have five co-teachers, plus the owner, for a total of 6
-  INSTRUCTOR_LIMIT = 6
-
-  def self.valid_login_type?(type)
-    LOGIN_TYPES.include? type
-  end
-
-  def self.valid_participant_type?(type)
-    Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.value?(type)
-  end
-
-  def self.valid_grades?(grades)
-    return false if grades.empty?
-    (grades - VALID_GRADES).empty?
-  end
 
   # Override default script accessor to use our cache
   def script
@@ -291,12 +296,6 @@ class Section < ApplicationRecord
     end
 
     false
-  end
-
-  # Sections can not be assigned courses where participants in the section
-  # can not be participants in the course
-  def self.can_be_assigned_course?(participant_audience, participant_type)
-    Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCES_BY_TYPE[participant_type].include? participant_audience
   end
 
   # Adds the student to the section, restoring a previous enrollment to do so if possible.

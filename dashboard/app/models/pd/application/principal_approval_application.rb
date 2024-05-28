@@ -44,6 +44,34 @@ module Pd::Application
                primary_key: :application_guid, foreign_key: :application_guid
     after_create :update_teacher_app_status
 
+    def self.next_year(year)
+      current_year_index = APPLICATION_YEARS.index(year)
+      current_year_index.nil? ? nil : APPLICATION_YEARS[current_year_index + 1]
+    end
+
+    def self.create_placeholder_and_send_mail(teacher_application)
+      teacher_application.send_pd_application_email :admin_approval
+
+      Pd::Application::PrincipalApprovalApplication.create(
+        form_data: {}.to_json,
+        application_guid: teacher_application.application_guid
+      )
+    end
+
+    def self.options(year = APPLICATION_CURRENT_YEAR)
+      {
+        title: COMMON_OPTIONS[:title],
+        can_email_you: [YES, NO],
+        school_state: COMMON_OPTIONS[:state],
+        school_type: COMMON_OPTIONS[:school_type],
+        do_you_approve: [YES, NO, TEXT_FIELDS[:other_with_text]],
+      }
+    end
+
+    def self.filtered_labels(course, status = 'unreviewed')
+      ALL_LABELS
+    end
+
     # @return a valid year (see Pd::SharedApplicationConstants::APPLICATION_YEARS)
     def year
       application_year
@@ -51,11 +79,6 @@ module Pd::Application
 
     def update_teacher_app_status
       teacher_application.update!(status: 'unreviewed') if teacher_application.status == 'awaiting_admin_approval'
-    end
-
-    def self.next_year(year)
-      current_year_index = APPLICATION_YEARS.index(year)
-      current_year_index.nil? ? nil : APPLICATION_YEARS[current_year_index + 1]
     end
 
     # @override
@@ -80,30 +103,11 @@ module Pd::Application
       JSON.parse(form_data).empty?
     end
 
-    def self.create_placeholder_and_send_mail(teacher_application)
-      teacher_application.send_pd_application_email :admin_approval
-
-      Pd::Application::PrincipalApprovalApplication.create(
-        form_data: {}.to_json,
-        application_guid: teacher_application.application_guid
-      )
-    end
-
     # @override
     def check_idempotency
       existing_application = Pd::Application::PrincipalApprovalApplication.find_by(application_guid: application_guid)
 
       (!existing_application || existing_application.placeholder?) ? nil : existing_application
-    end
-
-    def self.options(year = APPLICATION_CURRENT_YEAR)
-      {
-        title: COMMON_OPTIONS[:title],
-        can_email_you: [YES, NO],
-        school_state: COMMON_OPTIONS[:state],
-        school_type: COMMON_OPTIONS[:school_type],
-        do_you_approve: [YES, NO, TEXT_FIELDS[:other_with_text]],
-      }
     end
 
     def dynamic_required_fields(hash)
@@ -132,10 +136,6 @@ module Pd::Application
           end
         end
       end
-    end
-
-    def self.filtered_labels(course, status = 'unreviewed')
-      ALL_LABELS
     end
 
     def additional_text_fields

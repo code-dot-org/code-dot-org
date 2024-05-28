@@ -29,14 +29,6 @@ class SingleSignOn
     raise "sso_url not implemented on class, be sure to set it on instance"
   end
 
-  def sso_secret
-    @sso_secret || self.class.sso_secret
-  end
-
-  def sso_url
-    @sso_url || self.class.sso_url
-  end
-
   def self.parse(payload, sso_secret = nil)
     sso = new
     sso.sso_secret = sso_secret if sso_secret
@@ -74,6 +66,14 @@ class SingleSignOn
     end
 
     sso
+  end
+
+  def sso_secret
+    @sso_secret || self.class.sso_secret
+  end
+
+  def sso_url
+    @sso_url || self.class.sso_url
   end
 
   def custom_fields

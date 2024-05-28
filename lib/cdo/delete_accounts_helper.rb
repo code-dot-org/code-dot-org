@@ -15,15 +15,6 @@ class DeleteAccountsHelper
     Weblab
   ).freeze
 
-  def sql_query_to_anonymize_field(table_name, new_attribute_values, selector)
-    set = "SET " + new_attribute_values.map {|k, v| "`#{table_name}`.`#{k}` = #{v}"}.join(', ')
-    new_attribute_values.each do |k, v|
-      set << ", `#{table_name}`.`#{k}` = #{v}"
-    end
-    where = "WHERE `#{table_name}`.`#{selector.keys[0]}` = #{selector.values[0]}"
-    "UPDATE `#{table_name}` #{set} #{where}"
-  end
-
   # @param [IO|StringIO] log to record granular activity while deleting accounts.
   # @param [Boolean] bypass_safety_constraints to purge accounts without the
   #   usual checks on account type, row limits, etc.  For use only when an
@@ -37,6 +28,15 @@ class DeleteAccountsHelper
 
     @bypass_safety_constraints = bypass_safety_constraints
     raise ArgumentError, 'bypass_safety_constraints must be boolean' unless [true, false].include? @bypass_safety_constraints
+  end
+
+  def sql_query_to_anonymize_field(table_name, new_attribute_values, selector)
+    set = "SET " + new_attribute_values.map {|k, v| "`#{table_name}`.`#{k}` = #{v}"}.join(', ')
+    new_attribute_values.each do |k, v|
+      set << ", `#{table_name}`.`#{k}` = #{v}"
+    end
+    where = "WHERE `#{table_name}`.`#{selector.keys[0]}` = #{selector.values[0]}"
+    "UPDATE `#{table_name}` #{set} #{where}"
   end
 
   # Deletes all project-backed progress associated with a user.

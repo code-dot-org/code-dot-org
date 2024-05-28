@@ -68,6 +68,26 @@ module Cdo
     end
 
     class StackSecret < Secret
+      # Get the CloudFormation Stack Name that the EC2 Instance this code is executing on belongs to.
+      # @return [String]
+      def self.current_stack_name
+        ec2_instance_id = AWS::EC2.instance_id
+        return unless ec2_instance_id
+
+        region = AWS::EC2.region
+        return unless region
+
+        ec2_client = Aws::EC2::Client.new(region: region)
+        ec2_client.
+          describe_tags({filters: [{name: "resource-id", values: [ec2_instance_id]}]}).
+          tags.
+          select {|tag| tag.key == 'aws:cloudformation:stack-name'}.
+          first.
+          value
+      rescue StandardError
+        nil
+      end
+
       # This attribute is used by the Cdo::Secrets.required (and require!) methods to determine which AWS Secret to get.
       def key
         stack_specific_secret_path
@@ -101,26 +121,6 @@ module Cdo
       def stack_specific_secret_path
         @stack ||= Cdo::SecretsConfig::StackSecret.current_stack_name
         @stack ? "CfnStack/#{@stack}/#{secret_key}" : nil
-      end
-
-      # Get the CloudFormation Stack Name that the EC2 Instance this code is executing on belongs to.
-      # @return [String]
-      def self.current_stack_name
-        ec2_instance_id = AWS::EC2.instance_id
-        return unless ec2_instance_id
-
-        region = AWS::EC2.region
-        return unless region
-
-        ec2_client = Aws::EC2::Client.new(region: region)
-        ec2_client.
-          describe_tags({filters: [{name: "resource-id", values: [ec2_instance_id]}]}).
-          tags.
-          select {|tag| tag.key == 'aws:cloudformation:stack-name'}.
-          first.
-          value
-      rescue StandardError
-        nil
       end
     end
 

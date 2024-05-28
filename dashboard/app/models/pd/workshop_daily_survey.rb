@@ -53,18 +53,6 @@ module Pd
       }
     end
 
-    # @override
-    def map_answers_to_attributes
-      super
-
-      # Make sure we have a day, in case the form doesn't provide it
-      set_day_from_form_id if day.nil?
-    end
-
-    def set_day_from_form_id
-      self.day = self.class.get_day_for_subject_and_form_id(pd_workshop.subject, form_id)
-    end
-
     def self.get_form_id_for_subjects_and_day(subjects, day)
       subjects.filter_map do |subject|
         get_form_id_for_subject_and_day subject, day
@@ -93,6 +81,18 @@ module Pd
 
     def self.unique_attributes
       [:user_id, :pd_workshop_id, :day]
+    end
+
+    # @override
+    def map_answers_to_attributes
+      super
+
+      # Make sure we have a day, in case the form doesn't provide it
+      set_day_from_form_id if day.nil?
+    end
+
+    def set_day_from_form_id
+      self.day = self.class.get_day_for_subject_and_form_id(pd_workshop.subject, form_id)
     end
 
     private def day_for_subject

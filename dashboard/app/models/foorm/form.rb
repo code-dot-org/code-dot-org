@@ -27,12 +27,6 @@ class Foorm::Form < ApplicationRecord
 
   after_commit :write_form_to_file
 
-  # We have a uniqueness constraint on form name and version for this table.
-  # This key format is used elsewhere in Foorm to uniquely identify a form.
-  def key
-    "#{name}.#{version}"
-  end
-
   def self.setup
     # Seed all forms inside of a transaction, such that all forms are imported/updated successfully
     # or none at all.
@@ -61,30 +55,6 @@ class Foorm::Form < ApplicationRecord
       rescue JSON::ParserError
         raise format('failed to parse %s', full_name)
       end
-    end
-  end
-
-  def validate_questions
-    errors_arr = Foorm::Form.validate_questions(JSON.parse(questions))
-    errors_arr.each {|error| errors.add(:questions, error)}
-  end
-
-  def validate_published
-    parsed_questions = JSON.parse(questions)
-
-    if !parsed_questions['published'].nil? && (published != parsed_questions['published'])
-      errors.add(:questions, 'Mismatch between published state in questions and published state in model')
-    end
-  end
-
-  def write_form_to_file
-    if write_to_file? && saved_changes?
-      file_path = Rails.root.join("config/foorm/forms/#{name}.#{version}.json")
-      file_directory = File.dirname(file_path)
-
-      FileUtils.mkdir_p(file_directory)
-
-      File.write(file_path, questions)
     end
   end
 
@@ -209,6 +179,36 @@ class Foorm::Form < ApplicationRecord
 
   def self.get_matrix_question_id(parent_question_id, sub_question_id)
     parent_question_id + '-' + sub_question_id
+  end
+
+  # We have a uniqueness constraint on form name and version for this table.
+  # This key format is used elsewhere in Foorm to uniquely identify a form.
+  def key
+    "#{name}.#{version}"
+  end
+
+  def validate_questions
+    errors_arr = Foorm::Form.validate_questions(JSON.parse(questions))
+    errors_arr.each {|error| errors.add(:questions, error)}
+  end
+
+  def validate_published
+    parsed_questions = JSON.parse(questions)
+
+    if !parsed_questions['published'].nil? && (published != parsed_questions['published'])
+      errors.add(:questions, 'Mismatch between published state in questions and published state in model')
+    end
+  end
+
+  def write_form_to_file
+    if write_to_file? && saved_changes?
+      file_path = Rails.root.join("config/foorm/forms/#{name}.#{version}.json")
+      file_directory = File.dirname(file_path)
+
+      FileUtils.mkdir_p(file_directory)
+
+      File.write(file_path, questions)
+    end
   end
 
   # For a given Form, this method will produce a CSV of all responses

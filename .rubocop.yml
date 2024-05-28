@@ -38,6 +38,12 @@ CustomCops/OnlyAllowedCharacters:
   Include:
     - '**/*_mailer.rb'
 
+# We want to enable this optional rule, but because of the high number of
+# existing violations in our codebase, we plan to fix as many of those
+# violations as possible in advance of actually enabling the rule.
+#Layout/ClassStructure:
+#  Enabled: true
+
 Layout/DotPosition:
   EnforcedStyle: trailing
 

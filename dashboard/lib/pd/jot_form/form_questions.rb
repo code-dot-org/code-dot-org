@@ -7,16 +7,6 @@ module Pd
     class FormQuestions
       attr_reader :form_id
 
-      def initialize(form_id, questions)
-        @form_id = form_id
-        @questions_by_id = questions.index_by {|q| q.id.to_i}
-        @questions_by_name = questions.index_by(&:name)
-      end
-
-      def question_ids
-        @questions_by_id.keys
-      end
-
       # Construct from an array of serialized questions (hashes)
       # @param form_id [Integer]
       # @param serialized_questions [Array<Hash>]
@@ -28,6 +18,16 @@ module Pd
         end
 
         new(form_id, questions)
+      end
+
+      def initialize(form_id, questions)
+        @form_id = form_id
+        @questions_by_id = questions.index_by {|q| q.id.to_i}
+        @questions_by_name = questions.index_by(&:name)
+      end
+
+      def question_ids
+        @questions_by_id.keys
       end
 
       # Serialize the questions as an array of question hashes

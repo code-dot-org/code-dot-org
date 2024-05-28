@@ -32,10 +32,6 @@ class EmailPreference < ApplicationRecord
 
   validates_inclusion_of :source, in: EmailPreference::SOURCE_TYPES
 
-  def email=(value)
-    super(value&.strip&.downcase)
-  end
-
   def self.upsert!(email:, opt_in:, ip_address:, source:, form_kind:)
     email_preference = EmailPreference.find_or_initialize_by(email: email)
     # Don't change opt_in to false if a preference with opt_in = true exists already.
@@ -51,5 +47,9 @@ class EmailPreference < ApplicationRecord
     end
     # This is a write-only helper method.  Don't return data to the caller.
     return
+  end
+
+  def email=(value)
+    super(value&.strip&.downcase)
   end
 end

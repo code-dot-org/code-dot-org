@@ -38,12 +38,6 @@ class ProgrammingMethod < ApplicationRecord
 
   validate :validate_overload, unless: :seed_in_progress
 
-  def generate_key
-    return key if key
-    key = ProgrammingMethod.sanitize_key(name)
-    self.key = key
-  end
-
   # Sanitize a string so that it conforms to key requirements
   # We're using KEY_CHAR_RE from CurriculumHelper here except that paranthesis
   # should have special handling. So, for example, turnLeft() should be turnleft
@@ -53,6 +47,12 @@ class ProgrammingMethod < ApplicationRecord
     str.downcase.chars.map do |character|
       KEY_CHAR_RE.match(character) ? character : '_'
     end.join.gsub(/_+/, '-')
+  end
+
+  def generate_key
+    return key if key
+    key = ProgrammingMethod.sanitize_key(name)
+    self.key = key
   end
 
   def serialize

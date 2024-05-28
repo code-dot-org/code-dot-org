@@ -35,27 +35,6 @@ class Pd::Attendance < ApplicationRecord
 
   alias_method :user, :teacher
 
-  def teacher_or_enrollment_must_be_present
-    if teacher.nil? && enrollment.nil?
-      errors.add(:base, 'Teacher or enrollment must be present.')
-    end
-  end
-
-  def save_matching_enrollment_association
-    self.enrollment = resolve_enrollment
-  end
-
-  def update_enrollment_user
-    return unless enrollment && user
-    enrollment.update!(user: user)
-  end
-
-  def resolve_enrollment
-    Pd::Enrollment.with_deleted.find_by(id: pd_enrollment_id) ||
-      workshop.enrollments.find_by(user_id: teacher_id) ||
-      workshop.enrollments.find_by(email: User.with_deleted.find_by(id: teacher_id).try(&:email_for_enrollments))
-  end
-
   def self.for_teacher(teacher)
     where(teacher_id: teacher.id)
   end
@@ -80,5 +59,26 @@ class Pd::Attendance < ApplicationRecord
 
     attendance.restore! if attendance.deleted?
     attendance
+  end
+
+  def teacher_or_enrollment_must_be_present
+    if teacher.nil? && enrollment.nil?
+      errors.add(:base, 'Teacher or enrollment must be present.')
+    end
+  end
+
+  def save_matching_enrollment_association
+    self.enrollment = resolve_enrollment
+  end
+
+  def update_enrollment_user
+    return unless enrollment && user
+    enrollment.update!(user: user)
+  end
+
+  def resolve_enrollment
+    Pd::Enrollment.with_deleted.find_by(id: pd_enrollment_id) ||
+      workshop.enrollments.find_by(user_id: teacher_id) ||
+      workshop.enrollments.find_by(email: User.with_deleted.find_by(id: teacher_id).try(&:email_for_enrollments))
   end
 end

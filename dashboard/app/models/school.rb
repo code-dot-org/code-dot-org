@@ -41,55 +41,15 @@ class School < ApplicationRecord
   has_many :school_info
   has_many :census_summaries, class_name: 'Census::CensusSummary'
 
-  # Gets the full address of the school.
-  # @return [String] The full address.
-  def full_address
-    %w(address_line1 address_line2 address_line3 city state zip).filter_map do |col|
-      attributes[col].presence
-    end.join(' ')
-  end
-
-  def most_recent_school_stats
-    school_stats_by_year.order(school_year: :desc).first
-  end
-
-  def census_for_year(year)
-    census_summaries.find_by(school_year: year)
-  end
-
-  # Determines if school meets Amazon Future Engineer criteria.
-  # Eligible if the school is any of the following:
-  # a) title I school,
-  # b) >40% URM students,
-  # or c) >40% of students eligible for free and reduced meals.
-  def afe_high_needs?
-    stats = most_recent_school_stats
-    return false if stats.nil?
-
-    # Return false if we don't have all data for a given school.
-    stats.title_i_eligible? || (stats.urm_percent || 0) >= 40 || (stats.frl_eligible_percent || 0) >= 40
-  end
-
-  # Public school ids from NCES are always 12 digits, possibly with
-  # leading zeros. In the DB, those leading zeros have been stripped out.
-  # Other school types are less than 12 characters and in the DB they
-  # have not had their leading zeros removed.
-  def self.normalize_school_id(raw_school_id)
-    raw_school_id.length == 12 ? raw_school_id.to_i.to_s : raw_school_id
-  end
-
   # Use the zero byte as the quote character to allow importing double quotes
   #   via http://stackoverflow.com/questions/8073920/importing-csv-quoting-error-is-driving-me-nuts
   CSV_IMPORT_OPTIONS = {col_sep: "\t", headers: true, quote_char: "\x00"}.freeze
-
   # School statuses representing currently open schools in 2018-2019 import.
   # Non-open statuses are 'Closed', 'Future', 'Inactive'
   OPEN_SCHOOL_STATUSES_2018_2019 = ['Open', 'New', 'Reopened', 'Changed Boundary/Agency', 'Added']
-
   # School statuses representing currently open schools in 2019-2020 and 2020-2021 import.
   # Non-open statuses are '2-Closed', '7-Future', '6-Inactive'
   OPEN_SCHOOL_STATUSES = ['1-Open', '3-New', '8-Reopened', '5-Changed Boundary/Agency', '4-Added']
-
   # School categories need to be mapped to existing values for 2019-2020 import.
   SCHOOL_CATEGORY_MAP = {
     '1-Regular school' => 'Regular School',
@@ -97,16 +57,21 @@ class School < ApplicationRecord
     '3-Vocational school' => 'Career and Technical School',
     '4-Alternative/other school' => 'Alternative School'
   }
-
   # School charter values need to be mapped to existing values for 2019-2020 import.
   CHARTER_SCHOOL_MAP = {
     '1-Yes' => 'charter',
     '2-No' => 'public',
     '' => 'public'
   }
-
   # These values should always be mapped to nil
   NIL_CHARS = ['†', '–', '‡']
+  # Public school ids from NCES are always 12 digits, possibly with
+  # leading zeros. In the DB, those leading zeros have been stripped out.
+  # Other school types are less than 12 characters and in the DB they
+  # have not had their leading zeros removed.
+  def self.normalize_school_id(raw_school_id)
+    raw_school_id.length == 12 ? raw_school_id.to_i.to_s : raw_school_id
+  end
 
   # Gets the seeding file name.
   # @param stub_school_data [Boolean] True for stub file.
@@ -586,5 +551,34 @@ class School < ApplicationRecord
       end
     end
     return filename
+  end
+
+  # Gets the full address of the school.
+  # @return [String] The full address.
+  def full_address
+    %w(address_line1 address_line2 address_line3 city state zip).filter_map do |col|
+      attributes[col].presence
+    end.join(' ')
+  end
+
+  def most_recent_school_stats
+    school_stats_by_year.order(school_year: :desc).first
+  end
+
+  def census_for_year(year)
+    census_summaries.find_by(school_year: year)
+  end
+
+  # Determines if school meets Amazon Future Engineer criteria.
+  # Eligible if the school is any of the following:
+  # a) title I school,
+  # b) >40% URM students,
+  # or c) >40% of students eligible for free and reduced meals.
+  def afe_high_needs?
+    stats = most_recent_school_stats
+    return false if stats.nil?
+
+    # Return false if we don't have all data for a given school.
+    stats.title_i_eligible? || (stats.urm_percent || 0) >= 40 || (stats.frl_eligible_percent || 0) >= 40
   end
 end

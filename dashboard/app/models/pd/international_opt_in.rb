@@ -54,31 +54,6 @@ class Pd::InternationalOptIn < ApplicationRecord
     ]
   end
 
-  def validate_with(options)
-    # Because we're using the special "answerText/answerValue" format in
-    # self.options, we need to normalize to just answerValue here for
-    # validation.
-    normalized_options = options.map do |key, values|
-      normalized_values = values.map do |value|
-        return value.fetch(:answerValue, nil) if value.is_a? Hash
-        value
-      end
-      [key, normalized_values]
-    end.to_h
-    super(normalized_options)
-  end
-
-  def validate_required_fields
-    super
-
-    # Check that the workshop date provided is actually a date.
-    begin
-      Date.parse(form_data_hash['date']) if form_data_hash['date'].present?
-    rescue ArgumentError
-      errors.add(:form_data, :invalid)
-    end
-  end
-
   def self.options
     entry_keys = {
       schoolCountry: %w(australia barbados belize brazil canada chile colombia dominican_republic india indonesia israel italy jamaica kenya kosovo malaysia maldives mexico mongolia new_zealand paraguay philippines portugal puerto_rico slovakia south_korea spain thailand trinidad_and_tobago uzbekistan vietnam),
@@ -112,27 +87,6 @@ class Pd::InternationalOptIn < ApplicationRecord
     super.merge(entries)
   end
 
-  # @override
-  def dynamic_required_fields(hash)
-    [].tap do |required|
-      case hash[:school_country]
-      when 'Colombia'
-        required << :school_department
-        required << :school_municipality
-        required << :school_city
-      when 'Chile'
-        required << :school_department
-        required << :school_commune
-        required << :school_id
-      when 'Uzbekistan'
-        required << :school_department
-        required << :school_municipality
-      else
-        required << :school_city
-      end
-    end
-  end
-
   def self.labels
     keys = %w(
       firstName
@@ -163,6 +117,52 @@ class Pd::InternationalOptIn < ApplicationRecord
     )
 
     keys.index_with {|v| I18n.t("pd.form_labels.#{v.underscore}")}
+  end
+
+  def validate_with(options)
+    # Because we're using the special "answerText/answerValue" format in
+    # self.options, we need to normalize to just answerValue here for
+    # validation.
+    normalized_options = options.map do |key, values|
+      normalized_values = values.map do |value|
+        return value.fetch(:answerValue, nil) if value.is_a? Hash
+        value
+      end
+      [key, normalized_values]
+    end.to_h
+    super(normalized_options)
+  end
+
+  def validate_required_fields
+    super
+
+    # Check that the workshop date provided is actually a date.
+    begin
+      Date.parse(form_data_hash['date']) if form_data_hash['date'].present?
+    rescue ArgumentError
+      errors.add(:form_data, :invalid)
+    end
+  end
+
+  # @override
+  def dynamic_required_fields(hash)
+    [].tap do |required|
+      case hash[:school_country]
+      when 'Colombia'
+        required << :school_department
+        required << :school_municipality
+        required << :school_city
+      when 'Chile'
+        required << :school_department
+        required << :school_commune
+        required << :school_id
+      when 'Uzbekistan'
+        required << :school_department
+        required << :school_municipality
+      else
+        required << :school_city
+      end
+    end
   end
 
   def email_opt_in?

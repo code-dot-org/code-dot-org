@@ -33,6 +33,9 @@ module Cdo
     # Default no timeout.
     mattr_accessor(:timeout) {0}
 
+    SLEEP_INTERVAL = 0.1
+    # Increment OPTIMIZE_VERSION to change the cache key.
+    OPTIMIZE_VERSION = 3
     # @param data [String] input content
     # @param content_type [String] content type
     # @return [String] optimized content (or nil if optimization is pending)
@@ -49,8 +52,6 @@ module Cdo
       # Optimization is still pending after timeout.
       nil
     end
-
-    SLEEP_INTERVAL = 0.1
 
     # Optimizes image content.
     def self.optimize_image(data)
@@ -71,9 +72,6 @@ module Cdo
       sleep SLEEP_INTERVAL until (result = cache.read(cache_key))
       result
     end
-
-    # Increment OPTIMIZE_VERSION to change the cache key.
-    OPTIMIZE_VERSION = 3
 
     def self.cache_key(data)
       "optimize-#{OPTIMIZE_VERSION}-#{Digest::MD5.hexdigest(data)}"

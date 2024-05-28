@@ -59,6 +59,10 @@ class UserPermission < ApplicationRecord
   before_destroy :log_permission_delete
   after_create :send_verified_teacher_email, if: proc {permission == AUTHORIZED_TEACHER}
 
+  def self.should_log?
+    [:staging, :levelbuilder, :production].include? rack_env
+  end
+
   def send_verified_teacher_email
     TeacherMailer.verified_teacher_email(user).deliver_now if user&.email.present?
   end
@@ -95,9 +99,5 @@ class UserPermission < ApplicationRecord
         "email: #{user.email}, " \
         "permission: #{permission}",
       color: 'yellow'
-  end
-
-  def self.should_log?
-    [:staging, :levelbuilder, :production].include? rack_env
   end
 end

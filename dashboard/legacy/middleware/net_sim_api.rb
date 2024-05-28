@@ -61,6 +61,20 @@ class NetSimApi < Sinatra::Base
   @@overridden_pub_sub_api = nil
   @@overridden_redis = nil
 
+  # Set a particular Pub/Sub interface to use - for use in tests.
+  #
+  # @param [PubSubApi] override_api
+  def self.override_pub_sub_api_for_test(override_api)
+    @@overridden_pub_sub_api = override_api
+  end
+
+  # Set a particular Redis interface to use - for use in tests.
+  #
+  # @param [Redis] override_redis
+  def self.override_redis_for_test(override_redis)
+    @@overridden_redis = override_redis
+  end
+
   def initialize(app = nil)
     super(app)
   end
@@ -390,20 +404,6 @@ class NetSimApi < Sinatra::Base
   end
 
   # TEST-ONLY METHODS
-
-  # Set a particular Pub/Sub interface to use - for use in tests.
-  #
-  # @param [PubSubApi] override_api
-  def self.override_pub_sub_api_for_test(override_api)
-    @@overridden_pub_sub_api = override_api
-  end
-
-  # Set a particular Redis interface to use - for use in tests.
-  #
-  # @param [Redis] override_redis
-  def self.override_redis_for_test(override_redis)
-    @@overridden_redis = override_redis
-  end
 
   # Returns a new Redis client for the current configuration shard id.
   #

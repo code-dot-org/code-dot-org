@@ -29,6 +29,12 @@ class ProgrammingEnvironmentCategory < ApplicationRecord
 
   before_validation :generate_key, on: :create
 
+  def self.sanitize_key(key)
+    key.strip.downcase.chars.map do |character|
+      KEY_CHAR_RE.match(character) ? character : '_'
+    end.join.squeeze('_')
+  end
+
   def serialize
     {
       key: key,
@@ -89,12 +95,6 @@ class ProgrammingEnvironmentCategory < ApplicationRecord
     return key if key
     key = ProgrammingEnvironmentCategory.sanitize_key(name)
     self.key = key
-  end
-
-  def self.sanitize_key(key)
-    key.strip.downcase.chars.map do |character|
-      KEY_CHAR_RE.match(character) ? character : '_'
-    end.join.squeeze('_')
   end
 
   def name_with_environment

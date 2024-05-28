@@ -42,23 +42,6 @@ class Bounce < Grid
 
   validate :validate_skin_and_theme
 
-  def validate_skin_and_theme
-    return unless skin && theme
-    # the sports skin can have any theme except retro
-    sport_skin_non_sport_theme = (
-      skin == "sports" && theme == "retro"
-    )
-
-    # the bounce and basketball skins can only have retro or basketball themes
-    sport_theme_non_sport_skin = (
-      %(bounce basketball).include?(skin) &&
-      %(retro basketball).exclude?(theme)
-    )
-
-    errors.add(:theme, "#{skin} skin and #{theme} theme are incompatible") if
-      sport_skin_non_sport_theme || sport_theme_non_sport_skin
-  end
-
   def self.soft_buttons
     %w(
       leftButton
@@ -92,6 +75,23 @@ class Bounce < Grid
   def self.parse_maze(maze_json, _ = nil)
     maze_json = maze_json.to_json if maze_json.is_a? Array
     {'maze' => JSON.parse(maze_json).map {|row| row.map {|cell| Integer(cell['tileType'])}}.to_json}
+  end
+
+  def validate_skin_and_theme
+    return unless skin && theme
+    # the sports skin can have any theme except retro
+    sport_skin_non_sport_theme = (
+      skin == "sports" && theme == "retro"
+    )
+
+    # the bounce and basketball skins can only have retro or basketball themes
+    sport_theme_non_sport_skin = (
+      %(bounce basketball).include?(skin) &&
+      %(retro basketball).exclude?(theme)
+    )
+
+    errors.add(:theme, "#{skin} skin and #{theme} theme are incompatible") if
+      sport_skin_non_sport_theme || sport_theme_non_sport_skin
   end
 
   def uses_google_blockly?

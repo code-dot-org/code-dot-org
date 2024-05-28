@@ -1,6 +1,12 @@
 # Abstract base class for all level-specific DSLs, which provides some methods
 # which are available to all DSL-defined level types.
 class LevelDSL < BaseDSL
+  # can be extended by subclasses to specify which fields to include in the
+  # i18n hash
+  def self.i18n_fields
+    []
+  end
+
   def initialize
     super
     @hash[:editor_experiment] = nil
@@ -45,11 +51,5 @@ class LevelDSL < BaseDSL
       slice(*fields).
       # filter out any entries with nil key or value
       select {|key, value| key.present? && value.present?}
-  end
-
-  # can be extended by subclasses to specify which fields to include in the
-  # i18n hash
-  def self.i18n_fields
-    []
   end
 end

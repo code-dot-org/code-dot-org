@@ -145,6 +145,13 @@ class ProgrammingExpression < ApplicationRecord
     record.id
   end
 
+  def self.get_from_cache(programming_environment_name, key)
+    Rails.cache.fetch("programming_expression/#{programming_environment_name}/#{key}", force: !Unit.should_cache?) do
+      env = ProgrammingEnvironment.find_by_name(programming_environment_name)
+      ProgrammingExpression.includes([:programming_environment, :programming_environment_category]).find_by(programming_environment_id: env.id, key: key)
+    end
+  end
+
   def cb_documentation_path
     "/docs/#{programming_environment.name}/#{key}/"
   end
@@ -399,12 +406,5 @@ class ProgrammingExpression < ApplicationRecord
     new_exp.write_serialization
 
     new_exp
-  end
-
-  def self.get_from_cache(programming_environment_name, key)
-    Rails.cache.fetch("programming_expression/#{programming_environment_name}/#{key}", force: !Unit.should_cache?) do
-      env = ProgrammingEnvironment.find_by_name(programming_environment_name)
-      ProgrammingExpression.includes([:programming_environment, :programming_environment_category]).find_by(programming_environment_id: env.id, key: key)
-    end
   end
 end

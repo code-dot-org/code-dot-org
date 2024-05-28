@@ -23,15 +23,6 @@ class Game < ApplicationRecord
   has_many :levels
   belongs_to :intro_video, class_name: 'Video', optional: true
 
-  def self.by_name(name)
-    (@@game_cache ||= Game.all.index_by(&:name))[name].try(:id)
-  end
-  mattr_accessor :game_cache # Direct access should only be used in tests
-
-  def self.custom_maze
-    @@game_custom_maze ||= find_by_name("CustomMaze")
-  end
-
   UNPLUG = 'unplug'.freeze
   MULTI = 'multi'.freeze
   MATCH = 'match'.freeze
@@ -63,6 +54,94 @@ class Game < ApplicationRecord
   PYTHONLAB = 'pythonlab'.freeze
   PANELS = 'panels'.freeze
   WEBLAB2 = 'weblab2'.freeze
+  # Format: name:app:intro_video
+  # Don't change the order of existing entries! Always append to the end of the list.
+  # The list contains no longer used level types in order to maintain the order
+  # including: Scratch
+  GAMES_BY_INDEX = %w(
+    Maze:maze:maze_intro
+    Artist:turtle:artist_intro
+    Artist2:turtle
+    Farmer:maze:farmer_intro
+    Artist3:turtle
+    Farmer2:maze
+    Artist4:turtle
+    Farmer3:maze
+    Artist5:turtle
+    MazeEC:maze:maze_intro
+    Unplug1:unplug
+    Unplug2:unplug
+    Unplug3:unplug
+    Unplug4:unplug
+    Unplug5:unplug
+    Unplug6:unplug
+    Unplug7:unplug
+    Unplug8:unplug
+    Unplug9:unplug
+    Unplug10:unplug
+    Unplug11:unplug
+    Bounce:bounce
+    Custom:turtle
+    Flappy:flappy:flappy_intro
+    CustomMaze:maze
+    Studio:studio
+    Jigsaw:jigsaw
+    MazeStep:maze
+    Multi:multi
+    Match:match
+    Unplugged:unplug
+    Wordsearch:wordsearch
+    CustomStudio:studio
+    Calc:calc
+    Webapp:webapp
+    Eval:eval
+    ArtistEC:turtle:artist_intro
+    TextMatch
+    StudioEC:studio
+    ContractMatch
+    Applab:applab
+    NetSim:netsim
+    External:external
+    Pixelation:pixelation
+    TextCompression:text_compression
+    Odometer:odometer
+    FrequencyAnalysis:frequency_analysis
+    Vigenere:vigenere
+    Craft:craft
+    Gamelab:gamelab
+    LevelGroup:level_group
+    FreeResponse:free_response
+    NotUsed:not_used
+    StandaloneVideo:standalone_video
+    ExternalLink:external_link
+    EvaluationMulti:evaluation_multi
+    PublicKeyCryptography:public_key_cryptography
+    Weblab:weblab
+    CurriculumReference:curriculum_reference
+    Map:map
+    CustomFlappy:flappy
+    Scratch:scratch
+    Dance:dance
+    Spritelab:spritelab
+    BubbleChoice:bubble_choice
+    Fish:fish
+    Ailab:ailab
+    Javalab:javalab
+    Poetry:poetry
+    Music:music
+    Aichat:aichat
+    Pythonlab:pythonlab
+    Panels:panels
+    Weblab2:weblab2
+  )
+  def self.by_name(name)
+    (@@game_cache ||= Game.all.index_by(&:name))[name].try(:id)
+  end
+  mattr_accessor :game_cache # Direct access should only be used in tests
+
+  def self.custom_maze
+    @@game_custom_maze ||= find_by_name("CustomMaze")
+  end
 
   def self.bounce
     @@game_bounce ||= find_by_name("Bounce")
@@ -204,6 +283,18 @@ class Game < ApplicationRecord
     @@game_weblab2 ||= find_by_name("Weblab2")
   end
 
+  def self.setup
+    videos_by_key = Video.all.where(locale: 'en-US').index_by(&:key)
+    games = GAMES_BY_INDEX.map.with_index(1) do |line, id|
+      name, app, intro_video_key = line.split ':'
+      {id: id, name: name, app: app, intro_video_id: videos_by_key[intro_video_key]&.id}
+    end
+    transaction do
+      reset_db
+      Game.import! games
+    end
+  end
+
   def unplugged?
     app == UNPLUG
   end
@@ -279,98 +370,5 @@ class Game < ApplicationRecord
     return false unless [DANCE, MUSIC].include? app
     dev_with_credentials = rack_env?(:development) && !!CDO.cloudfront_key_pair_id
     CDO.cdn_enabled || dev_with_credentials || (rack_env?(:test) && ENV['CI'])
-  end
-
-  # Format: name:app:intro_video
-  # Don't change the order of existing entries! Always append to the end of the list.
-  # The list contains no longer used level types in order to maintain the order
-  # including: Scratch
-  GAMES_BY_INDEX = %w(
-    Maze:maze:maze_intro
-    Artist:turtle:artist_intro
-    Artist2:turtle
-    Farmer:maze:farmer_intro
-    Artist3:turtle
-    Farmer2:maze
-    Artist4:turtle
-    Farmer3:maze
-    Artist5:turtle
-    MazeEC:maze:maze_intro
-    Unplug1:unplug
-    Unplug2:unplug
-    Unplug3:unplug
-    Unplug4:unplug
-    Unplug5:unplug
-    Unplug6:unplug
-    Unplug7:unplug
-    Unplug8:unplug
-    Unplug9:unplug
-    Unplug10:unplug
-    Unplug11:unplug
-    Bounce:bounce
-    Custom:turtle
-    Flappy:flappy:flappy_intro
-    CustomMaze:maze
-    Studio:studio
-    Jigsaw:jigsaw
-    MazeStep:maze
-    Multi:multi
-    Match:match
-    Unplugged:unplug
-    Wordsearch:wordsearch
-    CustomStudio:studio
-    Calc:calc
-    Webapp:webapp
-    Eval:eval
-    ArtistEC:turtle:artist_intro
-    TextMatch
-    StudioEC:studio
-    ContractMatch
-    Applab:applab
-    NetSim:netsim
-    External:external
-    Pixelation:pixelation
-    TextCompression:text_compression
-    Odometer:odometer
-    FrequencyAnalysis:frequency_analysis
-    Vigenere:vigenere
-    Craft:craft
-    Gamelab:gamelab
-    LevelGroup:level_group
-    FreeResponse:free_response
-    NotUsed:not_used
-    StandaloneVideo:standalone_video
-    ExternalLink:external_link
-    EvaluationMulti:evaluation_multi
-    PublicKeyCryptography:public_key_cryptography
-    Weblab:weblab
-    CurriculumReference:curriculum_reference
-    Map:map
-    CustomFlappy:flappy
-    Scratch:scratch
-    Dance:dance
-    Spritelab:spritelab
-    BubbleChoice:bubble_choice
-    Fish:fish
-    Ailab:ailab
-    Javalab:javalab
-    Poetry:poetry
-    Music:music
-    Aichat:aichat
-    Pythonlab:pythonlab
-    Panels:panels
-    Weblab2:weblab2
-  )
-
-  def self.setup
-    videos_by_key = Video.all.where(locale: 'en-US').index_by(&:key)
-    games = GAMES_BY_INDEX.map.with_index(1) do |line, id|
-      name, app, intro_video_key = line.split ':'
-      {id: id, name: name, app: app, intro_video_id: videos_by_key[intro_video_key]&.id}
-    end
-    transaction do
-      reset_db
-      Game.import! games
-    end
   end
 end

@@ -22,6 +22,41 @@ class I18nStringUrlTracker
 
   MAX_BUFFER_SIZE = 250.megabytes
 
+  # Paths where everything after it will be aggregated.
+  # You can also add single pages which don't need aggregation as well e.g. /home
+  SIMPLE_PATHS = %w(home teacher_dashboard courses users).freeze
+  # Checks if a source string or a translation exists.
+  # @param string_key [String]
+  # @param scope [Array, String]
+  # @param locale [Symbol, String]
+  # @return [Boolean]
+  def self.string_exists?(string_key, scope = nil, locale = I18n.default_locale)
+    # By default, I18n.exists? returns true if the input key is nil,
+    # but raises exception if the key is an empty string.
+    return false if string_key.nil? || string_key.empty?
+
+    if scope.nil? || scope.empty?
+      I18n.exists? string_key, locale: locale
+    else
+      options = {
+        locale: locale,
+        scope: scope,
+        # don't report error if there is unused interpolation pattern in the translation
+        safe_interpolation: false,
+        # don't track string translation request
+        tracking: false,
+        # raise error if translation is missing
+        raise: true
+      }
+      source_string = begin
+        I18n.t(string_key, **options)
+      rescue
+        nil
+      end
+      !source_string.nil?
+    end
+  end
+
   def initialize
     super
     # A buffer of all the given i18n string tracking data. It will be flushed periodically.
@@ -90,38 +125,6 @@ class I18nStringUrlTracker
     add_to_buffer(normalized_key, logged_url, source, string_key.to_s, stringified_scope, separator)
   end
 
-  # Checks if a source string or a translation exists.
-  # @param string_key [String]
-  # @param scope [Array, String]
-  # @param locale [Symbol, String]
-  # @return [Boolean]
-  def self.string_exists?(string_key, scope = nil, locale = I18n.default_locale)
-    # By default, I18n.exists? returns true if the input key is nil,
-    # but raises exception if the key is an empty string.
-    return false if string_key.nil? || string_key.empty?
-
-    if scope.nil? || scope.empty?
-      I18n.exists? string_key, locale: locale
-    else
-      options = {
-        locale: locale,
-        scope: scope,
-        # don't report error if there is unused interpolation pattern in the translation
-        safe_interpolation: false,
-        # don't track string translation request
-        tracking: false,
-        # raise error if translation is missing
-        raise: true
-      }
-      source_string = begin
-        I18n.t(string_key, **options)
-      rescue
-        nil
-      end
-      !source_string.nil?
-    end
-  end
-
   # Sends the buffered i18n string usage data to Firehose.
   def flush
     buffer = nil
@@ -151,10 +154,6 @@ class I18nStringUrlTracker
       end
     end
   end
-
-  # Paths where everything after it will be aggregated.
-  # You can also add single pages which don't need aggregation as well e.g. /home
-  SIMPLE_PATHS = %w(home teacher_dashboard courses users).freeze
 
   # Determines if this URL should be tracked. We want to filter URLs so we don't waste resources recording data we are
   # not interested in.

@@ -1,4 +1,30 @@
 class LevelGroupDSL < LevelDSL
+  # @override
+  def self.i18n_fields
+    super + %w(
+      description
+      description_short
+      title
+    )
+  end
+
+  def self.serialize(level)
+    properties = level.properties
+    new_dsl = "name '#{level.name}'"
+    new_dsl << "\ntitle '#{properties['title']}'" if properties['title']
+    new_dsl << "\nsubmittable '#{properties['submittable']}'" if properties['submittable']
+    new_dsl << "\nanonymous '#{properties['anonymous']}'" if properties['anonymous']
+
+    level.pages.each do |page|
+      new_dsl << "\n\npage"
+      page.levels_and_texts.each do |sublevel|
+        command = sublevel.is_a?(External) ? 'text' : 'level'
+        new_dsl << "\n#{command} '#{sublevel.name}'"
+      end
+    end
+    new_dsl
+  end
+
   def initialize
     super
     @id = nil
@@ -14,15 +40,6 @@ class LevelGroupDSL < LevelDSL
   # @override
   def parse_output
     super.merge(pages: @pages)
-  end
-
-  # @override
-  def self.i18n_fields
-    super + %w(
-      description
-      description_short
-      title
-    )
   end
 
   integer :id
@@ -89,22 +106,5 @@ class LevelGroupDSL < LevelDSL
   # students' submissions for such levels.
   def anonymous(text)
     @hash[:anonymous] = text
-  end
-
-  def self.serialize(level)
-    properties = level.properties
-    new_dsl = "name '#{level.name}'"
-    new_dsl << "\ntitle '#{properties['title']}'" if properties['title']
-    new_dsl << "\nsubmittable '#{properties['submittable']}'" if properties['submittable']
-    new_dsl << "\nanonymous '#{properties['anonymous']}'" if properties['anonymous']
-
-    level.pages.each do |page|
-      new_dsl << "\n\npage"
-      page.levels_and_texts.each do |sublevel|
-        command = sublevel.is_a?(External) ? 'text' : 'level'
-        new_dsl << "\n#{command} '#{sublevel.name}'"
-      end
-    end
-    new_dsl
   end
 end

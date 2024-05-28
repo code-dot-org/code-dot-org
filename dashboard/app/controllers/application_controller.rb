@@ -29,6 +29,61 @@ class ApplicationController < ActionController::Base
 
   before_action :clear_sign_up_session_vars
 
+  # These are sometimes updated from the registration form
+  SCHOOL_INFO_ATTRIBUTES = [
+    :country,
+    :school_type,
+    :school_state,
+    :school_district_id,
+    :school_district_name,
+    :school_id,
+    :school_name,
+    :school_zip,
+    :full_address,
+    :school_district_other,
+    :school_name_other
+  ].freeze
+  # We create users via HTTP requests in UI tests.
+  # This list includes attributes we might want to
+  # set in accounts created/updated in tests, but do not
+  # want to be set via account creates/updates otherwise.
+  UI_TEST_ATTRIBUTES = [
+    :sign_in_count
+  ].freeze
+  PERMITTED_USER_FIELDS = [
+    :name,
+    :username,
+    :email,
+    :password,
+    :password_confirmation,
+    :locale,
+    :gender,
+    :gender_student_input,
+    :gender_teacher_input,
+    :login,
+    :remember_me,
+    :age,
+    :school,
+    :full_address,
+    :user_type,
+    :hashed_email,
+    :terms_of_service_version,
+    :email_preference_opt_in,
+    :share_teacher_email_reg_partner_opt_in_radio_choice,
+    :data_transfer_agreement_accepted,
+    :data_transfer_agreement_required,
+    :parent_email_preference_opt_in_required,
+    :parent_email_preference_opt_in,
+    :parent_email_preference_email,
+    :us_state,
+    :country_code,
+    {school_info_attributes: SCHOOL_INFO_ATTRIBUTES},
+    {
+      authentication_options_attributes: [
+        :email,
+      ],
+    },
+  ]
   def fix_crawlers_with_bad_accept_headers
     # append text/html as an acceptable response type for Edmodo and weebly-agent's malformed HTTP_ACCEPT header.
     if request.formats.include?("image/*") &&
@@ -106,64 +161,6 @@ class ApplicationController < ActionController::Base
     response.headers["Pragma"] = "no-cache"
     response.headers["Expires"] = "Fri, 01 Jan 1990 00:00:00 GMT"
   end
-
-  # These are sometimes updated from the registration form
-  SCHOOL_INFO_ATTRIBUTES = [
-    :country,
-    :school_type,
-    :school_state,
-    :school_district_id,
-    :school_district_name,
-    :school_id,
-    :school_name,
-    :school_zip,
-    :full_address,
-    :school_district_other,
-    :school_name_other
-  ].freeze
-
-  # We create users via HTTP requests in UI tests.
-  # This list includes attributes we might want to
-  # set in accounts created/updated in tests, but do not
-  # want to be set via account creates/updates otherwise.
-  UI_TEST_ATTRIBUTES = [
-    :sign_in_count
-  ].freeze
-
-  PERMITTED_USER_FIELDS = [
-    :name,
-    :username,
-    :email,
-    :password,
-    :password_confirmation,
-    :locale,
-    :gender,
-    :gender_student_input,
-    :gender_teacher_input,
-    :login,
-    :remember_me,
-    :age,
-    :school,
-    :full_address,
-    :user_type,
-    :hashed_email,
-    :terms_of_service_version,
-    :email_preference_opt_in,
-    :share_teacher_email_reg_partner_opt_in_radio_choice,
-    :data_transfer_agreement_accepted,
-    :data_transfer_agreement_required,
-    :parent_email_preference_opt_in_required,
-    :parent_email_preference_opt_in,
-    :parent_email_preference_email,
-    :us_state,
-    :country_code,
-    {school_info_attributes: SCHOOL_INFO_ATTRIBUTES},
-    {
-      authentication_options_attributes: [
-        :email,
-      ],
-    },
-  ]
 
   PERMITTED_USER_FIELDS.concat(UI_TEST_ATTRIBUTES) if rack_env?(:test, :development)
   PERMITTED_USER_FIELDS.freeze

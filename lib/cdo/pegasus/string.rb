@@ -1,4 +1,12 @@
 class String
+  # Returns each instance of left concatted with each instance of right.
+  # So: ['a','b'], ['c','d'] becomes ['ac', 'ad', 'bc', 'bd']
+  def self.multiply_concat(left, right)
+    left = [left] unless left.is_a?(Enumerable)
+    right = [right] unless right.is_a?(Enumerable)
+    left.map {|l| right.map {|r| l.to_s + r.to_s}}.flatten
+  end
+
   # Returns true if the string ends with the string passed
   def ends_with?(s)
     self[-s.length..] == s
@@ -19,14 +27,6 @@ class String
       return false if empty? || self =~ (/^(false|f|no|n|0)$/i)
       raise ArgumentError.new("'#{self}' is not convertable to true/false.")
     end
-  end
-
-  # Returns each instance of left concatted with each instance of right.
-  # So: ['a','b'], ['c','d'] becomes ['ac', 'ad', 'bc', 'bd']
-  def self.multiply_concat(left, right)
-    left = [left] unless left.is_a?(Enumerable)
-    right = [right] unless right.is_a?(Enumerable)
-    left.map {|l| right.map {|r| l.to_s + r.to_s}}.flatten
   end
 
   # squish and squish! copied from rails:

@@ -77,6 +77,39 @@ class Zendesk
   include HTTParty
   base_uri 'https://codeorg.zendesk.com'
 
+  def self.build_groups_query(groups: [], statuses: [])
+    [
+      statuses.map {|s| "status:#{s}"},
+      groups.map {|g| "group:\"#{g}\""}
+    ].flatten.join(' ')
+  end
+
+  def self.build_users_query(users: [], statuses: [])
+    [
+      statuses.map {|s| "status:#{s}"},
+      users.map {|u| "assignee:\"#{u}\""}
+    ].flatten.join(' ')
+  end
+
+  def self.group_url(group:, statuses:)
+    filter_id = GROUP_FILTERS[group]
+    if filter_id
+      return "#{base_uri}/agent/filters/#{filter_id}"
+    end
+
+    query = build_groups_query(groups: [group], statuses: statuses)
+    # Zendesk not friendly to '+' for spaces?
+    querystring = URI.encode_www_form(q: query).gsub('+', '%20')
+    "#{base_uri}/agent/search/1?#{querystring}"
+  end
+
+  def self.user_url(user:, statuses:)
+    query = build_users_query(users: [user], statuses: statuses)
+    # Zendesk not friendly to '+' for spaces?
+    querystring = URI.encode_www_form(q: query).gsub('+', '%20')
+    "#{base_uri}/agent/search/1?#{querystring}"
+  end
+
   def groups
     @groups ||= self.class.
       get(
@@ -141,39 +174,6 @@ class Zendesk
       end
     end
     results
-  end
-
-  def self.build_groups_query(groups: [], statuses: [])
-    [
-      statuses.map {|s| "status:#{s}"},
-      groups.map {|g| "group:\"#{g}\""}
-    ].flatten.join(' ')
-  end
-
-  def self.build_users_query(users: [], statuses: [])
-    [
-      statuses.map {|s| "status:#{s}"},
-      users.map {|u| "assignee:\"#{u}\""}
-    ].flatten.join(' ')
-  end
-
-  def self.group_url(group:, statuses:)
-    filter_id = GROUP_FILTERS[group]
-    if filter_id
-      return "#{base_uri}/agent/filters/#{filter_id}"
-    end
-
-    query = build_groups_query(groups: [group], statuses: statuses)
-    # Zendesk not friendly to '+' for spaces?
-    querystring = URI.encode_www_form(q: query).gsub('+', '%20')
-    "#{base_uri}/agent/search/1?#{querystring}"
-  end
-
-  def self.user_url(user:, statuses:)
-    query = build_users_query(users: [user], statuses: statuses)
-    # Zendesk not friendly to '+' for spaces?
-    querystring = URI.encode_www_form(q: query).gsub('+', '%20')
-    "#{base_uri}/agent/search/1?#{querystring}"
   end
 end
 

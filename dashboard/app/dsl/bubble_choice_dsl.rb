@@ -1,14 +1,33 @@
 class BubbleChoiceDSL < ContentDSL
+  # @override
+  def self.i18n_fields
+    super + %w(description display_name)
+  end
+
+  def self.serialize(level)
+    new_dsl = "name '#{escape(level.name)}'"
+    new_dsl += "\neditor_experiment '#{level.editor_experiment}'" if level.editor_experiment.present?
+    new_dsl += "\ndisplay_name '#{escape(level.display_name)}'" if level.display_name.present?
+    new_dsl += "\ndescription '#{escape(level.description)}'" if level.description.present?
+
+    new_dsl += "\n\nsublevels" if level.sublevels.any?
+    level.sublevels.each do |sublevel|
+      new_dsl += "\nlevel '#{sublevel.name}'"
+    end
+
+    new_dsl += "\n"
+    new_dsl
+  end
+
+  def self.escape(str)
+    str.gsub("'", "\\\\'")
+  end
+
   def initialize
     super
     @hash[:display_name] = nil
     @hash[:description] = nil
     @hash[:sublevels] = []
-  end
-
-  # @override
-  def self.i18n_fields
-    super + %w(description display_name)
   end
 
   def display_name(text) @hash[:display_name] = text end
@@ -31,24 +50,5 @@ class BubbleChoiceDSL < ContentDSL
     end
 
     @hash[:sublevels] << name
-  end
-
-  def self.serialize(level)
-    new_dsl = "name '#{escape(level.name)}'"
-    new_dsl += "\neditor_experiment '#{level.editor_experiment}'" if level.editor_experiment.present?
-    new_dsl += "\ndisplay_name '#{escape(level.display_name)}'" if level.display_name.present?
-    new_dsl += "\ndescription '#{escape(level.description)}'" if level.description.present?
-
-    new_dsl += "\n\nsublevels" if level.sublevels.any?
-    level.sublevels.each do |sublevel|
-      new_dsl += "\nlevel '#{sublevel.name}'"
-    end
-
-    new_dsl += "\n"
-    new_dsl
-  end
-
-  def self.escape(str)
-    str.gsub("'", "\\\\'")
   end
 end

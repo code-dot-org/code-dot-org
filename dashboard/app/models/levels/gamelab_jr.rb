@@ -38,20 +38,62 @@ class GamelabJr < Gamelab
     standalone_app_name
   )
 
-  def shared_blocks
-    Block.for(*block_pools.presence || type)
-  end
+  SAMPLE_VALIDATION_FUNCTIONS = {
+    template:
+'if (World.frameCount == 1) {
+  addCriteria(function() {
+    return minimumSprites(1); // Check whether or not the student created a sprite.
+  }, "noSprites");  // Failure message: "You need to make a sprite."
 
+  // Additional calls to addCriteria(), in order of precedence
+}
+check();
+',
+
+    advancedTemplate:
+'if (World.frameCount == 1) {
+  setFailTime(150); // Frames to wait before failing student
+  setDelayTime(90); // Frames to wait after success before stopping program
+  setSuccessMessage("genericExplore"); // Translated string to show upon success.
+  setBonusSuccessMessage("genericBonusSuccess"); // Translated string to show upon success with bonus.
+
+  addCriteria(function() {
+    return minimumSprites(1); // Check whether or not the student created a sprite.
+  }, "noSprites");  // Failure message: "You need to make a sprite."
+  // Additional calls to addCriteria(), in order of precedence
+
+  addBonusCriteria(function() {
+    return minimumSprites(2); // Check whether or not the student created two sprites.
+  });
+  // Additional calls to addBonusCriteria(). (Student must complete one or more for special feedback.)
+
+}
+check();
+',
+
+    clickSpriteForSpeechExample:
+'//Validate that a student created a sprite, then clicked a sprite to trigger a sprite to speak.
+if (World.frameCount == 1) {
+  addCriteria(function() {
+    return minimumSprites(1);
+  }, "noSprites");
+  addCriteria(function() {
+    return anySpriteClicked();
+  }, "clickAnySprite");
+  addCriteria(function(){
+    return clickEventFound();
+  }, "clickButNoEvent");
+  addCriteria(function(){
+    return clickEventFound() && anySpriteSpeaks();
+  }, "clickButNoSay");
+}
+
+check();
+'
+
+  }.freeze
   def self.standalone_app_names
     [['Sprite Lab', 'spritelab'], ['Story', 'story'], ['Science', 'science'], ['Adaptations', 'adaptations'], ['Ecosystems', 'ecosystems'], ['Sprite Lab (Game Design)', 'game_design']]
-  end
-
-  def standalone_app_name_or_default
-    return standalone_app_name || 'spritelab'
-  end
-
-  def project_type
-    return standalone_app_name_or_default
   end
 
   def self.create_from_level_builder(params, level_params)
@@ -80,6 +122,18 @@ class GamelabJr < Gamelab
         }
       )
     )
+  end
+
+  def shared_blocks
+    Block.for(*block_pools.presence || type)
+  end
+
+  def standalone_app_name_or_default
+    return standalone_app_name || 'spritelab'
+  end
+
+  def project_type
+    return standalone_app_name_or_default
   end
 
   def common_blocks(type)
@@ -190,59 +244,4 @@ class GamelabJr < Gamelab
   def age_13_required?
     false
   end
-
-  SAMPLE_VALIDATION_FUNCTIONS = {
-    template:
-'if (World.frameCount == 1) {
-  addCriteria(function() {
-    return minimumSprites(1); // Check whether or not the student created a sprite.
-  }, "noSprites");  // Failure message: "You need to make a sprite."
-
-  // Additional calls to addCriteria(), in order of precedence
-}
-check();
-',
-
-    advancedTemplate:
-'if (World.frameCount == 1) {
-  setFailTime(150); // Frames to wait before failing student
-  setDelayTime(90); // Frames to wait after success before stopping program
-  setSuccessMessage("genericExplore"); // Translated string to show upon success.
-  setBonusSuccessMessage("genericBonusSuccess"); // Translated string to show upon success with bonus.
-
-  addCriteria(function() {
-    return minimumSprites(1); // Check whether or not the student created a sprite.
-  }, "noSprites");  // Failure message: "You need to make a sprite."
-  // Additional calls to addCriteria(), in order of precedence
-
-  addBonusCriteria(function() {
-    return minimumSprites(2); // Check whether or not the student created two sprites.
-  });
-  // Additional calls to addBonusCriteria(). (Student must complete one or more for special feedback.)
-
-}
-check();
-',
-
-    clickSpriteForSpeechExample:
-'//Validate that a student created a sprite, then clicked a sprite to trigger a sprite to speak.
-if (World.frameCount == 1) {
-  addCriteria(function() {
-    return minimumSprites(1);
-  }, "noSprites");
-  addCriteria(function() {
-    return anySpriteClicked();
-  }, "clickAnySprite");
-  addCriteria(function(){
-    return clickEventFound();
-  }, "clickButNoEvent");
-  addCriteria(function(){
-    return clickEventFound() && anySpriteSpeaks();
-  }, "clickButNoSay");
-}
-
-check();
-'
-
-  }.freeze
 end

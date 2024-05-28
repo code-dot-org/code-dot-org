@@ -12,6 +12,9 @@ module Cdo
   class Buffer
     MAX_INT = Concurrent::Utility::NativeInteger::MAX_VALUE
 
+    # Track time each object was added to the buffer.
+    BufferObject = Struct.new(:object, :added_at)
+
     attr_accessor :log
 
     # @param [Integer] batch_count    Maximum number of objects in a buffered batch.
@@ -111,9 +114,6 @@ module Cdo
         observers.notify_observers
       end
     end
-
-    # Track time each object was added to the buffer.
-    BufferObject = Struct.new(:object, :added_at)
 
     private def now
       Process.clock_gettime(Process::CLOCK_MONOTONIC)

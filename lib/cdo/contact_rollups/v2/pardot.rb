@@ -38,16 +38,6 @@ class PardotV2
     :db_Roles
   ].to_set
 
-  def initialize(is_dry_run: false)
-    @new_prospects = []
-    @updated_prospects = []
-    @updated_prospect_deltas = []
-
-    # Relevant only during dry runs
-    @dry_run = is_dry_run
-    @dry_run_api_endpoints_hit = []
-  end
-
   # Retrieves new (email, Pardot ID) mappings from Pardot
   #
   # @param [Integer] last_id retrieves only Pardot ID greater than this value
@@ -109,128 +99,6 @@ class PardotV2
     url += "&limit=#{limit}" if limit
     url += "&deleted=true" if deleted
     url
-  end
-
-  # Compiles a batch of prospects and batch-create them in Pardot when batch size
-  # is big enough. If +eager_submit+ is true, creates the batch in Pardot immediately.
-  #
-  # *Warning:* By default, +eager_submit+ is false. It is possible that the batch never gets
-  # to the size that can trigger a Pardot request. Always uses this method together with its
-  # sibling, +batch_create_remaining_prospects+ to flush out the remaining data in the batch.
-  #
-  # You can think of using this method as writing to an output stream, which at the end you
-  # have to flush out the remaining content in the stream.
-  #
-  # @param [String] email
-  # @param [Hash] data
-  # @param [Boolean] eager_submit
-  # @return [Array<Array>] @see process_batch method
-  def batch_create_prospects(email, data, eager_submit: false)
-    prospect = self.class.convert_to_pardot_prospect data.merge(email: email)
-    @new_prospects << prospect
-
-    # Creating new prospects is not a retriable action because it could succeed
-    # on the Pardot side and we just didn't receive a response. If we try again,
-    # it would create duplicate prospects.
-    process_batch BATCH_CREATE_URL, @new_prospects, eager_submit
-  end
-
-  # Immediately batch-create the remaining prospects in Pardot.
-  # @return [Array<Array>] @see process_batch method
-  def batch_create_remaining_prospects
-    process_batch BATCH_CREATE_URL, @new_prospects, true
-  end
-
-  # Compiles a batch of prospects and batch-update them in Pardot when batch size
-  # is big enough. If +eager_submit+ is true, updates the batch in Pardot immediately.
-  #
-  # *Warning:* If +eager_submit+ is false (by default), always uses this method together with
-  # its sibling, +batch_update_remaining_prospects+ to flush out the remaining data in the batch.
-  #
-  # @param [String] email
-  # @param [Integer] pardot_id
-  # @param [Hash] old_prospect_data a hash with Pardot prospect keys
-  # @param [Hash] new_contact_data a hash with original contact keys
-  # @param [Boolean] eager_submit
-  # @return [Array<Array>] @see process_batch method
-  def batch_update_prospects(email, pardot_id, old_prospect_data, new_contact_data, eager_submit: false)
-    new_prospect_data = self.class.convert_to_pardot_prospect new_contact_data
-    delta = self.class.calculate_data_delta old_prospect_data, new_prospect_data
-    return [], [] unless delta.present?
-
-    email_pardot_id = self.class.convert_to_pardot_prospect(email: email, pardot_id: pardot_id)
-    prospect = email_pardot_id.merge new_prospect_data
-    @updated_prospects << prospect
-    prospect_delta = email_pardot_id.merge delta
-    @updated_prospect_deltas << prospect_delta
-
-    delta_submissions, errors = self.class.try_with_exponential_backoff(3) do
-      process_batch BATCH_UPDATE_URL, @updated_prospect_deltas, eager_submit
-    end
-    return [], [] unless delta_submissions.present?
-
-    # As an optimization, we only send the deltas to Pardot. However, as far as
-    # the caller's concerned, we have sent the entire contact data to Pardot.
-    full_submissions = @updated_prospects
-    @updated_prospects = []
-    [full_submissions, errors]
-  end
-
-  # Immediately batch-update the remaining prospects in Pardot.
-  # @return [Array<Array>] @see process_batch method
-  def batch_update_remaining_prospects
-    delta_submissions, errors = self.class.try_with_exponential_backoff(3) do
-      process_batch BATCH_UPDATE_URL, @updated_prospect_deltas, true
-    end
-    return [], [] unless delta_submissions.present?
-
-    full_submissions = @updated_prospects
-    @updated_prospects = []
-    [full_submissions, errors]
-  end
-
-  # Submits a request to a Pardot API endpoint if the prospect batch size is big enough
-  # or +eager_submit+ is true. Otherwise, does nothing.
-  #
-  # *Warning:* This is not a pure method. It clears +prospects+ array once a request
-  # is successfully send to Pardot.
-  #
-  # @param [String] api_endpoint
-  # @param [Array<Hash>] prospects
-  # @param [Boolean] eager_submit if is true, triggers submitting request immediately
-  # @return [Array<Array>] two arrays, one for all submitted prospects and one for Pardot errors
-  def process_batch(api_endpoint, prospects, eager_submit)
-    return [], [] unless prospects.present?
-
-    submissions = []
-    errors = []
-    url = self.class.build_batch_url api_endpoint, prospects
-
-    if url.length > URL_LENGTH_THRESHOLD || prospects.size == MAX_PROSPECT_BATCH_SIZE || eager_submit
-      if @dry_run
-        # During a dry run, we want to display two example batch of prospects.
-        # One for newly created prospects, and one for updated prospects.
-        # If we did not include this limit, the entire batch would be displayed,
-        # which could be overwhelming for debugging purposes.
-        unless @dry_run_api_endpoints_hit.include? api_endpoint
-          self.class.log "Prospects in sample batch to sync to Pardot: #{prospects.length}"
-          self.class.log "Query string for sample batch:\n#{url}"
-          self.class.log 'Prospects to be synced in sample batch:'
-          prospects.each do |prospect|
-            self.class.log prospect
-          end
-
-          @dry_run_api_endpoints_hit << api_endpoint
-        end
-      else
-        errors = self.class.submit_batch_request api_endpoint, prospects
-      end
-
-      submissions = prospects.clone
-      prospects.clear
-    end
-
-    [submissions, errors]
   end
 
   # Deletes all prospects with the same email address from Pardot.
@@ -417,5 +285,137 @@ class PardotV2
         delta[key] = val unless old_data.key?(key) && old_data[key] == val
       end
     end
+  end
+
+  def initialize(is_dry_run: false)
+    @new_prospects = []
+    @updated_prospects = []
+    @updated_prospect_deltas = []
+
+    # Relevant only during dry runs
+    @dry_run = is_dry_run
+    @dry_run_api_endpoints_hit = []
+  end
+
+  # Compiles a batch of prospects and batch-create them in Pardot when batch size
+  # is big enough. If +eager_submit+ is true, creates the batch in Pardot immediately.
+  #
+  # *Warning:* By default, +eager_submit+ is false. It is possible that the batch never gets
+  # to the size that can trigger a Pardot request. Always uses this method together with its
+  # sibling, +batch_create_remaining_prospects+ to flush out the remaining data in the batch.
+  #
+  # You can think of using this method as writing to an output stream, which at the end you
+  # have to flush out the remaining content in the stream.
+  #
+  # @param [String] email
+  # @param [Hash] data
+  # @param [Boolean] eager_submit
+  # @return [Array<Array>] @see process_batch method
+  def batch_create_prospects(email, data, eager_submit: false)
+    prospect = self.class.convert_to_pardot_prospect data.merge(email: email)
+    @new_prospects << prospect
+
+    # Creating new prospects is not a retriable action because it could succeed
+    # on the Pardot side and we just didn't receive a response. If we try again,
+    # it would create duplicate prospects.
+    process_batch BATCH_CREATE_URL, @new_prospects, eager_submit
+  end
+
+  # Immediately batch-create the remaining prospects in Pardot.
+  # @return [Array<Array>] @see process_batch method
+  def batch_create_remaining_prospects
+    process_batch BATCH_CREATE_URL, @new_prospects, true
+  end
+
+  # Compiles a batch of prospects and batch-update them in Pardot when batch size
+  # is big enough. If +eager_submit+ is true, updates the batch in Pardot immediately.
+  #
+  # *Warning:* If +eager_submit+ is false (by default), always uses this method together with
+  # its sibling, +batch_update_remaining_prospects+ to flush out the remaining data in the batch.
+  #
+  # @param [String] email
+  # @param [Integer] pardot_id
+  # @param [Hash] old_prospect_data a hash with Pardot prospect keys
+  # @param [Hash] new_contact_data a hash with original contact keys
+  # @param [Boolean] eager_submit
+  # @return [Array<Array>] @see process_batch method
+  def batch_update_prospects(email, pardot_id, old_prospect_data, new_contact_data, eager_submit: false)
+    new_prospect_data = self.class.convert_to_pardot_prospect new_contact_data
+    delta = self.class.calculate_data_delta old_prospect_data, new_prospect_data
+    return [], [] unless delta.present?
+
+    email_pardot_id = self.class.convert_to_pardot_prospect(email: email, pardot_id: pardot_id)
+    prospect = email_pardot_id.merge new_prospect_data
+    @updated_prospects << prospect
+    prospect_delta = email_pardot_id.merge delta
+    @updated_prospect_deltas << prospect_delta
+
+    delta_submissions, errors = self.class.try_with_exponential_backoff(3) do
+      process_batch BATCH_UPDATE_URL, @updated_prospect_deltas, eager_submit
+    end
+    return [], [] unless delta_submissions.present?
+
+    # As an optimization, we only send the deltas to Pardot. However, as far as
+    # the caller's concerned, we have sent the entire contact data to Pardot.
+    full_submissions = @updated_prospects
+    @updated_prospects = []
+    [full_submissions, errors]
+  end
+
+  # Immediately batch-update the remaining prospects in Pardot.
+  # @return [Array<Array>] @see process_batch method
+  def batch_update_remaining_prospects
+    delta_submissions, errors = self.class.try_with_exponential_backoff(3) do
+      process_batch BATCH_UPDATE_URL, @updated_prospect_deltas, true
+    end
+    return [], [] unless delta_submissions.present?
+
+    full_submissions = @updated_prospects
+    @updated_prospects = []
+    [full_submissions, errors]
+  end
+
+  # Submits a request to a Pardot API endpoint if the prospect batch size is big enough
+  # or +eager_submit+ is true. Otherwise, does nothing.
+  #
+  # *Warning:* This is not a pure method. It clears +prospects+ array once a request
+  # is successfully send to Pardot.
+  #
+  # @param [String] api_endpoint
+  # @param [Array<Hash>] prospects
+  # @param [Boolean] eager_submit if is true, triggers submitting request immediately
+  # @return [Array<Array>] two arrays, one for all submitted prospects and one for Pardot errors
+  def process_batch(api_endpoint, prospects, eager_submit)
+    return [], [] unless prospects.present?
+
+    submissions = []
+    errors = []
+    url = self.class.build_batch_url api_endpoint, prospects
+
+    if url.length > URL_LENGTH_THRESHOLD || prospects.size == MAX_PROSPECT_BATCH_SIZE || eager_submit
+      if @dry_run
+        # During a dry run, we want to display two example batch of prospects.
+        # One for newly created prospects, and one for updated prospects.
+        # If we did not include this limit, the entire batch would be displayed,
+        # which could be overwhelming for debugging purposes.
+        unless @dry_run_api_endpoints_hit.include? api_endpoint
+          self.class.log "Prospects in sample batch to sync to Pardot: #{prospects.length}"
+          self.class.log "Query string for sample batch:\n#{url}"
+          self.class.log 'Prospects to be synced in sample batch:'
+          prospects.each do |prospect|
+            self.class.log prospect
+          end
+
+          @dry_run_api_endpoints_hit << api_endpoint
+        end
+      else
+        errors = self.class.submit_batch_request api_endpoint, prospects
+      end
+
+      submissions = prospects.clone
+      prospects.clear
+    end
+
+    [submissions, errors]
   end
 end

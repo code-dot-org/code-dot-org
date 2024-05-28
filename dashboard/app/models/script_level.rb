@@ -54,6 +54,65 @@ class ScriptLevel < ApplicationRecord
   validate :validate_activity_section_lesson
   validate :validate_activity_section_position
 
+  # Given a script level summary for the last level in a lesson that has already
+  # been determined to be a long assessment, returns an array of additional
+  # level summaries.
+  def self.summarize_extra_puzzle_pages(last_level_summary)
+    extra_levels = []
+    level_id = last_level_summary[:ids].first
+    level = Unit.cache_find_level(level_id)
+    extra_level_count = level.pages.length - 1
+    (1..extra_level_count).each do |page_index|
+      new_level = last_level_summary.deep_dup
+      new_level[:uid] = "#{level_id}_#{page_index}"
+      new_level[:page_number] = page_index + 1
+      new_level[:url] << "/page/#{page_index + 1}"
+      new_level[:position] = last_level_summary[:position] + page_index
+      new_level[:title] = last_level_summary[:position] + page_index
+      extra_levels << new_level
+    end
+    extra_levels
+  end
+
+  def self.summarize_as_bonus_for_teacher_panel(script, bonus_level_ids, student)
+    # Just get the most recently lesson extra they worked on
+    lesson_extra_user_level = student.user_levels.where(script: script, level: bonus_level_ids)&.first
+    if lesson_extra_user_level
+      {
+        id: bonus_level_ids.first.to_s,
+        bonus: true,
+        userId: student.id,
+        passed: true,
+        status: SharedConstants::LEVEL_STATUS.perfect,
+        userLevelId: lesson_extra_user_level.id,
+        updatedAt: lesson_extra_user_level.updated_at
+      }
+    elsif bonus_level_ids.count == 0
+      {
+        # Some lessons have a lesson extras option without any bonus levels. In
+        # these cases, they just display previous lesson challenges. These should
+        # be displayed as "perfect." Example level: /s/express-2020/lessons/28/extras
+        id: '-1',
+        bonus: true,
+        userId: student.id,
+        passed: true,
+        status: SharedConstants::LEVEL_STATUS.perfect
+      }
+    else
+      {
+        id: bonus_level_ids.first.to_s,
+        bonus: true,
+        userId: student.id,
+        passed: false,
+        status: SharedConstants::LEVEL_STATUS.not_tried
+      }
+    end
+  end
+
+  def self.cache_find(id)
+    Unit.cache_find_script_level(id)
+  end
+
   # Make sure we never create a level that is not an assessment, but is anonymous,
   # as in that case it wouldn't actually be treated as anonymous
   def anonymous_must_be_assessment
@@ -429,26 +488,6 @@ class ScriptLevel < ApplicationRecord
     summary
   end
 
-  # Given a script level summary for the last level in a lesson that has already
-  # been determined to be a long assessment, returns an array of additional
-  # level summaries.
-  def self.summarize_extra_puzzle_pages(last_level_summary)
-    extra_levels = []
-    level_id = last_level_summary[:ids].first
-    level = Unit.cache_find_level(level_id)
-    extra_level_count = level.pages.length - 1
-    (1..extra_level_count).each do |page_index|
-      new_level = last_level_summary.deep_dup
-      new_level[:uid] = "#{level_id}_#{page_index}"
-      new_level[:page_number] = page_index + 1
-      new_level[:url] << "/page/#{page_index + 1}"
-      new_level[:position] = last_level_summary[:position] + page_index
-      new_level[:title] = last_level_summary[:position] + page_index
-      extra_levels << new_level
-    end
-    extra_levels
-  end
-
   def summarize_as_bonus
     localized_level_description = I18n.t(level.name, scope: [:data, :bubble_choice_description], default: level.bubble_choice_description)
     localized_level_display_name = I18n.t(level.name, scope: [:data, :display_name], default: level.display_name)
@@ -467,41 +506,6 @@ class ScriptLevel < ApplicationRecord
         level: level.summarize_as_bonus.camelize_keys
       }.camelize_keys
     }
-  end
-
-  def self.summarize_as_bonus_for_teacher_panel(script, bonus_level_ids, student)
-    # Just get the most recently lesson extra they worked on
-    lesson_extra_user_level = student.user_levels.where(script: script, level: bonus_level_ids)&.first
-    if lesson_extra_user_level
-      {
-        id: bonus_level_ids.first.to_s,
-        bonus: true,
-        userId: student.id,
-        passed: true,
-        status: SharedConstants::LEVEL_STATUS.perfect,
-        userLevelId: lesson_extra_user_level.id,
-        updatedAt: lesson_extra_user_level.updated_at
-      }
-    elsif bonus_level_ids.count == 0
-      {
-        # Some lessons have a lesson extras option without any bonus levels. In
-        # these cases, they just display previous lesson challenges. These should
-        # be displayed as "perfect." Example level: /s/express-2020/lessons/28/extras
-        id: '-1',
-        bonus: true,
-        userId: student.id,
-        passed: true,
-        status: SharedConstants::LEVEL_STATUS.perfect
-      }
-    else
-      {
-        id: bonus_level_ids.first.to_s,
-        bonus: true,
-        userId: student.id,
-        passed: false,
-        status: SharedConstants::LEVEL_STATUS.not_tried
-      }
-    end
   end
 
   def contained_levels
@@ -559,10 +563,6 @@ class ScriptLevel < ApplicationRecord
       linkToLevel: path,
       unitName: lesson.script.title_for_display
     }
-  end
-
-  def self.cache_find(id)
-    Unit.cache_find_script_level(id)
   end
 
   def to_param

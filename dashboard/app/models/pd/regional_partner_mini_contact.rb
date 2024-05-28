@@ -29,6 +29,12 @@ class Pd::RegionalPartnerMiniContact < ApplicationRecord
   before_save :update_regional_partner
 
   after_create :send_regional_partner_contact_emails
+  def self.required_fields
+    [
+      :zip
+    ]
+  end
+
   def send_regional_partner_contact_emails
     form = sanitized_and_trimmed_form_data_hash
 
@@ -53,12 +59,6 @@ class Pd::RegionalPartnerMiniContact < ApplicationRecord
     end
 
     Pd::RegionalPartnerMiniContactMailer.receipt(form, regional_partner).deliver_now
-  end
-
-  def self.required_fields
-    [
-      :zip
-    ]
   end
 
   def email

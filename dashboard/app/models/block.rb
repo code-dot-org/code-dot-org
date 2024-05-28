@@ -23,6 +23,9 @@ class Block < ApplicationRecord
 
   DEFAULT_POOL = 'Vanilla'.freeze
 
+  CONFIG_DIRECTORY = 'blocks'
+  SUBDIRECTORY_ATTRIBUTES = [:pool]
+  EXTENSION = 'json'
   def self.all_pool_names
     @@all_pool_names ||= Block.distinct.pluck(:pool)
   end
@@ -42,29 +45,6 @@ class Block < ApplicationRecord
     end
   end
 
-  def block_options
-    {
-      name: name,
-      pool: pool,
-      category: category,
-      config: JSON.parse(config),
-      helperCode: helper_code,
-    }
-  end
-
-  CONFIG_DIRECTORY = 'blocks'
-  SUBDIRECTORY_ATTRIBUTES = [:pool]
-  EXTENSION = 'json'
-
-  def file_content
-    JSON.pretty_generate(
-      {
-        category: category,
-        config: JSON.parse(config),
-      }
-    )
-  end
-
   def self.properties_from_file(path, content)
     block_config = JSON.parse(content)
     js_path = Pathname.new(path).sub_ext('.js')
@@ -76,6 +56,25 @@ class Block < ApplicationRecord
       config: block_config['config'].to_json,
       helper_code: helper_code,
     }
+  end
+
+  def block_options
+    {
+      name: name,
+      pool: pool,
+      category: category,
+      config: JSON.parse(config),
+      helperCode: helper_code,
+    }
+  end
+
+  def file_content
+    JSON.pretty_generate(
+      {
+        category: category,
+        config: JSON.parse(config),
+      }
+    )
   end
 
   def write_additional_files

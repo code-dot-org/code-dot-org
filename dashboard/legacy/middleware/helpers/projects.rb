@@ -16,6 +16,101 @@ class Projects
   class PublishError < StandardError
   end
 
+  # extracts published project data from a project (aka projects table row).
+  def self.get_published_project_data(project, channel_id)
+    project_value = JSON.parse(project[:value])
+    {
+      channel: channel_id,
+      name: project_value['name'],
+      thumbnailUrl: Projects.make_thumbnail_url_cacheable(project_value['thumbnailUrl']),
+      # Note that we are using the new :project_type field rather than extracting
+      # it from :value. :project_type might not be present in unpublished projects.
+      type: project[:project_type],
+      publishedAt: project[:published_at],
+    }
+  end
+
+  # This method can be removed once thumbnails are being served with s3 version ids.
+  def self.make_thumbnail_url_cacheable(url)
+    url&.sub('/v3/files/', '/v3/files-public/')
+  end
+
+  # Returns the row value with 'id' and 'isOwner' merged from input params, and
+  # 'createdAt', 'updatedAt', 'publishedAt' and 'projectType' merged from the
+  # corresponding database row values.
+  def self.merged_row_value(row, channel_id:, is_owner:)
+    JSON.parse(row[:value]).merge(
+      {
+        id: channel_id,
+        isOwner: is_owner,
+        createdAt: row[:created_at],
+        updatedAt: row[:updated_at],
+        publishedAt: row[:published_at],
+        projectType: row[:project_type],
+      }
+    )
+  end
+
+  #
+  # Looks up the set of ancestors in the remix history for a particular project.
+  # This can require several queries, so be careful exposing this in the UI
+  # for external users - right now this is designed as a utility for internal
+  # use only.
+  #
+  # Note: It should be possible to reduce the number of queries by joining the
+  #   table against itself.  Worth investigating if we wanted to expose this
+  #   to users.
+  #
+  # @param [String] channel_id the child project channel id where we start
+  #   our search.
+  # @param [Integer] depth (optional) how many ancestors to retrieve.  Default
+  #   to just one - this could get expensive if a project has a very deep
+  #   remix ancestry.
+  # @return [Array<String>] list of channel IDs of ancestor projects in reverse
+  #   chronological order, up to the provided limit.
+  #
+  def self.remix_ancestry(channel_id, depth: 1)
+    [].tap do |ancestors|
+      _, project_id = storage_decrypt_channel_id(channel_id)
+      next_row = Projects.table.where(id: project_id).first
+      while next_row&.[](:remix_parent_id)
+        next_row = Projects.table.where(id: next_row[:remix_parent_id]).first
+        ancestors.push storage_encrypt_channel_id(next_row[:storage_id], next_row[:id]) if next_row
+        break if ancestors.size >= depth
+      end
+    end
+  rescue
+    []
+  end
+
+  def self.get_abuse(channel_id)
+    _, project_id = storage_decrypt_channel_id(channel_id)
+    project_info = Projects.table.where(id: project_id).first
+    project_info[:abuse_score]
+  end
+
+  # Returns projects with id in ids
+  def self.get_by_ids(ids)
+    Projects.table.where(id: ids)
+  end
+
+  def self.table
+    DASHBOARD_DB[:projects]
+  end
+
+  def self.in_restricted_share_mode(channel_id, project_type)
+    # Only do this check if the project type is one that can be restricted, as this check
+    # requires a call to S3.
+    return false unless RESTRICTED_PUBLISH_PROJECT_TYPES.include?(project_type)
+
+    # Check for restricted share mode
+    source_data = SourceBucket.new.get(channel_id, SourceBucket.main_json_filename)
+    return unless source_data && source_data[:body] && source_data[:body].respond_to?(:string)
+    source_body = source_data[:body].string
+    project_src = ProjectSourceJson.new(source_body)
+    return project_src.in_restricted_share_mode?
+  end
+
   def initialize(storage_id)
     @storage_id = storage_id
 
@@ -192,25 +287,6 @@ class Projects
       update(state: 'active', updated_at: Time.now)
   end
 
-  # extracts published project data from a project (aka projects table row).
-  def self.get_published_project_data(project, channel_id)
-    project_value = JSON.parse(project[:value])
-    {
-      channel: channel_id,
-      name: project_value['name'],
-      thumbnailUrl: Projects.make_thumbnail_url_cacheable(project_value['thumbnailUrl']),
-      # Note that we are using the new :project_type field rather than extracting
-      # it from :value. :project_type might not be present in unpublished projects.
-      type: project[:project_type],
-      publishedAt: project[:published_at],
-    }
-  end
-
-  # This method can be removed once thumbnails are being served with s3 version ids.
-  def self.make_thumbnail_url_cacheable(url)
-    url&.sub('/v3/files/', '/v3/files-public/')
-  end
-
   def unpublish(channel_id)
     owner, project_id = storage_decrypt_channel_id(channel_id)
     raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
@@ -358,22 +434,6 @@ class Projects
     JSON.parse(row[:value])['id']
   end
 
-  # Returns the row value with 'id' and 'isOwner' merged from input params, and
-  # 'createdAt', 'updatedAt', 'publishedAt' and 'projectType' merged from the
-  # corresponding database row values.
-  def self.merged_row_value(row, channel_id:, is_owner:)
-    JSON.parse(row[:value]).merge(
-      {
-        id: channel_id,
-        isOwner: is_owner,
-        createdAt: row[:created_at],
-        updatedAt: row[:updated_at],
-        publishedAt: row[:published_at],
-        projectType: row[:project_type],
-      }
-    )
-  end
-
   #
   # Given an encrypted channel id, attempt to determine the channel's
   # project type.
@@ -387,66 +447,6 @@ class Projects
   #
   def project_type_from_channel_id(channel_id)
     project_type_from_merged_row(get(channel_id))
-  end
-
-  #
-  # Looks up the set of ancestors in the remix history for a particular project.
-  # This can require several queries, so be careful exposing this in the UI
-  # for external users - right now this is designed as a utility for internal
-  # use only.
-  #
-  # Note: It should be possible to reduce the number of queries by joining the
-  #   table against itself.  Worth investigating if we wanted to expose this
-  #   to users.
-  #
-  # @param [String] channel_id the child project channel id where we start
-  #   our search.
-  # @param [Integer] depth (optional) how many ancestors to retrieve.  Default
-  #   to just one - this could get expensive if a project has a very deep
-  #   remix ancestry.
-  # @return [Array<String>] list of channel IDs of ancestor projects in reverse
-  #   chronological order, up to the provided limit.
-  #
-  def self.remix_ancestry(channel_id, depth: 1)
-    [].tap do |ancestors|
-      _, project_id = storage_decrypt_channel_id(channel_id)
-      next_row = Projects.table.where(id: project_id).first
-      while next_row&.[](:remix_parent_id)
-        next_row = Projects.table.where(id: next_row[:remix_parent_id]).first
-        ancestors.push storage_encrypt_channel_id(next_row[:storage_id], next_row[:id]) if next_row
-        break if ancestors.size >= depth
-      end
-    end
-  rescue
-    []
-  end
-
-  def self.get_abuse(channel_id)
-    _, project_id = storage_decrypt_channel_id(channel_id)
-    project_info = Projects.table.where(id: project_id).first
-    project_info[:abuse_score]
-  end
-
-  # Returns projects with id in ids
-  def self.get_by_ids(ids)
-    Projects.table.where(id: ids)
-  end
-
-  def self.table
-    DASHBOARD_DB[:projects]
-  end
-
-  def self.in_restricted_share_mode(channel_id, project_type)
-    # Only do this check if the project type is one that can be restricted, as this check
-    # requires a call to S3.
-    return false unless RESTRICTED_PUBLISH_PROJECT_TYPES.include?(project_type)
-
-    # Check for restricted share mode
-    source_data = SourceBucket.new.get(channel_id, SourceBucket.main_json_filename)
-    return unless source_data && source_data[:body] && source_data[:body].respond_to?(:string)
-    source_body = source_data[:body].string
-    project_src = ProjectSourceJson.new(source_body)
-    return project_src.in_restricted_share_mode?
   end
 
   # TODO: post-firebase-cleanup, remove this once we switch 100% to datablock storage

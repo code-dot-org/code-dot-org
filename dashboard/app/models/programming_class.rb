@@ -73,6 +73,14 @@ class ProgrammingClass < ApplicationRecord
     programming_class.id
   end
 
+  def self.get_from_cache(programming_environment_name, key)
+    cache_key = "programming_class/#{programming_environment_name}/#{key}"
+    Rails.cache.fetch(cache_key, force: !Unit.should_cache?) do
+      env = ProgrammingEnvironment.find_by_name(programming_environment_name)
+      ProgrammingClass.includes([:programming_environment, :programming_environment_category, :programming_methods]).find_by(programming_environment_id: env.id, key: key)
+    end
+  end
+
   def file_path
     Rails.root.join("config/programming_classes/#{programming_environment.name}/#{key.parameterize(preserve_case: false)}.json")
   end
@@ -163,14 +171,6 @@ class ProgrammingClass < ApplicationRecord
       methods += [m.summarize_for_show]
     end
     methods
-  end
-
-  def self.get_from_cache(programming_environment_name, key)
-    cache_key = "programming_class/#{programming_environment_name}/#{key}"
-    Rails.cache.fetch(cache_key, force: !Unit.should_cache?) do
-      env = ProgrammingEnvironment.find_by_name(programming_environment_name)
-      ProgrammingClass.includes([:programming_environment, :programming_environment_category, :programming_methods]).find_by(programming_environment_id: env.id, key: key)
-    end
   end
 
   private def parsed_examples

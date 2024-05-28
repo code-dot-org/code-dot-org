@@ -37,6 +37,23 @@ class Grid < Blockly
     level
   end
 
+  # contents - should respond to read by returning a 2d square array
+  #   with the given size, representing a blockly level.
+  # Throws ArgumentError if there is a non integer value in the array.
+  def self.load_maze(maze_file, size)
+    raw_maze = maze_file.read[0...size]
+    raw_maze.map {|row| row.map {|cell| Integer(cell)}}
+  end
+
+  # Parses the 2d array contents.
+  # If type is "Maze" return a single entry hash with 'maze' mapping to a 2d
+  #   array that Blockly can render.
+  # Throws ArgumentError if there is a non integer value in the array.
+  def self.parse_maze(maze_json, _ = nil)
+    maze_json = maze_json.to_json if maze_json.is_a? Array
+    {'maze' => JSON.parse(maze_json).map {|row| row.map {|cell| Integer(cell)}}.to_json}
+  end
+
   def create_maze(level_params, params)
     size = params[:size].to_i
     if params[:maze_source]
@@ -62,23 +79,6 @@ class Grid < Blockly
     elsif property_changed?('min_collected')
       self.class.parse_maze(serialized_maze, min_total_value)
     end
-  end
-
-  # contents - should respond to read by returning a 2d square array
-  #   with the given size, representing a blockly level.
-  # Throws ArgumentError if there is a non integer value in the array.
-  def self.load_maze(maze_file, size)
-    raw_maze = maze_file.read[0...size]
-    raw_maze.map {|row| row.map {|cell| Integer(cell)}}
-  end
-
-  # Parses the 2d array contents.
-  # If type is "Maze" return a single entry hash with 'maze' mapping to a 2d
-  #   array that Blockly can render.
-  # Throws ArgumentError if there is a non integer value in the array.
-  def self.parse_maze(maze_json, _ = nil)
-    maze_json = maze_json.to_json if maze_json.is_a? Array
-    {'maze' => JSON.parse(maze_json).map {|row| row.map {|cell| Integer(cell)}}.to_json}
   end
 
   def filter_level_attributes(level_hash)

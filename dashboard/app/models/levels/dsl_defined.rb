@@ -33,41 +33,6 @@ class DSLDefined < Level
 
   DEFAULT_LEVEL_NAME = 'unique level name here'
 
-  def validate_level_name
-    errors.add(:name, "cannot be the default level name") if name == DEFAULT_LEVEL_NAME
-  end
-
-  def dsl_default
-    "Enter the level definition here.\n"
-  end
-
-  def localized_teacher_markdown
-    # Overrides the normal behavior since for DSLDefined levels, the teacher
-    # markdown is part of the dsl.
-    localized_property('teacher_markdown')
-  end
-
-  def localized_property(property)
-    # We have to manually check for default here rather than just passing
-    # self.send(property) directly  because some properties used here (like
-    # questions and answer for multi and match levels) expect to return an
-    # array of values, and if you pass an array as default to I18n.t it
-    # actually only returns the first element
-    localized = I18n.t(
-      property,
-      scope: ['data', 'dsls', name],
-      separator: I18n::Backend::Flatten::SEPARATOR_ESCAPE_CHAR,
-      default: nil,
-      smart: true
-    )
-
-    source = try(property) || properties[property]
-    # When the result of I18n.t is a hash (or an array of hashes), they always
-    # have symbol keys regardless of the input format. We always want strings,
-    # so convert the value here.
-    self.class.resolve_partially_localized(localized, source)
-  end
-
   # Localized content for DSL-Defined levels can be any combination of strings,
   # arrays, or hashes. In every case, when we do not yet have a translation for
   # a piece of content it comes back as nil. When that happens, we want to
@@ -137,6 +102,65 @@ class DSLDefined < Level
     end
   end
 
+  def self.decrypt_dsl_text_if_necessary(dsl_text)
+    if dsl_text =~ /^encrypted '(.*)'$/m
+      begin
+        return Encryption.decrypt_object($1)
+      rescue Exception
+        # just return the encrypted text
+      end
+    end
+    return dsl_text
+  end
+
+  def self.set_editor_experiment(dsl_text, editor_experiment)
+    return dsl_text unless editor_experiment
+
+    # remove previous editor experiment
+    dsl_text = dsl_text.sub(/\neditor_experiment.*/, '')
+
+    # define editor_experiment on the second line of the dsl file.
+    index = dsl_text.index("\n")
+    dsl_text = dsl_text.insert(index, "\neditor_experiment '#{editor_experiment}'") if index
+
+    dsl_text
+  end
+
+  def validate_level_name
+    errors.add(:name, "cannot be the default level name") if name == DEFAULT_LEVEL_NAME
+  end
+
+  def dsl_default
+    "Enter the level definition here.\n"
+  end
+
+  def localized_teacher_markdown
+    # Overrides the normal behavior since for DSLDefined levels, the teacher
+    # markdown is part of the dsl.
+    localized_property('teacher_markdown')
+  end
+
+  def localized_property(property)
+    # We have to manually check for default here rather than just passing
+    # self.send(property) directly  because some properties used here (like
+    # questions and answer for multi and match levels) expect to return an
+    # array of values, and if you pass an array as default to I18n.t it
+    # actually only returns the first element
+    localized = I18n.t(
+      property,
+      scope: ['data', 'dsls', name],
+      separator: I18n::Backend::Flatten::SEPARATOR_ESCAPE_CHAR,
+      default: nil,
+      smart: true
+    )
+
+    source = try(property) || properties[property]
+    # When the result of I18n.t is a hash (or an array of hashes), they always
+    # have symbol keys regardless of the input format. We always want strings,
+    # so convert the value here.
+    self.class.resolve_partially_localized(localized, source)
+  end
+
   # Write the specified text to the dsl level definition file for this level.
   def rewrite_dsl_file(text)
     File.write(file_path, (level_encrypted? ? encrypted_dsl_text(text) : text))
@@ -165,17 +189,6 @@ class DSLDefined < Level
   def encrypted_dsl_text(dsl_text)
     ["name '#{name}'",
      "encrypted '#{Encryption.encrypt_object(dsl_text)}'"].join("\n")
-  end
-
-  def self.decrypt_dsl_text_if_necessary(dsl_text)
-    if dsl_text =~ /^encrypted '(.*)'$/m
-      begin
-        return Encryption.decrypt_object($1)
-      rescue Exception
-        # just return the encrypted text
-      end
-    end
-    return dsl_text
   end
 
   def clone_with_name(new_name, editor_experiment: nil)
@@ -222,19 +235,6 @@ class DSLDefined < Level
   # don't allow markdown in DSL levels unless child class overrides this
   def supports_markdown?
     false
-  end
-
-  def self.set_editor_experiment(dsl_text, editor_experiment)
-    return dsl_text unless editor_experiment
-
-    # remove previous editor experiment
-    dsl_text = dsl_text.sub(/\neditor_experiment.*/, '')
-
-    # define editor_experiment on the second line of the dsl file.
-    index = dsl_text.index("\n")
-    dsl_text = dsl_text.insert(index, "\neditor_experiment '#{editor_experiment}'") if index
-
-    dsl_text
   end
 
   private def delete_level_file

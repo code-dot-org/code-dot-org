@@ -29,10 +29,6 @@ class ChannelToken < ApplicationRecord
   # to reflect the new table name, so an alias is used to clarify which table this ID maps to.
   alias_attribute :project_id, :storage_app_id
 
-  def channel
-    storage_encrypt_channel_id(storage_id, project_id)
-  end
-
   # @param [Level] level The level associated with the channel token request.
   # @param [String] ip The IP address making the channel token request.
   # @param [String] user_storage_id The ID of the project associated with the channel token request.
@@ -101,5 +97,9 @@ class ChannelToken < ApplicationRecord
       standalone: standalone,
       level: level,
     )
+  end
+
+  def channel
+    storage_encrypt_channel_id(storage_id, project_id)
   end
 end

@@ -34,42 +34,6 @@ class Poetry < GamelabJr
   )
   # Note that standalone_app_name refers to the Poetry subtype.
 
-  # Set the default poem to nil if the standalone_app does not have poems, or if the default poem is
-  # not in the list of poems for the standalone_app.
-  def sanitize_default_poem
-    self.default_poem = nil if Poetry.standalone_apps_with_poems.exclude?(standalone_app_name) ||
-      Poetry.poem_keys_for_standalone_app(standalone_app_name).exclude?(default_poem)
-  end
-
-  # Set the available poems to nil if the standalone_app does not have poems.
-  # Also remove any available poems that are not in the list of poems for the standalone_app.
-  def sanitize_available_poems
-    self.available_poems = nil unless Poetry.standalone_apps_with_poems.include?(standalone_app_name)
-    return if Poetry.standalone_apps_with_poems.exclude?(standalone_app_name) || (available_poems && available_poems.empty?)
-    # filter out any invalid poems from available_poems
-    self.available_poems = available_poems & Poetry.poem_keys_for_standalone_app(standalone_app_name)
-  end
-
-  def validate_default_poem_and_available_poems
-    sanitize_default_poem
-    sanitize_available_poems
-    # If there is a default poem and dropdown poem(s), check that the default poem is
-    # in the dropdown poem list.
-    if default_poem.present? && Poetry.standalone_apps_with_poems.include?(standalone_app_name) &&
-        available_poems && !available_poems.empty? && available_poems.exclude?(default_poem)
-      errors.add(:default_poem, "selected default poem is not in dropdown poem list")
-    end
-  end
-
-  # Poetry levels use the same shared_functions as GamelabJr
-  def shared_function_type
-    GamelabJr
-  end
-
-  def project_type
-    standalone_app_name
-  end
-
   def self.standalone_app_names
     [['Poetry', 'poetry'], ['Poetry HOC', 'poetry_hoc'],  ['Time Capsule', 'time_capsule']]
   end
@@ -104,13 +68,6 @@ class Poetry < GamelabJr
         }
       )
     )
-  end
-
-  def uses_google_blockly?
-    true
-  end
-
-  def common_blocks(type)
   end
 
   # Used to get all available poems for a Poetry level.
@@ -173,5 +130,48 @@ class Poetry < GamelabJr
       ['1980 - Bring Us Together', 'mike'],
       ['1990 - Mary W. Jackson ', 'jess'],
     ]
+  end
+
+  # Set the default poem to nil if the standalone_app does not have poems, or if the default poem is
+  # not in the list of poems for the standalone_app.
+  def sanitize_default_poem
+    self.default_poem = nil if Poetry.standalone_apps_with_poems.exclude?(standalone_app_name) ||
+      Poetry.poem_keys_for_standalone_app(standalone_app_name).exclude?(default_poem)
+  end
+
+  # Set the available poems to nil if the standalone_app does not have poems.
+  # Also remove any available poems that are not in the list of poems for the standalone_app.
+  def sanitize_available_poems
+    self.available_poems = nil unless Poetry.standalone_apps_with_poems.include?(standalone_app_name)
+    return if Poetry.standalone_apps_with_poems.exclude?(standalone_app_name) || (available_poems && available_poems.empty?)
+    # filter out any invalid poems from available_poems
+    self.available_poems = available_poems & Poetry.poem_keys_for_standalone_app(standalone_app_name)
+  end
+
+  def validate_default_poem_and_available_poems
+    sanitize_default_poem
+    sanitize_available_poems
+    # If there is a default poem and dropdown poem(s), check that the default poem is
+    # in the dropdown poem list.
+    if default_poem.present? && Poetry.standalone_apps_with_poems.include?(standalone_app_name) &&
+        available_poems && !available_poems.empty? && available_poems.exclude?(default_poem)
+      errors.add(:default_poem, "selected default poem is not in dropdown poem list")
+    end
+  end
+
+  # Poetry levels use the same shared_functions as GamelabJr
+  def shared_function_type
+    GamelabJr
+  end
+
+  def project_type
+    standalone_app_name
+  end
+
+  def uses_google_blockly?
+    true
+  end
+
+  def common_blocks(type)
   end
 end

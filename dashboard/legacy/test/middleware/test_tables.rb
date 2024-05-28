@@ -7,6 +7,8 @@ class TablesTest < Minitest::Test
   include Rack::Test::Methods
   include SetupTest
 
+  # channel id suffix, used by firebase in development and circleci environments
+  TEST_SUFFIX = '-test-suffix'.freeze
   def build_rack_mock_session
     @session = Rack::MockSession.new(ChannelsApi.new(TablesApi), "studio.code.org")
   end
@@ -24,9 +26,6 @@ class TablesTest < Minitest::Test
     CDO.unstub(:firebase_secret)
     CDO.unstub(:firebase_channel_id_suffix)
   end
-
-  # channel id suffix, used by firebase in development and circleci environments
-  TEST_SUFFIX = '-test-suffix'.freeze
 
   def test_firebase_export
     create_channel

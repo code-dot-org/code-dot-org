@@ -15,10 +15,6 @@ class Library < ApplicationRecord
   SUBDIRECTORY_ATTRIBUTES = []
   EXTENSION = 'interpreted.js'
 
-  def file_content
-    content
-  end
-
   def self.properties_from_file(path, content)
     {
       name: File.basename(path, ".#{EXTENSION}"),
@@ -35,5 +31,9 @@ class Library < ApplicationRecord
     Rails.cache.fetch("libraries/#{name}", force: !Unit.should_cache?) do
       Library.find_by(name: name).try(:content)
     end
+  end
+
+  def file_content
+    content
   end
 end

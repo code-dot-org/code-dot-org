@@ -29,13 +29,6 @@ class Pd::WorkshopSurveyFoormSubmission < ApplicationRecord
 
   validate :day_for_workshop
 
-  def save_with_foorm_submission(answers, form_name, form_version)
-    ActiveRecord::Base.transaction do
-      create_foorm_submission!(form_name: form_name, form_version: form_version, answers: answers)
-      save!
-    end
-  end
-
   def self.has_submitted_form?(user_id, pd_workshop_id, pd_session_id, day, form_name, workshop_agenda = nil)
     # Match on these values.
     submissions = Pd::WorkshopSurveyFoormSubmission.where(
@@ -52,6 +45,13 @@ class Pd::WorkshopSurveyFoormSubmission < ApplicationRecord
     end
 
     !submissions.empty?
+  end
+
+  def save_with_foorm_submission(answers, form_name, form_version)
+    ActiveRecord::Base.transaction do
+      create_foorm_submission!(form_name: form_name, form_version: form_version, answers: answers)
+      save!
+    end
   end
 
   def facilitator_specific?

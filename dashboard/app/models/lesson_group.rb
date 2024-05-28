@@ -20,9 +20,6 @@ class LessonGroup < ApplicationRecord
   include SerializedProperties
 
   belongs_to :script, class_name: 'Unit', optional: true
-  def script
-    Unit.get_from_cache(script_id)
-  end
 
   has_many :lessons, -> {order(:absolute_position)}, dependent: :destroy
   has_many :script_levels, through: :lessons
@@ -118,6 +115,10 @@ class LessonGroup < ApplicationRecord
         raise "The key #{reserved_lesson_group[:key]} is a reserved key. It must have the display name: #{reserved_lesson_group[:display_name]}."
       end
     end
+  end
+
+  def script
+    Unit.get_from_cache(script_id)
   end
 
   def localized_display_name

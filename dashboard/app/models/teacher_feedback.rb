@@ -44,23 +44,6 @@ class TeacherFeedback < ApplicationRecord
 
   validates_inclusion_of :review_state, in: REVIEW_STATES.to_h.values, allow_nil: true
 
-  # Finds the script level associated with this object, using script id and
-  # level id.
-  def get_script_level
-    script_level = level.script_levels.find {|sl| sl.script_id == script_id}
-    return script_level if script_level
-
-    # accomodate feedbacks associated with a Bubble Choice sublevel
-    script_level = BubbleChoice.
-      parent_levels(level.name).
-      map(&:script_levels).
-      flatten.
-      find {|sl| sl.script_id == script_id}
-
-    raise "no script level found for teacher feedback #{id}" unless script_level
-    script_level
-  end
-
   def self.get_latest_feedback_given(student_id, level_id, teacher_id, script_id)
     get_latest_feedbacks_given(student_id, level_id, script_id, teacher_id).first
   end
@@ -137,6 +120,23 @@ class TeacherFeedback < ApplicationRecord
 
   def self.latest
     find_by(id: maximum(:id))
+  end
+
+  # Finds the script level associated with this object, using script id and
+  # level id.
+  def get_script_level
+    script_level = level.script_levels.find {|sl| sl.script_id == script_id}
+    return script_level if script_level
+
+    # accomodate feedbacks associated with a Bubble Choice sublevel
+    script_level = BubbleChoice.
+      parent_levels(level.name).
+      map(&:script_levels).
+      flatten.
+      find {|sl| sl.script_id == script_id}
+
+    raise "no script level found for teacher feedback #{id}" unless script_level
+    script_level
   end
 
   def user_level

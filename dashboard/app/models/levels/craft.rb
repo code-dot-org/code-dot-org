@@ -27,9 +27,12 @@
 require "csv"
 
 class Craft < Blockly
-  def shared_blocks
-    Block.for('craft') if JSONValue.value(is_aquatic_level)
-  end
+  JSON_LEVEL_MAPS = [
+    :ground_plane,
+    :ground_decoration_plane,
+    :action_plane
+  ].freeze
+  EMPTY_STRING = ''.freeze
 
   serialized_attrs(
     :ground_plane,
@@ -68,13 +71,6 @@ class Craft < Blockly
     :songs
   )
 
-  JSON_LEVEL_MAPS = [
-    :ground_plane,
-    :ground_decoration_plane,
-    :action_plane
-  ].freeze
-
-  EMPTY_STRING = ''.freeze
   DEFAULT_MAP_VALUE = EMPTY_STRING.freeze # no item
 
   ALL_BLOCKS = {
@@ -470,10 +466,6 @@ class Craft < Blockly
 
   }.freeze
 
-  def uses_google_blockly?
-    true
-  end
-
   def self.start_directions
     [['North', 0], ['East', 1], ['South', 2], ['West', 3]]
   end
@@ -504,28 +496,6 @@ class Craft < Blockly
       ['Minecart level', 'minecart'],
       ['Spawn Agent on success level', 'agentSpawn']
     ]
-  end
-
-  def get_width
-    grid_width || 10
-  end
-
-  def get_height
-    grid_height || 10
-  end
-
-  def project_type
-    if is_agent_level == 'true'
-      'minecraft_hero'
-    elsif is_event_level == 'true'
-      'minecraft_designer'
-    elsif is_connection_level == 'true'
-      'minecraft_codebuilder'
-    elsif is_aquatic_level == 'true'
-      'minecraft_aquatic'
-    else
-      'minecraft_adventurer'
-    end
   end
 
   def self.create_from_level_builder(params, level_params)
@@ -577,6 +547,36 @@ class Craft < Blockly
 
   def self.skins
     ['craft']
+  end
+
+  def shared_blocks
+    Block.for('craft') if JSONValue.value(is_aquatic_level)
+  end
+
+  def uses_google_blockly?
+    true
+  end
+
+  def get_width
+    grid_width || 10
+  end
+
+  def get_height
+    grid_height || 10
+  end
+
+  def project_type
+    if is_agent_level == 'true'
+      'minecraft_hero'
+    elsif is_event_level == 'true'
+      'minecraft_designer'
+    elsif is_connection_level == 'true'
+      'minecraft_codebuilder'
+    elsif is_aquatic_level == 'true'
+      'minecraft_aquatic'
+    else
+      'minecraft_adventurer'
+    end
   end
 
   def adventurer_blocks

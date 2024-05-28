@@ -35,10 +35,6 @@ class MilestoneParser
 
   cattr_accessor :log_debug
 
-  def debug(msg)
-    puts msg if log_debug
-  end
-
   def self.count
     # Load v2 cache
     cache_file = MILESTONE_CACHE_V2
@@ -53,6 +49,10 @@ class MilestoneParser
     @s3_client = s3_client
     @s3_resource = Aws::S3::Resource.new(client: s3_client)
     self.log_debug = true
+  end
+
+  def debug(msg)
+    puts msg if log_debug
   end
 
   # Parses all milestone logs in s3://cdo-logs/hosts/**/dashboard/milestone.log*

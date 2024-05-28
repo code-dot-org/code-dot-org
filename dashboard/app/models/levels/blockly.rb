@@ -89,12 +89,14 @@ class Blockly < Level
   # DCDO key for turning this feature on or off.
   BLOCKLY_I18N_IN_TEXT_DCDO_KEY = 'blockly_i18n_in_text'.freeze
 
-  def summarize_for_lab2_properties(script)
-    level_properties = super
-    level_properties[:sharedBlocks] = localized_blockly_level_options(script)["sharedBlocks"]
-    level_properties
-  end
-
+  XML_OPTIONS = Nokogiri::XML::Node::SaveOptions::NO_DECLARATION
+  CATEGORY_CUSTOM_NAMES = {
+    Behavior: 'Behaviors',
+    Location: 'Locations',
+    PROCEDURE: 'Functions',
+    VARIABLE: 'Variables',
+  }
+  GOOGLE_BLOCKLY_NAMESPACE_XML = "<xml xmlns=\"https://developers.google.com/blockly/xml\">"
   def self.field_or_title(xml_doc)
     num_fields = xml_doc.xpath('//field').count
     num_titles = xml_doc.xpath('//title').count
@@ -103,68 +105,9 @@ class Blockly < Level
     "title"
   end
 
-  # These serialized fields will be serialized/deserialized as straight XML
-  def xml_blocks
-    %w(initialization_blocks start_blocks toolbox_blocks required_blocks recommended_blocks solution_blocks)
-  end
-
-  def to_xml(options = {})
-    xml_node = Nokogiri::XML(super(options))
-    Nokogiri::XML::Builder.with(xml_node.at(type)) do |xml|
-      xml.blocks do
-        xml_blocks.each do |attr|
-          xml.send(attr) {|x| x << send(attr)} if send(attr).present?
-        end
-      end
-    end
-    self.class.pretty_print_xml(xml_node.to_xml)
-  end
-
-  def load_level_xml(xml_node)
-    block_nodes = xml_blocks.count > 0 ? xml_node.xpath(xml_blocks.map {|x| '//' + x}.join(' | ')).map(&:remove) : []
-    level_properties = super(xml_node)
-    block_nodes.each do |attr_node|
-      level_properties[attr_node.name] = attr_node.child.serialize(save_with: XML_OPTIONS).strip
-    end
-    level_properties
-  end
-
-  def filter_level_attributes(level_hash)
-    super(level_hash.tap {|hash| hash['properties'].except!(*xml_blocks)})
-  end
-
-  before_save :update_preload_asset_list
-
-  def update_preload_asset_list
-    preload_asset_list = properties["preload_asset_list"]
-    preload_asset_list.try(:delete_if, &:blank?)
-    preload_asset_list = nil unless preload_asset_list.try(:present?)
-    properties["preload_asset_list"] = preload_asset_list
-  end
-
-  before_validation do
-    xml_blocks.each {|attr| normalize_xml attr}
-  end
-
-  XML_OPTIONS = Nokogiri::XML::Node::SaveOptions::NO_DECLARATION
-
-  def normalize_xml(attr)
-    attr_val = send(attr)
-    if attr_val.present?
-      attr_doc = Nokogiri::XML(attr_val) {|config| config.strict.noblanks}
-      normalized_attr = attr_doc.serialize(save_with: XML_OPTIONS).strip
-      send("#{attr}=", normalized_attr)
-    end
-  end
-
   # Overriden by different Blockly level types
   def self.skins
     []
-  end
-
-  def pretty_block(block_name)
-    xml_string = send("#{block_name}_blocks")
-    self.class.pretty_print_xml(xml_string)
   end
 
   def self.count_xml_blocks(xml_string)
@@ -179,15 +122,6 @@ class Blockly < Level
     end
     0
   end
-
-  CATEGORY_CUSTOM_NAMES = {
-    Behavior: 'Behaviors',
-    Location: 'Locations',
-    PROCEDURE: 'Functions',
-    VARIABLE: 'Variables',
-  }
-
-  GOOGLE_BLOCKLY_NAMESPACE_XML = "<xml xmlns=\"https://developers.google.com/blockly/xml\">"
 
   # This function converts category blocks used by levelbuilders to edit the toolbox to category tags
   # and places the appropriate blocks within each category
@@ -274,6 +208,78 @@ class Blockly < Level
     return xml_string if xml.nil?
     xml.xpath("//block[@type='controls_for_counter']//mutation[@counter='counter']").each(&:remove)
     xml.serialize(save_with: XML_OPTIONS).delete("\n").strip
+  end
+
+  def self.base_url
+    "#{Blockly.asset_host_prefix}/blockly/"
+  end
+
+  def self.asset_host_prefix
+    host = ActionController::Base.asset_host
+    (host.blank?) ? "" : "//#{host}"
+  end
+
+  def summarize_for_lab2_properties(script)
+    level_properties = super
+    level_properties[:sharedBlocks] = localized_blockly_level_options(script)["sharedBlocks"]
+    level_properties
+  end
+
+  # These serialized fields will be serialized/deserialized as straight XML
+  def xml_blocks
+    %w(initialization_blocks start_blocks toolbox_blocks required_blocks recommended_blocks solution_blocks)
+  end
+
+  def to_xml(options = {})
+    xml_node = Nokogiri::XML(super(options))
+    Nokogiri::XML::Builder.with(xml_node.at(type)) do |xml|
+      xml.blocks do
+        xml_blocks.each do |attr|
+          xml.send(attr) {|x| x << send(attr)} if send(attr).present?
+        end
+      end
+    end
+    self.class.pretty_print_xml(xml_node.to_xml)
+  end
+
+  def load_level_xml(xml_node)
+    block_nodes = xml_blocks.count > 0 ? xml_node.xpath(xml_blocks.map {|x| '//' + x}.join(' | ')).map(&:remove) : []
+    level_properties = super(xml_node)
+    block_nodes.each do |attr_node|
+      level_properties[attr_node.name] = attr_node.child.serialize(save_with: XML_OPTIONS).strip
+    end
+    level_properties
+  end
+
+  def filter_level_attributes(level_hash)
+    super(level_hash.tap {|hash| hash['properties'].except!(*xml_blocks)})
+  end
+
+  before_save :update_preload_asset_list
+
+  def update_preload_asset_list
+    preload_asset_list = properties["preload_asset_list"]
+    preload_asset_list.try(:delete_if, &:blank?)
+    preload_asset_list = nil unless preload_asset_list.try(:present?)
+    properties["preload_asset_list"] = preload_asset_list
+  end
+
+  before_validation do
+    xml_blocks.each {|attr| normalize_xml attr}
+  end
+
+  def normalize_xml(attr)
+    attr_val = send(attr)
+    if attr_val.present?
+      attr_doc = Nokogiri::XML(attr_val) {|config| config.strict.noblanks}
+      normalized_attr = attr_doc.serialize(save_with: XML_OPTIONS).strip
+      send("#{attr}=", normalized_attr)
+    end
+  end
+
+  def pretty_block(block_name)
+    xml_string = send("#{block_name}_blocks")
+    self.class.pretty_print_xml(xml_string)
   end
 
   # for levels with solutions
@@ -834,15 +840,6 @@ class Blockly < Level
       end
     end
     block_xml
-  end
-
-  def self.base_url
-    "#{Blockly.asset_host_prefix}/blockly/"
-  end
-
-  def self.asset_host_prefix
-    host = ActionController::Base.asset_host
-    (host.blank?) ? "" : "//#{host}"
   end
 
   # If true, don't autoplay videos before this level (but do keep them in the

@@ -13,13 +13,13 @@ class MilestoneParser
 end
 
 class TestMilestoneParser < Minitest::Test
-  def self.instance
-    @@instance
-  end
-
   MILESTONE_LOG = File.join(__dir__, 'fixtures', 'milestone.log')
   LOG_SIZE = File.stat(MILESTONE_LOG).size
   CACHE_FILE = File.join(__dir__, 'fixtures', 'milestone-cache-test.json')
+
+  def self.instance
+    @@instance
+  end
 
   def fetch(key, path, bytes)
     @fetch_count += 1

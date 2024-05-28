@@ -77,6 +77,10 @@ class Gamelab < Blockly
     )
   end
 
+  def self.palette
+    SharedConstants::GAMELAB_BLOCKS
+  end
+
   # By default, level types that inherit from Blockly will try to store a bunch
   # of fields as normalized xml, discarding anything that's not actually XML.
   # Gamelab doesn't use blockly, so don't do that to any of our fields.
@@ -99,9 +103,5 @@ class Gamelab < Blockly
 
   def age_13_required?
     true
-  end
-
-  def self.palette
-    SharedConstants::GAMELAB_BLOCKS
   end
 end

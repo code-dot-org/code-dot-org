@@ -19,6 +19,70 @@ class RedisTable
   class NotFound < Sinatra::NotFound
   end
 
+  # @param [Redis] redis The redis client.
+  # @param [String] shard_id
+  # @param [Hash<String, Integer>] table_map
+  # @return [Array<Hash<String, Array<Hash>>>]
+  def self.get_tables(redis, shard_id, table_map)
+    props = RedisPropertyBag.new(redis, shard_id)
+    {}.tap do |result|
+      props.to_hash.select do |k, v|
+        # Skip internal keys and rows for non-requested tables
+        table_name = table_from_row_key(k)
+        next if internal_key?(k) || !table_map.include?(table_name)
+
+        # Add or get the rows entry for the table from the result map.
+        value = (result[table_name] ||= {'rows' => []})
+
+        # Ignore rows whose id is too low
+        id = id_from_row_key(k)
+        next if id < table_map[table_name]
+
+        # Add the rows.
+        value['rows'] << make_row(v)
+      end
+    end
+  end
+
+  # Deletes all the tables and rows in a shard.
+  def self.reset_shard(shard_id, redis, pub_sub)
+    RedisPropertyBag.new(redis, shard_id).delete_all
+    pub_sub&.publish(shard_id, 'all_tables', {action: 'reset_shard'})
+  end
+
+  # Given a row key, return the name of the RedisTable that it belongs to.
+  # @param [String] row_key
+  # @return [String] the RedisTable name.
+  # TODO(asher): Remove the need for the rubocop disable.
+  def self.table_from_row_key(key)
+    key.split('_')[0]
+  end
+
+  # Makes a row object by parsing the JSON value.
+  #
+  # @param [String] value The JSON-encoded value.
+  # @return [Hash] The row, or null if no such row exists.
+  # @private
+  # TODO(asher): Remove the need for the rubocop disable.
+  def self.make_row(value)
+    value.nil? ? nil : JSON.parse(value)
+  end
+
+  # Return true if k is special internal key (e.g. the row id key) that should
+  # not be returned to callers.
+  # TODO(asher): Remove the need for the rubocop disable.
+  def self.internal_key?(k)
+    k.end_with?(ROW_ID_SUFFIX)
+  end
+
+  # Given a row key, return the id of the row that it corresponds to.
+  # @param [String] key
+  # @return [Integer] the row id.
+  # TODO(asher): Remove the need for the rubocop disable.
+  def self.id_from_row_key(key)
+    key.split('_')[1].to_i
+  end
+
   # Constructs the redis table.
   #
   # @param [Redis] redis The Redis client.
@@ -87,31 +151,6 @@ class RedisTable
   # RedisTable.get_tables(redis, "shard", {'t1' => 1, 't2' => 3})
   # =>  {'t1' => {'rows' => [{..}, <etc> }
 
-  # @param [Redis] redis The redis client.
-  # @param [String] shard_id
-  # @param [Hash<String, Integer>] table_map
-  # @return [Array<Hash<String, Array<Hash>>>]
-  def self.get_tables(redis, shard_id, table_map)
-    props = RedisPropertyBag.new(redis, shard_id)
-    {}.tap do |result|
-      props.to_hash.select do |k, v|
-        # Skip internal keys and rows for non-requested tables
-        table_name = table_from_row_key(k)
-        next if internal_key?(k) || !table_map.include?(table_name)
-
-        # Add or get the rows entry for the table from the result map.
-        value = (result[table_name] ||= {'rows' => []})
-
-        # Ignore rows whose id is too low
-        id = id_from_row_key(k)
-        next if id < table_map[table_name]
-
-        # Add the rows.
-        value['rows'] << make_row(v)
-      end
-    end
-  end
-
   # Fetches a row by id.
   #
   # @param [Integer] id The id of the row to fetch
@@ -147,45 +186,6 @@ class RedisTable
       publish_change({action: 'delete', ids: ids})
     end
     deleted
-  end
-
-  # Deletes all the tables and rows in a shard.
-  def self.reset_shard(shard_id, redis, pub_sub)
-    RedisPropertyBag.new(redis, shard_id).delete_all
-    pub_sub&.publish(shard_id, 'all_tables', {action: 'reset_shard'})
-  end
-
-  # Given a row key, return the name of the RedisTable that it belongs to.
-  # @param [String] row_key
-  # @return [String] the RedisTable name.
-  # TODO(asher): Remove the need for the rubocop disable.
-  def self.table_from_row_key(key)
-    key.split('_')[0]
-  end
-
-  # Makes a row object by parsing the JSON value.
-  #
-  # @param [String] value The JSON-encoded value.
-  # @return [Hash] The row, or null if no such row exists.
-  # @private
-  # TODO(asher): Remove the need for the rubocop disable.
-  def self.make_row(value)
-    value.nil? ? nil : JSON.parse(value)
-  end
-
-  # Return true if k is special internal key (e.g. the row id key) that should
-  # not be returned to callers.
-  # TODO(asher): Remove the need for the rubocop disable.
-  def self.internal_key?(k)
-    k.end_with?(ROW_ID_SUFFIX)
-  end
-
-  # Given a row key, return the id of the row that it corresponds to.
-  # @param [String] key
-  # @return [Integer] the row id.
-  # TODO(asher): Remove the need for the rubocop disable.
-  def self.id_from_row_key(key)
-    key.split('_')[1].to_i
   end
 
   # Maps a table row_id to a Redis field name that includes the table

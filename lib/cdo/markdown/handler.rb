@@ -6,14 +6,6 @@ module Cdo
     # A simple helper to capture the logic of registering a markdown handler with
     # ActionView
     class Handler
-      def initialize(renderer = Redcarpet::Render::HTML, options = {})
-        @parser = Redcarpet::Markdown.new(renderer, options)
-      end
-
-      def call(template, source)
-        "#{@parser.render(source).inspect}.html_safe"
-      end
-
       def self.register(*args)
         ActionView::Template.register_template_handler :md, Handler.new(*args)
       end
@@ -24,6 +16,14 @@ module Cdo
 
       def self.register_inline(*args)
         ActionView::Template.register_template_handler :inline_md, Handler.new(*args)
+      end
+
+      def initialize(renderer = Redcarpet::Render::HTML, options = {})
+        @parser = Redcarpet::Markdown.new(renderer, options)
+      end
+
+      def call(template, source)
+        "#{@parser.render(source).inspect}.html_safe"
       end
     end
   end

@@ -51,6 +51,52 @@ class UserLevel < ApplicationRecord
     where(script: lesson.script, level: levels)
   end
 
+  # This is called when a teacher updates the lock or readonly status for each student.
+  # As such, one of locked or readonly will be populated, and the other nil.
+  def self.update_lockable_state(user_id, level_id, script_id, locked, readonly_answers)
+    user_level = UserLevel.find_or_initialize_by(
+      user_id: user_id,
+      level_id: level_id,
+      script_id: script_id
+    )
+
+    # no need to create a level if it's just going to be locked
+    return if !user_level.persisted? && locked
+
+    # Explicitly set `locked=false` if `readonly_answers=true` to start
+    # the autolock clock so that the mutually-exclusive `show_as_locked` and
+    # `show_as_readonly` will flip from `false/true` to `true/false`
+    # after AUTOLOCK_PERIOD has passed.
+    # Otherwise, update according to new status given
+    user_level.locked = readonly_answers ? false : locked
+    user_level.readonly_answers = readonly_answers
+
+    # preserve updated_at, which represents the user's submission timestamp.
+    user_level.save!(touch: false)
+  end
+
+  def self.update_best_result(user_id, level_id, script_id, best_result, touch_updated_at: true)
+    user_level = UserLevel.find_by(
+      level_id: level_id,
+      script_id: script_id,
+      user_id: user_id
+    )
+
+    if user_level.present?
+      user_level.best_result = best_result
+
+      # touch_updated_at=false preserves updated_at, which represents the user's submission timestamp.
+      user_level.save!(touch: touch_updated_at)
+    end
+  end
+
+  # Get number of passed levels per user for the given set of user IDs
+  # @param [ActiveRecord::Relation<Collection<User>>] users
+  # @return [Hash<Integer, Integer>] user_id => passed_level_count
+  def self.count_passed_levels_for_users(users)
+    joins(:user).merge(users).passing.group(:user_id).count
+  end
+
   def attempted?
     !best_result.nil?
   end
@@ -189,52 +235,6 @@ class UserLevel < ApplicationRecord
   def script_level
     s = Unit.get_from_cache(script_id)
     s.script_levels.detect {|sl| sl.level_ids.include? level_id}
-  end
-
-  # This is called when a teacher updates the lock or readonly status for each student.
-  # As such, one of locked or readonly will be populated, and the other nil.
-  def self.update_lockable_state(user_id, level_id, script_id, locked, readonly_answers)
-    user_level = UserLevel.find_or_initialize_by(
-      user_id: user_id,
-      level_id: level_id,
-      script_id: script_id
-    )
-
-    # no need to create a level if it's just going to be locked
-    return if !user_level.persisted? && locked
-
-    # Explicitly set `locked=false` if `readonly_answers=true` to start
-    # the autolock clock so that the mutually-exclusive `show_as_locked` and
-    # `show_as_readonly` will flip from `false/true` to `true/false`
-    # after AUTOLOCK_PERIOD has passed.
-    # Otherwise, update according to new status given
-    user_level.locked = readonly_answers ? false : locked
-    user_level.readonly_answers = readonly_answers
-
-    # preserve updated_at, which represents the user's submission timestamp.
-    user_level.save!(touch: false)
-  end
-
-  def self.update_best_result(user_id, level_id, script_id, best_result, touch_updated_at: true)
-    user_level = UserLevel.find_by(
-      level_id: level_id,
-      script_id: script_id,
-      user_id: user_id
-    )
-
-    if user_level.present?
-      user_level.best_result = best_result
-
-      # touch_updated_at=false preserves updated_at, which represents the user's submission timestamp.
-      user_level.save!(touch: touch_updated_at)
-    end
-  end
-
-  # Get number of passed levels per user for the given set of user IDs
-  # @param [ActiveRecord::Relation<Collection<User>>] users
-  # @return [Hash<Integer, Integer>] user_id => passed_level_count
-  def self.count_passed_levels_for_users(users)
-    joins(:user).merge(users).passing.group(:user_id).count
   end
 
   # Retrieves and memoizes the latest PairedUserLevel that's associated with

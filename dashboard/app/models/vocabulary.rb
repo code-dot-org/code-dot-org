@@ -36,6 +36,35 @@ class Vocabulary < ApplicationRecord
     common_sense_media
   )
 
+  # Return a sanitized copy of the given key with all invalid characters
+  # replaced with valid equivalents.
+  def self.sanitize_key(key)
+    key.strip.downcase.chars.map do |character|
+      KEY_CHAR_RE.match(character) ? character : '_'
+    end.join.squeeze('_')
+  end
+
+  # Return a version of the given key which does not conflict
+  # with any existing key for the given CourseVersion. We
+  # achieve this through basic guess-and-check; simply append an
+  # arbitrary incrementable value, and increment it until we
+  # find one that works.
+  #
+  # NOTE that this is not currently used in production; it's
+  # currently only used by the ScriptSeedTest, to deal with
+  # the complex seeding logic used in that test.
+  def self.uniquify_key(key, course_version_id)
+    new_key = key.dup
+    suffix = 'a'
+
+    while Vocabulary.exists?(key: new_key, course_version_id: course_version_id)
+      new_key = "#{key}_#{suffix}"
+      suffix = suffix.next
+    end
+
+    new_key
+  end
+
   # Used for seeding from JSON. Returns the full set of information needed to
   # uniquely identify this object as well as any other objects it belongs to.
   # If the attributes of this object alone aren't sufficient, and associated
@@ -88,35 +117,6 @@ class Vocabulary < ApplicationRecord
     key = common_sense_media ? "#{word}_csm" : word
     key = Vocabulary.sanitize_key(key)
     self.key = key
-  end
-
-  # Return a sanitized copy of the given key with all invalid characters
-  # replaced with valid equivalents.
-  def self.sanitize_key(key)
-    key.strip.downcase.chars.map do |character|
-      KEY_CHAR_RE.match(character) ? character : '_'
-    end.join.squeeze('_')
-  end
-
-  # Return a version of the given key which does not conflict
-  # with any existing key for the given CourseVersion. We
-  # achieve this through basic guess-and-check; simply append an
-  # arbitrary incrementable value, and increment it until we
-  # find one that works.
-  #
-  # NOTE that this is not currently used in production; it's
-  # currently only used by the ScriptSeedTest, to deal with
-  # the complex seeding logic used in that test.
-  def self.uniquify_key(key, course_version_id)
-    new_key = key.dup
-    suffix = 'a'
-
-    while Vocabulary.exists?(key: new_key, course_version_id: course_version_id)
-      new_key = "#{key}_#{suffix}"
-      suffix = suffix.next
-    end
-
-    new_key
   end
 
   def serialize_scripts

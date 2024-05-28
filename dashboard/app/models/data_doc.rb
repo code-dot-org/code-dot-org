@@ -20,35 +20,6 @@ class DataDoc < ApplicationRecord
   validates_uniqueness_of :key, case_sensitive: false
   validate :validate_key_format
 
-  def to_param
-    key
-  end
-
-  def file_path
-    Rails.root.join("config/data_docs/#{key}.json")
-  end
-
-  def serialize
-    {
-      key: key,
-      name: name,
-      content: content
-    }
-  end
-
-  # writes data doc to a seed file in the config directory
-  def write_serialization
-    return unless Rails.application.config.levelbuilder_mode
-    directory_name = File.dirname(file_path)
-    FileUtils.mkdir_p(directory_name)
-    File.write(file_path, JSON.pretty_generate(serialize))
-  end
-
-  def remove_serialization
-    return unless Rails.application.config.levelbuilder_mode
-    FileUtils.rm_f(file_path)
-  end
-
   # creates and deletes records to match all the seed files
   def self.seed_all
     # collect all existing docs, and for each json file,
@@ -79,5 +50,34 @@ class DataDoc < ApplicationRecord
     )
     data_doc.update! properties
     data_doc.id
+  end
+
+  def to_param
+    key
+  end
+
+  def file_path
+    Rails.root.join("config/data_docs/#{key}.json")
+  end
+
+  def serialize
+    {
+      key: key,
+      name: name,
+      content: content
+    }
+  end
+
+  # writes data doc to a seed file in the config directory
+  def write_serialization
+    return unless Rails.application.config.levelbuilder_mode
+    directory_name = File.dirname(file_path)
+    FileUtils.mkdir_p(directory_name)
+    File.write(file_path, JSON.pretty_generate(serialize))
+  end
+
+  def remove_serialization
+    return unless Rails.application.config.levelbuilder_mode
+    FileUtils.rm_f(file_path)
   end
 end

@@ -11,6 +11,11 @@ require 'cdo/firehose'
 class BucketHelper
   cattr_accessor :s3
 
+  # Replace any unsafe characters with dashes.
+  def self.replace_unsafe_chars(str)
+    str.gsub(UNSAFE_CHAR_REGEX, '-')
+  end
+
   def initialize(bucket, base_dir)
     @bucket = bucket
     @base_dir = base_dir
@@ -472,11 +477,6 @@ class BucketHelper
   # recommended for use in S3 key names:
   # https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-key-guidelines-safe-characters
   UNSAFE_CHAR_REGEX = /[^0-9A-Za-z!\-_.*'()]/ unless defined? UNSAFE_CHAR_REGEX
-
-  # Replace any unsafe characters with dashes.
-  def self.replace_unsafe_chars(str)
-    str.gsub(UNSAFE_CHAR_REGEX, '-')
-  end
 
   #
   # Check if the given error indicates a badly-formatted version ID was passed.

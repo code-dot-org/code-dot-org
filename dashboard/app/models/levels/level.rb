@@ -96,9 +96,135 @@ class Level < ApplicationRecord
     ai_tutor_available
   )
 
+  PRETTY_PRINT = {save_with: Nokogiri::XML::Node::SaveOptions::NO_DECLARATION | Nokogiri::XML::Node::SaveOptions::FORMAT}
+  TYPES_WITHOUT_IDEAL_LEVEL_SOURCE = [
+    'Aichat', # no ideal solution
+    'Ailab', # no ideal solution
+    'Applab', # freeplay
+    'Bounce', # no ideal solution
+    'ContractMatch', # dsl defined, covered in dsl
+    'CurriculumReference', # no user submitted content
+    'Dancelab', # no ideal solution
+    'DSLDefined', # dsl defined, covered in dsl
+    'EvaluationMulti', # unknown
+    'External', # dsl defined, covered in dsl
+    'ExternalLink', # no user submitted content
+    'Fish', # no ideal solution
+    'FreeResponse', # no ideal solution
+    'FrequencyAnalysis', # widget
+    'Flappy', # no ideal solution
+    'Gamelab', # freeplay
+    'GoBeyond', # unknown
+    'Javalab', # no ideal solution
+    'Level', # base class
+    'LevelGroup', # dsl defined, covered in dsl
+    'Map', # no user submitted content
+    'Match', # dsl defined, covered in dsl
+    'Multi', # dsl defined, covered in dsl
+    'Music', # no ideal solution
+    'BubbleChoice', # dsl defined, covered in dsl
+    'NetSim', # widget
+    'Odometer', # widget
+    'Panels', # no ideal solution
+    'Pixelation', # widget
+    'Poetry', # no ideal solution
+    'PublicKeyCryptography', # widget
+    'Pythonlab', # no ideal solution
+    'ScriptCompletion', # unknown
+    'StandaloneVideo', # no user submitted content
+    'TextCompression', # widget
+    'TextMatch', # dsl defined, covered in dsl
+    'Unplugged', # no solutions
+    'Vigenere', # widget
+    'Weblab', # no ideal solution
+    'Weblab2', # no ideal solution
+    'Widget', # widget
+  ].freeze
+  TYPES_WITH_IDEAL_LEVEL_SOURCE = %w(
+    Artist
+    Blockly
+    Calc
+    Craft
+    Eval
+    Grid
+    GamelabJr
+    Karel
+    Maze
+    Studio
+    StudioEC
+    StarWarsGrid
+  ).freeze
+  COPY_SUFFIX_LENGTH = 8 # '_copy999'.length
   # Fix STI routing http://stackoverflow.com/a/9463495
   def self.model_name
     self < Level ? Level.model_name : super
+  end
+
+  # Overriden by different level types.
+  def self.start_directions
+  end
+
+  # Overriden by different level types.
+  def self.step_modes
+  end
+
+  # Overriden by different level types.
+  def self.flower_types
+  end
+
+  # Overriden by different level types.
+  def self.palette_categories
+  end
+
+  def self.pretty_print_xml(xml_string)
+    xml = Nokogiri::XML(xml_string, &:noblanks)
+    xml.serialize(PRETTY_PRINT).strip
+  end
+
+  def self.where_we_want_to_calculate_ideal_level_source
+    where.not(type: TYPES_WITHOUT_IDEAL_LEVEL_SOURCE).
+      where(ideal_level_source_id: nil).
+      to_a.reject {|level| level.try(:free_play)}
+  end
+
+  def self.find_by_key(key)
+    # this is the key used in the script files, as a way to uniquely
+    # identify a level that can be defined by the .level file or in a
+    # blockly levels.js. for example, from hourofcode.script:
+    # level 'blockly:Maze:2_14'
+    # level 'scrat 16'
+    find_by(key_to_params(key))
+  end
+
+  def self.key_to_params(key)
+    if key.start_with?('blockly:')
+      _, game_name, level_num = key.split(':')
+      {game_id: Game.by_name(game_name), level_num: level_num}
+    else
+      {name: key}
+    end
+  end
+
+  def self.cache_find(id)
+    Unit.cache_find_level(id)
+  end
+
+  # Define search filter fields
+  def self.search_options
+    {
+      levelOptions: [
+        ['All types', ''],
+        *LevelsController::LEVEL_CLASSES.map {|x| [x.name, x.name]}.push(['Blockly', 'Blockly']).sort_by {|a| a[0]}
+      ],
+      scriptOptions: [
+        ['All scripts', ''],
+        *Unit.all_scripts.pluck(:name, :id).sort_by {|a| a[0]}
+      ],
+      ownerOptions: [
+        ['Any owner', ''],
+        *Level.joins(:user).distinct.pluck('users.name, users.id').select {|a| a[0].present? && a[1].present?}.sort_by {|a| a[0]}
+      ]
+    }
   end
 
   # https://github.com/rails/rails/issues/3508#issuecomment-29858772
@@ -172,22 +298,6 @@ class Level < ApplicationRecord
 
   def enable_examples?
     is_a?(Blockly)
-  end
-
-  # Overriden by different level types.
-  def self.start_directions
-  end
-
-  # Overriden by different level types.
-  def self.step_modes
-  end
-
-  # Overriden by different level types.
-  def self.flower_types
-  end
-
-  # Overriden by different level types.
-  def self.palette_categories
   end
 
   # Custom levels are built in levelbuilder. Legacy levels are defined in .js.
@@ -276,13 +386,6 @@ class Level < ApplicationRecord
     builder.to_xml(PRETTY_PRINT)
   end
 
-  PRETTY_PRINT = {save_with: Nokogiri::XML::Node::SaveOptions::NO_DECLARATION | Nokogiri::XML::Node::SaveOptions::FORMAT}
-
-  def self.pretty_print_xml(xml_string)
-    xml = Nokogiri::XML(xml_string, &:noblanks)
-    xml.serialize(PRETTY_PRINT).strip
-  end
-
   def filter_level_attributes(level_hash)
     %w(name id updated_at type solution_level_source_id ideal_level_source_id md5).each {|field| level_hash.delete field}
     level_hash.compact!
@@ -300,70 +403,6 @@ class Level < ApplicationRecord
     {}
   end
 
-  TYPES_WITHOUT_IDEAL_LEVEL_SOURCE = [
-    'Aichat', # no ideal solution
-    'Ailab', # no ideal solution
-    'Applab', # freeplay
-    'Bounce', # no ideal solution
-    'ContractMatch', # dsl defined, covered in dsl
-    'CurriculumReference', # no user submitted content
-    'Dancelab', # no ideal solution
-    'DSLDefined', # dsl defined, covered in dsl
-    'EvaluationMulti', # unknown
-    'External', # dsl defined, covered in dsl
-    'ExternalLink', # no user submitted content
-    'Fish', # no ideal solution
-    'FreeResponse', # no ideal solution
-    'FrequencyAnalysis', # widget
-    'Flappy', # no ideal solution
-    'Gamelab', # freeplay
-    'GoBeyond', # unknown
-    'Javalab', # no ideal solution
-    'Level', # base class
-    'LevelGroup', # dsl defined, covered in dsl
-    'Map', # no user submitted content
-    'Match', # dsl defined, covered in dsl
-    'Multi', # dsl defined, covered in dsl
-    'Music', # no ideal solution
-    'BubbleChoice', # dsl defined, covered in dsl
-    'NetSim', # widget
-    'Odometer', # widget
-    'Panels', # no ideal solution
-    'Pixelation', # widget
-    'Poetry', # no ideal solution
-    'PublicKeyCryptography', # widget
-    'Pythonlab', # no ideal solution
-    'ScriptCompletion', # unknown
-    'StandaloneVideo', # no user submitted content
-    'TextCompression', # widget
-    'TextMatch', # dsl defined, covered in dsl
-    'Unplugged', # no solutions
-    'Vigenere', # widget
-    'Weblab', # no ideal solution
-    'Weblab2', # no ideal solution
-    'Widget', # widget
-  ].freeze
-  TYPES_WITH_IDEAL_LEVEL_SOURCE = %w(
-    Artist
-    Blockly
-    Calc
-    Craft
-    Eval
-    Grid
-    GamelabJr
-    Karel
-    Maze
-    Studio
-    StudioEC
-    StarWarsGrid
-  ).freeze
-
-  def self.where_we_want_to_calculate_ideal_level_source
-    where.not(type: TYPES_WITHOUT_IDEAL_LEVEL_SOURCE).
-      where(ideal_level_source_id: nil).
-      to_a.reject {|level| level.try(:free_play)}
-  end
-
   def calculate_ideal_level_source_id
     ideal_level_source =
       level_sources.
@@ -371,24 +410,6 @@ class Level < ApplicationRecord
         max_by {|level_source| level_source.activities.where("test_result >= #{Activity::FREE_PLAY_RESULT}").count}
 
     update_attribute(:ideal_level_source_id, ideal_level_source.id) if ideal_level_source
-  end
-
-  def self.find_by_key(key)
-    # this is the key used in the script files, as a way to uniquely
-    # identify a level that can be defined by the .level file or in a
-    # blockly levels.js. for example, from hourofcode.script:
-    # level 'blockly:Maze:2_14'
-    # level 'scrat 16'
-    find_by(key_to_params(key))
-  end
-
-  def self.key_to_params(key)
-    if key.start_with?('blockly:')
-      _, game_name, level_num = key.split(':')
-      {game_id: Game.by_name(game_name), level_num: level_num}
-    else
-      {name: key}
-    end
   end
 
   # Returns whether this level is backed by a channel, whose id may
@@ -469,10 +490,6 @@ class Level < ApplicationRecord
         script_level.destroy
       end
     end
-  end
-
-  def self.cache_find(id)
-    Unit.cache_find_level(id)
   end
 
   def icon
@@ -678,8 +695,6 @@ class Level < ApplicationRecord
     end
   end
 
-  COPY_SUFFIX_LENGTH = 8 # '_copy999'.length
-
   # Returns the first level name of the form "<base_name>_copy<num>_<suffix>" which
   # is not already used by another level.
   # @param [String] suffix
@@ -783,24 +798,6 @@ class Level < ApplicationRecord
   # the scripts associated with the level are hint_prompt_enabled.
   def hint_prompt_enabled?
     script_levels.map(&:script).any?(&:hint_prompt_enabled?)
-  end
-
-  # Define search filter fields
-  def self.search_options
-    {
-      levelOptions: [
-        ['All types', ''],
-        *LevelsController::LEVEL_CLASSES.map {|x| [x.name, x.name]}.push(['Blockly', 'Blockly']).sort_by {|a| a[0]}
-      ],
-      scriptOptions: [
-        ['All scripts', ''],
-        *Unit.all_scripts.pluck(:name, :id).sort_by {|a| a[0]}
-      ],
-      ownerOptions: [
-        ['Any owner', ''],
-        *Level.joins(:user).distinct.pluck('users.name, users.id').select {|a| a[0].present? && a[1].present?}.sort_by {|a| a[0]}
-      ]
-    }
   end
 
   def get_level_for_progress(student = nil, script = nil)

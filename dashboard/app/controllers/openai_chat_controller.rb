@@ -1,8 +1,8 @@
 class OpenaiChatController < ApplicationController
+  include OpenaiChatHelper
   S3_AI_BUCKET = 'cdo-ai'.freeze
   S3_TUTOR_SYSTEM_PROMPT_PATH = 'tutor/system_prompt.txt'.freeze
 
-  include OpenaiChatHelper
   authorize_resource class: false
 
   def s3_client

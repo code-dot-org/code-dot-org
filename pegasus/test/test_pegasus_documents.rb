@@ -14,18 +14,6 @@ class PegasusTest < Minitest::Test
   include Rack::Test::Methods
   include CaptureQueries
 
-  def app
-    @app ||= Documents.new
-  end
-
-  def test_pegasus_documents
-    documents = Documents.new.helpers.all_documents.map do |page|
-      "#{page[:site]}#{page[:uri]}"
-    end
-    CDO.log.info "Found #{documents.length} Pegasus documents."
-    assert_operator documents.length, :>, 1500
-  end
-
   # All documents expected to return 200 status-codes, with the following exceptions:
   STATUS_EXCEPTIONS = {
     302 => %w[
@@ -41,7 +29,6 @@ class PegasusTest < Minitest::Test
       csedweek.org/resource_kit
     ]
   }
-
   # All documents expected to return 'text/html' content-type, with the following exceptions:
   CONTENT_TYPE_EXCEPTIONS = {
     'text/plain' => %w[
@@ -51,7 +38,6 @@ class PegasusTest < Minitest::Test
       hourofcode.com/us/health_check
     ]
   }
-
   # All documents expected to have unchanged content between runs, with the following exceptions:
   # (TODO: remove all randomness in server-generated content from these pages.)
   CONTENT_CHANGE_EXCEPTIONS = %w[
@@ -73,6 +59,17 @@ class PegasusTest < Minitest::Test
     code.org/leaderboards
     code.org/page_mode
   ]
+  def app
+    @app ||= Documents.new
+  end
+
+  def test_pegasus_documents
+    documents = Documents.new.helpers.all_documents.map do |page|
+      "#{page[:site]}#{page[:uri]}"
+    end
+    CDO.log.info "Found #{documents.length} Pegasus documents."
+    assert_operator documents.length, :>, 1500
+  end
 
   def test_render_pegasus_documents
     all_documents = app.helpers.all_documents.reject do |page|

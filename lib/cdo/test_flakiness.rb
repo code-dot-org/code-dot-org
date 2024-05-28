@@ -2,14 +2,6 @@ require 'rest-client'
 require 'cdo/cache_method'
 
 class TestFlakiness
-  def self.sauce_username
-    ENV['SAUCE_USERNAME'] || CDO.saucelabs_username
-  end
-
-  def self.sauce_key
-    ENV['SAUCE_ACCESS_KEY'] || CDO.saucelabs_authkey
-  end
-
   PER_REQUEST = 1500 # maximum returned per API call (undocumented)
   NUM_REQUESTS = 50 # rate limit: 15 request/s with 300 request burst https://wiki.saucelabs.com/display/DOCS/Rate+Limits+for+the+Sauce+Labs+REST+API
   MIN_SAMPLES = 10
@@ -17,6 +9,18 @@ class TestFlakiness
 
   # Each feature should be retried until the chance of flaky failure is less than this amount.
   MAX_FAILURE_RATE = 0.001 # 0.1%
+
+  FLAKINESS_TIMESTAMP_FILENAME = (File.dirname(__FILE__) + "/../../bin/ui_test_flakiness_timestamp.json").freeze
+  CACHE_FILENAME = (File.dirname(__FILE__) + "/../../dashboard/tmp/cache/test_summary.json").freeze
+  CACHE_TTL = 86400 # 1 day of seconds
+
+  def self.sauce_username
+    ENV['SAUCE_USERNAME'] || CDO.saucelabs_username
+  end
+
+  def self.sauce_key
+    ENV['SAUCE_ACCESS_KEY'] || CDO.saucelabs_authkey
+  end
 
   # Queries the SauceLabs API for jobs
   # @param options [Hash] Optional, options overrides.
@@ -77,17 +81,12 @@ class TestFlakiness
     return [max_reruns, confidence]
   end
 
-  FLAKINESS_TIMESTAMP_FILENAME = (File.dirname(__FILE__) + "/../../bin/ui_test_flakiness_timestamp.json").freeze
-
   # Sets a timestamp that corresponds to the oldest results we will request from SauceLabs
   # for calculating flakiness.
   # @param timestamp [Integer] Unix timestamp (e.g., Time.now.to_i)
   def self.reset(timestamp)
     File.write(FLAKINESS_TIMESTAMP_FILENAME, {timestamp: timestamp}.to_json)
   end
-
-  CACHE_FILENAME = (File.dirname(__FILE__) + "/../../dashboard/tmp/cache/test_summary.json").freeze
-  CACHE_TTL = 86400 # 1 day of seconds
 
   using CacheMethod
 

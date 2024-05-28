@@ -106,6 +106,89 @@ class CourseOffering < ApplicationRecord
     offering
   end
 
+  def self.should_cache?
+    Unit.should_cache?
+  end
+
+  def self.get_from_cache(key)
+    Rails.cache.fetch("course_offering/#{key}", force: !should_cache?) do
+      CourseOffering.find_by_key(key)
+    end
+  end
+
+  def self.all_course_offerings
+    if should_cache?
+      @@course_offerings ||= CourseOffering.all.includes(course_versions: :content_root)
+    else
+      CourseOffering.all.includes(course_versions: :content_root)
+    end
+  end
+
+  # We only want course offerings that are:
+  # - Assignable (course offering 'assignable' setting is true)
+  # - Published (associated unit group or unit 'published_state' setting is 'preview' or 'stable')
+  # - For students (associated unit group or unit 'participant_audience' setting is student)
+  def self.assignable_published_for_students_course_offerings
+    all_course_offerings.select {|co| co.assignable? && co.any_version_is_in_published_state? && co.get_participant_audience == 'student'}
+  end
+
+  def self.assignable_course_offerings(user)
+    all_course_offerings.select {|co| co.can_be_assigned?(user)}
+  end
+
+  def self.assignable_course_offerings_info(user, locale_code = 'en-us')
+    assignable_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}.to_h
+  end
+
+  def self.professional_learning_and_self_paced_course_offerings
+    all_course_offerings.select {|co| co.get_participant_audience == 'teacher' && co.instruction_type == 'self_paced'}.map do |co|
+      {
+        id: co.id,
+        key: co.key,
+        display_name: co.display_name,
+      }
+    end
+  end
+
+  def self.single_unit_course_offerings_containing_units_info(unit_ids)
+    single_unit_course_offerings_containing_units(unit_ids).map {|co| co.summarize_for_unit_selector(unit_ids)}
+  end
+
+  def self.seed_all(glob = "config/course_offerings/*.json")
+    removed_records = all.pluck(:key)
+    Dir.glob(Rails.root.join(glob)).each do |path|
+      removed_records -= [CourseOffering.seed_record(path)]
+    end
+    where(key: removed_records).destroy_all
+  end
+
+  def self.properties_from_file(content)
+    config = JSON.parse(content)
+    config.symbolize_keys
+  end
+
+  # Returns the course offering key to help in removing records
+  # that are no longer in use during the seeding process. See
+  # seed_all
+  def self.seed_record(file_path)
+    properties = properties_from_file(File.read(file_path))
+    key = properties[:self_paced_pl_course_offering_key]
+    new_self_paced_pl_course_offering = CourseOffering.find_by_key(key)
+    if new_self_paced_pl_course_offering.nil? && !key.nil?
+      warn "self_paced_pl_course_offering_key: #{key} not found. Please seed again to fix."
+    else
+      properties[:self_paced_pl_course_offering_id] = new_self_paced_pl_course_offering&.id
+    end
+    properties.delete(:self_paced_pl_course_offering_key)
+    course_offering = CourseOffering.find_or_initialize_by(key: properties[:key])
+    course_offering.update! properties
+    course_offering.key
+  end
+
+  def self.single_unit_course_offerings_containing_units(unit_ids)
+    CourseOffering.all.select {|co| co.units_included_in_any_version?(unit_ids) && co.any_version_is_unit?}
+  end
+
   # @param locale_code [String] User or request locale. Optional.
   # @return [CourseVersion] Returns the latest stable version in a course family supported in the given locale.
   #   If the locale is in English or the latest stable version is nil (either because previous versions are not
@@ -147,16 +230,6 @@ class CourseOffering < ApplicationRecord
     latest_published_version&.content_root_type == 'Unit'
   end
 
-  def self.should_cache?
-    Unit.should_cache?
-  end
-
-  def self.get_from_cache(key)
-    Rails.cache.fetch("course_offering/#{key}", force: !should_cache?) do
-      CourseOffering.find_by_key(key)
-    end
-  end
-
   # All course versions in a course offering should have the same instructor audience
   def can_be_instructor?(user)
     course_versions.any? {|cv| cv.can_be_instructor?(user)}
@@ -182,44 +255,6 @@ class CourseOffering < ApplicationRecord
   def any_version_is_in_published_state?
     published_states = ['preview', 'stable']
     course_versions.any? {|cv| published_states.include?(cv.published_state)}
-  end
-
-  def self.all_course_offerings
-    if should_cache?
-      @@course_offerings ||= CourseOffering.all.includes(course_versions: :content_root)
-    else
-      CourseOffering.all.includes(course_versions: :content_root)
-    end
-  end
-
-  # We only want course offerings that are:
-  # - Assignable (course offering 'assignable' setting is true)
-  # - Published (associated unit group or unit 'published_state' setting is 'preview' or 'stable')
-  # - For students (associated unit group or unit 'participant_audience' setting is student)
-  def self.assignable_published_for_students_course_offerings
-    all_course_offerings.select {|co| co.assignable? && co.any_version_is_in_published_state? && co.get_participant_audience == 'student'}
-  end
-
-  def self.assignable_course_offerings(user)
-    all_course_offerings.select {|co| co.can_be_assigned?(user)}
-  end
-
-  def self.assignable_course_offerings_info(user, locale_code = 'en-us')
-    assignable_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}.to_h
-  end
-
-  def self.professional_learning_and_self_paced_course_offerings
-    all_course_offerings.select {|co| co.get_participant_audience == 'teacher' && co.instruction_type == 'self_paced'}.map do |co|
-      {
-        id: co.id,
-        key: co.key,
-        display_name: co.display_name,
-      }
-    end
-  end
-
-  def self.single_unit_course_offerings_containing_units_info(unit_ids)
-    single_unit_course_offerings_containing_units(unit_ids).map {|co| co.summarize_for_unit_selector(unit_ids)}
   end
 
   def summarize_for_unit_selector(unit_ids)
@@ -369,47 +404,12 @@ class CourseOffering < ApplicationRecord
     File.write(file_path, JSON.pretty_generate(object_to_serialize) + "\n")
   end
 
-  def self.seed_all(glob = "config/course_offerings/*.json")
-    removed_records = all.pluck(:key)
-    Dir.glob(Rails.root.join(glob)).each do |path|
-      removed_records -= [CourseOffering.seed_record(path)]
-    end
-    where(key: removed_records).destroy_all
-  end
-
-  def self.properties_from_file(content)
-    config = JSON.parse(content)
-    config.symbolize_keys
-  end
-
-  # Returns the course offering key to help in removing records
-  # that are no longer in use during the seeding process. See
-  # seed_all
-  def self.seed_record(file_path)
-    properties = properties_from_file(File.read(file_path))
-    key = properties[:self_paced_pl_course_offering_key]
-    new_self_paced_pl_course_offering = CourseOffering.find_by_key(key)
-    if new_self_paced_pl_course_offering.nil? && !key.nil?
-      warn "self_paced_pl_course_offering_key: #{key} not found. Please seed again to fix."
-    else
-      properties[:self_paced_pl_course_offering_id] = new_self_paced_pl_course_offering&.id
-    end
-    properties.delete(:self_paced_pl_course_offering_key)
-    course_offering = CourseOffering.find_or_initialize_by(key: properties[:key])
-    course_offering.update! properties
-    course_offering.key
-  end
-
   def units_included_in_any_version?(unit_ids)
     course_versions.any? {|cv| cv.included_in_units?(unit_ids)}
   end
 
   def any_version_is_unit?
     course_versions.any? {|cv| cv.content_root_type == 'Unit'}
-  end
-
-  def self.single_unit_course_offerings_containing_units(unit_ids)
-    CourseOffering.all.select {|co| co.units_included_in_any_version?(unit_ids) && co.any_version_is_unit?}
   end
 
   def csd?

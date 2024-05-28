@@ -21,16 +21,6 @@ class FeaturedProject < ApplicationRecord
   # to reflect the new table name, so an alias is used to clarify which table this ID maps to.
   alias_attribute :project_id, :storage_app_id
 
-  def active?
-    !featured_at.nil? && unfeatured_at.nil?
-  end
-
-  def status
-    return SharedConstants::FEATURED_PROJECT_STATUS.active if active?
-    return SharedConstants::FEATURED_PROJECT_STATUS.archived if !featured_at.nil? && !unfeatured_at.nil?
-    SharedConstants::FEATURED_PROJECT_STATUS.bookmarked
-  end
-
   # Determines if a project is currently featured by decrypting the provided
   # encrypted_channel_id, using the project_id to check for a
   # FeaturedProject with the corresponding project_id.  If there is a
@@ -43,5 +33,15 @@ class FeaturedProject < ApplicationRecord
     find_by(project_id: project_id)&.active?
   rescue ArgumentError
     false
+  end
+
+  def active?
+    !featured_at.nil? && unfeatured_at.nil?
+  end
+
+  def status
+    return SharedConstants::FEATURED_PROJECT_STATUS.active if active?
+    return SharedConstants::FEATURED_PROJECT_STATUS.archived if !featured_at.nil? && !unfeatured_at.nil?
+    SharedConstants::FEATURED_PROJECT_STATUS.bookmarked
   end
 end

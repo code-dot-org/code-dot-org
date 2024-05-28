@@ -53,23 +53,6 @@ class PeerReview < ApplicationRecord
   after_save :send_review_completed_mail, if: -> {saved_change_to_status? && (accepted? || rejected?)}
   after_update :mark_user_level, if: -> {saved_change_to_status? || saved_change_to_data?}
 
-  def add_assignment_to_audit_trail
-    message = reviewer_id.present? ? "ASSIGNED to user id #{reviewer_id}" : 'UNASSIGNED'
-    append_audit_trail message
-  end
-
-  def add_status_to_audit_trail
-    append_audit_trail "REVIEWED by user id #{reviewer_id} as #{status}"
-  end
-
-  def send_review_completed_mail
-    PeerReviewMailer.review_completed_receipt(self).deliver_now
-  end
-
-  def user_level
-    UserLevel.find_by!(user: submitter, level: level)
-  end
-
   def self.pull_review_from_pool(script, user)
     # Find the first review such that meets these criteria
     # Review is for this script
@@ -108,30 +91,6 @@ class PeerReview < ApplicationRecord
     ).where(
       'reviewer_id is null or created_at < now() - interval 1 day'
     ).take
-  end
-
-  def mark_user_level
-    user_level = UserLevel.find_by!(user: submitter, level: level)
-
-    if from_instructor
-      user_level.update!(best_result: accepted? ? Activity::REVIEW_ACCEPTED_RESULT : Activity::REVIEW_REJECTED_RESULT)
-      update_column :audit_trail, append_audit_trail("#{status.upcase} by instructor #{reviewer_id} #{reviewer.name}")
-    else
-      update_column :audit_trail, append_audit_trail("REVIEWED by user id #{reviewer_id} #{reviewer.try(:name)}")
-    end
-  end
-
-  def localized_status
-    I18n.t("peer_review.#{status}.name") if status
-  end
-
-  def localized_status_description
-    # We can safely treat this string as HTML-safe because rendering an i18n
-    # string with the `markdown: true` option automatically filters out any
-    # non-markdown-standard HTML.
-    # rubocop:disable Rails/OutputSafety
-    I18n.t("peer_review.#{status}.description_markdown", markdown: true).html_safe if status
-    # rubocop:enable Rails/OutputSafety
   end
 
   def self.create_for_submission(user_level, level_source_id)
@@ -209,16 +168,6 @@ class PeerReview < ApplicationRecord
     end
   end
 
-  def summarize
-    return {
-      id: id,
-      status: review_completed? ? LEVEL_STATUS.perfect : LEVEL_STATUS.not_tried,
-      name: review_completed? ? I18n.t('peer_review.link_to_submitted_review') : I18n.t('peer_review.review_in_progress'),
-      result: review_completed? ? ActivityConstants::BEST_PASS_RESULT : ActivityConstants::UNSUBMITTED_RESULT,
-      locked: false
-    }
-  end
-
   def self.get_potential_reviews(script, user)
     where(
       script: script
@@ -227,25 +176,6 @@ class PeerReview < ApplicationRecord
     ).where.not(
       level_source_id: PeerReview.where(reviewer: user, script: script).pluck(:level_source_id)
     )
-  end
-
-  def clear_data
-    update(data: SYSTEM_DELETED_DATA)
-  end
-
-  # Helper method for submission api calls
-  def submission_summarize
-    plc_course_unit = script.plc_course_unit
-
-    {
-      submitter: submitter.name,
-      course_name: plc_course_unit.plc_course.name,
-      unit_name: plc_course_unit.name,
-      level_name: level.name,
-      submission_date: created_at.strftime("%-m/%-d/%Y"),
-      escalation_date: updated_at.strftime("%-m/%-d/%Y"),
-      review_id: id
-    }
   end
 
   # Helper method that summarizes things at the user_level level of granularity
@@ -273,6 +203,76 @@ class PeerReview < ApplicationRecord
       escalated_review_id: status == 'escalated' ? escalated_review.id : nil,
       review_ids: reviews.pluck(:id, :status, :updated_at),
       status: status
+    }
+  end
+
+  def add_assignment_to_audit_trail
+    message = reviewer_id.present? ? "ASSIGNED to user id #{reviewer_id}" : 'UNASSIGNED'
+    append_audit_trail message
+  end
+
+  def add_status_to_audit_trail
+    append_audit_trail "REVIEWED by user id #{reviewer_id} as #{status}"
+  end
+
+  def send_review_completed_mail
+    PeerReviewMailer.review_completed_receipt(self).deliver_now
+  end
+
+  def user_level
+    UserLevel.find_by!(user: submitter, level: level)
+  end
+
+  def mark_user_level
+    user_level = UserLevel.find_by!(user: submitter, level: level)
+
+    if from_instructor
+      user_level.update!(best_result: accepted? ? Activity::REVIEW_ACCEPTED_RESULT : Activity::REVIEW_REJECTED_RESULT)
+      update_column :audit_trail, append_audit_trail("#{status.upcase} by instructor #{reviewer_id} #{reviewer.name}")
+    else
+      update_column :audit_trail, append_audit_trail("REVIEWED by user id #{reviewer_id} #{reviewer.try(:name)}")
+    end
+  end
+
+  def localized_status
+    I18n.t("peer_review.#{status}.name") if status
+  end
+
+  def localized_status_description
+    # We can safely treat this string as HTML-safe because rendering an i18n
+    # string with the `markdown: true` option automatically filters out any
+    # non-markdown-standard HTML.
+    # rubocop:disable Rails/OutputSafety
+    I18n.t("peer_review.#{status}.description_markdown", markdown: true).html_safe if status
+    # rubocop:enable Rails/OutputSafety
+  end
+
+  def summarize
+    return {
+      id: id,
+      status: review_completed? ? LEVEL_STATUS.perfect : LEVEL_STATUS.not_tried,
+      name: review_completed? ? I18n.t('peer_review.link_to_submitted_review') : I18n.t('peer_review.review_in_progress'),
+      result: review_completed? ? ActivityConstants::BEST_PASS_RESULT : ActivityConstants::UNSUBMITTED_RESULT,
+      locked: false
+    }
+  end
+
+  def clear_data
+    update(data: SYSTEM_DELETED_DATA)
+  end
+
+  # Helper method for submission api calls
+  def submission_summarize
+    plc_course_unit = script.plc_course_unit
+
+    {
+      submitter: submitter.name,
+      course_name: plc_course_unit.plc_course.name,
+      unit_name: plc_course_unit.name,
+      level_name: level.name,
+      submission_date: created_at.strftime("%-m/%-d/%Y"),
+      escalation_date: updated_at.strftime("%-m/%-d/%Y"),
+      review_id: id
     }
   end
 

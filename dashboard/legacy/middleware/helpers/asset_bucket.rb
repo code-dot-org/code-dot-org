@@ -4,13 +4,13 @@ require 'mini_magick'
 # AssetBucket
 #
 class AssetBucket < BucketHelper
+  def initialize
+    super CDO.assets_s3_bucket, CDO.assets_s3_directory
+  end
+
   # Don't attempt to resize images larger than 20 MB
   def max_resize_size
     20_000_000 # 20 MB
-  end
-
-  def initialize
-    super CDO.assets_s3_bucket, CDO.assets_s3_directory
   end
 
   def allowed_file_types

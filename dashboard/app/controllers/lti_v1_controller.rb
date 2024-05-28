@@ -17,6 +17,7 @@ class LtiV1Controller < ApplicationController
   # controller.
   skip_before_action :verify_authenticity_token
 
+  NAMESPACE = 'lti_v1_controller'.freeze
   # [GET/POST] /lti/v1/login(/:platform_id)
   #
   # Most LTI Platforms should send a client_id as part of the login request.
@@ -436,8 +437,6 @@ class LtiV1Controller < ApplicationController
     current_user.upgrade_to_teacher(params[:email])
     render status: :ok, json: {}
   end
-
-  NAMESPACE = 'lti_v1_controller'.freeze
 
   private def unauthorized_status
     render(status: :unauthorized, json: {error: 'Unauthorized'})

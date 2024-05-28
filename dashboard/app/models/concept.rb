@@ -20,6 +20,16 @@ class Concept < ApplicationRecord
   include Seeded
   has_and_belongs_to_many :levels
 
+  CONCEPT_NAMES_BY_INDEX = %w(
+    sequence
+    if
+    if_else
+    loop_times
+    loop_until
+    loop_while
+    loop_for
+    function parameters
+  ).freeze
   def self.by_name(name)
     Rails.cache.fetch("concepts/names/#{name}") do
       Concept.find_by_name(name).try(:id)
@@ -31,17 +41,6 @@ class Concept < ApplicationRecord
       Concept.all
     end
   end
-
-  CONCEPT_NAMES_BY_INDEX = %w(
-    sequence
-    if
-    if_else
-    loop_times
-    loop_until
-    loop_while
-    loop_for
-    function parameters
-  ).freeze
 
   def self.setup
     setup_with_concepts(CONCEPT_NAMES_BY_INDEX)
