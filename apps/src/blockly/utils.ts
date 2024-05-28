@@ -211,6 +211,8 @@ export function strip(code: string) {
  *     The last parameter is not a tuple, but just an alignment for any trailing
  *     dummy input.  This last parameter is mandatory; there may be any number
  *     of tuples (though the number of tuples must match the symbols in msg).
+ * This was copied and modernized from the original CDO Blockly version:
+ * https://github.com/code-dot-org/blockly/blob/v4.1.0/core/ui/block.js#L2632-L2692
  */
 export function interpolateMsg(
   this: ExtendedBlock,
