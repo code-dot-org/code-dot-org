@@ -1,7 +1,10 @@
-import React from 'react';
-import {connect} from 'react-redux';
+import React, {useEffect} from 'react';
+import {connect, useSelector} from 'react-redux';
 
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {RootState} from '@cdo/apps/types/redux';
 import i18n from '@cdo/locale';
 
 import BaseDialog from '../BaseDialog';
@@ -27,6 +30,16 @@ const AgeGatedStudentsModal: React.FC<Props> = ({
   isOpen,
   onClose,
 }) => {
+  const currentUser = useSelector((state: RootState) => state.currentUser);
+  const reportEvent = (eventName: string, payload: object = {}) => {
+    analyticsReporter.sendEvent(eventName, payload, PLATFORMS.AMPLITUDE);
+  };
+
+  useEffect(() => {
+    reportEvent(EVENTS.CAP_AGE_GATED_MODAL_SHOWN, {
+      user_id: currentUser.userId,
+    });
+  }, [currentUser.userId]);
   return (
     <BaseDialog
       isOpen={isOpen}
