@@ -740,7 +740,7 @@ module LevelsHelper
     if level_options[:edit_blocks]
       app_options[:edit_blocks] = level_options[:edit_blocks]
     end
-    # Also pass through if we are exemplar edit or view mode.
+    # Also pass through if we are in exemplar edit or view mode.
     if level_options[:is_editing_exemplar] || level_options[:is_viewing_exemplar]
       app_options[:is_editing_exemplar] = level_options[:is_editing_exemplar] || false
       app_options[:is_viewing_exemplar] = level_options[:is_viewing_exemplar] || false
