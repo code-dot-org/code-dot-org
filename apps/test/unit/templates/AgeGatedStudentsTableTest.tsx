@@ -34,7 +34,7 @@ interface FakeStudent {
   childAccountComplianceState: string;
 }
 
-describe('AgeGatedStudentsModal', () => {
+describe('AgeGatedStudentsTable', () => {
   const fakeStudent = {
     id: 1,
     name: 'Clark Kent',
@@ -85,7 +85,7 @@ describe('AgeGatedStudentsModal', () => {
     rowType: RowType.STUDENT,
     age: 10,
     atRiskAgeGatedStudent: true,
-    childAccountComplianceState: 'p',
+    childAccountComplianceState: 'g',
   };
   const fakeStudent5 = {
     id: 5,
@@ -120,7 +120,7 @@ describe('AgeGatedStudentsModal', () => {
     sharing_disabled: false,
     script: null,
     course_id: 29,
-    studentCount: 10,
+    studentCount: 5,
     students: Object.values(fakeStudents),
     hidden: false,
   };

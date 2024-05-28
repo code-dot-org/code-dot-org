@@ -5,6 +5,7 @@ import {Provider} from 'react-redux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
 import manageStudents, {
   RowType,
   setLoginType,
@@ -49,7 +50,7 @@ describe('AgeGatedStudentsModal', () => {
     sharing_disabled: false,
     script: null,
     course_id: 29,
-    studentCount: 10,
+    studentCount: 1,
     students: Object.values(fakeStudents),
     hidden: false,
   };
@@ -60,6 +61,7 @@ describe('AgeGatedStudentsModal', () => {
       manageStudents,
       isRtl,
       unitSelection,
+      currentUser,
     });
     store.dispatch(setLoginType(fakeSection.login_type));
     store.dispatch(setSections([fakeSection]));
@@ -67,7 +69,7 @@ describe('AgeGatedStudentsModal', () => {
     store.dispatch(setStudents(fakeStudents));
   });
 
-  it('should show a sync results view', () => {
+  it('should show a age gated students modal', () => {
     const {getByTestId} = render(
       <Provider store={getStore()}>
         <AgeGatedStudentsModal onClose={() => {}} isOpen={true} />
