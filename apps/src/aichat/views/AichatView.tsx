@@ -234,7 +234,7 @@ const renderModelCustomizationHeaderRight = (onStartOver: () => void) => {
     <div className={moduleStyles.chatHeaderRight}>
       <Button
         icon={{iconStyle: 'solid', iconName: 'refresh'}}
-        isIconOnly
+        isIconOnly={true}
         color={'white'}
         onClick={() => {
           onStartOver();
