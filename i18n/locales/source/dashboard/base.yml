@@ -1422,6 +1422,14 @@ en:
     founder: "Founder, Code.org"
     your_friends: "Your Friends at Code.org"
   lti:
+    account_linking:
+      connect_button: "Connect with %{provider}"
+      connect_with: "Connect with..."
+      connect_with_email: "Connect with personal login"
+      go_back: "Go back"
+      linking_page_header: "Link your %{provider} account to your existing Code.org account"
+      linking_page_description: "Choose the sign-in method you normally use to access Code.org"
+      sign_in_and_connect: "Sign in and connect"
     create_integration_success: "Successfully created your LTI integration"
     dynamic_registration_title: "Code.org Dynamic Registration"
     error:
