@@ -1,5 +1,4 @@
 require 'test_reporter'
-require 'minitest-spec-rails'
 
 if defined? ActiveRecord
   ActiveRecord::Migration&.check_pending!
@@ -53,6 +52,7 @@ require 'dynamic_config/dcdo'
 require 'testing/setup_all_and_teardown_all'
 require 'testing/lock_thread'
 require 'testing/transactional_test_case'
+require 'testing/spec_syntax'
 require 'testing/capture_queries'
 
 require 'parallel_tests/test/runtime_logger'
@@ -131,6 +131,7 @@ class ActiveSupport::TestCase
   include FactoryBot::Syntax::Methods
   include ActiveSupport::Testing::SetupAllAndTeardownAll
   include ActiveSupport::Testing::TransactionalTestCase
+  include ActiveSupport::Testing::SpecSyntax
   include CaptureQueries
 
   def seed_deprecated_unit_fixtures
