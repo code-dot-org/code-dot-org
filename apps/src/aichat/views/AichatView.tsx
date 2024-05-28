@@ -22,7 +22,7 @@ const commonI18n = require('@cdo/locale');
 const aichatI18n = require('@cdo/aichat/locale');
 
 import {
-  resetStartingAiCustomizations,
+  resetToDefaultAiCustomizations,
   setStartingAiCustomizations,
   setViewMode,
   clearChatMessages,
@@ -128,9 +128,8 @@ const AichatView: React.FunctionComponent = () => {
   );
 
   const resetProject = () => {
-    console.log('resetProject');
     dispatch(
-      resetStartingAiCustomizations({
+      resetToDefaultAiCustomizations({
         levelAichatSettings,
       })
     );
