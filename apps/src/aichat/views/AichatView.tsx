@@ -1,6 +1,6 @@
 /** @file Top-level view for AI Chat Lab */
 
-import React, {useCallback, useEffect} from 'react';
+import React, {useCallback, useEffect, useContext} from 'react';
 
 import Instructions from '@cdo/apps/lab2/views/components/Instructions';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
@@ -14,6 +14,10 @@ import Button from '@cdo/apps/componentLibrary/button/Button';
 import ProjectTemplateWorkspaceIcon from '@cdo/apps/templates/ProjectTemplateWorkspaceIcon';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {
+  DialogContext,
+  DialogType,
+} from '@cdo/apps/lab2/views/dialogs/DialogManager';
 const commonI18n = require('@cdo/locale');
 const aichatI18n = require('@cdo/aichat/locale');
 
@@ -122,6 +126,18 @@ const AichatView: React.FunctionComponent = () => {
     </div>
   );
 
+  const resetProject = () => {
+    console.log('resetProject');
+  };
+
+  const onClickStartOver = () => {
+    if (dialogControl) {
+      dialogControl.showDialog(DialogType.StartOver, resetProject);
+    }
+  };
+
+  const dialogControl = useContext(DialogContext);
+
   return (
     <div id="aichat-lab" className={moduleStyles.aichatLab}>
       {showPresentationToggle() && (
@@ -145,6 +161,11 @@ const AichatView: React.FunctionComponent = () => {
                 <PanelContainer
                   id="aichat-model-customization-panel"
                   headerContent="Model Customization"
+                  rightHeaderContent={renderModelCustomizationHeaderRight(
+                    () => {
+                      onClickStartOver();
+                    }
+                  )}
                 >
                   <ModelCustomizationWorkspace />
                 </PanelContainer>
@@ -198,6 +219,24 @@ const renderChatWorkspaceHeaderRight = (onClear: () => void) => {
         className={moduleStyles.clearButton}
       />
       <CopyButton />
+    </div>
+  );
+};
+
+const renderModelCustomizationHeaderRight = (onStartOver: () => void) => {
+  return (
+    <div className={moduleStyles.chatHeaderRight}>
+      <Button
+        icon={{iconStyle: 'solid', iconName: 'refresh'}}
+        isIconOnly
+        color={'black'}
+        onClick={() => {
+          onStartOver();
+        }}
+        ariaLabel={'Start Over'}
+        size={'xs'}
+        className={moduleStyles.startOverButton}
+      />
     </div>
   );
 };

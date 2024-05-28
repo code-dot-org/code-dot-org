@@ -18,16 +18,21 @@ const StartOverDialog: React.FunctionComponent<BaseDialogProps> = ({
   );
   const isTextWorkspace =
     currentAppName && TEXT_BASED_LABS.includes(currentAppName);
-
+  let dialogMessage = commonI18n.startOverWorkspace();
+  if (isTextWorkspace) {
+    if (currentAppName === 'aichat') {
+      dialogMessage = commonI18n.startOverAichatModelCustomizations();
+    } else {
+      dialogMessage = commonI18n.startOverWorkspaceText();
+    }
+  }
   return (
     <div className={moduleStyles.confirmDialog}>
       <Typography semanticTag="h1" visualAppearance="heading-lg">
         {commonI18n.startOverTitle()}
       </Typography>
       <Typography semanticTag="p" visualAppearance="body-two">
-        {isTextWorkspace
-          ? commonI18n.startOverWorkspaceText()
-          : commonI18n.startOverWorkspace()}
+        {dialogMessage}
       </Typography>
       <div className={moduleStyles.buttonContainer}>
         <button
