@@ -22,6 +22,7 @@ const commonI18n = require('@cdo/locale');
 const aichatI18n = require('@cdo/aichat/locale');
 
 import {
+  resetStartingAiCustomizations,
   setStartingAiCustomizations,
   setViewMode,
   clearChatMessages,
@@ -128,6 +129,11 @@ const AichatView: React.FunctionComponent = () => {
 
   const resetProject = () => {
     console.log('resetProject');
+    dispatch(
+      resetStartingAiCustomizations({
+        levelAichatSettings,
+      })
+    );
   };
 
   const onClickStartOver = () => {
@@ -229,12 +235,13 @@ const renderModelCustomizationHeaderRight = (onStartOver: () => void) => {
       <Button
         icon={{iconStyle: 'solid', iconName: 'refresh'}}
         isIconOnly
-        color={'black'}
+        color={'white'}
         onClick={() => {
           onStartOver();
         }}
         ariaLabel={'Start Over'}
         size={'xs'}
+        type="tertiary"
         className={moduleStyles.startOverButton}
       />
     </div>

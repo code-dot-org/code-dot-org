@@ -465,6 +465,24 @@ const aichatSlice = createSlice({
       state.fieldVisibilities =
         levelAichatSettings?.visibilities || DEFAULT_VISIBILITIES;
     },
+    resetStartingAiCustomizations: (
+      state,
+      action: PayloadAction<{
+        levelAichatSettings?: LevelAichatSettings;
+      }>
+    ) => {
+      const {levelAichatSettings} = action.payload;
+
+      const defaultAiCustomizations: AiCustomizations = {
+        ...(levelAichatSettings?.initialCustomizations ||
+          EMPTY_AI_CUSTOMIZATIONS),
+      };
+
+      state.savedAiCustomizations = defaultAiCustomizations;
+      state.currentAiCustomizations = defaultAiCustomizations;
+      state.fieldVisibilities =
+        levelAichatSettings?.visibilities || DEFAULT_VISIBILITIES;
+    },
     setSavedAiCustomizations: (
       state,
       action: PayloadAction<AiCustomizations>
@@ -561,6 +579,7 @@ export const {
   setShowWarningModal,
   updateUserChatMessageStatus,
   updateChatMessageSession,
+  resetStartingAiCustomizations,
   setViewMode,
   setStartingAiCustomizations,
   setSavedAiCustomizations,
