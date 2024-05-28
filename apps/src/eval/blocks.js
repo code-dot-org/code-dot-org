@@ -234,17 +234,6 @@ exports.install = function (blockly, blockInstallOptions) {
     returnType: blockly.BlockValueType.NUMBER,
     args: [{name: 'STR', type: blockly.BlockValueType.STRING}],
   });
-
-  blockly.FunctionalBlockUtils.installStringPicker(blockly, generator, {
-    blockName: 'functional_style',
-    values: [
-      [msg.solid(), 'solid'],
-      ['75%', '75%'],
-      ['50%', '50%'],
-      ['25%', '25%'],
-      [msg.outline(), 'outline'],
-    ],
-  });
 };
 
 function installFunctionalBlock(blockly, generator, gensym, options) {

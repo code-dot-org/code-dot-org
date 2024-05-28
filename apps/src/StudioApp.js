@@ -3020,11 +3020,6 @@ StudioApp.prototype.getFilteredUnfilledFunctionalBlock_ = function (filter) {
     if (!filter(rootBlock)) {
       return false;
     }
-
-    if (block.hasUnfilledFunctionalInput()) {
-      unfilledBlock = block;
-      return true;
-    }
   });
 
   return unfilledBlock;
