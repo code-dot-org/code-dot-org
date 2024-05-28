@@ -12,6 +12,11 @@ const START_REFRESHING_PROGRESS = 'sectionProgress/START_REFRESHING_PROGRESS';
 const FINISH_REFRESHING_PROGRESS = 'sectionProgress/FINISH_REFRESHING_PROGRESS';
 const ADD_DATA_BY_UNIT = 'sectionProgress/ADD_DATA_BY_UNIT';
 
+const EXPAND_METADATA_FOR_STUDENTS =
+  'sectionProgress/EXPAND_METADATA_FOR_STUDENTS';
+const COLLAPSE_METADATA_FOR_STUDENTS =
+  'sectionProgress/COLLAPSE_METADATA_FOR_STUDENTS';
+
 // Action creators
 export const startLoadingProgress = () => ({type: START_LOADING_PROGRESS});
 export const finishLoadingProgress = () => ({type: FINISH_LOADING_PROGRESS});
@@ -31,6 +36,15 @@ export const addDataByUnit = data => ({
   data,
 });
 
+export const expandMetadataForStudents = studentIds => ({
+  type: EXPAND_METADATA_FOR_STUDENTS,
+  studentIds,
+});
+export const collapseMetadataForStudents = studentIds => ({
+  type: COLLAPSE_METADATA_FOR_STUDENTS,
+  studentIds,
+});
+
 const INITIAL_LESSON_OF_INTEREST = 1;
 
 const initialState = {
@@ -43,6 +57,7 @@ const initialState = {
   lessonOfInterest: INITIAL_LESSON_OF_INTEREST,
   isLoadingProgress: false,
   isRefreshingProgress: false,
+  expandedMetadataStudentIds: [],
 };
 
 export default function sectionProgress(state = initialState, action) {
@@ -107,6 +122,23 @@ export default function sectionProgress(state = initialState, action) {
         ...state.studentLastUpdateByUnit,
         ...action.data.studentLastUpdateByUnit,
       },
+    };
+  }
+  if (action.type === EXPAND_METADATA_FOR_STUDENTS) {
+    return {
+      ...state,
+      expandedMetadataStudentIds: [
+        ...state.expandedMetadataStudentIds,
+        ...action.studentIds,
+      ],
+    };
+  }
+  if (action.type === COLLAPSE_METADATA_FOR_STUDENTS) {
+    return {
+      ...state,
+      expandedMetadataStudentIds: state.expandedMetadataStudentIds.filter(
+        studentId => !action.studentIds.includes(studentId)
+      ),
     };
   }
 
