@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-23 21:00:49 UTC",
+    "serialized_at": "2024-05-24 23:49:16 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2259,6 +2259,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "intro-pulse-survey_csd5_2024"
+        ],
         "progression": "Check-In Survey"
       },
       "bonus": false,
@@ -2281,6 +2284,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 black white images pixelation_2024"
+        ],
         "progression": "Representing Images"
       },
       "bonus": false,
@@ -2303,6 +2309,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 black white images pixelation 2_2024"
+        ],
         "progression": "Representing Images"
       },
       "bonus": false,
@@ -2325,6 +2334,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 black white images pixelation 3_2024"
+        ],
         "progression": "Representing Images"
       },
       "bonus": false,
@@ -2347,6 +2359,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 black white images pixelation 4_2024"
+        ],
         "progression": "Representing Images"
       },
       "bonus": false,
@@ -2369,6 +2384,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 black white images pixelation 5_2024"
+        ],
         "progression": "Representing Images"
       },
       "bonus": false,
@@ -2391,6 +2409,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 binary widget_2024"
+        ],
         "progression": "Binary Number Widget"
       },
       "bonus": false,
@@ -2413,6 +2434,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 binary 8 bits_2024"
+        ],
         "progression": "8-Bit Binary Number Widget"
       },
       "bonus": false,
@@ -2435,6 +2459,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U5Ch1_2024"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,

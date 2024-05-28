@@ -34,8 +34,28 @@ def main
       user = session.user
 
       level = Level.find(session.level_id)
+      path = ""
+
       script_level = level.script_levels.find_by_script_id(session.script_id)
-      path = script_level.path
+      if script_level
+        # This handles chat history that occurred on standard levels in a progression
+        path = script_level.path
+      else
+        # This handles chat history that occurred on a sublevel
+        parent_levels = BubbleChoice.parent_levels(level.name)
+        parent_levels_in_script = parent_levels.filter do |pl|
+          pl.script_levels.any? {|sl| sl.script_id == session.script_id}
+        end
+
+        if parent_levels_in_script
+          parent_level = parent_levels_in_script.first
+          sublevel_position = parent_level.sublevel_position(level)
+          path = parent_level.build_script_level_path(
+            parent_level.script_levels.first,
+            {sublevel_position: sublevel_position}
+          )
+        end
+      end
 
       base_row = [
         session.id,
