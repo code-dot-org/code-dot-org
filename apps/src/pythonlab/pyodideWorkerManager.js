@@ -8,6 +8,7 @@ import {
   appendOutputImage,
   appendSystemMessage,
   appendSystemOutMessage,
+  appendErrorMessage,
 } from '@codebridge/redux/consoleRedux';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
@@ -39,8 +40,7 @@ pyodideWorker.onmessage = event => {
     getStore().dispatch(setAndSaveProjectSource({source: message}));
     return;
   } else if (type === 'error') {
-    let parsedMessage = parseErrorMessage(message);
-    getStore().dispatch(appendSystemMessage(`Error: ${parsedMessage}`));
+    getStore().dispatch(appendErrorMessage(parseErrorMessage(message)));
     return;
   } else if (type === 'internal_error') {
     MetricsReporter.logError({

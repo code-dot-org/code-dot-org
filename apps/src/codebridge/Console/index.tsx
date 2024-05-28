@@ -51,6 +51,12 @@ const Console: React.FunctionComponent = () => {
             outputLine.type === 'system_in'
           ) {
             return <div key={index}>{outputLine.contents}</div>;
+          } else if (outputLine.type === 'error') {
+            return (
+              <div key={index} className={moduleStyles.errorLine}>
+                {outputLine.contents}
+              </div>
+            );
           } else {
             return <div key={index}>[PYTHON LAB] {outputLine.contents}</div>;
           }

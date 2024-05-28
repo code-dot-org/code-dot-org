@@ -1,4 +1,31 @@
+import {ALL_PATCHES} from './patches';
+
+/**
+ * This method parses an error message from pyodide and makes it more readable and useful
+ * for end users.
+ * Pyodide error messages start with an internal stack trace we can ignore.
+ * The first useful line is the one that starts with "File "<exec>", line (line number)", which refers to a line number
+ * in main.py. We prepend setup code to the user's main.py, so we adjust the line number accordingly.
+ * If there is a further stack trace we update it to remove reference to `/home/pyodide/`, which is the folder
+ * all user code goes into in the pyodide system.
+ * Otherwise we return the rest of the error message as is. If we never find the main error, we return the
+ * entire message unaltered.
+ *
+ * There is one exception to this rule: if the error message is a ModuleNotFoundError relating to a module
+ * that is supported by pyodide but is not installed, we change it to say that the module is not supported in Python Lab.
+ * This is because any uninstalled module is purposefully not supported.
+ * @param errorMessage - the error message from pyodide
+ **/
 export function parseErrorMessage(errorMessage: string) {
+  // Special case for an unsupported module.
+  const importErrorRegex =
+    /ModuleNotFoundError: The module '([^']+)' is included in the Pyodide distribution, but it is not installed./;
+  if (importErrorRegex.test(errorMessage)) {
+    const [, module] = errorMessage.match(importErrorRegex)!;
+    return `ModuleNotFoundError: The module '${module}' is not supported in Python Lab.`;
+  }
+
+  // Parse to find the main.py error line.
   const errorLines = errorMessage.trim().split('\n');
   const mainErrorRegex = /File "<exec>", line \d+.*/;
   let mainErrorLine = 0;
@@ -14,29 +41,28 @@ export function parseErrorMessage(errorMessage: string) {
   const mainLineNumber = parseInt(
     errorLines[mainErrorLine].match(/line (\d+)/)![1]
   );
-  let parsedError = `\nmain.py, line ${mainLineNumber}`;
-  let hasStackToParse = true;
+  let parsedError = `main.py, line ${getMainErrorLine(mainLineNumber)}`;
   let currentLine = mainErrorLine + 1;
   const lineRegex = /File "\/home\/pyodide\/([^"]+)", line (\d+).*/;
-  const caratMatch = /^\s+\^+$/;
-  while (hasStackToParse && currentLine < errorLines.length) {
+  while (currentLine < errorLines.length) {
     if (lineRegex.test(errorLines[currentLine])) {
       const [, file, line] = errorLines[currentLine].match(lineRegex)!;
       parsedError += `\n${file}, line ${line}`;
-      parsedError += `\n${errorLines[currentLine + 1]}`;
-      currentLine += 2;
-      if (caratMatch.test(errorLines[currentLine])) {
-        parsedError += `\n${errorLines[currentLine]}`;
-        currentLine++;
-      }
     } else {
-      hasStackToParse = false;
+      parsedError += `\n${errorLines[currentLine]}`;
     }
+    currentLine++;
   }
-  parsedError += `\n${errorLines[currentLine]}`;
   console.log({parsedError});
   return parsedError;
-  // TODO: translate message
-  // loop to get the stack trace
-  // then the error message will be after the stack trace
+}
+
+function getMainErrorLine(lineNumber: number) {
+  let prependedLines = 0;
+  for (const patch of ALL_PATCHES) {
+    if (patch.shouldPrepend) {
+      prependedLines += patch.contents.split('\n').length;
+    }
+  }
+  return lineNumber - prependedLines;
 }
