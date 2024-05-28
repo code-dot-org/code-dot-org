@@ -1,6 +1,8 @@
 import sinon from 'sinon';
-import {assertVisible, assertHidden} from '../../util/assertions';
+
 import showProjectAdmin from '@cdo/apps/code-studio/showProjectAdmin';
+
+import {assertVisible, assertHidden} from '../../util/assertions';
 import {enforceDocumentBodyCleanup} from '../../util/testUtils';
 
 describe('showProjectAdmin', () => {

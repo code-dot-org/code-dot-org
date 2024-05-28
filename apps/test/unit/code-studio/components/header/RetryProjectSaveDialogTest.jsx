@@ -1,12 +1,11 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon';
-import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-
-import {expect} from '../../../../util/reconfiguredChai';
-
-import {projectUpdatedStatuses as statuses} from '@cdo/apps/code-studio/projectRedux';
 
 import {UnconnectedRetryProjectSaveDialog as RetryProjectSaveDialog} from '@cdo/apps/code-studio/components/header/RetryProjectSaveDialog';
+import {projectUpdatedStatuses as statuses} from '@cdo/apps/code-studio/projectRedux';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 const errorTitle = 'Error saving your project';
 

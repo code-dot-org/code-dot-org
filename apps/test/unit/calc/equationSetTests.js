@@ -1,8 +1,8 @@
 import {assert} from '../../util/reconfiguredChai';
 
-var ExpressionNode = require('@cdo/apps/calc/expressionNode');
-var EquationSet = require('@cdo/apps/calc/equationSet');
 var Equation = require('@cdo/apps/calc/equation');
+var EquationSet = require('@cdo/apps/calc/equationSet');
+var ExpressionNode = require('@cdo/apps/calc/expressionNode');
 var utils = require('@cdo/apps/utils');
 
 describe('EquationSet', function () {

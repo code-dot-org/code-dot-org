@@ -1,7 +1,9 @@
-import React from 'react';
-import {expect} from '../../util/reconfiguredChai';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import React from 'react';
+
 import {UnconnectedCompletionButton as CompletionButton} from '@cdo/apps/templates/CompletionButton';
+
+import {expect} from '../../util/reconfiguredChai';
 
 describe('CompletionButton', () => {
   it('non-project level, can submit, havent', () => {

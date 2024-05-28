@@ -1,15 +1,17 @@
 import $ from 'jquery';
+import cookies from 'js-cookie';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import cookies from 'js-cookie';
-import SignInOrAgeDialog from '@cdo/apps/templates/SignInOrAgeDialog';
-import {getStore} from './redux';
+
+import {environmentSpecificCookieName} from '@cdo/apps/code-studio/utils';
 import {
   setUserSignedIn,
   setUserType,
 } from '@cdo/apps/templates/currentUserRedux';
-import {environmentSpecificCookieName} from '@cdo/apps/code-studio/utils';
+import SignInOrAgeDialog from '@cdo/apps/templates/SignInOrAgeDialog';
+
+import {getStore} from './redux';
 
 /**
  * Attempt to replicate logic used that user_header.haml uses to populate the

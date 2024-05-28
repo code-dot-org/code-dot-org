@@ -1,7 +1,9 @@
 import $ from 'jquery';
+
 import {TestResults} from '../../constants';
-import {onAnswerChanged, resetContainedLevel} from './codeStudioLevels';
 import {sourceForLevel} from '../clientState';
+
+import {onAnswerChanged, resetContainedLevel} from './codeStudioLevels';
 
 export default class FreeResponse {
   constructor(levelId, optional, allowMultipleAttempts) {

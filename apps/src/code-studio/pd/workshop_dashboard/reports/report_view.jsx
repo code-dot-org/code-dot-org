@@ -3,13 +3,10 @@
  * Route: /reports
  * Contains query fields (from, to, queryBy, course, report) and generates a report based on the response.
  */
-import PropTypes from 'prop-types';
-import React from 'react';
 import _ from 'lodash';
 import moment from 'moment';
-import WorkshopSummaryReport from './workshop_summary_report';
-import TeacherAttendanceReport from './teacher_attendance_report';
-import DatePicker from '../components/date_picker';
+import PropTypes from 'prop-types';
+import React from 'react';
 /* eslint-disable no-restricted-imports */
 import {
   Grid,
@@ -20,12 +17,17 @@ import {
   FormControl,
 } from 'react-bootstrap';
 /* eslint-enable no-restricted-imports */
+
+import DatePicker from '../components/date_picker';
+
 import {
   QUERY_BY_OPTIONS,
   QUERY_BY_VALUES,
   COURSE_OPTIONS,
   COURSE_VALUES,
 } from './report_constants';
+import TeacherAttendanceReport from './teacher_attendance_report';
+import WorkshopSummaryReport from './workshop_summary_report';
 
 const REPORT_VALUES = ['Teacher Attendance', 'Workshop Summary'];
 const API_DATE_FORMAT = 'YYYY-MM-DD';

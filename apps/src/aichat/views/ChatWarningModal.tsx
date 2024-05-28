@@ -1,14 +1,15 @@
 import React from 'react';
 
 import aichatI18n from '@cdo/apps/aichat/locale';
-import moduleStyles from './chatWarningModal.module.scss';
 import {
   BodyTwoText,
   Heading3,
   StrongText,
 } from '@cdo/apps/componentLibrary/typography';
-import Button from '@cdo/apps/templates/Button';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
+import Button from '@cdo/apps/templates/Button';
+
+import moduleStyles from './chatWarningModal.module.scss';
 
 export interface ChatWarningModalProps {
   onClose: () => void;

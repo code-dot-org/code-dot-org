@@ -1,13 +1,15 @@
 import React from 'react';
 
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
-import {Heading3} from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/componentLibrary/button/Button';
+import {Heading3} from '@cdo/apps/componentLibrary/typography';
+import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {ModelDescription} from '../../types';
 
 import ModelDescriptionPanel from './ModelDescriptionPanel';
+
 import styles from './compare-models-dialog.module.scss';
-import {ModelDescription} from '../../types';
 
 const CompareModelsDialog: React.FunctionComponent<{
   onClose: () => void;

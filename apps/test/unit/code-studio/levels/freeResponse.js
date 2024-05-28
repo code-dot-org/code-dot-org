@@ -1,7 +1,9 @@
 import {expect} from 'chai';
-import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
-import FreeResponse from '@cdo/apps/code-studio/levels/freeResponse';
+
 import {writeSourceForLevel} from '@cdo/apps/code-studio/clientState';
+import FreeResponse from '@cdo/apps/code-studio/levels/freeResponse';
+
+import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
 
 describe('Free Response', () => {
   const levelId = 1047;

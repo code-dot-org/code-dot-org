@@ -1,6 +1,8 @@
 import $ from 'jquery';
-import {registerGetResult, onAnswerChanged} from './codeStudioLevels';
+
 import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
+
+import {registerGetResult, onAnswerChanged} from './codeStudioLevels';
 
 var TextMatch = function (levelId, id, app, standalone, answers, lastAttempt) {
   // The dashboard levelId.

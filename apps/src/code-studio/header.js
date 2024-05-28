@@ -1,10 +1,29 @@
 import $ from 'jquery';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
+
+import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';
+import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
+import {
+  setUserSignedIn,
+  setInitialData,
+} from '@cdo/apps/templates/currentUserRedux';
+import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
+
+import logToCloud from '../logToCloud';
+import {getStore} from '../redux';
+
+import {setupNavigationHandler} from './browserNavigation';
+import SignInCalloutWrapper from './components/header/SignInCalloutWrapper';
 import {
   showProjectHeader,
   showMinimalProjectHeader,
   showProjectBackedHeader,
   showLevelBuilderSaveButton,
 } from './headerRedux';
+import progress from './progress';
+import {setCurrentLevelId} from './progressRedux';
 import {
   setProjectUpdatedError,
   setProjectUpdatedSaving,
@@ -13,24 +32,6 @@ import {
   refreshProjectName,
   setShowTryAgainDialog,
 } from './projectRedux';
-import React from 'react';
-import ReactDOM from 'react-dom';
-
-import {Provider} from 'react-redux';
-import progress from './progress';
-import {getStore} from '../redux';
-import {
-  setUserSignedIn,
-  setInitialData,
-} from '@cdo/apps/templates/currentUserRedux';
-import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
-import logToCloud from '../logToCloud';
-
-import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
-import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';
-import SignInCalloutWrapper from './components/header/SignInCalloutWrapper';
-import {setupNavigationHandler} from './browserNavigation';
-import {setCurrentLevelId} from './progressRedux';
 
 /**
  * Dynamic header generation and event bindings for header actions.

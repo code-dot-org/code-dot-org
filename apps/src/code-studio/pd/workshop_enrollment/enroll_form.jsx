@@ -1,9 +1,9 @@
 /*
  * Form to create a workshop enrollment
  */
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
-import $ from 'jquery';
 /* eslint-disable no-restricted-imports */
 import {
   FormGroup,
@@ -14,13 +14,15 @@ import {
 } from 'react-bootstrap';
 /* eslint-enable no-restricted-imports */
 import Select from 'react-select';
+
+import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import color from '@cdo/apps/util/color';
+import {isEmail} from '@cdo/apps/util/formatValidation';
+
+import SchoolAutocompleteDropdownWithCustomFields from '../components/schoolAutocompleteDropdownWithCustomFields';
 import {ButtonList} from '../form_components/ButtonList.jsx';
 import FieldGroup from '../form_components/FieldGroup';
 import QuestionsTable from '../form_components/QuestionsTable';
-import color from '@cdo/apps/util/color';
-import {isEmail} from '@cdo/apps/util/formatValidation';
-import SchoolAutocompleteDropdownWithCustomFields from '../components/schoolAutocompleteDropdownWithCustomFields';
-import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 const OTHER = 'Other';
 const NOT_TEACHING = "I'm not teaching this year";

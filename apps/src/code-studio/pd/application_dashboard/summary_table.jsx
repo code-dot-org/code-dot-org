@@ -1,12 +1,14 @@
 /**
  * Table displaying a summary of application statuses
  */
+import {difference, upperFirst} from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {Table, Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-import {StatusColors, getApplicationStatuses} from './constants';
-import {difference, upperFirst} from 'lodash';
+
 import color from '@cdo/apps/util/color';
+
+import {StatusColors, getApplicationStatuses} from './constants';
 
 const ApplicationDataPropType = PropTypes.shape({
   total: PropTypes.number.isRequired,

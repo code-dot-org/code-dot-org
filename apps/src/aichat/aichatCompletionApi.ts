@@ -1,3 +1,6 @@
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import HttpClient from '@cdo/apps/util/HttpClient';
+
 import {
   Role,
   ChatCompletionMessage,
@@ -5,8 +8,6 @@ import {
   AichatContext,
   AichatModelCustomizations,
 } from './types';
-import HttpClient from '@cdo/apps/util/HttpClient';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
 const CHAT_COMPLETION_URL = '/aichat/chat_completion';
 

@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import {Body} from '@cdo/apps/templates/Dialog';
 import color from '@cdo/apps/util/color';

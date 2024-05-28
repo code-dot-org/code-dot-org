@@ -1,13 +1,14 @@
+import {TestResults, ResultType} from '@cdo/apps/constants';
+
 import {assert} from '../../util/reconfiguredChai';
 
-var testUtils = require('../../util/testUtils');
-
 var Calc = require('@cdo/apps/calc/calc.js');
-var EquationSet = require('@cdo/apps/calc/equationSet.js');
 var Equation = require('@cdo/apps/calc/equation.js');
+var EquationSet = require('@cdo/apps/calc/equationSet.js');
 var ExpressionNode = require('@cdo/apps/calc/expressionNode.js');
-import {TestResults, ResultType} from '@cdo/apps/constants';
 var calcMsg = require('@cdo/apps/calc/locale');
+
+var testUtils = require('../../util/testUtils');
 
 describe('evaluateResults_/evaluateFunction_', function () {
   testUtils.setExternalGlobals();

@@ -3,21 +3,20 @@
  * Used in LevelBuilder, and relies on some apps code for validation.
  * Supports both Bee and Farmer skins.
  */
+import {cells, utils as mazeUtils} from '@code-dot-org/maze';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {cells, utils as mazeUtils} from '@code-dot-org/maze';
-
 var StudioCell = require('@cdo/apps/studio/cell');
 
+var BeeCellEditor = require('./BeeCellEditor');
+var BounceCellEditor = require('./BounceCellEditor');
+var CellEditor = require('./CellEditor');
+var Grid = require('./Grid');
 var HarvesterCellEditor = require('./HarvesterCellEditor');
 var PlanterCellEditor = require('./PlanterCellEditor');
-var BeeCellEditor = require('./BeeCellEditor');
-var CellEditor = require('./CellEditor');
-var StudioCellEditor = require('./StudioCellEditor');
 var StarWarsGridCellEditor = require('./StarWarsGridCellEditor');
-var BounceCellEditor = require('./BounceCellEditor');
-var Grid = require('./Grid');
+var StudioCellEditor = require('./StudioCellEditor');
 
 class CellJSON extends React.Component {
   static propTypes = {

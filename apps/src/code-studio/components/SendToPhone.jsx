@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import trackEvent from '../../util/trackEvent';
 
 // Similar UI exists in sharing.html.ejs. At some point int he future, it may

@@ -1,7 +1,9 @@
-import {expect} from '../../../util/reconfiguredChai';
-import React from 'react';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import React from 'react';
+
 import AssetRow from '@cdo/apps/code-studio/components/AssetRow';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   name: `fo\'o's.bar`,

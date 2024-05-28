@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import SoundListEntry from './SoundListEntry';
+
 import {searchAssets} from '../assets/searchAssets';
 import soundLibrary from '../soundLibrary.json';
+
+import SoundListEntry from './SoundListEntry';
 
 /**
  * A component for managing sounds from soundLibrary.json.

@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
-import i18n from '@cdo/locale';
+
 import StylizedBaseDialog, {
   FooterButton,
 } from '@cdo/apps/componentLibrary/StylizedBaseDialog';
+import i18n from '@cdo/locale';
 
 /*
  * Simple dialog to show a warning to users who are using deprecated unversioned

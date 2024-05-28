@@ -1,10 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import {FormGroup, FormControl, ControlLabel, Table} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
 import {ButtonList} from '../form_components/ButtonList';
 import FieldGroup from '../form_components/FieldGroup';
-
-import {FormGroup, FormControl, ControlLabel, Table} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
 const SINGLE_SELECT = 'single_select';
 const MULTI_SELECT = 'multi_select';

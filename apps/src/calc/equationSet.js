@@ -1,8 +1,10 @@
-var _ = require('lodash');
-var ExpressionNode = require('./expressionNode');
-var Equation = require('./equation');
 var jsnums = require('@code-dot-org/js-numbers');
+var _ = require('lodash');
+
 var utils = require('../utils');
+
+var Equation = require('./equation');
+var ExpressionNode = require('./expressionNode');
 
 /**
  * An EquationSet consists of a top level (compute) equation, and optionally

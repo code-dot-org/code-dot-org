@@ -1,16 +1,17 @@
-import $ from 'jquery';
-import _ from 'lodash';
-import JSZip from 'jszip';
 import {saveAs} from 'filesaver.js';
+import $ from 'jquery';
+import JSZip from 'jszip';
+import _ from 'lodash';
+
+import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
+import project from '@cdo/apps/code-studio/initApp/project';
 
 import * as assetPrefix from '../assetManagement/assetPrefix';
 import download from '../assetManagement/download';
+import logToCloud from '../logToCloud';
+import exportFontAwesomeCssEjs from '../templates/export/fontAwesome.css.ejs';
 import exportProjectEjs from '../templates/export/project.html.ejs';
 import exportProjectReadmeEjs from '../templates/export/projectReadme.md.ejs';
-import exportFontAwesomeCssEjs from '../templates/export/fontAwesome.css.ejs';
-import logToCloud from '../logToCloud';
-import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
-import project from '@cdo/apps/code-studio/initApp/project';
 import {
   extractSoundAssets,
   rewriteAssetUrls,

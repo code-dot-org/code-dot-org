@@ -4,35 +4,45 @@
 import PropTypes from 'prop-types';
 import React, {useEffect, useState} from 'react';
 import {connect, useDispatch} from 'react-redux';
-import i18n from '@cdo/locale';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+
+import Tabs from '@cdo/apps/componentLibrary/tabs';
 import {Heading2} from '@cdo/apps/componentLibrary/typography';
-import {EnrolledWorkshops, EnrolledWorkshopsTable} from './EnrolledWorkshops';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import HeaderBannerNoImage from '@cdo/apps/templates/HeaderBannerNoImage';
+import ActionBlocksWrapper from '@cdo/apps/templates/studioHomepages/ActionBlocksWrapper';
+import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
+import CoteacherInviteNotification from '@cdo/apps/templates/studioHomepages/CoteacherInviteNotification';
+import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
+import SetUpSections from '@cdo/apps/templates/studioHomepages/SetUpSections';
+import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
+import AddSectionDialog from '@cdo/apps/templates/teacherDashboard/AddSectionDialog';
+import OwnedSections from '@cdo/apps/templates/teacherDashboard/OwnedSections';
+import i18n from '@cdo/locale';
+
 import {
   COURSE_CSF,
   COURSE_CSD,
   COURSE_CSP,
   COURSE_CSA,
 } from '../workshop_dashboard/workshopConstants';
+
+import {EnrolledWorkshops, EnrolledWorkshopsTable} from './EnrolledWorkshops';
 import SelfPacedProgressTable from './SelfPacedProgressTable';
-import HeaderBannerNoImage from '@cdo/apps/templates/HeaderBannerNoImage';
-import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
-import ActionBlocksWrapper from '@cdo/apps/templates/studioHomepages/ActionBlocksWrapper';
-import CoteacherInviteNotification from '@cdo/apps/templates/studioHomepages/CoteacherInviteNotification';
-import OwnedSections from '@cdo/apps/templates/teacherDashboard/OwnedSections';
-import SetUpSections from '@cdo/apps/templates/studioHomepages/SetUpSections';
-import AddSectionDialog from '@cdo/apps/templates/teacherDashboard/AddSectionDialog';
-import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
-import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
+
 import style from './landingPage.module.scss';
+
 import './tableStyles.scss';
-import Tabs from '@cdo/apps/componentLibrary/tabs';
+
+// Disabling import order in order to import styles first.
+// This might be safe to remove but needs investigation.
+/* eslint-disable import/order */
 import {
   asyncLoadSectionData,
   asyncLoadCoteacherInvite,
   hiddenPlSectionIds,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import shapes from '@cdo/apps/templates/studioHomepages/shapes';
+/* eslint-enable import/order */
 
 const getAvailableTabs = permissions => {
   let tabs = [

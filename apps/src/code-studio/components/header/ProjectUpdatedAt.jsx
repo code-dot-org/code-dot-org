@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
+
+import project from '@cdo/apps/code-studio/initApp/project';
+import TimeAgo from '@cdo/apps/templates/TimeAgo';
 import msg from '@cdo/locale';
 
-import TimeAgo from '@cdo/apps/templates/TimeAgo';
-
 import {projectUpdatedStatuses as statuses} from '../../projectRedux';
+
 import RetryProjectSaveDialog from './RetryProjectSaveDialog';
-import project from '@cdo/apps/code-studio/initApp/project';
 
 class ProjectUpdatedAt extends React.Component {
   static propTypes = {

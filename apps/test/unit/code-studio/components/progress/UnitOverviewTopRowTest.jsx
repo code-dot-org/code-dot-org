@@ -1,16 +1,19 @@
-import {expect} from '../../../../util/reconfiguredChai';
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import i18n from '@cdo/locale';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {UnconnectedUnitOverviewTopRow as UnitOverviewTopRow} from '@cdo/apps/code-studio/components/progress/UnitOverviewTopRow';
-import Button from '@cdo/apps/templates/Button';
-import DropdownButton from '@cdo/apps/templates/DropdownButton';
-import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
+import React from 'react';
+
 import BulkLessonVisibilityToggle from '@cdo/apps/code-studio/components/progress/BulkLessonVisibilityToggle';
-import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
 import UnitCalendarButton from '@cdo/apps/code-studio/components/progress/UnitCalendarButton';
+import {UnconnectedUnitOverviewTopRow as UnitOverviewTopRow} from '@cdo/apps/code-studio/components/progress/UnitOverviewTopRow';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import Button from '@cdo/apps/templates/Button';
+import DropdownButton from '@cdo/apps/templates/DropdownButton';
+import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
+import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
+import i18n from '@cdo/locale';
+
+import {expect} from '../../../../util/reconfiguredChai';
+
 import {testLessons} from './unitCalendarTestData';
 
 const defaultProps = {

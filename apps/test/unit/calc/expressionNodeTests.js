@@ -1,8 +1,9 @@
 import {assert} from '../../util/reconfiguredChai';
 
+var jsnums = require('@code-dot-org/js-numbers');
+
 var ExpressionNode = require('@cdo/apps/calc/expressionNode');
 var Token = require('@cdo/apps/calc/token');
-var jsnums = require('@code-dot-org/js-numbers');
 
 function isJsNumber(val) {
   return (

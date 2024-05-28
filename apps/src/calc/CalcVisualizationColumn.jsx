@@ -1,7 +1,9 @@
 var React = require('react');
+
 var GameButtons = require('../templates/GameButtons').default;
-var BelowVisualization = require('../templates/BelowVisualization');
-import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
+var BelowVisualization = require('../templates/BelowVisualization'); // eslint-disable-line import/order
+
+import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv'; // eslint-disable-line import/order
 
 var CalcVisualizationColumn = function (props) {
   return (

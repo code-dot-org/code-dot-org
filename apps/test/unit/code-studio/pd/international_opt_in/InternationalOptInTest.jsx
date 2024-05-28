@@ -1,7 +1,9 @@
-import React from 'react';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../../util/reconfiguredChai';
+import React from 'react';
+
 import InternationalOptIn from '@cdo/apps/code-studio/pd/international_opt_in/InternationalOptIn';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('InternationalOptInTest', () => {
   const defaultProps = {

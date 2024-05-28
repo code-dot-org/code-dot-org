@@ -1,5 +1,6 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
 import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
 

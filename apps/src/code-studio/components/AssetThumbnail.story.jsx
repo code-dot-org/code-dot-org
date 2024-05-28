@@ -1,4 +1,5 @@
 import React from 'react';
+
 import AssetThumbnail from './AssetThumbnail';
 
 export default {

@@ -3,6 +3,7 @@
  *       combination of cookies and HTML5 web storage.
  */
 import {trySetSessionStorage} from '../utils';
+
 import {mergeActivityResult} from './activityUtils';
 
 // Note: sessionStorage is not shared between tabs.

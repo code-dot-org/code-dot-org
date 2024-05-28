@@ -1,4 +1,5 @@
 import {getAllAvailableDropletBlocks} from '../dropletUtils';
+
 var annotationList = require('./annotationList');
 
 /**

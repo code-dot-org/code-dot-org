@@ -1,7 +1,8 @@
 import {assert} from '../../util/reconfiguredChai';
 
-var Token = require('@cdo/apps/calc/token');
 var jsnums = require('@code-dot-org/js-numbers');
+
+var Token = require('@cdo/apps/calc/token');
 
 describe('Token', function () {
   it('handles repeated decimals properly', function () {

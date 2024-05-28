@@ -1,6 +1,7 @@
 /* eslint-disable react/no-danger */
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 /**

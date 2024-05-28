@@ -1,7 +1,8 @@
-import {assert} from '../../util/reconfiguredChai';
 import {blocks as applabBlocks} from '@cdo/apps/applab/dropletConfig';
 import {getExportedGlobals} from '@cdo/apps/applab/export';
 import {dropletGlobalConfigBlocks} from '@cdo/apps/dropletUtils';
+
+import {assert} from '../../util/reconfiguredChai';
 
 describe('the export module', () => {
   describe('the getExportedGlobals function', () => {

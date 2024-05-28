@@ -5,10 +5,12 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {FormGroup, Row, Col, ControlLabel, HelpBlock} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
-import CustomSchoolInfo from './customSchoolInfo';
-import {SchoolInfoPropType} from './constants';
 import {isZipCode} from '@cdo/apps/util/formatValidation';
+
+import {SchoolInfoPropType} from './constants';
+import CustomSchoolInfo from './customSchoolInfo';
 
 const VALIDATION_STATE_ERROR = 'error';
 const OTHER_SCHOOL_VALUE = '-1';

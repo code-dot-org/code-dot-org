@@ -1,5 +1,6 @@
-import {expect, assert} from '../../util/reconfiguredChai';
+import _ from 'lodash';
 import {combineReducers} from 'redux';
+
 import reducers, {
   addGroup,
   addLesson,
@@ -10,7 +11,8 @@ import reducers, {
   emptyNonUserFacingGroup,
   mapLessonGroupDataForEditor,
 } from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
-import _ from 'lodash';
+
+import {expect, assert} from '../../util/reconfiguredChai';
 
 const getInitialState = () => ({
   lessonGroups: [

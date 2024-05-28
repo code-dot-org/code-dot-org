@@ -1,5 +1,5 @@
-import vmsg from 'vmsg';
 import Recorder from 'recorder-js';
+import vmsg from 'vmsg';
 
 class Mp3Recorder {
   constructor() {

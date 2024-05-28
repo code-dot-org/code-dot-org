@@ -1,9 +1,11 @@
+import {utils, MazeMap, drawMap} from '@code-dot-org/maze';
 import PropTypes from 'prop-types';
 import React from 'react';
-import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
-import skins from '@cdo/apps/maze/skins';
+
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
-import {utils, MazeMap, drawMap} from '@code-dot-org/maze';
+import skins from '@cdo/apps/maze/skins';
+import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
+
 import color from '../../../util/color';
 
 const getSubtypeForSkin = utils.getSubtypeForSkin;

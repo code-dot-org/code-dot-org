@@ -1,15 +1,16 @@
-import React, {useState} from 'react';
 import classNames from 'classnames';
+import React, {useState} from 'react';
 
 import {
   ChatCompletionMessage,
   AITutorInteractionStatus as Status,
 } from '@cdo/apps/aiTutor/types';
-import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
+import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 import {saveFeedback, FeedbackData} from '../interactionsApi';
+
 import style from './chat-workspace.module.scss';
 
 interface AssistantMessageProps {

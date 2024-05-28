@@ -1,10 +1,12 @@
-import React from 'react';
-import SignInCalloutWrapper from '@cdo/apps/code-studio/components/header/SignInCalloutWrapper';
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../../util/reconfiguredChai';
-import i18n from '@cdo/locale';
-import sinon from 'sinon';
 import cookies from 'js-cookie';
+import React from 'react';
+import sinon from 'sinon';
+
+import SignInCalloutWrapper from '@cdo/apps/code-studio/components/header/SignInCalloutWrapper';
+import i18n from '@cdo/locale';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('ViewPopup', () => {
   it('displays the correct background darkness', () => {

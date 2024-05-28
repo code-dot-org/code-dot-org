@@ -8,14 +8,24 @@ import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {singleton as studioApp} from '../StudioApp';
-import commonMsg from '@cdo/locale';
+import {Provider} from 'react-redux';
+
 import applabMsg from '@cdo/applab/locale';
-import AppLabView from './AppLabView';
-import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
+import autogenerateML from '@cdo/apps/applab/ai';
+import * as aiConfig from '@cdo/apps/applab/ai/dropletConfig';
+import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
+import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
+import commonMsg from '@cdo/locale';
+
+import annotationList from '../acemode/annotationList';
 import dom from '../dom';
-import * as utils from '../utils';
-import * as dropletConfig from './dropletConfig';
+import executionLog from '../executionLog';
+import JsInterpreterLogger from '../JsInterpreterLogger';
+import JSInterpreter from '../lib/tools/jsinterpreter/JSInterpreter';
+import * as apiTimeoutList from '../lib/util/timeoutList';
+import logToCloud from '../logToCloud';
+import {getStore} from '../redux';
+import {add as addWatcher} from '../redux/watchedExpressions';
 import {getDatasetInfo} from '../storage/dataBrowser/dataUtils';
 import {
   initStorage,
@@ -23,25 +33,27 @@ import {
   DATABLOCK_STORAGE,
   FIREBASE_STORAGE,
 } from '../storage/storage';
-import * as apiTimeoutList from '../lib/util/timeoutList';
-import designMode from './designMode';
-import applabTurtle from './applabTurtle';
-import applabCommands from './commands';
-import JSInterpreter from '../lib/tools/jsinterpreter/JSInterpreter';
-import JsInterpreterLogger from '../JsInterpreterLogger';
-import * as elementUtils from './designElements/elementUtils';
+import {singleton as studioApp} from '../StudioApp';
+import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
 import {shouldOverlaysBeVisible} from '../templates/VisualizationOverlay';
-import logToCloud from '../logToCloud';
-import executionLog from '../executionLog';
-import annotationList from '../acemode/annotationList';
-import Exporter from './Exporter';
-import {Provider} from 'react-redux';
-import {getStore} from '../redux';
-import {actions, reducers} from './redux/applab';
-import {add as addWatcher} from '../redux/watchedExpressions';
-import {changeScreen} from './redux/screens';
+import * as utils from '../utils';
+
+import applabTurtle from './applabTurtle';
+import AppLabView from './AppLabView';
+import applabCommands from './commands';
 import * as applabConstants from './constants';
+import * as elementUtils from './designElements/elementUtils';
+import designMode from './designMode';
+import * as dropletConfig from './dropletConfig';
+import Exporter from './Exporter';
+import {actions, reducers} from './redux/applab';
+import {changeScreen} from './redux/screens';
+
 const {ApplabInterfaceMode} = applabConstants;
+
+// Disabling import order in order to import ApplabInterfaceMode
+// This might be safe to remove but needs investigation.
+/* eslint-disable import/order */
 import consoleApi from '../consoleApi';
 import {
   updateTableColumns,
@@ -55,11 +67,9 @@ import {
   postContainedLevelAttempt,
   runAfterPostContainedLevel,
 } from '../containedLevels';
-import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
 import {outputError, injectErrorHandler} from '../lib/util/javascriptMode';
 import {actions as jsDebugger} from '../lib/tools/jsdebugger/redux';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
-import * as aiConfig from '@cdo/apps/applab/ai/dropletConfig';
 import * as makerToolkit from '../lib/kits/maker/toolkit';
 import * as makerToolkitRedux from '../lib/kits/maker/redux';
 import project from '../code-studio/initApp/project';
@@ -70,10 +80,11 @@ import {getRandomDonorTwitter} from '../util/twitterHelper';
 import {showHideWorkspaceCallouts} from '../code-studio/callouts';
 import header from '../code-studio/header';
 import {TestResults, ResultType} from '../constants';
-import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
+
 import {workspace_running_background, white} from '@cdo/apps/util/color';
+
 import {MB_API} from '../lib/kits/maker/boards/microBit/MicroBitConstants';
-import autogenerateML from '@cdo/apps/applab/ai';
+/* eslint-enable import/order */
 
 /**
  * Create a namespace for the application.

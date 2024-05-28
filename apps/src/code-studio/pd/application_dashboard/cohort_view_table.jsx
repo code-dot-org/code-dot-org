@@ -1,21 +1,24 @@
+import _, {orderBy} from 'lodash';
+import moment from 'moment';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 import ReactTooltip from 'react-tooltip';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
-import color from '@cdo/apps/util/color';
-import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-import _, {orderBy} from 'lodash';
-import moment from 'moment';
-import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
+
 import {WorkshopTypes} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
-import {StatusColors, getApplicationStatuses} from './constants';
+import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
+import color from '@cdo/apps/util/color';
+
 import {
   UNMATCHED_PARTNER_VALUE,
   ALL_PARTNERS_VALUE,
   RegionalPartnerPropType,
 } from '../components/regional_partner_dropdown';
+
+import {StatusColors, getApplicationStatuses} from './constants';
 
 export class CohortViewTable extends React.Component {
   static propTypes = {

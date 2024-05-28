@@ -1,7 +1,8 @@
-import React from 'react';
 import {expect} from 'chai';
-import SurveyRollupTableFoorm from '@cdo/apps/code-studio/pd/workshop_dashboard/components/survey_results/survey_rollup_table_foorm';
 import mount from 'enzyme/build/mount';
+import React from 'react';
+
+import SurveyRollupTableFoorm from '@cdo/apps/code-studio/pd/workshop_dashboard/components/survey_results/survey_rollup_table_foorm';
 
 describe('Survey Rollup Table Foorm', () => {
   const sampleRollupAverages1 = {

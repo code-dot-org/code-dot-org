@@ -1,6 +1,7 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import classNames from 'classnames';
+
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 

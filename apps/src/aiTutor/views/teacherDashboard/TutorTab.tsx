@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
+
 import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
 
-import InteractionsTable from './InteractionsTable';
 import AccessControls from './AccessControls';
+import InteractionsTable from './InteractionsTable';
 
 import style from './interactions-table.module.scss';
 

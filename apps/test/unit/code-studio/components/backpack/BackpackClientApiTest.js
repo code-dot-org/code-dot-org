@@ -1,6 +1,8 @@
-import {assert, expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
+
 import BackpackClientApi from '@cdo/apps/code-studio/components/backpack/BackpackClientApi';
+
+import {assert, expect} from '../../../../util/reconfiguredChai';
 
 describe('BackpackClientApi', () => {
   const channelId = 'fake_channel_id';

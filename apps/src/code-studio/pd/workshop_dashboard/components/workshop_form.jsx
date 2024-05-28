@@ -2,16 +2,10 @@
  * Form for creating / editing workshop details.
  */
 import $ from 'jquery';
-import PropTypes from 'prop-types';
-import React from 'react';
-import {connect} from 'react-redux';
-import Select from 'react-select';
 import _ from 'lodash';
 import moment from 'moment';
-import Spinner from '../../components/spinner';
-import SessionListFormPart from './session_list_form_part';
-import FacilitatorListFormPart from './facilitator_list_form_part';
-import OrganizerFormPart from './organizer_form_part';
+import PropTypes from 'prop-types';
+import React from 'react';
 /* eslint-disable no-restricted-imports */
 import {
   Grid,
@@ -28,14 +22,9 @@ import {
   Alert,
 } from 'react-bootstrap';
 /* eslint-enable no-restricted-imports */
-import {TIME_FORMAT, DATE_FORMAT, DATETIME_FORMAT} from '../workshopConstants';
-import {
-  PermissionPropType,
-  WorkshopAdmin,
-  Organizer,
-  ProgramManager,
-  CsfFacilitator,
-} from '../permission';
+import {connect} from 'react-redux';
+import Select from 'react-select';
+
 import {
   ActiveCourseWorkshops,
   Subjects,
@@ -48,10 +37,24 @@ import {
   MustSuppressEmailSubjects,
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
-import CourseSelect from './CourseSelect';
-import SubjectSelect from './SubjectSelect';
+
 import MapboxLocationSearchField from '../../../../templates/MapboxLocationSearchField';
+import Spinner from '../../components/spinner';
+import {
+  PermissionPropType,
+  WorkshopAdmin,
+  Organizer,
+  ProgramManager,
+  CsfFacilitator,
+} from '../permission';
+import {TIME_FORMAT, DATE_FORMAT, DATETIME_FORMAT} from '../workshopConstants';
+
+import CourseSelect from './CourseSelect';
+import FacilitatorListFormPart from './facilitator_list_form_part';
 import ModuleSelect from './ModuleSelect';
+import OrganizerFormPart from './organizer_form_part';
+import SessionListFormPart from './session_list_form_part';
+import SubjectSelect from './SubjectSelect';
 
 // Default to today, 9am-5pm.
 const placeholderSession = {

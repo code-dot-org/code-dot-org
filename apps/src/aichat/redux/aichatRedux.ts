@@ -1,4 +1,3 @@
-import moment from 'moment';
 import {
   createAsyncThunk,
   createSlice,
@@ -7,22 +6,19 @@ import {
   PayloadAction,
   ThunkDispatch,
 } from '@reduxjs/toolkit';
+import moment from 'moment';
 
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {registerReducers} from '@cdo/apps/redux';
 import {RootState} from '@cdo/apps/types/redux';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {getTypedKeys} from '@cdo/apps/types/utils';
 import {
   AiInteractionStatus as Status,
   AichatErrorType,
 } from '@cdo/generated-scripts/sharedConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
-import {
-  AI_CUSTOMIZATIONS_LABELS,
-  DEFAULT_VISIBILITIES,
-  EMPTY_AI_CUSTOMIZATIONS,
-} from '../views/modelCustomization/constants';
 import {postAichatCompletionMessage} from '../aichatCompletionApi';
 import {
   AiCustomizations,
@@ -35,7 +31,11 @@ import {
   ViewMode,
   Visibility,
 } from '../types';
-import {getTypedKeys} from '@cdo/apps/types/utils';
+import {
+  AI_CUSTOMIZATIONS_LABELS,
+  DEFAULT_VISIBILITIES,
+  EMPTY_AI_CUSTOMIZATIONS,
+} from '../views/modelCustomization/constants';
 
 const haveDifferentValues = (
   value1: AiCustomizations[keyof AiCustomizations],

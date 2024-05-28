@@ -1,14 +1,17 @@
 import React, {useCallback, useRef, useEffect} from 'react';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {useSelector} from 'react-redux';
-import ChatWarningModal from '@cdo/apps/aichat/views/ChatWarningModal';
-import ChatMessage from './ChatMessage';
-import UserChatMessageEditor from './UserChatMessageEditor';
-import moduleStyles from './chatWorkspace.module.scss';
+
 import {
   AichatState,
   setShowWarningModal,
 } from '@cdo/apps/aichat/redux/aichatRedux';
+import ChatWarningModal from '@cdo/apps/aichat/views/ChatWarningModal';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+
+import ChatMessage from './ChatMessage';
+import UserChatMessageEditor from './UserChatMessageEditor';
+
+import moduleStyles from './chatWorkspace.module.scss';
 
 /**
  * Renders the AI Chat Lab main chat workspace component.

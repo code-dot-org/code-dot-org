@@ -1,7 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import fontConstants from '@cdo/apps/fontConstants';
+
 import color from '../../../../util/color';
+
 import ModuleAssignment from './ModuleAssignment';
 
 export default class EnrollmentUnitAssignment extends React.Component {

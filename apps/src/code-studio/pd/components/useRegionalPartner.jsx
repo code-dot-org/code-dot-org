@@ -1,13 +1,15 @@
-import {useCallback, useEffect, useState} from 'react';
 import $ from 'jquery';
+import {debounce} from 'lodash';
+import {useCallback, useEffect, useState} from 'react';
+
+import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+
 import {
   PROGRAM_CSD,
   PROGRAM_CSP,
   PROGRAM_CSA,
   getProgramInfo,
 } from '../application/teacher/TeacherApplicationConstants';
-import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
-import {debounce} from 'lodash';
 
 const COURSE_NAMES = {
   [PROGRAM_CSD]: 'CS Discoveries',

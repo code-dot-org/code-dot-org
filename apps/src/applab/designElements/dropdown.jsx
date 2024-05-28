@@ -1,24 +1,27 @@
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
+import RGBColor from 'rgbcolor';
+
 import applabMsg from '@cdo/applab/locale';
-import PropertyRow from './PropertyRow';
+
+import designMode from '../designMode';
+import themeValues, {CLASSIC_DROPDOWN_PADDING} from '../themeValues';
+
 import BooleanPropertyRow from './BooleanPropertyRow';
-import OptionsSelectRow from './OptionsSelectRow';
+import BorderProperties from './BorderProperties';
 import ColorPickerPropertyRow from './ColorPickerPropertyRow';
-import ZOrderRow from './ZOrderRow';
+import * as elementUtils from './elementUtils';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
-import themeValues, {CLASSIC_DROPDOWN_PADDING} from '../themeValues';
+import FontFamilyPropertyRow from './FontFamilyPropertyRow';
+import elementLibrary from './library';
+import OptionsSelectRow from './OptionsSelectRow';
+import PropertyRow from './PropertyRow';
 import TextAlignmentPropertyRow, {
   TEXT_ALIGNMENT_CENTER,
 } from './TextAlignmentPropertyRow';
-import BorderProperties from './BorderProperties';
-import FontFamilyPropertyRow from './FontFamilyPropertyRow';
-import * as elementUtils from './elementUtils';
-import designMode from '../designMode';
-import elementLibrary from './library';
-import RGBColor from 'rgbcolor';
+import ZOrderRow from './ZOrderRow';
 
 class DropdownProperties extends React.Component {
   static propTypes = {

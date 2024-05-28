@@ -22,28 +22,40 @@ var Calc = module.exports;
  */
 var React = require('react');
 var ReactDOM = require('react-dom');
-var studioApp = require('../StudioApp').singleton;
-var jsnums = require('@code-dot-org/js-numbers');
-var commonMsg = require('@cdo/locale');
-var calcMsg = require('./locale');
 var Provider = require('react-redux').Provider;
-import AppView from '../templates/AppView';
-var CalcVisualizationColumn = require('./CalcVisualizationColumn');
-var dom = require('../dom');
+
 var blockUtils = require('../block_utils');
+var dom = require('../dom');
+var studioApp = require('../StudioApp').singleton;
+
+var jsnums = require('@code-dot-org/js-numbers'); // eslint-disable-line import/order
+
+var commonMsg = require('@cdo/locale'); // eslint-disable-line import/order
+
 var utils = require('../utils');
+
+var CalcVisualizationColumn = require('./CalcVisualizationColumn');
+var Equation = require('./equation');
+var EquationSet = require('./equationSet');
+var ExpressionNode = require('./expressionNode');
+var InputIterator = require('./inputIterator');
+var calcMsg = require('./locale');
+
+// Disabling import order in order to add require statements first.
+// This might be safe to remove but needs investigation.
+/* eslint-disable import/order */
+import AppView from '../templates/AppView';
+
 var _ = require('lodash');
+
 import * as timeoutList from '../lib/util/timeoutList';
 import {getStore} from '../redux';
 
-var ExpressionNode = require('./expressionNode');
-var EquationSet = require('./equationSet');
-var Equation = require('./equation');
 var Token = require('./token');
-var InputIterator = require('./inputIterator');
 
 import {TestResults, ResultType} from '../constants';
 import {showDeprecatedAlgebraLabWarning} from '../util/deprecatedLabWarning';
+/* eslint-enable import/order */
 
 var level;
 var skin;

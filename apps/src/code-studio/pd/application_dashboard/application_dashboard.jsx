@@ -1,31 +1,33 @@
 /**
  * Main landing page and router for the application dashboard.
  */
+import {createHistory} from 'history';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {Provider} from 'react-redux';
+import {Router, Route, IndexRedirect, useRouterHistory} from 'react-router';
 import {createStore, combineReducers} from 'redux';
-import applicationDashboardReducers, {
-  setWorkshopAdminPermission,
-  setLockApplicationPermission,
-} from './reducers';
+
+import Header from '../components/header';
+import {UNMATCHED_PARTNER_OPTION} from '../components/regional_partner_dropdown';
 import regionalPartnerReducers, {
   setRegionalPartners,
   setRegionalPartnerFilter,
   setRegionalPartnerGroup,
   getInitialRegionalPartnerFilter,
 } from '../components/regional_partners_reducers';
-import {UNMATCHED_PARTNER_OPTION} from '../components/regional_partner_dropdown';
-import Header from '../components/header';
-import {Router, Route, IndexRedirect, useRouterHistory} from 'react-router';
-import {createHistory} from 'history';
-import Summary from './summary';
-import QuickView from './quick_view';
+
+import AdminEditView from './admin_edit_view';
+import CohortView from './cohort_view';
 import DetailView from './detail_view';
 import DetailViewRedirect from './detail_view_redirect';
-import CohortView from './cohort_view';
-import AdminEditView from './admin_edit_view';
-import _ from 'lodash';
+import QuickView from './quick_view';
+import applicationDashboardReducers, {
+  setWorkshopAdminPermission,
+  setLockApplicationPermission,
+} from './reducers';
+import Summary from './summary';
 
 const ROOT_PATH = '/pd/application_dashboard';
 // eslint-disable-next-line react-hooks/rules-of-hooks

@@ -1,15 +1,16 @@
 import React, {useState, useCallback} from 'react';
-import style from './ai-tutor.module.scss';
-import Button from '@cdo/apps/templates/Button';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {askAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
+import {askAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {
   AITutorTypes as ActionType,
   AITutorTypesValue,
 } from '@cdo/apps/aiTutor/types';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import Button from '@cdo/apps/templates/Button';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import style from './ai-tutor.module.scss';
 
 const QuickActions = {
   [ActionType.COMPILATION]: "Why doesn't my code compile?",

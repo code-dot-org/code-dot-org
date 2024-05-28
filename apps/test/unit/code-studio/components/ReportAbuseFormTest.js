@@ -1,8 +1,10 @@
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {assert} from '../../../util/reconfiguredChai';
-import {getChannelIdFromUrl} from '@cdo/apps/reportAbuse';
+import React from 'react';
+
 import ReportAbuseForm from '@cdo/apps/code-studio/components/ReportAbuseForm';
+import {getChannelIdFromUrl} from '@cdo/apps/reportAbuse';
+
+import {assert} from '../../../util/reconfiguredChai';
 
 describe('ReportAbuseForm', () => {
   it('getChannelIdFromUrl returns the channel id for codeprojects', () => {

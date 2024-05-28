@@ -3,8 +3,9 @@
 // This file contains some functionality related to navigating through
 // levels without doing page reloads.
 
-import {getStore} from '../redux';
 import {onLevelIndexChange} from '@cdo/apps/code-studio/progressRedux';
+
+import {getStore} from '../redux';
 
 // Returns whether we can safely navigate between the two given levels
 // without reloading the whole page.

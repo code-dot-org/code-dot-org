@@ -1,5 +1,19 @@
+import {
+  AnyAction,
+  PayloadAction,
+  ThunkAction,
+  ThunkDispatch,
+  createSlice,
+} from '@reduxjs/toolkit';
 import $ from 'jquery';
 import _ from 'lodash';
+
+import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
+import {TestResults} from '@cdo/apps/constants';
+import {
+  processServerStudentProgress,
+  getLevelResult,
+} from '@cdo/apps/templates/progress/progressHelpers';
 import {
   Lesson,
   LessonGroup,
@@ -13,26 +27,16 @@ import {
   PeerReviewLevelInfo,
   LevelWithProgress,
 } from '@cdo/apps/types/progressTypes';
-import {
-  AnyAction,
-  PayloadAction,
-  ThunkAction,
-  ThunkDispatch,
-  createSlice,
-} from '@reduxjs/toolkit';
-import {
-  processServerStudentProgress,
-  getLevelResult,
-} from '@cdo/apps/templates/progress/progressHelpers';
+
+import {getBubbleUrl} from '../templates/progress/BubbleFactory';
+import {navigateToHref} from '../utils';
+
 import {mergeActivityResult} from './activityUtils';
-import {SET_VIEW_TYPE} from './viewAsRedux';
-import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
-import {authorizeLockable} from './lessonLockRedux';
 import {
   canChangeLevelInPage,
   updateBrowserForLevelNavigation,
 } from './browserNavigation';
-import {TestResults} from '@cdo/apps/constants';
+import {authorizeLockable} from './lessonLockRedux';
 import {
   getCurrentLevel,
   getCurrentLevels,
@@ -40,8 +44,7 @@ import {
   levelById,
   nextLevelId,
 } from './progressReduxSelectors';
-import {getBubbleUrl} from '../templates/progress/BubbleFactory';
-import {navigateToHref} from '../utils';
+import {SET_VIEW_TYPE} from './viewAsRedux';
 
 export interface ProgressState {
   currentLevelId: string | null;

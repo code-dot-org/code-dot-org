@@ -1,15 +1,16 @@
-import {expect} from '../../util/reconfiguredChai';
-import designMode from '@cdo/apps/applab/designMode';
 import elementLibrary from '@cdo/apps/applab/designElements/library';
-import pageConstantsReducer, {
-  setPageConstants,
-} from '@cdo/apps/redux/pageConstants';
+import designMode from '@cdo/apps/applab/designMode';
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
+import pageConstantsReducer, {
+  setPageConstants,
+} from '@cdo/apps/redux/pageConstants';
+
+import {expect} from '../../util/reconfiguredChai';
 
 describe('appendPx', () => {
   it('returns a valid css positive integer', function () {

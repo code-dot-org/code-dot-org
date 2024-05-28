@@ -1,11 +1,13 @@
-import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
+import React, {Component} from 'react';
+
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
-import UnitCalendar from './UnitCalendar';
 import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import i18n from '@cdo/locale';
+
+import UnitCalendar from './UnitCalendar';
 
 const WEEKLY_INSTRUCTIONAL_MINUTES_OPTIONS = [
   45, 90, 135, 180, 225, 270, 315, 360, 405, 450,

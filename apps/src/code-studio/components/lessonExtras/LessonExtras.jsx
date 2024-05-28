@@ -1,12 +1,14 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import i18n from '@cdo/locale';
-import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
-import {lessonOfBonusLevels} from './shapes';
-import LessonExtrasNotification from './LessonExtrasNotification';
-import Button from '@cdo/apps/templates/Button';
-import BonusLevels from './BonusLevels';
+
 import fontConstants from '@cdo/apps/fontConstants';
+import Button from '@cdo/apps/templates/Button';
+import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
+import i18n from '@cdo/locale';
+
+import BonusLevels from './BonusLevels';
+import LessonExtrasNotification from './LessonExtrasNotification';
+import {lessonOfBonusLevels} from './shapes';
 
 export default class LessonExtras extends React.Component {
   static propTypes = {

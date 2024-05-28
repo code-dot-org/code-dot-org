@@ -1,12 +1,14 @@
 import {assert, expect} from 'chai';
-import Multi from '@cdo/apps/code-studio/levels/multi';
+
 import {writeSourceForLevel} from '@cdo/apps/code-studio/clientState';
-import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
+import Multi from '@cdo/apps/code-studio/levels/multi';
 import {
   LegacyTooFewDialog,
   LegacyIncorrectDialog,
 } from '@cdo/apps/lib/ui/LegacyDialogContents';
+
 import {TestResults} from '../../../../src/constants';
+import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
 
 describe('multi', () => {
   const levelId = 1028;

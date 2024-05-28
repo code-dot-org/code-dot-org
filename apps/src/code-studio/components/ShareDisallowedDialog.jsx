@@ -1,12 +1,14 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import color from '@cdo/apps/util/color';
-import Button from '@cdo/apps/templates/Button';
-import i18n from '@cdo/locale';
-import {hideShareDialog} from './shareDialogRedux';
+
 import fontConstants from '@cdo/apps/fontConstants';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import Button from '@cdo/apps/templates/Button';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
+import {hideShareDialog} from './shareDialogRedux';
 
 class ShareDisallowedDialog extends Component {
   static propTypes = {

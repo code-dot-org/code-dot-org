@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import React from 'react';
+
 import i18n from '@cdo/locale';
 
 import {convertBlocksXml} from '../../../craft/code-connection/utils';

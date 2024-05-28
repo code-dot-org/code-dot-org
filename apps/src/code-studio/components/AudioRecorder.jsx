@@ -1,12 +1,15 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import Button from '../../templates/Button';
-import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
+
 import {assets as assetsApi} from '@cdo/apps/clientApi';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
+import Button from '../../templates/Button';
+
 import {assetButtonStyles} from './AddAssetButtonRow';
 import {AudioErrorType} from './AssetManager';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 import getRecorder, {RecordingFileType} from './recorders';
 
 const RECORD_MAX_TIME = 30000;

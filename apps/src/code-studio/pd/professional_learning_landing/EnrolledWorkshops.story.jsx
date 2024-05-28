@@ -1,5 +1,7 @@
 import React from 'react';
+
 import reactBootstrapStoryDecorator from '../reactBootstrapStoryDecorator';
+
 import {EnrolledWorkshopsTable} from './EnrolledWorkshops';
 
 const workshops = [

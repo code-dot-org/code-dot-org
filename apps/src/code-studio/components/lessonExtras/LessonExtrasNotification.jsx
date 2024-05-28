@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
 

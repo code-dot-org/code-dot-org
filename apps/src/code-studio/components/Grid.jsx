@@ -1,5 +1,7 @@
+import {utils as mazeUtils} from '@code-dot-org/maze';
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import {
   SquareType,
   WallTypeMask,
@@ -8,7 +10,6 @@ import {
   WallCoordColMask,
   WallCoordColShift,
 } from '@cdo/apps/studio/constants';
-import {utils as mazeUtils} from '@code-dot-org/maze';
 
 const CELL_WIDTH = 48;
 const CELL_HEIGHT = 38;

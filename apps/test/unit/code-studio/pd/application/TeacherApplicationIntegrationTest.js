@@ -1,11 +1,13 @@
-import React from 'react';
 import {expect} from 'chai';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import sinon from 'sinon';
-import {PageLabels} from '@cdo/apps/generated/pd/teacherApplicationConstants';
-import TeacherApplication from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplication';
-import * as utils from '@cdo/apps/utils';
 import $ from 'jquery';
+import React from 'react';
+import sinon from 'sinon';
+
+import TeacherApplication from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplication';
+import {PageLabels} from '@cdo/apps/generated/pd/teacherApplicationConstants';
+import * as utils from '@cdo/apps/utils';
+
 import FindYourRegion from '../../../../../src/code-studio/pd/application/teacher/FindYourRegion';
 
 describe('TeacherApplication', () => {

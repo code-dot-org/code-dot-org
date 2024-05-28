@@ -1,13 +1,15 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
-import {updateQueryParam} from '../../utils';
-import {reload} from '../../../utils';
+
 import {
   selectSection,
   sectionsNameAndId,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import i18n from '@cdo/locale';
+
+import {reload} from '../../../utils';
+import {updateQueryParam} from '../../utils';
 
 // Exported for unit testing
 export const NO_SELECTED_SECTION_VALUE = '';

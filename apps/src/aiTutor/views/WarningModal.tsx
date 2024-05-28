@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import style from './chat-workspace.module.scss';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
 import {
   BodyTwoText,
   Heading2,
@@ -8,7 +7,10 @@ import {
 } from '@cdo/apps/componentLibrary/typography';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import Button from '@cdo/apps/templates/Button';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
+
+import style from './chat-workspace.module.scss';
 
 const WarningModal = () => {
   const sessionStorageKey = 'AITutorWarningModalSeenKey';

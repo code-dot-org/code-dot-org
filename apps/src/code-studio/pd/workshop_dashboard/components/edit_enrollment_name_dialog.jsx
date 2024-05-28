@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import {Modal, Button, Row, Col, FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {Modal, Button, Row, Col, FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
 export default class EditEnrollmentNameDialog extends React.Component {
   static propTypes = {

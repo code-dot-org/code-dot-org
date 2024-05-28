@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import FieldGroup from './FieldGroup';
 
 const PHONE_NUMBER_REGEX =

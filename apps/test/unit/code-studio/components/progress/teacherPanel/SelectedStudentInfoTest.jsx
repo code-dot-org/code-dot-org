@@ -1,9 +1,11 @@
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../../../util/reconfiguredChai';
+import React from 'react';
+
 import SelectedStudentInfo from '@cdo/apps/code-studio/components/progress/teacherPanel/SelectedStudentInfo';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
+
+import {expect} from '../../../../../util/reconfiguredChai';
 
 const LEVEL_WITH_PROGRESS = {
   id: '123',

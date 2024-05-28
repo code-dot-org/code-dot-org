@@ -7,8 +7,10 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
-import ApplicationLoader from './application_loader';
+
 import {getPathToApplication} from '@cdo/apps/code-studio/pd/application_dashboard/pathToApplicationHelper';
+
+import ApplicationLoader from './application_loader';
 
 export default class DetailViewRedirect extends React.Component {
   static propTypes = {

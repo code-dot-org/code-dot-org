@@ -1,7 +1,9 @@
-import {expect} from '../../../../util/reconfiguredChai';
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import React from 'react';
+
 import LibraryListItem from '@cdo/apps/code-studio/components/libraries/LibraryListItem';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('LibraryListItem', () => {
   it('displays no buttons if there are no action props', () => {

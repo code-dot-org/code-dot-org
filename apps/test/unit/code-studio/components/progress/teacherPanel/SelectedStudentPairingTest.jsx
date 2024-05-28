@@ -1,7 +1,9 @@
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../../../util/reconfiguredChai';
+import React from 'react';
+
 import SelectedStudentPairing from '@cdo/apps/code-studio/components/progress/teacherPanel/SelectedStudentPairing';
+
+import {expect} from '../../../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   partnerNames: ['Student 1'],

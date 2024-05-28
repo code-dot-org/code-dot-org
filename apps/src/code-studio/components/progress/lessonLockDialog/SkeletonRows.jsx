@@ -1,8 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import _ from 'lodash';
-import Skeleton from '@cdo/apps/util/loadingSkeleton';
+import PropTypes from 'prop-types';
+import React from 'react';
+
 import color from '@cdo/apps/util/color';
+import Skeleton from '@cdo/apps/util/loadingSkeleton';
 
 // Returns an array of rows, each with the given number of cells containing
 // a Skeleton element.

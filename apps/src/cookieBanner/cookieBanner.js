@@ -1,4 +1,5 @@
 import cookies from 'js-cookie';
+
 import {getRootDomainFromHostname} from '@cdo/apps/code-studio/utils';
 
 // Note that on the code.org homepage, jQuery is not yet available, since its

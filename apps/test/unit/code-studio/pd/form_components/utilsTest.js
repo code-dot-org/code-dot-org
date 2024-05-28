@@ -1,4 +1,5 @@
 import utils from '@cdo/apps/code-studio/pd/form_components/utils';
+
 import {expect} from '../../../../util/reconfiguredChai';
 
 describe('FormComponents Utils', () => {

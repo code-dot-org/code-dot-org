@@ -1,7 +1,9 @@
-import {expect} from '../../../../util/reconfiguredChai';
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import React from 'react';
+
 import LibraryIdCopier from '@cdo/apps/code-studio/components/libraries/LibraryIdCopier.jsx';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('LibraryIdCopier', () => {
   const CHANNEL_ID_SELECTOR = 'input[type="text"]';

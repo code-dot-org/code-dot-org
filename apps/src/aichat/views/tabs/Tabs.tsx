@@ -1,8 +1,11 @@
-import React, {useState, useEffect} from 'react';
 import classNames from 'classnames';
+import React, {useState, useEffect} from 'react';
+
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
-import styles from './tabs.module.scss';
+
 import TabPanel from './TabPanel';
+
+import styles from './tabs.module.scss';
 
 export type Tab = {
   title: string;

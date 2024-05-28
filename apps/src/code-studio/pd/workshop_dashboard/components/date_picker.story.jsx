@@ -1,7 +1,8 @@
-import React from 'react';
-import moment from 'moment';
-import DatePicker from './date_picker';
 import {action} from '@storybook/addon-actions';
+import moment from 'moment';
+import React from 'react';
+
+import DatePicker from './date_picker';
 
 export default {
   component: DatePicker,

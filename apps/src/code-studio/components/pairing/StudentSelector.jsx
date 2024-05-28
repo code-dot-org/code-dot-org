@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {studentsShape} from './types';
-import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
+
 import fontConstants from '@cdo/apps/fontConstants';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
+import {studentsShape} from './types';
 
 /**
  * A component for selecting one or more students in a section.

@@ -21,9 +21,9 @@
  * @fileoverview Demonstration of Blockly: Calc Graphics.
  * @author fraser@google.com (Neil Fraser)
  */
-var msg = require('./locale');
-
 var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
+
+var msg = require('./locale');
 
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function (blockly, blockInstallOptions) {

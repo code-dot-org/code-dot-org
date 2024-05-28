@@ -1,9 +1,12 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import applabMsg from '@cdo/applab/locale';
-import color from '../../util/color';
-import * as rowStyle from './rowStyle';
+
 import FontAwesome from '../../templates/FontAwesome';
+import color from '../../util/color';
+
+import * as rowStyle from './rowStyle';
 
 export default class ZOrderRow extends React.Component {
   static propTypes = {

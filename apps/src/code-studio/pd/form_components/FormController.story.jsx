@@ -1,9 +1,11 @@
+import {action} from '@storybook/addon-actions';
 import React from 'react';
 import {FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+
+import reactBootstrapStoryDecorator from '../reactBootstrapStoryDecorator';
+
 import FormComponent from './FormComponent';
 import FormController from './FormController';
-import reactBootstrapStoryDecorator from '../reactBootstrapStoryDecorator';
-import {action} from '@storybook/addon-actions';
 
 class TestPageOne extends FormComponent {
   render() {

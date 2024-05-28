@@ -1,8 +1,9 @@
 /** @file Tests for clientState.js */
 
 var assert = require('assert');
-var state = require('@cdo/apps/code-studio/clientState');
 var chai = require('chai');
+
+var state = require('@cdo/apps/code-studio/clientState');
 
 chai.should();
 

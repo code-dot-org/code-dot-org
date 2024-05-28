@@ -1,8 +1,10 @@
-import {expect} from '../../../../util/reconfiguredChai';
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {ShareTeacherLibraries} from '@cdo/apps/code-studio/components/libraries/ShareTeacherLibraries.jsx';
+import React from 'react';
 import sinon from 'sinon';
+
+import {ShareTeacherLibraries} from '@cdo/apps/code-studio/components/libraries/ShareTeacherLibraries.jsx';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('ShareTeacherLibraries', () => {
   const SECTIONS = [
