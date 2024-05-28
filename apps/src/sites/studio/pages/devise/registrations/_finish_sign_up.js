@@ -216,7 +216,7 @@ $(document).ready(() => {
     hideFields(STUDENT_ONLY_FIELDS);
     toggleVisShareEmailRegPartner(isInUnitedStates);
     isInSchoolAssociationExperiment = statsigReporter.getIsInExperiment(
-      'school_association_update_2024',
+      'school_association_update_2024_v3',
       'showNewFlow',
       false
     );
@@ -268,7 +268,7 @@ $(document).ready(() => {
       if (isInSchoolAssociationExperiment) {
         ReactDOM.render(
           <div style={{padding: 10}}>
-            <SchoolDataInputs />
+            <SchoolDataInputs usIp={usIp} />
           </div>,
           schoolInfoMountPoint
         );

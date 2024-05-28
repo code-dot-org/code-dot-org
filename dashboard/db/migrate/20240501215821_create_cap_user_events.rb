@@ -1,4 +1,4 @@
-class CreateCapUserEvents < ActiveRecord::Migration[6.1]
+class CreateCAPUserEvents < ActiveRecord::Migration[6.1]
   def change
     create_table :cap_user_events do |t|
       t.string :name, null: false, limit: 64

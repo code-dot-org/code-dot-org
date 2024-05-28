@@ -43,7 +43,7 @@ const ParentalPermissionBanner: React.FC<ParentalPermissionBannerProps> = ({
 
   useEffect(() => {
     if (show) {
-      reportEvent(EVENTS.CPA_PARENT_EMAIL_BANNER_SHOWN, {
+      reportEvent(EVENTS.CAP_PARENT_EMAIL_BANNER_SHOWN, {
         inSection: currentUser.inSection,
         consentStatus: currentUser.childAccountComplianceState,
       });
@@ -53,7 +53,7 @@ const ParentalPermissionBanner: React.FC<ParentalPermissionBannerProps> = ({
   const handleModalShow = () => {
     setShowModal(true);
 
-    reportEvent(EVENTS.CPA_PARENT_EMAIL_BANNER_CLICKED, {
+    reportEvent(EVENTS.CAP_PARENT_EMAIL_BANNER_CLICKED, {
       inSection: currentUser.inSection,
       consentStatus,
     });
@@ -70,7 +70,7 @@ const ParentalPermissionBanner: React.FC<ParentalPermissionBannerProps> = ({
 
     setConsentStatus(newConsentStatus);
 
-    reportEvent(EVENTS.CPA_PARENT_EMAIL_BANNER_CLOSED, {
+    reportEvent(EVENTS.CAP_PARENT_EMAIL_BANNER_CLOSED, {
       inSection: currentUser.inSection,
       consentStatus: newConsentStatus,
     });
@@ -83,7 +83,7 @@ const ParentalPermissionBanner: React.FC<ParentalPermissionBannerProps> = ({
 
     setConsentStatus(newConsentStatus);
 
-    reportEvent(EVENTS.CPA_PARENT_EMAIL_BANNER_SUBMITTED, {
+    reportEvent(EVENTS.CAP_PARENT_EMAIL_BANNER_SUBMITTED, {
       inSection: currentUser.inSection,
       consentStatus: newConsentStatus,
     });
@@ -98,7 +98,7 @@ const ParentalPermissionBanner: React.FC<ParentalPermissionBannerProps> = ({
 
     setConsentStatus(newConsentStatus);
 
-    reportEvent(EVENTS.CPA_PARENT_EMAIL_BANNER_RESEND, {
+    reportEvent(EVENTS.CAP_PARENT_EMAIL_BANNER_RESEND, {
       inSection: currentUser.inSection,
       oldConsentStatus,
       newConsentStatus,
@@ -114,7 +114,7 @@ const ParentalPermissionBanner: React.FC<ParentalPermissionBannerProps> = ({
 
     setConsentStatus(newConsentStatus);
 
-    reportEvent(EVENTS.CPA_PARENT_EMAIL_BANNER_UPDATED, {
+    reportEvent(EVENTS.CAP_PARENT_EMAIL_BANNER_UPDATED, {
       inSection: currentUser.inSection,
       oldConsentStatus,
       newConsentStatus,
