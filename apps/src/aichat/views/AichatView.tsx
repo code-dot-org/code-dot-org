@@ -221,7 +221,7 @@ const renderChatWorkspaceHeaderRight = (onClear: () => void) => {
         size="xs"
         color="white"
         type="secondary"
-        className={moduleStyles.clearButton}
+        className={moduleStyles.aichatViewButton}
       />
       <CopyButton />
     </div>
@@ -241,7 +241,7 @@ const renderModelCustomizationHeaderRight = (onStartOver: () => void) => {
         ariaLabel={'Start Over'}
         size={'xs'}
         type="tertiary"
-        className={moduleStyles.startOverButton}
+        className={moduleStyles.aichatViewButton}
       />
     </div>
   );
