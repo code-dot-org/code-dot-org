@@ -442,6 +442,7 @@ en:
       navigator: 'Partner'
       create: 'Create'
       new_project: "New Project"
+      new_project_low_cap: "New project"
       algebra_game: 'Algebra'
       applab: 'App Lab'
       artist: 'Artist'
