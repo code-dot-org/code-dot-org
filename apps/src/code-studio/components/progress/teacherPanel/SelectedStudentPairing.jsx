@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-
-import Tooltip from '@cdo/apps/templates/Tooltip';
 import i18n from '@cdo/locale';
+import Tooltip from '@cdo/apps/templates/Tooltip';
 
 // Render a string and possibly a tooltip that describes the student's
 // partners. This method should only be called when the student is in a

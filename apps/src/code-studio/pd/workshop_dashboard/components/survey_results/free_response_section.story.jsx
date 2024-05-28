@@ -1,5 +1,4 @@
 import React from 'react';
-
 import FreeResponseSection from './free_response_section';
 
 export default {

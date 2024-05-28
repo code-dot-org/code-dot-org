@@ -1,7 +1,6 @@
-import $ from 'jquery';
-import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
 /* eslint-disable no-restricted-imports */
 import {
   Row,
@@ -14,11 +13,16 @@ import {
   Table,
 } from 'react-bootstrap';
 /* eslint-enable no-restricted-imports */
-import {connect} from 'react-redux';
-
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import $ from 'jquery';
 import fontConstants from '@cdo/apps/fontConstants';
-import {CourseSpecificScholarshipDropdownOptions} from '@cdo/apps/generated/pd/scholarshipInfoConstants';
-import {CourseKeyMap} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {
+  RegionalPartnerDropdown,
+  UNMATCHED_PARTNER_VALUE,
+  UNMATCHED_PARTNER_LABEL,
+} from '../components/regional_partner_dropdown';
+import ConfirmationDialog from '../components/confirmation_dialog';
+import ScholarshipDropdown from '../components/scholarshipDropdown';
 import {
   LabelOverrides as TeacherLabelOverrides,
   PageLabels as TeacherPageLabelsOverrides,
@@ -28,33 +32,26 @@ import {
   ValidScores as TeacherValidScores,
   PrincipalApprovalState,
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {CourseSpecificScholarshipDropdownOptions} from '@cdo/apps/generated/pd/scholarshipInfoConstants';
+import {CourseKeyMap} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import _ from 'lodash';
+import {
+  getApplicationStatuses,
+  ApplicationFinalStatuses,
+  ScholarshipStatusRequiredStatuses,
+} from './constants';
+import PrincipalApprovalButtons from './principal_approval_buttons';
+import DetailViewWorkshopAssignmentResponse from './detail_view_workshop_assignment_response';
+import ChangeLog from './detail_view/change_log';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
-
 import {
   PROGRAM_CSD,
   PROGRAM_CSP,
   PROGRAM_CSA,
   getProgramInfo,
 } from '../application/teacher/TeacherApplicationConstants';
-import ConfirmationDialog from '../components/confirmation_dialog';
-import {
-  RegionalPartnerDropdown,
-  UNMATCHED_PARTNER_VALUE,
-  UNMATCHED_PARTNER_LABEL,
-} from '../components/regional_partner_dropdown';
-import ScholarshipDropdown from '../components/scholarshipDropdown';
-
-import {
-  getApplicationStatuses,
-  ApplicationFinalStatuses,
-  ScholarshipStatusRequiredStatuses,
-} from './constants';
-import ChangeLog from './detail_view/change_log';
-import DetailViewWorkshopAssignmentResponse from './detail_view_workshop_assignment_response';
-import PrincipalApprovalButtons from './principal_approval_buttons';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const NA = 'N/A';
 

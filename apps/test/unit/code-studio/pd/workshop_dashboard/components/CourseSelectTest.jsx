@@ -1,19 +1,17 @@
-import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-
-import CourseSelect, {
-  getAllowedCourses,
-} from '@cdo/apps/code-studio/pd/workshop_dashboard/components/CourseSelect';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import Permission, {
   Organizer,
 } from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
+import CourseSelect, {
+  getAllowedCourses,
+} from '@cdo/apps/code-studio/pd/workshop_dashboard/components/CourseSelect';
 import '../workshopFactory';
+import {expect} from '../../../../../util/reconfiguredChai';
 import {
   Courses,
   ActiveCourses,
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
-
-import {expect} from '../../../../../util/reconfiguredChai';
 
 describe('CourseSelect', () => {
   it('only renders blank if course is empty', () => {

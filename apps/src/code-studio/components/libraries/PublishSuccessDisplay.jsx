@@ -1,10 +1,8 @@
-import PropTypes from 'prop-types';
 import React from 'react';
-
-import {Heading2} from '@cdo/apps/lib/ui/Headings';
-import Button from '@cdo/apps/templates/Button';
+import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
-
+import Button from '@cdo/apps/templates/Button';
+import {Heading2} from '@cdo/apps/lib/ui/Headings';
 import LibraryIdCopier from './LibraryIdCopier';
 
 export default class PublishSuccessDisplay extends React.Component {

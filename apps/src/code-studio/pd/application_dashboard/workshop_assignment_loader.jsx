@@ -1,14 +1,11 @@
-import $ from 'jquery';
-import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-
-import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import color from '@cdo/apps/util/color';
-
+import $ from 'jquery';
+import _ from 'lodash';
 import Spinner from '../components/spinner';
-
 import WorkshopAssignmentSelect from './workshop_assignment_select';
+import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 const SUBJECT_NAME_MAP = {
   summer: SubjectNames.SUBJECT_SUMMER_WORKSHOP,

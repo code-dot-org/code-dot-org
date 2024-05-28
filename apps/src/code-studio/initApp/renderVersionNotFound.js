@@ -1,9 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import msg from '@cdo/locale';
-
 import AlertExclamation from '../components/AlertExclamation';
+import msg from '@cdo/locale';
 
 export function VersionNotFoundAlert() {
   return (

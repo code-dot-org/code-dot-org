@@ -1,17 +1,15 @@
-import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {Modal, FormGroup, Button, ControlLabel} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import Select from 'react-select';
-
 import 'react-select/dist/react-select.css';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import color from '@cdo/apps/util/color';
-
 import {SelectStyleProps} from '../constants';
-import ButtonList from '../form_components/ButtonList';
 import FieldGroup from '../form_components/FieldGroup';
+import ButtonList from '../form_components/ButtonList';
+import color from '@cdo/apps/util/color';
+import $ from 'jquery';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const ROLES = [
   'Teacher',

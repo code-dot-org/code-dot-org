@@ -1,10 +1,10 @@
-import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon';
-
-import {UnconnectedDownloadReplayVideoButton as DownloadReplayVideoButton} from '@cdo/apps/code-studio/components/DownloadReplayVideoButton';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 
 import {expect} from '../../../util/reconfiguredChai';
+
+import {UnconnectedDownloadReplayVideoButton as DownloadReplayVideoButton} from '@cdo/apps/code-studio/components/DownloadReplayVideoButton';
 
 // temporarily skipped because this button is disabled. Re-enable the test if we re-enable the button.
 describe.skip('DownloadReplayVideoButton', () => {

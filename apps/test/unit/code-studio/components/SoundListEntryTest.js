@@ -1,12 +1,10 @@
-import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import {assert, expect} from '../../../util/reconfiguredChai';
 import React from 'react';
-import sinon from 'sinon';
-
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import SoundListEntry from '@cdo/apps/code-studio/components/SoundListEntry';
 import Sounds from '@cdo/apps/Sounds';
 import color from '@cdo/apps/util/color';
-
-import {assert, expect} from '../../../util/reconfiguredChai';
+import sinon from 'sinon';
 
 describe('SoundListEntry', () => {
   const sounds = new Sounds();

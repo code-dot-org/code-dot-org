@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-
 import {SingleCheckbox} from '../form/SingleCheckbox';
 import {useDefaultOptions} from '../LabeledFormComponent';
 

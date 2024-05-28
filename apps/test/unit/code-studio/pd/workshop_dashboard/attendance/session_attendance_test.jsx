@@ -1,13 +1,11 @@
+import {expect} from '../../../../../util/reconfiguredChai';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon';
-
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import {SessionAttendance} from '@cdo/apps/code-studio/pd/workshop_dashboard/attendance/session_attendance';
-import Permission from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
+import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import {COURSE_CSF} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshopConstants';
-
-import {expect} from '../../../../../util/reconfiguredChai';
+import Permission from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
 
 const FAKE_WORKSHOP_ID = 11;
 const FAKE_SESSION_ID = 22;

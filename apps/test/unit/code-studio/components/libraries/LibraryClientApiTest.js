@@ -1,8 +1,6 @@
-import sinon from 'sinon';
-
-import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
-
 import {assert} from '../../../../util/reconfiguredChai';
+import sinon from 'sinon';
+import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
 
 describe('LibraryClientApi', () => {
   const channelId = 'abc123';

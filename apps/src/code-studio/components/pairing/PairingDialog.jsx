@@ -1,9 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
-
 import Pairing from './Pairing.jsx';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
 
 /**
  * Pair programming dialog.

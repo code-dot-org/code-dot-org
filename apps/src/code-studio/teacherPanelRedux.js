@@ -1,6 +1,5 @@
 import $ from 'jquery';
 import queryString from 'query-string';
-
 import {getCurrentLevel} from './progressReduxSelectors';
 
 const SET_LEVELS_WITH_PROGRESS = 'progress/SET_LEVELS_WITH_PROGRESS';

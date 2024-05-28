@@ -1,7 +1,6 @@
-import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-
 import {CourseRoles} from '@cdo/apps/templates/currentUserRedux';
+import PropTypes from 'prop-types';
 
 const InstructorsOnly = ({isInstructor, children}) => {
   return isInstructor ? children : null;

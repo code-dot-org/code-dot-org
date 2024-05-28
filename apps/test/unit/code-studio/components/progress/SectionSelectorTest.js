@@ -1,15 +1,13 @@
-import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {assert, expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
-
 import {
   UnconnectedSectionSelector as SectionSelector,
   NO_SELECTED_SECTION_VALUE,
 } from '@cdo/apps/code-studio/components/progress/SectionSelector';
-import * as codeStudioUtils from '@cdo/apps/code-studio/utils';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import * as utils from '@cdo/apps/utils';
-
-import {assert, expect} from '../../../../util/reconfiguredChai';
+import * as codeStudioUtils from '@cdo/apps/code-studio/utils';
 
 const fakeSection = {
   name: 'My Section',

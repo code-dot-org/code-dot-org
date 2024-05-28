@@ -1,23 +1,20 @@
-import PropTypes from 'prop-types';
 import React from 'react';
-import {FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-
+import PropTypes from 'prop-types';
+import color from '@cdo/apps/util/color';
 import {
   PageLabels,
   SectionHeaders,
   TextFields,
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
-import color from '@cdo/apps/util/color';
-
+import {PROGRAM_CSA} from './TeacherApplicationConstants';
+import {FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
 import {FormContext} from '../../form_components_func/FormComponent';
-import {LabeledCheckBoxes} from '../../form_components_func/labeled/LabeledCheckBoxes';
 import {
   LabeledRadioButtons,
   LabeledRadioButtonsWithAdditionalTextFields,
 } from '../../form_components_func/labeled/LabeledRadioButtons';
-import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
-
-import {PROGRAM_CSA} from './TeacherApplicationConstants';
+import {LabeledCheckBoxes} from '../../form_components_func/labeled/LabeledCheckBoxes';
 
 const AdditionalDemographicInformation = props => {
   const {data} = props;

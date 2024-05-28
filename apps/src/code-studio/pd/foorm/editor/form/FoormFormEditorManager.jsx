@@ -1,10 +1,6 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-
-import FoormFormSaveBar from '@cdo/apps/code-studio/pd/foorm/editor/form/FoormFormSaveBar';
-
-import {getLatestVersionMap} from '../../foormHelpers';
+import PropTypes from 'prop-types';
 import FoormEntityEditor from '../components/FoormEntityEditor';
 import FoormEntityLoadButtons from '../components/FoormEntityLoadButtons';
 import {
@@ -15,6 +11,8 @@ import {
   setHasLintError,
   setLastSavedQuestions,
 } from '../foormEditorRedux';
+import FoormFormSaveBar from '@cdo/apps/code-studio/pd/foorm/editor/form/FoormFormSaveBar';
+import {getLatestVersionMap} from '../../foormHelpers';
 
 /*
 Parent component for editing Foorm forms. Will initially show a choice

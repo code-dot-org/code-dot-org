@@ -1,8 +1,7 @@
-import _ from 'lodash';
 import {useMemo} from 'react';
-
-import {useFetch} from '@cdo/apps/util/useFetch';
+import _ from 'lodash';
 import {makeEnum} from '@cdo/apps/utils';
+import {useFetch} from '@cdo/apps/util/useFetch';
 
 export const LockStatus = makeEnum('Locked', 'Editable', 'ReadonlyAnswers');
 

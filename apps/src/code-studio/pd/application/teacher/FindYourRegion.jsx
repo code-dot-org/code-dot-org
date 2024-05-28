@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
 import React, {useEffect, useState} from 'react';
+import PropTypes from 'prop-types';
 /* eslint-disable no-restricted-imports */
 import {
   FormGroup,
@@ -9,28 +9,25 @@ import {
   Row,
   Col,
 } from 'react-bootstrap';
-
 /* eslint-enable no-restricted-imports */
+import {getProgramInfo, styles} from './TeacherApplicationConstants';
 import {
   PageLabels,
   SectionHeaders,
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
-import {isZipCode} from '@cdo/apps/util/formatValidation';
-
-import {useRegionalPartner} from '../../components/useRegionalPartner';
+import {LabeledInput} from '../../form_components_func/labeled/LabeledInput';
+import {LabeledSelect} from '../../form_components_func/labeled/LabeledSelect';
+import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
+import {LabeledRadioButtons} from '../../form_components_func/labeled/LabeledRadioButtons';
 import {
   FormContext,
   getValidationState,
 } from '../../form_components_func/FormComponent';
-import {LabeledInput} from '../../form_components_func/labeled/LabeledInput';
-import {LabeledRadioButtons} from '../../form_components_func/labeled/LabeledRadioButtons';
-import {LabeledSelect} from '../../form_components_func/labeled/LabeledSelect';
-import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
-
-import {getProgramInfo, styles} from './TeacherApplicationConstants';
+import {isZipCode} from '@cdo/apps/util/formatValidation';
+import {useRegionalPartner} from '../../components/useRegionalPartner';
+import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const PD_RESOURCES_URL =
   'https://support.code.org/hc/en-us/articles/115003865532';

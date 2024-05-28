@@ -1,13 +1,10 @@
-import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {Factory} from 'rosie';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import sinon from 'sinon';
-
-import AttendancePanel from '@cdo/apps/code-studio/pd/workshop_dashboard/AttendancePanel';
-
+import {Factory} from 'rosie';
 import {stubWindowDashboard} from '../../../../util/testUtils';
-
 import './workshopFactory';
+import AttendancePanel from '@cdo/apps/code-studio/pd/workshop_dashboard/AttendancePanel';
 
 describe('AttendancePanel', () => {
   stubWindowDashboard({

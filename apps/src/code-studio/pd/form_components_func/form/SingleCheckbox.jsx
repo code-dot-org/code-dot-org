@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React, {useContext} from 'react';
-
 import SingleCheckboxComponent from '../../form_components/SingleCheckbox';
 import {getValidationState, FormContext} from '../FormComponent';
 

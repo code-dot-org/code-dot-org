@@ -1,12 +1,12 @@
 /** @file Test of progress.js. */
 
 import assert from 'assert';
-import queryString from 'query-string';
 import sinon from 'sinon';
+import queryString from 'query-string';
 
-import {initViewAs} from '@cdo/apps/code-studio/progress';
-import {__testonly__} from '@cdo/apps/code-studio/progressReduxSelectors';
 import * as viewAsRedux from '@cdo/apps/code-studio/viewAsRedux';
+import {__testonly__} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {initViewAs} from '@cdo/apps/code-studio/progress';
 
 describe('bestResultLevelId', function () {
   var progressData;

@@ -1,7 +1,11 @@
 import {assert} from 'chai';
-import _ from 'lodash';
 import sinon from 'sinon';
-
+import _ from 'lodash';
+import {TestResults} from '@cdo/apps/constants';
+import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';
+import {ViewType, setViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
+import {getLevelResult} from '@cdo/apps/templates/progress/progressHelpers';
 import reducer, {
   initProgress,
   mergeResults,
@@ -24,11 +28,6 @@ import {
   lessonExtrasUrl,
   __testonly__ as __testonly__selectors,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
-import {ViewType, setViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {TestResults} from '@cdo/apps/constants';
-import {getLevelResult} from '@cdo/apps/templates/progress/progressHelpers';
-import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
-import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';
 
 // This is some sample lesson data taken from a course. I truncated to the first two
 // lessons, and also truncated the second lesson to the first 3 levels

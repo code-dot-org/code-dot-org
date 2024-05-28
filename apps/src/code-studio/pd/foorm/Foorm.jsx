@@ -1,8 +1,7 @@
+import * as Survey from 'survey-react';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-import * as Survey from 'survey-react';
-
 import Spinner from '../components/spinner';
 
 const SPINNER_WAIT_MS = 2000;

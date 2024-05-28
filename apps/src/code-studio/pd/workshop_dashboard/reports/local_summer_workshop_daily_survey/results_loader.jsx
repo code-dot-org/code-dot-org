@@ -1,12 +1,9 @@
-import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
-
-import color from '@cdo/apps/util/color';
-
+import $ from 'jquery';
 import Spinner from '../../../components/spinner';
-
 import Results from './results';
+import color from '@cdo/apps/util/color';
 
 export class ResultsLoader extends React.Component {
   static propTypes = {

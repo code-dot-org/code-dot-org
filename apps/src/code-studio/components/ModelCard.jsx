@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-
-import fontConstants from '@cdo/apps/fontConstants';
 import color from '@cdo/apps/util/color';
+import fontConstants from '@cdo/apps/fontConstants';
 
 class FeatureDetails extends React.Component {
   static propTypes = {

@@ -1,7 +1,6 @@
 import React from 'react';
-
-import ProjectRemix from './ProjectRemix';
 import ProjectShare from './ProjectShare';
+import ProjectRemix from './ProjectRemix';
 
 // Project header for script levels that are backed by a project.
 // Shows Share and Remix buttons,

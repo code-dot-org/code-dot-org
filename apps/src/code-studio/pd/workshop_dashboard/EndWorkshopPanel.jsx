@@ -1,13 +1,10 @@
 import $ from 'jquery';
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
 import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-
-import color from '@cdo/apps/util/color';
-
-import ConfirmationDialog from '../components/confirmation_dialog';
-
 import WorkshopPanel from './WorkshopPanel';
+import ConfirmationDialog from '../components/confirmation_dialog';
+import color from '@cdo/apps/util/color';
 
 const warningStyle = {
   color: color.red,

@@ -1,10 +1,9 @@
-import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-
-import headerVignetteStyles from './HeaderVignette';
 import ProjectUpdatedAt from './ProjectUpdatedAt';
+import headerVignetteStyles from './HeaderVignette';
+import $ from 'jquery';
 
 class ScriptName extends React.Component {
   static propTypes = {

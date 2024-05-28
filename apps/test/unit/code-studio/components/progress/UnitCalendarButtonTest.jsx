@@ -1,11 +1,8 @@
-import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import {expect} from '../../../../util/reconfiguredChai';
 import React from 'react';
-
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import UnitCalendarButton from '@cdo/apps/code-studio/components/progress/UnitCalendarButton';
 import UnitCalendarDialog from '@cdo/apps/code-studio/components/progress/UnitCalendarDialog';
-
-import {expect} from '../../../../util/reconfiguredChai';
-
 import {testLessons} from './unitCalendarTestData';
 
 describe('UnitCalendarButton', () => {

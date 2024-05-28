@@ -1,43 +1,30 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import {files} from '@cdo/apps/clientApi';
-import {setAppLoadStarted, setAppLoaded} from '@cdo/apps/code-studio/appRedux';
-import PlayZone from '@cdo/apps/code-studio/components/playzone';
-import {lockContainedLevelAnswers} from '@cdo/apps/code-studio/levels/codeStudioLevels';
-import {queryParams} from '@cdo/apps/code-studio/utils';
-import * as imageUtils from '@cdo/apps/imageUtils';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import msg from '@cdo/locale';
-
-import getScriptData from '../../util/getScriptData';
 import {getStore} from '../redux';
-
+import {setAppLoadStarted, setAppLoaded} from '@cdo/apps/code-studio/appRedux';
+import {files} from '@cdo/apps/clientApi';
+var renderAbusive = require('./renderAbusive');
 import renderProjectNotFound from './renderProjectNotFound';
 import renderVersionNotFound from './renderVersionNotFound';
-
-var project = require('@cdo/apps/code-studio/initApp/project');
-var timing = require('@cdo/apps/code-studio/initApp/timing');
-
-var clientState = require('../clientState');
-
-var renderAbusive = require('./renderAbusive');
 var userAgentParser = require('./userAgentParser');
-
-// Disabling import order in order to add require statements first
-// This might be safe to remove but needs investigation.
-/* eslint-disable import/order */
+var clientState = require('../clientState');
+import getScriptData from '../../util/getScriptData';
+import PlayZone from '@cdo/apps/code-studio/components/playzone';
+var timing = require('@cdo/apps/code-studio/initApp/timing');
+var project = require('@cdo/apps/code-studio/initApp/project');
 var createCallouts = require('@cdo/apps/code-studio/callouts').default;
 var reporting = require('@cdo/apps/code-studio/reporting');
 var LegacyDialog = require('@cdo/apps/code-studio/LegacyDialog');
 var showVideoDialog = require('@cdo/apps/code-studio/videos').showVideoDialog;
-
+import {lockContainedLevelAnswers} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import queryString from 'query-string';
-
+import * as imageUtils from '@cdo/apps/imageUtils';
 import trackEvent from '../../util/trackEvent';
-/* eslint-enable import/order */
+import msg from '@cdo/locale';
+import {queryParams} from '@cdo/apps/code-studio/utils';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const SHARE_IMAGE_NAME = '_share_image.png';
 

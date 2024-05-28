@@ -1,13 +1,12 @@
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-
-import fontConstants from '@cdo/apps/fontConstants';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
-import Tooltip from '@cdo/apps/templates/Tooltip';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
+import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
+import Tooltip from '@cdo/apps/templates/Tooltip';
+import fontConstants from '@cdo/apps/fontConstants';
 
 export class LibraryListItem extends React.Component {
   static propTypes = {

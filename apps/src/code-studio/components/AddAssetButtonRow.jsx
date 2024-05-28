@@ -1,12 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-
-import {isIE11} from '@cdo/apps/util/browser-detector';
-import i18n from '@cdo/locale';
-
-import Button from '../../templates/Button';
-
 import AssetUploader from './AssetUploader';
+import Button from '../../templates/Button';
+import i18n from '@cdo/locale';
+import {isIE11} from '@cdo/apps/util/browser-detector';
 
 export const assetButtonStyles = {
   button: {

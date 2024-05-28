@@ -1,14 +1,12 @@
+import color from '../../../util/color';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-
 import i18n from '@cdo/locale';
-
-import BaseDialog from '../../../templates/BaseDialog';
-import Button from '../../../templates/Button';
-import DialogFooter from '../../../templates/teacherDashboard/DialogFooter';
-import color from '../../../util/color';
 import {projectUpdatedStatuses as statuses} from '../../projectRedux';
+import BaseDialog from '../../../templates/BaseDialog';
+import DialogFooter from '../../../templates/teacherDashboard/DialogFooter';
+import Button from '../../../templates/Button';
 
 export class UnconnectedRetryProjectSaveDialog extends Component {
   static propTypes = {

@@ -1,14 +1,11 @@
 import React from 'react';
-
 import {
   SquareType,
   Direction,
   WallTypeMask,
   WallTypeShift,
 } from '@cdo/apps/studio/constants';
-
 import tileGuide from '../../../static/code_studio/tile-guide.png';
-
 import CellEditor from './CellEditor';
 
 const options = {

@@ -1,5 +1,4 @@
 import React, {useContext} from 'react';
-
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 // Containers of labeled form components should provide this context

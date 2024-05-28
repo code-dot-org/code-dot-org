@@ -1,8 +1,7 @@
-import {expect} from 'chai';
-import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import ApplicationDashboard from '@cdo/apps/code-studio/pd/application_dashboard/application_dashboard';
+import {expect} from 'chai';
 import {
   UNMATCHED_PARTNER_LABEL,
   ALL_PARTNERS_LABEL,

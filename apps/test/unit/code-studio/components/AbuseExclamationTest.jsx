@@ -1,9 +1,7 @@
-import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-
-import AbuseExclamation from '@cdo/apps/code-studio/components/AbuseExclamation';
-
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import {expect} from '../../../util/reconfiguredChai';
+import AbuseExclamation from '@cdo/apps/code-studio/components/AbuseExclamation';
 
 describe('AbuseExclamation', () => {
   it('renders AbuseExclamation components', () => {

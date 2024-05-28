@@ -1,9 +1,7 @@
-import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import React from 'react';
-
-import SoundPicker from '@cdo/apps/code-studio/components/SoundPicker';
-
 import {assert} from '../../../util/reconfiguredChai';
+import React from 'react';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import SoundPicker from '@cdo/apps/code-studio/components/SoundPicker';
 
 describe('SoundPicker', () => {
   const defaultProps = {

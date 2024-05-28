@@ -1,7 +1,6 @@
 import React from 'react';
-
-import {selfPacedCourseConstants} from './constants';
 import SelfPacedProgressTable from './SelfPacedProgressTable';
+import {selfPacedCourseConstants} from './constants';
 
 export default {
   component: SelfPacedProgressTable,

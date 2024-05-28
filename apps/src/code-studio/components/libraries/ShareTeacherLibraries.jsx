@@ -1,22 +1,20 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-
 import SortedTableSelect from '@cdo/apps/code-studio/components/SortedTableSelect';
+import LibraryIdCopier from './LibraryIdCopier';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import Button from '@cdo/apps/templates/Button';
-import {
-  setPersonalProjects,
-  updateProjectLibrary,
-} from '@cdo/apps/templates/projects/projectsRedux';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
 import {
   sectionsNameAndId,
   asyncLoadSectionData,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import color from '@cdo/apps/util/color';
-import i18n from '@cdo/locale';
-
-import LibraryIdCopier from './LibraryIdCopier';
+import {
+  setPersonalProjects,
+  updateProjectLibrary,
+} from '@cdo/apps/templates/projects/projectsRedux';
 
 export class ShareTeacherLibraries extends React.Component {
   static propTypes = {

@@ -7,9 +7,8 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
-
-import WorkshopTable from './workshop_table';
 import WorkshopTableLoader from './workshop_table_loader';
+import WorkshopTable from './workshop_table';
 
 export default class ServerSortWorkshopTable extends React.Component {
   static propTypes = {

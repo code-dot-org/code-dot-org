@@ -3,7 +3,6 @@
  */
 import PropTypes from 'prop-types';
 import React from 'react';
-
 import {WorkshopPropType} from './enrollmentConstants';
 
 export default class WorkshopDetails extends React.Component {

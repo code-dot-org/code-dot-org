@@ -1,12 +1,10 @@
-import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
-
+import AssetThumbnail from './AssetThumbnail';
+import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import color from '@cdo/apps/util/color';
-import i18n from '@cdo/locale';
-
-import AssetThumbnail from './AssetThumbnail';
+import $ from 'jquery';
 
 /**
  * A single row in the AssetManager, describing one asset.

@@ -1,5 +1,4 @@
 import React from 'react';
-
 import ResourcesDropdown from './ResourcesDropdown';
 
 const migratedSampleResources = [

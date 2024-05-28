@@ -1,18 +1,16 @@
 import $ from 'jquery';
-import _ from 'lodash';
+import trackEvent from '../util/trackEvent';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import videojs from 'video.js';
-
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import i18n from '@cdo/locale';
-
 import FallbackPlayerCaptionDialogLink from '../templates/FallbackPlayerCaptionDialogLink';
-import trackEvent from '../util/trackEvent';
-
-var clientState = require('./clientState');
+import videojs from 'video.js';
 var testImageAccess = require('./url_test');
+var clientState = require('./clientState');
+import i18n from '@cdo/locale';
+import _ from 'lodash';
+
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const TAB_NAV_CLASS = '.ui-tabs-nav';
 const MODAL_CLASS_NAME = 'video-modal';

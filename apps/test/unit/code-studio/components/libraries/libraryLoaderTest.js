@@ -1,11 +1,9 @@
-import sinon from 'sinon';
-
-import annotationList from '@cdo/apps/acemode/annotationList';
-import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
-import loadLibrary from '@cdo/apps/code-studio/components/libraries/libraryLoader';
-import libraryParser from '@cdo/apps/code-studio/components/libraries/libraryParser';
-
 import {expect} from '../../../../util/reconfiguredChai';
+import annotationList from '@cdo/apps/acemode/annotationList';
+import sinon from 'sinon';
+import libraryParser from '@cdo/apps/code-studio/components/libraries/libraryParser';
+import loadLibrary from '@cdo/apps/code-studio/components/libraries/libraryLoader';
+import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 
 describe('libraryLoader.load', () => {

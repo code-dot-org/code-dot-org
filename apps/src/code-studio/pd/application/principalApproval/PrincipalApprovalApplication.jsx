@@ -1,12 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-
 import FormController from '../../form_components_func/FormController';
-
 import PrincipalApprovalComponent from './PrincipalApprovalComponent';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const PrincipalApprovalApplication = props => {
   const getInitialData = () => ({

@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 
 import FormController from '../form_components/FormController';
-
 import PreWorkshopQuestions from './PreWorkshopQuestions';
 
 export default class PreWorkshopSurvey extends FormController {

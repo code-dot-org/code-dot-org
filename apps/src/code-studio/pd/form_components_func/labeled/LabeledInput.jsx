@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-
 import {FieldGroup} from '../form/FieldGroup';
 import {useDefaultOptions} from '../LabeledFormComponent';
 

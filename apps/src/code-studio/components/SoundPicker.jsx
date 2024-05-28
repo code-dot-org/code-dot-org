@@ -1,19 +1,16 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-
-import fontConstants from '@cdo/apps/fontConstants';
-import i18n from '@cdo/locale';
-
+import AssetManager from './AssetManager';
+import color from '../../util/color';
 import {
   SOUND_PREFIX,
   DEFAULT_SOUND_PATH_PREFIX,
 } from '../../assetManagement/assetPrefix';
-import Sounds from '../../Sounds';
-import color from '../../util/color';
-
-import AssetManager from './AssetManager';
-import {RecordingFileType} from './recorders';
 import SoundLibrary from './SoundLibrary';
+import i18n from '@cdo/locale';
+import Sounds from '../../Sounds';
+import {RecordingFileType} from './recorders';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const audioExtension = '.mp3';
 

@@ -1,8 +1,6 @@
 import React from 'react';
-
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import i18n from '@cdo/locale';
-
 import {disabledBubblesSupportArticle} from './disabledBubbles';
 
 /**

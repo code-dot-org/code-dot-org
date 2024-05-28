@@ -1,8 +1,7 @@
-import {action} from '@storybook/addon-actions';
 import PropTypes from 'prop-types';
 import React from 'react';
-
 import FieldGroup from './FieldGroup';
+import {action} from '@storybook/addon-actions';
 
 class TestWrapper extends React.Component {
   constructor(props) {

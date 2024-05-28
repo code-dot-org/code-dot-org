@@ -1,9 +1,7 @@
-import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-
-import AlertExclamation from '@cdo/apps/code-studio/components/AlertExclamation';
-
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import {expect} from '../../../util/reconfiguredChai';
+import AlertExclamation from '@cdo/apps/code-studio/components/AlertExclamation';
 
 describe('AlertExclamation', () => {
   it('renders children in table', () => {

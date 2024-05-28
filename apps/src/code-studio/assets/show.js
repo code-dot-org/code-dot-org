@@ -1,12 +1,11 @@
+import Sounds from '../../Sounds';
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import Sounds from '../../Sounds';
 import loadable from '../../util/loadable';
 const ImagePicker = loadable(() => import('../components/ImagePicker'));
 const SoundPicker = loadable(() => import('../components/SoundPicker'));
-import {RecordingFileType} from '../components/recorders';
 import Dialog from '../LegacyDialog';
+import {RecordingFileType} from '../components/recorders';
 
 module.exports = {
   showAssetManager,

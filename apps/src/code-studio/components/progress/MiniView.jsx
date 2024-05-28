@@ -1,12 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-
-import {hasGroups} from '@cdo/apps/code-studio/progressReduxSelectors';
-import GoogleClassroomAttributionLabel from '@cdo/apps/templates/progress/GoogleClassroomAttributionLabel';
-import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
-
 import MiniViewTopRow from './MiniViewTopRow';
+import {hasGroups} from '@cdo/apps/code-studio/progressReduxSelectors';
+import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
+import GoogleClassroomAttributionLabel from '@cdo/apps/templates/progress/GoogleClassroomAttributionLabel';
 
 /**
  * The course progress dropdown you get when you click the arrow in the header.

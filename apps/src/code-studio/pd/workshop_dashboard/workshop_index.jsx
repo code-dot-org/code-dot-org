@@ -2,12 +2,10 @@
  * Workshop Index. Displays workshop summaries and controls for CRUD actions.
  * Route: /workshops
  */
-import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Button, ButtonToolbar} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
-
+import {Button, ButtonToolbar} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import ServerSortWorkshopTable from './components/server_sort_workshop_table';
 import {
   PermissionPropType,
@@ -17,6 +15,7 @@ import {
   Facilitator,
   ProgramManager,
 } from './permission';
+import $ from 'jquery';
 import SubmissionsDownloadForm from './reports/foorm/submissions_download_form';
 
 const FILTER_API_URL = '/api/v1/pd/workshops/filter';

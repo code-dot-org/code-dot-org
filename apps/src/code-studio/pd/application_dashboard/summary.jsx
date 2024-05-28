@@ -2,21 +2,19 @@
  * Application Dashboard summary view.
  * Route: /summary
  */
-import $ from 'jquery';
-import {mapValues, omit} from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Row, Col} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
-
+import SummaryTable from './summary_table';
+import {Row, Col} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+import {mapValues, omit} from 'lodash';
 import RegionalPartnerDropdown, {
   RegionalPartnerPropType,
 } from '../components/regional_partner_dropdown';
-import Spinner from '../components/spinner';
-
-import AdminNavigationButtons from './admin_navigation_buttons';
 import ApplicantSearch from './applicant_search';
-import SummaryTable from './summary_table';
+import AdminNavigationButtons from './admin_navigation_buttons';
+import Spinner from '../components/spinner';
+import $ from 'jquery';
 
 export const removeIncompleteApplications = data =>
   mapValues(data, data_by_status => omit(data_by_status, ['incomplete']));

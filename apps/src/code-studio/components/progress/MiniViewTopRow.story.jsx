@@ -1,10 +1,8 @@
 import React from 'react';
-import {Provider} from 'react-redux';
-
-import progress from '@cdo/apps/code-studio/progressRedux';
-import {reduxStore} from '@cdo/storybook/decorators';
-
 import MiniViewTopRow from './MiniViewTopRow';
+import progress from '@cdo/apps/code-studio/progressRedux';
+import {Provider} from 'react-redux';
+import {reduxStore} from '@cdo/storybook/decorators';
 
 const initialState = {
   progress: {

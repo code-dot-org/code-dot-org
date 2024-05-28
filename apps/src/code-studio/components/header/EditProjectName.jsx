@@ -1,18 +1,15 @@
 /**
  * Component for editing the name of a project.
  */
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {connect} from 'react-redux';
-
 import i18n from '@cdo/locale';
-
+import {connect} from 'react-redux';
+import NameFailureDialog from '../NameFailureDialog';
 import NameFailureError from '../../NameFailureError';
 import {setNameFailure, unsetNameFailure} from '../../projectRedux';
-import NameFailureDialog from '../NameFailureDialog';
-
 import styles from './project-header.module.scss';
+import classNames from 'classnames';
 
 class UnconnectedEditProjectName extends React.Component {
   static propTypes = {

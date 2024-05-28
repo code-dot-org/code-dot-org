@@ -1,12 +1,10 @@
 import React from 'react';
-
-import {levelType} from '@cdo/apps/templates/progress/progressTypes';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import {navigateToHref} from '@cdo/apps/utils';
-import i18n from '@cdo/locale';
-
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SublevelCard from './SublevelCard';
+import {levelType} from '@cdo/apps/templates/progress/progressTypes';
 
 export default class BubbleChoice extends React.Component {
   static propTypes = {level: levelType};

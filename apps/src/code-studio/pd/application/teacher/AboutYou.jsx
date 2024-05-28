@@ -1,25 +1,23 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {FormGroup, Row, Col} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-
+import UsPhoneNumberInput from '../../form_components/UsPhoneNumberInput';
 import {
   PageLabels,
   SectionHeaders,
   TextFields,
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {isEmail, isZipCode} from '@cdo/apps/util/formatValidation';
-
-import UsPhoneNumberInput from '../../form_components/UsPhoneNumberInput';
-import {FormContext} from '../../form_components_func/FormComponent';
+import {FormGroup, Row, Col} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
+import {LabeledRadioButtons} from '../../form_components_func/labeled/LabeledRadioButtons';
 import {LabeledCheckBoxesWithAdditionalTextFields} from '../../form_components_func/labeled/LabeledCheckBoxes';
 import {
   LabeledInput,
   LabeledLargeInput,
 } from '../../form_components_func/labeled/LabeledInput';
-import {LabeledRadioButtons} from '../../form_components_func/labeled/LabeledRadioButtons';
-import {LabeledSelect} from '../../form_components_func/labeled/LabeledSelect';
 import {LabeledUsPhoneNumberInput} from '../../form_components_func/labeled/LabeledUsPhoneNumberInput';
-import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
+import {LabeledSelect} from '../../form_components_func/labeled/LabeledSelect';
+import {FormContext} from '../../form_components_func/FormComponent';
 
 const AboutYou = props => {
   const {accountEmail, data} = props;

@@ -1,10 +1,6 @@
-import {action} from '@storybook/addon-actions';
-import PropTypes from 'prop-types';
 import React from 'react';
-
-import reactBootstrapStoryDecorator from '../reactBootstrapStoryDecorator';
-
-import {FormContext} from './FormComponent';
+import PropTypes from 'prop-types';
+import {LabelsContext} from './LabeledFormComponent';
 import {
   LabeledCheckBoxes,
   LabeledCheckBoxesWithAdditionalTextFields,
@@ -20,7 +16,9 @@ import {
 import {LabeledSelect} from './labeled/LabeledSelect';
 import {LabeledSingleCheckbox} from './labeled/LabeledSingleCheckbox';
 import {LabeledUsPhoneNumberInput} from './labeled/LabeledUsPhoneNumberInput';
-import {LabelsContext} from './LabeledFormComponent';
+import {FormContext} from './FormComponent';
+import reactBootstrapStoryDecorator from '../reactBootstrapStoryDecorator';
+import {action} from '@storybook/addon-actions';
 
 const OTHER = 'Other (please specify):';
 

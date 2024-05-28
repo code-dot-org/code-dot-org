@@ -5,14 +5,12 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
-import {FormGroup, ControlLabel} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
+import {FormGroup, ControlLabel} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import Select from 'react-select';
-
 import {SelectStyleProps} from '../constants';
-import {WorkshopAdmin} from '../workshop_dashboard/permission';
-
 import {setRegionalPartnerFilter} from './regional_partners_reducers';
+import {WorkshopAdmin} from '../workshop_dashboard/permission';
 
 export const ALL_PARTNERS_LABEL = 'All Regional Partners';
 export const ALL_PARTNERS_VALUE = 'all';

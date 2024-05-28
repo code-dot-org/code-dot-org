@@ -1,16 +1,14 @@
-import {snakeCase} from 'lodash';
-import moment from 'moment';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Row, Col, ControlLabel, FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import i18n from '@cdo/locale';
-
-import FormComponent from '../form_components/FormComponent';
 import FormController from '../form_components/FormController';
+import FormComponent from '../form_components/FormComponent';
 import DatePicker from '../workshop_dashboard/components/date_picker';
+import moment from 'moment';
 import {DATE_FORMAT} from '../workshop_dashboard/workshopConstants';
+import {Row, Col, ControlLabel, FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+import i18n from '@cdo/locale';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {snakeCase} from 'lodash';
 
 export default class InternationalOptIn extends FormController {
   static propTypes = {

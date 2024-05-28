@@ -1,6 +1,5 @@
-import cookies from 'js-cookie';
 import React from 'react';
-
+import cookies from 'js-cookie';
 import SignInCallout from './SignInCallout';
 
 const HideSignInCallout = 'hide_signin_callout';

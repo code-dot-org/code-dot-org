@@ -1,12 +1,10 @@
 import $ from 'jquery';
 import _ from 'lodash';
-
-import {getContainedLevelId} from '@cdo/apps/code-studio/levels/codeStudioLevels';
-import {mergeResults} from '@cdo/apps/code-studio/progressRedux';
 import {TestResults} from '@cdo/apps/constants';
-import {getStore} from '@cdo/apps/redux';
 import {PostMilestoneMode} from '@cdo/generated-scripts/sharedConstants';
-
+import {getContainedLevelId} from '@cdo/apps/code-studio/levels/codeStudioLevels';
+import {getStore} from '@cdo/apps/redux';
+import {mergeResults} from '@cdo/apps/code-studio/progressRedux';
 var clientState = require('./clientState');
 
 var lastAjaxRequest;

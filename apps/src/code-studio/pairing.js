@@ -1,7 +1,6 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-
 import PairingDialog from './components/pairing/PairingDialog.jsx';
 
 export default {

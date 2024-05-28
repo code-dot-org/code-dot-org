@@ -1,5 +1,4 @@
 import {expect} from 'chai';
-
 import PrincipalApprovalComponent, {
   RACE_LIST,
   MANUAL_SCHOOL_FIELDS,

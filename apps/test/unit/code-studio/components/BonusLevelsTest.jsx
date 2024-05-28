@@ -1,11 +1,8 @@
-import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-
-import BonusLevels from '@cdo/apps/code-studio/components/lessonExtras/BonusLevels';
-
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import {assert} from '../../../util/reconfiguredChai';
-
 import {bonusLevels} from './lessonExtrasTestHelpers';
+import BonusLevels from '@cdo/apps/code-studio/components/lessonExtras/BonusLevels';
 
 const DEFAULT_PROPS = {
   bonusLevels: bonusLevels,

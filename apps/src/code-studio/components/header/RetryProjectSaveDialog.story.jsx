@@ -1,9 +1,7 @@
-import {action} from '@storybook/addon-actions';
-import React from 'react';
-
-import {projectUpdatedStatuses as statuses} from '../../projectRedux';
-
 import {UnconnectedRetryProjectSaveDialog as RetryProjectSaveDialog} from './RetryProjectSaveDialog';
+import React from 'react';
+import {projectUpdatedStatuses as statuses} from '../../projectRedux';
+import {action} from '@storybook/addon-actions';
 
 export default {
   component: RetryProjectSaveDialog,

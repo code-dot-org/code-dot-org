@@ -2,9 +2,7 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
-
 import {assets as assetsApi} from '@cdo/apps/clientApi';
-
 import assetListStore from '../assets/assetListStore';
 
 /**

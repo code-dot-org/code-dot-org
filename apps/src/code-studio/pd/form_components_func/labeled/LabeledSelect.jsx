@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-
 import {SelectFieldGroupFromOptions} from '../form/SelectFieldGroup';
 import {useDefaultOptions} from '../LabeledFormComponent';
 

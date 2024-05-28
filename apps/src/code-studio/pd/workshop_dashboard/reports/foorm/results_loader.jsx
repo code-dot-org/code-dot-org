@@ -1,16 +1,13 @@
-import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-import {connect} from 'react-redux';
-
-import color from '@cdo/apps/util/color';
-
+import $ from 'jquery';
 import Spinner from '../../../components/spinner';
-import {PermissionPropType, WorkshopAdmin} from '../../permission';
-
 import Results from './results';
+import color from '@cdo/apps/util/color';
 import SubmissionsDownloadForm from './submissions_download_form';
+import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+import {PermissionPropType, WorkshopAdmin} from '../../permission';
+import {connect} from 'react-redux';
 
 export class ResultsLoader extends React.Component {
   static propTypes = {

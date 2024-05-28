@@ -3,14 +3,12 @@
  */
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
-
+import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {
   WorkshopTypes,
   SubjectNames,
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
-
 import ConfirmationDialog from '../../components/confirmation_dialog';
 import {PermissionPropType} from '../permission';
 import {shouldUseFoormSurvey} from '../workshop_summary_utils';

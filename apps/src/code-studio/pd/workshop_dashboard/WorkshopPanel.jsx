@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
 import {Row, Col, Panel} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
 /**

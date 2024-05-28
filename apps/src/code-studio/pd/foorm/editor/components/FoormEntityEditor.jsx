@@ -1,11 +1,10 @@
-import _ from 'lodash';
-import PropTypes from 'prop-types';
 import React from 'react';
-import {Tabs, Tab} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
-
-import FoormEntityEditorHeader from './FoormEntityEditorHeader';
+import PropTypes from 'prop-types';
+import {Tabs, Tab} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import FoormEntityEditorPreview from './FoormEntityEditorPreview';
+import FoormEntityEditorHeader from './FoormEntityEditorHeader';
+import _ from 'lodash';
 
 const facilitator_names = ['Alice', 'Bob', 'Carly', 'Dave'];
 

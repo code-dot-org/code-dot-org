@@ -1,5 +1,4 @@
 import React from 'react';
-
 import TextResponses from './text_responses';
 
 export default {

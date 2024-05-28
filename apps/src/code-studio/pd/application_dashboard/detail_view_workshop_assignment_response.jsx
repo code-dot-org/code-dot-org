@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-
 import WorkshopAssignmentLoader, {
   SUBJECT_TYPES,
 } from './workshop_assignment_loader';

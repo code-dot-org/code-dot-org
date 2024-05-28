@@ -1,5 +1,4 @@
 import React from 'react';
-
 import PeerReviewSubmissionData from './PeerReviewSubmissionData';
 
 export default {

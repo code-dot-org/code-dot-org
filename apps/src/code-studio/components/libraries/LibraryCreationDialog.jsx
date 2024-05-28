@@ -1,26 +1,23 @@
-import _ from 'lodash';
-import PropTypes from 'prop-types';
 import React from 'react';
-import {connect} from 'react-redux';
-
-import {Heading1, Heading2} from '@cdo/apps/lib/ui/Headings';
-import {getStore} from '@cdo/apps/redux';
-import Button from '@cdo/apps/templates/Button';
+import PropTypes from 'prop-types';
+import _ from 'lodash';
 import Dialog, {Body} from '@cdo/apps/templates/Dialog';
-import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
-import PadAndCenter from '@cdo/apps/templates/teacherDashboard/PadAndCenter';
-import copyToClipboard from '@cdo/apps/util/copyToClipboard';
-import {findProfanity} from '@cdo/apps/utils';
-import i18n from '@cdo/locale';
-
-import Spinner from '../../pd/components/spinner';
+import {connect} from 'react-redux';
 import {hideLibraryCreationDialog} from '../shareDialogRedux';
-
-import LibraryClientApi from './LibraryClientApi';
-import loadLibrary from './libraryLoader';
-import LibraryPublisher from './LibraryPublisher';
+import i18n from '@cdo/locale';
+import PadAndCenter from '@cdo/apps/templates/teacherDashboard/PadAndCenter';
+import {Heading1, Heading2} from '@cdo/apps/lib/ui/Headings';
+import Spinner from '../../pd/components/spinner';
 import PublishSuccessDisplay from './PublishSuccessDisplay';
 import ShareTeacherLibraries from './ShareTeacherLibraries';
+import LibraryPublisher from './LibraryPublisher';
+import loadLibrary from './libraryLoader';
+import LibraryClientApi from './LibraryClientApi';
+import {getStore} from '@cdo/apps/redux';
+import {findProfanity} from '@cdo/apps/utils';
+import Button from '@cdo/apps/templates/Button';
+import copyToClipboard from '@cdo/apps/util/copyToClipboard';
+import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 
 const DEFAULT_COPY_BUTTON_TEXT = i18n.copyId();
 

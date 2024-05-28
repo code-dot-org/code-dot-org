@@ -1,11 +1,10 @@
+import {expect} from '../../util/reconfiguredChai';
 import sinon from 'sinon';
 
 import {
   getResponsiveBreakpoint,
   ResponsiveSize,
 } from '@cdo/apps/code-studio/responsiveRedux';
-
-import {expect} from '../../util/reconfiguredChai';
 
 describe('responsiveRedux', () => {
   it('getResponsiveBreakpoint returns lg', () => {

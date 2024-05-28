@@ -1,8 +1,7 @@
-import {expect} from 'chai';
-import mount from 'enzyme/build/mount';
 import React from 'react';
-
+import {expect} from 'chai';
 import MatrixChoiceResponses from '@cdo/apps/code-studio/pd/workshop_dashboard/components/survey_results/matrix_choice_responses';
+import mount from 'enzyme/build/mount';
 
 describe('Matrix Choice Responses', () => {
   const sampleMatrixAnswers = {

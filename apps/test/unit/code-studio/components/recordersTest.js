@@ -1,8 +1,7 @@
+import {assert} from '../../../util/reconfiguredChai';
 import getRecorder, {
   RecordingFileType,
 } from '@cdo/apps/code-studio/components/recorders';
-
-import {assert} from '../../../util/reconfiguredChai';
 
 describe('recorders', () => {
   for (const fileType of [

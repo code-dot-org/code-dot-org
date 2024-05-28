@@ -1,24 +1,22 @@
-import {assert} from 'chai';
-import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {Provider} from 'react-redux';
-import sinon from 'sinon';
-
-import FoormEntityEditor from '@cdo/apps/code-studio/pd/foorm/editor/components/FoormEntityEditor';
-import FoormFormSaveBar, {
-  UnconnectedFoormFormSaveBar,
-} from '@cdo/apps/code-studio/pd/foorm/editor/form/FoormFormSaveBar';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import {expect} from '../../../../util/reconfiguredChai';
+import {assert} from 'chai';
 import {
   stubRedux,
   restoreRedux,
   getStore,
   registerReducers,
 } from '@cdo/apps/redux';
-
+import {Provider} from 'react-redux';
+import FoormEntityEditor from '@cdo/apps/code-studio/pd/foorm/editor/components/FoormEntityEditor';
+import FoormFormSaveBar, {
+  UnconnectedFoormFormSaveBar,
+} from '@cdo/apps/code-studio/pd/foorm/editor/form/FoormFormSaveBar';
 import foorm, {
   setFormData,
 } from '../../../../../src/code-studio/pd/foorm/editor/foormEditorRedux';
-import {expect} from '../../../../util/reconfiguredChai';
+import sinon from 'sinon';
 import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
 
 global.$ = require('jquery');

@@ -1,11 +1,9 @@
 /** @file Test of searchAssetsTest.js. */
 
 import assert from 'assert';
-
 import {searchAssets} from '@cdo/apps/code-studio/assets/searchAssets';
-import soundLibrary from '@cdo/apps/code-studio/soundLibrary.json';
-
 import testAnimationLibrary from '../p5lab/testAnimationLibrary.json';
+import soundLibrary from '@cdo/apps/code-studio/soundLibrary.json';
 
 describe('search assets from animation library', function () {
   it('searchAssets searches the animation library in a category', function () {

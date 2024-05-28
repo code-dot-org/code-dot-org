@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-
 import EditableProjectName from './EditableProjectName';
 import ProjectImport from './ProjectImport';
 import ProjectRemix from './ProjectRemix';

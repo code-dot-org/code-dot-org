@@ -1,5 +1,4 @@
 import $ from 'jquery';
-
 import 'qtip2';
 var clientState = require('./clientState');
 

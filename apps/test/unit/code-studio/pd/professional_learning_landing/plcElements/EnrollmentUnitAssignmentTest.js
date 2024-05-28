@@ -1,8 +1,7 @@
-import {render, screen} from '@testing-library/react';
-import {expect} from 'chai';
 import React from 'react';
-
+import {render, screen} from '@testing-library/react';
 import EnrollmentUnitAssignment from '@cdo/apps/code-studio/pd/professional_learning_landing/plcElements/EnrollmentUnitAssignment';
+import {expect} from 'chai';
 
 const DEFAULT_PROPS = {
   courseUnitData: {

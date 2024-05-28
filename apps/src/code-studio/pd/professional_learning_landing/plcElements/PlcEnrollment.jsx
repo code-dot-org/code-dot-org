@@ -1,10 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-
 import fontConstants from '@cdo/apps/fontConstants';
-
 import color from '../../../../util/color';
-
 import EnrollmentUnitAssignment from './EnrollmentUnitAssignment';
 
 export default class PlcEnrollment extends React.Component {

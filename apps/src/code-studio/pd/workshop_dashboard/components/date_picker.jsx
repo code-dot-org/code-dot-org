@@ -3,17 +3,14 @@
  * It's basically a wrapper around react-datepicker (with limited props) that displays
  * as a React-Bootstrap select with a calendar icon Addon.
  */
+import React from 'react';
+import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import React from 'react';
-import {InputGroup, FormGroup, FormControl} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import ReactDatePicker from 'react-datepicker';
-import ReactDOM from 'react-dom';
-
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-
 import {DATE_FORMAT} from '../workshopConstants';
-
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {InputGroup, FormGroup, FormControl} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import 'react-datepicker/dist/react-datepicker.css';
 import '@cdo/apps/code-studio/assets/date_picker.scss';
 

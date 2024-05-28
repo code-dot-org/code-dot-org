@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-import Select from 'react-select';
-
 import DCDO from '@cdo/apps/dcdo';
+import Select from 'react-select';
 
 // if locked, the scholarship status can't be updated unless the user is a workshop admin.
 const locked = DCDO.get('scholarship-dropdown-locked', true);

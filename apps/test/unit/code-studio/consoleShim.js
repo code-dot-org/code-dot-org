@@ -2,7 +2,6 @@
  *  on older browsers by filling in no-op functions. */
 
 var assert = require('assert');
-
 var consoleShim = require('@cdo/apps/code-studio/consoleShim');
 
 describe('consoleShim', function () {

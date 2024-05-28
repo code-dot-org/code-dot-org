@@ -1,5 +1,4 @@
 import $ from 'jquery';
-
 var CodeMirror = require('codemirror');
 
 /**

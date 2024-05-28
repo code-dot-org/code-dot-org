@@ -185,6 +185,7 @@ module.exports = {
       // Commit any changes made.
       files: [
         'src/*',
+        'src/code-studio/**',
         'src/dance/**',
         'src/eval/*',
         'src/fish/*',
@@ -207,6 +208,7 @@ module.exports = {
         'test/integration/**',
         'test/*',
         'test/unit/*',
+        'test/unit/code-studio/**',
         'test/unit/dance/**',
         'test/unit/gamelab/**',
         'test/unit/javalab/**',

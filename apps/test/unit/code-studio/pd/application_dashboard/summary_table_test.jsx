@@ -1,11 +1,9 @@
-import {assert} from 'chai';
-import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-
-import {getApplicationStatuses} from '@cdo/apps/code-studio/pd/application_dashboard/constants';
-
-import {SummaryTable} from '../../../../../src/code-studio/pd/application_dashboard/summary_table';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import {assert} from 'chai';
 import {expect} from '../../../../util/reconfiguredChai';
+import {SummaryTable} from '../../../../../src/code-studio/pd/application_dashboard/summary_table';
+import {getApplicationStatuses} from '@cdo/apps/code-studio/pd/application_dashboard/constants';
 
 const getTableContents = wrapper =>
   wrapper.find('td').map(tableContent => tableContent.text());

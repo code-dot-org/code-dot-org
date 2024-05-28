@@ -1,7 +1,5 @@
 import debounce from 'lodash/debounce';
-
 import {getStore} from '../redux';
-
 import {getResponsiveBreakpoint, setResponsiveSize} from './responsiveRedux';
 
 /**

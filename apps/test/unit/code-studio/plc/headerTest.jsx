@@ -1,9 +1,7 @@
-import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-
-import PlcHeader from '@cdo/apps/code-studio/plc/header';
-
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import {expect} from '../../../util/reconfiguredChai';
+import PlcHeader from '@cdo/apps/code-studio/plc/header';
 
 const TEST_UNIT_NAME = 'Test Unit';
 const TEST_COURSE_VIEW_PATH = 'http://example.com/course';

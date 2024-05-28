@@ -1,13 +1,11 @@
-import _ from 'lodash';
-import PropTypes from 'prop-types';
 import React from 'react';
-
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
-import color from '@cdo/apps/util/color';
+import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
-
+import _ from 'lodash';
 import UnitCalendarLessonChunk from './UnitCalendarLessonChunk';
+import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import color from '@cdo/apps/util/color';
 
 export default class UnitCalendar extends React.Component {
   static propTypes = {

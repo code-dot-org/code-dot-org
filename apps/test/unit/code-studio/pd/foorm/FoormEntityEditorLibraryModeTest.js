@@ -1,26 +1,25 @@
-import {assert} from 'chai';
-import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import _ from 'lodash';
 import React from 'react';
-import {Provider} from 'react-redux';
-import sinon from 'sinon';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import {expect} from '../../../../util/reconfiguredChai';
+import {assert} from 'chai';
 
-import FoormEntityEditor from '@cdo/apps/code-studio/pd/foorm/editor/components/FoormEntityEditor';
-import FoormLibrarySaveBar, {
-  UnconnectedFoormLibrarySaveBar,
-} from '@cdo/apps/code-studio/pd/foorm/editor/library/FoormLibrarySaveBar';
 import {
   stubRedux,
   restoreRedux,
   getStore,
   registerReducers,
 } from '@cdo/apps/redux';
-
+import {Provider} from 'react-redux';
+import FoormEntityEditor from '@cdo/apps/code-studio/pd/foorm/editor/components/FoormEntityEditor';
+import FoormLibrarySaveBar, {
+  UnconnectedFoormLibrarySaveBar,
+} from '@cdo/apps/code-studio/pd/foorm/editor/library/FoormLibrarySaveBar';
 import foorm, {
   setLibraryData,
   setLibraryQuestionData,
 } from '../../../../../src/code-studio/pd/foorm/editor/foormEditorRedux';
-import {expect} from '../../../../util/reconfiguredChai';
+import sinon from 'sinon';
+import _ from 'lodash';
 global.$ = require('jquery');
 
 describe('FoormEntityEditor in Library editing mode', () => {

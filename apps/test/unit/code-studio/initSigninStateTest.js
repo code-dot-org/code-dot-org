@@ -1,10 +1,8 @@
 import {assert} from 'chai';
 import cookies from 'js-cookie';
-
 import {getUserSignedInFromCookieAndDom} from '@cdo/apps/code-studio/initSigninState';
-import {environmentSpecificCookieName} from '@cdo/apps/code-studio/utils';
-
 import {allowConsoleErrors} from '../../util/testUtils';
+import {environmentSpecificCookieName} from '@cdo/apps/code-studio/utils';
 
 describe('initSigninStateTest', () => {
   describe('getUserSignedInFromCookieAndDom', () => {
