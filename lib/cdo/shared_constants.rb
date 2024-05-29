@@ -82,10 +82,6 @@ module SharedConstants
   ALWAYS_PUBLISHABLE_PROJECT_TYPES = %w(
     artist
     frozen
-    playlab
-    gumball
-    iceage
-    infinity
     minecraft_adventurer
     minecraft_designer
     minecraft_hero
@@ -98,11 +94,11 @@ module SharedConstants
     sports
     basketball
     artist_k1
-    playlab_k1
     dance
     poetry
     poetry_hoc
     thebadguys
+    music
   ).freeze
 
   # For privacy reasons, App Lab and Game Lab can only be shared if certain conditions are met. These project types can be shared if: the user is >= 13 years old and their teacher has NOT disabled sharing OR the user is < 13 and their teacher has enabled sharing.
