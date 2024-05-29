@@ -27,7 +27,6 @@ class ProjectsListTest < ActionController::TestCase
       updatedAt: '2017-01-01T00:00:00.000-08:00',
       hidden: true
     }.to_json
-
     @hidden_project = {id: 33, value: hidden_project_value}
 
     # lab2 projects rely on the projectType field to determine type.
