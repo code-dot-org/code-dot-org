@@ -24,7 +24,6 @@ const callbacks = {};
 
 pyodideWorker.onmessage = event => {
   const {type, id, message} = event.data;
-  console.log({event});
   if (type === 'sysout' || type === 'syserr') {
     if (message.startsWith(MATPLOTLIB_IMG_TAG)) {
       // This is a matplotlib image, so we need to append it to the output

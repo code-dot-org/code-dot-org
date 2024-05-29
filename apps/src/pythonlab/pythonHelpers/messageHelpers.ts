@@ -41,19 +41,35 @@ export function parseErrorMessage(errorMessage: string) {
   const mainLineNumber = parseInt(
     errorLines[mainErrorLine].match(/line (\d+)/)![1]
   );
-  let parsedError = `main.py, line ${getMainErrorLine(mainLineNumber)}`;
+  const correctedMainErrorLine = getMainErrorLine(mainLineNumber);
+  let parsedError = `main.py, line ${correctedMainErrorLine}`;
   let currentLine = mainErrorLine + 1;
   const lineRegex = /File "\/home\/pyodide\/([^"]+)", line (\d+).*/;
+  let hasMultiFileStackTrace = false;
+  const mainErrorLineRegex = /line (\d+)/;
   while (currentLine < errorLines.length) {
     if (lineRegex.test(errorLines[currentLine])) {
       const [, file, line] = errorLines[currentLine].match(lineRegex)!;
       parsedError += `\n${file}, line ${line}`;
+      hasMultiFileStackTrace = true;
     } else {
-      parsedError += `\n${errorLines[currentLine]}`;
+      if (
+        !hasMultiFileStackTrace &&
+        mainErrorLineRegex.test(errorLines[currentLine])
+      ) {
+        // If the error message refers to a line number in main.py, we adjust it.
+        const line = errorLines[currentLine].match(mainErrorLineRegex)![1];
+        const correctedLine = getMainErrorLine(parseInt(line));
+        parsedError += `\n${errorLines[currentLine].replace(
+          `line ${line}`,
+          `line ${correctedLine}`
+        )}`;
+      } else {
+        parsedError += `\n${errorLines[currentLine]}`;
+      }
     }
     currentLine++;
   }
-  console.log({parsedError});
   return parsedError;
 }
 
