@@ -57,6 +57,39 @@ function StudentColumn({
     </div>
   );
 
+  const getUnexpandedRow = (student, ind) => (
+    <button
+      className={classNames(styles.gridBoxStudentExpandable, styles.gridBox)}
+      key={ind}
+      onClick={() => expandMetadataForStudents([student.id])}
+      type="button"
+      aria-expanded={false}
+    >
+      <FontAwesome
+        icon="caret-right"
+        title="caret"
+        className={styles.gridBoxStudentExpandableCaret}
+      />
+      {getFullName(student)}
+    </button>
+  );
+
+  const getExpandedRow = (student, ind) => (
+    <button
+      className={classNames(styles.gridBoxStudentExpandable, styles.gridBox)}
+      key={ind}
+      onClick={() => collapseMetadataForStudents([student.id])}
+      type="button"
+      aria-expanded={true}
+    >
+      <FontAwesome
+        icon="caret-down"
+        className={styles.gridBoxStudentExpandableCaret}
+      />
+      {getFullName(student)}
+    </button>
+  );
+
   const studentColumnBox = (student, ind) => {
     if (isSkeleton) {
       return skeletonCell(ind);
@@ -67,41 +100,10 @@ function StudentColumn({
     }
 
     if (expandedMetadataStudentIds.includes(student.id)) {
-      return (
-        <button
-          className={classNames(
-            styles.gridBoxStudentExpandable,
-            styles.gridBox
-          )}
-          key={ind}
-          onClick={() => collapseMetadataForStudents([student.id])}
-          type="button"
-        >
-          <FontAwesome
-            icon="caret-down"
-            title="caret"
-            className={styles.gridBoxStudentExpandableCaret}
-          />
-          {getFullName(student)}
-        </button>
-      );
+      return getExpandedRow(student, ind);
     }
 
-    return (
-      <button
-        className={classNames(styles.gridBoxStudentExpandable, styles.gridBox)}
-        key={ind}
-        onClick={() => expandMetadataForStudents([student.id])}
-        type="button"
-      >
-        <FontAwesome
-          icon="caret-right"
-          title="caret"
-          className={styles.gridBoxStudentExpandableCaret}
-        />
-        {getFullName(student)}
-      </button>
-    );
+    return getUnexpandedRow(student, ind);
   };
 
   return (
