@@ -34,8 +34,7 @@ describe('Design System - TextField', () => {
       spyOnChange(value);
     };
 
-    // Initial rendered
-    const {rerender} = render(
+    const TextFieldToRender = () => (
       <TextField
         name="test-textField"
         label="TextField label"
@@ -43,6 +42,9 @@ describe('Design System - TextField', () => {
         onChange={onChange}
       />
     );
+
+    // Initial rendered
+    const {rerender} = render(<TextFieldToRender />);
 
     let textField = screen.getByDisplayValue(`${value}`);
     expect(textField).to.exist;
@@ -54,14 +56,7 @@ describe('Design System - TextField', () => {
     await user.keyboard('1');
     //
     // Re-render after user's first click
-    rerender(
-      <TextField
-        name="test-textField"
-        label="TextField label"
-        value={value}
-        onChange={onChange}
-      />
-    );
+    rerender(<TextFieldToRender />);
 
     textField = screen.getByDisplayValue(value);
 
@@ -72,14 +67,7 @@ describe('Design System - TextField', () => {
     await user.keyboard('2');
 
     // Re-render after user's second click
-    rerender(
-      <TextField
-        name="test-textField"
-        label="TextField label"
-        value={value}
-        onChange={onChange}
-      />
-    );
+    rerender(<TextFieldToRender />);
 
     textField = screen.getByDisplayValue(value);
 
@@ -89,73 +77,119 @@ describe('Design System - TextField', () => {
     expect(textField.disabled).to.be.false;
   });
 
-  // it("TextField - renders disabled checkbox, doesn't change on click", async () => {
-  //   const user = userEvent.setup();
-  //   const spyOnChange = sinon.spy();
-  //
-  //   let checked = false;
-  //   const onChange = () => {
-  //     checked = !checked;
-  //     spyOnChange(checked);
-  //   };
-  //
-  //   // Initial render
-  //   const {rerender} = render(
-  //     <TextField
-  //       name="test-checkbox"
-  //       value="test-checkbox"
-  //       label="TextField label"
-  //       checked={checked}
-  //       onChange={onChange}
-  //       disabled={true}
-  //     />
-  //   );
-  //
-  //   let checkbox = screen.getByDisplayValue('test-checkbox');
-  //   expect(checkbox).to.exist;
-  //
-  //   expect(checkbox.checked).to.be.false;
-  //   expect(checkbox.disabled).to.be.true;
-  //   expect(checkbox.indeterminate).to.be.false;
-  //
-  //   await user.click(checkbox);
-  //
-  //   // Re-render after user's first click
-  //   rerender(
-  //     <TextField
-  //       name="test-checkbox"
-  //       value="test-checkbox"
-  //       label="TextField label"
-  //       checked={checked}
-  //       onChange={onChange}
-  //       disabled={true}
-  //     />
-  //   );
-  //
-  //   checkbox = screen.getByDisplayValue('test-checkbox');
-  //
-  //   expect(spyOnChange).to.not.have.been.called;
-  //   expect(checkbox.checked).to.be.false;
-  //   expect(checkbox.disabled).to.be.true;
-  //   expect(checkbox.indeterminate).to.be.false;
-  //
-  //   await user.click(checkbox);
-  //
-  //   // Re-render after user's second click
-  //   rerender(
-  //     <TextField
-  //       name="test-checkbox"
-  //       value="test-checkbox"
-  //       label="TextField label"
-  //       checked={checked}
-  //       onChange={onChange}
-  //       disabled={true}
-  //     />
-  //   );
-  //
-  //   expect(spyOnChange).to.not.have.been.called;
-  //   expect(checkbox.checked).to.be.false;
-  //   expect(checkbox.disabled).to.be.true;
-  //   expect(checkbox.indeterminate).to.be.false;
-  // });
+  it("TextField - renders disabled TextField, doesn't change value via keyboard input", async () => {
+    const user = userEvent.setup();
+    const spyOnChange = sinon.spy();
+
+    const initialValue = 'test-textfield';
+    let value = initialValue;
+
+    const onChange = e => {
+      value = e.target.value;
+      spyOnChange(value);
+    };
+
+    const TextFieldToRender = () => (
+      <TextField
+        name="test-textField"
+        label="TextField label"
+        value={value}
+        onChange={onChange}
+        disabled={true}
+      />
+    );
+
+    // Initial rendered
+    const {rerender} = render(<TextFieldToRender />);
+
+    let textField = screen.getByDisplayValue(`${initialValue}`);
+    expect(textField).to.exist;
+
+    expect(textField.value).to.equal(initialValue);
+    expect(textField.disabled).to.be.true;
+    expect(textField.readOnly).to.be.false;
+
+    await user.click(textField);
+    await user.keyboard('1');
+    //
+    // Re-render after user's first click
+    rerender(<TextFieldToRender />);
+
+    textField = screen.getByDisplayValue(`${initialValue}`);
+
+    expect(textField.value).to.equal(initialValue);
+    expect(textField.disabled).to.be.true;
+    expect(textField.readOnly).to.be.false;
+
+    await user.click(textField);
+    await user.keyboard('2');
+
+    // Re-render after user's second click
+    rerender(<TextFieldToRender />);
+
+    textField = screen.getByDisplayValue(`${initialValue}`);
+
+    expect(spyOnChange).to.have.not.been.called;
+    expect(textField.value).to.equal(initialValue);
+    expect(textField.disabled).to.be.true;
+    expect(textField.readOnly).to.be.false;
+  });
+
+  it("TextField - renders readOnly TextField, doesn't change value via keyboard input", async () => {
+    const user = userEvent.setup();
+    const spyOnChange = sinon.spy();
+
+    const initialValue = 'test-textfield';
+    let value = initialValue;
+
+    const onChange = e => {
+      value = e.target.value;
+      spyOnChange(value);
+    };
+
+    const TextFieldToRender = () => (
+      <TextField
+        name="test-textField"
+        label="TextField label"
+        value={value}
+        onChange={onChange}
+        readonly={true}
+      />
+    );
+
+    // Initial rendered
+    const {rerender} = render(<TextFieldToRender />);
+
+    let textField = screen.getByDisplayValue(`${initialValue}`);
+    expect(textField).to.exist;
+
+    expect(textField.value).to.equal(initialValue);
+    expect(textField.disabled).to.be.false;
+    expect(textField.readOnly).to.be.true;
+
+    await user.click(textField);
+    await user.keyboard('1');
+    //
+    // Re-render after user's first click
+    rerender(<TextFieldToRender />);
+
+    textField = screen.getByDisplayValue(`${initialValue}`);
+
+    expect(textField.value).to.equal(initialValue);
+    expect(textField.disabled).to.be.false;
+    expect(textField.readOnly).to.be.true;
+
+    await user.click(textField);
+    await user.keyboard('2');
+
+    // Re-render after user's second click
+    rerender(<TextFieldToRender />);
+
+    textField = screen.getByDisplayValue(`${initialValue}`);
+
+    expect(spyOnChange).to.have.not.been.called;
+    expect(textField.value).to.equal(initialValue);
+    expect(textField.disabled).to.be.false;
+    expect(textField.readOnly).to.be.true;
+  });
 });
