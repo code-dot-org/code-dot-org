@@ -27,6 +27,8 @@ export const useSource = (defaultSources: ProjectSources) => {
 
   const setSource = useMemo(
     () => (newSource: MultiFileSource) => {
+      console.log('got new source');
+      console.log({newSource});
       dispatch(setAndSaveProjectSource({source: newSource}));
     },
     [dispatch]
@@ -47,6 +49,8 @@ export const useSource = (defaultSources: ProjectSources) => {
   useEffect(() => {
     // We reset the project when the channelId changes, as this means we are on a new level.
     if (initialSources) {
+      console.log('updates initial source');
+      console.log({initialSources});
       dispatch(setAndSaveProjectSource(initialSources));
     }
   }, [channelId, initialSources, dispatch]);
