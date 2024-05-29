@@ -1382,6 +1382,7 @@ sk-SK:
   homepage_slot_text_link_k5: Kurzy pre prvý stupeň
   homepage_slot_text_link_local: Nájdi triedu v tvojej lokalite
   homepage_slot_text_link_middle: 2. stupeň ZŠ
+  homepage_slot_text_link_middle_and_high: 2. stupeň ZŠ a SŠ
   homepage_slot_text_link_othercourses: Iné online kurzy
   homepage_slot_text_link_pd: Profesionálny rozvoj
   homepage_slot_text_link_shop: Tričká, čiapky a ďalšie
@@ -2195,6 +2196,7 @@ sk-SK:
   user_header_label: Ahoj %{username}
   user_header_logout: Odhlásiť sa
   user_header_minecraft: Minecraft
+  user_header_music: Music Lab
   user_header_my_projects: Moje projekty
   user_header_new_project: Nový projekt
   user_header_playlab: Play Lab

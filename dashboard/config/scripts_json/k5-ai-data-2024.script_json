@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "k5-ai-data",
-    "serialized_at": "2024-05-23 22:49:15 UTC",
+    "serialized_at": "2024-05-24 20:07:13 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1086,7 +1086,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "sorting_items_emoji_question"
+          "k5_ai_matching_background_emoji"
         ],
         "lesson.key": "How AI Makes Decisions",
         "lesson_group.key": "",
@@ -1094,7 +1094,7 @@
         "activity_section.key": "af4a6c35-0bbb-443e-b9ca-1271c0f3e1d0"
       },
       "level_keys": [
-        "sorting_items_emoji_question"
+        "k5_ai_matching_background_emoji"
       ]
     },
     {
@@ -1406,9 +1406,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "sorting_items_emoji_question",
+        "level.key": "k5_ai_matching_background_emoji",
         "script_level.level_keys": [
-          "sorting_items_emoji_question"
+          "k5_ai_matching_background_emoji"
         ],
         "lesson.key": "How AI Makes Decisions",
         "lesson_group.key": "",
@@ -1614,7 +1614,7 @@
     {
       "key": "artificial_intelligence_a_i_",
       "word": "Artificial Intelligence (A.I.) ",
-      "definition": "A way to make computers and machines learn and make decisions by themselves",
+      "definition": "A way for computers to make decisions by themselves",
       "properties": {
       },
       "seeding_key": {
@@ -1624,7 +1624,7 @@
     {
       "key": "bias",
       "word": "Bias",
-      "definition": "When a decision favors some things and not others",
+      "definition": "Favoring some things but not others, which can lead to an unfair decision",
       "properties": {
       },
       "seeding_key": {
@@ -1654,7 +1654,7 @@
     {
       "key": "feature_vector",
       "word": "Feature Vector",
-      "definition": "Assigning a number value to certain features of an object so that a machine can find patterns in the data",
+      "definition": "Assigning a number value to certain features of an object so that a machine can find patterns between multiple objects in the data ",
       "properties": {
       },
       "seeding_key": {

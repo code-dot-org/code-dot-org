@@ -34,6 +34,7 @@ class Policies::ChildAccount
   # start_date: the date on which this policy first went into effect.
   STATE_POLICY = {
     'CO' => {
+      name: 'CPA', # Colorado Privacy Act
       max_age: 12,
       lockout_date: DateTime.parse(DCDO.get('cpa_schedule', {Cpa::ALL_USER_LOCKOUT => Cpa::ALL_USER_LOCKOUT_DATE.iso8601})[Cpa::ALL_USER_LOCKOUT]),
       start_date: DateTime.parse(DCDO.get('cpa_schedule', {Cpa::NEW_USER_LOCKOUT => Cpa::NEW_USER_LOCKOUT_DATE.iso8601})[Cpa::NEW_USER_LOCKOUT])
@@ -114,6 +115,14 @@ class Policies::ChildAccount
     end
   end
 
+  def self.state_policy(user)
+    # If the country_code is not set, then us_state value was inherited
+    # from the teacher and we don't trust it.
+    return unless user.country_code
+    return unless user.us_state
+    STATE_POLICY[user.us_state]
+  end
+
   # Check if parent permission is required for this account according to our
   # Child Account Policy.
   def self.parent_permission_required?(user)
@@ -130,13 +139,5 @@ class Policies::ChildAccount
     return false if student_birthday.since(min_required_age) <= lockout_date
 
     personal_account?(user)
-  end
-
-  private_class_method def self.state_policy(user)
-    # If the country_code is not set, then us_state value was inherited
-    # from the teacher and we don't trust it.
-    return unless user.country_code
-    return unless user.us_state
-    STATE_POLICY[user.us_state]
   end
 end

@@ -1,12 +1,10 @@
 name 'k5_ai_sorting_food_question'
-question 'AI Snack Picker is choosing a snack that is **sweet** and that students **like to eat**. The training data was collected from a few different students. 
-<br>
-Which snack is AI most likely to choose?'
+question 'AI Snack Picker was given training data from all the students in the class. The class wants a snack that is **sweet** and that students **like to eat**. AI snack picker chose **apples**. Which other snack is AI likely to choose?'
 
-wrong 'Coffee'
+wrong 'Hamburger'
 wrong 'Broccoli'
-right 'Ice Cream'
-wrong 'Strawberries'
+right 'Strawberries'
+wrong 'Corn'
 
 allow_multiple_attempts true
 markdown <<MARKDOWN
