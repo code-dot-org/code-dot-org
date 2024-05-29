@@ -19,13 +19,12 @@ import wrappedSortable from '../tables/wrapped_sortable';
 
 import PersonalProjectsNameCell from './PersonalProjectsNameCell';
 import PersonalProjectsTableActionsCell from './PersonalProjectsTableActionsCell';
-import {personalProjectDataPropType} from './projectConstants';
+import {
+  personalProjectDataPropType,
+  PROJECT_DEFAULT_IMAGE,
+  PROJECT_DEFAULT_IMAGE_OVERRIDE,
+} from './projectConstants';
 import {PROJECT_TYPE_MAP} from './projectTypeMap';
-
-const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
-const PROJECT_DEFAULT_IMAGE_OVERRIDE = {
-  music: '/shared/images/fill-70x70/courses/logo_music.png',
-};
 
 const THUMBNAIL_SIZE = 65;
 
