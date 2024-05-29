@@ -18,8 +18,8 @@ module ProjectsList
     k1: ['artist_k1'],
     dance: ['dance'],
     poetry: ['poetry', 'poetry_hoc'],
-    library: ['applab', 'gamelab']
-    music: ['music'],
+    library: ['applab', 'gamelab'],
+    music: ['music']
   }.freeze
 
   # Sharing of advanced project types to the public gallery is restricted for
