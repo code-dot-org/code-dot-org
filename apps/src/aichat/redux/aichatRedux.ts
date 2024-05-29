@@ -389,9 +389,10 @@ const aichatSlice = createSlice({
       // when requesting model responses within a chat session.
       // If we want to clear all history
       // and start a new session, see clearChatMessages.
+      const role = updatedMessages[messageToRemovePosition].role;
       if (
         messageToRemovePosition < 0 ||
-        updatedMessages[messageToRemovePosition].role !== Role.MODEL_UPDATE
+        (role !== Role.MODEL_UPDATE && role !== Role.MODEL_RESET)
       ) {
         return;
       }
