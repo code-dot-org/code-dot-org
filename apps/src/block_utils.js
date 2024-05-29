@@ -256,13 +256,7 @@ exports.forceInsertTopBlock = function (input, blockType) {
 
   if (firstBlock !== null) {
     // when run -> next -> firstBlock
-    var next;
-    if (/^functional/.test(blockType)) {
-      next = doc.createElement('functional_input');
-      next.setAttribute('name', 'ARG1');
-    } else {
-      next = doc.createElement('next');
-    }
+    var next = doc.createElement('next');
     next.appendChild(firstBlock);
     topBlock.appendChild(next);
   }
