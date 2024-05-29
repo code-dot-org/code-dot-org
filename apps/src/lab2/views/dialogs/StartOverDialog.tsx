@@ -4,6 +4,7 @@ import {BaseDialogProps} from './DialogManager';
 import moduleStyles from './confirm-dialog.module.scss';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {TEXT_BASED_LABS} from '@cdo/apps/lab2/types';
+import {AppName} from '@cdo/apps/lab2/types';
 const commonI18n = require('@cdo/locale');
 
 /**
@@ -16,16 +17,20 @@ const StartOverDialog: React.FunctionComponent<BaseDialogProps> = ({
   const currentAppName = useAppSelector(
     state => state.lab.levelProperties?.appName
   );
-  const isTextWorkspace =
-    currentAppName && TEXT_BASED_LABS.includes(currentAppName);
-  let dialogMessage = commonI18n.startOverWorkspace();
-  if (isTextWorkspace) {
-    if (currentAppName === 'aichat') {
-      dialogMessage = commonI18n.startOverAichatModelCustomizations();
-    } else {
-      dialogMessage = commonI18n.startOverWorkspaceText();
-    }
-  }
+
+  const generaDialogMessage =
+    currentAppName && TEXT_BASED_LABS.includes(currentAppName)
+      ? commonI18n.startOverWorkspaceText()
+      : commonI18n.startOverWorkspace();
+
+  // App-specific messages for starting over.
+  const LAB_SPECIFIC_MESSAGES: Partial<Record<AppName, string>> = {
+    aichat: commonI18n.startOverAichatModelCustomizations(),
+  };
+  const appSpecificMessage =
+    currentAppName && LAB_SPECIFIC_MESSAGES[currentAppName];
+  const dialogMessage = appSpecificMessage || generaDialogMessage;
+
   return (
     <div className={moduleStyles.confirmDialog}>
       <Typography semanticTag="h1" visualAppearance="heading-lg">
