@@ -1,0 +1,52 @@
+---
+title: LMS
+theme: responsive_full_width
+---
+
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
+
+%section.top
+  .wrapper
+    .text-wrapper.col-50
+      %h1=hoc_s("lms_page.heading")
+      %p.body-three
+        =hoc_s("lms_page.top_desc")
+      %a.link-button{href: "#"}
+        =hoc_s(:call_to_action_get_started)
+    %figure.col-45{style: "float: right; margin-top: 1.25rem;"}
+      %img.rounded-corners{src: "/images/lms/LMSHeroAnimation.gif", alt: "", style: "position: relative; width: 100%;"}
+    .clear
+
+%section.lms-systems.bg-neutral-light
+  .wrapper
+    %h2
+      =hoc_s("lms_page.top_module.heading")
+    %p.body-three
+      =hoc_s("lms_page.top_module.desc")
+    = view :section_divider_line
+    %h3
+      =hoc_s("lms_page.integrations.heading")
+    %p.body-three
+      =hoc_s("lms_page.integrations.desc")
+
+%section.bg-pattern-dark
+  .wrapper.centered
+    %h2.white
+      =hoc_s("lms_page.teacher_quote.text_01")
+    %p.white
+      =hoc_s("lms_page.teacher_quote.role_01")
+
+%section.get-started.bg-neutral-light
+  .wrapper
+    %h2.centered
+      =hoc_s("lms_page.get_started.heading")
+
+%section
+  .wrapper
+    %h2.centered
+      =hoc_s("lms_page.additional_resources.heading")
+    %p.centered
+      =hoc_s("lms_page.additional_resources.desc")
+    = view :"lms/lms_additional_resources"
+
+= view :analytics_event_log_helper, event_name: AnalyticsConstants::LMS_PAGE_VISITED_EVENT
