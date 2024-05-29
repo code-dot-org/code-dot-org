@@ -2,6 +2,9 @@ import React, {useCallback, useMemo} from 'react';
 import TimelineElement from './TimelineElement';
 import {useMusicSelector} from './types';
 import {FunctionEvents} from '../player/interfaces/FunctionEvents';
+import AppConfig from '../appConfig';
+
+const useTimelineLayout2 = AppConfig.getValue('timeline-layout-2') === 'true';
 
 /**
  * Compute the extents for the given function, given the list of unique sounds and all functions.
@@ -116,28 +119,32 @@ interface TimelineSimple2EventsProps {
 const TimelineSimple2Events: React.FunctionComponent<
   TimelineSimple2EventsProps
 > = ({paddingOffset, barWidth, eventVerticalSpace, getEventHeight}) => {
-  const soundEventsOrig = [
-    ...useMusicSelector(state => state.music.playbackEvents),
-  ];
-  const soundEvents = soundEventsOrig.sort((a, b) => {
-    if (a.triggered && b.triggered) {
-      const name1 = a.functionContext?.name || '';
-      const name2 = b.functionContext?.name || '';
-      if (name1 < name2) {
-        return -1;
-      } else if (name1 > name2) {
-        return 1;
-      } else {
-        return 0;
-      }
-    } else if (a.triggered && !b.triggered) {
-      return 1;
-    } else if (!a.triggered && b.triggered) {
-      return -1;
-    } else {
-      return a.when - b.when;
-    }
-  });
+  const soundEventsOriginal = useMusicSelector(
+    state => state.music.playbackEvents
+  );
+
+  const soundEvents = useTimelineLayout2
+    ? [...soundEventsOriginal].sort((a, b) => {
+        if (a.triggered && b.triggered) {
+          const name1 = a.functionContext?.name || '';
+          const name2 = b.functionContext?.name || '';
+          if (name1 < name2) {
+            return -1;
+          } else if (name1 > name2) {
+            return 1;
+          } else {
+            return 0;
+          }
+        } else if (a.triggered && !b.triggered) {
+          return 1;
+        } else if (!a.triggered && b.triggered) {
+          return -1;
+        } else {
+          return a.when - b.when;
+        }
+      })
+    : soundEventsOriginal;
+
   const orderedFunctions = useMusicSelector(
     state => state.music.orderedFunctions
   );
@@ -156,7 +163,6 @@ const TimelineSimple2Events: React.FunctionComponent<
         uniqueSounds.push(id);
       }
     }
-    console.log(uniqueSounds);
     return uniqueSounds;
   }, [soundEvents]);
 
@@ -166,7 +172,7 @@ const TimelineSimple2Events: React.FunctionComponent<
   // Each timeline extent has left/right position in measures, and
   // top/bottom position in rows.
   const uniqueFunctionExtentsArray = useMemo(() => {
-    const funcs = orderedFunctions
+    return orderedFunctions
       .map(orderedFunction =>
         getFunctionExtents(
           orderedFunction,
@@ -175,7 +181,6 @@ const TimelineSimple2Events: React.FunctionComponent<
         )
       )
       .filter(orderedFunction => orderedFunction);
-    return funcs;
   }, [orderedFunctions, currentUniqueSounds]);
 
   const eventHeight = useMemo(
