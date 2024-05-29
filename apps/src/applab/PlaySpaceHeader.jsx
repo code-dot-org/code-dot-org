@@ -40,7 +40,8 @@ class PlaySpaceHeader extends React.Component {
   // TODO: post-firebase-cleanup, remove this method, #56994
   squareCornersIfUsingDatablockStorage() {
     const STYLE_TO_FLAG_DATABLOCK_STORAGE = {
-      borderRadius: 0,
+      borderTopRightRadius: 0,
+      borderBottomRightRadius: 0,
     };
     return isDatablockStorage() ? STYLE_TO_FLAG_DATABLOCK_STORAGE : {};
   }
