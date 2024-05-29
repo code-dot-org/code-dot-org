@@ -1685,9 +1685,6 @@
   yw_page_top_heading: "Young Women in Computer Science"
   yw_page_top_desc: "Become a CS Ambassador and be a part of closing the gender gap in computer science."
 
-  lms_skinny_banner_heading: "Discover our new LMS integrations!"
-  lms_skinny_banner_desc: "We've added new LMS integrations for %{canvas} and %{schoology}! Learn how to get started!"
-
   lms_page:
     heading: "Integrate Code.org with your LMS platform"
     top_desc: "Connect existing LMS classrooms in your school to Code.org with one-click roster syncing, single sign-on (SSO), and integrated access curriculum."
@@ -1722,8 +1719,11 @@
       district_program_heading: "District Program"
       district_program_desc: "Join the Code.org District Program — at no cost! — to bring computer science to their district, empower their educators, and teach students the skills of the future."
       pl_desc: "Empower today's students to become tomorrow's heroes with tailored professional learning. Explore in-person workshops and self-paced online modules."
+    skinny_banner:
+      heading: "Discover our new LMS integrations!"
+      desc: "We've added new LMS integrations for %{canvas} and %{schoology}! Learn how to get started!"
   
-  lms_landing_page:
+  lms_partner_page:
     heading: "Integrate Code.org with %{website}"
     desc: "Sync your rosters and sign in to code.org with one-click. Plus, Code.org content is now available directly on %{website}."
     rosters:
