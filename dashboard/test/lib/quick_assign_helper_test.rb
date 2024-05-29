@@ -1,6 +1,11 @@
 require 'test_helper'
 
 class QuickAssignHelperTest < ActionController::TestCase
+  setup do
+    # remove any test fixtures
+    CourseOffering.destroy_all
+  end
+
   test 'returns course offerings by grade level' do
     elementary_course_version = create :course_version
     elementary_course_version.content_root.update!(published_state: 'stable')
