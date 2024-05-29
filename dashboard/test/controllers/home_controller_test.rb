@@ -409,6 +409,16 @@ class HomeControllerTest < ActionController::TestCase
     assert_select '#student-information-modal', false
   end
 
+  test 'clever student under 13 and in US with no us_state does not get student information prompt' do
+    student = create :student, :clever_sso_provider
+    student.update_attribute(:age, 11)
+    request.env['HTTP_CLOUDFRONT_VIEWER_COUNTRY'] = 'US'
+    sign_in student
+    Policies::ChildAccount.stubs(:show_cap_state_modal?).with(student).returns(true)
+    get :home
+    assert_select '#student-information-modal', false
+  end
+
   test 'anonymous does not get student information prompt' do
     get :index
 

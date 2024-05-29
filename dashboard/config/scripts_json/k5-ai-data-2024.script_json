@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "k5-ai-data",
-    "serialized_at": "2024-05-22 22:51:35 UTC",
+    "serialized_at": "2024-05-29 18:16:51 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -35,13 +35,13 @@
   "lessons": [
     {
       "key": "Sorting Data",
-      "name": "Sorting Data",
+      "name": "Making Predictions",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "This lesson will introduce students to the fundamentals of Artificial Intelligence (AI) and machine learning by focusing on predictive data models. Starting with a teacher-led demonstration (“we do”) on sorting items by their features using a widget, students will then partner up (“you do”) to apply these concepts by training a model on data they have categorized, in order to understand how AI makes predictions. This hands-on experience will be complemented by discussions on the significance of data categorization and the challenges posed by limited datasets. Students will explore a real-world example where AI predictions have been used to help humans. The lesson aims to demystify AI technology, emphasizing its pattern-based logic rather than perceiving it as magical or random."
+        "overview": "This lesson will introduce students to the fundamentals of Artificial Intelligence (AI) and machine learning by focusing on predictive data models. Students will get hands-on practice with reinforcement learning starting with data that has already been sorted and progressing to making predictions on their own of how to sort items on screen. In the final level, students will try their hand at sorting data on their own and will enlist a partner to predict how the items have been categorized.\n\nThis hands-on experience will be complemented by discussions on the significance of data categorization and the challenges posed by limited datasets. Students will explore a real-world example where AI predictions have been used to help humans. The lesson aims to demystify AI technology, emphasizing its pattern-based logic rather than perceiving it as magical or random.\n"
       },
       "seeding_key": {
         "lesson.key": "Sorting Data",
@@ -528,7 +528,7 @@
       "key": "993ecbfa-21fb-4e5c-b33a-dab012840f0c",
       "position": 1,
       "properties": {
-        "progression_name": "Sorting Food"
+        "progression_name": "Food Feature Vector"
       },
       "seeding_key": {
         "activity_section.key": "993ecbfa-21fb-4e5c-b33a-dab012840f0c",
@@ -550,7 +550,7 @@
       "key": "4a093f47-0048-417e-8347-30eb73d4ce9b",
       "position": 3,
       "properties": {
-        "progression_name": "Sorting Emojis"
+        "progression_name": "Emoji Feature Vector"
       },
       "seeding_key": {
         "activity_section.key": "4a093f47-0048-417e-8347-30eb73d4ce9b",
@@ -558,13 +558,13 @@
       }
     },
     {
-      "key": "35f40f0b-b6f2-4ea7-b02e-08376c055a23",
+      "key": "af4a6c35-0bbb-443e-b9ca-1271c0f3e1d0",
       "position": 4,
       "properties": {
-        "progression_name": "Choose Your Effects"
+        "progression_name": "Check For Understanding: Emojis"
       },
       "seeding_key": {
-        "activity_section.key": "35f40f0b-b6f2-4ea7-b02e-08376c055a23",
+        "activity_section.key": "af4a6c35-0bbb-443e-b9ca-1271c0f3e1d0",
         "lesson_activity.key": "6cb4f638-b71d-46fb-bf91-7a4f0e73a7f7"
       }
     },
@@ -995,7 +995,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Sorting Food"
+        "level_keys": [
+          "k5_ai_pilot_sorting_foods_2024"
+        ],
+        "progression": "Food Feature Vector"
       },
       "bonus": false,
       "seeding_key": {
@@ -1045,7 +1048,7 @@
         "level_keys": [
           "sorting_items_emoji"
         ],
-        "progression": "Sorting Emojis"
+        "progression": "Emoji Feature Vector"
       },
       "bonus": false,
       "seeding_key": {
@@ -1067,23 +1070,20 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "dance_customize_effect_2024"
-        ],
-        "progression": "Choose Your Effects"
+        "progression": "Check For Understanding: Emojis"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "dance_customize_effect_2024"
+          "k5_ai_matching_background_emoji"
         ],
         "lesson.key": "How AI Makes Decisions",
         "lesson_group.key": "",
         "script.name": "k5-ai-data-2024",
-        "activity_section.key": "35f40f0b-b6f2-4ea7-b02e-08376c055a23"
+        "activity_section.key": "af4a6c35-0bbb-443e-b9ca-1271c0f3e1d0"
       },
       "level_keys": [
-        "dance_customize_effect_2024"
+        "k5_ai_matching_background_emoji"
       ]
     },
     {
@@ -1370,14 +1370,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "dance_customize_effect_2024",
+        "level.key": "k5_ai_matching_background_emoji",
         "script_level.level_keys": [
-          "dance_customize_effect_2024"
+          "k5_ai_matching_background_emoji"
         ],
         "lesson.key": "How AI Makes Decisions",
         "lesson_group.key": "",
         "script.name": "k5-ai-data-2024",
-        "activity_section.key": "35f40f0b-b6f2-4ea7-b02e-08376c055a23"
+        "activity_section.key": "af4a6c35-0bbb-443e-b9ca-1271c0f3e1d0"
       }
     },
     {
@@ -1432,11 +1432,11 @@
   "resources": [
     {
       "name": "[KEY] Using AI Tools in School",
-      "url": "https://docs.google.com/document/d/1BR5Ucrj4dt2EpAI8ylHxDrhCF_1I7jtn9bKV2wnB2dQ/template/preview",
+      "url": "https://docs.google.com/document/d/159YGF-r55EY3BhEC_b6zaw5G3MaDNJEL5Si-5Z72boM/template/preview",
       "key": "_key_using_ai_tools_in_school",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/document/d/1BR5Ucrj4dt2EpAI8ylHxDrhCF_1I7jtn9bKV2wnB2dQ/export/pdf",
+        "download_url": "https://docs.google.com/document/d/159YGF-r55EY3BhEC_b6zaw5G3MaDNJEL5Si-5Z72boM/export/pdf",
         "type": "Answer Key"
       },
       "seeding_key": {
@@ -1484,11 +1484,11 @@
     },
     {
       "name": "Using AI Tools in School",
-      "url": "https://docs.google.com/document/d/1geTnFqtszszfH7Q4_8ZORTAxvh38b-HuLpV1ezy7mgI/template/preview",
+      "url": "https://docs.google.com/document/d/1rRpXQi3T4sl_lI4r5uw1h_btVQu_7M02NVoSjDXdMBk/template/preview",
       "key": "using_ai_tools_in_school",
       "properties": {
         "audience": "Student",
-        "download_url": "https://docs.google.com/document/d/1geTnFqtszszfH7Q4_8ZORTAxvh38b-HuLpV1ezy7mgI/export/pdf",
+        "download_url": "https://docs.google.com/document/d/1rRpXQi3T4sl_lI4r5uw1h_btVQu_7M02NVoSjDXdMBk/export/pdf",
         "type": "Activity Guide"
       },
       "seeding_key": {
@@ -1554,9 +1554,19 @@
   ],
   "vocabularies": [
     {
+      "key": "accurate",
+      "word": "Accurate",
+      "definition": "Another way to say \"correct\"",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "accurate"
+      }
+    },
+    {
       "key": "artificial_intelligence_a_i_",
       "word": "Artificial Intelligence (A.I.) ",
-      "definition": "A way to make computers and machines learn and make decisions by themselves",
+      "definition": "A way for computers to make decisions by themselves",
       "properties": {
       },
       "seeding_key": {
@@ -1566,7 +1576,7 @@
     {
       "key": "bias",
       "word": "Bias",
-      "definition": "When a decision favors some things and not others",
+      "definition": "Favoring some things but not others, which can lead to an unfair decision",
       "properties": {
       },
       "seeding_key": {
@@ -1596,7 +1606,7 @@
     {
       "key": "feature_vector",
       "word": "Feature Vector",
-      "definition": "Assigning a number value to certain features of an object so that a machine can find patterns in the data",
+      "definition": "Assigning a number value to certain features of an object so that a machine can find patterns between multiple objects in the data ",
       "properties": {
       },
       "seeding_key": {
@@ -1707,6 +1717,12 @@
       "seeding_key": {
         "lesson.key": "Sorting Data",
         "vocabulary.key": "training_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Training AI",
+        "vocabulary.key": "accurate"
       }
     },
     {

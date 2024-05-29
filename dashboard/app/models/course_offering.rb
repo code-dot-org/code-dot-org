@@ -461,6 +461,33 @@ class CourseOffering < ApplicationRecord
     find_corresponding_offerings_for_pl_course.any?(&:elementary_school_level?)
   end
 
+  def get_available_resources(locale_code = 'en-us')
+    latest_version = latest_published_version(locale_code)
+    units = latest_version&.units
+    lessons = units&.first&.lessons
+
+    return nil unless lessons
+    expanded_card_resources = {}
+
+    lessons.each do |lesson|
+      break if expanded_card_resources.size >= 5
+      if lesson.has_lesson_plan
+        expanded_card_resources["Lesson Plan"] ||= lesson.lesson_plan_html_url
+      end
+      lesson.resources&.each do |resource|
+        properties = resource.properties
+        next unless properties&.key?('type')
+        type = properties['type']
+        type = "Slide Deck" if type == "Slides"
+        type = "Answer Key" if type == "Exemplar"
+        if ACCEPTABLE_RESOURCE_TYPES.include?(type) && !expanded_card_resources.key?(type)
+          expanded_card_resources[type] ||= resource["url"]
+        end
+      end
+    end
+    expanded_card_resources
+  end
+
   private def grade_levels_format
     return true if grade_levels.nil?
 
@@ -492,32 +519,5 @@ class CourseOffering < ApplicationRecord
     end
 
     true
-  end
-
-  def get_available_resources(locale_code = 'en-us')
-    latest_version = latest_published_version(locale_code)
-    units = latest_version&.units
-    lessons = units&.first&.lessons
-
-    return nil unless lessons
-    expanded_card_resources = {}
-
-    lessons.each do |lesson|
-      break if expanded_card_resources.size >= 5
-      if lesson.has_lesson_plan
-        expanded_card_resources["Lesson Plan"] ||= lesson.lesson_plan_html_url
-      end
-      lesson.resources&.each do |resource|
-        properties = resource.properties
-        next unless properties&.key?('type')
-        type = properties['type']
-        type = "Slide Deck" if type == "Slides"
-        type = "Answer Key" if type == "Exemplar"
-        if ACCEPTABLE_RESOURCE_TYPES.include?(type) && !expanded_card_resources.key?(type)
-          expanded_card_resources[type] ||= resource["url"]
-        end
-      end
-    end
-    expanded_card_resources
   end
 end
