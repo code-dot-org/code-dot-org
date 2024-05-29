@@ -1235,55 +1235,6 @@
   pl_middle_high_additional_programs_heading: "Additional programs to meet diverse teacher needs"
   pl_middle_high_additional_programs_desc: "In addition to our in-person facilitator led options for middle and high school teachers we have several other programs to meet the diverse needs of our teachers."
 
-  lms_page_heading: "Integrate Code.org with your LMS platform"
-  lms_page_top_desc: "Connect existing LMS classrooms in your school to Code.org with one-click roster syncing, single sign-on (SSO), and integrated access curriculum."
-  lms_page_top_module_heading: "Code.org supports major learning management systems"
-  lms_page_top_module_desc: "Code.org has seamless, secure, one-click integrations for most major LMS & SSO providers."
-  lms_page_integrations_heading: "Single sign-on integrations"
-  lms_page_integrations_desc: "Use these common services as login methods for Code.org. Learn more about [logging in with SSO.](%{help_article_link})"
-  lms_page_reasoning_heading: "Why use Code.org LMS integrations?"
-  lms_page_reasoning_title_01: "Save instructor time and focus on what matters"
-  lms_page_reasoning_desc_01: "Instantly sync your sections, students, and co-teachers to optimize classroom prep and spend more time with your students."
-  lms_page_reasoning_title_02: "Streamline student access and improve participation"
-  lms_page_reasoning_desc_02: "No more worrying about personal logins or students getting lost - students can now access Code.org with the click of a button."
-  lms_page_reasoning_title_03: "Build on your existing technology and solutions"
-  lms_page_reasoning_desc_03: "Keep your tech together. Code.org syncs effortlessly with your existing LMS classroom."
-  lms_page_reasoning_title_04: "Empower digital learning with our robust curriculum"
-  lms_page_reasoning_desc_04: "Instantly connect to Code.org's suite of standards-aligned CS & AI curricula from home or from school"
-  lms_page_teacher_quote_01: "This is awesome for my kids; it's so nice when they can just click and go get started. This makes me really happy. It streamlines everything."
-  lms_page_teacher_quote_role_01: "Elementary Teacher"
-  lms_page_get_started_heading: "Ready to get started with our LMS integrations?"
-  lms_page_get_started_top_label: "Administrators and teachers"
-  lms_page_get_started_title: "Integrate Code.org with your LMS"
-  lms_page_get_started_desc: "Easily integrate Code.org with your school's LMS. Our step-by-step guide supports both administrators and teachers, helping you make the most of your tools in your educational setting."
-  lms_page_get_started_call_to_action: "See the guide to getting started"
-  lms_page_additional_resources_heading: "Additional resources"
-  lms_page_additional_resources_desc: "Beyond curriculum and professional learning, we have many materials to support your classroom."
-  lms_page_additional_resources_district_program_heading: "District Program"
-  lms_page_additional_resources_district_program_desc: "Join the Code.org District Program -at no cost!- to bring computer science to their district, empower their educators, and teach students the skills of the future."
-  lms_page_additional_resources_pl_desc: "Empower today's students to become tomorrow's heroes with tailored professional learning. Explore in-person workshops and self-paced online modules."
-
-  lms_landing_page_heading: "Integrate Code.org with %{website}"
-  lms_landing_page_desc: "Sync your rosters and sign in to code.org with one-click. Plus, Code.org content is now available directly on %{website}."
-  lms_landing_page_rosters_heading: "Sync your %{website} rosters"
-  lms_landing_page_rosters_desc: "No access codes needed! Launch the Code.org Integration to instantly import your sections, students, and co-teachers direcly to Code.org. Your sections stay up to date every time you launch from %{website}."
-  lms_landing_page_rosters_link: "Learn how to create and sync rosters"
-  lms_landing_page_sso_heading: "Single sign-on from %{website}"
-  lms_landing_page_sso_desc: "Sign in to Code.org without usernames and passwords. When students launch from the Code.org integration they are automatically logged in!"
-  lms_landing_page_sso_link: "Learn how to start using SSO with %{website}"
-  lms_landing_page_access_content_heading: "Access Code.org content"
-  lms_landing_page_access_content_desc: "Browse our standards-aligned computer science and artificial intelligence curricula directly from %{website}."
-  lms_landing_page_access_content_link: "See what's available in %{website}"
-  lms_landing_page_keep_account_heading: "Keep your Code.org account"
-  lms_landing_page_keep_account_desc: "You and your students have worked hard. Keep your work together by linking to your existing Code.org account when launching from %{website} for the first time."
-  lms_landing_page_ready_to_try_heading: "Ready to try the Code.org integration for %{website}?"
-  lms_landing_page_ready_to_try_title: "Install the Code.org integration on %{website}"
-  lms_landing_page_ready_list_01: "Streamline your school's digital learning by using a simple and straightforward installation process."
-  lms_landing_page_ready_list_02: "Use this guide to get started and encourage your administrator to integrate Code.org."
-
-  lms_skinny_banner_heading: "Discover our new LMS integrations!"
-  lms_skinny_banner_desc: "We've added new LMS integrations for %{canvas} and %{schoology}! Learn how to get started!"
-
   self_paced_pl_hero_heading: "Self-paced professional learning for educators"
   self_paced_pl_hero_desc: "Professional learning offerings to support teachers in every stage of their computer science teaching journey."
   self_paced_pl_intro_heading: "Professional learning on your timeline"
@@ -1733,6 +1684,68 @@
 
   yw_page_top_heading: "Young Women in Computer Science"
   yw_page_top_desc: "Become a CS Ambassador and be a part of closing the gender gap in computer science."
+
+  lms_skinny_banner_heading: "Discover our new LMS integrations!"
+  lms_skinny_banner_desc: "We've added new LMS integrations for %{canvas} and %{schoology}! Learn how to get started!"
+
+  lms_page:
+    heading: "Integrate Code.org with your LMS platform"
+    top_desc: "Connect existing LMS classrooms in your school to Code.org with one-click roster syncing, single sign-on (SSO), and integrated access curriculum."
+    top_module:
+      heading: "Code.org supports major learning management systems"
+      desc: "Code.org has seamless, secure, one-click integrations for most major LMS & SSO providers."
+    integrations:
+      heading: "Single sign-on integrations"
+      desc: "Use these common services as login methods for Code.org. Learn more about [logging in with SSO.](%{help_article_link})"
+    reasoning:
+      heading: "Why use Code.org LMS integrations?"
+      title_01: "Save instructor time and focus on what matters"
+      desc_01: "Instantly sync your sections, students, and co-teachers to optimize classroom prep and spend more time with your students."
+      title_02: "Streamline student access and improve participation"
+      desc_02: "No more worrying about personal logins or students getting lost — students can now access Code.org with the click of a button."
+      title_03: "Build on your existing technology and solutions"
+      desc_03: "Keep your tech together. Code.org syncs effortlessly with your existing LMS classroom."
+      title_04: "Empower digital learning with our robust curriculum"
+      desc_04: "Instantly connect to Code.org's suite of standards-aligned CS & AI curricula from home or from school"
+    teacher_quote:
+      text_01: "This is awesome for my kids; it's so nice when they can just click and go get started. This makes me really happy. It streamlines everything."
+      role_01: "Elementary Teacher"
+    get_started:
+      heading: "Ready to get started with our LMS integrations?"
+      top_label: "Administrators and teachers"
+      title: "Integrate Code.org with your LMS"
+      desc: "Easily integrate Code.org with your school's LMS. Our step-by-step guide supports both administrators and teachers, helping you make the most of your tools in your educational setting."
+      call_to_action: "See the guide to getting started"
+    additional_resources:
+      heading: "Additional resources"
+      desc: "Beyond curriculum and professional learning, we have many materials to support your classroom."
+      district_program_heading: "District Program"
+      district_program_desc: "Join the Code.org District Program — at no cost! — to bring computer science to their district, empower their educators, and teach students the skills of the future."
+      pl_desc: "Empower today's students to become tomorrow's heroes with tailored professional learning. Explore in-person workshops and self-paced online modules."
+  
+  lms_landing_page:
+    heading: "Integrate Code.org with %{website}"
+    desc: "Sync your rosters and sign in to code.org with one-click. Plus, Code.org content is now available directly on %{website}."
+    rosters:
+      heading: "Sync your %{website} rosters"
+      desc: "No access codes needed! Launch the Code.org Integration to instantly import your sections, students, and co-teachers direcly to Code.org. Your sections stay up to date every time you launch from %{website}."
+      link: "Learn how to create and sync rosters"
+    sso:
+      heading: "Single sign-on from %{website}"
+      desc: "Sign in to Code.org without usernames and passwords. When students launch from the Code.org integration they are automatically logged in!"
+      link: "Learn how to start using SSO with %{website}"
+    access_content:
+      heading: "Access Code.org content"
+      desc: "Browse our standards-aligned computer science and artificial intelligence curricula directly from %{website}."
+      link: "See what's available in %{website}"
+    keep_account:
+      heading: "Keep your Code.org account"
+      desc: "You and your students have worked hard. Keep your work together by linking to your existing Code.org account when launching from %{website} for the first time."
+    ready:
+      heading: "Ready to try the Code.org integration for %{website}?"
+      title: "Install the Code.org integration on %{website}"
+      list_01: "Streamline your school's digital learning by using a simple and straightforward installation process."
+      list_02: "Use this guide to get started and encourage your administrator to integrate Code.org."
 
   pl_page:
     heading: "Professional learning that empowers"
