@@ -42,17 +42,13 @@ export interface TextFieldProps extends AriaAttributes {
 }
 
 // TODO:
-// * Add tests +++
-// * Add onChange +++
-// * Add disabled styles +++
-// * Add readonly styles +++
 // * Add captions
 
 /**
  * ### Production-ready Checklist:
  * * (?) implementation of component approved by design team;
- * * (?) has storybook, covered with stories and documentation;
- * * (?) has tests: test every prop, every state and every interaction that's js related;
+ * * (✔) has storybook, covered with stories and documentation;
+ * * (✔) has tests: test every prop, every state and every interaction that's js related;
  * * (see apps/test/unit/componentLibrary/TextFieldTest.jsx)
  * * (?) passes accessibility checks;
  *
