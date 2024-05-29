@@ -21,7 +21,7 @@ def saucelabs_browser(test_run_name)
   raise "Please define CDO.saucelabs_authkey"  if CDO.saucelabs_authkey.blank?
 
   is_tunnel = ENV['CIRCLE_BUILD_NUM']
-  url = "http://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@#{is_tunnel ? 'localhost:4445' : 'ondemand.saucelabs.com:80'}/wd/hub"
+  url = "http://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@#{is_tunnel ? 'localhost:4445' : 'ondemand.us-west-1.saucelabs.com:80'}/wd/hub"
 
   capabilities = Selenium::WebDriver::Remote::Capabilities.new($browser_config.except('name'))
 
