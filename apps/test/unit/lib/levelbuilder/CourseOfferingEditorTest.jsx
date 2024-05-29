@@ -21,7 +21,6 @@ describe('CourseOfferingEditor', () => {
       initialCourseOffering: {
         key: 'test-course-offering',
         is_featured: false,
-        category: 'Other',
         display_name: 'Course Offering 1',
         assignable: true,
         grade_levels: 'K',
@@ -93,7 +92,6 @@ describe('CourseOfferingEditor', () => {
       let returnData = {
         key: 'test-course-offering',
         display_name: 'Course Offering 2',
-        category: 'Full Courses',
         is_featured: true,
         assignable: true,
         grade_levels: 'K',
@@ -171,7 +169,6 @@ describe('CourseOfferingEditor', () => {
       let returnData = {
         key: 'test-course-offering',
         display_name: 'Course Offering 2',
-        category: 'Full Courses',
         is_featured: true,
         grade_levels: 'K,1,2,3',
         curriculum_type: 'Course',

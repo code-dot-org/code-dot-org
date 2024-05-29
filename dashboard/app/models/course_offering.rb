@@ -290,7 +290,6 @@ class CourseOffering < ApplicationRecord
     {
       key: key,
       is_featured: is_featured?,
-      category: category,
       display_name: display_name,
       assignable: assignable?,
       curriculum_type: curriculum_type,
