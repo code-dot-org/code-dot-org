@@ -19,6 +19,8 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
 
     @teacher_other = create(:teacher)
     @teacher_other.permission = UserPermission::AUTHORIZED_TEACHER
+
+    @unit = create :script
   end
 
   # index tests - gets assessment questions and answers
@@ -45,7 +47,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
 
   test 'verified teacher can get assessment questions and answers' do
     sign_in @teacher
-    get :index, params: {section_id: @section.id, script_id: 2}
+    get :index, params: {section_id: @section.id, script_id: @unit.id}
     assert_response :success
     assert_equal '{}', @response.body
   end
@@ -167,7 +169,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
 
   test 'gets no assessment responses from students when no assessment' do
     sign_in @teacher
-    get :section_responses, params: {section_id: @section.id, script_id: 2}
+    get :section_responses, params: {section_id: @section.id, script_id: @unit.id}
     assert_response :success
     assert_equal '{}', @response.body
   end
@@ -458,7 +460,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
 
   test 'gets no survey responses from students when no survey' do
     sign_in @teacher
-    get :section_surveys, params: {section_id: @section.id, script_id: 2}
+    get :section_surveys, params: {section_id: @section.id, script_id: @unit.id}
     assert_response :success
     assert_equal '{}', @response.body
   end

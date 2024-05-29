@@ -422,7 +422,8 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "show should redirect to flappy" do
-    get :show, params: {id: 6}
+    flappy = Unit.find_by_name('flappy')
+    get :show, params: {id: flappy.id}
     assert_redirected_to "/s/flappy"
   end
 
