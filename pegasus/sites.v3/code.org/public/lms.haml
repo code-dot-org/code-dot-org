@@ -9,7 +9,7 @@ theme: responsive_full_width
   .wrapper
     .text-wrapper.col-50
       %h1=hoc_s("lms_page.heading")
-      %p.body-three
+      %p.body-two
         =hoc_s("lms_page.top_desc")
       %a.link-button{href: "#"}
         =hoc_s(:call_to_action_get_started)
@@ -21,20 +21,32 @@ theme: responsive_full_width
   .wrapper
     %h2
       =hoc_s("lms_page.top_module.heading")
-    %p.body-three
+    %p.body-two
       =hoc_s("lms_page.top_module.desc")
-    = view :section_divider_line
+
+= view :section_divider_line
+
+%section.integrations.bg-neutral-light
+  .wrapper
     %h3
       =hoc_s("lms_page.integrations.heading")
-    %p.body-three
+    %p.body-two
       =hoc_s("lms_page.integrations.desc")
 
-%section.bg-pattern-dark
-  .wrapper.centered
-    %h2.white
-      =hoc_s("lms_page.teacher_quote.text_01")
-    %p.white
-      =hoc_s("lms_page.teacher_quote.role_01")
+%section.why-use-integrations
+  .wrapper
+    %h2
+      =hoc_s("lms_page.reasoning.heading")
+
+%section.quote.bg-neutral-dark
+  .wrapper
+    %div.quotes-wrapper
+      %p.quote-text.large
+        =hoc_s("lms_page.teacher_quote.text_01")
+      %p.no-margin-bottom
+        =hoc_s("lms_page.teacher_quote.role_01")
+        %span •
+        Indiana
 
 %section.get-started.bg-neutral-light
   .wrapper
