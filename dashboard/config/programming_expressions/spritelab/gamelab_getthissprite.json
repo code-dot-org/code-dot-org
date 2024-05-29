@@ -4,7 +4,7 @@
   "category": "Sprites",
   "category_key": "sprites",
   "block_name": "gamelab_getThisSprite",
-  "content": "Gets a specific sprite from an event.\r\n\r\nUsing the [`costume`(#df9399)](/docs/spritelab/gamelab_allSpritesWithAnimation/) block, you can program with events to check for interactions involving any sprite with the same costume(s). This block allows you to program an action to only affect the sprite that triggered the event. In an event that involves two sprites, “this” refers to first sprite in the event, and “other” refers to the second sprite. Using this block makes it possible to apply actions to specific sprites after an event without having to use a sprite name or affect the whole costume group.",
+  "content": "Gets a specific sprite from an event.\n\nUsing the [`costume`(#df9399)](/docs/spritelab/gamelab_allSpritesWithAnimation/) block, you can program with events to check for interactions involving any sprite with the same costume(s). This block allows you to program an action to only affect the sprite that triggered the event. In an event that involves two sprites, “this” refers to the first sprite in the event, and “other” refers to the second sprite. Using this block makes it possible to apply actions to specific sprites after an event without having to use a sprite name or affect the whole costume group.",
   "examples": [
     {
       "name": "Example 1",

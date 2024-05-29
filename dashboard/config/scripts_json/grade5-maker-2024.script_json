@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "grade5-maker",
-    "serialized_at": "2024-05-25 01:14:26 UTC",
+    "serialized_at": "2024-05-28 22:49:55 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -697,21 +697,8 @@
       }
     },
     {
-      "key": "db63a2bd-8d13-44f4-a1d1-ad6b6aa93af8",
-      "position": 4,
-      "properties": {
-        "name": "[Optional] Extension"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "db63a2bd-8d13-44f4-a1d1-ad6b6aa93af8",
-        "lesson.key": "If/Else with Bee",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "grade5-maker-2024"
-      }
-    },
-    {
       "key": "190c555e-ca3c-417a-8663-38857c72df6f",
-      "position": 5,
+      "position": 4,
       "properties": {
         "name": "Extended Learning"
       },
@@ -765,8 +752,21 @@
       }
     },
     {
-      "key": "76a64823-1908-4e57-8d1a-c19e0c9fb435",
+      "key": "62671da3-6c10-4118-9fd0-6a069c4016be",
       "position": 1,
+      "properties": {
+        "name": "[Optional] Pre-requisite"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "62671da3-6c10-4118-9fd0-6a069c4016be",
+        "lesson.key": "Cristina - Micro:bit pet with micro:bit",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade5-maker-2024"
+      }
+    },
+    {
+      "key": "76a64823-1908-4e57-8d1a-c19e0c9fb435",
+      "position": 2,
       "properties": {
         "duration": 10,
         "name": "Warm Up"
@@ -780,7 +780,7 @@
     },
     {
       "key": "909fdda6-c847-47d6-bc98-36c773cf259e",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Main Activity"
@@ -794,7 +794,7 @@
     },
     {
       "key": "ea67305d-8687-4787-affe-803e70cc46ba",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -807,8 +807,21 @@
       }
     },
     {
+      "key": "03e72faa-9719-40af-99e2-61e97c3cda64",
+      "position": 5,
+      "properties": {
+        "name": "[Optional] Extension"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "03e72faa-9719-40af-99e2-61e97c3cda64",
+        "lesson.key": "Cristina - Micro:bit pet with micro:bit",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade5-maker-2024"
+      }
+    },
+    {
       "key": "89184511-51ff-44ea-a0fe-f3847ecb1db6",
-      "position": 4,
+      "position": 6,
       "properties": {
         "name": "[Optional] Extended learning"
       },
@@ -2066,18 +2079,6 @@
       }
     },
     {
-      "key": "8f1b6520-fb2b-4620-868a-81556c2478e6",
-      "position": 1,
-      "properties": {
-        "description": "Building on the understanding of If/Then statements from the conditionals with cards activity, this exercise allows students to immediately apply that knowledge in a practical and engaging way. Students can begin using the micro:bit sooner with this activity.\n\nStudents will combine their understanding of If/Then statements with the micro:bit's capabilities to create a musical and animated experience. Using If/Then statements, students will program the micro:bit to play specific notes (a simple 3-note song like \"Mary Had a Little Lamb\") when specific buttons are pressed (A, B, or A & B pressed together).\n\nTo further the engagement, students will create a stick figure animation using the micro:bit's LED display. This animation will come dance whenever a sound is played!\n\nThis activity serves as a bridge between the conditional statements concepts and the final micro:bit activity. It allows them to experiment with the micro:bit's functions earlier, solidifying their understanding of If/Then statements through a fun and interactive experience.This activity can be adapted to different skill levels. You may adjust the complexity of the song or the dancing animation based on your students' progress.\n\n**Find the code for this project <a href=\"https://makecode.microbit.org/_38sKbu4ivDzu\" target=\"_blank\">here.</a>**",
-        "name": "If/Else Music & Dance with micro:bit"
-      },
-      "seeding_key": {
-        "activity_section.key": "8f1b6520-fb2b-4620-868a-81556c2478e6",
-        "lesson_activity.key": "db63a2bd-8d13-44f4-a1d1-ad6b6aa93af8"
-      }
-    },
-    {
       "key": "411ce055-4d87-47fd-9176-ae34f7b56bb8",
       "position": 1,
       "properties": {
@@ -2283,6 +2284,18 @@
       }
     },
     {
+      "key": "88bc42e7-ca10-4c3c-8581-6dfc786029a0",
+      "position": 1,
+      "properties": {
+        "description": "Building on the understanding of If/Then statements from the conditionals with cards activity, this exercise allows students to immediately apply that knowledge in a practical and engaging way. \n\nStudents will combine their understanding of If/Then statements with the micro:bit's capabilities to create a musical and animated experience. Using If/Then statements, students will program the micro:bit to play specific notes (a simple 3-note song like \"Mary Had a Little Lamb\") when specific buttons are pressed (A, B, or A & B pressed together).\n\nTo further the engagement, students will create a stick figure animation using the micro:bit's LED display. This animation will come dance whenever a sound is played!\n\nThis activity serves as a bridge between the conditional statements concepts and the Micro:bit pet activity. It allows them to experiment with the micro:bit's functions earlier, solidifying their understanding of If/Then statements through a fun and interactive experience.This activity can be adapted to different skill levels. You may adjust the complexity of the song or the dancing animation based on your students' progress.\n\n**Find the code for this project <a href=\"https://makecode.microbit.org/_38sKbu4ivDzu\" target=\"_blank\">here.</a>**\n",
+        "name": "Music and Dance"
+      },
+      "seeding_key": {
+        "activity_section.key": "88bc42e7-ca10-4c3c-8581-6dfc786029a0",
+        "lesson_activity.key": "62671da3-6c10-4118-9fd0-6a069c4016be"
+      }
+    },
+    {
       "key": "a173c9a3-3097-485d-bdc0-a4f9a0a888c4",
       "position": 1,
       "properties": {
@@ -2332,6 +2345,18 @@
       "seeding_key": {
         "activity_section.key": "8993d594-f023-489f-95ab-18ccde343039",
         "lesson_activity.key": "ea67305d-8687-4787-affe-803e70cc46ba"
+      }
+    },
+    {
+      "key": "fddf296b-272f-4ca2-8090-6f159b33cc9b",
+      "position": 1,
+      "properties": {
+        "description": "This activity strengthens students' grasp of conditionals and utilizes functions to help them creating an interactive pet. The pet uses the LED screen and sounds to provide an engaging and creative experience. Students will program their micro:bit's LED screen to generate visual and auditory responses for their virtual pet.\n\nThis project extends beyond traditional programming, offering a fantastic opportunity for students with artistic and creative inclinations. It empowers them to design a physical \"body\" for the micro:bit, transforming it from a circuit board into a playful companion.\n\nOnce the micro:bit is programmed and the body is built, encourage students to write a short story featuring their micro:pet. The story should incorporate the pet's emotions to reflect the events in the story. Students can then share their stories, making their micro:bit pets react accordingly throughout the reading.\n\n**Find the code for this project <a href=\"https://makecode.microbit.org/_7b5cU2JDYJiv\" target=\"_blank\">here.</a>**\n\n**Find a micro:bit character demo video <a href=\"https://www.youtube.com/watch?v=yIig7oIYNZw\" target=\"_blank\">here.</a>** You may need to watch the video two times.",
+        "name": "Storytelling"
+      },
+      "seeding_key": {
+        "activity_section.key": "fddf296b-272f-4ca2-8090-6f159b33cc9b",
+        "lesson_activity.key": "03e72faa-9719-40af-99e2-61e97c3cda64"
       }
     },
     {

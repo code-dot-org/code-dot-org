@@ -8,11 +8,11 @@
   "examples": [
     {
       "name": "Example 1",
-      "description": "This simple program checks if a random addition expression equals a number greater than 50.\r\nClick on the gold coin, and the green critter will guess a random number between 1 and 25. If the green critter guesses a number that is higher than the one the princess critter was thinking of, he will get her gold coin!\r\n",
+      "description": "This simple program checks if a number is greater than another.\nClick on the gold coin, and the green critter will guess a random number between 1 and 25. If the green critter guesses a number that is higher than the one the princess critter was thinking of, he will get her gold coin!\n",
       "app": "https://studio.code.org/projects/spritelab/sOXRJcZJe-z5xSkg_AapcMIhbU1JkjzNUm4Zu4rKRbA",
       "image": null,
       "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 310
+      "embed_app_with_code_height": "500"
     },
     {
       "name": "Example 2",

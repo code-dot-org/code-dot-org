@@ -7,7 +7,7 @@
   "content": "Sets the background of the display area to a solid color. 70 colors are available in the default color block, or a [`random color`(#acacd2)](/docs/spritelab/gamelab_randomColor/) can be specified.",
   "examples": [
     {
-      "name": "Example 2",
+      "name": "Example 1",
       "description": "When more than one background is used together in a sequence, the last background set will be the one that is used. In this example, the background will not switch from red to blue; when it is run, the background will go straight to blue.",
       "app": "https://studio.code.org/projects/spritelab/l6IlcspCiPBcgJ2IUeMgqoLiw7s8eekw5Rm_PnEKGos",
       "image": null,
@@ -15,7 +15,7 @@
       "embed_app_with_code_height": 310
     },
     {
-      "name": "Example 1",
+      "name": "Example 2",
       "description": "The background starts white in Sprite Lab, but it can be changed to any color. ",
       "code": "```\nThe background starts white in Sprite Lab, but it can be changed to any color. \n```",
       "app": "https://studio.code.org/projects/spritelab/EMjD9LfR933K-2XxbiUgVOOEBBIQ53CjPlAXcq5InRY",

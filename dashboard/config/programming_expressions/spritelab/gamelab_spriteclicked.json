@@ -4,7 +4,7 @@
   "category": "Events",
   "category_key": "events",
   "block_name": "gamelab_spriteClicked",
-  "content": "Triggers a sequence of blocks to run when a specific sprite is clicked.\n\n(Opens YouTube in new tab)\n\n[![How To Make A Sprite](https://img.youtube.com/vi/VUmZ2IsFAGo/0.jpg)](https://www.youtube.com/watch?v=VUmZ2IsFAGo)\n\nSometimes code should only be run if an event happens. In this case, when a sprite is clicked, the blocks attached under the event block will begin to run sequentially. If the [`costume`(#df9399)](/docs/spritelab/gamelab_allSpritesWithAnimation/) block is used here, the code will run whenever any sprite with the matching costume is clicked.\n\nThis block has a drop-down menu with “when” and “while” options. “When” a sprite is clicked, the code will only run once. “While” a sprite is clicked, the code will run over and over again until the sprite stops being clicked on. ",
+  "content": "Triggers a sequence of blocks to run when a specific sprite is clicked.\n\n(Opens YouTube in new tab)\n\n[How To Make A Sprite](https://www.youtube.com/watch?v=VUmZ2IsFAGo)\n\nSometimes code should only be run if an event happens. In this case, when a sprite is clicked, the blocks attached under the event block will begin to run sequentially. If the [`costume`(#df9399)](/docs/spritelab/gamelab_allSpritesWithAnimation/) block is used here, the code will run whenever any sprite with the matching costume is clicked.\n\nThis block has a drop-down menu with “when” and “while” options. “When” a sprite is clicked, the code will only run once. “While” a sprite is clicked, the code will run over and over again until the sprite stops being clicked on. ",
   "examples": [
     {
       "name": "Example 1",
@@ -37,7 +37,7 @@
       "name": "when/while",
       "type": "",
       "required": true,
-      "description": "Determines if the code is run when the sprite is clicked (runs once at a time) or continuously while the sprite is clicked "
+      "description": "Determines if the code runs once when the sprite is clicked or continuously while the sprite is clicked "
     },
     {
       "name": "sprite",
@@ -48,5 +48,5 @@
   ],
   "short_description": "Triggers a sequence of blocks to run when a specific sprite is clicked.",
   "syntax": "spriteClicked",
-  "tips": "- If you want something to happen only to the individual sprite being clicked, use the [`this / other sprite`(#df9399)](/docs/spritelab/gamelab_getThisSprite/) block in any of the following actions."
+  "tips": "- If you want something to happen only to the individual sprite being clicked, use the [`this/other sprite`(#df9399)](/docs/spritelab/gamelab_getThisSprite/) block in any of the following actions."
 }

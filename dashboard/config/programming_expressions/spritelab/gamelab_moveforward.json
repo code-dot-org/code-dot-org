@@ -1,10 +1,10 @@
 {
   "key": "gamelab_moveForward",
   "name": "move forward",
-  "category": "Sprites",
+  "category": "Actions",
   "category_key": "actions",
   "block_name": "gamelab_moveForward",
-  "content": "Moves the sprite the specified number of pixels in the direction it is facing.\r\n\r\nBy default, the block moves sprites to the right (or east). However, changing the sprite’s movement direction will change which direction it moves when moving forward.",
+  "content": "Moves the sprite the specified number of pixels in the direction it is facing.\n\nBy default, the block moves sprites to the right (or east). However, changing the direction the sprite faces will change which direction it moves when moving forward.",
   "examples": [
     {
       "name": "Example 1",
