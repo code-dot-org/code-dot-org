@@ -3,6 +3,7 @@ import React from 'react';
 
 import {Heading4} from '@cdo/apps/componentLibrary/typography';
 import {CourseOfferingCurriculumTypes as curriculumTypes} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {assignmentCourseOfferingShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import i18n from '@cdo/locale';
 
 import {renderRows} from './QuickAssignTableHelpers';
@@ -59,7 +60,7 @@ export default function QuickAssignTable({
 
 QuickAssignTable.propTypes = {
   marketingAudience: PropTypes.string.isRequired,
-  courseOfferings: PropTypes.object.isRequired,
+  courseOfferings: assignmentCourseOfferingShape.isRequired,
   setSelectedCourseOffering: PropTypes.func.isRequired,
   updateCourse: PropTypes.func.isRequired,
   sectionCourse: PropTypes.object,

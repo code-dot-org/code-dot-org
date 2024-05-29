@@ -48,10 +48,10 @@ export const assignmentCourseVersionShape = PropTypes.shape({
 });
 
 export const assignmentCourseOfferingShape = PropTypes.shape({
-  id: PropTypes.number.isRequired,
-  display_name: PropTypes.string.isRequired,
-  is_featured: PropTypes.bool.isRequired,
-  course_versions: PropTypes.object.isRequired,
+  elementary: PropTypes.object,
+  high: PropTypes.object,
+  hoc: PropTypes.object,
+  middle: PropTypes.object,
 });
 
 export const classroomShape = PropTypes.shape({
