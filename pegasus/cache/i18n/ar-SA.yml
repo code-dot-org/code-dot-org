@@ -2338,6 +2338,7 @@ ar-SA:
   user_header_artist: 'فنان '
   user_header_create: 'إشاء '
   user_header_create_account: إنشاء حساب
+  user_header_create_account_low_cap: إنشاء حساب
   user_header_dance: حفلة الرقص
   user_header_flappy: فلابي
   user_header_gamelab: مختبر التطبيقات

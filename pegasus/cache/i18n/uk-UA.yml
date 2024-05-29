@@ -970,7 +970,7 @@ uk-UA:
   header_about_donors: Донори
   header_about_evaluation: Проба
   header_about_faqs: ЧаПи
-  header_about_jobs: Вакансії
+  header_about_jobs: Кар'єра в ІТ
   header_about_leadership: Керівництво
   header_about_news: Новини
   header_about_partners: Партнери
@@ -1113,7 +1113,7 @@ uk-UA:
   hoc2018_mc_continue_learning: Продовжуйте навчання з Minecraft.
   hoc2018_mc_designer_description: Запрограмуй тварин та інших істот Майнкрафт у власній
     версії цієї гри.
-  hoc2018_mc_designer_title: Майнкрафт - Розробник
+  hoc2018_mc_designer_title: 'Майнкрафт: Розробник'
   hoc2018_mc_details: Багато мов | Сучасні браузери та планшети | Класи 2+
   hoc2018_mc_download_adventurer: Завантажуйте оффлайнову версію Майнкрафт - Пригод.
   hoc2018_mc_educators_box1_button: Розпочинайте
@@ -1349,20 +1349,20 @@ uk-UA:
   homepage_slot_text_link_buy: Взяти участь
   homepage_slot_text_link_code_break: Зробіть перерву на код
   homepage_slot_text_link_codestudio: Спробуйте Студію Коду
-  homepage_slot_text_link_donate: Зробити пожертвування
+  homepage_slot_text_link_donate: Зробіть пожертвування
   homepage_slot_text_link_elementary: Початкова школа
   homepage_slot_text_link_fullcurriculum: Подивіться наш повний курс навчання
   homepage_slot_text_link_high: Старша школа
   homepage_slot_text_link_hoc: Спробуйте годину коду
   homepage_slot_text_link_hocserved: "# вже спробували"
-  homepage_slot_text_link_host: Провести Годину Коду
+  homepage_slot_text_link_host: Проведіть Годину Коду
   homepage_slot_text_link_k5: Курси для дітей
   homepage_slot_text_link_local: Знайти місцевий клас
   homepage_slot_text_link_middle: Середня школа
   homepage_slot_text_link_othercourses: Інші онлайн курси
   homepage_slot_text_link_pd: Професійний розвиток
   homepage_slot_text_link_shop: Футболки, капелюхи та інше
-  homepage_slot_text_link_stats: Подивитися статистику
+  homepage_slot_text_link_stats: Перегляньте статистику
   homepage_slot_text_link_thebadguys: Код з поганими хлопцями
   homepage_slot_text_shop: Магазин
   homepage_slot_text_studio: Всі наші підручники
@@ -1625,7 +1625,7 @@ uk-UA:
     Подорожуйте Майнкрафтом з кодом.
   minecraft_continue_learning: 'Інформатика для всіх: виходьте за рамки Години коду
     з Microsoft Store'
-  minecraft_designer: Майнкрафт - Розробник
+  minecraft_designer: 'Майнкрафт: Розробник'
   minecraft_designer_button: Початок
   minecraft_designer_description: Запрограмуй тварин та інших істот Майнкрафт у власній
     версії цієї гри.

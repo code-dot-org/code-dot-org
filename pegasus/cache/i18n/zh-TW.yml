@@ -1830,6 +1830,7 @@ zh-TW:
   user_header_artist: '演出者 '
   user_header_create: '創造 '
   user_header_create_account: 建立帳戶
+  user_header_create_account_low_cap: 創建帳戶
   user_header_dance: 舞蹈派對
   user_header_flappy: 像素鳥
   user_header_gamelab: Game Lab

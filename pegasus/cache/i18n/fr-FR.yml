@@ -2678,6 +2678,7 @@ fr-FR:
   user_header_artist: 'Artiste '
   user_header_create: 'Créer '
   user_header_create_account: Créer un compte
+  user_header_create_account_low_cap: Créer un compte
   user_header_dance: Soirée Dansante
   user_header_flappy: Flappy
   user_header_gamelab: Labo Jeux
