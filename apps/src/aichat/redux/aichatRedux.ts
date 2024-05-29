@@ -473,10 +473,8 @@ const aichatSlice = createSlice({
     ) => {
       const {levelAichatSettings} = action.payload;
 
-      const defaultAiCustomizations: AiCustomizations = {
-        ...(levelAichatSettings?.initialCustomizations ||
-          EMPTY_AI_CUSTOMIZATIONS),
-      };
+      const defaultAiCustomizations: AiCustomizations =
+        levelAichatSettings?.initialCustomizations || EMPTY_AI_CUSTOMIZATIONS;
 
       state.savedAiCustomizations = defaultAiCustomizations;
       state.currentAiCustomizations = defaultAiCustomizations;

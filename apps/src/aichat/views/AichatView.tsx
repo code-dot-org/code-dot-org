@@ -127,21 +127,21 @@ const AichatView: React.FunctionComponent = () => {
     </div>
   );
 
-  const resetProject = () => {
+  const resetProject = useCallback(() => {
     dispatch(
       resetToDefaultAiCustomizations({
         levelAichatSettings,
       })
     );
-  };
+  }, [dispatch, levelAichatSettings]);
 
-  const onClickStartOver = () => {
+  const dialogControl = useContext(DialogContext);
+
+  const onClickStartOver = useCallback(() => {
     if (dialogControl) {
       dialogControl.showDialog(DialogType.StartOver, resetProject);
     }
-  };
-
-  const dialogControl = useContext(DialogContext);
+  }, [dialogControl, resetProject]);
 
   return (
     <div id="aichat-lab" className={moduleStyles.aichatLab}>
@@ -167,9 +167,7 @@ const AichatView: React.FunctionComponent = () => {
                   id="aichat-model-customization-panel"
                   headerContent="Model Customization"
                   rightHeaderContent={renderModelCustomizationHeaderRight(
-                    () => {
-                      onClickStartOver();
-                    }
+                    onClickStartOver
                   )}
                 >
                   <ModelCustomizationWorkspace />
@@ -235,9 +233,7 @@ const renderModelCustomizationHeaderRight = (onStartOver: () => void) => {
         icon={{iconStyle: 'solid', iconName: 'refresh'}}
         isIconOnly={true}
         color={'white'}
-        onClick={() => {
-          onStartOver();
-        }}
+        onClick={onStartOver}
         ariaLabel={'Start Over'}
         size={'xs'}
         type="tertiary"
