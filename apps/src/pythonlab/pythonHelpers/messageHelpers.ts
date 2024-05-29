@@ -28,6 +28,7 @@ export function parseErrorMessage(errorMessage: string) {
   // Parse to find the main.py error line.
   const errorLines = errorMessage.trim().split('\n');
   const mainErrorRegex = /File "<exec>", line \d+.*/;
+  const mainErrorLineRegex = /line (\d+)/;
   let mainErrorLine = 0;
   while (
     mainErrorLine < errorLines.length &&
@@ -40,14 +41,13 @@ export function parseErrorMessage(errorMessage: string) {
     return errorMessage;
   }
   const mainLineNumber = parseInt(
-    errorLines[mainErrorLine].match(/line (\d+)/)![1]
+    errorLines[mainErrorLine].match(mainErrorLineRegex)![1]
   );
   const correctedMainErrorLine = getMainErrorLine(mainLineNumber);
   let parsedError = `main.py, line ${correctedMainErrorLine}`;
   let currentLine = mainErrorLine + 1;
   const lineRegex = /File "\/home\/pyodide\/([^"]+)", line (\d+).*/;
   let hasMultiFileStackTrace = false;
-  const mainErrorLineRegex = /line (\d+)/;
   while (currentLine < errorLines.length) {
     if (lineRegex.test(errorLines[currentLine])) {
       // If the error message refers to another file, remove the reference to the pyodide folder.
