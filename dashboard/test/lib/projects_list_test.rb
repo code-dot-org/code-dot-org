@@ -27,7 +27,18 @@ class ProjectsListTest < ActionController::TestCase
       updatedAt: '2017-01-01T00:00:00.000-08:00',
       hidden: true
     }.to_json
+
     @hidden_project = {id: 33, value: hidden_project_value}
+
+    # lab2 projects rely on the projectType field to determine type.
+    lab2_project_value = {
+      name: 'Lab2 Project',
+      createdAt: '2024-01-24T16:41:08.000-08:00',
+      updatedAt: '2024-01-25T17:48:12.358-08:00',
+      projectType: 'pythonlab',
+      hidden: false,
+    }.to_json
+    @lab2_project = {id: 44, value: lab2_project_value}
   end
 
   test 'get_project_row_data correctly parses student and project data' do
@@ -38,6 +49,16 @@ class ProjectsListTest < ActionController::TestCase
     assert_equal @student.name, project_row['studentName']
     assert_equal 'applab', project_row['type']
     assert_equal '2017-01-25T17:48:12.358-08:00', project_row['updatedAt']
+  end
+
+  test 'get_project_row_data correctly parses lab2 project data' do
+    project_row = ProjectsList.send(:get_project_row_data, @lab2_project, @channel_id, @student)
+    assert_nil @channel_id
+    assert_nil project_row['channel']
+    assert_equal 'Lab2 Project', project_row['name']
+    assert_equal @student.name, project_row['studentName']
+    assert_equal 'pythonlab', project_row['type']
+    assert_equal '2024-01-25T17:48:12.358-08:00', project_row['updatedAt']
   end
 
   test 'get_project_row_data ignores hidden projects' do
