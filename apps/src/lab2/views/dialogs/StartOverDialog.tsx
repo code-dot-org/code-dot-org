@@ -3,8 +3,7 @@ import React from 'react';
 import {BaseDialogProps} from './DialogManager';
 import moduleStyles from './confirm-dialog.module.scss';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {TEXT_BASED_LABS} from '@cdo/apps/lab2/types';
-import {AppName} from '@cdo/apps/lab2/types';
+import {TEXT_BASED_LABS, AppName} from '@cdo/apps/lab2/types';
 const commonI18n = require('@cdo/locale');
 
 /**
@@ -23,7 +22,7 @@ const StartOverDialog: React.FunctionComponent<BaseDialogProps> = ({
       ? commonI18n.startOverWorkspaceText()
       : commonI18n.startOverWorkspace();
 
-  // App-specific messages for starting over.
+  // Lab-specific messages for starting over.
   const LAB_SPECIFIC_MESSAGES: Partial<Record<AppName, string>> = {
     aichat: commonI18n.startOverAichatModelCustomizations(),
   };
