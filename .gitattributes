@@ -22,6 +22,9 @@ pegasus/sites.v3/** filter=lfs diff=lfs merge=lfs -text
 pegasus/sites/** filter=lfs diff=lfs merge=lfs -text
 shared/images/** filter=lfs diff=lfs merge=lfs -text
 
+# INCLUDE any .zip files that appear in the pyodide folder.
+apps/lib/pyodide/*.zip filter=lfs diff=lfs merge=lfs -text
+
 # HOW TO EXCLUDE A FILE/FILES FROM GIT LFS:
 #
 # 1. Add a new exclusion pattern in the immediately following section
