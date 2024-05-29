@@ -1,4 +1,4 @@
-import {useMemo, useEffect, useCallback} from 'react';
+import {useMemo, useEffect, useCallback, useRef} from 'react';
 
 import header from '@cdo/apps/code-studio/header';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
@@ -24,11 +24,10 @@ export const useSource = (defaultSources: ProjectSources) => {
   const levelStartSource = useAppSelector(
     state => state.lab.levelProperties?.source
   );
+  const previousChannelIdRef = useRef<string | null>(null);
 
   const setSource = useMemo(
     () => (newSource: MultiFileSource) => {
-      console.log('got new source');
-      console.log({newSource});
       dispatch(setAndSaveProjectSource({source: newSource}));
     },
     [dispatch]
@@ -47,11 +46,13 @@ export const useSource = (defaultSources: ProjectSources) => {
   }, [isStartMode, source]);
 
   useEffect(() => {
-    // We reset the project when the channelId changes, as this means we are on a new level.
-    if (initialSources) {
-      console.log('updates initial source');
-      console.log({initialSources});
-      dispatch(setAndSaveProjectSource(initialSources));
+    if (channelId && previousChannelIdRef.current !== channelId) {
+      // We reset the project when the channelId changes, as this means we are on a new level
+      // with a new project.
+      if (initialSources) {
+        dispatch(setAndSaveProjectSource(initialSources));
+      }
+      previousChannelIdRef.current = channelId;
     }
   }, [channelId, initialSources, dispatch]);
 
