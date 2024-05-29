@@ -829,8 +829,8 @@ class Unit < ApplicationRecord
     name
   end
 
-  def self.unit_in_category?(category, script)
-    return Unit.get_from_cache(script)&.course_version&.course_offering&.category == category
+  def in_initiative?(initiative)
+    return cached&.course_version&.course_offering&.marketing_initiative == initiative
   end
 
   # Legacy levels have different video and title logic in LevelsHelper.
@@ -858,7 +858,7 @@ class Unit < ApplicationRecord
   end
 
   def csf_international?
-    Unit.unit_in_category?('csf_international', name)
+    ScriptConstants::CATEGORIES[:csf_international].include?(name)
   end
 
   def self.unit_names_by_curriculum_umbrella(curriculum_umbrella)
@@ -885,6 +885,7 @@ class Unit < ApplicationRecord
     lessons.sum(&:total_lesson_duration)
   end
 
+  # curriculum umbrella is deprecated. use in_initiative? instead.
   def under_curriculum_umbrella?(specific_curriculum_umbrella)
     curriculum_umbrella == specific_curriculum_umbrella
   end
@@ -928,7 +929,7 @@ class Unit < ApplicationRecord
   end
 
   def csc?
-    Unit.unit_in_category?('csc', name)
+    in_initiative?('CSC')
   end
 
   # TODO: (Dani) Update to use new course types framework.
