@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2023-11-28T21:21:54.000Z",
   "level_num": "custom",
@@ -24,7 +25,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Change\r\n\r\nLet's see if we can use a slider to change how fast our LEDs will blink. We'll use the change event so the lights are updated right away instead of pressing a button.\r\n\r\n# Do This\r\n\r\n1) Get the value from the slider and store it in a variable\r\n\t- Use a [`var x = __`(#BB77C7)](/docs/applab/declareAssign_x/) and [`getProperty()`(#fff176)](/docs/applab/getProperty/) block to get the value from the dropdown\r\n2) Update the blink blocks to use the slider variable\r\n\r\n**Run your program!** You can move the slider to see whether the LEDs speed changes automatically.",
+    "long_instructions": "# Change\r\n\r\nLet's see if we can use a slider to change how fast our LEDs will blink. We'll use the change event so the lights are updated right away instead of pressing a button.\r\n\r\n# Do This\r\n\r\n1) Get the value from the slider and store it in a variable\r\n\t- Use a [`var x = __`(#BB77C7)](/docs/applab/declareAssign_x/) and [`getProperty()`(#fff176)](/docs/applab/getProperty/) block to get the value from the slider\r\n2) Update the blink blocks to use the slider variable\r\n\r\n**Run your program!** You can move the slider to see whether the LEDs speed changes automatically.",
     "instructions_important": "false",
     "submittable": "false",
     "start_blocks": "onEvent(\"interval\", \"change\", function() {\r\n  //1) Get the value from the slider and store it in a variable \r\n  \r\n  //2) Update the blink blocks to use the slider variable\r\n  colorLeds[0].blink(__);\r\n  colorLeds[1].blink(__);\r\n  colorLeds[8].blink(__);\r\n  colorLeds[9].blink(__);\r\n});\r\nonBoardEvent(buttonR, \"press\", function() {\r\n  colorLeds[0].off();\r\n  colorLeds[1].off();\r\n  colorLeds[8].off();\r\n  colorLeds[9].off();\r\n});\r\n\r\n",
@@ -80,9 +81,8 @@
     "ai_enabled": "false",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T21:21:54.731+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - SB4_2023\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - SB4_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T21:21:54.731+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - SB4_2023\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - SB4_2023\"},{\"changed_at\":\"2024-05-29 16:25:10 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18972,\"changed_by_email\":\"sarah.judd@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
