@@ -22,11 +22,13 @@ const commonI18n = require('@cdo/locale');
 const aichatI18n = require('@cdo/aichat/locale');
 
 import {
+  addChatMessage,
   resetToDefaultAiCustomizations,
   setStartingAiCustomizations,
   setViewMode,
   clearChatMessages,
   selectAllFieldsHidden,
+  RESET_MODEL_NOTIFICATION,
 } from '../redux/aichatRedux';
 import {AichatLevelProperties, ViewMode} from '../types';
 import {isDisabled} from './modelCustomization/utils';
@@ -128,11 +130,9 @@ const AichatView: React.FunctionComponent = () => {
   );
 
   const resetProject = useCallback(() => {
-    dispatch(
-      resetToDefaultAiCustomizations({
-        levelAichatSettings,
-      })
-    );
+    dispatch(resetToDefaultAiCustomizations(levelAichatSettings));
+    dispatch(clearChatMessages());
+    dispatch(addChatMessage(RESET_MODEL_NOTIFICATION));
   }, [dispatch, levelAichatSettings]);
 
   const dialogControl = useContext(DialogContext);

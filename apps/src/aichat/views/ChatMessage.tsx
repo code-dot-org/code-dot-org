@@ -23,7 +23,6 @@ const TOO_PERSONAL_MESSAGE = aichatI18n.tooPersonalUserMessage();
 const isAssistant = (role: string) => role === Role.ASSISTANT;
 const isUser = (role: string) => role === Role.USER;
 const isModelUpdate = (role: string) => role === Role.MODEL_UPDATE;
-const isModelReset = (role: string) => role === Role.MODEL_RESET;
 
 const displayUserMessage = (status: string, chatMessageText: string) => {
   if (
@@ -90,13 +89,11 @@ const displayAssistantMessage = (status: string, chatMessageText: string) => {
   }
 };
 
-const modelUpdateMessageTextEnd = ' has been updated';
 const displayModelUpdateMessage = (
   message: ChatCompletionMessage,
-  onRemove: () => void,
-  startOver: boolean = false
+  onRemove: () => void
 ) => {
-  const {chatMessageText, timestamp} = message;
+  const {chatMessageTextBold, chatMessageText, timestamp} = message;
 
   return (
     <ChatNotificationMessage
@@ -104,8 +101,8 @@ const displayModelUpdateMessage = (
       content={
         <>
           <span className={moduleStyles.modelUpdateMessageTextContainer}>
-            <StrongText>{chatMessageText}</StrongText>
-            {!startOver && modelUpdateMessageTextEnd}
+            <StrongText>{chatMessageTextBold}</StrongText>
+            {chatMessageText}
           </span>
           <StrongText>{timestamp}</StrongText>
         </>
@@ -135,13 +132,6 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({message}) => {
       {isModelUpdate(message.role) &&
         displayModelUpdateMessage(message, () =>
           dispatch(removeModelUpdateMessage(message.id))
-        )}
-
-      {isModelReset(message.role) &&
-        displayModelUpdateMessage(
-          message,
-          () => dispatch(removeModelUpdateMessage(message.id)),
-          true
         )}
     </div>
   );

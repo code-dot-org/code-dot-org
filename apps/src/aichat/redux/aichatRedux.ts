@@ -173,10 +173,11 @@ const getNewMessageId = () => {
   return latestMessageId;
 };
 
-const RESET_MODEL_NOTIFICATION: ChatCompletionMessage = {
+export const RESET_MODEL_NOTIFICATION: ChatCompletionMessage = {
   id: getNewMessageId(),
-  role: Role.MODEL_RESET,
-  chatMessageText: 'Model customizations reset to default settings.',
+  role: Role.MODEL_UPDATE,
+  chatMessageTextBold: 'Model customizations and model card information',
+  chatMessageText: ' have been reset to default settings.',
   status: Status.OK,
   timestamp: getCurrentTime(),
 };
@@ -237,8 +238,9 @@ const saveAiCustomization = async (
       addChatMessage({
         id: getNewMessageId(),
         role: Role.MODEL_UPDATE,
-        chatMessageText:
+        chatMessageTextBold:
           AI_CUSTOMIZATIONS_LABELS[property as keyof AiCustomizations],
+        chatMessageText: ' has been updated.',
         status: Status.OK,
         timestamp: getCurrentTime(),
       })
@@ -389,10 +391,9 @@ const aichatSlice = createSlice({
       // when requesting model responses within a chat session.
       // If we want to clear all history
       // and start a new session, see clearChatMessages.
-      const role = updatedMessages[messageToRemovePosition].role;
       if (
         messageToRemovePosition < 0 ||
-        (role !== Role.MODEL_UPDATE && role !== Role.MODEL_RESET)
+        updatedMessages[messageToRemovePosition].role !== Role.MODEL_UPDATE
       ) {
         return;
       }
@@ -476,11 +477,9 @@ const aichatSlice = createSlice({
     },
     resetToDefaultAiCustomizations: (
       state,
-      action: PayloadAction<{
-        levelAichatSettings?: LevelAichatSettings;
-      }>
+      action: PayloadAction<LevelAichatSettings | undefined>
     ) => {
-      const {levelAichatSettings} = action.payload;
+      const levelAichatSettings = action.payload;
 
       const defaultAiCustomizations: AiCustomizations =
         levelAichatSettings?.initialCustomizations || EMPTY_AI_CUSTOMIZATIONS;
@@ -489,9 +488,6 @@ const aichatSlice = createSlice({
       state.currentAiCustomizations = defaultAiCustomizations;
       state.fieldVisibilities =
         levelAichatSettings?.visibilities || DEFAULT_VISIBILITIES;
-      state.chatMessages = [];
-      state.currentSessionId = undefined;
-      state.chatMessages.push(RESET_MODEL_NOTIFICATION);
     },
     setSavedAiCustomizations: (
       state,
