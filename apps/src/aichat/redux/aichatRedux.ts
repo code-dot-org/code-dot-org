@@ -173,6 +173,14 @@ const getNewMessageId = () => {
   return latestMessageId;
 };
 
+const RESET_MODEL_NOTIFICATION: ChatCompletionMessage = {
+  id: getNewMessageId(),
+  role: Role.MODEL_RESET,
+  chatMessageText: 'Model customizations reset to default settings.',
+  status: Status.OK,
+  timestamp: getCurrentTime(),
+};
+
 // This is the "core" update logic that is shared when a student saves their
 // model customizations (setup, retrieval, and "publish" tab)
 const saveAiCustomization = async (
@@ -480,6 +488,9 @@ const aichatSlice = createSlice({
       state.currentAiCustomizations = defaultAiCustomizations;
       state.fieldVisibilities =
         levelAichatSettings?.visibilities || DEFAULT_VISIBILITIES;
+      state.chatMessages = [];
+      state.currentSessionId = undefined;
+      state.chatMessages.push(RESET_MODEL_NOTIFICATION);
     },
     setSavedAiCustomizations: (
       state,

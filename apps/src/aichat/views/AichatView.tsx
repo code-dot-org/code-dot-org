@@ -167,7 +167,16 @@ const AichatView: React.FunctionComponent = () => {
                   id="aichat-model-customization-panel"
                   headerContent="Model Customization"
                   rightHeaderContent={renderModelCustomizationHeaderRight(
-                    onClickStartOver
+                    () => {
+                      onClickStartOver();
+                      analyticsReporter.sendEvent(
+                        EVENTS.AICHAT_START_OVER,
+                        {
+                          levelPath: window.location.pathname,
+                        },
+                        PLATFORMS.BOTH
+                      );
+                    }
                   )}
                 >
                   <ModelCustomizationWorkspace />
