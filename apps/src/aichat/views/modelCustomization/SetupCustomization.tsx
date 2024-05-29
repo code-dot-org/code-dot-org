@@ -1,14 +1,11 @@
-import React, {useCallback, useState, useMemo} from 'react';
+import React, {useState, useMemo} from 'react';
 import classNames from 'classnames';
 
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown/SimpleDropdown';
-import {
-  setAiCustomizationProperty,
-  updateAiCustomization,
-} from '../../redux/aichatRedux';
+import {setAiCustomizationProperty} from '../../redux/aichatRedux';
 import styles from '../model-customization-workspace.module.scss';
 import {
   DEFAULT_VISIBILITIES,
@@ -22,6 +19,7 @@ import {modelDescriptions} from '../../constants';
 import {AichatLevelProperties, ModelDescription} from '@cdo/apps/aichat/types';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {useSelector} from 'react-redux';
+import UpdateButton from './UpdateButton';
 
 const SetupCustomization: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
@@ -73,11 +71,6 @@ const SetupCustomization: React.FunctionComponent = () => {
       isDisabled(systemPrompt) &&
       isDisabled(selectedModelId)) ||
     readOnlyWorkspace;
-
-  const onUpdate = useCallback(
-    () => dispatch(updateAiCustomization()),
-    [dispatch]
-  );
 
   const renderChooseAndCompareModels = () => {
     return (
@@ -175,13 +168,7 @@ const SetupCustomization: React.FunctionComponent = () => {
         )}
       </div>
       <div className={styles.footerButtonContainer}>
-        <Button
-          text="Update"
-          disabled={allFieldsDisabled}
-          iconLeft={{iconName: 'edit'}}
-          onClick={onUpdate}
-          className={styles.updateButton}
-        />
+        <UpdateButton isDisabledDefault={allFieldsDisabled} />
       </div>
     </div>
   );
