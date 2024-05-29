@@ -46,8 +46,6 @@ class Game < ApplicationRecord
   NETSIM = 'netsim'.freeze
   CRAFT = 'craft'.freeze
   MAZE = 'maze'.freeze
-  CALC = 'calc'.freeze
-  EVAL = 'eval'.freeze
   PIXELATION = 'pixelation'.freeze
   TEXT_COMPRESSION = 'text_compression'.freeze
   LEVEL_GROUP = 'level_group'.freeze
@@ -86,14 +84,6 @@ class Game < ApplicationRecord
 
   def self.custom_flappy
     @@game_custom_flappy ||= find_by_name("CustomFlappy")
-  end
-
-  def self.calc
-    @@game_calc ||= find_by_name("Calc")
-  end
-
-  def self.eval
-    @@game_eval ||= find_by_name("Eval")
   end
 
   def self.applab
