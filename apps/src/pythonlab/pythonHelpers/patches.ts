@@ -12,11 +12,11 @@ os.fsync(sys.stdout.fileno())
 // TODO: Should we always patch matplotlib? Or can we be smarter about when to patch it?
 // (patching it requires importing it, which can be slow).
 // Ticket: https://codedotorg.atlassian.net/browse/CT-475
-export function getSetupCode() {
-  return `
-from pythonlab_setup import setup_pythonlab
+const SETUP_CODE = `from pythonlab_setup import setup_pythonlab
 setup_pythonlab('${MATPLOTLIB_IMG_TAG}')
 `;
-}
 
-export const ALL_PATCHES = [{contents: FLUSH_STDOUT, shouldPrepend: false}];
+export const ALL_PATCHES = [
+  {contents: SETUP_CODE, shouldPrepend: true},
+  {contents: FLUSH_STDOUT, shouldPrepend: false},
+];

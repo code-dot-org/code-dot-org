@@ -11,7 +11,7 @@ import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {PyodideMessage, PyodidePathContent} from '../types';
 
 import {HIDDEN_FOLDERS} from './constants';
-import {ALL_PATCHES, getSetupCode} from './patches';
+import {ALL_PATCHES} from './patches';
 
 export function applyPatches(originalCode: string) {
   let finalCode = originalCode;
@@ -21,7 +21,6 @@ export function applyPatches(originalCode: string) {
       ? patch.contents + '\n' + finalCode
       : finalCode + '\n' + patch.contents;
   }
-  finalCode = getSetupCode() + finalCode;
   return finalCode;
 }
 
