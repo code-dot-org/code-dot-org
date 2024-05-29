@@ -36,6 +36,7 @@ export function parseErrorMessage(errorMessage: string) {
     mainErrorLine++;
   }
   if (mainErrorLine >= errorLines.length) {
+    // If we never find the main.py error, return the entire message.
     return errorMessage;
   }
   const mainLineNumber = parseInt(
@@ -49,6 +50,7 @@ export function parseErrorMessage(errorMessage: string) {
   const mainErrorLineRegex = /line (\d+)/;
   while (currentLine < errorLines.length) {
     if (lineRegex.test(errorLines[currentLine])) {
+      // If the error message refers to another file, remove the reference to the pyodide folder.
       const [, file, line] = errorLines[currentLine].match(lineRegex)!;
       parsedError += `\n${file}, line ${line}`;
       hasMultiFileStackTrace = true;
@@ -57,7 +59,7 @@ export function parseErrorMessage(errorMessage: string) {
         !hasMultiFileStackTrace &&
         mainErrorLineRegex.test(errorLines[currentLine])
       ) {
-        // If the error message refers to a line number in main.py, we adjust it.
+        // If the error message refers to a line number in main.py, adjust it.
         const line = errorLines[currentLine].match(mainErrorLineRegex)![1];
         const correctedLine = getMainErrorLine(parseInt(line));
         parsedError += `\n${errorLines[currentLine].replace(
@@ -65,6 +67,7 @@ export function parseErrorMessage(errorMessage: string) {
           `line ${correctedLine}`
         )}`;
       } else {
+        // Otherwise, add the line as is.
         parsedError += `\n${errorLines[currentLine]}`;
       }
     }
@@ -73,6 +76,11 @@ export function parseErrorMessage(errorMessage: string) {
   return parsedError;
 }
 
+/**
+ * @param lineNumber original line number from the error message
+ * @returns Adjusted line number for main.py that ignores any patches
+ * prepended to the user's code
+ */
 function getMainErrorLine(lineNumber: number) {
   let prependedLines = 0;
   for (const patch of ALL_PATCHES) {
