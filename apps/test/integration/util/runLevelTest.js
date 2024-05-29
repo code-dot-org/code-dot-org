@@ -152,9 +152,10 @@ function runLevel(app, skinId, level, onAttempt, finished, testData) {
     assetPathPrefix: testData.assetPathPrefix,
     containerId: 'app',
     embed: testData.embed,
-    firebaseName: 'test-firebase-name',
-    firebaseSharedAuthToken: 'test-firebase-shared-auth-token',
-    firebaseAuthToken: 'test-firebase-auth-token',
+    useDatablockStorage: true,
+    firebaseName: 'test-firebase-name', // TODO: post-firebase-cleanup
+    firebaseSharedAuthToken: 'test-firebase-shared-auth-token', // TODO: post-firebase-cleanup
+    firebaseAuthToken: 'test-firebase-auth-token', // TODO: post-firebase-cleanup
     isSignedIn: true,
     onFeedback: finished,
     onExecutionError: testData.onExecutionError

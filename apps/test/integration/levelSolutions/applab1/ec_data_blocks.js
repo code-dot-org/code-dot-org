@@ -1,5 +1,17 @@
 import tickWrapper from '../../util/tickWrapper';
 import {TestResults} from '@cdo/apps/constants';
+import sinon from 'sinon';
+import DatablockStorage from '@cdo/apps/storage/datablockStorage';
+
+// describe('Data blocks', function() {
+//   afterEach(function () {
+//     sinon.restore()
+//   })
+//   it('Data createRecord', function(done) {
+//     createRecord = sinon.stub(DatablockStorage.createRecord).returns(true);
+//     createRecord.has.been.calledWith('mytable', {name:'Alice', age:7}, sinon.match.func);
+//   })
+// })
 
 export default {
   app: 'applab',
@@ -16,7 +28,21 @@ export default {
             ' age: ' + record.age);
         });`,
 
+      /*
+      DatablockStorage.createRecord = function (
+        tableName,
+        record,
+        onSuccess,
+        onError
+      )
+      */
       runBeforeClick(assert) {
+        this.createRecord = sinon
+          .stub(DatablockStorage, 'createRecord')
+          .callsFake((tableName, record, onSuccess, onError) =>
+            onSuccess(true)
+          );
+
         // add a completion on timeout since this is a freeplay level
         tickWrapper.runOnAppTick(Applab, 200, () => {
           Applab.onPuzzleComplete();
@@ -29,6 +55,14 @@ export default {
           debugOutput.textContent,
           '"record created with id: 1 name: Alice age: 7"'
         );
+
+        //assert.isTrue(this.createRecord.calledOnce);
+        //assert.calledOnce(this.createRecord);
+        // assert.isTrue(this.createRecord.calledOnceWith('mytable', {name:'Alice', age:7}));
+
+        // this.createRecord.should.have.been.calledOnce();
+        sinon.assert.calledOnce(this.createRecord);
+
         return true;
       },
       expected: {

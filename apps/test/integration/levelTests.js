@@ -225,6 +225,8 @@ describe('Level tests', function () {
     project.isOwner.restore();
 
     tickWrapper.reset();
+
+    sinon.restore();
   });
 });
 
