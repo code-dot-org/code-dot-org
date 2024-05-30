@@ -118,6 +118,7 @@ module UsersHelper
   #   }
   # }
   def summarize_user_progress(unit, user = current_user, exclude_level_progress = false)
+    unit = unit.original_unit.cached
     user_data = {}
     if user
       is_instructor = unit.can_be_instructor?(user)

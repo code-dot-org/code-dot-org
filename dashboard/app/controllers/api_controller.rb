@@ -322,6 +322,7 @@ class ApiController < ApplicationController
     prevent_caching
     section = load_section
     script = load_script(section)
+    script = script.original_unit.cached
 
     if params[:level_id]
       script_level = script.script_levels.find do |sl|
@@ -410,6 +411,7 @@ class ApiController < ApplicationController
       end
 
       script = Unit.get_from_cache(params[:script])
+      script = script.original_unit.cached
       teacher_viewing_student = !current_user.student? && current_user.students.include?(user)
       render json: summarize_user_progress(script, user).merge(
         {
