@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_05_22_163806) do
+ActiveRecord::Schema.define(version: 2024_05_30_165657) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1916,9 +1916,11 @@ ActiveRecord::Schema.define(version: 2024_05_22_163806) do
     t.string "instruction_type"
     t.string "instructor_audience"
     t.string "participant_audience"
+    t.bigint "mirrored_unit_id"
     t.index ["family_name"], name: "index_scripts_on_family_name"
     t.index ["instruction_type"], name: "index_scripts_on_instruction_type"
     t.index ["instructor_audience"], name: "index_scripts_on_instructor_audience"
+    t.index ["mirrored_unit_id"], name: "index_scripts_on_mirrored_unit_id"
     t.index ["name"], name: "index_scripts_on_name", unique: true
     t.index ["new_name"], name: "index_scripts_on_new_name", unique: true
     t.index ["participant_audience"], name: "index_scripts_on_participant_audience"

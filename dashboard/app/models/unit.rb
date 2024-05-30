@@ -16,12 +16,14 @@
 #  instruction_type     :string(255)
 #  instructor_audience  :string(255)
 #  participant_audience :string(255)
+#  mirrored_unit_id     :bigint
 #
 # Indexes
 #
 #  index_scripts_on_family_name           (family_name)
 #  index_scripts_on_instruction_type      (instruction_type)
 #  index_scripts_on_instructor_audience   (instructor_audience)
+#  index_scripts_on_mirrored_unit_id      (mirrored_unit_id)
 #  index_scripts_on_name                  (name) UNIQUE
 #  index_scripts_on_new_name              (new_name) UNIQUE
 #  index_scripts_on_participant_audience  (participant_audience)
