@@ -2,7 +2,15 @@ import classNames from 'classnames';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
 
+import DCDO from '@cdo/apps/dcdo';
+
+import FontAwesome from '../FontAwesome';
+import {
+  collapseMetadataForStudents,
+  expandMetadataForStudents,
+} from '../sectionProgress/sectionProgressRedux';
 import SortByNameDropdown from '../SortByNameDropdown';
 
 import styles from './progress-table-v2.module.scss';
@@ -23,28 +31,79 @@ const skeletonCell = key => (
   </div>
 );
 
-export default function StudentColumn({
+function StudentColumn({
   sortedStudents,
   unitName,
   sectionId,
   isSkeleton,
+  expandedMetadataStudentIds,
+  expandMetadataForStudents,
+  collapseMetadataForStudents,
 }) {
+  const expandedMetadataEnabled = React.useMemo(
+    () => DCDO.get('progress-v2-metadata-enabled', false),
+    []
+  );
+
   const getFullName = student =>
     student.familyName ? `${student.name} ${student.familyName}` : student.name;
+
+  const getUnexpandableRow = (student, ind) => (
+    <div
+      className={classNames(styles.gridBox, styles.gridBoxStudent)}
+      key={ind}
+    >
+      {getFullName(student)}
+    </div>
+  );
+
+  const getUnexpandedRow = (student, ind) => (
+    <button
+      className={classNames(styles.gridBoxStudentExpandable, styles.gridBox)}
+      key={ind}
+      onClick={() => expandMetadataForStudents([student.id])}
+      type="button"
+      aria-expanded={false}
+    >
+      <FontAwesome
+        icon="caret-right"
+        title="caret"
+        className={styles.gridBoxStudentExpandableCaret}
+      />
+      {getFullName(student)}
+    </button>
+  );
+
+  const getExpandedRow = (student, ind) => (
+    <button
+      className={classNames(styles.gridBoxStudentExpandable, styles.gridBox)}
+      key={ind}
+      onClick={() => collapseMetadataForStudents([student.id])}
+      type="button"
+      aria-expanded={true}
+    >
+      <FontAwesome
+        icon="caret-down"
+        className={styles.gridBoxStudentExpandableCaret}
+      />
+      {getFullName(student)}
+    </button>
+  );
 
   const studentColumnBox = (student, ind) => {
     if (isSkeleton) {
       return skeletonCell(ind);
     }
 
-    return (
-      <div
-        className={classNames(styles.gridBox, styles.gridBoxStudent)}
-        key={ind}
-      >
-        {getFullName(student)}
-      </div>
-    );
+    if (!expandedMetadataEnabled) {
+      return getUnexpandableRow(student, ind);
+    }
+
+    if (expandedMetadataStudentIds.includes(student.id)) {
+      return getExpandedRow(student, ind);
+    }
+
+    return getUnexpandedRow(student, ind);
   };
 
   return (
@@ -67,4 +126,20 @@ StudentColumn.propTypes = {
   unitName: PropTypes.string,
   sortedStudents: PropTypes.array,
   isSkeleton: PropTypes.bool,
+  expandedMetadataStudentIds: PropTypes.array,
+  expandMetadataForStudents: PropTypes.func,
+  collapseMetadataForStudents: PropTypes.func,
 };
+
+export default connect(
+  state => ({
+    expandedMetadataStudentIds:
+      state.sectionProgress.expandedMetadataStudentIds,
+  }),
+  dispatch => ({
+    expandMetadataForStudents: studentIds =>
+      dispatch(expandMetadataForStudents(studentIds)),
+    collapseMetadataForStudents: studentIds =>
+      dispatch(collapseMetadataForStudents(studentIds)),
+  })
+)(StudentColumn);
