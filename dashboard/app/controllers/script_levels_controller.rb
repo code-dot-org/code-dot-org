@@ -221,7 +221,7 @@ class ScriptLevelsController < ApplicationController
 
     @level = select_level
 
-    render json: @level.summarize_for_lab2_properties(@script)
+    render json: @level.summarize_for_lab2_properties(@script, @script_level, @current_user)
   end
 
   # Get a list of hidden lessons for the current users section
@@ -539,13 +539,16 @@ class ScriptLevelsController < ApplicationController
       current_user.present? &&
       (current_user.teacher? || (current_user&.sections_as_student&.any?(&:code_review_enabled?) && !current_user.code_review_groups.empty?))
 
-    # Javalab exemplar URLs include ?exemplar=true as a URL param
+    # Javalab and Code Bridge exemplar URLs include ?exemplar=true as a URL param
     if params[:exemplar]
       return render 'levels/no_access_exemplar' unless current_user&.verified_instructor?
 
       @is_viewing_exemplar = true
       exemplar_sources = @level.try(:exemplar_sources)
-      return render 'levels/no_exemplar' unless exemplar_sources
+      # Java Lab shows the no exemplar page for levels that don't have exemplar sources.
+      # Lab2 handles this on the client side to enable switching between exemplar levels
+      # without a page reload.
+      return render 'levels/no_exemplar' unless exemplar_sources || @level.uses_lab2?
 
       level_view_options(@level.id, {is_viewing_exemplar: true, exemplar_sources: exemplar_sources})
       readonly_view_options
