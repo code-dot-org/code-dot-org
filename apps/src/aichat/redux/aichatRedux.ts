@@ -173,6 +173,15 @@ const getNewMessageId = () => {
   return latestMessageId;
 };
 
+export const RESET_MODEL_NOTIFICATION: ChatCompletionMessage = {
+  id: getNewMessageId(),
+  role: Role.MODEL_UPDATE,
+  chatMessageText: 'Model customizations and model card information',
+  chatMessageSuffix: ' have been reset to default settings.',
+  status: Status.OK,
+  timestamp: getCurrentTime(),
+};
+
 // This is the "core" update logic that is shared when a student saves their
 // model customizations (setup, retrieval, and "publish" tab)
 const saveAiCustomization = async (
@@ -369,11 +378,7 @@ const aichatSlice = createSlice({
   initialState,
   reducers: {
     addChatMessage: (state, action: PayloadAction<ChatCompletionMessage>) => {
-      const message = action.payload;
-      if (message.id < 0) {
-        message.id = getNewMessageId();
-      }
-      state.chatMessages.push(message);
+      state.chatMessages.push(action.payload);
     },
     removeModelUpdateMessage: (state, action: PayloadAction<number>) => {
       const updatedMessages = [...state.chatMessages];
