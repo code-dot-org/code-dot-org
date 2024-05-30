@@ -27,6 +27,8 @@ import Weblab2View from '@cdo/apps/weblab2/Weblab2View';
 import Loading from './Loading';
 import ExtraLinks from './ExtraLinks';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {getAppOptionsViewingExemplar} from '../projects/utils';
+import NoExemplarPage from './components/NoExemplarPage';
 
 // Configuration for how a Lab should be rendered
 interface AppProperties {
@@ -108,6 +110,10 @@ const LabViewsRenderer: React.FunctionComponent = () => {
     state => state.lab.levelProperties?.appName
   );
   const levelId = useAppSelector(state => state.lab.levelProperties?.id);
+  const exemplarSources = useAppSelector(
+    state => state.lab.levelProperties?.exemplarSources
+  );
+  const isViewingExemplar = getAppOptionsViewingExemplar();
 
   const [appsToRender, setAppsToRender] = useState<AppName[]>([]);
 
@@ -151,6 +157,11 @@ const LabViewsRenderer: React.FunctionComponent = () => {
         if (!properties) {
           console.warn("Don't know how to render app: " + appName);
           return null;
+        }
+        // Show a fallback no exemplar page if we are  trying to view
+        // exemplar but there is not exemplar for this level.
+        if (isViewingExemplar && !exemplarSources) {
+          return <NoExemplarPage />;
         }
 
         return (
