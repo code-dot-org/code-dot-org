@@ -18,11 +18,12 @@ import {
   DialogContext,
   DialogType,
 } from '@cdo/apps/lab2/views/dialogs/DialogManager';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {commonI18n} from '@cdo/apps/types/locale';
 
 import {
   addChatMessage,
   clearChatMessages,
-  RESET_MODEL_NOTIFICATION,
   resetToDefaultAiCustomizations,
   setStartingAiCustomizations,
   setViewMode,
@@ -31,16 +32,30 @@ import {
   onSaveFail,
   endSave,
 } from '../redux/aichatRedux';
-import {AichatLevelProperties, ViewMode} from '../types';
+import {
+  AichatLevelProperties,
+  ChatCompletionMessage,
+  Role,
+  ViewMode,
+} from '../types';
 import {isDisabled} from './modelCustomization/utils';
 import ChatWorkspace from './ChatWorkspace';
 import ModelCustomizationWorkspace from './ModelCustomizationWorkspace';
 import PresentationView from './presentation/PresentationView';
 import CopyButton from './CopyButton';
 import moduleStyles from './aichatView.module.scss';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {commonI18n} from '@cdo/apps/types/locale';
 import aichatI18n from '../locale';
+import {getCurrentTime, getNewMessageId} from '@cdo/apps/aichat/redux/utils';
+import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
+
+const RESET_MODEL_NOTIFICATION: ChatCompletionMessage = {
+  id: getNewMessageId(),
+  role: Role.MODEL_UPDATE,
+  chatMessageText: 'Model customizations and model card information',
+  chatMessageSuffix: ' have been reset to default settings.',
+  status: Status.OK,
+  timestamp: getCurrentTime(),
+};
 
 const AichatView: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
