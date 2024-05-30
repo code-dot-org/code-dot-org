@@ -103,5 +103,8 @@ describe('StudentColumn', () => {
     fireEvent.click(holmes);
 
     expect(holmes.ariaExpanded).to.equal('true');
+
+    screen.getByText('Time spent (minutes)');
+    screen.getByText('Last updated');
   });
 });
