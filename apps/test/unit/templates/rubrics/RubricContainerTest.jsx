@@ -982,6 +982,9 @@ describe('RubricContainer', () => {
       </Provider>
     );
 
+    const tourFabBg = document.getElementById('tour-fab-bg');
+    tourFabBg.scrollBy = jest.fn();
+
     const nextButton = await findByText('Next Tip');
 
     fireEvent.click(nextButton);
@@ -1058,7 +1061,8 @@ describe('RubricContainer', () => {
         />
       </Provider>
     );
-
+    const tourFabBg = document.getElementById('tour-fab-bg');
+    tourFabBg.scrollBy = jest.fn();
     const nextButton = await findByText('Next Tip');
 
     fireEvent.click(nextButton);
@@ -1102,6 +1106,8 @@ describe('RubricContainer', () => {
       </Provider>
     );
 
+    const tourFabBg = document.getElementById('tour-fab-bg');
+    tourFabBg.scrollBy = jest.fn();
     await wait();
 
     expect(queryByText('Getting Started with Your AI Teaching Assistant')).to
