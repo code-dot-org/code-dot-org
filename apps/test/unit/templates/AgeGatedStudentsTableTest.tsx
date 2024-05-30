@@ -10,7 +10,7 @@ import manageStudents, {
   setLoginType,
   setStudents,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
-import AgeGatedStudentsTable from '@cdo/apps/templates/teacherDashboard/AgeGatedStudentsTable';
+import AgeGatedStudentsTable from '@cdo/apps/templates/policy_compliance/AgeGatedStudentsModal/AgeGatedStudentsTable';
 import teacherSections, {
   setSections,
   selectSection,

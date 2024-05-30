@@ -5,8 +5,8 @@ import {Provider} from 'react-redux';
 // @ts-expect-error Typescript type declaration error
 import {reduxStore} from '@cdo/storybook/decorators';
 
-import currentUser from '../currentUserRedux';
-import manageStudents from '../manageStudents/manageStudentsRedux';
+import currentUser from '../../currentUserRedux';
+import manageStudents from '../../manageStudents/manageStudentsRedux';
 
 import {UnconnectedAgeGatedStudentsModal} from './AgeGatedStudentsModal';
 

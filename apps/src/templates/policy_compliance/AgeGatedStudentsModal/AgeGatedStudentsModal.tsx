@@ -7,12 +7,12 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {RootState} from '@cdo/apps/types/redux';
 import i18n from '@cdo/locale';
 
-import BaseDialog from '../BaseDialog';
-import SafeMarkdown from '../SafeMarkdown';
+import BaseDialog from '../../BaseDialog';
+import SafeMarkdown from '../../SafeMarkdown';
 
 import AgeGatedStudentsTable from './AgeGatedStudentsTable';
 
-import styles from '@cdo/apps/templates/teacherDashboard/age-gated-students-modal.module.scss';
+import styles from '@cdo/apps/templates/policy_compliance/AgeGatedStudentsModal/age-gated-students-modal.module.scss';
 
 interface ReduxState {
   manageStudents: {

@@ -8,9 +8,9 @@ import {
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import i18n from '@cdo/locale';
 
-import AgeGatedTableConsentStatusCell from '../manageStudents/AgeGatedTableConsentStatusCell';
-import ManageStudentsFamilyNameCell from '../manageStudents/ManageStudentsFamilyNameCell';
-import {tableLayoutStyles} from '../tables/tableConstants';
+import AgeGatedTableConsentStatusCell from '../../manageStudents/AgeGatedTableConsentStatusCell';
+import ManageStudentsFamilyNameCell from '../../manageStudents/ManageStudentsFamilyNameCell';
+import {tableLayoutStyles} from '../../tables/tableConstants';
 
 interface ReduxState {
   manageStudents: {
