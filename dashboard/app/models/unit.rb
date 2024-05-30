@@ -71,6 +71,10 @@ class Unit < ApplicationRecord
   belongs_to :mirrored_unit, class_name: 'Unit', optional: true
   has_many :mirror_units, class_name: 'Unit', foreign_key: 'mirrored_unit_id'
 
+  def original_unit
+    mirrored_unit || self
+  end
+
   scope :with_associated_models, -> do
     includes(
       [
