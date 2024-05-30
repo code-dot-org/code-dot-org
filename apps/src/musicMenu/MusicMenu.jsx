@@ -115,6 +115,14 @@ const optionsList = [
       },
     ],
   },
+  {
+    name: 'timeline-layout-2',
+    type: 'radio',
+    values: [
+      {value: 'false', description: 'Original timeline (default).'},
+      {value: 'true', description: 'New timeline.'},
+    ],
+  },
 ];
 
 export default class MusicMenu extends React.Component {

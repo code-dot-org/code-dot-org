@@ -19,8 +19,8 @@
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2024-05-16 22:32:12 UTC",
-    "published_state": "beta",
+    "serialized_at": "2024-05-29 18:24:58 UTC",
+    "published_state": "preview",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -15560,6 +15560,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music_lab_intro_panels_start2_express"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -15582,6 +15585,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_tutorial_play_sound_express"
+        ],
         "progression": "Play a sound"
       },
       "bonus": false,
@@ -15604,6 +15610,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_tutorial_change_sound_express"
+        ],
         "progression": "Play more sounds"
       },
       "bonus": false,
@@ -15626,6 +15635,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_tutorial_panels_repeat_express"
+        ],
         "progression": "Repeat"
       },
       "bonus": false,
@@ -15648,6 +15660,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_tutorial_repeat_express"
+        ],
         "progression": "Repeat"
       },
       "bonus": false,
@@ -15670,6 +15685,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_tutorial_panels_playtogether_express"
+        ],
         "progression": "Play together"
       },
       "bonus": false,
@@ -15692,6 +15710,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_tutorial_play_together_express"
+        ],
         "progression": "Play together"
       },
       "bonus": false,
@@ -15714,6 +15735,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_tutorial_panels_function_express"
+        ],
         "progression": "Functions"
       },
       "bonus": false,
@@ -15736,6 +15760,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_tutorial_function_express"
+        ],
         "progression": "Functions"
       },
       "bonus": false,
@@ -15758,6 +15785,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_tutorial_panels_trigger_express"
+        ],
         "progression": "Triggers"
       },
       "bonus": false,
@@ -15780,6 +15810,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_tutorial_trigger_express"
+        ],
         "progression": "Triggers"
       },
       "bonus": false,
@@ -15802,6 +15835,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_tutorial_panels_notes_express"
+        ],
         "progression": "Custom notes & beats"
       },
       "bonus": false,
@@ -15824,6 +15860,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_tutorial_notes_express"
+        ],
         "progression": "Custom notes & beats"
       },
       "bonus": false,
@@ -15846,6 +15885,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_tutorial_drums_express"
+        ],
         "progression": "Custom notes & beats"
       },
       "bonus": false,
@@ -15868,6 +15910,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "usiclab_tutorial_panels_end_express"
+        ],
         "progression": "Outro"
       },
       "bonus": false,
