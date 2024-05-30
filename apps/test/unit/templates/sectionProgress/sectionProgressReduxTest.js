@@ -199,6 +199,13 @@ describe('sectionProgressRedux', () => {
       const nextState = sectionProgress(initialState, action);
       assert.deepEqual(nextState.expandedMetadataStudentIds, [1, 2]);
     });
+    it('No duplicates', () => {
+      const action = expandMetadataForStudents([1, 2]);
+      const intermediateState = sectionProgress(initialState, action);
+
+      const nextState = sectionProgress(intermediateState, action);
+      assert.deepEqual(nextState.expandedMetadataStudentIds, [1, 2]);
+    });
     it('Removes ids', () => {
       const addAction = expandMetadataForStudents([1, 2]);
       const intermediateState = sectionProgress(initialState, addAction);

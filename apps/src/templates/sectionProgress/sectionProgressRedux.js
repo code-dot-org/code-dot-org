@@ -1,3 +1,5 @@
+import _ from 'lodash';
+
 import {SET_SCRIPT} from '@cdo/apps/redux/unitSelectionRedux';
 
 import firehoseClient from '../../lib/util/firehose';
@@ -127,10 +129,10 @@ export default function sectionProgress(state = initialState, action) {
   if (action.type === EXPAND_METADATA_FOR_STUDENTS) {
     return {
       ...state,
-      expandedMetadataStudentIds: [
+      expandedMetadataStudentIds: _.uniq([
         ...state.expandedMetadataStudentIds,
         ...action.studentIds,
-      ],
+      ]),
     };
   }
   if (action.type === COLLAPSE_METADATA_FOR_STUDENTS) {
