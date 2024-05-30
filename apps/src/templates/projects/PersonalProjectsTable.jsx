@@ -22,7 +22,7 @@ import PersonalProjectsTableActionsCell from './PersonalProjectsTableActionsCell
 import {
   personalProjectDataPropType,
   PROJECT_DEFAULT_IMAGE,
-  PROJECT_DEFAULT_IMAGE_OVERRIDE,
+  PROJECT_DEFAULT_THUMBNAIL_IMAGE_OVERRIDE,
 } from './projectConstants';
 import {PROJECT_TYPE_MAP} from './projectTypeMap';
 
@@ -312,7 +312,7 @@ const thumbnailFormatter = function (thumbnailUrl, {rowData}) {
   const projectUrl = `/projects/${rowData.type}/${rowData.channel}/edit`;
   thumbnailUrl =
     thumbnailUrl ||
-    PROJECT_DEFAULT_IMAGE_OVERRIDE[rowData.type] ||
+    PROJECT_DEFAULT_THUMBNAIL_IMAGE_OVERRIDE[rowData.type] ||
     PROJECT_DEFAULT_IMAGE;
   return (
     <a
