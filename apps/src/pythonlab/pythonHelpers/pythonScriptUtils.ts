@@ -210,6 +210,21 @@ export async function importPackagesFromFiles(
   }
 }
 
+// Delete any python globals that were not present in
+// the original globals on pyodide start (originalGlobals param).
+// This allows us to ensure each pyodide run has a clean state.
+export function resetGlobals(
+  pyodide: PyodideInterface,
+  originalGlobals: Map<string, string>
+) {
+  const newGlobals = pyodide.globals.toJs();
+  newGlobals.forEach((_value: string, key: string) => {
+    if (!originalGlobals.has(key)) {
+      pyodide.globals.delete(key);
+    }
+  });
+}
+
 // For the given fileId, return the module version of the file. For example, a file at
 // path folder1/folder2/file.py would have a module name of "folder1.folder2.file".
 function getModuleName(fileId: string, source: MultiFileSource) {

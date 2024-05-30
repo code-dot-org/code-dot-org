@@ -4,7 +4,7 @@
   "category": "Math",
   "category_key": "math",
   "block_name": "math_random_int",
-  "content": "Gets a random integer within the range of the specified minimum and maximum numbers.\r\n\r\nThis block can be used in place of any number. It works well for randomizing a sprite’s property or location. ",
+  "content": "Gets a random integer within the range of the specified minimum and maximum numbers.\n\nThis block can be used in place of any number. It works well for generating a random integer. For example, it can be used to randomize a sprite’s property or location. ",
   "examples": [
     {
       "name": "Example 1",

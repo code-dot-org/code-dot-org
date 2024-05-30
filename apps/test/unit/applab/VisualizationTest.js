@@ -1,8 +1,10 @@
-import {expect} from '../../util/reconfiguredChai';
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {UnconnectedVisualization} from '@cdo/apps/applab/Visualization';
+import React from 'react';
+
 import {WIDGET_WIDTH} from '@cdo/apps/applab/constants';
+import {UnconnectedVisualization} from '@cdo/apps/applab/Visualization';
+
+import {expect} from '../../util/reconfiguredChai';
 
 describe('Visualization', () => {
   describe('in widget mode', () => {

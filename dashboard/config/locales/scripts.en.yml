@@ -16929,7 +16929,7 @@ en:
               name: Share Your Voice
           lesson_groups: {}
           name: k5-ai-data-2024
-          title: How AI Makes Predictions
+          title: How AI Makes Decisions
           description_audience: ''
           description_short: ''
           description: ''
@@ -17705,3 +17705,69 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
+        sandbox-csf-a:
+          lessons: {}
+          lesson_groups: {}
+          name: sandbox-csf-a
+          title: 'SANDBOX CSF Course A '
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        sandbox-csf-intro:
+          lessons: {}
+          lesson_groups: {}
+          name: sandbox-csf-intro
+          title: SANDBOX CSF Intro
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        sandbox-csf-b:
+          lessons: {}
+          lesson_groups: {}
+          name: sandbox-csf-b
+          title: SANDBOX CSF Course B
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        sandbox-csf-c:
+          lessons: {}
+          lesson_groups: {}
+          name: sandbox-csf-c
+          title: SANDBOX CSF Course C
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        sandboc-csf-d:
+          lessons: {}
+          lesson_groups: {}
+        sandbox-csf-d:
+          lessons: {}
+          lesson_groups: {}
+          name: sandbox-csf-d
+          title: SANDBOX CSF Course D
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        sandbox-csf-e:
+          lessons: {}
+          lesson_groups: {}
+          name: sandbox-csf-e
+          title: SANDBOX CSF Course E
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        sandbox-csf-f:
+          lessons: {}
+          lesson_groups: {}
+          name: sandbox-csf-f
+          title: SANDBOX CSF Course F
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
