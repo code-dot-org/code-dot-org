@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import * as elementUtils from './designElements/elementUtils.js';
 
 export default class ElementSelect extends React.Component {
