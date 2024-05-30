@@ -458,3 +458,8 @@ $level-cell-width: 52;
   padding-right: 12px;
   font-size: 14px;
 }
+
+.lessonDataCellExpanded {
+  display: flex;
+  flex-direction: column;
+}

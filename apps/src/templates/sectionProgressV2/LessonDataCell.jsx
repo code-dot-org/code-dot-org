@@ -9,6 +9,7 @@ import {studentLessonProgressType} from '../progress/progressTypes';
 import {teacherDashboardUrl} from '../teacherDashboard/urlHelpers';
 
 import {ITEM_TYPE} from './ItemType';
+import {formatTimeSpent, formatLastUpdated} from './MetadataHelpers';
 import ProgressIcon from './ProgressIcon';
 
 import styles from './progress-table-v2.module.scss';
@@ -80,10 +81,10 @@ function LessonDataCell({
       <div className={styles.lessonDataCellExpanded}>
         {lessonCellUnexpanded}
         <div className={classNames(styles.gridBox, styles.gridBoxMetadata)}>
-          67
+          {formatTimeSpent(studentLessonProgress)}
         </div>
         <div className={classNames(styles.gridBox, styles.gridBoxMetadata)}>
-          4/13
+          {formatLastUpdated(studentLessonProgress)}
         </div>
       </div>
     );
