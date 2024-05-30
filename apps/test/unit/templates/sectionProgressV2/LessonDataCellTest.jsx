@@ -1,4 +1,4 @@
-import {render, screen} from '@testing-library/react';
+import {render, screen, cleanup} from '@testing-library/react';
 import React from 'react';
 
 import {UnconnectedLessonDataCell} from '@cdo/apps/templates/sectionProgressV2/LessonDataCell';
@@ -67,6 +67,8 @@ describe('LevelDataCell', () => {
 
     screen.getByText('3/4');
 
+    cleanup();
+
     renderDefault({
       metadataExpanded: true,
       studentLessonProgress: {
@@ -74,16 +76,18 @@ describe('LevelDataCell', () => {
         imperfectPercent: 20,
         completedPercent: 60,
         timeSpent: 300,
-        lastTimestamp: 1999999999,
+        lastTimestamp: 1614991198,
       },
     });
-    screen.getByText('3/4');
+    screen.getByText('3/6');
   });
 
   it('Shows time spent', () => {
     renderDefault({metadataExpanded: true});
 
     screen.getByText('5');
+
+    cleanup();
 
     renderDefault({
       metadataExpanded: true,
