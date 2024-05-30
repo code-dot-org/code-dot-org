@@ -21,12 +21,12 @@ const StartOverDialog: React.FunctionComponent<BaseDialogProps> = ({
   const currentAppName =
     useAppSelector(state => state.lab.levelProperties?.appName) || '';
 
-  const textBasedLab =
+  const isTextWorkspace =
     currentAppName && TEXT_BASED_LABS.includes(currentAppName);
 
   const dialogMessage =
     LAB_SPECIFIC_MESSAGES[currentAppName] ||
-    (textBasedLab
+    (isTextWorkspace
       ? commonI18n.startOverWorkspaceText()
       : commonI18n.startOverWorkspace());
 

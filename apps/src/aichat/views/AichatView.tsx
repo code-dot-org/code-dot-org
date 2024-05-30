@@ -18,6 +18,7 @@ import {
   DialogContext,
   DialogType,
 } from '@cdo/apps/lab2/views/dialogs/DialogManager';
+import {RESET_MODEL_NOTIFICATION} from '@cdo/apps/aichat/constants';
 const commonI18n = require('@cdo/locale');
 const aichatI18n = require('@cdo/aichat/locale');
 
@@ -28,7 +29,6 @@ import {
   setViewMode,
   clearChatMessages,
   selectAllFieldsHidden,
-  RESET_MODEL_NOTIFICATION,
 } from '../redux/aichatRedux';
 import {AichatLevelProperties, ViewMode} from '../types';
 import {isDisabled} from './modelCustomization/utils';

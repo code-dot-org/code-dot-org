@@ -93,7 +93,7 @@ const displayModelUpdateMessage = (
   message: ChatCompletionMessage,
   onRemove: () => void
 ) => {
-  const {chatMessageTextBold, chatMessageText, timestamp} = message;
+  const {chatMessageText, chatMessageSuffix, timestamp} = message;
 
   return (
     <ChatNotificationMessage
@@ -101,8 +101,8 @@ const displayModelUpdateMessage = (
       content={
         <>
           <span className={moduleStyles.modelUpdateMessageTextContainer}>
-            <StrongText>{chatMessageTextBold}</StrongText>
-            {chatMessageText}
+            <StrongText>{chatMessageText}</StrongText>
+            {chatMessageSuffix}
           </span>
           <StrongText>{timestamp}</StrongText>
         </>
