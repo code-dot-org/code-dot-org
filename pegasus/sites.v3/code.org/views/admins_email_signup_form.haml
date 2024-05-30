@@ -4,8 +4,8 @@
 :javascript
   hbspt.forms.create({
     region: "na1",
-    portalId: "44976903",
-    formId: "64c85121-eb10-45d1-82ab-c3052c625318",
+    portalId: "#{CDO.hubspot_portal_id}",
+    formId: "#{CDO.hubspot_admin_interest_form_id}",
     onFormSubmit: function() {
       let submitFormEvent = document.createEvent('Event');
       submitFormEvent.initEvent('submitsAdminForm', true, true);
