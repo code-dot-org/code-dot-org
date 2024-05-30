@@ -7,12 +7,10 @@ import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElemen
 import modelCustomizationStyles from '../model-customization-workspace.module.scss';
 import styles from './retrieval-customization.module.scss';
 import {isDisabled} from './utils';
-import {
-  setAiCustomizationProperty,
-  updateAiCustomization,
-} from '@cdo/apps/aichat/redux/aichatRedux';
+import {setAiCustomizationProperty} from '@cdo/apps/aichat/redux/aichatRedux';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {useSelector} from 'react-redux';
+import UpdateButton from './UpdateButton';
 
 const RetrievalCustomization: React.FunctionComponent = () => {
   const [newRetrievalContext, setNewRetrievalContext] = useState('');
@@ -26,11 +24,6 @@ const RetrievalCustomization: React.FunctionComponent = () => {
   );
 
   const isReadOnly = useSelector(isReadOnlyWorkspace) || isDisabled(visibility);
-
-  const onUpdate = useCallback(
-    () => dispatch(updateAiCustomization()),
-    [dispatch]
-  );
 
   const onAdd = useCallback(() => {
     dispatch(
@@ -110,13 +103,7 @@ const RetrievalCustomization: React.FunctionComponent = () => {
         })}
       </div>
       <div className={modelCustomizationStyles.footerButtonContainer}>
-        <Button
-          text="Update"
-          onClick={onUpdate}
-          iconLeft={{iconName: 'edit'}}
-          className={modelCustomizationStyles.updateButton}
-          disabled={isReadOnly}
-        />
+        <UpdateButton isDisabledDefault={isReadOnly} />
       </div>
     </div>
   );

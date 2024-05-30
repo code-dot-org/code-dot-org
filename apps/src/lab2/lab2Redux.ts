@@ -32,7 +32,11 @@ import {
   ValidationState,
 } from './progress/ProgressManager';
 import {LevelPropertiesValidator} from './responseValidators';
-import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import {
+  getAppOptionsEditBlocks,
+  getAppOptionsEditingExemplar,
+  getAppOptionsViewingExemplar,
+} from '@cdo/apps/lab2/projects/utils';
 import {START_SOURCES} from './constants';
 
 interface PageError {
@@ -103,6 +107,8 @@ export const setUpWithLevel = createAsyncThunk(
       });
 
       await cleanUpProjectManager();
+      const isViewingExemplar = getAppOptionsViewingExemplar();
+      const isEditingExemplar = getAppOptionsEditingExemplar();
 
       // Load level properties if we have a levelPropertiesPath.
       const levelProperties = await loadLevelProperties(
@@ -127,10 +133,11 @@ export const setUpWithLevel = createAsyncThunk(
         return;
       }
 
-      // Start mode doesn't use channel ids so we can skip creating
-      // a project manager and just set the level data.
+      // If we are in start mode or are editing or viewing exemplars,
+      // we don't use a channel id.
+      // We can skip creating a project manager and just set the level data.
       const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-      if (isStartMode) {
+      if (isStartMode || isViewingExemplar || isEditingExemplar) {
         setProjectAndLevelData(
           {levelProperties},
           thunkAPI.signal.aborted,
