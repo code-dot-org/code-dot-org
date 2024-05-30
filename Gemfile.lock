@@ -570,9 +570,6 @@ GEM
       minitest (>= 5.0)
       ruby-progressbar
     minitest-spec-context (0.0.5)
-    minitest-spec-rails (7.2.0)
-      minitest (>= 5.0)
-      railties (>= 4.1)
     minitest-stub-const (0.6)
     mocha (1.1.0)
       metaclass (~> 0.0.1)
@@ -1068,7 +1065,6 @@ DEPENDENCIES
   minitest-around
   minitest-reporters (~> 1.2.0.beta3)
   minitest-spec-context (~> 0.0.3)
-  minitest-spec-rails (~> 7.2)
   minitest-stub-const (~> 0.6)
   mocha
   mysql2 (>= 0.4.1)

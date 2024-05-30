@@ -1,5 +1,5 @@
 require 'test_reporter'
-require 'minitest-spec-rails'
+require 'rspec'
 
 if defined? ActiveRecord
   ActiveRecord::Migration&.check_pending!
@@ -30,7 +30,7 @@ ENV['TZ'] = 'UTC'
 require 'mocha/mini_test'
 
 CDO.stubs(:rack_env).returns(:test) if defined? CDO
-Rails.application&.reload_routes! if defined?(Rails) && defined?(Rails.application)
+Rails.application.reload_routes! if defined?(Rails) && defined?(Rails.application)
 
 require File.expand_path('../../config/environment', __FILE__)
 I18n.load_path += Dir[Rails.root.join('test', 'en.yml')]
