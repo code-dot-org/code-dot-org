@@ -93,6 +93,8 @@ function LessonDataCell({
   return lessonCellUnexpanded;
 }
 
+export const UnconnectedLessonDataCell = LessonDataCell;
+
 export default connect(state => ({
   sectionId: state.teacherSections.selectedSectionId,
 }))(LessonDataCell);
