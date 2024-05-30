@@ -424,6 +424,7 @@ describe('RubricSettings', () => {
 
   it('displays the AI enable toggle', () => {
     stubFetchEvalStatusForAll(ready);
+    stubFetchTeacherEvaluations(evals);
 
     render(
       <Provider store={store}>
@@ -442,6 +443,7 @@ describe('RubricSettings', () => {
 
   it('ensures the AI enable toggle represents the current value of the AI disabled user setting', () => {
     stubFetchEvalStatusForAll(ready);
+    stubFetchTeacherEvaluations(evals);
 
     // Set the user's opt-out setting to true (our setting will now be false)
     store.dispatch(setAiRubricsDisabled(true));
@@ -463,6 +465,7 @@ describe('RubricSettings', () => {
 
   it('updates the AI disabled user setting when the toggle is used', async () => {
     stubFetchEvalStatusForAll(ready);
+    stubFetchTeacherEvaluations(evals);
 
     render(
       <Provider store={store}>
