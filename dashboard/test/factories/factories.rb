@@ -1048,6 +1048,8 @@ FactoryBot.define do
       after(:create) do |csc_script|
         csc_script.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSC
         csc_script.save!
+        course_offering = CourseOffering.add_course_offering(csc_script)
+        course_offering.update!(marketing_initiative: 'CSC')
       end
     end
 
