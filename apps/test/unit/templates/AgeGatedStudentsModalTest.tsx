@@ -11,7 +11,7 @@ import manageStudents, {
   setLoginType,
   setStudents,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
-import AgeGatedStudentsModal from '@cdo/apps/templates/teacherDashboard/AgeGatedStudentsModal';
+import AgeGatedStudentsModal from '@cdo/apps/templates/policy_compliance/AgeGatedStudentsModal/AgeGatedStudentsModal';
 import teacherSections, {
   setSections,
   selectSection,
