@@ -23,12 +23,14 @@ interface Props {
   onClose: () => void;
   isOpen: boolean;
   isLoadingStudents: boolean;
+  ageGatedStudentsCount?: number;
 }
 
 const AgeGatedStudentsModal: React.FC<Props> = ({
   isLoadingStudents,
   isOpen,
   onClose,
+  ageGatedStudentsCount = 0,
 }) => {
   const currentUser = useSelector((state: RootState) => state.currentUser);
   const reportEvent = (eventName: string, payload: object = {}) => {
@@ -38,8 +40,9 @@ const AgeGatedStudentsModal: React.FC<Props> = ({
   useEffect(() => {
     reportEvent(EVENTS.CAP_AGE_GATED_MODAL_SHOWN, {
       user_id: currentUser.userId,
+      number_of_gateable_students: ageGatedStudentsCount,
     });
-  }, [currentUser.userId]);
+  }, [currentUser.userId, ageGatedStudentsCount]);
   return (
     <BaseDialog
       isOpen={isOpen}
