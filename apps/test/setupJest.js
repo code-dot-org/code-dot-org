@@ -19,7 +19,7 @@ import '../build/locales/en_us/studio_locale.js';
 import '../build/locales/en_us/craft_locale.js';
 import '../build/locales/en_us/flappy_locale.js';
 
-import enzyme from 'enzyme';
+import enzyme from 'enzyme'; // eslint-disable-line no-restricted-imports
 import Adapter from 'enzyme-adapter-react-16';
 import $ from 'jquery';
 import {TextEncoder, TextDecoder} from 'util';

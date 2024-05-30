@@ -225,7 +225,7 @@ const WEBPACK_BASE_CONFIG = {
     fallback: {...nodePolyfillConfig.resolve.fallback},
     alias: {
       ...WEBPACK_ALIASES,
-      serialport: false
+      serialport: false,
     },
   },
   module: {
