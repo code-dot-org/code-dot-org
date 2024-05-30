@@ -22,7 +22,7 @@ class ProjectsListTest < ActionController::TestCase
 
     hidden_project_value = {
       name: 'Hidden App',
-      level: '/projects/playlab',
+      level: '/projects/spritelab',
       createdAt: '2017-01-01T00:00:00.000-08:00',
       updatedAt: '2017-01-01T00:00:00.000-08:00',
       hidden: true
@@ -114,10 +114,10 @@ class ProjectsListTest < ActionController::TestCase
     refute_nil ProjectsList.send(:get_published_project_and_user_data, project_and_user)
   end
 
-  test 'get_published_project_and_user_data does not return nil for PlayLab project even with sharing_disabled' do
+  test 'get_published_project_and_user_data does not return nil for Poetry project even with sharing_disabled' do
     project_and_user = {
       properties: {sharing_disabled: true}.to_json,
-      project_type: 'playlab',
+      project_type: 'poetry',
       storage_id: @storage_id,
       id: 1,
       birthday: 13.years.ago.to_datetime,
@@ -239,7 +239,7 @@ class ProjectsListTest < ActionController::TestCase
         id: 184,
         storage_id: 160,
         value: fake_project_value,
-        project_type: "playlab",
+        project_type: "spritelab",
         published_at: "2018-02-26 11:23:11 -0800",
         featured_at: "2018-02-26 19:23:36 -0800",
         unfeatured_at: nil,
@@ -270,7 +270,7 @@ class ProjectsListTest < ActionController::TestCase
         id: 184,
         storage_id: 160,
         value: fake_project_value,
-        project_type: "playlab",
+        project_type: "spritelab",
         published_at: "2018-02-26 11:23:11 -0800",
         featured_at: "2018-02-26 19:23:36 -0800",
         unfeatured_at: nil,
@@ -295,7 +295,6 @@ class ProjectsListTest < ActionController::TestCase
         {name: "featuredApplab3"}
       ],
       gamelab: [],
-      playlab: [],
       artist: [],
       minecraft: [],
       events: [],
@@ -303,6 +302,7 @@ class ProjectsListTest < ActionController::TestCase
       spritelab: [],
       dance: [],
       poetry: [],
+      music: [],
       library: []
     }
     fake_recent_projects = {
@@ -312,7 +312,6 @@ class ProjectsListTest < ActionController::TestCase
         {name: "recentApplab3"}
       ],
       gamelab: [],
-      playlab: [],
       artist: [],
       minecraft: [],
       events: [],
@@ -320,6 +319,7 @@ class ProjectsListTest < ActionController::TestCase
       spritelab: [],
       dance: [],
       poetry: [],
+      music: [],
       library: []
     }
     ProjectsList.stubs(:fetch_featured_published_projects).returns(fake_featured_projects)
