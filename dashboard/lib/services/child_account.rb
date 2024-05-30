@@ -1,4 +1,4 @@
-class Services::ChildAccount
+module Services::ChildAccount
   # Sets the child's account to a lock_out state according to our Child Account
   # Policy.
   def self.lock_out(user)

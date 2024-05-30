@@ -31,6 +31,7 @@ const UserChatMessageEditor: React.FunctionComponent = () => {
         placeholder={aichatI18n.userChatMessagePlaceholder()}
         onChange={e => setUserMessage(e.target.value)}
         value={userMessage}
+        disabled={isWaitingForChatResponse}
       />
 
       <div className={moduleStyles.centerSingleItemContainer}>
