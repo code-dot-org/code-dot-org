@@ -171,6 +171,15 @@ const getNewMessageId = () => {
   return latestMessageId;
 };
 
+export const RESET_MODEL_NOTIFICATION: ChatCompletionMessage = {
+  id: getNewMessageId(),
+  role: Role.MODEL_UPDATE,
+  chatMessageText: 'Model customizations and model card information',
+  chatMessageSuffix: ' have been reset to default settings.',
+  status: Status.OK,
+  timestamp: getCurrentTime(),
+};
+
 // This is the "core" update logic that is shared when a student saves their
 // model customizations (setup, retrieval, and "publish" tab)
 const saveAiCustomization = async (
@@ -237,6 +246,7 @@ export const onSaveComplete =
           role: Role.MODEL_UPDATE,
           chatMessageText:
             AI_CUSTOMIZATIONS_LABELS[property as keyof AiCustomizations],
+          chatMessageSuffix: ' has been updated.',
           status: Status.OK,
           timestamp: getCurrentTime(),
         })
@@ -498,6 +508,20 @@ const aichatSlice = createSlice({
       state.fieldVisibilities =
         levelAichatSettings?.visibilities || DEFAULT_VISIBILITIES;
     },
+    resetToDefaultAiCustomizations: (
+      state,
+      action: PayloadAction<LevelAichatSettings | undefined>
+    ) => {
+      const levelAichatSettings = action.payload;
+
+      const defaultAiCustomizations: AiCustomizations =
+        levelAichatSettings?.initialCustomizations || EMPTY_AI_CUSTOMIZATIONS;
+
+      state.savedAiCustomizations = defaultAiCustomizations;
+      state.currentAiCustomizations = defaultAiCustomizations;
+      state.fieldVisibilities =
+        levelAichatSettings?.visibilities || DEFAULT_VISIBILITIES;
+    },
     setSavedAiCustomizations: (
       state,
       action: PayloadAction<AiCustomizations>
@@ -605,6 +629,7 @@ export const {
   setShowWarningModal,
   updateUserChatMessageStatus,
   updateChatMessageSession,
+  resetToDefaultAiCustomizations,
   setViewMode,
   setStartingAiCustomizations,
   setSavedAiCustomizations,
