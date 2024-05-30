@@ -18,8 +18,6 @@ import {
   DialogContext,
   DialogType,
 } from '@cdo/apps/lab2/views/dialogs/DialogManager';
-const commonI18n = require('@cdo/locale');
-const aichatI18n = require('@cdo/aichat/locale');
 
 import {
   addChatMessage,
@@ -29,6 +27,9 @@ import {
   setStartingAiCustomizations,
   setViewMode,
   selectAllFieldsHidden,
+  onSaveComplete,
+  onSaveFail,
+  endSave,
 } from '../redux/aichatRedux';
 import {AichatLevelProperties, ViewMode} from '../types';
 import {isDisabled} from './modelCustomization/utils';
@@ -37,6 +38,9 @@ import ModelCustomizationWorkspace from './ModelCustomizationWorkspace';
 import PresentationView from './presentation/PresentationView';
 import CopyButton from './CopyButton';
 import moduleStyles from './aichatView.module.scss';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {commonI18n} from '@cdo/apps/types/locale';
+import aichatI18n from '../locale';
 
 const AichatView: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
@@ -67,6 +71,25 @@ const AichatView: React.FunctionComponent = () => {
   const {botName, isPublished} = currentAiCustomizations.modelCardInfo;
 
   const allFieldsHidden = useAppSelector(selectAllFieldsHidden);
+
+  const projectManager = Lab2Registry.getInstance().getProjectManager();
+  // Attach save listeners whenever the project manager updates
+  useEffect(() => {
+    if (!projectManager) {
+      return;
+    }
+    // No save occurred
+    projectManager.addSaveNoopListener(() => {
+      dispatch(endSave());
+    });
+
+    projectManager.addSaveSuccessListener(() => {
+      dispatch(onSaveComplete());
+    });
+    projectManager.addSaveFailListener(() => {
+      dispatch(onSaveFail());
+    });
+  }, [projectManager, dispatch]);
 
   useEffect(() => {
     const studentAiCustomizations = JSON.parse(initialSources);

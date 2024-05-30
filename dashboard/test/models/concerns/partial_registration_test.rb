@@ -60,6 +60,11 @@ class PartialRegistrationTest < ActiveSupport::TestCase
       refute PartialRegistration.can_finish_signup?({}, @session)
     end
 
+    it 'can_finish_signup? is false when user is nil' do
+      PartialRegistration.persist_attributes @session, build(:user)
+      refute PartialRegistration.can_finish_signup?(ActionController::Parameters.new({user: nil}), @session)
+    end
+
     it 'can_finish_signup? is false when email is not present' do
       PartialRegistration.persist_attributes @session, build(:user)
       refute PartialRegistration.can_finish_signup?({user: {}}, @session)

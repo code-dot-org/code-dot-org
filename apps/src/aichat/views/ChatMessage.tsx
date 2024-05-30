@@ -7,7 +7,7 @@ import aiBotIcon from '@cdo/static/aichat/ai-bot-icon.svg';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
-import {removeModelUpdateMessage} from '../redux/aichatRedux';
+import {removeUpdateMessage} from '../redux/aichatRedux';
 import {ChatCompletionMessage, Role} from '../types';
 import aichatI18n from '../locale';
 import ChatNotificationMessage from './ChatNotificationMessage';
@@ -23,6 +23,7 @@ const TOO_PERSONAL_MESSAGE = aichatI18n.tooPersonalUserMessage();
 const isAssistant = (role: string) => role === Role.ASSISTANT;
 const isUser = (role: string) => role === Role.USER;
 const isModelUpdate = (role: string) => role === Role.MODEL_UPDATE;
+const isError = (role: string) => role === Role.ERROR_NOTIFICATION;
 
 const displayUserMessage = (status: string, chatMessageText: string) => {
   if (
@@ -114,6 +115,29 @@ const displayModelUpdateMessage = (
   );
 };
 
+const displayErrorMessage = (
+  message: ChatCompletionMessage,
+  onRemove: () => void
+) => {
+  const {chatMessageText} = message;
+
+  return (
+    <ChatNotificationMessage
+      onRemove={onRemove}
+      content={
+        <>
+          <span className={moduleStyles.modelUpdateMessageTextContainer}>
+            <StrongText>{chatMessageText}</StrongText>
+          </span>
+        </>
+      }
+      iconName="circle-xmark"
+      iconClass={moduleStyles.danger}
+      containerClass={moduleStyles.dangerContainer}
+    />
+  );
+};
+
 const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({message}) => {
   const dispatch = useAppDispatch();
 
@@ -131,7 +155,12 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({message}) => {
 
       {isModelUpdate(message.role) &&
         displayModelUpdateMessage(message, () =>
-          dispatch(removeModelUpdateMessage(message.id))
+          dispatch(removeUpdateMessage(message.id))
+        )}
+
+      {isError(message.role) &&
+        displayErrorMessage(message, () =>
+          dispatch(removeUpdateMessage(message.id))
         )}
     </div>
   );
