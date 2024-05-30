@@ -97,14 +97,15 @@ describe('StudentColumn', () => {
     renderDefault({
       sortedStudents: [studentA, studentB],
     });
-    const holmes = screen.getByText('Sherlock Holmes');
+    let holmes = screen.getByText('Sherlock Holmes');
     expect(holmes.ariaExpanded).to.equal('false');
 
     fireEvent.click(holmes);
 
+    holmes = screen.getByText('Sherlock Holmes');
     expect(holmes.ariaExpanded).to.equal('true');
 
-    screen.getByText('Time spent (minutes)');
-    screen.getByText('Last updated');
+    screen.getByText('Time Spent (mins)');
+    screen.getByText('Last Updated');
   });
 });
