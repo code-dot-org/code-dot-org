@@ -15,6 +15,7 @@ const Console: React.FunctionComponent = () => {
   const previousLevelId = useRef(levelId);
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
 
+  // TODO: Update this with other apps that use the console as needed.
   const systemMessagePrefix = appName === 'pythonlab' ? '[PYTHON LAB] ' : '';
 
   useEffect(() => {
