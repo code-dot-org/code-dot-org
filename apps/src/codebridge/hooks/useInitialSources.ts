@@ -1,7 +1,11 @@
 import {useMemo} from 'react';
 
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
-import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import {
+  getAppOptionsEditBlocks,
+  getAppOptionsEditingExemplar,
+  getAppOptionsViewingExemplar,
+} from '@cdo/apps/lab2/projects/utils';
 import {ProjectSources} from '@cdo/apps/lab2/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -15,12 +19,17 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
   const levelStartSource = useAppSelector(
     state => state.lab.levelProperties?.source
   );
+  const exemplarSources = useAppSelector(
+    state => state.lab.levelProperties?.exemplarSources
+  );
   // We memoize this object so that it doesn't cause an unexpected re-render.
   const projectStartSource: ProjectSources | undefined = useMemo(
     () => (levelStartSource ? {source: levelStartSource} : undefined),
     [levelStartSource]
   );
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+  const isEditingExemplar = getAppOptionsEditingExemplar();
+  const isViewingExemplar = getAppOptionsViewingExemplar();
 
   const initialSources = useMemo(() => {
     const startSources = projectStartSource || defaultSources;
@@ -28,10 +37,23 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
     if (isStartMode) {
       return startSources;
     }
+    if (isEditingExemplar || isViewingExemplar) {
+      // If we are viewing exemplars sources and have no exemplar, we show a fallback
+      // page from LabViewsRenderer. We fall back to start sources for editing.
+      return exemplarSources ? {source: exemplarSources} : startSources;
+    }
 
     const projectSources = labInitialSources;
     return projectSources || startSources;
-  }, [labInitialSources, projectStartSource, defaultSources, isStartMode]);
+  }, [
+    projectStartSource,
+    defaultSources,
+    isStartMode,
+    isEditingExemplar,
+    isViewingExemplar,
+    labInitialSources,
+    exemplarSources,
+  ]);
 
   return initialSources;
 };

@@ -102,6 +102,7 @@ import {
   LOOP_HIGHLIGHT,
   handleCodeGenerationFailure,
   strip,
+  interpolateMsg,
 } from './utils';
 
 const options = {
@@ -459,6 +460,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
 
   const extendedBlock = blocklyWrapper.Block.prototype as ExtendedBlock;
 
+  extendedBlock.interpolateMsg = interpolateMsg;
   extendedBlock.setStrictOutput = function (isOutput, check) {
     return this.setOutput(isOutput, check);
   };

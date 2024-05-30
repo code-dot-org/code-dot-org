@@ -4,7 +4,7 @@
   "category": "Sprites",
   "category_key": "sprites",
   "block_name": "gamelab_makeNewSpriteAnon",
-  "content": "Creates a new sprite of the chosen costume at the given location.\n\n## Video: How to Make a Sprite\n(Opens YouTube in new tab)\n\n[![How To Make A Sprite](https://img.youtube.com/vi/wbTJpx3driA/0.jpg)](https://www.youtube.com/watch?v=wbTJpx3driA)\n\nThis block customizes how the sprite looks and where it starts on the display. The costume drop down menu gives a variety of sprite costumes to choose from and also has the option to draw a costume. A location block can be attached at the end of the block to control where the sprite will appear on the display.",
+  "content": "Creates a new sprite of the chosen costume at the given location.\n\n## Video: How to Make a Sprite\n(Opens YouTube in new tab)\n\n[How To Make A Sprite](https://www.youtube.com/watch?v=wbTJpx3driA)\n\nThis block customizes how the sprite looks and where it starts on the display. The costume drop down menu gives a variety of sprite costumes to choose from and also has the option to draw a costume. A location block can be attached at the end of the block to control where the sprite will appear on the display.",
   "examples": [
     {
       "name": "Example 1",
