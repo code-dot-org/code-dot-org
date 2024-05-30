@@ -69,7 +69,6 @@ describe('RubricFloatingActionButton - React Testing Library', () => {
 
     it('renders pulse animation when session storage is empty', () => {
       const sendEventSpy = sinon.stub(analyticsReporter, 'sendEvent');
-      sessionStorage.getItem.withArgs('RubricFabOpenStateKey').returns(null);
       render(
         <Provider store={getStore()}>
           <RubricFloatingActionButton {...defaultProps} />
