@@ -339,21 +339,7 @@ export const submitChatContents = createAsyncThunk(
         .getMetricsReporter()
         .logError('Error in aichat completion request', error as Error);
 
-      const assistantChatMessage: ChatCompletionMessage = {
-        id: getNewMessageId(),
-        role: Role.ASSISTANT,
-        status: Status.ERROR,
-        chatMessageText: 'error',
-        timestamp: getCurrentTimestamp(),
-      };
-      thunkAPI.dispatch(addChatMessage(assistantChatMessage));
-
-      thunkAPI.dispatch(
-        updateUserChatMessageStatus({
-          id: newMessage.id,
-          status: Status.ERROR,
-        })
-      );
+      updateMessagesOnError(newMessage, thunkAPI.dispatch);
 
       return;
     }
@@ -400,21 +386,7 @@ export const submitChatContents = createAsyncThunk(
 
       // error state #1: model generated profanity
     } else if (chatApiResponse?.status === AichatErrorType.PROFANITY_MODEL) {
-      const assistantChatMessage: ChatCompletionMessage = {
-        id: getNewMessageId(),
-        role: Role.ASSISTANT,
-        status: Status.ERROR,
-        chatMessageText: 'error',
-        timestamp: getCurrentTimestamp(),
-      };
-      thunkAPI.dispatch(addChatMessage(assistantChatMessage));
-
-      thunkAPI.dispatch(
-        updateUserChatMessageStatus({
-          id: newMessage.id,
-          status: Status.ERROR,
-        })
-      );
+      updateMessagesOnError(newMessage, thunkAPI.dispatch);
 
       // error state #2: user message contained profanity
     } else if (chatApiResponse?.status === AichatErrorType.PROFANITY_USER) {
@@ -630,6 +602,27 @@ const allFieldsHidden = (fieldVisibilities: AichatState['fieldVisibilities']) =>
   getTypedKeys(fieldVisibilities).every(
     key => fieldVisibilities[key] === Visibility.HIDDEN
   );
+
+const updateMessagesOnError = (
+  newMessage: ChatCompletionMessage,
+  dispatch: ThunkDispatch<unknown, unknown, AnyAction>
+) => {
+  const assistantChatMessage: ChatCompletionMessage = {
+    id: getNewMessageId(),
+    role: Role.ASSISTANT,
+    status: Status.ERROR,
+    chatMessageText: 'error',
+    timestamp: getCurrentTimestamp(),
+  };
+  dispatch(addChatMessage(assistantChatMessage));
+
+  dispatch(
+    updateUserChatMessageStatus({
+      id: newMessage.id,
+      status: Status.ERROR,
+    })
+  );
+};
 
 // Selectors
 export const selectHasFilledOutModelCard = createSelector(
