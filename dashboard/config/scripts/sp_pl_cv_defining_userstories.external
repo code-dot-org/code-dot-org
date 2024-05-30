@@ -14,7 +14,7 @@ markdown <<MARKDOWN
 
 #### Create user stories using this format:
 
- <p style="font-weight: bold; font-size: 18px;">As a <span style="color: #0093A4;">{describe your user}</span>, I <span style="color: #0093A4;">{action connected to data}</span>.</p>
+ <p style="font-weight: bold; font-size: 22px;">As a <span style="color: #8c52ba;">[describe your user]</span>, I <span style="color: #0093a4;">[action connected to data]</span>.</p>
 
 ## Example: 
 
