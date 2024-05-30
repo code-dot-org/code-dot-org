@@ -114,25 +114,31 @@ GroupOfTextFieldSizes.args = {
     {
       name: 'textfield_size_l',
       label: 'L TextField',
+      helperIcon: {
+        iconName: 'info-circle',
+      },
+      helperMessage: 'Helper message',
       size: 'l',
       onChange: () => null,
     },
     {
       name: 'textfield_size_m',
       label: 'M TextField',
+      helperIcon: {
+        iconName: 'info-circle',
+      },
+      helperMessage: 'Helper message',
       size: 'm',
       onChange: () => null,
     },
     {
       name: 'textfield_size_s',
       label: 'S TextField',
+      helperIcon: {
+        iconName: 'info-circle',
+      },
+      helperMessage: 'Helper message',
       size: 's',
-      onChange: () => null,
-    },
-    {
-      name: 'textfield_size_xs',
-      label: 'XS TextField',
-      size: 'xs',
       onChange: () => null,
     },
   ],

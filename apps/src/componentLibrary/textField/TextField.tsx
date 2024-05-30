@@ -38,15 +38,12 @@ export interface TextFieldProps extends AriaAttributes {
   /** TextField color */
   color?: 'black' | 'gray' | 'white';
   /** Size of TextField */
-  size?: ComponentSizeXSToL;
+  size?: Exclude<ComponentSizeXSToL, 'xs'>;
 }
-
-// TODO:
-// * Add captions
 
 /**
  * ### Production-ready Checklist:
- * * (?) implementation of component approved by design team;
+ * * (✔) implementation of component approved by design team;
  * * (✔) has storybook, covered with stories and documentation;
  * * (✔) has tests: test every prop, every state and every interaction that's js related;
  * * (see apps/test/unit/componentLibrary/TextFieldTest.jsx)
