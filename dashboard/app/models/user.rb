@@ -2128,6 +2128,8 @@ class User < ApplicationRecord
       end
 
       script = Unit.get_from_cache(script_id)
+      raise "cannot store progress on mirror unit #{script.name}" if script.mirrored_unit
+
       script_valid = script.csf? && script.name != Unit::COURSE1_NAME
       if (!user_level.perfect? || user_level.best_result == ActivityConstants::MANUAL_PASS_RESULT) &&
           new_result >= ActivityConstants::BEST_PASS_RESULT &&

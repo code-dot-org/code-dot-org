@@ -186,12 +186,13 @@ class ActivitiesController < ApplicationController
       @activity = Activity.new(attributes).tap(&:atomic_save!)
     end
     if @script_level
+      progress_script_id = @script_level.script.original_unit.id
       # convert milliseconds to seconds
       time_since_last_milestone = [(params[:timeSinceLastMilestone].to_f / 1000).ceil.to_i, MAX_INT_TIME_SPENT].min
       @user_level, @new_level_completed = User.track_level_progress(
         user_id: current_user.id,
         level_id: @level.id,
-        script_id: @script_level.script_id,
+        script_id: progress_script_id,
         new_result: test_result,
         submitted: params[:submitted] == 'true',
         level_source_id: @level_source.try(:id),
@@ -210,7 +211,7 @@ class ActivitiesController < ApplicationController
         User.track_level_progress(
           user_id: current_user.id,
           level_id: bubble_choice_parent_level.id,
-          script_id: @script_level.script_id,
+          script_id: progress_script_id,
           new_result: test_result,
           submitted: false,
           level_source_id: nil,
