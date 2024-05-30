@@ -110,6 +110,9 @@ const AITutorFooter: React.FC<AITutorFooterProps> = ({renderAITutor}) => {
           onChange={e => setUserMessage(e.target.value)}
           value={userMessage}
           disabled={disabled}
+          onKeyDown={(e) => (
+            e.key === 'Enter' ? handleSubmit(ActionType.GENERAL_CHAT) : null
+          )}
         />
         <Button
           className={style.submitButton}
