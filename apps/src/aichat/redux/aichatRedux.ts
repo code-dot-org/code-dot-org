@@ -320,17 +320,44 @@ export const submitChatContents = createAsyncThunk(
 
     // Post user content and messages to backend and retrieve assistant response.
     const startTime = Date.now();
-    const chatApiResponse = await postAichatCompletionMessage(
-      newUserMessageText,
-      currentSessionId
-        ? storedMessages.filter(
-            message => message.sessionId === currentSessionId
-          )
-        : [],
-      aiCustomizations,
-      aichatContext,
-      currentSessionId
-    );
+
+    let chatApiResponse;
+    try {
+      chatApiResponse = await postAichatCompletionMessage(
+        newUserMessageText,
+        currentSessionId
+          ? storedMessages.filter(
+              message => message.sessionId === currentSessionId
+            )
+          : [],
+        aiCustomizations,
+        aichatContext,
+        currentSessionId
+      );
+    } catch (error) {
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .logError('Error in aichat completion request', error as Error);
+
+      const assistantChatMessage: ChatCompletionMessage = {
+        id: getNewMessageId(),
+        role: Role.ASSISTANT,
+        status: Status.ERROR,
+        chatMessageText: 'error',
+        timestamp: getCurrentTimestamp(),
+      };
+      thunkAPI.dispatch(addChatMessage(assistantChatMessage));
+
+      thunkAPI.dispatch(
+        updateUserChatMessageStatus({
+          id: newMessage.id,
+          status: Status.ERROR,
+        })
+      );
+
+      return;
+    }
+
     Lab2Registry.getInstance()
       .getMetricsReporter()
       .reportLoadTime('AichatModelResponseTime', Date.now() - startTime, [
