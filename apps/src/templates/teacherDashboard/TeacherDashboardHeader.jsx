@@ -4,16 +4,21 @@ import {connect} from 'react-redux';
 
 import {disabledBubblesSupportArticle} from '@cdo/apps/code-studio/disabledBubbles';
 import Link from '@cdo/apps/componentLibrary/link';
+import {getStore} from '@cdo/apps/redux';
 import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import Button from '../Button';
 import DropdownButton from '../DropdownButton';
+import {
+  convertStudentDataToArray,
+  filterAgeGatedStudents,
+} from '../manageStudents/manageStudentsRedux';
 import Notification, {NotificationType} from '../Notification';
+import {AgeGatedStudentsBanner} from '../policy_compliance/AgeGatedStudentsModal/AgeGatedStudentsBanner';
 
 import FontAwesome from './../FontAwesome';
-import AgeGatedStudentsModal from './AgeGatedStudentsModal';
 import {switchToSection, recordSwitchToSection} from './sectionHelpers';
 import {
   asyncLoadCourseOfferings,
@@ -31,8 +36,15 @@ function TeacherDashboardHeader({
   openEditSectionDialog,
   asyncLoadCourseOfferings,
   isRtl,
+  ageGatedStudentsCount,
 }) {
   const [modalOpen, setModalOpen] = useState(false);
+
+  const currentUser = getStore().getState().currentUser;
+  const inUSA =
+    ['US', 'RD'].includes(currentUser.countryCode) || !!currentUser.usStateCode;
+  const showAgeGatedStudentsBanner =
+    inUSA && currentUser.isTeacher && ageGatedStudentsCount;
 
   const toggleModal = () => {
     setModalOpen(!modalOpen);
@@ -91,19 +103,6 @@ function TeacherDashboardHeader({
     );
   };
 
-  const ageGatedStudentsNotification = () => {
-    return (
-      <Notification
-        type={NotificationType.warning}
-        notice={i18n.headsUp()}
-        details={i18n.childAccountPolicy_ageGatedStudentsWarning()}
-        buttonText={i18n.learnMore()}
-        buttonLink={'#'}
-        onButtonClick={toggleModal}
-        dismissable={false}
-      />
-    );
-  };
   /**
    * Returns the URL to the correct section to be edited
    */
@@ -134,8 +133,13 @@ function TeacherDashboardHeader({
         loginType: selectedSection.loginType,
       })}
       {selectedSection.postMilestoneDisabled && progressNotSavingNotification()}
-      {true && ageGatedStudentsNotification()}
-      <AgeGatedStudentsModal isOpen={modalOpen} onClose={toggleModal} />
+      {showAgeGatedStudentsBanner && (
+        <AgeGatedStudentsBanner
+          toggleModal={toggleModal}
+          modalOpen={modalOpen}
+          ageGatedStudentsCount={ageGatedStudentsCount}
+        />
+      )}
       <div className={dashboardStyles.header}>
         <div>
           <h1>{selectedSection.name}</h1>
@@ -182,6 +186,7 @@ TeacherDashboardHeader.propTypes = {
   assignmentName: PropTypes.string,
   asyncLoadCourseOfferings: PropTypes.func.isRequired,
   isRtl: PropTypes.bool,
+  ageGatedStudentsCount: PropTypes.number,
 };
 
 const styles = {
@@ -208,6 +213,9 @@ export default connect(
       state.teacherSections.selectedSectionId
     ),
     isRtl: state.isRtl,
+    ageGatedStudentsCount: filterAgeGatedStudents(
+      convertStudentDataToArray(state.manageStudents.studentData)
+    ).length,
   }),
   dispatch => {
     return {
