@@ -1,5 +1,5 @@
 import {resetOutput} from '@codebridge/redux/consoleRedux';
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import {useDispatch} from 'react-redux';
 
 import Button from '@cdo/apps/componentLibrary/button';
@@ -11,6 +11,16 @@ import moduleStyles from './console.module.scss';
 const Console: React.FunctionComponent = () => {
   const codeOutput = useAppSelector(state => state.codebridgeConsole.output);
   const dispatch = useDispatch();
+  const levelId = useAppSelector(state => state.lab.levelProperties?.id);
+  const previousLevelId = useRef(levelId);
+
+  useEffect(() => {
+    // If the level changes, clear the console.
+    if (previousLevelId.current !== levelId) {
+      dispatch(resetOutput());
+      previousLevelId.current = levelId;
+    }
+  }, [dispatch, levelId]);
 
   const clearOutput = () => {
     dispatch(resetOutput());
