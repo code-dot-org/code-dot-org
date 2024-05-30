@@ -11,6 +11,7 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 import {saveFeedback, FeedbackData} from '../interactionsApi';
 import style from './chat-workspace.module.scss';
+import AssistantMessageFeedback from './AssistantMessageFeedback';
 
 interface AssistantMessageProps {
   message: ChatCompletionMessage;
@@ -67,28 +68,7 @@ const AssistantMessage: React.FC<AssistantMessageProps> = ({message}) => {
           />
         </div>
         {shouldRenderFeedbackButtons && (
-          <>
-            <Button
-              className={style.hamburgerMenuButton}
-              color={buttonColors.black}
-              disabled={false}
-              icon={{iconName: 'thumbs-up', iconStyle: 'solid'}}
-              isIconOnly={true}
-              onClick={() => handleFeedbackSubmission(true, message.id)}
-              size="xs"
-              type={feedbackState.thumbsUp ? 'primary' : 'tertiary'}
-            />
-            <Button
-              className={style.hamburgerMenuButton}
-              color={buttonColors.black}
-              disabled={false}
-              icon={{iconName: 'thumbs-down', iconStyle: 'solid'}}
-              isIconOnly={true}
-              onClick={() => handleFeedbackSubmission(false, message.id)}
-              size="xs"
-              type={feedbackState.thumbsDown ? 'primary' : 'tertiary'}
-            />
-          </>
+          <AssistantMessageFeedback messageId={message.id}/>
         )}
       </div>
     </div>
