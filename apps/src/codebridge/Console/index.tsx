@@ -13,6 +13,9 @@ const Console: React.FunctionComponent = () => {
   const dispatch = useDispatch();
   const levelId = useAppSelector(state => state.lab.levelProperties?.id);
   const previousLevelId = useRef(levelId);
+  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+
+  const systemMessagePrefix = appName === 'pythonlab' ? '[PYTHON LAB] ' : '';
 
   useEffect(() => {
     // If the level changes, clear the console.
@@ -31,7 +34,7 @@ const Console: React.FunctionComponent = () => {
       <Button
         isIconOnly
         color={'black'}
-        icon={{iconStyle: 'solid', iconName: 'broom'}}
+        icon={{iconStyle: 'solid', iconName: 'eraser'}}
         ariaLabel="clear console"
         onClick={clearOutput}
         size={'xs'}
@@ -68,7 +71,12 @@ const Console: React.FunctionComponent = () => {
               </div>
             );
           } else {
-            return <div key={index}>[PYTHON LAB] {outputLine.contents}</div>;
+            return (
+              <div key={index}>
+                {systemMessagePrefix}
+                {outputLine.contents}
+              </div>
+            );
           }
         })}
       </div>
