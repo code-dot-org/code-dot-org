@@ -9,7 +9,7 @@ import manageStudents, {
 // @ts-expect-error Typescript type declaration error
 import {reduxStore} from '@cdo/storybook/decorators';
 
-import {UnconnectedAgeGatedStudentsTable} from '../policy_compliance/AgeGatedStudentsModal/AgeGatedStudentsTable';
+import {UnconnectedAgeGatedStudentsTable} from './AgeGatedStudentsTable';
 
 const sectionStudents = [
   {
