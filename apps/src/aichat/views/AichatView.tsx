@@ -20,6 +20,7 @@ import {
 } from '@cdo/apps/lab2/views/dialogs/DialogManager';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {commonI18n} from '@cdo/apps/types/locale';
+import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
 import {
   addChatMessage,
@@ -45,8 +46,7 @@ import PresentationView from './presentation/PresentationView';
 import CopyButton from './CopyButton';
 import moduleStyles from './aichatView.module.scss';
 import aichatI18n from '../locale';
-import {getCurrentTime, getNewMessageId} from '@cdo/apps/aichat/redux/utils';
-import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
+import {getCurrentTime, getNewMessageId} from '../redux/utils';
 
 const RESET_MODEL_NOTIFICATION: ChatCompletionMessage = {
   id: getNewMessageId(),
