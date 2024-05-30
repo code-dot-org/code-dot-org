@@ -2,6 +2,7 @@ import React, {useCallback, useMemo} from 'react';
 import TimelineElement from './TimelineElement';
 import {useMusicSelector} from './types';
 import {FunctionEvents} from '../player/interfaces/FunctionEvents';
+import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 import AppConfig from '../appConfig';
 
 const useTimelineLayout2 = AppConfig.getValue('timeline-layout-2') === 'true';
@@ -107,6 +108,34 @@ const FunctionExtentsSimple2: React.FunctionComponent<
 };
 
 /**
+ * Given an array of playback events, returns a copy of the array that is sorted
+ * primarily by when each sound is played.
+ */
+const getOrderedByWhenSoundEvents = (soundEvents: PlaybackEvent[]) => {
+  // This sort arranges all of the sounds played under "when run" in order of when
+  // played.  Triggered sounds come after them.
+  return [...soundEvents].sort((soundEvent1, soundEvent2) => {
+    if (soundEvent1.triggered && soundEvent2.triggered) {
+      const soundEvent1Name = soundEvent1.functionContext?.name || '';
+      const soundEvent2Name = soundEvent2.functionContext?.name || '';
+      if (soundEvent1Name < soundEvent2Name) {
+        return -1;
+      } else if (soundEvent1 > soundEvent2) {
+        return 1;
+      } else {
+        return 0;
+      }
+    } else if (soundEvent1.triggered && !soundEvent2.triggered) {
+      return 1;
+    } else if (!soundEvent1.triggered && soundEvent2.triggered) {
+      return -1;
+    } else {
+      return soundEvent1.when - soundEvent2.when;
+    }
+  });
+};
+
+/**
  * Renders timeline events in the simple2 model.
  */
 interface TimelineSimple2EventsProps {
@@ -123,26 +152,12 @@ const TimelineSimple2Events: React.FunctionComponent<
     state => state.music.playbackEvents
   );
 
+  // soundEventsOriginal has sounds sorted primarily by the immediate function
+  // that generates them, and next by when they are played.  If useTimelineLayout2
+  // is true, then they are resorted so that all sounds played somewhere under
+  // "when run" are sorted by when they are played.
   const soundEvents = useTimelineLayout2
-    ? [...soundEventsOriginal].sort((a, b) => {
-        if (a.triggered && b.triggered) {
-          const name1 = a.functionContext?.name || '';
-          const name2 = b.functionContext?.name || '';
-          if (name1 < name2) {
-            return -1;
-          } else if (name1 > name2) {
-            return 1;
-          } else {
-            return 0;
-          }
-        } else if (a.triggered && !b.triggered) {
-          return 1;
-        } else if (!a.triggered && b.triggered) {
-          return -1;
-        } else {
-          return a.when - b.when;
-        }
-      })
+    ? getOrderedByWhenSoundEvents(soundEventsOriginal)
     : soundEventsOriginal;
 
   const orderedFunctions = useMusicSelector(
