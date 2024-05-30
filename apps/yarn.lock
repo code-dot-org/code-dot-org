@@ -6316,6 +6316,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/jest@npm:^29.5.12":
+  version: 29.5.12
+  resolution: "@types/jest@npm:29.5.12"
+  dependencies:
+    expect: ^29.0.0
+    pretty-format: ^29.0.0
+  checksum: 19b1efdeed9d9a60a81edc8226cdeae5af7479e493eaed273e01243891c9651f7b8b4c08fc633a7d0d1d379b091c4179bbaa0807af62542325fd72f2dd17ce1c
+  languageName: node
+  linkType: hard
+
 "@types/jquery@npm:^3.5.16":
   version: 3.5.16
   resolution: "@types/jquery@npm:3.5.16"
@@ -8836,6 +8846,7 @@ __metadata:
     "@testing-library/user-event": ^14.4.3
     "@types/chai": ^4.3.5
     "@types/htmlhint": ^1.1.5
+    "@types/jest": ^29.5.12
     "@types/jquery": ^3.5.16
     "@types/js-cookie": ^3.0.6
     "@types/mocha": ^10.0.1
@@ -13422,7 +13433,7 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"expect@npm:^29.7.0":
+"expect@npm:^29.0.0, expect@npm:^29.7.0":
   version: 29.7.0
   resolution: "expect@npm:29.7.0"
   dependencies:
@@ -22194,7 +22205,7 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"pretty-format@npm:^29.7.0":
+"pretty-format@npm:^29.0.0, pretty-format@npm:^29.7.0":
   version: 29.7.0
   resolution: "pretty-format@npm:29.7.0"
   dependencies:
