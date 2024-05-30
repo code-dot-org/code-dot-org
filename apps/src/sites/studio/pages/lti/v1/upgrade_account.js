@@ -8,6 +8,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import LtiUpgradeAccountDialog from '@cdo/apps/lib/ui/lti/upgrade/LtiUpgradeAccountDialog';
+import Bootstrap from '@cdo/apps/common/Bootstrap';
 
 document.addEventListener('DOMContentLoaded', () => {
   const scriptData = getScriptData('ltiUpgradeAccountFormData');
@@ -21,7 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   ReactDOM.render(
-    <LtiUpgradeAccountDialog isOpen formData={formData} onClose={onClose} />,
+    <Bootstrap>
+      <LtiUpgradeAccountDialog isOpen formData={formData} onClose={onClose} />
+    </Bootstrap>,
     mountPoint
   );
 });

@@ -8,6 +8,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import LtiDynamicRegistrationPage from '@cdo/apps/lib/ui/lti/registration/LtiDynamicRegistrationPage';
 import getScriptData from '@cdo/apps/util/getScriptData';
+import Bootstrap from '@cdo/apps/common/Bootstrap';
 
 document.addEventListener('DOMContentLoaded', () => {
   const mountPoint = document.createElement('div');
@@ -16,10 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const {logoUrl, registrationID} = scriptData;
 
   ReactDOM.render(
-    <LtiDynamicRegistrationPage
-      logoUrl={logoUrl}
-      registrationID={registrationID}
-    />,
+    <Bootstrap>
+      <LtiDynamicRegistrationPage
+        logoUrl={logoUrl}
+        registrationID={registrationID}
+      />
+    </Bootstrap>,
     mountPoint
   );
 });

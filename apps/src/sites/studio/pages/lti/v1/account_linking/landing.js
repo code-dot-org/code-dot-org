@@ -9,6 +9,7 @@ import ReactDOM from 'react-dom';
 import LtiLinkAccountPage from '@cdo/apps/lib/ui/lti/link/LtiLinkAccountPage';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import {LtiProviderContext} from '@cdo/apps/lib/ui/lti/link/LtiLinkAccountPage/context';
+import Bootstrap from '@cdo/apps/common/Bootstrap';
 
 document.addEventListener('DOMContentLoaded', () => {
   const mountPoint = document.getElementById('mount-point');
@@ -28,9 +29,11 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   ReactDOM.render(
-    <LtiProviderContext.Provider value={ltiProviderContext}>
-      <LtiLinkAccountPage />
-    </LtiProviderContext.Provider>,
+    <Bootstrap>
+      <LtiProviderContext.Provider value={ltiProviderContext}>
+        <LtiLinkAccountPage />
+      </LtiProviderContext.Provider>
+    </Bootstrap>,
     mountPoint
   );
 });

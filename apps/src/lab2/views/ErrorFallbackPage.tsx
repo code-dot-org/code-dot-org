@@ -4,9 +4,13 @@ const i18n = require('@cdo/locale');
 
 export interface ErrorUIProps {
   message?: string;
+  traceId?: string;
 }
 
-export const ErrorUI: React.FunctionComponent<ErrorUIProps> = ({message}) => (
+export const ErrorUI: React.FunctionComponent<ErrorUIProps> = ({
+  message,
+  traceId,
+}) => (
   <div id="page-error-container" className={moduleStyles.pageErrorContainer}>
     <div id="page-error" className={moduleStyles.pageError}>
       <img
@@ -18,6 +22,7 @@ export const ErrorUI: React.FunctionComponent<ErrorUIProps> = ({message}) => (
       {message && (
         <div className={moduleStyles.pageErrorMessage}>({message})</div>
       )}
+      {traceId && <p>Trace ID: {traceId}</p>}
     </div>
   </div>
 );

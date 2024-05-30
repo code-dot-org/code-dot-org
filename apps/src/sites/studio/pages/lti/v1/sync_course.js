@@ -8,6 +8,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import LtiSectionSyncDialog from '@cdo/apps/lib/ui/lti/sync/LtiSectionSyncDialog';
 import getScriptData from '@cdo/apps/util/getScriptData';
+import Bootstrap from '@cdo/apps/common/Bootstrap';
 
 document.addEventListener('DOMContentLoaded', () => {
   const scriptData = getScriptData('ltiSectionSyncDialog');
@@ -23,13 +24,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const lmsName = scriptData['lms_name'];
 
   ReactDOM.render(
-    <LtiSectionSyncDialog
-      isOpen
-      syncResult={result}
-      onClose={onClose}
-      disableRosterSyncButtonEnabled
-      lmsName={lmsName}
-    />,
+    <Bootstrap>
+      <LtiSectionSyncDialog
+        isOpen
+        syncResult={result}
+        onClose={onClose}
+        disableRosterSyncButtonEnabled
+        lmsName={lmsName}
+      />
+    </Bootstrap>,
     mountPoint
   );
 });

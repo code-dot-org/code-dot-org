@@ -3913,6 +3913,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@honeybadger-io/core@npm:^6.6.0":
+  version: 6.6.0
+  resolution: "@honeybadger-io/core@npm:6.6.0"
+  dependencies:
+    json-nd: ^1.0.0
+    stacktrace-parser: ^0.1.10
+  checksum: d41d04c08e34c576719510cdfb2fe411f1ba187af027e00e06fea86dc6a4c2c56db8f3a715a3f5fe013db4455303d2f8148e826285750ce9668e05972eeebcca
+  languageName: node
+  linkType: hard
+
+"@honeybadger-io/js@npm:^6.9.1":
+  version: 6.9.1
+  resolution: "@honeybadger-io/js@npm:6.9.1"
+  dependencies:
+    "@honeybadger-io/core": ^6.6.0
+    "@types/aws-lambda": ^8.10.89
+    "@types/express": ^4.17.13
+  bin:
+    honeybadger-checkins-sync: dist/server/check-ins-sync-exec.js
+  checksum: 3be1e2af6ad7de7f0e035e3e310125cb334c8048e9fdd7204c6ee1aba35254dda2d4f9f75712615d7e58702f9217db237a16e962fdd26b3c5248ed4f7d0e1541
+  languageName: node
+  linkType: hard
+
 "@humanwhocodes/config-array@npm:^0.11.13":
   version: 0.11.14
   resolution: "@humanwhocodes/config-array@npm:0.11.14"
@@ -5452,6 +5475,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/aws-lambda@npm:^8.10.89":
+  version: 8.10.138
+  resolution: "@types/aws-lambda@npm:8.10.138"
+  checksum: 99784f008ac9ca1f85fd0de1149ee11c5f6b9c00d836dfc1eeebec7d4bb288d540f8f6d05991f26ce9f59375532c748fb2e646472a65ff881220851804a908b2
+  languageName: node
+  linkType: hard
+
 "@types/babel__core@npm:^7.18.0":
   version: 7.20.5
   resolution: "@types/babel__core@npm:7.20.5"
@@ -5658,7 +5688,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/express@npm:*, @types/express@npm:^4.17.21, @types/express@npm:^4.7.0":
+"@types/express@npm:*, @types/express@npm:^4.17.13, @types/express@npm:^4.17.21, @types/express@npm:^4.7.0":
   version: 4.17.21
   resolution: "@types/express@npm:4.17.21"
   dependencies:
@@ -8076,6 +8106,7 @@ __metadata:
     "@codemirror/state": ^6.3.2
     "@codemirror/view": ^6.22.1
     "@dsco_/link": ^1.1.2
+    "@honeybadger-io/js": ^6.9.1
     "@lezer/highlight": ^1.2.0
     "@microsoft/immersive-reader-sdk": ^1.1.0
     "@pmmmwh/react-refresh-webpack-plugin": ^0.5.11
@@ -16696,6 +16727,13 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
+"json-nd@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "json-nd@npm:1.0.0"
+  checksum: 92fd1d15bb57443c4e3dad08dd7b7c5cd82c5696814ae080975a565cc9b0ca843110ff003a107792a2753bda15159f3539bbc827828d3c0bf286322c15bfd22d
+  languageName: node
+  linkType: hard
+
 "json-parse-better-errors@npm:^1.0.1":
   version: 1.0.1
   resolution: "json-parse-better-errors@npm:1.0.1"
@@ -24086,6 +24124,15 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
+"stacktrace-parser@npm:^0.1.10":
+  version: 0.1.10
+  resolution: "stacktrace-parser@npm:0.1.10"
+  dependencies:
+    type-fest: ^0.7.1
+  checksum: f4fbddfc09121d91e587b60de4beb4941108e967d71ad3a171812dc839b010ca374d064ad0a296295fed13acd103609d99a4224a25b4e67de13cae131f1901ee
+  languageName: node
+  linkType: hard
+
 "standardized-audio-context@npm:^25.1.8":
   version: 25.3.64
   resolution: "standardized-audio-context@npm:25.3.64"
@@ -25430,6 +25477,13 @@ temporal@latest:
   version: 0.6.0
   resolution: "type-fest@npm:0.6.0"
   checksum: b2188e6e4b21557f6e92960ec496d28a51d68658018cba8b597bd3ef757721d1db309f120ae987abeeda874511d14b776157ff809f23c6d1ce8f83b9b2b7d60f
+  languageName: node
+  linkType: hard
+
+"type-fest@npm:^0.7.1":
+  version: 0.7.1
+  resolution: "type-fest@npm:0.7.1"
+  checksum: 5b1b113529d59949d97b76977d545989ddc11b81bb0c766b6d2ccc65473cb4b4a5c7d24f5be2c2bb2de302a5d7a13c1732ea1d34c8c59b7e0ec1f890cf7fc424
   languageName: node
   linkType: hard
 
