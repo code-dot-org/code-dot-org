@@ -6,6 +6,11 @@ class VideosController < ApplicationController
 
   before_action :set_video, only: [:edit, :update]
 
+  # This is to fix a ForbiddenAttributesError CanCan issue.
+  prepend_before_action do
+    params[:video] &&= video_params
+  end
+
   # This page is currently deprecated, so let's redirect to related content.
   def test
     redirect_to CDO.code_org_url('/educate/it')
@@ -98,11 +103,6 @@ class VideosController < ApplicationController
 
   private def i18n_params
     params.permit(:title)
-  end
-
-  # This is to fix a ForbiddenAttributesError CanCan issue.
-  prepend_before_action do
-    params[:video] &&= video_params
   end
 
   private def merge_and_write

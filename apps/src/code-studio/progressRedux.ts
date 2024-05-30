@@ -36,6 +36,7 @@ import {TestResults} from '@cdo/apps/constants';
 import {
   getCurrentLevel,
   getCurrentLevels,
+  getCurrentScriptLevelId,
   levelById,
   nextLevelId,
 } from './progressReduxSelectors';
@@ -368,21 +369,9 @@ export function sendSuccessReport(appType: string): ProgressThunkAction {
     if (!state.currentLessonId || !levelId) {
       return;
     }
-    const currentLevel = getCurrentLevel(getState());
-    if (!currentLevel) {
+    const scriptLevelId = getCurrentScriptLevelId(getState());
+    if (!scriptLevelId) {
       return;
-    }
-
-    let scriptLevelId;
-    if (currentLevel.parentLevelId) {
-      const parentLevel = levelById(
-        state,
-        state.currentLessonId,
-        currentLevel.parentLevelId
-      );
-      scriptLevelId = parentLevel.scriptLevelId;
-    } else {
-      scriptLevelId = currentLevel.scriptLevelId;
     }
 
     // The server does not appear to use the user ID parameter,

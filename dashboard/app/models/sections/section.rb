@@ -104,9 +104,7 @@ class Section < ApplicationRecord
   validate :pl_sections_must_use_pl_grade
   validate :participant_type_not_changed
 
-  private def soft_delete_lti_section
-    lti_section.destroy if lti_section
-  end
+  before_validation :strip_emoji_from_name
 
   # PL courses which are run with adults should be set up with teacher accounts so they must use
   # email logins
@@ -615,26 +613,6 @@ class Section < ApplicationRecord
     self.code_review_expires_at = enable_code_review ? Time.now.utc + 90.days : nil
   end
 
-  private def unused_random_code
-    CodeGeneration.random_unique_code length: 6, model: Section
-  end
-
-  # Drops unicode characters not supported by utf8mb3 strings (most commonly emoji)
-  # from the section name.
-  # We make a best-effort to make the name usable without the removed characters.
-  # We can remove this once our database has utf8mb4 support everywhere.
-  private def strip_emoji_from_name
-    # We don't want to fill in a default name if the caller intentionally tried to clear it.
-    return if name.blank?
-
-    # Drop emoji and other unsupported characters
-    self.name = name&.strip_utf8mb4&.strip
-
-    # If dropping emoji resulted in a blank name, use a default
-    self.name = I18n.t('sections.default_name', default: 'Untitled Section') if name.blank?
-  end
-  before_validation :strip_emoji_from_name
-
   # Adds an instructor to the section
   # If the instructor was previously deleted, restore the instructor
   # Make the instructor active if they had a different status
@@ -673,7 +651,7 @@ class Section < ApplicationRecord
   end
 
   # Validates instructor can be added to the section, returns soft-deleted section instructor (if any)
-  public def validate_instructor(instructor)
+  def validate_instructor(instructor)
     if section_instructors.count >= INSTRUCTOR_LIMIT
       raise ArgumentError.new('section full')
     end
@@ -689,5 +667,28 @@ class Section < ApplicationRecord
     elsif students.exists?(email: instructor.email)
       raise ArgumentError.new('already a student')
     end
+  end
+
+  private def soft_delete_lti_section
+    lti_section.destroy if lti_section
+  end
+
+  private def unused_random_code
+    CodeGeneration.random_unique_code length: 6, model: Section
+  end
+
+  # Drops unicode characters not supported by utf8mb3 strings (most commonly emoji)
+  # from the section name.
+  # We make a best-effort to make the name usable without the removed characters.
+  # We can remove this once our database has utf8mb4 support everywhere.
+  private def strip_emoji_from_name
+    # We don't want to fill in a default name if the caller intentionally tried to clear it.
+    return if name.blank?
+
+    # Drop emoji and other unsupported characters
+    self.name = name&.strip_utf8mb4&.strip
+
+    # If dropping emoji resulted in a blank name, use a default
+    self.name = I18n.t('sections.default_name', default: 'Untitled Section') if name.blank?
   end
 end

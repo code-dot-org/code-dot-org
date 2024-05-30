@@ -7,12 +7,13 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
       returns(Cpa::NEW_USER_LOCKOUT)
   end
 
-  test "accounts needing permission should be locked out" do
-    # Test matrix for the user states which require parent permission.
-    [
-      [:U13, :in_colorado, :without_parent_permission],
-    ].each do |traits|
-      user = create(:student, *traits)
+  # Test matrix for the user states which require parent permission.
+  [
+    [:non_compliant_child, :without_parent_permission],
+    [:non_compliant_child, :with_pending_parent_permission],
+  ].each do |traits|
+    test "user needing permission should be locked out: #{traits}" do
+      user = create(*traits)
       sign_in user
       get '/home'
       assert_redirected_to '/lockout', "failed to redirect to /lockout for user with traits #{traits}"
@@ -26,21 +27,27 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "accounts NOT needing permission should NOT be locked out" do
-    # Test matrix for the user states which don't require parent permission.
-    [
-      [:student_in_word_section, :U13, :in_colorado],
-      [:student_in_picture_section, :U13, :in_colorado],
-      [:student, :U13, :in_colorado, :migrated_imported_from_clever],
-      [:student, :U13, :unknown_us_region],
-      [:student, :not_U13, :in_colorado],
-      [:student, :U13, :in_colorado, :without_parent_permission, :google_sso_provider],
-      [:student, :U13, :in_colorado, :migrated_imported_from_clever, :with_google_authentication_option],
-    ].each do |traits|
+  # Test matrix for the user states which don't require parent permission.
+  [
+    [:student_in_word_section, :U13, :in_colorado],
+    [:student_in_picture_section, :U13, :in_colorado],
+    [:non_compliant_child, :migrated_imported_from_clever],
+    [:non_compliant_child, :unknown_us_region],
+    [:non_compliant_child, :not_U13],
+    [:non_compliant_child, :without_parent_permission, :google_sso_provider],
+    [:non_compliant_child, :migrated_imported_from_clever, :with_google_authentication_option],
+    [:non_compliant_child, :with_interpolated_co, :skip_validation],
+    [:non_compliant_child, :with_interpolated_colorado, :skip_validation],
+    [:non_compliant_child, :with_interpolated_wa, :skip_validation],
+    # P20-939 - regression where accounts were allowed to be created without
+    # setting a US State
+    [:non_compliant_child, :skip_validation, {us_state: nil}],
+  ].each do |traits|
+    test "User should not require permission #{traits}" do
       user = create(*traits)
       sign_in user
       get '/home'
-      assert_response :success, "expected 200 response for user with traits #{traits}"
+      assert_response :success
     end
   end
 
