@@ -100,6 +100,8 @@ const AITutorFooter: React.FC<AITutorFooterProps> = ({renderAITutor}) => {
 
   const disabled = !renderAITutor || isWaitingForChatResponse;
 
+  const userMessageIsEmpty = userMessage.trim() === '';
+
   return (
     <div className={style.aiTutorFooter}>
       <div className={style.aiTutorFooterInputArea}>
@@ -111,13 +113,13 @@ const AITutorFooter: React.FC<AITutorFooterProps> = ({renderAITutor}) => {
           value={userMessage}
           disabled={disabled}
           onKeyDown={(e) => (
-            e.key === 'Enter' ? handleSubmit(ActionType.GENERAL_CHAT) : null
+            e.key === 'Enter' && !userMessageIsEmpty ? handleSubmit(ActionType.GENERAL_CHAT) : null
           )}
         />
         <Button
           className={style.submitButton}
           color={Button.ButtonColor.brandSecondaryDefault}
-          disabled={disabled}
+          disabled={disabled || userMessageIsEmpty}
           icon="arrow-up"
           key="submit"
           onClick={() => handleSubmit(ActionType.GENERAL_CHAT)}
