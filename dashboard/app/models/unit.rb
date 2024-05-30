@@ -1267,6 +1267,19 @@ class Unit < ApplicationRecord
     end
   end
 
+  def sync_from_mirrored_unit
+    start_time = Time.now
+    raise unless mirrored_unit
+    transaction do
+      lesson_groups.destroy_all
+      reload
+      mirrored_unit.lesson_groups.each do |lesson_group|
+        lesson_group.copy_to_unit(self)
+      end
+    end
+    puts "Synced #{name} from mirrored unit #{mirrored_unit.name} in #{(Time.now - start_time).to_i} seconds"
+  end
+
   def base_name
     Unit.base_name(name)
   end

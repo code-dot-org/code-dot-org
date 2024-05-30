@@ -195,6 +195,7 @@ class ScriptsController < ApplicationController
 
     if @script.update_text(unit_params, i18n_params, general_params)
       @script.reload
+      @script.mirror_units.each(&:sync_from_mirrored_unit)
       render json: @script.summarize_for_unit_edit
     else
       render(status: :not_acceptable, json: @script.errors)
