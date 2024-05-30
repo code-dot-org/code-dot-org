@@ -1,12 +1,5 @@
 #!/usr/bin/env ruby
 
-require_relative 'only_one'
-abort 'Script already running' unless only_one_running?(__FILE__)
-
-# require_relative '../../lib/cdo/redshift'
-require_relative '../../dashboard/config/environment'
-require 'cdo/chat_client'
-
 # This script is responsible for reshaping and uploading Foorm data to Redshift.
 # It works via a series of steps:
 #
@@ -16,11 +9,28 @@ require 'cdo/chat_client'
 # 4. Import the reshaped data to a temp table in Redshift.
 # 5. Merge the temp table with the main table in Redshift.
 # 6. Cleanup the temp table and the CSV file from S3.
+#
+# There are a couple of things to keep in mind with this script:
+#
+# * Rows delete in the source tables will not be deleted from Redshift
+# * Rows with their user_id changed will be modified in Redshift
+# * To anonymize/disassosiate PII, you should MODIFY the source table
+# * To delete data, you should delete it from the destination redshift table
+# * Temp S3 files containing PII are not cleaned up. The expectation is that we're
+#   using lifecycle rules to expire them once their troubleshooting value is gone
+
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
+require_relative '../../lib/cdo/redshift'
+require_relative '../../dashboard/config/environment'
+require 'cdo/chat_client'
+
+DRY_RUN = true
 
 # Batch Config - Approx total submissions is 300,000
-# MOCK_SUBMISSIONS_COUNT = 300000
-BATCH_SIZE = 30000 # aiming for about 10 batches
-BATCHES_PER_LOG = 2 # with progress reported every 2 batches
+BATCH_SIZE = 10000 # aiming for about 30 batches
+BATCHES_PER_LOG = 1 # with progress reported every 1 batches
 
 # AWS Config
 AWS_ACCOUNT_ID = Aws::STS::Client.new.get_caller_identity.account
@@ -30,6 +40,7 @@ REDSHIFT_S3_ACCESS_ROLE_ARN = "arn:aws:iam::#{AWS_ACCOUNT_ID}:role/redshift-s3"
 S3_BUCKET_NAME = 'cdo-data-sharing-internal'
 SUBMISSIONS_S3_CSV_NAME = 'submissions.csv'
 FORMS_S3_CSV_NAME = 'forms.csv'
+S3_PREFIX = "tmp-pii-foorm/#{Time.now.strftime('%Y/%m/%d')}"
 
 # Redshift Config
 SUBMISSIONS_REDSHIFT_TABLE_NAME = 'analysis_pii.foorm_submissions_reshaped'
@@ -37,24 +48,31 @@ FORMS_REDSHIFT_TABLE_NAME = 'analysis.foorm_forms_reshaped'
 
 def main
   log '*Process Foorm Data*'
-  client = nil #Aws::Redshift::Client.new
+
+  unless CDO.rack_env?(:production)
+    log 'Foorm processing should only be run in production'
+    return
+  end
+
+  client = RedshiftClient.instance
   process_submissions(client)
-  # process_forms(client)
+  process_forms(client)
   log 'Foorm data processing complete.'
 end
 
 def process_submissions(client)
-  # TODO: bad form to access the model here, alternative?
-  submissions_count = Pd::Foorm::Submission.count
-  submissions_count = MOCK_SUBMISSIONS_COUNT
+  # TODO: THIS LINE IS FAILING, UNITIALIZED CONSTANT
+  submissions_count = Foorm::Submission.count
   log "Processing #{submissions_count} foorm submissions"
 
   offset = 0
 
   loop do
-    # reshaped_submissions_csv = mock_csv(offset, BATCH_SIZE, MOCK_SUBMISSIONS_COUNT)
     reshaped_submissions_csv = Pd::Foorm::SubmissionAnalyticsParser.reshape_submissions_batch_into_csv(offset, BATCH_SIZE)
-    break if reshaped_submissions_csv.nil?
+    if reshaped_submissions_csv.nil?
+      log 'No more submissions to process'
+      break
+    end
 
     merge_csv_into_redshift_table(client, reshaped_submissions_csv, SUBMISSIONS_REDSHIFT_TABLE_NAME)
 
@@ -65,61 +83,113 @@ def process_submissions(client)
 
     offset += BATCH_SIZE
   rescue => exception
-    log "Error processing submissions #{offset + 1}-#{offset + BATCH_SIZE}: #{exception.message}"
+    log "Error processing submissions #{offset + 1}-#{offset + BATCH_SIZE}: #{exception.message}\n#{exception.backtrace.join("\n")}"
     break
   end
 
   log "Processed #{submissions_count}/#{submissions_count} submissions"
 end
 
-# TODO - remove mock_csv method
-def mock_csv(offset, batch_size, total_count)
-  return nil if offset >= total_count
+# Forms are processed in one batch, because there are less than a few hundred.
+def process_forms(client)
+  forms_count = Foorm::Form.count
+  log "Processing #{forms_count} foorm forms"
 
-  csv = "submission_id,item_name,matrix_item_name,response_value,response_text\n"
-  (offset...(offset + batch_size)).each do |i|
-    break if i >= total_count
-    csv += "#{i},item_name,matrix_item_name,response_value,response_text\n"
+  reshaped_forms_csv = Pd::Foorm::FormAnalyticsParser.reshape_all_forms_into_csv
+
+  filename = "#{S3_PREFIX}/#{FORMS_REDSHIFT_TABLE_NAME}_#{Time.now.to_i}.csv"
+  if DRY_RUN
+    log "DRY_RUN - Would upload to S3:\n#{filename}"
+  else
+    AWS::S3.upload_to_bucket(S3_BUCKET_NAME, filename, reshaped_forms_csv, no_random: true)
   end
 
-  sleep 1
-  csv
-end
+  s3_path = "s3://#{S3_BUCKET_NAME}/#{filename}"
+  load_csv_from_s3_into_redshift_table(client, s3_path, FORMS_REDSHIFT_TABLE_NAME)
 
-def process_forms(client)
-  # TODO: bad form to access the model here, alternative?
-  forms_count = Pd::Foorm::Form.count
-  log "Processing #{forms_count} foorm forms"
-  reshaped_forms_csv = Pd::Foorm::FormAnalyticsParser.reshape_all_forms_into_csv
-  merge_csv_into_redshift_table(reshaped_forms_csv, FORMS_REDSHIFT_TABLE_NAME)
   log "Processed #{forms_count}/#{forms_count} forms"
 end
 
+# Merges a csv into a redshift table via a temp table to not lock or recreate the main table
 def merge_csv_into_redshift_table(client, csv, table_name)
-  log "Pretending to merge CSV into Redshift table #{table_name}..."
-  # wait for 3 seconds
-  sleep 1
+  # Prefix filenames with a seconds timestamp to avoid collisions.
+  filename = "#{S3_PREFIX}/#{table_name}_#{Time.now.to_i}.csv"
 
-  # Upload the reshaped data to S3, timestamped.
-  # TODO
+  if DRY_RUN
+    log "DRY_RUN - Would upload to S3:\n#{filename}"
+  else
+    AWS::S3.upload_to_bucket(S3_BUCKET_NAME, filename, csv, no_random: true)
+  end
 
-  # Import the reshaped data to a temp table in Redshift.
-  # TODO
+  load_csv_from_s3_into_redshift_table(client, "s3://#{S3_BUCKET_NAME}/#{filename}", "#{table_name}_temp")
 
-  # Merge the temp table with the main table in Redshift.
-  # TODO
+  merge_temp_table_with_main_table(client, "#{table_name}_temp", table_name)
 
-  # Cleanup the temp table and the CSV file from S3.
-  # TODO
+  # Cleanup the temp table to minimize PII exposure (S3 file should be cleaned up via lifecycle rules)
+  # TODO: actually delete the table once we're done troubleshooting this script.
+  # delete_redshift_table(client, "#{table_name}_temp")
+end
+
+def load_csv_from_s3_into_redshift_table(client, s3_path, table_name)
+  query = <<~SQL
+    DROP TABLE IF EXISTS #{table_name};
+    CREATE TABLE IF NOT EXISTS #{table_name} (
+      submission_id    int,
+      item_name        varchar,
+      matrix_item_name varchar,
+      response_value   varchar,
+      response_text    varchar(max)
+    );
+
+    COPY #{table_name}
+    FROM '#{s3_path}'
+    IAM_ROLE '#{REDSHIFT_S3_ACCESS_ROLE_ARN}'
+    CSV
+    IGNOREHEADER 1;
+  SQL
+
+  execute_redshift_query(client, query)
+end
+
+def merge_temp_table_with_main_table(client, temp_table_name, main_table_name)
+  query = <<~SQL
+    BEGIN;
+    DELETE FROM #{main_table_name}
+    USING #{temp_table_name}
+    WHERE #{main_table_name}.submission_id = #{temp_table_name}.submission_id;
+
+    INSERT INTO #{main_table_name}
+    SELECT * FROM #{temp_table_name};
+
+    COMMIT;
+  SQL
+
+  execute_redshift_query(client, query)
+end
+
+def delete_redshift_table(client, table_name)
+  query = "DROP TABLE IF EXISTS #{table_name}"
+  execute_redshift_query(client, query)
+end
+
+def execute_redshift_query(client, query)
+  if DRY_RUN
+    log "DRY_RUN - Would execute Redshift Query:\n#{query}"
+  else
+    client.execute(query)
+  end
+rescue => exception
+  log "Error executing Redshift query: #{exception.message}\n#{exception.backtrace.join("\n")}"
+  raise
 end
 
 def log(message)
   puts message
-  ChatClient.message 'cron-daily', full_message
+  ChatClient.message 'cron-daily', message
 end
 
 begin
   main
 ensure
-  log 'Foorm data processing complete, possibly with errors.'
+  log 'Foorm data processing ended.'
 end

@@ -39,7 +39,7 @@ module Pd::Foorm
     # @param [Integer] batch_size Number of submissions to reshape at a time
     # @param [Integer] offset Number of submissions to skip before reshaping
     # @return [String] a CSV formatted string with each line containing an answer.
-    def self.reshape_submissions_batch_into_csv(batch_size: 1000, offset: 0)
+    def self.reshape_submissions_batch_into_csv(offset, batch_size)
       submissions = ::Foorm::Submission.offset(offset).limit(batch_size)
       return nil if submissions.empty?
 
