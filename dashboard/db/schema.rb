@@ -168,7 +168,7 @@ ActiveRecord::Schema.define(version: 2024_05_22_163806) do
     t.string "callout_text"
   end
 
-  create_table "cap_user_events", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+  create_table "cap_user_events", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "name", limit: 64, null: false
     t.integer "user_id", null: false
     t.string "policy", limit: 16, null: false
@@ -966,7 +966,7 @@ ActiveRecord::Schema.define(version: 2024_05_22_163806) do
     t.float "value", null: false
   end
 
-  create_table "new_feature_feedbacks", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+  create_table "new_feature_feedbacks", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "form_key", null: false
     t.boolean "satisfied", null: false

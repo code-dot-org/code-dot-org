@@ -20,6 +20,7 @@ function LessonDataCell({
   studentLessonProgress,
   addExpandedLesson,
   studentId,
+  metadataExpanded,
 }) {
   const noLevels = !lessonHasLevels(lesson);
   const finished = studentLessonProgress?.completedPercent === 100;
@@ -66,13 +67,29 @@ function LessonDataCell({
     ? () => addExpandedLesson(lesson)
     : undefined;
 
-  return getCellComponent(
+  const lessonCellUnexpanded = getCellComponent(
     <>
       {finished && <ProgressIcon itemType={ITEM_TYPE.SUBMITTED} />}
       {partiallyComplete && <ProgressIcon itemType={ITEM_TYPE.IN_PROGRESS} />}
       {noLevels && <ProgressIcon itemType={ITEM_TYPE.NO_ONLINE_WORK} />}
     </>
   );
+
+  if (metadataExpanded) {
+    return (
+      <div className={styles.lessonDataCellExpanded}>
+        {lessonCellUnexpanded}
+        <div className={classNames(styles.gridBox, styles.gridBoxMetadata)}>
+          67
+        </div>
+        <div className={classNames(styles.gridBox, styles.gridBoxMetadata)}>
+          4/13
+        </div>
+      </div>
+    );
+  }
+
+  return lessonCellUnexpanded;
 }
 
 export default connect(state => ({
@@ -86,4 +103,5 @@ LessonDataCell.propTypes = {
   lesson: PropTypes.object.isRequired,
   addExpandedLesson: PropTypes.func.isRequired,
   studentId: PropTypes.number.isRequired,
+  metadataExpanded: PropTypes.bool,
 };
