@@ -2,7 +2,10 @@ import {useMemo, useEffect, useCallback, useRef} from 'react';
 
 import header from '@cdo/apps/code-studio/header';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
-import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import {
+  getAppOptionsEditBlocks,
+  getAppOptionsEditingExemplar,
+} from '@cdo/apps/lab2/projects/utils';
 import {setAndSaveProjectSource} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -20,11 +23,13 @@ export const useSource = (defaultSources: ProjectSources) => {
   const source = projectSource?.source as MultiFileSource;
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+  const isEditingExemplarMode = getAppOptionsEditingExemplar();
   const initialSources = useInitialSources(defaultSources);
   const levelStartSource = useAppSelector(
     state => state.lab.levelProperties?.source
   );
   const previousChannelIdRef = useRef<string | null>(null);
+  const levelId = useAppSelector(state => state.lab.levelProperties?.id);
 
   const setSource = useMemo(
     () => (newSource: MultiFileSource) => {
@@ -42,8 +47,14 @@ export const useSource = (defaultSources: ProjectSources) => {
       header.showLevelBuilderSaveButton(() => {
         return {source};
       });
+    } else if (isEditingExemplarMode) {
+      header.showLevelBuilderSaveButton(
+        () => ({exemplar_sources: source}),
+        'Levelbuilder: Edit Exemplar',
+        `/levels/${levelId}/update_exemplar_code`
+      );
     }
-  }, [isStartMode, source]);
+  }, [isStartMode, isEditingExemplarMode, levelId, source]);
 
   useEffect(() => {
     if (channelId && previousChannelIdRef.current !== channelId) {
