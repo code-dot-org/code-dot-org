@@ -125,7 +125,7 @@ class Policies::ChildAccount
 
   # Check if parent permission is required for this account according to our
   # Child Account Policy.
-  private_class_method def self.parent_permission_required?(user)
+  def self.parent_permission_required?(user)
     return false unless user.student?
     return false unless user.birthday
 
