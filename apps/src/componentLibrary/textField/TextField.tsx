@@ -28,7 +28,7 @@ export interface TextFieldProps extends AriaAttributes {
   /** TextField placeholder */
   placeholder?: string;
   /** Is TextField readOnly */
-  readonly?: boolean;
+  readOnly?: boolean;
   /** Is TextField disabled */
   disabled?: boolean;
   /** TextField Error */
@@ -49,7 +49,7 @@ export interface TextFieldProps extends AriaAttributes {
  * * (see apps/test/unit/componentLibrary/TextFieldTest.jsx)
  * * (?) passes accessibility checks;
  *
- * ###  Status: ```WIP```
+ * ###  Status: ```Ready for dev```
  *
  * Design System: TextField Component.
  * Used to render a text field.
@@ -61,7 +61,7 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
   value,
   placeholder,
   disabled = false,
-  readonly = false,
+  readOnly = false,
   helperMessage,
   helperIcon,
   error,
@@ -88,7 +88,7 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
         name={name}
         value={value}
         placeholder={placeholder}
-        readOnly={readonly}
+        readOnly={readOnly}
         disabled={disabled}
         onChange={onChange}
         {...ariaProps}

@@ -78,9 +78,9 @@ DisabledTextField.args = {
 
 export const ReadOnlyTextField = SingleTemplate.bind({});
 ReadOnlyTextField.args = {
-  name: 'textfield_readonly',
+  name: 'textfield_readOnly',
   label: 'TextField Label',
-  readonly: true,
+  readOnly: true,
   onChange: () => null,
 };
 
