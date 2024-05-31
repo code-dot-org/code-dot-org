@@ -102,6 +102,12 @@ const AITutorFooter: React.FC<AITutorFooterProps> = ({renderAITutor}) => {
 
   const userMessageIsEmpty = userMessage.trim() === '';
 
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' && userMessage.trim() !== '') {
+      handleSubmit(ActionType.GENERAL_CHAT);
+    }
+  };
+
   return (
     <div className={style.aiTutorFooter}>
       <div className={style.aiTutorFooterInputArea}>
@@ -112,11 +118,7 @@ const AITutorFooter: React.FC<AITutorFooterProps> = ({renderAITutor}) => {
           onChange={e => setUserMessage(e.target.value)}
           value={userMessage}
           disabled={disabled}
-          onKeyDown={e =>
-            e.key === 'Enter' && !userMessageIsEmpty
-              ? handleSubmit(ActionType.GENERAL_CHAT)
-              : null
-          }
+          onKeyDown={e => handleKeyPress(e)}
         />
         <Button
           className={style.submitButton}
