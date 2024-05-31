@@ -20,9 +20,9 @@ const Template = args => (
 export const NewAccount = Template.bind({});
 NewAccount.args = {};
 
-export const NewPrePolicyAccount = Template.bind({});
-NewPrePolicyAccount.args = {
-  isPrePolicyUser: true,
+export const NewPreLockoutAccount = Template.bind({});
+NewPreLockoutAccount.args = {
+  isPreLockoutUser: true,
 };
 
 export const PendingRequest = Template.bind({});

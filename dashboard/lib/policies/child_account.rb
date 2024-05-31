@@ -88,6 +88,15 @@ class Policies::ChildAccount
       user.authentication_options.any?(&:google?)
   end
 
+  # Checks if a user affected by a state policy was created before the lockout date.
+  def self.pre_lockout_user?(user)
+    lockout_date = state_policy(user).try(:[], :lockout_date)
+    return false unless lockout_date
+    return user_predates_policy?(user) if DateTime.now < lockout_date
+
+    user.created_at < lockout_date
+  end
+
   # The date on which the student's account will be locked if the account is not compliant.
   def self.lockout_date(user)
     return if compliant?(user)

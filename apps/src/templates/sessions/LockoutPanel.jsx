@@ -98,8 +98,8 @@ export default function LockoutPanel(props) {
       <h2>
         {props.pendingEmail
           ? i18n.sessionLockoutPendingHeader()
-          : props.isPrePolicyUser
-          ? i18n.sessionLockoutNewPrePolicyAccountHeader()
+          : props.isPreLockoutUser
+          ? i18n.sessionLockoutNewPreLockoutAccountHeader()
           : i18n.sessionLockoutNewAccountHeader()}
       </h2>
 
@@ -116,8 +116,8 @@ export default function LockoutPanel(props) {
         )}
         {!props.pendingEmail && (
           <p>
-            {props.isPrePolicyUser
-              ? i18n.sessionLockoutPrePolicyAccountPrompt()
+            {props.isPreLockoutUser
+              ? i18n.sessionLockoutPreLockoutAccountPrompt()
               : i18n.sessionLockoutPrompt()}
           </p>
         )}
@@ -244,11 +244,11 @@ LockoutPanel.propTypes = {
   pendingEmail: PropTypes.string,
   requestDate: PropTypes.instanceOf(Date),
   disallowedEmail: PropTypes.string.isRequired,
-  isPrePolicyUser: PropTypes.bool,
+  isPreLockoutUser: PropTypes.bool,
 };
 
 LockoutPanel.defaultProps = {
-  isPrePolicyUser: false,
+  isPreLockoutUser: false,
 };
 
 const styles = {
