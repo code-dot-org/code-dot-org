@@ -1,5 +1,5 @@
 import {resetOutput} from '@codebridge/redux/consoleRedux';
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import {useDispatch} from 'react-redux';
 
 import Button from '@cdo/apps/componentLibrary/button';
@@ -11,6 +11,20 @@ import moduleStyles from './console.module.scss';
 const Console: React.FunctionComponent = () => {
   const codeOutput = useAppSelector(state => state.codebridgeConsole.output);
   const dispatch = useDispatch();
+  const levelId = useAppSelector(state => state.lab.levelProperties?.id);
+  const previousLevelId = useRef(levelId);
+  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+
+  // TODO: Update this with other apps that use the console as needed.
+  const systemMessagePrefix = appName === 'pythonlab' ? '[PYTHON LAB] ' : '';
+
+  useEffect(() => {
+    // If the level changes, clear the console.
+    if (previousLevelId.current !== levelId) {
+      dispatch(resetOutput());
+      previousLevelId.current = levelId;
+    }
+  }, [dispatch, levelId]);
 
   const clearOutput = () => {
     dispatch(resetOutput());
@@ -21,7 +35,7 @@ const Console: React.FunctionComponent = () => {
       <Button
         isIconOnly
         color={'black'}
-        icon={{iconStyle: 'solid', iconName: 'broom'}}
+        icon={{iconStyle: 'solid', iconName: 'eraser'}}
         ariaLabel="clear console"
         onClick={clearOutput}
         size={'xs'}
@@ -58,7 +72,12 @@ const Console: React.FunctionComponent = () => {
               </div>
             );
           } else {
-            return <div key={index}>[PYTHON LAB] {outputLine.contents}</div>;
+            return (
+              <div key={index}>
+                {systemMessagePrefix}
+                {outputLine.contents}
+              </div>
+            );
           }
         })}
       </div>
