@@ -1,5 +1,3 @@
-import moment from 'moment';
-
 export function formatTimeSpent(studentProgress) {
   if (studentProgress?.timeSpent) {
     const minutes = studentProgress.timeSpent / 60;
@@ -13,7 +11,7 @@ export function formatLastUpdated(studentProgress) {
     const date = new Date(studentProgress.lastTimestamp * 1000);
     return new Intl.DateTimeFormat('en-US', {
       month: 'numeric',
-      day: 'numeric'
+      day: 'numeric',
     }).format(date);
   }
   return missingDataFormatter(!!studentProgress);
