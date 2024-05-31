@@ -15,18 +15,44 @@ import autogenerateML from '@cdo/apps/applab/ai';
 import * as aiConfig from '@cdo/apps/applab/ai/dropletConfig';
 import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
+import {workspace_running_background, white} from '@cdo/apps/util/color';
 import commonMsg from '@cdo/locale';
 
 import annotationList from '../acemode/annotationList';
+import {showHideWorkspaceCallouts} from '../code-studio/callouts';
+import header from '../code-studio/header';
+import project from '../code-studio/initApp/project';
+import consoleApi from '../consoleApi';
+import {TestResults, ResultType} from '../constants';
+import {
+  getContainedLevelResultInfo,
+  postContainedLevelAttempt,
+  runAfterPostContainedLevel,
+} from '../containedLevels';
 import dom from '../dom';
+import {makeDisabledConfig} from '../dropletUtils';
 import executionLog from '../executionLog';
+import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 import JsInterpreterLogger from '../JsInterpreterLogger';
+import {MB_API} from '../lib/kits/maker/boards/microBit/MicroBitConstants';
+import * as makerToolkitRedux from '../lib/kits/maker/redux';
+import * as makerToolkit from '../lib/kits/maker/toolkit';
+import {actions as jsDebugger} from '../lib/tools/jsdebugger/redux';
 import JSInterpreter from '../lib/tools/jsinterpreter/JSInterpreter';
+import {outputError, injectErrorHandler} from '../lib/util/javascriptMode';
 import * as apiTimeoutList from '../lib/util/timeoutList';
 import logToCloud from '../logToCloud';
 import {getStore} from '../redux';
+import {setStepSpeed} from '../redux/runState';
 import {add as addWatcher} from '../redux/watchedExpressions';
+import Sounds from '../Sounds';
 import {getDatasetInfo} from '../storage/dataBrowser/dataUtils';
+import {loadDataForView} from '../storage/dataBrowser/loadDataForView';
+import {
+  updateTableColumns,
+  updateTableRecords,
+  setLibraryManifest,
+} from '../storage/redux/data';
 import {
   initStorage,
   isFirebaseStorage,
@@ -36,6 +62,8 @@ import {
 import {singleton as studioApp} from '../StudioApp';
 import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
 import {shouldOverlaysBeVisible} from '../templates/VisualizationOverlay';
+import * as thumbnailUtils from '../util/thumbnail';
+import {getRandomDonorTwitter} from '../util/twitterHelper';
 import * as utils from '../utils';
 
 import applabTurtle from './applabTurtle';
@@ -50,41 +78,6 @@ import {actions, reducers} from './redux/applab';
 import {changeScreen} from './redux/screens';
 
 const {ApplabInterfaceMode} = applabConstants;
-
-// Disabling import order in order to import ApplabInterfaceMode
-// This might be safe to remove but needs investigation.
-/* eslint-disable import/order */
-import consoleApi from '../consoleApi';
-import {
-  updateTableColumns,
-  updateTableRecords,
-  setLibraryManifest,
-} from '../storage/redux/data';
-import {loadDataForView} from '../storage/dataBrowser/loadDataForView';
-import {setStepSpeed} from '../redux/runState';
-import {
-  getContainedLevelResultInfo,
-  postContainedLevelAttempt,
-  runAfterPostContainedLevel,
-} from '../containedLevels';
-import {outputError, injectErrorHandler} from '../lib/util/javascriptMode';
-import {actions as jsDebugger} from '../lib/tools/jsdebugger/redux';
-import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
-import * as makerToolkit from '../lib/kits/maker/toolkit';
-import * as makerToolkitRedux from '../lib/kits/maker/redux';
-import project from '../code-studio/initApp/project';
-import * as thumbnailUtils from '../util/thumbnail';
-import Sounds from '../Sounds';
-import {makeDisabledConfig} from '../dropletUtils';
-import {getRandomDonorTwitter} from '../util/twitterHelper';
-import {showHideWorkspaceCallouts} from '../code-studio/callouts';
-import header from '../code-studio/header';
-import {TestResults, ResultType} from '../constants';
-
-import {workspace_running_background, white} from '@cdo/apps/util/color';
-
-import {MB_API} from '../lib/kits/maker/boards/microBit/MicroBitConstants';
-/* eslint-enable import/order */
 
 /**
  * Create a namespace for the application.

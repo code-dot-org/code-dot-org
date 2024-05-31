@@ -3,7 +3,8 @@ import React from 'react';
 var msg = require('@cdo/locale');
 
 // Disabling import order in order to add require statements first
-// This might be safe to remove but needs investigation.
+// Require statements can change behavior based on the order they are called.
+// This might be safe to remove but needs investigation whether any behavior is changed by order.
 /* eslint-disable import/order */
 var GameButtons = require('../templates/GameButtons').default;
 var BelowVisualization = require('../templates/BelowVisualization');
