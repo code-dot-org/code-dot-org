@@ -241,7 +241,6 @@ module ProjectsList
     end
 
     def fetch_featured_projects_by_type(project_type, featured_before: nil)
-      puts "inside fetching featured projects by type: #{project_type}"
       projects = "#{CDO.dashboard_db_name}__projects".to_sym
       user_project_storage_ids = "#{CDO.dashboard_db_name}__user_project_storage_ids".to_sym
 
@@ -261,7 +260,6 @@ module ProjectsList
         exclude(abuse_score: 1...).
         order(Sequel.desc(:featured_at)).limit(FEATURED_MAX_LIMIT)
       result = extract_data_for_featured_project_cards(project_featured_project_user_combo_data)
-      puts "result: #{result}"
       return result
     end
 
