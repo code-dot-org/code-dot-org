@@ -901,6 +901,12 @@ en:
 
             * You can find the *Syllabus*, *Course Vocab*, and other resources to help you implement this curriculum in the Teacher Resources menu below.
           version_title: "'24-'25"
+        modular-course:
+          title: Modular Course
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
         focus-on-coding-2024:
           title: Focus on Coding ('24-'25)
           description_short: ''
