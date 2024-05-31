@@ -124,8 +124,6 @@ describe('LessonProgressDataColumn', () => {
   it('shows progress for all students', () => {
     renderDefault();
 
-    screen.getByTestId('lesson-data-cell-1-1');
-    screen.getByTestId('lesson-data-cell-1-2');
     expect(screen.queryAllByTestId(/lesson-data-cell/)).to.have.length(
       STUDENTS.length
     );
