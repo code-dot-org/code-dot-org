@@ -22,6 +22,7 @@ class PublicGallery extends Component {
       applab: PropTypes.arrayOf(publishedFeaturedProjectPropType),
       spritelab: PropTypes.arrayOf(publishedFeaturedProjectPropType),
       gamelab: PropTypes.arrayOf(publishedFeaturedProjectPropType),
+      playlab: PropTypes.arrayOf(publishedFeaturedProjectPropType),
       artist: PropTypes.arrayOf(publishedFeaturedProjectPropType),
       minecraft: PropTypes.arrayOf(publishedFeaturedProjectPropType),
       dance: PropTypes.arrayOf(publishedFeaturedProjectPropType),

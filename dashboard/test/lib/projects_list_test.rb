@@ -114,7 +114,7 @@ class ProjectsListTest < ActionController::TestCase
     refute_nil ProjectsList.send(:get_published_project_and_user_data, project_and_user)
   end
 
-  test 'get_published_project_and_user_data does not return nil for Playlab project even with sharing_disabled' do
+  test 'get_published_project_and_user_data does not return nil for PlayLab project even with sharing_disabled' do
     project_and_user = {
       properties: {sharing_disabled: true}.to_json,
       project_type: 'playlab',
@@ -295,8 +295,8 @@ class ProjectsListTest < ActionController::TestCase
         {name: "featuredApplab3"}
       ],
       gamelab: [],
-      artist: [],
       playlab: [],
+      artist: [],
       minecraft: [],
       events: [],
       k1: [],
