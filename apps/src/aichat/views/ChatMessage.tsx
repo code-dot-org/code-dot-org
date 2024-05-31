@@ -103,7 +103,8 @@ const displayModelUpdateMessage = (
         <>
           <span className={moduleStyles.modelUpdateMessageTextContainer}>
             <StrongText>{chatMessageText}</StrongText>
-            {chatMessageSuffix}
+            {chatMessageSuffix?.text}
+            <StrongText>{chatMessageSuffix?.boldtypeText}</StrongText>
           </span>
           <StrongText>{timestamp}</StrongText>
         </>
