@@ -2244,6 +2244,8 @@ class User < ApplicationRecord
       sharing_disabled: sharing_disabled?,
       has_ever_signed_in: has_ever_signed_in?,
       ai_tutor_access_denied: !!ai_tutor_access_denied,
+      at_risk_age_gated: Policies::ChildAccount.parent_permission_required?(self),
+      child_account_compliance_state: child_account_compliance_state,
     }
   end
 

@@ -1,12 +1,14 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon';
-import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../util/reconfiguredChai';
+
 import {ImportProjectDialog} from '@cdo/apps/applab/ImportProjectDialog';
 import {
   sources as sourcesApi,
   channels as channelsApi,
 } from '@cdo/apps/clientApi';
+
+import {expect} from '../../util/reconfiguredChai';
 
 describe('Applab ImportProjectDialog component', function () {
   var form, urlInput, nextButton;

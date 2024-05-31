@@ -1,5 +1,7 @@
 import React from 'react';
+
 import {UnconnectedExternalRedirectDialog as ExternalRedirectDialog} from '@cdo/apps/applab/ExternalRedirectDialog';
+
 import {REDIRECT_RESPONSE} from './redux/applab';
 
 export default {

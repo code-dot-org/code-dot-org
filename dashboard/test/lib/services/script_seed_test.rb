@@ -51,6 +51,13 @@ module Services
     end
 
     test 'seed new script' do
+      # This line of code is used to initialize the `max_allowed_packet` setting in ActiveRecord::Import.
+      # When a test is run in isolation, this setting may not be set, which can cause an extra database request.
+      # This extra request can interfere with the `assert_queries` count in the test, causing it to fail.
+      # By calling `max_allowed_packet` here, we ensure that the setting is initialized before the test begins.
+      # See: https://github.com/zdennis/activerecord-import/blob/v1.0.8/lib/activerecord-import/adapters/mysql_adapter.rb#L55-L64
+      ApplicationRecord.connection.max_allowed_packet if ApplicationRecord.connection.respond_to?(:max_allowed_packet)
+
       script = create_script_tree
       script.freeze
       json = ScriptSeed.serialize_seeding_json(script)

@@ -47,6 +47,9 @@ const EVENTS = {
   CAP_PARENT_EMAIL_MODAL_UPDATED: 'CAP Parent Email Modal Updated',
   CAP_PARENT_EMAIL_MODAL_RESEND: 'CAP Parent Email Modal Resend',
   CAP_PARENT_EMAIL_MODAL_CLOSED: 'CAP Parent Email Modal Closed',
+  CAP_AGE_GATED_MODAL_SHOWN: 'CAP Teacher Students Warning Modal Shown',
+  CAP_STUDENT_WARNING_LINK_CLICKED:
+    'CAP Teacher Students Warning Modal Documentation Clicked',
 
   // School Selection Component
   COUNTRY_SELECTED: 'User Selects Country',
@@ -157,6 +160,8 @@ const EVENTS = {
   // Rubrics
   TA_RUBRIC_OPENED_FROM_FAB_EVENT: 'TA Rubric Opened From FAB',
   TA_RUBRIC_CLOSED_FROM_FAB_EVENT: 'TA Rubric Closed From FAB',
+  TA_RUBRIC_OPEN_ON_PAGE_LOAD: 'TA Rubric Open on Page Load',
+  TA_RUBRIC_CLOSED_ON_PAGE_LOAD: 'TA Rubric Closed on Page Load',
   TA_RUBRIC_LEARNING_GOAL_EXPANDED_EVENT: 'TA Rubric Learning Goal Expanded',
   TA_RUBRIC_LEARNING_GOAL_COLLAPSED_EVENT: 'TA Rubric Learning Goal Collapsed',
   TA_RUBRIC_ON_STUDENT_WORK_LOADED: 'TA Rubric On Student Work Loaded',
@@ -286,6 +291,7 @@ const EVENTS = {
   CHAT_ACTION: 'Student takes a chat action',
   SAVE_MODEL_CARD_INFO: 'Student saves their model card info',
   PUBLISH_MODEL_CARD_INFO: 'Student publishes their model card info',
+  AICHAT_START_OVER: 'Student starts over and resets to default model settings',
 };
 
 const EVENT_GROUP_NAMES = {

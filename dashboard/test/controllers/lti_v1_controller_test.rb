@@ -575,6 +575,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'auth - should render oauth redirector if student-email-post-enabled' do
+    DCDO.stubs(:get)
     Cpa.stubs(:cpa_experience).with(any_parameters).returns(false)
     SignUpTracking.stubs(:begin_sign_up_tracking).returns(false)
     DCDO.stubs(:get).with(I18nStringUrlTracker::I18N_STRING_TRACKING_DCDO_KEY, false).returns(false)
