@@ -19,12 +19,9 @@ import wrappedSortable from '../tables/wrapped_sortable';
 
 import PersonalProjectsNameCell from './PersonalProjectsNameCell';
 import PersonalProjectsTableActionsCell from './PersonalProjectsTableActionsCell';
-import {
-  personalProjectDataPropType,
-  PROJECT_DEFAULT_IMAGE,
-  PROJECT_DEFAULT_IMAGE_OVERRIDE,
-} from './projectConstants';
+import {personalProjectDataPropType} from './projectConstants';
 import {PROJECT_TYPE_MAP} from './projectTypeMap';
+import {getThumbnailUrl} from './projectUtils';
 
 const THUMBNAIL_SIZE = 65;
 
@@ -310,10 +307,8 @@ export const styles = {
 // Cell formatters.
 const thumbnailFormatter = function (thumbnailUrl, {rowData}) {
   const projectUrl = `/projects/${rowData.type}/${rowData.channel}/edit`;
-  thumbnailUrl =
-    thumbnailUrl ||
-    PROJECT_DEFAULT_IMAGE_OVERRIDE[rowData.type] ||
-    PROJECT_DEFAULT_IMAGE;
+  thumbnailUrl = getThumbnailUrl(thumbnailUrl, rowData.type);
+  console.log('thumbnailUrl', thumbnailUrl);
   return (
     <a
       style={tableLayoutStyles.link}
