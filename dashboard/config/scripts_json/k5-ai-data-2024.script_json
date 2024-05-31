@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "k5-ai-data",
-    "serialized_at": "2024-05-29 18:16:51 UTC",
+    "serialized_at": "2024-05-30 20:01:47 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -41,7 +41,8 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "This lesson will introduce students to the fundamentals of Artificial Intelligence (AI) and machine learning by focusing on predictive data models. Students will get hands-on practice with reinforcement learning starting with data that has already been sorted and progressing to making predictions on their own of how to sort items on screen. In the final level, students will try their hand at sorting data on their own and will enlist a partner to predict how the items have been categorized.\n\nThis hands-on experience will be complemented by discussions on the significance of data categorization and the challenges posed by limited datasets. Students will explore a real-world example where AI predictions have been used to help humans. The lesson aims to demystify AI technology, emphasizing its pattern-based logic rather than perceiving it as magical or random.\n"
+        "overview": "This lesson will introduce students to the fundamentals of Artificial Intelligence (AI) and machine learning by focusing on predictive data models. Students will get hands-on practice with reinforcement learning starting with data that has already been sorted and progressing to making predictions on their own of how to sort items on screen. In the final level, students will try their hand at sorting data on their own and will enlist a partner to predict how the items have been categorized.\n\nThis hands-on experience will be complemented by discussions on the significance of data categorization and the challenges posed by limited datasets. Students will explore a real-world example where AI predictions have been used to help humans. The lesson aims to demystify AI technology, emphasizing its pattern-based logic rather than perceiving it as magical or random.\n",
+        "preparation": "- Play through the levels on your own\n- Preview the sorting activity for students by printing and cutting out the <a href=\"https://docs.google.com/document/d/1AmimDxv3luX-LyQFGnTWIEKdD370CzpYZtDQK4HyDIQ/template/preview\" target=\"_blank\">physical manipulatives</a>"
       },
       "seeding_key": {
         "lesson.key": "Sorting Data",
@@ -67,13 +68,13 @@
     },
     {
       "key": "How AI Makes Decisions",
-      "name": "How AI Makes Decisions",
+      "name": "Using AI Bot",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "In this lesson, students will begin thinking about how to classify real world objects by their features. They will build out a feature vector of fruits and vegetables in order to learn how AI makes decisions based on the probability of an outcome. Students will use “Dance Party: AI Edition” to see first-hand how AI can make tasks more efficient, but that it might come at the cost of customization. Students will consider what it means to collaborate and co-create with AI.\n"
+        "overview": "In this lesson, students will begin thinking about how to classify real world objects by their features. They will build out two feature vectors (foods and emojis) in order to learn how AI makes decisions based on the probability of an outcome. Students will use “Dance Party: AI Edition” to see first-hand how AI can make tasks more efficient, but that it might come at the cost of customization. Students will consider what it means to collaborate and co-create with AI.\n"
       },
       "seeding_key": {
         "lesson.key": "How AI Makes Decisions",
@@ -83,7 +84,7 @@
     },
     {
       "key": "Using AI Tools in School",
-      "name": "Using AI Tools in School",
+      "name": "AI Tools in School",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -624,13 +625,13 @@
       }
     },
     {
-      "key": "07c28396-fa22-4a41-8d8a-c93681489785",
+      "key": "77e408bb-19be-47f8-9f0f-000093decae7",
       "position": 2,
       "properties": {
-        "progression_name": "Using AI Tools in School"
+        "progression_name": "Using AI Tools in School (Online Version)"
       },
       "seeding_key": {
-        "activity_section.key": "07c28396-fa22-4a41-8d8a-c93681489785",
+        "activity_section.key": "77e408bb-19be-47f8-9f0f-000093decae7",
         "lesson_activity.key": "7abfdbb7-92d5-42ed-97d5-2da44b710690"
       }
     },
@@ -1070,6 +1071,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "k5_ai_matching_background_emoji"
+        ],
         "progression": "Check For Understanding: Emojis"
       },
       "bonus": false,
@@ -1142,23 +1146,20 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "k5_ai_plan_your_poster_pilot_2024"
-        ],
-        "progression": "Using AI Tools in School"
+        "progression": "Using AI Tools in School (Online Version)"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "k5_ai_plan_your_poster_pilot_2024"
+          "k5_ai_data_student_data_questions_level"
         ],
         "lesson.key": "Using AI Tools in School",
         "lesson_group.key": "",
         "script.name": "k5-ai-data-2024",
-        "activity_section.key": "07c28396-fa22-4a41-8d8a-c93681489785"
+        "activity_section.key": "77e408bb-19be-47f8-9f0f-000093decae7"
       },
       "level_keys": [
-        "k5_ai_plan_your_poster_pilot_2024"
+        "k5_ai_data_student_data_questions_level"
       ]
     },
     {
@@ -1406,14 +1407,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "k5_ai_plan_your_poster_pilot_2024",
+        "level.key": "k5_ai_data_student_data_questions_level",
         "script_level.level_keys": [
-          "k5_ai_plan_your_poster_pilot_2024"
+          "k5_ai_data_student_data_questions_level"
         ],
         "lesson.key": "Using AI Tools in School",
         "lesson_group.key": "",
         "script.name": "k5-ai-data-2024",
-        "activity_section.key": "07c28396-fa22-4a41-8d8a-c93681489785"
+        "activity_section.key": "77e408bb-19be-47f8-9f0f-000093decae7"
       }
     },
     {
@@ -1441,6 +1442,19 @@
       },
       "seeding_key": {
         "resource.key": "_key_using_ai_tools_in_school"
+      }
+    },
+    {
+      "name": "[Optional] Physical Sorting Manipulatives",
+      "url": "https://docs.google.com/document/d/1AmimDxv3luX-LyQFGnTWIEKdD370CzpYZtDQK4HyDIQ/template/preview",
+      "key": "_optional_physical_sorting_manipulatives",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/document/d/1AmimDxv3luX-LyQFGnTWIEKdD370CzpYZtDQK4HyDIQ/export/pdf",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "_optional_physical_sorting_manipulatives"
       }
     },
     {
@@ -1501,6 +1515,12 @@
       "seeding_key": {
         "lesson.key": "How AI Makes Decisions",
         "resource.key": "elementary_ai_module_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sorting Data",
+        "resource.key": "_optional_physical_sorting_manipulatives"
       }
     },
     {
