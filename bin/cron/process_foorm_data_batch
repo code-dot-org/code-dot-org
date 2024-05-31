@@ -129,7 +129,7 @@ def process_submissions(client)
     # Prefix filenames with a seconds timestamp to avoid collisions.
     filename = "#{S3_PREFIX}/#{SUBMISSIONS_REDSHIFT_TABLE_NAME}_#{Time.now.to_i}.csv"
     s3_path = "s3://#{S3_BUCKET_NAME}/#{filename}"
-    AWS::S3.upload_to_bucket(S3_BUCKET_NAME, filename, csv, no_random: true)
+    AWS::S3.upload_to_bucket(S3_BUCKET_NAME, filename, reshaped_submissions_csv, no_random: true)
 
     load_submissions_csv_from_s3_into_redshift_table(client, s3_path, "#{SUBMISSIONS_REDSHIFT_TABLE_NAME}_temp")
     merge_temp_table_with_main_table(client, "#{SUBMISSIONS_REDSHIFT_TABLE_NAME}_temp", SUBMISSIONS_REDSHIFT_TABLE_NAME, 'submission_id')
@@ -138,6 +138,8 @@ def process_submissions(client)
     # TODO: actually delete the table once we're done troubleshooting this script.
     # delete_redshift_table(client, "#{table_name}_temp")
 
+    offset += BATCH_SIZE
+
     # log only after N batches to reduce noise
     if offset % (BATCH_SIZE * BATCHES_PER_LOG) == 0
       elapsed_time = Time.now - start_time
@@ -145,8 +147,6 @@ def process_submissions(client)
       estimated_minutes_remaining = ((elapsed_time / percent_complete) - elapsed_time) / 60
       log "Processed #{offset}/#{submissions_count} submissions, ETA: #{estimated_minutes_remaining.round(0)}m"
     end
-
-    offset += BATCH_SIZE
   rescue => exception
     log "Error processing submissions #{offset + 1}-#{offset + BATCH_SIZE}: #{exception.message}\n#{exception.backtrace.join("\n")}"
     break
@@ -162,7 +162,7 @@ def load_submissions_csv_from_s3_into_redshift_table(client, s3_path, table_name
       submission_id    int,
       item_name        varchar,
       matrix_item_name varchar,
-      response_value   varchar,
+      response_value   varchar(2000),
       response_text    varchar(max)
     );
 
