@@ -127,12 +127,12 @@ def process_submissions(client)
     end
 
     # Prefix filenames with a seconds timestamp to avoid collisions.
-    filename = "#{S3_PREFIX}/#{table_name}_#{Time.now.to_i}.csv"
+    filename = "#{S3_PREFIX}/#{SUBMISSIONS_REDSHIFT_TABLE_NAME}_#{Time.now.to_i}.csv"
     s3_path = "s3://#{S3_BUCKET_NAME}/#{filename}"
     AWS::S3.upload_to_bucket(S3_BUCKET_NAME, filename, csv, no_random: true)
 
-    load_submissions_csv_from_s3_into_redshift_table(client, s3_path, "#{table_name}_temp")
-    merge_temp_table_with_main_table(client, "#{table_name}_temp", table_name, 'submission_id')
+    load_submissions_csv_from_s3_into_redshift_table(client, s3_path, "#{SUBMISSIONS_REDSHIFT_TABLE_NAME}_temp")
+    merge_temp_table_with_main_table(client, "#{SUBMISSIONS_REDSHIFT_TABLE_NAME}_temp", SUBMISSIONS_REDSHIFT_TABLE_NAME, 'submission_id')
 
     # Cleanup the temp table to minimize PII exposure (S3 file should be cleaned up via lifecycle rules)
     # TODO: actually delete the table once we're done troubleshooting this script.
