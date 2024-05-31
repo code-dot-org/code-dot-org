@@ -17717,6 +17717,13 @@ en:
               display_name: Events
             lessonGroup-5:
               display_name: End of Course Project
+          lessons: {}
+          name: modular-unit
+          title: Course A (2023)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         sandbox-csf-a:
           lessons: {}
           lesson_groups: {}
