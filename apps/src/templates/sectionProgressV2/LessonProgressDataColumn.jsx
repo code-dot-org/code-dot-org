@@ -82,8 +82,6 @@ LessonProgressDataColumn.propTypes = {
   expandedMetadataStudentIds: PropTypes.array,
 };
 
-export const UnconnectedLessonProgressDataColumn = LessonProgressDataColumn;
-
 export default connect(state => ({
   lessonProgressByStudent:
     state.sectionProgress.studentLessonProgressByUnit[
