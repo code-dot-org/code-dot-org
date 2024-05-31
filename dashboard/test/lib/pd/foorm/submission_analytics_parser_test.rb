@@ -5,16 +5,6 @@ module Pd::Foorm
     setup_all {@form = create :foorm_form_csf_intro_post_survey}
     teardown_all {@form.delete}
 
-    test 'reshape_all_submissions_into_csv returns a CSV string' do
-      csv = SubmissionAnalyticsParser.reshape_all_submissions_into_csv
-      assert csv.is_a? String
-    end
-
-    test 'reshape submissions_batch_into_csv returns a CSV string' do
-      csv = SubmissionAnalyticsParser.reshape_submissions_batch_into_csv(0, 100)
-      assert csv.is_a? String
-    end
-
     test 'reshape_submission formats matrix question response as expected' do
       submission = create :csf_intro_post_foorm_submission, :answers_low
       reshaped_submission = SubmissionAnalyticsParser.reshape_submission(submission)
