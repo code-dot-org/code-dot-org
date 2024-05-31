@@ -49,6 +49,7 @@ export default function initializeGenerator(
     }
     const generator = blocklyWrapper.getGenerator();
     generator.init(blocklyWrapper.getMainWorkspace());
+    generator.variableDB_ = generator.nameDB_;
     const code: string[] = [];
     blocksToGenerate.forEach(block => {
       code.push(blocklyWrapper.JavaScript.blockToCode(block));

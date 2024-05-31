@@ -20,6 +20,7 @@ import modelCustomizationStyles from '../model-customization-workspace.module.sc
 import {ModelCardInfo} from '../../types';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {useSelector} from 'react-redux';
+import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 
 const PublishNotes: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
@@ -33,6 +34,8 @@ const PublishNotes: React.FunctionComponent = () => {
   const hasFilledOutModelCard = useAppSelector(selectHasFilledOutModelCard);
 
   const isReadOnly = useSelector(isReadOnlyWorkspace) || isDisabled(visibility);
+  const saveInProgress = useAppSelector(state => state.aichat.saveInProgress);
+  const currentSaveType = useAppSelector(state => state.aichat.currentSaveType);
 
   const onSave = useCallback(() => {
     dispatch(saveModelCard());
@@ -41,6 +44,11 @@ const PublishNotes: React.FunctionComponent = () => {
   const onPublish = useCallback(() => {
     dispatch(publishModel());
   }, [dispatch]);
+
+  const spinnerIconProps: FontAwesomeV6IconProps = {
+    iconName: 'spinner',
+    animationType: 'spin',
+  };
 
   return (
     <div className={modelCustomizationStyles.verticalFlexContainer}>
@@ -92,17 +100,25 @@ const PublishNotes: React.FunctionComponent = () => {
       <div className={modelCustomizationStyles.footerButtonContainer}>
         <Button
           text="Save"
-          iconLeft={{iconName: 'download'}}
+          iconLeft={
+            saveInProgress && currentSaveType === 'saveModelCard'
+              ? spinnerIconProps
+              : {iconName: 'download'}
+          }
           type="secondary"
           color="black"
-          disabled={isReadOnly}
+          disabled={isReadOnly || saveInProgress}
           onClick={onSave}
           className={modelCustomizationStyles.updateButton}
         />
         <Button
           text="Publish"
-          iconLeft={{iconName: 'upload'}}
-          disabled={isReadOnly || !hasFilledOutModelCard}
+          iconLeft={
+            saveInProgress && currentSaveType === 'publishModelCard'
+              ? spinnerIconProps
+              : {iconName: 'upload'}
+          }
+          disabled={isReadOnly || !hasFilledOutModelCard || saveInProgress}
           onClick={onPublish}
           className={modelCustomizationStyles.updateButton}
         />
