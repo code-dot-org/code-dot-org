@@ -90,10 +90,10 @@ class Policies::Lti
     jwks_uri: CDO.studio_url('/oauth/jwks', CDO.default_scheme),
     token_endpoint_auth_method: "private_key_jwt",
     contacts: ["platform@code.org"],
-    scope: "https://purl.imsglobal.org/spec/lti-ags/scope/score https://purl.imsglobal.org/spec/lti-nrps/scope/contextmembership.readonly",
+    scope: ALL_SCOPES.join(' '),
     "https://purl.imsglobal.org/spec/lti-tool-configuration" => {
       domain: CDO.studio_url('', CDO.default_scheme),
-      description: "Code.org - Nick Dynamic",
+      description: "Code.org LTI Integration (Nick)",
       target_link_uri: CDO.studio_url('/lti/v1/sync_course', CDO.default_scheme),
       custom_parameters: {
         email: "$Person.email.primary",
