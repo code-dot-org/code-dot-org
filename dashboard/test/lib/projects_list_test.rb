@@ -22,7 +22,7 @@ class ProjectsListTest < ActionController::TestCase
 
     hidden_project_value = {
       name: 'Hidden App',
-      level: '/projects/spritelab',
+      level: '/projects/playlab',
       createdAt: '2017-01-01T00:00:00.000-08:00',
       updatedAt: '2017-01-01T00:00:00.000-08:00',
       hidden: true
@@ -114,10 +114,10 @@ class ProjectsListTest < ActionController::TestCase
     refute_nil ProjectsList.send(:get_published_project_and_user_data, project_and_user)
   end
 
-  test 'get_published_project_and_user_data does not return nil for Poetry project even with sharing_disabled' do
+  test 'get_published_project_and_user_data does not return nil for Playlab project even with sharing_disabled' do
     project_and_user = {
       properties: {sharing_disabled: true}.to_json,
-      project_type: 'poetry',
+      project_type: 'playlab',
       storage_id: @storage_id,
       id: 1,
       birthday: 13.years.ago.to_datetime,
@@ -239,7 +239,7 @@ class ProjectsListTest < ActionController::TestCase
         id: 184,
         storage_id: 160,
         value: fake_project_value,
-        project_type: "spritelab",
+        project_type: "playlab",
         published_at: "2018-02-26 11:23:11 -0800",
         featured_at: "2018-02-26 19:23:36 -0800",
         unfeatured_at: nil,
@@ -270,7 +270,7 @@ class ProjectsListTest < ActionController::TestCase
         id: 184,
         storage_id: 160,
         value: fake_project_value,
-        project_type: "spritelab",
+        project_type: "playlab",
         published_at: "2018-02-26 11:23:11 -0800",
         featured_at: "2018-02-26 19:23:36 -0800",
         unfeatured_at: nil,
@@ -296,6 +296,7 @@ class ProjectsListTest < ActionController::TestCase
       ],
       gamelab: [],
       artist: [],
+      playlab: [],
       minecraft: [],
       events: [],
       k1: [],
@@ -312,6 +313,7 @@ class ProjectsListTest < ActionController::TestCase
         {name: "recentApplab3"}
       ],
       gamelab: [],
+      playlab: [],
       artist: [],
       minecraft: [],
       events: [],
