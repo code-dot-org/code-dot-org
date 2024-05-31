@@ -144,7 +144,6 @@ module ProjectsList
         return fetch_featured_published_projects(featured_before: featured_before)
       end
       raise ArgumentError, "invalid project type: #{project_group}" unless PUBLISHED_PROJECT_TYPE_GROUPS.key?(project_group.to_sym)
-      puts "fetching by type: #{project_group}"
       fetch_featured_projects_by_type(project_group, featured_before: featured_before)
     end
 
