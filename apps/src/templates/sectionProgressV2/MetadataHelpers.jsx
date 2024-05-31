@@ -10,7 +10,11 @@ export function formatTimeSpent(studentProgress) {
 
 export function formatLastUpdated(studentProgress) {
   if (studentProgress?.lastTimestamp) {
-    return moment.unix(studentProgress.lastTimestamp).format('M/D');
+    const date = new Date(studentProgress.lastTimestamp * 1000);
+    return new Intl.DateTimeFormat('en-US', {
+      month: 'numeric',
+      day: 'numeric'
+    }).format(date);
   }
   return missingDataFormatter(!!studentProgress);
 }
