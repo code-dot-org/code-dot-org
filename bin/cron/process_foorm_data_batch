@@ -60,7 +60,8 @@ def main
 end
 
 def process_submissions(client)
-  submissions_count = Foorm::Submission.count
+  start_time = Time.now
+  submissions_count = Foorm::Submission.count - SUBMISSIONS_OFFSET
   log "Processing #{submissions_count} foorm submissions"
 
   offset = SUBMISSIONS_OFFSET
@@ -76,7 +77,10 @@ def process_submissions(client)
 
     # log only after N batches to reduce noise
     if offset % (BATCH_SIZE * BATCHES_PER_LOG) == 0
-      log "Processed #{offset}/#{submissions_count} submissions"
+      elapsed_time = Time.now - start_time
+      percent_complete = (offset + BATCH_SIZE) / submissions_count.to_f
+      estimated_minutes_remaining = ((elapsed_time / percent_complete) - elapsed_time) / 60
+      log "Processed #{offset}/#{submissions_count} submissions, ETA: #{estimated_minutes_remaining.round(0)}m"
     end
 
     offset += BATCH_SIZE
