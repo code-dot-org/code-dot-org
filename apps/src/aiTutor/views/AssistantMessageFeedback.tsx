@@ -8,17 +8,13 @@ interface AssistantMessageProps {
   messageId: number | undefined;
 }
 
-const AssistantMessageFeedback: React.FC<AssistantMessageProps> = ({messageId}) => {
+const AssistantMessageFeedback: React.FC<AssistantMessageProps> = ({
+  messageId,
+}) => {
   const [feedbackState, setFeedbackState] = useState<FeedbackData>({
     thumbsUp: false,
     thumbsDown: false,
   });
-
-  const FeedbackType = {
-    thumbsUp: 'thumbsUp',
-    thumbsDown: 'thumbsDown',
-    inappropriate: 'inappropriate'
-  };
 
   const handleFeedbackSubmission = async (
     thumbsUp: boolean,
@@ -31,9 +27,9 @@ const AssistantMessageFeedback: React.FC<AssistantMessageProps> = ({messageId}) 
     // This logic allows the user to "ungive" feedback by clicking the same button again
     // If the user "ungives" all feedback, a row with null values will persist in the database
     const feedbackData = {
-        thumbsUp: thumbsUp ? (feedbackState.thumbsUp ? null : true) : null,
-        thumbsDown: thumbsUp ? null : feedbackState.thumbsDown ? null : true,
-      };
+      thumbsUp: thumbsUp ? (feedbackState.thumbsUp ? null : true) : null,
+      thumbsDown: thumbsUp ? null : feedbackState.thumbsDown ? null : true,
+    };
 
     try {
       setFeedbackState(feedbackData);
@@ -44,28 +40,29 @@ const AssistantMessageFeedback: React.FC<AssistantMessageProps> = ({messageId}) 
   };
 
   return (
-        <>
-            <Button
-                className={style.hamburgerMenuButton}
-                color={buttonColors.black}
-                disabled={false}
-                icon={{iconName: 'thumbs-up', iconStyle: 'solid'}}
-                isIconOnly={true}
-                onClick={() => handleFeedbackSubmission(true, messageId)}
-                size="xs"
-                type={feedbackState.thumbsUp ? 'primary' : 'tertiary'}
-            />
-            <Button
-                className={style.hamburgerMenuButton}
-                color={buttonColors.black}
-                disabled={false}
-                icon={{iconName: 'thumbs-down', iconStyle: 'solid'}}
-                isIconOnly={true}
-                onClick={() => handleFeedbackSubmission(false, messageId)}
-                size="xs"
-                type={feedbackState.thumbsDown ? 'primary' : 'tertiary'}
-            />
-        </>
-    )}
+    <>
+      <Button
+        className={style.hamburgerMenuButton}
+        color={buttonColors.black}
+        disabled={false}
+        icon={{iconName: 'thumbs-up', iconStyle: 'solid'}}
+        isIconOnly={true}
+        onClick={() => handleFeedbackSubmission(true, messageId)}
+        size="xs"
+        type={feedbackState.thumbsUp ? 'primary' : 'tertiary'}
+      />
+      <Button
+        className={style.hamburgerMenuButton}
+        color={buttonColors.black}
+        disabled={false}
+        icon={{iconName: 'thumbs-down', iconStyle: 'solid'}}
+        isIconOnly={true}
+        onClick={() => handleFeedbackSubmission(false, messageId)}
+        size="xs"
+        type={feedbackState.thumbsDown ? 'primary' : 'tertiary'}
+      />
+    </>
+  );
+};
 
 export default AssistantMessageFeedback;
