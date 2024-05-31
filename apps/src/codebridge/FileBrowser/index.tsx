@@ -4,14 +4,17 @@ import {
   getNextFolderId,
 } from '@codebridge/codebridgeContext';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
+import {PopUpButton} from '@codebridge/PopUpButton/PopUpButton';
 import {ProjectType, FileId, FolderId} from '@codebridge/types';
 import {findFolder, getErrorMessage} from '@codebridge/utils';
 import React, {useMemo} from 'react';
 
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 
 import './styles/fileBrowser.css';
+import moduleStyles from './styles/filebrowser.module.scss';
 
 type FilesComponentProps = {
   newFolderPrompt: (parentId?: string) => void;
@@ -65,21 +68,22 @@ const InnerFileBrowser = React.memo(
                     </span>
                     <span>{f.name}</span>
                   </span>
-
-                  <span className="button-bar">
-                    <span onClick={() => renameFolderPrompt(f.id)}>
-                      <i className="fa-solid fa-pencil" />
+                  <PopUpButton iconName="ellipsis-v" className="button-kebab">
+                    <span className="button-bar">
+                      <span onClick={() => renameFolderPrompt(f.id)}>
+                        <i className="fa-solid fa-pencil" /> Rename folder
+                      </span>
+                      <span onClick={() => newFolderPrompt(f.id)}>
+                        <i className="fa-solid fa-folder-plus" /> Add sub-folder
+                      </span>
+                      <span onClick={() => newFilePrompt(f.id)}>
+                        <i className="fa-solid fa-plus" /> Add file
+                      </span>
+                      <span onClick={() => deleteFolder(f.id)}>
+                        <i className="fa-solid fa-trash" /> Delete folder
+                      </span>
                     </span>
-                    <span onClick={() => newFolderPrompt(f.id)}>
-                      <i className="fa-solid fa-folder-plus" />
-                    </span>
-                    <span onClick={() => newFilePrompt(f.id)}>
-                      <i className="fa-solid fa-plus" />
-                    </span>
-                    <span onClick={() => deleteFolder(f.id)}>
-                      <i className="fa-solid fa-trash" />
-                    </span>
-                  </span>
+                  </PopUpButton>
                 </span>
                 {f.open && (
                   <ul>
@@ -115,26 +119,29 @@ const InnerFileBrowser = React.memo(
                   )}
                   {f.name}
                 </span>
-                <span className="button-bar">
-                  <span onClick={() => moveFilePrompt(f.id)}>
-                    <i className="fa-solid fa-arrow-right" />
-                  </span>
-                  <span onClick={() => renameFilePrompt(f.id)}>
-                    <i className="fa-solid fa-pencil" />
-                  </span>
-                  <span onClick={() => deleteFile(f.id)}>
-                    <i className="fa-solid fa-trash" />
-                  </span>
-                  {isStartMode && (
-                    <span onClick={() => toggleFileVisibility(f.id)}>
-                      <i
-                        className={`fa-solid ${
-                          f.hidden ? 'fa-eye' : 'fa-eye-slash'
-                        }`}
-                      />
+                <PopUpButton iconName="ellipsis-v" className="button-kebab">
+                  <span className="button-bar">
+                    <span onClick={() => moveFilePrompt(f.id)}>
+                      <i className="fa-solid fa-arrow-right" />
+                      Move file
                     </span>
-                  )}
-                </span>
+                    <span onClick={() => renameFilePrompt(f.id)}>
+                      <i className="fa-solid fa-pencil" /> Rename file
+                    </span>
+                    <span onClick={() => deleteFile(f.id)}>
+                      <i className="fa-solid fa-trash" /> Delete file
+                    </span>
+                    {isStartMode && (
+                      <span onClick={() => toggleFileVisibility(f.id)}>
+                        <i
+                          className={`fa-solid ${
+                            f.hidden ? 'fa-eye' : 'fa-eye-slash'
+                          }`}
+                        />
+                      </span>
+                    )}
+                  </span>
+                </PopUpButton>
               </span>
             </li>
           ))}
@@ -296,29 +303,41 @@ export const FileBrowser = React.memo(() => {
 
   return (
     <div className="file-browser">
-      <div className="files-toolbar">
-        <button type="button" onClick={() => newFolderPrompt()}>
-          <i className="fa-solid fa-folder" />
-          &nbsp; New Folder
-        </button>
-        <button type="button" onClick={() => newFilePrompt()}>
-          <i className="fa-solid fa-file" />
-          &nbsp; New File
-        </button>
-      </div>
-      <ul>
-        <InnerFileBrowser
-          parentId={DEFAULT_FOLDER_ID}
-          folders={project.folders}
-          newFolderPrompt={newFolderPrompt}
-          files={project.files}
-          newFilePrompt={newFilePrompt}
-          moveFilePrompt={moveFilePrompt}
-          renameFilePrompt={renameFilePrompt}
-          renameFolderPrompt={renameFolderPrompt}
-          toggleFileVisibility={toggleFileVisibility}
-        />
-      </ul>
+      <PanelContainer
+        id="file-browser"
+        headerContent={'Files'}
+        className={moduleStyles['file-browser']}
+        rightHeaderContent={
+          <PopUpButton iconName="plus" alignment="right">
+            <span className="button-bar">
+              <button type="button" onClick={() => newFolderPrompt()}>
+                <i className="fa-solid fa-folder" />
+                New Folder
+              </button>
+              <button type="button" onClick={() => newFilePrompt()}>
+                <i className="fa-solid fa-file" />
+                New File
+              </button>
+            </span>
+          </PopUpButton>
+        }
+      >
+        <div className="file-browser">
+          <ul>
+            <InnerFileBrowser
+              parentId={DEFAULT_FOLDER_ID}
+              folders={project.folders}
+              newFolderPrompt={newFolderPrompt}
+              files={project.files}
+              newFilePrompt={newFilePrompt}
+              moveFilePrompt={moveFilePrompt}
+              renameFilePrompt={renameFilePrompt}
+              renameFolderPrompt={renameFolderPrompt}
+              toggleFileVisibility={toggleFileVisibility}
+            />
+          </ul>
+        </div>
+      </PanelContainer>
     </div>
   );
 });

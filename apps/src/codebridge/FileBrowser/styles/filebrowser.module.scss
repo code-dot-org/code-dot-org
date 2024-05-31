@@ -1,0 +1,12 @@
+@import 'color.scss';
+
+.file-browser {
+  height: 100%;
+  grid-area: workspace;
+  background-color: $darkest_gray;
+  color: $white;
+}
+
+.file-browser button {
+  white-space: nowrap;
+}
