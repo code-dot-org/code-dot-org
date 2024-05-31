@@ -13,13 +13,13 @@ import AgeGatedStudentsModal from './AgeGatedStudentsModal';
 interface Props {
   toggleModal: () => void;
   modalOpen: boolean;
-  ageGatedStudentsCount: number;
+  ageGatedStudentsCount?: number;
 }
 
 export const AgeGatedStudentsBanner: React.FC<Props> = ({
   toggleModal,
   modalOpen,
-  ageGatedStudentsCount,
+  ageGatedStudentsCount = 0,
 }) => {
   const currentUser = useSelector((state: RootState) => state.currentUser);
   const reportEvent = (eventName: string, payload: object = {}) => {
@@ -32,6 +32,14 @@ export const AgeGatedStudentsBanner: React.FC<Props> = ({
       number_of_gateable_students: ageGatedStudentsCount,
     });
   }, [currentUser.userId, ageGatedStudentsCount]);
+
+  const bannerLearnMoreClicked = () => {
+    reportEvent(EVENTS.CAP_PARENT_EMAIL_BANNER_CLICKED, {
+      user_id: currentUser.userId,
+      number_of_gateable_students: ageGatedStudentsCount,
+    });
+    toggleModal();
+  };
   return (
     <div>
       <Notification
@@ -40,11 +48,15 @@ export const AgeGatedStudentsBanner: React.FC<Props> = ({
         details={i18n.childAccountPolicy_ageGatedStudentsWarning()}
         buttonText={i18n.learnMore()}
         buttonLink={'#'}
-        onButtonClick={toggleModal}
+        onButtonClick={bannerLearnMoreClicked}
         dismissible={false}
       />
       {modalOpen && (
-        <AgeGatedStudentsModal isOpen={modalOpen} onClose={toggleModal} />
+        <AgeGatedStudentsModal
+          isOpen={modalOpen}
+          onClose={toggleModal}
+          ageGatedStudentsCount={ageGatedStudentsCount}
+        />
       )}
     </div>
   );

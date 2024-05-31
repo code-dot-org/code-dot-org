@@ -102,7 +102,6 @@ function TeacherDashboardHeader({
       />
     );
   };
-
   /**
    * Returns the URL to the correct section to be edited
    */
