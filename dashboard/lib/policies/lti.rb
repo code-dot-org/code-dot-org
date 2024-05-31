@@ -21,6 +21,7 @@ class Policies::Lti
   NAMESPACE = 'lti_v1_controller'.freeze
   JWT_CLIENT_ASSERTION_TYPE = 'urn:ietf:params:oauth:client-assertion-type:jwt-bearer'.freeze
   JWT_ISSUER = CDO.studio_url('', CDO.default_scheme).freeze
+  DEFAULT_TARGET_LINK_URI = CDO.studio_url('/lti/v1/sync_course', CDO.default_scheme).freeze
 
   MEMBERSHIP_CONTAINER_CONTENT_TYPE = 'application/vnd.ims.lti-nrps.v2.membershipcontainer+json'.freeze
   TEACHER_ROLES = Set.new(['http://purl.imsglobal.org/vocab/lis/v1/institution/person#Instructor',
@@ -94,7 +95,7 @@ class Policies::Lti
     "https://purl.imsglobal.org/spec/lti-tool-configuration" => {
       domain: CDO.dashboard_site_host,
       description: "Code.org LTI Integration",
-      target_link_uri: CDO.studio_url('/lti/v1/sync_course', CDO.default_scheme),
+      target_link_uri: DEFAULT_TARGET_LINK_URI,
       custom_parameters: {
         email: "$Person.email.primary",
         full_name: "$Person.name.full",
