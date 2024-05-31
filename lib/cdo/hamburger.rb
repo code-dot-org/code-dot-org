@@ -107,14 +107,6 @@ class Hamburger
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
     end
 
-    signed_out_entries = [
-      {title: "course_catalog", url: CDO.studio_url("/catalog")},
-      {title: "districts", url: CDO.code_org_url("/administrators"), id: "hamburger-districts"},
-      {title: "incubator", url: CDO.studio_url("/incubator")}
-    ].each do |entry|
-      entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
-    end
-
     educate_entries = [
       {title: "educate_overview", url: CDO.code_org_url("/teach"), id: "educate-overview"},
       {title: "educate_elementary", url: CDO.code_org_url("/educate/curriculum/elementary-school")},
@@ -145,14 +137,6 @@ class Hamburger
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
     end.freeze
 
-    legal_entries = [
-      {title: "legal_privacy", url: CDO.code_org_url("/privacy")},
-      {title: "legal_cookie_notice", url: CDO.code_org_url("/cookies")},
-      {title: "legal_tos", url: CDO.code_org_url("/tos")},
-    ].each do |entry|
-      entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
-    end.freeze
-
     # Get visibility CSS.
     visibility_options = {level: options[:level], language: options[:language], user_type: options[:user_type]}
     visibility = Hamburger.get_visibility(visibility_options)
@@ -170,9 +154,6 @@ class Hamburger
     when 'student'
       entries = entries.concat(student_entries.each {|e| e[:class] = visibility[:show_student_options]})
       entries << {type: "divider", class: get_divider_visibility(visibility[:show_student_options], visibility[:show_help_options]), id: "after-student"}
-    else
-      entries = entries.concat(signed_out_entries.each {|e| e[:class] = visibility[:show_signed_out_options]})
-      entries << {type: "divider", class: get_divider_visibility(visibility[:show_signed_out_options], visibility[:show_help_options]), id: "after-signed-out"}
     end
 
     help_contents = HelpHeader.get_help_contents(options)
@@ -197,6 +178,13 @@ class Hamburger
     }
 
     entries << {
+      title: I18n.t("#{loc_prefix}districts"),
+      url: CDO.code_org_url("/districts"),
+      class: visibility[:show_pegasus_options],
+      id: "districts"
+    }
+
+    entries << {
       title: I18n.t("#{loc_prefix}stats"),
       url: CDO.code_org_url("/promote"),
       class: visibility[:show_pegasus_options],
@@ -211,18 +199,17 @@ class Hamburger
     }
 
     entries << {
-      type: "expander",
-      title: I18n.t("#{loc_prefix}about"),
-      id: "about_entries",
-      subentries: about_entries.each {|e| e[:class] = visibility[:show_pegasus_options]},
-      class: visibility[:show_pegasus_options]
+      title: I18n.t("#{loc_prefix}incubator"),
+      url: CDO.code_org_url("/incubator"),
+      class: visibility[:show_pegasus_options],
+      id: "incubator"
     }
 
     entries << {
       type: "expander",
-      title: I18n.t("#{loc_prefix}legal"),
-      id: "legal_entries",
-      subentries: legal_entries.each {|e| e[:class] = visibility[:show_pegasus_options]},
+      title: I18n.t("#{loc_prefix}about"),
+      id: "about_entries",
+      subentries: about_entries.each {|e| e[:class] = visibility[:show_pegasus_options]},
       class: visibility[:show_pegasus_options]
     }
 
