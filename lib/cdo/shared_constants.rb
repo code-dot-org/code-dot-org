@@ -82,10 +82,6 @@ module SharedConstants
   ALWAYS_PUBLISHABLE_PROJECT_TYPES = %w(
     artist
     frozen
-    playlab
-    gumball
-    iceage
-    infinity
     minecraft_adventurer
     minecraft_designer
     minecraft_hero
@@ -98,7 +94,6 @@ module SharedConstants
     sports
     basketball
     artist_k1
-    playlab_k1
     dance
     poetry
     poetry_hoc
