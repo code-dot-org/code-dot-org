@@ -26,11 +26,10 @@ require_relative '../../lib/cdo/redshift'
 require_relative '../../dashboard/config/environment'
 require 'cdo/chat_client'
 
-DRY_RUN = true
-
 # Batch Config - Approx total submissions is 300,000
 BATCH_SIZE = 10000 # aiming for about 30 batches
 BATCHES_PER_LOG = 1 # with progress reported every 1 batches
+SUBMISSIONS_OFFSET = 0
 
 # AWS Config
 AWS_ACCOUNT_ID = Aws::STS::Client.new.get_caller_identity.account
@@ -40,7 +39,7 @@ REDSHIFT_S3_ACCESS_ROLE_ARN = "arn:aws:iam::#{AWS_ACCOUNT_ID}:role/redshift-s3"
 S3_BUCKET_NAME = 'cdo-data-sharing-internal'
 SUBMISSIONS_S3_CSV_NAME = 'submissions.csv'
 FORMS_S3_CSV_NAME = 'forms.csv'
-S3_PREFIX = "tmp-pii-foorm/#{Time.now.strftime('%Y/%m/%d')}"
+S3_PREFIX = "tmp-foorm/#{Time.now.strftime('%Y/%m/%d')}"
 
 # Redshift Config
 SUBMISSIONS_REDSHIFT_TABLE_NAME = 'analysis_pii.foorm_submissions_reshaped'
@@ -61,11 +60,10 @@ def main
 end
 
 def process_submissions(client)
-  # TODO: THIS LINE IS FAILING, UNITIALIZED CONSTANT
   submissions_count = Foorm::Submission.count
   log "Processing #{submissions_count} foorm submissions"
 
-  offset = 0
+  offset = SUBMISSIONS_OFFSET
 
   loop do
     reshaped_submissions_csv = Pd::Foorm::SubmissionAnalyticsParser.reshape_submissions_batch_into_csv(offset, BATCH_SIZE)
@@ -98,11 +96,7 @@ def process_forms(client)
   reshaped_forms_csv = Pd::Foorm::FormAnalyticsParser.reshape_all_forms_into_csv
 
   filename = "#{S3_PREFIX}/#{FORMS_REDSHIFT_TABLE_NAME}_#{Time.now.to_i}.csv"
-  if DRY_RUN
-    log "DRY_RUN - Would upload to S3:\n#{filename}"
-  else
-    AWS::S3.upload_to_bucket(S3_BUCKET_NAME, filename, reshaped_forms_csv, no_random: true)
-  end
+  AWS::S3.upload_to_bucket(S3_BUCKET_NAME, filename, reshaped_forms_csv, no_random: true)
 
   s3_path = "s3://#{S3_BUCKET_NAME}/#{filename}"
   load_csv_from_s3_into_redshift_table(client, s3_path, FORMS_REDSHIFT_TABLE_NAME)
@@ -115,11 +109,7 @@ def merge_csv_into_redshift_table(client, csv, table_name)
   # Prefix filenames with a seconds timestamp to avoid collisions.
   filename = "#{S3_PREFIX}/#{table_name}_#{Time.now.to_i}.csv"
 
-  if DRY_RUN
-    log "DRY_RUN - Would upload to S3:\n#{filename}"
-  else
-    AWS::S3.upload_to_bucket(S3_BUCKET_NAME, filename, csv, no_random: true)
-  end
+  AWS::S3.upload_to_bucket(S3_BUCKET_NAME, filename, csv, no_random: true)
 
   load_csv_from_s3_into_redshift_table(client, "s3://#{S3_BUCKET_NAME}/#{filename}", "#{table_name}_temp")
 
@@ -173,11 +163,7 @@ def delete_redshift_table(client, table_name)
 end
 
 def execute_redshift_query(client, query)
-  if DRY_RUN
-    log "DRY_RUN - Would execute Redshift Query:\n#{query}"
-  else
-    client.execute(query)
-  end
+  client.exec(query)
 rescue => exception
   log "Error executing Redshift query: #{exception.message}\n#{exception.backtrace.join("\n")}"
   raise
