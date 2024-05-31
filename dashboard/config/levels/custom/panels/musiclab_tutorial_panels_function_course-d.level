@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2024-05-29T18:18:43.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "background": "music-black",
+    "level_data": {
+      "panels": [
+        {
+          "imageUrl": "https://images.code.org/1e98a3f611800130f566676c1f699136-function1.gif",
+          "text": "You can make your own blocks that play a chunk of code whenever you call it. In coding, this is called a *function*. First, build your function with the sound you want. \n\n Then, name your function. This function is called `bass`, and it plays the `Funky Bass` sound."
+        },
+        {
+          "imageUrl": "https://images.code.org/c904b4d5b311b8d08d7d0b60b468738d-function2.gif",
+          "text": "You can \"call\" your new function by using the block with the matching name."
+        }
+      ]
+    },
+    "name_suffix": "_course-d",
+    "panels": [
+      {
+        "imageUrl": "https://images.code.org/4b445a8955ab411f81792fc7b40b7a3b-functions (1).gif",
+        "text": "###Functions\n\nCreate a **function** to play a specific chunk of code whenever it's called. \n\n**First** build your function using the sounds you like.",
+        "key": "musiclab_intro_panels_function_pdx-f1f658c0-64a9-471c-9f2a-399ba1ea8538"
+      },
+      {
+        "imageUrl": "https://images.code.org/40333fce057d1c45297ff7d1ecfce1b3-call function (2).gif",
+        "text": "###Use your new function! \n\nNow, you can use your new function anytime by choosing the block with your function’s name. \n\nThis new block will **call** your function when you press Run. ",
+        "key": "musiclab_intro_panels_function_pdx-952b5575-5487-40c6-8a7e-4e37339d81d3"
+      }
+    ]
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-05-29T18:18:43.477+00:00\",\"changed\":[\"cloned from \\\"musiclab_tutorial_panels_function_express\\\"\"],\"cloned_from\":\"musiclab_tutorial_panels_function_express\"}]"
+}]]></config>
+</Panels>

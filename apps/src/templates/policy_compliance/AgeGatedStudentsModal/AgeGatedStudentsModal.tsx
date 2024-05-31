@@ -8,7 +8,6 @@ import {RootState} from '@cdo/apps/types/redux';
 import i18n from '@cdo/locale';
 
 import BaseDialog from '../../BaseDialog';
-import SafeMarkdown from '../../SafeMarkdown';
 
 import AgeGatedStudentsTable from './AgeGatedStudentsTable';
 
@@ -37,6 +36,13 @@ const AgeGatedStudentsModal: React.FC<Props> = ({
     analyticsReporter.sendEvent(eventName, payload, PLATFORMS.AMPLITUDE);
   };
 
+  const modalDocumentationClicked = () => {
+    reportEvent(EVENTS.CAP_STUDENT_WARNING_LINK_CLICKED, {
+      user_id: currentUser.userId,
+      number_of_gateable_students: ageGatedStudentsCount,
+    });
+  };
+
   useEffect(() => {
     reportEvent(EVENTS.CAP_AGE_GATED_MODAL_SHOWN, {
       user_id: currentUser.userId,
@@ -61,11 +67,9 @@ const AgeGatedStudentsModal: React.FC<Props> = ({
           <hr />
           <p>{i18n.childAccountPolicy_studentParentalConsentNotice()}</p>
           <br />
-          <SafeMarkdown
-            markdown={i18n.childAccountPolicy_consentProcessReadMore({
-              url: '/',
-            })}
-          />
+          <a href="#" onClick={modalDocumentationClicked}>
+            {i18n.childAccountPolicy_consentProcessReadMore()}
+          </a>
           {isLoadingStudents && <Spinner />}
           {!isLoadingStudents && <AgeGatedStudentsTable />}
           <hr />
