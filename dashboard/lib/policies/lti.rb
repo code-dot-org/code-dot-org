@@ -86,14 +86,14 @@ class Policies::Lti
     grant_types: ["client_credentials", "implicit"],
     initiate_login_uri: CDO.studio_url('/lti/v1/login', CDO.default_scheme),
     redirect_uris: [CDO.studio_url('/lti/v1/authenticate', CDO.default_scheme)],
-    client_name: "Code.org - Nick Dynamic",
+    client_name: "Code.org",
     jwks_uri: CDO.studio_url('/oauth/jwks', CDO.default_scheme),
     token_endpoint_auth_method: "private_key_jwt",
     contacts: ["platform@code.org"],
     scope: ALL_SCOPES.join(' '),
     "https://purl.imsglobal.org/spec/lti-tool-configuration" => {
       domain: CDO.studio_url('', CDO.default_scheme),
-      description: "Code.org LTI Integration (Nick)",
+      description: "Code.org LTI Integration",
       target_link_uri: CDO.studio_url('/lti/v1/sync_course', CDO.default_scheme),
       custom_parameters: {
         email: "$Person.email.primary",
@@ -108,13 +108,13 @@ class Policies::Lti
       messages: [
         {
           type: "LtiResourceLinkRequest",
-          label: "Launch Code.org - Nick Dynamic",
+          label: "Launch Code.org",
           placements: ["link_selection"],
           icon_uri: CDO.studio_url('/images/logo.svg', CDO.default_scheme),
         },
         {
           type: "LtiResourceLinkRequest",
-          label: "Launch Code.org - Nick Dynamic",
+          label: "Launch Code.org",
           placements: ["assignment_selection"],
           icon_uri: CDO.studio_url('/images/logo.svg', CDO.default_scheme),
         }
