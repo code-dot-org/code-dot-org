@@ -117,6 +117,8 @@ Feature: Professional Learning landing page
     Then I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/3"
     And I wait until element "a:contains(Submit)" is visible
     Then I click selector "a:contains(Submit)"
+    Then I wait until I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/4"
+    And I wait until element "a:contains(Submit)" is visible
     Then I am on "http://studio.code.org/my-professional-learning"
 
     # Sees Self-Paced Professional Learning Courses table

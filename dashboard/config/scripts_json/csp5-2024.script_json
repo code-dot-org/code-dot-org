@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-22 15:05:19 UTC",
+    "serialized_at": "2024-05-29 18:18:46 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -892,7 +892,7 @@
       "key": "35e6cccb-7e2c-45b5-84a7-4b196a429470",
       "position": 8,
       "properties": {
-        "description": "Now let's explore metadata in App Lab in the datasets you've used in previous units. Where can we find this information? What can it tell us about the data? How can it help us organize the data?",
+        "description": "Now let's explore metadata in App Lab datasets. Where can we find this information? What can it tell us about the data? How can it help us organize the data?",
         "remarks": true
       },
       "seeding_key": {

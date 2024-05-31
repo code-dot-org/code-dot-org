@@ -82,6 +82,36 @@ $level-cell-width: 52;
     background-color: $light_gray_50;
   }
 
+  &StudentExpandable {
+    @include remove-default-button-styles;
+    border-top: 1px solid $neutral_dark40;
+    border-left: 1px solid $neutral_dark40;
+    border-right: 0;
+    border-bottom: 0;
+    padding: 0;
+    font-size: 16px;
+
+    height: 47px;
+    width: calc(100% - 21px);
+    line-height: 47px;
+    padding-inline-start: 12px;
+    padding-inline-end: .5em;
+    text-align: start;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: $light_gray_50;
+
+    &:active {
+      border-bottom: 0 !important;
+    }
+  
+
+    &Caret {
+      margin-inline-end: 12px;
+    }
+  }
+
   &Lesson {
     text-align: center;
     min-width: 52px;

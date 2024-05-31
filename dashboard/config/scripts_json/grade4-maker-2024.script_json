@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "grade4-maker",
-    "serialized_at": "2024-05-25 01:02:53 UTC",
+    "serialized_at": "2024-05-28 22:41:57 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -758,21 +758,8 @@
       }
     },
     {
-      "key": "4a7fabe6-a8ef-4b88-a143-09d499d76ddf",
-      "position": 1,
-      "properties": {
-        "name": "[Optional] Pre-requisite"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "4a7fabe6-a8ef-4b88-a143-09d499d76ddf",
-        "lesson.key": "Songwriting",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "grade4-maker-2024"
-      }
-    },
-    {
       "key": "baf6109f-29f9-4cff-90ea-0498240582e8",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 20,
         "name": "Warm Up"
@@ -786,7 +773,7 @@
     },
     {
       "key": "513c22c1-d3f8-4926-830b-83de0d73b2f6",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 20,
         "name": "Main Activity"
@@ -800,7 +787,7 @@
     },
     {
       "key": "1637b8e6-aefe-4163-9e0c-8e04351daa13",
-      "position": 4,
+      "position": 3,
       "properties": {
       },
       "seeding_key": {
@@ -812,7 +799,7 @@
     },
     {
       "key": "9a6d5865-517d-4199-ab72-3bfa130aee8b",
-      "position": 5,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -826,7 +813,7 @@
     },
     {
       "key": "04dc2a5b-1944-47fb-aff6-1976d0fd5d54",
-      "position": 6,
+      "position": 5,
       "properties": {
         "duration": 5,
         "name": "Assessment"
@@ -840,7 +827,7 @@
     },
     {
       "key": "1229f508-cc38-40e0-876a-bfd4b64693b9",
-      "position": 7,
+      "position": 6,
       "properties": {
         "name": "Extended Learning"
       },
@@ -853,7 +840,7 @@
     },
     {
       "key": "31bfb12a-8dce-4e90-9238-187dc1151d6c",
-      "position": 8,
+      "position": 7,
       "properties": {
         "name": "Cross-Curricular Opportunity"
       },
@@ -976,8 +963,21 @@
       }
     },
     {
-      "key": "a217aa32-7d5a-4322-a33d-56b1d3012dd0",
+      "key": "d2636eab-5145-47b4-9453-fd19690ff418",
       "position": 1,
+      "properties": {
+        "name": "[Optional] Pre-requisites"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d2636eab-5145-47b4-9453-fd19690ff418",
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "grade4-maker-2024"
+      }
+    },
+    {
+      "key": "a217aa32-7d5a-4322-a33d-56b1d3012dd0",
+      "position": 2,
       "properties": {
         "duration": 10,
         "name": "Warm Up"
@@ -991,7 +991,7 @@
     },
     {
       "key": "d21a6fc8-d473-4847-b0d9-8722fb320626",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Main Activity"
@@ -1005,7 +1005,7 @@
     },
     {
       "key": "7dbfa582-703f-4e60-97da-bc742a36ef59",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1019,7 +1019,7 @@
     },
     {
       "key": "0af43712-2621-42d1-be20-0d796898d56e",
-      "position": 4,
+      "position": 5,
       "properties": {
         "name": "[Optional] Extended learning"
       },
@@ -1637,7 +1637,7 @@
       "key": "851d89ff-b010-4711-b323-697bf8ba7f2e",
       "position": 1,
       "properties": {
-        "description": "After students have created a sensory toy this concept can be expanded to further teach students about the importance of accessibility and how technology can help support people in different ways. For individuals with physical limitations that make speaking or writing difficult, sensory apps can provide alternative communication channels. This fosters independence and allows them to participate more actively in daily life.\n\nThese devices are called Augmentative and Alternative communication devices and are frequently used by non-verbal students in schools. Here is a <a href=\"https://youtu.be/qB2Fk0KdUuo?si=OmiaPxGRFkbUYFwm\" target=\"_blank\">video</a> of students using an AAC device in the classroom. \n\n**Find the code for this project <a href=\"https://makecode.microbit.org/81839-69759-10729-78574\" target=\"_blank\">here.</a>**",
+        "description": "After students have created a sensory toy, this concept can be expanded to further teach students about the importance of accessibility and how technology can help support people in different ways. For individuals with physical limitations that make speaking or writing difficult, sensory apps can provide alternative communication channels. This fosters independence and allows them to participate more actively in daily life.\n\nThese devices are called Augmentative and Alternative communication devices and are frequently used by non-verbal students in schools. Here is a <a href=\"https://youtu.be/qB2Fk0KdUuo?si=OmiaPxGRFkbUYFwm\" target=\"_blank\">video</a> of students using an AAC device in the classroom. \n\n**Find the code for this project <a href=\"https://makecode.microbit.org/81839-69759-10729-78574\" target=\"_blank\">here.</a>**",
         "name": "Sensory Communication Device"
       },
       "seeding_key": {
@@ -2053,18 +2053,6 @@
       "seeding_key": {
         "activity_section.key": "0c02ca25-e0c1-4cb7-97e4-a3fa05f1fb31",
         "lesson_activity.key": "13457777-07b5-48e7-ab34-105d4e62c8bd"
-      }
-    },
-    {
-      "key": "58de2e8a-c8ee-48ec-aed3-a915cf8f2b48",
-      "position": 1,
-      "properties": {
-        "description": "This activity helps students understand how physical devices use sensors to track data and solve problems. Students will create a sound meter to gauge the classroom's noise level. Each student will program their micro:bit to react to the volume in the classroom. Once the sound meters are created, you can challenge the whole class to see how long they can stay quiet enough to get all the smiley faces to show up.\n\nThis could also be an opportunity to have students explore the light sensor on the micro:bit and create an alarm clock that shines and plays music when the sun rises but when it is dark it turns into a night light.\n\n**Find the code for the Sound Meter project <a href=\"https://makecode.microbit.org/33947-11529-24623-19370\" target=\"_blank\">here.</a>**\n\n**Find the code for the Alarm Clock project <a href=\"https://makecode.microbit.org/_7x7AdjUL8Awf\" target=\"_blank\">here.</a>**",
-        "name": "Sound Meter and Alarm Clock"
-      },
-      "seeding_key": {
-        "activity_section.key": "58de2e8a-c8ee-48ec-aed3-a915cf8f2b48",
-        "lesson_activity.key": "4a7fabe6-a8ef-4b88-a143-09d499d76ddf"
       }
     },
     {
@@ -2550,6 +2538,18 @@
       "seeding_key": {
         "activity_section.key": "6b76c1a8-4e15-4926-b014-a52224148ad3",
         "lesson_activity.key": "5bfde588-9908-49b6-98ec-fd67e99354e2"
+      }
+    },
+    {
+      "key": "8dae7e3a-abd2-47c4-8075-3dc7b15b3030",
+      "position": 1,
+      "properties": {
+        "description": "**Option 1:** This activity helps students understand how physical devices use sensors to track data and solve problems. Students will create a sound meter to gauge the classroom's noise level. Each student will program their micro:bit to react to the volume in the classroom. Once the sound meters are created, you can challenge the whole class to see how long they can stay quiet enough to get all the smiley faces to show up.\n\n**Find the code for the Sound Meter project <a href=\"https://makecode.microbit.org/33947-11529-24623-19370\" target=\"_blank\">here.</a>**\n\n**Option 2:** This could also be an opportunity to have students explore the light sensor on the micro:bit and create an alarm clock that shines and plays music when the sun rises but when it is dark it turns into a night light.\n\n**Find the code for the Alarm Clock project <a href=\"https://makecode.microbit.org/_7x7AdjUL8Awf\" target=\"_blank\">here.</a>**",
+        "name": "Sound Meter and Alarm Clock"
+      },
+      "seeding_key": {
+        "activity_section.key": "8dae7e3a-abd2-47c4-8075-3dc7b15b3030",
+        "lesson_activity.key": "d2636eab-5145-47b4-9453-fd19690ff418"
       }
     },
     {
