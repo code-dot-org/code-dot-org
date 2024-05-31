@@ -82,10 +82,8 @@ export const useRegionalPartner = data => {
     let cancelled = false;
     fetchRegionalPartner(searchTerm)
       .then(partner => {
-        console.log('Fetched partner');
         // Update state with all the partner workshop data to display
         if (!cancelled) {
-          console.log('Not cancelled then');
           setLoadingPartner(false);
           setLoadError(false);
           // the api returns an object with all fields set to null if not found
@@ -99,21 +97,15 @@ export const useRegionalPartner = data => {
         }
       })
       .catch(() => {
-        console.log('Caught partner fetch');
         if (!cancelled) {
-          console.log('Not cancelled catch');
           setLoadingPartner(false);
           setLoadError(true);
         }
       });
     return () => {
-      console.log('Cancelled');
       cancelled = true;
     };
   }, [program, searchTerm]);
 
-  if (loadingPartner) {
-    console.log('Loading partner before return');
-  }
   return [loadingPartner ? undefined : partner, loadError];
 };
