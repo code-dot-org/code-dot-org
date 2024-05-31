@@ -28,7 +28,9 @@ class MusiclabController < ApplicationController
 
     view_options(no_header: true, no_footer: true, full_width: true, no_padding_container: true)
 
-    channel_ids = params[:channels] ? params[:channels].split(',') : []
+    # channel_ids = params[:channels] ? params[:channels].split(',') : []
+    channel_ids = ProjectsList.fetch_active_published_featured_projects('applab')
+    puts "channel_ids: #{channel_ids}"
 
     project_ids = channel_ids.map do |channel_id|
       _, project_id = storage_decrypt_channel_id(channel_id)

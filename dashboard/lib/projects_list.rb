@@ -144,7 +144,8 @@ module ProjectsList
         return fetch_featured_published_projects(featured_before: featured_before)
       end
       raise ArgumentError, "invalid project type: #{project_group}" unless PUBLISHED_PROJECT_TYPE_GROUPS.key?(project_group.to_sym)
-      fetch_featured_projects_by_type([project_group.to_sym], featured_before: featured_before)
+      puts "fetching by type: #{project_group}"
+      fetch_featured_projects_by_type(project_group, featured_before: featured_before)
     end
 
     def fetch_featured_published_projects(featured_before: nil)
@@ -240,6 +241,7 @@ module ProjectsList
     end
 
     def fetch_featured_projects_by_type(project_type, featured_before: nil)
+      puts "inside fetching featured projects by type: #{project_type}"
       projects = "#{CDO.dashboard_db_name}__projects".to_sym
       user_project_storage_ids = "#{CDO.dashboard_db_name}__user_project_storage_ids".to_sym
 
@@ -258,7 +260,9 @@ module ProjectsList
         exclude(published_at: nil).
         exclude(abuse_score: 1...).
         order(Sequel.desc(:featured_at)).limit(FEATURED_MAX_LIMIT)
-      extract_data_for_featured_project_cards(project_featured_project_user_combo_data)
+      result = extract_data_for_featured_project_cards(project_featured_project_user_combo_data)
+      puts "result: #{result}"
+      return result
     end
 
     def extract_data_for_featured_project_cards(project_featured_project_user_combo_data)
