@@ -18,6 +18,16 @@
 # * To delete data, you should delete it from the destination redshift table
 # * Temp S3 files containing PII are not cleaned up. The expectation is that we're
 #   using lifecycle rules to expire them once their troubleshooting value is gone
+#
+# It is possible that the import into Redshift from the S3 CSV file will fail with
+# a "stl_load_errors" error. This can be investigated with the following query in
+# the Redshift query editor.
+#
+# ```
+# SELECT * FROM stl_load_errors
+# WHERE filename LIKE 's3://cdo-data-sharing-internal/tmp-foorm/%'
+# ORDER BY starttime DESC LIMIT 10;
+# ````
 
 require_relative 'only_one'
 abort 'Script already running' unless only_one_running?(__FILE__)
@@ -54,11 +64,54 @@ def main
   end
 
   client = RedshiftClient.instance
-  process_submissions(client)
   process_forms(client)
+  process_submissions(client)
   log 'Foorm data processing complete.'
 end
 
+# Forms are processed in one batch, because there are less than a few hundred.
+def process_forms(client)
+  forms_count = Foorm::Form.count
+  log "Processing #{forms_count} foorm forms"
+
+  reshaped_forms_csv = Pd::Foorm::FormAnalyticsParser.reshape_all_forms_into_csv
+
+  filename = "#{S3_PREFIX}/#{FORMS_REDSHIFT_TABLE_NAME}_#{Time.now.to_i}.csv"
+  AWS::S3.upload_to_bucket(S3_BUCKET_NAME, filename, reshaped_forms_csv, no_random: true)
+
+  s3_path = "s3://#{S3_BUCKET_NAME}/#{filename}"
+
+  # Drop and reload the table from the CSV
+  query = <<~SQL
+    DROP TABLE IF EXISTS #{FORMS_REDSHIFT_TABLE_NAME};
+    CREATE TABLE #{FORMS_REDSHIFT_TABLE_NAME}
+    (
+      form_id                 int,
+      form_name               varchar,
+      form_version            int,
+      item_type               varchar,
+      item_name               varchar,
+      item_text               varchar(max),
+      matrix_item_name        varchar,
+      matrix_item_header      varchar(max),
+      is_facilitator_specific int,
+      response_options        varchar(max),
+      num_response_options    int
+    );
+
+    COPY #{FORMS_REDSHIFT_TABLE_NAME}
+    FROM '#{s3_path}'
+    IAM_ROLE '#{REDSHIFT_S3_ACCESS_ROLE_ARN}'
+    CSV
+    IGNOREHEADER 1;
+  SQL
+
+  execute_redshift_query(client, query)
+
+  log "Processed #{forms_count}/#{forms_count} forms"
+end
+
+# There are about 300,000 submissions, so we process them in batches.
 def process_submissions(client)
   start_time = Time.now
   submissions_count = Foorm::Submission.count - SUBMISSIONS_OFFSET
@@ -73,7 +126,17 @@ def process_submissions(client)
       break
     end
 
-    merge_csv_into_redshift_table(client, reshaped_submissions_csv, SUBMISSIONS_REDSHIFT_TABLE_NAME)
+    # Prefix filenames with a seconds timestamp to avoid collisions.
+    filename = "#{S3_PREFIX}/#{table_name}_#{Time.now.to_i}.csv"
+    s3_path = "s3://#{S3_BUCKET_NAME}/#{filename}"
+    AWS::S3.upload_to_bucket(S3_BUCKET_NAME, filename, csv, no_random: true)
+
+    load_submissions_csv_from_s3_into_redshift_table(client, s3_path, "#{table_name}_temp")
+    merge_temp_table_with_main_table(client, "#{table_name}_temp", table_name, 'submission_id')
+
+    # Cleanup the temp table to minimize PII exposure (S3 file should be cleaned up via lifecycle rules)
+    # TODO: actually delete the table once we're done troubleshooting this script.
+    # delete_redshift_table(client, "#{table_name}_temp")
 
     # log only after N batches to reduce noise
     if offset % (BATCH_SIZE * BATCHES_PER_LOG) == 0
@@ -92,39 +155,7 @@ def process_submissions(client)
   log "Processed #{submissions_count}/#{submissions_count} submissions"
 end
 
-# Forms are processed in one batch, because there are less than a few hundred.
-def process_forms(client)
-  forms_count = Foorm::Form.count
-  log "Processing #{forms_count} foorm forms"
-
-  reshaped_forms_csv = Pd::Foorm::FormAnalyticsParser.reshape_all_forms_into_csv
-
-  filename = "#{S3_PREFIX}/#{FORMS_REDSHIFT_TABLE_NAME}_#{Time.now.to_i}.csv"
-  AWS::S3.upload_to_bucket(S3_BUCKET_NAME, filename, reshaped_forms_csv, no_random: true)
-
-  s3_path = "s3://#{S3_BUCKET_NAME}/#{filename}"
-  load_csv_from_s3_into_redshift_table(client, s3_path, FORMS_REDSHIFT_TABLE_NAME)
-
-  log "Processed #{forms_count}/#{forms_count} forms"
-end
-
-# Merges a csv into a redshift table via a temp table to not lock or recreate the main table
-def merge_csv_into_redshift_table(client, csv, table_name)
-  # Prefix filenames with a seconds timestamp to avoid collisions.
-  filename = "#{S3_PREFIX}/#{table_name}_#{Time.now.to_i}.csv"
-
-  AWS::S3.upload_to_bucket(S3_BUCKET_NAME, filename, csv, no_random: true)
-
-  load_csv_from_s3_into_redshift_table(client, "s3://#{S3_BUCKET_NAME}/#{filename}", "#{table_name}_temp")
-
-  merge_temp_table_with_main_table(client, "#{table_name}_temp", table_name)
-
-  # Cleanup the temp table to minimize PII exposure (S3 file should be cleaned up via lifecycle rules)
-  # TODO: actually delete the table once we're done troubleshooting this script.
-  # delete_redshift_table(client, "#{table_name}_temp")
-end
-
-def load_csv_from_s3_into_redshift_table(client, s3_path, table_name)
+def load_submissions_csv_from_s3_into_redshift_table(client, s3_path, table_name)
   query = <<~SQL
     DROP TABLE IF EXISTS #{table_name};
     CREATE TABLE IF NOT EXISTS #{table_name} (
@@ -145,12 +176,12 @@ def load_csv_from_s3_into_redshift_table(client, s3_path, table_name)
   execute_redshift_query(client, query)
 end
 
-def merge_temp_table_with_main_table(client, temp_table_name, main_table_name)
+def merge_temp_table_with_main_table(client, temp_table_name, main_table_name, key)
   query = <<~SQL
     BEGIN;
     DELETE FROM #{main_table_name}
     USING #{temp_table_name}
-    WHERE #{main_table_name}.submission_id = #{temp_table_name}.submission_id;
+    WHERE #{main_table_name}.#{key} = #{temp_table_name}.#{key};
 
     INSERT INTO #{main_table_name}
     SELECT * FROM #{temp_table_name};
