@@ -11,7 +11,7 @@ module Pd::Foorm
     end
 
     test 'reshape submissions_batch_into_csv returns a CSV string' do
-      csv = SubmissionAnalyticsParser.reshape_submissions_batch_into_csv
+      csv = SubmissionAnalyticsParser.reshape_submissions_batch_into_csv(0, 100)
       assert csv.is_a? String
     end
 
