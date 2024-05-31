@@ -12,7 +12,6 @@ export default {
 // TEMPLATE
 //
 const SingleTemplate: StoryFn<TextFieldProps> = args => <TextField {...args} />;
-//
 const MultipleTemplate: StoryFn<{
   components: TextFieldProps[];
 }> = args => (
@@ -23,87 +22,91 @@ const MultipleTemplate: StoryFn<{
   </>
 );
 
+const defaultArgs = {
+  onChange: () => null,
+};
+
 export const DefaultTextField = SingleTemplate.bind({});
 DefaultTextField.args = {
+  ...defaultArgs,
   name: 'textfield_default',
   label: 'TextField Label',
-  onChange: () => null,
 };
 
 export const WithErrorTextField = SingleTemplate.bind({});
 WithErrorTextField.args = {
+  ...defaultArgs,
   name: 'textfield_error',
   label: 'TextField Label',
   error: {
     hasError: true,
     message: 'Error message',
   },
-  onChange: () => null,
 };
 
 export const WithHelperMessageTextField = SingleTemplate.bind({});
 WithHelperMessageTextField.args = {
+  ...defaultArgs,
   name: 'textfield_helper_message',
   label: 'TextField Label',
   helperMessage: 'Helper message',
-  onChange: () => null,
 };
 
 export const WithHelperMessageAndIconTextField = SingleTemplate.bind({});
 WithHelperMessageAndIconTextField.args = {
+  ...defaultArgs,
   name: 'textfield_helper_icon',
   label: 'TextField Label',
   helperIcon: {
     iconName: 'info-circle',
   },
   helperMessage: 'Helper message',
-  onChange: () => null,
 };
 
 export const WithPlaceholderTextField = SingleTemplate.bind({});
 WithPlaceholderTextField.args = {
+  ...defaultArgs,
   name: 'textfield_placeholder',
   label: 'TextField Label',
   placeholder: 'Placeholder',
-  onChange: () => null,
 };
 
 export const DisabledTextField = SingleTemplate.bind({});
 DisabledTextField.args = {
+  ...defaultArgs,
   name: 'textfield_disabled',
   label: 'TextField Label',
   disabled: true,
-  onChange: () => null,
 };
 
 export const ReadOnlyTextField = SingleTemplate.bind({});
 ReadOnlyTextField.args = {
+  ...defaultArgs,
   name: 'textfield_readOnly',
   label: 'TextField Label',
   readOnly: true,
-  onChange: () => null,
 };
 
 export const GroupOfTextFieldColors = MultipleTemplate.bind({});
 GroupOfTextFieldColors.args = {
   components: [
     {
+      ...defaultArgs,
       name: 'textfield_color_black',
       label: 'Black TextField',
       color: 'black',
-      onChange: () => null,
     },
     {
+      ...defaultArgs,
       name: 'textfield_color_gray',
       label: 'Gray TextField',
       color: 'gray',
-      onChange: () => null,
     },
     {
+      ...defaultArgs,
       name: 'textfield_color_white',
       label: 'White TextField',
       color: 'white',
-      onChange: () => null,
     },
   ],
 };
@@ -112,6 +115,7 @@ export const GroupOfTextFieldSizes = MultipleTemplate.bind({});
 GroupOfTextFieldSizes.args = {
   components: [
     {
+      ...defaultArgs,
       name: 'textfield_size_l',
       label: 'L TextField',
       helperIcon: {
@@ -119,9 +123,9 @@ GroupOfTextFieldSizes.args = {
       },
       helperMessage: 'Helper message',
       size: 'l',
-      onChange: () => null,
     },
     {
+      ...defaultArgs,
       name: 'textfield_size_m',
       label: 'M TextField',
       helperIcon: {
@@ -129,9 +133,9 @@ GroupOfTextFieldSizes.args = {
       },
       helperMessage: 'Helper message',
       size: 'm',
-      onChange: () => null,
     },
     {
+      ...defaultArgs,
       name: 'textfield_size_s',
       label: 'S TextField',
       helperIcon: {
@@ -139,7 +143,6 @@ GroupOfTextFieldSizes.args = {
       },
       helperMessage: 'Helper message',
       size: 's',
-      onChange: () => null,
     },
   ],
 };
