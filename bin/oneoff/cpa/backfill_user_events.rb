@@ -105,6 +105,8 @@ else
   
   # Write out the record information we intend to write
   File.open('cpa-backfill-records.json') do |f|
-    f.write(records.to_json)
+    records.each do |data|
+      f.write(data.to_json)
+    end
   end
 end
