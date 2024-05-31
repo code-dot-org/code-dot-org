@@ -12,10 +12,11 @@ module ProjectsList
     applab: ['applab'],
     gamelab: ['gamelab'],
     spritelab: ['spritelab', 'thebadguys'],
+    playlab: ['playlab', 'gumball', 'infinity', 'iceage'],
     artist: ['artist', 'frozen'],
     minecraft: ['minecraft_adventurer', 'minecraft_designer', 'minecraft_hero', 'minecraft_aquatic'],
     events: %w(starwars starwarsblocks starwarsblocks_hour flappy bounce sports basketball),
-    k1: ['artist_k1'],
+    k1: ['artist_k1', 'playlab_k1'],
     dance: ['dance'],
     poetry: ['poetry', 'poetry_hoc'],
     library: ['applab', 'gamelab'],
@@ -103,6 +104,7 @@ module ProjectsList
     #   {
     #     applab: [{...}, {...}, {...}]
     #     gamelab: [{...}, {...}, {...}]
+    #     playlab: [{...}, {...}, {...}]
     #     artist: [{...}, {...}, {...}]
     #   }
     # @param project_group [String] Project group to retrieve. Must be one of
