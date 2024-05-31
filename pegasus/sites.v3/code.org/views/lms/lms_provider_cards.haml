@@ -24,12 +24,12 @@
 
 .action-block__wrapper.action-block__wrapper--four-col
   - card_list.each do |card_list|
-    .action-block.action-block--one-col.flex-space-between.white
+    .action-block.action-block--one-col.flex-space-between.white.provider-card
       .content-wrapper
         %figure
-          %img{style: "width: 40px; height: 40px;", src: "#{card_list[:image]}", alt: ""}
+          %img{src: "#{card_list[:image]}", alt: ""}
         .text-wrapper
           %h4.heading-xs
             = card_list[:title]
-          %a.link-button.has-external-link{href: card_list[:url]}
-            = hoc_s(:call_to_action_learn_more)
+      %a.link-button.has-external-link{href: card_list[:url]}
+        = hoc_s(:call_to_action_learn_more)

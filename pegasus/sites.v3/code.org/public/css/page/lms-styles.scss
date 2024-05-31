@@ -1,6 +1,5 @@
 
 section.integrations {
-
   .sso-card {
     h4 {
       display: unset;
@@ -13,4 +12,18 @@ section.integrations {
       margin-right: 1rem;
     }
   }
+}
+
+section.lms-systems {
+  .provider-card {
+    img {
+      width: 40px;
+      height: 40px;
+    }
+
+    a {
+      width: 100%;
+    }
+  }
+
 }
