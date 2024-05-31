@@ -10506,6 +10506,19 @@ indexes:
     type:
     using: :btree
     comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: pd_enrollments
+    name: index_pd_enrollments_on_user_id
+    unique: false
+    columns:
+    - user_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
   pd_facilitator_program_registrations:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_facilitator_program_registrations
@@ -13503,7 +13516,7 @@ indexes:
     type: :fulltext
     using:
     comment:
-version: 20240514181513
+version: 20240522163806
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 5

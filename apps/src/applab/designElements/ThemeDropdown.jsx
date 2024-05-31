@@ -2,11 +2,13 @@
 // each theme will look like
 import PropTypes from 'prop-types';
 import React from 'react';
-import applabMsg from '@cdo/applab/locale';
-import {themeOptionsForSelect, DEFAULT_THEME_INDEX} from '../constants';
 import Select from 'react-select';
-import 'react-select/dist/react-select.css';
+
+import applabMsg from '@cdo/applab/locale';
+
 import FontAwesome from '../../templates/FontAwesome';
+import {themeOptionsForSelect, DEFAULT_THEME_INDEX} from '../constants';
+import 'react-select/dist/react-select.css';
 
 export default class ThemeDropdown extends React.Component {
   static propTypes = {

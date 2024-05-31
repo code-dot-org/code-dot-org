@@ -1,7 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import applabMsg from '@cdo/applab/locale';
+
 import color from '../../util/color';
+
 import * as elementUtils from './elementUtils';
 
 export default class DefaultScreenButtonPropertyRow extends React.Component {

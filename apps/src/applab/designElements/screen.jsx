@@ -1,18 +1,21 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import applabMsg from '@cdo/applab/locale';
-import PropertyRow from './PropertyRow';
+
+import {getStore} from '../../redux';
+import * as applabConstants from '../constants';
+import designMode from '../designMode';
+import themeValues from '../themeValues';
+
 import ColorPickerPropertyRow from './ColorPickerPropertyRow';
-import ImagePickerPropertyRow from './ImagePickerPropertyRow';
+import DefaultScreenButtonPropertyRow from './DefaultScreenButtonPropertyRow';
+import * as elementUtils from './elementUtils';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
-import DefaultScreenButtonPropertyRow from './DefaultScreenButtonPropertyRow';
-import designMode from '../designMode';
+import ImagePickerPropertyRow from './ImagePickerPropertyRow';
 import elementLibrary from './library';
-import * as applabConstants from '../constants';
-import * as elementUtils from './elementUtils';
-import themeValues from '../themeValues';
-import {getStore} from '../../redux';
+import PropertyRow from './PropertyRow';
 
 class ScreenProperties extends React.Component {
   static propTypes = {

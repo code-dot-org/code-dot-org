@@ -16,14 +16,12 @@ markdown <<MARKDOWN
 **Step 1. Check out the student dataset:**  <a href="https://docs.google.com/spreadsheets/d/1t44C0ScGvgajfOEE6VE8sl7OQEJbgT1kvGDCnDgOPys/preview
 " target="_blank"> Student Dataset</a>.
 
-**Step 2. Answer the questions in the handout:**  <a href="https://docs.google.com/document/d/1geTnFqtszszfH7Q4_8ZORTAxvh38b-HuLpV1ezy7mgI/preview" target="_blank"> Using AI Tools in School</a>.
+**Step 2. Answer the questions in the handout:**  <a href="https://docs.google.com/document/d/1rRpXQi3T4sl_lI4r5uw1h_btVQu_7M02NVoSjDXdMBk/template/preview" target="_blank"> Using AI Tools in School</a>.
 
 >Make sure to answer:
-> - Which categories in the dataset do you think are the most important to consider? Why?
+> - Which columns in the dataset should you give to AI as your training data? Explain why.
+> - Which columns in the dataset would you want to take out of the training data? Explain why.
 > - What other data would you want to train the AI tool on? How would you collect that data?
-> - What data would you want to remove or ignore from the dataset? Why?
-> - How will you know if the tool was successful?
 
-**Step 3. When you're done answering the questions above, go to the second page of the handout. Write a letter to your principal explaining why you think AI tools should or shouldn't be used to make decisions in school.** 
 </div>
 MARKDOWN
