@@ -1,6 +1,7 @@
 import {
   getUpdatedSourceAndDeleteFiles,
   importPackagesFromFiles,
+  resetGlobals,
   writeSource,
 } from './pythonHelpers/pythonScriptUtils';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
@@ -12,19 +13,26 @@ async function loadPyodideAndPackages() {
     // which does serve the unhashed files. We need to serve the unhashed files because
     // pyodide controls adding the filenames to the url we provide here.
     indexURL: `/blockly/js/pyodide/${version}/`,
-    // pre-load numpy as it will frequently be used, and matplotlib as we patch it.
-    packages: ['numpy', 'matplotlib'],
+    // pre-load numpy as it will frequently be used, our custom setup package, and matplotlib
+    // which our custom setup package patches.
+    packages: [
+      'numpy',
+      'matplotlib',
+      `/blockly/js/pyodide/${version}/pythonlab_setup-0.0.1-py3-none-any.whl`,
+    ],
   });
   self.pyodide.setStdout(getStreamHandlerOptions('sysout'));
   self.pyodide.setStderr(getStreamHandlerOptions('syserr'));
 }
 
 let pyodideReadyPromise = null;
+let pyodideGlobals = null;
 async function initializePyodide() {
   if (pyodideReadyPromise === null) {
     pyodideReadyPromise = loadPyodideAndPackages();
   }
   await pyodideReadyPromise;
+  pyodideGlobals = self.pyodide.globals.toJs();
 }
 
 // Get pyodide ready as soon as possible.
@@ -49,6 +57,7 @@ self.onmessage = async event => {
     self.postMessage
   );
   self.postMessage({type: 'updated_source', message: updatedSource, id});
+  resetGlobals(self.pyodide, pyodideGlobals);
   self.postMessage({type: 'run_complete', message: results, id});
 };
 

@@ -350,12 +350,7 @@ const customInputTypes = {
     generateCode(block, arg) {
       const fieldValue = block.getFieldValue(arg.name);
       const invalidBehavior = fieldValue === NO_OPTIONS_MESSAGE;
-      // variableDB_ was deprecated in Google Blockly but exists up to v9 and in CDO Blockly.
-      // TODO: After Sprite Lab has migrated to mainline, and before updating to v10,
-      // use nameDB_ exclusively.
-      const variableNameDB =
-        Blockly.JavaScript.nameDB_ || Blockly.JavaScript.variableDB_;
-      const behaviorId = variableNameDB.getName(fieldValue, 'PROCEDURE');
+      const behaviorId = Blockly.JavaScript.getName(fieldValue, 'PROCEDURE');
       if (invalidBehavior) {
         console.warn('No behaviors available');
         return undefined;
