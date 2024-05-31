@@ -308,7 +308,6 @@ export const styles = {
 const thumbnailFormatter = function (thumbnailUrl, {rowData}) {
   const projectUrl = `/projects/${rowData.type}/${rowData.channel}/edit`;
   thumbnailUrl = getThumbnailUrl(thumbnailUrl, rowData.type);
-  console.log('thumbnailUrl', thumbnailUrl);
   return (
     <a
       style={tableLayoutStyles.link}
