@@ -82,10 +82,6 @@ parental_permissions.each do |ppr|
   records = records[...-1] if DASHBOARD_REPORTING_DB_READER[:cap_user_events].where(policy: records[-1][:policy], name: records[-1][:name], user_id: records[-1][:user_id]).count > 0
 end
 
-# Print out the record information we intend to write
-puts records
-puts
-
 # Print out the number of event records
 puts "Discovered #{records.length} new event records. Add a '1' as an argument to write them."
 
@@ -100,5 +96,15 @@ if ARGV[0] == '1'
       data[key] = DateTime.parse(data[key])
     end
     DASHBOARD_DB[:cap_user_events] << data
+  end
+else
+  puts
+  puts "Writing 'cpa-backfill-records.json' with the records we intend to write."
+  puts "  Refer and verify this file and then re-run the script and append '1' as an argument to commit these records."
+  puts
+  
+  # Write out the record information we intend to write
+  File.open('cpa-backfill-records.json') do |f|
+    f.write(records.to_json)
   end
 end
