@@ -68,9 +68,7 @@ export const convertChannelsToProjectData = function (projects) {
 
 export const PROJECT_DEFAULT_IMAGE =
   '/blockly/media/projects/project_default.png';
-export const PROJECT_DEFAULT_THUMBNAIL_IMAGE_OVERRIDE = {
-  music: '/shared/images/fill-70x70/courses/logo_music.png',
-};
+
 export const PROJECT_DEFAULT_IMAGE_OVERRIDE = {
   music: musicNoteProjectCardImage,
 };
