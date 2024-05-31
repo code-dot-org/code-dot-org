@@ -136,7 +136,7 @@ const AITutorFooter: React.FC<AITutorFooterProps> = ({renderAITutor}) => {
           <Button
             className={style.quickActionButton}
             color={buttonColors.gray}
-            type={"secondary"}
+            type={'secondary'}
             size="s"
             disabled={disabled}
             key="compilation"
@@ -148,7 +148,7 @@ const AITutorFooter: React.FC<AITutorFooterProps> = ({renderAITutor}) => {
           <Button
             className={style.quickActionButton}
             color={buttonColors.gray}
-            type={"secondary"}
+            type={'secondary'}
             size="s"
             disabled={disabled}
             key="validation"
