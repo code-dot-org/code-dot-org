@@ -142,11 +142,9 @@ class Hamburger
     visibility = Hamburger.get_visibility(visibility_options)
 
     # Generate the list of entries.
-
     entries = []
 
     # user_type-specific.
-
     case options[:user_type]
     when 'teacher'
       entries = entries.concat(teacher_entries.each {|e| e[:class] = visibility[:show_teacher_options]})
@@ -160,8 +158,7 @@ class Hamburger
     entries.concat(help_contents.each {|e| e[:class] = visibility[:show_help_options]})
     entries << {type: "divider", class: get_divider_visibility(visibility[:show_help_options], visibility[:show_pegasus_options]), id: "after-help"}
 
-    # Pegasus options.
-
+    # Pegasus links.
     entries << {
       title: I18n.t("#{loc_prefix}learn"),
       url: CDO.code_org_url("/students"),
@@ -198,12 +195,14 @@ class Hamburger
       id: "help-us"
     }
 
-    entries << {
-      title: I18n.t("#{loc_prefix}incubator"),
-      url: CDO.code_org_url("/incubator"),
-      class: visibility[:show_pegasus_options],
-      id: "incubator"
-    }
+    unless options[:user_type] == "teacher" || options[:user_type] == "student"
+      entries << {
+        title: I18n.t("#{loc_prefix}incubator"),
+        url: CDO.code_org_url("/incubator"),
+        class: visibility[:show_pegasus_options],
+        id: "incubator"
+      }
+    end
 
     entries << {
       type: "expander",
@@ -216,6 +215,7 @@ class Hamburger
     {entries: entries, visibility: visibility[:hamburger_class]}
   end
 
+  # Main header navigation links to the right of the Code.org logo.
   def self.get_header_contents(options)
     loc_prefix = options[:loc_prefix]
 
