@@ -4,6 +4,7 @@ theme: responsive_full_width
 ---
 
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
+%link{href: "/css/generated/page/lms-styles.css", rel: "stylesheet"}
 
 %section.top
   .wrapper
@@ -23,17 +24,19 @@ theme: responsive_full_width
       =hoc_s("lms_page.top_module.heading")
     %p.body-two
       =hoc_s("lms_page.top_module.desc")
+    =view :"lms/lms_provider_cards"
 
-= view :section_divider_line
+=view :section_divider_line
 
 %section.integrations.bg-neutral-light
   .wrapper
     %h3
       =hoc_s("lms_page.integrations.heading")
     %p.body-two
-      =hoc_s("lms_page.integrations.desc")
+      =hoc_s("lms_page.integrations.desc", markdown: :inline, locals: {help_article_link: 'https://support.code.org/hc/en-us/articles/4403192755725-Can-I-single-sign-on-SSO-to-Code-org-using-a-third-party-authentication-provider-like-Google-or-Clever'})
+    =view :"lms/lms_sso_cards"
 
-%section.why-use-integrations
+%section.why-use-integrations.centered
   .wrapper
     %h2
       =hoc_s("lms_page.reasoning.heading")

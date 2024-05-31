@@ -1,0 +1,35 @@
+:ruby
+  card_list = [
+    {
+      image: "/images/lms/clever.png",
+      title: "Clever",
+      url: "https://support.code.org/hc/en-us/articles/115002716111-Setting-Up-Sections-with-Clever-Sync"
+    },
+    {
+      image: "/images/lms/classroom.png",
+      title: "Google Classroom",
+      url: "https://support.code.org/hc/en-us/articles/115001319312-Setting-Up-Sections-with-Google-Classroom-Sync"
+    },
+    {
+      image: "/images/lms/canvas.png",
+      title: "Canvas",
+      url: "code.org/lms/canvas"
+    },
+    {
+      image: "/images/lms/schoology.png",
+      title: "Schoology",
+      url: "code.org/lms/schoology"
+    },
+  ]
+
+.action-block__wrapper.action-block__wrapper--four-col
+  - card_list.each do |card_list|
+    .action-block.action-block--one-col.flex-space-between.white
+      .content-wrapper
+        %figure
+          %img{style: "width: 40px; height: 40px;", src: "#{card_list[:image]}", alt: ""}
+        .text-wrapper
+          %h4.heading-xs
+            = card_list[:title]
+          %a.link-button.has-external-link{href: card_list[:url]}
+            = hoc_s(:call_to_action_learn_more)
