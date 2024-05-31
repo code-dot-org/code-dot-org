@@ -16,7 +16,7 @@ const COURSE_NAMES = {
 };
 
 // constructs query params and fetches the data, returning a promise
-const fetchRegionalPartner = async ({
+const fetchRegionalPartner = ({
   program,
   schoolZipCode,
   schoolState,
@@ -39,7 +39,7 @@ const fetchRegionalPartner = async ({
     locationParams
   )}`;
 
-  return await fetch(url).then(response => {
+  return fetch(url).then(response => {
     if (!response.ok) {
       throw response.statusText;
     }
