@@ -148,6 +148,9 @@ export interface LevelProperties {
   // Help and Tips values
   mapReference?: string;
   referenceLinks?: string[];
+  // Exemplars
+  exampleSolutions?: string[];
+  exemplarSources?: MultiFileSource;
   // For Teachers Only value
   teacherMarkdown?: string;
 }

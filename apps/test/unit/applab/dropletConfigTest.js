@@ -1,6 +1,7 @@
 /** @file Test applab droplet config behavior */
-import {expect} from '../../util/reconfiguredChai';
 import {blocks} from '@cdo/apps/applab/dropletConfig';
+
+import {expect} from '../../util/reconfiguredChai';
 
 describe(`Applab droplet configuration`, () => {
   it('uses half the max height for the default location of lines, circles, and rectangles', () => {

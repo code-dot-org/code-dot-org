@@ -1,8 +1,10 @@
 import $ from 'jquery';
+
 import * as utils from '../../utils';
-import * as elementUtils from './elementUtils';
-import designMode from '../designMode';
 import {themeOptions, DEFAULT_THEME_INDEX} from '../constants';
+import designMode from '../designMode';
+
+import * as elementUtils from './elementUtils';
 
 /**
  * A map from prefix to the next numerical suffix to try to
