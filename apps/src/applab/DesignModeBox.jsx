@@ -3,11 +3,8 @@ import React from 'react';
 
 import color from '../util/color';
 
-// DesignToolbox must be imported before DesignProperties to avoid circular dependency
-/* eslint-disable import/order */
-import DesignToolbox from './DesignToolbox';
 import DesignProperties from './designProperties';
-/* eslint-enable import/order */
+import DesignToolbox from './DesignToolbox';
 
 export default class DesignModeBox extends React.Component {
   static propTypes = {

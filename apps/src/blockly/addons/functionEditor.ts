@@ -491,8 +491,7 @@ export default class FunctionEditor {
       }
     });
 
-    // Mirror variable events from main workspace to editor workspace and the
-    // hidden procedure definition workspace.
+    // Mirror variable events from main workspace to the hidden workspace.
     // This is allows newly created/renamed/deleted variables to propogate
     // to the other workspaces.
     this.primaryWorkspace?.addChangeListener(e => {
@@ -500,13 +499,8 @@ export default class FunctionEditor {
         return;
       }
       if (e instanceof Blockly.Events.VarBase) {
-        let newEditorWorkspaceEvent;
         let newHiddenWorkspaceEvent;
         try {
-          newEditorWorkspaceEvent = Blockly.Events.fromJson(
-            e.toJson(),
-            this.editorWorkspace
-          );
           newHiddenWorkspaceEvent = Blockly.Events.fromJson(
             e.toJson(),
             Blockly.getHiddenDefinitionWorkspace()
@@ -517,7 +511,6 @@ export default class FunctionEditor {
           // cannot be deserialized into the original workspace.
           return;
         }
-        newEditorWorkspaceEvent.run(true);
         newHiddenWorkspaceEvent.run(true);
 
         // Update the toolbox in case this change is happening

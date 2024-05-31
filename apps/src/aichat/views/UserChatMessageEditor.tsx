@@ -18,6 +18,8 @@ const UserChatMessageEditor: React.FunctionComponent = () => {
     state => state.aichat.isWaitingForChatResponse
   );
 
+  const saveInProgress = useAppSelector(state => state.aichat.saveInProgress);
+
   const dispatch = useAppDispatch();
 
   const handleSubmit = useCallback(() => {
@@ -42,7 +44,7 @@ const UserChatMessageEditor: React.FunctionComponent = () => {
           isIconOnly
           icon={{iconName: 'paper-plane'}}
           onClick={handleSubmit}
-          disabled={isWaitingForChatResponse || !userMessage}
+          disabled={isWaitingForChatResponse || !userMessage || saveInProgress}
         />
       </div>
     </div>

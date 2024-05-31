@@ -1590,6 +1590,7 @@
   user_header_create_account_low_cap: "Create account"
   user_header_create: 'Create '
   user_header_new_project: "New Project"
+  user_header_new_project_low_cap: "New project"
   user_header_applab: 'App Lab '
   user_header_artist: 'Artist '
   user_header_gamelab: "Game Lab"

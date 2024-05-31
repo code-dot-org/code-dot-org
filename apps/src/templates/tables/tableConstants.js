@@ -6,6 +6,43 @@ import color from '../../util/color';
 // Constants for React tables
 
 // Styles for a reacttabular table
+/**
+ * @type {{
+ *   tableText: {
+ *     textOverflow?: string;
+ *     overflow?: string;
+ *     whiteSpace?: "normal" | "nowrap" | "pre" | "pre-line" | "pre-wrap";
+ *   };
+ *   table: {
+ *     borderWidth?: string;
+ *     borderStyle?: string;
+ *     borderColor?: string;
+ *     width?: string;
+ *     backgroundColor?: string,
+ *   };
+ *   cell: {
+ *     maxWidth?: number;
+ *     border?: string;
+ *     borderColor?: string;
+ *     padding?: number;
+ *     fontSize?: number;
+ *   };
+ *   headerCell: {
+ *     backgroundColor?: string;
+ *     fontWeight?: string;
+ *     borderColor?: string;
+ *     borderStyle?: string;
+ *     borderBottomWidth?: number;
+ *     borderTopWidth?: number;
+ *     borderLeftWidth?: number;
+ *     borderRightWidth?: number;
+ *     paddingTop?: number;
+ *     paddingBottom?: number;
+ *     color?: string;
+ *     textAlign?: string;
+ *   };
+ * }}
+ */
 export const tableLayoutStyles = {
   tableText: {
     textOverflow: 'ellipsis',

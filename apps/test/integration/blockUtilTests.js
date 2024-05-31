@@ -334,27 +334,4 @@ describe('forceInsertTopBlock', function () {
     msg = '\n' + 'result: ' + result + '\n' + 'expect: ' + expected + '\n';
     assert(result === expected, msg);
   });
-
-  it('insert functional_compute', function () {
-    var withXml, withoutXml, result, expected, msg;
-    withoutXml = '<block type="foo"/>';
-    result = blockUtils.forceInsertTopBlock(withoutXml, 'functional_compute');
-    expected =
-      '<xml><block type="functional_compute" movable="false" deletable="false">' +
-      '<functional_input name="ARG1">' +
-      withoutXml +
-      '</functional_input></block></xml>';
-    msg = '\n' + 'result: ' + result + '\n' + 'expect: ' + expected + '\n';
-    assert(result === expected, msg);
-
-    withXml = '<xml>' + withoutXml + '</xml>';
-    result = blockUtils.forceInsertTopBlock(withXml, 'functional_compute');
-    expected =
-      '<xml><block type="functional_compute" movable="false" deletable="false">' +
-      '<functional_input name="ARG1">' +
-      withoutXml +
-      '</functional_input></block></xml>';
-    msg = '\n' + 'result: ' + result + '\n' + 'expect: ' + expected + '\n';
-    assert(result === expected, msg);
-  });
 });

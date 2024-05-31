@@ -3622,19 +3622,6 @@ exports.install = function (blockly, blockInstallOptions) {
   // install number and string
   sharedFunctionalBlocks.install(blockly, generator);
 
-  // Note: in other languages, the translated values won't be accepted
-  // as valid backgrounds if they are typed in as free text. Also this
-  // block will have the effect of translating the selected text to
-  // english if not connected to the functional_setBackground block.
-  // TODO(i18n): translate these strings in the Studio.setBackground
-  // API instead of here.
-  var functional_background_values = skin.backgroundChoices.slice(1);
-
-  blockly.FunctionalBlockUtils.installStringPicker(blockly, generator, {
-    blockName: 'functional_background_string_picker',
-    values: functional_background_values,
-  });
-
   blockly.Blocks.studio_vanishSprite = {
     helpUrl: '',
     init: function () {

@@ -9,29 +9,27 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import RGBColor from 'rgbcolor';
 
-import firehoseClient from '../lib/util/firehose';
-import logToCloud from '../logToCloud';
-
-import sanitizeHtml from './sanitizeHtml';
-// Disabling import order because build fails with circular dependencies
-/* eslint-disable import/order */
-import DesignWorkspace from './DesignWorkspace';
-import * as assetPrefix from '../assetManagement/assetPrefix';
-import elementLibrary from './designElements/library';
-import * as elementUtils from './designElements/elementUtils';
-import {singleton as studioApp} from '../StudioApp';
-import {KeyCodes, NOTIFICATION_ALERT_TYPE} from '../constants';
-import * as applabConstants from './constants';
-import * as utils from '../utils';
-import * as gridUtils from './gridUtils';
-import {getStore} from '../redux';
-import {actions} from './redux/applab';
-import * as screens from './redux/screens';
-import project from '../code-studio/initApp/project';
-import {ImageMode} from '../code-studio/components/AssetManager';
 import autogenerateML from '@cdo/apps/applab/ai';
 import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
-/* eslint-enable import/order */
+
+import * as assetPrefix from '../assetManagement/assetPrefix';
+import {ImageMode} from '../code-studio/components/AssetManager';
+import project from '../code-studio/initApp/project';
+import {KeyCodes, NOTIFICATION_ALERT_TYPE} from '../constants';
+import firehoseClient from '../lib/util/firehose';
+import logToCloud from '../logToCloud';
+import {getStore} from '../redux';
+import {singleton as studioApp} from '../StudioApp';
+import * as utils from '../utils';
+
+import * as applabConstants from './constants';
+import * as elementUtils from './designElements/elementUtils';
+import elementLibrary from './designElements/library';
+import DesignWorkspace from './DesignWorkspace';
+import * as gridUtils from './gridUtils';
+import {actions} from './redux/applab';
+import * as screens from './redux/screens';
+import sanitizeHtml from './sanitizeHtml';
 
 var designMode = {};
 export default designMode;

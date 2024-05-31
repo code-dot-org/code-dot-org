@@ -3,11 +3,8 @@ import React from 'react';
 
 import applabMsg from '@cdo/applab/locale';
 
-// DesignToolboxElement must be imported before ThemeDropdown to avoid circular dependency
-/* eslint-disable import/order */
-import DesignToolboxElement from './DesignToolboxElement';
 import ThemeDropdown from './designElements/ThemeDropdown';
-/* eslint-enable import/order */
+import DesignToolboxElement from './DesignToolboxElement';
 
 const IMAGE_BASE_URL = '/blockly/media/applab/design_toolbox/';
 
