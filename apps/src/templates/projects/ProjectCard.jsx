@@ -94,7 +94,7 @@ export default class ProjectCard extends React.Component {
               target={isPublicGallery ? '_blank' : undefined}
             >
               <img
-                src={getThumbnailUrl(projectData.getThumbnailUrl, type)}
+                src={getThumbnailUrl(projectData.thumbnailUrl, type)}
                 className={style.image}
                 alt={i18n.projectThumbnail()}
               />
