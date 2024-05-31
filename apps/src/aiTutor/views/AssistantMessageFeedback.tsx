@@ -40,9 +40,9 @@ const AssistantMessageFeedback: React.FC<AssistantMessageProps> = ({
   };
 
   return (
-    <>
+    <div className={style.feedbackIcons}>
+      Was this helpful? 
       <Button
-        className={style.hamburgerMenuButton}
         color={buttonColors.black}
         disabled={false}
         icon={{iconName: 'thumbs-up', iconStyle: 'solid'}}
@@ -52,7 +52,6 @@ const AssistantMessageFeedback: React.FC<AssistantMessageProps> = ({
         type={feedbackState.thumbsUp ? 'primary' : 'tertiary'}
       />
       <Button
-        className={style.hamburgerMenuButton}
         color={buttonColors.black}
         disabled={false}
         icon={{iconName: 'thumbs-down', iconStyle: 'solid'}}
@@ -61,7 +60,7 @@ const AssistantMessageFeedback: React.FC<AssistantMessageProps> = ({
         size="xs"
         type={feedbackState.thumbsDown ? 'primary' : 'tertiary'}
       />
-    </>
+    </div>
   );
 };
 

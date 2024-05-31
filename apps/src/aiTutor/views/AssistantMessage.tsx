@@ -27,20 +27,18 @@ const AssistantMessage: React.FC<AssistantMessageProps> = ({message}) => {
       <Typography semanticTag="h5" visualAppearance="heading-xs">
         AI Tutor ({message.role})
       </Typography>
-      <div className={style.assistantMessageButtonRow}>
-        <div
-          id={'chat-workspace-message-body'}
-          className={classNames(style.message, style.assistantMessage)}
-        >
-          <SafeMarkdown
-            markdown={message.chatMessageText}
-            className={style.aiTutorMarkdown}
-          />
-        </div>
-        {shouldRenderFeedbackButtons && (
-          <AssistantMessageFeedback messageId={message.id} />
-        )}
+      <div
+        id={'chat-workspace-message-body'}
+        className={classNames(style.message, style.assistantMessage)}
+      >
+        <SafeMarkdown
+          markdown={message.chatMessageText}
+          className={style.aiTutorMarkdown}
+        />
       </div>
+      {shouldRenderFeedbackButtons && (
+        <AssistantMessageFeedback messageId={message.id} />
+      )}
     </div>
   );
 };
