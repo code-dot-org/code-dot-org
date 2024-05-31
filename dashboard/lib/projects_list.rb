@@ -258,8 +258,7 @@ module ProjectsList
         exclude(published_at: nil).
         exclude(abuse_score: 1...).
         order(Sequel.desc(:featured_at)).limit(FEATURED_MAX_LIMIT)
-      result = extract_data_for_featured_project_cards(project_featured_project_user_combo_data)
-      return result
+      extract_data_for_featured_project_cards(project_featured_project_user_combo_data)
     end
 
     def extract_data_for_featured_project_cards(project_featured_project_user_combo_data)
