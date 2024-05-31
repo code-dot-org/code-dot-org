@@ -1,10 +1,10 @@
-import * as utils from '../utils';
 import {
   ICON_PREFIX,
   ICON_PREFIX_REGEX,
   DATA_URL_PREFIX_REGEX,
   ABSOLUTE_REGEXP,
 } from '../assetManagement/assetPrefix';
+import * as utils from '../utils';
 
 export {ICON_PREFIX, ICON_PREFIX_REGEX, DATA_URL_PREFIX_REGEX, ABSOLUTE_REGEXP};
 export const FOOTER_HEIGHT = 30;
