@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect} from 'react';
 
 import {Role} from '@cdo/apps/aiTutor/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -26,16 +26,30 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
     }
   };
 
+  const chatContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (chatContainerRef.current) {
+      chatContainerRef.current.scrollTo({
+        top: chatContainerRef.current.scrollHeight,
+        behavior: 'smooth',
+      });
+    }
+  }, [chatContainerRef, storedMessages, isWaitingForChatResponse]);
+
+
   return (
-    <div id="ai-tutor-chat-workspace">
-      {storedMessages.map((message, idx) =>
-        message.role === Role.ASSISTANT ? (
-          <AssistantMessage message={message} key={idx} />
-        ) : (
-          <UserMessage message={message} key={idx} />
-        )
-      )}
-      {showWaitingAnimation()}
+    <div id="ai-tutor-chat-workspace" className={style.chatWorkspace}>
+      <div ref={chatContainerRef} className={style.chatArea}> 
+        {storedMessages.map((message, idx) =>
+          message.role === Role.ASSISTANT ? (
+            <AssistantMessage message={message} key={idx} />
+          ) : (
+            <UserMessage message={message} key={idx} />
+          )
+        )}
+        {showWaitingAnimation()}
+      </div>
       <WarningModal />
     </div>
   );

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import style from './chat-workspace.module.scss';
+import style from './warning-modal.module.scss';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {
   BodyTwoText,
