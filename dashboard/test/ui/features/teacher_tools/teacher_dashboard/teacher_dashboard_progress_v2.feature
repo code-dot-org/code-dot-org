@@ -137,6 +137,7 @@ Scenario: Teacher can view student work, ask student to keep working, on rubric 
   And I press keys "Nice!" for element "#ui-test-feedback-input"
   And I press "#ui-test-submit-feedback" using jQuery
   And element ".editor-column" contains text "Nice!"
+  And I wait for 3 seconds
 
   # Teacher can see feedback given icon
   Given I am on "http://studio.code.org/"
