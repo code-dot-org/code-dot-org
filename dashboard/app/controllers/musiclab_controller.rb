@@ -1,5 +1,6 @@
 class MusiclabController < ApplicationController
   ANALYTICS_KEY = CDO.amplitude_api_key
+  NUM_MINI_PLAYER_PROJECTS = 5
 
   def menu
     view_options(full_width: true, responsive_content: true, no_padding_container: true)
@@ -31,7 +32,9 @@ class MusiclabController < ApplicationController
     featured_music_projects = ProjectsList.fetch_active_published_featured_projects('music')
     channel_ids_from_params = params[:channels].split(',')
     channel_ids = channel_ids_from_params.length() > 0 ? channel_ids_from_params : featured_music_projects.map {|project| project['channel']}
-    project_ids = channel_ids.map do |channel_id|
+    selected_channel_ids = channel_ids.shuffle().first(NUM_MINI_PLAYER_PROJECTS)
+
+    project_ids = selected_channel_ids.map do |channel_id|
       _, project_id = storage_decrypt_channel_id(channel_id)
       project_id
     end
