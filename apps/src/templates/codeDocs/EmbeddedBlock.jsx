@@ -11,6 +11,10 @@ export default function EmbeddedBlock({blockName, link, ariaLabel}) {
   useEffect(() => {
     if (blockName && blockRef.current) {
       const blocksDom = parseElement(`<block type='${blockName}' />`);
+      const previousBlockSpace = blockRef.current.querySelector(
+        'svg.readOnlyBlockSpace'
+      );
+      previousBlockSpace?.remove();
       const blockSpace = Blockly.createEmbeddedWorkspace(
         blockRef.current,
         blocksDom,
