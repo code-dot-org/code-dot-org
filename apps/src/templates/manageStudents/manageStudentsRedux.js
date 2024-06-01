@@ -867,6 +867,8 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
       isSaving: false,
       rowType: RowType.STUDENT,
       userType: student.user_type,
+      atRiskAgeGatedStudent: student.at_risk_age_gated,
+      childAccountComplianceState: student.child_account_compliance_state,
     };
   }
   return studentLookup;
@@ -990,4 +992,8 @@ export const loadSectionStudentData = sectionId => {
       dispatch(finishLoadingStudents());
     }
   };
+};
+
+export const filterAgeGatedStudents = studentData => {
+  return studentData.filter(student => student.atRiskAgeGatedStudent);
 };
