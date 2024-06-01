@@ -23,6 +23,14 @@ class MusiclabController < ApplicationController
       to_json
   end
 
+  CHANNELS = [
+    'syBuoFelbGB3eOmNVoQGrWMXEk0l1EhkIX6c08ujq6s',
+    'Ehnks69B0Whcn_YQQNCK4GUHAPU3WSG2jfilvQF1kfo',
+    '6Xc53NIhwFxjjwsSaoj_eSiRbbXr97BYQ3W_7vIaAwY',
+    'NwTkJSskTswEOtgy6TbaJ-8SonhhSxojrJjlJLBko4w',
+    'PCO7mvB5ylByrbpF7tEbzXdYOqrALhW3M5OlcDRIF7E'
+  ]
+
   def embed
     response.headers['X-Frame-Options'] = 'ALLOWALL'
     response.headers['Content-Security-Policy'] = ''
@@ -30,9 +38,13 @@ class MusiclabController < ApplicationController
     view_options(no_header: true, no_footer: true, full_width: true, no_padding_container: true)
 
     featured_music_projects = ProjectsList.fetch_active_published_featured_projects('music')
+    channel_ids_from_featured_projects = featured_music_projects.map {|project| project['channel']}
+    if get_channel_ids_from_constant?
+      channel_ids_from_featured_projects = CHANNELS
+    end
     channel_ids_from_params = params[:channels].split(',')
-    channel_ids = channel_ids_from_params.length() > 0 ? channel_ids_from_params : featured_music_projects.map {|project| project['channel']}
-    selected_channel_ids = channel_ids.shuffle().first(NUM_MINI_PLAYER_PROJECTS)
+    all_channel_ids = channel_ids_from_params.length() > 0 ? channel_ids_from_params : channel_ids_from_featured_projects
+    selected_channel_ids = all_channel_ids.shuffle().first(NUM_MINI_PLAYER_PROJECTS)
 
     project_ids = selected_channel_ids.map do |channel_id|
       _, project_id = storage_decrypt_channel_id(channel_id)
@@ -44,6 +56,10 @@ class MusiclabController < ApplicationController
       map {|project| {name: JSON.parse(project.value)["name"], id: JSON.parse(project.value)["id"], labConfig: JSON.parse(project.value)["labConfig"]}}.
       compact_blank.
       to_json
+  end
+
+  private def get_channel_ids_from_constant?
+    DCDO.get('get_channel_ids_from_constant', false)
   end
 
   # TODO: This is a temporary addition to serve the analytics API key
