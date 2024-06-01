@@ -5,7 +5,7 @@ import {
 } from '@codebridge/codebridgeContext';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {PopUpButton} from '@codebridge/PopUpButton/PopUpButton';
-import {ProjectType, FileId, FolderId} from '@codebridge/types';
+import {ProjectType, FolderId} from '@codebridge/types';
 import {findFolder, getErrorMessage} from '@codebridge/utils';
 import React, {useMemo} from 'react';
 
@@ -13,19 +13,29 @@ import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 
-import './styles/fileBrowser.css';
+import {FileBrowserHeaderPopUpButton} from './FileBrowserHeaderPopUpButton';
+import {
+  moveFilePromptType,
+  newFilePromptType,
+  newFolderPromptType,
+  renameFilePromptType,
+  renameFolderPromptType,
+  toggleFileVisibilityType,
+} from './types';
+
 import moduleStyles from './styles/filebrowser.module.scss';
 
 type FilesComponentProps = {
-  newFolderPrompt: (parentId?: string) => void;
-  folders: ProjectType['folders'];
-  parentId?: string;
   files: ProjectType['files'];
-  newFilePrompt: (folderId?: FolderId) => void;
-  moveFilePrompt: (fileId: FileId) => void;
-  renameFilePrompt: (fileId: FileId) => void;
-  renameFolderPrompt: (folderId: FolderId) => void;
-  toggleFileVisibility: (fileId: FileId) => void;
+  folders: ProjectType['folders'];
+  parentId?: FolderId;
+
+  moveFilePrompt: moveFilePromptType;
+  newFilePrompt: newFilePromptType;
+  newFolderPrompt: newFolderPromptType;
+  renameFilePrompt: renameFilePromptType;
+  renameFolderPrompt: renameFolderPromptType;
+  toggleFileVisibility: toggleFileVisibilityType;
 };
 
 const InnerFileBrowser = React.memo(
@@ -58,18 +68,21 @@ const InnerFileBrowser = React.memo(
             );
             return (
               <li key={f.id + f.open}>
-                <span className="label">
-                  <span className="title">
+                <span className={moduleStyles.label}>
+                  <span className={moduleStyles.title}>
                     <span
-                      className="caret-container"
+                      className={moduleStyles['caret-container']}
                       onClick={() => toggleOpenFolder(f.id)}
                     >
                       {caret}
                     </span>
                     <span>{f.name}</span>
                   </span>
-                  <PopUpButton iconName="ellipsis-v" className="button-kebab">
-                    <span className="button-bar">
+                  <PopUpButton
+                    iconName="ellipsis-v"
+                    className={moduleStyles['button-kebab']}
+                  >
+                    <span className={moduleStyles['button-bar']}>
                       <span onClick={() => renameFolderPrompt(f.id)}>
                         <i className="fa-solid fa-pencil" /> Rename folder
                       </span>
@@ -108,7 +121,7 @@ const InnerFileBrowser = React.memo(
           .sort((a, b) => a.name.localeCompare(b.name))
           .map(f => (
             <li key={f.id}>
-              <span className="label">
+              <span className={moduleStyles.label}>
                 <span onClick={() => openFile(f.id)}>
                   {isStartMode && (
                     <i
@@ -117,10 +130,14 @@ const InnerFileBrowser = React.memo(
                       }`}
                     />
                   )}
+                  <i className="fa-solid fa-file" />
                   {f.name}
                 </span>
-                <PopUpButton iconName="ellipsis-v" className="button-kebab">
-                  <span className="button-bar">
+                <PopUpButton
+                  iconName="ellipsis-v"
+                  className={moduleStyles['button-kebab']}
+                >
+                  <span className={moduleStyles['button-bar']}>
                     <span onClick={() => moveFilePrompt(f.id)}>
                       <i className="fa-solid fa-arrow-right" />
                       Move file
@@ -302,42 +319,30 @@ export const FileBrowser = React.memo(() => {
     );
 
   return (
-    <div className="file-browser">
-      <PanelContainer
-        id="file-browser"
-        headerContent={'Files'}
-        className={moduleStyles['file-browser']}
-        rightHeaderContent={
-          <PopUpButton iconName="plus" alignment="right">
-            <span className="button-bar">
-              <button type="button" onClick={() => newFolderPrompt()}>
-                <i className="fa-solid fa-folder" />
-                New Folder
-              </button>
-              <button type="button" onClick={() => newFilePrompt()}>
-                <i className="fa-solid fa-file" />
-                New File
-              </button>
-            </span>
-          </PopUpButton>
-        }
-      >
-        <div className="file-browser">
-          <ul>
-            <InnerFileBrowser
-              parentId={DEFAULT_FOLDER_ID}
-              folders={project.folders}
-              newFolderPrompt={newFolderPrompt}
-              files={project.files}
-              newFilePrompt={newFilePrompt}
-              moveFilePrompt={moveFilePrompt}
-              renameFilePrompt={renameFilePrompt}
-              renameFolderPrompt={renameFolderPrompt}
-              toggleFileVisibility={toggleFileVisibility}
-            />
-          </ul>
-        </div>
-      </PanelContainer>
-    </div>
+    <PanelContainer
+      id="file-browser"
+      headerContent={'Files'}
+      className={moduleStyles['file-browser']}
+      rightHeaderContent={
+        <FileBrowserHeaderPopUpButton
+          newFolderPrompt={newFolderPrompt}
+          newFilePrompt={newFilePrompt}
+        />
+      }
+    >
+      <ul>
+        <InnerFileBrowser
+          parentId={DEFAULT_FOLDER_ID}
+          folders={project.folders}
+          newFolderPrompt={newFolderPrompt}
+          files={project.files}
+          newFilePrompt={newFilePrompt}
+          moveFilePrompt={moveFilePrompt}
+          renameFilePrompt={renameFilePrompt}
+          renameFolderPrompt={renameFolderPrompt}
+          toggleFileVisibility={toggleFileVisibility}
+        />
+      </ul>
+    </PanelContainer>
   );
 });
