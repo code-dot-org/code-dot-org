@@ -54,8 +54,14 @@ const optionsList = [
     name: 'sounds-panel-1-preview',
     type: 'radio',
     values: [
-      {value: 'false', description: 'Use original sounds panel (default).'},
-      {value: 'true', description: 'Use original sounds panel with preview.'},
+      {
+        value: 'false',
+        description: 'Use original sounds panel with preview (default).',
+      },
+      {
+        value: 'true',
+        description: 'Use original sounds panel with preview on select.',
+      },
     ],
   },
   {
