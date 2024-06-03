@@ -4006,6 +4006,8 @@ class UserTest < ActiveSupport::TestCase
         sharing_disabled: false,
         has_ever_signed_in: @student.has_ever_signed_in?,
         ai_tutor_access_denied: !!@student.ai_tutor_access_denied,
+        at_risk_age_gated: false,
+        child_account_compliance_state: @student.child_account_compliance_state,
       },
       @student.summarize
     )
