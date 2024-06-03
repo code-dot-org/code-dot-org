@@ -1,3 +1,5 @@
+ROLES_FOR_MODEL = %w(assistant user).freeze
+
 class AichatController < ApplicationController
   include AichatSagemakerHelper
   authorize_resource class: false
@@ -32,12 +34,17 @@ class AichatController < ApplicationController
       }
     end
 
+    messages_for_model = params.to_unsafe_h[:storedMessages].filter do |message|
+      message[:status] == SharedConstants::AI_INTERACTION_STATUS[:OK] &&
+        ROLES_FOR_MODEL.include?(message[:role])
+    end
+
     # Use to_unsafe_h here to allow testing this function.
     # Safe params are primarily targeted at preventing "mass assignment vulnerability"
     # which isn't relevant here.
     input = AichatSagemakerHelper.format_inputs_for_sagemaker_request(
       params.to_unsafe_h[:aichatModelCustomizations],
-      params.to_unsafe_h[:storedMessages].filter {|message| message[:status] == SharedConstants::AI_INTERACTION_STATUS[:OK] && ['assistant', 'user'].include?(message[:role])},
+      messages_for_model,
       params.to_unsafe_h[:newMessage]
     )
     sagemaker_response = AichatSagemakerHelper.request_sagemaker_chat_completion(input, params[:aichatModelCustomizations][:selectedModelId])
@@ -48,12 +55,10 @@ class AichatController < ApplicationController
       messages = [
         params[:newMessage].merge({status: SharedConstants::AI_INTERACTION_STATUS[:ERROR]}),
         {
-          id: -1,
           role: "assistant",
           status: SharedConstants::AI_INTERACTION_STATUS[:ERROR],
           # manage sending placeholder to frontend, but storing profanity in backend?
           chatMessageText: '[profane]',
-          timestamp: 'fix this'
         }
       ]
 
@@ -68,12 +73,10 @@ class AichatController < ApplicationController
       return {messages: messages}
     end
 
-    # This structure results in logging some extraneous information -- we could filter (eg, timestamp)
     assistant_message = {
       role: "assistant",
       status: SharedConstants::AI_INTERACTION_STATUS[:OK],
       chatMessageText: latest_assistant_response,
-      timestamp: 'fix this'
     }
 
     messages = [

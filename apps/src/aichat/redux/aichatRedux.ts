@@ -11,10 +11,7 @@ import {
 import {registerReducers} from '@cdo/apps/redux';
 import {RootState} from '@cdo/apps/types/redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {
-  AiInteractionStatus as Status,
-  AichatErrorType,
-} from '@cdo/generated-scripts/sharedConstants';
+import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
@@ -252,6 +249,22 @@ const saveAiCustomization = async (
   });
 };
 
+type AichatCompletionMessage = {
+  role: Role;
+  chatMessageText: string;
+  status: string;
+};
+
+const decorateMessage = (
+  responseMessage: AichatCompletionMessage
+): ChatCompletionMessage => {
+  return {
+    ...responseMessage,
+    id: getNewMessageId(),
+    timestamp: getCurrentTimestamp(),
+  };
+};
+
 // This thunk's callback function submits a user's chat content and AI customizations to
 // the chat completion endpoint, then waits for a chat completion response, and updates
 // the user messages.
@@ -309,8 +322,8 @@ export const submitChatContents = createAsyncThunk(
     }
 
     thunkAPI.dispatch(clearChatMessagePending());
-    chatApiResponse?.messages.forEach((message: ChatCompletionMessage) =>
-      thunkAPI.dispatch(addChatMessage(message))
+    chatApiResponse?.messages.forEach((message: AichatCompletionMessage) =>
+      thunkAPI.dispatch(addChatMessage(decorateMessage(message)))
     );
   }
 );
