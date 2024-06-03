@@ -117,8 +117,8 @@ describe('useRegionalPartner tests', () => {
           }}
         />
       );
-      await clock.runAllAsync();
     });
+    await clock.runAllAsync();
 
     const [regionalPartner, regionalPartnerError] =
       getRegionalPartnerData(rendered);
@@ -144,8 +144,8 @@ describe('useRegionalPartner tests', () => {
           }}
         />
       );
-      await clock.runAllAsync();
     });
+    await clock.runAllAsync();
 
     const [regionalPartner, regionalPartnerError] =
       getRegionalPartnerData(rendered);

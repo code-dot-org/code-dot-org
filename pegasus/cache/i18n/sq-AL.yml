@@ -627,6 +627,7 @@ sq-AL:
     lloje logimi, <b>figura, fjala ose email-i</b>, do të duash të zgjedhësh për një
     seksion.
   dashboard_sections_name: 'Emri i sesionit:'
+  dashboard_sections_new_google_section: Seksioni i importit nga Google Classroom
   dashboard_sections_new_section: Seksion i ri
   dashboard_sections_password_account_creation: Fjalëkalimi i krijuar nga studentet
   dashboard_sections_password_question: Çfarë përdorin studentët si një "fjalëkalim"?
@@ -871,6 +872,7 @@ sq-AL:
   hoc2014_whatishoc: Çfarë është Ora e Kodimit?
   hoc2018_creativity_create: Krijo
   hoc2018_creativity_hoc_coming: Ora e kodimit po vjen…
+  hoc2018_creativity_what_will_you_create: Çfarë do të krijoni?
   hoc2018_dance_amazon_about_future_engineer_button: Mëso më shumë
   hoc2018_dance_keep_on_dancing_box_title: Vazhdoni të kërceni
   hoc2018_dance_party_box_title: Festë vallëzimi
@@ -891,6 +893,7 @@ sq-AL:
   hoc2018_mc_educators_box2_button: Shkarko
   hoc2018_mc_homepage_join_us: Na u bashko!
   hoc2018_mc_homepage_try_it: Provoje
+  hoc2018_mc_homepage_what_create: Çfarë do të krijoni?
   hoc2018_mc_page_title: Tutorialet e Orës së Kodimit Minecraft
   hoc2018_mc_start: Fillo
   hoc2018_mc_video_1min: 1 minutë
@@ -1028,6 +1031,7 @@ sq-AL:
   homepage_slot_text_title_hoc: Ora e Kodimit
   homepage_slot_text_title_students: Studentët
   homepage_solot_text_link_volunteer: Vullnetarizo për Orën e Kodimit
+  homepage_stats_teachers: mësimdhënësit përdorin Code.org
   hopscotch_beyond_gradelevel: Shkolla tetë vjeçare +
   hopscotch_beyond_longdescription: Tutorial për studentët në iPad duke përdorur gjuhën
     e programimit Hopscotch. Studentët do të ndërtojnë lojëra dhe aplikacione për
@@ -1492,6 +1496,9 @@ sq-AL:
   studiobar_title_nolink: Eksploro Code Studio
   submit: Dorëzo
   support_url: http://support.code.org/
+  syncing_students_instructions: 'Nëse seksioni juaj Code.org është i vjetëruar ndonjëherë
+    me listën tuaj të nxënësve në Google Classroom, klikoni në butonin “Sinkronizoni
+    nxënësit nga Google Classroom” në skedën “Menaxho nxënëst”:'
   teacherled_gradelevel: Moshat 5+
   teacherled_platformtext: Browserat e kohës, smartphones, tableta
   teachers_notes: Shënimet e Mësuesit
@@ -1726,6 +1733,7 @@ sq-AL:
   user_header_artist: 'Artisti '
   user_header_create: 'Krijo '
   user_header_create_account: Krijo llogari
+  user_header_create_account_low_cap: Krijo llogari
   user_header_dance: Festë vallëzimi
   user_header_flappy: Flappy
   user_header_gamelab: Game Lab
