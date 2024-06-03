@@ -12,7 +12,7 @@ theme: responsive_full_width
       %h1=hoc_s("lms_page.heading")
       %p.body-two
         =hoc_s("lms_page.top_desc")
-      %a.link-button{href: "#"}
+      %a.link-button{href: "#get-started"}
         =hoc_s(:call_to_action_get_started)
     %figure.col-45{style: "float: right; margin-top: 1.25rem;"}
       %img.rounded-corners{src: "/images/lms/LMSHeroAnimation.gif", alt: ""}
@@ -50,7 +50,7 @@ theme: responsive_full_width
         %span •
         Indiana
 
-%section.get-started.bg-neutral-light
+%section#get-started.bg-neutral-light
   .wrapper
     %h2.centered
       =hoc_s("lms_page.get_started.heading")
