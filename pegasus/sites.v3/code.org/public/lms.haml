@@ -18,28 +18,25 @@ theme: responsive_full_width
       %img.rounded-corners{src: "/images/lms/LMSHeroAnimation.gif", alt: ""}
     .clear
 
-%section.lms-systems.bg-neutral-light
+%section.bg-neutral-light
   .wrapper
-    %h2
-      =hoc_s("lms_page.top_module.heading")
-    %p.body-two
-      =hoc_s("lms_page.top_module.desc")
-    =view :"lms/lms_provider_cards"
+    .lms-systems
+      %h2
+        =hoc_s("lms_page.top_module.heading")
+      %p.body-two
+        =hoc_s("lms_page.top_module.desc")
+      =view :"lms/lms_provider_cards"
+    %hr
+    .integrations
+      %h3
+        =hoc_s("lms_page.integrations.heading")
+      %p.body-two
+        =hoc_s("lms_page.integrations.desc", markdown: :inline, locals: {help_article_link: 'https://support.code.org/hc/en-us/articles/4403192755725-Can-I-single-sign-on-SSO-to-Code-org-using-a-third-party-authentication-provider-like-Google-or-Clever'})
+      =view :"lms/lms_sso_cards"
 
-%div.divider.divider-margins
-  %hr
-
-%section.integrations.bg-neutral-light
+%section.why-use-integrations
   .wrapper
-    %h3
-      =hoc_s("lms_page.integrations.heading")
-    %p.body-two
-      =hoc_s("lms_page.integrations.desc", markdown: :inline, locals: {help_article_link: 'https://support.code.org/hc/en-us/articles/4403192755725-Can-I-single-sign-on-SSO-to-Code-org-using-a-third-party-authentication-provider-like-Google-or-Clever'})
-    =view :"lms/lms_sso_cards"
-
-%section.why-use-integrations.centered
-  .wrapper
-    %h2
+    %h2.centered
       =hoc_s("lms_page.reasoning.heading")
     = view :"lms/lms_editorial_cards"
 

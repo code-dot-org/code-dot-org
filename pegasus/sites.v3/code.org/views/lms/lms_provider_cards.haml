@@ -30,13 +30,13 @@
   - card_list.each do |card_list|
     .action-block.action-block--one-col.flex-space-between.white.provider-card
       .content-wrapper
-        %figure
-          %img{src: "#{card_list[:image]}", alt: ""}
         - if card_list[:is_new] == "true"
           %p.new.top-right
             =hoc_s(:new)
+        %figure
+          %img{src: "#{card_list[:image]}", alt: ""}
         .text-wrapper
           %h4.heading-xs
             = card_list[:title]
-      %a.link-button.has-external-link{href: card_list[:url]}
+      %a.link-button.has-external-link.no-margin-top{href: card_list[:url]}
         = hoc_s(:call_to_action_learn_more)
