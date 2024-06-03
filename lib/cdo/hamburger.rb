@@ -240,7 +240,7 @@ class Hamburger
     {entries: entries, visibility: visibility[:hamburger_class]}
   end
 
-  # Main header navigation links to the right of the Code.org logo.
+  # Main header navigation links next to the Code.org logo.
   def self.get_header_contents(options)
     loc_prefix = options[:loc_prefix]
 
