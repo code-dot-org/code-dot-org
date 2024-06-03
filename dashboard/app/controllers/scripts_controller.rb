@@ -5,6 +5,7 @@ class ScriptsController < ApplicationController
   before_action :require_levelbuilder_mode_or_test_env, only: [:edit, :update, :new, :create]
   before_action :authenticate_user!, except: [:show, :vocab, :resources, :code, :standards]
   check_authorization
+  before_action :check_unit_param, only: [:show, :vocab, :resources, :code, :standards]
   before_action :set_unit, only: [:show, :vocab, :resources, :code, :standards, :edit, :update, :destroy]
   before_action :render_no_access, only: [:show]
   before_action :set_redirect_override, only: [:show]
@@ -282,6 +283,12 @@ class ScriptsController < ApplicationController
   private def set_unit
     @script = get_unit
     raise ActiveRecord::RecordNotFound unless @script
+  end
+
+  private def check_unit_param
+    unit_id = params[:id]
+    is_id = unit_id.to_i.to_s == unit_id.to_s
+    raise ActiveRecord::RecordNotFound if is_id
   end
 
   private def render_no_access
