@@ -43,7 +43,7 @@ class MusiclabController < ApplicationController
       channel_ids_from_featured_projects = CHANNELS
     end
     channel_ids_from_params = params[:channels].nil? ? [] : params[:channels].split(',')
-    all_channel_ids = channel_ids_from_params.empty? ? channel_ids_from_featured_projects : channel_ids_from_params  
+    all_channel_ids = channel_ids_from_params.empty? ? channel_ids_from_featured_projects : channel_ids_from_params
     selected_channel_ids = all_channel_ids.sample(NUM_MINI_PLAYER_PROJECTS)
 
     project_ids = selected_channel_ids.map do |channel_id|
