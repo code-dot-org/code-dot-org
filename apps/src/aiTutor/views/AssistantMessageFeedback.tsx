@@ -41,7 +41,7 @@ const AssistantMessageFeedback: React.FC<AssistantMessageProps> = ({
 
   return (
     <div className={style.feedbackIcons}>
-      Was this helpful? 
+      Was this helpful?
       <Button
         color={buttonColors.black}
         disabled={false}
