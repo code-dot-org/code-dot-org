@@ -287,16 +287,8 @@ class ScriptsController < ApplicationController
     raise ActiveRecord::RecordNotFound unless @script
   end
 
-  private def get_unit_by_id
-    unit_id = params[:id]
-    is_id = unit_id.to_i.to_s == unit_id.to_s
-    raise ActiveRecord::RecordNotFound unless is_id
-
-    Unit.get_from_cache(unit_id, raise_exceptions: false)
-  end
-
   private def set_unit_by_id
-    @script = get_unit_by_id
+    @script = Unit.find(params[:id])
     raise ActiveRecord::RecordNotFound unless @script
   end
 
