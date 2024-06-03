@@ -38,7 +38,6 @@ body {
 }
 
 .formLabel {
-  margin-right: 10px; /* Adds space between the label and the input field */
   white-space: nowrap; /* Prevents the label from wrapping */
 }
 
@@ -49,6 +48,7 @@ body {
 }
 
 .input {
+  margin-left: 10px;
   padding: 8px 12px;
   width: 300px; /* Responsive width */
   font-size: 16px; /* Sufficiently large font size for readability */
