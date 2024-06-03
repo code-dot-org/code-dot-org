@@ -1,0 +1,14 @@
+@import 'color.scss';
+
+.popup-button-menu {
+  position: absolute;
+  cursor: pointer;
+  border: 1px solid $black;
+  background-color: $darkest_gray;
+  color: $white;
+  min-width: 100px;
+  padding: 3px;
+  text-align: left;
+  vertical-align: top;
+  z-index: 1000;
+}
