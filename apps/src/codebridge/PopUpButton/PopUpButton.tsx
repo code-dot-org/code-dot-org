@@ -17,25 +17,36 @@ export const PopUpButton = ({
   className,
   alignment = 'left',
 }: PopUpButtonProps) => {
-  const [isOpen, _setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const [buttonRect, setButtonRect] = useState<DOMRect>();
   const [offsetParent, setOffsetParent] = useState<DOMRect>();
 
   const setIsOpenFalse = useCallback(() => {
-    _setIsOpen(false);
+    setIsOpen(false);
     document.removeEventListener('click', setIsOpenFalse);
-  }, [_setIsOpen]);
+  }, [setIsOpen]);
 
-  const setIsOpen = useCallback(
-    (newIsOpen: boolean) => {
-      _setIsOpen(newIsOpen);
-      if (newIsOpen) {
-        document.addEventListener('click', setIsOpenFalse);
-      } else {
-        document.removeEventListener('click', setIsOpenFalse);
-      }
+  const clickHandler = useCallback(
+    (
+      e:
+        | React.MouseEvent<HTMLButtonElement>
+        | React.MouseEvent<HTMLAnchorElement>
+    ) => {
+      setButtonRect((e.target as HTMLElement).getBoundingClientRect());
+      setOffsetParent(
+        (e.target as HTMLElement).offsetParent?.getBoundingClientRect()
+      );
+      setIsOpen(oldIsOpen => {
+        const newIsOpen = !oldIsOpen;
+        if (newIsOpen) {
+          document.addEventListener('click', setIsOpenFalse);
+        } else {
+          document.removeEventListener('click', setIsOpenFalse);
+        }
+        return newIsOpen;
+      });
     },
-    [_setIsOpen, setIsOpenFalse]
+    [setIsOpen, setIsOpenFalse]
   );
 
   return (
@@ -46,13 +57,7 @@ export const PopUpButton = ({
         icon={{iconStyle: 'solid', iconName}}
         color="black"
         isIconOnly
-        onClick={e => {
-          setButtonRect((e.target as HTMLElement).getBoundingClientRect());
-          setOffsetParent(
-            (e.target as HTMLElement).offsetParent?.getBoundingClientRect()
-          );
-          setIsOpen(!isOpen);
-        }}
+        onClick={clickHandler}
       />
       {isOpen && buttonRect && offsetParent && (
         <div
