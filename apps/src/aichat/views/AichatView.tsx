@@ -52,7 +52,7 @@ const RESET_MODEL_NOTIFICATION: ChatCompletionMessage = {
   id: getNewMessageId(),
   role: Role.MODEL_UPDATE,
   chatMessageText: 'Model customizations and model card information',
-  chatMessageSuffix: ' have been reset to default settings.',
+  chatMessageSuffix: {text: ' have been reset to default settings.'},
   status: Status.OK,
   timestamp: getCurrentTime(),
 };

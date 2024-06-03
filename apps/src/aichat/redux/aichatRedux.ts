@@ -375,7 +375,7 @@ const updateMessagesOnError = (
     id: getNewMessageId(),
     role: Role.ASSISTANT,
     status: Status.ERROR,
-    chatMessageText: 'error',
+    chatMessageText: 'There was an error getting a response. Please try again.',
     timestamp: getCurrentTimestamp(),
   };
   dispatch(addChatMessage(assistantChatMessage));
