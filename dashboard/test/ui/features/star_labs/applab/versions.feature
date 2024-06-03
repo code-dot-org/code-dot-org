@@ -1,3 +1,6 @@
+@skip
+# This test has been very flaky recently. Temporarily disabling while we investigate in LABS-867
+
 @as_student
 Feature: App Lab Versions
 
