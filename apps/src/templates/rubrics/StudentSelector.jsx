@@ -86,12 +86,11 @@ function StudentSelector({
               <div className={style.studentDropdownOption}>
                 <BodyThreeText className={style.submitStatusText}>
                   {student.familyName
-                    ? student.familyName.length < 10
+                    ? student.familyName.length + student.name.length < 15
                       ? `${student.name} ${student.familyName}`
-                      : `${student.name} ${student.familyName.substring(
-                          0,
-                          7
-                        )}...`
+                      : `${student.name} ${student.familyName}`
+                          .substring(0, 12)
+                          .concat('', '...')
                     : `${student.name}`}
                 </BodyThreeText>
                 {!!levelsWithProgress && (
