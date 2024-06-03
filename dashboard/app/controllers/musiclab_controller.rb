@@ -24,13 +24,14 @@ class MusiclabController < ApplicationController
   end
 
   CHANNELS = %w(
-    syBuoFelbGB3eOmNVoQGrWMXEk0l1EhkIX6c08ujq6s
-    Ehnks69B0Whcn_YQQNCK4GUHAPU3WSG2jfilvQF1kfo
-    6Xc53NIhwFxjjwsSaoj_eSiRbbXr97BYQ3W_7vIaAwY
-    NwTkJSskTswEOtgy6TbaJ-8SonhhSxojrJjlJLBko4w
-    PCO7mvB5ylByrbpF7tEbzXdYOqrALhW3M5OlcDRIF7E
+  syBuoFelbGB3eOmNVoQGrWMXEk0l1EhkIX6c08ujq6s
+  Ehnks69B0Whcn_YQQNCK4GUHAPU3WSG2jfilvQF1kfo
+  6Xc53NIhwFxjjwsSaoj_eSiRbbXr97BYQ3W_7vIaAwY
+  NwTkJSskTswEOtgy6TbaJ-8SonhhSxojrJjlJLBko4w
+  PCO7mvB5ylByrbpF7tEbzXdYOqrALhW3M5OlcDRIF7E
   )
 
+  # GET "/musiclab/embed"
   def embed
     response.headers['X-Frame-Options'] = 'ALLOWALL'
     response.headers['Content-Security-Policy'] = ''
@@ -41,7 +42,7 @@ class MusiclabController < ApplicationController
     if get_channel_ids_from_constant?
       channel_ids_from_featured_projects = CHANNELS
     end
-    channel_ids_from_params = params[:channels].split(',')
+    channel_ids_from_params = params[:channels].nil? ? [] : params[:channels].split(',')
     all_channel_ids = channel_ids_from_params.empty? ? channel_ids_from_featured_projects : channel_ids_from_params  
     selected_channel_ids = all_channel_ids.sample(NUM_MINI_PLAYER_PROJECTS)
 
