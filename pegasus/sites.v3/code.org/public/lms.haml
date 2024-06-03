@@ -8,14 +8,14 @@ theme: responsive_full_width
 
 %section.top
   .wrapper
-    .text-wrapper.col-50
+    .text-wrapper.col-50.pad
       %h1=hoc_s("lms_page.heading")
       %p.body-two
         =hoc_s("lms_page.top_desc")
       %a.link-button{href: "#"}
         =hoc_s(:call_to_action_get_started)
     %figure.col-45{style: "float: right; margin-top: 1.25rem;"}
-      %img.rounded-corners{src: "/images/lms/LMSHeroAnimation.gif", alt: "", style: "position: relative; width: 100%;"}
+      %img.rounded-corners{src: "/images/lms/LMSHeroAnimation.gif", alt: ""}
     .clear
 
 %section.lms-systems.bg-neutral-light
@@ -26,7 +26,8 @@ theme: responsive_full_width
       =hoc_s("lms_page.top_module.desc")
     =view :"lms/lms_provider_cards"
 
-=view :section_divider_line
+%div.divider.divider-margins
+  %hr
 
 %section.integrations.bg-neutral-light
   .wrapper
