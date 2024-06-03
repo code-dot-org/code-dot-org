@@ -611,10 +611,12 @@ nav.main #hamburger #hamburger-icon {
   margin-inline-start: 6px;
 }
 
-/* Show the hamburger on small desktop */
+/* Show the hamburger on small desktop
+  with appropriate links hidden */
 @media (min-width: 1024px) and (max-width: 1268px) {
-  nav.main .left ul li:nth-child(n+4) {
-    display: none;
+  nav.main .left ul li:nth-child(n+4),
+  nav.main #hamburger-contents > div:nth-child(-n+4) {
+    display: none !important;
   }
 
   nav.main #hamburger {
