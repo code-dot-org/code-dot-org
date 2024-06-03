@@ -176,20 +176,6 @@ $arrow-size: 1.5rem;
     }
   }
 
-  @media (min-width: 1024px) and (max-width: 1268px) {
-    &.show-desktop-truncated,
-    .show-desktop-truncated {
-      display: block;
-    }
-    &.hide-desktop-truncated,
-    .hide-desktop-truncated {
-      display: none;
-    }
-    #hamburger {
-      padding-left: 0;
-    }
-  }
-
   @media(max-width: 1023px) {
     &.show-mobile,
     .show-mobile {

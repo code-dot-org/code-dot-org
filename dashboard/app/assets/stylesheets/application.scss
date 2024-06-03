@@ -224,14 +224,8 @@ img.video_thumbnail {
     }
   }
 
-  @media screen and (max-width: 1010px) {
+  @media screen and (max-width: 1023px) {
     .hide_on_tablet {
-      display: none !important;
-    }
-  }
-
-  @media screen and (max-width: 1120px) {
-    .create_menu {
       display: none !important;
     }
   }

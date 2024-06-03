@@ -154,9 +154,12 @@ class Hamburger
       entries << {type: "divider", class: get_divider_visibility(visibility[:show_student_options], visibility[:show_help_options]), id: "after-student"}
     end
 
+    # Show help links before Pegasus links for signed in users.
     help_contents = HelpHeader.get_help_contents(options)
-    entries.concat(help_contents.each {|e| e[:class] = visibility[:show_help_options]})
-    entries << {type: "divider", class: get_divider_visibility(visibility[:show_help_options], visibility[:show_pegasus_options]), id: "after-help"}
+    if options[:user_type] == "teacher" || options[:user_type] == "student"
+      entries.concat(help_contents.each {|e| e[:class] = visibility[:show_help_options]})
+      entries << {type: "divider", class: get_divider_visibility(visibility[:show_help_options], visibility[:show_pegasus_options]), id: "after-help"}
+    end
 
     # Pegasus links.
     entries << {
@@ -198,7 +201,7 @@ class Hamburger
     unless options[:user_type] == "teacher" || options[:user_type] == "student"
       entries << {
         title: I18n.t("#{loc_prefix}incubator"),
-        url: CDO.code_org_url("/incubator"),
+        url: CDO.studio_url("/incubator"),
         class: visibility[:show_pegasus_options],
         id: "incubator"
       }
@@ -211,6 +214,12 @@ class Hamburger
       subentries: about_entries.each {|e| e[:class] = visibility[:show_pegasus_options]},
       class: visibility[:show_pegasus_options]
     }
+
+    # Show help links at the bottom of the list for signed out users.
+    unless options[:user_type] == "teacher" || options[:user_type] == "student"
+      entries << {type: "divider", class: get_divider_visibility(visibility[:show_help_options], visibility[:show_pegasus_options]), id: "before-help"}
+      entries.concat(help_contents.each {|e| e[:class] = visibility[:show_help_options]})
+    end
 
     {entries: entries, visibility: visibility[:hamburger_class]}
   end
