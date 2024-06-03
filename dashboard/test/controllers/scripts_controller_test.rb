@@ -366,14 +366,14 @@ class ScriptsControllerTest < ActionController::TestCase
   test "platformization partner cannot edit our units" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:platformization_partner)
-    get :edit, params: {id: @coursez_2019.id}
+    get :edit, params: {id: @coursez_2019.name}
     assert_response :forbidden
   end
 
   test "platformization partner can edit their units" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:platformization_partner)
-    get :edit, params: {id: @partner_unit.id}
+    get :edit, params: {id: @partner_unit.name}
     assert_response :success
   end
 

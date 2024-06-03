@@ -5,8 +5,8 @@ class ScriptsController < ApplicationController
   before_action :require_levelbuilder_mode_or_test_env, only: [:edit, :update, :new, :create]
   before_action :authenticate_user!, except: [:show, :vocab, :resources, :code, :standards]
   check_authorization
-  before_action :check_unit_param, only: [:show, :vocab, :resources, :code, :standards]
-  before_action :set_unit, only: [:show, :vocab, :resources, :code, :standards, :edit, :update, :destroy]
+  before_action :set_unit_by_name, only: [:show, :vocab, :resources, :code, :standards, :edit]
+  before_action :set_unit_by_id, only: [:update, :destroy]
   before_action :render_no_access, only: [:show]
   before_action :set_redirect_override, only: [:show]
   authorize_resource class: 'Unit'
@@ -261,13 +261,15 @@ class ScriptsController < ApplicationController
     end
   end
 
-  private def get_unit
+  private def get_unit_by_name
     unit_id = params[:id]
+    is_id = unit_id.to_i.to_s == unit_id.to_s
+    raise ActiveRecord::RecordNotFound if is_id
 
-    script =
-      params[:action] == "edit" ?
+    script = params[:action] == "edit" ?
       Unit.get_without_cache(unit_id, with_associated_models: true) :
       Unit.get_from_cache(unit_id, raise_exceptions: false)
+
     return script if script
 
     if Unit.family_names.include?(unit_id)
@@ -280,15 +282,22 @@ class ScriptsController < ApplicationController
     return nil
   end
 
-  private def set_unit
-    @script = get_unit
+  private def set_unit_by_name
+    @script = get_unit_by_name
     raise ActiveRecord::RecordNotFound unless @script
   end
 
-  private def check_unit_param
+  private def get_unit_by_id
     unit_id = params[:id]
     is_id = unit_id.to_i.to_s == unit_id.to_s
-    raise ActiveRecord::RecordNotFound if is_id
+    raise ActiveRecord::RecordNotFound unless is_id
+
+    Unit.get_from_cache(unit_id, raise_exceptions: false)
+  end
+
+  private def set_unit_by_id
+    @script = get_unit_by_id
+    raise ActiveRecord::RecordNotFound unless @script
   end
 
   private def render_no_access
