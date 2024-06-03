@@ -47,6 +47,9 @@ const EVENTS = {
   CAP_PARENT_EMAIL_MODAL_UPDATED: 'CAP Parent Email Modal Updated',
   CAP_PARENT_EMAIL_MODAL_RESEND: 'CAP Parent Email Modal Resend',
   CAP_PARENT_EMAIL_MODAL_CLOSED: 'CAP Parent Email Modal Closed',
+  CAP_AGE_GATED_MODAL_SHOWN: 'CAP Teacher Students Warning Modal Shown',
+  CAP_STUDENT_WARNING_LINK_CLICKED:
+    'CAP Teacher Students Warning Modal Documentation Clicked',
 
   // School Selection Component
   COUNTRY_SELECTED: 'User Selects Country',
@@ -288,6 +291,7 @@ const EVENTS = {
   CHAT_ACTION: 'Student takes a chat action',
   SAVE_MODEL_CARD_INFO: 'Student saves their model card info',
   PUBLISH_MODEL_CARD_INFO: 'Student publishes their model card info',
+  AICHAT_START_OVER: 'Student starts over and resets to default model settings',
 };
 
 const EVENT_GROUP_NAMES = {

@@ -207,7 +207,7 @@ class WorkshopMailerTest < ActionMailer::TestCase
       workshop = if Pd::Workshop::ACADEMIC_YEAR_WORKSHOP_SUBJECTS.include?(test_case[:subject])
                    create :academic_year_workshop, course: test_case[:course], subject: test_case[:subject]
                  else
-                   suppress_email = Pd::Workshop::MUST_SUPPRESS_EMAIL_SUBJECTS.include?(test_case[:subject]) ? true : false
+                   suppress_email = Pd::Workshop::MUST_SUPPRESS_EMAIL_SUBJECTS.include?(test_case[:subject])
                    create :workshop, course: test_case[:course], subject: test_case[:subject], suppress_email: suppress_email
                  end
 
