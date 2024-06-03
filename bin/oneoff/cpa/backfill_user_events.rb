@@ -102,7 +102,7 @@ else
   puts "Writing 'cpa-backfill-records.json' with the records we intend to write."
   puts "  Refer and verify this file and then re-run the script and append '1' as an argument to commit these records."
   puts
-  
+
   # Write out the record information we intend to write
   File.open('cpa-backfill-records.json') do |f|
     records.each do |data|
