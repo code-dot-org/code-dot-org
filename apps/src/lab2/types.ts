@@ -153,6 +153,7 @@ export interface LevelProperties {
   exemplarSources?: MultiFileSource;
   // For Teachers Only value
   teacherMarkdown?: string;
+  isProjectTemplateLevel?: boolean;
 }
 
 // Level configuration data used by project-backed labs that don't require

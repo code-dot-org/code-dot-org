@@ -4,16 +4,26 @@ import {FileTabs} from '@codebridge/FileTabs';
 import React from 'react';
 
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import ProjectTemplateWorkspaceIcon from '@cdo/apps/templates/ProjectTemplateWorkspaceIcon';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import HeaderButtons from './HeaderButtons';
 
 import moduleStyles from './workspace.module.scss';
 const Workspace = () => {
   const {config} = useCodebridgeContext();
+  const isProjectTemplateLevel = useAppSelector(
+    state => state.lab.levelProperties?.isProjectTemplateLevel
+  );
+
+  const headerContent = (
+    <>Workspace {isProjectTemplateLevel && <ProjectTemplateWorkspaceIcon />}</>
+  );
+
   return (
     <PanelContainer
       id="editor-workspace"
-      headerContent={'Workspace'}
+      headerContent={headerContent}
       rightHeaderContent={<HeaderButtons />}
       className={moduleStyles.workspace}
     >
