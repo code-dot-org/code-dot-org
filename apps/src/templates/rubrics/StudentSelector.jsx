@@ -84,9 +84,16 @@ function StudentSelector({
           label: (
             <div className={style.studentDropdownOptionContainer}>
               <div className={style.studentDropdownOption}>
-                <BodyThreeText className={style.submitStatusText}>{`${
-                  student.name
-                } ${student.familyName || ''}`}</BodyThreeText>
+                <BodyThreeText className={style.submitStatusText}>
+                  {student.familyName
+                    ? student.familyName.length < 10
+                      ? `${student.name} ${student.familyName}`
+                      : `${student.name} ${student.familyName.substring(
+                          0,
+                          7
+                        )}...`
+                    : `${student.name}`}
+                </BodyThreeText>
                 {!!levelsWithProgress && (
                   <StudentProgressStatus
                     level={levelsWithProgress.find(
