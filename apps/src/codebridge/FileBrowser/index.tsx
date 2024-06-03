@@ -6,7 +6,7 @@ import {
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {PopUpButton} from '@codebridge/PopUpButton/PopUpButton';
 import {ProjectType, FolderId, ProjectFile} from '@codebridge/types';
-import {findFolder, getErrorMessage} from '@codebridge/utils';
+import {findFolder, getErrorMessage, shouldShowFile} from '@codebridge/utils';
 import React, {useMemo} from 'react';
 
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
@@ -168,7 +168,7 @@ const InnerFileBrowser = React.memo(
             );
           })}
         {Object.values(files)
-          .filter(f => f.folderId === parentId && (!f.hidden || isStartMode))
+          .filter(f => f.folderId === parentId && shouldShowFile(f))
           .sort((a, b) => a.name.localeCompare(b.name))
           .map(f => (
             <li key={f.id}>

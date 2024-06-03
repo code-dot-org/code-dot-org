@@ -1,5 +1,5 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
-import {sortFilesByName} from '@codebridge/utils';
+import {sortFilesByName, shouldShowFile} from '@codebridge/utils';
 import React from 'react';
 
 import './styles/fileTabs.css';
@@ -9,6 +9,8 @@ import {
   getAppOptionsEditBlocks,
 } from '@cdo/apps/lab2/projects/utils';
 
+import {ProjectFile} from '../types';
+
 export const FileTabs = React.memo(() => {
   const {project, closeFile, setActiveFile} = useCodebridgeContext();
 
@@ -17,13 +19,22 @@ export const FileTabs = React.memo(() => {
   const activeFile = getActiveFileForProject(project);
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
+  const getFileIcon = (file: ProjectFile) => {
+    if (isStartMode) {
+      return (
+        'fa-solid ' +
+        (file.validation ? 'fa-flask' : file.hidden ? 'fa-eye-slash' : 'fa-eye')
+      );
+    } else {
+      return 'fa-solid fa-file';
+    }
+  };
+
   return (
     <div className="file-tabs">
       {files
-        .filter(f => !f.hidden || isStartMode)
+        .filter(f => shouldShowFile(f))
         .map(f => {
-          const tabIconClassName =
-            'fa-solid ' + (f.hidden ? 'fa-eye-slash' : 'fa-file');
           return (
             <div
               className={`file-tab ${
@@ -32,7 +43,7 @@ export const FileTabs = React.memo(() => {
               key={f.id}
             >
               <span onClick={() => setActiveFile(f.id)}>
-                <i className={tabIconClassName} />
+                <i className={getFileIcon(f)} />
                 &nbsp;
                 {f.name}
               </span>

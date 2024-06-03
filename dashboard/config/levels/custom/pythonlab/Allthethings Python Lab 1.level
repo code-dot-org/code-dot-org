@@ -1,8 +1,7 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
-  "created_at": "2024-01-03T20:01:05.000Z",
+  "created_at": "2024-04-30T03:00:53.000Z",
   "level_num": "custom",
   "user_id": 6959,
   "properties": {
@@ -16,7 +15,9 @@
           "contents": "print('Hello start!')",
           "folderId": "1",
           "active": true,
-          "open": true
+          "open": true,
+          "validation": false,
+          "hidden": false
         }
       },
       "folders": {
@@ -33,9 +34,9 @@
     "reference_links": [
       "/courses/csa-2023/guides/instantiating-objects"
     ],
-    "map_reference": "/docs/concepts/html/",
-    "teacher_markdown": "Teachers should see this extra info."
+    "map_reference": "/docs/concepts/html/"
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-08 10:58:39 -0700\",\"changed\":[\"source\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 11:24:52 -0700\",\"changed\":[\"source\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-10 09:11:05 -0700\",\"changed\":[\"source\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-10 09:11:27 -0700\",\"changed\":[\"source\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-15 10:24:36 -0700\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-15 10:52:58 -0700\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-15 16:23:46 -0700\",\"changed\":[\"map_reference\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-23 14:13:27 -0400\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2024-05-23 15:01:14 -0400\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-05-08 10:58:39 -0700\",\"changed\":[\"source\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 11:24:52 -0700\",\"changed\":[\"source\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-10 09:11:05 -0700\",\"changed\":[\"source\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-10 09:11:27 -0700\",\"changed\":[\"source\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-15 10:24:36 -0700\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-15 10:52:58 -0700\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-15 16:23:46 -0700\",\"changed\":[\"map_reference\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-03 15:42:31 -0700\",\"changed\":[\"source\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-03 15:42:43 -0700\",\"changed\":[\"source\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>
