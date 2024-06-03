@@ -57,7 +57,6 @@ class AichatController < ApplicationController
         {
           role: "assistant",
           status: SharedConstants::AI_INTERACTION_STATUS[:ERROR],
-          # manage sending placeholder to frontend, but storing profanity in backend?
           chatMessageText: '[profane]',
         }
       ]

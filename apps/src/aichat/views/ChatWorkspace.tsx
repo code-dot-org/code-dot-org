@@ -7,6 +7,7 @@ import UserChatMessageEditor from './UserChatMessageEditor';
 import moduleStyles from './chatWorkspace.module.scss';
 import {
   AichatState,
+  selectAllMessages,
   setShowWarningModal,
 } from '@cdo/apps/aichat/redux/aichatRedux';
 
@@ -18,19 +19,7 @@ const ChatWorkspace: React.FunctionComponent = () => {
     (state: {aichat: AichatState}) => state.aichat.showWarningModal
   );
 
-  const storedMessagesCurrent = useSelector(
-    (state: {aichat: AichatState}) => state.aichat.chatMessagesCurrent
-  );
-  const storedMessagesPast = useSelector(
-    (state: {aichat: AichatState}) => state.aichat.chatMessagesPast
-  );
-  const pendingMessage = useSelector(
-    (state: {aichat: AichatState}) => state.aichat.chatMessagePending
-  );
-  const messages = [...storedMessagesPast, ...storedMessagesCurrent];
-  if (pendingMessage) {
-    messages.push(pendingMessage);
-  }
+  const messages = useSelector(selectAllMessages);
 
   const isWaitingForChatResponse = useSelector(
     (state: {aichat: AichatState}) => state.aichat.isWaitingForChatResponse
@@ -45,12 +34,7 @@ const ChatWorkspace: React.FunctionComponent = () => {
         behavior: 'smooth',
       });
     }
-  }, [
-    conversationContainerRef,
-    storedMessagesCurrent,
-    storedMessagesPast,
-    isWaitingForChatResponse,
-  ]);
+  }, [conversationContainerRef, messages, isWaitingForChatResponse]);
 
   const dispatch = useAppDispatch();
 
@@ -79,8 +63,8 @@ const ChatWorkspace: React.FunctionComponent = () => {
         className={moduleStyles.conversationArea}
         ref={conversationContainerRef}
       >
-        {messages.map((message, index) => (
-          <ChatMessage message={message} key={index} />
+        {messages.map(message => (
+          <ChatMessage message={message} key={message.id} />
         ))}
         {showWaitingAnimation()}
       </div>

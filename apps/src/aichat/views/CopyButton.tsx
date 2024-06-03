@@ -3,18 +3,15 @@ import {useSelector} from 'react-redux';
 
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
-import {AichatState} from '@cdo/apps/aichat/redux/aichatRedux';
+import {selectAllMessages} from '@cdo/apps/aichat/redux/aichatRedux';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const CopyButton: React.FunctionComponent = () => {
-  // update to include historical messages
-  const storedMessages = useSelector(
-    (state: {aichat: AichatState}) => state.aichat.chatMessagesCurrent
-  );
+  const messages = useSelector(selectAllMessages);
 
   const handleCopy = () => {
-    const textToCopy = storedMessages
+    const textToCopy = messages
       .map(
         message =>
           `[${message.timestamp || 'XXXX-XX-XX XX:XX'} - ${message.role}] ${

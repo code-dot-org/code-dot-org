@@ -335,14 +335,7 @@ const aichatSlice = createSlice({
     addChatMessage: (state, action: PayloadAction<ChatCompletionMessage>) => {
       state.chatMessagesCurrent.push(action.payload);
     },
-    removeModelUpdateMessage: (
-      state,
-      action: PayloadAction<number | undefined>
-    ) => {
-      if (!action.payload) {
-        return;
-      }
-
+    removeModelUpdateMessage: (state, action: PayloadAction<number>) => {
       // update to remove from current or past messages, not just current
       const updatedMessages = [...state.chatMessagesCurrent];
       const messageToRemovePosition = updatedMessages.findIndex(
@@ -530,6 +523,16 @@ export const selectAllFieldsHidden = createSelector(
   (state: RootState) => state.aichat.fieldVisibilities,
   allFieldsHidden
 );
+
+export const selectAllMessages = (state: {aichat: AichatState}) => {
+  const {chatMessagesPast, chatMessagesCurrent, chatMessagePending} =
+    state.aichat;
+  const messages = [...chatMessagesPast, ...chatMessagesCurrent];
+  if (chatMessagePending) {
+    messages.push(chatMessagePending);
+  }
+  return messages;
+};
 
 registerReducers({aichat: aichatSlice.reducer});
 export const {
