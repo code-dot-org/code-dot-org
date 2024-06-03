@@ -263,6 +263,8 @@ class ScriptsController < ApplicationController
 
   private def get_unit_by_name
     unit_id = params[:id]
+
+    # showing scripts by id is no longer supported.
     is_id = unit_id.to_i.to_s == unit_id.to_s
     raise ActiveRecord::RecordNotFound if is_id
 

@@ -11,6 +11,7 @@ class ScriptLevelsController < ApplicationController
   before_action :disable_session_for_cached_pages
   before_action :redirect_admin_from_labs, only: [:reset, :next, :show, :lesson_extras]
   before_action :set_redirect_override, only: [:show]
+  before_action :check_script_id_is_name, only: [:show, :lesson_extras]
 
   # Return true if request is one that can be publicly cached.
   def cachable_request?(request)
@@ -594,6 +595,13 @@ class ScriptLevelsController < ApplicationController
     if params[:script_id] && params[:no_redirect]
       VersionRedirectOverrider.set_unit_redirect_override(session, params[:script_id])
     end
+  end
+
+  # showing script levels by script id is no longer supported.
+  private def check_script_id_is_name
+    script_id = request.params[:script_id]
+    is_id = script_id.to_i.to_s == script_id.to_s
+    raise ActiveRecord::RecordNotFound if is_id
   end
 
   private def redirect_script(script, locale)
