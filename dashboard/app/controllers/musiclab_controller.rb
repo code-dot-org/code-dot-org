@@ -24,11 +24,11 @@ class MusiclabController < ApplicationController
   end
 
   CHANNELS = %w(
-  syBuoFelbGB3eOmNVoQGrWMXEk0l1EhkIX6c08ujq6s
-  Ehnks69B0Whcn_YQQNCK4GUHAPU3WSG2jfilvQF1kfo
-  6Xc53NIhwFxjjwsSaoj_eSiRbbXr97BYQ3W_7vIaAwY
-  NwTkJSskTswEOtgy6TbaJ-8SonhhSxojrJjlJLBko4w
-  PCO7mvB5ylByrbpF7tEbzXdYOqrALhW3M5OlcDRIF7E
+    syBuoFelbGB3eOmNVoQGrWMXEk0l1EhkIX6c08ujq6s
+    Ehnks69B0Whcn_YQQNCK4GUHAPU3WSG2jfilvQF1kfo
+    6Xc53NIhwFxjjwsSaoj_eSiRbbXr97BYQ3W_7vIaAwY
+    NwTkJSskTswEOtgy6TbaJ-8SonhhSxojrJjlJLBko4w
+    PCO7mvB5ylByrbpF7tEbzXdYOqrALhW3M5OlcDRIF7E
   )
 
   # GET "/musiclab/embed"
