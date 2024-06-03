@@ -1,23 +1,13 @@
-import {render, screen} from '@testing-library/react';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {Provider} from 'react-redux';
 
-import {
-  getStore,
-  registerReducers,
-  restoreRedux,
-  stubRedux,
-} from '@cdo/apps/redux';
-import unitSelection, {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 import {
   fakeLessonWithLevels,
   fakeLesson,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
-import sectionProgress, {
-  addDataByUnit,
-} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import LessonProgressDataColumn from '@cdo/apps/templates/sectionProgressV2/LessonProgressDataColumn.jsx';
-import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import LessonDataCell from '@cdo/apps/templates/sectionProgressV2/LessonDataCell.jsx';
+import LessonProgressColumnHeader from '@cdo/apps/templates/sectionProgressV2/LessonProgressColumnHeader.jsx';
+import {UnconnectedLessonProgressDataColumn} from '@cdo/apps/templates/sectionProgressV2/LessonProgressDataColumn.jsx';
 
 import {expect} from '../../../util/reconfiguredChai';
 
@@ -69,63 +59,34 @@ const LEVEL_PROGRESS = {
 
 const DEFAULT_PROPS = {
   lesson: LESSON,
+  lessonProgressByStudent: LESSON_PROGRESS,
+  levelProgressByStudent: LEVEL_PROGRESS,
   sortedStudents: STUDENTS,
   addExpandedLesson: () => {},
+  expandedMetadataStudentIds: [],
+};
+
+const setUp = overrideProps => {
+  const props = {...DEFAULT_PROPS, ...overrideProps};
+  return shallow(<UnconnectedLessonProgressDataColumn {...props} />);
 };
 
 describe('LessonProgressDataColumn', () => {
-  let store;
-
-  beforeEach(() => {
-    stubRedux();
-    registerReducers({
-      sectionProgress,
-      unitSelection,
-      teacherSections,
-    });
-
-    store = getStore();
-    store.dispatch(setScriptId(1));
-    store.dispatch(
-      addDataByUnit({
-        unitDataByUnit: {},
-        studentLevelProgressByUnit: {1: LEVEL_PROGRESS},
-        studentLessonProgressByUnit: {1: LESSON_PROGRESS},
-        studentLastUpdateByUnit: {},
-      })
-    );
-
-    store = getStore();
-  });
-
-  function renderDefault(propOverrides) {
-    render(
-      <Provider store={store}>
-        <LessonProgressDataColumn {...DEFAULT_PROPS} {...propOverrides} />
-      </Provider>
-    );
-  }
-
-  afterEach(() => {
-    restoreRedux();
-  });
   it('Shows header lesson', () => {
-    renderDefault();
+    const wrapper = setUp();
 
-    screen.findAllByText(LESSON.id);
+    expect(wrapper.find(LessonProgressColumnHeader)).to.have.length(1);
   });
 
   it('Shows no expansion if no levels', () => {
-    renderDefault({lesson: fakeLesson()});
+    const wrapper = setUp({lesson: fakeLesson()});
 
-    expect(screen.queryByRole('button')).to.be.null;
+    expect(wrapper.find('FontAwesome')).to.have.length(0);
   });
 
   it('shows progress for all students', () => {
-    renderDefault();
+    const wrapper = setUp();
 
-    expect(screen.queryAllByTestId(/lesson-data-cell/)).to.have.length(
-      STUDENTS.length
-    );
+    expect(wrapper.find(LessonDataCell)).to.have.length(STUDENTS.length);
   });
 });

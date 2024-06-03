@@ -69,6 +69,8 @@ function LessonProgressDataColumn({
   );
 }
 
+export const UnconnectedLessonProgressDataColumn = LessonProgressDataColumn;
+
 LessonProgressDataColumn.propTypes = {
   sortedStudents: PropTypes.arrayOf(studentShape),
   lessonProgressByStudent: PropTypes.objectOf(
