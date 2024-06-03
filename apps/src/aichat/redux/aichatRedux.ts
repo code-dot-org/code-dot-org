@@ -68,10 +68,12 @@ const getCurrentTimestamp = () => moment(Date.now()).format('YYYY-MM-DD HH:mm');
 const getCurrentTime = () => moment(Date.now()).format('LT');
 
 export interface AichatState {
-  // All user and assistant chat messages - includes too personal and inappropriate user messages.
-  // Messages will be logged and stored.
+  // Messages from previous chat sessions that we track purely for visibility to the user
+  // and do not send to the model as history.
   chatMessagesPast: ChatCompletionMessage[];
+  // Messages in the current chat session that we want to provide as history to the model.
   chatMessagesCurrent: ChatCompletionMessage[];
+  // The user message currently awaiting response from the model (if any).
   chatMessagePending?: ChatCompletionMessage;
   // Denotes whether we are waiting for a chat completion response from the backend
   isWaitingForChatResponse: boolean;
