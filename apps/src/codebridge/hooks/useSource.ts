@@ -1,4 +1,4 @@
-import {useMemo, useEffect, useCallback, useRef} from 'react';
+import {useMemo, useEffect, useCallback, useRef, useState} from 'react';
 
 import header from '@cdo/apps/code-studio/header';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
@@ -30,6 +30,7 @@ export const useSource = (defaultSources: ProjectSources) => {
   );
   const previousChannelIdRef = useRef<string | null>(null);
   const levelId = useAppSelector(state => state.lab.levelProperties?.id);
+  const [hasSetInitialSource, setHasSetInitialSource] = useState(false);
 
   const setSource = useMemo(
     () => (newSource: MultiFileSource) => {
@@ -57,15 +58,22 @@ export const useSource = (defaultSources: ProjectSources) => {
   }, [isStartMode, isEditingExemplarMode, levelId, source]);
 
   useEffect(() => {
-    if (channelId && previousChannelIdRef.current !== channelId) {
+    // It's possible to not have a channel id if we are in start or exemplar mode.
+    if (
+      !hasSetInitialSource ||
+      (channelId && previousChannelIdRef.current !== channelId)
+    ) {
       // We reset the project when the channelId changes, as this means we are on a new level
       // with a new project.
       if (initialSources) {
         dispatch(setAndSaveProjectSource(initialSources));
       }
-      previousChannelIdRef.current = channelId;
+      if (channelId) {
+        previousChannelIdRef.current = channelId;
+      }
+      setHasSetInitialSource(true);
     }
-  }, [channelId, initialSources, dispatch]);
+  }, [channelId, initialSources, dispatch, hasSetInitialSource]);
 
   return {source, setSource, resetToStartSource};
 };
