@@ -10,6 +10,7 @@ export const initialState = {
   isGoogleClassroomStudent: false,
   isCleverStudent: false,
   personalAccountLinkingEnabled: false,
+  lockReason: null,
 };
 
 const INITIALIZE_STATE = 'manageLinkedAccounts/INITIALIZE_STATE';
@@ -24,6 +25,7 @@ export default function manageLinkedAccounts(state = initialState, action) {
       isGoogleClassroomStudent,
       isCleverStudent,
       personalAccountLinkingEnabled,
+      lockReason,
     } = action.state;
     return {
       ...state,
@@ -32,6 +34,7 @@ export default function manageLinkedAccounts(state = initialState, action) {
       isGoogleClassroomStudent,
       isCleverStudent,
       personalAccountLinkingEnabled,
+      lockReason,
     };
   }
 

@@ -279,6 +279,7 @@
       isCleverStudent: current_user.clever_student?,
       dependentStudentsCount: Queries::User.dependent_students_count(current_user.id),
       personalAccountLinkingEnabled: @personal_account_linking_enabled,
+      accountLinkingLockReason: account_linking_lock_reason(current_user),
       lmsName: Queries::Lti.get_lms_name_from_user(current_user)
     }.to_json
   }

@@ -33,6 +33,7 @@ const {
   dependentStudentsCount,
   personalAccountLinkingEnabled,
   lmsName,
+  accountLinkingLockReason,
 } = scriptData;
 
 $(document).ready(() => {
@@ -141,7 +142,8 @@ $(document).ready(() => {
       isPasswordRequired,
       isGoogleClassroomStudent,
       isCleverStudent,
-      personalAccountLinkingEnabled
+      personalAccountLinkingEnabled,
+      accountLinkingLockReason
     );
   }
 

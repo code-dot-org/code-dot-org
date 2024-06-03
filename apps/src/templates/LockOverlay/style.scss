@@ -1,0 +1,24 @@
+@import 'font';
+@import url($font-awesome-core-url); // stylelint-disable-line import-notation
+
+.lock-overlay {
+  opacity: .4;
+  pointer-events: none;
+  position: relative;
+  width: fit-content;
+
+  &:after {
+    $icon-size: 3rem;
+
+    content: '\f30d';
+    font-family: 'Font Awesome 6 Pro', sans-serif;
+    font-size: $icon-size;
+    line-height: $icon-size;
+    font-weight: 900;
+    pointer-events: none;
+    position: absolute;
+    transform: scale(.9, 1);
+    top: calc(50% - $icon-size / 2);
+    left: calc(50% - $icon-size / 2);
+  }
+}

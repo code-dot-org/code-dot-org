@@ -10,6 +10,7 @@ import {connect} from 'react-redux';
 import RailsAuthenticityToken from '../../util/RailsAuthenticityToken';
 import {OAuthProviders} from '@cdo/apps/lib/ui/accounts/constants';
 import fontConstants from '@cdo/apps/fontConstants';
+import LockOverlay from '@cdo/apps/templates/LockOverlay';
 
 export const ENCRYPTED = `*** ${i18n.encrypted()} ***`;
 const authOptionPropType = PropTypes.shape({
@@ -42,6 +43,7 @@ class ManageLinkedAccounts extends React.Component {
     isGoogleClassroomStudent: PropTypes.bool.isRequired,
     isCleverStudent: PropTypes.bool.isRequired,
     personalAccountLinkingEnabled: PropTypes.bool.isRequired,
+    lockReason: PropTypes.string,
   };
 
   cannotDisconnectGoogle = authOption => {
@@ -139,41 +141,47 @@ class ManageLinkedAccounts extends React.Component {
       <div style={styles.container}>
         <hr />
         <h2 style={styles.header}>{i18n.manageLinkedAccounts()}</h2>
-        <table style={styles.table}>
-          <thead>
-            <tr>
-              <th style={styles.headerCell}>
-                {i18n.manageLinkedAccounts_loginType()}
-              </th>
-              <th style={styles.headerCell}>
-                {i18n.manageLinkedAccounts_emailAddress()}
-              </th>
-              <th style={styles.headerCell}>
-                {i18n.manageLinkedAccounts_actions()}
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {this.formatAuthOptions().map(option => {
-              return (
-                <OauthConnection
-                  key={option.id || _.uniqueId('empty_')}
-                  displayName={this.getDisplayName(option.credentialType)}
-                  id={option.id}
-                  email={this.formatEmail(option)}
-                  credentialType={option.credentialType}
-                  disconnectDisabledStatus={
-                    option.id ? this.disconnectDisabledStatus(option) : null
-                  }
-                  error={option.error}
-                  personalAccountLinkingEnabled={
-                    this.props.personalAccountLinkingEnabled
-                  }
-                />
-              );
-            })}
-          </tbody>
-        </table>
+
+        {this.props.lockReason && <p>{this.props.lockReason}</p>}
+
+        <LockOverlay isLocked={!!this.props.lockReason}>
+          <table style={styles.table}>
+            <thead>
+              <tr>
+                <th style={styles.headerCell}>
+                  {i18n.manageLinkedAccounts_loginType()}
+                </th>
+                <th style={styles.headerCell}>
+                  {i18n.manageLinkedAccounts_emailAddress()}
+                </th>
+                <th style={styles.headerCell}>
+                  {i18n.manageLinkedAccounts_actions()}
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {this.formatAuthOptions().map(option => {
+                return (
+                  <OauthConnection
+                    key={option.id || _.uniqueId('empty_')}
+                    displayName={this.getDisplayName(option.credentialType)}
+                    id={option.id}
+                    email={this.formatEmail(option)}
+                    credentialType={option.credentialType}
+                    disconnectDisabledStatus={
+                      option.id ? this.disconnectDisabledStatus(option) : null
+                    }
+                    error={option.error}
+                    personalAccountLinkingEnabled={
+                      this.props.personalAccountLinkingEnabled
+                    }
+                    lockReason={this.props.lockReason}
+                  />
+                );
+              })}
+            </tbody>
+          </table>
+        </LockOverlay>
       </div>
     );
   }
@@ -188,6 +196,7 @@ export default connect(state => ({
   isCleverStudent: state.manageLinkedAccounts.isCleverStudent,
   personalAccountLinkingEnabled:
     state.manageLinkedAccounts.personalAccountLinkingEnabled,
+  lockReason: state.manageLinkedAccounts.lockReason,
 }))(ManageLinkedAccounts);
 
 class OauthConnection extends React.Component {
@@ -199,6 +208,7 @@ class OauthConnection extends React.Component {
     disconnectDisabledStatus: PropTypes.string,
     error: PropTypes.string,
     personalAccountLinkingEnabled: PropTypes.bool.isRequired,
+    lockReason: PropTypes.string,
   };
 
   getDisconnectDisabledTooltip = () => {
@@ -222,6 +232,7 @@ class OauthConnection extends React.Component {
   render() {
     const {
       credentialType,
+      lockReason,
       disconnectDisabledStatus,
       displayName,
       id,
@@ -276,6 +287,7 @@ class OauthConnection extends React.Component {
                 style={styles.button}
                 text={buttonText}
                 disabled={
+                  !!lockReason ||
                   !!disconnectDisabledMessage ||
                   (!isConnected && this.shouldDisableConnectButton())
                 }
