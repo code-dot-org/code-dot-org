@@ -4,10 +4,8 @@ require "services/lti"
 require "policies/lti"
 require "concerns/partial_registration"
 require "clients/lti_advantage_client"
-require 'clients/lti_dynamic_registration_client'
 require "cdo/honeybadger"
 require 'metrics/events'
-require 'securerandom'
 
 class LtiV1Controller < ApplicationController
   before_action -> {redirect_to lti_v1_integrations_path, alert: I18n.t('lti.integration.early_access.closed')},

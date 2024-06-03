@@ -72,6 +72,7 @@ function UnitSelectorV2({
       size="s"
       dropdownTextThickness="thin"
       id="unit-selector-v2"
+      color="gray"
     />
   );
 }

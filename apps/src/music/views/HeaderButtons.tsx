@@ -111,6 +111,9 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
   );
 
   const onClickStartOver = useCallback(() => {
+    // Hide any custom fields that are showing.
+    Blockly.getMainWorkspace().hideChaff();
+
     if (dialogControl) {
       dialogControl.showDialog(DialogType.StartOver, clearCode);
     }

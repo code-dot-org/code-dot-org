@@ -88,10 +88,27 @@ class Policies::ChildAccount
       user.authentication_options.any?(&:google?)
   end
 
+  # Checks if a user affected by a state policy was created before the lockout date.
+  def self.pre_lockout_user?(user)
+    lockout_date = state_policy(user).try(:[], :lockout_date)
+    return false unless lockout_date
+    return user_predates_policy?(user) if DateTime.now < lockout_date
+
+    user.created_at < lockout_date
+  end
+
   # The date on which the student's account will be locked if the account is not compliant.
   def self.lockout_date(user)
     return if compliant?(user)
     state_policy(user).try(:[], :lockout_date)
+  end
+
+  # Checks if the user is locked out due to non-compliance with CAP.
+  def self.locked_out?(user)
+    user_lockout_date = lockout_date(user)
+    return false unless user_lockout_date
+
+    DateTime.now >= user_lockout_date || !user_predates_policy?(user)
   end
 
   # Authentication option types which we consider to be "owned" by the school
@@ -125,7 +142,7 @@ class Policies::ChildAccount
 
   # Check if parent permission is required for this account according to our
   # Child Account Policy.
-  private_class_method def self.parent_permission_required?(user)
+  def self.parent_permission_required?(user)
     return false unless user.student?
     return false unless user.birthday
 
