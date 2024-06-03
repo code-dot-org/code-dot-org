@@ -124,6 +124,9 @@ theme: responsive_full_width
         %strong
           Are you a district leader or administrator? <a href="/administrators">Find out how to bring Code.org to your district</a>.
 
+- if !!DCDO.get('show-updated-lms-content', false)
+  = view :lms_integrations_banner
+
 %section
   .wrapper
     %h2.centered
