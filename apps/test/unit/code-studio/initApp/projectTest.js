@@ -196,19 +196,9 @@ describe('project.js', () => {
       expect(project.getStandaloneApp()).to.equal('applab');
     });
 
-    it('for calc', () => {
-      window.appOptions.app = 'calc';
-      expect(project.getStandaloneApp()).to.equal('calc');
-    });
-
     it('for dance', () => {
       window.appOptions.app = 'dance';
       expect(project.getStandaloneApp()).to.equal('dance');
-    });
-
-    it('for eval', () => {
-      window.appOptions.app = 'eval';
-      expect(project.getStandaloneApp()).to.equal('eval');
     });
 
     it('for flappy', () => {

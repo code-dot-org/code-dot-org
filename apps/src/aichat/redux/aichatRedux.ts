@@ -191,13 +191,24 @@ export const onSaveComplete =
     }
 
     changedProperties.forEach(property => {
+      const typedProperty = property as keyof AiCustomizations;
+      const propertiesSpecificityNeeded = ['temperature', 'selectedModelId'];
+      const textSuffix = propertiesSpecificityNeeded.includes(property)
+        ? {
+            text: ' has been updated to ',
+            boldtypeText: `${currentAiCustomizations[typedProperty]}.`,
+          }
+        : {
+            text: ' has been updated.',
+          };
+
       dispatch(
         addChatMessage({
           id: getNewMessageId(),
           role: Role.MODEL_UPDATE,
           chatMessageText:
             AI_CUSTOMIZATIONS_LABELS[property as keyof AiCustomizations],
-          chatMessageSuffix: ' has been updated.',
+          chatMessageSuffix: textSuffix,
           status: Status.OK,
           timestamp: getCurrentTime(),
         })

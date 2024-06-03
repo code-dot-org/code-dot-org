@@ -2731,6 +2731,7 @@ fil-PH:
   user_header_applab: 'App na Lab '
   user_header_artist: 'Artista '
   user_header_create: 'Lumikha '
+  user_header_create_account_low_cap: Gumawa ng account
   user_header_dance: Dance Party
   user_header_flappy: Flappy
   user_header_gamelab: Game Lab
