@@ -24,8 +24,7 @@ export function handleRunClick(
     return;
   }
   if (runTests) {
-    dispatch(appendSystemMessage('Running tests...'));
-    runAllTests(source);
+    runAllTests(source, dispatch);
   } else {
     // Run main.py
     const code = getFileByName(source.files, MAIN_PYTHON_FILE)?.contents;
@@ -54,7 +53,19 @@ export async function runPythonCode(mainFile: string, source: MultiFileSource) {
   }
 }
 
-export async function runAllTests(source: MultiFileSource) {
-  // To run all tests in the project, we look for files that follow the regex 'test*.py'
-  await runPythonCode(getTestRunnerScript('test*.py'), source);
+export async function runAllTests(
+  source: MultiFileSource,
+  dispatch: Dispatch<AnyAction>
+) {
+  // If the project has a validation file, we just run those tests.
+  const validationFile = Object.values(source.files).filter(f => f.validation);
+  if (validationFile.length > 0) {
+    // We only support one validation file. If somehow there are more than one, just run the first one.
+    dispatch(appendSystemMessage(`Running level tests...`));
+    await runPythonCode(getTestRunnerScript(validationFile[0].name), source);
+  } else {
+    dispatch(appendSystemMessage(`Running your project's tests...`));
+    // Otherwise, we look for files that follow the regex 'test*.py' and run those.
+    await runPythonCode(getTestRunnerScript('test*.py'), source);
+  }
 }
