@@ -3,22 +3,26 @@
     {
       image: "/images/lms/clever.png",
       title: "Clever",
-      url: "https://support.code.org/hc/en-us/articles/115002716111-Setting-Up-Sections-with-Clever-Sync"
+      url: "https://support.code.org/hc/en-us/articles/115002716111-Setting-Up-Sections-with-Clever-Sync",
+      is_new: "false"
     },
     {
       image: "/images/lms/classroom.png",
       title: "Google Classroom",
-      url: "https://support.code.org/hc/en-us/articles/115001319312-Setting-Up-Sections-with-Google-Classroom-Sync"
+      url: "https://support.code.org/hc/en-us/articles/115001319312-Setting-Up-Sections-with-Google-Classroom-Sync",
+      is_new: "false"
     },
     {
       image: "/images/lms/canvas.png",
       title: "Canvas",
-      url: "code.org/lms/canvas"
+      url: "code.org/lms/canvas",
+      is_new: "true"
     },
     {
       image: "/images/lms/schoology.png",
       title: "Schoology",
-      url: "code.org/lms/schoology"
+      url: "code.org/lms/schoology",
+      is_new: "true"
     },
   ]
 
@@ -28,6 +32,9 @@
       .content-wrapper
         %figure
           %img{src: "#{card_list[:image]}", alt: ""}
+        - if card_list[:is_new] == "true"
+          %p.new.top-right
+            =hoc_s(:new)
         .text-wrapper
           %h4.heading-xs
             = card_list[:title]
