@@ -21,6 +21,7 @@ class Policies::Lti
   NAMESPACE = 'lti_v1_controller'.freeze
   JWT_CLIENT_ASSERTION_TYPE = 'urn:ietf:params:oauth:client-assertion-type:jwt-bearer'.freeze
   JWT_ISSUER = CDO.studio_url('', CDO.default_scheme).freeze
+  DEFAULT_TARGET_LINK_URI = CDO.studio_url('/lti/v1/sync_course', CDO.default_scheme).freeze
 
   MEMBERSHIP_CONTAINER_CONTENT_TYPE = 'application/vnd.ims.lti-nrps.v2.membershipcontainer+json'.freeze
   TEACHER_ROLES = Set.new(['http://purl.imsglobal.org/vocab/lis/v1/institution/person#Instructor',
@@ -90,11 +91,11 @@ class Policies::Lti
     jwks_uri: CDO.studio_url('/oauth/jwks', CDO.default_scheme),
     token_endpoint_auth_method: "private_key_jwt",
     contacts: ["platform@code.org"],
-    scope: "https://purl.imsglobal.org/spec/lti-ags/scope/score https://purl.imsglobal.org/spec/lti-nrps/scope/contextmembership.readonly",
+    scope: ALL_SCOPES.join(' '),
     "https://purl.imsglobal.org/spec/lti-tool-configuration" => {
-      domain: "studio.code.org",
-      description: "Code.org",
-      target_link_uri: "https://studio.code.org/lti/v1/sync_course",
+      domain: CDO.dashboard_site_host,
+      description: "Code.org LTI Integration",
+      target_link_uri: DEFAULT_TARGET_LINK_URI,
       custom_parameters: {
         email: "$Person.email.primary",
         full_name: "$Person.name.full",
@@ -109,37 +110,14 @@ class Policies::Lti
         {
           type: "LtiResourceLinkRequest",
           label: "Launch Code.org",
-          placements: ["course_navigation"],
-        },
-        {
-          type: "LtiResourceLinkRequest",
-          label: "Launch Code.org",
-          placements: ["account_navigation"],
-        },
-        {
-          type: "LtiResourceLinkRequest",
-          label: "Launch Code.org",
           placements: ["link_selection"],
+          icon_uri: CDO.studio_url('/images/logo.svg', CDO.default_scheme),
         },
         {
           type: "LtiResourceLinkRequest",
           label: "Launch Code.org",
           placements: ["assignment_selection"],
-        },
-        {
-          type: "LtiResourceLinkRequest",
-          label: "Launch Code.org",
-          placements: ["assignment_menu"],
-        },
-        {
-          type: "LtiResourceLinkRequest",
-          label: "Launch Code.org",
-          placements: ["assignment_view"],
-        },
-        {
-          type: "LtiResourceLinkRequest",
-          label: "Launch Code.org",
-          placements: ["submission_type_selection"],
+          icon_uri: CDO.studio_url('/images/logo.svg', CDO.default_scheme),
         }
       ]
     }
