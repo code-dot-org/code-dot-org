@@ -23,13 +23,13 @@ class MusiclabController < ApplicationController
       to_json
   end
 
-  CHANNELS = [
-    'syBuoFelbGB3eOmNVoQGrWMXEk0l1EhkIX6c08ujq6s',
-    'Ehnks69B0Whcn_YQQNCK4GUHAPU3WSG2jfilvQF1kfo',
-    '6Xc53NIhwFxjjwsSaoj_eSiRbbXr97BYQ3W_7vIaAwY',
-    'NwTkJSskTswEOtgy6TbaJ-8SonhhSxojrJjlJLBko4w',
-    'PCO7mvB5ylByrbpF7tEbzXdYOqrALhW3M5OlcDRIF7E'
-  ]
+  CHANNELS = %w(
+    syBuoFelbGB3eOmNVoQGrWMXEk0l1EhkIX6c08ujq6s
+    Ehnks69B0Whcn_YQQNCK4GUHAPU3WSG2jfilvQF1kfo
+    6Xc53NIhwFxjjwsSaoj_eSiRbbXr97BYQ3W_7vIaAwY
+    NwTkJSskTswEOtgy6TbaJ-8SonhhSxojrJjlJLBko4w
+    PCO7mvB5ylByrbpF7tEbzXdYOqrALhW3M5OlcDRIF7E
+  )
 
   def embed
     response.headers['X-Frame-Options'] = 'ALLOWALL'
@@ -42,8 +42,8 @@ class MusiclabController < ApplicationController
       channel_ids_from_featured_projects = CHANNELS
     end
     channel_ids_from_params = params[:channels].split(',')
-    all_channel_ids = channel_ids_from_params.length() > 0 ? channel_ids_from_params : channel_ids_from_featured_projects
-    selected_channel_ids = all_channel_ids.shuffle().first(NUM_MINI_PLAYER_PROJECTS)
+    all_channel_ids = channel_ids_from_params.empty? ? channel_ids_from_featured_projects : channel_ids_from_params  
+    selected_channel_ids = all_channel_ids.sample(NUM_MINI_PLAYER_PROJECTS)
 
     project_ids = selected_channel_ids.map do |channel_id|
       _, project_id = storage_decrypt_channel_id(channel_id)
@@ -57,10 +57,6 @@ class MusiclabController < ApplicationController
       to_json
   end
 
-  private def get_channel_ids_from_constant?
-    DCDO.get('get_channel_ids_from_constant', false)
-  end
-
   # TODO: This is a temporary addition to serve the analytics API key
   # specifically for Music Lab. When we start using Amplitude for other
   # applications, we should create a dedicated controller/util that serves
@@ -71,5 +67,9 @@ class MusiclabController < ApplicationController
   # GET /musiclab/analytics_key
   def get_analytics_key
     render(json: {key: ANALYTICS_KEY})
+  end
+
+  private def get_channel_ids_from_constant?
+    DCDO.get('get_channel_ids_from_constant', false)
   end
 end
