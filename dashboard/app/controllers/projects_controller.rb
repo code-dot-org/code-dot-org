@@ -418,7 +418,6 @@ class ProjectsController < ApplicationController
       iframe_embed_app_and_code: iframe_embed_app_and_code,
       project_type: params[:key]
     )
-    # look here
     # for sharing pages, the app will display the footer inside the playspace instead
     # if the game doesn't own the sharing footer, treat it as a legacy share
     @legacy_share_style = sharing && !@game.owns_footer_for_share?
