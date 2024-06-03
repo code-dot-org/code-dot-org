@@ -38,10 +38,7 @@ WithErrorTextField.args = {
   ...defaultArgs,
   name: 'textfield_error',
   label: 'TextField Label',
-  error: {
-    hasError: true,
-    message: 'Error message',
-  },
+  errorMessage: 'Error message',
 };
 
 export const WithHelperMessageTextField = SingleTemplate.bind({});

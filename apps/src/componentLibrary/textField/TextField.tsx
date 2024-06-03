@@ -31,8 +31,8 @@ export interface TextFieldProps extends AriaAttributes {
   readOnly?: boolean;
   /** Is TextField disabled */
   disabled?: boolean;
-  /** TextField Error */
-  error?: {message: string; hasError: boolean};
+  /** TextField error message */
+  errorMessage?: string;
   /** TextField custom className */
   className?: string;
   /** TextField color */
@@ -64,7 +64,7 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
   readOnly = false,
   helperMessage,
   helperIcon,
-  error,
+  errorMessage,
   className,
   color = 'black',
   size = 'm',
@@ -94,13 +94,13 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
         {...ariaProps}
         aria-disabled={disabled || ariaProps['aria-disabled']}
       />
-      {(!error || !error.hasError) && (
+      {!errorMessage && (helperMessage || helperIcon) && (
         <div className={moduleStyles.textFieldHelperSection}>
           {helperIcon && <FontAwesomeV6Icon {...helperIcon} />}
           {helperMessage && <span>{helperMessage}</span>}
         </div>
       )}
-      {error && error.hasError && (
+      {errorMessage && (
         <div
           className={classNames(
             moduleStyles.textFieldHelperSection,
@@ -108,7 +108,7 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
           )}
         >
           <FontAwesomeV6Icon iconName={'circle-exclamation'} />
-          <span>{error.message}</span>
+          <span>{errorMessage}</span>
         </div>
       )}
     </label>
