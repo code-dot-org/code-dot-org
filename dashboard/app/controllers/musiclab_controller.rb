@@ -23,6 +23,7 @@ class MusiclabController < ApplicationController
       to_json
   end
 
+  # Hard-coded list of channel IDs for the mini player if DCDO flag is set to `true`
   CHANNELS = %w(
     syBuoFelbGB3eOmNVoQGrWMXEk0l1EhkIX6c08ujq6s
     Ehnks69B0Whcn_YQQNCK4GUHAPU3WSG2jfilvQF1kfo
