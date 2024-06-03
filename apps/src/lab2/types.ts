@@ -81,6 +81,7 @@ export interface ProjectFile {
   active?: boolean;
   folderId: string;
   hidden?: boolean;
+  validation?: boolean;
 }
 
 export interface ProjectFolder {

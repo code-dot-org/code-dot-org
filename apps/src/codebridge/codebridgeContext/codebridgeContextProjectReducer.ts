@@ -91,6 +91,21 @@ export const projectReducer = (project: ProjectType, action: ReducerAction) => {
         },
       };
     }
+
+    case PROJECT_REDUCER_ACTIONS.SET_FILE_IS_VALIDATION: {
+      const {fileId, isValidation} = <
+        DefaultFilePayload & {isValidation: boolean}
+      >action.payload;
+
+      return {
+        ...project,
+        files: {
+          ...project.files,
+          [fileId]: {...project.files[fileId], validation: isValidation},
+        },
+      };
+    }
+
     // OPEN_FILE does exactly the same thing as ACTIVATE_FILE, at least for now.
     case PROJECT_REDUCER_ACTIONS.OPEN_FILE:
     case PROJECT_REDUCER_ACTIONS.ACTIVATE_FILE: {

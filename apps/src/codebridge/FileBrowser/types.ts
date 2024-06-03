@@ -5,4 +5,8 @@ export type newFilePromptType = (folderId?: FolderId) => void;
 export type newFolderPromptType = (parentId?: FolderId) => void;
 export type renameFilePromptType = (fileId: FileId) => void;
 export type renameFolderPromptType = (folderId: FolderId) => void;
-export type toggleFileVisibilityType = (fileId: FileId) => void;
+export type setFileVisibilityType = (fileId: FileId, hidden: boolean) => void;
+export type setFileIsValidationType = (
+  fileId: FileId,
+  isValidation: boolean
+) => void;
