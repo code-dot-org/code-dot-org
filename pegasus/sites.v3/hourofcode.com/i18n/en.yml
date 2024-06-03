@@ -134,6 +134,10 @@
   poetry_banner_desc: "Celebrate Poetry Month with our \"Coding with Poetry\" activities and discover new perspectives!"
   poetry_banner_explore_aria_label: "Explore poetry activities"
 
+  lms_skinny_banner_title: "Discover our new LMS integrations!"
+  lms_skinny_banner_desc: "We've added new LMS integrations for Canvas and Schoology! Learn how to get started!"
+  lms_skinny_banner_learn_more_aria_label: "Learn more about our LMS integrations"
+
   curriculum_launch_2023_title: "Introducing incredible updates to our curriculum"
   curriculum_launch_2023_desc: "Updates to CSC, CSP, CSD, and more — plus a new Curriculum Catalog and redesigned Teach page to help you find it all!"
 
