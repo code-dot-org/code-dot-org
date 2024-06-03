@@ -19,7 +19,7 @@ import LibraryCreationDialog from './libraries/LibraryCreationDialog';
 import QRCode from 'qrcode.react';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import Button, {buttonColors} from './../../componentLibrary/button';
+import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
 import defaultThumbnail from '@cdo/static/projects/project_default.png';
 import fontConstants from '@cdo/apps/fontConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
@@ -404,6 +404,8 @@ class ShareAllowedDialog extends React.Component {
                   />
                   {canPrint && hasThumbnail && (
                     <Button
+                      color={buttonColors.purple}
+                      type="primary"
                       onClick={wrapShareClick(this.print, 'print')}
                       iconLeft={{iconName: 'print'}}
                       text={i18n.print()}
