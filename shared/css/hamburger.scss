@@ -55,9 +55,9 @@ $arrow-size: 1.5rem;
     list-style: none;
     margin: 0;
     width: 300px;
-    right: 0;
     position: absolute;
     top: 55px;
+    inset-inline-end: 0;
     background-color: $light_primary_500;
     max-height: 100vh;
     overflow-y: auto;
@@ -74,8 +74,8 @@ $arrow-size: 1.5rem;
       list-style-type: none;
       margin-block: 1rem;
       margin-inline: 1rem;
-      display: block;
-      float: none;
+      display: flex;
+      justify-content: space-between;
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
@@ -83,15 +83,9 @@ $arrow-size: 1.5rem;
       &:last-of-type {
         border-bottom: none;
       }
-
       &::before {
         content: none;
       }
-
-      &:last-child {
-        margin-right: 0;
-      }
-
       a {
         @include main-font-regular;
         color: $white;
@@ -101,7 +95,6 @@ $arrow-size: 1.5rem;
         }
       }
     }
-
     &.hide-responsive-menu {
       display: none;
     }
@@ -109,14 +102,12 @@ $arrow-size: 1.5rem;
     .hide-about {
       display: none;
     }
-
     .hide-educate {
       display: none;
     }
 
     .hamburger-expandable-item {
       cursor: pointer;
-
       .text {
         float: left;
         max-width: 210px;
@@ -127,7 +118,6 @@ $arrow-size: 1.5rem;
           float: right;
         }
       }
-
       .arrow-down,
       .arrow-up {
         font-size: $arrow-size;
@@ -138,11 +128,9 @@ $arrow-size: 1.5rem;
           float: left;
         }
       }
-
       .arrow-up {
         display: none;
       }
-
       i {
         width: unset;
       }
