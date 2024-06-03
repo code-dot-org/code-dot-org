@@ -6,10 +6,10 @@ class ScriptsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :vocab, :resources, :code, :standards]
   check_authorization
   before_action :set_unit_by_name, only: [:show, :vocab, :resources, :code, :standards, :edit]
-  before_action :set_unit_by_id, only: [:update, :destroy]
   before_action :render_no_access, only: [:show]
   before_action :set_redirect_override, only: [:show]
-  authorize_resource class: 'Unit'
+  authorize_resource class: 'Unit', except: [:update, :destroy]
+  load_and_authorize_resource class: 'Unit', only: [:update, :destroy]
 
   use_reader_connection_for_route(:show)
 
@@ -284,11 +284,6 @@ class ScriptsController < ApplicationController
 
   private def set_unit_by_name
     @script = get_unit_by_name
-    raise ActiveRecord::RecordNotFound unless @script
-  end
-
-  private def set_unit_by_id
-    @script = Unit.find(params[:id])
     raise ActiveRecord::RecordNotFound unless @script
   end
 
