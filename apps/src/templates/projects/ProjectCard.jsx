@@ -10,10 +10,7 @@ import i18n from '@cdo/locale';
 import color from '../../util/color';
 import {UnlocalizedTimeAgo} from '../TimeAgo';
 
-import {
-  PROJECT_DEFAULT_IMAGE,
-  PROJECT_DEFAULT_IMAGE_OVERRIDE,
-} from './projectConstants';
+import {getProjectCardImageUrl} from './projectUtils';
 
 import style from './project-card.module.scss';
 
@@ -97,11 +94,7 @@ export default class ProjectCard extends React.Component {
               target={isPublicGallery ? '_blank' : undefined}
             >
               <img
-                src={
-                  projectData.thumbnailUrl ||
-                  PROJECT_DEFAULT_IMAGE_OVERRIDE[type] ||
-                  PROJECT_DEFAULT_IMAGE
-                }
+                src={getProjectCardImageUrl(projectData.thumbnailUrl, type)}
                 className={style.image}
                 alt={i18n.projectThumbnail()}
               />

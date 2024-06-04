@@ -81,10 +81,10 @@ const displayAssistantMessage = (status: string, chatMessageText: string) => {
         className={classNames(
           moduleStyles.message,
           moduleStyles.assistantMessage,
-          moduleStyles.errorMessage
+          moduleStyles.dangerContainer
         )}
       >
-        {'There was an error getting a response. Please try again.'}
+        {chatMessageText}
       </div>
     );
   }
@@ -94,7 +94,7 @@ const displayModelUpdateMessage = (
   message: ChatCompletionMessage,
   onRemove: () => void
 ) => {
-  const {chatMessageText, timestamp} = message;
+  const {chatMessageText, chatMessageSuffix, timestamp} = message;
 
   return (
     <ChatNotificationMessage
@@ -102,7 +102,11 @@ const displayModelUpdateMessage = (
       content={
         <>
           <span className={moduleStyles.modelUpdateMessageTextContainer}>
-            <StrongText>{chatMessageText}</StrongText> has been updated
+            <StrongText>{chatMessageText}</StrongText>
+            {chatMessageSuffix?.text}
+            {chatMessageSuffix?.boldtypeText && (
+              <StrongText>{chatMessageSuffix?.boldtypeText}</StrongText>
+            )}
           </span>
           <StrongText>{timestamp}</StrongText>
         </>

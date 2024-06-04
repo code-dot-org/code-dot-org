@@ -24,6 +24,7 @@ import {
   PROJECT_DEFAULT_THUMBNAIL_IMAGE_OVERRIDE,
 } from './projectConstants';
 import {FEATURED_PROJECT_TYPE_MAP} from './projectTypeMap';
+import {getThumbnailUrl} from './projectUtils';
 
 const THUMBNAIL_SIZE = 65;
 
@@ -84,10 +85,7 @@ export const styles = {
 // Cell formatters.
 const thumbnailFormatter = function (thumbnailUrl, {rowData}) {
   const projectUrl = `/projects/${rowData.type}/${rowData.channel}/`;
-  thumbnailUrl =
-    thumbnailUrl ||
-    PROJECT_DEFAULT_THUMBNAIL_IMAGE_OVERRIDE[rowData.type] ||
-    PROJECT_DEFAULT_IMAGE;
+  thumbnailUrl = getThumbnailUrl(thumbnailUrl, rowData.type);
   return (
     <a
       style={tableLayoutStyles.link}

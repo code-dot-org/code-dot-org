@@ -1,4 +1,3 @@
-import moment from 'moment';
 import {
   createAsyncThunk,
   createSlice,
@@ -16,68 +15,37 @@ import {
   AichatErrorType,
 } from '@cdo/generated-scripts/sharedConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {
   AI_CUSTOMIZATIONS_LABELS,
   DEFAULT_VISIBILITIES,
   EMPTY_AI_CUSTOMIZATIONS,
 } from '../views/modelCustomization/constants';
+import {saveTypeToAnalyticsEvent} from '../constants';
 import {postAichatCompletionMessage} from '../aichatCompletionApi';
 import {
   AiCustomizations,
   AichatInteractionStatusValue,
   ChatCompletionMessage,
   AichatContext,
+  FieldVisibilities,
   LevelAichatSettings,
   ModelCardInfo,
   Role,
+  SaveType,
   ViewMode,
   Visibility,
 } from '../types';
-import {getTypedKeys} from '@cdo/apps/types/utils';
-import {AppDispatch} from '@cdo/apps/util/reduxHooks';
-
-const haveDifferentValues = (
-  value1: AiCustomizations[keyof AiCustomizations],
-  value2: AiCustomizations[keyof AiCustomizations]
-): boolean => {
-  if (typeof value1 === 'object' && typeof value2 === 'object') {
-    return JSON.stringify(value1) !== JSON.stringify(value2);
-  }
-
-  return value1 !== value2;
-};
-
-const findChangedProperties = (
-  previous: AiCustomizations | undefined,
-  next: AiCustomizations
-) => {
-  if (!previous) {
-    return Object.keys(next);
-  }
-
-  const changedProperties: string[] = [];
-  Object.keys(next).forEach(key => {
-    const typedKey = key as keyof AiCustomizations;
-    if (haveDifferentValues(previous[typedKey], next[typedKey])) {
-      changedProperties.push(key);
-    }
-  });
-
-  return changedProperties;
-};
-
-const getCurrentTimestamp = () => moment(Date.now()).format('YYYY-MM-DD HH:mm');
-const getCurrentTime = () => moment(Date.now()).format('LT');
-
-const saveTypeToAnalyticsEvent: {[key in SaveType]: string} = {
-  updateChatbot: EVENTS.UPDATE_CHATBOT,
-  publishModelCard: EVENTS.PUBLISH_MODEL_CARD_INFO,
-  saveModelCard: EVENTS.SAVE_MODEL_CARD_INFO,
-};
-
-type SaveType = 'updateChatbot' | 'publishModelCard' | 'saveModelCard';
+import {
+  allFieldsHidden,
+  findChangedProperties,
+  getNewMessageId,
+  getCurrentTime,
+  getCurrentTimestamp,
+  hasFilledOutModelCard,
+} from './utils';
 
 export interface AichatState {
   // All user and assistant chat messages - includes too personal and inappropriate user messages.
@@ -91,7 +59,7 @@ export interface AichatState {
   chatMessageError: boolean;
   currentAiCustomizations: AiCustomizations;
   savedAiCustomizations: AiCustomizations;
-  fieldVisibilities: {[key in keyof AiCustomizations]: Visibility};
+  fieldVisibilities: FieldVisibilities;
   viewMode: ViewMode;
   currentSessionId?: number;
   // If a save is currently in progress
@@ -163,14 +131,6 @@ export const saveModelCard = createAsyncThunk(
   }
 );
 
-// This variable keeps track of the most recent message ID so that we can
-// assign a unique message id in increasing sequence to a new message.
-let latestMessageId = 0;
-const getNewMessageId = () => {
-  latestMessageId += 1;
-  return latestMessageId;
-};
-
 // This is the "core" update logic that is shared when a student saves their
 // model customizations (setup, retrieval, and "publish" tab)
 const saveAiCustomization = async (
@@ -231,12 +191,24 @@ export const onSaveComplete =
     }
 
     changedProperties.forEach(property => {
+      const typedProperty = property as keyof AiCustomizations;
+      const propertiesSpecificityNeeded = ['temperature', 'selectedModelId'];
+      const textSuffix = propertiesSpecificityNeeded.includes(property)
+        ? {
+            text: ' has been updated to ',
+            boldtypeText: `${currentAiCustomizations[typedProperty]}.`,
+          }
+        : {
+            text: ' has been updated.',
+          };
+
       dispatch(
         addChatMessage({
           id: getNewMessageId(),
           role: Role.MODEL_UPDATE,
           chatMessageText:
             AI_CUSTOMIZATIONS_LABELS[property as keyof AiCustomizations],
+          chatMessageSuffix: textSuffix,
           status: Status.OK,
           timestamp: getCurrentTime(),
         })
@@ -310,17 +282,30 @@ export const submitChatContents = createAsyncThunk(
 
     // Post user content and messages to backend and retrieve assistant response.
     const startTime = Date.now();
-    const chatApiResponse = await postAichatCompletionMessage(
-      newUserMessageText,
-      currentSessionId
-        ? storedMessages.filter(
-            message => message.sessionId === currentSessionId
-          )
-        : [],
-      aiCustomizations,
-      aichatContext,
-      currentSessionId
-    );
+
+    let chatApiResponse;
+    try {
+      chatApiResponse = await postAichatCompletionMessage(
+        newUserMessageText,
+        currentSessionId
+          ? storedMessages.filter(
+              message => message.sessionId === currentSessionId
+            )
+          : [],
+        aiCustomizations,
+        aichatContext,
+        currentSessionId
+      );
+    } catch (error) {
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .logError('Error in aichat completion request', error as Error);
+
+      updateMessagesOnError(newMessage, thunkAPI.dispatch);
+
+      return;
+    }
+
     Lab2Registry.getInstance()
       .getMetricsReporter()
       .reportLoadTime('AichatModelResponseTime', Date.now() - startTime, [
@@ -363,21 +348,7 @@ export const submitChatContents = createAsyncThunk(
 
       // error state #1: model generated profanity
     } else if (chatApiResponse?.status === AichatErrorType.PROFANITY_MODEL) {
-      const assistantChatMessage: ChatCompletionMessage = {
-        id: getNewMessageId(),
-        role: Role.ASSISTANT,
-        status: Status.ERROR,
-        chatMessageText: 'error',
-        timestamp: getCurrentTimestamp(),
-      };
-      thunkAPI.dispatch(addChatMessage(assistantChatMessage));
-
-      thunkAPI.dispatch(
-        updateUserChatMessageStatus({
-          id: newMessage.id,
-          status: Status.ERROR,
-        })
-      );
+      updateMessagesOnError(newMessage, thunkAPI.dispatch);
 
       // error state #2: user message contained profanity
     } else if (chatApiResponse?.status === AichatErrorType.PROFANITY_USER) {
@@ -393,6 +364,29 @@ export const submitChatContents = createAsyncThunk(
     }
   }
 );
+
+// Helper that is used when we receive an error response
+// (or a handled "error" state, like the model producing profanity).
+const updateMessagesOnError = (
+  newMessage: ChatCompletionMessage,
+  dispatch: ThunkDispatch<unknown, unknown, AnyAction>
+) => {
+  const assistantChatMessage: ChatCompletionMessage = {
+    id: getNewMessageId(),
+    role: Role.ASSISTANT,
+    status: Status.ERROR,
+    chatMessageText: 'There was an error getting a response. Please try again.',
+    timestamp: getCurrentTimestamp(),
+  };
+  dispatch(addChatMessage(assistantChatMessage));
+
+  dispatch(
+    updateUserChatMessageStatus({
+      id: newMessage.id,
+      status: Status.ERROR,
+    })
+  );
+};
 
 const aichatSlice = createSlice({
   name: 'aichat',
@@ -433,9 +427,6 @@ const aichatSlice = createSlice({
     },
     setChatSessionId: (state, action: PayloadAction<number>) => {
       state.currentSessionId = action.payload;
-    },
-    setIsWaitingForChatResponse: (state, action: PayloadAction<boolean>) => {
-      state.isWaitingForChatResponse = action.payload;
     },
     setShowWarningModal: (state, action: PayloadAction<boolean>) => {
       state.showWarningModal = action.payload;
@@ -498,6 +489,20 @@ const aichatSlice = createSlice({
       state.fieldVisibilities =
         levelAichatSettings?.visibilities || DEFAULT_VISIBILITIES;
     },
+    resetToDefaultAiCustomizations: (
+      state,
+      action: PayloadAction<LevelAichatSettings | undefined>
+    ) => {
+      const levelAichatSettings = action.payload;
+
+      const defaultAiCustomizations: AiCustomizations =
+        levelAichatSettings?.initialCustomizations || EMPTY_AI_CUSTOMIZATIONS;
+
+      state.savedAiCustomizations = defaultAiCustomizations;
+      state.currentAiCustomizations = defaultAiCustomizations;
+      state.fieldVisibilities =
+        levelAichatSettings?.visibilities || DEFAULT_VISIBILITIES;
+    },
     setSavedAiCustomizations: (
       state,
       action: PayloadAction<AiCustomizations>
@@ -557,29 +562,6 @@ const aichatSlice = createSlice({
   },
 });
 
-const hasFilledOutModelCard = (modelCardInfo: ModelCardInfo) => {
-  for (const key of getTypedKeys(modelCardInfo)) {
-    if (key === 'isPublished') {
-      continue;
-    } else if (key === 'exampleTopics') {
-      if (
-        !modelCardInfo['exampleTopics'].filter(topic => topic.length).length
-      ) {
-        return false;
-      }
-    } else if (!modelCardInfo[key].length) {
-      return false;
-    }
-  }
-
-  return true;
-};
-
-const allFieldsHidden = (fieldVisibilities: AichatState['fieldVisibilities']) =>
-  getTypedKeys(fieldVisibilities).every(
-    key => fieldVisibilities[key] === Visibility.HIDDEN
-  );
-
 // Selectors
 export const selectHasFilledOutModelCard = createSelector(
   (state: RootState) => state.aichat.currentAiCustomizations.modelCardInfo,
@@ -601,10 +583,10 @@ export const {
   setNewChatSession,
   setChatSessionId,
   clearChatMessages,
-  setIsWaitingForChatResponse,
   setShowWarningModal,
   updateUserChatMessageStatus,
   updateChatMessageSession,
+  resetToDefaultAiCustomizations,
   setViewMode,
   setStartingAiCustomizations,
   setSavedAiCustomizations,

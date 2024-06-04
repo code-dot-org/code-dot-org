@@ -1,0 +1,62 @@
+@import 'color.scss';
+
+.file-browser {
+  height: 100%;
+  background-color: $darkest_gray;
+  color: $white;
+  grid-area: file-browser;
+}
+.file-browser ul {
+  list-style: none;
+  padding-left: 5px;
+}
+
+.file-browser ul li span.label {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.file-browser ul li span.title {
+  display: flex;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+
+.file-browser ul li span.button-bar {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.file-browser ul li span.button-bar span:hover {
+  background-color: $dimgray;
+}
+
+.file-browser ul li span.button-bar span {
+  display: grid;
+  grid-template-columns: 15px auto;
+}
+
+.button-bar button {
+  white-space: nowrap;
+}
+
+span.caret-container {
+  padding-right: 2px;
+}
+
+.file-browser ul li span.label i,
+.file-browser ul li span.button-bar i {
+  margin-right: 4px;
+}
+
+li .button-kebab {
+  display: none;
+  height: 13px;
+}
+
+li :hover .button-kebab {
+  display: inherit;
+}
