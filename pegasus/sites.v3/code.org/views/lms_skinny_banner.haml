@@ -5,10 +5,10 @@
     .wrapper.flex-container.justify-space-between.align-items-center.wrap
       .text-wrapper
         %h5.white
-          =hoc_s('lms_skinny_banner_title')
+          =hoc_s('lms_page.skinny_banner.heading')
         %p.white.no-margin-bottom
-          =hoc_s('lms_skinny_banner_desc')
+          =hoc_s('lms_page.skinny_banner.desc')
       .flex-container.justify-center.align-items-center.wrap-reverse{style: "column-gap: 5rem;"}
         %img{src:"/images/marketing/lms-integration-icons.png", alt: ""}
-        %a.link-button.white{href: CDO.code_org_url("/lms"), "aria-label": hoc_s('lms_skinny_banner_learn_more_aria_label')}
+        %a.link-button.white{href: "/lms", target: "_blank", rel: "noopener noreferrer", "aria-label": hoc_s('admins_page_lms_call_to_action')}
           =hoc_s('call_to_action_learn_more')
