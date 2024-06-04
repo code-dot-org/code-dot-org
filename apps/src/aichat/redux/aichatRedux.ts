@@ -23,7 +23,6 @@ import {
 import {postAichatCompletionMessage} from '../aichatCompletionApi';
 import {
   AiCustomizations,
-  AichatInteractionStatusValue,
   ChatCompletionMessage,
   AichatContext,
   LevelAichatSettings,
@@ -361,15 +360,8 @@ const aichatSlice = createSlice({
     },
     clearChatMessages: state => {
       state.chatMessagesPast = [];
-      // dedupe this with "setNewChatSession"
       state.chatMessagesCurrent = [];
       state.currentSessionId = undefined;
-    },
-    setChatMessages: (
-      state,
-      action: PayloadAction<ChatCompletionMessage[]>
-    ) => {
-      state.chatMessagesCurrent = action.payload;
     },
     setChatMessagePending: (
       state,
@@ -391,17 +383,6 @@ const aichatSlice = createSlice({
     },
     setShowWarningModal: (state, action: PayloadAction<boolean>) => {
       state.showWarningModal = action.payload;
-    },
-    updateUserChatMessageStatus: (
-      state,
-      action: PayloadAction<{id: number; status: AichatInteractionStatusValue}>
-    ) => {
-      // shouldn't ever need to update outside of current chat messsages
-      const {id, status} = action.payload;
-      const chatMessage = state.chatMessagesCurrent.find(msg => msg.id === id);
-      if (chatMessage && chatMessage.role === Role.USER) {
-        chatMessage.status = status;
-      }
     },
     setViewMode: (state, action: PayloadAction<ViewMode>) => {
       state.viewMode = action.payload;
@@ -542,13 +523,11 @@ export const {
   removeModelUpdateMessage,
   setNewChatSession,
   setChatSessionId,
-  setChatMessages,
   setChatMessagePending,
   clearChatMessages,
   clearChatMessagePending,
   setIsWaitingForChatResponse,
   setShowWarningModal,
-  updateUserChatMessageStatus,
   setViewMode,
   setStartingAiCustomizations,
   setSavedAiCustomizations,
