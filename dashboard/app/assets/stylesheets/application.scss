@@ -4125,10 +4125,13 @@ $clickable-text-glow: 0 0 1px $realyellow,
   .clickable-text {
     cursor: pointer;
     position: relative;
-    animation: clickable-text-glow-keyframes 2s ease-in-out;
 
-    &:hover {
-      text-shadow: $clickable-text-glow;
+    &-with-glow {
+      animation: clickable-text-glow-keyframes 2s ease-in-out;
+
+      &:hover {
+        text-shadow: $clickable-text-glow;
+      }
     }
   }
 
