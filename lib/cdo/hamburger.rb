@@ -88,6 +88,7 @@ class Hamburger
   def self.get_hamburger_contents(options)
     loc_prefix = options[:loc_prefix]
 
+    # Teacher-specific hamburger dropdown links.
     teacher_entries = [
       {title: "my_dashboard", url: CDO.studio_url("/home")},
       {title: "course_catalog", url: CDO.studio_url("/catalog")},
@@ -98,6 +99,7 @@ class Hamburger
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
     end
 
+    # Student-specific hamburger dropdown links.
     student_entries = [
       {title: "my_dashboard", url: CDO.studio_url("/home"), id: "hamburger-student-home"},
       {title: "course_catalog", url: CDO.code_org_url("/students")},
@@ -107,11 +109,10 @@ class Hamburger
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
     end
 
-    # educate_entries = []
-
+    # Teach hamburger dropdown links.
     educate_entries = [
       {title: "educate_overview", url: CDO.code_org_url("/teach"), id: "educate-overview"},
-      # {title: "course_catalog", url: CDO.studio_url("/catalog"), id: "course-catalog"},
+      {title: "course_catalog", url: CDO.studio_url("/catalog"), id: "course-catalog"},
       {title: "educate_elementary", url: CDO.code_org_url("/educate/curriculum/elementary-school")},
       {title: "educate_middle", url: CDO.code_org_url("/educate/curriculum/middle-school")},
       {title: "educate_high", url: CDO.code_org_url("/educate/curriculum/high-school")},
@@ -121,10 +122,22 @@ class Hamburger
       {title: "educate_community", url: CDO.code_org_url("/educate/community")},
       {title: "educate_requirements", url: CDO.code_org_url("/educate/it")},
       {title: "educate_tools", url: CDO.code_org_url("/educate/resources/videos")},
-    ].each do |entry|
-      entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
-    end.freeze
+    ]
 
+    # Remove Course Catalog link for teachers and students.
+    # This link is already in the teacher and student entries above.
+    if options[:user_type] == "teacher" || options[:user_type] == "student"
+      educate_entries.delete_if {|e| e[:title] == "course_catalog"}
+    end
+
+    # Return the rest of the educate links.
+    educate_entries.each do |entry|
+      entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
+    end
+
+    educate_entries.freeze
+
+    # About hamburger dropdown links.
     about_entries = [
       {title: "about_us", url: CDO.code_org_url("/about"), id: "about-us"},
       {title: "about_leadership", url: CDO.code_org_url("/about/leadership")},
@@ -140,6 +153,7 @@ class Hamburger
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
     end.freeze
 
+    # Privacy & Legal hamburger dropdown links.
     legal_entries = [
       {title: "legal_privacy", url: CDO.code_org_url("/privacy")},
       {title: "legal_cookie_notice", url: CDO.code_org_url("/cookies")},
