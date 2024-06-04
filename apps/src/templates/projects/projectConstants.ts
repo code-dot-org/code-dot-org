@@ -51,7 +51,7 @@ export const MAX_PROJECTS_PER_CATEGORY = 100;
 
 // The project table uses the channels API to populate the personal projects
 // and the data needs to be filtered and mapped before displaying.
-export const convertChannelsToProjectData = function (projects: project[]) {
+export const convertChannelsToProjectData = function (projects: Project[]) {
   // Get the ones that aren't hidden, and have a type and id.
   const projectLists = projects.filter(
     project => !project.hidden && project.id && project.projectType
@@ -69,7 +69,9 @@ export const convertChannelsToProjectData = function (projects: project[]) {
 export const PROJECT_DEFAULT_IMAGE =
   '/blockly/media/projects/project_default.png';
 
-export const PROJECT_DEFAULT_CARD_IMAGE_OVERRIDE = {
+export const PROJECT_DEFAULT_CARD_IMAGE_OVERRIDE: {
+  [projectType: string]: string;
+} = {
   music: musicNoteProjectCardImage,
 };
 
@@ -80,7 +82,7 @@ export const PROJECT_DEFAULT_THUMBNAIL_IMAGE_OVERRIDE: {
 };
 
 // Project data from the channels API.
-type project = {
+type Project = {
   id: string;
   createdAt: Date;
   updatedAt: Date;

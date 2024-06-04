@@ -9,7 +9,5 @@ export const getThumbnailUrl = (path: string, type: string) =>
   PROJECT_DEFAULT_THUMBNAIL_IMAGE_OVERRIDE[type] ||
   PROJECT_DEFAULT_IMAGE;
 
-export const getProjectCardImageUrl = (
-  path: string,
-  type: keyof typeof PROJECT_DEFAULT_CARD_IMAGE_OVERRIDE
-) => path || PROJECT_DEFAULT_CARD_IMAGE_OVERRIDE[type] || PROJECT_DEFAULT_IMAGE;
+export const getProjectCardImageUrl = (path: string, type: string) =>
+  path || PROJECT_DEFAULT_CARD_IMAGE_OVERRIDE[type] || PROJECT_DEFAULT_IMAGE;
