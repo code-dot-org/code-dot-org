@@ -4135,20 +4135,10 @@ $clickable-text-glow: 0 0 1px $realyellow,
     }
   }
 
-  .clickable-text-0 {
-    animation-delay: 1s;
-  }
-  .clickable-text-1 {
-    animation-delay: 2s;
-  }
-  .clickable-text-2 {
-    animation-delay: 3s;
-  }
-  .clickable-text-3 {
-    animation-delay: 4s;
-  }
-  .clickable-text-4 {
-    animation-delay: 5s;
+  @for $i from 0 through 4 {
+    .clickable-text-#{$i} {
+      animation-delay: #{$i + 1}s;
+    }
   }
 }
 
