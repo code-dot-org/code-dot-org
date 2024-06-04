@@ -107,8 +107,11 @@ class Hamburger
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
     end
 
+    # educate_entries = []
+
     educate_entries = [
       {title: "educate_overview", url: CDO.code_org_url("/teach"), id: "educate-overview"},
+      # {title: "course_catalog", url: CDO.studio_url("/catalog"), id: "course-catalog"},
       {title: "educate_elementary", url: CDO.code_org_url("/educate/curriculum/elementary-school")},
       {title: "educate_middle", url: CDO.code_org_url("/educate/curriculum/middle-school")},
       {title: "educate_high", url: CDO.code_org_url("/educate/curriculum/high-school")},
@@ -187,7 +190,7 @@ class Hamburger
 
     entries << {
       title: I18n.t("#{loc_prefix}districts"),
-      url: CDO.code_org_url("/districts"),
+      url: CDO.code_org_url("/administrators"),
       class: visibility[:show_pegasus_options],
       id: "districts"
     }
