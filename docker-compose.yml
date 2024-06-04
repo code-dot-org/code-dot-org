@@ -15,6 +15,19 @@ services:
     environment:
       JAVA_OPTS: -Dwebdriver.chrome.whitelistedIps= -Dwebdriver.chrome.allowedIps=
     shm_size: '2gb'
+    # Many default ulimits are just too high
+    # And, so, it will consume way too much memory (16GB+)
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536
+    network_mode: host
+
+  redis:
+    container_name: redis
+    hostname: redis
+    image: redis:latest
+    network_mode: host
 
   db:
     container_name: db
@@ -36,5 +49,5 @@ services:
     # And, so, it will consume way too much memory (16GB+)
     ulimits:
       nofile:
-        soft: "65536"
-        hard: "65536"
+        soft: 65536
+        hard: 65536

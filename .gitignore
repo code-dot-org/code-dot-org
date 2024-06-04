@@ -36,6 +36,11 @@ npm-debug.log
 /rebuild-code-studio
 
 #
+# Local Docker Environment Ignores
+#
+.mysql-data/
+
+#
 # JS Ignores
 #
 
