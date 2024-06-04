@@ -43,8 +43,11 @@
       "availableModelIds": [
 
       ]
-    }
+    },
+    "display_name": "Social Media Sound-Alike",
+    "bubble_choice_description": "Create a chatbot that generates social media posts in the same style and voice as someone recognizable on social media using examples.",
+    "thumbnail_url": "https://images.code.org/c3bf7e4be3229519276e4f30d202422a-Lesson 5 - Level 8C - Social Media Sound Alike.png"
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-04T02:09:53.095+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-explore-template\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-explore-template\"},{\"changed_at\":\"2024-05-08 03:34:29 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-04T02:09:53.095+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-explore-template\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-explore-template\"},{\"changed_at\":\"2024-05-08 03:34:29 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-06-04 02:24:03 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>
