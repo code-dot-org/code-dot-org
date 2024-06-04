@@ -336,7 +336,7 @@ export const playSoundsRandom = {
 export const repeatSimple2 = {
   definition: {
     type: BlockTypes.REPEAT_SIMPLE2,
-    message0: '%{BKY_CONTROLS_REPEAT_TITLE}',
+    message0: Blockly.Msg['CONTROLS_REPEAT_TITLE'],
     args0: [
       {
         type: 'field_number',
@@ -346,7 +346,7 @@ export const repeatSimple2 = {
         max: 100,
       },
     ],
-    message1: '%{BKY_CONTROLS_REPEAT_INPUT_DO} %1',
+    message1: `${Blockly.Msg['CONTROLS_REPEAT_INPUT_DO']} %1`,
     args1: [
       {
         type: 'input_statement',
@@ -357,7 +357,7 @@ export const repeatSimple2 = {
     previousStatement: null,
     nextStatement: null,
     style: 'loop_blocks',
-    tooltip: '%{BKY_CONTROLS_REPEAT_TOOLTIP}',
+    tooltip: Blockly.Msg['CONTROLS_REPEAT_TOOLTIP'],
     helpUrl: DOCS_BASE_URL + 'repeat',
   },
   generator: block => {

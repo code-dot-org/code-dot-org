@@ -3,7 +3,7 @@
 Feature: Google Blockly Sprite Lab Eyes
 
 Background:
-  Given I am on "http://studio.code.org/s/allthethings/lessons/36/levels/4?noautoplay=true&blocklyVersion=google"
+  Given I am on "http://studio.code.org/s/allthethings/lessons/36/levels/4?noautoplay=true"
   And I wait for the page to fully load
   And I wait for 3 seconds
   And I wait until I don't see selector "#p5_loading"

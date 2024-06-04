@@ -1587,6 +1587,11 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     Pd::Workshop.send_automated_emails
   end
 
+  test 'workshop date range string is NA when no sessions' do
+    workshop = create :workshop, num_sessions: 0
+    assert_equal 'N/A', workshop.workshop_date_range_string
+  end
+
   private def session_on_day(day_offset)
     # 9am-5pm
     session_on(day_offset, 9.hours, 17.hours)

@@ -334,6 +334,8 @@ class DatablockStorageController < ApplicationController
 
   private def table_or_create
     where_table.first_or_create
+  rescue ActiveRecord::ValueTooLong
+    raise StudentFacingError.new(:TABLE_NAME_INVALID), "The table name is too long, it must be shorter than #{DatablockStorageTable.columns_hash['table_name'].limit} bytes ('characters')"
   rescue ActiveRecord::RecordNotUnique
     # first_or_create() is not atomic, retry in case a create was done in parallel
     where_table.first_or_create

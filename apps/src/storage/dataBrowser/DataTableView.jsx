@@ -1,21 +1,25 @@
 /**
  * @overview Component for detailed view of a data table.
  */
-import TableControls from './TableControls';
-import {DataView, WarningType} from '../constants';
-import DataTable from './DataTable';
-import {storageBackend, isFirebaseStorage} from '../storage';
-import FontAwesome from '../../templates/FontAwesome';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {changeView, showWarning, tableType} from '../redux/data';
-import dataStyles from './data-styles.module.scss';
 import {connect} from 'react-redux';
-import TableDescription from './TableDescription';
-import classNames from 'classnames';
-import style from './data-table-view.module.scss';
+
 import msg from '@cdo/locale';
+
+import FontAwesome from '../../templates/FontAwesome';
+import {DataView, WarningType} from '../constants';
+import {changeView, showWarning, tableType} from '../redux/data';
+import {storageBackend, isFirebaseStorage} from '../storage';
+
+import DataTable from './DataTable';
 import {refreshCurrentDataView} from './loadDataForView';
+import TableControls from './TableControls';
+import TableDescription from './TableDescription';
+
+import dataStyles from './data-styles.module.scss';
+import style from './data-table-view.module.scss';
 
 const INITIAL_STATE = {
   showDebugView: false,

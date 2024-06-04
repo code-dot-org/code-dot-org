@@ -46,7 +46,7 @@ class DatablockStorageKvp < ApplicationRecord
       DatablockStorageKvp.insert_all(kvps)
     end
   rescue ActiveRecord::ValueTooLong
-    raise StudentFacingError.new(:MAX_KEY_LENGTH_EXCEEDED), "The key is too large, it must be shorter than #{columns_hash['key'].limit} bytes ('characters')"
+    raise StudentFacingError.new(:KEY_INVALID), "The key is too large, it must be shorter than #{columns_hash['key'].limit} bytes ('characters')"
   end
 
   def self.set_kvp(project_id, key, value)

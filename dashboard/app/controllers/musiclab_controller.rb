@@ -14,9 +14,10 @@ class MusiclabController < ApplicationController
 
     @channel_ids = Project.
       where(project_type: "music").
-      last(15).
+      last(30).
       reverse.
-      map {|project| {name: JSON.parse(project.value)["name"], id: JSON.parse(project.value)["id"]}}.
+      map {|project| {name: JSON.parse(project.value)["name"], id: JSON.parse(project.value)["id"], labConfig: JSON.parse(project.value)["labConfig"]}}.
+      select {|entry| entry[:id] && entry[:labConfig]}.
       compact_blank.
       to_json
   end

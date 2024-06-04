@@ -80,7 +80,7 @@ function LandingPage({
   lastWorkshopSurveyCourse,
   deeperLearningCourseData,
   currentYearApplicationId,
-  workshopsAsParticipant,
+  hasEnrolledInWorkshop,
   workshopsAsFacilitator,
   workshopsAsOrganizer,
   workshopsAsRegionalPartner,
@@ -101,7 +101,7 @@ function LandingPage({
 
   const showGettingStartedBanner =
     !currentYearApplicationId &&
-    workshopsAsParticipant?.length === 0 &&
+    !hasEnrolledInWorkshop &&
     plCoursesStarted?.length === 0;
 
   const joinedPlSectionsStyling =
@@ -438,7 +438,7 @@ LandingPage.propTypes = {
   lastWorkshopSurveyCourse: PropTypes.string,
   deeperLearningCourseData: PropTypes.array,
   currentYearApplicationId: PropTypes.number,
-  workshopsAsParticipant: PropTypes.array,
+  hasEnrolledInWorkshop: PropTypes.bool,
   workshopsAsFacilitator: PropTypes.array,
   workshopsAsOrganizer: PropTypes.array,
   workshopsAsRegionalPartner: PropTypes.array,

@@ -1,19 +1,22 @@
 import $ from 'jquery';
+import objectFitImages from 'object-fit-images';
 import PropTypes from 'prop-types';
 import React from 'react';
-import objectFitImages from 'object-fit-images';
+
 import applabMsg from '@cdo/applab/locale';
-import PropertyRow from './PropertyRow';
-import ColorPickerPropertyRow from './ColorPickerPropertyRow';
+
+import {ICON_PREFIX_REGEX} from '../constants';
+
 import BooleanPropertyRow from './BooleanPropertyRow';
-import ImagePickerPropertyRow from './ImagePickerPropertyRow';
-import ZOrderRow from './ZOrderRow';
+import BorderProperties from './BorderProperties';
+import ColorPickerPropertyRow from './ColorPickerPropertyRow';
+import * as elementUtils from './elementUtils';
+import EnumPropertyRow from './EnumPropertyRow';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
-import {ICON_PREFIX_REGEX} from '../constants';
-import EnumPropertyRow from './EnumPropertyRow';
-import BorderProperties from './BorderProperties';
-import * as elementUtils from './elementUtils';
+import ImagePickerPropertyRow from './ImagePickerPropertyRow';
+import PropertyRow from './PropertyRow';
+import ZOrderRow from './ZOrderRow';
 
 class ImageProperties extends React.Component {
   static propTypes = {

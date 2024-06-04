@@ -10,6 +10,8 @@ export interface PartialAppOptions {
   editBlocks: string;
   levelId: number;
   share: boolean;
+  isEditingExemplar: boolean;
+  isViewingExemplar: boolean;
 }
 
 /**
@@ -47,6 +49,28 @@ export function getAppOptionsEditBlocks(): string | undefined {
   if (hasScriptData('script[data-appoptions]')) {
     const appOptions = getScriptData('appoptions') as PartialAppOptions;
     return appOptions.editBlocks;
+  }
+}
+
+/**
+ * Returns the value of isEditingExemplar provided by App Options, if available.
+ * This can be used to tell if we are currently editing exemplars.
+ */
+export function getAppOptionsEditingExemplar(): boolean | undefined {
+  if (hasScriptData('script[data-appoptions]')) {
+    const appOptions = getScriptData('appoptions') as PartialAppOptions;
+    return appOptions.isEditingExemplar;
+  }
+}
+
+/**
+ * Returns the value of isViewingExemplar provided by App Options, if available.
+ * This can be used to tell if we are currently viewing exemplars.
+ */
+export function getAppOptionsViewingExemplar(): boolean | undefined {
+  if (hasScriptData('script[data-appoptions]')) {
+    const appOptions = getScriptData('appoptions') as PartialAppOptions;
+    return appOptions.isViewingExemplar;
   }
 }
 /**

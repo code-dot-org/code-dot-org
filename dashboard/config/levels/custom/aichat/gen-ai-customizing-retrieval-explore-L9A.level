@@ -7,7 +7,7 @@
   "user_id": 4,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Personal Passions & Hot Takes\r\n\r\nHas anyone ever asked you to explain a book series or show or other content that you are obsessed with and have lots of strong opinions on? Wouldn't it be nice to have a chatbot that could help with that?\r\n\r\n### Do This\r\n\r\n1) Decide on a book or show or other content that you have strong opinions for.\r\n2) Set a system prompt to answer questions about this topic. \r\n3) Add at least 5 retrieval statements that exemplify your \"hot takes\" or strong opinions on the content. \r\n    - For example, which team member is clearly the best and why?\r\n    - Write your retrieval as statements of fact that the chatbot can refer to\r\n\r\nTest the chatbot! Have a 4-5 message conversation! When you're done, press the `Continue`(#7435b2) button!",
+    "long_instructions": "## Personal Passions & Hot Takes\r\n\r\nHas anyone ever asked you to explain a book series or show or other content that you are obsessed with and have lots of strong opinions on? Wouldn't it be nice to have a chatbot that could help with that?\r\n\r\n### Do This\r\n\r\n1) Decide on a book or show or other content that you have strong opinions for.\r\n2) Set a system prompt to answer questions about this topic. \r\n3) Add at least 5 retrieval statements that exemplify your \"hot takes\" or strong opinions on the content. \r\n    - For example, which team member is clearly the best and why?\r\n    - Write your retrieval as statements of fact that the chatbot can refer to\r\n\r\nTest the chatbot! Have a 4-5 message conversation! When you're done, press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!",
     "system_prompt": "deprecated",
     "bot_title": "deprecated",
     "bot_description": "deprecated",
@@ -44,8 +44,11 @@
 
       ]
     },
-    "project_template_level_name": "gen-ai-customizing-retrieval-templateA"
+    "project_template_level_name": "gen-ai-customizing-retrieval-templateA",
+    "display_name": "Personal Passions",
+    "bubble_choice_description": "Has anyone ever asked you to explain a book series or show or other content that you are obsessed with and have lots of strong opinions on? Wouldn't it be nice to have a chatbot that could help with that?",
+    "thumbnail_url": "https://images.code.org/6675c8f20144cb2fb5134589e2ff5adf-Lesson 6 - Level 9A - Personal Passions and Hot Takes.png"
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-04T02:20:04.712+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-explore-L7D\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-explore-L7D\"},{\"changed_at\":\"2024-05-08 22:23:30 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-08 22:26:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-08 22:47:09 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-04T02:20:04.712+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-explore-L7D\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-explore-L7D\"},{\"changed_at\":\"2024-05-08 22:23:30 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-08 22:26:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-08 22:47:09 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-21 17:38:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-06-04 02:28:30 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>

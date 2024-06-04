@@ -27,8 +27,8 @@
     "instructions_important": "false",
     "long_instructions": "**Scoreboard Setup**\r\n\r\n1.  Add `show variable score` block to the `when run` program\r\n- Then connect a `set score to 0` block \r\n\r\n- Press `Run` \r\n\r\nNext, we'll learn how to change the score!",
     "submittable": "false",
-    "hide_share_and_remix": "false",
-    "never_autoplay_video": "false",
+    "hide_share_and_remix": "true",
+    "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_if_else_editing": "false",
     "include_shared_functions": "true",
@@ -49,13 +49,14 @@
     "short_instructions": "Set the score to 0 and show the score variable in the playspace.",
     "validation_code": "if (World.frameCount == 1) {\r\n\r\n  addCriteria(function() {\r\n    return variableBubblesCreated(); // Check whether variable bubble is visible on screen. \r\n  }, \"variableBubbles\");  // Failure message: \"Make sure to display your variable on screen.\"\r\n  \r\n   addCriteria(function() {\r\n    return variableValueSet(); // Check whether variable has been set to something. \r\n  }, \"variableSetValue\");  // Failure message: \"You need to set the value of your variable.\"\r\n  \r\n\r\n  // Additional calls to addCriteria(), in order of precedence\r\n}\r\ncheck();\r\n",
     "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"This block will show your variable on the playspace:\\n<xml><block xmlns=\\\"https://developers.google.com/blockly/xml\\\" type=\\\"gamelab_showVariable\\\" id=\\\"CX]E4@VU[,b3Rb$gNv6@\\\" disabled=\\\"false\\\">\\n  <field name=\\\"VAR\\\" id=\\\"@-=S@3O,n:QRq]zW8kK+\\\">Score</field>\\n  <value name=\\\"LOCATION\\\">\\n    <block type=\\\"gamelab_location_picker\\\" id=\\\"-OyFO}@bmFm.tQyEPF8L\\\">\\n      <field name=\\\"LOCATION\\\">{\\\"x\\\":200,\\\"y\\\":100}</field>\\n    </block>\\n  </value>\\n</block>\\n</xml>\",\"hint_id\":\"Hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/66ffc6dd769784ce651b7242396a6c9d/game_variables_show_2024.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"The starting value of your variable is set using this block: \\n<xml><block xmlns=\\\"https://developers.google.com/blockly/xml\\\" type=\\\"variables_set\\\" id=\\\"vfHl|%AE}ZTDYwycPNsB\\\" disabled=\\\"false\\\">\\n  <field name=\\\"VAR\\\" id=\\\"@-=S@3O,n:QRq]zW8kK+\\\">Score</field>\\n  <value name=\\\"VALUE\\\">\\n    <block type=\\\"math_number\\\" id=\\\"it,if~~;$kMchS*:VO!|\\\">\\n      <field name=\\\"NUM\\\">0</field>\\n    </block>\\n  </value>\\n</block></xml>\",\"hint_id\":\"Hint2\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/467f39f8a2ff03a5a1121922d1cb2caa/game_variables_show_2024.mp3\"}]",
-    "encrypted_examples": "7Y9SVB5MZp/aBqfoLWLRPHgP89eL8gmZ2v0udBugbEUL/wmrTAPWSOd2IC1p\n3jgAwP3dwx3vrlfJjc8Qsm7yvA==\n",
+    "encrypted_examples": "TXhUAWNUcHZgL2+gjM/cjgGvLvV1wiepFUe+R4smUYWOWAwF47D9e9Ws2yqS\nT7ldJoGIfo2zUFN2lcwUsEgufA==\n",
     "name_suffix": "_course-e",
     "instructions_icon": "fox",
+    "hint_prompt_attempts_threshold": "1",
     "preload_asset_list": null,
-    "hint_prompt_attempts_threshold": "1"
+    "video_key": "variables_sprite_lab_games"
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-17T16:37:29.820+00:00\",\"changed\":[\"cloned from \\\"game_variables_show_2024\\\"\"],\"cloned_from\":\"game_variables_show_2024\"},{\"changed_at\":\"2024-05-17 16:53:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-17T16:37:29.820+00:00\",\"changed\":[\"cloned from \\\"game_variables_show_2024\\\"\"],\"cloned_from\":\"game_variables_show_2024\"},{\"changed_at\":\"2024-05-17 16:53:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-21 15:30:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-21 15:30:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-24 17:22:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-24 17:22:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -387,10 +387,10 @@ en:
       app_lab_tutorials: "App Lab Tutorials"
       game_lab_documentation: "Game Lab Documentation"
       game_lab_tutorials: "Game Lab Tutorials"
+      music_lab_documentation: "Music Lab Documentation"
       sprite_lab_documentation: "Sprite Lab Documentation"
       sprite_lab_tutorials: "Sprite Lab Tutorials"
       web_lab_documentation: "Web Lab Documentation"
-      project_beats_documentation: "Project Beats Documentation"
       educate_overview: "Educator Overview"
       educate_elementary: "Elementary School"
       educate_middle: "Middle School"
@@ -434,6 +434,7 @@ en:
       signin: 'Sign in'
       signup: 'Create an account'
       create_account: 'Create Account'
+      create_account_low_cap: 'Create account'
       already_registered: 'Already registered?'
       pair_programming: 'Pair programming'
       team: 'Team'
@@ -463,7 +464,7 @@ en:
       minecraft_codebuilder: 'Minecraft: Code Connection'
       minecraft_designer: 'Minecraft'
       minecraft_hero: 'Minecraft Hero'
-      music: 'Project Beats'
+      music: 'Music Lab'
       playlab: 'Play Lab'
       playlab_k1: 'Play Lab (Pre-reader)'
       poetry: 'Poetry'
@@ -1421,10 +1422,20 @@ en:
     founder: "Founder, Code.org"
     your_friends: "Your Friends at Code.org"
   lti:
+    account_linking:
+      connect_button: "Connect with %{provider}"
+      connect_with: "Connect with..."
+      connect_with_email: "Connect with personal login"
+      go_back: "Go back"
+      linking_page_header: "Link your %{provider} account to your existing Code.org account"
+      linking_page_description: "Choose the sign-in method you normally use to access Code.org"
+      sign_in_and_connect: "Sign in and connect"
     create_integration_success: "Successfully created your LTI integration"
+    dynamic_registration_title: "Code.org Dynamic Registration"
     error:
       integration_exists: "Lti Integration already exists for this Client ID"
       missing_params: "Missing required param(s): School/District name, Client ID, LMS, Email"
+      missing_email: "Email is required"
       unsupported_lms_type: "Unsupported LMS platform type"
       unsupported_message_type: Unsupported LTI message type
       unsupported_message_type_desc: |
@@ -1449,6 +1460,7 @@ en:
       navigate_registration: "Back to Registration"
       lms_selector: "What LMS are you using?"
       exists_body: "It seems like your LMS is already in our system. You should be able to continue installing and using our LTI integration."
+      exists_error: "Unable to create registration: LTI tool integration already exists in our system."
       exists_header: "Looks like you're are already registered!"
       form_header: "Register Your LMS with Code.org"
       form_instructions: "Please use this form to register your Learning Management System (LMS) with Code.org. This will allow you to install our LTI integration on your LMS."
@@ -1481,3 +1493,12 @@ en:
     alt_text_with_name: "Certificate for %{student_name} for completion of %{course_name}"
     alt_text_no_name: "Certificate for completion of %{course_name}"
     one_hour_of_code: "One Hour of Code"
+  child_account:
+    parental_permission_request:
+      errors:
+        already_granted: Parental permission has already been granted
+        daily_limit_reached: The daily request limit has been reached
+        invalid_parent_email: The parent/guardian's email address is invalid
+        parent_email_is_own: A request cannot be sent to your own email address
+        resend_limit_reached: The limit for resend requests has been reached
+  not_applicable_abbreviation: "N/A"

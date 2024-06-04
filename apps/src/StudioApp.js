@@ -2764,7 +2764,7 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
   let isXml = stringIsXml(startBlocks);
 
   if (isXml) {
-    // Only used in Calc/Eval, Craft, Maze, and Artist
+    // Only used in Craft, Maze, and Artist
     if (config.forceInsertTopBlock) {
       // Adds a 'when_run' or similar block to workspace, if there isn't one.
       startBlocks = blockUtils.forceInsertTopBlock(
@@ -3019,11 +3019,6 @@ StudioApp.prototype.getFilteredUnfilledFunctionalBlock_ = function (filter) {
     var rootBlock = block.getRootBlock();
     if (!filter(rootBlock)) {
       return false;
-    }
-
-    if (block.hasUnfilledFunctionalInput()) {
-      unfilledBlock = block;
-      return true;
     }
   });
 

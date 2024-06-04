@@ -27,7 +27,7 @@
     "instructions_important": "false",
     "submittable": "false",
     "hide_share_and_remix": "true",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_if_else_editing": "false",
     "include_shared_functions": "true",
@@ -45,10 +45,11 @@
     "short_instructions": "Make your sprite grow when you click on it.",
     "encrypted_examples": "VreZszXteNvaAhoB9v159i6MlKRSxqKj2F+vkXdB7yobq1SjzLS8ONocCfYz\nW+nU11CTonkYiM7gIMjqDOlZxw==\n",
     "instructions_icon": "fox",
+    "hint_prompt_attempts_threshold": "1",
     "preload_asset_list": null,
-    "hint_prompt_attempts_threshold": "1"
+    "video_key": "csf_lots_of_sprites"
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-17T16:35:16.323+00:00\",\"changed\":[\"cloned from \\\"game_design_event_click_2024\\\"\"],\"cloned_from\":\"game_design_event_click_2024\"},{\"changed_at\":\"2024-05-17 16:58:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-17T16:35:16.323+00:00\",\"changed\":[\"cloned from \\\"game_design_event_click_2024\\\"\"],\"cloned_from\":\"game_design_event_click_2024\"},{\"changed_at\":\"2024-05-17 16:58:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-21 20:42:42 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-21 20:46:56 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-23 19:44:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-23 19:56:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"validation_code\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-23 19:58:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"validation_code\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-23 19:59:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"validation_code\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-23 20:04:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"validation_code\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-23 21:30:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"validation_code\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-24 17:16:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-24 17:28:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -57,10 +58,10 @@
       <xml xmlns="https://developers.google.com/blockly/xml">
         <block type="when_run" deletable="false" movable="false" x="16" y="16">
           <next>
-            <block type="gamelab_setBackgroundImageAs" movable="false">
+            <block type="gamelab_setBackgroundImageAs" deletable="false">
               <field name="IMG">"gradient_15"</field>
               <next>
-                <block type="gamelab_makeNewSpriteAnon" movable="false">
+                <block type="gamelab_makeNewSpriteAnon" deletable="false" movable="false">
                   <field name="ANIMATION_NAME">"game_power"</field>
                   <value name="LOCATION">
                     <block type="gamelab_location_picker" movable="false">
@@ -72,9 +73,7 @@
             </block>
           </next>
         </block>
-        <block type="gamelab_spriteClicked" deletable="false" x="13" y="220">
-          <mutation useDefaultIcon="true"/>
-          <field name="button_gamelab_spriteClicked"/>
+        <block type="gamelab_spriteClicked" deletable="false" x="39" y="205">
           <field name="CONDITION">"when"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation" deletable="false" movable="false">
@@ -1215,22 +1214,22 @@
             </block>
           </value>
         </block>
-        <block type="gamelab_setBackgroundImageAs" id="$)4_hd{uTsUZsDDzN-WO" x="64" y="341">
-          <field name="IMG">"gradient_15"</field>
-        </block>
-        <block type="gamelab_makeNewSpriteAnon" id="PKIu$+Ld/(p8rzCFaWD%" x="50" y="520">
-          <field name="ANIMATION_NAME">"game_power"</field>
-          <value name="LOCATION">
-            <block type="gamelab_location_picker" id="gI5UPJ|(-g`J;hesR(f^">
-              <field name="LOCATION">{"x":200,"y":200}</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_spriteClicked" id="[W)t,#0RbL^0`)U?U]!f" x="61" y="626">
+        <block type="gamelab_spriteClicked" id="[W)t,#0RbL^0`)U?U]!f" x="57" y="320">
           <field name="CONDITION">"when"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation" id="8b,^=ueFABE1*Efp`fMD">
               <field name="ANIMATION">"game_power"</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_setBackgroundImageAs" id="$)4_hd{uTsUZsDDzN-WO" x="54" y="447">
+          <field name="IMG">"gradient_15"</field>
+        </block>
+        <block type="gamelab_makeNewSpriteAnon" id="PKIu$+Ld/(p8rzCFaWD%" x="58" y="549">
+          <field name="ANIMATION_NAME">"game_power"</field>
+          <value name="LOCATION">
+            <block type="gamelab_location_picker" id="gI5UPJ|(-g`J;hesR(f^">
+              <field name="LOCATION">{"x":200,"y":200}</field>
             </block>
           </value>
         </block>

@@ -180,6 +180,9 @@ class ProjectsController < ApplicationController
     },
     game_design: {
       name: 'New Game Design Project'
+    },
+    pythonlab: {
+      name: 'New Python Lab Project'
     }
   }.with_indifferent_access.freeze
 
@@ -320,15 +323,24 @@ class ProjectsController < ApplicationController
   # Returns json: {channel: <encrypted-channel-token>}
   def get_or_create_for_level
     script_id = params[:script_id]
+    script_level_id = params[:script_level_id]
     level = Level.find(params[:level_id])
     user_id = params[:user_id]
 
     error_message = under_13_without_tos_teacher?(level)
     return render(status: :forbidden, json: {error: error_message}) if error_message
 
+    # If viewing another user's work, ensure that we have permission.
     if user_id
-      # If viewing another user's work, ensure that we have permission.
-      script_level = level.script_levels.find_by_script_id(script_id)
+      # If a script level ID was provided, ensure it matches the level ID.
+      if script_level_id
+        script_level = ScriptLevel.cache_find(script_level_id.to_i)
+        same_level = script_level.oldest_active_level.id == level.id
+        is_sublevel = ParentLevelsChildLevel.exists?(child_level_id: level.id, parent_level_id: script_level.oldest_active_level.id)
+        return render(status: :forbidden, json: {error: "Access denied."}) unless same_level || is_sublevel
+      else
+        script_level = level.script_levels.find_by_script_id(script_id)
+      end
       user = User.find(user_id)
       unless can?(:view_as_user, script_level, user)
         return render(status: :forbidden, json: {error: "Access denied."})
@@ -364,16 +376,6 @@ class ProjectsController < ApplicationController
 
   def weblab_footer
     render partial: 'projects/weblab_footer'
-  end
-
-  private def initial_data
-    data = {
-      name: 'Untitled Project',
-      level: polymorphic_url([params[:key].to_sym, :project_projects])
-    }
-    default_image_url = STANDALONE_PROJECTS[params[:key]][:default_image_url]
-    data[:thumbnailUrl] = default_image_url if default_image_url
-    data
   end
 
   def show
@@ -519,27 +521,6 @@ class ProjectsController < ApplicationController
     }
   end
 
-  private def uses_asset_bucket?(project_type)
-    %w(applab makerlab gamelab spritelab javalab).include? project_type
-  end
-
-  private def uses_animation_bucket?(project_type)
-    projects_that_use_animations = ['gamelab']
-    poetry_subtypes = Poetry.standalone_app_names.map {|item| item[1]}
-    spritelab_subtypes = GamelabJr.standalone_app_names.map {|item| item[1]}
-    projects_that_use_animations.concat(poetry_subtypes)
-    projects_that_use_animations.concat(spritelab_subtypes)
-    projects_that_use_animations.include?(project_type)
-  end
-
-  private def uses_file_bucket?(project_type)
-    %w(weblab).include? project_type
-  end
-
-  private def uses_starter_assets?(project_type)
-    %w(javalab applab).include? project_type
-  end
-
   def export_create_channel
     return if redirect_under_13_without_tos_teacher(@level)
     src_channel_id = params[:channel_id]
@@ -590,6 +571,51 @@ class ProjectsController < ApplicationController
     !project_validator && limited_project_gallery
   end
 
+  # Automatically catch authorization exceptions on any methods in this controller
+  # Overrides handler defined in application_controller.rb.
+  # Special for projects controller - when forbidden, redirect to home instead
+  # of returning a 403.
+  rescue_from CanCan::AccessDenied do
+    if current_user
+      # Logged in and trying to reach a forbidden page - redirect to home.
+      redirect_to '/'
+    else
+      # Not logged in and trying to reach a forbidden page - redirect to sign in.
+      authenticate_user!
+    end
+  end
+
+  private def initial_data
+    data = {
+      name: 'Untitled Project',
+      level: polymorphic_url([params[:key].to_sym, :project_projects])
+    }
+    default_image_url = STANDALONE_PROJECTS[params[:key]][:default_image_url]
+    data[:thumbnailUrl] = default_image_url if default_image_url
+    data
+  end
+
+  private def uses_asset_bucket?(project_type)
+    %w(applab makerlab gamelab spritelab javalab).include? project_type
+  end
+
+  private def uses_animation_bucket?(project_type)
+    projects_that_use_animations = ['gamelab']
+    poetry_subtypes = Poetry.standalone_app_names.map {|item| item[1]}
+    spritelab_subtypes = GamelabJr.standalone_app_names.map {|item| item[1]}
+    projects_that_use_animations.concat(poetry_subtypes)
+    projects_that_use_animations.concat(spritelab_subtypes)
+    projects_that_use_animations.include?(project_type)
+  end
+
+  private def uses_file_bucket?(project_type)
+    %w(weblab).include? project_type
+  end
+
+  private def uses_starter_assets?(project_type)
+    %w(javalab applab).include? project_type
+  end
+
   # @param iframe_embed [Boolean] Whether the project view event was via iframe.
   # @param sharing [Boolean] Whether the project view event was via share page.
   # @returns [String] A string representing the project view event type.
@@ -635,19 +661,6 @@ class ProjectsController < ApplicationController
     # If the user is on the play view '/projects/channel_id', set `response_content`.`
     if sharing == true
       view_options(responsive_content: true)
-    end
-  end
-  # Automatically catch authorization exceptions on any methods in this controller
-  # Overrides handler defined in application_controller.rb.
-  # Special for projects controller - when forbidden, redirect to home instead
-  # of returning a 403.
-  rescue_from CanCan::AccessDenied do
-    if current_user
-      # Logged in and trying to reach a forbidden page - redirect to home.
-      redirect_to '/'
-    else
-      # Not logged in and trying to reach a forbidden page - redirect to sign in.
-      authenticate_user!
     end
   end
 end

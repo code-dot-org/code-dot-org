@@ -6,6 +6,11 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {TEXT_BASED_LABS} from '@cdo/apps/lab2/types';
 const commonI18n = require('@cdo/locale');
 
+// Lab-specific messages for starting over.
+const LAB_SPECIFIC_MESSAGES: {[key: string]: string} = {
+  aichat: commonI18n.startOverAichatModelCustomizations(),
+};
+
 /**
  * Start Over dialog used in Lab2 labs.
  */
@@ -13,11 +18,17 @@ const StartOverDialog: React.FunctionComponent<BaseDialogProps> = ({
   handleConfirm,
   handleCancel,
 }) => {
-  const currentAppName = useAppSelector(
-    state => state.lab.levelProperties?.appName
-  );
+  const currentAppName =
+    useAppSelector(state => state.lab.levelProperties?.appName) || '';
+
   const isTextWorkspace =
     currentAppName && TEXT_BASED_LABS.includes(currentAppName);
+
+  const dialogMessage =
+    LAB_SPECIFIC_MESSAGES[currentAppName] ||
+    (isTextWorkspace
+      ? commonI18n.startOverWorkspaceText()
+      : commonI18n.startOverWorkspace());
 
   return (
     <div className={moduleStyles.confirmDialog}>
@@ -25,9 +36,7 @@ const StartOverDialog: React.FunctionComponent<BaseDialogProps> = ({
         {commonI18n.startOverTitle()}
       </Typography>
       <Typography semanticTag="p" visualAppearance="body-two">
-        {isTextWorkspace
-          ? commonI18n.startOverWorkspaceText()
-          : commonI18n.startOverWorkspace()}
+        {dialogMessage}
       </Typography>
       <div className={moduleStyles.buttonContainer}>
         <button

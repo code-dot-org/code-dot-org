@@ -28,7 +28,6 @@ import {
   getCurrentlyPlayingBlockIds,
   setSoundLoadingProgress,
   setUndoStatus,
-  showCallout,
   clearCallout,
   setSelectedTriggerId,
   clearSelectedTriggerId,
@@ -43,13 +42,19 @@ import {
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
 import AdvancedSequencer from '../player/sequencer/AdvancedSequencer';
 import MusicPlayerStubSequencer from '../player/sequencer/MusicPlayerStubSequencer';
-import {BlockMode, LEGACY_DEFAULT_LIBRARY, DEFAULT_LIBRARY} from '../constants';
+import {
+  BlockMode,
+  LEGACY_DEFAULT_LIBRARY,
+  DEFAULT_LIBRARY,
+  DEFAULT_PACK,
+} from '../constants';
 import {Key} from '../utils/Notes';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {isEqual} from 'lodash';
 import MusicLibrary from '../player/MusicLibrary';
 import {TRIGGER_FIELD} from '../blockly/constants';
 import MusicLabView from './MusicLabView';
+import DCDO from '@cdo/apps/dcdo';
 
 const BLOCKLY_DIV_ID = 'blockly-div';
 
@@ -98,7 +103,6 @@ class UnconnectedMusicView extends React.Component {
     isReadOnlyWorkspace: PropTypes.bool,
     updateLoadProgress: PropTypes.func,
     setUndoStatus: PropTypes.func,
-    showCallout: PropTypes.func,
     clearCallout: PropTypes.func,
     isPlayView: PropTypes.bool,
   };
@@ -281,12 +285,35 @@ class UnconnectedMusicView extends React.Component {
     this.library.setCurrentPackId(packId);
     this.props.setPackId(packId);
 
+    // Check if the user has already made changes to the code on the project level.
+    let codeChangedOnProjectLevel = false;
     if (this.getStartSources() || initialSources) {
-      let codeToLoad = this.getStartSources();
+      const startSources = this.getStartSources();
+      let codeToLoad = startSources;
       if (initialSources?.source) {
         codeToLoad = JSON.parse(initialSources.source);
+        codeChangedOnProjectLevel =
+          this.props.isProjectLevel &&
+          !isEqual(codeToLoad?.blocks, startSources?.blocks);
       }
       this.loadCode(codeToLoad);
+    }
+
+    // If the user has made changes to the code on the project level but does
+    // not have a pack ID set, assume they are using the default pack. This is
+    // specifically to handle the case where a user starts a project on a library
+    // that does not have restricted packs (and is therefore using default),
+    // and then later opens their project with a library that does have restricted packs.
+    if (
+      DCDO.get('music-lab-existing-projects-default-sounds', true) &&
+      codeChangedOnProjectLevel &&
+      !packId
+    ) {
+      this.library.setCurrentPackId(DEFAULT_PACK);
+      this.props.setPackId(DEFAULT_PACK);
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .logInfo('Setting existing project to default pack');
     }
 
     // Go ahead and compile and execute the initial song once code is loaded.
@@ -298,6 +325,23 @@ class UnconnectedMusicView extends React.Component {
         (AppConfig.getValue('show-sound-filters') === 'true' ||
           levelData?.showSoundFilters)
     );
+
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .incrementCounter('LevelLoad', [
+        {
+          name: 'Type',
+          value: this.props.isProjectLevel ? 'Project' : 'Level',
+        },
+        {
+          name: 'Mode',
+          value: this.props.isPlayView
+            ? 'Share'
+            : this.props.isReadOnlyWorkspace
+            ? 'View'
+            : 'Edit',
+        },
+      ]);
   }
 
   // Load the library and initialize the music player, if not already loaded.
@@ -724,7 +768,6 @@ const MusicView = connect(
     setPageError: pageError => dispatch(setPageError(pageError)),
     updateLoadProgress: value => dispatch(setSoundLoadingProgress(value)),
     setUndoStatus: value => dispatch(setUndoStatus(value)),
-    showCallout: id => dispatch(showCallout(id)),
     clearCallout: id => dispatch(clearCallout()),
   })
 )(UnconnectedMusicView);
