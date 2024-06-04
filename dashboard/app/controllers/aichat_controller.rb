@@ -26,7 +26,9 @@ class AichatController < ApplicationController
     locale = params[:locale] || "en"
     filter_result = ShareFiltering.find_failure(params[:newMessage][:chatMessageText], locale)
     if filter_result&.type == ShareFiltering::FailureType::PROFANITY
-      messages = [params[:newMessage].merge({status: SharedConstants::AI_INTERACTION_STATUS[:PROFANITY_VIOLATION]})]
+      messages = [
+        get_user_message(SharedConstants::AI_INTERACTION_STATUS[:PROFANITY_VIOLATION])
+      ]
 
       return {
         messages: messages,
@@ -53,7 +55,7 @@ class AichatController < ApplicationController
     filter_result = ShareFiltering.find_failure(latest_assistant_response, locale)
     if filter_result&.type == ShareFiltering::FailureType::PROFANITY
       messages = [
-        params[:newMessage].merge({status: SharedConstants::AI_INTERACTION_STATUS[:ERROR]}),
+        get_user_message(SharedConstants::AI_INTERACTION_STATUS[:ERROR]),
         {
           role: "assistant",
           status: SharedConstants::AI_INTERACTION_STATUS[:ERROR],
@@ -79,7 +81,7 @@ class AichatController < ApplicationController
     }
 
     messages = [
-      ok_user_message,
+      get_user_message(SharedConstants::AI_INTERACTION_STATUS[:OK]),
       assistant_message
     ]
     {messages: messages}
@@ -154,7 +156,7 @@ class AichatController < ApplicationController
     params[:storedMessages] + new_messages
   end
 
-  private def ok_user_message
-    params[:newMessage].merge({status: 'ok'})
+  private def get_user_message(status)
+    params[:newMessage].merge({status: status})
   end
 end
