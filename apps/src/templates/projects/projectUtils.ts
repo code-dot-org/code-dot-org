@@ -4,10 +4,7 @@ import {
   PROJECT_DEFAULT_CARD_IMAGE_OVERRIDE,
 } from './projectConstants';
 
-export const getThumbnailUrl = (
-  path: string,
-  type: keyof typeof PROJECT_DEFAULT_THUMBNAIL_IMAGE_OVERRIDE
-) =>
+export const getThumbnailUrl = (path: string, type: string) =>
   path ||
   PROJECT_DEFAULT_THUMBNAIL_IMAGE_OVERRIDE[type] ||
   PROJECT_DEFAULT_IMAGE;

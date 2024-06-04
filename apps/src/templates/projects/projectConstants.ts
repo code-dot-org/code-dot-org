@@ -51,9 +51,9 @@ export const MAX_PROJECTS_PER_CATEGORY = 100;
 
 // The project table uses the channels API to populate the personal projects
 // and the data needs to be filtered and mapped before displaying.
-export const convertChannelsToProjectData = function (projects) {
+export const convertChannelsToProjectData = function (projects: project[]) {
   // Get the ones that aren't hidden, and have a type and id.
-  let projectLists = projects.filter(
+  const projectLists = projects.filter(
     project => !project.hidden && project.id && project.projectType
   );
   return projectLists.map(project => ({
@@ -73,6 +73,24 @@ export const PROJECT_DEFAULT_CARD_IMAGE_OVERRIDE = {
   music: musicNoteProjectCardImage,
 };
 
-export const PROJECT_DEFAULT_THUMBNAIL_IMAGE_OVERRIDE = {
+export const PROJECT_DEFAULT_THUMBNAIL_IMAGE_OVERRIDE: {
+  [projectType: string]: string;
+} = {
   music: '/shared/images/fill-70x70/courses/logo_music.png',
+};
+
+// Project data from the channels API.
+type project = {
+  id: string;
+  createdAt: Date;
+  updatedAt: Date;
+  publishedAt: Date;
+  projectType: string;
+  hidden: boolean;
+  isOwner: boolean;
+  name?: string;
+  thumbnailUrl?: string;
+  level?: string;
+  labConfig?: unknown;
+  frozen?: boolean;
 };
