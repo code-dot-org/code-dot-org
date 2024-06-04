@@ -48,8 +48,11 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
     workspaceRef.current.initHeadless();
     const library = await loadLibrary(libraryName);
     MusicLibrary.setCurrent(library);
+    analyticsReporter.startSession().then(() => {
+      analyticsReporter.setUserProperties(userId, userType, signInState);
+    });
     setIsLoading(false);
-  }, [libraryName]);
+  }, [libraryName, analyticsReporter, signInState, userId, userType]);
 
   useEffect(() => {
     onMount();
@@ -114,10 +117,12 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
       setCurrentProjectId(project.id);
 
       // Report analytics.
-      analyticsReporter.onButtonClicked('play', {
+      analyticsReporter.onMiniMusicPlayerButtonClicked({
         userId,
         userType,
         signInState,
+        projectName: project.name,
+        projectChannel: project.id,
       });
     },
     [analyticsReporter, signInState, userId, userType]
