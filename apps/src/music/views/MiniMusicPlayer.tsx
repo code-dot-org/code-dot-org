@@ -1,4 +1,7 @@
-import React, {useCallback, useEffect, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
+import {AnalyticsContext} from '@cdo/apps/music/context';
 import {Channel} from '../../lab2/types';
 import MusicPlayer from '../player/MusicPlayer';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
@@ -35,15 +38,22 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
   const [currentProjectId, setCurrentProjectId] = useState<string | undefined>(
     undefined
   );
+  const {userId, userType, signInState} = useAppSelector(
+    state => state.currentUser
+  );
+  const analyticsReporter = useMemo(() => new AnalyticsReporter(), []);
 
-  // Setup library and workspace on mount
+  // Setup library, workspace, and analyticsReporter on mount
   const onMount = useCallback(async () => {
     setUpBlocklyForMusicLab();
     workspaceRef.current.initHeadless();
     const library = await loadLibrary(libraryName);
     MusicLibrary.setCurrent(library);
+    analyticsReporter.startSession().then(() => {
+      analyticsReporter.setUserProperties(userId, userType, signInState);
+    });
     setIsLoading(false);
-  }, [libraryName]);
+  }, [libraryName, analyticsReporter, userId, userType, signInState]);
 
   useEffect(() => {
     onMount();
@@ -130,72 +140,74 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
   };
 
   return (
-    <div className={moduleStyles.miniMusicPlayer}>
-      {projects.map(project => {
-        const packId = project?.labConfig?.music.packId;
-        const packDetails = packId ? getPackDetails(packId) : undefined;
+    <AnalyticsContext.Provider value={analyticsReporter}>
+      <div className={moduleStyles.miniMusicPlayer}>
+        {projects.map(project => {
+          const packId = project?.labConfig?.music.packId;
+          const packDetails = packId ? getPackDetails(packId) : undefined;
 
-        return (
-          <div
-            className={moduleStyles.entry}
-            key={project.id}
-            onClick={() => {
-              project.id === currentProjectId
-                ? onStopSong()
-                : onPlaySong(project);
-            }}
-          >
-            <div className={moduleStyles.pack}>
-              {packId && (
-                <img
-                  src={noteImage}
-                  className={moduleStyles.packImage}
-                  style={{
-                    background:
-                      packDetails?.color &&
-                      `radial-gradient(${packDetails.color}, #000`,
-                  }}
-                  alt=""
-                />
-              )}
-            </div>
+          return (
+            <div
+              className={moduleStyles.entry}
+              key={project.id}
+              onClick={() => {
+                project.id === currentProjectId
+                  ? onStopSong()
+                  : onPlaySong(project);
+              }}
+            >
+              <div className={moduleStyles.pack}>
+                {packId && (
+                  <img
+                    src={noteImage}
+                    className={moduleStyles.packImage}
+                    style={{
+                      background:
+                        packDetails?.color &&
+                        `radial-gradient(${packDetails.color}, #000`,
+                    }}
+                    alt=""
+                  />
+                )}
+              </div>
 
-            <div className={moduleStyles.control}>
-              <FontAwesomeV6Icon
-                iconName={project.id === currentProjectId ? 'stop' : 'play'}
-                iconStyle="solid"
-                className={moduleStyles.icon}
-              />
-            </div>
-
-            <div className={moduleStyles.body}>
-              <div className={moduleStyles.name}>{project.name}</div>
-              {packDetails && (
-                <div className={moduleStyles.details}>
-                  {packDetails.name} &bull; {packDetails.artist}
-                </div>
-              )}
-            </div>
-
-            <div className={moduleStyles.other}>
-              <a
-                href={`/projects/music/${project.id}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={e => e.stopPropagation()}
-                className={moduleStyles.otherLink}
-              >
+              <div className={moduleStyles.control}>
                 <FontAwesomeV6Icon
-                  iconName="arrow-up-right-from-square"
+                  iconName={project.id === currentProjectId ? 'stop' : 'play'}
                   iconStyle="solid"
                   className={moduleStyles.icon}
                 />
-              </a>
+              </div>
+
+              <div className={moduleStyles.body}>
+                <div className={moduleStyles.name}>{project.name}</div>
+                {packDetails && (
+                  <div className={moduleStyles.details}>
+                    {packDetails.name} &bull; {packDetails.artist}
+                  </div>
+                )}
+              </div>
+
+              <div className={moduleStyles.other}>
+                <a
+                  href={`/projects/music/${project.id}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={e => e.stopPropagation()}
+                  className={moduleStyles.otherLink}
+                >
+                  <FontAwesomeV6Icon
+                    iconName="arrow-up-right-from-square"
+                    iconStyle="solid"
+                    className={moduleStyles.icon}
+                  />
+                </a>
+              </div>
             </div>
-          </div>
-        );
-      })}
-    </div>
+          );
+        })}
+      </div>
+    </AnalyticsContext.Provider>
   );
 };
 
