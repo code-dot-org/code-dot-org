@@ -392,6 +392,7 @@ class ShareAllowedDialog extends React.Component {
                 </div>
                 <div className="social-buttons" style={{marginTop: 12}}>
                   <Button
+                    id="sharing-phone"
                     color={buttonColors.black}
                     type="secondary"
                     onClick={wrapShareClick(
@@ -545,18 +546,6 @@ const styles = {
     marginBottom: 0,
     marginLeft: 0,
     verticalAlign: 'top',
-  },
-  copyButton: {
-    paddingTop: 12.5,
-    paddingBottom: 12.5,
-    marginLeft: 0,
-    marginBottom: 0,
-    marginTop: 0,
-    marginRight: 16,
-    fontSize: 'large',
-  },
-  copyButtonLight: {
-    backgroundColor: color.light_purple,
   },
   thumbnail: {
     float: 'left',
