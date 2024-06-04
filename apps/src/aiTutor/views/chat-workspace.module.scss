@@ -29,7 +29,6 @@ $default-spacing: 2px;
   padding: 10px 10px;
   border-radius: 10px;
   overflow: hidden;
-  max-width: calc(100% - 92px - 1rem);
   margin-bottom: 15px;
 }
 
@@ -54,9 +53,21 @@ $default-spacing: 2px;
   margin: 5px 0 5px 0;
 }
 
-.textArea {
-  width: 80%;
+.feedbackIcons {
+  float: right;
+  height: 36px;
+  justify-content: space-between;
+  gap: 10px;
 }
+
+.aiTutorMarkdown {
+  pre, code {
+    // Color copied for consistency with bootstrap styles auto-applied to SafeMarkdown component
+    background-color: #f7f7f9;
+    color: $light_primary_700;
+  }
+}
+
 
 // Warning Modal
 .chatWarningModal {
@@ -126,25 +137,4 @@ $default-spacing: 2px;
 .bottomSection {
   display: flex;
   justify-content: flex-end;
-}
-
-.assistantMessageButtonRow .hamburgerMenuButton {
-  border: none;
-  padding: 0 10px;
-  height: 36px;
-}
-
-.assistantMessageButtonRow {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  align-items: center;
-}
-
-.aiTutorMarkdown {
-  pre {
-    // Color copied for consistency with bootstrap styles auto-applied to SafeMarkdown component
-    background-color: #f7f7f9;
-    color: $purple;
-  }
 }

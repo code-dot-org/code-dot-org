@@ -10,8 +10,28 @@ class FileBucket < BucketHelper
   end
 
   def allowed_file_type?(extension)
-    # Allow all file types recognized by Sinatra
-    Sinatra::Base.mime_type(extension)
+    # use Sinatra to get the mime_type
+    mime_type = Sinatra::Base.mime_type(extension)
+
+    # and compare it against of our allowed regex-ish strings.
+    allowed_mime_regexes = [
+      "image/",
+      "text/",
+      "audio/",
+      "video/",
+      "application/json",
+      "application/ld+json",
+      "application/pdf",
+      "application/rtf",
+    ]
+
+    allowed_mime_regexes.each do |type|
+      if Regexp.new(type).match(mime_type)
+        return true
+      end
+    end
+
+    return false
   end
 
   def get_manifest(channel_id)

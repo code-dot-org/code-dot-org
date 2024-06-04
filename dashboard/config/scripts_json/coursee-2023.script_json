@@ -32,7 +32,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2024-05-22 20:51:10 UTC",
+    "serialized_at": "2024-05-31 19:46:59 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -9987,13 +9987,6 @@
         "lesson.key": "Hello World",
         "programming_environment.name": "spritelab",
         "programming_expression.key": "gamelab_setBackgroundImage"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Hello World",
-        "programming_environment.name": "spritelab",
-        "programming_expression.key": "outbreak_layoutClusters"
       }
     }
   ],

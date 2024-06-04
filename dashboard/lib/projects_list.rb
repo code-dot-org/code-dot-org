@@ -301,7 +301,7 @@ module ProjectsList
         name: project_value['name'],
         studentName: student&.name,
         thumbnailUrl: project_value['thumbnailUrl'],
-        type: project_type(project_value['level']),
+        type: project_type(project_value['level']) || project_value['projectType'],
         updatedAt: project_value['updatedAt'],
         publishedAt: project[:published_at],
         frozen: project_value['frozen'],

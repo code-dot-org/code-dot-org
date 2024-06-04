@@ -1392,25 +1392,6 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_nil @section.code_review_expires_at
   end
 
-  private def set_up_code_review_groups
-    # create a new section to avoid extra unassigned students
-    @code_review_group_section = create(:section, user: @teacher, login_type: 'word')
-    # Create 5 students
-    @followers = []
-    5.times do |i|
-      student = create(:student, name: "student_#{i}")
-      @followers << create(:follower, section: @code_review_group_section, student_user: student)
-    end
-
-    # Create 2 code review groups
-    @group1 = create :code_review_group, section: @code_review_group_section
-    @group2 = create :code_review_group, section: @code_review_group_section
-    # put student 0 and 1 in group 1, and student 2 in group 2
-    create :code_review_group_member, follower: @followers[0], code_review_group: @group1
-    create :code_review_group_member, follower: @followers[1], code_review_group: @group1
-    create :code_review_group_member, follower: @followers[2], code_review_group: @group2
-  end
-
   test 'can toggle ai_tutor_enabled by the section teacher' do
     sign_in @teacher
     post :set_ai_tutor_enabled, params: {id: @section.id, ai_tutor_enabled: true}
@@ -1439,5 +1420,24 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     post :set_ai_tutor_enabled, params: {id: -1, ai_tutor_enabled: true}
     assert_response :forbidden
+  end
+
+  private def set_up_code_review_groups
+    # create a new section to avoid extra unassigned students
+    @code_review_group_section = create(:section, user: @teacher, login_type: 'word')
+    # Create 5 students
+    @followers = []
+    5.times do |i|
+      student = create(:student, name: "student_#{i}")
+      @followers << create(:follower, section: @code_review_group_section, student_user: student)
+    end
+
+    # Create 2 code review groups
+    @group1 = create :code_review_group, section: @code_review_group_section
+    @group2 = create :code_review_group, section: @code_review_group_section
+    # put student 0 and 1 in group 1, and student 2 in group 2
+    create :code_review_group_member, follower: @followers[0], code_review_group: @group1
+    create :code_review_group_member, follower: @followers[1], code_review_group: @group1
+    create :code_review_group_member, follower: @followers[2], code_review_group: @group2
   end
 end

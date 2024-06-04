@@ -20,24 +20,24 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const handleClose = () => {
-      reportEvent(EVENTS.CPA_PARENT_EMAIL_MODAL_CLOSED);
+      reportEvent(EVENTS.CAP_PARENT_EMAIL_MODAL_CLOSED);
     };
 
     const handleSubmit = parentalPermissionRequest => {
-      reportEvent(EVENTS.CPA_PARENT_EMAIL_MODAL_SUBMITTED, {
+      reportEvent(EVENTS.CAP_PARENT_EMAIL_MODAL_SUBMITTED, {
         consentStatus: parentalPermissionRequest.consent_status,
       });
     };
 
     const handleResend = (prevPPR, PPR) => {
-      reportEvent(EVENTS.CPA_PARENT_EMAIL_MODAL_RESEND, {
+      reportEvent(EVENTS.CAP_PARENT_EMAIL_MODAL_RESEND, {
         oldConsentStatus: prevPPR.consent_status,
         newConsentStatus: PPR.consent_status,
       });
     };
 
     const handleUpdate = (prevPPR, PPR) => {
-      reportEvent(EVENTS.CPA_PARENT_EMAIL_MODAL_UPDATED, {
+      reportEvent(EVENTS.CAP_PARENT_EMAIL_MODAL_UPDATED, {
         oldConsentStatus: prevPPR.consent_status,
         newConsentStatus: PPR.consent_status,
       });
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('parental-permission-modal-container')
     );
 
-    reportEvent(EVENTS.CPA_PARENT_EMAIL_MODAL_SHOWN);
+    reportEvent(EVENTS.CAP_PARENT_EMAIL_MODAL_SHOWN);
   };
 
   if (getScriptData('forceDisplay')) {
