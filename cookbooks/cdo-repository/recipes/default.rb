@@ -61,3 +61,15 @@ if node.chef_environment == 'staging'
     not_if {File.exist? worktree_path}
   end
 end
+
+if node.chef_environment == 'adhoc'
+  worktree_path = File.join(home_path, 'content-push')
+
+  execute 'create worktree for seeding curriculum content' do
+    command "git worktree add #{worktree_path}"
+    cwd git_path
+    user node[:user]
+    group node[:user]
+    not_if {File.exist? worktree_path}
+  end
+end
