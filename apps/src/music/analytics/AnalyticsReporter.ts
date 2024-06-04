@@ -149,6 +149,12 @@ export default class AnalyticsReporter {
     });
   }
 
+  onMiniplayerPlayButtonClicked(properties?: object) {
+    this.trackUIEvent('Miniplayer play button clicked', {
+      ...properties,
+    });
+  }
+
   onMiniPlayerButtonClicked(buttonName: string, properties?: object) {
     this.trackUIEvent('Mini-player button clicked', {
       buttonName,
