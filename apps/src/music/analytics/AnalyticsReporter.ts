@@ -149,8 +149,9 @@ export default class AnalyticsReporter {
     });
   }
 
-  onMiniMusicPlayerButtonClicked(properties?: object) {
-    this.trackUIEvent('Mini music player play button clicked', {
+  onMiniMusicPlayerButtonClicked(buttonName: string, properties: object) {
+    this.trackUIEvent('Mini music player button clicked', {
+      buttonName,
       ...properties,
     });
   }

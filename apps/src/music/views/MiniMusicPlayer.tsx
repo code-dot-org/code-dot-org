@@ -116,12 +116,11 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
       playerRef.current.playSong(sequencerRef.current.getPlaybackEvents());
       setCurrentProjectId(project.id);
 
-      // Report analytics.
-      analyticsReporter.onMiniMusicPlayerButtonClicked({
+      // Report analytics on play button.
+      analyticsReporter.onMiniMusicPlayerButtonClicked('play', {
         userId,
         userType,
         signInState,
-        projectName: project.name,
         projectChannel: project.id,
       });
     },
@@ -205,7 +204,15 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
                 href={`/projects/music/${project.id}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={e => e.stopPropagation()}
+                onClick={e => {
+                  e.stopPropagation();
+                  analyticsReporter.onButtonClicked('Open project', {
+                    userId,
+                    userType,
+                    signInState,
+                    projectChannel: project.id,
+                  });
+                }}
                 className={moduleStyles.otherLink}
               >
                 <FontAwesomeV6Icon
