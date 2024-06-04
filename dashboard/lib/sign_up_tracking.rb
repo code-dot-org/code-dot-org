@@ -81,7 +81,7 @@ module SignUpTracking
     FirehoseClient.instance.put_record(:analysis, tracking_data)
 
     Metrics::Events.log_event(
-      event_name: "#{provider}-begin-sign-up-#{result}",
+      event_name: "begin-sign-up-#{result}",
       metadata: {
         study: STUDY_NAME,
         study_group: study_group(session),
