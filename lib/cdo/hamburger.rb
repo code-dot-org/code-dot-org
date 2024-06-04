@@ -21,7 +21,6 @@ class Hamburger
   def self.get_visibility(options)
     show_teacher_options = HIDE_ALWAYS
     show_student_options = HIDE_ALWAYS
-    show_signed_out_options = HIDE_ALWAYS
     show_pegasus_options = HIDE_ALWAYS
     show_intl_about = SHOW_MOBILE
     show_help_options = SHOW_MOBILE
@@ -35,8 +34,6 @@ class Hamburger
         show_teacher_options = SHOW_ALWAYS
       when 'student'
         show_student_options = SHOW_ALWAYS
-      else
-        show_signed_out_options = SHOW_ALWAYS
       end
 
       # Regardless of user type, then they also need the pegasus
@@ -52,8 +49,6 @@ class Hamburger
         show_teacher_options = SHOW_MOBILE
       when 'student'
         show_student_options = SHOW_MOBILE
-      else
-        show_signed_out_options = SHOW_MOBILE
       end
 
       # We want to show the pegasus options.  They're in the hamburger for desktop
@@ -63,7 +58,7 @@ class Hamburger
     end
 
     # Do we show hamburger on all widths, only mobile, or not at all?
-    show_set = [show_teacher_options, show_student_options, show_signed_out_options, show_pegasus_options]
+    show_set = [show_teacher_options, show_student_options, show_pegasus_options]
     hamburger_class =
       if show_set.include? SHOW_ALWAYS
         SHOW_ALWAYS
@@ -78,7 +73,6 @@ class Hamburger
       hamburger_class: hamburger_class,
       show_teacher_options: show_teacher_options,
       show_student_options: show_student_options,
-      show_signed_out_options: show_signed_out_options,
       show_pegasus_options: show_pegasus_options,
       show_intl_about: show_intl_about,
       show_help_options: show_help_options
