@@ -1,0 +1,14 @@
+---
+title: LMS
+theme: responsive_full_width
+---
+
+%section
+  .wrapper
+    %h2.centered
+      =hoc_s("lms_page.additional_resources.heading")
+    %p.centered
+      =hoc_s("lms_page.additional_resources.desc")
+    = view :"lms/lms_additional_resources"
+
+= view :analytics_event_log_helper, event_name: AnalyticsConstants::LMS_PAGE_VISITED_EVENT
