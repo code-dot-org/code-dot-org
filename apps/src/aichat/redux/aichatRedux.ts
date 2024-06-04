@@ -175,7 +175,7 @@ export const RESET_MODEL_NOTIFICATION: ChatCompletionMessage = {
   id: getNewMessageId(),
   role: Role.MODEL_UPDATE,
   chatMessageText: 'Model customizations and model card information',
-  chatMessageSuffix: ' have been reset to default settings.',
+  chatMessageSuffix: {text: ' have been reset to default settings.'},
   status: Status.OK,
   timestamp: getCurrentTime(),
 };
@@ -240,13 +240,24 @@ export const onSaveComplete =
     }
 
     changedProperties.forEach(property => {
+      const typedProperty = property as keyof AiCustomizations;
+      const propertiesSpecificityNeeded = ['temperature', 'selectedModelId'];
+      const textSuffix = propertiesSpecificityNeeded.includes(property)
+        ? {
+            text: ' has been updated to ',
+            boldtypeText: `${currentAiCustomizations[typedProperty]}.`,
+          }
+        : {
+            text: ' has been updated.',
+          };
+
       dispatch(
         addChatMessage({
           id: getNewMessageId(),
           role: Role.MODEL_UPDATE,
           chatMessageText:
             AI_CUSTOMIZATIONS_LABELS[property as keyof AiCustomizations],
-          chatMessageSuffix: ' has been updated.',
+          chatMessageSuffix: textSuffix,
           status: Status.OK,
           timestamp: getCurrentTime(),
         })
@@ -320,17 +331,30 @@ export const submitChatContents = createAsyncThunk(
 
     // Post user content and messages to backend and retrieve assistant response.
     const startTime = Date.now();
-    const chatApiResponse = await postAichatCompletionMessage(
-      newUserMessageText,
-      currentSessionId
-        ? storedMessages.filter(
-            message => message.sessionId === currentSessionId
-          )
-        : [],
-      aiCustomizations,
-      aichatContext,
-      currentSessionId
-    );
+
+    let chatApiResponse;
+    try {
+      chatApiResponse = await postAichatCompletionMessage(
+        newUserMessageText,
+        currentSessionId
+          ? storedMessages.filter(
+              message => message.sessionId === currentSessionId
+            )
+          : [],
+        aiCustomizations,
+        aichatContext,
+        currentSessionId
+      );
+    } catch (error) {
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .logError('Error in aichat completion request', error as Error);
+
+      updateMessagesOnError(newMessage, thunkAPI.dispatch);
+
+      return;
+    }
+
     Lab2Registry.getInstance()
       .getMetricsReporter()
       .reportLoadTime('AichatModelResponseTime', Date.now() - startTime, [
@@ -373,21 +397,7 @@ export const submitChatContents = createAsyncThunk(
 
       // error state #1: model generated profanity
     } else if (chatApiResponse?.status === AichatErrorType.PROFANITY_MODEL) {
-      const assistantChatMessage: ChatCompletionMessage = {
-        id: getNewMessageId(),
-        role: Role.ASSISTANT,
-        status: Status.ERROR,
-        chatMessageText: 'error',
-        timestamp: getCurrentTimestamp(),
-      };
-      thunkAPI.dispatch(addChatMessage(assistantChatMessage));
-
-      thunkAPI.dispatch(
-        updateUserChatMessageStatus({
-          id: newMessage.id,
-          status: Status.ERROR,
-        })
-      );
+      updateMessagesOnError(newMessage, thunkAPI.dispatch);
 
       // error state #2: user message contained profanity
     } else if (chatApiResponse?.status === AichatErrorType.PROFANITY_USER) {
@@ -603,6 +613,27 @@ const allFieldsHidden = (fieldVisibilities: AichatState['fieldVisibilities']) =>
   getTypedKeys(fieldVisibilities).every(
     key => fieldVisibilities[key] === Visibility.HIDDEN
   );
+
+const updateMessagesOnError = (
+  newMessage: ChatCompletionMessage,
+  dispatch: ThunkDispatch<unknown, unknown, AnyAction>
+) => {
+  const assistantChatMessage: ChatCompletionMessage = {
+    id: getNewMessageId(),
+    role: Role.ASSISTANT,
+    status: Status.ERROR,
+    chatMessageText: 'There was an error getting a response. Please try again.',
+    timestamp: getCurrentTimestamp(),
+  };
+  dispatch(addChatMessage(assistantChatMessage));
+
+  dispatch(
+    updateUserChatMessageStatus({
+      id: newMessage.id,
+      status: Status.ERROR,
+    })
+  );
+};
 
 // Selectors
 export const selectHasFilledOutModelCard = createSelector(
