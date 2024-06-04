@@ -1,187 +1,208 @@
 @import "color";
+@import "@cdo/apps/componentLibrary/common/styles/mixins";
+@import "@cdo/apps/componentLibrary/typography/typography.module";
 
-// Checkbox common styles
-.label {
-  display: flex;
-  gap: 8px;
-  align-items: center;
+// TextField common styles
+.textField {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.125rem;
+  min-width: 18.75rem;
+  margin: 0;
 
-  i {
-    vertical-align: bottom;
-
-    &::before {
-      display: inline-block;
-      content: ' ';
-      text-align: center;
-      border: 2px solid $neutral_dark;
-      border-radius: 4px;
-    }
-  }
-
-  span {
+  input {
     margin-bottom: 0;
-  }
+    border-radius: 0.25rem;
+    border: 1px solid unset;
+    caret-color: $light_primary_500;
 
-  input[type="checkbox"] {
-    position: absolute;
-    opacity: 0;
-
-    &:checked + i::before {
-      content: "\f00c";
-      color: $neutral_white;
-      background: $light_primary_500;
-      border: 2px solid $light_primary_500;
-      border-radius: 4px;
-    }
-
-    &:indeterminate + i::before {
-      content: "\e404";
-      color: $neutral_white;
-      background: $light_primary_500;
-      border: 2px solid $light_primary_500;
-      border-radius: 4px;
-    }
-
-    // Focus styles
     &:focus-visible {
-      + i::before {
-        outline: 2px solid $light_primary_500;
-        outline-offset: 2px;
-        border-radius: 4px;
-      }
-      &:indeterminate + i::before {
-        color: $neutral_white;
-        background: $light_primary_500;
-        border: 2px solid $light_primary_500;
-      }
+      outline: 2px solid $light_primary_500;
+      outline-offset: 2px;
+      box-shadow: none;
     }
   }
 
-  // Hover styles
-  &:hover {
-    cursor: pointer;
+  .textFieldHelperSection {
+    display: flex;
+    align-items: baseline;
+    align-self: stretch;
+  }
+}
 
-    i {
-      &::before {
-        background-color: $brand_primary_light;
-      }
+// TextField colors
+.textField.textField-black, .textField.textField-gray {
+  .textFieldLabel {
+    color: $light-black;
+  }
+
+  input {
+    border-color: $light_black;
+    background: $light_white;
+
+    &::placeholder {
+      color: $light_gray_400;
     }
 
-    input[type="checkbox"] {
-      &:checked + i::before,
-      &:indeterminate + i::before {
-        color: $neutral_white;
-        background: $light_primary_700;
-        border-color: $light_primary_700;
-      }
+    &:focus-visible {
+      border-color: $light_black;
     }
   }
 
-  // Pressed styles
-  &:active {
-    i {
-      &::before {
-        background-color: $brand_primary_light;
-        border-color: $light_primary_500;
-      }
-    }
+  .textFieldHelperSection {
+    color: $light_black;
+  }
 
-    input[type="checkbox"] {
-      &:checked + i::before,
-      &:indeterminate + i::before {
-        color: $neutral_white;
-        background: $light_primary_700;
-        border-color: $light_primary_500;
-      }
-    }
+  .textFieldErrorSection {
+    color: $light_negative_500;
   }
 
   // Disabled styles
-  &:has(input[type="checkbox"]:disabled) {
-    span {
-      color: $neutral_dark20;
+  &:has(input:disabled) {
+    .textFieldLabel {
+      color: $light_gray_200;
     }
 
-    i::before {
-      border-color: $neutral_dark20;
+    input {
+      border-color: $light_gray_200;
+      color: $light_gray_200;
     }
 
-    input[type="checkbox"] {
-      &:checked + i::before,
-      &:indeterminate + i::before {
-        background: $neutral_dark20;
-        color: $neutral_white;
-      }
+    .textFieldHelperSection, .textFieldErrorSection {
+      color: $light_gray_200;
     }
+  }
 
-    &:hover {
-      cursor: not-allowed;
-      i::before {
-        background: $neutral_white;
-      }
-
-      input[type="checkbox"]:checked + i::before,
-      input[type="checkbox"]:indeterminate + i::before {
-        background: $neutral_dark20;
-        border-color: $neutral_dark20;
-      }
+  // Read Only styles
+  &:has(input:read-only) {
+    input {
+      border-color: $light_gray_200;
+      background-color: $light_gray_50;
     }
   }
 }
 
-// Sizes
-.label-xs {
-  i {
-    width: 16px;
-    height: 16px;
-  }
+.textField.textField-gray {
+  input {
+    border-color: $light_gray_400;
 
-  i::before {
-    font-size: 8px;
-    width: 12px;
-    height: 12px;
-    line-height: 12px;
+    &:focus-visible {
+      border-color: $light_gray_400;
+    }
   }
 }
 
-.label-s {
-  i {
-    width: 18px;
-    height: 18px;
+.textField.textField-white {
+  .textFieldLabel {
+    color: $light_white;
   }
 
-  i::before {
-    font-size: 9.5px;
-    width: 14px;
-    height: 14px;
-    line-height: 14px;
+  input {
+    border-color: $light_white;
+    background: $light_black;
+    color: $light_white;
+
+    &::placeholder {
+      color: $light_gray_600;
+    }
+
+    &:focus-visible {
+      border-color: $light_white;
+    }
+  }
+
+  .textFieldHelperSection, .textFieldErrorSection {
+    color: $light_white;
+  }
+
+  // Disabled styles
+  &:has(input:disabled) {
+    .textFieldLabel {
+      color: $light_gray_700;
+    }
+
+    input {
+      border-color: $light_gray_800;
+      color: $light_gray_800;
+    }
+
+    .textFieldHelperSection, .textFieldErrorSection {
+      color: $light_gray_700;
+    }
+  }
+
+  // Read Only styles
+  &:has(input:read-only) {
+    input {
+      border-color: $light_gray_200;
+      background-color: $light_gray_900;
+    }
   }
 }
 
-.label-m {
-  i {
-    width: 20px;
-    height: 20px;
+// TextField sizes
+.textField-l {
+  .textFieldLabel {
+    @include label-one;
+    margin-bottom: 0;
   }
 
-  i::before {
-    font-size: 11px;
-    width: 16px;
-    height: 16px;
-    line-height: 16px;
+  input {
+    @include body-one;
+    padding: 0.625rem 0.875rem;
+    margin-bottom: 0;
+  }
+
+  .textFieldHelperSection {
+    @include body-two;
+    margin-bottom: 0;
+    gap: 0.375rem;
   }
 }
 
-.label-l {
-  i {
-    width: 24px;
-    height: 24px;
+.textField-m {
+  .textFieldLabel {
+    @include label-two;
+    margin-bottom: 0;
   }
 
-  i::before {
-    font-size: 13px;
-    width: 20px;
-    height: 20px;
-    line-height: 20px;
+  input {
+    @include body-two;
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 0;
+
+    &::placeholder {
+      color: $light_gray_400;
+    }
+  }
+
+  .textFieldHelperSection {
+    @include body-three;
+    margin-bottom: 0;
+    gap: 0.375rem;
+  }
+}
+
+.textField-s {
+  .textFieldLabel {
+    @include label-three;
+    margin-bottom: 0;
+  }
+
+  input {
+    @include body-three;
+    padding: 0.3125rem 0.625rem;
+    margin-bottom: 0;
+
+    &::placeholder {
+      color: $light_gray_400;
+    }
+  }
+
+  .textFieldHelperSection {
+    @include body-four;
+    margin-bottom: 0;
+    gap: 0.25rem;
   }
 }
