@@ -257,7 +257,7 @@ export const isLabLoading = (state: {lab: LabState}) =>
 
 // This may depend on more factors, such as share.
 export const isReadOnlyWorkspace = (state: {lab: LabState}) => {
-  return !state.lab.channel?.isOwner;
+  return !state.lab.channel?.isOwner || !!state.lab.channel?.frozen;
 };
 
 // If there is an error present on the page.
