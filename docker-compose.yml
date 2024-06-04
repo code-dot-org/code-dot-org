@@ -1,0 +1,40 @@
+services:
+  # A Selenium server running Chrome for running UI tests locally
+  selenium:
+    container_name: selenium
+    hostname: selenium
+    image: seleniarm/standalone-chromium:latest
+    ports:
+      - "5900:5900" # The selenium direct VNC port
+      - "4444:4444" # The selenium router port
+      - "7900:7900" # The selenium NoVNC service port
+    expose:
+      - "5900" 
+      - "4444"
+      - "7900"
+    environment:
+      JAVA_OPTS: -Dwebdriver.chrome.whitelistedIps= -Dwebdriver.chrome.allowedIps=
+    shm_size: '2gb'
+
+  db:
+    container_name: db
+    hostname: db
+    image: mysql/mysql-server:8.0
+    environment:
+      MYSQL_DATABASE: 'db'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'password'
+      MYSQL_ROOT_PASSWORD: 'password'
+      MYSQL_ROOT_HOST: '%'
+    ports:
+      - "3306:3306"
+    expose:
+      - "3306"
+    volumes:
+      - ./.mysql-data:/var/lib/mysql
+    # Many default ulimits are just too high
+    # And, so, it will consume way too much memory (16GB+)
+    ulimits:
+      nofile:
+        soft: "65536"
+        hard: "65536"
