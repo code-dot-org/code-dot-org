@@ -31,6 +31,7 @@ import {DEFAULT_EXECUTION_INFO} from '@cdo/apps/lib/tools/jsinterpreter/CustomMa
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 import {blockAsXmlNode, cleanBlocks} from '../block_utils';
+import {getCodeBlocks} from '../blockly/utils';
 import {TestResults} from '../constants';
 import {
   getContainedLevelResultInfo,
@@ -893,7 +894,7 @@ Artist.prototype.execute = function (executionInfo) {
   if (this.level.editCode) {
     this.initInterpreter();
   } else {
-    let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
+    let codeBlocks = getCodeBlocks();
     if (this.studioApp_.initializationBlocks) {
       codeBlocks = this.studioApp_.initializationBlocks.concat(codeBlocks);
     }
