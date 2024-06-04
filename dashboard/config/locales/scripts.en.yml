@@ -17771,3 +17771,84 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        self-paced-foundations-unit1:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-foundations-unit1
+          title: Foundations of CS Unit 1
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-foundations-unit2:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-foundations-unit2
+          title: Foundations of CS Unit 2
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-foundations-unit3:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-foundations-unit3
+          title: Foundations of CS Unit 3
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-foundations-unit4:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-foundations-unit4
+          title: Foundations of CS Unit 4
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-foundations-unit5:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-foundations-unit5
+          title: Foundations of CS Unit 5
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-foundations-unit6:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-foundations-unit6
+          title: Foundations of CS Unit 6
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-foundations-unit1:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-foundations-unit1
+          title: Foundations of CS Unit 1
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-foundations-unit2:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-foundations-unit2
+          title: Foundations of CS Unit 2
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        gen-ai-customizing-pilot-v2:
+          lessons: {}
+          lesson_groups: {}
+          name: gen-ai-customizing-pilot-v2
+          title: Customizing Language Models
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
