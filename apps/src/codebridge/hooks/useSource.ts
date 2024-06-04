@@ -1,4 +1,4 @@
-import {useMemo, useEffect, useCallback, useRef, useState} from 'react';
+import {useMemo, useEffect, useCallback, useRef} from 'react';
 
 import header from '@cdo/apps/code-studio/header';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
@@ -21,16 +21,14 @@ export const useSource = (defaultSources: ProjectSources) => {
     state => state.lab2Project.projectSource
   );
   const source = projectSource?.source as MultiFileSource;
-  const channelId = useAppSelector(state => state.lab.channel?.id);
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const isEditingExemplarMode = getAppOptionsEditingExemplar();
   const initialSources = useInitialSources(defaultSources);
   const levelStartSource = useAppSelector(
     state => state.lab.levelProperties?.source
   );
-  const previousChannelIdRef = useRef<string | null>(null);
+  const previousLevelIdRef = useRef<number | null>(null);
   const levelId = useAppSelector(state => state.lab.levelProperties?.id);
-  const [hasSetInitialSource, setHasSetInitialSource] = useState(false);
 
   const setSource = useMemo(
     () => (newSource: MultiFileSource) => {
@@ -58,22 +56,16 @@ export const useSource = (defaultSources: ProjectSources) => {
   }, [isStartMode, isEditingExemplarMode, levelId, source]);
 
   useEffect(() => {
-    // It's possible to not have a channel id if we are in start or exemplar mode.
-    if (
-      !hasSetInitialSource ||
-      (channelId && previousChannelIdRef.current !== channelId)
-    ) {
-      // We reset the project when the channelId changes, as this means we are on a new level
-      // with a new project.
+    if (levelId && previousLevelIdRef.current !== levelId) {
+      // We reset the project when the levelId changes, as this means we are on a new level.
       if (initialSources) {
         dispatch(setAndSaveProjectSource(initialSources));
       }
-      if (channelId) {
-        previousChannelIdRef.current = channelId;
+      if (levelId) {
+        previousLevelIdRef.current = levelId;
       }
-      setHasSetInitialSource(true);
     }
-  }, [channelId, initialSources, dispatch, hasSetInitialSource]);
+  }, [initialSources, dispatch, levelId]);
 
   return {source, setSource, resetToStartSource};
 };
