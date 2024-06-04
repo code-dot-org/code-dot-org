@@ -597,7 +597,10 @@ class ScriptLevelsController < ApplicationController
     end
   end
 
-  # showing script levels by script id is no longer supported.
+  # showing script levels by script id is no longer supported. Other codepaths
+  # still need underlying helper methods to support lookup by id, so we filter
+  # out numerical ids on a per-action basis rather than removing support for
+  # ids from those methods.
   private def check_script_id_is_name
     script_id = request.params[:script_id]
     is_id = script_id.to_i.to_s == script_id.to_s
