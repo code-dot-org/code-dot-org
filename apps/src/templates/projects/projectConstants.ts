@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 
+import {Channel} from '@cdo/apps/lab2/types';
 import musicNoteProjectCardImage from '@cdo/static/music/music-note-project-card.png';
 
 export const publishedFeaturedProjectDataPropType = PropTypes.shape({
@@ -51,7 +52,7 @@ export const MAX_PROJECTS_PER_CATEGORY = 100;
 
 // The project table uses the channels API to populate the personal projects
 // and the data needs to be filtered and mapped before displaying.
-export const convertChannelsToProjectData = function (projects: Project[]) {
+export const convertChannelsToProjectData = function (projects: Channel[]) {
   // Get the ones that aren't hidden, and have a type and id.
   const projectLists = projects.filter(
     project => !project.hidden && project.id && project.projectType
@@ -79,20 +80,4 @@ export const PROJECT_DEFAULT_THUMBNAIL_IMAGE_OVERRIDE: {
   [projectType: string]: string;
 } = {
   music: '/shared/images/fill-70x70/courses/logo_music.png',
-};
-
-// Project data from the channels API.
-type Project = {
-  id: string;
-  createdAt: Date;
-  updatedAt: Date;
-  publishedAt: Date;
-  projectType: string;
-  hidden: boolean;
-  isOwner: boolean;
-  name?: string;
-  thumbnailUrl?: string;
-  level?: string;
-  labConfig?: unknown;
-  frozen?: boolean;
 };
