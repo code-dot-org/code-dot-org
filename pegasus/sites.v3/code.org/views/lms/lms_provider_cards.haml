@@ -1,0 +1,42 @@
+:ruby
+  card_list = [
+    {
+      image: "/images/lms/clever.png",
+      title: "Clever",
+      url: "https://support.code.org/hc/en-us/articles/115002716111-Setting-Up-Sections-with-Clever-Sync",
+      is_new: "false"
+    },
+    {
+      image: "/images/lms/classroom.png",
+      title: "Google Classroom",
+      url: "https://support.code.org/hc/en-us/articles/115001319312-Setting-Up-Sections-with-Google-Classroom-Sync",
+      is_new: "false"
+    },
+    {
+      image: "/images/lms/canvas.png",
+      title: "Canvas",
+      url: "/lms/canvas",
+      is_new: "true"
+    },
+    {
+      image: "/images/lms/schoology.png",
+      title: "Schoology",
+      url: "/lms/schoology",
+      is_new: "true"
+    },
+  ]
+
+.action-block__wrapper.action-block__wrapper--four-col
+  - card_list.each do |card_list|
+    .action-block.action-block--one-col.flex-space-between.white.provider-card
+      .content-wrapper
+        - if card_list[:is_new] == "true"
+          %p.new.top-right
+            =hoc_s(:new)
+        %figure
+          %img{src: card_list[:image], alt: ""}
+        .text-wrapper
+          %h4.heading-xs
+            = card_list[:title]
+      %a.link-button.has-external-link.no-margin-top{href: card_list[:url]}
+        = hoc_s(:call_to_action_learn_more)
