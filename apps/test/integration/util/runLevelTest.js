@@ -117,7 +117,9 @@ module.exports = function (testCollection, testData, dataItem, done) {
 
 const appLoaders = {
   applab: require('@cdo/apps/sites/studio/pages/init/loadApplab'),
+  calc: require('@cdo/apps/sites/studio/pages/init/loadCalc'),
   craft: require('@cdo/apps/sites/studio/pages/init/loadCraft'),
+  eval: require('@cdo/apps/sites/studio/pages/init/loadEval'),
   gamelab: require('../../util/gamelab/loadTestableGamelab'),
   maze: require('@cdo/apps/sites/studio/pages/init/loadMaze'),
   studio: require('@cdo/apps/sites/studio/pages/init/loadStudio'),
@@ -135,6 +137,7 @@ function runLevel(app, skinId, level, onAttempt, finished, testData) {
   if (level.editCode) {
     assert(window.droplet, 'droplet is in global');
   }
+  setAppSpecificGlobals(app);
 
   const unexpectedExecutionErrorMsg =
     'Unexpected execution error. ' +
@@ -214,5 +217,17 @@ function runLevel(app, skinId, level, onAttempt, finished, testData) {
       blockDefinitions: level.sharedBlocks,
       customInputTypes: options.blocksModule.customInputTypes,
     });
+  }
+}
+
+function setAppSpecificGlobals(app) {
+  // app specific hacks
+  switch (app.toLowerCase()) {
+    case 'calc':
+      global.Calc = window.Calc;
+      break;
+    case 'eval':
+      global.Eval = window.Eval;
+      break;
   }
 }
