@@ -44,8 +44,11 @@
 
       ]
     },
-    "project_template_level_name": "gen-ai-customizing-prompt-templateE"
+    "project_template_level_name": "gen-ai-customizing-prompt-templateE",
+    "display_name": "Make Your Own",
+    "bubble_choice_description": "Make the chatbot you described in the last level!",
+    "thumbnail_url": "https://images.code.org/21cd14c08ff03e807cdea984e11d139a-Lesson 3 - Level 7E - Make Your Own.png"
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-08T20:15:41.901+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-explore-L7E\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-explore-L7E\"},{\"changed_at\":\"2024-05-08 20:26:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-08 20:28:11 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-08 20:45:48 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-08T20:15:41.901+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-explore-L7E\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-explore-L7E\"},{\"changed_at\":\"2024-05-08 20:26:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-08 20:28:11 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-08 20:45:48 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-06-04 02:27:01 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>
