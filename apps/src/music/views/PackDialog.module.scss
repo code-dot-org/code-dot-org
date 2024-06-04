@@ -93,7 +93,6 @@
             margin-top: 8px;
             display: flex;
             justify-content: space-between;
-            align-items: center;
 
             &Name {
               font-size: 18px;
@@ -106,15 +105,11 @@
             }
 
             &Preview {
-              margin-right: 10px;
+              margin: 3px 6px 0 3px;
+              font-size: 18px;
 
               .preview {
                 color: $neutral_dark40;
-
-                &Playing {
-                  color: $neutral_dark70;
-                  cursor: default;
-                }
               }
             }
           }
