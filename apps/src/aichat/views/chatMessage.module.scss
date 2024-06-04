@@ -37,7 +37,7 @@
   font-size: 16px;
 }
 
-.dangerContainer {
+div.dangerContainer {
   background-color: #FBE0DD;
 }
 
@@ -50,8 +50,4 @@
 
 .inappropriateMessage {
   background-color: $lightest_red;
-}
-
-.errorMessage {
-  background-color: $lightest_yellow;
 }
