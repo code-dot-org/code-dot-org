@@ -1,4 +1,4 @@
-import {WorkspaceSvg} from 'blockly';
+import {Block, BlockSvg, WorkspaceSvg} from 'blockly';
 import _ from 'lodash';
 
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
@@ -14,6 +14,7 @@ type xmlAttribute = string | null;
 type InputTuple = [string, string, number];
 type InputCallback = () => void;
 type InputArgs = [...(InputTuple | InputCallback)[], number];
+type BlockList = [Block | BlockSvg];
 
 // Considers an attribute true only if it is explicitly set to 'true' (i.e. defaults to false if unset).
 export const FALSEY_DEFAULT = (attributeValue: xmlAttribute) =>
@@ -266,4 +267,22 @@ export function interpolateMsg(
 
   // Make the inputs inline unless there is only one input and no text follows it.
   this.setInputsInline(!msg.match(/%1\s*$/));
+}
+
+/**
+ * Retrieves the top-level Blockly blocks from the students Blockly workspace and
+ * potentially includes the top-level blocks from the hidden definition workspace.
+ *
+ * @returns {BlockList} An array of the top-level blocks.
+ */
+export function getCodeBlocks(): BlockList {
+  const codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true) as BlockList;
+  // The hidden workspace is only present in Google Blockly labs where the modal
+  // function editor is enabled.
+  if (Blockly.getHiddenDefinitionWorkspace()) {
+    const hiddenBlocks =
+      Blockly.getHiddenDefinitionWorkspace().getTopBlocks(true);
+    codeBlocks.push(...hiddenBlocks);
+  }
+  return codeBlocks;
 }
