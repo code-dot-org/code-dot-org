@@ -7,7 +7,7 @@ import i18n from '@cdo/locale';
 
 import {expect} from '../../../util/reconfiguredChai';
 
-describe('UnconnectedProgressFeedbackBanner', () => {
+describe('ProgressFeedbackBanner', () => {
   const fakeFetch = sinon.spy();
   const fakeCreate = sinon.spy();
   const defaultProps = {
