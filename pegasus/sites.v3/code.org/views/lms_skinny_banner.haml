@@ -7,7 +7,7 @@
         %h5.white
           =hoc_s('lms_page.skinny_banner.heading')
         %p.white.no-margin-bottom
-          =hoc_s('lms_page.skinny_banner.desc')
+          =hoc_s('lms_page.skinny_banner.desc', markdown: :inline, locals: {canvas: 'Canvas', schoology: 'Schoology'})
       .flex-container.justify-center.align-items-center.wrap-reverse{style: "column-gap: 5rem;"}
         %img{src:"/images/marketing/lms-integration-icons.png", alt: ""}
         %a.link-button.white{href: "/lms", target: "_blank", rel: "noopener noreferrer", "aria-label": hoc_s('admins_page_lms_call_to_action')}
