@@ -1160,6 +1160,10 @@ $default-modal-width: 640px;
     display: block;
   }
 
+  .social-buttons button {
+    margin-right: 16px;
+  }
+
   .social-buttons a {
     display: inline-block;
     background: $purple;
