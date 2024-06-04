@@ -1,3 +1,4 @@
+import {getCodeBlocks} from '../blockly/utils';
 import {TestResults, ResultType} from '../constants';
 import AppView from '../templates/AppView';
 
@@ -309,9 +310,9 @@ module.exports = class Maze {
     this.beginAttempt();
     this.prepareForExecution_();
 
-    var code = '';
+    let code = '';
     if (studioApp().isUsingBlockly()) {
-      let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
+      let codeBlocks = getCodeBlocks();
       if (studioApp().initializationBlocks) {
         codeBlocks = studioApp().initializationBlocks.concat(codeBlocks);
       }

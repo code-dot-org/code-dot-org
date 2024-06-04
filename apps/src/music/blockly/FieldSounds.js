@@ -158,6 +158,8 @@ class FieldSounds extends GoogleBlockly.Field {
   }
 
   dropdownDispose_() {
+    this.options.cancelPreviews();
+
     this.newDiv_ = null;
     this.showingEditor = false;
   }

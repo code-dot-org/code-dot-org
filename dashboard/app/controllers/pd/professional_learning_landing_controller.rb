@@ -16,11 +16,6 @@ class Pd::ProfessionalLearningLandingController < ApplicationController
       PLC_COURSE_ORDERING.index(enrollment[:courseName]) || PLC_COURSE_ORDERING.size
     end
 
-    workshops_as_participant_data = Pd::Enrollment.for_user(current_user).map do |enrollment|
-      workshop = enrollment.workshop
-      workshop.summarize_for_my_pl_page.merge({feedback_given: enrollments_with_pending_surveys.include?(enrollment)})
-    end
-
     workshops_as_facilitator = current_user.pd_workshops_facilitated
     workshops_as_facilitator_with_surveys_completed = Pd::WorkshopSurveyFoormSubmission.where(user: current_user, pd_workshop: workshops_as_facilitator).pluck(:pd_workshop_id).uniq
     workshops_as_facilitator_data = workshops_as_facilitator.map do |workshop|
@@ -36,7 +31,7 @@ class Pd::ProfessionalLearningLandingController < ApplicationController
       last_workshop_survey_course: last_enrollment_with_pending_survey.try(:workshop).try(:course),
       summarized_plc_enrollments: summarized_plc_enrollments,
       current_year_application_id: Pd::Application::TeacherApplication.find_by(user: current_user, application_year: Pd::SharedApplicationConstants::APPLICATION_CURRENT_YEAR)&.id,
-      workshops_as_participant: workshops_as_participant_data,
+      has_enrolled_in_workshop: Pd::Enrollment.for_user(current_user).any?,
       workshops_as_facilitator: workshops_as_facilitator_data,
       workshops_as_organizer: workshops_as_organizer_data,
       workshops_for_regional_partner: workshops_for_regional_partner_data,

@@ -8,6 +8,10 @@
   flex-direction: column;
   gap: 5px;
 
+  &ExtraHeight {
+    height: 340px;
+  }
+
   &Top {
     display: flex;
     justify-content: space-between;
@@ -103,6 +107,10 @@
     align-items: center;
     cursor: pointer;
 
+    &ExtraHeight {
+      padding: 6px 0;
+    }
+
     &:hover {
       background-color: $neutral_dark90;
     }
@@ -156,6 +164,10 @@
     margin-right: 10px;
     color: $neutral_dark50;
     text-align: right;
+
+    &NoMarginRight {
+      margin-right: 0;
+    }
   }
 
   .previewContainer {

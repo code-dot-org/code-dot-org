@@ -53,6 +53,7 @@ class DCDOBase < DynamicConfigBase
       'disable-try-new-progress-view-modal': DCDO.get('disable-try-new-progress-view-modal', false),
       'music-lab-existing-projects-default-sounds': DCDO.get('music-lab-existing-projects-default-sounds', true),
       'student-email-post-enabled': DCDO.get('student-email-post-enabled', false),
+      'progress-v2-metadata-enabled': DCDO.get('progress-v2-metadata-enabled', false),
     }
   end
 end

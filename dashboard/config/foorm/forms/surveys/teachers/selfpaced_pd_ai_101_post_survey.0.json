@@ -25,7 +25,7 @@
           "rateCount": 7,
           "rateMax": 7,
           "minRateDescription": "Not relevant at all",
-          "maxRateDescription": "Very relevant"
+          "maxRateDescription": "Extremely relevant"
         },
         {
           "type": "rating",

@@ -1747,6 +1747,7 @@ fil-PH:
   homepage_slot_text_link_k5: Mga kurso para sa nasa K-5 na baitang
   homepage_slot_text_link_local: Maghanap ng isang lokal na klase
   homepage_slot_text_link_middle: Middle school
+  homepage_slot_text_link_middle_and_high: Estudyante sa Gitna at Mataas na Paaralan
   homepage_slot_text_link_othercourses: Iba pang mga online na kurso
   homepage_slot_text_link_pd: Professional development
   homepage_slot_text_link_shop: Mga t-shirt, mga sombrero, & iba pa
@@ -2730,6 +2731,7 @@ fil-PH:
   user_header_applab: 'App na Lab '
   user_header_artist: 'Artista '
   user_header_create: 'Lumikha '
+  user_header_create_account_low_cap: Gumawa ng account
   user_header_dance: Dance Party
   user_header_flappy: Flappy
   user_header_gamelab: Game Lab
