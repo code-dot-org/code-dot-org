@@ -182,6 +182,7 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
       className={classNames(
         'sounds-panel-sound-row',
         styles.soundRow,
+        useSoundsPanelPreview && styles.soundRowExtraHeight,
         isSelected && styles.soundRowSelected
       )}
       onClick={onSoundClick}
@@ -218,20 +219,27 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
         </div>
       )}
       <div className={styles.soundRowRight}>
-        <div className={styles.length}>
+        <div
+          className={classNames(
+            styles.length,
+            useSoundsPanelPreview && styles.lengthNoMarginRight
+          )}
+        >
           {getLengthRepresentation(sound.length)}
         </div>
-        <div className={styles.previewContainer}>
-          <FontAwesome
-            title={undefined}
-            icon={'play-circle'}
-            className={classNames(
-              styles.preview,
-              isPlayingPreview && styles.previewPlaying
-            )}
-            onClick={onPreviewClick}
-          />
-        </div>
+        {!useSoundsPanelPreview && (
+          <div className={styles.previewContainer}>
+            <FontAwesome
+              title={undefined}
+              icon={'play-circle'}
+              className={classNames(
+                styles.preview,
+                isPlayingPreview && styles.previewPlaying
+              )}
+              onClick={onPreviewClick}
+            />
+          </div>
+        )}
       </div>
     </div>
   );
@@ -343,7 +351,14 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
 
   return (
     <FocusLock>
-      <div id="sounds-panel" className={styles.soundsPanel} aria-modal>
+      <div
+        id="sounds-panel"
+        className={classNames(
+          styles.soundsPanel,
+          useSoundsPanelPreview && styles.soundsPanelExtraHeight
+        )}
+        aria-modal
+      >
         <div id="hidden-item" tabIndex={0} role="button" />
         {showSoundFilters && (
           <div id="sounds-panel-top" className={styles.soundsPanelTop}>

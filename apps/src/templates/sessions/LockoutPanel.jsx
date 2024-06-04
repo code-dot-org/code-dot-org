@@ -98,6 +98,8 @@ export default function LockoutPanel(props) {
       <h2>
         {props.pendingEmail
           ? i18n.sessionLockoutPendingHeader()
+          : props.isPreLockoutUser
+          ? i18n.sessionLockoutNewPreLockoutAccountHeader()
           : i18n.sessionLockoutNewAccountHeader()}
       </h2>
 
@@ -112,7 +114,13 @@ export default function LockoutPanel(props) {
             {pendingPromptParts[1]}
           </p>
         )}
-        {!props.pendingEmail && <p>{i18n.sessionLockoutPrompt()}</p>}
+        {!props.pendingEmail && (
+          <p>
+            {props.isPreLockoutUser
+              ? i18n.sessionLockoutPreLockoutAccountPrompt()
+              : i18n.sessionLockoutPrompt()}
+          </p>
+        )}
 
         {/* The timezone is set to UTC to ensure that the exact date renders. */}
         <p>
@@ -236,6 +244,11 @@ LockoutPanel.propTypes = {
   pendingEmail: PropTypes.string,
   requestDate: PropTypes.instanceOf(Date),
   disallowedEmail: PropTypes.string.isRequired,
+  isPreLockoutUser: PropTypes.bool,
+};
+
+LockoutPanel.defaultProps = {
+  isPreLockoutUser: false,
 };
 
 const styles = {
