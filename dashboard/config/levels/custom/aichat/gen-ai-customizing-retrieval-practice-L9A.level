@@ -43,8 +43,11 @@
       "availableModelIds": [
 
       ]
-    }
+    },
+    "display_name": "Fan Club Chatbot",
+    "bubble_choice_description": "Create a chatbot that acts as a superfan for someone you follow on social media or who's artistic work you enjoy.",
+    "thumbnail_url": "https://images.code.org/28741d63930b7e46160952806542f2ba-Lesson 7 - Level 9A- Fan Club Chatbot.png"
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-04T02:27:13.059+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L7\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L7\"},{\"changed_at\":\"2024-05-09 05:02:40 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-04T02:27:13.059+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L7\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L7\"},{\"changed_at\":\"2024-05-09 05:02:40 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-06-04 02:31:25 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>

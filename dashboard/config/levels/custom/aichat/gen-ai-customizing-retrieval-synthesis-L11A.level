@@ -44,8 +44,11 @@
 
       ]
     },
-    "project_template_level_name": "gen-ai-customizing-retrieval-templateA"
+    "project_template_level_name": "gen-ai-customizing-retrieval-templateA",
+    "display_name": "Personal Passions",
+    "bubble_choice_description": "Has anyone ever asked you to explain a book series or show or other content that you are obsessed with and have lots of strong opinions on? Wouldn't it be nice to have a chatbot that could help with that?",
+    "thumbnail_url": "https://images.code.org/6675c8f20144cb2fb5134589e2ff5adf-Lesson 6 - Level 9A - Personal Passions and Hot Takes.png"
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-08T22:47:46.824+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-explore-L9A\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-explore-L9A\"},{\"changed_at\":\"2024-05-08 22:49:39 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-08T22:47:46.824+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-explore-L9A\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-explore-L9A\"},{\"changed_at\":\"2024-05-08 22:49:39 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-06-04 02:37:35 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>

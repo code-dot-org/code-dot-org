@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "k5-ai-data",
-    "serialized_at": "2024-05-30 20:01:47 UTC",
+    "serialized_at": "2024-06-04 15:32:26 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -41,7 +41,7 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "This lesson will introduce students to the fundamentals of Artificial Intelligence (AI) and machine learning by focusing on predictive data models. Students will get hands-on practice with reinforcement learning starting with data that has already been sorted and progressing to making predictions on their own of how to sort items on screen. In the final level, students will try their hand at sorting data on their own and will enlist a partner to predict how the items have been categorized.\n\nThis hands-on experience will be complemented by discussions on the significance of data categorization and the challenges posed by limited datasets. Students will explore a real-world example where AI predictions have been used to help humans. The lesson aims to demystify AI technology, emphasizing its pattern-based logic rather than perceiving it as magical or random.\n",
+        "overview": "This lesson will introduce students to the fundamentals of Artificial Intelligence (AI) and machine learning by focusing on predictive data models. Students will get hands-on practice with supervised and reinforcement learning. They’ll start with data that has already been sorted and progress to making predictions on their own of how to sort items on screen. In the final level, students will try their hand at sorting data on their own and will enlist a partner to predict how the items have been categorized.\n\nThis hands-on experience will be complemented by discussions on the significance of data categorization and the challenges posed by limited datasets. Students will explore a real-world example where AI predictions have been used to help humans. The lesson aims to demystify AI technology, emphasizing its pattern-based logic rather than perceiving it as magical or random.\n",
         "preparation": "- Play through the levels on your own\n- Preview the sorting activity for students by printing and cutting out the <a href=\"https://docs.google.com/document/d/1AmimDxv3luX-LyQFGnTWIEKdD370CzpYZtDQK4HyDIQ/template/preview\" target=\"_blank\">physical manipulatives</a>"
       },
       "seeding_key": {
@@ -106,6 +106,7 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "overview": "In this lesson, students will create an artifact explaining their opinion on using AI tools. They have the option to write a letter to the principal, make a speech or song, make a poster, create a Sprite Lab project, or code a poem to share their opinion. At the end of the lesson, students will reflect on what they have learned about AI over the course of the module.\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -1484,6 +1485,19 @@
       }
     },
     {
+      "name": "How AI Makes Predictions",
+      "url": "https://docs.google.com/presentation/d/16adWPsJf9kGrCZv_cdaqT2-MUr1CiWX0U5E4lPzas-g/template/preview\t",
+      "key": "how_ai_makes_predictions",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/16adWPsJf9kGrCZv_cdaqT2-MUr1CiWX0U5E4lPzas-g/export/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "how_ai_makes_predictions"
+      }
+    },
+    {
       "name": "Student Data",
       "url": "https://docs.google.com/spreadsheets/d/1t44C0ScGvgajfOEE6VE8sl7OQEJbgT1kvGDCnDgOPys/preview",
       "key": "student_data",
@@ -1563,6 +1577,12 @@
       "seeding_key": {
         "lesson.key": "Using AI Tools in School",
         "resource.key": "using_ai_tools_in_school"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "how_ai_makes_predictions"
       }
     }
   ],
