@@ -97,7 +97,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
     helpUrl: '/docs/spritelab/spritelab_adding-and-removing-behaviors',
     extensions: [
       'procedures_edit_button',
-      'procedure_caller_serialize_name',
+      'behavior_caller_serialize_name',
       'procedure_caller_get_def_mixin',
       'behavior_caller_get_def_mixin',
       'procedure_caller_var_mixin',
@@ -132,6 +132,17 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
 GoogleBlockly.Extensions.registerMutator(
   'behavior_def_mutator',
   behaviorDefMutator
+);
+
+// This extension make the NAME fields of behavior getter blocks serializable.
+GoogleBlockly.Extensions.register(
+  'behavior_caller_serialize_name',
+  function (this: ProcedureBlock) {
+    const labelField = this.getField('NAME');
+    if (labelField) {
+      labelField.SERIALIZABLE = true;
+    }
+  }
 );
 
 // This extension adds an SVG frame around behavior definition blocks.
