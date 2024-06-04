@@ -123,6 +123,17 @@ const optionsList = [
       {value: 'true', description: 'New timeline.'},
     ],
   },
+  {
+    name: 'clickable-text-with-glow',
+    type: 'radio',
+    values: [
+      {
+        value: 'false',
+        description: 'No glow for clickable text in instructions (default).',
+      },
+      {value: 'true', description: 'Glow for clickable text in instructions.'},
+    ],
+  },
 ];
 
 export default class MusicMenu extends React.Component {
