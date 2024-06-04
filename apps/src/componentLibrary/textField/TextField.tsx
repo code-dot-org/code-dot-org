@@ -1,15 +1,15 @@
-import classNames from 'classnames';
+import classnames from 'classnames';
 import React, {ChangeEvent, AriaAttributes} from 'react';
 
-import {getAriaPropsFromProps} from '@cdo/apps/componentLibrary/common/helpers';
+import {componentSizeToBodyTextSizeMap} from '@cdo/apps/componentLibrary/common/constants';
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
-import FontAwesomeV6Icon, {
-  FontAwesomeV6IconProps,
-} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+import Typography from '@cdo/apps/componentLibrary/typography';
 
 import moduleStyles from './textfield.module.scss';
 
 export interface TextFieldProps extends AriaAttributes {
+  /** TextField checked state */
+  checked: boolean;
   /** TextField onChange handler*/
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
   /** The name attribute specifies the name of an input element.
@@ -21,96 +21,59 @@ export interface TextFieldProps extends AriaAttributes {
   value?: string;
   /** TextField label */
   label?: string;
-  /** TextField helper message */
-  helperMessage?: string;
-  /** TextField helper icon */
-  helperIcon?: FontAwesomeV6IconProps;
-  /** TextField placeholder */
-  placeholder?: string;
-  /** Is TextField readOnly */
-  readOnly?: boolean;
   /** Is TextField disabled */
   disabled?: boolean;
-  /** TextField error message */
-  errorMessage?: string;
-  /** TextField custom className */
-  className?: string;
-  /** TextField color */
-  color?: 'black' | 'gray' | 'white';
+  /** Is TextField indeterminate */
+  readonly?: boolean;
+  error?: {message: string; hasError: boolean};
   /** Size of TextField */
-  size?: Exclude<ComponentSizeXSToL, 'xs'>;
+  size?: ComponentSizeXSToL;
 }
 
 /**
  * ### Production-ready Checklist:
- * * (✔) implementation of component approved by design team;
- * * (✔) has storybook, covered with stories and documentation;
- * * (✔) has tests: test every prop, every state and every interaction that's js related;
+ * * (?) implementation of component approved by design team;
+ * * (?) has storybook, covered with stories and documentation;
+ * * (?) has tests: test every prop, every state and every interaction that's js related;
  * * (see apps/test/unit/componentLibrary/TextFieldTest.jsx)
  * * (?) passes accessibility checks;
  *
- * ###  Status: ```Ready for dev```
+ * ###  Status: ```WIP```
  *
  * Design System: TextField Component.
  * Used to render a text field.
  */
 const TextField: React.FunctionComponent<TextFieldProps> = ({
   label,
+  checked,
   onChange,
   name,
   value,
-  placeholder,
   disabled = false,
-  readOnly = false,
-  helperMessage,
-  helperIcon,
-  errorMessage,
-  className,
-  color = 'black',
+  readonly = false,
+  error,
   size = 'm',
   ...rest
 }) => {
-  const ariaProps = getAriaPropsFromProps(rest);
+  const bodyTextSize = componentSizeToBodyTextSizeMap[size];
 
   return (
     <label
-      className={classNames(
-        moduleStyles.textField,
-        moduleStyles[`textField-${color}`],
-        moduleStyles[`textField-${size}`],
-        className
-      )}
+      className={classnames(moduleStyles.label, moduleStyles[`label-${size}`])}
       aria-describedby={rest['aria-describedby']}
     >
-      {label && <span className={moduleStyles.textFieldLabel}>{label}</span>}
+      {label && (
+        <Typography semanticTag="span" visualAppearance={bodyTextSize}>
+          {label}
+        </Typography>
+      )}
       <input
         type="text"
         name={name}
         value={value}
-        placeholder={placeholder}
-        readOnly={readOnly}
         disabled={disabled}
         onChange={onChange}
-        {...ariaProps}
-        aria-disabled={disabled || ariaProps['aria-disabled']}
       />
-      {!errorMessage && (helperMessage || helperIcon) && (
-        <div className={moduleStyles.textFieldHelperSection}>
-          {helperIcon && <FontAwesomeV6Icon {...helperIcon} />}
-          {helperMessage && <span>{helperMessage}</span>}
-        </div>
-      )}
-      {errorMessage && (
-        <div
-          className={classNames(
-            moduleStyles.textFieldHelperSection,
-            moduleStyles.textFieldErrorSection
-          )}
-        >
-          <FontAwesomeV6Icon iconName={'circle-exclamation'} />
-          <span>{errorMessage}</span>
-        </div>
-      )}
     </label>
   );
 };
