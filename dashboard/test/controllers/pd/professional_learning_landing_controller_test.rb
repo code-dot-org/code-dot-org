@@ -208,6 +208,7 @@ class Pd::ProfessionalLearningLandingControllerTest < ActionController::TestCase
 
     @teacher.permission = UserPermission::FACILITATOR
     workshop = create :pd_workshop, facilitators: [@teacher]
+    create :pd_workshop, :ended, facilitators: [@teacher]
     @teacher.reload
 
     load_pl_landing @teacher
@@ -222,6 +223,7 @@ class Pd::ProfessionalLearningLandingControllerTest < ActionController::TestCase
 
     @teacher.permission = UserPermission::WORKSHOP_ORGANIZER
     workshop = create :pd_workshop, organizer: @teacher
+    create :pd_workshop, :ended, organizer: @teacher
 
     load_pl_landing @teacher
 
@@ -236,6 +238,7 @@ class Pd::ProfessionalLearningLandingControllerTest < ActionController::TestCase
     regional_partner = create :regional_partner
     @teacher.regional_partners << regional_partner
     workshop = create :pd_workshop, regional_partner: regional_partner
+    create :pd_workshop, :ended, regional_partner: regional_partner
 
     load_pl_landing @teacher
 
