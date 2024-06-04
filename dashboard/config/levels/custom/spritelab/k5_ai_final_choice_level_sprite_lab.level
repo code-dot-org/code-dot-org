@@ -70,7 +70,7 @@
     ]
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-05-13T21:03:59.877+00:00\",\"changed\":[\"cloned from \\\"AI_Project_SpriteLab_emmatest\\\"\"],\"cloned_from\":\"AI_Project_SpriteLab_emmatest\"},{\"changed_at\":\"2024-05-13 21:05:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-13T21:03:59.877+00:00\",\"changed\":[\"cloned from \\\"AI_Project_SpriteLab_emmatest\\\"\"],\"cloned_from\":\"AI_Project_SpriteLab_emmatest\"},{\"changed_at\":\"2024-05-13 21:05:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-17 17:39:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

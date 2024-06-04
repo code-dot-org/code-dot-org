@@ -248,7 +248,7 @@
     "long_instructions": "## Sustainable Practice 1: Fishing Zones\n\n**Change the boat’s behavior so it stays in the fishing zone.** \n\n-   First, run the code to see the boat catch fish everywhere.\n\n-   Next, under <code style=\"color:black; background-color:#FFBD46\">when run</code>, change the <code style=\"color:black; background-color:#B3B2FB\">background</code> to underwater with zone buoy. \n\n-   Then, under the new background, add a block so the boat <code style=\"color:black; background-color:#5ED5DD\">begins fishing only in fishing zone</code>  \n\n-   Click <code style=\"color:black; background-color:#FFBD46\">Run</code> to see the boat fish only in one area!",
     "authored_hints": {
       "Hint1": "**Note**: You may have to drag some of the  <code style=\"color:black; background-color:#6AF36C\">when touches</code> code lower on your screen to fit the new blocks.",
-      "hint2": "At the top of the worskpace, connect the background block to when run.",
+      "hint2": "At the top of the workspace, connect the background block to when run.",
       "hint3": "Under the background\nconnect the begins\nfishing only in fishing\nzone"
     },
     "behavior_descriptions": {

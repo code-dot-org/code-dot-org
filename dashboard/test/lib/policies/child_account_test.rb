@@ -37,9 +37,14 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       [[:non_compliant_child, :not_U13], true],
       [[:non_compliant_child, :migrated_imported_from_clever], true],
       [[:non_compliant_child, :with_lti_auth], true],
-      [[:non_compliant_child, :with_pending_parent_permission, {created_at: '2023-06-30T23:59:59Z'}], true],
-      [[:non_compliant_child, :with_pending_parent_permission, {created_at: '2023-07-01T00:00:00Z'}], false],
+      [[:non_compliant_child, :with_pending_parent_permission, {created_at: '2023-06-30T23:59:59MST'}], true],
+      [[:non_compliant_child, :with_pending_parent_permission, {created_at: '2023-07-01T00:00:00MST'}], true],
+      [[:non_compliant_child, :with_pending_parent_permission, :before_p20_937_exception_date], true],
+      [[:non_compliant_child, :with_pending_parent_permission, :p20_937_exception_date], false],
       [[:non_compliant_child, :skip_validation, {birthday: nil}], true],
+      [[:non_compliant_child, :with_interpolated_co], true],
+      [[:non_compliant_child, :with_interpolated_colorado], true],
+      [[:non_compliant_child, :with_interpolated_wa], true],
     ]
     test_matrix.each do |traits, compliance|
       user = create(*traits)
@@ -76,20 +81,132 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       [[:student], false],
       [[:student, :U13], false],
       [[:student, :U13, :unknown_us_region], false],
-      [[:non_compliant_child, {created_at: '2023-06-29T23:59:59Z'}], true],
-      [[:non_compliant_child, {created_at: '2023-07-01T00:00:00Z'}], false],
-      [[:non_compliant_child, {created_at: '2024-06-29T23:59:59Z'}], false],
-      [[:non_compliant_child, :migrated_imported_from_clever, {created_at: '2023-06-29T23:59:59Z'}], false],
-      [[:non_compliant_child, :migrated_imported_from_clever, {created_at: '2024-06-29T23:59:59Z'}], false],
-      [[:non_compliant_child, :migrated_imported_from_google_classroom, {created_at: '2023-06-29T23:59:59Z'}], true],
-      [[:non_compliant_child, :migrated_imported_from_google_classroom, {created_at: '2024-06-29T23:59:59Z'}], true],
-      [[:non_compliant_child, :with_google_authentication_option, {created_at: '2024-06-29T23:59:59Z'}], true],
+      [[:non_compliant_child, {created_at: '2023-06-29T23:59:59MST'}], true],
+      [[:non_compliant_child, {created_at: '2024-06-29T23:59:59MST'}], false],
+      [[:non_compliant_child, {created_at: '2024-07-01T00:00:00MST'}], false],
+      [[:non_compliant_child, :migrated_imported_from_clever, {created_at: '2023-06-29T23:59:59MST'}], false],
+      [[:non_compliant_child, :migrated_imported_from_clever, {created_at: '2024-06-29T23:59:59MST'}], false],
+      [[:non_compliant_child, :migrated_imported_from_google_classroom, {created_at: '2023-06-29T23:59:59MST'}], true],
+      [[:non_compliant_child, :migrated_imported_from_google_classroom, {created_at: '2024-06-29T23:59:59MST'}], true],
+      [[:non_compliant_child, :with_google_authentication_option, {created_at: '2024-06-29T23:59:59MST'}], true],
+      # The following test cases address P20-937
+      [[:non_compliant_child, :before_p20_937_exception_date], true],
+      [[:non_compliant_child, :microsoft_v2_sso_provider, :before_p20_937_exception_date], true],
+      [[:non_compliant_child, :facebook_sso_provider, :before_p20_937_exception_date], true],
+      [[:non_compliant_child, :p20_937_exception_date], false],
+      [[:non_compliant_child, :microsoft_v2_sso_provider, :p20_937_exception_date], false],
+      [[:non_compliant_child, :facebook_sso_provider, :p20_937_exception_date], false],
     ]
+    failures = []
     test_matrix.each do |traits, compliance|
       user = create(*traits)
       actual = Policies::ChildAccount.user_predates_policy?(user)
       failure_msg = "Expected user_predates_policy?(#{traits}) to be #{compliance} but it was #{actual}"
-      assert_equal compliance, actual, failure_msg
+      failures << failure_msg if actual != compliance
+    end
+    assert failures.empty?, failures.join("\n")
+  end
+
+  describe '.pre_lockout_user?' do
+    let(:pre_lockout_user?) {Policies::ChildAccount.pre_lockout_user?(user)}
+
+    let(:user) {build_stubbed(:student, created_at: user_lockout_date.ago(1.second))}
+
+    let(:user_lockout_date) {DateTime.now}
+    let(:user_state_policy) {{lockout_date: user_lockout_date}}
+    let(:user_predates_policy?) {false}
+
+    around do |test|
+      Timecop.freeze {test.call}
+    end
+
+    before do
+      Policies::ChildAccount.stubs(:state_policy).with(user).returns(user_state_policy)
+      Policies::ChildAccount.stubs(:user_predates_policy?).with(user).returns(user_predates_policy?)
+    end
+
+    it 'returns true' do
+      _(pre_lockout_user?).must_equal true
+    end
+
+    context 'when user was created during lockout phase' do
+      before do
+        user.created_at = user_lockout_date.since(1.second)
+      end
+
+      it 'returns false' do
+        _(pre_lockout_user?).must_equal false
+      end
+    end
+
+    context 'when currently is pre lockout phase' do
+      let(:user_lockout_date) {1.second.since}
+
+      it 'returns false' do
+        _(pre_lockout_user?).must_equal false
+      end
+
+      context 'if user predates policy' do
+        let(:user_predates_policy?) {true}
+
+        it 'returns true' do
+          _(pre_lockout_user?).must_equal true
+        end
+      end
+    end
+
+    context 'when user is not affected by a state policy' do
+      let(:user_state_policy) {nil}
+
+      it 'returns false' do
+        _(pre_lockout_user?).must_equal false
+      end
+    end
+  end
+
+  describe '.locked_out?' do
+    let(:locked_out?) {Policies::ChildAccount.locked_out?(user)}
+
+    let(:user) {build_stubbed(:student)}
+
+    let(:user_lockout_date) {DateTime.now}
+    let(:user_predates_policy?) {true}
+
+    around do |test|
+      Timecop.freeze {test.call}
+    end
+
+    before do
+      Policies::ChildAccount.stubs(:lockout_date).with(user).returns(user_lockout_date)
+      Policies::ChildAccount.stubs(:user_predates_policy?).with(user).returns(user_predates_policy?)
+    end
+
+    it 'returns true' do
+      _(locked_out?).must_equal true
+    end
+
+    context 'when user does not have lockout date' do
+      let(:user_lockout_date) {nil}
+
+      it 'returns false' do
+        _(locked_out?).must_equal false
+      end
+    end
+
+    context 'when lockdown has not yet come' do
+      let(:user_lockout_date) {1.second.since}
+
+      it 'returns false' do
+        _(locked_out?).must_equal false
+      end
+
+      context 'if user does not predate policy' do
+        let(:user_predates_policy?) {false}
+
+        it 'returns true' do
+          _(locked_out?).must_equal true
+        end
+      end
     end
   end
 end

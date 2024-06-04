@@ -6,7 +6,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "long_instructions": "<img style=\"width: 40%; float: right;  margin: 10px; border: solid 2px black\" src=\"\" />\r\n\r\n# Predict (Part 1)\r\n\r\n#### .\r\n\r\n> Looking at the screenshot above, **What do you notice? What do you wonder?** Write 1 sentence for each of these. _There is no wrong answer - it's just your observation_.\r\n>\r\n> Type in your response, then press the `Run`(#FFA400) button to lock it in!",
+    "long_instructions": "<img style=\"width: 40%; float: right;  margin: 10px; border: solid 2px black\" src=\"https://images.code.org/bb09c78334acde0f7637e7e5d1177ba7-image-1715990442289.png\" />\r\n\r\n# Predict (Part 1)\r\n\r\n#### In the next few levels, we'll be able to set a different base language model to chat with. This one is called _BioMistral_ and more information is provided here.\r\n\r\n#### We'll explore more about what some of these terms mean, but for now: what do you notice about this description? What do you wonder?\r\n\r\n> Looking at the screenshot above, **What do you notice? What do you wonder?** Write 1 sentence for each of these. _There is no wrong answer - it's just your observation_.\r\n>\r\n> Type in your response, then press the `Run`(#FFA400) button to lock it in!",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 19018,
@@ -21,7 +21,7 @@
     "placeholder": "Type your answer here!"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-05-04T02:58:33.788+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-synthesis-L9\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-synthesis-L9\"},{\"changed_at\":\"2024-05-11 03:46:11 +0000\",\"changed\":[\"long_instructions\",\"optional\",\"title\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-11 03:58:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-04T02:58:33.788+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-synthesis-L9\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-synthesis-L9\"},{\"changed_at\":\"2024-05-11 03:46:11 +0000\",\"changed\":[\"long_instructions\",\"optional\",\"title\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-11 03:58:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-18 00:03:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-18 00:03:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

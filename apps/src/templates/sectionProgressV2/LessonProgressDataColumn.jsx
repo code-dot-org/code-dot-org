@@ -19,6 +19,7 @@ function LessonProgressDataColumn({
   levelProgressByStudent,
   sortedStudents,
   addExpandedLesson,
+  expandedMetadataStudentIds,
 }) {
   const lockedPerStudent = React.useMemo(
     () =>
@@ -60,12 +61,15 @@ function LessonProgressDataColumn({
             key={student.id + '.' + lesson.id}
             studentId={student.id}
             addExpandedLesson={addExpandedLesson}
+            metadataExpanded={expandedMetadataStudentIds.includes(student.id)}
           />
         ))}
       </div>
     </div>
   );
 }
+
+export const UnconnectedLessonProgressDataColumn = LessonProgressDataColumn;
 
 LessonProgressDataColumn.propTypes = {
   sortedStudents: PropTypes.arrayOf(studentShape),
@@ -77,9 +81,8 @@ LessonProgressDataColumn.propTypes = {
   ).isRequired,
   lesson: PropTypes.object.isRequired,
   addExpandedLesson: PropTypes.func.isRequired,
+  expandedMetadataStudentIds: PropTypes.array,
 };
-
-export const UnconnectedLessonProgressDataColumn = LessonProgressDataColumn;
 
 export default connect(state => ({
   lessonProgressByStudent:
@@ -90,4 +93,5 @@ export default connect(state => ({
     state.sectionProgress.studentLevelProgressByUnit[
       state.unitSelection.scriptId
     ],
+  expandedMetadataStudentIds: state.sectionProgress.expandedMetadataStudentIds,
 }))(LessonProgressDataColumn);

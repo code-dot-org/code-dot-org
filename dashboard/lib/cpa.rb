@@ -6,6 +6,9 @@ module Cpa
   ALL_USER_LOCKOUT_WARNING = 'cpa_all_user_lockout_warning'
   ALL_USER_LOCKOUT = 'cpa_all_user_lockout'
 
+  NEW_USER_LOCKOUT_DATE = DateTime.parse('2023-07-01T00:00:00MST').freeze
+  ALL_USER_LOCKOUT_DATE = DateTime.parse('2024-07-01T00:00:00MST').freeze
+
   # There are four phases for the Colorado Privacy Act:
   # 1. Nothing - nil
   # 2. New User Accounts must be compliant - 'cpa_new_user_lockout'

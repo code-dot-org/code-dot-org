@@ -1722,6 +1722,7 @@ fr-FR:
   homepage_slot_text_link_k5: Cours de la petite section à la CM2
   homepage_slot_text_link_local: Trouvez un cours près de chez vous
   homepage_slot_text_link_middle: Collège
+  homepage_slot_text_link_middle_and_high: Collège et lycée
   homepage_slot_text_link_othercourses: Autres cours en ligne
   homepage_slot_text_link_pd: Développement professionnel
   homepage_slot_text_link_shop: T-shirts, casquettes & plus
@@ -2677,6 +2678,7 @@ fr-FR:
   user_header_artist: 'Artiste '
   user_header_create: 'Créer '
   user_header_create_account: Créer un compte
+  user_header_create_account_low_cap: Créer un compte
   user_header_dance: Soirée Dansante
   user_header_flappy: Flappy
   user_header_gamelab: Labo Jeux

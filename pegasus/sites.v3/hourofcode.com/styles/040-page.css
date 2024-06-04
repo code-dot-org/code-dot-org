@@ -656,24 +656,6 @@ a.link-button.secondary.white {
   border-radius: 5px;
 }
 
-.btn-carousel-slide {
-  background: #ffa401;
-}
-.course-carousel .slide-prev, .course-carousel .slide-next {
-  background-color: #7765a1;
-}
-#stats-carousel .slide-prev > span {
-  border-right-color: #b9bf15;
-}
-#stats-carousel .slide-next > span {
-  border-left-color: #b9bf15;
-}
-.carousel-wrapper .pagination a {
-  background: var(--brand_secondary_light);
-}
-.carousel-wrapper .pagination a.selected {
-  background: var(--brand_secondary_default);
-}
 .container_nonresponsive { width: 970px; margin: 0 auto; max-width: none !important; }
 
 .lines_of_code_header {

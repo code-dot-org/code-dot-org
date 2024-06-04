@@ -10,8 +10,9 @@ question '![](https://images.code.org/8d4b0514fee6879b9e7a2fa2b0d7248f-image-171
 answer 'Sorted by **border color** ![](https://images.code.org/94f03f85356b4fc25d89001c2ed5c629-image-1715960324432.jpg)'
 
 markdown <<MARKDOWN
-###These items can be sorted in different ways. 
-Match each way of sorting to the correct label.
+###These items can be sorted in different ways. Match each way of sorting to the correct label.
+
+
 MARKDOWN
 
 teacher_markdown <<MARKDOWN

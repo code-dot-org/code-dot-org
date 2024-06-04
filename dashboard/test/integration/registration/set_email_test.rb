@@ -300,66 +300,6 @@ module RegistrationsControllerTests
       assert_includes response.body, 'Email has already been taken'
     end
 
-    private def can_edit_password_with_password(user, current_password)
-      new_password = 'newpassword'
-
-      sign_in user
-      patch '/users/email', as: :json, params: {
-        user: {
-          password: new_password,
-          password_confirmation: new_password,
-          current_password: current_password
-        }
-      }
-
-      user = user.reload
-      user.valid_password? new_password
-    end
-
-    private def can_edit_email_without_password(user)
-      new_email = 'new@example.com'
-
-      sign_in user
-      patch '/users/email', as: :json, params: {user: {email: new_email}}
-
-      user = user.reload
-      user.email == new_email || user.hashed_email == User.hash_email(new_email)
-    end
-
-    private def can_edit_email_with_password(user, current_password)
-      new_email = 'new@example.com'
-
-      sign_in user
-      patch '/users/email', as: :json, params: {
-        user: {email: new_email, current_password: current_password}
-      }
-
-      user = user.reload
-      user.email == new_email || user.hashed_email == User.hash_email(new_email)
-    end
-
-    private def can_edit_hashed_email_without_password(user)
-      new_hashed_email = '729980b94e1439aeed40122476b0f695'
-
-      sign_in user
-      patch '/users/email', as: :json, params: {user: {hashed_email: new_hashed_email}}
-
-      user = user.reload
-      user.hashed_email == new_hashed_email
-    end
-
-    private def can_edit_hashed_email_with_password(user, current_password)
-      new_hashed_email = '729980b94e1439aeed40122476b0f695'
-
-      sign_in user
-      patch '/users/email', as: :json, params: {
-        user: {hashed_email: new_hashed_email, current_password: current_password}
-      }
-
-      user = user.reload
-      user.hashed_email == new_hashed_email
-    end
-
     #
     # Tests for migrated users
     #
@@ -529,6 +469,66 @@ module RegistrationsControllerTests
       assert_response :unprocessable_entity
       assert_includes assigns(:user).errors.full_messages, 'Email has already been taken'
       assert_includes response.body, 'Email has already been taken'
+    end
+
+    private def can_edit_password_with_password(user, current_password)
+      new_password = 'newpassword'
+
+      sign_in user
+      patch '/users/email', as: :json, params: {
+        user: {
+          password: new_password,
+          password_confirmation: new_password,
+          current_password: current_password
+        }
+      }
+
+      user = user.reload
+      user.valid_password? new_password
+    end
+
+    private def can_edit_email_without_password(user)
+      new_email = 'new@example.com'
+
+      sign_in user
+      patch '/users/email', as: :json, params: {user: {email: new_email}}
+
+      user = user.reload
+      user.email == new_email || user.hashed_email == User.hash_email(new_email)
+    end
+
+    private def can_edit_email_with_password(user, current_password)
+      new_email = 'new@example.com'
+
+      sign_in user
+      patch '/users/email', as: :json, params: {
+        user: {email: new_email, current_password: current_password}
+      }
+
+      user = user.reload
+      user.email == new_email || user.hashed_email == User.hash_email(new_email)
+    end
+
+    private def can_edit_hashed_email_without_password(user)
+      new_hashed_email = '729980b94e1439aeed40122476b0f695'
+
+      sign_in user
+      patch '/users/email', as: :json, params: {user: {hashed_email: new_hashed_email}}
+
+      user = user.reload
+      user.hashed_email == new_hashed_email
+    end
+
+    private def can_edit_hashed_email_with_password(user, current_password)
+      new_hashed_email = '729980b94e1439aeed40122476b0f695'
+
+      sign_in user
+      patch '/users/email', as: :json, params: {
+        user: {hashed_email: new_hashed_email, current_password: current_password}
+      }
+
+      user = user.reload
+      user.hashed_email == new_hashed_email
     end
   end
 end

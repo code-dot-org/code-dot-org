@@ -7,7 +7,7 @@
   "user_id": 4,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Explore a Chatbot Round 2\r\n\r\nThis chatbot now has additional information you can view, called the **Model Card**. This displays additional information for you, the user, about how the chatbot works.\r\n\r\n### Do This\r\n\r\n1) Read the model card to learn more about how the chatbot works\r\n2) With this new information: try to have a successful conversation with the chatbot\r\n\r\nTest the chatbot! Have a conversation with at least 4 messages, then press the `Continue`(#7435b2) button!",
+    "long_instructions": "## Explore a Chatbot Round 2\r\n\r\nThis chatbot now has additional information you can view, called the **Model Card**. This displays additional information for you, the user, about how the chatbot works.\r\n\r\n### Do This\r\n\r\n1) Read the model card to learn more about how the chatbot works\r\n2) With this new information: try to have a successful conversation with the chatbot\r\n\r\nTest the chatbot! Have a conversation with at least 4 messages, then press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!",
     "system_prompt": "deprecated",
     "bot_title": "deprecated",
     "bot_description": "deprecated",
@@ -48,6 +48,6 @@
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-06T18:04:54.577+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-intro-template\\\"\"],\"cloned_from\":\"gen-ai-customizing-intro-template\"},{\"changed_at\":\"2024-05-06 18:10:37 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-06 22:41:54 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-06 22:43:36 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-06T18:04:54.577+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-intro-template\\\"\"],\"cloned_from\":\"gen-ai-customizing-intro-template\"},{\"changed_at\":\"2024-05-06 18:10:37 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-06 22:41:54 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-06 22:43:36 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-21 15:45:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>

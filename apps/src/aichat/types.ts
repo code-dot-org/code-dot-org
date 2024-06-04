@@ -8,11 +8,17 @@ export type ChatCompletionMessage = {
   role: Role;
   chatMessageText: string;
   status: AichatInteractionStatusValue;
+  chatMessageSuffix?: ChatMessageSuffix;
   timestamp?: string;
   // sessionId is the Rails-side identifier for the logging session to which this message belongs.
   // It can be missing a) if the session has been reset because a model customization has changed (or chat history has been reset),
   // or for model update messages that do not need to be sent to the server.
   sessionId?: number;
+};
+
+type ChatMessageSuffix = {
+  text: string;
+  boldtypeText?: string;
 };
 
 export type AichatContext = {
@@ -26,6 +32,7 @@ export enum Role {
   USER = 'user',
   SYSTEM = 'system',
   MODEL_UPDATE = 'update',
+  ERROR_NOTIFICATION = 'error_notification',
 }
 
 export enum ViewMode {

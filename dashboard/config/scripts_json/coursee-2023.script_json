@@ -32,7 +32,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2024-03-15 20:25:03 UTC",
+    "serialized_at": "2024-05-31 19:46:59 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -9954,7 +9954,41 @@
     }
   ],
   "lessons_programming_expressions": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Hello World",
+        "programming_environment.name": "spritelab",
+        "programming_expression.key": "codestudio_variableName"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Hello World",
+        "programming_environment.name": "spritelab",
+        "programming_expression.key": "gamelab_addBehaviorSimple"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Hello World",
+        "programming_environment.name": "spritelab",
+        "programming_expression.key": "gamelab_allSpritesWithAnimation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Hello World",
+        "programming_environment.name": "spritelab",
+        "programming_expression.key": "gamelab_locationMouse"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Hello World",
+        "programming_environment.name": "spritelab",
+        "programming_expression.key": "gamelab_setBackgroundImage"
+      }
+    }
   ],
   "objectives": [
     {

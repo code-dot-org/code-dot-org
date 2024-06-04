@@ -21,4 +21,5 @@ export const componentSizeToBodyTextSizeMap: {
 export const dropdownColors: {[key in DropdownColor]: DropdownColor} = {
   white: 'white',
   black: 'black',
+  gray: 'gray',
 };

@@ -29,6 +29,7 @@ const logViolationDetails = (response: OpenaiChatCompletionMessage) => {
   });
   MetricsReporter.logWarning({
     event: MetricEvent.AI_TUTOR_CHAT_PROFANITY_PII_VIOLATION,
+    content: response.flagged_content,
   });
 };
 

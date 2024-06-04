@@ -28,6 +28,16 @@ module BlocklyHelpers
         "$(\"[#{id_selector}='#{from}']\").simulate( 'drag', {justDrag: true, handle: 'corner', dx: drag_dx + #{target_dx}, dy: drag_dy + #{target_dy}, moves: 5});"
   end
 
+  def get_indexed_blockly_draggable_selector(index)
+    ".blocklyDraggable:visible:eq(#{index - 1})"
+  end
+
+  def drag_indexed_block_to_offset(block_selector, dx, dy)
+    target_selector = block_selector # Using the same block as target for relative drag
+    code = generate_selector_drag_code(block_selector, target_selector, dx.to_i, dy.to_i)
+    @browser.execute_script(code)
+  end
+
   def generate_offset_code(selector)
     # Only get offset for non-hidden elements. We have to check the parent tree
     # for any hidden parents, because blocks will not be "hidden" per jquery's logic

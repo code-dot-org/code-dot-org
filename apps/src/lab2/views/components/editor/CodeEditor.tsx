@@ -7,6 +7,7 @@ import {editorConfig} from './editorConfig';
 import {darkMode as darkModeTheme} from './editorThemes';
 import {autocompletion} from '@codemirror/autocomplete';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import moduleStyles from './code-editor.module.scss';
 
 interface CodeEditorProps {
   onCodeChange: (code: string) => void;
@@ -83,9 +84,13 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   }, [startCode, editorView, channelId]);
 
   return (
-    <div id="code-editor">
-      <div ref={editorRef} className={classNames('codemirror-container')} />;
-    </div>
+    <div
+      ref={editorRef}
+      className={classNames(
+        'codemirror-container',
+        moduleStyles.codeEditorContainer
+      )}
+    />
   );
 };
 

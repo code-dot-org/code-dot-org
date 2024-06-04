@@ -1128,8 +1128,8 @@ end
 # Send an asynchronous XmlHttpRequest from the browser.
 def browser_request(url:, method: 'GET', headers: {}, body: nil, code: 200, tries: 3)
   if body
-    headers['Content-Type'] = 'application/x-www-form-urlencoded'
-    body = "'#{body.to_param}'" if body
+    headers['Content-Type'] = 'application/json'
+    body = "'#{body.to_json}'"
   end
 
   js = <<~JS

@@ -1704,6 +1704,7 @@ es-ES:
   homepage_slot_text_link_k5: Cursos para los grados K-5
   homepage_slot_text_link_local: Busca una clase local
   homepage_slot_text_link_middle: Secundaria
+  homepage_slot_text_link_middle_and_high: Escuela secundaria
   homepage_slot_text_link_othercourses: Otros cursos en línea
   homepage_slot_text_link_pd: Desarrollo profesional
   homepage_slot_text_link_shop: Camisetas, gorras y más
@@ -2671,6 +2672,7 @@ es-ES:
   user_header_artist: 'Artista '
   user_header_create: 'Crear '
   user_header_create_account: Crear una cuenta
+  user_header_create_account_low_cap: Crear cuenta
   user_header_dance: Fiesta de Baile
   user_header_flappy: Flappy
   user_header_gamelab: Laboratorio de Juegos

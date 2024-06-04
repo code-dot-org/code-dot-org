@@ -1,30 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import weblabI18n from '@cdo/weblab/locale';
-import consoleApi from '../consoleApi';
-import WebLabView from './WebLabView';
+import {Provider} from 'react-redux';
+
+import project from '@cdo/apps/code-studio/initApp/project';
+import {queryParams} from '@cdo/apps/code-studio/utils';
+import {FatalErrorType} from '@cdo/apps/weblab/constants';
 import {
   DisallowedHtmlWarningDialog,
   FatalErrorDialog,
   ResetSuccessDialog,
   UploadErrorDialog,
 } from '@cdo/apps/weblab/dialogs/';
-import {Provider} from 'react-redux';
-import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
-import dom from '../dom';
-import reducers from './reducers';
-import * as actions from './actions';
-var filesApi = require('@cdo/apps/clientApi').files;
-var assetListStore = require('../code-studio/assets/assetListStore');
-import project from '@cdo/apps/code-studio/initApp/project';
-import {getStore} from '../redux';
-import {TestResults} from '../constants';
-import {FatalErrorType} from '@cdo/apps/weblab/constants';
-import {queryParams} from '@cdo/apps/code-studio/utils';
-import {reload} from '../utils';
-import firehoseClient from '../lib/util/firehose';
+import weblabI18n from '@cdo/weblab/locale';
+
 import {getCurrentId} from '../code-studio/initApp/project';
+import consoleApi from '../consoleApi';
+import {TestResults} from '../constants';
+import dom from '../dom';
+import firehoseClient from '../lib/util/firehose';
 import logToCloud from '../logToCloud';
+import {getStore} from '../redux';
+import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
+import {reload} from '../utils';
+
+import * as actions from './actions';
+import reducers from './reducers';
+import WebLabView from './WebLabView';
+
+var filesApi = require('@cdo/apps/clientApi').files;
+
+var assetListStore = require('../code-studio/assets/assetListStore');
 
 export const WEBLAB_FOOTER_HEIGHT = 30;
 

@@ -23,11 +23,11 @@ theme: responsive_full_width
 %section.bg-neutral-light
   .wrapper.centered
     %h2=hoc_s("music_lab.tools_page.glance.heading")
-    = view :"tools/tools_glance", ages: hoc_s("music_lab.tools_page.glance.ages"), level: hoc_s("music_lab.tools_page.glance.level"), make: hoc_s("music_lab.tools_page.glance.make"), devices: hoc_s("music_lab.tools_page.glance.devices"), browsers: hoc_s("music_lab.tools_page.glance.browsers"), languages: "العربية, Español (España), Español (LATAM), Filipino, Français, हिन्दी, Bahasa Indonesia, Italiano, 日本語, 한국어, فارسی, Polski, Português (Brasil), Português (Portugal), Slovenčina, ภาษาไทย, Türkçe, Tiếng Việt, 繁體字", accessibility: hoc_s("music_lab.tools_page.glance.accessibility")
-    %p.body-two
-      =hoc_s("music_lab.tools_page.glance.teachers_guide_desc")
+    = view :"tools/tools_glance", ages: hoc_s("music_lab.tools_page.glance.ages"), level: hoc_s("music_lab.tools_page.glance.level"), make: hoc_s("music_lab.tools_page.glance.make"), devices: hoc_s("music_lab.tools_page.glance.devices"), browsers: hoc_s("music_lab.tools_page.glance.browsers"), languages: "العربية, Español (España), Español (LATAM), Filipino, Français, हिन्दी, Bahasa Indonesia, Italiano, 日本語, 한국어, فارسی, Polski, Português (Brasil), Português (Portugal), Slovenčina, ภาษาไทย, Türkçe, Tiếng Việt, 繁體字", accessibility: nil
+    %p.body-two.wrap-pretty
+      =hoc_s("music_lab.tutorial.desc")
     %a.link-button.secondary{href: CDO.studio_url("/s/music-tutorial-2024")}
-      =hoc_s("music_lab.button.get_teachers_guide")
+      =hoc_s("music_lab.tutorial.button")
 
 %section.student-projects
   .wrapper

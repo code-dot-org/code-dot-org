@@ -1716,6 +1716,7 @@ es-MX:
   homepage_slot_text_link_k5: Cursos de Kinder a 5to básico
   homepage_slot_text_link_local: Encuentra una clase local
   homepage_slot_text_link_middle: Escuela secundaria
+  homepage_slot_text_link_middle_and_high: Escuela secundaria
   homepage_slot_text_link_othercourses: Otros cursos en línea
   homepage_slot_text_link_pd: Desarrollo profesional
   homepage_slot_text_link_shop: Camisetas, sombreros y más
@@ -2692,6 +2693,7 @@ es-MX:
   user_header_artist: 'Artista '
   user_header_create: 'Crear '
   user_header_create_account: Crear cuenta
+  user_header_create_account_low_cap: Crear cuenta
   user_header_dance: Fiesta de baile
   user_header_flappy: Flappy
   user_header_gamelab: Laboratorio de juegos

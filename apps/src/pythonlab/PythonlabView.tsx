@@ -22,18 +22,12 @@ const defaultProject: ProjectSources = {
         name: MAIN_PYTHON_FILE,
         language: 'py',
         contents: 'print("Hello world!")',
-        folderId: '1',
+        folderId: '0',
         active: true,
         open: true,
       },
     },
-    folders: {
-      '1': {
-        id: '1',
-        name: 'src',
-        parentId: '0',
-      },
-    },
+    folders: {},
   },
 };
 
@@ -44,7 +38,7 @@ const defaultConfig: ConfigType = {
   leftNav: [
     {
       icon: 'fa-square-check',
-      component: 'Instructions',
+      component: 'info-panel',
     },
     {
       icon: 'fa-file',
@@ -67,12 +61,13 @@ const defaultConfig: ConfigType = {
       action: () => window.alert('You are already on the file browser'),
     },
   ],
-  gridLayoutRows: '1fr 1fr 1fr',
-  gridLayoutColumns: '300px auto',
+  gridLayoutRows: '1fr 1fr 1fr 48px',
+  gridLayoutColumns: '300px minmax(0, 1fr)',
   gridLayout: `
-    "instructions workspace"
+    "info-panel workspace"
     "file-browser workspace"
     "file-browser console"
+    "file-browser control-buttons"
   `,
 };
 
