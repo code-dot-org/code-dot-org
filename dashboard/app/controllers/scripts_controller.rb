@@ -264,7 +264,10 @@ class ScriptsController < ApplicationController
   private def get_unit_by_name
     unit_id = params[:id]
 
-    # showing scripts by id is no longer supported.
+    # Showing scripts by id is no longer supported. Other codepaths still need
+    # get_without_cache and get_from_cache to support lookup by id, so we filter
+    # out numerical ids here rather than removing support for them from those
+    # methods.
     is_id = unit_id.to_i.to_s == unit_id.to_s
     raise ActiveRecord::RecordNotFound if is_id
 
