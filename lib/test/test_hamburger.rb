@@ -138,7 +138,7 @@ class HamburgerTest < Minitest::Test
 
   def test_hamburger_content_nobody
     contents = Hamburger.get_hamburger_contents({level: nil, script_level: nil, user_type: nil, language: "en"})
-    assert_includes_id contents[:entries], "stats"
+    assert_includes_id contents[:entries], "learn"
   end
 
   def test_hamburger_content_nolevel
@@ -172,6 +172,6 @@ class HamburgerTest < Minitest::Test
 
   def test_header_content_nobody_nonen
     contents = Hamburger.get_header_contents({user_type: nil, language: "fr"})
-    assert_includes_id contents, "stats"
+    assert_includes_id contents, "header-districts"
   end
 end
