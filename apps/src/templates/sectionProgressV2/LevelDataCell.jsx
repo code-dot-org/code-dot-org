@@ -156,11 +156,19 @@ function LevelDataCell({
     return (
       <div className={styles.lessonDataCellExpanded}>
         {levelCellUnexpanded}
-        <div className={classNames(styles.gridBox, styles.gridBoxMetadata)}>
-          {formatTimeSpent(studentLevelProgress)}
+        <div
+          className={classNames(styles.gridBox, styles.gridBoxMetadata, {
+            [styles.gridBoxChoiceSubLevel]: level.parentLevelId !== undefined,
+          })}
+        >
+          {!level.parentLevelId && formatTimeSpent(studentLevelProgress)}
         </div>
-        <div className={classNames(styles.gridBox, styles.gridBoxMetadata)}>
-          {formatLastUpdated(studentLevelProgress)}
+        <div
+          className={classNames(styles.gridBox, styles.gridBoxMetadata, {
+            [styles.gridBoxChoiceSubLevel]: level.parentLevelId !== undefined,
+          })}
+        >
+          {!level.parentLevelId && formatLastUpdated(studentLevelProgress)}
         </div>
       </div>
     );
