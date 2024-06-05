@@ -91,7 +91,7 @@ export default class AnalyticsReporter {
     });
   }
 
-  async startSession() {
+  async startSession(sessionType: 'miniPlayer' | 'project' = 'project') {
     // Capture start time before making init call
     this.sessionStartTime = Date.now();
 
@@ -99,7 +99,9 @@ export default class AnalyticsReporter {
       await this.initialize();
       setSessionId(this.sessionStartTime);
 
-      this.log(`Session start. Session ID: ${this.sessionStartTime}`);
+      this.log(
+        `Session start. Session ID: ${this.sessionStartTime} Session type: ${sessionType}`
+      );
       this.sessionInProgress = true;
     } catch (error) {
       const message = error instanceof Error ? error.message : String(error);
@@ -144,13 +146,6 @@ export default class AnalyticsReporter {
 
   onButtonClicked(buttonName: string, properties?: object) {
     this.trackUIEvent('Button clicked', {
-      buttonName,
-      ...properties,
-    });
-  }
-
-  onMiniMusicPlayerButtonClicked(buttonName: string, properties: object) {
-    this.trackUIEvent('Mini music player button clicked', {
       buttonName,
       ...properties,
     });

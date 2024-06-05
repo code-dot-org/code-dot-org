@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
 import {Channel} from '../../lab2/types';
@@ -33,6 +33,7 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
   );
   const sequencerRef = useRef<Simple2Sequencer>(new Simple2Sequencer());
   const sourcesStoreRef = useRef<SourcesStore>(new RemoteSourcesStore());
+  const analyticsReporter = useRef<AnalyticsReporter>(new AnalyticsReporter());
   const [isLoading, setIsLoading] = useState(true);
   const [currentProjectId, setCurrentProjectId] = useState<string | undefined>(
     undefined
@@ -40,7 +41,6 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
   const {userId, userType, signInState} = useAppSelector(
     state => state.currentUser
   );
-  const analyticsReporter = useMemo(() => new AnalyticsReporter(), []);
 
   // Setup library and workspace, and analyticsReporter on mount
   const onMount = useCallback(async () => {
@@ -49,8 +49,12 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
     const library = await loadLibrary(libraryName);
     MusicLibrary.setCurrent(library);
     setIsLoading(false);
-    analyticsReporter.startSession().then(() => {
-      analyticsReporter.setUserProperties(userId, userType, signInState);
+    analyticsReporter.current.startSession('miniPlayer').then(() => {
+      analyticsReporter.current.setUserProperties(
+        userId,
+        userType,
+        signInState
+      );
     });
   }, [analyticsReporter, libraryName, signInState, userId, userType]);
 
@@ -117,14 +121,11 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
       setCurrentProjectId(project.id);
 
       // Report analytics on play button.
-      analyticsReporter.onMiniMusicPlayerButtonClicked('play', {
-        userId,
-        userType,
-        signInState,
-        projectChannel: project.id,
+      analyticsReporter.current.onButtonClicked('mini-player-play', {
+        channelId: project.id,
       });
     },
-    [analyticsReporter, signInState, userId, userType]
+    [analyticsReporter]
   );
 
   const onStopSong = useCallback(async () => {
@@ -206,12 +207,12 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
                 rel="noopener noreferrer"
                 onClick={e => {
                   e.stopPropagation();
-                  analyticsReporter.onButtonClicked('Open project', {
-                    userId,
-                    userType,
-                    signInState,
-                    projectChannel: project.id,
-                  });
+                  analyticsReporter.current.onButtonClicked(
+                    'mini-player-open-project',
+                    {
+                      channelId: project.id,
+                    }
+                  );
                 }}
                 className={moduleStyles.otherLink}
               >
