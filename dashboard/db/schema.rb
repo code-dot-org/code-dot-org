@@ -317,8 +317,8 @@ ActiveRecord::Schema.define(version: 2024_05_22_163806) do
     t.datetime "deleted_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.virtual "active", type: :boolean, as: "if(isnull(`deleted_at`),TRUE,NULL)"
-    t.virtual "open", type: :boolean, as: "if(isnull(`closed_at`),TRUE,NULL)"
+    t.virtual "active", type: :boolean, as: "if((`deleted_at` is null),true,NULL)"
+    t.virtual "open", type: :boolean, as: "if((`closed_at` is null),true,NULL)"
     t.index ["project_id", "deleted_at"], name: "index_code_reviews_on_project_id_and_deleted_at"
     t.index ["user_id", "project_id", "open", "active"], name: "index_code_reviews_unique", unique: true
     t.index ["user_id", "script_id", "project_level_id", "closed_at", "deleted_at"], name: "index_code_reviews_for_peer_lookup"
@@ -1667,7 +1667,7 @@ ActiveRecord::Schema.define(version: 2024_05_22_163806) do
     t.index ["project_id"], name: "index_project_use_datablock_storages_on_project_id"
   end
 
-  create_table "projects", id: :integer, charset: "utf8mb4", force: :cascade do |t|
+  create_table "projects", id: :integer, charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "storage_id"
     t.text "value", size: :medium
     t.datetime "updated_at", null: false
