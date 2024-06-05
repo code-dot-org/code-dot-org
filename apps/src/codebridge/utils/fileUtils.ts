@@ -10,3 +10,18 @@ export function shouldShowFile(file: ProjectFile) {
   // hide files that are hidden or are validation.
   return isStartMode ? true : !file.hidden && !file.validation;
 }
+
+export function getFileIcon(file: ProjectFile) {
+  const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+  let icon = 'fa-solid ';
+  if (isStartMode) {
+    icon += file.validation
+      ? 'fa-flask'
+      : file.hidden
+      ? 'fa-eye-slash'
+      : 'fa-eye';
+  } else {
+    icon += 'fa-file';
+  }
+  return icon;
+}

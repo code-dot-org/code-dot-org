@@ -6,7 +6,12 @@ import {
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {PopUpButton} from '@codebridge/PopUpButton/PopUpButton';
 import {ProjectType, FolderId, ProjectFile} from '@codebridge/types';
-import {findFolder, getErrorMessage, shouldShowFile} from '@codebridge/utils';
+import {
+  findFolder,
+  getErrorMessage,
+  getFileIcon,
+  shouldShowFile,
+} from '@codebridge/utils';
 import React, {useMemo} from 'react';
 
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
@@ -60,7 +65,7 @@ const InnerFileBrowser = React.memo(
 
     const handleSetFileVisibility = (fileId: string, hidden: boolean) => {
       setFileVisibility(fileId, hidden);
-      // When we set the visibility, we also want to set the file as not validation.
+      // When we set the visibility, we also want to set the file to validation: false.
       setFileIsValidation(fileId, false);
     };
 
@@ -79,7 +84,7 @@ const InnerFileBrowser = React.memo(
         );
       }
       // Validation overrides the hidden/visible state, so if a file is validation
-      // we show both show and hide options.
+      // we include both make file visible and hide file options.
       if (file.hidden || file.validation) {
         options.push(
           <span
@@ -174,18 +179,7 @@ const InnerFileBrowser = React.memo(
             <li key={f.id}>
               <span className={moduleStyles.label}>
                 <span onClick={() => openFile(f.id)}>
-                  {isStartMode && (
-                    <i
-                      className={`fa-solid ${
-                        f.validation
-                          ? 'fa-flask'
-                          : f.hidden
-                          ? 'fa-eye-slash'
-                          : 'fa-eye'
-                      }`}
-                    />
-                  )}
-                  <i className="fa-solid fa-file" />
+                  <i className={getFileIcon(f)} />
                   {f.name}
                 </span>
                 <PopUpButton

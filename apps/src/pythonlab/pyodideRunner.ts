@@ -60,7 +60,7 @@ export async function runAllTests(
   // If the project has a validation file, we just run those tests.
   const validationFile = Object.values(source.files).filter(f => f.validation);
   if (validationFile.length > 0) {
-    // We only support one validation file. If somehow there are more than one, just run the first one.
+    // We only support one validation file. If somehow there is more than one, just run the first one.
     dispatch(appendSystemMessage(`Running level tests...`));
     await runPythonCode(getTestRunnerScript(validationFile[0].name), source);
   } else {
