@@ -19,7 +19,7 @@ theme: responsive_full_width
       %img.rounded-corners.box-shadow-primary{src: "/images/teach-page-top.png", alt: "", style: "position: relative; width: 100%;"}
     .clear
 
-= view :lms_skinny_banner
+= view :"lms/lms_skinny_banner"
 
 // TODO - Remove this once the Music Lab launch is over
 = view :"music/music_lab_skinny_banner"
@@ -125,7 +125,7 @@ theme: responsive_full_width
           Are you a district leader or administrator? <a href="/administrators">Find out how to bring Code.org to your district</a>.
 
 - if !!DCDO.get('show-updated-lms-content', false)
-  = view :lms_integrations_banner
+  = view :"lms/lms_integrations_banner"
 
 %section
   .wrapper
