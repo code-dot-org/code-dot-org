@@ -24,7 +24,7 @@ Scenario: Signed out user in English should see 7 header links
 Scenario: Signed out user in English should see 3 header links on small desktop
   Given I am on "http://code.org/"
   And I dismiss the language selector
-  And I change the browser window size to 1267 by 768
+  And I change the browser window size to 1268 by 768
   And I wait to see "#headerlinks"
   And I see "#header-learn"
   And element "#header-learn" contains text "Learn"
