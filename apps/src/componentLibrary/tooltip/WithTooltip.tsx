@@ -1,4 +1,10 @@
-import React, {useState, ReactNode, HTMLAttributes} from 'react';
+import React, {
+  useEffect,
+  useRef,
+  useState,
+  ReactNode,
+  HTMLAttributes,
+} from 'react';
 import {createPortal} from 'react-dom';
 
 import Tooltip, {TooltipOverlay, TooltipProps} from './Tooltip';
@@ -16,6 +22,8 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
 }) => {
   const [nodePosition, setNodePosition] = useState<HTMLElement | null>(null);
   const [showTooltip, setShowTooltip] = useState<boolean>(false);
+  const [tooltipStyles, setTooltipStyles] = useState<React.CSSProperties>({});
+  const tooltipRef = useRef<HTMLDivElement | null>(null);
 
   // Define the additional event handlers
   const handleFocus = (event: React.FocusEvent<HTMLElement>) => {
@@ -37,6 +45,59 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
     setShowTooltip(false);
     setNodePosition(null);
   };
+
+  useEffect(() => {
+    if (nodePosition && tooltipRef.current) {
+      const rect = nodePosition.getBoundingClientRect();
+      const tooltipRect = tooltipRef.current.getBoundingClientRect();
+
+      let styles: React.CSSProperties = {};
+
+      console.log(rect);
+      console.log(nodePosition);
+
+      switch (tooltipProps.direction) {
+        case 'onRight':
+          styles = {
+            top: `${rect.top + rect.height / 2 - tooltipRect.height / 2}px`,
+            left: `${rect.right}px`,
+          };
+          break;
+        case 'onBottom':
+          styles = {
+            top: `${rect.bottom}px`,
+            left: `${rect.left + rect.width / 2 - tooltipRect.width / 2}px`,
+          };
+          break;
+        case 'onLeft':
+          styles = {
+            top: `${rect.top + rect.height / 2 - tooltipRect.height / 2}px`,
+            left: `${rect.left - tooltipRect.width}px`,
+          };
+          break;
+        case 'onTop':
+        default:
+          styles = {
+            top: `${rect.top - tooltipRect.height}px`,
+            left: `${rect.left + rect.width / 2 - tooltipRect.width / 2}px`,
+          };
+          break;
+      }
+
+      setTooltipStyles(styles);
+    }
+  }, [showTooltip, nodePosition, tooltipProps.direction]);
+
+  const tooltipStyleProps: React.CSSProperties = {
+    visibility: showTooltip ? 'visible' : 'hidden',
+    ...tooltipStyles,
+  };
+
+  console.log('-- WithTooltip --');
+
+  console.log(tooltipStyleProps);
+  console.log(tooltipProps.direction);
+  console.log(tooltipStyles);
 
   // Check if children is a valid React element and clone it with ariaDescribedBy attribute
   // and additional event handlers to make sure the tooltip is displayed correctly
@@ -78,7 +139,14 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
   return (
     <TooltipOverlay className={tooltipOverlayClassName}>
       {componentToWrap}
-      {createPortal(<Tooltip {...tooltipProps} />, document.body)}
+      {createPortal(
+        <Tooltip
+          {...tooltipProps}
+          ref={tooltipRef}
+          style={tooltipStyleProps}
+        />,
+        document.body
+      )}
     </TooltipOverlay>
   );
 };
