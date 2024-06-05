@@ -81,6 +81,7 @@ class Hamburger
 
   def self.get_hamburger_contents(options)
     loc_prefix = options[:loc_prefix]
+    is_teacher_or_student = options[:user_type] == "teacher" || options[:user_type] == "student"
 
     # Teacher-specific hamburger dropdown links.
     teacher_entries = [
@@ -120,7 +121,7 @@ class Hamburger
 
     # Remove Course Catalog link for teachers and students.
     # This link is already in the teacher and student entries above.
-    if options[:user_type] == "teacher" || options[:user_type] == "student"
+    if is_teacher_or_student
       educate_entries.delete_if {|e| e[:title] == "course_catalog"}
     end
 
@@ -175,7 +176,7 @@ class Hamburger
 
     # Show help links before Pegasus links for signed in users.
     help_contents = HelpHeader.get_help_contents(options)
-    if options[:user_type] == "teacher" || options[:user_type] == "student"
+    if is_teacher_or_student
       entries.concat(help_contents.each {|e| e[:class] = visibility[:show_help_options]})
       entries << {type: "divider", class: get_divider_visibility(visibility[:show_help_options], visibility[:show_pegasus_options]), id: "after-help"}
     end
@@ -217,7 +218,7 @@ class Hamburger
       id: "help-us"
     }
 
-    unless options[:user_type] == "teacher" || options[:user_type] == "student"
+    unless is_teacher_or_student
       entries << {
         title: I18n.t("#{loc_prefix}incubator"),
         url: CDO.studio_url("/incubator"),
@@ -243,7 +244,7 @@ class Hamburger
     }
 
     # Show help links at the bottom of the list for signed out users.
-    unless options[:user_type] == "teacher" || options[:user_type] == "student"
+    unless is_teacher_or_student
       entries << {type: "divider", class: get_divider_visibility(visibility[:show_help_options], visibility[:show_pegasus_options]), id: "before-help"}
       entries.concat(help_contents.each {|e| e[:class] = visibility[:show_help_options]})
     end
