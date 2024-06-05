@@ -140,13 +140,22 @@ module ProjectsList
     #   PUBLISHED_PROJECT_TYPE_GROUPS.keys, or 'all' to retrieve all project groups.
     # @param featured_before [string] String representing a DateTime before
     #   which to search for the requested featured projects. Optional.
-    # @return [Hash<Array<Hash>>] A hash of lists of active published feature projects.
+    # @return [Hash<Array<Hash>>] A hash of lists of active published featured projects.
     def fetch_active_published_featured_projects(project_group, featured_before: nil)
+      # If the project group is 'all', we return all the featured projects as a hash with
+      # keys for each project group and values as lists of featured projects of that project group.
+      # {applab: [{project_1}, {project_2}], gamelab: [{project_1}, {project_2}], ...}
+      # Note that a project group may have more than one project type, e.g., poetry: ['poetry', 'poetry_hoc'].      
       if project_group == 'all'
         return fetch_featured_published_projects(featured_before: featured_before)
       end
       raise ArgumentError, "invalid project type: #{project_group}" unless PUBLISHED_PROJECT_TYPE_GROUPS.key?(project_group.to_sym)
-      fetch_featured_projects_by_type([project_group.to_sym], featured_before: featured_before)
+      # If the project group is specified, we return a list of featured projects of that project group.
+      typed_featured_published_projects = []
+      PUBLISHED_PROJECT_TYPE_GROUPS[project_group.to_sym].map do |project_type|
+        typed_featured_published_projects << fetch_featured_projects_by_type(project_type, featured_before: featured_before)
+      end
+      return typed_featured_published_projects.flatten
     end
 
     def fetch_featured_published_projects(featured_before: nil)

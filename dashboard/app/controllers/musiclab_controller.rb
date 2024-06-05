@@ -1,5 +1,6 @@
 class MusiclabController < ApplicationController
   ANALYTICS_KEY = CDO.amplitude_api_key
+  NUM_MINI_PLAYER_PROJECTS = 5
 
   def menu
     view_options(full_width: true, responsive_content: true, no_padding_container: true)
@@ -22,15 +23,32 @@ class MusiclabController < ApplicationController
       to_json
   end
 
+  # Hard-coded list of channel IDs for the mini player if DCDO flag is set to `true`
+  CHANNELS = %w(
+    syBuoFelbGB3eOmNVoQGrWMXEk0l1EhkIX6c08ujq6s
+    Ehnks69B0Whcn_YQQNCK4GUHAPU3WSG2jfilvQF1kfo
+    6Xc53NIhwFxjjwsSaoj_eSiRbbXr97BYQ3W_7vIaAwY
+    NwTkJSskTswEOtgy6TbaJ-8SonhhSxojrJjlJLBko4w
+    PCO7mvB5ylByrbpF7tEbzXdYOqrALhW3M5OlcDRIF7E
+  )
+
+  # GET "/musiclab/embed"
   def embed
     response.headers['X-Frame-Options'] = 'ALLOWALL'
     response.headers['Content-Security-Policy'] = ''
 
     view_options(no_header: true, no_footer: true, full_width: true, no_padding_container: true)
 
-    channel_ids = params[:channels] ? params[:channels].split(',') : []
+    music_featured_projects = ProjectsList.fetch_active_published_featured_projects('music')
+    channel_ids_from_featured_projects = ProjectsList.fetch_active_published_featured_projects('music').map {|project| project['channel']}
+    if get_channel_ids_from_constant?
+      channel_ids_from_featured_projects = CHANNELS
+    end
+    channel_ids_from_params = params[:channels].nil? ? [] : params[:channels].split(',')
+    all_channel_ids = channel_ids_from_params.empty? ? channel_ids_from_featured_projects : channel_ids_from_params
+    selected_channel_ids = all_channel_ids.sample(NUM_MINI_PLAYER_PROJECTS)
 
-    project_ids = channel_ids.map do |channel_id|
+    project_ids = selected_channel_ids.map do |channel_id|
       _, project_id = storage_decrypt_channel_id(channel_id)
       project_id
     end
@@ -52,5 +70,9 @@ class MusiclabController < ApplicationController
   # GET /musiclab/analytics_key
   def get_analytics_key
     render(json: {key: ANALYTICS_KEY})
+  end
+
+  private def get_channel_ids_from_constant?
+    DCDO.get('get_channel_ids_from_constant', false)
   end
 end
