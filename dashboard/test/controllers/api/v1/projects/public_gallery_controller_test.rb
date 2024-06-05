@@ -73,7 +73,6 @@ class Api::V1::Projects::PublicGalleryControllerTest < ActionController::TestCas
   end
 
   test 'project details are correct listing applab published featured projects' do
-    puts "FAILING TEST"
     Rails.stubs(:env).returns(ActiveSupport::StringInquirer.new('production'))
     get :index, params: {project_type: 'applab'}
 
