@@ -278,7 +278,7 @@ export const submitChatContents = createAsyncThunk(
     const state = thunkAPI.getState() as RootState;
     const {
       savedAiCustomizations: aiCustomizations,
-      chatMessagesCurrent: storedMessages,
+      chatMessagesCurrent,
       currentSessionId,
     } = state.aichat;
 
@@ -302,9 +302,12 @@ export const submitChatContents = createAsyncThunk(
 
     let chatApiResponse;
     try {
+      const conversationMessages = chatMessagesCurrent.filter(
+        message => message.role === Role.USER || message.role === Role.ASSISTANT
+      );
       chatApiResponse = await postAichatCompletionMessage(
         newMessage,
-        storedMessages,
+        conversationMessages,
         aiCustomizations,
         aichatContext,
         currentSessionId
@@ -351,6 +354,9 @@ const updateMessagesOnError = (
   newMessage: ChatCompletionMessage,
   dispatch: ThunkDispatch<unknown, unknown, AnyAction>
 ) => {
+  dispatch(clearChatMessagePending());
+  dispatch(addChatMessage({...newMessage, status: Status.ERROR}));
+
   const assistantChatMessage: ChatCompletionMessage = {
     id: getNewMessageId(),
     role: Role.ASSISTANT,
@@ -359,9 +365,6 @@ const updateMessagesOnError = (
     timestamp: getCurrentTimestamp(),
   };
   dispatch(addChatMessage(assistantChatMessage));
-
-  dispatch(clearChatMessagePending());
-  dispatch(addChatMessage({...newMessage, status: Status.ERROR}));
 };
 
 const aichatSlice = createSlice({
