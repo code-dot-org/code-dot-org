@@ -13,8 +13,8 @@ class Api::V1::Projects::PublicGalleryControllerTest < ActionController::TestCas
       studentAgeRange: "18+",
       isFeatured: true
     }
-    all_featured_projects = {applab: [published_applab_project], gamelab: [], spritelab: [], playlab: [], artist: [], minecraft: [], events: [], k1: [], dance: [], poetry: [], library: []}
-    applab_featured_projects = {applab: [published_applab_project]}
+    all_featured_projects = {applab: [published_applab_project], gamelab: [], spritelab: [], playlab: [], artist: [], minecraft: [], events: [], k1: [], dance: [], poetry: [], library: [], music: []}
+    applab_featured_projects = [published_applab_project]
     ProjectsList.stubs(:fetch_featured_published_projects).returns(all_featured_projects)
     ProjectsList.stubs(:fetch_featured_projects_by_type).returns(applab_featured_projects)
   end
@@ -57,7 +57,7 @@ class Api::V1::Projects::PublicGalleryControllerTest < ActionController::TestCas
     assert_response :success
     assert_equal "max-age=5, public", @response.headers["Cache-Control"]
     categories_list = JSON.parse(@response.body)
-    assert_equal 11, categories_list.length
+    assert_equal 12, categories_list.length
     assert_empty categories_list['gamelab']
     assert_empty categories_list['playlab']
     assert_empty categories_list['artist']
@@ -73,6 +73,7 @@ class Api::V1::Projects::PublicGalleryControllerTest < ActionController::TestCas
   end
 
   test 'project details are correct listing applab published featured projects' do
+    puts "FAILING TEST"
     Rails.stubs(:env).returns(ActiveSupport::StringInquirer.new('production'))
     get :index, params: {project_type: 'applab'}
 
