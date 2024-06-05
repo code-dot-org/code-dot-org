@@ -262,25 +262,27 @@ class ScriptsController < ApplicationController
   end
 
   private def get_unit_by_name
-    unit_id = params[:id]
+    # Unfortunately, scripts routes sometimes pass the name and sometimes pass
+    # the id, making params[:id] a misnomer when passing the name.
+    unit_name = params[:id]
 
     # Showing scripts by id is no longer supported. Other codepaths still need
     # get_without_cache and get_from_cache to support lookup by id, so we filter
     # out numerical ids here rather than removing support for them from those
     # methods.
-    is_id = unit_id.to_i.to_s == unit_id.to_s
+    is_id = unit_name.to_i.to_s == unit_name.to_s
     raise ActiveRecord::RecordNotFound if is_id
 
     script = params[:action] == "edit" ?
-      Unit.get_without_cache(unit_id, with_associated_models: true) :
-      Unit.get_from_cache(unit_id, raise_exceptions: false)
+      Unit.get_without_cache(unit_name, with_associated_models: true) :
+      Unit.get_from_cache(unit_name, raise_exceptions: false)
 
     return script if script
 
-    if Unit.family_names.include?(unit_id)
-      script = Unit.get_unit_family_redirect_for_user(unit_id, user: current_user, locale: request.locale)
+    if Unit.family_names.include?(unit_name)
+      script = Unit.get_unit_family_redirect_for_user(unit_name, user: current_user, locale: request.locale)
       session[:show_unversioned_redirect_warning] = true
-      Unit.log_redirect(unit_id, script.redirect_to, request, 'unversioned-script-redirect', current_user&.user_type) if script.present?
+      Unit.log_redirect(unit_name, script.redirect_to, request, 'unversioned-script-redirect', current_user&.user_type) if script.present?
       return script
     end
 
