@@ -2,6 +2,8 @@ import React, {useEffect} from 'react';
 import {connect, useSelector} from 'react-redux';
 
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import Link from '@cdo/apps/componentLibrary/link';
+import Typography from '@cdo/apps/componentLibrary/typography';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {RootState} from '@cdo/apps/types/redux';
@@ -36,6 +38,9 @@ const AgeGatedStudentsModal: React.FC<Props> = ({
     analyticsReporter.sendEvent(eventName, payload, PLATFORMS.AMPLITUDE);
   };
 
+  const helpDocsUrl =
+    'https://support.code.org/hc/en-us/articles/15465423491085-How-do-I-obtain-parent-or-guardian-permission-for-student-accounts';
+
   const modalDocumentationClicked = () => {
     reportEvent(EVENTS.CAP_STUDENT_WARNING_LINK_CLICKED, {
       user_id: currentUser.userId,
@@ -61,15 +66,26 @@ const AgeGatedStudentsModal: React.FC<Props> = ({
         data-testid="age-gated-students-modal"
       >
         <div>
-          <h2 className={styles.modalHeader}>
+          <Typography
+            semanticTag="h2"
+            visualAppearance="heading-md"
+            className={styles.modalHeader}
+          >
             {i18n.childAccountPolicy_studentParentalConsentStatus()}
-          </h2>
+          </Typography>
           <hr />
-          <p>{i18n.childAccountPolicy_studentParentalConsentNotice()}</p>
-          <br />
-          <a href="#" onClick={modalDocumentationClicked}>
-            {i18n.childAccountPolicy_consentProcessReadMore()}
-          </a>
+          <Typography semanticTag="p" visualAppearance="body-two">
+            {i18n.childAccountPolicy_studentParentalConsentNotice()}
+          </Typography>
+          <Typography semanticTag="p" visualAppearance="body-two">
+            <Link
+              href={helpDocsUrl}
+              onClick={modalDocumentationClicked}
+              openInNewTab={true}
+            >
+              {i18n.childAccountPolicy_consentProcessReadMore()}
+            </Link>
+          </Typography>
           {isLoadingStudents && <Spinner />}
           {!isLoadingStudents && <AgeGatedStudentsTable />}
           <hr />
@@ -83,7 +99,6 @@ const AgeGatedStudentsModal: React.FC<Props> = ({
     </BaseDialog>
   );
 };
-export const UnconnectedAgeGatedStudentsModal = AgeGatedStudentsModal;
 
 export default connect((state: ReduxState) => ({
   isLoadingStudents: state.manageStudents.isLoadingStudents || false,

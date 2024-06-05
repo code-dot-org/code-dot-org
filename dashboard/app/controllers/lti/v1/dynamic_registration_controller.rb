@@ -1,5 +1,6 @@
 require 'clients/cache_client'
 require 'clients/lti_dynamic_registration_client'
+require 'metrics/events'
 
 module Lti
   module V1
@@ -67,7 +68,7 @@ module Lti
         end
 
         begin
-          dynamic_registration_client = Lti::DynamicRegistration.new(registration_data[:registration_token], registration_data[:registration_endpoint])
+          dynamic_registration_client = LtiDynamicRegistrationClient.new(registration_data[:registration_token], registration_data[:registration_endpoint])
           registration_response = dynamic_registration_client.make_registration_request
         rescue => exception
           message = 'Error creating registration'
@@ -87,6 +88,14 @@ module Lti
             access_token_url: platform[:access_token_url],
             admin_email: admin_email,
           )
+          metadata = {
+            lms_name: platform[:name],
+          }
+          Metrics::Events.log_event(
+            event_name: 'lti_dynamic_registration_completed',
+            metadata: metadata,
+          )
+
           return render status: :created, json: {}
         else
           return render status: :conflict, json: {error: I18n.t('lti.integration.exists_error')}

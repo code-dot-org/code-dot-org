@@ -38,6 +38,7 @@ export const fieldSoundsDefinition = {
   playPreview: (id, onStop) => {
     Globals.getPlayer().previewSound(id, onStop);
   },
+  cancelPreviews: () => Globals.getPlayer().cancelPreviews(),
   currentValue: null,
   getShowSoundFilters: () => Globals.getShowSoundFilters(),
 };

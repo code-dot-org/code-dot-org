@@ -5,6 +5,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import DCDO from '@cdo/apps/dcdo';
+import i18n from '@cdo/locale';
 
 import FontAwesome from '../FontAwesome';
 import {
@@ -59,7 +60,7 @@ function StudentColumn({
 
   const getUnexpandedRow = (student, ind) => (
     <button
-      className={classNames(styles.gridBoxStudentExpandable, styles.gridBox)}
+      className={styles.studentColumnName}
       key={ind}
       onClick={() => expandMetadataForStudents([student.id])}
       type="button"
@@ -68,26 +69,43 @@ function StudentColumn({
       <FontAwesome
         icon="caret-right"
         title="caret"
-        className={styles.gridBoxStudentExpandableCaret}
+        className={styles.studentColumnNameCaret}
       />
       {getFullName(student)}
     </button>
   );
 
   const getExpandedRow = (student, ind) => (
-    <button
-      className={classNames(styles.gridBoxStudentExpandable, styles.gridBox)}
-      key={ind}
-      onClick={() => collapseMetadataForStudents([student.id])}
-      type="button"
-      aria-expanded={true}
-    >
-      <FontAwesome
-        icon="caret-down"
-        className={styles.gridBoxStudentExpandableCaret}
-      />
-      {getFullName(student)}
-    </button>
+    <div className={styles.studentColumnExpandedHeader} key={ind}>
+      <button
+        className={styles.studentColumnName}
+        onClick={() => collapseMetadataForStudents([student.id])}
+        type="button"
+        aria-expanded={true}
+      >
+        <FontAwesome
+          icon="caret-down"
+          className={styles.studentColumnNameCaret}
+        />
+        {getFullName(student)}
+      </button>
+      <div
+        className={classNames(
+          styles.gridBox,
+          styles.studentColumnExpandedHeaderText
+        )}
+      >
+        {i18n.timeSpentMins()}
+      </div>
+      <div
+        className={classNames(
+          styles.gridBox,
+          styles.studentColumnExpandedHeaderText
+        )}
+      >
+        {i18n.lastUpdatedTitle()}
+      </div>
+    </div>
   );
 
   const studentColumnBox = (student, ind) => {
