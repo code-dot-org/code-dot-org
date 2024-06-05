@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import TimelineSampleEvents from './TimelineSampleEvents';
 import TimelineTrackEvents from './TimelineTrackEvents';
 import TimelineSimple2Events from './TimelineSimple2Events';
-import appConfig, {getBlockMode} from '../appConfig';
+import {getBlockMode} from '../appConfig';
 import {BlockMode, MIN_NUM_MEASURES} from '../constants';
 import {useDispatch} from 'react-redux';
 import {
@@ -89,8 +89,7 @@ const Timeline: React.FunctionComponent = () => {
 
   const onMeasuresBackgroundClick = useCallback(
     (event: MouseEvent) => {
-      // Ignore if playing unless using ToneJS player
-      if (isPlaying && appConfig.getValue('player') !== 'tonejs') {
+      if (isPlaying) {
         return;
       }
       const offset =
@@ -98,7 +97,7 @@ const Timeline: React.FunctionComponent = () => {
         (event.target as Element).getBoundingClientRect().x -
         paddingOffset;
       const exactMeasure = offset / barWidth + 1;
-      // Round measure to the nearest beat (1/4 note)
+      // Round measure to the nearest beat (1/4 note).
       const roundedMeasure = Math.round(exactMeasure * 4) / 4;
       dispatch(setStartPlayheadPosition(roundedMeasure));
     },
@@ -155,7 +154,8 @@ const Timeline: React.FunctionComponent = () => {
         id="timeline-measures-background"
         className={classNames(
           moduleStyles.measuresBackground,
-          moduleStyles.fullWidthOverlay
+          moduleStyles.fullWidthOverlay,
+          !isPlaying && moduleStyles.measuresBackgroundClickable
         )}
         style={{width: paddingOffset + measuresToDisplay * barWidth}}
         onClick={onMeasuresBackgroundClick}
@@ -174,7 +174,8 @@ const Timeline: React.FunctionComponent = () => {
                 className={classNames(
                   moduleStyles.barNumber,
                   measure === Math.floor(currentPlayheadPosition) &&
-                    moduleStyles.barNumberCurrent
+                    moduleStyles.barNumberCurrent,
+                  !isPlaying && moduleStyles.barNumberClickable
                 )}
                 onClick={() => onMeasureNumberClick(measure)}
               >
