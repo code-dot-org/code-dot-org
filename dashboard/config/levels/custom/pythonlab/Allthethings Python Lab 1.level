@@ -16,9 +16,7 @@
           "contents": "print('Hello start!')",
           "folderId": "1",
           "active": true,
-          "open": true,
-          "validation": false,
-          "hidden": false
+          "open": true
         }
       },
       "folders": {

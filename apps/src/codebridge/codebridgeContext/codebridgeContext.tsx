@@ -1,5 +1,6 @@
 import React, {createContext, useContext} from 'react';
 
+import {setFileType} from '../FileBrowser/types';
 import {
   ProjectType,
   ConfigType,
@@ -22,8 +23,6 @@ import {
   RenameFileFunction,
   MoveFileFunction,
   RenameFolderFunction,
-  SetFileVisibilityFunction,
-  SetFileIsValidationFunction,
 } from './types';
 
 type CodebridgeContextType = {
@@ -44,9 +43,8 @@ type CodebridgeContextType = {
   renameFile: RenameFileFunction;
   moveFile: MoveFileFunction;
   renameFolder: RenameFolderFunction;
-  setFileVisibility: SetFileVisibilityFunction;
   resetProject: ResetProjectFunction;
-  setFileIsValidation: SetFileIsValidationFunction;
+  setFileType: setFileType;
 };
 
 export const CodebridgeContext = createContext<CodebridgeContextType | null>(

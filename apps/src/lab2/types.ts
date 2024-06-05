@@ -82,8 +82,13 @@ export interface ProjectFile {
   open?: boolean;
   active?: boolean;
   folderId: string;
-  hidden?: boolean;
-  validation?: boolean;
+  type?: ProjectFileType;
+}
+
+export enum ProjectFileType {
+  STARTER = 'starter',
+  SUPPORT = 'support',
+  VALIDATION = 'validation',
 }
 
 export interface ProjectFolder {

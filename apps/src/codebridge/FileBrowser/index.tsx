@@ -16,6 +16,7 @@ import React, {useMemo} from 'react';
 
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import {ProjectFileType} from '@cdo/apps/lab2/types';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 
 import {FileBrowserHeaderPopUpButton} from './FileBrowserHeaderPopUpButton';
@@ -25,8 +26,7 @@ import {
   newFolderPromptType,
   renameFilePromptType,
   renameFolderPromptType,
-  setFileIsValidationType,
-  setFileVisibilityType,
+  setFileType,
 } from './types';
 
 import moduleStyles from './styles/filebrowser.module.scss';
@@ -41,8 +41,7 @@ type FilesComponentProps = {
   newFolderPrompt: newFolderPromptType;
   renameFilePrompt: renameFilePromptType;
   renameFolderPrompt: renameFolderPromptType;
-  setFileVisibility: setFileVisibilityType;
-  setFileIsValidation: setFileIsValidationType;
+  setFileType: setFileType;
 };
 
 const InnerFileBrowser = React.memo(
@@ -55,53 +54,53 @@ const InnerFileBrowser = React.memo(
     moveFilePrompt,
     renameFilePrompt,
     renameFolderPrompt,
-    setFileVisibility,
-    setFileIsValidation,
+    setFileType,
   }: FilesComponentProps) => {
     const {openFile, deleteFile, toggleOpenFolder, deleteFolder} =
       useCodebridgeContext();
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-    const hasValidationFile = Object.values(files).some(f => f.validation);
-
-    const handleSetFileVisibility = (fileId: string, hidden: boolean) => {
-      setFileVisibility(fileId, hidden);
-      // When we set the visibility, we also want to set the file to validation: false.
-      setFileIsValidation(fileId, false);
-    };
+    const hasValidationFile = Object.values(files).find(
+      f => f.type === ProjectFileType.VALIDATION
+    );
 
     const startModeFileDropdownOptions = (file: ProjectFile) => {
       // We only support one validation file per project, so if we already have one,
       // do not show the option to mark another file as validation.
       const options = [];
-      if (!file.validation && !hasValidationFile) {
+      if (!hasValidationFile) {
         options.push(
           <span
-            onClick={() => setFileIsValidation(file.id, true)}
+            onClick={() => setFileType(file.id, ProjectFileType.VALIDATION)}
             key={'make-validation'}
           >
             <i className={`fa-solid fa-flask`} /> Make validation file
           </span>
         );
       }
-      // Validation overrides the hidden/visible state, so if a file is validation
-      // we include both make file visible and hide file options.
-      if (file.hidden || file.validation) {
+      if (
+        file.type === ProjectFileType.VALIDATION ||
+        file.type === ProjectFileType.SUPPORT
+      ) {
         options.push(
           <span
-            onClick={() => handleSetFileVisibility(file.id, false)}
-            key={'make-visible'}
+            onClick={() => setFileType(file.id, ProjectFileType.STARTER)}
+            key={'make-starter'}
           >
-            <i className={`fa-solid fa-eye`} /> Make file visible
+            <i className={`fa-solid fa-eye`} /> Make starter file
           </span>
         );
       }
-      if (!file.hidden || file.validation) {
+      if (
+        file.type === ProjectFileType.VALIDATION ||
+        file.type === ProjectFileType.STARTER ||
+        !file.type
+      ) {
         options.push(
           <span
-            onClick={() => handleSetFileVisibility(file.id, true)}
-            key={'make-hidden'}
+            onClick={() => setFileType(file.id, ProjectFileType.SUPPORT)}
+            key={'make-support'}
           >
-            <i className={`fa-solid fa-eye-slash`} /> Hide file
+            <i className={`fa-solid fa-eye-slash`} /> Make support file
           </span>
         );
       }
@@ -164,8 +163,7 @@ const InnerFileBrowser = React.memo(
                       moveFilePrompt={moveFilePrompt}
                       renameFilePrompt={renameFilePrompt}
                       renameFolderPrompt={renameFolderPrompt}
-                      setFileVisibility={setFileVisibility}
-                      setFileIsValidation={setFileIsValidation}
+                      setFileType={setFileType}
                     />
                   </ul>
                 )}
@@ -217,8 +215,7 @@ export const FileBrowser = React.memo(() => {
 
     renameFolder,
     newFolder,
-    setFileVisibility,
-    setFileIsValidation,
+    setFileType,
   } = useCodebridgeContext();
 
   const newFolderPrompt: FilesComponentProps['newFolderPrompt'] = useMemo(
@@ -347,7 +344,10 @@ export const FileBrowser = React.memo(() => {
     if (existingFiles.length > 0) {
       const existingFile = existingFiles[0];
       message = `Filename ${fileName} is already in use in this folder. Please choose a different name.`;
-      if (existingFile.hidden || existingFile.validation) {
+      if (
+        existingFile.type === ProjectFileType.SUPPORT ||
+        existingFile.type === ProjectFileType.VALIDATION
+      ) {
         message = `Filename ${fileName} is already in use in this folder in the level's support code. Please choose a different name.`;
       }
     }
@@ -397,8 +397,7 @@ export const FileBrowser = React.memo(() => {
           moveFilePrompt={moveFilePrompt}
           renameFilePrompt={renameFilePrompt}
           renameFolderPrompt={renameFolderPrompt}
-          setFileVisibility={setFileVisibility}
-          setFileIsValidation={setFileIsValidation}
+          setFileType={setFileType}
         />
       </ul>
     </PanelContainer>
