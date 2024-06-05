@@ -54,7 +54,7 @@ $arrow-size: 1.5rem;
     font-size: 1rem;
     list-style: none;
     margin: 0;
-    width: 300px;
+    width: 290px;
     position: absolute;
     top: 55px;
     inset-inline-end: 0;
@@ -149,18 +149,6 @@ $arrow-size: 1.5rem;
       height: 1px;
       background: $light_primary_700;
       margin: 0.75rem 0;
-    }
-
-    @media(max-width: 400px) {
-      .item {
-        max-width: 240px;
-      }
-      .hamburger-expandable-item .text {
-        max-width: 210px;
-      }
-      .hamburger-expandable-items .item {
-        max-width: 220px;
-      }
     }
   }
 
