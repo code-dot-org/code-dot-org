@@ -12,6 +12,7 @@ import React, {useMemo} from 'react';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import DeleteConfirmationDialog from '@cdo/apps/lab2/views/dialogs/DeleteConfirmationDialog';
 
 import {FileBrowserHeaderPopUpButton} from './FileBrowserHeaderPopUpButton';
 import {
@@ -53,6 +54,31 @@ const InnerFileBrowser = React.memo(
     const {openFile, deleteFile, toggleOpenFolder, deleteFolder} =
       useCodebridgeContext();
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+    const [showDeleteConfirmation, setShowDeleteConfirmation] =
+      React.useState<boolean>(false);
+    const [nameToDelete, setNameToDelete] = React.useState<string | null>(null);
+    const [deleteCallback, setDeleteCallback] = React.useState<() => void>(
+      () => {}
+    );
+    const [isDeletingFolder, setIsDeletingFolder] =
+      React.useState<boolean>(false);
+
+    const handleDeleteFile = (fileId: string) => {
+      const file = files[fileId];
+      setNameToDelete(file.name);
+      setDeleteCallback(() => deleteFile(fileId));
+      setIsDeletingFolder(false);
+      setShowDeleteConfirmation(true);
+    };
+
+    const handleDeleteFolder = (folderId: string) => {
+      const folder = folders[folderId];
+      setNameToDelete(folder.name);
+      setDeleteCallback(() => deleteFolder(folderId));
+      setIsDeletingFolder(true);
+      setShowDeleteConfirmation(true);
+    };
+
     return (
       <>
         {Object.values(folders)
@@ -92,7 +118,7 @@ const InnerFileBrowser = React.memo(
                       <span onClick={() => newFilePrompt(f.id)}>
                         <i className="fa-solid fa-plus" /> Add file
                       </span>
-                      <span onClick={() => deleteFolder(f.id)}>
+                      <span onClick={() => handleDeleteFolder(f.id)}>
                         <i className="fa-solid fa-trash" /> Delete folder
                       </span>
                     </span>
@@ -145,7 +171,7 @@ const InnerFileBrowser = React.memo(
                     <span onClick={() => renameFilePrompt(f.id)}>
                       <i className="fa-solid fa-pencil" /> Rename file
                     </span>
-                    <span onClick={() => deleteFile(f.id)}>
+                    <span onClick={() => handleDeleteFile(f.id)}>
                       <i className="fa-solid fa-trash" /> Delete file
                     </span>
                     {isStartMode && (
@@ -162,6 +188,14 @@ const InnerFileBrowser = React.memo(
               </span>
             </li>
           ))}
+        {showDeleteConfirmation && nameToDelete && (
+          <DeleteConfirmationDialog
+            handleCancel={() => setShowDeleteConfirmation(false)}
+            handleConfirm={deleteCallback}
+            isFolder={isDeletingFolder}
+            nameToDelete={nameToDelete}
+          />
+        )}
       </>
     );
   }

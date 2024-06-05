@@ -1,5 +1,5 @@
 /**
- * A TypeScript wrapper for the Music Lab locale object which casts
+ * A TypeScript wrapper for the Lab2 locale object which casts
  * it to the {@link Locale} type.
  */
 import {Locale} from '@cdo/apps/types/locale';
