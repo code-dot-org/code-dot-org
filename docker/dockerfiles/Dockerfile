@@ -104,7 +104,7 @@ WORKDIR /tmp
 # en_US.UTF-8 locale not available by default
 RUN locale-gen en_US.UTF-8
 
-# Install MySQL.
+# Install MySQL; implicitly targeting MySQL 8.0
 RUN apt-get update && \
     apt-get install --yes libmysqlclient-dev mysql-client mysql-server
 
