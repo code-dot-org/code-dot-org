@@ -397,6 +397,9 @@ class RegistrationsController < Devise::RegistrationsController
       @pending_email = permission_request&.parent_email
       @request_date = permission_request&.updated_at || Date.new
       @personal_account_linking_enabled = false unless Policies::ChildAccount.compliant?(current_user)
+
+      partially_locked = current_user.student? && experiment_value('cpa-partial-lockout', request) && Cpa.cpa_experience(request)
+      @personal_account_linking_enabled = false if partially_locked
     end
 
     @personal_account_linking_enabled = true unless experiment_value('cpa-partial-lockout', request)
