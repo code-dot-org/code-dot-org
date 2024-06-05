@@ -337,26 +337,16 @@ const aichatSlice = createSlice({
       state.chatMessagesCurrent.push(action.payload);
     },
     removeModelUpdateMessage: (state, action: PayloadAction<number>) => {
-      // update to remove from current or past messages, not just current
-      const updatedMessages = [...state.chatMessagesCurrent];
-      const messageToRemovePosition = updatedMessages.findIndex(
-        message => message.id === action.payload
+      const modelUpdateMessageInfo = findModelUpdateMessage(
+        action.payload,
+        state
       );
-
-      // Only allow removing individual messages that are model updates,
-      // as we want to retain user and bot message history
-      // when requesting model responses within a chat session.
-      // If we want to clear all history
-      // and start a new session, see clearChatMessages.
-      if (
-        messageToRemovePosition < 0 ||
-        updatedMessages[messageToRemovePosition].role !== Role.MODEL_UPDATE
-      ) {
+      if (!modelUpdateMessageInfo) {
         return;
       }
-      updatedMessages.splice(messageToRemovePosition, 1);
 
-      state.chatMessagesCurrent = updatedMessages;
+      const {index, messageListKey} = modelUpdateMessageInfo;
+      state[messageListKey].splice(index, 1);
     },
     clearChatMessages: state => {
       state.chatMessagesPast = [];
@@ -495,6 +485,35 @@ const allFieldsHidden = (fieldVisibilities: AichatState['fieldVisibilities']) =>
   getTypedKeys(fieldVisibilities).every(
     key => fieldVisibilities[key] === Visibility.HIDDEN
   );
+
+type MessageListKey = 'chatMessagesCurrent' | 'chatMessagesPast';
+type MessageLocation = {
+  index: number;
+  messageListKey: MessageListKey;
+};
+
+const findModelUpdateMessage = (
+  id: number,
+  state: AichatState
+): MessageLocation | undefined => {
+  for (const messageListKey of ['chatMessagesCurrent', 'chatMessagesPast']) {
+    const typedKey = messageListKey as MessageListKey;
+    const messageList = state[typedKey] as ChatCompletionMessage[];
+
+    // Only allow removing individual messages that are model updates,
+    // as we want to retain user and bot message history
+    // when requesting model responses within a chat session.
+    // If we want to clear all history
+    // and start a new session, see clearChatMessages.
+    const messageToRemovePosition = messageList.findIndex(
+      message => message.id === id && message.role === Role.MODEL_UPDATE
+    );
+
+    if (messageToRemovePosition >= 0) {
+      return {index: messageToRemovePosition, messageListKey: typedKey};
+    }
+  }
+};
 
 // Selectors
 export const selectHasFilledOutModelCard = createSelector(
