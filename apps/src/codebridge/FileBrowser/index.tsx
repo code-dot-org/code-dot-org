@@ -93,7 +93,7 @@ const InnerFileBrowser = React.memo(
       if (
         file.type === ProjectFileType.VALIDATION ||
         file.type === ProjectFileType.STARTER ||
-        !file.type
+        !file.type // A file wihtout a type is a starter file.
       ) {
         options.push(
           <span
