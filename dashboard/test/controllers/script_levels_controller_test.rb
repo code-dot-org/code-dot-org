@@ -197,6 +197,27 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal @script_level, assigns(:script_level)
   end
 
+  test 'should show script level by script name' do
+    params = {
+      script_id: @script_level.script.name,
+      lesson_position: @script_level.lesson.absolute_position,
+      id: @script_level.position
+    }
+    get :show, params: params
+    assert_response :success
+  end
+
+  test 'should not show script level by script id' do
+    params = {
+      script_id: @script_level.script.id,
+      lesson_position: @script_level.lesson.absolute_position,
+      id: @script_level.position
+    }
+    assert_raises ActiveRecord::RecordNotFound do
+      get :show, params: params
+    end
+  end
+
   test 'should make script level pages uncachable by default' do
     get_show_script_level_page(@script_level)
 

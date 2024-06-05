@@ -8,24 +8,25 @@ import {reduxStore} from '@cdo/storybook/decorators';
 import currentUser from '../../currentUserRedux';
 import manageStudents from '../../manageStudents/manageStudentsRedux';
 
-import {UnconnectedAgeGatedStudentsModal} from './AgeGatedStudentsModal';
+import AgeGatedStudentsModal from './AgeGatedStudentsModal';
+import {MockStudentData} from './MockData';
 
 export default {
   name: 'At Risk Age Gated Students Modal (teacher dashboard)',
-  component: UnconnectedAgeGatedStudentsModal,
+  component: AgeGatedStudentsModal,
+};
+
+const mockState = {
+  manageStudents: {
+    studentData: MockStudentData,
+    isLoadingStudents: false,
+  },
 };
 
 const Template: StoryFn = args => (
-  <Provider store={reduxStore({currentUser, manageStudents})}>
-    <UnconnectedAgeGatedStudentsModal
-      isOpen={true}
-      onClose={() => {}}
-      isLoadingStudents={false}
-      {...args}
-    />
+  <Provider store={reduxStore({currentUser, manageStudents}, mockState)}>
+    <AgeGatedStudentsModal isOpen={true} onClose={() => {}} {...args} />
   </Provider>
 );
 export const ModalForAgeGatedStudents = Template.bind({});
-ModalForAgeGatedStudents.args = {
-  manageStudents: {isLoadingStudents: false},
-};
+ModalForAgeGatedStudents.args = {};
