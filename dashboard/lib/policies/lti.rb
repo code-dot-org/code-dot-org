@@ -212,11 +212,6 @@ class Policies::Lti
 
   # Check if a partial registration is in progress for an LTI user.
   def self.lti_registration_in_progress?(session)
-    puts 'CHECKING'
-    if PartialRegistration.in_progress?(session)
-      puts 'IN PROGRESS'
-      return PartialRegistration.get_provider(session) == AuthenticationOption::LTI_V1
-    end
-    return false
+    PartialRegistration.in_progress?(session) && PartialRegistration.get_provider(session) == AuthenticationOption::LTI_V1
   end
 end
