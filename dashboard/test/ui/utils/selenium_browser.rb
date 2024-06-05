@@ -14,6 +14,10 @@ module SeleniumBrowser
       options[:options] = Selenium::WebDriver::Firefox::Options.new
       options[:options].headless! if headless
       options[:options].add_argument('window-size=1280,1024')
+    when :edge
+      options[:options] = Selenium::WebDriver::Edge::Options.new
+      options[:options].headless! if headless
+      options[:options].add_argument('window-size=1280,1024')
     end
 
     if selenium_url

@@ -21,8 +21,21 @@ module TestRunUtils
 
   def self.run_local_ui_test
     feature_path = File.expand_path(ENV['feature'])
+    args = [
+      "--verbose",
+      "--pegasus=localhost.code.org:3000",
+      "--dashboard=localhost-studio.code.org:3000",
+      "--local",
+      "--headed",
+      "--feature=#{feature_path}"
+    ]
+
+    if ENV['browser']
+      args << "--browser=#{ENV['browser']}"
+    end
+
     Dir.chdir(dashboard_dir('test/ui/')) do
-      RakeUtils.system "./runner.rb --verbose --pegasus=localhost.code.org:3000 --dashboard=localhost-studio.code.org:3000 --local --headed --feature=#{feature_path}"
+      RakeUtils.system "./runner.rb #{args.join(' ')}"
     end
   end
 
