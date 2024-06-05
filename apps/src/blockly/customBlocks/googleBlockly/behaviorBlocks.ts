@@ -245,12 +245,14 @@ export function flyoutCategory(
     blockList.push(newBehaviorButton);
   }
 
+  // Add blocks from the level toolbox XML, if present.
+  const levelToolboxBlocks = Blockly.cdoUtils.getLevelToolboxBlocks('Behavior');
+  if (!levelToolboxBlocks?.querySelector('xml')?.hasChildNodes()) {
+    return blockList;
+  }
+
   // Blockly supports XML or JSON, but not a combination of both.
   // We convert to JSON here because the behavior_get blocks are JSON.
-  const levelToolboxBlocks = Blockly.cdoUtils.getLevelToolboxBlocks('Behavior');
-  if (!levelToolboxBlocks) {
-    return [];
-  }
   const blocksConvertedJson = convertXmlToJson(
     levelToolboxBlocks.documentElement
   );
