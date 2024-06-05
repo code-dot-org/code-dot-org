@@ -68,35 +68,71 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
       switch (tooltipProps.direction) {
         case 'onRight':
           styles = {
-            top: `${rect.top + rect.height / 2 - tooltipRect.height / 2}px`,
+            top: `${
+              rect.top +
+              window.scrollY +
+              rect.height / 2 -
+              tooltipRect.height / 2
+            }px`,
             left:
               direction === 'ltr'
-                ? `${rect.right + tailOffset + tailLength}px`
+                ? `${rect.right + window.scrollX + tailOffset + tailLength}px`
                 : `${
-                    rect.left - tooltipRect.width - tailOffset - tailLength
+                    rect.left +
+                    window.scrollX -
+                    tooltipRect.width -
+                    tailOffset -
+                    tailLength
                   }px`,
           };
           break;
         case 'onBottom':
           styles = {
-            top: `${rect.bottom + tailOffset + tailLength}px`,
-            left: `${rect.left + rect.width / 2 - tooltipRect.width / 2}px`,
+            top: `${rect.bottom + window.scrollY + tailOffset + tailLength}px`,
+            left: `${
+              rect.left +
+              window.scrollX +
+              rect.width / 2 -
+              tooltipRect.width / 2
+            }px`,
           };
           break;
         case 'onLeft':
           styles = {
-            top: `${rect.top + rect.height / 2 - tooltipRect.height / 2}px`,
+            top: `${
+              rect.top +
+              window.scrollY +
+              rect.height / 2 -
+              tooltipRect.height / 2
+            }px`,
             left:
               direction === 'ltr'
-                ? `${rect.left - tooltipRect.width - tailOffset - tailLength}px`
-                : `${rect.right + tailOffset + tailLength}px`,
+                ? `${
+                    rect.left +
+                    window.scrollX -
+                    tooltipRect.width -
+                    tailOffset -
+                    tailLength
+                  }px`
+                : `${rect.right + window.scrollX + tailOffset + tailLength}px`,
           };
           break;
         case 'onTop':
         default:
           styles = {
-            top: `${rect.top - tooltipRect.height - tailOffset - tailLength}px`,
-            left: `${rect.left + rect.width / 2 - tooltipRect.width / 2}px`,
+            top: `${
+              rect.top +
+              window.scrollY -
+              tooltipRect.height -
+              tailOffset -
+              tailLength
+            }px`,
+            left: `${
+              rect.left +
+              window.scrollX +
+              rect.width / 2 -
+              tooltipRect.width / 2
+            }px`,
           };
           break;
       }
