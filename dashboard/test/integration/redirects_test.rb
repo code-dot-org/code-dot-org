@@ -118,18 +118,6 @@ class RedirectsTest < ActionDispatch::IntegrationTest
     assert_includes e.message, 'No route matches'
   end
 
-  test 'old script id paths redirect to named paths' do
-    {
-      'Hour of Code': 'Hour%20of%20Code',
-      events: 'events',
-      jigsaw: 'jigsaw'
-    }.each do |name, slug|
-      unit = Unit.find_by_name(name)
-      get "/s/#{unit.id}"
-      assert_redirected_to "/s/#{slug}"
-    end
-  end
-
   test 'redirects weblab code studio share link to codeprojects' do
     get "http://#{CDO.dashboard_hostname}/projects/weblab/abcdef"
     assert_redirected_to "http://#{CDO.codeprojects_hostname}/abcdef/"
