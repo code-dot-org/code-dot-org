@@ -2,6 +2,7 @@ import React, {
   useEffect,
   useRef,
   useState,
+  useCallback,
   ReactNode,
   HTMLAttributes,
 } from 'react';
@@ -46,47 +47,75 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
     setNodePosition(null);
   };
 
-  useEffect(() => {
+  // Define the tail offset and length values
+  const tailOffset = 4;
+  const tailLengths = {
+    l: 12,
+    m: 9,
+    s: 6,
+    xs: 6,
+  };
+  const tailLength = tailLengths[tooltipProps.size || 'm'];
+
+  const updateTooltipStyles = useCallback(() => {
     if (nodePosition && tooltipRef.current) {
       const rect = nodePosition.getBoundingClientRect();
       const tooltipRect = tooltipRef.current.getBoundingClientRect();
+      const direction = document.documentElement.dir || 'ltr'; // Default to 'ltr' if not specified
 
       let styles: React.CSSProperties = {};
-
-      console.log(rect);
-      console.log(nodePosition);
 
       switch (tooltipProps.direction) {
         case 'onRight':
           styles = {
             top: `${rect.top + rect.height / 2 - tooltipRect.height / 2}px`,
-            left: `${rect.right}px`,
+            left:
+              direction === 'ltr'
+                ? `${rect.right + tailOffset + tailLength}px`
+                : `${
+                    rect.left - tooltipRect.width - tailOffset - tailLength
+                  }px`,
           };
           break;
         case 'onBottom':
           styles = {
-            top: `${rect.bottom}px`,
+            top: `${rect.bottom + tailOffset + tailLength}px`,
             left: `${rect.left + rect.width / 2 - tooltipRect.width / 2}px`,
           };
           break;
         case 'onLeft':
           styles = {
             top: `${rect.top + rect.height / 2 - tooltipRect.height / 2}px`,
-            left: `${rect.left - tooltipRect.width}px`,
+            left:
+              direction === 'ltr'
+                ? `${rect.left - tooltipRect.width - tailOffset - tailLength}px`
+                : `${rect.right + tailOffset + tailLength}px`,
           };
           break;
         case 'onTop':
         default:
           styles = {
-            top: `${rect.top - tooltipRect.height}px`,
+            top: `${rect.top - tooltipRect.height - tailOffset - tailLength}px`,
             left: `${rect.left + rect.width / 2 - tooltipRect.width / 2}px`,
           };
           break;
       }
-
       setTooltipStyles(styles);
     }
-  }, [showTooltip, nodePosition, tooltipProps.direction]);
+  }, [nodePosition, tailLength, tooltipProps.direction]);
+
+  useEffect(() => {
+    if (showTooltip) {
+      updateTooltipStyles();
+    }
+  }, [
+    showTooltip,
+    nodePosition,
+    tooltipProps.direction,
+    tailOffset,
+    tailLength,
+    updateTooltipStyles,
+  ]);
 
   const tooltipStyleProps: React.CSSProperties = {
     visibility: showTooltip ? 'visible' : 'hidden',
@@ -130,11 +159,6 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
         }
       },
     });
-
-  console.log('componentToWrap', componentToWrap);
-  console.log('tooltipProps', tooltipProps);
-  console.log('showTooltip', showTooltip);
-  console.log('nodePosition', nodePosition);
 
   return (
     <TooltipOverlay className={tooltipOverlayClassName}>

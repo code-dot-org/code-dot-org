@@ -16,7 +16,7 @@ $tooltip-span-vertical-top-spacing: 2px;
   }
 
   &.tooltip-onTop {
-    inset-block-end: calc(100% + $tail-length + $tail-offset);
+    //inset-block-end: calc(100% + $tail-length + $tail-offset);
 
     &::after {
       border-bottom-width: 0;
@@ -24,7 +24,7 @@ $tooltip-span-vertical-top-spacing: 2px;
   }
 
   &.tooltip-onRight {
-    inset-inline-start: calc(100% + $tail-length + $tail-offset);
+    //inset-inline-start: calc(100% + $tail-length + $tail-offset);
 
     &::after {
       border-inline-start-width: 0;
@@ -32,7 +32,7 @@ $tooltip-span-vertical-top-spacing: 2px;
   }
 
   &.tooltip-onBottom {
-    inset-block-start: calc(100% + $tail-length + $tail-offset);
+    //inset-block-start: calc(100% + $tail-length + $tail-offset);
 
     &::after {
       border-top-width: 0;
@@ -40,7 +40,7 @@ $tooltip-span-vertical-top-spacing: 2px;
   }
 
   &.tooltip-onLeft {
-    inset-inline-end: calc(100% + $tail-length + $tail-offset);
+    //inset-inline-end: calc(100% + $tail-length + $tail-offset);
 
     &::after {
       border-inline-end-width: 0;
@@ -76,24 +76,24 @@ $tooltip-span-vertical-top-spacing: 2px;
   }
 }
 
-[aria-describedby]:hover,
-[aria-describedby]:focus {
-  position: relative;
-}
+//[aria-describedby]:hover,
+//[aria-describedby]:focus {
+//  position: relative;
+//}
 
-[aria-describedby]:hover + [role="tooltip"],
-[aria-describedby]:focus + [role="tooltip"] {
-  visibility: visible;
-}
+//[aria-describedby]:hover + [role="tooltip"],
+//[aria-describedby]:focus + [role="tooltip"] {
+//  visibility: visible;
+//}
 
 // Direction
 .tooltip-onTop {
   display: flex;
-  inset-inline-start: 50%;
-  transform: translateX(-50%);
+  //inset-inline-start: 50%;
+  //transform: translateX(-50%);
 
   html[dir='rtl'] & {
-    transform: translateX(50%);
+    //transform: translateX(50%);
   }
 
 
@@ -108,8 +108,8 @@ $tooltip-span-vertical-top-spacing: 2px;
 }
 
 .tooltip-onRight {
-  inset-block-start: 50%;
-  transform: translateY(-50%);
+  //inset-block-start: 50%;
+  //transform: translateY(-50%);
 
 
   &::after {
@@ -126,11 +126,11 @@ $tooltip-span-vertical-top-spacing: 2px;
 }
 
 .tooltip-onBottom {
-  inset-inline-start: 50%;
-  transform: translateX(-50%);
+  //inset-inline-start: 50%;
+  //transform: translateX(-50%);
 
   html[dir='rtl'] & {
-    transform: translateX(50%);
+    //transform: translateX(50%);
   }
 
   &::after {
@@ -144,8 +144,8 @@ $tooltip-span-vertical-top-spacing: 2px;
 }
 
 .tooltip-onLeft {
-  inset-block-start: 50%;
-  transform: translateY(-50%);
+  //inset-block-start: 50%;
+  //transform: translateY(-50%);
 
   &::after {
     content: "";
