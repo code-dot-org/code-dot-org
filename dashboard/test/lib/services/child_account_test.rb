@@ -1,62 +1,6 @@
 require 'test_helper'
 
 class Services::ChildAccountTest < ActiveSupport::TestCase
-  class LockOut < ActiveSupport::TestCase
-    teardown do
-      Timecop.return
-    end
-
-    test 'given no user should not throw an error' do
-      Services::ChildAccount.lock_out(nil)
-    end
-
-    test 'given non compliant user sets the lock_out state' do
-      user = create :non_compliant_child
-
-      Services::ChildAccount.lock_out(user)
-
-      assert_equal Policies::ChildAccount::ComplianceState::LOCKED_OUT, user.child_account_compliance_state
-      refute_nil user.child_account_compliance_state_last_updated
-      refute_nil user.child_account_compliance_lock_out_date
-    end
-
-    test 'given locked_out user does not update state' do
-      user = create :locked_out_child
-      compliance_state = user.child_account_compliance_state
-      last_updated = user.child_account_compliance_state_last_updated
-      Timecop.travel 5.minutes
-
-      Services::ChildAccount.lock_out(user)
-
-      assert_equal compliance_state, user.child_account_compliance_state
-      assert_equal last_updated, user.child_account_compliance_state_last_updated
-    end
-
-    test 'given pending_permission user does not update state' do
-      user = create :locked_out_child, :with_pending_parent_permission
-      compliance_state = user.child_account_compliance_state
-      last_updated = user.child_account_compliance_state_last_updated
-      Timecop.travel 5.minutes
-
-      Services::ChildAccount.lock_out(user)
-
-      assert_equal compliance_state, user.child_account_compliance_state
-      assert_equal last_updated, user.child_account_compliance_state_last_updated
-    end
-
-    test 'given parent_permission user does not update state' do
-      user = create :locked_out_child, :with_parent_permission
-      compliance_state = user.child_account_compliance_state
-      last_updated = user.child_account_compliance_state_last_updated
-      Timecop.travel 5.minutes
-
-      Services::ChildAccount.lock_out(user)
-
-      assert_equal compliance_state, user.child_account_compliance_state
-      assert_equal last_updated, user.child_account_compliance_state_last_updated
-    end
-  end
-
   class UpdateCompliance < ActiveSupport::TestCase
     teardown do
       Timecop.return
@@ -145,6 +89,44 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
       user.reload
       # The date shouldn't be updated
       assert_equal last_updated, user.child_account_compliance_state_last_updated
+    end
+  end
+
+  describe '.lock_out' do
+    let(:lock_out) {Services::ChildAccount.lock_out(user)}
+
+    let(:user) {create(:non_compliant_child)}
+
+    around do |test|
+      Timecop.freeze {test.call}
+    end
+
+    it 'updates user CAP attributes with "lock out" compliance state' do
+      assert_changes -> {user.properties} do
+        lock_out
+      end
+
+      assert_attributes user, {
+        child_account_compliance_state: 'l',
+        child_account_compliance_lock_out_date: DateTime.now.iso8601(3),
+        child_account_compliance_state_last_updated: DateTime.now.iso8601(3),
+      }
+    end
+
+    context 'when user is already locked out' do
+      let(:user) do
+        create(
+          :locked_out_child,
+          child_account_compliance_lock_out_date: 2.days.ago,
+          child_account_compliance_state_last_updated: 1.day.ago
+        )
+      end
+
+      it 'does not update user' do
+        assert_no_changes -> {user.properties} do
+          lock_out
+        end
+      end
     end
   end
 end

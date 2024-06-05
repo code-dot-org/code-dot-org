@@ -164,8 +164,8 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     end
   end
 
-  describe '.locked_out?' do
-    let(:locked_out?) {Policies::ChildAccount.locked_out?(user)}
+  describe '.lockable?' do
+    let(:lockable?) {Policies::ChildAccount.lockable?(user)}
 
     let(:user) {build_stubbed(:student)}
 
@@ -182,14 +182,14 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     end
 
     it 'returns true' do
-      _(locked_out?).must_equal true
+      _(lockable?).must_equal true
     end
 
     context 'when user does not have lockout date' do
       let(:user_lockout_date) {nil}
 
       it 'returns false' do
-        _(locked_out?).must_equal false
+        _(lockable?).must_equal false
       end
     end
 
@@ -197,14 +197,14 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       let(:user_lockout_date) {1.second.since}
 
       it 'returns false' do
-        _(locked_out?).must_equal false
+        _(lockable?).must_equal false
       end
 
       context 'if user does not predate policy' do
         let(:user_predates_policy?) {false}
 
         it 'returns true' do
-          _(locked_out?).must_equal true
+          _(lockable?).must_equal true
         end
       end
     end
