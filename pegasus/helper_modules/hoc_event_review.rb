@@ -5,9 +5,9 @@ module HocEventReview
   Sequel.extension :core_refinements
   using Sequel::CoreRefinements
 
-  # Converts a simple x.y JSON-attribute path to a MySQL 5.7 JSON expression using the inline-path operator.
-  # Ref: https://dev.mysql.com/doc/refman/5.7/en/json-search-functions.html#operator_json-inline-path
-  #
+  # Converts a simple x.y JSON-attribute path to a MySQL JSON expression
+  # (available in MySQL 5.7.13 and later) using the inline-path operator.
+  # Ref: https://dev.mysql.com/doc/refman/8.0/en/json-search-functions.html#operator_json-inline-path
   # Because we use this method to initialize some constants, it must be
   # declared before the constants, in violation of the usual convention for
   # private methods.
