@@ -247,11 +247,11 @@ namespace :seed do
         raise 'no matching dsl-defined level files found. please check filename for exact case and spelling.'
       end
 
-      # Parse each .[dsl] file and setup its model.
       parse_dsl_files(dsl_files)
     end
   end
 
+  # Parse each .[dsl] file and setup its model.
   def parse_dsl_files(dsl_files)
     level_md5s_by_name = DSLDefined.pluck(:name, :md5).to_h
 
