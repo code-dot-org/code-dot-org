@@ -1,4 +1,4 @@
-@no_circle
+@no_ci
 @no_mobile
 
 Feature: Using the YourSchool census page
@@ -29,7 +29,7 @@ Feature: Using the YourSchool census page
     Then I press "#submit-button" using jQuery
     Then I wait until I am on "http://code.org/yourschool/thankyou"
 
-  @no_circle
+  @no_ci
   Scenario: Use census map to select school
     Given I am on "http://code.org/yourschool"
     Then I see "#map"

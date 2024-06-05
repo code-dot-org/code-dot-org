@@ -1,7 +1,7 @@
 @eyes
 Feature: Theater
 
-  @no_circle
+  @no_ci
   Scenario: GIF plays on run
     When I open my eyes to test "Javalab Theater GIF Playback"
     Given I create a levelbuilder named "Simone"
