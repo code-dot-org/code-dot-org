@@ -237,18 +237,23 @@ namespace :seed do
   # explicit execution of "seed:dsls"
   timed_task_with_logging dsls: :environment do
     DSLDefined.transaction do
-      # Allow developers to seed just one dsl-defined level, e.g.
-      # rake seed:dsls DSL_FILENAME=k-1_Artistloops_multi1.multi
-      dsl_files = ENV['DSL_FILENAME'] ? Dir.glob("config/scripts/**/#{ENV['DSL_FILENAME']}") : DSL_FILES
-
-      # This is only expected to happen when DSL_FILENAME is set and the
-      # filename is not found
-      unless dsl_files.count > 0
-        raise 'no matching dsl-defined level files found. please check filename for exact case and spelling.'
-      end
-
+      dsl_files = override_dsl_filenames(ENV['DSL_FILENAME'], DSL_FILES)
       parse_dsl_files(dsl_files)
     end
+  end
+
+  # Allow developers to seed just one dsl-defined level, e.g.
+  # rake seed:dsls DSL_FILENAME=k-1_Artistloops_multi1.multi
+  def override_dsl_filenames(filename_override, dsl_files)
+    dsl_files = filename_override ? Dir.glob("config/scripts/**/#{filename_override}") : dsl_files
+
+    # This is only expected to happen when DSL_FILENAME is set and the
+    # filename is not found
+    unless dsl_files.count > 0
+      raise 'no matching dsl-defined level files found. please check filename for exact case and spelling.'
+    end
+
+    dsl_files
   end
 
   # Parse each .[dsl] file and setup its model.
