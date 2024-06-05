@@ -1,9 +1,11 @@
+import classnames from 'classnames';
+import FocusTrap from 'focus-trap-react';
 import PropTypes from 'prop-types';
 import React from 'react';
-import FocusTrap from 'focus-trap-react';
+
 import CloseOnEscape from '@cdo/apps/templates/CloseOnEscape';
+
 import defaultStyle from './accessible-dialogue.module.scss';
-import classnames from 'classnames';
 
 function AccessibleDialog({
   styles,

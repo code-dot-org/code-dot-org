@@ -1,3 +1,4 @@
+@no_phone
 Feature: Self Paced PL Instructor in Training
 
   Scenario: View Instructor In Training Applab Level as Universal Instructor

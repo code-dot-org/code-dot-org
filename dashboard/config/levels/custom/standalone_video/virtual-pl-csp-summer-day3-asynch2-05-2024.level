@@ -1,0 +1,21 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2024-05-10T15:34:11.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "PL_CSP_SummerAsync_U3L1Computers",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28731,
+    "name_suffix": "_2023",
+    "encrypted": "false",
+    "long_instructions": "<img src=\"https://images.code.org/9df1a7b659aba5907457cec20dd907a8-Screenshot 2023-10-19 at 12.26.39 PM.png\" alt=\"A clipboard with the words TO DO on it. This icon is used to signal an action item for participants.\" width=\"30px\" style=\"border-radius:10px; float:left; margin: 0px 10px 5px 0px;\">\r\n\r\n#### CSP Unit 3 is called Intro to App Design and it includes 8 lessons. Throughout the unit, students learn how to make simple apps and eventually create a working app with a partner. It serves as a bridge from the non-programming Units 1 and 2 to the more formal programming Units 4 and beyond. In the first lesson, students explore and investigate what makes an app an app.\r\n\r\n---\r\n## Learn More:\r\n\r\n<img src=\"https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png\" alt=\"A clipboard with the words TO DO on it. This icon is used to signal an action item for participants.\" width=\"30px\" style=\"border-radius:10px; float:left; margin: 0px 10px 5px 0px;\">\r\n\r\n#### In preparation for the next module, watch the video in Unit 3 Lesson 1: How Computers Work: What Makes a Computer, a Computer? (5:09)."
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-05-10T15:34:11.027+00:00\",\"changed\":[\"cloned from \\\"virtual-pl-csd-summer-day3-UnderstandingContext3_4_video\\\"\"],\"cloned_from\":\"virtual-pl-csd-summer-day3-UnderstandingContext3_4_video\"}]"
+}]]></config>
+</StandaloneVideo>

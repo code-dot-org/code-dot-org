@@ -1,6 +1,6 @@
 import React from 'react';
 import {expect} from '../util/deprecatedChai';
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import sinon from 'sinon';
 import ShareWarningsDialog from '@cdo/apps/templates/ShareWarningsDialog';
 import commonMsg from '@cdo/locale';

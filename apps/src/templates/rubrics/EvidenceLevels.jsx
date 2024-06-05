@@ -1,12 +1,13 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
+import EvidenceLevelsForStudents from './EvidenceLevelsForStudents';
+import EvidenceLevelsForTeachersV2 from './EvidenceLevelsForTeachersV2';
 import {
   aiEvaluationShape,
   evidenceLevelShape,
   submittedEvaluationShape,
 } from './rubricShapes';
-import EvidenceLevelsForStudents from './EvidenceLevelsForStudents';
-import EvidenceLevelsForTeachersV2 from './EvidenceLevelsForTeachersV2';
 
 export default function EvidenceLevels({
   productTour,

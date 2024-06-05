@@ -1,11 +1,13 @@
 // Event Handlers for Google Blockly.
 
-import {handleWorkspaceResizeOrScroll} from '@cdo/apps/code-studio/callouts';
-import {BLOCK_TYPES} from './constants';
 import {Block, WorkspaceSvg} from 'blockly';
-import {ExtendedBlockSvg, ExtendedWorkspaceSvg} from './types';
-import BlockSvgLimitIndicator from './addons/blockSvgLimitIndicator';
 import * as GoogleBlockly from 'blockly/core';
+
+import {handleWorkspaceResizeOrScroll} from '@cdo/apps/code-studio/callouts';
+
+import BlockSvgLimitIndicator from './addons/blockSvgLimitIndicator';
+import {BLOCK_TYPES} from './constants';
+import {ExtendedBlockSvg, ExtendedWorkspaceSvg} from './types';
 
 // A custom version of Blockly's Events.disableOrphans. This makes a couple
 // changes to the original function.

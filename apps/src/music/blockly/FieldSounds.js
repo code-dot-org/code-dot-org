@@ -11,6 +11,14 @@ import AppConfig from '../appConfig';
 const FIELD_HEIGHT = 20;
 const FIELD_PADDING = 2;
 
+// A variant for SoundsPanel that plays previews as sounds are selected.
+const useSoundsPanelPreview =
+  AppConfig.getValue('sounds-panel-1-preview') === 'true';
+
+// Default to using SoundsPanel, unless a URL parameter forces the use of
+// the newer SoundsPanel2.
+const useSoundsPanel2 = AppConfig.getValue('sounds-panel-2') === 'true';
+
 /**
  * A custom field that renders the sample previewing and choosing UI, used in
  * various "play_sound"-related blocks. The UI is rendered by {@link SoundsPanel}.
@@ -113,10 +121,7 @@ class FieldSounds extends GoogleBlockly.Field {
       return;
     }
 
-    const CurrentSoundsPanel =
-      AppConfig.getValue('sounds-panel-2') === 'true'
-        ? SoundsPanel2
-        : SoundsPanel;
+    const CurrentSoundsPanel = useSoundsPanel2 ? SoundsPanel2 : SoundsPanel;
 
     ReactDOM.render(
       <CurrentSoundsPanel
@@ -143,7 +148,7 @@ class FieldSounds extends GoogleBlockly.Field {
         }}
         onSelect={value => {
           this.setValue(value);
-          if (AppConfig.getValue('sounds-panel-2') !== 'true') {
+          if (!useSoundsPanelPreview && !useSoundsPanel2) {
             this.hide_();
           }
         }}
@@ -153,6 +158,8 @@ class FieldSounds extends GoogleBlockly.Field {
   }
 
   dropdownDispose_() {
+    this.options.cancelPreviews();
+
     this.newDiv_ = null;
     this.showingEditor = false;
   }

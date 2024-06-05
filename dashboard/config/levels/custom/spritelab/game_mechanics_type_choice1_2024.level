@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2024-05-07T21:28:10.000Z",
   "level_num": "custom",
@@ -66,16 +67,18 @@
     "mini_toolbox": "true",
     "validation_enabled": "false",
     "hide_pause_button": "false",
-    "instructions_icon": "purplebunny",
+    "instructions_icon": "fox",
     "hint_prompt_attempts_threshold": "1",
     "short_instructions": "Try out this game! Use the arrows to move the astronaut to find their friend.",
     "standalone_app_name": "game_design",
     "long_instructions": "**Try it out!**\r\n- Move the astronaut to find their friend\r\n- The moon sprites block the player so you'll have to go around them\r\n\r\n- Press `Finish` when you are ready to move on",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-05-07T21:28:10.360+00:00\",\"changed\":[\"cloned from \\\"game_mechanics_type_choice1\\\"\"],\"cloned_from\":\"game_mechanics_type_choice1\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-07T21:28:10.360+00:00\",\"changed\":[\"cloned from \\\"game_mechanics_type_choice1\\\"\"],\"cloned_from\":\"game_mechanics_type_choice1\"},{\"changed_at\":\"2024-05-09 17:27:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions_icon\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

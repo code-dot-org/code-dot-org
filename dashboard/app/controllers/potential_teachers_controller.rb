@@ -31,10 +31,6 @@ class PotentialTeachersController < ApplicationController
     render json: @potential_teacher_data
   end
 
-  private def potential_teacher_params
-    params.permit([:name, :email, :script_id, :receives_marketing]).to_h
-  end
-
   def send_hoc_email(params)
     name = current_user&.name || params[:name]
     email = current_user&.email || params[:email]
@@ -47,5 +43,9 @@ class PotentialTeachersController < ApplicationController
   def set_potential_teacher
     @potential_teacher = PotentialTeacher.find_by(id: params[:id])
     return render :not_found unless @potential_teacher
+  end
+
+  private def potential_teacher_params
+    params.permit([:name, :email, :script_id, :receives_marketing]).to_h
   end
 end

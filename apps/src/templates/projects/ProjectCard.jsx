@@ -1,16 +1,18 @@
 /* eslint-disable react/jsx-no-target-blank */
 import PropTypes from 'prop-types';
 import React from 'react';
-import color from '../../util/color';
-import i18n from '@cdo/locale';
-import {studio} from '@cdo/apps/lib/util/urlHelpers';
+
 import fontConstants from '@cdo/apps/fontConstants';
+import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import style from './project-card.module.scss';
+import i18n from '@cdo/locale';
 
-const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
-
+import color from '../../util/color';
 import {UnlocalizedTimeAgo} from '../TimeAgo';
+
+import {getProjectCardImageUrl} from './projectUtils';
+
+import style from './project-card.module.scss';
 
 export default class ProjectCard extends React.Component {
   static propTypes = {
@@ -92,7 +94,7 @@ export default class ProjectCard extends React.Component {
               target={isPublicGallery ? '_blank' : undefined}
             >
               <img
-                src={projectData.thumbnailUrl || PROJECT_DEFAULT_IMAGE}
+                src={getProjectCardImageUrl(projectData.thumbnailUrl, type)}
                 className={style.image}
                 alt={i18n.projectThumbnail()}
               />

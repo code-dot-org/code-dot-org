@@ -1,0 +1,29 @@
+name 'SP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5PL1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Why Game Design?
+
+#### Game design enhances creativity and technical skills by introducing students to basic programming and digital tools. It also improves problem-solving abilities and storytelling skills, as students create narratives and work through game mechanics. Additionally, game design teaches perseverance through iterative testing and improvement, and fosters collaboration through group projects. It helps students understand complex systems and rules, and builds empathy by considering the player's experience.  
+
+
+ <img src="https://images.code.org/44eb7f90ee41629850d306b4866be1a0-image-1715290809911.png" 
+         alt="pixelated cartoon image of a grey cat" 
+         style="border-radius: 40px; float: right; padding-right: 12px; height: 275px; margin: 0 0px 0px 0;">
+
+
+## Click on the links below to see example student projects: 
+* ##### <a href="https://studio.code.org/projects/game_design/HCreCXs4VSDQW6wkdle7qMsYvs17dE1SuQtnPz3iFR8">Cute food game</a>
+* ##### <a href="https://studio.code.org/projects/game_design/H2_zZSWx781bIZEbiXByTITXCwtIT3ZopMtq2zRYlzg">Custom Cheetahs</a> 
+* ##### <a href="https://studio.code.org/projects/game_design/6IJhNDYPYqow4L4tSOIINTuefj_Qsy5ie1h-hfUdMro">Funny plants</a>
+* ##### <a href="https://studio.code.org/projects/game_design/Lfgz2aHZHXaeJWM4vOz6u7aWZwPXwJVUnAO1ZYsPpLA">Unicorn Jewels</a>
+<div style="clear:both;"></div>
+
+## In this module, your students will use Sprite Lab to design and create games. 
+
+
+
+
+
+MARKDOWN

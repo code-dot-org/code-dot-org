@@ -15,6 +15,7 @@ require_relative '../legacy/middleware/animation_library_api'
 require 'bootstrap-sass'
 require 'cdo/hash'
 require 'cdo/i18n_backend'
+require 'cdo/shared_constants'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -108,9 +109,9 @@ module Dashboard
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '*.json').to_s]
     config.i18n.backend = CDO.i18n_backend
     config.i18n.enforce_available_locales = false
-    config.i18n.available_locales = ['en-US']
-    config.i18n.fallbacks[:defaults] = ['en-US']
-    config.i18n.default_locale = 'en-US'
+    config.i18n.available_locales = [SharedConstants::DEFAULT_LOCALE]
+    config.i18n.fallbacks[:defaults] = [SharedConstants::DEFAULT_LOCALE]
+    config.i18n.default_locale = SharedConstants::DEFAULT_LOCALE
     LOCALES = YAML.load_file("#{Rails.root}/config/locales.yml")
     LOCALES.each do |locale, data|
       next unless data.is_a? Hash

@@ -16,11 +16,14 @@ import unitSelection, {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 import currentUser, {
   setShowProgressTableV2,
   setProgressTableV2ClosedBeta,
+  setDateProgressTableInvitationDelayed,
+  setHasSeenProgressTableInvite,
 } from '@cdo/apps/templates/currentUserRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import progressV2Feedback from '@cdo/apps/templates/sectionProgressV2/progressV2FeedbackRedux';
 import SectionProgressSelector from '@cdo/apps/templates/sectionProgressV2/SectionProgressSelector.jsx';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import i18n from '@cdo/locale';
 
 import {expect} from '../../../util/reconfiguredChai';
 
@@ -57,7 +60,7 @@ describe('SectionProgressSelector', () => {
     postStub = sinon.stub($, 'post');
     postStub.returns(Promise.resolve());
 
-    sinon.stub(_, 'once').callsFake(fn => fn);
+    sinon.stub(_, 'debounce').callsFake(fn => fn);
   });
 
   afterEach(() => {
@@ -141,8 +144,6 @@ describe('SectionProgressSelector', () => {
   it('sets user preference when link clicked', () => {
     renderDefault();
 
-    const remindLaterLink = screen.getByText('Remind me later');
-    fireEvent.click(remindLaterLink);
     const link = screen.getByText(V1_PAGE_LINK_TEXT);
     fireEvent.click(link);
 
@@ -190,30 +191,33 @@ describe('SectionProgressSelector', () => {
     expect(screen.queryByTestId(V2_TEST_ID)).to.not.exist;
   });
 
-  it('calls analytics when toggling to v2', () => {
+  it('shows modal if modal is available', () => {
+    DCDO.set('progress-table-v2-enabled', true);
+    DCDO.set('progress-table-v2-closed-beta-enabled', true);
+    DCDO.set('disable-try-new-progress-view-modal', false);
+
+    store.dispatch(setDateProgressTableInvitationDelayed(''));
+    store.dispatch(setHasSeenProgressTableInvite(false));
+
     renderDefault();
 
-    const remindLaterLink = screen.getByText('Remind me later');
-    fireEvent.click(remindLaterLink);
-
-    const toggle = screen.getByRole('link', {name: V1_PAGE_LINK_TEXT});
-    fireEvent.click(toggle);
-
-    expect(postStub).to.have.been.calledWith(
-      '/api/v1/users/set_progress_table_timestamp'
-    );
+    screen.getByText(i18n.progressTrackingAnnouncement());
   });
 
-  it('calls analytics when toggling to v1', () => {
+  it('does not show modal if modal is not available', () => {
+    DCDO.set('progress-table-v2-enabled', true);
+    DCDO.set('progress-table-v2-closed-beta-enabled', true);
+    DCDO.set('disable-try-new-progress-view-modal', true);
+
+    store.dispatch(setDateProgressTableInvitationDelayed(''));
+    store.dispatch(setHasSeenProgressTableInvite(false));
+
     renderDefault();
-    store.dispatch(setShowProgressTableV2(true));
 
-    const toggle = screen.getByRole('link', {name: V2_PAGE_LINK_TEXT});
+    screen.getByText(V1_PAGE_LINK_TEXT);
+    screen.getByTestId(V1_TEST_ID);
 
-    fireEvent.click(toggle);
-
-    expect(postStub).to.have.been.calledWith(
-      '/api/v1/users/set_progress_table_timestamp'
-    );
+    expect(screen.queryByText(i18n.progressTrackingAnnouncement())).to.not
+      .exist;
   });
 });

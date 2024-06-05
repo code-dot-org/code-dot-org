@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2024-05-07T21:27:53.000Z",
   "level_num": "custom",
@@ -46,10 +47,10 @@
     "encrypted_examples": "fDAyomACpQcjPwwolaNycDsIJVqkIXtcYvqSynfmzCSvnsGYElqs31EkwtH+\nt8GlIVOq5xdu4DJU1LQopyrIfA==\n",
     "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"Did you add a conditional to one of your events?\\n<xml>\\n<block xmlns=\\\"https://developers.google.com/blockly/xml\\\" type=\\\"gamelab_ifVarEquals\\\" id=\\\"M/gCD$xcQAi@;(xYGB%;\\\">\\n  <field name=\\\"NUM\\\" id=\\\"TPks;#qQ]AsS/}K=XrX$\\\">ballCount</field>\\n  <value name=\\\"VAL\\\">\\n    <block type=\\\"math_number\\\" id=\\\"4k.$ts7E5)WO(|_4LA29\\\">\\n      <field name=\\\"NUM\\\">8</field>\\n    </block>\\n  </value>\\n</block>\\n</xml>\",\"hint_id\":\"Hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4634ceec559a7c4359defb14ad8766b2/game_variables_fix_choices_c.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"You can code anything to happen when the ballCount reaches 8! Just nest the block you want to happen **within** the `if ballCount = 8` block.\",\"hint_id\":\"Hint2\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/bc6a0cb44efbc6bbda77b5ec235bcb4b/game_variables_fix_choices_c.mp3\"}]",
     "name_suffix": "_2024",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "instructions_icon": "fox"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-05-07T21:27:53.395+00:00\",\"changed\":[\"cloned from \\\"game_variables_fix_choices_c\\\"\"],\"cloned_from\":\"game_variables_fix_choices_c\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-07T21:27:53.395+00:00\",\"changed\":[\"cloned from \\\"game_variables_fix_choices_c\\\"\"],\"cloned_from\":\"game_variables_fix_choices_c\"},{\"changed_at\":\"2024-05-09 16:28:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

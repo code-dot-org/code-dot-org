@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import MusicPlayer from '../player/MusicPlayer';
-import AnalyticsReporter from '../analytics/AnalyticsReporter';
+import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {AnalyticsContext} from '../context';
 import Globals from '../globals';
@@ -28,14 +28,12 @@ import {
   getCurrentlyPlayingBlockIds,
   setSoundLoadingProgress,
   setUndoStatus,
-  showCallout,
   clearCallout,
   setSelectedTriggerId,
   clearSelectedTriggerId,
 } from '../redux/musicRedux';
 import KeyHandler from './KeyHandler';
 import Callouts from './Callouts';
-import {currentLevelIndex} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {
   isReadOnlyWorkspace,
   setIsLoading,
@@ -44,14 +42,19 @@ import {
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
 import AdvancedSequencer from '../player/sequencer/AdvancedSequencer';
 import MusicPlayerStubSequencer from '../player/sequencer/MusicPlayerStubSequencer';
-import {BlockMode, LEGACY_DEFAULT_LIBRARY, DEFAULT_LIBRARY} from '../constants';
+import {
+  BlockMode,
+  LEGACY_DEFAULT_LIBRARY,
+  DEFAULT_LIBRARY,
+  DEFAULT_PACK,
+} from '../constants';
 import {Key} from '../utils/Notes';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {isEqual} from 'lodash';
 import MusicLibrary from '../player/MusicLibrary';
-import {setUpBlocklyForMusicLab} from '../blockly/setup';
 import {TRIGGER_FIELD} from '../blockly/constants';
 import MusicLabView from './MusicLabView';
+import DCDO from '@cdo/apps/dcdo';
 
 const BLOCKLY_DIV_ID = 'blockly-div';
 
@@ -64,14 +67,8 @@ const BLOCKLY_DIV_ID = 'blockly-div';
  */
 class UnconnectedMusicView extends React.Component {
   static propTypes = {
-    /**
-     * True if Music Lab is being presented from the /projectbeats page,
-     * false/undefined if as part of a script or single level.
-     * */
-    onProjectBeats: PropTypes.bool,
-
     // populated by Redux
-    currentLevelIndex: PropTypes.number,
+    currentLevelId: PropTypes.string,
     userId: PropTypes.number,
     userType: PropTypes.string,
     signInState: PropTypes.oneOf(Object.values(SignInState)),
@@ -106,7 +103,6 @@ class UnconnectedMusicView extends React.Component {
     isReadOnlyWorkspace: PropTypes.bool,
     updateLoadProgress: PropTypes.func,
     setUndoStatus: PropTypes.func,
-    showCallout: PropTypes.func,
     clearCallout: PropTypes.func,
     isPlayView: PropTypes.bool,
   };
@@ -116,10 +112,13 @@ class UnconnectedMusicView extends React.Component {
 
     const bpm = AppConfig.getValue('bpm');
     const key = AppConfig.getValue('key');
-
-    this.player = new MusicPlayer(bpm, key && Key[key.toUpperCase()]);
-    Globals.setPlayer(this.player);
     this.analyticsReporter = new AnalyticsReporter();
+    this.player = new MusicPlayer(
+      bpm,
+      key && Key[key.toUpperCase()],
+      this.analyticsReporter
+    );
+    Globals.setPlayer(this.player);
     this.musicBlocklyWorkspace = new MusicBlocklyWorkspace();
     this.soundUploader = new SoundUploader(this.player);
     this.playingTriggers = [];
@@ -142,12 +141,6 @@ class UnconnectedMusicView extends React.Component {
       loadedLibrary: false,
       hasLoadedInitialSounds: false,
     };
-
-    // If on /projectbeats, we need to manually setup Blockly for Music Lab.
-    // Otherwise, this is handled by Lab2.
-    if (props.onProjectBeats) {
-      setUpBlocklyForMusicLab();
-    }
   }
 
   componentDidMount() {
@@ -200,11 +193,11 @@ class UnconnectedMusicView extends React.Component {
     // callout that might be showing, and dispose of the Blockly workspace so that
     // any lingering UI is removed.
     //
-    // Note that the current level index updates before the app name has changed.
+    // Note that the current level ID updates before the app name has changed.
     // Therefore, this code will run when we are transitioning away from a music level
     // to another level (music or not).
     if (
-      prevProps.currentLevelIndex !== this.props.currentLevelIndex &&
+      prevProps.currentLevelId !== this.props.currentLevelId &&
       this.props.levelProperties?.appName === 'music'
     ) {
       this.stopSong();
@@ -243,7 +236,8 @@ class UnconnectedMusicView extends React.Component {
     // the level changes.
     if (
       (!isEqual(prevProps.levelProperties, this.props.levelProperties) ||
-        !isEqual(prevProps.initialSources, this.props.initialSources)) &&
+        !isEqual(prevProps.initialSources, this.props.initialSources) ||
+        prevProps.isReadOnlyWorkspace !== this.props.isReadOnlyWorkspace) &&
       this.props.levelProperties?.appName === 'music'
     ) {
       if (this.props.levelProperties?.appName === 'music') {
@@ -291,12 +285,35 @@ class UnconnectedMusicView extends React.Component {
     this.library.setCurrentPackId(packId);
     this.props.setPackId(packId);
 
+    // Check if the user has already made changes to the code on the project level.
+    let codeChangedOnProjectLevel = false;
     if (this.getStartSources() || initialSources) {
-      let codeToLoad = this.getStartSources();
+      const startSources = this.getStartSources();
+      let codeToLoad = startSources;
       if (initialSources?.source) {
         codeToLoad = JSON.parse(initialSources.source);
+        codeChangedOnProjectLevel =
+          this.props.isProjectLevel &&
+          !isEqual(codeToLoad?.blocks, startSources?.blocks);
       }
       this.loadCode(codeToLoad);
+    }
+
+    // If the user has made changes to the code on the project level but does
+    // not have a pack ID set, assume they are using the default pack. This is
+    // specifically to handle the case where a user starts a project on a library
+    // that does not have restricted packs (and is therefore using default),
+    // and then later opens their project with a library that does have restricted packs.
+    if (
+      DCDO.get('music-lab-existing-projects-default-sounds', true) &&
+      codeChangedOnProjectLevel &&
+      !packId
+    ) {
+      this.library.setCurrentPackId(DEFAULT_PACK);
+      this.props.setPackId(DEFAULT_PACK);
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .logInfo('Setting existing project to default pack');
     }
 
     // Go ahead and compile and execute the initial song once code is loaded.
@@ -308,6 +325,23 @@ class UnconnectedMusicView extends React.Component {
         (AppConfig.getValue('show-sound-filters') === 'true' ||
           levelData?.showSoundFilters)
     );
+
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .incrementCounter('LevelLoad', [
+        {
+          name: 'Type',
+          value: this.props.isProjectLevel ? 'Project' : 'Level',
+        },
+        {
+          name: 'Mode',
+          value: this.props.isPlayView
+            ? 'Share'
+            : this.props.isReadOnlyWorkspace
+            ? 'View'
+            : 'Edit',
+        },
+      ]);
   }
 
   // Load the library and initialize the music player, if not already loaded.
@@ -394,10 +428,7 @@ class UnconnectedMusicView extends React.Component {
   };
 
   getStartSources = () => {
-    if (
-      !this.props.onProjectBeats &&
-      this.props.levelProperties?.levelData?.startSources
-    ) {
+    if (this.props.levelProperties?.levelData?.startSources) {
       return this.props.levelProperties?.levelData.startSources;
     } else {
       const startSourcesFilename = 'startSources' + getBlockMode();
@@ -638,6 +669,7 @@ class UnconnectedMusicView extends React.Component {
     this.player.stopSong();
     this.playingTriggers = [];
 
+    // Clear the timeline of triggered events when song is stopped.
     this.executeCompiledSong();
 
     this.props.setIsPlaying(false);
@@ -690,7 +722,7 @@ class UnconnectedMusicView extends React.Component {
 
 const MusicView = connect(
   state => ({
-    currentLevelIndex: currentLevelIndex(state),
+    currentLevelId: state.progress.currentLevelId,
 
     userId: state.currentUser.userId,
     userType: state.currentUser.userType,
@@ -736,7 +768,6 @@ const MusicView = connect(
     setPageError: pageError => dispatch(setPageError(pageError)),
     updateLoadProgress: value => dispatch(setSoundLoadingProgress(value)),
     setUndoStatus: value => dispatch(setUndoStatus(value)),
-    showCallout: id => dispatch(showCallout(id)),
     clearCallout: id => dispatch(clearCallout()),
   })
 )(UnconnectedMusicView);

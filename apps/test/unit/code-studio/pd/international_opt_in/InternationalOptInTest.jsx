@@ -1,5 +1,5 @@
 import React from 'react';
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import {expect} from '../../../../util/reconfiguredChai';
 import InternationalOptIn from '@cdo/apps/code-studio/pd/international_opt_in/InternationalOptIn';
 

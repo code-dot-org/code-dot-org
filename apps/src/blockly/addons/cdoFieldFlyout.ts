@@ -1,4 +1,5 @@
 import GoogleBlockly, {Block, FieldConfig, WorkspaceSvg} from 'blockly/core';
+
 import CdoBlockFlyout from './cdoBlockFlyout';
 
 interface FieldFlyoutConfig extends FieldConfig {

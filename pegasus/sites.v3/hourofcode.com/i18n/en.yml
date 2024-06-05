@@ -224,6 +224,7 @@
   educators_label: "Educators"
   companies_label: "Companies"
   districts_label: "Districts"
+  administrators_label: "Administrators"
   school_assemblies_label: "School Assemblies"
   parents_label: "Parents"
   public_officials_label: "Public Officials"
@@ -356,6 +357,7 @@
   call_to_action_focus_on_topic: "Focus on a topic"
   call_to_action_teach_full_intro_course: "Teach a full intro course"
   call_to_action_see_module_details: "See module details"
+  call_to_action_start_module: "Start module"
   call_to_action_start_modules: "Start modules"
   call_to_action_see_course_details: "See course details"
   call_to_action_see_lesson_details: "See lesson details"
@@ -431,6 +433,7 @@
   aria_label_call_to_action_afe: "Learn more about Amazon Future Engineer"
   aria_label_call_to_action_facilitator_pl: "Learn more about facilitator-led professional learning workshops"
   aria_label_call_to_action_self_paced_pl: "Learn more about self-paced professional learning"
+  aria_label_call_to_action_ai_101: "Start the AI 101 self-paced professional learning program"
   aria_label_call_to_action_teaching_csf: "Start the Teaching Computer Science Fundamentals professional learning program"
   aria_label_call_to_action_teaching_csd: "Start the Teaching Computer Science Discoveries professional learning program"
   aria_label_call_to_action_teaching_csp: "Start the Teaching Computer Science Principles professional learning program"
@@ -450,6 +453,7 @@
   aria_label_call_to_action_curriculum_problem_solving: "Explore the Problem Solving and Computing curriculum"
   aria_label_call_to_action_curriculum_csc: "Explore the Computer Science Connections curriculum"
   aria_label_call_to_action_curriculum_ai: "Explore the AI and Machine Learning curriculum"
+  aria_label_call_to_action_curriculum_ai_101: "Explore our AI curriculum offerings"
   aria_label_call_to_action_curriculum_maker_cp: "Explore the Creating Apps with Devices (Circuit Playground) curriculum"
   aria_label_call_to_action_curriculum_maker_microbit: "Explore the Creating Apps with Devices (micro:bit) curriculum"
   aria_label_call_to_action_curriculum_creating_apps_with_devices: "Explore the Creating Apps with Devices unit"
@@ -522,6 +526,7 @@
   video_title_professional_learning_program: "Code.org's Professional Learning Program"
   video_title_young_women_in_computer_science: "Young Women in Computer Science"
 
+  curriculum_name_all_ai: "Any curriculum that teaches about or with AI"
   curriculum_name_all_k5: "All K-5 Curriculum"
   curriculum_name_csf: "Computer Science Fundamentals"
   curriculum_name_csf_02: "Any CS Fundamentals (Course A-F)"
@@ -666,6 +671,7 @@
   module_age_13: "Ages 13+"
   module_age_all_age: "All Ages"
   module_professional_learning: "Professional learning"
+  module_grade_k_12_teachers: "K-12 Teachers"
   module_grade_k_5_teachers: "K-5 Teachers"
   module_grade_6_10_teachers: "6-10 Teachers"
   module_grade_9_12_teachers: "9-12 Teachers"
@@ -696,6 +702,7 @@
   module_prerequisites_none: "None"
   module_prerequisites_maker_cp: "Access to a Circuit Playground"
   module_prerequisites_maker_microbit: "Access to a micro:bit"
+  module_label_ai_101_self_paced_pl: "AI 101 Self-Paced Professional Learning"
   module_label_teaching_csf: "Teaching Computer Science Fundamentals"
   module_label_teaching_csd: "Teaching Computer Science Discoveries"
   module_label_teaching_csp: "Teaching Computer Science Principles"
@@ -1035,6 +1042,8 @@
   ai_pl_duration: "Duration: 2 hours"
   ai_pl_title: "Teaching AI and Machine Learning"
   ai_pl_desc: "Introduction to artificial intelligence and machine learning. Train a machine learning model using AI Lab. and engage with machine learning apps. Consider real-world implications of AI and machine learning."
+  ai_pl_101_title: "AI 101 Self-Paced Professional Learning"
+  ai_pl_101_desc: "Foundational online learning series for any teacher or educator interested in the groundbreaking world of artificial intelligence (AI) and its transformative potential in education."
   ai_promote_literacy: "Promote AI Literacy. Support Innovation. Provide Guidance."
   ai_section_body: "The latest resource from TeachAI, Foundational Policy Ideas for AI in Education, provides briefs, policy considerations, and presentation materials for policymakers to craft responsible policies for teaching with and about AI. Let's #TeachAI."
   ai_banner_body: "The latest resource from TeachAI provides briefs, policy considerations, and presentation materials for policymakers."
@@ -1178,7 +1187,8 @@
   admins_page_subscribe_form_desc: "Sign up to receive monthly emails from Code.org on bringing computer science to your school or district. Get helpful reminders, tips, and updates sent right to your inbox. You can unsubscribe at any time."
   admins_page_subscribe_form_district_disclaimer: "District Administrator? [Discover our District Program](%{district_program_url})."
   admins_page_lms_heading: "Seamless LMS integration for simplified management"
-  admins_page_lms_desc: "Connect Code.org with your district or school's Learning Management System. Our platform integrates with leading LMS and LTI providers, making class management more efficient while ensuring a unified learning experience."
+  admins_page_lms_desc: "Our platform integrates seamlessly with leading LMS providers. Connect existing LMS classrooms to Code.org with one-click Roster Syncing, Single Sign-On, and integrated access to curriculum."
+  admins_page_lms_call_to_action: "Learn more about LMS integrations"
   admins_page_resources_desc: "Beyond curriculum and professional learning, we have many materials to support your classroom."
   admins_page_resources_desc_intl: "We have a growing number of partners around the world that are helping to bring computer science to students in their area."
   admins_page_resources_desc_videos: "We offer a growing library of educational videos for use by educators worldwide, online or in classrooms."
@@ -1494,7 +1504,6 @@
   csd_page_curriculum_glance_devices: "Laptop, Chromebook"
   csd_page_curriculum_glance_tools: "App Lab, Game Lab, AI Lab, Web Lab"
   csd_page_curriculum_glance_professional_learning: "Facilitator-led Workshops, Self-paced Modules"
-  csd_page_curriculum_glance_professional_languages: "English"
   csd_page_curriculum_glance_professional_accessibility_features: "Text-to-speech, Closed captioning, Immersive reader"
   csd_page_pick_a_course_heading: "Picking the right CS Discoveries&reg; course for your classroom"
   csd_page_pick_a_course_heading_non_en: "Picking the right %{cs_discoveries} (CS Discoveries) course for your classroom"
@@ -1570,7 +1579,6 @@
   csf_page_curriculum_glance_devices: "Laptop, Chromebook, Tablet"
   csf_page_curriculum_glance_tools: "Sprite Lab, Play Lab"
   csf_page_curriculum_glance_professional_learning: "Facilitator-led Workshops, Self-paced Modules"
-  csf_page_curriculum_glance_languages: "Arabic, Bahasa Indonesian, Catalán, Chinese Simplified, Chinese Traditional, Czech, French, German, Hindi, Italian, Japanese, Korean, Kannada, Malay, Marathi, Mongolian, Polish, Portuguese-BR, Romanian, Russian, Slovak, Tagalog, Tamil, Thai, Turkish, Ukrainian, Spanish Latam, Urdu, Spanish-ES, Uzbek, Vietnamese"
   csf_page_curriculum_glance_accessibility_features: "Text-to-speech, Closed captioning, Immersive reader"
   csf_page_pick_a_course_heading: "Picking the right CS Fundamentals course for your classroom"
   csf_page_pick_a_course_desc: "With the diverse set of options offered for CS Fundamentals, there is a course for all different needs."
@@ -1676,6 +1684,68 @@
 
   yw_page_top_heading: "Young Women in Computer Science"
   yw_page_top_desc: "Become a CS Ambassador and be a part of closing the gender gap in computer science."
+
+  lms_page:
+    heading: "Integrate Code.org with your LMS platform"
+    top_desc: "Connect existing LMS classrooms in your school to Code.org with one-click roster syncing, single sign-on (SSO), and integrated access curriculum."
+    top_module:
+      heading: "Code.org supports major learning management systems"
+      desc: "Code.org has seamless, secure, one-click integrations for most major LMS & SSO providers."
+    integrations:
+      heading: "Single sign-on integrations"
+      desc: "Use these common services as login methods for Code.org. Learn more about [logging in with SSO.](%{help_article_link})"
+    reasoning:
+      heading: "Why use Code.org LMS integrations?"
+      title_01: "Save instructor time and focus on what matters"
+      desc_01: "Instantly sync your sections, students, and co-teachers to optimize classroom prep and spend more time with your students."
+      title_02: "Streamline student access and improve participation"
+      desc_02: "No more worrying about personal logins or students getting lost — students can now access Code.org with the click of a button."
+      title_03: "Build on your existing technology and solutions"
+      desc_03: "Keep your tech together. Code.org syncs effortlessly with your existing LMS classroom."
+      title_04: "Empower digital learning with our robust curriculum"
+      desc_04: "Instantly connect to Code.org's suite of standards-aligned CS & AI curricula from home or from school"
+    teacher_quote:
+      text_01: "This is awesome for my kids; it's so nice when they can just click and go get started. This makes me really happy. It streamlines everything."
+      role_01: "Elementary Teacher"
+    get_started:
+      heading: "Ready to get started with our LMS integrations?"
+      top_label: "Administrators and teachers"
+      title: "Integrate Code.org with your LMS"
+      desc: "Easily integrate Code.org with your school's LMS. Our step-by-step guide supports both administrators and teachers, helping you make the most of your tools in your educational setting."
+      call_to_action: "See the guide to getting started"
+    additional_resources:
+      heading: "Additional resources"
+      desc: "Beyond curriculum and professional learning, we have many materials to support your classroom."
+      district_program_heading: "District Program"
+      district_program_desc: "Join the Code.org District Program — at no cost! — to bring computer science to their district, empower their educators, and teach students the skills of the future."
+      pl_desc: "Empower today's students to become tomorrow's heroes with tailored professional learning. Explore in-person workshops and self-paced online modules."
+    skinny_banner:
+      heading: "Discover our new LMS integrations!"
+      desc: "We've added new LMS integrations for %{canvas} and %{schoology}! Learn how to get started!"
+  
+  lms_partner_page:
+    heading: "Integrate Code.org with %{website}"
+    desc: "Sync your rosters and sign in to code.org with one-click. Plus, Code.org content is now available directly on %{website}."
+    rosters:
+      heading: "Sync your %{website} rosters"
+      desc: "No access codes needed! Launch the Code.org Integration to instantly import your sections, students, and co-teachers direcly to Code.org. Your sections stay up to date every time you launch from %{website}."
+      link: "Learn how to create and sync rosters"
+    sso:
+      heading: "Single sign-on from %{website}"
+      desc: "Sign in to Code.org without usernames and passwords. When students launch from the Code.org integration they are automatically logged in!"
+      link: "Learn how to start using SSO with %{website}"
+    access_content:
+      heading: "Access Code.org content"
+      desc: "Browse our standards-aligned computer science and artificial intelligence curricula directly from %{website}."
+      link: "See what's available in %{website}"
+    keep_account:
+      heading: "Keep your Code.org account"
+      desc: "You and your students have worked hard. Keep your work together by linking to your existing Code.org account when launching from %{website} for the first time."
+    ready:
+      heading: "Ready to try the Code.org integration for %{website}?"
+      title: "Install the Code.org integration on %{website}"
+      list_01: "Streamline your school's digital learning by using a simple and straightforward installation process."
+      list_02: "Use this guide to get started and encourage your administrator to integrate Code.org."
 
   pl_page:
     heading: "Professional learning that empowers"
@@ -2013,6 +2083,7 @@
     music_lab: "Music Lab"
     introducing_music_lab: "Introducing Music Lab"
     introducing_music_lab_strong: "Introducing **%{music_lab}**"
+    make_music_learn_code: "Make Music, Learn Code"
     button:
       try_music_lab: "Try Music Lab"
       learn_more: "Learn more"
@@ -2064,6 +2135,7 @@
       heading: "Teach Music Lab in your Classroom"
       desc: "Use our Music Lab tutorial to unleash your students' musical creativity, combining the joy of music with the principles of coding."
       button: "Start tutorial"
+      english_only: "Available in English only"
     additional_resources:
       heading: "Additional resources"
       catalog:
@@ -2078,6 +2150,21 @@
         title: "Try an Hour of Code"
         desc: "Looking for more short-form activities and resources for all age levels? Explore our large library of Hour of Code activities and tutorials!"
         button: "See Hour of Code activities"
+    tools_page:
+      top:
+        subheading: "Create music with code"
+        desc: "Music Lab is a programming environment where students are the producers! Using its large selection of sounds, including songs from popular artists, students work in Music Lab to create new mixes using code."
+      glance:
+        heading: "Music Lab at a glance"
+        ages: "10+"
+        level: "Beginner"
+        make: "Block-based music mixes"
+        devices: "Laptop, Chromebook, Tablet"
+        browsers: "All modern browsers"
+        accessibility: "Text-to-speech, Closed captioning, Immersive reader"
+        teachers_guide_desc: "Check out the teacher's guide to learn how to get started, explore activity ideas, and get answers to common questions."
+      videos:
+        heading: "Videos to help you get started with Music Lab"
 
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'
@@ -10837,6 +10924,8 @@
   about_page_section_donors_description_2: "Code.org's accomplishments (above) demonstrate our ability to leverage those dollars into strong outcomes. But given our nonprofit ambition that every child in every school should have access to computer science — to become literate citizens in today's digital world and to test their interests in exploring CS further as a career — we have a long way to go to meet a fundraising goal that will support that vision."
   about_page_donors_link_1: "Make a donations"
   about_page_donors_link_2: "[see our list of donors](%{donors_url})"
+
+  districts_skinny_banner_title: "Over 100+ Districts have joined our District Program! [See district partners](%{district_partners_url})"
 
   teach_ai_title: "Real-world Examples. Practical Resources."
   teach_ai_description: "The AI Guidance for Schools Toolkit is a resource for policymakers, school leaders, and staff to develop initial guidance on AI in their schools."

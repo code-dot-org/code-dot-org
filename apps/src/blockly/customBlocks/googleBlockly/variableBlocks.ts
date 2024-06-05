@@ -1,7 +1,8 @@
 import {WorkspaceSvg} from 'blockly';
+import {BlockInfo, FlyoutItemInfoArray} from 'blockly/core/utils/toolbox';
+
 import {convertXmlToJson} from '@cdo/apps/blockly/addons/cdoSerializationHelpers';
 import {commonI18n} from '@cdo/apps/types/locale';
-import {BlockInfo, FlyoutItemInfoArray} from 'blockly/core/utils/toolbox';
 
 /**
  * Constructs the blocks required by the flyout for the variables category.

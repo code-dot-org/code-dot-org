@@ -41,8 +41,8 @@ Dashboard::Application.routes.draw do
     get "/congrats", to: "congrats#index"
 
     get "/incubator", to: "incubator#index"
-    get "/musiclab", to: redirect("/projectbeats", status: 302)
-    get "/projectbeats", to: "musiclab#index"
+    get "/musiclab", to: redirect(CDO.code_org_url("/music"))
+    get "/projectbeats", to: redirect(CDO.code_org_url("/music"))
     get "/musiclab/menu", to: "musiclab#menu"
     get "/musiclab/gallery", to: "musiclab#gallery"
     get "/musiclab/embed", to: "musiclab#embed"
@@ -128,6 +128,7 @@ Dashboard::Application.routes.draw do
           get 'code_review_groups'
           post 'code_review_groups', to: 'sections#set_code_review_groups'
           post 'code_review_enabled', to: 'sections#set_code_review_enabled'
+          post 'ai_tutor_enabled', to: 'sections#set_ai_tutor_enabled'
         end
         collection do
           get 'membership'
@@ -271,7 +272,10 @@ Dashboard::Application.routes.draw do
 
     # Get or create a project for the given level_id. Optionally, the request
     # can include script_id to get or create a project for the level and script.
-    get "projects(/script/:script_id)/level/:level_id", to: 'projects#get_or_create_for_level'
+    # Optionally, the request can include user_id to get a project for another user,
+    # like a teacher viewing a student's work.
+    # The request can also include a script_level_id if the level_id refers to a different level (for example, a sublevel).
+    get "projects(/script/:script_id)(/script_level/:script_level_id)/level/:level_id(/user/:user_id)", to: 'projects#get_or_create_for_level'
 
     post '/locale', to: 'home#set_locale', as: 'locale'
 
@@ -478,7 +482,7 @@ Dashboard::Application.routes.draw do
             get 'sublevel/:sublevel_position', to: 'script_levels#show', as: 'sublevel', format: false
             # Get the level's properties via JSON.
             # /s/xxx/lessons/yyy/levels/zzz/level_properties
-            get 'level_properties', to: 'script_levels#level_properties'
+            get '(sublevel/:sublevel_position)/level_properties', to: 'script_levels#level_properties'
           end
         end
         resources :script_levels, only: [:show], path: "/levels", format: false do
@@ -613,6 +617,10 @@ Dashboard::Application.routes.draw do
     namespace :lti do
       namespace :v1 do
         resource :feedback, controller: :feedback, only: %i[create show]
+        controller :dynamic_registration do
+          get 'dynamic_registration', action: :new_registration
+          post 'dynamic_registration', action: :create_registration
+        end
         resources :sections, only: [] do
           collection do
             patch :bulk_update_owners
@@ -912,7 +920,6 @@ Dashboard::Application.routes.draw do
         post 'users/sort_by_family_name', to: 'users#post_sort_by_family_name'
 
         post 'users/show_progress_table_v2', to: 'users#post_show_progress_table_v2'
-        post 'users/set_progress_table_timestamp', to: 'users#post_set_progress_table_timestamp'
         post 'users/date_progress_table_invitation_last_delayed', to: 'users#post_date_progress_table_invitation_last_delayed'
         post 'users/has_seen_progress_table_v2_invitation', to: 'users#post_has_seen_progress_table_v2_invitation'
         post 'users/ai_rubrics_disabled', to: 'users#post_ai_rubrics_disabled'
@@ -1149,10 +1156,11 @@ Dashboard::Application.routes.draw do
     end
 
     # Policy Compliance
-    get '/policy_compliance/child_account_consent/', to:
-      'policy_compliance#child_account_consent'
-    post '/policy_compliance/child_account_consent/', to:
-      'policy_compliance#child_account_consent_request'
+    namespace :policy_compliance do
+      get :pending_permission_request
+      get :child_account_consent
+      post :child_account_consent, action: :child_account_consent_request
+    end
 
     # DatablockStorageController powers the data features of applab,
     # and the key/value pair store feature of gamelab

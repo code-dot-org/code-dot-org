@@ -24,9 +24,12 @@ CSV.table(teacher_id_csv, encoding: 'iso-8859-1:utf-8').by_col[:id].each do |id|
     next
   end
 
-  if user.teacher?
+  next unless user.teacher?
+  begin
     user.update!(progress_table_v2_closed_beta: true)
     count += 1
+  rescue ActiveRecord::RecordInvalid
+    puts "RecordInvalid error #{id}"
   end
 end
 

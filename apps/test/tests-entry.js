@@ -8,7 +8,7 @@ import 'whatwg-fetch';
 import {throwOnConsoleErrorsEverywhere} from './util/throwOnConsole';
 import {clearTimeoutsBetweenTests} from './util/clearTimeoutsBetweenTests';
 import Adapter from 'enzyme-adapter-react-16';
-import enzyme from 'enzyme';
+import enzyme from 'enzyme'; // eslint-disable-line no-restricted-imports
 import stubFirehose from './util/stubFirehose';
 import KARMA_CLI_FLAGS from './util/KARMA_CLI_FLAGS';
 

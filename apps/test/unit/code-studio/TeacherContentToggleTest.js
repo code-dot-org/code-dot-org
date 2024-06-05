@@ -1,5 +1,5 @@
 import {assert} from 'chai';
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import $ from 'jquery';
 import sinon from 'sinon';

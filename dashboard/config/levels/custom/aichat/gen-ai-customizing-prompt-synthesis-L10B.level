@@ -44,8 +44,11 @@
 
       ]
     },
-    "project_template_level_name": "gen-ai-customizing-prompt-templateB"
+    "project_template_level_name": "gen-ai-customizing-prompt-templateB",
+    "display_name": "Personal Tutor",
+    "bubble_choice_description": "Have you ever wanted a personal tutor to help you better understand one of your classes?",
+    "thumbnail_url": "https://images.code.org/e4599c3b8f63a4a07c0e5a091352a33c-Lesson 3 - Level 7B - Personal Tutor.png"
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-08T20:15:33.631+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-explore-L7B\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-explore-L7B\"},{\"changed_at\":\"2024-05-08 20:26:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-08 20:27:54 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-08 20:45:15 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-08T20:15:33.631+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-explore-L7B\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-explore-L7B\"},{\"changed_at\":\"2024-05-08 20:26:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-08 20:27:54 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-08 20:45:15 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-06-04 02:26:08 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>

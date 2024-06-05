@@ -7,7 +7,7 @@ sublevels
 level 'gen-ai-customizing-intro-L8A'
 level 'gen-ai-customizing-intro-L8B'
 level 'gen-ai-customizing-intro-L8C'
-level 'gen-ai-customizing-intro-L8D'
+# level 'gen-ai-customizing-intro-L8D'
 
 markdown <<MARKDOWN
 

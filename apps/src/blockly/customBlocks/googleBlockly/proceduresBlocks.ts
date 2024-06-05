@@ -1,15 +1,17 @@
+import {ObservableProcedureModel} from '@blockly/block-shareable-procedures';
 import * as GoogleBlockly from 'blockly/core';
+import {FlyoutItemInfoArray} from 'blockly/core/utils/toolbox';
+
+import BlockSvgFrame from '@cdo/apps/blockly/addons/blockSvgFrame';
+import CdoFieldButton from '@cdo/apps/blockly/addons/cdoFieldButton';
+import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
+import {ExtendedWorkspaceSvg, ProcedureBlock} from '@cdo/apps/blockly/types';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {nameComparator} from '@cdo/apps/util/sort';
-import BlockSvgFrame from '@cdo/apps/blockly/addons/blockSvgFrame';
-import {procedureDefMutator} from './mutators/procedureDefMutator';
-import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
+
 import procedureCallerOnChangeMixin from './mixins/procedureCallerOnChangeMixin';
 import procedureCallerMutator from './mutators/procedureCallerMutator';
-import {ExtendedWorkspaceSvg, ProcedureBlock} from '@cdo/apps/blockly/types';
-import CdoFieldButton from '@cdo/apps/blockly/addons/cdoFieldButton';
-import {ObservableProcedureModel} from '@blockly/block-shareable-procedures';
-import {FlyoutItemInfoArray} from 'blockly/core/utils/toolbox';
+import {procedureDefMutator} from './mutators/procedureDefMutator';
 
 /**
  * A dictionary of our custom procedure block definitions, used across labs.

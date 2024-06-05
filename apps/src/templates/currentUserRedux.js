@@ -1,9 +1,10 @@
-import {makeEnum} from '../utils';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReport from '@cdo/apps/lib/util/AnalyticsReporter';
 import statsigReporter from '@cdo/apps/lib/util/StatsigReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import experiments from '@cdo/apps/util/experiments';
 import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
+
+import {makeEnum} from '../utils';
 
 const SET_CURRENT_USER_NAME = 'currentUser/SET_CURRENT_USER_NAME';
 const SET_USER_SIGNED_IN = 'currentUser/SET_USER_SIGNED_IN';
@@ -112,6 +113,10 @@ const initialState = {
   // Setting default under13 value to true to err on the side of caution for age-restricted content.
   under13: true,
   over21: false,
+  childAccountComplianceState: null,
+  countryCode: null,
+  usStateCode: null,
+  inSection: null,
 };
 
 export default function currentUser(state = initialState, action) {
@@ -210,6 +215,7 @@ export default function currentUser(state = initialState, action) {
       aiRubricsDisabled: action.aiRubricsDisabled,
     };
   }
+
   if (action.type === SET_INITIAL_DATA) {
     const {
       id,
@@ -226,6 +232,10 @@ export default function currentUser(state = initialState, action) {
       is_lti,
       date_progress_table_invitation_last_delayed,
       has_seen_progress_table_v2_invitation,
+      child_account_compliance_state,
+      country_code,
+      us_state_code,
+      in_section,
     } = action.serverUser;
     analyticsReport.setUserProperties(
       id,
@@ -257,6 +267,10 @@ export default function currentUser(state = initialState, action) {
       dateProgressTableInvitationDelayed:
         date_progress_table_invitation_last_delayed,
       hasSeenProgressTableInvite: has_seen_progress_table_v2_invitation,
+      childAccountComplianceState: child_account_compliance_state,
+      countryCode: country_code,
+      usStateCode: us_state_code,
+      inSection: in_section,
     };
   }
 

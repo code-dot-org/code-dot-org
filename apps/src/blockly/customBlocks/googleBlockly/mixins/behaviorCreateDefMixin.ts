@@ -5,8 +5,8 @@
 // This should only be needed if a user had previously deleted a definition
 // block but not its call blocks, which was possible with CDO Blockly.
 // References to behaviorId properties are customizations.
-import {getAlphanumericId} from '@cdo/apps/utils';
 import {ProcedureBlock} from '@cdo/apps/blockly/types';
+import {getAlphanumericId} from '@cdo/apps/utils';
 
 export const behaviorCreateDefMixin = function (this: ProcedureBlock) {
   const mixin = {

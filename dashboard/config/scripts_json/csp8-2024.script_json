@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-02 19:19:28 UTC",
+    "serialized_at": "2024-05-09 18:18:46 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3447,12 +3447,11 @@
       }
     },
     {
-      "name": "CSP Unit 8 - Lesson 10 - Project: Innovation Simulation Part 4",
-      "url": "https://docs.google.com/presentation/d/1eddAzjMCA_uVc_DlMXPZZkNs-4d4nh-gK4yR41XpTpk/copy",
+      "name": "Project: Innovation Simulation Part 4",
+      "url": "https://docs.google.com/presentation/d/1rHsYWa9C7mUcVEcL2KRhO2vPOTjr6oAVls3mFl3haJM/template/preview",
       "key": "csp_unit_8_-_lesson_10_-_project_innovation_simulation_part_4",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1eddAzjMCA_uVc_DlMXPZZkNs-4d4nh-gK4yR41XpTpk/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -3460,12 +3459,11 @@
       }
     },
     {
-      "name": "CSP Unit 8 - Lesson 11 - Assessment Day",
-      "url": "https://docs.google.com/presentation/d/1P1Jw7IJQciYo_o1xoQ6LjjjuLnfr4N_MrSVCqfiA9DE/copy",
+      "name": "Assessment Day",
+      "url": "https://docs.google.com/presentation/d/1EBRiKAc3jZcMXwGNGEs46zICsAPwR2Iyv_yLTH_sxlQ/template/preview",
       "key": "csp_unit_8_-_lesson_11_-_assessment_day",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1P1Jw7IJQciYo_o1xoQ6LjjjuLnfr4N_MrSVCqfiA9DE/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -3473,12 +3471,11 @@
       }
     },
     {
-      "name": "CSP Unit 8 - Lesson 1 - Project: Innovation Simulation Part 1",
-      "url": "https://docs.google.com/presentation/d/15ZETgJrwKPzmaycaAButEX3L0JMpN84UuINM0BuIW-0/copy",
+      "name": "Innovation Simulation Part 1",
+      "url": "https://docs.google.com/presentation/d/1olqD-R8gzh0zo9rnYKltDJ6I1Yl4ZYt4MSeFuu_nGSk/template/preview",
       "key": "csp_unit_8_-_lesson_1_-_project_innovation_simulation_part_1",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/15ZETgJrwKPzmaycaAButEX3L0JMpN84UuINM0BuIW-0/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -3486,12 +3483,11 @@
       }
     },
     {
-      "name": "CSP Unit 8 - Lesson 2 - Data Policies and Privacy",
-      "url": "https://docs.google.com/presentation/d/1lruerL3W-UO_Q4dLo2CTFFIHpeIjAbxBloOyjLGFkH8/copy",
+      "name": "Data Policies and Privacy",
+      "url": "https://docs.google.com/presentation/d/13Cl7HZ_jNBFgk0dt7TSu9Eb_vrjPEM9Wh4sATkQLMrc/template/preview",
       "key": "csp_unit_8_-_lesson_2_-_data_policies_and_privacy",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1lruerL3W-UO_Q4dLo2CTFFIHpeIjAbxBloOyjLGFkH8/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -3499,12 +3495,11 @@
       }
     },
     {
-      "name": "CSP Unit 8 - Lesson 3 - The Value of Privacy",
-      "url": "https://docs.google.com/presentation/d/1_d9JATEfx3UEhpKWA10HfIK0HrdBDl62p9-DJ028peQ/copy",
+      "name": "The Value of Privacy",
+      "url": "https://docs.google.com/presentation/d/1vXxAIjKa31CyZQOPlvacYXc_A3ByFPhF2sisqoEqH44/template/preview",
       "key": "csp_unit_8_-_lesson_3_-_the_value_of_privacy",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1_d9JATEfx3UEhpKWA10HfIK0HrdBDl62p9-DJ028peQ/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -3512,12 +3507,11 @@
       }
     },
     {
-      "name": "CSP Unit 8 - Lesson 4 - Project: Innovation Simulation Part 2",
-      "url": "https://docs.google.com/presentation/d/1NQm12j4Bk7XsZczgZbTDuSVM8we-S4vnHYyjZY-UUro/copy",
+      "name": "Project: Innovation Simulation Part 2",
+      "url": "https://docs.google.com/presentation/d/1LxIhDHxM87w9CaXm0xESuRv3Y8dP8wde7uvqTJs4RqQ/template/preview",
       "key": "csp_unit_8_-_lesson_4_-_project_innovation_simulation_part_2",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1NQm12j4Bk7XsZczgZbTDuSVM8we-S4vnHYyjZY-UUro/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -3525,12 +3519,11 @@
       }
     },
     {
-      "name": "CSP Unit 8 - Lesson 5 - Security Risks Part 1",
-      "url": "https://docs.google.com/presentation/d/1Q39BgzWsGzb4BeJXb6-L5xEDD6rJG5BqWNpUvw1VpHc/copy",
+      "name": "Security Risks Part 1",
+      "url": "https://docs.google.com/presentation/d/1Vgr1SmAarwd-cJPsdTA4c9s3-Eid0x9N0KDzxnB5BnQ/template/preview",
       "key": "csp_unit_8_-_lesson_5_-_security_risks_part_1",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1Q39BgzWsGzb4BeJXb6-L5xEDD6rJG5BqWNpUvw1VpHc/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -3538,12 +3531,11 @@
       }
     },
     {
-      "name": "CSP Unit 8 - Lesson 6 - Security Risks Part 2",
-      "url": "https://docs.google.com/presentation/d/1SgM-bQorufulv8cXUPa-ZN082RHO0DWlktc2hlK1IwY/copy",
+      "name": "Security Risks Part 2",
+      "url": "https://docs.google.com/presentation/d/1ubFpL6_Umcs8y2oViRnN4H_gqiwp2OHoYKsHbNi87XM/template/preview",
       "key": "csp_unit_8_-_lesson_6_-_security_risks_part_2",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1SgM-bQorufulv8cXUPa-ZN082RHO0DWlktc2hlK1IwY/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -3551,12 +3543,11 @@
       }
     },
     {
-      "name": "CSP Unit 8 - Lesson 7 - Project: Innovation Simulation Part 3",
-      "url": "https://docs.google.com/presentation/d/1bApf23hj78Pg_4dqArZ5vwdNwJT6TRxZjYX6J2mEt0g/copy",
+      "name": "Project: Innovation Simulation Part 3",
+      "url": "https://docs.google.com/presentation/d/1AEGMbFuQGD5gL0IUuBVOrrxbG0Zz0qXYkgKepZr3aVw/template/preview",
       "key": "csp_unit_8_-_lesson_7_-_project_innovation_simulation_part_3",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1bApf23hj78Pg_4dqArZ5vwdNwJT6TRxZjYX6J2mEt0g/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -3564,12 +3555,11 @@
       }
     },
     {
-      "name": "CSP Unit 8 - Lesson 8 - Protecting Data Part 1",
-      "url": "https://docs.google.com/presentation/d/13UxFNpOXcnrANeMBynFLC2XyAK7fzHN5_Gg8ZKSMddc/copy",
+      "name": "Protecting Data Part 1",
+      "url": "https://docs.google.com/presentation/d/1FqaBsiOOejuSm82MgfiYrdABeYu8e0C2rqUzh9mZXIM/template/preview",
       "key": "csp_unit_8_-_lesson_8_-_protecting_data_part_1",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/13UxFNpOXcnrANeMBynFLC2XyAK7fzHN5_Gg8ZKSMddc/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -3577,12 +3567,11 @@
       }
     },
     {
-      "name": "CSP Unit 8 - Lesson 9 - Protecting Data Part 2",
-      "url": "https://docs.google.com/presentation/d/18OM96OsnZeX115cRQp_SUKBp6RQOOP7UHKi2fEFZW44/copy",
+      "name": "Protecting Data Part 2",
+      "url": "https://docs.google.com/presentation/d/1HxfRhk-hmIX1rHsqpeMAgQhqmayV7P6FyBGMt6CBpnI/template/preview",
       "key": "csp_unit_8_-_lesson_9_-_protecting_data_part_2",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/18OM96OsnZeX115cRQp_SUKBp6RQOOP7UHKi2fEFZW44/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -3591,7 +3580,7 @@
     },
     {
       "name": "Cybersecurity and Global Impacts (Unit Slides)",
-      "url": "https://docs.google.com/presentation/d/1yA5Wzqz4NwsCaOstBjGqOckTBbj6pcoIM-VDh6o9F2g/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1T6Bk9nNHyOi8OLn8ZDLzzNWPr-ujIJo881rH1l2DRUU/template/preview",
       "key": "cybersecurity_and_global_impacts_unit_slides_",
       "properties": {
         "audience": "Teacher",

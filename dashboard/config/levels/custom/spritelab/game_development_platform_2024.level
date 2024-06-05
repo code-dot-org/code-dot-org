@@ -1,6 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "published": true,
   "game_id": 64,
   "created_at": "2024-05-07T21:28:13.000Z",
   "level_num": "custom",
@@ -73,13 +72,14 @@
     "validation_code": "if (World.frameCount == 1) {\r\n  \r\n  setFailTime(150);\r\n  setDelayTime(400);\r\n  \r\n   addCriteria(function() {\r\n  return minimumCostumeCount(4);\r\n   }, \"starterSprites\"); //It looks like you removed a sprite. You can add it back or reset your program using the Version History button below.\r\n  \r\n  addCriteria(function() {\r\n    return playerSpriteFound(); // Check whether or not the student created a player sprite.\r\n  }, \"gameDesignNoPlayerSprite\");  // Failure message: \"You need to make a player sprite.\"\r\n\r\n   addCriteria(function() {\r\n  return minimumCostumesForGroup(\"walls\", 2);\r\n   }, \"gameDesignMissingType\"); //Failure message: You need to add another `set sprite type to environment` so the monster can land on the green platforms.\r\n\r\n  \r\n}\r\ncheck();\r\n\r\n",
     "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"The gray platforms are set to the correct type, but you need to add this code so the green platforms are also environment types. \\n<xml>\\n<block xmlns=\\\"https://developers.google.com/blockly/xml\\\" type=\\\"GameDev_setGroup\\\" id=\\\"s0~~e0!}K[fm;ShKs2sG\\\">\\n  <field name=\\\"GROUP\\\">\\\"walls\\\"</field>\\n  <value name=\\\"SPRITE\\\">\\n    <block type=\\\"gamelab_allSpritesWithAnimation\\\" id=\\\"x,sMj}}CfvGtzA+U2wfm\\\">\\n      <field name=\\\"ANIMATION\\\">\\\"ground_grass\\\"</field>\\n    </block>\\n  </value>\\n</block>\\n</xml>\",\"hint_id\":\"Hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f89b5a0dd6c06fe2786ea8820dfb5b8c/game_development_platform.mp3\"}]",
     "encrypted_examples": "vtbeyFYUGNwvtm7i2pobQct14naRrBekkc5c3tinE6T4Ezb8PvipilJ4I4Xi\nvb8+cSx8hN/lNe6r05afp85ctQ==\n",
-    "preload_asset_list": null,
     "display_name": "Platform Monster",
     "bubble_choice_description": "**Difficulty:** 🌶️🌶️🌶️\r\n\r\n**Problem:** The monster falls through the green platforms!",
-    "thumbnail_url": "https://images.code.org/328e613ec8c37b139c742bf3e89c7253-debug c.jpg"
+    "thumbnail_url": "https://images.code.org/328e613ec8c37b139c742bf3e89c7253-debug c.jpg",
+    "preload_asset_list": null
   },
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-05-07T21:28:13.382+00:00\",\"changed\":[\"cloned from \\\"game_development_platform\\\"\"],\"cloned_from\":\"game_development_platform\"},{\"changed_at\":\"2024-05-08 20:42:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions_icon\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 22:29:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 22:30:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 23:02:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-09 00:17:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"bubble_choice_description\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-07T21:28:13.382+00:00\",\"changed\":[\"cloned from \\\"game_development_platform\\\"\"],\"cloned_from\":\"game_development_platform\"},{\"changed_at\":\"2024-05-08 20:42:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions_icon\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 22:29:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 22:30:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 23:02:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-09 00:17:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"bubble_choice_description\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-15 21:23:46 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-15 21:24:01 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -93,17 +93,17 @@
               <next>
                 <block type="gamelab_makeSpritesGrid">
                   <field name="ANIMATION_NAME">"ground_stone"</field>
-                  <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,1,0],[0,0,0,0,0,0,0,0],[1,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,1,0,0],[1,1,1,1,1,1,1,1]]</field>
+                  <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,1,1],[0,0,0,0,0,0,0,0],[1,1,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,1,1,0],[1,1,1,1,1,1,1,1]]</field>
                   <next>
                     <block type="gamelab_makeSpritesGrid">
                       <field name="ANIMATION_NAME">"ground_grass"</field>
-                      <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,1,0,0],[0,0,0,1,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,1,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]</field>
+                      <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,1,0,0],[0,0,0,1,1,0,0,0],[0,0,0,0,0,0,0,0],[0,0,1,1,1,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]</field>
                       <next>
                         <block type="gamelab_makeNewSpriteAnon">
                           <field name="ANIMATION_NAME">"alien_06"</field>
                           <value name="LOCATION">
                             <block type="gamelab_location_picker">
-                              <field name="LOCATION">{"x":364,"y":345}</field>
+                              <field name="LOCATION">{"x":379,"y":338}</field>
                             </block>
                           </value>
                           <next>
@@ -1260,9 +1260,6 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="gamelab_setBackgroundImageAs" id="e_w.RAW8aDDfs68bKi=U" x="35" y="12">
-          <field name="IMG">"background_landscape_21"</field>
-        </block>
         <block type="GameDev_setGroup" id="s0~~e0!}K[fm;ShKs2sG" x="25" y="148">
           <field name="GROUP">"walls"</field>
           <value name="SPRITE">
@@ -1302,7 +1299,10 @@
           <field name="KEY">"up"</field>
         </block>
         <block type="GameDev_playerJump" id="#:ilJiw4mfZ]hEYbH1;T" x="39" y="592">
-          <field name="STRENGTH">6.5</field>
+          <field name="STRENGTH">6</field>
+        </block>
+        <block type="gamelab_setBackgroundImageAs" id="e_w.RAW8aDDfs68bKi=U" x="309" y="659">
+          <field name="IMG">"background_landscape_21"</field>
         </block>
       </xml>
     </toolbox_blocks>

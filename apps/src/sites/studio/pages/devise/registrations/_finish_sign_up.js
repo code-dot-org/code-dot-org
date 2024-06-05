@@ -53,15 +53,10 @@ let userInRegionalPartnerVariant = experiments.isEnabled(
   experiments.OPT_IN_EMAIL_REG_PARTNER
 );
 
-const isInSchoolAssociationExperiment = statsigReporter.getIsInExperiment(
-  'sign_up_flow_school_association_update_2024',
-  'showNewFlow',
-  false
-);
-
 $(document).ready(() => {
   const schoolInfoMountPoint = document.getElementById('school-info-inputs');
   let user_type = $('#user_user_type').val();
+  let isInSchoolAssociationExperiment = false;
   init();
 
   function init() {
@@ -75,7 +70,6 @@ $(document).ready(() => {
         'width:135px;';
     }
     setUserType(user_type);
-    renderSchoolInfo();
     renderParentSignUpSection();
   }
 
@@ -91,14 +85,34 @@ $(document).ready(() => {
 
     alreadySubmitted = true;
     // Clean up school data and set age for teachers.
+    let has_school = false;
+    let has_marketing_value = false;
+    const has_display_name = $('input[name="user[name]"]')?.val() !== '';
     if (user_type === 'teacher') {
       cleanSchoolInfo();
       $('#user_age').val('21+');
+      // If the new or old school association flow has a school, update to true
+      if (
+        $('select[name="user[school_info_attributes][school_id]"]')?.val() ||
+        $('input[name="user[school_info_attributes][school_id]"]')?.val()
+      ) {
+        has_school = true;
+      }
+      // Check if either of the marketing opt in/out radio buttons are selected
+      if (
+        $('input[id="user_email_preference_opt_in_yes"]')?.is(':checked') ||
+        $('input[id="user_email_preference_opt_in_no"]')?.is(':checked')
+      ) {
+        has_marketing_value = true;
+      }
     }
     analyticsReporter.sendEvent(
       EVENTS.SIGN_UP_FINISHED_EVENT,
       {
         'user type': user_type,
+        'has school': has_school,
+        'has marketing value selected': has_marketing_value,
+        'has display name': has_display_name,
       },
       PLATFORMS.BOTH
     );
@@ -201,6 +215,12 @@ $(document).ready(() => {
     fadeInFields(TEACHER_ONLY_FIELDS);
     hideFields(STUDENT_ONLY_FIELDS);
     toggleVisShareEmailRegPartner(isInUnitedStates);
+    isInSchoolAssociationExperiment = statsigReporter.getIsInExperiment(
+      'school_association_update_2024_v3',
+      'showNewFlow',
+      false
+    );
+    renderSchoolInfo();
   }
 
   function switchToStudent() {
@@ -248,7 +268,7 @@ $(document).ready(() => {
       if (isInSchoolAssociationExperiment) {
         ReactDOM.render(
           <div style={{padding: 10}}>
-            <SchoolDataInputs />
+            <SchoolDataInputs usIp={usIp} />
           </div>,
           schoolInfoMountPoint
         );

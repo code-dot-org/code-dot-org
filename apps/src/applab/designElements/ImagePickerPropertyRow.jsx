@@ -3,8 +3,9 @@ import React from 'react';
 
 import commonMsg from '@cdo/locale';
 
-import * as rowStyle from './rowStyle';
 import {getStore} from '../../redux';
+
+import * as rowStyle from './rowStyle';
 
 // We'd prefer not to make GET requests every time someone types a character.
 // This is the amount of time that must pass between edits before we'll do a GET

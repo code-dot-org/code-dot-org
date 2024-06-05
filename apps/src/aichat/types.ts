@@ -8,7 +8,13 @@ export type ChatCompletionMessage = {
   role: Role;
   chatMessageText: string;
   status: AichatInteractionStatusValue;
+  chatMessageSuffix?: ChatMessageSuffix;
   timestamp?: string;
+};
+
+type ChatMessageSuffix = {
+  text: string;
+  boldtypeText?: string;
 };
 
 export type AichatContext = {
@@ -22,6 +28,7 @@ export enum Role {
   USER = 'user',
   SYSTEM = 'system',
   MODEL_UPDATE = 'update',
+  ERROR_NOTIFICATION = 'error_notification',
 }
 
 export enum ViewMode {
@@ -59,6 +66,8 @@ export interface AiCustomizations {
 // Model customizations sent to backend for aichat levels - excludes modelCardInfo.
 // The customizations will be included in request to LLM endpoint.
 export type AichatModelCustomizations = Omit<AiCustomizations, 'modelCardInfo'>;
+
+export type FieldVisibilities = {[key in keyof AiCustomizations]: Visibility};
 
 /** Chat bot Model Card information */
 export interface ModelCardInfo {
@@ -98,3 +107,6 @@ export interface LevelAichatSettings {
   /** list of ModelDescription.ids to limit the models available to choose from in the level */
   availableModelIds: string[];
 }
+
+// The type of save action being performed (customization update, publish, model card save, etc).
+export type SaveType = 'updateChatbot' | 'publishModelCard' | 'saveModelCard';

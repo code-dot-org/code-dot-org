@@ -64,8 +64,9 @@ class AichatController < ApplicationController
       ]
 
       Honeybadger.notify(
-        'Profanity returned from aichat model',
+        'Profanity returned from aichat model (blocked before reaching student)',
         context: {
+          model_response: latest_assistant_response,
           flagged_content: filter_result.content,
           aichat_session_id: session_id
         }
@@ -119,9 +120,11 @@ class AichatController < ApplicationController
       return false
     end
 
-    _, project_id = storage_decrypt_channel_id(context[:channelId])
-    if session.project_id != project_id
-      return false
+    if context[:channelId]
+      _, project_id = storage_decrypt_channel_id(context[:channelId])
+      if session.project_id != project_id
+        return false
+      end
     end
 
     if params[:aichatModelCustomizations] != JSON.parse(session.model_customizations) ||
@@ -140,7 +143,11 @@ class AichatController < ApplicationController
 
   private def create_session(new_messages)
     context = params[:aichatContext]
-    _, project_id = storage_decrypt_channel_id(context[:channelId])
+
+    project_id = nil
+    if context[:channelId]
+      _, project_id = storage_decrypt_channel_id(context[:channelId])
+    end
 
     AichatSession.create(
       user_id: current_user.id,

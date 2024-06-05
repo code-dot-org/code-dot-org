@@ -6,15 +6,19 @@ markdown <<MARKDOWN
 # Ideating Lessons
 
 
-#### Lessons 6-9 help students brainstorm solutions to their problem statements while exploring how computer vision works. 
+#### Lessons **6 through 9** help students brainstorm solutions to their problem statements while exploring how computer vision works.
+
+---
 
 <img src="https://images.code.org/fdaa5e62a99234f50b3561a074ab40b0-image-1715009476793.png" alt="sample QR code" width="200px"  style="border-radius:10px; float:right; margin: 40px 20px 10px 40px;">
 
 ## Lesson 6: Pixels and QR Codes
 
-#### This lesson introduces students to the fundamental concepts of **digital image processing** and information encoding. Students explore how images are represented on screens using pixels and color values (RGB) and how QR codes use these principles to **encode data**. 
+#### In this lesson, students explore how images are represented on screens using pixels and color values (RGB) and how QR codes use these principles to **encode data**. 
 
-#### Students engage in activities that illustrate the conversion of binary data into visual patterns and explore decoding mechanisms. By the end of the lesson, students should be able to explain the information stored within a pixel and apply their knowledge to encode and decode QR codes.
+#### Students engage in activities that illustrate the conversion of binary data into visual patterns and explore decoding mechanisms.
+
+#### By the end of the lesson, students should be able to explain the information stored within a pixel and apply their knowledge to encode and decode QR codes.
 
 
 ### <b>Check out the entire lesson plan  <a href="http://studio.code.org/s/computer-vision-pilot/lessons/6" target="blank" rel="noopener noreferrer">here</a>.</b>
@@ -23,12 +27,15 @@ markdown <<MARKDOWN
 ## Lesson 7: Edge Detection 
 <img src="https://images.code.org/ef660fedce89a5ee70046bcf7762855e-image-1715009802151.png" alt="sketch of a daisy" width="200px" style="border-radius:10px; float:right; margin: 0 20px 40px 40px;">
 
-#### This lesson focuses on **developing algorithms** that help computers identify and outline distinct boundaries within images. Students learn how edge detection algorithms work and their applications in computer vision, particularly in **image processing and enhancement**. 
+#### This lesson focuses on **developing algorithms** that help computers identify and outline distinct boundaries within images. 
 
-#### They engage in activities that involve writing and optimizing their own **edge detection algorithms** and discussing their efficiency and practical applications. By the end of this lesson, students should understand the technical aspects and importance of edge detection in various computer vision tasks.
+#### Students engage in activities that involve writing and optimizing their own **edge detection algorithms** and discussing their efficiency and practical applications.
+
+#### By the end of this lesson, students should understand the technical aspects and importance of edge detection in various computer vision tasks.
 
 
-#### <b>Check out the entire lesson plan  <a href="http://studio.code.org/s/computer-vision-pilot/lessons/7" target="blank" rel="noopener noreferrer">here</a>.</b>
+### <b>Check out the entire lesson plan  <a href="http://studio.code.org/s/computer-vision-pilot/lessons/7" target="blank" rel="noopener noreferrer">here</a>.</b>
  
+---
 
 MARKDOWN

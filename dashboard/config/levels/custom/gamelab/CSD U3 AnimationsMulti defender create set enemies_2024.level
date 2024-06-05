@@ -1,5 +1,6 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 50,
   "created_at": "2023-11-28T21:13:49.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "long_instructions": "# Creating Functions\r\n\r\n<img src=\"https://images.code.org/126982cbde9ae62e9a77ca1e53c92024-image-1476291567280.58.00 AM.png\" style=\"float:right; height:90px\">\r\n\r\nYour program now includes code in two places to set the enemies on the left side of the screen at a random y location. You can create functions to reset each of your two enemies to remove repetitions from your program. This will make your program easier to read, allow you to change it more easily, and allow you to quickly reset your sprites at other points in your program if you need to.\r\n\r\n# Do This\r\n\r\n<img src=\"https://images.code.org/01a2f4d9725162482fda9f74734c992c-image-1476461412974.09.52 AM.png\" style=\"\r\nfloat:right; height:70px\">\r\n\r\n* At the bottom of your program create two new functions, `setEnemy1` and `setEnemy2`.\r\n* Inside each of these functions place the code that sets the enemies on the left side of the screen and gives them a random y position.\r\n* Wherever the code for `setEnemy1` and `setEnemy2` appears in your program replace them with a call to the functions you just created.",
+    "long_instructions": "# Creating Functions\r\n\r\n<img src=\"https://images.code.org/126982cbde9ae62e9a77ca1e53c92024-image-1476291567280.58.00 AM.png\" style=\"float:right; height:90px\">\r\n\r\nYour program now includes code in two places to set the enemies on the left side of the screen at a random y location. You can create functions to reset each of your two enemies to remove repetitions from your program. This will make your program easier to read, allow you to change it more easily, and allow you to quickly reset your sprites at other points in your program if you need to.\r\n\r\n# Do This\r\n\r\n<img src=\"https://images.code.org/01a2f4d9725162482fda9f74734c992c-image-1476461412974.09.52 AM.png\" style=\"\r\nfloat:right; height:70px\">\r\n\r\n* At the bottom of your program create two new functions, `setEnemy1` and `setEnemy2`.\r\n* Inside each of these functions place the code that sets the enemies on the left side of the screen, gives them a random y position, and a velocityX of 2 (_the same blocks that you see in the image above_).\r\n* Wherever the code for `setEnemy1` and `setEnemy2` appears in your program replace them with a call to the functions you just created.",
     "submittable": "false",
     "start_blocks": "// Variables\r\nvar score = 0;\r\n// Create Sprites\r\nvar cake = createSprite(350,200);\r\n\r\nvar player = createSprite(200,200);\r\n\r\nvar enemy1 = createSprite(0,200);\r\n\r\nvar enemy2 = createSprite(0,200);\r\n\r\nfunction draw() {\r\n  // draw the background\r\n  gameBackground();\r\n  // update the sprites\r\n  movePlayer();\r\n  enemiesTouchCake();\r\n  enemiesTouchWater();\r\n  showScore();\r\n  drawSprites();\r\n}\r\n\r\n// Functions\r\nfunction gameBackground() {\r\n  noStroke();\r\n  background(color(0,100,255));\r\n  fill(color(100,100,100));\r\n  rect(0,150,400,100);\r\n  fill(color(80,80,80));\r\n  rect(0,140,400,10);\r\n  rect(0,250,400,10);\r\n}\r\n\r\nfunction movePlayer(){\r\n  \r\n}\r\n\r\nfunction enemiesTouchCake(){\r\n  \r\n}\r\n\r\nfunction enemiesTouchWater(){\r\n  \r\n}\r\n\r\nfunction showScore() {\r\n  fill(\"white\");\r\n  textSize(20);\r\n  text(\"Score: \" + score,10, 10, 80, 20);\r\n}",
     "is_k1": "false",
@@ -61,9 +62,8 @@
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "Need to add gif of what it should look like.",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T21:13:49.285+00:00\",\"changed\":[\"cloned from \\\"CSD U3 AnimationsMulti defender create set enemies_2023\\\"\"],\"cloned_from\":\"CSD U3 AnimationsMulti defender create set enemies_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T21:13:49.285+00:00\",\"changed\":[\"cloned from \\\"CSD U3 AnimationsMulti defender create set enemies_2023\\\"\"],\"cloned_from\":\"CSD U3 AnimationsMulti defender create set enemies_2023\"},{\"changed_at\":\"2024-05-13 15:11:28 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

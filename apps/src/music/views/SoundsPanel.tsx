@@ -1,6 +1,6 @@
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 import classNames from 'classnames';
-import {getBaseAssetUrl} from '../appConfig';
+import AppConfig, {getBaseAssetUrl} from '../appConfig';
 import styles from './soundsPanel.module.scss';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
@@ -13,6 +13,10 @@ import SoundStyle from '../utils/SoundStyle';
 import FocusLock from 'react-focus-lock';
 import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons';
 import musicI18n from '../locale';
+
+// A variant for SoundsPanel that plays previews as sounds are selected.
+const useSoundsPanelPreview =
+  AppConfig.getValue('sounds-panel-1-preview') === 'true';
 
 /*
  * Renders a UI for previewing and choosing samples. This is currently used within a
@@ -145,6 +149,24 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
   const soundPath = folder.id + '/' + sound.src;
   const isSelected = soundPath === currentValue;
   const isPlayingPreview = playingPreview === soundPath;
+
+  const onSoundSelect = useCallback(() => {
+    if (useSoundsPanelPreview) {
+      if (!isPlayingPreview) {
+        onPreview(soundPath);
+      }
+    }
+    onSelect(soundPath);
+  }, [isPlayingPreview, onPreview, onSelect, soundPath]);
+
+  const onSoundClick = useCallback(
+    (e: React.MouseEvent<HTMLDivElement>) => {
+      e.stopPropagation();
+      onSoundSelect();
+    },
+    [onSoundSelect]
+  );
+
   const onPreviewClick = useCallback(
     (e: Event) => {
       if (!isPlayingPreview) {
@@ -160,12 +182,13 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
       className={classNames(
         'sounds-panel-sound-row',
         styles.soundRow,
+        useSoundsPanelPreview && styles.soundRowExtraHeight,
         isSelected && styles.soundRowSelected
       )}
-      onClick={() => onSelect(folder.id + '/' + sound.src)}
+      onClick={onSoundClick}
       onKeyDown={event => {
         if (event.key === 'Enter') {
-          onSelect(folder.id + '/' + sound.src);
+          onSoundSelect();
         }
       }}
       ref={isSelected ? currentSoundRefCallback : null}
@@ -196,20 +219,27 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
         </div>
       )}
       <div className={styles.soundRowRight}>
-        <div className={styles.length}>
+        <div
+          className={classNames(
+            styles.length,
+            useSoundsPanelPreview && styles.lengthNoMarginRight
+          )}
+        >
           {getLengthRepresentation(sound.length)}
         </div>
-        <div className={styles.previewContainer}>
-          <FontAwesome
-            title={undefined}
-            icon={'play-circle'}
-            className={classNames(
-              styles.preview,
-              isPlayingPreview && styles.previewPlaying
-            )}
-            onClick={onPreviewClick}
-          />
-        </div>
+        {!useSoundsPanelPreview && (
+          <div className={styles.previewContainer}>
+            <FontAwesome
+              title={undefined}
+              icon={'play-circle'}
+              className={classNames(
+                styles.preview,
+                isPlayingPreview && styles.previewPlaying
+              )}
+              onClick={onPreviewClick}
+            />
+          </div>
+        )}
       </div>
     </div>
   );
@@ -321,7 +351,14 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
 
   return (
     <FocusLock>
-      <div id="sounds-panel" className={styles.soundsPanel} aria-modal>
+      <div
+        id="sounds-panel"
+        className={classNames(
+          styles.soundsPanel,
+          useSoundsPanelPreview && styles.soundsPanelExtraHeight
+        )}
+        aria-modal
+      >
         <div id="hidden-item" tabIndex={0} role="button" />
         {showSoundFilters && (
           <div id="sounds-panel-top" className={styles.soundsPanelTop}>

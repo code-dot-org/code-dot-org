@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2024-05-07T21:27:53.000Z",
   "level_num": "custom",
@@ -51,10 +52,10 @@
     "encrypted_examples": "xnjNxYaFGSFZomQAMKF3a+QCUnO8J+F7+9BJMGR0bdXI+mXAp6i+vBBUdDeH\n7m4FeFKTD1GmTb2olxe6D5Jzsg==\n",
     "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"We need to `show variable` in order for the user to know how many coins they have collected!\",\"hint_id\":\"Hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7d2fc041e2c5ae6e26a587c04e126781/game_variables_fix_choices_d.mp3\"}]",
     "name_suffix": "_2024",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "instructions_icon": "fox"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-05-07T21:27:53.760+00:00\",\"changed\":[\"cloned from \\\"game_variables_fix_choices_d\\\"\"],\"cloned_from\":\"game_variables_fix_choices_d\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-07T21:27:53.760+00:00\",\"changed\":[\"cloned from \\\"game_variables_fix_choices_d\\\"\"],\"cloned_from\":\"game_variables_fix_choices_d\"},{\"changed_at\":\"2024-05-09 16:26:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -165,6 +165,22 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
           )}
         </div>
       )}
+      {linkData.script_level_path_links && (
+        <>
+          <StrongText>
+            This level is in{' '}
+            {Object.entries(linkData.script_level_path_links).length} scripts:
+          </StrongText>
+          <ul>
+            {linkData.script_level_path_links.map((link, index) => (
+              <li key={index}>
+                <a href={'/s/' + link.script}>{link.script}</a> as{' '}
+                <a href={link.path}>{link.path}</a>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
     </AccessibleDialog>
   ) : null;
 };

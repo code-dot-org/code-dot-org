@@ -1,5 +1,5 @@
 import React from 'react';
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {UnconnectedRemoveLessonDialog as RemoveLessonDialog} from '@cdo/apps/lib/levelbuilder/unit-editor/RemoveLessonDialog';

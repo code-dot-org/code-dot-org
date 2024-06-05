@@ -9,7 +9,12 @@ import classNames from 'classnames';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import MusicPlayer from '../player/MusicPlayer';
 import {DEFAULT_PACK} from '../constants';
+import AppConfig from '../appConfig';
 import musicI18n from '../locale';
+
+// A variant for PackDialog that plays previews as sounds are selected.
+const usePackDialogPreview =
+  AppConfig.getValue('pack-dialog-preview') === 'true';
 
 interface PackEntryProps {
   playingPreview: string | null;
@@ -17,6 +22,7 @@ interface PackEntryProps {
   isSelected: boolean;
   onSelect: (path: SoundFolder) => void;
   onPreview: (path: string) => void;
+  onStopPreview: () => void;
 }
 
 const PackEntry: React.FunctionComponent<PackEntryProps> = ({
@@ -25,6 +31,7 @@ const PackEntry: React.FunctionComponent<PackEntryProps> = ({
   isSelected,
   onSelect,
   onPreview,
+  onStopPreview,
 }) => {
   const library = MusicLibrary.getInstance();
 
@@ -33,23 +40,35 @@ const PackEntry: React.FunctionComponent<PackEntryProps> = ({
   const isPlayingPreview = previewSound && playingPreview === soundPath;
   const imageSrc = library?.getPackImageUrl(folder.id);
 
+  const onEntryClick = useCallback(() => {
+    onSelect(folder);
+
+    if (usePackDialogPreview) {
+      if (soundPath && !isPlayingPreview) {
+        onPreview(soundPath);
+      }
+    }
+  }, [folder, isPlayingPreview, onPreview, onSelect, soundPath]);
+
   const onPreviewClick = useCallback(
     (e: Event) => {
-      if (soundPath && !isPlayingPreview) {
+      if (isPlayingPreview) {
+        onStopPreview();
+      } else if (soundPath && !isPlayingPreview) {
         onPreview(soundPath);
       }
       e.stopPropagation();
     },
-    [isPlayingPreview, onPreview, soundPath]
+    [isPlayingPreview, onPreview, soundPath, onStopPreview]
   );
 
   return (
     <div
       className={classNames(styles.pack, isSelected && styles.packSelected)}
-      onClick={() => onSelect(folder)}
+      onClick={onEntryClick}
       onKeyDown={event => {
         if (event.key === 'Enter') {
-          onSelect(folder);
+          onEntryClick();
         }
       }}
       aria-label={folder.name}
@@ -76,15 +95,12 @@ const PackEntry: React.FunctionComponent<PackEntryProps> = ({
             <div className={styles.packFooteArtist}>{folder.artist}</div>
           )}
         </div>
-        {previewSound && (
+        {!usePackDialogPreview && previewSound && (
           <div className={styles.packFooterPreview}>
             <FontAwesome
               title={undefined}
-              icon={'play-circle'}
-              className={classNames(
-                styles.preview,
-                isPlayingPreview && styles.previewPlaying
-              )}
+              icon={isPlayingPreview ? 'stop-circle' : 'play-circle'}
+              className={styles.preview}
               onClick={onPreviewClick}
             />
           </div>
@@ -139,10 +155,11 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
       return;
     }
 
+    player.cancelPreviews();
     dispatch(setPackId(DEFAULT_PACK));
     library.setCurrentPackId(DEFAULT_PACK);
     setSelectedFolderId(null);
-  }, [dispatch, library]);
+  }, [dispatch, library, player]);
 
   const setPackToSelectedFolder = useCallback(() => {
     if (!library) {
@@ -150,11 +167,12 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
     }
 
     if (selectedFolderId) {
+      player.cancelPreviews();
       dispatch(setPackId(selectedFolderId));
       library.setCurrentPackId(selectedFolderId);
       setSelectedFolderId(null);
     }
-  }, [selectedFolderId, dispatch, library]);
+  }, [selectedFolderId, dispatch, library, player]);
 
   const onPreview = useCallback(
     (id: string) => {
@@ -176,6 +194,10 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
     },
     [player]
   );
+
+  const onStopPreview = useCallback(() => {
+    player.cancelPreviews();
+  }, [player]);
 
   if (!library) return null;
 
@@ -211,6 +233,7 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
                     isSelected={folder.id === selectedFolderId}
                     onSelect={handleSelectFolder}
                     onPreview={onPreview}
+                    onStopPreview={onStopPreview}
                   />
                 );
               })}
@@ -220,10 +243,10 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
           <div className={styles.buttonContainer}>
             <button
               onClick={setPackToDefault}
-              className={styles.skip}
+              className={classNames('skip-button', styles.skip)}
               type="button"
             >
-              Skip
+              {musicI18n.skip()}
             </button>
             <button
               onClick={setPackToSelectedFolder}
@@ -235,7 +258,7 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
               disabled={!selectedFolderId}
               type="button"
             >
-              Continue
+              {musicI18n.continue()}
             </button>
           </div>
         </div>

@@ -1,6 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "published": true,
   "game_id": 64,
   "created_at": "2024-05-07T21:26:47.000Z",
   "level_num": "custom",
@@ -31,7 +30,7 @@
     ],
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "**What happens when sprites touch?** Try a new type of event.\r\n1.  Program a sound to play when sprites touch\r\n\r\n- Press `Run` and watch what happens when the sprites touch!",
+    "long_instructions": "**What happens when sprites touch?** Try a new type of event.\r\n1.  Add a `play sound` block to the `when sprites touch` event\r\n\r\n- Press `Run` and watch what happens when the sprites touch!",
     "submittable": "false",
     "hide_share_and_remix": "true",
     "never_autoplay_video": "false",
@@ -47,13 +46,15 @@
     "mini_toolbox": "true",
     "hide_pause_button": "false",
     "name_suffix": "_2024",
-    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"Connect a play sound under the when sprite touches sprite event block:\\n\\n<xml>\\n<block xmlns=\\\"https://developers.google.com/blockly/xml\\\" type=\\\"gamelab_checkTouching\\\" id=\\\"@A@OP8hlfSbE`fWePRp)\\\">\\n  <mutation useDefaultIcon=\\\"true\\\"></mutation>\\n  <field name=\\\"button_gamelab_checkTouching\\\"></field>\\n  <field name=\\\"CONDITION\\\">\\\"when\\\"</field>\\n  <value name=\\\"SPRITE1\\\">\\n    <block type=\\\"gamelab_allSpritesWithAnimation\\\" id=\\\"`HM:3iSiCIwSgK.{6/RX\\\">\\n      <field name=\\\"ANIMATION\\\">\\\"gameplay_greendiamond2\\\"</field>\\n    </block>\\n  </value>\\n  <value name=\\\"SPRITE2\\\">\\n    <block type=\\\"gamelab_allSpritesWithAnimation\\\" id=\\\"!gfnJ{[3]pw7`zmu{TE|\\\">\\n      <field name=\\\"ANIMATION\\\">\\\"cuteanimals_bear\\\"</field>\\n    </block>\\n  </value>\\n  <next>\\n    <block type=\\\"GameDev_playSoundOptions\\\" id=\\\"Dg9XuPgSla:FktuL@Ix(\\\">\\n      <field name=\\\"SOUND\\\">'sound://category_digital/boing_2.mp3'</field>\\n    </block>\\n  </next>\\n</block>\\n</xml>\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9c1d97ee5d87a733edbfb691c9b9e842/hello_games_touch_event_simplified.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"Connect a play sound under the when sprite touches sprite event block:\\n<xml>\\n  <block xmlns=\\\"https://developers.google.com/blockly/xml\\\" type=\\\"gamelab_checkTouching\\\">\\n    <field name=\\\"CONDITION\\\">\\\"when\\\"</field>\\n    <value name=\\\"SPRITE1\\\">\\n      <block type=\\\"gamelab_allSpritesWithAnimation\\\" movable=\\\"false\\\">\\n        <field name=\\\"ANIMATION\\\">\\\"cuteanimals_bear\\\"</field>\\n      </block>\\n    </value>\\n    <value name=\\\"SPRITE2\\\">\\n      <block type=\\\"gamelab_allSpritesWithAnimation\\\" movable=\\\"false\\\">\\n        <field name=\\\"ANIMATION\\\">\\\"gameplay_greendiamond2\\\"</field>\\n      </block>\\n    </value>\\n    <next>\\n      <block type=\\\"GameDev_playSoundOptions\\\">\\n        <field name=\\\"SOUND\\\">'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'</field>\\n      </block>\\n    </next>\\n  </block>\\n</xml>\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9c1d97ee5d87a733edbfb691c9b9e842/game_design_event_touch_2024.mp3\"}]",
     "short_instructions": "Code a sound to play when the two sprites touch.",
     "validation_code": "if (World.frameCount == 1) {\r\n  addCriteria(function() {\r\n    return minimumCostumeCount(2); // Check whether or not the student created two sprites with different costumes.\r\n  }, \"spritelabFeedbackCreateTwoDifferentSprites\");  // Failure message: \"You need two sprites with different costumes.\"\r\n\r\n//  addCriteria(function() {\r\n  //  return minimumMatchingBehaviors(\"wandering\", 1); // Check whether a sprite is wandering\r\n // }, \"oneWanderingSprite\");  // Failure message: \"Make sure at least one sprite has the wandering behavior. \"\r\n  \r\n  addCriteria(function() {\r\n    return anySpritesTouched(); // Check whether or not two sprites touch. \r\n  }, \"spritesNotTouch\");  // Failure message: \"Make sure your sprites touch at some point.\"\r\n  \r\n  addCriteria(function() {\r\n    return touchEventFound(); // Check whether or not two sprites touch. \r\n  }, \"addWhenTouchesEvent\");  // Failure message: \"You need to have a `when touches` block for any of your sprites that will touch.\"\r\n\r\n  addCriteria(function() {\r\n    return playedSound(); // Check whether sound is played. \r\n  }, \"chooseSound\");  // Failure message: \"You need to choose a sound from the drop-down menu.\"\r\n  \r\n  addCriteria(function() {\r\n    return touchEventFound() && playedSound(); // Check whether sound is played. \r\n  }, \"soundTouch\");  // Failure message: \"Make sure a sound plays when two sprites touch. \"\r\n\r\n}\r\ncheck();\r\n",
     "encrypted_examples": "znDfNgtCgOJbAFMXwmYT9t2fQ+Z3zkK15V54RJrhup9l4seaD/hJ7+urjujB\nZ8oK1/05inwryH5p39qFf2Jo4Q==\n",
+    "instructions_icon": "fox",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-07T21:26:47.335+00:00\",\"changed\":[\"cloned from \\\"game_design_event_touch\\\"\"],\"cloned_from\":\"game_design_event_touch\"},{\"changed_at\":\"2024-05-07 22:27:26 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-07 22:27:37 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-07 22:28:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-07 22:29:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-05-07T21:26:47.335+00:00\",\"changed\":[\"cloned from \\\"game_design_event_touch\\\"\"],\"cloned_from\":\"game_design_event_touch\"},{\"changed_at\":\"2024-05-07 22:27:26 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-07 22:27:37 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-07 22:28:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-07 22:29:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-09 19:57:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"mini_toolbox\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-09 19:58:15 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-09 19:58:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-09 19:59:27 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-10 20:09:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-10 20:11:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-16 21:34:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"mini_toolbox\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-16 21:35:19 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -1274,13 +1275,13 @@
     <toolbox_blocks>
       <xml>
         <block type="GameDev_playSoundOptions" id="Dg9XuPgSla:FktuL@Ix(" x="22" y="24">
-          <field name="SOUND">'sound://category_digital/boing_2.mp3'</field>
+          <field name="SOUND">'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'</field>
         </block>
         <block type="gamelab_setBackgroundImageAs" id="$)4_hd{uTsUZsDDzN-WO" x="60" y="70">
           <field name="IMG">"gradient_01"</field>
         </block>
         <block type="gamelab_makeNewSpriteAnon" id="PKIu$+Ld/(p8rzCFaWD%" x="25" y="157">
-          <field name="ANIMATION_NAME">"gameplayfaces_04"</field>
+          <field name="ANIMATION_NAME">"cuteanimals_bear"</field>
           <value name="LOCATION">
             <block type="gamelab_location_picker" id="gI5UPJ|(-g`J;hesR(f^">
               <field name="LOCATION">{"x":200,"y":200}</field>
@@ -1291,13 +1292,13 @@
           <field name="TOGGLE">"begins"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation" id="{Ne`OJ+0ATVg*euI4_6(">
-              <field name="ANIMATION">"gameplay_greendiamond2"</field>
+              <field name="ANIMATION">"cuteanimals_bear"</field>
             </block>
           </value>
           <value name="BEHAVIOR">
-            <block type="gamelab_behavior_get" id="%]?|7X?D~cF}3h2@UH_D">
-              <mutation behaviorId="wandering" name="wandering"/>
-              <field name="NAME">wandering</field>
+            <block type="gamelab_behavior_get" id="w7d3M5tI^{A3y%=Kde}L">
+              <mutation behaviorId="moving east and looping" name="moving east and looping"/>
+              <field name="NAME">moving east and looping</field>
             </block>
           </value>
         </block>
@@ -1307,13 +1308,18 @@
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation" id="rfg_^K]CouT?LhqNO4P`" movable="false">
-              <field name="ANIMATION">"gameplay_greendiamond2"</field>
+              <field name="ANIMATION">"cuteanimals_bear"</field>
             </block>
           </value>
           <value name="SPRITE2">
             <block type="gamelab_allSpritesWithAnimation" id="*%MXDyjEIR9A|t}]mcg$" movable="false">
-              <field name="ANIMATION">"cuteanimals_bear"</field>
+              <field name="ANIMATION">"gameplay_greendiamond2"</field>
             </block>
+          </value>
+        </block>
+        <block type="gamelab_destroy" id="J^Au)!.8r:wT.Hj?*MB+" x="45" y="504">
+          <value name="THIS">
+            <block type="gamelab_objectSpritePointer" id="EYBmrr09Y/D.x::a64eP"/>
           </value>
         </block>
       </xml>

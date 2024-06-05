@@ -1,8 +1,4 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-
 import Parser from '@code-dot-org/redactable-markdown';
-
 import {
   details,
   clickableText,
@@ -10,12 +6,13 @@ import {
   visualCodeBlock,
   xmlAsTopLevelBlock,
 } from '@code-dot-org/remark-plugins';
-
-import remarkRehype from 'remark-rehype';
-import rehypeRaw from 'rehype-raw';
-import rehypeSanitize from 'rehype-sanitize';
-import rehypeReact from 'rehype-react';
 import defaultSanitizationSchema from 'hast-util-sanitize/lib/github.json';
+import PropTypes from 'prop-types';
+import React from 'react';
+import rehypeRaw from 'rehype-raw';
+import rehypeReact from 'rehype-react';
+import rehypeSanitize from 'rehype-sanitize';
+import remarkRehype from 'remark-rehype';
 
 import externalLinks from './plugins/externalLinks';
 

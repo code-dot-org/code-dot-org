@@ -1,5 +1,6 @@
-import {BlocklyWrapperType, ExtendedBlock} from '@cdo/apps/blockly/types';
 import {Block} from 'blockly';
+
+import {BlocklyWrapperType, ExtendedBlock} from '@cdo/apps/blockly/types';
 
 export default function initializeGenerator(
   blocklyWrapper: BlocklyWrapperType
@@ -48,6 +49,7 @@ export default function initializeGenerator(
     }
     const generator = blocklyWrapper.getGenerator();
     generator.init(blocklyWrapper.getMainWorkspace());
+    generator.variableDB_ = generator.nameDB_;
     const code: string[] = [];
     blocksToGenerate.forEach(block => {
       code.push(blocklyWrapper.JavaScript.blockToCode(block));

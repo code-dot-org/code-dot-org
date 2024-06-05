@@ -10,6 +10,8 @@ require_relative 'http_cache'
 # result in changes to these other files.
 
 module SharedConstants
+  DEFAULT_LOCALE = 'en-US'.freeze
+
   # Used to communicate different types of levels
   LEVEL_KIND = OpenStruct.new(
     {
@@ -101,6 +103,7 @@ module SharedConstants
     poetry
     poetry_hoc
     thebadguys
+    music
   ).freeze
 
   # For privacy reasons, App Lab and Game Lab can only be shared if certain conditions are met. These project types can be shared if: the user is >= 13 years old and their teacher has NOT disabled sharing OR the user is < 13 and their teacher has enabled sharing.
@@ -706,7 +709,7 @@ module SharedConstants
 
   # We should always specify a version for the LLM so the results don't unexpectedly change.
   # reference: https://platform.openai.com/docs/models/gpt-3-5
-  AI_TUTOR_CHAT_MODEL_VERISON = 'gpt-4-turbo-2024-04-09'
+  AI_TUTOR_CHAT_MODEL_VERISON = 'gpt-4o-2024-05-13'
 
   # These reflect the 'status' of an AI Interaction,
   # and are used in both AI Tutor and AI Chat.

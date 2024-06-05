@@ -2,14 +2,15 @@
   "script": {
     "name": "self-paced-pl-ai-101-mod1",
     "wrapup_video_id": null,
-    "login_required": true,
+    "login_required": false,
     "properties": {
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-08 19:51:47 UTC",
+    "serialized_at": "2024-05-10 16:03:27 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -728,14 +729,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "self-paced-pl-ai-101-mod1-closing_2024"
+          "self-paced-pl-ai-101-mod1-closing_02_2024"
         ],
         "progression": "Wrap Up (5 min)"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "self-paced-pl-ai-101-mod1-closing_2024"
+          "self-paced-pl-ai-101-mod1-closing_02_2024"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -743,7 +744,7 @@
         "activity_section.key": "990cd6bd-3dce-49aa-a703-fef263c10bfe"
       },
       "level_keys": [
-        "self-paced-pl-ai-101-mod1-closing_2024"
+        "self-paced-pl-ai-101-mod1-closing_02_2024"
       ]
     },
     {
@@ -752,6 +753,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-mod1-closing_00_2024"
+        ],
         "progression": "Wrap Up (5 min)"
       },
       "bonus": false,
@@ -775,14 +779,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "self-paced-pl-ai-101-mod1-closing_02_2024"
+          "self-paced-pl-ai-101-mod1-closing_2024"
         ],
         "progression": "Wrap Up (5 min)"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "self-paced-pl-ai-101-mod1-closing_02_2024"
+          "self-paced-pl-ai-101-mod1-closing_2024"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -790,7 +794,7 @@
         "activity_section.key": "990cd6bd-3dce-49aa-a703-fef263c10bfe"
       },
       "level_keys": [
-        "self-paced-pl-ai-101-mod1-closing_02_2024"
+        "self-paced-pl-ai-101-mod1-closing_2024"
       ]
     }
   ],
@@ -1085,9 +1089,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "self-paced-pl-ai-101-mod1-closing_2024",
+        "level.key": "self-paced-pl-ai-101-mod1-closing_02_2024",
         "script_level.level_keys": [
-          "self-paced-pl-ai-101-mod1-closing_2024"
+          "self-paced-pl-ai-101-mod1-closing_02_2024"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1109,9 +1113,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "self-paced-pl-ai-101-mod1-closing_02_2024",
+        "level.key": "self-paced-pl-ai-101-mod1-closing_2024",
         "script_level.level_keys": [
-          "self-paced-pl-ai-101-mod1-closing_02_2024"
+          "self-paced-pl-ai-101-mod1-closing_2024"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

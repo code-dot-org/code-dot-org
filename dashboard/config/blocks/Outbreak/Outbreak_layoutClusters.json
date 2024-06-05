@@ -2,6 +2,7 @@
   "category": "",
   "config": {
     "func": "layoutClusters",
+    "docFunc": "outbreak_layoutClusters",
     "blockText": "layout monsters in clusters of {NUM}",
     "args": [
       {

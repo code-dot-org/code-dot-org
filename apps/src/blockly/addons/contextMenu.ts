@@ -8,7 +8,11 @@ import GoogleBlockly, {
   Theme,
   WorkspaceSvg,
 } from 'blockly/core';
+
 import {commonI18n} from '@cdo/apps/types/locale';
+import experiments from '@cdo/apps/util/experiments';
+
+import LegacyDialog from '../../code-studio/LegacyDialog';
 import {
   Themes,
   MenuOptionStates,
@@ -17,8 +21,6 @@ import {
   NAVIGATION_CURSOR_TYPES,
   DARK_THEME_SUFFIX,
 } from '../constants';
-import LegacyDialog from '../../code-studio/LegacyDialog';
-import experiments from '@cdo/apps/util/experiments';
 import {getBaseName} from '../utils';
 
 // Some options are only available to levelbuilders via start mode.

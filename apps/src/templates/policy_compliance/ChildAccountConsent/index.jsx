@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
 import cookies from 'js-cookie';
+import PropTypes from 'prop-types';
+import React from 'react';
+
 import {
   Heading4,
   BodyThreeText,
@@ -10,6 +10,7 @@ import {
   StrongText,
 } from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/templates/Button';
+import i18n from '@cdo/locale';
 
 import './index.scss';
 

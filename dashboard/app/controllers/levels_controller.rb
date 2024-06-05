@@ -8,7 +8,7 @@ class LevelsController < ApplicationController
   include LevelsHelper
   include ActiveSupport::Inflector
   before_action :authenticate_user!, except: [:show, :level_properties, :embed_level, :get_rubric, :get_serialized_maze]
-  before_action :require_levelbuilder_mode_or_test_env, except: [:show, :level_properties, :embed_level, :get_rubric, :get_serialized_maze, :get_extra_links]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:show, :level_properties, :embed_level, :get_rubric, :get_serialized_maze, :extra_links]
   load_and_authorize_resource except: [:create]
 
   before_action :set_level, only: [:show, :edit, :update, :destroy]
@@ -144,7 +144,7 @@ class LevelsController < ApplicationController
   # Get a JSON summary of a level's properties, used in modern labs that don't
   # reload the page between level views.
   def level_properties
-    render json: @level.summarize_for_lab2_properties(nil)
+    render json: @level.summarize_for_lab2_properties(nil, nil, current_user)
   end
 
   # GET /levels/1/edit
@@ -533,13 +533,29 @@ class LevelsController < ApplicationController
       }
     end
 
+    script_level_path_links = []
+    script_levels = @level.script_levels.includes(:script)
+
+    script_levels.each do |script_level|
+      script_level_path = build_script_level_path(script_level)
+
+      script_level_path_links << {
+        script: script_level.script.name,
+        path: script_level_path
+      }
+    end
     # TODO: Not present here, but present in original extra links. Some of these can be handled on the client side.
     # Anything project-specific should be handled via a separate API, as this controller has no context for projects.
-    # Gamelab show animation json, list contained levels, Blockly start/toolbox/etc, Blockly helpers, list of scripts,
-    # list of parent levels, all project validator links (should be handled elsewhere),
-    # abuse handlers (should be handled elsewhere).
+    # Gamelab show animation json, list contained levels, Blockly start/toolbox/etc, Blockly helpers, list of parent
+    # levels, all project validator links (should be handled elsewhere), abuse handlers (should be handled elsewhere).
 
-    return render json: {links: links, can_clone: can?(:clone, @level), can_delete: can?(:delete, @level), level_name: @level.name}
+    render json: {
+      links: links,
+      can_clone: can?(:clone, @level),
+      can_delete: can?(:delete, @level),
+      level_name: @level.name,
+      script_level_path_links: script_level_path_links
+    }
   end
 
   # Use callbacks to share common setup or constraints between actions.

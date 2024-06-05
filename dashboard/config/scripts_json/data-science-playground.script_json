@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "data-science-playground",
-    "serialized_at": "2024-05-08 16:25:36 UTC",
+    "serialized_at": "2024-05-28 16:58:06 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -39,12 +39,42 @@
   ],
   "lessons": [
     {
-      "key": "lesson-1",
-      "name": "Performance Tasks",
+      "key": "lesson-2",
+      "name": "Making Sense of Data",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "data-science-playground"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Crafting Effective Questions From Data",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "data-science-playground"
+      }
+    },
+    {
+      "key": "lesson-1",
+      "name": "Performance Tasks",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
       "properties": {
       },
       "seeding_key": {
@@ -55,6 +85,30 @@
     }
   ],
   "lesson_activities": [
+    {
+      "key": "5d6594cb-e9dd-456e-9e4f-e5391280ce33",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5d6594cb-e9dd-456e-9e4f-e5391280ce33",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "data-science-playground"
+      }
+    },
+    {
+      "key": "7437d91c-6630-44c1-bd34-05d3af1355af",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7437d91c-6630-44c1-bd34-05d3af1355af",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "data-science-playground"
+      }
+    },
     {
       "key": "4650af87-0eec-4db4-b1e8-75bef33f8f64",
       "position": 1,
@@ -70,6 +124,52 @@
   ],
   "activity_sections": [
     {
+      "key": "b5e26d6e-3ff5-48ea-95b2-81ba35937c76",
+      "position": 1,
+      "properties": {
+        "name": "Three Reads of Data",
+        "progression_name": "Three Reads of Data - Pizza Slices"
+      },
+      "seeding_key": {
+        "activity_section.key": "b5e26d6e-3ff5-48ea-95b2-81ba35937c76",
+        "lesson_activity.key": "5d6594cb-e9dd-456e-9e4f-e5391280ce33"
+      }
+    },
+    {
+      "key": "83b7d3ea-0aa3-4db9-9bef-1e24a2f2157b",
+      "position": 2,
+      "properties": {
+        "name": "Answering A Data Question",
+        "progression_name": "Answering A Data Question"
+      },
+      "seeding_key": {
+        "activity_section.key": "83b7d3ea-0aa3-4db9-9bef-1e24a2f2157b",
+        "lesson_activity.key": "5d6594cb-e9dd-456e-9e4f-e5391280ce33"
+      }
+    },
+    {
+      "key": "eb5546fb-e1cb-4dd3-983c-03837362d513",
+      "position": 1,
+      "properties": {
+        "progression_name": "Three Reads of Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "eb5546fb-e1cb-4dd3-983c-03837362d513",
+        "lesson_activity.key": "7437d91c-6630-44c1-bd34-05d3af1355af"
+      }
+    },
+    {
+      "key": "dcb2e0b7-f540-4750-ac44-3420a8f4e8f5",
+      "position": 2,
+      "properties": {
+        "progression_name": "CFU"
+      },
+      "seeding_key": {
+        "activity_section.key": "dcb2e0b7-f540-4750-ac44-3420a8f4e8f5",
+        "lesson_activity.key": "7437d91c-6630-44c1-bd34-05d3af1355af"
+      }
+    },
+    {
       "key": "00df9750-9091-413f-b93f-19602495ef6f",
       "position": 1,
       "properties": {
@@ -78,6 +178,17 @@
       },
       "seeding_key": {
         "activity_section.key": "00df9750-9091-413f-b93f-19602495ef6f",
+        "lesson_activity.key": "4650af87-0eec-4db4-b1e8-75bef33f8f64"
+      }
+    },
+    {
+      "key": "9a78e5ce-4fe0-45ac-a549-36d45d212ea2",
+      "position": 2,
+      "properties": {
+        "description": "## [LINK TO 1ST EXEMPLAR IN CODAP](https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FuCKN6TY4wTrvBVjhln1H%2Ffile.json)\n\n## [LINK TO 2ND EXEMPLAR IN CODAP](https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FJStCeavkaZfDikE1mdEY%2Ffile.json)"
+      },
+      "seeding_key": {
+        "activity_section.key": "9a78e5ce-4fe0-45ac-a549-36d45d212ea2",
         "lesson_activity.key": "4650af87-0eec-4db4-b1e8-75bef33f8f64"
       }
     }
@@ -89,6 +200,109 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Data Science Ch1 L2 Three Reads of Data - Pizza Slices"
+        ],
+        "progression": "Three Reads of Data - Pizza Slices"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Data Science Ch1 L2 Three Reads of Data - Pizza Slices"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "data-science-playground",
+        "activity_section.key": "b5e26d6e-3ff5-48ea-95b2-81ba35937c76"
+      },
+      "level_keys": [
+        "Data Science Ch1 L2 Three Reads of Data - Pizza Slices"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Data Science - Pizza Slice Dataset"
+        ],
+        "progression": "Answering A Data Question"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Data Science - Pizza Slice Dataset"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "data-science-playground",
+        "activity_section.key": "83b7d3ea-0aa3-4db9-9bef-1e24a2f2157b"
+      },
+      "level_keys": [
+        "Data Science - Pizza Slice Dataset"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Data Science Ch1 L5 Three Reads of Data - School Party"
+        ],
+        "progression": "Three Reads of Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Data Science Ch1 L5 Three Reads of Data - School Party"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "data-science-playground",
+        "activity_section.key": "eb5546fb-e1cb-4dd3-983c-03837362d513"
+      },
+      "level_keys": [
+        "Data Science Ch1 L5 Three Reads of Data - School Party"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Data Sci - Ch1L5 match criteria"
+        ],
+        "progression": "CFU"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Data Sci - Ch1L5 match criteria"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "data-science-playground",
+        "activity_section.key": "dcb2e0b7-f540-4750-ac44-3420a8f4e8f5"
+      },
+      "level_keys": [
+        "Data Sci - Ch1L5 match criteria"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data_sci ch1_project"
+        ],
         "progression": "Ch. 1 Performance Task"
       },
       "bonus": false,
@@ -106,11 +320,14 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 6,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data_sci ch1_viz"
+        ],
         "progression": "Ch. 1 Performance Task"
       },
       "bonus": false,
@@ -129,6 +346,54 @@
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "Data Science Ch1 L2 Three Reads of Data - Pizza Slices",
+        "script_level.level_keys": [
+          "Data Science Ch1 L2 Three Reads of Data - Pizza Slices"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "data-science-playground",
+        "activity_section.key": "b5e26d6e-3ff5-48ea-95b2-81ba35937c76"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Data Science - Pizza Slice Dataset",
+        "script_level.level_keys": [
+          "Data Science - Pizza Slice Dataset"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "data-science-playground",
+        "activity_section.key": "83b7d3ea-0aa3-4db9-9bef-1e24a2f2157b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Data Science Ch1 L5 Three Reads of Data - School Party",
+        "script_level.level_keys": [
+          "Data Science Ch1 L5 Three Reads of Data - School Party"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "data-science-playground",
+        "activity_section.key": "eb5546fb-e1cb-4dd3-983c-03837362d513"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Data Sci - Ch1L5 match criteria",
+        "script_level.level_keys": [
+          "Data Sci - Ch1L5 match criteria"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "data-science-playground",
+        "activity_section.key": "dcb2e0b7-f540-4750-ac44-3420a8f4e8f5"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "data_sci ch1_project",

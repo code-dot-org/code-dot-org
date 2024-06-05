@@ -134,7 +134,10 @@ function initPage() {
             studentLevelInfo={studentLevelInfo}
             reportingData={reportingData}
             currentLevelName={config.level_name}
-            aiEnabled={experiments.isEnabled('ai-rubrics')}
+            aiEnabled={
+              experiments.isEnabled('ai-rubrics') &&
+              rubric.learningGoals.some(lg => lg.aiEnabled)
+            }
           />
         </Provider>,
         rubricFabMountPoint

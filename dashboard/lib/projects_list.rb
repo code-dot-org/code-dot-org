@@ -19,11 +19,12 @@ module ProjectsList
     k1: ['artist_k1', 'playlab_k1'],
     dance: ['dance'],
     poetry: ['poetry', 'poetry_hoc'],
-    library: ['applab', 'gamelab']
+    library: ['applab', 'gamelab'],
+    music: ['music']
   }.freeze
 
   # Sharing of advanced project types to the public gallery is restricted for
-  # young students unless sharing is explciitly enabled by the student's
+  # young students unless sharing is explicitly enabled by the student's
   # teacher for privacy reasons.
   ADVANCED_PROJECT_TYPES = ['applab', 'gamelab', 'spritelab']
 
@@ -301,7 +302,7 @@ module ProjectsList
         name: project_value['name'],
         studentName: student&.name,
         thumbnailUrl: project_value['thumbnailUrl'],
-        type: project_type(project_value['level']),
+        type: project_type(project_value['level']) || project_value['projectType'],
         updatedAt: project_value['updatedAt'],
         publishedAt: project[:published_at],
         frozen: project_value['frozen'],

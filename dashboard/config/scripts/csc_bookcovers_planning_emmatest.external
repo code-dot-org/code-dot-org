@@ -1,5 +1,9 @@
 name 'csc_bookcovers_planning_emmatest'
 title 'Make a Poster'
+display_name 'Make a Poster'
+bubble_choice_description '🌶️ Share your thoughts on AI by making a hallway poster.'
+thumbnail_url '![](https://images.code.org/483d23062870c2b485f6a92a1deff1d4-image-1715374258778.50.44 PM.png)'
+
 
 markdown <<MARKDOWN
 ##Make a Poster
@@ -20,4 +24,5 @@ markdown <<MARKDOWN
 **Here is a planning template you can copy to use yourself:**  <a href="https://docs.google.com/document/d/1geTnFqtszszfH7Q4_8ZORTAxvh38b-HuLpV1ezy7mgI/preview" target="_blank"> Using AI Tools in School</a>.
 
 </div>
+
 MARKDOWN

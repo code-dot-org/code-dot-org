@@ -1,5 +1,18 @@
 // TODO: post-firebase-cleanup, remove this file #56994
 
+import parseCsv from 'csv-parse';
+import _ from 'lodash';
+
+// TODO: unfirebase: ideally we would not have a back-reference to redux here, however
+// coupling firebaseStorage to redux made the datablock storage version much cleaner,
+// and since this code is being removed once we're done migrating, it was preferable
+// to make firebaseStorage.js ugly rather than the datablockStorage.js API ugly.
+//
+// We only use getStore to sniff if the table is a shared table or not, whereas in
+// datablock storage, we check this on the backend and hide the abstraction.
+import {getStore} from '../redux';
+
+import {WarningType} from './constants';
 import {
   ColumnType,
   castValue,
@@ -7,21 +20,6 @@ import {
   isNumber,
   toBoolean,
 } from './dataBrowser/dataUtils';
-import parseCsv from 'csv-parse';
-import {
-  init,
-  loadConfig,
-  fixFirebaseKey,
-  getRecordsRef,
-  getProjectCountersRef,
-  getProjectDatabase,
-  getSharedDatabase,
-  resetConfigForTesting,
-  isInitialized,
-  validateFirebaseKey,
-  getPathRef,
-  unescapeFirebaseKey,
-} from './firebaseUtils';
 import {
   enforceTableCount,
   incrementRateLimitCounters,
@@ -38,18 +36,21 @@ import {
   getColumnNamesSnapshot,
   onColumnsChange,
 } from './firebaseMetadata';
+import {
+  init,
+  loadConfig,
+  fixFirebaseKey,
+  getRecordsRef,
+  getProjectCountersRef,
+  getProjectDatabase,
+  getSharedDatabase,
+  resetConfigForTesting,
+  isInitialized,
+  validateFirebaseKey,
+  getPathRef,
+  unescapeFirebaseKey,
+} from './firebaseUtils';
 import {tableType} from './redux/data';
-import {WarningType} from './constants';
-import _ from 'lodash';
-
-// TODO: unfirebase: ideally we would not have a back-reference to redux here, however
-// coupling firebaseStorage to redux made the datablock storage version much cleaner,
-// and since this code is being removed once we're done migrating, it was preferable
-// to make firebaseStorage.js ugly rather than the datablockStorage.js API ugly.
-//
-// We only use getStore to sniff if the table is a shared table or not, whereas in
-// datablock storage, we check this on the backend and hide the abstraction.
-import {getStore} from '../redux';
 
 /**
  * Namespace for Firebase storage.

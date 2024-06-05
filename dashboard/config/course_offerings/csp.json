@@ -2,7 +2,7 @@
   "key": "csp",
   "display_name": "Computer Science Principles",
   "category": "full_course",
-  "is_featured": false,
+  "is_featured": true,
   "assignable": true,
   "curriculum_type": "Course",
   "marketing_initiative": "CSP",

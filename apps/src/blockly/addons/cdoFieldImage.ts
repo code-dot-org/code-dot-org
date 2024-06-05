@@ -1,4 +1,5 @@
 import GoogleBlockly, {Field, FieldImage, FieldImageConfig} from 'blockly/core';
+
 import {FIELD_IMAGE_DEFAULT_SIZE} from '../constants';
 
 export default class CdoFieldImage extends GoogleBlockly.FieldImage {
