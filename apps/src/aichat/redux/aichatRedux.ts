@@ -317,7 +317,17 @@ export const submitChatContents = createAsyncThunk(
         .getMetricsReporter()
         .logError('Error in aichat completion request', error as Error);
 
-      updateMessagesOnError(newMessage, thunkAPI.dispatch);
+      thunkAPI.dispatch(clearChatMessagePending());
+      thunkAPI.dispatch(addChatMessage({...newMessage, status: Status.ERROR}));
+
+      const assistantChatMessage: ChatCompletionMessage = {
+        id: getNewMessageId(),
+        role: Role.ASSISTANT,
+        status: Status.ERROR,
+        chatMessageText: 'error',
+        timestamp: getCurrentTimestamp(),
+      };
+      thunkAPI.dispatch(addChatMessage(assistantChatMessage));
 
       return;
     }
@@ -347,25 +357,6 @@ export const submitChatContents = createAsyncThunk(
     );
   }
 );
-
-// Helper that is used when we receive an error response
-// (or a handled "error" state, like the model producing profanity).
-const updateMessagesOnError = (
-  newMessage: ChatCompletionMessage,
-  dispatch: ThunkDispatch<unknown, unknown, AnyAction>
-) => {
-  dispatch(clearChatMessagePending());
-  dispatch(addChatMessage({...newMessage, status: Status.ERROR}));
-
-  const assistantChatMessage: ChatCompletionMessage = {
-    id: getNewMessageId(),
-    role: Role.ASSISTANT,
-    status: Status.ERROR,
-    chatMessageText: 'There was an error getting a response. Please try again.',
-    timestamp: getCurrentTimestamp(),
-  };
-  dispatch(addChatMessage(assistantChatMessage));
-};
 
 const aichatSlice = createSlice({
   name: 'aichat',
