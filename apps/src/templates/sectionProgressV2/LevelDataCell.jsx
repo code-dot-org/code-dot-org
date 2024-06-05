@@ -13,6 +13,7 @@ import {commentLeft, studentNeedsFeedback} from '../progress/progressHelpers';
 import {studentLevelProgressType} from '../progress/progressTypes';
 
 import {ITEM_TYPE} from './ItemType';
+import {formatTimeSpent, formatLastUpdated} from './MetadataHelpers';
 import ProgressIcon from './ProgressIcon';
 
 import legendStyles from './progress-table-legend.module.scss';
@@ -73,6 +74,7 @@ function LevelDataCell({
   linkClassName,
   parentLevelId,
   lessonId,
+  metadataExpanded,
 }) {
   const itemType = React.useMemo(() => {
     if (expandedChoiceLevel) {
@@ -123,7 +125,7 @@ function LevelDataCell({
     }
   }, [studentLevelProgress, level, expandedChoiceLevel]);
 
-  return (
+  const levelCellUnexpanded = (
     <td
       className={classNames(
         styles.gridBox,
@@ -149,6 +151,22 @@ function LevelDataCell({
       </Link>
     </td>
   );
+
+  if (metadataExpanded) {
+    return (
+      <div className={styles.lessonDataCellExpanded}>
+        {levelCellUnexpanded}
+        <div className={classNames(styles.gridBox, styles.gridBoxMetadata)}>
+          {formatTimeSpent(studentLevelProgress)}
+        </div>
+        <div className={classNames(styles.gridBox, styles.gridBoxMetadata)}>
+          {formatLastUpdated(studentLevelProgress)}
+        </div>
+      </div>
+    );
+  }
+
+  return levelCellUnexpanded;
 }
 
 export const UnconnectedLevelDataCell = LevelDataCell;
@@ -167,4 +185,5 @@ LevelDataCell.propTypes = {
   lessonId: PropTypes.number.isRequired,
   className: PropTypes.string,
   linkClassName: PropTypes.string,
+  metadataExpanded: PropTypes.bool,
 };
