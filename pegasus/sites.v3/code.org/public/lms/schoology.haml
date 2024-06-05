@@ -6,7 +6,10 @@ theme: responsive_full_width
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/page/lms-styles.css", rel: "stylesheet"}
 
-%section#get-started.bg-neutral-light
+%section.alternating-rows
+  =view :"lms/lms_alternating_rows", provider: "Schoology"
+
+%section.bg-neutral-light
   .wrapper
     %h2.centered
       =hoc_s("lms_partner_page.ready.heading", locals: {website: "Schoology"})
