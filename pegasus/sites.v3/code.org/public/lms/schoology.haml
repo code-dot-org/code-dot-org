@@ -3,6 +3,15 @@ title: LMS
 theme: responsive_full_width
 ---
 
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
+%link{href: "/css/generated/page/lms-styles.css", rel: "stylesheet"}
+
+%section#get-started.bg-neutral-light
+  .wrapper
+    %h2.centered
+      =hoc_s("lms_partner_page.ready.heading", locals: {website: "Schoology"})
+    = view :"lms/lms_integration", provider: "Schoology"
+
 %section
   .wrapper
     %h2.centered
@@ -11,4 +20,4 @@ theme: responsive_full_width
       =hoc_s("lms_page.additional_resources.desc")
     = view :"lms/lms_additional_resources"
 
-= view :analytics_event_log_helper, event_name: AnalyticsConstants::LMS_PAGE_VISITED_EVENT
+= view :analytics_event_log_helper, event_name: AnalyticsConstants::SCHOOLOGY_PAGE_VISITED_EVENT
