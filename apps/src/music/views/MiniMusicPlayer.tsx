@@ -1,4 +1,6 @@
-import React, {useCallback, useEffect, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
 import {Channel} from '../../lab2/types';
 import MusicPlayer from '../player/MusicPlayer';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
@@ -35,15 +37,22 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
   const [currentProjectId, setCurrentProjectId] = useState<string | undefined>(
     undefined
   );
+  const {userId, userType, signInState} = useAppSelector(
+    state => state.currentUser
+  );
+  const analyticsReporter = useMemo(() => new AnalyticsReporter(), []);
 
-  // Setup library and workspace on mount
+  // Setup library and workspace, and analyticsReporter on mount
   const onMount = useCallback(async () => {
     setUpBlocklyForMusicLab();
     workspaceRef.current.initHeadless();
     const library = await loadLibrary(libraryName);
     MusicLibrary.setCurrent(library);
     setIsLoading(false);
-  }, [libraryName]);
+    analyticsReporter.startSession().then(() => {
+      analyticsReporter.setUserProperties(userId, userType, signInState);
+    });
+  }, [analyticsReporter, libraryName, signInState, userId, userType]);
 
   useEffect(() => {
     onMount();
@@ -53,57 +62,70 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
   // Loads code from the server, compiles the song, executes it to generate events,
   // and then plays the events.
   // Optimization: cache code and/or compiled song after played once.
-  const onPlaySong = useCallback(async (project: Channel) => {
-    playerRef.current.stopSong();
-    // Load code
-    const projectSources = await sourcesStoreRef.current.load(project.id);
-    workspaceRef.current.loadCode(JSON.parse(projectSources.source as string));
-
-    // Compile song
-    workspaceRef.current.compileSong({Sequencer: sequencerRef.current});
-
-    // Execute compiled song
-    // Sequence out all possible trigger events to preload sounds if necessary.
-    sequencerRef.current.clear();
-    workspaceRef.current.executeAllTriggers();
-    const allTriggerEvents = sequencerRef.current.getPlaybackEvents();
-
-    sequencerRef.current.clear();
-    workspaceRef.current.executeCompiledSong();
-
-    // If there is a pack ID, give the player its BPM and key.
-    const currentLibrary = MusicLibrary.getInstance();
-    const packId = project.labConfig?.music.packId || null;
-    if (currentLibrary) {
-      currentLibrary.setCurrentPackId(packId);
-      playerRef.current.updateConfiguration(
-        currentLibrary.getBPM(),
-        currentLibrary.getKey()
+  const onPlaySong = useCallback(
+    async (project: Channel) => {
+      playerRef.current.stopSong();
+      // Load code
+      const projectSources = await sourcesStoreRef.current.load(project.id);
+      workspaceRef.current.loadCode(
+        JSON.parse(projectSources.source as string)
       );
-    }
 
-    // Preload sounds in player
-    await playerRef.current.preloadSounds(
-      [...allTriggerEvents, ...sequencerRef.current.getPlaybackEvents()],
-      (loadTimeMs, soundsLoaded) => {
-        if (soundsLoaded > 0) {
-          Lab2Registry.getInstance()
-            .getMetricsReporter()
-            .reportLoadTime('MiniPlayer.SoundLoadTime', loadTimeMs);
-        }
-        Lab2Registry.getInstance().getMetricsReporter().logInfo({
-          event: 'MiniPlayerSoundsLoaded',
-          soundsLoaded,
-          loadTimeMs,
-          channelId: project.id,
-        });
+      // Compile song
+      workspaceRef.current.compileSong({Sequencer: sequencerRef.current});
+
+      // Execute compiled song
+      // Sequence out all possible trigger events to preload sounds if necessary.
+      sequencerRef.current.clear();
+      workspaceRef.current.executeAllTriggers();
+      const allTriggerEvents = sequencerRef.current.getPlaybackEvents();
+
+      sequencerRef.current.clear();
+      workspaceRef.current.executeCompiledSong();
+
+      // If there is a pack ID, give the player its BPM and key.
+      const currentLibrary = MusicLibrary.getInstance();
+      const packId = project.labConfig?.music.packId || null;
+      if (currentLibrary) {
+        currentLibrary.setCurrentPackId(packId);
+        playerRef.current.updateConfiguration(
+          currentLibrary.getBPM(),
+          currentLibrary.getKey()
+        );
       }
-    );
 
-    // Play sounds
-    playerRef.current.playSong(sequencerRef.current.getPlaybackEvents());
-    setCurrentProjectId(project.id);
-  }, []);
+      // Preload sounds in player
+      await playerRef.current.preloadSounds(
+        [...allTriggerEvents, ...sequencerRef.current.getPlaybackEvents()],
+        (loadTimeMs, soundsLoaded) => {
+          if (soundsLoaded > 0) {
+            Lab2Registry.getInstance()
+              .getMetricsReporter()
+              .reportLoadTime('MiniPlayer.SoundLoadTime', loadTimeMs);
+          }
+          Lab2Registry.getInstance().getMetricsReporter().logInfo({
+            event: 'MiniPlayerSoundsLoaded',
+            soundsLoaded,
+            loadTimeMs,
+            channelId: project.id,
+          });
+        }
+      );
+
+      // Play sounds
+      playerRef.current.playSong(sequencerRef.current.getPlaybackEvents());
+      setCurrentProjectId(project.id);
+
+      // Report analytics on play button.
+      analyticsReporter.onMiniMusicPlayerButtonClicked('play', {
+        userId,
+        userType,
+        signInState,
+        projectChannel: project.id,
+      });
+    },
+    [analyticsReporter, signInState, userId, userType]
+  );
 
   const onStopSong = useCallback(async () => {
     playerRef.current.stopSong();
@@ -182,7 +204,15 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
                 href={`/projects/music/${project.id}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={e => e.stopPropagation()}
+                onClick={e => {
+                  e.stopPropagation();
+                  analyticsReporter.onButtonClicked('Open project', {
+                    userId,
+                    userType,
+                    signInState,
+                    projectChannel: project.id,
+                  });
+                }}
                 className={moduleStyles.otherLink}
               >
                 <FontAwesomeV6Icon
