@@ -228,8 +228,8 @@ namespace :seed do
   # detect changes to dsldefined level files
   # LevelGroup must be last here so that LevelGroups are seeded after all levels that they can contain
   DSL_TYPES = %w(TextMatch ContractMatch External Match Multi EvaluationMulti BubbleChoice LevelGroup).freeze
-  DSLS_GLOB = DSL_TYPES.map {|x| Dir.glob("config/scripts/**/*.#{x.underscore}*").sort}.flatten.freeze
-  file 'config/scripts/.dsls_seeded' => DSLS_GLOB do |t|
+  DSL_FILES = DSL_TYPES.map {|x| Dir.glob("config/scripts/**/*.#{x.underscore}*").sort}.flatten.freeze
+  file 'config/scripts/.dsls_seeded' => DSL_FILES do |t|
     Rake::Task['seed:dsls'].invoke
     FileUtils.touch(t.name)
   end
@@ -239,23 +239,23 @@ namespace :seed do
     DSLDefined.transaction do
       # Allow developers to seed just one dsl-defined level, e.g.
       # rake seed:dsls DSL_FILENAME=k-1_Artistloops_multi1.multi
-      dsls_glob = ENV['DSL_FILENAME'] ? Dir.glob("config/scripts/**/#{ENV['DSL_FILENAME']}") : DSLS_GLOB
+      dsl_files = ENV['DSL_FILENAME'] ? Dir.glob("config/scripts/**/#{ENV['DSL_FILENAME']}") : DSL_FILES
 
       # This is only expected to happen when DSL_FILENAME is set and the
       # filename is not found
-      unless dsls_glob.count > 0
+      unless dsl_files.count > 0
         raise 'no matching dsl-defined level files found. please check filename for exact case and spelling.'
       end
 
       # Parse each .[dsl] file and setup its model.
-      parse_dsl_files(dsls_glob)
+      parse_dsl_files(dsl_files)
     end
   end
 
-  def parse_dsl_files(dsls_glob)
+  def parse_dsl_files(dsl_files)
     level_md5s_by_name = DSLDefined.pluck(:name, :md5).to_h
 
-    dsls_glob.each do |filename|
+    dsl_files.each do |filename|
       dsl_class = DSL_TYPES.detect {|type| filename.include?(".#{type.underscore}")}.try(:constantize)
       begin
         contents = File.read(filename)
