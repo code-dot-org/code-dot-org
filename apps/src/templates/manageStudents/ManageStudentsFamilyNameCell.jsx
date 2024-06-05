@@ -1,14 +1,17 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {useDispatch} from 'react-redux';
 import ReactTooltip from 'react-tooltip';
-import _ from 'lodash';
+
 import i18n from '@cdo/locale';
-import {editStudent} from './manageStudentsRedux';
+
 import {
   tableLayoutStyles,
   NAME_CELL_INPUT_WIDTH,
 } from '../tables/tableConstants';
+
+import {editStudent} from './manageStudentsRedux';
 
 export default function ManageStudentFamilyNameCell({
   id,

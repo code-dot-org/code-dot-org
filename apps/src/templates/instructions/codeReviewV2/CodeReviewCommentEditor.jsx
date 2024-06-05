@@ -1,6 +1,5 @@
-import React, {useCallback, useMemo, useState} from 'react';
 import PropTypes from 'prop-types';
-import {Editable, withReact, Slate} from 'slate-react';
+import React, {useCallback, useMemo, useState} from 'react';
 import {
   Editor,
   Transforms,
@@ -8,11 +7,15 @@ import {
   Text,
   Element as SlateElement,
 } from 'slate';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {Editable, withReact, Slate} from 'slate-react';
+
 import Button from '@cdo/apps/templates/Button';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
 import javalabMsg from '@cdo/javalab/locale';
+
 import CodeReviewError from './CodeReviewError';
+
 import moduleStyles from './code-review-comment-editor.module.scss';
 
 const CodeReviewCommentEditor = ({addCodeReviewComment}) => {

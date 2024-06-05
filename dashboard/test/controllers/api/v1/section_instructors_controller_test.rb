@@ -10,8 +10,6 @@ class Api::V1::SectionInstructorsControllerTest < ActionController::TestCase
     @section = create(:section, user: @teacher, login_type: 'word')
     @section2 = create(:section, user: @teacher, login_type: 'word')
     # These are auto-created for the section creator
-    @si1 = @section.instructors.first
-    @si2 = @section2.instructors.first
     @former_instructor = create(:section_instructor, section: @section, instructor: @teacher2, status: :removed)
     @former_instructor.destroy!
     @si3 = create(:section_instructor, section: @section2, instructor: @teacher2, status: :active)
@@ -127,7 +125,7 @@ class Api::V1::SectionInstructorsControllerTest < ActionController::TestCase
 
   test 'instructor cannot remove section owner' do
     section = create(:section, user: @teacher, login_type: 'word')
-    si = section.instructors.first
+    si = SectionInstructor.find_by(instructor_id: @teacher.id, section_id: section.id)
     create(:section_instructor, section: section, instructor: @teacher2, status: :active)
     sign_in @teacher2
     delete :destroy, params: {id: si.id}

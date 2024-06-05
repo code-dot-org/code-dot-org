@@ -2,7 +2,7 @@
 
 current_dir = File.dirname(__FILE__)
 log_level                :info
-log_location             STDOUT
+log_location             $stdout
 node_name                @node_name = ENV['CDO_CHEF_NODE_NAME'] || '<%= @chef_user_name %>'
                          @org_name = ENV['CDO_CHEF_ORG_NAME'] || 'code-dot-org'
 client_key               @client_key = ENV['CDO_CHEF_CLIENT_KEY'] || "#{ENV['HOME']}/.chef/#{@node_name}.pem"

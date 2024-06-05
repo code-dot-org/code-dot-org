@@ -74,7 +74,7 @@ theme: responsive
   }
 
 %div{dir: language_dir_class}
-  .tutorial-promo-container
+  .tutorial-promo-container{style: "margin-top: 3rem;"}
     = view :oceans_promo
     .tutorial-details.desktop-feature
       %h1.tutorial-heading= hoc_s(:oceans_landing_title)
@@ -94,7 +94,7 @@ theme: responsive
 
   %div{style: "clear: both; margin-top: 10px;"}
 
-  %p.body-one.blurb!= hoc_s(:oceans_landing_explanation_markdown, markdown: :inline)
+  %p.body-three.blurb!= hoc_s(:oceans_landing_explanation_markdown, markdown: :inline)
 
   = view :resource_boxes, resources: resources
 

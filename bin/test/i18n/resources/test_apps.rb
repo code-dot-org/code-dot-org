@@ -28,6 +28,18 @@ describe I18n::Resources::Apps do
     end
   end
 
+  describe '.sync_down' do
+    it 'sync-down Apps resources' do
+      execution_sequence = sequence('execution')
+
+      described_class::Animations.expects(:sync_down).in_sequence(execution_sequence)
+      described_class::ExternalSources.expects(:sync_down).in_sequence(execution_sequence)
+      described_class::Labs.expects(:sync_down).in_sequence(execution_sequence)
+
+      described_class.sync_down
+    end
+  end
+
   describe '.sync_out' do
     it 'sync-out Apps resources' do
       execution_sequence = sequence('execution')

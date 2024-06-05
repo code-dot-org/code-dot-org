@@ -1,9 +1,11 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
 import sinon from 'sinon';
-import {expect} from '../../util/deprecatedChai';
+
 import {TestableCodeWorkspaceContainer as CodeWorkspaceContainer} from '@cdo/apps/templates/CodeWorkspaceContainer';
 import * as utils from '@cdo/apps/utils';
+
+import {expect} from '../../util/deprecatedChai';
 
 describe('CodeWorkspaceContainer', () => {
   let wrapper;

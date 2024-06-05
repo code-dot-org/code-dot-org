@@ -1,10 +1,11 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import PropTypes from 'prop-types';
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../util/reconfiguredChai';
 import sinon from 'sinon';
 
 import MultiCheckboxSelector from '@cdo/apps/templates/MultiCheckboxSelector';
+
+import {expect} from '../../util/reconfiguredChai';
 
 const ItemComponent = function ({item}) {
   return <strong>{item}</strong>;

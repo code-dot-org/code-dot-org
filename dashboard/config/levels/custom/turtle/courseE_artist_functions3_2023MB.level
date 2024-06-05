@@ -1,5 +1,6 @@
 <Artist>
   <config><![CDATA[{
+  "published": true,
   "game_id": 23,
   "created_at": "2024-01-29T22:25:08.000Z",
   "level_num": "custom",
@@ -39,14 +40,21 @@
     "disable_procedure_autopopulate": "false",
     "name_suffix": "_2023",
     "top_level_procedure_autopopulate": "false",
-    "long_instructions": "Build a function that will create this star.\r\n\r\n---\r\n\r\n- Each arm of the star is 25 pixels long\r\n- You need to turn 45 degrees to get 8 arms\r\n- It is okay to go forward and backward over the same arm",
+    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\r\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \r\nIn this level, you will declare a function. Declaring a function means that you will fill in a function with code and give the function a name.\r\n</p>\r\n</div>\r\n\r\n\r\nBuild a function that will create this star.\r\n\r\n---\r\n\r\n- Each arm of the star is 25 pixels long\r\n- You need to turn 45 degrees to get 8 arms\r\n- It is okay to go forward and backward over the same arm",
     "show_type_hints": "false",
     "parent_level_id": 21568,
+    "encrypted": "false",
+    "validation_enabled": "false",
+    "enable_download_image": "false",
+    "encrypted_examples": [
+
+    ],
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-01-29T22:25:08.472+00:00\",\"changed\":[\"cloned from \\\"courseE_artist_functions3_2023\\\"\"],\"cloned_from\":\"courseE_artist_functions3_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-01-29T22:25:08.472+00:00\",\"changed\":[\"cloned from \\\"courseE_artist_functions3_2023\\\"\"],\"cloned_from\":\"courseE_artist_functions3_2023\"},{\"changed_at\":\"2024-02-09 21:24:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-02-14 23:46:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-02-14 23:47:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>

@@ -1,11 +1,14 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import LegacyButton from './LegacyButton';
-import BaseDialog from './BaseDialog';
-import color from '../util/color';
-import {childrenOfType, whenNoChildOfTypes} from '../propTypes';
+import React from 'react';
+
 import locale from '@cdo/locale';
+
+import {childrenOfType, whenNoChildOfTypes} from '../propTypes';
+import color from '../util/color';
+
+import BaseDialog from './BaseDialog';
+import LegacyButton from './LegacyButton';
 
 export const styles = {
   icon: {

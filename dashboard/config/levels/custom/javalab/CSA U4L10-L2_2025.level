@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U4L10-MultiSelection PBT_2025",
     "teacher_markdown": "Students should notice that the output doesn't change. The updated code uses nested `if` statements to achieve the same goal.",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-16T23:55:25.189+00:00\",\"changed\":[\"cloned from \\\"CSA U4L10-L2_2023\\\"\"],\"cloned_from\":\"CSA U4L10-L2_2023\"}]"

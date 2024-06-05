@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U3L1-Array_2025",
     "teacher_markdown": "Students will see the following printed to the console:\r\n\r\n```\r\nNumber of Integers in firstValues: 10\r\nNumber of Integers in secondValues: 5\r\nNumber of Integers for firstManager: 10\r\nNumber of Integers for secondManager: 20\r\n```\r\n\r\nThe constructor `ArrayManager(int[] arrayValues)` is used to initialize the instance variable `arrayValues` to point to the 1D array `thirdValues`.\r\n\r\nStudents should conclude that a 1D array can be used to represent an attribute of an object, and it can be initialized by either specifying the length of the 1D array as a parameter in a constructor or it can point to an existing 1D array that is declared and initialized elsewhere.",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-16T23:52:10.642+00:00\",\"changed\":[\"cloned from \\\"CSA U3L1-L4_2023\\\"\"],\"cloned_from\":\"CSA U3L1-L4_2023\"}]"

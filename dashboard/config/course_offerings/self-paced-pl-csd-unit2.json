@@ -1,7 +1,7 @@
 {
   "key": "self-paced-pl-csd-unit2",
-  "display_name": "self-paced-pl-csd-unit2",
-  "category": "other",
+  "display_name": "Teaching Web Development",
+  "category": "pl_self_paced",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": null,
@@ -16,6 +16,6 @@
   "professional_learning_program": null,
   "video": null,
   "published_date": null,
-  "self_paced_pl_course_offering_id": null,
-  "self_paced_pl_course_offering_key": null
+  "self_paced_pl_course_offering_id": 486,
+  "self_paced_pl_course_offering_key": "self-paced-pl-csd-unit2"
 }

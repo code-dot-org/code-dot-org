@@ -64,8 +64,11 @@ class ScriptLevelsController < ApplicationController
     @current_user = current_user && User.includes(:teachers).where(id: current_user.id).first
     authorize! :read, ScriptLevel
     @script = ScriptLevelsController.get_script(request)
+    @script_level = ScriptLevelsController.get_script_level(@script, params)
 
-    if @script.is_deprecated
+    # Check if the script or current level is deprecated
+    level_is_deprecated = @script_level&.level_deprecated?
+    if @script.is_deprecated || level_is_deprecated
       return render 'errors/deprecated_course'
     end
 
@@ -103,10 +106,22 @@ class ScriptLevelsController < ApplicationController
 
     @public_caching = configure_caching(@script)
 
-    @script_level = ScriptLevelsController.get_script_level(@script, params)
     raise ActiveRecord::RecordNotFound unless @script_level
-    # If we have a signed out user for any of these cases we will want to redirect them to sign in
-    authenticate_user! if !can?(:read, @script) || @script.login_required? || (!params.nil? && params[:login_required] == "true")
+
+    if @script.login_required? || (!params.nil? && params[:login_required] == "true")
+      if cachable_request?(request)
+        # if login_required on a cached level, redirect to cached_page_auth_redirect
+        # See https://codedotorg.atlassian.net/browse/TEACH-758 for more details.
+        uri = Addressable::URI.parse request.fullpath
+        uri.query_values = uri&.query_values&.except('login_required')
+        uri.query_values = nil if uri.query_values && uri.query_values.empty?
+        return redirect_to api_v1_users_cached_page_auth_redirect_path({user_return_to: uri.to_s})
+      else
+        authenticate_user!
+      end
+    end
+    authenticate_user! unless can?(:read, @script)
+
     return render 'levels/no_access' unless can?(:read, @script_level)
 
     if current_user&.script_level_hidden?(@script_level)
@@ -204,9 +219,9 @@ class ScriptLevelsController < ApplicationController
     @script_level = ScriptLevelsController.get_script_level(@script, params)
     raise ActiveRecord::RecordNotFound unless @script_level
 
-    @level = @script_level.level
+    @level = select_level
 
-    render json: @level.summarize_for_lab2_properties(@script)
+    render json: @level.summarize_for_lab2_properties(@script, @script_level, @current_user)
   end
 
   # Get a list of hidden lessons for the current users section
@@ -524,13 +539,16 @@ class ScriptLevelsController < ApplicationController
       current_user.present? &&
       (current_user.teacher? || (current_user&.sections_as_student&.any?(&:code_review_enabled?) && !current_user.code_review_groups.empty?))
 
-    # Javalab exemplar URLs include ?exemplar=true as a URL param
+    # Javalab and Code Bridge exemplar URLs include ?exemplar=true as a URL param
     if params[:exemplar]
       return render 'levels/no_access_exemplar' unless current_user&.verified_instructor?
 
       @is_viewing_exemplar = true
       exemplar_sources = @level.try(:exemplar_sources)
-      return render 'levels/no_exemplar' unless exemplar_sources
+      # Java Lab shows the no exemplar page for levels that don't have exemplar sources.
+      # Lab2 handles this on the client side to enable switching between exemplar levels
+      # without a page reload.
+      return render 'levels/no_exemplar' unless exemplar_sources || @level.uses_lab2?
 
       level_view_options(@level.id, {is_viewing_exemplar: true, exemplar_sources: exemplar_sources})
       readonly_view_options

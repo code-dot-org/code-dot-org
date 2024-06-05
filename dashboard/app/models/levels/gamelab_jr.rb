@@ -43,7 +43,7 @@ class GamelabJr < Gamelab
   end
 
   def self.standalone_app_names
-    [['Sprite Lab', 'spritelab'], ['Story', 'story'], ['Science', 'science'], ['Adaptations', 'adaptations'], ['Ecosystems', 'ecosystems']]
+    [['Sprite Lab', 'spritelab'], ['Story', 'story'], ['Science', 'science'], ['Adaptations', 'adaptations'], ['Ecosystems', 'ecosystems'], ['Sprite Lab (Game Design)', 'game_design']]
   end
 
   def standalone_app_name_or_default
@@ -183,9 +183,8 @@ class GamelabJr < Gamelab
     false
   end
 
-  # Use a DCDO flag here so we can flip Sprite Lab without a deploy
   def uses_google_blockly?
-    DCDO.get('sprite_lab_google_blockly', false)
+    true
   end
 
   def age_13_required?

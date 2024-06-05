@@ -1,18 +1,21 @@
-import React, {useState, useEffect, useCallback} from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import i18n from '@cdo/locale';
-import moduleStyles from './sections-refresh.module.scss';
-import QuickAssignTable from './QuickAssignTable';
-import QuickAssignTableHocPl from './QuickAssignTableHocPl';
-import CurriculumQuickAssignTopRow from './CurriculumQuickAssignTopRow';
-import VersionUnitDropdowns from './VersionUnitDropdowns';
+import PropTypes from 'prop-types';
+import React, {useState, useEffect, useCallback} from 'react';
+
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import {BodyTwoText, Heading3} from '@cdo/apps/componentLibrary/typography';
 import {
   CourseOfferingCurriculumTypes as curriculumTypes,
   ParticipantAudience,
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
-import {BodyTwoText, Heading3} from '@cdo/apps/componentLibrary/typography';
+import i18n from '@cdo/locale';
+
+import CurriculumQuickAssignTopRow from './CurriculumQuickAssignTopRow';
+import QuickAssignTable from './QuickAssignTable';
+import QuickAssignTableHocPl from './QuickAssignTableHocPl';
+import VersionUnitDropdowns from './VersionUnitDropdowns';
+
+import moduleStyles from './sections-refresh.module.scss';
 
 export const MARKETING_AUDIENCE = {
   ELEMENTARY: 'elementary',

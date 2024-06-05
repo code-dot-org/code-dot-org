@@ -1,6 +1,8 @@
-import GoogleBlockly from 'blockly/core';
 import HighContrastTheme from '@blockly/theme-highcontrast';
+import GoogleBlockly from 'blockly/core';
+
 import fontConstants from '@cdo/apps/fontConstants';
+
 import {Themes} from '../constants';
 
 // Intentionally overriden styles from Google Blockly.

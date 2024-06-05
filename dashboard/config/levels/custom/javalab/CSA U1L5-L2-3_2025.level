@@ -762,7 +762,8 @@
       "/courses/csa-2023/guides/while-loops"
     ],
     "teacher_markdown": "When changing the condition on **Line 16** from `jesse.hasPaint()` to `jesse.canMove()`, students see `\"There is no more paint in the painter's bucket\"` displayed in the console. When the condition checked if the `Painter` object had paint, it  executed the block of code until it ran out of paint. However, when the condition checks if the `Painter` object can move, the block of code repeats as long as the `Painter` object can move forward, even though it runs out of paint before the condition becomes `false`.",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-16T23:00:55.036+00:00\",\"changed\":[\"cloned from \\\"CSA U1L5-L2-3_2023\\\"\"],\"cloned_from\":\"CSA U1L5-L2-3_2023\"}]"

@@ -32,7 +32,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2024-01-31 21:29:14 UTC",
+    "serialized_at": "2024-06-01 03:48:40 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2110,7 +2110,7 @@
       "key": "338b0a65-5ddc-46b1-8cf3-49ebe44adfb8",
       "position": 1,
       "properties": {
-        "description": "Students may have different levels of experience with both the Artist tool and the concept of loops. Based on what you think your class could benefit from, we recommend finding a puzzle or two to preview with the class. Whether this lesson is an introduction or a review, it's important to prepare students for what is coming next!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _How does this puzzle work?_",
+        "description": "Students may have different levels of experience with both the Artist tool and the concept of loops. We recommend teaching them strategies for breaking the instructions down into subtasks. The Warm Up example is taken from Level 5 which asks students to draw a square using a loop.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Think About It” slide\n\n**Make a plan for solving this puzzle:**\n\n_1. What should the Artist do first?_\n\n_2. What should the Artist do next?_\n\n_3. How can you use a loop (a repeat block) to simplify your code?_",
         "name": "Introduction\r"
       },
       "seeding_key": {

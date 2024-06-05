@@ -1,43 +1,82 @@
-export type ChatCompletionMessage = {
-  id: number;
+import {
+  AiTutorInteractionStatus as AITutorInteractionStatus,
+  AiTutorTypes as AITutorTypes,
+} from '@cdo/generated-scripts/sharedConstants';
+
+// TODO: Update this once https://codedotorg.atlassian.net/browse/CT-471 is resolved
+export type AITutorTypesValue = string;
+export type AITutorInteractionStatusValue = string;
+
+export {AITutorInteractionStatus, AITutorTypes};
+
+export interface ChatCompletionMessage {
+  id?: number;
   role: Role;
   chatMessageText: string;
-  status: Status;
-  timestamp?: string;
-};
-
-export type AITutorInteraction = {
-  userId: number;
-  levelId: number;
-  scriptId: number;
-  type: TutorTypes;
-  prompt: string;
   status: string;
-  aiResponse: string;
-};
+  timestamp?: string;
+}
+
+export interface AITutorInteraction {
+  userId?: number;
+  levelId?: number;
+  scriptId?: number;
+  type: AITutorTypesValue | undefined;
+  isProjectBacked?: boolean;
+  prompt: string;
+  status: AITutorInteractionStatusValue;
+  aiResponse?: string;
+}
+
+export interface StudentChatRow {
+  aiModelVersion: string;
+  aiResponse?: string;
+  createdAt: string;
+  id: number;
+  levelId?: number;
+  projectId?: string;
+  prompt: string;
+  scriptId?: number;
+  status: AITutorInteractionStatusValue;
+  studentName: string;
+  type: AITutorTypesValue;
+  updatedAt?: string;
+  userId: number;
+}
+
+export interface StudentServerData {
+  id: number;
+  name: string;
+  ai_tutor_access_denied: boolean;
+}
+
+export interface StudentAccessData {
+  id: number;
+  name: string;
+  aiTutorAccessDenied: boolean;
+}
+
+export interface Level {
+  id: number;
+  type: string;
+  hasValidation: boolean;
+  isProjectBacked: boolean;
+  aiTutorAvailable: boolean;
+  isAssessment: boolean;
+}
+
+export interface ChatContext {
+  // studentInput is the last user message for general chat
+  // or the student's code for compilation and validation.
+  studentInput: string;
+  studentCode: string;
+  actionType: AITutorTypesValue | undefined;
+}
 
 export enum Role {
   ASSISTANT = 'assistant',
   USER = 'user',
   SYSTEM = 'system',
-}
-
-export enum Status {
-  ERROR = 'error',
-  PROFANITY = 'profanity',
-  PERSONAL = 'personal',
-  INAPPROPRIATE = 'inappropriate',
-  OK = 'ok',
-  UNKNOWN = 'unknown',
-  EMAIL = 'email',
-  ADDRESS = 'address',
-  PHONE = 'phone',
-}
-
-export const PII = [Status.EMAIL, Status.ADDRESS, Status.PHONE];
-
-export enum TutorTypes {
-  COMPILATION = 'compilation',
-  VALIDATION = 'validation',
-  GENERAL_CHAT = 'general_chat',
+  // only used in Aichat, but our types are currently tangled up :)
+  MODEL_UPDATE = 'update',
 }

@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import i18n from '@cdo/locale';
-import style from './rubrics.module.scss';
-import {evidenceLevelShape} from './rubricShapes';
+import PropTypes from 'prop-types';
+import React from 'react';
+
 import RadioButton from '@cdo/apps/componentLibrary/radioButton/RadioButton';
 import {
   BodyThreeText,
   StrongText,
   Heading6,
 } from '@cdo/apps/componentLibrary/typography';
+import i18n from '@cdo/locale';
+
 import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
+import {evidenceLevelShape} from './rubricShapes';
+
+import style from './rubrics.module.scss';
 
 export default function EvidenceLevelsForTeachers({
   evidenceLevels,

@@ -12,9 +12,12 @@ import instructions, {
   setCodeReviewEnabledForLevel,
   setTaRubric,
 } from '@cdo/apps/redux/instructions';
+import {setLevel, setScriptId} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import experiments from '@cdo/apps/util/experiments';
 import RubricFloatingActionButton from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
-import AITutorFloatingActionButton from '@cdo/apps/code-studio/components/aiTutor/aiTutorFloatingActionButton';
+import AITutorFloatingActionButton from '@cdo/apps/aiTutor/views/AITutorFloatingActionButton';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 $(document).ready(initPage);
 
@@ -23,6 +26,7 @@ function initPage() {
   const config = JSON.parse(script.dataset.level);
 
   registerReducers({instructions});
+
   // this is the common js entry point for level pages
   // which is why ttsAutoplay is set here
   const ttsAutoplayEnabled = config.tts_autoplay_enabled;
@@ -57,14 +61,34 @@ function initPage() {
     );
   }
 
-  if (hasScriptData('script[data-aitutorleveldata]')) {
-    const aiTutorLevelData = getScriptData('aitutorleveldata');
+  if (hasScriptData('script[data-aitutordata]')) {
+    const aiTutorData = getScriptData('aitutordata');
+    const {
+      levelId,
+      type,
+      hasValidation,
+      isProjectBacked,
+      aiTutorAvailable,
+      isAssessment,
+    } = aiTutorData;
+    const level = {
+      id: levelId,
+      type,
+      hasValidation,
+      isProjectBacked,
+      aiTutorAvailable,
+      isAssessment,
+    };
+    getStore().dispatch(setLevel(level));
+    getStore().dispatch(setScriptId(aiTutorData.scriptId));
     const aiTutorFabMountPoint = document.getElementById(
       'ai-tutor-fab-mount-point'
     );
     if (aiTutorFabMountPoint) {
       ReactDOM.render(
-        <AITutorFloatingActionButton level={aiTutorLevelData} />,
+        <Provider store={getStore()}>
+          <AITutorFloatingActionButton />
+        </Provider>,
         aiTutorFabMountPoint
       );
     }
@@ -87,6 +111,22 @@ function initPage() {
       'rubric-fab-mount-point'
     );
     if (rubricFabMountPoint) {
+      //rubric fab mount point is only true for teachers
+      if (
+        experiments.isEnabled('ai-rubrics') &&
+        !!rubric &&
+        rubric.learningGoals.some(lg => lg.aiEnabled) &&
+        config.level_name === rubric.level.name
+      ) {
+        analyticsReporter.sendEvent(
+          EVENTS.TA_RUBRIC_AI_PAGE_VISITED,
+          {
+            ...reportingData,
+            studentId: !!studentLevelInfo ? studentLevelInfo.user_id : '',
+          },
+          PLATFORMS.BOTH
+        );
+      }
       ReactDOM.render(
         <Provider store={getStore()}>
           <RubricFloatingActionButton
@@ -94,7 +134,10 @@ function initPage() {
             studentLevelInfo={studentLevelInfo}
             reportingData={reportingData}
             currentLevelName={config.level_name}
-            aiEnabled={experiments.isEnabled('ai-rubrics')}
+            aiEnabled={
+              experiments.isEnabled('ai-rubrics') &&
+              rubric.learningGoals.some(lg => lg.aiEnabled)
+            }
           />
         </Provider>,
         rubricFabMountPoint

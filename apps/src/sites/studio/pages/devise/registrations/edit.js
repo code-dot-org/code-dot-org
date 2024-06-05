@@ -14,6 +14,9 @@ import ManageLinkedAccountsController from '@cdo/apps/lib/ui/accounts/ManageLink
 import DeleteAccount from '@cdo/apps/lib/ui/accounts/DeleteAccount';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import color from '@cdo/apps/util/color';
+import LtiRosterSyncSettings from '@cdo/apps/lib/ui/accounts/LtiRosterSyncSettings';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 // Values loaded from scriptData are always initial values, not the latest
 // (possibly unsaved) user-edited values on the form.
@@ -27,9 +30,9 @@ const {
   isGoogleClassroomStudent,
   isCleverStudent,
   dependedUponForLogin,
-  dependentStudents,
-  studentCount,
+  dependentStudentsCount,
   personalAccountLinkingEnabled,
+  lmsName,
 } = scriptData;
 
 $(document).ready(() => {
@@ -83,6 +86,23 @@ $(document).ready(() => {
     new AddPasswordController($('#add-password-form'), addPasswordMountPoint);
   }
 
+  const ltiSyncSettingsMountPoint =
+    document.getElementById('lti-sync-settings');
+  if (ltiSyncSettingsMountPoint) {
+    ReactDOM.render(
+      <LtiRosterSyncSettings
+        ltiRosterSyncEnabled={
+          ltiSyncSettingsMountPoint.getAttribute(
+            'data-lti-roster-sync-enabled'
+          ) === 'true'
+        }
+        formId={'lti-sync-settings-form'}
+        lmsName={lmsName}
+      />,
+      ltiSyncSettingsMountPoint
+    );
+  }
+
   const lockoutLinkedAccountsMountPoint = document.getElementById(
     'lockout-linked-accounts'
   );
@@ -132,13 +152,19 @@ $(document).ready(() => {
         isPasswordRequired={isPasswordRequired}
         isTeacher={userType === 'teacher'}
         dependedUponForLogin={dependedUponForLogin}
-        dependentStudents={dependentStudents}
-        hasStudents={studentCount > 0}
+        dependentStudentsCount={dependentStudentsCount}
+        hasStudents={dependentStudentsCount > 0}
         isAdmin={isAdmin}
       />,
       deleteAccountMountPoint
     );
   }
+
+  analyticsReporter.sendEvent(
+    EVENTS.ACCOUNT_SETTINGS_PAGE_VISITED,
+    {'user type': userType},
+    PLATFORMS.BOTH
+  );
 
   initializeCreatePersonalAccountControls();
 });

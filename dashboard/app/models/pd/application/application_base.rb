@@ -179,6 +179,10 @@ module Pd::Application
       )
     end
 
+    def status_including_enrolled
+      status
+    end
+
     # We need to validate this inclusion explicitly in a function in order to support derived
     # models overriding the valid status list. This way that list comes from the instance type
     # when called, rather than a constant list here in the base class.

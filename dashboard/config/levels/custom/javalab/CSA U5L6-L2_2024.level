@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U5L6-Image Filters PBT_2024",
     "teacher_markdown": "1. The `BrightenedImage` class extends the `Image` class. The class has many methods available, such as: `getPixel()`, `setPixel()`, `getWidth()`, `getHeight()`, and `clear()`.\r\n\r\n2. **Line 11** in the `BrightenedImage` calls the `getPixelsFromImage()` method that exists within the class. Within that method, we populate and return a 2D array of pixels from the image. If we replace the line with `imagePixels = new Pixel[getHeight()][getWidth()];`, nothing appears in the scene. This is because the 2D array `imagePixels` is instead initialized with empty (white) `Pixel` objects.",
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T21:01:37.839+00:00\",\"changed\":[\"cloned from \\\"CSA U5L6-L2_2023\\\"\"],\"cloned_from\":\"CSA U5L6-L2_2023\"}]"

@@ -1,15 +1,16 @@
-import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import PadAndCenter from '@cdo/apps/templates/teacherDashboard/PadAndCenter';
-import i18n from '@cdo/locale';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+
+import fontConstants from '@cdo/apps/fontConstants';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
-import color from '@cdo/apps/util/color';
-import {connect} from 'react-redux';
+import PadAndCenter from '@cdo/apps/templates/teacherDashboard/PadAndCenter';
 import {beginEditingSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import fontConstants from '@cdo/apps/fontConstants';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
 
 class InitialSectionCreationInterstitial extends Component {
   static propTypes = {

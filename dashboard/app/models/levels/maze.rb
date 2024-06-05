@@ -135,4 +135,8 @@ class Maze < Grid
       #{common_blocks(type)}
     XML
   end
+
+  def validated?
+    true
+  end
 end

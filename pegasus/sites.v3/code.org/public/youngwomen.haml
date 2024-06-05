@@ -5,21 +5,26 @@ theme: responsive_full_width
 
 -# Set this to true or false when applications open or
 -# close to show the corresponding version of the page.
-- applications_closed = true
+- applications_closed = false
 
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/page/young-women-in-cs-styles.css", rel: "stylesheet"}
 
+-# FontAwesome icons
+- icon_megaphone = "fa-solid fa-megaphone"
+
 %section.hero-banner-basic.overlay
   .wrapper.flex-container.justify-space-between.align-items-center.wrap
     .text-wrapper
-      %h1{style: "color: white"}
+      %h1.white
         =hoc_s(:yw_page_top_heading)
-      %p.body-one{style: "color: white"}
+      %p.body-one.white
         =hoc_s(:yw_page_top_desc)
       - if !applications_closed
-        %a.link-button.white.has-external-link{href: "https://docs.google.com/forms/d/e/1FAIpQLScKoT8ttOeWU3mWp_fDaFV0qQ5niXk3tSi1INALHhGWFQtVjw/viewform", target: "_blank", rel: "noopener noreferrer"}
-          =hoc_s(:call_to_action_applications_open)
+        %a.link-button.has-icon.has-external-link{href: "https://forms.gle/mMKtxq27VcS5sAeX6", target: "_blank", rel: "noopener noreferrer"}
+          %div.flex-wrapper
+            %i{class: "#{icon_megaphone}"}
+            =hoc_s(:call_to_action_applications_open)
 
 %section.intro
   .wrapper
@@ -32,29 +37,34 @@ theme: responsive_full_width
           =hoc_s(:cs_ambassador_subhead)
         %p.body-three
           =hoc_s(:cs_ambassador_desc)
-    .flex-container.justify-space-between.align-items-center.wrap.gap-2.rounded-corners
+
+%section.applications.bg-primary-light
+  .wrapper
+    .flex-container.justify-space-between.align-items-center.wrap
       .text-wrapper
-        %h3.heading-md
-          =hoc_s((!applications_closed ? :cs_ambassador_application_date : :cs_ambassador_application_closed_title))
+        %h2
+          =hoc_s((!applications_closed ? :call_to_action_applications_open_exclamation : :cs_ambassador_application_closed_title))
         - if !applications_closed
           %p.heading-xs
+            =hoc_s(:cs_ambassador_priority_deadline)
+          %p.heading-xs.no-margin-bottom
             =hoc_s(:cs_ambassador_application_subhead)
-        %p.body-three.no-margin-bottom
+        %p.body-three
           =hoc_s((!applications_closed ? :cs_ambassador_application_questions : :cs_ambassador_application_closed_subhead), markdown: :inline, locals:{email_url: "mailto:youngwomen@code.org"})
+        %p.body-three
+          =hoc_s(:cs_ambassador_application_parter_program, markdown: :inline)
       - if !applications_closed
         = view :"young_women_in_cs/yw_apply_button"
-
-= view :section_divider_line
 
 %section.cs-amb-do
   .wrapper
     %h2
     .flex-container.justify-space-between.wrap
+      %figure.img-wrapper.rounded-corners.col-45
       .text-wrapper.col-50
         %h2=hoc_s(:cs_ambassador_do_heading)
         %p.body-three
           =hoc_s(:cs_ambassador_do_desc)
-      %figure.img-wrapper.rounded-corners.col-45
 
 %section.bg-neutral-light
   .wrapper.centered
@@ -71,3 +81,22 @@ theme: responsive_full_width
     - if !applications_closed
       .centered
         = view :"young_women_in_cs/yw_apply_button"
+
+%section#partner-program.bg-neutral-light
+  .wrapper
+    %h2=hoc_s(:cs_ambassador_partner_program_heading)
+    %p.body-two
+      =hoc_s(:cs_ambassador_partner_program_desc)
+    .flex-container.justify-space-between.wrap
+      .text-wrapper.col-50
+        %p.heading-xs
+          =hoc_s(:cs_ambassador_partner_program_title)
+        %ul
+          %li=hoc_s(:cs_ambassador_partner_program_desc_01)
+          %li=hoc_s(:cs_ambassador_partner_program_desc_02)
+          %li=hoc_s(:cs_ambassador_partner_program_desc_03)
+          %li=hoc_s(:cs_ambassador_partner_program_desc_04)
+        %p.body-three
+          =hoc_s(:cs_ambassador_partner_program_get_involved, markdown: :inline, locals: {email_url: "mailto:youngwomen@code.org"})
+      %figure.img-wrapper.rounded-corners.col-45
+

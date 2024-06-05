@@ -21,15 +21,20 @@
  * @fileoverview Demonstration of Blockly: Solving a maze.
  * @author fraser@google.com (Neil Fraser)
  */
-var commonMsg = require('@cdo/locale');
+
 var mazeUtils = require('@code-dot-org/maze').utils;
 
+var commonMsg = require('@cdo/locale');
+
 var blockUtils = require('../block_utils');
+var BlockStyles = require('../blockly/constants').BlockStyles;
+var BlockColors = require('../blockly/constants').BlockColors;
 
 var msg = require('./locale');
 
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function (blockly, blockInstallOptions) {
+  Blockly.cdoUtils.registerCustomProcedureBlocks();
   var skin = blockInstallOptions.skin;
   var generator = blockly.getGenerator();
   blockly.JavaScript = generator;
@@ -84,7 +89,11 @@ exports.install = function (blockly, blockInstallOptions) {
       return {
         helpUrl: '',
         init: function () {
-          Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
+          Blockly.cdoUtils.handleColorAndStyle(
+            this,
+            BlockColors.DEFAULT,
+            BlockStyles.DEFAULT
+          );
           this.appendDummyInput()
             .appendField(
               new blockly.FieldLabel(directionConfig.letter, {
@@ -138,7 +147,11 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for moving forward/backward
     helpUrl: 'http://code.google.com/p/blockly/wiki/Move',
     init: function () {
-      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.DEFAULT,
+        BlockStyles.DEFAULT
+      );
       this.appendDummyInput().appendField(
         new blockly.FieldDropdown(this.DIRECTIONS),
         'DIR'
@@ -164,7 +177,11 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for turning left or right.
     helpUrl: 'http://code.google.com/p/blockly/wiki/Turn',
     init: function () {
-      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.DEFAULT,
+        BlockStyles.DEFAULT
+      );
       this.appendDummyInput().appendField(
         new blockly.FieldDropdown(this.DIRECTIONS),
         'DIR'
@@ -190,7 +207,11 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for checking if there a path.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.LOGIC,
+        BlockStyles.LOGIC
+      );
       this.setOutput(true, blockly.BlockValueType.NUMBER);
       this.appendDummyInput().appendField(
         new blockly.FieldDropdown(this.DIRECTIONS),
@@ -216,7 +237,11 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for 'if' conditional if there is a path.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.LOGIC,
+        BlockStyles.LOGIC
+      );
       this.appendDummyInput().appendField(
         new blockly.FieldDropdown(this.DIRECTIONS),
         'DIR'
@@ -244,7 +269,11 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for 'if/else' conditional if there is a path.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.LOGIC,
+        BlockStyles.LOGIC
+      );
       this.appendDummyInput().appendField(
         new blockly.FieldDropdown(this.DIRECTIONS),
         'DIR'
@@ -275,7 +304,11 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for 'if' conditional if there is a path.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.LOGIC,
+        BlockStyles.LOGIC
+      );
       this.appendDummyInput().appendField(msg.ifCode());
       this.appendDummyInput().appendField(
         new blockly.FieldDropdown(this.DIRECTIONS),
@@ -309,7 +342,11 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for 'if/else' conditional if there is a path.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.LOGIC,
+        BlockStyles.LOGIC
+      );
       this.appendDummyInput().appendField(msg.ifCode());
       this.appendDummyInput().appendField(
         new blockly.FieldDropdown(this.DIRECTIONS),
@@ -340,7 +377,11 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.maze_whileNotClear = {
     helpUrl: 'http://code.google.com/p/blockly/wiki/Repeat',
     init: function () {
-      Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.LOOP,
+        BlockStyles.LOOP
+      );
       this.appendDummyInput().appendField(
         new blockly.FieldDropdown(this.DIRECTIONS),
         'DIR'
@@ -368,7 +409,11 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.maze_untilBlocked = {
     helpUrl: 'http://code.google.com/p/blockly/wiki/Repeat',
     init: function () {
-      Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.LOOP,
+        BlockStyles.LOOP
+      );
       this.appendDummyInput().appendField(msg.repeatUntilBlocked());
       this.appendStatementInput('DO').appendField(msg.doCode());
       this.setPreviousStatement(true);
@@ -388,7 +433,11 @@ exports.install = function (blockly, blockInstallOptions) {
     // Do forever loop.
     helpUrl: 'http://code.google.com/p/blockly/wiki/Repeat',
     init: function () {
-      Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.LOOP,
+        BlockStyles.LOOP
+      );
       this.appendDummyInput()
         .appendField(msg.repeatUntil())
         .appendField(new blockly.FieldImage(skin.maze_forever, 35, 35));
@@ -411,7 +460,11 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.maze_untilBlockedOrNotClear = {
     helpUrl: 'http://code.google.com/p/blockly/wiki/Repeat',
     init: function () {
-      Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.LOOP,
+        BlockStyles.LOOP
+      );
       this.appendDummyInput().appendField(
         new blockly.FieldDropdown(this.DIRECTIONS),
         'DIR'

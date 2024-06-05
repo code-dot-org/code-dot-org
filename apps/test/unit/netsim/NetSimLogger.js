@@ -1,4 +1,5 @@
 import {assert} from '../../util/reconfiguredChai';
+
 var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
 
 // Simple console that only has 'log' method

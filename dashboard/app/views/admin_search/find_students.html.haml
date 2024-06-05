@@ -7,6 +7,11 @@
   %table.filters
     %tr
       %td
+        Username
+      %td
+        %input{name: "usernameFilter", id: "usernameFilter", value: params[:usernameFilter]}
+    %tr
+      %td
         Student Name
       %td
         %input{name: "studentNameFilter", id: "studentNameFilter", value: params[:studentNameFilter]}
@@ -43,12 +48,12 @@
   = paginate @users, total_pages: (@total_count / AdminSearchController::MAX_PAGE_SIZE.to_f).ceil
   %table.users
     %tr
-      - ['ID', 'Name', 'Email', 'Provider', 'Can Share?', 'Deleted At', 'Undelete', 'Delete'].each do |field|
+      - ['ID', 'Name', 'Username', 'Email', 'Provider', 'Can Share?', 'Deleted At', 'Undelete', 'Delete'].each do |field|
         %th
           %span= field
     - @users.each do |user|
       %tr
-        - [:id, :name, :email, :provider].each do |field|
+        - [:id, :name, :username, :email, :provider].each do |field|
           %td
             %span= user[field]
         %td

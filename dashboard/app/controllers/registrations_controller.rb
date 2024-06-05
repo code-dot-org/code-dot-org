@@ -1,7 +1,11 @@
 require 'cdo/firehose'
 require 'cdo/honeybadger'
+require 'cdo/mailjet'
 require 'cpa'
 require_relative '../../../shared/middleware/helpers/experiments'
+require 'metrics/events'
+require 'policies/lti'
+require 'queries/lti'
 
 class RegistrationsController < Devise::RegistrationsController
   respond_to :json
@@ -9,7 +13,7 @@ class RegistrationsController < Devise::RegistrationsController
     :edit, :update, :destroy, :upgrade, :set_email, :set_user_type,
     :migrate_to_multi_auth, :demigrate_from_multi_auth
   ]
-  skip_before_action :verify_authenticity_token, only: [:set_age]
+  skip_before_action :verify_authenticity_token, only: [:set_student_information]
   skip_before_action :clear_sign_up_session_vars, only: [:new, :begin_sign_up, :cancel, :create]
 
   #
@@ -20,7 +24,13 @@ class RegistrationsController < Devise::RegistrationsController
     if PartialRegistration.in_progress?(session)
       user_params = params[:user] || ActionController::Parameters.new
       user_params[:user_type] ||= session[:default_sign_up_user_type]
-      @user = User.new_with_session(user_params.permit(:user_type), session)
+      if DCDO.get('student-email-post-enabled', false)
+        user_params[:email] ||= params[:email]
+
+        @user = User.new_with_session(user_params.permit(:user_type, :email), session)
+      else
+        @user = User.new_with_session(user_params.permit(:user_type), session)
+      end
     else
       save_default_sign_up_user_type
       SignUpTracking.begin_sign_up_tracking(session, split_test: true)
@@ -49,13 +59,14 @@ class RegistrationsController < Devise::RegistrationsController
     @user = User.new(begin_sign_up_params)
     @user.validate_for_finish_sign_up
     SignUpTracking.log_begin_sign_up(@user, session)
+    is_signup_post_enabled = DCDO.get('student-email-post-enabled', false)
 
     if @user.errors.blank?
       PartialRegistration.persist_attributes(session, @user)
-      redirect_to new_user_registration_path
-    else
-      render 'new' # Re-render form to display validation errors
+      redirect_to new_user_registration_path and return unless is_signup_post_enabled
     end
+
+    render 'new'
   end
 
   #
@@ -112,15 +123,41 @@ class RegistrationsController < Devise::RegistrationsController
       super
     end
 
-    should_send_new_teacher_email = current_user&.teacher?
-    TeacherMailer.new_teacher_email(current_user, request.locale).deliver_now if should_send_new_teacher_email
-    should_send_parent_email = current_user && current_user.parent_email.present?
-    ParentMailer.parent_email_added_to_student_account(current_user.parent_email, current_user).deliver_now if should_send_parent_email
+    if current_user && current_user.errors.blank?
+      if current_user.teacher?
+        if MailJet.enabled? && request.locale != 'es-MX'
+          MailJet.create_contact_and_send_welcome_email(current_user)
+        else
+          TeacherMailer.new_teacher_email(current_user, request.locale).deliver_now
+        end
+      end
+      ParentMailer.parent_email_added_to_student_account(current_user.parent_email, current_user).deliver_now if current_user.parent_email.present?
 
-    if current_user # successful registration
       storage_id = take_storage_id_ownership_from_cookie(current_user.id)
       current_user.generate_progress_from_storage_id(storage_id) if storage_id
       PartialRegistration.delete session
+      if Policies::Lti.lti? current_user
+        lms_name = Queries::Lti.get_lms_name_from_user(current_user)
+        metadata = {
+          'user_type' => current_user.user_type,
+          'lms_name' => lms_name,
+        }
+        Metrics::Events.log_event(
+          user: current_user,
+          event_name: 'lti_user_created',
+          metadata: metadata,
+        )
+      end
+      has_school = current_user.school_info&.school_id.present?
+      event_metadata = {
+        'has_school' => has_school,
+      }
+      Metrics::Events.log_event(
+        user: current_user,
+        event_name: 'Sign Up Finished Backend',
+        metadata: event_metadata,
+        get_enabled_experiments: true,
+      )
     end
 
     SignUpTracking.log_sign_up_result resource, session
@@ -209,12 +246,20 @@ class RegistrationsController < Devise::RegistrationsController
     params.require(:user).permit(:email, :password, :password_confirmation)
   end
 
-  # Set age for the current user if empty - skips CSRF verification because this can be called
+  # Set age, us_state and gender for the current user if empty - skips CSRF verification because this can be called
   # from cached pages which will not populate the CSRF token. This also skips lockout policy
   # checks since those depend on the age being set.
-  def set_age
+  def set_student_information
     return head(:forbidden) unless current_user
-    current_user.update(age: params[:user][:age]) if current_user.age.blank?
+    student_information = {}
+
+    student_information[:age] = params[:user][:age] if current_user.age.blank?
+    student_information[:us_state] = params[:user][:us_state] unless current_user.user_provided_us_state
+    student_information[:user_provided_us_state] = params[:user][:us_state].present? unless current_user.user_provided_us_state
+    student_information[:gender_student_input] = params[:user][:gender_student_input] if current_user.gender.blank?
+    student_information[:country_code] = params[:user][:country_code] if current_user.country_code.blank?
+
+    current_user.update(student_information) unless student_information.empty?
   end
 
   def upgrade
@@ -346,11 +391,6 @@ class RegistrationsController < Devise::RegistrationsController
     @permission_status = current_user.child_account_compliance_state
     @personal_account_linking_enabled = true
 
-    # Backfill us_state for pre-CPA students
-    if current_user.student? && current_user.us_state.nil?
-      Services::ChildAccount.update_us_state_from_teacher!(current_user)
-    end
-
     # Handle users who aren't locked out, but still need parent permission to link personal accounts.
     if Policies::ChildAccount.user_predates_policy?(current_user)
       permission_request = Queries::ChildAccount.latest_permission_request(current_user)
@@ -470,7 +510,9 @@ class RegistrationsController < Devise::RegistrationsController
       :provider,
       :us_state,
       :country_code,
+      :user_provided_us_state,
       :ai_rubrics_disabled,
+      :lti_roster_sync_enabled,
       school_info_attributes: [
         :country,
         :school_type,

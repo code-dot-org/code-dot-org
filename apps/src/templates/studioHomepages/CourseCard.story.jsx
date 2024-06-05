@@ -1,7 +1,9 @@
 import React from 'react';
-import CourseCard from './CourseCard';
 import {Provider} from 'react-redux';
+
 import {reduxStore} from '@cdo/storybook/decorators';
+
+import CourseCard from './CourseCard';
 
 const exampleCard = {
   title: 'CSP Unit 2 - Digital Information',

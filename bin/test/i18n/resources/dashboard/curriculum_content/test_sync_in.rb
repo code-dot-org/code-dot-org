@@ -177,7 +177,7 @@ describe I18n::Resources::Dashboard::CurriculumContent::SyncIn do
         returns(crowdin_serializer)
 
       described_instance.stubs(:get_unit_subdirectory).with(unit).returns(unit_subdirectory)
-      I18nScriptUtils.stubs(:unit_directory_change?).with(i18n_source_dir, unit_file_name, i18n_source_file_path).returns(false)
+      I18nScriptUtils.stubs(:unit_directory_change?).with(i18n_source_dir, i18n_source_file_path).returns(false)
     end
 
     it 'prepares the i18n source file' do
@@ -225,7 +225,7 @@ describe I18n::Resources::Dashboard::CurriculumContent::SyncIn do
 
     context 'when the unit directory is changed' do
       before do
-        I18nScriptUtils.expects(:unit_directory_change?).with(i18n_source_dir, unit_file_name, i18n_source_file_path).returns(true)
+        I18nScriptUtils.expects(:unit_directory_change?).with(i18n_source_dir, i18n_source_file_path).returns(true)
       end
 
       it 'does not prepare the i18n source file' do

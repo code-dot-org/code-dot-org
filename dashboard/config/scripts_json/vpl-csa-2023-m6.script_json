@@ -4,7 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "curriculum_umbrella": "CSA Virtual PL",
+      "curriculum_umbrella": "PD Workshop Activity CSA",
       "hideable_lessons": true,
       "is_migrated": true,
       "student_detail_progress_view": true,
@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-13 22:16:11 UTC",
+    "serialized_at": "2024-04-18 14:15:25 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -56,6 +56,7 @@
       "key": "f2db9acb-8659-480c-aa70-d4bafd32f137",
       "position": 1,
       "properties": {
+        "duration": 60
       },
       "seeding_key": {
         "lesson_activity.key": "f2db9acb-8659-480c-aa70-d4bafd32f137",
@@ -132,6 +133,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-6-2022-ap-subset_2023"
+        ],
         "progression": "Opening"
       },
       "bonus": false,
@@ -154,6 +158,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA vpl_m6_U6L9-L1_2023"
+        ],
         "progression": "NLP Content"
       },
       "bonus": false,
@@ -176,6 +183,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-M6-NLP1_2023"
+        ],
         "progression": "NLP Content"
       },
       "bonus": false,
@@ -198,6 +208,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA VPL_M6_U6L9-L2_2023"
+        ],
         "progression": "NLP Content"
       },
       "bonus": false,
@@ -220,6 +233,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA VPL_M6_U6L9-L3_2023"
+        ],
         "progression": "NLP Content"
       },
       "bonus": false,
@@ -242,6 +258,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA VPL_M6_U6L9-L4_2023"
+        ],
         "progression": "NLP Content"
       },
       "bonus": false,

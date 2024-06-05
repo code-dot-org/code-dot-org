@@ -2,7 +2,7 @@
 
 // Please keep this file simple; it should only contain color definitions
 //   and aliases.  Variables defined in this file are exported to
-//   apps/src/color.js during the apps build process.
+//   apps/src/util/color.js during the apps build process.
 
 $black: #000;
 $background_black: #121416;
@@ -27,6 +27,7 @@ $light_teal: #59cad3;
 $lightish_teal: #80d6de;
 $lighter_teal: #a6e3e8;
 $lightest_teal: #d9f3f5;
+$ai_rubric_cyan: #3cfff8;
 
 $purple: #8c52ba;
 $light_purple: #a69bc1;
@@ -73,6 +74,7 @@ $realyellow: #ff0;
 $mustardyellow: #efcd1c;
 $twitter_blue: #00aced;
 $facebook_blue: #3b5998;
+$linkedin_blue: #0077B5;
 $dark_blue: #00647f;
 $blockly_flyout_gray: #ddd;
 $default_text: #333;
@@ -151,6 +153,8 @@ $brand_secondary_dark: #6F488E;
 
 $brand_accent_default: #ED6060;
 
+$brand_teal_5: #DFF2F4;
+
 //Product
 $product_affirmative_default: #3EA33E;
 
@@ -191,15 +195,23 @@ $light_secondary_100: #E2D4EE;
 $light_secondary_500: #8C52BA;
 $light_secondary_700: #6F488E;
 
+$light_gray_50: #F7F8FA;
 $light_gray_100: #EAEBEB;
 $light_gray_200: #D4D5D7;
 $light_gray_300: #BFC1C3;
+$light_gray_400: #A9ACAF;
 $light_gray_500: #94979B;
+$light_gray_600: #7F8286;
 $light_gray_700: #6A6E73;
 $light_gray_800: #54595E;
 $light_gray_900: #3F444B;
 
 $light_affirmative_100: #E2F1E2;
+$light_affirmative_500: #3EA33E;
+
+$light_negative_500: #E5311A;
+
+$light_caution_500: #F9CB28;
 
 $light_info_100: #DCEFFB;
 $light_info_500: #1892E3;

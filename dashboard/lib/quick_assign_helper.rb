@@ -44,8 +44,8 @@ module QuickAssignHelper
     end
 
     # Sort the headers and the course offerings
-    data.keys.each do |curriculum_type|
-      data[curriculum_type].keys.each do |header|
+    data.each_key do |curriculum_type|
+      data[curriculum_type].each_key do |header|
         data[curriculum_type][header].sort_by! {|co| co[:display_name]}
       end
       data[curriculum_type] = data[curriculum_type].sort {|(h1, _), (h2, _)| compare_headers(h1, h2)}.to_h
@@ -75,7 +75,7 @@ module QuickAssignHelper
       data[header].append(co.summarize_for_quick_assign(user, locale))
     end
 
-    data.keys.each do |header|
+    data.each_key do |header|
       data[header].sort_by! {|co| co[:display_name]}
     end
     data.sort {|(h1, _), (h2, _)| compare_headers(h1, h2)}.to_h

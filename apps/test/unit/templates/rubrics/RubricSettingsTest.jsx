@@ -1,25 +1,71 @@
+import {screen} from '@testing-library/dom';
+import {render, fireEvent, act} from '@testing-library/react';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {expect} from '../../../util/reconfiguredChai';
-import {mount, shallow} from 'enzyme';
+import {Provider} from 'react-redux';
 import sinon from 'sinon';
-import {act} from 'react-dom/test-utils';
-import i18n from '@cdo/locale';
+
 import * as utils from '@cdo/apps/code-studio/utils';
-import RubricSettings from '@cdo/apps/templates/rubrics/RubricSettings';
-import {RubricAiEvaluationStatus} from '@cdo/apps/util/sharedConstants';
-import experiments from '@cdo/apps/util/experiments';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
+import currentUser, {
+  setAiRubricsDisabled,
+} from '@cdo/apps/templates/currentUserRedux';
+import RubricSettings from '@cdo/apps/templates/rubrics/RubricSettings';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {Provider} from 'react-redux';
+import i18n from '@cdo/locale';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('RubricSettings', () => {
+  let clock;
+  let fetchStub;
+  let store;
+  let refreshAiEvaluationsSpy;
+
+  async function wait() {
+    for (let _ = 0; _ < 10; _++) {
+      await act(async () => {
+        await Promise.resolve();
+      });
+    }
+  }
+
+  function stubFetchEvalStatusForAll(data) {
+    fetchStub
+      .withArgs(sinon.match(/rubrics\/\d+\/ai_evaluation_status_for_all.*/))
+      .returns(Promise.resolve(new Response(JSON.stringify(data))));
+  }
+
+  beforeEach(() => {
+    fetchStub = sinon.stub(window, 'fetch');
+    fetchStub.returns(Promise.resolve(new Response('')));
+    refreshAiEvaluationsSpy = sinon.spy();
+    sinon.stub(utils, 'queryParams').withArgs('section_id').returns('1');
+    stubRedux();
+    registerReducers({teacherSections, currentUser});
+    store = getStore();
+  });
+
+  afterEach(() => {
+    if (clock) {
+      clock.restore();
+    }
+    restoreRedux();
+    utils.queryParams.restore();
+    fetchStub.restore();
+  });
+
   const defaultRubric = {
-    learningGoals: [],
+    id: 1,
+    learningGoals: [{id: 1, learningGoal: 'Key Concept'}],
     lesson: {
       position: 3,
       name: 'Data Structures',
@@ -28,455 +74,407 @@ describe('RubricSettings', () => {
       name: 'test_level',
       position: 7,
     },
-    id: 1,
   };
 
-  it('shows a a button for running analysis if canProvideFeedback is true', () => {
-    const wrapper = shallow(
-      <RubricSettings
-        canProvideFeedback={true}
-        teacherHasEnabledAi={true}
-        visible
-        rubric={defaultRubric}
-      />
+  const ready = {
+    attemptedCount: 1,
+    attemptedUnevaluatedCount: 1,
+    csrfToken: 'abcdef',
+  };
+
+  const noAttempts = {
+    attemptedCount: 0,
+    attemptedUnevaluatedCount: 0,
+    csrfToken: 'abcdef',
+  };
+
+  const noUnevaluated = {
+    attemptedCount: 1,
+    attemptedUnevaluatedCount: 0,
+    csrfToken: 'abcdef',
+  };
+
+  const onePending = {
+    attemptedCount: 1,
+    attemptedUnevaluatedCount: 1,
+    pendingCount: 1,
+    csrfToken: 'abcdef',
+  };
+
+  const noEvals = [
+    {
+      user_name: 'Stilgar',
+      user_id: 1,
+      eval: [],
+    },
+    {
+      user_name: 'Chani',
+      user_id: 1,
+      eval: [],
+    },
+  ];
+
+  const evals = [
+    {
+      user_name: 'Stilgar',
+      user_id: 1,
+      eval: [
+        {id: 1, learning_goal_id: 1, understanding: 1, feedback: 'feedback1'},
+      ],
+    },
+    {
+      user_name: 'Chani',
+      user_id: 2,
+      eval: [
+        {id: 1, learning_goal_id: 1, understanding: 2, feedback: 'feedback1'},
+      ],
+    },
+  ];
+
+  const reportingData = {
+    unitName: 'test-2023',
+    courseName: 'course-2023',
+    levelName: 'Test Blah Blah Blah',
+  };
+
+  it('displays Section selector', () => {
+    stubFetchEvalStatusForAll(ready);
+
+    const wrapper = mount(
+      <Provider store={store}>
+        <RubricSettings
+          visible
+          refreshAiEvaluations={refreshAiEvaluationsSpy}
+          rubric={defaultRubric}
+          sectionId={1}
+        />
+      </Provider>
     );
-    expect(wrapper.find('Button')).to.have.lengthOf(2);
+
+    expect(wrapper.find('SectionSelector').length).to.equal(1);
   });
 
-  describe('fetch ai status', () => {
-    let fetchStub;
-    let store;
+  it('allows teacher to run AI assessment for all students when AI status is ready', async () => {
+    stubFetchEvalStatusForAll(ready);
 
-    beforeEach(() => {
-      fetchStub = sinon.stub(window, 'fetch');
-      sinon.stub(utils, 'queryParams').withArgs('section_id').returns('1');
-      stubRedux();
-      registerReducers({teacherSections});
-      store = getStore();
-    });
+    const wrapper = mount(
+      <Provider store={store}>
+        <RubricSettings
+          visible
+          refreshAiEvaluations={refreshAiEvaluationsSpy}
+          rubric={defaultRubric}
+          sectionId={1}
+        />
+      </Provider>
+    );
 
-    afterEach(() => {
-      fetchStub.restore();
-      utils.queryParams.restore();
-      restoreRedux();
-    });
+    // Perform fetches
+    await wait();
 
-    it('shows status text when student has not attempted level', async () => {
-      const returnedJson = {attempted: false};
-      const returnedAllJson = {attemptedCount: 0, attemptedUnevaluatedCount: 0};
-      fetchStub
-        .onCall(0)
-        .returns(Promise.resolve(new Response(JSON.stringify(returnedJson))));
-      fetchStub
-        .onCall(1)
-        .returns(
-          Promise.resolve(new Response(JSON.stringify(returnedAllJson)))
-        );
-      const wrapper = mount(
-        <Provider store={store}>
-          <RubricSettings
-            canProvideFeedback={true}
-            teacherHasEnabledAi={true}
-            visible
-            studentUserId={10}
-            rubric={defaultRubric}
-            sectionId={2}
-          />
-        </Provider>
-      );
-      await act(async () => {
-        await Promise.resolve();
-      });
-      await act(async () => {
-        await Promise.resolve();
-      });
-      wrapper.update();
-      expect(fetchStub).to.have.been.calledTwice;
-      expect(wrapper.text()).to.include(
-        i18n.aiEvaluationStatus_not_attempted()
-      );
-      expect(wrapper.find('Button').at(0).props().disabled).to.be.true;
-      expect(wrapper.find('Button').at(1).props().disabled).to.be.true;
-    });
+    wrapper.update();
+    expect(wrapper.find('Button').first().props().disabled).to.be.false;
+  });
 
-    it('shows status text when level has already been evaluated', async () => {
-      const returnedJson = {attempted: true, lastAttemptEvaluated: true};
-      const returnedAllJson = {attemptedCount: 1, attemptedUnevaluatedCount: 0};
-      fetchStub
-        .onCall(0)
-        .returns(Promise.resolve(new Response(JSON.stringify(returnedJson))));
-      fetchStub
-        .onCall(1)
-        .returns(
-          Promise.resolve(new Response(JSON.stringify(returnedAllJson)))
-        );
-      const wrapper = mount(
-        <Provider store={store}>
-          <RubricSettings
-            canProvideFeedback={true}
-            teacherHasEnabledAi={true}
-            visible
-            studentUserId={10}
-            rubric={defaultRubric}
-            sectionId={2}
-          />
-        </Provider>
-      );
-      await act(async () => {
-        await Promise.resolve();
-      });
-      await act(async () => {
-        await Promise.resolve();
-      });
-      wrapper.update();
-      expect(fetchStub).to.have.been.calledTwice;
-      expect(wrapper.text()).to.include(
-        i18n.aiEvaluationStatus_already_evaluated()
-      );
-      expect(wrapper.find('Button').at(0).props().disabled).to.be.true;
-      expect(wrapper.find('Button').at(1).props().disabled).to.be.true;
-    });
+  it('disables run AI assessment for all button when no students have attempted', async () => {
+    stubFetchEvalStatusForAll(noAttempts);
 
-    it('allows teacher to run analysis when level has not been evaluated', async () => {
-      const returnedJson = {attempted: true, lastAttemptEvaluated: false};
-      const returnedAllJson = {attemptedCount: 1, attemptedUnevaluatedCount: 1};
-      fetchStub
-        .onCall(0)
-        .returns(Promise.resolve(new Response(JSON.stringify(returnedJson))));
-      fetchStub
-        .onCall(1)
-        .returns(
-          Promise.resolve(new Response(JSON.stringify(returnedAllJson)))
-        );
+    const wrapper = mount(
+      <Provider store={store}>
+        <RubricSettings
+          visible
+          refreshAiEvaluations={refreshAiEvaluationsSpy}
+          rubric={defaultRubric}
+          sectionId={1}
+        />
+      </Provider>
+    );
 
-      const wrapper = mount(
-        <Provider store={store}>
-          <RubricSettings
-            canProvideFeedback={true}
-            teacherHasEnabledAi={true}
-            visible
-            studentUserId={10}
-            rubric={defaultRubric}
-            sectionId={2}
-          />
-        </Provider>
-      );
-      await act(async () => {
-        await Promise.resolve();
-      });
-      await act(async () => {
-        await Promise.resolve();
-      });
-      wrapper.update();
-      expect(fetchStub).to.have.been.calledTwice;
-      expect(wrapper.find('Button').at(0).props().disabled).to.be.false;
-      expect(wrapper.find('Button').at(1).props().disabled).to.be.false;
-    });
+    // Perform fetches and re-render
+    await wait();
+    wrapper.update();
 
-    it('handles running ai assessment', async () => {
-      /* This is a fairly complex test that has multiple steps
-        1. Initial fetch returns a json object that puts AI Status into READY state
-        2. User clicks button to run analysis
-        3. Fetch returns a json object with puts AI Status into EVALUATION_PENDING state
-        4. Move clock forward 5 seconds
-        5. Fetch returns a json object with puts AI Status into EVALUATION_RUNNING state
-        6. Move clock forward 5 seconds
-        7. Fetch returns a json object with puts AI Status into SUCCESS state
-        8. Calls refreshAiEvaluations
-      */
-      const clock = sinon.useFakeTimers();
-      const readyJson = {
-        attempted: true,
-        lastAttemptEvaluated: false,
-        csrfToken: 'abcdef',
-      };
-      const readyJsonAll = {
-        attemptedCount: 1,
-        attemptedUnevaluatedCount: 1,
-        csrfToken: 'abcdef',
-      };
-      fetchStub
-        .onCall(0)
-        .returns(Promise.resolve(new Response(JSON.stringify(readyJson))));
-      fetchStub
-        .onCall(1)
-        .returns(Promise.resolve(new Response(JSON.stringify(readyJsonAll))));
+    expect(wrapper.find('Button').first().props().disabled).to.be.true;
+  });
 
-      //for run ai fetch on click
-      fetchStub.onCall(2).returns(Promise.resolve({ok: true}));
+  it('disables run AI assessment for all button when all student work has been evaluated', async () => {
+    stubFetchEvalStatusForAll(noUnevaluated);
 
-      const pendingJson = {
-        attempted: true,
-        lastAttemptEvaluated: false,
-        csrfToken: 'abcdef',
-        status: RubricAiEvaluationStatus.QUEUED,
-      };
-      const pendingJsonAll = {
-        attemptedCount: 1,
-        attemptedUnevaluatedCount: 0,
-        csrfToken: 'abcdef',
-      };
-      fetchStub
-        .onCall(3)
-        .returns(Promise.resolve(new Response(JSON.stringify(pendingJson))));
-      fetchStub
-        .onCall(4)
-        .returns(Promise.resolve(new Response(JSON.stringify(pendingJsonAll))));
+    const wrapper = mount(
+      <Provider store={store}>
+        <RubricSettings
+          visible
+          refreshAiEvaluations={refreshAiEvaluationsSpy}
+          rubric={defaultRubric}
+          sectionId={1}
+        />
+      </Provider>
+    );
 
-      const runningJson = {
-        attempted: true,
-        lastAttemptEvaluated: false,
-        csrfToken: 'abcdef',
-        status: RubricAiEvaluationStatus.RUNNING,
-      };
-      const runningJsonAll = {
-        attemptedCount: 1,
-        attemptedUnevaluatedCount: 0,
-        csrfToken: 'abcdef',
-      };
-      fetchStub
-        .onCall(5)
-        .returns(Promise.resolve(new Response(JSON.stringify(runningJson))));
-      fetchStub
-        .onCall(6)
-        .returns(Promise.resolve(new Response(JSON.stringify(runningJsonAll))));
+    // Perform fetches and re-render
+    await wait();
+    wrapper.update();
 
-      const successJson = {
-        attempted: true,
-        lastAttemptEvaluated: true,
-        status: RubricAiEvaluationStatus.SUCCESS,
-      };
-      const successJsonAll = {
-        attemptedCount: 1,
-        attemptedUnevaluatedCount: 0,
-        csrfToken: 'abcdef',
-      };
-      fetchStub
-        .onCall(7)
-        .returns(Promise.resolve(new Response(JSON.stringify(successJson))));
-      fetchStub
-        .onCall(8)
-        .returns(Promise.resolve(new Response(JSON.stringify(successJsonAll))));
+    expect(wrapper.find('Button').first().props().disabled).to.be.true;
+  });
 
-      const refreshAiEvaluationsSpy = sinon.spy();
-      const wrapper = mount(
-        <Provider store={store}>
-          <RubricSettings
-            canProvideFeedback={true}
-            teacherHasEnabledAi={true}
-            studentUserId={10}
-            refreshAiEvaluations={refreshAiEvaluationsSpy}
-            visible
-            rubric={defaultRubric}
-            sectionId={2}
-          />
-        </Provider>
-      );
+  it('shows pending status when eval is pending', async () => {
+    // show ready state on initial load
 
-      await act(async () => {
-        await Promise.resolve();
-      });
-      await act(async () => {
-        await Promise.resolve();
-      });
-      // 1. Initial fetch returns a json object that puts AI Status into READY state
-      wrapper.update();
-      expect(wrapper.find('Button').at(0).props().disabled).to.be.false;
-      // 2. User clicks button to run analysis
-      wrapper.find('Button').at(0).simulate('click');
+    stubFetchEvalStatusForAll(ready);
 
-      clock.tick(5000);
-      await act(async () => {
-        await Promise.resolve();
-      });
-      await act(async () => {
-        await Promise.resolve();
-      });
-      wrapper.update();
-      // 3. Fetch returns a json object with puts AI Status into EVALUATION_PENDING state
-      expect(wrapper.find('Button').at(0).props().disabled).to.be.true;
-      expect(wrapper.text()).include(i18n.aiEvaluationStatus_pending());
+    const wrapper = mount(
+      <Provider store={store}>
+        <RubricSettings
+          visible
+          refreshAiEvaluations={refreshAiEvaluationsSpy}
+          rubric={defaultRubric}
+          sectionId={1}
+        />
+      </Provider>
+    );
 
-      // 4. Move clock forward 5 seconds
-      clock.tick(5000);
-      await act(async () => {
-        await Promise.resolve();
-      });
-      await act(async () => {
-        await Promise.resolve();
-      });
-      wrapper.update();
-      // 5. Fetch returns a json object with puts AI Status into EVALUATION_RUNNING state
-      expect(wrapper.find('Button').at(0).props().disabled).to.be.true;
-      expect(wrapper.text()).include(i18n.aiEvaluationStatus_in_progress());
+    // Perform fetches and re-render
+    await wait();
+    wrapper.update();
 
-      // 6. Move clock forward 5 seconds
-      clock.tick(5000);
-      await act(async () => {
-        await Promise.resolve();
-      });
-      await act(async () => {
-        await Promise.resolve();
-      });
-      wrapper.update();
-      // 7. Fetch returns a json object with puts AI Status into SUCCESS state
-      expect(wrapper.find('Button').at(0).props().disabled).to.be.true;
-      expect(wrapper.text()).include(i18n.aiEvaluationStatus_success());
-      // 8. Calls refreshAiEvaluations
-      expect(refreshAiEvaluationsSpy).to.have.been.calledOnce;
-    });
+    let status = wrapper.find('BodyTwoText.uitest-eval-status-all-text');
+    expect(status.text()).to.include(
+      i18n.aiEvaluationStatusAll_ready({unevaluatedCount: 1})
+    );
+    expect(wrapper.find('Button').first().props().disabled).to.be.false;
 
-    it('shows general error message for status 1000', async () => {
-      const returnedJson = {
-        attempted: true,
-        lastAttemptEvaluated: false,
-        status: 1000,
-      };
-      const returnedJsonAll = {
-        attemptedCount: 1,
-        attemptedUnevaluatedCount: 0,
-        csrfToken: 'abcdef',
-      };
-      fetchStub
-        .onCall(0)
-        .returns(Promise.resolve(new Response(JSON.stringify(returnedJson))));
-      fetchStub
-        .onCall(1)
-        .returns(
-          Promise.resolve(new Response(JSON.stringify(returnedJsonAll)))
-        );
-      const wrapper = mount(
-        <Provider store={store}>
-          <RubricSettings
-            canProvideFeedback={true}
-            teacherHasEnabledAi={true}
-            studentUserId={10}
-            visible
-            rubric={defaultRubric}
-            sectionId={2}
-          />
-        </Provider>
-      );
-      await act(async () => {
-        await Promise.resolve();
-      });
-      await act(async () => {
-        await Promise.resolve();
-      });
-      wrapper.update();
-      expect(fetchStub).to.have.been.calledTwice;
-      expect(wrapper.text()).to.include(i18n.aiEvaluationStatus_error());
-      expect(wrapper.find('Button').at(0).props().disabled).to.be.true;
-    });
+    // show pending state after clicking run
 
-    it('shows PII error message for status 1001', async () => {
-      const returnedJson = {
-        attempted: true,
-        lastAttemptEvaluated: false,
-        status: 1001,
-      };
-      const returnedJsonAll = {
-        attemptedCount: 1,
-        attemptedUnevaluatedCount: 0,
-        csrfToken: 'abcdef',
-      };
-      fetchStub
-        .onCall(0)
-        .returns(Promise.resolve(new Response(JSON.stringify(returnedJson))));
-      fetchStub
-        .onCall(1)
-        .returns(
-          Promise.resolve(new Response(JSON.stringify(returnedJsonAll)))
-        );
-      const wrapper = mount(
-        <Provider store={store}>
-          <RubricSettings
-            canProvideFeedback={true}
-            teacherHasEnabledAi={true}
-            studentUserId={10}
-            visible
-            rubric={defaultRubric}
-            sectionId={2}
-          />
-        </Provider>
-      );
-      await act(async () => {
-        await Promise.resolve();
-      });
-      await act(async () => {
-        await Promise.resolve();
-      });
-      wrapper.update();
-      expect(fetchStub).to.have.been.calledTwice;
-      expect(wrapper.text()).to.include(i18n.aiEvaluationStatus_pii_error());
-      expect(wrapper.find('Button').at(0).props().disabled).to.be.true;
-    });
+    stubFetchEvalStatusForAll(onePending);
 
-    it('shows profanity error message for status 1002', async () => {
-      const returnedJson = {
-        attempted: true,
-        lastAttemptEvaluated: false,
-        status: 1002,
-      };
-      const returnedJsonAll = {
-        attemptedCount: 1,
-        attemptedUnevaluatedCount: 0,
-        csrfToken: 'abcdef',
-      };
-      fetchStub
-        .onCall(0)
-        .returns(Promise.resolve(new Response(JSON.stringify(returnedJson))));
-      fetchStub
-        .onCall(1)
-        .returns(
-          Promise.resolve(new Response(JSON.stringify(returnedJsonAll)))
-        );
-      const wrapper = mount(
-        <Provider store={store}>
-          <RubricSettings
-            canProvideFeedback={true}
-            teacherHasEnabledAi={true}
-            studentUserId={10}
-            visible
-            rubric={defaultRubric}
-            sectionId={2}
-          />
-        </Provider>
-      );
-      await act(async () => {
-        await Promise.resolve();
-      });
-      await act(async () => {
-        await Promise.resolve();
-      });
-      wrapper.update();
-      expect(fetchStub).to.have.been.calledTwice;
-      expect(wrapper.text()).to.include(
-        i18n.aiEvaluationStatus_profanity_error()
-      );
-      expect(wrapper.find('Button').at(0).props().disabled).to.be.true;
-    });
+    wrapper.find('button.uitest-run-ai-assessment-all').simulate('click');
 
-    it('displays new Section selector when ai-rubrics-redesign experiment is enabled', () => {
-      experiments.setEnabled('ai-rubrics-redesign', true);
-      const returnedJson = {attempted: false};
-      fetchStub.returns(
-        Promise.resolve(new Response(JSON.stringify(returnedJson)))
-      );
-      const wrapper = mount(
-        <Provider store={store}>
-          <RubricSettings
-            canProvideFeedback={true}
-            teacherHasEnabledAi={true}
-            studentUserId={10}
-            visible
-            rubric={defaultRubric}
-            sectionId={2}
-          />
-        </Provider>
-      );
-      expect(wrapper.find('SectionSelector').length).to.equal(1);
-      experiments.setEnabled('ai-rubrics-redesign', false);
-    });
+    status = wrapper.find('BodyTwoText.uitest-eval-status-all-text');
+    expect(status.text()).to.include(i18n.aiEvaluationStatus_pending());
+
+    expect(wrapper.find('Button').first().props().disabled).to.be.true;
+  });
+
+  it('runs AI assessment for all unevaluated projects when requested by teacher', async () => {
+    stubFetchEvalStatusForAll(ready);
+    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
+
+    clock = sinon.useFakeTimers();
+
+    const wrapper = mount(
+      <Provider store={store}>
+        <RubricSettings
+          visible
+          refreshAiEvaluations={refreshAiEvaluationsSpy}
+          rubric={defaultRubric}
+          sectionId={1}
+        />
+      </Provider>
+    );
+
+    // Perform fetches and re-renders
+    await wait();
+    wrapper.update();
+
+    // Next time it asks, we have no unevaluated as a status
+    stubFetchEvalStatusForAll(noUnevaluated);
+
+    wrapper.find('Button').first().simulate('click');
+
+    //sends event on click
+    expect(sendEventSpy).to.have.been.calledWith(
+      EVENTS.TA_RUBRIC_SECTION_AI_EVAL,
+      {
+        rubricId: defaultRubric.id,
+        sectionId: 1,
+      }
+    );
+
+    // Perform fetches and re-renders
+    await wait();
+    wrapper.update();
+
+    expect(wrapper.find('Button').first().props().disabled).to.be.true;
+    expect(wrapper.text()).to.include(i18n.aiEvaluationStatus_pending());
+
+    // Advance clock 5 seconds
+    clock.tick(5000);
+
+    // Perform fetches and re-renders
+    await wait();
+    wrapper.update();
+    expect(fetchStub).to.have.callCount(4);
+    expect(wrapper.find('Button').first().props().disabled).to.be.true;
+    expect(wrapper.text()).to.include(i18n.aiEvaluationStatus_success());
+    sendEventSpy.restore();
+  });
+
+  it('displays switch tab text and button when there are no evaluations', async () => {
+    fetchStub
+      .onCall(0)
+      .returns(Promise.resolve(new Response(JSON.stringify(noEvals))));
+    fetchStub
+      .onCall(1)
+      .returns(Promise.resolve(new Response(JSON.stringify(noEvals))));
+    const wrapper = mount(
+      <Provider store={store}>
+        <RubricSettings
+          visible
+          refreshAiEvaluations={refreshAiEvaluationsSpy}
+          rubric={defaultRubric}
+          sectionId={1}
+        />
+      </Provider>
+    );
+    await wait();
+    wrapper.update();
+    //fetch for get_teacher_evaluations_all is the 2nd fetch
+    await wait();
+    wrapper.update();
+    expect(wrapper.text()).to.include(i18n.rubricNoStudentEvals());
+    expect(wrapper.find('Button').at(1).text()).to.include(
+      i18n.rubricTabStudent()
+    );
+  });
+
+  it('displays generate CSV button when there are evaluations to export', async () => {
+    fetchStub
+      .onCall(0)
+      .returns(Promise.resolve(new Response(JSON.stringify(evals))));
+    fetchStub
+      .onCall(1)
+      .returns(Promise.resolve(new Response(JSON.stringify(evals))));
+    const wrapper = mount(
+      <Provider store={store}>
+        <RubricSettings
+          visible
+          refreshAiEvaluations={refreshAiEvaluationsSpy}
+          rubric={defaultRubric}
+          sectionId={1}
+        />
+      </Provider>
+    );
+    await wait();
+    wrapper.update();
+    //fetch for get_teacher_evaluations_all is the 2nd fetch
+    await wait();
+    wrapper.update();
+    expect(wrapper.text()).to.include(
+      i18n.rubricNumberStudentEvals({
+        teacherEvalCount: 2,
+      })
+    );
+    expect(wrapper.find('Button').at(1).text()).to.include(i18n.downloadCSV());
+  });
+
+  it('sends event when download CSV is clicked', async () => {
+    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    fetchStub
+      .onCall(0)
+      .returns(Promise.resolve(new Response(JSON.stringify(evals))));
+    fetchStub
+      .onCall(1)
+      .returns(Promise.resolve(new Response(JSON.stringify(evals))));
+    const wrapper = mount(
+      <Provider store={store}>
+        <RubricSettings
+          visible
+          refreshAiEvaluations={refreshAiEvaluationsSpy}
+          rubric={defaultRubric}
+          reportingData={reportingData}
+          sectionId={1}
+        />
+      </Provider>
+    );
+    await wait();
+    wrapper.update();
+    //fetch for get_teacher_evaluations_all is the 2nd fetch
+    await wait();
+    wrapper.update();
+    expect(wrapper.text()).to.include(
+      i18n.rubricNumberStudentEvals({
+        teacherEvalCount: 2,
+      })
+    );
+    expect(wrapper.find('Button').at(1).text()).to.include(i18n.downloadCSV());
+    wrapper.find('Button').at(1).simulate('click');
+    expect(sendEventSpy).to.have.been.calledWith(
+      EVENTS.TA_RUBRIC_CSV_DOWNLOADED,
+      {
+        unitName: 'test-2023',
+        courseName: 'course-2023',
+        levelName: 'Test Blah Blah Blah',
+        sectionId: 1,
+      }
+    );
+    sendEventSpy.restore();
+  });
+
+  it('displays the AI enable toggle', () => {
+    stubFetchEvalStatusForAll(ready);
+
+    render(
+      <Provider store={store}>
+        <RubricSettings
+          visible
+          refreshAiEvaluations={refreshAiEvaluationsSpy}
+          rubric={defaultRubric}
+          sectionId={1}
+        />
+      </Provider>
+    );
+
+    const input = screen.getByRole('checkbox', {name: i18n.useAiFeatures()});
+    expect(input.checked).to.be.true;
+  });
+
+  it('ensures the AI enable toggle represents the current value of the AI disabled user setting', () => {
+    stubFetchEvalStatusForAll(ready);
+
+    // Set the user's opt-out setting to true (our setting will now be false)
+    store.dispatch(setAiRubricsDisabled(true));
+
+    render(
+      <Provider store={store}>
+        <RubricSettings
+          visible
+          refreshAiEvaluations={refreshAiEvaluationsSpy}
+          rubric={defaultRubric}
+          sectionId={1}
+        />
+      </Provider>
+    );
+
+    const input = screen.getByRole('checkbox', {name: i18n.useAiFeatures()});
+    expect(input.checked).to.be.false;
+  });
+
+  it('updates the AI disabled user setting when the toggle is used', async () => {
+    stubFetchEvalStatusForAll(ready);
+
+    render(
+      <Provider store={store}>
+        <RubricSettings
+          visible
+          refreshAiEvaluations={refreshAiEvaluationsSpy}
+          rubric={defaultRubric}
+          sectionId={1}
+        />
+      </Provider>
+    );
+
+    // Let's stub out setting the field via UserPreferences
+    const setStub = sinon.stub(
+      UserPreferences.prototype,
+      'setAiRubricsDisabled'
+    );
+
+    const input = screen.getByRole('checkbox', {name: i18n.useAiFeatures()});
+    fireEvent.click(input);
+    fireEvent.change(input);
+
+    expect(input.checked).to.be.false;
+    expect(setStub).to.have.been.calledWith(true);
+    setStub.restore();
   });
 });

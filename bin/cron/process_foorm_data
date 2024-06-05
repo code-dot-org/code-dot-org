@@ -75,7 +75,7 @@ def write_submissions_to_redshift(client, arn)
       submission_id    int,
       item_name        varchar,
       matrix_item_name varchar,
-      response_value   varchar,
+      response_value   varchar(max),
       response_text    varchar(max)
     );
 

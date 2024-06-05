@@ -1,14 +1,13 @@
-export const CHAT_COMPLETION_URL = '/openai/chat_completion';
-import {ChatCompletionMessage, Role, Status} from './types';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
-const initialChatMessages: ChatCompletionMessage[] = [
-  {
-    id: 1,
-    role: Role.ASSISTANT,
-    chatMessageText:
-      'Welcome to AI Chat! I am your assistant - please ask me questions according to the instructions given.',
-    status: Status.OK,
-  },
-];
+import modelsJson from '@cdo/static/aichat/modelDescriptions.json';
 
-export {initialChatMessages};
+import {ModelDescription, SaveType} from './types';
+
+export const modelDescriptions: ModelDescription[] = modelsJson;
+
+export const saveTypeToAnalyticsEvent: {[key in SaveType]: string} = {
+  updateChatbot: EVENTS.UPDATE_CHATBOT,
+  publishModelCard: EVENTS.PUBLISH_MODEL_CARD_INFO,
+  saveModelCard: EVENTS.SAVE_MODEL_CARD_INFO,
+};

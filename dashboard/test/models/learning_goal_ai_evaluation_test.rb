@@ -28,6 +28,7 @@ class LearningGoalAiEvaluationTest < ActiveSupport::TestCase
       learning_goal: @learning_goal,
       understanding: SharedConstants::RUBRIC_UNDERSTANDING_LEVELS.CONVINCING,
       ai_confidence: LearningGoalAiEvaluation::AI_CONFIDENCE_LEVELS[:MEDIUM],
+      ai_confidence_exact_match: LearningGoalAiEvaluation::AI_CONFIDENCE_LEVELS[:LOW],
     )
     summary = eval.summarize_debug
 
@@ -42,5 +43,6 @@ class LearningGoalAiEvaluationTest < ActiveSupport::TestCase
     assert_equal 'evaluated learning goal', summary[:learning_goal]
     assert_equal 'CONVINCING', summary[:understanding]
     assert_equal 'MEDIUM', summary[:ai_confidence]
+    assert_equal 'LOW', summary[:ai_confidence_exact_match]
   end
 end

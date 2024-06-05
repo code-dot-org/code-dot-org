@@ -217,7 +217,7 @@ Scenario: Teacher starts a new csa application and submits it
 
   # Section 7
   And I complete Section 7 of the teacher PD application
-  And I press the first "button[type='submit']" element
+  And I press the first "button[type='submit']" element to load a new page
 
   # Confirmation page
   Then I wait until element "h1" contains text "Thank you for submitting your application!"

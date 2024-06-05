@@ -1,5 +1,5 @@
-import color from '@cdo/apps/util/color';
 import fontConstants from '@cdo/apps/fontConstants';
+import color from '@cdo/apps/util/color';
 
 const teacherFeedbackStyles = {
   footer: {

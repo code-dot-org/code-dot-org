@@ -1,11 +1,13 @@
-import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
+
 import fontConstants from '@cdo/apps/fontConstants';
 import i18n from '@cdo/locale';
-import color from '../../util/color';
+
 import styleConstants from '../../styleConstants';
+import color from '../../util/color';
 import Button from '../Button';
 
 // While this is named TopCourse, it really refers to the most recent course

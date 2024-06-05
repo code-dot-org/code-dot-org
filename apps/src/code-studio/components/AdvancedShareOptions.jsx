@@ -8,6 +8,8 @@ import i18n from '@cdo/locale';
 import {hideShareDialog, showLibraryCreationDialog} from './shareDialogRedux';
 import Button from '../../templates/Button';
 import fontConstants from '@cdo/apps/fontConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const style = {
   nav: {
@@ -93,6 +95,7 @@ class AdvancedShareOptions extends React.Component {
       iframeHeight: PropTypes.number.isRequired,
       iframeWidth: PropTypes.number.isRequired,
     }).isRequired,
+    appType: PropTypes.string.isRequired,
   };
 
   constructor(props) {
@@ -108,6 +111,9 @@ class AdvancedShareOptions extends React.Component {
   }
 
   downloadExport = () => {
+    analyticsReporter.sendEvent(EVENTS.EXPORT_APP, {
+      lab_type: this.props.appType,
+    });
     this.setState({exporting: true});
     this.props
       .exportApp()

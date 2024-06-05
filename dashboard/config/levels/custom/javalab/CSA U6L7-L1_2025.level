@@ -21,7 +21,8 @@
       "CSA U6L7-L1 Contained_2025"
     ],
     "project_template_level_name": "CSA U6L7-Lists PBT_2025",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-17T00:15:55.934+00:00\",\"changed\":[\"cloned from \\\"CSA U6L7-L1_2023\\\"\"],\"cloned_from\":\"CSA U6L7-L1_2023\"}]"

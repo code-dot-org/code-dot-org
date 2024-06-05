@@ -1,16 +1,19 @@
+import PropTypes from 'prop-types';
 import React, {createRef, useEffect} from 'react';
 import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types';
-import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
-import Example from './Example';
-import ParametersTable from './ParametersTable';
+
 import {createVideoWithFallback} from '@cdo/apps/code-studio/videos';
-import i18n from '@cdo/locale';
+import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import {
   convertXmlToBlockly,
   shrinkBlockSpaceContainer,
 } from '@cdo/apps/templates/instructions/utils';
 import {parseElement} from '@cdo/apps/xml';
+import i18n from '@cdo/locale';
+
+import Example from './Example';
+import ParametersTable from './ParametersTable';
+
 import '../../../style/curriculum/documentation_tables.scss';
 
 const VIDEO_WIDTH = 560;

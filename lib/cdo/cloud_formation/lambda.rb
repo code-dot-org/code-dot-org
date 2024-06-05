@@ -69,15 +69,19 @@ module Cdo::CloudFormation
         globs = absolute_directory + '/**/*'
         hash = Digest::MD5.hexdigest(
           Dir[*globs].
-            select(&File.method(:file?)).
+            select {|file_name| File.file?(file_name)}.
             sort.
-            map(&Digest::MD5.method(:file)).
+            map {|file_name| Digest::MD5.file(file_name)}.
             join
         )
         code_zip = `zip -qr - .`
         key = "#{key_prefix}-#{hash}.zip"
         s3_client = Aws::S3::Client.new(http_read_timeout: 30)
-        object_exists = s3_client.head_object(bucket: S3_LAMBDA_BUCKET, key: key) rescue nil
+        object_exists = begin
+          s3_client.head_object(bucket: S3_LAMBDA_BUCKET, key: key)
+        rescue
+          nil
+        end
         unless object_exists
           CDO.log.info("Uploading Lambda zip package to S3 (#{code_zip.length} bytes)...")
           s3_client.put_object({bucket: S3_LAMBDA_BUCKET, key: key, body: code_zip})
@@ -98,15 +102,19 @@ module Cdo::CloudFormation
       end
       hash = Digest::MD5.hexdigest(
         Dir[*globs].
-          select(&File.method(:file?)).
+          select {|filename| File.file?(filename)}.
           sort.
-          map(&Digest::MD5.method(:file)).
+          map {|filename| Digest::MD5.file(filename)}.
           join
       )
       code_zip = `zip -qr - #{files.join(' ')}`
       key = "#{key_prefix}-#{hash}.zip"
       s3_client = Aws::S3::Client.new(http_read_timeout: 30)
-      object_exists = s3_client.head_object(bucket: S3_LAMBDA_BUCKET, key: key) rescue nil
+      object_exists = begin
+        s3_client.head_object(bucket: S3_LAMBDA_BUCKET, key: key)
+      rescue
+        nil
+      end
       unless object_exists
         CDO.log.info("Uploading Lambda zip package to S3 (#{code_zip.length} bytes)...")
         s3_client.put_object({bucket: S3_LAMBDA_BUCKET, key: key, body: code_zip})

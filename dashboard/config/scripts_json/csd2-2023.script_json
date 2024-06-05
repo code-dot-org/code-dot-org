@@ -29,7 +29,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-12-12 03:16:00 UTC",
+    "serialized_at": "2024-02-22 16:16:27 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5714,7 +5714,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**New Code and Previous Challenge Levels:** Throughout the unit, students may have learned additional code in the challenge levels of different lessons. As students approach this project, they may want to revisit the code they learned in these levels or visit them for the first time to learn new codes to use in this project. To help guide students back to previous levels, you can use the [r extra_code_in_challenge_levels/csd/2023] as a resource to quickly find where new codes were introduced in earlier challenge levels."
+            "markdown": "**New Code and Previous Challenge Levels:** Throughout the unit, students may have learned additional code in the challenge levels of different lessons. As students approach this project, they may want to revisit the code they learned in these levels or visit them for the first time to learn new codes to use in this project. To help guide students back to previous levels, you can use the [Extra Code in Challenge Levels](https://docs.google.com/document/d/1tRTtnwBfqYn1-UWoS6Ca2e-mzQN2F0mSzsnzCn8IXrk/edit?usp=drive_link) as a resource to quickly find where new codes were introduced in earlier challenge levels."
           }
         ]
       },
@@ -10489,6 +10489,19 @@
       }
     },
     {
+      "name": "Web Development Challenge Levels Extra Code",
+      "url": "https://docs.google.com/document/d/1tRTtnwBfqYn1-UWoS6Ca2e-mzQN2F0mSzsnzCn8IXrk/edit?usp=drive_link",
+      "key": "web_development_challenge_levels_extra_code",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "web_development_challenge_levels_extra_code"
+      }
+    },
+    {
       "name": "Website for a Purpose",
       "url": "https://docs.google.com/document/d/19ObCznDrFTz93q15fq3SMUkURiVgTuchLbFninlj3ww/edit",
       "key": "website_for_a_purpose",
@@ -11102,6 +11115,12 @@
       "seeding_key": {
         "lesson.key": "Project - Website for a Purpose",
         "resource.key": "project_-_website_for_a_purpose"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Website for a Purpose",
+        "resource.key": "web_development_challenge_levels_extra_code"
       }
     },
     {

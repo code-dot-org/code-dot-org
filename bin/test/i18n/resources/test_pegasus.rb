@@ -28,6 +28,18 @@ describe I18n::Resources::Pegasus do
     end
   end
 
+  describe '.sync_down' do
+    it 'sync-down Pegasus resources' do
+      execution_sequence = sequence('execution')
+
+      described_class::HourOfCode.expects(:sync_down).in_sequence(execution_sequence)
+      described_class::Markdown.expects(:sync_down).in_sequence(execution_sequence)
+      described_class::Mobile.expects(:sync_down).in_sequence(execution_sequence)
+
+      described_class.sync_down
+    end
+  end
+
   describe '.sync_out' do
     it 'sync-out Pegasus resources' do
       execution_sequence = sequence('execution')

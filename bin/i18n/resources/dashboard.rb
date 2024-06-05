@@ -46,6 +46,25 @@ module I18n
         UnpluggedContent.sync_up(**opts)
       end
 
+      def self.sync_down(**opts)
+        BaseContent.sync_down(**opts)
+        Blocks.sync_down(**opts)
+        CourseContent.sync_down(**opts)
+        CourseOfferings.sync_down(**opts)
+        Courses.sync_down(**opts)
+        CurriculumContent.sync_down(**opts)
+        DataContent.sync_down(**opts)
+        DeviseContent.sync_down(**opts)
+        Docs.sync_down(**opts)
+        MarketingAnnouncements.sync_down(**opts)
+        RestrictedContent.sync_down(**opts)
+        Scripts.sync_down(**opts)
+        SharedFunctions.sync_down(**opts)
+        Slides.sync_down(**opts)
+        Standards.sync_down(**opts)
+        UnpluggedContent.sync_down(**opts)
+      end
+
       def self.sync_out
         BaseContent.sync_out
         Blocks.sync_out

@@ -159,7 +159,7 @@ theme: responsive
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="ಪ್ರೀ-ರೀಡರ್ ಎಕ್ಸ್‌ಪ್ರೆಸ್ ಕೋರ್ಸ್"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">ಪ್ರೀ ರೀಡರ್‌ಗಳಿಗೆ ಎಕ್ಸ್‌ಪ್ರೆಸ್‌ ಕೋರ್ಸ್‌</a>
+<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="ಪ್ರೀ-ರೀಡರ್ ಎಕ್ಸ್‌ಪ್ರೆಸ್ ಕೋರ್ಸ್"></a><br>ಪೂರ್ವ ಓದುಗರಿಗೆ <a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express" target="_blank">ಎಕ್ಸ್ಪ್ರೆಸ್ ಕೋರ್ಸ್</a>
 
 </div>
 <div style="clear: both; margin-bottom: 2rem"></div>
@@ -228,7 +228,7 @@ theme: responsive
 
 <br>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_primary_default)">
   <div style="width: 87%; float: left">
     <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">ಅಪ್ಲಿಕೇಶನ್ ಲ್ಯಾಬ್</h3></a>
     <p style="color:#ffffff">ಆಪ್‌ ಲ್ಯಾಬ್ ಎಂಬುದು ಪ್ರೋಗ್ರಾಮಿಂಗ್‌ ಪರಿಸರವಾಗಿದ್ದು, ಇದರಲ್ಲಿ ನೀವು ಸರಳ ಆಪ್‌ಗಳನ್ನು ಮಾಡಬಹುದು. ಆಪ್‌ ವಿನ್ಯಾಸ ಮಾಡಿ, ಬ್ಲಾಕ್‌ಗಳು ಅಥವಾ ಜಾವಾಸ್ಕ್ರಿಪ್ಟ್‌ ಬಳಸಿ ಕೋಡ್ ಮಾಡಿ, ನಂತರ ಕೆಲವೇ ಸೆಕೆಂಡುಗಳಲ್ಲಿ ನಿಮ್ಮ ಆಪ್‌ಗಳನ್ನು ಹಂಚಿಕೊಳ್ಳಿ.</p>
@@ -237,7 +237,7 @@ theme: responsive
   <div style="clear: both"></div>
 </div>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_primary_default)">
   <div style="width: 87%; float: left">
     <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">ಗೇಮ್ ಲ್ಯಾಬ್</h3></a>
     <p style="color:#ffffff">ಗೇಮ್ ಲ್ಯಾಬ್ ಎಂಬುದು ಪ್ರೋಗ್ರಾಮಿಂಗ್‌ ಪರಿಸರವಾಗಿದ್ದು, ಪರಸ್ಪರ ಸಂವಹನ ನಡೆಸುವ ವಸ್ತುಗಳು ಮತ್ತು ಪಾತ್ರಗಳನ್ನು ಬಳಸಿ ಸರಳ ಆನಿಮೇಶನ್‌ಗಳು ಮತ್ತು ಗೇಮ್‌ಗಳನ್ನು ರಚಿಸಿ.</p>
@@ -247,7 +247,7 @@ theme: responsive
   <div style="clear: both"></div>
 </div>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_primary_default)">
   <div style="width: 87%; float: left">
     <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">ವೆಬ್ ಲ್ಯಾಬ್</h3></a>
     <p style="color:#ffffff">ವೆಬ್ ಲ್ಯಾಬ್ ಎಂಬುದು ಪ್ರೋಗ್ರಾಮಿಂಗ್‌ ಪರಿಸರವಾಗಿದ್ದು, ಇದರಲ್ಲಿ ನೀವು ಎಚ್‌ಟಿಎಂಎಲ್‌ ಮತ್ತು ಸಿಎಸ್‌ಎಸ್‌ ಬಳಸಿ ಸರಳ ವೆಬ್ ಪೇಜ್‌ಗಳನ್ನು ಮಾಡಬಹುದು. ನಿಮ್ಮ ವೆಬ್ ಪೇಜ್‌ಗಳನ್ನು ವಿನ್ಯಾಸ ಮಾಡಿ ಮತ್ತು ಕೆಲವೇ ಸೆಕೆಂಡುಗಳಲ್ಲಿ ನಿಮ್ಮ ಸೈಟ್ ಹಂಚಿಕೊಳ್ಳಿ.</p>

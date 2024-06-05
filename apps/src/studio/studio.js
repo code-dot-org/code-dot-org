@@ -6,60 +6,65 @@
  */
 
 import $ from 'jquery';
-import * as constants from './constants';
-import * as utils from '../utils';
 import _ from 'lodash';
-import AppView from '../templates/AppView';
-import BigGameLogic from './customLogic/bigGameLogic';
-import CollisionMaskWalls from './collisionMaskWalls';
-import Hammer from '../third-party/hammer';
-import GlowFilter from './starwars/GlowFilter';
-import InputPrompt from '../templates/InputPrompt';
-import Item from './Item';
-import JSInterpreter from '../lib/tools/jsinterpreter/JSInterpreter';
-import JsInterpreterLogger from '../JsInterpreterLogger';
-import MusicController from '../MusicController';
-import ObstacleZoneWalls from './obstacleZoneWalls';
-import Projectile from './projectile';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import RocketHeightLogic from './customLogic/rocketHeightLogic';
-import SamBatLogic from './customLogic/samBatLogic';
-import Sprite from './Sprite';
-import StudioVisualizationColumn from './StudioVisualizationColumn';
-import ThreeSliceAudio from './ThreeSliceAudio';
-import TileWalls from './tileWalls';
-import api from './api';
-import blocks from './blocks';
-import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-import commonMsg from '@cdo/locale';
-import dom from '../dom';
-import dropletConfig from './dropletConfig';
-import paramLists from './paramLists.js';
-import studioCell from './cell';
-import studioMsg from './locale';
-import {GridTurn, GridMove, GridMoveAndCancel} from './spriteActions';
 import {Provider} from 'react-redux';
-import {singleton as studioApp} from '../StudioApp';
-import {outputError, injectErrorHandler} from '../lib/util/javascriptMode';
-import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
+
+import {
+  showArrowButtons,
+  dismissSwipeOverlay,
+} from '@cdo/apps/templates/arrowDisplayRedux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import commonMsg from '@cdo/locale';
+
+import {blockAsXmlNode, cleanBlocks} from '../block_utils';
+import project from '../code-studio/initApp/project';
+import {TestResults, ResultType, KeyCodes, SVG_NS} from '../constants';
 import {
   getContainedLevelResultInfo,
   postContainedLevelAttempt,
   runAfterPostContainedLevel,
 } from '../containedLevels';
+import dom from '../dom';
+import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
+import JsInterpreterLogger from '../JsInterpreterLogger';
+import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import JSInterpreter from '../lib/tools/jsinterpreter/JSInterpreter';
+import {outputError, injectErrorHandler} from '../lib/util/javascriptMode';
+import MusicController from '../MusicController';
 import {getStore} from '../redux';
 import Sounds from '../Sounds';
-import {captureThumbnailFromSvg} from '../util/thumbnail';
-import project from '../code-studio/initApp/project';
-import {blockAsXmlNode, cleanBlocks} from '../block_utils';
-import {parseElement} from '../xml';
-import {getRandomDonorTwitter} from '../util/twitterHelper';
+import {singleton as studioApp} from '../StudioApp';
+import AppView from '../templates/AppView';
+import InputPrompt from '../templates/InputPrompt';
+import Hammer from '../third-party/hammer';
 import {muteCookieWithLevel} from '../util/muteCookieHelpers';
-import {
-  showArrowButtons,
-  dismissSwipeOverlay,
-} from '@cdo/apps/templates/arrowDisplayRedux';
+import {captureThumbnailFromSvg} from '../util/thumbnail';
+import {getRandomDonorTwitter} from '../util/twitterHelper';
+import * as utils from '../utils';
+import {parseElement} from '../xml';
+
+import api from './api';
+import blocks from './blocks';
+import studioCell from './cell';
+import CollisionMaskWalls from './collisionMaskWalls';
+import * as constants from './constants';
+import BigGameLogic from './customLogic/bigGameLogic';
+import RocketHeightLogic from './customLogic/rocketHeightLogic';
+import SamBatLogic from './customLogic/samBatLogic';
+import dropletConfig from './dropletConfig';
+import Item from './Item';
+import studioMsg from './locale';
+import ObstacleZoneWalls from './obstacleZoneWalls';
+import paramLists from './paramLists.js';
+import Projectile from './projectile';
+import Sprite from './Sprite';
+import {GridTurn, GridMove, GridMoveAndCancel} from './spriteActions';
+import GlowFilter from './starwars/GlowFilter';
+import StudioVisualizationColumn from './StudioVisualizationColumn';
+import ThreeSliceAudio from './ThreeSliceAudio';
+import TileWalls from './tileWalls';
 
 // tests don't have svgelement
 import '../util/svgelement-polyfill';
@@ -71,9 +76,6 @@ var SquareType = constants.SquareType;
 var Emotions = constants.Emotions;
 const turnRight90 = constants.turnRight90;
 const turnLeft90 = constants.turnLeft90;
-
-import {TestResults, ResultType, KeyCodes, SVG_NS} from '../constants';
-import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 // Whether we are showing debug information
 var showDebugInfo = false;
@@ -114,15 +116,6 @@ const EdgeClassNames = ['top', 'left', 'bottom', 'right'];
 
 let level;
 let skin;
-
-// These skins can be published as projects.
-const PUBLISHABLE_SKINS = [
-  'gumball',
-  'studio',
-  'iceage',
-  'infinity',
-  'hoc2015',
-];
 
 //TODO: Make configurable.
 studioApp().setCheckForEmptyBlocks(true);
@@ -3079,7 +3072,6 @@ Studio.displayFeedback = function () {
   };
 
   if (!Studio.waitingForReport) {
-    const saveToProjectGallery = PUBLISHABLE_SKINS.includes(skin.id);
     const isSignedIn =
       getStore().getState().currentUser.signInState === SignInState.SignedIn;
     studioApp().displayFeedback({
@@ -3096,12 +3088,13 @@ Studio.displayFeedback = function () {
         !level.projectTemplateLevelName,
       feedbackImage: Studio.feedbackImage,
       twitter: skin.twitterOptions || twitterOptions,
-      // save to the project gallery
-      saveToProjectGallery: saveToProjectGallery,
+      // Do not allow saving to the project gallery because converting from level to standalone
+      // project is problematic.
+      saveToProjectGallery: false,
       disableSaveToGallery: !isSignedIn,
       message: Studio.message,
       appStrings: appStrings,
-      // Currently only true for Artist levels
+      // Currently only true for Artist levels.
       enablePrinting: level.enablePrinting,
     });
   }

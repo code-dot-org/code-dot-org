@@ -1,118 +1,117 @@
-import {
-  getChatCompletionMessage,
-  postOpenaiChatCompletion,
-} from '@cdo/apps/aichat/chatApi';
-import {Role, Status, ChatCompletionMessage} from '@cdo/apps/aichat/types';
+import _ from 'lodash';
+import {getChatCompletionMessage} from '@cdo/apps/aiTutor/chatApi';
 import {createSlice, PayloadAction, createAsyncThunk} from '@reduxjs/toolkit';
-import {generalChatSystemPrompt} from '@cdo/apps/aiTutor/constants';
+import {savePromptAndResponse} from '../interactionsApi';
+import {
+  Role,
+  AITutorInteractionStatus as Status,
+  ChatCompletionMessage,
+  Level,
+  ChatContext,
+  AITutorTypes,
+} from '../types';
 
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 
 export interface AITutorState {
-  // State for compilation and validation.
+  level: Level | undefined;
+  scriptId: number | undefined;
   aiResponse: string | undefined;
-  isWaitingForAIResponse: boolean;
-  // State for general chat.
   chatMessages: ChatCompletionMessage[];
   isWaitingForChatResponse: boolean;
-  chatMessageError: boolean;
+  isChatOpen: boolean;
+}
+
+export interface InstructionsState {
+  longInstructions: string;
 }
 
 const initialChatMessages: ChatCompletionMessage[] = [
   {
-    id: 0,
     role: Role.ASSISTANT,
-    chatMessageText: "Hi! I'm your AI Tutor. Type your question below.",
+    chatMessageText: "Hi! I'm your AI Tutor.",
     status: Status.OK,
   },
 ];
 
 const initialState: AITutorState = {
+  level: undefined,
+  scriptId: undefined,
   aiResponse: '',
-  isWaitingForAIResponse: false,
   chatMessages: initialChatMessages,
   isWaitingForChatResponse: false,
-  chatMessageError: false,
+  isChatOpen: false,
 };
 
-export interface ChatContext {
-  levelId?: number;
-  systemPrompt: string;
-  studentCode: string;
-}
+const formatQuestionForAITutor = (chatContext: ChatContext) => {
+  if (chatContext.actionType === AITutorTypes.GENERAL_CHAT) {
+    return chatContext.studentInput;
+  }
+
+  const separator = '\n\n---\n\n';
+  const codePrefix = "Here is the student's code:\n\n```\n";
+  const codePostfix = '\n```';
+
+  const formattedQuestion = `${chatContext.studentInput}${separator}${codePrefix}${chatContext.studentCode}${codePostfix}`;
+  return formattedQuestion;
+};
 
 // THUNKS
-
-// Compilation & Validation
 export const askAITutor = createAsyncThunk(
   'aitutor/askAITutor',
-  async (ChatContext: ChatContext, thunkAPI) => {
-    if (ChatContext.systemPrompt === undefined) {
-      throw new Error('systemPrompt is undefined');
-    }
+  async (chatContext: ChatContext, thunkAPI) => {
+    const state = thunkAPI.getState();
+    const aiTutorState = state as {aiTutor: AITutorState};
+    const instructionsState = state as {instructions: InstructionsState};
+    const levelContext = {
+      levelId: aiTutorState.aiTutor.level?.id,
+      isProjectBacked: aiTutorState.aiTutor.level?.isProjectBacked,
+      scriptId: aiTutorState.aiTutor.scriptId,
+    };
 
-    if (ChatContext.studentCode === undefined) {
-      throw new Error('studentCode is undefined');
-    }
+    const levelInstructions = instructionsState.instructions.longInstructions;
 
-    const chatApiResponse = await postOpenaiChatCompletion(
-      [
-        {role: Role.SYSTEM, content: ChatContext.systemPrompt},
-        {role: Role.USER, content: ChatContext.studentCode},
-      ],
-      ChatContext.levelId
-    );
-
-    thunkAPI.dispatch(addAIResponse(chatApiResponse?.content));
-  }
-);
-
-// General Chat
-// This thunk's callback function submits a user chat message to the chat completion endpoint,
-// waits for a chat completion response, and updates the user message state.
-export const submitChatMessage = createAsyncThunk(
-  'aitutor/submitChatMessage',
-  async (message: string, thunkAPI) => {
-    const state = thunkAPI.getState() as {aiTutor: AITutorState};
-    const systemPrompt = generalChatSystemPrompt;
-    const storedMessages = state.aiTutor.chatMessages;
-    const newMessageId = storedMessages[storedMessages.length - 1].id + 1;
-
-    // Create the new user ChatCompleteMessage and add to chatMessages.
+    const storedMessages = aiTutorState.aiTutor.chatMessages;
     const newMessage: ChatCompletionMessage = {
-      id: newMessageId,
       role: Role.USER,
       status: Status.UNKNOWN,
-      chatMessageText: message,
+      chatMessageText: chatContext.studentInput,
     };
     thunkAPI.dispatch(addChatMessage(newMessage));
 
-    // Send user message to backend and retrieve assistant response.
+    const formattedQuestion = formatQuestionForAITutor(chatContext);
     const chatApiResponse = await getChatCompletionMessage(
-      systemPrompt,
-      newMessageId,
-      message,
-      storedMessages
+      formattedQuestion,
+      storedMessages,
+      levelContext.levelId,
+      chatContext.actionType,
+      levelInstructions
     );
-
-    // Find message in chatMessages and update status.
     thunkAPI.dispatch(
-      updateChatMessageStatus({
-        id: chatApiResponse.id,
+      updateLastChatMessage({
         status: chatApiResponse.status,
       })
     );
 
-    // Add assistant chat messages to chatMessages.
     if (chatApiResponse.assistantResponse) {
       const assistantChatMessage: ChatCompletionMessage = {
-        id: chatApiResponse.id + 1,
         role: Role.ASSISTANT,
-        status: Status.OK,
+        status: chatApiResponse.status,
         chatMessageText: chatApiResponse.assistantResponse,
       };
       thunkAPI.dispatch(addChatMessage(assistantChatMessage));
     }
+
+    const interactionData = {
+      ...levelContext,
+      type: chatContext.actionType,
+      prompt: JSON.stringify(chatContext.studentInput),
+      status: chatApiResponse?.status,
+      aiResponse: chatApiResponse?.assistantResponse,
+    };
+
+    const savedInteraction = await savePromptAndResponse(interactionData);
+    thunkAPI.dispatch(updateLastChatMessage({id: savedInteraction.id}));
   }
 );
 
@@ -123,11 +122,17 @@ const aiTutorSlice = createSlice({
     addAIResponse: (state, action: PayloadAction<string | undefined>) => {
       state.aiResponse = action.payload;
     },
-    setIsWaitingForAIResponse: (state, action: PayloadAction<boolean>) => {
-      state.isWaitingForAIResponse = action.payload;
+    setLevel: (state, action: PayloadAction<Level | undefined>) => {
+      state.level = action.payload;
     },
-    addChatMessage: (state, action: PayloadAction<ChatCompletionMessage>) => {
-      state.chatMessages.push(action.payload);
+    setScriptId: (state, action: PayloadAction<number | undefined>) => {
+      state.scriptId = action.payload;
+    },
+    addChatMessage: (
+      state,
+      {payload}: PayloadAction<ChatCompletionMessage>
+    ) => {
+      state.chatMessages.push(payload);
     },
     clearChatMessages: state => {
       state.chatMessages = initialChatMessages;
@@ -135,37 +140,29 @@ const aiTutorSlice = createSlice({
     setIsWaitingForChatResponse: (state, action: PayloadAction<boolean>) => {
       state.isWaitingForChatResponse = action.payload;
     },
-    updateChatMessageStatus: (
+    updateLastChatMessage: (
       state,
-      action: PayloadAction<{id: number; status: Status}>
+      action: PayloadAction<Partial<ChatCompletionMessage>>
     ) => {
-      const {id, status} = action.payload;
-      const chatMessage = state.chatMessages.find(msg => msg.id === id);
-      if (chatMessage) {
-        chatMessage.status = status;
+      if (state.chatMessages.length > 0) {
+        const index = state.chatMessages.length - 1;
+        const lastMessage = state.chatMessages[index];
+        state.chatMessages[index] = _.merge({}, lastMessage, action.payload);
       }
+    },
+    setIsChatOpen: (state, action: PayloadAction<boolean>) => {
+      state.isChatOpen = action.payload;
     },
   },
   extraReducers: builder => {
     builder.addCase(askAITutor.fulfilled, state => {
-      state.isWaitingForAIResponse = false;
+      state.isWaitingForChatResponse = false;
     });
     builder.addCase(askAITutor.rejected, (state, action) => {
-      state.isWaitingForAIResponse = false;
+      state.isWaitingForChatResponse = false;
       console.error(action.error);
     });
     builder.addCase(askAITutor.pending, state => {
-      state.isWaitingForAIResponse = true;
-    });
-    builder.addCase(submitChatMessage.fulfilled, state => {
-      state.isWaitingForChatResponse = false;
-    });
-    builder.addCase(submitChatMessage.rejected, (state, action) => {
-      state.isWaitingForChatResponse = false;
-      state.chatMessageError = true;
-      console.error(action.error);
-    });
-    builder.addCase(submitChatMessage.pending, state => {
       state.isWaitingForChatResponse = true;
     });
   },
@@ -173,9 +170,12 @@ const aiTutorSlice = createSlice({
 
 registerReducers({aiTutor: aiTutorSlice.reducer});
 export const {
+  setLevel,
+  setScriptId,
   addAIResponse,
   addChatMessage,
   clearChatMessages,
   setIsWaitingForChatResponse,
-  updateChatMessageStatus,
+  updateLastChatMessage,
+  setIsChatOpen,
 } = aiTutorSlice.actions;

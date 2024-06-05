@@ -159,7 +159,7 @@ theme: responsive
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="Kursi Express i lexuesit paraprak"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">Kurs Express për para-lexuesit</a>
+<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="Kursi Express i lexuesit paraprak"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express" target="_blank">Kurs Express për para-lexuesit</a>
 
 </div>
 <div style="clear: both; margin-bottom: 2rem"></div>
@@ -228,7 +228,7 @@ theme: responsive
 
 <br>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_primary_default)">
   <div style="width: 87%; float: left">
     <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Laboratori i aplikacionit</h3></a>
     <p style="color:#ffffff">App Lab është një mjedis programimi ku mund të bëni aplikacione të thjeshta. Dizajnoni një aplikacion, kod me blloqe ose JavaScript për ta bërë atë të funksionojë, pastaj ndani aplikacionin tuaj në sekonda.</p>
@@ -237,7 +237,7 @@ theme: responsive
   <div style="clear: both"></div>
 </div>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_primary_default)">
   <div style="width: 87%; float: left">
     <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Lojë Lab</h3></a>
     <p style="color:#ffffff">Game Lab është një mjedis programimi ku mund të bëni animacione dhe lojëra të thjeshta me objekte dhe karaktere që ndërveprojnë me njëri-tjetrin.</p>
@@ -247,7 +247,7 @@ theme: responsive
   <div style="clear: both"></div>
 </div>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_primary_default)">
   <div style="width: 87%; float: left">
     <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Web Lab</h3></a>
     <p style="color:#ffffff">Web Lab është një mjedis programimi ku mund të bëni faqe të thjeshta në internet duke përdorur HTML dhe CSS. Dizajnoni faqet tuaja të internetit dhe ndani faqen tuaj në sekonda.</p>

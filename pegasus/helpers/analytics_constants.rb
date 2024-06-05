@@ -15,6 +15,7 @@ module AnalyticsConstants
     CSF_CURRICULUM_PAGE_VISITED_EVENT = 'CSF Curriculum Page Visited'.freeze,
     CSF_UNPLUGGED_PAGE_VISITED_EVENT = 'CSF Unplugged Page Visited'.freeze,
     CSP_CURRICULUM_PAGE_VISITED_EVENT = 'CSP Curriculum Page Visited'.freeze,
+    DISTRICT_PROGRAM_PAGE_VISITED_EVENT = 'District Program Page Visited'.freeze,
     DONATE_PAGE_VISITED_EVENT = 'Donate Page Visited'.freeze,
     HELP_US_PAGE_VISITED_EVENT = 'Help Us Page Visited'.freeze,
     PHYSICAL_COMPUTING_PAGE_VISITED_EVENT = 'Physical Computing Page Visited'.freeze,
@@ -34,6 +35,11 @@ module AnalyticsConstants
     RP_LANDING_PAGE_VISITED_EVENT = 'Regional Partner Landing Page Visited'.freeze,
     TEACH_PAGE_VISITED_EVENT = 'Teach Page Visited'.freeze,
     TEACHER_LOGIN_EVENT = 'Teacher Login'.freeze,
-    VIDEO_LIBRARY_PAGE_VISIT_EVENT = 'Video Library Page Visited'.freeze
+    VIDEO_LIBRARY_PAGE_VISIT_EVENT = 'Video Library Page Visited'.freeze,
+    INTL_PL_PAGE_VISIT_EVENT = 'International Professional Learning Page Visited'.freeze,
+    INTL_PL_PARTNERS_PAGE_VISIT_EVENT = 'International Professional Learning Partners Page Visited'.freeze,
+    MUSIC_PAGE_VISITED_EVENT = 'Music Lab Marketing Page Visited'.freeze,
+    MUSIC_LAB_PAGE_VISITED_EVENT = 'Music Lab Tools Page Visited'.freeze,
+    LMS_PAGE_VISITED_EVENT = 'LMS Page Visited'.freeze
   ].freeze
 end

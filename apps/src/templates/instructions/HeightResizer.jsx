@@ -3,11 +3,12 @@
  * A draggable, horizontal toolbar. As it is dragged, it calls back to onResize
  * which handles any movement.
  */
-import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import color from '../../util/color';
+import React from 'react';
+
 import styleConstants from '../../styleConstants';
+import color from '../../util/color';
 
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 

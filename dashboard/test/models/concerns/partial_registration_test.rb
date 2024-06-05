@@ -45,6 +45,37 @@ class PartialRegistrationTest < ActiveSupport::TestCase
     refute PartialRegistration.in_progress? @session
   end
 
+  describe 'can_finish_signup?' do
+    before do
+      DCDO.stubs(:get).with('student-email-post-enabled', false).returns(true)
+    end
+
+    it 'can_finish_signup? is false when params are not present' do
+      PartialRegistration.persist_attributes @session, build(:user)
+      refute PartialRegistration.can_finish_signup?(nil, @session)
+    end
+
+    it 'can_finish_signup? is false when no user params are present' do
+      PartialRegistration.persist_attributes @session, build(:user)
+      refute PartialRegistration.can_finish_signup?({}, @session)
+    end
+
+    it 'can_finish_signup? is false when user is nil' do
+      PartialRegistration.persist_attributes @session, build(:user)
+      refute PartialRegistration.can_finish_signup?(ActionController::Parameters.new({user: nil}), @session)
+    end
+
+    it 'can_finish_signup? is false when email is not present' do
+      PartialRegistration.persist_attributes @session, build(:user)
+      refute PartialRegistration.can_finish_signup?({user: {}}, @session)
+    end
+
+    it 'can_finish_signup? is true when email is present' do
+      PartialRegistration.persist_attributes @session, build(:user)
+      assert PartialRegistration.can_finish_signup?({user: {email: 'anything@code.org'}}, @session)
+    end
+  end
+
   test 'new_from_partial_registration raises unless a partial registration is available' do
     exception = assert_raise RuntimeError do
       User.new_from_partial_registration @session
@@ -91,8 +122,10 @@ class PartialRegistrationTest < ActiveSupport::TestCase
 
     user = User.new_from_partial_registration @session do |u|
       u.name = 'Different fake name'
+      u.email = 'different-email@code.org'
     end
     assert_equal 'Different fake name', user.name
+    assert_equal 'different-email@code.org', user.email
   end
 
   test 'round-trip preserves important attributes (email)' do
@@ -107,6 +140,21 @@ class PartialRegistrationTest < ActiveSupport::TestCase
     assert_equal user.email, result_user.email
     assert_equal user.encrypted_password, result_user.encrypted_password
     assert_equal user.age, result_user.age
+  end
+
+  test 'persist_attributes expires after TTL' do
+    DCDO.stubs(:get).with('student-email-post-enabled', false).returns(true)
+
+    user = build :student
+    refute_nil user.email
+    refute_nil user.encrypted_password
+    PartialRegistration.persist_attributes @session, user
+
+    cache_key = PartialRegistration.cache_key(user)
+    normalized_key = CDO.shared_cache.send(:normalize_key, cache_key, {})
+    cache_entry = CDO.shared_cache.send(:read_entry, normalized_key)
+
+    assert_equal 8.hours, cache_entry.instance_variable_get(:@expires_in)
   end
 
   test 'round-trip preserves important attributes (sso)' do

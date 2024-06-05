@@ -12,18 +12,17 @@ module I18n
       module Blocks
         class SyncOut < I18n::Utils::SyncOutBase
           def process(language)
-            crowdin_file_path = I18nScriptUtils.locale_dir(language[:crowdin_name_s], DIR_NAME, FILE_NAME)
+            crowdin_file_path = I18nScriptUtils.crowdin_locale_dir(language[:locale_s], FILE_PATH)
             return unless File.file?(crowdin_file_path)
 
             restore(language[:locale_s], crowdin_file_path)
             distribute_localization(language[:locale_s], crowdin_file_path)
 
-            I18nScriptUtils.move_file(crowdin_file_path, I18nScriptUtils.locale_dir(language[:locale_s], DIR_NAME, FILE_NAME))
+            I18nScriptUtils.move_file(crowdin_file_path, I18nScriptUtils.locale_dir(language[:locale_s], FILE_PATH))
+            I18nScriptUtils.remove_empty_dir File.dirname(crowdin_file_path)
           end
 
-          private
-
-          def restore(locale, crowdin_file_path)
+          private def restore(locale, crowdin_file_path)
             return unless File.exist?(I18N_BACKUP_FILE_PATH)
 
             malformed_i18n_reporter = I18n::Utils::MalformedI18nReporter.new(locale)
@@ -40,7 +39,7 @@ module I18n
             malformed_i18n_reporter.report
           end
 
-          def distribute_localization(locale, crowdin_file_path)
+          private def distribute_localization(locale, crowdin_file_path)
             target_i18n_file_path = CDO.dir("dashboard/config/locales/blocks.#{locale}.yml")
             I18nScriptUtils.sanitize_file_and_write(crowdin_file_path, target_i18n_file_path)
           end

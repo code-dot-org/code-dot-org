@@ -1,8 +1,9 @@
-import React from 'react';
 import $ from 'jquery';
+import React from 'react';
 import sinon from 'sinon';
-const project = require('@cdo/apps/code-studio/initApp/project');
+
 const assets = require('@cdo/apps/code-studio/assets');
+const project = require('@cdo/apps/code-studio/initApp/project');
 export {
   throwOnConsoleErrorsEverywhere,
   throwOnConsoleWarningsEverywhere,

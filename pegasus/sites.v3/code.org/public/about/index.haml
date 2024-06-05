@@ -4,6 +4,7 @@ nav: about_nav
 video_player: true
 theme: responsive
 style_min: true
+set_dir: true
 ---
 
 - facebook = {:u=>'https://youtu.be/mTGSiB4kB18'}
@@ -23,16 +24,16 @@ style_min: true
 %section
   .col-33
     %center
-      %img{src: "/images/marketing/diversity2021/code_gender.png", style:"max-width: 100%"}
+      %img{src: "/images/marketing/diversity/code_gender.png", style:"max-width: 100%"}
   .col-33
     %center
-      %img{src: "/images/marketing/diversity2021/code_urg.png", style:"max-width: 100%"}
+      %img{src: "/images/marketing/diversity/code_urg.png", style:"max-width: 100%"}
   .col-33
     %center
-      %img{src: "/images/marketing/diversity2021/code_frl.png", style:"max-width: 100%"}
+      %img{src: "/images/marketing/diversity/code_frl.png", style:"max-width: 100%"}
 .div{style:"clear: both;"}
   %figcaption{style: "text-align: center; font-size: 13px"}
-    =hoc_s(:about_us_page_statistic_figcaption, markdown: :inline, locals: {data_url: "/promote/diversitydata"})
+    =hoc_s(:about_us_page_statistic_figcaption, markdown: :inline, locals: {data_url: "/diversity"})
   %br
     =hoc_s(:about_us_page_statistic_description, markdown: :inline, locals: {diversity_url: "/diversity"})
 
@@ -105,14 +106,12 @@ style_min: true
   %p
     =hoc_s(:about_page_section_more_description_2)
   %p
-    =hoc_s(:about_page_section_more_description_3, markdown: :inline, locals: {efforts_url: "https://docs.google.com/document/d/1rdEUqAkYtKPMD4UeEmpZCAau4_AdIOGbZDqLkePAQrY/pub", partners_url: "https://medium.com/@codeorg/dedicating-our-5-year-anniversary-to-our-partners-b57368a92924"})
+    =hoc_s(:about_page_section_more_description_3, markdown: :inline, locals: {efforts_url: "https://docs.google.com/document/d/1rdEUqAkYtKPMD4UeEmpZCAau4_AdIOGbZDqLkePAQrY/pub", partners_url: "/about/supporters"})
   %ul
     %li
       =hoc_s(:about_page_annual_report_2022, markdown: :inline, locals: {report_url_2022: "/about/2022", report_url_2021: "/about/2021", report_url_2020: "/about/2020", report_url_2019: "/about/2019", report_url_2018: "/about/2018", report_url_2017: "/about/2017", report_url_2016: "/about/2016", report_url_2015: "/about/2015", report_url_2014: "/about/2014"})
     %li
       =hoc_s(:about_page_section_more_list_2, markdown: :inline, locals: {core_url: "/about/values"})
-    %li
-      =hoc_s(:about_page_section_more_list_3, markdown: :inline, locals: {curriculum_url: "educate/curriculum/values"})
     %li
       =hoc_s(:about_page_section_more_list_4, markdown: :inline, locals: {tedx_url: "https://www.youtube.com/watch?v=m-U9wzC9xLk"})
 = view :section_divider_line
@@ -159,13 +158,13 @@ style_min: true
     %a
       =hoc_s(:about_page_donors_link_2, markdown: :inline, locals: {donors_url: "/about/donors"})
   %p
-    =hoc_s(:about_page_section_specific_description_6, markdown: :inline, locals: {irs_url_1: "/files/irs-form.pdf", irs_url_2: "/files/irs-form-2015.pdf", irs_url_3: "/files/irs-form-2016.pdf", irs_url_4: "/files/irs-form-2017.pdf", irs_url_5: "/files/irs-form-2018.pdf", irs_url_6: "/files/irs-form-2019.pdf", irs_url_7: "/files/irs-form-2020.pdf", irs_url_8: "/files/irs-form-2021.pdf", donation_policy_url: "/about/donation-policy"})
+    =hoc_s(:about_page_section_specific_description_6, markdown: :inline, locals: {irs_url_2014: "/files/irs-form.pdf", irs_url_2015: "/files/irs-form-2015.pdf", irs_url_2016: "/files/irs-form-2016.pdf", irs_url_2017: "/files/irs-form-2017.pdf", irs_url_2018: "/files/irs-form-2018.pdf", irs_url_2019: "/files/irs-form-2019.pdf", irs_url_2020: "/files/irs-form-2020.pdf", irs_url_2021: "/files/irs-form-2021.pdf", irs_url_2022: "/files/irs-form-2022.pdf", donation_policy_url: "/about/donation-policy"})
   = view :section_divider_line
 
 %h2
   =hoc_s(:about_page_section_specific_title_7)
 %p
   =hoc_s(:about_page_section_specific_description_7, markdown: :inline, locals: {sign_up_url: "https://code.org/about/hear-from-us"})
-= view :social_media, facebook: "Code.org", twitter: "codeorg", instagram: "codeorg"
+= view :social_media, facebook: "Code.org", twitter: "codeorg", instagram: "codeorg", tiktok: 'code.org'
 = view :section_divider_line
 = view :about_seals

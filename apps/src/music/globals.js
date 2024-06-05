@@ -8,6 +8,7 @@
 // this data.
 
 let playerRef = null;
+let showSoundFilters = false;
 
 export default {
   setPlayer(player) {
@@ -16,5 +17,13 @@ export default {
 
   getPlayer() {
     return playerRef;
+  },
+
+  setShowSoundFilters(show) {
+    showSoundFilters = show;
+  },
+
+  getShowSoundFilters() {
+    return showSoundFilters;
   },
 };

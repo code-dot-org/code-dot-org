@@ -31,7 +31,7 @@ The following code segment appears in a class other than `TextEditor`.
 String text = "Welcome to Java!";
 String fontStyle = "bold";
 
-changeFont(text, fontStyle);
+TextEditor.changeFont(text, fontStyle);
 System.out.println(text + " " + fontStyle);
 ```
 

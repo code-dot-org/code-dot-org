@@ -1,25 +1,28 @@
+import classNames from 'classnames';
 import $ from 'jquery';
-import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
+import React from 'react';
 import {connect} from 'react-redux';
-import ProtectedStatefulDiv from './ProtectedStatefulDiv';
-import JsDebugger from '@cdo/apps/lib/tools/jsdebugger/JsDebugger';
-import PaneHeader, {PaneSection, PaneButton} from './PaneHeader';
-import i18n from '@cdo/locale';
-import commonStyles from '../commonStyles';
-import color from '../util/color';
-import * as utils from '@cdo/apps/utils';
-import {shouldUseRunModeIndicators} from '../redux/selectors';
-import SettingsCog from '../lib/ui/SettingsCog';
-import ShowCodeToggle from './ShowCodeToggle';
-import {singleton as studioApp} from '../StudioApp';
-import ProjectTemplateWorkspaceIcon from './ProjectTemplateWorkspaceIcon';
-import {queryParams} from '../code-studio/utils';
+
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
-import {closeWorkspaceAlert} from '../code-studio/projectRedux';
+import JsDebugger from '@cdo/apps/lib/tools/jsdebugger/JsDebugger';
 import styleConstants from '@cdo/apps/styleConstants';
-import classNames from 'classnames';
+import * as utils from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
+
+import {closeWorkspaceAlert} from '../code-studio/projectRedux';
+import {queryParams} from '../code-studio/utils';
+import commonStyles from '../commonStyles';
+import SettingsCog from '../lib/ui/SettingsCog';
+import {shouldUseRunModeIndicators} from '../redux/selectors';
+import {singleton as studioApp} from '../StudioApp';
+import color from '../util/color';
+
+import PaneHeader, {PaneSection, PaneButton} from './PaneHeader';
+import ProjectTemplateWorkspaceIcon from './ProjectTemplateWorkspaceIcon';
+import ProtectedStatefulDiv from './ProtectedStatefulDiv';
+import ShowCodeToggle from './ShowCodeToggle';
 
 class CodeWorkspace extends React.Component {
   static propTypes = {
@@ -43,6 +46,7 @@ class CodeWorkspace extends React.Component {
     workspaceAlert: PropTypes.object,
     isProjectTemplateLevel: PropTypes.bool,
     hasIncompatibleSources: PropTypes.bool,
+    failedToGenerateCode: PropTypes.bool,
   };
 
   shouldComponentUpdate(nextProps) {
@@ -53,16 +57,14 @@ class CodeWorkspace extends React.Component {
     Object.keys(nextProps).forEach(
       function (key) {
         // isRunning and style only affect style, and can be updated
-        // workspaceAlert is involved in displaying or closing workspace alert
-        // therefore this key can be updated
-        // hasIncompatibleSources is involved in displaying an alert for invalid Blockly
-        // sources. This key can be updated because it will only be set once, and it will
-        // be set after the initial render.
+        // workspaceAlert, hasIncompatibleSources and failedToGenerateCode
+        // are involved in displaying or closing workspace alert and therefore can be updated.
         if (
           key === 'isRunning' ||
           key === 'style' ||
           key === 'workspaceAlert' ||
-          key === 'hasIncompatibleSources'
+          key === 'hasIncompatibleSources' ||
+          key === 'failedToGenerateCode'
         ) {
           return;
         }
@@ -298,9 +300,17 @@ class CodeWorkspace extends React.Component {
         {this.props.hasIncompatibleSources && (
           <div
             id="incompatibleSourcesBanner"
-            style={{...styles.topBanner, ...styles.incompatibleCodeBanner}}
+            style={{...styles.topBanner, ...styles.errorBanner}}
           >
             {i18n.jsonInCdoBlockly()}
+          </div>
+        )}
+        {this.props.failedToGenerateCode && (
+          <div
+            id="failedToGenerateCodeBanner"
+            style={{...styles.topBanner, ...styles.errorBanner}}
+          >
+            {i18n.failedToGenerateBlocklyCode()}
           </div>
         )}
         {props.showDebugger && (
@@ -344,7 +354,7 @@ const styles = {
     position: 'relative',
     height: 'fit-content',
   },
-  incompatibleCodeBanner: {
+  errorBanner: {
     backgroundColor: color.lightest_red,
   },
   chevronButton: {
@@ -391,6 +401,7 @@ export default connect(
     workspaceAlert: state.project.workspaceAlert,
     isProjectTemplateLevel: state.pageConstants.isProjectTemplateLevel,
     hasIncompatibleSources: state.blockly.hasIncompatibleSources,
+    failedToGenerateCode: state.blockly.failedToGenerateCode,
   }),
   dispatch => ({
     closeWorkspaceAlert: () => dispatch(closeWorkspaceAlert()),

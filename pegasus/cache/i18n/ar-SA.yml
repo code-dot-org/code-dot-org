@@ -233,6 +233,7 @@ ar-SA:
   class_submission_out_of_school_summer_camp: مخيم صيفي
   classicmaze_name: المتاهة الكلاسيكية
   code_hoc_coming: إرسال رسالة إلكترونية
+  code_org_logo_alt: الصفحة الرئيسية Code.org
   code_sign_up: قم بالتسجيل للمشاركة خلال أسبوع تعليم علم الحاسوب
   codea_beyond_gradelevel: الثانوية +
   codea_beyond_longdescription: يتيح الآيباد Codea إنشاء ألعاب ومحاكاة و &mdash;؛
@@ -892,7 +893,7 @@ ar-SA:
   dashboard_sections_table_code: قسم البرمجة
   dashboard_sections_table_course: الدرس
   dashboard_sections_table_grade: الصف الدراسي
-  dashboard_sections_table_pairing_allowed: البرمجة الزوجية
+  dashboard_sections_table_pairing_allowed: البرمجة مع صديق
   dashboard_sections_table_secret: نوع تسجيل الدخول
   dashboard_sections_table_section: القسم
   dashboard_sections_table_stage_extras: إضافات المرحلة
@@ -1082,6 +1083,7 @@ ar-SA:
   header_about_us: نبذة عنا
   header_course_catalog: فهرس الدورة التدريبية
   header_courses: الدروس
+  header_districts: مقاطعة
   header_documentation: الوثائق
   header_educate_beyond: ما بعد Code.org
   header_educate_community: المجتمع الإلكتروني
@@ -1108,6 +1110,7 @@ ar-SA:
   header_project_gallery: المشاريع
   header_report_abuse: الإبلاغ عن سوء استخدام
   header_report_bug: أبلغ عن وجود خلل
+  header_schools: مدارس
   header_screen_reader_hamburger: قائمة
   header_screen_reader_help: قائمة المساعدة
   header_sections: الأقسام
@@ -1497,6 +1500,7 @@ ar-SA:
   homepage_slot_text_link_k5: دورات للروضة حتى الصف الخامس
   homepage_slot_text_link_local: البحث عن فصل محلّي
   homepage_slot_text_link_middle: المدرسة الإعدادية
+  homepage_slot_text_link_middle_and_high: المدرسة المتوسطة والثانوية
   homepage_slot_text_link_othercourses: دورات أخرى على الإنترنت
   homepage_slot_text_link_pd: التطوير المهني
   homepage_slot_text_link_shop: القمصان, القبعات, و المزيد
@@ -2333,6 +2337,8 @@ ar-SA:
   user_header_applab: 'مختبر التطبيقات '
   user_header_artist: 'فنان '
   user_header_create: 'إشاء '
+  user_header_create_account: إنشاء حساب
+  user_header_create_account_low_cap: إنشاء حساب
   user_header_dance: حفلة الرقص
   user_header_flappy: فلابي
   user_header_gamelab: مختبر التطبيقات
@@ -2340,6 +2346,7 @@ ar-SA:
   user_header_logout: تسجيل الخروج
   user_header_minecraft: Minecraft
   user_header_my_projects: مشاريعي
+  user_header_new_project: مشروع جديد
   user_header_playlab: مختبر اللعب
   user_header_settings: حسابي
   user_header_signin: تسجيل الدخول

@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 
 export const sectionShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
@@ -20,6 +21,7 @@ export const sectionShape = PropTypes.shape({
   providerManaged: PropTypes.bool.isRequired,
   restrictSection: PropTypes.bool,
   postMilestoneDisabled: PropTypes.bool,
+  syncEnabled: PropTypes.bool,
 });
 
 export const assignmentUnitShape = PropTypes.shape({

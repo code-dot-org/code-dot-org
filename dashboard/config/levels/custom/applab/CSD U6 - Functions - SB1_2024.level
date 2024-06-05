@@ -62,12 +62,12 @@
     "widget_mode": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/functions",
-      "/courses/csd-2022/guides/the-accelerometer",
-      "/courses/csd-2022/guides/board-events",
-      "/courses/csd-2022/guides/data-and-change-events",
-      "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/random-numbers",
+      "/courses/csd-2024/guides/functions",
+      "/courses/csd-2024/guides/the-accelerometer",
+      "/courses/csd-2024/guides/board-events",
+      "/courses/csd-2024/guides/data-and-change-events",
+      "/courses/csd-2024/guides/variables",
+      "/courses/csd-2024/guides/random-numbers",
       "/maker/setup"
     ],
     "starter_assets": {

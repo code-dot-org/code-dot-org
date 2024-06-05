@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U3L9-Nested PBT_2025",
     "teacher_markdown": "Students should notice that the inner `for` loop repeats until its condition is `false` for each iteration of the outer `for` loop. If they change the starting value or the condition for the outer `for` loop, this will impact the number of times the entire code segment repeats. If they change the starting value or the condition for the inner `for` loop, this will impact the number of times the inner loop will repeat for each iteration of the outer loop.",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-16T23:52:59.756+00:00\",\"changed\":[\"cloned from \\\"CSA U3L9-L2_2023\\\"\"],\"cloned_from\":\"CSA U3L9-L2_2023\"}]"

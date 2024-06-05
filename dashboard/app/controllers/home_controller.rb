@@ -50,7 +50,7 @@ class HomeController < ApplicationController
   # Note: the student will be redirected to the course or script in which they
   # most recently made progress, which may not be an assigned course or script.
   # Signed in student or teacher, without an assigned course/script: redirect to /home
-  # Signed out: redirect to /courses
+  # Signed out: redirect to /users/sign_in
   def index
     if current_user
       if should_redirect_to_script_overview?
@@ -59,7 +59,7 @@ class HomeController < ApplicationController
         redirect_to '/home'
       end
     else
-      redirect_to '/courses'
+      redirect_to '/users/sign_in'
     end
   end
 
@@ -210,6 +210,7 @@ class HomeController < ApplicationController
       @homepage_data[:sections] = student_sections
       @homepage_data[:studentId] = current_user.id
       @homepage_data[:studentSpecialAnnouncement] = Announcements.get_localized_announcement_for_page("/student-home")
+      @homepage_data[:parentalPermissionBanner] = helpers.parental_permission_banner_data(current_user, request)
     end
 
     if current_user.school_donor_name

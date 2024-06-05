@@ -1,19 +1,21 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
+
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import fontConstants from '@cdo/apps/fontConstants';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {PrintLoginCardsButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import PrintLoginCards from '@cdo/apps/templates/manageStudents/PrintLoginCards';
-import SignInInstructions from '@cdo/apps/templates/teacherDashboard/SignInInstructions';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import SignInInstructions from '@cdo/apps/templates/teacherDashboard/SignInInstructions';
+import color from '@cdo/apps/util/color';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
+
 import oauthSignInButtons from '../../../static/teacherDashboard/oauthSignInButtons.png';
-import syncGoogleClassroom from '../../../static/teacherDashboard/syncGoogleClassroom.png';
 import syncClever from '../../../static/teacherDashboard/syncClever.png';
-import {queryParams} from '@cdo/apps/code-studio/utils';
+import syncGoogleClassroom from '../../../static/teacherDashboard/syncGoogleClassroom.png';
 
 const getManageStudentsUrl = sectionId => {
   return `/teacher_dashboard/sections/${sectionId}/manage_students`;
@@ -27,6 +29,7 @@ const getManageStudentsUrl = sectionId => {
 class SectionLoginInfo extends React.Component {
   static propTypes = {
     studioUrlPrefix: PropTypes.string.isRequired,
+    sectionProviderName: PropTypes.string,
 
     // Provided by redux.
     section: PropTypes.shape({
@@ -72,7 +75,9 @@ class SectionLoginInfo extends React.Component {
         ) && (
           <OAuthLogins sectionId={section.id} loginType={section.loginType} />
         )}
-        {section.loginType === SectionLoginType.lti_v1 && <LtiLogins />}
+        {section.loginType === SectionLoginType.lti_v1 && (
+          <LtiLogins sectionProviderName={this.props.sectionProviderName} />
+        )}
       </div>
     );
   }
@@ -86,13 +91,29 @@ export default connect(state => ({
   students: state.teacherSections.selectedStudents,
 }))(SectionLoginInfo);
 
-class LtiLogins extends React.Component {
+export class LtiLogins extends React.Component {
+  static propTypes = {
+    sectionProviderName: PropTypes.string,
+  };
   render() {
     return (
       <div>
         <h2 style={styles.heading}>{i18n.loginInfoLtiSetupHeader()}</h2>
-        <SafeMarkdown markdown={i18n.loginInfoLtiSetupBody()} />
-        <SignInInstructions loginType={SectionLoginType.lti_v1} />
+        <SafeMarkdown
+          markdown={i18n.loginInfoLtiSetupBody({
+            providerName: this.props.sectionProviderName,
+          })}
+        />
+        <h2 style={styles.heading}>{i18n.loginInfoLtiUpdateHeader()}</h2>
+        <SafeMarkdown
+          markdown={i18n.loginInfoLtiUpdateBody({
+            providerName: this.props.sectionProviderName,
+          })}
+        />
+        <SignInInstructions
+          loginType={SectionLoginType.lti_v1}
+          sectionProviderName={this.props.sectionProviderName}
+        />
       </div>
     );
   }

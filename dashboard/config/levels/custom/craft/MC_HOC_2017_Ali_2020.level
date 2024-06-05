@@ -58,6 +58,7 @@
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"MC_HOC_2017_08_RY_1\",\r\n  \"callout_text\": \"The Agent can hover over lava, but Steve and Alex can't!  \",\r\n  \"element_id\": \"#runButton\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"right top\",\r\n    \"adjust\": {\r\n     \"x\": -20,\r\n     \"y\": -55\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Press \\\"Run\\\"!\\n\\nYou can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.\",\"hint_id\":\"MC_HOC_2017_08_RY_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b976918ccda49fa14f036e16688224e5/MC_HOC_2017_Ali.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"There are LOTS of ways to solve this puzzle.  Try a few!\",\"hint_id\":\"MC_HOC_2017_08_RY_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/bdea2c269c741d080fa34abe2ac982a2/MC_HOC_2017_Ali.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Try following the dotted line for a simple path through the lava.\",\"hint_id\":\"MC_HOC_2017_08_RY_c\",\"hint_type\":\"general\",\"hint_path\":\"[[4,9],[5,9],[5,2]]\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/dda74995f05cf38bece4932625031d4b/MC_HOC_2017_Ali.mp3\"}]",
     "songs": "[\"nether2\"]",
+    "top_level_procedure_autopopulate": "true",
     "parent_level_id": 14809,
     "name_suffix": "_2020",
     "preload_asset_list": null,
@@ -118,12 +119,6 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="procedures_callnoreturn">
-          <mutation name="build short bridge"/>
-        </block>
-        <block type="procedures_callnoreturn">
-          <mutation name="build long bridge"/>
-        </block>
         <block type="craft_moveForward"/>
         <block type="craft_turn">
           <title name="DIR">right</title>

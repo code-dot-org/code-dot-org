@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import msg from '@cdo/locale';
-import craftMsg from '../locale';
 
-import {default as GameButtons} from '../../templates/GameButtons';
-import BelowVisualization from '../../templates/BelowVisualization';
-import ArrowButtons from '../../templates/ArrowButtons';
-import ProtectedVisualizationDiv from '../../templates/ProtectedVisualizationDiv';
 import SwipePrompt from '@cdo/apps/templates/SwipePrompt';
+import msg from '@cdo/locale';
+
+import ArrowButtons from '../../templates/ArrowButtons';
+import BelowVisualization from '../../templates/BelowVisualization';
+import {default as GameButtons} from '../../templates/GameButtons';
+import ProtectedVisualizationDiv from '../../templates/ProtectedVisualizationDiv';
+import craftMsg from '../locale';
 
 export default class CraftVisualizationColumn extends React.Component {
   static propTypes = {

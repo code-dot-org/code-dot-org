@@ -255,6 +255,7 @@ hi-IN:
   class_submission_out_of_school_summer_camp: ग्रीष्मकालीन शिविर
   classicmaze_name: क्लासिक मेज़ (Classic Maze)
   code_hoc_coming: आवर ऑफ़ कोड - 8-14 दिसम्बर को आ रहा है!
+  code_org_logo_alt: Code.org होम
   code_sign_up: CS शिक्षा सप्ताह के दौरान भाग लेने के लिए साइन अप करें
   codea_beyond_gradelevel: हाई स्कूल +
   codea_beyond_longdescription: Ipad के लिए Codea से &mdash; या किसी भी दृश्य डेटे
@@ -1176,6 +1177,7 @@ hi-IN:
   header_about_us: हमारे बारे में
   header_course_catalog: कोर्स कैटलॉग
   header_courses: पाठ्यक्रम
+  header_districts: डिस्ट्रिक्ट्स
   header_documentation: दस्तावेजीकरण
   header_educate_beyond: Code.org से परे
   header_educate_community: ऑनलाइन समुदाय
@@ -1202,6 +1204,7 @@ hi-IN:
   header_project_gallery: प्रोजेक्ट्स
   header_report_abuse: दुरुपयोग की रिपोर्ट करें
   header_report_bug: समस्या की रिपोर्ट करें
+  header_schools: स्कूल
   header_screen_reader_hamburger: मेन्यू
   header_screen_reader_help: मदद मेन्यू
   header_sections: अनुभाग
@@ -1620,6 +1623,7 @@ hi-IN:
   homepage_slot_text_link_k5: ग्रेड K-5 के लिए कोर्स
   homepage_slot_text_link_local: स्थानीय कक्षा ढूंढें
   homepage_slot_text_link_middle: माध्यमिक विद्यालय
+  homepage_slot_text_link_middle_and_high: मिडिल और हाई स्कूल
   homepage_slot_text_link_othercourses: अन्य ऑनलाइन कोर्स
   homepage_slot_text_link_pd: पेशेवर विकास
   homepage_slot_text_link_shop: टी-शर्टें, टोप आदि
@@ -2540,6 +2544,7 @@ hi-IN:
   user_header_applab: 'ऐप लैब '
   user_header_artist: 'कलाकार '
   user_header_create: 'बनाएं '
+  user_header_create_account_low_cap: खाता बनाएँ
   user_header_dance: डांस पार्टी
   user_header_flappy: फ्लैपी
   user_header_gamelab: गेम लैब

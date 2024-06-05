@@ -1,8 +1,10 @@
-import sinon from 'sinon';
-import BackToFrontConfetti from '@cdo/apps/templates/BackToFrontConfetti';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
+
+import BackToFrontConfetti from '@cdo/apps/templates/BackToFrontConfetti';
+
 import {expect} from '../../util/deprecatedChai';
-import {mount} from 'enzyme';
 
 describe('BackToFrontConfetti', () => {
   let clock;

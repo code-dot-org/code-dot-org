@@ -825,6 +825,38 @@ en:
         dance_ai_intro_to_ai_v3: 'Dance Party AI Edition - An Intro to AI '
         PL_CSD_Unit4_Chapter1Project: 'Unit 4: The Design Process Chapter 1 Project'
         PL_CSD_Unit4_Chapter2Project: 'Unit 4: The Design Process Chapter 2 Project'
+        maker_with_microbit_PL_overview: Introduction to CSF Maker with micro:bit Professional Learning
+        elementary_machine_learning: Elementary Machine Learning
+        variables_sprite_lab_game_design: 'Variables for Sprite Lab Game Design '
+        csd_weblab_flexboxforteachers1: Using Flexbox in Web Development
+        csd_weblab_flexboxforteachers2: Flexbox Children
+        csd-iosp-shortened: What Makes a Computer a Computer?
+        self-paced-pl-ai-101-Machine_Learning: What is Machine Learning?
+        self-paced-pl-ai-101-Training_Data: Training Data and Bias
+        self-paced-pl-ai-101-Neural_Networks: How Neural Networks Work
+        self-paced-pl-ai-101-How_LLMs_Work: How Chatbots and Large Language Models Work
+        self-paced-pl-ai-101-AI_in_Education: AI in Education
+        self-paced-pl-ai-101-Introducing_AI_Literacy: Introducing AI Literacy
+        self-paced-pl-ai-101-AI_Literacy_Skills: AI Literacy Skills
+        self-paced-pl-ai-101-Introducing_AI_and_Impact: Introducing AI and its Impact
+        self-paced-pl-ai-101-Impact_of_AI: Impact of AI
+        self-paced-pl-ai-101-Introducing_AI_for_Educators: Introducing AI for Educators
+        self-paced-pl-ai-101-Applications_of_AI: Applications of AI
+        self-paced-pl-ai-101-Introduction_to_AI: Introduction to AI
+        self-paced-pl-ai-101-Large_Language_Models: Large Language Models
+        self-paced-pl-ai-101-Guiding_AI_Use: Guiding AI Use
+        self-paced-pl-ai-101-Teaching_about_AI: Teaching about AI
+        self-paced-pl-ai-101-Introducing_Algorithmic_Bias: Introducing Algorithmic Bias
+        self-paced-pl-ai-101-Educators_and_Algorithmic_Bias: Educators and Algorithmic Bias
+        self-paced-pl-ai-101-Introducing_Data_Privacy: Introducing Data Privacy
+        self-paced-pl-ai-101-Educators_and_Data_Privacy: Educators and Data Privacy
+        self-paced-pl-ai-101-Educators_and_AI_Fiction: Educators and Misinformation and AI Fiction
+        self-paced-pl-ai-101-Ensuring_a_Responsible_Approach: Ensuring a Responsible Approach to AI
+        self-paced-pl-ai-101-Introducing_AI_Fiction: Introducing Misinformation and AI Fiction
+        csd_AI-TA_preview: AI Teaching Assistant, Assessing Student Projects Highlights
+        ai-how-computer-vision-works: How Computer Vision Works
+        variables_sprite_lab_games: Variables for Sprite Lab Games
+        music_lab_promo_long: Music Lab - Make Music, Learn Code
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U2L8-Operators PBT_2024",
     "teacher_markdown": "1. The first code segment attempts to divide an `int` value by `0` and will result in the following error:\r\n\r\n```\r\nException message: java.lang.ArithmeticException: / by zero\r\n\t at ExpressionsRunner.main(ExpressionsRunner.java:21)\r\n```\r\n\r\n2. The second code segment attempts to divide a `double` value by `0` and will print `Infinity` to the console. This is because of the standard Java uses to handle `double` values.",
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T20:49:44.355+00:00\",\"changed\":[\"cloned from \\\"CSA U2L8-L4_2023\\\"\"],\"cloned_from\":\"CSA U2L8-L4_2023\"}]"

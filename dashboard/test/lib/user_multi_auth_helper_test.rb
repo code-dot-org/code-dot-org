@@ -515,14 +515,12 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     end
   end
 
-  private
-
   #
   # Assert a set of attributes about a user.
   # See assert_attributes for details.
   # Has special handling for :primary_contact_info
   #
-  def assert_user(user, expected_values)
+  private def assert_user(user, expected_values)
     refute_nil user
     asserts_primary_contact_info = expected_values.key? :primary_contact_info
     expected_primary_option = expected_values.delete(:primary_contact_info)
@@ -537,7 +535,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     end
   end
 
-  def migrate(user)
+  private def migrate(user)
     refute user.migrated?
     result = user.migrate_to_multi_auth
     user.reload
@@ -548,7 +546,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   # De-migrates and then re-migrates a user
   # Requires a block containing assertions to be run before and after the
   # demigration, showing that the user is returned to its initial state.
-  def round_trip(user)
+  private def round_trip(user)
     yield user
 
     assert user.migrated?

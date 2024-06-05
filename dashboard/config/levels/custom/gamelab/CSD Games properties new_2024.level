@@ -71,14 +71,14 @@
     "parent_level_id": 20695,
     "name_suffix": "_2024",
     "reference_links": [
-      "/courses/csd-2022/guides/sprites",
-      "/courses/csd-2022/guides/animation-tab",
-      "/courses/csd-2022/guides/random-numbers",
-      "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/naming-variables",
-      "/courses/csd-2022/guides/drawing-shapes",
-      "/courses/csd-2022/guides/shapes-and-parameters",
-      "/courses/csd-2022/guides/sprite-interactions"
+      "/courses/csd-2024/guides/sprites",
+      "/courses/csd-2024/guides/animation-tab",
+      "/courses/csd-2024/guides/random-numbers",
+      "/courses/csd-2024/guides/variables",
+      "/courses/csd-2024/guides/naming-variables",
+      "/courses/csd-2024/guides/drawing-shapes",
+      "/courses/csd-2024/guides/shapes-and-parameters",
+      "/courses/csd-2024/guides/sprite-interactions"
     ],
     "video_key": "csd_sprite_properties",
     "disable_procedure_autopopulate": "false",
@@ -91,7 +91,7 @@
     "long_instructions": "# New Properties\r\n\r\nSprites have lots of properties.  Check out the two new blocks in this activity and try them out for yourself.  Notice that different sprites can use the same animation, and still look different because of properties.\r\n\r\n# Do this\r\n\r\n1) Run the program to see what is different about the first two notes.\r\n   - Notice how the [`rotation`(#f78183)](/docs/ide/gamelab/expressions/rotation) and [`scale`(#f78183)](/docs/ide/gamelab/expressions/scale) blocks make the first two notes look different.\r\n2) Use the same blocks on the last two notes to make them look different, too.\r\n   - Use the the [`rotation`(#f78183)](/docs/ide/gamelab/expressions/rotation) and [`scale`(#f78183)](/docs/ide/gamelab/expressions/scale) blocks on the last two notes.",
     "encrypted_examples": "9mw1uOwn6CoQ6omMD7FAMVEacLcuseLWu3IU3D/XGE2vHUOlpbQGz8F32pcN\nNJa2Gcvpqv3jYvf+WXGPqmjtCw==\n",
     "libraries_enabled": "false",
-    "map_reference": "/courses/csd-2022/guides/sprite-properties",
+    "map_reference": "/courses/csd-2024/guides/sprite-properties",
     "preload_asset_list": null
   },
   "published": true,

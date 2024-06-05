@@ -132,7 +132,7 @@ class Pd::Workshop < ApplicationRecord
   # Whether enrollment in this workshop requires an application
   def require_application?
     courses = [COURSE_CSP, COURSE_CSD, COURSE_CSA]
-    subjects = [SUBJECT_SUMMER_WORKSHOP]
+    subjects = ACADEMIC_YEAR_SUBJECTS.push(SUBJECT_SUMMER_WORKSHOP)
     courses.include?(course) && subjects.include?(subject) &&
       regional_partner && regional_partner.link_to_partner_application.blank?
   end
@@ -683,6 +683,7 @@ class Pd::Workshop < ApplicationRecord
   end
 
   def workshop_date_range_string
+    return I18n.t('not_applicable_abbreviation') if sessions.empty?
     if workshop_starting_date == workshop_ending_date
       workshop_starting_date.strftime('%B %e, %Y')
     else
@@ -912,5 +913,27 @@ class Pd::Workshop < ApplicationRecord
 
   def user_attended?(user)
     attending_teachers.include?(user)
+  end
+
+  def summarize_for_my_pl_page
+    {
+      id: id,
+      course: course_name,
+      subject: subject,
+      dates: workshop_date_range_string,
+      location: location_address,
+      sessions: sessions,
+      location_name: location_name,
+      location_address: location_address,
+      on_map: on_map,
+      funded: funded,
+      virtual: virtual?,
+      enrolled_teacher_count: enrollments ? enrollments.count : 0,
+      capacity: capacity,
+      facilitators: facilitators,
+      organizer: organizer,
+      enrollment_code: enrollments&.first&.code,
+      status: state,
+    }
   end
 end

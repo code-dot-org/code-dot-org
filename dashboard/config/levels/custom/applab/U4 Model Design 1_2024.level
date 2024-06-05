@@ -54,7 +54,7 @@
     "show_type_hints": "false",
     "include_shared_functions": "false",
     "teacher_markdown": "Students will be using App Lab to create a simple prototype for their app.  Students who want to go further in making their apps functional can learn more about App Lab, watch demo videos, and work through tutorials at [https://code.org/educate/applab](https://code.org/educate/applab).",
-    "map_reference": "/courses/csd-2022/guides/design-mode",
+    "map_reference": "/courses/csd-2024/guides/design-mode",
     "mini_rubric": "false",
     "encrypted": "false",
     "video_key": "csd_applab_designmode",

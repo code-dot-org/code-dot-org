@@ -11,8 +11,8 @@ const Template = args => (
   </div>
 );
 
-export const singleFacilitator = Template.bind({});
-singleFacilitator.args = {
+export const SingleFacilitator = Template.bind({});
+SingleFacilitator.args = {
   questions: [
     {text: 'Question 1', key: 'question_1'},
     {text: 'Question 2', key: 'question_2'},
@@ -23,8 +23,8 @@ singleFacilitator.args = {
   },
 };
 
-export const multipleFacilitators = Template.bind({});
-multipleFacilitators.args = {
+export const MultipleFacilitators = Template.bind({});
+MultipleFacilitators.args = {
   questions: [
     {text: 'Question 1', key: 'question_1'},
     {text: 'Question 2', key: 'question_2'},

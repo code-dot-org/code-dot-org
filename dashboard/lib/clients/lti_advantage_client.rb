@@ -18,10 +18,10 @@ class LtiAdvantageClient
         'Authorization' => "Bearer #{get_access_token(@client_id, @issuer)}",
       },
       query: {
-        rlid: resource_link_id,
         limit: page_limit,
       },
     }
+    options[:query][:rlid] = resource_link_id if Policies::Lti.issuer_accepts_resource_link?(@issuer)
     res = make_request(url, options)
     next_page = next_page_url(res[:headers])
     parsed_res = res[:body]
@@ -41,11 +41,9 @@ def make_request(url, options)
   return {headers: res.headers, body: JSON.parse(res.body, symbolize_names: true)}
 end
 
-private
-
 # Get the next page URL from the Link header in the response.
 # Returns nil if no next page is present.
-def next_page_url(headers)
+private def next_page_url(headers)
   link_header = headers&.[](:link)
   return nil unless link_header
 

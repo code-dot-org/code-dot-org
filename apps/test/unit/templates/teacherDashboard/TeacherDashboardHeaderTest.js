@@ -1,10 +1,12 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import i18n from '@cdo/locale';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import {UnconnectedTeacherDashboardHeader as TeacherDashboardHeader} from '@cdo/apps/templates/teacherDashboard/TeacherDashboardHeader';
+
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {UnconnectedTeacherDashboardHeader as TeacherDashboardHeader} from '@cdo/apps/templates/teacherDashboard/TeacherDashboardHeader';
+import i18n from '@cdo/locale';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 // Note: The UnconnectedTeacherDashboadHeader assumes the sections it receives
 // have already been filtered (to remove hidden sections) and sorted
@@ -50,6 +52,7 @@ const DEFAULT_PROPS = {
   selectedSection: MOCK_SECTIONS[0],
   assignmentName: MOCK_SCRIPT.name,
   openEditSectionDialog: () => {},
+  asyncLoadCourseOfferings: () => {},
 };
 
 describe('TeacherDashboardHeader', () => {

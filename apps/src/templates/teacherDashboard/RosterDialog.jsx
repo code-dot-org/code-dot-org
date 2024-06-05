@@ -1,18 +1,21 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import BaseDialog from '../BaseDialog';
-import {classroomShape, loadErrorShape} from './shapes';
+
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
-import color from '../../util/color';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import locale from '@cdo/locale';
+
+import RailsAuthenticityToken from '../../lib/util/RailsAuthenticityToken';
+import color from '../../util/color';
+import BaseDialog from '../BaseDialog';
+
+import {classroomShape, loadErrorShape} from './shapes';
 import {
   cancelImportRosterFlow,
   importOrUpdateRoster,
   isRosterDialogOpen,
 } from './teacherSectionsRedux';
-import RailsAuthenticityToken from '../../lib/util/RailsAuthenticityToken';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 
 const COMPLETED_EVENT = 'Section Setup Completed';
 const CANCELLED_EVENT = 'Section Setup Cancelled';

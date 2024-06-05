@@ -1,7 +1,9 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+
 import {PersonalProjectsTableActionsCell} from '@cdo/apps/templates/projects/PersonalProjectsTableActionsCell';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('PersonalProjectsTableActionsCell', () => {
   it('shows NameFailureDialog when there is a projectNameFailure', () => {

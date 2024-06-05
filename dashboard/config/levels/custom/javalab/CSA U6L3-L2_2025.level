@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U6L3-Wrapper PBT_2025",
     "teacher_markdown": "When we add this code, we find that they are able to be initialized properly and display in the console without error. That is because there are two ways to initialize `Integer` and `Double` objects.",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-17T00:15:31.764+00:00\",\"changed\":[\"cloned from \\\"CSA U6L3-L2_2023\\\"\"],\"cloned_from\":\"CSA U6L3-L2_2023\"}]"

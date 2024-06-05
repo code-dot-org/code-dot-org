@@ -377,9 +377,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     assert_response :unprocessable_entity
   end
 
-  private
-
-  def parsed_response
+  private def parsed_response
     JSON.parse(@response.body)
   end
 
@@ -388,7 +386,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
   # Note that the section that a piece of teacher feedback is explicitly associated with via section ID
   # is not (as of Feb. 2021) used in our application (we're only logging section ID for analytics purposes for now),
   # so the section created during setup_all is provided as a default.
-  def teacher_sign_in_and_give_feedback(teacher, student, script, level, script_level, comment, performance, review_state = nil, section = @section)
+  private def teacher_sign_in_and_give_feedback(teacher, student, script, level, script_level, comment, performance, review_state = nil, section = @section)
     sign_in teacher
     params = {
       student_id: student.id,

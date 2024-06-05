@@ -542,7 +542,8 @@
       ]
     ],
     "teacher_markdown": "Students should notice that the value at index `0` in the 1D array `paintColors` is the same as the value at index `0` in the `DashPainter` object's 1D array `colors`. The `colors` instance variable in the `DashPainter` class points to the same 1D array that is passed to the parameter in the constructor.",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-16T23:52:16.259+00:00\",\"changed\":[\"cloned from \\\"CSA U3L2-L3_2023\\\"\"],\"cloned_from\":\"CSA U3L2-L3_2023\"}]"

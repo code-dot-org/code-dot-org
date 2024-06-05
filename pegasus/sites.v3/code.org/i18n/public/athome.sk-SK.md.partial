@@ -159,7 +159,7 @@ theme: responsive
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="Expresný kurz pre predškolákov"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">Expresný kurz pre predškolákov</a>
+<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="Expresný kurz pre predškolákov"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express" target="_blank">Expresný kurz pre predčitateľov</a>
 
 </div>
 <div style="clear: both; margin-bottom: 2rem"></div>
@@ -228,7 +228,7 @@ theme: responsive
 
 <br>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_primary_default)">
   <div style="width: 87%; float: left">
     <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Laboratórium aplikácií</h3></a>
     <p style="color:#ffffff">App Lab je programovacie prostredie, v ktorom môžeš vyrábať jednoduché aplikácie. Môžeš navrhnúť aplikáciu, naprogramovať ju pomocou blokov alebo JavaScriptu a nakoniec ju pár kliknutiami zdieľať.</p>
@@ -237,7 +237,7 @@ theme: responsive
   <div style="clear: both"></div>
 </div>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_primary_default)">
   <div style="width: 87%; float: left">
     <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Herné laboratórium</h3></a>
     <p style="color:#ffffff">Game Lab je programovacie prostredie, v ktorom môžeš vytvárať jednoduché animácie a hry s postavami a predmetmi, ktoré na seba reagujú.</p>
@@ -247,7 +247,7 @@ theme: responsive
   <div style="clear: both"></div>
 </div>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_primary_default)">
   <div style="width: 87%; float: left">
     <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Webové laboratórium</h3></a>
     <p style="color:#ffffff">Web Lab je programovacie prostredie, v ktorom môžeš vytvárať jednoduché webové stránky pomocou HTML a CSS. Môžeš v ňom navrhovať webové stránky a nakoniec ich pár kliknutiami zdieľať.</p>

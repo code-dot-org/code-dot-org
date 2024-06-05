@@ -1,11 +1,14 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
 import {Provider} from 'react-redux';
 import {combineReducers, createStore} from 'redux';
+
 import SummaryEntryPoint from '@cdo/apps/templates/levelSummary/SummaryEntryPoint';
-import styles from '@cdo/apps/templates/levelSummary/summary-entry-point.module.scss';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+
+import {expect} from '../../../util/reconfiguredChai';
+
+import styles from '@cdo/apps/templates/levelSummary/summary-entry-point.module.scss';
 
 const JS_DATA = {
   response_count: 1,

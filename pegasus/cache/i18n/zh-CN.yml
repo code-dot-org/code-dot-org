@@ -185,6 +185,7 @@ zh-CN:
   class_submission_out_of_school_summer_camp: 夏令营
   classicmaze_name: 经典迷宫
   code_hoc_coming: 编程一小时就在这里 — — 12 月 8-14 日 ！
+  code_org_logo_alt: Code.org 首页
   code_sign_up: 注册以便在计算机科学教育周期间参加
   codea_beyond_gradelevel: 高中或以上
   codea_beyond_longdescription: iPad 上的 Codea 可以让你创建游戏和模拟&mdash; 或是你的任何可视化想法。使用 iPad
@@ -819,8 +820,9 @@ zh-CN:
   header_about_us: 关于我们
   header_course_catalog: 课程分类
   header_courses: 课程
+  header_districts: 学区
   header_documentation: 使用文档
-  header_educate_beyond: Code.org 意外的内容
+  header_educate_beyond: Code.org 以外的内容
   header_educate_community: 在线社区
   header_educate_elementary: 小学
   header_educate_high: 高中
@@ -845,6 +847,7 @@ zh-CN:
   header_project_gallery: 项目
   header_report_abuse: 举报滥用
   header_report_bug: 报告错误
+  header_schools: 学校
   header_screen_reader_hamburger: 菜单
   header_screen_reader_help: 帮助菜单
   header_sections: 小组

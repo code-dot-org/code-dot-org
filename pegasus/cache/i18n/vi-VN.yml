@@ -9,7 +9,7 @@ vi-VN:
     hộ hợp pháp cho phép sử dụng dịch vụ Code.org.
   account_sign_up_email_opt_in: Chúng tôi có thể gửi email cho bạn thông tin cập nhật
     về các khóa học của chúng tôi, các cơ hội ở địa phương hay tin tức về khoa học
-    máy tính khác không?
+    máy tính khác không? (khoảng một tháng một lần)
   ai_activity: Hoạt động
   ai_aiedu_intro: 'AiEdu: Giới thiệu về trí tuệ nhân tạo'
   ai_aiedu_intro_description: Giới thiệu về AI là một chương trình giảng dạy miễn
@@ -257,6 +257,7 @@ vi-VN:
   class_submission_out_of_school_summer_camp: Trại hè
   classicmaze_name: Mê cung cổ điển
   code_hoc_coming: Giờ lập trình là ở đây - ngày 8-14 tháng 12!
+  code_org_logo_alt: Trang chủ Code.org
   code_sign_up: Đăng ký để tham gia trong tuần giáo dục Khoa học máy tính
   codea_beyond_gradelevel: Trung học +
   codea_beyond_longdescription: Codea cho iPad giúp bạn làm game và bản mô phỏng &mdash;
@@ -1199,6 +1200,7 @@ vi-VN:
   header_about_us: Giới thiệu về chúng tôi
   header_course_catalog: Danh mục khóa học
   header_courses: Các khóa học
+  header_districts: Quận
   header_documentation: Tài liệu
   header_educate_beyond: Đằng sau Code.org
   header_educate_community: Cộng đồng trực tuyến
@@ -1225,6 +1227,7 @@ vi-VN:
   header_project_gallery: Dự án
   header_report_abuse: Báo cáo lạm dụng
   header_report_bug: Báo cáo sự cố
+  header_schools: Trường học
   header_screen_reader_hamburger: Menu
   header_screen_reader_help: Danh sách hỗ trợ
   header_sections: Mục
@@ -1669,6 +1672,7 @@ vi-VN:
   homepage_slot_text_link_k5: Các khoá cho cấp tiểu học
   homepage_slot_text_link_local: Tìm lớp ở địa phương
   homepage_slot_text_link_middle: Trung học cơ sở
+  homepage_slot_text_link_middle_and_high: Trung học cơ sở và Trung học phổ thông
   homepage_slot_text_link_othercourses: Các khoá trực tuyến khác
   homepage_slot_text_link_pd: Phát triển nghề nghiệp
   homepage_slot_text_link_shop: Áo phông, nón và nhiều hơn nữa
@@ -2611,6 +2615,7 @@ vi-VN:
   user_header_applab: Phòng thí nghiệm ứng dụng
   user_header_artist: Họa sĩ
   user_header_create: Tạo
+  user_header_create_account_low_cap: Tạo tài khoản
   user_header_dance: Bữa Tiệc Khiêu Vũ
   user_header_flappy: Flappy bird
   user_header_gamelab: Phòng thí nghiệm trò chơi

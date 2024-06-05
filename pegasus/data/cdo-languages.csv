@@ -58,7 +58,7 @@ no,no,no,no-NO,Norsk (Bokmål),Norwegian (Bokmål),TRUE,TRUE,no,Norwegian,TRUE,T
 pl,pl,pl,pl-PL,Polski,Polish,TRUE,TRUE,pl,Polish,FALSE,FALSE,TRUE,FALSE,TRUE
 ps,ps,ps,ps-AF,پښتو,Pashto,FALSE,FALSE,ps,Pashto,TRUE,TRUE,FALSE,TRUE,FALSE
 pt-BR,pt,pt,pt-BR,Português (Brasil),Portuguese (Brazil),TRUE,TRUE,pt-BR,"Portuguese, Brazilian",FALSE,TRUE,TRUE,TRUE,TRUE
-pt-PT,po,pt,pt-PT,Português (Portugal),Portuguese (Portugal),TRUE,TRUE,pt,Portuguese,TRUE,TRUE,TRUE,TRUE,TRUE
+pt-PT,po,pt,pt-PT,Português (Portugal),Portuguese (Portugal),TRUE,TRUE,pt-PT,Portuguese,TRUE,TRUE,TRUE,TRUE,TRUE
 ro,ro,ro,ro-RO,Română,Romanian,TRUE,TRUE,ro,Romanian,TRUE,TRUE,FALSE,TRUE,FALSE
 ru,ru,ru,ru-RU,Pусский,Russian,TRUE,TRUE,ru,Russian,FALSE,FALSE,TRUE,FALSE,TRUE
 se,se,se,se-FI,Davvisámegiella,Northern Sami,TRUE,TRUE,se,Northern Sami,FALSE,FALSE,FALSE,FALSE,FALSE

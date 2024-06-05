@@ -6,7 +6,7 @@ Feature: Creating and deleting data docs
     And I am on "http://studio.code.org/data_docs/edit"
 
     # create data doc
-    And I click selector "#create_new_data_doc"
+    And I click selector "#create_new_data_doc" to load a new page
     And I wait until element "#form" is visible
     And I enter a temp data doc key and temp data doc name
     And I press keys "Description of Doc" for element "textarea"

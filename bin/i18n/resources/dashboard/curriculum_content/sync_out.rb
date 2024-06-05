@@ -36,15 +36,13 @@ module I18n
             I18nScriptUtils.rename_dir(crowdin_locale_dir, i18n_locale_dir)
           end
 
-          private
-
-          def crowdin_locale_dir_of(language)
-            I18nScriptUtils.locale_dir(language[:crowdin_name_s], DIR_NAME)
+          private def crowdin_locale_dir_of(language)
+            I18nScriptUtils.crowdin_locale_dir(language[:locale_s], DIR_NAME)
           end
 
           # We use URLs as keys for lessons in Crowdin, to make things easier for translators.
           # For the actual translation files, though, we'd like to use more-standard keys.
-          def restore_lesson_i18n_keys(types_i18n_data)
+          private def restore_lesson_i18n_keys(types_i18n_data)
             return types_i18n_data unless types_i18n_data[:lessons]
 
             rekeyed_lessons = types_i18n_data[:lessons].map do |lesson_url, lesson_data|
@@ -73,7 +71,7 @@ module I18n
 
           # We use URLs as keys for reference_guides in Crowdin, to make things easier for translators.
           # For the actual translation files, though, we'd like to use more-standard keys.
-          def restore_reference_guide_i18n_keys(types_i18n_data)
+          private def restore_reference_guide_i18n_keys(types_i18n_data)
             return types_i18n_data unless types_i18n_data[:reference_guides]
 
             rekeyed_reference_guides = types_i18n_data[:reference_guides].map do |reference_guide_url, reference_guide_data|
@@ -102,7 +100,7 @@ module I18n
             types_i18n_data.merge(reference_guides: rekeyed_reference_guides.compact.to_h)
           end
 
-          def fix_resource_urls(types_i18n_data)
+          private def fix_resource_urls(types_i18n_data)
             return types_i18n_data unless types_i18n_data[:resources]
 
             # We also provide URLs to the translators for Resources only;
@@ -199,7 +197,7 @@ module I18n
           #     ...
           #   }
           # }
-          def flatten(raw_i18n_data, serializer = UNIT_SERIALIZER, name = :scripts)
+          private def flatten(raw_i18n_data, serializer = UNIT_SERIALIZER, name = :scripts)
             raw_i18n_data.each_with_object({}) do |(key, object), i18n_data|
               object = object.symbolize_keys
 
@@ -222,7 +220,7 @@ module I18n
           #
           # @param crowdin_file_path [String] the full Crowdin file path
           # @return [Hash] the restored i18n data or an empty hash
-          def restore_file_content(crowdin_file_path)
+          private def restore_file_content(crowdin_file_path)
             # Separates the file subpath (e.g. `2017/csd/csd1-2017.json`)
             # from the Crowdin file path (e.g. `i18n/locales/source/curriculum_content/2017/csd/csd1-2017.json`)
             file_subpath = crowdin_file_path.partition(DIR_NAME).last
@@ -232,7 +230,7 @@ module I18n
             I18nScriptUtils.parse_file(crowdin_file_path) || {}
           end
 
-          def types_i18n_data_of(language)
+          private def types_i18n_data_of(language)
             types_i18n_data = {}
 
             crowdin_file_paths = Dir.glob(File.join(crowdin_locale_dir_of(language), '**/*.json'))
@@ -259,7 +257,7 @@ module I18n
             types_i18n_data.deep_stringify_keys
           end
 
-          def distribute_localization(language)
+          private def distribute_localization(language)
             types_i18n_data = types_i18n_data_of(language)
             return if types_i18n_data.blank?
 

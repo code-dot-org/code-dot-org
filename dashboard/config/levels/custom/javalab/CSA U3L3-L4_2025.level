@@ -358,7 +358,8 @@
       ]
     ],
     "teacher_markdown": "Students should notice that each element in the 1D array `colors` is now accessed from last to first. This is because `index` is initialized to the last index of the 1D array, and the `while` loop repeats as long as `index` is greater than or equal to `0`. Inside the `while` loop, the value of `index` is **decreased** by `1` to reach the beginning of the 1D array.",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-16T23:52:22.704+00:00\",\"changed\":[\"cloned from \\\"CSA U3L3-L4_2023\\\"\"],\"cloned_from\":\"CSA U3L3-L4_2023\"}]"

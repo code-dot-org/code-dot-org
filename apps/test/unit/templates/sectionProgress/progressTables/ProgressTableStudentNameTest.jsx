@@ -1,8 +1,10 @@
-import React from 'react';
-import {expect} from '../../../../util/reconfiguredChai';
-import {shallow} from 'enzyme';
-import ProgressTableStudentName from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableStudentName';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import moment from 'moment';
+import React from 'react';
+
+import ProgressTableStudentName from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableStudentName';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   name: 'Joe',

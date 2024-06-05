@@ -1,11 +1,12 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {expect} from '../../../util/reconfiguredChai';
-import {mount} from 'enzyme';
+
+import {UnconnectedStandardsProgressTable as StandardsProgressTable} from '../../../../src/templates/sectionProgress/standards/StandardsProgressTable';
 import {
   standardsData,
   lessonCompletedByStandard,
 } from '../../../../src/templates/sectionProgress/standards/standardsTestHelpers';
-import {UnconnectedStandardsProgressTable as StandardsProgressTable} from '../../../../src/templates/sectionProgress/standards/StandardsProgressTable';
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('StandardsProgressTable', () => {
   it('renders a description cell for each standard', () => {

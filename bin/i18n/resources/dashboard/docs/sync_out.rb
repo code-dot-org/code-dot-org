@@ -23,20 +23,18 @@ module I18n
             I18nScriptUtils.rename_dir(crowdin_locale_dir, i18n_locale_dir)
           end
 
-          private
-
-          def crowdin_locale_dir_of(language)
-            I18nScriptUtils.locale_dir(language[:crowdin_name_s], DIR_NAME)
+          private def crowdin_locale_dir_of(language)
+            I18nScriptUtils.crowdin_locale_dir(language[:locale_s], DIR_NAME)
           end
 
-          def new_programming_envs_i18n_data(crowdin_file_path)
+          private def new_programming_envs_i18n_data(crowdin_file_path)
             file_subpath = crowdin_file_path.partition(DIR_NAME).last
             original_file_path = File.join(I18N_BACKUP_DIR_PATH, file_subpath)
             RedactRestoreUtils.restore(original_file_path, crowdin_file_path, crowdin_file_path, REDACT_PLUGINS)
             I18nScriptUtils.parse_file(crowdin_file_path) || {}
           end
 
-          def programming_envs_i18n_data(target_i18n_file_path)
+          private def programming_envs_i18n_data(target_i18n_file_path)
             return {} unless File.exist?(target_i18n_file_path)
 
             i18n_data = I18nScriptUtils.parse_file(target_i18n_file_path)
@@ -45,7 +43,7 @@ module I18n
             i18n_data.values.first.dig('data', PROGRAMMING_ENVS_TYPE) || {}
           end
 
-          def distribute_localization(language)
+          private def distribute_localization(language)
             crowdin_file_paths = Dir.glob(File.join(crowdin_locale_dir_of(language), '*.json'))
 
             progress_bar.total += crowdin_file_paths.size

@@ -97,7 +97,7 @@ class PegasusTest < Minitest::Test
 
       # If this site isn't a live host, use an inherited site instead.
       unless live_host?(site)
-        site = inherited_sites(site).select(&method(:live_host?)).last
+        site = inherited_sites(site).select {|inherited_site| live_host?(inherited_site)}.last
       end
 
       url = "#{site}#{uri}"

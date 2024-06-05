@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import BaseDialog from '../../templates/BaseDialog';
-import PendingButton from '../../templates/PendingButton';
 import AdvancedShareOptions from './AdvancedShareOptions';
 import AbuseError from './AbuseError';
 import SendToPhone from './SendToPhone';
@@ -16,37 +15,32 @@ import {showPublishDialog} from '../../templates/projects/publishDialog/publishD
 import PublishDialog from '../../templates/projects/publishDialog/PublishDialog';
 import {createHiddenPrintWindow} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 import LibraryCreationDialog from './libraries/LibraryCreationDialog';
 import QRCode from 'qrcode.react';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import Button from '../../templates/Button';
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
 import defaultThumbnail from '@cdo/static/projects/project_default.png';
 import fontConstants from '@cdo/apps/fontConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
-function recordShare(type) {
+function recordShare(type, appType) {
   if (!window.dashboard) {
     return;
   }
-
-  firehoseClient.putRecord(
-    {
-      study: 'finish-dialog-share',
-      study_group: 'v1',
-      event: 'project-share',
-      project_id: dashboard.project && dashboard.project.getCurrentId(),
-      data_string: type,
-    },
-    {includeUserId: true}
-  );
+  if (EVENTS[type]) {
+    analyticsReporter.sendEvent(EVENTS[type], {
+      lab_type: appType,
+      channel_id: dashboard.project && dashboard.project.getCurrentId(),
+    });
+  }
 }
 
-function wrapShareClick(handler, type) {
+function wrapShareClick(handler, type, appType) {
   return function () {
     try {
-      recordShare(type);
+      recordShare(type, appType);
     } finally {
       handler.apply(this, arguments);
     }
@@ -126,7 +120,7 @@ class ShareAllowedDialog extends React.Component {
 
   componentDidUpdate(prevProps, prevState, snapshot) {
     if (this.props.isOpen && !prevProps.isOpen) {
-      recordShare('open');
+      recordShare('SHARING_DIALOG_OPEN', this.props.appType);
       this.setState({hasBeenCopied: false});
 
       this.checkProjectAndAccountAge();
@@ -164,7 +158,7 @@ class ShareAllowedDialog extends React.Component {
     ['applab', 'gamelab', 'weblab'].includes(this.props.appType);
 
   close = () => {
-    recordShare('close');
+    recordShare('SHARING_CLOSE_ESCAPE', this.props.appType);
     this.props.onClose();
     this.setState({
       replayVideoUnavailable: false,
@@ -262,12 +256,6 @@ class ShareAllowedDialog extends React.Component {
       channelId,
     } = this.props;
 
-    const {
-      isAccountOldEnoughToPublish,
-      isProjectOldEnoughToPublish,
-      isLoadingAccountAndProjectAge,
-    } = this.state;
-
     const modalClass = 'modal-content no-modal-icon';
 
     const isDroplet = appType === 'applab' || appType === 'gamelab';
@@ -320,10 +308,6 @@ class ShareAllowedDialog extends React.Component {
     }
 
     const showPublishInfo = this.isPublishAllowed() && !isPublished;
-    const disablePublishButton =
-      !hasThumbnail ||
-      !isAccountOldEnoughToPublish ||
-      !isProjectOldEnoughToPublish;
 
     const warningText = this.getWarningText(showPublishInfo);
 
@@ -388,15 +372,15 @@ class ShareAllowedDialog extends React.Component {
                   </div>
                   <div>
                     <Button
-                      color={Button.ButtonColor.brandSecondaryDefault}
+                      color={buttonColors.purple}
+                      type="primary"
                       id="sharing-dialog-copy-button"
-                      icon="clipboard"
-                      style={{
-                        ...styles.button,
-                        ...styles.copyButton,
-                        ...(this.state.hasBeenCopied && styles.copyButtonLight),
-                      }}
-                      onClick={wrapShareClick(this.copy, 'copy')}
+                      iconLeft={{iconName: 'copy'}}
+                      onClick={wrapShareClick(
+                        this.copy,
+                        'SHARING_LINK_COPY',
+                        this.props.appType
+                      )}
                       text={i18n.copyLinkToProject()}
                       value={shareUrl}
                     />
@@ -408,56 +392,25 @@ class ShareAllowedDialog extends React.Component {
                 </div>
                 <div className="social-buttons" style={{marginTop: 12}}>
                   <Button
-                    color={Button.ButtonColor.neutralDark}
                     id="sharing-phone"
-                    href=""
+                    color={buttonColors.black}
+                    type="secondary"
                     onClick={wrapShareClick(
                       this.showSendToPhone,
-                      'send-to-phone'
+                      'SHARING_LINK_SEND_TO_PHONE',
+                      this.props.appType
                     )}
-                    style={styles.sendToPhoneButton}
-                  >
-                    <FontAwesome icon="mobile-phone" style={{fontSize: 36}} />
-                    <span style={styles.sendToPhoneSpan}>
-                      {i18n.sendToPhone()}
-                    </span>
-                  </Button>
-
-                  {showPublishInfo &&
-                    (isLoadingAccountAndProjectAge ? (
-                      <Spinner size="medium" style={styles.loadingSpinner} />
-                    ) : (
-                      <Button
-                        type="button"
-                        color={Button.ButtonColor.neutralDark}
-                        id="share-dialog-publish-button"
-                        style={
-                          hasThumbnail ? styles.button : styles.buttonDisabled
-                        }
-                        onClick={wrapShareClick(this.publish, 'publish')}
-                        disabled={disablePublishButton}
-                        className="no-mc"
-                      >
-                        <span>{i18n.publish()}</span>
-                      </Button>
-                    ))}
-                  {this.isPublishAllowed() && isPublished && (
-                    <PendingButton
-                      id="share-dialog-unpublish-button"
-                      isPending={isUnpublishPending}
-                      onClick={this.unpublish}
-                      pendingText={i18n.unpublishPending()}
-                      style={styles.button}
-                      text={i18n.unpublish()}
-                      className="no-mc"
-                    />
-                  )}
-
+                    text={i18n.sendToPhone()}
+                    iconLeft={{iconName: 'mobile-screen'}}
+                  />
                   {canPrint && hasThumbnail && (
-                    <a href="#" onClick={wrapShareClick(this.print, 'print')}>
-                      <FontAwesome icon="print" style={{fontSize: 26}} />
-                      <span>{i18n.print()}</span>
-                    </a>
+                    <Button
+                      color={buttonColors.purple}
+                      type="primary"
+                      onClick={wrapShareClick(this.print, 'print')}
+                      iconLeft={{iconName: 'print'}}
+                      text={i18n.print()}
+                    />
                   )}
                   {/* prevent buttons from overlapping when unpublish is pending */}
                   {this.isSocialShareAllowed() && !isUnpublishPending && (
@@ -469,7 +422,8 @@ class ShareAllowedDialog extends React.Component {
                           rel="noopener noreferrer"
                           onClick={wrapShareClick(
                             onClickPopup.bind(this),
-                            'facebook'
+                            'SHARING_FB',
+                            this.props.appType
                           )}
                           style={styles.socialLink}
                         >
@@ -483,7 +437,8 @@ class ShareAllowedDialog extends React.Component {
                           rel="noopener noreferrer"
                           onClick={wrapShareClick(
                             onClickPopup.bind(this),
-                            'twitter'
+                            'SHARING_TWITTER',
+                            this.props.appType
                           )}
                           style={styles.socialLink}
                         >
@@ -530,6 +485,7 @@ class ShareAllowedDialog extends React.Component {
                       onExpand={this.showAdvancedOptions}
                       channelId={channelId}
                       embedOptions={embedOptions}
+                      appType={this.props.appType}
                     />
                   )}
                 </div>
@@ -590,18 +546,6 @@ const styles = {
     marginBottom: 0,
     marginLeft: 0,
     verticalAlign: 'top',
-  },
-  copyButton: {
-    paddingTop: 12.5,
-    paddingBottom: 12.5,
-    marginLeft: 0,
-    marginBottom: 0,
-    marginTop: 0,
-    marginRight: 16,
-    fontSize: 'large',
-  },
-  copyButtonLight: {
-    backgroundColor: color.light_purple,
   },
   thumbnail: {
     float: 'left',

@@ -132,6 +132,10 @@ jotform_forms:
     post201:     90065524560150
     facilitator: 91405279991164
 
+# HubSpot
+hubspot_portal_id:              !Secret
+hubspot_admin_interest_form_id: !Secret
+
 # PagerDuty
 pagerduty_token: !Secret
 
@@ -215,6 +219,7 @@ azure_content_moderation_key:
 # multiple browsers
 saucelabs_username:
 saucelabs_authkey:
+saucelabs_tunnel_name:
 
 # Credentials for applitools.com, used for running automated visual tests
 applitools_eyes_api_key:      !Secret
@@ -284,7 +289,7 @@ csta_jotform_form_id: !Secret
 ### Service configurations (urls, endpoints, etc)
 
 freegeoip_host:
-geocoder_redis_url:
+geocoder_redis_url: 'redis://localhost:6379/0/geocoder'
 solr_server: localhost
 
 # S3 bucket and (environment-specific) path-prefix configuration
@@ -302,6 +307,9 @@ libraries_s3_bucket:       cdo-v3-libraries
 libraries_s3_directory:    libraries<%=_env%>
 videos_s3_bucket:          videos.code.org
 videos_url:                //videos.code.org
+
+# Session Store (ElastiCache Redis)
+session_store_server:
 
 # Memcached (ElastiCache)
 memcached_endpoint:
@@ -323,7 +331,7 @@ dcdo_table_name:       dcdo_<%=env%>
 gatekeeper_table_name: gatekeeper_<%=env%>
 
 # Poste (internal transactional email processing framework)
-poste_host: <%= code_org_url.sub('//', '') %>
+poste_host: '<%= code_org_url.sub('//', '') %>'
 poste_attachment_dir:
 poste_smtp_password: !Secret
 poste_smtp_server:   email-smtp.us-east-1.amazonaws.com
@@ -358,7 +366,8 @@ app_servers: {}
 rack_mini_profiler_enabled:
 https_development:
 default_scheme: '<%=(env == 'development') || ci ? 'http:' : 'https:'%>'
-allowed_iframe_ancestors: http://*.disney.com http://*.diznee.net cuantrix.mx <%=pegasus_site_host%> <%=dashboard_site_host%> curriculum.code.org codecurricula.com
+allowed_iframe_ancestors: 'https://*.schoology.com http://*.disney.com http://*.diznee.net cuantrix.mx <%=pegasus_site_host%> <%=dashboard_site_host%> curriculum.code.org https://*.lausd.iap.allhere.co'
+
 skip_locales:
 secret_pictures_csv:
 no_https_store:
@@ -629,3 +638,22 @@ openai_evaluate_rubric_org_id:
 
 # AI Proxy for OpenAI API
 ai_proxy_origin: https://aiproxy-test.code.org
+
+# Statsig API keys
+# These are dummy values for all environments except Production and our managed
+# Test web application server, which are overridden in production.yml.erb
+# and test.yml.erb. The Statsig SDK expects the prefixed key type (secret-) in
+# the string, otherwise it will throw an error on initialization, even in
+# local_mode.
+statsig_server_secret_key: 'secret-fake-key'
+statsig_api_client_key: 'client-fake-key'
+
+# MailGun/MailJet API keys
+mailjet_api_key:
+mailjet_secret_key:
+mailgun_api_key:
+
+# ActiveJob queues
+active_job_queues:
+  :default: :default
+  :mailers: :mailers

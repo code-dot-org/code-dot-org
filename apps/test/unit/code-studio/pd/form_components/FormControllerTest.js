@@ -2,7 +2,7 @@ import FormController from '@cdo/apps/code-studio/pd/form_components/FormControl
 import FormComponent from '@cdo/apps/code-studio/pd/form_components/FormComponent';
 import React from 'react';
 import {expect} from '../../../../util/reconfiguredChai';
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import sinon from 'sinon';
 
 class DummyPage1 extends FormComponent {

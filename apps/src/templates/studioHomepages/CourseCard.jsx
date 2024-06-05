@@ -1,10 +1,12 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+
 import fontConstants from '@cdo/apps/fontConstants';
-import color from '../../util/color';
-import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
+import i18n from '@cdo/locale';
+
+import color from '../../util/color';
 
 /**
  * A card used on the homepage to display information about a particular course

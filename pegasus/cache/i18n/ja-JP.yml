@@ -6,7 +6,8 @@ ja-JP:
   accelerated_gradelevel: 10-18 才
   accelerated_name: 上級コース
   account_sign_up_child_accept_terms: Code.orgのサービスを利用することについて、親または保護者の許可を得ていることを確認します。
-  account_sign_up_email_opt_in: 当社のコースについての最新情報、各地域における機会、コンピュータサイエンスに関するニュースなどを電子メールを介して送付してもよろしいですか？
+  account_sign_up_email_opt_in: コースの最新情報、地元でのイベント、その他コンピュータサイエンスに関する情報などをメールでお知らせしてもよろしいですか？
+    ( 概ね月1回)
   ai_activity: アクティビティ
   ai_aiedu_intro: 'AiEdu: 人工知能入門'
   ai_aiedu_intro_description: Intro to AI は、学生が AI とは何か、そしてそれが現実世界でどのように使用されているかについて、概念的な知識を身につけることができる、革新的で文化的な関連性を備えた無料のカリキュラムです。
@@ -191,6 +192,7 @@ ja-JP:
   class_submission_out_of_school_summer_camp: サマーキャンプ
   classicmaze_name: 古典的な迷路
   code_hoc_coming: Hour of Codeはこちら - 12月8日 - 14日です！
+  code_org_logo_alt: Code.orgホーム
   code_sign_up: コンピュタサイエンス教育週間の間に参加する
   codea_beyond_gradelevel: 高校生以上
   codea_beyond_longdescription: iPad アプリの Codea ではゲーム作り、またはあなたの持っているアイデアを表現することができます。タッチ機能や加速度計を使って、そのアイデアを作品にしてみよう。Codea
@@ -841,6 +843,7 @@ ja-JP:
   header_about_us: 私たちについて
   header_course_catalog: コース カタログ
   header_courses: コース
+  header_districts: 地区
   header_documentation: ドキュメント
   header_educate_beyond: Code.org を超えて
   header_educate_community: オンライン コミュニティ
@@ -867,6 +870,7 @@ ja-JP:
   header_project_gallery: プロジェクト
   header_report_abuse: 不正行為を報告
   header_report_bug: バグを報告
+  header_schools: 学校
   header_screen_reader_hamburger: メニュー
   header_screen_reader_help: "[ヘルプ] メニュー"
   header_sections: セクション
@@ -1194,6 +1198,7 @@ ja-JP:
   homepage_slot_text_link_k5: 小学生以下向けのコース
   homepage_slot_text_link_local: 地元のクラスを探す
   homepage_slot_text_link_middle: 中学校
+  homepage_slot_text_link_middle_and_high: 中学生・高校生
   homepage_slot_text_link_othercourses: その他のオンラインコース
   homepage_slot_text_link_pd: プロになるために
   homepage_slot_text_link_shop: T シャツ、帽子、その他

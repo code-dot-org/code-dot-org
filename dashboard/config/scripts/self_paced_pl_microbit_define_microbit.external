@@ -9,5 +9,9 @@ markdown <<MARKDOWN
 
 #### The micro:bit needs instructions—programs—to tell it what to do. Using the online **Microsoft MakeCode** block editor, your students will be able to create working code in seconds which they can test out in the simulator before transferring them to a real micro:bit over a USB cable. They can then unplug the micro:bit from the computer, attach a battery pack, and use their projects anywhere.
 
+<img src="https://images.code.org/b6b8229efab85b249ccc25076d18a37e-image-1707929371492.png" alt="graphic of the front of a micro:bit" width="650px" style="border-radius:10px; float:left; margin: 0 0px 40px 100px;">
+
+
+
 
 MARKDOWN

@@ -1,8 +1,10 @@
 /** @file Tests for BaseDialog component */
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
-import {expect} from '../../util/reconfiguredChai';
+
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
+
+import {expect} from '../../util/reconfiguredChai';
 
 describe('BaseDialog', function () {
   describe('fullWidth option', function () {

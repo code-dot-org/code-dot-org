@@ -216,6 +216,7 @@ ko-KR:
   class_submission_out_of_school_summer_camp: 여름 캠프
   classicmaze_name: 고전 미로게임
   code_hoc_coming: Hour of Code 가 여기있습니다. - 12월8일-14일!
+  code_org_logo_alt: Cord.org 홈
   code_sign_up: CS Education Week 기간 동안의 활동을 신청하세요.
   codea_beyond_gradelevel: 고등학생 이상
   codea_beyond_longdescription: 아이패드용 코디아(Codea)는 게임, 시뮬레이션 &mdash; 또는 자신이 가진 비주얼적
@@ -967,6 +968,7 @@ ko-KR:
   header_about_us: 우리 소개
   header_course_catalog: 과정 카탈로그
   header_courses: courses
+  header_districts: 교육구
   header_documentation: 문서
   header_educate_beyond: Code.org 너머
   header_educate_community: 온라인 커뮤니티
@@ -992,6 +994,7 @@ ko-KR:
   header_project_gallery: 프로젝트
   header_report_abuse: 학대 사례 신고
   header_report_bug: 문제 신고
+  header_schools: 학교
   header_screen_reader_hamburger: 메뉴
   header_screen_reader_help: 도움말 메뉴
   header_sections: 섹션
@@ -1346,6 +1349,7 @@ ko-KR:
   homepage_slot_text_link_k5: 초등학교 4학년 학생을 위한 과정
   homepage_slot_text_link_local: 현지 수업 찾기
   homepage_slot_text_link_middle: 중학교
+  homepage_slot_text_link_middle_and_high: 중고등학교를 위한 툴
   homepage_slot_text_link_othercourses: 다른 온라인 코스
   homepage_slot_text_link_pd: 전문 개발
   homepage_slot_text_link_shop: T-셔츠, 모자 등

@@ -1,11 +1,20 @@
+import classNames from 'classnames';
+import _ from 'lodash';
+import PropTypes from 'prop-types';
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
-import _ from 'lodash';
+
+import moduleStyles from './project-template-workspace-icon.module.scss';
+
 var msg = require('@cdo/locale');
 
 const IMAGE_BASE_URL = '/blockly/media/';
 
 export default class ProjectTemplateWorkspaceIcon extends React.Component {
+  static propTypes = {
+    tooltipPlace: PropTypes.string,
+  };
+
   constructor(props) {
     super(props);
     this.tooltipId = _.uniqueId();
@@ -13,23 +22,32 @@ export default class ProjectTemplateWorkspaceIcon extends React.Component {
 
   render() {
     return (
-      <div style={styles.container}>
-        <img
-          style={styles.projectTemplateIcon}
-          className="projectTemplateWorkspaceIcon"
-          src={IMAGE_BASE_URL + 'connect.svg'}
+      <div className={moduleStyles.container}>
+        <button
+          type="button"
           data-tip
           data-for={this.tooltipId}
           aria-describedby={this.tooltipId}
-          alt={msg.workspaceProjectTemplateLevel()}
-        />
+          data-event="mouseenter mouseleave click"
+          className={moduleStyles.projectTemplateButton}
+        >
+          <img
+            className={classNames(
+              'projectTemplateWorkspaceIcon',
+              moduleStyles.projectTemplateIcon
+            )}
+            src={IMAGE_BASE_URL + 'connect.svg'}
+            alt={msg.workspaceProjectTemplateLevel()}
+          />
+        </button>
         <ReactTooltip
           id={this.tooltipId}
           role="tooltip"
           wrapper="div"
           effect="solid"
+          place={this.props.tooltipPlace}
         >
-          <div style={styles.tooltip}>
+          <div className={moduleStyles.tooltip}>
             {msg.workspaceProjectTemplateLevel()}
           </div>
         </ReactTooltip>
@@ -37,18 +55,3 @@ export default class ProjectTemplateWorkspaceIcon extends React.Component {
     );
   }
 }
-
-const styles = {
-  container: {
-    display: 'inline-block',
-  },
-  tooltip: {
-    maxWidth: 200,
-    lineHeight: '20px',
-    whiteSpace: 'normal',
-  },
-  projectTemplateIcon: {
-    marginRight: 5,
-    marginTop: -1,
-  },
-};

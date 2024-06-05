@@ -1,5 +1,5 @@
+import {Meta, StoryFn} from '@storybook/react';
 import React from 'react';
-import {Meta, Story} from '@storybook/react';
 
 import {
   RadioButton,
@@ -9,7 +9,7 @@ import {
 } from './index';
 
 export default {
-  title: 'DesignSystem/Radio Button',
+  title: 'DesignSystem/Radio Button', // eslint-disable-line storybook/no-title-property-in-meta
   /**
    * Storybook Docs Generation doesn't work properly (as of 07.19.2023).
    * This workaround (component: Component.type instead of component: Component) is taken from
@@ -26,9 +26,11 @@ export default {
 //
 // This is needed to fix children type error (passing string instead of React.ReactNode type)
 // eslint-disable-next-line
-const SingleTemplate:Story<RadioButtonProps> = (args) => <RadioButton {...args} />;
+const SingleTemplate: StoryFn<RadioButtonProps> = args => (
+  <RadioButton {...args} />
+);
 
-const MultipleTemplate: Story<RadioButtonsGroupProps> = args => (
+const MultipleTemplate: StoryFn<RadioButtonsGroupProps> = args => (
   <>
     <RadioButtonsGroup {...args} />
   </>

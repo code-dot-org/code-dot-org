@@ -7,6 +7,7 @@ module I18n
     module Dashboard
       module SharedFunctions
         FILE_NAME = 'shared_functions.yml'.freeze
+        FILE_PATH = File.join(DIR_NAME, FILE_NAME).freeze
         I18N_SOURCE_FILE_PATH = File.join(I18N_SOURCE_DIR_PATH, FILE_NAME).freeze
 
         def self.sync_in
@@ -15,6 +16,10 @@ module I18n
 
         def self.sync_up(**opts)
           SyncUp.perform(**opts)
+        end
+
+        def self.sync_down(**opts)
+          SyncDown.perform(**opts)
         end
 
         def self.sync_out

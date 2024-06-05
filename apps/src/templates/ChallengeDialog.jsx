@@ -1,14 +1,17 @@
+import PropTypes from 'prop-types';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
+import React from 'react';
+
+import assetUrl from '@cdo/apps/code-studio/assetUrl';
+import {getStore} from '@cdo/apps/redux';
+import i18n from '@cdo/locale';
+
+import color from '../util/color';
+
 import BackToFrontConfetti from './BackToFrontConfetti';
 import BaseDialog from './BaseDialog';
 import LegacyButton from './LegacyButton';
 import PuzzleRatingButtons from './PuzzleRatingButtons';
-import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import React from 'react';
-import assetUrl from '@cdo/apps/code-studio/assetUrl';
-import color from '../util/color';
-import {getStore} from '@cdo/apps/redux';
-import i18n from '@cdo/locale';
 
 class ChallengeDialog extends React.Component {
   static propTypes = {

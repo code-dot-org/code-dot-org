@@ -1,9 +1,11 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
+
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import CodeReviewError from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewError';
 import javalabMsg from '@cdo/javalab/locale';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   messageTitle: null,

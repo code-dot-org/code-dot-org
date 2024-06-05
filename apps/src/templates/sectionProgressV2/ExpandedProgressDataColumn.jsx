@@ -1,80 +1,122 @@
-import React from 'react';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import styles from './progress-table-v2.module.scss';
-import {studentShape} from '../teacherDashboard/teacherSectionsRedux';
-import {studentLevelProgressType} from '../progress/progressTypes';
+import React from 'react';
 import {connect} from 'react-redux';
-import LevelDataCell from './LevelDataCell';
+
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import i18n from '@cdo/locale';
+
+import {studentLevelProgressType} from '../progress/progressTypes';
+import {studentShape} from '../teacherDashboard/teacherSectionsRedux';
+
 import ExpandedProgressColumnHeader from './ExpandedProgressColumnHeader.jsx';
+import LevelDataCell, {getStudentRowHeaderId} from './LevelDataCell';
+
+import styles from './progress-table-v2.module.scss';
+
+const getFullName = student =>
+  student.familyName ? `${student.name} ${student.familyName}` : student.name;
 
 function ExpandedProgressDataColumn({
   lesson,
-  sectionId,
   levelProgressByStudent,
   sortedStudents,
   removeExpandedLesson,
+  sectionId,
 }) {
   const [expandedChoiceLevels, setExpandedChoiceLevels] = React.useState([]);
 
   const toggleExpandedChoiceLevel = level => {
     if (expandedChoiceLevels.includes(level.id)) {
       setExpandedChoiceLevels(expandedChoiceLevels.filter(l => l !== level.id));
+      analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_COLLAPSE_CHOICE_LEVEL, {
+        sectionId: sectionId,
+        levelId: level.id,
+      });
     } else if (level?.sublevels?.length > 0) {
       setExpandedChoiceLevels([...expandedChoiceLevels, level.id]);
+      analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_EXPAND_CHOICE_LEVEL, {
+        sectionId: sectionId,
+        levelId: level.id,
+      });
     }
   };
 
   const getSingleLevelColumn = React.useCallback(
-    (level, propOverrides = {}) => {
+    (level, studentId, propOverrides = {}) => {
       return (
-        <div
-          className={styles.expandedLevelColumn}
-          key={lesson.id + '.' + level.id}
-        >
-          {sortedStudents.map(student => (
-            <LevelDataCell
-              studentId={student.id}
-              level={level}
-              studentLevelProgress={
-                levelProgressByStudent[student.id][level.id]
-              }
-              key={student.id + '.' + lesson.id + '.' + level.id}
-              {...propOverrides}
-            />
-          ))}
-        </div>
+        <LevelDataCell
+          studentId={studentId}
+          level={level}
+          studentLevelProgress={levelProgressByStudent[studentId][level.id]}
+          key={studentId + '.' + lesson.id + '.' + level.id}
+          lessonId={lesson.id}
+          {...propOverrides}
+        />
       );
     },
-    [levelProgressByStudent, sortedStudents, lesson]
+    [levelProgressByStudent, lesson]
   );
 
   const getExpandedChoiceLevel = React.useCallback(
-    level => [
-      getSingleLevelColumn(level, {overrideIcon: 'split'}),
-      ...level.sublevels.map(sublevel => getSingleLevelColumn(sublevel)),
+    (level, studentId) => [
+      getSingleLevelColumn(level, studentId, {
+        expandedChoiceLevel: true,
+        className: styles.expandedLevelCellFirst,
+      }),
+      ...level.sublevels.map((sublevel, index) => {
+        return getSingleLevelColumn(sublevel, studentId, {
+          parentLevelId: level.id,
+          className:
+            index === level.sublevels.length - 1
+              ? classNames(
+                  styles.expandedLevelCellLast,
+                  styles.expandedLevelCell
+                )
+              : styles.expandedLevelCell,
+          linkClassName: styles.expandedChoiceLevelLink,
+        });
+      }),
     ],
     [getSingleLevelColumn]
   );
 
   const progress = React.useMemo(
     () => (
-      <div className={styles.expandedTable}>
-        {lesson.levels.flatMap(level => {
-          if (
-            level.sublevels?.length > 0 &&
-            expandedChoiceLevels.includes(level.id)
-          ) {
-            return getExpandedChoiceLevel(level);
-          }
-          return [getSingleLevelColumn(level)];
-        })}
-      </div>
+      <tbody className={styles.expandedTable}>
+        {sortedStudents.map(student => (
+          <tr className={styles.expandedLevelColumn} key={student.id}>
+            <th hidden={true} id={getStudentRowHeaderId(student.id)}>
+              {getFullName(student)}
+            </th>
+            {lesson.levels.flatMap(level => {
+              if (
+                level.sublevels?.length > 0 &&
+                expandedChoiceLevels.includes(level.id)
+              ) {
+                return getExpandedChoiceLevel(level, student.id);
+              }
+              return [getSingleLevelColumn(level, student.id)];
+            })}
+          </tr>
+        ))}
+      </tbody>
     ),
-    [lesson, expandedChoiceLevels, getSingleLevelColumn, getExpandedChoiceLevel]
+    [
+      lesson,
+      sortedStudents,
+      expandedChoiceLevels,
+      getSingleLevelColumn,
+      getExpandedChoiceLevel,
+    ]
   );
 
   return (
-    <div key={lesson.id} className={styles.expandedColumn}>
+    <table key={lesson.id} className={styles.expandedColumn}>
+      <caption hidden={true}>
+        {i18n.progressForLesson({lessonName: lesson.title})}
+      </caption>
       <ExpandedProgressColumnHeader
         lesson={lesson}
         removeExpandedLesson={removeExpandedLesson}
@@ -82,18 +124,18 @@ function ExpandedProgressDataColumn({
         toggleExpandedChoiceLevel={toggleExpandedChoiceLevel}
       />
       {progress}
-    </div>
+    </table>
   );
 }
 
 ExpandedProgressDataColumn.propTypes = {
   sortedStudents: PropTypes.arrayOf(studentShape),
-  sectionId: PropTypes.number,
   levelProgressByStudent: PropTypes.objectOf(
     PropTypes.objectOf(studentLevelProgressType)
   ).isRequired,
   lesson: PropTypes.object.isRequired,
   removeExpandedLesson: PropTypes.func.isRequired,
+  sectionId: PropTypes.number,
 };
 
 export const UnconnectedExpandedProgressDataColumn = ExpandedProgressDataColumn;

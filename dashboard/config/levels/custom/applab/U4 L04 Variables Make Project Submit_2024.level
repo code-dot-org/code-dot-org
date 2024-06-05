@@ -26,8 +26,8 @@
     },
     "encrypted_examples": "es/ZziwLN0gMvrSJknv/dZ71IY4KDIyJ0Rp9k1tMQQ5htdii4umjrKukWGIw\ne4d3uLkdwXejQTHame+WGMQ2qg==\n",
     "reference_links": [
-      "/docs/concepts/patterns/counter-patterns-with-event/",
-      "/docs/concepts/patterns/variable-with-string-concatenation-pattern/"
+      "/courses/csp-2024/guides/counter-patterns-with-event",
+      "/courses/csp-2024/guides/variable-with-string-concatenation-pattern"
     ],
     "embed": "false",
     "instructions_important": "false",

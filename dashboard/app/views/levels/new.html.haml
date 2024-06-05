@@ -34,7 +34,6 @@
   %li= link_to 'Build a Match Level', new_level_path(type: 'Match')
   %li= link_to 'Build an Evaluation Multi Level', new_level_path(type: 'EvaluationMulti')
   %li= link_to 'Build a Text Match Level (for open-ended responses use the new Free Response level type)', new_level_path(type: 'TextMatch')
-  %li= link_to 'Build a Contract Match Level', new_level_path(type: 'ContractMatch')
   (The following level types are en_us only!)
   %li= link_to 'Build a Markdown Level', new_level_path(type: 'External')
   %li= link_to 'Build a CurriculumReference Level', new_level_path(type: 'CurriculumReference')
@@ -61,14 +60,13 @@
   %li= link_to 'Build an External Link Level', new_level_path(type: 'ExternalLink')
   %li= link_to 'Build a Java Lab level', new_level_path(type: 'Javalab')
   %li= link_to 'Build a Music Lab level', new_level_path(type: 'Music')
-  %li= link_to 'Build a Python Lab level', new_level_path(type: 'Pythonlab')
   %li= link_to 'Build a Panels level', new_level_path(type: 'Panels')
-  %li= link_to 'Build a Web Lab 2 level', new_level_path(type: 'Weblab2')
 
-%h2 Algebra
+%h2 Code Bridge
+%p These level types are still in development (expect breaking changes), and are not yet localized (en_us only!)
 %ul
-  %li= link_to 'Build a Calc Level', new_level_path(type: 'Calc')
-  %li= link_to 'Build an Eval Level', new_level_path(type: 'Eval')
+  %li= link_to 'Build a Python Lab level', new_level_path(type: 'Pythonlab')
+  %li= link_to 'Build a Web Lab 2 level', new_level_path(type: 'Weblab2')
 
 %h2 Your Levels
 - @levels.each do |level|

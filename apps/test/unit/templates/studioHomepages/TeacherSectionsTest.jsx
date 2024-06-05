@@ -1,7 +1,9 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+
 import {UnconnectedTeacherSections as TeacherSections} from '@cdo/apps/templates/studioHomepages/TeacherSections';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('TeacherSections', () => {
   const defaultProps = {
@@ -54,17 +56,6 @@ describe('TeacherSections', () => {
     ).to.equal(undefined);
   });
 
-  it('renders PL sections area if coteacher invite for PL', () => {
-    const wrapper = shallow(
-      <TeacherSections {...defaultProps} coteacherInviteForPl={{id: 2}} />
-    );
-    expect(wrapper.find('Connect(ContentContainer)').length).to.equal(2);
-    expect(wrapper.find('Connect(OwnedSections)').length).to.equal(1);
-    expect(
-      wrapper.find('Connect(OwnedSections)').props().isPlSections
-    ).to.equal(true);
-  });
-
   it('renders student sections area if there are student sections', () => {
     const wrapper = shallow(
       <TeacherSections {...defaultProps} studentSectionIds={[1]} />
@@ -89,43 +80,5 @@ describe('TeacherSections', () => {
     expect(
       wrapper.find('Connect(OwnedSections)').props().isPlSections
     ).to.equal(undefined);
-  });
-
-  it('renders pl sections area if there are pl sections', () => {
-    const wrapper = shallow(
-      <TeacherSections {...defaultProps} plSectionIds={[1]} />
-    );
-    expect(wrapper.find('Connect(ContentContainer)').length).to.equal(2);
-    expect(wrapper.find('Connect(OwnedSections)').length).to.equal(1);
-    expect(
-      wrapper.find('Connect(OwnedSections)').props().isPlSections
-    ).to.equal(true);
-  });
-
-  it('renders pl sections area if there are pl sections and coteacher invite for PL', () => {
-    const wrapper = shallow(
-      <TeacherSections
-        {...defaultProps}
-        plSectionIds={[1]}
-        coteacherInviteForPl={{id: 2}}
-      />
-    );
-    expect(wrapper.find('Connect(ContentContainer)').length).to.equal(2);
-    expect(wrapper.find('Connect(OwnedSections)').length).to.equal(1);
-    expect(
-      wrapper.find('Connect(OwnedSections)').props().isPlSections
-    ).to.equal(true);
-  });
-
-  it('renders both sections area if there are student and pl sections', () => {
-    const wrapper = shallow(
-      <TeacherSections
-        {...defaultProps}
-        studentSectionIds={[2]}
-        plSectionIds={[1]}
-      />
-    );
-    expect(wrapper.find('Connect(ContentContainer)').length).to.equal(3);
-    expect(wrapper.find('Connect(OwnedSections)').length).to.equal(2);
   });
 });

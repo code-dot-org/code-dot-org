@@ -356,7 +356,8 @@
     ],
     "long_instructions": "##Import from the Backpack\r\n\r\nNow let's import your `PainterPlus`(#e7e8ea) class to this program.\r\n\r\n1. Click the **Backpack** button in the upper-left corner of the **Editor**.\r\n\r\n2. Check the `PainterPlus.java`(#e7e8ea) file, then click the **Import** button.",
     "project_template_level_name": "CSA U1L8 PBT_pilot-2022",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:21:33.288+00:00\",\"changed\":[\"cloned from \\\"CSA U1L8-L4_2022\\\"\"],\"cloned_from\":\"CSA U1L8-L4_2022\"}]"

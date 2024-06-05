@@ -149,9 +149,7 @@ module OmniauthCallbacksControllerTests
       assert_equal 'teacher', assigns(:user).user_type
     end
 
-    private
-
-    def mock_oauth
+    private def mock_oauth
       mock_oauth_for AuthenticationOption::FACEBOOK, generate_auth_hash(
         provider: AuthenticationOption::FACEBOOK
       )
@@ -159,7 +157,7 @@ module OmniauthCallbacksControllerTests
 
     # The user signs in through Facebook, which hits the oauth callback
     # and redirects to something else: homepage, finish_sign_up, etc.
-    def sign_in_through_facebook
+    private def sign_in_through_facebook
       sign_in_through AuthenticationOption::FACEBOOK
     end
   end

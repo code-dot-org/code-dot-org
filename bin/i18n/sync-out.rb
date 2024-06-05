@@ -6,9 +6,6 @@
 require File.expand_path('../../../dashboard/config/environment', __FILE__)
 require 'cdo/languages'
 
-require 'cdo/crowdin/legacy_utils'
-require 'cdo/crowdin/project'
-
 require 'fileutils'
 require 'json'
 require 'parallel'
@@ -26,9 +23,13 @@ Dir[File.expand_path('../resources/**/*.rb', __FILE__)].sort.each {|file| requir
 
 module I18n
   module SyncOut
-    def self.perform
+    def self.parse_options
+      I18n::Utils::SyncOutBase.parse_options
+    end
+
+    def self.perform(opts = parse_options)
       puts "Sync out starting"
-      I18n::Resources::Apps.sync_out
+      I18n::Resources::Apps.sync_out(**opts)
       I18n::Resources::Dashboard.sync_out
       I18n::Resources::Pegasus.sync_out
 

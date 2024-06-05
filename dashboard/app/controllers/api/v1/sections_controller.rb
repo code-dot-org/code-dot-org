@@ -1,3 +1,5 @@
+require 'metrics/events'
+
 class Api::V1::SectionsController < Api::V1::JSONApiController
   load_resource :section, find_by: :code, only: [:join, :leave]
   before_action :find_follower, only: :leave
@@ -70,8 +72,16 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     )
     return head :bad_request unless section.persisted?
 
+    if Policies::Lti.lti? current_user
+      metadata = {'section_type' => section[:login_type]}
+      Metrics::Events.log_event(
+        user: current_user,
+        event_name: 'lti_section_created_non_lti',
+        metadata: metadata,
+      )
+    end
     # Add all coteachers specified in params
-    params[:instructor_emails]&.each {|instructor_email| section.add_instructor(instructor_email, current_user)}
+    params[:instructor_emails]&.each {|instructor_email| section.invite_instructor(instructor_email, current_user)}
 
     # TODO: Move to an after_create step on Section model when old API is fully deprecated
     current_user.assign_script @unit if @unit
@@ -79,6 +89,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     render json: section.summarize
   end
 
+  # PATCH /api/v1/sections/<id>
   # Allows you to update a section. Clears any assigned script_id in the process
   def update
     section = Section.find(params[:id])
@@ -116,7 +127,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     end
 
     # Add all coteachers specified in params
-    params[:instructor_emails]&.each {|instructor_email| section.add_instructor(instructor_email, current_user)}
+    params[:instructor_emails]&.each {|instructor_email| section.invite_instructor(instructor_email, current_user)}
 
     render json: section.summarize
   end
@@ -165,7 +176,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       return
     end
     render json: {
-      sections: current_user.sections_as_student.map(&:summarize_without_students),
+      sections: current_user.sections_as_student.reload.map(&:summarize_without_students),
       studentSections: current_user.sections_as_student_participant.map(&:summarize_without_students),
       plSections: current_user.sections_as_pl_participant.map(&:summarize_without_students),
       result: result
@@ -276,6 +287,12 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     @section.update_code_review_expiration(enable_code_review)
     @section.save
     render json: {result: 'success', expiration: @section.code_review_expires_at}
+  end
+
+  # POST /api/v1/sections/<id>/ai_tutor_enabled
+  def set_ai_tutor_enabled
+    @section.update!(ai_tutor_enabled: params[:ai_tutor_enabled])
+    render json: {result: 'success'}
   end
 
   private def find_follower

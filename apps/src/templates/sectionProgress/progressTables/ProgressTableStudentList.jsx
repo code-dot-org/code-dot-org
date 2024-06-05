@@ -1,17 +1,22 @@
-import React from 'react';
-import * as Table from 'reactabular-table';
-import * as Sticky from 'reactabular-sticky';
-import * as Virtualized from 'reactabular-virtualized';
 import PropTypes from 'prop-types';
+import React from 'react';
+import * as Sticky from 'reactabular-sticky';
+import * as Table from 'reactabular-table';
+import * as Virtualized from 'reactabular-virtualized';
+
+import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import i18n from '@cdo/locale';
+
 import {
   unitDataPropType,
   studentTableRowType,
 } from '../sectionProgressConstants';
+
 import ProgressTableStudentName from './ProgressTableStudentName';
+
 import styleConstants from './progress-table-constants.module.scss';
+
 import './progressTableStyles.scss';
-import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
-import i18n from '@cdo/locale';
 
 export default class ProgressTableStudentList extends React.Component {
   static propTypes = {

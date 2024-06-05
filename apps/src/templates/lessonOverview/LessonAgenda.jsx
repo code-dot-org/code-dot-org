@@ -1,7 +1,8 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+
 import i18n from '@cdo/locale';
-import _ from 'lodash';
 
 export default class LessonAgenda extends Component {
   static propTypes = {

@@ -7,6 +7,8 @@ import {generateGraphDataFromChord, ChordGraphNote} from '../utils/Chords';
 import PreviewControls from './PreviewControls';
 import musicI18n from '../locale';
 import moduleStyles from './chordPanel.module.scss';
+import LoadingOverlay from './LoadingOverlay';
+import MusicPlayer from '../player/MusicPlayer';
 
 const NUM_OCTAVES = 3;
 const START_OCTAVE = 4;
@@ -23,9 +25,15 @@ export interface ChordPanelProps {
   library: MusicLibrary;
   initValue: ChordEventValue;
   onChange: (value: ChordEventValue) => void;
-  previewChord: (chord: ChordEventValue, onStop?: () => void) => void;
-  previewNote: (note: number, instrument: string, onStop?: () => void) => void;
-  cancelPreviews: () => void;
+  previewChord: MusicPlayer['previewChord'];
+  previewNote: MusicPlayer['previewNote'];
+  cancelPreviews: MusicPlayer['cancelPreviews'];
+  setupSampler: MusicPlayer['setupSampler'];
+  isInstrumentLoading: MusicPlayer['isInstrumentLoading'];
+  isInstrumentLoaded: MusicPlayer['isInstrumentLoaded'];
+  registerInstrumentLoadCallback: (
+    callback: (instrumentName: string) => void
+  ) => void;
 }
 
 const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
@@ -35,6 +43,10 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
   previewNote,
   cancelPreviews,
   library,
+  setupSampler,
+  isInstrumentLoading,
+  isInstrumentLoaded,
+  registerInstrumentLoadCallback,
 }) => {
   const [selectedNotes, setSelectedNotes] = useState<number[]>(initValue.notes);
   const [playStyle, setPlayStyle] = useState<PlayStyle>(initValue.playStyle);
@@ -42,10 +54,13 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
   const [isDisabled, setIsDisabled] = useState<boolean>(
     selectedNotes.length >= MAX_NOTES
   );
+  const [isLoading, setIsLoading] = useState(false);
+  const [isPlayingPreview, setIsPlayingPreview] = useState(false);
 
-  const instruments: [string, string][] = library.groups[0].folders
-    .filter(folder => folder.type === 'instrument')
-    .map(folder => [folder.name, folder.path]);
+  const instruments: [string, string][] = library.instruments.map(folder => [
+    folder.name,
+    folder.id,
+  ]);
 
   const onPressKey = useCallback(
     (note: number) => {
@@ -62,6 +77,30 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
   );
 
   useEffect(() => {
+    if (!isInstrumentLoaded(instrument)) {
+      setIsLoading(true);
+      // If the instrument is already loading, register a callback and wait for it to finish.
+      if (isInstrumentLoading(instrument)) {
+        registerInstrumentLoadCallback(instrumentName => {
+          if (instrumentName === instrument) {
+            setIsLoading(false);
+          }
+        });
+      } else {
+        // Otherwise, initiate the load.
+        setupSampler(instrument, () => setIsLoading(false));
+      }
+    }
+  }, [
+    setupSampler,
+    isInstrumentLoading,
+    isInstrumentLoaded,
+    instrument,
+    setIsLoading,
+    registerInstrumentLoadCallback,
+  ]);
+
+  useEffect(() => {
     onChange({
       notes: selectedNotes,
       playStyle,
@@ -73,15 +112,23 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
     setIsDisabled(selectedNotes.length >= MAX_NOTES);
   }, [selectedNotes]);
 
-  const playPreview = useCallback(
-    () =>
-      previewChord({
+  const playPreview = useCallback(() => {
+    previewChord(
+      {
         notes: selectedNotes,
         playStyle,
         instrument,
-      }),
-    [previewChord, selectedNotes, playStyle, instrument]
-  );
+      },
+      undefined, // TODO: use onTick() callback to highlight notes
+      () => setIsPlayingPreview(false)
+    );
+    setIsPlayingPreview(true);
+  }, [previewChord, selectedNotes, playStyle, instrument]);
+
+  const stopPreview = useCallback(() => {
+    cancelPreviews();
+    setIsPlayingPreview(false);
+  }, [cancelPreviews, setIsPlayingPreview]);
 
   const onClear = useCallback(() => setSelectedNotes([]), [setSelectedNotes]);
 
@@ -92,6 +139,7 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
           value={instrument}
           onChange={event => setInstrument(event.target.value)}
           className={moduleStyles.dropdown}
+          disabled={isLoading}
         >
           {instruments.map(([name, value]) => (
             <option key={value} value={value}>
@@ -116,7 +164,7 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
         startOctave={START_OCTAVE}
         selectedNotes={selectedNotes}
         onPressKey={onPressKey}
-        isDisabled={isDisabled}
+        isDisabled={isDisabled || isLoading}
       />
       <NoteGrid
         numOctaves={NUM_OCTAVES}
@@ -125,11 +173,13 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
         playStyle={playStyle}
         instrument={instrument}
       />
+      <LoadingOverlay show={isLoading} />
       <PreviewControls
-        enabled={selectedNotes.length > 0}
+        enabled={selectedNotes.length > 0 && !isLoading}
         playPreview={playPreview}
         onClickClear={onClear}
-        cancelPreviews={cancelPreviews}
+        cancelPreviews={stopPreview}
+        isPlayingPreview={isPlayingPreview}
       />
     </div>
   );

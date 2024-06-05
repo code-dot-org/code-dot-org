@@ -1,0 +1,56 @@
+name 'sp-pl-CV_empathize_Lessons'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Empathize Lessons
+
+
+#### Lessons 2 and 3 in the Computer Vision unit help students realize the importance of **understanding user stories** and needs to develop an effective product. 
+
+---
+
+## Lesson 2: Empathizing with Users 
+
+<img src="https://images.code.org/7546281a32ad5bbe5dfeeb22add1178f-image-1715283683089.png" alt="farmwise robot and crops" width="250px"  style="border-radius:10px; float:right; margin: 0 20px 40px 40px;">
+
+
+#### This lesson delves into understanding user needs and problems through qualitative and quantitative **data collection**. 
+#### Students are introduced to the **empathize phase** of the design thinking process, using real-world examples like FarmWise's approach to understanding farmer needs. 
+
+#### In the main activity, students practice developing empathy and tailored research questions to gather user data that informs the design of practical solutions for community-specific issues.
+
+### <b>Check out the entire lesson plan  <a href="http://studio.code.org/s/computer-vision-pilot/lessons/2" target="blank" rel="noopener noreferrer">here</a>.</b>
+
+
+
+## Lesson 3: 
+<img src="https://images.code.org/7c51d9a0f3fe4cb77ffc27ec78a4a097-image-1714578560802.png" alt="person squatting with exercise app" width="250px" style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
+
+#### In this lesson, students learn to distinguish between **qualitative and quantitative data**.
+
+#### This lesson uses a workout tracking device as a case study to discuss privacy concerns and user demographics. 
+
+#### Students then develop a **data collection plan**, crafting questions to gather useful user data for surveys that inform their project designs.
+
+<div style="clear:both;"></div>
+<br>
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> Consider using Google Forms or Microsoft Forms to collect survey information. You may need to give your students a brief tutorial on how to use these tools. Decide ahead of time of how you want to approach data collection.
+</p>
+</div>
+
+
+### <b>Check out the entire lesson plan  <a href="http://studio.code.org/s/computer-vision-pilot/lessons/3" target="blank" rel="noopener noreferrer">here</a>.</b>
+
+<br>
+
+ 
+---
+
+## Let's explore empathizing 
+
+#### In the next few levels, we will dive deeper into the activity from lesson 2. 
+MARKDOWN

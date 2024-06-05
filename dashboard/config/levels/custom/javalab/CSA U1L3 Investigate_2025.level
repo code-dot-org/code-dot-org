@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U1L3 Classes PBT_2025",
     "video_key": "csa_object_oriented_programming",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-16T23:00:37.341+00:00\",\"changed\":[\"cloned from \\\"CSA U1L3 Investigate_2023\\\"\"],\"cloned_from\":\"CSA U1L3 Investigate_2023\"}]"

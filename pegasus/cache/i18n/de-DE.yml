@@ -258,6 +258,7 @@ de-DE:
   class_submission_out_of_school_summer_camp: Sommercamp
   classicmaze_name: Klassisches Labyrinth
   code_hoc_coming: '"The Hour of Code" ist da - 8.-14. Dezember!'
+  code_org_logo_alt: Code.org Startseite
   code_sign_up: Melden Sie sich an, um an der Informatikwoche teilzunehmen
   codea_beyond_gradelevel: Ab der 9. Klasse
   codea_beyond_longdescription: Mit Codea für iPad können Sie Spiele und Simulationen
@@ -1188,6 +1189,7 @@ de-DE:
   header_about_us: 'Über uns '
   header_course_catalog: Kurs Katalog
   header_courses: Kurse
+  header_districts: Bezirke
   header_documentation: Dokumentation
   header_educate_beyond: Jenseits von Code.org
   header_educate_community: Online Community
@@ -1214,6 +1216,7 @@ de-DE:
   header_project_gallery: Projekte
   header_report_abuse: Missbrauch melden
   header_report_bug: Einen Fehler melden
+  header_schools: Schulen
   header_screen_reader_hamburger: Speisekarte
   header_screen_reader_help: Hilfe Menu
   header_sections: Lerngruppen
@@ -1225,7 +1228,7 @@ de-DE:
   help_recruit: Hilf uns, weitere Programmierer zu rekrutieren!
   help_recruit_coders: Hilf uns, weitere Programmierer/-innen für dein Team zu gewinnen!
   help_translate: Hilf mit, bei der Übersetzung.
-  hero_name: Minecraft Helden Reise
+  hero_name: Minecraft Heldenreise
   hoc-encryption_name: Einfache Verschlüsselung
   hoc-impact-study_name: Klassisches Labyrinth mit Umfrage
   hoc2014_everyone: Jeder

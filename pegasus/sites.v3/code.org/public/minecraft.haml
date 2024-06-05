@@ -9,7 +9,7 @@ theme: responsive_full_width
 %section.hero-banner-basic.overlay
   .wrapper.flex-container.justify-space-between.align-items-center.wrap
     .text-wrapper
-      %h1{style: "color: white"}
+      %h1.white
         =hoc_s(:minecraft_hero_heading)
     %figure
       %img{src: "/images/mc/minecraft-banner-figures.png", alt: ""}
@@ -44,6 +44,4 @@ theme: responsive_full_width
   .wrapper
     = view :ai_microsoft_block
 
-%script{:src=>'/js/jquery.carouFredSel-6.2.1-packed.js'}
-%script{:src=>'/js/jquery.touchSwipe.min.js'}
-%script{:src=>'/js/page/minecraft_page.js'}
+= view :swiper_page_minecraft

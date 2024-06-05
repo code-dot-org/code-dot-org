@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U2L10-toString PBT_2025",
     "teacher_markdown": "Students should notice that the `super.toString()` calls the superclass version of the `toString()` method and concatenates this with `\"Length: \"` and the running time of the `Movie` object. Students should also notice that the running time is printed on a new line and conclude that the `\\n` prints a new line.",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-16T23:50:44.496+00:00\",\"changed\":[\"cloned from \\\"CSA U2L10-L3_2023\\\"\"],\"cloned_from\":\"CSA U2L10-L3_2023\"}]"

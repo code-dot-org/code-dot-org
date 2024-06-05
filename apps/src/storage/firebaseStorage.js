@@ -1,3 +1,18 @@
+// TODO: post-firebase-cleanup, remove this file #56994
+
+import parseCsv from 'csv-parse';
+import _ from 'lodash';
+
+// TODO: unfirebase: ideally we would not have a back-reference to redux here, however
+// coupling firebaseStorage to redux made the datablock storage version much cleaner,
+// and since this code is being removed once we're done migrating, it was preferable
+// to make firebaseStorage.js ugly rather than the datablockStorage.js API ugly.
+//
+// We only use getStore to sniff if the table is a shared table or not, whereas in
+// datablock storage, we check this on the backend and hide the abstraction.
+import {getStore} from '../redux';
+
+import {WarningType} from './constants';
 import {
   ColumnType,
   castValue,
@@ -5,20 +20,6 @@ import {
   isNumber,
   toBoolean,
 } from './dataBrowser/dataUtils';
-import parseCsv from 'csv-parse';
-import {
-  init,
-  loadConfig,
-  fixFirebaseKey,
-  getRecordsRef,
-  getProjectCountersRef,
-  getProjectDatabase,
-  getSharedDatabase,
-  resetConfigForTesting,
-  isInitialized,
-  validateFirebaseKey,
-  getPathRef,
-} from './firebaseUtils';
 import {
   enforceTableCount,
   incrementRateLimitCounters,
@@ -33,9 +34,23 @@ import {
   getColumnsRef,
   getColumnNamesFromRecords,
   getColumnNamesSnapshot,
+  onColumnsChange,
 } from './firebaseMetadata';
+import {
+  init,
+  loadConfig,
+  fixFirebaseKey,
+  getRecordsRef,
+  getProjectCountersRef,
+  getProjectDatabase,
+  getSharedDatabase,
+  resetConfigForTesting,
+  isInitialized,
+  validateFirebaseKey,
+  getPathRef,
+  unescapeFirebaseKey,
+} from './firebaseUtils';
 import {tableType} from './redux/data';
-import {WarningType} from './constants';
 
 /**
  * Namespace for Firebase storage.
@@ -63,7 +78,7 @@ FirebaseStorage.getColumnsForTable = function (tableName, tableType) {
 /**
  * @return {Promise<boolean>} whether the project channel exists
  */
-FirebaseStorage.channelExists = function () {
+FirebaseStorage.projectHasData = function () {
   return getProjectDatabase()
     .once('value')
     .then(snapshot => snapshot.val() !== null);
@@ -540,6 +555,14 @@ FirebaseStorage.resetForTesting = function () {
   resetConfigForTesting();
 };
 
+// Current tables are live updated, the data is NOT copied into
+// the student project, instead a new type of firebase node is created
+// like /v3/channels/{channelId}/current_tables/Daily Weather
+// as opposed to a normal table that would be like
+// /v3/channels/{channelId}/storage/tables/Daily Weather
+//
+// Current tables can be found in https://console.firebase.google.com/project/cdo-v3-shared/database/cdo-v3-shared/data/~2Fv3~2Fchannels~2Fshared~2Fmetadata~2Fmanifest~2Ftables
+// where the table has `current: true` set in the manifest object
 FirebaseStorage.addCurrentTableToProject = function (
   tableName,
   onSuccess,
@@ -557,6 +580,7 @@ FirebaseStorage.addCurrentTableToProject = function (
     .then(onSuccess, onError);
 };
 
+// TODO: unfirebase, this method is not found in DatablockStorage
 FirebaseStorage.copyStaticTable = function (tableName, onSuccess, onError) {
   return enforceUniqueTableNames(tableName)
     .then(incrementRateLimitCounters)
@@ -655,6 +679,8 @@ FirebaseStorage.createTable = function (tableName, onSuccess, onError) {
  * @param {function ()} onSuccess
  * @param {function (string)} onError
  */
+// TODO: unfirebase, note that this diverges from DatablockStorage.deleteTable
+// which doesn't take a `type` parameter, since that's handled on the backend
 FirebaseStorage.deleteTable = function (tableName, type, onSuccess, onError) {
   if (type === tableType.SHARED) {
     getPathRef(getProjectDatabase(), `current_tables/${tableName}`)
@@ -1067,6 +1093,165 @@ FirebaseStorage.importCsv = function (
     .then(recordsData => validateRecordsData(recordsData))
     .then(recordsData => overwriteTableData(tableName, recordsData))
     .then(onSuccess, onError);
+};
+
+// Initialize redux's list of tables from firebase, and keep it up to date as
+// new tables are added and removed.
+// TODO: unfirebase, this is ONLY implemented in FirebaseStorage, not DatablockStorage
+FirebaseStorage.subscribeToListOfProjectTables = function (
+  onTableAdded,
+  onTableRemoved
+) {
+  // Subscribe to the list of regular tables in the current project
+  const tableRef = getPathRef(getProjectDatabase(), 'counters/tables');
+  tableRef.on('child_added', snapshot => {
+    let tableName =
+      typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key;
+    tableName = unescapeFirebaseKey(tableName); // TODO: unfirebase
+    onTableAdded(tableName, tableType.PROJECT);
+  });
+  tableRef.on('child_removed', snapshot => {
+    let tableName =
+      typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key;
+    tableName = unescapeFirebaseKey(tableName); // TODO: unfirebase
+    onTableRemoved(tableName);
+  });
+
+  // Subscribe to the list of shared tables, aka "current tables"
+  // these are like "Spotify Viral 50", but we'll also put deduped
+  // stock tables here
+
+  // /v3/channels/<channel_id>/current_tables tracks which
+  // current tables the project has imported. Here we initialize the
+  // redux list of current tables and keep it in sync
+  let currentTableRef = getPathRef(getProjectDatabase(), 'current_tables');
+  currentTableRef.on('child_added', snapshot => {
+    let tableName =
+      typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key;
+    tableName = unescapeFirebaseKey(tableName);
+    onTableAdded(tableName, tableType.SHARED);
+  });
+  currentTableRef.on('child_removed', snapshot => {
+    let tableName =
+      typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key;
+    tableName = unescapeFirebaseKey(tableName);
+    onTableRemoved(tableName);
+  });
+};
+
+FirebaseStorage.getKeyValuePairs = function (onKeyValuePairsChanged) {
+  const projectStorageRef = getPathRef(getProjectDatabase(), 'storage');
+
+  getPathRef(projectStorageRef, 'keys').on('value', snapshot => {
+    if (snapshot) {
+      let keyValueData = snapshot.val();
+      // "if all of the keys are integers, and more than half of the keys between 0 and
+      // the maximum key in the object have non-empty values, then Firebase will render
+      // it as an array."
+      // https://firebase.googleblog.com/2014/04/best-practices-arrays-in-firebase.html
+      // Coerce it to an object here, if needed, so we can unescape the keys
+      if (Array.isArray(keyValueData)) {
+        keyValueData = Object.assign({}, keyValueData);
+      }
+      keyValueData = _.mapKeys(keyValueData, (_, key) =>
+        unescapeFirebaseKey(key)
+      );
+      onKeyValuePairsChanged(keyValueData);
+    }
+  });
+};
+
+FirebaseStorage.loadTable = function (
+  tableName,
+  onColumnsChanged,
+  onRecordsChanged
+) {
+  // This is an ugly coupling, we use getStore() from redux to check if this is a shared table or not
+  // this code is not required in the DatablockStorage version, because the backend does the switching
+  // and hides it from the frontend.
+  let newTableType = getStore().getState().data.tableListMap[tableName];
+
+  const db =
+    newTableType === tableType.PROJECT
+      ? getProjectDatabase()
+      : getSharedDatabase();
+
+  // subscribe to records
+  getPathRef(db, `storage/tables/${tableName}/records`).on(
+    'value',
+    snapshot => {
+      onRecordsChanged(snapshot.val());
+    }
+  );
+
+  // subscribe to columns
+  onColumnsChange(db, tableName, columnNames => {
+    onColumnsChanged(columnNames);
+  });
+};
+
+FirebaseStorage.previewSharedTable = function (
+  sharedTableName,
+  onColumnsChanged,
+  onRecordsChanged
+) {
+  const db = getSharedDatabase();
+
+  // load records, note only once
+  getPathRef(db, `storage/tables/${sharedTableName}/records`).once(
+    'value',
+    snapshot => {
+      onRecordsChanged(snapshot.val());
+    }
+  );
+
+  // subscribe to columns
+  onColumnsChange(db, sharedTableName, columnNames => {
+    onColumnsChanged(columnNames);
+  });
+};
+
+// Unsubscribe Firebase from a table
+// TODO: unfirebase, this is ONLY implemented in FirebaseStorage, not DatablockStorage
+FirebaseStorage.unsubscribeFromTable = function (tableName) {
+  const projectStorageRef = getPathRef(getProjectDatabase(), 'storage');
+  const sharedStorageRef = getPathRef(getSharedDatabase(), 'storage');
+
+  // Unlisten from previous data view. This should not interfere with events listened to
+  // by onRecordEvent, which listens for added/updated/deleted events, whereas we are
+  // only unlistening from 'value' events here.
+  getPathRef(projectStorageRef, `tables/${tableName}/records`).off('value');
+  getPathRef(sharedStorageRef, `tables/${tableName}/records`).off('value');
+  getColumnsRef(getProjectDatabase(), tableName).off();
+};
+
+// TODO: unfirebase, this is ONLY implemented in FirebaseStorage, not DatablockStorage
+FirebaseStorage.unsubscribeFromKeyValuePairs = function () {
+  const projectStorageRef = getPathRef(getProjectDatabase(), 'storage');
+  getPathRef(projectStorageRef, 'keys').off('value');
+};
+
+// This method was added so it could be optimized in the DatablockStorage version
+FirebaseStorage.getColumn = function (
+  tableName,
+  columnName,
+  onSuccess,
+  onError
+) {
+  this.readRecords(
+    tableName,
+    {},
+    records => {
+      if (records === null) {
+        onSuccess(null);
+      } else {
+        let columnValues = [];
+        records.forEach(row => columnValues.push(row[columnName]));
+        onSuccess(columnValues);
+      }
+    },
+    onError
+  );
 };
 
 export default FirebaseStorage;

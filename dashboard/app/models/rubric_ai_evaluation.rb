@@ -25,7 +25,7 @@ class RubricAiEvaluation < ApplicationRecord
   belongs_to :requester, class_name: 'User'
   belongs_to :rubric
 
-  has_many :learning_goal_ai_evaluations, inverse_of: :rubric_ai_evaluation
+  has_many :learning_goal_ai_evaluations, inverse_of: :rubric_ai_evaluation, dependent: :destroy
 
   validates :status, inclusion: {in: SharedConstants::RUBRIC_AI_EVALUATION_STATUS.values}
 

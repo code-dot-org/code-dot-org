@@ -1,25 +1,66 @@
-@import 'color.scss';
-@import 'font.scss';
+@import 'color';
+@import 'font';
+@import '@cdo/apps/componentLibrary/common/styles/mixins';
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 50px rgba(90 153 212 / 0);
+  }
+  100% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(90 153 212 / 0);
+  }
+}
 
 .floatingActionButton {
   position: fixed;
   left: 10px;
   bottom: 48px;
 
-  height: 60px;
-  width: 60px;
-  background-size: 60px;
+  height: 55px;
+  width: 55px;
+  background-size: 55px;
   padding: 0;
 
   border-width: 0;
   border-radius: 30px;
+
+  img {
+    opacity: 1;
+    border-radius: 30px;
+  }
+}
+
+.pulse {
+  animation: pulse 1.5s 1.7;
+  box-shadow: 0 0 0 0 rgba(90 153 212 / 0.5);
+}
+
+.taOverlay {
+  position: fixed;
+  left: 51px;
+  bottom: 97px;
+
+  height: 18px;
+  width: 28px;
+  background-size: 28px;
+  padding: 0;
+
+  border-width: 2px;
+  border-color: $background_gray;
+  border-radius: 15px;
+  border-style: solid;
 }
 
 .rubricContainer {
   position: fixed;
   left: 10px;
-  bottom: 116px;
-  z-index: 400;
+  bottom: 120px;
+  z-index: 2000;
   width: 760px;
 }
 
@@ -70,44 +111,81 @@
 }
 
 .rubricContent {
-  border-radius: 0 0 4px 4px;
   border-right: 2px solid $neutral_dark;
   border-left: 2px solid $neutral_dark;
-  border-bottom: 2px solid $neutral_dark;
   background: $neutral_light;
-  box-shadow: 4px 4px 6px 0 rgba(0 0 0 / 0.25);
-
+  box-shadow: 0.25rem 0.25rem 0.375rem 0 rgba(0 0 0 / 0.25);
   height: 408px;
-
   overflow-x: hidden;
   overflow-y: auto;
-
   padding: 16px;
+
+  &:last-child {
+    border-radius: 0 0 4px 4px;
+    border-bottom: 2px solid $neutral_dark;
+  }
 }
 
 .visibleRubricContent {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 24px;
+  gap: 28px;
 }
 
 .hiddenRubricContent {
   display: none;
 }
 
-.rubricContainerFooter {
+.rubricFooter {
+  background: $neutral_dark;
+  border-radius: 0 0 4px 4px;
+  border-bottom: 2px solid $neutral_dark;
+  color: $neutral_white;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  align-self: stretch;
+  flex-direction: row;
+  gap: 0.5rem;
+  padding: 0.5rem 2rem 0.5rem 1rem;
+}
+
+.rubricFooterContent {
+  flex: 1 1 100%;
+  padding: 0.25rem 0;
+
+  input[type='checkbox'] {
+    & + i::before {
+      background: $neutral_white;
+    }
+
+    & ~ span {
+      color: $neutral_white;
+    }
+  }
 }
 
 .submitToStudentButtonAndError {
   display: flex;
+  flex: 0 0 auto;
   flex-direction: column;
   align-items: flex-end;
-  gap: 0.5rem;
+  gap: 0.25rem;
+  align-self: stretch;
+
+  p {
+    color: $neutral_white;
+    line-height: 0.75rem;
+    margin: 0;
+    min-height: 0.75rem;
+    position: relative;
+    top: 0.1875rem;
+    font-size: 0.6875rem;
+  }
+}
+
+.rubricContainerFooter {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   align-self: stretch;
 }
 
@@ -132,6 +210,7 @@
   align-items: flex-start;
   gap: 1.5rem;
   align-self: stretch;
+  justify-content: center;
 }
 
 .levelAndStudentDetails {
@@ -180,24 +259,33 @@
   border-right: 2px solid $neutral_dark;
   border-left: 2px solid $neutral_dark;
 
+  padding-inline-start: 0.75rem;
+
   display: flex;
   height: 40px;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   align-self: stretch;
 }
 
 .rubricHeaderLeftSide {
   display: flex;
-  gap: 4px;
-  //height: 40px;
+  gap: 0.25rem;
   align-items: center;
+
+  .aiBotOutlineIcon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  span {
+    @include label-two;
+    margin: 0;
+  }
 }
 
 .rubricHeaderRightSide {
   display: flex;
-  // height: 40px;
-  // justify-content: flex-end;
   align-items: flex-start;
   align-self: stretch;
 }
@@ -329,26 +417,8 @@ button.rubricHeaderTab {
   }
 }
 
-.aiToken {
-  display: flex;
-  height: 20px;
-  padding: 4px 8px;
-  justify-content: center;
-  align-items: center;
-  gap: 4px;
-
-  border-radius: 30px;
-  border: 1px solid $product_information_default;
-  background: $lightest_cyan;
-}
-
-p.aiTokenText {
-  color: $product_information_default;
+p.feedbackIndicatorText {
   margin-bottom: 0;
-}
-
-.aiTokenText {
-  color: $product_affirmative_default;
 }
 
 h2.studentName {
@@ -363,15 +433,28 @@ h2.studentName {
   align-items: center;
 }
 
+.learningGoalOuterBlock {
+  align-self: stretch;
+}
+
 .learningGoalExpanded {
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1rem;
   align-self: stretch;
+
+  .tipsDetailsSummary {
+    font-size: 0.875rem;
+
+    &:hover {
+      background-color: unset;
+    }
+  }
 }
 
 .learningGoalTips {
+  display: none;
   padding: 0.5rem;
   border-radius: 0.25rem;
   border: 1px solid $neutral_dark50;
@@ -391,7 +474,9 @@ h2.studentName {
   display: flex;
   flex-direction: row;
   width: 100%;
-  gap: 12px;
+  height: 100px;
+  gap: 8px;
+  min-height: 92px;
 }
 
 .evidenceLevelInnerDiv:first-child {
@@ -467,7 +552,7 @@ p.errorMessage {
   cursor: pointer;
   margin-left: 5px;
   margin-right: 5px;
-  font-size: 18px;
+  font-size: 0.75rem;
   vertical-align: middle;
   color: gray;
 }
@@ -480,6 +565,27 @@ p.errorMessage {
   padding: 1rem 1rem 0 1rem;
 }
 
+.aiAssessmentOuterBlock {
+  padding: 0.75rem 0.75rem 1rem 1.25rem;
+  border-radius: 0.25rem;
+  border: 1px solid $neutral_dark20;
+  background: $neutral_white;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: calc(-0.5rem * sqrt(2) + 0.125rem);
+    left: calc(50% - 0.5rem);
+    width: 1rem;
+    height: 1rem;
+    background: $neutral_white;
+    transform: rotate(45deg);
+    border-top: 1px solid $neutral_dark20;
+    border-left: 1px solid $neutral_dark20;
+  }
+}
+
 .aiAssessmentBlock {
   align-items: flex-start;
   display: flex;
@@ -487,51 +593,109 @@ p.errorMessage {
   position: relative;
 }
 
+.aiAssessmentInfoBlock {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  gap: 1rem;
+}
+
+.aiAssessmentInfoRow {
+  display: flex;
+  flex-direction: row;
+  align-self: stretch;
+  gap: 0.5rem;
+
+  p {
+    margin: 0;
+  }
+}
+
+p.aiAssessmentScoreText {
+  strong::after {
+    content: ' ';
+  }
+}
+
+p.aiAssessmentEvidenceBlock {
+  margin: 0;
+
+  + ul li p {
+    margin: 0;
+  }
+}
+
+.aiConfidenceBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  > div:first-child {
+    display: flex;
+    flex-direction: row;
+    gap: 0.25rem;
+    margin-top: 0.375rem;
+  }
+}
+
+.aiConfidenceBoxText {
+  p.labelThree {
+    @include label-three;
+    white-space: nowrap;
+    margin: 0;
+  }
+}
+
+.aiConfidenceBar {
+  display: inline-block;
+  width: 3.25rem;
+  height: 0.5rem;
+  border-radius: 0.25rem;
+  background: $light_gray_200;
+  margin: 0;
+}
+
+.aiConfidenceBarLow {
+  &:first-child {
+    background: $light_negative_500;
+  }
+}
+
+.aiConfidenceBarMedium {
+  &:not(:last-child) {
+    background: $light_caution_500;
+  }
+}
+
+.aiConfidenceBarHigh {
+  background: $light_affirmative_500;
+}
+
+.aiAssessmentFeedback {
+  border-top: 1px solid $light_gray_200;
+  border-bottom: 1px solid $light_gray_200;
+  padding: 1rem 0;
+
+  label {
+    margin: 0 0 1rem;
+  }
+}
+
 .aiBotImg {
-  width: 42px;
-  height: 68px;
-}
-
-.greenAiAssessment {
-  align-items: left;
-  border: 1px solid $product_affirmative_default;
-  background-color: $light_affirmative_100;
-  border-radius: 4px;
-  display: flex;
-  flex-grow: 1;
-  overflow: hidden;
-  padding: 8px;
-  position: relative;
-}
-
-.redAiAssessment {
-  align-items: left;
-  border: 1px solid $product_negative_default;
-  background-color: $product_negative_light;
-  border-radius: 4px;
-  display: flex;
-  flex-grow: 1;
-  overflow: hidden;
-  padding: 8px;
-  position: relative;
-}
-
-.noAiAssessment {
-  align-items: left;
-  background-color: $lightest_gray;
-  border: 1px solid $light_gray;
-  border-radius: 4px;
-  display: flex;
-  flex-grow: 1;
-  overflow: hidden;
-  padding: 8px;
-  position: relative;
+  width: 4rem;
 }
 
 .inputTextbox {
-  width: 95%;
-  height: 5rem;
-  margin-top: 5;
+  width: 100%;
+  box-sizing: border-box;
+  height: 2.375rem;
+  min-height: 2.375rem;
+  padding: 0.5rem 0.625rem;
+  border-radius: 0.25rem;
+  border: 1px solid $light_black;
+  color: $light_black;
+  resize: vertical;
+  overflow: auto;
 }
 
 .autosaveMessage {
@@ -555,6 +719,10 @@ p.errorMessage {
   border-radius: 4px;
   background: $light_info_100;
 
+  &:last-child {
+    margin-bottom: 24px;
+  }
+
   p {
     margin: 0;
     line-height: 1.25;
@@ -573,50 +741,45 @@ i.infoAlertIcon {
   display: none;
 }
 
-.aiFeedbackRow {
+.aiFeedbackRadioBox {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0.5rem;
+  gap: 0.125rem;
+}
+
+p.aiFeedbackRadioBoxText {
+  @include label-three;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.aiFeedbackRadioRow {
   display: flex;
   flex-direction: row;
-  gap: 15px;
-  padding-top: 10px;
-}
+  align-self: center;
+  gap: 1rem;
 
-.aiFeedbackThumbsUpChecked {
-  display: flex;
-  padding: 4px;
-  font-size: 16px;
-  vertical-align: middle;
-  color: $product_affirmative_default;
-}
-
-.aiFeedbackThumbsUp {
-  display: flex;
-  padding: 4px;
-  font-size: 16px;
-  vertical-align: middle;
-
-  &:hover {
-    background-color: $light_affirmative_100;
-    color: $product_affirmative_default;
+  > label {
+    margin: 0;
   }
 }
 
-.aiFeedbackThumbsDownChecked {
-  display: flex;
-  padding: 4px;
-  font-size: 16px;
-  vertical-align: middle;
-  color: $product_negative_default;
+.aiFeedbackRadioLabelChecked {
+  background-color: $light_gray_100;
+  color: $light_gray_800;
 }
 
-.aiFeedbackThumbsDown {
+.aiFeedbackRadioLabel {
   display: flex;
   padding: 4px;
   font-size: 16px;
   vertical-align: middle;
+  border-radius: 0.25rem;
 
   &:hover {
-    background-color: $product_negative_light;
-    color: $product_negative_default;
+    background-color: $light_gray_100;
+    color: $light_gray_800;
   }
 }
 
@@ -634,16 +797,23 @@ i.infoAlertIcon {
 }
 
 .aiFeedbackTextbox {
-  height: 60px;
+  height: 2.375rem;
+  min-height: 2.375rem;
+  padding: 0.5rem 0.625rem;
   width: 100%;
-  overflow: scroll;
+  max-width: 100%;
+  resize: vertical;
+  overflow: auto;
   box-sizing: border-box;
+  border-radius: 0.25rem;
+  border: 1px solid $light_black;
+  color: $light_black;
 }
 
 .submitFeedbackRow {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
   gap: 0.5rem;
 }
 
@@ -652,8 +822,10 @@ i.infoAlertIcon {
   gap: 0.5rem;
 }
 
-.aiFeedbackReceived {
-  margin-left: auto;
+em.aiFeedbackReceived {
+  i {
+    margin-right: 0.5rem;
+  }
 }
 
 .selectors {
@@ -663,26 +835,27 @@ i.infoAlertIcon {
   align-items: flex-start;
   align-self: stretch;
   gap: 15px;
-  padding: 10px;
 }
 
 .studentInfoGroup {
   display: flex;
-  align-self: stretch;
+  align-self: center;
+  justify-content: space-around;
   flex-direction: column;
+  text-align: center;
+  gap: 0.75rem;
+
+  h3 {
+    margin: 0;
+  }
+}
+
+.learningGoalsWrapper {
+  width: 100%;
 }
 
 .studentSelector {
-  width: 180px;
-}
-
-// Start of rubrics redesign
-
-//TODO: remove tempContainer style when redesign is ready to roll out
-.tempContainer {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+  width: 240px;
 }
 
 .learningGoalsContainer {
@@ -698,44 +871,134 @@ i.infoAlertIcon {
   min-width: 100%;
 }
 
-.learningGoalButton {
+.learningGoalRing {
+  flex: 0 0 auto;
+}
+
+button.learningGoalButton {
+  align-self: center;
   background: none;
   border: none;
+  box-shadow: none;
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0.5rem;
+
+  &:active,
+  &:hover {
+    box-shadow: none;
+    // The important is needed here to override the common button:active style
+    border: none !important;
+  }
+}
+
+button.learningGoalButtonLeft {
+  margin-left: 0.5rem;
+  margin-right: 0.625rem;
+}
+
+button.learningGoalButtonRight {
+  margin-left: 0.625rem;
+  margin-right: 0.5rem;
 }
 
 .learningGoalsHeader {
   display: flex;
   flex-direction: row;
-  height: 60px;
-  padding: 0.5rem 1rem 0 1rem;
+  min-height: 60px;
   justify-content: space-between;
-  align-items: center;
   align-self: stretch;
   line-height: 154%;
   position: relative;
+  margin: 1rem 0 0 0;
+  padding: 0 0 0.75rem 0;
+  border-bottom: 1px $light_gray_100 solid;
+  overflow: hidden;
 }
 
 .learningGoalsHeaderLeftSide {
   @include main-font-semi-bold;
   display: flex;
   justify-content: flex-start;
-  align-items: left;
-  gap: 16px;
+  align-items: center;
   font-size: 14px;
+  flex: 1;
+  overflow: hidden;
 }
 
 .learningGoalsHeaderRightSideV2 {
   display: flex;
   justify-content: flex-end;
-  align-items: right;
+  align-items: center;
+  align-self: stretch;
   gap: 16px;
   font-weight: 325;
+  flex: 0 0 auto;
 }
 
 .learningGoalsHeaderText {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  padding: 0 0.5rem;
+  flex: 0 1 100%;
+  overflow: hidden;
+}
+
+p.learningGoalsHeaderTextBody,
+h5.learningGoalsHeaderTextBody {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  flex: 1;
+  margin: 0;
+}
+
+h5.learningGoalsHeaderTextBody {
+  margin: 0 0 0.25rem;
+  display: flex;
+  flex-direction: row;
+
+  span {
+    align-self: stretch;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+
+.learningGoalSummary {
+  display: flex;
+  flex-direction: row;
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: space-between;
+  border-bottom: 1px $light_gray_100 solid;
+  margin: 1rem 1rem 0 1rem;
+}
+
+.aiTokenContainer {
+  align-self: start;
+  margin-left: 0.5rem;
+}
+
+.aiToken {
+  display: flex;
+  height: 20px;
+  padding: 2px 12px 2px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+  border-radius: 30px;
+  background: $ai_rubric_cyan;
+}
+
+p.aiTokenText {
+  color: $light_black;
+  font-size: 0.7rem;
+  line-height: 1rem;
+  margin-bottom: 0;
 }
 
 .progressRing {
@@ -754,6 +1017,10 @@ i.infoAlertIcon {
   border-radius: 0.25rem;
   border: 1px solid $neutral_dark20;
   background: $neutral_white;
+}
+
+p.evidenceLevelHeaderText {
+  margin: 0 0 0.25rem;
 }
 
 .evidenceLevelSetHorizontalV2 {
@@ -777,40 +1044,50 @@ i.infoAlertIcon {
   margin-bottom: 0;
 }
 
-.evidenceLevelUnselected {
+.evidenceLevel {
   border-radius: 100px;
-  border: 1px solid $light_black;
-  background: $neutral_white;
-  gap: 10px;
-  padding: 3px 16px 0;
+  border-width: 1px;
+  border-style: solid;
+  margin: 0;
+  padding: 0 16px 0;
   font-size: 0.875rem;
   height: 32px;
   text-align: center;
+}
+
+.evidenceLevelUnselected {
+  border-color: $light_black;
+  background: $neutral_white;
 
   &:hover {
     box-shadow: none;
     background-color: $light_gray_100;
   }
+
+  &:disabled {
+    border-color: $light_black;
+    background: $neutral_white;
+  }
 }
 
 .evidenceLevelSelected {
-  border-radius: 100px;
-  border: 1px solid $light_primary_500;
+  border-color: $light_primary_500;
   background: $light_primary_500;
-  gap: 10px;
-  padding: 3px 16px 0;
-  font-size: 0.875rem;
   color: $light_white;
-  height: 32px;
-  text-align: center;
 
   &:hover {
     box-shadow: none;
     background-color: $light_primary_700;
   }
+
+  &:disabled {
+    border-color: $light_primary_500;
+    background: $light_primary_500;
+    color: $light_white;
+  }
 }
 
-.aiEvalSuggestion {
+.evidenceLevelSuggested {
   border-radius: 100px;
   border: 1px solid $light_black;
   background: $neutral_white;
@@ -818,31 +1095,50 @@ i.infoAlertIcon {
   padding: 3px 16px 0;
   font-size: 0.875rem;
   height: 32px;
-  box-shadow: 0 0 0 2px #3cfff8;
+  box-shadow: 0 0 0 0.125rem $ai_rubric_cyan;
 
   &:hover {
-    box-shadow: 0 0 0 2px #3cfff8;
+    box-shadow: 0 0 0 0.125rem $ai_rubric_cyan;
     background-color: $light_gray_100;
+  }
+
+  &:disabled {
+    border-radius: 100px;
+    border: 1px solid $light_black;
+    background: $neutral_white;
+    gap: 10px;
+    padding: 3px 16px 0;
+    font-size: 0.875rem;
+    height: 32px;
+    box-shadow: 0 0 0 0.125rem $ai_rubric_cyan;
   }
 }
 
 .fabBackground {
-  width: 724px;
-  padding: 16px 16px 32px 16px;
-  gap: 16px;
-  border-radius: 0 0 4px 4px;
-  border-right: 2px solid $neutral_dark;
-  border-bottom: 2px solid $neutral_dark;
-  border-left: 2px solid $neutral_dark;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 1rem;
+  border-right: 0.125rem solid $neutral_dark;
+  border-left: 0.125rem solid $neutral_dark;
   background: $neutral_white;
-  box-shadow: 4px 4px 6px 0 rgb(0 0 0 / 0.25);
+  box-shadow: 0.25rem 0.25rem 0.375rem 0 rgba(0 0 0 / 0.25);
   height: 408px;
-
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: scroll;
+
+  &:last-child {
+    border-radius: 0 0 0.25rem 0.25rem;
+    border-bottom: 0.125rem solid $neutral_dark;
+  }
+
   h2 {
     margin-bottom: 0;
   }
+}
+
+.sectionSelector {
+  width: 180px;
 }
 
 .rubricTabGroup {
@@ -861,19 +1157,37 @@ i.infoAlertIcon {
 
 .infoAlertLeft {
   display: flex;
-  gap: 10px
+  gap: 10px;
 }
 
 .infoAlertRight {
   display: flex;
   align-items: flex-start;
   align-self: stretch;
+  margin: 0;
+}
+
+button.infoAlertRight {
+  box-shadow: none;
+  border: 1px solid transparent;
+
+  &:active,
+  &:hover {
+    box-shadow: none;
+  }
 }
 
 .settingsGroup {
   display: flex;
   flex-direction: column;
   align-self: stretch;
+}
+
+.settingsContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
 }
 
 .settingsContainers {
@@ -893,6 +1207,10 @@ i.infoAlertIcon {
   }
 }
 
+.aiSettingsContainer {
+  align-items: unset;
+}
+
 .runAiAllStatuses {
   display: flex;
   flex-direction: column;
@@ -904,13 +1222,66 @@ i.infoAlertIcon {
   gap: 1rem;
 }
 
-.detailsVisible {
+p.detailsVisible {
   display: inline;
   padding-inline-end: 1rem;
 }
 
-.detailsHidden {
+p.detailsHidden {
   display: none;
 }
 
-// End of rubrics redesign
+.studentDropdownOptionContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.studentDropdownOption {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  margin-top: 3px;
+  height: 26px;
+}
+
+.greenStatusBlob {
+  background-color: $light_affirmative_100;
+  border-radius: 20px;
+  padding: 4px 10px 0;
+  height: 22px;
+  display: inline;
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.yellowStatusBlob {
+  background-color: $lighter_yellow;
+  border-radius: 20px;
+  padding: 5px 10px 0;
+  height: 22px;
+  display: inline;
+  p {
+    margin: 0, 0, 0, 0;
+  }
+}
+
+.grayStatusBlob {
+  background-color: $light_gray_100;
+  border-radius: 20px;
+  padding: 5px 10px 0;
+  height: 22px;
+  display: inline;
+  p {
+    margin: 0, 0, 0, 0;
+  }
+}
+
+.submitStatusText {
+  display: inline;
+  padding-top: 3px;
+  p {
+    margin-bottom: 0;
+  }
+}

@@ -1,5 +1,6 @@
 require_relative '../../shared/middleware/helpers/storage_id'
 require 'cdo/aws/s3'
+require 'cdo/mailjet'
 require 'cdo/db'
 
 # rubocop:disable CustomCops/PegasusDbUsage
@@ -28,7 +29,7 @@ class DeleteAccountsHelper
   #   usual checks on account type, row limits, etc.  For use only when an
   #   engineer needs to purge an account manually after investigating whatever
   #   prevented it from being automatically purged.
-  def initialize(log: STDERR, bypass_safety_constraints: false)
+  def initialize(log: $stderr, bypass_safety_constraints: false)
     @pegasus_db = PEGASUS_DB
 
     @log = log
@@ -71,6 +72,8 @@ class DeleteAccountsHelper
     end
 
     # Clear Firebase contents for user's channels
+    # TODO: unfirebase, write a version of this for Datablock Storage: #57004
+    # TODO: post-firebase-cleanup, switch to the datablock storage version: #56994
     @log.puts "Deleting Firebase contents for #{channel_count} channels"
     FirebaseHelper.delete_channels encrypted_channel_ids
 
@@ -248,6 +251,10 @@ class DeleteAccountsHelper
     ContactRollupsPardotMemory.find_or_create_by(email: email).update(marked_for_deletion_at: Time.now.utc)
   end
 
+  def remove_mailjet_contact(email)
+    MailJet.delete_contact(email)
+  end
+
   # Removes the StudioPerson record associated with the user IF it is not
   # associated with any other users.
   # @param [User] user The user whose studio person we will delete if it's not shared
@@ -306,6 +313,13 @@ class DeleteAccountsHelper
       feedback.save!
     end
     @log.puts "Cleared #{as_student_count} TeacherFeedback" if as_student_count > 0
+  end
+
+  def delete_ai_tutor_interactions(user_id)
+    chat_messages_to_delete = AiTutorInteraction.where(user_id: user_id)
+    count = chat_messages_to_delete.count
+    chat_messages_to_delete.in_batches.destroy_all
+    @log.puts "Deleted #{count} AI Tutor Interactions" if count > 0
   end
 
   def clean_and_destroy_code_reviews(user_id)
@@ -427,10 +441,12 @@ class DeleteAccountsHelper
     clean_level_source_backed_progress(user.id)
     clean_pegasus_forms_for_user(user)
     delete_project_backed_progress(user)
+    delete_ai_tutor_interactions(user.id)
     clean_and_destroy_pd_content(user.id, user_email)
     clean_user_sections(user.id)
     remove_user_from_sections_as_student(user)
     remove_poste_data(user_email) if user_email&.present?
+    remove_mailjet_contact(user_email) if user_email&.present?
     purge_contact_rollups(user_email)
     purge_unshared_studio_person(user)
     anonymize_user(user)
@@ -460,18 +476,16 @@ class DeleteAccountsHelper
     clean_pegasus_forms_for_email(email)
   end
 
-  private
-
-  def clean_pegasus_forms_for_user(user)
+  private def clean_pegasus_forms_for_user(user)
     @log.puts "Cleaning pegasus forms for user"
     clean_pegasus_forms(@pegasus_db[:forms].where(user_id: user.id))
   end
 
-  def clean_pegasus_forms_for_email(email)
+  private def clean_pegasus_forms_for_email(email)
     clean_pegasus_forms(@pegasus_db[:forms].where(email: email))
   end
 
-  def clean_pegasus_forms(forms_recordset)
+  private def clean_pegasus_forms(forms_recordset)
     form_ids = forms_recordset.map {|f| f[:id]}
     @pegasus_db[:form_geos].
       where(form_id: form_ids).

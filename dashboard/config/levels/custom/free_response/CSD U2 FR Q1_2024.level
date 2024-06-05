@@ -1,5 +1,6 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
   "game_id": 52,
   "created_at": "2023-11-28T16:59:34.000Z",
   "level_num": "custom",
@@ -18,11 +19,10 @@
     "encrypted": "false",
     "allow_multiple_attempts": "false",
     "teacher_markdown": "**Content: Unit 2 Lesson 8**\r\n\r\nCopyright is intended to protect the rights of content creators. These rights include being recognized as the creator when the work is displayed, or deciding who can use and make money off the work.",
-    "encrypted_solution": "7YS/csTzqvbWaVi5l7eXhaWgbCdro6f1Xs7T+Vsp99XwpDJC+7CR3WrAnJPz\nBXig70nvsFiNVCruaMTNH/HUyGdTrNnKiWOGLaEokR/4BMsN6W26c7bIc0DO\n6lzJRpw6O9KexFTfa5VknIIJr3rcx82G7soT2QzCuppZYtUYDUs5b4l1pN+x\n5YrH9EyzmxP8U6BNPfe9XQ/VU3ZWhrawLOtwB0ND/GpG5wxQxVePZvvpJcfl\nuuFYhDRVU3Jzyxd6JV0c6o/romxJjc6dZSR9Ky+LPB7MIw8/HP0/RWtv5pQs\n01R1TgRH9/wY0KQ3P8wh+DR6LX0/1ZFVSnnwPVjTQg==\n"
+    "encrypted_solution": "7YS/csTzqvbWaVi5l7eXhfeolm+ksDuBNSENqo36C0BmqLR+yZxIuVUo64O8\nSvlXrj6fV7MXTed6AywuTTTRQh2A8Ppbk2TV58B0MqUzq16u3X96+xHXduZY\nChsx9m2tso/L4J22W9K2HK4UFLONiyyiafiNgA6Z9JifeVbzGW/kz4dgDCZX\n7fSoCb9AMoHypUp3faZpCAP9fEDK16/fEIPNsgjG+BctmGPBFQtH7k8Uf8cE\ngpShEqOYwcwVMLaHp2AQQMognmE0mthW4y1FTq5uMIikG/SHKyLv3JIHGZF+\nvr4mfntAuT1KL3vu3a5NAQ1ALy8NhqwnxQey8G7Tgg==\n"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T16:59:34.358+00:00\",\"changed\":[\"cloned from \\\"CSD U2 FR Q1_2023\\\"\"],\"cloned_from\":\"CSD U2 FR Q1_2023\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-11-28T16:59:34.358+00:00\",\"changed\":[\"cloned from \\\"CSD U2 FR Q1_2023\\\"\"],\"cloned_from\":\"CSD U2 FR Q1_2023\"},{\"changed_at\":\"2024-02-22 17:00:38 +0000\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

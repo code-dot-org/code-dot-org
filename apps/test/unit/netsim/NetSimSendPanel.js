@@ -1,12 +1,17 @@
 /** @file Tests for NetSimLogPanel */
 import $ from 'jquery';
-import {assert} from '../../util/reconfiguredChai';
+
 import {KeyCodes} from '@cdo/apps/constants';
-var NetSimTestUtils = require('../../util/netsimTestUtils');
-var NetSimSendPanel = require('@cdo/apps/netsim/NetSimSendPanel');
-var NetSimLocalClientNode = require('@cdo/apps/netsim/NetSimLocalClientNode');
-var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
+
+import {assert} from '../../util/reconfiguredChai';
+
 var NetSimConstants = require('@cdo/apps/netsim/NetSimConstants');
+var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
+var NetSimLocalClientNode = require('@cdo/apps/netsim/NetSimLocalClientNode');
+var NetSimSendPanel = require('@cdo/apps/netsim/NetSimSendPanel');
+
+var NetSimTestUtils = require('../../util/netsimTestUtils');
+
 var MessageGranularity = NetSimConstants.MessageGranularity;
 
 /**

@@ -1,13 +1,17 @@
+import classNames from 'classnames';
 import React from 'react';
-import i18n from '@cdo/locale';
-import LegendItem from './LegendItem';
-import {ITEM_TYPE} from './ItemType';
-import styles from './progress-table-legend.module.scss';
+
 import {StrongText} from '@cdo/apps/componentLibrary/typography';
+import i18n from '@cdo/locale';
+
+import {ITEM_TYPE} from './ItemType';
+import LegendItem from './LegendItem';
+
+import styles from './progress-table-legend.module.scss';
 
 export default function LevelTypesBox() {
   return (
-    <div className={styles.legend}>
+    <div className={classNames(styles.legend, styles.levelTypes)}>
       <StrongText className={styles.headerContainer}>
         {i18n.levelTypes()}
       </StrongText>

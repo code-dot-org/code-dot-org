@@ -4,14 +4,16 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "curriculum_umbrella": "PD Workshop Activity CSA",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-17 14:08:19 UTC",
+    "serialized_at": "2024-05-09 19:02:42 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -303,6 +305,7 @@
       "key": "7e048515-4ff5-4b6c-bcdc-172f7dc645af",
       "position": 1,
       "properties": {
+        "duration": 55
       },
       "seeding_key": {
         "lesson_activity.key": "7e048515-4ff5-4b6c-bcdc-172f7dc645af",
@@ -351,6 +354,7 @@
       "key": "01242250-21e7-4bdc-aae3-1543e063f76f",
       "position": 1,
       "properties": {
+        "duration": 45
       },
       "seeding_key": {
         "lesson_activity.key": "01242250-21e7-4bdc-aae3-1543e063f76f",

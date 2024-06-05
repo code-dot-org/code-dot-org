@@ -1,9 +1,11 @@
+import sinon from 'sinon';
+
 import {
   isUnsupportedBrowser,
   isIE11,
   getBrowserName,
 } from '@cdo/apps/util/browser-detector';
-import sinon from 'sinon';
+
 import {expect} from '../../util/reconfiguredChai';
 
 describe('Browser Detector', () => {

@@ -23,38 +23,38 @@ nav: promote_nav
 
 컴퓨터 과학은 산업을 변화시키고, 새로운 상업분야를 만들어 내고, 모든 과학분야에 혁신을 추진하며, 기존의 경제 영역에서 생산성을 강화하고 있습니다.
 
-반면 컴퓨터 과학 분야는 미국 경제 생산량에 크게 기여하는 정보 기술 부문을 뒷받침하는 기본 주제입니다.
+Whereas the field of computer science is a foundational subject that underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
 
-인공 지능 리터러시는 컴퓨터 과학의 기본 개념, 인공 지능을 안전하고 책임감 있고 윤리적으로 사용하는 방법을 포함하여 인공 지능의 작동 방식과 관련된 지식, 기술 및 태도를 의미합니다.
+Whereas artificial intelligence literacy refers to the knowledge, skills, and attitudes associated with how artificial intelligence works, including fundamental concepts in computer science, and how to use artificial intelligence safely, responsibly, and ethically;
 
-반면 인공 지능을 포함한 컴퓨터 과학 분야는 미국 경제의 거의 모든 부문을 근본적으로 변화시킬 수 있는 힘을 가진 기술입니다.
+Whereas the field of computer science, including artificial intelligence, are technologies with the power to fundamentally transform nearly all sectors of the United States economy;
 
-반면 인공 지능을 포함한 모든 컴퓨터 과학 분야의 기술 리더십은 경제 및 국가 안보의 필수 요소입니다.
+Whereas technological leadership in all areas of computer science, including artificial intelligence, is an economic and national security imperative;
 
-컴퓨터 과학 일자리에 대한 전망은 밝으며 전국적으로 500,000개 이상의 컴퓨팅 일자리가 열려 있습니다.
+Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
 
-학생들에게 높은 수준의 컴퓨터과학 활동들에 참여할 수 있도록 하는 기회들을 주는 것은, 전체 삶을 살아가는데 있어서 매우 중요한 생각하는 방법과 기술들을 배울 수 있는 풍부한 기회들을 주는 것입니다;
+Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
 
-모든 학생들은 컴퓨터과학(정보과학) 교육에 대해 준비할만한 자격이 있습니다. 수준 높은 선생님, 컴퓨터과학기술, 나이에 따른 교육과정으로 컴퓨터과학(정보과학)을 초등학교부터 중고등학교 수준까지 교육받을 수 있도록 하는 것이 포함되어야 합니다.
+Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
 
-반면 컴퓨터 과학 교육에는 모든 학생이 컴퓨터 과학 과정에 대한 접근성을 높이고 컴퓨터 과학 교사에게 전문성 개발을 제공하는 등 해결해야 할 과제가 있습니다.
+Whereas computer science education has challenges to address, including improving access to computer science courses for all students, and providing professional development for computer science teachers;
 
-컴퓨터과학교육주간(Computer Science Education Week) 동안에 Hour of Code를 참여하는 것은 컴퓨터과학(정보과학)의 영역을 보다 이해하기 쉽게 배울 수 있으며, 더 많은 학생들이 컴퓨터과학에 대해서 더 많이 배울 수 있도록 격려할 수 있습니다.
+Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
 
-반면 컴퓨터 과학 분야는 인종, 민족, 성별이 다양한 분야의 후보자를 모집하고 유지하는 것을 포함하여 해결해야 할 상당한 형평성 장벽이 있습니다.
+Whereas the field of computer science has significant equity barriers to address, including attracting and retaining a field of candidates diverse in race, ethnicity, and gender at all levels and branches;
 
-컴퓨터과학 분야의 최초의 여성인 그레이스 머레이 호퍼(Grace Murray Hopper)는 새로운 프로그래밍 언어를 만들어 내는데 공헌하였으며, 컴퓨터과학 분야의 수 많은 성과들을 만들어내는 기초가 된 컴퓨터 시스템의 기초 표준들을 만들어내는 선구자 역할을 하였습니다; 그리고
+Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
 
-{{ campaign_date/start_long }} 주간은 그레이스 호퍼의 생일을 기리기 위해 '컴퓨터 과학 교육주간'으로 지정되었습니다. : 이제, 그러므로, 다시 말해 <br />
+Whereas the week of {{ campaign_date/start_long }}, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it <br />
 
-다음과 같이 결의합니다. [하원 또는 상원 의원, 주, 카운티, 시, 학교 위원회]는 --
+Resolved, That the (HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD) --
 
-(1) 컴퓨터 과학 교육주간({{ campaign_date/full }}) 지정을 지원합니다.
+(1) supports the designation of Computer Science Education Week ({{ campaign_date/full }});
 
-(2) 학교, 교육자, 학부모와 정책입안자들이 컴퓨터과학교육주간에 학생들이 Hour of Code 행사에 참여하도록 하는 것을 장려합니다;
+(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
 
-(3) 교사가 학생들에게 모든 교육 레벨에서 컴퓨터 과학에서의 지속적인 학습 경험을 제공하고 또한 학생들에게 컴퓨터 과학의 개념에 노출되게 하기 위해 첨단 전문성 개발을 받을 수 있는 메커니즘을 학교와 교사, 연구원, 대학, 비즈니스 리더, 정책입안자는 파악해야 합니다.
+(3) encourages schools, teachers, researchers, universities, business leaders, and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
 
-(4) 컴퓨터 과학 분야에서 소외된 인종 및 민족 집단의 여학생과 학생에게 기존 프로그램을 포함한 기회를 제공합니다.
+(4) encourages opportunities, including through existing programs, for female students and students from racial and ethnic groups underrepresented in computer science.
 
 {{ signup_button }}

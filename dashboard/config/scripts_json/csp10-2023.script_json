@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-11-07 19:54:12 UTC",
+    "serialized_at": "2024-02-21 22:17:57 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2886,6 +2886,12 @@
     }
   ],
   "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "algorithms_unit_slides_",
+        "script.name": "csp10-2023"
+      }
+    },
     {
       "seeding_key": {
         "resource.key": "all_resources_19",

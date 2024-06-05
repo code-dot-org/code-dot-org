@@ -1,24 +1,24 @@
-const webpack = require('webpack');
+/* eslint-disable import/order */
 const path = require('path');
+var pyodide = require('pyodide');
 const sass = require('sass');
+const webpack = require('webpack');
 
 // Webpack Plugins:
-const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
+const {PyodidePlugin} = require('@pyodide/webpack-plugin');
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+const CircularDependencyPlugin = require('circular-dependency-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-const LiveReloadPlugin = require('webpack-livereload-plugin');
-const {StatsWriterPlugin} = require('webpack-stats-plugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const ReactRefreshTypeScript = require('react-refresh-typescript');
 const TerserPlugin = require('terser-webpack-plugin');
 const UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
+const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
 const {WebpackManifestPlugin} = require('webpack-manifest-plugin');
-const WebpackNotifierPlugin = require('webpack-notifier');
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
-const {PyodidePlugin} = require('@pyodide/webpack-plugin');
-const CircularDependencyPlugin = require('circular-dependency-plugin');
+const {StatsWriterPlugin} = require('webpack-stats-plugin');
 
 const circularDependencies = require('./circular_dependencies.json');
-
 const envConstants = require('./envConstants');
-
 const {
   ALL_APPS,
   appsEntriesFor,
@@ -29,6 +29,8 @@ const {
   SHARED_ENTRIES,
   OTHER_ENTRIES,
 } = require('./webpackEntryPoints');
+
+const WEBPACK_DEV_SERVER_PORT = 9000;
 
 const p = (...paths) => path.resolve(__dirname, ...paths);
 
@@ -44,6 +46,8 @@ const nodeModulesToTranspile = [
   '@blockly/field-grid-dropdown',
   '@blockly/keyboard-navigation',
   '@blockly/plugin-scroll-options',
+  '@blockly/field-angle',
+  '@blockly/field-bitmap',
   'blockly',
   '@code-dot-org/dance-party',
   '@code-dot-org/johnny-five',
@@ -136,6 +140,7 @@ const nodePolyfillConfig = {
       stream: require.resolve('stream-browserify'),
       timers: require.resolve('timers-browserify'),
       crypto: false,
+      vm: require.resolve('vm-browserify'),
     },
   },
 };
@@ -208,6 +213,8 @@ const WEBPACK_BASE_CONFIG = {
       repl: p('src/noop'),
       '@cdo/storybook': p('.storybook'),
       serialport: false,
+      '@codebridge': p('src/codebridge'),
+      '@cdo/generated-scripts': p('generated-scripts'),
     },
   },
   module: {
@@ -280,8 +287,11 @@ const WEBPACK_BASE_CONFIG = {
         exclude: [p('src/lodash.js')],
         loader: 'babel-loader',
         options: {
-          cacheDirectory: p('.babel-cache'),
+          cacheDirectory: p('build/babel-cache'),
           compact: false,
+          ...(envConstants.HOT
+            ? {plugins: [['react-refresh/babel', {skipEnvCheck: true}]]}
+            : {}),
         },
       },
       {
@@ -294,6 +304,9 @@ const WEBPACK_BASE_CONFIG = {
               // Instead we typecheck in parallel using ForkTsCheckerWebpackPlugin
               transpileOnly: true,
               configFile: 'tsconfig.build.json',
+              getCustomTransformers: () => ({
+                before: envConstants.HOT ? [new ReactRefreshTypeScript()] : [],
+              }),
             },
           },
         ],
@@ -339,20 +352,6 @@ const WEBPACK_BASE_CONFIG = {
   ignoreWarnings: [/Failed to parse source map/],
 };
 
-// FIXME: figure out how to re-enable hot reloading with
-// the current webpack version.
-//
-// Disabled in 2023 because current webpack doesn't permit
-// a `module.loaders` property in the config.
-//
-// if (envConstants.HOT) {
-//   WEBPACK_BASE_CONFIG.module.loaders.push({
-//     test: /\.jsx?$/,
-//     loader: 'react-hot-loader',
-//     include: [p('src')],
-//   });
-// }
-
 /**
  * Adds pollyfills to each entrypoint (before the existing path(s))
  *
@@ -377,16 +376,12 @@ function addPollyfillsToEntryPoints(entries, polyfills) {
  * @param {Object} appEntries - defaults to building all apps, to build only one app pass in e.g. `appEntriesFor('maze')`
  * @param {boolean} minify - whether to minify the output
  * @param {boolean} piskelDevMode - whether to use the piskel dev mode
- * @param {boolean} watch - whether to watch for changes
- * @param {boolean} watchNotify - if watch is enabled, whether to use watch-notify
  * @returns {Object} A webpack config object for building `apps/`
  */
 function createWebpackConfig({
   appsEntries = appsEntriesFor(ALL_APPS),
-  minify,
-  piskelDevMode,
-  watch,
-  watchNotify,
+  minify = false,
+  piskelDevMode = false,
 } = {}) {
   //////////////////////////////////////////////
   ///////// WEBPACK CONFIG BEGINS HERE /////////
@@ -402,7 +397,6 @@ function createWebpackConfig({
     // Don't output >1000 lines of webpack build stats to the CI logs
     stats: envConstants.DEV ? 'normal' : 'errors-only',
     devtool: devtool({minify}),
-    watch,
     entry: addPollyfillsToEntryPoints(
       {
         ...appsEntries,
@@ -668,18 +662,66 @@ function createWebpackConfig({
               }),
             ]),
       }),
-      ...(watch
+      new PyodidePlugin({
+        outDirectory: `pyodide/${pyodide.version}`,
+      }),
+      ...(envConstants.HOT
         ? [
-            new LiveReloadPlugin({
-              appendScriptTag: envConstants.AUTO_RELOAD,
-            }),
+            new webpack.HotModuleReplacementPlugin({}),
+            new ReactRefreshWebpackPlugin(),
+            // Prints a URL for accessing the Dashboard via webpack-dev-server
+            {
+              apply: compiler => {
+                compiler.hooks.afterDone.tap('PrintDashboardURL', stats => {
+                  if (stats.hasErrors()) return;
+
+                  if (!process.env.WEBPACK_SERVE) {
+                    console.warn(
+                      "webpack-dev-server should be running, but it doesn't seem to be, url may be wrong"
+                    );
+                  }
+
+                  const TIMEOUT_SO_PRINT_IS_LAST = 1000;
+                  setTimeout(() => {
+                    const WEBPACK_DEV_SERVER_URL = `http://localhost-studio.code.org:${WEBPACK_DEV_SERVER_PORT}`;
+                    const BOLD = '\x1b[1m';
+                    const MAGENTA_BG = `\x1b[45m\x1b[30m${BOLD}`;
+                    const RESET = '\x1b[0m';
+                    console.log(
+                      `\n${MAGENTA_BG}To use webpack-dev-server, access Dashboard at:${RESET} ${BOLD}${WEBPACK_DEV_SERVER_URL}${RESET}`
+                    );
+                  }, TIMEOUT_SO_PRINT_IS_LAST);
+                });
+              },
+            },
           ]
         : []),
-      ...(watch && watchNotify
-        ? [new WebpackNotifierPlugin({alwaysNotify: true})]
-        : []),
-      new PyodidePlugin(),
     ],
+    devServer: envConstants.DEV
+      ? {
+          allowedHosts: [
+            'localhost-studio.code.org',
+            'localhost.code.org',
+            'localhost.hourofcode.com',
+          ],
+          client: {overlay: false},
+          port: WEBPACK_DEV_SERVER_PORT,
+          proxy: [
+            {
+              context: ['**'],
+              target: 'http://localhost-studio.code.org:3000',
+              changeOrigin: false,
+              logLevel: 'debug',
+            },
+          ],
+          host: '0.0.0.0',
+          hot: envConstants.HOT,
+          liveReload: envConstants.HOT,
+          devMiddleware: {
+            writeToDisk: true,
+          },
+        }
+      : undefined,
   };
 
   //////////////////////////////////////////////

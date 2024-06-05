@@ -810,9 +810,7 @@ class SourcesTest < FilesApiTestBase
     delete_all_source_versions(filename)
   end
 
-  private
-
-  def assert_restores_main_json_with_animation_version(version_value)
+  private def assert_restores_main_json_with_animation_version(version_value)
     delete_all_source_versions(MAIN_JSON)
 
     animation_key = @api.add_random_suffix('animation-key')
@@ -907,7 +905,7 @@ class SourcesTest < FilesApiTestBase
   # @param [Hash] body The main.json data given as a hash with string keys.
   # @return [String] S3 version id of the uploaded file
   #
-  def put_main_json(body)
+  private def put_main_json(body)
     @api.put_object(MAIN_JSON, body.to_json, {'CONTENT_TYPE' => 'application/json'})
     assert successful?
     JSON.parse(last_response.body)['versionId']
@@ -919,7 +917,7 @@ class SourcesTest < FilesApiTestBase
   # @param [String] body The animation file body
   # @return [String] S3 version id of the uploaded file
   #
-  def put_animation(filename, body)
+  private def put_animation(filename, body)
     @animations_api.post_file(filename, body, 'image/png')
     assert successful?
     JSON.parse(last_response.body)['versionId']
@@ -930,21 +928,21 @@ class SourcesTest < FilesApiTestBase
   # @param [String] version_id The S3 version id to restore
   # @return [String] S3 version id of the newly-restored main.json
   #
-  def restore_main_json(version_id)
+  private def restore_main_json(version_id)
     @api.restore_sources_version(MAIN_JSON, version_id)
     assert successful?
     JSON.parse(last_response.body)['version_id']
   end
 
-  def delete_all_source_versions(filename)
+  private def delete_all_source_versions(filename)
     delete_all_versions(CDO.sources_s3_bucket, "#{CDO.sources_s3_directory}/1/1/#{filename}")
   end
 
-  def delete_all_animation_versions(filename)
+  private def delete_all_animation_versions(filename)
     delete_all_versions(CDO.animations_s3_bucket, "animations_test/1/1/#{filename}")
   end
 
-  def assert_equal_json(expected_json, actual_json)
+  private def assert_equal_json(expected_json, actual_json)
     pretty_expected = JSON.pretty_generate JSON.parse expected_json
     pretty_actual = JSON.pretty_generate JSON.parse actual_json
     assert_equal pretty_expected, pretty_actual

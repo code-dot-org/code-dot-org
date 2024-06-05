@@ -1,11 +1,11 @@
-import React from 'react';
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import React from 'react';
 import sinon from 'sinon';
 
-import {expect} from '../../util/reconfiguredChai';
+import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 
-import SimpleDropdown from '@cdo/apps/componentLibrary/simpleDropdown';
+import {expect} from '../../util/reconfiguredChai';
 
 let dropdownValue;
 let onDropdownChange = value => (dropdownValue = value);
@@ -141,5 +141,41 @@ describe('Design System - Dropdown Select Component', () => {
 
     expect(spyOnChange).to.have.not.been.called;
     expect(dropdownValue).to.equal('');
+  });
+
+  it('SimpleDropdown - renders with correct text and options with grouped items', () => {
+    render(
+      <SimpleDropdown
+        name="test4-dropdown"
+        itemGroups={[
+          {
+            label: 'Group1',
+            groupItems: [
+              {value: 'option-1', text: 'option1'},
+              {value: 'option-2', text: 'option2'},
+            ],
+          },
+          {
+            label: 'Group2',
+            groupItems: [{value: 'option-3', text: 'option3'}],
+          },
+        ]}
+        selectedValue={dropdownValue}
+        onChange={e => onDropdownChange(e.target.value)}
+        labelText="Dropdown label"
+      />
+    );
+
+    const label = screen.getByText('Dropdown label');
+    const groupLabels = screen.getAllByRole('group');
+    const option1 = screen.getByText('option1');
+    const option2 = screen.getByText('option2');
+    const option3 = screen.getByText('option3');
+
+    expect(label).to.exist;
+    expect(option1).to.exist;
+    expect(groupLabels).to.have.length(2);
+    expect(option2).to.exist;
+    expect(option3).to.exist;
   });
 });

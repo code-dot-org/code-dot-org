@@ -25,6 +25,7 @@
 #  index_pd_enrollments_on_code            (code) UNIQUE
 #  index_pd_enrollments_on_email           (email)
 #  index_pd_enrollments_on_pd_workshop_id  (pd_workshop_id)
+#  index_pd_enrollments_on_user_id         (user_id)
 #
 
 require 'cdo/code_generation'
@@ -328,24 +329,22 @@ class Pd::Enrollment < ApplicationRecord
     save!
   end
 
-  protected
-
-  def autoupdate_user_field
+  protected def autoupdate_user_field
     resolved_user = resolve_user
     self.user = resolve_user if resolved_user
   end
 
-  def enroll_in_corresponding_online_learning
+  protected def enroll_in_corresponding_online_learning
     if user && workshop.associated_online_course
       Plc::UserCourseEnrollment.find_or_create_by(user: user, plc_course: workshop.associated_online_course)
     end
   end
 
-  def check_school_info(school_info_attr)
+  protected def check_school_info(school_info_attr)
     deduplicate_school_info(school_info_attr, self)
   end
 
-  def authorize_teacher_account
+  protected def authorize_teacher_account
     user.permission = UserPermission::AUTHORIZED_TEACHER if user&.teacher? && [COURSE_CSD, COURSE_CSP, COURSE_CSA].include?(workshop.course)
   end
 

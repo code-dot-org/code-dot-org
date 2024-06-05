@@ -23,7 +23,8 @@ class CurriculumCatalogController < ApplicationController
       isSignedOut: @is_signed_out,
       isTeacher: @is_teacher,
       sections: @sections_for_teacher,
-      isInUS: request.country.to_s.casecmp?('rd') || request.country.to_s.casecmp?('us')
+      isInUS: request.country.to_s.casecmp?('rd') || request.country.to_s.casecmp?('us'),
+      curriculaTaught: current_user&.sections&.map(&:course_offering_id)
     }
   end
 end

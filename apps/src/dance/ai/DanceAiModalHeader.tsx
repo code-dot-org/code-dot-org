@@ -42,6 +42,7 @@ const DanceAiModalHeader: React.FunctionComponent<DanceAiModalHeaderProps> = ({
     return (
       <div
         className={moduleStyles.inputsContainer}
+        role="button"
         tabIndex={0}
         onClick={handleStartOverClick}
       >

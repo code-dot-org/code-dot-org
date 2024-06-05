@@ -1,12 +1,16 @@
-import _ from 'lodash';
 import $ from 'jquery';
-import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
-import {SectionLoginType, PlGradeValue} from '../../util/sharedConstants';
+
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {
+  SectionLoginType,
+  PlGradeValue,
+} from '@cdo/generated-scripts/sharedConstants';
 
 /**
  * @const {string[]} The only properties that can be updated by the user
@@ -27,6 +31,7 @@ const USER_EDITABLE_SECTION_PROPS = [
   'hidden',
   'restrictSection',
   'codeReviewExpiresAt',
+  'aiTutorEnabled',
 ];
 
 /** @const {number} ID for a new section that has not been saved */
@@ -110,6 +115,9 @@ const IMPORT_ROSTER_REQUEST = 'teacherSections/IMPORT_ROSTER_REQUEST';
 /** Reports request to import a roster has succeeded */
 const IMPORT_ROSTER_SUCCESS = 'teacherSections/IMPORT_ROSTER_SUCCESS';
 const IMPORT_LTI_ROSTER_SUCCESS = 'teacherSections/IMPORT_LTI_ROSTER_SUCCESS';
+/** Sets section aiTutorEnabled */
+const UPDATE_SECTION_AI_TUTOR_ENABLED =
+  'teacherSections/UPDATE_SECTION_AI_TUTOR_ENABLED';
 
 /** @const A few constants exposed for unit test setup */
 export const __testInterface__ = {
@@ -169,6 +177,14 @@ export const setSectionCodeReviewExpiresAt = (
   };
 };
 
+export const updateSectionAiTutorEnabled = (sectionId, aiTutorEnabled) => {
+  return {
+    type: UPDATE_SECTION_AI_TUTOR_ENABLED,
+    sectionId,
+    aiTutorEnabled,
+  };
+};
+
 // pageType describes the current route the user is on. Used only for logging.
 // Enum of allowed values:
 export const pageTypes = {
@@ -214,7 +230,7 @@ export const toggleSectionHidden = sectionId => (dispatch, getState) => {
  * Removes null values from stringified object before sending firehose record
  */
 function removeNullValues(key, val) {
-  if (val === null || typeof val === undefined) {
+  if (val === null || typeof val === 'undefined') {
     return undefined;
   }
   return val;
@@ -444,6 +460,14 @@ export const asyncLoadSectionData = id => dispatch => {
     })
     .then(() => {
       dispatch({type: ASYNC_LOAD_END});
+    });
+};
+
+export const asyncLoadCourseOfferings = () => dispatch => {
+  fetchJSON('/dashboardapi/sections/valid_course_offerings')
+    .then(offerings => dispatch(setCourseOfferings(offerings)))
+    .catch(err => {
+      console.error(err.message);
     });
 };
 
@@ -677,8 +701,8 @@ function newSectionData(participantType) {
     courseVersionId: null,
     unitId: null,
     hidden: false,
-    isAssigned: undefined,
     restrictSection: false,
+    aiTutorEnabled: false,
   };
 }
 
@@ -1199,6 +1223,25 @@ export default function teacherSections(state = initialState, action) {
     };
   }
 
+  if (action.type === UPDATE_SECTION_AI_TUTOR_ENABLED) {
+    const {sectionId, aiTutorEnabled} = action;
+    const section = state.sections[sectionId];
+    if (!section) {
+      throw new Error('section does not exist');
+    }
+
+    return {
+      ...state,
+      sections: {
+        ...state.sections,
+        [sectionId]: {
+          ...state.sections[sectionId],
+          aiTutorEnabled: aiTutorEnabled,
+        },
+      },
+    };
+  }
+
   return state;
 }
 
@@ -1230,6 +1273,10 @@ export function sectionName(state, sectionId) {
 
 export function ltiSyncResult(state) {
   return getRoot(state).ltiSyncResult;
+}
+
+export function syncEnabled(state, sectionId) {
+  return (getRoot(state).sections[sectionId] || {}).syncEnabled;
 }
 
 export function sectionUnitName(state, sectionId) {
@@ -1291,6 +1338,7 @@ export function getSectionRows(state, sectionIds) {
       'name',
       'courseVersionName',
       'loginType',
+      'loginTypeName',
       'studentCount',
       'code',
       'participantType',
@@ -1318,6 +1366,7 @@ export const sectionFromServerSection = serverSection => ({
   courseVersionName: serverSection.courseVersionName,
   createdAt: serverSection.createdAt,
   loginType: serverSection.login_type,
+  loginTypeName: serverSection.login_type_name,
   grades: serverSection.grades,
   providerManaged: serverSection.providerManaged || false, // TODO: (josh) make this required when /v2/sections API is deprecated
   lessonExtras: serverSection.lesson_extras,
@@ -1331,7 +1380,6 @@ export const sectionFromServerSection = serverSection => ({
   unitId: serverSection.unit_id,
   courseId: serverSection.course_id,
   hidden: serverSection.hidden,
-  isAssigned: serverSection.isAssigned,
   restrictSection: serverSection.restrict_section,
   postMilestoneDisabled: serverSection.post_milestone_disabled,
   codeReviewExpiresAt: serverSection.code_review_expires_at
@@ -1340,6 +1388,8 @@ export const sectionFromServerSection = serverSection => ({
   isAssignedCSA: serverSection.is_assigned_csa,
   participantType: serverSection.participant_type,
   sectionInstructors: serverSection.section_instructors,
+  syncEnabled: serverSection.sync_enabled,
+  aiTutorEnabled: serverSection.ai_tutor_enabled,
 });
 
 /**
@@ -1379,6 +1429,7 @@ export function serverSectionFromSection(section) {
     course_id: section.courseId,
     restrict_section: section.restrictSection,
     participant_type: section.participantType,
+    ai_tutor_enabled: section.aiTutorEnabled,
   };
 }
 

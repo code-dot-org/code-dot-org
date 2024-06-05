@@ -124,3 +124,11 @@ Then(/^check that level (\d+) on this lesson is not done$/) do |level|
   undone = @browser.execute_script("return $('a[href$=\"level/#{level}\"].other_level').hasClass('level_undone')")
   undone
 end
+
+And(/^I complete unit (.+)/) do |unit_name|
+  browser_request(
+    url: '/api/test/complete_unit',
+    method: 'POST',
+    body: {unit_name: unit_name}
+  )
+end

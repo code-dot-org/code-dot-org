@@ -542,7 +542,8 @@
       ]
     ],
     "teacher_markdown": "Students should see that the `DashPainter` object now paints with the values in the 1D array `newColors`. This is because the instance variable in the `DashPainter` class now points to this 1D array after the `setColors()` method is called. Students should conclude that they can create 1D arrays using the `new` keyword or by providing a list of values and also notice similarities in accessing and modifying a 1D array and its values and primitive instance variables.",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-16T23:52:16.465+00:00\",\"changed\":[\"cloned from \\\"CSA U3L2-L4_2023\\\"\"],\"cloned_from\":\"CSA U3L2-L4_2023\"}]"

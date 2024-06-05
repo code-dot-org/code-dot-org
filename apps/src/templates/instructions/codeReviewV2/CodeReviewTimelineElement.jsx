@@ -1,13 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
 import {TextLink} from '@dsco_/link';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import color from '@cdo/apps/util/color';
-import javalabMsg from '@cdo/javalab/locale';
-import {stringifyQueryParams} from '@cdo/apps/utils';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {connect} from 'react-redux';
+
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import fontConstants from '@cdo/apps/fontConstants';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import color from '@cdo/apps/util/color';
+import {stringifyQueryParams} from '@cdo/apps/utils';
+import javalabMsg from '@cdo/javalab/locale';
 
 export const codeReviewTimelineElementType = {
   CREATED: 'created',

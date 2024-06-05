@@ -1,4 +1,3 @@
-import {assert, expect} from '../../../util/reconfiguredChai';
 import sectionStandardsProgress, {
   setTeacherCommentForReport,
   getUnpluggedLessonsForScript,
@@ -20,6 +19,8 @@ import {
   stateForPartiallyCompletedLesson,
   fakeState,
 } from '@cdo/apps/templates/sectionProgress/standards/standardsTestHelpers';
+
+import {assert, expect} from '../../../util/reconfiguredChai';
 
 describe('sectionStandardsProgressRedux', () => {
   const initialState = sectionStandardsProgress(undefined, {});

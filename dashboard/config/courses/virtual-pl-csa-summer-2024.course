@@ -7,7 +7,7 @@
     "virtual-pl-csa-summer-day4",
     "virtual-pl-csa-summer-day5"
   ],
-  "published_state": "in_development",
+  "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "teacher",
   "instructor_audience": "facilitator",

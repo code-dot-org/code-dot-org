@@ -2,6 +2,10 @@ require 'test_helper'
 require 'cdo/script_config'
 
 class SessionCookieTest < ActionDispatch::IntegrationTest
+  setup_all do
+    seed_deprecated_unit_fixtures
+  end
+
   test 'session cookie name contains environment' do
     get '/reset_session'
 

@@ -23,7 +23,8 @@
     "contained_level_names": [
       "CSA U8L7-L1 Predict_2022"
     ],
-    "name_suffix": "_2022"
+    "name_suffix": "_2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-02-26T00:34:01.112+00:00\",\"changed\":[\"cloned from \\\"CSA U8L7-L1\\\"\"],\"cloned_from\":\"CSA U8L7-L1\"}]"

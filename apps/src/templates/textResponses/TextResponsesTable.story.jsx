@@ -1,4 +1,5 @@
 import React from 'react';
+
 import TextResponsesTable from './TextResponsesTable';
 
 export default {

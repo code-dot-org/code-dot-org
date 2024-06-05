@@ -35,7 +35,8 @@
       }
     },
     "teacher_markdown": "Students should notice that all classes declare instance variables for `title` and `year`, making these redundant. They should recall how inheritance allowed classes to share attributes and behaviors and suggest making the `Movie` and `TVShow` classes extend the `Content` class.",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-16T23:49:47.509+00:00\",\"changed\":[\"cloned from \\\"CSA U2L1-L4_2023\\\"\"],\"cloned_from\":\"CSA U2L1-L4_2023\"}]"

@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U6L6-CompareTo PBT_2025",
     "teacher_markdown": "Encourage students to change the values for the `String` variables as well. What happens when we compare `\"New York\"` to `\"New Haven\"`?",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-17T00:15:51.459+00:00\",\"changed\":[\"cloned from \\\"CSA U6L6-L4_2023\\\"\"],\"cloned_from\":\"CSA U6L6-L4_2023\"}]"

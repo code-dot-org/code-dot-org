@@ -1,9 +1,12 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import ChatBubble from './ChatBubble';
+import React from 'react';
+
 import msg from '@cdo/locale';
+
 import LegacyButton from '../LegacyButton';
+
+import ChatBubble from './ChatBubble';
 
 const HintPrompt = ({
   onConfirm,
@@ -25,11 +28,21 @@ const HintPrompt = ({
       skinId={skinId}
       textToSpeechEnabled={textToSpeechEnabled}
     >
-      <p>{message}</p>
-      <LegacyButton type="cancel" onClick={onConfirm} style={{marginRight: 5}}>
+      <p id={'hint-prompt-message'}>{message}</p>
+      <LegacyButton
+        id="hint-prompt-yes-button"
+        type="cancel"
+        onClick={onConfirm}
+        style={{marginRight: 5}}
+        aria-labelledby="hint-prompt-message"
+      >
         {msg.yes()}
       </LegacyButton>
-      <LegacyButton type="cancel" onClick={onDismiss}>
+      <LegacyButton
+        type="cancel"
+        onClick={onDismiss}
+        aria-labelledby="hint-prompt-message"
+      >
         {msg.no()}
       </LegacyButton>
     </ChatBubble>

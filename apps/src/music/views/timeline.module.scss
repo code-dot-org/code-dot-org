@@ -12,6 +12,10 @@
   height: 100%;
   position: relative;
 
+  &Playing {
+    overflow-x: hidden;
+  }
+
   .fullWidthOverlay {
     height: 100%;
     position: absolute;
@@ -23,7 +27,10 @@
     background-color: $neutral_dark90;
     height: 24px;
     border-bottom: solid $default-spacing $dark_black;
-    cursor: pointer;
+
+    &Clickable {
+      cursor: pointer;
+    }
   }
 
   .barLineContainer {
@@ -37,10 +44,13 @@
       top: 4px;
       left: 6px;
       color: $neutral_dark20;
-      cursor: pointer;
 
       &Current {
         color: $neutral_light;
+      }
+
+      &Clickable {
+        cursor: pointer;
       }
     }
 
@@ -64,37 +74,8 @@
       position: absolute;
       box-sizing: border-box;
       border-radius: 8px;
-      border: solid 2px;
-
-      &Purple {
-        background-color: purple;
-        border-color: lightpink;
-      }
-
-      &Blue {
-        background-color: blue;
-        border-color: lightblue;
-      }
-
-      &Green {
-        background-color: green;
-        border-color: lightgreen;
-      }
-
-      &Yellow {
-        background-color: yellow;
-        border-color: brown;
-      }
-
-      &Pattern {
-        background-color: black;
-        border-color: white;
-      }
-
-      &Chord {
-        background-color: $light_cyan;
-        border-color: $neutral_dark80;
-      }
+      border-width: 2px;
+      border-style: solid;
 
       &Playing {
         box-shadow: 0 0 10px rgba(255 255 255 / 0.5);
@@ -152,6 +133,10 @@
 
     &Playing {
       border-left: 3px yellow solid;
+    }
+
+    &Loop {
+      border-left: 3px $light_primary_500 solid;
     }
   }
 }

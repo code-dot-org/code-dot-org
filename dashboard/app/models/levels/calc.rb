@@ -73,4 +73,8 @@ class Calc < Blockly
   def toolbox(type)
     Calc.toolbox
   end
+
+  def deprecated?
+    true
+  end
 end

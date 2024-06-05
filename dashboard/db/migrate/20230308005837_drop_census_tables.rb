@@ -11,9 +11,7 @@ class DropCensusTables < ActiveRecord::Migration[6.0]
   def down
   end
 
-  private
-
-  def drop_table_if_exists(table)
+  private def drop_table_if_exists(table)
     drop_table table if ActiveRecord::Base.connection.table_exists? table
   end
 end

@@ -159,7 +159,7 @@ theme: responsive
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="د مخکې لوستونکي ایکسپریس کورس"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">د مخکې لوستونکو لپاره د ایکسپریس کورس</a>
+<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="د مخکې لوستونکي ایکسپریس کورس"></a><br>د مخکیو لوستونکو لپاره <a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express" target="_blank">ایکسپریس کورس</a>
 
 </div>
 <div style="clear: both; margin-bottom: 2rem"></div>
@@ -228,7 +228,7 @@ theme: responsive
 
 <br>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_primary_default)">
   <div style="width: 87%; float: left">
     <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">ددفتروسایل لابراتوار</h3></a>
     <p style="color:#ffffff">د ایپ لیب د برنامې چاپیریال دی چیرې چې تاسو کولی شئ ساده اطلاقات رامینځته کړئ. یو اپلیکیشن ډیزاین کړئ، د بلاکونو یا جاواسکریپټ سره کوډ کړئ ترڅو دا کار وکړي، بیا خپل اپلیکیشن په ثانیو کې شریک کړئ.</p>
@@ -237,7 +237,7 @@ theme: responsive
   <div style="clear: both"></div>
 </div>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_primary_default)">
   <div style="width: 87%; float: left">
     <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">د لوبې لابراتوار</h3></a>
     <p style="color:#ffffff">د لوبې لابراتوار د برنامې چاپیریال دی چیرې چې تاسو کولی شئ ساده متحرکات او لوبې د شیانو او کرکټرونو سره رامینځته کړئ چې له یو بل سره متقابل عمل کوي.</p>
@@ -247,7 +247,7 @@ theme: responsive
   <div style="clear: both"></div>
 </div>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_primary_default)">
   <div style="width: 87%; float: left">
     <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">ویب لیب</h3></a>
     <p style="color:#ffffff">ویب لیب د برنامې چاپیریال دی چیرې چې تاسو کولی شئ د HTML او CSS په کارولو سره ساده ویب پا pagesې رامینځته کړئ. خپل ویب پا pagesې ډیزاین کړئ او خپل سایټ په ثانیو کې شریک کړئ.</p>

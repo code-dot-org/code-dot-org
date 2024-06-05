@@ -1,8 +1,8 @@
-import {assert} from '../../util/reconfiguredChai';
 import {assertOwnProperty} from '../../util/assertions';
-var NetSimTestUtils = require('../../util/netsimTestUtils');
+import {assert} from '../../util/reconfiguredChai';
+
 var _ = require('lodash');
-var utils = require('@cdo/apps/utils'); // Provides String.prototype.repeat
+
 var DataConverters = require('@cdo/apps/netsim/DataConverters');
 var NetSimConstants = require('@cdo/apps/netsim/NetSimConstants');
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
@@ -13,6 +13,9 @@ var NetSimMessage = require('@cdo/apps/netsim/NetSimMessage');
 var NetSimRouterNode = require('@cdo/apps/netsim/NetSimRouterNode');
 var NetSimWire = require('@cdo/apps/netsim/NetSimWire');
 var Packet = require('@cdo/apps/netsim/Packet');
+var utils = require('@cdo/apps/utils'); // Provides String.prototype.repeat
+
+var NetSimTestUtils = require('../../util/netsimTestUtils');
 
 var asciiToBinary = DataConverters.asciiToBinary;
 var assertTableSize = NetSimTestUtils.assertTableSize;

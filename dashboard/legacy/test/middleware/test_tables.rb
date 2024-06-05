@@ -56,20 +56,18 @@ class TablesTest < Minitest::Test
     delete_channel
   end
 
-  # Methods below this line are test utilities, not actual tests
-  private
-
-  def create_channel
+  private def create_channel
     post '/v3/channels', {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     @channel_id = last_response.location.split('/').last
   end
 
-  def delete_channel
+  private def delete_channel
     delete "/v3/channels/#{@channel_id}"
     assert last_response.successful?
   end
 
-  def export_firebase(table_name = @table_name)
+  # TODO: unfirebase, this should moved to datablock_storage_controler, see: #56996
+  private def export_firebase(table_name = @table_name)
     get "/v3/export-firebase-tables/#{@channel_id}/#{table_name}"
   end
 end

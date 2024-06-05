@@ -1,14 +1,16 @@
-import React from 'react';
 import moment from 'moment';
+import React from 'react';
+
 import {
   lessonIsAllAssessment,
   lessonHasLevels,
 } from '@cdo/apps/templates/progress/progressHelpers';
-import ProgressTableSummaryCell from './ProgressTableSummaryCell';
-import ProgressTableDetailCell from './ProgressTableDetailCell';
-import ProgressTableLevelSpacer from './ProgressTableLevelSpacer';
-import ProgressTableLevelIconSet from './ProgressTableLevelIconSet';
 import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
+
+import ProgressTableDetailCell from './ProgressTableDetailCell';
+import ProgressTableLevelIconSet from './ProgressTableLevelIconSet';
+import ProgressTableLevelSpacer from './ProgressTableLevelSpacer';
+import ProgressTableSummaryCell from './ProgressTableSummaryCell';
 
 /**
  * @return {Array} Array of formatter functions for the progress table summary view

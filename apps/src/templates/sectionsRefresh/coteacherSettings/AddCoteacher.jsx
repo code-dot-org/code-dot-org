@@ -1,18 +1,19 @@
-import React, {useCallback, useState} from 'react';
+import classNames from 'classnames';
+import $ from 'jquery';
 import PropTypes from 'prop-types';
+import React, {useCallback, useState} from 'react';
 
+import {Figcaption} from '@cdo/apps/componentLibrary/typography';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import Button from '@cdo/apps/templates/Button';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 import i18n from '@cdo/locale';
-import classNames from 'classnames';
-import {Figcaption} from '@cdo/apps/componentLibrary/typography';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import Button from '@cdo/apps/templates/Button';
-import $ from 'jquery';
+
+import {convertAddCoteacherResponse} from './CoteacherUtils';
 
 import styles from './coteacher-settings.module.scss';
-import {convertAddCoteacherResponse} from './CoteacherUtils';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const getErrorMessageFromResponse = (response, email) => {
   if (response.ok) {
@@ -92,6 +93,7 @@ export default function AddCoteacher({
   addError,
   setAddError,
   sectionMetricInformation,
+  disabled,
 }) {
   const [inputValue, setInputValue] = useState('');
 
@@ -194,6 +196,10 @@ export default function AddCoteacher({
   const isMaxCoteachers = numCoteachers >= 5;
 
   const getErrorOrCount = () => {
+    if (disabled) {
+      return null;
+    }
+
     if (addError) {
       return (
         <Figcaption
@@ -219,7 +225,7 @@ export default function AddCoteacher({
         <input
           className={classNames(styles.input, !!addError && styles.inputError)}
           type="text"
-          disabled={isMaxCoteachers}
+          disabled={isMaxCoteachers || !!disabled}
           value={inputValue}
           onChange={handleInputChange}
           onKeyDown={handleSubmitAddEmail}
@@ -231,7 +237,7 @@ export default function AddCoteacher({
           type="submit"
           text={i18n.coteacherAddButton()}
           onClick={handleAddEmail}
-          disabled={isMaxCoteachers}
+          disabled={isMaxCoteachers || !!disabled}
         />
       </div>
       {getErrorOrCount()}
@@ -248,4 +254,5 @@ AddCoteacher.propTypes = {
   addSavedCoteacher: PropTypes.func.isRequired,
   setAddError: PropTypes.func.isRequired,
   sectionMetricInformation: PropTypes.object,
+  disabled: PropTypes.bool,
 };

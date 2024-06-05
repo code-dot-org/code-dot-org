@@ -1,35 +1,36 @@
+import classnames from 'classnames';
+import moment from 'moment';
+import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
-import moment from 'moment';
-import i18n from '@cdo/locale';
+
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {shouldShowReviewStates} from '@cdo/apps/templates/progress/progressHelpers';
+import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
+import {
+  studentLessonProgressType,
+  studentLevelProgressType,
+} from '@cdo/apps/templates/progress/progressTypes';
+import SummaryViewLegend from '@cdo/apps/templates/sectionProgress/progressTables/SummaryViewLegend';
 import {
   ViewType,
   unitDataPropType,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
 import {
-  studentLessonProgressType,
-  studentLevelProgressType,
-} from '@cdo/apps/templates/progress/progressTypes';
-import {shouldShowReviewStates} from '@cdo/apps/templates/progress/progressHelpers';
-import {
   getCurrentUnitData,
   jumpToLessonDetails,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import styleConstants from '@cdo/apps/styleConstants';
-import ProgressTableStudentList from './ProgressTableStudentList';
+import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';
+import i18n from '@cdo/locale';
+
 import ProgressTableContentView from './ProgressTableContentView';
-import SummaryViewLegend from '@cdo/apps/templates/sectionProgress/progressTables/SummaryViewLegend';
-import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import {
   getSummaryCellFormatters,
   getDetailCellFormatters,
   getLevelIconHeaderFormatter,
 } from './progressTableHelpers';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import classnames from 'classnames';
-import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';
+import ProgressTableStudentList from './ProgressTableStudentList';
 
 /**
  * Since our progress tables are built out of standard HTML table elements,
@@ -209,8 +210,12 @@ class ProgressTableView extends React.Component {
   syncScrollTop() {
     clearTimeout(this.timeout);
     this.timeout = setTimeout(() => {
-      this.setScrollState(this.contentView.bodyComponent);
-      this.setScrollState(this.studentList.bodyComponent);
+      if (this.contentView?.bodyComponent) {
+        this.setScrollState(this.contentView.bodyComponent);
+      }
+      if (this.studentList?.bodyComponent) {
+        this.setScrollState(this.studentList.bodyComponent);
+      }
     }, 200);
   }
 
@@ -401,7 +406,7 @@ class ProgressTableView extends React.Component {
 
 const styles = {
   container: {
-    width: styleConstants['content-width'],
+    width: parseInt(progressTableStyleConstants.TABLE_WIDTH),
   },
   studentList: {
     display: 'inline-block',

@@ -52,7 +52,7 @@ Feature: Curriculum Catalog Page
 
     Then I click selector "[aria-label='Assign AI for Oceans to your classroom']"
     And I wait until element "h3:contains(Sign in or create account to assign a curriculum)" is visible
-    Then I click selector "a:contains(Sign in or create account)"
+    Then I click selector "a:contains(Sign in or create account)" to load a new page
     And I wait until element "h2:contains(Have an account already? Sign in)" is visible
 
   Scenario: Signed-in student does not see Assign button
@@ -69,6 +69,8 @@ Feature: Curriculum Catalog Page
     Then I click selector "[aria-label='Assign AI for Oceans to your classroom']"
     And I wait until element "h3:contains(Create class section to assign a curriculum)" is visible
     Then I click selector "a:contains(Create Section)"
+    And I wait until current URL contains "/home"
+    And I wait for jquery to load
     And I wait until element "h3:contains(Create a new section)" is visible
 
   Scenario: Signed-in teacher with sections assigns and unassigns offerings to sections
@@ -140,12 +142,16 @@ Feature: Curriculum Catalog Page
 
   #Expanded card scenarios
   @no_mobile
-  Scenario: Signed-out user sees the curriculum catalog with offerings and can expand card
+  Scenario: Signed-out user sees the curriculum catalog with offerings and can expand card and view recommendations
     Given I am on "http://studio.code.org/catalog"
     And I wait until element "h4:contains(AI for Oceans)" is visible
 
     And I click selector "[aria-label='View details about AI for Oceans']"
     And I wait until element "a:contains(See curriculum details)" is visible
+    And I wait until element "#similarCurriculumImage" is visible
+    And I wait until element "#similarCurriculumButton" is visible
+    And I wait until element "#stretchCurriculumImage" is visible
+    And I wait until element "#stretchCurriculumButton" is visible
 
   @no_mobile
   Scenario: Signed-out user sees course offering page when clicking on see curriculum details on expanded card
@@ -154,7 +160,7 @@ Feature: Curriculum Catalog Page
 
     And I click selector "[aria-label='View details about AI for Oceans']"
 
-    And I click selector "a:contains(See curriculum details)"
+    And I click selector "a:contains(See curriculum details)" to load a new page
     And I wait until element "h1:contains(AI for Oceans)" is visible
 
   @no_mobile
@@ -166,7 +172,7 @@ Feature: Curriculum Catalog Page
     Then I wait until element "a:contains(Facilitator led workshops)" is visible
     And I click selector "a:contains(Facilitator led workshops)"
     Then I wait for jquery to load
-    And I wait until current URL contains "/professional-development-workshops"
+    And I wait until current URL contains "/professional-learning/elementary"
 
   @no_mobile
   Scenario: On expanded card, Signed-in teacher sees professional learning section
@@ -193,7 +199,7 @@ Feature: Curriculum Catalog Page
     And I click selector "[aria-label='View details about AI for Oceans']"
     And I click selector "button:contains(Assign to class sections)"
     And I wait until element "h3:contains(Sign in or create account to assign a curriculum)" is visible
-    Then I click selector "a:contains(Sign in or create account)"
+    Then I click selector "a:contains(Sign in or create account)" to load a new page
     And I wait until element "h2:contains(Have an account already? Sign in)" is visible
 
   @no_mobile
@@ -216,6 +222,8 @@ Feature: Curriculum Catalog Page
     And I click selector "button:contains(Assign to class sections)"
     And I wait until element "h3:contains(Create class section to assign a curriculum)" is visible
     Then I click selector "a:contains(Create Section)"
+    And I wait until current URL contains "/home"
+    And I wait for jquery to load
     And I wait until element "h3:contains(Create a new section)" is visible
   
   @no_mobile
@@ -295,11 +303,29 @@ Feature: Curriculum Catalog Page
     And I see that "Section 2" is not assigned to "Computer Science Principles" in the section table
   
   @only_mobile
-  Scenario: On mobile, User sees the Learn More button on Catalog Cards
+  Scenario: On mobile, Signed-out User sees the Learn More button on Catalog Cards
     Given I am on "http://studio.code.org/catalog"
     And I rotate to portrait
     And I wait until element "h4:contains(AI for Oceans)" is visible
     And I click selector "[aria-label='Learn more about AI for Oceans']"
+    And I wait until current URL contains "/oceans"
+  
+  @only_mobile
+  Scenario: On mobile, Signed-in teacher sees the Learn More button on Catalog Cards
+    Given I create a teacher named "Teacher Tom"
+    Given I am on "http://studio.code.org/catalog"
+    And I rotate to portrait
+    And I wait until element "h4:contains(AI for Oceans)" is visible
+    And I click selector "[aria-label='Learn more about AI for Oceans']"
+    And I wait until current URL contains "/oceans"
+  
+  @only_mobile
+  Scenario: On mobile, Signed-in student sees the Try Now button on Catalog Cards
+    Given I create a student named "Student Sam"
+    Given I am on "http://studio.code.org/catalog"
+    And I rotate to portrait
+    And I wait until element "h4:contains(AI for Oceans)" is visible
+    And I click selector "[aria-label='Try AI for Oceans now']"
     And I wait until current URL contains "/oceans"
   
   # Curriculum Catalog Filter tests

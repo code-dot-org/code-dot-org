@@ -44,9 +44,8 @@ Scenario: Share and save an artist level to the project gallery
   Then I press "finishButton"
   And I wait to see a congrats dialog with title containing "Congratulations"
   And I reopen the congrats dialog unless I see the sharing input
-  And I press "publish-to-project-gallery-button"
-  And I click selector "#publish-dialog-publish-button" once I see it
-  And I wait until element "#publish-dialog-publish-button" is not visible
+  And I press "save-to-project-gallery-button"
+  And I wait until element "#save-to-project-gallery-button" contains text "Added"
   # close the feedback dialog
   And I close the dialog
   And element ".modal-body" is not visible
@@ -55,44 +54,4 @@ Scenario: Share and save an artist level to the project gallery
   And I wait until element ".ui-personal-projects-table" is visible
   And the project table contains 1 row
   And the first project in the table is named "Artist Project"
-
-  # Make sure the published project shows up in the public gallery
-
-  Then I click selector "#uitest-gallery-switcher div:contains(Public Projects)"
-  And I wait until element "#projects-page" is visible
-  And I wait until element ".project_card:contains(Artist Project)" is visible
   And I sign out
-
-  Then I am on "http://studio.code.org/projects/public"
-  And I wait until element ".project_card:contains(Artist Project)" is visible
-
-@as_student
-Scenario: Share and save a playlab level to the project gallery
-  Given I am on "http://studio.code.org/s/playlab/lessons/1/levels/10"
-  And I wait for the page to fully load
-
-  When I press "runButton"
-  And I press "finishButton"
-  And I wait to see a congrats dialog with title containing "Congratulations"
-  And I reopen the congrats dialog unless I see the sharing input
-  And I press "publish-to-project-gallery-button"
-  And I click selector "#publish-dialog-publish-button" once I see it
-  And I wait until element "#publish-dialog-publish-button" is not visible
-  # close the feedback dialog
-  And I close the dialog
-  And element ".modal-body" is not visible
-
-  Then I am on "http://studio.code.org/projects/"
-  And I wait until element ".ui-personal-projects-table" is visible
-  And the project table contains 1 row
-  And the first project in the table is named "Play Lab Project"
-
-  # Make sure the published project shows up in the public gallery
-
-  Then I click selector "#uitest-gallery-switcher div:contains(Public Projects)"
-  And I wait until element "#projects-page" is visible
-  And I wait until element ".project_card:contains(Play Lab Project)" is visible
-  And I sign out
-
-  Then I am on "http://studio.code.org/projects/public"
-  And I wait until element ".project_card:contains(Play Lab Project)" is visible

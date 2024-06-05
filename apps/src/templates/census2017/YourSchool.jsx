@@ -1,18 +1,19 @@
 import PropTypes from 'prop-types';
-
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+
+import fontConstants from '@cdo/apps/fontConstants';
+import i18n from '@cdo/locale';
+
+import Notification, {NotificationType} from '../Notification';
+import SchoolAutocompleteDropdown from '../SchoolAutocompleteDropdown';
+
 import {
   UnconnectedCensusForm as CensusForm,
   censusFormPrefillDataShape,
 } from './CensusForm';
-import YourSchoolResources from './YourSchoolResources';
-import Notification, {NotificationType} from '../Notification';
-import {SpecialAnnouncementActionBlock} from '../studioHomepages/TwoColumnActionBlock';
-import i18n from '@cdo/locale';
-import SchoolAutocompleteDropdown from '../SchoolAutocompleteDropdown';
 import CensusMapReplacement from './CensusMapReplacement';
-import fontConstants from '@cdo/apps/fontConstants';
+import YourSchoolResources from './YourSchoolResources';
 
 class YourSchool extends Component {
   static propTypes = {
@@ -65,12 +66,8 @@ class YourSchool extends Component {
       schoolForMap = schoolDropdownOption.school;
     }
 
-    // Hide the special announcement.
-    const showSpecialAnnouncement = false;
-
     return (
       <div>
-        {showSpecialAnnouncement && <SpecialAnnouncementActionBlock />}
         {this.props.alertHeading &&
           this.props.alertText &&
           this.props.alertUrl && (

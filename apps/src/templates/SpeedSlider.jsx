@@ -1,7 +1,8 @@
-import React from 'react';
-import color from '../util/color';
 import PropTypes from 'prop-types';
+import React from 'react';
+
 import dom from '../dom';
+import color from '../util/color';
 
 const style = {
   sliderTrack: {

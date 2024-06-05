@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import CountryAutocompleteDropdown from '@cdo/apps/templates/CountryAutocompleteDropdown';
-import SchoolTypeDropdown from '@cdo/apps/templates/SchoolTypeDropdown';
+
+import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
+import CountryAutocompleteDropdown from '@cdo/apps/templates/CountryAutocompleteDropdown';
 import SchoolNotFound from '@cdo/apps/templates/SchoolNotFound';
+import SchoolTypeDropdown from '@cdo/apps/templates/SchoolTypeDropdown';
 import i18n from '@cdo/locale';
 
 export const SCHOOL_TYPES_HAVING_NCES_SEARCH = ['charter', 'private', 'public'];
@@ -125,6 +127,10 @@ export default class SchoolInfoInputs extends Component {
 
     return (
       <div style={{width: 600, ...this.props.styles}}>
+        <Heading2 visualAppearance={'heading-lg'}>
+          {i18n.censusHeading()}
+        </Heading2>
+        <BodyTwoText>{i18n.schoolInfoInterstitialTitle()}</BodyTwoText>
         <CountryAutocompleteDropdown
           onChange={this.props.onCountryChange}
           value={this.props.country}

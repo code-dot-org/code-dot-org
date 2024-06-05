@@ -8,6 +8,9 @@ import color from '../../../util/color';
 
 const getSubtypeForSkin = utils.getSubtypeForSkin;
 
+// Size of each edge of (unscaled) square thumbnail, in pixels.
+const SIZE = 400;
+
 export default class MazeThumbnail extends React.Component {
   static propTypes = {
     size: PropTypes.number,
@@ -53,7 +56,7 @@ export default class MazeThumbnail extends React.Component {
   }
 
   render() {
-    const scale = (this.props.size || 400) / 400;
+    const scale = (this.props.size || SIZE) / SIZE;
     return (
       <div
         style={{
@@ -72,8 +75,8 @@ export default class MazeThumbnail extends React.Component {
         >
           <ProtectedStatefulDiv>
             <svg
-              width="400"
-              height="400"
+              width={SIZE}
+              height={SIZE}
               ref={c => {
                 this.svg = c;
               }}
@@ -89,11 +92,11 @@ const styles = {
   wrapper: {
     display: 'inline-block',
     position: 'relative',
-    transformOrigin: '0 0',
+    transformOrigin: document.dir === 'rtl' ? `${SIZE}px 0` : '0 0',
   },
   overlay: {
-    width: 400,
-    height: 400,
+    width: SIZE,
+    height: SIZE,
     backgroundColor: 'rgba(0, 255, 0, 0.3)',
     position: 'absolute',
     top: 0,

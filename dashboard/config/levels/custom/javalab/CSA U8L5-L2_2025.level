@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U8L5-Insertion Sort PBT_2025",
     "teacher_markdown": "1. If the array is already sorted, then the efficiency of the insertion sort algorithm will be higher compared to when it is applied to an unsorted array. This is because the inner loop will never execute because all of the elements in the sorted part of the array will already be smaller than the current element being inserted. The method will only execute the outer loop.\r\n\r\n2. If the array is in reverse order, the efficiency of the insertion sort algorithm will be negatively impacted compared to when it is applied to an array that is already sorted. This is because the inner loop will execute for every element in the array. Each element in the unsorted part of the array is greater than all of the elements in the sorted part of the array.",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-17T00:40:55.626+00:00\",\"changed\":[\"cloned from \\\"CSA U8L5-L2_2023\\\"\"],\"cloned_from\":\"CSA U8L5-L2_2023\"}]"

@@ -11,9 +11,9 @@ theme: responsive_full_width
     .flex-container
       .text-wrapper.col-60.flex-container.align-items-center
         .hero-banner-basic__content
-          %h1{style: "color: white"}
+          %h1.white
             =hoc_s(:engineering_hero_heading)
-          %p{style: "color: white"}
+          %p.white
             =hoc_s(:engineering_hero_desc)
           %a{href: "/about/careers#roles", class: "link-button", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s("call_to_action_open_positions")}}
             =hoc_s(:call_to_action_open_positions)

@@ -1,0 +1,42 @@
+@import 'color.scss';
+@import 'font';
+
+.header {
+  font-weight: bold;
+}
+
+.row {
+  border: 1px solid;
+}
+
+.cell {
+  padding: 8px;
+  border-right: 1px solid;
+}
+
+.lastCell {
+  padding: 8px;
+}
+
+.response {
+  float: right;
+  width: 90%;
+}
+
+.alert {
+  background-color: #fdd;
+  color: darkred;
+  padding: 10px;
+  margin: 10px 0;
+  border-left: 6px solid red;
+}
+
+.filterDropdowns {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+}
+
+.interactionsElement {
+  margin: 10px 10px 10px 0;
+}

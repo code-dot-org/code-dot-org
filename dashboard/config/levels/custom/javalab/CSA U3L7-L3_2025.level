@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U3L7-Enhanced PBT_2025",
     "teacher_markdown": "Students should see the following error in the console:\r\n\r\n```\r\n/Forbes.java:64: error: cannot find symbol\r\n      total += annualProfits[index];\r\n                             ^\r\n  symbol:   variable index\r\n  location: class Forbes\r\n```\r\n\r\nThis is because the `index` variable has not been declared and initialzied. This type of loop structure does not use a variable to keep track of the current position.\r\n\r\nWhen students change the line to `total += profit`, the error is corrected. This is because the value of the variable `profit` is added to `total`. The variable `profit` is being assigned a copy of the value in the 1D array.",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-16T23:52:47.141+00:00\",\"changed\":[\"cloned from \\\"CSA U3L7-L3_2023\\\"\"],\"cloned_from\":\"CSA U3L7-L3_2023\"}]"

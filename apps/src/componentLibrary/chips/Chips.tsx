@@ -1,9 +1,11 @@
-import React from 'react';
-import uniq from 'lodash/uniq';
 import classNames from 'classnames';
+import uniq from 'lodash/uniq';
+import React from 'react';
 
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
+
 import Chip from './_Chip';
+
 import moduleStyles from './chip.module.scss';
 
 export interface ChipsProps {
@@ -15,12 +17,16 @@ export interface ChipsProps {
   required?: boolean;
   /** Chips disabled state */
   disabled?: boolean;
+  /** Chips text type (thickness) */
+  textThickness?: 'thick' | 'thin';
   /** List of chips to render */
   options: {value: string; label: string}[];
   /** List of selected chips values */
   values: string[];
   /** Callback to update selected chips values */
   setValues: (values: string[]) => void;
+  /** Chips color */
+  color?: 'black' | 'gray';
   /** Size of chips */
   size?: ComponentSizeXSToL;
   /** Custom className */
@@ -48,6 +54,8 @@ const Chips: React.FunctionComponent<ChipsProps> = ({
   options,
   values,
   setValues,
+  textThickness = 'thin',
+  color = 'black',
   size = 'm',
   className,
 }) => {
@@ -61,6 +69,7 @@ const Chips: React.FunctionComponent<ChipsProps> = ({
     <div
       className={classNames(
         moduleStyles.chips,
+        moduleStyles[`chips-${color}`],
         moduleStyles[`chips-${size}`],
         className
       )}
@@ -76,6 +85,7 @@ const Chips: React.FunctionComponent<ChipsProps> = ({
               name={inputName}
               value={option.value}
               key={option.value}
+              textThickness={textThickness}
               checked={values.includes(option.value)}
               // The child's `required` prop will be set to `false` if the
               // Group's `required` prop is falsy. It will be set to `true` if

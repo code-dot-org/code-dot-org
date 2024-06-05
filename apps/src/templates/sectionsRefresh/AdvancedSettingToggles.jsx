@@ -1,8 +1,10 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
-import InfoHelpTip from '@cdo/apps/lib/ui/InfoHelpTip';
+import React from 'react';
+
 import ToggleSwitch from '@cdo/apps/code-studio/components/ToggleSwitch';
+import InfoHelpTip from '@cdo/apps/lib/ui/InfoHelpTip';
+import i18n from '@cdo/locale';
+
 import style from './sections-refresh.module.scss';
 
 export default function AdvancedSettingToggles({

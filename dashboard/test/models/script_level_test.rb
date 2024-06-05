@@ -8,6 +8,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
+    seed_deprecated_unit_fixtures
+
     @script_level = create(:script_level)
     @script_level2 = create(:script_level)
     @lesson = create(:lesson)
@@ -1143,9 +1145,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal "can only be used on migrated scripts", e.message
   end
 
-  private
-
-  def create_fake_plc_data
+  private def create_fake_plc_data
     @plc_course_unit = create(:plc_course_unit)
     @plc_script = @plc_course_unit.script
     @plc_script.update(professional_learning_course: 'My course name')

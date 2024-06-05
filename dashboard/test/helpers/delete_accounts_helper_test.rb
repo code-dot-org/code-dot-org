@@ -50,8 +50,13 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     end
 
     # Skip real Firebase operations
+    # TODO: unfirebase, write a version of this for Datablock Storage: #57004
+    # TODO: post-firebase-cleanup, switch to the datablock storage version: #56994
     FirebaseHelper.stubs(:delete_channel)
     FirebaseHelper.stubs(:delete_channels)
+
+    # Skip MailJet calls
+    MailJet.stubs(:delete_contact)
 
     # Global log used to check expected log output
     @log = StringIO.new
@@ -1585,6 +1590,20 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Table: dashboard.ai_tutor_interactions
+  #
+
+  test "deletes all of a purged user's ai tutor interactions (chat messages)" do
+    student = create :student_with_ai_tutor_access
+    num_ai_tutor_interactions = 3
+    create_list :ai_tutor_interaction, num_ai_tutor_interactions, user: student
+
+    assert_changes -> {AiTutorInteraction.where(user: student).count}, from: num_ai_tutor_interactions, to: 0 do
+      purge_user student
+    end
+  end
+
+  #
   # Table: dashboard.projects
   #
 
@@ -1799,12 +1818,12 @@ class DeleteAccountsHelperTest < ActionView::TestCase
         project_id: project_id,
         featured_at: Time.now
 
-      assert featured_project.featured?
+      assert featured_project.active?
 
       student.destroy
 
       featured_project.reload
-      refute featured_project.featured?
+      refute featured_project.active?
     end
   end
 
@@ -1815,12 +1834,12 @@ class DeleteAccountsHelperTest < ActionView::TestCase
         project_id: project_id,
         featured_at: Time.now
 
-      assert featured_project.featured?
+      assert featured_project.active?
 
       purge_user student
 
       featured_project.reload
-      refute featured_project.featured?
+      refute featured_project.active?
     end
   end
 
@@ -1834,14 +1853,14 @@ class DeleteAccountsHelperTest < ActionView::TestCase
         featured_at: featured_time,
         unfeatured_at: unfeatured_time
 
-      refute featured_project.featured?
+      refute featured_project.active?
       assert_equal unfeatured_time.utc.to_s,
         featured_project.unfeatured_at.utc.to_s
 
       student.destroy
 
       featured_project.reload
-      refute featured_project.featured?
+      refute featured_project.active?
       assert_equal unfeatured_time.utc.to_s,
         featured_project.unfeatured_at.utc.to_s
     end
@@ -1907,6 +1926,9 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
         student_channels = [storage_encrypt_channel_id(storage_id, project_id_a),
                             storage_encrypt_channel_id(storage_id, project_id_b)]
+
+        # TODO: unfirebase, write a version of this for Datablock Storage: #57004
+        # TODO: post-firebase-cleanup, switch to the datablock storage version: #56994
         FirebaseHelper.
           expects(:delete_channels).
           with(student_channels)
@@ -2161,9 +2183,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     refute_nil ContactRollupsPardotMemory.find_by_email(teacher_email).marked_for_deletion_at
   end
 
-  private
-
-  def assert_logged(expected_message)
+  private def assert_logged(expected_message)
     assert_includes @log.string, expected_message
   end
 
@@ -2172,7 +2192,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   # Performs our account purge on the provided user instance, and then reloads
   # that instance so we can assert things about its final state.
   #
-  def purge_user(user)
+  private def purge_user(user)
     unpurged_users_before = User.with_deleted.where(purged_at: nil).count
 
     DeleteAccountsHelper.new(log: @log).purge_user(user)
@@ -2187,17 +2207,17 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     user.reload
   end
 
-  def unsafe_purge_user(user)
+  private def unsafe_purge_user(user)
     DeleteAccountsHelper.new(log: @log, bypass_safety_constraints: true).purge_user(user)
 
     user.reload
   end
 
-  def purge_all_accounts_with_email(email)
+  private def purge_all_accounts_with_email(email)
     DeleteAccountsHelper.new(log: @log).purge_all_accounts_with_email(email)
   end
 
-  def assert_removes_field_from_forms(field, expect: :nil)
+  private def assert_removes_field_from_forms(field, expect: :nil)
     user = create :teacher
     with_form(user: user) do |form_id|
       initial_value = PEGASUS_DB[:forms].where(id: form_id).first[field]
@@ -2226,7 +2246,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     end
   end
 
-  def assert_removes_field_from_form_geos(field)
+  private def assert_removes_field_from_form_geos(field)
     user = create :teacher
     with_form_geo(user) do |form_geo_id|
       initial_value = PEGASUS_DB[:form_geos].where(id: form_geo_id).first[field]
@@ -2249,7 +2269,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   # @param [String] email - An email for the form submitter.
   # @yields [Integer] The id for the created form.
   #
-  def with_form(user: nil, email: nil)
+  private def with_form(user: nil, email: nil)
     use_name = user&.name || 'Fake Name'
     use_email = user ? user.email : email
     form_id = PEGASUS_DB[:forms].insert(
@@ -2284,7 +2304,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   # @param [User] user to create an associated form.
   # @yields [Integer] the id of the form_geos row.
   #
-  def with_form_geo(user)
+  private def with_form_geo(user)
     with_form(user: user) do |form_id|
       form_geo_id = PEGASUS_DB[:form_geos].insert(
         {

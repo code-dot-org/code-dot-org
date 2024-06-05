@@ -1,8 +1,10 @@
-import React from 'react';
-import SetUpSections from './SetUpSections';
 import {action} from '@storybook/addon-actions';
-import {reduxStore} from '@cdo/storybook/decorators';
+import React from 'react';
 import {Provider} from 'react-redux';
+
+import {reduxStore} from '@cdo/storybook/decorators';
+
+import SetUpSections from './SetUpSections';
 
 export default {
   component: SetUpSections,

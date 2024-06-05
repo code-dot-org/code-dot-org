@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+
 import fontConstants from '@cdo/apps/fontConstants';
 import ProgressBox from '@cdo/apps/templates/sectionProgress/ProgressBox';
 import color from '@cdo/apps/util/color';

@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2023-04-14T14:04:04.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Which algorithm is more efficient?\r\n\r\nTry adding values to each list and compare their execution counts.",
@@ -14,17 +18,11 @@
         "tabOrder": 0
       }
     },
-    "encrypted_examples": [
-
-    ],
     "project_template_level_name": "CSA U8L5-Insertion Sort PBT_2023",
-    "teacher_markdown": "Students should notice that the insertion sort algorithm can be more efficient than the selection sort algorithm for certain types of arrays. This is because the insertion sort algorithm requires fewer comparisons and swaps than the selection sort algorithm.\r\n\r\nFor example, if the array is already sorted or nearly sorted, the insertion sort algorithm will perform fewer comparisons than the selection sort algorithm and is faster for smaller arrays."
+    "teacher_markdown": "Students should notice that the insertion sort algorithm can be more efficient than the selection sort algorithm for certain types of arrays. This is because the insertion sort algorithm requires fewer comparisons and swaps than the selection sort algorithm.\r\n\r\nFor example, if the array is already sorted or nearly sorted, the insertion sort algorithm will perform fewer comparisons than the selection sort algorithm and is faster for smaller arrays.",
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2023-04-14T14:04:04.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "audit_log": "[{\"changed_at\":\"2023-04-14T14:04:04.072+00:00\",\"changed\":[\"cloned from \\\"CSA U8L5-L2_2023\\\"\"],\"cloned_from\":\"CSA U8L5-L2_2023\"},{\"changed_at\":\"2023-04-14 14:04:05 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-20 22:37:14 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-20 23:34:39 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

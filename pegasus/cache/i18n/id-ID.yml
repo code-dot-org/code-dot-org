@@ -7,8 +7,9 @@ id-ID:
   accelerated_name: Kursus Akselerasi
   account_sign_up_child_accept_terms: Saya mengonfirmasi bahwa saya telah menerima
     izin dari orang tua atau wali saya untuk menggunakan layanan Code.org.
-  account_sign_up_email_opt_in: Dapatkah kami mengirimi Anda email berisi pembaruan
-    kursus, peluang lokal, atau berita ilmu komputer lainnya? (kira-kira sekali sebulan)
+  account_sign_up_email_opt_in: Bolehkah kami mengirim email kepada Anda tentang pembaruan
+    program, peluang lokal, atau info lain terkait ilmu komputer? (kurang lebih sekali
+    sebulan)
   ai_activity: Kegiatan
   ai_aiedu_intro: 'aiEDU: Pengantar Kecerdasan Buatan'
   ai_aiedu_intro_description: Pengantar Kecerdasan Buatan adalah sebuah kurikulum
@@ -264,6 +265,7 @@ id-ID:
   class_submission_out_of_school_summer_camp: Perkemahan musim panas
   classicmaze_name: Labirin Klasik
   code_hoc_coming: Hour of Code hadir disini - 8-14 Desember!
+  code_org_logo_alt: Home Code.org
   code_sign_up: Daftarlah untuk ikut serta dalam Pekan Edukasi Ilmu Komputer
   codea_beyond_gradelevel: Sekolah menengah atas +
   codea_beyond_longdescription: Kode untuk iPad memungkinkan Anda membuat game dan
@@ -1184,6 +1186,7 @@ id-ID:
   header_about_us: Tentang Kami
   header_course_catalog: Katalog Kursus
   header_courses: Nama Kursus
+  header_districts: Distrik
   header_documentation: Dokumentasi
   header_educate_beyond: Di Luar Code.org
   header_educate_community: Komunitas Online
@@ -1210,6 +1213,7 @@ id-ID:
   header_project_gallery: Proyek
   header_report_abuse: Laporkan penyalahgunaan
   header_report_bug: Laporkan masalah
+  header_schools: Sekolah
   header_screen_reader_hamburger: Menu
   header_screen_reader_help: Menu bantuan
   header_sections: Bagian
@@ -1643,6 +1647,7 @@ id-ID:
   homepage_slot_text_link_k5: Kursus untuk kelas K-5
   homepage_slot_text_link_local: Temukan kelas setempat
   homepage_slot_text_link_middle: Sekolah Menengah Pertama
+  homepage_slot_text_link_middle_and_high: Sekolah Menengah dan SMA
   homepage_slot_text_link_othercourses: Kursus daring lainnya
   homepage_slot_text_link_pd: Pengembangan profesional
   homepage_slot_text_link_shop: Kaos, topi, & banyak lagi

@@ -452,7 +452,7 @@ class Unit < ApplicationRecord
   def self.script_level_cache
     return nil unless should_cache?
     @@script_level_cache ||= {}.tap do |cache|
-      script_cache.values.each do |unit|
+      script_cache.each_value do |unit|
         cache.merge!(unit.script_levels.index_by(&:id))
       end
     end
@@ -463,7 +463,7 @@ class Unit < ApplicationRecord
   def self.level_cache
     return nil unless should_cache?
     @@level_cache ||= {}.tap do |cache|
-      script_level_cache.values.each do |script_level|
+      script_level_cache.each_value do |script_level|
         level = script_level.level
         next unless level
         cache[level.id] = level unless cache.key? level.id
@@ -1238,7 +1238,7 @@ class Unit < ApplicationRecord
         end
 
         source_course_version&.reference_guides&.each do |reference_guide|
-          reference_guide.copy_to_course_version(destination_unit_group.course_version)
+          reference_guide.copy_to_course_version(copied_unit.get_course_version)
         end
 
         if destination_professional_learning_course.nil?
@@ -1466,7 +1466,8 @@ class Unit < ApplicationRecord
   def finish_url
     return hoc_finish_url if hoc?
     return csf_finish_url if csf?
-    nil
+    return CDO.code_org_url "/congrats/#{unit_group.name}" if unit_group
+    CDO.code_org_url "/congrats/#{name}"
   end
 
   # A unit that the general public can assign. Has been soft or
@@ -1623,9 +1624,13 @@ class Unit < ApplicationRecord
     summary
   end
 
+  def allow_major_curriculum_changes?
+    get_published_state == PUBLISHED_STATE.in_development || get_published_state == PUBLISHED_STATE.pilot
+  end
+
   def summarize_for_lesson_edit
     {
-      allowMajorCurriculumChanges: get_published_state == PUBLISHED_STATE.in_development || get_published_state == PUBLISHED_STATE.pilot,
+      allowMajorCurriculumChanges: allow_major_curriculum_changes?,
       courseVersionId: get_course_version&.id,
       unitPath: script_path(self),
       lessonExtrasAvailableForUnit: lesson_extras_available,
@@ -1722,6 +1727,7 @@ class Unit < ApplicationRecord
     raise "only call this in a test!" unless Rails.env.test?
     @@unit_cache = nil
     @@unit_family_cache = nil
+    @@script_level_cache = nil
     @@level_cache = nil
     @@all_scripts = nil
     @@visible_units = nil
@@ -1918,11 +1924,6 @@ class Unit < ApplicationRecord
     }
   end
 
-  private def teacher_feedback_enabled?
-    initiative = get_course_version&.course_offering&.marketing_initiative
-    TEACHER_FEEDBACK_INITIATIVES.include? initiative
-  end
-
   def summarize_for_assignment_dropdown
     [
       id,
@@ -2098,5 +2099,10 @@ class Unit < ApplicationRecord
   # send students on the last level of a lesson to the unit overview page.
   def show_unit_overview_between_lessons?
     middle_high? || ['vpl-csd-summer-pilot'].include?(get_course_version&.course_offering&.key)
+  end
+
+  private def teacher_feedback_enabled?
+    initiative = get_course_version&.course_offering&.marketing_initiative
+    TEACHER_FEEDBACK_INITIATIVES.include? initiative
   end
 end

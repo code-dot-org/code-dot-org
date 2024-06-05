@@ -28,6 +28,16 @@ class ProjectsListTest < ActionController::TestCase
       hidden: true
     }.to_json
     @hidden_project = {id: 33, value: hidden_project_value}
+
+    # lab2 projects rely on the projectType field to determine type.
+    lab2_project_value = {
+      name: 'Lab2 Project',
+      createdAt: '2024-01-24T16:41:08.000-08:00',
+      updatedAt: '2024-01-25T17:48:12.358-08:00',
+      projectType: 'pythonlab',
+      hidden: false,
+    }.to_json
+    @lab2_project = {id: 44, value: lab2_project_value}
   end
 
   test 'get_project_row_data correctly parses student and project data' do
@@ -38,6 +48,16 @@ class ProjectsListTest < ActionController::TestCase
     assert_equal @student.name, project_row['studentName']
     assert_equal 'applab', project_row['type']
     assert_equal '2017-01-25T17:48:12.358-08:00', project_row['updatedAt']
+  end
+
+  test 'get_project_row_data correctly parses lab2 project data' do
+    project_row = ProjectsList.send(:get_project_row_data, @lab2_project, @channel_id, @student)
+    assert_nil @channel_id
+    assert_nil project_row['channel']
+    assert_equal 'Lab2 Project', project_row['name']
+    assert_equal @student.name, project_row['studentName']
+    assert_equal 'pythonlab', project_row['type']
+    assert_equal '2024-01-25T17:48:12.358-08:00', project_row['updatedAt']
   end
 
   test 'get_project_row_data ignores hidden projects' do
@@ -243,6 +263,30 @@ class ProjectsListTest < ActionController::TestCase
     assert_nil returned_project["studentAgeRange"]
   end
 
+  test 'extract_data_for_featured_project_cards correctly parses project data without thumbnail url' do
+    fake_project_value = "{\"name\":\"Desert Dinosaur\"}"
+    fake_project_featured_project_user_combo_data = [
+      {
+        id: 184,
+        storage_id: 160,
+        value: fake_project_value,
+        project_type: "playlab",
+        published_at: "2018-02-26 11:23:11 -0800",
+        featured_at: "2018-02-26 19:23:36 -0800",
+        unfeatured_at: nil,
+        name: "harry_potter",
+        birthday: DateTime.now,
+        properties: {}
+      }
+    ]
+    returned_project = ProjectsList.send(
+      :extract_data_for_featured_project_cards, fake_project_featured_project_user_combo_data
+    ).first
+
+    assert_equal JSON.parse(fake_project_value)["name"], returned_project["name"]
+    assert_nil returned_project["thumbnailUrl"]
+  end
+
   test "include_featured combines featured project data and published projects data correctly" do
     fake_featured_projects = {
       applab: [
@@ -259,6 +303,7 @@ class ProjectsListTest < ActionController::TestCase
       spritelab: [],
       dance: [],
       poetry: [],
+      music: [],
       library: []
     }
     fake_recent_projects = {
@@ -276,6 +321,7 @@ class ProjectsListTest < ActionController::TestCase
       spritelab: [],
       dance: [],
       poetry: [],
+      music: [],
       library: []
     }
     ProjectsList.stubs(:fetch_featured_published_projects).returns(fake_featured_projects)
@@ -453,17 +499,15 @@ class ProjectsListTest < ActionController::TestCase
     assert_equal [], ProjectsList.fetch_updated_library_channels([])
   end
 
-  private
-
-  def user_db_result(result)
+  private def user_db_result(result)
     stub(where: stub(select_hash: result))
   end
 
-  def library_db_result(result)
+  private def library_db_result(result)
     stub(where: stub(where: stub(where: result)))
   end
 
-  def db_result(result)
+  private def db_result(result)
     stub(select: stub(join: stub(join: stub(where: stub(where: stub(exclude: stub(order: stub(limit: result))))))))
   end
 end

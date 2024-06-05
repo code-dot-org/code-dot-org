@@ -64,7 +64,7 @@ def combine_css(*paths)
   request_site = request.site == "advocacy.code.org" ? "code.org" : request.site
 
   files = paths.map {|path| Dir.glob(pegasus_dir('sites.v3', request_site, path, '*.css'))}.flatten
-  css = files.sort_by(&File.method(:basename)).map do |i|
+  css = files.sort_by {|file| File.basename(file)}.map do |i|
     File.read(i)
   end.join("\n\n")
   css_min = Sass::Engine.new(css,

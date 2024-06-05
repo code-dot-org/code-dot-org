@@ -97,6 +97,16 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
   end
 
   class GrantPermissionRequest < ActionDispatch::IntegrationTest
+    def assert_enqueued_parent_permission_confirm_mail(permission, &block)
+      assert_enqueued_with(
+        job: ParentMailer.delivery_job,
+        args: ['ParentMailer', 'parent_permission_confirmation', 'deliver_now', {args: [permission.parent_email]}],
+        queue: 'mailers',
+        at: 24.hours.from_now,
+        &block
+      )
+    end
+
     teardown do
       Timecop.return
     end
@@ -108,7 +118,7 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
     test 'given permission request it should update user and send email' do
       permission = create :parental_permission_request
       user = permission.user
-      assert_emails 1 do
+      assert_enqueued_parent_permission_confirm_mail(permission) do
         Services::ChildAccount.grant_permission_request! permission
       end
       user.reload
@@ -119,7 +129,7 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
     test 'granting permission twice only makes changes once' do
       permission = create :parental_permission_request
       user = permission.user
-      assert_emails 1 do
+      assert_enqueued_parent_permission_confirm_mail(permission) do
         Services::ChildAccount.grant_permission_request! permission
       end
       user.reload
@@ -129,25 +139,12 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
       refute_empty last_updated
 
       # No emails should be sent
-      assert_emails 0 do
+      assert_no_enqueued_emails do
         Services::ChildAccount.grant_permission_request! permission
       end
       user.reload
       # The date shouldn't be updated
       assert_equal last_updated, user.child_account_compliance_state_last_updated
-    end
-  end
-
-  class TeacherUsState < ActiveSupport::TestCase
-    test 'Sets the student\'s us_state based on their teacher\'s state' do
-      school_info = create :school_info, state: 'WA'
-      teacher = create :teacher, :with_school_info, school_info: school_info
-      section = create :section, user: teacher
-      student = create(:follower, section: section).student_user
-
-      Services::ChildAccount.update_us_state_from_teacher!(student)
-
-      assert_equal 'WA', student.reload.us_state
     end
   end
 end

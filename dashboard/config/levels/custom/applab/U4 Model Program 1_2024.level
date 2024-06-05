@@ -52,10 +52,10 @@
     "name_suffix": "_2024",
     "mini_rubric": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/design-mode",
-      "/courses/csd-2022/guides/design-mode-elements"
+      "/courses/csd-2024/guides/design-mode",
+      "/courses/csd-2024/guides/design-mode-elements"
     ],
-    "map_reference": "/courses/csd-2022/guides/multi-screen-apps",
+    "map_reference": "/courses/csd-2024/guides/multi-screen-apps",
     "encrypted": "false",
     "libraries_enabled": "false",
     "widget_mode": "false",

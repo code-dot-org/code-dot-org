@@ -8,31 +8,31 @@
 
 :root {
   /* Colors */
-  --brand_primary_light: #ABDFE5;
-  --brand_primary_medium: #7BC6CF;
-  --brand_primary_default: #0093A4;
+  --brand_primary_light: #abdfe5;
+  --brand_primary_medium: #7bc6cf;
+  --brand_primary_default: #0093a4;
   --brand_primary_dark: #008291;
-  --brand_secondary_light: #E0D1EC;
-  --brand_secondary_default: #8C52BA;
-  --brand_secondary_dark: #6F488E;
-  --brand_accent_default: #ED6060;
-  --neutral_white: #FFFFFF;
-  --neutral_light: #F7F8FA;
-  --neutral_dark10: #EAEBEB;
-  --neutral_dark20: #D4D5D7;
-  --neutral_dark30: #BFC1C3;
-  --neutral_dark40: #A9ACAF;
-  --neutral_dark50: #94979B;
-  --neutral_dark60: #7F8286;
-  --neutral_dark70: #6A6E73;
-  --neutral_dark80: #54595E;
-  --neutral_dark90: #3F444B;
-  --neutral_dark: #292F36;
+  --brand_secondary_light: #e0d1ec;
+  --brand_secondary_default: #8c52ba;
+  --brand_secondary_dark: #6f488e;
+  --brand_accent_default: #ed6060;
+  --neutral_white: #ffffff;
+  --neutral_light: #f7f8fa;
+  --neutral_dark10: #eaebeb;
+  --neutral_dark20: #d4d5d7;
+  --neutral_dark30: #bfc1c3;
+  --neutral_dark40: #a9acaf;
+  --neutral_dark50: #94979b;
+  --neutral_dark60: #7f8286;
+  --neutral_dark70: #6a6e73;
+  --neutral_dark80: #54595e;
+  --neutral_dark90: #3f444b;
+  --neutral_dark: #292f36;
   --orange: #ffa400; /* legacy color */
   /* Typography */
-  --barlowSemiCondensed-semibold: 'Barlow Semi Condensed Semibold', sans-serif;
-  --barlowSemiCondensed-medium: 'Barlow Semi Condensed Medium', sans-serif;
-  --main-font: 'Metropolis', sans-serif;
+  --barlowSemiCondensed-semibold: "Barlow Semi Condensed Semibold", sans-serif;
+  --barlowSemiCondensed-medium: "Barlow Semi Condensed Medium", sans-serif;
+  --main-font: "Metropolis", sans-serif;
   --thin-font-weight: 100;
   --extra-light-font-weight: 200;
   --light-font-weight: 300;
@@ -104,7 +104,7 @@ h5,
   font-family: var(--main-font);
   font-weight: var(--semi-bold-font-weight);
   font-size: 1.25rem;
-  line-height: 1.40;
+  line-height: 1.4;
   margin-bottom: 0.5em;
 }
 
@@ -115,6 +115,17 @@ h6,
   font-size: 1rem;
   line-height: 1.48;
   margin-bottom: 0.5em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/* Use this class on text elements to turn them white */
+h1, h2, h3, h4, h5, h6, p, figcaption, span, a:not(.link-button) {
+  &.white {
+    color: var(--neutral_white) !important;
+  }
 }
 
 p {
@@ -196,12 +207,12 @@ em {
 }
 
 /* Text link styles */
-a:is(:link, :visited) {
+a:any-link {
   font-family: var(--main-font);
   font-weight: var(--semi-bold-font-weight);
   color: var(--brand_secondary_default);
   text-decoration: underline;
-  transition: color ease-in-out .2s;
+  transition: color ease-in-out 0.2s;
 }
 
 a:is(:hover, :active) {
@@ -219,13 +230,13 @@ a:link:has(*) {
 a.link-button,
 button,
 .btn,
-input[type=submit] {
+input[type="submit"] {
   display: inline-block;
   color: var(--neutral_white);
   background: var(--brand_secondary_default);
   border: 2px solid var(--brand_secondary_default);
   border-radius: 4px;
-  padding: .75rem 1rem;
+  padding: 0.75rem 1rem;
   margin: 0.5rem 0;
   font-size: 1rem;
   font-family: var(--main-font);
@@ -233,7 +244,7 @@ input[type=submit] {
   line-height: 1;
   text-decoration: none;
   text-align: center;
-  transition: all ease-in-out .2s;
+  transition: all ease-in-out 0.2s;
 
   /* Hover styles */
   &:hover {
@@ -292,7 +303,16 @@ input[type=submit] {
     .flex-wrapper {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
+      gap: 0.5rem;
+    }
+
+    &.has-external-link {
+      display: inline-flex;
+      gap: 0.25rem;
+
+      &::after {
+        margin-top: 2px;
+      }
     }
   }
 
@@ -346,6 +366,7 @@ input[type=submit] {
   an "a" tag when a link opens in a new tab or window */
 .has-external-link a::after,
 a.has-external-link::after {
+  display: inline-block;
   font: var(--fa-font-solid);
   content: "\f08e";
   font-size: 0.875em;
@@ -357,6 +378,11 @@ a.link-button.has-external-link::after {
   margin-inline: 4px 0;
 }
 
+html[dir="rtl"] .has-external-link a::after,
+html[dir="rtl"] a.has-external-link::after {
+  transform: scaleX(-1);
+}
+
 li > ul {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -364,13 +390,13 @@ li > ul {
 
 ul {
   list-style: none;
-  padding:0;
-  margin:20px;
+  padding: 0;
+  margin: 20px;
 }
 
 ul li {
   padding-left: 1em;
-  text-indent: -.7em;
+  text-indent: -0.7em;
 }
 
 ul li:before {
@@ -404,6 +430,21 @@ td {
   border-color: rgb(141, 138, 138);
   border-style: solid;
   padding: 15px;
+}
+
+/* Centers a block-level element */
+.centered {
+  text-align: center !important;
+}
+
+/* Applies text-wrap: balance to an element */
+.wrap-balance {
+  text-wrap: balance;
+}
+
+/* Applies text-wrap: pretty to an element */
+.wrap-pretty {
+  text-wrap: pretty;
 }
 
 /* Styles for the "OR" divider line between paragraphs
@@ -558,7 +599,7 @@ nav.main .help_button .help_icon {
 }
 
 nav.main .help_button .help_contents {
-  top: 46px;
+  top: 44px;
 }
 
 nav.main #hamburger #hamburger-icon {
@@ -573,9 +614,72 @@ nav.main #hamburger #hamburger-icon {
   }
 }
 
+/* Start top skinny banner styles --------------- */
+aside.top-skinny-banner {
+  background: var(--neutral_dark);
+  display: flex;
+
+  &.light-theme {
+    background: var(--neutral_dark10);
+
+    & * {
+      color: var(--neutral_dark) !important;
+    }
+  }
+
+  & * {
+    color: var(--neutral_white);
+  }
+
+  & .content-wrapper {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+
+    & > i {
+      margin-top: 2px;
+    }
+
+    & > a {
+      text-decoration: none;
+      font-weight: var(--normal-font-weight);
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  & > button {
+    all: unset;
+    padding: 1rem 1.1rem;
+    margin-top: 2px;
+    cursor: pointer;
+    text-align: center;
+    align-self: start;
+    opacity: 0.7;
+    transition: opacity 0.2s ease-in-out;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:focus {
+      outline: 5px auto -webkit-focus-ring-color;
+
+      &:not(:focus-visible) {
+        outline: none;
+      }
+    }
+  }
+}
+
 /* Start carousel styles ------------------------ */
 .carousel-wrapper {
   position: relative;
+  margin: 2rem 0 0;
 }
 
 /* Sets the font-family for text/image carousels */
@@ -598,7 +702,7 @@ swiper-slide {
 .carousel-wrapper .swiper-nav-prev,
 .carousel-wrapper .swiper-nav-next {
   position: absolute;
-  top: 42%;
+  top: 40%;
   border: 0;
   height: 48px;
 }
@@ -625,6 +729,17 @@ swiper-slide {
   }
 }
 
+/* Video carousel styles */
+.carousel-wrapper.video-carousel swiper-slide {
+  display: block;
+  text-align: left;
+}
+
+.carousel-wrapper.video-carousel .swiper-nav-prev,
+.carousel-wrapper.video-carousel .swiper-nav-next {
+  top: 28%;
+}
+
 /* Begin legacy styles ------------------------ */
 
 /* for homepage 2.0.. */
@@ -645,10 +760,11 @@ swiper-slide {
 
 .grey_input {
   font-size: 14px;
-  height:34px;
-  background-color: rgb(226,228,227);
-  border: none; padding: 5px;
-  color: rgb(89,89,89);
+  height: 34px;
+  background-color: rgb(226, 228, 227);
+  border: none;
+  padding: 5px;
+  color: rgb(89, 89, 89);
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
   border-top-left-radius: 4px;
@@ -659,17 +775,19 @@ swiper-slide {
   font-family: var(--main-font);
 }
 
-#petition_form a:link, #petition_form a:visited {
+#petition_form a:link,
+#petition_form a:visited {
   color: #dcdcdc;
   text-decoration: none;
 }
 
-#petition_form a:hover, #petition_form a:active {
+#petition_form a:hover,
+#petition_form a:active {
   color: #fff;
   text-decoration: underline;
 }
 
-.listed_supporter{
+.listed_supporter {
   font-family: var(--main-font);
   font-weight: var(--bold-font-weight);
   font-weight: normal;
@@ -680,7 +798,7 @@ swiper-slide {
   color: var(--neutral_white);
   padding: 20px;
   text-align: center;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 #about_nav {
@@ -707,19 +825,6 @@ a.about_list_item:hover {
 .dropdown {
   border-color: rgb(204, 204, 204);
   border-radius: 5px;
-}
-
-#stats-carousel .slide-prev > span {
-  border-right-color: #b9bf15;
-}
-#stats-carousel .slide-next > span {
-  border-left-color: #b9bf15;
-}
-.carousel-wrapper .pagination a {
-  background: var(--brand_primary_light);
-}
-.carousel-wrapper .pagination a.selected {
-  background: var(--brand_primary_default);
 }
 
 @media screen and (max-width: 450px) {

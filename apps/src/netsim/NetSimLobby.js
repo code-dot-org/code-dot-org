@@ -6,20 +6,24 @@
  *      lobby table.
  */
 import $ from 'jquery';
-var utils = require('../utils');
-var _ = require('lodash');
-var i18n = require('@cdo/netsim/locale');
-var NetSimNodeFactory = require('./NetSimNodeFactory');
-var NetSimClientNode = require('./NetSimClientNode');
-var NetSimAlert = require('./NetSimAlert');
-var NetSimApiError = require('./NetSimApiError');
-var NetSimRouterNode = require('./NetSimRouterNode');
-var NetSimShardSelectionPanel = require('./NetSimShardSelectionPanel');
-var NetSimRemoteNodeSelectionPanel = require('./NetSimRemoteNodeSelectionPanel');
+
 import {getUserSections} from '@cdo/apps/util/userSectionClient';
 
-var logger = require('./NetSimLogger').getSingleton();
+var _ = require('lodash');
+
+var i18n = require('@cdo/netsim/locale');
+
+var utils = require('../utils');
+
+var NetSimAlert = require('./NetSimAlert');
+var NetSimApiError = require('./NetSimApiError');
+var NetSimClientNode = require('./NetSimClientNode');
 var NetSimGlobals = require('./NetSimGlobals');
+var logger = require('./NetSimLogger').getSingleton();
+var NetSimNodeFactory = require('./NetSimNodeFactory');
+var NetSimRemoteNodeSelectionPanel = require('./NetSimRemoteNodeSelectionPanel');
+var NetSimRouterNode = require('./NetSimRouterNode');
+var NetSimShardSelectionPanel = require('./NetSimShardSelectionPanel');
 
 /**
  * @typedef {Object} ShardChoice

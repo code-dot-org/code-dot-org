@@ -176,7 +176,7 @@ module UsersHelper
       script: unit,
       users: users,
       user_levels_by_level: User.user_levels_by_user_by_level(users, unit),
-      teacher_feedback_by_level: teacher_feedbacks_by_student_by_level(users, unit),
+      teacher_feedback_by_level: teacher_feedbacks_by_student_by_level(users, unit, current_user&.id),
       paired_user_levels: PairedUserLevel.pairs_by_user(users),
       include_timestamp: true
     )
@@ -186,6 +186,101 @@ module UsersHelper
     end
 
     [progress_by_user, timestamp_by_user]
+  end
+
+  # Given a user and a script-level, returns a nil if there is only one page, or an array of
+  # values if there are multiple pages.  The array contains whether each page is completed, partially
+  # completed, or not yet attempted.  These values are ActivityConstants::FREE_PLAY_RESULT,
+  # ActivityConstants::UNSUBMITTED_RESULT, and nil, respectively.
+  #
+  # Since this is currently just used for multi-page LevelGroup levels, we only check that a valid
+  # (though not necessarily correct) answer has been given for each level embedded on a given page.
+  def get_pages_completed(user, sl)
+    # Since we only swap LevelGroups with other LevelGroups, just check levels[0]
+    return nil unless sl.levels[0].is_a? LevelGroup
+
+    last_user_level = user.last_attempt_for_any(sl.levels)
+    level = last_user_level.try(:level) || sl.oldest_active_level
+    pages_completed = []
+
+    if last_user_level.try(:level_source)
+      last_attempt = JSON.parse(last_user_level.level_source.data)
+    end
+
+    # Go through each page.
+    level.pages.each do |page|
+      page_valid_result_count = 0
+
+      # Retrieve the level information for the embedded levels.
+      embedded_levels = page.levels
+      embedded_levels.reject! {|l| l.type == 'FreeResponse' && l.optional == 'true'}
+      embedded_levels.each do |embedded_level|
+        level_id = embedded_level.id
+
+        # Do we have a valid result for this level in the LevelGroup last_attempt?
+        if last_attempt&.key?(level_id.to_s) && last_attempt[level_id.to_s]["valid"]
+          page_valid_result_count += 1
+        end
+      end
+
+      # The page is considered complete if there was a valid result for each
+      # embedded level.
+      page_completed_value =
+        if page_valid_result_count.zero?
+          nil
+        elsif page_valid_result_count == embedded_levels.length
+          ActivityConstants::FREE_PLAY_RESULT
+        else
+          ActivityConstants::UNSUBMITTED_RESULT
+        end
+      pages_completed << page_completed_value
+    end
+
+    pages_completed
+  end
+
+  # @return [Float] The percentage, between 0.0 and 100.0, of the levels in the
+  #   unit that were passed or perfected.
+  def percent_complete_total(unit, user = current_user)
+    summary = summarize_user_progress(unit, user)
+    levels = unit.script_levels.map(&:level)
+    complete_statuses = %w(perfect passed)
+    completed = levels.count do |l|
+      sum = summary[:progress][l.id]; sum && complete_statuses.include?(sum[:status])
+    end
+    (100.0 * completed / levels.count).round(2)
+  end
+
+  def usa?(country_code)
+    %w[US RD].include?(country_code.to_s.upcase)
+  end
+
+  def cap_user_info_required?(user, country_code)
+    return false unless user.student?
+    # We only need to collect the us_state for students living in the USA.
+    return false unless country_code.nil? || usa?(country_code)
+    # If user_provided_us_state is true, then the us_state field has been set
+    # from a trusted source. Therefore we should not show the cap_user_info modal.
+    return false if user.user_provided_us_state
+    # If this account has the us_state field and the account was created after
+    # CPA started, then the us_state must have come from a trusted source.
+    # Therefore, we don't need to show the cap_user_info modal.
+    return false if !Policies::ChildAccount.user_predates_state_collection?(user) && user.us_state.present?
+    # Is the student a child and using a personal account to access code.org?
+    Policies::ChildAccount.show_cap_state_modal?(user) && user.under_13? && Policies::ChildAccount.personal_account?(user)
+  end
+
+  def lti_user_info_required?(user)
+    return false unless user.student?
+    return false unless user.us_state.nil?
+
+    Policies::Lti.lti?(current_user)
+  end
+
+  def country_code(user, request)
+    return user.country_code if user.student?
+
+    user.country_code.presence || request.country.to_s.upcase
   end
 
   # Retrieve all teacher feedback for the designated set of users in the given
@@ -205,10 +300,10 @@ module UsersHelper
   #   },
   #   3: {}
   # }
-  private def teacher_feedbacks_by_student_by_level(users, unit)
+  private def teacher_feedbacks_by_student_by_level(users, unit, teacher_id = nil)
     initial_hash = users.map {|user| [user.id, {}]}.to_h
     TeacherFeedback.
-      get_latest_feedbacks_received(users.map(&:id), nil, unit.id).
+      get_latest_feedbacks_received(users.map(&:id), nil, unit.id, teacher_id).
       group_by(&:student_id).
       inject(initial_hash) do |memo, (student_id, teacher_feedbacks)|
         memo[student_id] = teacher_feedbacks.index_by(&:level_id)
@@ -288,6 +383,7 @@ module UsersHelper
     include_timestamp: false
   )
     progress = users.map {|user| [user.id, {}]}.to_h
+
     script.script_levels.each do |sl|
       sl.level_ids.each do |level_id|
         level = Level.cache_find(level_id)
@@ -315,8 +411,7 @@ module UsersHelper
             level_progress = get_level_progress(
               user_id: user.id,
               user_level: user_levels_by_level[user.id][level_for_progress_id],
-              feedback_review_state:
-                teacher_feedback_by_level[user.id][level_for_progress_id]&.review_state,
+              teacher_feedback: teacher_feedback_by_level[user.id][level_for_progress_id],
               script_level: sl,
               paired_user_levels: paired_user_levels[user.id],
               include_timestamp: include_timestamp
@@ -344,7 +439,7 @@ module UsersHelper
   private def get_level_progress(
     user_id:,
     user_level:,
-    feedback_review_state:,
+    teacher_feedback:,
     script_level:,
     paired_user_levels:,
     include_timestamp:
@@ -356,11 +451,13 @@ module UsersHelper
     if user_level.nil?
       if script_level.lesson.lockable?
         return {locked: true}
-      elsif feedback_review_state.present?
+      elsif teacher_feedback.present?
         return {
           status: LEVEL_STATUS.not_tried,
-          teacher_feedback_review_state: feedback_review_state
-        }
+          teacher_feedback_review_state: teacher_feedback.review_state,
+          teacher_feedback_commented: teacher_feedback.comment.present? || nil,
+          teacher_feedback_new: true
+        }.compact
       else
         return nil
       end
@@ -373,7 +470,10 @@ module UsersHelper
       paired: (paired_user_levels.include? user_level.id) || nil,
       last_progress_at: include_timestamp ? user_level.updated_at&.to_i : nil,
       time_spent: user_level.time_spent&.to_i,
-      teacher_feedback_review_state: feedback_review_state
+      teacher_feedback_review_state: teacher_feedback&.review_state,
+      teacher_feedback_commented: teacher_feedback&.comment&.present? || nil,
+      teacher_feedback_new:
+        ((teacher_feedback&.updated_at&.to_i || 0) > (user_level.updated_at&.to_i || 0)) || nil
     }.compact
   end
 
@@ -411,7 +511,7 @@ module UsersHelper
       sublevel_progress = get_level_progress(
         user_id: user.id,
         user_level: user_levels_by_level[level_for_progress.id],
-        feedback_review_state: teacher_feedback_by_level[sublevel.id]&.review_state,
+        teacher_feedback: teacher_feedback_by_level[sublevel.id],
         script_level: script_level,
         paired_user_levels: paired_user_levels,
         include_timestamp: include_timestamp
@@ -432,68 +532,5 @@ module UsersHelper
     progress[level.id][:time_spent] = time_sum if time_sum > 0
 
     progress
-  end
-
-  # Given a user and a script-level, returns a nil if there is only one page, or an array of
-  # values if there are multiple pages.  The array contains whether each page is completed, partially
-  # completed, or not yet attempted.  These values are ActivityConstants::FREE_PLAY_RESULT,
-  # ActivityConstants::UNSUBMITTED_RESULT, and nil, respectively.
-  #
-  # Since this is currently just used for multi-page LevelGroup levels, we only check that a valid
-  # (though not necessarily correct) answer has been given for each level embedded on a given page.
-  def get_pages_completed(user, sl)
-    # Since we only swap LevelGroups with other LevelGroups, just check levels[0]
-    return nil unless sl.levels[0].is_a? LevelGroup
-
-    last_user_level = user.last_attempt_for_any(sl.levels)
-    level = last_user_level.try(:level) || sl.oldest_active_level
-    pages_completed = []
-
-    if last_user_level.try(:level_source)
-      last_attempt = JSON.parse(last_user_level.level_source.data)
-    end
-
-    # Go through each page.
-    level.pages.each do |page|
-      page_valid_result_count = 0
-
-      # Retrieve the level information for the embedded levels.
-      embedded_levels = page.levels
-      embedded_levels.reject! {|l| l.type == 'FreeResponse' && l.optional == 'true'}
-      embedded_levels.each do |embedded_level|
-        level_id = embedded_level.id
-
-        # Do we have a valid result for this level in the LevelGroup last_attempt?
-        if last_attempt&.key?(level_id.to_s) && last_attempt[level_id.to_s]["valid"]
-          page_valid_result_count += 1
-        end
-      end
-
-      # The page is considered complete if there was a valid result for each
-      # embedded level.
-      page_completed_value =
-        if page_valid_result_count.zero?
-          nil
-        elsif page_valid_result_count == embedded_levels.length
-          ActivityConstants::FREE_PLAY_RESULT
-        else
-          ActivityConstants::UNSUBMITTED_RESULT
-        end
-      pages_completed << page_completed_value
-    end
-
-    pages_completed
-  end
-
-  # @return [Float] The percentage, between 0.0 and 100.0, of the levels in the
-  #   unit that were passed or perfected.
-  def percent_complete_total(unit, user = current_user)
-    summary = summarize_user_progress(unit, user)
-    levels = unit.script_levels.map(&:level)
-    complete_statuses = %w(perfect passed)
-    completed = levels.count do |l|
-      sum = summary[:progress][l.id]; sum && complete_statuses.include?(sum[:status])
-    end
-    (100.0 * completed / levels.count).round(2)
   end
 end

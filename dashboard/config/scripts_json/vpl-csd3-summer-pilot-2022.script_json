@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "curriculum_umbrella": "PD Workshop Activity CSD",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -13,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-11 01:58:35 UTC",
+    "serialized_at": "2024-03-06 20:07:25 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1472,6 +1473,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-async1-classroomCulture"
+        ],
         "progression": "Classroom culture"
       },
       "bonus": false,
@@ -1494,6 +1498,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-mod3-async1-Inclusion"
+        ],
         "progression": "Curriculum supports "
       },
       "bonus": false,
@@ -1516,6 +1523,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDPILOT-VPL-21-mod4-Differentiation"
+        ],
         "progression": "Curriculum supports "
       },
       "bonus": false,
@@ -1538,6 +1548,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDPILOT-VPL-21-mod4-DifferentiationContinued"
+        ],
         "progression": "Curriculum supports "
       },
       "bonus": false,
@@ -1560,6 +1573,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-mod3-teamworkOverview"
+        ],
         "progression": "Teamwork"
       },
       "bonus": false,
@@ -1582,6 +1598,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-csd web teamwork video_2022"
+        ],
         "progression": "Teamwork"
       },
       "bonus": false,
@@ -1604,6 +1623,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-csd web disagreement video_2022"
+        ],
         "progression": "Teamwork"
       },
       "bonus": false,
@@ -1626,6 +1648,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-async-Day3Lesson4-WrapUp"
+        ],
         "progression": "Wrap up"
       },
       "bonus": false,
@@ -2500,6 +2525,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

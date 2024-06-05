@@ -70,7 +70,9 @@
 #
 
 require 'digest/md5'
+require 'state_abbr'
 require 'cdo/aws/metrics'
+require 'cdo/shared_constants'
 require_relative '../../legacy/middleware/helpers/user_helpers'
 require 'school_info_interstitial_helper'
 require 'sign_up_tracking'
@@ -107,6 +109,9 @@ class User < ApplicationRecord
   #   child_account_compliance_state_last_updated: The date the user became
   #     compliant with our child account policy.
   #   ai_rubrics_disabled: Turns off AI assessment for a User.
+  #   ai_rubrics_tour_seen: Tracks whether user has viewed the AI rubric product tour.
+  #   lti_roster_sync_enabled: Enable/disable LTI roster syncing for a User.
+  #   user_provided_us_state: Indicates if the us_state was provided by the user as opposed to being interpolated.
   serialized_attrs %w(
     ops_first_name
     ops_last_name
@@ -144,8 +149,17 @@ class User < ApplicationRecord
     country_code
     family_name
     ai_rubrics_disabled
+    ai_rubrics_tour_seen
     sort_by_family_name
     show_progress_table_v2
+    progress_table_v2_closed_beta
+    lti_roster_sync_enabled
+    ai_tutor_access_denied
+    progress_table_v2_timestamp
+    progress_table_v1_timestamp
+    has_seen_progress_table_v2_invitation
+    date_progress_table_invitation_last_delayed
+    user_provided_us_state
   )
 
   attr_accessor(
@@ -190,8 +204,8 @@ class User < ApplicationRecord
 
   # :user_type is locked. Use the :permissions property for more granular user permissions.
   USER_TYPE_OPTIONS = [
-    TYPE_STUDENT = 'student'.freeze,
-    TYPE_TEACHER = 'teacher'.freeze
+    TYPE_STUDENT = SharedConstants::USER_TYPES.STUDENT,
+    TYPE_TEACHER = SharedConstants::USER_TYPES.TEACHER,
   ].freeze
 
   validates_presence_of :user_type
@@ -212,6 +226,7 @@ class User < ApplicationRecord
     through: :regional_partner_program_managers
 
   has_many :pd_workshops_organized, class_name: 'Pd::Workshop', foreign_key: :organizer_id
+  has_and_belongs_to_many :pd_workshops_facilitated, class_name: 'Pd::Workshop', join_table: 'pd_workshops_facilitators', association_foreign_key: 'pd_workshop_id'
 
   has_many :authentication_options, dependent: :destroy
   accepts_nested_attributes_for :authentication_options
@@ -273,9 +288,13 @@ class User < ApplicationRecord
 
   after_save :save_email_reg_partner_preference, if: -> {share_teacher_email_reg_partner_opt_in_radio_choice.present?}
 
+  after_save :log_cap_event, if: -> {properties_previous_change&.dig(1, 'child_account_compliance_state')}
+
   after_create if: -> {Policies::Lti.lti? self} do
     Services::Lti.create_lti_user_identity(self)
   end
+
+  after_create :verify_teacher!, if: -> {teacher? && Policies::Lti.lti?(self)}
 
   before_destroy :soft_delete_channels
 
@@ -283,7 +302,7 @@ class User < ApplicationRecord
     self.gender = Policies::Gender.normalize gender
   end
 
-  validate :validate_us_state, on: :create
+  validate :validate_us_state, if: :should_validate_us_state?
 
   before_create unless: -> {Policies::ChildAccount.compliant?(self)} do
     Services::ChildAccount.lock_out(self)
@@ -300,6 +319,10 @@ class User < ApplicationRecord
 
   validates :gender_student_input, length: {maximum: 50}, no_utf8mb4: true
   validates :gender_teacher_input, no_utf8mb4: true
+
+  validate :lti_roster_sync_enabled, if: -> {lti_roster_sync_enabled.present?} do
+    self.lti_roster_sync_enabled = ActiveRecord::Type::Boolean.new.cast(lti_roster_sync_enabled)
+  end
 
   def save_email_preference
     if teacher?
@@ -533,7 +556,7 @@ class User < ApplicationRecord
 
   USERNAME_REGEX = /\A#{UserHelpers::USERNAME_ALLOWED_CHARACTERS.source}+\z/i
   validates_length_of :username, within: 5..20, allow_blank: true
-  validates_format_of :username, with: USERNAME_REGEX, on: :create, allow_blank: true
+  validates_format_of :username, if: :username_changed?, with: USERNAME_REGEX, allow_blank: true
   validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :create, if: -> {errors.blank?}
   validates_uniqueness_of :username, case_sensitive: false, on: :update, if: -> {errors.blank? && username_changed?}
   validates_presence_of :username, if: :username_required?
@@ -1094,6 +1117,9 @@ class User < ApplicationRecord
     self.parent_email = nil
 
     new_attributes = email_preference.nil? ? {} : email_preference
+    if Policies::Lti.lti? self
+      self.lti_roster_sync_enabled = true
+    end
 
     transaction do
       if migrated?
@@ -1357,7 +1383,19 @@ class User < ApplicationRecord
     user_levels_by_level = user_levels_by_level(script)
 
     script.script_levels.none? do |script_level|
-      user_levels = script_level.level_ids.map {|id| user_levels_by_level[id]}
+      user_levels = []
+      script_level.levels.each do |level|
+        curr_user_level = user_levels_by_level[level.id]
+
+        # If level.id is not present in user_levels_by_level, check if level has contained_levels with present ids
+        if !curr_user_level && !level.contained_levels.empty?
+          level.contained_levels.each do |contained_level|
+            user_levels.push(user_levels_by_level[contained_level.id])
+          end
+        else
+          user_levels.push(curr_user_level)
+        end
+      end
       unpassed_progression_level?(script_level, user_levels)
     end
   end
@@ -1468,6 +1506,10 @@ class User < ApplicationRecord
     user_type == TYPE_TEACHER
   end
 
+  def verify_teacher!
+    self.permission = UserPermission::AUTHORIZED_TEACHER
+  end
+
   # This method just checks if a user has the authorized teacher permission
   # if you are hoping to know if someone can access content for verified instructors
   # you should use the verified_instructor? method instead which includes checks for a
@@ -1496,12 +1538,15 @@ class User < ApplicationRecord
       SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME))
   end
 
+  def can_view_student_ai_chat_messages?
+    sections.any?(&:assigned_csa?) &&
+      SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME)
+  end
+
   # Students
   def has_ai_tutor_access?
-    !DCDO.get('ai-tutor-disabled', false) && (
-    permission?(UserPermission::AI_TUTOR_ACCESS) ||
-      (get_active_experiment_names_by_teachers.include?(AI_TUTOR_EXPERIMENT_NAME) &&
-      sections_as_student.any?(&:ai_tutor_enabled)))
+    return false if ai_tutor_access_denied || ai_tutor_feature_globally_disabled?
+    permission_for_ai_tutor? || in_ai_tutor_experiment_with_enabled_section?
   end
 
   def student_of_verified_instructor?
@@ -1531,7 +1576,11 @@ class User < ApplicationRecord
 
   def age=(val)
     @age = val
-    val = val.to_i rescue 0 # sometimes we get age: {"Pr" => nil}
+    val = begin
+      val.to_i
+    rescue
+      0 # sometimes we get age: {"Pr" => nil}
+    end
     return unless val > 0
     return unless val < 200
     return if birthday && val == age # don't change birthday if we want to stay the same age
@@ -1878,6 +1927,40 @@ class User < ApplicationRecord
     user_course_data + user_script_data
   end
 
+  def pl_units_started
+    user_scripts = Queries::ScriptActivity.in_progress_and_completed_scripts(self)
+    pl_user_scripts = user_scripts.select {|us| us.script.pl_course?}
+    pl_scripts = pl_user_scripts.map(&:script)
+
+    levels = pl_scripts.map(&:levels).flatten
+    level_ids = levels.map(&:id)
+
+    # Handle levels-within-levels
+    levels.each {|l| level_ids << l.contained_levels.first&.id unless l.contained_levels.empty?}
+
+    user_levels = UserLevel.where(user: self, script: pl_scripts, level_id: level_ids)
+    return [] if user_levels.empty?
+    user_levels_by_script = user_levels.group_by(&:script_id)
+    percent_completed_by_script = {}
+    pl_scripts.each do |pl_script|
+      levels_completed = (user_levels_by_script[pl_script.id] || []).count(&:passing?)
+      total_levels = pl_script.levels.count
+      next if total_levels == 0
+      percent_completed_by_script[pl_script.id] = ((levels_completed.to_f / total_levels) * 100).round
+    end
+
+    pl_scripts.map do |script|
+      percent_completed = percent_completed_by_script[script.id] || 0
+      {
+        name: script.name,
+        title: script.title_for_display,
+        percent_completed: percent_completed,
+        finish_url: percent_completed == 100 ? script.finish_url : nil,
+        current_lesson_name: next_unpassed_progression_level(script)&.lesson&.localized_name
+      }
+    end
+  end
+
   # Return a collection of courses and scripts for the user.
   # First in the list will be courses enrolled in by the user's sections.
   # Following that will be all scripts in which the user has made progress that # are not in any of the enrolled courses.
@@ -2160,6 +2243,9 @@ class User < ApplicationRecord
       age: age,
       sharing_disabled: sharing_disabled?,
       has_ever_signed_in: has_ever_signed_in?,
+      ai_tutor_access_denied: !!ai_tutor_access_denied,
+      at_risk_age_gated: Policies::ChildAccount.parent_permission_required?(self),
+      child_account_compliance_state: child_account_compliance_state,
     }
   end
 
@@ -2511,25 +2597,6 @@ class User < ApplicationRecord
     SingleUserExperiment.enabled?(user: self, experiment_name: pilot_name)
   end
 
-  # Called before_destroy.
-  # Soft-deletes any projects and other channel-backed progress belonging to
-  # this user.  Unfeatures any featured projects belonging to this user.
-  private def soft_delete_channels
-    return unless user_storage_id
-
-    project = Projects.new(user_storage_id)
-    project_ids = project.get_all_project_ids
-
-    # Unfeature any featured projects owned by the user
-    FeaturedProject.
-      where(project_id: project_ids, unfeatured_at: nil).
-      where.not(featured_at: nil).
-      update_all(unfeatured_at: Time.now)
-
-    # Soft-delete all of the user's projects
-    project.soft_delete_all
-  end
-
   def user_storage_id
     @user_storage_id ||= storage_id_for_user_id(id)
   end
@@ -2638,6 +2705,95 @@ class User < ApplicationRecord
     followeds.filter_map(&:code_review_group)
   end
 
+  # Can be used to identify users in cases where integer IDs may be vulnerable to abuse
+  def uuid
+    id && Digest::UUID.uuid_v5(Dashboard::Application.config.secret_key_base, id.to_s)
+  end
+
+  # @return [String, nil] the user's US state code in the ISO 3166-2:US standard
+  def us_state_code
+    state = student? ? us_state : school_info&.usa? && school_info&.state
+    return if state.blank?
+
+    # Returns `state` if it is a US state code
+    return state.upcase if us_state_abbr?(state, include_dc: true)
+
+    # Returns the code of `state` if it is a US state name
+    get_us_state_abbr_from_name(state, include_dc: true)
+  end
+
+  US_STATE_DROPDOWN_OPTIONS = {
+    'AL' => 'Alabama', 'AK' => 'Alaska', 'AZ' => 'Arizona', 'AR' => 'Arkansas',
+    'CA' => 'California', 'CO' => 'Colorado', 'CT' => 'Connecticut',
+    'DE' => 'Delaware', 'FL' => 'Florida', 'GA' => 'Georgia', 'HI' => 'Hawaii',
+    'ID' => 'Idaho', 'IL' => 'Illinois', 'IN' => 'Indiana', 'IA' => 'Iowa',
+    'KS' => 'Kansas', 'KY' => 'Kentucky', 'LA' => 'Louisiana', 'ME' => 'Maine',
+    'MD' => 'Maryland', 'MA' => 'Massachusetts', 'MI' => 'Michigan',
+    'MN' => 'Minnesota', 'MS' => 'Mississippi', 'MO' => 'Missouri',
+    'MT' => 'Montana', 'NE' => 'Nebraska', 'NV' => 'Nevada',
+    'NH' => 'New Hampshire', 'NJ' => 'New Jersey', 'NM' => 'New Mexico',
+    'NY' => 'New York', 'NC' => 'North Carolina', 'ND' => 'North Dakota',
+    'OH' => 'Ohio', 'OK' => 'Oklahoma', 'OR' => 'Oregon',
+    'PA' => 'Pennsylvania', 'RI' => 'Rhode Island', 'SC' => 'South Carolina',
+    'SD' => 'South Dakota', 'TN' => 'Tennessee', 'TX' => 'Texas',
+    'UT' => 'Utah', 'VT' => 'Vermont', 'VA' => 'Virginia', 'WA' => 'Washington',
+    'DC' => 'Washington D.C.', 'WV' => 'West Virginia', 'WI' => 'Wisconsin',
+    'WY' => 'Wyoming'
+  }.freeze
+
+  # Returns a Hash of US state codes to state names meant for use in dropdown
+  # selection inputs for User accounts.
+  # Includes a '??' state code for a location not listed.
+  def self.us_state_dropdown_options
+    {'??' => I18n.t('signup_form.us_state_dropdown_options.other')}.
+      merge(US_STATE_DROPDOWN_OPTIONS)
+  end
+
+  def us_state_changed?
+    # Check if us_state value will change
+    will_save_change_to_properties? && properties_change&.first&.[]("us_state") != us_state
+  end
+
+  def should_validate_us_state?
+    # tracking a user's US State is currently limited to students.
+    return false unless user_type == TYPE_STUDENT
+    # us_state is only a required field if the User lives in the US.
+    return false unless %w[US RD].include? country_code
+    new_record? || us_state_changed?
+  end
+
+  private def ai_tutor_feature_globally_disabled?
+    DCDO.get('ai-tutor-disabled', false)
+  end
+
+  private def permission_for_ai_tutor?
+    permission?(UserPermission::AI_TUTOR_ACCESS)
+  end
+
+  private def in_ai_tutor_experiment_with_enabled_section?
+    get_active_experiment_names_by_teachers.include?(AI_TUTOR_EXPERIMENT_NAME) &&
+      sections_as_student.any?(&:ai_tutor_enabled)
+  end
+
+  # Called before_destroy.
+  # Soft-deletes any projects and other channel-backed progress belonging to
+  # this user.  Unfeatures any featured projects belonging to this user.
+  private def soft_delete_channels
+    return unless user_storage_id
+
+    project = Projects.new(user_storage_id)
+    project_ids = project.get_all_project_ids
+
+    # Unfeature any featured projects owned by the user
+    FeaturedProject.
+      where(project_id: project_ids, unfeatured_at: nil).
+      where.not(featured_at: nil).
+      update_all(unfeatured_at: Time.now)
+
+    # Soft-delete all of the user's projects
+    project.soft_delete_all
+  end
+
   private def account_age_in_years
     ((Time.now - created_at.to_time) / 1.year).round
   end
@@ -2726,40 +2882,9 @@ class User < ApplicationRecord
       Cdo::EmailValidator.email_address?(parent_email)
   end
 
-  US_STATE_DROPDOWN_OPTIONS = {
-    'AL' => 'Alabama', 'AK' => 'Alaska', 'AZ' => 'Arizona', 'AR' => 'Arkansas',
-    'CA' => 'California', 'CO' => 'Colorado', 'CT' => 'Connecticut',
-    'DE' => 'Delaware', 'FL' => 'Florida', 'GA' => 'Georgia', 'HI' => 'Hawaii',
-    'ID' => 'Idaho', 'IL' => 'Illinois', 'IN' => 'Indiana', 'IA' => 'Iowa',
-    'KS' => 'Kansas', 'KY' => 'Kentucky', 'LA' => 'Louisiana', 'ME' => 'Maine',
-    'MD' => 'Maryland', 'MA' => 'Massachusetts', 'MI' => 'Michigan',
-    'MN' => 'Minnesota', 'MS' => 'Mississippi', 'MO' => 'Missouri',
-    'MT' => 'Montana', 'NE' => 'Nebraska', 'NV' => 'Nevada',
-    'NH' => 'New Hampshire', 'NJ' => 'New Jersey', 'NM' => 'New Mexico',
-    'NY' => 'New York', 'NC' => 'North Carolina', 'ND' => 'North Dakota',
-    'OH' => 'Ohio', 'OK' => 'Oklahoma', 'OR' => 'Oregon',
-    'PA' => 'Pennsylvania', 'RI' => 'Rhode Island', 'SC' => 'South Carolina',
-    'SD' => 'South Dakota', 'TN' => 'Tennessee', 'TX' => 'Texas',
-    'UT' => 'Utah', 'VT' => 'Vermont', 'VA' => 'Virginia', 'WA' => 'Washington',
-    'DC' => 'Washington D.C.', 'WV' => 'West Virginia', 'WI' => 'Wisconsin',
-    'WY' => 'Wyoming'
-  }.freeze
-
-  # Returns a Hash of US state codes to state names meant for use in dropdown
-  # selection inputs for User accounts.
-  # Includes a '??' state code for a location not listed.
-  def self.us_state_dropdown_options
-    {'??' => I18n.t('signup_form.us_state_dropdown_options.other')}.
-      merge(US_STATE_DROPDOWN_OPTIONS)
-  end
-
   # Verifies that the serialized attribute "us_state" is a 2 character string
   # representing a US State or "??" which represents a "N/A" kind of response.
   private def validate_us_state
-    # tracking a user's US State is currently limited to students.
-    return unless user_type == TYPE_STUDENT
-    # us_state is only a required field if the User lives in the US.
-    return unless %w[US RD].include? country_code
     # us_state must be selected.
     if us_state.blank?
       errors.add(:us_state, :blank)
@@ -2768,6 +2893,14 @@ class User < ApplicationRecord
     # Report an error if an invalid value was submitted (probably tampering).
     unless User.us_state_dropdown_options.include?(us_state)
       errors.add(:us_state, :invalid)
+    end
+  end
+
+  private def log_cap_event
+    if Policies::ChildAccount::ComplianceState.locked_out?(self)
+      Services::ChildAccount::EventLogger.log_account_locking(self)
+    elsif Policies::ChildAccount::ComplianceState.permission_granted?(self)
+      Services::ChildAccount::EventLogger.log_permission_granting(self)
     end
   end
 end

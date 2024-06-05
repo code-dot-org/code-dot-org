@@ -1,6 +1,6 @@
 import {expect} from '../../util/reconfiguredChai';
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import i18n from '@cdo/locale';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import DisabledBubblesModal from '@cdo/apps/code-studio/DisabledBubblesModal';

@@ -1,9 +1,11 @@
-import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
+import React, {Component} from 'react';
+
+import msg from '@cdo/locale';
+
 import color from '../../util/color';
 import FontAwesome from '../FontAwesome';
-import msg from '@cdo/locale';
 
 /**
  * A button for toggling the collapse state of instructions in CSF
@@ -81,6 +83,10 @@ const styles = {
     color: color.neutral_dark,
     whiteSpace: 'nowrap',
     ':hover': {
+      backgroundColor: color.neutral_dark20,
+      boxShadow: 'none',
+    },
+    ':focus': {
       backgroundColor: color.neutral_dark20,
       boxShadow: 'none',
     },

@@ -15,6 +15,7 @@ require_relative '../legacy/middleware/animation_library_api'
 require 'bootstrap-sass'
 require 'cdo/hash'
 require 'cdo/i18n_backend'
+require 'cdo/shared_constants'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -108,9 +109,9 @@ module Dashboard
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '*.json').to_s]
     config.i18n.backend = CDO.i18n_backend
     config.i18n.enforce_available_locales = false
-    config.i18n.available_locales = ['en-US']
-    config.i18n.fallbacks[:defaults] = ['en-US']
-    config.i18n.default_locale = 'en-US'
+    config.i18n.available_locales = [SharedConstants::DEFAULT_LOCALE]
+    config.i18n.fallbacks[:defaults] = [SharedConstants::DEFAULT_LOCALE]
+    config.i18n.default_locale = SharedConstants::DEFAULT_LOCALE
     LOCALES = YAML.load_file("#{Rails.root}/config/locales.yml")
     LOCALES.each do |locale, data|
       next unless data.is_a? Hash
@@ -186,6 +187,8 @@ module Dashboard
 
     # use https://(*-)studio.code.org urls in mails
     config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}
+    config.action_mailer.delivery_job = 'MailDeliveryJob'
+    config.action_mailer.deliver_later_queue_name = CDO.active_job_queues[:mailers]
 
     # Rails.cache is a fast memory store, cleared every time the application reloads.
     config.cache_store = :memory_store, {
@@ -214,5 +217,6 @@ module Dashboard
     config.exceptions_app = routes
 
     config.active_job.queue_adapter = :delayed_job
+    config.active_job.default_queue_name = CDO.active_job_queues[:default]
   end
 end

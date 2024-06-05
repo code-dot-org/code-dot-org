@@ -1,11 +1,11 @@
-import React from 'react';
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import React from 'react';
 import sinon from 'sinon';
 
-import {expect} from '../../util/reconfiguredChai';
-
 import Checkbox from '@cdo/apps/componentLibrary/checkbox';
+
+import {expect} from '../../util/reconfiguredChai';
 describe('Design System - Checkbox', () => {
   it('Checkbox - renders with correct label', () => {
     render(

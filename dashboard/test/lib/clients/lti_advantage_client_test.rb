@@ -52,7 +52,7 @@ class LtiAdvantageClientTest < ActiveSupport::TestCase
     @lti_client.expects(:sign_jwt).never # should not be called since the get_access_token method is stubbed
     @lti_client.expects(:get_access_token).with(@client_id, @issuer).once.returns(access_token)
     HTTParty.expects(:get).with(url, headers: expected_headers, query: expected_query).once.returns(stub(code: response_code, body: response_body))
-
+    Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
     actual_error = assert_raises(RuntimeError) {@lti_client.get_context_membership(url, @rlid)}
     assert_equal "Error getting context membership: #{response_code} #{response_body}", actual_error.message
   end

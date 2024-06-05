@@ -13,6 +13,9 @@ module AWS
     # List from: http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/HTTPStatusCodes.html#HTTPStatusCodes-cached-errors
     CLIENT_ERROR_CODES = [400, 403, 404, 405, 414].freeze
     SERVER_ERROR_CODES = [500, 501, 502, 503, 504].freeze
+    CUSTOM_ERROR_PAGES = {
+      500 => '/assets/error-pages/500.html'
+    }.freeze
     ERROR_CACHE_TTL = 60
     # Configure CloudFront to forward these headers for S3 origins.
     S3_FORWARD_HEADERS = %w(
@@ -155,7 +158,7 @@ module AWS
                 ErrorCachingMinTTL: ERROR_CACHE_TTL,
                 ErrorCode: error,
                 ResponseCode: error,
-                ResponsePagePath: '/assets/error-pages/site-down.html'
+                ResponsePagePath: CUSTOM_ERROR_PAGES[error] || '/assets/error-pages/site-down.html'
               }.tap do |error_response_hash|
                 # Don't use friendly error pages on some environments (such as adhocs and LevelBuilder).
                 unless CDO.custom_error_response

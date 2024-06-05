@@ -1,12 +1,15 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
-import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import i18n from '@cdo/locale';
-import {joinedSections} from './homepagesTestData';
-import SectionsAsStudentTable from '@cdo/apps/templates/studioHomepages/SectionsAsStudentTable';
 import {combineReducers, createStore} from 'redux';
+
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
+import SectionsAsStudentTable from '@cdo/apps/templates/studioHomepages/SectionsAsStudentTable';
+import i18n from '@cdo/locale';
+
+import {expect} from '../../../util/reconfiguredChai';
+
+import {joinedSections} from './homepagesTestData';
 
 const store = createStore(combineReducers({isRtl}));
 

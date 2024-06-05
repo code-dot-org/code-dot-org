@@ -2,10 +2,8 @@ const ALL_APPS = [
   'ailab',
   'applab',
   'bounce',
-  'calc',
   'craft',
   'dance',
-  'eval',
   'fish',
   'flappy',
   'javalab',
@@ -27,7 +25,6 @@ const CODE_STUDIO_ENTRIES = {
   'certificates/show': './src/sites/studio/pages/certificates/show.js',
   'code-studio': './src/sites/studio/pages/code-studio.js',
   'congrats/index': './src/sites/studio/pages/congrats/index.js',
-  'courses/index': './src/sites/studio/pages/courses/index.js',
   'courses/show': './src/sites/studio/pages/courses/show.js',
   'courses/vocab': './src/sites/studio/pages/courses/vocab.js',
   'courses/resources': './src/sites/studio/pages/courses/resources.js',
@@ -39,10 +36,14 @@ const CODE_STUDIO_ENTRIES = {
   'incubator/index': './src/sites/studio/pages/incubator/index.js',
   'lessons/show': './src/sites/studio/pages/lessons/show.js',
   'lessons/student_lesson_plan': './src/sites/studio/pages/lessons/student_lesson_plan.js',
-  'musiclab/index': './src/sites/studio/pages/musiclab/index.js',
   'musiclab/menu': './src/sites/studio/pages/musiclab/menu.js',
+  'musiclab/gallery': './src/sites/studio/pages/musiclab/gallery.js',
+  'musiclab/embed': './src/sites/studio/pages/musiclab/embed.js',
+  'policy_compliance/parental_permission/_banner': './src/sites/studio/pages/policy_compliance/parental_permission/_banner.js',
+  'policy_compliance/parental_permission/_modal': './src/sites/studio/pages/policy_compliance/parental_permission/_modal.js',
   'policy_compliance/child_account_consent': './src/sites/studio/pages/policy_compliance/child_account_consent.js',
   'print_certificates/batch': './src/sites/studio/pages/print_certificates/batch.js',
+  'print_certificates/show': './src/sites/studio/pages/print_certificates/show.js',
   'programming_classes/show': './src/sites/studio/pages/programming_classes/show.js',
   'programming_environments/index': './src/sites/studio/pages/programming_environments/index.js',
   'programming_environments/show': './src/sites/studio/pages/programming_environments/show.js',
@@ -62,6 +63,7 @@ const CODE_STUDIO_ENTRIES = {
   'layouts/_school_info_interstitial': './src/sites/studio/pages/layouts/_school_info_interstitial.js',
   'layouts/_small_footer': './src/sites/studio/pages/layouts/_small_footer.js',
   'layouts/_terms_interstitial': './src/sites/studio/pages/layouts/_terms_interstitial.js',
+  'layouts/_student_information_interstitial': './src/sites/studio/pages/layouts/_student_information_interstitial.js',
   'layouts/_initial_section_creation_interstitial': './src/sites/studio/pages/layouts/_initial_section_creation_interstitial.js',
   'levels/_bubble_choice': './src/sites/studio/pages/levels/_bubble_choice.js',
   'levels/_content': './src/sites/studio/pages/levels/_content.js',
@@ -84,7 +86,12 @@ const CODE_STUDIO_ENTRIES = {
   'levels/_text_match': './src/sites/studio/pages/levels/_text_match.js',
   'levels/_widget': './src/sites/studio/pages/levels/_widget.js',
   'levels/show': './src/sites/studio/pages/levels/show.js',
+  'lti/v1/_early_access_banner': './src/sites/studio/pages/lti/v1/_early_access_banner.js',
+  'lti/v1/iframe': './src/sites/studio/pages/lti/v1/iframe.js',
+  'lti/v1/account_linking/landing': './src/sites/studio/pages/lti/v1/account_linking/landing.js',
+  'lti/v1/dynamic_registration': './src/sites/studio/pages/lti/v1/dynamic_registration.js',
   'lti/v1/sync_course': './src/sites/studio/pages/lti/v1/sync_course.js',
+  'lti/v1/upgrade_account': './src/sites/studio/pages/lti/v1/upgrade_account.js',
   'maker/home': './src/sites/studio/pages/maker/home.js',
   'maker/setup': './src/sites/studio/pages/maker/setup.js',
   'projects/featured': './src/sites/studio/pages/projects/featured.js',
@@ -125,12 +132,14 @@ const INTERNAL_ENTRIES = {
   'levels/editors/_applab': './src/sites/studio/pages/levels/editors/_applab.js',
   'levels/editors/_craft': './src/sites/studio/pages/levels/editors/_craft.js',
   'levels/editors/_dsl': './src/sites/studio/pages/levels/editors/_dsl.js',
+  'levels/editors/fields/_aichat_settings': './src/sites/studio/pages/levels/editors/fields/_aichat_settings.js',
   'levels/editors/fields/_animation': './src/sites/studio/pages/levels/editors/fields/_animation.js',
   'levels/editors/fields/_bubble_choice_sublevel': './src/sites/studio/pages/levels/editors/fields/_bubble_choice_sublevel.js',
   'levels/editors/fields/_blockly': './src/sites/studio/pages/levels/editors/fields/_blockly.js',
   'levels/editors/fields/_callouts': './src/sites/studio/pages/levels/editors/fields/_callouts.js',
   'levels/editors/fields/_droplet': './src/sites/studio/pages/levels/editors/fields/_droplet.js',
   'levels/editors/fields/_grid': './src/sites/studio/pages/levels/editors/fields/_grid.js',
+  'levels/editors/fields/_panels': './src/sites/studio/pages/levels/editors/fields/_panels.js',
   'levels/editors/fields/_poetry_fields': './src/sites/studio/pages/levels/editors/fields/_poetry_fields.js',
   'levels/editors/fields/_preload_assets': './src/sites/studio/pages/levels/editors/fields/_preload_assets.js',
   'levels/editors/fields/_special_level_types': './src/sites/studio/pages/levels/editors/fields/_special_level_types.js',
@@ -171,11 +180,10 @@ const INTERNAL_ENTRIES = {
 const PEGASUS_ENTRIES = {
   // code.org
   'code.org/public/dance': './src/sites/code.org/pages/public/dance.js',
-  'code.org/public/educate/curriculum/courses': './src/sites/code.org/pages/public/educate/curriculum/courses.js',
   'code.org/public/teacher-dashboard/index': './src/sites/code.org/pages/public/teacher-dashboard/index.js',
   'code.org/public/yourschool': './src/sites/code.org/pages/public/yourschool.js',
   'code.org/public/yourschool/thankyou': './src/sites/code.org/pages/public/yourschool/thankyou.js',
-  'code.org/public/districts': './src/sites/code.org/pages/public/districts.js',
+  'code.org/views/admins_email_signup_form': './src/sites/code.org/pages/views/admins_email_signup_form.js',
   'code.org/views/share_privacy': './src/sites/code.org/pages/views/share_privacy.js',
   'code.org/views/theme_common_head_after': './src/sites/code.org/pages/views/theme_common_head_after.js',
   'code.org/views/theme_google_analytics': './src/sites/code.org/pages/views/theme_google_analytics.js',
@@ -185,12 +193,23 @@ const PEGASUS_ENTRIES = {
   'code.org/views/job_board': './src/sites/code.org/pages/views/job_board.js',
   'code.org/views/analytics_event_log_helper': './src/sites/code.org/pages/views/analytics_event_log_helper.js',
   'code.org/views/swiper': './src/sites/code.org/pages/views/swiper.js',
+  'code.org/views/swiper_page_csd': './src/sites/code.org/pages/views/swiper_page_csd.js',
+  'code.org/views/swiper_page_self_paced_pl': './src/sites/code.org/pages/views/swiper_page_self_paced_pl.js',
+  'code.org/views/swiper_page_ai': './src/sites/code.org/pages/views/swiper_page_ai.js',
+  'code.org/views/swiper_page_applab': './src/sites/code.org/pages/views/swiper_page_applab.js',
+  'code.org/views/swiper_page_videos': './src/sites/code.org/pages/views/swiper_page_videos.js',
+  'code.org/views/swiper_page_minecraft': './src/sites/code.org/pages/views/swiper_page_minecraft.js',
+  'code.org/views/swiper_page_music_lab': './src/sites/code.org/pages/views/swiper_page_music_lab.js',
+  'code.org/views/swiper_page_promote': './src/sites/code.org/pages/views/swiper_page_promote.js',
+  'code.org/public/poetry': './src/sites/code.org/pages/public/poetry.js',
 
   // hourofcode.com
   'hourofcode.com/public/events/index': './src/sites/hourofcode.com/pages/public/events/index.js',
   'hourofcode.com/views/theme_common_head_after': './src/sites/hourofcode.com/pages/views/theme_common_head_after.js',
   'hourofcode.com/views/hoc_events_map': './src/sites/hourofcode.com/pages/views/hoc_events_map.js',
   'hourofcode.com/views/theme_google_analytics': './src/sites/hourofcode.com/pages/views/theme_google_analytics.js',
+  'hourofcode.com/views/swiper_page_ai': './src/sites/hourofcode.com/pages/views/swiper_page_ai.js',
+  'hourofcode.com/views/swiper_page_beyond': './src/sites/hourofcode.com/pages/views/swiper_page_beyond.js',
 
   // shared between code.org and hourofcode.com
   'tutorialExplorer': './src/tutorialExplorer/tutorialExplorer.js',
@@ -198,8 +217,6 @@ const PEGASUS_ENTRIES = {
 
 // prettier-ignore
 const PROFESSIONAL_DEVELOPMENT_ENTRIES = {
-  'code.org/public/learn/local': './src/sites/code.org/pages/public/learn/local.js',
-
   'pd/_jotform_loader': './src/sites/studio/pages/pd/_jotform_loader.js',
   'pd/_jotform_embed': './src/sites/studio/pages/pd/_jotform_embed.js',
 
@@ -226,12 +243,15 @@ const PROFESSIONAL_DEVELOPMENT_ENTRIES = {
   'foorm/forms/editor': './src/sites/studio/pages/foorm/forms/editor.js',
   'foorm/libraries/editor': './src/sites/studio/pages/foorm/libraries/editor.js',
   'foorm/simple_survey_forms/show': './src/sites/studio/pages/foorm/simple_survey_forms/show.js',
+
+  'plc/user_course_enrollments/index': './src/sites/studio/pages/plc/user_course_enrollments/index.js',
 };
 
 // Entries which are shared between dashboard and pegasus, which are included
 // by haml partials in the shared/haml/ directory.
 const SHARED_ENTRIES = {
   cookieBanner: './src/cookieBanner/cookieBanner.js',
+  userHeaderEventLogger: './src/userHeaderEventLogger/userHeaderEventLogger.js',
 };
 
 // prettier-ignore

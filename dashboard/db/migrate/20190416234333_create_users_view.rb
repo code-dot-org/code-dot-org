@@ -1,5 +1,7 @@
+require 'cdo/sequel'
+
 class CreateUsersView < ActiveRecord::Migration[5.0]
-  DASHBOARD_REPORTING_DB_WRITER = sequel_connect(CDO.dashboard_reporting_db_writer, CDO.dashboard_reporting_db_reader)
+  DASHBOARD_REPORTING_DB_WRITER = Cdo::Sequel.database_connection_pool(CDO.dashboard_reporting_db_writer, CDO.dashboard_reporting_db_reader)
   def up
     # Remove existing users_view, which was provisioned manually (20180428013942_add_multi_auth_view_to_reporting_db.rb)
     DASHBOARD_REPORTING_DB_WRITER.run "DROP VIEW IF EXISTS users_view"

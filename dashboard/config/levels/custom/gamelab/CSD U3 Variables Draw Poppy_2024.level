@@ -60,11 +60,11 @@
     "parent_level_id": 20667,
     "name_suffix": "_2024",
     "reference_links": [
-      "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/drawing-shapes",
-      "/courses/csd-2022/guides/shapes-and-parameters"
+      "/courses/csd-2024/guides/variables",
+      "/courses/csd-2024/guides/drawing-shapes",
+      "/courses/csd-2024/guides/shapes-and-parameters"
     ],
-    "map_reference": "/courses/csd-2022/guides/naming-variables",
+    "map_reference": "/courses/csd-2024/guides/naming-variables",
     "video_key": "csd_gamelab_variables_1",
     "show_type_hints": "false",
     "encrypted": "false",

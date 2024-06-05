@@ -1,11 +1,6 @@
-import {assert} from '../../../util/reconfiguredChai';
 import Immutable from 'immutable';
-import {
-  fakeLesson,
-  fakeLevels,
-  fakeProgressForLevels,
-} from '@cdo/apps/templates/progress/progressTestHelpers';
-import {LevelKind, LevelStatus} from '@cdo/apps/util/sharedConstants';
+
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {
   lessonIsVisible,
   lessonIsLockedForUser,
@@ -16,7 +11,14 @@ import {
   isLevelAssessment,
   lessonIsAllAssessment,
 } from '@cdo/apps/templates/progress/progressHelpers';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {
+  fakeLesson,
+  fakeLevels,
+  fakeProgressForLevels,
+} from '@cdo/apps/templates/progress/progressTestHelpers';
+import {LevelKind, LevelStatus} from '@cdo/generated-scripts/sharedConstants';
+
+import {assert} from '../../../util/reconfiguredChai';
 
 describe('progressHelpers', () => {
   describe('lessonIsVisible', () => {

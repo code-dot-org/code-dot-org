@@ -1,14 +1,17 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+
+import {getSelectedScriptName} from '@cdo/apps/redux/unitSelectionRedux';
+import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import i18n from '@cdo/locale';
+
 import {
   tableLayoutStyles,
   NAME_CELL_INPUT_WIDTH,
 } from '../tables/tableConstants';
-import i18n from '@cdo/locale';
+
 import {editStudent} from './manageStudentsRedux';
-import {getSelectedScriptName} from '@cdo/apps/redux/unitSelectionRedux';
-import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 
 class ManageStudentNameCell extends Component {
   static propTypes = {

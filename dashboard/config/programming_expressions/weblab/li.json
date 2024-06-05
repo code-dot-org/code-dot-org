@@ -3,7 +3,7 @@
   "name": "List Item",
   "category": "HTML Tags",
   "category_key": "html_tags",
-  "content": "# List Item\n\nThis tag is used to create a list. The list tag `<li>` must be contained in an ordered list (`<ul>` with bullets) or an unordered list (`<ol>` with numbers).",
+  "content": "# List Item\n\nThis tag is used to create a list. The list tag `<li>` must be contained in an ordered list (`<ul>`) with bullets) or an unordered list (`<ol>`) with numbers).",
   "examples": [
     {
       "name": "Ordered List",

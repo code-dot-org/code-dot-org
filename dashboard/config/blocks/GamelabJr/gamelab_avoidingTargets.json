@@ -4,11 +4,6 @@
     "func": "avoidingTargets",
     "blockText": "avoiding targets",
     "returnType": "Behavior",
-    "color": [
-      136,
-      ".84",
-      ".80"
-    ],
     "style": "behavior_blocks"
   }
 }

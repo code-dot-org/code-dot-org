@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U7L2-Parameters PBT_2025",
     "teacher_markdown": "When we set the `betsy` variable to a new `Student` object, we are changing its reference to a new `Student` object. However, since the status of the class is associated with the `Course` object, when we drop the course for `\"Betsy\"`, but then change the reference to `\"Sara\"`, the `\"Computer Science\"` course will still show as dropped since we updated the variable within the `Course` object to be `false` with the `dropCourse()` method. The only information in the new object that will be different will be the name of the student.",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-17T00:24:19.949+00:00\",\"changed\":[\"cloned from \\\"CSA U7L2-L4_2023\\\"\"],\"cloned_from\":\"CSA U7L2-L4_2023\"}]"

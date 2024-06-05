@@ -1,5 +1,6 @@
+import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount, shallow} from 'enzyme';
+
 import BubbleBadge, {
   KeepWorkingBadge,
   AssessmentBadge,
@@ -9,8 +10,9 @@ import {
   BubbleSize,
   BubbleShape,
 } from '@cdo/apps/templates/progress/BubbleFactory';
-import {expect} from '../../../util/reconfiguredChai';
 import color from '@cdo/apps/util/color';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('BubbleBadge', () => {
   it('renders an AssessmentBadge for BadgeType.assessment', () => {

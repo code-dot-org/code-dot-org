@@ -1,5 +1,4 @@
 import React, {memo} from 'react';
-
 import {
   OverlayTrigger,
   Tooltip,
@@ -7,8 +6,9 @@ import {
   OverlayTriggerProps,
 } from 'react-bootstrap-2'; // TODO: Once we have [DSCO] Tooltip component, replace this import with it
 
-import moduleStyles from './tags.module.scss';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+
+import moduleStyles from './tags.module.scss';
 
 // Allow the tooltips to display on focus so that the information
 // can be shown via keyboard
@@ -72,7 +72,7 @@ const Tag: React.FunctionComponent<TagProps> = ({
       )}
     >
       <div
-        tabIndex={0}
+        tabIndex={0} // eslint-disable-line jsx-a11y/no-noninteractive-tabindex
         role="tooltip"
         aria-describedby={tooltipId}
         className={moduleStyles.tag}

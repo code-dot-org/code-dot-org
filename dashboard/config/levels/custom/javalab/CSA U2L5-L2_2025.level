@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U2L5-Super PBT_2025",
     "teacher_markdown": "After changing the code, students will see the following errors in the console:\r\n\r\n```\r\n/Movie.java:21: error: title has private access in Content\r\n    this.title = title;\r\n        ^\r\n/Movie.java:22: error: year has private access in Content\r\n    this.year = year;\r\n        ^\r\n```\r\n\r\nThis emphasizes that `private` instance variables can only be accessed by the class in which they are declared. While subclasses inherit these instance variables, they cannot directly access them.",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-16T23:50:15.081+00:00\",\"changed\":[\"cloned from \\\"CSA U2L5-L2_2023\\\"\"],\"cloned_from\":\"CSA U2L5-L2_2023\"}]"

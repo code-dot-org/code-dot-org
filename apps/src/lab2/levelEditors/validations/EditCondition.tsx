@@ -26,6 +26,7 @@ const EditCondition: React.FunctionComponent<EditConditionProps> = ({
   });
 
   const isNumeric = currentConditionType?.valueType === 'number';
+  const hasValue = currentConditionType?.valueType !== undefined;
 
   return (
     <div className={moduleStyles.row}>
@@ -39,7 +40,7 @@ const EditCondition: React.FunctionComponent<EditConditionProps> = ({
         value={condition.name}
         onChange={e => {
           condition.name = e.target.value;
-          if (!currentConditionType?.hasValue) {
+          if (!hasValue) {
             condition.value = undefined;
           }
           onConditionChange(condition, index);
@@ -53,7 +54,7 @@ const EditCondition: React.FunctionComponent<EditConditionProps> = ({
           );
         })}
       </select>
-      {currentConditionType?.hasValue && (
+      {hasValue && (
         <>
           <label htmlFor="conditionValue" className={moduleStyles.label}>
             Value:

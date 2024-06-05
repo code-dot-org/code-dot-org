@@ -13,6 +13,14 @@ module Api::V1::Pd
     REGIONAL_PARTNERS_ALL = "all"
     REGIONAL_PARTNERS_NONE = "none"
 
+    TYPES_BY_ROLE = {
+      csd_teachers: TEACHER_APPLICATION_CLASS,
+      csp_teachers: TEACHER_APPLICATION_CLASS,
+      csa_teachers: TEACHER_APPLICATION_CLASS
+    }
+    ROLES = TYPES_BY_ROLE.keys
+    TEACHER_ROLES = ROLES.select {|role| role.to_s.include?('teachers')}
+
     # GET /api/v1/pd/applications?regional_partner_value=:regional_partner_value
     # :regional_partner_value can be "all", "none", or a regional_partner_id
     def index
@@ -22,21 +30,16 @@ module Api::V1::Pd
       ROLES.each do |role|
         apps = get_applications_by_role(role, include_associations: false)
 
-        apps_statuses = apps.select(:status, "count(id) AS total").group(:status)
-
         if regional_partner_value == REGIONAL_PARTNERS_NONE
-          apps_statuses = apps_statuses.where(regional_partner_id: nil)
+          apps = apps.where(regional_partner_id: nil)
         elsif regional_partner_value && regional_partner_value != REGIONAL_PARTNERS_ALL
-          apps_statuses = apps_statuses.where(regional_partner_id: regional_partner_value)
+          apps = apps.where(regional_partner_id: regional_partner_value)
         end
 
-        apps_statuses.group(:status).each do |group|
-          application_data[role][group.status] = {total: group.total}
+        apps_statuses = apps&.map(&:status_including_enrolled)&.tally
+        apps_statuses&.each do |status, total|
+          application_data[role][status] = {total: total}
         end
-
-        enrollments = apps.count {|a| a.try(:enrolled?)}
-        application_data[role]['enrolled'] = {total: enrollments}
-        application_data[role]['accepted'][:total] -= enrollments if application_data[role]['accepted']
       end
 
       render json: application_data
@@ -227,14 +230,6 @@ module Api::V1::Pd
       end
     end
 
-    TYPES_BY_ROLE = {
-      csd_teachers: TEACHER_APPLICATION_CLASS,
-      csp_teachers: TEACHER_APPLICATION_CLASS,
-      csa_teachers: TEACHER_APPLICATION_CLASS
-    }
-    ROLES = TYPES_BY_ROLE.keys
-    TEACHER_ROLES = ROLES.select {|role| role.to_s.include?('teachers')}
-
     private def empty_application_data
       {}.tap do |app_data|
         TYPES_BY_ROLE.each do |role, app_type|
@@ -244,6 +239,9 @@ module Api::V1::Pd
               total: 0
             }
           end
+          app_data[role]['enrolled'] = {
+            total: 0
+          }
         end
       end
     end

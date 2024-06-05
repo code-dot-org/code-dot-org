@@ -4,7 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "curriculum_umbrella": "CSD Self Paced PL",
+      "curriculum_umbrella": "PD Workshop Activity CSD",
       "has_verified_resources": true,
       "is_migrated": true,
       "student_detail_progress_view": true,
@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-26 08:10:37 UTC",
+    "serialized_at": "2024-03-06 20:07:29 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1448,6 +1448,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

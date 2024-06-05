@@ -23,38 +23,38 @@ Visto che la tecnologia informatica è un parte integrante della cultura e sta t
 
 Visto che l'ingegneria informatica sta trasformando l'industria, creando nuovi ambiti di commercio, guidando l'innovazione in ogni campo della scienza e incrementando la produttività nei settori economici consolidati;
 
-considerando che il campo dell'informatica è un argomento fondamentale che è alla base del settore della tecnologia dell'informazione della nostra economia, che contribuisce in modo significativo alla produzione economica degli Stati Uniti;
+Whereas the field of computer science is a foundational subject that underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
 
-Considerando che l'alfabetizzazione in materia di intelligenza artificiale si riferisce alle conoscenze, alle abilità e agli atteggiamenti associati al funzionamento dell'intelligenza artificiale, compresi i concetti fondamentali dell'informatica e a come utilizzare l'intelligenza artificiale in modo sicuro, responsabile ed etico;
+Whereas artificial intelligence literacy refers to the knowledge, skills, and attitudes associated with how artificial intelligence works, including fundamental concepts in computer science, and how to use artificial intelligence safely, responsibly, and ethically;
 
-considerando che il campo dell'informatica, compresa l'intelligenza artificiale, è costituito da tecnologie in grado di trasformare radicalmente quasi tutti i settori dell'economia degli Stati Uniti;
+Whereas the field of computer science, including artificial intelligence, are technologies with the power to fundamentally transform nearly all sectors of the United States economy;
 
-considerando che la leadership tecnologica in tutti i settori dell'informatica, compresa l'intelligenza artificiale, è un imperativo economico e di sicurezza nazionale;
+Whereas technological leadership in all areas of computer science, including artificial intelligence, is an economic and national security imperative;
 
-Considerando che le prospettive per i posti di lavori nel campo dell'informatica sono luminose con oltre 500.000 posizioni informatiche aperte in tutto il paese;
+Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
 
-Considerato che offrire agli studenti la possibilità di partecipare ad attività informatiche di alta qualità li espone alle ricche opportunità che il settore offre, e fornisce le abilità di pensiero critico che gli serviranno nel corso della loro vita;
+Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
 
-Considerando che tutti gli studenti meritano una preparazione completa nell'insegnamento dell'informatica, compreso l'accesso a insegnanti qualificati, tecnologia e curriculum adeguati all'età, necessari per apprendere l'informatica ai livelli elementare e secondario dell'istruzione;
+Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
 
-considerando che l'istruzione informatica presenta sfide da affrontare, tra cui il miglioramento dell'accesso ai corsi di informatica per tutti gli studenti e lo sviluppo professionale degli insegnanti di informatica;
+Whereas computer science education has challenges to address, including improving access to computer science courses for all students, and providing professional development for computer science teachers;
 
 Considerando che la partecipazione a un'Ora del Codice durante la settimana dell'insegnamento dell'informatica può servire a fare chiarezza sul tema dell'informatica e incoraggiare un maggior numero di studenti a intraprendere ulteriori studi in questo ambito;
 
-considerando che il campo dell'informatica presenta notevoli barriere di equità da affrontare, tra cui l'attrazione e il mantenimento di un gruppo di candidati diversi per razza, etnia e genere a tutti i livelli e settori;
+Whereas the field of computer science has significant equity barriers to address, including attracting and retaining a field of candidates diverse in race, ethnicity, and gender at all levels and branches;
 
-Considerando che Grace Murray Hopper, una delle prime donne nel campo dell'informatica, ha progettato nuovi linguaggi di programmazione e ha introdotto standard per i sistemi informatici che hanno gettato le basi per molti progressi nell'informatica; e
+Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
 
-Considerando che la settimana di {{ campaign_date/start_long }}, in onore del compleanno di Grace Hopper, è designato come "Settimana della formazione informatica": Adesso, quindi, sia<br />
+Whereas the week of {{ campaign_date/start_long }}, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it <br />
 
-Determinato che il (IL SENATO, STATO, CONTEA, CITTÀ O CONSIGLIO SCOLASTICO) -
+Resolved, That the (HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD) --
 
-(1) sostiene la designazione di Settimana dell'insegnamento dell'informatica ({{ campaign_date/full }});
+(1) supports the designation of Computer Science Education Week ({{ campaign_date/full }});
 
-incoraggia scuole, educatori, genitori e responsabili politici a partecipare alla settimana dell'educazione informatica permettendo agli studenti di partecipare all'Ora del Codice;
+(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
 
-(3) incoraggia scuole, insegnanti, ricercatori, università, dirigenti d'azienda e responsabili politici a identificare meccanismi che consentano agli insegnanti di ricevere uno sviluppo professionale all'avanguardia per fornire esperienze di apprendimento sostenibile in informatica a tutti i livelli educativi e incoraggiare gli studenti ad avvicinarsi ai concetti di informatica ;
+(3) encourages schools, teachers, researchers, universities, business leaders, and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
 
-(4) incoraggia le opportunità, anche attraverso i programmi esistenti, per studentesse e studentesse di gruppi razziali ed etnici sottorappresentati nell'informatica.
+(4) encourages opportunities, including through existing programs, for female students and students from racial and ethnic groups underrepresented in computer science.
 
 {{ signup_button }}

@@ -19,7 +19,8 @@
       }
     },
     "project_template_level_name": "CSA U8L3-Binary Search PBT_2025",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-17T00:40:50.999+00:00\",\"changed\":[\"cloned from \\\"CSA U8L3-L2_2023\\\"\"],\"cloned_from\":\"CSA U8L3-L2_2023\"}]"

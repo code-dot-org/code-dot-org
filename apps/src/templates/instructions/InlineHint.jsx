@@ -1,15 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import EmbeddedWorkspace from '../EmbeddedWorkspace';
-import ChatBubble from './ChatBubble';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import {connect} from 'react-redux';
-import {convertXmlToBlockly} from './utils';
-import VideoThumbnail from '../VideoThumbnail';
-import {videoDataShape} from '../types';
+
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+
+import EmbeddedWorkspace from '../EmbeddedWorkspace';
 import SafeMarkdown from '../SafeMarkdown';
+import {videoDataShape} from '../types';
+import VideoThumbnail from '../VideoThumbnail';
+
+import ChatBubble from './ChatBubble';
+import {convertXmlToBlockly} from './utils';
 
 class InlineHint extends React.Component {
   static propTypes = {

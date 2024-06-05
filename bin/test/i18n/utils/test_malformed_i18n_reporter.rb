@@ -6,8 +6,8 @@ describe I18n::Utils::MalformedI18nReporter do
 
   let(:locale) {'en-US'}
 
-  def around
-    FakeFS.with_fresh {yield}
+  def around(&block)
+    FakeFS.with_fresh(&block)
   end
 
   before do

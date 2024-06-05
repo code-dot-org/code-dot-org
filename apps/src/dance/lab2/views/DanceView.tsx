@@ -144,14 +144,14 @@ const DanceView: React.FunctionComponent = () => {
       <div className={moduleStyles.workArea}>
         <PanelContainer
           id="dance-instructions-panel"
-          headerText={commonI18n.instructions()}
+          headerContent={commonI18n.instructions()}
           className={moduleStyles.instructionsArea}
         >
           <Instructions layout="horizontal" />
         </PanelContainer>
         <PanelContainer
           id="dance-workspace-panel"
-          headerText={commonI18n.workspaceHeaderShort()}
+          headerContent={commonI18n.workspaceHeaderShort()}
           className={moduleStyles.workspaceArea}
         >
           <div id={BLOCKLY_DIV_ID} />

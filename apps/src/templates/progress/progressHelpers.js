@@ -1,13 +1,15 @@
-import {fullyLockedLessonMapping} from '@cdo/apps/code-studio/lessonLockRedux';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {isLessonHiddenForSection} from '@cdo/apps/code-studio/hiddenLessonRedux';
-import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
-import {PUZZLE_PAGE_NONE} from './progressTypes';
+import _ from 'lodash';
+
 import {
   activityCssClass,
   resultFromStatus,
 } from '@cdo/apps/code-studio/activityUtils';
-import _ from 'lodash';
+import {isLessonHiddenForSection} from '@cdo/apps/code-studio/hiddenLessonRedux';
+import {fullyLockedLessonMapping} from '@cdo/apps/code-studio/lessonLockRedux';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';
+
+import {PUZZLE_PAGE_NONE} from './progressTypes';
 
 /**
  * This is conceptually similar to being a selector, except that it operates on
@@ -156,6 +158,16 @@ export function lessonHasLevels(lesson) {
   return !!lesson.levels?.length;
 }
 
+export const commentLeft = progress =>
+  progress?.teacherFeedbackCommented && progress?.teacherFeedbackNew;
+
+export const studentNeedsFeedback = (progress, level) =>
+  progress &&
+  progress.status !== LevelStatus.not_tried &&
+  !progress.teacherFeedbackNew &&
+  level.kind === 'assessment' &&
+  level.canHaveFeedback;
+
 /**
  * Determines if we should show "Keep working" and "Needs review" states for
  * progress in a unit. Unit must be either CSD or CSP.
@@ -257,9 +269,10 @@ export function lessonProgressForSection(sectionLevelProgress, lessons) {
  * script.lessons.levels) contains more data than we need. This parses the parts
  * we care about to conform to our `levelType` object.
  */
-export const processedLevel = level => {
+export const processedLevel = (level, parentLevelId) => {
+  const id = level.activeId || level.id;
   return {
-    id: level.activeId || level.id,
+    id,
     url: level.url,
     name: level.name,
     app: level.app,
@@ -269,19 +282,29 @@ export const processedLevel = level => {
     kind: level.kind,
     icon: level.icon,
     isUnplugged: level.display_as_unplugged,
-    levelNumber: level.kind === LevelKind.unplugged ? undefined : level.title,
+    levelNumber:
+      level.kind === LevelKind.unplugged
+        ? undefined
+        : level.title || level.position,
     bubbleText:
       level.kind === LevelKind.unplugged
         ? undefined
         : level.letter || level.title.toString(),
     isConceptLevel: level.is_concept_level,
+    isValidated: level.is_validated,
+    canHaveFeedback: level.can_have_feedback,
     bonus: level.bonus,
     pageNumber:
       typeof level.page_number !== 'undefined'
         ? level.page_number
         : PUZZLE_PAGE_NONE,
+    // Script level ID doesn't apply for sublevels. Set to undefined if we have a parent level.
+    scriptLevelId: parentLevelId ? undefined : level.id,
     sublevels:
-      level.sublevels && level.sublevels.map(level => processedLevel(level)),
+      level.sublevels &&
+      level.sublevels.map(sublevel => processedLevel(sublevel, id)),
+    path: level.path,
+    parentLevelId,
   };
 };
 
@@ -325,6 +348,9 @@ export const levelProgressFromServer = serverProgress => {
     paired: serverProgress.paired || false,
     timeSpent: serverProgress.time_spent,
     teacherFeedbackReviewState: serverProgress.teacher_feedback_review_state,
+    teacherFeedbackNew: serverProgress.teacher_feedback_new || false,
+    teacherFeedbackCommented:
+      serverProgress.teacher_feedback_commented || false,
     lastTimestamp: serverProgress.last_progress_at,
     pages: getPagesProgress(serverProgress),
   };

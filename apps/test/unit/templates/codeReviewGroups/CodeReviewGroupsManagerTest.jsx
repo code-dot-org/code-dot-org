@@ -1,15 +1,17 @@
-import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
+import React from 'react';
+import {DragDropContext} from 'react-beautiful-dnd';
+
+import AssignedStudentsPanel from '@cdo/apps/templates/codeReviewGroups/AssignedStudentsPanel';
 import CodeReviewGroupsManager from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsManager';
 import {
   getAssignedGroupDroppableId,
   DROPPABLE_ID_UNASSIGNED,
 } from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsUtils';
-import AssignedStudentsPanel from '@cdo/apps/templates/codeReviewGroups/AssignedStudentsPanel';
 import UnassignedStudentsPanel from '@cdo/apps/templates/codeReviewGroups/UnassignedStudentsPanel';
-import {DragDropContext} from 'react-beautiful-dnd';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('Code Review Groups Manager', () => {
   let wrapper,

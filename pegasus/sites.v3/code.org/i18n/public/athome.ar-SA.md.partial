@@ -156,7 +156,7 @@ theme: responsive
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="دورة تدريبية أساسية لمستوى ما قبل القارئ"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">الكورس السريع لمرحلة ما قبل القراءة</a>
+<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="دورة تدريبية أساسية لمستوى ما قبل القارئ"></a><br>دورة <a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express" target="_blank">Express للقراء المسبقين</a>
 
 </div>
 <div style="clear: both; margin-bottom: 2rem"></div>
@@ -223,7 +223,7 @@ theme: responsive
 
 <br>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_primary_default)">
   <div style="width: 87%; float: left">
     <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">مختبر التطبيقات</h3></a>
     <p style="color:#ffffff">معمل التطبيقات هو بيئة برمجة يمكنك فيها إنشاء تطبيقات بسيطة. صمم تطبيقًا أو كودًا باستخدام القطع البرمجية أو الجافاسكريبت ليعمل ثم انشر وشارك تطبيقك في ثواني.</p>
@@ -232,7 +232,7 @@ theme: responsive
   <div style="clear: both"></div>
 </div>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_primary_default)">
   <div style="width: 87%; float: left">
     <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">مختبر الألعاب</h3></a>
     <p style="color:#ffffff">معمل الألعاب هو بيئة برمجة يمكنك فيها عمل رسومات متحركة بسيطة وألعاب بأشياء وشخصيات تتفاعل مع بعضها الآخر.</p>
@@ -242,7 +242,7 @@ theme: responsive
   <div style="clear: both"></div>
 </div>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_primary_default)">
   <div style="width: 87%; float: left">
     <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">مختبر الويب</h3></a>
     <p style="color:#ffffff">معمل الشبكة هو بيئة برمجة يمكنك فيها إنشاء صفحات بسيطة على شبكة الإنترنت باستخدام HTML وCSS. صمم صفحاتك على الشبكة وأطلق موقعك في ثواني.</p>

@@ -1,14 +1,16 @@
 /* A pop-up modal displaying information about a single tutorial in TutorialExplorer.
  */
 
+import FocusTrap from 'focus-trap-react';
 import PropTypes from 'prop-types';
 import React from 'react';
+
+import fontConstants from '@cdo/apps/fontConstants';
+import i18n from '@cdo/tutorialExplorer/locale';
+
+import Image from './image';
 import shapes from './shapes';
 import {getTagString, getTutorialDetailString, DoNotShow} from './util';
-import Image from './image';
-import i18n from '@cdo/tutorialExplorer/locale';
-import FocusTrap from 'focus-trap-react';
-import fontConstants from '@cdo/apps/fontConstants';
 
 export default class TutorialDetail extends React.Component {
   static propTypes = {

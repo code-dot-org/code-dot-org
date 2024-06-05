@@ -1,9 +1,11 @@
 import {assert} from '../../util/reconfiguredChai';
+
 var DataConverters = require('@cdo/apps/netsim/DataConverters');
-var NetSimLogEntry = require('@cdo/apps/netsim/NetSimLogEntry');
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
-var NetSimTestUtils = require('../../util/netsimTestUtils');
+var NetSimLogEntry = require('@cdo/apps/netsim/NetSimLogEntry');
 var Packet = require('@cdo/apps/netsim/Packet');
+
+var NetSimTestUtils = require('../../util/netsimTestUtils');
 
 var assertTableSize = NetSimTestUtils.assertTableSize;
 var base64ToBinary = DataConverters.base64ToBinary;

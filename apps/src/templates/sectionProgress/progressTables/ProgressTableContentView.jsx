@@ -1,20 +1,25 @@
-import React from 'react';
-import * as Table from 'reactabular-table';
-import * as Sticky from 'reactabular-sticky';
-import * as Virtualized from 'reactabular-virtualized';
 import PropTypes from 'prop-types';
+import React from 'react';
+import * as Sticky from 'reactabular-sticky';
+import * as Table from 'reactabular-table';
+import * as Virtualized from 'reactabular-virtualized';
+
+import {
+  lessonIsAllAssessment,
+  lessonHasLevels,
+} from '@cdo/apps/templates/progress/progressHelpers';
+
 import {
   unitDataPropType,
   studentTableRowType,
   scrollbarWidth,
 } from '../sectionProgressConstants';
-import {
-  lessonIsAllAssessment,
-  lessonHasLevels,
-} from '@cdo/apps/templates/progress/progressHelpers';
-import styleConstants from './progress-table-constants.module.scss';
-import './progressTableStyles.scss';
+
 import ProgressTableLessonNumber from './ProgressTableLessonNumber';
+
+import styleConstants from './progress-table-constants.module.scss';
+
+import './progressTableStyles.scss';
 
 // Extra header column to account for scrollbar in progress tables
 const gutterHeader = {

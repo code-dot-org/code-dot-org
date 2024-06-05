@@ -1,11 +1,14 @@
 import React from 'react';
 import {Provider} from 'react-redux';
 import sinon from 'sinon';
+
 import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
+
 import teacherSections, {
   serverSectionFromSection,
   setSections,
 } from '../teacherDashboard/teacherSectionsRedux';
+
 import TeacherSections from './TeacherSections';
 
 export default {

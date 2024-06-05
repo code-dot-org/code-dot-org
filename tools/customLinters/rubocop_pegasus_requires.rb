@@ -14,9 +14,7 @@ module CustomCops
       end
     end
 
-    private
-
-    def violation?(path, node)
+    private def violation?(path, node)
       # Check if the path points to something inside 'pegasus/'
       if path.include?('../pegasus/')
         file_path = processed_source.buffer.name

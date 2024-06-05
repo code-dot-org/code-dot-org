@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+
 import fontConstants from '@cdo/apps/fontConstants';
 import color from '@cdo/apps/util/color';
 
@@ -76,7 +77,7 @@ export default class ProgressBox extends Component {
     };
 
     return (
-      <div style={boxWithBorderStyle}>
+      <div style={boxWithBorderStyle} data-testid="progress-box">
         {this.props.lessonNumber && (
           <div style={lessonNumberStyle}>{this.props.lessonNumber}</div>
         )}

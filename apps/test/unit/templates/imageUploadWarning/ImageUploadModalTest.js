@@ -1,7 +1,9 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+
 import ImageUploadModal from '@cdo/apps/templates/imageUploadWarning/ImageUploadModal';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const defaultProps = {
   isOpen: true,

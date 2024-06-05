@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U8L4-Selection Sort PBT_2024",
     "teacher_markdown": "If the array is already sorted, the selection sort algorithm will still execute the same number of comparisons, even though they are unnecessary. The algorithm will still run through all of the comparisons and swaps, but no changes to the array will actually be made. This is because the algorithm will always still compare the first element of the unsorted part of the array to the rest of the array, but since the array is already sorted, the first element will always be the smallest.",
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T21:08:31.144+00:00\",\"changed\":[\"cloned from \\\"CSA U8L4-L2_2023\\\"\"],\"cloned_from\":\"CSA U8L4-L2_2023\"}]"

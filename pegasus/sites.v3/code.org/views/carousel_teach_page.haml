@@ -14,32 +14,28 @@
 
 - slides_button_label = [hoc_s(:call_to_action_explore_ai_curricula), hoc_s(:call_to_action_explore_csc), hoc_s(:call_to_action_explore_csd), hoc_s(:call_to_action_explore_hoc_short), hoc_s(:call_to_action_explore_maker), hoc_s(:call_to_action_explore_csa_short), hoc_s(:call_to_action_explore_csf), hoc_s(:call_to_action_explore_csp)]
 
-.carousel-wrapper#flexible_units_carousel
-  .carousel.carousel--flexible_units{style: "height: 525px"}
-    .slides
-      - slides_index.times do |index|
-        .slide
-          .action-block.action-block--one-col.flex-space-between
-            .content-wrapper
-              %h3
-                = slides_title[index]
-              %img{src: slides_img[index], alt: ""}
-              %p.no-margin-bottom
-                %strong=hoc_s(:module_label_grades)
-                = slides_grade[index]
-              %p
-                %strong=hoc_s(:module_label_duration)
-                = slides_duration[index]
-              %p
-                = slides_desc[index]
-            .content-footer
-              %a.link-button{href: slides_url[index]}
-                = slides_button_label[index]
+.carousel-wrapper
+  %swiper-container.three-col{navigation: "true", "navigation-next-el": ".swiper-nav-next", "navigation-prev-el": ".swiper-nav-prev", "auto-height": "false", init: "false"}
+    - slides_index.times do |index|
+      %swiper-slide
+        .action-block.action-block--one-col.flex-space-between
+          .content-wrapper
+            %h3
+              = slides_title[index]
+            %img{src: slides_img[index], alt: ""}
+            %p.no-margin-bottom
+              %strong=hoc_s(:module_label_grades)
+              = slides_grade[index]
+            %p
+              %strong=hoc_s(:module_label_duration)
+              = slides_duration[index]
+            %p
+              = slides_desc[index]
+          .content-footer
+            %a.link-button{href: slides_url[index]}
+              = slides_button_label[index]
 
-  .pagination
-    #flexible_units_carousel-pagination
-  .dd__buttons
-    %button.carousel__prev#prev_1
-      %img{src: "/images/carousel/prev.svg", alt: "previous"}
-    %button.carousel__next#next_1
-      %img{src: "/images/carousel/next.svg", alt: "next"}
+  %button.swiper-nav-prev
+  %button.swiper-nav-next
+
+= view :swiper

@@ -11,6 +11,7 @@ describe I18n::Utils::CrowdinClient do
 
   let(:api_token) {'expected_crowdin_api_token'}
   let(:client) {stub(:client)}
+  let(:client_config) {stub(:client_config)}
 
   around do |test|
     FakeFS.with_fresh {test.call}
@@ -19,16 +20,18 @@ describe I18n::Utils::CrowdinClient do
   before do
     CDO.stubs(:crowdin_projects).returns(cdo_crowdin_projects)
     I18nScriptUtils.stubs(:crowdin_creds).returns({'api_token' => api_token})
+    client_config.stubs(:project_id).returns(project_id)
+    client.stubs(:config).returns(client_config)
     Crowdin::Client.stubs(:new).returns(client)
   end
 
   describe '#initialize' do
     it 'defines `client` as Crowdin client instance' do
-      client_config = stub(:client_config)
-
       Crowdin::Client.expects(:new).yields(client_config).returns(client)
+
       client_config.expects(:api_token=).with(api_token).once
       client_config.expects(:project_id=).with(project_id).once
+      client_config.expects(:request_timeout=).with(120).once
 
       assert_equal client, described_instance.send(:client)
     end
@@ -39,6 +42,38 @@ describe I18n::Utils::CrowdinClient do
       it 'raises "project is invalid" error' do
         actual_error = assert_raises(ArgumentError) {described_instance}
         assert_equal 'project is invalid', actual_error.message
+      end
+    end
+  end
+
+  describe '#get_project' do
+    let(:get_project) {described_instance.get_project}
+
+    it 'returns data of the project' do
+      expected_crowdin_project_data = {'id' => project_id}
+
+      described_instance.
+        expects(:request).
+        with(:get_project, project_id).
+        returns({'data' => expected_crowdin_project_data})
+
+      _(get_project).must_equal expected_crowdin_project_data
+    end
+
+    context 'when a project id is provided' do
+      let(:get_project) {described_instance.get_project(another_project_id)}
+
+      let(:another_project_id) {'another_project_id'}
+
+      it 'returns data of the provided project' do
+        another_crowdin_project_data = {'id' => another_project_id}
+
+        described_instance.
+          expects(:request).
+          with(:get_project, another_project_id).
+          returns({'data' => another_crowdin_project_data})
+
+        _(get_project).must_equal another_crowdin_project_data
       end
     end
   end
@@ -201,6 +236,63 @@ describe I18n::Utils::CrowdinClient do
     end
   end
 
+  describe '#list_source_files' do
+    let(:list_source_files) {described_instance.list_source_files}
+
+    let(:crowdin_dir_path) {'expected_crowdin_dir_path'}
+    let(:directory_id) {nil}
+    let(:recursion) {true}
+    let(:source_file_data) {'expected_source_file_data'}
+
+    before do
+      described_instance.
+        stubs(:request).
+        with(:fetch_all, :list_files, directoryId: directory_id, recursion: recursion).
+        returns([{'data' => source_file_data}])
+    end
+
+    it 'returns list of all project files data' do
+      described_instance.expects(:get_source_directory).never
+
+      _(list_source_files).must_equal [source_file_data]
+    end
+
+    context 'when provided `crowdin_dir_path` exists' do
+      let(:list_source_files) {described_instance.list_source_files(crowdin_dir_path)}
+      let(:directory_id) {'expected_directory_id'}
+
+      it 'returns list of all project files data in the provided directory' do
+        described_instance.
+          expects(:get_source_directory).
+          with(crowdin_dir_path).
+          returns({'id' => directory_id})
+
+        _(list_source_files).must_equal [source_file_data]
+      end
+    end
+
+    context 'when provided `crowdin_dir_path` does not exists' do
+      let(:list_source_files) {described_instance.list_source_files(crowdin_dir_path)}
+
+      it 'returns empty array' do
+        described_instance.expects(:get_source_directory).with(crowdin_dir_path).returns(nil)
+        described_instance.expects(:request).with(:fetch_all, :list_files, anything).never
+
+        _(list_source_files).must_equal []
+      end
+    end
+
+    context 'when `recursion` is false' do
+      let(:list_source_files) {described_instance.list_source_files(recursion: recursion)}
+
+      let(:recursion) {false}
+
+      it 'returns list of project files data in the root directory' do
+        _(list_source_files).must_equal [source_file_data]
+      end
+    end
+  end
+
   describe '#add_storage' do
     let(:add_storage) {described_instance.add_storage(file_path)}
 
@@ -299,27 +391,41 @@ describe I18n::Utils::CrowdinClient do
     end
   end
 
-  describe '#upload_source_files' do
-    let(:upload_source_files) {described_instance.upload_source_files(source_files, base_path: base_path)}
+  describe '#download_translation' do
+    let(:download_translation) do
+      described_instance.download_translation(source_file_id, language_id, dest_path, etag: etag)
+    end
 
-    let(:base_path) {'/expected_base_path'}
-    let(:crowdin_dir_path) {'/expected_crowdin_dir_path'}
-    let(:source_file_path) {File.join(base_path, crowdin_dir_path, 'expected_source_file_path')}
-    let(:source_files) {[source_file_path]}
+    let(:source_file_id) {'expected_source_file_id'}
+    let(:language_id) {'expected_language_id'}
+    let(:dest_path) {'expected_dest_path'}
+    let(:etag) {'expected_etag'}
 
-    it 'returns uploaded source file data' do
-      expected_source_file_data = 'uploaded_source_file_data'
+    let(:translation_url) {'expected_translation_url'}
+    let(:translation_etag) {'expected_translation_etag'}
+    let(:translation_build) {{'data' => {'url' => translation_url, 'etag' => translation_etag}}}
 
+    before do
       described_instance.
-        expects(:upload_source_file).
-        with(source_file_path, crowdin_dir_path).
-        returns(expected_source_file_data)
+        stubs(:request).
+        with(:build_project_file_translation, source_file_id, targetLanguageId: language_id, eTag: etag).
+        returns(translation_build)
+    end
 
-      source_files_data = upload_source_files do |uploaded_source_file_data|
-        _(uploaded_source_file_data).must_equal expected_source_file_data
+    it 'downloads translation for the given source file' do
+      described_instance.expects(:download_file).with(translation_url, dest_path)
+
+      _(download_translation).must_equal translation_etag
+    end
+
+    context 'when translation has no changes' do
+      let(:translation_build) {304}
+
+      it 'returns current etag' do
+        described_instance.expects(:download_file).never
+
+        _(download_translation).must_equal etag
       end
-
-      _(source_files_data).must_equal [expected_source_file_data]
     end
   end
 

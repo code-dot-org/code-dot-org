@@ -1,7 +1,9 @@
 import React from 'react';
+
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
+
 import {UnconnectedProgressBubbleSet as ProgressBubbleSet} from './ProgressBubbleSet';
 import {fakeLevels, fakeLevel} from './progressTestHelpers';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
 const statusForLevel = [
   LevelStatus.perfect,

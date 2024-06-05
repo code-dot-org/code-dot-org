@@ -15,8 +15,10 @@
  */
 
 import GoogleBlockly from 'blockly/core';
-import {createPlusField} from './field_plus';
+
 import {createMinusField} from './field_minus';
+import {createPlusField} from './field_plus';
+
 var msg = require('@cdo/locale');
 
 const MINIMUM_INPUTS = 2;

@@ -157,6 +157,7 @@ fa-IR:
   class_submission_out_of_school_summer_camp: اردوی تابستانه
   classicmaze_name: ماز معروف و قدیمی
   code_hoc_coming: ساعت کد نویسی اینجاست - 8 تا 14 دسامبر!
+  code_org_logo_alt: صفحه اصلی سایت Code.org
   code_sign_up: ثبت نام کنید برای شرکت کردن تو هفته ی آموزش علوم کامپیوتر
   codea_beyond_gradelevel: دبیرستان +
   codea_beyond_longdescription: Codea برای آی پد به شما اجازه می دهد بازی و شبیه سازی
@@ -586,7 +587,7 @@ fa-IR:
   dashboard_navigation_section_teacher_progress: پیشرفت دوره ی شما
   dashboard_navigation_student: 'دانش آموز: %{student_name}'
   dashboard_navigation_view_assessments: ارزیابی
-  dashboard_navigation_view_progress: روند
+  dashboard_navigation_view_progress: روند پیشرفت
   dashboard_navigation_view_stats: آمار
   dashboard_overview: مرور کلی
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">
@@ -670,7 +671,7 @@ fa-IR:
     <b>تصویر</b> تغییر دهید.
   dashboard_students_print_info: کارت های اطلاعات ورود دانش آموزان خود راه چاپ نمایید.
   dashboard_students_print_page: چاپ این صفحه
-  dashboard_students_progress: روند
+  dashboard_students_progress: روند پیشرفت
   dashboard_students_reset_picture: شما در هر زمان میتوانید عکس محرمانه هر دانش آموز
     را تغییر دهید با انتخاب <b>نمایش محرمانه</b> و سپس <b>تغییر محرمانه</b>. با انجام
     این کار، یک عکس محرمانه جدید برای استفاده آن دانش آموز در هنگام ورودش به سیستم
@@ -687,7 +688,7 @@ fa-IR:
     اشتراک بگذارید:'
   dashboard_students_total_lines: خطوطی از کد
   dashboard_students_url: آدرس اینترنتی
-  dashboard_submission_in_progress: در حال اجرا
+  dashboard_submission_in_progress: در حال انجام
   dashboard_submission_submitted: ثبت‌شده
   dashboard_teacher: دبیر
   dashboard_teacher_worksheet: ورقه کار معلم
@@ -726,7 +727,7 @@ fa-IR:
     به گوشی خود انتقال بدهید.
   flappy_name: درست کردن بازی فلاپی
   flappy_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
-  flappy_shortcode: پریدن
+  flappy_shortcode: بال بزن و بالا برو
   flappy_shortdescription: بازی خودتان را بسازید- فلپی برد, شرک,یا زیردریایی
   flappy_text: Code.org یک ساله شد. <br/><br/> با ساختن بازی <b>Flappy</b> مخصوص خودتان،
     همراه با ما جشن بگیرید. قوانین خودتان را کدنویسی کنید و با دوستانتان به اشتراک
@@ -805,6 +806,7 @@ fa-IR:
   header_about_us: درباره ما
   header_course_catalog: سرفصل دوره‌ها
   header_courses: دوره‌ها
+  header_districts: ناحیه
   header_documentation: مستندات
   header_educate_beyond: فراتر از Code.org
   header_educate_community: جامعه‌ی مجازی
@@ -817,6 +819,7 @@ fa-IR:
   header_educate_partner: با ما شریک شوید
   header_educate_tools: ابزار‌ها و فیلم‌ها
   header_help_us: به ما کمک کنید
+  header_incubator: کارگاه
   header_learn: یادگیری
   header_legal: حریم خصوصی و مسائل حقوقی
   header_legal_cookie_notice: هشدار کوکی
@@ -826,6 +829,7 @@ fa-IR:
   header_professional_learning: یادگیری پیشرفته
   header_project_gallery: پروژه‌ها
   header_report_bug: گزارش مشکل
+  header_schools: مدرسه
   header_sections: بخش‌ها
   header_stats: آمار
   header_teach: آموزش
@@ -1017,6 +1021,7 @@ fa-IR:
   homepage_slot_text_link_k5: دوره هایی برای بچه های ابتدایی
   homepage_slot_text_link_local: یک کلاس محلی پیدا کنید
   homepage_slot_text_link_middle: راهنمایی
+  homepage_slot_text_link_middle_and_high: دبیرستان و دبیرستان
   homepage_slot_text_link_othercourses: دوره های آنلاین دیگر
   homepage_slot_text_link_pd: توسعه ی حرفه ای
   homepage_slot_text_link_stats: آمار ها را ببینید

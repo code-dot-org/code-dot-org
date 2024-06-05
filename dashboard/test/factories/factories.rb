@@ -2,6 +2,10 @@ require 'cdo/activity_constants'
 require 'policies/child_account'
 
 FactoryBot.define do
+  trait :skip_validation do
+    to_create {|instance| instance.save(validate: false)}
+  end
+
   factory :course_offering do
     sequence(:key, 'a') {|c| "bogus-course-offering-#{c}"}
     sequence(:display_name, 'a') {|c| "bogus-course-offering-#{c}"}
@@ -407,6 +411,21 @@ FactoryBot.define do
         birthday {Time.zone.today - 13.years}
       end
 
+      trait :with_interpolated_co do
+        us_state {'CO'}
+        country_code {nil}
+      end
+
+      trait :with_interpolated_wa do
+        us_state {'wa'}
+        country_code {nil}
+      end
+
+      trait :with_interpolated_colorado do
+        us_state {'Colorado'}
+        country_code {nil}
+      end
+
       trait :with_parent_permission do
         child_account_compliance_state {Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED}
         child_account_compliance_state_last_updated {DateTime.now}
@@ -422,7 +441,15 @@ FactoryBot.define do
         child_account_compliance_state_last_updated {DateTime.now}
       end
 
-      factory :non_compliant_child, traits: [:U13, :in_colorado] do
+      trait :before_p20_937_exception_date do
+        created_at {Policies::ChildAccount::CPA_CREATED_AT_EXCEPTION_DATE - 1.second}
+      end
+
+      trait :p20_937_exception_date do
+        created_at {Policies::ChildAccount::CPA_CREATED_AT_EXCEPTION_DATE}
+      end
+
+      factory :non_compliant_child, traits: [:U13, :in_colorado, :p20_937_exception_date] do
         factory :locked_out_child do
           child_account_compliance_state {Policies::ChildAccount::ComplianceState::LOCKED_OUT}
           child_account_compliance_state_last_updated {DateTime.now}
@@ -449,6 +476,7 @@ FactoryBot.define do
         user.authentication_options.destroy_all
         lti_auth = create(:lti_authentication_option, user: user)
         user.authentication_options << lti_auth
+        user.lti_roster_sync_enabled = true
         user.save!
       end
     end
@@ -521,6 +549,23 @@ FactoryBot.define do
       provider {'windowslive'}
     end
 
+    trait :with_facebook_authentication_option do
+      after(:create) do |user|
+        create(:authentication_option,
+          user: user,
+          email: user.email,
+          hashed_email: user.hashed_email,
+          credential_type: AuthenticationOption::FACEBOOK,
+          authentication_id: SecureRandom.uuid,
+          data: {
+            oauth_token: 'some-facebook-token',
+            oauth_refresh_token: 'some-facebook-refresh-token',
+            oauth_token_expiration: '999999'
+          }.to_json
+        )
+      end
+    end
+
     trait :with_google_authentication_option do
       after(:create) do |user|
         create(:authentication_option,
@@ -532,6 +577,23 @@ FactoryBot.define do
           data: {
             oauth_token: 'some-google-token',
             oauth_refresh_token: 'some-google-refresh-token',
+            oauth_token_expiration: '999999'
+          }.to_json
+        )
+      end
+    end
+
+    trait :with_microsoft_authentication_option do
+      after(:create) do |user|
+        create(:authentication_option,
+          user: user,
+          email: user.email,
+          hashed_email: user.hashed_email,
+          credential_type: AuthenticationOption::MICROSOFT,
+          authentication_id: SecureRandom.uuid,
+          data: {
+            oauth_token: 'some-microsoft-token',
+            oauth_refresh_token: 'some-microsoft-refresh-token',
             oauth_token_expiration: '999999'
           }.to_json
         )
@@ -854,6 +916,11 @@ FactoryBot.define do
     level_num {'custom'}
   end
 
+  factory :panels, parent: :level, class: Panels do
+    game {Game.panels}
+    level_num {'custom'}
+  end
+
   factory :block do
     transient do
       sequence(:index)
@@ -985,9 +1052,14 @@ FactoryBot.define do
     end
 
     factory :hoc_script do
+      is_course {true}
+      sequence(:version_year) {|n| "bogus-hoc-version-year-#{n}"}
+      sequence(:family_name) {|n| "bogus-hoc-family-name-#{n}"}
       after(:create) do |hoc_script|
         hoc_script.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.HOC
         hoc_script.save!
+        course_offering = CourseOffering.add_course_offering(hoc_script)
+        course_offering.update!(category: 'hoc')
       end
     end
 
@@ -997,13 +1069,19 @@ FactoryBot.define do
         standalone_unit.save!
       end
     end
+
+    factory :pl_unit do
+      participant_audience {"teacher"}
+      instructor_audience {"facilitator"}
+    end
   end
 
-  # WARNING: Using this factory in new tests may cause other tests, including
-  # ProjectsController tests, to fail.
   factory :project_storage do
   end
 
+  # WARNING: using this factory in new tests may cause other tests, including
+  # ProjectsController tests, to fail with: `Mysql2::Error::TimeoutError`
+  # See: https://codedotorg.atlassian.net/browse/TEACH-230
   factory :project do
     transient do
       owner {create :user}
@@ -1018,7 +1096,14 @@ FactoryBot.define do
   end
 
   factory :featured_project do
-    project_id {456}
+    factory :active_featured_project do
+      featured_at {DateTime.now}
+    end
+
+    factory :archived_featured_project do
+      featured_at {DateTime.now}
+      unfeatured_at {DateTime.now}
+    end
   end
 
   factory :user_ml_model do
@@ -1757,6 +1842,13 @@ FactoryBot.define do
     data_synced_at {Time.now.utc}
   end
 
+  factory :lti_feedback, class: 'Lti::Feedback' do
+    association :user, factory: :teacher
+
+    locale {I18n.locale.to_s}
+    satisfied {true}
+  end
+
   factory :lti_integration do
     issuer {SecureRandom.alphanumeric}
     client_id {SecureRandom.alphanumeric}
@@ -1790,6 +1882,13 @@ FactoryBot.define do
     lti_course {create :lti_course}
     section {create :section}
     lms_section_id {SecureRandom.uuid}
+  end
+
+  factory :new_feature_feedback do
+    association :user, factory: :teacher
+
+    form_key {'progress_v2'}
+    satisfied {true}
   end
 
   factory :parental_permission_request do
@@ -1911,5 +2010,11 @@ FactoryBot.define do
     name {"foosbars"}
     email {"foobar@example.com"}
     receives_marketing {true}
+  end
+
+  factory :ai_tutor_interaction do
+    association :user
+    type {SharedConstants::AI_TUTOR_TYPES[:GENERAL_CHAT]}
+    status {SharedConstants::AI_TUTOR_INTERACTION_STATUS[:OK]}
   end
 end

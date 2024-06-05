@@ -10,6 +10,8 @@ import {
   DOCS_BASE_URL,
   FIELD_TRIGGER_START_NAME,
   TriggerStart,
+  FIELD_EFFECTS_EXTENSION,
+  FIELD_EFFECT_NAME_OPTIONS,
 } from '../constants';
 import {
   fieldSoundsDefinition,
@@ -210,20 +212,12 @@ export const setEffectAtCurrentLocationSimple2 = {
       {
         type: 'field_dropdown',
         name: FIELD_EFFECTS_NAME,
-        options: [
-          ['volume', 'volume'],
-          ['filter', 'filter'],
-          ['delay', 'delay'],
-        ],
+        options: FIELD_EFFECT_NAME_OPTIONS,
       },
       {
-        type: 'field_dropdown',
+        // This input is replaced with a field_dropdown by the extension
+        type: 'input_dummy',
         name: FIELD_EFFECTS_VALUE,
-        options: [
-          ['normal', ''],
-          ['medium', 'medium'],
-          ['low', 'low'],
-        ],
       },
     ],
     inputsInline: true,
@@ -232,6 +226,7 @@ export const setEffectAtCurrentLocationSimple2 = {
     style: 'lab_blocks',
     tooltip: musicI18n.blockly_blockSetEffectTooltip(),
     helpUrl: DOCS_BASE_URL + 'set_effect',
+    extensions: [FIELD_EFFECTS_EXTENSION],
   },
   generator: block => {
     const effectName = block.getFieldValue(FIELD_EFFECTS_NAME);
@@ -341,7 +336,7 @@ export const playSoundsRandom = {
 export const repeatSimple2 = {
   definition: {
     type: BlockTypes.REPEAT_SIMPLE2,
-    message0: '%{BKY_CONTROLS_REPEAT_TITLE}',
+    message0: Blockly.Msg['CONTROLS_REPEAT_TITLE'],
     args0: [
       {
         type: 'field_number',
@@ -351,7 +346,7 @@ export const repeatSimple2 = {
         max: 100,
       },
     ],
-    message1: '%{BKY_CONTROLS_REPEAT_INPUT_DO} %1',
+    message1: `${Blockly.Msg['CONTROLS_REPEAT_INPUT_DO']} %1`,
     args1: [
       {
         type: 'input_statement',
@@ -362,7 +357,7 @@ export const repeatSimple2 = {
     previousStatement: null,
     nextStatement: null,
     style: 'loop_blocks',
-    tooltip: '%{BKY_CONTROLS_REPEAT_TOOLTIP}',
+    tooltip: Blockly.Msg['CONTROLS_REPEAT_TOOLTIP'],
     helpUrl: DOCS_BASE_URL + 'repeat',
   },
   generator: block => {

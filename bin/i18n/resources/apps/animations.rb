@@ -16,8 +16,12 @@ module I18n
           SyncUp.perform(**opts)
         end
 
-        def self.sync_out
-          SyncOut.perform
+        def self.sync_down(**opts)
+          SyncDown.perform(**opts)
+        end
+
+        def self.sync_out(**opts)
+          SyncOut.perform(**opts)
         end
       end
     end

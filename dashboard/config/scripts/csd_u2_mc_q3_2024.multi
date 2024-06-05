@@ -7,7 +7,7 @@ right '![](https://images.code.org/fc4436f26aab128b600627593df6fabe-Q3C.png)'
 wrong '![](https://images.code.org/6d583761b5ad33fead10f5a20fa1dfb8-Q3D.png)'
 wrong '![](https://images.code.org/47f793758bfc9dfdb7acdbb2cd463bec-Q3E.png)'
 teacher_markdown <<MARKDOWN
-**Content: Unit 2 Lesson 6, 11, 17**
+**Content: Unit 2 Lesson 6, 9, 11**
 
 In CSS files, rules are found inside curly braces `{}` and each rule consists of a property name and a value, separated by a colon `:`. HTML tags use `<>`.
 MARKDOWN

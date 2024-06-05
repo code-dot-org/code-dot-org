@@ -1,10 +1,13 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import QuickAssignTableHocPl from '@cdo/apps/templates/sectionsRefresh/QuickAssignTableHocPl';
+
 import {MARKETING_AUDIENCE} from '@cdo/apps/templates/sectionsRefresh/CurriculumQuickAssign';
-import {hocCourseOfferings, plCourseOfferings} from './CourseOfferingsTestData';
+import QuickAssignTableHocPl from '@cdo/apps/templates/sectionsRefresh/QuickAssignTableHocPl';
 import i18n from '@cdo/locale';
+
+import {expect} from '../../../util/reconfiguredChai';
+
+import {hocCourseOfferings, plCourseOfferings} from './CourseOfferingsTestData';
 
 const DEFAULT_PROPS = {
   marketingAudience: MARKETING_AUDIENCE.HOC,

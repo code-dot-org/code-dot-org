@@ -107,11 +107,7 @@ const EditValidations: React.FunctionComponent<EditValidationsProps> = ({
         name="level[validations]"
         value={JSON.stringify(validations)}
       />
-      <Typography
-        semanticTag="p"
-        visualAppearance="body-three"
-        className={moduleStyles.title}
-      >
+      <Typography semanticTag="p" visualAppearance="body-three">
         Edit validations for this level. Currently only supported by Lab2 labs.
         <br />
         NOTE: Validations are checked in the order they are listed. The first

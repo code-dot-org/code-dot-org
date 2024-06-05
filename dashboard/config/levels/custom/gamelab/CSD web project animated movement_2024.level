@@ -83,9 +83,9 @@
     "parent_level_id": 23050,
     "name_suffix": "_2024",
     "reference_links": [
-      "/courses/csd-2022/guides/the-counter-pattern-2",
-      "/courses/csd-2022/guides/random-numbers",
-      "/courses/csd-2022/guides/problem-solving-process-programming"
+      "/courses/csd-2024/guides/the-counter-pattern-2",
+      "/courses/csd-2024/guides/random-numbers",
+      "/courses/csd-2024/guides/problem-solving-process-programming"
     ],
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",

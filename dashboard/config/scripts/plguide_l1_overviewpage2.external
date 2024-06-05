@@ -3,18 +3,22 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-#Overview Page
-##Module Overview 
-#### The overview page consists of an overview of the entire module on the top of the page and overviews of each lesson in boxes below. 
+# Module/Unit Overview Page
+
+#### The module/unit overview page consists of an overview of the entire module on the top of the page and overviews of each lesson in boxes below. 
 
 #### The overview of the module can be edited on the module overview page in Levelbuilder and each lesson overview is edited on the lesson overview page in the overview section. You must click on each lesson and add the overviews one by one.  
 
-![](https://images.code.org/d36a259426fd4df88be409deef7db6cd-image-1706725812749.29.44 AM.png)
+#### This diagram guides you to where you edit the overviews for each page on Levelbuilder. 
 
-### The each overview should include: 
-* Title 
-* Objectives 
-* Suggested time 
+![](https://images.code.org/9ce5edd0559815d0b872d5a49ab80eac-image-1711047182753.png)
+
+### **Each overview should include:** 
+* #### Title 
+* #### Objectives 
+* #### Suggested time 
+
+
 
 #### The content you put in the "Edit Markdown" this page will appear in two places:
 
@@ -29,12 +33,13 @@ markdown <<MARKDOWN
 <img src="https://images.code.org/0c6ee5c6d0fbe30287b2286c3c88a6b5-image-1706722784360.39.40 AM.png" alt=" screen shot of an example of the overview page" width="600px" style="border-radius:10px; float:center;">
 
 
-##Lesson Overview 
-####The content that is in the lesson box is edited when you click into the lesson and edit the **lesson overview** section.
+## Lesson Overview 
 
-####The content you put on this page automatically gets pulled into the Welcome Page in the unit description. The transition between the welcome page (module/units) and the overview page (lessons) is seen once the user selects "go to unit"  
+#### The content that is in the lesson box is edited when you click into the lesson and edit the **lesson overview** section.
 
+#### The content you put on this page automatically gets pulled into the Welcome Page in the unit description. The transition between the welcome page (module/units) and the overview page (lessons) is seen once the user selects "go to unit"  
 
+___
 
 ## Exemplar: 
 #### This module is a short introduction to both Code.org and this professional learning course. 

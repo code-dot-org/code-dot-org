@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "k5-onlinepd",
-    "serialized_at": "2023-05-01 16:53:33 UTC",
+    "serialized_at": "2024-03-25 22:49:27 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "facilitator",
@@ -246,6 +246,7 @@
       "key": "5b9bd5fd-d246-43aa-83c9-9db7b320eefe",
       "position": 1,
       "properties": {
+        "duration": 15,
         "name": "Levels"
       },
       "seeding_key": {
@@ -259,6 +260,7 @@
       "key": "738e3880-26b5-4bc1-95b4-04a9aace0db4",
       "position": 1,
       "properties": {
+        "duration": 15,
         "name": "Levels"
       },
       "seeding_key": {
@@ -272,6 +274,7 @@
       "key": "0e7b706a-2fb6-4ea2-bf90-0b98d2814002",
       "position": 1,
       "properties": {
+        "duration": 5,
         "name": "Levels"
       },
       "seeding_key": {
@@ -285,6 +288,7 @@
       "key": "abe93b68-d24f-4806-9ad2-15f90bea9958",
       "position": 1,
       "properties": {
+        "duration": 20,
         "name": "Levels"
       },
       "seeding_key": {
@@ -298,6 +302,7 @@
       "key": "916282e9-c69c-4130-8735-2218dee67093",
       "position": 1,
       "properties": {
+        "duration": 25,
         "name": "Levels"
       },
       "seeding_key": {
@@ -311,6 +316,7 @@
       "key": "dfb0f724-5945-43b6-b2d4-de623471e662",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -324,6 +330,7 @@
       "key": "45d20902-38b8-4c45-9be8-ffe0da8753e1",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -337,6 +344,7 @@
       "key": "10707f2d-f757-4460-b5cf-969e10b75ce3",
       "position": 1,
       "properties": {
+        "duration": 30,
         "name": "Levels"
       },
       "seeding_key": {
@@ -350,6 +358,7 @@
       "key": "53fb6143-04c0-4c0f-9fa5-7047ed608853",
       "position": 1,
       "properties": {
+        "duration": 20,
         "name": "Levels"
       },
       "seeding_key": {
@@ -363,6 +372,7 @@
       "key": "786b1dd2-d2fb-4216-8341-498762664b01",
       "position": 1,
       "properties": {
+        "duration": 30,
         "name": "Levels"
       },
       "seeding_key": {
@@ -376,6 +386,7 @@
       "key": "892371ba-e334-4f39-aa40-3068cf35c026",
       "position": 1,
       "properties": {
+        "duration": 30,
         "name": "Levels"
       },
       "seeding_key": {
@@ -389,6 +400,7 @@
       "key": "91298d8a-4d03-4cdd-8150-5ac96075ebac",
       "position": 1,
       "properties": {
+        "duration": 10,
         "name": "Levels"
       },
       "seeding_key": {
@@ -682,6 +694,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K5-onlinePD-features_2023"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -704,6 +719,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K5-onlinePD-classsection_2023"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -726,6 +744,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K5-onlinePD-STexperience_2023"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -748,6 +769,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K5-onlinePD-assessment_2023"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -4305,6 +4329,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

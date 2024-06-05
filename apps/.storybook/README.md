@@ -62,14 +62,3 @@ yarn test:storybook
 ## Static Style Guide
 
 A static version of the style guide is hosted at https://code-dot-org.github.io/cdo-styleguide/
-
-## Migrating from `storiesOf` (Legacy) API to Component Story Format (CSF)
-
-Many of our Storybook stories still use the `storiesOf` API, which has been deprecated as of Storybook 5.2 (read more at ["`storiesOf` (Legacy) API"](https://github.com/storybookjs/storybook/blob/master/lib/core/docs/storiesOf.md)). All stories should be refactored to use the [Component Story Format (CSF)](https://storybook.js.org/docs/react/api/csf). Any `storiesOf` stories will be ignored when you run Storybook, but they are still covered by our unit test harness, which supports the old API.
-
-The status of this migration is captured in [Storybook Files to Refactor](https://docs.google.com/spreadsheets/d/1z8r10AcR0v3GimV_-28dJ6QaiaQ3CJoo9yXqa7U_bKs) (internal Google Doc) and [PP-186](https://codedotorg.atlassian.net/browse/PP-186).
-
-This README outlines how stories should be written now, but here are a couple of migration examples as well:
-
-- [Simple] Meter.story.jsx - [migration commit](https://github.com/code-dot-org/code-dot-org/commit/1fe4b7e71d172e6cd5ed89b39bdb9574c40f05b5) / [before](https://github.com/code-dot-org/code-dot-org/blob/8fefb23ba21de2e08758e8d28b9325d1afb58ff0/apps/src/templates/Meter.story.jsx) / [after](https://github.com/code-dot-org/code-dot-org/blob/67043bef50ab5c70c1e831d076264a8703ba16c4/apps/src/templates/Meter.story.jsx)
-- [Complex - uses redux and an addon] Notification.story.jsx - [migration commit](https://github.com/code-dot-org/code-dot-org/commit/535d0b95be5f5e982b8c826d046d279c2b080f0e) / [before](https://github.com/code-dot-org/code-dot-org/blob/49138f05ca953effb43c2f5578f803ac79add993/apps/src/templates/Notification.story.jsx) / [after](https://github.com/code-dot-org/code-dot-org/blob/67043bef50ab5c70c1e831d076264a8703ba16c4/apps/src/templates/Notification.story.jsx)

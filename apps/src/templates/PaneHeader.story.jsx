@@ -1,4 +1,5 @@
 import React from 'react';
+
 import PaneHeader, {PaneSection, PaneButton} from './PaneHeader';
 
 const styles = {
@@ -17,7 +18,7 @@ export default {
   component: PaneHeader,
 };
 
-export const hasFocus = () => (
+export const HasFocus = () => (
   <PaneHeader hasFocus={true}>
     <div style={styles.flex}>
       <PaneSection style={styles.header}>
@@ -36,7 +37,7 @@ export const hasFocus = () => (
   </PaneHeader>
 );
 
-export const doesNotHaveFocus = () => (
+export const DoesNotHaveFocus = () => (
   <PaneHeader hasFocus={false}>
     <div style={styles.flex}>
       <PaneSection style={styles.header}>
@@ -55,7 +56,7 @@ export const doesNotHaveFocus = () => (
   </PaneHeader>
 );
 
-export const teacherOnlyWithFocus = () => (
+export const TeacherOnlyWithFocus = () => (
   <PaneHeader hasFocus={true} teacherOnly={true}>
     <div style={styles.flex}>
       <PaneSection style={styles.header}>
@@ -74,7 +75,7 @@ export const teacherOnlyWithFocus = () => (
   </PaneHeader>
 );
 
-export const teacherOnlyWithoutFocus = () => (
+export const TeacherOnlyWithoutFocus = () => (
   <PaneHeader hasFocus={false} teacherOnly={true}>
     <div style={styles.flex}>
       <PaneSection style={styles.header}>
@@ -93,7 +94,7 @@ export const teacherOnlyWithoutFocus = () => (
   </PaneHeader>
 );
 
-export const withRTLAndLTRButtons = () => (
+export const WithRTLAndLTRButtons = () => (
   <PaneHeader hasFocus={false} teacherOnly={true}>
     <div style={styles.flex}>
       <PaneButton

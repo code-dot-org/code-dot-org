@@ -2,22 +2,21 @@ import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
 
-import i18n from '@cdo/locale';
+import {updateHiddenScript} from '@cdo/apps/code-studio/hiddenLessonRedux';
+import Checkbox from '@cdo/apps/componentLibrary/checkbox';
+import {
+  Heading3,
+  Heading5,
+  BodyTwoText,
+} from '@cdo/apps/componentLibrary/typography';
+import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import Button from '@cdo/apps/templates/Button';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {
   assignToSection,
   unassignSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {updateHiddenScript} from '@cdo/apps/code-studio/hiddenLessonRedux';
-import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
-
-import {
-  Heading3,
-  Heading5,
-  BodyTwoText,
-} from '@cdo/apps/componentLibrary/typography';
-import Checkbox from '@cdo/apps/componentLibrary/checkbox';
+import i18n from '@cdo/locale';
 
 import moduleStyle from './multiple-sections-assigner.module.scss';
 
@@ -198,7 +197,6 @@ const MultipleSectionsAssigner = ({
         role="region"
         aria-label={i18n.directionsForAssigningSections()}
         className={moduleStyle.information}
-        tabIndex="0"
       >
         <div className={moduleStyle.modalHeader}>
           <Heading3>{i18n.chooseSectionsPrompt({assignmentName})}</Heading3>

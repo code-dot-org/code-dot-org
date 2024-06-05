@@ -1,12 +1,14 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
+
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {getCurrentUnitData} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import i18n from '@cdo/locale';
+
 import Button from '../../Button';
 import DialogFooter from '../../teacherDashboard/DialogFooter';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
-import {connect} from 'react-redux';
-import {getCurrentUnitData} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 
 class CreateStandardsReportStep2 extends Component {
   static propTypes = {

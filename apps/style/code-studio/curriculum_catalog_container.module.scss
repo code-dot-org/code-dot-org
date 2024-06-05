@@ -21,21 +21,21 @@ $container-width: 309px;
   width: 70%;
   margin: 3em auto;
   text-align: justify;
-}
 
-.noResultsImage {
-  display: block;
-  margin: auto;
-  width: 5em;
-}
+  img {
+    display: block;
+    margin: auto;
+    width: 5em;
+  }
 
-.noResultsHeading {
-  color: color.$teal;
-  margin: 1em 0 0 0;
-}
+  h5 {
+    color: color.$teal;
+    margin: 1em 0 0 0;
+  }
 
-.noResultsBody {
-  margin: 1em;
+  p {
+    margin: 1em;
+  }
 }
 
 .assignSuccessMessageContainer {
@@ -57,11 +57,11 @@ $container-width: 309px;
     border: none;
     font-size: 12px;
   }
-}
 
-.assignSuccessMessage {
-  margin: 16px;
-  color: color.$bootstrap_success_text;
+  p {
+    margin: 16px;
+    color: color.$bootstrap_success_text;
+  }
 }
 
 .assignSuccessMessageCenter {

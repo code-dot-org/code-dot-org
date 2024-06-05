@@ -15,7 +15,8 @@
     "allow_multiple_attempts": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-17T00:48:11.091+00:00\",\"changed\":[\"cloned from \\\"CSA-CV-L2-L3_2023\\\"\"],\"cloned_from\":\"CSA-CV-L2-L3_2023\"}]",

@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import i18n from '@cdo/locale';
+
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {unitDataPropType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
 import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
 import {cstaStandardsURL} from './standardsConstants';
 
 export default class StandardsReportCurrentCourseInfo extends Component {

@@ -1,7 +1,7 @@
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow, mount} from 'enzyme';
-import {updateQueryParam} from '../../../../src/code-studio/utils';
-import {currentLocation} from '@cdo/apps/utils';
+import sinon from 'sinon';
+
 import {
   BasicBubble,
   BubbleShape,
@@ -12,11 +12,13 @@ import {
   getBubbleUrl,
   unitTestExports,
 } from '@cdo/apps/templates/progress/BubbleFactory';
-import {fakeLevel} from '@cdo/apps/templates/progress/progressTestHelpers';
 import * as progressHelpers from '@cdo/apps/templates/progress/progressHelpers';
-import sinon from 'sinon';
-import {expect} from '../../../util/reconfiguredChai';
+import {fakeLevel} from '@cdo/apps/templates/progress/progressTestHelpers';
+import {currentLocation} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
+
+import {updateQueryParam} from '../../../../src/code-studio/utils';
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('BubbleFactory', () => {
   describe('BasicBubble', () => {

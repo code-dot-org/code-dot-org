@@ -7,7 +7,7 @@ import {
 } from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/templates/Button';
 import RubricEditor from './RubricEditor';
-import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
+import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 import {saveRubricToTable, SAVING_TEXT, styles} from './rubricHelper';
 
 export default function RubricsContainer({

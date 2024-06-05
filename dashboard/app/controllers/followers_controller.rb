@@ -79,7 +79,7 @@ class FollowersController < ApplicationController
   end
 
   private def redirect_url
-    params[:redirect] || root_path
+    params[:redirect] || student_user_new_path
   end
 
   private def load_section

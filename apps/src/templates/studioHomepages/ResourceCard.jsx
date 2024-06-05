@@ -1,10 +1,12 @@
-import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import fontConstants from '@cdo/apps/fontConstants';
-import Button from '../Button';
-import color from '../../util/color';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+
+import color from '../../util/color';
+import Button from '../Button';
 
 // If you want to include an image, you're probably looking for a ImageResourceCard.
 class ResourceCard extends Component {

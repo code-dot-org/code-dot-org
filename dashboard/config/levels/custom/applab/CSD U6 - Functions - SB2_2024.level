@@ -62,15 +62,15 @@
     "widget_mode": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/the-accelerometer",
-      "/courses/csd-2022/guides/board-events",
-      "/courses/csd-2022/guides/data-and-change-events",
-      "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/random-numbers",
+      "/courses/csd-2024/guides/the-accelerometer",
+      "/courses/csd-2024/guides/board-events",
+      "/courses/csd-2024/guides/data-and-change-events",
+      "/courses/csd-2024/guides/variables",
+      "/courses/csd-2024/guides/random-numbers",
       "/maker/setup"
     ],
     "start_blocks": "//Events\r\nonEvent(\"redAlien1\", \"click\", function() {\r\n  //Turn the LEDs red\r\n  redLEDs();\r\n});\r\nonEvent(\"redAlien2\", \"click\", function() {\r\n  //Turn the LEDs red\r\n  redLEDs();\r\n});\r\n\r\n//2) Calling our Functions\r\nonEvent(\"blueAlien1\", \"click\", function() {\r\n  //Turn the LEDs blue\r\n  \r\n});\r\nonEvent(\"blueAlien2\", \"click\", function() {\r\n  //Turn the LEDs blue\r\n  \r\n});\r\n\r\n\r\n// Functions\r\nfunction redLEDs() {\r\n  colorLeds[0].color(\"red\");\r\n  colorLeds[1].color(\"red\");\r\n  colorLeds[2].color(\"red\");\r\n  colorLeds[3].color(\"red\");\r\n  colorLeds[4].color(\"red\");\r\n  colorLeds[5].color(\"red\");\r\n  colorLeds[6].color(\"red\");\r\n  colorLeds[7].color(\"red\");\r\n  colorLeds[8].color(\"red\");\r\n  colorLeds[9].color(\"red\");\r\n}\r\n//1) Defining our Functions\r\n//Add Your Function Here!\r\n",
-    "map_reference": "/courses/csd-2022/guides/functions",
+    "map_reference": "/courses/csd-2024/guides/functions",
     "starter_assets": {
       "Alien_11.png": "fd9d0576-c852-4806-8e94-3e9442e542d8.png",
       "Alien_13.png": "2741f080-4a17-42e1-a8e6-5beb05495966.png",

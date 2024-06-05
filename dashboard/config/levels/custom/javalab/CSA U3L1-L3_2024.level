@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U3L1-Array_2024",
     "teacher_markdown": "Students will see the following printed to the console:\r\n\r\n```\r\nNumber of Integers in firstValues: 10\r\nNumber of Integers in secondValues: 5\r\nNumber of Integers for firstManager: 10\r\n```\r\n\r\nThe constructor `ArrayManager(int numValues)` is used to initialize the 1D array `arrayValues` to store `10` values. The parameter `numValues` is used inside the square brackets `[ ]` to specify the length of the 1D array.",
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T20:51:44.892+00:00\",\"changed\":[\"cloned from \\\"CSA U3L1-L3_2023\\\"\"],\"cloned_from\":\"CSA U3L1-L3_2023\"}]"

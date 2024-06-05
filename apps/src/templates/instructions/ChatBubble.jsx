@@ -1,10 +1,12 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import ChatBubbleTip from './ChatBubbleTip';
-import {shouldDisplayChatTips} from './utils';
-import InlineAudio from './InlineAudio';
+import React from 'react';
+
 import color from '@cdo/apps/util/color';
+
+import ChatBubbleTip from './ChatBubbleTip';
+import InlineAudio from './InlineAudio';
+import {shouldDisplayChatTips} from './utils';
 
 const styles = {
   container: {

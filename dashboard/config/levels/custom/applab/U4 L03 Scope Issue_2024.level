@@ -45,11 +45,11 @@
     "fail_on_lint_errors": "false",
     "long_instructions": "This program has a scope bug created by accidentally using a **local variable**.\r\n\r\n# Do This\r\n\r\n* Read the yellow warning. Why might you see this when you create a local variable?\r\n* Run this program once. Click the \"+1\" button to see how it works now.\r\n* Remove the `var` command inside the `onEvent()` to remove the local variable.",
     "parent_level_id": 15835,
-    "map_reference": "/docs/concepts/patterns/counter-patterns-with-event/",
+    "map_reference": "/courses/csp-2024/guides/counter-patterns-with-event",
     "mini_rubric": "false",
     "reference_links": [
-      "/docs/concepts/patterns/counter-patterns-with-event/",
-      "/docs/concepts/patterns/variable-with-string-concatenation-pattern/"
+      "/courses/csp-2024/guides/counter-patterns-with-event",
+      "/courses/csp-2024/guides/variable-with-string-concatenation-pattern"
     ],
     "encrypted": "false",
     "encrypted_examples": "XOQsNjTKQFNDyrJ9Kivgk8uj7/aF+HVudffK9YLWiPBBgG7y61iBXUTxspK6\nXJcDSo0Flu5Hbsa8E15LVTVOeA==\n",

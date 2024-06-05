@@ -2,6 +2,7 @@ require 'test_helper'
 
 class RubricsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
+  include SharedConstants
 
   setup do
     @levelbuilder = create :levelbuilder
@@ -9,17 +10,19 @@ class RubricsControllerTest < ActionController::TestCase
     @level = create(:level)
     @script_level = create :script_level, script: @lesson.script, lesson: @lesson, levels: [@level]
 
+    # set up a section containing 6 students: 1 @student and 5 other_students.
+
     @teacher = create :teacher
     @student = create :student
     @follower = create :follower, student_user: @student, user: @teacher
     @rubric = create :rubric, lesson: @lesson, level: @level
 
-    @followers = []
-    @students = []
+    other_followers = []
+    other_students = []
 
     5.times do
-      @students << create(:student)
-      @followers << create(:follower, section: @follower.section, student_user: @students[-1], user: @teacher)
+      other_students << create(:student)
+      other_followers << create(:follower, section: @follower.section, student_user: other_students[-1], user: @teacher)
     end
 
     @fake_ip = '127.0.0.1'
@@ -46,17 +49,20 @@ class RubricsControllerTest < ActionController::TestCase
     @rubric.destroy
 
     File.stubs(:write).with do |filename, contents|
-      filename == "#{Rails.root}/config/scripts_json/#{@lesson.script.name}.script_json" && contents.include?('learning goal example 1')
+      filename == "#{Rails.root}/config/scripts_json/#{@lesson.script.name}.script_json" && contents.include?('ai-configured learning goal 1')
     end.once
     Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    AiRubricConfig.stubs(:get_lesson_s3_name).returns('fake-lesson-s3-name')
+    stub_lesson_s3_data
 
     assert_creates(Rubric) do
       post :create, params: {
         level_id: @level.id,
         lesson_id: @lesson.id,
         learning_goals_attributes: [
-          {learning_goal: 'learning goal example 1', ai_enabled: true, position: 1},
-          {learning_goal: 'learning goal example 2', ai_enabled: false, position: 2}
+          {learning_goal: 'ai-configured learning goal 1', ai_enabled: true, position: 1},
+          {learning_goal: 'ai-configured learning goal 2', ai_enabled: false, position: 2}
         ]
       }
     end
@@ -71,6 +77,30 @@ class RubricsControllerTest < ActionController::TestCase
     assert_equal 2, learning_goals.length
   end
 
+  test "cannot create ai-enabled learning goal without ai config" do
+    sign_in @levelbuilder
+    @rubric.destroy
+
+    File.stubs(:write).never
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    AiRubricConfig.stubs(:get_lesson_s3_name).returns('fake-lesson-s3-name')
+    stub_lesson_s3_data
+
+    refute_creates(Rubric) do
+      post :create, params: {
+        level_id: @level.id,
+        lesson_id: @lesson.id,
+        learning_goals_attributes: [
+          {learning_goal: 'non-ai learning goal', ai_enabled: true, position: 1},
+        ]
+      }
+    end
+    assert_response :bad_request
+    errors = JSON.parse(response.body)
+    assert_equal "no valid AI config in S3 for ai-enabled learning goal 'non-ai learning goal'", errors['learning_goals.learning_goal'].first
+  end
+
   test 'updates rubric and learning goals with valid params' do
     sign_in @levelbuilder
 
@@ -78,21 +108,74 @@ class RubricsControllerTest < ActionController::TestCase
     level = create :level
     create :script_level, script: lesson.script, lesson: lesson, levels: [level]
     rubric = create :rubric, lesson: lesson, level: level
-    learning_goal = create :learning_goal, rubric: rubric
+    learning_goal = create :learning_goal, rubric: rubric, learning_goal: 'original learning goal', ai_enabled: false, position: 0
     unit_name = rubric.lesson.script.name
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{unit_name}.script_json" && contents.include?(learning_goal.key)
     end.once
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
+    AiRubricConfig.stubs(:get_lesson_s3_name).returns('fake-lesson-s3-name')
+    stub_lesson_s3_data
+
     post :update, params: {
       id: rubric.id,
       learning_goals_attributes: [
-        {id: learning_goal.id, learning_goal: 'updated learning goal', ai_enabled: true, position: 0},
+        {id: learning_goal.id, learning_goal: 'updated learning goal', ai_enabled: false, position: 0},
       ]
     }
     learning_goal.reload
     assert_equal 'updated learning goal', learning_goal.learning_goal
+  end
+
+  test 'cannot update ai_enabled learning goal to non-ai-configured name' do
+    sign_in @levelbuilder
+
+    AiRubricConfig.stubs(:get_lesson_s3_name).returns('fake-lesson-s3-name')
+    stub_lesson_s3_data
+
+    lesson = create :lesson, :with_lesson_group
+    level = create :level
+    create :script_level, script: lesson.script, lesson: lesson, levels: [level]
+    rubric = create :rubric, lesson: lesson, level: level
+    learning_goal = create :learning_goal, rubric: rubric, learning_goal: 'ai-configured learning goal 1', ai_enabled: true, position: 0
+    File.stubs(:write).never
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    post :update, params: {
+      id: rubric.id,
+      learning_goals_attributes: [
+        {id: learning_goal.id, learning_goal: 'non-ai learning goal', ai_enabled: true, position: 0},
+      ]
+    }
+    assert_response :bad_request
+    learning_goal.reload
+    assert_equal 'ai-configured learning goal 1', learning_goal.learning_goal
+  end
+
+  test 'cannot set ai_enabled field for non-ai-configured learning goal' do
+    sign_in @levelbuilder
+
+    AiRubricConfig.stubs(:get_lesson_s3_name).returns('fake-lesson-s3-name')
+    stub_lesson_s3_data
+
+    lesson = create :lesson, :with_lesson_group
+    level = create :level
+    create :script_level, script: lesson.script, lesson: lesson, levels: [level]
+    rubric = create :rubric, lesson: lesson, level: level
+    learning_goal = create :learning_goal, rubric: rubric, learning_goal: 'non-ai learning goal', ai_enabled: false, position: 0
+    File.stubs(:write).never
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    post :update, params: {
+      id: rubric.id,
+      learning_goals_attributes: [
+        {id: learning_goal.id, learning_goal: 'non-ai learning goal', ai_enabled: true, position: 0},
+      ]
+    }
+    assert_response :bad_request
+    learning_goal.reload
+    refute learning_goal.ai_enabled
   end
 
   test 'submits rubric evaluations of a student' do
@@ -132,7 +215,7 @@ class RubricsControllerTest < ActionController::TestCase
       rubric: @rubric,
       user: student,
       requester: @teacher,
-      status: 1
+      status: RUBRIC_AI_EVALUATION_STATUS[:RUNNING]
     )
     ai_evaluation1 = create(
       :learning_goal_ai_evaluation,
@@ -154,7 +237,7 @@ class RubricsControllerTest < ActionController::TestCase
         rubric: @rubric,
         user: classmate,
         requester: @teacher,
-        status: 1
+        status: RUBRIC_AI_EVALUATION_STATUS[:RUNNING]
       )
       create(
         :learning_goal_ai_evaluation,
@@ -196,7 +279,7 @@ class RubricsControllerTest < ActionController::TestCase
       rubric: learning_goal.rubric,
       user: student,
       requester: @teacher,
-      status: 1
+      status: RUBRIC_AI_EVALUATION_STATUS[:RUNNING]
     )
     create(
       :learning_goal_ai_evaluation,
@@ -225,7 +308,7 @@ class RubricsControllerTest < ActionController::TestCase
       rubric: learning_goal.rubric,
       user: student,
       requester: @teacher,
-      status: 1
+      status: RUBRIC_AI_EVALUATION_STATUS[:RUNNING]
     )
     create(
       :learning_goal_ai_evaluation,
@@ -239,7 +322,7 @@ class RubricsControllerTest < ActionController::TestCase
         rubric: learning_goal.rubric,
         user: student,
         requester: @teacher,
-        status: 1
+        status: RUBRIC_AI_EVALUATION_STATUS[:RUNNING]
       )
       create(
         :learning_goal_ai_evaluation,
@@ -293,7 +376,7 @@ class RubricsControllerTest < ActionController::TestCase
     sign_in @teacher
 
     Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
-    EvaluateRubricJob.expects(:ai_enabled?).with(@script_level).returns(false)
+    AiRubricConfig.expects(:ai_enabled?).with(@script_level).returns(false)
 
     get :ai_evaluation_status_for_all, params: {
       id: @rubric.id,
@@ -315,7 +398,7 @@ class RubricsControllerTest < ActionController::TestCase
     sign_in @teacher
 
     Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
-    EvaluateRubricJob.stubs(:ai_enabled?).with(@script_level).returns(true)
+    AiRubricConfig.stubs(:ai_enabled?).with(@script_level).returns(true)
 
     get :ai_evaluation_status_for_all, params: {
       id: @rubric.id,
@@ -327,6 +410,7 @@ class RubricsControllerTest < ActionController::TestCase
     assert_equal 0, json_response['attemptedCount']
     assert_equal 0, json_response['attemptedUnevaluatedCount']
     assert_equal 0, json_response['lastAttemptEvaluatedCount']
+    assert_equal 0, json_response['pendingCount']
     assert json_response['csrfToken']
   end
 
@@ -334,7 +418,7 @@ class RubricsControllerTest < ActionController::TestCase
     sign_in @teacher
 
     Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
-    EvaluateRubricJob.stubs(:ai_enabled?).with(@script_level).returns(true)
+    AiRubricConfig.stubs(:ai_enabled?).with(@script_level).returns(true)
 
     get :ai_evaluation_status_for_all, params: {
       id: @rubric.id,
@@ -346,6 +430,71 @@ class RubricsControllerTest < ActionController::TestCase
     assert_equal 1, json_response['attemptedCount']
     assert_equal 1, json_response['attemptedUnevaluatedCount']
     assert_equal 0, json_response['lastAttemptEvaluatedCount']
+    assert_equal 0, json_response['pendingCount']
+    assert json_response['csrfToken']
+  end
+
+  test "returns ok and pending count when getting aggregate status if work is queued" do
+    sign_in @teacher
+
+    Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
+    AiRubricConfig.stubs(:ai_enabled?).with(@script_level).returns(true)
+
+    Timecop.freeze do
+      Timecop.travel 1.minute
+      create(
+        :rubric_ai_evaluation,
+        rubric: @rubric,
+        user: @student,
+        requester: @teacher,
+        status: RUBRIC_AI_EVALUATION_STATUS[:QUEUED]
+      )
+    end
+
+    get :ai_evaluation_status_for_all, params: {
+      id: @rubric.id,
+      sectionId: @follower.section.id,
+    }
+
+    assert_response :success
+
+    assert_equal 5, json_response['notAttemptedCount']
+    assert_equal 1, json_response['attemptedCount']
+    assert_equal 1, json_response['attemptedUnevaluatedCount']
+    assert_equal 0, json_response['lastAttemptEvaluatedCount']
+    assert_equal 1, json_response['pendingCount']
+    assert json_response['csrfToken']
+  end
+
+  test "returns ok and pending count when getting aggregate status if work is running" do
+    sign_in @teacher
+
+    Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
+    AiRubricConfig.stubs(:ai_enabled?).with(@script_level).returns(true)
+
+    Timecop.freeze do
+      Timecop.travel 1.minute
+      create(
+        :rubric_ai_evaluation,
+        rubric: @rubric,
+        user: @student,
+        requester: @teacher,
+        status: RUBRIC_AI_EVALUATION_STATUS[:RUNNING]
+      )
+    end
+
+    get :ai_evaluation_status_for_all, params: {
+      id: @rubric.id,
+      sectionId: @follower.section.id,
+    }
+
+    assert_response :success
+
+    assert_equal 5, json_response['notAttemptedCount']
+    assert_equal 1, json_response['attemptedCount']
+    assert_equal 1, json_response['attemptedUnevaluatedCount']
+    assert_equal 0, json_response['lastAttemptEvaluatedCount']
+    assert_equal 1, json_response['pendingCount']
     assert json_response['csrfToken']
   end
 
@@ -382,7 +531,7 @@ class RubricsControllerTest < ActionController::TestCase
           rubric: @rubric,
           user: s,
           requester: @teacher,
-          status: 2 # successful
+          status: RUBRIC_AI_EVALUATION_STATUS[:SUCCESS]
         )
         create(
           :learning_goal_ai_evaluation,
@@ -396,7 +545,7 @@ class RubricsControllerTest < ActionController::TestCase
     sign_in @teacher
 
     Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
-    EvaluateRubricJob.stubs(:ai_enabled?).with(@script_level).returns(true)
+    AiRubricConfig.stubs(:ai_enabled?).with(@script_level).returns(true)
 
     get :ai_evaluation_status_for_all, params: {
       id: @rubric.id,
@@ -408,6 +557,7 @@ class RubricsControllerTest < ActionController::TestCase
     assert_equal 6, json_response['attemptedCount']
     assert_equal 1, json_response['attemptedUnevaluatedCount']
     assert_equal 5, json_response['lastAttemptEvaluatedCount']
+    assert_equal 0, json_response['pendingCount']
     assert json_response['csrfToken']
   end
 
@@ -415,6 +565,7 @@ class RubricsControllerTest < ActionController::TestCase
     sign_in @teacher
 
     Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(false)
+    Metrics::Events.stubs(:log_event).never
 
     get :run_ai_evaluations_for_all, params: {
       id: @rubric.id,
@@ -428,7 +579,8 @@ class RubricsControllerTest < ActionController::TestCase
     sign_in @teacher
 
     Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
-    EvaluateRubricJob.expects(:ai_enabled?).with(@script_level).returns(false)
+    AiRubricConfig.expects(:ai_enabled?).with(@script_level).returns(false)
+    Metrics::Events.stubs(:log_event).never
 
     get :run_ai_evaluations_for_all, params: {
       id: @rubric.id,
@@ -451,8 +603,9 @@ class RubricsControllerTest < ActionController::TestCase
     sign_in @teacher
 
     Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
-    EvaluateRubricJob.stubs(:ai_enabled?).with(@script_level).returns(true)
+    AiRubricConfig.stubs(:ai_enabled?).with(@script_level).returns(true)
     EvaluateRubricJob.expects(:perform_later).never
+    Metrics::Events.stubs(:log_event).never
 
     get :run_ai_evaluations_for_all, params: {
       id: @rubric.id,
@@ -495,7 +648,7 @@ class RubricsControllerTest < ActionController::TestCase
           rubric: @rubric,
           user: s,
           requester: @teacher,
-          status: 2 # successful
+          status: RUBRIC_AI_EVALUATION_STATUS[:SUCCESS]
         )
         create(
           :learning_goal_ai_evaluation,
@@ -509,8 +662,9 @@ class RubricsControllerTest < ActionController::TestCase
     sign_in @teacher
 
     Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
-    EvaluateRubricJob.stubs(:ai_enabled?).with(@script_level).returns(true)
+    AiRubricConfig.stubs(:ai_enabled?).with(@script_level).returns(true)
     EvaluateRubricJob.expects(:perform_later).once
+    Metrics::Events.stubs(:log_event).once
 
     get :run_ai_evaluations_for_all, params: {
       id: @rubric.id,
@@ -539,7 +693,7 @@ class RubricsControllerTest < ActionController::TestCase
           rubric: @rubric,
           user: s,
           requester: @teacher,
-          status: 2 # successful
+          status: RUBRIC_AI_EVALUATION_STATUS[:SUCCESS]
         )
         create(
           :learning_goal_ai_evaluation,
@@ -561,7 +715,7 @@ class RubricsControllerTest < ActionController::TestCase
     sign_in @teacher
 
     Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
-    EvaluateRubricJob.stubs(:ai_enabled?).with(@script_level).returns(true)
+    AiRubricConfig.stubs(:ai_enabled?).with(@script_level).returns(true)
 
     get :ai_evaluation_status_for_all, params: {
       id: @rubric.id,
@@ -576,6 +730,8 @@ class RubricsControllerTest < ActionController::TestCase
     assert json_response['csrfToken']
 
     EvaluateRubricJob.expects(:perform_later).times(5)
+    Metrics::Events.stubs(:log_event).times(5)
+
     get :run_ai_evaluations_for_all, params: {
       id: @rubric.id,
       sectionId: follower.section.id,
@@ -621,11 +777,85 @@ class RubricsControllerTest < ActionController::TestCase
     assert_equal submitted_teacher_evaluation.feedback, json_response[0]['feedback']
   end
 
+  test "does not get teacher evaluations for students in section if not logged in" do
+    student = create :student
+    follower = create :follower, student_user: student, user: @teacher
+
+    get :get_teacher_evaluations_for_all, params: {
+      id: @rubric.id,
+      section_id: follower.section,
+    }
+
+    assert_response :forbidden
+  end
+
+  test "gets empty teacher evaluations for students when no student has evaualuations" do
+    student = create :student
+    follower = create :follower, student_user: student, user: @teacher
+    followers = []
+    students = []
+    2.times do
+      students << create(:student)
+      followers << create(:follower, section: follower.section, student_user: students[-1], user: @teacher)
+    end
+    sign_in @teacher
+
+    create :learning_goal, rubric: @rubric
+    create :learning_goal, rubric: @rubric
+
+    get :get_teacher_evaluations_for_all, params: {
+      id: @rubric.id,
+      section_id: follower.section,
+    }
+
+    assert_response :success
+    assert_equal 3, json_response.length
+    json_response.each do |j|
+      assert_equal 0, j['eval'].length
+    end
+  end
+
+  test "gets teacher evaluations for students in section when 1 student has evaluations" do
+    student = create :student
+    follower = create :follower, student_user: student, user: @teacher
+    followers = []
+    students = []
+    2.times do
+      students << create(:student)
+      followers << create(:follower, section: follower.section, student_user: students[-1], user: @teacher)
+    end
+    sign_in @teacher
+
+    learning_goal1 = create :learning_goal, rubric: @rubric
+    learning_goal2 = create :learning_goal, rubric: @rubric
+    teacher_evaluation1 = create :learning_goal_teacher_evaluation, learning_goal: learning_goal1, user: student, submitted_at: Time.now, feedback: 'feedback1'
+    teacher_evaluation2 = create :learning_goal_teacher_evaluation, learning_goal: learning_goal2, user: student, submitted_at: Time.now, feedback: 'feedback2'
+
+    get :get_teacher_evaluations_for_all, params: {
+      id: @rubric.id,
+      section_id: follower.section,
+    }
+
+    assert_response :success
+    assert_equal 3, json_response.length
+    count_eval = 0
+    json_response.each do |j|
+      if j['user_id'] == student.id
+        assert_equal teacher_evaluation1.feedback, j['eval'][0]['feedback']
+        assert_equal teacher_evaluation2.feedback, j['eval'][1]['feedback']
+        count_eval += 1
+      else
+        assert_equal 0, j['eval'].length
+      end
+    end
+    assert_equal 1, count_eval
+  end
+
   test "run ai evaluations for user calls EvaluateRubricJob" do
     sign_in @teacher
 
     Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
-    EvaluateRubricJob.stubs(:ai_enabled?).returns(true)
+    AiRubricConfig.stubs(:ai_enabled?).returns(true)
     EvaluateRubricJob.expects(:perform_later).with(user_id: @student.id, requester_id: @teacher.id, script_level_id: @script_level.id).once
 
     post :ai_evaluation_status_for_user, params: {
@@ -657,7 +887,7 @@ class RubricsControllerTest < ActionController::TestCase
     stub_project_source_data(new_channel_id)
 
     Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
-    EvaluateRubricJob.stubs(:ai_enabled?).returns(true)
+    AiRubricConfig.stubs(:ai_enabled?).returns(true)
     EvaluateRubricJob.expects(:perform_later).with(user_id: new_student.id, requester_id: @teacher.id, script_level_id: @script_level.id).once
 
     post :ai_evaluation_status_for_user, params: {
@@ -684,7 +914,7 @@ class RubricsControllerTest < ActionController::TestCase
     create_storage_id_for_user(new_student.id)
 
     Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
-    EvaluateRubricJob.stubs(:ai_enabled?).returns(true)
+    AiRubricConfig.stubs(:ai_enabled?).returns(true)
     EvaluateRubricJob.expects(:perform_later).never
 
     post :ai_evaluation_status_for_user, params: {
@@ -712,7 +942,7 @@ class RubricsControllerTest < ActionController::TestCase
         rubric: @rubric,
         user: @student,
         requester: @teacher,
-        status: SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:SUCCESS]
+        status: RUBRIC_AI_EVALUATION_STATUS[:SUCCESS]
       )
       create(
         :learning_goal_ai_evaluation,
@@ -729,7 +959,7 @@ class RubricsControllerTest < ActionController::TestCase
         rubric: @rubric,
         user: @student,
         requester: @teacher,
-        status: SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:SUCCESS]
+        status: RUBRIC_AI_EVALUATION_STATUS[:SUCCESS]
       )
       create(
         :learning_goal_ai_evaluation,
@@ -742,7 +972,7 @@ class RubricsControllerTest < ActionController::TestCase
       sign_in @teacher
 
       Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
-      EvaluateRubricJob.stubs(:ai_enabled?).returns(true)
+      AiRubricConfig.stubs(:ai_enabled?).returns(true)
       EvaluateRubricJob.expects(:perform_later).never
 
       post :ai_evaluation_status_for_user, params: {
@@ -770,7 +1000,7 @@ class RubricsControllerTest < ActionController::TestCase
         rubric: @rubric,
         user: @student,
         requester: @teacher,
-        status: 1
+        status: RUBRIC_AI_EVALUATION_STATUS[:RUNNING]
       )
       create(
         :learning_goal_ai_evaluation,
@@ -785,7 +1015,7 @@ class RubricsControllerTest < ActionController::TestCase
 
       Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
 
-      EvaluateRubricJob.stubs(:ai_enabled?).returns(true)
+      AiRubricConfig.stubs(:ai_enabled?).returns(true)
       EvaluateRubricJob.expects(:perform_later).with(user_id: @student.id, requester_id: @teacher.id, script_level_id: @script_level.id).once
 
       post :ai_evaluation_status_for_user, params: {
@@ -838,5 +1068,32 @@ class RubricsControllerTest < ActionController::TestCase
       last_modified: DateTime.now
     }
     SourceBucket.any_instance.stubs(:get).with(channel_id, "main.json").returns(fake_source_data)
+  end
+
+  private def stub_lesson_s3_data
+    s3_client = Aws::S3::Client.new(stub_responses: true)
+    AiRubricConfig.stubs(:s3_client).returns(s3_client)
+
+    fake_rubric_csv = <<~CSV
+      Key Concept,Extensive Evidence,Convincing Evidence,Limited Evidence,No Evidence
+      ai-configured learning goal 1,abc,def,ghi,jkl
+      ai-configured learning goal 2,abc,def,ghi,jkl
+      ai-configured learning goal 3,abc,def,ghi,jkl
+    CSV
+
+    path_prefix = AiRubricConfig::S3_AI_RELEASE_PATH
+    bucket = {
+      "#{path_prefix}fake-lesson-s3-name/standard_rubric.csv" => fake_rubric_csv,
+    }
+
+    s3_client.stub_responses(
+      :get_object,
+      ->(context) do
+        key = context.params[:key]
+        obj = bucket[key]
+        raise AiRubricConfig::StubNoSuchKey.new(key) unless obj
+        {body: StringIO.new(obj)}
+      end
+    )
   end
 end

@@ -182,9 +182,9 @@ module Services
             return path
           elsif url.start_with?("https://drive.google.com/")
             file_id = url_to_id(url)
-            file = service.getFile(file_id)
-            return nil unless file.export_links.include? "application/pdf"
-            service.export_file(file_id, 'application/pdf', download_dest: path)
+            file = service.get_file(file_id)
+            return nil unless file.mime_type == "application/pdf"
+            service.get_file(file_id, download_dest: path)
             return path
           elsif url.end_with?(".pdf")
             IO.copy_stream(URI.parse(url)&.open, path)

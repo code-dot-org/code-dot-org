@@ -18,9 +18,7 @@ module I18n
             progress_bar.progress = 100
           end
 
-          private
-
-          def prepare_i18n_source_files
+          private def prepare_i18n_source_files
             Dir.glob(CDO.dir('apps/i18n/**/en_us.json')) do |filepath|
               lab_name = File.basename(File.dirname(filepath))
               I18nScriptUtils.copy_file(filepath, File.join(I18N_SOURCE_DIR_PATH, "#{lab_name}.json"))
@@ -32,7 +30,7 @@ module I18n
             I18nScriptUtils.copy_file(oceans_lab_path, File.join(I18N_SOURCE_DIR_PATH, 'fish.json')) if File.exist?(oceans_lab_path)
           end
 
-          def redact_i18n_source_files
+          private def redact_i18n_source_files
             # Only CSD labs are redacted, since other labs were already part of the i18n pipeline and redaction would edit
             # strings existing in crowdin already
             REDACTABLE_LABS.each do |lab_name|

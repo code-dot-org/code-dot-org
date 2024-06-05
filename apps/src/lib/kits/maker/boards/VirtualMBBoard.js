@@ -167,10 +167,6 @@ class VirtualLightSensor extends VirtualComponent {
 
   start() {}
   setScale() {}
-
-  getAveragedValue() {
-    return 0;
-  }
 }
 
 class VirtualMicroBitThermometer extends VirtualComponent {

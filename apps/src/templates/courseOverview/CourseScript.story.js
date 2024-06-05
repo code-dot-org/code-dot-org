@@ -1,9 +1,12 @@
-import React from 'react';
 import Immutable from 'immutable';
-import {UnconnectedCourseScript as CourseScript} from './CourseScript';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {reduxStore} from '../../../.storybook/decorators';
+import React from 'react';
 import {Provider} from 'react-redux';
+
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+
+import {reduxStore} from '../../../.storybook/decorators';
+
+import {UnconnectedCourseScript as CourseScript} from './CourseScript';
 
 export default {
   component: CourseScript,

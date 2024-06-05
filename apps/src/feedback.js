@@ -31,17 +31,14 @@ import {createHiddenPrintWindow} from './utils';
 import testImageAccess from './code-studio/url_test';
 import {TestResults, KeyCodes} from './constants';
 import QRCode from 'qrcode.react';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import experiments from '@cdo/apps/util/experiments';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import color from '@cdo/apps/util/color';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
 const UNCOUNTED_BLOCK_TYPES = ['draw_colour', 'alpha', 'comment'];
-
-const FIREHOSE_STUDY = 'feedback_dialog';
-let dialog_type = 'default';
 
 /**
  * Bag of utility functions related to building and displaying feedback
@@ -259,15 +256,6 @@ FeedbackUtils.prototype.displayFeedback = function (
   const showPuzzleRatingButtons =
     options.response && options.response.puzzle_ratings_enabled;
 
-  if (showingSharing) {
-    dialog_type = 'share';
-    if (idealBlocks !== Infinity) {
-      dialog_type += '_validate';
-    }
-  } else if (idealBlocks !== Infinity) {
-    dialog_type = 'validate';
-  }
-
   if (getStore().getState().pageConstants.isChallengeLevel) {
     const container = document.createElement('div');
     document.body.appendChild(container);
@@ -317,11 +305,6 @@ FeedbackUtils.prototype.displayFeedback = function (
 
   if (againButton) {
     dom.addClickTouchEvent(againButton, function () {
-      logDialogActions(
-        'replay_level',
-        options,
-        idealBlocks === Infinity ? null : isPerfect
-      );
       feedbackDialog.hide();
     });
   }
@@ -404,12 +387,11 @@ FeedbackUtils.prototype.displayFeedback = function (
     }
 
     dom.addClickTouchEvent(continueButton, function () {
-      logDialogActions(
-        'continue',
-        options,
-        idealBlocks === Infinity ? null : isPerfect
-      );
       feedbackDialog.hide();
+      recordFinishShare(
+        'FINISH_BUTTON_CERTIFICATE',
+        project.getStandaloneApp()
+      );
 
       if (options.response && options.response.puzzle_ratings_enabled) {
         puzzleRatingUtils.cachePuzzleRating(feedback, {
@@ -450,6 +432,7 @@ FeedbackUtils.prototype.displayFeedback = function (
   if (publishButton) {
     dom.addClickTouchEvent(publishButton, () => {
       // Hide the current dialog since we're about to show the publish dialog
+      recordFinishShare('FINISH_SHARING_PUBLISH', project.getStandaloneApp());
       feedbackDialog.hide();
 
       const store = getStore();
@@ -529,18 +512,10 @@ FeedbackUtils.prototype.displayFeedback = function (
   }
 };
 
-function logDialogActions(event, options, isPerfect) {
-  if (experiments.isEnabled(experiments.FINISH_DIALOG_METRICS)) {
-    firehoseClient.putRecord({
-      study: FIREHOSE_STUDY,
-      study_group: dialog_type,
-      event: event,
-      data_json: JSON.stringify({
-        level_type: options.level ? options.level.skin : null,
-        level_id: options.response ? options.response.level_id : null,
-        level_path: options.response ? options.response.level_path : null,
-        isPerfectBlockCount: isPerfect,
-      }),
+function recordFinishShare(type, appType) {
+  if (EVENTS[type]) {
+    analyticsReporter.sendEvent(EVENTS[type], {
+      lab_type: appType,
     });
   }
 }
@@ -714,7 +689,6 @@ FeedbackUtils.prototype.getFeedbackMessage = function (options) {
     // Otherwise, the message will depend on the test result.
     switch (options.feedbackType) {
       case TestResults.FREE_PLAY_UNCHANGED_FAIL:
-        logDialogActions('level_unchanged_failure', options, null);
         message = options.useDialog
           ? msg.freePlayUnchangedFail()
           : msg.freePlayUnchangedFailInline();
@@ -978,9 +952,26 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
   );
   if (sharingCopyButton) {
     dom.addClickTouchEvent(sharingCopyButton, function () {
+      recordFinishShare('FINISH_SHARING_LINK_COPY', project.getStandaloneApp());
       copyToClipboard(options.shareLink, () => {
         sharingCopyButton.className = 'sharing-dialog-copy-button-shared';
       });
+    });
+  }
+
+  const twitterButtonSelector = '#twitter-button';
+  const twitterButton = sharingDiv.querySelector(twitterButtonSelector);
+  if (twitterButton) {
+    dom.addClickTouchEvent(twitterButton, () => {
+      recordFinishShare('FINISH_SHARING_TWITTER', project.getStandaloneApp());
+    });
+  }
+
+  const facebookButtonSelector = '#facebook-button';
+  const facebookButton = sharingDiv.querySelector(facebookButtonSelector);
+  if (facebookButton) {
+    dom.addClickTouchEvent(facebookButton, () => {
+      recordFinishShare('FINISH_SHARING_FB', project.getStandaloneApp());
     });
   }
 
@@ -1003,6 +994,10 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
   //  QR Code & SMS-to-phone feature
   var sharingPhone = sharingDiv.querySelector('#sharing-phone');
   dom.addClickTouchEvent(sharingPhone, function () {
+    recordFinishShare(
+      'FINISH_SHARING_LINK_SEND_TO_PHONE',
+      project.getStandaloneApp()
+    );
     var sendToPhone = sharingDiv.querySelector('#send-to-phone');
     if ($(sendToPhone).is(':hidden')) {
       $(sendToPhone).show();
@@ -1447,14 +1442,6 @@ FeedbackUtils.prototype.throwOnInvalidExampleBlocks = function (
 
   if (!resultBlock) {
     throw new Error('Invalid Result Block');
-  }
-
-  if (resultBlock.hasUnfilledFunctionalInput()) {
-    throw new Error('Result has unfilled inputs');
-  }
-
-  if (callBlock.hasUnfilledFunctionalInput()) {
-    throw new Error('Call has unfilled inputs');
   }
 };
 

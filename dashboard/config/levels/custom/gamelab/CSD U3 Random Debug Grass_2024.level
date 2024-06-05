@@ -53,9 +53,9 @@
     "top_level_procedure_autopopulate": "false",
     "name_suffix": "_2024",
     "reference_links": [
-      "/courses/csd-2022/guides/drawing-shapes"
+      "/courses/csd-2024/guides/drawing-shapes"
     ],
-    "map_reference": "/courses/csd-2022/guides/shapes-and-parameters",
+    "map_reference": "/courses/csd-2024/guides/shapes-and-parameters",
     "long_instructions": "<img src=\"https://images.code.org/08c7c6cd82f4d4ff57459165f29ab624-image-1520402652290.03.37 PM.png\" style=\"float:right;height:150px\">\r\n\r\n# Debug - Using 4 Parameters\r\n\r\nThis program uses the four parameter version of [`rect()`(#4dd0e1)](/docs/ide/gamelab/expressions/rect) and [`ellipse()`(#4dd0e1)](/docs/ide/gamelab/expressions/ellipse) to draw a simple scene.\r\n\r\n# Do This\r\n\r\n1) Debug this program and correct the error so that the grass extends across the entire bottom.\r\n\t- Hint: You only have to change one number! Which parameter makes your rectangle (the grass) wider?\r\n\r\n**Run Your Code!** Verify that the grass extends all the way across the bottom of the screen",
     "parent_level_id": 20655,
     "encrypted": "false",

@@ -1,8 +1,24 @@
-import React, {useEffect, useState, useRef} from 'react';
-import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
 import classnames from 'classnames';
-import style from './rubrics.module.scss';
+import PropTypes from 'prop-types';
+import React, {useEffect, useState, useRef} from 'react';
+
+import {
+  BodyThreeText,
+  BodyFourText,
+  ExtraStrongText,
+  Heading6,
+} from '@cdo/apps/componentLibrary/typography';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import i18n from '@cdo/locale';
+
+import AiAssessment from './AiAssessment';
+import AiAssessmentFeedbackContext from './AiAssessmentFeedbackContext';
+import EvidenceLevels from './EvidenceLevels';
+import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
 import {
   learningGoalShape,
   reportingDataShape,
@@ -10,20 +26,8 @@ import {
   submittedEvaluationShape,
   aiEvaluationShape,
 } from './rubricShapes';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {
-  BodyThreeText,
-  BodyFourText,
-  ExtraStrongText,
-  Heading6,
-} from '@cdo/apps/componentLibrary/typography';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import EvidenceLevels from './EvidenceLevels';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import AiAssessment from './AiAssessment';
-import HttpClient from '@cdo/apps/util/HttpClient';
-import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
+
+import style from './rubrics.module.scss';
 
 const invalidUnderstanding = -1;
 
@@ -48,6 +52,7 @@ export default function LearningGoal({
     ERROR: 3,
   });
   const [isOpen, setIsOpen] = useState(false);
+  const [aiFeedback, setAiFeedback] = useState(-1);
   const [autosaveStatus, setAutosaveStatus] = useState(STATUS.NOT_STARTED);
   const [learningGoalEval, setLearningGoalEval] = useState(null);
   const [displayFeedback, setDisplayFeedback] = useState('');
@@ -56,7 +61,7 @@ export default function LearningGoal({
   const teacherFeedback = useRef('');
   const understandingLevel = useRef(invalidUnderstanding);
 
-  const aiEnabled = learningGoal.aiEnabled && teacherHasEnabledAi;
+  const aiEnabled = !!(learningGoal.aiEnabled && teacherHasEnabledAi);
   const base_teacher_evaluation_endpoint = '/learning_goal_teacher_evaluations';
 
   // Timer variables for autosaving
@@ -263,24 +268,29 @@ export default function LearningGoal({
 
       {/*TODO: Pass through data to child component*/}
       <div>
-        {teacherHasEnabledAi &&
-          !!studentLevelInfo &&
-          !!aiEvalInfo &&
-          aiUnderstanding !== undefined && (
-            <div className={style.openedAiAssessment}>
-              <AiAssessment
-                isAiAssessed={learningGoal.aiEnabled}
-                studentName={studentLevelInfo.name}
-                aiConfidence={aiConfidence}
-                aiUnderstandingLevel={aiUnderstanding}
-                aiEvalInfo={aiEvalInfo}
-              />
-            </div>
-          )}
+        <AiAssessmentFeedbackContext.Provider
+          value={{aiFeedback, setAiFeedback}}
+        >
+          {teacherHasEnabledAi &&
+            !!studentLevelInfo &&
+            !!aiEvalInfo &&
+            aiUnderstanding !== undefined && (
+              <div className={style.openedAiAssessment}>
+                <AiAssessment
+                  isAiAssessed={learningGoal.aiEnabled}
+                  studentName={studentLevelInfo.name}
+                  aiConfidence={aiConfidence}
+                  aiUnderstandingLevel={aiUnderstanding}
+                  aiEvalInfo={aiEvalInfo}
+                />
+              </div>
+            )}
+        </AiAssessmentFeedbackContext.Provider>
         <div className={style.learningGoalExpanded}>
           {!!submittedEvaluation && renderSubmittedFeedbackTextbox()}
           <EvidenceLevels
             learningGoalKey={learningGoal.key}
+            isAiAssessed={aiEnabled}
             evidenceLevels={learningGoal.evidenceLevels}
             canProvideFeedback={canProvideFeedback}
             understanding={displayUnderstanding}

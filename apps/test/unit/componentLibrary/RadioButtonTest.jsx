@@ -1,11 +1,11 @@
-import React from 'react';
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import React from 'react';
 import sinon from 'sinon';
 
-import {expect} from '../../util/reconfiguredChai';
-
 import RadioButton from '@cdo/apps/componentLibrary/radioButton';
+
+import {expect} from '../../util/reconfiguredChai';
 describe('Design System - Radio Button', () => {
   it('RadioButton - renders with correct label', () => {
     const radioButtonLabel = 'Radio Button label';

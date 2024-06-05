@@ -20,6 +20,7 @@ Feature: Using the teacher dashboard
 
   Scenario: Viewing a student
     Given I create an authorized teacher-associated student named "Sally"
+    Given I am assigned to unit "allthethings"
     And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
     And I complete the free response on "http://studio.code.org/s/allthethings/lessons/27/levels/1"
     And I submit the assessment on "http://studio.code.org/s/allthethings/lessons/33/levels/1"
@@ -30,8 +31,17 @@ Feature: Using the teacher dashboard
     And I wait until element "a:contains('Untitled Section')" is visible
     And I save the section id from row 0 of the section table
     Then I navigate to teacher dashboard for the section I saved
+    Then I append "/?enableExperiments=section_progress_v2" to the URL
+    Then I click selector "#ui-close-dialog"
     And I wait until element "#uitest-course-dropdown" is visible
     And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
+
+    # Toggle to V2 progress view
+    Then I click selector "#ui-test-toggle-progress-view"
+    And I wait until element "h6:contains(Icon Key)" is visible
+    And I wait until element "#ui-test-progress-table-v2" is visible
+    Then I click selector "#ui-test-toggle-progress-view"
+    And I wait until element "#uitest-course-dropdown" is visible
 
     # Stats tab
     And I click selector "#uitest-teacher-dashboard-nav a:contains(Stats)" once I see it
@@ -165,23 +175,6 @@ Feature: Using the teacher dashboard
     And I press the first ".project_remix" element to load a new page
     And I wait for the page to fully load
 
-    # Create a playlab project level and generate a thumbnail.
-
-    # We don't want to have to write the code by dragging blocks, so just remix
-    # an existing project-backed level, and then run the project.
-
-    When I am on "http://studio.code.org/s/allthethings/lessons/5/levels/5"
-    And I wait for the page to fully load
-    And I press the first ".project_remix" element to load a new page
-    And I wait for the page to fully load
-    And I press "runButton"
-    And I wait until element ".project_updated_at" contains text "Saved"
-    And I wait until initial thumbnail capture is complete
-    And I press "resetButton"
-    And I click selector "#runButton" once I see it
-    # Wait for the thumbnail URL to be sent to the server.
-    And I wait until element ".project_updated_at" contains text "Saved"
-
     # Create a dance party project level and generate a thumbnail.
 
     # We don't want to have to write the code by dragging blocks, so just remix
@@ -215,7 +208,6 @@ Feature: Using the teacher dashboard
     And I wait until the image within element "tr:eq(2)" has loaded
     And I wait until the image within element "tr:eq(3)" has loaded
     And I wait until the image within element "tr:eq(4)" has loaded
-    And I wait until the image within element "tr:eq(5)" has loaded
 
     Then I see no difference for "projects list view"
     And I close my eyes
@@ -224,7 +216,7 @@ Feature: Using the teacher dashboard
     Given I am a teacher
     And I create a new student section and go home
     And I attempt to join the section
-    Then I wait until element "#flashes" is visible
+    Then I wait until element "div.alert" is visible
     And element "div.alert" contains text matching "Sorry, you can't join your own section"
 
   Scenario: Attempt to join an invalid section through the homepage
@@ -243,3 +235,48 @@ Feature: Using the teacher dashboard
     And I click selector "button.ui-test-join-section"
     Then I wait until element ".announcement-notification" is visible
     And element ".announcement-notification" contains text matching "You are already an instructor for section"
+
+  Scenario: Decline invitation to new progress view
+    Given I create an authorized teacher-associated student named "Sally"
+    Given I am assigned to unit "allthethings"
+    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
+
+    When I sign in as "Teacher_Sally" and go home
+    And I get levelbuilder access
+    And I wait until element "a:contains('Untitled Section')" is visible
+    And I save the section id from row 0 of the section table
+    Then I navigate to teacher dashboard for the section I saved
+    Then I append "/?enableExperiments=section_progress_v2" to the URL
+    Then I click selector "#ui-close-dialog"
+    And I wait until element "#uitest-course-dropdown" is visible
+    And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
+
+  Scenario: Accept invitation to new progress view and see new view immediately. 
+    Given I create an authorized teacher-associated student named "Sally"
+    Given I am assigned to unit "allthethings"
+    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
+
+    When I sign in as "Teacher_Sally" and go home
+    And I get levelbuilder access
+    And I wait until element "a:contains('Untitled Section')" is visible
+    And I save the section id from row 0 of the section table
+    Then I navigate to teacher dashboard for the section I saved
+    Then I append "/?enableExperiments=section_progress_v2" to the URL
+    Then I click selector "#accept-invitation"
+    And I wait until element "h6:contains(Icon Key)" is visible
+    And I wait until element "#ui-test-progress-table-v2" is visible
+
+  Scenario: Delay responding to invitation to new progress view and see old view immediately. 
+    Given I create an authorized teacher-associated student named "Sally"
+    Given I am assigned to unit "allthethings"
+    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
+
+    When I sign in as "Teacher_Sally" and go home
+    And I get levelbuilder access
+    And I wait until element "a:contains('Untitled Section')" is visible
+    And I save the section id from row 0 of the section table
+    Then I navigate to teacher dashboard for the section I saved
+    Then I append "/?enableExperiments=section_progress_v2" to the URL
+    Then I click selector "#remind-me-later-option"
+    And I wait until element "#uitest-course-dropdown" is visible
+    And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"

@@ -1,11 +1,11 @@
-import React, {memo, ChangeEvent} from 'react';
 import classnames from 'classnames';
+import React, {memo, ChangeEvent} from 'react';
 
-import Typography from '@cdo/apps/componentLibrary/typography';
+import {componentSizeToBodyTextSizeMap} from '@cdo/apps/componentLibrary/common/constants';
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
+import Typography from '@cdo/apps/componentLibrary/typography';
 
 import moduleStyles from './radioButton.module.scss';
-import {componentSizeToBodyTextSizeMap} from '@cdo/apps/componentLibrary/common/constants';
 
 export interface RadioButtonProps {
   /** Radio Button checked state */

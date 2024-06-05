@@ -1,8 +1,9 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
+import React from 'react';
+
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
 
 export default function GetVerifiedBanner({courseName}) {
   return (

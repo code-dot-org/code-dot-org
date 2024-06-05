@@ -1,6 +1,7 @@
-import {expect} from '../../../util/reconfiguredChai';
-import {parseElement} from '@cdo/apps/xml';
 import {convertBlocksXml} from '@cdo/apps/craft/code-connection/utils';
+import {parseElement} from '@cdo/apps/xml';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const normalizeWhitespace = function (xmlString) {
   return xmlString.replace(/\n\s*/g, '\n');

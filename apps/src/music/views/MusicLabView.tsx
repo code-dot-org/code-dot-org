@@ -1,4 +1,4 @@
-import React, {useCallback, useContext, useEffect, useRef} from 'react';
+import React, {useCallback, useContext, useEffect} from 'react';
 import MusicValidator from '../progress/MusicValidator';
 import moduleStyles from './music-view.module.scss';
 import {
@@ -9,14 +9,19 @@ import {
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import musicI18n from '../locale';
 import HeaderButtons from './HeaderButtons';
-import AppConfig from '../appConfig';
+import AppConfig, {getBaseAssetUrl} from '../appConfig';
 import classNames from 'classnames';
 import Instructions from '@cdo/apps/lab2/views/components/Instructions';
-import {baseAssetUrl} from '../constants';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import Controls from './Controls';
 import Timeline from './Timeline';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
+import usePlaybackUpdate from './hooks/usePlaybackUpdate';
+import MusicPlayer from '../player/MusicPlayer';
+import useUpdatePlayer from './hooks/useUpdatePlayer';
+import AdvancedControls from './AdvancedControls';
+import PackDialog from './PackDialog';
+import MusicPlayView from './MusicPlayView';
 
 interface MusicLabViewProps {
   blocklyDivId: string;
@@ -29,8 +34,9 @@ interface MusicLabViewProps {
   redo: () => void;
   clearCode: () => void;
   validator: MusicValidator;
+  player: MusicPlayer;
+  allowPackSelection: boolean;
 }
-const UPDATE_RATE = 1000 / 30; // 30 times per second
 
 const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   blocklyDivId,
@@ -43,7 +49,10 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   redo,
   clearCode,
   validator,
+  player,
+  allowPackSelection,
 }) => {
+  useUpdatePlayer(player);
   const dispatch = useAppDispatch();
   const showInstructions = useAppSelector(
     state => state.music.showInstructions
@@ -54,10 +63,10 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const timelineAtTop = useAppSelector(state => state.music.timelineAtTop);
   const hideHeaders = useAppSelector(state => state.music.hideHeaders);
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
-  const isPlaying = useAppSelector(state => state.music.isPlaying);
+  const skipUrl = useAppSelector(state => state.lab.levelProperties?.skipUrl);
+  const isPlayView = useAppSelector(state => state.lab.isShareView);
 
   const progressManager = useContext(ProgressManagerContext);
-  const intervalId = useRef<number | undefined>(undefined);
 
   // Pass music validator to Progress Manager
   useEffect(() => {
@@ -78,21 +87,11 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     progressManager,
   ]);
 
-  // Starts updates whenever playback is in progress, and stops updates
-  // when playback stops.
-  useEffect(() => {
-    if (isPlaying) {
-      if (intervalId.current !== undefined) {
-        window.clearInterval(intervalId.current);
-      }
-      // Reset validation before starting the update timer when playback starts.
-      progressManager?.resetValidation();
-      intervalId.current = window.setInterval(doPlaybackUpdate, UPDATE_RATE);
-    } else {
-      window.clearInterval(intervalId.current);
-      intervalId.current = undefined;
-    }
-  }, [isPlaying, doPlaybackUpdate, progressManager]);
+  const resetValidation = useCallback(
+    () => progressManager?.resetValidation(),
+    [progressManager]
+  );
+  usePlaybackUpdate(doPlaybackUpdate, resetValidation);
 
   const onInstructionsTextClick = useCallback(
     (id: string) => {
@@ -115,11 +114,11 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
         >
           <PanelContainer
             id="instructions-panel"
-            headerText={musicI18n.panelHeaderInstructions()}
+            headerContent={musicI18n.panelHeaderInstructions()}
             hideHeaders={hideHeaders}
           >
             <Instructions
-              baseUrl={baseAssetUrl}
+              baseUrl={getBaseAssetUrl() || ''}
               layout={
                 position !== InstructionsPosition.TOP
                   ? 'vertical'
@@ -149,7 +148,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
           <div id="controls-area" className={moduleStyles.controlsArea}>
             <PanelContainer
               id="controls-panel"
-              headerText={musicI18n.panelHeaderControls()}
+              headerContent={musicI18n.panelHeaderControls()}
               hideHeaders={hideHeaders}
             >
               <Controls
@@ -163,10 +162,14 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
             </PanelContainer>
           </div>
 
-          <div id="timeline-area" className={moduleStyles.timelineArea}>
+          <div
+            dir="ltr"
+            id="timeline-area"
+            className={moduleStyles.timelineArea}
+          >
             <PanelContainer
               id="timeline-panel"
-              headerText={musicI18n.panelHeaderTimeline()}
+              headerContent={musicI18n.panelHeaderTimeline()}
               hideHeaders={hideHeaders}
             >
               <Timeline />
@@ -178,8 +181,18 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     [setPlaying, playTrigger, hasTrigger, hideHeaders]
   );
 
+  const showAdvancedControls =
+    AppConfig.getValue('player') === 'tonejs' &&
+    AppConfig.getValue('advanced-controls-enabled') === 'true';
+
+  if (isPlayView) {
+    return <MusicPlayView setPlaying={setPlaying} />;
+  }
+
   return (
     <div id="music-lab" className={moduleStyles.musicLab}>
+      {allowPackSelection && <PackDialog player={player} />}
+
       {showInstructions &&
         instructionsPosition === InstructionsPosition.TOP &&
         renderInstructions(InstructionsPosition.TOP)}
@@ -194,17 +207,24 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
         <div id="blockly-area" className={moduleStyles.blocklyArea}>
           <PanelContainer
             id="workspace-panel"
-            headerText={musicI18n.panelHeaderWorkspace()}
+            headerContent={musicI18n.panelHeaderWorkspace()}
             hideHeaders={hideHeaders}
             rightHeaderContent={
               <HeaderButtons
                 onClickUndo={undo}
                 onClickRedo={redo}
                 clearCode={clearCode}
+                allowPackSelection={allowPackSelection}
+                skipUrl={skipUrl}
               />
             }
           >
             <div id={blocklyDivId} />
+            {showAdvancedControls && (
+              <div className={moduleStyles.advancedControlsContainer}>
+                <AdvancedControls />
+              </div>
+            )}
           </PanelContainer>
         </div>
 

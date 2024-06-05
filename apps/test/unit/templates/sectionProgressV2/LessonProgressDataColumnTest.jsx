@@ -1,20 +1,21 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-
-import {UnconnectedLessonProgressDataColumn} from '@cdo/apps/templates/sectionProgressV2/LessonProgressDataColumn.jsx';
-import LessonProgressColumnHeader from '@cdo/apps/templates/sectionProgressV2/LessonProgressColumnHeader.jsx';
-import LessonDataCell from '@cdo/apps/templates/sectionProgressV2/LessonDataCell.jsx';
 
 import {
   fakeLessonWithLevels,
   fakeLesson,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
+import LessonDataCell from '@cdo/apps/templates/sectionProgressV2/LessonDataCell.jsx';
+import LessonProgressColumnHeader from '@cdo/apps/templates/sectionProgressV2/LessonProgressColumnHeader.jsx';
+import {UnconnectedLessonProgressDataColumn} from '@cdo/apps/templates/sectionProgressV2/LessonProgressDataColumn.jsx';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const STUDENT_1 = {id: 1, name: 'Student 1', familyName: 'FamNameB'};
 const STUDENT_2 = {id: 2, name: 'Student 2', familyName: 'FamNameA'};
 const STUDENTS = [STUDENT_1, STUDENT_2];
 const LESSON = fakeLessonWithLevels({}, 1);
+const LEVEL = LESSON.levels[0];
 const LESSON_PROGRESS = {
   [STUDENT_1.id]: {
     [LESSON.id]: {
@@ -35,12 +36,34 @@ const LESSON_PROGRESS = {
     },
   },
 };
+const LEVEL_PROGRESS = {
+  [STUDENT_1.id]: {
+    [LEVEL.id]: {
+      locked: false,
+      status: 'perfect',
+      result: 100,
+      paired: true,
+      teacherFeedbackNew: false,
+    },
+  },
+  [STUDENT_2.id]: {
+    [LESSON.id]: {
+      locked: true,
+      status: 'not_tried',
+      result: 1,
+      paired: false,
+      teacherFeedbackNew: true,
+    },
+  },
+};
 
 const DEFAULT_PROPS = {
   lesson: LESSON,
   lessonProgressByStudent: LESSON_PROGRESS,
+  levelProgressByStudent: LEVEL_PROGRESS,
   sortedStudents: STUDENTS,
   addExpandedLesson: () => {},
+  expandedMetadataStudentIds: [],
 };
 
 const setUp = overrideProps => {

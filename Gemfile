@@ -28,7 +28,7 @@ gem 'rails-controller-testing', '~> 1.0.5'
 
 # Compile Sprockets assets concurrently in `assets:precompile`.
 # Ref: https://github.com/rails/sprockets/pull/470
-gem 'sprockets', github: 'wjordan/sprockets', ref: 'concurrent_asset_bundle_3.x'
+gem 'sprockets', github: 'code-dot-org/sprockets', ref: 'concurrent_asset_bundle_3.x'
 gem 'sprockets-rails', '3.3.0'
 
 # provide `respond_to` methods
@@ -45,7 +45,8 @@ gem 'google_drive'
 gem 'jumphash'
 gem 'os'
 gem 'parallel'
-gem 'redis', '~> 3.3.3'
+gem 'redis', '~> 4.8.1'
+gem 'redis-actionpack', '~> 5.4.0'
 # Using commit ref on fork until maintainer publishes a new version.
 gem 'redis-slave-read', require: false, github: 'code-dot-org/redis-slave-read', ref: 'cfe1bd0f5cf65eee5b52560139cab133f22cb880'
 gem 'xxhash'
@@ -91,7 +92,7 @@ group :development, :test do
   gem 'brakeman'
   gem 'database_cleaner-active_record', '~> 2.1.0'
   gem 'haml-rails' # haml (instead of erb) generators
-  gem 'ruby-prof'
+  gem 'ruby-prof', '>= 1.7.0'
   gem 'vcr', require: false
   # For unit testing.
   gem 'webmock', '~> 3.8', require: false
@@ -106,6 +107,7 @@ group :development, :test do
   gem 'fakefs', '~> 2.5.0', require: false
   gem 'minitest', '~> 5.15'
   gem 'minitest-around'
+  gem 'minitest-rails', '~> 6.1', require: false
   gem 'minitest-reporters', '~> 1.2.0.beta3'
   gem 'minitest-spec-context', '~> 0.0.3'
   gem 'minitest-stub-const', '~> 0.6'
@@ -132,7 +134,7 @@ gem 'open_uri_redirections', require: false
 # Optimizes copy-on-write memory usage with GC before web-application fork.
 gem 'nakayoshi_fork'
 
-gem 'puma', '~> 5.0'
+gem 'puma', '~> 5.6'
 gem 'puma_worker_killer'
 gem 'raindrops'
 gem 'sd_notify' # required for Puma to support systemd's Type=notify
@@ -158,7 +160,7 @@ gem 'gemoji'
 
 # Authentication and permissions.
 gem 'cancancan', '~> 3.5.0'
-gem 'devise', '~> 4.7.0'
+gem 'devise', '~> 4.9.0'
 gem 'devise_invitable', '~> 2.0.2'
 
 # Ref: https://github.com/daynew/omniauth-clever/pull/1
@@ -168,7 +170,7 @@ gem 'omniauth-google-oauth2', '~> 0.6.0'
 gem 'omniauth-microsoft_v2_auth', github: 'dooly-ai/omniauth-microsoft_v2_auth'
 # Ref: https://github.com/joel/omniauth-windowslive/pull/16
 # Ref: https://github.com/joel/omniauth-windowslive/pull/17
-gem 'omniauth-windowslive', '~> 0.0.11', github: 'wjordan/omniauth-windowslive', ref: 'cdo'
+gem 'omniauth-windowslive', '~> 0.0.11', github: 'code-dot-org/omniauth-windowslive', ref: 'cdo'
 
 # Resolve CVE 2015 9284
 # see: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-9284
@@ -240,6 +242,7 @@ gem 'aws-sdk-glue'
 gem 'aws-sdk-rds'
 gem 'aws-sdk-route53'
 gem 'aws-sdk-s3'
+gem 'aws-sdk-sagemakerruntime'
 gem 'aws-sdk-secretsmanager'
 
 # Lint tools
@@ -254,7 +257,7 @@ end
 
 # Reduce volume of production logs
 # Ref: https://github.com/roidrage/lograge/pull/252
-gem 'lograge', github: 'wjordan/lograge', ref: 'debug_exceptions'
+gem 'lograge', github: 'code-dot-org/lograge', ref: 'debug_exceptions'
 
 # Enforce SSL
 gem 'rack-ssl-enforcer'
@@ -264,7 +267,7 @@ gem 'pusher', '~> 1.3.1', require: false
 
 gem 'youtube-dl.rb', group: [:development, :staging, :levelbuilder]
 
-gem 'daemons'
+gem 'daemons', '1.1.9' # Pinned to old version, see PR 57938
 gem 'httparty'
 gem 'net-scp'
 gem 'net-ssh'
@@ -298,13 +301,13 @@ gem 'full-name-splitter', github: 'pahanix/full-name-splitter'
 gem 'rambling-trie', '>= 2.1.1'
 
 gem 'omniauth-openid'
-gem 'omniauth-openid-connect', github: 'wjordan/omniauth-openid-connect', ref: 'cdo'
+gem 'omniauth-openid-connect', github: 'code-dot-org/omniauth-openid-connect', ref: 'cdo'
 
 # Ref: https://github.com/toy/image_optim/pull/145
 # Also include sRGB color profile conversion.
-gem 'image_optim', github: 'wjordan/image_optim', ref: 'cdo'
+gem 'image_optim', github: 'code-dot-org/image_optim', ref: 'cdo'
 # Image-optimization tools and binaries.
-gem 'image_optim_pack', '~> 0.5.0', github: 'wjordan/image_optim_pack', ref: 'guetzli'
+gem 'image_optim_pack', '~> 0.5.0', github: 'code-dot-org/image_optim_pack', ref: 'guetzli'
 gem 'image_optim_rails', '~> 0.4.0'
 
 gem 'image_size', require: false
@@ -349,8 +352,17 @@ gem 'pry', '~> 0.14.0'
 # Google's Compact Language Detector
 gem 'cld'
 
-gem 'crowdin-api', '~> 1.6.0'
+gem 'crowdin-api', '~> 1.10.0'
 
 gem "delayed_job_active_record", "~> 4.1"
 
 gem 'rack-cors', '~> 2.0.1'
+
+# pin http to 5.0 or greater so that statsig does not pull in an older version.
+# older versions depend on http-parser which breaks some developer builds.
+gem 'http', '~> 5.0'
+
+gem 'statsig', '~> 1.33'
+
+gem 'mailgun-ruby', '~>1.2.14'
+gem 'mailjet', '~> 1.7.3'

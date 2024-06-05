@@ -22,12 +22,13 @@
   opacity: 75%;
   background-color: $neutral_dark40;
   cursor: default;
-  
+
   &Active {
     cursor: pointer;
     border-color: #00bc3e;
     background-color: #00bc3e;
     color: white;
+    opacity: 100%
   }
 
   &Selected {

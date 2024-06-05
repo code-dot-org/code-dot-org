@@ -881,6 +881,44 @@ class CourseOfferingTest < ActiveSupport::TestCase
     assert course7.high_school_level?
   end
 
+  test 'finds corresponding offerings for pl course' do
+    pl_course_offering = create :course_offering
+    pl_unit = create :script, participant_audience: 'teacher', instructor_audience: 'facilitator'
+    create :course_version, content_root: pl_unit, course_offering: pl_course_offering
+
+    course_offering = create :course_offering, self_paced_pl_course_offering: pl_course_offering
+
+    assert_equal [course_offering], pl_course_offering.find_corresponding_offerings_for_pl_course
+  end
+
+  test 'does not find corresponding offerings for non-pl course' do
+    course_offering = create :course_offering
+
+    assert_nil course_offering.find_corresponding_offerings_for_pl_course
+  end
+
+  test 'pl_for_elementary_school? returns true if non-pl offering is targeted at elementary' do
+    pl_course_offering = create :course_offering
+    pl_unit = create :script, participant_audience: 'teacher', instructor_audience: 'facilitator'
+    create :course_version, content_root: pl_unit, course_offering: pl_course_offering
+
+    non_pl_course_offering = create :course_offering, grade_levels: 'K,1,2,3,4,5', self_paced_pl_course_offering: pl_course_offering
+
+    assert non_pl_course_offering.elementary_school_level?
+    assert pl_course_offering.pl_for_elementary_school?
+  end
+
+  test 'pl_for_elementary_school? returns false if non-pl offering is not targeted at elementary' do
+    pl_course_offering = create :course_offering
+    pl_unit = create :script, participant_audience: 'teacher', instructor_audience: 'facilitator'
+    create :course_version, content_root: pl_unit, course_offering: pl_course_offering
+
+    non_pl_course_offering = create :course_offering, grade_levels: '9,10,11,12', self_paced_pl_course_offering: pl_course_offering
+
+    refute non_pl_course_offering.elementary_school_level?
+    refute pl_course_offering.pl_for_elementary_school?
+  end
+
   def course_offering_with_versions(num_versions, content_root_trait = :with_unit_group)
     create :course_offering do |offering|
       create_list :course_version, num_versions, content_root_trait, course_offering: offering

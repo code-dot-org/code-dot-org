@@ -1,7 +1,8 @@
 <Craft>
   <config><![CDATA[{
+  "published": true,
   "game_id": 49,
-  "created_at": "2023-03-14T20:38:26.000Z",
+  "created_at": "2023-09-27T06:33:36.000Z",
   "level_num": "custom",
   "user_id": 9,
   "properties": {
@@ -38,7 +39,7 @@
     "free_play": "false",
     "grid_width": "10",
     "grid_height": "10",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"craft_callout_moveforward\",\r\n  \"callout_text\": \"This code will check for lava, can you add a command to move forward?\",\r\n  \"element_id\": \"[block-id=\\\"8\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"craft_callout_moveforward\",\r\n  \"callout_text\": \"This code will check for lava, can you add a command to move forward?\",\r\n  \"element_id\": \"[data-id=\\\"8\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"All of the code is in place to check for lava and deal with it. All you need to do is add a block to move.\",\"hint_id\":\"mc_11_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c72d9f278229f2b48ac8815ba7e8e7ff/Underground Avoiding Lava.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Should your `move forward` command go inside of the `if` statement or after?\",\"hint_id\":\"mc_11_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c950888a1f223ae592072da155f0e28d/Underground Avoiding Lava.mp3\"}]",
     "instructions_important": "false",
     "disable_procedure_autopopulate": "false",
@@ -62,9 +63,8 @@
     "boat": "false",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-14T20:38:25.958+00:00\",\"changed\":[\"cloned from \\\"Underground Avoiding Lava2022\\\"\"],\"cloned_from\":\"Underground Avoiding Lava2022\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-14T20:38:25.958+00:00\",\"changed\":[\"cloned from \\\"Underground Avoiding Lava2022\\\"\"],\"cloned_from\":\"Underground Avoiding Lava2022\"},{\"changed_at\":\"2024-03-28 16:00:52 -0700\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"}]",
   "level_concept_difficulty": {
     "sequencing": 4,
     "debugging": 2,
@@ -75,7 +75,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
+        <block type="when_run" deletable="false" movable="false" id="8">
           <next>
             <block type="controls_repeat_dropdown">
               <title name="TIMES" config="2-10">7</title>

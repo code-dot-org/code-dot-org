@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U3L9-Nested PBT_2025",
     "teacher_markdown": "Students should notice that the outer `for` loop is moving to the next row for each shape, while the inner `for` loop is filling in each row with `\"*\"`. Calling the methods with different values will impact the number of rows that are printed and the number of `\"*\"` on each row.",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-16T23:52:59.941+00:00\",\"changed\":[\"cloned from \\\"CSA U3L9-L3_2023\\\"\"],\"cloned_from\":\"CSA U3L9-L3_2023\"}]"

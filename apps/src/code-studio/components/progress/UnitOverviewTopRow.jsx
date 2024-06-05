@@ -45,7 +45,6 @@ class UnitOverviewTopRow extends React.Component {
     scriptResourcesPdfUrl: PropTypes.string,
     courseOfferingId: PropTypes.number,
     courseVersionId: PropTypes.number,
-    isProfessionalLearningCourse: PropTypes.bool,
     publishedState: PropTypes.oneOf(Object.values(PublishedState)),
     courseLink: PropTypes.string,
     participantAudience: PropTypes.string,
@@ -140,7 +139,6 @@ class UnitOverviewTopRow extends React.Component {
       hasPerLevelResults,
       courseOfferingId,
       courseVersionId,
-      isProfessionalLearningCourse,
       publishedState,
       participantAudience,
       isUnitWithLevels,
@@ -161,13 +159,6 @@ class UnitOverviewTopRow extends React.Component {
       unitProgress = IN_PROGRESS;
     }
 
-    /*
-     * We are turning off Printing Certificates for Professional Learning Courses
-     * until we can create a specialized certificate for PL courses.
-     * */
-    let completedProfessionalLearningCourse =
-      isProfessionalLearningCourse && unitProgress === COMPLETED;
-
     const displayPrintingOptionsDropwdown =
       pdfDropdownOptions.length > 0 &&
       publishedState !== PublishedState.pilot &&
@@ -177,7 +168,7 @@ class UnitOverviewTopRow extends React.Component {
       <div style={styles.buttonRow} className="unit-overview-top-row">
         {!deeperLearningCourse && viewAs === ViewType.Participant && (
           <div style={styles.buttonsInRow}>
-            {!completedProfessionalLearningCourse && isUnitWithLevels && (
+            {isUnitWithLevels && (
               <Button
                 __useDeprecatedTag
                 href={`/s/${scriptName}/next`}

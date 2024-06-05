@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
+
 import ProgressBoxForLessonNumber from './ProgressBoxForLessonNumber';
-import fontConstants from '@cdo/apps/fontConstants';
 
 export default class StandardsLegend extends Component {
   render() {

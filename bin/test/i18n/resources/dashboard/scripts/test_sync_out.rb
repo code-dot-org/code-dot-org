@@ -6,11 +6,10 @@ describe I18n::Resources::Dashboard::Scripts::SyncOut do
   let(:described_instance) {described_class.new}
   let(:malformed_i18n_reporter) {stub}
 
-  let(:crowdin_locale) {'expected_crowdin_locale'}
   let(:i18n_locale) {'expected_i18n_locale'}
-  let(:language) {{crowdin_name_s: crowdin_locale, locale_s: i18n_locale}}
+  let(:language) {{locale_s: i18n_locale}}
 
-  let(:crowdin_file_path) {CDO.dir('i18n/locales', crowdin_locale, 'dashboard/scripts.yml')}
+  let(:crowdin_file_path) {CDO.dir('i18n/crowdin', i18n_locale, 'dashboard/scripts.yml')}
   let(:i18n_file_path) {CDO.dir('i18n/locales', i18n_locale, 'dashboard/scripts.yml')}
   let(:i18n_backup_file_path) {CDO.dir('i18n/locales/original/dashboard/scripts.yml')}
 
@@ -41,6 +40,9 @@ describe I18n::Resources::Dashboard::Scripts::SyncOut do
     let(:expect_crowdin_file_to_i18n_locale_dir_moving) do
       I18nScriptUtils.expects(:move_file).with(crowdin_file_path, i18n_file_path)
     end
+    let(:expect_crowdin_resource_dir_removing) do
+      I18nScriptUtils.expects(:remove_empty_dir).with(File.dirname(crowdin_file_path))
+    end
 
     before do
       I18n::Metrics.stubs(:report_runtime).yields(nil)
@@ -61,6 +63,7 @@ describe I18n::Resources::Dashboard::Scripts::SyncOut do
       expect_malformed_i18n_reporting.in_sequence(execution_sequence)
       expect_localization_distribution.in_sequence(execution_sequence)
       expect_crowdin_file_to_i18n_locale_dir_moving.in_sequence(execution_sequence)
+      expect_crowdin_resource_dir_removing.in_sequence(execution_sequence)
 
       perform_sync_out
     end
@@ -87,6 +90,11 @@ describe I18n::Resources::Dashboard::Scripts::SyncOut do
 
       it 'does not move file from the Crowdin locale dir to the I18n locale dir' do
         expect_crowdin_file_to_i18n_locale_dir_moving.never
+        perform_sync_out
+      end
+
+      it 'does not try to remove the Crowdin resource dir' do
+        expect_crowdin_resource_dir_removing.never
         perform_sync_out
       end
     end

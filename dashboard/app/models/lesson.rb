@@ -605,7 +605,7 @@ class Lesson < ApplicationRecord
     end
     next_level = next_level_for_lesson_extras(user)
     next_level ?
-      build_script_level_path(next_level) : script_completion_redirect(script)
+      build_script_level_path(next_level) : script_completion_redirect(user, script)
   end
 
   def next_level_number_for_lesson_extras(user)
@@ -901,7 +901,7 @@ class Lesson < ApplicationRecord
 
   def report_bug_url(request)
     message = "Bug in Lesson #{name}\n#{request.url}\n#{request.user_agent}\n"
-    "https://support.code.org/hc/en-us/requests/new?&description=#{CGI.escape(message)}"
+    "https://support.code.org/hc/en-us/requests/new?&tf_description=#{CGI.escape(message)}"
   end
 
   # Finds the LessonActivity by id, or creates a new one if id is not specified.

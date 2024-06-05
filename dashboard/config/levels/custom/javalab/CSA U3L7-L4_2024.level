@@ -45,7 +45,8 @@
     },
     "project_template_level_name": "CSA U3L7-Enhanced PBT_2024",
     "teacher_markdown": "When students add the `increaseProfits()` method and prints the values assigned to the 1D array `annualProfits`, they should notice that the values are not changed. This is because changes made using this loop structure does not impact the values assigned to the 1D array. The variable `profit` is being assigned a *copy* of the value, so changes made are only impacting the variable `profit` and not the 1D array.\r\n\r\nWhen students change the `increaseProfits()` method to use a regular `for` loop, the values assigned to the 1D array are modified. This type of loop is accessing the element in the 1D array instead of accessing a copy of it.",
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T20:52:20.847+00:00\",\"changed\":[\"cloned from \\\"CSA U3L7-L4_2023\\\"\"],\"cloned_from\":\"CSA U3L7-L4_2023\"}]"

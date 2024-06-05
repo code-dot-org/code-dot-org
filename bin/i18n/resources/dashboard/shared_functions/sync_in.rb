@@ -18,13 +18,11 @@ module I18n
             )
           end
 
-          private
-
-          def shared_functions
+          private def shared_functions
             @shared_functions ||= SharedBlocklyFunction.where(level_type: LEVEL_TYPES)
           end
 
-          def shared_functions_i18n_data
+          private def shared_functions_i18n_data
             shared_functions.select(:id, :name).find_each.each_with_object({}) do |shared_function, i18n_data|
               i18n_data[shared_function.name] = shared_function.name
             end.sort.to_h

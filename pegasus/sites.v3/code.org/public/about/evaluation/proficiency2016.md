@@ -29,7 +29,7 @@ Most levels are coding levels (which we’ll call "puzzles" for this paper) but 
     <th>Concepts </th>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/course1" target="_blank">Course 1</a><br>
+    <td><a href="https://studio.code.org/s/course1?viewAs=Instructor" target="_blank">Course 1</a><br>
 18 stages<br>
 119/146 coding levels</td>
     <td>Pre-readers (K-1)<br>
@@ -37,7 +37,7 @@ NOTE: this course was not used in measuring student proficiency</td>
     <td>Instruction Sequencing, Loops</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/course2" target="_blank">Course 2</a><br>
+    <td><a href="https://studio.code.org/s/course2?viewAs=Instructor" target="_blank">Course 2</a><br>
 19 stages<br>
 128/159 coding levels</td>
     <td>Elementary school students<br>Recommended starting point for students in 2nd-5th grade who have never tried CS before</td>
@@ -45,7 +45,7 @@ NOTE: this course was not used in measuring student proficiency</td>
 </td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/course3" target="_blank">Course 3</a><br>
+    <td><a href="https://studio.code.org/s/course3?viewAs=Instructor" target="_blank">Course 3</a><br>
 21 stages<br>
 148/177 coding levels</td>
     <td>Elementary school students<br>
@@ -54,7 +54,7 @@ Designed for students 3rd-5th grade after completing course 2</td>
 </td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/course4" target="_blank">Course 4</a><br>
+    <td><a href="https://studio.code.org/s/course4?viewAs=Instructor" target="_blank">Course 4</a><br>
 22 stages<br>
 161/167 coding levels</td>
     <td>Elementary school students<br>
@@ -62,7 +62,7 @@ Designed for 5-6th grade students after completing course 3</td>
     <td>Sequencing, Lots of Loops, Conditionals, Events, Functions with parameters, Variables</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/20-hour" target="_blank">Accelerated Course</a><br>
+    <td><a href="https://studio.code.org/s/20-hour?viewAs=Instructor" target="_blank">Accelerated Course</a><br>
 20 stages<br>
 109/109 coding levels</td>
     <td>Middle and high school students<br>Designed for older students new to computer science. The course covers most of the material in courses 2 and 3 (and a few concepts from course 4) in an accelerated format.</td>

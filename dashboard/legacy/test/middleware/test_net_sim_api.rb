@@ -898,32 +898,29 @@ class NetSimApiTest < Minitest::Test
     )
   end
 
-  # Methods below this point are test utilities, not actual tests
-  private
-
-  def record_exists(table_name, record_id)
+  private def record_exists(table_name, record_id)
     @net_sim_api.get "/v3/netsim/#{@shard_id}/#{table_name}/#{record_id}"
     @net_sim_api.last_response.status == 200
   end
 
-  def create_node(record, node_type = nil)
+  private def create_node(record, node_type = nil)
     record[:type] = node_type unless node_type.nil?
     create_record record, TABLE_NAMES[:node]
   end
 
-  def create_client_node(record = {})
+  private def create_client_node(record = {})
     create_node(record, NODE_TYPES[:client])
   end
 
-  def create_router_node(record = {})
+  private def create_router_node(record = {})
     create_node(record, NODE_TYPES[:router])
   end
 
-  def delete_node(id)
+  private def delete_node(id)
     delete_record id, TABLE_NAMES[:node]
   end
 
-  def create_wire(from_node_id, to_node_id)
+  private def create_wire(from_node_id, to_node_id)
     wire_record = {
       localNodeID: from_node_id,
       remoteNodeID: to_node_id
@@ -931,53 +928,53 @@ class NetSimApiTest < Minitest::Test
     create_record wire_record, TABLE_NAMES[:wire]
   end
 
-  def delete_wire(id)
+  private def delete_wire(id)
     delete_record id, TABLE_NAMES[:wire]
   end
 
-  def create_message(record)
+  private def create_message(record)
     create_record record, TABLE_NAMES[:message]
   end
 
-  def delete_message(id)
+  private def delete_message(id)
     delete_record id, TABLE_NAMES[:message]
   end
 
-  def create_record(record, table_name = @table_name)
+  private def create_record(record, table_name = @table_name)
     @net_sim_api.post "/v3/netsim/#{@shard_id}/#{table_name}", record.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     JSON.parse(@net_sim_api.last_response.body)
   end
 
-  def create_record_malformed(record)
+  private def create_record_malformed(record)
     @net_sim_api.post "/v3/netsim/#{@shard_id}/#{@table_name}", '\\' + record.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     @net_sim_api.last_response
   end
 
-  def read_records(table_name = @table_name)
+  private def read_records(table_name = @table_name)
     read_records_for_url("/v3/netsim/#{@shard_id}/#{table_name}")
   end
 
-  def read_records_for_url(url)
+  private def read_records_for_url(url)
     @net_sim_api.get url
     JSON.parse(@net_sim_api.last_response.body)
   end
 
-  def update_record(id, record)
+  private def update_record(id, record)
     @net_sim_api.put "/v3/netsim/#{@shard_id}/#{@table_name}/#{id}", record.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     @net_sim_api.last_response
   end
 
-  def update_record_malformed(id, record)
+  private def update_record_malformed(id, record)
     @net_sim_api.put "/v3/netsim/#{@shard_id}/#{@table_name}/#{id}", '\\' + record.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     @net_sim_api.last_response
   end
 
-  def delete_record(id, table_name = @table_name)
+  private def delete_record(id, table_name = @table_name)
     @net_sim_api.delete "/v3/netsim/#{@shard_id}/#{table_name}/#{id}"
     @net_sim_api.last_response
   end
 
-  def last_error_details
+  private def last_error_details
     JSON.parse(@net_sim_api.last_response.body)['details']
   end
 end

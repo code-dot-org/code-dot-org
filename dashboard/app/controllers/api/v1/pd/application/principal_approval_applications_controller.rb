@@ -8,9 +8,7 @@ module Api::V1::Pd::Application
       )
     end
 
-    protected
-
-    def on_successful_create
+    protected def on_successful_create
       # Approval application created, now score corresponding teacher application
       teacher_application = TEACHER_APPLICATION_CLASS.find_by!(application_guid: @application.application_guid)
       teacher_application.on_successful_principal_approval_create(@application)

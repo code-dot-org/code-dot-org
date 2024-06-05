@@ -1,12 +1,14 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
-import {sectionForDropdownShape} from './shapes';
-import TeacherSectionSelector from './TeacherSectionSelector';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import MultipleAssignButton from '@cdo/apps/templates/MultipleAssignButton';
 import {selectSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import fontConstants from '@cdo/apps/fontConstants';
+import i18n from '@cdo/locale';
+
+import {sectionForDropdownShape} from './shapes';
+import TeacherSectionSelector from './TeacherSectionSelector';
 
 class SectionAssigner extends Component {
   static propTypes = {

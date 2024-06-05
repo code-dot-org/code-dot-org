@@ -267,7 +267,7 @@ def rollup_monthly_snapshots
 
   puts "WRITING #{AGGREGATE_FILENAME}..."
   CSV.open(AGGREGATE_FILENAME, 'wb') do |csv|
-    user_proficiency_hash.values.each do |row|
+    user_proficiency_hash.each_value do |row|
       csv << row
     end
   end

@@ -185,12 +185,16 @@ class BubbleChoiceTest < ActiveSupport::TestCase
         description: @sublevel1.bubble_choice_description,
         thumbnail_url: @sublevel1.thumbnail_url,
         url: level_url(@sublevel1.id),
+        path: level_path(@sublevel1.id),
         type: @sublevel1.type,
         name: @sublevel1.name,
         position: 1,
         letter: 'a',
         icon: nil,
-        status: 'not_tried'
+        status: 'not_tried',
+        is_validated: false,
+        can_have_feedback: false,
+        uses_lab2: false
       },
       {
         level_id: @sublevel2.id.to_s,
@@ -199,13 +203,17 @@ class BubbleChoiceTest < ActiveSupport::TestCase
         description: @sublevel2.bubble_choice_description,
         thumbnail_url: nil,
         url: level_url(@sublevel2.id),
+        path: level_path(@sublevel2.id),
         type: @sublevel2.type,
         name: @sublevel2.name,
         position: 2,
         letter: 'b',
         icon: nil,
         status: 'not_tried',
-        short_instructions: @sublevel2.short_instructions
+        short_instructions: @sublevel2.short_instructions,
+        is_validated: false,
+        can_have_feedback: false,
+        uses_lab2: false
       }
     ]
 
@@ -234,7 +242,9 @@ class BubbleChoiceTest < ActiveSupport::TestCase
           level_id: @sublevel_contained_level.id.to_s,
           type: "FreeResponse",
           name: "Sublevel contained level",
-          display_name: nil
+          display_name: nil,
+          is_validated: false,
+          can_have_feedback: false
         }],
         id: @sublevel_with_contained.id.to_s,
         description: @sublevel_with_contained.bubble_choice_description,
@@ -243,10 +253,14 @@ class BubbleChoiceTest < ActiveSupport::TestCase
         letter: 'a',
         icon: nil,
         url: build_script_level_url(script_level, {sublevel_position: 1}),
+        path: build_script_level_path(script_level, {sublevel_position: 1}),
         perfect: true,
         status: 'perfect',
         teacher_feedback_review_state: nil,
-        exampleSolutions: []
+        exampleSolutions: [],
+        is_validated: false,
+        can_have_feedback: false,
+        uses_lab2: false
       },
       {
         level_id: @sublevel2.id.to_s,
@@ -261,10 +275,14 @@ class BubbleChoiceTest < ActiveSupport::TestCase
         letter: 'b',
         icon: nil,
         url: build_script_level_url(script_level, {sublevel_position: 2}),
+        path: build_script_level_path(script_level, {sublevel_position: 2}),
         perfect: false,
         status: 'passed',
         teacher_feedback_review_state: nil,
-        exampleSolutions: []
+        exampleSolutions: [],
+        is_validated: false,
+        can_have_feedback: false,
+        uses_lab2: false
       }
     ]
 

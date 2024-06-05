@@ -1,21 +1,22 @@
-import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import React, {useCallback} from 'react';
-import i18n from '@cdo/locale';
-import {setSortByFamilyName} from '@cdo/apps/templates/currentUserRedux';
+import {connect} from 'react-redux';
+
+import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
+import {setSortByFamilyName} from '@cdo/apps/templates/currentUserRedux';
+import i18n from '@cdo/locale';
 
 const FAMILY_NAME = 'familyName';
 const DISPLAY_NAME = 'displayName';
 
 function SortByNameDropdown({
-  sortByStyles,
-  selectStyles,
   sectionId,
   unitName,
   source,
   isSortedByFamilyName,
   setSortByFamilyName,
+  className,
 }) {
   const onSortByFamilyNameChange = useCallback(
     e => {
@@ -28,30 +29,30 @@ function SortByNameDropdown({
 
   const selectedValue = isSortedByFamilyName ? FAMILY_NAME : DISPLAY_NAME;
   return (
-    <div>
-      <div style={sortByStyles}>{i18n.sortBy()}</div>
-      <select
-        name="familyNameSort"
-        aria-label={i18n.sortBy()}
-        style={selectStyles}
-        value={selectedValue}
-        onChange={onSortByFamilyNameChange}
-      >
-        <option value={DISPLAY_NAME}>{i18n.displayName()}</option>
-        <option value={FAMILY_NAME}>{i18n.familyName()}</option>
-      </select>
-    </div>
+    <SimpleDropdown
+      items={[
+        {value: DISPLAY_NAME, text: i18n.displayName()},
+        {value: FAMILY_NAME, text: i18n.familyName()},
+      ]}
+      selectedValue={selectedValue}
+      name="familyNameSort"
+      onChange={onSortByFamilyNameChange}
+      labelText={i18n.sortBy()}
+      className={className}
+      size="s"
+      dropdownTextThickness="thin"
+      color="gray"
+    />
   );
 }
 
 SortByNameDropdown.propTypes = {
-  sortByStyles: PropTypes.object,
-  selectStyles: PropTypes.object,
   sectionId: PropTypes.number,
   unitName: PropTypes.string,
   source: PropTypes.string,
   isSortedByFamilyName: PropTypes.bool,
   setSortByFamilyName: PropTypes.func,
+  className: PropTypes.string,
 };
 
 export const UnconnectedSortByNameDropdown = SortByNameDropdown;

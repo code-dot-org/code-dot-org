@@ -6,12 +6,10 @@ module Pd::Payment
     STAFFER_PAYMENT_PER_DAY = 250
     VENUE_PAYMENT_PER_DAY = 400
 
-    protected
-
     # Calculates payment amounts.
     # @param workshop_summary [WorkshopSummary] calculated workshop details that go into payment amount calculation.
     # @return [Hash{String => Numeric}] Map of payment parts (e.g. :food) to their dollar amounts.
-    def calculate_payment_amounts(workshop_summary)
+    protected def calculate_payment_amounts(workshop_summary)
       plp_multiplier = workshop_summary.plp&.urban? ? PLP_URBAN_MULTIPLIER : 1
 
       {

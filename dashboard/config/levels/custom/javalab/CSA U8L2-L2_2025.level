@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U8L2-Linear Search PBT_2025",
     "teacher_markdown": "If `target` is not in the list, then `itemsChecked` will equal the length of the list minus `1`. This is because the entire list must be traversed before determining that the item is not in the list.",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-17T00:40:47.840+00:00\",\"changed\":[\"cloned from \\\"CSA U8L2-L2_2023\\\"\"],\"cloned_from\":\"CSA U8L2-L2_2023\"}]"

@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U2L9-Mutators PBT_2024",
     "teacher_markdown": "1. Students will see the following error when they change the return type from `void` to `double`:\r\n\r\n```\r\n/Clothes.java:45: error: missing return statement\r\n  }\r\n  ^\r\n```\r\n\r\nSince the method signature now specifies a return type, Java now looks for a return statement in the body of the method.\r\n\r\n2. Removing the parameter from the `setPrice()` method will result in the following error:\r\n\r\n```\r\n/Clothes.java:51: error: cannot find symbol\r\n    price = newPrice;\r\n            ^\r\n  symbol:   variable newPrice\r\n  location: class Clothes\r\n```\r\n\r\nThe body of the method sets the `price` instance variable to the value passed as the parameter. Without the parameter, the value assigned to the instance variable cannot be updated.",
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T20:49:49.169+00:00\",\"changed\":[\"cloned from \\\"CSA U2L9-L2_2023\\\"\"],\"cloned_from\":\"CSA U2L9-L2_2023\"}]"

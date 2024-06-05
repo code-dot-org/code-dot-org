@@ -1,10 +1,13 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import moduleStyles from './sections-refresh.module.scss';
-import i18n from '@cdo/locale';
-import {CourseOfferingCurriculumTypes as curriculumTypes} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
-import {renderRows} from './QuickAssignTableHelpers';
+import React from 'react';
+
 import {Heading4} from '@cdo/apps/componentLibrary/typography';
+import {CourseOfferingCurriculumTypes as curriculumTypes} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import i18n from '@cdo/locale';
+
+import {renderRows} from './QuickAssignTableHelpers';
+
+import moduleStyles from './sections-refresh.module.scss';
 
 /*
 Represents the (collection of) tables in Curriculum Quick Assign.

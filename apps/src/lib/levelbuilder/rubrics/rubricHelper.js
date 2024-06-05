@@ -41,6 +41,14 @@ export async function saveRubricToTable(
       },
       body: JSON.stringify(rubric_data),
     });
+    if (!response.ok) {
+      const errorData = await response.json();
+      const msg = `Error saving rubric: ${JSON.stringify(errorData, null, 2)}`;
+      console.error(msg);
+      setSaveNotificationText(msg);
+      return;
+    }
+
     let data = await response.json();
     if (!rubric) {
       navigateToHref(data.redirectUrl);

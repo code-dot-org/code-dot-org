@@ -2,7 +2,7 @@
 
 require_relative '../../config/environment'
 
-STDIN.each do |row|
+$stdin.each do |row|
   email = row.split(',').first
   if email && email =~ /@/
     if user = User.find_by_email_or_hashed_email(email)

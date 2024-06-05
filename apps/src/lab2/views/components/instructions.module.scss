@@ -145,7 +145,7 @@
   border: dashed $neutral_white 2px;
 }
 
-.buttonNext {
+.buttonInstruction {
   font-size: 14px;
   background-color: $brand_secondary_default;
   border-color: $brand_secondary_default;
@@ -155,12 +155,22 @@
   border-radius: 4px;
   height: 38px;
   margin: 0 0 10px 0;
+  &:disabled,
+  &[aria-disabled='true'] {
+    cursor: not-allowed;
+    border-color: $light_gray_200;
+    background-color: $light_gray_200;
+    color: $light_white;
+  }
 }
 
 .markdownText {
   line-height: 0;
 
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     margin: 0 0 10px 0;
     font-family: $barlowSemiCondensed-semibold;
     font-size: 1.75em;
@@ -176,7 +186,7 @@
   }
 
   code {
-    color: $neutral_light;
+    color: $light_primary_700;
   }
 
   p {

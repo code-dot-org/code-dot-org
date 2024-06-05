@@ -6,6 +6,7 @@
  */
 
 var utils = require('../utils'); // For String.prototype.repeat polyfill
+
 var NetSimUtils = require('./NetSimUtils');
 
 /**

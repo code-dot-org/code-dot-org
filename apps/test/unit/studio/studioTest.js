@@ -1,16 +1,18 @@
 import sinon from 'sinon';
+
+import {SVG_NS} from '@cdo/apps/constants';
+import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import Studio, {
+  setSvgText,
+  calculateBubblePosition,
+} from '@cdo/apps/studio/studio';
+
+import {expect} from '../../util/reconfiguredChai';
 import {
   replaceOnWindow,
   restoreOnWindow,
   allowConsoleErrors,
 } from '../../util/testUtils';
-import {expect} from '../../util/reconfiguredChai';
-import {SVG_NS} from '@cdo/apps/constants';
-import Studio, {
-  setSvgText,
-  calculateBubblePosition,
-} from '@cdo/apps/studio/studio';
-import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 
 const STUDIO_WIDTH = 400;
 const SPEECH_BUBBLE_H_OFFSET = 50;

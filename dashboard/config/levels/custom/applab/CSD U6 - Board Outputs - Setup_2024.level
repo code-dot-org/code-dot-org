@@ -55,7 +55,7 @@
     "widget_mode": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/circuits-and-leds",
+      "/courses/csd-2024/guides/circuits-and-leds",
       "/maker/setup"
     ],
     "teacher_markdown": "Students are only required to connect their circuit playground in this level; they do not need to run any code yet. Help students with connecting their boards, managing supplied, and troubleshooting any issues. Make sure students always unplug their their board before changing wires - otherwise, electricity may still be flowing and can damage the circuit playground. This is a good time to emphasize this norm and remind students of safety precautions when working with the circuit playground and their materials.",

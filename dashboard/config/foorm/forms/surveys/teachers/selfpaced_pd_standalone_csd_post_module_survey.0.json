@@ -5,10 +5,12 @@
       "elements": [
         {
           "type": "radiogroup",
-          "name": "module",
+          "name": "module_name",
           "title": "[UNHIDE THIS FOR TESTING] Select Module",
-          "defaultValueExpression": "{1}",
-          "visible": "false",
+          "defaultValueExpression": "{module}",
+          "startWithNewLine": false,
+          "readOnly": true,
+          "visible": false,
           "choices": [
             {
               "value": "1",
@@ -16,11 +18,11 @@
             },
             {
               "value": "2",
-              "text": "Interactive Animations and Games"
+              "text": "Web Development"
             },
             {
               "value": "3",
-              "text": "Web Development "
+              "text": "Interactive Animations and Games"
             },
             {
               "value": "4",
@@ -35,17 +37,17 @@
         {
           "type": "html",
           "name": "question1",
-          "html": "<h1>Code.org Self-paced Online Professional Learning</h1><p><h3><strong>{module} - Post Module Survey</strong></h2><p><strong>Thanks for learning with us!</strong></p>\n\n<p>Code.org relies on surveys as a crucial tool through which we remain connected to teachers, and to give you the opportunity to provide feedback about our curriculum and your teaching experience, as well as to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul><li>Your individual responses here are completely confidential.</li>\n<li>Your identity will never be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share anonymous, aggregate data (representing all responses) publicly.</li>\n<li>Your anonymized responses will be used by Code.org and our Regional Partners for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p>"
+          "html": "<h1>Code.org Self-paced Online Professional Learning</h1><p><h3><strong>{module_name} - Post Module Survey</strong></h2><p><strong>Thanks for learning with us!</strong></p>\n\n<p>Code.org relies on surveys as a crucial tool through which we remain connected to teachers, and to give you the opportunity to provide feedback about our curriculum and your teaching experience, as well as to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul><li>Your individual responses here are completely confidential.</li>\n<li>Your identity will never be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share anonymous, aggregate data (representing all responses) publicly.</li>\n<li>Your anonymized responses will be used by Code.org and our Regional Partners for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p>"
         },
         {
           "type": "html",
           "name": "experience_section_intro",
-          "html": "<h2>{module} - Post Module Survey </h2>"
+          "html": "<h2>{module_name} - Post Module Survey </h2>"
         },
         {
           "type": "matrix",
           "name": "module_effectiveness",
-          "title": "Please rate your level of agreement with each of the following statements about your confidence in teaching Code.org's {module} unit after participating in this professional learning experience.",
+          "title": "Please rate your level of agreement with each of the following statements about your confidence in teaching Code.org's {module_name} unit after participating in this professional learning experience.",
           "columns": [
             {
               "value": "1",
@@ -71,22 +73,22 @@
           "rows": [
             {
               "value": "module_better_understanding",
-              "text": "After completing this module, I have a better understanding of the content relevant to teaching the {module} unit."
+              "text": "After completing this module, I have a better understanding of the content relevant to teaching the {module_name} unit."
             },
             {
               "value": "ability_to_teach",
-              "text": "After completing this professional learning experience, I am more confident in my ability to teach Code.org’s {module}."
+              "text": "After completing this professional learning experience, I am more confident in my ability to teach Code.org’s {module_name}."
             },
             {
               "value": "understand_student_content",
-              "text": "After completing this professional learning experience, I understand what my students will learn in the {module} unit."
+              "text": "After completing this professional learning experience, I understand what my students will learn in the {module_name} unit."
             }
           ]
         },
         {
           "type": "radiogroup",
           "name": "plan_to_teach",
-          "title": "Are you planning to teach Code.org's {module} unit?",
+          "title": "Are you planning to teach Code.org's {module_name} unit?",
           "choices": [
             {
               "value": "yes",
@@ -147,7 +149,7 @@
             },
             {
               "value": "making_a_plan",
-              "text": "Making a plan for teaching the {module} unit."
+              "text": "Making a plan for teaching the {module_name} unit."
             },
             {
               "value": "check_for_understanding",
@@ -184,10 +186,22 @@
         },
         {
           "type": "rating",
+          "name": "nps_self_paced_pd",
+          "title": "How likely are you to recommend this self-paced professional learning experience to a friend or colleague?",
+          "rateCount": 11,
+          "rateMin": 0,
+          "rateMax": 10,
+          "minRateDescription": "Not likely at all",
+          "maxRateDescription": "Extremely likely"
+        },
+        {
+          "type": "rating",
           "name": "how_likely_attend_inperson",
           "title": "After engaging in this self-paced professional learning module, how likely are you to attend a facilitator-led professional development workshop if one were offered in your region? ",
           "minRateDescription": "Not likely at all",
-          "maxRateDescription": "Very likely"
+          "maxRateDescription": "Extremely likely",
+          "visible": false,
+          "natalia_comment": "NOTE: removed by adding visible statement as this question is no longer relevant, we can track attendance to facilitator-led pd instead of asking about interest- 05/28/2024"
         },
         {
           "type": "comment",

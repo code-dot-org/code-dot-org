@@ -49,9 +49,7 @@ module Pd
       refute (build :pd_workshop_daily_survey, placeholder_params((@pd_summer_workshop)).merge({day: 6})).valid?
     end
 
-    private
-
-    def placeholder_params(workshop)
+    private def placeholder_params(workshop)
       @placeholder_params ||= {
         user_id: @user.id,
         pd_workshop_id: workshop.id,

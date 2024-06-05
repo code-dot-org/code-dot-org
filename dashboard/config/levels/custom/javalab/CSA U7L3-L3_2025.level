@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U7L3-L1 Overloaded PBT_2025",
     "teacher_markdown": "When there are two methods with the same name and parameters, students get the following error:\r\n\r\n```\r\n/MusicPlayer.java:14: error: method play(Song) is already defined in class MusicPlayer\r\n  public String play(Song song) {\r\n                ^\r\n```\r\n\r\nJava does not allow two methods with the same name to have the same parameter.",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-17T00:24:25.634+00:00\",\"changed\":[\"cloned from \\\"CSA U7L3-L3_2023\\\"\"],\"cloned_from\":\"CSA U7L3-L3_2023\"}]"

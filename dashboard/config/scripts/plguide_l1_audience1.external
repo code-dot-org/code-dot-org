@@ -15,7 +15,7 @@ markdown <<MARKDOWN
 
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.25em; font-weight: bold;">💡 International Audience Tips</summary>
+    <summary style="font-size: 1.25em; font-weight: bold;">💡 Tips for International Audiences</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
      
     	<ul>
@@ -27,15 +27,45 @@ markdown <<MARKDOWN
  </div>
 </details>
 
+___
+
 ##Our learners are overloaded 
 * #### Teaching requires a high volume of information processing full of multitasking and role juggling.
 * #### Teachers are busy with many demands and want PD to be as efficient as possible.
 
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.25em; font-weight: bold;">💡 Tips for Simplifying Content</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+     
+    	<ul>
+        <li>Streamline content in a level to be about one topic, image, or concept. Avoid overloading multiple topics on one page.</li>
+        <li>Avoid overloading learners with gifs or distracting visuals that don't align with the body text.</li>
+        <li>Explain complex topics in plain, clear, and direct language. Consider using the same examples that curriculum uses with students.</li>
+        <li>Avoid complex language. Pair complex topics with opportunities to practice or reflect on new knowledge.</li>
+        </ul>
+  
+ </div>
+</details>
+
+___
 
 ##Our learners are adults
 * #### Remember adult learners bring a wealth of experience to the learning environment and value being treated as a peer through the learning process.
 * #### In general, adults are more self-directed and intrinsically motivated than young learners. 
 * #### Teachers are motivated by clear connections between the learning material and immediate application to their classrooms.
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.25em; font-weight: bold;">💡 Tips for Adult Learners</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+     
+    	<ul>
+        <li>Use language appropriate for adults. Adults can feel insulted if the tone is too childlike.</li>
+        <li>Keep the lessons relevant and immediately applicable.</li>
+        <li>Foster active learning and engagement through interactive elements.</li>
+        </ul>
+  
+ </div>
+</details>
 
 <br>
 

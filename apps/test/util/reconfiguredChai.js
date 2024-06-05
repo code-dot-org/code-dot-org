@@ -1,9 +1,9 @@
 /** @file Import chai and configure it for our own test style. */
 import chai from 'chai';
-import chaiSubset from 'chai-subset';
-import sinonChai from 'sinon-chai';
 import chaiAsPromised from 'chai-as-promised';
+import chaiSubset from 'chai-subset';
 import chaiXml from 'chai-xml';
+import sinonChai from 'sinon-chai';
 
 chai.use(sinonChai);
 chai.use(chaiSubset);

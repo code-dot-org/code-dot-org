@@ -1,5 +1,5 @@
 :ruby
-  slide_item = [
+  block_item = [
     {
       title: hoc_s(:minecraft_cdo_activity_title_aquatic),
       image: "/images/mc/minecraft-activity-aquatic.png",
@@ -38,26 +38,25 @@
     },
   ]
 
-.carousel-wrapper#minecraft_cdo_activities
-  .carousel.blocks
-    .slides
-      - slide_item.each do |slide_item|
-        .slide
-          .slide-content
-            .action-block.action-block--one-col
-              .content-wrapper
-                %p.overline
-                  =hoc_s(:module_label_grades)
-                  =hoc_s(:module_grade_2_12)
-                %h3
-                  = slide_item[:title]
-                %img{src: "#{slide_item[:image]}", alt: ""}
-                %p.body-three.no-margin-bottom
-                  = slide_item[:desc]
-              .content-footer
-                %a.link-button{href: "#{slide_item[:url]}", "aria-label": "#{slide_item[:aria_label]}"}
-                  =hoc_s(:call_to_action_get_started)
-                %a.link-button.secondary{href: "#{slide_item[:url_lesson]}", "aria-label": "#{slide_item[:aria_label_lesson]}"}
-                  =hoc_s(:call_to_action_view_lesson_plan)
+.carousel-wrapper
+  %swiper-container.minecraft-activities{navigation: "true", "navigation-next-el": ".nav-next-minecraft-activities", "navigation-prev-el": ".nav-prev-minecraft-activities", pagination: "true", init: "false"}
+    - block_item.each do |block_item|
+      %swiper-slide
+        .action-block.action-block--one-col.flex-space-between
+          .content-wrapper
+            %p.overline
+              =hoc_s(:module_label_grades)
+              =hoc_s(:module_grade_2_12)
+            %h3
+              = block_item[:title]
+            %img{src: "#{block_item[:image]}", alt: "", style: "width: 100%"}
+            %p
+              = block_item[:desc]
+          .content-footer
+            %a.link-button{href: "#{block_item[:url]}", "aria-label": "#{block_item[:aria_label]}"}
+              =hoc_s(:call_to_action_get_started)
+            %a.link-button.secondary{href: "#{block_item[:url_lesson]}", "aria-label": "#{block_item[:aria_label_lesson]}"}
+              =hoc_s(:call_to_action_view_lesson_plan)
 
-  = view :carousel_pagination, carousel_id: "minecraft_cdo_activities-pagination", carousel_index: "1"
+  %button.swiper-nav-prev.nav-prev-minecraft-activities
+  %button.swiper-nav-next.nav-next-minecraft-activities

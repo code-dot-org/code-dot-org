@@ -1,9 +1,11 @@
-import React, {useCallback} from 'react';
 import classnames from 'classnames';
-import moduleStyles from '@cdo/apps/componentLibrary/segmentedButtons/segmentedButtons.module.scss';
+import React, {useCallback} from 'react';
+
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
 } from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+
+import moduleStyles from '@cdo/apps/componentLibrary/segmentedButtons/segmentedButtons.module.scss';
 
 export type SegmentButtonType = 'withLabel' | 'iconOnly' | 'number';
 

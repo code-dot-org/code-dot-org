@@ -5,7 +5,7 @@ import ShareDialog from './components/ShareDialog';
 import {Provider} from 'react-redux';
 import {getStore} from '../redux';
 import {showShareDialog} from './components/shareDialogRedux';
-import {AllPublishableProjectTypes} from '../util/sharedConstants';
+import {AllPublishableProjectTypes} from '@cdo/generated-scripts/sharedConstants';
 
 export function shareProject(shareUrl) {
   dashboard.project.saveIfSourcesChanged().then(() => {

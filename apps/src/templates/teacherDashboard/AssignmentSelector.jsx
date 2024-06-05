@@ -1,15 +1,17 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import _ from 'lodash';
-import i18n from '@cdo/locale';
-import {sectionShape, assignmentCourseOfferingShape} from './shapes';
-import AssignmentVersionSelector from './AssignmentVersionSelector';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import {
   CourseOfferingCategories,
   ParticipantAudiencesByType,
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import i18n from '@cdo/locale';
+
 import {translatedCourseOfferingCategories} from './AssignmentSelectorHelpers';
-import fontConstants from '@cdo/apps/fontConstants';
+import AssignmentVersionSelector from './AssignmentVersionSelector';
+import {sectionShape, assignmentCourseOfferingShape} from './shapes';
 
 const noAssignment = '__noAssignment__';
 //Additional valid option in dropdown - no associated course

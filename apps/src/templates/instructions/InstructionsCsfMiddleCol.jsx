@@ -1,17 +1,20 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
+
+import i18n from '@cdo/locale';
+
+import color from '../../util/color';
+import LegacyButton from '../LegacyButton';
+import SafeMarkdown from '../SafeMarkdown';
+
+import ChatBubble from './ChatBubble';
 import HintPrompt from './HintPrompt';
 import InlineFeedback from './InlineFeedback';
 import InlineHint from './InlineHint';
-import ChatBubble from './ChatBubble';
-import LegacyButton from '../LegacyButton';
-import i18n from '@cdo/locale';
-import SafeMarkdown from '../SafeMarkdown';
-import {scrollTo, shouldDisplayChatTips} from './utils';
-import color from '../../util/color';
 import Instructions from './Instructions';
+import {scrollTo, shouldDisplayChatTips} from './utils';
 
 var instructions = require('../../redux/instructions');
 const VERY_LIGHT_BLUE_COLOR = '#f0ffff';

@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U7L4-L1 Private PBT_2024",
     "teacher_markdown": "Students should conclude that the `recipesToString()` method should be `private` because it is only used inside the `RecipeBlog` class. With the design and structure of the program, there is no reason for another class to call this method.\r\n\r\nWhen students change this method to `private`, the functionality of the program is not impacted because it is only called inside the `RecipeBlog` class.",
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T21:06:41.551+00:00\",\"changed\":[\"cloned from \\\"CSA U7L4-L3_2023\\\"\"],\"cloned_from\":\"CSA U7L4-L3_2023\"}]"

@@ -1,6 +1,7 @@
 import React from 'react';
-import MatchByStudentTable from './MatchByStudentTable';
+
 import {matchDataForSingleStudent} from './assessmentsTestHelpers';
+import MatchByStudentTable from './MatchByStudentTable';
 
 export default {
   component: MatchByStudentTable,

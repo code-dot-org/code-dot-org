@@ -55,13 +55,11 @@ class Pd::WorkshopDashboardControllerTest < ActionController::TestCase
 
   test_user_gets_response_for :index, user: :teacher, response: :not_found
 
-  private
-
-  def prop(name)
+  private def prop(name)
     JSON.parse(assigns(:script_data).try(:[], :props)).try(:[], name)
   end
 
-  def permission_list
+  private def permission_list
     prop('permissionList')
   end
 end

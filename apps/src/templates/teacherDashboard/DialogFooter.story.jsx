@@ -1,6 +1,8 @@
 import React from 'react';
-import DialogFooter from './DialogFooter';
+
 import Button from '../Button';
+
+import DialogFooter from './DialogFooter';
 
 export default {
   name: 'DialogFooter',

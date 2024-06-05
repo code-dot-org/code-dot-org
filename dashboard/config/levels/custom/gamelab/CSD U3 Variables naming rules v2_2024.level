@@ -57,11 +57,11 @@
     "parent_level_id": 20666,
     "teacher_markdown": "If students use variable names that start with numbers, include spaces, or break other rules, the code may be forced into text mode the next time that they go to that level or refresh the page.  To get back into block mode, students will first need to fix the problem with the variable names.  Use the red error squares to see where the bugs most likely are, and once they are gone, click the \"block mode\" button at the top right of the workspace.",
     "reference_links": [
-      "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/drawing-shapes",
-      "/courses/csd-2022/guides/shapes-and-parameters"
+      "/courses/csd-2024/guides/variables",
+      "/courses/csd-2024/guides/drawing-shapes",
+      "/courses/csd-2024/guides/shapes-and-parameters"
     ],
-    "map_reference": "/courses/csd-2022/guides/naming-variables",
+    "map_reference": "/courses/csd-2024/guides/naming-variables",
     "video_key": "csd_gamelab_variables_1",
     "show_type_hints": "false",
     "name_suffix": "_2024",

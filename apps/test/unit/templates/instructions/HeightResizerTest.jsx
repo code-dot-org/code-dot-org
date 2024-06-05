@@ -1,8 +1,10 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
 import sinon from 'sinon';
-import {expect} from '../../../util/reconfiguredChai';
+
 import HeightResizer from '@cdo/apps/templates/instructions/HeightResizer';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('HeightResizer', () => {
   it('handles a drag event', () => {

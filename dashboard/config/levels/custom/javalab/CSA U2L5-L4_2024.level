@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U2L5-Super PBT_2024",
     "teacher_markdown": "The `super()` keyword can be used in a subclass constructor to pass the values to the superclass constructor. This allows the values to be assigned to the instance variables that are declared in the superclass since the subclass cannot directly access these.",
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T20:49:27.920+00:00\",\"changed\":[\"cloned from \\\"CSA U2L5-L4_2023\\\"\"],\"cloned_from\":\"CSA U2L5-L4_2023\"}]"

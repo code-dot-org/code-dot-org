@@ -1,5 +1,10 @@
 <Craft>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 49,
+  "created_at": "2023-09-27T06:33:36.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "skin": "craft",
     "ground_plane": "[\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\"]",
@@ -75,7 +80,7 @@
       "planksSpruce"
     ],
     "video_key": "mc_intro",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"craft_run_button_callout\",\r\n  \"callout_text\": \"Hit \\\"Run\\\" to try your program\",\r\n  \"element_id\": \"#runButton\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"craft_drag_block_callout\",\r\n  \"callout_text\": \"Drag a \\\"move forward\\\" block and snap it below the other block\",\r\n  \"element_id\": \"[block-id='1']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"no-tip\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom right\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"craft_run_button_callout\",\r\n  \"callout_text\": \"Hit \\\"Run\\\" to try your program\",\r\n  \"element_id\": \"#runButton\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"craft_drag_block_callout\",\r\n  \"callout_text\": \"Drag a \\\"move forward\\\" block and snap it below the other block\",\r\n  \"element_id\": \"[data-id='1']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"no-tip\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom right\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "embed": "false",
     "free_play": "false",
     "grid_width": "10",
@@ -103,13 +108,8 @@
     "boat": "false",
     "preload_asset_list": null
   },
-  "game_id": 49,
-  "published": true,
-  "created_at": "2022-01-06T19:47:41.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:47:41.624+00:00\",\"changed\":[\"cloned from \\\"Overworld Move to Sheep_2021\\\"\"],\"cloned_from\":\"Overworld Move to Sheep_2021\"},{\"changed_at\":\"2022-03-07 16:59:46 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"hint_prompt_attempts_threshold\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-06-22 17:17:39 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:47:41.624+00:00\",\"changed\":[\"cloned from \\\"Overworld Move to Sheep_2021\\\"\"],\"cloned_from\":\"Overworld Move to Sheep_2021\"},{\"changed_at\":\"2022-03-07 16:59:46 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"hint_prompt_attempts_threshold\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-06-22 17:17:39 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2024-03-28 15:45:33 -0700\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"}]",
   "level_concept_difficulty": {
     "sequencing": 2
   }
@@ -117,7 +117,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
+        <block type="when_run" deletable="false" movable="false" id="1">
           <next>
             <block type="craft_moveForward"/>
           </next>

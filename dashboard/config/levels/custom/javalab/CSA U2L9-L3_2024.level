@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U2L9-Mutators PBT_2024",
     "teacher_markdown": "The `nextInt()` method obtains an `int` value entered by the user.\r\n\r\nThe `nextDouble()` method obtains a `double` value entered by the user.\r\n\r\nThe `nextLine()` method obtains a `String` entered by the user.\r\n\r\nThe code segment prints `\"Enter a new price for your favorite shirt: \"` then allows the user to enter a value. The value entered by the user is assigned to the `newPrice` variable and used when calling the `setPrice()` method to update the value assigned to `price` for the `favShirt` object. The text `\"Shirt Price: \"` followed by the value entered by the user is then printed to the console.",
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T20:49:49.358+00:00\",\"changed\":[\"cloned from \\\"CSA U2L9-L3_2023\\\"\"],\"cloned_from\":\"CSA U2L9-L3_2023\"}]"

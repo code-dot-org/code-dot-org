@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import color from '../../util/color';
+
 import fontConstants from '@cdo/apps/fontConstants';
+
+import color from '../../util/color';
 
 class LoginTypeCard extends Component {
   static propTypes = {

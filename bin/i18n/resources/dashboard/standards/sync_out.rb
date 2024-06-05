@@ -20,13 +20,11 @@ module I18n
             I18nScriptUtils.rename_dir(crowdin_locale_dir, i18n_locale_dir)
           end
 
-          private
-
-          def crowdin_locale_dir_of(language)
-            I18nScriptUtils.locale_dir(language[:crowdin_name_s], DIR_NAME)
+          private def crowdin_locale_dir_of(language)
+            I18nScriptUtils.crowdin_locale_dir(language[:locale_s], DIR_NAME)
           end
 
-          def resource_i18n_data(resource_i18n_file_path)
+          private def resource_i18n_data(resource_i18n_file_path)
             return {} unless File.exist?(resource_i18n_file_path)
 
             i18n_data = JSON.load_file(resource_i18n_file_path)
@@ -35,7 +33,7 @@ module I18n
             i18n_data.values.first['data'].values.first || {}
           end
 
-          def distribute_localizations(language)
+          private def distribute_localizations(language)
             frameworks_i18n_file_path = File.join(ORIGIN_I18N_DIR_PATH, "frameworks.#{language[:locale_s]}.json")
             categories_i18n_file_path = File.join(ORIGIN_I18N_DIR_PATH, "standard_categories.#{language[:locale_s]}.json")
             standards_i18n_file_path = File.join(ORIGIN_I18N_DIR_PATH, "standards.#{language[:locale_s]}.json")

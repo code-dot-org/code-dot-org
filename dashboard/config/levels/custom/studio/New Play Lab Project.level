@@ -1,5 +1,9 @@
 <Studio>
   <config><![CDATA[{
+  "game_id": 33,
+  "created_at": "2015-02-10T19:51:02.000Z",
+  "level_num": "custom",
+  "user_id": 16,
   "properties": {
     "skin": "studio",
     "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
@@ -48,20 +52,13 @@
     "disable_if_else_editing": "false",
     "remove_items_when_actor_collides": "false",
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
     "default_num_example_blocks": "false",
     "show_type_hints": "false",
     "preload_asset_list": null
   },
-  "game_id": 33,
   "published": true,
-  "created_at": "2015-02-10T19:51:02.000Z",
-  "level_num": "custom",
-  "user_id": 16,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-16 19:36:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"projectile_collisions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-11-02 20:46:25 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2021-04-29 20:24:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-04-29 20:24:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"background\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-04-29 20:25:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"background\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-04-29 20:25:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"background\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-04-29 20:25:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"background\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-10-16 19:36:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"projectile_collisions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-11-02 20:46:25 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2021-04-29 20:24:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-04-29 20:24:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"background\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-04-29 20:25:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"background\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-04-29 20:25:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"background\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-04-29 20:25:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"background\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2024-04-13 23:09:00 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -150,377 +147,377 @@
     <toolbox_blocks>
       <xml>
         <category name="Actions">
-          <block type="studio_setSpriteParams" inline="true">
-            <title name="VALUE">"witch"</title>
+          <block type="studio_setSpriteParams">
+            <field name="VALUE">"witch"</field>
             <value name="SPRITE">
               <block type="math_number">
-                <title name="NUM">1</title>
+                <field name="NUM">1</field>
               </block>
             </value>
           </block>
           <block type="studio_setBackground">
-            <title name="VALUE">"cave"</title>
+            <field name="VALUE">"cave"</field>
           </block>
-          <block type="studio_moveDistanceParamsSprite" inline="true">
-            <title name="DIR">1</title>
+          <block type="studio_moveDistanceParamsSprite">
+            <field name="DIR">1</field>
             <value name="SPRITE">
               <block type="math_number">
-                <title name="NUM">1</title>
+                <field name="NUM">1</field>
               </block>
             </value>
             <value name="DISTANCE">
               <block type="math_number">
-                <title name="NUM">???</title>
+                <field name="NUM">???</field>
               </block>
             </value>
           </block>
-          <block type="studio_stopSprite" inline="true">
+          <block type="studio_stopSprite">
             <value name="SPRITE">
               <block type="math_number">
-                <title name="NUM">1</title>
+                <field name="NUM">1</field>
               </block>
             </value>
           </block>
-          <block type="studio_waitParams" inline="true">
+          <block type="studio_waitParams">
             <value name="VALUE">
               <block type="math_number">
-                <title name="NUM">1</title>
+                <field name="NUM">1</field>
               </block>
             </value>
           </block>
-          <block type="studio_setSpriteSpeedParams" inline="true">
+          <block type="studio_setSpriteSpeedParams">
             <value name="SPRITE">
               <block type="math_number">
-                <title name="NUM">1</title>
-              </block>
-            </value>
-            <value name="VALUE">
-              <block type="math_number">
-                <title name="NUM">5</title>
-              </block>
-            </value>
-          </block>
-          <block type="studio_setSpriteSizeParams" inline="true">
-            <value name="SPRITE">
-              <block type="math_number">
-                <title name="NUM">1</title>
+                <field name="NUM">1</field>
               </block>
             </value>
             <value name="VALUE">
               <block type="math_number">
-                <title name="NUM">1</title>
+                <field name="NUM">5</field>
+              </block>
+            </value>
+          </block>
+          <block type="studio_setSpriteSizeParams">
+            <value name="SPRITE">
+              <block type="math_number">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+            <value name="VALUE">
+              <block type="math_number">
+                <field name="NUM">1</field>
               </block>
             </value>
           </block>
           <block type="studio_playSound">
-            <title name="SOUND">hit</title>
+            <field name="SOUND">hit</field>
           </block>
           <block type="studio_makeProjectile">
-            <title name="VALUE">"basketball"</title>
-            <title name="ACTION">"bounce"</title>
+            <field name="VALUE">"basketball"</field>
+            <field name="ACTION">"bounce"</field>
           </block>
           <block type="studio_throw">
-            <title name="SPRITE">0</title>
-            <title name="VALUE">"basketball"</title>
-            <title name="DIR">1</title>
+            <field name="SPRITE">0</field>
+            <field name="VALUE">"basketball"</field>
+            <field name="DIR">1</field>
           </block>
-          <block type="studio_saySpriteParamsTime" inline="true">
+          <block type="studio_saySpriteParamsTime">
             <value name="SPRITE">
               <block type="math_number">
-                <title name="NUM">1</title>
+                <field name="NUM">1</field>
               </block>
             </value>
             <value name="TEXT">
               <block type="text">
-                <title name="TEXT"/>
+                <field name="TEXT"/>
               </block>
             </value>
             <value name="TIME">
               <block type="math_number">
-                <title name="NUM">1</title>
+                <field name="NUM">1</field>
               </block>
             </value>
           </block>
           <block type="studio_ask">
-            <title name="TEXT"/>
-            <title name="VAR">answer</title>
+            <field name="TEXT"/>
+            <field name="VAR">answer</field>
           </block>
-          <block type="studio_showTitleScreenParams" inline="false">
+          <block type="studio_showTitleScreenParams">
             <value name="TITLE">
               <block type="text">
-                <title name="TEXT"/>
+                <field name="TEXT"/>
               </block>
             </value>
             <value name="TEXT">
               <block type="text">
-                <title name="TEXT"/>
+                <field name="TEXT"/>
               </block>
             </value>
           </block>
           <block type="studio_showTitleScreen">
-            <title name="TITLE">type title here</title>
-            <title name="TEXT">type text here</title>
+            <field name="TITLE">type title here</field>
+            <field name="TEXT">type text here</field>
           </block>
-          <block type="text_join_simple" inline="false" inputcount="2"/>
-          <block type="studio_setSpriteEmotionParams" inline="true">
-            <title name="VALUE">0</title>
+          <block type="text_join_simple" inputcount="2"/>
+          <block type="studio_setSpriteEmotionParams">
+            <field name="VALUE">0</field>
             <value name="SPRITE">
               <block type="math_number">
-                <title name="NUM">1</title>
+                <field name="NUM">1</field>
               </block>
             </value>
           </block>
-          <block type="studio_vanishSprite" inline="true">
+          <block type="studio_vanishSprite">
             <value name="SPRITE">
               <block type="math_number">
-                <title name="NUM">1</title>
+                <field name="NUM">1</field>
               </block>
             </value>
           </block>
           <block type="studio_setSpritesWander">
-            <title name="VALUE">"witch"</title>
+            <field name="VALUE">"witch"</field>
           </block>
           <block type="studio_setSpritesStop">
-            <title name="VALUE">"witch"</title>
+            <field name="VALUE">"witch"</field>
           </block>
-          <block type="studio_setSpritesChase" inline="true">
-            <title name="VALUE">"witch"</title>
+          <block type="studio_setSpritesChase">
+            <field name="VALUE">"witch"</field>
             <value name="SPRITE">
               <block type="math_number">
-                <title name="NUM">1</title>
+                <field name="NUM">1</field>
               </block>
             </value>
           </block>
-          <block type="studio_setSpritesFlee" inline="true">
-            <title name="VALUE">"witch"</title>
+          <block type="studio_setSpritesFlee">
+            <field name="VALUE">"witch"</field>
             <value name="SPRITE">
               <block type="math_number">
-                <title name="NUM">1</title>
+                <field name="NUM">1</field>
               </block>
             </value>
           </block>
-          <block type="studio_setSpritesSpeed" inline="true">
-            <title name="VALUE">"witch"</title>
+          <block type="studio_setSpritesSpeed">
+            <field name="VALUE">"witch"</field>
             <value name="SPEED">
               <block type="math_number">
-                <title name="NUM">5</title>
+                <field name="NUM">5</field>
               </block>
             </value>
           </block>
-          <block type="studio_setSpriteBehavior" inline="true">
-            <title name="VALUE">"chase"</title>
+          <block type="studio_setSpriteBehavior">
+            <field name="VALUE">"chase"</field>
             <value name="SPRITE">
               <block type="math_number">
-                <title name="NUM">1</title>
+                <field name="NUM">1</field>
               </block>
             </value>
             <value name="TARGETSPRITE">
               <block type="math_number">
-                <title name="NUM">2</title>
+                <field name="NUM">2</field>
               </block>
             </value>
           </block>
-          <block type="studio_setSpriteXY" inline="true">
+          <block type="studio_setSpriteXY">
             <value name="SPRITE">
               <block type="math_number">
-                <title name="NUM">1</title>
+                <field name="NUM">1</field>
               </block>
             </value>
             <value name="XPOS">
               <block type="math_number">
-                <title name="NUM">200</title>
+                <field name="NUM">200</field>
               </block>
             </value>
             <value name="YPOS">
               <block type="math_number">
-                <title name="NUM">200</title>
+                <field name="NUM">200</field>
               </block>
             </value>
           </block>
           <block type="studio_setMap">
-            <title name="VALUE">random</title>
+            <field name="VALUE">random</field>
           </block>
-          <block type="studio_setMapAndColor" inline="true">
-            <title name="VALUE">random</title>
+          <block type="studio_setMapAndColor">
+            <field name="VALUE">random</field>
             <value name="COLOR">
               <block type="colour_picker">
-                <title name="COLOUR">#ff0000</title>
+                <field name="COLOUR">#ff0000</field>
               </block>
             </value>
           </block>
           <block type="comment">
-            <title name="TEXT"/>
+            <field name="TEXT"/>
           </block>
         </category>
         <category name="Events">
           <block type="studio_whenSpriteCollided">
-            <title name="SPRITE1">0</title>
-            <title name="SPRITE2">1</title>
+            <field name="SPRITE1">0</field>
+            <field name="SPRITE2">1</field>
           </block>
           <block type="studio_whenArrow">
-            <title name="VALUE">up</title>
+            <field name="VALUE">up</field>
           </block>
           <block type="studio_whenSpriteClicked">
-            <title name="SPRITE">0</title>
+            <field name="SPRITE">0</field>
           </block>
-          <block type="studio_whenSpriteAndGroupCollide" inline="false">
-            <title name="SPRITE">0</title>
-            <title name="SPRITENAME">"witch"</title>
+          <block type="studio_whenSpriteAndGroupCollide">
+            <field name="SPRITE">0</field>
+            <field name="SPRITENAME">"witch"</field>
             <value name="GROUPMEMBER">
               <block type="variables_get">
-                <title name="VAR">actor</title>
+                <field name="VAR">actor</field>
               </block>
             </value>
           </block>
         </category>
         <category name="Loops">
           <block type="studio_repeatForever"/>
-          <block type="controls_repeat_ext" inline="true">
+          <block type="controls_repeat_ext">
             <value name="TIMES">
               <block type="math_number">
-                <title name="NUM">???</title>
+                <field name="NUM">???</field>
               </block>
             </value>
           </block>
-          <block type="controls_for" inline="true">
-            <title name="VAR">counter</title>
+          <block type="controls_for">
+            <field name="VAR">counter</field>
             <value name="FROM">
               <block type="math_number">
-                <title name="NUM">???</title>
+                <field name="NUM">???</field>
               </block>
             </value>
             <value name="TO">
               <block type="math_number">
-                <title name="NUM">???</title>
+                <field name="NUM">???</field>
               </block>
             </value>
             <value name="BY">
               <block type="math_number">
-                <title name="NUM">???</title>
+                <field name="NUM">???</field>
               </block>
             </value>
           </block>
           <block type="variables_get">
-            <title name="VAR">counter</title>
+            <field name="VAR">counter</field>
           </block>
         </category>
         <category name="Math">
           <block type="math_number">
-            <title name="NUM">1</title>
+            <field name="NUM">1</field>
           </block>
-          <block type="math_arithmetic" inline="true">
-            <title name="OP">ADD</title>
+          <block type="math_arithmetic">
+            <field name="OP">ADD</field>
             <value name="A">
               <block type="math_number">
-                <title name="NUM">???</title>
+                <field name="NUM">???</field>
               </block>
             </value>
             <value name="B">
               <block type="math_number">
-                <title name="NUM">???</title>
+                <field name="NUM">???</field>
               </block>
             </value>
           </block>
-          <block type="math_random_int" inline="true">
+          <block type="math_random_int">
             <value name="FROM">
               <block type="math_number">
-                <title name="NUM">1</title>
+                <field name="NUM">1</field>
               </block>
             </value>
             <value name="TO">
               <block type="math_number">
-                <title name="NUM">100</title>
+                <field name="NUM">100</field>
               </block>
             </value>
           </block>
         </category>
         <category name="Logic">
-          <block type="controls_if" inline="false"/>
-          <block type="logic_compare" inline="true">
-            <title name="OP">EQ</title>
+          <block type="controls_if"/>
+          <block type="logic_compare">
+            <field name="OP">EQ</field>
           </block>
-          <block type="logic_operation" inline="true">
-            <title name="OP">AND</title>
+          <block type="logic_operation">
+            <field name="OP">AND</field>
           </block>
-          <block type="logic_negate" inline="false"/>
+          <block type="logic_negate"/>
           <block type="logic_boolean">
-            <title name="BOOL">TRUE</title>
+            <field name="BOOL">TRUE</field>
           </block>
-          <block type="studio_ifActorHasEmotionParams" inline="true">
-            <title name="EMOTION">1</title>
+          <block type="studio_ifActorHasEmotionParams">
+            <field name="EMOTION">1</field>
             <value name="SPRITE">
               <block type="math_number">
-                <title name="NUM">1</title>
+                <field name="NUM">1</field>
               </block>
             </value>
           </block>
-          <block type="studio_ifActorPositionParams" inline="true">
-            <title name="POSITION">x</title>
-            <title name="OPERATOR">EQ</title>
+          <block type="studio_ifActorPositionParams">
+            <field name="POSITION">x</field>
+            <field name="OPERATOR">EQ</field>
             <value name="SPRITE">
               <block type="math_number">
-                <title name="NUM">1</title>
+                <field name="NUM">1</field>
               </block>
             </value>
           </block>
-          <block type="studio_ifActorIsVisibleParams" inline="true">
-            <title name="VISIBILITY">false</title>
+          <block type="studio_ifActorIsVisibleParams">
+            <field name="VISIBILITY">false</field>
             <value name="SPRITE">
               <block type="math_number">
-                <title name="NUM">1</title>
+                <field name="NUM">1</field>
               </block>
             </value>
           </block>
-          <block type="studio_ifActorIsSpriteParams" inline="true">
-            <title name="VALUE">"witch"</title>
+          <block type="studio_ifActorIsSpriteParams">
+            <field name="VALUE">"witch"</field>
             <value name="SPRITE">
               <block type="math_number">
-                <title name="NUM">1</title>
+                <field name="NUM">1</field>
               </block>
             </value>
           </block>
-          <block type="studio_ifActorHasEmotionElseParams" inline="true">
-            <title name="EMOTION">1</title>
+          <block type="studio_ifActorHasEmotionElseParams">
+            <field name="EMOTION">1</field>
             <value name="SPRITE">
               <block type="math_number">
-                <title name="NUM">1</title>
+                <field name="NUM">1</field>
               </block>
             </value>
           </block>
-          <block type="studio_ifActorPositionElseParams" inline="true">
-            <title name="POSITION">x</title>
-            <title name="OPERATOR">EQ</title>
+          <block type="studio_ifActorPositionElseParams">
+            <field name="POSITION">x</field>
+            <field name="OPERATOR">EQ</field>
             <value name="SPRITE">
               <block type="math_number">
-                <title name="NUM">1</title>
+                <field name="NUM">1</field>
               </block>
             </value>
           </block>
-          <block type="studio_ifActorIsVisibleElseParams" inline="true">
-            <title name="VISIBILITY">false</title>
+          <block type="studio_ifActorIsVisibleElseParams">
+            <field name="VISIBILITY">false</field>
             <value name="SPRITE">
               <block type="math_number">
-                <title name="NUM">1</title>
+                <field name="NUM">1</field>
               </block>
             </value>
           </block>
-          <block type="studio_ifActorIsSpriteElseParams" inline="true">
-            <title name="VALUE">"witch"</title>
+          <block type="studio_ifActorIsSpriteElseParams">
+            <field name="VALUE">"witch"</field>
             <value name="SPRITE">
               <block type="math_number">
-                <title name="NUM">1</title>
+                <field name="NUM">1</field>
               </block>
             </value>
           </block>
         </category>
         <category name="Functions" custom="PROCEDURE">
-          <block type="procedures_callnoreturn" inline="false">
+          <block type="procedures_callnoreturn">
             <mutation name="jump">
               <arg name="height"/>
               <arg name="actor"/>
             </mutation>
           </block>
-          <block type="procedures_callnoreturn" inline="false">
+          <block type="procedures_callnoreturn">
             <mutation name="patrol">
               <arg name="actor"/>
               <arg name="speed"/>
@@ -529,67 +526,72 @@
         </category>
         <category name="Variables" custom="VARIABLE"/>
         <category name="Games/Score">
-          <block type="studio_showTitleScreenParams" inline="false">
+          <block type="studio_showTitleScreenParams">
             <value name="TITLE">
               <block type="text">
-                <title name="TEXT"/>
+                <field name="TEXT"/>
               </block>
             </value>
             <value name="TEXT">
               <block type="text">
-                <title name="TEXT"/>
+                <field name="TEXT"/>
               </block>
             </value>
           </block>
           <block type="studio_changeScore">
-            <title name="VALUE">1</title>
+            <field name="VALUE">1</field>
           </block>
-          <block type="studio_setScoreText" inline="true">
+          <block type="studio_setScoreText">
             <value name="TEXT">
               <block type="text">
-                <title name="TEXT"/>
+                <field name="TEXT"/>
               </block>
             </value>
           </block>
-          <block type="studio_setScoreText" inline="true">
+          <block type="studio_setScoreText">
             <value name="TEXT">
               <block type="math_number">
-                <title name="NUM">0</title>
+                <field name="NUM">0</field>
               </block>
             </value>
           </block>
-          <block type="studio_addNumPoints" inline="true">
+          <block type="studio_addNumPoints">
             <value name="NUM">
               <block type="math_number">
-                <title name="NUM">1</title>
+                <field name="NUM">1</field>
               </block>
             </value>
           </block>
-          <block type="studio_removeNumPoints" inline="true">
+          <block type="studio_removeNumPoints">
             <value name="NUM">
               <block type="math_number">
-                <title name="NUM">1</title>
+                <field name="NUM">1</field>
               </block>
             </value>
           </block>
           <block type="studio_endGame">
-            <title name="VALUE">win</title>
+            <field name="VALUE">win</field>
           </block>
           <block type="studio_getScore"/>
-          <block type="controls_if" inline="false">
+          <block type="controls_if">
             <value name="IF0">
-              <block type="logic_compare" inline="true" movable="false">
-                <title name="OP">EQ</title>
+              <block type="logic_compare" movable="false">
+                <field name="OP">EQ</field>
                 <value name="A">
                   <block type="studio_getScore" movable="false"/>
                 </value>
                 <value name="B">
                   <block type="math_number" movable="false">
-                    <title name="NUM">5</title>
+                    <field name="NUM">5</field>
                   </block>
                 </value>
               </block>
             </value>
+          </block>
+        </category>
+        <category name="Comments">
+          <block type="comment">
+            <field name="TEXT"/>
           </block>
         </category>
       </xml>

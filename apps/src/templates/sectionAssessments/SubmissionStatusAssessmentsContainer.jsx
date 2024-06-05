@@ -1,17 +1,21 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import SubmissionStatusAssessmentsTable from './SubmissionStatusAssessmentsTable';
+import {CSVLink} from 'react-csv';
+import {connect} from 'react-redux';
+
+import i18n from '@cdo/locale';
+
+import Button from '../Button';
+
 import {studentOverviewDataPropType} from './assessmentDataShapes';
 import {
   getStudentsMCandMatchSummaryForCurrentAssessment,
   getExportableSubmissionStatusData,
 } from './sectionAssessmentsRedux';
-import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
-import {CSVLink} from 'react-csv';
+import SubmissionStatusAssessmentsTable from './SubmissionStatusAssessmentsTable';
+
 import moduleStyles from '@cdo/apps/templates/button.module.scss';
-import classNames from 'classnames';
-import Button from '../Button';
 
 export const studentExportableDataPropType = PropTypes.shape({
   studentName: PropTypes.string.isRequired,

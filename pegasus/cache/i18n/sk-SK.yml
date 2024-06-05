@@ -192,6 +192,7 @@ sk-SK:
   class_submission_out_of_school_summer_camp: Letný tábor
   classicmaze_name: Klasické bludisko
   code_hoc_coming: Hodina kódu je tu - 8.-14. december!
+  code_org_logo_alt: Code.org Domov
   code_sign_up: Prihláste sa k účasti počas "CS Education Week"
   codea_beyond_gradelevel: Stredná škola +
   codea_beyond_shortdescription: Vytvor aplikáciu na iPade
@@ -992,6 +993,7 @@ sk-SK:
   header_about_us: O nás
   header_course_catalog: Katalóg kurzov
   header_courses: Kurzy
+  header_districts: Kraje
   header_documentation: Dokumentácia
   header_educate_beyond: Nad rámec Code.org
   header_educate_community: Online komunita
@@ -1018,6 +1020,7 @@ sk-SK:
   header_project_gallery: Projekty
   header_report_abuse: Nahlásiť zneužitie
   header_report_bug: Nahlásiť chybu
+  header_schools: Škola
   header_screen_reader_hamburger: Menu
   header_screen_reader_help: Pomocné menu
   header_sections: Triedy
@@ -1379,6 +1382,7 @@ sk-SK:
   homepage_slot_text_link_k5: Kurzy pre prvý stupeň
   homepage_slot_text_link_local: Nájdi triedu v tvojej lokalite
   homepage_slot_text_link_middle: 2. stupeň ZŠ
+  homepage_slot_text_link_middle_and_high: 2. stupeň ZŠ a SŠ
   homepage_slot_text_link_othercourses: Iné online kurzy
   homepage_slot_text_link_pd: Profesionálny rozvoj
   homepage_slot_text_link_shop: Tričká, čiapky a ďalšie
@@ -2185,13 +2189,16 @@ sk-SK:
   user_header_applab: 'App Lab '
   user_header_artist: 'Umelec '
   user_header_create: 'Vytvoriť '
+  user_header_create_account: Vytvoriť účet
   user_header_dance: Tanečná Párty
   user_header_flappy: Flappy
   user_header_gamelab: Game Lab
   user_header_label: Ahoj %{username}
   user_header_logout: Odhlásiť sa
   user_header_minecraft: Minecraft
+  user_header_music: Music Lab
   user_header_my_projects: Moje projekty
+  user_header_new_project: Nový projekt
   user_header_playlab: Play Lab
   user_header_settings: Nastavenia účtu
   user_header_signin: Prihlásiť sa

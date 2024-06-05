@@ -90,13 +90,6 @@ const ATTENDED_CSF_COURSES_OPTIONS = {
   'Nope, I have never attended a CS Fundamentals workshop.': 'No',
 };
 
-const REPLACE_EXISTING_OPTIONS = [
-  'Yes, this course will replace an existing computer science course',
-  'No, this course will be added to the schedule in addition to an existing computer science course',
-  'No, this will be the only computer science course on the master schedule',
-  'I don’t know',
-];
-
 export default class EnrollForm extends React.Component {
   static propTypes = {
     user_id: PropTypes.number.isRequired,
@@ -271,7 +264,6 @@ export default class EnrollForm extends React.Component {
       attended_csf_intro_workshop:
         ATTENDED_CSF_COURSES_OPTIONS[this.state.attended_csf_intro_workshop],
       previous_courses: this.state.previous_courses,
-      replace_existing: this.state.replace_existing,
       csf_intro_intent: this.state.csf_intro_intent,
       csf_intro_other_factors: this.state.csf_intro_other_factors,
       years_teaching: this.state.years_teaching,
@@ -661,27 +653,6 @@ export default class EnrollForm extends React.Component {
               errorText={this.state.errors.previous_courses}
               type="check"
               columnCount={2}
-            />
-
-            <ButtonList
-              id="replace_existing"
-              key="replace_existing"
-              answers={REPLACE_EXISTING_OPTIONS}
-              groupName="replace_existing"
-              label="Will this course replace an existing computer science course in the master schedule?"
-              onChange={this.handleChange}
-              selectedItems={this.state.replace_existing}
-              validationState={
-                Object.prototype.hasOwnProperty.call(
-                  this.state.errors,
-                  'replace_existing'
-                )
-                  ? VALIDATION_STATE_ERROR
-                  : null
-              }
-              errorText={this.state.errors.replace_existing}
-              type="radio"
-              columnCount={1}
             />
           </div>
         )}

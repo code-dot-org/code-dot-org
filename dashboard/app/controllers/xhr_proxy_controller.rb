@@ -61,6 +61,7 @@ class XhrProxyController < ApplicationController
     api.scripture.api.bible
     api.scryfall.com
     api.spoonacular.com
+    api.sportsdata.io
     api.si.edu
     api.spacexdata.com
     api.spotify.com
@@ -102,6 +103,7 @@ class XhrProxyController < ApplicationController
     noaa.gov
     numbersapi.com
     open.mapquestapi.com
+    openlibrary.org
     opentdb.com
     perenual.com
     pixabay.com

@@ -4,9 +4,8 @@
  * Copyright 2014 Code.org
  *
  */
-import {singleton as studioApp} from '../StudioApp';
-
 import {BEHAVIOR_STOP} from '../constants';
+import {singleton as studioApp} from '../StudioApp';
 
 export default class Collidable {
   /**

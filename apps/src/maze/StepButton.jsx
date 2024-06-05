@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
 var msg = require('./locale');
 
 var StepButton = function (props) {

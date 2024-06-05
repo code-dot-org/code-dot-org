@@ -1,35 +1,47 @@
+import orderBy from 'lodash/orderBy';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import ReactTooltip from 'react-tooltip';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
-import wrappedSortable from '../tables/wrapped_sortable';
-import orderBy from 'lodash/orderBy';
-import PasswordReset from './PasswordReset';
-import ShowSecret from './ShowSecret';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
-import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
-import experiments from '@cdo/apps/util/experiments';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
-import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
-import ManageStudentsNameCell from './ManageStudentsNameCell';
-import ManageStudentsFamilyNameCell from './ManageStudentsFamilyNameCell';
-import ManageStudentsAgeCell from './ManageStudentsAgeCell';
-import ManageStudentsGenderCell from './ManageStudentsGenderCell';
-import ManageStudentsGenderCellLegacy from './ManageStudentsGenderCellLegacy';
-import ManageStudentsSharingCell from './ManageStudentsSharingCell';
-import ManageStudentsActionsCell from './ManageStudentsActionsCell';
-import ManageStudentsActionsHeaderCell from './ManageStudentsActionsHeaderCell';
-import SharingControlActionsHeaderCell from './SharingControlActionsHeaderCell';
-import ManageStudentsLoginInfo from './ManageStudentsLoginInfo';
-import NoSectionCodeDialog from './NoSectionCodeDialog';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+import CodeReviewGroupsDataApi from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsDataApi';
+import {setSortByFamilyName} from '@cdo/apps/templates/currentUserRedux';
 import {
   sectionCode,
   sectionName,
   selectedSection,
   sectionUnitName,
+  syncEnabled,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import color from '@cdo/apps/util/color';
+import copyToClipboard from '@cdo/apps/util/copyToClipboard';
+import experiments from '@cdo/apps/util/experiments';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
+
+import Button from '../Button';
+import Notification, {NotificationType} from '../Notification';
+import SafeMarkdown from '../SafeMarkdown';
+import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
+import wrappedSortable from '../tables/wrapped_sortable';
+
+import AddMultipleStudents from './AddMultipleStudents';
+import CodeReviewGroupsDialog from './CodeReviewGroupsDialog';
+import DownloadParentLetter from './DownloadParentLetter';
+import ManageStudentsActionsCell from './ManageStudentsActionsCell';
+import ManageStudentsActionsHeaderCell from './ManageStudentsActionsHeaderCell';
+import ManageStudentsAgeCell from './ManageStudentsAgeCell';
+import ManageStudentsFamilyNameCell from './ManageStudentsFamilyNameCell';
+import ManageStudentsGenderCell from './ManageStudentsGenderCell';
+import ManageStudentsGenderCellLegacy from './ManageStudentsGenderCellLegacy';
+import ManageStudentsLoginInfo from './ManageStudentsLoginInfo';
+import ManageStudentsNameCell from './ManageStudentsNameCell';
 import {
   convertStudentDataToArray,
   AddStatus,
@@ -41,21 +53,13 @@ import {
   ParentLetterButtonMetricsCategory,
   PrintLoginCardsButtonMetricsCategory,
 } from './manageStudentsRedux';
-import {connect} from 'react-redux';
-import Notification, {NotificationType} from '../Notification';
-import AddMultipleStudents from './AddMultipleStudents';
+import ManageStudentsSharingCell from './ManageStudentsSharingCell';
 import MoveStudents from './MoveStudents';
-import DownloadParentLetter from './DownloadParentLetter';
+import NoSectionCodeDialog from './NoSectionCodeDialog';
+import PasswordReset from './PasswordReset';
 import PrintLoginCards from './PrintLoginCards';
-import CodeReviewGroupsDialog from './CodeReviewGroupsDialog';
-import CodeReviewGroupsDataApi from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsDataApi';
-import Button from '../Button';
-import copyToClipboard from '@cdo/apps/util/copyToClipboard';
-import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import SafeMarkdown from '../SafeMarkdown';
-import {setSortByFamilyName} from '@cdo/apps/templates/currentUserRedux';
-import fontConstants from '@cdo/apps/fontConstants';
+import SharingControlActionsHeaderCell from './SharingControlActionsHeaderCell';
+import ShowSecret from './ShowSecret';
 
 const LOGIN_TYPES_WITH_PASSWORD_COLUMN = [
   SectionLoginType.word,
@@ -126,6 +130,7 @@ class ManageStudentsTable extends Component {
     transferData: PropTypes.object,
     transferStatus: PropTypes.object,
     setSortByFamilyName: PropTypes.func,
+    syncEnabled: PropTypes.bool,
   };
 
   constructor(props) {
@@ -204,6 +209,14 @@ class ManageStudentsTable extends Component {
   // Helper function to determine if user is a teacher
   isTeacher(userType) {
     return userType === 'teacher';
+  }
+
+  shouldShowActionColumn() {
+    const {loginType} = this.props;
+    return (
+      LOGIN_TYPES_WITH_ACTIONS_COLUMN.includes(loginType) ||
+      (loginType === SectionLoginType.lti_v1 && !this.props.syncEnabled)
+    );
   }
 
   // Cell formatters.
@@ -509,7 +522,7 @@ class ManageStudentsTable extends Component {
       columns.push(this.projectSharingColumn());
     }
 
-    if (LOGIN_TYPES_WITH_ACTIONS_COLUMN.includes(loginType)) {
+    if (this.shouldShowActionColumn()) {
       columns.push(this.controlsColumn());
     }
 
@@ -1098,6 +1111,7 @@ export default connect(
     addStatus: state.manageStudents.addStatus,
     transferData: state.manageStudents.transferData,
     transferStatus: state.manageStudents.transferStatus,
+    syncEnabled: syncEnabled(state, state.teacherSections.selectedSectionId),
   }),
   dispatch => ({
     saveAllStudents() {

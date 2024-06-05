@@ -1,10 +1,11 @@
-import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import color from '@cdo/apps/util/color';
-import i18n from '@cdo/locale';
+import React, {Component} from 'react';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import RubricField from '@cdo/apps/templates/instructions/teacherFeedback/RubricField';
 import {rubricShape} from '@cdo/apps/templates/instructions/teacherFeedback/types';
-import fontConstants from '@cdo/apps/fontConstants';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
 
 const rubricLevels = [
   'performanceLevel1',

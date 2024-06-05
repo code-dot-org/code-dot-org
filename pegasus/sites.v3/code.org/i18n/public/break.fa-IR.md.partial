@@ -14,7 +14,7 @@ social:
   og:video:type: ''
 ---
 
-<div style="background-color: #00adbc; padding: 15px; margin-top:50px;"><img src="/images/athome/CodeBreak-horizontal.png" style="max-width: 100%"/></div>
+<div style="background-color: var(--brand_primary_default); padding: 15px; margin-top:50px;"><img src="/images/athome/CodeBreak-horizontal.png" style="max-width: 100%"/></div>
 <h1>دوره Code Break (کشف رمز) را پشت سر بگذارید</h1>
 <div class="col-66" style="padding-right: 28px; padding-bottom: 20px;">
 
@@ -49,14 +49,14 @@ social:
 <div style="clear: both;"></div>
 <a id="activities"></a>
 
-<div style="background-color: #7665a0; margin-top:50px;"><h1 style="color: #FFFFFF; padding-top: 15px; padding-bottom: 15px; padding-left: 10px; padding-right: 10px;">فعالیتهای هفتگی و اپیزودهای گذشته</h1></div>
+<div style="background-color: var(--brand_secondary_default); margin-top:50px;"><h1 style="color: #FFFFFF; padding-top: 15px; padding-bottom: 15px; padding-left: 10px; padding-right: 10px;">فعالیتهای هفتگی و اپیزودهای گذشته</h1></div>
 <h2>اپیزود 1 - الگوریتمها - استاد: هیل هارپر</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">اپیزود 3/25 را ببینید</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">اپیزود 3/25 را ببینید</h4>
 <a href="https://www.youtube.com/watch?v=IiHveVqxvcw"><img src="/images/marketing/episode-1-hill-harper.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br> <a href="https://www.youtube.com/watch?v=IiHveVqxvcw"><i>در یوتیوب ببینید</a></i>|<i><a href="https://www.facebook.com/Code.org/videos/212168439992679/">در فیسبوک ببینید</i></a></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">فعالیت هفتگی - الگوریتمها</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">فعالیت هفتگی - الگوریتمها</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">دانش‌آموزان کم‌سنتر:</span> نیازی به ثبت نام ندارید</p>
@@ -72,11 +72,11 @@ social:
 <div style="clear: both;"></div>
 <h2>اپیزود 2 - پیش‌نمونه‌ها - اساتید: مارک کوبان و لیندسی اسکات</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">اپیزود 4/1 را ببینید</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">اپیزود 4/1 را ببینید</h4>
 <a href="https://www.youtube.com/watch?v=guNM-3CXgnQ"><img src="/images/marketing/code-break-episode2-screenshot.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=guNM-3CXgnQ"><i>در یوتیوب ببینید</i></a><a href="https://www.facebook.com/Code.org/videos/231140824935457/"><i>در فیسبوک ببینید</i></a></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">فعالیت هفتگی - پیش‌نمونه‌ها</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">فعالیت هفتگی - پیش‌نمونه‌ها</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">دانش‌آموزان کم‌سنتر:</span> نیازی به ثبت نام ندارید</p>
@@ -93,11 +93,11 @@ social:
 <div style="clear: both;"></div>
 <h2>اپیزود 3 - رمزنگاری با اشتون کوچر و میا گیل اپنر</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">اپیزود 4/8 را ببینید</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">اپیزود 4/8 را ببینید</h4>
 <a href="https://youtu.be/_RrmereHcTQ"><img src="/images/marketing/code-break-april-8-video-final.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://youtu.be/_RrmereHcTQ"><i>در یوتیوب ببینید</i></a> I <a href="https://www.facebook.com/Code.org/videos/221983958869058/"><i>در فیسبوک ببینید</i></a></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">فعالیت هفتگی - رمزنگاری</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">فعالیت هفتگی - رمزنگاری</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">دانش‌آموزان کم‌سنتر:</span> نیازی به ثبت نام ندارید</p>
@@ -116,12 +116,12 @@ social:
 <div style="clear: both;"></div>
 <h2>اپیزود 4 - اطلاعات دیجیتال - اساتید: مارک کرایگر و آلیس کیلر</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">اپیزود 4/8 را ببینید</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">اپیزود 4/8 را ببینید</h4>
 <a href="https://www.youtube.com/watch?v=kL-3o5EiLsM"><img src="/images/marketing/code-break-april-15-video.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=kL-3o5EiLsM"><i>در یوتیوب ببینید</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/1642489922621088/
 ">در فیسبوک ببینید</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">فعایت هفتگی - اطلاعات دیجیتال</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">فعایت هفتگی - اطلاعات دیجیتال</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">دانش‌آموزان کم‌سنتر:</span> نیازی به ثبت نام ندارید</p>
@@ -140,11 +140,11 @@ social:
 <div style="clear: both;"></div>
 <h2>اپیزود 5 - شبیه‌سازی - استاد بیل گیتس</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">اپیزود 4/22 را ببینید</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">اپیزود 4/22 را ببینید</h4>
 <a href="https://www.youtube.com/watch?v=fv5g9xw_jek"><img src="/images/marketing/code-break-bill-gates.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=fv5g9xw_jek"><i>در یوتیوب ببینید</i></a> I <i><a href="https://www.facebook.com/watch/live/?v=870396600091039&ref=watch_permalink">در فیسبوک ببینید</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">فعالیت هفتگی - شبیه‌سازی و داده‌ها</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">فعالیت هفتگی - شبیه‌سازی و داده‌ها</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">دانش‌آموزان کم‌سنتر:</span> نیازی به ثبت نام ندارید</p>
@@ -163,11 +163,11 @@ social:
 <div style="clear: both;"></div>
 <h2>اپیزود 6 - اینترنت - اساتید: کیگان-مایکل کی و وینت سرف</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">ایپزود 4/29 را ببینید</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">ایپزود 4/29 را ببینید</h4>
 <a href="https://www.youtube.com/watch?v=7jcnJR6aZfs"><img src="/images/marketing/code-break-episode-6.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=7jcnJR6aZfs"><i>در یوتیوب ببینید</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/267326194655266/">در فیسبوک ببینید</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">فعالیت هفتگی - اینترنت</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">فعالیت هفتگی - اینترنت</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">دانش‌آموزان کم‌سنتر:</span> نیازی به ثبت نام ندارید</p>
@@ -186,11 +186,11 @@ social:
 <div style="clear: both;"></div>
 <h2>اپیزود 7 - شرطها - اساتید: سال خان و فلو وان</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">اپیزود 5/6 را ببینید</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">اپیزود 5/6 را ببینید</h4>
 <a href="https://www.youtube.com/watch?v=oKwvRwmvXsE"><img src="/images/marketing/episode-7-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=oKwvRwmvXsE"><i>در یوتیوب ببینید</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/838885113258946/">در فیسبوک ببینید</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">فعالیت هفتگی - دستورات شرطی</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">فعالیت هفتگی - دستورات شرطی</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">دانش‌آموزان کم‌سنتر:</span> نیازی به ثبت نام ندارید</p>
@@ -207,11 +207,11 @@ social:
 <div style="clear: both;"></div>
 <h2>اپیزود 8 - متغیرها - اساتید: یارا شهیدی و فازی خسروشاهی</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">اپیزود 5/13 را ببینید</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">اپیزود 5/13 را ببینید</h4>
 <a href="https://www.youtube.com/watch?v=bQElba6x6yI"><img src="/images/marketing/episode-8-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=bQElba6x6yI"><i>در یوتیوب ببینید</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/580781632554625/">در فیسبوک ببینید</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">فعالیت هفتگی - متغیرها</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">فعالیت هفتگی - متغیرها</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">دانش‌آموزان کم‌سنتر:</span> نیازی به ثبت نام ندارید</p>
@@ -228,11 +228,11 @@ social:
 <div style="clear: both;"></div>
 <h2>اپیزود 9 - رویدادها - اساتید مکلمور و اسکات فورستال</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">اپیزود 5/20 را ببینید</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">اپیزود 5/20 را ببینید</h4>
 <a href="https://www.youtube.com/watch?v=-bcO-X9thds"><img src="/images/marketing/episode-9-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=-bcO-X9thds"><i>در یوتیوب ببینید</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/3261824343882823/">در فیسبوک ببینید</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">فعالیت هفتگی - رویدادها</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">فعالیت هفتگی - رویدادها</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">دانش‌آموزان کم‌سنتر:</span> نیازی به ثبت نام ندارید</p>
@@ -249,11 +249,11 @@ social:
 <div style="clear: both;"></div>
 <h2>اپیزود 10 - هوش مصنوعی - اساتید: کت گراهام و کیت پارک</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">اپیزود 5/27 را ببینید</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">اپیزود 5/27 را ببینید</h4>
 <a href="https://www.youtube.com/watch?v=MLH2bKpXkm8"><img src="/images/marketing/episode-10-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=MLH2bKpXkm8"><i>در یوتیوب ببینید</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/551511042204493/">در فیسبوک ببینید</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">فعالیت هفتگی - هوش مصنوعی (AI)</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">فعالیت هفتگی - هوش مصنوعی (AI)</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">دانش‌آموزان کم‌سنتر:</span> نیازی به ثبت نام ندارید</p>
@@ -270,11 +270,11 @@ social:
 <div style="clear: both;"></div>
 <h2>اپیزود 11 - انتزاع - اساتید: سوزان ویسیچیکی و چاینا آن مک‌کین</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">اپیزود 6/3 را ببینید</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">اپیزود 6/3 را ببینید</h4>
 <a href="https://www.youtube.com/watch?v=LPnRS3F0VWw"><img src="/images/marketing/episode-11-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=LPnRS3F0VWw"><i>در یوتیوب ببینید</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/581342096133818/">در فیسبوک ببینید</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">فعالیت هفتگی - انتزاع</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">فعالیت هفتگی - انتزاع</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">دانش‌آموزان کم‌سنتر:</span> نیازی به ثبت نام ندارید</p>
@@ -291,11 +291,11 @@ social:
 <div style="clear: both;"></div>
 <h2>اپیزود 12 - سخت‌افزار - اساتید: آلوئه بلاک، برت تیلور و پائولا مخیا مینایا</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">اپیزود 6/10 را ببینید</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">اپیزود 6/10 را ببینید</h4>
 <a href="https://www.youtube.com/watch?v=4-JZYqk2K6w"><img src="/images/marketing/episode-12-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=4-JZYqk2K6w"><i>در یوتیوب ببینید</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/258344332114141/">در فیسبوک ببینید</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">فعالیت هفتگی - سخت‌افزار</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">فعالیت هفتگی - سخت‌افزار</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">دانش‌آموزان کم‌سنتر:</span> نیازی به ثبت نام ندارید</p>
@@ -315,3 +315,4 @@ social:
 <div style="text-align:center">
 <img src="/images/athome/unescovid19.png" style="width:35%">
 </div>
+

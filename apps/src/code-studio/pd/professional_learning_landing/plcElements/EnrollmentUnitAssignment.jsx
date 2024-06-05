@@ -27,8 +27,8 @@ export default class EnrollmentUnitAssignment extends React.Component {
 
   render() {
     return (
-      <div style={styles.courseUnitSection}>
-        <a href={this.props.courseUnitData.link}>
+      <div style={styles.courseUnitSection} className="course_unit_section">
+        <a href={this.props.courseUnitData.link} className="course_unit_title">
           <div style={styles.courseUnitSectionHeader}>
             {this.props.courseUnitData['unitName']}
           </div>

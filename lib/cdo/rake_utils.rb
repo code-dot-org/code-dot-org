@@ -60,13 +60,13 @@ module RakeUtils
     status
   end
 
-  # Alternate version of RakeUtils.rake which always streams STDOUT to the shell
+  # Alternate version of RakeUtils.rake which always streams $stdout to the shell
   # during execution.
   def self.rake_stream_output(*args, &block)
     system_stream_output "RAILS_ENV=#{rack_env}", "RACK_ENV=#{rack_env}", 'bundle', 'exec', 'rake', *args, &block
   end
 
-  # Alternate version of RakeUtils.system which always streams STDOUT to the
+  # Alternate version of RakeUtils.system which always streams $stdout to the
   # shell during execution.
   def self.system_stream_output(*args, &block)
     command = command_(*args)
@@ -306,14 +306,14 @@ module RakeUtils
   end
 
   # Captures all stdout and stderr within a block, including subprocesses:
-  # - redirect STDOUT and STDERR streams to a pipe
+  # - redirect $stdout and $stderr streams to a pipe
   # - have a background thread read from the pipe
   # - store data in a StringIO
   # - execute the block
   # - revert streams to original pipes and return output
   def self.capture(&block)
-    old_stdout = STDOUT.clone
-    old_stderr = STDERR.clone
+    old_stdout = $stdout.clone
+    old_stderr = $stderr.clone
     pipe_r, pipe_w = IO.pipe
     pipe_r.sync = true
     output = StringIO.new('', 'w')
@@ -324,12 +324,12 @@ module RakeUtils
     rescue EOFError
       # Do nothing.
     end
-    STDOUT.reopen(pipe_w)
-    STDERR.reopen(pipe_w)
+    $stdout.reopen(pipe_w)
+    $stderr.reopen(pipe_w)
     yield
   ensure
-    STDOUT.reopen(old_stdout)
-    STDERR.reopen(old_stderr)
+    $stdout.reopen(old_stdout)
+    $stderr.reopen(old_stderr)
     pipe_w.close
     reader.join
     pipe_r.close
@@ -340,12 +340,10 @@ module RakeUtils
   # threaded_each provide a simple way to process an array of elements using multiple threads.
   # create_threads is a helper for threaded_each.
   #
-  def self.create_threads(count)
+  def self.create_threads(count, &block)
     [].tap do |threads|
       count.times do
-        threads << Thread.new do
-          yield
-        end
+        threads << Thread.new(&block)
       end
     end
   end
@@ -361,7 +359,11 @@ module RakeUtils
 
     threads = create_threads(thread_count) do
       until queue.empty?
-        next unless item = queue.pop(true) rescue nil
+        next unless item = begin
+          queue.pop(true)
+        rescue
+          nil
+        end
         yield item if block_given?
       end
     end

@@ -205,6 +205,7 @@ pt-PT:
   class_submission_out_of_school_summer_camp: Acampamento de verão
   classicmaze_name: Labirinto clássico
   code_hoc_coming: 'A Hora de Código chegou: de 8 a 14 de dezembro!'
+  code_org_logo_alt: Início - Code.org
   code_sign_up: Inscreva-se para participar durante a Semana da Educação em Ciência
     da Computação
   codea_beyond_gradelevel: A partir do Ensino Secundário
@@ -1122,6 +1123,7 @@ pt-PT:
   header_about_us: Quem somos
   header_course_catalog: Catálogo do Curso
   header_courses: Cursos
+  header_districts: Distritos
   header_documentation: Documentação
   header_educate_beyond: Para além da Code.org
   header_educate_community: Comunidade online
@@ -1144,6 +1146,7 @@ pt-PT:
   header_professional_learning: Aprendizado Profissional
   header_project_gallery: Projetos
   header_report_bug: Comunicar um problema
+  header_schools: Escolas
   header_screen_reader_hamburger: Menu
   header_sections: Turmas
   header_stats: Estatísticas
@@ -1536,6 +1539,7 @@ pt-PT:
   homepage_slot_text_link_k5: Cursos para alunos do 1.º Ciclo
   homepage_slot_text_link_local: Encontra uma turma à tua volta
   homepage_slot_text_link_middle: 2.º ou 3.º Ciclos do Ensino Básico
+  homepage_slot_text_link_middle_and_high: Ensino Fundamental e Médio
   homepage_slot_text_link_othercourses: Outros cursos online
   homepage_slot_text_link_pd: Desenvolvimento profissional
   homepage_slot_text_link_shop: T-shirts, chapéus e muito mais

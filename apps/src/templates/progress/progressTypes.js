@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 
 /**
@@ -79,7 +80,7 @@ export const levelWithProgressType = PropTypes.shape({
  *
  * @property {string} status
  * A string enum representing student progress status on a level.
- * See src/util/sharedConstants.LevelStatus.
+ * See generated-scripts/sharedConstants.LevelStatus.
  * @property {number} result
  * A numerical enum of the TestResult a student received for a level.
  * See src/constants.TestResult.
@@ -106,6 +107,7 @@ const studentLevelProgressShape = {
   timeSpent: PropTypes.number,
   lastTimestamp: PropTypes.number,
   teacherFeedbackReviewState: PropTypes.oneOf(Object.keys(ReviewStates)),
+  teacherFeedbackNew: PropTypes.bool.isRequired,
   /** pages: PropTypes.array */ // See below
 };
 // Avoid recursive definition

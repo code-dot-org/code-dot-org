@@ -12,7 +12,7 @@ module I18n
       module Labs
         class SyncOut < I18n::Utils::SyncOutBase
           def process(language)
-            crowdin_locale_dir = I18nScriptUtils.locale_dir(language[:crowdin_name_s], DIR_NAME)
+            crowdin_locale_dir = I18nScriptUtils.crowdin_locale_dir(language[:locale_s], DIR_NAME)
             return unless File.directory?(crowdin_locale_dir)
 
             restore_crawding_locale_files(language[:locale_s], crowdin_locale_dir)
@@ -22,9 +22,7 @@ module I18n
             I18nScriptUtils.rename_dir(crowdin_locale_dir, i18n_locale_dir)
           end
 
-          private
-
-          def restore_crawding_locale_files(locale, crowdin_locale_dir)
+          private def restore_crawding_locale_files(locale, crowdin_locale_dir)
             malformed_i18n_reporter = I18n::Utils::MalformedI18nReporter.new(locale)
 
             REDACTABLE_LABS.each do |lab_name|
@@ -48,11 +46,11 @@ module I18n
             malformed_i18n_reporter.report
           end
 
-          def lab_i18n_file_path(lab_name, js_locale)
+          private def lab_i18n_file_path(lab_name, js_locale)
             CDO.dir('apps/i18n', lab_name, "#{js_locale}.json")
           end
 
-          def distribute_crawding_locale_files(locale, crowdin_locale_dir)
+          private def distribute_crawding_locale_files(locale, crowdin_locale_dir)
             js_locale = I18nScriptUtils.to_js_locale(locale)
 
             Dir.glob(File.join(crowdin_locale_dir, '*.json')) do |crowdin_locale_file_path|

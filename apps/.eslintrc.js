@@ -7,12 +7,10 @@
 // reenabling.
 const rulesToEventuallyReenable = {
   'jsx-a11y/anchor-is-valid': 'off',
-  'jsx-a11y/blob': 'off',
   'jsx-a11y/click-events-have-key-events': 'off',
   'jsx-a11y/label-has-associated-control': 'off',
   'jsx-a11y/mouse-events-have-key-events': 'off',
   'jsx-a11y/no-noninteractive-element-interactions': 'off',
-  'jsx-a11y/no-noninteractive-tabindex': 'off',
   'jsx-a11y/no-static-element-interactions': 'off',
   'jsx-a11y/tabindex-no-positive': 'off',
 };
@@ -29,6 +27,8 @@ module.exports = {
     'mocha',
     'babel',
     'jsx-a11y',
+    'storybook',
+    'import',
   ],
   parserOptions: {
     babelOptions: {
@@ -39,6 +39,7 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:prettier/recommended',
     'plugin:jsx-a11y/recommended',
+    'plugin:storybook/recommended',
   ],
   env: {
     es6: true,
@@ -85,6 +86,8 @@ module.exports = {
     SerialPort: 'readonly',
     signupErrorMessage: 'readonly',
     Studio: 'readonly',
+    // Only used in Web Lab 2.
+    stylelint: 'readonly',
     thanksUrl: 'readonly',
     Turtle: 'readonly',
     YT: 'readonly',
@@ -111,11 +114,44 @@ module.exports = {
     'react/no-danger': 'error',
     'react-hooks/exhaustive-deps': 'error',
     'react-hooks/rules-of-hooks': 'error',
+    'import/no-duplicates': 'error',
+    'import/order': [
+      'error',
+      {
+        'newlines-between': 'always',
+        groups: [
+          ['builtin', 'external'],
+          'internal',
+          'parent',
+          'sibling',
+          'index',
+        ],
+        pathGroups: [
+          {
+            pattern: '*.scss',
+            group: 'index',
+            position: 'after',
+            patternOptions: {matchBase: true},
+          },
+          {
+            pattern: '@cdo/**',
+            group: 'internal',
+            position: 'before',
+          },
+        ],
+        alphabetize: {
+          order: 'asc',
+          caseInsensitive: true,
+        },
+        pathGroupsExcludedImportTypes: ['builtin', 'object'],
+      },
+    ],
   },
   settings: {
     react: {
       version: 'detect',
     },
+    'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
   },
   overrides: [
     {
@@ -127,11 +163,76 @@ module.exports = {
       rules: {
         // We can rely on typescript types instead of prop types
         'react/prop-types': 'off',
+        '@typescript-eslint/no-unused-vars': ['error', {args: 'none'}],
         // TODO: We are temporarily disabling this rule to allow using require() to import
         // JavaScript files in TypeScript. Instead, we should add 'allowJs': true to our
         // tsconfig.json file, but this is currently causing some build issues (SL-791)
         '@typescript-eslint/no-var-requires': 'off',
       },
+    },
+    {
+      files: ['*.story.@(ts|tsx|js|jsx)'],
+      rules: {
+        'storybook/no-title-property-in-meta': 'error',
+      },
+    },
+    {
+      rules: {
+        'import/order': 'off',
+      },
+      // We are actively working to decrease the number of folders in this list.
+      // To turn on the order rule for a folder, remove it from this list and run `yarn lint --fix`
+      // Commit any changes made.
+      files: [
+        'src/*',
+        'src/acemode/*',
+        'src/aichat/**',
+        'src/ailab/*',
+        'src/aiTutor/**',
+        'src/assetManagement/*',
+        'src/blockTooltips/*',
+        'src/bounce/*',
+        'src/code-studio/**',
+        'src/cookieBanner/*',
+        'src/courseExplorer/*',
+        'src/dance/**',
+        'src/fish/*',
+        'src/flappy/*',
+        'src/generated/**',
+        'src/hamburger/*',
+        'src/javalab/**',
+        'src/lab2/**',
+        'src/lib/**',
+        'src/music/**',
+        'src/musicMenu/*',
+        'src/p5lab/**',
+        'src/panels/*',
+        'src/publicKeyCryptography/*',
+        'src/pythonlab/*',
+        'src/redux/*',
+        'src/sites/**',
+        // This one had some problems, see https://github.com/code-dot-org/code-dot-org/pull/58284
+        'src/templates/curriculumCatalog/**',
+        'test/integration/**',
+        'test/*',
+        'test/unit/*',
+        'test/unit/assetManagement/**',
+        'test/unit/blockTooltips/**',
+        'test/unit/code-studio/**',
+        'test/unit/dance/**',
+        'test/unit/gamelab/**',
+        'test/unit/javalab/**',
+        'test/unit/lab2/**',
+        'test/unit/lib/**',
+        'test/unit/lib/kits/**',
+        'test/unit/lib/levelbuilder/**',
+        'test/unit/music/**',
+        'test/unit/p5lab/**',
+        'test/unit/redux/**',
+        'test/unit/sites/**',
+        'test/unit/storage/**',
+        'test/unit/weblab/**',
+      ],
     },
   ],
 };

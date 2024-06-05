@@ -1,12 +1,7 @@
-import {ViewType} from './sectionProgressConstants';
-import {
-  startLoadingProgress,
-  setCurrentView,
-  finishLoadingProgress,
-  addDataByUnit,
-  startRefreshingProgress,
-  finishRefreshingProgress,
-} from './sectionProgressRedux';
+import _ from 'lodash';
+
+import logToCloud from '@cdo/apps/logToCloud';
+import {getStore} from '@cdo/apps/redux';
 import {
   processedLevel,
   processServerSectionProgress,
@@ -16,9 +11,16 @@ import {
   fetchStandardsCoveredForScript,
   fetchStudentLevelScores,
 } from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
-import {getStore} from '@cdo/apps/redux';
-import _ from 'lodash';
-import logToCloud from '@cdo/apps/logToCloud';
+
+import {ViewType} from './sectionProgressConstants';
+import {
+  startLoadingProgress,
+  setCurrentView,
+  finishLoadingProgress,
+  addDataByUnit,
+  startRefreshingProgress,
+  finishRefreshingProgress,
+} from './sectionProgressRedux';
 
 const NUM_STUDENTS_PER_PAGE = 20;
 

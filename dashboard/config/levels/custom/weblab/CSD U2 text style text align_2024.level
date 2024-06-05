@@ -1,5 +1,6 @@
 <Weblab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 58,
   "created_at": "2023-11-28T16:58:40.000Z",
   "level_num": "custom",
@@ -25,14 +26,13 @@
     "long_instructions": "\r\n# Text Alignment\r\n\r\nThe `text-align` property sets the horizontal (side to side) position of the text within each line.\r\n\r\n# Do This\r\n1) Find the CSS code that is making the \"From Wikipedia\" in the `h6` tag align to the right.\r\n* Change the `h1` tag so that it is aligned to the center of the page.\r\n* Change the alignment of the paragraph tag, too.",
     "encrypted": "false",
     "mini_rubric": "false",
-    "start_sources": "{\r\n  \"files\": [\r\n    {\"name\": \"style.css\",\r\n     \"data\": \"h1 {\\r\\n  color: green;\\r\\n  font-size: 24px;\\r\\n}\\r\\nh6 {\\r\\n  text-align: right;\\r\\n}\\r\\np {\\r\\n    font-size: 14px;\\r\\n}\"\r\n     },\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html> \\r\\n<html> \\r\\n<head>\\r\\n   <link rel=\\\"stylesheet\\\" href=\\\"style.css\\\">\\r\\n<\\/head>\\r\\n<body>\\r\\n  <h1>Build a Terrarium!<\\/h1> \\r\\n  <h3>\\r\\n    What's a terrarium?\\r\\n  <\\/h3>\\r\\n  <p>\\r\\n    A terrarium is usually a sealable glass container containing soil and plants, and can be opened for maintenance to access the plants inside. \\r\\n  <\\/p> \\r\\n  <h6>From Wikipedia<\\/h6>\\r\\n\\r\\n  <h3>How do they work?<\\/h3>\\r\\n  <p> \\r\\n    The glass lets the light in, but it also keeps the water inside so there can be a water cycle.  That way your plants get all the sun they need but never lose any water!\\r\\n  <\\/p> \\r\\n\\r\\n  <h3>How can I make one?<\\/h3>\\r\\n  <p>\\r\\n    Get a big glass jar, and put it on its side, then put your dirt and plants inside.  Then make sure there's enough water and clse up the jar.\\r\\n  <\\/p> \\r\\n<\\/body>\\r\\n<\\/html>  \\r\\n\"\r\n    }\r\n  ]\r\n}",
+    "start_sources": "              {\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html> \\n<html> \\n<head>\\n   <link rel=\\\"stylesheet\\\" href=\\\"style.css\\\">\\n</head>\\n<body>\\n  <!-- content on terrariums -->\\n  <h1>Build a Terrarium!</h1> \\n  \\n  <h3>\\n    What's a terrarium?\\n  </h3>\\n  \\n  <p>\\n    A terrarium is usually a sealable glass container containing soil and plants, and can be opened for maintenance to access the plants inside. \\n  </p> \\n  \\n  <h6>From Wikipedia</h6>\\n\\n  <h3>How do they work?</h3>\\n  \\n  <p> \\n    The glass lets the light in, but it also keeps the water inside so there can be a water cycle.  That way your plants get all the sun they need but never lose any water!\\n  </p> \\n\\n  <h3>How can I make one?</h3>\\n  \\n  <p>\\n    Get a big glass jar, and put it on its side, then put your dirt and plants inside.  Then make sure there's enough water and clse up the jar.\\n  </p> \\n</body>\\n</html>\"\r\n    },\r\n    {\r\n      \"name\": \"style.css\",\r\n      \"data\": \"/* 2) Change the code for the h1 tag so that it is aligned to the center of the page */\\n/* 3) Change the alignment of the paragraph tag */\\nh1 {\\n  color: green;\\n  font-size: 24px;\\n}\\nh6 {\\n  text-align: right;\\n}\\np {\\n    font-size: 14px;\\n}\"\r\n    }\r\n  ]\r\n}\r\n            ",
     "display_name": "Extra Code: Align text",
     "thumbnail_url": "https://images.code.org/f074b4d2427feefc77110bc017f0ccc0-image-1565643571085.59.19 PM.png",
     "bubble_choice_description": "Align text to the right or center of the page.",
     "validation_enabled": "false"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T16:58:40.486+00:00\",\"changed\":[\"cloned from \\\"CSD U2 text style text align_2023\\\"\"],\"cloned_from\":\"CSD U2 text style text align_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T16:58:40.486+00:00\",\"changed\":[\"cloned from \\\"CSD U2 text style text align_2023\\\"\"],\"cloned_from\":\"CSD U2 text style text align_2023\"},{\"changed_at\":\"2024-02-15 17:46:11 +0000\",\"changed\":[\"encrypted_examples\",\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>

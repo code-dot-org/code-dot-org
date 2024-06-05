@@ -65,11 +65,11 @@
     "parent_level_id": 20418,
     "name_suffix": "_2024",
     "reference_links": [
-      "/courses/csd-2022/guides/circuit-playground",
-      "/courses/csd-2022/guides/board-events",
+      "/courses/csd-2024/guides/circuit-playground",
+      "/courses/csd-2024/guides/board-events",
       "/maker/setup"
     ],
-    "map_reference": "/courses/csd-2022/guides/physical-input",
+    "map_reference": "/courses/csd-2024/guides/physical-input",
     "mini_rubric": "false",
     "encrypted": "false",
     "widget_mode": "false",

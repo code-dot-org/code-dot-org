@@ -762,7 +762,8 @@
       "/courses/csa-2023/guides/while-loops"
     ],
     "teacher_markdown": "When changing the condition on **Line 34** from `jesse.canMove()` to `jesse.hasPaint()`, the `Painter` object no longer moves across the second row. This is because the `Painter` object runs out of paint in the first row, so the condition for this `while` loop is never `true` when this code segment is reached.",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-16T23:00:55.291+00:00\",\"changed\":[\"cloned from \\\"CSA U1L5-L2-4_2023\\\"\"],\"cloned_from\":\"CSA U1L5-L2-4_2023\"}]"

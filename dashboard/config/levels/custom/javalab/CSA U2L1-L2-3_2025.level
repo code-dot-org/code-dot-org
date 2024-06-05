@@ -35,7 +35,8 @@
       }
     },
     "teacher_markdown": "Students should see the following displayed in the console after adding the code segment:\r\n\r\n```\r\nContent Year: 0\r\nContent Year Updated: 2020\r\n```\r\n\r\nStudents should realize that since the `year` is `public`, it can be accessed and modified by other classes. While this may seem to make it easier to work with variables in other classes, they should realize that there might be instances where information about an object shouldn't be as easy to access or modify.",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-16T23:49:46.199+00:00\",\"changed\":[\"cloned from \\\"CSA U2L1-L2-3_2023\\\"\"],\"cloned_from\":\"CSA U2L1-L2-3_2023\"}]"

@@ -232,9 +232,48 @@ class AdminUsersController < ApplicationController
       @users_with_permission = restricted_users.
         joins(:permissions).
         where(user_permissions: {permission: permission}).
-        order(:email)
-      @users_with_permission = @users_with_permission.page(page).per(page_size)
+        order(:email).
+        page(page).
+        per(page_size)
     end
+  end
+
+  # get /admin/permissions/csv
+  def permissions_csv
+    permissions_form
+
+    return render :not_found unless @users_with_permission
+
+    # Create a friendly filename for it
+    start = (page - 1) * page_size
+    final = start + page_size - 1
+
+    start = start.to_s.rjust(8, '0')
+    final = final.to_s.rjust(8, '0')
+
+    date = Time.zone.today
+    date = "#{date.year}-#{date.month}-#{date.day}"
+
+    filename = "#{params[:permission]}-#{date}-#{start}-#{final}.csv"
+
+    headers = ['ID', 'Email', 'Name', 'User Type', 'Recent Sign In', 'Sign In Count', 'Created At']
+    send_data(
+      CSV.generate do |csv|
+        csv << headers
+        @users_with_permission.each do |user|
+          csv << [
+            user.id,
+            user.email,
+            user.name,
+            user.user_type,
+            user.current_sign_in_at.try(:strftime, '%F'),
+            user.sign_in_count,
+            user.created_at.strftime('%F')
+          ]
+        end
+      end,
+      filename: filename
+    )
   end
 
   def grant_permission
@@ -331,12 +370,11 @@ class AdminUsersController < ApplicationController
   end
 
   private def page
-    params[:page] || 1
+    params[:page].to_i || 1
   end
 
   private def page_size
-    return DEFAULT_MANAGE_PAGE_SIZE unless params.key? :page_size
-    params[:page_size] == 'All' ? @users_with_permission.count : params[:page_size]
+    params[:page_size].to_i || DEFAULT_MANAGE_PAGE_SIZE
   end
 
   private def set_target_user_from_identifier(user_identifier)

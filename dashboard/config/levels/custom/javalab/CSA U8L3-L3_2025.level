@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U8L3-Binary Search PBT_2025",
     "teacher_markdown": "With this modification, if the middle element is equal to the target element, the algorithm recursively searches the right half of the array to find the last occurence of the target element. If a last occurrence is found in the right half, its index is returned. Otherwise, the current occurence is the last occurrence, and the algorithm returns the current index.\r\n\r\nThis means that additional checks are performed and a different value may be returned depending on the element's position in the array and whether or not the value appears more than once.",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-17T00:40:51.316+00:00\",\"changed\":[\"cloned from \\\"CSA U8L3-L3_2023\\\"\"],\"cloned_from\":\"CSA U8L3-L3_2023\"}]"

@@ -7,12 +7,16 @@
       "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
+      "supported_locales": [
+        "es-MX",
+        "es-ES"
+      ],
       "tts": true,
       "version_year": "2023"
     },
     "new_name": null,
     "family_name": "dance-ai",
-    "serialized_at": "2023-11-22 18:28:08 UTC",
+    "serialized_at": "2024-03-05 20:13:13 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

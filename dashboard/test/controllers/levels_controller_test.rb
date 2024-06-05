@@ -6,6 +6,10 @@ class LevelsControllerTest < ActionController::TestCase
 
   STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
 
+  setup_all do
+    seed_deprecated_unit_fixtures
+  end
+
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     Policies::LevelFiles.stubs(:write_to_file?).returns(false) # don't write to level files
@@ -83,7 +87,7 @@ class LevelsControllerTest < ActionController::TestCase
     assert_response :success
 
     body = JSON.parse(response.body)
-    assert_equal({"levelData" => {"hello" => "there"}, "other" => "other", "preloadAssetList" => nil, "type" => "Maze", "appName" => "maze", "useRestrictedSongs" => false, "sharedBlocks" => []}, body)
+    assert_equal({"id" => level.id, "levelData" => {"hello" => "there"}, "other" => "other", "preloadAssetList" => nil, "type" => "Maze", "appName" => "maze", "useRestrictedSongs" => false, "sharedBlocks" => [], "usesProjects" => false, "exemplarSources" => nil}, body)
   end
 
   test "should get filtered levels with just page param" do
@@ -1292,10 +1296,8 @@ class LevelsControllerTest < ActionController::TestCase
     params: -> {{id: @partner_level.id, level: {name: 'new partner name'}}}
   )
 
-  private
-
   # Assert that the url is a real S3 url, and not a placeholder.
-  def assert_s3_image_url(url)
+  private def assert_s3_image_url(url)
     assert(
       %r{#{LevelSourceImage::S3_URL}.*\.png}o.match(url),
       "expected #{url.inspect} to be an S3 URL"
@@ -1306,7 +1308,7 @@ class LevelsControllerTest < ActionController::TestCase
   # generated when solution images are uploaded. We don't want to actually
   # upload any S3 images in our tests, so just enable the codepath where an
   # existing LevelSourceImage is found based on the program contents.
-  def enable_level_source_image_s3_urls
+  private def enable_level_source_image_s3_urls
     # Allow LevelSourceImage to return real S3 urls.
     CDO.stubs(:disable_s3_image_uploads).returns(false)
 

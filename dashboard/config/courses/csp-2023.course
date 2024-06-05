@@ -150,6 +150,16 @@
       }
     },
     {
+      "name": "Help Students Sign Up For The AP Exam",
+      "url": "https://drive.google.com/file/d/1zwC1ZVW1ug9EUJfZ9a9ZitqMFQ0DScbU/view?usp=drive_link",
+      "key": "help_students_sign_up_the_ap_exam",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "help_students_sign_up_the_ap_exam"
+      }
+    },
+    {
       "name": "Journaling",
       "url": "https://docs.google.com/document/d/1d9Lq_-K5vNi8osaI-VNVqcgbb-aDr4BJtHADe-MRoKU/view",
       "key": "journaling",

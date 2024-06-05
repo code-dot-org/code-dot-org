@@ -15,7 +15,7 @@ module I18n
       module HourOfCode
         class SyncOut < I18n::Utils::SyncOutBase
           def process(language)
-            crowdin_locale_dir = I18nScriptUtils.locale_dir(language[:crowdin_name_s], DIR_NAME)
+            crowdin_locale_dir = I18nScriptUtils.crowdin_locale_dir(language[:locale_s], DIR_NAME)
             return unless File.directory?(crowdin_locale_dir)
 
             distribute_origin_i18n_file(language[:unique_language_s], crowdin_locale_dir)
@@ -24,9 +24,7 @@ module I18n
             I18nScriptUtils.rename_dir(crowdin_locale_dir, I18nScriptUtils.locale_dir(language[:locale_s], DIR_NAME))
           end
 
-          private
-
-          def distribute_origin_i18n_file(unique_language_code, crowdin_locale_dir)
+          private def distribute_origin_i18n_file(unique_language_code, crowdin_locale_dir)
             crowdin_en_file_path = File.join(crowdin_locale_dir, ORIGIN_I18N_FILE_NAME)
             return unless File.exist?(crowdin_en_file_path)
 
@@ -44,7 +42,7 @@ module I18n
           end
 
           # Copy the markdown files representing individual page content
-          def distribute_markdown_files(unique_language_code, crowdin_locale_dir)
+          private def distribute_markdown_files(unique_language_code, crowdin_locale_dir)
             Dir.glob(File.join(crowdin_locale_dir, '**/*.md')) do |crowdin_file_path|
               file_name = crowdin_file_path.delete_prefix(crowdin_locale_dir)
 

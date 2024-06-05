@@ -12,23 +12,19 @@ module I18n
         end
       end
 
-      protected
-
-      def process
+      protected def process
         raise NotImplementedError
       end
 
-      def progress_bar
+      protected def progress_bar
         @progress_bar ||= I18nScriptUtils.create_progress_bar(title: self.class.name)
       end
 
-      def mutex
+      protected def mutex
         @mutex ||= Thread::Mutex.new
       end
 
-      private
-
-      def perform
+      private def perform
         progress_bar.start
 
         process

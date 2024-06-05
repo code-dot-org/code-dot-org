@@ -1,8 +1,10 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
 import applabMsg from '@cdo/applab/locale';
-import PropertyRow from './PropertyRow';
+
 import ColorPickerPropertyRow from './ColorPickerPropertyRow';
+import PropertyRow from './PropertyRow';
 
 export default class BorderProperties extends React.Component {
   static propTypes = {

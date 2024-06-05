@@ -1,10 +1,11 @@
 import _ from 'lodash';
-import {styleTypes} from './blockly/themes/cdoBlockStyles.mjs';
+import cdoBlockStyles from './blockly/themes/cdoBlockStyles';
 import xml from './xml';
 import MetricsReporter from './lib/metrics/MetricsReporter';
+import {BlockColors, BlockStyles, EMPTY_OPTION} from './blockly/constants';
 
+const styleTypes = Object.keys(cdoBlockStyles);
 const ATTRIBUTES_TO_CLEAN = ['uservisible', 'deletable', 'movable'];
-const DEFAULT_COLOR = [184, 1.0, 0.74];
 
 /**
  * Create the xml for a level's toolbox
@@ -166,7 +167,11 @@ exports.generateSimpleBlock = function (blockly, generator, options) {
     helpUrl: helpUrl,
     init: function () {
       // Note: has a fixed HSV.  Could make this customizable if need be
-      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.DEFAULT,
+        BlockStyles.DEFAULT
+      );
       var input = this.appendEndRowInput();
       if (title) {
         input.appendField(title);
@@ -251,13 +256,7 @@ exports.forceInsertTopBlock = function (input, blockType) {
 
   if (firstBlock !== null) {
     // when run -> next -> firstBlock
-    var next;
-    if (/^functional/.test(blockType)) {
-      next = doc.createElement('functional_input');
-      next.setAttribute('name', 'ARG1');
-    } else {
-      next = doc.createElement('next');
-    }
+    var next = doc.createElement('next');
     next.appendChild(firstBlock);
     topBlock.appendChild(next);
   }
@@ -268,144 +267,6 @@ exports.forceInsertTopBlock = function (input, blockType) {
     root.appendChild(topBlock);
   }
   return xml.serialize(root);
-};
-
-/**
- * Generate the xml for a block for the calc app.
- * @param {string} type Type for this block
- * @param {number[]|string[]} args List of args, where each arg is either the
- *   xml for a child block, a number, or the name of a variable.
- */
-exports.calcBlockXml = function (type, args) {
-  var str = '<block type="' + type + '" inline="false">';
-  for (var i = 1; i <= args.length; i++) {
-    str += '<functional_input name="ARG' + i + '">';
-    var arg = args[i - 1];
-    if (typeof arg === 'number') {
-      arg =
-        '<block type="functional_math_number"><title name="NUM">' +
-        arg +
-        '</title></block>';
-    } else if (/^<block/.test(arg)) {
-      // we have xml, dont make any changes
-    } else {
-      // we think we have a variable
-      arg = exports.calcBlockGetVar(arg);
-    }
-    str += arg;
-    str += '</functional_input>';
-  }
-  str += '</block>';
-
-  return str;
-};
-
-/**
- * @returns the xml for a functional_parameters_get block with the given
- *   variableName
- */
-exports.calcBlockGetVar = function (variableName) {
-  return (
-    '' +
-    '<block type="functional_parameters_get" uservisible="false">' +
-    '  <mutation>' +
-    '    <outputtype>Number</outputtype>' +
-    '  </mutation>' +
-    '  <title name="VAR">' +
-    variableName +
-    '</title>' +
-    '</block>'
-  );
-};
-
-/**
- * Generate the xml for a math block (either calc or eval apps).
- * @param {string} type Type for this block
- * @param {Object.<string,string>} inputs Dictionary mapping input name to the
-     xml for that input
- * @param {Object.<string.string>} [titles] Dictionary of titles mapping name to value
- */
-exports.mathBlockXml = function (type, inputs, titles) {
-  var str = '<block type="' + type + '" inline="false">';
-  for (var title in titles) {
-    str += '<title name="' + title + '">' + titles[title] + '</title>';
-  }
-
-  for (var input in inputs) {
-    str +=
-      '<functional_input name="' +
-      input +
-      '">' +
-      inputs[input] +
-      '</functional_input>';
-  }
-
-  str += '</block>';
-
-  return str;
-};
-
-/**
- * Generate xml for a functional definition
- * @param {string} name The name of the function
- * @param {string} outputType Function's output type
- * @param {Object<string, string>[]} argList Name and type for each arg
- * @param {string} blockXml Xml for the blocks that actually define the function
- */
-exports.functionalDefinitionXml = function (
-  name,
-  outputType,
-  argList,
-  blockXml
-) {
-  var mutation = '<mutation>';
-  argList.forEach(function (argInfo) {
-    mutation +=
-      '<arg name="' + argInfo.name + '" type="' + argInfo.type + '"></arg>';
-  });
-  mutation += '<outputtype>' + outputType + '</outputtype></mutation>';
-
-  return (
-    '<block type="functional_definition" inline="false">' +
-    mutation +
-    '<field name="NAME">' +
-    name +
-    '</field>' +
-    '<functional_input name="STACK">' +
-    blockXml +
-    '</functional_input>' +
-    '</block>'
-  );
-};
-
-/**
- * Generate xml for a calling a functional function
- * @param {string} name The name of the function
- * @param {Object<string, string>[]} argList Name and type for each arg
- */
-exports.functionalCallXml = function (name, argList, inputContents) {
-  if (argList.length !== inputContents.length) {
-    throw new Error('must define contents for each arg');
-  }
-
-  var mutation = '<mutation name="' + name + '">';
-  argList.forEach(function (argInfo) {
-    mutation +=
-      '<arg name="' + argInfo.name + '" type="' + argInfo.type + '"></arg>';
-  });
-  mutation += '</mutation>';
-
-  var contents = '';
-  inputContents.forEach(function (blockXml, index) {
-    contents +=
-      '<functional_input name="ARG' +
-      index +
-      '">' +
-      blockXml +
-      '</functional_input>';
-  });
-
-  return '<block type="functional_call">' + mutation + contents + '</block>';
 };
 
 /**
@@ -740,7 +601,8 @@ const STANDARD_INPUT_TYPES = {
     generateCode(block, inputConfig) {
       let code = block.getFieldValue(inputConfig.name);
       if (
-        inputConfig.type === Blockly.BlockValueType.STRING &&
+        (inputConfig.type === Blockly.BlockValueType.STRING ||
+          code === EMPTY_OPTION) &&
         !code.startsWith('"') &&
         !code.startsWith("'")
       ) {
@@ -759,29 +621,6 @@ const STANDARD_INPUT_TYPES = {
             block.getFieldValue(inputConfig.name),
           ],
         };
-      };
-
-      // The following functions make sure that the variable naming/renaming options work for this block
-      block.renameVar = function (oldName, newName) {
-        if (
-          Blockly.Names.equals(oldName, block.getFieldValue(inputConfig.name))
-        ) {
-          block.setTitleValue(newName, inputConfig.name);
-        }
-      };
-      block.removeVar = function (oldName) {
-        if (
-          Blockly.Names.equals(oldName, block.getFieldValue(inputConfig.name))
-        ) {
-          block.dispose(true, true);
-        }
-      };
-      block.superSetTitleValue = block.setTitleValue;
-      block.setTitleValue = function (newValue, name) {
-        if (name === inputConfig.name && block.blockSpace.isFlyout) {
-          newValue = Blockly.Variables.generateUniqueName(newValue, block);
-        }
-        block.superSetTitleValue(newValue, name);
       };
 
       // Add the variable field to the block
@@ -1073,24 +912,8 @@ exports.createJsWrapperBlockCreator = function (
     blockly.Blocks[blockName] = {
       helpUrl: getHelpUrl(docFunc), // optional param
       init: function () {
-        // All Google Blockly blocks must have a style in order to be compatible with themes.
-        // However, blocks with just a color and no style are still permitted.
-        if (style) {
-          // Google Blockly method. No-op for CDO Blockly.
-          this.setStyle(style);
-        }
-        // CDO Blockly uses colors, not styles. However, the color may be determined
-        // automatically based on a block's returnType (e.g. yellow for "Location").
-        if (color) {
-          Blockly.cdoUtils.setHSV(this, ...color);
-        } else if (!returnType) {
-          // CDO Blockly assigns colors to blocks with an output connection based on return type.
-          // See Blockly.Connection.prototype.colorForType
-          // Blocks with neither style or color that do not have a return type can
-          // use the default teal color and style.
-          Blockly.cdoUtils.setHSV(this, ...DEFAULT_COLOR);
-          this.setStyle(style || 'default');
-        }
+        // Apply style or color to block as needed, based on Blockly version.
+        Blockly.cdoUtils.handleColorAndStyle(this, color, style, returnType);
 
         if (returnType) {
           this.setOutput(
@@ -1135,7 +958,6 @@ exports.createJsWrapperBlockCreator = function (
             flyoutToggleButton
           );
         }
-        // Blockly.customBlocks.(this);
       },
     };
 

@@ -25,7 +25,8 @@
     "contained_level_names": [
       "CSA U5L1-L1 Contained_2025"
     ],
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-17T00:13:20.554+00:00\",\"changed\":[\"cloned from \\\"CSA U5L1-L1_2023\\\"\"],\"cloned_from\":\"CSA U5L1-L1_2023\"}]"

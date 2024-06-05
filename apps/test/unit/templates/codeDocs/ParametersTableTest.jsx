@@ -1,7 +1,9 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+
 import ParametersTable from '@cdo/apps/templates/codeDocs/ParametersTable';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('ParametersTable', () => {
   let defaultParameters;

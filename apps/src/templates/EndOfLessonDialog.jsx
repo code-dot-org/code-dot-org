@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
-import Button from '@cdo/apps/templates/Button';
-import i18n from '@cdo/locale';
+
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import Button from '@cdo/apps/templates/Button';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
+import i18n from '@cdo/locale';
 
 function EndOfLessonDialog({lessonNumber, isSummaryView}) {
   const [isDialogOpen, setIsDialogOpen] = useState(true);

@@ -1,8 +1,10 @@
 import React from 'react';
 import {Provider} from 'react-redux';
-import {reduxStore} from '@cdo/storybook/decorators';
-import ParticipantFeedbackNotification from './ParticipantFeedbackNotification';
 import sinon from 'sinon';
+
+import {reduxStore} from '@cdo/storybook/decorators';
+
+import ParticipantFeedbackNotification from './ParticipantFeedbackNotification';
 
 export default {
   component: ParticipantFeedbackNotification,

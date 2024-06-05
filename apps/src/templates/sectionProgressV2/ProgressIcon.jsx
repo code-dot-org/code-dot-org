@@ -1,58 +1,51 @@
-import React from 'react';
-import {ITEM_TYPE, ITEM_TYPE_SHAPE} from './ItemType';
-import styles from './progress-table-legend.module.scss';
-import FontAwesome from '../FontAwesome';
-import ProgressBox from '../sectionProgress/ProgressBox';
 import classNames from 'classnames';
+import React from 'react';
+
+import FontAwesome from '../FontAwesome';
+
+import {ITEM_TYPE, ITEM_TYPE_SHAPE} from './ItemType';
+
+import styles from './progress-table-legend.module.scss';
+
+export const PROGRESS_ICON_TITLE_PREFIX = 'progressicon-';
 
 export default function ProgressIcon({itemType}) {
   const needsFeedbackTriangle = () => (
-    <div className={classNames(styles.needsFeedback, styles.cornerBox)} />
-  );
-
-  const feedbackGivenTriangle = () => (
-    <div className={classNames(styles.feedbackGiven, styles.cornerBox)} />
-  );
-
-  const notStartedBox = () => (
-    <ProgressBox
-      started={false}
-      incomplete={20}
-      imperfect={0}
-      perfect={0}
-      lessonIsAllAssessment={false}
+    <div
+      className={classNames(styles.needsFeedback, styles.cornerBox)}
+      aria-label={itemType['title']}
+      data-testid="needs-feedback-triangle"
     />
   );
 
-  const viewedBox = () => (
-    <ProgressBox
-      started={false}
-      incomplete={20}
-      imperfect={0}
-      perfect={0}
-      lessonIsAllAssessment={false}
-      viewed={true}
+  const feedbackGivenTriangle = () => (
+    <div
+      className={classNames(styles.feedbackGiven, styles.cornerBox)}
+      aria-label={itemType['title']}
+      data-testid="feedback-given-triangle"
     />
   );
 
   return (
-    <>
-      {itemType?.length && (
+    <div data-testid="progress-icon">
+      {itemType['icon'] !== undefined && (
         <FontAwesome
-          id={'uitest-' + itemType[0]}
-          icon={itemType[0]}
-          style={{color: itemType[1]}}
+          id={'uitest-' + itemType['icon']}
+          icon={itemType['icon']}
+          style={{color: itemType['color']}}
           className={styles.fontAwesomeIcon}
+          aria-label={itemType['title']}
         />
       )}
-      {itemType === ITEM_TYPE.NOT_STARTED && notStartedBox()}
-      {itemType === ITEM_TYPE.VIEWED && viewedBox()}
       {itemType === ITEM_TYPE.NEEDS_FEEDBACK && needsFeedbackTriangle()}
       {itemType === ITEM_TYPE.FEEDBACK_GIVEN && feedbackGivenTriangle()}
-    </>
+      {itemType === ITEM_TYPE.NO_PROGRESS && (
+        <div aria-label={itemType['title']} className={styles.emptyBox} />
+      )}
+    </div>
   );
 }
 
 ProgressIcon.propTypes = {
-  itemType: ITEM_TYPE_SHAPE,
+  itemType: ITEM_TYPE_SHAPE.isRequired,
 };

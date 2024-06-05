@@ -3,9 +3,11 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
+
+import i18n from '@cdo/tutorialExplorer/locale';
+
 import FilterGroupContainer from './filterGroupContainer';
 import {TutorialsSortByOptions} from './util';
-import i18n from '@cdo/tutorialExplorer/locale';
 
 export default class FilterGroupSortBy extends React.Component {
   static propTypes = {

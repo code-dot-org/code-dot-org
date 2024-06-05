@@ -16,9 +16,7 @@ module I18n
             I18nScriptUtils.write_file(I18N_SOURCE_FILE_PATH, JSON.pretty_generate(i18n_data))
           end
 
-          private
-
-          def i18n_data
+          private def i18n_data
             CourseOffering.find_each.each_with_object({}) do |course_offering, i18n_data|
               i18n_data[course_offering.key] = course_offering.display_name
             end.sort.to_h

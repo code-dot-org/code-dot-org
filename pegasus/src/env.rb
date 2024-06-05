@@ -34,7 +34,7 @@ module Pegasus
   end
 
   def self.create_logger
-    logger = Logger.new STDOUT if rack_env?(:development)
+    logger = Logger.new $stdout if rack_env?(:development)
     logger ||= Logger.new pegasus_dir('log', "#{rack_env}.log")
 
     logger.level = Logger::INFO if rack_env?(:production)

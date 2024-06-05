@@ -1,9 +1,11 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon';
-import {UnconnectedDocumentationTab} from '@cdo/apps/templates/instructions/DocumentationTab';
-import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import {UnconnectedDocumentationTab} from '@cdo/apps/templates/instructions/DocumentationTab';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const ENVIRONMENT = 'javalab';
 

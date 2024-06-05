@@ -1,14 +1,16 @@
-import React, {useState, useEffect} from 'react';
 import cookies from 'js-cookie';
 import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
-import Button from '@cdo/apps/templates/Button';
-import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import React, {useState, useEffect} from 'react';
+
 import {Heading2, Heading3} from '@cdo/apps/componentLibrary/typography';
-import style from './hoc-guide-dialogue.module.scss';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
+import Button from '@cdo/apps/templates/Button';
 import {isEmail} from '@cdo/apps/util/formatValidation';
+import i18n from '@cdo/locale';
+
+import style from './hoc-guide-dialogue.module.scss';
 
 function HourOfCodeGuideEmailDialog({isSignedIn, unitId}) {
   const [isOpen, setIsOpen] = useState(true);
@@ -88,7 +90,7 @@ function HourOfCodeGuideEmailDialog({isSignedIn, unitId}) {
     <div>
       {isOpen && (
         <AccessibleDialog styles={style} onClose={onClose}>
-          <div tabIndex="0">
+          <div>
             <Heading2>{i18n.welcomeToDanceParty()}</Heading2>
           </div>
           <div className={style.middle}>

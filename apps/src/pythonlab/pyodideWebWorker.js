@@ -1,39 +1,71 @@
-import {loadPyodide} from 'pyodide';
+import {
+  getUpdatedSourceAndDeleteFiles,
+  importPackagesFromFiles,
+  resetGlobals,
+  writeSource,
+} from './pythonHelpers/pythonScriptUtils';
+import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
+import {loadPyodide, version} from 'pyodide';
 
 async function loadPyodideAndPackages() {
   self.pyodide = await loadPyodide({
-    indexURL: 'https://cdn.jsdelivr.net/pyodide/v0.24.1/full',
+    // /assets does not serve unhashed files, so we load from /blockly instead,
+    // which does serve the unhashed files. We need to serve the unhashed files because
+    // pyodide controls adding the filenames to the url we provide here.
+    indexURL: `/blockly/js/pyodide/${version}/`,
+    // pre-load numpy as it will frequently be used, our custom setup package, and matplotlib
+    // which our custom setup package patches.
+    packages: [
+      'numpy',
+      'matplotlib',
+      `/blockly/js/pyodide/${version}/pythonlab_setup-0.0.1-py3-none-any.whl`,
+    ],
   });
-  await self.pyodide.loadPackage(['numpy']);
-  self.pyodide.setStdout({
-    batched: msg => {
-      self.postMessage({type: 'sysout', message: msg, id: 'none'});
-    },
-  });
+  self.pyodide.setStdout(getStreamHandlerOptions('sysout'));
+  self.pyodide.setStderr(getStreamHandlerOptions('syserr'));
 }
 
 let pyodideReadyPromise = null;
+let pyodideGlobals = null;
 async function initializePyodide() {
   if (pyodideReadyPromise === null) {
     pyodideReadyPromise = loadPyodideAndPackages();
   }
   await pyodideReadyPromise;
+  pyodideGlobals = self.pyodide.globals.toJs();
 }
+
+// Get pyodide ready as soon as possible.
+initializePyodide();
 
 self.onmessage = async event => {
   // make sure loading is done
   await initializePyodide();
-  const {id, python, ...context} = event.data;
-  // The worker copies the context in its own "memory" (an object mapping name to values)
-  for (const key of Object.keys(context)) {
-    self[key] = context[key];
-  }
-  // Now is the easy part, the one that is similar to working in the main thread:
+  const {id, python, source} = event.data;
+  let results = '';
   try {
-    await self.pyodide.loadPackagesFromImports(python);
-    let results = await self.pyodide.runPythonAsync(python);
-    self.postMessage({type: 'run_complete', results, id});
+    writeSource(source, DEFAULT_FOLDER_ID, '', self.pyodide);
+    await importPackagesFromFiles(source, self.pyodide);
+    results = await self.pyodide.runPythonAsync(python);
   } catch (error) {
-    self.postMessage({type: 'error', error: error.message, id});
+    self.postMessage({type: 'error', message: error.message, id});
   }
+  const updatedSource = getUpdatedSourceAndDeleteFiles(
+    source,
+    id,
+    self.pyodide,
+    self.postMessage
+  );
+  self.postMessage({type: 'updated_source', message: updatedSource, id});
+  resetGlobals(self.pyodide, pyodideGlobals);
+  self.postMessage({type: 'run_complete', message: results, id});
 };
+
+// Return the options for sysout or syserr stream handler.
+function getStreamHandlerOptions(type) {
+  return {
+    batched: msg => {
+      self.postMessage({type: type, message: msg, id: 'none'});
+    },
+  };
+}

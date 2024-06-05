@@ -1,7 +1,4 @@
 import React from 'react';
-import {LOCAL_STORAGE, REMOTE_STORAGE} from '../music/constants';
-
-const baseUrl = window.location.origin + '/musiclab';
 
 const optionsList = [
   {
@@ -36,40 +33,51 @@ const optionsList = [
     ],
   },
   {
+    name: 'base-asset-url',
+    type: 'string',
+    description: 'Use a specific base asset URL.',
+  },
+  {
     name: 'library',
     type: 'string',
     description: 'Use a specific music library file.',
   },
   {
-    name: 'show-upload',
+    name: 'show-sound-filters',
     type: 'radio',
     values: [
-      {value: 'false', description: "Don't show upload option."},
-      {value: 'true', description: 'Show upload option.'},
+      {value: 'false', description: 'Hide sound filters.'},
+      {value: 'true', description: 'Show sound filters.'},
     ],
   },
   {
-    name: 'show-instructions',
+    name: 'sounds-panel-1-preview',
     type: 'radio',
     values: [
-      {value: 'false', description: "Don't show instructions."},
-      {value: 'true', description: 'Show instructions.'},
+      {
+        value: 'false',
+        description: 'Use original sounds panel with preview (default).',
+      },
+      {
+        value: 'true',
+        description: 'Use original sounds panel with preview on select.',
+      },
     ],
   },
   {
-    name: 'show-video',
+    name: 'sounds-panel-2',
     type: 'radio',
     values: [
-      {value: 'false', description: "Don't show video."},
-      {value: 'true', description: 'Show video.'},
+      {value: 'false', description: 'Use original sounds panel (default).'},
+      {value: 'true', description: 'Use new sounds panel.'},
     ],
   },
   {
-    name: 'storage-type',
+    name: 'pack-dialog-preview',
     type: 'radio',
     values: [
-      {value: LOCAL_STORAGE, description: 'Save to local storage.'},
-      {value: REMOTE_STORAGE, description: 'Save to remote storage (default).'},
+      {value: 'false', description: 'Use original pack dialog (default).'},
+      {value: 'true', description: 'Use pack dialog with preview on select.'},
     ],
   },
   {
@@ -96,6 +104,48 @@ const optionsList = [
     values: [
       {value: 'false', description: 'Disable keyboard shortcuts.'},
       {value: 'true', description: 'Enable keyboard shortcuts.'},
+    ],
+  },
+  {
+    name: 'player',
+    type: 'radio',
+    values: [
+      {value: 'sample', description: 'Use the sample player (legacy).'},
+      {value: 'tonejs', description: 'Use the ToneJS player (default).'},
+    ],
+  },
+  {
+    name: 'advanced-controls-enabled',
+    type: 'radio',
+    values: [
+      {
+        value: 'false',
+        description:
+          'Disable advanced controls for the ToneJS player (default).',
+      },
+      {
+        value: 'true',
+        description: 'Enable advanced controls for the ToneJS player.',
+      },
+    ],
+  },
+  {
+    name: 'timeline-layout-2',
+    type: 'radio',
+    values: [
+      {value: 'false', description: 'Original timeline (default).'},
+      {value: 'true', description: 'New timeline.'},
+    ],
+  },
+  {
+    name: 'clickable-text-with-glow',
+    type: 'radio',
+    values: [
+      {
+        value: 'false',
+        description: 'No glow for clickable text in instructions (default).',
+      },
+      {value: 'true', description: 'Glow for clickable text in instructions.'},
     ],
   },
 ];
@@ -189,7 +239,7 @@ export default class MusicMenu extends React.Component {
           userSelect: 'all',
         }}
       >
-        {baseUrl}?
+        ?
         {optionsList
           .map(option => {
             return (

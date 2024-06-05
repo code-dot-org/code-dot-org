@@ -1,0 +1,15 @@
+name 'gen-ai-customizing-prompt-explore-L7'
+editor_experiment ''
+display_name 'You Try: Make'
+description 'Choose at least 1 level to complete fully, then try the others!'
+
+sublevels
+level 'gen-ai-customizing-prompt-explore-L7A'
+level 'gen-ai-customizing-prompt-explore-L7B'
+level 'gen-ai-customizing-prompt-explore-L7C'
+level 'gen-ai-customizing-prompt-explore-L7D'
+level 'gen-ai-customizing-prompt-explore-L7E'
+
+markdown <<MARKDOWN
+
+MARKDOWN

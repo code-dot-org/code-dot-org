@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U4L5-Random PBT_2024",
     "teacher_markdown": "1. Multiplying the result from `Math.random()` by `6` and then adding `5` causes `firstNumber` to be assigned a random integer between `5` and `10`.\r\n\r\n2. The possible values for `thirdNumber` range from from `-5` to `24`.",
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T20:58:44.521+00:00\",\"changed\":[\"cloned from \\\"CSA U4L5-L3_2023\\\"\"],\"cloned_from\":\"CSA U4L5-L3_2023\"}]"

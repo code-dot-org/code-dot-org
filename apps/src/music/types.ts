@@ -15,3 +15,10 @@ export type LoadFinishedCallback = (
   loadTimeMs: number,
   soundsLoaded: number
 ) => void;
+
+export type UpdateLoadProgressCallback = (progress: number) => void;
+
+export type SoundLoadCallbacks = {
+  onLoadFinished?: LoadFinishedCallback;
+  updateLoadProgress?: UpdateLoadProgressCallback;
+};

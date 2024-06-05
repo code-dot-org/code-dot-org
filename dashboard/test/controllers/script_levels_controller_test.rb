@@ -10,6 +10,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
+    seed_deprecated_unit_fixtures
+
     @student = create :student
     @young_student = create :young_student
     @teacher = create :teacher
@@ -53,6 +55,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     @script = @custom_script
     @script_level = @custom_s1_l1
+    @level = @script_level.level
 
     in_development_unit = create(:script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
     in_development_lesson_group = create(:lesson_group, script: in_development_unit)
@@ -112,7 +115,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_response :success
 
     body = JSON.parse(response.body)
-    assert_equal({"levelData" => {"hello" => "there"}, "other" => "other", "preloadAssetList" => nil, "type" => "Maze", "appName" => "maze", "useRestrictedSongs" => false, "sharedBlocks" => []}, body)
+    assert_equal({"id" => level.id, "levelData" => {"hello" => "there"}, "other" => "other", "preloadAssetList" => nil, "type" => "Maze", "appName" => "maze", "useRestrictedSongs" => false, "sharedBlocks" => [], "usesProjects" => false, "exampleSolutions" => []}, body)
   end
 
   test 'should show script level for csp1-2020 lockable lesson with lesson plan' do
@@ -1093,22 +1096,22 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test 'end of HoC for a user is HOC endpoint' do
     stubs(:current_user).returns(@student)
-    assert_equal('//test.code.org/api/hour/finish/hourofcode', script_completion_redirect(Unit.find_by_name(Unit::HOC_NAME)))
+    assert_equal('//test.code.org/api/hour/finish/hourofcode', Unit.find_by_name(Unit::HOC_NAME).finish_url)
   end
 
   test 'post script redirect is HOC endpoint' do
     stubs(:current_user).returns(nil)
-    assert_equal('//test.code.org/api/hour/finish/hourofcode', script_completion_redirect(Unit.find_by_name(Unit::HOC_NAME)))
+    assert_equal('//test.code.org/api/hour/finish/hourofcode', Unit.find_by_name(Unit::HOC_NAME).finish_url)
   end
 
   test 'post script redirect is frozen endpoint' do
     stubs(:current_user).returns(nil)
-    assert_equal('//test.code.org/api/hour/finish/frozen', script_completion_redirect(Unit.find_by_name(Unit::FROZEN_NAME)))
+    assert_equal('//test.code.org/api/hour/finish/frozen', Unit.find_by_name(Unit::FROZEN_NAME).finish_url)
   end
 
   test 'post script redirect is starwars endpoint' do
     stubs(:current_user).returns(nil)
-    assert_equal('//test.code.org/api/hour/finish/starwars', script_completion_redirect(Unit.find_by_name(Unit::STARWARS_NAME)))
+    assert_equal('//test.code.org/api/hour/finish/starwars', Unit.find_by_name(Unit::STARWARS_NAME).finish_url)
   end
 
   test "show redirects admins to root" do

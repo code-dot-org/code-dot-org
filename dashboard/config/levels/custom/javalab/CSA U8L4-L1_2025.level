@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U8L4-Selection Sort PBT_2025",
     "teacher_markdown": "The number of comparisons made for the given 1D array will be 10.\r\n\r\nStudents should notice that the method selects the smallest element from the unsorted part of the array and swaps it with the first element of the unsorted part of the array. This approach results in the smallest element being gradually moved to the beginning of the array. The process repeats until the entire array is sorted.",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-17T00:40:53.052+00:00\",\"changed\":[\"cloned from \\\"CSA U8L4-L1_2023\\\"\"],\"cloned_from\":\"CSA U8L4-L1_2023\"}]"

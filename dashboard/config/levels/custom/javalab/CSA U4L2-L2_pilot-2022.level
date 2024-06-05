@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:31:54.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "##Investigate and Modify\r\n\r\nRun the program to observe the results.\r\n\r\nThen, experiment with the program by making the following modifications. Change one line at a time, then run the program after each change to observe the results.\r\n\r\n1. In `MyConsole.java`(#e7e8ea), change **Line 12** to `boolean result = firstTitle == thirdTitle;`(#e7e8ea) then run the program to observe the results. Why do you think this happened?\r\n\r\n2. In `MyConsole.java`(#e7e8ea), change **Line 12** to `boolean result = firstEvent.equals(thirdEvent);`(#e7e8ea) then run the program to observe the results. Why do you think this happened?\r\n\r\n3. In `Event.java`(#e7e8ea), look at the `equals()`(#e7e8ea) method. What do you notice about the condition? Try changing the condition to compare `capacity`(#e7e8ea) with `otherEvent.getCapacity()`(#e7e8ea) then run the program to observe the results. Why do you think this happened?",
@@ -19,12 +23,9 @@
         "tabOrder": 1
       }
     },
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:31:54.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:31:54.860+00:00\",\"changed\":[\"cloned from \\\"CSA U4L2-L2_2022\\\"\"],\"cloned_from\":\"CSA U4L2-L2_2022\"},{\"changed_at\":\"2022-12-05 16:30:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-12-05 16:30:07 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

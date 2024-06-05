@@ -1,40 +1,43 @@
-import $ from 'jquery';
-import React from 'react';
-import ReactDOM from 'react-dom';
-import _ from 'lodash';
-import Hammer from 'hammerjs';
-
-import {singleton as studioApp} from '../../StudioApp';
-import craftMsg from '../locale';
-import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {
   GameController,
   FacingDirection,
   utils as CraftUtils,
 } from '@code-dot-org/craft';
-import dom from '../../dom';
-import {trySetLocalStorage} from '@cdo/apps/utils';
-import eventsLevelbuilderOverrides from './eventsLevelbuilderOverrides';
-import MusicController from '../../MusicController';
+import Hammer from 'hammerjs';
+import $ from 'jquery';
+import _ from 'lodash';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import AppView from '../../templates/AppView';
-import CraftVisualizationColumn from './CraftVisualizationColumn';
-import {ENTITY_ACTION_BLOCKS, ENTITY_TARGET_ACTION_BLOCKS} from './blocks';
-import {getStore} from '../../redux';
-import Sounds from '../../Sounds';
-import {TestResults} from '../../constants';
-import trackEvent from '../../util/trackEvent';
-import {captureThumbnailFromCanvas} from '../../util/thumbnail';
-import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+
+import {getCodeBlocks} from '@cdo/apps/blockly/utils';
+import PlayerSelectionDialog from '@cdo/apps/craft/PlayerSelectionDialog';
+import reducers from '@cdo/apps/craft/redux';
 import {ARROW_KEY_NAMES, handlePlayerSelection} from '@cdo/apps/craft/utils';
 import {
   showArrowButtons,
   hideArrowButtons,
   dismissSwipeOverlay,
 } from '@cdo/apps/templates/arrowDisplayRedux';
-import PlayerSelectionDialog from '@cdo/apps/craft/PlayerSelectionDialog';
-import reducers from '@cdo/apps/craft/redux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import {trySetLocalStorage} from '@cdo/apps/utils';
+
+import {TestResults} from '../../constants';
+import dom from '../../dom';
+import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import MusicController from '../../MusicController';
+import {getStore} from '../../redux';
+import Sounds from '../../Sounds';
+import {singleton as studioApp} from '../../StudioApp';
+import AppView from '../../templates/AppView';
 import {muteCookieWithLevel} from '../../util/muteCookieHelpers';
+import {captureThumbnailFromCanvas} from '../../util/thumbnail';
+import trackEvent from '../../util/trackEvent';
+import craftMsg from '../locale';
+
+import {ENTITY_ACTION_BLOCKS, ENTITY_TARGET_ACTION_BLOCKS} from './blocks';
+import CraftVisualizationColumn from './CraftVisualizationColumn';
+import eventsLevelbuilderOverrides from './eventsLevelbuilderOverrides';
 
 const MEDIA_URL = '/blockly/media/craft/';
 
@@ -764,7 +767,11 @@ Craft.executeUserCode = function () {
   var appCodeOrgAPI = Craft.gameController.codeOrgAPI;
   appCodeOrgAPI.startCommandCollection();
   // Run user generated code, calling appCodeOrgAPI
-  const code = Blockly.getWorkspaceCode();
+  let codeBlocks = getCodeBlocks();
+  if (studioApp().initializationBlocks) {
+    codeBlocks = studioApp().initializationBlocks.concat(codeBlocks);
+  }
+  const code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
 
   const evalApiMethods = {
     moveForward: function (blockID) {

@@ -65,23 +65,22 @@
     }
   ]
 
-.carousel-wrapper#educator_resources
-  .carousel.blocks
-    .slides
-      - resource_item.each do |resource_item|
-        .slide
-          .slide-content
-            .action-block.action-block--one-col
-              .content-wrapper
-                %p.overline-two
-                  = resource_item[:overline]
-                %h3
-                  = resource_item[:title]
-                %img{src: "#{resource_item[:image]}", alt: ""}
-                %p.body-three.no-margin-bottom
-                  = resource_item[:desc]
-              .content-footer
-                %a.link-button{href: "#{resource_item[:url]}", target: "_blank", rel: "noopener noreferrer", aria:{label: resource_item[:aria_label]}}
-                  = resource_item[:button_label]
+.carousel-wrapper
+  %swiper-container.ai-educator-resources.three-col{navigation: "true", "navigation-next-el": ".nav-next-ai-educator-resources", "navigation-prev-el": ".nav-prev-ai-educator-resources", init: "false"}
+    - resource_item.each do |resource_item|
+      %swiper-slide
+        .action-block.action-block--one-col.flex-space-between
+          .content-wrapper
+            %p.overline-two
+              = resource_item[:overline]
+            %h3
+              = resource_item[:title]
+            %img{src: "#{resource_item[:image]}", alt: ""}
+            %p.body-three.no-margin-bottom
+              = resource_item[:desc]
+          .content-footer
+            %a.link-button{href: "#{resource_item[:url]}", target: "_blank", rel: "noopener noreferrer", aria:{label: resource_item[:aria_label]}}
+              = resource_item[:button_label]
 
-  = view :carousel_pagination, carousel_id: "educator_resources-pagination", carousel_index: "4"
+  %button.swiper-nav-prev.nav-prev-ai-educator-resources
+  %button.swiper-nav-next.nav-next-ai-educator-resources

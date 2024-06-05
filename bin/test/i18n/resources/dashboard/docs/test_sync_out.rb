@@ -7,14 +7,13 @@ describe I18n::Resources::Dashboard::Docs::SyncOut do
 
   let(:programming_env) {'expected_programming_env'}
 
-  let(:crowdin_locale) {'expected_crowdin_locale'}
   let(:i18n_locale) {'expected_i18n_locale'}
-  let(:language) {{crowdin_name_s: crowdin_locale, locale_s: i18n_locale}}
+  let(:language) {{locale_s: i18n_locale}}
 
-  let(:crowdin_locale_dir) {CDO.dir('i18n/locales', crowdin_locale, 'docs')}
+  let(:crowdin_locale_dir) {CDO.dir('i18n/crowdin', i18n_locale, 'docs')}
   let(:i18n_locale_dir) {CDO.dir('i18n/locales', i18n_locale, 'docs')}
 
-  let(:crowdin_file_path) {CDO.dir('i18n/locales', crowdin_locale, "docs/#{programming_env}.json")}
+  let(:crowdin_file_path) {CDO.dir('i18n/crowdin', i18n_locale, "docs/#{programming_env}.json")}
   let(:i18n_original_file_path) {CDO.dir("i18n/locales/original/docs/#{programming_env}.json")}
   let(:target_i18n_file_path) {CDO.dir('dashboard/config/locales', "programming_environments.#{i18n_locale}.json")}
 

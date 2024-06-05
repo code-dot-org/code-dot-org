@@ -37,9 +37,7 @@ class HooksUtils
   end
 
   class << self
-    private
-
-    def sanitize_file_paths(output)
+    private def sanitize_file_paths(output)
       return output.split("\n").map(&:chomp).map {|x| File.expand_path("../../../#{x}", __FILE__)}
     end
   end

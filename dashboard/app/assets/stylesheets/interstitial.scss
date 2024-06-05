@@ -1,5 +1,5 @@
-@import 'color';
-@import 'font';
+@import "color";
+@import "font";
 
 #terms-modal,
 #school-info-modal,
@@ -9,13 +9,15 @@
 }
 #terms-modal .modal-content,
 #school-info-modal .modal-content,
-#race-modal .modal-content {
+#race-modal .modal-content,
+#student-information-modal .modal-content {
   margin: 0 20px;
   padding: 0 15px;
 }
 #terms-modal .modal-content p,
 #school-info-modal .modal-content p,
-#race-modal .modal-content p {
+#race-modal .modal-content p,
+#student-information-modal .modal-content p {
   font-size: 12px;
   color: $default_text;
 }
@@ -76,7 +78,8 @@
 }
 #terms-modal .primary-button,
 #school-info-modal .primary-button,
-#race-modal .primary-button {
+#race-modal .primary-button,
+#student-information-modal .primary-button {
   background-color: $orange;
   border: 1px solid $orange;
   color: $white;
@@ -88,7 +91,8 @@
   margin-top: 10px;
 }
 
-#race-modal .primary-button {
+#race-modal .primary-button,
+#student-information-modal .primary-button {
   background-color: $brand_secondary_default;
   border-color: $brand_secondary_default;
   color: $neutral_white;
@@ -135,7 +139,9 @@ $almost_white: #eee;
 }
 
 @media (max-width: 600px) {
-  #terms-modal, #race-modal, #school-info-modal {
+  #terms-modal,
+  #race-modal,
+  #school-info-modal {
     width: 400px;
     left: 70%;
   }
@@ -165,4 +171,75 @@ $almost_white: #eee;
     margin: 25px 0 0 0;
     padding: 10px 25px;
   }
+}
+#student-information-modal {
+  max-height: none;
+}
+
+#student-information-modal select {
+  margin-bottom: 5px;
+}
+
+#student-information-modal #edit_user .form-group {
+  margin-bottom: 10px;
+}
+
+#student-information-modal select {
+  width: 100%;
+}
+
+#student-information-modal #user_gender_student_input {
+  width: 96%;
+}
+
+#student-information-modal #information_form_buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+#student-information-modal {
+  width: 450px;
+}
+
+#student-information-modal .header-divider {
+  margin: 15px 0;
+  border-color: $lighter_gray;
+}
+
+#student-information-modal .label-title {
+  font-weight: bold;
+}
+
+#student-information-modal .dismiss-button {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  color: $neutral_dark20;
+  font-size: 30px;
+  background-color: transparent;
+  border-color: transparent;
+  padding: 0;
+
+  &:hover {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+
+  &:active {
+    border: none;
+  }
+}
+
+#student-information-modal #sign-out-btn {
+  background-color: transparent;
+  border: 1px solid $black;
+  color: $black;
+  text-decoration: none;
+  line-height: 1.5rem;
+  height: auto;
+}
+
+#student-information-modal .required-message {
+  font-size: 12px;
 }

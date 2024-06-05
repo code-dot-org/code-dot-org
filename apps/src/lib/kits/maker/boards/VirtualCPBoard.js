@@ -181,10 +181,6 @@ class VirtualSensor extends VirtualComponent {
 
   start() {}
   setScale() {}
-
-  getAveragedValue() {
-    return 0;
-  }
 }
 
 class VirtualThermometer extends VirtualComponent {

@@ -1,25 +1,44 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './progress-table-v2.module.scss';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+
+import i18n from '@cdo/locale';
+
 import FontAwesome from '../FontAwesome';
 import {lessonHasLevels} from '../progress/progressHelpers';
+
+import LessonTitleTooltip, {getTooltipId} from './LessonTitleTooltip';
+
+import styles from './progress-table-v2.module.scss';
 import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
 
-const getUninteractiveLessonColumnHeader = lesson => {
+const getUninteractiveLessonColumnHeader = (lesson, allLocked) => {
   return (
     <div
-      className={classNames(styles.gridBox, styles.lessonHeaderCell)}
+      className={styles.lessonHeaderCell}
       key={lesson.id}
+      data-tip
+      data-for={getTooltipId(lesson)}
     >
-      {lesson.relative_position}
+      <LessonTitleTooltip lesson={lesson} />
+      {!lesson.lockable && lesson.relative_position}
+      {lesson.lockable && (
+        <FontAwesome
+          icon={allLocked ? 'lock' : 'lock-open'}
+          title={i18n.locked()}
+        />
+      )}
     </div>
   );
 };
 
 const getSkeletonLessonHeader = lessonId => (
   <div
-    className={classNames(styles.gridBox, styles.lessonHeaderCell)}
+    aria-label={i18n.loadingLesson()}
+    className={classNames(
+      styles.lessonHeaderCell,
+      styles.lessonHeaderCellContainer
+    )}
     key={lessonId}
   >
     <div
@@ -34,29 +53,39 @@ const getSkeletonLessonHeader = lessonId => (
 export default function LessonProgressColumnHeader({
   addExpandedLesson,
   lesson,
+  allLocked,
 }) {
   if (lesson.isFake) {
     return getSkeletonLessonHeader(lesson.id);
   }
-  if (!lessonHasLevels(lesson)) {
-    return getUninteractiveLessonColumnHeader(lesson);
+  if (!lessonHasLevels(lesson) || lesson.lockable) {
+    return getUninteractiveLessonColumnHeader(lesson, allLocked);
   }
   return (
-    <div
-      className={classNames(
-        styles.gridBox,
-        styles.lessonHeaderCell,
-        styles.pointerMouse
-      )}
-      onClick={() => addExpandedLesson(lesson.id)}
+    <button
+      id={'ui-test-lesson-header-' + lesson.relative_position}
+      className={styles.lessonHeaderCellInteractive}
+      data-tip
+      data-for={getTooltipId(lesson)}
+      onClick={() => addExpandedLesson(lesson)}
+      aria-label={lesson.title}
+      aria-expanded={false}
+      type="button"
+      tabIndex={0}
     >
-      <FontAwesome icon="caret-right" className={styles.lessonHeaderCaret} />
+      <LessonTitleTooltip lesson={lesson} />
+      <FontAwesome
+        icon="caret-right"
+        className={styles.lessonHeaderCaret}
+        title={i18n.expand()}
+      />
       {lesson.relative_position}
-    </div>
+    </button>
   );
 }
 
 LessonProgressColumnHeader.propTypes = {
   lesson: PropTypes.object.isRequired,
   addExpandedLesson: PropTypes.func.isRequired,
+  allLocked: PropTypes.bool,
 };

@@ -1,10 +1,12 @@
 import React from 'react';
-import StudentsBeyondHoc from './StudentsBeyondHoc';
-import {reduxStore} from '@cdo/storybook/decorators';
 import {Provider} from 'react-redux';
 
+import {reduxStore} from '@cdo/storybook/decorators';
+
+import StudentsBeyondHoc from './StudentsBeyondHoc';
+
 export default {
-  title: 'Congrats/StudentsBeyondHoc',
+  title: 'Congrats/StudentsBeyondHoc', // eslint-disable-line storybook/no-title-property-in-meta
   component: StudentsBeyondHoc,
 };
 

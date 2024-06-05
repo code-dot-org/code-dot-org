@@ -168,23 +168,6 @@ class Pd::ProfessionalLearningLandingControllerTest < ActionController::TestCase
 
   test_redirect_to_sign_in_for :index
 
-  test 'teachers without enrollments are redirected' do
-    new_teacher = create :teacher
-    sign_in new_teacher
-
-    get :index
-    assert_redirected_to CDO.code_org_url('educate/professional-learning', CDO.default_scheme)
-  end
-
-  test 'teachers with a plc enrollment (and no workshop enrollment) are not redirected' do
-    no_workshop_teacher = create :teacher
-    create :plc_user_course_enrollment, user: no_workshop_teacher, plc_course: (create :plc_course, name: 'Course with no workshop')
-
-    load_pl_landing no_workshop_teacher
-
-    assert_empty Pd::Enrollment.for_user(no_workshop_teacher)
-  end
-
   test 'courses are sorted as expected' do
     prepare_scenario
 
@@ -197,6 +180,164 @@ class Pd::ProfessionalLearningLandingControllerTest < ActionController::TestCase
 
     response = assigns(:landing_page_data)
     assert_equal(['CSP Support', 'ECS Support', 'Bills Fandom 101'], response[:summarized_plc_enrollments].map {|enrollment| enrollment[:courseName]})
+  end
+
+  test 'id of current year application is passed down' do
+    prepare_scenario
+
+    application = create :pd_teacher_application, user: @teacher, application_year: Pd::SharedApplicationConstants::APPLICATION_CURRENT_YEAR
+
+    load_pl_landing @teacher
+
+    response = assigns(:landing_page_data)
+    assert_equal application.id, response[:current_year_application_id]
+  end
+
+  test 'has_enrolled_in_workshops is true when user is enrolled workshops' do
+    prepare_scenario
+
+    load_pl_landing @teacher
+
+    response = assigns(:landing_page_data)
+    assert response[:has_enrolled_in_workshop]
+  end
+
+  test 'facilitated workshops are passed down' do
+    prepare_scenario
+
+    @teacher.permission = UserPermission::FACILITATOR
+    workshop = create :pd_workshop, facilitators: [@teacher]
+    @teacher.reload
+
+    load_pl_landing @teacher
+
+    response = assigns(:landing_page_data)
+    assert_equal 1, response[:workshops_as_facilitator].length
+    assert_equal workshop.course_name, response[:workshops_as_facilitator].first[:course]
+  end
+
+  test 'organized workshops are passed down' do
+    prepare_scenario
+
+    @teacher.permission = UserPermission::WORKSHOP_ORGANIZER
+    workshop = create :pd_workshop, organizer: @teacher
+
+    load_pl_landing @teacher
+
+    response = assigns(:landing_page_data)
+    assert_equal 1, response[:workshops_as_organizer].length
+    assert_equal workshop.course_name, response[:workshops_as_organizer].first[:course]
+  end
+
+  test 'workshops for regional partner are passed down' do
+    prepare_scenario
+
+    regional_partner = create :regional_partner
+    @teacher.regional_partners << regional_partner
+    workshop = create :pd_workshop, regional_partner: regional_partner
+
+    load_pl_landing @teacher
+
+    response = assigns(:landing_page_data)
+    assert_equal 1, response[:workshops_for_regional_partner].length
+    assert_equal workshop.course_name, response[:workshops_for_regional_partner].first[:course]
+  end
+
+  test 'progress in PL courses is passed down' do
+    prepare_scenario
+
+    # User has completed all of this unit
+    pl_unit1 = create :pl_unit, :with_lessons
+    create :user_script, user: @teacher, script: pl_unit1
+    unit1_level1 = create :level
+    create :script_level, script: pl_unit1, levels: [unit1_level1], lesson: pl_unit1.lessons.first
+    create :user_level, user: @teacher, level: unit1_level1, script: pl_unit1, best_result: ActivityConstants::MINIMUM_PASS_RESULT
+    unit1_level2 = create :level
+    create :script_level, script: pl_unit1, levels: [unit1_level2], lesson: pl_unit1.lessons.first
+    create :user_level, user: @teacher, level: unit1_level2, script: pl_unit1, best_result: ActivityConstants::MINIMUM_PASS_RESULT
+    pl_unit1.reload
+
+    # User has completed some of this unit
+    pl_unit2 = create :pl_unit, :with_lessons
+    create :user_script, user: @teacher, script: pl_unit2
+    unit2_level1 = create :level
+    create :script_level, script: pl_unit2, levels: [unit2_level1], lesson: pl_unit2.lessons.first
+    create :user_level, user: @teacher, level: unit2_level1, script: pl_unit2, best_result: ActivityConstants::MINIMUM_PASS_RESULT
+    unit2_level2 = create :level
+    create :script_level, script: pl_unit2, levels: [unit2_level2], lesson: pl_unit2.lessons.first
+    pl_unit2.reload
+
+    load_pl_landing @teacher
+
+    response = assigns(:landing_page_data)
+    assert_equal 2, response[:pl_courses_started].length
+    assert_equal([pl_unit1.name, pl_unit2.name], response[:pl_courses_started].map {|u| u[:name]})
+    assert_equal 100, response[:pl_courses_started].find {|u| u[:name] == pl_unit1.name}[:percent_completed]
+    assert_equal 50, response[:pl_courses_started].find {|u| u[:name] == pl_unit2.name}[:percent_completed]
+  end
+
+  test 'user permissions are passed down' do
+    prepare_scenario
+
+    @teacher.permission = UserPermission::PROGRAM_MANAGER
+    @teacher.permission = UserPermission::FACILITATOR
+
+    load_pl_landing @teacher
+
+    response = assigns(:landing_page_data)
+    assert_equal ['authorized_teacher', 'program_manager', 'facilitator'].sort, response[:user_permissions].sort
+  end
+
+  test 'courses as facilitator are passed down' do
+    prepare_scenario
+
+    create :pd_course_facilitator, facilitator: @teacher, course: @csd_workshop.course
+    create :pd_course_facilitator, facilitator: @teacher, course: @csp_workshop.course
+
+    load_pl_landing @teacher
+
+    response = assigns(:landing_page_data)
+    assert_equal [@csd_workshop.course, @csp_workshop.course], response[:courses_as_facilitator]
+  end
+
+  test 'workshop admins see application dashboard links' do
+    workshop_admin = create :workshop_admin
+    load_pl_landing workshop_admin
+    assert_select '.extra-links' do
+      assert_select 'a[href=?]', '/pd/application_dashboard'
+    end
+  end
+
+  test 'workshop admins see workshop dashboard links' do
+    workshop_admin = create :workshop_admin
+    load_pl_landing workshop_admin
+    assert_select '.extra-links' do
+      assert_select 'a[href=?]', '/pd/workshop_dashboard'
+    end
+  end
+
+  test "workshop organizers do not see extra links box" do
+    workshop_organizer = create :workshop_organizer
+    load_pl_landing workshop_organizer
+    assert_select '.extra-links', count: 0
+  end
+
+  test "facilitators do not see extra links box" do
+    facilitator = create :facilitator
+    load_pl_landing facilitator
+    assert_select '.extra-links', count: 0
+  end
+
+  test "program managers do not see extra links box" do
+    program_manager = create :program_manager
+    load_pl_landing program_manager
+    assert_select '.extra-links', count: 0
+  end
+
+  test "teachers with no extra permissions do not see extra links box" do
+    teacher = create :teacher
+    load_pl_landing teacher
+    assert_select '.extra-links', count: 0
   end
 
   def go_to_workshop(workshop, teacher)

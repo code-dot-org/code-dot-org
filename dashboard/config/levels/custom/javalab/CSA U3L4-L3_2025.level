@@ -766,7 +766,8 @@
       ]
     ],
     "teacher_markdown": "Students should notice that the `paintAndMove()` method uses a `for` loop to traverse the 1D array `paintColors`. It has the same components and functionality as a `while` loop since it has a variable to keep track of the index, which is increased by a set amount until it reaches the end of the 1D array.\r\n\r\nWhen adding additional paint colors, this increases the number of times the `LoopPainter` paints and moves since it goes through each element in the 1D array.",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-16T23:52:28.887+00:00\",\"changed\":[\"cloned from \\\"CSA U3L4-L3_2023\\\"\"],\"cloned_from\":\"CSA U3L4-L3_2023\"}]"

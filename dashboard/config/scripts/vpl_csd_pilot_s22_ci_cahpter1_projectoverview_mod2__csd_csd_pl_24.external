@@ -1,0 +1,70 @@
+name 'VPL-CSD-PILOT-S22-CI-Cahpter1-ProjectOverview-mod2_-csd_CSD-PL-24'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Chapter 1 Project
+<img src="https://images.code.org/5c7f5731f419113f89a84845e3da0d7c-image-1711664715459.25.12 PM.png" alt="A website with a resume for a user named Alana" width="300px" style="float:right; margin-left:20px;padding-right: 10px;">
+
+#### <a href="https://studio.code.org/s/csd2-2024/lessons/14" target="blank" rel="noopener noreferrer">Lesson Plan</a>
+
+#### Chapter 1 of the Web Development unit concludes with a multi-lesson project where students will use the skills they have learned throughout the unit to create and design a web page for a user. They will be able to choose from several different users with distinct needs to style their web page.
+
+#### Students begin their project by using the Problem Solving Process to help them determine how they will organize the content of a user’s web page. Students then use CSS classes and flexbox to organize their user’s web page in Web Lab. Optionally, after engaging in a formal feedback process, they may change their web pages based on feedback before reflecting on their process.
+
+## Project Options
+
+#### Read over the options below, then open the project resources for the option of your choice.
+
+#### **Option 1 - Easy:** Students add classes and flexbox to web page content that is already organized with `<div>` elements. Choose this option if you don’t have time available to allow your students to either alter the code that will be brought over from the Lesson 10 mini-project or build a new web page for a new user from scratch.
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 18px; font-weight: bold;">Option 1 Project Resources</summary>
+<div style="margin-top: 20px; margin-left: 5px; margin-right: 20px; padding-bottom:5px;">
+
+* #### <a href="https://docs.google.com/document/d/1llotpD2fYz5CdLkEiQb-ouO1bKtobBh2UyYGfh0uSH8/edit?usp=sharing" target="blank" rel="noopener noreferrer">Option 1 Activity Guide</a><br>
+* #### <a href="https://docs.google.com/document/d/1MEan92ixZ7aLrRMjUu1h8L0bJg2DfeHf1KX_rWANYmo/edit?usp=sharing" target="blank" rel="noopener noreferrer">Option 1 Project Rubric</a>
+* ####  <a href="https://docs.google.com/document/d/1T0-5a1gYerxs4rfu6ktlZpzBnp2NaN341CHPUP0KZQs/edit?usp=sharing" target="blank" rel="noopener noreferrer">Option 1 Project Student Checklist</a>
+</div></details>
+<br>
+
+#### **Option 2** - Intermediate: Students add `div` tags, classes, and Flexbox to the webpage they styled for Lesson 10. Choose this option if your students are up for the challenge and you have the extra time (possibly 2 days) to allow students to shift their HTML code, iterating on their HTML to make their page look as their user requests.
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 18px; font-weight: bold;">Option 2 Project Resources</summary>
+<div style="margin-top: 20px; margin-left: 5px; margin-right: 20px; padding-bottom:5px;">
+
+* #### <a href="https://docs.google.com/document/d/1VwEzTDsVaIi8oYILUxdUeEe8DzH00hRpgKvwXUQ6hB4/view" target="blank" rel="noopener noreferrer">Option 2 Activity Guide</a>
+* #### <a href="https://docs.google.com/document/d/1h4LafqbTvxdpygc1jmpNuQ_ngxLDIuoKbIuk2K-5Fp4/view" target="blank" rel="noopener noreferrer">Option 2 Project Rubric</a>
+* #### <a href="https://docs.google.com/document/d/1Rxz-8GAoLLJn8zsy_NmwZ5UJ7WND1qzKKxefbxa6zbg/view" target="blank" rel="noopener noreferrer">Option 2 Project Student Checklist</a>
+</div></details>
+<br>
+
+#### **Option 3** - Challenging: Students create a webpage for a new user from scratch. Choose this option if you have at least 2-3 days to dedicate to this project and would like students to have the experience of building a webpage from beginning to end without breaks in between the process.
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 18px; font-weight: bold;">Option 3 Project Resources</summary>
+<div style="margin-top: 20px; margin-left: 5px; margin-right: 20px; padding-bottom:5px;">
+
+* #### <a href="https://docs.google.com/document/d/1lEq51w4Ldm4xetEsoq9WIMTDbyhvIp-LknibXGFmCRg/view" target="blank" rel="noopener noreferrer">Option 3 Activity Guide</a>
+* #### <a href="https://docs.google.com/document/d/1ACaiFhEAMabueHNVEYQKz8YRVHOXqKPHjpOKej8XvHU/view" target="blank" rel="noopener noreferrer">Option 3 Project Rubric</a>
+* #### <a href="https://docs.google.com/document/d/1xb5xJyp2QjOrHAkm5bMMGexJWPosC-Off32-mwwL-Fg/view" target="blank" rel="noopener noreferrer">Option 3 Project Student Checklist</a>
+</div></details>
+<br>
+
+## Pacing Recommendation
+
+#### If you are short on time, this project can be used as way to wrap up the unit. This project can also be expanded out to include a student presentation if you have the time available. 
+
+## Sample Student Projects
+
+#### Click the images below to view the sample projects in a new tab.
+
+<div style="float: left; text-align:center;"><strong>Ken's Soccer Club</strong><br /><a href="https://studio.code.org/projects/weblab/6dmaYZIItR7ixewgOyztK5pq3dkbY6ta0aQ8mDrb7l0/view" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin-right: 25px; margin-bottom:10px;" src="https://images.code.org/5db832f7c38ca16ace6faa4e8e422993-image-1711665052786.30.26 PM.png" width="280px"; alt="A web page for a soccer club"></a></div>
+
+<div style="float: left; text-align:center;"><strong>Denzel's Delights</strong><br /><a href="https://studio.code.org/projects/weblab/DV1U_Ywcb8w858vOTg2USHx9_1XYVU-31ZyHMpP5HrQ/view" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin-right: 25px; margin-bottom:10px;" src="https://images.code.org/2bbfe0a5695f08ceb20d716fb63f6437-image-1711665079431.30.10 PM.png" width="250px" alt="A web page for recipes"></a></div>
+
+<div style="float: left; text-align:center;"><strong>Alana's Resume</strong><br /><a href="https://studio.code.org/projects/weblab/zvk_bjQYjdQvtDBJZdXLa_IZygoZU57SGq1_GTGIkv8/view" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin-right: 25px; margin-bottom:10px;" src="https://images.code.org/349aea0117223bfd4956095db7c8986b-image-1711665154547.29.51 PM.png" width="250px" alt="A web page for a resume"></a></div>
+
+<div style="clear:both"/>
+MARKDOWN

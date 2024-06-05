@@ -23,7 +23,7 @@ describe I18n::Resources::Dashboard::CourseContent::SyncOut do
   describe '.perform' do
     let(:perform_sync_out) {described_class.perform}
 
-    let(:language) {{crowdin_name_s: 'expected Crowdin locale'}}
+    let(:language) {{locale_s: 'expected_locale'}}
 
     before do
       I18n::Metrics.stubs(:report_runtime).yields(nil)
@@ -193,11 +193,10 @@ describe I18n::Resources::Dashboard::CourseContent::SyncOut do
   describe '#i18n_data_of' do
     let(:i18n_data_of_language) {described_instance.send(:i18n_data_of, language, crowdin_locale_dir)}
 
-    let(:crowdin_locale) {'expected_crowdin_locale'}
     let(:i18n_locale) {'expected_i18n_locale'}
-    let(:language) {{crowdin_name_s: crowdin_locale, locale_s: i18n_locale}}
+    let(:language) {{locale_s: i18n_locale}}
 
-    let(:crowdin_locale_dir) {CDO.dir('i18n/locales', crowdin_locale, 'course_content')}
+    let(:crowdin_locale_dir) {CDO.dir('i18n/crowdin', i18n_locale, 'course_content')}
 
     let(:level) {'expected_level_instance'}
     let(:level_url) {'expected_level_url'}
@@ -300,9 +299,8 @@ describe I18n::Resources::Dashboard::CourseContent::SyncOut do
   describe '#distribute_level_content' do
     let(:distribute_level_content) {described_instance.send(:distribute_level_content, language)}
 
-    let(:crowdin_locale) {'expected_crowdin_locale'}
     let(:i18n_locale) {'expected_i18n_locale'}
-    let(:language) {{crowdin_name_s: crowdin_locale, locale_s: i18n_locale}}
+    let(:language) {{locale_s: i18n_locale}}
     let(:level_type) {'expected_type'}
     let(:level_type_i18n_data) {{'level_type_1i8n_key' => 'level_type_1i8n_val'}}
     let(:i18n_data) {{level_type => level_type_i18n_data}}
@@ -310,7 +308,7 @@ describe I18n::Resources::Dashboard::CourseContent::SyncOut do
     let(:expected_dashboard_i18n_data) {{i18n_locale => {'data' => i18n_data}}}
     let(:expected_target_i18n_file_format) {'json'}
 
-    let(:crowdin_locale_dir) {CDO.dir('i18n/locales', crowdin_locale, 'course_content')}
+    let(:crowdin_locale_dir) {CDO.dir('i18n/crowdin', i18n_locale, 'course_content')}
     let(:target_i18n_file_path) {CDO.dir("dashboard/config/locales/#{level_type}.#{i18n_locale}.#{expected_target_i18n_file_format}")}
 
     let(:expect_i18n_data_collecting) do
@@ -414,13 +412,11 @@ describe I18n::Resources::Dashboard::CourseContent::SyncOut do
   describe '#distribute_localization_of' do
     let(:distribute_localization) {described_instance.send(:distribute_localization_of, type, language)}
 
-    let(:crowdin_locale) {'English'}
     let(:i18n_locale) {'en-US'}
-
     let(:type) {'expected_type'}
-    let(:language) {{crowdin_name_s: crowdin_locale, locale_s: i18n_locale}}
+    let(:language) {{locale_s: i18n_locale}}
 
-    let(:crowdin_file_path) {CDO.dir('i18n/locales', crowdin_locale, "dashboard/#{type}.yml")}
+    let(:crowdin_file_path) {CDO.dir('i18n/crowdin', i18n_locale, "dashboard/#{type}.yml")}
     let(:i18n_file_path) {CDO.dir('i18n/locales', i18n_locale, "dashboard/#{type}.yml")}
     let(:target_i18n_file_path) {CDO.dir("dashboard/config/locales/#{type}.#{i18n_locale}.yml")}
 

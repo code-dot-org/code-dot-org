@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U5L2-2D Arrays PBT_2025",
     "teacher_markdown": "The `setGrade()` method updates the grade for a specific student in a specific week. The parameters `row` represents the week, `col` represents the student, and `newValue` represents the new grade to set.\r\n\r\nFor example, if we wanted to change the grade of the third student in the second week to a score of `90`, we would call the `setGrade()` method like this:\r\n\r\n```\r\nmsHamilton.setGrade(1, 2, 90);\r\n```",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-17T00:13:28.094+00:00\",\"changed\":[\"cloned from \\\"CSA U5L2-L3_2023\\\"\"],\"cloned_from\":\"CSA U5L2-L3_2023\"}]"

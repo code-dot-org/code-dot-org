@@ -5,6 +5,7 @@
     "preload_asset_list": null,
     "background": "music-black",
     "level_data": {
+      "library": "intro2024",
       "text": "First, please play one sound.",
       "toolbox": {
         "blocks": {

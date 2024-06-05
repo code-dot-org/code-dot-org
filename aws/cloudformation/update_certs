@@ -44,7 +44,11 @@ begin
   # raise 'new cert'
 
   CDO.log.info "Checking for existing certificate for #{common_name}..."
-  Acmesmith::Command.start ['current', common_name] rescue raise 'cert not found'
+  begin
+    Acmesmith::Command.start ['current', common_name]
+  rescue
+    raise 'cert not found'
+  end
 
   CDO.log.info "Existing certificate found, checking expiration..."
   expiration_date = get_certificate_expiration(common_name)

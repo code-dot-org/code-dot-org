@@ -27,7 +27,7 @@ require_relative '../../../dashboard/config/environment'
 # Please note that we _did_ see some impact to database performance while running
 # this script, even on the upgraded HoC db instance.
 
-CDO.log = Logger.new(STDOUT)
+CDO.log = Logger.new($stdout)
 ActiveRecord::Base.record_timestamps = false
 
 options = {actually_update: false}

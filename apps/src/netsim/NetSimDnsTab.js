@@ -2,10 +2,11 @@
  * @overview UI controller for the DNS tab in the left column.
  */
 import $ from 'jquery';
-var markup = require('./NetSimDnsTab.html.ejs');
+
 var DnsMode = require('./NetSimConstants').DnsMode;
-var NetSimDnsModeControl = require('./NetSimDnsModeControl');
 var NetSimDnsManualControl = require('./NetSimDnsManualControl');
+var NetSimDnsModeControl = require('./NetSimDnsModeControl');
+var markup = require('./NetSimDnsTab.html.ejs');
 var NetSimDnsTable = require('./NetSimDnsTable');
 var NetSimGlobals = require('./NetSimGlobals');
 

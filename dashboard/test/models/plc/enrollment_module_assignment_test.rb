@@ -50,9 +50,7 @@ class Plc::EnrollmentModuleAssignmentTest < ActiveSupport::TestCase
     assert_equal Plc::EnrollmentModuleAssignment::COMPLETED, module_assignment.status
   end
 
-  private
-
-  def track_progress_for_level(level, result)
+  private def track_progress_for_level(level, result)
     User.track_level_progress(
       user_id: @user.id,
       level_id: level.id,

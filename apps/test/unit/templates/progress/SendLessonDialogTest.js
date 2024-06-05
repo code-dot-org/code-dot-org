@@ -1,7 +1,9 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {assert} from '../../../util/reconfiguredChai';
+
 import {UnconnectedSendLessonDialog as SendLessonDialog} from '@cdo/apps/templates/progress/SendLessonDialog';
-import {shallow} from 'enzyme';
+
+import {assert} from '../../../util/reconfiguredChai';
 
 const lessonUrl = 'https://studio.code.org/s/coursee-2020/lessons/2/levels/1';
 

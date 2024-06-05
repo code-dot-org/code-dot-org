@@ -3,6 +3,10 @@ require 'test_helper'
 class ScriptsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
+  setup_all do
+    seed_deprecated_unit_fixtures
+  end
+
   setup do
     @coursez_2017 = create :script, name: 'coursez-2017', family_name: 'coursez', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     @coursez_2018 = create :script, name: 'coursez-2018', family_name: 'coursez', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
@@ -418,7 +422,8 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "show should redirect to flappy" do
-    get :show, params: {id: 6}
+    flappy = Unit.find_by_name('flappy')
+    get :show, params: {id: flappy.id}
     assert_redirected_to "/s/flappy"
   end
 

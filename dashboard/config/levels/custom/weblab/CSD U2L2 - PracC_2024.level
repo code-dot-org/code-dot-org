@@ -1,6 +1,5 @@
 <Weblab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 58,
   "created_at": "2023-11-28T16:58:27.000Z",
   "level_num": "custom",
@@ -13,7 +12,7 @@
     "submittable": "false",
     "parent_level_id": 20000,
     "name_suffix": "_2024",
-    "map_reference": "/courses/csd-2022/guides/html-tags",
+    "map_reference": "/courses/csd-2024/guides/html-tags",
     "video_key": "csd_weblab_intro_2",
     "encrypted": "false",
     "mini_rubric": "true",
@@ -28,6 +27,7 @@
     "rubric_performance_level_4": "There are no paragraph tags in the text.",
     "encrypted_examples": "v+EpjYO6l1BGcxZWfofrLlrX6Gb4qe8XNEE1L0GNTYSCqFKYDHzMjXt3r3TS\nKZTNVMnKhMriztOcQWptSefD7w==\n"
   },
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2023-11-28T16:58:27.490+00:00\",\"changed\":[\"cloned from \\\"CSD U2L2 - PracC_2023\\\"\"],\"cloned_from\":\"CSD U2L2 - PracC_2023\"},{\"changed_at\":\"2024-01-10 18:13:32 +0000\",\"changed\":[\"hide_share_and_remix\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>

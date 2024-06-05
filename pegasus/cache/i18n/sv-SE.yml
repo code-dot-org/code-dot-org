@@ -763,6 +763,7 @@ sv-SE:
   header_about_us: Om oss
   header_course_catalog: Kurskatalog
   header_courses: kurser
+  header_districts: Distrikt
   header_documentation: Dokumentation
   header_educate_beyond: Bortom Code.org
   header_educate_community: Online Community
@@ -782,6 +783,7 @@ sv-SE:
   header_professional_learning: Kollaborativt lärande
   header_project_gallery: Projekt
   header_report_bug: Rapportera ett problem
+  header_schools: Skola
   header_screen_reader_hamburger: Meny
   header_screen_reader_help: Hjälpmeny
   header_sections: Avsnitt

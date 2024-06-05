@@ -1,7 +1,9 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+
 import CodeDocLink from '@cdo/apps/templates/codeDocs/CodeDocLink';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('CodeDocLink', () => {
   it('renders simple link when no blockName provided', () => {

@@ -264,6 +264,7 @@ ru-RU:
   class_submission_out_of_school_summer_camp: Летний лагерь
   classicmaze_name: Классический лабиринт
   code_hoc_coming: '"Час кода" наступает  8-14 декабря!'
+  code_org_logo_alt: Code.org Home
   code_sign_up: Зарегистрируйтесь для участия в неделе информатики
   codea_beyond_gradelevel: Средняя школа +
   codea_beyond_longdescription: Codea для iPad позволяет создавать игры и симуляторы
@@ -1196,6 +1197,7 @@ ru-RU:
   header_about_us: О нас
   header_course_catalog: Каталог курсов
   header_courses: курсы
+  header_districts: Район
   header_documentation: Документация
   header_educate_beyond: За пределами Code.org
   header_educate_community: Онлайн сообщество
@@ -1222,6 +1224,7 @@ ru-RU:
   header_project_gallery: Проекты
   header_report_abuse: Сообщить о нарушении
   header_report_bug: Сообщить об ошибке
+  header_schools: школы
   header_screen_reader_hamburger: Меню
   header_screen_reader_help: Меню Помощи
   header_sections: Секции

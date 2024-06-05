@@ -1,3 +1,17 @@
+# TODO: post-firebase-cleanup, remove this file: #56994
+#
+# This file is used by:
+# - bin/cron/applab_datasets/covid19
+# - bin/cron/applab_datasets/daily_weather
+# - bin/cron/applab_datasets/spotify
+# - dashboard/app/controllers/datasets_controller.rb
+# - dashboard/app/controllers/levels_controller.rb
+# - dashboard/legacy/middleware/tables_api.rb
+# - dashboard/legacy/test/middleware/helpers/test_firebase_helper.rb
+# - dashboard/test/controllers/datasets_controller_test.rb
+# - dashboard/test/helpers/delete_accounts_helper_test.rb
+# - lib/cdo/delete_accounts_helper.rb
+
 require 'csv'
 require 'firebase'
 require 'time'
@@ -29,7 +43,9 @@ class FirebaseHelper
   end
 
   def number?(num)
-    !Float(num).nil? rescue false
+    !Float(num).nil?
+  rescue
+    false
   end
 
   def csv_as_table(csv_data)

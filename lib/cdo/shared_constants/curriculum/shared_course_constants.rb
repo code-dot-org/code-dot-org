@@ -55,10 +55,13 @@ module Curriculum
         CSD_self_paced_pl: 'CSD Self Paced PL',
         CSF_self_paced_pl: 'CSF Self Paced PL',
         CSC_self_paced_pl: 'CSC Self Paced PL',
-        CSP_virtual_pl: 'CSP Virtual PL',
-        CSD_virtual_pl: 'CSD Virtual PL',
-        CSA_virtual_pl: 'CSA Virtual PL',
-        student_self_paced: 'Student Self Paced Courses'
+        student_self_paced: 'Student Self Paced Courses',
+        pd_workshop_activity_csf: 'PD Workshop Activity CSF',
+        pd_workshop_activity_csd: 'PD Workshop Activity CSD',
+        pd_workshop_activity_csp: 'PD Workshop Activity CSP',
+        pd_workshop_activity_csa: 'PD Workshop Activity CSA',
+        foundations_of_cs: 'Foundations of CS',
+        foundations_of_programming: 'Foundations of Programming'
       }
     ).freeze
 

@@ -2,8 +2,7 @@ class Ability
   include CanCan::Ability
   include Pd::Application::ActiveApplicationModels
 
-  CSA_PILOT = 'csa-pilot'
-  CSA_PILOT_FACILITATORS = 'csa-pilot-facilitators'
+  GENAI_PILOT = 'gen-ai-lab-v1'
 
   # Define abilities for the passed in user here. For more information, see the
   # wiki at https://github.com/ryanb/cancan/wiki/Defining-Abilities.
@@ -157,39 +156,6 @@ class Ability
         can?(:manage, section) || user.sections_as_student.include?(section)
       end
 
-      can :view_as_user, ScriptLevel do |script_level, user_to_assume, sublevel_to_view|
-        user.project_validator? ||
-          user_to_assume.student_of?(user) ||
-          can?(:view_as_user_for_code_review, script_level, user_to_assume, sublevel_to_view)
-      end
-
-      can :view_as_user_for_code_review, ScriptLevel do |script_level, user_to_assume, level_to_view|
-        can_view_as_user_for_code_review = false
-
-        level_to_view ||= script_level&.oldest_active_level
-
-        # Only allow a student to view another student's project
-        # only on levels where we have our peer review feature.
-        # For now, that's only Javalab.
-        if level_to_view.is_a?(Javalab)
-          project_level_id = level_to_view.project_template_level.try(:id) ||
-            level_to_view.id
-
-          if user != user_to_assume &&
-              !user_to_assume.student_of?(user) &&
-              can?(:code_review, user_to_assume) &&
-              CodeReview.open_reviews.find_by(
-                user_id: user_to_assume.id,
-                script_id: script_level.script_id,
-                project_level_id: project_level_id
-              )
-            can_view_as_user_for_code_review = true
-          end
-        end
-
-        can_view_as_user_for_code_review
-      end
-
       if user.teacher?
         can :manage, Section do |s|
           s.instructors.include?(user)
@@ -292,6 +258,12 @@ class Ability
 
       if user.has_ai_tutor_access?
         can :chat_completion, :openai_chat
+        can :create, AiTutorInteraction, user_id: user.id
+        can :index, AiTutorInteraction
+      end
+
+      if user.can_view_student_ai_chat_messages?
+        can :index, AiTutorInteraction
       end
     end
 
@@ -369,6 +341,11 @@ class Ability
       end
     end
 
+    # We allow loading extra links on non-levelbuilder environments (such as prod)
+    if user.persisted? && user.permission?(UserPermission::LEVELBUILDER)
+      can :extra_links, Level
+    end
+
     # In order to accommodate the possibility of there being no database, we
     # need to check that the user is persisted before checking the user
     # permissions.
@@ -426,6 +403,41 @@ class Ability
     end
 
     if user.persisted?
+      can :view_as_user, ScriptLevel do |script_level, user_to_assume, sublevel_to_view|
+        user.project_validator? ||
+          user_to_assume.student_of?(user) ||
+          can?(:view_as_user_for_code_review, script_level, user_to_assume, sublevel_to_view)
+      end
+
+      # make sure levelbuilders do not have this permission outside of javalab
+      cannot :view_as_user_for_code_review, ScriptLevel
+      can :view_as_user_for_code_review, ScriptLevel do |script_level, user_to_assume, level_to_view|
+        can_view_as_user_for_code_review = false
+
+        level_to_view ||= script_level&.oldest_active_level
+
+        # Only allow a student to view another student's project
+        # only on levels where we have our peer review feature.
+        # For now, that's only Javalab.
+        if level_to_view.is_a?(Javalab)
+          project_level_id = level_to_view.project_template_level.try(:id) ||
+            level_to_view.id
+
+          if user != user_to_assume &&
+              !user_to_assume.student_of?(user) &&
+              can?(:code_review, user_to_assume) &&
+              CodeReview.open_reviews.find_by(
+                user_id: user_to_assume.id,
+                script_id: script_level.script_id,
+                project_level_id: project_level_id
+              )
+            can_view_as_user_for_code_review = true
+          end
+        end
+
+        can_view_as_user_for_code_review
+      end
+
       # TODO: should add editor experiment for Unit Group
       editor_experiment = Experiment.get_editor_experiment(user)
       if editor_experiment
@@ -435,9 +447,7 @@ class Ability
         can [:edit, :update], Unit, editor_experiment: editor_experiment
         can [:edit, :update], Lesson, editor_experiment: editor_experiment
       end
-    end
 
-    if user.persisted?
       # These checks control access to Javabuilder.
       # All teachers can generate a Javabuilder session token to run Java code,
       # although only verified teachers can generate tokens will be valid for "main" javabuilder.
@@ -458,6 +468,12 @@ class Ability
 
       can :use_unrestricted_javabuilder, :javabuilder_session do
         user.verified_instructor? || user.sections_as_student.any? {|s| s.assigned_csa? && s.teacher&.verified_instructor?}
+      end
+
+      if user.has_pilot_experiment?(GENAI_PILOT) ||
+          (!user.teachers.empty? &&
+          user.teachers.any? {|teacher| teacher.has_pilot_experiment?(GENAI_PILOT)})
+        can :chat_completion, :aichat
       end
     end
 

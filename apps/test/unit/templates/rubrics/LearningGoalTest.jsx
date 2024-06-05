@@ -1,11 +1,13 @@
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {expect} from '../../../util/reconfiguredChai';
-import {shallow, mount} from 'enzyme';
 import sinon from 'sinon';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import LearningGoal from '@cdo/apps/templates/rubrics/LearningGoal';
+import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('LearningGoal', () => {
   const studentLevelInfo = {name: 'Grace Hopper', timeSpent: 706};
@@ -44,7 +46,7 @@ describe('LearningGoal', () => {
           id: 2,
           learning_goal_id: 2,
           understanding: 2,
-          ai_confidence: 2,
+          aiConfidencePassFail: 2,
         }}
       />
     );
@@ -101,6 +103,7 @@ describe('LearningGoal', () => {
           evidenceLevels: [],
           tips: 'Tips',
         }}
+        teacherHasEnabledAi={false}
         isStudent={true}
       />
     );
@@ -164,12 +167,14 @@ describe('LearningGoal', () => {
       <LearningGoal
         learningGoal={{
           learningGoal: 'Testing',
+          aiEnabled: true,
           evidenceLevels: [],
         }}
         submittedEvaluation={{
           feedback: 'test feedback',
           understanding: RubricUnderstandingLevels.LIMITED,
         }}
+        teacherHasEnabledAi={false}
       />
     );
     expect(wrapper.find('AiToken')).to.have.lengthOf(0);
@@ -180,7 +185,11 @@ describe('LearningGoal', () => {
 
     const wrapper = shallow(
       <LearningGoal
-        learningGoal={{key: 'key', learningGoal: 'Testing', evidenceLevels: []}}
+        learningGoal={{
+          key: 'key',
+          learningGoal: 'Testing',
+          evidenceLevels: [],
+        }}
         reportingData={{unitName: 'test-2023', levelName: 'test-level'}}
       />
     );
@@ -220,7 +229,7 @@ describe('LearningGoal', () => {
       />
     );
     wrapper.update();
-    expect(wrapper.find('BodyThreeText').text()).to.include('Evaluate');
+    expect(wrapper.find('BodyThreeText').first().text()).to.include('Evaluate');
     wrapper.unmount();
   });
 
@@ -237,7 +246,7 @@ describe('LearningGoal', () => {
       />
     );
     wrapper.update();
-    expect(wrapper.find('BodyThreeText').text()).to.include('Approve');
+    expect(wrapper.find('BodyThreeText').first().text()).to.include('Approve');
     wrapper.unmount();
   });
 

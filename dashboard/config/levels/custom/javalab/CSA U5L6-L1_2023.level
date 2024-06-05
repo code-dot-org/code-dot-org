@@ -1,6 +1,5 @@
 <Javalab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 68,
   "created_at": "2023-03-28T00:00:11.000Z",
   "level_num": "custom",
@@ -22,10 +21,9 @@
       "CSA U5L6-L1 Contained_2023"
     ],
     "project_template_level_name": "CSA U5L6-Image Filters PBT_2023",
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": true
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2023-03-28T00:00:11.631+00:00\",\"changed\":[\"cloned from \\\"CSA U5L5-L1_2023\\\"\"],\"cloned_from\":\"CSA U5L5-L1_2023\"},{\"changed_at\":\"2023-03-28 00:00:17 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-22 00:33:17 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-10-31 17:56:41 +0000\",\"changed\":[\"csa_view_mode\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2023-10-31 18:01:31 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
 </Javalab>

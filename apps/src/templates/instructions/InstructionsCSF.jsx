@@ -1,15 +1,17 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
-import ThreeColumns from './ThreeColumns';
-import {Z_INDEX as OVERLAY_Z_INDEX} from '../Overlay';
-import {levenshtein} from '../../utils';
-import {getOuterHeight} from './utils';
 import debounce from 'lodash/debounce';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {connect} from 'react-redux';
+
 import styleConstants from '../../styleConstants';
+import {levenshtein} from '../../utils';
+import {Z_INDEX as OVERLAY_Z_INDEX} from '../Overlay';
+
 import InstructionsCsfLeftCol from './InstructionsCsfLeftCol';
-import InstructionsCsfRightCol from './InstructionsCsfRightCol';
 import InstructionsCsfMiddleCol from './InstructionsCsfMiddleCol';
+import InstructionsCsfRightCol from './InstructionsCsfRightCol';
+import ThreeColumns from './ThreeColumns';
+import {getOuterHeight} from './utils';
 
 var instructions = require('../../redux/instructions');
 

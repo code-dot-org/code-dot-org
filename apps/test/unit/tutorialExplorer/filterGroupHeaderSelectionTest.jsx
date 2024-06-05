@@ -1,8 +1,10 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../util/reconfiguredChai';
 import sinon from 'sinon';
+
 import FilterGroupHeaderSelection from '@cdo/apps/tutorialExplorer/filterGroupHeaderSelection';
+
+import {expect} from '../../util/reconfiguredChai';
 
 const FAKE_ON_USER_INPUT = () => {};
 const DEFAULT_PROPS = {

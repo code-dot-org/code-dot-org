@@ -1217,11 +1217,7 @@
   },
   "https://studio.code.org/s/coursec-2023/lessons/16/levels/7": {
     "short_instructions": "You've finished! Now you can play your game or share it with your friends and classmates!",
-    "long_instructions": "You've finished! Now you can play your game or share it with your friends and classmates!",
-    "placeholder_texts": {
-      "5cec903c4d41c49412a70a94d54999ee": "You can write something.",
-      "3e11a2dc6edb909c47778bed75a81769": "Text here"
-    }
+    "long_instructions": "You've finished! Now you can play your game or share it with your friends and classmates!"
   },
   "https://studio.code.org/s/coursec-2023/lessons/16/extras?level_name=courseC_PlayLab_events_lesson_extras_2023": {
     "short_instructions": "Use a new block to make Waddles automatically move back to the start when he runs into the Dinosaur and when he scores a point. \nPlay the game and move Waddles with the arrows until you score enough points.",

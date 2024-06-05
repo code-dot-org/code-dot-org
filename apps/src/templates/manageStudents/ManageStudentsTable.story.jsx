@@ -1,14 +1,17 @@
 import React from 'react';
-import {UnconnectedManageStudentsTable} from './ManageStudentsTable';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {Provider} from 'react-redux';
+
+import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
+import {reduxStore} from '@cdo/storybook/decorators';
+
+import teacherSections from '../teacherDashboard/teacherSectionsRedux';
+
 import manageStudents, {
   RowType,
   blankStudentTransfer,
 } from './manageStudentsRedux';
-import teacherSections from '../teacherDashboard/teacherSectionsRedux';
-import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
-import {reduxStore} from '@cdo/storybook/decorators';
-import {Provider} from 'react-redux';
+import {UnconnectedManageStudentsTable} from './ManageStudentsTable';
 
 const initialState = {
   manageStudents: {
@@ -302,7 +305,7 @@ const cleverData = [
 ];
 
 export default {
-  title: 'ManageStudents/ManageStudentsTable',
+  title: 'ManageStudents/ManageStudentsTable', // eslint-disable-line storybook/no-title-property-in-meta
   component: UnconnectedManageStudentsTable,
 };
 

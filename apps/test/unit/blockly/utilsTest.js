@@ -1,10 +1,11 @@
-import {expect} from '../../util/reconfiguredChai';
+import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
 import {
   numberListToString,
   parseSoundPathString,
   printerStyleNumberRangeToList,
 } from '@cdo/apps/blockly/utils';
-import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
+
+import {expect} from '../../util/reconfiguredChai';
 
 describe('the parseSoundPathString function', () => {
   it('for a valid path to sound file, returns a user-friendly sound name with category', () => {

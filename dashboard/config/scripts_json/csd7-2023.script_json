@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-12-12 03:17:07 UTC",
+    "serialized_at": "2024-05-15 16:17:27 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4999,7 +4999,7 @@
       "key": "042d27e8-48d1-4205-b2ed-cae33b607743",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _You all make plans to hang out at a park over the weekend._\n\n- _Amy lives 12 minutes away from the park_\n- _Dan lives 24 minutes away from the park_\n- _Hannah lives 5 minutes away from the park_\n- _Ken lives 30 minutes away from the park_\n- _Mike lives 13 minutes away from the park_\n\n_Aaron lives closest to Amy, Dan, and Ken. How long do you predict it will take Aaron to get to the park? Explain your reasoning._\n\nHave students journal individually first, then share with a neighbor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share Out:** Have students share out their responses to both prompts.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _You all make plans to hang out at a park over the weekend._\n\n- _Zoey lives 12 minutes away from the park_\n- _Isaac lives 24 minutes away from the park_\n- _Hawa lives 5 minutes away from the park_\n- _Nico lives 30 minutes away from the park_\n- _Kim lives 13 minutes away from the park_\n\n_Aaron lives closest to Zoey, Isaac, and Nico. How long do you predict it will take Aaron to get to the park? Explain your reasoning._\n\nHave students journal individually first, then share with a neighbor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share Out:** Have students share out their responses to both prompts.",
         "name": "Journal\r"
       },
       "seeding_key": {
@@ -5011,7 +5011,7 @@
       "key": "82b08c5c-2c56-45bd-b584-dc2f644234f7",
       "position": 2,
       "properties": {
-        "description": " **Discussion Goal:** Even though students can’t be 100% sure about the answer, students should use the clues about the friends Aaron is “closest to” to help guide their answers. Students may have a wider variety of answers, but they should all rely on using the values from Amy, Dan, and Ken to help predict how long it will take Aaron to get to the park."
+        "description": " **Discussion Goal:** Even though students can’t be 100% sure about the answer, students should use the clues about the friends Aaron is “closest to” to help guide their answers. Students may have a wider variety of answers, but they should all rely on using the values from Zoey, Isaac, and Nico to help predict how long it will take Aaron to get to the park."
       },
       "seeding_key": {
         "activity_section.key": "82b08c5c-2c56-45bd-b584-dc2f644234f7",

@@ -1,14 +1,16 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
+import sinon from 'sinon';
+
+import * as utils from '@cdo/apps/code-studio/utils';
 import {
   UnconnectedCodeReviewTimelineElement as CodeReviewTimelineElement,
   codeReviewTimelineElementType,
 } from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineElement';
 import color from '@cdo/apps/util/color';
 import javalabMsg from '@cdo/javalab/locale';
-import sinon from 'sinon';
-import * as utils from '@cdo/apps/code-studio/utils';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   type: codeReviewTimelineElementType.CREATED,

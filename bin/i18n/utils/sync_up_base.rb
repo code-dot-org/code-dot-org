@@ -19,15 +19,7 @@ module I18n
       end
 
       def self.parse_options
-        options = Options.new
-
-        OptionParser.new do |opts|
-          opts.on('-t', '--testing', 'Run in testing mode') do
-            options[:testing] = true
-          end
-        end.parse!
-
-        options.to_h
+        I18nScriptUtils.parse_options
       end
 
       # Sync-up an i18n resource.
@@ -45,34 +37,37 @@ module I18n
         end
       end
 
-      protected
-
-      Options = Struct.new :testing, keyword_init: true do
-        def initialize(testing: I18nScriptUtils::TESTING_BY_DEFAULT, **) super end
-      end
-
       attr_reader :config, :options
 
-      def initialize(**options)
+      protected def initialize(**options)
         @config = self.class.config.freeze
-        @options = Options.new(**options).freeze
+        @options = options.freeze
       end
 
-      def perform
+      protected def perform
         progress_bar.start
 
-        crowdin_client.upload_source_files(source_files, base_path: config.base_path) do |_source_file_data|
-          progress_bar.increment
+        mutex = Thread::Mutex.new
+        Parallel.each(source_files, in_threads: I18n::Utils::CrowdinClient::MAX_CONCURRENT_REQUESTS) do |source_file_path|
+          crowdin_file_path = File.join File::SEPARATOR, source_file_path.delete_prefix(config.base_path)
+          crowdin_dir_path = File.dirname(crowdin_file_path)
+
+          crowdin_client.upload_source_file(source_file_path, crowdin_dir_path)
+        ensure
+          mutex.synchronize do
+            progress_bar.increment
+
+            # Limits the number of requests to 20 per second to avoid hitting Crowdin's rate limit
+            sleep(1) if progress_bar.progress % I18n::Utils::CrowdinClient::MAX_CONCURRENT_REQUESTS == 0
+          end
         end
 
         progress_bar.finish
       end
 
-      private
-
-      def crowdin_project
+      private def crowdin_project
         @crowdin_project ||=
-          if options.testing
+          if options[:testing]
             # When testing, use a set of test Crowdin projects that mirrors our regular set of projects.
             CDO.crowdin_project_test_mapping[config.crowdin_project]
           else
@@ -80,11 +75,11 @@ module I18n
           end
       end
 
-      def crowdin_client
+      private def crowdin_client
         @crowdin_client ||= I18n::Utils::CrowdinClient.new(project: crowdin_project)
       end
 
-      def source_files
+      private def source_files
         @source_files ||= begin
           source_files = config.source_paths.flat_map do |source_path|
             Dir.glob(File.expand_path(source_path, config.base_path)).select {|source_file_path| File.file?(source_file_path)}
@@ -98,7 +93,7 @@ module I18n
         end
       end
 
-      def progress_bar
+      private def progress_bar
         @progress_bar ||= I18nScriptUtils.create_progress_bar(
           title: "#{self.class.name}[#{crowdin_project}]",
           total: source_files.size,

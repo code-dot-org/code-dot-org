@@ -14,9 +14,7 @@ module CustomCops
       end
     end
 
-    private
-
-    def violation?(path, node)
+    private def violation?(path, node)
       # Check if the path points to something inside 'dashboard/'
       if path.include?('../dashboard/')
         file_path = processed_source.buffer.name

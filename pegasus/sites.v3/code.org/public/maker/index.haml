@@ -4,6 +4,8 @@ theme: responsive_full_width
 ---
 
 %script{data: {"amplitude-api-key": CDO.safe_amplitude_api_key}}
+%script{data: {'statsig-api-client-key': CDO.safe_statsig_api_client_key}}
+%script{data: {'managed-test-server': "#{CDO.running_web_application? && CDO.test_system?}"}}
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/maker-styles.css", rel: "stylesheet"}
 
@@ -16,8 +18,8 @@ theme: responsive_full_width
   .wrapper
     %div.flex-container
       %div.text-wrapper.col-50
-        %h1{style: "color: white"} Become a Maker
-        %p{style: "color: white"} Explore your creativity with physical computing.
+        %h1.white Become a Maker
+        %p.white Explore your creativity with physical computing.
       %div.col-30.flex-container.justify-end
         %img{src: "/images/maker/maker-skinny-banner-img-left.svg", alt: ""}
         %img{src: "/images/maker/maker-skinny-banner-img-right.svg", alt: ""}

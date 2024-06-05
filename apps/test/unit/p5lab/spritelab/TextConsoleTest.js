@@ -3,7 +3,7 @@ import {expect} from '../../../util/reconfiguredChai';
 import TextConsole, {
   AUTO_CLOSE_TIME,
 } from '@cdo/apps/p5lab/spritelab/TextConsole';
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import sinon from 'sinon';
 
 describe('Sprite Lab Text Console', () => {

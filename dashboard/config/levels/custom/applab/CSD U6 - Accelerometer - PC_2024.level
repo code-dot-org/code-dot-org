@@ -67,9 +67,9 @@
     "parent_level_id": 20566,
     "name_suffix": "_2024",
     "reference_links": [
-      "/courses/csd-2022/guides/accelerometer-events",
-      "/courses/csd-2022/guides/the-accelerometer",
-      "/courses/csd-2022/guides/board-events",
+      "/courses/csd-2024/guides/accelerometer-events",
+      "/courses/csd-2024/guides/the-accelerometer",
+      "/courses/csd-2024/guides/board-events",
       "/maker/setup"
     ],
     "mini_rubric": "false",

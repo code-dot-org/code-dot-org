@@ -25,38 +25,46 @@
  * @author fraser@google.com (Neil Fraser)
  */
 
-var React = require('react');
-var ReactDOM = require('react-dom');
-var color = require('../util/color');
-var commonMsg = require('@cdo/locale');
-var turtleMsg = require('./locale');
-import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-var ArtistAPI = require('./api');
-var apiJavascript = require('./apiJavascript');
-var Provider = require('react-redux').Provider;
-import AppView from '../templates/AppView';
-var ArtistVisualizationColumn = require('./ArtistVisualizationColumn');
-var utils = require('../utils');
-var Slider = require('../slider');
-var _ = require('lodash');
-var dropletConfig = require('./dropletConfig');
-var JSInterpreter = require('../lib/tools/jsinterpreter/JSInterpreter');
-var JsInterpreterLogger = require('../JsInterpreterLogger');
+import Visualization from '@code-dot-org/artist';
+
+import {DEFAULT_EXECUTION_INFO} from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+
+import {blockAsXmlNode, cleanBlocks} from '../block_utils';
+import {getCodeBlocks} from '../blockly/utils';
+import {TestResults} from '../constants';
 import {
   getContainedLevelResultInfo,
   postContainedLevelAttempt,
   runAfterPostContainedLevel,
 } from '../containedLevels';
-import {getStore} from '../redux';
-import {TestResults} from '../constants';
-import {captureThumbnailFromCanvas} from '../util/thumbnail';
-import {blockAsXmlNode, cleanBlocks} from '../block_utils';
-import ArtistSkins from './skins';
 import dom from '../dom';
-import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-import Visualization from '@code-dot-org/artist';
+import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import {getStore} from '../redux';
+import AppView from '../templates/AppView';
 import experiments from '../util/experiments';
-import {DEFAULT_EXECUTION_INFO} from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import {captureThumbnailFromCanvas} from '../util/thumbnail';
+
+import ArtistSkins from './skins';
+
+var _ = require('lodash');
+var React = require('react');
+var ReactDOM = require('react-dom');
+var Provider = require('react-redux').Provider;
+
+var commonMsg = require('@cdo/locale');
+
+var JsInterpreterLogger = require('../JsInterpreterLogger');
+var JSInterpreter = require('../lib/tools/jsinterpreter/JSInterpreter');
+var Slider = require('../slider');
+var color = require('../util/color');
+var utils = require('../utils');
+
+var ArtistAPI = require('./api');
+var apiJavascript = require('./apiJavascript');
+var ArtistVisualizationColumn = require('./ArtistVisualizationColumn');
+var dropletConfig = require('./dropletConfig');
+var turtleMsg = require('./locale');
 
 const CANVAS_HEIGHT = 400;
 const CANVAS_WIDTH = 400;
@@ -886,7 +894,7 @@ Artist.prototype.execute = function (executionInfo) {
   if (this.level.editCode) {
     this.initInterpreter();
   } else {
-    let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
+    let codeBlocks = getCodeBlocks();
     if (this.studioApp_.initializationBlocks) {
       codeBlocks = this.studioApp_.initializationBlocks.concat(codeBlocks);
     }

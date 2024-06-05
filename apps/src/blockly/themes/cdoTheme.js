@@ -1,7 +1,10 @@
 import GoogleBlockly from 'blockly/core';
+
 import fontConstants from '@cdo/apps/fontConstants';
-import {Themes} from '../constants.js';
-import cdoBlockStyles from './cdoBlockStyles.mjs';
+
+import {Themes} from '../constants';
+
+import cdoBlockStyles from './cdoBlockStyles.js';
 
 export default GoogleBlockly.Theme.defineTheme(Themes.MODERN, {
   base: GoogleBlockly.Themes.Classic,

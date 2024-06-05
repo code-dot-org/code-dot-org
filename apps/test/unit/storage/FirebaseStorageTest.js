@@ -1,3 +1,5 @@
+// TODO: post-firebase-cleanup, remove this file #56994
+
 import {expect} from '../../util/reconfiguredChai';
 import {initFirebaseStorage} from '@cdo/apps/storage/firebaseStorage';
 import {WarningType} from '@cdo/apps/storage/constants';
@@ -1165,6 +1167,97 @@ describe('FirebaseStorage', () => {
       function validateError(error) {
         expect(error).to.contain('SyntaxError');
         expect(error).to.contain('while parsing initial key/value data: {');
+        done();
+      }
+    });
+  });
+
+  describe('getColumn', () => {
+    it('can get column when the column exists', done => {
+      const csvData =
+        'id,name,age,male\n' +
+        '4,alice,7,false\n' +
+        '5,bob,8,true\n' +
+        '6,charlie,9,true\n';
+      const expectedColumnValues = ['alice', 'bob', 'charlie'];
+
+      FirebaseStorage.importCsv(
+        'mytable',
+        csvData,
+        () => {
+          FirebaseStorage.getColumn('mytable', 'name', onSuccess, error => {
+            throw error;
+          });
+        },
+        error => {
+          throw error;
+        }
+      );
+      function onSuccess(columnValues) {
+        expect(columnValues).to.deep.equal(expectedColumnValues);
+        done();
+      }
+    });
+
+    it('can read cols from a current table', done => {
+      const tableData = {
+        1: '{"id":1,"name":"alice","age":7,"male":false}',
+        2: '{"id":2,"name":"bob","age":8,"male":true}',
+        3: '{"id":3,"name":"charlie","age":9,"male":true}',
+      };
+      getSharedDatabase()
+        .child('counters/tables/mytable')
+        .set({lastId: 3, rowCount: 3});
+      getSharedDatabase()
+        .child('storage/tables/mytable/records')
+        .set(tableData);
+
+      getProjectDatabase().child('current_tables/mytable').set(true);
+
+      const expectedColumnValues = ['alice', 'bob', 'charlie'];
+
+      FirebaseStorage.getColumn(
+        'mytable',
+        'name',
+        colValues => {
+          expect(colValues).to.deep.equal(expectedColumnValues);
+          done();
+        },
+        err => {
+          throw 'error';
+        }
+      );
+    });
+
+    it('returns [] for a table with no rows', done => {
+      FirebaseStorage.createTable(
+        'emptytable',
+        () => {
+          FirebaseStorage.getColumn(
+            'emptytable',
+            'column',
+            onSuccess,
+            error => {
+              throw error;
+            }
+          );
+        },
+        error => {
+          throw error;
+        }
+      );
+      function onSuccess(colValues) {
+        expect(colValues).to.deep.equal([]);
+        done();
+      }
+    });
+
+    it('returns null for a non-existent table', done => {
+      FirebaseStorage.getColumn('notATable', 'column', onSuccess, error => {
+        throw error;
+      });
+      function onSuccess(colValues) {
+        expect(colValues).to.equal(null);
         done();
       }
     });

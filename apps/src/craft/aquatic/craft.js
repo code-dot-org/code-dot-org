@@ -1,31 +1,35 @@
-import $ from 'jquery';
-import React from 'react';
-import ReactDOM from 'react-dom';
-import trackEvent from '../../util/trackEvent';
-import {singleton as studioApp} from '@cdo/apps/StudioApp';
-import craftMsg from '../locale';
-import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {
   GameController,
   EventType,
   utils as CraftUtils,
 } from '@code-dot-org/craft';
-import {handlePlayerSelection} from '@cdo/apps/craft/utils';
-import dom from '@cdo/apps/dom';
-import {trySetLocalStorage} from '@cdo/apps/utils';
-import MusicController from '@cdo/apps/MusicController';
-var Provider = require('react-redux').Provider;
-import AppView from '../../templates/AppView';
-var CraftVisualizationColumn = require('../simple/CraftVisualizationColumn');
-import {getStore} from '@cdo/apps/redux';
-import Sounds from '@cdo/apps/Sounds';
+import $ from 'jquery';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
+import {getCodeBlocks} from '@cdo/apps/blockly/utils';
 import {TestResults} from '@cdo/apps/constants';
-import {captureThumbnailFromCanvas} from '@cdo/apps/util/thumbnail';
-import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import PlayerSelectionDialog from '@cdo/apps/craft/PlayerSelectionDialog';
 import reducers from '@cdo/apps/craft/redux';
+import {handlePlayerSelection} from '@cdo/apps/craft/utils';
+import dom from '@cdo/apps/dom';
+import MusicController from '@cdo/apps/MusicController';
+import {getStore} from '@cdo/apps/redux';
+import Sounds from '@cdo/apps/Sounds';
+import {singleton as studioApp} from '@cdo/apps/StudioApp';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import {captureThumbnailFromCanvas} from '@cdo/apps/util/thumbnail';
+import {trySetLocalStorage} from '@cdo/apps/utils';
+
+import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import AppView from '../../templates/AppView';
 import {muteCookieWithLevel} from '../../util/muteCookieHelpers';
+import trackEvent from '../../util/trackEvent';
+import craftMsg from '../locale';
+
+var Provider = require('react-redux').Provider;
+
+var CraftVisualizationColumn = require('../simple/CraftVisualizationColumn');
 
 var MEDIA_URL = '/blockly/media/craft/';
 
@@ -579,7 +583,8 @@ Craft.executeUserCode = function () {
   };
 
   // Run user code.
-  code += Blockly.getWorkspaceCode();
+  let codeBlocks = getCodeBlocks();
+  code += Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
   interpreter = CustomMarshalingInterpreter.evalWith(
     code,
     {

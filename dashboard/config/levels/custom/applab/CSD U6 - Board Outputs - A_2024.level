@@ -59,12 +59,12 @@
     "parent_level_id": 20400,
     "name_suffix": "_2024",
     "reference_links": [
-      "/courses/csd-2022/guides/responding-to-user-input",
-      "/courses/csd-2022/guides/design-mode",
-      "/courses/csd-2022/guides/design-mode-elements",
+      "/courses/csd-2024/guides/responding-to-user-input",
+      "/courses/csd-2024/guides/design-mode",
+      "/courses/csd-2024/guides/design-mode-elements",
       "/maker/setup"
     ],
-    "map_reference": "/courses/csd-2022/guides/circuit-playground",
+    "map_reference": "/courses/csd-2024/guides/circuit-playground",
     "mini_rubric": "true",
     "text_mode_at_start": "false",
     "encrypted": "false",

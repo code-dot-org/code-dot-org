@@ -4,8 +4,8 @@
 // Utils required only for Function.prototype.inherits()
 require('../utils');
 var NetSimConstants = require('./NetSimConstants');
-var NetSimUtils = require('./NetSimUtils');
 var NetSimSlider = require('./NetSimSlider');
+var NetSimUtils = require('./NetSimUtils');
 
 /**
  * Generator and controller for packet size slider/selector

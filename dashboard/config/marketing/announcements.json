@@ -1,8 +1,7 @@
 {
   "pages": {
-    "/courses": "hoc-2023-dance-ai",
-    "/home": "superhero",
-    "/student-home": "hoc-2023-dance-ai"
+    "/home": "music-lab-launch",
+    "/student-home": "music-lab-launch"
   },
   "banners": {
     "superhero": {
@@ -10,7 +9,7 @@
       "title": "Help your students become superheroes!",
       "body": "Join our highly supportive Professional Learning Program for middle and high school educators.",
       "buttonText": "Learn More",
-      "buttonUrl": "https://code.org/educate/professional-learning/middle-high",
+      "buttonUrl": "https://code.org/educate/professional-learning",
       "buttonId": "superhero-pl-details"
     },
     "hoc-2023": {
@@ -21,21 +20,19 @@
       "buttonUrl": "https://code.org/hourofcode",
       "buttonId": "hoc-2023"
     },
-    "hoc-2023-dance-ai": {
-      "image": "/images/dance-hoc/dance-party-activity-ai-edition.png",
-      "title": "Dance Party: AI Edition",
-      "body": "Learn about artificial intelligence (AI) concepts to create your own virtual dance party showcasing today's top artists. With dozens of songs to choose from, reach every student no matter their music taste. It's time to strut your stuff!",
+    "music-lab-launch": {
+      "dcdo": "music-lab-launch-2024",
+      "image": "/shared/images/banners/music-lab-with-afe-logo.png",
+      "title": "Introducing Music Lab",
+      "body": "Get creative with your favorite artist's music and code new songs and mixes!",
       "buttonText": "Learn more",
-      "buttonUrl": "https://code.org/dance",
-      "buttonId": "hoc-2023-dance-ai"
+      "buttonUrl": "https://code.org/music",
+      "buttonId": "music-lab-launch"
     },
-    "co-teacher": {
-      "image": "/shared/images/announcement/announcement_co_teacher_2024.png",
-      "title": "New! Add co-teachers to your sections",
-      "body": "Streamline your classroom management by adding co-teachers from your \"Edit Section Details\" page.",
-      "buttonText": "Learn more",
-      "buttonUrl": "https://support.code.org/hc/en-us/articles/228116368-Can-2-teachers-share-access-to-a-classroom-section-",
-      "buttonId": "co-teacher"
+    "lms-launch": {
+      "discoverLMSIntegrations": "Discover our new LMS integrations",
+      "discoverLMSDescription": "We've added new LMS integrations for Canvas and Schoology! Connect existing LMS classrooms in your school to Code.org with one-click Roster Syncing, Single Sign-On, and integrated access to curriculum.",
+      "buttonText": "Learn more"
     }
   }
 }

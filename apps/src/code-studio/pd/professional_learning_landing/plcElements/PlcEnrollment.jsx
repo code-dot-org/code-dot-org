@@ -10,7 +10,7 @@ export default class PlcEnrollment extends React.Component {
   };
 
   renderEnrollmentUnitAssignments() {
-    const courseUnits = this.props.plcData['courseUnits'].map(
+    const courseUnits = this.props.plcData['courseUnits']?.map(
       (courseUnit, i) => {
         return <EnrollmentUnitAssignment key={i} courseUnitData={courseUnit} />;
       }

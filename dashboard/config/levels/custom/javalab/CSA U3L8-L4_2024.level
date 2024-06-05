@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U3L8-Comparing Strings PBT_2024",
     "teacher_markdown": "Students should see the following error printed to the console:\r\n\r\n```\r\n/MusicSurvey.java:65: error: missing return statement\r\n}\r\n^\r\n```\r\n\r\nSince the return statement is inside the `if` statement, there is no return specified for if the condition is never `true` or no match is found. The `return null;` line specifies what to return if no match is found.",
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T20:52:28.587+00:00\",\"changed\":[\"cloned from \\\"CSA U3L8-L4_2023\\\"\"],\"cloned_from\":\"CSA U3L8-L4_2023\"}]"

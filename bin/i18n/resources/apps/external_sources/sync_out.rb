@@ -19,10 +19,8 @@ module I18n
             distribute_blockly_core(language)
           end
 
-          private
-
-          def distribute_ml_playground(language)
-            crowdin_locale_dir = I18nScriptUtils.locale_dir(language[:crowdin_name_s], DIR_NAME, ML_PLAYGROUND_DIR_NAME)
+          private def distribute_ml_playground(language)
+            crowdin_locale_dir = I18nScriptUtils.crowdin_locale_dir(language[:locale_s], DIR_NAME, ML_PLAYGROUND_DIR_NAME)
 
             js_locale = I18nScriptUtils.to_js_locale(language[:locale_s])
             target_i18n_file_path = CDO.dir("apps/i18n/mlPlayground/#{js_locale}.json")
@@ -58,10 +56,10 @@ module I18n
           ensure
             i18n_locale_dir = I18nScriptUtils.locale_dir(language[:locale_s], DIR_NAME, ML_PLAYGROUND_DIR_NAME)
             I18nScriptUtils.rename_dir(crowdin_locale_dir, i18n_locale_dir) if File.directory?(crowdin_locale_dir)
-            I18nScriptUtils.remove_empty_dir(I18nScriptUtils.locale_dir(language[:crowdin_name_s], DIR_NAME))
+            I18nScriptUtils.remove_empty_dir(I18nScriptUtils.crowdin_locale_dir(language[:locale_s], DIR_NAME))
           end
 
-          def blockly_core_i18n_data(crowdin_file_path)
+          private def blockly_core_i18n_data(crowdin_file_path)
             i18n_source_file_path = File.join(BLOCKLY_CORE_I18N_SOURCE_DIR, BLOCKLY_CORE_FILE_NAME)
             source_i18n_data = File.exist?(i18n_source_file_path) ? JSON.load_file(i18n_source_file_path) : {}
 
@@ -78,8 +76,8 @@ module I18n
             I18nScriptUtils.sort_and_sanitize(i18n_data)
           end
 
-          def distribute_blockly_core(language)
-            crowdin_file_path = I18nScriptUtils.locale_dir(language[:crowdin_name_s], BLOCKLY_CORE_DIR_NAME, BLOCKLY_CORE_FILE_NAME)
+          private def distribute_blockly_core(language)
+            crowdin_file_path = I18nScriptUtils.crowdin_locale_dir(language[:locale_s], BLOCKLY_CORE_DIR_NAME, BLOCKLY_CORE_FILE_NAME)
             return unless File.exist?(crowdin_file_path)
 
             i18n_data = blockly_core_i18n_data(crowdin_file_path)

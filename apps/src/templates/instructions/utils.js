@@ -1,5 +1,5 @@
-import ReactDOM from 'react-dom';
 import $ from 'jquery';
+import ReactDOM from 'react-dom';
 
 /**
  * Checks the given inputs to determine whether the instruction panel should be displayed
@@ -194,8 +194,6 @@ export function shouldDisplayChatTips(skinId) {
   /*eslint-disable no-fallthrough*/
   switch (skinId) {
     // skins without avatars
-    case 'calc':
-    case 'eval':
     case 'jigsaw':
     // skins with licensed avatars
     case 'infinity':

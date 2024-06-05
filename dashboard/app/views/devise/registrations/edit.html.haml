@@ -2,8 +2,11 @@
 - require 'cpa'
 - require 'policies/child_account'
 - require 'policies/lti'
+- require 'queries/user'
 - @page_title = t('activerecord.attributes.user.edit_header')
 - no_email = current_user.no_personal_email? || params[:noEmail] == 'true'
+
+= render_parental_permission_banner(current_user, request)
 
 = link_to :back do
   %i.fa.fa-chevron-left
@@ -44,7 +47,7 @@
   - if resource.username.present?
     .field
       = f.label :username, class: "label-bold"
-      = f.object.username
+      = f.text_field :username, autofocus: false, maxlength: 20, minlength: 5
   - if f.object.can_edit_password? && f.object.encrypted_password.present?
     %div
       = f.label :password, maxlength: 255, class: "label-bold"
@@ -118,6 +121,15 @@
       )
     %p= t('user.only_one_parent_email_supported_warning')
 
+- if current_user.teacher? && Policies::Lti.lti?(current_user)
+  %div#lti-sync-settings{
+    data: {
+      lti_roster_sync_enabled: current_user.lti_roster_sync_enabled.to_s,
+    }
+  }
+  = form_for(resource, as: resource_name, url: registration_path(resource_name), html: {method: :put, id: 'lti-sync-settings-form'}) do |f|
+    = f.hidden_field :lti_roster_sync_enabled
+
 - if current_user.student? && experiment_value('cpa-partial-lockout', request) && Cpa.cpa_experience(request) && Policies::ChildAccount.user_predates_policy?(current_user)
   %div#lockout-linked-accounts{
     data: {
@@ -145,7 +157,7 @@
             = t('activerecord.attributes.user.ai_rubrics_disabled')
       %div= form.submit t('crud.update'), id: 'edit-ai-settings', class: 'btn btn-warning'
 
-- if current_user.migrated? && !(Policies::Lti.lti? current_user)
+- if current_user.migrated?
   -# Mount point for React ManageLinkedAccounts component.
   %div#manage-linked-accounts
 
@@ -265,9 +277,9 @@
       authenticationOptions: current_user.authentication_options.map(&:summarize),
       isGoogleClassroomStudent: current_user.google_classroom_student?,
       isCleverStudent: current_user.clever_student?,
-      dependentStudents: current_user.dependent_students,
-      studentCount: current_user.students.count,
+      dependentStudentsCount: Queries::User.dependent_students_count(current_user.id),
       personalAccountLinkingEnabled: @personal_account_linking_enabled,
+      lmsName: Queries::Lti.get_lms_name_from_user(current_user)
     }.to_json
   }
 %script{src: webpack_asset_path('js/devise/registrations/edit.js'), data: script_data}

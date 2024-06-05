@@ -1,69 +1,173 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
-import style from './rubrics.module.scss';
+import React, {useContext} from 'react';
+
 import {
   EmText,
   StrongText,
-  BodyThreeText,
+  BodyFourText,
 } from '@cdo/apps/componentLibrary/typography';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import ReactTooltip from 'react-tooltip';
-import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
+import EditorAnnotator from '@cdo/apps/EditorAnnotator';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
+
+import AiAssessmentFeedback from './AiAssessmentFeedback';
+import AiAssessmentFeedbackContext from './AiAssessmentFeedbackContext';
+import AiAssessmentFeedbackRadio from './AiAssessmentFeedbackRadio';
+import AiConfidenceBox from './AiConfidenceBox';
+import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
+import {
+  aiEvaluationShape,
+  aiEvidenceShape,
+  learningGoalShape,
+  reportingDataShape,
+  studentLevelInfoShape,
+} from './rubricShapes';
+
+import style from './rubrics.module.scss';
 
 export default function AiAssessmentBox({
   isAiAssessed,
+  learningGoals,
+  currentLearningGoal,
+  reportingData,
   studentName,
+  studentLevelInfo,
   aiUnderstandingLevel,
   aiConfidence,
+  aiEvalInfo,
+  aiEvidence,
 }) {
-  const boxColor = () => {
-    if (isAiAssessed) {
-      return aiUnderstandingLevel >= RubricUnderstandingLevels.CONVINCING
-        ? style.greenAiAssessment
-        : style.redAiAssessment;
-    } else {
-      return style.noAiAssessment;
-    }
-  };
+  const thumbsdownval = 0;
 
-  const studentAchievment = () => {
-    const assessment =
-      aiUnderstandingLevel >= RubricUnderstandingLevels.CONVINCING
-        ? i18n.aiAssessmentDoesMeet()
-        : i18n.aiAssessmentDoesNotMeet();
+  const studentAchievement = () => {
+    const assessment = getStudentAssessmentString();
     return i18n.aiStudentAssessment({
       studentName: studentName,
       understandingLevel: assessment,
     });
   };
 
-  const aiConfidenceText = () => {
-    const confidenceLevels = [i18n.low(), i18n.medium(), i18n.high()];
-    const ratingText = confidenceLevels[aiConfidence - 1];
-    return i18n.aiConfidence({aiConfidence: ratingText});
+  // use the computed value showExactMatch to decide whether to return text
+  // containing a single evidence level (exact match) or a range of two
+  // evidence levels (pass fail).
+  const getStudentAssessmentString = () => {
+    if (aiEvalInfo.showExactMatch) {
+      return UNDERSTANDING_LEVEL_STRINGS[aiUnderstandingLevel];
+    }
+    return aiUnderstandingLevel >= RubricUnderstandingLevels.CONVINCING
+      ? i18n.aiAssessmentDoesMeet()
+      : i18n.aiAssessmentDoesNotMeet();
   };
 
+  const onEvidenceLineNumberClick = () => {
+    // When somebody clicks on the line number embedded in the evidence line,
+    // record that event alongside information about the learning goal.
+    const eventName = EVENTS.TA_RUBRIC_EVIDENCE_GOTO_CLICKED;
+    analyticsReporter.sendEvent(eventName, {
+      ...(reportingData || {}),
+      learningGoalKey: learningGoals[currentLearningGoal].key,
+      learningGoal: learningGoals[currentLearningGoal].learningGoal,
+      studentId: !!studentLevelInfo ? studentLevelInfo.user_id : '',
+    });
+  };
+
+  // When a line number is clicked in the evidence listing
+  const lineNumberClickHandler = (lineNumber, e) => {
+    e.preventDefault();
+    onEvidenceLineNumberClick();
+    EditorAnnotator.scrollToLine(lineNumber);
+  };
+
+  const renderEvidenceItem = (evidence, i) => {
+    let text = evidence.message;
+
+    /* When the message is the same as the whole observations, this
+     * was evidence that did not have a dedicated message. In this
+     * case, this is where we fall back to just showing a list of
+     * observations instead of the evidence. This won't have line
+     * numbers and is certainly worse but better than nothing. */
+    if (evidence.firstLine === undefined) {
+      return <p key={i}>{text}</p>;
+    } else if (evidence.firstLine === evidence.lastLine) {
+      // Line [lineNumber]: [message]
+      text = i18n.aiAssessmentEvidenceLine({
+        lineNumber: '<><first-line><>',
+        feedbackForLine: evidence.message,
+      });
+    } else {
+      // Lines [firstLineNumber]-[lastLineNumber]: [message]
+      text = i18n.aiAssessmentEvidenceLines({
+        firstLineNumber: '<><first-line><>',
+        lastLineNumber: '<><last-line><>',
+        feedbackForLines: evidence.message,
+      });
+    }
+
+    return (
+      <p key={i}>
+        {text.split('<>').map((subtext, k) => {
+          if (subtext === '<first-line>') {
+            return (
+              <a
+                key={`${i}-${k}`}
+                href="#"
+                onClick={lineNumberClickHandler.bind(this, evidence.firstLine)}
+              >
+                {evidence.firstLine}
+              </a>
+            );
+          } else if (subtext === '<last-line>') {
+            return (
+              <a
+                key={`${i}-${k}`}
+                href="#"
+                onClick={lineNumberClickHandler.bind(this, evidence.lastLine)}
+              >
+                {evidence.lastLine}
+              </a>
+            );
+          } else {
+            return <span key={`${i}-${k}`}>{subtext}</span>;
+          }
+        })}
+      </p>
+    );
+  };
+
+  const {aiFeedback, setAiFeedback} = useContext(AiAssessmentFeedbackContext);
+
   return (
-    <div className={boxColor()}>
+    <div className={style.aiAssessmentInfoBlock}>
       {isAiAssessed && (
-        <div>
-          <BodyThreeText>
-            <StrongText>{studentAchievment()}</StrongText>
-          </BodyThreeText>
-          {aiConfidence && (
-            <div>
-              <EmText>{aiConfidenceText()}</EmText>
-              <span data-tip data-for="info-tip">
-                <FontAwesome icon="info-circle" className={style.infoTipIcon} />
-              </span>
-              <ReactTooltip id="info-tip" effect="solid">
-                <div className={style.infoTipText}>
-                  {i18n.aiConfidenceTooltip()}
-                </div>
-              </ReactTooltip>
-            </div>
-          )}
+        <div className={style.aiAssessmentInfoRow}>
+          <BodyFourText className={style.aiAssessmentScoreText}>
+            {/* Score: */}
+            <StrongText>{i18n.aiAssessmentScore()}</StrongText>
+            <span>{studentAchievement()}</span>
+          </BodyFourText>
+          {aiConfidence && <AiConfidenceBox aiConfidence={aiConfidence} />}
+          <AiAssessmentFeedbackRadio
+            onChosen={val => setAiFeedback(val)}
+            aiEvalId={aiEvalInfo.id}
+          />
+        </div>
+      )}
+      {isAiAssessed && aiFeedback === thumbsdownval && (
+        <AiAssessmentFeedback aiEvalInfo={aiEvalInfo} />
+      )}
+      {isAiAssessed && aiEvidence && aiEvidence.length > 0 && (
+        <div id="tour-ai-evidence">
+          <BodyFourText className={style.aiAssessmentEvidenceBlock}>
+            {/* Evidence: */}
+            <StrongText>{i18n.aiAssessmentEvidence()}</StrongText>
+          </BodyFourText>
+          <ul>
+            {aiEvidence.map((info, i) => (
+              <li key={i}>{renderEvidenceItem(info, i)}</li>
+            ))}
+          </ul>
         </div>
       )}
       {!isAiAssessed && <EmText>{i18n.aiCannotAssess()}</EmText>}
@@ -73,7 +177,13 @@ export default function AiAssessmentBox({
 
 AiAssessmentBox.propTypes = {
   isAiAssessed: PropTypes.bool.isRequired,
+  learningGoals: PropTypes.arrayOf(learningGoalShape),
+  currentLearningGoal: PropTypes.number,
+  reportingData: reportingDataShape,
   studentName: PropTypes.string,
+  studentLevelInfo: studentLevelInfoShape,
   aiUnderstandingLevel: PropTypes.number,
   aiConfidence: PropTypes.number,
+  aiEvalInfo: aiEvaluationShape,
+  aiEvidence: PropTypes.arrayOf(aiEvidenceShape),
 };

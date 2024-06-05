@@ -875,8 +875,8 @@
     "long_instructions": "# Create your own sprites\n\n<img src=\"https://images.code.org/d823ca4327740a53df3600a0d9bc55b8-image-1566234132679.59.40 AM.png\" style=\"float: right; width: 150px;\">\n\nUse what you've learned to create your own sprites.  The example is just one way to complete the level.  Decide for yourself what you want your sprites to look like.\n\n# Do This\n\n1.  Go to the animation tab and add at least two animations to your project.\n2.  In the code tab, create at least two sprites in two different places on the screen.\n3.  Assign each sprite a different animation.\n4.  Draw your sprites to the screen.",
     "mini_rubric": {
       "rubric_key_concept": "Create and use sprites.",
-      "rubric_performance_level_1": "More than two sprites have been created with different animations that are drawn to the canvas at different locations. Each sprite has a unique and meaningful label.",
-      "rubric_performance_level_2": "At least two sprites have been created with different animations that are drawn to the canvas at different locations.",
+      "rubric_performance_level_1": "At least two sprites have been created with different animations that are drawn to the canvas at different locations. Each sprite has a unique and meaningful label.",
+      "rubric_performance_level_2": "At least two sprites were created with different animations that were drawn to the canvas. The sprites may not have different locations or unique and meaningful labels.",
       "rubric_performance_level_3": "At least one sprite has been created with an animation that is drawn to the canvas.",
       "rubric_performance_level_4": "No sprites were created or were created without an animation - shown by a gray square."
     }

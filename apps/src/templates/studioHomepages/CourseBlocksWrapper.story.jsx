@@ -1,12 +1,14 @@
 import React from 'react';
-import CourseBlocksWrapper from './CourseBlocksWrapper';
 import {Provider} from 'react-redux';
-import {reduxStore} from '@cdo/storybook/decorators';
+
 import {
   TeacherGradeBandCards,
   ToolsCards,
   ToolsAIExtrasCard,
 } from '@cdo/apps/util/courseBlockCardsConstants';
+import {reduxStore} from '@cdo/storybook/decorators';
+
+import CourseBlocksWrapper from './CourseBlocksWrapper';
 
 export default {
   component: CourseBlocksWrapper,

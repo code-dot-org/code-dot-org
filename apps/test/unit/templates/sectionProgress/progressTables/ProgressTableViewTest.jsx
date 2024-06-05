@@ -1,42 +1,44 @@
-import React from 'react';
-import sinon from 'sinon';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
+import React from 'react';
 import {Provider} from 'react-redux';
-import {expect} from '../../../../util/reconfiguredChai';
-import {mount} from 'enzyme';
-import ProgressTableView, {
-  UnconnectedProgressTableView,
-} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableView';
-import ProgressTableStudentList from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableStudentList';
-import ProgressTableContentView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContentView';
-import SummaryViewLegend from '@cdo/apps/templates/sectionProgress/progressTables/SummaryViewLegend';
-import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
-import ProgressTableSummaryCell from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableSummaryCell';
-import ProgressTableDetailCell from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableDetailCell';
-import ProgressTableLevelIconSet from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLevelIconSet';
-import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
-import {createStore, combineReducers} from 'redux';
-import currentUser from '@cdo/apps/templates/currentUserRedux';
-import progress from '@cdo/apps/code-studio/progressRedux';
-import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
-import {unitTestExports} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLessonNumber';
 import * as Sticky from 'reactabular-sticky';
+import {createStore, combineReducers} from 'redux';
+import sinon from 'sinon';
+
+import progress from '@cdo/apps/code-studio/progressRedux';
 import locales from '@cdo/apps/redux/localesRedux';
+import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
+import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import {
   fakeLessonWithLevels,
   fakeStudents,
-  fakeScriptData,
+  fakeUnitData,
   fakeProgressTableReduxInitialState,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
+import ProgressTableContentView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContentView';
+import ProgressTableDetailCell from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableDetailCell';
 import * as progressTableHelpers from '@cdo/apps/templates/sectionProgress/progressTables/progressTableHelpers';
+import {unitTestExports} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLessonNumber';
+import ProgressTableLevelIconSet from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLevelIconSet';
+import ProgressTableStudentList from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableStudentList';
+import ProgressTableSummaryCell from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableSummaryCell';
+import ProgressTableView, {
+  UnconnectedProgressTableView,
+} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableView';
+import SummaryViewLegend from '@cdo/apps/templates/sectionProgress/progressTables/SummaryViewLegend';
+import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
+import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 const LESSON_1 = fakeLessonWithLevels({position: 1});
 const LESSON_2 = fakeLessonWithLevels({position: 2}, 2);
 const STUDENTS = fakeStudents(2);
 const LESSONS = [LESSON_1, LESSON_2];
-const SCRIPT_DATA = fakeScriptData({lessons: LESSONS});
+const SCRIPT_DATA = fakeUnitData({lessons: LESSONS});
 
 const initialState = fakeProgressTableReduxInitialState(
   LESSONS,

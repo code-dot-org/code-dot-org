@@ -159,10 +159,8 @@ module Pd::Application
       )
     end
 
-    protected
-
     # Remove empty params. This can happen when the regional partner contact info is missing
-    def mail(params)
+    protected def mail(params)
       super params.compact
     end
   end

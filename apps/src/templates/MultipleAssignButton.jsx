@@ -1,15 +1,17 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
-import Button from './Button';
-import i18n from '@cdo/locale';
+
+import MultipleSectionsAssigner from '@cdo/apps/templates/MultipleSectionsAssigner';
+import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {
   assignToSection,
   unassignSection,
   sectionsForDropdown,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import MultipleSectionsAssigner from '@cdo/apps/templates/MultipleSectionsAssigner';
-import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+import i18n from '@cdo/locale';
+
+import Button from './Button';
 
 class MultipleAssignButton extends React.Component {
   static propTypes = {

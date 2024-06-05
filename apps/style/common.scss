@@ -652,6 +652,7 @@ button:hover > img {
   opacity: 1;
 }
 button:active {
+  // TODO: Can we remove it?
   border: 1px solid #888 !important;
 }
 button:hover {

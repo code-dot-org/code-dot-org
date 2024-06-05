@@ -20,17 +20,16 @@ module I18n
             report_malformed_i18n(language)
             distribute_localization(language)
 
-            i18n_file_path = I18nScriptUtils.locale_dir(language[:locale_s], DIR_NAME, FILE_NAME)
+            i18n_file_path = I18nScriptUtils.locale_dir(language[:locale_s], FILE_PATH)
             I18nScriptUtils.move_file(crowdin_file_path, i18n_file_path)
+            I18nScriptUtils.remove_empty_dir File.dirname(crowdin_file_path)
           end
 
-          private
-
-          def crowdin_file_path_of(language)
-            I18nScriptUtils.locale_dir(language[:crowdin_name_s], DIR_NAME, FILE_NAME)
+          private def crowdin_file_path_of(language)
+            I18nScriptUtils.crowdin_locale_dir(language[:locale_s], FILE_PATH)
           end
 
-          def restore_localization(language)
+          private def restore_localization(language)
             crowdin_file_path = crowdin_file_path_of(language)
 
             RedactRestoreUtils.restore(
@@ -46,7 +45,7 @@ module I18n
           # the sync has a side effect of applying Markdown formatting to
           # everything it encounters, we want to make sure to un-Markdownify
           # these URLs
-          def fix_localization_urls(language)
+          private def fix_localization_urls(language)
             i18n_data = YAML.load_file(crowdin_file_path_of(language))
 
             lang_code = i18n_data.keys.first
@@ -61,13 +60,13 @@ module I18n
             I18nScriptUtils.write_file(crowdin_file_path_of(language), I18nScriptUtils.to_crowdin_yaml(i18n_data))
           end
 
-          def report_malformed_i18n(language)
+          private def report_malformed_i18n(language)
             malformed_i18n_reporter = I18n::Utils::MalformedI18nReporter.new(language[:locale_s])
             malformed_i18n_reporter.process_file(crowdin_file_path_of(language))
             malformed_i18n_reporter.report
           end
 
-          def distribute_localization(language)
+          private def distribute_localization(language)
             target_i18n_file_path = File.join(ORIGIN_I18N_DIR_PATH, "courses.#{language[:locale_s]}.yml")
             I18nScriptUtils.sanitize_file_and_write(crowdin_file_path_of(language), target_i18n_file_path)
           end

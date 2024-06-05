@@ -1,10 +1,12 @@
+import {Meta, StoryFn} from '@storybook/react';
 import React from 'react';
-import Checkbox, {CheckboxProps} from './index';
-import {Meta, Story} from '@storybook/react';
+
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 
+import Checkbox, {CheckboxProps} from './index';
+
 export default {
-  title: 'DesignSystem/Checkbox',
+  title: 'DesignSystem/Checkbox', // eslint-disable-line storybook/no-title-property-in-meta
   component: Checkbox,
 } as Meta;
 
@@ -13,9 +15,9 @@ export default {
 //
 // This is needed to fix children type error (passing string instead of React.ReactNode type)
 // eslint-disable-next-line
-const SingleTemplate: Story<CheckboxProps> = args => <Checkbox {...args} />;
+const SingleTemplate: StoryFn<CheckboxProps> = args => <Checkbox {...args} />;
 
-const MultipleTemplate: Story<{
+const MultipleTemplate: StoryFn<{
   components: CheckboxProps[];
 }> = args => (
   <>
@@ -121,9 +123,9 @@ GroupOfSizesOfCheckboxes.args = {
 // -----------------------------------------------------------
 // Stories under this line are for Supernova Documentation only
 // -----------------------------------------------------------
-const SupernovaDefaultMultipleTemplate: Story<{
+const SupernovaDefaultMultipleTemplate: StoryFn<{
   components: CheckboxProps[];
-}> = args => (
+}> = () => (
   <>
     <div style={{display: 'flex', justifyContent: 'space-around'}}>
       {[
@@ -184,9 +186,9 @@ const SupernovaDefaultMultipleTemplate: Story<{
 export const SupernovaGroupOfDefaultCheckboxes =
   SupernovaDefaultMultipleTemplate.bind({});
 
-const SupernovaSizesMultipleTemplate: Story<{
+const SupernovaSizesMultipleTemplate: StoryFn<{
   components: CheckboxProps[];
-}> = args => (
+}> = () => (
   <>
     <div style={{display: 'flex', justifyContent: 'space-around'}}>
       {[

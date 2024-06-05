@@ -12,7 +12,7 @@ class Services::LtiTest < ActiveSupport::TestCase
       iss: 'http://some-iss.com',
     }
     user.authentication_options.create(
-      authentication_id: Policies::Lti.generate_auth_id(id_token),
+      authentication_id: Services::Lti::AuthIdGenerator.new(id_token).call,
       credential_type: AuthenticationOption::LTI_V1,
     )
 
@@ -30,7 +30,7 @@ class Services::LtiTest < ActiveSupport::TestCase
       iss: lms_issuer,
     }
     user.authentication_options.create(
-      authentication_id: Policies::Lti.generate_auth_id(id_token),
+      authentication_id: Services::Lti::AuthIdGenerator.new(id_token).call,
       credential_type: AuthenticationOption::LTI_V1,
     )
     mock_nrps_member = {
@@ -73,5 +73,20 @@ class Services::LtiTest < ActiveSupport::TestCase
     lti_integration = create :lti_integration
     lti_course = create :lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid
     assert_equal lti_course, Queries::Lti.find_or_create_lti_course(lti_integration_id: lti_integration.id, context_id: lti_course.context_id, deployment_id: 'deployment-id', nrps_url: 'http://some-nrps-url.com', resource_link_id: 'rlid')
+  end
+
+  test 'lti_user_id should return the subject (user id) for a given user' do
+    lti_integration = create :lti_integration
+    lti_user_identity = create :lti_user_identity, lti_integration: lti_integration
+
+    assert_equal "subject", Queries::Lti.lti_user_id(lti_user_identity.user, lti_integration)
+  end
+
+  test 'lti_user_id should return nil if there are no matching identities' do
+    lti_integration = create :lti_integration
+    other_lti_integration = create :lti_integration
+    lti_user_identity = create :lti_user_identity, lti_integration: lti_integration
+
+    assert_nil Queries::Lti.lti_user_id(lti_user_identity.user, other_lti_integration)
   end
 end

@@ -74,9 +74,9 @@
     "encrypted": "false",
     "widget_mode": "false",
     "reference_links": [
-      "/docs/concepts/patterns/list-scrolling-pattern/",
-      "/docs/concepts/patterns/when-to-make-a-function/",
-      "/docs/concepts/patterns/update-screen-pattern/"
+      "/courses/csp-2024/guides/list-scrolling-pattern",
+      "/courses/csp-2024/guides/when-to-make-a-function",
+      "/courses/csp-2024/guides/update-screen-pattern"
     ],
     "libraries_enabled": "false",
     "encrypted_examples": "VI5AmgdsXeeD8JlV2EZi93hknWV5Kv9xSiaSSp7Ac1vHZHapSOxZzAfcwHQI\nRBBHjoQ7o/jsb18BsMvErUpULw==\n",

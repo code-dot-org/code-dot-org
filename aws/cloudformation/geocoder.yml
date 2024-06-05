@@ -160,6 +160,7 @@ Resources:
             - !ImportValue VPC-SubnetB
             - !ImportValue VPC-SubnetC
       TaskDefinition: !Ref FreegeoipTaskDefinition
+      PropagateTags: SERVICE
   HTTPErrorRateAlarm:
     Type: "AWS::CloudWatch::Alarm"
     Properties:

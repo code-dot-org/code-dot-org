@@ -56,9 +56,7 @@
     = render partial: 'levels/editors/text_compression', locals: {f: f} if @level.is_a? TextCompression
     = render partial: 'levels/editors/vigenere', locals: {f: f} if @level.is_a? Vigenere
     -# Other
-    = render partial: 'levels/editors/calc', locals: {f: f} if @level.is_a? Calc
     = render partial: 'levels/editors/curriculum_reference', locals: {f: f} if @level.is_a? CurriculumReference
-    = render partial: 'levels/editors/eval', locals: {f: f} if @level.is_a? Eval
     = render partial: 'levels/editors/external_link', locals: {f: f} if @level.is_a? ExternalLink
     = render partial: 'levels/editors/free_response', locals: {f: f} if @level.is_a? FreeResponse
     = render partial: 'levels/editors/dsl', locals: {f: f} if @level.is_a? DSLDefined
@@ -129,5 +127,4 @@
 = link_to t('crud.show'), @level
 |
 = link_to t('crud.back'), levels_path
-= '|' unless @level.new_record?
-= link_to t('crud.destroy'), @level, method: :delete, data: { confirm: t('crud.confirm') } unless @level.new_record?
+| (Note: To delete levels that have already been created, please contact the engineering team)

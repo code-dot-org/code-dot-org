@@ -1,15 +1,16 @@
 var chalk = require('chalk');
 var child_process = require('child_process');
-var path = require('path');
 var fs = require('fs');
 var _ = require('lodash');
+var path = require('path');
+var pyodide = require('pyodide');
 var sass = require('sass');
-var envConstants = require('./envConstants');
-var checkEntryPoints = require('./script/checkEntryPoints');
 
-const {ALL_APPS, appsEntriesFor} = require('./webpackEntryPoints');
-const {createWebpackConfig} = require('./webpack.config');
+var envConstants = require('./envConstants');
 const {VALID_KARMA_CLI_FLAGS} = require('./karma.conf');
+var checkEntryPoints = require('./script/checkEntryPoints');
+const {createWebpackConfig} = require('./webpack.config');
+const {ALL_APPS, appsEntriesFor} = require('./webpackEntryPoints');
 
 // Review every couple of years to see if an increase improves test performance
 const MEM_PER_KARMA_PROCESS_MB = 4300;
@@ -229,6 +230,12 @@ module.exports = function (grunt) {
           src: ['*.js'],
           dest: 'build/minifiable-lib/fileupload/',
         },
+        {
+          expand: true,
+          cwd: 'lib/pyodide',
+          src: ['*.whl', '*.zip'],
+          dest: `build/package/js/pyodide/${pyodide.version}`,
+        },
       ],
     },
     unhash: {
@@ -400,50 +407,22 @@ module.exports = function (grunt) {
   config.webpack = {
     build: createWebpackConfig({
       appsEntries,
-      minify: false,
-      watch: false,
       piskelDevMode,
     }),
 
     uglify: createWebpackConfig({
       appsEntries,
+      piskelDevMode,
       minify: true,
-      watch: false,
-      piskelDevMode,
-    }),
-
-    watch: createWebpackConfig({
-      appsEntries,
-      minify: false,
-      watch: true,
-      watchNotify: grunt.option('watch-notify'),
-      piskelDevMode,
     }),
   };
 
+  // This is started by `yarn start`, and is the normal dev mode with HMR
   config['webpack-dev-server'] = {
-    watch: {
-      webpack: createWebpackConfig({
-        appsEntries,
-        minify: false,
-        watch: false,
-        piskelDevMode,
-      }),
-      keepAlive: true,
-      proxy: {
-        '**': 'http://localhost:3000',
-      },
-      publicPath: '/assets/js/',
-      hot: true,
-      inline: true,
-      port: 3001,
-      host: '0.0.0.0',
-      watchOptions: {
-        aggregateTimeout: 1000,
-        poll: 1000,
-        ignored: /^node_modules\/[^@].*/,
-      },
-    },
+    dev: createWebpackConfig({
+      appsEntries,
+      piskelDevMode,
+    }),
   };
 
   config.uglify = {
@@ -466,7 +445,6 @@ module.exports = function (grunt) {
       tasks: ['newer:sass', 'notify:sass'],
       options: {
         interval: DEV_WATCH_INTERVAL,
-        livereload: envConstants.AUTO_RELOAD,
         interrupt: true,
       },
     },
@@ -475,7 +453,6 @@ module.exports = function (grunt) {
       tasks: ['newer:copy', 'notify:content'],
       options: {
         interval: DEV_WATCH_INTERVAL,
-        livereload: envConstants.AUTO_RELOAD,
       },
     },
     vendor_js: {
@@ -483,7 +460,6 @@ module.exports = function (grunt) {
       tasks: ['newer:copy:lib', 'notify:vendor_js'],
       options: {
         interval: DEV_WATCH_INTERVAL,
-        livereload: envConstants.AUTO_RELOAD,
       },
     },
     messages: {
@@ -491,31 +467,28 @@ module.exports = function (grunt) {
       tasks: ['messages', 'notify:messages'],
       options: {
         interval: DEV_WATCH_INTERVAL,
-        livereload: envConstants.AUTO_RELOAD,
       },
     },
   };
 
-  (config.concurrent = {
+  config.concurrent = {
     // run our two watch tasks concurrently so that they dont block each other
     watch: {
-      tasks: [
-        'watch',
-        envConstants.HOT ? 'webpack-dev-server:watch' : 'webpack:watch',
-      ],
+      tasks: ['watch', 'webpack-dev-server'],
       options: {
         logConcurrentOutput: true,
       },
     },
-  }),
-    (config.notify = {
-      'js-build': {options: {message: 'JS build completed.'}},
-      sass: {options: {message: 'SASS build completed.'}},
-      content: {options: {message: 'Content build completed.'}},
-      ejs: {options: {message: 'EJS build completed.'}},
-      messages: {options: {message: 'i18n messages build completed.'}},
-      vendor_js: {options: {message: 'vendor JS copy done.'}},
-    });
+  };
+
+  config.notify = {
+    'js-build': {options: {message: 'JS build completed.'}},
+    sass: {options: {message: 'SASS build completed.'}},
+    content: {options: {message: 'Content build completed.'}},
+    ejs: {options: {message: 'EJS build completed.'}},
+    messages: {options: {message: 'i18n messages build completed.'}},
+    vendor_js: {options: {message: 'vendor JS copy done.'}},
+  };
 
   grunt.initConfig(config);
 
@@ -650,12 +623,12 @@ module.exports = function (grunt) {
 
   grunt.registerTask('rebuild', ['clean', 'build']);
 
-  grunt.registerTask('dev', [
-    'prebuild',
-    'newer:sass',
-    'concurrent:watch',
-    'postbuild',
-  ]);
+  grunt.registerTask('dev', function () {
+    // Unless explicitly overridden, set HOT=1 and DEV=1 when running `grunt dev`
+    process.env.HOT ||= 1;
+    process.env.DEV ||= 1;
+    grunt.task.run(['prebuild', 'newer:sass', 'concurrent:watch', 'postbuild']);
+  });
 
   grunt.registerTask('default', ['rebuild', 'test']);
 };

@@ -8,16 +8,18 @@
               %h1= t('lti.integration.success_header')
           .row
             .span10
-              %p= t('lti.integration.success_body').html_safe
-              %p= t('lti.integration.guide_instructions').html_safe
+              %p= t('lti.integration.success_body')
+              %p
+                != I18n.t('lti.integration.guide_instructions', lms_guides: SharedConstants::LMS_LINKS.INTEGRATION_GUIDE_URL, contact_us: SharedConstants::EMAIL_LINKS.CONTACT_US_URL, markdown: true)
         - else
           .row
             .span10.header
               %h1= t('lti.integration.exists_header')
           .row
             .span10
-              %p= t('lti.integration.exists_body').html_safe
-              %p= t('lti.integration.guide_instructions').html_safe
+              %p= t('lti.integration.exists_body')
+              %p
+                != I18n.t('lti.integration.guide_instructions', lms_guides: SharedConstants::LMS_LINKS.INTEGRATION_GUIDE_URL, contact_us: SharedConstants::EMAIL_LINKS.CONTACT_US_URL, markdown: true)
         .row
           .span10
             %br
