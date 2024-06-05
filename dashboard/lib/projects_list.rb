@@ -141,7 +141,7 @@ module ProjectsList
     # @param featured_before [string] String representing a DateTime before
     #   which to search for the requested featured projects. Optional.
     # @return [Hash<Array<Hash>>] A hash of lists of active published featured projects.
-    def fetch_active_published_featured_projects(project_group, featured_before: nil)            
+    def fetch_active_published_featured_projects(project_group, featured_before: nil)         
       if project_group == 'all'
         return fetch_featured_published_projects(featured_before: featured_before)
       end
