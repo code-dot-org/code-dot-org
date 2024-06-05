@@ -602,6 +602,8 @@ class ScriptLevelsController < ApplicationController
   # out numerical ids on a per-action basis rather than removing support for
   # ids from those methods.
   private def check_script_id_is_name
+    # Unfortunately, scripts routes sometimes pass the name and sometimes pass
+    # the id, making params[:script_id] a misnomer when passing the name.
     script_id = request.params[:script_id]
     is_id = script_id.to_i.to_s == script_id.to_s
     raise ActiveRecord::RecordNotFound if is_id
