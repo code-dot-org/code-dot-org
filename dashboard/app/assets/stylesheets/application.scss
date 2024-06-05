@@ -2423,6 +2423,12 @@ a.download-video {
       background-color: $microsoft_brand_color;
       border-color: $microsoft_brand_color;
     }
+
+    &.with-clever {
+      background-color: $clever_brand_color;
+      border-color: $clever_brand_color;
+      color: $neutral_white;
+    }
   }
 }
 
