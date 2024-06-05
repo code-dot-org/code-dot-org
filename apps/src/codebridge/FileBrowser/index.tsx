@@ -251,13 +251,7 @@ export const FileBrowser = React.memo(() => {
           return;
         }
 
-        const duplicateNameError = getDuplicateFilenameError(
-          fileName,
-          folderId,
-          project.files
-        );
-        if (duplicateNameError) {
-          alert(duplicateNameError);
+        if (checkForDuplicateFilename(fileName, folderId, project.files)) {
           return;
         }
 
@@ -291,13 +285,7 @@ export const FileBrowser = React.memo(() => {
           required: true,
         });
 
-        const duplicateNameError = getDuplicateFilenameError(
-          file.name,
-          folderId,
-          project.files
-        );
-        if (duplicateNameError) {
-          alert(duplicateNameError);
+        if (checkForDuplicateFilename(file.name, folderId, project.files)) {
           return;
         }
 
@@ -317,13 +305,7 @@ export const FileBrowser = React.memo(() => {
         return;
       }
 
-      const duplicateNameError = getDuplicateFilenameError(
-        file.name,
-        file.folderId,
-        project.files
-      );
-      if (duplicateNameError) {
-        alert(duplicateNameError);
+      if (checkForDuplicateFilename(newName, file.folderId, project.files)) {
         return;
       }
 
@@ -332,17 +314,18 @@ export const FileBrowser = React.memo(() => {
     [renameFile, project.files]
   );
 
-  const getDuplicateFilenameError = (
+  // Check if the filename is already in use in the given folder.
+  // If it is, alert the user and return true, otherwise return false.
+  const checkForDuplicateFilename = (
     fileName: string,
     folderId: string,
     projectFiles: Record<string, ProjectFile>
   ) => {
     let message = null;
-    const existingFiles = Object.values(projectFiles).filter(
+    const existingFile = Object.values(projectFiles).find(
       f => f.name === fileName && f.folderId === folderId
     );
-    if (existingFiles.length > 0) {
-      const existingFile = existingFiles[0];
+    if (existingFile) {
       message = `Filename ${fileName} is already in use in this folder. Please choose a different name.`;
       if (
         existingFile.type === ProjectFileType.SUPPORT ||
@@ -351,7 +334,12 @@ export const FileBrowser = React.memo(() => {
         message = `Filename ${fileName} is already in use in this folder in the level's support code. Please choose a different name.`;
       }
     }
-    return message;
+    if (message) {
+      alert(message);
+      return true;
+    } else {
+      return false;
+    }
   };
 
   const renameFolderPrompt: FilesComponentProps['renameFolderPrompt'] = useMemo(
