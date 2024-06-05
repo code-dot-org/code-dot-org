@@ -46,7 +46,7 @@ parental_permissions.each do |ppr|
     policy: POLICY,
     name: PARENT_EMAIL_SUBMIT,
     user_id: ppr[:user_id],
-    state_before: nil,
+    state_before: 'l',
     state_after: 's',
   }
   records = records[...-1] if DASHBOARD_REPORTING_DB_READER[:cap_user_events].where(policy: records[-1][:policy], name: records[-1][:name], user_id: records[-1][:user_id]).count > 0
