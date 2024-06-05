@@ -141,21 +141,21 @@ module ProjectsList
     # @param featured_before [string] String representing a DateTime before
     #   which to search for the requested featured projects. Optional.
     # @return [Hash<Array<Hash>>] A hash of lists of active published featured projects.
-    def fetch_active_published_featured_projects(project_group, featured_before: nil)
-      # If the project group is 'all', we return all the featured projects as a hash with
-      # keys for each project group and values as lists of featured projects of that project group.
-      # {applab: [{project_1}, {project_2}], gamelab: [{project_1}, {project_2}], ...}
-      # Note that a project group may have more than one project type, e.g., poetry: ['poetry', 'poetry_hoc'].      
+    def fetch_active_published_featured_projects(project_group, featured_before: nil)            
       if project_group == 'all'
         return fetch_featured_published_projects(featured_before: featured_before)
       end
       raise ArgumentError, "invalid project type: #{project_group}" unless PUBLISHED_PROJECT_TYPE_GROUPS.key?(project_group.to_sym)
-      # If the project group is specified, we return a list of featured projects of that project group.
-      typed_featured_published_projects = []
+      # If the project group is specified, we return a hash with one key/value pair with the
+      # key as the project_group and value is a list of featured projects of that project group.
+      # Note that a project group may have more than one project type, e.g., poetry: ['poetry', 'poetry_hoc'].
+      typed_featured_published_projects = {}
+      typed_featured_published_projects[project_group] = []
       PUBLISHED_PROJECT_TYPE_GROUPS[project_group.to_sym].map do |project_type|
-        typed_featured_published_projects << fetch_featured_projects_by_type(project_type, featured_before: featured_before)
+        typed_featured_published_projects[project_group] << fetch_featured_projects_by_type(project_type, featured_before: featured_before)
       end
-      return typed_featured_published_projects.flatten
+      typed_featured_published_projects[project_group].flatten!
+      return typed_featured_published_projects
     end
 
     def fetch_featured_published_projects(featured_before: nil)

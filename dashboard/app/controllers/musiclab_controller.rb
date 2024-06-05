@@ -39,8 +39,7 @@ class MusiclabController < ApplicationController
 
     view_options(no_header: true, no_footer: true, full_width: true, no_padding_container: true)
 
-    music_featured_projects = ProjectsList.fetch_active_published_featured_projects('music')
-    channel_ids_from_featured_projects = ProjectsList.fetch_active_published_featured_projects('music').map {|project| project['channel']}
+    channel_ids_from_featured_projects = ProjectsList.fetch_active_published_featured_projects('music')["music"].map {|project| project['channel']}
     if get_channel_ids_from_constant?
       channel_ids_from_featured_projects = CHANNELS
     end
