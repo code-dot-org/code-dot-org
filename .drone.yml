@@ -70,7 +70,7 @@ steps:
 
   - name: unit-tests
     # see: docker/dockerfiles/Dockerfile
-    image: codedotorg/code-dot-org:mysql-8
+    image: codedotorg/code-dot-org:1.9.4
     pull: always
     volumes:
       - name: rbenv
@@ -189,7 +189,7 @@ steps:
 
   - name: ui-tests
     # see: docker/dockerfiles/Dockerfile
-    image: codedotorg/code-dot-org:mysql-8
+    image: codedotorg/code-dot-org:1.9.4
     pull: always
     volumes:
       - name: rbenv
