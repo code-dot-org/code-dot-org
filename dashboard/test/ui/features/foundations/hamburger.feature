@@ -2,11 +2,47 @@
 @single_session
 Feature: Hamburger dropdown
 
-  Scenario: Signed out user in English should not see hamburger on desktop
+  Scenario: Signed out user in English should not see hamburger on large desktop
     Given I am on "http://code.org/"
     And I dismiss the language selector
     Then I wait to see ".header_button"
     Then element "#hamburger-icon" is not visible
+
+  Scenario: Signed out user in English should see hamburger on small desktop
+    Given I am on "http://code.org/"
+    And I dismiss the language selector
+    And I change the browser window size to 1268 by 768
+    Then I wait to see "#hamburger-icon"
+    And I click selector "#hamburger-icon"
+    Then I wait to see "#hamburger-contents"
+    And element "#learn" is not visible
+    And element "#educate_entries" is not visible
+    And element "#districts" is not visible
+    And I see "#stats"
+    And I see "#help-us"
+    And I see "#incubator"
+    And I see "#about_entries"
+    And I see "#legal_entries"
+    And I see "#support"
+    And I see "#report-bug"
+
+  Scenario: Signed out user in English should see hamburger on tablet
+    Given I am on "http://code.org/"
+    And I dismiss the language selector
+    And I change the browser window size to 1023 by 768
+    Then I wait to see "#hamburger-icon"
+    And I click selector "#hamburger-icon"
+    Then I wait to see "#hamburger-contents"
+    And I see "#learn"
+    And I see "#educate_entries"
+    And I see "#districts"
+    And I see "#stats"
+    And I see "#help-us"
+    And I see "#incubator"
+    And I see "#about_entries"
+    And I see "#legal_entries"
+    And I see "#support"
+    And I see "#report-bug"
 
   Scenario: Student viewing hamburger dropdown and help button dropdown in English on desktop
     Given I create a student named "Sally Student" and go home
@@ -15,6 +51,7 @@ Feature: Hamburger dropdown
     And I click selector "#hamburger-icon"
     Then I wait to see "#hamburger-contents"
     And I see "#learn"
+    And I see "#districts"
     And I see "#stats"
     And I see "#help-us"
     And I see "#about_entries"
@@ -31,6 +68,7 @@ Feature: Hamburger dropdown
     And I click selector "#hamburger-icon"
     Then I wait to see "#hamburger-contents"
     And I see "#learn"
+    And I see "#districts"
     And I see "#stats"
     And I see "#help-us"
     And I see "#about_entries"
@@ -71,16 +109,17 @@ Feature: Hamburger dropdown
     And I click selector "#hamburger-icon"
     Then I wait to see "#hamburger-contents"
     And I see ".divider#after-student"
-    And I see "#about_entries"
-    And I see "#educate_entries"
     And I see "#learn"
+    And I see "#educate_entries"
+    And I see "#districts"
     And I see "#stats"
     And I see "#help-us"
+    And I see "#about_entries"
+    And I see "#legal_entries"
     Then I click selector "#help-icon"
     Then I wait to see "#help-contents"
-    And I see "#report-bug"
     And I see "#support"
-  
+    And I see "#report-bug"
 
   Scenario: Teacher viewing hamburger dropdown and help button in English on desktop on level
     Given I create a teacher named "Tessa Teacher"
@@ -91,17 +130,19 @@ Feature: Hamburger dropdown
     And I click selector "#hamburger-icon"
     Then I wait to see "#hamburger-contents"
     And I see ".divider#after-teacher"
-    And I see "#about_entries"
-    And I see "#educate_entries"
     And I see "#learn"
+    And I see "#educate_entries"
+    And I see "#districts"
     And I see "#stats"
     And I see "#help-us"
+    And I see "#about_entries"
+    And I see "#legal_entries"
     Then I click selector "#help-icon"
     Then I wait to see "#help-contents"
     And I see "#report-bug"
     And I see "#support"
     And I see "#teacher-community"
- 
+
 Scenario: Signed out user viewing help dropdown in Spanish on desktop
   Given I am on "http://code.org/lang/es"
   Then I wait until I am on "http://code.org/"
