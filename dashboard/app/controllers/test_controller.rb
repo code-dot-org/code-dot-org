@@ -404,10 +404,4 @@ class TestController < ApplicationController
     Services::ChildAccount.grant_permission_request!(permission_request)
     head :ok
   end
-
-  # Ages an account via its created_at property
-  def make_account_older
-    current_user.update!(created_at: DateTime.new(2020))
-    head :ok
-  end
 end
