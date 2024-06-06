@@ -224,14 +224,8 @@ img.video_thumbnail {
     }
   }
 
-  @media screen and (max-width: 1010px) {
+  @media screen and (max-width: 1023px) {
     .hide_on_tablet {
-      display: none !important;
-    }
-  }
-
-  @media screen and (max-width: 1120px) {
-    .create_menu {
       display: none !important;
     }
   }
@@ -2422,6 +2416,12 @@ a.download-video {
     &.with-microsoft_v2_auth {
       background-color: $microsoft_brand_color;
       border-color: $microsoft_brand_color;
+    }
+
+    &.with-clever {
+      background-color: $clever_brand_color;
+      border-color: $clever_brand_color;
+      color: $neutral_white;
     }
   }
 }
