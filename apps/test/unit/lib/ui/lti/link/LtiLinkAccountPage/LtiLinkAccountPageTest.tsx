@@ -38,6 +38,11 @@ describe('LTI Link Account Page Tests', () => {
 
       const existingAccountCard = screen.getByTestId('existing-account-card');
       const withinExistingAccountCard = within(existingAccountCard);
+      const urlParams = new URLSearchParams({
+        lms_name: DEFAULT_CONTEXT.ltiProviderName,
+        lti_provider: DEFAULT_CONTEXT.ltiProvider,
+        email: DEFAULT_CONTEXT.emailAddress,
+      });
 
       // Should render header
       withinExistingAccountCard.getByText(
@@ -53,9 +58,7 @@ describe('LTI Link Account Page Tests', () => {
           .getByText(i18n.ltiLinkAccountExistingAccountCardActionLabel())
           .closest('a')!
           .getAttribute('href')
-      ).to.equal(
-        'https://example.com/existing-account?lms_name=Canvas&lti_provider=canvas_cloud'
-      );
+      ).to.equal(`https://example.com/existing-account?${urlParams}`);
     });
   });
 

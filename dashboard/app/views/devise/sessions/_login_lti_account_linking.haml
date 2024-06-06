@@ -22,7 +22,6 @@
     %h3= t('lti.account_linking.connect_with_email')
     = form_with(url: :lti_v1_account_linking_link_email, method: :post) do |f|
       = show_flashes.html_safe
-      = f.hidden_field :hashed_email
 
       / Email
       .field
