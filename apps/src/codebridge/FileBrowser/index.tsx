@@ -69,7 +69,7 @@ const InnerFileBrowser = React.memo(
       const filename = files[fileId].name;
       const title = `Are you sure?`;
       const message = `Are you sure you want to delete the file ${filename}?`;
-      dialogControl?.showGenericDialog(
+      dialogControl?.showDialog(
         DialogType.GenericConfirmation,
         () => deleteFile(fileId),
         title,
@@ -82,7 +82,7 @@ const InnerFileBrowser = React.memo(
       const folderName = folders[folderId].name;
       const title = `Are you sure?`;
       const message = `Are you sure you want to delete the folder ${folderName}? This will delete all files and folders inside ${folderName}.`;
-      dialogControl?.showGenericDialog(
+      dialogControl?.showDialog(
         DialogType.GenericConfirmation,
         () => deleteFolder(folderId),
         title,

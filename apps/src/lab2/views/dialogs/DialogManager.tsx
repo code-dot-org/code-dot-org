@@ -55,27 +55,26 @@ const DialogManager: React.FunctionComponent<DialogManagerProps> = ({
   >(undefined);
 
   const showDialog = useCallback(
-    (dialogType: DialogType, callback: () => void) => {
-      setOpenDialog(dialogType);
-      setDialogCallback(() => callback);
-    },
-    [setOpenDialog, setDialogCallback]
-  );
-
-  const showGenericDialog = useCallback(
     (
       dialogType: DialogType,
       callback: () => void,
-      title: string,
-      message: string,
+      title?: string,
+      message?: string,
       confirmText?: string
     ) => {
       setDialogTitle(title);
       setDialogMessage(message);
       setDialogConfirmText(confirmText);
-      showDialog(dialogType, callback);
+      setOpenDialog(dialogType);
+      setDialogCallback(() => callback);
     },
-    [showDialog]
+    [
+      setDialogTitle,
+      setDialogMessage,
+      setDialogConfirmText,
+      setOpenDialog,
+      setDialogCallback,
+    ]
   );
 
   const handleConfirm = useCallback(() => {
@@ -95,7 +94,6 @@ const DialogManager: React.FunctionComponent<DialogManagerProps> = ({
     <DialogContext.Provider
       value={{
         showDialog,
-        showGenericDialog,
       }}
     >
       {DialogView && (
@@ -115,12 +113,11 @@ const DialogManager: React.FunctionComponent<DialogManagerProps> = ({
 };
 
 interface DialogControl {
-  showDialog: (dialogType: DialogType, callback: () => void) => void;
-  showGenericDialog: (
+  showDialog: (
     dialogType: DialogType,
     callback: () => void,
-    title: string,
-    message: string,
+    title?: string,
+    message?: string,
     confirmText?: string
   ) => void;
 }
