@@ -62,6 +62,10 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
     onMount();
   }, [onMount]);
 
+  useEffect(() => {
+    analyticsReporter.current.setUserProperties(userId, userType, signInState);
+  }, [userId, userType, signInState]);
+
   // This is the main function that is called when a song is played in the mini player
   // Loads code from the server, compiles the song, executes it to generate events,
   // and then plays the events.
