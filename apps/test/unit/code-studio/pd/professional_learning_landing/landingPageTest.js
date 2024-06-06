@@ -39,7 +39,7 @@ const DEFAULT_PROPS = {
   lastWorkshopSurveyCourse: 'CS Fundamentals',
   deeperLearningCourseData: [{data: 'oh yeah'}],
   currentYearApplicationId: 2024,
-  workshopsAsParticipant: [{data: 'workshops'}],
+  hasEnrorolledInWorkshop: true,
   workshopsAsFacilitator: [],
   workshopsAsOrganizer: [],
   workshopsAsRegionalPartner: [],
@@ -79,7 +79,7 @@ describe('LandingPage', () => {
       lastWorkshopSurveyCourse: null,
       deeperLearningCourseData: null,
       currentYearApplicationId: null,
-      workshopsAsParticipant: [],
+      hasEnrolledInWorkshop: false,
       plCoursesStarted: [],
     });
     screen.getByText(i18n.plLandingGettingStartedHeading());

@@ -43,8 +43,11 @@
       "availableModelIds": [
 
       ]
-    }
+    },
+    "display_name": "Investigating Translation",
+    "bubble_choice_description": "This chatbot is designed to help translate sentences to different language. Let's investigate how accurate it can be.",
+    "thumbnail_url": "https://images.code.org/5c7fcf2d28163b561e93ea540f9394a0-Lesson 2 - Level 9A - Investigating Translation.png"
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-06T18:06:21.480+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-intro-L6\\\"\"],\"cloned_from\":\"gen-ai-customizing-intro-L6\"},{\"changed_at\":\"2024-05-06 18:25:55 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-09 21:01:21 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-09 21:07:35 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-09 21:09:58 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-09 21:10:07 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-06T18:06:21.480+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-intro-L6\\\"\"],\"cloned_from\":\"gen-ai-customizing-intro-L6\"},{\"changed_at\":\"2024-05-06 18:25:55 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-09 21:01:21 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-09 21:07:35 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-09 21:09:58 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-09 21:10:07 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-06-04 02:00:59 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>
