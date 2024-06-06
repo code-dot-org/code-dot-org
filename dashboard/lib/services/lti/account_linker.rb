@@ -23,9 +23,9 @@ module Services
         @rehydrated_user ||= find_cached_user || ::User.new_with_session(ActionController::Parameters.new, session)
       end
 
-      # The user with the auth option being linked might be in sections, if they were
-      # created via a roster sync. In this case, we need to swap the existing user into these
-      # sections to avoid the roster being in a bad state.
+      # The new user might already be in sections, if the account was created
+      # via a roster sync. In this case, we need to swap the pre-existing user
+      # into these sections to avoid the roster being in a bad state.
       private def handle_sections(user_to_remove, user_to_add)
         return if user_to_remove.sections_as_student.empty?
         user_to_remove.sections_as_student.each do |section|
@@ -34,8 +34,9 @@ module Services
         end
       end
 
-      # A cached user should be referenced in the session. If the user was created via
-      # roster sync, there might be a fully-created user with an ID. Use this user if it exists.
+      # A cached user should be referenced in the session. If the user was
+      # created via roster sync, there might be a fully-created user with an ID.
+      # Prefer this user if it exists.
       private def find_cached_user
         cache_key = session[PartialRegistration::SESSION_KEY]
         user_attrs = CDO.shared_cache.read(cache_key)
