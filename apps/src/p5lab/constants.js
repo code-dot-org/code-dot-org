@@ -15,7 +15,7 @@ export const P5LabType = utils.makeEnum('GAMELAB', 'SPRITELAB', 'POETRY');
 export const CURRENT_ANIMATION_TYPE = utils.makeEnum('default', 'background');
 
 /** @const {number} */
-export const APP_WIDTH = 400;
+export const APP_WIDTH = 800;
 
 /** @const {number} */
 export const APP_HEIGHT = 400;
