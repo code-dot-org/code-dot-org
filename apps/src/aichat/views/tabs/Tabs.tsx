@@ -3,7 +3,6 @@ import classNames from 'classnames';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import styles from './tabs.module.scss';
 import TabPanel from './TabPanel';
-import {WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 
 export type Tab = {
   title: string;
@@ -59,33 +58,24 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
                 )}
                 key={index}
               >
-                <WithTooltip
-                  tooltipProps={{
-                    text: tab.title,
-                    tooltipId: getTabButtonId(index),
-                  }}
+                <button
+                  type="button"
+                  role="tab"
+                  aria-selected={activeIndex === index}
+                  aria-controls={getTabPanelId(index)}
+                  id={getTabButtonId(index)}
+                  onClick={() => handleTabClick(index)}
+                  className={classNames(index === activeIndex && styles.active)}
                 >
-                  <button
-                    type="button"
-                    role="tab"
-                    aria-selected={activeIndex === index}
-                    aria-controls={getTabPanelId(index)}
-                    id={getTabButtonId(index)}
-                    onClick={() => handleTabClick(index)}
-                    className={classNames(
-                      index === activeIndex && styles.active
-                    )}
-                  >
-                    {tab.title}
-                    {tab.isReadOnly && (
-                      <FontAwesomeV6Icon
-                        iconName="lock"
-                        iconStyle="solid"
-                        className={styles.tabIcon}
-                      />
-                    )}
-                  </button>
-                </WithTooltip>
+                  {tab.title}
+                  {tab.isReadOnly && (
+                    <FontAwesomeV6Icon
+                      iconName="lock"
+                      iconStyle="solid"
+                      className={styles.tabIcon}
+                    />
+                  )}
+                </button>
               </li>
             );
           })}
