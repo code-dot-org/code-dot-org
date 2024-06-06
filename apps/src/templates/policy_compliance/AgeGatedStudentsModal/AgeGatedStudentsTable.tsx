@@ -120,8 +120,6 @@ const AgeGatedStudentsTable: React.FC<Props> = ({studentData}) => {
   );
 };
 
-export const UnconnectedAgeGatedStudentsTable = AgeGatedStudentsTable;
-
 export default connect(
   (state: ReduxState) => ({
     studentData: filterAgeGatedStudents(

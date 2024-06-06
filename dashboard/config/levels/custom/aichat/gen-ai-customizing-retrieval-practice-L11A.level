@@ -43,8 +43,11 @@
       "availableModelIds": [
 
       ]
-    }
+    },
+    "display_name": "Laptop Support Chatbot",
+    "bubble_choice_description": "Greg isn't very great with technology - he keeps calling you for help fixing his brand new Sony laptop. You've decided to create a chatbot for him to talk to instead.",
+    "thumbnail_url": "https://images.code.org/c143a86b32b97329bce0204a65949dfe-Lesson 7 - Level 11A- Laptop Tech Support Chatbot.png"
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-04T02:30:12.919+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L10\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L10\"},{\"changed_at\":\"2024-05-11 23:17:57 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-04T02:30:12.919+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L10\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L10\"},{\"changed_at\":\"2024-05-11 23:17:57 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-06-04 02:33:33 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>
