@@ -229,10 +229,6 @@ namespace :seed do
   # LevelGroup must be last here so that LevelGroups are seeded after all levels that they can contain
   DSL_TYPES = %w(TextMatch ContractMatch External Match Multi EvaluationMulti BubbleChoice LevelGroup).freeze
   DSL_FILES = DSL_TYPES.map {|x| Dir.glob("config/scripts/**/*.#{x.underscore}*").sort}.flatten.freeze
-  file 'config/scripts/.dsls_seeded' => DSL_FILES do |t|
-    Rake::Task['seed:dsls'].invoke
-    FileUtils.touch(t.name)
-  end
 
   # explicit execution of "seed:dsls"
   timed_task_with_logging dsls: :environment do
