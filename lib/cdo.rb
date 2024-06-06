@@ -290,6 +290,11 @@ module Cdo
       running_web_application? && ENV['CI']
     end
 
+    # The web server instance has some intention to use AWS credentials?
+    def aws_access?
+      rack_env?(:development) && !!ENV['AWS_PROFILE']&.include?('cdo')
+    end
+
     def shared_image_url(path)
       "/shared/images/#{path}"
     end
