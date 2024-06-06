@@ -1,7 +1,7 @@
 import React from 'react';
 
 import aichatI18n from '@cdo/apps/aichat/locale';
-import moduleStyles from './chatWarningModal.module.scss';
+import moduleStyles from './warning-modal.module.scss';
 import {
   BodyTwoText,
   Heading3,
