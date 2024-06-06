@@ -232,7 +232,10 @@ namespace :seed do
 
   timed_task_with_logging child_dsls: :environment do
     DSLDefined.transaction do
+      # Allow developers to seed just one dsl-defined level, e.g.
+      # rake seed:child_dsls DSL_FILENAME=k-1_Artistloops_multi1.multi
       dsl_files = override_dsl_filenames(ENV['DSL_FILENAME'], CHILD_DSL_FILES)
+
       parse_dsl_files(dsl_files, CHILD_DSL_TYPES)
     end
   end
@@ -244,13 +247,14 @@ namespace :seed do
 
   timed_task_with_logging parent_dsls: :environment do
     DSLDefined.transaction do
+      # Allow developers to seed just one dsl-defined level, e.g.
+      # rake seed:parent_dsls DSL_FILENAME=csa_unit_6_assessment_2023.level_group
       dsl_files = override_dsl_filenames(ENV['DSL_FILENAME'], PARENT_DSL_FILES)
+
       parse_dsl_files(dsl_files, PARENT_DSL_TYPES)
     end
   end
 
-  # Allow developers to seed just one dsl-defined level, e.g.
-  # rake seed:dsls DSL_FILENAME=k-1_Artistloops_multi1.multi
   def override_dsl_filenames(filename_override, dsl_files)
     dsl_files = filename_override ? Dir.glob("config/scripts/**/#{filename_override}") : dsl_files
 
