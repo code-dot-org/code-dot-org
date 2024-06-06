@@ -1,8 +1,7 @@
 :ruby
   subsection_list = [
     {
-      imageSide: "left",
-      hasUrl: "true",
+      wrapReverse: false,
       image: "/images/lms/groups.png",
       title: hoc_s("lms_partner_page.rosters.heading", locals: {website: provider}),
       desc: hoc_s("lms_partner_page.rosters.desc", locals: {website: provider}),
@@ -10,8 +9,7 @@
       urlText: hoc_s("lms_partner_page.rosters.link"),
     },
     {
-      imageSide: "right",
-      hasUrl: "true",
+      wrapReverse: true,
       image: "/images/lms/unlocked.png",
       title: hoc_s("lms_partner_page.sso.heading", locals: {website: provider}),
       desc: hoc_s("lms_partner_page.sso.desc"),
@@ -19,15 +17,7 @@
       urlText: hoc_s("lms_partner_page.sso.link", locals: {website: provider}),
     },
     {
-      imageSide: "left",
-      hasUrl: "false",
-      image: "/images/lms/binders.png",
-      title: hoc_s("lms_partner_page.access_content.heading", locals: {website: provider}),
-      desc: hoc_s("lms_partner_page.access_content.desc", locals: {website: provider}),
-    },
-    {
-      imageSide: "right",
-      hasUrl: "false",
+      wrapReverse: false,
       image: "/images/lms/profiles.png",
       title: hoc_s("lms_partner_page.keep_account.heading", locals: {website: provider}),
       desc: hoc_s("lms_partner_page.keep_account.desc", locals: {website: provider}),
@@ -35,27 +25,6 @@
   ]
 
 - subsection_list.each do |subsection_list|
-  - if subsection_list[:imageSide] == "left"
-    .wrapper.flex-container.justify-space-between.align-items-center.wrap
-      %figure.col-45
-        %img{src: subsection_list[:image], alt: "", style: "width: 100%"}
-      .text-wrapper.col-50
-        %h2.heading-lg
-          = subsection_list[:title]
-          %p.body-three
-          = subsection_list[:desc]
-          - if subsection_list[:hasUrl] == "true"
-            %a.white-link.has-external-link{href: subsection_list[:url], target: "_blank", rel: "noopener noreferrer"}
-            = subsection_list[:urlText]
-  - else
-    .wrapper.flex-container.justify-space-between.align-items-center.wrap
-      .text-wrapper.col-50
-        %h2.heading-lg
-          = subsection_list[:title]
-          %p.body-three
-          = subsection_list[:desc]
-          - if subsection_list[:hasUrl] == "true"
-            %a.white-link.has-external-link{href: subsection_list[:url], target: "_blank", rel: "noopener noreferrer"}
-            = subsection_list[:urlText]
-      %figure.col-45
-        %img{src: subsection_list[:image], alt: "", style: "width: 100%"}
+  %section.no-padding-bottom
+    .wrapper
+      = view :section_basic_image_text, image_url: subsection_list[:image], heading: subsection_list[:title], desc: subsection_list[:desc], wrap_reverse: subsection_list[:wrapReverse], url: subsection_list[:url], urlText: subsection_list[:urlText]
