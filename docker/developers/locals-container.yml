@@ -1,0 +1,18 @@
+dashboard_enable_pegasus: true
+build_apps: true
+use_my_apps: true
+
+slack_bot_token: localoverride
+pardot_private_key: localoverride
+firebase_secret: localoverride
+firebase_shared_secret: localoverride
+properties_encryption_key:
+db_writer: 'mysql://root:password@db/'
+db_endpoint_writer: 'db'
+db_credential_admin:
+  username: root
+  password: password
+statsig_server_secret_key: 'secret-fake-key'
+statsig_api_client_key: 'client-fake-key'
+session_store_server: redis://redis:6379/0/session
+geocoder_redis_url: redis://redis:6379/0/geocoder

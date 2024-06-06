@@ -1,13 +1,357 @@
 services:
-  # A Selenium server running Chrome for running UI tests locally
-  selenium-chrome:
+  # Docker-managed redis server
+  redis-contained: &redis-base
+    container_name: redis
+    hostname: redis
+    image: redis:latest
+    networks:
+      cdo_network_test:
+      cdo_network:
+
+  redis:
+    <<: *redis-base
+    ports:
+      - "6379:6379"
+
+  # Docker-managed database
+  mysql-contained: &mysql-base
+    container_name: mysql
+    hostname: db
+    image: mysql/mysql-server:8.0
+    environment:
+      MYSQL_DATABASE: 'db'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'password'
+      MYSQL_ROOT_PASSWORD: 'password'
+      MYSQL_ROOT_HOST: '%'
+    expose:
+      - "3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    # Many default ulimits are just too high
+    # And, so, it will consume way too much memory (16GB+)
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536
+    networks:
+      cdo_network_test:
+      cdo_network:
+
+  mysql:
+    <<: *mysql-base
+    ports:
+      - "3306:3306"
+
+  # The base for all dashboard servers
+  web-base: &cdo-web-base
+    image: codedotorg/codedotorg-test
+    build:
+      dockerfile: ./docker/developers/Dockerfile
+      target: cdo-web
+      args:
+        UID: ${FIXUID:-1000}
+        GID: ${FIXGID:-1000}
+    cap_add:
+      - SYS_PTRACE
+    working_dir: /app/src
+
+  # Spins up a dashboard server with contributor access
+  web: &cdo-web
+    <<: *cdo-web-base
+    hostname: web
+    container_name: web
+    environment:
+      HOST_PWD: ${PWD}
+    volumes:
+      - rbenv:/home/cdodev/.rbenv
+      - nvm:/home/cdodev/.nvm
+      - .:/app/src
+      - ./docker/developers/locals-container.yml:/app/src/locals.yml
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mysql-contained
+      - redis-contained
+    tty: true
+    command: /bin/bash -l -c './bin/dashboard-server'
+    networks:
+      cdo_network:
+
+  mysql-client-admin:
+    <<: *cdo-web
+    hostname: web-mysql-client-admin
+    container_name: web-mysql-client-admin
+    volumes:
+      - rbenv:/home/cdodev/.rbenv
+      - nvm:/home/cdodev/.nvm
+      - .:/app/src
+      - ./docker/developers/locals-container.yml:/app/src/locals.yml
+    depends_on:
+      - mysql-contained
+    tty: true
+    command: /bin/bash -l -c './bin/mysql-client-admin'
+
+  # Spins up a dashboard server with full AWS access
+  # This is for Code.org staff with engineering access.
+  web-aws: &cdo-web-aws
+    <<: *cdo-web
+    environment:
+      AWS_PROFILE: 'cdo'
+    volumes:
+      - rbenv:/home/cdodev/.rbenv
+      - nvm:/home/cdodev/.nvm
+      - .:/app/src
+      - ~/.aws:/home/cdodev/.aws
+
+  # Spins up an environment to authenticate a Code.org staff engineer's
+  # AWS credentials.
+  aws-access:
+    <<: *cdo-web-aws
+    command: /bin/bash -l -c "./bin/aws_access"
+
+  # Spins up a bash shell inside the web container for basic access
+  shell:
+    <<: *cdo-web
+    hostname: web-shell
+    container_name: web-shell
+    tty: true
+    command: /bin/bash -i
+
+  # Spins up a bash shell inside the web container with full AWS access
+  # for Code.org staff
+  shell-aws:
+    <<: *cdo-web-aws
+    hostname: web-shell
+    container_name: web-shell
+    tty: true
+    command: /bin/bash -i
+
+  # Spins up a dashboard server with contributor access
+  console:
+    <<: *cdo-web
+    hostname: web-console
+    container_name: web-console
+    command: /bin/bash -l -c './bin/dashboard-console'
+
+  # Spins up a dashboard server with contributor access
+  console-aws:
+    <<: *cdo-web-aws
+    hostname: web-console-aws
+    container_name: web-console-aws
+    command: /bin/bash -l -c './bin/dashboard-console'
+
+  # Performs the 'install' step for the contained web instance
+  install:
+    <<: *cdo-web
+    hostname: web-install
+    container_name: web-install
+    command: /bin/bash -i -c "bundle exec rake install"
+
+  # Performs the 'install' step for the contained web instance (with AWS access)
+  install-aws:
+    <<: *cdo-web-aws
+    hostname: web-install
+    container_name: web-install
+    command: /bin/bash -i -c "bundle exec rake install"
+
+  # Performs the 'build' step for the contained web instance
+  build:
+    <<: *cdo-web
+    hostname: web-build
+    container_name: web-build
+    command: /bin/bash -i -c "bundle exec rake build"
+
+  # Performs the 'build' step for the contained web instance (with AWS access)
+  build-aws:
+    <<: *cdo-web-aws
+    hostname: web-build
+    container_name: web-build
+    command: /bin/bash -i -c "bundle exec rake build"
+
+  # Installs rbenv (and ruby)
+  install-rbenv:
+    <<: *cdo-web-base
+    hostname: install-rbenv
+    container_name: install-rbenv
+    volumes:
+      - rbenv:/home/cdodev/.rbenv
+      - .ruby-version:/app/src/.ruby-version
+      - ./docker/developers:/app/src
+    command: /bin/bash -l -c "./install-local-rbenv.sh"
+
+  # Installs nvm (and node)
+  install-nvm:
+    <<: *cdo-web-base
+    hostname: install-nvm
+    container_name: install-nvm
+    volumes:
+      - nvm:/home/cdodev/.nvm
+      - ./apps/package.json:/app/src/apps/package.json
+      - ./docker/developers:/app/src
+    command: /bin/bash -l -c "./install-local-nvm.sh"
+
+  # Installs any gems (lightweight invocation)
+  install-gems:
+    <<: *cdo-web-base
+    hostname: install-gems
+    container_name: install-gems
+    volumes:
+      - rbenv:/home/cdodev/.rbenv
+      - .:/app/src
+    command: /bin/bash -l -c "bundle install"
+
+  # Installs the node/npm/js libraries
+  install-js:
+    <<: *cdo-web-base
+    hostname: install-js
+    container_name: install-js
+    volumes:
+      - nvm:/home/cdodev/.nvm
+      - .:/app/src
+    working_dir: /app/src/apps
+    command: /bin/bash -l -c '../docker/developers/run.sh yarn install'
+
+  build-js:
+    <<: *cdo-web-base
+    hostname: build-js
+    container_name: build-js
+    volumes:
+      - nvm:/home/cdodev/.nvm
+      - .:/app/src
+    working_dir: /app/src/apps
+    command: /bin/bash -l -c '../docker/developers/run.sh yarn build'
+
+  build-js-server:
+    <<: *cdo-web-base
+    hostname: build-js
+    container_name: build-js
+    volumes:
+      - nvm:/home/cdodev/.nvm
+      - .:/app/src
+    tty: false
+    working_dir: /app/src/apps
+    command: /bin/bash -l -c '../docker/developers/run.sh yarn start'
+
+  # These are the git hooks
+  pre-commit-hook:
+    <<: *cdo-web
+
+  lint-js:
+    <<: *cdo-web
+    volumes:
+      - nvm:/home/cdodev/.nvm
+      - .:/app/src
+    working_dir: /app/src/apps
+    entrypoint: ['/bin/bash', '../docker/developers/run.sh', '/app/src/apps/node_modules/.bin/eslint', '-c', '/app/src/apps/.eslintrc.js', '-f', '/app/src/apps/.eslintCustomMessagesFormatter.js']
+    command: []
+
+  lint-rb:
+    <<: *cdo-web
+    volumes:
+      - .:/app/src
+    entrypoint: ['/bin/bash', './docker/developers/run.sh', 'rubocop']
+    command: []
+
+  # Run a 'bundle exec rake --' command
+  rake:
+    <<: *cdo-web
+    hostname: web-rake
+    container_name: web-rake
+    entrypoint: ['/bin/bash', './docker/developers/run.sh', 'rake']
+    command: ['--tasks']
+
+  # Run a 'bundle exec rake --' command in the dashboard directory
+  dashboard-rake:
+    <<: *cdo-web
+    hostname: web-bundle-exec
+    container_name: web-bundle-exec
+    working_dir: /app/src/dashboard
+    entrypoint: ['/bin/bash', '../docker/developers/run.sh', 'rake']
+    command: ['--tasks']
+
+  # Run a 'bundle exec rake --' command in the pegasus directory
+  pegasus-rake:
+    <<: *cdo-web
+    hostname: web-bundle-exec
+    container_name: web-bundle-exec
+    working_dir: /app/src/pegasus
+    entrypoint: ['/bin/bash', '../docker/developers/run.sh', 'bundle', 'exec', 'rake']
+    command: ['--tasks']
+
+  migrations:
+    <<: *cdo-web
+    hostname: web-migrations
+    container_name: web-migrations
+    command: /bin/bash -l -c 'cd dashboard && ../docker/developers/run.sh bundle exec rake db:migrate && cd ../pegasus && ../docker/developers/run.sh bundle exec rake db:migrate'
+
+  # The base for all test servers
+  test-base: &cdo-test-base
+    image: codedotorg/codedotorg-test
+    build:
+      dockerfile: ./docker/developers/Dockerfile
+      target: cdo-test
+      args:
+        UID: ${FIXUID:-1000}
+        GID: ${FIXGID:-1000}
+
+  # This is a testing environment.
+  # It spins up a contained version of the dashboard server accessible by the
+  # Selenium nodes.
+  test:
+    <<: *cdo-test-base
+    container_name: test-web
+    hostname: test-web
+    volumes:
+      - .:/app/src
+      - ./docker/developers/locals-container.yml:/app/src/locals.yml
+      - rbenv:/home/cdodev/.rbenv
+      - nvm:/home/cdodev/.nvm
+    depends_on:
+      - mysql-contained
+      - redis-contained
+    expose:
+      - "3000"
+    environment:
+      # Ensure the local selenium is used
+      SELENIUM_URL: 'http://selenium:4444/wd/hub'
+    tty: true
+    working_dir: /app/src
+    command: /bin/bash -i -c "./bin/dashboard-server"
+    healthcheck:
+      test: "curl --fail --head http://localhost:3000/"
+      interval: 2s
+      retries: 100
+      start_period: 30s
+      timeout: 10s
+    networks:
+      cdo_network_test:
+        aliases:
+          - localhost.code.org
+          - localhost-studio.code.org
+          - localhost-hourofcode.org
+
+  # Runs a UI test
+  ui-test:
+    <<: *cdo-web
+    environment:
+      SELENIUM_URL: 'http://selenium:4444/wd/hub'
+    depends_on:
+      selenium-chrome-contained:
+        condition: service_started
+      test:
+        condition: service_healthy
+    entrypoint: ['/bin/bash', './docker/developers/run.sh', 'bundle', 'exec', 'rake', 'test:ui']
+    #entrypoint: ['/bin/bash', './docker/developers/run.sh', '/bin/bash']
+    #command: []
+    networks:
+      cdo_network_test:
+
+  # A Selenium server running Chrome for running UI tests contained in Docker
+  selenium-chrome-contained: &selenium-chrome-base
     container_name: selenium-chrome
     hostname: selenium
     image: seleniarm/standalone-chromium:latest
-    ports:
-      - "5900:5900" # The selenium direct VNC port
-      - "4444:4444" # The selenium router port
-      - "7900:7900" # The selenium NoVNC service port
     expose:
       - "5900" 
       - "4444"
@@ -21,17 +365,23 @@ services:
       nofile:
         soft: 65536
         hard: 65536
-    network_mode: host
+    networks:
+      cdo_network_test:
 
-  # A Selenium server running Firefox for running UI tests locally
-  selenium-firefox:
+  # A Selenium server running Chrome for running UI tests locally
+  selenium-chrome:
+    <<: *selenium-chrome-base
+    network_mode: host
+    ports:
+      - "5900:5900" # The selenium direct VNC port
+      - "4444:4444" # The selenium router port
+      - "7900:7900" # The selenium NoVNC service port
+
+  # A Selenium server running Firefox for running UI tests contained in Docker
+  selenium-firefox-contained: &selenium-firefox-base
     container_name: selenium-firefox
     hostname: selenium
     image: seleniarm/standalone-firefox:latest
-    ports:
-      - "5900:5900" # The selenium direct VNC port
-      - "4444:4444" # The selenium router port
-      - "7900:7900" # The selenium NoVNC service port
     expose:
       - "5900"
       - "4444"
@@ -43,17 +393,23 @@ services:
       nofile:
         soft: 65536
         hard: 65536
+    networks:
+      cdo_network_test:
+
+  # A Selenium server running Firefox for running UI tests locally
+  selenium-firefox:
+    <<: *selenium-firefox-base
+    ports:
+      - "5900:5900" # The selenium direct VNC port
+      - "4444:4444" # The selenium router port
+      - "7900:7900" # The selenium NoVNC service port
     network_mode: host
 
-  # A Selenium server running Edge for running UI tests locally
-  selenium-edge:
+  # A Selenium server running Edge for running UI tests contained in Docker
+  selenium-edge-contained: &selenium-edge-base
     container_name: selenium-edge
     hostname: selenium
     image: selenium/standalone-edge:latest
-    ports:
-      - "5900:5900" # The selenium direct VNC port
-      - "4444:4444" # The selenium router port
-      - "7900:7900" # The selenium NoVNC service port
     expose:
       - "5900"
       - "4444"
@@ -65,33 +421,25 @@ services:
       nofile:
         soft: 65536
         hard: 65536
-    network_mode: host
+    networks:
+      cdo_network_test:
 
-  redis:
-    container_name: redis
-    hostname: redis
-    image: redis:latest
-    network_mode: host
-
-  db:
-    container_name: db
-    hostname: db
-    image: mysql/mysql-server:8.0
-    environment:
-      MYSQL_DATABASE: 'db'
-      MYSQL_USER: 'user'
-      MYSQL_PASSWORD: 'password'
-      MYSQL_ROOT_PASSWORD: 'password'
-      MYSQL_ROOT_HOST: '%'
+  # A Selenium server running Firefox for running UI tests locally
+  selenium-edge:
+    <<: *selenium-edge-base
     ports:
-      - "3306:3306"
-    expose:
-      - "3306"
-    volumes:
-      - ./.mysql-data:/var/lib/mysql
-    # Many default ulimits are just too high
-    # And, so, it will consume way too much memory (16GB+)
-    ulimits:
-      nofile:
-        soft: 65536
-        hard: 65536
+      - "5900:5900" # The selenium direct VNC port
+      - "4444:4444" # The selenium router port
+      - "7900:7900" # The selenium NoVNC service port
+    network_mode: host
+
+volumes:
+  mysql_data:
+  rbenv:
+  nvm:
+
+networks:
+  cdo_network:
+    driver: bridge
+  cdo_network_test:
+    driver: bridge
