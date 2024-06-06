@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import i18n from '@cdo/locale';
 import * as utils from '../../../utils';
 import WorkshopTableLoader from '../workshop_dashboard/components/workshop_table_loader';
 import {workshopShape} from '../workshop_dashboard/types.js';
@@ -17,7 +18,7 @@ class EnrolledWorkshops extends React.Component {
       <WorkshopTableLoader
         queryUrl="/api/v1/pd/workshops_user_enrolled_in"
         hideNoWorkshopsMessage={true}
-        tableHeader="My Workshops"
+        tableHeader={i18n.myWorkshops()}
       >
         <WorkshopsTable />
       </WorkshopTableLoader>

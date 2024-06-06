@@ -345,7 +345,7 @@ function LandingPage({
           <WorkshopsTable
             workshops={workshopsAsFacilitator}
             forMyPlPage={true}
-            tableHeader="In Progress and Upcoming Workshops"
+            tableHeader={i18n.inProgressAndUpcomingWorkshops()}
           />
         )}
       </>
@@ -368,7 +368,7 @@ function LandingPage({
           <WorkshopsTable
             workshops={workshopsAsRegionalPartner}
             forMyPlPage={true}
-            tableHeader="In Progress and Upcoming Workshops"
+            tableHeader={i18n.inProgressAndUpcomingWorkshops()}
           />
         )}
       </>
@@ -394,7 +394,7 @@ function LandingPage({
           <WorkshopsTable
             workshops={workshopsAsOrganizer}
             forMyPlPage={true}
-            tableHeader="In Progress and Upcoming Workshops"
+            tableHeader={i18n.inProgressAndUpcomingWorkshops()}
           />
         )}
       </>
