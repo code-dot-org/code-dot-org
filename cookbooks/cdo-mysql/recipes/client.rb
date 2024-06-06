@@ -1,11 +1,11 @@
 include_recipe 'cdo-mysql::repo'
 
-# We don't need to install a MySQL 5.7-specific libmysqlclient library,
-# since the 8.0 version distributed by default is backwards-compatible
-# all the way back to MySQL 5.5
 apt_package 'libmysqlclient-dev'
 
-# Pin to MySQL 5.7 until we're ready to update to MySQL 8
 apt_package 'mysql-client' do
-  version '5.7.42-1ubuntu18.04'
+  if node['cdo-mysql']['target_version'] == '5.7'
+    version '5.7.42-1ubuntu18.04'
+  elsif node['cdo-mysql']['target_version'] == '8.0'
+    version '8.0.36-0ubuntu0.20.04.1'
+  end
 end
