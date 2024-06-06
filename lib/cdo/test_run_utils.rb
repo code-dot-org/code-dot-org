@@ -20,18 +20,33 @@ module TestRunUtils
   end
 
   def self.run_local_ui_test
-    feature_path = File.expand_path(ENV['feature'])
     args = [
       "--verbose",
       "--pegasus=localhost.code.org:3000",
       "--dashboard=localhost-studio.code.org:3000",
       "--local",
       "--headed",
-      "--feature=#{feature_path}"
     ]
+
+    if ENV['feature']
+      # Perform one or more specific test files (delimited by commas)
+      features = ENV['feature'].split(',')
+      feature_path = features.map do |feature|
+        File.expand_path(feature)
+      end.join(',')
+      args << "--feature=#{feature_path}"
+    else
+      # Perform all tests
+      args << "--with-status-page"
+    end
 
     if ENV['browser']
       args << "--browser=#{ENV['browser']}"
+    end
+
+    if ENV['selenium']
+      url = ENV['selenium'] == "" ? 'http://localhost:4444/wd/hub' : ENV['selenium']
+      args << "--selenium-hub-url=#{url}"
     end
 
     Dir.chdir(dashboard_dir('test/ui/')) do
