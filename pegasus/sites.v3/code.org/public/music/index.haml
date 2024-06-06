@@ -62,20 +62,17 @@ theme: responsive_full_width
     %h2.white=hoc_s("music_lab.quotes.heading")
     = view :"music/music_lab_carousel_quotes"
 
-- if request.language == "en"
-  %section
-    .wrapper
-      .flex-container.justify-space-between.align-items-center.wrap.gap-2
-        %figure.col-45
-          %img.rounded-corners{src: "/images/music-lab/music-lab-tutorial.png", alt: "", style: "width: 100%;"}
-        .text-wrapper.col-50
-          %h2=hoc_s("music_lab.tutorial.heading")
-          %p.wrap-pretty
-            =hoc_s("music_lab.tutorial.desc")
-          %p.body-three
-            =hoc_s("music_lab.tutorial.english_only")
-          %a.link-button{href: CDO.studio_url("/s/music-tutorial-2024")}
-            =hoc_s("music_lab.tutorial.button")
+%section
+  .wrapper
+    .flex-container.justify-space-between.align-items-center.wrap.gap-2
+      %figure.col-45
+        %img.rounded-corners{src: "/images/music-lab/music-lab-tutorial.png", alt: "", style: "width: 100%;"}
+      .text-wrapper.col-50
+        %h2=hoc_s("music_lab.tutorial.heading")
+        %p.wrap-pretty
+          =hoc_s("music_lab.tutorial.desc")
+        %a.link-button{href: CDO.studio_url("/s/music-tutorial-2024")}
+          =hoc_s("music_lab.tutorial.button")
 
 %section.bg-neutral-light
   .wrapper

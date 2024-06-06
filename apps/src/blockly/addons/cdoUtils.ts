@@ -595,7 +595,7 @@ export function getSimplifiedStateForFlyout(
   const blocksCopy = {...blocks};
 
   // Replace variable ids with names and simplify state for flyout.
-  blocksCopy.blocks.forEach(block => {
+  blocksCopy.blocks?.forEach(block => {
     updateVariableFields(block, serializedVariableMap);
     blocksList.push(simplifyBlockState(block));
   });

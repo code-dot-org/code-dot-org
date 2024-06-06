@@ -4,7 +4,7 @@
   "category": "Actions",
   "category_key": "actions",
   "block_name": "gamelab_moveForward",
-  "content": "Moves the sprite the specified number of pixels in the direction it is facing.\n\nBy default, the block moves sprites to the right (or east). However, changing the direction the sprite faces will change which direction it moves when moving forward.",
+  "content": "Moves the sprite the specified number of pixels in the direction it is facing.\n\nBy default, the block moves sprites to the right (or east). However, changing the direction the sprite faces will change which direction it moves when moving forward.\n## Artist\nIf this block is being used with Artist, then by default, the sprite that will be moved is the artist, as no other sprites can be generated in an Artist lesson. Therefore, this block's Artist version does not allow you to choose which sprite to turn. Whenever the artist moves (not jumps), it will draw along the path it moves. ",
   "examples": [
     {
       "name": "Example 1",
