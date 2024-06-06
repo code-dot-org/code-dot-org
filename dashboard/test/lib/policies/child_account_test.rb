@@ -185,6 +185,14 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       _(lockable?).must_equal true
     end
 
+    context 'when user is already locked out' do
+      let(:user) {build_stubbed(:locked_out_child)}
+
+      it 'returns false' do
+        _(lockable?).must_equal false
+      end
+    end
+
     context 'when user does not have lockout date' do
       let(:user_lockout_date) {nil}
 

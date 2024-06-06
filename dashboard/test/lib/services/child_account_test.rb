@@ -112,21 +112,5 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
         child_account_compliance_state_last_updated: DateTime.now.iso8601(3),
       }
     end
-
-    context 'when user is already locked out' do
-      let(:user) do
-        create(
-          :locked_out_child,
-          child_account_compliance_lock_out_date: 2.days.ago,
-          child_account_compliance_state_last_updated: 1.day.ago
-        )
-      end
-
-      it 'does not update user' do
-        assert_no_changes -> {user.properties} do
-          lock_out
-        end
-      end
-    end
   end
 end
