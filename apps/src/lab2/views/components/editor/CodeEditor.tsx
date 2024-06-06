@@ -2,7 +2,7 @@ import React, {useEffect, useMemo, useRef, useState} from 'react';
 import classNames from 'classnames';
 import {Compartment, EditorState, Extension} from '@codemirror/state';
 import {EditorView, ViewUpdate} from '@codemirror/view';
-import {useDispatch, useSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
 import {editorConfig} from './editorConfig';
 import {darkMode as darkModeTheme} from './editorThemes';
 import {autocompletion} from '@codemirror/autocomplete';
@@ -28,7 +28,7 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   const [didInit, setDidInit] = useState(false);
   const [editorView, setEditorView] = useState<EditorView | null>(null);
   const channelId = useAppSelector(state => state.lab.channel?.id);
-  const isReadOnly = useSelector(isReadOnlyWorkspace);
+  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
 
   // These two compartments control read-only settings.
   // Controls if you can type in the editor or not.
@@ -54,8 +54,6 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
       autocompletion(),
       ...editorConfigExtensions,
     ];
-
-    console.log(`Setting editor read only to ${isReadOnly}`);
 
     editorExtensions.push(
       editorReadOnlyCompartment.of(EditorState.readOnly.of(isReadOnly)),
@@ -103,7 +101,6 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
 
   useEffect(() => {
     if (editorView) {
-      console.log(`Changing editor read only to ${isReadOnly}`);
       editorView.dispatch({
         effects: [
           editorReadOnlyCompartment.reconfigure(

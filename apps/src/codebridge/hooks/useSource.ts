@@ -35,16 +35,23 @@ export const useSource = (defaultSources: ProjectSources) => {
   const levelId = useAppSelector(state => state.lab.levelProperties?.id);
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
 
-  const setSource = useMemo(
-    () => (newSource: MultiFileSource) => {
+  const setSourceHelper = useMemo(
+    () => (newProjectSource: ProjectSources) => {
       if (isReadOnly) {
-        dispatch(setProjectSource({source: newSource}));
+        // Don't attempt to save in read-only mode.
+        dispatch(setProjectSource(newProjectSource));
       } else {
-        // Only attempt to save in read-only mode.
-        dispatch(setAndSaveProjectSource({source: newSource}));
+        dispatch(setAndSaveProjectSource(newProjectSource));
       }
     },
     [dispatch, isReadOnly]
+  );
+
+  const setSource = useMemo(
+    () => (newSource: MultiFileSource) => {
+      setSourceHelper({source: newSource});
+    },
+    [setSourceHelper]
   );
 
   const resetToStartSource = useCallback(() => {
@@ -69,18 +76,13 @@ export const useSource = (defaultSources: ProjectSources) => {
     if (levelId && previousLevelIdRef.current !== levelId) {
       // We reset the project when the levelId changes, as this means we are on a new level.
       if (initialSources) {
-        if (isReadOnly) {
-          dispatch(setProjectSource(initialSources));
-        } else {
-          // Only attempt to save in read-only mode.
-          dispatch(setAndSaveProjectSource(initialSources));
-        }
+        setSourceHelper(initialSources);
       }
       if (levelId) {
         previousLevelIdRef.current = levelId;
       }
     }
-  }, [initialSources, dispatch, levelId, isReadOnly]);
+  }, [initialSources, levelId, setSourceHelper]);
 
   return {source, setSource, resetToStartSource};
 };
