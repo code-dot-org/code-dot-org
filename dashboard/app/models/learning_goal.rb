@@ -25,10 +25,14 @@ class LearningGoal < ApplicationRecord
   validate :validate_ai_config
   def validate_ai_config
     if ai_enabled
-      lesson_s3_name = AiRubricConfig.get_lesson_s3_name(rubric.get_script_level)
-      s3_learning_goals = AiRubricConfig.get_s3_learning_goals(lesson_s3_name)
-      unless s3_learning_goals.include?(learning_goal)
-        errors.add(:learning_goal, "no valid AI config in S3 for ai-enabled learning goal '#{learning_goal}'")
+      if CDO.aws_access?
+        lesson_s3_name = AiRubricConfig.get_lesson_s3_name(rubric.get_script_level)
+        s3_learning_goals = AiRubricConfig.get_s3_learning_goals(lesson_s3_name)
+        unless s3_learning_goals.include?(learning_goal)
+          errors.add(:learning_goal, "no valid AI config in S3 for ai-enabled learning goal '#{learning_goal}'")
+        end
+      elsif rack_env?(:development)
+        puts "warning: learning_goal key #{key} was not validated since AWS access was not available"
       end
     end
   end
