@@ -5,12 +5,18 @@ import {
 } from '@codebridge/codebridgeContext';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {PopUpButton} from '@codebridge/PopUpButton/PopUpButton';
-import {ProjectType, FolderId} from '@codebridge/types';
-import {findFolder, getErrorMessage} from '@codebridge/utils';
+import {ProjectType, FolderId, ProjectFile} from '@codebridge/types';
+import {
+  findFolder,
+  getErrorMessage,
+  getFileIcon,
+  shouldShowFile,
+} from '@codebridge/utils';
 import React, {useMemo} from 'react';
 
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import {ProjectFileType} from '@cdo/apps/lab2/types';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 
 import {FileBrowserHeaderPopUpButton} from './FileBrowserHeaderPopUpButton';
@@ -20,7 +26,7 @@ import {
   newFolderPromptType,
   renameFilePromptType,
   renameFolderPromptType,
-  toggleFileVisibilityType,
+  setFileType,
 } from './types';
 
 import moduleStyles from './styles/filebrowser.module.scss';
@@ -35,7 +41,7 @@ type FilesComponentProps = {
   newFolderPrompt: newFolderPromptType;
   renameFilePrompt: renameFilePromptType;
   renameFolderPrompt: renameFolderPromptType;
-  toggleFileVisibility: toggleFileVisibilityType;
+  setFileType: setFileType;
 };
 
 const InnerFileBrowser = React.memo(
@@ -48,11 +54,59 @@ const InnerFileBrowser = React.memo(
     moveFilePrompt,
     renameFilePrompt,
     renameFolderPrompt,
-    toggleFileVisibility,
+    setFileType,
   }: FilesComponentProps) => {
     const {openFile, deleteFile, toggleOpenFolder, deleteFolder} =
       useCodebridgeContext();
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+    const hasValidationFile = Object.values(files).find(
+      f => f.type === ProjectFileType.VALIDATION
+    );
+
+    const startModeFileDropdownOptions = (file: ProjectFile) => {
+      // We only support one validation file per project, so if we already have one,
+      // do not show the option to mark another file as validation.
+      const options = [];
+      if (!hasValidationFile) {
+        options.push(
+          <span
+            onClick={() => setFileType(file.id, ProjectFileType.VALIDATION)}
+            key={'make-validation'}
+          >
+            <i className={`fa-solid fa-flask`} /> Make validation file
+          </span>
+        );
+      }
+      if (
+        file.type === ProjectFileType.VALIDATION ||
+        file.type === ProjectFileType.SUPPORT
+      ) {
+        options.push(
+          <span
+            onClick={() => setFileType(file.id, ProjectFileType.STARTER)}
+            key={'make-starter'}
+          >
+            <i className={`fa-solid fa-eye`} /> Make starter file
+          </span>
+        );
+      }
+      if (
+        file.type === ProjectFileType.VALIDATION ||
+        file.type === ProjectFileType.STARTER ||
+        !file.type // A file wihtout a type is a starter file.
+      ) {
+        options.push(
+          <span
+            onClick={() => setFileType(file.id, ProjectFileType.SUPPORT)}
+            key={'make-support'}
+          >
+            <i className={`fa-solid fa-eye-slash`} /> Make support file
+          </span>
+        );
+      }
+      return options;
+    };
+
     return (
       <>
         {Object.values(folders)
@@ -109,7 +163,7 @@ const InnerFileBrowser = React.memo(
                       moveFilePrompt={moveFilePrompt}
                       renameFilePrompt={renameFilePrompt}
                       renameFolderPrompt={renameFolderPrompt}
-                      toggleFileVisibility={toggleFileVisibility}
+                      setFileType={setFileType}
                     />
                   </ul>
                 )}
@@ -117,20 +171,13 @@ const InnerFileBrowser = React.memo(
             );
           })}
         {Object.values(files)
-          .filter(f => f.folderId === parentId && (!f.hidden || isStartMode))
+          .filter(f => f.folderId === parentId && shouldShowFile(f))
           .sort((a, b) => a.name.localeCompare(b.name))
           .map(f => (
             <li key={f.id}>
               <span className={moduleStyles.label}>
                 <span onClick={() => openFile(f.id)}>
-                  {isStartMode && (
-                    <i
-                      className={`fa-solid ${
-                        f.hidden ? 'fa-eye-slash' : 'fa-eye'
-                      }`}
-                    />
-                  )}
-                  <i className="fa-solid fa-file" />
+                  <i className={getFileIcon(f)} />
                   {f.name}
                 </span>
                 <PopUpButton
@@ -148,15 +195,7 @@ const InnerFileBrowser = React.memo(
                     <span onClick={() => deleteFile(f.id)}>
                       <i className="fa-solid fa-trash" /> Delete file
                     </span>
-                    {isStartMode && (
-                      <span onClick={() => toggleFileVisibility(f.id)}>
-                        <i
-                          className={`fa-solid ${
-                            f.hidden ? 'fa-eye' : 'fa-eye-slash'
-                          }`}
-                        />
-                      </span>
-                    )}
+                    {isStartMode && startModeFileDropdownOptions(f)}
                   </span>
                 </PopUpButton>
               </span>
@@ -176,7 +215,7 @@ export const FileBrowser = React.memo(() => {
 
     renameFolder,
     newFolder,
-    setFileVisibility,
+    setFileType,
   } = useCodebridgeContext();
 
   const newFolderPrompt: FilesComponentProps['newFolderPrompt'] = useMemo(
@@ -212,11 +251,7 @@ export const FileBrowser = React.memo(() => {
           return;
         }
 
-        const existingFile = Object.values(project.files).some(
-          f => f.name === fileName && f.folderId === folderId
-        );
-        if (existingFile) {
-          alert('File already exists');
+        if (checkForDuplicateFilename(fileName, folderId, project.files)) {
           return;
         }
 
@@ -250,11 +285,7 @@ export const FileBrowser = React.memo(() => {
           required: true,
         });
 
-        const existingFile = Object.values(project.files).some(
-          f => f.name === file.name && f.folderId === folderId
-        );
-        if (existingFile) {
-          alert('File already exists');
+        if (checkForDuplicateFilename(file.name, folderId, project.files)) {
           return;
         }
 
@@ -274,11 +305,7 @@ export const FileBrowser = React.memo(() => {
         return;
       }
 
-      const existingFile = Object.values(project.files).some(
-        f => f.name === newName && f.folderId === file.folderId
-      );
-      if (existingFile) {
-        alert('File already exists');
+      if (checkForDuplicateFilename(newName, file.folderId, project.files)) {
         return;
       }
 
@@ -286,6 +313,34 @@ export const FileBrowser = React.memo(() => {
     },
     [renameFile, project.files]
   );
+
+  // Check if the filename is already in use in the given folder.
+  // If it is, alert the user and return true, otherwise return false.
+  const checkForDuplicateFilename = (
+    fileName: string,
+    folderId: string,
+    projectFiles: Record<string, ProjectFile>
+  ) => {
+    let message = null;
+    const existingFile = Object.values(projectFiles).find(
+      f => f.name === fileName && f.folderId === folderId
+    );
+    if (existingFile) {
+      message = `Filename ${fileName} is already in use in this folder. Please choose a different name.`;
+      if (
+        existingFile.type === ProjectFileType.SUPPORT ||
+        existingFile.type === ProjectFileType.VALIDATION
+      ) {
+        message = `Filename ${fileName} is already in use in this folder in the level's support code. Please choose a different name.`;
+      }
+    }
+    if (message) {
+      alert(message);
+      return true;
+    } else {
+      return false;
+    }
+  };
 
   const renameFolderPrompt: FilesComponentProps['renameFolderPrompt'] = useMemo(
     () => folderId => {
@@ -307,16 +362,6 @@ export const FileBrowser = React.memo(() => {
     },
     [renameFolder, project.folders]
   );
-
-  const toggleFileVisibility: FilesComponentProps['toggleFileVisibility'] =
-    useMemo(
-      () => fileId => {
-        const file = project.files[fileId];
-        const hide = !file.hidden;
-        setFileVisibility(fileId, hide);
-      },
-      [setFileVisibility, project.files]
-    );
 
   return (
     <PanelContainer
@@ -340,7 +385,7 @@ export const FileBrowser = React.memo(() => {
           moveFilePrompt={moveFilePrompt}
           renameFilePrompt={renameFilePrompt}
           renameFolderPrompt={renameFolderPrompt}
-          toggleFileVisibility={toggleFileVisibility}
+          setFileType={setFileType}
         />
       </ul>
     </PanelContainer>
