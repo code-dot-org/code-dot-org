@@ -6,12 +6,15 @@ import commonI18n from '@cdo/locale';
 
 /**
  * Generic confirmation dialog used in Lab2 labs.
+ * The title, message, and confirm button text can be customized.
+ * If no confirm button text is provided, the default text is "OK" (translatable).
  */
 const GenericConfirmationDialog: React.FunctionComponent<BaseDialogProps> = ({
   handleConfirm,
   handleCancel,
   title,
   message,
+  confirmText,
 }) => {
   return (
     <div className={moduleStyles.confirmDialog}>
@@ -34,7 +37,7 @@ const GenericConfirmationDialog: React.FunctionComponent<BaseDialogProps> = ({
           type="button"
           onClick={handleConfirm}
         >
-          {commonI18n.delete()}
+          {confirmText || commonI18n.dialogOK()}
         </button>
       </div>
     </div>

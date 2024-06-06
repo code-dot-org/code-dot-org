@@ -19,6 +19,7 @@ export interface BaseDialogProps {
   handleCancel: () => void;
   title?: string;
   message?: string;
+  confirmText?: string;
 }
 
 const DialogViews: {
@@ -49,6 +50,9 @@ const DialogManager: React.FunctionComponent<DialogManagerProps> = ({
   const [dialogMessage, setDialogMessage] = useState<string | undefined>(
     undefined
   );
+  const [dialogConfirmText, setDialogConfirmText] = useState<
+    string | undefined
+  >(undefined);
 
   const showDialog = useCallback(
     (dialogType: DialogType, callback: () => void) => {
@@ -63,10 +67,12 @@ const DialogManager: React.FunctionComponent<DialogManagerProps> = ({
       dialogType: DialogType,
       callback: () => void,
       title: string,
-      message: string
+      message: string,
+      confirmText?: string
     ) => {
       setDialogTitle(title);
       setDialogMessage(message);
+      setDialogConfirmText(confirmText);
       showDialog(dialogType, callback);
     },
     [showDialog]
@@ -99,6 +105,7 @@ const DialogManager: React.FunctionComponent<DialogManagerProps> = ({
             handleCancel={handleCancel}
             title={dialogTitle}
             message={dialogMessage}
+            confirmText={dialogConfirmText}
           />
         </div>
       )}
@@ -113,7 +120,8 @@ interface DialogControl {
     dialogType: DialogType,
     callback: () => void,
     title: string,
-    message: string
+    message: string,
+    confirmText?: string
   ) => void;
 }
 
