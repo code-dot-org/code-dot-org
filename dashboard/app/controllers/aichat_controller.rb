@@ -5,8 +5,8 @@ class AichatController < ApplicationController
   authorize_resource class: false
 
   # params are
-  # newMessage: ChatCompletionMessage
-  # storedMessages: Array of {role: <'user', 'system', or 'assistant'>; content: string} - does not include user's new message
+  # newMessage: {role: 'user'; chatMessageText: string; status: string}
+  # storedMessages: Array of {role: <'user', 'system', or 'assistant'>; chatMessageText: string; status: string} - does not include user's new message
   # aichatModelCustomizations: {temperature: number; retrievalContexts: string[]; systemPrompt: string;}
   # aichatContext: {currentLevelId: number; scriptId: number; channelId: string;}
   # POST /aichat/chat_completion
