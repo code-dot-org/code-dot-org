@@ -174,8 +174,9 @@ namespace :seed do
     :check_migrations,
     :games,
     :deprecated_blockly_levels,
+    :child_dsls,
     :custom_levels,
-    :dsls,
+    :parent_dsls,
     :code_docs,
     :blocks,
     :standards,
@@ -225,16 +226,26 @@ namespace :seed do
     end
   end
 
-  # detect changes to dsldefined level files
-  # LevelGroup must be last here so that LevelGroups are seeded after all levels that they can contain
-  DSL_TYPES = %w(TextMatch ContractMatch External Match Multi EvaluationMulti BubbleChoice LevelGroup).freeze
-  DSL_FILES = DSL_TYPES.map {|x| Dir.glob("config/scripts/**/*.#{x.underscore}*").sort}.flatten.freeze
+  # multi and match files must be seeded before any custom levels which contain them
+  CHILD_DSL_TYPES = %w(TextMatch ContractMatch External Match Multi EvaluationMulti).freeze
+  CHILD_DSL_FILES = CHILD_DSL_TYPES.map {|x| Dir.glob("config/scripts/**/*.#{x.underscore}*").sort}.flatten.freeze
 
-  # explicit execution of "seed:dsls"
-  timed_task_with_logging dsls: :environment do
+  timed_task_with_logging child_dsls: :environment do
     DSLDefined.transaction do
-      dsl_files = override_dsl_filenames(ENV['DSL_FILENAME'], DSL_FILES)
-      parse_dsl_files(dsl_files)
+      dsl_files = override_dsl_filenames(ENV['DSL_FILENAME'], CHILD_DSL_FILES)
+      parse_dsl_files(dsl_files, CHILD_DSL_TYPES)
+    end
+  end
+
+  # bubble choice and level group files must be seeded last, since they can
+  # contain many other level types
+  PARENT_DSL_TYPES = %w(BubbleChoice LevelGroup).freeze
+  PARENT_DSL_FILES = PARENT_DSL_TYPES.map {|x| Dir.glob("config/scripts/**/*.#{x.underscore}*").sort}.flatten.freeze
+
+  timed_task_with_logging parent_dsls: :environment do
+    DSLDefined.transaction do
+      dsl_files = override_dsl_filenames(ENV['DSL_FILENAME'], PARENT_DSL_FILES)
+      parse_dsl_files(dsl_files, PARENT_DSL_TYPES)
     end
   end
 
@@ -253,11 +264,11 @@ namespace :seed do
   end
 
   # Parse each .[dsl] file and setup its model.
-  def parse_dsl_files(dsl_files)
+  def parse_dsl_files(dsl_files, dsl_types)
     level_md5s_by_name = DSLDefined.pluck(:name, :md5).to_h
 
     dsl_files.each do |filename|
-      dsl_class = DSL_TYPES.detect {|type| filename.include?(".#{type.underscore}")}.try(:constantize)
+      dsl_class = dsl_types.detect {|type| filename.include?(".#{type.underscore}")}.try(:constantize)
       begin
         contents = File.read(filename)
         md5 = Digest::MD5.hexdigest(contents)
