@@ -274,6 +274,9 @@ namespace :seed do
         contents = File.read(filename)
         md5 = Digest::MD5.hexdigest(contents)
         data, _i18n = dsl_class.parse(contents, filename)
+
+        # Skip any files which have not been updated since last seed. To force a
+        # a level to be reseeded, clear its md5 field in the database.
         unless md5 == level_md5s_by_name[data[:name]]
           dsl_class.setup(data, md5)
         end
