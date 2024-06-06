@@ -1,16 +1,19 @@
 import React, {useCallback, useContext} from 'react';
 
 import Button from '@cdo/apps/componentLibrary/button';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {
   DialogContext,
   DialogType,
 } from '@cdo/apps/lab2/views/dialogs/DialogManager';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {useCodebridgeContext} from '../codebridgeContext';
 
 const WorkspaceHeaderButtons: React.FunctionComponent = () => {
   const dialogControl = useContext(DialogContext);
   const {resetProject} = useCodebridgeContext();
+  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
 
   const onClickStartOver = useCallback(() => {
     if (dialogControl) {
@@ -18,7 +21,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
     }
   }, [dialogControl, resetProject]);
 
-  return (
+  return !isReadOnly ? (
     <div>
       <Button
         icon={{iconStyle: 'solid', iconName: 'refresh'}}
@@ -29,7 +32,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
         size={'xs'}
       />
     </div>
-  );
+  ) : null;
 };
 
 export default WorkspaceHeaderButtons;

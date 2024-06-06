@@ -2,11 +2,15 @@ import {useMemo, useEffect, useCallback, useRef} from 'react';
 
 import header from '@cdo/apps/code-studio/header';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {
   getAppOptionsEditBlocks,
   getAppOptionsEditingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
-import {setAndSaveProjectSource} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import {
+  setAndSaveProjectSource,
+  setProjectSource,
+} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -29,12 +33,18 @@ export const useSource = (defaultSources: ProjectSources) => {
   );
   const previousLevelIdRef = useRef<number | null>(null);
   const levelId = useAppSelector(state => state.lab.levelProperties?.id);
+  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
 
   const setSource = useMemo(
     () => (newSource: MultiFileSource) => {
-      dispatch(setAndSaveProjectSource({source: newSource}));
+      if (isReadOnly) {
+        dispatch(setProjectSource({source: newSource}));
+      } else {
+        // Only attempt to save in read-only mode.
+        dispatch(setAndSaveProjectSource({source: newSource}));
+      }
     },
-    [dispatch]
+    [dispatch, isReadOnly]
   );
 
   const resetToStartSource = useCallback(() => {
@@ -59,13 +69,18 @@ export const useSource = (defaultSources: ProjectSources) => {
     if (levelId && previousLevelIdRef.current !== levelId) {
       // We reset the project when the levelId changes, as this means we are on a new level.
       if (initialSources) {
-        dispatch(setAndSaveProjectSource(initialSources));
+        if (isReadOnly) {
+          dispatch(setProjectSource(initialSources));
+        } else {
+          // Only attempt to save in read-only mode.
+          dispatch(setAndSaveProjectSource(initialSources));
+        }
       }
       if (levelId) {
         previousLevelIdRef.current = levelId;
       }
     }
-  }, [initialSources, dispatch, levelId]);
+  }, [initialSources, dispatch, levelId, isReadOnly]);
 
   return {source, setSource, resetToStartSource};
 };
