@@ -1,6 +1,2 @@
 {
-  "deleteFileConfirmation": "Are you sure you want to delete the file {filename}?",
-  "deleteFileTitle": "Delete File",
-  "deleteFolderConfirmation": "Are you sure you want to delete the folder {folderName}? This will delete all files and folders inside {folderName}.",
-  "deleteFolderTitle": "Delete Folder"
 }
