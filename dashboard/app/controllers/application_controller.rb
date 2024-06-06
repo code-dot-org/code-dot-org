@@ -64,6 +64,25 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  if Rails.env.development? || Rails.env.test?
+    # This will pretend the request is coming from the requested IP
+    # (or rewrite a proxy to localhost)
+    before_action :set_remote_ip
+    def set_remote_ip
+      # We can see a 'set_remote_ip' parameter to force the remote IP
+      if params[:set_remote_ip]
+        request.env['REMOTE_ADDR'] = params[:set_remote_ip]
+      end
+
+      # If we are developing and accessing the site via a remote session,
+      # we want to pretend it is a local request so we can gracefully handle
+      # this situation. This is true for VirtualBox installs and Docker usage.
+      if Geocoder.search(request.env['REMOTE_ADDR']).try(:first)&.data&.[]('bogon')
+        request.env['REMOTE_ADDR'] = '127.0.0.1'
+      end
+    end
+  end
+
   rescue_from CanCan::AccessDenied do
     if !current_user && request.format == :html
       # we don't know who you are, you can try to sign in
