@@ -519,7 +519,7 @@ es-ES:
     de la computación y la seguridad en Internet. Al final del curso, crea tu propio
     juego o historia para compartir.
   coursea-2022_gradelevel: De 4 a 7 años
-  coursea-2022_name: Curso A (2021)
+  coursea-2022_name: Curso A (2022)
   coursea-2022_shortdescription_congrats: Aprende los fundamentos de las ciencias
     de la computación y la seguridad en Internet. Al final del curso, crea tu propio
     juego o historia para compartir.
@@ -550,7 +550,7 @@ es-ES:
     de la computación y la seguridad en Internet. Al final del curso, crea tu propio
     juego o historia para compartir.
   courseb-2022_gradelevel: De 5 a 8 años
-  courseb-2022_name: Curso B (2021)
+  courseb-2022_name: Curso B (2022)
   courseb-2022_shortdescription_congrats: Aprende los fundamentos de las ciencias
     de la computación y la seguridad en Internet. Al final del curso, crea tu propio
     juego o historia para compartir.
@@ -584,7 +584,7 @@ es-ES:
     de resolución de problemas y aprende cómo responder al ciberacoso. ¡Al final del
     curso podrás crear tu propio juego o historia para compartir!
   coursec-2022_gradelevel: Edades de 6 a 10 años
-  coursec-2022_name: Curso C (2021)
+  coursec-2022_name: Curso C (2022)
   coursec-2022_shortdescription_congrats: Crea programas con secuencias, bucles y
     eventos. Traduce tus iniciales a código binario, investiga distintas técnicas
     de resolución de problemas y aprende cómo responder al ciberacoso. ¡Al final del
@@ -620,7 +620,7 @@ es-ES:
     de bucles anidados, bucles `mientras`, condicionales y eventos. Los estudiantes
     no solo aprenden a programar, sino que también aprenden sobre ciudadanía digital.
   coursed-2022_gradelevel: Grado 8 +
-  coursed-2022_name: Curso D (2021)
+  coursed-2022_name: Curso D (2022)
   coursed-2022_shortdescription_congrats: Los estudiantes desarrollan su comprensión
     de bucles anidados, bucles `mientras`, condicionales y eventos. Los estudiantes
     no solo aprenden a programar, sino que también aprenden sobre ciudadanía digital.
@@ -2671,7 +2671,7 @@ es-ES:
   user_header_applab: 'Laboratorio de Aplicaciones '
   user_header_artist: 'Artista '
   user_header_create: 'Crear '
-  user_header_create_account: Crear una cuenta
+  user_header_create_account: Crear Cuenta
   user_header_create_account_low_cap: Crear cuenta
   user_header_dance: Fiesta de Baile
   user_header_flappy: Flappy
@@ -2681,6 +2681,7 @@ es-ES:
   user_header_minecraft: Minecraft
   user_header_my_projects: Mis proyectos
   user_header_new_project: Proyecto nuevo
+  user_header_new_project_low_cap: Nuevo proyecto
   user_header_playlab: Laboratorio de juegos
   user_header_settings: Mi cuenta
   user_header_signin: Iniciar Sesión
