@@ -19,9 +19,7 @@ class ChannelsBase64ErrorTest < Minitest::Test
     run_test_cases CAUSES_CIPHERERROR
   end
 
-  private
-
-  def run_test_cases(channel_id)
+  private def run_test_cases(channel_id)
     @channels.get "/v3/channels/#{channel_id}"
     assert_equal 400, @channels.last_response.status
 

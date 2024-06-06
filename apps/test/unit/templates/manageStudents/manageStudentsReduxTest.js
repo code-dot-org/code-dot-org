@@ -1,5 +1,3 @@
-import {assert} from '../../../util/reconfiguredChai';
-import {sectionLoginFactory} from '../../../factories/sectionLogin';
 import manageStudents, {
   setLoginType,
   setStudents,
@@ -32,6 +30,9 @@ import manageStudents, {
   addStudentsFull,
   transferStudentsFull,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
+
+import {sectionLoginFactory} from '../../../factories/sectionLogin';
+import {assert} from '../../../util/reconfiguredChai';
 
 const sectionLoginData = {
   1: sectionLoginFactory.build({id: 1, name: 'StudentNameA', sectionId: 53}),
@@ -677,14 +678,26 @@ describe('manageStudentsRedux', () => {
         },
       };
       const action = addMultipleRows({
-        '-1': {id: -1, name: 'student -1', isEditing: true},
-        '-2': {id: -2, name: 'student -2', isEditing: true},
+        '-1': {id: -1, name: 'student -1', familyName: '', isEditing: true},
+        '-2': {id: -2, name: 'student -2', familyName: '', isEditing: true},
+        '-3': {
+          id: -3,
+          name: 'student -3',
+          familyName: 'family -3',
+          isEditing: true,
+        },
       });
       const nextState = manageStudents(startingState, action);
 
       const expectedData = {
-        '-1': {id: -1, name: 'student -1', isEditing: true},
-        '-2': {id: -2, name: 'student -2', isEditing: true},
+        '-1': {id: -1, name: 'student -1', familyName: '', isEditing: true},
+        '-2': {id: -2, name: 'student -2', familyName: '', isEditing: true},
+        '-3': {
+          id: -3,
+          name: 'student -3',
+          familyName: 'family -3',
+          isEditing: true,
+        },
         4: {id: 4, name: 'original student', isEditing: true},
       };
       assert.deepEqual(nextState.studentData, expectedData);

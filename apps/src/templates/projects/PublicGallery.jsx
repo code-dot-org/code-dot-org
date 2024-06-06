@@ -1,20 +1,14 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import _ from 'lodash';
 import {connect} from 'react-redux';
+
 import i18n from '@cdo/locale';
-import ProjectCardGrid from './ProjectCardGrid';
+
 import Button from '../Button';
 
-export const publishedProjectPropType = PropTypes.shape({
-  channel: PropTypes.string.isRequired,
-  name: PropTypes.string,
-  studentName: PropTypes.string,
-  studentAgeRange: PropTypes.string,
-  thumbnailUrl: PropTypes.string,
-  type: PropTypes.string.isRequired,
-  publishedAt: PropTypes.string.isRequired,
-});
+import ProjectCardGrid from './ProjectCardGrid';
+import {publishedFeaturedProjectPropType} from './projectConstants';
 
 class PublicGallery extends Component {
   static propTypes = {
@@ -24,15 +18,16 @@ class PublicGallery extends Component {
 
     // Provided by Redux
     projectLists: PropTypes.shape({
-      special_topic: PropTypes.arrayOf(publishedProjectPropType),
-      applab: PropTypes.arrayOf(publishedProjectPropType),
-      spritelab: PropTypes.arrayOf(publishedProjectPropType),
-      gamelab: PropTypes.arrayOf(publishedProjectPropType),
-      playlab: PropTypes.arrayOf(publishedProjectPropType),
-      artist: PropTypes.arrayOf(publishedProjectPropType),
-      minecraft: PropTypes.arrayOf(publishedProjectPropType),
-      dance: PropTypes.arrayOf(publishedProjectPropType),
-      poetry: PropTypes.arrayOf(publishedProjectPropType),
+      special_topic: PropTypes.arrayOf(publishedFeaturedProjectPropType),
+      applab: PropTypes.arrayOf(publishedFeaturedProjectPropType),
+      spritelab: PropTypes.arrayOf(publishedFeaturedProjectPropType),
+      gamelab: PropTypes.arrayOf(publishedFeaturedProjectPropType),
+      playlab: PropTypes.arrayOf(publishedFeaturedProjectPropType),
+      artist: PropTypes.arrayOf(publishedFeaturedProjectPropType),
+      minecraft: PropTypes.arrayOf(publishedFeaturedProjectPropType),
+      dance: PropTypes.arrayOf(publishedFeaturedProjectPropType),
+      poetry: PropTypes.arrayOf(publishedFeaturedProjectPropType),
+      music: PropTypes.arrayOf(publishedFeaturedProjectPropType),
     }),
   };
 
@@ -40,20 +35,31 @@ class PublicGallery extends Component {
    * Transform the projectLists data from the format expected by the
    * PublicGallery to the format expected by the ProjectCardGrid.
    * See the PropTypes of each component for a definition of each format.
+   * Note that the updated public gallery now displays only featured projects selected by
+   * a project validator. There is now only one section 'Featured Projects' which
+   * contains a mix of all project types.
+   * In the future, we plan to implement a public gallery with sections for each project type.
+   * For now, the public gallery displays one section of mixed project types so that we convert
+   * projectLists (an object with key project type (e.g. 'applab' and value an array of project data objects
+   * (e.g., [{name: 'My Project', channel: 'abc1--def234', ...}, {...}])
+   * to an object with a single key 'featured' and value an array of modified project data
+   * objects with different project types.
    */
   mapProjectData(projectLists) {
-    return _.mapValues(projectLists, projectList => {
-      return projectList.map(projectData => {
-        return {
-          projectData: {
-            ...projectData,
-            publishedToPublic: true,
-            publishedToClass: false,
-          },
-          currentGallery: 'public',
-        };
-      });
-    });
+    // allProjectData is an array of project data objects with all lab types.
+    const allProjectData = Object.values(projectLists).flat();
+    // Update each project data object to format expected by ProjectCardGrid
+    const updatedAllProjectData = allProjectData.map(data => ({
+      projectData: {
+        ...data,
+        publishedToPublic: true,
+        publishedToClass: false,
+      },
+      currentGallery: 'public',
+    }));
+    return {
+      featured: _.shuffle(updatedAllProjectData),
+    };
   }
 
   render() {

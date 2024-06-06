@@ -17,6 +17,7 @@ export default class EditEnrollmentNameDialog extends React.Component {
     this.state = {
       firstName: '',
       lastName: '',
+      email: '',
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -29,6 +30,7 @@ export default class EditEnrollmentNameDialog extends React.Component {
       this.setState({
         firstName: this.props.selectedEnrollment.first_name,
         lastName: this.props.selectedEnrollment.last_name,
+        email: this.props.selectedEnrollment.email,
       });
     }
   }
@@ -38,7 +40,10 @@ export default class EditEnrollmentNameDialog extends React.Component {
   }
 
   handleClickUpdate() {
-    this.props.onEdit(_.pick(this.state, ['firstName', 'lastName']));
+    this.props.onEdit(
+      _.pick(this.state, ['firstName', 'lastName']),
+      this.state.email
+    );
   }
 
   render() {
@@ -69,6 +74,19 @@ export default class EditEnrollmentNameDialog extends React.Component {
                   type="text"
                   name="lastName"
                   value={this.state.lastName}
+                  onChange={this.handleInputChange}
+                />
+              </Col>
+            </Row>
+          </FormGroup>
+          <FormGroup>
+            <Row>
+              <Col sm={3}>Email:</Col>
+              <Col sm={3}>
+                <input
+                  type="text"
+                  name="email"
+                  value={this.state.email}
                   onChange={this.handleInputChange}
                 />
               </Col>

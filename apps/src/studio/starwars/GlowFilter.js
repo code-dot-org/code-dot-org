@@ -1,8 +1,9 @@
 /** @file Filter that adds a white glowing outline to an image. */
 
 import '@cdo/apps/utils'; // Provides Function.prototype.inherits
-import color from '@cdo/apps/util/color';
 import {SVG_NS} from '@cdo/apps/constants';
+import color from '@cdo/apps/util/color';
+
 import ImageFilter from './ImageFilter';
 
 /**

@@ -1,12 +1,13 @@
-require 'webmock/minitest'
-WebMock.disable_net_connect!(allow_localhost: true)
 require_relative '../../../shared/test/spy_newrelic_agent'
 require 'test_helper'
+
+require 'webmock/minitest'
+WebMock.disable_net_connect!(allow_localhost: true)
 
 class CurriculumProxyControllerTest < ActionController::TestCase
   test "should redirect from studio.code.org/docs path to curriculum.code.org/docs path" do
     stub_request(:get, "https://curriculum.code.org/docs/concepts/game-lab/drawing-shapes/").
-        to_return(body: 'curriculum.code.org content', headers: {})
+      to_return(body: 'curriculum.code.org content', headers: {})
 
     request.host = "studio.code.org"
     get :get_doc, params: {path: 'concepts/game-lab/drawing-shapes/'}

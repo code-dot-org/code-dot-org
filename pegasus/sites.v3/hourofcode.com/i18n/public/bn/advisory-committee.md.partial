@@ -1,8 +1,8 @@
 ---
-title: Hour of Code and CSEdWeek Advisory Committee
+title: ঘন্টা অফ কোড এবং সিএসইডউইক অ্যাডভাইজরি কমিটি
 ---
 
-# Hour of Code and CSEdWeek Advisory Committee
+# ঘন্টা অফ কোড এবং সিএসইডউইক অ্যাডভাইজরি কমিটি
 
 {{ advisory-committee/about_headshots }}
 

@@ -2,6 +2,10 @@ require 'test_helper'
 require 'cdo/script_config'
 
 class SessionCookieTest < ActionDispatch::IntegrationTest
+  setup_all do
+    seed_deprecated_unit_fixtures
+  end
+
   test 'session cookie name contains environment' do
     get '/reset_session'
 
@@ -38,6 +42,6 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
     get '/hoc/1',
       headers: {'Cache-Control' => 'no-cache'},
       env: {'rack-cache.allow_reload' => true}
-    assert_not_nil cookies['_learn_session_test']
+    refute_nil cookies['_learn_session_test']
   end
 end

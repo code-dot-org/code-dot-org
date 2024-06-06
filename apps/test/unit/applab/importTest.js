@@ -1,15 +1,25 @@
 /* eslint no-unused-vars: "error" */
 import sinon from 'sinon';
-import {expect} from '../../util/reconfiguredChai';
-import {allowConsoleErrors} from '../../util/testUtils';
-import designMode from '@cdo/apps/applab/designMode';
-import * as elementUtils from '@cdo/apps/applab/designElements/elementUtils';
-import {assets as assetsApi} from '@cdo/apps/clientApi';
 
+import * as elementUtils from '@cdo/apps/applab/designElements/elementUtils';
+import designMode from '@cdo/apps/applab/designMode';
 import {
   getImportableProject,
   importScreensAndAssets,
 } from '@cdo/apps/applab/import';
+import {assets as assetsApi} from '@cdo/apps/clientApi';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux,
+} from '@cdo/apps/redux';
+import pageConstantsReducer, {
+  setPageConstants,
+} from '@cdo/apps/redux/pageConstants';
+
+import {expect} from '../../util/reconfiguredChai';
+import {allowConsoleErrors} from '../../util/testUtils';
 
 describe('The applab/import module', () => {
   allowConsoleErrors();
@@ -369,6 +379,17 @@ describe('The applab/import module', () => {
           [project.screens[0], project.screens[1]],
           [{filename: 'asset3.png'}, {filename: 'asset4.png'}]
         ).then(onResolve, onReject);
+        stubRedux();
+        registerReducers({pageConstants: pageConstantsReducer});
+        getStore().dispatch(
+          setPageConstants({
+            isCurriculumLevel: true,
+          })
+        );
+      });
+
+      afterEach(() => {
+        restoreRedux();
       });
 
       it('will import the specified screens', () => {

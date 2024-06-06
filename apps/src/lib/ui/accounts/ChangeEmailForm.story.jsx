@@ -21,7 +21,6 @@ const DEFAULT_PROPS = {
 };
 
 export default {
-  title: 'ChangeEmailForm',
   component: ChangeEmailForm,
 };
 

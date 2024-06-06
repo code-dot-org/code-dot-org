@@ -1,34 +1,47 @@
+import orderBy from 'lodash/orderBy';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import ReactTooltip from 'react-tooltip';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
-import wrappedSortable from '../tables/wrapped_sortable';
-import orderBy from 'lodash/orderBy';
-import PasswordReset from './PasswordReset';
-import ShowSecret from './ShowSecret';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
-import i18n from '@cdo/locale';
-import DCDO from '@cdo/apps/dcdo';
-import color from '@cdo/apps/util/color';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
-import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
-import ManageStudentsNameCell from './ManageStudentsNameCell';
-import ManageStudentsFamilyNameCell from './ManageStudentsFamilyNameCell';
-import ManageStudentsAgeCell from './ManageStudentsAgeCell';
-import ManageStudentsGenderCell from './ManageStudentsGenderCell';
-import ManageStudentsGenderCellLegacy from './ManageStudentsGenderCellLegacy';
-import ManageStudentsSharingCell from './ManageStudentsSharingCell';
-import ManageStudentsActionsCell from './ManageStudentsActionsCell';
-import ManageStudentsActionsHeaderCell from './ManageStudentsActionsHeaderCell';
-import SharingControlActionsHeaderCell from './SharingControlActionsHeaderCell';
-import ManageStudentsLoginInfo from './ManageStudentsLoginInfo';
-import NoSectionCodeDialog from './NoSectionCodeDialog';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+import CodeReviewGroupsDataApi from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsDataApi';
+import {setSortByFamilyName} from '@cdo/apps/templates/currentUserRedux';
 import {
   sectionCode,
   sectionName,
   selectedSection,
+  sectionUnitName,
+  syncEnabled,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import color from '@cdo/apps/util/color';
+import copyToClipboard from '@cdo/apps/util/copyToClipboard';
+import experiments from '@cdo/apps/util/experiments';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
+
+import Button from '../Button';
+import Notification, {NotificationType} from '../Notification';
+import SafeMarkdown from '../SafeMarkdown';
+import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
+import wrappedSortable from '../tables/wrapped_sortable';
+
+import AddMultipleStudents from './AddMultipleStudents';
+import CodeReviewGroupsDialog from './CodeReviewGroupsDialog';
+import DownloadParentLetter from './DownloadParentLetter';
+import ManageStudentsActionsCell from './ManageStudentsActionsCell';
+import ManageStudentsActionsHeaderCell from './ManageStudentsActionsHeaderCell';
+import ManageStudentsAgeCell from './ManageStudentsAgeCell';
+import ManageStudentsFamilyNameCell from './ManageStudentsFamilyNameCell';
+import ManageStudentsGenderCell from './ManageStudentsGenderCell';
+import ManageStudentsGenderCellLegacy from './ManageStudentsGenderCellLegacy';
+import ManageStudentsLoginInfo from './ManageStudentsLoginInfo';
+import ManageStudentsNameCell from './ManageStudentsNameCell';
 import {
   convertStudentDataToArray,
   AddStatus,
@@ -40,19 +53,13 @@ import {
   ParentLetterButtonMetricsCategory,
   PrintLoginCardsButtonMetricsCategory,
 } from './manageStudentsRedux';
-import {connect} from 'react-redux';
-import Notification, {NotificationType} from '../Notification';
-import AddMultipleStudents from './AddMultipleStudents';
+import ManageStudentsSharingCell from './ManageStudentsSharingCell';
 import MoveStudents from './MoveStudents';
-import DownloadParentLetter from './DownloadParentLetter';
+import NoSectionCodeDialog from './NoSectionCodeDialog';
+import PasswordReset from './PasswordReset';
 import PrintLoginCards from './PrintLoginCards';
-import CodeReviewGroupsDialog from './CodeReviewGroupsDialog';
-import CodeReviewGroupsDataApi from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsDataApi';
-import Button from '../Button';
-import copyToClipboard from '@cdo/apps/util/copyToClipboard';
-import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import SafeMarkdown from '../SafeMarkdown';
+import SharingControlActionsHeaderCell from './SharingControlActionsHeaderCell';
+import ShowSecret from './ShowSecret';
 
 const LOGIN_TYPES_WITH_PASSWORD_COLUMN = [
   SectionLoginType.word,
@@ -70,6 +77,8 @@ const LOGIN_TYPES_WITH_GENDER_COLUMN = [
   SectionLoginType.word,
   SectionLoginType.picture,
 ];
+
+const MANAGE_STUDENTS_TABLE = 'ManageStudentsTable';
 
 export const studentSectionDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
@@ -108,6 +117,7 @@ class ManageStudentsTable extends Component {
     sectionId: PropTypes.number,
     sectionCode: PropTypes.string,
     sectionName: PropTypes.string,
+    sectionUnitName: PropTypes.string,
     participantType: PropTypes.string,
     studentData: PropTypes.arrayOf(studentSectionDataPropType),
     loginType: PropTypes.string,
@@ -119,6 +129,8 @@ class ManageStudentsTable extends Component {
     editAll: PropTypes.func,
     transferData: PropTypes.object,
     transferStatus: PropTypes.object,
+    setSortByFamilyName: PropTypes.func,
+    syncEnabled: PropTypes.bool,
   };
 
   constructor(props) {
@@ -129,6 +141,7 @@ class ManageStudentsTable extends Component {
     this.isMoveStudentsEnabled = this.isMoveStudentsEnabled.bind(this);
     this.passwordHeaderFormatter = this.passwordHeaderFormatter.bind(this);
     this.passwordFormatter = this.passwordFormatter.bind(this);
+    this.familyNameFormatter = this.familyNameFormatter.bind(this);
     this.actionsFormatter = this.actionsFormatter.bind(this);
     this.actionsHeaderFormatter = this.actionsHeaderFormatter.bind(this);
     this.getSortingColumns = this.getSortingColumns.bind(this);
@@ -196,6 +209,14 @@ class ManageStudentsTable extends Component {
   // Helper function to determine if user is a teacher
   isTeacher(userType) {
     return userType === 'teacher';
+  }
+
+  shouldShowActionColumn() {
+    const {loginType} = this.props;
+    return (
+      LOGIN_TYPES_WITH_ACTIONS_COLUMN.includes(loginType) ||
+      (loginType === SectionLoginType.lti_v1 && !this.props.syncEnabled)
+    );
   }
 
   // Cell formatters.
@@ -333,12 +354,14 @@ class ManageStudentsTable extends Component {
 
   familyNameFormatter(familyName, {rowData}) {
     const editedValue = rowData.isEditing ? rowData.editingData.familyName : '';
+    const isTeacher = this.isTeacher(rowData.userType);
     return (
       <ManageStudentsFamilyNameCell
         id={rowData.id}
         familyName={familyName}
         isEditing={rowData.isEditing}
         editedValue={editedValue}
+        inputDisabled={isTeacher}
       />
     );
   }
@@ -372,7 +395,7 @@ class ManageStudentsTable extends Component {
           <Button
             __useDeprecatedTag
             onClick={this.props.saveAllStudents}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
             text={i18n.saveAll()}
           />
         )}
@@ -451,6 +474,24 @@ class ManageStudentsTable extends Component {
         selectedColumn,
       }),
     });
+    if (
+      this.props.participantType === 'student' &&
+      selectedColumn === COLUMNS.FAMILY_NAME
+    ) {
+      this.props.setSortByFamilyName(
+        true,
+        this.props.sectionId,
+        this.props.sectionUnitName,
+        MANAGE_STUDENTS_TABLE
+      );
+    } else if (selectedColumn === COLUMNS.NAME) {
+      this.props.setSortByFamilyName(
+        false,
+        this.props.sectionId,
+        this.props.sectionUnitName,
+        MANAGE_STUDENTS_TABLE
+      );
+    }
   }
 
   getColumns(sortable) {
@@ -458,17 +499,17 @@ class ManageStudentsTable extends Component {
 
     const columns = [this.nameColumn(sortable)];
 
-    if (!!DCDO.get('family-name-features', false)) {
-      if (this.props.participantType === 'student') {
-        // Only in non-PL sections.
-        columns.push(this.familyNameColumn(sortable));
-      }
+    // Only include family name in non-PL sections
+    if (this.props.participantType === 'student') {
+      columns.push(this.familyNameColumn(sortable));
     }
 
     columns.push(this.ageColumn(sortable));
 
     if (
-      !window.GENDER_FEATURE_ENABLED ||
+      !experiments.isEnabledAllowingQueryString(
+        experiments.GENDER_FEATURE_ENABLED
+      ) ||
       LOGIN_TYPES_WITH_GENDER_COLUMN.includes(loginType)
     ) {
       columns.push(this.genderColumn(sortable));
@@ -481,7 +522,7 @@ class ManageStudentsTable extends Component {
       columns.push(this.projectSharingColumn());
     }
 
-    if (LOGIN_TYPES_WITH_ACTIONS_COLUMN.includes(loginType)) {
+    if (this.shouldShowActionColumn()) {
       columns.push(this.controlsColumn());
     }
 
@@ -574,7 +615,11 @@ class ManageStudentsTable extends Component {
   }
 
   genderColumn(sortable) {
-    if (window.GENDER_FEATURE_ENABLED) {
+    if (
+      experiments.isEnabledAllowingQueryString(
+        experiments.GENDER_FEATURE_ENABLED
+      )
+    ) {
       return {
         property: 'genderTeacherInput',
         header: {
@@ -956,7 +1001,7 @@ const styles = {
   sectionCode: {
     marginLeft: 5,
     color: color.teal,
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
     cursor: 'copy',
   },
   noSectionCode: {
@@ -965,7 +1010,7 @@ const styles = {
     cursor: 'pointer',
   },
   sectionCodeNotApplicable: {
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
   },
 };
 
@@ -1051,6 +1096,10 @@ export default connect(
     sectionId: state.teacherSections.selectedSectionId,
     sectionCode: sectionCode(state, state.teacherSections.selectedSectionId),
     sectionName: sectionName(state, state.teacherSections.selectedSectionId),
+    sectionUnitName: sectionUnitName(
+      state,
+      state.teacherSections.selectedSectionId
+    ),
     participantType:
       state.teacherSections.sections[state.teacherSections.selectedSectionId]
         .participantType,
@@ -1062,6 +1111,7 @@ export default connect(
     addStatus: state.manageStudents.addStatus,
     transferData: state.manageStudents.transferData,
     transferStatus: state.manageStudents.transferStatus,
+    syncEnabled: syncEnabled(state, state.teacherSections.selectedSectionId),
   }),
   dispatch => ({
     saveAllStudents() {
@@ -1069,6 +1119,11 @@ export default connect(
     },
     editAll() {
       dispatch(editAll());
+    },
+    setSortByFamilyName(isSortedByFamilyName, sectionId, unitName, source) {
+      dispatch(
+        setSortByFamilyName(isSortedByFamilyName, sectionId, unitName, source)
+      );
     },
   })
 )(ManageStudentsTable);

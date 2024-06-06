@@ -1,17 +1,22 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
-import {showWarning} from '../redux/data';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import LibraryCategory from './LibraryCategory';
-import SearchBar from '@cdo/apps/templates/SearchBar';
-import {getDatasetInfo} from './dataUtils';
-import msg from '@cdo/locale';
-import PreviewModal from './PreviewModal';
-import FirebaseStorage from '../firebaseStorage';
-import {WarningType} from '../constants';
-import experiments from '../../util/experiments';
 import _ from 'lodash';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {connect} from 'react-redux';
+
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import SearchBar from '@cdo/apps/templates/SearchBar';
+import msg from '@cdo/locale';
+
+import experiments from '../../util/experiments';
+import {WarningType} from '../constants';
+import {showWarning} from '../redux/data';
+import {isFirebaseStorage, storageBackend} from '../storage';
+
+import {getDatasetInfo} from './dataUtils';
+import LibraryCategory from './LibraryCategory';
+import {refreshCurrentDataView} from './loadDataForView';
+import PreviewModal from './PreviewModal';
+
 import style from './data-library-pane.module.scss';
 
 class DataLibraryPane extends React.Component {
@@ -35,14 +40,24 @@ class DataLibraryPane extends React.Component {
   };
 
   importTable = datasetInfo => {
-    if (datasetInfo.current) {
-      FirebaseStorage.addCurrentTableToProject(
-        datasetInfo.name,
-        () => {},
-        this.onError
-      );
+    // TODO: post-firebase-cleanup, remove this conditional: #56994
+    if (isFirebaseStorage()) {
+      if (datasetInfo.current) {
+        storageBackend().addCurrentTableToProject(
+          datasetInfo.name,
+          () => {},
+          this.onError
+        );
+      } else {
+        storageBackend().copyStaticTable(
+          datasetInfo.name,
+          () => {},
+          this.onError
+        );
+      }
     } else {
-      FirebaseStorage.copyStaticTable(datasetInfo.name, () => {}, this.onError);
+      storageBackend().addSharedTable(datasetInfo.name);
+      refreshCurrentDataView();
     }
   };
 

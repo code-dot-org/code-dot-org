@@ -51,6 +51,13 @@ module Services
     end
 
     test 'seed new script' do
+      # This line of code is used to initialize the `max_allowed_packet` setting in ActiveRecord::Import.
+      # When a test is run in isolation, this setting may not be set, which can cause an extra database request.
+      # This extra request can interfere with the `assert_queries` count in the test, causing it to fail.
+      # By calling `max_allowed_packet` here, we ensure that the setting is initialized before the test begins.
+      # See: https://github.com/zdennis/activerecord-import/blob/v1.0.8/lib/activerecord-import/adapters/mysql_adapter.rb#L55-L64
+      ApplicationRecord.connection.max_allowed_packet if ApplicationRecord.connection.respond_to?(:max_allowed_packet)
+
       script = create_script_tree
       script.freeze
       json = ScriptSeed.serialize_seeding_json(script)
@@ -497,16 +504,17 @@ module Services
       # or resources, the seed process will not re-create the programming expression for us.
       # choose a key later in the sort order than existing keys.
       new_programming_expression = create :programming_expression, key: 'xyz'
+      old_programming_expression = script.lessons.first.programming_expressions.last
 
       expected_keys = [
-        script.lessons.first.programming_expressions.last.key,
+        old_programming_expression.key,
         new_programming_expression.key
       ]
       assert_equal expected_keys, expected_keys.sort
 
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         lesson = script.lessons.first
-        lesson.programming_expressions.first.destroy
+        lesson.programming_expressions = [old_programming_expression]
         lesson.programming_expressions.push(new_programming_expression)
       end
 
@@ -525,16 +533,17 @@ module Services
       # or resources, the seed process will not re-create the programming expression for us.
       # choose a key earlier in the sort order than existing keys.
       new_programming_expression = create :programming_expression, key: 'abc'
+      old_programming_expression = script.lessons.first.programming_expressions.last
 
       expected_keys = [
-        script.lessons.first.programming_expressions.last.key,
+        old_programming_expression.key,
         new_programming_expression.key
       ]
       refute_equal expected_keys, expected_keys.sort
 
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         lesson = script.lessons.first
-        lesson.programming_expressions.first.destroy
+        lesson.programming_expressions = [old_programming_expression]
         lesson.programming_expressions.push(new_programming_expression)
       end
 
@@ -709,7 +718,7 @@ module Services
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         rubric = script.lessons.first.rubric
         rubric.learning_goals.first.learning_goal_evidence_levels.first.update!(teacher_description: 'Updated Evidence Level')
-        rubric.learning_goals.first.learning_goal_evidence_levels.create!(teacher_description: 'New Evidence Level', understanding: 4)
+        rubric.learning_goals.first.learning_goal_evidence_levels.create!(teacher_description: 'New Evidence Level', understanding: 2)
       end
 
       ScriptSeed.seed_from_json(json)
@@ -1402,7 +1411,7 @@ module Services
       end
     end
 
-    def assert_attributes_equal(a, b, additional_excludes=[])
+    def assert_attributes_equal(a, b, additional_excludes = [])
       excludes = ['id', 'created_at', 'updated_at'] + additional_excludes
       assert_equal a.attributes.except(*excludes), b.attributes.except(*excludes)
     end
@@ -1548,7 +1557,7 @@ module Services
           rubric = create :rubric, lesson: lesson, level: lesson.levels.last
           (1..num_learning_goals_per_rubric).each do |lg|
             learning_goal = create :learning_goal, rubric: rubric, key: "#{lesson.name}-learning-goal-#{lg}"
-            (1..num_learning_goal_evidence_levels_per_learning_goal).each do |lge|
+            (0...num_learning_goal_evidence_levels_per_learning_goal).each do |lge|
               create :learning_goal_evidence_level, learning_goal: learning_goal, understanding: lge
             end
           end

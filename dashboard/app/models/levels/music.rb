@@ -27,10 +27,8 @@
 # Music uses level_data, which is actual JSON in each .level file, and
 # currently contains the following top-level fields:
 #
-#   text: instructions text
 #   toolbox: an object containing blockly toolbox categories and member blocks
 #   sounds: an object containing sound categories and member sounds
-#   validations: an array containing validation conditions, responses, and actions.
 #   startSources: an object used as starter content for blockly
 
 class Music < Blockly
@@ -40,6 +38,7 @@ class Music < Blockly
     submittable
     background
     level_data
+    validations
   )
 
   def self.create_from_level_builder(params, level_params)

@@ -2,7 +2,7 @@
  * @file Styles shared by various react components in the applab data browser.
  */
 
-@import "color.scss";
+@import 'color', 'font';
 
 $row-height: 45px;
 $cell-padding: 10px;
@@ -19,9 +19,11 @@ $max-cell-width: 350px;
   font-size: 14px;
   max-width: $max-cell-width;
   overflow: hidden;
+
   &.addButton {
     background-color: $lightest_teal;
   }
+
   &.editButton {
     background-color: $lightest_teal;
     width: $edit-button-cell-width;
@@ -37,9 +39,9 @@ $max-cell-width: 350px;
 }
 
 .link {
+  @include main-font-bold;
   color: $purple;
   cursor: pointer;
-  font-family: "Gotham 7r", sans-serif;
 }
 
 .button {

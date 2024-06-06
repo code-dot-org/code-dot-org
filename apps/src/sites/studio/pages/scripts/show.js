@@ -30,6 +30,7 @@ import progress from '@cdo/apps/code-studio/progress';
 import UnitOverview from '@cdo/apps/code-studio/components/progress/UnitOverview.jsx';
 import {setStudentDefaultsSummaryView} from '@cdo/apps/code-studio/progressRedux';
 import {updateQueryParam, queryParams} from '@cdo/apps/code-studio/utils';
+import ParentalPermissionBanner from '@cdo/apps/templates/policy_compliance/ParentalPermissionBanner';
 
 import locales, {setLocaleCode} from '../../../../redux/localesRedux';
 
@@ -38,6 +39,9 @@ $(document).ready(initPage);
 function initPage() {
   const script = document.querySelector('script[data-scriptoverview]');
   const config = JSON.parse(script.dataset.scriptoverview);
+  const parentalPermissionBannerData = JSON.parse(
+    script.dataset.parentalPermissionBanner
+  );
 
   const {scriptData, plcBreadcrumb} = config;
   const store = getStore();
@@ -97,8 +101,17 @@ function initPage() {
   // rendered on this page
   updateQueryParam('completedLessonNumber', undefined);
 
+  const unitHasLevels = scriptData.lessons.reduce(
+    (n, {levels}) => n || !!levels?.length,
+    false
+  );
+
   ReactDOM.render(
     <Provider store={store}>
+      {parentalPermissionBannerData && (
+        <ParentalPermissionBanner {...parentalPermissionBannerData} />
+      )}
+
       <UnitOverview
         id={scriptData.id}
         courseId={scriptData.course_id}
@@ -125,6 +138,7 @@ function initPage() {
         showCalendar={scriptData.showCalendar}
         weeklyInstructionalMinutes={scriptData.weeklyInstructionalMinutes}
         unitCalendarLessons={scriptData.calendarLessons}
+        unitHasLevels={unitHasLevels}
         isMigrated={scriptData.is_migrated}
         scriptOverviewPdfUrl={scriptData.scriptOverviewPdfUrl}
         scriptResourcesPdfUrl={scriptData.scriptResourcesPdfUrl}

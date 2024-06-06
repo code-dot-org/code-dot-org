@@ -70,7 +70,7 @@ module Pd::Payment
       workshop_standard = create :csp_academic_year_workshop, :ended, on_map: true, funded: true
 
       standard_summary = PaymentFactory.get_payment(workshop_standard)
-      assert_not_nil standard_summary
+      refute_nil standard_summary
       assert standard_summary.instance_of?(WorkshopSummary)
       assert_equal PaymentCalculatorStandard, standard_summary.calculator_class
     end

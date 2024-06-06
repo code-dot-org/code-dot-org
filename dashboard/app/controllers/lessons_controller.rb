@@ -23,6 +23,10 @@ class LessonsController < ApplicationController
     script = Unit.get_from_cache(params[:script_id])
     return render :forbidden unless script.is_migrated
 
+    if script.is_deprecated
+      return render 'errors/deprecated_course'
+    end
+
     @lesson = script.lessons.find do |l|
       l.has_lesson_plan && l.relative_position == params[:position].to_i
     end

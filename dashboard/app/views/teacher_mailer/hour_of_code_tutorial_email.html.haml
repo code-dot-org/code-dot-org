@@ -1,0 +1,35 @@
+%p
+  = t('hoc_tutorial_email_content.dear_teacher', teacher_name: @teacher_name)
+
+%p
+  = t('hoc_tutorial_email_content.intro_step_by_step_guide')
+%ol
+  %li
+    != I18n.t('hoc_tutorial_email_content.sign_up_step', url: CDO.studio_url('/users/sign_up'), markdown: true)
+  %li
+    != I18n.t('hoc_tutorial_email_content.create_classroom_section', section_setup_url: CDO.studio_url('/home?openAddSectionDialog=true&participantType=student'), guide_url: 'https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section', markdown: true)
+  %li
+    != I18n.t('hoc_tutorial_email_content.pick_perfect_activity', url: CDO.studio_url('/catalog?marketingInitiative=hoc'), markdown: true)
+  %li
+    != I18n.t('hoc_tutorial_email_content.plan_like_pro', lesson_plan_url: CDO.studio_url(@lesson_plan_html_url), markdown: true)
+  %li
+    != I18n.t('hoc_tutorial_email_content.let_fun_begin', markdown: true)
+  %li
+    != I18n.t('hoc_tutorial_email_content.hip_hip_hooray', url: CDO.studio_url('/certificates/batch'), markdown: true)
+  %li
+    != I18n.t('hoc_tutorial_email_content.more_adventures_await', markdown: true)
+    %ol
+      %li
+        %a{href: CDO.studio_url('/catalog')}
+          = t('hoc_tutorial_email_content.explore_course')
+      %li
+        %a{href: CDO.code_org_url('/ai/how-ai-works')}
+          = t('hoc_tutorial_email_content.learn_about_ai')
+
+%p
+  = t('hoc_tutorial_email_content.thank_you')
+
+%p
+  Hadi Partovi
+  %br
+  = t('hoc_tutorial_email_content.founder')

@@ -4,8 +4,10 @@
  */
 
 import $ from 'jquery';
-var NetSimTable = require('./NetSimTable');
+
 import createPubSub from '../lib/util/PubSubService';
+
+var NetSimTable = require('./NetSimTable');
 
 /**
  * PubSub event key for events invalidating all tables.

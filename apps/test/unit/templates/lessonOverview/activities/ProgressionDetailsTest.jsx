@@ -1,7 +1,9 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
+
 import ProgressionDetails from '@cdo/apps/templates/lessonOverview/activities/ProgressionDetails';
+
+import {expect} from '../../../../util/reconfiguredChai';
 import {sampleActivities} from '../../../lib/levelbuilder/lesson-editor/activitiesTestData';
 
 describe('ProgressionDetails', () => {

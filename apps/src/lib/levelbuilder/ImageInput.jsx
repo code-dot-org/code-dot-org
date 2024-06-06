@@ -47,7 +47,9 @@ export default function ImageInput({
           />
         </label>
         {showPreview && !!currentImageUrl && (
-          <img src={currentImageUrl} style={styles.image} />
+          // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+          // Verify or update this alt-text as necessary
+          <img src={currentImageUrl} style={styles.image} alt="" />
         )}
       </div>
       <UploadImageDialog

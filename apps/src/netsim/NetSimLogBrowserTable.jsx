@@ -1,12 +1,14 @@
 /** @file Table of log rows displayed in the log browser */
+import orderBy from 'lodash/orderBy';
+import moment from 'moment';
 import PropTypes from 'prop-types';
 import React from 'react';
-import orderBy from 'lodash/orderBy';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
-import moment from 'moment';
-import color from '../util/color';
+
 import wrappedSortable from '../templates/tables/wrapped_sortable';
+import color from '../util/color';
+
 import Packet from './Packet';
 
 let style = {

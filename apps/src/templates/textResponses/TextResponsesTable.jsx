@@ -1,14 +1,17 @@
+import orderBy from 'lodash/orderBy';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import i18n from '@cdo/locale';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
-import wrappedSortable from '../tables/wrapped_sortable';
-import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
-import orderBy from 'lodash/orderBy';
-import {textResponsePropType} from './textReponsesDataApi';
+
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import i18n from '@cdo/locale';
+
+import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
+import wrappedSortable from '../tables/wrapped_sortable';
+
+import {textResponsePropType} from './textReponsesDataApi';
 
 const TABLE_WIDTH = tableLayoutStyles.table.width;
 const TABLE_COLUMN_WIDTHS = {

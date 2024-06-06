@@ -11,6 +11,7 @@ class ScriptLevelsController < ApplicationController
   before_action :disable_session_for_cached_pages
   before_action :redirect_admin_from_labs, only: [:reset, :next, :show, :lesson_extras]
   before_action :set_redirect_override, only: [:show]
+  before_action :check_script_id_is_name, only: [:show, :lesson_extras]
 
   # Return true if request is one that can be publicly cached.
   def cachable_request?(request)
@@ -64,6 +65,13 @@ class ScriptLevelsController < ApplicationController
     @current_user = current_user && User.includes(:teachers).where(id: current_user.id).first
     authorize! :read, ScriptLevel
     @script = ScriptLevelsController.get_script(request)
+    @script_level = ScriptLevelsController.get_script_level(@script, params)
+
+    # Check if the script or current level is deprecated
+    level_is_deprecated = @script_level&.level_deprecated?
+    if @script.is_deprecated || level_is_deprecated
+      return render 'errors/deprecated_course'
+    end
 
     # @view_as_user is used to determine redirect path for bubble choice levels
     view_as_other = params[:user_id] && current_user && params[:user_id] != current_user.id
@@ -99,10 +107,22 @@ class ScriptLevelsController < ApplicationController
 
     @public_caching = configure_caching(@script)
 
-    @script_level = ScriptLevelsController.get_script_level(@script, params)
     raise ActiveRecord::RecordNotFound unless @script_level
-    # If we have a signed out user for any of these cases we will want to redirect them to sign in
-    authenticate_user! if !can?(:read, @script) || @script.login_required? || (!params.nil? && params[:login_required] == "true")
+
+    if @script.login_required? || (!params.nil? && params[:login_required] == "true")
+      if cachable_request?(request)
+        # if login_required on a cached level, redirect to cached_page_auth_redirect
+        # See https://codedotorg.atlassian.net/browse/TEACH-758 for more details.
+        uri = Addressable::URI.parse request.fullpath
+        uri.query_values = uri&.query_values&.except('login_required')
+        uri.query_values = nil if uri.query_values && uri.query_values.empty?
+        return redirect_to api_v1_users_cached_page_auth_redirect_path({user_return_to: uri.to_s})
+      else
+        authenticate_user!
+      end
+    end
+    authenticate_user! unless can?(:read, @script)
+
     return render 'levels/no_access' unless can?(:read, @script_level)
 
     if current_user&.script_level_hidden?(@script_level)
@@ -160,6 +180,21 @@ class ScriptLevelsController < ApplicationController
 
     @body_classes = @level.properties['background']
 
+    @rubric = @script_level.lesson.rubric
+    if @rubric
+      @rubric_data = {rubric: @rubric.summarize}
+      if @script_level.lesson.rubric && view_as_other
+        viewing_user_level = @view_as_user.user_levels.find_by(script: @script_level.script, level: @level)
+        @rubric_data[:studentLevelInfo] = {
+          user_id: @view_as_user.id,
+          name: @view_as_user.name,
+          attempts: viewing_user_level&.attempts,
+          timeSpent: viewing_user_level&.time_spent,
+          lastAttempt: viewing_user_level&.updated_at,
+        }
+      end
+    end
+
     present_level
   end
 
@@ -185,9 +220,9 @@ class ScriptLevelsController < ApplicationController
     @script_level = ScriptLevelsController.get_script_level(@script, params)
     raise ActiveRecord::RecordNotFound unless @script_level
 
-    @level = @script_level.level
+    @level = select_level
 
-    render json: @level.summarize_for_lab2_properties
+    render json: @level.summarize_for_lab2_properties(@script, @script_level, @current_user)
   end
 
   # Get a list of hidden lessons for the current users section
@@ -233,11 +268,11 @@ class ScriptLevelsController < ApplicationController
 
     if @script.can_be_instructor?(current_user)
       if params[:section_id]
-        @section = current_user.sections.find_by(id: params[:section_id])
+        @section = current_user.sections_instructed.find_by(id: params[:section_id])
         @user = @section&.students&.find_by(id: params[:user_id])
       # If we have no url param and only one section make sure that is the section we are using
-      elsif current_user.sections.length == 1
-        @section = current_user.sections[0]
+      elsif current_user.sections_instructed.length == 1
+        @section = current_user.sections_instructed[0]
         @user = @section&.students&.find_by(id: params[:user_id])
       end
       # This errs on the side of showing the warning by only if the script we are in
@@ -308,7 +343,7 @@ class ScriptLevelsController < ApplicationController
       if params[:lesson_position]
         script.lesson_by_relative_position(params[:lesson_position])
       else
-        script.lesson_by_relative_position(params[:lockable_lesson_position], true)
+        script.lesson_by_relative_position(params[:lockable_lesson_position], unnumbered_lesson: true)
       end
 
     render json: lesson.summary_for_lesson_plans
@@ -344,7 +379,7 @@ class ScriptLevelsController < ApplicationController
   private def find_next_level_for_session(script)
     script.script_levels.detect do |sl|
       sl.valid_progression_level? &&
-          (client_state.level_progress(sl) < Activity::MINIMUM_PASS_RESULT)
+        (client_state.level_progress(sl) < Activity::MINIMUM_PASS_RESULT)
     end
   end
 
@@ -413,12 +448,9 @@ class ScriptLevelsController < ApplicationController
     if params[:section_id] && params[:section_id] != "undefined"
       section = Section.find(params[:section_id])
 
-      # TODO: This should use cancan/authorize.
-      if section.user == current_user
-        @section = section
-      end
-    elsif current_user.try(:sections).try(:where, hidden: false).try(:count) == 1
-      @section = current_user.sections.where(hidden: false).first
+      @section = section if can?(:manage, section)
+    elsif current_user.try(:sections_instructed).try(:where, hidden: false).try(:count) == 1
+      @section = current_user.sections_instructed.where(hidden: false).first
     end
   end
 
@@ -456,9 +488,7 @@ class ScriptLevelsController < ApplicationController
 
     # Check to see if any of the variants are part of an experiment that we're in
     if current_user && @script_level.has_experiment?
-      section_as_student = current_user.sections_as_student.find_by(script: @script_level.script) ||
-        current_user.sections_as_student.first
-      experiment_level = @script_level.find_experiment_level(current_user, section_as_student)
+      experiment_level = @script_level.find_experiment_level(current_user)
       return experiment_level if experiment_level
     end
 
@@ -510,13 +540,16 @@ class ScriptLevelsController < ApplicationController
       current_user.present? &&
       (current_user.teacher? || (current_user&.sections_as_student&.any?(&:code_review_enabled?) && !current_user.code_review_groups.empty?))
 
-    # Javalab exemplar URLs include ?exemplar=true as a URL param
+    # Javalab and Code Bridge exemplar URLs include ?exemplar=true as a URL param
     if params[:exemplar]
       return render 'levels/no_access_exemplar' unless current_user&.verified_instructor?
 
       @is_viewing_exemplar = true
       exemplar_sources = @level.try(:exemplar_sources)
-      return render 'levels/no_exemplar' unless exemplar_sources
+      # Java Lab shows the no exemplar page for levels that don't have exemplar sources.
+      # Lab2 handles this on the client side to enable switching between exemplar levels
+      # without a page reload.
+      return render 'levels/no_exemplar' unless exemplar_sources || @level.uses_lab2?
 
       level_view_options(@level.id, {is_viewing_exemplar: true, exemplar_sources: exemplar_sources})
       readonly_view_options
@@ -562,6 +595,18 @@ class ScriptLevelsController < ApplicationController
     if params[:script_id] && params[:no_redirect]
       VersionRedirectOverrider.set_unit_redirect_override(session, params[:script_id])
     end
+  end
+
+  # showing script levels by script id is no longer supported. Other codepaths
+  # still need underlying helper methods to support lookup by id, so we filter
+  # out numerical ids on a per-action basis rather than removing support for
+  # ids from those methods.
+  private def check_script_id_is_name
+    # Unfortunately, scripts routes sometimes pass the name and sometimes pass
+    # the id, making params[:script_id] a misnomer when passing the name.
+    script_id = request.params[:script_id]
+    is_id = script_id.to_i.to_s == script_id.to_s
+    raise ActiveRecord::RecordNotFound if is_id
   end
 
   private def redirect_script(script, locale)

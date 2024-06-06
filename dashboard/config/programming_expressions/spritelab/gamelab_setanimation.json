@@ -4,7 +4,7 @@
   "category": "Sprites",
   "category_key": "sprites",
   "block_name": "gamelab_setAnimation",
-  "content": "Changes the costume of a sprite or group of sprites.\r\n\r\nThis block can make a sprite look different without changing its location or properties. ",
+  "content": "Changes the costume of a sprite or group of sprites.\n\nThis block can make a sprite look different without changing its location or properties. ",
   "examples": [
     {
       "name": "Example 1",

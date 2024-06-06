@@ -7,6 +7,8 @@ class UnitTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
+    seed_deprecated_unit_fixtures
+
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     @game = create(:game)
     # Level names match those in 'test.script'
@@ -1085,9 +1087,9 @@ class UnitTest < ActiveSupport::TestCase
 
     [foo16, foo17, foo18, foo19].each do |s|
       summary = s.summarize_course_versions(create(:teacher))
-      assert_equal ["foo-2016", "foo-2017", "foo-2018"], summary.values.map {|h| h[:name]}
-      assert_equal [true, true, false], summary.values.map {|h| h[:is_stable]}
-      assert_equal [false, true, false], summary.values.map {|h| h[:is_recommended]}
+      assert_equal(["foo-2016", "foo-2017", "foo-2018"], summary.values.map {|h| h[:name]})
+      assert_equal([true, true, false], summary.values.map {|h| h[:is_stable]})
+      assert_equal([false, true, false], summary.values.map {|h| h[:is_recommended]})
     end
   end
 
@@ -1115,9 +1117,9 @@ class UnitTest < ActiveSupport::TestCase
 
     [foo17, foo18, foo19].each do |s|
       summary = s.summarize_course_versions(create(:student))
-      assert_equal ["foo-2017"], summary.values.map {|h| h[:name]}
-      assert_equal [true], summary.values.map {|h| h[:is_stable]}
-      assert_equal [true], summary.values.map {|h| h[:is_recommended]}
+      assert_equal(["foo-2017"], summary.values.map {|h| h[:name]})
+      assert_equal([true], summary.values.map {|h| h[:is_stable]})
+      assert_equal([true], summary.values.map {|h| h[:is_recommended]})
     end
   end
 
@@ -1240,6 +1242,26 @@ class UnitTest < ActiveSupport::TestCase
       'buttonText' => localized_button_text
     }]
     assert_equal expected_announcements, summary[:announcements]
+  end
+
+  test 'summarize_for_unit_selector determines whether feedback is enabled' do
+    course_version = create :course_version, :with_unit
+    course_offering = course_version.course_offering
+    course_offering.update!(marketing_initiative: 'CSD')
+    unit = course_version.content_root
+    summary = unit.summarize_for_unit_selector
+    assert summary[:is_feedback_enabled]
+
+    course_offering.update!(marketing_initiative: 'HOC')
+    unit.reload
+    summary = unit.summarize_for_unit_selector
+    refute summary[:is_feedback_enabled]
+
+    # no course version means no feedback
+    unit = create :script
+    refute unit.get_course_version
+    summary = unit.summarize_for_unit_selector
+    refute summary[:is_feedback_enabled]
   end
 
   test 'should generate PLC objects for migrated unit' do
@@ -1663,9 +1685,9 @@ class UnitTest < ActiveSupport::TestCase
     Unit.stubs(:modern_elementary_courses).returns([course1_modern, course2_modern])
 
     assert Unit.modern_elementary_courses_available?("en-us")
-    assert_not Unit.modern_elementary_courses_available?("ch-ch")
-    assert_not Unit.modern_elementary_courses_available?("it-it")
-    assert_not Unit.modern_elementary_courses_available?("fr-fr")
+    refute Unit.modern_elementary_courses_available?("ch-ch")
+    refute Unit.modern_elementary_courses_available?("it-it")
+    refute Unit.modern_elementary_courses_available?("fr-fr")
   end
 
   test 'locale_english_name_map' do
@@ -2091,6 +2113,42 @@ class UnitTest < ActiveSupport::TestCase
     assert_equal "test-localized-title-default", unit.localized_title
   end
 
+  test 'next_unit returns next unit if there is another unit in unit group' do
+    unit_group = create :unit_group
+    unit1 = create :unit
+    unit2 = create :unit
+    create :unit_group_unit, unit_group: unit_group, script: unit1, position: 1
+    create :unit_group_unit, unit_group: unit_group, script: unit2, position: 2
+    unit1.reload
+    unit2.reload
+
+    student = create :student
+
+    assert_equal unit2, unit1.next_unit(student)
+  end
+
+  test 'next_unit returns nil if there is no next unit in unit group' do
+    unit1 = create :unit
+    unit2 = create :unit
+    unit_group = create :unit_group
+    create :unit_group_unit, unit_group: unit_group, script: unit1, position: 1
+    create :unit_group_unit, unit_group: unit_group, script: unit2, position: 2
+    unit1.reload
+    unit2.reload
+
+    student = create :student
+
+    assert_nil unit2.next_unit(student)
+  end
+
+  test 'next_unit returns nil if not in a unit group' do
+    unit1 = create :unit, is_course: true
+
+    student = create :student
+
+    assert_nil unit1.next_unit(student)
+  end
+
   class MigratedScriptCopyTests < ActiveSupport::TestCase
     setup do
       Unit.any_instance.stubs(:write_script_json)
@@ -2102,7 +2160,9 @@ class UnitTest < ActiveSupport::TestCase
       @deeper_learning_unit = create :script, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, professional_learning_course: 'DLP 2021'
 
       @unit_group = create :unit_group
-      create :course_version, content_root: @unit_group
+      @ug_course_version = create :course_version, content_root: @unit_group
+      create :reference_guide, course_version: @ug_course_version
+
       @unit_in_course = create :script, is_migrated: true, name: 'coursename1-2021'
       create :unit_group_unit, unit_group: @unit_group, script: @unit_in_course, position: 1
       @unit_group.reload
@@ -2266,14 +2326,31 @@ class UnitTest < ActiveSupport::TestCase
       assert_equal @unit_in_course.student_resources[0], cloned_unit.student_resources[0]
     end
 
-    test 'can copy reference guides' do
+    test 'can copy reference guides when cloning unit in unit group' do
       Rails.application.config.stubs(:levelbuilder_mode).returns true
       ReferenceGuide.any_instance.expects(:write_serialization).once
       File.stubs(:write)
-      @unit_in_course.unit_group.course_version.reference_guides = [create(:reference_guide)]
-      cloned_unit = @unit_in_course.clone_migrated_unit('coursename3-2021', destination_unit_group_name: @unit_group.name)
+      cloned_unit = @unit_in_course.clone_migrated_unit('refguidetest-ug-coursename-2021', destination_unit_group_name: @unit_group.name)
       assert_equal cloned_unit.unit_group, @unit_group
-      assert_equal 1, @unit_group.course_version.reference_guides.count
+      assert_equal 1, cloned_unit.get_course_version.reference_guides.count
+    end
+
+    test 'can copy reference guides when cloning unit from unit group to stand alone' do
+      Rails.application.config.stubs(:levelbuilder_mode).returns true
+      ReferenceGuide.any_instance.expects(:write_serialization).once
+      File.stubs(:write)
+      cloned_unit = @unit_in_course.clone_migrated_unit('refguidetest-ugsa-coursename-2021', version_year: '2021', family_name: 'csf')
+      assert_equal 1, cloned_unit.get_course_version.reference_guides.count
+    end
+
+    test 'can copy reference guides when cloning stand alone' do
+      Rails.application.config.stubs(:levelbuilder_mode).returns true
+      ReferenceGuide.any_instance.expects(:write_serialization).once
+      File.stubs(:write)
+      @standalone_unit.course_version.reference_guides = [create(:reference_guide)]
+
+      cloned_unit = @standalone_unit.clone_migrated_unit('refguidetest-sa-coursename-2022', version_year: '2022', family_name: 'csf')
+      assert_equal 1, cloned_unit.get_course_version.reference_guides.count
     end
 
     test 'can copy a script without a course version' do
@@ -2377,9 +2454,21 @@ class UnitTest < ActiveSupport::TestCase
     assert_includes error.message, 'Instruction type must be set on the unit if its a standalone unit.'
   end
 
-  private
+  test 'finish_url returns unit group finish url if in a unit group' do
+    unit_group = create :unit_group
+    unit = create :script
+    create :unit_group_unit, unit_group: unit_group, script: unit, position: 1
+    unit.reload
 
-  def has_unlaunched_unit?(units)
+    assert unit.finish_url.include?(unit_group.name)
+  end
+
+  test 'finish_url returns unit finish url if not in a unit group' do
+    unit = create :script, is_course: true
+    assert unit.finish_url.include?(unit.name)
+  end
+
+  private def has_unlaunched_unit?(units)
     units.any? {|u| !u.launched?}
   end
 end

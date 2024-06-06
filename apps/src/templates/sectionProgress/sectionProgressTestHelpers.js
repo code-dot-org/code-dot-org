@@ -1,21 +1,21 @@
+import {TestResults} from '@cdo/apps/constants';
 import {registerReducers, createStoreWithReducers} from '@cdo/apps/redux';
+import locales from '@cdo/apps/redux/localesRedux';
+import unitSelection, {
+  setCoursesWithProgress,
+} from '@cdo/apps/redux/unitSelectionRedux';
+import {ReviewStates} from '@cdo/apps/templates/feedback/types';
+import {lessonProgressForSection} from '@cdo/apps/templates/progress/progressHelpers';
 import sectionProgress, {
   addDataByUnit,
   setLessonOfInterest,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import unitSelection, {
-  setCoursesWithProgress,
-} from '@cdo/apps/redux/unitSelectionRedux';
+import {fakeCoursesWithProgress} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 import teacherSections, {
   setSections,
   selectSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import locales from '@cdo/apps/redux/localesRedux';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
-import {TestResults} from '@cdo/apps/constants';
-import {lessonProgressForSection} from '@cdo/apps/templates/progress/progressHelpers';
-import {ReviewStates} from '@cdo/apps/templates/feedback/types';
-import {fakeCoursesWithProgress} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 export function fakeRowsForStudents(students) {
   const rows = [];
@@ -37,7 +37,7 @@ export function fakeDetailRowsForStudent(student) {
   ];
 }
 
-export function createStore(numStudents, numLessons) {
+export function createStore(numStudents, numLessons, studentList = null) {
   const scriptData = getScriptData(numLessons);
   const section = {
     id: 11,
@@ -45,8 +45,12 @@ export function createStore(numStudents, numLessons) {
     students: [],
     lessonExtras: false,
   };
-  for (let i = 0; i < numStudents; i++) {
-    section.students.push({id: i, name: 'Student' + i + ' Long Lastname'});
+  if (studentList === null) {
+    for (let i = 0; i < numStudents; i++) {
+      section.students.push({id: i, name: 'Student' + i + ' Long Lastname'});
+    }
+  } else {
+    section.students = [...studentList];
   }
   try {
     registerReducers({
@@ -110,7 +114,9 @@ function randomProgress(level) {
         paired: paired,
         timeSpent: timeSpent,
         lastTimestamp: timestamp,
-        reviewState: randomReviewState(),
+        teacherFeedbackReviewState: randomReviewState(),
+        teacherFeedbackNew: false,
+        teacherFeedbackCommented: true,
       };
     case 1:
       return {
@@ -120,7 +126,9 @@ function randomProgress(level) {
         paired: paired,
         timeSpent: timeSpent,
         lastTimestamp: timestamp,
-        reviewState: randomReviewState(),
+        teacherFeedbackReviewState: randomReviewState(),
+        teacherFeedbackNew: true,
+        teacherFeedbackCommented: false,
       };
     case 2:
       return {
@@ -130,7 +138,9 @@ function randomProgress(level) {
         paired: paired,
         timeSpent: timeSpent,
         lastTimestamp: timestamp,
-        reviewState: randomReviewState(),
+        teacherFeedbackReviewState: randomReviewState(),
+        teacherFeedbackNew: false,
+        teacherFeedbackCommented: true,
       };
     default:
       return null;

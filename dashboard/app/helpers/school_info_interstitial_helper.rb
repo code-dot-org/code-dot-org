@@ -3,7 +3,7 @@ module SchoolInfoInterstitialHelper
     return false if user.nil?
     return false unless user.teacher?
 
-    return false if user.account_age_days < 7
+    return false if user.account_age_days < 7 && !Policies::Lti.lti?(user)
 
     # Interstitial should pop up the first time for the teacher if it has been at least 7 days since the teacher signed
     # up for an account AND the teacher hasn’t previously filled out all the fields already (e.g. as part

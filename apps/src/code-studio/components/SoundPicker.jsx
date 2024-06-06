@@ -10,6 +10,7 @@ import SoundLibrary from './SoundLibrary';
 import i18n from '@cdo/locale';
 import Sounds from '../../Sounds';
 import {RecordingFileType} from './recorders';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const audioExtension = '.mp3';
 
@@ -56,19 +57,36 @@ export default class SoundPicker extends React.Component {
       soundModeToggle: {
         float: 'left',
         margin: '0 20px 0 0',
-        fontFamily: isFileMode ? null : '"Gotham 5r"',
-        color: isFileMode ? color.light_gray : null,
         fontSize: 16,
         cursor: 'pointer',
       },
       fileModeToggle: {
         margin: 0,
         fontSize: 16,
-        fontFamily: isFileMode ? '"Gotham 5r"' : null,
-        color: isFileMode ? null : color.light_gray,
         cursor: 'pointer',
       },
     };
+
+    if (isFileMode) {
+      headerStyles.soundModeToggle = {
+        ...headerStyles.soundModeToggle,
+        color: color.light_gray,
+      };
+
+      headerStyles.fileModeToggle = {
+        ...headerStyles.fileModeToggle,
+        ...fontConstants['main-font-semi-bold'],
+      };
+    } else {
+      headerStyles.soundModeToggle = {
+        ...headerStyles.soundModeToggle,
+        ...fontConstants['main-font-semi-bold'],
+      };
+      headerStyles.fileModeToggle = {
+        ...headerStyles.fileModeToggle,
+        color: color.light_gray,
+      };
+    }
 
     let modeSwitch;
     let title = <p>{i18n.chooseSounds()}</p>;

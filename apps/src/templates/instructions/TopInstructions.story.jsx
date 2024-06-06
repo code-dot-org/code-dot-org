@@ -1,19 +1,22 @@
 import React from 'react';
 import {Provider} from 'react-redux';
 import {createStore, combineReducers} from 'redux';
+
+import isRtl, {setRtlFromDOM} from '@cdo/apps/code-studio/isRtlRedux';
+import {enqueueHints, showNextHint} from '@cdo/apps/redux/authoredHints';
 import * as commonReducers from '@cdo/apps/redux/commonReducers';
 import {
   setHasAuthoredHints,
   setInstructionsConstants,
   setTtsAutoplayEnabledForLevel,
 } from '@cdo/apps/redux/instructions';
-import {enqueueHints, showNextHint} from '@cdo/apps/redux/authoredHints';
-import isRtl, {setRtlFromDOM} from '@cdo/apps/code-studio/isRtlRedux';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
+import FailureAvatar from '@cdo/static/skins/bee/failure_avatar.png';
+import SmallStaticAvatar from '@cdo/static/skins/bee/small_static_avatar.png';
+
 import TopInstructions from './TopInstructions';
 
 export default {
-  title: 'TopInstructions',
   component: TopInstructions,
 };
 
@@ -91,10 +94,8 @@ const createCommonStore = function (options = {}) {
       store.dispatch(showNextHint());
     };
 
-    pageConstants.smallStaticAvatar =
-      '/blockly/media/skins/bee/small_static_avatar.png';
-
-    pageConstants.failureAvatar = '/blockly/media/skins/bee/failure_avatar.png';
+    pageConstants.smallStaticAvatar = SmallStaticAvatar;
+    pageConstants.failureAvatar = FailureAvatar;
   } else {
     instructionsConstants.noInstructionsWhenCollapsed = true;
     pageConstants.documentationUrl = 'https://studio.code.org/docs/weblab/';

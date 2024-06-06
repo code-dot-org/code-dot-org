@@ -1,0 +1,11 @@
+name 'CSA-SE-CV-Pre-Survey-Q07'
+
+question 'How confident are you in your understanding of how AI models are trained and their limitations?'
+
+right 'Not at all confident: I do not feel confident about my understanding of how AI models are trained and their limitations.'
+right 'Slightly confident: I understand some basics, but I\'m largely unsure about the training process of AI models and their limitations.'
+right 'Moderately confident: I have a fair understanding and can handle some topics related to the training of AI models and their limitations, but I still have questions about certain aspects.'
+right 'Mostly confident: I feel comfortable with my understanding of how AI models are trained and aware of their limitations, but there are a few complex aspects I might need to explore further.'
+right 'Very confident: I am fully confident in my understanding of how AI models are trained and am thoroughly aware of their limitations.'
+
+allow_multiple_attempts false

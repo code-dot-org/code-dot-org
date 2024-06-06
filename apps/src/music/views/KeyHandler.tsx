@@ -5,7 +5,6 @@ import {AnalyticsContext} from '../context';
 import {
   advanceInstructionsPosition,
   toggleHeaders,
-  toggleBeatPad,
   toggleInstructions,
   toggleTimelinePosition,
   moveStartPlayheadPositionBackward,
@@ -15,6 +14,7 @@ import {
 interface KeyHandlerProps {
   togglePlaying: () => void;
   playTrigger: (triggerId: string) => void;
+  uiShortcutsEnabled: boolean;
 }
 
 /**
@@ -24,6 +24,7 @@ interface KeyHandlerProps {
 const KeyHandler: React.FunctionComponent<KeyHandlerProps> = ({
   togglePlaying,
   playTrigger,
+  uiShortcutsEnabled,
 }) => {
   const analyticsReporter = useContext(AnalyticsContext);
   const dispatch = useDispatch();
@@ -54,25 +55,23 @@ const KeyHandler: React.FunctionComponent<KeyHandlerProps> = ({
       // keys are used for Blockly keyboard navigation: A, D, I, S, T, W, X
       // https://developers.google.com/blockly/guides/configure/web/keyboard-nav
       // Also avoid C and V that may be used in copy/paste shortcuts.
-      if (event.key === 'u') {
-        reportKeyPress('toggle-timeline-position');
-        dispatch(toggleTimelinePosition());
-      }
-      if (event.key === 'j') {
-        reportKeyPress('toggle-instructions');
-        dispatch(toggleInstructions());
-      }
-      if (event.key === 'n') {
-        reportKeyPress('advance-instructions-position');
-        dispatch(advanceInstructionsPosition());
-      }
-      if (event.key === 'h') {
-        reportKeyPress('toggle-headers');
-        dispatch(toggleHeaders());
-      }
-      if (event.key === 'b') {
-        reportKeyPress('toggle-beat-pad');
-        dispatch(toggleBeatPad());
+      if (uiShortcutsEnabled) {
+        if (event.key === 'u') {
+          reportKeyPress('toggle-timeline-position');
+          dispatch(toggleTimelinePosition());
+        }
+        if (event.key === 'j') {
+          reportKeyPress('toggle-instructions');
+          dispatch(toggleInstructions());
+        }
+        if (event.key === 'n') {
+          reportKeyPress('advance-instructions-position');
+          dispatch(advanceInstructionsPosition());
+        }
+        if (event.key === 'h') {
+          reportKeyPress('toggle-headers');
+          dispatch(toggleHeaders());
+        }
       }
       if (event.key === ',') {
         dispatch(moveStartPlayheadPositionBackward());
@@ -89,11 +88,14 @@ const KeyHandler: React.FunctionComponent<KeyHandlerProps> = ({
         togglePlaying();
       }
     },
-    [togglePlaying, playTrigger, reportKeyPress, dispatch]
+    [togglePlaying, playTrigger, reportKeyPress, dispatch, uiShortcutsEnabled]
   );
 
   useEffect(() => {
     document.body.addEventListener('keyup', handleKeyUp);
+    return () => {
+      document.body.removeEventListener('keyup', handleKeyUp);
+    };
   }, [handleKeyUp]);
 
   return null;

@@ -279,9 +279,9 @@ class AdminSearchControllerTest < ActionController::TestCase
     pilot_name = create(:pilot).name
     post :add_to_pilot, params: {
       email: teacher.email + "\n" + teacher2.email + "\n" + teacher3.email + "\n" +
-      teacher4.email + "\n" + teacher5.email + "\n" + teacher6.email + "\n" +
-      teacher7.email + "\n" + teacher8.email + "\n" + teacher9.email + "\n" +
-      teacher10.email + "\n" + teacher11.email, pilot_name: pilot_name
+        teacher4.email + "\n" + teacher5.email + "\n" + teacher6.email + "\n" +
+        teacher7.email + "\n" + teacher8.email + "\n" + teacher9.email + "\n" +
+        teacher10.email + "\n" + teacher11.email, pilot_name: pilot_name
     }
 
     assert SingleUserExperiment.find_by(min_user_id: teacher.id, name: pilot_name).present?

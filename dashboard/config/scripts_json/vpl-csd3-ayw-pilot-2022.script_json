@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "curriculum_umbrella": "PD Workshop Activity CSD",
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
@@ -13,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-11-28 20:20:27 UTC",
+    "serialized_at": "2024-03-06 20:07:27 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -328,6 +329,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-ProblemSolvingSample"
+        ],
         "progression": "Student Samples"
       },
       "bonus": false,
@@ -350,6 +354,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-WebDevSample"
+        ],
         "progression": "Student Samples"
       },
       "bonus": false,
@@ -372,6 +379,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-AnimGamesSample"
+        ],
         "progression": "Student Samples"
       },
       "bonus": false,
@@ -394,6 +404,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-DesignProcessSample"
+        ],
         "progression": "Student Samples"
       },
       "bonus": false,
@@ -416,6 +429,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-DataSocietySample"
+        ],
         "progression": "Student Samples"
       },
       "bonus": false,
@@ -438,6 +454,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-PhysCompSample"
+        ],
         "progression": "Student Samples"
       },
       "bonus": false,
@@ -460,6 +479,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-AIMLSample"
+        ],
         "progression": "Student Samples"
       },
       "bonus": false,
@@ -843,6 +865,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

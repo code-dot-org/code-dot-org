@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {h3Style} from '../../lib/ui/Headings';
+
 import i18n from '@cdo/locale';
+
+import {h3Style} from '../../lib/ui/Headings';
 
 class LessonSelector extends Component {
   static propTypes = {

@@ -1,12 +1,12 @@
 import React from 'react';
-import {UnconnectedMatchAssessmentsOverviewTable} from './MatchAssessmentsOverviewTable';
+
 import {
   matchQuestionWith2Pairs,
   matchQuestionWith4Pairs,
 } from './assessmentsTestHelpers';
+import {UnconnectedMatchAssessmentsOverviewTable} from './MatchAssessmentsOverviewTable';
 
 export default {
-  title: 'MatchAssessmentsOverviewTable',
   component: UnconnectedMatchAssessmentsOverviewTable,
 };
 

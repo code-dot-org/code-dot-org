@@ -1,5 +1,3 @@
-# coding: utf-8
-
 require_relative 'test_helper'
 
 require 'cdo/email_validator'

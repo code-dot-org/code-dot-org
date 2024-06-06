@@ -4,57 +4,39 @@
 # Hourofcode projects to i18n/locales.
 # https://crowdin.com/project/codeorg
 
+require_relative 'metrics'
 require_relative 'i18n_script_utils'
 
-require 'cdo/crowdin/legacy_utils'
-require 'cdo/crowdin/project'
+Dir[File.expand_path('../resources/*.rb', __FILE__)].sort.each {|file| require file}
 
-def with_elapsed
-  before = Time.now
-  yield
-  after = Time.now
-  return Time.at(after - before).utc.strftime('%H:%M:%S')
-end
-
-def sync_down
-  I18nScriptUtils.with_synchronous_stdout do
-    puts "Sync down starting"
-    logger = Logger.new(STDOUT)
-    logger.level = Logger::INFO
-
-    CROWDIN_PROJECTS.each do |name, options|
-      puts "Downloading translations from #{name} project"
-      api_token = YAML.load_file(options[:identity_file])["api_token"]
-      project_identifier = YAML.load_file(options[:config_file])["project_identifier"]
-      project = Crowdin::Project.new(project_identifier, api_token)
-      options = {
-        etags_json: options[:etags_json],
-        files_to_sync_out_json: options[:files_to_sync_out_json],
-        locales_dir: File.join(I18N_SOURCE_DIR, '..'),
-        logger: logger
-      }
-
-      # download strings not in the regular codeorg project to
-      # a specific subdirectory within the locale directory
-      case name.to_s
-      when "codeorg-markdown-testing", "codeorg-markdown"
-        options[:locale_subdir] = "codeorg-markdown"
-      when "hour-of-code"
-        options[:locale_subdir] = "hourofcode"
-      end
-
-      utils = Crowdin::LegacyUtils.new(project, options)
-
-      puts "Downloading changed files"
-      elapsed = with_elapsed {utils.download_changed_files}
-      puts "Files downloaded in #{elapsed}"
+module I18n
+  class SyncDown
+    def self.parse_options
+      I18n::Utils::SyncDownBase.parse_options
     end
 
-    puts "Sync down completed successfully"
-  rescue => exception
-    puts "Sync down failed from the error: #{exception}"
-    raise exception
+    # Sync-down all i18n resources.
+    #
+    # @param [Hash] opts
+    # @option opts [true, false] :testing Whether to run in testing mode
+    # @return [void]
+    def self.perform(opts = parse_options)
+      I18nScriptUtils.with_synchronous_stdout do
+        puts "Sync down starting"
+
+        I18n::Resources::Apps.sync_down(**opts)
+        I18n::Resources::Dashboard.sync_down(**opts)
+        I18n::Resources::Pegasus.sync_down(**opts)
+
+        I18n::Metrics.report_status(true, 'sync-down', 'Sync down completed successfully')
+        puts "Sync down completed successfully"
+      rescue => exception
+        I18n::Metrics.report_status(false, 'sync-down', "Sync down failed from the error: #{exception}")
+        puts "Sync down failed from the error: #{exception}"
+        raise exception
+      end
+    end
   end
 end
 
-sync_down if __FILE__ == $0
+I18n::SyncDown.perform if __FILE__ == $0

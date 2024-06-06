@@ -1,35 +1,36 @@
+import classnames from 'classnames';
+import moment from 'moment';
+import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
-import moment from 'moment';
-import i18n from '@cdo/locale';
-import {
-  ViewType,
-  scriptDataPropType,
-} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
+
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {shouldShowReviewStates} from '@cdo/apps/templates/progress/progressHelpers';
+import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import {
   studentLessonProgressType,
   studentLevelProgressType,
 } from '@cdo/apps/templates/progress/progressTypes';
-import {shouldShowReviewStates} from '@cdo/apps/templates/progress/progressHelpers';
+import SummaryViewLegend from '@cdo/apps/templates/sectionProgress/progressTables/SummaryViewLegend';
+import {
+  ViewType,
+  unitDataPropType,
+} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
 import {
   getCurrentUnitData,
   jumpToLessonDetails,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import styleConstants from '@cdo/apps/styleConstants';
-import ProgressTableStudentList from './ProgressTableStudentList';
+import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';
+import i18n from '@cdo/locale';
+
 import ProgressTableContentView from './ProgressTableContentView';
-import SummaryViewLegend from '@cdo/apps/templates/sectionProgress/progressTables/SummaryViewLegend';
-import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import {
   getSummaryCellFormatters,
   getDetailCellFormatters,
   getLevelIconHeaderFormatter,
 } from './progressTableHelpers';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import classnames from 'classnames';
-import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
+import ProgressTableStudentList from './ProgressTableStudentList';
 
 /**
  * Since our progress tables are built out of standard HTML table elements,
@@ -74,7 +75,7 @@ class ProgressTableView extends React.Component {
     // redux
     sectionId: PropTypes.number.isRequired,
     students: PropTypes.arrayOf(studentShape),
-    scriptData: scriptDataPropType.isRequired,
+    scriptData: unitDataPropType.isRequired,
     lessonProgressByStudent: PropTypes.objectOf(
       PropTypes.objectOf(studentLessonProgressType)
     ).isRequired,
@@ -85,6 +86,7 @@ class ProgressTableView extends React.Component {
     lessonOfInterest: PropTypes.number.isRequired,
     studentTimestamps: PropTypes.object.isRequired,
     localeCode: PropTypes.string,
+    isSortedByFamilyName: PropTypes.bool,
   };
 
   constructor(props) {
@@ -108,8 +110,14 @@ class ProgressTableView extends React.Component {
     // `studentTableRowType` object to track their expanded state. these
     // objects also include an `expansionIndex` to determine which lesson
     // formatter to use to render the row.
+
+    // Sort students, in-place.
+    const sortedStudents = props.isSortedByFamilyName
+      ? props.students.sort(stringKeyComparator(['familyName', 'name']))
+      : props.students.sort(stringKeyComparator(['name', 'familyName']));
+
     this.state = {
-      rows: props.students.map((student, index) => {
+      rows: sortedStudents.map((student, index) => {
         return {
           id: idForExpansionIndex(student.id, 0),
           student: student,
@@ -138,6 +146,28 @@ class ProgressTableView extends React.Component {
     if (prevProps.currentView !== this.props.currentView) {
       this.setRowsToRender();
     }
+    if (prevProps.isSortedByFamilyName !== this.props.isSortedByFamilyName) {
+      this.sortTableRows();
+    }
+  }
+
+  sortTableRows() {
+    const comparator = keys => (a, b) =>
+      stringKeyComparator(keys)(a.student, b.student);
+    const sortedRows = this.props.isSortedByFamilyName
+      ? this.state.rows.sort(comparator(['familyName', 'name']))
+      : this.state.rows.sort(comparator(['name', 'familyName']));
+
+    // Alternate dark/light background (child rows use same color as parent)
+    let darkBackground = true;
+    this.setState({
+      rows: sortedRows.map(row => {
+        if (row.expansionIndex === 0) {
+          darkBackground = !darkBackground;
+        }
+        return {...row, useDarkBackground: darkBackground};
+      }),
+    });
   }
 
   /**
@@ -180,8 +210,12 @@ class ProgressTableView extends React.Component {
   syncScrollTop() {
     clearTimeout(this.timeout);
     this.timeout = setTimeout(() => {
-      this.setScrollState(this.contentView.bodyComponent);
-      this.setScrollState(this.studentList.bodyComponent);
+      if (this.contentView?.bodyComponent) {
+        this.setScrollState(this.contentView.bodyComponent);
+      }
+      if (this.studentList?.bodyComponent) {
+        this.setScrollState(this.studentList.bodyComponent);
+      }
     }, 200);
   }
 
@@ -356,18 +390,6 @@ class ProgressTableView extends React.Component {
             />
           </div>
         </div>
-        <div style={styles.midpageBanner}>
-          <Notification
-            type={NotificationType.feedback}
-            notice={i18n.feedbackShareBannerTitle()}
-            details={i18n.feedbackShareBannerDesc()}
-            buttonText={i18n.feedbackShareBannerButton()}
-            buttonLink={
-              'https://studio.code.org/form/share_feedback_progress_table'
-            }
-            dismissible={true}
-          />
-        </div>
         {this.props.currentView === ViewType.DETAIL ? (
           <ProgressLegend
             includeCsfColumn={this.props.scriptData.csf}
@@ -384,7 +406,7 @@ class ProgressTableView extends React.Component {
 
 const styles = {
   container: {
-    width: styleConstants['content-width'],
+    width: parseInt(progressTableStyleConstants.TABLE_WIDTH),
   },
   studentList: {
     display: 'inline-block',
@@ -394,15 +416,13 @@ const styles = {
     display: 'inline-block',
     width: parseInt(progressTableStyleConstants.CONTENT_VIEW_WIDTH),
   },
-  midpageBanner: {
-    marginTop: '60px',
-  },
 };
 
 export const UnconnectedProgressTableView = ProgressTableView;
 
 export default connect(
   state => ({
+    isSortedByFamilyName: state.currentUser.isSortedByFamilyName,
     sectionId: state.teacherSections.selectedSectionId,
     students: state.teacherSections.selectedStudents,
     scriptData: getCurrentUnitData(state),

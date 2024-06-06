@@ -147,6 +147,23 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_equal 'My School', student.school
   end
 
+  test "user cannot update username to existing username" do
+    student = create(:student)
+    new_student = create(:student)
+
+    new_student.username = "newusername"
+    new_student.save
+
+    sign_in student
+    put :update, params: {
+      user: {
+        username: 'newusername',
+      }
+    }
+    assert_equal ["Username has already been taken"], assigns(:user).errors.full_messages
+    refute_equal 'newusername', student.reload.username
+  end
+
   test "parent_email: student can add a parent email without opt in" do
     student = create(:student)
     sign_in student
@@ -329,6 +346,7 @@ class RegistrationsControllerTest < ActionController::TestCase
 
   test "create new teacher with us ip sends email with us content" do
     teacher_params = @default_params.update(user_type: 'teacher', email_preference_opt_in: 'yes')
+    MailJet.stubs(:enabled?).returns(false)
     Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'US')])
     assert_creates(User) do
       post :create, params: {user: teacher_params}
@@ -343,6 +361,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   test "create new teacher with non-us ip sends email without us content" do
     teacher_params = @default_params.update(user_type: 'teacher', email_preference_opt_in: 'yes')
     Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'CA')])
+    MailJet.stubs(:enabled?).returns(false)
     assert_creates(User) do
       post :create, params: {user: teacher_params}
     end
@@ -351,6 +370,18 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_equal 'Welcome to Code.org!', mail.subject
     assert_includes(mail.body.to_s, 'Hadi Partovi')
     refute_includes(mail.body.to_s, 'New to teaching computer science')
+  end
+
+  test "create new teacher with MailJet enabled sends welcome email" do
+    teacher_params = @default_params.update(user_type: 'teacher', email_preference_opt_in: 'yes')
+    Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'CA')])
+    MailJet.stubs(:enabled?).returns(true)
+    MailJet.expects(:create_contact_and_send_welcome_email).once
+    assert_creates(User) do
+      post :create, params: {user: teacher_params}
+    end
+
+    assert_empty ActionMailer::Base.deliveries
   end
 
   test 'create new teacher with es-MX locale sends localized welcome email' do
@@ -401,7 +432,7 @@ class RegistrationsControllerTest < ActionController::TestCase
     end
 
     teacher = User.last
-    assert_not_nil teacher.share_teacher_email_regional_partner_opt_in
+    refute_nil teacher.share_teacher_email_regional_partner_opt_in
   end
 
   test "create new teacher with us ip with opt-out to sharing email with regional partners ensure share_teacher_email_regional_partner_opt_in value is nil" do

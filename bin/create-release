@@ -51,8 +51,8 @@ end
 def get_next_release_version
   # version format is "v{year}-{month}-{day}.{version number}"
   today = TZInfo::Timezone.get('US/Pacific').
-      utc_to_local(Time.now.utc).
-      strftime("v%Y-%m-%d")
+    utc_to_local(Time.now.utc).
+    strftime("v%Y-%m-%d")
   version_number = 0
 
   # if we've already released a .0 or more today, increment the version

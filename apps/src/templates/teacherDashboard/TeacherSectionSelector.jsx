@@ -1,14 +1,17 @@
-import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import queryString from 'query-string';
+import React, {Component} from 'react';
+
+import {updateQueryParam} from '@cdo/apps/code-studio/utils';
+import SmallChevronLink from '@cdo/apps/templates/SmallChevronLink';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
+
 import PopUpMenu from '../../lib/ui/PopUpMenu';
-import TeacherSectionSelectorMenuItem from './TeacherSectionSelectorMenuItem';
-import {sectionForDropdownShape} from './shapes';
-import SmallChevronLink from '@cdo/apps/templates/SmallChevronLink';
-import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {reload} from '../../utils';
-import queryString from 'query-string';
+
+import {sectionForDropdownShape} from './shapes';
+import TeacherSectionSelectorMenuItem from './TeacherSectionSelectorMenuItem';
 
 export default class TeacherSectionSelector extends Component {
   static propTypes = {

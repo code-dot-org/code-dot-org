@@ -47,7 +47,7 @@ def main
       keys = data.keys
       puts CSV.generate_line keys
     end
-    puts CSV.generate_line keys.map {|i| data[i]}
+    puts CSV.generate_line(keys.map {|i| data[i]})
   end
 end
 

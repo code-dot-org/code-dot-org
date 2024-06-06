@@ -1,12 +1,16 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import PopUpMenu from '../../lib/ui/PopUpMenu';
-import {assignmentCourseVersionShape} from './shapes';
-import i18n from '@cdo/locale';
-import FontAwesome from './../FontAwesome';
-import color from '../../util/color';
 import ReactTooltip from 'react-tooltip';
-import _ from 'lodash';
+
+import fontConstants from '@cdo/apps/fontConstants';
+import i18n from '@cdo/locale';
+
+import PopUpMenu from '../../lib/ui/PopUpMenu';
+import color from '../../util/color';
+
+import FontAwesome from './../FontAwesome';
+import {assignmentCourseVersionShape} from './shapes';
 
 export default function AssignmentVersionMenuItem(props) {
   // Returns whether we should display this version as english-only.
@@ -102,8 +106,7 @@ const style = {
   titleColumn: {
     ...cellStyle,
     width: columnWidths.title,
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontWeight: 'bold',
+    ...fontConstants['main-font-semi-bold'],
   },
   statusColumn: {
     ...cellStyle,

@@ -1,14 +1,16 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
-import Button from './Button';
-import i18n from '@cdo/locale';
-import {assignToSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import ConfirmHiddenAssignment from '@cdo/apps/templates/courseOverview/ConfirmHiddenAssignment';
+
 import {
   isScriptHiddenForSection,
   updateHiddenScript,
 } from '@cdo/apps/code-studio/hiddenLessonRedux';
+import ConfirmHiddenAssignment from '@cdo/apps/templates/courseOverview/ConfirmHiddenAssignment';
+import {assignToSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import i18n from '@cdo/locale';
+
+import Button from './Button';
 
 class AssignButton extends React.Component {
   static propTypes = {
@@ -100,7 +102,7 @@ class AssignButton extends React.Component {
         <div style={buttonMarginStyle}>
           <Button
             style={styles.boxShadow}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
             text={i18n.assignToSection()}
             icon="plus"
             onClick={this.handleClick}

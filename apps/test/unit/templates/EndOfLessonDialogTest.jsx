@@ -1,9 +1,11 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../util/reconfiguredChai';
 import sinon from 'sinon';
-import {UnconnectedEndOfLessonDialog as EndOfLessonDialog} from '@cdo/apps/templates/EndOfLessonDialog';
+
 import Button from '@cdo/apps/templates/Button';
+import {UnconnectedEndOfLessonDialog as EndOfLessonDialog} from '@cdo/apps/templates/EndOfLessonDialog';
+
+import {expect} from '../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   lessonNumber: 2,

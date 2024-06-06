@@ -3,6 +3,8 @@ require_relative '../legacy/middleware/helpers/user_helpers'
 module ProjectsList
   # Maximum number of projects of each type that can be requested.
   MAX_LIMIT = 100
+  # Maximum number of featured projects of each type that can be requested.
+  FEATURED_MAX_LIMIT = SharedConstants::FEATURED_PROJECT_CONSTANTS.MAX_REQUESTS_PER_CATEGORY
 
   # A hash map from project group name to a list of publishable project types in
   # that group.
@@ -17,11 +19,12 @@ module ProjectsList
     k1: ['artist_k1', 'playlab_k1'],
     dance: ['dance'],
     poetry: ['poetry', 'poetry_hoc'],
-    library: ['applab', 'gamelab']
+    library: ['applab', 'gamelab'],
+    music: ['music']
   }.freeze
 
   # Sharing of advanced project types to the public gallery is restricted for
-  # young students unless sharing is explciitly enabled by the student's
+  # young students unless sharing is explicitly enabled by the student's
   # teacher for privacy reasons.
   ADVANCED_PROJECT_TYPES = ['applab', 'gamelab', 'spritelab']
 
@@ -35,7 +38,7 @@ module ProjectsList
       storage_id = storage_id_for_user_id(user_id)
       Projects.new(storage_id).get_active_projects.each do |project|
         channel_id = storage_encrypt_channel_id(storage_id, project[:id])
-        project_data = get_project_row_data(project, channel_id, nil, true)
+        project_data = get_project_row_data(project, channel_id, with_library: true)
         personal_projects_list << project_data if project_data
       end
       personal_projects_list
@@ -64,7 +67,7 @@ module ProjectsList
 
       projects_query.each do |project|
         channel_id = storage_encrypt_channel_id(storage_id, project[:id])
-        project_data = get_project_row_data(project, channel_id, nil, true)
+        project_data = get_project_row_data(project, channel_id, with_library: true)
         personal_projects_list << project_data if project_data
       end
 
@@ -127,19 +130,35 @@ module ProjectsList
     def include_featured(limit:)
       published = fetch_published_project_types(PUBLISHED_PROJECT_TYPE_GROUPS.keys, limit: limit)
       featured = fetch_featured_published_projects
-      PUBLISHED_PROJECT_TYPE_GROUPS.keys.each do |project_type|
+      PUBLISHED_PROJECT_TYPE_GROUPS.each_key do |project_type|
         featured[project_type].push(published[project_type]).flatten!.uniq!
       end
       return featured
     end
 
-    def fetch_featured_published_projects
+    # @param project_group [String] Project group to retrieve. Must be one of
+    #   PUBLISHED_PROJECT_TYPE_GROUPS.keys, or 'all' to retrieve all project groups.
+    # @param featured_before [string] String representing a DateTime before
+    #   which to search for the requested featured projects. Optional.
+    # @return [Hash<Array<Hash>>] A hash of lists of active published feature projects.
+    def fetch_active_published_featured_projects(project_group, featured_before: nil)
+      if project_group == 'all'
+        return fetch_featured_published_projects(featured_before: featured_before)
+      end
+      raise ArgumentError, "invalid project type: #{project_group}" unless PUBLISHED_PROJECT_TYPE_GROUPS.key?(project_group.to_sym)
+      fetch_featured_projects_by_type([project_group.to_sym], featured_before: featured_before)
+    end
+
+    def fetch_featured_published_projects(featured_before: nil)
       featured_published_projects = {}
       PUBLISHED_PROJECT_TYPE_GROUPS.each do |project_group, project_types|
+        if project_group == :library
+          next
+        end
         featured_published_projects[project_group] = []
         project_types.each do |project_type|
           featured_published_projects[project_group] <<
-          fetch_featured_projects_by_type(project_type)
+            fetch_featured_projects_by_type(project_type, featured_before: featured_before)
         end
         featured_published_projects[project_group].flatten!
       end
@@ -222,7 +241,7 @@ module ProjectsList
       ]
     end
 
-    def fetch_featured_projects_by_type(project_type)
+    def fetch_featured_projects_by_type(project_type, featured_before: nil)
       projects = "#{CDO.dashboard_db_name}__projects".to_sym
       user_project_storage_ids = "#{CDO.dashboard_db_name}__user_project_storage_ids".to_sym
 
@@ -236,9 +255,11 @@ module ProjectsList
           project_type: project_type.to_s,
           state: 'active'
         ).
+        where {featured_before.nil? || featured_at < DateTime.parse(featured_before)}.
+        exclude(featured_at: nil).
         exclude(published_at: nil).
-        exclude(abuse_score: 0...).
-        order(Sequel.desc(:published_at)).limit(8).all.shuffle!
+        exclude(abuse_score: 1...).
+        order(Sequel.desc(:featured_at)).limit(FEATURED_MAX_LIMIT)
       extract_data_for_featured_project_cards(project_featured_project_user_combo_data)
     end
 
@@ -255,25 +276,24 @@ module ProjectsList
           "publishedAt" => project_details[:published_at],
           "studentName" => UserHelpers.initial(project_details[:name]),
           "studentAgeRange" => UserHelpers.age_range_from_birthday(project_details[:birthday]),
-          "isFeatured" => true
+          "isFeatured" => true,
+          "featuredAt" => project_details[:featured_at]
         }
         data_for_featured_project_cards << data_for_featured_project_card
       end
       return data_for_featured_project_cards
     end
 
-    private
-
     # e.g. '/projects/applab' -> 'applab', or
     # 'https://studio.code.org/projects/weblab' --> 'weblab'
-    def project_type(level)
+    private def project_type(level)
       level&.split('/')&.last
     end
 
     # pull various fields out of the student and project records to populate
     # a data structure that can be used to populate a UI component displaying a
     # single project.
-    def get_project_row_data(project, channel_id, student = nil, with_library = false)
+    private def get_project_row_data(project, channel_id, student = nil, with_library: false)
       project_value = project[:value] ? JSON.parse(project[:value]) : {}
       return nil if project_value['hidden'] == true || project_value['hidden'] == 'true'
 
@@ -282,9 +302,10 @@ module ProjectsList
         name: project_value['name'],
         studentName: student&.name,
         thumbnailUrl: project_value['thumbnailUrl'],
-        type: project_type(project_value['level']),
+        type: project_type(project_value['level']) || project_value['projectType'],
         updatedAt: project_value['updatedAt'],
-        publishedAt: project[:published_at]
+        publishedAt: project[:published_at],
+        frozen: project_value['frozen'],
       }
 
       if with_library
@@ -300,7 +321,7 @@ module ProjectsList
     # pull various fields out of the user and project records to populate
     # a data structure that can be used to populate a UI component displaying a
     # single library or a list of libraries.
-    def get_library_row_data(project, channel_id, section_name, user = nil)
+    private def get_library_row_data(project, channel_id, section_name, user = nil)
       project_value = project[:value] ? JSON.parse(project[:value]) : {}
       {
         sectionName: section_name,
@@ -312,7 +333,7 @@ module ProjectsList
       }.with_indifferent_access
     end
 
-    def project_and_user_fields
+    private def project_and_user_fields
       [
         :projects__id___id,
         :projects__storage_id___storage_id,
@@ -326,7 +347,7 @@ module ProjectsList
       ]
     end
 
-    def fetch_published_project_types(project_groups, limit:, published_before: nil)
+    private def fetch_published_project_types(project_groups, limit:, published_before: nil)
       users = "dashboard_#{CDO.rack_env}__users".to_sym
 
       user_project_storage_ids = "#{CDO.dashboard_db_name}__user_project_storage_ids".to_sym
@@ -355,7 +376,7 @@ module ProjectsList
     #  See project_and_user_fields for which fields it contains.
     # @returns [hash, nil] containing fields relevant to the published project or
     #  nil when the user has sharing_disabled = true for App Lab, Game Lab and Sprite Lab.
-    def get_published_project_and_user_data(project_and_user)
+    private def get_published_project_and_user_data(project_and_user)
       return nil if get_sharing_disabled_from_properties(project_and_user[:properties]) && ADVANCED_PROJECT_TYPES.include?(project_and_user[:project_type])
       return nil if project_and_user[:abuse_score] > 0
       channel_id = storage_encrypt_channel_id(project_and_user[:storage_id], project_and_user[:id])

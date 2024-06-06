@@ -54,6 +54,8 @@ en:
             '1.00': medium
             '2.00': large
             '3.00': extra large
+      Dancelab_ai:
+        text: "[IMAGE][0]generate [VALUE][1] effect"
       Dancelab_alternateMoves:
         text: "[GROUP][0] alternate every [N][1] measures \nbetween [MOVE1][2] and [MOVE2][3]"
         options:
@@ -103,6 +105,12 @@ en:
           UNIT:
             '"measures"': measures
             '"seconds"': seconds
+      Dancelab_atTimestampNotAfter:
+        text: at [TIMESTAMP][0] [UNIT][1]
+        options:
+          UNIT:
+            '"measures"': measures
+            '"seconds"': seconds
       Dancelab_changeColorBy:
         text: change [COLOR][0] [METHOD][1] by [AMOUNT][2]
         options:
@@ -143,6 +151,31 @@ en:
             MOVES.ThisOrThat: This or That
             MOVES.Thriller: Zombie
             MOVES.Rest: None
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "[GROUP][0] do [MOVE][1] [DIR][2] forever"
+        options:
+          GROUP:
+            '"CAT"': cats
+            '"SLOTH"': sloths
+          MOVE:
+            MOVES.Roll: Body Roll
+            MOVES.ClapHigh: Clap High
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double Down
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Star
+            MOVES.ThisOrThat: This or That
+            MOVES.Thriller: Zombie
+            MOVES.Rest: None
+            '"next"': "(Next)"
+            '"prev"': "(Previous)"
+            '"rand"': "(Random)"
           DIR:
             '1': "→"
             "-1": "←"
@@ -648,6 +681,65 @@ en:
             '"tropical"': Tropical
             '"vintage"': Vintage
             '"warm"': Warm
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          set background effect
+          [PALETTE][0] [EFFECT][1]
+        options:
+          EFFECT:
+            '"none"': None
+            '"rand"': "(Random)"
+            '"quads"': Angles
+            '"blooming_petals"': Blooming Petals
+            '"circles"': Circles
+            '"clouds"': Clouds
+            '"color_cycle"': Colors
+            '"diamonds"': Diamonds
+            '"disco_ball"': Disco Ball
+            '"fireworks"': Fireworks
+            '"flowers"': Flowers
+            '"frosted_grid"': Frosted Grid
+            '"growing_stars"': Growing Stars
+            '"higher_power"': Higher Power
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kaleidoscope
+            '"lasers"': Laser Dance Floor
+            '"splatter"': Paint Splatter
+            '"rainbow"': Rainbow
+            '"ripples_random"': Random Ripples
+            '"ripples"': Ripples
+            '"snowflakes"': Snow
+            '"text"': Song Names
+            '"galaxy"': Space
+            '"sparkles"': Sparkles
+            '"spiral"': Spiral
+            '"disco"': Squares
+            '"squiggles"': Squiggles
+            '"starburst"': Starburst
+            '"stars"': Stars
+            '"music_wave"': Waves
+          PALETTE:
+            '"autumn"': Autumn
+            '"rave"': Black and White
+            '"cool"': Cool
+            '"electronic"': Electronic
+            '"grayscale"': Grayscale
+            '"iceCream"': Ice Cream
+            '"default"': Light
+            '"neon"': Neon
+            '"ocean"': Ocean
+            '"rainbow"': Rainbow
+            '"roses"': Roses
+            '"sky"': Sky
+            '"spring"': Spring
+            '"summer"': Summer
+            '"sunrise"': Sunrise
+            '"sunset"': Sunset
+            '"tropical"': Tropical
+            '"twinkling"': Twinkling
+            '"vintage"': Vintage
+            '"warm"': Warm
+            '"winter"': Winter
       Dancelab_setDanceSpeed:
         text: set [SPRITE][0] dance speed to [SPEED][1]
         options:
@@ -1058,6 +1150,8 @@ en:
             '"macklemore90"': Macklemore - Can't Hold Us
             '"hammer"': MC Hammer - U Can't Touch This
             '"peas"': The Black Eyed Peas - I Got a Feeling
+      DansBlocks_borderGPT:
+        text: Generate Border [DESCRIPTION][0]
       DansBlocks_getMicroscope:
         text: Microscope has [INPUT1][0]
         options:
@@ -1065,8 +1159,15 @@ en:
             '1': lemon juice
             '3': baking soda
             '5': both
+      DansBlocks_gravity_test:
+        text: "[BEHAVIOR][0]"
+        options:
+          BEHAVIOR:
+            new Behavior(fall_gravity_behavior, []): fall_gravity
+      DansBlocks_jump_gravity:
+        text: make [SPRITE][0] jump
       DansBlocks_setForegroundEffect2:
-        text: do [EFFECT][0] effect
+        text: "[Don't Use] do [EFFECT][0] effect"
         options:
           EFFECT:
             '"bubbles"': bubbles
@@ -1086,6 +1187,15 @@ en:
             '5': both
       DansBlocks_testRectangle:
         text: 'make rectangle x: [X][0] y: [Y][1] w: [W][2] h: [H][3] color: [COLOR][4]'
+      DansBlocks_testShowVariable:
+        text: 'Display this number: [SOMENUMBER][0] at size [SOMESIZE][1] in [COLOR][2]'
+        options:
+          OPT:
+            '"large"': large
+            '"small"': small
+          COLOR:
+            '"blue"': blue
+            '"red"': red
       FunctionBlocks_addEightBlock:
         text: addEight
       FunctionBlocks_addFiveBlock:
@@ -1114,6 +1224,73 @@ en:
         text: "[testing] represent [NUM][0] new [ANIMATION_NAME][1] sprites"
       FunctionBlocks_spriteSayVar:
         text: "[SPRITE][0]say[TEXT1][1]"
+      GameDev_collide:
+        text: colliding [SPRITE][0] [INTERACTION][1] [TARGET][2]
+        options:
+          INTERACTION:
+            '"bounceOff"': bounces off
+            '"bounce"': bumps
+            '"collide"': is blocked by
+            '"displace"': pushes
+      GameDev_getVelocity:
+        text: "[SPRITE][0] [PROPERTY][1]"
+        options:
+          PROPERTY:
+            '"velocityX"': horizontal velocity
+            '"velocityY"': vertical velocity
+      GameDev_gravity:
+        text: "[SPRITE][0] falls with [VELOCITY][1] gravity"
+        options:
+          VELOCITY:
+            "-0.25": low
+            "-0.5": medium
+            "-1": high
+      GameDev_playSoundOptions:
+        text: play sound [SOUND][0]
+        options:
+          SOUND:
+            "'sound://category_digital/boing_2.mp3'": boing
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": bubble
+            "'sound://category_collect/clicky_crunch.mp3'": crunch
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": harp
+            "'sound://category_digital/jump_7.mp3'": jump
+            "'sound://category_projectile/retro_game_magic_spell_6.mp3'": magic spell
+            "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": pop
+            "'sound://category_transition/star_dust_particle_10.mp3'": star dust
+            "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": tonal hit
+            "'sound://category_collect/trill_stings.mp3'": trill
+            "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": twinkle
+      GameDev_playerJump:
+        text: make player do [STRENGTH][0] jump
+        options:
+          STRENGTH:
+            '10': small
+            '13': medium
+            '17': big
+      GameDev_removeGroup:
+        text: set [SPRITE][0] type to [GROUP][1]
+        options:
+          GROUP:
+            '"players"': player
+            '"walls"': environment
+      GameDev_setGroup:
+        text: set [SPRITE][0] type to [GROUP][1]
+        options:
+          GROUP:
+            '"players"': player
+            '"walls"': environment
+      GameDev_setVelocity:
+        text: set [SPRITE][0] [PROPERTY][1] to [VALUE][2]
+        options:
+          PROPERTY:
+            '"velocityX"': horizontal velocity
+            '"velocityY"': vertical velocity
+      GameDev_spriteType:
+        text: "[GROUP][0]"
+        options:
+          GROUP:
+            '"players"': player
+            '"walls"': environment
       gamelab_addBehaviorSimple:
         text: sprite [SPRITE][0] begins [BEHAVIOR][1]
       gamelab_addTarget:
@@ -1136,6 +1313,8 @@ en:
         text: begin collecting data [BREAK][0] value [VALUE][1] with label [LABEL][2]
       gamelab_behaviorPicker:
         text: "[BEHAVIOR][0]"
+      gamelab_bitmap:
+        text: "[GRID][0]"
       gamelab_bounceOff:
         text: "[SPRITE][0] bounces off [TARGET][1]"
       gamelab_changePropBy:
@@ -1148,8 +1327,6 @@ en:
             '"y"': y position
             '"direction"': movement direction
             '"speed"': speed
-      gamelab_changeVarBy:
-        text: change [VARIABLE][0] by [VAL][1]
       gamelab_checkTouching:
         text: "[CONDITION][0] [SPRITE1][1] touches [SPRITE2][2]"
         options:
@@ -1230,6 +1407,8 @@ en:
         text: "[SPRITE][0] glide to [LOCATION][1]"
       gamelab_hideTitleScreen:
         text: hide title screen
+      gamelab_hideVariable:
+        text: hide variable [VAR][0]
       gamelab_ifVarEquals:
         text: |-
           if [NUM][0] =[VAL][1]
@@ -1395,6 +1574,10 @@ en:
             '90': down
             '180': left
             '270': up
+      gamelab_makeSpritesGrid:
+        text: 'make [ANIMATION_NAME][0] sprites using grid: [GRID][1]'
+      gamelab_makeSpritesGridInput:
+        text: make [ANIMATION_NAME][0] sprites using grid [GRID][1]
       gamelab_makeSpritesWithSize:
         text: make [NUM][0] new [SIZE][1] [COSTUME][2] sprites
         options:
@@ -1583,6 +1766,18 @@ en:
             '50': small
             '75': medium
             '100': large
+      gamelab_setForegroundEffect:
+        text: do [EFFECT][0] effect
+        options:
+          EFFECT:
+            '"bubbles"': bubbles
+            '"confetti"': confetti
+            '"hearts"': hearts
+            '"emojis"': happy emojis
+            '"rain"': rain
+            '"starburst"': starburst
+            '"glass"': shattering glass
+            '"twinkling"': twinkling
       gamelab_setPrompt:
         text: prompt user [QUESTION][0] for variable [VAR][1]
       gamelab_setPromptWith2Choices:
@@ -1638,6 +1833,8 @@ en:
           [SPRITE3N][6][SPRITE3COSTUME][7]
       gamelab_showTitleScreen:
         text: show title screen [BREAK][0] title [TITLE][1] subtitle [SUBTITLE][2]
+      gamelab_showVariable:
+        text: show variable [VAR][0] at [LOCATION][1]
       gamelab_spriteClicked:
         text: "[CONDITION][0] [SPRITE][1] clicked"
         options:
@@ -1699,6 +1896,12 @@ en:
         text: "[LEFT_QUOTE][0][TEXT1][1][RIGHT_QUOTE][2][TEXT2][3]"
       gamelab_textVariableJoin:
         text: "[VAR][0][TEXT2][1]"
+      gamelab_toggleBehaviorSimple:
+        text: sprite [SPRITE][0] [TOGGLE][1] [BEHAVIOR][2]
+        options:
+          TOGGLE:
+            '"begins"': begins
+            '"stops"': stops
       gamelab_tumbling:
         text: tumbling
       gamelab_turn:
@@ -1780,10 +1983,38 @@ en:
         text: x coordinate of [SPRITE][0]
       gamelab_yLocationOf:
         text: y coordinate of [SPRITE][0]
+      KatiesBlocks_changeVelocity:
+        text: "[SPRITE][0] jump [PROPERTY][1] and [PROPERTY][2]"
+        options:
+          PROPERTY:
+            '"velocityX"': short
+            '"velocityY"': long
+      KatiesBlocks_collide:
+        text: "[SPRITE][0] blocks [TARGET][1]"
       KatiesBlocks_glideTo:
         text: "[SPRITE][0] glide to [LOCATION][1]"
+      KatiesBlocks_goldilocks:
+        text: |2-
+           if [CONDITION][0][SPRITE][1]
+          [STATEMENT][2]
+        options:
+          CONDITION:
+            '"solid"': solid
+            '"liquid"': liquid
+            '"gas"': gas
+      KatiesBlocks_katieCollide:
+        text: "[SPRITE][0] collides [TARGET][1]"
+      KatiesBlocks_katiePushes:
+        text: "[SPRITE][0] bumps [TARGET][1]"
       KatiesBlocks_makeNumSpritesNear:
         text: make [NUM][0] new [ANIMATION_NAME][1] sprites near [LOCATION][2]
+      KatiesBlocks_setVelocity:
+        text: set [SPRITE][0] [PROPERTY][1] to [VAL][2]
+        options:
+          PROPERTY:
+            '"velocityX"': velocityX
+            '"velocityY"': velocityY
+            '"rotationSpeed"': rotationSpeed
       KatiesBlocks_spriteBirdSay:
         text: "[SPRITE][0] says [SPEECH][1]"
         options:

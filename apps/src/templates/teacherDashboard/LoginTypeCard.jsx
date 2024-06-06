@@ -1,5 +1,8 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+
+import fontConstants from '@cdo/apps/fontConstants';
+
 import color from '../../util/color';
 
 class LoginTypeCard extends Component {
@@ -83,7 +86,7 @@ const styles = {
     paddingBottom: 0,
     fontSize: 12,
     lineHeight: '18px',
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     zIndex: 2,
     color: color.neutral_dark,
   },
@@ -91,7 +94,7 @@ const styles = {
     paddingTop: 12,
     fontSize: 12,
     lineHeight: '18px',
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     zIndex: 2,
     color: color.neutral_dark,
   },

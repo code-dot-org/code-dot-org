@@ -29,7 +29,7 @@ export default class NameFailureDialog extends React.Component {
             __useDeprecatedTag
             text={i18n.ok()}
             onClick={this.props.handleClose}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
             className="no-mc ui-confirm-project-delete-button"
           />
         </DialogFooter>

@@ -264,6 +264,7 @@ el-GR:
   class_submission_out_of_school_summer_camp: Θερινή κατασκήνωση
   classicmaze_name: Κλασικός λαβύρινθος
   code_hoc_coming: Η ώρα του κώδικα έφτασε  - 8-14 Δεκεμβρίου!
+  code_org_logo_alt: Αρχική σελίδα Code.org
   code_sign_up: Εγγραφείτε για να συμμετάσχετε κατά τη διάρκεια της εκπαιδευτικής
     εβδομάδας για την Επιστήμη της Πληροφορικής
   codea_beyond_gradelevel: Λύκειο +
@@ -1241,6 +1242,7 @@ el-GR:
   header_about_us: Σχετικά με εμάς
   header_course_catalog: Κατάλογος Μαθημάτων
   header_courses: Τες
+  header_districts: Περιφέρειες
   header_documentation: Τεκμηρίωση
   header_educate_beyond: Πέρα από το Code.org
   header_educate_community: Online Κοινότητα
@@ -1256,8 +1258,10 @@ el-GR:
   header_help_support: 'Βοήθεια και υποστήριξη '
   header_help_us: Βοηθήστε μας
   header_home: Αρχική
+  header_incubator: Εκκολαπτήριο
   header_learn: Εκμάθηση
   header_legal: Απόρρητο & Νομικά
+  header_legal_cookie_notice: Ειδοποιήση Cookie
   header_legal_privacy: Πολιτική Απορρήτου
   header_legal_tos: Όροι παροχής υπηρεσιών
   header_my_dashboard: Ο Πίνακας Ελέγχου Μου
@@ -1265,6 +1269,7 @@ el-GR:
   header_project_gallery: Έργα
   header_report_abuse: Αναφορά κατάχρησης
   header_report_bug: Αναφορά προβλήματος
+  header_schools: Σχολείο
   header_screen_reader_hamburger: Μενού
   header_screen_reader_help: Μενού Βοήθειας
   header_sections: Ενότητες
@@ -2833,30 +2838,15 @@ el-GR:
     κίνημα για να δοκιμάσει μια ωριαία εισαγωγή στην Πληροφορική, φθάνοντας τα δεκάδες
     εκατομμύρια μαθητών σε 180+ χώρες. Σας παρακαλούμε να λάβετε μέρος κατά τη διάρκεια
     της Εκπαιδευτικής Εβδομάδας στην Πληροφορική, 7-13 Δεκεμβρίου.
-  volunteer_engineer_submission_intro_guide: Μάθετε περισσότερα για τα δικά μας <a
-    href="%{volunteer_guide}">προγράμματα εθελοντισμού εδώ</a>.
   volunteer_engineer_submission_intro_guide_markdown: Μάθετε περισσότερα για τα [προγράμματα
     εθελοντισμού μας εδώ](%{volunteer_guide}).
-  volunteer_engineer_submission_intro_links: Δεν θέλετε να γίνετε εθελοντής; <a href="%{learn_more}">Μάθετε
-    περισσότερα</a> για τη διοργάνωση της δικής σας εκδήλωσης της Ώρας του Κώδικα
-    και βρείτε εθελοντές από τον <a href="%{volunteer_local}">χάρτη εθελοντών</a>
-    μας.
   volunteer_engineer_submission_intro_links_markdown: Είστε δασκάλα που αναζητά εθελοντές;
     Βρείτε έναν τοπικό εθελοντή στον [χάρτη εθελοντών] μας (%{volunteer_local}).
-  volunteer_engineer_submission_intro_recruit: 'Αυτοί οι δάσκαλοι θα ήθελαν πολύ να
-    έχουν κάποιον <span style="font-family: ''Gotham 7r'', sans-serif;">παθιασμένο
-    με την εκπαίδευση στην Πληροφορική</span> που μπορεί να βοηθήσει μέσα στην τάξη
-    ή κάποιον που μπορεί να <span style="font-family: ''Gotham 7r'', sans-serif;">εμπνεύσει</span>
-    τους μαθητές τους μιλώντας για το εύρος των δυνατοτήτων με την Πληροφορική (κάτι
-    που μπορεί να γίνει και μέσω βίντεοομιλίας).'
   volunteer_engineer_submission_intro_recruit_markdown: Αυτοί οι δάσκαλοι θα ήθελαν
     πολύ να έχουν κάποιον **παθιασμένο με την εκπαίδευση στην Πληροφορική** που μπορεί
     να βοηθήσει μέσα στην τάξη ή κάποιον που μπορεί να **εμπνεύσει** τους μαθητές
     τους μιλώντας για το εύρος των δυνατοτήτων με την Πληροφορική (κάτι που μπορεί
     να γίνει και μέσω βίντεοομιλίας).
-  volunteer_engineer_submission_intro_signup: Παρακαλούμε εισάγετε τις ακόλουθες πληροφορίες,
-    αν είστε φοιτητής Πληροφορικής ή επαγγελματίας λογισμικού. Τα πεδία με <span class="form-required-field">
-    *</span> είναι υποχρεωτικά.
   volunteer_engineer_submission_intro_signup_markdown: Παρακαλούμε εισάγετε τις ακόλουθες
     πληροφορίες, αν είστε φοιτητής Πληροφορικής ή επαγγελματίας λογισμικού. Πρέπει
     να είστε τουλάχιστον 18 ετών για να εγγραφείτε ως εθελοντής. Σημειώστε ότι όλα

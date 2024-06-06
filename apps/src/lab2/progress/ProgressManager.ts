@@ -1,12 +1,13 @@
 // This file contains a generic ProgressManager which any lab can include,
 // if it wants to make progress without reloading the page.
 
-import {ProjectLevelData, Condition} from '@cdo/apps/lab2/types';
+import {Condition, Validation} from '@cdo/apps/lab2/types';
 
 // Abstract class that validates a set of conditions. How
 // the validation works is up to the implementor.
 export abstract class Validator {
   abstract shouldCheckConditions(): boolean;
+  abstract shouldCheckNextConditionsOnly(): boolean;
   abstract checkConditions(): void;
   abstract conditionsMet(conditions: Condition[]): boolean;
   abstract clear(): void;
@@ -14,33 +15,37 @@ export abstract class Validator {
 
 // The current progress validation state.
 export interface ValidationState {
+  hasConditions: boolean;
   satisfied: boolean;
   message: string | null;
+  index: number;
 }
 
-export const initialValidationState: ValidationState = {
+export const getInitialValidationState: () => ValidationState = () => ({
+  hasConditions: false,
   satisfied: false,
   message: null,
-};
+  index: 0,
+});
 
 export default class ProgressManager {
-  private levelData: ProjectLevelData | undefined;
+  private currentValidations: Validation[] | undefined;
   private validator: Validator | undefined;
   private onProgressChange: () => void;
   private currentValidationState: ValidationState;
 
   constructor(onProgressChange: () => void) {
-    this.levelData = undefined;
+    this.currentValidations = undefined;
     this.onProgressChange = onProgressChange;
-    this.currentValidationState = initialValidationState;
+    this.currentValidationState = getInitialValidationState();
   }
 
   /**
    * Update the ProgressManager with level data for a new level.
    * Resets validation status internally.
    */
-  onLevelChange(levelData: ProjectLevelData) {
-    this.levelData = levelData;
+  onLevelChange(validations?: Validation[]) {
+    this.currentValidations = validations;
     this.resetValidation();
   }
 
@@ -53,9 +58,7 @@ export default class ProgressManager {
   }
 
   updateProgress(): void {
-    const validations = this.levelData?.validations;
-
-    if (!validations || !this.validator) {
+    if (!this.currentValidations || !this.validator) {
       return;
     }
 
@@ -72,7 +75,13 @@ export default class ProgressManager {
     this.validator.checkConditions();
 
     // Go through each validation to see if we have a match.
-    for (const validation of validations) {
+    for (const validation of this.currentValidations) {
+      // If it's a non-successful validation (i.e. validation.next is false), then
+      // make sure the lab-specific validator is ready for it.
+      if (this.validator.shouldCheckNextConditionsOnly() && !validation.next) {
+        continue;
+      }
+
       if (validation.conditions) {
         // Ask the lab-specific validator if this validation's
         // conditions are met.
@@ -92,14 +101,25 @@ export default class ProgressManager {
     this.onProgressChange();
   }
 
-  private resetValidation() {
+  resetValidation() {
     if (this.validator) {
       // Give the lab the chance to clear accumulated satisfied conditions.
       this.validator.clear();
     }
 
-    this.currentValidationState.satisfied = false;
-    this.currentValidationState.message = null;
+    const hasConditions =
+      (this.currentValidations && this.currentValidations.length > 0) || false;
+
+    this.currentValidationState = {
+      hasConditions,
+      satisfied: false,
+      message: null,
+      // Ensure that the validation feedback UI is rendered fresh.  This index is
+      // used as part of the key for that React component; having a unique value
+      // ensures that the UI is rendered fresh, and any apperance animation is
+      // played again, even if it's the same message as last time.
+      index: this.currentValidationState.index + 1,
+    };
 
     this.onProgressChange();
   }

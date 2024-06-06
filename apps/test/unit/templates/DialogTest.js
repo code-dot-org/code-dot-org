@@ -1,8 +1,10 @@
 /** @file Tests for Dialog component */
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
-import {expect} from '../../util/reconfiguredChai';
+
 import Dialog from '@cdo/apps/templates/Dialog';
+
+import {expect} from '../../util/reconfiguredChai';
 
 describe('Dialog', function () {
   describe('fullWidth option', function () {

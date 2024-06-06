@@ -4,7 +4,7 @@
 .label {
   display: flex;
   gap: 8px;
-  align-items: start;
+  align-items: center;
 
   i {
     vertical-align: bottom;
@@ -36,13 +36,14 @@
 
     &:indeterminate + i::before {
       content: "\e404";
-      color: $neutral_dark;
+      color: $neutral_white;
+      background: $light_primary_500;
       border: 2px solid $light_primary_500;
       border-radius: 4px;
     }
 
     // Focus styles
-    &:focus {
+    &:focus-visible {
       + i::before {
         outline: 2px solid $light_primary_500;
         outline-offset: 2px;

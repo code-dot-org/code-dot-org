@@ -1,10 +1,12 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
-import ManageStudentsTable from './ManageStudentsTable';
+
+import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import SyncOmniAuthSectionControl from '@cdo/apps/lib/ui/SyncOmniAuthSectionControl';
 import {loadSectionStudentData} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+
+import ManageStudentsTable from './ManageStudentsTable';
 
 class ManageStudents extends React.Component {
   static propTypes = {
@@ -28,7 +30,10 @@ class ManageStudents extends React.Component {
         {isLoadingStudents && <Spinner />}
         {!isLoadingStudents && (
           <div>
-            <SyncOmniAuthSectionControl sectionId={sectionId} />
+            <SyncOmniAuthSectionControl
+              sectionId={sectionId}
+              studioUrlPrefix={studioUrlPrefix}
+            />
             <ManageStudentsTable studioUrlPrefix={studioUrlPrefix} />
           </div>
         )}

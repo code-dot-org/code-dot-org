@@ -28,7 +28,7 @@
 #
 
 class SingleUserExperiment < Experiment
-  def enabled?(user: nil, section: nil)
+  def enabled?(user: nil)
     return false unless user
 
     return user.id == min_user_id

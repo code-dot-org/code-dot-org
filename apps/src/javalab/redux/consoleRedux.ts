@@ -6,7 +6,7 @@ interface ConsoleLog {
   text?: string;
 }
 
-interface JavalabConsoleState {
+export interface JavalabConsoleState {
   consoleLogs: ConsoleLog[];
   isPhotoPrompterOpen: boolean;
   photoPrompterPromptText: string;

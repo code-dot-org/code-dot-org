@@ -27,7 +27,7 @@ export default class ConfirmCancelFooter extends React.Component {
   static defaultProps = {
     confirmText: i18n.dialogOK(),
     cancelText: i18n.cancel(),
-    confirmColor: Button.ButtonColor.orange,
+    confirmColor: Button.ButtonColor.brandSecondaryDefault,
     cancelColor: Button.ButtonColor.gray,
   };
 

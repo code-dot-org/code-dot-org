@@ -1,9 +1,10 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import {stub} from 'sinon';
 import {expect} from '../../../util/reconfiguredChai';
 import * as utils from '@cdo/apps/utils';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
 import {
@@ -12,6 +13,7 @@ import {
   READY,
   IN_PROGRESS,
   SUCCESS,
+  DISABLED,
 } from '@cdo/apps/lib/ui/SyncOmniAuthSectionControl';
 
 describe('SyncOmniAuthSectionControl', () => {
@@ -44,6 +46,7 @@ describe('SyncOmniAuthSectionControl', () => {
       sectionCode: 'G-123456',
       sectionName: 'Test Google Classroom Section',
       sectionProvider: OAuthSectionTypes.google_classroom,
+      sectionProviderName: 'Google Classroom',
       updateRoster: updateRoster,
     };
   });
@@ -60,6 +63,7 @@ describe('SyncOmniAuthSectionControl', () => {
       wrapper.containsMatchingElement(
         <SyncOmniAuthSectionButton
           provider={defaultProps.sectionProvider}
+          providerName={defaultProps.sectionProviderName}
           buttonState={READY}
         />
       )
@@ -121,6 +125,7 @@ describe('SyncOmniAuthSectionControl', () => {
       wrapper.containsMatchingElement(
         <SyncOmniAuthSectionButton
           provider={defaultProps.sectionProvider}
+          providerName={defaultProps.sectionProviderName}
           buttonState={IN_PROGRESS}
         />
       )
@@ -148,6 +153,7 @@ describe('SyncOmniAuthSectionControl', () => {
         wrapper.containsMatchingElement(
           <SyncOmniAuthSectionButton
             provider={defaultProps.sectionProvider}
+            providerName={defaultProps.sectionProviderName}
             buttonState={SUCCESS}
           />
         )
@@ -205,5 +211,17 @@ describe('SyncOmniAuthSectionControl', () => {
         wrapper.find(SyncOmniAuthSectionButton).prop('buttonState')
       ).to.equal(READY);
     });
+  });
+
+  it('Disables the button when the section is of type LTI and syncEnabled is false', () => {
+    const wrapper = shallow(
+      <SyncOmniAuthSectionControl
+        {...defaultProps}
+        sectionProvider={SectionLoginType.lti_v1}
+        syncEnabled={false}
+      />
+    );
+    const button = wrapper.find(SyncOmniAuthSectionButton);
+    expect(button.prop('buttonState')).to.equal(DISABLED);
   });
 });

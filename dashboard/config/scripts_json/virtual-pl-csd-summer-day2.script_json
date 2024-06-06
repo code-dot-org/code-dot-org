@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-19 22:30:25 UTC",
+    "serialized_at": "2023-08-17 21:32:50 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -202,7 +202,7 @@
       "relative_position": 8,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\n\n* **Essential Practice:** Programming lessons are meant to have active teacher engagement with the teacher circulating to direct students to appropriate resources, guide them through the debugging process, assess understanding and help students determine when to move on and when to do more practice in choice levels.\n\n\n* **Lesson Decisions:**\n  * The teacher instructs participants to complete all choice level bubbles until they feel comfortable enough to move on to the assessment. If they are successful with the assessment (use the mini rubric to check) they can move on to the challenge choice levels.\n  * As participants are working in choice levels, ask to see their work in the assessment level. Ask participants to justify their score on the mini rubric.\n  * The teacher directs participants to the student version of the “Student Guide to Debugging” on page 24 of their Resource Packet and prompts them to use the debugging process when they encounter bugs.\n\n\n* **Debrief Topic:**\n  * Context setting\n  * Exploration\n  * Experimentation\n  * Assessment\n\n\n**Objectives:**\n* Participants understand how programming lessons are structured within the curriculum\n* Participants reinforce their understanding of the debugging process\n\n**Suggested Time:** 45 minutes\n\n<a href=\"https://studio.code.org/s/csd3-2022/lessons/4\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> ",
+        "overview": "**Purpose:**\n\n* **Essential Practice:** Programming lessons are meant to have active teacher engagement with the teacher circulating to direct students to appropriate resources, guide them through the debugging process, assess understanding and help students determine when to move on and when to do more practice in choice levels.\n\n\n* **Lesson Decisions:**\n  * The teacher instructs participants to complete all choice level bubbles until they feel comfortable enough to move on to the assessment. If they are successful with the assessment (use the mini rubric to check) they can move on to the challenge choice levels.\n  * As participants are working in choice levels, ask to see their work in the assessment level. Ask participants to justify their score on the mini rubric.\n  * The teacher directs participants to the student version of the “Student Guide to Debugging” on page 24 of their Resource Packet and prompts them to use the debugging process when they encounter bugs.\n\n\n* **Debrief Topic:**\n  * Context setting\n  * Exploration\n  * Experimentation\n  * Assessment\n\n\n**Objectives:**\n* Participants understand how programming lessons are structured within the curriculum\n* Participants reinforce their understanding of the debugging process\n\n**Suggested Time:** 45 minutes\n\n<a href=\"https://studio.code.org/s/csd3-2023/lessons/4\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> ",
         "preparation": "* Review the level progression in Code Studio\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
         "student_overview": "**Question of the Day:**  How can we use variables to store information in our programs?\n\nIn this lesson, you will be introduced to variables - an important concept in programming used to store values for your programs!"
       },
@@ -2631,6 +2631,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

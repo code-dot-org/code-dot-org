@@ -1,6 +1,8 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import _ from 'lodash';
+
+import {DEPRECATED_PROJECT_TYPES} from '@cdo/apps/constants';
 
 import ProjectsList from './ProjectsList';
 import StudentFilterDropdown, {ALL_STUDENTS} from './StudentFilterDropdown';
@@ -53,11 +55,13 @@ class SectionProjectsList extends Component {
   }
 
   render() {
-    const filteredProjectsData = this.props.projectsData.filter(project =>
-      [ALL_STUDENTS, project['studentName']].includes(
-        this.state.selectedStudent
+    const filteredProjectsData = this.props.projectsData
+      .filter(project =>
+        [ALL_STUDENTS, project['studentName']].includes(
+          this.state.selectedStudent
+        )
       )
-    );
+      .filter(project => !DEPRECATED_PROJECT_TYPES.includes(project.type));
 
     return (
       <div>

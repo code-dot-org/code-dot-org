@@ -74,7 +74,7 @@ markdown <<MARKDOWN
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">6) LED Lights</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">6) LED Lights & Light Sensor</summary>
     <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:100px;">
     <p><img src="https://images.code.org/a5e885401f1337fcc29374bb7bfd3a18-image-1681167337528.gif" style="width:200px; float:left; margin: 5px 20px 0px 10px;">
 

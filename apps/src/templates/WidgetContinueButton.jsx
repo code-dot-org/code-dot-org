@@ -1,6 +1,8 @@
 /** @file Button that continues to the next puzzle when clicked */
 import React from 'react';
+
 import i18n from '@cdo/locale';
+
 import * as dialogHelper from '../code-studio/levels/dialogHelper';
 
 export default class ContinueButton extends React.Component {

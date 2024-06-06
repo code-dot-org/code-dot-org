@@ -30,7 +30,6 @@
     "browserName": "safari",
     "appium:deviceName": "iPhone Simulator",
     "mobile": true,
-    "rotatable": true,
     "sauce:options": {
       "deviceOrientation": "LANDSCAPE"
     }
@@ -42,7 +41,6 @@
     "browserName": "safari",
     "appium:deviceName": "iPad Simulator",
     "mobile": true,
-    "rotatable": true,
     "sauce:options": {
       "deviceOrientation": "LANDSCAPE"
     }

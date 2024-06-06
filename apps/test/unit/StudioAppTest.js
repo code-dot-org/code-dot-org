@@ -390,6 +390,37 @@ describe('StudioApp', () => {
     });
   });
 
+  describe('getCode', () => {
+    beforeEach(() => stubStudioApp);
+    afterEach(() => restoreStudioApp);
+
+    it('should get the starting blocks if the source is hidden', () => {
+      studioApp().editCode = true;
+      studioApp().hideSource = true;
+      studioApp().startBlocks_ = 'start blocks';
+      expect(studioApp().getCode()).to.equal('start blocks');
+    });
+
+    it('should get the blockly workspace code if it is read only', () => {
+      studioApp().editCode = false;
+      let stub = sinon
+        .stub(Blockly, 'getWorkspaceCode')
+        .returns('blockly workspace');
+      expect(studioApp().getCode()).to.equal('blockly workspace');
+      stub.restore();
+    });
+
+    it('should get the code from the editor itself if editable and the source is not hidden', () => {
+      studioApp().editCode = true;
+      studioApp().hideSource = false;
+      let oldEditor = studioApp().editor;
+      studioApp().editor = sinon.stub();
+      studioApp().editor.getValue = sinon.stub().returns('editor code');
+      expect(studioApp().getCode()).to.equal('editor code');
+      studioApp().editor = oldEditor;
+    });
+  });
+
   describe('playAudio', () => {
     let playStub, isPlayingStub;
     beforeEach(() => {

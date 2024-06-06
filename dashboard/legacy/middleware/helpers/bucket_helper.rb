@@ -128,7 +128,7 @@ class BucketHelper
     end
   end
 
-  def copy_files(src_channel, dest_channel, options={})
+  def copy_files(src_channel, dest_channel, options = {})
     src_owner_id, src_storage_app_id = storage_decrypt_channel_id(src_channel)
     dest_owner_id, dest_storage_app_id = storage_decrypt_channel_id(dest_channel)
 
@@ -165,7 +165,9 @@ class BucketHelper
     owner_id, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, storage_app_id, filename
 
-    s3.copy_object(bucket: @bucket, copy_source: ERB::Util.url_encode("#{@bucket}/#{key}?versionId=#{version}"), key: key, metadata_directive: 'REPLACE')
+    encoded_location = ERB::Util.url_encode("#{@bucket}/#{key}")
+    copy_source = "#{encoded_location}?versionId=#{version}"
+    s3.copy_object(bucket: @bucket, copy_source: copy_source, key: key, metadata_directive: 'REPLACE')
   end
 
   def replace_abuse_score(encrypted_channel_id, filename, abuse_score)
@@ -265,8 +267,6 @@ class BucketHelper
           # tab making this request. This is for diagnosing problems with writes from multiple browser
           # tabs.
           firstSaveTimestamp: timestamp,
-
-          versions: versions,
         }.to_json
       }
     )
@@ -352,9 +352,9 @@ class BucketHelper
       map do |version|
         comment = with_comments ?
           DASHBOARD_DB[:project_commits].
-          select(:comment).
-          where(storage_app_id: storage_app_id, object_version_id: version.version_id).
-          first&.
+            select(:comment).
+            where(storage_app_id: storage_app_id, object_version_id: version.version_id).
+            first&.
           fetch(:comment) :
           nil
         {
@@ -478,19 +478,17 @@ class BucketHelper
     str.gsub(UNSAFE_CHAR_REGEX, '-')
   end
 
-  protected
-
   #
   # Check if the given error indicates a badly-formatted version ID was passed.
   # @param [Exception] err
   # @return [Boolean] true if err was caused by an invalid version ID
   #
-  def invalid_version_id?(err)
+  protected def invalid_version_id?(err)
     # S3 returns an InvalidArgument exception with a particular message for this case.
     err.is_a?(Aws::S3::Errors::InvalidArgument) && err.message.include?('Invalid version id specified')
   end
 
-  def log_restored_file(project_id:, user_id:, filename:, source_version_id:, new_version_id:)
+  protected def log_restored_file(project_id:, user_id:, filename:, source_version_id:, new_version_id:)
     owner_id, storage_app_id = storage_decrypt_channel_id(project_id)
     key = s3_path owner_id, storage_app_id, filename
     FirehoseClient.instance.put_record(
@@ -516,23 +514,23 @@ class BucketHelper
     )
   end
 
-  def object_exists?(key)
+  protected def object_exists?(key)
     response = s3.get_object(bucket: @bucket, key: key)
     response && !response[:delete_marker]
   rescue Aws::S3::Errors::NoSuchKey
     false
   end
 
-  def s3_path(owner_id, storage_app_id, filename = nil)
+  protected def s3_path(owner_id, storage_app_id, filename = nil)
     "#{@base_dir}/#{owner_id}/#{storage_app_id}/#{Addressable::URI.unencode(filename)}"
   end
 
   # Extracted so we can override with special behavior in AnimationBucket.
-  def s3_get_object(key, if_modified_since, version)
+  protected def s3_get_object(key, if_modified_since, version)
     s3.get_object(bucket: @bucket, key: key, if_modified_since: if_modified_since, version_id: version)
   end
 
-  def track_list_operation(source_name)
+  protected def track_list_operation(source_name)
     return unless CDO.newrelic_logging
     NewRelic::Agent.record_metric("Custom/ListRequests/#{self.class.name}/#{source_name}", 1)
   end

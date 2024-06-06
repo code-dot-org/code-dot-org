@@ -1,6 +1,6 @@
 :css
   body {
-    font-family: Gotham, sans-serif;
+    font-family: Metropolis, sans-serif;
   }
 
 - code_org_link = link_to 'Code.org', 'http://code.org'
@@ -50,13 +50,6 @@
     = @workshop.course
 
   %p
-    To help you get started with
-    = @workshop.course
-    in your classroom, we've created these
-    = link_to('Amazon lists', 'https://www.amazon.com/ideas/amzn1.account.AFRP6N2PQKQ73HHEN6SJNS5ONHEA') + '.'
-    Also feel free to source similar items locally and use these lists as a checklist!
-
-  %p
     If you have any questions, feel free to reach out to us at
     = link_to('teacher@code.org', 'mailto:teacher@code.org')
     or connect with other teachers on our
@@ -78,16 +71,14 @@
   %p
     Thank you,
     %br
-    Dave Frye
-    %br
-    Director of Program Development and Operations, Code.org
+    = @workshop.organizer.name
 
 - else
   %p
     Thank you,
     %br
-    Baker Franke
+    Karim Meghji
     %br
-    Research and Evaluation Manager
+    Chief Product Officer
     = code_org_link
 

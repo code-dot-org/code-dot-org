@@ -1,10 +1,13 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import BaseDialog from '../../BaseDialog';
-import DialogFooter from '../../teacherDashboard/DialogFooter';
-import Button from '../../Button';
+
 import i18n from '@cdo/locale';
+
+import BaseDialog from '../../BaseDialog';
+import Button from '../../Button';
+import DialogFooter from '../../teacherDashboard/DialogFooter';
+
 import {hideDeleteDialog, deleteProject} from './deleteProjectDialogRedux';
 
 class DeleteProjectDialog extends Component {
@@ -40,7 +43,7 @@ class DeleteProjectDialog extends Component {
           <Button
             text={i18n.delete()}
             onClick={this.delete}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
             className="no-mc ui-confirm-project-delete-button"
             isPending={this.props.isDeletePending}
             pendingText={i18n.deleting()}

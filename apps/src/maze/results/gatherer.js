@@ -1,5 +1,6 @@
-import ResultsHandler from './resultsHandler';
 import {TestResults} from '../../constants.js';
+
+import ResultsHandler from './resultsHandler';
 
 export default class GathererHandler extends ResultsHandler {
   /**

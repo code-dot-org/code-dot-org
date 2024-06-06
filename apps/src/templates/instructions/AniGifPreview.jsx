@@ -1,7 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
+import React from 'react';
 import {connect} from 'react-redux';
+
 import {openDialog} from '../../redux/instructionsDialog';
 
 class ImagePreviewUnwrapped extends React.Component {

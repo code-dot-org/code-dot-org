@@ -192,13 +192,11 @@ class CrowdinValidator
     [translations, source_strings, errors]
   end
 
-  private
-
   # Validate multiple translations.
   # @param translations [Array<Hash>]
   # @param source_strings [Array<Hash>]
   # @return [Array<Hash>] array of translation errors
-  def validate_all_translations(translations, source_strings)
+  private def validate_all_translations(translations, source_strings)
     # Transform data structure from an array to a hash for faster lookup using string_id
     transformed_translations = transform_translations(translations)
     transformed_source_strings = transform_source_strings(source_strings)
@@ -220,7 +218,7 @@ class CrowdinValidator
   # @param source [SourceString]
   # @param translation [Translation]
   # @return [Array<Hash>] array of translation errors
-  def validate_translation(translation, source)
+  private def validate_translation(translation, source)
     # Validate redaction blocks
     error_messages = []
     error_messages << validate_redacted_blocks(translation.text)
@@ -240,8 +238,8 @@ class CrowdinValidator
     # Combine error messages found by the validation functions with
     # other useful information to help translators fixing errors faster.
     crowdin_editor_code = languages[translation.crowdin_language_id]['editor_code']
-    project_name = Crowdin::Client::CDO_PROJECT_IDS.key(source.project_id)
-    project_source_language = Crowdin::Client::CDO_PROJECT_SOURCE_LANGUAGES[project_name]
+    project_name, project_configs = CDO.crowdin_projects.find {|_p, configs| configs['id'] == source.project_id.to_i}
+    project_source_language = project_configs['source_language']
     crowdin_link = "https://crowdin.com/translate/#{project_name}/#{source.file_id}/#{project_source_language}-#{crowdin_editor_code}##{source.id}"
     common_info = {
       string_id: source.id,
@@ -266,7 +264,7 @@ class CrowdinValidator
   # Transform an array of translation to a hash for faster lookup.
   # @param translations [Array<Hash>]
   # @return [Hash{string_id => Hash{translation_id => Translation}}]
-  def transform_translations(translations)
+  private def transform_translations(translations)
     {}.tap do |res|
       translations.each do |data|
         string_id = data['stringId']
@@ -290,7 +288,7 @@ class CrowdinValidator
   # Transform an array of source strings to a hash for faster lookup.
   # @param source_strings [Array<Hash>]
   # @return [Hash{string_id => SourceString}]
-  def transform_source_strings(source_strings)
+  private def transform_source_strings(source_strings)
     {}.tap do |res|
       source_strings.each do |data|
         string_id = data['id']
@@ -320,7 +318,7 @@ class CrowdinValidator
   # @see https://github.com/google/cld3#supported-languages for language_detector_code(s) for the Google Compact Language Detector
   #
   # @return [Hash]
-  def load_languages(file_name = LANGUAGE_FILE)
+  private def load_languages(file_name = LANGUAGE_FILE)
     @languages = read_from_json(file_name) if @languages.nil? && File.exist?(file_name)
     @languages
   end

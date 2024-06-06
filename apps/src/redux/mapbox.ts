@@ -1,6 +1,6 @@
 import {PayloadAction, createSlice} from '@reduxjs/toolkit';
 
-interface MapboxState {
+export interface MapboxState {
   mapboxAccessToken: null | string;
 }
 

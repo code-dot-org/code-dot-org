@@ -12,11 +12,6 @@
         "field": true
       }
     ],
-    "color": [
-      39,
-      1,
-      0.99
-    ],
     "style": "setup_blocks"
   }
 }

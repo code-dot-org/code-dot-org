@@ -10,6 +10,7 @@ const DEFAULT_PROPS = {
   userHasPassword: true,
   isGoogleClassroomStudent: false,
   isCleverStudent: false,
+  personalAccountLinkingEnabled: true,
 };
 
 const mockAuthenticationOptions = {
@@ -24,7 +25,6 @@ const mockAuthenticationOptions = {
 };
 
 export default {
-  title: 'ManageLinkedAccounts',
   component: ManageLinkedAccounts,
 };
 

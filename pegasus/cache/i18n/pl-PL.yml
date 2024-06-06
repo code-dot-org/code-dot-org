@@ -265,6 +265,7 @@ pl-PL:
   class_submission_out_of_school_summer_camp: Obóz letni
   classicmaze_name: Klasyczny labirynt
   code_hoc_coming: Godzina Kodowania jest tutaj - 8-14 grudnia!
+  code_org_logo_alt: Strona domowa Code.org
   code_sign_up: Zarejestruj się, aby uczestniczyć w tygodniu edukacji informatycznej
     (CS Education Week)
   codea_beyond_gradelevel: Szkoła ponadgimnazjalna +
@@ -1138,6 +1139,8 @@ pl-PL:
   footer_store: Skład
   footer_support: Wsparcie
   footer_terms: Warunki
+  footer_trademark: "„&copy; Code.org, %{current_year}. Code.org&reg;, logo CODE,
+    Godzina Kodowania&reg; i %{cs_discoveries} są znakami towarowymi Code.org."
   frozen_gradelevel: W wieku 8-108
   frozen_longdescription: Użyjmy kodowania, by przyłączyć się do Anny i Elsy, które
     poszukują magii i piękna w lodzie. Będziesz tworzył płatki śniegu oraz wzory podczas
@@ -1210,6 +1213,7 @@ pl-PL:
   header_about_us: O nas
   header_course_catalog: Katalog Kursów
   header_courses: Kursy
+  header_districts: Dystrykty
   header_documentation: Dokumentacja
   header_educate_beyond: Poza Code.org
   header_educate_community: Społeczność online
@@ -1225,8 +1229,10 @@ pl-PL:
   header_help_support: 'Pomoc i wsparcie '
   header_help_us: Pomóż nam
   header_home: Strona główna
+  header_incubator: Inkubator
   header_learn: Ucz się
   header_legal: Prywatność i legalność
+  header_legal_cookie_notice: Informacja o plikach cookie
   header_legal_privacy: Polityka prywatności
   header_legal_tos: Regulamin
   header_my_dashboard: Mój pulpit
@@ -1234,6 +1240,7 @@ pl-PL:
   header_project_gallery: Galeria Projektów
   header_report_abuse: Zgłoś nadużycie
   header_report_bug: Zgłoś problem
+  header_schools: Szkoła
   header_screen_reader_hamburger: Menu
   header_screen_reader_help: 'Pomoc Menu '
   header_sections: Sekcje
@@ -1460,13 +1467,13 @@ pl-PL:
     uczniami! Uzyskaj dostęp do bezpłatnych zasobów, w tym planu lekcji, filmów, programu
     nauczania informatyki, lekcji dotyczcych równości oraz szkoleń dla nauczycieli.'
   hoc2020_mc_mee_title: Opowieść Minecrafta o dwóch wioskach
-  hoc2021_mc_mee_ai_description: 'Odkrywaj sztuczną inteligencję ze swoimi uczniami
+  hoc2021_mc_mee_ai_description: 'Poznaj sztuczną inteligencję ze swoimi uczniami
     i naucz się kodować w grze Minecraft: Education Edition.'
   hoc2021_mc_mee_ai_title: AI Na dobre
-  hoc2021_mc_mee_description: 'Cofnij się w czasie i naucz się kodować! Nowy samouczek
-    Minecraft w ramach Godziny Kodowania jest już dostępny w grze Minecraft: Education
-    Edition dla systemów Windows, Mac, Chromebook i iPad. Zacznij od bezpłatnych zasobów,
-    szkoleń i filmów dla nauczycieli.'
+  hoc2021_mc_mee_description: 'Cofnij się w czasie i naucz się kodować! W grze Minecraft:
+    Education Edition na systemy Windows, Mac, Chromebook oraz iPad został udostępniony
+    nowy samouczek poświęcony Godzinie kodowania z Minecraft. Skorzystaj z darmowych
+    zasobów edukacyjnych, szkoleń i filmów.'
   hoc2021_mc_mee_title: Minecraft TimeCraft
   hoc2021_mc_mee_villages_description: 'Naucz się podstaw kodowania i odkrywaj różnorodność
     oraz integrację ze swoimi uczniami w Minecraft: Education Edition.'
@@ -1661,6 +1668,7 @@ pl-PL:
   homepage_slot_text_link_k5: Kursy dla szkoły podstawowej
   homepage_slot_text_link_local: Znajdź klasę w okolicy
   homepage_slot_text_link_middle: Gimnazjum
+  homepage_slot_text_link_middle_and_high: Gimnazjum i liceum
   homepage_slot_text_link_othercourses: Pozostałe kursy online
   homepage_slot_text_link_pd: Rozwój zawodowy
   homepage_slot_text_link_shop: Koszulki, czapki i inne
@@ -2596,13 +2604,16 @@ pl-PL:
   user_header_applab: 'App Lab '
   user_header_artist: 'Artysta '
   user_header_create: 'Twórz '
+  user_header_create_account: Utwórz konto
   user_header_dance: Potańcówka
   user_header_flappy: Flappy
   user_header_gamelab: Laboratorium Gier (Game Lab)
   user_header_label: Witaj %{username}
   user_header_logout: Wyloguj się
   user_header_minecraft: Minecraft
+  user_header_music: Laboratorium muzyczne
   user_header_my_projects: Moje projekty
+  user_header_new_project: Nowy projekt
   user_header_playlab: Lab Gier
   user_header_settings: Ustawienia konta
   user_header_signin: Zaloguj się
@@ -2717,30 +2728,14 @@ pl-PL:
     inicjatywą godzinnego wprowadzenia do informatyki, podejmowaną przez dziesiątki
     milionów uczniów w 180+ krajach. Weź udział w tej inicjatywie podczas Tygodnia
     Edukacji Informatycznej w dniach 7-13 grudnia.
-  volunteer_engineer_submission_intro_guide: Dowiedz się tutaj więcej o naszym <a
-    href="%{volunteer_guide}"> programie dla wolontariuszy</a>.
   volunteer_engineer_submission_intro_guide_markdown: Dowiedz się tutaj więcej o naszym  [programie
     dla wolontariuszy](%{volunteer_guide}).
-  volunteer_engineer_submission_intro_links: Czy jesteś nauczycielem poszukującym
-    wolontariusza? Odszukaj wolontariusza w okolicy na naszej <a href="%{volunteer_local}">
-    mapie wolontariuszy</a>.
   volunteer_engineer_submission_intro_links_markdown: Czy jesteś nauczycielem poszukującym
     wolontariuszy? Odszukaj wolontariusza w okolicy na naszej  [mapie wolontariuszy](%{volunteer_local}).
-  volunteer_engineer_submission_intro_recruit: 'Nauczyciele byliby szczęśliwi mając
-    kogoś <span style="font-family: ''Gotham 7r'', sans-serif;">, pasjonata edukacji
-    informatycznej </span>, kto mógłby pomóc w klasie, lub kogoś, kto potrafi <span
-    style="font-family: ''Gotham 7r'', sans-serif;"> zainspirować</span> uczniów opowiadając
-    o szerokich możliwościach informatyki (na przykład za pośrednictwem wideo czatu).'
   volunteer_engineer_submission_intro_recruit_markdown: Nauczyciele byliby szczęśliwi
     mając kogoś , **pasjonata edukacji informatycznej**, kto mógłby pomóc w klasie,
     lub kogoś, kto potrafi  **zainspirować** uczniów opowiadając o szerokich możliwościach
     informatyki (na przykład za pośrednictwem wideo czatu).
-  volunteer_engineer_submission_intro_signup: Podaj następujące informacje, jeśli
-    jesteś studentem informatyki lub profesjonalnym programistą. Aby zarejestrować
-    się jako wolontariusz, musisz mieć co najmniej 18 lat. Pamiętaj, że wszystkie
-    pola, które wypełnisz w tej sekcji, będą dostępne dla każdego, kto przegląda <a
-    href="/volunteer/local"> mapę wolontariuszy</a>. Pola oznaczone <span class="form-required-field">*</span>
-    są wymagane.
   volunteer_engineer_submission_intro_signup_markdown: Podaj następujące informacje,
     jeśli jesteś studentem informatyki lub profesjonalnym programistą. Musisz mieć
     ukończone 18 lat i zgłosić się jako wolontariusz. Należy mieć na uwadze, że wszystkie

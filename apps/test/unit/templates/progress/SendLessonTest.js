@@ -1,7 +1,9 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {assert} from '../../../util/reconfiguredChai';
+
 import SendLesson from '@cdo/apps/templates/progress/SendLesson';
-import {shallow} from 'enzyme';
+
+import {assert} from '../../../util/reconfiguredChai';
 
 const lessonUrl = 'https://studio.code.org/s/coursee-2020/lessons/2/levels/1';
 const lessonTitle = 'Lesson 2: Drawing with Loops';

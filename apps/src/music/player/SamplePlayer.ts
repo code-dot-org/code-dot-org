@@ -1,9 +1,9 @@
-import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
+import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import {Effects} from './interfaces/Effects';
-import MusicLibrary from './MusicLibrary';
-
-// Using require() to import JS in TS files
-const soundApi = require('./sound');
+import SoundCache from './SoundCache';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import SoundPlayer from './SoundPlayer';
+import {SoundLoadCallbacks} from '../types';
 
 // Multiplied by the duration of a single beat to determine the length of
 // time to fade out a sound, if trimming to a specific duration. This results
@@ -14,7 +14,7 @@ const RELEASE_DURATION_FACTOR = 0.2;
 
 export interface SampleEvent {
   offsetSeconds: number;
-  sampleId: string;
+  sampleUrl: string;
   triggered: boolean;
   effects?: Effects;
   lengthSeconds?: number;
@@ -32,113 +32,69 @@ const PREVIEW_GROUP = 'preview';
  * Handles playback of individual samples.
  */
 export default class SamplePlayer {
+  private readonly soundCache: SoundCache;
+  private readonly soundPlayer: SoundPlayer;
+  private readonly metricsReporter: LabMetricsReporter;
   private playingSamples: PlayingSample[];
   private isPlaying: boolean;
   private startPlayingAudioTime: number;
-  private isInitialized: boolean;
-  private groupPath: string;
 
-  constructor() {
+  constructor(
+    metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter(),
+    soundCache: SoundCache = new SoundCache(),
+    soundPlayer: SoundPlayer = new SoundPlayer()
+  ) {
+    this.metricsReporter = metricsReporter;
+    this.soundCache = soundCache;
+    this.soundPlayer = soundPlayer;
     this.playingSamples = [];
     this.isPlaying = false;
     this.startPlayingAudioTime = -1;
-    this.isInitialized = false;
-    this.groupPath = '';
   }
 
-  initialize(
-    library: MusicLibrary,
-    bpm: number,
-    updateLoadProgress: (value: number) => void
-  ) {
-    const soundList = library.groups
-      .map(group => {
-        return group.folders.map(folder => {
-          return folder.sounds
-            .map(sound => {
-              // Skip loading sequenced sounds; these are generated at runtime
-              // and made up of individual instrument samples.
-              if (!sound.sequence) {
-                return {
-                  path: group.path + '/' + folder.path + '/' + sound.src,
-                  restricted: sound.restricted,
-                };
-              }
-            })
-            .filter(sound => sound !== undefined);
-        });
-      })
-      .flat(2);
-
+  setBpm(bpm: number) {
     const secondsPerBeat = 60 / bpm;
-    soundApi.InitSound(soundList, {
+    this.soundPlayer.updateConfiguration({
       // Calculate release time using release duration factor
       releaseTimeSeconds: secondsPerBeat * RELEASE_DURATION_FACTOR,
       // Use a delay value of a half of a beat
       delayTimeSeconds: secondsPerBeat / 2,
-      reportSoundLibraryLoadTime: (loadTimeMs: number) => {
-        Lab2MetricsReporter.reportLoadTime('SoundLibraryLoadTime', loadTimeMs, [
-          {name: 'Library', value: library.name},
-        ]);
-      },
-      updateLoadProgress: updateLoadProgress,
     });
-
-    this.groupPath = library.groups[0].path;
-
-    this.isInitialized = true;
-  }
-
-  initialized(): boolean {
-    return this.isInitialized;
   }
 
   /**
-   * Start playback with the given sample events.
+   * Start playback with the given sample events. Loads sounds into the cache if necessary.
    * @param sampleEventList samples to play
    * @param playTimeOffsetSeconds the number of seconds to offset playback by.
    */
-  startPlayback(
+  async startPlayback(
     sampleEventList: SampleEvent[],
     playTimeOffsetSeconds?: number
   ) {
-    if (!this.isInitialized) {
-      this.logUninitialized();
-      return;
-    }
-
-    this.stopPlayback();
-    this.startPlayingAudioTime =
-      soundApi.GetCurrentAudioTime() - (playTimeOffsetSeconds || 0);
-    this.isPlaying = true;
-
-    this.playSamples(sampleEventList);
-
-    soundApi.StartPlayback();
+    await this.loadSounds(sampleEventList.map(event => event.sampleUrl));
+    this.startInternal(sampleEventList, playTimeOffsetSeconds);
   }
 
-  previewSample(sampleId: string, onStop?: () => void) {
-    if (!this.isInitialized) {
-      this.logUninitialized();
-      return;
-    }
-
+  async previewSample(sampleUrl: string, onStop?: () => void) {
     this.cancelPreviews();
 
-    soundApi.PlaySound(
-      this.groupPath + '/' + sampleId,
-      PREVIEW_GROUP,
-      0,
-      onStop
-    );
+    try {
+      const audioBuffer = await this.soundCache.loadSound(sampleUrl);
+      if (audioBuffer) {
+        this.soundPlayer.playSound(audioBuffer, PREVIEW_GROUP, 0, onStop);
+      } else {
+        this.metricsReporter.logError('Error loading sound', undefined, {
+          sound: sampleUrl,
+        });
+      }
+    } catch (error) {
+      this.metricsReporter.logError('Error loading sound', error as Error, {
+        sound: sampleUrl,
+      });
+    }
   }
 
-  previewSamples(events: SampleEvent[], onStop?: () => void) {
-    if (!this.isInitialized) {
-      this.logUninitialized();
-      return;
-    }
-
+  async previewSamples(events: SampleEvent[], onStop?: () => void) {
     this.cancelPreviews();
 
     let counter = 0;
@@ -151,13 +107,23 @@ export default class SamplePlayer {
         }
       : undefined;
 
+    await this.loadSounds(events.map(event => event.sampleUrl));
+
     events.forEach(event => {
-      soundApi.PlaySound(
-        this.groupPath + '/' + event.sampleId,
-        PREVIEW_GROUP,
-        soundApi.GetCurrentAudioTime() + event.offsetSeconds,
-        onStopWrapper
-      );
+      const audioBuffer = this.soundCache.getSound(event.sampleUrl);
+      if (!audioBuffer) {
+        this.metricsReporter.logWarning(
+          'Could not load sound which should have been in cache: ' +
+            event.sampleUrl
+        );
+      } else {
+        this.soundPlayer.playSound(
+          audioBuffer,
+          PREVIEW_GROUP,
+          this.soundPlayer.getCurrentAudioTime() + event.offsetSeconds,
+          onStopWrapper
+        );
+      }
     });
   }
 
@@ -166,7 +132,7 @@ export default class SamplePlayer {
   }
 
   getElapsedPlaybackTimeSeconds(): number {
-    const currentAudioTime = soundApi.GetCurrentAudioTime();
+    const currentAudioTime = this.soundPlayer.getCurrentAudioTime();
     if (!this.isPlaying || currentAudioTime === null) {
       return -1;
     }
@@ -175,17 +141,12 @@ export default class SamplePlayer {
   }
 
   playSamples(sampleEvents: SampleEvent[]) {
-    if (!this.isInitialized) {
-      this.logUninitialized();
-      return;
-    }
-
     if (!this.isPlaying) {
       return;
     }
 
     for (const sampleEvent of sampleEvents) {
-      const currentAudioTime = soundApi.GetCurrentAudioTime();
+      const currentAudioTime = this.soundPlayer.getCurrentAudioTime();
       const eventStart = this.startPlayingAudioTime + sampleEvent.offsetSeconds;
 
       // Triggered sounds might have a target play time that is very slightly in
@@ -202,34 +163,44 @@ export default class SamplePlayer {
       const delayCompensation = sampleEvent.triggered ? 0.1 : 0.05;
 
       if (eventStart >= currentAudioTime - delayCompensation) {
-        const uniqueId = soundApi.PlaySound(
-          this.groupPath + '/' + sampleEvent.sampleId,
+        const buffer = this.soundCache.getSound(sampleEvent.sampleUrl);
+        if (!buffer) {
+          this.metricsReporter.logWarning(
+            'Could not load sound which should have been in cache: ' +
+              sampleEvent.sampleUrl
+          );
+          continue;
+        }
+        const uniqueId = this.soundPlayer.playSound(
+          buffer,
           MAIN_AUDIO_GROUP,
           eventStart,
-          null,
+          undefined,
           false,
           sampleEvent.effects,
           sampleEvent.lengthSeconds
         );
 
-        this.playingSamples.push({
-          eventStart,
-          uniqueId,
-        });
+        if (uniqueId !== undefined) {
+          this.playingSamples.push({
+            eventStart,
+            uniqueId,
+          });
+        }
       }
     }
   }
 
   stopPlayback() {
-    soundApi.StopSound(MAIN_AUDIO_GROUP);
-    soundApi.StopSound(PREVIEW_GROUP);
+    this.soundPlayer.stopSound(MAIN_AUDIO_GROUP);
+    this.soundPlayer.stopSound(PREVIEW_GROUP);
     this.playingSamples = [];
     this.isPlaying = false;
     this.startPlayingAudioTime = -1;
   }
 
   cancelPreviews() {
-    soundApi.StopSound(PREVIEW_GROUP);
+    this.soundPlayer.stopSound(PREVIEW_GROUP);
   }
 
   /**
@@ -241,13 +212,26 @@ export default class SamplePlayer {
     }
 
     for (const sample of this.playingSamples) {
-      if (sample.eventStart > soundApi.GetCurrentAudioTime()) {
-        soundApi.StopSoundByUniqueId(MAIN_AUDIO_GROUP, sample.uniqueId);
+      if (sample.eventStart > this.soundPlayer.getCurrentAudioTime()) {
+        this.soundPlayer.stopSoundByUniqueId(MAIN_AUDIO_GROUP, sample.uniqueId);
       }
     }
   }
 
-  private logUninitialized() {
-    Lab2MetricsReporter.logWarning('Sample player not initialized.');
+  async loadSounds(sampleUrls: string[], callbacks?: SoundLoadCallbacks) {
+    return this.soundCache.loadSounds(sampleUrls, callbacks);
+  }
+
+  private startInternal(
+    sampleEventList: SampleEvent[],
+    playTimeOffsetSeconds?: number
+  ) {
+    this.startPlayingAudioTime =
+      this.soundPlayer.getCurrentAudioTime() - (playTimeOffsetSeconds || 0);
+    this.isPlaying = true;
+
+    this.playSamples(sampleEventList);
+
+    this.soundPlayer.startPlayback();
   }
 }

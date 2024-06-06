@@ -116,21 +116,22 @@ layout: wide
     * الاسم والبريد الإلكتروني للشخص الذي يمثل النشاط المقدم
     * اسم النشاط (لا يمكن تضمين "ساعة من البرمجة" في الاسم)
     * الرابط الإلكتروني للنشاط
-    * وصف النشاط (الحد الأقصى لعدد الحروف: 400 حرف) 
-        * في الوصف، يُرجى تضمين ما إذا كان النشاط موجهًا بشكل أساسي من الطلاب أو موجهًا من قِبل المعلم. بالإضافة إلى ذلك، تهتم بعض المدارس بمعرفة ما إذا كانت أنشطة "ساعة من البرمجة" تتناول المعايير الأساسية أو معايير العلوم للجيل القادم. وإذا كان النشاط يتناول معايير محددة، فكِّر في تضمين هذه المعلومات.
-    * مستوى (مستويات) الصف الموصى به للمستخدمين المستهدفين. يمكنك الرجوع إلى \[معايير رابطة معلمي علوم الحاسوب لرياض الأطفال-الصف 12\] (https://k12cs.org/framework-statements-by-grade-band/) لمعرفة مفاهيم علوم الحاسوب المناسبة للصف. تتضمن مستويات الصف: 
-        * رياض الأطفال - المستوى 1 (4-6 سنوات)
-        * الصفوف 2-5 (7-10 سنوات)
-        * الصفوف 6-8 (11-13 سنة)
-        * الصف 9 فما فوق (14 سنة وما فوق)
-    * قائمة بالمجالات التي يغطيها نشاطك (بالإضافة إلى علوم الحاسوب). على سبيل المثال، إذا كان بإمكان مدرس الرياضيات استخدام نشاطك لتدريس الزوايا أو القطع المكافئ، فقم بإدراج مادة الرياضيات. إذا كان لديك نشاط عن الارتجال العفوي يعلِّم الطلاب الأفعال والأسماء وغير ذلك، اختر مادة فنون اللغة.
-    * قائمة لغات البرمجة التي يعلِّمها نشاطك. مثل، C/C++، وJava، وJavaScript، وغير ذلك، أو لغة مستقلة (لخطط الدرس التي يمكن تدريسها بلغات متعددة)
-    * قائمة اللغات الطبيعية المعتمدة. ملاحظة: تقع مسؤولية كشف اللغة على عاتق مزود النشاط، ونحن سنعيد توجيه جميع المستخدمين إلى العنوان الإلكتروني المقدَّم.
-    * ما هو مستوى الخبرة التي يجب على المعلم استخدامها لنشاطك؟ (على سبيل المثال، مبتدئ أو لديه خلفية بسيطة). وما مستوى الخبرة التي يجب أن يتمتع بها الطلاب؟ إذا كنت ترغب في إعداد أنشطة ساعة من البرمجة™ الأكثر تقدمًا، يرجى تضمين المعلومات المسبقة المطلوبة في وصف نشاطك.
-    * مدة نشاطك 
-        * ساعة واحدة
-        * ساعة واحدة مع دورة متابعة
-        * 2 - 6 ساعات (يمكن أن تكون دروسًا متعددة)
+    * Does this activity include AI: Yes or No
+    * An activity description (max character count: 400) 
+        * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
+    * Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
+        * Kindergarten - Grade 1 (ages 4-6)
+        * Grades 2-5 (ages 7-10)
+        * Grades 6-8 (ages 11-13)
+        * Grades 9+ (ages 14+)
+    * قائمة لغات البرمجة التي يعلِّمها نشاطك. مثل، C/C++، وJava، وJavaScript، وغير ذلك، أو لغة مستقلة (لخطط الدرس التي يمكن تدريسها بلغات متعددة) choose language arts.
+    * قائمة اللغات الطبيعية المعتمدة. ملاحظة: تقع مسؤولية كشف اللغة على عاتق مزود النشاط، ونحن سنعيد توجيه جميع المستخدمين إلى العنوان الإلكتروني المقدَّم. or language independent (for lesson plans that can be taught in multiple languages)
+    * ما هو مستوى الخبرة التي يجب على المعلم استخدامها لنشاطك؟ (على سبيل المثال، مبتدئ أو لديه خلفية بسيطة). وما مستوى الخبرة التي يجب أن يتمتع بها الطلاب؟
+    * What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
+    * The length of your activity 
+        * 1 hour only
+        * 1 hour with follow-on course
+        * 2-6 hours (can be multiple lessons)
     * A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
     
     #### الأشياء الإضافية التي ستحتاج إليها عند إرسال خطط الدرس
@@ -182,9 +183,11 @@ layout: wide
     
     ## كيفية تقييم الأنشطة
     
-    ستقوم لجنة متنوعة من معلمي علوم الحاسوب بترتيب عمليات الإرسال بناءً على المعايير النوعية والكمية. سيتم إدراج جميع الأنشطة التي تتوافق مع المعايير الأساسية. كما سيتمكن المعلمون من التصفية والفرز للعثور على أفضل الأنشطة لفصولهم الدراسية.
+    ستقوم لجنة متنوعة من معلمي علوم الحاسوب بترتيب عمليات الإرسال بناءً على المعايير النوعية والكمية. سيتم إدراج جميع الأنشطة التي تتوافق مع المعايير الأساسية.
     
-    سيبحث دليل تقييم الأنشطة وخطط الدروس عن المعايير التالية في جميع الأنشطة وترتيبها وفقًا لذلك:
+    For traditional coding activities, a diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
+    
+    إذا منحت لجنة المراجعة النشاط تقييم "صفر" في جودة الإنتاج (بسبب الأخطاء أو التعليمات السيئة أو الثغرات التي تجعل من الصعب جدًا استخدامه)، وفي تعزيز التعلم في المجموعات الممثلة تمثيلًا ضعيفًا (بسبب المواد العنصرية / التحيز الجنسي)، وفي القيمة التعليمية (لا يعمل على تعليم مفاهيم علوم الحاسوب)، أو في المتعة / التفاعل (نظرًا لصعوبته / تثبيط الطلاب للعمل من خلاله)، فلن يتم إدراج النشاط.
     
     - جودة الإنتاج العالية
     - تعزيز التعلم من قِبل جميع المجموعات الديمغرافية (وخاصة، المجموعات ذات التمثيل الضعيف)
@@ -192,9 +195,9 @@ layout: wide
     - المتعة والجاذبية
     - تشجيع الطلاب على إنشاء شيء فريد يمكنهم مشاركته (للطلاب الأصغر سنًا: مع أولياء الأمور وزملاء الدراسة. للتلاميذ البالغين: عبر الإنترنت)
     
-    إذا منحت لجنة المراجعة النشاط تقييم "صفر" في جودة الإنتاج (بسبب الأخطاء أو التعليمات السيئة أو الثغرات التي تجعل من الصعب جدًا استخدامه)، وفي تعزيز التعلم في المجموعات الممثلة تمثيلًا ضعيفًا (بسبب المواد العنصرية / التحيز الجنسي)، وفي القيمة التعليمية (لا يعمل على تعليم مفاهيم علوم الحاسوب)، أو في المتعة / التفاعل (نظرًا لصعوبته / تثبيط الطلاب للعمل من خلاله)، فلن يتم إدراج النشاط.
-    
     بالإضافة إلى ذلك، لكي يتم إدراج النشاط ضمن القائمة، يجب على كل الأنشطة أن:
+    
+    In addition, in order to be listed, all activities must:
     
     - تتناسب مع الفصول الدراسية في المدارس العامة (بدون أسلحة، أو محتوى فاضح / جنسي، أو محتوى ديني، وما إلى ذلك)
     - لا تتطلب تسجيل الدخول
@@ -223,20 +226,22 @@ layout: wide
     
     ## إرشادات تقديم الأنشطة لمراجعة نوعية مبكرة (جديد)
     
+    Activities do not have to include AI, though we are looking to offer more AI related activities.
+    
     You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resources#logo) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. <u>Under no circumstances can the Code.org logo and name be used.</u> Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
     
-    يرجى ملاحظة: هذه هي الإرشادات العامة لتقديم التعليقات والملاحظات. وقد تتضمن المراجعة المبكرة لنشاطك تعليقات وملاحظات عبر جميع هذه الفئات، أو قد تتضمن فقط تعليقات وملاحظات في فئة واحدة أو فئتين.
+    ستتلقى جميع الأنشطة المقدَّمة للمراجعة المبكرة تعليقات وملاحظات قبل 1 سبتمبر. سنوفر أيضًا رابطًا لنموذج يمكنك استخدامه لشرح تغييرات معينة تم إجراؤها على النشاط ردًا على التعليقات والملاحظات.
     
-    **Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
+    كل نشاط يتم إرساله قبل يوم 1 أكتوبر سيحصل على مراجعة قياسية، سواء تلقى مراجعة مبكرة أم لا. وأثناء فترة المراجعة القياسية (سبتمبر - أكتوبر)، سيركِّز المراجعون على تصنيف الأنشطة وفقًا للمعايير الموضحة في قسم "كيفية تقييم الأنشطة" أعلاه. وما لم تلاحظ تغييرات محددة على نشاط ما، يمكن للمراجعين، بل من المرجح، أن يعتمدوا على ملاحظات المراجعة المبكرة لتقييم الأنشطة.
     
     - ما المنصات والمتصفحات التي يعمل عليها البرنامج التعليمي بشكل أفضل؟
     - هل يعمل على الهواتف الذكية؟ والأجهزة اللوحية؟
     - هل توصي بالبرمجة الثنائية؟
     - هل يراعي اعتبارات الاستخدام في الفصول الدراسية؟ على سبيل المثال، إذا كانت هناك مقاطع فيديو، يجب أن تنصح المعلمين بعرض مقاطع الفيديو على شاشة عرض ليطلع عليها الفصل بأكمله معًا
     
-    ستتلقى جميع الأنشطة المقدَّمة للمراجعة المبكرة تعليقات وملاحظات قبل 1 سبتمبر. سنوفر أيضًا رابطًا لنموذج يمكنك استخدامه لشرح تغييرات معينة تم إجراؤها على النشاط ردًا على التعليقات والملاحظات.
+    **Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
     
-    كل نشاط يتم إرساله قبل يوم 1 أكتوبر سيحصل على مراجعة قياسية، سواء تلقى مراجعة مبكرة أم لا. وأثناء فترة المراجعة القياسية (سبتمبر - أكتوبر)، سيركِّز المراجعون على تصنيف الأنشطة وفقًا للمعايير الموضحة في قسم "كيفية تقييم الأنشطة" أعلاه. وما لم تلاحظ تغييرات محددة على نشاط ما، يمكن للمراجعين، بل من المرجح، أن يعتمدوا على ملاحظات المراجعة المبكرة لتقييم الأنشطة. @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
+    **Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
     
     **Create your activity in Spanish or in other languages besides English.**
     
@@ -253,7 +258,7 @@ layout: wide
     
     ## اقتراحات لتصميم دروس وبرامج تعليمية قائمة على التوجيه الذاتي لمدة ساعة واحدة
     
-    **أدرج التعليقات والملاحظات في نهاية النشاط.** (على سبيل المثال، "لقد أنهيت 10 مستويات وتعرفت على الحلقات البرمجية! أحسنت!") We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
+    Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
     
     1. Use “Hour of Code” only in connection with non-commercial CS Education activities in the context of the Hour of Code campaign, and for no other purpose.
     2. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but that it rather references the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code ® at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
@@ -294,7 +299,7 @@ layout: wide
     
     ## عرف بانشطتك، أسبوع تعليم الحاسوب، و ساعة من البرمجة
     
-    سيتيح لنا ذلك إحصاء المستخدمين الذين يقومون بالبرنامج التعليمي لساعة البرمجة. وسيؤدي إلى إحصاء أكثر دقة للمشاركة في البرنامج التعليمي الخاص بك. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
+    Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
     
     - الإعلان عن حملة "ساعة من البرمجة" والأسبوع العالمي للبرمجة وعلوم الحاسوب على موقعك الإلكتروني. على سبيل المثال: <http://www.tynker.com/hour-of-code>
     - الإعلان عن أنشطة "ساعة من البرمجة" باستخدام وسائل التواصل الاجتماعي ووسائل الإعلام التقليدية والقوائم البريدية وما إلى ذلك، باستخدام هاشتاج #HourOfCode (مع كتابة الحروف H و O و C بأحرف كبيرة)
@@ -303,4 +308,4 @@ layout: wide
     
     [**عودة إلى الأعلى**](#top)
     
-    ملاحظة: هذا ليس مهمًا للتطبيقات القابلة للتثبيت (تطبيقات الهواتف التي تعمل بنظام iOS أو Android أو تطبيقات التثبيت على أجهزة الحاسوب)
+    {{ signup_button }}

@@ -76,6 +76,17 @@
       }
     },
     {
+      "name": "CSD Course Standards CSTA Alignment",
+      "url": "https://docs.google.com/spreadsheets/d/1mSkUykxhOhSviA7wmo5Ejh3vYgLJDtG46rCm_92607g/edit?usp=sharing",
+      "key": "csd_course_standards_csta_alignment",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_course_standards_csta_alignment"
+      }
+    },
+    {
       "name": "CSD Guide to Assessment",
       "url": "https://docs.google.com/document/d/1IO5XgPW_Apil_Uziq5hAMCBgilm8txZ3sp8atxiKiLU/view",
       "key": "csd_guide_to_assessment",

@@ -165,17 +165,8 @@ export function itMakesCircuitPlaygroundComponentsAvailable(
             component = jsInterpreter.globalProperties[sensorName];
           });
 
-          it('start()', () => {
-            expect(component.start).to.be.a('function');
-          });
-
           it('value', () => {
             expect(component).to.have.property('value');
-          });
-
-          it('getAveragedValue()', () => {
-            expect(component.getAveragedValue).to.be.a('function');
-            expect(component.getAveragedValue()).to.be.a('number');
           });
 
           it('setScale()', () => {

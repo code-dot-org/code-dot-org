@@ -1,20 +1,25 @@
-import React from 'react';
-import * as Table from 'reactabular-table';
-import * as Sticky from 'reactabular-sticky';
-import * as Virtualized from 'reactabular-virtualized';
 import PropTypes from 'prop-types';
-import {
-  scriptDataPropType,
-  studentTableRowType,
-  scrollbarWidth,
-} from '../sectionProgressConstants';
+import React from 'react';
+import * as Sticky from 'reactabular-sticky';
+import * as Table from 'reactabular-table';
+import * as Virtualized from 'reactabular-virtualized';
+
 import {
   lessonIsAllAssessment,
   lessonHasLevels,
 } from '@cdo/apps/templates/progress/progressHelpers';
-import styleConstants from './progress-table-constants.module.scss';
-import './progressTableStyles.scss';
+
+import {
+  unitDataPropType,
+  studentTableRowType,
+  scrollbarWidth,
+} from '../sectionProgressConstants';
+
 import ProgressTableLessonNumber from './ProgressTableLessonNumber';
+
+import styleConstants from './progress-table-constants.module.scss';
+
+import './progressTableStyles.scss';
 
 // Extra header column to account for scrollbar in progress tables
 const gutterHeader = {
@@ -28,7 +33,7 @@ export default class ProgressTableContentView extends React.Component {
   static propTypes = {
     rows: PropTypes.arrayOf(studentTableRowType).isRequired,
     onRow: PropTypes.func.isRequired,
-    scriptData: scriptDataPropType.isRequired,
+    scriptData: unitDataPropType.isRequired,
     lessonOfInterest: PropTypes.number.isRequired,
     onClickLesson: PropTypes.func.isRequired,
     columnWidths: PropTypes.arrayOf(PropTypes.number),

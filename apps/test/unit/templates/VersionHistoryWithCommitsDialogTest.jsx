@@ -1,12 +1,14 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
 import sinon from 'sinon';
-import {assert, expect} from '../../util/reconfiguredChai';
-import VersionHistoryWithCommitsDialog from '@cdo/apps/templates/VersionHistoryWithCommitsDialog';
+
 import {sources as sourcesApi} from '@cdo/apps/clientApi';
-import * as utils from '@cdo/apps/utils';
 import project from '@cdo/apps/code-studio/initApp/project';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import VersionHistoryWithCommitsDialog from '@cdo/apps/templates/VersionHistoryWithCommitsDialog';
+import * as utils from '@cdo/apps/utils';
+
+import {assert, expect} from '../../util/reconfiguredChai';
 
 const FAKE_CURRENT_VERSION = 'current-version-id';
 const FAKE_PREVIOUS_VERSION = 'previous-version-id';
@@ -121,14 +123,14 @@ describe('VersionHistoryWithCommitsDialog', () => {
       finishVersionHistoryLoad();
       expect(restoreSpy()).not.to.have.been.called;
 
-      wrapper.find('Button').at(2).simulate('click');
+      wrapper.find('Button').at(3).simulate('click');
       expect(restoreSpy()).to.have.been.calledOnce;
     });
 
     it('renders an error on failed restore', () => {
       wrapper = mount(<VersionHistoryWithCommitsDialog {...props} />);
       finishVersionHistoryLoad();
-      wrapper.find('Button').at(2).simulate('click');
+      wrapper.find('Button').at(3).simulate('click');
 
       failRestoreVersion();
       expect(wrapper.text()).to.include('An error occurred.');
@@ -137,7 +139,7 @@ describe('VersionHistoryWithCommitsDialog', () => {
     it('reloads the page on successful restore', () => {
       wrapper = mount(<VersionHistoryWithCommitsDialog {...props} />);
       finishVersionHistoryLoad();
-      wrapper.find('Button').at(2).simulate('click');
+      wrapper.find('Button').at(3).simulate('click');
       expect(utils.reload).not.to.have.been.called;
 
       finishRestoreVersion();
@@ -220,7 +222,7 @@ describe('VersionHistoryWithCommitsDialog', () => {
         );
         finishVersionHistoryLoad();
         wrapper.find('Button').last().simulate('click');
-        wrapper.find('Button').first().simulate('click');
+        wrapper.find('Button').at(1).simulate('click');
       });
 
       afterEach(async () => {

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import CollapserIcon from './CollapserIcon';
 
 const styles = {
@@ -8,7 +9,6 @@ const styles = {
 };
 
 export default {
-  title: 'CollapserIcon',
   component: CollapserIcon,
 };
 

@@ -95,13 +95,11 @@ module OmniauthCallbacksControllerTests
       created_user&.destroy!
     end
 
-    private
-
-    def mock_oauth(user_type:)
+    private def mock_oauth(user_type:)
       mock_oauth_for AuthenticationOption::POWERSCHOOL, generate_powerschool_auth_hash(user_type)
     end
 
-    def generate_powerschool_auth_hash(user_type)
+    private def generate_powerschool_auth_hash(user_type)
       user_type = 'staff' if user_type == User::TYPE_TEACHER
       OmniAuth::AuthHash.new(
         uid: SecureRandom.uuid,
@@ -126,7 +124,7 @@ module OmniauthCallbacksControllerTests
 
     # The user signs in through Powerschool, which hits the oauth callback
     # and redirects to something else: homepage, finish_sign_up, etc.
-    def sign_in_through_powerschool
+    private def sign_in_through_powerschool
       sign_in_through AuthenticationOption::POWERSCHOOL
     end
   end

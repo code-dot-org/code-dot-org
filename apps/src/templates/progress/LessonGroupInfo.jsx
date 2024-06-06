@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
 
 // Information about a lesson group
 export default class LessonGroupInfo extends Component {
@@ -44,11 +46,10 @@ export default class LessonGroupInfo extends Component {
 const styles = {
   description: {
     color: color.dark_charcoal,
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
   },
   bigQuestion: {
-    fontWeight: 'bolder',
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
   },
   subTitle: {
     color: color.teal,

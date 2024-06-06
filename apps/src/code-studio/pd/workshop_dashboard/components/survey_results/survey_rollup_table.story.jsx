@@ -1,7 +1,10 @@
 import React from 'react';
 import SurveyRollupTable from '../../components/survey_results/survey_rollup_table';
-import reactBootstrapStoryDecorator from '../../../reactBootstrapStoryDecorator';
 import {COURSE_CSF} from '../../workshopConstants';
+
+export default {
+  component: SurveyRollupTable,
+};
 
 const facilitator_rollups = {
   facilitators: {
@@ -157,32 +160,24 @@ const workshop_rollups = {
   },
 };
 
-export default storybook => {
-  storybook
-    .storiesOf('SurveyRollupTable', module)
-    .addDecorator(reactBootstrapStoryDecorator)
-    .addStoryTable([
-      {
-        name: 'Facilitator Rollup Table',
-        story: () => (
-          <SurveyRollupTable
-            courseName="CS Principles"
-            rollups={facilitator_rollups.rollups}
-            questions={facilitator_rollups.questions}
-            facilitators={facilitator_rollups.facilitators}
-          />
-        ),
-      },
-      {
-        name: 'Workshop Rollup Table',
-        story: () => (
-          <SurveyRollupTable
-            courseName={COURSE_CSF}
-            rollups={workshop_rollups.rollups}
-            questions={workshop_rollups.questions}
-            facilitators={workshop_rollups.facilitators}
-          />
-        ),
-      },
-    ]);
+const Template = args => (
+  <div id="application-container">
+    <SurveyRollupTable {...args} />
+  </div>
+);
+
+export const FacilitatorRollup = Template.bind({});
+FacilitatorRollup.args = {
+  courseName: 'CS Principles',
+  rollups: facilitator_rollups.rollups,
+  questions: facilitator_rollups.questions,
+  facilitators: facilitator_rollups.facilitators,
+};
+
+export const WorkshopRollup = Template.bind({});
+WorkshopRollup.args = {
+  courseName: COURSE_CSF,
+  rollups: workshop_rollups.rollups,
+  questions: workshop_rollups.questions,
+  facilitators: workshop_rollups.facilitators,
 };

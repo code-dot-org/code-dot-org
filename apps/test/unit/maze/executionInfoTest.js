@@ -1,5 +1,6 @@
-import {expect} from '../../util/reconfiguredChai';
 import ExecutionInfo from '@cdo/apps/maze/executionInfo';
+
+import {expect} from '../../util/reconfiguredChai';
 
 describe('ExecutionInfo tests', function () {
   it('single action queue/dequeue', function () {

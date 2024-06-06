@@ -196,19 +196,9 @@ describe('project.js', () => {
       expect(project.getStandaloneApp()).to.equal('applab');
     });
 
-    it('for calc', () => {
-      window.appOptions.app = 'calc';
-      expect(project.getStandaloneApp()).to.equal('calc');
-    });
-
     it('for dance', () => {
       window.appOptions.app = 'dance';
       expect(project.getStandaloneApp()).to.equal('dance');
-    });
-
-    it('for eval', () => {
-      window.appOptions.app = 'eval';
-      expect(project.getStandaloneApp()).to.equal('eval');
     });
 
     it('for flappy', () => {
@@ -1063,6 +1053,7 @@ describe('project.js', () => {
 
       // change getLevelSource stub to simulate changing source code
       const getLevelSourceStub = sinon.stub();
+      getLevelSourceStub.resolves();
       getLevelSourceStub.onCall(0).resolves('source code v0');
       getLevelSourceStub.onCall(1).resolves('source code v1');
       sourceHandler.getLevelSource = getLevelSourceStub;
@@ -1084,6 +1075,7 @@ describe('project.js', () => {
 
       // change getLevelSource stub to simulate changing source code
       const getLevelSourceStub = sinon.stub();
+      getLevelSourceStub.resolves();
       getLevelSourceStub.onCall(0).resolves('source code v0');
       getLevelSourceStub.onCall(1).resolves('source code v1');
       sourceHandler.getLevelSource = getLevelSourceStub;

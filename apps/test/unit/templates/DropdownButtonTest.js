@@ -1,15 +1,17 @@
-import {assert} from '../../util/reconfiguredChai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import {DropdownButton} from '@cdo/apps/templates/DropdownButton';
+
 import Button from '@cdo/apps/templates/Button';
+import {DropdownButton} from '@cdo/apps/templates/DropdownButton';
+
+import {assert} from '../../util/reconfiguredChai';
 
 const clickSpy = sinon.spy();
 
 const defaultProps = {
   text: 'Click me',
-  color: Button.ButtonColor.orange,
+  color: Button.ButtonColor.brandSecondaryDefault,
   children: [<a href="foo">href</a>, <a onClick={clickSpy}>onclick</a>],
 };
 

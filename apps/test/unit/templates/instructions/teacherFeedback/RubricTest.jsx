@@ -1,8 +1,10 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
+
 import Rubric from '@cdo/apps/templates/instructions/teacherFeedback/Rubric';
 import i18n from '@cdo/locale';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   rubric: {

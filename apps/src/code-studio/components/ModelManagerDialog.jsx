@@ -172,7 +172,7 @@ export default class ModelManagerDialog extends React.Component {
                 <br />
                 <Button
                   text={i18n.import()}
-                  color={Button.ButtonColor.orange}
+                  color={Button.ButtonColor.brandSecondaryDefault}
                   onClick={this.importMLModel}
                   disabled={noModels}
                   isPending={this.state.isImportPending}
@@ -211,7 +211,7 @@ export default class ModelManagerDialog extends React.Component {
             <div>
               <Button
                 text={i18n.no()}
-                color={Button.ButtonColor.orange}
+                color={Button.ButtonColor.brandSecondaryDefault}
                 onClick={this.closeConfirmDialog}
               />
               <Button

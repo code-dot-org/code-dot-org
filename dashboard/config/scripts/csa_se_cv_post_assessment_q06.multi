@@ -1,0 +1,10 @@
+name 'CSA-SE-CV-Post-Assessment-Q06'
+
+question 'Why should you consider the limitations of an AI model?'
+
+wrong 'All models are inherently flawed and should not be trusted.'
+right 'Understanding limitations helps to avoid potential pitfalls and aids in more effective and informed use of the models.'
+wrong 'Because AI models are often outdated.'
+wrong 'Limitations are not important as long as the model gives an output.'
+
+allow_multiple_attempts false

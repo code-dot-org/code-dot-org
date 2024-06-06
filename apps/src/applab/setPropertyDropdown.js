@@ -3,10 +3,11 @@
  */
 import _ from 'lodash';
 
-import {getFirstParam, getSecondParam, setParamAtIndex} from '../dropletUtils';
-import library from './designElements/library';
 import getAssetDropdown from '../assetManagement/getAssetDropdown';
+import {getFirstParam, getSecondParam, setParamAtIndex} from '../dropletUtils';
+
 import {fontFamilyOptions} from './constants';
+import library from './designElements/library';
 var ElementType = library.ElementType;
 
 /**
@@ -166,12 +167,6 @@ var PROP_INFO = {
     internalName: 'textColor',
     type: 'string',
     defaultValue: '"red"',
-  },
-  iconSize: {
-    friendlyName: 'icon-size',
-    internalName: 'fontSize',
-    type: 'number',
-    defaultValue: '32',
   },
   groupId: {
     friendlyName: 'group-id',
@@ -393,7 +388,6 @@ PROPERTIES[ElementType.TEXT_AREA] = {
     'textAlign',
     'readonly',
     'hidden',
-    'value',
     'borderWidth',
     'borderColor',
     'borderRadius',
@@ -424,7 +418,6 @@ PROPERTIES[ElementType.PHOTO_SELECT] = {
     'y',
     'iconColor',
     'backgroundColor',
-    'iconSize',
     'hidden',
     'borderWidth',
     'borderColor',

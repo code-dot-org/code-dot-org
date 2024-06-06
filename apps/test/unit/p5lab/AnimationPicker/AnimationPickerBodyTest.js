@@ -1,5 +1,5 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import {expect} from '../../../util/reconfiguredChai';
 const msg = require('@cdo/locale');
 import AnimationPickerBody, {
@@ -33,6 +33,12 @@ describe('AnimationPickerBody', function () {
     onAnimationSelectionComplete: emptyFunction,
     pickerType: PICKER_TYPE.gamelab,
     shouldWarnOnAnimationUpload: false,
+    isRestrictedMode: false,
+    teacherHasConfirmedUploadWarning: false,
+    refreshInRestrictedShareMode: emptyFunction,
+    refreshTeacherHasConfirmedUploadWarning: emptyFunction,
+    showingUploadWarning: false,
+    exitedUploadWarning: emptyFunction,
   };
 
   describe('upload warning', function () {

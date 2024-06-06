@@ -15,7 +15,10 @@
   color: #666;
 }
 
-.info a:link, .info a:visited, .states-link a:link, .states-link a:visited {
+.info a:link,
+.info a:visited,
+.states-link a:link,
+.states-link a:visited {
   color: #888;
   cursor: pointer;
   text-decoration: underline;
@@ -57,15 +60,20 @@
 }
 
 .banner-shade {
-  background: rgb(0,0,0);
-  background: linear-gradient(0deg, rgba(0,0,0,0.4416141456582633) 0%, rgba(0,0,0,0.33237044817927175) 57%, rgba(0,0,0,0) 76%);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.3) 57%,
+    rgba(0, 0, 0, 0) 76%
+  );
   height: 400px;
   position: absolute;
   width: 100%;
 }
 
 .banner h1 {
-  font-family: 'Gotham 7r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--bold-font-weight);
   font-size: 36px;
   margin-top: 220px;
   margin-bottom: 10px;
@@ -76,28 +84,103 @@
   margin-top: 10px;
 }
 
-.banner-container .header-button {
-  background-color: initial;
-  border-color: white;
-  border-width: 2px;
-}
-
 .non-banner {
   text-align: center;
   margin-top: 20px;
-}
-
-h2 {
-  font-size: 32px;
-  color: grey;
-  text-align: center;
 }
 
 .centered {
   text-align: center;
 }
 
+.button-wrapper {
+  margin-top: 0.75rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+
+  & > a {
+    margin: 0;
+  }
+}
+
+.desktop-feature {
+  & a:first-child {
+    background-color: var(--neutral_white);
+    border-color: var(--neutral_white);
+    color: var(--neutral_dark);
+  }
+
+  & a:last-child {
+    border-color: var(--neutral_white);
+    color: var(--neutral_white);
+
+    &:hover {
+      background: none;
+    }
+  }
+}
+
 #audienceblocks {
   text-align: center;
-  margin-top: 0px;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+
+  & > .block {
+    flex: 1;
+
+    @media (max-width: 969px) {
+      flex: unset;
+      width: 100%;
+    }
+
+    .quarterslot-links {
+      width: 100%;
+
+      & .headerbox {
+        padding-inline: 1rem !important;
+
+        & .sentence {
+          display: none;
+        }
+      }
+    }
+
+    .quarterslot-links-large {
+      padding: 0 !important;
+    }
+  }
+}
+
+.teach-ai-container {
+  background-color: #032d83;
+  margin: 4rem auto;
+  padding: 1.5rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.teach-ai-container img {
+  width: 260px;
+}
+
+@media (max-width: 969px) {
+  .teach-ai-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .teach-ai-container p {
+    text-align: center;
+  }
+
+  .teach-ai-container img {
+    width: 60%;
+  }
 }

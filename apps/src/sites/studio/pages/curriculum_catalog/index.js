@@ -19,6 +19,8 @@ $(document).ready(function () {
     sections,
     isSignedOut,
     isTeacher,
+    isInUS,
+    curriculaTaught,
   } = catalogData;
 
   const store = getStore();
@@ -36,6 +38,8 @@ $(document).ready(function () {
         languageNativeName={languageNativeName}
         isSignedOut={isSignedOut}
         isTeacher={isTeacher}
+        isInUS={isInUS}
+        curriculaTaught={curriculaTaught}
       />
     </Provider>,
     document.getElementById('curriculum-catalog-container')

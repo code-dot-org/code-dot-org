@@ -205,6 +205,7 @@ pt-PT:
   class_submission_out_of_school_summer_camp: Acampamento de verão
   classicmaze_name: Labirinto clássico
   code_hoc_coming: 'A Hora de Código chegou: de 8 a 14 de dezembro!'
+  code_org_logo_alt: Início - Code.org
   code_sign_up: Inscreva-se para participar durante a Semana da Educação em Ciência
     da Computação
   codea_beyond_gradelevel: A partir do Ensino Secundário
@@ -1122,6 +1123,7 @@ pt-PT:
   header_about_us: Quem somos
   header_course_catalog: Catálogo do Curso
   header_courses: Cursos
+  header_districts: Distritos
   header_documentation: Documentação
   header_educate_beyond: Para além da Code.org
   header_educate_community: Comunidade online
@@ -1136,6 +1138,7 @@ pt-PT:
   header_help_support: Ajuda e suporte
   header_help_us: Ajuda-nos
   header_home: Início
+  header_incubator: Incubadora
   header_learn: Aprender
   header_legal_privacy: Política de privacidade
   header_legal_tos: Termos de utilização
@@ -1143,6 +1146,7 @@ pt-PT:
   header_professional_learning: Aprendizado Profissional
   header_project_gallery: Projetos
   header_report_bug: Comunicar um problema
+  header_schools: Escolas
   header_screen_reader_hamburger: Menu
   header_sections: Turmas
   header_stats: Estatísticas
@@ -1535,6 +1539,7 @@ pt-PT:
   homepage_slot_text_link_k5: Cursos para alunos do 1.º Ciclo
   homepage_slot_text_link_local: Encontra uma turma à tua volta
   homepage_slot_text_link_middle: 2.º ou 3.º Ciclos do Ensino Básico
+  homepage_slot_text_link_middle_and_high: Ensino Fundamental e Médio
   homepage_slot_text_link_othercourses: Outros cursos online
   homepage_slot_text_link_pd: Desenvolvimento profissional
   homepage_slot_text_link_shop: T-shirts, chapéus e muito mais
@@ -2571,32 +2576,15 @@ pt-PT:
     global que oferece uma introdução de uma hora à ciência da computação e que atinge
     dezenas de milhões de estudantes em mais de 180 países. Participe você também
     durante a Semana da Educação em Ciência da Computação, de 7 a 13 de dezembro.
-  volunteer_engineer_submission_intro_guide: Saiba mais sobre o nosso <a href="%{volunteer_guide}">programa
-    de voluntariado aqui</a>.
   volunteer_engineer_submission_intro_guide_markdown: Saiba mais sobre o nosso [programa
     de voluntariado aqui](%{volunteer_guide}).
-  volunteer_engineer_submission_intro_links: É professor(a) e está procurando voluntários?
-    Encontre um voluntário na sua região em nosso <a href="%{volunteer_local}">mapa
-    de voluntários</a>.
   volunteer_engineer_submission_intro_links_markdown: É professor(a) e está procurando
     voluntários? Encontre um voluntário na sua região em nosso [mapa de voluntários](%{volunteer_local}).
-  volunteer_engineer_submission_intro_recruit: 'Os professores adorariam ter alguém<span
-    style="font-family: ''Gotham 7r'', sans-serif;">apaixonado pelo ensino da ciência
-    da computação</span> que pudesse ajudá-los em suas aulas, ou alguém que pudesse<span
-    style="font-family: ''Gotham 7r'', sans-serif;">inspirar</span> seus alunos falando
-    sobre a gama de possibilidades da ciência da computação (o que pode ser feito
-    por meio de de vídeo conferência).'
   volunteer_engineer_submission_intro_recruit_markdown: Os professores adorariam ter
     alguém**apaixonado pelo ensino da ciência da computação** que pudesse ajudá-los
     em suas aulas, ou alguém que pudesse**inspirar** seus alunos falando sobre a gama
     de possibilidades da ciência da computação (o que pode ser feito por meio de de
     vídeo conferência).
-  volunteer_engineer_submission_intro_signup: Por favor, insira as seguintes informações
-    se você é um estudante de ciência da computação ou profissional de software. Você
-    deve ter pelo menos 18 anos de idade para se inscrever como voluntário. Observe
-    que todos os campos que você preencher nesta seção estarão publicamente disponíveis
-    para qualquer um olhando para o <a href="/volunteer/local">mapa de voluntário</a>.
-    Campos marcados com um <span class="form-required-field">*</span> são obrigatórios.
   volunteer_engineer_submission_intro_signup_markdown: Insira as seguintes informações
     se você for um estudante de ciência da computação ou profissional de software.
     Você deve ter pelo menos 18 anos de idade para se inscrever como voluntário. Observe

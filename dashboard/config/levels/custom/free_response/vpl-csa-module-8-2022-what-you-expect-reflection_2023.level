@@ -1,0 +1,29 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2023-08-01T16:36:25.000Z",
+  "level_num": "custom",
+  "user_id": 884,
+  "properties": {
+    "encrypted": "false",
+    "tts_short_instructions_override": "How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
+    "tts_long_instructions_override": "Congratulations! You just wrote some code. You are officially a programmer!\r\n\r\nDid you notice that the last puzzle was a little more difficult? It was a challenge puzzle. Challenge puzzles are meant to stretch the boundaries of what students will do. We make it clear that they should be attempted, but do not require that they be completed for students to succeed for the lesson.\r\n\r\nNow take a moment to reflect. How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
+    "instructions_important": "false",
+    "long_instructions": "# Topics on the AP Exam\r\n\r\nBefore we start focusing on how to support students in preparing for the AP Exam, let’s start with acknowledging all that you and your students have accomplished this year!  It is very exciting!  The AP Exam is one test on one day.  Regardless of student scores on the AP Exam, there is a lot to celebrate.  That being said, we know in some schools and districts, AP Exams are very important.  We also know some students are looking for AP Exam scores to make post-secondary education less expensive for them.  For these reasons, we are going to focus on strategies for supporting students in the final stretch to the AP Exam in this module.  Let’s get started. \r\n\r\nWhen helping students prepare for the AP Exam, it is important to know what topics are on the AP Exam.  The topics are not all weighted equally thus when preparing students with a limited amount of time, it is important to know where students can improve their knowledge of a topics to make the biggest difference on their overall performance on the AP Exam.\r\n\r\nLet’s take a look at the breakdown of these topics, as described by the College Board’s Course and Exam Description. \r\n\r\n## The big picture\r\n\r\nFirst, as a reminder, there are two different portions of the AP CSA Exam.  These two sections are weighted equally:\r\n\r\n1. The Multiple Choice Question section which has 40 questions in 90 minutes\r\n2. The Free Response Question section which has 4 questions in 90 minutes\r\n\r\n \r\n## Multiple choice weighting\r\nThe College Board has provided a breakdown of the different topics covered on the multiple choice section of the exam.  The table below shows this breakdown for each of the College Board defined “Units”.\r\n \r\n<img src=\"https://images.code.org/6d89df4433d2042f8e4438d87a0f8398-image-1672794151548.59.41 PM.png\" width=\"60%\" alt=\"Multiple Choice Exam Breakdown\">\r\n\r\n## FRQ weighting\r\nThe College Board has dedicated topics for each of the four Free Response Questions.  The table below shows the topics for each of the Free Response Questions. \r\n\r\n<img src=\"https://images.code.org/4ccf0fd7a4958844148bfe3d0c030a8c-image-1678124901127.47.59 AM.png\" width=\"50%\" alt=\"FRQ Breakdown\">\r\n\r\n## Reflect\r\n\r\n* When you think back from across the year, which of these topics did students seem to struggle with the most? \r\n* Which topics do you think the full class might need more time to revisit before the AP Exam?\r\n\r\n<hr>\r\n\r\n**Up next:** You will create a pre-assessment for your students. ",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 24299,
+    "name_suffix": "_2023",
+    "allow_multiple_attempts": "true"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2023-08-01T16:36:25.859+00:00\",\"changed\":[\"cloned from \\\"vpl-csa-module-8-2022-what-you-expect-reflection_-f\\\"\"],\"cloned_from\":\"vpl-csa-module-8-2022-what-you-expect-reflection_-f\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

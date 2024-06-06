@@ -1,11 +1,22 @@
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import $ from 'jquery';
-import QuickActionsCell from '../tables/QuickActionsCell';
+import {connect} from 'react-redux';
+
 import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {asyncLoadSectionData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import {navigateToHref} from '@cdo/apps/utils';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
+
 import color from '../../util/color';
-import FontAwesome from '../FontAwesome';
 import Button from '../Button';
+import FontAwesome from '../FontAwesome';
+import QuickActionsCell from '../tables/QuickActionsCell';
+
+import ConfirmRemoveStudentDialog from './ConfirmRemoveStudentDialog';
 import {
   startEditingStudent,
   cancelEditingStudent,
@@ -14,14 +25,6 @@ import {
   addStudents,
   RowType,
 } from './manageStudentsRedux';
-import {connect} from 'react-redux';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
-import ConfirmRemoveStudentDialog from './ConfirmRemoveStudentDialog';
-import {asyncLoadSectionData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import i18n from '@cdo/locale';
-import {navigateToHref} from '@cdo/apps/utils';
-import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 class ManageStudentsActionsCell extends Component {
   static propTypes = {
@@ -244,7 +247,7 @@ class ManageStudentsActionsCell extends Component {
           <div>
             <Button
               onClick={this.onSave}
-              color={Button.ButtonColor.orange}
+              color={Button.ButtonColor.brandSecondaryDefault}
               text={i18n.save()}
               disabled={this.props.isSaving || this.props.disableSaving}
               style={styles.saveButton}

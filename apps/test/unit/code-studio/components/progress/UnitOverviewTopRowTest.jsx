@@ -1,6 +1,6 @@
 import {expect} from '../../../../util/reconfiguredChai';
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import i18n from '@cdo/locale';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {UnconnectedUnitOverviewTopRow as UnitOverviewTopRow} from '@cdo/apps/code-studio/components/progress/UnitOverviewTopRow';
@@ -26,8 +26,8 @@ const defaultProps = {
   isMigrated: false,
   unitCompleted: false,
   hasPerLevelResults: false,
-  isProfessionalLearningCourse: false,
   publishedState: 'stable',
+  isUnitWithLevels: true,
 };
 
 describe('UnitOverviewTopRow', () => {
@@ -68,6 +68,23 @@ describe('UnitOverviewTopRow', () => {
         </div>
       )
     ).to.be.true;
+  });
+
+  it('does not render "Try Now" if unit has no levels', () => {
+    const wrapper = shallow(
+      <UnitOverviewTopRow {...defaultProps} isUnitWithLevels={false} />
+    );
+
+    expect(
+      wrapper.containsMatchingElement(
+        <Button
+          __useDeprecatedTag
+          href="/s/test-script/next"
+          text={i18n.tryNow()}
+          size={Button.ButtonSize.large}
+        />
+      )
+    ).to.be.false;
   });
 
   it('renders "Continue" for participant if has level results and not unitCompleted', () => {
@@ -111,28 +128,6 @@ describe('UnitOverviewTopRow', () => {
         />
       )
     ).to.be.true;
-  });
-
-  it('does not render "Print Certificate" button for participant in professional learning course', () => {
-    const wrapper = shallow(
-      <UnitOverviewTopRow
-        {...defaultProps}
-        viewAs={ViewType.Participant}
-        unitCompleted={true}
-        isProfessionalLearningCourse={true}
-      />
-    );
-
-    expect(
-      wrapper.containsMatchingElement(
-        <Button
-          __useDeprecatedTag
-          href="/s/test-script/next"
-          text={i18n.printCertificate()}
-          size={Button.ButtonSize.large}
-        />
-      )
-    ).to.be.false;
   });
 
   it('renders SectionAssigner for instructor', () => {

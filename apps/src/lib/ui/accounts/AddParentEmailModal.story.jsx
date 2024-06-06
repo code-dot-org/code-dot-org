@@ -8,7 +8,6 @@ const DEFAULT_PROPS = {
 };
 
 export default {
-  title: 'AddParentEmailModal',
   component: AddParentEmailModal,
 };
 

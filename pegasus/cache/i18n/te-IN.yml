@@ -6,7 +6,7 @@ te-IN:
     లేదా చట్టపరమైన సంరక్షకుల అనుమతి ఉందని నేను ధృవీకరిస్తున్నాను.
   account_sign_up_email_opt_in: మా కోర్సులు, స్థానిక అవకాశాలు లేదా ఇతర కంప్యూటర్ సైన్స్
     వార్తలకు నవీకరణల గురించి మేము మీకు ఇమెయిల్ చేయవచ్చా? (సుమారు నెలకు ఒకసారి)
-  ai_activity: కార్యాచరణ
+  ai_activity: ఆక్టివిటీ
   ai_for_oceans: AI ఫర్ ఓషన్స్
   applab_gradelevel: వయస్సు 13+
   applab_name: యాప్ ల్యాబ్
@@ -17,6 +17,7 @@ te-IN:
   class_submission_level_high_school: ఉన్నత పాఠశాల
   class_submission_level_middle_school: మాధ్యమిక పాఠశాల
   classicmaze_name: క్లాసిక్ మేజ్
+  code_org_logo_alt: కోడ్. ఆర్గ్ హోమ్
   codebytes_skinny_banner_english_only: ఇంగ్లీష్-మాత్రమే
   codecademy_beyond_gradelevel: ఉన్నత పాఠశాల
   codecademy_gradelevel: ఉన్నత పాఠశాల
@@ -73,6 +74,7 @@ te-IN:
   dashboard_navigation_lesson_plans_resources: పాఠాంశ ప్రణాళిక ప్రమాణాలు
   dashboard_navigation_section_community: మద్దతు
   dashboard_navigation_section_teacher_progress: మీ కోర్సు పురోగతి
+  dashboard_overview: ఓవర్ వ్యూ
   dashboard_progress_completed_perfect: పూర్తయింది, పరిపూర్ణమైనది
   dashboard_progress_completed_too_many_blocks: పూర్తయింది, చాలా బ్లాక్స్
   dashboard_progress_furthest_level_attempted: అవతలిస్థాయి ప్రయత్నించారు
@@ -111,7 +113,7 @@ te-IN:
   footer_partners: భాగస్వాములు
   footer_powered_by_aws: అమెజాన్ వెబ్ సర్వీసెస్ మరియు “AWS చేత ఆధారితం” లోగో అమెజాన్.
     కామ్, ఇంక్ లేదా యునైటెడ్ స్టేట్స్ మరియు/లేదా ఇతర దేశాలలో దాని అనుబంధ సంస్థల ట్రేడ్మార్క్లు.
-  footer_privacy_policy: గోప్యతా పాలసీ
+  footer_privacy_policy: ప్రైవసీ పాలసీ
   footer_support: మద్దతు
   footer_terms: నిబంధనలు
   frozen_name: అన్నా మరియు ఎల్సాతో కోడ్
@@ -143,14 +145,16 @@ te-IN:
   header_educate_partner: మాతో భాగస్వామి
   header_educate_tools: ఉపకరణాలు మరియు వీడియోలు
   header_help_support: 'సహాయం మరియు మద్దతు '
-  header_help_us: మాకు సహాయం చెయ్యండి
-  header_learn: తెలుసుకోండి
-  header_legal_privacy: గోప్యతా పాలసీ
+  header_help_us: 'హెల్ప్ అస్ '
+  header_incubator: ఇంక్యుబేటర్
+  header_learn: నేర్చుకోండి
+  header_legal_privacy: ప్రైవసీ పాలసీ
   header_legal_tos: సర్వీసు నిబంధనలు
   header_my_dashboard: నా డాష్బోర్డ్
   header_professional_learning: ప్రొఫెషనల్ లెర్నింగ్
   header_project_gallery: ప్రాజెక్టులు
   header_report_bug: ఒక సమస్యను రిపోర్టు చేయండి
+  header_schools: పాఠశాలలు
   header_sections: సెక్షన్లు
   header_teach: నేర్పండి
   header_teacher_community: ఉపాధ్యాయ సమాజం

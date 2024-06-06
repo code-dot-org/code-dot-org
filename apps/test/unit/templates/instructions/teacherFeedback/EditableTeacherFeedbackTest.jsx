@@ -1,14 +1,16 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect, assert} from '../../../../util/reconfiguredChai';
-import {UnconnectedEditableTeacherFeedback as EditableTeacherFeedback} from '@cdo/apps/templates/instructions/teacherFeedback/EditableTeacherFeedback';
-import Comment from '@cdo/apps/templates/instructions/teacherFeedback/Comment';
-import EditableReviewState from '@cdo/apps/templates/instructions/teacherFeedback/EditableReviewState';
-import EditableFeedbackStatus from '@cdo/apps/templates/instructions/teacherFeedback/EditableFeedbackStatus';
-import Rubric from '@cdo/apps/templates/instructions/teacherFeedback/Rubric';
-import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import sinon from 'sinon';
+
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {ReviewStates} from '@cdo/apps/templates/feedback/types';
+import Comment from '@cdo/apps/templates/instructions/teacherFeedback/Comment';
+import EditableFeedbackStatus from '@cdo/apps/templates/instructions/teacherFeedback/EditableFeedbackStatus';
+import EditableReviewState from '@cdo/apps/templates/instructions/teacherFeedback/EditableReviewState';
+import {UnconnectedEditableTeacherFeedback as EditableTeacherFeedback} from '@cdo/apps/templates/instructions/teacherFeedback/EditableTeacherFeedback';
+import Rubric from '@cdo/apps/templates/instructions/teacherFeedback/Rubric';
+
+import {expect, assert} from '../../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   user: 5,
@@ -22,6 +24,7 @@ const DEFAULT_PROPS = {
   verifiedInstructor: true,
   selectedSectionId: 789,
   canHaveFeedbackReviewState: true,
+  allowUnverified: false,
   updateUserProgress: () => {},
 };
 

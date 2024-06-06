@@ -1,6 +1,6 @@
 import {expect} from '../../../util/reconfiguredChai';
 import React from 'react';
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import CourseOfferingEditor from '@cdo/apps/lib/levelbuilder/CourseOfferingEditor';
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
@@ -35,6 +35,8 @@ describe('CourseOfferingEditor', () => {
         description: 'An introductory course into computer science.',
         professional_learning: 'code.org/apply',
         self_paced_pl_course_offering_id: 1,
+        video: 'https://www.youtube-nocookie.com/test_video',
+        published_date: '2019-07-16 14:00:00',
       },
       selfPacedPLCourseOfferings: [
         {
@@ -57,6 +59,14 @@ describe('CourseOfferingEditor', () => {
         'K5 Workshops': 'code.org/professional-development-workshops',
         '6-12 Workshops': 'code.org/apply',
       },
+      videos: [
+        {
+          name: 'test_video',
+          youtube_url: 'https://www.youtube-nocookie.com/test_video',
+          thumbnail: null,
+          locale: 'en-US',
+        },
+      ],
     };
   });
 
@@ -96,6 +106,8 @@ describe('CourseOfferingEditor', () => {
         device_compatibility: JSON.stringify(deviceCompatibilities),
         description: 'An introductory course into computer science.',
         professional_learning: 'code.org/apply',
+        video: 'https://www.youtube-nocookie.com/test_video',
+        published_date: '2019-07-16 14:00:00',
       };
       server.respondWith('PUT', '/course_offerings/test-course-offering', [
         200,
@@ -171,6 +183,8 @@ describe('CourseOfferingEditor', () => {
         device_compatibility: JSON.stringify(deviceCompatibilities),
         description: 'An introductory course into computer science.',
         professional_learning: 'code.org/apply',
+        video: 'https://www.youtube-nocookie.com/test_video',
+        published_date: '2019-07-16 14:00:00',
       };
 
       server.respondWith('PUT', '/course_offerings/test-course-offering', [

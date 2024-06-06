@@ -1,12 +1,17 @@
 /** @overview Component for editing a key/value pair row. */
-import FirebaseStorage from '../firebaseStorage';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import PendingButton from '../../templates/PendingButton';
-import {castValue, displayableValue, editableValue} from './dataUtils';
-import dataStyles from './data-styles.module.scss';
-import classNames from 'classnames';
+
 import msg from '@cdo/locale';
+
+import PendingButton from '../../templates/PendingButton';
+import {storageBackend} from '../storage';
+
+import {castValue, displayableValue, editableValue} from './dataUtils';
+import {refreshCurrentDataView} from './loadDataForView';
+
+import dataStyles from './data-styles.module.scss';
 
 const INITIAL_STATE = {
   isDeleting: false,
@@ -49,10 +54,10 @@ class EditKeyRow extends React.Component {
         this.state.newValue,
         /* allowUnquotedStrings */ false
       );
-      FirebaseStorage.setKeyValue(
+      storageBackend().setKeyValue(
         this.props.keyName,
         newValue,
-        this.resetState,
+        this.onKeyValueChanged,
         msg => console.warn(msg)
       );
     } catch (e) {
@@ -61,17 +66,21 @@ class EditKeyRow extends React.Component {
     }
   };
 
-  resetState = () => {
+  onKeyValueChanged = () => {
     // Deleting a key/value pair could cause this component to become unmounted.
     if (this.isMounted_) {
       this.setState(INITIAL_STATE);
     }
+
+    refreshCurrentDataView();
   };
 
   handleDelete = () => {
     this.setState({isDeleting: true});
-    FirebaseStorage.deleteKeyValue(this.props.keyName, this.resetState, msg =>
-      console.warn(msg)
+    storageBackend().deleteKeyValue(
+      this.props.keyName,
+      this.onKeyValueChanged,
+      msg => console.warn(msg)
     );
   };
 

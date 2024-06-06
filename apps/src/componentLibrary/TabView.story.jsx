@@ -1,8 +1,8 @@
 import React from 'react';
+
 import TabView from './TabView';
 
 export default {
-  title: 'TabView',
   component: TabView,
 };
 

@@ -17,11 +17,18 @@
       "project_widget_visible": true,
       "supported_locales": [
         "ar-SA",
+        "ca-ES",
         "de-DE",
         "es-ES",
         "es-MX",
+        "fa-IR",
+        "fil-PH",
         "fr-FR",
+        "hi-IN",
+        "id-ID",
         "it-IT",
+        "ja-JP",
+        "ko-KR",
         "kn-IN",
         "mr-IN",
         "ms-MY",
@@ -30,14 +37,24 @@
         "pt-PT",
         "ro-RO",
         "ru-RU",
-        "sk-SK"
+        "sk-SK",
+        "sq-AL",
+        "ta-IN",
+        "te-IN",
+        "th-TH",
+        "tr-TR",
+        "uk-UA",
+        "ur-PK",
+        "vi-VN",
+        "zh-CN",
+        "zh-TW"
       ],
       "tts": true,
       "version_year": "2021"
     },
     "new_name": null,
     "family_name": "pre-express",
-    "serialized_at": "2022-04-05 22:41:41 UTC",
+    "serialized_at": "2023-11-11 00:09:05 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -8209,6 +8226,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

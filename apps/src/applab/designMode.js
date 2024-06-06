@@ -3,29 +3,33 @@ import 'jquery-ui/ui/effects/effect-drop';
 import 'jquery-ui/ui/widgets/draggable';
 import 'jquery-ui/ui/widgets/droppable';
 import 'jquery-ui/ui/widgets/resizable';
+import objectFitImages from 'object-fit-images';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import RGBColor from 'rgbcolor';
-import objectFitImages from 'object-fit-images';
-import DesignWorkspace from './DesignWorkspace';
+
+import autogenerateML from '@cdo/apps/applab/ai';
+import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
+
 import * as assetPrefix from '../assetManagement/assetPrefix';
-import elementLibrary from './designElements/library';
-import * as elementUtils from './designElements/elementUtils';
-import {singleton as studioApp} from '../StudioApp';
+import {ImageMode} from '../code-studio/components/AssetManager';
+import project from '../code-studio/initApp/project';
 import {KeyCodes, NOTIFICATION_ALERT_TYPE} from '../constants';
-import * as applabConstants from './constants';
-import sanitizeHtml from './sanitizeHtml';
-import * as utils from '../utils';
-import * as gridUtils from './gridUtils';
+import firehoseClient from '../lib/util/firehose';
 import logToCloud from '../logToCloud';
+import {getStore} from '../redux';
+import {singleton as studioApp} from '../StudioApp';
+import * as utils from '../utils';
+
+import * as applabConstants from './constants';
+import * as elementUtils from './designElements/elementUtils';
+import elementLibrary from './designElements/library';
+import DesignWorkspace from './DesignWorkspace';
+import * as gridUtils from './gridUtils';
 import {actions} from './redux/applab';
 import * as screens from './redux/screens';
-import {getStore} from '../redux';
-import firehoseClient from '../lib/util/firehose';
-import project from '../code-studio/initApp/project';
-import {ImageMode} from '../code-studio/components/AssetManager';
-import autogenerateML from '@cdo/apps/applab/ai';
+import sanitizeHtml from './sanitizeHtml';
 
 var designMode = {};
 export default designMode;
@@ -1204,6 +1208,7 @@ designMode.parseFromLevelHtml = function (rootEl, allowDragging, prefix) {
   var levelDom = $.parseHTML(
     sanitizeHtml(Applab.levelHtml, reportUnsafeHtml, true)
   );
+  sanitizeLevelDom(levelDom);
   var children = $(levelDom).children();
   children.each(function () {
     designMode.parseScreenFromLevelHtml(
@@ -1215,6 +1220,37 @@ designMode.parseFromLevelHtml = function (rootEl, allowDragging, prefix) {
   });
   children.appendTo(rootEl);
 };
+
+// We have seen issues where design mode HTML somehow contains HTML from
+// outside the design mode area (ex. codeApp, visualizationArea). We don't know
+// exactly how this is happening, but this function removes those selectors to
+// help prevent the page from breaking.
+function sanitizeLevelDom(levelDom) {
+  const disallowedSelectors = [
+    '#codeApp',
+    '#visualizationColumn',
+    '#visualizationResizeBar',
+    '#null',
+    '.editor-column',
+  ];
+
+  const foundSelectors = [];
+
+  for (const selector of disallowedSelectors) {
+    if ($(levelDom).find(selector).length > 0) {
+      foundSelectors.push(selector);
+      $(levelDom).find(selector).remove();
+    }
+  }
+
+  if (foundSelectors.length > 0) {
+    MetricsReporter.logWarning({
+      message: 'Invalid HTML detected in App Lab project',
+      channelId: Applab.channelId,
+      selectors: foundSelectors,
+    });
+  }
+}
 
 /**
  * When we make elements resizable, we wrap them in an outer div. Given an outer

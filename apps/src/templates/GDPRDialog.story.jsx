@@ -1,8 +1,8 @@
 import React from 'react';
+
 import GDPRDialog from './GDPRDialog';
 
 export default {
-  title: 'GDPRDialog',
   component: GDPRDialog,
 };
 

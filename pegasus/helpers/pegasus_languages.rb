@@ -1,3 +1,5 @@
+require_relative '../src/env'
+
 require 'cdo/db'
 require 'cdo/languages'
 

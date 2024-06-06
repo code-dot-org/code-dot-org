@@ -6,10 +6,11 @@ sq-AL:
   account_sign_up_child_accept_terms: Konfirmoj se kam lejen e prindit ose të kujdestarit
     ligjor për të përdorur shërbimet e Code.org.
   account_sign_up_email_opt_in: A mund t'ju dërgojmë email-e mbi përditësimin e kurseve
-    tona, mundësitë lokale apo të rejat e shkencave kompjuterike? (afërsisht një herë
-    në muaj)
+    tona, mundësitë apo të rejat për shkencatkompjuterike? (afërsisht një herë në
+    muaj)
   ai_activity: Aktiviteti
   ai_description: Përshkrimi
+  ai_for_oceans: IA për oqeanet
   ai_for_oceans_lesson_plan: plani mësimor
   alice_beyond_gradelevel: Shkolla tetë vjeçare +
   alice_beyond_longdescription: Duke përdorur një mjedis programimi inovativ që suporton
@@ -58,7 +59,7 @@ sq-AL:
   arduino_beyond_name: Arduino me Sparkfun
   arduino_beyond_platformtext: Shfletues i faqeve të internetit, më pas bli Kit
   arduino_beyond_shortdescription: Mëso Arduino me Sparkfun's Digital Sandbox.
-  are_you_teacher: A jeni një mësues?
+  are_you_teacher: A jeni një mësimdhënës?
   artist_gradelevel: Moshat 8+
   artist_name: Artisti
   artist_shortdescription: Vizato figura të hatashme dhe dizenjo me Artistin!
@@ -108,9 +109,9 @@ sq-AL:
   cargobot_beyond_shortdescription: Programo një krah roboti në iPad-in tënd
   carousel_heading_apps_games: Bëj aplikacionet ose lojrat e tua
   carousel_heading_beginners: Tutoriale për Fillestarët
-  carousel_heading_beyond_devices: Aplikacione me tutoriale për telefona dhe tableta
-  carousel_heading_beyond_javascript: Tutorialet që mësojnë JavaScript
-  carousel_heading_beyond_languages: Tutoriale në gjuhë të tjera programimi
+  carousel_heading_beyond_devices: Aplikacione për telefona dhe tableta
+  carousel_heading_beyond_javascript: Mësoni JavaScript
+  carousel_heading_beyond_languages: Mësoni gjuhë të tjera programimi
   carousel_heading_devices: Aplikacione me tutoriale për telefona dhe tableta
   carousel_heading_domestic: Tutorialet vetëm në Anglisht
   carousel_heading_ide: Platformat popullore ndërmjet mësuesëve
@@ -118,11 +119,11 @@ sq-AL:
   carousel_heading_javascript: Tutorialet që mësojnë JavaScript
   carousel_heading_languages: Tutoriale në gjuhë të tjera programimi
   carousel_heading_robots: Mëso të programosh me robota
-  carousel_heading_university: Kurse online të universitetit
+  carousel_heading_university: Kurset online dhe shkollat
   carousel_heading_unplugged: Nuk ke pajisje ose internet? Provo shkencën kompjuterike
     'unplugged'
   carousel_heading_webpages: Mëso të bësh faqe interneti
-  cded_sign_up: Rregjistrohu
+  cded_sign_up: Regjistrohu
   cded_try_it: Provoje
   city: Qyteti
   class_submission_in_school: Në shkollë
@@ -156,6 +157,7 @@ sq-AL:
   class_submission_out_of_school_summer_camp: Kamp veror
   classicmaze_name: Labirint Klasik
   code_hoc_coming: Ora e Kodimit është këtu - Dhjetor 8-14!
+  code_org_logo_alt: Code.org Faqja kryesore
   code_sign_up: Rregjistrohu për të marrë pjesë në Javën Edukative për SHK
   codea_beyond_gradelevel: Shkolla e mesme +
   codea_beyond_longdescription: Codea për iPad të lejon ty të krijosh lojëra dhe simulime
@@ -185,6 +187,7 @@ sq-AL:
   codeavengers_name: Ndërto një lojë me JavaScript
   codeavengers_platformtext: Browserat modern të webit
   codeavengers_shortdescription: Mëso programimin në JavaScript, në një shfletues
+  codebytes_skinny_banner_english_only: Vetëm në anglisht
   codecademy_beyond_gradelevel: Shkolla e mesme
   codecademy_beyond_longdescription: Codecademy është një hyrje interaktive, e udhëhequr
     nga studentët në bazat e SHK përmes JavaScript që përodret nga dhjetra miliona
@@ -283,7 +286,7 @@ sq-AL:
     rreth programimit.
   codesters_gradelevel: Moshat 12-14
   codesters_platformtext: Browserat modern të webit
-  compatibility_hide_this_warning: Mbaj të fshehtë këtë paralajmërim
+  compatibility_hide_this_warning: Fshihni këtë paralajmërim
   compatibility_unsupported_browser: Shfletuesi juaj nuk suportohet. Ju lutem përmirësoni
     versionin e shfletuesit në <a href='%{supported_browsers_url}', target='_blank'>
     një nga shfletuesit që suportohen</a>. Ju mund të provoni ta shikoni faqen, por
@@ -314,7 +317,7 @@ sq-AL:
   congrats_next_tutorials_title: Më pas provoni këto tutoriale
   congrats_third_party_title: Përdori aftësitë tua në këto webfaqe dhe aplikacione
   congratulations: Urime!
-  congratulations_on_completing_course: Përgëzime në plotësimin e %{course}
+  congratulations_on_completing_course: Urime për përfundimin e %{course}
   congratulations_on_completing_hoc: Urime që përfunduat një Orë Kodimi
   congratulations_volunteer: 'Përgëzime: Tani pasiqë keni provuar Orën e Kodimit,
     <a href="https://code.org/volunteer">regjistrohu të bëhesh vullnetarë në një klasë</a>
@@ -345,33 +348,74 @@ sq-AL:
   course4_name: Kursi 4
   coursea-2017_gradelevel: Moshat 4-7
   coursea-2018_gradelevel: Moshat 4-7
+  coursea-2018_name: Kursi A (2018)
   coursea-2019_gradelevel: Moshat 4-7
+  coursea-2019_name: Kursi A (2019)
   coursea-2020_gradelevel: Moshat 4-7
+  coursea-2020_name: Kursi A (2020)
+  coursea-2020_shortdescription_congrats: Mësoni bazat e shkencave kompjuterike dhe
+    sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund
+    të ndani.
   coursea-2021_gradelevel: Moshat 4-7
+  coursea-2021_name: Kursi A (2021)
+  coursea-2021_shortdescription_congrats: Mësoni bazat e shkencave kompjuterike dhe
+    sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund
+    të ndani.
   coursea-2022_gradelevel: Moshat 4-7
   coursea-2022_name: Kursi A (2022)
+  coursea-2022_shortdescription_congrats: Mësoni bazat e shkencave kompjuterike dhe
+    sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund
+    të ndani.
+  coursea-draft_name: Kursi A
   coursea_gradelevel: Moshat 4-7
+  coursea_name: Kursi A
   courseb-2017_gradelevel: Moshat 5-8
   courseb-2018_gradelevel: Moshat 5-8
+  courseb-2018_name: Kursi B (2018)
   courseb-2019_gradelevel: Moshat 5-8
+  courseb-2019_name: Kursi B (2019)
   courseb-2020_gradelevel: Moshat 5-8
+  courseb-2020_shortdescription_congrats: Mësoni bazat e shkencave kompjuterike dhe
+    sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund
+    të ndani.
   courseb-2021_gradelevel: Moshat 5-8
+  courseb-2021_name: Kursi B (2021)
+  courseb-2021_shortdescription_congrats: Mësoni bazat e shkencave kompjuterike dhe
+    sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund
+    të ndani.
   courseb-2022_gradelevel: Moshat 5-8
   courseb-2022_name: Kursi B (2022)
+  courseb-2022_shortdescription_congrats: Mësoni bazat e shkencave kompjuterike dhe
+    sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund
+    të ndani.
   courseb_gradelevel: Moshat 5-8
   coursec-2017_gradelevel: Moshat 6-10
+  coursec-2017_shortdescription_congrats: Mësoni bazat e shkencave kompjuterike dhe
+    krijoni artin, historitë dhe lojërat tuaja.
   coursec-2018_gradelevel: Moshat 6-10
+  coursec-2018_shortdescription_congrats: Mësoni bazat e shkencave kompjuterike dhe
+    krijoni artin, historitë dhe lojërat tuaja.
   coursec-2019_gradelevel: Moshat 6-10
+  coursec-2019_shortdescription_congrats: Mësoni bazat e shkencave kompjuterike dhe
+    krijoni artin, historitë dhe lojërat tuaja.
   coursec-2020_gradelevel: Moshat 6-10
   coursec-2021_gradelevel: Moshat 6-10
+  coursec-2021_name: Kursi C (2021)
   coursec-2022_gradelevel: Moshat 6-10
-  coursec_gradelevel: Moshat 6-10
+  coursec-2022_name: Kursi C (2022)
+  coursec-draft_name: Kursi C
+  coursec_gradelevel: 'Moshat 6-10 '
+  coursec_name: Kursi C
+  coursec_shortdescription_congrats: Mësoni bazat e shkencave kompjuterike dhe krijoni
+    artin, historitë dhe lojërat tuaja.
   coursed-2017_gradelevel: Klasat 8+
   coursed-2018_gradelevel: Klasat 8+
   coursed-2019_gradelevel: Klasat 8+
   coursed-2020_gradelevel: Klasat 8+
   coursed-2021_gradelevel: Klasat 8+
+  coursed-2021_name: Kursi D (2021)
   coursed-2022_gradelevel: Klasat 8+
+  coursed-2022_name: Kursi D (2022)
   coursed_gradelevel: Klasat 8+
   coursee-2017_gradelevel: Moshat 8-12
   coursee-2018_gradelevel: Moshat 8-12
@@ -379,14 +423,17 @@ sq-AL:
   coursee-2020_gradelevel: Moshat 8-12
   coursee-2021_gradelevel: Moshat 8-12
   coursee-2022_gradelevel: Moshat 8-12
+  coursee-2022_name: Kursi E (2022)
   coursee_gradelevel: Moshat 8-12
-  coursef-2017_gradelevel: Moshat 9-13
-  coursef-2018_gradelevel: Moshat 9-13
-  coursef-2019_gradelevel: Moshat 9-13
-  coursef-2020_gradelevel: Moshat 9-13
-  coursef-2021_gradelevel: Moshat 9-13
-  coursef-2022_gradelevel: Moshat 9-13
-  coursef_gradelevel: Moshat 9-13
+  coursef-2017_gradelevel: Moshat 9 -13
+  coursef-2018_gradelevel: Moshat 9 -13
+  coursef-2019_gradelevel: Moshat 9 -13
+  coursef-2020_gradelevel: Moshat 9 -13
+  coursef-2021_gradelevel: Moshat 9 -13
+  coursef-2021_name: Kursi F (2021)
+  coursef-2022_gradelevel: Moshat 9 -13
+  coursef-2022_name: Kursi F (2022)
+  coursef_gradelevel: 'Moshat 9 -13 '
   coursera_beyond_gradelevel: Universiteti
   coursera_beyond_longdescription: 'Klasa CS 101 e Stanford i shpjeguar nga Nick Parlante
     (FALAS). CS101 ju mëson idetë bazë të Shkencës Kompjuterike për ata që nuk kanë
@@ -406,19 +453,19 @@ sq-AL:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">A je ti një mësues për shkencat kompjuterike? Shiko burimet
     e javes për shkencat kompjuterike</a>'
-  csedweek_banner_teachers_text: A je ti një mësues për shkencat kompjuterike? Shiko
-    burimet e javes për shkencat kompjuterike
+  csedweek_banner_teachers_text: A jeni një mësimdhënës i Shkencave Kompjuterike?
+    Shikoni burime të tjera të CSEdWeek
   csedweek_dates: Dhjetor 8-14, 2014
   csedweek_map_header: "#CSEdWeek / Hour of Code ngjarjet në mbarë botën"
   csedweek_map_legend_cs_tech_jam: Ngjarje speciale
   csedweek_map_legend_event: Ngjarje e Orës së Kodimit
   csedweek_map_legend_title: Legjend
   csedweek_map_search_placeholder: Kërko ngjarjet Hour of Code
-  csedweek_map_search_reset: Rivendosn
+  csedweek_map_search_reset: Rifillo
   csedweek_map_search_search: Kërko
   csedweek_map_signup: Regjistro ngjarjen tënde
   csedweek_og_description: 'Ora e Kodimit është një lëvizje globale që i përfshin
-    dhjetëra miliona studentë në mbi 180 shtete dhe mbi 45 gjuhë. '
+    dhjetëra miliona nxënës në mbi 180 shtete dhe mbi 45 gjuhë. '
   csedweek_og_title: Ora e kodimit po vjen
   csfirst_gradelevel: Moshat 9-14
   csfirst_platformtext: Browserat modern të webit
@@ -455,7 +502,7 @@ sq-AL:
   dashboard_curriculum: Plani mësimor
   dashboard_curriculum_csina: 'Shkencat Kompjuterike në fushën e algjebrës:'
   dashboard_curriculum_csins: 'Shkencat kompjuterike si pjesë e shkencës:'
-  dashboard_curriculum_csp: 'Ap® Parimet e Shkencave Kompjuterike:'
+  dashboard_curriculum_csp: 'Parimet e Shkencave Kompjuterike:'
   dashboard_curriculum_ecs: 'Explorimi i Shkencave Kompjuterike:'
   dashboard_curriculum_high_title: Burime për Mësues të Shkollave të Mesme
   dashboard_curriculum_k5_title: Burimet e Mësuesve për K-5
@@ -538,7 +585,7 @@ sq-AL:
   dashboard_navigation_all_sections: Llogaritë dhe Ecuria e Studentit
   dashboard_navigation_home_page: Faqja kryesore e mësuesit
   dashboard_navigation_lesson_plans_resources: Planet Mësimore dhe Burimet
-  dashboard_navigation_manage_students: Menaxho Studentët
+  dashboard_navigation_manage_students: Menaxho nxënësit
   dashboard_navigation_section: 'Seksioni: %{section_name}'
   dashboard_navigation_section_community: Ndihma dhe Komuniteti
   dashboard_navigation_section_lesson_plans: Planet Mësimore dhe Burimet
@@ -550,7 +597,7 @@ sq-AL:
   dashboard_navigation_view_assessments: Vlerësimet
   dashboard_navigation_view_progress: Ecuri
   dashboard_navigation_view_stats: statistikat
-  dashboard_overview: Përmbledhja
+  dashboard_overview: Përmbledhje
   dashboard_percent: Përqindje
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Kliko
     këtu</a> për dokumentat tona të privatësisë që mund të ndahen ose printohen për
@@ -579,7 +626,8 @@ sq-AL:
   dashboard_sections_login_type_explanation: Kjo tabelë shpjegonë se cili nga këto
     lloje logimi, <b>figura, fjala ose email-i</b>, do të duash të zgjedhësh për një
     seksion.
-  dashboard_sections_name: Emri Seksionit
+  dashboard_sections_name: 'Emri i sesionit:'
+  dashboard_sections_new_google_section: Seksioni i importit nga Google Classroom
   dashboard_sections_new_section: Seksion i ri
   dashboard_sections_password_account_creation: Fjalëkalimi i krijuar nga studentet
   dashboard_sections_password_question: Çfarë përdorin studentët si një "fjalëkalim"?
@@ -603,13 +651,13 @@ sq-AL:
   dashboard_sections_table_code: Pjesë Kodi
   dashboard_sections_table_course: Kurs
   dashboard_sections_table_grade: Notë
-  dashboard_sections_table_pairing_allowed: Programim në çift
+  dashboard_sections_table_pairing_allowed: Programimi në ekip
   dashboard_sections_table_secret: Mënyra e logimit
   dashboard_sections_table_section: Pjesë
-  dashboard_sections_table_students: Studentët
+  dashboard_sections_table_students: Nxënësit
   dashboard_sections_word_account_creation: Një fjalë e thjeshtë e caktuar nga Code.org
-  dashboard_sections_yes_both: Po, unë dua t'i kopjoj student(ët) që të jenë në këtë
-    seksion DHE në seksionin e ri
+  dashboard_sections_yes_both: Po, dua të kopjoj nxënësit që të jenë në këtë sesion
+    aktual DHE sesionin e ri
   dashboard_sequence: Sekuencë
   dashboard_stage: Fazë
   dashboard_standards: Standartet
@@ -622,7 +670,7 @@ sq-AL:
   dashboard_students_join_link: Thuaju studentëve të krijojnë llogarinë e tyre dhe
     të bashkohen në seksionin tuaj te
   dashboard_students_male: Mashkull
-  dashboard_students_name: Emri
+  dashboard_students_name: 'Emri:'
   dashboard_students_new_section: Ti ke krijuar një seksion të ri! Tani shto studentë
     duke përdorur butonat lartë <b>Shto studentë</b> dhe <b>Shto studentë të shumëfishtë</b>.
   dashboard_students_no_email: Nëse studentet tuaj nuk kanë adresa email-i, ose ti
@@ -647,11 +695,13 @@ sq-AL:
     Kjo do të thotë që secili student ka fjalë sekrete që i përdor në vend të fjalekalimit
     kur logohet. Studentët duhet të perdorin adresën e logimit e dhënë më lart për
     tu loguar.
-  dashboard_students_secret_word_title: Fjala e Fshehtë
-  dashboard_students_share_section: 'Shpërndaje këtë faqe logimi për seksionin me
-    studentet tuaj:'
+  dashboard_students_secret_word_title: Kodi sekret
+  dashboard_students_share_section: Kërkoni nxënësit tuaj të shkojnë në <a href=%{join_url}>%{join_url}</a>
+    dhe shkruajnë kodin e seksionit (%{section_code})
   dashboard_students_total_lines: Rreshta Kodi
   dashboard_students_url: URL
+  dashboard_submission_in_progress: Në proces
+  dashboard_submission_submitted: Dorëzuar
   dashboard_teacher: Mësues
   dashboard_teacher_worksheet: puna mësuesit
   dashboard_view_all_lesson_plans: Shkarko planin mësimor për kurset 1-3
@@ -672,6 +722,8 @@ sq-AL:
   enter_country: Vendos shtetin nëse jeni nga jashtë Shteteve të Bashkuara
   enter_valid_age: Të lutem zgjidh një moshë të vlefshme
   enter_valid_email: Ju lutem shkruani një adresë email-i të vlefshme
+  express-2021_name: Kursi Express (2021)
+  express-2022_name: Kursi Express (2022)
   finch_beyond_gradelevel: Moshat 8+
   finch_beyond_longdescription: Finchi është një robot i ri për edukimin në shkencën
     kompjuterike. Dizenjimi i tij është rezultati i 4 viteve studimi tek labortori
@@ -695,9 +747,13 @@ sq-AL:
   flappy_text: Code.org sapo mbushi një vit.<br/><br/> Festo me ne duke krijuar lojën
     tuaj <b>Flappy</b>. Kodo rregullat e tua dhe ndaji ato me shoket e tu!
   footer_about: Rreth
+  footer_built_on_github: E ndërtuar në GitHub nga Microsoft
+  footer_cookie_notice: Njoftim për Cookie
   footer_donate: Dhuro
+  footer_partners: Partnerët
   footer_powered_by_aws: Mundësuar nga Amazon Web Services
   footer_privacy_policy: Rregullat e Privatësisë
+  footer_store: Dyqani
   footer_support: Ndihma dhe Komuniteti
   footer_terms: Termat
   frozen_gradelevel: Moshat 8+
@@ -709,15 +765,16 @@ sq-AL:
   frozen_platformtext: Shfletuesit modernë + tabletat
   frozen_shortdescription: Le të përodrim kod për të bashkuar Anën dhe Elsën ndërkohë
     që ato eksplorojnë magjinë dhe bukurinë e akullit.
+  gamelab_name: Game Lab
   gender: Gjini
   get_a_certificate_message: Ne do tu dergojmë një certifikate dhe informacione se
     si mund të mesoni <a href='/learn/beyond'>përtej Ores së Kodimit</a>
   get_a_certificate_message_after: Kliko te certivikata për ta shkarkuar ose për ta
     printuar. Tani vazhdo me <a href='http://studio.code.org'> kurset e tjera</a>,
     ose shiko mundësi të tjera tek <a href='/learn/beyond'> Mëso Përtej Një Ore</a>.
-  get_a_certificate_message_after_markdown: Kliko te certivikata për ta shkarkuar
-    ose për ta printuar. Tani vazhdo me [kurset e tjera](http://studio.code.org),
-    ose shiko mundësi të tjera tek [Mësoni përtej një ore](/learn/beyond].
+  get_a_certificate_message_after_markdown: Klikoni mbi certifikatën për ta shkarkuar
+    ose printuar atë. Tani, vazhdoni me [kurset e tjera] tona (http://studio.code.org),
+    ose shikoni më shumë opsione për [Mëso përtej një ore] (/mëso/përtej).
   get_a_certificate_of_achievement: Merr një certifikatë të arritjes
   get_started: Fillo
   girl: Vajzë
@@ -754,16 +811,48 @@ sq-AL:
   hacketyhack_beyond_platformtext: Instalim desktopi
   hacketyhack_beyond_shortdescription: Mëso Ruby nga fillimi
   header_about: Rreth
+  header_about_contact: Na kontaktoni
+  header_about_donors: Donatorët
+  header_about_evaluation: Vlerësim
+  header_about_faqs: "(FAQ) Pyetjet e shpeshta"
+  header_about_jobs: Karriera
+  header_about_leadership: Udhëheqja
+  header_about_news: Redaksia
+  header_about_partners: Partnerët
+  header_about_team: Ekipi i plotë
+  header_about_us: Rreth nesh
+  header_course_catalog: Katalogu i kurseve
   header_courses: Kurset
+  header_districts: Rrethet
+  header_documentation: Dokumentacioni
+  header_educate_beyond: Përtej Code.org
+  header_educate_community: Komuniteti Online
+  header_educate_elementary: Shkollë Fillore
+  header_educate_high: Shkollë e Mesme e Lartë
   header_educate_hoc: Ora e Kodimit
-  header_help_us: Na Ndihmo
+  header_educate_inspire: Frymëzoni një nxënës
+  header_educate_middle: Shkollë e Mesme e Ultë
+  header_educate_overview: Përmbledhje e mësimdhënësit
+  header_educate_partner: Partner me ne
+  header_educate_requirements: Kërkesat teknike
+  header_educate_tools: Veglat dhe Videot
+  header_help_us: Na ndihmoni
+  header_incubator: Inkubatori
   header_learn: Mëso
+  header_legal: Ligjore & Private
+  header_legal_cookie_notice: Njoftim për Cookie
   header_legal_privacy: Rregullat e Privatësisë
   header_legal_tos: Kushtet e shërbimit
+  header_my_dashboard: Paneli im
+  header_professional_learning: Mësimi Profesional
   header_project_gallery: Projekte
+  header_report_abuse: Raporto abuzim
   header_report_bug: Raporto një problem
-  header_sections: Seksionet
+  header_schools: Shkollat
+  header_sections: Sesionet
   header_stats: statistikat
+  header_teach: Mësoni
+  header_tutorials: Tutoriale
   hello: Pershendetje Botë
   help_recruit: Na ndihmo te rekrutojmë më shumë kodues!
   help_recruit_coders: Na ndihmoni të rekrutojmë më shumë kodues për skuadrën tënde!
@@ -783,8 +872,12 @@ sq-AL:
   hoc2014_whatishoc: Çfarë është Ora e Kodimit?
   hoc2018_creativity_create: Krijo
   hoc2018_creativity_hoc_coming: Ora e kodimit po vjen…
+  hoc2018_creativity_what_will_you_create: Çfarë do të krijoni?
   hoc2018_dance_amazon_about_future_engineer_button: Mëso më shumë
+  hoc2018_dance_keep_on_dancing_box_title: Vazhdoni të kërceni
+  hoc2018_dance_party_box_title: Festë vallëzimi
   hoc2018_dance_party_button: Fillo
+  hoc2018_dance_party_main_heading: Festë vallëzimi
   hoc2018_dance_teacher_resources_tile1_button: Plani Mësimor
   hoc2018_dance_teacher_resources_tile2_button: Aktiviteti Unplugged
   hoc2018_mc_adventurer_description: Përdorni kodin për të marrë Alex apo Steve në
@@ -797,18 +890,21 @@ sq-AL:
   hoc2018_mc_designer_title: Dizenjuesi i Minecraft
   hoc2018_mc_details: Shumë gjuhë | Browserët modern dhe tabletat | Klasat 2+
   hoc2018_mc_download_adventurer: 'Shkarko versionin offline të Aventurave Minecraft '
+  hoc2018_mc_educators_box2_button: Shkarko
   hoc2018_mc_homepage_join_us: Na u bashko!
   hoc2018_mc_homepage_try_it: Provoje
+  hoc2018_mc_homepage_what_create: Çfarë do të krijoni?
   hoc2018_mc_page_title: Tutorialet e Orës së Kodimit Minecraft
   hoc2018_mc_start: Fillo
   hoc2018_mc_video_1min: 1 minutë
   hoc2018_mc_video_2min: 2 minutë
   hoc2018_mc_video_5min: 5 minutë
+  hoc2018_mc_video_title_cs_is_everything: Shkenca kompjuterike po ndryshon gjithçka
   hoc2018_mc_video_title_inspire_girl: Frymëzo një vajzë
-  hoc2018_mc_video_title_sports: Nxit vetveten. Çdokush mund të mësoj.
+  hoc2018_mc_video_title_sports: Shtyni veten. Çdokush mund të mësojë.
   hoc2018_mc_videos_more: Më shumë <a href='%{inspiring_videos_playlist}'>video inspiruese</a>duke
     shfaqur modele dhe të famshëm
-  hoc2018_mc_watch_videos: Para se të fillosh, shiko një nga këto video frymëzuese
+  hoc2018_mc_watch_videos: Para se të filloni, shikoni një nga këto video frymëzuese
   hoc2022_banner_title: Eksploro, Luaj, Krijo!
   hoc2022_landing_page_create_title: Krijo
   hoc2022_landing_page_explore_description: פתחו דלתות לעולמות חדשים עם מדעי המחשב!
@@ -816,6 +912,7 @@ sq-AL:
   hoc2022_landing_page_play_title: Luaj
   hoc_is_here: Ora e kodimit është duke ardhur përsëri në 5-11 Dhjetor. https://youtu.be/KsOIlDT145A.
   hoc_leaderboards: Tabela e udheheqësve të Orës Së Kodimit
+  hoc_overview_dance_title: Festë vallëzimi
   hoc_overview_start_tutorial: Fillo
   homepage_action_text_codevideo: Ndiq videon
   homepage_action_text_girlvideo: Frymëzo një vajzë
@@ -823,7 +920,7 @@ sq-AL:
   homepage_action_text_join_us: Na u bashko!
   homepage_action_text_learn: Fillo të mësosh
   homepage_action_text_num_served: "# e dorëzuar"
-  homepage_action_text_sign_up: Rregjistrohu
+  homepage_action_text_sign_up: Regjistrohu
   homepage_action_text_signpetition: Nënshkruaj peticionin
   homepage_action_text_teachervideo: Ndiq videon
   homepage_action_text_try_it: Provoje
@@ -934,6 +1031,7 @@ sq-AL:
   homepage_slot_text_title_hoc: Ora e Kodimit
   homepage_slot_text_title_students: Studentët
   homepage_solot_text_link_volunteer: Vullnetarizo për Orën e Kodimit
+  homepage_stats_teachers: mësimdhënësit përdorin Code.org
   hopscotch_beyond_gradelevel: Shkolla tetë vjeçare +
   hopscotch_beyond_longdescription: Tutorial për studentët në iPad duke përdorur gjuhën
     e programimit Hopscotch. Studentët do të ndërtojnë lojëra dhe aplikacione për
@@ -960,17 +1058,17 @@ sq-AL:
     ose pafundesi personazhesh Disney.
   just_did_accelerated: Unë sapo përfundova kursin e përshpejtuar - kontrollojeni
     atë ! @codeorg
-  just_did_course1: Unë sapo përfundova kursin 1 - kontrollojeni atë ! @codeorg
-  just_did_course2: Unë sapo përfundova kursin 2- kontrollojeni atë ! @codeorg
-  just_did_course3: Unë sapo përfundova kursin 3- kontrollojeni atë ! @codeorg
-  just_did_course4: Unë sapo përfundova kursin 4- kontrollojeni atë ! @codeorg
+  just_did_course1: Unë sapo përfundova kursin 1 - kontrollojeni atë! @codeorg
+  just_did_course2: Unë sapo përfundova kursin 2 - kontrollojeni atë! @codeorg
+  just_did_course3: Unë sapo përfundova kursin 3 - kontrollojeni atë! @codeorg
+  just_did_course4: Unë sapo përfundova kursin 4 - kontrollojeni atë! @codeorg
   just_did_coursea: Unë sa përfundova Kursin A - shikoje! @codeorg
   just_did_courseb: Unë sa përfundova Kursin B - shikoje! @codeorg
   just_did_coursec: Unë sa përfundova Kursin C - shikoje! @codeorg
   just_did_coursed: Unë sa përfundova Kursin D - shikoje! @codeorg
   just_did_coursee: Unë sa përfundova Kursin E - shikoje! @codeorg
   just_did_coursef: Unë sa përfundova Kursin F - shikoje! @codeorg
-  just_did_hoc: 'Unë sapo mbarova #OrënPërKodim - provoje! @codeorg'
+  just_did_hoc: 'Sapo bëra #HourOfCode - shikoni! @codeorg'
   khan_beyond_gradelevel: Shkolla tetë vjeçare +
   khan_beyond_longdescription: Mëso bazat e programimit në JavaScript, ndërsa krijon
     vizatime argëtuese me kodin tënd. Bëje vetë ose me klasën tënde!
@@ -1058,8 +1156,14 @@ sq-AL:
   kodu_beyond_shortdescription: Dizenjo një botë lojrash 3D
   leaderboards_for_hoc: Tabela e udhëheqësve për Orën e Kodimin.
   learn_back_to_minecraft: Mëso vazhdimisht me Minecraft
+  learn_banner_desc: Ora e Kodimit është një lëvizje globale që arrin mbi 100 milionë
+    studentë në më shumë se 180 vende. Çdokush, kudo mund të organizojë një event
+    Hour of Code. Na ndihmoni t'i japim çdo nxënësi mundësinë për të mësuar shkenca
+    kompjuterike! Organizatorët mund të ndjekin udhëzuesin tonë <a href='%{how_to_url}'
+    target='_blank'>si</a> për të mësuar një orë kodi dhe të frymëzojnë nxënësit me
+    <a href='%{videos_url}' target='_blank'>këto video</a>.
   learn_classes: Gjej klasa lokale
-  learn_code_studio: Provo kurset e Code Studio
+  learn_code_studio: Provoni kurset e Code.org
   learn_cs_concepts: Mësoni konceptet fillestare të Shkencave Kompjuterike me programim
     merr dhe lësho. Ky është një mësim sikurse lojë me video me mësimë nga Bill Gates,
     Mark Zuckerberg, Zogjët e Zemëruar dhe Bimët kundër Lugatëve. Mësoni unazat-kthyese,
@@ -1068,10 +1172,10 @@ sq-AL:
   learn_educator_resources_description: Mësoni si të jepni mësim për Orën e Kodimit
   learn_hoc: Meso Orën e Kodimit
   learn_more: Mëso më Shumë
-  learn_next_level: Provo një kurs tjetër nga Code Studio
+  learn_next_level: Provoni një kurs tjetër Code.org
   learn_now: Meso tani
   learn_online: Provo kurse të tjera online
-  learn_sign_up_button: Rregjistrohu
+  learn_sign_up_button: Regjistrohu
   learn_sign_up_description: Regjostrohuni që të bëheni pjesë e Orës së Kodimit gjatë
     Javës së Mësimdhënies së Shkencave Kompjuterike
   lego_beyond_gradelevel: Shkolla tetë vjeçare +
@@ -1118,25 +1222,24 @@ sq-AL:
   lynda_beyond_shortdescription: Kurse programimi online me shumicë
   make_app: Bëj një aplikacion
   makeschool_beyond_gradelevel: Shkolla e mesme
-  makeschool_beyond_longdescription: A di pak ObjectiveC? Mëso të bësh një lojë për
-    iPhone në një orë! Ne do t'ju udhëheqim ju drejt procesit, te kodimit, të testimit,
-    dhe për të luajtur lojën tënde në shfletues dhe më pas shpërndaje atë në Facebook
-    për ta provuar shokët e tu! Nuk kërkohet eksperiencë e mëparshme në zhvillimin
-    e kodit të iPhone. Ti duhet të kesh njohuri se çfarë janë variablat, metodat dhe
-    objektet.
+  makeschool_beyond_longdescription: Dini ndonjë objektiveC? Mësoni të bëni një lojë
+    iPhone brenda një ore! Ne do t'ju udhëzojmë përmes procesit, për të koduar, testuar
+    dhe luajtur lojën tuaj tërësisht në shfletues dhe pastaj ta ndajmë atë në Facebook
+    që miqtë të provojnë! Nuk kërkohet asnjë përvojë paraprake e zhvillimit të iPhone.
+    Ju duhet të kuptoni se cilat janë variablat, metodat dhe objektet.
   makeschool_beyond_name: Ndërto një lojë për iPhone në shefletuesin tënd!
   makeschool_beyond_platformtext: Shfletuesit modern të web-it
   makeschool_beyond_shortdescription: Mëso të bësh një lojë për iPhone në një orë
   makeschool_gradelevel: Shkolla e mesme
-  makeschool_longdescription: Mëso të kodosh duke bërë një lojë iPhone duke përdorur
-    një gjuhë programimit të quajtur Swift! Krijo një lojë Pok&eacute;moni dhe shkruaj
-    kod për t'i mësuar përbindëshave të tu lëvizje të reja. Ti do të mësosh si të
-    përdorësh variabla, metoda dhe objekte për të ndihmuar përbindëshin tënd që të
-    fitoj!
+  makeschool_longdescription: Mësoni të kodoni duke bërë një lojë në iPhone duke përdorur
+    një gjuhë programimi krejt të re dhe miqësore për fillestarët të quajtur Swift!
+    Krijoni një lojë veprimi të frymëzuar nga Pok&eacute;mon dhe shkruani kod për
+    të mësuar përbindësit tuaj lëvizje të reja. Ju do të mësoni se si të përdorni
+    variablat, metodat dhe objektet për të ndihmuar përbindësin tuaj të fitojë!
   makeschool_name: Ndërto një lojë për iPhone në shefletuesin tënd!
   makeschool_platformtext: Shfletuesit modern të web-it
-  makeschool_shortdescription: Bëj një lojë për iPhone! Mëso të shkruash kod që t'i
-    mësosh monstrës tuaj lëvizjet e rea!
+  makeschool_shortdescription: Bëni një lojë në iPhone! Mësoni duke shkruar kod për
+    të mësuar përbindësin tuaj lëvizje të reja!
   mc_gradelevel: Moshat 4-104
   mc_longdescription: Përdor blloqe të kodimit t'i dërgosh Steve ose Alex në një aventurë
     nëpër këtë botë Minecraft.
@@ -1155,16 +1258,17 @@ sq-AL:
   minecraft_designer_description: Kafshët e programit dhe krijesa të tjera Minecraft
     në versionin tuaj të Minecraft.
   minecraft_download_adventurer: 'Shkarko versionin offline të Aventurave Minecraft '
-  minecraft_host_event: Prit një ngjarje të Orës së Kodimit Minecraft
-  minecraft_leader_guide: Shkarko burime për t'ju ndihmuar të planifikoni dhe të kryesoni
-    një ngjarje.
+  minecraft_host_event: Organizoni një ngjarje të Minecraft Hour of Code
+  minecraft_leader_guide: Shkarkoni burime për t'ju ndihmuar të planifikoni dhe drejtoni
+    një event.
   minecraft_name: Minecraft
-  minecraft_signup_store_camps: <a href="%{signup_store_camp}"> Regjistrohu </a> falas
-    në e kampin Orën së Kodimit  në një dyqan Microsoft në Australi, Kanada, Porto
-    Riko ose SH.B.A. Mëso se si të kombinoni kreativitetin tuaj me kodim.
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Regjistrohuni</a>
+    për punëtoritë falas të Minecraft Hour of Code në Dyqanet e Microsoft në Australi,
+    Kanada, Porto Riko ose SHBA. Mësoni se si kodimi është për të gjithë dhe kombinon
+    kreativitetin, zgjidhjen e problemeve dhe shumë argëtim."
   minecraft_specs: Shumë gjuhë | Browserët modern dhe tabletat | Klasat 2+
   minecraft_subtitle: Ora e Kodimit Minecraft
-  minecraft_teach_resources: Burimet e mësuesve dhe plani mësim.
+  minecraft_teach_resources: Burimet e mësimdhënësve dhe plani mësimor.
   minecraft_tutorials: Tutorialet e Orës së Kodimit Minecraft
   mobile_devices: Tutorialet për pajisje mobile
   monstercoding_gradelevel: Moshat 5-13
@@ -1192,6 +1296,7 @@ sq-AL:
   older_systems_subheading: Këto duhet të punojnë në shfletuesit e vjetër. Për të
     aksesuar të gjitha tutorialet, përmirsohu me një <a href="http://browsehappy.com/"
     target="_blank">shfletues modern.</a>
+  outbreak_tile_title: Shpërthimi
   participant_educator: Mësues
   participant_engineer: Inxhinier Softuerik
   participant_other: Asnjë prej atyre lart
@@ -1204,8 +1309,8 @@ sq-AL:
   petition_join_others: 'Bashkohu # të tjerë'
   petition_message: Çdo student në çdo shkollë duhet të ketë mundësinë për të mësuar
     rreth shkencave kompjuterike
-  petition_sign_message: 'Nëse jeni dakort, nënshkruani emrin tuaj. Bashkohuni me
-    # të tjerët.'
+  petition_sign_message: 'Nëse jeni dakord, shkruani emrin tuaj dhe bashkohuni me
+    listën tonë të postave së bashku me # të tjerët.'
   petition_thankyou: Faleminderit për nënshkrimin e peticionit
   playlab_choose_theme: Zgjedhe temën e Play Lab
   playlab_classic_title: Klasik
@@ -1329,27 +1434,27 @@ sq-AL:
   sphero_beyond_shortdescription: Mësimet SPRK i japin fëmijëve një kurs argëtues
     në programimin e robotëve ndërsa thellojnë njohuritë në matematikë dhe shkencë.
   sports_all_sports_title: Përziej dhe përshtat sportet
-  sports_athlete_Draymond: Draymond Green, Olimpiku i Medaljes së Arit dhe Kampion
-    i NBA-së, Luftëtarët e Shtetit të Artë
+  sports_athlete_Draymond: Draymond Green, Medalisti Olimpik i Artë dhe Kampion i
+    NBA, Golden State Warriors
   sports_athlete_Serena: Serena Williams, Olimpikja e Medaljes së Artë dhe Kampione
     Tenisi
   sports_athlete_Sergio: Sergio Ramos, Kampion i Kupës Botërore dhe lojtar Futbolli,
     Real Madrid
-  sports_athletes_title: Sportistët e dhënë
+  sports_athletes_title: Atletë të veçantë
   sports_basketball_title: Realizo një lojë basketbolli
   sports_featured_athletes: Shiko sportistët e dhënë
-  sports_name: Krijo lojën tënde sportive
-  sports_og_description: Kampionët dhe medalistët e arit ju enkurajojnë të provoni
-    Orën e Kodit. Kodoni lojrat e juaja sportive.
-  sports_og_title: Nxit vetveten. Çdokush mund të mësoj.
-  sports_title: Krijo lojën tënde sportive
-  sports_video_title: Nxit vetveten. Çdokush mund të mësoj.
+  sports_name: Kodoni lojën tuaj sportive
+  sports_og_description: Kampionët dhe fituesit e medaljes së artë ju inkurajojnë
+    të provoni Orën e Kodimit. Kodoni lojën tuaj sportive.
+  sports_og_title: Shtyni veten. Çdokush mund të mësojë.
+  sports_title: Kodoni lojën tuaj sportive
+  sports_video_title: Shtyni veten. Çdokush mund të mësojë.
   sports_watch_video: Ndiq videon
   start_hoc: Fillo Orën e Kodimit tani
   starwars_blocks_description: Përdor blloqet me tërheqje-lëshim.
   starwars_blocks_specs: Shumë gjuhë | Browserët modern, telefonat e mençur, tableta
     | Moshat 6-106
-  starwars_blocks_title: Blloqe
+  starwars_blocks_title: Kutia e blloqeve
   starwars_gradelevel: Moshat 4-104
   starwars_javascript_description: Përdor blloqe me tërheqje-lëshim dhe JavaScript.
   starwars_javascript_specs: Vetëm në gjuhën Angleze | Browserët modern | Moshat 11+
@@ -1372,6 +1477,7 @@ sq-AL:
     - Mariana Alzate, nxënëse e klasës së 5-të'
   students_and_lines: "%{students} studente kane kryer Oren e Kodimit dhe jane shkruar
     %{lines} rrjeshta me kode."
+  studiobar_dance_title: Festë vallëzimi
   studiobar_donate_body: Një fëmijë mëson për çdo dollar që ti dhuron
   studiobar_donate_title: Dhuro
   studiobar_elementary_body: Tre kurset tona të reja për K&#8209;5
@@ -1390,6 +1496,9 @@ sq-AL:
   studiobar_title_nolink: Eksploro Code Studio
   submit: Dorëzo
   support_url: http://support.code.org/
+  syncing_students_instructions: 'Nëse seksioni juaj Code.org është i vjetëruar ndonjëherë
+    me listën tuaj të nxënësve në Google Classroom, klikoni në butonin “Sinkronizoni
+    nxënësit nga Google Classroom” në skedën “Menaxho nxënëst”:'
   teacherled_gradelevel: Moshat 5+
   teacherled_platformtext: Browserat e kohës, smartphones, tableta
   teachers_notes: Shënimet e Mësuesit
@@ -1551,11 +1660,12 @@ sq-AL:
   touchdevelop_shortdescription: 'Zgjidh formueset, krijo lojëra dhe mëso të kodosh
     gjithçka në telefonin tënd. '
   try_an_activity: Provoni një aktivitet
+  try_hoc_num_served: "<h1>Provo</h1><h2>Orën e Kodimit</h2><h3>%{num} të shërbyer</h3>"
   try_hoc_num_served_markdown: |-
-    # Provo\
-    \
-    ## Ora e Kodimit\
-    \
+    # Provoni një
+
+    ## Ora e Kodimit
+
     ### %{num} të shërbyer #Try an
   try_now: Mëso më Shumë
   twentyhours_heading: Provojeni kursin tonë për Hyrje në Shkencat Kompjuterike
@@ -1622,32 +1732,42 @@ sq-AL:
   user_header_applab: 'Laboratori i Aplikacioneve '
   user_header_artist: 'Artisti '
   user_header_create: 'Krijo '
+  user_header_create_account: Krijo llogari
+  user_header_create_account_low_cap: Krijo llogari
+  user_header_dance: Festë vallëzimi
   user_header_flappy: Flappy
+  user_header_gamelab: Game Lab
   user_header_label: Përshëndetje %{username}
   user_header_logout: Dil
   user_header_minecraft: Minecraft
+  user_header_my_projects: Projektet e mia
+  user_header_new_project: Projekti i ri
   user_header_playlab: Play Lab
-  user_header_settings: Llogaria ime
-  user_header_signin: Futu
-  user_header_team: Skuadra
+  user_header_settings: Cilësimet e llogarisë
+  user_header_signin: Kyçu
+  user_header_spritelab: Sprite Lab
+  user_header_team: Ekipi
+  user_header_view_all: Shiko të gjitha projektet...
   video_1min: 1 minutë
   video_2min: 2 minutë
   video_5min: 5 minutë
   video_title_chris_bosh: Chris Bosh në Shkencat Kompjuterike
-  video_title_draymond_green: Ora e Kodit me Draymond Green
+  video_title_cs_is_everything: Shkenca kompjuterike po ndryshon gjithçka
+  video_title_draymond_green: Ora e Kodimit me Draymond Green
   video_title_inspire_girl: Frymëzo një vajzë
   video_title_marco_belinelli: Ora e Koditit me Marco Belinelli
   video_title_real_madrid: Ora e Kodit me Real Madritin
-  video_title_russell_okung: Ora e Kodit me Rusell Okung
+  video_title_russell_okung: Ora e Kodimit me Rusell Okung
   videos_more: Më shumë <a href='%{inspiring_videos_playlist}'>video inspiruese</a>duke
     shfaqur modele dhe të famshëm
+  view_all_sections: Shiko të gjitha sesionet
   view_course: Shiko kursin
   view_english_site: Shiko faqen në gjuhën angleze
   view_unit: Shiko njësinë
-  volunteer_engineer_submission_checkbox_age_18_plus: Unë vërtetoj që jam të paktën
+  volunteer_engineer_submission_checkbox_age_18_plus: Unë vërtetoj se jam të paktën
     18 vjeç.
-  volunteer_engineer_submission_checkbox_contact: 'Unë pranoj mësuesit të më kontaktojnë
-    për mundësit vullnetare (Vërejtje: email adresa yte nuk do të shpërdahet)'
+  volunteer_engineer_submission_checkbox_contact: 'Unë pranoj mësimdhënësit të më
+    kontaktojnë për mundësit vullnetare (Vërejtje: email adresa yte nuk do të shpërdahet)'
   volunteer_engineer_submission_commitment_annually: 2-3 herë në vit
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 orë në javë
   volunteer_engineer_submission_commitment_monthly: Disa orë në muaj
@@ -1661,7 +1781,7 @@ sq-AL:
   volunteer_engineer_submission_distance_24: 15 milje
   volunteer_engineer_submission_distance_32: 20 milje
   volunteer_engineer_submission_distance_8: 5 milje
-  volunteer_engineer_submission_distance_80: 50 mil
+  volunteer_engineer_submission_distance_80: 50 milje
   volunteer_engineer_submission_experience_software_professional: Profesionist Software-i
   volunteer_engineer_submission_experience_university_student_or_researcher: Student
     i universitetit (ose studiues)
@@ -1669,12 +1789,12 @@ sq-AL:
   volunteer_engineer_submission_field_company: Firma (ose Universiteti)
   volunteer_engineer_submission_field_company_placeholder: Firma (ose Universiteti)
   volunteer_engineer_submission_field_description: Përshkrimi
-  volunteer_engineer_submission_field_description_placeholder: Përshkrimi i eksperiencës
-    dhe/ose pjesmarrjes. Nëse flitni gjuhë ndryshe nga Anglishtja, sigurojeni duke
-    e cekur këtu.
+  volunteer_engineer_submission_field_description_placeholder: Përshkrimi i përvojës
+    dhe/ose pjesëmarrjes. Nëse flisni gjuhë të tjera përveç anglishtes, sigurohuni
+    që ta përfshini këtu.
   volunteer_engineer_submission_field_email: Adresa Email-it
-  volunteer_engineer_submission_field_email_desc: Email adresa yte nuk do të shpërndahet,
-    por do ju dërgojmë kërkesat nga mësuesit.
+  volunteer_engineer_submission_field_email_desc: Adresa juaj e emailit nuk do të
+    shpërndahet kurrë, por ne do t'ju dërgojmë kërkesa nga mësimdhënësit.
   volunteer_engineer_submission_field_email_placeholder: Adresa Email-it
   volunteer_engineer_submission_field_email_preference_no: Jo
   volunteer_engineer_submission_field_email_preference_yes: Po
@@ -1687,18 +1807,13 @@ sq-AL:
     shteti, ose adresa e rrugës
   volunteer_engineer_submission_field_name: Emri
   volunteer_engineer_submission_field_name_placeholder: Emri i plotë
-  volunteer_engineer_submission_final_paragraph: Ju do të jeni listuar në hartën e
-    mësuesve lokal për t'ju kontaktuar rreth Orës së Kodit ose mundësive tjera vullnetare.
-    Email-i juaj dhe adresa e saktë ASNJËHERË nuk do të shpërndahet nga ana jonë.
-    Por informata tjetër (duke përfshirë lokacionin e përafërt) do të jetë e shikueshme
-    nga ana e mësuesve lokal.
-  volunteer_engineer_submission_header_private: Informata u mbajt private dhe nuk
-    shpërndahet
-  volunteer_engineer_submission_intro_links: Keni nevojë të gjeni vullnetarë? Gjej
-    një vullnetar vendor në hartën tonë<a href="%{volunteer_local}">të vullnetarëve</a>.
-  volunteer_engineer_submission_intro_signup: Ju lutemi shkruani të dhënat e mëposhtme
-    në qoftë se jeni student i shkencës kompjuterike ose profesionist i software.
-    Fushat e shënuara me një<span class="form-required-field">*</span>janë të domosdoshme.
+  volunteer_engineer_submission_final_paragraph: Ju do të listoheni në një hartë që
+    mësimdhënësit lokalë t'ju kontaktojnë për Orën e Kodimit ose mundësi të tjera
+    vullnetare. Emaili juaj dhe adresa e saktë nuk do të shpërndahen kurrë nga ne.
+    Por informacioni tjetër (përfshirë vendndodhjen e përafërt) do të shihet publikisht
+    nga mësimdhënësit lokalë.
+  volunteer_engineer_submission_header_private: Informacionet mbahen private dhe kurrë
+    nuk shpërndahen
   volunteer_engineer_submission_location_flexibility_curriculum: Të gatshëm për të
     ndihmuar në kontributin e kurrikulës së projekteve open-source
   volunteer_engineer_submission_location_flexibility_onsite: Merr pjesë te një shkollë
@@ -1715,6 +1830,14 @@ sq-AL:
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} e mësuesve kanë
     nevojë për vullnetarë.<br>%{num_volunteers} vullnetarë janë regjistruar. Bashkoju
     atyre."
+  volunteer_engineer_submission_thankyou: Faleminderit! Informacioni juaj vullnetar
+    është dorëzuar me sukses. Mësuesit do të përdorin <a href="%{url}">këtë hartë</a>
+    për të kërkuar dhe kontaktuar vullnetarë si ju. Ju lutemi lejoni 48 orë që informacioni
+    juaj të shfaqet saktësisht në hartë.
+  volunteer_engineer_submission_thankyou_markdown: Faleminderit! Informacioni juaj
+    vullnetar është dorëzuar me sukses. Mësuesit do të përdorin <a href="%{url}">këtë
+    hartë</a> për të kërkuar dhe kontaktuar vullnetarë si ju. Ju lutemi lejoni 48
+    orë që informacioni juaj të shfaqet saktësisht në hartë.
   volunteer_engineer_submission_title: Frymëzo nxënësit dhe vullnetarizo
   volunteer_engineer_submission_type_task_mentor: Jam duke kërkuar një mentor për
     të më ndihmuar me kodimin me studentët e mij
@@ -1725,7 +1848,7 @@ sq-AL:
   w3schools_beyond_name: Mëso HTML
   w3schools_beyond_platformtext: Shfletuesit modern të web-it
   w3schools_beyond_shortdescription: Mëso të bësh faqe interneti
-  watch_inspirational_videos: Para se të fillosh, shiko një nga këto video frymëzuese
+  watch_inspirational_videos: Para se të filloni, shikoni një nga këto video frymëzuese
   what_gender: Cfare gjinie jeni ju?
   who_has_done_hoc: 'Kush ka kryer #OrënPërKodim? @codeorg'
   write_your_first_program: Shkruani programin tuaj të parë kompjuterik

@@ -1,0 +1,1291 @@
+@import 'color';
+@import 'font';
+@import '@cdo/apps/componentLibrary/common/styles/mixins';
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 50px rgba(90 153 212 / 0);
+  }
+  100% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(90 153 212 / 0);
+  }
+}
+
+.floatingActionButton {
+  position: fixed;
+  left: 10px;
+  bottom: 48px;
+
+  height: 55px;
+  width: 55px;
+  background-size: 55px;
+  padding: 0;
+
+  border-width: 0;
+  border-radius: 30px;
+
+  img {
+    opacity: 1;
+    border-radius: 30px;
+  }
+}
+
+.pulse {
+  animation: pulse 1.5s 1.7;
+  box-shadow: 0 0 0 0 rgba(90 153 212 / 0.5);
+}
+
+.taOverlay {
+  position: fixed;
+  left: 51px;
+  bottom: 97px;
+
+  height: 18px;
+  width: 28px;
+  background-size: 28px;
+  padding: 0;
+
+  border-width: 2px;
+  border-color: $background_gray;
+  border-radius: 15px;
+  border-style: solid;
+}
+
+.rubricContainer {
+  position: fixed;
+  left: 10px;
+  bottom: 120px;
+  z-index: 2000;
+  width: 760px;
+}
+
+.hiddenRubricContainer {
+  display: none;
+}
+
+.settings {
+  width: 724px;
+  min-height: 298px;
+  padding: 16px 16px 32px 16px;
+  gap: 16px;
+
+  border-radius: 0 0 4px 4px;
+  border-right: 2px solid $neutral_dark;
+  border-bottom: 2px solid $neutral_dark;
+  border-left: 2px solid $neutral_dark;
+  background: $neutral_light;
+  box-shadow: 4px 4px 6px 0 rgb(0 0 0 / 0.25);
+
+  h2 {
+    margin-bottom: 0;
+  }
+}
+
+.settingsVisible {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.settingsHidden {
+  display: none;
+}
+
+.aiAssessmentOptions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  align-self: stretch;
+  border-bottom: 1px solid $light_gray_200;
+  padding-bottom: 1rem;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.rubricContent {
+  border-right: 2px solid $neutral_dark;
+  border-left: 2px solid $neutral_dark;
+  background: $neutral_light;
+  box-shadow: 0.25rem 0.25rem 0.375rem 0 rgba(0 0 0 / 0.25);
+  height: 408px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 16px;
+
+  &:last-child {
+    border-radius: 0 0 4px 4px;
+    border-bottom: 2px solid $neutral_dark;
+  }
+}
+
+.visibleRubricContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.hiddenRubricContent {
+  display: none;
+}
+
+.rubricFooter {
+  background: $neutral_dark;
+  border-radius: 0 0 4px 4px;
+  border-bottom: 2px solid $neutral_dark;
+  color: $neutral_white;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  padding: 0.5rem 2rem 0.5rem 1rem;
+}
+
+.rubricFooterContent {
+  flex: 1 1 100%;
+  padding: 0.25rem 0;
+
+  input[type='checkbox'] {
+    & + i::before {
+      background: $neutral_white;
+    }
+
+    & ~ span {
+      color: $neutral_white;
+    }
+  }
+}
+
+.submitToStudentButtonAndError {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+  align-self: stretch;
+
+  p {
+    color: $neutral_white;
+    line-height: 0.75rem;
+    margin: 0;
+    min-height: 0.75rem;
+    position: relative;
+    top: 0.1875rem;
+    font-size: 0.6875rem;
+  }
+}
+
+.rubricContainerFooter {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  align-self: stretch;
+}
+
+.submitToStudentButton {
+  margin: 0;
+}
+
+.studentInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  align-self: stretch;
+
+  h2 {
+    margin-bottom: 0;
+  }
+}
+
+.studentMetadata {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  align-self: stretch;
+  justify-content: center;
+}
+
+.levelAndStudentDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  align-self: stretch;
+
+  h5,
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.singleMetadatum {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rubricHeader {
+  border-radius: 4px 4px 0 0;
+  background: $neutral_dark;
+  color: $neutral_white;
+  // padding: 9px 15px 8px;
+
+  border-top: 2px solid $neutral_dark;
+  border-right: 2px solid $neutral_dark;
+  border-left: 2px solid $neutral_dark;
+
+  display: flex;
+  height: 40px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.rubricHeaderRedesign {
+  border-radius: 4px 4px 0 0;
+  background: $neutral_dark;
+  color: $neutral_white;
+  // padding: 9px 15px 8px;
+
+  border-top: 2px solid $neutral_dark;
+  border-right: 2px solid $neutral_dark;
+  border-left: 2px solid $neutral_dark;
+
+  padding-inline-start: 0.75rem;
+
+  display: flex;
+  height: 40px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.rubricHeaderLeftSide {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+
+  .aiBotOutlineIcon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  span {
+    @include label-two;
+    margin: 0;
+  }
+}
+
+.rubricHeaderRightSide {
+  display: flex;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+button.buttonStyle {
+  border-width: 0;
+  margin: 0;
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.closeButton {
+  display: flex;
+  padding: 11px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  background-color: $neutral_dark;
+  color: $neutral_white;
+}
+
+button.rubricHeaderTab {
+  display: flex;
+  height: 40px;
+  padding: 0 16px;
+  align-items: center;
+  border-radius: 4px 4px 0 0;
+}
+
+.selectedTab {
+  background: $neutral_light;
+  h6 {
+    line-height: 1.1875;
+    margin-bottom: 0;
+    color: $light_primary_700;
+  }
+}
+
+.unselectedTab {
+  background: $neutral_dark70;
+  h6 {
+    color: $neutral_white;
+    margin-bottom: 0;
+    line-height: 1.1875;
+  }
+}
+
+.learningGoalContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  align-self: stretch;
+  border-radius: 4px;
+  border: 1px solid $neutral_dark40;
+  background: $neutral_white;
+}
+
+.learningGoalRow {
+  display: flex;
+  align-self: stretch;
+  border-bottom: 1px solid $neutral_dark40;
+  min-height: 40px;
+
+  // Directly target the <summary> child with the class
+  .learningGoalHeader {
+    display: flex;
+    height: 40px;
+    padding: 0 1rem 0 2rem;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    line-height: 154%;
+    position: relative;
+
+    // Common styles for the FontAwesome icons, regardless of state
+    &::after {
+      font: var(--fa-font-solid);
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-35%);
+      padding-right: 10px;
+      height: 16px;
+      width: 16px;
+      // Icon for closed details
+      content: '\f107';
+    }
+
+    &:hover {
+      background: none;
+      cursor: pointer;
+    }
+
+    // Hide the default disclosure arrow for summary elements in Safari
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  // When the details are open, change the icon
+  &[open] .learningGoalHeader::after {
+    content: '\f106';
+  }
+}
+
+.learningGoalHeaderLeftSide {
+  @include main-font-semi-bold;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 14px;
+  padding-left: 10px;
+}
+
+.learningGoalHeaderRightSide {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+  font-weight: 325;
+  line-height: 154%;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+p.feedbackIndicatorText {
+  margin-bottom: 0;
+}
+
+h2.studentName {
+  margin-bottom: 8px;
+}
+
+.submittedEvaluation {
+  display: flex;
+  width: 170px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.learningGoalOuterBlock {
+  align-self: stretch;
+}
+
+.learningGoalExpanded {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-self: stretch;
+
+  .tipsDetailsSummary {
+    font-size: 0.875rem;
+
+    &:hover {
+      background-color: unset;
+    }
+  }
+}
+
+.learningGoalTips {
+  display: none;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid $neutral_dark50;
+  background: $neutral_dark10;
+
+  // This is body three styles but the typography components don't work well with markdown support
+  // SafeMarkdown also wraps everything in its own div so explicitly apply this style to the div
+  div {
+    @include main-font-regular;
+    color: $neutral-dark;
+    font-size: 0.875rem;
+    line-height: 1.54;
+  }
+}
+
+.evidenceLevelSetHorizontal {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100px;
+  gap: 8px;
+  min-height: 92px;
+}
+
+.evidenceLevelInnerDiv:first-child {
+  padding: 1em;
+  width: 100%;
+  border-left: 0;
+}
+
+.evidenceLevelInnerDiv {
+  padding: 1em;
+  border-left: 1px solid #a9acaf;
+  width: 100%;
+}
+
+.evidenceLevelSet {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-self: stretch;
+  flex: 1;
+
+  h6 {
+    margin-bottom: 0;
+  }
+}
+
+.evidenceLevelOption {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+
+  span {
+    @include main-font-semi-bold;
+    font-size: 0.875rem;
+    line-height: 154%;
+  }
+
+  p,
+  h6 {
+    margin-bottom: 0;
+  }
+}
+
+.evidenceLevelLabel {
+  @include main-font-semi-bold;
+  font-size: 0.875rem;
+  line-height: 154%;
+  margin-bottom: 0;
+}
+
+.evidenceLevelDescriptionIndented {
+  padding-left: 2rem;
+}
+
+.submittedEvaluationEvidenceLevel {
+  border-radius: 4px;
+  background: $light_primary_100;
+  height: 100%;
+}
+
+.studentLearningGoalContainer {
+  margin: 20px;
+}
+
+p.errorMessage {
+  color: $product_negative_default;
+  margin-bottom: 0;
+}
+
+.infoTipIcon {
+  cursor: pointer;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 0.75rem;
+  vertical-align: middle;
+  color: gray;
+}
+
+.infoTipText {
+  max-width: 500px;
+}
+
+.openedAiAssessment {
+  padding: 1rem 1rem 0 1rem;
+}
+
+.aiAssessmentOuterBlock {
+  padding: 0.75rem 0.75rem 1rem 1.25rem;
+  border-radius: 0.25rem;
+  border: 1px solid $neutral_dark20;
+  background: $neutral_white;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: calc(-0.5rem * sqrt(2) + 0.125rem);
+    left: calc(50% - 0.5rem);
+    width: 1rem;
+    height: 1rem;
+    background: $neutral_white;
+    transform: rotate(45deg);
+    border-top: 1px solid $neutral_dark20;
+    border-left: 1px solid $neutral_dark20;
+  }
+}
+
+.aiAssessmentBlock {
+  align-items: flex-start;
+  display: flex;
+  gap: 16px;
+  position: relative;
+}
+
+.aiAssessmentInfoBlock {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  gap: 1rem;
+}
+
+.aiAssessmentInfoRow {
+  display: flex;
+  flex-direction: row;
+  align-self: stretch;
+  gap: 0.5rem;
+
+  p {
+    margin: 0;
+  }
+}
+
+p.aiAssessmentScoreText {
+  strong::after {
+    content: ' ';
+  }
+}
+
+p.aiAssessmentEvidenceBlock {
+  margin: 0;
+
+  + ul li p {
+    margin: 0;
+  }
+}
+
+.aiConfidenceBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  > div:first-child {
+    display: flex;
+    flex-direction: row;
+    gap: 0.25rem;
+    margin-top: 0.375rem;
+  }
+}
+
+.aiConfidenceBoxText {
+  p.labelThree {
+    @include label-three;
+    white-space: nowrap;
+    margin: 0;
+  }
+}
+
+.aiConfidenceBar {
+  display: inline-block;
+  width: 3.25rem;
+  height: 0.5rem;
+  border-radius: 0.25rem;
+  background: $light_gray_200;
+  margin: 0;
+}
+
+.aiConfidenceBarLow {
+  &:first-child {
+    background: $light_negative_500;
+  }
+}
+
+.aiConfidenceBarMedium {
+  &:not(:last-child) {
+    background: $light_caution_500;
+  }
+}
+
+.aiConfidenceBarHigh {
+  background: $light_affirmative_500;
+}
+
+.aiAssessmentFeedback {
+  border-top: 1px solid $light_gray_200;
+  border-bottom: 1px solid $light_gray_200;
+  padding: 1rem 0;
+
+  label {
+    margin: 0 0 1rem;
+  }
+}
+
+.aiBotImg {
+  width: 4rem;
+}
+
+.inputTextbox {
+  width: 100%;
+  box-sizing: border-box;
+  height: 2.375rem;
+  min-height: 2.375rem;
+  padding: 0.5rem 0.625rem;
+  border-radius: 0.25rem;
+  border: 1px solid $light_black;
+  color: $light_black;
+  resize: vertical;
+  overflow: auto;
+}
+
+.autosaveMessage {
+  float: right;
+  line-height: 100%;
+  padding: 0;
+  color: #3ea33e;
+}
+
+.feedbackArea {
+  flex: 1;
+}
+
+.infoAlert {
+  display: flex;
+  padding: 4px 12px;
+  gap: 10px;
+  align-items: center;
+  align-self: stretch;
+  justify-content: space-between;
+  border-radius: 4px;
+  background: $light_info_100;
+
+  &:last-child {
+    margin-bottom: 24px;
+  }
+
+  p {
+    margin: 0;
+    line-height: 1.25;
+  }
+}
+
+i.infoAlertIcon {
+  color: $light-info-500;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 125%;
+}
+
+.infoAlertClosed {
+  display: none;
+}
+
+.aiFeedbackRadioBox {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0.5rem;
+  gap: 0.125rem;
+}
+
+p.aiFeedbackRadioBoxText {
+  @include label-three;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.aiFeedbackRadioRow {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  gap: 1rem;
+
+  > label {
+    margin: 0;
+  }
+}
+
+.aiFeedbackRadioLabelChecked {
+  background-color: $light_gray_100;
+  color: $light_gray_800;
+}
+
+.aiFeedbackRadioLabel {
+  display: flex;
+  padding: 4px;
+  font-size: 16px;
+  vertical-align: middle;
+  border-radius: 0.25rem;
+
+  &:hover {
+    background-color: $light_gray_100;
+    color: $light_gray_800;
+  }
+}
+
+.aiFeedbackRadio {
+  opacity: 0;
+  position: absolute;
+  height: 0;
+}
+
+.aiFeedbackOther {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  gap: 5px;
+}
+
+.aiFeedbackTextbox {
+  height: 2.375rem;
+  min-height: 2.375rem;
+  padding: 0.5rem 0.625rem;
+  width: 100%;
+  max-width: 100%;
+  resize: vertical;
+  overflow: auto;
+  box-sizing: border-box;
+  border-radius: 0.25rem;
+  border: 1px solid $light_black;
+  color: $light_black;
+}
+
+.submitFeedbackRow {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.submitFeedbackButtons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+em.aiFeedbackReceived {
+  i {
+    margin-right: 0.5rem;
+  }
+}
+
+.selectors {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 15px;
+}
+
+.studentInfoGroup {
+  display: flex;
+  align-self: center;
+  justify-content: space-around;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.75rem;
+
+  h3 {
+    margin: 0;
+  }
+}
+
+.learningGoalsWrapper {
+  width: 100%;
+}
+
+.studentSelector {
+  width: 300px;
+}
+
+.learningGoalsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  align-self: stretch;
+  border-radius: 4px;
+  border: 1px solid $neutral_dark20;
+  background: $neutral_light;
+  width: 100%;
+  min-width: 100%;
+}
+
+.learningGoalRing {
+  flex: 0 0 auto;
+}
+
+button.learningGoalButton {
+  align-self: center;
+  background: none;
+  border: none;
+  box-shadow: none;
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0.5rem;
+
+  &:active,
+  &:hover {
+    box-shadow: none;
+    // The important is needed here to override the common button:active style
+    border: none !important;
+  }
+}
+
+button.learningGoalButtonLeft {
+  margin-left: 0.5rem;
+  margin-right: 0.625rem;
+}
+
+button.learningGoalButtonRight {
+  margin-left: 0.625rem;
+  margin-right: 0.5rem;
+}
+
+.learningGoalsHeader {
+  display: flex;
+  flex-direction: row;
+  min-height: 60px;
+  justify-content: space-between;
+  align-self: stretch;
+  line-height: 154%;
+  position: relative;
+  margin: 1rem 0 0 0;
+  padding: 0 0 0.75rem 0;
+  border-bottom: 1px $light_gray_100 solid;
+  overflow: hidden;
+}
+
+.learningGoalsHeaderLeftSide {
+  @include main-font-semi-bold;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 14px;
+  flex: 1;
+  overflow: hidden;
+}
+
+.learningGoalsHeaderRightSideV2 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  align-self: stretch;
+  gap: 16px;
+  font-weight: 325;
+  flex: 0 0 auto;
+}
+
+.learningGoalsHeaderText {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 0.5rem;
+  flex: 0 1 100%;
+  overflow: hidden;
+}
+
+p.learningGoalsHeaderTextBody,
+h5.learningGoalsHeaderTextBody {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  flex: 1;
+  margin: 0;
+}
+
+h5.learningGoalsHeaderTextBody {
+  margin: 0 0 0.25rem;
+  display: flex;
+  flex-direction: row;
+
+  span {
+    align-self: stretch;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+
+.learningGoalSummary {
+  display: flex;
+  flex-direction: row;
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: space-between;
+  border-bottom: 1px $light_gray_100 solid;
+  margin: 1rem 1rem 0 1rem;
+}
+
+.aiTokenContainer {
+  align-self: start;
+  margin-left: 0.5rem;
+}
+
+.aiToken {
+  display: flex;
+  height: 20px;
+  padding: 2px 12px 2px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+  border-radius: 30px;
+  background: $ai_rubric_cyan;
+}
+
+p.aiTokenText {
+  color: $light_black;
+  font-size: 0.7rem;
+  line-height: 1rem;
+  margin-bottom: 0;
+}
+
+.progressRing {
+  transition: stroke-dashoffset 0.35s;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+.progressRingText {
+  text-anchor: middle;
+  font-size: smaller;
+}
+
+.learningGoalsTips {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid $neutral_dark20;
+  background: $neutral_white;
+}
+
+p.evidenceLevelHeaderText {
+  margin: 0 0 0.25rem;
+}
+
+.evidenceLevelSetHorizontalV2 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 8px;
+}
+
+.evidenceLevelOptionV2 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.evidenceLevelLabelV2 {
+  @include main-font-semi-bold;
+  font-size: 0.875rem;
+  line-height: 154%;
+  margin-bottom: 0;
+}
+
+.evidenceLevel {
+  border-radius: 100px;
+  border-width: 1px;
+  border-style: solid;
+  margin: 0;
+  padding: 0 16px 0;
+  font-size: 0.875rem;
+  height: 32px;
+  text-align: center;
+}
+
+.evidenceLevelUnselected {
+  border-color: $light_black;
+  background: $neutral_white;
+
+  &:hover {
+    box-shadow: none;
+    background-color: $light_gray_100;
+  }
+
+  &:disabled {
+    border-color: $light_black;
+    background: $neutral_white;
+  }
+}
+
+.evidenceLevelSelected {
+  border-color: $light_primary_500;
+  background: $light_primary_500;
+  color: $light_white;
+
+  &:hover {
+    box-shadow: none;
+    background-color: $light_primary_700;
+  }
+
+  &:disabled {
+    border-color: $light_primary_500;
+    background: $light_primary_500;
+    color: $light_white;
+  }
+}
+
+.evidenceLevelSuggested {
+  border-radius: 100px;
+  border: 1px solid $light_black;
+  background: $neutral_white;
+  gap: 10px;
+  padding: 3px 16px 0;
+  font-size: 0.875rem;
+  height: 32px;
+  box-shadow: 0 0 0 0.125rem $ai_rubric_cyan;
+
+  &:hover {
+    box-shadow: 0 0 0 0.125rem $ai_rubric_cyan;
+    background-color: $light_gray_100;
+  }
+
+  &:disabled {
+    border-radius: 100px;
+    border: 1px solid $light_black;
+    background: $neutral_white;
+    gap: 10px;
+    padding: 3px 16px 0;
+    font-size: 0.875rem;
+    height: 32px;
+    box-shadow: 0 0 0 0.125rem $ai_rubric_cyan;
+  }
+}
+
+.fabBackground {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 1rem;
+  border-right: 0.125rem solid $neutral_dark;
+  border-left: 0.125rem solid $neutral_dark;
+  background: $neutral_white;
+  box-shadow: 0.25rem 0.25rem 0.375rem 0 rgba(0 0 0 / 0.25);
+  height: 408px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  &:last-child {
+    border-radius: 0 0 0.25rem 0.25rem;
+    border-bottom: 0.125rem solid $neutral_dark;
+  }
+
+  h2 {
+    margin-bottom: 0;
+  }
+}
+
+.sectionSelector {
+  width: 180px;
+}
+
+.rubricTabGroup {
+  padding-bottom: 8px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+}
+
+.rubricTabGroupRight {
+  display: flex;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.infoAlertLeft {
+  display: flex;
+  gap: 10px;
+}
+
+.infoAlertRight {
+  display: flex;
+  align-items: flex-start;
+  align-self: stretch;
+  margin: 0;
+}
+
+button.infoAlertRight {
+  box-shadow: none;
+  border: 1px solid transparent;
+
+  &:active,
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.settingsGroup {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+}
+
+.settingsContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.settingsContainers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  align-self: stretch;
+  border-radius: 4px;
+  border: 1px solid $neutral_dark20;
+  background: $neutral_light;
+  gap: 15px;
+  padding: 20px;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.aiSettingsContainer {
+  align-items: unset;
+}
+
+.runAiAllStatuses {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detailsGroup {
+  display: inline;
+  gap: 1rem;
+}
+
+p.detailsVisible {
+  display: inline;
+  padding-inline-end: 1rem;
+}
+
+p.detailsHidden {
+  display: none;
+}
+
+.studentDropdownOptionContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.studentDropdownOption {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 5px;
+  margin-top: 3px;
+  height: 26px;
+}
+
+.greenStatusBlob {
+  background-color: $light_affirmative_100;
+  border-radius: 20px;
+  padding: 4px 10px 0;
+  height: 22px;
+  min-width: 80px;
+  display: inline;
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.yellowStatusBlob {
+  background-color: $lighter_yellow;
+  border-radius: 20px;
+  padding: 5px 10px 0;
+  height: 22px;
+  min-width: 80px;
+  display: inline;
+  p {
+    margin: 0, 0, 0, 0;
+  }
+}
+
+.grayStatusBlob {
+  background-color: $light_gray_100;
+  border-radius: 20px;
+  padding: 5px 10px 0;
+  height: 22px;
+  min-width: 80px;
+  display: inline;
+  p {
+    margin: 0, 0, 0, 0;
+  }
+}
+
+.submitStatusText {
+  display: inline;
+  padding-top: 3px;
+  p {
+    margin-bottom: 0;
+  }
+}

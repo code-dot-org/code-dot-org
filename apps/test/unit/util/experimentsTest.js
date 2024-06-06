@@ -1,6 +1,7 @@
-import experiments from '@cdo/apps/util/experiments';
-import {expect} from '../../util/reconfiguredChai';
 import DCDO from '@cdo/apps/dcdo';
+import experiments from '@cdo/apps/util/experiments';
+
+import {expect} from '../../util/reconfiguredChai';
 
 describe('experiments.isEnabled', () => {
   afterEach(() => {

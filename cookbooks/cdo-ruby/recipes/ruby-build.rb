@@ -10,6 +10,7 @@ RUBY_BUILD_VERSION = '20221225'.freeze
 
 remote_file '/tmp/ruby-build.tar.gz' do
   source "https://github.com/rbenv/ruby-build/archive/refs/tags/v#{RUBY_BUILD_VERSION}.tar.gz"
+  action :create_if_missing
 end
 
 archive_file '/tmp/ruby-build.tar.gz' do
@@ -22,6 +23,9 @@ execute 'install ruby-build' do
   command './install.sh'
   not_if "which ruby-build && ruby-build --version | grep --quiet --fixed-strings 'ruby-build #{RUBY_BUILD_VERSION}'"
 end
+
+# Install dependencies require for ruby-build to succeed
+apt_package %w(zlib1g-dev)
 
 execute 'install ruby with ruby build' do
   # Target /usr/local; it might make sense to install ruby itself to /usr as

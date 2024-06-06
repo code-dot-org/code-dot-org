@@ -1,15 +1,17 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
-import Button from './Button';
-import i18n from '@cdo/locale';
+
+import MultipleSectionsAssigner from '@cdo/apps/templates/MultipleSectionsAssigner';
+import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {
   assignToSection,
   unassignSection,
   sectionsForDropdown,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import MultipleSectionsAssigner from '@cdo/apps/templates/MultipleSectionsAssigner';
-import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+import i18n from '@cdo/locale';
+
+import Button from './Button';
 
 class MultipleAssignButton extends React.Component {
   static propTypes = {
@@ -21,7 +23,7 @@ class MultipleAssignButton extends React.Component {
     scriptId: PropTypes.number,
     assignmentName: PropTypes.string,
     reassignConfirm: PropTypes.func,
-    isOnCoursePage: PropTypes.bool,
+    isAssigningCourse: PropTypes.bool,
     isStandAloneUnit: PropTypes.bool,
     participantAudience: PropTypes.string,
     // Redux
@@ -58,7 +60,7 @@ class MultipleAssignButton extends React.Component {
       isRtl,
       sectionsForDropdown,
       participantAudience,
-      isOnCoursePage,
+      isAssigningCourse,
       reassignConfirm,
     } = this.props;
 
@@ -71,7 +73,7 @@ class MultipleAssignButton extends React.Component {
       <div>
         <div style={buttonMarginStyle}>
           <Button
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
             text={i18n.assignToMultipleSections()}
             icon="plus"
             onClick={this.handleClick}
@@ -88,7 +90,7 @@ class MultipleAssignButton extends React.Component {
             scriptId={scriptId}
             courseVersionId={courseVersionId}
             reassignConfirm={reassignConfirm}
-            isOnCoursePage={isOnCoursePage}
+            isAssigningCourse={isAssigningCourse}
             isStandAloneUnit={isStandAloneUnit}
             participantAudience={participantAudience}
           />

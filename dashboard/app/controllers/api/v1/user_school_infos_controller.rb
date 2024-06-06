@@ -28,14 +28,14 @@ class Api::V1::UserSchoolInfosController < ApplicationController
       submitted_school_info =
         if school_info_params[:school_id]
           SchoolInfo.where(school_info_params).
-          first_or_create
+            first_or_create
         else
           # VALIDATION_COMPLETE is passed when the school_id does not exist to check
           # form for completeness; specifically, school name is required.
           # If school_id does not exist, ncesSchoolId is set to -1 when the checkbox
           # for school not found is clicked.
           SchoolInfo.where(school_info_params).
-          first_or_create(validation_type: SchoolInfo::VALIDATION_COMPLETE)
+            first_or_create(validation_type: SchoolInfo::VALIDATION_COMPLETE)
         end
       unless current_user.update(school_info: submitted_school_info)
         render json: current_user.errors, status: :unprocessable_entity

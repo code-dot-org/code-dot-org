@@ -3,7 +3,6 @@ import SchoolInfoConfirmationDialog from './SchoolInfoConfirmationDialog';
 import {action} from '@storybook/addon-actions';
 
 export default {
-  title: 'SchoolInfoConfirmationDialog',
   component: SchoolInfoConfirmationDialog,
 };
 

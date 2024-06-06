@@ -10,7 +10,6 @@ import {createHistory} from 'history';
 import NewWorkshop from './new_workshop';
 import Workshop from './workshop';
 import Header from '../components/header';
-import LocalSummerWorkshopSurveyResults from './local_summer_workshop_survey_results';
 import LegacySurveySummaries from './legacy_survey_summaries.jsx';
 import {ResultsLoader as DailySurveyResultsLoader} from './reports/local_summer_workshop_daily_survey/results_loader';
 import FoormDailySurveyResultsLoader from './reports/foorm/results_loader';
@@ -106,11 +105,6 @@ export default class WorkshopDashboard extends React.Component {
               path="workshops/filter"
               breadcrumbs="Workshops,Filter"
               component={WorkshopFilter}
-            />
-            <Route
-              path="local_summer_workshop_survey_results(/:workshopId)"
-              breadcrumbs="Local Summer Workshop Survey Results"
-              component={LocalSummerWorkshopSurveyResults}
             />
             <Route
               path="daily_survey_results(/:workshopId)"

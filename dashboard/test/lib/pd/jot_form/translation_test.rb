@@ -219,9 +219,7 @@ module Pd
         )
       end
 
-      protected
-
-      def get_submissions_result
+      protected def get_submissions_result
         {
           resultSet: {
             offset: 0,

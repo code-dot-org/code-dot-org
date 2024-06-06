@@ -1,10 +1,12 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
 import sinon from 'sinon';
+
+import HintDisplayLightbulb from '@cdo/apps/templates/HintDisplayLightbulb';
 import {UnconnectedInstructionsCsfLeftCol as InstructionsCsfLeftCol} from '@cdo/apps/templates/instructions/InstructionsCsfLeftCol';
 import PromptIcon from '@cdo/apps/templates/instructions/PromptIcon';
-import HintDisplayLightbulb from '@cdo/apps/templates/HintDisplayLightbulb';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   requestHint: () => {},

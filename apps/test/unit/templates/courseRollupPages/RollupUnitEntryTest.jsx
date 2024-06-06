@@ -1,7 +1,10 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+
 import RollupUnitEntry from '@cdo/apps/templates/courseRollupPages/RollupUnitEntry';
+
+import {expect} from '../../../util/reconfiguredChai';
+
 import {courseData} from './rollupTestData';
 
 describe('RollupUnitEntry', () => {

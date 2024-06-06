@@ -1,18 +1,20 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import FreeResponsesAssessmentsTable from './FreeResponsesAssessmentsTable';
+import {connect} from 'react-redux';
+
+import i18n from '@cdo/locale';
+
 import {
   freeResponsesDataPropType,
   QUESTION_CHARACTER_LIMIT,
 } from './assessmentDataShapes';
+import FreeResponsesAssessmentsTable from './FreeResponsesAssessmentsTable';
 import {
   getAssessmentsFreeResponseResults,
   ALL_STUDENT_FILTER,
   currentStudentHasResponses,
   setQuestionIndex,
 } from './sectionAssessmentsRedux';
-import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
 
 export const freeResponseSummaryPropType = PropTypes.shape({
   questionText: PropTypes.string,

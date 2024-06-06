@@ -1,8 +1,10 @@
-import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
-import EditableFeedbackStatus from '@cdo/apps/templates/instructions/teacherFeedback/EditableFeedbackStatus';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import moment from 'moment/moment';
+import React from 'react';
+
+import EditableFeedbackStatus from '@cdo/apps/templates/instructions/teacherFeedback/EditableFeedbackStatus';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 const setUp = latestFeedback => {
   const props = {latestFeedback};

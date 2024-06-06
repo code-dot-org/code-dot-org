@@ -1,5 +1,5 @@
 import React from 'react';
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import sinon from 'sinon';
 import {expect} from '../../../../util/reconfiguredChai';
 import {UnconnectedStandardsEditor as StandardsEditor} from '@cdo/apps/lib/levelbuilder/lesson-editor/StandardsEditor';
@@ -47,7 +47,7 @@ describe('StandardsEditor', () => {
       .first();
     removeStandardButton.simulate('mouseDown');
     const removeDialog = wrapper.find('Dialog');
-    const deleteButton = removeDialog.find('button').at(1);
+    const deleteButton = removeDialog.find('button').at(2);
     deleteButton.simulate('click');
     expect(removeStandard).to.have.been.calledOnce;
   });
@@ -62,7 +62,7 @@ describe('StandardsEditor', () => {
       .first();
     removeStandardButton.simulate('mouseDown');
     const removeDialog = wrapper.find('Dialog');
-    const cancelButton = removeDialog.find('button').at(0);
+    const cancelButton = removeDialog.find('button').at(1);
     cancelButton.simulate('click');
     expect(removeStandard).not.to.have.been.called;
   });

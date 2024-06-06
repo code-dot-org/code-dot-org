@@ -1,12 +1,14 @@
 import {assert} from '../../util/reconfiguredChai';
-var NetSimTestUtils = require('../../util/netsimTestUtils');
+
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 var NetSimLocalClientNode = require('@cdo/apps/netsim/NetSimLocalClientNode');
-var NetSimWire = require('@cdo/apps/netsim/NetSimWire');
 var NetSimVizElement = require('@cdo/apps/netsim/NetSimVizElement');
-var NetSimVizWire = require('@cdo/apps/netsim/NetSimVizWire');
 var NetSimVizSimulationNode = require('@cdo/apps/netsim/NetSimVizSimulationNode');
 var NetSimVizSimulationWire = require('@cdo/apps/netsim/NetSimVizSimulationWire');
+var NetSimVizWire = require('@cdo/apps/netsim/NetSimVizWire');
+var NetSimWire = require('@cdo/apps/netsim/NetSimWire');
+
+var NetSimTestUtils = require('../../util/netsimTestUtils');
 
 var fakeShard = NetSimTestUtils.fakeShard;
 

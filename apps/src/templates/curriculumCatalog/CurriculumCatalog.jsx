@@ -1,280 +1,54 @@
-import React, {useState, useEffect, useCallback} from 'react';
+import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {curriculumDataShape} from './curriculumCatalogShapes';
+import {curriculumDataShape} from './curriculumCatalogConstants';
 import i18n from '@cdo/locale';
 import style from '../../../style/code-studio/curriculum_catalog_container.module.scss';
-import {queryParams, updateQueryParam} from '../../code-studio/utils';
 import HeaderBanner from '../HeaderBanner';
 import CourseCatalogBannerBackground from '../../../static/curriculum_catalog/course-catalog-banner-bg.png';
 import CourseCatalogIllustration01 from '../../../static/curriculum_catalog/course-catalog-illustration-01.png';
 import CourseCatalogNoSearchResultPenguin from '../../../static/curriculum_catalog/course-catalog-no-search-result-penguin.png';
-import Toggle from '../../componentLibrary/toggle/Toggle.tsx';
-import Button from '@cdo/apps/templates/Button';
-import {
-  Heading5,
-  Heading6,
-  BodyTwoText,
-} from '@cdo/apps/componentLibrary/typography';
-import CheckboxDropdown from '../CheckboxDropdown';
+import {Heading5, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
+import CurriculumCatalogFilters from './CurriculumCatalogFilters';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
-import {
-  translatedCourseOfferingCsTopics,
-  translatedInterdisciplinary,
-  translatedCourseOfferingDeviceTypes,
-  translatedCourseOfferingDurations,
-  translatedGradeLevels,
-  gradeLevelsMap,
-} from '../teacherDashboard/CourseOfferingHelpers';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-
-const filterTypes = {
-  grade: {
-    name: 'grade',
-    label: i18n.grade(),
-    options: translatedGradeLevels,
-  },
-  duration: {
-    name: 'duration',
-    label: i18n.duration(),
-    options: translatedCourseOfferingDurations,
-  },
-  topic: {
-    name: 'topic',
-    label: i18n.topic(),
-    options: {
-      ...translatedInterdisciplinary,
-      ...translatedCourseOfferingCsTopics,
-    },
-  },
-  device: {
-    name: 'device',
-    label: i18n.device(),
-    options: translatedCourseOfferingDeviceTypes,
-  },
-};
-
-const getEmptyFilters = () => {
-  let filters = {translated: false};
-  Object.keys(filterTypes).forEach(filterKey => {
-    filters[filterKey] = [];
-  });
-  return filters;
-};
-
-// Filters out invalid values for the given filter key.
-const getValidParamValues = (filterKey, paramValues) => {
-  if (!Array.isArray(paramValues)) {
-    paramValues = [paramValues];
-  }
-  return paramValues.filter(paramValue => {
-    return Object.keys(filterTypes[filterKey].options).includes(paramValue);
-  });
-};
-
-// Returns initial filter states based on URL parameters (returns empty filters if
-// no relevant parameters in the URL).
-const getInitialFilterStates = () => {
-  const filterTypeKeys = Object.keys(filterTypes);
-  const urlParams = queryParams();
-
-  let filters = getEmptyFilters();
-  Object.keys(urlParams).forEach(paramKey => {
-    if (filterTypeKeys.includes(paramKey)) {
-      filters[paramKey] = getValidParamValues(paramKey, urlParams[paramKey]);
-    } else if (paramKey === 'translated') {
-      filters['translated'] = urlParams[paramKey] === 'true';
-    }
-  });
-  return filters;
-};
-
-// Returns whether the given curriculum matches the checked grade level filters.
-const filterByGradeLevel = (curriculum, gradeFilters) => {
-  if (gradeFilters.length > 0) {
-    if (!curriculum.grade_levels) {
-      return false;
-    } else {
-      const curriculumGradeLevels = curriculum.grade_levels.split(',');
-      const supportsFilteredGradeLevel = gradeFilters.some(grade =>
-        curriculumGradeLevels.includes(gradeLevelsMap[grade])
-      );
-      if (!supportsFilteredGradeLevel) {
-        return false;
-      }
-    }
-  }
-  return true;
-};
-
-// Returns whether the given curriculum matches the checked duration filters.
-const filterByDuration = (curriculum, durationFilters) => {
-  return (
-    durationFilters.length === 0 ||
-    durationFilters.includes(curriculum.duration)
-  );
-};
-
-// Returns whether the given curriculum matches the checked topic filters.
-// (Note: the Interdisciplinary topic will show any course that has been tagged
-// with a school subject (e.g. Math, Science, etc.))
-const filterByTopic = (curriculum, topicFilters) => {
-  if (topicFilters.length > 0) {
-    if (!curriculum.cs_topic) {
-      return false;
-    } else {
-      // Handle main CS topics
-      const curriculumTopics = curriculum.cs_topic.split(',');
-      const supportsFilteredTopics = topicFilters.some(topic =>
-        curriculumTopics.includes(topic)
-      );
-      // Handle case of Interdisciplinary topic
-      const hasAndSupportsInterdisciplinary =
-        topicFilters.includes('interdisciplinary') && curriculum.school_subject;
-      if (!supportsFilteredTopics && !hasAndSupportsInterdisciplinary) {
-        return false;
-      }
-    }
-  }
-  return true;
-};
-
-// Returns whether the given curriculum matches the checked device filters.
-const filterByDevice = (curriculum, deviceFilters) => {
-  if (deviceFilters.length > 0) {
-    if (!curriculum.device_compatibility) {
-      return false;
-    } else {
-      const curriculumDevComp = JSON.parse(curriculum.device_compatibility);
-      const supportsFilteredDevice = deviceFilters.some(
-        device => curriculumDevComp[device] === 'ideal'
-      );
-      if (!supportsFilteredDevice) {
-        return false;
-      }
-    }
-  }
-  return true;
-};
+import {
+  getSimilarRecommendations,
+  getStretchRecommendations,
+} from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
+import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 
 const CurriculumCatalog = ({
   curriculaData,
   isEnglish,
   languageNativeName,
+  isInUS,
+  isSignedOut,
+  isTeacher,
+  curriculaTaught,
   ...props
 }) => {
   const [filteredCurricula, setFilteredCurricula] = useState(curriculaData);
-  const [numFilteredTranslatedCurricula, setNumFilteredTranslatedCurricula] =
-    useState(
-      filteredCurricula.filter(curriculum => curriculum.is_translated).length
-    );
-  const [appliedFilters, setAppliedFilters] = useState(
-    getInitialFilterStates()
-  );
   const [assignSuccessMessage, setAssignSuccessMessage] = useState('');
   const [showAssignSuccessMessage, setShowAssignSuccessMessage] =
     useState(false);
+  const [expandedCardKey, setExpandedCardKey] = useState(null);
+  const [recommendedSimilarCurriculum, setRecommendedSimilarCurriculum] =
+    useState(null);
+  const [recommendedStretchCurriculum, setRecommendedStretchCurriculum] =
+    useState(null);
 
-  // Filters out any Curriculum Catalog Cards of courses that do not match the filter criteria.
   useEffect(() => {
-    const newFilteredCurricula = curriculaData.filter(
-      curriculum =>
-        filterByGradeLevel(curriculum, appliedFilters['grade']) &&
-        filterByDuration(curriculum, appliedFilters['duration']) &&
-        filterByTopic(curriculum, appliedFilters['topic']) &&
-        filterByDevice(curriculum, appliedFilters['device']) &&
-        (!appliedFilters['translated'] || curriculum.is_translated)
+    const expandedCardFound = filteredCurricula.some(
+      co => expandedCardKey === co['key']
     );
-    const newNumFilteredTranslatedCurricula = newFilteredCurricula.filter(
-      curriculum => curriculum.is_translated
-    ).length;
 
-    setNumFilteredTranslatedCurricula(newNumFilteredTranslatedCurricula);
-    setFilteredCurricula(newFilteredCurricula);
-
-    if (newFilteredCurricula.length === 0) {
-      analyticsReporter.sendEvent(
-        EVENTS.CURRICULUM_CATALOG_NO_AVAILABLE_CURRICULA_EVENT,
-        {
-          filters_selected: JSON.stringify(appliedFilters),
-        }
-      );
+    if (!expandedCardFound) {
+      setExpandedCardKey(null);
+      setRecommendedSimilarCurriculum(null);
+      setRecommendedStretchCurriculum(null);
     }
-  }, [curriculaData, appliedFilters]);
-
-  // Handles updating the given filter and the URL parameters.
-  const handleUpdateFilter = (filterKey, values) => {
-    let newFilters = {...appliedFilters};
-    newFilters[filterKey] = values;
-    setAppliedFilters(newFilters);
-
-    const valuesParam =
-      values.length > 0 || filterKey === 'translated' ? values : undefined;
-    updateQueryParam(filterKey, valuesParam, true);
-  };
-
-  // Selects the given value in the given filter.
-  const handleSelect = (event, filterKey) => {
-    const value = event.target.value;
-    const isChecked = event.target.checked;
-
-    let updatedFilters;
-    if (isChecked) {
-      // Add checked item into applied filters
-      updatedFilters = [...appliedFilters[filterKey], value];
-    } else {
-      // Remove unchecked item from applied filters
-      updatedFilters = appliedFilters[filterKey].filter(item => item !== value);
-    }
-    handleUpdateFilter(filterKey, updatedFilters);
-
-    analyticsReporter.sendEvent(
-      EVENTS.CURRICULUM_CATALOG_DROPDOWN_FILTER_SELECTED_EVENT,
-      {
-        filter_category: filterKey,
-        filter_name: value,
-      }
-    );
-  };
-
-  // Selects all options within the given filter.
-  const handleSelectAllOfFilter = filterKey => {
-    handleUpdateFilter(filterKey, Object.keys(filterTypes[filterKey].options));
-    analyticsReporter.sendEvent(
-      EVENTS.CURRICULUM_CATALOG_DROPDOWN_FILTER_SELECTED_EVENT,
-      {
-        filter_category: filterKey,
-        filter_name: Object.keys(filterTypes[filterKey].options).toString(),
-      }
-    );
-  };
-
-  const handleToggleLanguageFilter = isToggled => {
-    handleUpdateFilter('translated', isToggled);
-    analyticsReporter.sendEvent(
-      EVENTS.CURRICULUM_CATALOG_TOGGLE_LANGUAGE_FILTER_EVENT,
-      {
-        toggle_setting: isToggled,
-      }
-    );
-  };
-
-  // Clears all filter selections.
-  const handleClear = useCallback(() => {
-    setAppliedFilters(getEmptyFilters());
-    Object.keys(filterTypes).forEach(filterKey =>
-      updateQueryParam(filterKey, undefined, false)
-    );
-    if (!isEnglish) {
-      updateQueryParam('translated', undefined, false);
-    }
-  }, [isEnglish]);
-
-  // Clears selections within the given filter.
-  const handleClearAllOfFilter = filterKey => {
-    handleUpdateFilter(filterKey, []);
-  };
+  }, [expandedCardKey, filteredCurricula]);
 
   const handleAssignSuccess = assignmentData => {
     setAssignSuccessMessage(
@@ -295,6 +69,111 @@ const CurriculumCatalog = ({
   const handleCloseAssignSuccessMessage = () => {
     setShowAssignSuccessMessage(false);
     setAssignSuccessMessage('');
+  };
+
+  const handleQuickViewClicked = key => {
+    if (expandedCardKey === key) {
+      // If Quick View is clicked again to close the card (or the 'X' on the expanded card is clicked)
+      setExpandedCardKey(null);
+      setRecommendedSimilarCurriculum(null);
+      setRecommendedStretchCurriculum(null);
+    } else {
+      analyticsReporter.sendEvent(
+        EVENTS.CURRICULUM_CATALOG_QUICK_VIEW_CLICKED_EVENT,
+        {
+          curriculum_offering: key,
+        }
+      );
+      handleSetExpandedCardKey(key);
+    }
+  };
+
+  const handleSetExpandedCardKey = key => {
+    const newRecommendedSimilarCurriculum =
+      getRecommendedSimilarCurriculum(key);
+    const newRecommendedStretchCurriculum = getRecommendedStretchCurriculum(
+      key,
+      newRecommendedSimilarCurriculum.key
+    );
+
+    analyticsReporter.sendEvent(EVENTS.RECOMMENDED_CATALOG_CURRICULUM_SHOWN, {
+      current_curriculum_offering: key,
+      recommended_similar_curriculum_offering:
+        newRecommendedSimilarCurriculum.key,
+      recommended_stretch_curriculum_offering:
+        newRecommendedStretchCurriculum.key,
+    });
+
+    setRecommendedSimilarCurriculum(newRecommendedSimilarCurriculum);
+    setRecommendedStretchCurriculum(newRecommendedStretchCurriculum);
+    setExpandedCardKey(key);
+  };
+
+  // Get the top recommended similar curriculum based on the curriculum with the given
+  // curriculumKey
+  const getRecommendedSimilarCurriculum = curriculumKey => {
+    // Check if Similar Curriculum Recommender has already been run with this curriculumKey and cached in sessionStorage
+    const similarRecommenderResults =
+      JSON.parse(tryGetSessionStorage('similarRecommenderResults', '{}')) || {};
+    const similarRecommenderCurrKeyResult =
+      similarRecommenderResults[curriculumKey];
+    if (similarRecommenderCurrKeyResult) {
+      return similarRecommenderCurrKeyResult;
+    }
+
+    // Get top recommended similar curriculum
+    const recommendations = getSimilarRecommendations(
+      curriculaData,
+      curriculumKey,
+      curriculaTaught
+    );
+    const recommendedCurriculum = recommendations[0];
+
+    // Update sessionStorage with new recommendation result
+    similarRecommenderResults[curriculumKey] = recommendedCurriculum;
+    trySetSessionStorage(
+      'similarRecommenderResults',
+      JSON.stringify(similarRecommenderResults)
+    );
+
+    return recommendedCurriculum;
+  };
+
+  // Get the top recommended stretch curriculum based on the curriculum with the given
+  // curriculumKey. If the top result is the same as the similar curriculum, show the
+  // second result.
+  const getRecommendedStretchCurriculum = (
+    curriculumKey,
+    similarCurriculumKey
+  ) => {
+    // Check if Stretch Curriculum Recommender has already been run with this curriculumKey and cached in sessionStorage
+    const stretchRecommenderResults =
+      JSON.parse(tryGetSessionStorage('stretchRecommenderResults', '{}')) || {};
+    const stretchRecommenderCurrKeyResult =
+      stretchRecommenderResults[curriculumKey];
+    if (stretchRecommenderCurrKeyResult) {
+      return stretchRecommenderCurrKeyResult;
+    }
+
+    // Get top recommended stretch curriculum
+    const recommendations = getStretchRecommendations(
+      curriculaData,
+      curriculumKey,
+      curriculaTaught
+    );
+    const recommendedCurriculum =
+      similarCurriculumKey === recommendations[0].key
+        ? recommendations[1]
+        : recommendations[0];
+
+    // Update sessionStorage with new recommendation result
+    stretchRecommenderResults[curriculumKey] = recommendedCurriculum;
+    trySetSessionStorage(
+      'stretchRecommenderResults',
+      JSON.stringify(stretchRecommenderResults)
+    );
+
+    return recommendedCurriculum;
   };
 
   // Renders search results based on the applied filters (or shows the No matching curriculums
@@ -325,9 +204,18 @@ const CurriculumCatalog = ({
                 script_id,
                 is_standalone_unit,
                 is_translated,
+                //Expanded Card Props
+                device_compatibility,
+                description,
+                professional_learning_program,
+                video,
+                published_date,
+                self_paced_pl_course_offering_path,
+                available_resources,
               }) => (
                 <CurriculumCatalogCard
                   key={key}
+                  courseKey={key}
                   courseDisplayName={display_name}
                   courseDisplayNameWithLatestYear={
                     display_name_with_latest_year
@@ -346,6 +234,23 @@ const CurriculumCatalog = ({
                   scriptId={script_id}
                   isStandAloneUnit={is_standalone_unit}
                   onAssignSuccess={response => handleAssignSuccess(response)}
+                  deviceCompatibility={device_compatibility}
+                  description={description}
+                  professionalLearningProgram={professional_learning_program}
+                  video={video}
+                  publishedDate={published_date}
+                  selfPacedPlCourseOfferingPath={
+                    self_paced_pl_course_offering_path
+                  }
+                  isExpanded={expandedCardKey === key}
+                  handleSetExpandedCardKey={handleSetExpandedCardKey}
+                  onQuickViewClick={() => handleQuickViewClicked(key)}
+                  isInUS={isInUS}
+                  availableResources={available_resources}
+                  isSignedOut={isSignedOut}
+                  isTeacher={isTeacher}
+                  recommendedSimilarCurriculum={recommendedSimilarCurriculum}
+                  recommendedStretchCurriculum={recommendedStretchCurriculum}
                   {...props}
                 />
               )
@@ -355,17 +260,9 @@ const CurriculumCatalog = ({
     } else {
       return (
         <div className={style.catalogContentNoResults}>
-          <img
-            className={style.noResultsImage}
-            src={CourseCatalogNoSearchResultPenguin}
-            alt=""
-          />
-          <Heading5 className={style.noResultsHeading}>
-            {i18n.noCurriculumSearchResultsHeader()}
-          </Heading5>
-          <BodyTwoText className={style.noResultsBody}>
-            {i18n.noCurriculumSearchResultsBody()}
-          </BodyTwoText>
+          <img src={CourseCatalogNoSearchResultPenguin} alt="" />
+          <Heading5>{i18n.noCurriculumSearchResultsHeader()}</Heading5>
+          <BodyTwoText>{i18n.noCurriculumSearchResultsBody()}</BodyTwoText>
         </div>
       );
     }
@@ -376,78 +273,30 @@ const CurriculumCatalog = ({
       <HeaderBanner
         headingText={i18n.curriculumCatalogHeaderTitle()}
         subHeadingText={i18n.curriculumCatalogHeaderSubtitle()}
-        short={false}
         backgroundUrl={CourseCatalogBannerBackground}
         imageUrl={CourseCatalogIllustration01}
       />
       {showAssignSuccessMessage && (
-        <div className={style.assignSuccessMessageContainer}>
-          <BodyTwoText className={style.assignSuccessMessage}>
-            {assignSuccessMessage}
-          </BodyTwoText>
-          <button
-            aria-label="close success message"
-            onClick={handleCloseAssignSuccessMessage}
-            type="button"
-          >
-            <strong>X</strong>
-          </button>
+        <div className={style.assignSuccessMessageCenter}>
+          <div className={style.assignSuccessMessageContainer}>
+            <BodyTwoText>{assignSuccessMessage}</BodyTwoText>
+            <button
+              aria-label="close success message"
+              onClick={handleCloseAssignSuccessMessage}
+              type="button"
+            >
+              <strong>X</strong>
+            </button>
+          </div>
         </div>
       )}
-      <div className={style.fixedFiltersTop}>
-        <div className={style.catalogFiltersContainer}>
-          <Heading6 className={style.catalogFiltersRowLabel}>
-            {i18n.filterBy()}
-          </Heading6>
-          {Object.keys(filterTypes).map(filterKey => (
-            <CheckboxDropdown
-              key={filterKey}
-              name={filterKey}
-              label={filterTypes[filterKey].label}
-              allOptions={filterTypes[filterKey].options}
-              checkedOptions={appliedFilters[filterKey]}
-              onChange={e => handleSelect(e, filterKey)}
-              handleSelectAll={() => handleSelectAllOfFilter(filterKey)}
-              handleClearAll={() => handleClearAllOfFilter(filterKey)}
-            />
-          ))}
-          <Button
-            id="clear-filters"
-            className={style.catalogClearFiltersButton}
-            type="button"
-            onClick={handleClear}
-            text={i18n.clearFilters()}
-            styleAsText
-            color={Button.ButtonColor.brandSecondaryDefault}
-          />
-        </div>
-        {!isEnglish && (
-          <div className={style.catalogLanguageFilterRow}>
-            <div className={style.catalogLanguageFilterRowNumAvailable}>
-              <BodyTwoText>
-                {i18n.numCurriculaAvailableInLanguage({
-                  numCurricula: numFilteredTranslatedCurricula,
-                  language: languageNativeName,
-                })}
-              </BodyTwoText>
-              <FontAwesome
-                icon="language"
-                className="fa-solid"
-                title={i18n.courseInYourLanguage()}
-              />
-            </div>
-            <Toggle
-              name="filterTranslatedToggle"
-              label={i18n.onlyShowCurriculaInLanguage({
-                language: languageNativeName,
-              })}
-              size="m"
-              checked={appliedFilters['translated']}
-              onChange={e => handleToggleLanguageFilter(e.target.checked)}
-            />
-          </div>
-        )}
-      </div>
+      <CurriculumCatalogFilters
+        curriculaData={curriculaData}
+        filteredCurricula={filteredCurricula}
+        setFilteredCurricula={setFilteredCurricula}
+        isEnglish={isEnglish}
+        languageNativeName={languageNativeName}
+      />
       <div className={style.catalogContentContainer}>
         {renderSearchResults()}
       </div>
@@ -459,6 +308,10 @@ CurriculumCatalog.propTypes = {
   curriculaData: PropTypes.arrayOf(curriculumDataShape),
   isEnglish: PropTypes.bool.isRequired,
   languageNativeName: PropTypes.string.isRequired,
+  isInUS: PropTypes.bool.isRequired,
+  isSignedOut: PropTypes.bool.isRequired,
+  isTeacher: PropTypes.bool.isRequired,
+  curriculaTaught: PropTypes.arrayOf(PropTypes.number),
 };
 
 export default CurriculumCatalog;

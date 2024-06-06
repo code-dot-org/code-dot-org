@@ -1,11 +1,13 @@
-import {assert} from '../../../util/reconfiguredChai';
 import sinon from 'sinon';
+
+import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
 import {
   stubRedux,
   restoreRedux,
   registerReducers,
   getStore,
 } from '@cdo/apps/redux';
+import {stubFakePersonalProjectData} from '@cdo/apps/templates/projects/generateFakeProjects';
 import projects, {
   setPersonalProjectsList,
   updatePersonalProjectData,
@@ -20,8 +22,8 @@ import projects, {
   unsetNameFailure,
   unpublishProjectLibrary,
 } from '@cdo/apps/templates/projects/projectsRedux';
-import {stubFakePersonalProjectData} from '@cdo/apps/templates/projects/generateFakeProjects';
-import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
+
+import {assert} from '../../../util/reconfiguredChai';
 
 describe('projectsRedux', () => {
   const initialState = projects(undefined, {});

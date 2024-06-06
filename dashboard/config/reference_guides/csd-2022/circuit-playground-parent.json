@@ -4,6 +4,6 @@
   "course_offering_key": "csd",
   "parent_reference_guide_key": "maker-toolkit",
   "display_name": "Adafruit Circuit Playground",
-  "content": "These resources reference features specifically on the [Circuit Playground](/maker/circuitplayground).",
+  "content": "These resources reference features specifically on the [Circuit Playground](https://code.org/maker/circuitplayground).",
   "position": 20
 }

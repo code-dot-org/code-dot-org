@@ -1,6 +1,9 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import i18n from '@cdo/locale';
+
 import color from '../util/color';
 
 export default class SchoolTypeDropdown extends Component {
@@ -67,12 +70,12 @@ export default class SchoolTypeDropdown extends Component {
 const styles = {
   asterisk: {
     fontSize: 20,
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     color: color.red,
   },
   errors: {
     fontSize: 14,
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     color: color.red,
     paddingTop: 5,
     paddingBottom: 5,
@@ -83,7 +86,7 @@ const styles = {
     verticalAlign: 'middle',
     minHeight: 42,
     fontSize: 13,
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     color: '#333',
     padding: 0,
   },

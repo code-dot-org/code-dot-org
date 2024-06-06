@@ -24,6 +24,7 @@ import IFrameEmbedOverlay from '@cdo/apps/templates/IFrameEmbedOverlay';
 import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
 import AnimationPicker, {PICKER_TYPE} from './AnimationPicker/AnimationPicker';
 import {getManifest} from '@cdo/apps/assetManagement/animationLibraryApi';
+import ModalFunctionEditor from '@cdo/apps/blockly/components/ModalFunctionEditor';
 
 /**
  * Top-level React wrapper for GameLab
@@ -175,6 +176,7 @@ class P5LabView extends React.Component {
         <VisualizationResizeBar />
         <InstructionsWithWorkspace>
           <CodeWorkspace withSettingsCog={!this.props.isBlockly} />
+          <ModalFunctionEditor />
         </InstructionsWithWorkspace>
       </div>
     );

@@ -1,0 +1,29 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2023-07-28T17:59:16.000Z",
+  "level_num": "custom",
+  "user_id": 884,
+  "properties": {
+    "encrypted": "false",
+    "tts_short_instructions_override": "How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
+    "tts_long_instructions_override": "Congratulations! You just wrote some code. You are officially a programmer!\r\n\r\nDid you notice that the last puzzle was a little more difficult? It was a challenge puzzle. Challenge puzzles are meant to stretch the boundaries of what students will do. We make it clear that they should be attempted, but do not require that they be completed for students to succeed for the lesson.\r\n\r\nNow take a moment to reflect. How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
+    "instructions_important": "false",
+    "long_instructions": "# Role of the Teacher\r\n\r\n**Goal:** The purpose of this section is to help you understand what your role is before and during the Create PT.    *(Estimated time: ~15 minutes)*\r\n\r\n## Context\r\nThe Create Performance Task Survival Guide is used in U8L2-3.  It contains activities to help students prepare for working. Once students officially start the Create Performance Task, your role in the classroom will shift based on the College Board guidelines for what you can and cannot do while students are working on the Create PT.  In some ways, your role shifts from “teacher” to “test administrator”.  Understanding this shift will also help you understand the importance of adequately preparing students with tools and knowledge prior to starting the Create Performance Task. \r\n\r\n## Do this:\r\n* Read pages 169-171 in the <a href=\"https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-course-and-exam-description.pdf?course=ap-computer-science-principles\" target=\"blank\">Course and Exam Description</a> about “Preparing for the Create Performance Task”.  This includes what the teacher can and cannot do before or during the Create PT. \r\n* Highlight information that is surprising or write down questions this generates. \r\n\r\n## Important!\r\nNote the AP Computer Science Principles Policy on Plagiarism:\r\n\r\n> The use of media (e.g., video, images, sound), data, information, evidence, or program code created by someone else in the creation of a program and/or a program code segment(s), without appropriate acknowledgment (i.e., through citation, through attribution, and/or by reference), is considered plagiarism. A student who commits\r\nplagiarism will receive a score of 0 on the performance task.\r\n\r\n## Reflect: \r\n* How do you anticipate your students will respond to this shift in your role during the Create Performance Task?  \r\n* What can you do to prepare them for this shift?",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 24475,
+    "name_suffix": "_2023",
+    "allow_multiple_attempts": "true"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2023-07-28T17:59:16.260+00:00\",\"changed\":[\"cloned from \\\"CSP-PL M6 - Role of teacher_2022\\\"\"],\"cloned_from\":\"CSP-PL M6 - Role of teacher_2022\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

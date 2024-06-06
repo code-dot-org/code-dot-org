@@ -1,0 +1,8 @@
+name 'CSA-CV-L2-L1'
+display_name 'Select a Program'
+description 'We\'re going to be training a model that can be used in an existing Java program! Before you train the model, you\'re going to first pick the existing Java program that you will work on.'
+
+sublevels
+level 'CSA-CV-L2-L1a'
+level 'CSA-CV-L2-L1b'
+level 'CSA-CV-L2-L1c'

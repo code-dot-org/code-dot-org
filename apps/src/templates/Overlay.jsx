@@ -1,10 +1,9 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
+import React from 'react';
+import {connect} from 'react-redux';
 
 import {hideOverlay} from '../redux/instructions';
-
-import {connect} from 'react-redux';
 
 // 1020 puts this halfway between the small footer (at 1000) and the
 // video modal backdrop (at 1040)

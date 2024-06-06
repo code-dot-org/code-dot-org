@@ -84,7 +84,7 @@ class SingleSignOn
     OpenSSL::HMAC.hexdigest("sha256", sso_secret, payload)
   end
 
-  def to_url(base_url=nil)
+  def to_url(base_url = nil)
     base = (base_url || sso_url).to_s
     "#{base}#{base.include?('?') ? '&' : '?'}#{payload}"
   end

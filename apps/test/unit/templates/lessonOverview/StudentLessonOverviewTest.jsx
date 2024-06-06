@@ -1,14 +1,16 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import _ from 'lodash';
 import React from 'react';
-import {shallow} from 'enzyme';
-import {assert, expect} from '../../../util/reconfiguredChai';
+
+import Button from '@cdo/apps/templates/Button';
 import {UnconnectedStudentLessonOverview as StudentLessonOverview} from '@cdo/apps/templates/lessonOverview/StudentLessonOverview';
+import {fakeLevels} from '@cdo/apps/templates/progress/progressTestHelpers';
+
+import {assert, expect} from '../../../util/reconfiguredChai';
 import {
   fakeStudentAnnouncement,
   fakeTeacherAndStudentAnnouncement,
 } from '../../code-studio/components/progress/FakeAnnouncementsTestData';
-import _ from 'lodash';
-import Button from '@cdo/apps/templates/Button';
-import {fakeLevels} from '@cdo/apps/templates/progress/progressTestHelpers';
 
 describe('StudentLessonOverview', () => {
   let defaultProps;

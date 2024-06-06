@@ -20,7 +20,7 @@ class VideosControllerTest < ActionController::TestCase
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:videos)
+    refute_nil assigns(:videos)
   end
 
   test "should get new" do

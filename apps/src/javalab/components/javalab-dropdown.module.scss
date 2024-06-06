@@ -1,4 +1,4 @@
-@import "color.scss";
+@import 'color', 'font';
 
 // The placeholder classes (%) allow these to be extended in other modules
 .dropdown,
@@ -16,9 +16,9 @@
 
 .anchor,
 %anchor {
+  @include main-font-regular;
   padding: 5px 12px;
   color: $dark_charcoal;
-  font-family: "Gotham 4r", sans-serif;
   font-size: 14px;
   display: block;
   background-color: $white;

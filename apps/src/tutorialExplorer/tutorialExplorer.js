@@ -2,15 +2,27 @@
  * Entry point to build a bundle containing a set of globals used when displaying
  * tutorialExplorer.  Includes the TutorialExplorer React class.
  */
+import Immutable from 'immutable';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
+import queryString from 'query-string';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Immutable from 'immutable';
+import {StickyContainer} from 'react-sticky';
+
+import fontConstants from '@cdo/apps/fontConstants';
+import i18n from '@cdo/tutorialExplorer/locale';
+
 import FilterHeader from './filterHeader';
 import FilterSet from './filterSet';
-import TutorialSet from './tutorialSet';
-import ToggleAllTutorialsButton from './toggleAllTutorialsButton';
+import {
+  getResponsiveContainerWidth,
+  isResponsiveCategoryInactive,
+  getResponsiveValue,
+} from './responsive';
 import Search from './search';
+import ToggleAllTutorialsButton from './toggleAllTutorialsButton';
+import TutorialSet from './tutorialSet';
 import {
   isTutorialSortByFieldNamePopularity,
   TutorialsSortByOptions,
@@ -21,15 +33,6 @@ import {
   orgNameCodeOrg,
   orgNameMinecraft,
 } from './util';
-import {
-  getResponsiveContainerWidth,
-  isResponsiveCategoryInactive,
-  getResponsiveValue,
-} from './responsive';
-import i18n from '@cdo/tutorialExplorer/locale';
-import _ from 'lodash';
-import queryString from 'query-string';
-import {StickyContainer} from 'react-sticky';
 
 export default class TutorialExplorer extends React.Component {
   static propTypes = {
@@ -669,7 +672,7 @@ const styles = {
     clear: 'both',
   },
   bottomLinksLink: {
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
   },
   bottomLinksLinkFirst: {
     paddingBottom: 10,
@@ -720,11 +723,15 @@ function getFilters({mobile}) {
       name: 'subject',
       text: i18n.filterTopics(),
       entries: [
-        {name: 'science', text: i18n.filterTopicsScience()},
-        {name: 'math', text: i18n.filterTopicsMath()},
-        {name: 'history', text: i18n.filterTopicsHistory()},
-        {name: 'la', text: i18n.filterTopicsLa()},
         {name: 'art', text: i18n.filterTopicsArt()},
+        {
+          name: 'ai',
+          text: i18n.filterTopicsArtificialIntelligence(),
+        },
+        {name: 'la', text: i18n.filterTopicsLa()},
+        {name: 'math', text: i18n.filterTopicsMath()},
+        {name: 'science', text: i18n.filterTopicsScience()},
+        {name: 'history', text: i18n.filterTopicsHistory()},
         {name: 'cs-only', text: i18n.filterTopicsCsOnly()},
       ],
     },

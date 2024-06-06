@@ -463,9 +463,7 @@ module Pd
       assert_not_enrolled
     end
 
-    private
-
-    def setup_summer_workshop
+    private def setup_summer_workshop
       @regional_partner = create :regional_partner
       @summer_workshop = create :summer_workshop, regional_partner: @regional_partner
       @summer_enrollment = create :pd_enrollment, :from_user, workshop: @summer_workshop
@@ -473,7 +471,7 @@ module Pd
       @facilitators = @summer_workshop.facilitators.order(:name, :id)
     end
 
-    def setup_academic_year_workshop
+    private def setup_academic_year_workshop
       @regional_partner = create :regional_partner
       @academic_year_workshop = create :csp_academic_year_workshop, regional_partner: @regional_partner
       @academic_year_enrollment = create :pd_enrollment, :from_user, workshop: @academic_year_workshop
@@ -481,7 +479,7 @@ module Pd
       @facilitators = @academic_year_workshop.facilitators.order(:name, :id)
     end
 
-    def setup_two_day_academic_year_workshop
+    private def setup_two_day_academic_year_workshop
       @regional_partner = create :regional_partner
       @two_day_academic_year_workshop = create :csp_academic_year_workshop, :two_day,
         regional_partner: @regional_partner
@@ -491,14 +489,14 @@ module Pd
       @facilitators = @two_day_academic_year_workshop.facilitators.order(:name, :id)
     end
 
-    def setup_csf201_not_started_workshop
+    private def setup_csf201_not_started_workshop
       @regional_partner = create :regional_partner
       @csf201_not_started_workshop = create :csf_deep_dive_workshop,
         regional_partner: @regional_partner,
         num_facilitators: 2
     end
 
-    def setup_csf201_in_progress_workshop
+    private def setup_csf201_in_progress_workshop
       @regional_partner = create :regional_partner
       @csf201_in_progress_workshop = create :csf_deep_dive_workshop,
         :in_progress,
@@ -506,7 +504,7 @@ module Pd
         num_facilitators: 2
     end
 
-    def setup_csf201_ended_workshop
+    private def setup_csf201_ended_workshop
       @regional_partner = create :regional_partner
       @csf201_ended_workshop = create :csf_deep_dive_workshop,
         :ended,
@@ -514,7 +512,7 @@ module Pd
         num_facilitators: 2
     end
 
-    def setup_csf101_workshop
+    private def setup_csf101_workshop
       @regional_partner = create :regional_partner
       @csf101_workshop = create :csf_intro_workshop,
         regional_partner: @regional_partner,
@@ -525,35 +523,35 @@ module Pd
       @facilitators = @csf101_workshop.facilitators.order(:name, :id)
     end
 
-    def unenrolled_teacher
+    private def unenrolled_teacher
       create :teacher
     end
 
-    def prop(name)
+    private def prop(name)
       JSON.parse(assigns(:script_data).try(:[], :props)).try(:[], name)
     end
 
-    def assert_not_enrolled
+    private def assert_not_enrolled
       assert_select 'h1', text: 'Not Enrolled'
       assert_select 'p', text: 'You need to be enrolled in a workshop before completing this survey.'
     end
 
-    def assert_closed
+    private def assert_closed
       assert_select 'h1', text: 'The survey has closed'
       assert_select 'p', text: /The survey for today’s session of your workshop is now closed\./
     end
 
-    def assert_no_attendance
+    private def assert_no_attendance
       assert_select 'h1', text: 'No Attendance'
       assert_select 'p', text:
         'You need to be marked as attended for today’s session of your workshop before you can complete this survey.'
     end
 
-    def assert_thanks
+    private def assert_thanks
       assert_select '#thanks>h1', text: 'Thank you for submitting today’s survey.'
     end
 
-    def assert_redirected_to_sign_in
+    private def assert_redirected_to_sign_in
       assert_match %r{users/sign_in.*redirected}, response.body
     end
   end

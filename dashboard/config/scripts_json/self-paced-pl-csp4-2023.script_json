@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-07-04 01:51:12 UTC",
+    "serialized_at": "2024-01-11 15:35:02 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -108,6 +108,7 @@
       "key": "d5557014-017e-4a46-a09a-4f7b5338f009",
       "position": 1,
       "properties": {
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "d5557014-017e-4a46-a09a-4f7b5338f009",
@@ -120,6 +121,7 @@
       "key": "33ae1e85-d95f-4f33-81f4-77e673e5620c",
       "position": 1,
       "properties": {
+        "duration": 25
       },
       "seeding_key": {
         "lesson_activity.key": "33ae1e85-d95f-4f33-81f4-77e673e5620c",
@@ -132,6 +134,7 @@
       "key": "c31ad781-5897-4ab6-b04e-988da51c0222",
       "position": 1,
       "properties": {
+        "duration": 20
       },
       "seeding_key": {
         "lesson_activity.key": "c31ad781-5897-4ab6-b04e-988da51c0222",
@@ -144,6 +147,7 @@
       "key": "8460b5ef-30fe-43a1-a8ca-7ca5118debe0",
       "position": 1,
       "properties": {
+        "duration": 20
       },
       "seeding_key": {
         "lesson_activity.key": "8460b5ef-30fe-43a1-a8ca-7ca5118debe0",
@@ -1562,6 +1566,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

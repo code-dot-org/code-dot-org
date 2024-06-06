@@ -1,0 +1,234 @@
+<Craft>
+  <config><![CDATA[{
+  "game_id": 49,
+  "created_at": "2024-04-23T19:44:09.000Z",
+  "level_num": "custom",
+  "user_id": 562,
+  "properties": {
+    "skin": "craft",
+    "ground_plane": "[\"water\",\"water\",\"lava\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"water\",\"obsidian\",\"water\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"water\",\"bedrock\",\"bedrock\",\"obsidian\",\"obsidian\",\"obsidian\",\"obsidian\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"logAcacia\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"lava\",\"lava\",\"lava\",\"lava\",\"lava\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"gravel\",\"gravel\",\"lava\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"lava\",\"lava\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"lava\",\"lava\",\"lava\",\"lava\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\"]",
+    "ground_decoration_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"Nether_Portal\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
+    "action_plane": "[\"\",\"\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"pistonDownOnSticky\",\"railsRedstoneTorch\",\"\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"pistonArmDown\",\"pistonUp\",\"bedrock\",\"bedrock\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"pressurePlateUp\",\"bedrock\",\"\",\"\",\"\",\"flintAndSteelMiniblock\",\"\",\"\",\"\",\"bedrock\",\"diamondMiniblock\",\"gravel\",\"rails\",\"rails\",\"rails\",\"rails\",\"\",\"\",\"gravel\",\"\",\"\",\"gravel\",\"\",\"\",\"\",\"bedrock\",\"\",\"bedrock\",\"gravel\",\"bedrock\",\"bedrock\",\"gravel\",\"bedrock\",\"\",\"bedrock\",\"bedrock\",\"bedrock\",\"bedrock\",\"rails\",\"rails\",\"gravel\",\"rails\",\"bedrock\",\"bedrock\",\"bedrock\",\"\",\"\",\"bedrock\",\"bedrock\",\"bedrock\",\"gravel\",\"rails\",\"bedrock\",\"bedrock\",\"\",\"\",\"\",\"\",\"bedrock\",\"bedrock\",\"gravel\",\"gravel\",\"gravel\",\"rails\",\"rails\",\"\",\"\",\"rails\",\"rails\",\"gravel\",\"gravel\"]",
+    "player_start_position": "[5,9]",
+    "grid_width": "10",
+    "grid_height": "10",
+    "player_start_direction": "0",
+    "is_daytime": "false",
+    "is_event_level": "false",
+    "use_player": "true",
+    "verification_function": "function (verificationAPI) {\r\n      // player is at given x, y position\r\n      return verificationAPI.isPlayerAt([4, 3]);\r\n}",
+    "timeout_verification_function": "function (verificationAPI) {\r\n  // Fail if we hit the end of the timeout.\r\n  return false;\r\n}",
+    "failure_check_function": "function (verificationAPI) {\r\n  // Fail instantly\r\n  return false;\r\n}",
+    "embed": "false",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "use_score": "false",
+    "day_night_cycle_start": "0",
+    "day_night_cycle_time": "0",
+    "display_name": "The Cave",
+    "agent_start_direction": "0",
+    "is_agent_level": "true",
+    "agent_start_position": "[4,9]",
+    "level_verification_timeout": "0",
+    "songs": "[\"vignette5-shortpiano\", \"vignette7-funky-chirps-short\", \"vignette8-free-play\", \"vignette1\", \"vignette2-quiet\", \"vignette3\", \"vignette4-intro\"]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Don't know where to go?  See if you can find the dotted line!\",\"hint_id\":\"MC_HOC_2017_10_Cole_b\",\"hint_type\":\"general\",\"hint_path\":\"[[4,9],[0,9],[0,4]]\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/012a11d3b096b20415487b7e60419260/MC_HOC_2017_10_RETRY.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use functions to make solving this puzzle easier!\",\"hint_id\":\"MC_HOC_2017_10_Cole_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/25b0c4124fc1a0a63fde4a5b4273cd99/MC_HOC_2017_10_RETRY.mp3\"}]",
+    "available_blocks": [
+      "rails"
+    ],
+    "parent_level_id": 21548,
+    "name_suffix": "_grade4",
+    "top_level_procedure_autopopulate": "true",
+    "show_type_hints": "false",
+    "is_aquatic_level": "false",
+    "boat": "false",
+    "short_instructions": "Use the functions to finish this minecart track.",
+    "long_instructions": "Can you spot the difference between the two functions in your workspace? \r\n \r\nUse these functions with other code from the toolbox to clear a path for the Minecart, then collect the **Flint and Steel** [flint_and_steel]. \r\n ",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-04-23T19:44:09.851+00:00\",\"changed\":[\"cloned from \\\"MC_HOC_2017_10_RETRY_maker\\\"\"],\"cloned_from\":\"MC_HOC_2017_10_RETRY_maker\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 1,
+    "functions": 2
+  }
+}]]></config>
+  <blocks>
+    <initialization_blocks>
+      <xml/>
+    </initialization_blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false" id="when_run"/>
+        <block type="procedures_defnoreturn" deletable="false" editable="false" usercreated="true" x="200px">
+          <mutation/>
+          <title name="NAME">fix long path</title>
+          <statement name="STACK">
+            <block type="controls_repeat" deletable="false" editable="false" next_connection_disabled="true" can_disconnect_from_parent="false">
+              <title name="TIMES">3</title>
+              <statement name="DO">
+                <block type="craft_destroyBlock" deletable="false" editable="false" can_disconnect_from_parent="false">
+                  <next>
+                    <block type="craft_moveForward" deletable="false" editable="false" can_disconnect_from_parent="false">
+                      <next>
+                        <block type="craft_placeBlock" deletable="false" editable="false" next_connection_disabled="true" can_disconnect_from_parent="false">
+                          <title name="TYPE">rails</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" deletable="false" editable="false" usercreated="true" x="200px">
+          <mutation/>
+          <title name="NAME">fix short path</title>
+          <statement name="STACK">
+            <block type="controls_repeat" deletable="false" editable="false" next_connection_disabled="true" can_disconnect_from_parent="false">
+              <title name="TIMES">2</title>
+              <statement name="DO">
+                <block type="craft_destroyBlock" deletable="false" can_disconnect_from_parent="false">
+                  <next>
+                    <block type="craft_moveForward" deletable="false" editable="false" can_disconnect_from_parent="false">
+                      <next>
+                        <block type="craft_placeBlock" deletable="false" editable="false" next_connection_disabled="true" can_disconnect_from_parent="false">
+                          <title name="TYPE">rails</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="craft_moveForward"/>
+        <block type="craft_moveBackward"/>
+        <block type="craft_turn">
+          <title name="DIR">left</title>
+        </block>
+        <block type="craft_turn">
+          <title name="DIR">right</title>
+        </block>
+        <block type="craft_placeBlock">
+          <title name="TYPE">rails</title>
+        </block>
+        <block type="craft_destroyBlock"/>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="2-10">2</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" id="when_run">
+          <next>
+            <block type="craft_turn">
+              <title name="DIR">left</title>
+              <next>
+                <block type="craft_moveForward">
+                  <next>
+                    <block type="craft_moveForward">
+                      <next>
+                        <block type="procedures_callnoreturn">
+                          <mutation name="fix short path"/>
+                          <next>
+                            <block type="craft_turn">
+                              <title name="DIR">right</title>
+                              <next>
+                                <block type="craft_moveForward">
+                                  <next>
+                                    <block type="craft_moveForward">
+                                      <next>
+                                        <block type="procedures_callnoreturn">
+                                          <mutation name="fix long path"/>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn" deletable="false" usercreated="true">
+          <mutation/>
+          <title name="NAME">fix long path</title>
+          <statement name="STACK">
+            <block type="controls_repeat" can_disconnect_from_parent="false">
+              <title name="TIMES">3</title>
+              <statement name="DO">
+                <block type="craft_destroyBlock" can_disconnect_from_parent="false">
+                  <next>
+                    <block type="craft_moveForward" can_disconnect_from_parent="false">
+                      <next>
+                        <block type="craft_placeBlock" can_disconnect_from_parent="false">
+                          <title name="TYPE">rails</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" deletable="false" usercreated="true">
+          <mutation/>
+          <title name="NAME">fix short path</title>
+          <statement name="STACK">
+            <block type="controls_repeat" can_disconnect_from_parent="false">
+              <title name="TIMES">2</title>
+              <statement name="DO">
+                <block type="craft_destroyBlock" can_disconnect_from_parent="false">
+                  <next>
+                    <block type="craft_moveForward" can_disconnect_from_parent="false">
+                      <next>
+                        <block type="craft_placeBlock" can_disconnect_from_parent="false">
+                          <title name="TYPE">rails</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Craft>

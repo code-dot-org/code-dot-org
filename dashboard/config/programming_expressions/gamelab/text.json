@@ -3,7 +3,7 @@
   "name": "text()",
   "category": "Drawing",
   "category_key": "drawing",
-  "content": "Draws text onto the display positioned at x and y.\r\n\r\nYou are not limited to just drawing shapes and lines in the display, you can also write text. Use [`textFont()`(#4dd0e1)](/docs/gamelab/textFont/) and [`textSize()`(#4dd0e1)](/docs/gamelab/textSize/) to change the default font, Arial, and the default size, 12 pixels. Use [`textAlign()`(#4dd0e1)](/docs/gamelab/textAlign/) to change where the text is displayed relative to the (x,y) position specified. The default is that (x,y) is the top left corner of the text.\r\n\r\nText that does not fit completely within the display area will not be drawn or seen. Use the fourth and fifth parameters to create a text box to display the text in with automatic line wrapping.",
+  "content": "Draws text onto the display positioned at x and y.\n\nYou are not limited to just drawing shapes and lines in the display, you can also write text. Use [`textFont()`(#4dd0e1)](/docs/gamelab/textFont/) and [`textSize()`(#4dd0e1)](/docs/gamelab/textSize/) to change the default font, Arial, and the default size, 12 pixels. Use [`textAlign()`(#4dd0e1)](/docs/gamelab/textAlign/) to change where the text is displayed relative to the (x,y) position specified. When no width or height are provided, (x,y) is the top middle of the text. When width and height are provided, (x,y) is the top left corner of the text.\n\nText that does not fit completely within the display area will not be drawn or seen. Use the fourth and fifth parameters to create a text box to display the text in with automatic line wrapping.",
   "examples": [
     {
       "name": "Changing color and size",

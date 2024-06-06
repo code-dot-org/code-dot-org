@@ -17,7 +17,14 @@ const Breakpoints = [
 ];
 
 export function getResponsiveBreakpoint(width) {
-  return Breakpoints.find(({breakpoint}) => width > breakpoint).responsiveSize;
+  const responsiveSize = Breakpoints.find(({breakpoint}) => width > breakpoint);
+  if (responsiveSize === undefined) {
+    console.error(
+      `No responsive size found for width ${width}, defaulting to xs`
+    );
+    return ResponsiveSize.xs;
+  }
+  return responsiveSize.responsiveSize;
 }
 
 const initialState = {

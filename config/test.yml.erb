@@ -28,7 +28,6 @@ db_writer: 'mysql://root@localhost/'
 firebase_shared_secret: fake_firebase_shared_secret
 <% end -%>
 
-db_cluster_id: test-cluster
 netsim_enable_metrics: true
 stub_school_data: true
 daemon: true
@@ -51,3 +50,19 @@ disable_s3_image_uploads: true
 
 # provide a unique path for firebase channels data for ci, to avoid conflicts in channel ids.
 firebase_channel_id_suffix: '<%=ci ? "-#{circle_run_identifier}" : ''%>'
+
+ai_proxy_origin:
+
+openai_evaluate_rubric_api_key: 'stub-api-key'
+
+# Statsig API keys
+# The only type of test environment we enable Statsig is the managed test server
+# (`test.code.org / test-studio.code.org`) and only in Ruby code executing within
+# the web application server.
+<% if running_web_application? && test_system? -%>
+statsig_server_secret_key: !Secret
+statsig_api_client_key: !Secret
+<% else %>
+statsig_server_secret_key: 'secret-fake-key'
+statsig_api_client_key: 'client-fake-key'
+<% end -%>

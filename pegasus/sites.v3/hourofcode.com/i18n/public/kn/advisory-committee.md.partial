@@ -1,8 +1,8 @@
 ---
-title: Hour of Code and CSEdWeek Advisory Committee
+title: ಕೋಡ್ ಮತ್ತು ಸಿಎಸ್ಇಡಿ ವೀಕ್ ಸಲಹಾ ಸಮಿತಿಯ ಗಂಟೆ
 ---
 
-# Hour of Code and CSEdWeek Advisory Committee
+# ಕೋಡ್ ಮತ್ತು ಸಿಎಸ್ಇಡಿ ವೀಕ್ ಸಲಹಾ ಸಮಿತಿಯ ಗಂಟೆ
 
 {{ advisory-committee/about_headshots }}
 

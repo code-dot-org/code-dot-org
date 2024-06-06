@@ -1,4 +1,3 @@
-import {expect} from '../../../util/reconfiguredChai';
 import {
   translatedCourseOfferingCsTopics,
   translatedCourseOfferingSchoolSubjects,
@@ -7,6 +6,8 @@ import {
   translatedCourseOfferingDurations,
   subjectsAndTopicsOrder,
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('CourseOfferingHelpers', () => {
   it('each translatedCourseOfferingCsTopics constant is mapped to a non-empty string', () => {

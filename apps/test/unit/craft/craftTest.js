@@ -1,5 +1,6 @@
-import {assert} from '../../util/reconfiguredChai';
 import sinon from 'sinon';
+
+import Craft from '@cdo/apps/craft/code-connection/craft';
 import {
   getStore,
   registerReducers,
@@ -7,7 +8,8 @@ import {
   restoreRedux,
 } from '@cdo/apps/redux';
 import pageConstants from '@cdo/apps/redux/pageConstants';
-import Craft from '@cdo/apps/craft/code-connection/craft';
+
+import {assert} from '../../util/reconfiguredChai';
 
 describe('Craft', () => {
   before(() => sinon.stub(Craft, 'render'));

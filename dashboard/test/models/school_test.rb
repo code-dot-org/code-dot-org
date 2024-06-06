@@ -9,7 +9,7 @@ class SchoolTest < ActiveSupport::TestCase
 
     schools = School.merge_from_csv(School.get_seed_filename(true))
     assert_equal(20, schools.size, 'test data contains 20 schools')
-    assert_not_nil School.find_by(
+    refute_nil School.find_by(
       {
         id: '10000500871',
         school_district_id: 100005,
@@ -18,6 +18,7 @@ class SchoolTest < ActiveSupport::TestCase
         state: 'AL',
         zip: '35950',
         school_type: 'public',
+        last_known_school_year_open: '2022-2023'
       }
     )
   end
@@ -49,7 +50,6 @@ class SchoolTest < ActiveSupport::TestCase
     parse_row = proc do |row|
       {
         id: row['id'],
-        state_school_id: row['state_school_id'],
         name: row['name'] + 'test'
       }
     end
@@ -60,88 +60,6 @@ class SchoolTest < ActiveSupport::TestCase
       assert_includes exception.message, 'This was a dry run'
       assert_equal before_count, School.count
     end
-  end
-
-  test 'null state_school_id is valid' do
-    school = build :school, :without_state_school_id
-    assert school.valid?, school.errors.full_messages
-  end
-
-  test 'invalid state_school_id is invalid' do
-    school = build :school, :with_invalid_state_school_id
-    refute school.valid?
-  end
-
-  test 'maker high needs false when no stats data' do
-    school = create :school
-    refute school.maker_high_needs?
-  end
-
-  test 'maker high needs false when null students total' do
-    school = create :school
-    school.school_stats_by_year << SchoolStatsByYear.new(
-      {
-        school_id: school.id,
-        school_year: '1998-1999'
-      }
-    )
-    school.save!
-    refute school.maker_high_needs?
-  end
-
-  test 'maker high needs false when null frl eligible total' do
-    school = create :school
-    school.school_stats_by_year << SchoolStatsByYear.new(
-      {
-        school_id: school.id,
-        school_year: '1998-1999',
-        students_total: 100
-      }
-    )
-    school.save!
-    refute school.maker_high_needs?
-  end
-
-  test 'maker high needs false when frl eligible below 50 percent of students' do
-    school = create :school
-    school.school_stats_by_year << SchoolStatsByYear.new(
-      {
-        school_id: school.id,
-        school_year: '1998-1999',
-        students_total: 100,
-        frl_eligible_total: 49
-      }
-    )
-    school.save!
-    refute school.maker_high_needs?
-  end
-
-  test 'maker high needs true when frl eligible equal to 50 percent of students' do
-    school = create :school
-    school.school_stats_by_year << SchoolStatsByYear.new(
-      {
-        school_id: school.id,
-        school_year: '1998-1999',
-        students_total: 1000,
-        frl_eligible_total: 500
-      }
-    )
-    school.save!
-    assert school.maker_high_needs?
-  end
-
-  test 'maker high needs true when frl eligible above 50 percent of students' do
-    school = create :school
-    school.school_stats_by_year << SchoolStatsByYear.new(
-      {
-        school_id: school.id,
-        school_year: '1998-1999',
-        students_total: 1000,
-        frl_eligible_total: 501
-      }
-    )
-    school.save!
-    assert school.maker_high_needs?
   end
 
   test 'AFE high needs false when no stats data' do
@@ -278,15 +196,12 @@ class SchoolTest < ActiveSupport::TestCase
     assert_equal "12345678901", normalized_id
   end
 
-  private
-
-  def clear_schools_and_dependent_models
+  private def clear_schools_and_dependent_models
     # Clear tables with hard dependencies (ie, MySQL foreign keys)
     # on the schools table.
     Census::CensusSummary.delete_all
     SchoolInfo.delete_all
     SchoolStatsByYear.delete_all
-    CircuitPlaygroundDiscountApplication.delete_all
 
     School.delete_all
   end

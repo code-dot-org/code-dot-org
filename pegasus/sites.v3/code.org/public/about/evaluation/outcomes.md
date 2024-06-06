@@ -37,12 +37,12 @@ Code.org offers a series of 20-hour long courses we refer to as ["Computer Scien
 
 | Since 9/14 | Sequencing | Debugging | Loops | Conditionals | Nested Loops | Event handlers | Functions |
 |---|---|---|---|---|---|---|---|
-| [Course 1](http://studio.code.org/s/course1)   | 524,776 | 394,986 | 161,185 | -  | -  |  124,559 | -  |
-| [Course 2](http://studio.code.org/s/course2)   | 516,595 | 140,135 | 219,110 | 90,550 | 65,785 | 273,849 | -  |
-| [Course 3](http://studio.code.org/s/course3)   | 114,250 | 18,937 | 114,250 | 27,736 | 25,008 | 24,716 | 45,878 |
+| [Course 1](http://studio.code.org/s/course1?viewAs=Instructor)   | 524,776 | 394,986 | 161,185 | -  | -  |  124,559 | -  |
+| [Course 2](http://studio.code.org/s/course2?viewAs=Instructor)   | 516,595 | 140,135 | 219,110 | 90,550 | 65,785 | 273,849 | -  |
+| [Course 3](http://studio.code.org/s/course3?viewAs=Instructor)   | 114,250 | 18,937 | 114,250 | 27,736 | 25,008 | 24,716 | 45,878 |
 *Source: Code Studio database*
 
-**"Skill demonstration" is defined as having solved 80% of the puzzles in at least one stage that teaches that concept. Note: If the same student did [CS Fundamentals](/educate/k5) Courses [1](http://studio.code.org/s/course1) and [2](http://studio.code.org/s/course2), they are double counted for a concept. On the other hand, this does not account for learning the concept more deeply by repeating it in different contexts, or at more depth.*
+**"Skill demonstration" is defined as having solved 80% of the puzzles in at least one stage that teaches that concept. Note: If the same student did [CS Fundamentals](/educate/k5) Courses [1](http://studio.code.org/s/course1?viewAs=Instructor) and [2](http://studio.code.org/s/course2?viewAs=Instructor), they are double counted for a concept. On the other hand, this does not account for learning the concept more deeply by repeating it in different contexts, or at more depth.*
 <br/>
 <br/>
 
@@ -62,7 +62,7 @@ Students who are learning with the support of their teacher in a classroom setti
 
 During the 2014-15 school year, Code.org partnered with [Exploring Computer Science (ECS)](http://www.exploringcs.org) to deliver professional development for the program at scale. In order to gauge the impact of that work, Code.org conducted a pilot evaluation of student learning outcomes in [Exploring Computer Science (ECS)](http://www.exploringcs.org) using a concepts assessment developed with Outlier as well as a programming test developed independently on Code Studio. Results are promising, but more rigorous design is needed to validate and measure mastery learning and transfer.
 
-A [programming challenge](https://studio.code.org/s/CodeStudioPuzzleChallenge/) was designed by Code.org and piloted to about 1,000 ECS students via Code Studio to see if student programming skills would transfer to a different environment. The data below shows the percentage of students who successfully completed a puzzle challenge related to a particular concept/task (untimed, no hints, unlimited attempts). Further work is required to validate and revise the questions.
+A [programming challenge](https://studio.code.org/s/CodeStudioPuzzleChallenge?viewAs=Instructor) was designed by Code.org and piloted to about 1,000 ECS students via Code Studio to see if student programming skills would transfer to a different environment. The data below shows the percentage of students who successfully completed a puzzle challenge related to a particular concept/task (untimed, no hints, unlimited attempts). Further work is required to validate and revise the questions.
 
 ### Table: Programming challenge pilot results (delivered through Code Studio, N=~1000).
 

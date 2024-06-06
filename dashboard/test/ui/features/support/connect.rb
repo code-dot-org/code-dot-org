@@ -21,7 +21,7 @@ def saucelabs_browser(test_run_name)
   raise "Please define CDO.saucelabs_authkey"  if CDO.saucelabs_authkey.blank?
 
   is_tunnel = ENV['CIRCLE_BUILD_NUM']
-  url = "http://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@#{is_tunnel ? 'localhost:4445' : 'ondemand.saucelabs.com:80'}/wd/hub"
+  url = "http://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@#{is_tunnel ? 'localhost:4445' : 'ondemand.us-west-1.saucelabs.com:80'}/wd/hub"
 
   capabilities = Selenium::WebDriver::Remote::Capabilities.new($browser_config.except('name'))
 
@@ -32,7 +32,12 @@ def saucelabs_browser(test_run_name)
     idleTimeout: 60,
     seleniumVersion: Selenium::WebDriver::VERSION
   }
-  sauce_options[:tunnelIdentifier] = CDO.circle_run_identifier if CDO.circle_run_identifier
+
+  # CDO.saucelabs_tunnel_name is only intended to be used by developers doing
+  # local testing. This alternative name was chosen to make the developer's
+  # locals.yml easier to understand.
+  tunnel_name = CDO.circle_run_identifier || CDO.saucelabs_tunnel_name
+  sauce_options[:tunnelIdentifier] = tunnel_name if tunnel_name
   sauce_options[:priority] = ENV['PRIORITY'].to_i if ENV['PRIORITY']
   capabilities["sauce:options"] ||= {}
   capabilities["sauce:options"].merge!(sauce_options)
@@ -60,7 +65,7 @@ def get_browser(test_run_name)
   browser = nil
   if ENV['TEST_LOCAL'] == 'true'
     headless = ENV['TEST_LOCAL_HEADLESS'] == 'true'
-    browser = SeleniumBrowser.local(headless, ENV['BROWSER_CONFIG'])
+    browser = SeleniumBrowser.local(browser: ENV['BROWSER_CONFIG'], headless: headless)
   else
     browser = Retryable.retryable(tries: MAX_CONNECT_RETRIES) do
       saucelabs_browser(test_run_name)

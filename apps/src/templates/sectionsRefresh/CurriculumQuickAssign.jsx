@@ -1,18 +1,21 @@
-import React, {useState, useEffect, useCallback} from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import i18n from '@cdo/locale';
-import moduleStyles from './sections-refresh.module.scss';
-import QuickAssignTable from './QuickAssignTable';
-import QuickAssignTableHocPl from './QuickAssignTableHocPl';
-import CurriculumQuickAssignTopRow from './CurriculumQuickAssignTopRow';
-import VersionUnitDropdowns from './VersionUnitDropdowns';
+import PropTypes from 'prop-types';
+import React, {useState, useEffect, useCallback} from 'react';
+
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import {BodyTwoText, Heading3} from '@cdo/apps/componentLibrary/typography';
 import {
   CourseOfferingCurriculumTypes as curriculumTypes,
   ParticipantAudience,
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
-import {BodyTwoText, Heading3} from '@cdo/apps/componentLibrary/typography';
+import i18n from '@cdo/locale';
+
+import CurriculumQuickAssignTopRow from './CurriculumQuickAssignTopRow';
+import QuickAssignTable from './QuickAssignTable';
+import QuickAssignTableHocPl from './QuickAssignTableHocPl';
+import VersionUnitDropdowns from './VersionUnitDropdowns';
+
+import moduleStyles from './sections-refresh.module.scss';
 
 export const MARKETING_AUDIENCE = {
   ELEMENTARY: 'elementary',
@@ -38,6 +41,11 @@ export default function CurriculumQuickAssign({
     : initialParticipantType;
 
   const showPlOfferings = participantType !== ParticipantAudience.student;
+
+  const updateCourse = useCallback(
+    course => updateSection('course', course),
+    [updateSection]
+  );
 
   // Retrieve course offerings on mount and convert to JSON
   useEffect(() => {
@@ -85,7 +93,7 @@ export default function CurriculumQuickAssign({
           courseDataByHeaderValues.forEach(course => {
             if (sectionCourse?.courseOfferingId === course.id) {
               setSelectedCourseOffering(course);
-              updateSectionCourseForExisitngSections(course);
+              updateSectionCourseForExistingSections(course);
               setMarketingAudience(audience);
             }
           });
@@ -110,10 +118,10 @@ export default function CurriculumQuickAssign({
     sectionCourse,
     selectedCourseOffering,
     updateSection,
-    updateSectionCourseForExisitngSections,
+    updateSectionCourseForExistingSections,
   ]);
 
-  const updateSectionCourseForExisitngSections = useCallback(
+  const updateSectionCourseForExistingSections = useCallback(
     course => {
       const courseVersions = {};
       // The structure of cv is an array with the first item an id and the second
@@ -143,43 +151,37 @@ export default function CurriculumQuickAssign({
         hasTextToSpeech: targetUnit?.text_to_speech_enabled,
       };
 
-      updateSection('course', updateSectionData);
+      updateCourse(updateSectionData);
     },
-    [updateSection, sectionCourse]
+    [updateCourse, sectionCourse]
   );
 
   /*
-  When toggling 'decide later', clear out marketing audience or assign one to make
-  the table appear again automatically.
-  Additionally, erase any previously selected course assignment.
+    When toggling 'decide later', erase any selected course assignment.
+    Leave the marketing audience alone to prevent toggling of the table that
+    might be jarring to the user.
   */
   const toggleDecideLater = () => {
-    setDecideLater(!decideLater);
-    updateSection('course', {});
-    if (marketingAudience !== '') {
-      setMarketingAudience('');
-      setSelectedCourseOffering(null);
-    } else {
-      setMarketingAudience(MARKETING_AUDIENCE.ELEMENTARY);
-    }
-  };
-
-  // When selecting a marketing audience, ensure 'decide later' is unchecked
-  const updateMarketingAudience = useCallback(
-    marketingAudience => {
-      setMarketingAudience(marketingAudience);
+    // User clicked "Clear assigned curriculum"
+    if (selectedCourseOffering) {
       setDecideLater(false);
-    },
-    [setDecideLater, setMarketingAudience]
-  );
+    }
+
+    // User clicked "Decide later"
+    else {
+      setDecideLater(!decideLater);
+    }
+
+    updateCourse({});
+    setSelectedCourseOffering(null);
+  };
 
   // To distinguish between types of tables: HOC & PL vs Grade Bands
-  const isPlOrHoc = () => {
-    return (
-      marketingAudience === MARKETING_AUDIENCE.HOC ||
-      marketingAudience === MARKETING_AUDIENCE.PL
-    );
-  };
+  const SelectedQuickAssignTable =
+    marketingAudience === MARKETING_AUDIENCE.HOC ||
+    marketingAudience === MARKETING_AUDIENCE.PL
+      ? QuickAssignTableHocPl
+      : QuickAssignTable;
 
   return (
     <div className={moduleStyles.containerWithMarginTop}>
@@ -211,35 +213,25 @@ export default function CurriculumQuickAssign({
       <CurriculumQuickAssignTopRow
         showPlOfferings={showPlOfferings}
         marketingAudience={marketingAudience}
-        updateMarketingAudience={updateMarketingAudience}
+        updateMarketingAudience={setMarketingAudience}
       />
-      {marketingAudience && !isPlOrHoc() && courseOfferings && (
-        <QuickAssignTable
+      {marketingAudience && courseOfferings && (
+        <SelectedQuickAssignTable
           marketingAudience={marketingAudience}
           courseOfferings={courseOfferings}
-          setSelectedCourseOffering={offering =>
-            setSelectedCourseOffering(offering)
-          }
-          updateCourse={course => updateSection('course', course)}
+          setSelectedCourseOffering={offering => {
+            setDecideLater(false);
+            setSelectedCourseOffering(offering);
+          }}
+          updateCourse={updateCourse}
           sectionCourse={sectionCourse}
           isNewSection={isNewSection}
-        />
-      )}
-      {marketingAudience && isPlOrHoc() && courseOfferings && (
-        <QuickAssignTableHocPl
-          marketingAudience={marketingAudience}
-          courseOfferings={courseOfferings}
-          setSelectedCourseOffering={offering =>
-            setSelectedCourseOffering(offering)
-          }
-          updateCourse={course => updateSection('course', course)}
-          sectionCourse={sectionCourse}
         />
       )}
       {marketingAudience && (
         <VersionUnitDropdowns
           courseOffering={selectedCourseOffering}
-          updateCourse={course => updateSection('course', course)}
+          updateCourse={updateCourse}
           sectionCourse={sectionCourse}
           isNewSection={isNewSection}
         />

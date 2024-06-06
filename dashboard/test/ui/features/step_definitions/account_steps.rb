@@ -18,12 +18,7 @@ end
 
 Given(/^I sign in as "([^"]*)"( and go home)?$/) do |name, home|
   navigate_to replace_hostname('http://studio.code.org/reset_session')
-  user = @users[name]
-  email = user[:email]
-  password = user[:password]
-  url = "/users/sign_in"
-  browser_request(url: url, method: 'POST', body: {user: {login: email, password: password}})
-
+  sign_in name
   redirect = 'http://studio.code.org/home'
   navigate_to replace_hostname(redirect) if home
 end
@@ -62,6 +57,14 @@ def find_test_user_by_name(name)
   User.find_by(email: @users[name][:email])
 end
 
+def sign_in(name)
+  user = @users[name]
+  email = user[:email]
+  password = user[:password]
+  url = "/users/sign_in"
+  browser_request(url: url, method: 'POST', body: {user: {login: email, password: password}})
+end
+
 def sign_up(name)
   wait_proc = proc do
     opacity = @browser.execute_script <<~JS
@@ -83,10 +86,29 @@ rescue RSpec::Expectations::ExpectationNotMetError
   retry
 end
 
-def create_user(name, url: '/users.json', code: 201, **user_opts)
+# Creates the user and signs them in.
+def create_user(name, url: '/api/test/create_user', **user_opts)
   navigate_to replace_hostname('http://studio.code.org/reset_session')
   Retryable.retryable(on: RSpec::Expectations::ExpectationNotMetError, tries: 3) do
+    # Generate the user
     email, password = generate_user(name)
+
+    # Set the parent email to the user email, if we see it
+    # in the user options (we generate the email, here)
+    if user_opts.key? :parent_email_preference_email
+      user_opts[:parent_email_preference_opt_in_required] = '1'
+      user_opts[:parent_email_preference_opt_in] = 'no'
+      user_opts[:parent_email_preference_email] = email
+      user_opts[:parent_email_preference_request_ip] = '127.0.0.1'
+      user_opts[:parent_email_preference_source] = 'ACCOUNT_SIGN_UP'
+    end
+
+    if user_opts[:email_preference_opt_in] == 'yes'
+      user_opts[:email_preference_form_kind] = email
+      user_opts[:email_preference_request_ip] = '127.0.0.1'
+      user_opts[:email_preference_source] = 'ACCOUNT_SIGN_UP'
+    end
+
     browser_request(
       url: url,
       method: 'POST',
@@ -102,33 +124,65 @@ def create_user(name, url: '/users.json', code: 201, **user_opts)
           sign_in_count: 2
         }.merge(user_opts)
       },
-      code: code
+      code: 200
     )
   end
 end
 
-And(/^I create a (young )?student( in Colorado)?( who has never signed in)? named "([^"]*)"( and go home)?$/) do |young, locked, new_account, name, home|
+And(/^I create( as a parent)? a (young )?student( in Colorado)?( who has never signed in)? named "([^"]*)"( after CPA exception)?( before CPA exception)?( and go home)?$/) do |parent_created, young, locked, new_account, name, after_cpa_exception, before_cpa_exception, home|
   age = young ? '10' : '16'
   sign_in_count = new_account ? 0 : 2
 
   user_opts = {
+    user_type: 'student',
     age: age,
-    sign_in_count: sign_in_count
+    sign_in_count: sign_in_count,
   }
 
   if locked
     user_opts[:country_code] = "US"
     user_opts[:us_state] = "CO"
+    user_opts[:user_provided_us_state] = true
+  end
+
+  # See Policies::ChildAccount::CPA_CREATED_AT_EXCEPTION_DATE
+  cpa_exception_date = Date.parse('2024-05-26T00:00:00MST')
+
+  if after_cpa_exception
+    user_opts[:created_at] = cpa_exception_date
+  end
+
+  if before_cpa_exception
+    user_opts[:created_at] = cpa_exception_date - 1.second
+  end
+
+  if parent_created
+    user_opts[:parent_email_preference_email] = "[user-email]"
   end
 
   create_user(name, **user_opts)
   navigate_to replace_hostname('http://studio.code.org') if home
 end
 
+And(/^I type the email for "([^"]*)" into element "([^"]*)"$/) do |name, element|
+  steps <<~GHERKIN
+    And I type "#{@users[name][:email]}" into "#{element}"
+  GHERKIN
+end
+
+And(/^I press keys for the email for "([^"]*)" into element "([^"]*)"$/) do |name, element|
+  steps <<~GHERKIN
+    And I press keys "#{@users[name][:email]}" for element "#{element}"
+  GHERKIN
+end
+
 And(/^I create a student in the eu named "([^"]*)"$/) do |name|
   create_user(name,
-    data_transfer_agreement_required: '1',
-    data_transfer_agreement_accepted: '1'
+              data_transfer_agreement_accepted: true,
+              data_transfer_agreement_request_ip: '127.0.0.1',
+              data_transfer_agreement_kind: '0',
+              data_transfer_agreement_source: 'ACCOUNT_SIGN_UP',
+              data_transfer_agreement_at: DateTime.now,
   )
 end
 
@@ -150,6 +204,13 @@ And(/^I fill in the sign up form with (in)?valid values for "([^"]*)"$/) do |inv
     And I type "#{password}" into "#user_password_confirmation"
     And I select the "#{age}" option in dropdown "user_age"
     And I click ".btn.btn-primary" to load a new page
+  GHERKIN
+end
+
+And(/^I fill in the sign up email field with a random email$/) do
+  email = "user#{Time.now.to_i}_#{rand(1_000_000)}@test.xx"
+  steps <<~GHERKIN
+    And I type "#{email}" into "#user_email"
   GHERKIN
 end
 
@@ -200,11 +261,8 @@ def pass_time_for_user(name, amount_of_time)
   end
 end
 
-And(/^I give user "([^"]*)" authorized teacher permission$/) do |name|
-  require_rails_env
-  user = User.find_by_email_or_hashed_email(@users[name][:email])
-  user.permission = UserPermission::AUTHORIZED_TEACHER
-  user.save!
+And(/^I give user "([^"]*)" authorized teacher permission$/) do |_|
+  browser_request(url: '/api/test/authorized_teacher_access', method: 'POST')
 end
 
 And(/^I get universal instructor access$/) do
@@ -213,4 +271,8 @@ end
 
 And(/^I get plc reviewer access$/) do
   browser_request(url: '/api/test/plc_reviewer_access', method: 'POST')
+end
+
+And(/^I get debug info for the current user$/) do
+  puts browser_request(url: '/api/v1/users/current', method: 'GET')
 end

@@ -1,14 +1,18 @@
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import {FormGroup, Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-import FieldGroup from '../../code-studio/pd/form_components/FieldGroup';
-import color from '@cdo/apps/util/color';
-import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
-import AmazonFutureEngineerEligibilityForm from './amazonFutureEngineerEligibilityForm';
-import AmazonFutureEngineerAccountConfirmation from './amazonFutureEngineerAccountConfirmation';
+
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {studio, pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
+import color from '@cdo/apps/util/color';
 import {isEmail} from '@cdo/apps/util/formatValidation';
+
+import FieldGroup from '../../code-studio/pd/form_components/FieldGroup';
+
+import AmazonFutureEngineerAccountConfirmation from './amazonFutureEngineerAccountConfirmation';
+import AmazonFutureEngineerEligibilityForm from './amazonFutureEngineerEligibilityForm';
 
 const sessionStorageKey = 'AmazonFutureEngineerEligibility';
 
@@ -86,10 +90,7 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
   };
 
   submit = () => {
-    firehoseClient.putRecord({
-      study: 'amazon-future-engineer-eligibility',
-      event: 'submit_school_info',
-    });
+    analyticsReporter.sendEvent(EVENTS.AFE_SUBMIT_SCHOOL_INFO);
 
     if (this.state.formData.schoolId === '-1') {
       this.handleEligibility(false);
@@ -160,13 +161,8 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
     this.saveToSessionStorage();
 
     if (!isEligible) {
-      firehoseClient.putRecord(
-        {
-          study: 'amazon-future-engineer-eligibility',
-          event: 'ineligible',
-        },
-        {callback: () => (window.location = pegasus('/afe/start-codeorg'))}
-      );
+      analyticsReporter.sendEvent(EVENTS.AFE_INELIGIBLE);
+      window.location = pegasus('/afe/start-codeorg');
     }
   }
 
@@ -180,6 +176,13 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
   };
 
   submitToAFE = () => {
+    if (this.props.signedIn && !this.props.isStudentAccount) {
+      analyticsReporter.sendEvent(EVENTS.AFE_SUBMIT, {
+        formEmail: this.state.formData.email,
+        formSchoolId: this.state.formData.schoolId,
+        formData: JSON.stringify(this.state.formData),
+      });
+    }
     return fetch('/dashboardapi/v1/amazon_future_engineer_submit', {
       method: 'POST',
       headers: {
@@ -296,6 +299,7 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
             email={formData.email}
             schoolId={formData.schoolId}
             updateFormData={this.updateAndStoreFormData}
+            isSignedIn={formData.signedIn}
           />
         )}
         {formData.schoolEligible &&
@@ -311,7 +315,8 @@ const styles = {
     paddingBottom: 10,
   },
   container: {
-    borderColor: color.teal,
+    backgroundColor: 'var(--neutral_white)',
+    border: '1px solid var(--neutral_dark20)',
     borderWidth: 'thin',
     borderStyle: 'solid',
     padding: '10px 15px 10px 15px',

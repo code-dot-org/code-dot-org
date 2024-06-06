@@ -158,10 +158,13 @@ export default class AnimationPreview extends React.Component {
       this.props.animationProps.categories.includes('backgrounds')
     ) {
       return (
+        // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+        // Verify or update this alt-text as necessary
         <img
           onLoad={this.props.onPreviewLoad}
           src={this.props.sourceUrl || EMPTY_IMAGE}
           style={backgroundImageStyle}
+          alt=""
         />
       );
     }
@@ -182,10 +185,15 @@ export default class AnimationPreview extends React.Component {
         }
       >
         <div style={cropStyle}>
+          {
+            // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+            // Verify or update this alt-text as necessary
+          }
           <img
             onLoad={this.props.onPreviewLoad}
             src={this.props.sourceUrl || EMPTY_IMAGE}
             style={imageStyle}
+            alt=""
           />
         </div>
       </div>

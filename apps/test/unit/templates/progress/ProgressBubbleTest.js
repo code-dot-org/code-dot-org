@@ -1,19 +1,21 @@
-import {assert, expect} from '../../../util/reconfiguredChai';
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow, mount} from 'enzyme';
 import sinon from 'sinon';
-import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
-import color from '@cdo/apps/util/color';
-import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
+
+import {ReviewStates} from '@cdo/apps/templates/feedback/types';
+import BubbleBadge, {BadgeType} from '@cdo/apps/templates/progress/BubbleBadge';
 import {
   BasicBubble,
   BubbleLink,
   BubbleSize,
   BubbleShape,
 } from '@cdo/apps/templates/progress/BubbleFactory';
-import BubbleBadge, {BadgeType} from '@cdo/apps/templates/progress/BubbleBadge';
+import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
+import color from '@cdo/apps/util/color';
 import * as utils from '@cdo/apps/utils';
-import {ReviewStates} from '@cdo/apps/templates/feedback/types';
+import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';
+
+import {assert, expect} from '../../../util/reconfiguredChai';
 
 const defaultProps = {
   level: {

@@ -1,15 +1,17 @@
 import React from 'react';
 import {Provider} from 'react-redux';
 import sinon from 'sinon';
+
 import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
+
 import teacherSections, {
   serverSectionFromSection,
   setSections,
 } from '../teacherDashboard/teacherSectionsRedux';
+
 import TeacherSections from './TeacherSections';
 
 export default {
-  title: 'TeacherSections',
   component: TeacherSections,
 };
 
@@ -101,4 +103,5 @@ function withFakeServer({courses = [], sections = []} = {}) {
     '/dashboardapi/sections/valid_course_offerings',
     successResponse([])
   );
+  server.respondWith('GET', '/api/v1/section_instructors', successResponse([]));
 }

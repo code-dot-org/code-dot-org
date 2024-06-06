@@ -2,6 +2,7 @@ require_relative './test_helper'
 require 'minitest/autorun'
 require 'rack/test'
 require 'mocha/mini_test'
+require 'shared_resources'
 require_relative 'fixtures/mock_pegasus'
 
 # Set up the rack environment to be test and recreate the Gatekeeper and DCDO in that mode.

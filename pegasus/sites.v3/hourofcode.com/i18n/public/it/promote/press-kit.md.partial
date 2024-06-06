@@ -63,7 +63,7 @@ I computer sono ovunque e stanno cambiando ogni industria del pianeta, ma meno d
 
 Con l'Ora del Codice, l'informatica è stata sulle homepage di Google, MSN, Yahoo! e Disney. Più di 100 partner si sono uniti per supportare questo movimento. Ogni Apple Store nel mondo ha ospitato un'Ora del Codice. Anche il presidente Obama ha scritto la sua prima riga di codice nell'ambito di questa campagna.
 
-Ecco perché ognuno dei [NUMERO] studenti della scuola [NOME SCUOLA] sta per prendere parte al più grande evento nella storia dell'apprendimento: l'Ora del Codice, durante la Settimana di Educazione all'Informatica (<%= campaign_date('full') %>).
+Ecco perché ognuno dei [NUMERO] studenti della scuola [NOME SCUOLA] sta per prendere parte al più grande evento nella storia dell'apprendimento: l'Ora del Codice, durante la Settimana Internazionale di Educazione all'Informatica (<%= campaign_date('full') %>).
 
 Ti scrivo per invitarti a partecipare alla nostra riunione di lancio e vedere i ragazzi che iniziano l'attività il [DATA].
 

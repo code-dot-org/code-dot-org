@@ -1,11 +1,12 @@
 import React from 'react';
-import ContentContainer from './ContentContainer';
-import CourseCard from './studioHomepages/CourseCard';
 import {Provider} from 'react-redux';
+
 import {reduxStore} from '@cdo/storybook/decorators';
 
+import ContentContainer from './ContentContainer';
+import CourseCard from './studioHomepages/CourseCard';
+
 export default {
-  title: 'ContentContainer',
   component: ContentContainer,
 };
 

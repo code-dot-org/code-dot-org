@@ -1,11 +1,10 @@
-// TODO: define all prop types for this file.
-/* eslint-disable react/prop-types */
-import React from 'react';
-import PropTypes from 'prop-types';
-import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
-import CodeDocLink from '@cdo/apps/templates/codeDocs/CodeDocLink';
-import i18n from '@cdo/locale';
 import {TextLink} from '@dsco_/link';
+import PropTypes from 'prop-types';
+import React from 'react';
+
+import CodeDocLink from '@cdo/apps/templates/codeDocs/CodeDocLink';
+import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
+import i18n from '@cdo/locale';
 
 export function CategorySection({category}) {
   return (
@@ -70,5 +69,6 @@ ProgrammingEnvironmentOverview.propTypes = {
     title: PropTypes.string,
     description: PropTypes.string,
     categories: PropTypes.arrayOf(categoryShape),
+    projectUrl: PropTypes.string,
   }).isRequired,
 };

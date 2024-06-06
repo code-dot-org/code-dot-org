@@ -1,5 +1,5 @@
 import React from 'react';
-import {shallow, mount} from 'enzyme';
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import CloneProgrammingExpressionDialog, {
   CloneFormDialog,
 } from '@cdo/apps/lib/levelbuilder/code-docs-editor/CloneProgrammingExpressionDialog';
@@ -177,7 +177,7 @@ describe('CloneProgrammingExpressionDialog integration test', () => {
     wrapper.find('Button').last().simulate('click');
     return new Promise(resolve => setImmediate(resolve)).then(() => {
       wrapper.update();
-      expect(wrapper.find('Button').length).to.equal(1);
+      expect(wrapper.find('FooterButton').length).to.equal(1);
       expect(wrapper.find('TextLink').props().href).to.equal(
         '/programming_expressions/100/edit'
       );

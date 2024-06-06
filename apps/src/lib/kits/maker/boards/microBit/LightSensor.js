@@ -5,7 +5,6 @@ import {
   MAX_SENSOR_BUFFER_DURATION,
   MAX_LIGHT_SENSOR_VALUE,
 } from './MicroBitConstants';
-import {apiValidateTypeAndRange} from '../../../../util/javascriptMode';
 
 export default class LightSensor extends EventEmitter {
   constructor(board) {
@@ -92,51 +91,6 @@ export default class LightSensor extends EventEmitter {
     if (this.state.buffer) {
       this.state.buffer.fill(0);
     }
-  }
-
-  // Get the averaged value over the given ms, adjusted within the range, if specified.
-  // If ms is outside of 50 and 3000 range, prints a warning to debug console.
-  getAveragedValue(ms) {
-    let opts = {ms};
-    apiValidateTypeAndRange(
-      opts,
-      'lightSensor.getAveragedValue',
-      'ms',
-      opts.ms,
-      'number',
-      SAMPLE_INTERVAL,
-      MAX_SENSOR_BUFFER_DURATION
-    );
-
-    // Divide ms range by sample rate of sensor
-    let requestedRange = Math.ceil(ms / SAMPLE_INTERVAL);
-    let indicesRange;
-    // User requested average over greater range than is recorded, so average over all
-    // recorded data.
-    if (requestedRange >= this.state.currentBufferWriteIndex) {
-      indicesRange = this.state.currentBufferWriteIndex;
-    } else {
-      indicesRange = requestedRange;
-    }
-
-    // currentBufferWriteIndex points to the next spot to write, so historical
-    // data starts at currentBufferWriteIndex - 1
-    let endIndex = this.state.currentBufferWriteIndex - 1;
-    let startIndex = this.state.currentBufferWriteIndex - indicesRange;
-
-    let sum = 0;
-    for (let index = startIndex; index <= endIndex; index++) {
-      // Because index might be negative or higher than buffer.length, use
-      // modulo to loop circular buffer.
-      let sumIndex =
-        (index + this.state.buffer.length) % this.state.buffer.length;
-      sum += this.state.buffer[sumIndex];
-    }
-    return scaleWithinRange(
-      sum / indicesRange,
-      this.state.rangeMin,
-      this.state.rangeMax
-    );
   }
 
   setScale(min, max) {

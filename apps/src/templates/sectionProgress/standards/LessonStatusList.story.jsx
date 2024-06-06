@@ -1,14 +1,16 @@
-import React from 'react';
-import {UnconnectedLessonStatusList as LessonStatusList} from './LessonStatusList';
-import {unpluggedLessonList} from './standardsTestHelpers';
 import {action} from '@storybook/addon-actions';
-import sectionStandardsProgress from './sectionStandardsProgressRedux';
-import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
-import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import currentUser from '@cdo/apps/templates/currentUserRedux';
-import {reduxStore} from '@cdo/storybook/decorators';
+import React from 'react';
 import {Provider} from 'react-redux';
+
+import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
+import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {reduxStore} from '@cdo/storybook/decorators';
+
+import {UnconnectedLessonStatusList as LessonStatusList} from './LessonStatusList';
+import sectionStandardsProgress from './sectionStandardsProgressRedux';
+import {unpluggedLessonList} from './standardsTestHelpers';
 
 const initialState = {
   teacherSections: {
@@ -31,7 +33,6 @@ const store = reduxStore(
 );
 
 export default {
-  title: 'LessonStatusList',
   component: LessonStatusList,
 };
 

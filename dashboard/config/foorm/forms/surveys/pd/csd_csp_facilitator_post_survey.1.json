@@ -7,7 +7,7 @@
         {
           "type": "html",
           "name": "612_facilitator_post_header",
-          "html": "<p><span style=\"font-size: 18pt;\"><strong><span>{workshop_course} {workshop_subject}: Facilitator Post-Workshop Survey</span></strong></span></p><p><After leading your {workshop_course} workshop this week, we ask that you please take&nbsp;<strong>5 minutes</strong> to share some feedback about your workshop experience and development as a facilitator.</p><p>In the event that Code.org shares feedback with workshop organizers, we will do our best to anonymize your responses.</p>"
+          "html": "<p><span style=\"font-size: 18pt;\"><strong><span>{workshop_course} {workshop_subject}: Facilitator Post-Workshop Survey</span></strong></span></p><p><p>After leading your {workshop_course} workshop this week, we ask that you please take&nbsp;<strong>5 minutes</strong> to share some feedback about your workshop experience and development as a facilitator.</p><p>In the event that Code.org shares feedback with workshop organizers, we will do our best to anonymize your responses.</p>"
         },
         {
           "type": "html",

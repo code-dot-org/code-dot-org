@@ -2,7 +2,7 @@
 
 require_relative '../../../dashboard/config/environment'
 
-CDO.log = Logger.new(STDOUT)
+CDO.log = Logger.new($stdout)
 
 SURVEY_YEAR = '2019-2020'.freeze
 

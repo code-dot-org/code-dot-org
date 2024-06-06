@@ -3,6 +3,8 @@
 // possible combinations of more expensive sound effects, so that any
 // sound can attach to the right one.
 
+import {BUS_EFFECT_COMBINATIONS} from '../constants';
+
 export default class SoundEffects {
   constructor(audioContext, delayTimeSeconds) {
     this.audioContext = audioContext;
@@ -33,18 +35,7 @@ export default class SoundEffects {
   // expensive, we want to pre-generate the busses and then connect
   // sounds to the appropriate one.
   generateBusses() {
-    const busEffectsCombinations = [
-      {filter: 'medium', delay: 'medium'},
-      {filter: 'low', delay: 'low'},
-      {filter: 'low', delay: 'medium'},
-      {filter: 'medium', delay: 'low'},
-      {filter: 'medium'},
-      {filter: 'low'},
-      {delay: 'medium'},
-      {delay: 'low'},
-    ];
-
-    busEffectsCombinations.forEach(busEffects => {
+    BUS_EFFECT_COMBINATIONS.forEach(busEffects => {
       const {firstNode, lastNode} = this.generateBus(busEffects);
 
       // The bus connects to our main output.

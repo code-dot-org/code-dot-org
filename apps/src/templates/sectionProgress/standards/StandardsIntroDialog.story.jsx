@@ -1,9 +1,9 @@
-import React from 'react';
-import {UnconnectedStandardsIntroDialog as StandardsIntroDialog} from './StandardsIntroDialog';
 import {action} from '@storybook/addon-actions';
+import React from 'react';
+
+import {UnconnectedStandardsIntroDialog as StandardsIntroDialog} from './StandardsIntroDialog';
 
 export default {
-  title: 'StandardsIntroDialog',
   component: StandardsIntroDialog,
 };
 

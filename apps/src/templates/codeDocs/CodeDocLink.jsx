@@ -1,9 +1,8 @@
-// TODO: define all prop types for this file.
-/* eslint-disable react/prop-types */
+import {TextLink} from '@dsco_/link';
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import EmbeddedBlock from '@cdo/apps/templates/codeDocs/EmbeddedBlock';
-import {TextLink} from '@dsco_/link';
 
 export default function CodeDocLink({programmingExpression, showBlocks}) {
   if (showBlocks && programmingExpression.blockName) {
@@ -28,5 +27,7 @@ CodeDocLink.propTypes = {
   programmingExpression: PropTypes.shape({
     name: PropTypes.string,
     link: PropTypes.string,
+    blockName: PropTypes.string,
   }).isRequired,
+  showBlocks: PropTypes.bool,
 };

@@ -1,0 +1,8 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#panels-container"}}
+  Panels
+
+#panels-container.in.collapse
+
+- content_for :body_scripts do
+  %script{src: webpack_asset_path('js/levels/editors/fields/_panels.js'),
+        data: {panels: (@level.properties['panels'] || @level.properties.dig('level_data', 'panels') || []).to_json, levelname: @level.name}}

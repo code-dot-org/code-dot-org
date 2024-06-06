@@ -1,30 +1,36 @@
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React, {useState, useEffect, useRef} from 'react';
 import {connect} from 'react-redux';
-import $ from 'jquery';
-import HeaderBanner from '../HeaderBanner';
-import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
-import MarketingAnnouncementBanner from './MarketingAnnouncementBanner';
-import RecentCourses from './RecentCourses';
-import TeacherSections from './TeacherSections';
-import TeacherResources from './TeacherResources';
-import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
-import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
-import shapes from './shapes';
-import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
-import NpsSurveyBlock from './NpsSurveyBlock';
-import i18n from '@cdo/locale';
-import CensusTeacherBanner from '../census2017/CensusTeacherBanner';
-import DonorTeacherBanner from '@cdo/apps/templates/DonorTeacherBanner';
-import {beginGoogleImportRosterFlow} from '../teacherDashboard/teacherSectionsRedux';
-import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
-import Button from '@cdo/apps/templates/Button';
-import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
-import IncubatorBanner from './IncubatorBanner';
-import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+
+import {LinkButton} from '@cdo/apps/componentLibrary/button';
+import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {studio} from '@cdo/apps/lib/util/urlHelpers';
+import DonorTeacherBanner from '@cdo/apps/templates/DonorTeacherBanner';
+import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
+import Notification from '@cdo/apps/templates/Notification';
+import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
+import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
+import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
+import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
+
+import CensusTeacherBanner from '../census2017/CensusTeacherBanner';
+import ContentContainer from '../ContentContainer';
+import HeaderBanner from '../HeaderBanner';
 import ProfessionalLearningSkinnyBanner from '../ProfessionalLearningSkinnyBanner';
+import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
+import {beginGoogleImportRosterFlow} from '../teacherDashboard/teacherSectionsRedux';
+
+import IncubatorBanner from './IncubatorBanner';
+import MarketingAnnouncementBanner from './MarketingAnnouncementBanner';
+import NpsSurveyBlock from './NpsSurveyBlock';
+import RecentCourses from './RecentCourses';
+import shapes from './shapes';
+import TeacherResources from './TeacherResources';
+import TeacherSections from './TeacherSections';
 
 const LOGGED_TEACHER_SESSION = 'logged_teacher_session';
 
@@ -35,7 +41,6 @@ export const UnconnectedTeacherHomepage = ({
   plCourses,
   courses,
   afeEligible,
-  isEnglish,
   joinedStudentSections,
   joinedPlSections,
   ncesSchoolId,
@@ -55,23 +60,29 @@ export const UnconnectedTeacherHomepage = ({
   hasFeedback,
   showIncubatorBanner,
   currentUserId,
-  showDeprecatedCalcAndEvalWarning,
 }) => {
   const censusBanner = useRef(null);
   const teacherReminders = useRef(null);
   const flashes = useRef(null);
 
+  /*
+   * Determines whether the AFE banner will take premium space on the Teacher Homepage
+   */
+  const shouldShowAFEBanner = true;
+
+  /*
+   * Set to true to hide the census banner
+   */
+  const forceHideCensusBanner = true;
+
   /* We are hiding the PL application banner to free up space on the Teacher Homepage (May 2023)
-   * when we want to show the Census banner again set this to true
+   * when we want to show the PL banner again set this to true
    */
   const showPLBanner = false;
 
-  /* We are hiding the Census banner to free up space on the Teacher Homepage (May 2023)
-   * when we want to show the Census banner again remove the next line
-   */
-  showCensusBanner = false;
-  const [displayCensusBanner, setDisplayCensusBanner] =
-    useState(showCensusBanner);
+  const [displayCensusBanner, setDisplayCensusBanner] = useState(
+    showCensusBanner && !forceHideCensusBanner
+  );
   const [censusSubmittedSuccessfully, setCensusSubmittedSuccessfully] =
     useState(null);
   const [censusBannerTeachesSelection, setCensusBannerTeachesSelection] =
@@ -92,6 +103,10 @@ export const UnconnectedTeacherHomepage = ({
       beginGoogleImportRosterFlow();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    analyticsReporter.sendEvent(EVENTS.TEACHER_HOMEPAGE_VISITED);
   }, []);
 
   const handleCensusBannerSubmit = () => {
@@ -154,7 +169,7 @@ export const UnconnectedTeacherHomepage = ({
   // Verify background image works for both LTR and RTL languages.
   const backgroundUrl = '/shared/images/banners/teacher-homepage-hero.jpg';
 
-  const showAFEBanner = isEnglish && afeEligible;
+  const showAFEBanner = shouldShowAFEBanner && afeEligible;
 
   // Send one analytics event when a teacher logs in. Use session storage to determine
   // whether they've just logged in.
@@ -173,22 +188,14 @@ export const UnconnectedTeacherHomepage = ({
     <div>
       <HeaderBanner
         headingText={i18n.homepageHeading()}
-        short={true}
         backgroundUrl={backgroundUrl}
+        backgroundImageStyling={{backgroundPosition: '90% 30%'}}
       />
       <div className={'container main'}>
         <ProtectedStatefulDiv ref={flashes} />
-        {showDeprecatedCalcAndEvalWarning && (
-          <Notification
-            type={NotificationType.warning}
-            notice={i18n.deprecatedCalcAndEvalWarning()}
-            details={i18n.deprecatedCalcAndEvalDetails()}
-            dismissible={false}
-          />
-        )}
         <ProtectedStatefulDiv ref={teacherReminders} />
         {showNpsSurvey && <NpsSurveyBlock />}
-        {isEnglish && specialAnnouncement && (
+        {specialAnnouncement && (
           <MarketingAnnouncementBanner
             announcement={specialAnnouncement}
             marginBottom="30px"
@@ -215,7 +222,6 @@ export const UnconnectedTeacherHomepage = ({
             headingText="Return to Your Application"
             descriptionText="Finish applying for our Professional Learning Program"
             buttonText="Finish Application"
-            buttonColor={Button.ButtonColor.orange}
             buttonUrl="/pd/application/teacher"
             solidBorder={true}
           />
@@ -226,7 +232,6 @@ export const UnconnectedTeacherHomepage = ({
             headingText="Return to Your Application"
             descriptionText="Your Regional Partner has requested updates to your Professional Learning Application."
             buttonText="Return to Application"
-            buttonColor={Button.ButtonColor.orange}
             buttonUrl="/pd/application/teacher"
             solidBorder={true}
           />
@@ -263,7 +268,7 @@ export const UnconnectedTeacherHomepage = ({
         )}
         {showAFEBanner && (
           <div>
-            <DonorTeacherBanner showPegasusLink={true} source="teacher_home" />
+            <DonorTeacherBanner source="teacher_home" />
             <div style={styles.clear} />
           </div>
         )}
@@ -281,14 +286,27 @@ export const UnconnectedTeacherHomepage = ({
             isProfessionalLearningCourse={true}
           />
         )}
+        {/* TODO - We will eventually remove this section
+          once enough time has passed */}
         {(plCourses?.length > 0 || topPlCourse) && (
-          <RecentCourses
-            courses={plCourses}
-            topCourse={topPlCourse}
-            showAllCoursesLink={true}
-            isProfessionalLearningCourse={true}
-            hasFeedback={hasFeedback}
-          />
+          <section id={'pl-courses-placeholder'} style={{marginBlock: '6rem'}}>
+            <Heading2 visualAppearance="heading-md">
+              {i18n.myProfessionalLearningCourses()}
+            </Heading2>
+            <BodyTwoText>
+              {i18n.myProfessionalLearningCoursesHomepageDesc()}
+            </BodyTwoText>
+            <LinkButton
+              color={'purple'}
+              href={studio('/my-professional-learning#self-paced-pl')}
+              iconLeft={{
+                iconName: 'book-circle-arrow-right',
+                iconStyle: 'solid',
+              }}
+              size="s"
+              text={i18n.myProfessionalLearningCoursesHomepageButton()}
+            />
+          </section>
         )}
         <TeacherResources />
         {showIncubatorBanner && <IncubatorBanner />}
@@ -296,11 +314,30 @@ export const UnconnectedTeacherHomepage = ({
           canViewFullList={true}
           canViewAdvancedTools={canViewAdvancedTools}
         />
-        <JoinSectionArea
-          initialJoinedStudentSections={joinedStudentSections}
-          initialJoinedPlSections={joinedPlSections}
-          isTeacher={true}
-        />
+        <section>
+          <JoinSectionArea
+            initialJoinedStudentSections={joinedStudentSections}
+            initialJoinedPlSections={joinedPlSections}
+            isTeacher={true}
+          />
+        </section>
+        <ContentContainer
+          heading={i18n.joinedProfessionalLearningSectionsHomepageTitle()}
+        >
+          <BodyTwoText>
+            {i18n.joinedProfessionalLearningSectionsHomepageDesc()}
+          </BodyTwoText>
+          <LinkButton
+            color={'purple'}
+            href={studio('/my-professional-learning')}
+            iconLeft={{
+              iconName: 'book-circle-arrow-right',
+              iconStyle: 'solid',
+            }}
+            size="s"
+            text={i18n.myProfessionalLearningSectionsHomepageButton()}
+          />
+        </ContentContainer>
       </div>
     </div>
   );
@@ -314,7 +351,6 @@ UnconnectedTeacherHomepage.propTypes = {
   courses: shapes.courses,
   afeEligible: PropTypes.bool,
   hocLaunch: PropTypes.string,
-  isEnglish: PropTypes.bool.isRequired,
   joinedStudentSections: shapes.sections,
   joinedPlSections: shapes.sections,
   ncesSchoolId: PropTypes.string,
@@ -334,7 +370,6 @@ UnconnectedTeacherHomepage.propTypes = {
   hasFeedback: PropTypes.bool,
   showIncubatorBanner: PropTypes.bool,
   currentUserId: PropTypes.number,
-  showDeprecatedCalcAndEvalWarning: PropTypes.bool,
 };
 
 const styles = {

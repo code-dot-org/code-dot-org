@@ -1,22 +1,26 @@
+import orderBy from 'lodash/orderBy';
 import PropTypes from 'prop-types';
 import React from 'react';
-import i18n from '@cdo/locale';
-import color from '../../util/color';
-import {ImageWithStatus} from '../ImageWithStatus';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
-import wrappedSortable from '../tables/wrapped_sortable';
-import orderBy from 'lodash/orderBy';
-import {
-  featuredProjectDataPropType,
-  featuredProjectTableTypes,
-} from './projectConstants';
-import {FEATURED_PROJECT_TYPE_MAP} from './projectTypeMap';
+
+import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
+import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
+import experiments from '@cdo/apps/util/experiments';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
+import {FeaturedProjectStatus} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
+
+import color from '../../util/color';
+import {ImageWithStatus} from '../ImageWithStatus';
 import QuickActionsCell from '../tables/QuickActionsCell';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
-import PopUpMenu from '@cdo/apps/lib/ui/PopUpMenu';
+import wrappedSortable from '../tables/wrapped_sortable';
 
-const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
+import {featuredProjectDataPropType} from './projectConstants';
+import {FEATURED_PROJECT_TYPE_MAP} from './projectTypeMap';
+import {getThumbnailUrl} from './projectUtils';
 
 const THUMBNAIL_SIZE = 65;
 
@@ -25,9 +29,10 @@ export const COLUMNS = {
   THUMBNAIL: 0,
   PROJECT_NAME: 1,
   APP_TYPE: 2,
-  LAST_PUBLISHED: 3,
+  STATUS: 3,
   LAST_FEATURED: 4,
-  ACTIONS: 5,
+  LAST_PUBLISHED: 5,
+  ACTIONS: 6,
 };
 
 export const styles = {
@@ -68,12 +73,15 @@ export const styles = {
     justifyContent: 'center',
     alignItems: 'center',
   },
+  tableMessage: {
+    marginLeft: 10,
+  },
 };
 
 // Cell formatters.
 const thumbnailFormatter = function (thumbnailUrl, {rowData}) {
   const projectUrl = `/projects/${rowData.type}/${rowData.channel}/`;
-  thumbnailUrl = thumbnailUrl || PROJECT_DEFAULT_IMAGE;
+  thumbnailUrl = getThumbnailUrl(thumbnailUrl, rowData.type);
   return (
     <a
       style={tableLayoutStyles.link}
@@ -105,14 +113,17 @@ const nameFormatter = (projectName, {rowData}) => {
 };
 
 const unfeature = channel => {
-  var url = `/featured_projects/${channel}/unfeature`;
-  $.ajax({
-    url: url,
-    type: 'PUT',
-    dataType: 'json',
-  })
-    .done(handleSuccess)
-    .fail(handleUnfeatureFailure);
+  const url = `/featured_projects/${channel}/unfeature`;
+  HttpClient.put(url, undefined, true)
+    .then(handleSuccess)
+    .catch(handleUnfeatureFailure);
+};
+
+const bookmark = channel => {
+  const url = `/featured_projects/${channel}/bookmark`;
+  HttpClient.put(url, undefined, true)
+    .then(handleSuccess)
+    .catch(handleUnfeatureFailure);
 };
 
 const handleSuccess = () => {
@@ -127,37 +138,48 @@ const handleFeatureFailure = () => {
   alert("Shucks. Something went wrong - this project wasn't featured.");
 };
 
-const actionsFormatterFeatured = (actions, {rowData}) => {
-  return (
-    <QuickActionsCell>
-      <PopUpMenu.Item onClick={() => unfeature(rowData.channel)}>
-        {i18n.stopFeaturing()}
-      </PopUpMenu.Item>
-    </QuickActionsCell>
-  );
-};
-
 const feature = (channel, publishedAt) => {
-  var url = `/featured_projects/${channel}/feature`;
+  const url = `/featured_projects/${channel}/feature`;
   if (!publishedAt) {
     alert(i18n.featureUnpublishedWarning());
   }
-  $.ajax({
-    url: url,
-    type: 'PUT',
-    dataType: 'json',
-  })
-    .done(handleSuccess)
-    .fail(handleFeatureFailure);
+  HttpClient.put(url, undefined, true)
+    .then(handleSuccess)
+    .catch(handleFeatureFailure);
 };
 
-const actionsFormatterUnfeatured = (actions, {rowData}) => {
+const onDelete = channel => {
+  const url = `/featured_projects/${channel}`;
+  HttpClient.delete(url, true).then(handleSuccess).catch(handleFeatureFailure);
+};
+
+const actionsFormatter = (actions, {rowData}) => {
+  const status = rowData.status;
   return (
     <QuickActionsCell>
+      {status !== FeaturedProjectStatus.active && (
+        <PopUpMenu.Item
+          onClick={() => feature(rowData.channel, rowData.publishedAt)}
+        >
+          Feature
+        </PopUpMenu.Item>
+      )}
+      {status === FeaturedProjectStatus.active && (
+        <PopUpMenu.Item onClick={() => unfeature(rowData.channel)}>
+          Unfeature
+        </PopUpMenu.Item>
+      )}
+      {status === FeaturedProjectStatus.archived && (
+        <PopUpMenu.Item onClick={() => bookmark(rowData.channel)}>
+          Bookmark
+        </PopUpMenu.Item>
+      )}
+      <MenuBreak />
       <PopUpMenu.Item
-        onClick={() => feature(rowData.channel, rowData.publishedAt)}
+        onClick={() => onDelete(rowData.channel)}
+        color={color.red}
       >
-        {i18n.featureAgain()}
+        Remove
       </PopUpMenu.Item>
     </QuickActionsCell>
   );
@@ -168,7 +190,7 @@ const dateFormatter = time => {
     const date = new Date(time);
     return date.toLocaleDateString();
   } else {
-    return i18n.no();
+    return 'N/A';
   }
 };
 
@@ -176,26 +198,61 @@ const typeFormatter = type => {
   return FEATURED_PROJECT_TYPE_MAP[type];
 };
 
+const statusFormatter = status => {
+  return status;
+};
+
+const publishedFormatter = time => {
+  return time ? 'yes' : 'no';
+};
+
 const topicFormatter = topic => {
   return topic;
 };
-
 class FeaturedProjectsTable extends React.Component {
   static propTypes = {
-    projectList: PropTypes.arrayOf(featuredProjectDataPropType).isRequired,
-    tableVersion: PropTypes.oneOf(Object.values(featuredProjectTableTypes))
-      .isRequired,
+    activeList: PropTypes.arrayOf(featuredProjectDataPropType).isRequired,
+    bookmarkedList: PropTypes.arrayOf(featuredProjectDataPropType).isRequired,
+    archivedList: PropTypes.arrayOf(featuredProjectDataPropType).isRequired,
   };
 
   state = {
-    [COLUMNS.PROJECT_NAME]: {
-      direction: 'desc',
-      position: 0,
+    sortingColumns: {
+      [COLUMNS.LAST_FEATURED]: {
+        direction: 'desc',
+        position: 4,
+      },
     },
+    filterDropdownStatusValue:
+      tryGetLocalStorage('featured-projects-filter-dropdown', 'all') || 'all',
+  };
+
+  setFilterDropdownStatusValue = value => {
+    trySetLocalStorage('featured-projects-filter-dropdown', value);
+    this.setState({filterDropdownStatusValue: value});
   };
 
   getSortingColumns = () => {
     return this.state.sortingColumns || {};
+  };
+
+  getProjectList = () => {
+    if (this.state.filterDropdownStatusValue === FeaturedProjectStatus.active) {
+      return this.props.activeList;
+    } else if (
+      this.state.filterDropdownStatusValue === FeaturedProjectStatus.bookmarked
+    ) {
+      return this.props.bookmarkedList;
+    } else if (
+      this.state.filterDropdownStatusValue === FeaturedProjectStatus.archived
+    ) {
+      return this.props.archivedList;
+    } else {
+      return this.props.activeList.concat(
+        this.props.bookmarkedList,
+        this.props.archivedList
+      );
+    }
   };
 
   // The user requested a new sorting column. Adjust the state accordingly.
@@ -214,9 +271,10 @@ class FeaturedProjectsTable extends React.Component {
     });
   };
 
+  showSpecialTopic = experiments.isEnabled(experiments.SPECIAL_TOPIC);
+
   getColumns = sortable => {
-    const tableVersion = this.props.tableVersion;
-    const dataColumns = [
+    const columns = [
       {
         property: 'thumbnailUrl',
         header: {
@@ -279,6 +337,65 @@ class FeaturedProjectsTable extends React.Component {
         },
       },
       {
+        property: 'status',
+        header: {
+          label: 'Status',
+          props: {style: tableLayoutStyles.headerCell},
+          transforms: [sortable],
+        },
+        cell: {
+          formatters: [statusFormatter],
+          props: {
+            style: {
+              ...styles.cellType,
+              ...tableLayoutStyles.cell,
+            },
+          },
+        },
+      },
+      {
+        property: 'featuredAt',
+        header: {
+          label: i18n.featured(),
+          props: {style: tableLayoutStyles.headerCell},
+          transforms: [sortable],
+        },
+        cell: {
+          formatters: [dateFormatter],
+          props: {style: tableLayoutStyles.cell},
+        },
+      },
+      {
+        property: 'publishedAt',
+        header: {
+          label: i18n.published(),
+          props: {style: tableLayoutStyles.headerCell},
+          transforms: [sortable],
+        },
+        cell: {
+          formatters: [publishedFormatter],
+          props: {style: tableLayoutStyles.cell},
+        },
+      },
+      {
+        property: 'actions',
+        header: {
+          label: i18n.quickActions(),
+          props: {
+            style: {
+              ...tableLayoutStyles.headerCell,
+              ...tableLayoutStyles.unsortableHeader,
+            },
+          },
+        },
+        cell: {
+          formatters: [actionsFormatter],
+          props: {style: tableLayoutStyles.cell},
+        },
+      },
+    ];
+    if (this.showSpecialTopic) {
+      columns.splice(4, 0, {
         property: 'topic',
         header: {
           label: 'Topic',
@@ -294,86 +411,36 @@ class FeaturedProjectsTable extends React.Component {
             },
           },
         },
-      },
-      {
-        property: 'publishedAt',
-        header: {
-          label: i18n.published(),
-          props: {style: tableLayoutStyles.headerCell},
-          transforms: [sortable],
-        },
-        cell: {
-          formatters: [dateFormatter],
-          props: {style: tableLayoutStyles.cell},
-        },
-      },
-      {
-        property: 'featuredAt',
-        header: {
-          label: i18n.featured(),
-          props: {style: tableLayoutStyles.headerCell},
-          transforms: [sortable],
-        },
-        cell: {
-          formatters: [dateFormatter],
-          props: {style: tableLayoutStyles.cell},
-        },
-      },
-    ];
-    const archiveColumns = [
-      {
-        property: 'unfeaturedAt',
-        header: {
-          label: i18n.unfeatured(),
-          props: {style: tableLayoutStyles.headerCell},
-          transforms: [sortable],
-        },
-        cell: {
-          formatters: [dateFormatter],
-          props: {style: tableLayoutStyles.cell},
-        },
-      },
-      {
-        property: 'actions',
-        header: {
-          label: i18n.quickActions(),
-          props: {
-            style: {
-              ...tableLayoutStyles.headerCell,
-              ...tableLayoutStyles.unsortableHeader,
-            },
-          },
-        },
-        cell: {
-          formatters: [actionsFormatterUnfeatured],
-          props: {style: tableLayoutStyles.cell},
-        },
-      },
-    ];
-    const currentColumns = [
-      {
-        property: 'actions',
-        header: {
-          label: i18n.quickActions(),
-          props: {
-            style: {
-              ...tableLayoutStyles.headerCell,
-              ...tableLayoutStyles.unsortableHeader,
-            },
-          },
-        },
-        cell: {
-          formatters: [actionsFormatterFeatured],
-          props: {style: tableLayoutStyles.cell},
-        },
-      },
-    ];
-
-    if (tableVersion === 'currentFeatured') {
-      return dataColumns.concat(currentColumns);
-    } else {
-      return dataColumns.concat(archiveColumns);
+      });
     }
+    return columns;
+  };
+
+  renderStatusFilterDropdown = () => {
+    return (
+      <SimpleDropdown
+        name="featured-projects-table-filter-dropdown"
+        items={[
+          {value: 'all', text: 'all'},
+          {value: FeaturedProjectStatus.active, text: 'currently featured'},
+          {
+            value: FeaturedProjectStatus.bookmarked,
+            text: FeaturedProjectStatus.bookmarked,
+          },
+          {
+            value: FeaturedProjectStatus.archived,
+            text: FeaturedProjectStatus.archived,
+          },
+        ]}
+        labelText="Featured projects table filter dropdown"
+        isLabelVisible={false}
+        selectedValue={this.state.filterDropdownStatusValue}
+        onChange={e => {
+          this.setFilterDropdownStatusValue(e.target.value);
+        }}
+        size="s"
+      />
+    );
   };
 
   render() {
@@ -390,13 +457,20 @@ class FeaturedProjectsTable extends React.Component {
       columns,
       sortingColumns,
       sort: orderBy,
-    })(this.props.projectList);
+    })(this.getProjectList());
+
+    const mustBePulishedMessage =
+      '* Featured projects must be published in order to be displayed in the public featured projects gallery.';
 
     return (
-      <Table.Provider columns={columns} style={tableLayoutStyles.table}>
-        <Table.Header />
-        <Table.Body rows={sortedRows} rowKey="channel" />
-      </Table.Provider>
+      <div>
+        {this.renderStatusFilterDropdown()}
+        <span style={styles.tableMessage}>{mustBePulishedMessage}</span>
+        <Table.Provider columns={columns} style={tableLayoutStyles.table}>
+          <Table.Header />
+          <Table.Body rows={sortedRows} rowKey="channel" />
+        </Table.Provider>
+      </div>
     );
   }
 }

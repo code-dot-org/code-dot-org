@@ -4,13 +4,14 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "CSC",
       "is_course": true,
       "is_migrated": true,
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "playground",
-    "serialized_at": "2023-01-10 23:59:38 UTC",
+    "serialized_at": "2024-04-24 16:50:42 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -324,6 +325,39 @@
       },
       "seeding_key": {
         "activity_section.key": "ed0c8455-8efd-47db-a41c-b3c8670e4843",
+        "lesson_activity.key": "873dd67c-9e94-453f-a589-b5de0a7adc18"
+      }
+    },
+    {
+      "key": "71a26d6c-c189-4e44-adf0-d87e1e1efb5c",
+      "position": 7,
+      "properties": {
+        "progression_name": "Multiple Choice w/Images"
+      },
+      "seeding_key": {
+        "activity_section.key": "71a26d6c-c189-4e44-adf0-d87e1e1efb5c",
+        "lesson_activity.key": "873dd67c-9e94-453f-a589-b5de0a7adc18"
+      }
+    },
+    {
+      "key": "c786354d-ca88-4c07-bf11-716bc5592c70",
+      "position": 8,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "c786354d-ca88-4c07-bf11-716bc5592c70",
+        "lesson_activity.key": "873dd67c-9e94-453f-a589-b5de0a7adc18"
+      }
+    },
+    {
+      "key": "bf7996d2-bb05-41a4-9c09-83306c3c1100",
+      "position": 9,
+      "properties": {
+        "progression_name": "Google Form"
+      },
+      "seeding_key": {
+        "activity_section.key": "bf7996d2-bb05-41a4-9c09-83306c3c1100",
         "lesson_activity.key": "873dd67c-9e94-453f-a589-b5de0a7adc18"
       }
     },
@@ -804,6 +838,75 @@
     },
     {
       "chapter": 14,
+      "position": 14,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "test-csp-matching-csc-images"
+        ],
+        "progression": "Multiple Choice w/Images"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-csp-matching-csc-images"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "71a26d6c-c189-4e44-adf0-d87e1e1efb5c"
+      },
+      "level_keys": [
+        "test-csp-matching-csc-images"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 15,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_survey_L2-test"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "c786354d-ca88-4c07-bf11-716bc5592c70"
+      },
+      "level_keys": [
+        "csc_ecosystems_survey_L2-test"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 16,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Google Form"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_Particles_StatesOfMatter_L7-Liquid_google_form"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "bf7996d2-bb05-41a4-9c09-83306c3c1100"
+      },
+      "level_keys": [
+        "csc_Particles_StatesOfMatter_L7-Liquid_google_form"
+      ]
+    },
+    {
+      "chapter": 17,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -828,7 +931,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 18,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -853,7 +956,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 19,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -878,7 +981,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 20,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -903,7 +1006,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 21,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -928,7 +1031,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 22,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -953,7 +1056,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 23,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -978,7 +1081,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 24,
       "position": 8,
       "activity_section_position": 5,
       "assessment": false,
@@ -1003,7 +1106,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 25,
       "position": 9,
       "activity_section_position": 6,
       "assessment": false,
@@ -1028,7 +1131,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 26,
       "position": 10,
       "activity_section_position": 7,
       "assessment": false,
@@ -1053,7 +1156,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 27,
       "position": 11,
       "activity_section_position": 8,
       "assessment": false,
@@ -1078,7 +1181,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 28,
       "position": 12,
       "activity_section_position": 1,
       "assessment": true,
@@ -1103,7 +1206,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 29,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -1127,7 +1230,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1152,7 +1255,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 31,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1177,7 +1280,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 32,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -1202,7 +1305,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 33,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -1227,7 +1330,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 34,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -1252,7 +1355,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 35,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -1277,7 +1380,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 36,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -1302,7 +1405,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 37,
       "position": 8,
       "activity_section_position": 5,
       "assessment": false,
@@ -1327,7 +1430,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 38,
       "position": 9,
       "activity_section_position": 6,
       "assessment": false,
@@ -1352,7 +1455,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 39,
       "position": 10,
       "activity_section_position": 7,
       "assessment": false,
@@ -1377,7 +1480,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 40,
       "position": 11,
       "activity_section_position": 8,
       "assessment": false,
@@ -1402,7 +1505,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 41,
       "position": 12,
       "activity_section_position": 1,
       "assessment": true,
@@ -1427,7 +1530,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1451,7 +1554,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 43,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1475,7 +1578,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 44,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -1499,7 +1602,55 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 45,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_particles_phys_experimentEvent_test"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_particles_phys_experimentEvent_test"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "c4b317dd-2f3c-444c-88ed-b1e3c7f12f25"
+      },
+      "level_keys": [
+        "csc_particles_phys_experimentEvent_test"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_particles_phys_experimentEvent_test_2"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_particles_phys_experimentEvent_test_2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "c4b317dd-2f3c-444c-88ed-b1e3c7f12f25"
+      },
+      "level_keys": [
+        "csc_particles_phys_experimentEvent_test_2"
+      ]
+    },
+    {
+      "chapter": 47,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1523,7 +1674,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 48,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1547,7 +1698,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 49,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1571,11 +1722,38 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 50,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "kjf_test_landmarks_2"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "kjf_test_landmarks_2"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "4789b720-e7e6-44ff-9fe3-327a4d7c5e75"
+      },
+      "level_keys": [
+        "kjf_test_landmarks_2"
+      ]
+    },
+    {
+      "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "harvester_playground_functions"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1592,11 +1770,14 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 52,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "laurel_playground_functions"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1613,11 +1794,14 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 53,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "laurel_playground_abw"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1789,6 +1973,42 @@
         "lesson_group.key": "",
         "script.name": "csc-playground",
         "activity_section.key": "ed0c8455-8efd-47db-a41c-b3c8670e4843"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-csp-matching-csc-images",
+        "script_level.level_keys": [
+          "test-csp-matching-csc-images"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "71a26d6c-c189-4e44-adf0-d87e1e1efb5c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_survey_L2-test",
+        "script_level.level_keys": [
+          "csc_ecosystems_survey_L2-test"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "c786354d-ca88-4c07-bf11-716bc5592c70"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Particles_StatesOfMatter_L7-Liquid_google_form",
+        "script_level.level_keys": [
+          "csc_Particles_StatesOfMatter_L7-Liquid_google_form"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "bf7996d2-bb05-41a4-9c09-83306c3c1100"
       }
     },
     {
@@ -2129,6 +2349,30 @@
     },
     {
       "seeding_key": {
+        "level.key": "csc_particles_phys_experimentEvent_test",
+        "script_level.level_keys": [
+          "csc_particles_phys_experimentEvent_test"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "c4b317dd-2f3c-444c-88ed-b1e3c7f12f25"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_particles_phys_experimentEvent_test_2",
+        "script_level.level_keys": [
+          "csc_particles_phys_experimentEvent_test_2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "c4b317dd-2f3c-444c-88ed-b1e3c7f12f25"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "function_machine_1",
         "script_level.level_keys": [
           "function_machine_1"
@@ -2156,6 +2400,18 @@
         "level.key": "kjf_test_landmarks",
         "script_level.level_keys": [
           "kjf_test_landmarks"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "4789b720-e7e6-44ff-9fe3-327a4d7c5e75"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "kjf_test_landmarks_2",
+        "script_level.level_keys": [
+          "kjf_test_landmarks_2"
         ],
         "lesson.key": "lesson-6",
         "lesson_group.key": "",
@@ -2228,6 +2484,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

@@ -1,5 +1,14 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
+
+import i18n from '@cdo/locale';
+
+import {
+  QUESTION_CHARACTER_LIMIT,
+  matchQuestionPropType,
+  studentWithMatchResponsesPropType,
+} from './assessmentDataShapes';
 import MatchByStudentTable from './MatchByStudentTable';
 import {
   getMatchStructureForCurrentAssessment,
@@ -8,13 +17,6 @@ import {
   currentStudentHasResponses,
   setQuestionIndex,
 } from './sectionAssessmentsRedux';
-import i18n from '@cdo/locale';
-import {connect} from 'react-redux';
-import {
-  QUESTION_CHARACTER_LIMIT,
-  matchQuestionPropType,
-  studentWithMatchResponsesPropType,
-} from './assessmentDataShapes';
 
 class MatchByStudentContainer extends Component {
   static propTypes = {

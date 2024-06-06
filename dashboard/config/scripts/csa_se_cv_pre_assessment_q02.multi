@@ -1,0 +1,10 @@
+name 'CSA-SE-CV-Pre-Assessment-Q02'
+
+question 'What is the most important aspect to consider when modifying auto-generated code to fit a new problem scenario?'
+
+wrong 'The code aesthetics and readability.'
+wrong 'The original problem that the code was designed to solve.'
+right 'The new problem requirements and how they match with the existing code structure.'
+wrong 'The length of the AI-generated code.'
+
+allow_multiple_attempts false

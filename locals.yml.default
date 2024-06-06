@@ -71,6 +71,7 @@ use_my_apps: true
 # multiple browsers
 #saucelabs_username: ''
 #saucelabs_authkey: ''
+#saucelabs_tunnel_name: ''
 
 
 # Credentails for applitools.com, used for running automated visual tests
@@ -101,7 +102,7 @@ use_my_apps: true
 # in Applab.
 #firebase_name: 'cdo-v3-dev'
 #firebase_secret: localoverride
-#firebase_shared_secret localoverride
+#firebase_shared_secret: localoverride
 
 
 # Configuration and credentials for the Geocoder gem.  Google Maps provides a
@@ -136,3 +137,9 @@ use_my_apps: true
 # instance of Javabuilder. This will likely be 'javabuilder-dev-<your_branch_name>'
 # use_localhost_javabuilder: true
 # local_javabuilder_stack_name: javabuilder-dev-<your_branch_name>
+
+# Configuration for local development with HTTPS. Setting https_development to true will
+# also cause the bin/dashboard-server script to start with SSL enabled.
+#https_development: true
+#default_scheme: 'https:'
+#dashboard_port: 443

@@ -2,6 +2,8 @@ require 'cdo/activity_constants'
 require 'cdo/share_filtering'
 require 'cdo/firehose'
 require 'cdo/web_purify'
+require 'policies/ai'
+require 'metrics/events'
 
 class ActivitiesController < ApplicationController
   include LevelsHelper
@@ -118,6 +120,23 @@ class ActivitiesController < ApplicationController
         track_progress_for_user if @script_level
       else
         track_progress_in_session
+      end
+
+      # If a student in the pilot is submitting work on an AI-enabled level, and their teachers haven't opted-out, trigger the AI evaluation job.
+      is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, script: @script_level&.script, experiment_name: 'ai-rubrics') && Policies::Ai.ai_rubrics_enabled_for_script_level?(current_user, @script_level)
+      is_level_ai_enabled = AiRubricConfig.ai_enabled?(@script_level)
+      if is_ai_experiment_enabled && is_level_ai_enabled && params[:submitted] == 'true'
+        metadata = {
+          'studentId' => current_user.id,
+          'unitName' => @script_level.script.name,
+          'levelName' => @level.name,
+        }
+        Metrics::Events.log_event(
+          user: current_user,
+          event_name: 'TA Rubric Student AI Level Submitted',
+          metadata: metadata,
+        )
+        EvaluateRubricJob.perform_later(user_id: current_user.id, requester_id: current_user.id, script_level_id: @script_level.id)
       end
     end
 

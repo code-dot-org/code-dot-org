@@ -1,17 +1,26 @@
-import {BlocklyVersion} from '@cdo/apps/blockly/constants';
-import {CLAMPED_NUMBER_REGEX, stringIsXml} from './constants';
+import {
+  BlocklyVersion,
+  CLAMPED_NUMBER_REGEX,
+  stringIsXml,
+} from '@cdo/apps/blockly/constants';
+import {MetricEvent} from '@cdo/apps/lib/metrics/events';
 import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
-import customBlocks from './customBlocks/cdoBlockly/index.js';
+import {getStore} from '@cdo/apps/redux';
+import {
+  setFailedToGenerateCode,
+  setHasIncompatibleSources,
+} from '@cdo/apps/redux/blockly';
+
+import * as blockUtils from '../block_utils';
 import {parseElement as parseXmlElement} from '../xml';
 
-const INFINITE_LOOP_TRAP =
-  '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
-
-const LOOP_HIGHLIGHT = 'loopHighlight();\n';
-const LOOP_HIGHLIGHT_RE = new RegExp(
-  LOOP_HIGHLIGHT.replace(/\(.*\)/, '\\(.*\\)') + '\\s*',
-  'g'
-);
+import customBlocks from './customBlocks/cdoBlockly/index.js';
+import {
+  INFINITE_LOOP_TRAP,
+  LOOP_HIGHLIGHT,
+  handleCodeGenerationFailure,
+  strip,
+} from './utils';
 
 /**
  * Wrapper class for https://github.com/code-dot-org/blockly
@@ -41,35 +50,6 @@ const BlocklyWrapper = function (blocklyInstance) {
     };
   };
 };
-
-function escapeRegExp(str) {
-  return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-}
-
-/**
- * Extract the user's code as raw JavaScript.
- * @param {string} code Generated code.
- * @return {string} The code without serial numbers and timeout checks.
- */
-function strip(code) {
-  return (
-    code
-      // Strip out serial numbers.
-      .replace(/(,\s*)?'block_id_\d+'\)/g, ')')
-      // Remove timeouts.
-      .replace(new RegExp(escapeRegExp(INFINITE_LOOP_TRAP), 'g'), '')
-      // Strip out loop highlight
-      .replace(LOOP_HIGHLIGHT_RE, '')
-      // Strip out class namespaces.
-      .replace(/(StudioApp|Maze|Turtle)\./g, '')
-      // Strip out particular helper functions.
-      .replace(/^function (colour_random)[\s\S]*?^}/gm, '')
-      // Collapse consecutive blank lines.
-      .replace(/\n\n+/gm, '\n\n')
-      // Trim.
-      .replace(/^\s+|\s+$/g, '')
-  );
-}
 
 /**
  * Given a type string for a field input, returns an appropriate change handler function
@@ -214,12 +194,24 @@ function initializeBlocklyWrapper(blocklyInstance) {
   };
 
   blocklyWrapper.getWorkspaceCode = function (opt_showHidden) {
-    const code = Blockly.Generator.blockSpaceToCode(
-      'JavaScript',
-      null,
-      !!opt_showHidden
-    );
-    return strip(code);
+    let code = '';
+    try {
+      code = Blockly.Generator.blockSpaceToCode(
+        'JavaScript',
+        null,
+        !!opt_showHidden
+      );
+      code = strip(code);
+      getStore().dispatch(setFailedToGenerateCode(false));
+    } catch (e) {
+      handleCodeGenerationFailure(MetricEvent.CDO_BLOCKLY_GET_CODE_ERROR, e);
+    }
+    return code;
+  };
+
+  // We renamed createReadOnlyBlockSpace to createEmbeddedWorkspace for clarity.
+  blocklyWrapper.createEmbeddedWorkspace = function (container, xml, options) {
+    return Blockly.BlockSpace.createReadOnlyBlockSpace(container, xml, options);
   };
 
   // The second argument to Google Blockly's blockToCode specifies whether to
@@ -243,15 +235,19 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blocklyWrapper.Input.prototype.appendTitle;
   blocklyWrapper.Block.prototype.getFieldValue =
     blocklyWrapper.Block.prototype.getTitleValue;
+  blocklyWrapper.Block.prototype.appendEndRowInput =
+    blocklyWrapper.Block.prototype.appendDummyInput;
+
+  // Block.setStyle doesn't exist in CDO Blockly but it is called
+  // in definitions of various common blocks that are also supported
+  // on Google Blockly.
+  blocklyWrapper.Block.prototype.setStyle = function () {};
 
   blocklyWrapper.cdoUtils = {
     loadBlocksToWorkspace(blockSpace, source) {
       const isXml = stringIsXml(source);
       if (!isXml) {
-        console.warn(
-          `Source string was JSON. Use Version History to recover a working version of this project.`,
-          `This likely occurred by opening a project that was last saved with Google Blockly.`
-        );
+        getStore().dispatch(setHasIncompatibleSources(true));
         source = '';
       }
       Blockly.Xml.domToBlockSpace(blockSpace, parseXmlElement(source));
@@ -273,6 +269,17 @@ function initializeBlocklyWrapper(blocklyInstance) {
     },
     isWorkspaceReadOnly: function (workspace) {
       return workspace.isReadOnly();
+    },
+    handleColorAndStyle(block, color, style, returnType) {
+      // CDO Blockly does not support block styles.
+      if (color) {
+        this.setHSV(block, ...color);
+      } else if (!returnType) {
+        // CDO Blockly assigns colors to blocks with an output connection based on return type.
+        // See Blockly.Connection.prototype.colorForType
+        const DEFAULT_COLOR = [184, 1.0, 0.74];
+        this.setHSV(block, ...DEFAULT_COLOR);
+      }
     },
     setHSV: function (block, h, s, v) {
       block.setHSV(h, s, v);
@@ -327,8 +334,55 @@ function initializeBlocklyWrapper(blocklyInstance) {
     resizeSvg(blockSpace) {
       return blockSpace.blockSpaceEditor.svgResize();
     },
+    registerCustomProcedureBlocks() {
+      // Google Blockly only. Registers custom blocks for modal function editor.
+    },
+    appendSharedFunctions(source, functionsXml) {
+      const isXml = stringIsXml(source);
+      if (isXml) {
+        return blockUtils.appendNewFunctions(source, functionsXml);
+      } else {
+        // CDO Blockly is not equipped to handle json projects, and we will reset the
+        // project to empty in loadBlocksToWorkspace if it is json. So if we see
+        // json here, we just return the json as-is.
+        return source;
+      }
+    },
+    processToolboxXml(toolbox) {
+      return toolbox;
+    },
+    highlightBlock(id, spotlight) {
+      Blockly.mainBlockSpace.highlightBlock(id, spotlight);
+    },
   };
   blocklyWrapper.customBlocks = customBlocks;
+
+  // Pointer block behavior is handled in the cdo blockly repo,
+  // so we can safely return an empty string here.
+  blocklyWrapper.getPointerBlockImageUrl = () => {
+    return '';
+  };
+
+  // No-op for CDO Blockly.
+  blocklyWrapper.setHiddenDefinitionWorkspace = _ => {};
+
+  // CDO Blockly does not have a concept of a hidden definition workspace,
+  // so we return undefined here.
+  blocklyWrapper.getHiddenDefinitionWorkspace = () => {
+    return undefined;
+  };
+
+  // CDO Blockly does not have a separate workspace for the function editor,
+  // so we return undefined here.
+  blocklyWrapper.getFunctionEditorWorkspace = () => {
+    return undefined;
+  };
+
+  // Google Blockly labs also need to clear separate workspaces for the function editor.
+  blocklyWrapper.clearAllStudentWorkspaces = () => {
+    Blockly.mainBlockSpace.clear();
+  };
+
   return blocklyWrapper;
 }
 

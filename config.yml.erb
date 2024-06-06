@@ -132,6 +132,10 @@ jotform_forms:
     post201:     90065524560150
     facilitator: 91405279991164
 
+# HubSpot
+hubspot_portal_id:              !Secret
+hubspot_admin_interest_form_id: !Secret
+
 # PagerDuty
 pagerduty_token: !Secret
 
@@ -168,10 +172,44 @@ gdrive_export_secret:     !Secret
 
 # Mapbox
 mapbox_upload_token:
+mapbox_upload_tileset:
 mapbox_access_token:      !Secret
+mapbox_access_tileset:    'censustiles'
 
 # Crowdin
 crowdin_codeorg_api_key:
+
+crowdin_projects:
+  codeorg:
+    id: 26074
+    source_language: 'enus'
+  hour-of-code:
+    id: 55536
+    source_language: 'en'
+  codeorg-markdown:
+    id: 314545
+    source_language: 'en'
+  codeorg-restricted:
+    id: 464582
+    source_language: 'en'
+  codeorg-testing:
+    id: 346087
+    source_language: 'en'
+  codeorg-markdown-testing:
+    id: 547997
+    source_language: 'en'
+  hour-of-code-test:
+    id: 634038
+    source_language: 'en'
+  codeorg-restricted-test:
+    id: 634320
+    source_language: 'en'
+
+crowdin_project_test_mapping:
+  codeorg: codeorg-testing
+  codeorg-markdown: codeorg-markdown-testing
+  codeorg-restricted: codeorg-restricted-test
+  hour-of-code: hour-of-code-test
 
 # Azure Content Moderator
 azure_content_moderation_endpoint: https://eastus.api.cognitive.microsoft.com/contentmoderator
@@ -181,6 +219,7 @@ azure_content_moderation_key:
 # multiple browsers
 saucelabs_username:
 saucelabs_authkey:
+saucelabs_tunnel_name:
 
 # Credentials for applitools.com, used for running automated visual tests
 applitools_eyes_api_key:      !Secret
@@ -250,7 +289,7 @@ csta_jotform_form_id: !Secret
 ### Service configurations (urls, endpoints, etc)
 
 freegeoip_host:
-geocoder_redis_url:
+geocoder_redis_url: 'redis://localhost:6379/0/geocoder'
 solr_server: localhost
 
 # S3 bucket and (environment-specific) path-prefix configuration
@@ -268,6 +307,9 @@ libraries_s3_bucket:       cdo-v3-libraries
 libraries_s3_directory:    libraries<%=_env%>
 videos_s3_bucket:          videos.code.org
 videos_url:                //videos.code.org
+
+# Session Store (ElastiCache Redis)
+session_store_server:
 
 # Memcached (ElastiCache)
 memcached_endpoint:
@@ -289,7 +331,7 @@ dcdo_table_name:       dcdo_<%=env%>
 gatekeeper_table_name: gatekeeper_<%=env%>
 
 # Poste (internal transactional email processing framework)
-poste_host: <%= code_org_url.sub('//', '') %>
+poste_host: '<%= code_org_url.sub('//', '') %>'
 poste_attachment_dir:
 poste_smtp_password: !Secret
 poste_smtp_server:   email-smtp.us-east-1.amazonaws.com
@@ -324,7 +366,8 @@ app_servers: {}
 rack_mini_profiler_enabled:
 https_development:
 default_scheme: '<%=(env == 'development') || ci ? 'http:' : 'https:'%>'
-allowed_iframe_ancestors: http://*.disney.com http://*.diznee.net cuantrix.mx <%=pegasus_site_host%> <%=dashboard_site_host%> curriculum.code.org codecurricula.com
+allowed_iframe_ancestors: 'https://*.schoology.com http://*.disney.com http://*.diznee.net cuantrix.mx <%=pegasus_site_host%> <%=dashboard_site_host%> curriculum.code.org https://*.lausd.iap.allhere.co'
+
 skip_locales:
 secret_pictures_csv:
 no_https_store:
@@ -415,7 +458,7 @@ levelbuilder_mode:
 # make it easier to tell the difference
 use_local_header_color:
 
-default_hoc_mode: post-hoc  # overridden by 'hoc_mode' DCDO param, except in :test
+default_hoc_mode: false  # overridden by 'hoc_mode' DCDO param, except in :test
 default_hoc_launch: ''      # overridden by 'hoc_launch' DCDO param, except in :test
 
 # teacher_application_mode values: 'open', 'closing-soon', 'closed'
@@ -514,30 +557,20 @@ redshift_password:
 
 devinternal_db_writer: !Secret
 
-# Temporarily set in locals.yml until Stack Secrets are ready to deploy.
-db_cluster_id:
-
-# FOLLOW ON: Transition from the above naming convention to the `db_endpoint_[type]` convention below.
-db_endpoint_writer: PLACEHOLDER
-db_endpoint_proxy_writer: PLACEHOLDER
-db_endpoint_proxy_reader: PLACEHOLDER
-db_endpoint_proxy_reporting: PLACEHOLDER
+# Until we have a better configuration setting service, use AWS Secrets Manager to store these non-secret values.
+db_cluster_id: !StackSecret
+db_endpoint_writer: !StackSecret
+db_endpoint_proxy_writer: !StackSecret
+db_endpoint_proxy_reader: !StackSecret
+db_endpoint_proxy_reporting: !StackSecret
 
 # Database credentials (username & password) are stored in an AWS Secret in a JSON format required by RDS Proxy:
 # https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-proxy-setup.html#rds-proxy-secrets-arns
-db_credential_admin: {"username":"PLACEHOLDER", "password":"PLACEHOLDER"}
-db_admin_user: master
-db_admin_password: !Secret
-db_credential_writer: {"username":"PLACEHOLDER", "password":"PLACEHOLDER"}
-db_writer_user: application-writer
-db_writer_password: !Secret
-db_credential_reader: {"username":"PLACEHOLDER", "password":"PLACEHOLDER"}
-db_reader_user: readonly
-db_reader_password: !Secret
+db_credential_admin: !StackSecret
+db_credential_writer: !StackSecret
+db_credential_reader: !StackSecret
 
-# Legacy database configuration settings contain a complete URI (username, password, servername, and database).
-db_admin: !Secret
-reporting_db_admin:
+# mysql:// URI (including credentials) to connect to ProxySQL administrative interface (which emulates a MySQL server)
 db_proxy_admin:
 
 db_writer: !Secret
@@ -593,9 +626,34 @@ cdo_amplitude_api_key:
 # API Key for doublethedonation.com
 ddconf_api_key: !Secret
 
-# EC2 Metadata endpoint
-ec2_instance_id_endpoint: 'http://169.254.169.254/latest/meta-data/instance-id'
+# JSON Web Key Set and private key data
+jwks_data: <%=File.read("#{File.expand_path(File.dirname(__FILE__))}/dashboard/public/oauth/jwks.json")%>
+jwk_private_key_data: !Secret
 
 # Credentials for OpenAI API
 openai_chat_completion_api_key: !Secret
 openai_chat_completion_org_id: !Secret
+openai_evaluate_rubric_api_key: !Secret
+openai_evaluate_rubric_org_id:
+
+# AI Proxy for OpenAI API
+ai_proxy_origin: https://aiproxy-test.code.org
+
+# Statsig API keys
+# These are dummy values for all environments except Production and our managed
+# Test web application server, which are overridden in production.yml.erb
+# and test.yml.erb. The Statsig SDK expects the prefixed key type (secret-) in
+# the string, otherwise it will throw an error on initialization, even in
+# local_mode.
+statsig_server_secret_key: 'secret-fake-key'
+statsig_api_client_key: 'client-fake-key'
+
+# MailGun/MailJet API keys
+mailjet_api_key:
+mailjet_secret_key:
+mailgun_api_key:
+
+# ActiveJob queues
+active_job_queues:
+  :default: :default
+  :mailers: :mailers

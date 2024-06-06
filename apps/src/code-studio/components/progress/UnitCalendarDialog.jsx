@@ -93,7 +93,7 @@ export default class UnitCalendarDialog extends Component {
           style={styles.button}
           text={i18n.closeDialog()}
           onClick={handleClose}
-          color={Button.ButtonColor.orange}
+          color={Button.ButtonColor.brandSecondaryDefault}
         />
       </BaseDialog>
     );

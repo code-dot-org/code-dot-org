@@ -3,11 +3,6 @@
   "config": {
     "func": "beginWearingMasks",
     "blockText": "monsters begin wearing masks",
-    "color": [
-      136,
-      0.84,
-      0.8
-    ],
     "style": "behavior_blocks"
   }
 }

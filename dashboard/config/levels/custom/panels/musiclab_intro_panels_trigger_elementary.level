@@ -1,0 +1,27 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2024-02-23T17:39:39.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "background": "music-black",
+    "level_data": {
+      "panels": [
+        {
+          "imageUrl": "https://images.code.org/d988bb05ff85d96f14ba4579560a1025-trigger1.gif",
+          "text": "Did you know you can play live music, too? First, code your trigger block with the sound you want it to play."
+        },
+        {
+          "imageUrl": "https://images.code.org/43f611a97466086325a2a8945026b73c-trigger2.gif",
+          "text": "Then, use the *trigger* to add new sounds to your song in real-time."
+        }
+      ]
+    },
+    "name_suffix": "_elementary"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-02-23T17:39:39.443+00:00\",\"changed\":[\"cloned from \\\"musiclab_intro_panels_function_elementary\\\"\"],\"cloned_from\":\"musiclab_intro_panels_function_elementary\"},{\"changed_at\":\"2024-02-23 17:42:18 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-02-23 17:47:47 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-02-23 17:50:39 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-02-23 17:54:31 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+</Panels>

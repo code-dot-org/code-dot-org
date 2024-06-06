@@ -1,12 +1,13 @@
-import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import Button from '@cdo/apps/templates/Button';
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
-import {CourseRoles} from '@cdo/apps/templates/currentUserRedux';
-import {resetContainedLevel} from '@cdo/apps/code-studio/levels/codeStudioLevels';
+import React, {useState} from 'react';
 import {connect} from 'react-redux';
+
+import {resetContainedLevel} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
+import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import Button from '@cdo/apps/templates/Button';
+import {CourseRoles} from '@cdo/apps/templates/currentUserRedux';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
@@ -26,6 +27,7 @@ export const UnconnectedContainedLevelResetButton = ({
     firehoseClient.putRecord({
       study: 'reset-predict-level',
       event: 'level-reset',
+      user_id: userId,
       script_id: serverScriptId,
       level_id: serverLevelId,
     });

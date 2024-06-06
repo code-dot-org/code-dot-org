@@ -1,7 +1,9 @@
-import React from 'react';
 import classnames from 'classnames';
-import moduleStyles from './sections-refresh.module.scss';
+import React from 'react';
+
 import {Heading5} from '@cdo/apps/componentLibrary/typography';
+
+import moduleStyles from './sections-refresh.module.scss';
 
 /*
 This is a file to house the shared pieces of both types of Curriculum

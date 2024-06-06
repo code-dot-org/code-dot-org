@@ -127,6 +127,7 @@ kn-IN:
   class_submission_out_of_school_other: ಶಾಲೆಯಿಂದ ಹೊರಬರುವ ಇತರ
   class_submission_out_of_school_summer_camp: ಬೇಸಿಗೆ ಶಿಬಿರ
   classicmaze_name: ಕ್ಲಾಸಿಕ್‌ ಮೇಝ್‌
+  code_org_logo_alt: Code.org ಲೋಗೋ
   codebytes_skinny_banner_english_only: ಇಂಗ್ಲಿಷ್-ಮಾತ್ರ
   codecademy_beyond_gradelevel: ಹೈಸ್ಕೂಲ್
   codecademy_gradelevel: ಹೈಸ್ಕೂಲ್
@@ -497,6 +498,7 @@ kn-IN:
   header_about_us: ನಮ್ಮ ಬಗ್ಗೆ
   header_course_catalog: ಕೋರ್ಸ್ ಕ್ಯಾಟಲಾಗ್
   header_courses: ಕೋರ್ಸ್‌ಗಳು
+  header_districts: ಜಿಲ್ಲೆಗಳು
   header_documentation: ದಾಖಲೆ
   header_educate_beyond: Code.org ಮೀರಿ
   header_educate_community: ಆನ್‌ಲೈನ್ ಸಮುದಾಯ
@@ -510,6 +512,7 @@ kn-IN:
   header_educate_requirements: ತಾಂತ್ರಿಕ ಅವಶ್ಯಕತೆಗಳು
   header_educate_tools: ಪರಿಕರಗಳು ಮತ್ತು ವೀಡಿಯೊಗಳು
   header_help_us: ಸಹಾಯ ಮಾಡಿ
+  header_incubator: ಇನ್ಕ್ಯುಬೇಟರ್
   header_learn: ತಿಳಿಯಿರಿ
   header_legal_privacy: ಗೌಪ್ಯತಾ ನೀತಿ
   header_legal_tos: ಸೇವೆಯ ಷರತ್ತುಗಳು
@@ -517,6 +520,7 @@ kn-IN:
   header_professional_learning: ವೃತ್ತಿಪರ ಕಲಿಕೆ
   header_project_gallery: ಪ್ರಾಯೋಜನೆಗಳು
   header_report_bug: ತೊಂದರೆ ವರದಿ ಮಾಡು
+  header_schools: ಶಾಲೆ
   header_sections: ವಿಭಾಗಗಳು
   header_teach: ಬೋಧಿಸಿ
   header_teacher_community: ಶಿಕ್ಷಕ ಸಮುದಾಯ

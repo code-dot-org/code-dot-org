@@ -1,22 +1,18 @@
 import React from 'react';
-import LargeChevronLink from './LargeChevronLink';
-import i18n from '@cdo/locale';
+import {Provider} from 'react-redux';
 
-export default storybook => {
-  return storybook
-    .storiesOf('LargeChevronLink', module)
-    .withReduxStore()
-    .addStoryTable([
-      {
-        name: 'Large teal chevron link',
-        description: `Currently used on /congrats`,
-        story: () => (
-          <LargeChevronLink
-            link={'/foo'}
-            linkText={i18n.viewCourse()}
-            isRtl={false}
-          />
-        ),
-      },
-    ]);
+import {reduxStore} from '@cdo/storybook/decorators';
+
+import LargeChevronLink from './LargeChevronLink';
+
+export default {
+  component: LargeChevronLink,
+};
+
+export const Default = () => {
+  return (
+    <Provider store={reduxStore()}>
+      <LargeChevronLink link="/foo" linkText="View course" isRtl={false} />
+    </Provider>
+  );
 };

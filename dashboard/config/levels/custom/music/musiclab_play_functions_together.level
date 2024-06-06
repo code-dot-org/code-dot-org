@@ -1,0 +1,205 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2023-06-21T00:01:20.000Z",
+  "level_num": "custom",
+  "user_id": 976,
+  "properties": {
+    "encrypted": "false",
+    "level_data": {
+      "library": "happy",
+      "startSources": {
+        "variables": [
+          {
+            "name": "currentTime"
+          },
+          {
+            "name": "i"
+          }
+        ],
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "next": {
+                "block": {
+                  "type": "repeat_simple2",
+                  "fields": {
+                    "times": 2
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "x": 300,
+              "y": 70,
+              "fields": {
+                "NAME": "beat"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "repeat_simple2",
+                    "id": "kHh8G%3S4)7Vn.k4X$It",
+                    "fields": {
+                      "times": 5
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "play_sound_at_current_location_simple2",
+                          "id": "play-sound-block",
+                          "fields": {
+                            "sound": "remix_happy/drums_1"
+                          }
+                        }
+                      }
+                    },
+                    "next": {
+                      "block": {
+                        "type": "repeat_simple2",
+                        "id": "~gh)$MjeauaRz2l@BCt=",
+                        "fields": {
+                          "times": 3
+                        },
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "i|;)|,51jW[SQ6vCSdRG",
+                              "fields": {
+                                "sound": "remix_happy/drums_2"
+                              }
+                            }
+                          }
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "A~m]tmy71BB:O6u}gxje",
+                            "fields": {
+                              "sound": "remix_happy/drums_1"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "x": 150,
+              "y": 150,
+              "fields": {
+                "NAME": "bass"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sound_at_current_location_simple2",
+                    "fields": {
+                      "sound": "remix_happy/bass_1"
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "fields": {
+                          "sound": "remix_happy/bass_1"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "fields": {
+                              "sound": "remix_happy/bass_2"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "fields": {
+                                  "sound": "remix_happy/bass_2"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "fields": {
+                                      "sound": "remix_happy/bass_1"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "fields": {
+                                          "sound": "remix_happy/bass_3"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "fields": {
+                                              "sound": "remix_happy/bass_1"
+                                            },
+                                            "next": {
+                                              "block": {
+                                                "type": "play_sound_at_current_location_simple2",
+                                                "fields": {
+                                                  "sound": "remix_happy/bass_2"
+                                                },
+                                                "next": {
+                                                  "block": {
+                                                    "type": "play_sound_at_current_location_simple2",
+                                                    "fields": {
+                                                      "sound": "remix_happy/bass_1"
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "text": "Now let's try to make two functions play at the same time.\n##Do This\n1. Add a `play together`(#0194CA) block inside the `repeat`(#f218a2) block.\n2. Drag the `beat`(#509919) and `bass`(#509919) blocks from the `Functions`(#999999) category into the `play together`(#0194CA) block.\n3. Press the `Run`(#fca401) button. Your beat and bass will play together and repeat!",
+      "validations": [
+        {
+          "conditions": [
+            {
+              "name": "played_sounds_together",
+              "value": 1
+            }
+          ],
+          "message": "Awesome - it's time to make a mix!",
+          "next": "true"
+        },
+        {
+          "message": "Snap the `repeat`(#f218a2) block under the `when run`(#fca401) block, and put the `play together`(#0194CA) block bass and beat function blocks in it."
+        }
+      ]
+    },
+    "hide_share_and_remix": "false",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2023-06-21T00:01:20.743+00:00\",\"changed\":[\"cloned from \\\"music_lab_2023_3\\\"\"],\"cloned_from\":\"music_lab_2023_3\"},{\"changed_at\":\"2023-06-21 18:14:22 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-21 18:29:01 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-21 22:46:23 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-22 19:36:06 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-22 19:37:53 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-22 19:39:25 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-22 19:40:03 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-05 21:15:02 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-05 21:18:48 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-13 22:16:07 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-13 22:16:50 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-13 22:22:34 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-13 22:23:17 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-13 22:23:40 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-08-01 20:46:22 +0000\",\"changed\":[\"name\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

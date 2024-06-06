@@ -25,6 +25,13 @@ class ApplicationHelperTest < ActionView::TestCase
     assert_equal 'staging.code.org', CDO.canonical_hostname('code.org')
   end
 
+  test "canonical_hostname in CI" do
+    set_env :test
+    CDO.stubs(:ci_webserver?).returns(true)
+    assert_equal 'localhost-studio.code.org', CDO.canonical_hostname('studio.code.org')
+    assert_equal 'localhost.code.org', CDO.canonical_hostname('code.org')
+  end
+
   test "canonical_hostname in development" do
     set_env :development
     assert_equal 'localhost-studio.code.org', CDO.canonical_hostname('studio.code.org')
@@ -65,7 +72,7 @@ class ApplicationHelperTest < ActionView::TestCase
         )
       )
     end
-    assert_not(browser.cdo_unsupported?)
+    refute(browser.cdo_unsupported?)
   end
 
   test "chrome 34 detected" do
@@ -126,24 +133,54 @@ class ApplicationHelperTest < ActionView::TestCase
   end
 
   test 'video_seen' do
-    assert_not client_state.videos_seen_for_test?
-    assert_not client_state.video_seen? 'foo'
+    refute client_state.videos_seen_for_test?
+    refute client_state.video_seen? 'foo'
 
     client_state.add_video_seen 'foo'
     client_state.add_video_seen 'bar'
     assert client_state.video_seen? 'foo'
     assert client_state.video_seen? 'bar'
-    assert_not client_state.video_seen? 'baz'
+    refute client_state.video_seen? 'baz'
 
     client_state.add_video_seen 'foo'
     assert client_state.video_seen? 'foo'
   end
 
   test 'callout_seen' do
-    assert_not client_state.callout_seen? 'callout'
+    refute client_state.callout_seen? 'callout'
     client_state.add_callout_seen 'callout'
     assert client_state.callout_seen? 'callout'
-    assert_not client_state.callout_seen? 'callout2'
+    refute client_state.callout_seen? 'callout2'
+  end
+
+  test 'callout_seen only has a truncated list' do
+    refute client_state.callout_seen? 'callout'
+    client_state.add_callout_seen 'callout'
+    25.times do |i|
+      client_state.add_callout_seen "callout_#{i}"
+    end
+    assert client_state.callout_seen? 'callout_24'
+    refute client_state.callout_seen? 'callout'
+  end
+
+  test 'callout_seen maintains most recently used order' do
+    refute client_state.callout_seen? 'callout'
+    client_state.add_callout_seen 'callout'
+    assert client_state.callout_seen? 'callout'
+    10.times do |i|
+      client_state.add_callout_seen "callout_#{i}"
+    end
+    assert client_state.callout_seen? 'callout'
+    client_state.add_callout_seen 'callout'
+    10.times do |i|
+      client_state.add_callout_seen "callout_#{i + 10}"
+    end
+    assert client_state.callout_seen? 'callout'
+    client_state.add_callout_seen 'callout'
+    10.times do |i|
+      client_state.add_callout_seen "callout_#{i + 10}"
+    end
+    assert client_state.callout_seen? 'callout'
   end
 
   test 'client state with invalid cookie' do
@@ -224,9 +261,7 @@ class ApplicationHelperTest < ActionView::TestCase
     assert_equal LEVEL_STATUS.attempted,  best_activity_css_class([user_level1, user_level2])
   end
 
-  private
-
-  def assert_equal_unordered(array1, array2)
+  private def assert_equal_unordered(array1, array2)
     Set.new(array1) == Set.new(array2)
   end
 end

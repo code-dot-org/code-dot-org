@@ -187,6 +187,7 @@ export default class IntroPanel extends React.Component {
         break;
       }
       case 'In Progress': {
+        const signupUrl = `${location.origin}/pd/workshops/${workshopId}/enroll`;
         if (isAccountRequiredForAttendance) {
           contents = (
             <div>
@@ -196,9 +197,9 @@ export default class IntroPanel extends React.Component {
               </p>
               <h4>Step 1: Sign into Code Studio</h4>
               <p>
-                Tell teachers to sign into their Code Studio accounts. If they
-                do not already have an account tell them to create one by going
-                to{' '}
+                Tell workshop attendees to sign into their Code Studio accounts.
+                If they do not already have an account tell them to create one
+                by going to{' '}
                 <a
                   href={location.origin}
                   target="_blank"
@@ -209,14 +210,19 @@ export default class IntroPanel extends React.Component {
               </p>
               <h4>Step 2: Take attendance</h4>
               <p>
-                After teachers have signed into their Code Studio accounts, use
-                the attendance links below to take attendance.
+                After workshop attendees have signed into their Code Studio
+                accounts, use the attendance links below to take attendance.
+                Note: Workshop attendees need to have enrolled in the workshop
+                in order to take attendance. They can enroll in the workshop
+                using{' '}
+                <a href={signupUrl} target="_blank" rel="noopener noreferrer">
+                  {signupUrl}
+                </a>
               </p>
             </div>
           );
         } else {
           // account not required
-          const signupUrl = `${location.origin}/pd/workshops/${workshopId}/enroll`;
           contents = (
             <div>
               <p>
@@ -238,7 +244,7 @@ export default class IntroPanel extends React.Component {
           <div>
             <p>We hope you had a great workshop!</p>
             <p>
-              Teachers will receive an email with survey link from{' '}
+              Workshop attendees will receive an email with survey link from{' '}
               <a href="mailto:survey@code.org">survey@code.org</a>. If they do
               not receive the link ask them to check their spam. Many school
               districts block outside emails. You can also recommend they set

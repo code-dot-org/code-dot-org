@@ -24,10 +24,6 @@ This is the best option for rapid iteration while writing a new test. ChromeDriv
 
 If you get the error `unknown error: cannot get automation extension`, follow the [chromedriver-helper instructions](https://github.com/flavorjones/chromedriver-helper#updating-to-latest-chromedriver) to upgrade to latest chromedriver.
 
-If you get the error `session not created: Chrome version must be between 71 and 75`, you may need a newer version of `chromedriver`. Download a version of chromedriver that matches your current version of Chrome [here]([url](https://chromedriver.chromium.org/downloads)), unzip it, and reference the file path of your new version of chromedriver [here](https://github.com/code-dot-org/code-dot-org/blob/d7b3ba84adf30ef2844c538e7206ca4bd3565ea9/dashboard/test/ui/utils/selenium_browser.rb#L9) as follows:
-
-`Selenium::WebDriver::Chrome.driver_path = [path to your chromedriver]`
-
 ### With remote browsers: Sauce Labs
 
 Running tests remotely on [Sauce Labs](https://saucelabs.com) lets you review results, view visual logs of test runs and even watch live video of your tests running on different browsers in real-time.
@@ -51,6 +47,17 @@ You can find the values for these settings in your saucelabs account settings (`
 
 If you want to run tests on Sauce Labs against localhost you need to set up your tunnel:
 
+#### Latest version of Sauce Connect Proxy CLI (5.1.0)
+1. Login to Sauce Labs and download the [tunnel](https://app.saucelabs.com/tunnels).
+2. Uncomment and fill out the values for the "saucelabs_" properties in `locals.yml`
+   - `saucelabs_tunnel_name` can be an arbitrary name, but it needs to match what you pass as an argument to `sc run...`
+3. (Re)start your dashboard-server `./bin/dashboard-server`.
+4. Start the sauce labs tunnel
+    - `sc run -u <saucelabs_username> -k <saucelabs_authkey> -r us-west --tunnel-name <saucelabs_tunnel_name>`
+5. Run your UI test
+    - `./runner.rb -l -c Chrome --html -f features/platform/policy_compliance.feature`
+        - The log output can be found in `log/*.html`
+#### Older versions of Sauce Connect Proxy CLI
 1. Login to Sauce Labs and download the [tunnel](https://app.saucelabs.com/tunnels).
    - If you work on a Linux EC2 instance:
      - Download the Linux version (will end in .tar.gz)
@@ -99,7 +106,7 @@ Run one feature in one saucelabs browser against your local machine with html ou
 
 `./runner.rb -l -f features/big_game_remix.feature -c Chrome --html`
 
-Run **eyes tests** on one feature in one saucelabs browser against your local machine with html output (requires SauceConnect, described earlier)
+Run **eyes tests** on one feature in one saucelabs browser against your local machine with html output (requires SauceConnect and api_key for eyes testing described in See Also below)
 
 `./runner.rb -l -f features/angle_helper.feature -c Chrome --html --eyes`
 

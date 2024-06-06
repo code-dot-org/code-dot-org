@@ -1,0 +1,35 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2023-08-01T16:19:20.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##In Video.java:\r\n\r\n1. Write the `equals()`(#e7e8ea) method. It should return `true`(#e7e8ea) if the `title`(#e7e8ea) of both `Video`(#e7e8ea) objects are the same. Otherwise, return `false`(#e7e8ea).\r\n\r\n##In MyConsole.java:\r\n\r\n2. Test your `equals()`(#e7e8ea) method by checking if `firstVideo`(#e7e8ea) and `secondVideo`(#e7e8ea) are equivalent and printing the result.\r\n\r\n::: details [**Show Me How**]\r\nThe `equals()`(#e7e8ea) method uses the following syntax:\r\n  \r\n  ```\r\n  public boolean equals(Object otherObject) {\r\n    // code to compare values\r\n  }\r\n  ```\r\n\r\nDon't forget to first check if `otherObject`(#e7e8ea) is `null`(#e7e8ea)!\r\n:::",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "display_name": "The Video Class",
+    "bubble_choice_description": "Write an equals() method in the Video class to check if Video objects are equivalent.",
+    "thumbnail_url": "https://images.code.org/e5c20d6ce1123d1ec15d8c9f0e97c16e-image-1650492460871.png",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    Video firstVideo = new Video(\"Adventures in Java Lab\");\n    Video secondVideo = new Video(\"Adventures in Java Lab\");\n\n    System.out.println(\"firstVideo == secondVideo: \" + (firstVideo == secondVideo));\n\n    // TO DO #2: Test your equals method and print the result.\n\n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "Video.java": {
+        "text": "/*\n * Represents a video\n */\npublic class Video {\n\n  private String title;  // The title of the video\n\n  /*\n   * Constructor to create a Video with\n   * the specified title\n   */\n  public Video(String title) {\n    this.title = title;\n  }\n\n  /*\n   * Returns the title of the video\n   */\n  public String getTitle() {\n    return title;\n  }\n\n  // TO DO #1: Write the equals() method.\n\n\n  \n}",
+        "isVisible": true,
+        "tabOrder": 1
+      }
+    },
+    "encrypted_exemplar_sources": "jrRNHcOowRx22njbDNzE6K10Ex1m7JwmHnodMo3x9M01grNmTKWBqdNEV7mo\nk42Exx0BTZYjksJB7j7E+XyvRF5s2fNXpNMV57I3GqjkXKZnCERcgPEU2qWj\nVBBhRo7c9vd/0ZVD11UKWF7Xowx8hdrFGZKni7qqNtb6Lp+sSH5L/4J7pKV5\nPm1KbBEKzDP3C1gQdx3anav2Km4qx7Klad+fVoJnZZ38A8+klUxgX43efU6G\niRm4LjdshEGprVRwMvPP26ZkBUV6ea7EphO4Fi4O21UXLtUKR/YpxA0ZSsn6\nogwrJ6f2AFBQVeRWl7XmxY7eXIHMGezGkNLu9RcF9wLRNMhYQJ95u5omM3Vt\nCXHObe7gFQIhC8NuVfQGkYa9B3BKhL/3TQBG16Logb23EqNPIuZS/0XZ9rjQ\nSoJDsH+xRGJebNqCP5cUCLB+JMSTcpEfeSsjDNuNPb9ctZKTo2Ln8cagSlZq\noiRGMshjd/k80GB5BbPjRMMOdRjpMxtMreZW0msd66bYkvTwzUdMg7M5+b//\ntAepn6YcADeev0j3c8UOe2r70uYtGLJq6Ng1nosU4bWva6o5FmXCeKzvpT6k\ndRgtrpoAELmnTxdCcAsGywS/hWNrSXTFLWnlF/J0irZYYQa3ptBhPQdGLx/m\nFY0ul3Z2BZj+UPAQ3zMEyGCac1HH1yq14fpXkarhMWND85RKY508gF09uKEG\ntbvQwRKaDcgzhVfBgxQ5m0g4+NOqIvqeIsFOC9owZDRx4WuArAozK7xmGd+a\nIz4RHZZW4OdRPm0p9ufqgKsyIyuF17vN09rOC7GmONF+H/dvOMzif2UupHWs\noyDM/v3QSEVLOtYeJAqos9tv7Kp9EuWRWvSVStIQx5WiUSPl+x+UEtaB6X4b\nOgJQ0UKSeeykocNrQ4KAlVVrJmRL/H4LLxes1Oi/jCN9hPGIHWVuKn77D4jx\n8hJGcpApLAsmgvGh+HJZ5yLhubS5zXtRqOdqz0G235sKknKSwW8tLfxg3i3y\nv53+BEd1eZYdAsVYuDX+45iU8dhXiQTMOBiYOlFasmfgOAC3M7VVu7rmz/hl\n7mcYVe8YqtzmuQFwoSbEQVgEuSZmkaBgeTf57wu9kRuauwzbRoVWPNwzopRS\nfO6qL7b7uJIbl3a1028160xZgeW1jjfpYG4kyueApVGYzjVyqtlTcV3k4utN\naYa6aZdgnxkh0td9FY3U0OdKkIKsI96BKGWfEGTmchKMjyoay+vNeSKVlceN\nhiU/yoVGzCGis2nPCIXG0LI/16icFtIZ6ROLQFhY9dtJHv6xuSqfUXvUy1i4\ns0t1fpsmkTc/kd41hpnouOFxj8F0Ytl5Tab1E8y+GnMeTS48SwJ9unlpTkg9\nvN4GA016vbRZ8fT3na6wV0jB+li4LNITlDEgP0hHd3zWLz2PkeR2L8/Iy8SP\nAY/KKFuPgjg=\n",
+    "name_suffix": "_2023"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2023-08-01T16:19:20.688+00:00\",\"changed\":[\"cloned from \\\"CSA U4L2-L4b_-m2\\\"\"],\"cloned_from\":\"CSA U4L2-L4b_-m2\"}]"
+}]]></config>
+</Javalab>

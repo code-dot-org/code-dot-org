@@ -1,42 +1,44 @@
-import React from 'react';
-import sinon from 'sinon';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
+import React from 'react';
 import {Provider} from 'react-redux';
-import {expect} from '../../../../util/reconfiguredChai';
-import {mount} from 'enzyme';
-import ProgressTableView, {
-  UnconnectedProgressTableView,
-} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableView';
-import ProgressTableStudentList from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableStudentList';
-import ProgressTableContentView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContentView';
-import SummaryViewLegend from '@cdo/apps/templates/sectionProgress/progressTables/SummaryViewLegend';
-import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
-import ProgressTableSummaryCell from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableSummaryCell';
-import ProgressTableDetailCell from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableDetailCell';
-import ProgressTableLevelIconSet from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLevelIconSet';
-import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
-import {createStore, combineReducers} from 'redux';
-import progress from '@cdo/apps/code-studio/progressRedux';
-import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
-import {unitTestExports} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLessonNumber';
 import * as Sticky from 'reactabular-sticky';
+import {createStore, combineReducers} from 'redux';
+import sinon from 'sinon';
+
+import progress from '@cdo/apps/code-studio/progressRedux';
 import locales from '@cdo/apps/redux/localesRedux';
-import isRtl from '@cdo/apps/code-studio/isRtlRedux';
+import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
+import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import {
   fakeLessonWithLevels,
   fakeStudents,
-  fakeScriptData,
+  fakeUnitData,
   fakeProgressTableReduxInitialState,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
+import ProgressTableContentView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContentView';
+import ProgressTableDetailCell from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableDetailCell';
 import * as progressTableHelpers from '@cdo/apps/templates/sectionProgress/progressTables/progressTableHelpers';
+import {unitTestExports} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLessonNumber';
+import ProgressTableLevelIconSet from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLevelIconSet';
+import ProgressTableStudentList from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableStudentList';
+import ProgressTableSummaryCell from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableSummaryCell';
+import ProgressTableView, {
+  UnconnectedProgressTableView,
+} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableView';
+import SummaryViewLegend from '@cdo/apps/templates/sectionProgress/progressTables/SummaryViewLegend';
+import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
+import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 const LESSON_1 = fakeLessonWithLevels({position: 1});
 const LESSON_2 = fakeLessonWithLevels({position: 2}, 2);
 const STUDENTS = fakeStudents(2);
 const LESSONS = [LESSON_1, LESSON_2];
-const SCRIPT_DATA = fakeScriptData({lessons: LESSONS});
+const SCRIPT_DATA = fakeUnitData({lessons: LESSONS});
 
 const initialState = fakeProgressTableReduxInitialState(
   LESSONS,
@@ -47,12 +49,12 @@ const initialState = fakeProgressTableReduxInitialState(
 const setUp = (currentView = ViewType.SUMMARY, overrideState = {}) => {
   const store = createStore(
     combineReducers({
+      currentUser,
       progress,
       teacherSections,
       sectionProgress,
       unitSelection,
       locales,
-      isRtl,
     }),
     _.merge({}, initialState, overrideState)
   );
@@ -263,5 +265,27 @@ describe('ProgressTableView', () => {
     );
     wrapper.onToggleRow(rowData.student.id);
     expect(wrapper.state.rows).to.have.lengthOf(STUDENTS.length);
+  });
+
+  it('sorts by family name', () => {
+    // The default test helper sorts by given name
+    const givenNameWrapper = setUp()
+      .find(UnconnectedProgressTableView)
+      .instance();
+
+    const overrideState = {currentUser: {isSortedByFamilyName: true}};
+    const familyNameWrapper = setUp(ViewType.SUMMARY, overrideState)
+      .find(UnconnectedProgressTableView)
+      .instance();
+
+    expect(givenNameWrapper.state.rows).to.have.lengthOf(STUDENTS.length);
+    expect(familyNameWrapper.state.rows).to.have.lengthOf(STUDENTS.length);
+
+    // The student generator makes the first student have the first given name
+    // alphabetically. The last student has the first family name alphabetically
+    expect(givenNameWrapper.state.rows[0].student.id).to.equal(0);
+    expect(familyNameWrapper.state.rows[0].student.id).to.equal(
+      STUDENTS.length - 1
+    );
   });
 });

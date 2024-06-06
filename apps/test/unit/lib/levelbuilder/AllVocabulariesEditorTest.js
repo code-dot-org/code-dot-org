@@ -1,5 +1,5 @@
 import React from 'react';
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import sinon from 'sinon';
 import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedAllVocabulariesEditor as AllVocabulariesEditor} from '@cdo/apps/lib/levelbuilder/AllVocabulariesEditor';
@@ -50,7 +50,7 @@ describe('AllVocabulariesEditor', () => {
       .first();
     removeVocabularyButton.simulate('mouseDown');
     const removeDialog = wrapper.find('Dialog');
-    const deleteButton = removeDialog.find('button').at(1);
+    const deleteButton = removeDialog.find('button').at(2);
     deleteButton.simulate('click');
     expect(removeVocabulary).to.have.been.calledOnce;
   });

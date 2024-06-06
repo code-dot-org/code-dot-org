@@ -25,12 +25,12 @@ class Api::V1::Pd::WorkshopOrganizersControllerTest < ActionController::TestCase
         name: organizer.name,
         email: organizer.email
       }.stringify_keys
-      assert_equal expected, response.find {|o| o['id'] == organizer.id}
+      assert_equal(expected, response.find {|o| o['id'] == organizer.id})
     end
 
     # No non-organizers returned
     non_organizers.each do |non_organizer|
-      refute response.any? {|o| o['id'] == non_organizer.id}
+      refute(response.any? {|o| o['id'] == non_organizer.id})
     end
   end
 end

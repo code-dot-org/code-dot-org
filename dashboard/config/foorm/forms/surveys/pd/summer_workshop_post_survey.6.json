@@ -172,7 +172,7 @@
               ]
             }
           ],
-          "visibleIf": "{is_friday_institute} = 'true'"
+          "visibleIf": "{is_friday_institute} = 'true' and ({workshop_course} = 'CS Principles' or {workshop_course} = 'Computer Science A')"
         },
         {
           "type": "library_item",

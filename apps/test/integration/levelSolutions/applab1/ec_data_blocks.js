@@ -38,6 +38,113 @@ export default {
     },
 
     {
+      description: 'Data getColumn',
+      editCode: true,
+      xml: `
+        createRecord("mytable", {name:'Alice'}, function(record) {
+          createRecord("mytable", {name: 'Bob'}, function (record) {
+            var names = getColumn('mytable', 'name');
+            console.log("getColumn returned: " + names.join(', '));
+          });
+        });`,
+
+      runBeforeClick(assert) {
+        // add a completion on timeout since this is a freeplay level
+        tickWrapper.runOnAppTick(Applab, 200, () => {
+          Applab.onPuzzleComplete();
+        });
+      },
+      customValidator(assert) {
+        // No errors in output console
+        const debugOutput = document.getElementById('debug-output');
+        assert.equal(
+          debugOutput.textContent,
+          '"getColumn returned: Alice, Bob"'
+        );
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY,
+      },
+    },
+
+    {
+      description:
+        'Data getColumn returns correct console message for nonexistant table',
+      editCode: true,
+      xml: `var names = getColumn('nonexistant table', 'name');`,
+
+      runBeforeClick(assert) {
+        // add a completion on timeout since this is a freeplay level
+        tickWrapper.runOnAppTick(Applab, 200, () => {
+          Applab.onPuzzleComplete();
+        });
+      },
+      customValidator(assert) {
+        // Error text includes correct info
+        const debugOutput = document.getElementById('debug-output');
+        assert.equal(
+          String(debugOutput.textContent).startsWith('ERROR'),
+          true,
+          `log message contains error: ${debugOutput.textContent}`
+        );
+        assert.equal(
+          String(debugOutput.textContent).endsWith(
+            "but that table doesn't exist in this app"
+          ),
+          true,
+          `log message contains correct info about nonexistant table: ${debugOutput.textContent}`
+        );
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY,
+      },
+    },
+
+    {
+      description:
+        'Data getColumn returns correct console message for nonexistant column',
+      editCode: true,
+      xml: `
+        createRecord("mytable", {name:'Alice'}, function(record) {
+          createRecord("mytable", {name: 'Bob'}, function (record) {
+            var names = getColumn('mytable', 'nonexistant column');
+          });
+        });`,
+
+      runBeforeClick(assert) {
+        // add a completion on timeout since this is a freeplay level
+        tickWrapper.runOnAppTick(Applab, 200, () => {
+          Applab.onPuzzleComplete();
+        });
+      },
+      customValidator(assert) {
+        // Error text includes correct info
+        const debugOutput = document.getElementById('debug-output');
+        assert.equal(
+          String(debugOutput.textContent).startsWith('ERROR'),
+          true,
+          `log message contains error: ${debugOutput.textContent}`
+        );
+        assert.equal(
+          String(debugOutput.textContent).endsWith(
+            "but that column doesn't exist. "
+          ),
+          true,
+          `log message contains correct info about nonexistant column: ${debugOutput.textContent}`
+        );
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY,
+      },
+    },
+
+    {
       description: 'Data createRecord again to confirm mock is reset',
       editCode: true,
       xml: `
@@ -58,157 +165,6 @@ export default {
         assert.equal(
           debugOutput.textContent,
           '"record created with id: 1 name: Alice age: 7"'
-        );
-        return true;
-      },
-      expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY,
-      },
-    },
-
-    {
-      description: 'onRecordEvent without includeAll excludes previous creates',
-      editCode: true,
-      xml: `
-        createRecord("mytable", {name:'Alice'}, function(record) {
-          onRecordEvent("mytable", function(record, eventType) {
-            console.log(eventType + ' ' + record.id)
-          });
-          createRecord("mytable", {name:'Alice'}, function(record) {
-            updateRecord("mytable", {id:1, name:'Bob'}, function(record, success) {
-              deleteRecord("mytable", {id:1}, function(success) {
-              });
-            });
-          });
-        });`,
-
-      runBeforeClick(assert) {
-        // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 100, () => {
-          Applab.onPuzzleComplete();
-        });
-      },
-      customValidator(assert) {
-        // Verify that onRecordEvent was called with the correct data
-        const debugOutput = document.getElementById('debug-output');
-        assert.equal(
-          debugOutput.textContent,
-          '"create 2"' + '"update 1"' + '"delete 1"'
-        );
-        return true;
-      },
-      expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY,
-      },
-    },
-
-    {
-      description: 'onRecordEvent with includeAll includes previous creates',
-      editCode: true,
-      xml: `
-        createRecord("mytable", {name:'Alice'}, function(record) {
-          var includeAll = true;
-          onRecordEvent("mytable", function(record, eventType) {
-            console.log(eventType + ' ' + record.id)
-          }, includeAll);
-          createRecord("mytable", {name:'Alice'}, function(record) {
-            updateRecord("mytable", {id:1, name:'Bob'}, function(record, success) {
-              deleteRecord("mytable", {id:1}, function(success) {
-              });
-            });
-          });
-        });`,
-
-      runBeforeClick(assert) {
-        // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 100, () => {
-          Applab.onPuzzleComplete();
-        });
-      },
-      customValidator(assert) {
-        // Verify that onRecordEvent was called with the correct data
-        const debugOutput = document.getElementById('debug-output');
-        assert.equal(
-          debugOutput.textContent,
-          '"create 1"' + '"create 2"' + '"update 1"' + '"delete 1"'
-        );
-        return true;
-      },
-      expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY,
-      },
-    },
-
-    {
-      description:
-        'additional calls to onRecordEvent do not interfere with existing ones',
-      editCode: true,
-      xml: `
-        createRecord("mytable", {name:'Alice'}, function(record) {
-          onRecordEvent("mytable", function(record, eventType) {
-            console.log(eventType + ' ' + record.id)
-          });
-          onRecordEvent("other table", function(record, eventType) {
-            console.log(eventType + ' ' + record.id)
-          });
-          createRecord("mytable", {name:'Alice'}, function(record) {
-            updateRecord("mytable", {id:1, name:'Bob'}, function(record, success) {
-              deleteRecord("mytable", {id:1}, function(success) {
-              });
-            });
-          });
-        });`,
-
-      runBeforeClick(assert) {
-        // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 100, () => {
-          Applab.onPuzzleComplete();
-        });
-      },
-      customValidator(assert) {
-        // Verify that onRecordEvent was called with the correct data
-        const debugOutput = document.getElementById('debug-output');
-        assert.equal(
-          debugOutput.textContent,
-          '"create 2"' + '"update 1"' + '"delete 1"'
-        );
-        return true;
-      },
-      expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY,
-      },
-    },
-
-    {
-      description:
-        'multiple calls to onRecordEvent on the same table give a warning',
-      editCode: true,
-      xml: `
-        onRecordEvent("mytable", function(record, eventType) {
-          console.log(eventType + ' ' + record.id)
-        });
-        onRecordEvent("mytable", function(record, eventType) {
-          console.log(eventType + ' ' + record.id)
-        });`,
-      runBeforeClick(assert) {
-        // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 100, () => {
-          Applab.onPuzzleComplete();
-        });
-      },
-      customValidator(assert) {
-        // Verify that onRecordEvent prints a warning
-        const debugOutput = document.getElementById('debug-output');
-        const msg =
-          'WARNING: Line: 5: onRecordEvent was already called for table "mytable"';
-        assert.equal(
-          String(debugOutput.textContent).includes(msg),
-          true,
-          'correct warning message is shown'
         );
         return true;
       },
@@ -270,7 +226,6 @@ export default {
           'readRecords',
           'updateRecord',
           'deleteRecord',
-          'onRecordEvent',
           'getUserId',
           'drawChart',
           'drawChartFromRecords',

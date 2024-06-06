@@ -1,9 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import RubricsContainer from '@cdo/apps/lib/levelbuilder/rubrics/RubricsContainer';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
-// Note that I will need to pass some data in here (perhaps the id of the rubric)
-// Currently, this URL will work http://localhost-studio.code.org:3000/rubrics/12/edit
 $(document).ready(() => {
-  ReactDOM.render(<RubricsContainer />, document.getElementById('form'));
+  const rubric = getScriptData('rubricData');
+  const lessonData = getScriptData('lessonData');
+  const {unitName, lessonNumber, levels} = lessonData;
+  const submittableLevels = levels.filter(
+    level => level.properties.submittable === 'true'
+  );
+
+  ReactDOM.render(
+    <RubricsContainer
+      unitName={unitName}
+      lessonNumber={lessonNumber}
+      submittableLevels={submittableLevels}
+      rubric={rubric}
+    />,
+    document.getElementById('form')
+  );
 });

@@ -1,7 +1,9 @@
-import React, {Component} from 'react';
-import i18n from '@cdo/locale';
-import Button from '../../Button';
 import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+
+import i18n from '@cdo/locale';
+
+import Button from '../../Button';
 
 export default class PrintReportButton extends Component {
   static propTypes = {
@@ -14,7 +16,7 @@ export default class PrintReportButton extends Component {
         <Button
           __useDeprecatedTag
           onClick={this.props.onClick}
-          color={Button.ButtonColor.orange}
+          color={Button.ButtonColor.brandSecondaryDefault}
           text={i18n.printReport()}
           icon="print"
           iconClassName="fa"

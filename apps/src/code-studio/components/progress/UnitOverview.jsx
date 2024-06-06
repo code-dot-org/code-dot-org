@@ -49,6 +49,7 @@ class UnitOverview extends React.Component {
     showAssignButton: PropTypes.bool,
     assignedSectionId: PropTypes.number,
     unitCalendarLessons: PropTypes.arrayOf(unitCalendarLesson),
+    unitHasLevels: PropTypes.bool,
     weeklyInstructionalMinutes: PropTypes.number,
     showCalendar: PropTypes.bool,
     isMigrated: PropTypes.bool,
@@ -118,6 +119,7 @@ class UnitOverview extends React.Component {
       showCalendar,
       weeklyInstructionalMinutes,
       unitCalendarLessons,
+      unitHasLevels,
       isMigrated,
       scriptOverviewPdfUrl,
       scriptResourcesPdfUrl,
@@ -203,6 +205,7 @@ class UnitOverview extends React.Component {
             courseLink={this.props.courseLink}
             publishedState={publishedState}
             participantAudience={participantAudience}
+            isUnitWithLevels={unitHasLevels}
           />
         </div>
         <ProgressTable minimal={false} />

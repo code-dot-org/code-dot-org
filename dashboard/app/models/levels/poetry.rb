@@ -56,7 +56,7 @@ class Poetry < GamelabJr
     # If there is a default poem and dropdown poem(s), check that the default poem is
     # in the dropdown poem list.
     if default_poem.present? && Poetry.standalone_apps_with_poems.include?(standalone_app_name) &&
-      available_poems && !available_poems.empty? && available_poems.exclude?(default_poem)
+        available_poems && !available_poems.empty? && available_poems.exclude?(default_poem)
       errors.add(:default_poem, "selected default poem is not in dropdown poem list")
     end
   end

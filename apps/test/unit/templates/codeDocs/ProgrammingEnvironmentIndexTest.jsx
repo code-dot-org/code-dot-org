@@ -1,9 +1,11 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+
 import ProgrammingEnvironmentIndex, {
   ProgrammingEnvironmentCard,
 } from '@cdo/apps/templates/codeDocs/ProgrammingEnvironmentIndex';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('ProgrammingEnvironmentIndex', () => {
   it('renders card for each IDE', () => {

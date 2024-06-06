@@ -2,9 +2,7 @@
 class CustomDeviseFailure < Devise::FailureApp
   include LocaleHelper
 
-  protected
-
-  def i18n_options(options)
+  protected def i18n_options(options)
     options[:locale] = locale
     options
   end

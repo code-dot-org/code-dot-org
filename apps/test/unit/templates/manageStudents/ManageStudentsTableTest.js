@@ -1,25 +1,21 @@
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
+
+import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
-import i18n from '@cdo/locale';
-import DCDO from '@cdo/apps/dcdo';
-import {expect} from '../../../util/deprecatedChai';
-import {shallow, mount} from 'enzyme';
-import ManageStudentsTable, {
-  UnconnectedManageStudentsTable,
-  sortRows,
-} from '@cdo/apps/templates/manageStudents/ManageStudentsTable';
+import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import CodeReviewGroupsDialog from '@cdo/apps/templates/manageStudents/CodeReviewGroupsDialog';
 import ManageStudentsActionsCell from '@cdo/apps/templates/manageStudents/ManageStudentsActionsCell';
-import ManageStudentNameCell from '@cdo/apps/templates/manageStudents/ManageStudentsNameCell';
+import ManageStudentActionsHeaderCell from '@cdo/apps/templates/manageStudents/ManageStudentsActionsHeaderCell';
 import ManageStudentFamilyNameCell from '@cdo/apps/templates/manageStudents/ManageStudentsFamilyNameCell';
 import ManageStudentsGenderCell from '@cdo/apps/templates/manageStudents/ManageStudentsGenderCell';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import ManageStudentNameCell from '@cdo/apps/templates/manageStudents/ManageStudentsNameCell';
 import manageStudents, {
   RowType,
   setLoginType,
@@ -34,14 +30,21 @@ import manageStudents, {
   TransferStatus,
   TransferType,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
+import ManageStudentsTable, {
+  UnconnectedManageStudentsTable,
+  sortRows,
+} from '@cdo/apps/templates/manageStudents/ManageStudentsTable';
+import NoSectionCodeDialog from '@cdo/apps/templates/manageStudents/NoSectionCodeDialog';
 import teacherSections, {
   setSections,
   selectSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
-import isRtl from '@cdo/apps/code-studio/isRtlRedux';
-import NoSectionCodeDialog from '@cdo/apps/templates/manageStudents/NoSectionCodeDialog';
+import experiments from '@cdo/apps/util/experiments';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
+
 import {ManageStudentsNotificationFull} from '../../../../src/templates/manageStudents/ManageStudentsTable';
+import {expect} from '../../../util/deprecatedChai';
 import {allowConsoleWarnings} from '../../../util/throwOnConsole';
 
 describe('ManageStudentsTable', () => {
@@ -188,13 +191,43 @@ describe('ManageStudentsTable', () => {
       );
     });
 
+    describe('LTI section tests', () => {
+      it('does not render the Actions column if loginType is lti_v1 and sync is enabled', () => {
+        const store = getStore();
+        store.dispatch(setLoginType(SectionLoginType.lti_v1));
+        store.dispatch(setSections([{...fakeSection, sync_enabled: true}]));
+        const wrapper = mount(
+          <Provider store={store}>
+            <ManageStudentsTable />
+          </Provider>
+        );
+
+        expect(wrapper.find(ManageStudentActionsHeaderCell).exists()).to.be
+          .false;
+      });
+
+      it('does render the Actions column if loginType is lti_v1 and sync is disabled', () => {
+        const store = getStore();
+        store.dispatch(setLoginType(SectionLoginType.lti_v1));
+        store.dispatch(setSections([{...fakeSection, sync_enabled: false}]));
+        const wrapper = mount(
+          <Provider store={store}>
+            <ManageStudentsTable />
+          </Provider>
+        );
+
+        expect(wrapper.find(ManageStudentActionsHeaderCell).exists()).to.be
+          .true;
+      });
+    });
+
     describe('Gender field feature flag', () => {
       before(() => {
-        window.GENDER_FEATURE_ENABLED = 'true';
+        experiments.setEnabled(experiments.GENDER_FEATURE_ENABLED, true);
       });
 
       after(() => {
-        window.GENDER_FEATURE_ENABLED = undefined;
+        experiments.setEnabled(experiments.GENDER_FEATURE_ENABLED, false);
       });
 
       it('does render the gender column if loginType is secret picture', () => {
@@ -284,9 +317,6 @@ describe('ManageStudentsTable', () => {
     });
 
     it('renders an editable family name field in student sections', async () => {
-      DCDO.reset();
-      DCDO.set('family-name-features', true);
-
       const wrapper = mount(
         <Provider store={getStore()}>
           <ManageStudentsTable />
@@ -317,14 +347,9 @@ describe('ManageStudentsTable', () => {
 
       // Expect the input box value to have changed
       expect(nameInput().prop('value')).to.equal('z');
-
-      DCDO.reset();
     });
 
     it('does not render a family name field in PL sections', async () => {
-      DCDO.reset();
-      DCDO.set('family-name-features', true);
-
       const plSection = {...fakeSection, participant_type: 'teacher'};
       getStore().dispatch(setSections([plSection]));
       const wrapper = mount(
@@ -345,34 +370,6 @@ describe('ManageStudentsTable', () => {
 
       // Check for a family name cell with expecting initial editing props
       expect(manageStudentFamilyNameCell().exists()).to.be.false;
-
-      DCDO.reset();
-    });
-
-    it('does not render a family name field when flag is false', async () => {
-      DCDO.reset();
-      DCDO.set('family-name-features', false);
-
-      const wrapper = mount(
-        <Provider store={getStore()}>
-          <ManageStudentsTable />
-        </Provider>
-      );
-      // Begin editing the student
-      // (Using redux directly to do this requires us to trigger a manual update)
-      getStore().dispatch(startEditingStudent(fakeStudent.id));
-      wrapper.update();
-
-      const manageStudentFamilyNameCell = () =>
-        wrapper
-          .find(ManageStudentFamilyNameCell)
-          .findWhere(w => w.prop('id') === fakeStudent.id)
-          .first();
-
-      // Check for a family name cell with expecting initial editing props
-      expect(manageStudentFamilyNameCell().exists()).to.be.false;
-
-      DCDO.reset();
     });
 
     it('renders correctly if loginType is picture', () => {

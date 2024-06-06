@@ -6,12 +6,14 @@ import color from '@cdo/apps/util/color';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import {hideShareDialog} from './shareDialogRedux';
+import fontConstants from '@cdo/apps/fontConstants';
 
 class ShareDisallowedDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     hideShareDialog: PropTypes.func.isRequired,
   };
+
   render() {
     return (
       <BaseDialog
@@ -35,7 +37,7 @@ class ShareDisallowedDialog extends Component {
               __useDeprecatedTag
               href={`/users/sign_up?user_return_to=${location.pathname}`}
               text={i18n.createAccount()}
-              color={Button.ButtonColor.orange}
+              color={Button.ButtonColor.brandSecondaryDefault}
             />
           </div>
         </div>
@@ -51,7 +53,7 @@ const styles = {
   },
   heading: {
     fontSize: 16,
-    fontFamily: "'Gotham 5r', sans-serif",
+    ...fontConstants['main-font-semi-bold'],
   },
   middle: {
     marginTop: 20,

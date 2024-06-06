@@ -32,7 +32,6 @@ class StandaloneVideo < Level
     video_full_width
     background
     uses_lab2
-    disable_projects
   )
 
   before_validation do
@@ -66,7 +65,14 @@ class StandaloneVideo < Level
   end
 
   def self.create_from_level_builder(params, level_params)
-    create!(level_params.merge(user: params[:user], game: Game.standalone_video, level_num: 'custom'))
+    create!(
+      level_params.merge(
+        user: params[:user],
+        game: Game.standalone_video,
+        level_num: 'custom',
+        properties: {}
+      )
+    )
   end
 
   def localized_long_instructions

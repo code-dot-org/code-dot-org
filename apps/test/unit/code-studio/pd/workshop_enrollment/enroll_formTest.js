@@ -1,6 +1,6 @@
 import React from 'react';
 import {assert, expect} from 'chai';
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import sinon from 'sinon';
 import jQuery from 'jquery';
 import {pick, omit} from 'lodash';
@@ -23,6 +23,7 @@ describe('Enroll Form', () => {
   });
 
   const props = {
+    user_id: 1,
     workshop_id: 1,
     first_name: 'Rubeus',
     email: 'rhagrid@hogwarts.edu',
@@ -40,6 +41,7 @@ describe('Enroll Form', () => {
   };
 
   const baseParams = {
+    user_id: 1,
     first_name: 'Rubeus',
     last_name: 'Hagrid',
     email: props.email,
@@ -80,6 +82,7 @@ describe('Enroll Form', () => {
     beforeEach(() => {
       enrollForm = shallow(
         <EnrollForm
+          user_id={props.user_id}
           workshop_id={props.workshop_id}
           workshop_course="CS Fundamentals"
           first_name={props.first_name}
@@ -129,6 +132,7 @@ describe('Enroll Form', () => {
     beforeEach(() => {
       enrollForm = shallow(
         <EnrollForm
+          user_id={props.user_id}
           workshop_id={props.workshop_id}
           workshop_course="CS Fundamentals"
           workshop_subject={SubjectNames.SUBJECT_CSF_101}
@@ -172,6 +176,7 @@ describe('Enroll Form', () => {
     beforeEach(() => {
       enrollForm = shallow(
         <EnrollForm
+          user_id={props.user_id}
           workshop_id={props.workshop_id}
           workshop_course="CS Fundamentals"
           workshop_subject={SubjectNames.SUBJECT_CSF_DISTRICT}
@@ -219,6 +224,7 @@ describe('Enroll Form', () => {
     beforeEach(() => {
       enrollForm = shallow(
         <EnrollForm
+          user_id={props.user_id}
           workshop_id={props.workshop_id}
           workshop_course="CS Fundamentals"
           workshop_subject={SubjectNames.SUBJECT_CSF_201}
@@ -260,6 +266,7 @@ describe('Enroll Form', () => {
     beforeEach(() => {
       enrollForm = shallow(
         <EnrollForm
+          user_id={props.user_id}
           workshop_id={props.workshop_id}
           workshop_course="CS Principles"
           first_name={props.first_name}
@@ -279,10 +286,6 @@ describe('Enroll Form', () => {
       refute(enrollForm.exists('#previous_courses'));
     });
 
-    it('does not display replace existing question', () => {
-      refute(enrollForm.exists('#replace_existing'));
-    });
-
     it('does not display intent question', () => {
       refute(enrollForm.exists({groupName: 'csf_intro_intent'}));
     });
@@ -300,6 +303,7 @@ describe('Enroll Form', () => {
     beforeEach(() => {
       enrollForm = shallow(
         <EnrollForm
+          user_id={props.user_id}
           workshop_id={props.workshop_id}
           workshop_course="CS Principles"
           first_name={props.first_name}
@@ -313,10 +317,6 @@ describe('Enroll Form', () => {
 
     it('does display previous courses question', () => {
       assert(enrollForm.exists('#previous_courses'));
-    });
-
-    it('does display replace existing question', () => {
-      assert(enrollForm.exists('#replace_existing'));
     });
 
     it('submits when all required params are present', () => {
@@ -338,6 +338,7 @@ describe('Enroll Form', () => {
     beforeEach(() => {
       enrollForm = shallow(
         <EnrollForm
+          user_id={props.user_id}
           workshop_id={props.workshop_id}
           workshop_course="CS Principles"
           workshop_subject={SubjectNames.SUBJECT_CSP_FOR_RETURNING_TEACHERS}
@@ -362,7 +363,7 @@ describe('Enroll Form', () => {
       });
     });
 
-    ['role', 'previous_courses', 'replace_existing'].forEach(question => {
+    ['role', 'previous_courses'].forEach(question => {
       it('displays questions not relevant for this workshop type', () => {
         refute(enrollForm.exists('#' + question));
       });
@@ -393,6 +394,7 @@ describe('Enroll Form', () => {
     beforeEach(() => {
       enrollForm = shallow(
         <EnrollForm
+          user_id={props.user_id}
           workshop_id={props.workshop_id}
           workshop_course="Admin/Counselor Workshop"
           first_name={props.first_name}
@@ -437,6 +439,7 @@ describe('Enroll Form', () => {
     beforeEach(() => {
       enrollForm = shallow(
         <EnrollForm
+          user_id={props.user_id}
           workshop_id={props.workshop_id}
           workshop_course="CS Fundamentals"
           first_name={props.first_name}
@@ -506,6 +509,7 @@ describe('Enroll Form', () => {
       // prop but never an email prop, which caused a bug in the past.
       enrollForm = shallow(
         <EnrollForm
+          user_id={props.user_id}
           workshop_id={props.workshop_id}
           first_name={'Student'}
           email={''}

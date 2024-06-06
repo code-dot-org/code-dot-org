@@ -1,11 +1,13 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import MarkdownInstructions from './MarkdownInstructions';
-import InputOutputTable from './InputOutputTable';
-import AniGifPreview from './AniGifPreview';
-import ImmersiveReaderButton from './ImmersiveReaderButton';
-import ExampleImage from './ExampleImage';
+
 import i18n from '@cdo/locale';
+
+import AniGifPreview from './AniGifPreview';
+import ExampleImage from './ExampleImage';
+import ImmersiveReaderButton from './ImmersiveReaderButton';
+import InputOutputTable from './InputOutputTable';
+import MarkdownInstructions from './MarkdownInstructions';
 
 /**
  * A component for displaying our level instructions text, and possibly also

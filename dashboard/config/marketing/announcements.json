@@ -1,0 +1,42 @@
+{
+  "pages": {
+    "/home": "lms-launch",
+    "/student-home": "music-lab-launch"
+  },
+  "banners": {
+    "superhero": {
+      "image": "/images/marketing/superhero_teacherdash.png",
+      "title": "Help your students become superheroes!",
+      "body": "Join our highly supportive Professional Learning Program for middle and high school educators.",
+      "buttonText": "Learn More",
+      "buttonUrl": "https://code.org/educate/professional-learning",
+      "buttonId": "superhero-pl-details"
+    },
+    "hoc-2023": {
+      "image": "/shared/images/fill-540x300/social-media/hoc2023_social.png",
+      "title": "Hour of Code: Creativity with AI",
+      "body": "Join millions across the globe in organizing an hour of coding, with or without AI and learning how AI works. Anyone, anywhere can do it. No experience needed.",
+      "buttonText": "Learn more",
+      "buttonUrl": "https://code.org/hourofcode",
+      "buttonId": "hoc-2023"
+    },
+    "music-lab-launch": {
+      "dcdo": "music-lab-launch-2024",
+      "image": "/shared/images/banners/music-lab-with-afe-logo.png",
+      "title": "Introducing Music Lab",
+      "body": "Get creative with your favorite artist's music and code new songs and mixes!",
+      "buttonText": "Learn more",
+      "buttonUrl": "https://code.org/music",
+      "buttonId": "music-lab-launch"
+    },
+    "lms-launch": {
+      "dcdo": "show-updated-lms-content",
+      "image": "/shared/images/banners/banner-lms-launch.png",
+      "title": "Discover our new LMS integrations",
+      "body": "We've added new LMS integrations for Canvas and Schoology! Connect existing LMS classrooms in your school to Code.org with one-click Roster Syncing, Single Sign-On, and integrated access to curriculum.",
+      "buttonText": "Learn more",
+      "buttonUrl": "https://code.org/lms",
+      "buttonId": "lms-launch"
+    }
+  }
+}

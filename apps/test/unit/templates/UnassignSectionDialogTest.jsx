@@ -1,8 +1,9 @@
-import React from 'react';
-import {mount} from 'enzyme';
-import sinon from 'sinon';
-import UnassignSectionDialog from '@cdo/apps/templates/UnassignSectionDialog';
 import {expect} from 'chai';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import React from 'react';
+import sinon from 'sinon';
+
+import UnassignSectionDialog from '@cdo/apps/templates/UnassignSectionDialog';
 
 const DEFAULT_PROPS = {
   isOpen: true,
@@ -24,7 +25,7 @@ describe('UnassignSectionDialog', () => {
     const unassignSpy = sinon.spy();
     const wrapper = setUp({unassignSection: unassignSpy});
 
-    const button = wrapper.find('Button').at(1);
+    const button = wrapper.find('Button').at(2);
 
     button.simulate('click');
     expect(unassignSpy).to.have.been.calledOnce;
@@ -33,7 +34,7 @@ describe('UnassignSectionDialog', () => {
   it('calls cancel function when user clicks cancel', () => {
     const cancelSpy = sinon.spy();
     const wrapper = setUp({cancelUnassign: cancelSpy});
-    const button = wrapper.find('Button').at(0);
+    const button = wrapper.find('Button').at(1);
 
     button.simulate('click');
     expect(cancelSpy).to.have.been.calledOnce;

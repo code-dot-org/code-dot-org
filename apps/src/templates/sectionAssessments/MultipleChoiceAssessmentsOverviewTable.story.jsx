@@ -1,6 +1,8 @@
 import React from 'react';
-import {UnconnectedMultipleChoiceAssessmentsOverviewTable as MultipleChoiceAssessmentsOverviewTable} from './MultipleChoiceAssessmentsOverviewTable';
+
 import i18n from '@cdo/locale';
+
+import {UnconnectedMultipleChoiceAssessmentsOverviewTable as MultipleChoiceAssessmentsOverviewTable} from './MultipleChoiceAssessmentsOverviewTable';
 
 const multipleChoiceData = [
   {
@@ -153,7 +155,6 @@ const multipleChoiceData = [
 ];
 
 export default {
-  name: 'MultipleChoiceAssessmentsOverviewTable',
   component: MultipleChoiceAssessmentsOverviewTable,
 };
 

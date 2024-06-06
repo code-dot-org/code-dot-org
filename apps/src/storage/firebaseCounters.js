@@ -1,11 +1,14 @@
+// TODO: post-firebase-cleanup, remove this file #56994
+
 import Firebase from 'firebase';
+
+import {WarningType} from './constants';
 import {
   loadConfig,
   getProjectDatabase,
   showRateLimitAlert,
   getPathRef,
 } from './firebaseUtils';
-import {WarningType} from './constants';
 
 /**
  * @fileoverview

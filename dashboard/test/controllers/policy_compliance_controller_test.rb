@@ -25,8 +25,8 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
     end
     user.reload
     assert_response :ok
-    assert_equal User::ChildAccountCompliance::PERMISSION_GRANTED, user.child_account_compliance_state
-    assert_not_empty user.child_account_compliance_state_last_updated
+    assert_equal Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED, user.child_account_compliance_state
+    refute_empty user.child_account_compliance_state_last_updated
   end
 
   test "making the same request twice is ok and email is sent once" do
@@ -65,7 +65,7 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
   test "given a user already has parental permission, should just redirect back" do
     permission = create :parental_permission_request, :granted
     user = permission.user
-    user.child_account_compliance_state = User::ChildAccountCompliance::PERMISSION_GRANTED
+    user.child_account_compliance_state = Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED
 
     sign_in user
 
@@ -76,6 +76,43 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
         }
       assert_redirected_to lockout_path
     end
+  end
+
+  test "if a user enters their own email as their parent email, should just redirect back" do
+    user = create(:young_student, :without_parent_permission, email: 'test@studentemail.com')
+    sign_in user
+
+    assert_emails 0 do
+      post '/policy_compliance/child_account_consent', params:
+        {
+          'parent-email': 'test@studentemail.com',
+        }
+      assert_redirected_to lockout_path
+    end
+  end
+
+  test "if a user enters their own email with a subaddress/plus address, it should redirect back" do
+    user = create(:young_student, :without_parent_permission, email: 'test@studentemail.com')
+    sign_in user
+
+    assert_emails 0 do
+      post '/policy_compliance/child_account_consent', params:
+        {
+          'parent-email': 'test+foo@studentemail.com',
+        }
+      assert_redirected_to lockout_path
+    end
+  end
+
+  test "if a user enters an invalid email, it should return a 400" do
+    user = create(:young_student, :without_parent_permission)
+    sign_in user
+
+    post '/policy_compliance/child_account_consent', params:
+      {
+        'parent-email': 'bademail',
+      }
+    assert_response :bad_request
   end
 
   test "should update user and send an email to the parent upon creating the request" do
@@ -90,8 +127,8 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
         }
       assert_redirected_to lockout_path
       user.reload
-      assert_equal User::ChildAccountCompliance::REQUEST_SENT, user.child_account_compliance_state
-      assert_not_empty user.child_account_compliance_state_last_updated
+      assert_equal Policies::ChildAccount::ComplianceState::REQUEST_SENT, user.child_account_compliance_state
+      refute_empty user.child_account_compliance_state_last_updated
     end
   end
 
@@ -178,8 +215,7 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "registration email should be given a fully qualified path to the token endpoint" do
-    user = create(:young_student, :without_parent_permission
-)
+    user = create(:young_student, :without_parent_permission)
     sign_in user
 
     post '/policy_compliance/child_account_consent', params:
@@ -193,7 +229,107 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
       action: :child_account_consent,
       controller: :policy_compliance,
       only_path: false,
+      protocol: Rails.application.routes.default_url_options[:protocol],
     )
     assert_includes(mail.body.to_s, token_endpoint_url)
+  end
+
+  class PendingPermissionRequestTest < ActionDispatch::IntegrationTest
+    test 'json format - returns pending permission request data when exists' do
+      consent_status = 'expected_consent_status'
+      user = create(:young_student, child_account_compliance_state: consent_status)
+      parent_email = 'parent@example.com'
+      requested_at = DateTime.now.utc.iso8601(3)
+      resends_sent = 999
+
+      parental_permission_request = build(
+        :parental_permission_request,
+        user: user,
+        parent_email: parent_email,
+        updated_at: requested_at,
+        resends_sent: resends_sent
+      )
+
+      Queries::ChildAccount.
+        expects(:latest_permission_request).
+        with(user).
+        returns(parental_permission_request)
+
+      sign_in user
+      get policy_compliance_pending_permission_request_path, as: :json
+
+      assert_response :success
+      assert_equal JSON.dump(
+        parent_email: parent_email,
+        requested_at: requested_at,
+        resends_sent: resends_sent,
+        consent_status: consent_status,
+      ), response.body
+    end
+
+    test 'json format - returns no content when no pending permission request' do
+      user = create(:young_student)
+
+      Queries::ChildAccount.
+        expects(:latest_permission_request).
+        with(user).
+        returns(nil)
+
+      sign_in user
+      get policy_compliance_pending_permission_request_path, as: :json
+
+      assert_response :no_content
+    end
+  end
+
+  class ChildAccountConsentRequest < ActionDispatch::IntegrationTest
+    test 'json format - returns permission request data on success' do
+      consent_status = 'expected_consent_status'
+      child_account = create(:young_student, child_account_compliance_state: consent_status)
+      parent_email = 'parent@example.com'
+      requested_at = DateTime.now.utc.iso8601(3)
+      resends_sent = 999
+
+      expected_permission_request = build_stubbed(
+        :parental_permission_request,
+        user: child_account,
+        parent_email: parent_email,
+        updated_at: requested_at,
+        resends_sent: resends_sent,
+      )
+
+      Forms::ChildAccount::ParentalPermissionRequest.
+        expects(:new).
+        with(child_account: child_account, parent_email: parent_email).
+        returns(mock(request: true, record: expected_permission_request))
+
+      sign_in child_account
+      post policy_compliance_child_account_consent_path, as: :json, params: {'parent-email': parent_email}
+
+      assert_response :created
+      assert_equal JSON.dump(
+        parent_email: parent_email,
+        requested_at: requested_at,
+        resends_sent: resends_sent,
+        consent_status: consent_status,
+      ), response.body
+    end
+
+    test 'json format - returns error message on failure' do
+      child_account = build(:young_student)
+      parent_email = 'parent@example.com'
+      error_message = 'error_message'
+
+      Forms::ChildAccount::ParentalPermissionRequest.
+        expects(:new).
+        with(child_account: child_account, parent_email: parent_email).
+        returns(mock(request: false, errors: stub(full_messages: [error_message])))
+
+      sign_in child_account
+      post policy_compliance_child_account_consent_path, as: :json, params: {'parent-email': parent_email}
+
+      assert_response :unprocessable_entity
+      assert_equal JSON.dump(error: error_message), response.body
+    end
   end
 end

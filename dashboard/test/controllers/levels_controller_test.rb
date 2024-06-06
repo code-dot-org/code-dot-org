@@ -6,9 +6,13 @@ class LevelsControllerTest < ActionController::TestCase
 
   STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
 
+  setup_all do
+    seed_deprecated_unit_fixtures
+  end
+
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    Level.any_instance.stubs(:write_to_file?).returns(false) # don't write to level files
+    Policies::LevelFiles.stubs(:write_to_file?).returns(false) # don't write to level files
 
     @level = create(:level)
     @partner_level = create :level, editor_experiment: 'platformization-partners'
@@ -83,7 +87,7 @@ class LevelsControllerTest < ActionController::TestCase
     assert_response :success
 
     body = JSON.parse(response.body)
-    assert_equal({"levelData" => {"hello" => "there"}, "other" => "other", "preloadAssetList" => nil, "type" => "Maze", "appName" => "maze"}, body)
+    assert_equal({"id" => level.id, "levelData" => {"hello" => "there"}, "other" => "other", "preloadAssetList" => nil, "type" => "Maze", "appName" => "maze", "useRestrictedSongs" => false, "sharedBlocks" => [], "usesProjects" => false, "exemplarSources" => nil}, body)
   end
 
   test "should get filtered levels with just page param" do
@@ -134,7 +138,7 @@ class LevelsControllerTest < ActionController::TestCase
   test "should get index" do
     get :index, params: {game_id: @level.game}
     assert_response :success
-    assert_not_nil assigns(:levels)
+    refute_nil assigns(:levels)
   end
 
   test_user_gets_response_for(
@@ -494,7 +498,7 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should create and destroy custom level with level file" do
     # Enable writing custom level to file for this specific test only
-    Level.any_instance.stubs(:write_to_file?).returns(true)
+    Policies::LevelFiles.stubs(:write_to_file?).returns(true)
 
     level_name = 'TestCustomLevel'
     begin
@@ -504,12 +508,11 @@ class LevelsControllerTest < ActionController::TestCase
         program: @program
       }
       level = Level.find_by(name: level_name)
-      file_path = Level.level_file_path(level.name)
+      file_path = Policies::LevelFiles.level_file_path(level)
       assert_equal true, file_path && File.exist?(file_path)
       delete :destroy, params: {id: level}
       assert_equal false, file_path && File.exist?(file_path)
     ensure
-      file_path = Level.level_file_path(level_name)
       File.delete(file_path) if file_path && File.exist?(file_path)
     end
   end
@@ -740,7 +743,7 @@ class LevelsControllerTest < ActionController::TestCase
     get :edit, params: {id: @level.id}
     assert_response :success
     assert_includes @response.body, @level.name
-    assert_not_includes @response.body, 'level cannot be renamed'
+    refute_includes @response.body, 'level cannot be renamed'
   end
 
   test "should prevent rename of level in launched or pilot script" do
@@ -774,7 +777,7 @@ class LevelsControllerTest < ActionController::TestCase
     get :edit, params: {id: level.id}
     assert_response :success
     assert_includes @response.body, level.name
-    assert_not_includes @response.body, 'level cannot be renamed'
+    refute_includes @response.body, 'level cannot be renamed'
   end
 
   test "should prevent rename of stanadalone project level" do
@@ -861,7 +864,7 @@ class LevelsControllerTest < ActionController::TestCase
     level = create(:artist)
     get :edit, params: {id: level}
     css = css_select "form[action=\"#{level_path(level)}\"]"
-    assert_not css.empty?
+    refute css.empty?
   end
 
   test "should use first skin as default" do
@@ -1293,10 +1296,8 @@ class LevelsControllerTest < ActionController::TestCase
     params: -> {{id: @partner_level.id, level: {name: 'new partner name'}}}
   )
 
-  private
-
   # Assert that the url is a real S3 url, and not a placeholder.
-  def assert_s3_image_url(url)
+  private def assert_s3_image_url(url)
     assert(
       %r{#{LevelSourceImage::S3_URL}.*\.png}o.match(url),
       "expected #{url.inspect} to be an S3 URL"
@@ -1307,7 +1308,7 @@ class LevelsControllerTest < ActionController::TestCase
   # generated when solution images are uploaded. We don't want to actually
   # upload any S3 images in our tests, so just enable the codepath where an
   # existing LevelSourceImage is found based on the program contents.
-  def enable_level_source_image_s3_urls
+  private def enable_level_source_image_s3_urls
     # Allow LevelSourceImage to return real S3 urls.
     CDO.stubs(:disable_s3_image_uploads).returns(false)
 

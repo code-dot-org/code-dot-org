@@ -200,6 +200,7 @@ uz-UZ:
   class_submission_out_of_school_summer_camp: Yozgi oromgoh
   classicmaze_name: Klassik labirint
   code_hoc_coming: The Hour of Code is here - December 8-14!
+  code_org_logo_alt: Code.org Bosh sahifa
   code_sign_up: Sign up to participate during CS Education Week
   codea_beyond_gradelevel: High school +
   codea_beyond_longdescription: Codea for iPad lets you create games and simulations
@@ -1095,6 +1096,7 @@ uz-UZ:
   header_about_us: Biz haqimizda
   header_course_catalog: Kurslar katalogi
   header_courses: Kurslar
+  header_districts: Viloyatlar
   header_documentation: Hujjatlar
   header_educate_beyond: Code.org-dan tashqarida
   header_educate_community: Onlayn hamjamiyat
@@ -1109,6 +1111,7 @@ uz-UZ:
   header_help_support: Yordam va qo‘llab-quvvatlash
   header_help_us: Bizga yordam bering
   header_home: Home
+  header_incubator: Inkubator
   header_learn: Oʻrganish
   header_legal: Privacy & Legal
   header_legal_privacy: Maxfiylik siyosati
@@ -1118,6 +1121,7 @@ uz-UZ:
   header_project_gallery: Loyihalar
   header_report_abuse: Report abuse
   header_report_bug: Muammo haqida xabar berish
+  header_schools: Maktablar
   header_sections: Boʻlimlar
   header_stats: Statistika
   header_teach: O'qiting
@@ -2525,30 +2529,16 @@ uz-UZ:
     kirish soatini o‘tishni maqsad qilgan umumbashariy harakat. U 180 dan oshiq mamlakatda
     o‘n millionlab o‘quvchilarni qamrab olishni maqsad qilgan. 7-13 Dekabr kunlari
     Informatika ta'limi haftaligiga qo‘shiling.
-  volunteer_engineer_submission_intro_guide: <a href="%{volunteer_guide}"> Ko'ngillilar
-    dasturi haqida bu yerda </a> bilib oling.
   volunteer_engineer_submission_intro_guide_markdown: Ko'ngillilar dasturi haqida
     [bu yerda](%{volunteer_guide}) bilib oling.
-  volunteer_engineer_submission_intro_links: Are you a teacher looking for volunteers?
-    Find a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_intro_links_markdown: Are you a teacher looking for
     volunteers? Find a local volunteer on our [volunteer map](%{volunteer_local}).
-  volunteer_engineer_submission_intro_recruit: 'Bu o‘qituvchilar darslariga yordami
-    tegadigan, <span style="font-family: ''Gotham 7r'', sans-serif;">informatikani
-    o‘qitishga qiziqqan</span> yoki o‘quvchilarini Informatika ilmi imkoniyatlari
-    haqida so‘zlab (buni videochat orqali ham amalga oshirish mumkin) <span style="font-family:
-    ''Gotham 7r'', sans-serif;">ilhomlantira oladigan</span> insonlarni qo‘shilishidan
-    bag‘oyatda minnatdor. Agar siz ko‘ngilli qidirmayotgan bo‘lsangiz, Dasturlash
-    soatini tashkillashtirish haqida <a href="%{url}">batafsil o‘rganing</a>.'
   volunteer_engineer_submission_intro_recruit_markdown: Bu o‘qituvchilar darslariga
     yordami tegadigan, informatikani o‘qitishga qiziqqan yoki o‘quvchilarini Informatika
     ilmi imkoniyatlari haqida so‘zlab (buni videochat orqali ham amalga oshirish mumkin)
     ilhomlantira oladigan insonlarni qo‘shilishidan bag‘oyatda minnatdor. Agar siz
     ko‘ngilli qidirmayotgan bo‘lsangiz, Dasturlash soatini tashkillashtirish haqida
     <a href="%{url}">batafsil o‘rganing</a>.
-  volunteer_engineer_submission_intro_signup: Informatika talabasi yoki dasturchi
-    bo‘lsangiz, iltimos, quyidagi ma'lumotlarni kiriting. <span class="form-required-field">*</span>
-    belgili sohalarni to‘ldirish majburiy.
   volunteer_engineer_submission_intro_signup_markdown: Informatika talabasi yoki dasturchi
     bo‘lsangiz, iltimos, quyidagi ma'lumotlarni kiriting. Ko'ngilli sifatida ro'yxatdan
     o'tish uchun siz kamida 18 yoshda bo'lishingiz kerak. Shuni esda tutingki, ushbu

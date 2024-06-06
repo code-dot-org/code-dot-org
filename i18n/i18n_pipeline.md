@@ -16,7 +16,7 @@
 ## Introduction
 This document visualizes the entire I18n pipeline using data-flow diagrams.
 
-It starts with a high-level view of the pipeline (Level 0 and Level 1 diagram), then drills down to each of the pipeline's 4 main components (`sync-in`, `sync-up`, `sync-dow`, and `sync-out`). The detailed diagrams capture the inputs and outputs of those components and their sub-components. They show how data flows through our system and 3rd-party services.
+It starts with a high-level view of the pipeline (Level 0 and Level 1 diagram), then drills down to each of the pipeline's 4 main components (`sync-in`, `sync-up`, `sync-down`, and `sync-out`). The detailed diagrams capture the inputs and outputs of those components and their sub-components. They show how data flows through our system and 3rd-party services.
 
 
 

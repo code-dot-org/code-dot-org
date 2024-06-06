@@ -35,10 +35,7 @@ class PeerReviewSubmissionData extends React.Component {
               <td>{submission['level_name']}</td>
               <td>{submission['submission_date']}</td>
               <td>
-                <PeerReviewLinkSection
-                  reviews={submission['review_ids']}
-                  escalatedReviewId={submission['escalated_review_id']}
-                />
+                <PeerReviewLinkSection reviews={submission['review_ids']} />
               </td>
             </tr>
           );

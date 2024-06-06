@@ -1,12 +1,14 @@
 import sinon from 'sinon';
-import {assert, expect} from '../../../util/reconfiguredChai';
+
+import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {
   stubRedux,
   restoreRedux,
   registerReducers,
   getStore,
 } from '@cdo/apps/redux';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 import reducer, {
   __testInterface__,
   setAuthProviders,
@@ -41,8 +43,8 @@ import reducer, {
   assignToSection,
   NO_SECTION,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
-import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
+
+import {assert, expect} from '../../../util/reconfiguredChai';
 
 const {
   EDIT_SECTION_SUCCESS,
@@ -76,6 +78,14 @@ const sections = [
     hidden: false,
     restrict_section: false,
     post_milestone_disabled: false,
+    section_instructors: [
+      {
+        id: 1,
+        status: 'accepted',
+        instructor_name: 'teacher',
+        instructor_email: 'teacher@code.org',
+      },
+    ],
   },
   {
     id: 12,
@@ -98,6 +108,20 @@ const sections = [
     hidden: false,
     restrict_section: false,
     post_milestone_disabled: false,
+    section_instructors: [
+      {
+        id: 2,
+        status: 'accepted',
+        instructor_name: 'teacher',
+        instructor_email: 'teacher@code.org',
+      },
+      {
+        id: 3,
+        status: 'invited',
+        instructor_name: 'coteacher',
+        instructor_email: 'coteacher@code.org',
+      },
+    ],
   },
   {
     id: 307,
@@ -120,6 +144,14 @@ const sections = [
     hidden: false,
     restrict_section: false,
     post_milestone_disabled: false,
+    section_instructors: [
+      {
+        id: 4,
+        status: 'accepted',
+        instructor_name: 'teacher',
+        instructor_email: 'teacher@code.org',
+      },
+    ],
   },
 ];
 
@@ -326,8 +358,8 @@ describe('teacherSectionsRedux', () => {
         courseVersionId: null,
         unitId: null,
         hidden: false,
-        isAssigned: undefined,
         restrictSection: false,
+        aiTutorEnabled: false,
       });
     });
 
@@ -358,8 +390,8 @@ describe('teacherSectionsRedux', () => {
         courseVersionId: courseVersionId,
         unitId: unitId,
         hidden: false,
-        isAssigned: undefined,
         restrictSection: false,
+        aiTutorEnabled: false,
       });
     });
   });
@@ -386,8 +418,8 @@ describe('teacherSectionsRedux', () => {
         courseVersionId: null,
         unitId: null,
         hidden: false,
-        isAssigned: undefined,
         restrictSection: false,
+        aiTutorEnabled: false,
       });
     });
 
@@ -400,6 +432,7 @@ describe('teacherSectionsRedux', () => {
         name: 'My Other Section',
         courseVersionName: 'coursea-2017',
         loginType: 'picture',
+        loginTypeName: undefined,
         grades: ['11'],
         participantType: 'student',
         providerManaged: false,
@@ -415,11 +448,26 @@ describe('teacherSectionsRedux', () => {
         createdAt: createdAt,
         studentCount: 1,
         hidden: false,
-        isAssigned: undefined,
         restrictSection: false,
         postMilestoneDisabled: false,
         codeReviewExpiresAt: null,
         isAssignedCSA: undefined,
+        sectionInstructors: [
+          {
+            id: 2,
+            status: 'accepted',
+            instructor_name: 'teacher',
+            instructor_email: 'teacher@code.org',
+          },
+          {
+            id: 3,
+            status: 'invited',
+            instructor_name: 'coteacher',
+            instructor_email: 'coteacher@code.org',
+          },
+        ],
+        syncEnabled: undefined,
+        aiTutorEnabled: undefined,
       });
     });
   });
@@ -577,6 +625,7 @@ describe('teacherSectionsRedux', () => {
       hidden: false,
       restrict_section: false,
       post_milestone_disabled: false,
+      ai_tutor_enabled: false,
     };
 
     function successResponse(customProps = {}) {
@@ -702,6 +751,7 @@ describe('teacherSectionsRedux', () => {
           login_type: 'picture',
           grades: ['3'],
           participantType: 'student',
+          section_instructors: [],
         })
       );
 
@@ -716,6 +766,7 @@ describe('teacherSectionsRedux', () => {
           name: 'Aquarius PM Block 2',
           courseVersionName: undefined,
           loginType: 'picture',
+          loginTypeName: undefined,
           grades: ['3'],
           participantType: 'student',
           providerManaged: false,
@@ -731,11 +782,13 @@ describe('teacherSectionsRedux', () => {
           courseId: undefined,
           createdAt: createdAt,
           hidden: false,
-          isAssigned: undefined,
           restrictSection: false,
           postMilestoneDisabled: false,
           codeReviewExpiresAt: null,
           isAssignedCSA: undefined,
+          sectionInstructors: [],
+          syncEnabled: undefined,
+          aiTutorEnabled: false,
         },
       });
     });
@@ -1633,8 +1686,10 @@ describe('teacherSectionsRedux', () => {
           name: 'My Section',
           courseVersionName: 'csd-2017',
           loginType: 'picture',
+          loginTypeName: undefined,
           studentCount: 10,
           code: 'PMTKVH',
+          courseOfferingsAreLoaded: true,
           grades: ['2'],
           participantType: 'student',
           providerManaged: false,
@@ -1647,8 +1702,10 @@ describe('teacherSectionsRedux', () => {
           name: 'My Other Section',
           courseVersionName: 'coursea-2017',
           loginType: 'picture',
+          loginTypeName: undefined,
           studentCount: 1,
           code: 'DWGMFX',
+          courseOfferingsAreLoaded: true,
           grades: ['11'],
           participantType: 'student',
           providerManaged: false,

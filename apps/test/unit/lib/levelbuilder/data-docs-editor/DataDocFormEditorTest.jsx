@@ -5,7 +5,7 @@ import {isolateComponent} from 'isolate-react';
 import {getStore} from '@cdo/apps/redux';
 import {Provider} from 'react-redux';
 import sinon from 'sinon';
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import * as utils from '@cdo/apps/utils';
 
 describe('DataDocFormEditor', () => {

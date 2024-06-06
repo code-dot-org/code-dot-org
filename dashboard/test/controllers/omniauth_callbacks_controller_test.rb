@@ -5,10 +5,88 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   include UsersHelper
   STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
 
+  # This is a sample AuthHash provided by omniauth-clever plugin
+  TEST_CLEVER_STUDENT_DATA = OmniAuth::AuthHash.new(JSON.parse(<<~JSON
+    {
+      "provider": "clever",
+      "uid": "5966ed736b21538e3c000006",
+      "info": {
+        "name": "Elizabeth Smith",
+        "first_name": "Elizabeth",
+        "last_name": "Smith",
+        "user_type": "student"
+      },
+      "credentials": {
+        "token": "faketoken123455678",
+        "expires": false
+      },
+      "extra": {
+        "raw_info": {
+          "me": {
+            "type": "student",
+            "data": {
+              "id": "5966ed736b21538e3c000006",
+              "district": "59484d29ae5dee0001fd3291",
+              "type": "student",
+              "authorized_by": "district"
+            },
+            "links": [
+              {
+                "rel": "self",
+                "uri": "/me"
+              },
+              {
+                "rel": "canonical",
+                "uri": "/v2.1/students/5966ed736b21538e3c000006"
+              },
+              {
+                "rel": "district",
+                "uri": "/v2.1/districts/59484d29ae5dee0001fd3291"
+              }
+            ]
+          },
+          "canonical": {
+            "data": {
+              "created": "2017-07-13T03:48:03.512Z",
+              "district": "59484d29ae5dee0001fd3291",
+              "dob": "2000-05-21T00:00:00.000Z",
+              "enrollments": [],
+              "gender": "M",
+              "hispanic_ethnicity": "",
+              "last_modified": "2017-11-02T00:49:40.504Z",
+              "name": {
+                "first": "Elizabeth",
+                "last": "Smith",
+                "middle": ""
+              },
+              "race": "",
+              "school": "5966ed6cf9d478523c000004",
+              "schools": [
+                "5966ed6cf9d478523c000004"
+              ],
+              "sis_id": "202",
+              "id": "5966ed736b21538e3c000006"
+            },
+            "links": [
+              {
+                "rel": "self",
+                "uri": "/v2.1/students/5966ed736b21538e3c000006"
+              }
+            ]
+          }
+        }
+      }
+    }
+  JSON
+  )
+  )
+
   setup do
     @request.env["devise.mapping"] = Devise.mappings[:user]
     @request.host = CDO.dashboard_hostname
     CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
+    DCDO.stubs(:get)
+    DCDO.stubs(:get).with('sign_up_split_test', 0).returns(0)
   end
 
   test "login: authorizing with known facebook account signs in" do
@@ -530,110 +608,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal user.primary_contact_info.data_hash[:oauth_token_expiration], auth[:credentials][:expires_at]
   end
 
-  test 'maker_google_oauth2: returns an error if no token' do
-    # Go to function with no parameters
-    post :maker_google_oauth2
-
-    assert_template 'maker/login_code'
-
-    # Check that flash alert displays desired message
-    expected_error = I18n.t('maker.google_oauth.error_no_code')
-    assert_select ".container .alert-danger", expected_error
-  end
-
-  test 'maker_google_oauth2: returns an error if token is expired' do
-    #Given I have a Google-Code.org account
-    user = create :student, :google_sso_provider
-    user_auth = user.authentication_options.find_by_credential_type(AuthenticationOption::GOOGLE)
-
-    #Generate token from 6 minutes ago
-    secret_code = Encryption.encrypt_string_utf8(
-      (Time.now - 6.minutes).strftime('%Y%m%dT%H%M%S%z') + user_auth['authentication_id'] + user_auth['credential_type']
-    )
-
-    # Go to function
-    post :maker_google_oauth2, params: {secret_code: secret_code}
-
-    assert_template 'maker/login_code'
-
-    # Check that flash alert displays desired message
-    expected_error = I18n.t('maker.google_oauth.error_token_expired')
-    assert_select ".container .alert-danger", expected_error
-  end
-
-  test 'maker_google_oauth2: returns an error if provider is incorrect' do
-    #Given I have a Google-Code.org account
-    user = create :student, :google_sso_provider
-    user_auth = user.authentication_options.find_by_credential_type(AuthenticationOption::GOOGLE)
-
-    #Generate token with incorrect provider
-    secret_code = Encryption.encrypt_string_utf8(
-      Time.now.strftime('%Y%m%dT%H%M%S%z') + user_auth['authentication_id'] + "Clever"
-    )
-
-    # Go to function
-    post :maker_google_oauth2, params: {secret_code: secret_code}
-
-    assert_template 'maker/login_code'
-
-    # Check that flash alert displays desired message
-    expected_error = I18n.t('maker.google_oauth.error_wrong_provider')
-    assert_select ".container .alert-danger", expected_error
-  end
-
-  test 'maker_google_oauth2: returns an error if user if is invalid' do
-    #Given I have a Google-Code.org account
-    user = create :student, :google_sso_provider
-    user_auth = user.authentication_options.find_by_credential_type(AuthenticationOption::GOOGLE)
-
-    #Generate token with corrupted authentication id
-    secret_code = Encryption.encrypt_string_utf8(
-      Time.now.strftime('%Y%m%dT%H%M%S%z') + user_auth['authentication_id'] + "test" + user_auth['credential_type']
-    )
-
-    # Go to function
-    post :maker_google_oauth2, params: {secret_code: secret_code}
-
-    assert_template 'maker/login_code'
-
-    # Check that flash alert displays desired message
-    expected_error = I18n.t('maker.google_oauth.error_invalid_user')
-    assert_select ".container .alert-danger", expected_error
-  end
-
-  test 'maker_google_oauth2: logs migrated in user if valid token' do
-    # Given I have a Google-Code.org account
-    user = create :student, :google_sso_provider
-    user_auth = user.authentication_options.find_by_credential_type(AuthenticationOption::GOOGLE)
-
-    # Generate token
-    secret_code = Encryption.encrypt_string_utf8(
-      Time.now.strftime('%Y%m%dT%H%M%S%z') + user_auth['authentication_id'] + user_auth['credential_type']
-    )
-
-    # Go to function
-    post :maker_google_oauth2, params: {secret_code: secret_code}
-
-    # Then I am signed in
-    assert_equal user.id, signed_in_user_id
-  end
-
-  test 'maker_google_oauth2: logs non-migrated in user if valid token' do
-    # Given I have a Google-Code.org account
-    user = create :student, :google_sso_provider, :demigrated
-
-    # Generate token
-    secret_code = Encryption.encrypt_string_utf8(
-      Time.now.strftime('%Y%m%dT%H%M%S%z') + user.uid + user.provider
-    )
-
-    # Go to function
-    post :maker_google_oauth2, params: {secret_code: secret_code}
-
-    # Then I am signed in
-    assert_equal user.id, signed_in_user_id
-  end
-
   test 'google_oauth2: signs in user if user is found by credentials' do
     # Given I have a Google-Code.org account
     user = create :student, :google_sso_provider
@@ -735,6 +709,32 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal uid, partial_user.uid
   end
 
+  test 'google_oauth2: renders redirector to complete registration if user is not found by credentials' do
+    Cpa.stubs(:cpa_experience).with(any_parameters).returns(false)
+    SignUpTracking.stubs(:begin_sign_up_tracking).returns(false)
+    DCDO.stubs(:get).with(I18nStringUrlTracker::I18N_STRING_TRACKING_DCDO_KEY, false).returns(false)
+    DCDO.stubs(:get).with('student-email-post-enabled', false).returns(true)
+    # Given I do not have a Code.org account
+    uid = "nonexistent-google-oauth2"
+
+    # When I hit the google oauth callback
+    auth = generate_auth_user_hash \
+      provider: AuthenticationOption::GOOGLE,
+      uid: uid,
+      user_type: '' # Google doesn't provider user_type
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    assert_does_not_create(User) do
+      get :google_oauth2
+    end
+
+    # Then I go to the registration page to finish signing up
+    assert_template 'omniauth/redirect'
+    partial_user = User.new_from_partial_registration(session)
+    assert_equal AuthenticationOption::GOOGLE, partial_user.provider
+    assert_equal uid, partial_user.uid
+  end
+
   test 'google_oauth2: sets tokens in session/cache when redirecting to complete registration' do
     # Given I do not have a Code.org account
     uid = "nonexistent-google-oauth2"
@@ -804,7 +804,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
     assert_redirected_to 'http://test-studio.code.org/users/existing_account?email=test%40foo.xyz&provider=google_oauth2'
     user.reload
-    assert_not_equal 'google_oauth2', user.provider
+    refute_equal 'google_oauth2', user.provider
   end
 
   test 'login: microsoft_v2_auth silently takes over unmigrated student with matching email' do
@@ -865,7 +865,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       get :google_oauth2
     end
     user.reload
-    assert_not_equal 'google_oauth2', user.provider
+    refute_equal 'google_oauth2', user.provider
     assert_nil signed_in_user_id
   end
 
@@ -894,7 +894,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
     user.reload
     takeover_auth = user.authentication_options.last
-    assert_not_equal 'microsoft_v2_auth', takeover_auth.credential_type
+    refute_equal 'microsoft_v2_auth', takeover_auth.credential_type
     assert_nil signed_in_user_id
   end
 
@@ -911,7 +911,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_redirected_to 'http://test-studio.code.org/users/existing_account?email=test%40foo.xyz&provider=google_oauth2'
     user.reload
     found_google = user.authentication_options.any? {|auth_option| auth_option.credential_type == AuthenticationOption::GOOGLE}
-    assert_not found_google
+    refute found_google
   end
 
   test 'login: google_oauth2 silently takes over migrated Google Classroom student with matching email' do
@@ -948,7 +948,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     user.reload
     assert_equal 'migrated', user.provider
     found_google = user.authentication_options.any? {|auth_option| auth_option.credential_type == AuthenticationOption::GOOGLE}
-    assert_not found_google
+    refute found_google
     assert_nil signed_in_user_id
   end
 
@@ -1603,7 +1603,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     # Verify takeover completed
     user.reload
     google_oauth = user.authentication_options.find {|a| a.credential_type == AuthenticationOption::GOOGLE}
-    assert_not_nil google_oauth
+    refute_nil google_oauth
 
     # Verify that we signed the user into the taken-over account
     assert_equal user.id, signed_in_user_id
@@ -1671,19 +1671,104 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_nil signed_in_user_id
   end
 
-  private
+  test 'Google SSO: links an LTI auth option to an existing account' do
+    DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(true)
+    lti_integration = create :lti_integration
+
+    # Pre-existing Google account that we want the new LTI auth option to be linked to
+    existing_user = create :teacher, :with_google_authentication_option
+    auth = generate_auth_user_hash provider: AuthenticationOption::GOOGLE, uid: existing_user.authentication_options[1].authentication_id
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    # Teacher that is going through the account linking flow
+    partial_lti_teacher = create :teacher
+    fake_id_token = {iss: lti_integration.issuer, aud: lti_integration.client_id, sub: 'foo'}
+    auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
+    ao = AuthenticationOption.new(
+      authentication_id: auth_id,
+      credential_type: AuthenticationOption::LTI_V1,
+      email: existing_user.email,
+    )
+    partial_lti_teacher.authentication_options = [ao]
+    PartialRegistration.persist_attributes session, partial_lti_teacher
+
+    get :google_oauth2
+    # The user factory automatically creates an email auth option,
+    # so this includes 1 email, 1 google, and 1 LTI auth option
+    assert_equal 3, existing_user.reload.authentication_options.count
+    assert_includes existing_user.authentication_options, ao
+  end
+
+  test 'Facebook SSO: links an LTI auth option to an existing account' do
+    DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(true)
+    lti_integration = create :lti_integration
+
+    # Pre-existing Facebook account that we want the new LTI auth option to be linked to
+    existing_user = create :teacher, :with_facebook_authentication_option
+    auth = generate_auth_user_hash provider: AuthenticationOption::FACEBOOK, uid: existing_user.authentication_options[1].authentication_id
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    # Teacher that is going through the account linking flow
+    partial_lti_teacher = create :teacher
+    fake_id_token = {iss: lti_integration.issuer, aud: lti_integration.client_id, sub: 'foo'}
+    auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
+    ao = AuthenticationOption.new(
+      authentication_id: auth_id,
+      credential_type: AuthenticationOption::LTI_V1,
+      email: existing_user.email,
+    )
+    partial_lti_teacher.authentication_options = [ao]
+    PartialRegistration.persist_attributes session, partial_lti_teacher
+
+    get :facebook
+    # The user factory automatically creates an email auth option,
+    # so this includes 1 email, 1 Facebook, and 1 LTI auth option
+    assert_equal 3, existing_user.reload.authentication_options.count
+    assert_includes existing_user.authentication_options, ao
+  end
+
+  test 'Microsoft SSO: links an LTI auth option to an existing account' do
+    DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(true)
+    lti_integration = create :lti_integration
+
+    # Pre-existing Microsoft account that we want the new LTI auth option to be linked to
+    existing_user = create :teacher, :with_microsoft_authentication_option
+    auth = generate_auth_user_hash provider: AuthenticationOption::MICROSOFT, uid: existing_user.authentication_options[1].authentication_id
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    # Teacher that is going through the account linking flow
+    partial_lti_teacher = create :teacher
+    fake_id_token = {iss: lti_integration.issuer, aud: lti_integration.client_id, sub: 'foo'}
+    auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
+    ao = AuthenticationOption.new(
+      authentication_id: auth_id,
+      credential_type: AuthenticationOption::LTI_V1,
+      email: existing_user.email,
+    )
+    partial_lti_teacher.authentication_options = [ao]
+    PartialRegistration.persist_attributes session, partial_lti_teacher
+
+    get :microsoft_v2_auth
+    # The user factory automatically creates an email auth option,
+    # so this includes 1 email, 1 Microsoft, and 1 LTI auth option
+    assert_equal 3, existing_user.reload.authentication_options.count
+    assert_includes existing_user.authentication_options, ao
+  end
 
   # Try to link a credential to the provided user
   # @return [OmniAuth::AuthHash] the auth hash, useful for validating
   #   linked credentials with assert_auth_option
-  def link_credential(user, type:, id:)
+  private def link_credential(user, type:, id:)
     auth = generate_auth_user_hash(provider: type, uid: id)
     setup_should_connect_provider(user, auth)
     get :google_oauth2
     auth
   end
 
-  def generate_auth_user_hash(args)
+  private def generate_auth_user_hash(args)
     OmniAuth::AuthHash.new(
       uid: args[:uid] || '1111',
       provider: args[:provider] || 'facebook',
@@ -1702,13 +1787,13 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     )
   end
 
-  def setup_should_connect_provider(user, auth_hash)
+  private def setup_should_connect_provider(user, auth_hash)
     @request.env['omniauth.auth'] = auth_hash
     @request.env['omniauth.params'] = {'action' => 'connect'}
     sign_in user
   end
 
-  def assert_auth_option(user, oauth_hash)
+  private def assert_auth_option(user, oauth_hash)
     auth_option = user.authentication_options.last
 
     assert_authentication_option auth_option,
@@ -1722,80 +1807,4 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
         oauth_refresh_token: oauth_hash.credentials.refresh_token
       }
   end
-
-  # This is a sample AuthHash provided by omniauth-clever plugin
-  TEST_CLEVER_STUDENT_DATA = OmniAuth::AuthHash.new(JSON.parse('
-{
-  "provider": "clever",
-  "uid": "5966ed736b21538e3c000006",
-  "info": {
-    "name": "Elizabeth Smith",
-    "first_name": "Elizabeth",
-    "last_name": "Smith",
-    "user_type": "student"
-  },
-  "credentials": {
-    "token": "faketoken123455678",
-    "expires": false
-  },
-  "extra": {
-    "raw_info": {
-      "me": {
-        "type": "student",
-        "data": {
-          "id": "5966ed736b21538e3c000006",
-          "district": "59484d29ae5dee0001fd3291",
-          "type": "student",
-          "authorized_by": "district"
-        },
-        "links": [
-          {
-            "rel": "self",
-            "uri": "/me"
-          },
-          {
-            "rel": "canonical",
-            "uri": "/v2.1/students/5966ed736b21538e3c000006"
-          },
-          {
-            "rel": "district",
-            "uri": "/v2.1/districts/59484d29ae5dee0001fd3291"
-          }
-        ]
-      },
-      "canonical": {
-        "data": {
-          "created": "2017-07-13T03:48:03.512Z",
-          "district": "59484d29ae5dee0001fd3291",
-          "dob": "2000-05-21T00:00:00.000Z",
-          "enrollments": [],
-          "gender": "M",
-          "hispanic_ethnicity": "",
-          "last_modified": "2017-11-02T00:49:40.504Z",
-          "name": {
-            "first": "Elizabeth",
-            "last": "Smith",
-            "middle": ""
-          },
-          "race": "",
-          "school": "5966ed6cf9d478523c000004",
-          "schools": [
-            "5966ed6cf9d478523c000004"
-          ],
-          "sis_id": "202",
-          "id": "5966ed736b21538e3c000006"
-        },
-        "links": [
-          {
-            "rel": "self",
-            "uri": "/v2.1/students/5966ed736b21538e3c000006"
-          }
-        ]
-      }
-    }
-  }
-}
-'
-  )
-  )
 end

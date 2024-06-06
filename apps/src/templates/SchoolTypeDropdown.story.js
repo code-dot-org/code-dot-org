@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
+
 import SchoolTypeDropdown from './SchoolTypeDropdown';
 
 export default {
-  title: 'SchoolTypeDropdown',
   component: SchoolTypeDropdown,
 };
 

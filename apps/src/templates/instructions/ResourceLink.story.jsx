@@ -1,8 +1,8 @@
-import ResourceLink from './ResourceLink';
 import React from 'react';
 
+import ResourceLink from './ResourceLink';
+
 export default {
-  title: 'ResourceLink',
   component: ResourceLink,
 };
 

@@ -5,8 +5,11 @@
   window.dashboard = window.dashboard || {};
   window.dashboard.CODE_ORG_URL = "#{CDO.code_org_url}";
 
--# data needed for dcdo.js
+-# data needed for dcdo.js and amplitude
 %script{data: {'dcdo': DCDO.frontend_config.to_json}}
+%script{data: {'amplitude-api-key': CDO.safe_amplitude_api_key}}
+%script{data: {'statsig-api-client-key': CDO.safe_statsig_api_client_key}}
+%script{data: {'managed-test-server': "#{CDO.running_web_application? && CDO.test_system?}"}}
 
 .amazon-future-engineer-eligibility-container
 - js_locale = request.locale.to_s.downcase.tr('-', '_')

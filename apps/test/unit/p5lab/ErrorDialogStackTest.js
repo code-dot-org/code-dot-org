@@ -1,7 +1,7 @@
 var errorDialogStack = require('@cdo/apps/p5lab/redux/errorDialogStack');
 import {expect} from '../../util/reconfiguredChai';
 import {UnconnectedErrorDialogStack as ErrorDialogStack} from '@cdo/apps/p5lab/ErrorDialogStack';
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 describe('ErrorDialogStack', function () {
@@ -88,7 +88,8 @@ describe('ErrorDialogStack', function () {
         expect(dialog.text()).to.not.contain(
           'It looks like we are having trouble loading your animation'
         );
-        expect(dialog.find('Button')).to.have.length(0);
+        // only shows the close dialog 'X' button
+        expect(dialog.find('Button')).to.have.length(1);
       });
     });
 

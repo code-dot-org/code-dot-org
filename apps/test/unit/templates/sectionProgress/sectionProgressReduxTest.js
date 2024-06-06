@@ -1,4 +1,5 @@
-import {assert, expect} from '../../../util/reconfiguredChai';
+import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
+import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
 import sectionProgress, {
   setCurrentView,
   addDataByUnit,
@@ -8,9 +9,11 @@ import sectionProgress, {
   getCurrentUnitData,
   startRefreshingProgress,
   finishRefreshingProgress,
+  expandMetadataForStudents,
+  collapseMetadataForStudents,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
-import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
+
+import {assert, expect} from '../../../util/reconfiguredChai';
 
 const fakeUnitData789 = {
   unitDataByUnit: {
@@ -187,6 +190,29 @@ describe('sectionProgressRedux', () => {
           },
         ],
       });
+    });
+  });
+
+  describe('expandedMetadataStudentIds', () => {
+    it('Adds student ids', () => {
+      const action = expandMetadataForStudents([1, 2]);
+      const nextState = sectionProgress(initialState, action);
+      assert.deepEqual(nextState.expandedMetadataStudentIds, [1, 2]);
+    });
+    it('No duplicates', () => {
+      const action = expandMetadataForStudents([1, 2]);
+      const intermediateState = sectionProgress(initialState, action);
+
+      const nextState = sectionProgress(intermediateState, action);
+      assert.deepEqual(nextState.expandedMetadataStudentIds, [1, 2]);
+    });
+    it('Removes ids', () => {
+      const addAction = expandMetadataForStudents([1, 2]);
+      const intermediateState = sectionProgress(initialState, addAction);
+
+      const collapseAction = collapseMetadataForStudents([1, 2]);
+      const nextState = sectionProgress(intermediateState, collapseAction);
+      assert.deepEqual(nextState.expandedMetadataStudentIds, []);
     });
   });
 });

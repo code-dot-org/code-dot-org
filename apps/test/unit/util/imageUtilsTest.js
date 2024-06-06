@@ -1,3 +1,5 @@
+import {assert} from 'chai';
+
 import {
   dataURIToBlob,
   dataURIToFramedBlob,
@@ -5,9 +7,10 @@ import {
   toImage,
   toImageData,
 } from '@cdo/apps/imageUtils';
-import {assert} from 'chai';
-import expectedPng from './expected.png';
+
 import assertVisualMatch from '../../util/assertVisualMatch';
+
+import expectedPng from './expected.png';
 
 const TEST_DATA_URI =
   'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg"><circle cx="0" cy="0" r="1000"/></svg>';

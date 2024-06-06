@@ -1,16 +1,18 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import {UnconnectedStandardsReport as StandardsReport} from '@cdo/apps/templates/sectionProgress/standards/StandardsReport';
-import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
-import * as progressLoader from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
 import sinon from 'sinon';
+
+import * as progressLoader from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
+import {UnconnectedStandardsReport as StandardsReport} from '@cdo/apps/templates/sectionProgress/standards/StandardsReport';
+
+import {expect} from '../../../util/reconfiguredChai';
+import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
 
 describe('StandardsReport', () => {
   let DEFAULT_PROPS;
 
   beforeEach(() => {
-    sinon.stub(progressLoader, 'loadScriptProgress');
+    sinon.stub(progressLoader, 'loadUnitProgress');
     DEFAULT_PROPS = {
       scriptId: 2,
       teacherName: 'Awesome Teacher',
@@ -40,7 +42,7 @@ describe('StandardsReport', () => {
 
   afterEach(() => {
     restoreOnWindow('opener');
-    progressLoader.loadScriptProgress.restore();
+    progressLoader.loadUnitProgress.restore();
   });
 
   it('report shows print buttons', () => {

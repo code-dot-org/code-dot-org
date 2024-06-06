@@ -7,9 +7,9 @@ pt-BR:
   accelerated_name: Curso acelerado
   account_sign_up_child_accept_terms: Confirmo que tenho autorização dos meus pais
     ou do tutor legal para usar os serviços do Code.org.
-  account_sign_up_email_opt_in: Podemos te enviar por e-mail atualizações de nossos
-    cursos, oportunidades locais ou outras notícias de ciências da computação? (aproximadamente
-    uma vez por mês)
+  account_sign_up_email_opt_in: Podemos enviar atualizações de nossos cursos, oportunidades
+    locais ou outras notícias sobre ciências da computação por e-mail? (cerca de uma
+    vez por mês)
   ai_activity: Atividade
   ai_aiedu_intro: 'AiEdu: Introdução à Inteligência Artificial'
   ai_aiedu_intro_description: A introdução à IA é um currículo gratuito, inovador
@@ -116,7 +116,7 @@ pt-BR:
   appinventor_shortdescription: Faça seu próprio aplicativo! (Apenas para Android)
   applab-intro_name: Introdução ao Laboratório de Aplicativo
   applab_gradelevel: A partir de 13 anos
-  applab_name: Laboratório de Aplicativo
+  applab_name: App Lab
   applab_shortdescription_congrats: O App Lab é um ambiente de programação onde você
     pode criar aplicativos simples. Projete um aplicativo, programe com blocos ou
     JavaScript para fazê-lo funcionar, e então compartilhe seu aplicativo em apenas
@@ -259,6 +259,7 @@ pt-BR:
   class_submission_out_of_school_summer_camp: Acampamento de verão
   classicmaze_name: Labirinto clássico
   code_hoc_coming: 'A Hora do Código chegou: de 8 a 14 de dezembro!'
+  code_org_logo_alt: Code.org Home
   code_sign_up: Inscreva-se para participar durante a Semana da Educação em Ciência
     da Computação
   codea_beyond_gradelevel: A partir do Ensino Médio
@@ -913,7 +914,7 @@ pt-BR:
   dashboard_navigation_view_progress: Progresso
   dashboard_navigation_view_stats: Estatísticas
   dashboard_navigation_view_text_responses: Respostas de texto
-  dashboard_overview: Visão geral
+  dashboard_overview: Visão Geral
   dashboard_percent: Porcentagem
   dashboard_pre-express: 'Curso Expresso de Pré-Leitor: '
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Clique
@@ -1197,6 +1198,7 @@ pt-BR:
   header_about_us: Quem Somos
   header_course_catalog: Catálogo do Curso
   header_courses: percursos
+  header_districts: Distritos
   header_documentation: Documentação
   header_educate_beyond: Além do Code.org
   header_educate_community: Comunidade On-Line
@@ -1212,8 +1214,10 @@ pt-BR:
   header_help_support: 'Ajuda e suporte '
   header_help_us: Ajude-nos
   header_home: Início
+  header_incubator: Incubadora
   header_learn: Aprenda
   header_legal: Termos & Privacidade
+  header_legal_cookie_notice: Aviso sobre Cookies
   header_legal_privacy: Política de Privacidade
   header_legal_tos: Termos de Serviço
   header_my_dashboard: Meu painel de Controle
@@ -1221,6 +1225,7 @@ pt-BR:
   header_project_gallery: Projetos
   header_report_abuse: Reportar abuso
   header_report_bug: Reportar um erro
+  header_schools: Escolas
   header_screen_reader_hamburger: Menu
   header_screen_reader_help: Menu de ajuda
   header_sections: Seções
@@ -1680,6 +1685,7 @@ pt-BR:
   homepage_slot_text_link_k5: Cursos para turmas do pré ao 5º ano
   homepage_slot_text_link_local: Encontre uma turma na sua região
   homepage_slot_text_link_middle: Ensino Fundamental - 7º, 8º e 9º anos
+  homepage_slot_text_link_middle_and_high: Ensino Fundamental e Médio
   homepage_slot_text_link_othercourses: Outros cursos on-line
   homepage_slot_text_link_pd: Desenvolvimento profissional
   homepage_slot_text_link_shop: Camisetas, bonés e muito mais
@@ -1715,6 +1721,7 @@ pt-BR:
   hourofcode_longdescription: Espaço reservado para um novo code.org/hoc
   hourofcode_name: Labirinto clássico
   hourofcode_platformtext: Navegadores modernos, smartphones, tablets
+  hourofcode_shortcode: programar
   hourofcode_shortdescription: Aprenda a programar com Mark Zuckerberg e Angry Birds!
   how_ai_works: Como funciona a IA
   how_ai_works_tile_description: Saiba mais sobre como a IA funciona e por que ela
@@ -2639,6 +2646,7 @@ pt-BR:
   user_header_applab: 'Laboratório de Aplicativo '
   user_header_artist: 'Artista '
   user_header_create: 'Criar '
+  user_header_create_account: Criar Conta
   user_header_dance: Festa dançante
   user_header_flappy: Flappy bird
   user_header_gamelab: Laboratório de Jogos
@@ -2762,32 +2770,15 @@ pt-BR:
     global que oferece uma introdução de uma hora à ciência da computação e que atinge
     dezenas de milhões de estudantes em mais de 180 países. Participe você também
     durante a Semana da Educação em Ciência da Computação, de 7 a 13 de dezembro.
-  volunteer_engineer_submission_intro_guide: Saiba mais sobre o nosso <a href="%{volunteer_guide}">programa
-    de voluntariado aqui</a>.
   volunteer_engineer_submission_intro_guide_markdown: Saiba mais sobre o nosso [programa
     de voluntariado aqui](%{volunteer_guide}).
-  volunteer_engineer_submission_intro_links: É professor(a) e está procurando voluntários?
-    Encontre um voluntário na sua região em nosso <a href="%{volunteer_local}">mapa
-    de voluntários</a>.
   volunteer_engineer_submission_intro_links_markdown: É professor(a) e está procurando
     voluntários? Encontre um voluntário na sua região em nosso [mapa de voluntários](%{volunteer_local}).
-  volunteer_engineer_submission_intro_recruit: 'Os professores adorariam ter alguém<span
-    style="font-family: ''Gotham 7r'', sans-serif;">apaixonado pelo ensino da ciência
-    da computação</span> que pudesse ajudá-los em suas aulas, ou alguém que pudesse<span
-    style="font-family: ''Gotham 7r'', sans-serif;">inspirar</span> seus alunos falando
-    sobre a gama de possibilidades da ciência da computação (o que pode ser feito
-    por meio de de vídeo conferência).'
   volunteer_engineer_submission_intro_recruit_markdown: Os professores adorariam ter
     alguém**apaixonado pelo ensino da ciência da computação** que pudesse ajudá-los
     em suas aulas, ou alguém que pudesse**inspirar** seus alunos falando sobre a gama
     de possibilidades da ciência da computação (o que pode ser feito por meio de de
     vídeo conferência).
-  volunteer_engineer_submission_intro_signup: Por favor, insira as seguintes informações
-    se você é um estudante de ciência da computação ou profissional de software. Você
-    deve ter pelo menos 18 anos de idade para se inscrever como voluntário. Observe
-    que todos os campos que você preencher nesta seção estarão publicamente disponíveis
-    para qualquer um olhando para o <a href="/volunteer/local">mapa de voluntário</a>.
-    Campos marcados com um <span class="form-required-field">*</span> são obrigatórios.
   volunteer_engineer_submission_intro_signup_markdown: Insira as seguintes informações
     se você for um estudante de ciência da computação ou profissional de software.
     Você deve ter pelo menos 18 anos de idade para se inscrever como voluntário. Observe

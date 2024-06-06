@@ -1,7 +1,8 @@
-import {expect} from '../../../util/reconfiguredChai';
 import {levelProgressStyle} from '@cdo/apps/templates/progress/progressStyles';
-import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import color from '@cdo/apps/util/color';
+import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('progressStyles', () => {
   describe('levelProgressStyle', () => {

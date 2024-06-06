@@ -119,6 +119,16 @@ Given(/^I am an organizer with started and completed courses$/) do
   GHERKIN
 end
 
+Given(/^I am a program manager with started and completed courses$/) do
+  random_name = "TestProgramManager" + SecureRandom.hex[0..9]
+  steps <<~GHERKIN
+    And I am a program manager named "#{random_name}" for regional partner "Test Partner"
+    And I create a workshop for course "CS Fundamentals" organized by "#{random_name}" with 5 people and start it
+    And I create a workshop for course "CS Fundamentals" organized by "#{random_name}" with 5 people and end it
+    And I create a workshop for course "CS Fundamentals" organized by "#{random_name}" with 5 people
+  GHERKIN
+end
+
 Given(/^I am a teacher who has just followed a workshop certificate link$/) do
   test_teacher_name = "TestTeacher - Certificate Test"
   require_rails_env
@@ -228,7 +238,6 @@ And(/^I complete Section 7 of the teacher PD application$/) do
     Then I wait until element "h3" contains text "Section 7: Program Requirements and Submission"
     Then I wait until element "input[name='committed']" is visible
     And I press "input[name='committed']:first" using jQuery
-    And I press the first "input#understandFee" element
     And I click selector "input[name='payFee']" if I see it
     And I press the first "input#agree" element
   GHERKIN
@@ -469,7 +478,7 @@ def create_fake_daily_survey_results(workshop)
   end
 end
 
-def create_enrollment(workshop, name=nil)
+def create_enrollment(workshop, name = nil)
   first_name = name.nil? ? "First - #{SecureRandom.hex}" : name
   last_name = name.nil? ? "Last - #{SecureRandom.hex}" : "Last"
   user = Retryable.retryable(on: [ActiveRecord::RecordInvalid], tries: 5) do

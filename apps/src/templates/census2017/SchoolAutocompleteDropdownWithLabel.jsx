@@ -1,7 +1,13 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import SchoolAutocompleteDropdown from '../SchoolAutocompleteDropdown';
+
+import fontConstants from '@cdo/apps/fontConstants';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import i18n from '@cdo/locale';
+
+import SchoolAutocompleteDropdown from '../SchoolAutocompleteDropdown';
+
 import {styles} from './censusFormStyles';
 
 const singleLineLayoutStyles = {
@@ -10,7 +16,7 @@ const singleLineLayoutStyles = {
   verticalAlign: 'middle',
   minHeight: 42,
   fontSize: 13,
-  fontFamily: '"Gotham 4r", sans-serif',
+  ...fontConstants['main-font-regular'],
   color: '#333',
   padding: 0,
 };
@@ -52,6 +58,11 @@ export default class SchoolAutocompleteDropdownWithLabel extends Component {
   handleSchoolNotFoundCheckbox(event) {
     var checkbox = event.target;
     if (checkbox.checked) {
+      analyticsReporter.sendEvent(
+        EVENTS.ADD_MANUALLY_CLICKED,
+        {},
+        PLATFORMS.BOTH
+      );
       this.props.setField(
         'nces',
         this.schoolDropdown.constructSchoolNotFoundOption()

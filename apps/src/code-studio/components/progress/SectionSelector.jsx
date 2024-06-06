@@ -50,6 +50,7 @@ function SectionSelector({
     <select
       className="uitest-sectionselect"
       name="sections"
+      aria-label={i18n.selectSection()}
       style={{
         ...styles.select,
         ...style,

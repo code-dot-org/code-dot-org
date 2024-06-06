@@ -2,7 +2,7 @@
 
 require_relative '../deployment'
 
-def fanout_memory_check(threshold, short=false)
+def fanout_memory_check(threshold, short = false)
   require 'sshkit'
   SSHKit::Backend::Netssh.configure {|ssh| ssh.ssh_options = {paranoid: false}}
   # SSHKit::Coordinator.new(CDO.app_servers.values).each(in: :groups, wait: 1, limit: 10) do |host|

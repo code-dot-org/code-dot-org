@@ -8,7 +8,7 @@ import {scriptLevelShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import LevelTokenDetails from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelTokenDetails';
 import {toggleExpand} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import _ from 'lodash';
 
 /**
@@ -276,7 +276,7 @@ const styles = {
     display: 'table-cell',
     color: 'white',
     background: color.teal,
-    border: '1px solid #00adbc',
+    border: '1px solid #0093a4',
     boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.6)',
     padding: '7px 13px',
     cursor: 'pointer',

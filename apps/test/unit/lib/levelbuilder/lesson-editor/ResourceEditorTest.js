@@ -1,5 +1,5 @@
 import React from 'react';
-import {mount, shallow} from 'enzyme';
+import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import sinon from 'sinon';
 import {expect} from '../../../../util/reconfiguredChai';
 import {UnconnectedResourcesEditor as ResourcesEditor} from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesEditor';
@@ -37,7 +37,7 @@ describe('ResourcesEditor', () => {
       .first();
     removeResourceButton.simulate('mouseDown');
     const removeDialog = wrapper.find('Dialog');
-    const deleteButton = removeDialog.find('button').at(1);
+    const deleteButton = removeDialog.find('button').at(2);
     deleteButton.simulate('click');
     expect(removeResource).to.have.been.calledOnce;
   });

@@ -37,7 +37,7 @@ module Cdo
     def required(*keys, fetch: false)
       keys = keys.map(&:to_s)
       @required += keys
-      keys.map(&method(:get)) if fetch
+      keys.map {|key| get(key)} if fetch
     end
 
     # Ensure all required secrets are fully loaded.
@@ -62,13 +62,11 @@ module Cdo
     # @return [Concurrent::Promises::Future<String>] Resolved value
     def get(key)
       key = key.to_s
-      @values[key] ||= begin
-        client_promise.then do |client|
-          parse_json(get_secret_value(client, key))
-        rescue => exception
-          exception.message << " Key: #{key}"
-          raise
-        end
+      @values[key] ||= client_promise.then do |client|
+        parse_json(get_secret_value(client, key))
+      rescue => exception
+        exception.message << " Key: #{key}"
+        raise
       end
     end
 

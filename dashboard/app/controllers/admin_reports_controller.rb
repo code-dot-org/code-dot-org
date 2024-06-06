@@ -28,11 +28,11 @@ class AdminReportsController < ApplicationController
 
           # Regardless of the level type, query the DB for level answers.
           @responses[level_id] = LevelSource.
-                                 where(level_id: level_id).
-                                 joins(:activities).
-                                 joins("INNER JOIN users ON activities.user_id = users.id").
-                                 limit(@response_limit).
-                                 pluck(:level_id, :email, :data)
+            where(level_id: level_id).
+            joins(:activities).
+            joins("INNER JOIN users ON activities.user_id = users.id").
+            limit(@response_limit).
+            pluck(:level_id, :email, :data)
 
           # Determine whether the level is a multi question, replacing the
           # numerical answer with its corresponding text if so.
@@ -93,11 +93,11 @@ class AdminReportsController < ApplicationController
     output_data.each_key do |key|
       output_data[key]['Avg Success Rate'] = output_data[key].delete('AvgAttempt')
       output_data[key]['Avg attempts per completion'] = output_data[key].delete('AvgSuccess')
-      output_data[key]['Avg Unique Success Rate'] = output_data[key]['UniqueSuccess'].to_f / output_data[key]['UniqueAttempt'].to_f
+      output_data[key]['Avg Unique Success Rate'] = output_data[key]['UniqueSuccess'].to_f / output_data[key]['UniqueAttempt']
       output_data[key]['Perceived Dropout'] = output_data[key]['UniqueAttempt'].to_f - output_data[key]['UniqueSuccess'].to_f
     end
 
-    page_data = Hash[GAClient.query_ga(@start_date, @end_date, 'ga:pagePath', 'ga:avgTimeOnPage', 'ga:pagePath=~^/s/|^/flappy/|^/hoc/').rows]
+    page_data = GAClient.query_ga(@start_date, @end_date, 'ga:pagePath', 'ga:avgTimeOnPage', 'ga:pagePath=~^/s/|^/flappy/|^/hoc/').rows.to_h
 
     data_array = output_data.map do |key, value|
       {'Puzzle' => key}.merge(value).merge('timeOnSite' => page_data[key]&.to_i)

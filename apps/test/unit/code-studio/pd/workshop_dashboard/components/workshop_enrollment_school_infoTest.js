@@ -2,7 +2,7 @@ import {WorkshopEnrollmentSchoolInfo} from '@cdo/apps/code-studio/pd/workshop_da
 import Permission from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
 import React from 'react';
 import {expect} from 'chai';
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 describe('Workshop Enrollment School Info', () => {

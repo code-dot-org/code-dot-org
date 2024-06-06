@@ -72,6 +72,7 @@ ur-PK:
   class_submission_out_of_school_other: اسکول کے باہر، دوسرے
   class_submission_out_of_school_summer_camp: سرمائی کیمپ
   classicmaze_name: کلاسک بھولبلییا
+  code_org_logo_alt: Code.org ہوم
   codebytes_skinny_banner_english_only: صرف انگریزی
   codecademy_beyond_gradelevel: ہائی اسکول
   codecademy_gradelevel: ہائی اسکول
@@ -462,6 +463,7 @@ ur-PK:
   header_educate_tools: ٹولز اور ویڈیوز
   header_help_support: 'مدد اور معاونت '
   header_help_us: ہماری مدد کریں
+  header_incubator: انکیوبیٹر
   header_learn: سیکھیں
   header_legal_privacy: رازداری کی پالیسی
   header_legal_tos: سروس کی شرائط
@@ -469,6 +471,7 @@ ur-PK:
   header_professional_learning: پیشہ ورانہ تعلیم
   header_project_gallery: پروجیکٹس
   header_report_bug: ایک مسئلہ کی اطلاع دیں
+  header_schools: اسکول
   header_sections: سیکشنز
   header_teach: سکھائیں
   header_teacher_community: ٹیچر کمیونٹی

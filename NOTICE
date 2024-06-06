@@ -1,51 +1,56 @@
 Code.org tutorial platform
-Copyright 2016 Code.org
+Copyright 2024 Code.org
 
 This product includes software developed at Code.org (http://code.org), in
 collaboration with engineers from Google, Microsoft, Facebook, Twitter.
 
-The Code.org proprietary graphics, artwork, sounds, lectures, videos, logos,
-characters, and screenshots are all the copyrighted property of Code.org and
-may not be used or distributed or accessed in any manner other than directly
-via Code.org's own web site, mobile applications, or social media channels,
-as-is without  modification or embedding in another format.
+The Code.org proprietary or licensed graphics, artwork, sounds, lectures,
+videos, logos, characters, fonts, etc., are all the copyrighted property of
+Code.org or the licensor identified herein and may not be used or distributed
+or accessed in any manner other than directly via Code.org's own website,
+mobile applications, or social media channels, as-is without modification or
+embedding in another format. Any use or distribution of the Third-Party
+Licensed Materials requires the consent/license of the licensor identified
+below.
+
+Third-Party Licensed Materials
 
 The branded graphics, artwork, sounds, lectures, videos, logos, characters,
 screenshots, and trademarked names of Minecraft are the sole property of
 Microsoft (https://www.microsoft.com). Any distribution of the software in
-this repository outside of Code.org's own web site may not include any use
+this repository outside of Code.org's own website may not include any use
 of this proprietary IP without a separate agreement with Microsoft.
 
 The branded graphics, artwork, sounds, lectures, videos, logos, characters,
 screenshots, and trademarked names of Star Wars are the sole property of
 Disney (http://www.disney.com) and Lucasfilm (http://www.lucasfilm.com). Any
 distribution of the software in this repository outside of Code.org's own
-web site may not include any use of this proprietary IP without a separate
+website may not include any use of this proprietary IP without a separate
 agreement with Disney and Lucasfilm.
 
 The branded graphics, artwork, sounds, lectures, videos, logos, characters,
 screenshots, and trademarked names of Frozen are the sole property of Disney
 (http://www.disney.com). Any distribution of the software in this repository
-outside of Code.org's own web site may not include any use of this
+outside of Code.org's own website may not include any use of this
 proprietary IP without a separate agreement with Disney.
 
 The branded graphics, artwork, sounds, lectures, videos, logos, characters,
 screenshots, and trademarked names of Ice Age are the sole property of 20th
 Century Fox (http://www.foxmovies.com). Any distribution of the software in
-this repository outside of Code.org's own web site may not include any use of
+this repository outside of Code.org's own website may not include any use of
 this proprietary IP without a separate agreement with 20th Century Fox.
 
 The branded graphics, artwork, sounds, lectures, videos, logos, characters,
 screenshots, and trademarked names of Angry Birds are the sole property of
 Rovio Entertainment Ltd (http://www.rovio.com). Any distribution of the
-software in this repository outside of Code.org's own web site may not
+software in this repository outside of Code.org's own website may not
 include any use of this proprietary IP without a separate agreement with
 Rovio Entertainment Ltd.
 
 The branded graphics, artwork, sounds, lectures, videos, logos, characters,
 screenshots, and trademarked names of Plants vs. Zombies are the sole
 property of Popcap Games, Inc (http://www.popcap.com). Any distribution of
-the software in this repository outside of Code.org's own web site may not
+the software in this repository outside of Code.org's own website may not
 include any use of this proprietary IP without a separate agreement with
 Popcap Games, Inc.
 
@@ -53,14 +58,17 @@ The branded graphics, artwork, sounds, lectures, videos, logos, characters,
 screenshots, and trademarked names of The Amazing World of Gumball are the
 sole property of Cartoon Network (http://www.cartoonnetwork.com). Any
 distribution of the software in this repository outside of Code.org's own
-web site may not include any use of this proprietary IP without a separate
+website may not include any use of this proprietary IP without a separate
 agreement with Cartoon Network.
 
-Code.org uses keywords for its icon library from Font Awesome, which are
-licensed under CC BY 3.0 (https://fortawesome.github.io/Font-Awesome/license/).
+The branded graphics, artwork, sounds, lectures, videos, logos, characters,
+screenshots, and trademarked names of The Bad Guys are the
+sole property of DreamWorks Animation LLC (https://www.dreamworks.com). Any
+distribution of the software in this repository outside of Code.org's own
+website may not include any use of this proprietary IP without a separate
+agreement with DreamWorks Animation LLC.
 
-Code.org uses clip art from openclipart.org, which are provided under
-the following license (https://openclipart.org/share).
-
-Code.org uses p5.play, which is licensed under the GNU Lesser General Public
-License 2.1 (https://github.com/molleindustria/p5.play/blob/master/license.txt).
+Code.org uses a set of Font Awesome proprietary icons, related computer
+software, and other material published at github.com/FortAwesome/Font-Awesome
+and fontawesome.com licensed under the Font Awesome Pro License
+(https://fontawesome.com/license).

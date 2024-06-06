@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-06-21 18:09:37 UTC",
+    "serialized_at": "2023-08-22 20:44:48 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1683,13 +1683,7 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition:** Ask students to plug their boards in and head to [the Maker Toolkit setup page](//studio.code.org/maker/setup) to confirm that the software has been correctly configured.",
-        "name": "Connecting The Board",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Troubleshooting Board Issues:** Ensure that all students are able to set up their boards correctly.  If they have trouble, encourage them to work with peers to solve the problem with the help of the setup page.  Students should be able to read through the page and follow the instructions on their own.  If not, walk them through the process, but encourage them to troubleshoot their own boards in subsequent lessons."
-          }
-        ]
+        "name": "Connecting The Board"
       },
       "seeding_key": {
         "activity_section.key": "9e10f5c9-d5a9-43ff-a5bd-1fda4e69a1d0",
@@ -1728,6 +1722,7 @@
       "key": "1cb5a771-d027-4763-9c9c-bdd2c78bd207",
       "position": 4,
       "properties": {
+        "description": "<div style=\"float: right; margin-left: 10px;\">\n\n![expandable](https://images.code.org/c74f7a652cc4392241f224e58d1309d8-maker-setup.gif)\n\n</div>\n\n**Troubleshooting Devices:** If student devices aren't able to connect, they can click the Help and Tips tab and then access the Maker Setup page (click the image to see more). This will let them re-reconnect their board to App Lab.\n\nIf students continue to have issues, refer to the Troubleshooting section of our [Maker Support Article](https://support.code.org/hc/en-us/articles/115003407851-Maker-Toolkit-Support-for-Circuit-Playground-and-micro-bit)",
         "progression_name": "Predict",
         "tips": [
           {
@@ -2097,6 +2092,7 @@
       "key": "9e7ed703-7569-4ebc-a980-239670dc533c",
       "position": 2,
       "properties": {
+        "description": "<div style=\"float: right; margin-left: 10px;\">\n\n![expandable](https://images.code.org/c74f7a652cc4392241f224e58d1309d8-maker-setup.gif)\n\n</div>\n\n**Troubleshooting Devices:** If student devices aren't able to connect, they can click the Help and Tips tab and then access the Maker Setup page (click the image to see more). This will let them re-reconnect their board to App Lab.\n\nIf students continue to have issues, refer to the Troubleshooting section of our [Maker Support Article](https://support.code.org/hc/en-us/articles/115003407851-Maker-Toolkit-Support-for-Circuit-Playground-and-micro-bit)",
         "progression_name": "Predict"
       },
       "seeding_key": {
@@ -2227,6 +2223,7 @@
       "key": "f479e28f-0442-44da-b4cc-e59c6687369f",
       "position": 2,
       "properties": {
+        "description": "<div style=\"float: right; margin-left: 10px;\">\n\n![expandable](https://images.code.org/c74f7a652cc4392241f224e58d1309d8-maker-setup.gif)\n\n</div>\n\n**Troubleshooting Devices:** If student devices aren't able to connect, they can click the Help and Tips tab and then access the Maker Setup page (click the image to see more). This will let them re-reconnect their board to App Lab.\n\nIf students continue to have issues, refer to the Troubleshooting section of our [Maker Support Article](https://support.code.org/hc/en-us/articles/115003407851-Maker-Toolkit-Support-for-Circuit-Playground-and-micro-bit)",
         "progression_name": "Predict"
       },
       "seeding_key": {
@@ -2590,7 +2587,7 @@
       "key": "5a42e74c-5fb4-48cf-ad99-0c694527f320",
       "position": 9,
       "properties": {
-        "description": "**Circulate:** Encourage students to use the steps in the Problem-Solving Process for Programming when they get stuck or are unsure of what to do next.",
+        "description": "<div style=\"float: right; margin-left: 10px;\">\n\n![expandable](https://images.code.org/c74f7a652cc4392241f224e58d1309d8-maker-setup.gif)\n\n</div>\n\n**Troubleshooting Devices:** If student devices aren't able to connect, they can click the Help and Tips tab and then access the Maker Setup page (click the image to see more). This will let them re-reconnect their board to App Lab.\n\nIf students continue to have issues, refer to the Troubleshooting section of our [Maker Support Article](https://support.code.org/hc/en-us/articles/115003407851-Maker-Toolkit-Support-for-Circuit-Playground-and-micro-bit)\n\n**Circulate:** Encourage students to use the steps in the Problem-Solving Process for Programming when they get stuck or are unsure of what to do next.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2929,6 +2926,7 @@
       "key": "b2bbe233-7b54-451b-bd66-8d6f01297884",
       "position": 2,
       "properties": {
+        "description": "<div style=\"float: right; margin-left: 10px;\">\n\n![expandable](https://images.code.org/c74f7a652cc4392241f224e58d1309d8-maker-setup.gif)\n\n</div>\n\n**Troubleshooting Devices:** If student devices aren't able to connect, they can click the Help and Tips tab and then access the Maker Setup page (click the image to see more). This will let them re-reconnect their board to App Lab.\n\nIf students continue to have issues, refer to the Troubleshooting section of our [Maker Support Article](https://support.code.org/hc/en-us/articles/115003407851-Maker-Toolkit-Support-for-Circuit-Playground-and-micro-bit)",
         "progression_name": "Predict"
       },
       "seeding_key": {
@@ -3197,7 +3195,7 @@
       "key": "a3052d52-d558-44a9-9d4c-9cd40ac347de",
       "position": 4,
       "properties": {
-        "description": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
+        "description": "<div style=\"float: right; margin-left: 10px;\">\n\n![expandable](https://images.code.org/c74f7a652cc4392241f224e58d1309d8-maker-setup.gif)\n\n</div>\n\n**Troubleshooting Devices:** If student devices aren't able to connect, they can click the Help and Tips tab and then access the Maker Setup page (click the image to see more). This will let them re-reconnect their board to App Lab.\n\nIf students continue to have issues, refer to the Troubleshooting section of our [Maker Support Article](https://support.code.org/hc/en-us/articles/115003407851-Maker-Toolkit-Support-for-Circuit-Playground-and-micro-bit)\n\n**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
       },
       "seeding_key": {
         "activity_section.key": "a3052d52-d558-44a9-9d4c-9cd40ac347de",
@@ -3403,6 +3401,7 @@
       "key": "002c877a-e6ef-46c4-bbdb-1dcd909cfeae",
       "position": 2,
       "properties": {
+        "description": "<div style=\"float: right; margin-left: 10px;\">\n\n![expandable](https://images.code.org/c74f7a652cc4392241f224e58d1309d8-maker-setup.gif)\n\n</div>\n\n**Troubleshooting Devices:** If student devices aren't able to connect, they can click the Help and Tips tab and then access the Maker Setup page (click the image to see more). This will let them re-reconnect their board to App Lab.\n\nIf students continue to have issues, refer to the Troubleshooting section of our [Maker Support Article](https://support.code.org/hc/en-us/articles/115003407851-Maker-Toolkit-Support-for-Circuit-Playground-and-micro-bit)",
         "progression_name": "Predict"
       },
       "seeding_key": {
@@ -3573,6 +3572,7 @@
       "key": "deb1bf53-2c48-4d57-8914-a8726c349399",
       "position": 2,
       "properties": {
+        "description": "<div style=\"float: right; margin-left: 10px;\">\n\n![expandable](https://images.code.org/c74f7a652cc4392241f224e58d1309d8-maker-setup.gif)\n\n</div>\n\n**Troubleshooting Devices:** If student devices aren't able to connect, they can click the Help and Tips tab and then access the Maker Setup page (click the image to see more). This will let them re-reconnect their board to App Lab.\n\nIf students continue to have issues, refer to the Troubleshooting section of our [Maker Support Article](https://support.code.org/hc/en-us/articles/115003407851-Maker-Toolkit-Support-for-Circuit-Playground-and-micro-bit)",
         "progression_name": "Predict"
       },
       "seeding_key": {
@@ -3703,6 +3703,7 @@
       "key": "9858e8fc-ae2e-4381-b4eb-f2e9bffb50b6",
       "position": 2,
       "properties": {
+        "description": "<div style=\"float: right; margin-left: 10px;\">\n\n![expandable](https://images.code.org/c74f7a652cc4392241f224e58d1309d8-maker-setup.gif)\n\n</div>\n\n**Troubleshooting Devices:** If student devices aren't able to connect, they can click the Help and Tips tab and then access the Maker Setup page (click the image to see more). This will let them re-reconnect their board to App Lab.\n\nIf students continue to have issues, refer to the Troubleshooting section of our [Maker Support Article](https://support.code.org/hc/en-us/articles/115003407851-Maker-Toolkit-Support-for-Circuit-Playground-and-micro-bit)",
         "progression_name": "Predict"
       },
       "seeding_key": {
@@ -3953,13 +3954,7 @@
       "key": "897fbffd-83b4-49fa-8cc7-27766552fb6d",
       "position": 5,
       "properties": {
-        "progression_name": "Interactive Pet",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
-          }
-        ]
+        "progression_name": "Interactive Pet"
       },
       "seeding_key": {
         "activity_section.key": "897fbffd-83b4-49fa-8cc7-27766552fb6d",
@@ -3967,8 +3962,19 @@
       }
     },
     {
-      "key": "f9977a31-481f-4e1c-8b42-2a586c0faf03",
+      "key": "27a4a613-8b01-4834-aef0-6c1768335c07",
       "position": 6,
+      "properties": {
+        "description": "<div style=\"float: right; margin-left: 10px;\">\n\n![expandable](https://images.code.org/c74f7a652cc4392241f224e58d1309d8-maker-setup.gif)\n\n</div>\n\n**Troubleshooting Devices:** If student devices aren't able to connect, they can click the Help and Tips tab and then access the Maker Setup page (click the image to see more). This will let them re-reconnect their board to App Lab.\n\nIf students continue to have issues, refer to the Troubleshooting section of our [Maker Support Article](https://support.code.org/hc/en-us/articles/115003407851-Maker-Toolkit-Support-for-Circuit-Playground-and-micro-bit)\n\n**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
+      },
+      "seeding_key": {
+        "activity_section.key": "27a4a613-8b01-4834-aef0-6c1768335c07",
+        "lesson_activity.key": "8573c8bd-629f-4728-ba00-c124b256d79f"
+      }
+    },
+    {
+      "key": "f9977a31-481f-4e1c-8b42-2a586c0faf03",
+      "position": 7,
       "properties": {
         "description": "Allow students to walk around the room and interact with each other's devices. Celebrate all of the different ideas that students were able to implement with the same basic code.",
         "name": "(Optional) Gallery Walk"
@@ -4067,6 +4073,7 @@
       "key": "643e7d9e-ecda-41ea-b926-60364afc2888",
       "position": 2,
       "properties": {
+        "description": "<div style=\"float: right; margin-left: 10px;\">\n\n![expandable](https://images.code.org/c74f7a652cc4392241f224e58d1309d8-maker-setup.gif)\n\n</div>\n\n**Troubleshooting Devices:** If student devices aren't able to connect, they can click the Help and Tips tab and then access the Maker Setup page (click the image to see more). This will let them re-reconnect their board to App Lab.\n\nIf students continue to have issues, refer to the Troubleshooting section of our [Maker Support Article](https://support.code.org/hc/en-us/articles/115003407851-Maker-Toolkit-Support-for-Circuit-Playground-and-micro-bit)",
         "progression_name": "Setup"
       },
       "seeding_key": {
@@ -4217,6 +4224,7 @@
       "key": "b5c510e9-1e87-4570-a084-79d68f7a26d8",
       "position": 3,
       "properties": {
+        "description": "<div style=\"float: right; margin-left: 10px;\">\n\n![expandable](https://images.code.org/c74f7a652cc4392241f224e58d1309d8-maker-setup.gif)\n\n</div>\n\n**Troubleshooting Devices:** If student devices aren't able to connect, they can click the Help and Tips tab and then access the Maker Setup page (click the image to see more). This will let them re-reconnect their board to App Lab.\n\nIf students continue to have issues, refer to the Troubleshooting section of our [Maker Support Article](https://support.code.org/hc/en-us/articles/115003407851-Maker-Toolkit-Support-for-Circuit-Playground-and-micro-bit)",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -12282,6 +12290,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

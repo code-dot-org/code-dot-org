@@ -1,0 +1,81 @@
+@import "color.scss";
+
+.miniMusicPlayer {
+  background-color: $neutral_dark;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  user-select: none;
+
+  .entry {
+    background-color: $neutral_dark80;
+    color: $neutral_light;
+    cursor: pointer;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 4px;
+    padding-inline-end: 15px;
+    gap: 20px;
+
+    .control {
+      display: contents;
+      box-sizing: border-box;
+      text-align: center;
+
+      .icon {
+        transition: opacity 0.1s ease-in;
+        font-size: 20px;
+      }
+    }
+
+    .pack {
+      width: 42px;
+      height: 42px;
+
+      &Image {
+        height: 42px;
+        width: 42px;
+        max-width: initial;
+        border-radius: 4px;
+        background-color: $black;
+      }
+    }
+
+    .body {
+      flex-grow: 1;
+      overflow: hidden;
+
+      .name {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 18px;
+        line-height: 1.5em;
+      }
+
+      .details {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 12px;
+      }
+    }
+
+    .other {
+      display: contents;
+
+      &Link {
+        display: contents;
+
+        .icon {
+          transition: opacity 0.1s ease-in;
+          color: $neutral_light;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

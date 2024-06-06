@@ -1,0 +1,29 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2023-08-01T17:54:19.000Z",
+  "level_num": "custom",
+  "user_id": 884,
+  "properties": {
+    "encrypted": "false",
+    "tts_short_instructions_override": "How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
+    "tts_long_instructions_override": "Congratulations! You just wrote some code. You are officially a programmer!\r\n\r\nDid you notice that the last puzzle was a little more difficult? It was a challenge puzzle. Challenge puzzles are meant to stretch the boundaries of what students will do. We make it clear that they should be attempted, but do not require that they be completed for students to succeed for the lesson.\r\n\r\nNow take a moment to reflect. How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
+    "instructions_important": "false",
+    "long_instructions": "# Reflection \r\n\r\n##The Design Process - Lesson 14: Design Mode in App Lab\r\n\r\nStudents will experience designing in App Lab for the first time in Lesson 14.  It's important to note that learning how to program using App Lab is not the objective of The Design Process. Instead the focus is on students understanding there are other roles in software development - product management, marketing, design, and testing, as well as students using what they learn as a tool for social impact.\r\n\r\nChoose from **one** of the topics below to respond to:\r\n\r\n**Prompts:** \r\n\r\n* **Referencing Resources:** \r\n\t* What resources are available for students to reference during this lesson? \r\n\t* How will these resources be used to support a culture of active learning within your classroom?\r\n    \r\n* **Role of the Teacher:** \r\n\t* How will you model the skill of referencing resources for your students? \r\n\t* How does this support a culture of active learning and inclusion within your classroom?  \r\n    \r\n* **Role of the Student**:\r\n\t* How does referencing resources support students in developing active learning skills within this unit?\r\n    \r\n* **Unit Planning**:\r\n\r\n\t* How will you support students in developing active learning skills within this unit? \r\n\t* How will you establish an inclusive learning environment during this unit?\r\n\r\n\r\n\r\n\r\n<span style=\"font-size:12px;\">If more space is needed, click and drag the bottom-right corner to adjust the size of the text box.</span>",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 24386,
+    "name_suffix": "_2023",
+    "allow_multiple_attempts": "true"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2023-08-01T17:54:19.644+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD Module 4 U4L12 Reflection_2022\\\"\"],\"cloned_from\":\"VPL - CSD Module 4 U4L12 Reflection_2022\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

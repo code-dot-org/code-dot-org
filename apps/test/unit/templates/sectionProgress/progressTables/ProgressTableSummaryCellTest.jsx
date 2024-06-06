@@ -1,12 +1,14 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import _ from 'lodash';
 import React from 'react';
-import {expect} from '../../../../util/reconfiguredChai';
-import {mount} from 'enzyme';
+import sinon from 'sinon';
+
 import ProgressTableSummaryCell, {
   unitTestExports,
 } from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableSummaryCell';
 import color from '@cdo/apps/util/color';
-import sinon from 'sinon';
-import _ from 'lodash';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   studentId: 1,

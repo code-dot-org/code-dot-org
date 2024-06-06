@@ -231,6 +231,7 @@ class PiskelEditor extends React.Component {
         ref={iframe => (this.iframe = iframe)}
         style={this.props.style}
         src={PISKEL_PATH}
+        title="Piskel"
       />
     );
   }

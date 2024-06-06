@@ -1,11 +1,17 @@
+import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount, shallow} from 'enzyme';
-import {expect} from '../../util/deprecatedChai';
-import {UnconnectedCodeWorkspace as CodeWorkspace} from '../../../src/templates/CodeWorkspace';
-import {singleton as studioAppSingleton} from '@cdo/apps/StudioApp';
 import sinon from 'sinon';
-import ShowCodeToggle from '@cdo/apps/templates/ShowCodeToggle';
+
 import {workspaceAlertTypes} from '@cdo/apps/code-studio/projectRedux';
+import {
+  singleton as studioAppSingleton,
+  stubStudioApp,
+  restoreStudioApp,
+} from '@cdo/apps/StudioApp';
+import ShowCodeToggle from '@cdo/apps/templates/ShowCodeToggle';
+
+import {UnconnectedCodeWorkspace as CodeWorkspace} from '../../../src/templates/CodeWorkspace';
+import {expect} from '../../util/deprecatedChai';
 
 describe('CodeWorkspace', () => {
   const MINIMUM_PROPS = {
@@ -30,6 +36,7 @@ describe('CodeWorkspace', () => {
   let studioApp, workspace;
 
   beforeEach(() => {
+    stubStudioApp();
     studioApp = studioAppSingleton();
     sinon.stub(studioApp, 'showGeneratedCode');
     workspace = mount(<CodeWorkspace {...MINIMUM_PROPS} />);
@@ -37,6 +44,7 @@ describe('CodeWorkspace', () => {
 
   afterEach(() => {
     studioApp.showGeneratedCode.restore();
+    restoreStudioApp();
   });
 
   it('onToggleShowCode displays blocks for levels with enableShowBlockCount=true', () => {

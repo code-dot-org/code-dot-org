@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "announcements": [
+        {
+          "key": "56795418-a6d4-4b7a-948d-d7b35e1f42da",
+          "notice": "New Self-Paced Professional Learning Module!",
+          "details": "Are you an elementary school teacher who wants to teach computer science, but you’re not sure where to start? Discover Code.org's newly released professional learning module on Computer Science Basics. Click the button to start this two-hour, self-paced course to equip yourself with the skills to teach foundational computer science concepts to your students.",
+          "link": "https://studio.code.org/courses/self-paced-pl-k5-2024",
+          "type": "information",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Computer Science Basics for K-5 Teachers"
+        }
+      ],
       "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
@@ -49,7 +61,7 @@
     },
     "new_name": null,
     "family_name": "hello-world-emoji",
-    "serialized_at": "2023-07-03 05:02:18 UTC",
+    "serialized_at": "2024-02-05 21:47:18 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -211,6 +223,22 @@
       },
       "seeding_key": {
         "activity_section.key": "f95b4eed-639e-483e-bef7-ead9abf4808e",
+        "lesson_activity.key": "6a36e450-dd26-4e9f-b236-a9c77b5041a1"
+      }
+    },
+    {
+      "key": "913cf29b-f688-4c8b-9834-96c9b75274f5",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Professional Learning Opportunity**\n\nWant to keep the fun going but not sure how? Consider engaging in our self-paced professional learning module, [Preparing to Teach Interactive Animations and Games](https://studio.code.org/courses/self-paced-pl-csd-unit3-2023)! This unit teaches students to build exciting creations using sprites. This module will give you all the necessary tools, skills, and knowledge."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "913cf29b-f688-4c8b-9834-96c9b75274f5",
         "lesson_activity.key": "6a36e450-dd26-4e9f-b236-a9c77b5041a1"
       }
     }
@@ -700,6 +728,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

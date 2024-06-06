@@ -1,10 +1,13 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import i18n from '@cdo/locale';
-import Button from './Button';
-import BaseDialog from './BaseDialog';
-import DialogFooter from './teacherDashboard/DialogFooter';
+
 import Spinner from '../code-studio/pd/components/spinner';
+
+import BaseDialog from './BaseDialog';
+import Button from './Button';
+import DialogFooter from './teacherDashboard/DialogFooter';
 
 /*
 Note that the version of reCAPTCHA supported by this dialog (v2 - I am not a robot)
@@ -122,7 +125,7 @@ export default class ReCaptchaDialog extends React.Component {
             <Button
               text={submitText}
               onClick={this.handleSubmit}
-              color={Button.ButtonColor.orange}
+              color={Button.ButtonColor.brandSecondaryDefault}
               disabled={!this.state.submitButtonEnabled}
             />
           </DialogFooter>

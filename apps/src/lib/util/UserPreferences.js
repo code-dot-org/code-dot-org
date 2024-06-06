@@ -40,6 +40,36 @@ export default class UserPreferences extends Record({userId: 'me'}) {
   }
 
   /**
+   * Save the student list sorting preference
+   * @param {boolean} sortByFamilyName: True if sorting by family name, false otherwise.
+   */
+  setSortByFamilyName(sortByFamilyName) {
+    return $.post(`/api/v1/users/sort_by_family_name`, {
+      sort_by_family_name: sortByFamilyName,
+    });
+  }
+
+  /**
+   * Save the preference to show v1 or v2 progress table.
+   * @param {boolean} showProgressTableV2: True if showing progress table v2, false otherwise.
+   */
+  setShowProgressTableV2(showProgressTableV2) {
+    return $.post(`/api/v1/users/show_progress_table_v2`, {
+      show_progress_table_v2: showProgressTableV2,
+    });
+  }
+
+  /**
+   * Save the preference to opt-out of AI Rubrics (AI TA).
+   * @param {boolean} aiRubricsDisabled: True if disabling AI rubric features, false otherwise.
+   */
+  setAiRubricsDisabled(aiRubricsDisabled) {
+    return $.post(`/api/v1/users/ai_rubrics_disabled`, {
+      ai_rubrics_disabled: aiRubricsDisabled,
+    });
+  }
+
+  /**
    * Save the background music user preference
    * @param {boolean} muteMusic: True if background music muted
    */

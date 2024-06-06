@@ -8,6 +8,8 @@ import {
   FIELD_EFFECTS_NAME,
   FIELD_TRIGGER_START_NAME,
   TriggerStart,
+  DEFAULT_EFFECT_VALUE,
+  FIELD_EFFECTS_VALUE,
 } from './constants';
 import musicI18n from '../locale';
 
@@ -41,15 +43,17 @@ const toolboxBlocks = {
     type: BlockTypes.SET_CURRENT_LOCATION_NEXT_MEASURE,
   },
   [BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2]: {
-    id: 'play-sound-block',
+    id: BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2,
     kind: 'block',
     type: BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2,
   },
   [BlockTypes.PLAY_PATTERN_AT_CURRENT_LOCATION_SIMPLE2]: {
+    id: BlockTypes.PLAY_PATTERN_AT_CURRENT_LOCATION_SIMPLE2,
     kind: 'block',
     type: BlockTypes.PLAY_PATTERN_AT_CURRENT_LOCATION_SIMPLE2,
   },
   [BlockTypes.PLAY_CHORD_AT_CURRENT_LOCATION_SIMPLE2]: {
+    id: BlockTypes.PLAY_CHORD_AT_CURRENT_LOCATION_SIMPLE2,
     kind: 'block',
     type: BlockTypes.PLAY_CHORD_AT_CURRENT_LOCATION_SIMPLE2,
   },
@@ -65,6 +69,7 @@ const toolboxBlocks = {
     type: BlockTypes.SET_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
     fields: {
       [FIELD_EFFECTS_NAME]: 'volume',
+      [FIELD_EFFECTS_VALUE]: DEFAULT_EFFECT_VALUE,
     },
   },
   [BlockTypes.SET_FILTER_EFFECT_AT_CURRENT_LOCATION_SIMPLE2]: {
@@ -72,6 +77,7 @@ const toolboxBlocks = {
     type: BlockTypes.SET_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
     fields: {
       [FIELD_EFFECTS_NAME]: 'filter',
+      [FIELD_EFFECTS_VALUE]: DEFAULT_EFFECT_VALUE,
     },
   },
   [BlockTypes.SET_DELAY_EFFECT_AT_CURRENT_LOCATION_SIMPLE2]: {
@@ -79,9 +85,11 @@ const toolboxBlocks = {
     type: BlockTypes.SET_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
     fields: {
       [FIELD_EFFECTS_NAME]: 'delay',
+      [FIELD_EFFECTS_VALUE]: DEFAULT_EFFECT_VALUE,
     },
   },
   [BlockTypes.PLAY_SOUNDS_TOGETHER]: {
+    id: BlockTypes.PLAY_SOUNDS_TOGETHER,
     kind: 'block',
     type: BlockTypes.PLAY_SOUNDS_TOGETHER,
   },
@@ -94,6 +102,7 @@ const toolboxBlocks = {
     type: BlockTypes.PLAY_SOUNDS_RANDOM,
   },
   [BlockTypes.REPEAT_SIMPLE2]: {
+    id: BlockTypes.REPEAT_SIMPLE2,
     kind: 'block',
     type: BlockTypes.REPEAT_SIMPLE2,
     fields: {
@@ -424,7 +433,9 @@ export function getToolbox(toolbox) {
           ],
           Logic: ['controls_if', 'logic_compare'],
         },
-        {includeVariables: true}
+        {
+          includeVariables: true,
+        }
       );
     case BlockMode.SIMPLE2:
     default:

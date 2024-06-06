@@ -2,7 +2,6 @@ import React from 'react';
 import {Heading1, Heading2, Heading3} from './Headings';
 
 export default {
-  title: 'Headings',
   // The component and subcomponents properties are somewhat invalid since all headings hold the
   // same weight here, but Storybook requires us to set the component property.
   component: Heading1,

@@ -1,6 +1,6 @@
 import React from 'react';
 import {assert, expect} from '../../../../util/reconfiguredChai';
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {UnconnectedUnitOverviewHeader as UnitOverviewHeader} from '@cdo/apps/code-studio/components/progress/UnitOverviewHeader';
 import {

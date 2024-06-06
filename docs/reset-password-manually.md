@@ -9,7 +9,7 @@ You might want to do this for a couple reasons:
 
 
 ````
-ubuntu@levelbuilder-staging:~$ dashboard-console
+ubuntu@levelbuilder:~$ dashboard-console
 Loading levelbuilder environment (Rails 4.0.3)
 irb(main):001:0> User.find_by_email_or_hashed_email('thi.phomprida@code.org').send_reset_password_instructions('thi.phomprida@code.org')
 ````

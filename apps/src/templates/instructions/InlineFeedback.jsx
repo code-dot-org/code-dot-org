@@ -1,14 +1,17 @@
-import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
+import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
+
+import SafeMarkdown from '../SafeMarkdown';
+
 import ChatBubble from './ChatBubble';
 import {convertXmlToBlockly} from './utils';
-import SafeMarkdown from '../SafeMarkdown';
 
 class InlineFeedback extends Component {
   static propTypes = {
     borderColor: PropTypes.string,
+    backgroundColor: PropTypes.string,
     extra: PropTypes.string,
     message: PropTypes.string.isRequired,
     styles: PropTypes.object,
@@ -30,7 +33,7 @@ class InlineFeedback extends Component {
   }
 
   render() {
-    const {borderColor, extra, message, styles} = this.props;
+    const {borderColor, backgroundColor, extra, message, styles} = this.props;
 
     // We add a classname to this element exclusively so that UI tests can
     // easily detect its presence. This class should NOT be used for
@@ -38,6 +41,7 @@ class InlineFeedback extends Component {
     return (
       <ChatBubble
         borderColor={borderColor}
+        backgroundColor={backgroundColor}
         ttsMessage={message}
         isMinecraft={this.props.isMinecraft}
         skinId={this.props.skinId}

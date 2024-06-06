@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "CSF",
       "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
@@ -14,12 +15,13 @@
         "artist"
       ],
       "project_widget_visible": true,
+      "tts": true,
       "version_year": "2023"
     },
     "new_name": null,
     "family_name": "nevada-standards-aligned-fourth-grade",
-    "serialized_at": "2023-07-24 17:15:15 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2024-02-16 22:31:16 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -4132,14 +4134,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "coursee_helloworld_introtosprites_2023"
+          "Nevada_video_introSpriteLab_2023"
         ],
         "progression": "Video: Hello World: Welcome to Sprite Lab"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "coursee_helloworld_introtosprites_2023"
+          "Nevada_video_introSpriteLab_2023"
         ],
         "lesson.key": "Hello World",
         "lesson_group.key": "lessonGroup-2",
@@ -4147,7 +4149,7 @@
         "activity_section.key": "5fca5b45-0ca0-4ba0-ad3b-22a881de777d"
       },
       "level_keys": [
-        "coursee_helloworld_introtosprites_2023"
+        "Nevada_video_introSpriteLab_2023"
       ]
     },
     {
@@ -6833,9 +6835,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "coursee_helloworld_introtosprites_2023",
+        "level.key": "Nevada_video_introSpriteLab_2023",
         "script_level.level_keys": [
-          "coursee_helloworld_introtosprites_2023"
+          "Nevada_video_introSpriteLab_2023"
         ],
         "lesson.key": "Hello World",
         "lesson_group.key": "lessonGroup-2",
@@ -8331,6 +8333,18 @@
       }
     },
     {
+      "name": "Nevada CS Standards",
+      "url": "https://docs.google.com/spreadsheets/d/1zUGymPWwlVdVjti_lhsUrgwLDFDzy33VY9JVwi4AikE/edit?usp=sharing",
+      "key": "nevada_cs_standards",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "nevada_cs_standards"
+      }
+    },
+    {
       "name": "Open-ended Programming Levels",
       "url": "https://docs.google.com/document/d/1Pr3XEM5J4oogmwFCGyvolp5XQzVaUFkGCkSMs9d55dQ/view",
       "key": "open-ended_programming_levels",
@@ -8775,6 +8789,12 @@
     {
       "seeding_key": {
         "resource.key": "lesson_type_guide",
+        "script.name": "nevada-standards-aligned-fourth-grade-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "nevada_cs_standards",
         "script.name": "nevada-standards-aligned-fourth-grade-2023"
       }
     },
@@ -9810,5 +9830,14 @@
         "opportunity_standard.shortcode": "4.MD.5.b"
       }
     }
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
   ]
 }

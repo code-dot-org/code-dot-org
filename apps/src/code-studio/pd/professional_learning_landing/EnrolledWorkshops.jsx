@@ -27,6 +27,7 @@ class EnrolledWorkshops extends React.Component {
 class EnrolledWorkshopsTable extends React.Component {
   static propTypes = {
     workshops: PropTypes.arrayOf(workshopShape),
+    forMyPlPage: PropTypes.bool,
   };
 
   state = {
@@ -96,40 +97,53 @@ class EnrolledWorkshopsTable extends React.Component {
   };
 
   renderWorkshopActionButtons(workshop) {
-    return (
-      <div>
-        {workshop.state === 'Not Started' &&
-          workshop.pre_workshop_survey_url &&
-          this.renderPreWorkshopSurveyButton(workshop)}
-        {workshop.state === 'Ended' && (
-          <Button
-            onClick={() => this.openCertificate(workshop)}
-            style={styles.button}
-            disabled={!workshop.attended}
-          >
-            Print certificate
-          </Button>
-        )}
+    if (this.props.forMyPlPage) {
+      return (
         <Button
           onClick={() =>
-            utils.windowOpen(
-              `/pd/workshop_enrollment/${workshop.enrollment_code}`
-            )
+            utils.windowOpen(`/pd/workshop_dashboard/workshops/${workshop.id}`)
           }
           style={styles.button}
         >
-          Workshop details
+          Workshop Details
         </Button>
-        {workshop.state === 'Not Started' && (
+      );
+    } else {
+      return (
+        <div>
+          {workshop.state === 'Not Started' &&
+            workshop.pre_workshop_survey_url &&
+            this.renderPreWorkshopSurveyButton(workshop)}
+          {workshop.state === 'Ended' && (
+            <Button
+              onClick={() => this.openCertificate(workshop)}
+              style={styles.button}
+              disabled={!workshop.attended}
+            >
+              Print certificate
+            </Button>
+          )}
           <Button
-            onClick={() => this.showCancelModal(workshop.enrollment_code)}
+            onClick={() =>
+              utils.windowOpen(
+                `/pd/workshop_enrollment/${workshop.enrollment_code}`
+              )
+            }
             style={styles.button}
           >
-            Cancel enrollment
+            Workshop details
           </Button>
-        )}
-      </div>
-    );
+          {workshop.state === 'Not Started' && (
+            <Button
+              onClick={() => this.showCancelModal(workshop.enrollment_code)}
+              style={styles.button}
+            >
+              Cancel enrollment
+            </Button>
+          )}
+        </div>
+      );
+    }
   }
 
   renderWorkshopsTable() {
@@ -145,6 +159,7 @@ class EnrolledWorkshopsTable extends React.Component {
             <th>Date</th>
             <th>Time</th>
             <th>Location</th>
+            {this.props.forMyPlPage && <th>Status</th>}
             <th style={{width: '20%'}} />
           </tr>
         </thead>
@@ -184,6 +199,7 @@ class EnrolledWorkshopsTable extends React.Component {
             <p>{workshop.location_address}</p>
           </div>
         </td>
+        {this.props.forMyPlPage && <td>{workshop.status}</td>}
         <td>{this.renderWorkshopActionButtons(workshop)}</td>
       </tr>
     );
@@ -209,8 +225,12 @@ class EnrolledWorkshopsTable extends React.Component {
             </Button>
           </Modal.Footer>
         </Modal>
-        <h2>My Workshops</h2>
-        {this.renderWorkshopsTable()}
+        {this.props.workshops && (
+          <section>
+            <h2>My Workshops</h2>
+            {this.renderWorkshopsTable()}
+          </section>
+        )}
       </div>
     );
   }

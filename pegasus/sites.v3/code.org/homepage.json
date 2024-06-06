@@ -1,3 +1,129 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e8fc21ff153c9aea1b57ba3413574901c155b5b6bf93597b49ec855a269afebc
-size 3580
+{
+  "pages": {
+    "homepage": [
+      "hoc2023-soon-hoc",
+      "hoc2023-actual-hoc",
+      "pl-launch-superhero",
+      "music-lab-launch-2024"
+    ]
+  },
+
+  "banners": {
+    "hoc2023-soon-hoc": {
+      "hoc_modes": ["soon-hoc"],
+      "class": "hoc-banner homepage",
+      "desktopImage": "/images/hoc2023-codeorg-hero-banner.png",
+      "mobileImage": "/images/hoc2023-codeorg-hero-banner-mobile.png",
+      "leftImage": "/images/hoc2023-codeorg-hero-banner-left.svg",
+      "rightImage": "/images/hoc2023-codeorg-hero-banner-right.svg",
+      "actions": [
+        {
+          "type": "text",
+          "text": "homepage_hero_hoc_is_coming"
+        },
+        {
+          "type": "heading",
+          "text": "curriculum_name_dance_party_ai_edition"
+        },
+        {
+          "type": "heading-two",
+          "text": "codeorg_homepage_hoc2023_body"
+        },
+        {
+          "type": "cta_button_solid_yellow",
+          "text": "hoc2022_cta_primary",
+          "url": "/dance"
+        },
+        {
+          "type": "cta_button_solid_white",
+          "text": "hoc2022_cta_secondary",
+          "url": "https://hourofcode.com/learn"
+        }
+      ]
+    },
+    "hoc2023-actual-hoc": {
+      "hoc_modes": ["actual-hoc"],
+      "class": "hoc-banner homepage",
+      "desktopImage": "/images/hoc2023-codeorg-hero-banner.png",
+      "mobileImage": "/images/hoc2023-codeorg-hero-banner-mobile.png",
+      "leftImage": "/images/hoc2023-codeorg-hero-banner-left.svg",
+      "rightImage": "/images/hoc2023-codeorg-hero-banner-right.svg",
+      "actions": [
+        {
+          "type": "text",
+          "text": "homepage_hero_hoc_is_here"
+        },
+        {
+          "type": "heading",
+          "text": "curriculum_name_dance_party_ai_edition"
+        },
+        {
+          "type": "heading-two",
+          "text": "codeorg_homepage_hoc2023_body"
+        },
+        {
+          "type": "cta_button_solid_yellow",
+          "text": "hoc2022_cta_primary",
+          "url": "/dance"
+        },
+        {
+          "type": "cta_button_solid_white",
+          "text": "hoc2022_cta_secondary",
+          "url": "https://hourofcode.com/learn"
+        }
+      ]
+    },
+    "pl-launch-superhero": {
+      "dcdo": "pl-launch-hero-banner",
+      "languages": ["en"],
+      "class": "pl-banner-superhero homepage",
+      "desktopImage": "/images/pl-superhero-banner-yellow-bg.svg",
+      "actions": [
+        {
+          "type": "heading",
+          "text": "pl_superhero_title"
+        },
+        {
+          "type": "heading-two",
+          "text": "pl_superhero_desc"
+        },
+        {
+          "type": "image",
+          "url": "/images/pl-superhero-girl.png"
+        },
+        {
+          "type": "image-tablet",
+          "url": "/images/pl-superhero-girl-tablet.png"
+        },
+        {
+          "type": "cta_button_solid_yellow",
+          "text": "front_join_us_learn_more",
+          "url": "/educate/professional-learning"
+        }
+      ]
+    },
+    "music-lab-launch-2024": {
+      "dcdo": "music-lab-launch-2024",
+      "class": "music-lab-launch homepage",
+      "desktopImage": "/images/music-lab/music-lab-homepage-banner-bg.png",
+      "mobileImage": "/images/music-lab/music-lab-homepage-banner-bg.png",
+      "leftImage": "/images/music-lab/music-lab-homepage-banner-left.png",
+      "rightImage": "/images/music-lab/music-lab-homepage-banner-right.png",
+      "actions": [
+        {
+          "type": "music-lab-launch-2024",
+          "text_overline": "music_lab.introducing_music_lab_strong",
+          "text_h1": "music_lab.banner.heading",
+          "text_desc": "music_lab.banner.desc",
+          "button_label_primary": "music_lab.button.try_music_lab",
+          "button_url_primary": "https://studio.code.org/s/music-intro-2024/reset",
+          "button_label_secondary": "music_lab.button.learn_more",
+          "button_url_secondary": "/music",
+          "text_desc_02": "music_lab.in_partnership_with",
+          "logo_list_01": "/images/avatars/amazon_future_engineer_light.png",
+          "logo_list_01_alt": "music_lab.amazon_future_engineer"
+        }
+      ]
+    }
+  }
+}

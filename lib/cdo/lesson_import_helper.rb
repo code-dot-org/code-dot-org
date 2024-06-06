@@ -302,7 +302,7 @@ module LessonImportHelper
     lesson_activity
   end
 
-  def self.create_activity_sections_by_progression(levels, lesson_activity_id, position_offset=1)
+  def self.create_activity_sections_by_progression(levels, lesson_activity_id, position_offset = 1)
     activity_sections = []
     current_progression_levels = []
     current_progression = nil
@@ -329,7 +329,7 @@ module LessonImportHelper
     activity_sections
   end
 
-  def self.create_activity_section_with_levels(script_levels, lesson_activity_id, progression_name="")
+  def self.create_activity_section_with_levels(script_levels, lesson_activity_id, progression_name = "")
     return nil if script_levels.empty?
     activity_section = ActivitySection.new
     activity_section.progression_name = progression_name

@@ -1,9 +1,10 @@
-import React, {useRef, useEffect, ChangeEvent} from 'react';
 import classnames from 'classnames';
+import React, {useRef, useEffect, ChangeEvent} from 'react';
 
-import Typography from '@cdo/apps/componentLibrary/typography';
-import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 import {componentSizeToBodyTextSizeMap} from '@cdo/apps/componentLibrary/common/constants';
+import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
+import Typography from '@cdo/apps/componentLibrary/typography';
+
 import moduleStyles from './checkbox.module.scss';
 
 export interface CheckboxProps {
@@ -32,7 +33,8 @@ export interface CheckboxProps {
  * ### Production-ready Checklist:
  * * (✔) implementation of component approved by design team;
  * * (✔) has storybook, covered with stories and documentation;
- * * (✘) has tests: test every prop, every state and every interaction that's js related;
+ * * (✔) has tests: test every prop, every state and every interaction that's js related;
+ * * (see apps/test/unit/componentLibrary/CheckboxTest.jsx)
  * * (?) passes accessibility checks;
  *
  * ###  Status: ```Ready for dev```

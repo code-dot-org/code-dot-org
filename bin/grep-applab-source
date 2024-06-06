@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 require_relative '../deployment'
 require_relative '../lib/cdo/aws/s3'
+require 'cdo/sequel'
 require_relative '../shared/middleware/helpers/storage_id'
 require 'cdo/db'
 
@@ -50,7 +51,7 @@ puts "Fetching a list of applab apps from Dashboard DB. This step may take appro
 puts "to run over ~3M rows in projects in production..."
 
 # An array of pairs of storage_owner_ids and channel_ids, each representing an applab app.
-DASHBOARD_REPORTING_DB_READONLY = sequel_connect CDO.dashboard_reporting_db_reader, CDO.dashboard_reporting_db_reader
+DASHBOARD_REPORTING_DB_READONLY = Cdo::Sequel.database_connection_pool CDO.dashboard_reporting_db_reader, CDO.dashboard_reporting_db_reader
 applab_channels = DASHBOARD_REPORTING_DB_READONLY[:projects].grep(:value, '%applab%').map do |row|
   [row[:storage_id], row[:id]]
 end

@@ -1,3 +1,0 @@
-{{ featured_project, title: "Afternoon", author: "M", age: "13+", image: "/images/csc/poetry/cscpoetry_afternoon.gif", url: "https://studio.code.org/projects" }}
-
-{{ clearfix}}

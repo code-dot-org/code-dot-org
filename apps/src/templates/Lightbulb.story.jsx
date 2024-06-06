@@ -1,8 +1,8 @@
 import React from 'react';
+
 import Lightbulb from './Lightbulb';
 
 export default {
-  title: 'Lightbulb',
   component: Lightbulb,
 };
 

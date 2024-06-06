@@ -1,13 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import {DragDropContext} from 'react-beautiful-dnd';
 import _ from 'lodash';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {DragDropContext} from 'react-beautiful-dnd';
+
+import AssignedStudentsPanel from './AssignedStudentsPanel';
 import {
   DROPPABLE_ID_UNASSIGNED,
   generateNewGroup,
 } from './CodeReviewGroupsUtils';
 import UnassignedStudentsPanel from './UnassignedStudentsPanel';
-import AssignedStudentsPanel from './AssignedStudentsPanel';
 
 // Provides "drag and drop context" that allows us to drag
 // code review group members between groups as teachers arrange their students into code review groups.

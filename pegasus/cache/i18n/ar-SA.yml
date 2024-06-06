@@ -233,6 +233,7 @@ ar-SA:
   class_submission_out_of_school_summer_camp: مخيم صيفي
   classicmaze_name: المتاهة الكلاسيكية
   code_hoc_coming: إرسال رسالة إلكترونية
+  code_org_logo_alt: الصفحة الرئيسية Code.org
   code_sign_up: قم بالتسجيل للمشاركة خلال أسبوع تعليم علم الحاسوب
   codea_beyond_gradelevel: الثانوية +
   codea_beyond_longdescription: يتيح الآيباد Codea إنشاء ألعاب ومحاكاة و &mdash;؛
@@ -892,7 +893,7 @@ ar-SA:
   dashboard_sections_table_code: قسم البرمجة
   dashboard_sections_table_course: الدرس
   dashboard_sections_table_grade: الصف الدراسي
-  dashboard_sections_table_pairing_allowed: البرمجة الزوجية
+  dashboard_sections_table_pairing_allowed: البرمجة مع صديق
   dashboard_sections_table_secret: نوع تسجيل الدخول
   dashboard_sections_table_section: القسم
   dashboard_sections_table_stage_extras: إضافات المرحلة
@@ -1082,6 +1083,7 @@ ar-SA:
   header_about_us: نبذة عنا
   header_course_catalog: فهرس الدورة التدريبية
   header_courses: الدروس
+  header_districts: مقاطعة
   header_documentation: الوثائق
   header_educate_beyond: ما بعد Code.org
   header_educate_community: المجتمع الإلكتروني
@@ -1097,8 +1099,10 @@ ar-SA:
   header_help_support: 'المساعدة والدعم '
   header_help_us: ساعدنا
   header_home: الصفحة الرئيسية
+  header_incubator: حاضنة
   header_learn: تعلّم
   header_legal: الخصوصية والقانونية
+  header_legal_cookie_notice: إشعار ملفات تعريف الارتباط
   header_legal_privacy: سياسة الخصوصية
   header_legal_tos: شروط الخدمة
   header_my_dashboard: لوحة التحكم
@@ -1106,6 +1110,7 @@ ar-SA:
   header_project_gallery: المشاريع
   header_report_abuse: الإبلاغ عن سوء استخدام
   header_report_bug: أبلغ عن وجود خلل
+  header_schools: مدارس
   header_screen_reader_hamburger: قائمة
   header_screen_reader_help: قائمة المساعدة
   header_sections: الأقسام
@@ -1495,6 +1500,7 @@ ar-SA:
   homepage_slot_text_link_k5: دورات للروضة حتى الصف الخامس
   homepage_slot_text_link_local: البحث عن فصل محلّي
   homepage_slot_text_link_middle: المدرسة الإعدادية
+  homepage_slot_text_link_middle_and_high: المدرسة المتوسطة والثانوية
   homepage_slot_text_link_othercourses: دورات أخرى على الإنترنت
   homepage_slot_text_link_pd: التطوير المهني
   homepage_slot_text_link_shop: القمصان, القبعات, و المزيد
@@ -2331,6 +2337,8 @@ ar-SA:
   user_header_applab: 'مختبر التطبيقات '
   user_header_artist: 'فنان '
   user_header_create: 'إشاء '
+  user_header_create_account: إنشاء حساب
+  user_header_create_account_low_cap: إنشاء حساب
   user_header_dance: حفلة الرقص
   user_header_flappy: فلابي
   user_header_gamelab: مختبر التطبيقات
@@ -2338,6 +2346,7 @@ ar-SA:
   user_header_logout: تسجيل الخروج
   user_header_minecraft: Minecraft
   user_header_my_projects: مشاريعي
+  user_header_new_project: مشروع جديد
   user_header_playlab: مختبر اللعب
   user_header_settings: حسابي
   user_header_signin: تسجيل الدخول
@@ -2442,28 +2451,14 @@ ar-SA:
   volunteer_engineer_submission_intro_background: فعالية "ساعة من البرمجة" هي حركة
     عالمية لتقديم ساعة من علم الحاسب، ستصل إلى عشرات الملاين من الطلبة في أكثر من
     180 دولة. من فضلك انضم إلينا خلال "أسبوع تعليم علم الحاسوب"، 07-13 ديسمبر.
-  volunteer_engineer_submission_intro_guide: تعلم المزيد حول <a href="%{volunteer_guide}">برنامجنا
-    التطوعي هنا</a>.
   volunteer_engineer_submission_intro_guide_markdown: تعلم المزيد عن [برنامجنا التطوعي
     هنا] (%{volunteer_guide}).
-  volunteer_engineer_submission_intro_links: هل أنت مدرس تبحث عن متطوعين؟ يمكنك العثور
-    على متطوعين في [volunteer map](%{volunteer_local}) التابع لنا.
   volunteer_engineer_submission_intro_links_markdown: هل أنت مدرس تبحث عن متطوعين؟
     يمكنك العثور على متطوعين في [volunteer map](%{volunteer_local}) التابع لنا.
-  volunteer_engineer_submission_intro_recruit: 'سيحب المعلمين الحصول على أشخاص <span
-    style="font-family: ''Gotham 7r'', sans-serif;"> شغوفين بتعليم علوم الحاسوب </span>
-    و يستطيعون المساعدة في الفصول او اشخاص يستطيعون <span style="font-family: ''Gotham
-    7r'', sans-serif;"> الهام </span> طلابهم عن طريق التحدث معهم عن الإمكانيات المهولة
-    المتاحة عن طريق علم الحاسوب ( و يكمن عمل هذا عن طريق محادثة مُصورة عبر الانترنت).
-    اذا كنت لا تريد ان تتطوع <a href="%{url}"> تعلم المزيد </a> عن تنظيم "Hour of
-    code" الخاص بك.'
   volunteer_engineer_submission_intro_recruit_markdown: سيسعد المدرسون بوجود شخص **ذو
     عاطفة قوية تجاه تعليم علم الحاسوب** الذي يمكنه أن يقدم المساعدة في غرفة الصف أو
     بوجود شخص يمكنه **إلهام** طلابهم بالحديث عن سعة احتمالات علم الحاسوب (الذي يمكن
     القيام به عن طريق درشة الفيديو).
-  volunteer_engineer_submission_intro_signup: الرجاء إدخال المعلومات التالية إذا كنت
-    طالب علم الحاسوب أو مختص في البرمجة. ادخال الحقول بـ  <span class="form-required-field">
-    *</span> مطلوبة.
   volunteer_engineer_submission_intro_signup_markdown: الرجاء إدخال المعلومات التالية
     إذا كنت طالب علوم الحاسوب أو محترف البرامج. يجب أن تكون 18 سنة من العمر على الأقل
     للتسجيل كمتطوّع. لاحظ أن جميع الحقول التي تقوم بتعبئتها في هذا القسم ستكون متوفرة

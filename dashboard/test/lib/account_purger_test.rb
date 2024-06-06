@@ -29,8 +29,8 @@ class AccountPurgerTest < ActiveSupport::TestCase
   end
 
   test 'raises ArgumentError unless log is a stream-like' do
-    AccountPurger.new log: STDOUT
-    AccountPurger.new log: STDERR
+    AccountPurger.new log: $stdout
+    AccountPurger.new log: $stderr
     AccountPurger.new log: StringIO.new
     assert_raises ArgumentError do
       AccountPurger.new log: ''

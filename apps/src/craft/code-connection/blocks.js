@@ -1,5 +1,6 @@
-var i18n = require('../locale');
 import items from './items';
+
+var i18n = require('../locale');
 
 // Helper functions for block string
 function getName(blockString) {

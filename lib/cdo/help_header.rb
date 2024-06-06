@@ -59,10 +59,9 @@ class HelpHeader
     end
 
     if options[:level] && options[:level].game == Game.music
-      options[:request].path.starts_with?('/projectbeats')
       entries << {
-        title: I18n.t("#{loc_prefix}project_beats_documentation"),
-        url: "https://studio.code.org/docs/ide/projectbeats/",
+        title: I18n.t("#{loc_prefix}music_lab_documentation"),
+        url: "/docs/ide/music",
         id: "musiclab-docs"
       }
     end
@@ -124,7 +123,7 @@ class HelpHeader
       # these protections because we use them. For example, the report abuse page uses the referrer attribute to know
       # which page the user probably wants to report.
       entry[:rel] = "noopener noreferrer nofollow" unless URI(entry[:url]).host.
-                                                            blank?
+        blank?
     end
     entries
   end

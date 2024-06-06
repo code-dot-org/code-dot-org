@@ -1,0 +1,58 @@
+@import 'color.scss';
+
+//200px is a value got from visual comparison (screen collapses when columns width is smaller than 196.7px,
+// we use x8 factor for design system, so used the closes x8 factor here, which is 200px).
+// This value is used to set the min-width of the columns in the lab, othervise markup of the page will be broken
+// and bottom buttons will jump down causing visual regression.
+$column-min-width: 200px;
+
+.viewModeButtons {
+  margin: 2px;
+}
+
+.aichatLab {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin: 2px;
+
+  .instructionsArea {
+    width: 30%;
+    height: 100%;
+    min-width: $column-min-width;
+  }
+
+  .chatWorkspaceArea {
+    flex: 1;
+    min-width: $column-min-width;
+  }
+
+  .customizationArea {
+    height: 100%;
+    width: 30%;
+    min-width: $column-min-width;
+  }
+
+  .presentationArea {
+    width: 50%;
+    height: 90%;
+    overflow-y: auto;
+  }
+}
+
+.labCoreContainer {
+  display: flex;
+  flex: 1;
+  gap: 2px;
+  overflow: auto;
+}
+
+.aichatViewButton {
+  margin-right: 5px;
+}
+

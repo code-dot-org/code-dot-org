@@ -49,24 +49,22 @@ end
 # Then call assign_attributes to update the level and rewrite the file
 # This method catches exceptions as not all errors are immediately addressable
 def update_dsl_level(level, allow_multiple_attempts)
-  begin
-    allow_multiple_attempts_str = allow_multiple_attempts.to_s
-    path = level.file_path
-    file_contents = File.read(path)
-    text = level.class.decrypt_dsl_text_if_necessary(file_contents)
-    encrypted = file_contents =~ /^encrypted '(.*)'$/m
-    if text.include?('allow_multiple_attempts')
-      return if text.include?("allow_multiple_attempts #{allow_multiple_attempts_str}")
-      text.gsub!(/allow_multiple_attempts.*$/, "allow_multiple_attempts #{allow_multiple_attempts_str}")
-    else
-      text += "\nallow_multiple_attempts #{allow_multiple_attempts_str}"
-    end
-    level.assign_attributes({dsl_text: text, allow_multiple_attempts: allow_multiple_attempts_str, encrypted: encrypted})
-    level.save!
-    raise "allow_multiple_attempts unset for #{level.name}" if level.reload.allow_multiple_attempts.nil?
-  rescue => exception
-    puts "Error updating #{level.name} with error #{exception.inspect}"
+  allow_multiple_attempts_str = allow_multiple_attempts.to_s
+  path = level.file_path
+  file_contents = File.read(path)
+  text = level.class.decrypt_dsl_text_if_necessary(file_contents)
+  encrypted = file_contents =~ /^encrypted '(.*)'$/m
+  if text.include?('allow_multiple_attempts')
+    return if text.include?("allow_multiple_attempts #{allow_multiple_attempts_str}")
+    text.gsub!(/allow_multiple_attempts.*$/, "allow_multiple_attempts #{allow_multiple_attempts_str}")
+  else
+    text += "\nallow_multiple_attempts #{allow_multiple_attempts_str}"
   end
+  level.assign_attributes({dsl_text: text, allow_multiple_attempts: allow_multiple_attempts_str, encrypted: encrypted})
+  level.save!
+  raise "allow_multiple_attempts unset for #{level.name}" if level.reload.allow_multiple_attempts.nil?
+rescue => exception
+  puts "Error updating #{level.name} with error #{exception.inspect}"
 end
 
 def backfill_match_levels

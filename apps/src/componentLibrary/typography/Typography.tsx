@@ -1,5 +1,6 @@
-import React, {memo} from 'react';
 import classnames from 'classnames';
+import React, {memo} from 'react';
+
 import {SemanticTag, VisualAppearance} from './types';
 
 import moduleStyles from './typography.module.scss';

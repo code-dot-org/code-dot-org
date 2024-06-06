@@ -273,6 +273,7 @@ es-MX:
   class_submission_out_of_school_summer_camp: Campamento de verano
   classicmaze_name: Laberinto clásico
   code_hoc_coming: 'Llega la Hora del Código: ¡del 8 al 14 de diciembre!'
+  code_org_logo_alt: Inicio de Code.org
   code_sign_up: Regístrate para participar durante la Semana de la Educación en Ciencias
     de la Computación
   codea_beyond_gradelevel: Escuela secundaria +
@@ -1180,7 +1181,7 @@ es-MX:
   game_lab_documentation: Documentación del Laboratorio de juegos
   game_lab_tutorials: Tutoriales del Laboratorio de juegos
   gamelab_name: Laboratorio de juegos
-  gender: Sexo
+  gender: Género
   get_a_certificate_message: Te enviaremos un certificado e información sobre cómo
     hacer para que <a href='/learn/beyond'> aprenda más allá de una hora</a>
   get_a_certificate_message_after: Haz clic en el certificado para descargarlo o imprimirlo.
@@ -1241,6 +1242,7 @@ es-MX:
   header_about_us: Acerca de nosotros
   header_course_catalog: Catálogo de cursos
   header_courses: Cursos
+  header_districts: Distritos Escolares
   header_documentation: Documentación
   header_educate_beyond: Más allá de Code.org
   header_educate_community: Comunidad en línea
@@ -1256,8 +1258,10 @@ es-MX:
   header_help_support: 'Ayuda y soporte '
   header_help_us: Ayúdanos
   header_home: Inicio
+  header_incubator: Incubadora
   header_learn: Aprender
   header_legal: Privacidad y Legalidad
+  header_legal_cookie_notice: Aviso de Cookies
   header_legal_privacy: Política de privacidad
   header_legal_tos: Términos de uso
   header_my_dashboard: Mi panel de control
@@ -1265,6 +1269,7 @@ es-MX:
   header_project_gallery: Proyectos
   header_report_abuse: Denunciar abuso
   header_report_bug: Reportar un error
+  header_schools: Escuelas
   header_screen_reader_hamburger: Menú
   header_screen_reader_help: Menú de ayuda
   header_sections: Secciones
@@ -1571,8 +1576,8 @@ es-MX:
   hoc_overview_dance_title: Fiesta de baile
   hoc_overview_hello_world_2022_alt_text: Astronauta animado y animalitos flotando
     alrededor de una ilustración de la tierra
-  hoc_overview_hello_world_2022_subtitle: Elige entre cuatro temas divertidos para
-    codificar personajes interactivos en un mundo creado por ti.
+  hoc_overview_hello_world_2022_subtitle: Elige entre seis temas divertidos para programar
+    personajes interactivos en un mundo creado por ti.
   hoc_overview_more_resources: Para obtener más recursos sobre cómo participar en
     tu aula a distancia, consulta nuestra guía para organizar una [Hora del Código
     virtual](https://hourofcode.com/us/how-to/virtual). Para los alumnos con tecnología
@@ -1711,6 +1716,7 @@ es-MX:
   homepage_slot_text_link_k5: Cursos de Kinder a 5to básico
   homepage_slot_text_link_local: Encuentra una clase local
   homepage_slot_text_link_middle: Escuela secundaria
+  homepage_slot_text_link_middle_and_high: Escuela secundaria
   homepage_slot_text_link_othercourses: Otros cursos en línea
   homepage_slot_text_link_pd: Desarrollo profesional
   homepage_slot_text_link_shop: Camisetas, sombreros y más
@@ -2686,6 +2692,8 @@ es-MX:
   user_header_applab: 'Laboratorio de aplicaciones '
   user_header_artist: 'Artista '
   user_header_create: 'Crear '
+  user_header_create_account: Crear cuenta
+  user_header_create_account_low_cap: Crear cuenta
   user_header_dance: Fiesta de baile
   user_header_flappy: Flappy
   user_header_gamelab: Laboratorio de juegos
@@ -2693,6 +2701,7 @@ es-MX:
   user_header_logout: Cerrar sesión
   user_header_minecraft: Minecraft
   user_header_my_projects: Mis proyectos
+  user_header_new_project: Proyecto nuevo
   user_header_playlab: Laboratorio de juegos
   user_header_settings: Configuración de la cuenta
   user_header_signin: Iniciar sesión
@@ -2809,35 +2818,15 @@ es-MX:
     mundial para introducir la Informática a millones de estudiantes en más de 180
     países. Únete a esta iniciativa durante la Semana de Educación en Ciencias de
     la Computación, del 7 al 13 de Diciembre.
-  volunteer_engineer_submission_intro_guide: Conoce más sobre nuestro <a href="%{volunteer_guide}">programa
-    de voluntariado aquí</a>.
   volunteer_engineer_submission_intro_guide_markdown: Obtén más información sobre
     nuestro [programa de voluntarios aquí](%{volunteer_guide}).
-  volunteer_engineer_submission_intro_links: ¿No está buscando ser voluntario? <a
-    href="%{learn_more}"> Aprende más</a> sobre organizar tu propio evento Hora de
-    Código y encontrando un voluntario local en nuestro <a href="%{volunteer_local}">
-    mapa de voluntariado</a>.
   volunteer_engineer_submission_intro_links_markdown: "¿Eres un profesor buscando
     voluntarios? Encuentra un voluntario local en nuestro [mapa de voluntarios](%{volunteer_local})."
-  volunteer_engineer_submission_intro_recruit: 'A estos maestros les encantaría tener
-    a alguien <span style="font-family: ''Gotham 7r'', sans-serif;"> apasionado por
-    enseñar ciencia de la computación</span>, la cual puede ayudar en el aula, o alguien
-    que pueda <span style="font-family: ''Gotham 7r'', sans-serif;"> inspirar </span>
-    a sus alumnos hablando de la amplitud de posibilidades con las ciencias de la
-    computación (que podría hacerse a través de una video conferencia). Si usted no
-    está buscando ofrecerse como voluntario, <a href="%{url}"> aprenda más</a> acerca
-    de organizar su propio evento de Hora de Código.'
   volunteer_engineer_submission_intro_recruit_markdown: A los profesores les encantaría
     tener a alguien **apasionado por la educación en la ciencia de la computación**
     que pueda ayudar en el aula, o alguien que pueda **inspirar** a sus estudiantes
     mediante charlas sobre la amplitud de posibilidades que brinda la ciencia de la
     computación (lo cual podría hacerse a través de un chat de video).
-  volunteer_engineer_submission_intro_signup: Ingresa la siguiente información si
-    eres estudiante de ciencias de la computación o profesional de software. Debes
-    tener al menos 18 años de edad para inscribirte como voluntario. Ten en cuenta
-    que todos los que miren el <a href="/volunteer/local">mapa de voluntarios</a>
-    verán los campos que completes en esta sección. Los campos marcados con <span
-    class="form-required-field">*</span> son obligatorios.
   volunteer_engineer_submission_intro_signup_markdown: Ingresa la siguiente información
     si eres un estudiante de ciencias de la computación o un profesional del software.
     Debes tener al menos 18 años para inscribirte como voluntario. Ten en cuenta que

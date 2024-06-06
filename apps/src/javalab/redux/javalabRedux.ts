@@ -4,7 +4,7 @@
 
 import {PayloadAction, createSlice} from '@reduxjs/toolkit';
 
-interface JavalabState {
+export interface JavalabState {
   isRunning: boolean;
   isTesting: boolean;
   backpackEnabled: boolean;

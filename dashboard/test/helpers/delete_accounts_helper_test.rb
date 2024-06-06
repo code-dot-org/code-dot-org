@@ -1,7 +1,9 @@
 require 'test_helper'
 require 'testing/projects_test_utils'
 require 'cdo/delete_accounts_helper'
+# rubocop:disable CustomCops/PegasusRequires
 require_relative '../../../pegasus/test/fixtures/mock_pegasus'
+# rubocop:enable CustomCops/PegasusRequires
 
 #
 # This test is the comprehensive spec on the desired behavior when purging a
@@ -17,7 +19,7 @@ require_relative '../../../pegasus/test/fixtures/mock_pegasus'
 # Getting this right is important for compliance with various privacy
 # regulations around the globe, so changes to this behavior should be carefully
 # reviewed by the product team.
-#
+# rubocop:disable CustomCops/PegasusDbUsage
 class DeleteAccountsHelperTest < ActionView::TestCase
   include ProjectsTestUtils
 
@@ -48,8 +50,13 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     end
 
     # Skip real Firebase operations
+    # TODO: unfirebase, write a version of this for Datablock Storage: #57004
+    # TODO: post-firebase-cleanup, switch to the datablock storage version: #56994
     FirebaseHelper.stubs(:delete_channel)
     FirebaseHelper.stubs(:delete_channels)
+
+    # Skip MailJet calls
+    MailJet.stubs(:delete_contact)
 
     # Global log used to check expected log output
     @log = StringIO.new
@@ -617,6 +624,19 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     end
   end
 
+  test "removes lti user identities rows" do
+    lti_user_identity = create :lti_user_identity
+    user = lti_user_identity.user
+
+    assert_equal 1, user.lti_user_identities.with_deleted.count,
+    'Expected user to have one lti user identities'
+
+    purge_user user
+
+    assert_equal 0, user.lti_user_identities.with_deleted.count,
+      'Expected user to have no lti user identities'
+  end
+
   #
   # Table: dashboard.authored_hint_view_requests
   #
@@ -727,52 +747,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     Census::CensusSubmission.expects(:where).never
 
     purge_user student
-  end
-
-  #
-  # Table: dashboard.circuit_playground_discount_applications
-  #
-
-  test 'anonymizes signature on circuit_playground_discount_application' do
-    application = create :circuit_playground_discount_application, signature: 'Will Halloway'
-    user = application.user
-
-    assert_equal 'Will Halloway', application.signature
-
-    purge_user user
-    application.reload
-
-    assert_equal '(anonymized signature)', application.signature
-
-    assert_logged "Anonymized 1 CircuitPlaygroundDiscountApplication"
-  end
-
-  test 'leaves blank signature blank on circuit_playground_discount_application' do
-    application = create :circuit_playground_discount_application
-    user = application.user
-
-    assert_nil application.signature
-
-    purge_user user
-    application.reload
-
-    assert_nil application.signature
-
-    assert_logged "Anonymized 1 CircuitPlaygroundDiscountApplication"
-  end
-
-  test 'removes school id from circuit_playground_discount_application' do
-    application = create :circuit_playground_discount_application, school_id: create(:school).id
-    user = application.user
-
-    refute_nil application.school_id
-
-    purge_user user
-    application.reload
-
-    assert_nil application.school_id
-
-    assert_logged "Anonymized 1 CircuitPlaygroundDiscountApplication"
   end
 
   #
@@ -1222,22 +1196,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
-  # Table: dashboard.pd_workshop_surveys
-  # Associated via enrollment
-  #
-
-  test "clears form_data from pd_workshop_surveys" do
-    enrollment = create :pd_enrollment, :from_user
-    survey = create :pd_workshop_survey, pd_enrollment: enrollment
-    refute_equal '{}', survey.form_data
-
-    purge_user survey.pd_enrollment.user
-
-    survey.reload
-    assert_equal '{}', survey.form_data
-  end
-
-  #
   # Table dashboard.peer_reviews
   # Could delete submitter or viewer
   #
@@ -1557,11 +1515,11 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       form_ids = PEGASUS_DB[:forms].where(email: email).map {|f| f[:id]}
 
       refute_empty PEGASUS_DB[:forms].where(id: form_ids)
-      assert PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?}
+      assert(PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?})
 
       purge_all_accounts_with_email email
 
-      refute PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?}
+      refute(PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?})
     end
   end
 
@@ -1571,11 +1529,11 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       form_ids = PEGASUS_DB[:forms].where(user_id: user.id).map {|f| f[:id]}
 
       refute_empty PEGASUS_DB[:forms].where(id: form_ids)
-      assert PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?}
+      assert(PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?})
 
       purge_user user
 
-      refute PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?}
+      refute(PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?})
     end
   end
 
@@ -1629,6 +1587,20 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   test "removes longitude from form_geos" do
     assert_removes_field_from_form_geos :longitude
+  end
+
+  #
+  # Table: dashboard.ai_tutor_interactions
+  #
+
+  test "deletes all of a purged user's ai tutor interactions (chat messages)" do
+    student = create :student_with_ai_tutor_access
+    num_ai_tutor_interactions = 3
+    create_list :ai_tutor_interaction, num_ai_tutor_interactions, user: student
+
+    assert_changes -> {AiTutorInteraction.where(user: student).count}, from: num_ai_tutor_interactions, to: 0 do
+      purge_user student
+    end
   end
 
   #
@@ -1846,12 +1818,12 @@ class DeleteAccountsHelperTest < ActionView::TestCase
         project_id: project_id,
         featured_at: Time.now
 
-      assert featured_project.featured?
+      assert featured_project.active?
 
       student.destroy
 
       featured_project.reload
-      refute featured_project.featured?
+      refute featured_project.active?
     end
   end
 
@@ -1862,12 +1834,12 @@ class DeleteAccountsHelperTest < ActionView::TestCase
         project_id: project_id,
         featured_at: Time.now
 
-      assert featured_project.featured?
+      assert featured_project.active?
 
       purge_user student
 
       featured_project.reload
-      refute featured_project.featured?
+      refute featured_project.active?
     end
   end
 
@@ -1881,14 +1853,14 @@ class DeleteAccountsHelperTest < ActionView::TestCase
         featured_at: featured_time,
         unfeatured_at: unfeatured_time
 
-      refute featured_project.featured?
+      refute featured_project.active?
       assert_equal unfeatured_time.utc.to_s,
         featured_project.unfeatured_at.utc.to_s
 
       student.destroy
 
       featured_project.reload
-      refute featured_project.featured?
+      refute featured_project.active?
       assert_equal unfeatured_time.utc.to_s,
         featured_project.unfeatured_at.utc.to_s
     end
@@ -1954,6 +1926,9 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
         student_channels = [storage_encrypt_channel_id(storage_id, project_id_a),
                             storage_encrypt_channel_id(storage_id, project_id_b)]
+
+        # TODO: unfirebase, write a version of this for Datablock Storage: #57004
+        # TODO: post-firebase-cleanup, switch to the datablock storage version: #56994
         FirebaseHelper.
           expects(:delete_channels).
           with(student_channels)
@@ -2208,9 +2183,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     refute_nil ContactRollupsPardotMemory.find_by_email(teacher_email).marked_for_deletion_at
   end
 
-  private
-
-  def assert_logged(expected_message)
+  private def assert_logged(expected_message)
     assert_includes @log.string, expected_message
   end
 
@@ -2219,7 +2192,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   # Performs our account purge on the provided user instance, and then reloads
   # that instance so we can assert things about its final state.
   #
-  def purge_user(user)
+  private def purge_user(user)
     unpurged_users_before = User.with_deleted.where(purged_at: nil).count
 
     DeleteAccountsHelper.new(log: @log).purge_user(user)
@@ -2234,17 +2207,17 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     user.reload
   end
 
-  def unsafe_purge_user(user)
+  private def unsafe_purge_user(user)
     DeleteAccountsHelper.new(log: @log, bypass_safety_constraints: true).purge_user(user)
 
     user.reload
   end
 
-  def purge_all_accounts_with_email(email)
+  private def purge_all_accounts_with_email(email)
     DeleteAccountsHelper.new(log: @log).purge_all_accounts_with_email(email)
   end
 
-  def assert_removes_field_from_forms(field, expect: :nil)
+  private def assert_removes_field_from_forms(field, expect: :nil)
     user = create :teacher
     with_form(user: user) do |form_id|
       initial_value = PEGASUS_DB[:forms].where(id: form_id).first[field]
@@ -2273,7 +2246,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     end
   end
 
-  def assert_removes_field_from_form_geos(field)
+  private def assert_removes_field_from_form_geos(field)
     user = create :teacher
     with_form_geo(user) do |form_geo_id|
       initial_value = PEGASUS_DB[:form_geos].where(id: form_geo_id).first[field]
@@ -2296,7 +2269,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   # @param [String] email - An email for the form submitter.
   # @yields [Integer] The id for the created form.
   #
-  def with_form(user: nil, email: nil)
+  private def with_form(user: nil, email: nil)
     use_name = user&.name || 'Fake Name'
     use_email = user ? user.email : email
     form_id = PEGASUS_DB[:forms].insert(
@@ -2331,7 +2304,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   # @param [User] user to create an associated form.
   # @yields [Integer] the id of the form_geos row.
   #
-  def with_form_geo(user)
+  private def with_form_geo(user)
     with_form(user: user) do |form_id|
       form_geo_id = PEGASUS_DB[:form_geos].insert(
         {
@@ -2354,3 +2327,4 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     end
   end
 end
+# rubocop:enable CustomCops/PegasusDbUsage

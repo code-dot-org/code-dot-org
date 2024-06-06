@@ -1,10 +1,10 @@
 import $ from 'jquery';
 import Immutable from 'immutable';
-import MD5 from 'crypto-js/md5';
 import RGBColor from 'rgbcolor';
 import {Position} from './constants';
 import {dataURIFromURI} from './imageUtils';
 import './polyfills';
+import md5 from 'md5';
 
 /**
  * Checks whether the given subsequence is truly a subsequence of the given sequence,
@@ -406,7 +406,7 @@ export function showUnusedBlockQtip(targetElement) {
 /**
  * @param {string} key
  * @param {string} defaultValue
- * @return {string}
+ * @return {string} returns the value of the key in localStorage, null if not set or the defaultValue if there is an error
  */
 export function tryGetLocalStorage(key, defaultValue) {
   if (defaultValue === undefined) {
@@ -812,9 +812,9 @@ export function resetAniGif(element) {
 export function interpolateColors(from, to, value) {
   const fromRGB = new RGBColor(from);
   const toRGB = new RGBColor(to);
-  const r = fromRGB.r * (1 - value) + toRGB.r * value;
-  const g = fromRGB.g * (1 - value) + toRGB.g * value;
-  const b = fromRGB.b * (1 - value) + toRGB.b * value;
+  const r = Math.round(fromRGB.r * (1 - value) + toRGB.r * value);
+  const g = Math.round(fromRGB.g * (1 - value) + toRGB.g * value);
+  const b = Math.round(fromRGB.b * (1 - value) + toRGB.b * value);
   return `rgb(${r}, ${g}, ${b})`;
 }
 
@@ -883,7 +883,7 @@ export const findProfanity = (text, locale, authenticityToken = null) => {
  * @returns {string} A string representing an MD5 hash.
  */
 export function hashString(str) {
-  return MD5(str).toString();
+  return md5(str);
 }
 
 /*
@@ -954,8 +954,65 @@ export function isProductionEnvironment() {
 /**
  * Fetch cookies signed by cloudfront which grant access to restricted content.
  * @returns {Promise<Response>}
- * TODO: Reuse this in Dance Party (Dance.js and songs.js)
  */
-export function fetchSignedCookies() {
-  return fetch('/dashboardapi/sign_cookies', {credentials: 'same-origin'});
+export function fetchSignedCookies(buster = false) {
+  return fetch(
+    `/dashboardapi/sign_cookies${buster ? `?bust=${Date.now()}` : ''}`,
+    {
+      credentials: 'same-origin',
+    }
+  );
+}
+
+export function getAlphanumericId() {
+  const validCharacters =
+    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  const idLength = 16;
+  const id = [];
+  for (let i = 0; i < idLength; i++) {
+    id.push(
+      validCharacters.charAt(Math.floor(Math.random() * validCharacters.length))
+    );
+  }
+  return id.join('');
+}
+
+/**
+ * Parses a level's XML properties for block ids that were explicitly set.
+ * @param {Object} appOptions
+ * @returns {Set<string>} - A set of explicitly set 'id' attributes found in the XML.
+ */
+export function findExplicitlySetBlockIds(appOptions = null) {
+  if (!appOptions || !appOptions.level) {
+    return [];
+  }
+  const explicitlySetIds = new Set();
+
+  const blockSources = ['startBlocks', 'toolbox'];
+  for (const levelProperty of blockSources) {
+    const xmlString = appOptions.level?.[levelProperty];
+
+    try {
+      if (!xmlString) {
+        break;
+      }
+
+      const parser = new DOMParser();
+      const xmlDoc = parser.parseFromString(xmlString, 'text/xml');
+
+      // Find all 'block' elements and extract explicitly set ids
+      const blockElements = xmlDoc.querySelectorAll('block');
+      blockElements.forEach(blockElement => {
+        const idAttribute = blockElement.getAttribute('id');
+        if (idAttribute) {
+          explicitlySetIds.add(idAttribute);
+        }
+      });
+    } catch (error) {
+      // Handle parsing errors (e.g., invalid XML)
+      console.error(`Error parsing XML for ${levelProperty}:`, error);
+    }
+  }
+
+  return explicitlySetIds;
 }

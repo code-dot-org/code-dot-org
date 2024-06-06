@@ -1,33 +1,23 @@
-import React from 'react';
-import {reduxStore} from '@cdo/storybook/decorators';
-import {Provider, connect} from 'react-redux';
 import PropTypes from 'prop-types';
+import React from 'react';
+import {Provider, connect} from 'react-redux';
+
+import locales from '@cdo/apps/redux/localesRedux';
+import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
 import ProgressTableView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableView';
-import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
 import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
+import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
+import {fakeCoursesWithProgress} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
+import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {reduxStore} from '@cdo/storybook/decorators';
+
+import {allowConsoleWarnings} from '../../../../test/util/testUtils';
 import {
   getScriptData,
   buildSectionProgress,
 } from '../sectionProgressTestHelpers';
-import {allowConsoleWarnings} from '../../../../test/util/testUtils';
-import {fakeCoursesWithProgress} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
-import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
-import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import locales from '@cdo/apps/redux/localesRedux';
-
-/**
- * The variety of stories here can be useful during development, but add
- * unnecessary work to our unit tests and have proven to be potentially flaky
- * due to timeout while processing so much data. Set this value to `true` to
- * enable all the stories.
- */
-const INCLUDE_LARGE_STORIES = false;
-
-const defaultExport = {
-  title: 'ProgressTableView',
-  component: ProgressTableView,
-};
 
 class _TableWrapper extends React.Component {
   static propTypes = {
@@ -77,6 +67,9 @@ function createStore(numStudents, numLessons) {
   }
 
   const initialState = {
+    currentUser: {
+      isSortedByFamilyName: true,
+    },
     sectionProgress: {
       ...buildSectionProgress(section.students, scriptData),
       lessonOfInterest: 0,
@@ -95,6 +88,7 @@ function createStore(numStudents, numLessons) {
 
   return reduxStore(
     {
+      currentUser,
       sectionProgress,
       unitSelection,
       teacherSections,
@@ -104,68 +98,49 @@ function createStore(numStudents, numLessons) {
   );
 }
 
-function buildSmallStories() {
-  if (IN_UNIT_TEST) {
-    allowConsoleWarnings();
-  }
-
-  const stories = {};
-
-  const SmallSectionSmallScript = Template.bind({});
-  SmallSectionSmallScript.args = {
-    store: createStore(3, 10),
-  };
-  stories['SmallSectionSmallScript'] = SmallSectionSmallScript;
-
-  const SmallSectionLargeScript = Template.bind({});
-  SmallSectionLargeScript.args = {
-    store: createStore(3, 30),
-  };
-  stories['SmallSectionLargeScript'] = SmallSectionLargeScript;
-
-  return stories;
+if (IN_UNIT_TEST) {
+  allowConsoleWarnings();
 }
 
-function buildLargeStories() {
-  const stories = {};
+export const SmallSectionSmallScript = Template.bind({});
+SmallSectionSmallScript.args = {
+  store: createStore(3, 10),
+};
 
-  const MediumSectionSmallScript = Template.bind({});
-  MediumSectionSmallScript.args = {
-    store: createStore(30, 10),
-  };
-  stories['MediumSectionSmallScript'] = MediumSectionSmallScript;
+export const SmallSectionLargeScript = Template.bind({});
+SmallSectionLargeScript.args = {
+  store: createStore(3, 30),
+};
 
-  const MediumSectionLargeScript = Template.bind({});
-  MediumSectionLargeScript.args = {
-    store: createStore(30, 30),
-  };
-  stories['MediumSectionLargeScript'] = MediumSectionLargeScript;
+/**
+ * The variety of stories here can be useful during development, but add
+ * unnecessary work to our unit tests and have proven to be potentially flaky
+ * due to timeout while processing so much data. Uncomment the following
+ * enable all the stories.
+ */
 
-  const LargeSectionSmallScript = Template.bind({});
-  LargeSectionSmallScript.args = {
-    store: createStore(200, 19),
-  };
-  stories['LargeSectionSmallScript'] = LargeSectionSmallScript;
+/**
+export const MediumSectionSmallScript = Template.bind({});
+MediumSectionSmallScript.args = {
+  store: createStore(30, 10),
+};
 
-  const LargeSectionLargeScript = Template.bind({});
-  LargeSectionLargeScript.args = {
-    store: createStore(200, 30),
-  };
-  stories['LargeSectionLargeScript'] = LargeSectionLargeScript;
+export const MediumSectionLargeScript = Template.bind({});
+MediumSectionLargeScript.args = {
+  store: createStore(30, 30),
+};
 
-  return stories;
-}
+export const LargeSectionSmallScript = Template.bind({});
+LargeSectionSmallScript.args = {
+  store: createStore(200, 19),
+};
 
-let stories = buildSmallStories();
+export const LargeSectionLargeScript = Template.bind({});
+LargeSectionLargeScript.args = {
+  store: createStore(200, 30),
+};
+*/
 
-if (INCLUDE_LARGE_STORIES) {
-  stories = {
-    ...stories,
-    ...buildLargeStories(),
-  };
-}
-
-module.exports = {
-  ...stories,
-  default: defaultExport,
+export default {
+  component: ProgressTableView,
 };

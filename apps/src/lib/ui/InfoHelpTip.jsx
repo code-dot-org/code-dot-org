@@ -2,17 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import ReactTooltip from 'react-tooltip';
+import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
+import color from '@cdo/apps/util/color';
 
 export default function InfoHelpTip({id, content}) {
   return (
-    <div>
+    <span style={{marginLeft: '12px'}}>
       <span data-tip data-for={id}>
         <FontAwesome icon="info-circle" style={styles.infoTipIcon} />
       </span>
       <ReactTooltip id={id} role="tooltip" effect="solid">
-        <div style={{maxWidth: 400}}>{content}</div>
+        <div style={styles.infoToolTipBox}>
+          <BodyTwoText style={styles.infoToolTipText}>{content}</BodyTwoText>
+        </div>
       </ReactTooltip>
-    </div>
+    </span>
   );
 }
 
@@ -29,5 +33,15 @@ const styles = {
     fontSize: '18px',
     verticalAlign: 'middle',
     color: 'gray',
+  },
+  infoToolTipBox: {
+    maxWidth: '400px',
+    whiteSpace: 'normal',
+    textAlign: 'left',
+  },
+  infoToolTipText: {
+    fontSize: '13px',
+    color: color.neutral_white,
+    marginBottom: '0',
   },
 };

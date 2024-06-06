@@ -1,10 +1,15 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import loadable from '../util/loadable';
-const VirtualizedSelect = loadable(() => import('./VirtualizedSelect'));
+
+import fontConstants from '@cdo/apps/fontConstants';
 import i18n from '@cdo/locale';
-import {styles} from './census2017/censusFormStyles';
+
 import {COUNTRIES} from '../geographyConstants';
+import loadable from '../util/loadable';
+
+const VirtualizedSelect = loadable(() => import('./VirtualizedSelect'));
+
+import {styles} from './census2017/censusFormStyles';
 
 const singleLineLayoutStyles = {
   display: 'table-cell',
@@ -12,7 +17,7 @@ const singleLineLayoutStyles = {
   verticalAlign: 'middle',
   minHeight: 42,
   fontSize: 13,
-  fontFamily: '"Gotham 4r", sans-serif',
+  ...fontConstants['main-font-regular'],
   color: '#333',
   padding: 0,
 };

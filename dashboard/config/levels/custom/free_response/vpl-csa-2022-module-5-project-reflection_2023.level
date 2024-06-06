@@ -1,0 +1,29 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2023-08-01T16:25:45.000Z",
+  "level_num": "custom",
+  "user_id": 884,
+  "properties": {
+    "encrypted": "false",
+    "tts_short_instructions_override": "How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
+    "tts_long_instructions_override": "Congratulations! You just wrote some code. You are officially a programmer!\r\n\r\nDid you notice that the last puzzle was a little more difficult? It was a challenge puzzle. Challenge puzzles are meant to stretch the boundaries of what students will do. We make it clear that they should be attempted, but do not require that they be completed for students to succeed for the lesson.\r\n\r\nNow take a moment to reflect. How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
+    "instructions_important": "false",
+    "long_instructions": "# Reviewing the Unit 5 project \r\n\r\nDuring your facilitator-led call, you looked at the exemplar Unit 5 project.  \r\n\r\n## Do this:\r\n\r\nTake a minute to review the  <a href=\"https://studio.code.org/s/csa5-2022/lessons/11/levels/1?exemplar=true\" target=\"blank\">exemplar project</a>.  As you do this consider:\r\n\r\n1. Which original filters were created for this project?  That is, what filters were not part of the previous levels?\r\n2. What do you see in this example that you would like to see your students do in the project as well?  Consider how the code is structured, what makes the code readable, where you see creativity in the project, etc. \r\n3. Share your thoughts to these prompts in the space below. \r\n\r\n<hr>\r\n\r\n**Up next:** We will look at the rubric for the project and determine what, if anything you would want to add to the rubric for your students.",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 24299,
+    "allow_multiple_attempts": "true",
+    "name_suffix": "_2023"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2023-08-01T16:25:45.228+00:00\",\"changed\":[\"cloned from \\\"vpl-csa-2022-module-5-project-reflection\\\"\"],\"cloned_from\":\"vpl-csa-2022-module-5-project-reflection\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

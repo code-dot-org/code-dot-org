@@ -1,8 +1,11 @@
-import sinon from 'sinon';
 import GoogleBlockly from 'blockly/core';
+import sinon from 'sinon';
+
+import {READ_ONLY_PROPERTIES} from '@cdo/apps/blockly/constants';
 import initializeGoogleBlocklyWrapper from '@cdo/apps/blockly/googleBlocklyWrapper';
-import {expect} from '../../util/reconfiguredChai';
 import '@cdo/apps/flappy/flappy'; // Importing the app forces the test to load Blockly
+
+import {expect} from '../../util/reconfiguredChai';
 
 describe('Google Blockly Wrapper', () => {
   const cdoBlockly = Blockly;
@@ -20,70 +23,7 @@ describe('Google Blockly Wrapper', () => {
   });
 
   it('readOnly properties cannot be set', () => {
-    const readOnlyProperties = [
-      'ALIGN_CENTRE',
-      'ALIGN_LEFT',
-      'ALIGN_RIGHT',
-      'applab_locale',
-      'blockRendering',
-      'Block',
-      'BlockFieldHelper',
-      'Blocks',
-      'BlockSvg',
-      'common_locale',
-      'Connection',
-      'ContextMenu',
-      'contractEditor',
-      'createSvgElement',
-      'Css',
-      'disableVariableEditing',
-      'Events',
-      'FieldAngleDropdown',
-      'FieldAngleInput',
-      'FieldAngleTextInput',
-      'FieldColour',
-      'FieldColourDropdown',
-      'FieldIcon',
-      'FieldImage',
-      'FieldLabel',
-      'FieldParameter',
-      'FieldRectangularDropdown',
-      'fish_locale',
-      'Flyout',
-      'FunctionalBlockUtils',
-      'FunctionalTypeColors',
-      'FunctionEditor',
-      'functionEditor',
-      'gamelab_locale',
-      'Generator',
-      'geras',
-      'getRelativeXY',
-      'googlecode',
-      'hasCategories',
-      'html',
-      'Input',
-      'INPUT_VALUE',
-      'js',
-      'modalBlockSpace',
-      'Msg',
-      'Names',
-      'netsim_locale',
-      'Procedures',
-      'removeChangeListener',
-      'RTL',
-      'selected',
-      'tutorialExplorer_locale',
-      'useContractEditor',
-      'useModalFunctionEditor',
-      'utils',
-      'Trashcan',
-      'Variables',
-      'weblab_locale',
-      'Workspace',
-      'WorkspaceSvg',
-      'Xml',
-    ];
-    readOnlyProperties.forEach(property => {
+    READ_ONLY_PROPERTIES.forEach(property => {
       expect(() => {
         Blockly[property] = 'NEW VALUE';
       }).to.throw('Cannot set property');

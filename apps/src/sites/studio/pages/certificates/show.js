@@ -8,13 +8,14 @@ import {getStore} from '@cdo/apps/redux';
 $(document).ready(function () {
   const store = getStore();
   const certificateData = getScriptData('certificate');
-  const {imageUrl, printUrl, announcement} = certificateData;
+  const {imageAlt, imageUrl, printUrl, announcement} = certificateData;
   ReactDOM.render(
     <Provider store={store}>
       <CertificateShare
         imageUrl={imageUrl}
         printUrl={printUrl}
         announcement={announcement}
+        imageAlt={imageAlt}
       />
     </Provider>,
     document.getElementById('certificate-share')

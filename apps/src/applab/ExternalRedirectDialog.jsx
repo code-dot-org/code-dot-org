@@ -1,13 +1,16 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import Dialog, {Body} from '@cdo/apps/templates/Dialog';
-import DialogFooter from '../templates/teacherDashboard/DialogFooter';
-import Button from '../templates/Button';
-import i18n from '@cdo/locale';
 import {connect} from 'react-redux';
-import {actions, REDIRECT_RESPONSE} from './redux/applab';
-import {studio} from '@cdo/apps/lib/util/urlHelpers';
+
 import {BASE_DIALOG_WIDTH} from '@cdo/apps/constants';
+import {studio} from '@cdo/apps/lib/util/urlHelpers';
+import Dialog, {Body} from '@cdo/apps/templates/Dialog';
+import i18n from '@cdo/locale';
+
+import Button from '../templates/Button';
+import DialogFooter from '../templates/teacherDashboard/DialogFooter';
+
+import {actions, REDIRECT_RESPONSE} from './redux/applab';
 
 class ExternalRedirectDialog extends React.Component {
   static propTypes = {
@@ -59,7 +62,7 @@ class ExternalRedirectDialog extends React.Component {
           <Button
             onClick={() => this.handleRedirect(url)}
             text={i18n.continue()}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
             style={{margin: 0}}
           />
         </DialogFooter>

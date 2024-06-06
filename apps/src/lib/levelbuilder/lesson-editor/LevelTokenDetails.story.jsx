@@ -17,7 +17,6 @@ const defaultLevel = {
 };
 
 export default {
-  title: 'LevelTokenDetails',
   component: LevelTokenDetails,
 };
 

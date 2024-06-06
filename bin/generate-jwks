@@ -1,0 +1,67 @@
+#!/usr/bin/env ruby
+
+# This script is meant to be run locally on a dev machine (not a server), and it
+# is used to generate new JSON Web Keys (JWK) to be added to the
+# JSON Web Key Set (JWKS) exposed at /oauth/jwks. It generates both the public
+# key and the private key. The public key will be added to the JWKS in
+# dashboard/public/oauth/jwks.json. It will print the private key and
+# key id (kid) that is to be used for updating the secret at
+# CDO.jwk_private_key_data.
+
+# When you include 'dev' as an argument, it will write the JWK and the private
+# key to your locals.yml. This should be done once for local development.
+
+require 'jwt'
+require 'json'
+
+allowed_args = ["dev", "prod"].freeze
+# default to 'prod'
+arg = ARGV.first || "prod"
+
+puts "Usage: 'dev' or 'prod' as arguments...\n" unless allowed_args.include? arg
+
+params = {use: 'sig', alg: 'RS256'}
+jwk = JWT::JWK.new(OpenSSL::PKey::RSA.new(2048), params, kid_generator: JWT::JWK::Thumbprint)
+@jwks_hash = JWT::JWK::Set.new(jwk).export
+
+@private_key_obj = {
+  kid: jwk[:kid],
+  private_key: jwk.signing_key.to_s,
+}
+
+def write_jwk_prod
+  # read current JWKS
+  jwks_data = File.join(File.dirname(__FILE__), '../dashboard/public/oauth/jwks.json')
+  jwks_json = File.read(jwks_data)
+  current_jwks = JSON.parse(jwks_json).transform_keys(&:to_sym)
+
+  # get new key
+  new_jwk = @jwks_hash[:keys][0]
+  # push new key to current jwks keys array
+  current_jwks[:keys] << new_jwk
+
+  File.write(jwks_data, current_jwks.to_json)
+
+  print "Update secret CDO.jwk_private_key_data with the following value:\n\n"
+  print @private_key_obj.to_json
+end
+
+def write_jwk_dev
+  # format values to be written to locals.yml
+  jwk_data = <<~EOF
+    jwks_data:
+      #{@jwks_hash.to_json}
+
+    jwk_private_key_data:
+      #{@private_key_obj.to_json}
+  EOF
+
+  File.write(File.join(File.dirname(__FILE__), '../locals.yml'), jwk_data, mode: "a")
+end
+
+case arg
+when "dev"
+  write_jwk_dev
+when "prod"
+  write_jwk_prod
+end

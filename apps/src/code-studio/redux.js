@@ -13,12 +13,17 @@ import isRtl from './isRtlRedux';
 import responsive from './responsiveRedux';
 import publishDialog from '../templates/projects/publishDialog/publishDialogRedux';
 import projects from '../templates/projects/projectsRedux';
+import frozenProjectInfoDialog from '../templates/projects/frozenProjectInfoDialog/frozenProjectInfoDialogRedux';
 import verifiedInstructor from './verifiedInstructorRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 import arrowDisplay from '@cdo/apps/templates/arrowDisplayRedux';
 import teacherPanel from '@cdo/apps/code-studio/teacherPanelRedux';
 import microBit from '../lib/kits/maker/microBitRedux';
-import lab from '../lab2/lab2Redux';
+import lab from '@cdo/apps/lab2/lab2Redux';
+import lab2Project from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import javalabEditor from '@cdo/apps/javalab/redux/editorRedux';
+import javalab from '@cdo/apps/javalab/redux/javalabRedux';
+import codebridgeConsole from '@codebridge/redux/consoleRedux';
 
 registerReducers({
   header,
@@ -34,12 +39,17 @@ registerReducers({
   isRtl,
   responsive,
   publishDialog,
+  frozenProjectInfoDialog,
   projects,
   verifiedInstructor,
   currentUser,
   arrowDisplay,
   microBit,
   lab,
+  lab2Project,
+  javalabEditor,
+  javalab,
+  codebridgeConsole,
 });
 
 export {getStore};

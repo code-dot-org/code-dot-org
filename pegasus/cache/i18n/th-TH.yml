@@ -5,8 +5,8 @@ th-TH:
   accelerated_name: หลักสูตรเร่งรัด
   account_sign_up_child_accept_terms: ฉันยืนยันว่าฉันได้รับอนุญาตจากผู้ปกครองหรือผู้พิทักษ์ตามกฏหมายให้ใช้บริการของ
     Code.org ได้
-  account_sign_up_email_opt_in: เราสามารถส่งอีเมลถึงคุณเกี่ยวกับการปรับปรุงหลักสูตรของเรา
-    โอกาสในท้องถิ่น หรือข่าวสารวิทยาการคอมพิวเตอร์อื่นๆ ได้หรือไม่?(ประมาณเดือนละครั้ง)
+  account_sign_up_email_opt_in: เราสามารถส่งอีเมลถึงคุณเกี่ยวกับการอัปเดตหลักสูตรของเรา
+    โอกาสในท้องถิ่น หรือข่าวสารด้านวิทยาการคอมพิวเตอร์อื่นๆ ได้หรือไม่?(ประมาณเดือนละครั้ง)
   ai_activity: กิจกรรม
   ai_and_ethics: AI และจริยธรรม
   ai_and_ethics_tile_description: นักเรียนทบทวนถึงนัยยะทางจริยธรรมที่สำคัญของ AI ก่อนช่วยกันจัดทำแหล่งข้อมูล
@@ -172,6 +172,7 @@ th-TH:
   class_submission_out_of_school_summer_camp: ค่ายซัมเมอร์
   classicmaze_name: เขาวงกตสุดคลาสสิค
   code_hoc_coming: นี่คือ Hour of Code - 8-14 ธันวาคม!
+  code_org_logo_alt: Code.org หน้าหลัก
   code_sign_up: ลงทะเบียนเพื่อเข้าร่วมในช่วงสัปดาห์ของวิทยาการคอมพิวเตอร์
   codea_beyond_gradelevel: มัธยมศึกษาตอนปลาย +
   codea_beyond_longdescription: Codea สำหรับ iPad ช่วยให้คุณสร้างเกมและสถานการณ์จำลอง
@@ -808,6 +809,7 @@ th-TH:
   header_about_us: เกี่ยวกับเรา
   header_course_catalog: รายการหลักสูตร
   header_courses: คอร์ส
+  header_districts: อำเภอ
   header_documentation: เอกสารประกอบ
   header_educate_beyond: นอกเหนือจากรหัส.org
   header_educate_community: ชุมชนออนไลน์
@@ -821,13 +823,16 @@ th-TH:
   header_educate_tools: เครื่องมือและวิดีโอ
   header_help_support: 'การช่วยเหลือและสนับสนุน '
   header_help_us: ช่วยเรา
+  header_incubator: ตู้บ่มเพาะเชื้อ
   header_learn: เรียนรู้
+  header_legal_cookie_notice: ประกาศเกี่ยวกับคุกกี้
   header_legal_privacy: นโยบายความเป็นส่วนตัว
   header_legal_tos: เงื่อนไขการให้บริการ
   header_my_dashboard: แดชบอร์ดของฉัน
   header_professional_learning: การเรียนรู้อย่างมืออาชีพ
   header_project_gallery: โปรเจกต์
   header_report_bug: รายงานปัญหา
+  header_schools: โรงเรียน
   header_sections: ส่วนต่างๆ ของชั้นเรียน
   header_stats: สถิติ
   header_teach: สอน
@@ -890,7 +895,7 @@ th-TH:
   hoc2018_dance_party_subheading: ช่วยแปลเกมปาร์ตี้เต้นรำ
   hoc2018_dance_teacher_resources_tile1_button: แผนการเรียนการสอน
   hoc2018_dance_teacher_resources_tile1_description: แผนการเรียนการสอน ใบรับรอง และการกรองเพลง
-  hoc2018_dance_teacher_resources_tile2_button: กิจกรรมถอดปลั๊ก
+  hoc2018_dance_teacher_resources_tile2_button: กิจกรรมแบบออฟไลน์
   hoc2018_dance_teacher_resources_tile2_description: ไม่จำเป็นต้องมีคอมพิวเตอร์!  เรียนรู้แนวคิดการเขียนโปรแกรมเพื่อออกแบบท่าเต้นไปด้วยกัน
   hoc2018_dance_teacher_resources_tile2_title: สร้างเกมปาร์ตี้เต้นรำแบบออฟไลน์
   hoc2018_dance_teacher_resources_title: แหล่งข้อมูลสำหรับผู้สอน
@@ -1138,6 +1143,7 @@ th-TH:
   homepage_slot_text_link_k5: คอร์สสำหรับเด็กอนุบาลถึง ป.5
   homepage_slot_text_link_local: ค้นหาชั้นเรียนในท้องถิ่น
   homepage_slot_text_link_middle: มัธยมศึกษาตอนต้น
+  homepage_slot_text_link_middle_and_high: โรงเรียนมัธยมและมัธยม
   homepage_slot_text_link_othercourses: หลักสูตรออนไลน์อื่นๆ
   homepage_slot_text_link_pd: การพัฒนาอย่างมืออาชีพ
   homepage_slot_text_link_stats: ดูสถิติ
@@ -1705,7 +1711,7 @@ th-TH:
   volunteer_engineer_submission_field_facebook: โปรไฟล์ Facebook
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
-  volunteer_engineer_submission_field_location: ที่อยู่
+  volunteer_engineer_submission_field_location: 'ตำแหน่ง '
   volunteer_engineer_submission_field_location_desc: ตำแหน่งของคุณจะถูกใช้เพื่อช่วยให้ครูค้นหาอาสาสมัครใกล้เคียง
     และจะแสดงเป็นหมุดบนแผนที่ ถ้าคุณกังวลเกี่ยวกับความเป็นส่วนตัว กรุณาใช้ที่ทำงาน/โรงเรียนหรือเมืองของคุณเท่านั้น
   volunteer_engineer_submission_field_location_flexibility: ฉันสามารถอาสาสมัคร โดย...
@@ -1719,15 +1725,6 @@ th-TH:
     เพื่อนำเนื้อหาเบื้องต้นเกี่ยวกับวิทยาการคอมพิวเตอร์ไปยังนักเรียนหลายล้านคนในกว่า
     180 ประเทศ โปรดเข้ามามีส่วนร่วมในช่วยเวลาสัปดาห์แห่งการศึกษาวิทยาการคอมพิวเตอร์
     วันที่ 7-13 ธันวาคม
-  volunteer_engineer_submission_intro_links: ต้องการหาอาสาสมัครหรือไม่ ลองค้นหาอาสาสมัครใกล้เคียงด้วย<a
-    href="%{volunteer_local}">แผนที่อาสาสมัคร</a>ของเรา
-  volunteer_engineer_submission_intro_recruit: 'ครูหลายคนชอบที่จะมีสักคน<span style="font-family:
-    ''Gotham 7r'', sans-serif;">ที่หลงไหลเกี่ยวกับการศึกษาวิทยาการคอมพิวเตอร์</span>
-    และสามารถช่วยครูได้ในชั้นเรียน หรือใครสักคนที่สามารถจะ<span style="font-family:
-    ''Gotham 7r'', sans-serif;">สร้างแรงบันดาลใจ</span>ให้กับนักเรียนของเขาด้วยการพูดเกี่ยวกับความเป็นไปได้ต่างๆ
-    เกี่ยวกับวิทยาการคอมพิวเตอร์ (ซึ่งอาจจะทำได้ผ่านวีดีโอแชท)'
-  volunteer_engineer_submission_intro_signup: กรุณากรอกข้อมูลต่อไปนี้ หากคุณคือนักเรียนวิทยาการคอมพิวเตอร์หรือบุคลากรเกี่ยวกับซอฟต์แวร์
-    ข้อมูลที่กำหนดด้วยเครื่องหมาย <span class="form-required-field">*</span> เป็นข้อมูลที่จำเป็น
   volunteer_engineer_submission_location_flexibility_curriculum: ยินดีที่จะช่วยสนับสนุนโครงการ
     open-source
   volunteer_engineer_submission_location_flexibility_onsite: ปฏิบัติที่โรงเรียน

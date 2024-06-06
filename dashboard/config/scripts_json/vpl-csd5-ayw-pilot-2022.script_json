@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "curriculum_umbrella": "PD Workshop Activity CSD",
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
@@ -13,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-12-16 19:20:12 UTC",
+    "serialized_at": "2024-03-06 20:07:29 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -254,6 +255,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M56-Async"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -342,6 +346,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

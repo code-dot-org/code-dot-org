@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import colors from '@cdo/apps/util/color';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
 var map;
 
@@ -42,8 +43,9 @@ function initializeMapboxMap() {
 }
 
 function loadMapboxWorkshops() {
+  const studioUrl = getScriptData('studioUrl');
   const deepDiveOnly = $('#properties').attr('data-deep-dive-only');
-  let url = '/dashboardapi/v1/pd/k5workshops?geojson=1';
+  let url = `//${studioUrl}/dashboardapi/v1/pd/k5workshops?geojson=1`;
   if (deepDiveOnly !== undefined) {
     url += '&deep_dive_only=1';
   }

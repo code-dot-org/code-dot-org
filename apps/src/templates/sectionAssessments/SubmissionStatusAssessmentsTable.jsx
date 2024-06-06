@@ -1,13 +1,17 @@
+import orderBy from 'lodash/orderBy';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
-import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
-import i18n from '@cdo/locale';
-import wrappedSortable from '../tables/wrapped_sortable';
-import orderBy from 'lodash/orderBy';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
+import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
+import wrappedSortable from '../tables/wrapped_sortable';
+
 import {studentOverviewDataPropType} from './assessmentDataShapes';
 
 const TABLE_WIDTH = tableLayoutStyles.table.width;
@@ -275,11 +279,11 @@ const styles = {
   },
   headerLabels: {
     color: color.charcoal,
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
   },
   studentNameColumn: {
     color: color.teal,
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
   },
 };
 

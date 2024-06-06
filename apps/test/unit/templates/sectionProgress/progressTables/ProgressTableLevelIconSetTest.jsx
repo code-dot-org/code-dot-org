@@ -1,14 +1,16 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {expect} from '../../../../util/reconfiguredChai';
-import {mount} from 'enzyme';
-import ProgressTableLevelIconSet from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLevelIconSet';
-import {unitTestExports} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLevelSpacer';
+
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {
   bubbleContainerWidths,
   BubbleSize,
 } from '@cdo/apps/templates/progress/BubbleFactory';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {fakeLevels} from '@cdo/apps/templates/progress/progressTestHelpers';
+import ProgressTableLevelIconSet from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLevelIconSet';
+import {unitTestExports} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLevelSpacer';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 const levelWithSublevels = {
   id: '123',

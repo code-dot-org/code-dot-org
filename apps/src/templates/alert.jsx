@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import color from '../util/color';
 import {valueOr} from '../utils';
 
@@ -84,6 +85,7 @@ export default class Alert extends React.Component {
         <button
           type="button"
           style={styles.closeButton}
+          className="no-mc"
           onClick={this.props.onClose}
         >
           <span>&times;</span>

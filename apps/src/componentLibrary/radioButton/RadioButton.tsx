@@ -1,11 +1,11 @@
-import React, {memo, ChangeEvent} from 'react';
 import classnames from 'classnames';
+import React, {memo, ChangeEvent} from 'react';
 
-import Typography from '@cdo/apps/componentLibrary/typography';
+import {componentSizeToBodyTextSizeMap} from '@cdo/apps/componentLibrary/common/constants';
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
+import Typography from '@cdo/apps/componentLibrary/typography';
 
 import moduleStyles from './radioButton.module.scss';
-import {componentSizeToBodyTextSizeMap} from '@cdo/apps/componentLibrary/common/constants';
 
 export interface RadioButtonProps {
   /** Radio Button checked state */
@@ -71,7 +71,8 @@ const RadioButton: React.FunctionComponent<RadioButtonProps> = ({
  * ### Production-ready Checklist:
  * * (✔) implementation of component approved by design team;
  * * (✔) has storybook, covered with stories and documentation;
- * * (✘) has tests: test every prop, every state and every interaction that's js related;
+ * * (✔) has tests: test every prop, every state and every interaction that's js related;
+ * * (see apps/test/unit/componentLibrary/RadioButtonTest.jsx, apps/test/unit/componentLibrary/RadioButtonsGroupTest.jsx)
  * * (?) passes accessibility checks;
  *
  * ###  Status: ```Ready for dev```

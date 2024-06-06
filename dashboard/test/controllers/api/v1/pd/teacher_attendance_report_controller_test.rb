@@ -92,7 +92,6 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ActionController::Tes
     assert_payment_fields response.first
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test 'organizers do not get payment info' do
     skip 'test is flaky for 6 hours per day due to time zone differences'
     sign_in @organizer
@@ -129,7 +128,6 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ActionController::Tes
     assert_equal [@pm_workshop.id, @workshop.id, @other_workshop.id].sort, response.map {|r| r['workshop_id']}.uniq.sort
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test 'organizers only see their own workshops' do
     skip 'test is flaky for 6 hours per day due to time zone differences'
     sign_in @organizer
@@ -264,26 +262,24 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ActionController::Tes
 
     # Check expected row counts for our test workshops
     # (We don't count all rows to insulate this test against existing state)
-    assert_equal 10, response.count {|row| row[11] == @pm_workshop.id.to_s}
-    assert_equal 10, response.count {|row| row[11] == @workshop.id.to_s}
-    assert_equal 1, response.count {|row| row[11] == @other_workshop.id.to_s}
+    assert_equal(10, response.count {|row| row[11] == @pm_workshop.id.to_s})
+    assert_equal(10, response.count {|row| row[11] == @workshop.id.to_s})
+    assert_equal(1, response.count {|row| row[11] == @other_workshop.id.to_s})
   end
 
-  private
-
-  def assert_common_fields(line)
+  private def assert_common_fields(line)
     EXPECTED_COMMON_FIELDS.each do |field_name|
       assert line.key?(field_name), "Expected common field #{field_name} not found in report line: #{line}"
     end
   end
 
-  def assert_payment_fields(line)
+  private def assert_payment_fields(line)
     EXPECTED_PAYMENT_FIELDS.each do |field_name|
       assert line.key?(field_name), "Expected payment field #{field_name} not found in report line: #{line}"
     end
   end
 
-  def refute_payment_fields(line)
+  private def refute_payment_fields(line)
     EXPECTED_PAYMENT_FIELDS.each do |field_name|
       refute line.key?(field_name), "Unexpected payment field #{field_name} found in report line: #{line}"
     end

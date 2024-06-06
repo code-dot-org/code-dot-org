@@ -1,8 +1,12 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import i18n from '@cdo/locale';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
 import BaseDialog from '../../BaseDialog';
+
 import CreateStandardsReportStep1 from './CreateStandardsReportStep1';
 import CreateStandardsReportStep2 from './CreateStandardsReportStep2';
 
@@ -69,13 +73,13 @@ const styles = {
     color: color.dark_charcoal,
   },
   boldText: {
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
   },
   dialog: {
     paddingLeft: 20,
     paddingRight: 20,
     paddingBottom: 20,
-    fontFamily: '"Gotham 4r", sans-serif, sans-serif',
+    ...fontConstants['main-font-regular'],
   },
 };
 

@@ -22,7 +22,7 @@ require_relative '../../../dashboard/config/environment'
 require 'optparse'
 require 'tmpdir'
 
-CDO.log = Logger.new(STDOUT)
+CDO.log = Logger.new($stdout)
 ActiveRecord::Base.record_timestamps = false
 
 options = {actually_update: false, interstitial_days: nil, deleted_filter: nil}

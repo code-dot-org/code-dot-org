@@ -1,25 +1,28 @@
+import classNames from 'classnames';
 import $ from 'jquery';
-import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
+import React from 'react';
 import {connect} from 'react-redux';
-import ProtectedStatefulDiv from './ProtectedStatefulDiv';
-import JsDebugger from '@cdo/apps/lib/tools/jsdebugger/JsDebugger';
-import PaneHeader, {PaneSection, PaneButton} from './PaneHeader';
-import i18n from '@cdo/locale';
-import commonStyles from '../commonStyles';
-import color from '../util/color';
-import * as utils from '@cdo/apps/utils';
-import {shouldUseRunModeIndicators} from '../redux/selectors';
-import SettingsCog from '../lib/ui/SettingsCog';
-import ShowCodeToggle from './ShowCodeToggle';
-import {singleton as studioApp} from '../StudioApp';
-import ProjectTemplateWorkspaceIcon from './ProjectTemplateWorkspaceIcon';
-import {queryParams} from '../code-studio/utils';
+
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
-import {closeWorkspaceAlert} from '../code-studio/projectRedux';
+import JsDebugger from '@cdo/apps/lib/tools/jsdebugger/JsDebugger';
 import styleConstants from '@cdo/apps/styleConstants';
-import classNames from 'classnames';
+import * as utils from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
+
+import {closeWorkspaceAlert} from '../code-studio/projectRedux';
+import {queryParams} from '../code-studio/utils';
+import commonStyles from '../commonStyles';
+import SettingsCog from '../lib/ui/SettingsCog';
+import {shouldUseRunModeIndicators} from '../redux/selectors';
+import {singleton as studioApp} from '../StudioApp';
+import color from '../util/color';
+
+import PaneHeader, {PaneSection, PaneButton} from './PaneHeader';
+import ProjectTemplateWorkspaceIcon from './ProjectTemplateWorkspaceIcon';
+import ProtectedStatefulDiv from './ProtectedStatefulDiv';
+import ShowCodeToggle from './ShowCodeToggle';
 
 class CodeWorkspace extends React.Component {
   static propTypes = {
@@ -42,6 +45,8 @@ class CodeWorkspace extends React.Component {
     closeWorkspaceAlert: PropTypes.func,
     workspaceAlert: PropTypes.object,
     isProjectTemplateLevel: PropTypes.bool,
+    hasIncompatibleSources: PropTypes.bool,
+    failedToGenerateCode: PropTypes.bool,
   };
 
   shouldComponentUpdate(nextProps) {
@@ -52,12 +57,14 @@ class CodeWorkspace extends React.Component {
     Object.keys(nextProps).forEach(
       function (key) {
         // isRunning and style only affect style, and can be updated
-        // workspaceAlert is involved in displaying or closing workspace alert
-        // therefore this key can be updated
+        // workspaceAlert, hasIncompatibleSources and failedToGenerateCode
+        // are involved in displaying or closing workspace alert and therefore can be updated.
         if (
           key === 'isRunning' ||
           key === 'style' ||
-          key === 'workspaceAlert'
+          key === 'workspaceAlert' ||
+          key === 'hasIncompatibleSources' ||
+          key === 'failedToGenerateCode'
         ) {
           return;
         }
@@ -263,23 +270,48 @@ class CodeWorkspace extends React.Component {
           </ProtectedStatefulDiv>
         )}
         {this.props.displayNotStartedBanner && !inCsfExampleSolution && (
-          <div id="notStartedBanner" style={styles.studentNotStartedWarning}>
+          <div
+            id="notStartedBanner"
+            style={{...styles.topBanner, ...styles.studentNotStartedWarning}}
+          >
             {i18n.levelNotStartedWarning()}
           </div>
         )}
         {this.props.displayOldVersionBanner && (
-          <div id="oldVersionBanner" style={styles.oldVersionWarning}>
+          <div
+            id="oldVersionBanner"
+            style={{...styles.topBanner, ...styles.oldVersionWarning}}
+          >
             {i18n.oldVersionWarning()}
           </div>
         )}
         {this.props.inStartBlocksMode && (
           <>
-            <div id="startBlocksBanner" style={styles.startBlocksBanner}>
+            <div
+              id="startBlocksBanner"
+              style={{...styles.topBanner, ...styles.startBlocksBanner}}
+            >
               {this.props.isProjectTemplateLevel
                 ? i18n.startBlocksTemplateWarning()
                 : i18n.inStartBlocksMode()}
             </div>
           </>
+        )}
+        {this.props.hasIncompatibleSources && (
+          <div
+            id="incompatibleSourcesBanner"
+            style={{...styles.topBanner, ...styles.errorBanner}}
+          >
+            {i18n.jsonInCdoBlockly()}
+          </div>
+        )}
+        {this.props.failedToGenerateCode && (
+          <div
+            id="failedToGenerateCodeBanner"
+            style={{...styles.topBanner, ...styles.errorBanner}}
+          >
+            {i18n.failedToGenerateBlocklyCode()}
+          </div>
         )}
         {props.showDebugger && (
           <JsDebugger
@@ -306,29 +338,24 @@ const styles = {
     },
   },
   oldVersionWarning: {
-    zIndex: 99,
     backgroundColor: color.lightest_red,
     textAlign: 'center',
-    height: 20,
-    padding: 5,
-    opacity: 0.8,
-    position: 'relative',
   },
   studentNotStartedWarning: {
-    zIndex: 99,
     backgroundColor: color.lightest_red,
-    height: 20,
-    padding: 5,
-    opacity: 0.9,
-    position: 'relative',
   },
   startBlocksBanner: {
-    zIndex: 99,
     backgroundColor: color.lighter_yellow,
-    height: 20,
+  },
+  topBanner: {
+    zIndex: 99,
     padding: 5,
     opacity: 0.9,
     position: 'relative',
+    height: 'fit-content',
+  },
+  errorBanner: {
+    backgroundColor: color.lightest_red,
   },
   chevronButton: {
     padding: 0,
@@ -373,6 +400,8 @@ export default connect(
     showMakerToggle: !!state.pageConstants.showMakerToggle,
     workspaceAlert: state.project.workspaceAlert,
     isProjectTemplateLevel: state.pageConstants.isProjectTemplateLevel,
+    hasIncompatibleSources: state.blockly.hasIncompatibleSources,
+    failedToGenerateCode: state.blockly.failedToGenerateCode,
   }),
   dispatch => ({
     closeWorkspaceAlert: () => dispatch(closeWorkspaceAlert()),

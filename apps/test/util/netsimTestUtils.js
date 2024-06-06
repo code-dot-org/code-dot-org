@@ -1,11 +1,12 @@
 import {assert} from './deprecatedChai';
 
-var utils = require('@cdo/apps/utils');
 var _ = require('lodash');
+
+var levels = require('@cdo/apps/netsim/levels');
+var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
 var NetSimTable = require('@cdo/apps/netsim/NetSimTable');
-var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
-var levels = require('@cdo/apps/netsim/levels');
+var utils = require('@cdo/apps/utils');
 
 /**
  * Checks whether the given table has the specified number of rows.

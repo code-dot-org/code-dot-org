@@ -1,0 +1,11 @@
+name 'CSA-SE-CV-Pre-Survey-Q04'
+
+question 'How confident are you in using a code-generating AI tool to modify solutions to fit problems?'
+
+right 'Not at all confident: I do not feel confident about using a code-generating AI tool to modify solutions to fit problems.'
+right 'Slightly confident: I understand the basics, but I am still uncertain about how to effectively use a code-generating AI tool to modify solutions.'
+right 'Moderately confident: I have a decent level of confidence and can handle some tasks, but I find more complex modifications challenging.'
+right 'Mostly confident: I am comfortable using a code-generating AI tool to make modifications to solutions for a range of problems, though I may need assistance with some complex scenarios.'
+right 'Very confident: I am completely confident in my ability to use a code-generating AI tool to modify solutions to fit any problem, regardless of its complexity.'
+
+allow_multiple_attempts false

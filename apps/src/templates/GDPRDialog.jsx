@@ -1,10 +1,12 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import Button from './Button';
-import i18n from '@cdo/locale';
-import BaseDialog from './BaseDialog';
-import DialogFooter from './teacherDashboard/DialogFooter';
+
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import i18n from '@cdo/locale';
+
+import BaseDialog from './BaseDialog';
+import Button from './Button';
+import DialogFooter from './teacherDashboard/DialogFooter';
 
 export default class GDPRDialog extends Component {
   static propTypes = {
@@ -64,7 +66,7 @@ export default class GDPRDialog extends Component {
             __useDeprecatedTag
             text={i18n.gdprDialogYes()}
             onClick={this.handleYesClick}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
             className="ui-test-gdpr-dialog-accept"
           />
         </DialogFooter>

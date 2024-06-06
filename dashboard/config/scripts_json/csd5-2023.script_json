@@ -4,6 +4,28 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "3ca02f91-9da1-492c-aa4f-ead62723da82",
+          "notice": "New Self-Paced Professional Learning Module!",
+          "details": "Want to teach CS Discoveries, but not sure where to start? Code.org has released a professional learning module all about CSD's Unit 5: Data and Society. This two-hour, self-paced module will teach you what you need to know to teach CSD. Check it out at this link!",
+          "link": "https://studio.code.org/courses/self-paced-pl-csd-unit5-2023",
+          "type": "information",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Unit 5 Self-Paced PL"
+        },
+        {
+          "key": "562b29e4-8c19-44f7-8a27-fb3162f17514",
+          "notice": "Free Teacher Resources from Amazon Future Engineer",
+          "details": "Code.org has partnered with Amazon Future Engineer to offer teachers at underserved schools a growing number of resources and benefits at no cost! ",
+          "link": "https://code.org/afe",
+          "type": "bullhorn",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Get free resources"
+        }
+      ],
       "curriculum_umbrella": "CSD",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -18,7 +40,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-07-17 23:33:36 UTC",
+    "serialized_at": "2024-04-15 17:56:42 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6076,13 +6098,13 @@
     {
       "name": "Project Guide Exemplar",
       "url": "https://docs.google.com/document/d/1D-Wr_Q9st_DsT1MF92Ixm8RFnWwI9tYmQN2rUXpd8I8/edit",
-      "key": "project_guide_exemplar",
+      "key": "project_guide_exemplar_2",
       "properties": {
         "audience": "Verified Teacher",
         "type": "Exemplar"
       },
       "seeding_key": {
-        "resource.key": "project_guide_exemplar"
+        "resource.key": "project_guide_exemplar_2"
       }
     },
     {
@@ -6211,14 +6233,13 @@
     {
       "name": "Sample Marked Rubrics",
       "url": "https://docs.google.com/document/d/1fbImuYWBio4mkmFMWWGBolyEWihxFPlvtxgxGhRokIc/edit",
-      "key": "sample_marked_rubrics",
+      "key": "sample_marked_rubrics_2",
       "properties": {
         "audience": "Verified Teacher",
-        "include_in_pdf": true,
         "type": "Exemplar"
       },
       "seeding_key": {
-        "resource.key": "sample_marked_rubrics"
+        "resource.key": "sample_marked_rubrics_2"
       }
     },
     {
@@ -6697,13 +6718,13 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Make a Recommendation",
-        "resource.key": "project_guide_exemplar"
+        "resource.key": "project_guide_exemplar_2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Make a Recommendation",
-        "resource.key": "sample_marked_rubrics"
+        "resource.key": "sample_marked_rubrics_2"
       }
     },
     {
@@ -7534,6 +7555,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

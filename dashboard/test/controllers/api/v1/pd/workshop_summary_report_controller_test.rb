@@ -82,7 +82,6 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ActionController::TestC
     assert_payment_fields response.first
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test 'organizers do not get payment info' do
     sign_in @organizer
 
@@ -116,7 +115,6 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ActionController::TestC
     assert_equal 3, response.count
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test 'organizers only see their own workshops' do
     sign_in @organizer
 
@@ -223,26 +221,24 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ActionController::TestC
     response = JSON.parse(@response.body)
     assert_equal 4, response.count
     unpaid_report = response.find {|row| row['workshop_id'] == unpaid_workshop.id}
-    assert_not_nil unpaid_report
+    refute_nil unpaid_report
     refute unpaid_report['qualified']
     assert_nil unpaid_report['payment_total']
   end
 
-  private
-
-  def assert_common_fields(line)
+  private def assert_common_fields(line)
     EXPECTED_COMMON_FIELDS.each do |field_name|
       assert line.key?(field_name), "Expected common field #{field_name} not found in report line: #{line}"
     end
   end
 
-  def assert_payment_fields(line)
+  private def assert_payment_fields(line)
     EXPECTED_PAYMENT_FIELDS.each do |field_name|
       assert line.key?(field_name), "Expected payment field #{field_name} not found in report line: #{line}"
     end
   end
 
-  def refute_payment_fields(line)
+  private def refute_payment_fields(line)
     EXPECTED_PAYMENT_FIELDS.each do |field_name|
       refute line.key?(field_name), "Unexpected payment field #{field_name} found in report line: #{line}"
     end

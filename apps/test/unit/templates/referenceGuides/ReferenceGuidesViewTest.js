@@ -1,7 +1,9 @@
-import React from 'react';
 import {isolateComponent} from 'isolate-react';
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
 import ReferenceGuideView from '@cdo/apps/templates/referenceGuides/ReferenceGuideView';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('ReferenceGuideView', () => {
   it('reference guide shows title', () => {

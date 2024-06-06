@@ -125,17 +125,17 @@ export const commands = {
   setBonusSuccessMessage(message) {
     this.bonusSuccessMessage = message;
   },
-  setEarlyTime(frames) {
-    this.validationFrames.early = frames;
-  },
   setWaitTime(frames) {
     this.validationFrames.fail = frames;
+    return true;
   },
   setFailTime(frames) {
     this.validationFrames.fail = frames;
+    return true;
   },
   setDelayTime(frames) {
     this.validationFrames.delay = frames;
+    return true;
   },
   getFailTime() {
     return this.validationFrames.fail;
@@ -222,9 +222,13 @@ export const commands = {
     this.previous.eventLogLength = this.eventLog.length;
     this.previous.printLogLength = this.printLog.length || 0;
     this.previous.soundLogLength = this.soundLog.length || 0;
+    this.previous.foregroundEffectsLength = this.foregroundEffects.length || 0;
+    this.previous.background = this.background;
+    this.previous.screenText = this.screenText;
+
+    // Store basic information about sprites.
     this.previous.sprites = [];
-    for (let i = 0; i < spriteIds.length; i++) {
-      let spriteId = spriteIds[i];
+    spriteIds.forEach(spriteId => {
       this.previous.sprites.push({
         id: spriteId,
         costume: this.nativeSpriteMap[spriteId].getAnimationLabel(),
@@ -236,7 +240,20 @@ export const commands = {
         speed: this.nativeSpriteMap[spriteId].speed,
         rotation: this.nativeSpriteMap[spriteId].rotation,
       });
-    }
+    });
+
+    // Store basic information about watched variables.
+    this.previous.variableBubbles = [];
+    const variableBubbles = this.getVariableBubbles();
+    variableBubbles.forEach(variableBubble => {
+      this.previous.variableBubbles.push({
+        ...variableBubble,
+        // Run the variable name through the JS interpreter to get its value,
+        // using an empty string for undefined variables.
+        // We need to store the previous value to validate changes between frames.
+        value: this.getVariableValue(variableBubble.name, ''),
+      });
+    });
   },
 
   // If the student has not completed any criteria, they are "failing".
@@ -304,6 +321,32 @@ export const commands = {
     if (firstFailed > -1) {
       return criteria[firstFailed].feedback;
     }
+  },
+
+  // Returns an object with properties representing student Blockly variables.
+  // Typically called in validation code to set `varLog` - a global variable
+  // initialized by the interpreted variableLog helper library.
+  buildVariableLog() {
+    const studentVariables = {};
+
+    const blocklyVariables = Blockly.getMainWorkspace()
+      .getVariableMap()
+      .getAllVariables();
+    const variableNames = blocklyVariables.map(blocklyVariable =>
+      Blockly.JavaScript.getName(blocklyVariable.name)
+    );
+
+    for (const name of variableNames) {
+      const value = this.getVariableValue(name);
+      if (
+        ['number', 'string', 'boolean'].includes(typeof value) |
+        Array.isArray(value)
+      ) {
+        studentVariables[name] = value;
+      }
+    }
+
+    return studentVariables;
   },
 };
 

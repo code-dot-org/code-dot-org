@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a1ad153ccead8c955cb50e77209628cbaa87d6fb7daa6c18feebbad812b36a48
-size 249
+@mixin unselectable {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin selectable {
+  -moz-user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}

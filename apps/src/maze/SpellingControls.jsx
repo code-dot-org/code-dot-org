@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-var msg = require('./locale');
+
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
+
+var msg = require('./locale');
 
 var SpellingControls = function (props) {
   return (
@@ -17,7 +19,7 @@ var SpellingControls = function (props) {
                 className="spellingButton"
                 disabled
               >
-                <img src="/blockly/media/1x1.gif" />
+                <img src="/blockly/media/1x1.gif" alt="" />
                 {props.searchWord}
               </button>
             </td>
@@ -31,7 +33,7 @@ var SpellingControls = function (props) {
                 className="spellingButton"
                 disabled
               >
-                <img src="/blockly/media/1x1.gif" />
+                <img src="/blockly/media/1x1.gif" alt="" />
                 <span id="currentWordContents" />
               </button>
             </td>

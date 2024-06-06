@@ -1,5 +1,9 @@
+import _ from 'lodash';
+
 import {SET_SCRIPT} from '@cdo/apps/redux/unitSelectionRedux';
+
 import firehoseClient from '../../lib/util/firehose';
+
 import {ViewType} from './sectionProgressConstants';
 
 const SET_CURRENT_VIEW = 'sectionProgress/SET_CURRENT_VIEW';
@@ -9,6 +13,11 @@ const FINISH_LOADING_PROGRESS = 'sectionProgress/FINISH_LOADING_PROGRESS';
 const START_REFRESHING_PROGRESS = 'sectionProgress/START_REFRESHING_PROGRESS';
 const FINISH_REFRESHING_PROGRESS = 'sectionProgress/FINISH_REFRESHING_PROGRESS';
 const ADD_DATA_BY_UNIT = 'sectionProgress/ADD_DATA_BY_UNIT';
+
+const EXPAND_METADATA_FOR_STUDENTS =
+  'sectionProgress/EXPAND_METADATA_FOR_STUDENTS';
+const COLLAPSE_METADATA_FOR_STUDENTS =
+  'sectionProgress/COLLAPSE_METADATA_FOR_STUDENTS';
 
 // Action creators
 export const startLoadingProgress = () => ({type: START_LOADING_PROGRESS});
@@ -29,6 +38,15 @@ export const addDataByUnit = data => ({
   data,
 });
 
+export const expandMetadataForStudents = studentIds => ({
+  type: EXPAND_METADATA_FOR_STUDENTS,
+  studentIds,
+});
+export const collapseMetadataForStudents = studentIds => ({
+  type: COLLAPSE_METADATA_FOR_STUDENTS,
+  studentIds,
+});
+
 const INITIAL_LESSON_OF_INTEREST = 1;
 
 const initialState = {
@@ -41,6 +59,7 @@ const initialState = {
   lessonOfInterest: INITIAL_LESSON_OF_INTEREST,
   isLoadingProgress: false,
   isRefreshingProgress: false,
+  expandedMetadataStudentIds: [],
 };
 
 export default function sectionProgress(state = initialState, action) {
@@ -107,6 +126,23 @@ export default function sectionProgress(state = initialState, action) {
       },
     };
   }
+  if (action.type === EXPAND_METADATA_FOR_STUDENTS) {
+    return {
+      ...state,
+      expandedMetadataStudentIds: _.uniq([
+        ...state.expandedMetadataStudentIds,
+        ...action.studentIds,
+      ]),
+    };
+  }
+  if (action.type === COLLAPSE_METADATA_FOR_STUDENTS) {
+    return {
+      ...state,
+      expandedMetadataStudentIds: state.expandedMetadataStudentIds.filter(
+        studentId => !action.studentIds.includes(studentId)
+      ),
+    };
+  }
 
   return state;
 }
@@ -137,7 +173,7 @@ export const jumpToLessonDetails = lessonOfInterest => {
 
 /**
  * Retrieves the unit data for the section in the selected unit
- * @returns {scriptDataPropType} object containing metadata about the unit structure
+ * @returns {unitDataPropType} object containing metadata about the unit structure
  */
 export const getCurrentUnitData = state => {
   return state.sectionProgress.unitDataByUnit[state.unitSelection.scriptId];

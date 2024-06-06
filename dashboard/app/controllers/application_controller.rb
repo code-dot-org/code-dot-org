@@ -4,6 +4,7 @@ require 'dynamic_config/gatekeeper'
 require 'dynamic_config/page_mode'
 require 'cdo/shared_constants'
 require 'cpa'
+require 'policies/child_account'
 
 class ApplicationController < ActionController::Base
   include LocaleHelper
@@ -106,8 +107,6 @@ class ApplicationController < ActionController::Base
     response.headers["Expires"] = "Fri, 01 Jan 1990 00:00:00 GMT"
   end
 
-  protected
-
   # These are sometimes updated from the registration form
   SCHOOL_INFO_ATTRIBUTES = [
     :country,
@@ -159,29 +158,32 @@ class ApplicationController < ActionController::Base
     :us_state,
     :country_code,
     {school_info_attributes: SCHOOL_INFO_ATTRIBUTES},
+    {
+      authentication_options_attributes: [
+        :email,
+      ],
+    },
   ]
 
   PERMITTED_USER_FIELDS.concat(UI_TEST_ATTRIBUTES) if rack_env?(:test, :development)
   PERMITTED_USER_FIELDS.freeze
 
-  def configure_permitted_parameters
+  protected def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:account_update) {|u| u.permit PERMITTED_USER_FIELDS}
     devise_parameter_sanitizer.permit(:sign_up) {|u| u.permit PERMITTED_USER_FIELDS}
     devise_parameter_sanitizer.permit(:sign_in) {|u| u.permit PERMITTED_USER_FIELDS}
   end
 
   # Capture the current request URL for i18n string tracking
-  def setup_i18n_tracking
+  protected def setup_i18n_tracking
     Thread.current[:current_request_url] = request.url
   end
 
-  def with_locale
-    I18n.with_locale(locale) do
-      yield
-    end
+  protected def with_locale(&block)
+    I18n.with_locale(locale, &block)
   end
 
-  def milestone_response(options)
+  protected def milestone_response(options)
     response = {
       timestamp: DateTime.now.to_milliseconds
     }
@@ -229,15 +231,15 @@ class ApplicationController < ActionController::Base
     response
   end
 
-  def set_locale_cookie(locale)
+  protected def set_locale_cookie(locale)
     cookies[:language_] = {value: locale, domain: :all, expires: 10.years.from_now}
   end
 
-  def require_english_in_levelbuilder_mode
+  protected def require_english_in_levelbuilder_mode
     redirect_to '/', flash: {alert: 'Editing on levelbuilder is only supported in English (en-US locale).'} unless locale == :'en-US'
   end
 
-  def require_levelbuilder_mode
+  protected def require_levelbuilder_mode
     require_english_in_levelbuilder_mode
 
     unless Rails.application.config.levelbuilder_mode
@@ -253,7 +255,7 @@ class ApplicationController < ActionController::Base
   # not modify curriculum content in a way could introduce intermittent failures
   # in other tests. Developers wishing to run these tests locally should run
   # their local server in levelbuilder_mode.
-  def require_levelbuilder_mode_or_test_env
+  protected def require_levelbuilder_mode_or_test_env
     require_english_in_levelbuilder_mode
 
     unless Rails.application.config.levelbuilder_mode || rack_env?(:test)
@@ -261,11 +263,11 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def require_admin
+  protected def require_admin
     authorize! :read, :reports
   end
 
-  def redirect_admin_from_labs
+  protected def redirect_admin_from_labs
     redirect_to root_path, flash: {alert: 'Labs not allowed for admins.'} if current_user&.admin?
   end
 
@@ -273,7 +275,7 @@ class ApplicationController < ActionController::Base
   # (storing full objects is not a good idea because the session is
   # saved as a cookie)
 
-  def pairings=(pairings_from_params)
+  protected def pairings=(pairings_from_params)
     # remove pairings
     if pairings_from_params[:pairings].blank?
       session[:pairings] = []
@@ -295,7 +297,7 @@ class ApplicationController < ActionController::Base
     session[:pairing_section_id] = pairings_from_params[:section_id].to_i
   end
 
-  def pairings
+  protected def pairings
     return [] if session[:pairings].blank?
     if pairing_still_enabled
       User.find(session[:pairings])
@@ -308,7 +310,7 @@ class ApplicationController < ActionController::Base
 
   # @return [Array of Integers] an array of user IDs of users paired with the
   #   current user.
-  def pairing_user_ids
+  protected def pairing_user_ids
     unless pairing_still_enabled
       # clear the pairing data from the session cookie
       self.pairings = {pairings: []}
@@ -318,7 +320,7 @@ class ApplicationController < ActionController::Base
     session[:pairings].nil? ? [] : session[:pairings]
   end
 
-  def clear_sign_up_session_vars
+  protected def clear_sign_up_session_vars
     if session[:sign_up_uid] || session[:sign_up_type] || session[:sign_up_tracking_expiration]
       session.delete(:sign_up_uid)
       session.delete(:sign_up_type)
@@ -328,7 +330,7 @@ class ApplicationController < ActionController::Base
 
   # Check that the user is compliant with the Child Account Policy. If they
   # are not compliant, then we need to send them to the lockout page.
-  def assert_child_account_policy
+  protected def assert_child_account_policy
     # Check that the child account policy is currently enabled.
     return unless ::Cpa.cpa_experience(request)
 
@@ -345,9 +347,11 @@ class ApplicationController < ActionController::Base
       lockout_path,
       # The locked out student needs access to the policy consent API's
       policy_compliance_child_account_consent_path,
+      # The age interstitial when the age isn't known will block the lockout page
+      users_set_student_information_path,
     ].include?(request.path)
 
-    redirect_to lockout_path unless current_user.child_account_policy_compliant?
+    redirect_to lockout_path if Policies::ChildAccount.locked_out?(current_user)
   end
 
   private def pairing_still_enabled

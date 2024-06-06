@@ -32,6 +32,7 @@ const SET_TTS_AUTOPLAY_ENABLED_FOR_LEVEL =
   'instructions/SET_TTS_AUTOPLAY_ENABLED_FOR_LEVEL';
 const SET_CODE_REVIEW_ENABLED_FOR_LEVEL =
   'instructions/SET_CODE_REVIEW_ENABLED_FOR_LEVEL';
+const SET_TA_RUBRIC = 'instructions/SET_TA_RUBRIC';
 
 /**
  * Some scenarios:
@@ -77,6 +78,7 @@ const instructionsInitialState = {
   muteBackgroundMusic: () => {},
   unmuteBackgroundMusic: () => {},
   programmingEnvironment: null,
+  taRubric: null,
 };
 
 export default function reducer(state = {...instructionsInitialState}, action) {
@@ -216,6 +218,12 @@ export default function reducer(state = {...instructionsInitialState}, action) {
     });
   }
 
+  if (action.type === SET_TA_RUBRIC) {
+    return Object.assign({}, state, {
+      taRubric: action.taRubric,
+    });
+  }
+
   return state;
 }
 
@@ -328,6 +336,11 @@ export const setDynamicInstructionsOverlayDismissCallback =
     type: SET_DYNAMIC_INSTRUCTIONS_DISMISS_CALLBACK,
     dynamicInstructionsDismissCallback,
   });
+
+export const setTaRubric = taRubric => ({
+  type: SET_TA_RUBRIC,
+  taRubric,
+});
 
 // HELPERS
 

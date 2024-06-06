@@ -88,6 +88,7 @@ class Api::V1::SectionsStudentsController < Api::V1::JSONApiController
           user_type: User::TYPE_STUDENT,
           provider: User::PROVIDER_SPONSORED,
           name: student["name"],
+          family_name: student["family_name"],
           age: student["age"],
           gender: student["gender"],
           gender_teacher_input: student["gender_teacher_input"],

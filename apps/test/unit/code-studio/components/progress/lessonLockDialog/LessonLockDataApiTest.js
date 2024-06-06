@@ -1,5 +1,6 @@
 import React from 'react';
-import {mount} from 'enzyme';
+import PropTypes from 'prop-types';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import {expect} from '../../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {
@@ -18,8 +19,6 @@ describe('LessonLockDataApi', () => {
   let useGetLockStateReturnValue = {
     current: null,
   };
-  // TODO: define these props
-  // eslint-disable-next-line react/prop-types
   const UseGetLockStateHarness = ({unitId, lessonId, sectionId}) => {
     useGetLockStateReturnValue.current = useGetLockState(
       unitId,
@@ -131,4 +130,10 @@ describe('LessonLockDataApi', () => {
       window.fetch.restore();
     });
   });
+
+  UseGetLockStateHarness.propTypes = {
+    unitId: PropTypes.number,
+    lessonId: PropTypes.number,
+    sectionId: PropTypes.number,
+  };
 });

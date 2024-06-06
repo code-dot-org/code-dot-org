@@ -25,8 +25,8 @@ class Api::V1::FoormSimpleSurveySubmissionsControllerTest < ActionController::Te
 
     response_body = JSON.parse(response.body)
 
-    assert_not_nil response_body['foorm_submission_id']
-    assert_not_nil response_body['simple_survey_submission_id']
+    refute_nil response_body['foorm_submission_id']
+    refute_nil response_body['simple_survey_submission_id']
     assert_equal @simple_survey_form.id, response_body['simple_survey_form_id']
   end
 
@@ -37,8 +37,8 @@ class Api::V1::FoormSimpleSurveySubmissionsControllerTest < ActionController::Te
 
     response_body = JSON.parse(response.body)
 
-    assert_not_nil response_body['foorm_submission_id']
-    assert_not_nil response_body['simple_survey_submission_id']
+    refute_nil response_body['foorm_submission_id']
+    refute_nil response_body['simple_survey_submission_id']
     assert_equal @simple_survey_form.id, response_body['simple_survey_form_id']
 
     # A submission's answers cannot be null, so we store a blank JSON object string if a submission has no answers

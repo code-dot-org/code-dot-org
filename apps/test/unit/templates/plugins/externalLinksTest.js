@@ -1,5 +1,6 @@
-import {assert} from '../../../util/reconfiguredChai';
 import {isExternalLink} from '@cdo/apps/templates/plugins/externalLinks';
+
+import {assert} from '../../../util/reconfiguredChai';
 
 describe('external links remark plugin', () => {
   it('treats relative links as internal', () => {

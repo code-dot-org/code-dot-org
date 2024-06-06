@@ -14,14 +14,17 @@ import {SourcesStore} from './SourcesStore';
 import {ChannelsStore} from './ChannelsStore';
 import {Channel, Project, ProjectSources} from '../types';
 import {currentLocation} from '@cdo/apps/utils';
-import Lab2MetricsReporter from '../Lab2MetricsReporter';
+import LabMetricsReporter from '../Lab2MetricsReporter';
 import {ValidationError} from '../responseValidators';
+import {NetworkError} from '@cdo/apps/util/HttpClient';
+import Lab2Registry from '../Lab2Registry';
 const {reload} = require('@cdo/apps/utils');
 
 export default class ProjectManager {
   private readonly channelId: string;
   private readonly sourcesStore: SourcesStore;
   private readonly channelsStore: ChannelsStore;
+  private readonly metricsReporter: LabMetricsReporter;
   private nextSaveTime: number | null = null;
   private readonly saveInterval: number = 30 * 1000; // 30 seconds
   private saveInProgress = false;
@@ -52,7 +55,8 @@ export default class ProjectManager {
     sourcesStore: SourcesStore,
     channelsStore: ChannelsStore,
     channelId: string,
-    reduceChannelUpdates: boolean
+    reduceChannelUpdates: boolean,
+    metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
   ) {
     this.channelId = channelId;
     this.sourcesStore = sourcesStore;
@@ -60,6 +64,11 @@ export default class ProjectManager {
     this.reduceChannelUpdates = reduceChannelUpdates;
     this.initialSaveComplete = false;
     this.forceReloading = false;
+    this.metricsReporter = metricsReporter;
+  }
+
+  getChannelId(): string {
+    return this.channelId;
   }
 
   // Load the project from the sources and channels store.
@@ -77,12 +86,16 @@ export default class ProjectManager {
       // we will default to empty sources. Source can return not found if the project
       // is new. If neither of these cases, throw the error.
       if (error instanceof ValidationError) {
-        Lab2MetricsReporter.logWarning(
+        this.metricsReporter.logWarning(
           `Error validating sources (${error.message}). Defaulting to empty sources.`
         );
-      } else if (!(error as Error).message.includes('404')) {
-        Lab2MetricsReporter.logError('Error loading sources', error as Error);
-        throw error;
+      } else if (
+        error instanceof NetworkError &&
+        (error as NetworkError).response.status === 404
+      ) {
+        // This is expected if the project is new. Default to empty sources.
+      } else {
+        throw new Error('Error loading sources', {cause: error});
       }
     }
 
@@ -90,8 +103,7 @@ export default class ProjectManager {
     try {
       channel = await this.channelsStore.load(this.channelId);
     } catch (error) {
-      Lab2MetricsReporter.logError('Error loading channel', error as Error);
-      throw error;
+      throw new Error('Error loading channel', {cause: error});
     }
 
     this.lastChannel = channel;
@@ -138,7 +150,7 @@ export default class ProjectManager {
   /**
    * Try to force save with the last sourcesToSave, if it exists.
    * This is used to flush out any remaining enqueued saves.
-   * @returns  a promise that resolves to a Response. If the save is successful, the response
+   * @returns a promise that resolves to a Response. If the save is successful, the response
    * will be empty, otherwise it will contain failure information.
    */
   async flushSave() {
@@ -210,6 +222,15 @@ export default class ProjectManager {
     this.channelsStore.redirectToRemix(this.lastChannel);
   }
 
+  redirectToView() {
+    this.throwErrorIfDestroyed('redirectToView');
+    if (!this.lastChannel || !this.lastChannel.projectType) {
+      this.logAndThrowError('Cannot view without channel');
+      return;
+    }
+    this.channelsStore.redirectToView(this.lastChannel);
+  }
+
   /**
    * Publish the current channel.
    */
@@ -259,7 +280,12 @@ export default class ProjectManager {
     // We can't save without a last channel or last source.
     // We also know we don't need to save if we don't have sources to save
     // or a channel to save.
-    if (!this.lastChannel || !(this.sourcesToSave || this.channelToSave)) {
+    // We also cannot save if the user is not the owner of this project.
+    if (
+      !this.lastChannel ||
+      !this.lastChannel.isOwner ||
+      !(this.sourcesToSave || this.channelToSave)
+    ) {
       this.executeSaveNoopListeners(this.lastChannel);
       return;
     }
@@ -300,6 +326,17 @@ export default class ProjectManager {
       // Even if only the source changed, we still update the channel to modify the last
       // updated time.
       this.channelToSave ||= this.lastChannel;
+
+      // If the sources contain a labConfig entry, then also save this to the
+      // channel, which means that the labConfig entry will also be saved in the
+      // Project model in the database, specifically inside the value field JSON.
+      if (this.sourcesToSave?.labConfig) {
+        this.channelToSave = {
+          ...this.channelToSave,
+          labConfig: this.sourcesToSave?.labConfig,
+        };
+      }
+
       let channelResponse;
       try {
         channelResponse = await this.channelsStore.save(this.channelToSave);
@@ -320,16 +357,17 @@ export default class ProjectManager {
   private onSaveFail(errorMessage: string, error: Error) {
     this.saveInProgress = false;
     this.executeSaveFailListeners(error);
-    if (error.message.includes('409')) {
-      // If this is a conflict, we need to reload the page.
+    if (error.message.includes('409') || error.message.includes('401')) {
+      // If this is a conflict or the user has somehow become unauthorized,
+      // we need to reload the page.
       // We set forceReloading to true so the client can skip
       // showing the user a dialog before reload.
       this.forceReloading = true;
-      Lab2MetricsReporter.logWarning('Conflict on save, reloading page');
+      this.metricsReporter.logWarning(`${error.message}. Reloading page.`);
       reload();
     } else {
       // Otherwise, we log the error.
-      Lab2MetricsReporter.logError(errorMessage, error);
+      this.metricsReporter.logError(errorMessage, error);
     }
   }
 
@@ -418,7 +456,7 @@ export default class ProjectManager {
 
   private logAndThrowError(errorMessage: string) {
     const error = new Error(errorMessage);
-    Lab2MetricsReporter.logError(errorMessage, error);
+    this.metricsReporter.logError(errorMessage, error);
     throw error;
   }
 

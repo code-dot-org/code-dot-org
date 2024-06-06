@@ -17,6 +17,13 @@ class TestController < ApplicationController
     head :ok
   end
 
+  def authorized_teacher_access
+    return unless (user = current_user)
+    user.permission = UserPermission::AUTHORIZED_TEACHER
+    user.save!
+    head :ok
+  end
+
   def plc_reviewer_access
     return unless (user = current_user)
     user.permission = UserPermission::PLC_REVIEWER
@@ -228,6 +235,7 @@ class TestController < ApplicationController
       previous_yearlong_cdo_pd: ['CS in Science'],
       enough_course_hours: Pd::Application::TeacherApplication.options[:enough_course_hours].first,
       program: 'csp',
+      will_teach: 'Yes',
       csp_which_grades: ['11', '12'],
       csp_how_offer: 'As an AP course',
       csd_which_grades: ['6', '7'],
@@ -235,7 +243,6 @@ class TestController < ApplicationController
       csa_how_offer: 'As an AP course',
       csa_phone_screen: 'Yes',
       csa_already_know: 'Yes',
-      replace_existing: 'No, this course will be added to the schedule in addition to an existing computer science course',
       pay_fee: 'Yes, my school/district would be able to pay the full program fee.'
     }
   end
@@ -317,6 +324,77 @@ class TestController < ApplicationController
     Pd::Application::TeacherApplication.find(params[:application_id].to_i).destroy
     User.find(params[:teacher_id].to_i).destroy
     User.find_by(name: params[:pm_name]).destroy
+    head :ok
+  end
+
+  def create_pilot
+    name = params.require(:pilot_name)
+    Pilot.create_with(allow_joining_via_url: true, display_name: name).find_or_create_by(name: name)
+    head :ok
+  end
+
+  def set_single_user_experiment
+    SingleUserExperiment.find_or_create_by!(
+      min_user_id: current_user.id,
+      name: params[:experiment_name]
+    )
+    head :ok
+  end
+
+  def set_single_section_experiment
+    SingleSectionExperiment.find_or_create_by!(
+      name: params[:experiment_name],
+      section: current_user.sections.first,
+      script: Unit.find_by(name: params[:script_name])
+    )
+    head :ok
+  end
+
+  def get_validate_rubric_ai_config
+    AiRubricConfig.validate_ai_config
+    render plain: 'OK'
+  end
+
+  def complete_unit
+    unit_name = params.require(:unit_name)
+    unit = Unit.find_by!(name: unit_name)
+    UserScript.create!(user: current_user, script: unit, completed_at: Time.now)
+    head :ok
+  end
+
+  # Creates the user and signs them in.
+  def create_user
+    user_opts = params.require(:user).permit(
+      :user_type,
+      :email,
+      :password,
+      :password_confirmation,
+      :name,
+      :age,
+      :username,
+      :terms_of_service_version,
+      :sign_in_count,
+      :parent_email_preference_opt_in_required,
+      :parent_email_preference_opt_in,
+      :parent_email_preference_email,
+      :parent_email_preference_request_ip,
+      :parent_email_preference_source,
+      :email_preference_opt_in,
+      :email_preference_form_kind,
+      :email_preference_request_ip,
+      :email_preference_source,
+      :created_at,
+      :country_code,
+      :us_state,
+      :user_provided_us_state,
+      :data_transfer_agreement_accepted,
+      :data_transfer_agreement_request_ip,
+      :data_transfer_agreement_kind,
+      :data_transfer_agreement_source,
+      :data_transfer_agreement_at,
+    )
+    user = User.create!(**user_opts)
+    sign_in user
     head :ok
   end
 end

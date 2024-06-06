@@ -1,0 +1,189 @@
+@import "color.scss";
+@import "font.scss";
+@import "@cdo/apps/componentLibrary/common/styles/mixins";
+@import "@cdo/apps/componentLibrary/typography/typography.module";
+
+// Chips common styles
+.chips {
+  fieldset {
+    .chipsContainer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .chip {
+      display: inline-block;
+      background-color: $light_white;
+      border: 1px solid $light_black;
+      color: $light_black;
+      min-width: 30px;
+      text-align: center;
+      border-radius: 100px;
+      white-space: nowrap;
+      margin: 0;
+      cursor: pointer;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+
+      input[type="checkbox"] {
+        position: absolute;
+        opacity: 0;
+      }
+
+      // Checked styles
+      &:has(input[type="checkbox"]:checked) {
+        border: 1px solid $light_primary_500;
+        background-color: $light_primary_500;
+        color: $light_white;
+      }
+
+      // Hover styles
+      &:hover {
+        background-color: $light_gray_100;
+
+        &:has(input[type="checkbox"]:checked) {
+          background-color: $light_primary_700;
+        }
+      }
+
+      // Pressed styles
+      &:active {
+        background-color: $light_primary_100;
+        outline: $light_primary_500 solid 2px;
+        outline-offset: -2px;
+
+        &:has(input[type="checkbox"]:checked) {
+          background-color: $light_primary_700;
+          outline: $light_primary_500 solid 2px;
+          outline-offset: -2px;
+        }
+      }
+
+      // Focus styles
+      &:has(input[type="checkbox"]:focus-visible) {
+        outline: 2px solid $light_primary_500;
+        outline-offset: 2px;
+      }
+
+      //Disabled styles
+      &:has(input[type="checkbox"]:disabled) {
+        color: $light_gray_200;
+        border-color: $light_gray_200;
+
+        &:hover {
+          cursor: not-allowed;
+          background-color: $light_white;
+        }
+
+        &:active {
+          background-color: $light_white;
+          outline: none;
+        }
+      }
+
+      &:has(input[type="checkbox"]:disabled:checked) {
+        background-color: $light_gray_200;
+        color: $light_white;
+      }
+    }
+  }
+
+  fieldset div:nth-of-type(1) {
+    margin-inline-start: 0;
+  }
+}
+
+// Chips Colors
+.chips-black {
+  fieldset {
+    .chip {
+      border-color: $light_black;
+    }
+  }
+}
+
+.chips-gray {
+  fieldset {
+    .chip {
+      border-color: $light_gray_400;
+    }
+  }
+}
+
+// Chips sizes
+.chips-l {
+  .groupLabel {
+    @include label-one;
+  }
+
+  .chip {
+    padding: calc(0.62rem + 2px) 1.25rem 0.62rem;
+
+    &.chip-thick {
+      @include button-one-text;
+    }
+
+    &.chip-thin {
+      @include body-one;
+    }
+  }
+}
+
+.chips-m {
+  .groupLabel {
+    @include label-two;
+  }
+
+  .chip {
+    padding: calc(0.5rem + 2px) 1rem 0.5rem;
+
+    &.chip-thick {
+      @include button-two-text;
+    }
+
+    &.chip-thin {
+      @include body-two;
+    }
+  }
+}
+
+.chips-s {
+  .groupLabel {
+    @include label-three;
+  }
+
+  .chip {
+    padding: calc(0.31rem + 1px) 0.75rem 0.31rem;
+
+    &.chip-thick {
+      @include button-three-text;
+    }
+
+    &.chip-thin {
+      @include body-three;
+    }
+  }
+}
+
+.chips-xs {
+  .groupLabel {
+    @include label-four;
+  }
+
+  .chip {
+    padding: calc(0.12rem + 1px) 0.5rem 0.12rem;
+
+    &.chip-thick {
+      @include button-four-text;
+    }
+
+    &.chip-thin {
+      @include body-four;
+    }
+  }
+}

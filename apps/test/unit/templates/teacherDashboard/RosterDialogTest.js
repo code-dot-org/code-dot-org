@@ -1,11 +1,13 @@
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow, mount} from 'enzyme';
 import sinon from 'sinon';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
-import {assert, expect} from '../../../util/reconfiguredChai';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {UnconnectedRosterDialog as RosterDialog} from '@cdo/apps/templates/teacherDashboard/RosterDialog';
 import locale from '@cdo/locale';
+
+import {assert, expect} from '../../../util/reconfiguredChai';
 
 const failedLoadError = {
   status: 404,

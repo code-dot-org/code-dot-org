@@ -2,7 +2,7 @@ require 'selenium/webdriver'
 require 'webdrivers'
 
 module SeleniumBrowser
-  def self.local(headless=true, browser=:chrome)
+  def self.local(browser: :chrome, headless: true)
     browser = browser.to_sym
     options = {}
     case browser
@@ -40,7 +40,11 @@ module SeleniumBrowser
     rescue Selenium::WebDriver::Error::WebDriverError => exception
       if (msg = exception.message.match(/unexpected response, code=(?<code>\d+).*\n(?<error>.*)/))
         error = msg[:error]
-        error = JSON.parse(error)['value']['error'] rescue error
+        error = begin
+          JSON.parse(error)['value']['error']
+        rescue
+          error
+        end
         raise exception, "Error #{msg[:code]}: #{error}", exception.backtrace
       end
       raise

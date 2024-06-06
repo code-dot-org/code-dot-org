@@ -1,0 +1,31 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2023-08-11T00:53:52.000Z",
+  "level_num": "custom",
+  "user_id": 976,
+  "properties": {
+    "encrypted": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "library": "snap",
+      "text": "__SNAP__\nBase Mix",
+      "startSources": {
+        "languageVersion": 0,
+        "blocks": [
+          {
+            "type": "when_run_simple2",
+            "id": "*+!=@+i`ETr:}_lA=S!E",
+            "x": 30,
+            "y": 30
+          }
+        ]
+      }
+    },
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2023-08-11T00:53:52.816+00:00\",\"changed\":[\"cloned from \\\"I Need a Dollar\\\"\"],\"cloned_from\":\"I Need a Dollar\"},{\"changed_at\":\"2023-08-11 00:54:34 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-08-11 00:55:28 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

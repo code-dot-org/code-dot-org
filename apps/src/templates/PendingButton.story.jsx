@@ -1,10 +1,11 @@
-import React from 'react';
-import PendingButton from './PendingButton';
-import dataStyles from '../storage/dataBrowser/data-styles.module.scss';
 import classNames from 'classnames';
+import React from 'react';
+
+import PendingButton from './PendingButton';
+
+import dataStyles from '../storage/dataBrowser/data-styles.module.scss';
 
 export default {
-  title: 'PendingButton',
   component: PendingButton,
 };
 

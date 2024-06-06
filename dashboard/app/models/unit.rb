@@ -45,6 +45,7 @@ class Unit < ApplicationRecord
   include Curriculum::CourseTypes
   include Curriculum::AssignableCourse
   include Rails.application.routes.url_helpers
+  include Unit::TextToSpeech
 
   include Seeded
   has_many :lesson_groups, -> {order(:position)}, foreign_key: 'script_id', dependent: :destroy
@@ -198,6 +199,8 @@ class Unit < ApplicationRecord
 
   UNIT_DIRECTORY = "#{Rails.root}/config/scripts".freeze
 
+  TEACHER_FEEDBACK_INITIATIVES = %w(CSF CSC CSD CSP CSA).freeze
+
   def prevent_course_version_change?
     resources.any? ||
       student_resources.any? ||
@@ -281,6 +284,10 @@ class Unit < ApplicationRecord
   #   said json.  Expect this to be nil on levelbulider, since those objects
   #   are created, not seeded. Used by the staging build to identify when a
   #   unit is being updated, so we can regenerate PDFs.
+  # is_deprecated - true if the unit is deprecated. If this flag is set, we will redirect
+  #   all /s, /lessons and /levels page in that unit to our "This course is deprecated" page.
+  #   We don't use published_state here because some courses in the deprecated published state
+  #   are not ready to be redirected. In the future we should unify these two states.
   serialized_attrs %w(
     hideable_lessons
     professional_learning_course
@@ -308,6 +315,7 @@ class Unit < ApplicationRecord
     is_migrated
     seeded_from
     use_legacy_lesson_plans
+    is_deprecated
   )
 
   def self.twenty_hour_unit
@@ -390,7 +398,7 @@ class Unit < ApplicationRecord
 
   # Find the lesson based on its relative position, lockable value, and if it has a lesson plan.
   # Raises `ActiveRecord::RecordNotFound` if no matching lesson is found.
-  def lesson_by_relative_position(position, unnumbered_lesson = false)
+  def lesson_by_relative_position(position, unnumbered_lesson: false)
     if unnumbered_lesson
       lessons.where(lockable: true, has_lesson_plan: false).find_by!(relative_position: position)
     else
@@ -444,7 +452,7 @@ class Unit < ApplicationRecord
   def self.script_level_cache
     return nil unless should_cache?
     @@script_level_cache ||= {}.tap do |cache|
-      script_cache.values.each do |unit|
+      script_cache.each_value do |unit|
         cache.merge!(unit.script_levels.index_by(&:id))
       end
     end
@@ -455,7 +463,7 @@ class Unit < ApplicationRecord
   def self.level_cache
     return nil unless should_cache?
     @@level_cache ||= {}.tap do |cache|
-      script_level_cache.values.each do |script_level|
+      script_level_cache.each_value do |script_level|
         level = script_level.level
         next unless level
         cache[level.id] = level unless cache.key? level.id
@@ -711,6 +719,16 @@ class Unit < ApplicationRecord
 
     # A student can view the unit version if they are assigned to it.
     user.assigned_script?(self)
+  end
+
+  # If this unit is in a unit group, returns the next unit in the unit group.
+  # If it's the last unit in the unit group, returns nil.
+  # If it's not in a unit group, returns nil.
+  def next_unit(user)
+    return nil unless unit_group
+    other_units = unit_group.units_for_user(user)
+    self_index = other_units.index {|u| u.id == id}
+    other_units[self_index + 1] if self_index
   end
 
   # @param family_name [String] The family name for a unit family.
@@ -972,15 +990,6 @@ class Unit < ApplicationRecord
     summarized_lesson_levels
   end
 
-  def text_to_speech_enabled?
-    tts?
-  end
-
-  # Generates TTS files for each level in a unit.
-  def tts_update(update_all = false)
-    levels.each {|l| l.tts_update(update_all)}
-  end
-
   def hint_prompt_enabled?
     csf?
   end
@@ -1229,7 +1238,7 @@ class Unit < ApplicationRecord
         end
 
         source_course_version&.reference_guides&.each do |reference_guide|
-          reference_guide.copy_to_course_version(destination_unit_group.course_version)
+          reference_guide.copy_to_course_version(copied_unit.get_course_version)
         end
 
         if destination_professional_learning_course.nil?
@@ -1355,7 +1364,7 @@ class Unit < ApplicationRecord
     end
     update_teacher_resources(general_params[:resourceIds])
     update_student_resources(general_params[:studentResourceIds])
-    tts_update(true) if need_to_update_tts
+    tts_update(update_all: true) if need_to_update_tts
     begin
       if Rails.application.config.levelbuilder_mode
         unit = Unit.find_by_name(unit_name)
@@ -1457,7 +1466,8 @@ class Unit < ApplicationRecord
   def finish_url
     return hoc_finish_url if hoc?
     return csf_finish_url if csf?
-    nil
+    return CDO.code_org_url "/congrats/#{unit_group.name}" if unit_group
+    CDO.code_org_url "/congrats/#{name}"
   end
 
   # A unit that the general public can assign. Has been soft or
@@ -1614,9 +1624,13 @@ class Unit < ApplicationRecord
     summary
   end
 
+  def allow_major_curriculum_changes?
+    get_published_state == PUBLISHED_STATE.in_development || get_published_state == PUBLISHED_STATE.pilot
+  end
+
   def summarize_for_lesson_edit
     {
-      allowMajorCurriculumChanges: get_published_state == PUBLISHED_STATE.in_development || get_published_state == PUBLISHED_STATE.pilot,
+      allowMajorCurriculumChanges: allow_major_curriculum_changes?,
       courseVersionId: get_course_version&.id,
       unitPath: script_path(self),
       lessonExtrasAvailableForUnit: lesson_extras_available,
@@ -1632,7 +1646,7 @@ class Unit < ApplicationRecord
   #   initializeHiddenScripts in hiddenLessonRedux.js.
   def section_hidden_unit_info(user)
     return {} unless user && can_be_instructor?(user)
-    hidden_section_ids = SectionHiddenScript.where(script_id: id, section: user.sections).pluck(:section_id)
+    hidden_section_ids = SectionHiddenScript.where(script_id: id, section: user.sections_instructed).pluck(:section_id)
     hidden_section_ids.index_with([id])
   end
 
@@ -1713,6 +1727,7 @@ class Unit < ApplicationRecord
     raise "only call this in a test!" unless Rails.env.test?
     @@unit_cache = nil
     @@unit_family_cache = nil
+    @@script_level_cache = nil
     @@level_cache = nil
     @@all_scripts = nil
     @@visible_units = nil
@@ -1904,7 +1919,8 @@ class Unit < ApplicationRecord
       version_year: version_year,
       name: launched? ? localized_title : localized_title + " *",
       position: unit_group_units&.first&.position,
-      description: localized_description ? Services::MarkdownPreprocessor.process(localized_description) : nil
+      description: localized_description ? Services::MarkdownPreprocessor.process(localized_description) : nil,
+      is_feedback_enabled: teacher_feedback_enabled?
     }
   end
 
@@ -2083,5 +2099,10 @@ class Unit < ApplicationRecord
   # send students on the last level of a lesson to the unit overview page.
   def show_unit_overview_between_lessons?
     middle_high? || ['vpl-csd-summer-pilot'].include?(get_course_version&.course_offering&.key)
+  end
+
+  private def teacher_feedback_enabled?
+    initiative = get_course_version&.course_offering&.marketing_initiative
+    TEACHER_FEEDBACK_INITIATIVES.include? initiative
   end
 end

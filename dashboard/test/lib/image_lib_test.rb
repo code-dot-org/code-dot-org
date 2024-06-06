@@ -80,15 +80,13 @@ class ImageLibTest < ActiveSupport::TestCase
 
     assert_equal 'PNG', MiniMagick::Image.read(png).info(:format)
 
-    assert_not_equal original_jpg, png
+    refute_equal original_jpg, png
     assert images_equal?(MiniMagick::Image.read(original_jpg), MiniMagick::Image.read(png))
   end
 
-  private
-
   # Return true if image1 and image2 are identical as determined by
   # the ImageMagic compare tool.
-  def images_equal?(image1, image2)
+  private def images_equal?(image1, image2)
     result = capture_stderr do
       MiniMagick::Tool::Compare.new(whiny: false) do |c|
         # Use the absolute error metric, which outputs non-zero to stderr
@@ -102,7 +100,7 @@ class ImageLibTest < ActiveSupport::TestCase
   end
 
   # Helper function to evaluate and return output to stderr.
-  def capture_stderr
+  private def capture_stderr
     $stderr = StringIO.new
     yield
     result = $stderr.string
@@ -110,11 +108,11 @@ class ImageLibTest < ActiveSupport::TestCase
     result
   end
 
-  def test_image_path(name)
+  private def test_image_path(name)
     Rails.root.join("test/fixtures/#{name}")
   end
 
-  def test_image(name)
+  private def test_image(name)
     MiniMagick::Image.open(test_image_path(name))
   end
 end

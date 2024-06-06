@@ -22,7 +22,6 @@ export const removeIncompleteApplications = data =>
 export class Summary extends React.Component {
   static propTypes = {
     regionalPartnerFilter: RegionalPartnerPropType.isRequired,
-    showRegionalPartnerDropdown: PropTypes.bool,
     isWorkshopAdmin: PropTypes.bool,
   };
 
@@ -59,12 +58,9 @@ export class Summary extends React.Component {
     this.abortLoad();
     this.setState({loading: true});
 
-    let url = '/api/v1/pd/applications';
-    if (this.props.showRegionalPartnerDropdown) {
-      url += `?${$.param({
-        regional_partner_value: regionalPartnerFilter.value,
-      })}`;
-    }
+    let url = `/api/v1/pd/applications?${$.param({
+      regional_partner_value: regionalPartnerFilter.value,
+    })}`;
 
     this.loadRequest = $.ajax({
       method: 'GET',
@@ -88,7 +84,7 @@ export class Summary extends React.Component {
       <div>
         <ApplicantSearch />
         {this.props.isWorkshopAdmin && <AdminNavigationButtons />}
-        {this.props.showRegionalPartnerDropdown && <RegionalPartnerDropdown />}
+        <RegionalPartnerDropdown />
         <h1>{this.props.regionalPartnerFilter.label}</h1>
         <Row>
           <Col sm={6}>
@@ -130,7 +126,5 @@ export default connect(state => {
   return {
     regionalPartnerFilter: state.regionalPartners.regionalPartnerFilter,
     isWorkshopAdmin,
-    showRegionalPartnerDropdown:
-      isWorkshopAdmin || state.regionalPartners.regionalPartners.length > 1,
   };
 })(Summary);

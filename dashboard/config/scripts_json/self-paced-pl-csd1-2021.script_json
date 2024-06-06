@@ -11,9 +11,11 @@
           "link": "https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform",
           "type": "information",
           "visibility": "Teacher-only",
-          "key": "db80eb59-07a6-49a6-81df-73cefd0c9a47"
+          "key": "db80eb59-07a6-49a6-81df-73cefd0c9a47",
+          "buttonText": null
         }
       ],
+      "curriculum_umbrella": "CSD Self Paced PL",
       "has_verified_resources": true,
       "is_migrated": true,
       "student_detail_progress_view": true,
@@ -21,7 +23,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-09-28 14:31:48 UTC",
+    "serialized_at": "2024-01-25 21:24:38 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -480,6 +482,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import {shallow, mount} from 'enzyme';
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import sinon from 'sinon';
 import {expect} from '../../../util/reconfiguredChai';
 import i18n from '@cdo/locale';
@@ -29,11 +29,6 @@ describe('SchoolInfoInterstitial', () => {
       <BaseDialog>
         <div>
           <div>
-            We want to bring Computer Science to every student - help us track
-            our progress!
-          </div>
-          <div>
-            <p>Please enter your school information below.</p>
             <SchoolInfoInputs
               country={''}
               schoolType={''}
@@ -51,14 +46,12 @@ describe('SchoolInfoInterstitial', () => {
           </div>
           <div>
             <Button
-              __useDeprecatedTag
               text={i18n.dismiss()}
               onClick={wrapper
                 .find('Button[id="dismiss-button"]')
                 .prop('onClick')}
             />
             <Button
-              __useDeprecatedTag
               text={i18n.save()}
               onClick={wrapper.find('Button[id="save-button"]').prop('onClick')}
             />

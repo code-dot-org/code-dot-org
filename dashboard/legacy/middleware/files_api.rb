@@ -222,7 +222,11 @@ class FilesApi < Sinatra::Base
   #
   def get_file(endpoint, encrypted_channel_id, filename, code_projects_domain_root_route = false, cache_duration: nil)
     # We occasionally serve HTML files through theses APIs - we don't want NewRelic JS inserted...
-    NewRelic::Agent.ignore_enduser rescue nil
+    begin
+      NewRelic::Agent.ignore_enduser
+    rescue
+      nil
+    end
 
     buckets = get_bucket_impl(endpoint).new
     cache_duration ||= buckets.cache_duration_seconds
@@ -417,7 +421,7 @@ class FilesApi < Sinatra::Base
       begin
         share_failure = ShareFiltering.find_failure(body, request.locale)
       rescue StandardError => exception
-        return file_too_large(endpoint) if exception.class == WebPurify::TextTooLongError
+        return file_too_large(endpoint) if exception.instance_of?(WebPurify::TextTooLongError)
         details = exception.message.empty? ? nil : exception.message
         return json_bad_request(details)
       end
@@ -479,9 +483,18 @@ class FilesApi < Sinatra::Base
     if source.is_a?(Hash)
       # Iterate over each file
       source.each_key do |key|
-        # Multi-file source structure:
-        # {"source":{"MyClass.java":{"text":"“public class ClassName: {...<code here>...}”","isVisible":true}}
-        return false unless source[key]["text"]&.force_encoding("UTF-8")&.valid_encoding?
+        if source[key]["text"].is_a?(String)
+          # Multi-file source structure, used in Java Lab
+          # {"source":{"MyClass.java":{"text":"“public class ClassName: {...<code here>...}”","isVisible":true}}
+          return false unless source[key]["text"]&.force_encoding("UTF-8")&.valid_encoding?
+        elsif key == "files"
+          # Nested file source structure for lab2 labs such as Python Lab and Web Lab 2 is
+          # {files: {filename: {contents: "...<code here>...",...}}, folders: {id: {id: <id>, name: <folder_name>,...}}}
+          source[key].each_key do |file|
+            return false unless source[key][file]["contents"]&.force_encoding("UTF-8")&.valid_encoding?
+          end
+        end
+        # TODO: do we need to validate folders?
       end
       return true
     end
@@ -1053,20 +1066,18 @@ class FilesApi < Sinatra::Base
     no_content
   end
 
-  private
-
   #
   # Returns the (parsed) manifest associated with the given encrypted_channel_id.
   #
-  def get_manifest(bucket, encrypted_channel_id)
+  private def get_manifest(bucket, encrypted_channel_id)
     bucket.get_manifest(encrypted_channel_id)
   end
 
-  def moderate_type?(project_type)
+  private def moderate_type?(project_type)
     MODERATE_THUMBNAILS_FOR_PROJECT_TYPES.include?(project_type)
   end
 
-  def moderate_channel?(encrypted_channel_id)
+  private def moderate_channel?(encrypted_channel_id)
     project = Projects.new(get_storage_id)
     !project.content_moderation_disabled?(encrypted_channel_id)
   end

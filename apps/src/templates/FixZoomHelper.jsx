@@ -1,8 +1,10 @@
+import _ from 'lodash';
 import React from 'react';
+
 import i18n from '@cdo/locale';
+
 import color from '../util/color';
 import trackEvent from '../util/trackEvent';
-import _ from 'lodash';
 
 /**
  * If the browser supports window.visualViewport, and we detect that the user

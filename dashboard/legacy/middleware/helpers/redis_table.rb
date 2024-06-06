@@ -46,7 +46,7 @@ class RedisTable
   # @param [Hash] value The hash for the new row.
   # @param [String] ignored_ip Unused, for compatability with other table apis.
   # @return [Hash] The inserted value, including the new :id field.
-  def insert(value, ignored_ip=nil)
+  def insert(value, ignored_ip = nil)
     new_id = next_id
     value = merge_ids(value, new_id, SecureRandom.uuid)
     @props.set(row_key(new_id), value.to_json)
@@ -61,9 +61,9 @@ class RedisTable
   # @return [Array<Hash>]
   def to_a_from_min_id(min_id)
     @props.to_hash.
-        select {|k, _v| belongs_to_this_table_with_min_id(k, min_id)}.
-        collect {|_k, v| make_row(v)}.
-        sort_by {|row| row['id']}
+      select {|k, _v| belongs_to_this_table_with_min_id(k, min_id)}.
+      collect {|_k, v| make_row(v)}.
+      sort_by {|row| row['id']}
   end
 
   # Returns all rows as an array ordered by ascending row id.
@@ -128,7 +128,7 @@ class RedisTable
   # @param [Integer] id The id of the row to update.
   # @param [Hash] hash The updated hash.
   # @param [String] ignored_ip Unused, for compatability with other table apis.
-  def update(id, hash, ignored_ip=nil)
+  def update(id, hash, ignored_ip = nil)
     original_hash = @props.to_hash[row_key(id)]
     raise NotFound, "row `#{id}` not found in `#{@table_name}` table" unless original_hash
     hash = merge_ids(hash, id, JSON.parse(original_hash)['uuid'])
@@ -155,48 +155,59 @@ class RedisTable
     pub_sub&.publish(shard_id, 'all_tables', {action: 'reset_shard'})
   end
 
-  private
-
-  # Maps a table row_id to a Redis field name that includes the table
-  # name, since all keys for a shard are stored in the same hash value.
-  #
-  # @param [Integer] row_id
-  # @return [String] Redis field name.
-  def row_key(row_id)
-    "#{@table_name}_#{row_id}"
-  end
-
   # Given a row key, return the name of the RedisTable that it belongs to.
   # @param [String] row_key
   # @return [String] the RedisTable name.
   # TODO(asher): Remove the need for the rubocop disable.
-  # rubocop:disable Lint/IneffectiveAccessModifier
   def self.table_from_row_key(key)
     key.split('_')[0]
   end
-  # rubocop:enable Lint/IneffectiveAccessModifier
 
-  def table_from_row_key(key)
-    self.class.table_from_row_key(key)
+  # Makes a row object by parsing the JSON value.
+  #
+  # @param [String] value The JSON-encoded value.
+  # @return [Hash] The row, or null if no such row exists.
+  # @private
+  # TODO(asher): Remove the need for the rubocop disable.
+  def self.make_row(value)
+    value.nil? ? nil : JSON.parse(value)
+  end
+
+  # Return true if k is special internal key (e.g. the row id key) that should
+  # not be returned to callers.
+  # TODO(asher): Remove the need for the rubocop disable.
+  def self.internal_key?(k)
+    k.end_with?(ROW_ID_SUFFIX)
   end
 
   # Given a row key, return the id of the row that it corresponds to.
   # @param [String] key
   # @return [Integer] the row id.
   # TODO(asher): Remove the need for the rubocop disable.
-  # rubocop:disable Lint/IneffectiveAccessModifier
   def self.id_from_row_key(key)
     key.split('_')[1].to_i
   end
-  # rubocop:enable Lint/IneffectiveAccessModifier
 
-  def id_from_row_key(key)
+  # Maps a table row_id to a Redis field name that includes the table
+  # name, since all keys for a shard are stored in the same hash value.
+  #
+  # @param [Integer] row_id
+  # @return [String] Redis field name.
+  private def row_key(row_id)
+    "#{@table_name}_#{row_id}"
+  end
+
+  private def table_from_row_key(key)
+    self.class.table_from_row_key(key)
+  end
+
+  private def id_from_row_key(key)
     self.class.id_from_row_key(key)
   end
 
   # Returns a new, monotonically increasing id for a row.
   # @return [String]
-  def next_id
+  private def next_id
     @props.increment_counter(@row_id_key)
   end
 
@@ -206,23 +217,11 @@ class RedisTable
   # @param [String, Integer] id
   # @param [String] uuid
   # @return [Hash]
-  def merge_ids(hash, id, uuid)
+  private def merge_ids(hash, id, uuid)
     hash.merge({'id' => id.to_i, 'uuid' => uuid})
   end
 
-  # Makes a row object by parsing the JSON value.
-  #
-  # @param [String] value The JSON-encoded value.
-  # @return [Hash] The row, or null if no such row exists.
-  # @private
-  # TODO(asher): Remove the need for the rubocop disable.
-  # rubocop:disable Lint/IneffectiveAccessModifier
-  def self.make_row(value)
-    value.nil? ? nil : JSON.parse(value)
-  end
-  # rubocop:enable Lint/IneffectiveAccessModifier
-
-  def make_row(value)
+  private def make_row(value)
     self.class.make_row(value)
   end
 
@@ -230,7 +229,7 @@ class RedisTable
   # provided.
   #
   # @param [Hash] update_hash A hash describing the update.
-  def publish_change(update_hash)
+  private def publish_change(update_hash)
     @pub_sub_api&.publish(@shard_id, @table_name, update_hash)
   end
 
@@ -239,22 +238,13 @@ class RedisTable
   # @param [String] row_key The row key.
   # @param [Integer] min_id The minimum id, or nil for all ids.
   # @return [Boolean]
-  def belongs_to_this_table_with_min_id(row_key, min_id)
+  private def belongs_to_this_table_with_min_id(row_key, min_id)
     (@table_name == table_from_row_key(row_key)) &&
-        (row_key != @row_id_key) &&
-        (min_id.nil? || id_from_row_key(row_key) >= min_id)
+      (row_key != @row_id_key) &&
+      (min_id.nil? || id_from_row_key(row_key) >= min_id)
   end
 
-  # Return true if k is special internal key (e.g. the row id key) that should
-  # not be returned to callers.
-  # TODO(asher): Remove the need for the rubocop disable.
-  # rubocop:disable Lint/IneffectiveAccessModifier
-  def self.internal_key?(k)
-    k.end_with?(ROW_ID_SUFFIX)
-  end
-  # rubocop:enable Lint/IneffectiveAccessModifier
-
-  def internal_key?(k)
+  private def internal_key?(k)
     self.class.internal_key?(k)
   end
 end

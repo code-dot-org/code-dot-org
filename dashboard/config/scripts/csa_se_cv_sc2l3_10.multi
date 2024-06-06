@@ -1,0 +1,11 @@
+name 'CSA-SE-CV-SC2L3-10'
+
+question 'Some parts of today\'s lesson were difficult to navigate or understand.'
+
+right 'Strongly Agree'
+right 'Agree'
+right 'Neutral'
+right 'Disagree'
+right 'Strongly Disagree'
+
+allow_multiple_attempts true

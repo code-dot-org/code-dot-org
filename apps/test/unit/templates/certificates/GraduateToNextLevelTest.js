@@ -1,6 +1,8 @@
-import GraduateToNextLevel from '@cdo/apps/templates/certificates/GraduateToNextLevel';
-import React from 'react';
 import {isolateComponent} from 'isolate-react';
+import React from 'react';
+
+import GraduateToNextLevel from '@cdo/apps/templates/certificates/GraduateToNextLevel';
+
 import {expect} from '../../../util/reconfiguredChai';
 
 const propsPassedToVerticalImageResourceCard = props =>

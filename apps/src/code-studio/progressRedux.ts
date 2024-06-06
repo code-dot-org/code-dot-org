@@ -11,6 +11,7 @@ import {
   LevelResults,
   ViewType,
   PeerReviewLevelInfo,
+  LevelWithProgress,
 } from '@cdo/apps/types/progressTypes';
 import {
   AnyAction,
@@ -27,9 +28,20 @@ import {mergeActivityResult} from './activityUtils';
 import {SET_VIEW_TYPE} from './viewAsRedux';
 import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {authorizeLockable} from './lessonLockRedux';
-import {updateBrowserForLevelNavigation} from './browserNavigation';
+import {
+  canChangeLevelInPage,
+  updateBrowserForLevelNavigation,
+} from './browserNavigation';
 import {TestResults} from '@cdo/apps/constants';
-import {nextLevelId} from './progressReduxSelectors';
+import {
+  getCurrentLevel,
+  getCurrentLevels,
+  getCurrentScriptLevelId,
+  levelById,
+  nextLevelId,
+} from './progressReduxSelectors';
+import {getBubbleUrl} from '../templates/progress/BubbleFactory';
+import {navigateToHref} from '../utils';
 
 export interface ProgressState {
   currentLevelId: string | null;
@@ -39,6 +51,7 @@ export interface ProgressState {
   lessons: Lesson[] | null;
   lessonGroups: LessonGroup[] | null;
   scriptId: number | null;
+  viewAsUserId: string | null;
   scriptName: string | null;
   scriptDisplayName: string | undefined;
   unitTitle: string | null;
@@ -80,6 +93,7 @@ const initialState: ProgressState = {
   lessons: null,
   lessonGroups: null,
   scriptId: null,
+  viewAsUserId: null,
   scriptName: null,
   scriptDisplayName: undefined,
   unitTitle: null,
@@ -250,6 +264,9 @@ const progressSlice = createSlice({
     setLessonExtrasEnabled(state, action: PayloadAction<boolean>) {
       state.lessonExtrasEnabled = action.payload;
     },
+    setViewAsUserId(state, action: PayloadAction<string>) {
+      state.viewAsUserId = action.payload;
+    },
   },
   extraReducers: {
     // TODO: When we convert viewAsRedux to redux-toolkit, we will need to use
@@ -271,10 +288,10 @@ type ProgressThunkAction = ThunkAction<
 >;
 
 export const queryUserProgress =
-  (userId: string): ProgressThunkAction =>
+  (userId: string, mergeProgress: boolean = true): ProgressThunkAction =>
   (dispatch, getState) => {
     const state = getState().progress;
-    return userProgressFromServer(state, dispatch, userId);
+    return userProgressFromServer(state, dispatch, userId, mergeProgress);
   };
 
 // The user has navigated to a new level in the current lesson,
@@ -283,20 +300,52 @@ export const queryUserProgress =
 export function navigateToLevelId(levelId: string): ProgressThunkAction {
   return (dispatch, getState) => {
     const state = getState().progress;
-    if (!state.currentLessonId) {
+    if (!state.currentLessonId || !state.currentLevelId) {
       return;
     }
-    const newLevel = getLevelById(
-      state.lessons,
-      state.currentLessonId,
-      levelId
-    );
+    const newLevel = levelById(state, state.currentLessonId, levelId);
     if (!newLevel) {
       return;
     }
 
-    updateBrowserForLevelNavigation(state, newLevel.url, levelId);
-    dispatch(setCurrentLevelId(levelId));
+    const currentLevel = getCurrentLevel(getState());
+
+    if (canChangeLevelInPage(currentLevel, newLevel)) {
+      updateBrowserForLevelNavigation(state, newLevel.path, levelId);
+      dispatch(setCurrentLevelId(levelId));
+    } else {
+      const url = getBubbleUrl(newLevel.path, undefined, undefined, true);
+      navigateToHref(url);
+    }
+  };
+}
+
+// Updates the current level ID in the store when the level
+// (and possibly sublevel) index changes.
+// Typically happens when the user presses the browser back/forward button
+// in a level progression that doesn't require page reloads.
+export function onLevelIndexChange(
+  levelIndex: number,
+  sublevelIndex?: number
+): ProgressThunkAction {
+  return (dispatch, getState) => {
+    const levels: LevelWithProgress[] = getCurrentLevels(getState());
+    if (!levels || levels.length === 0) {
+      return;
+    }
+
+    const level = levels[levelIndex];
+    if (
+      sublevelIndex !== undefined &&
+      level.sublevels &&
+      sublevelIndex < level.sublevels.length
+    ) {
+      const newLevelId = level.sublevels[sublevelIndex].id;
+      dispatch(setCurrentLevelId(newLevelId));
+    } else {
+      const newLevelId = level.id;
+      dispatch(setCurrentLevelId(newLevelId));
+    }
   };
 }
 
@@ -312,7 +361,7 @@ export function navigateToNextLevel(): ProgressThunkAction {
 }
 
 // The user has successfully completed the level and the page
-// will not be reloading.
+// will not be reloading. Currently only used by Lab2 labs.
 export function sendSuccessReport(appType: string): ProgressThunkAction {
   return (dispatch, getState) => {
     const state = getState().progress;
@@ -320,15 +369,10 @@ export function sendSuccessReport(appType: string): ProgressThunkAction {
     if (!state.currentLessonId || !levelId) {
       return;
     }
-    const currentLevel = getLevelById(
-      state.lessons,
-      state.currentLessonId,
-      levelId
-    );
-    if (!currentLevel) {
+    const scriptLevelId = getCurrentScriptLevelId(getState());
+    if (!scriptLevelId) {
       return;
     }
-    const scriptLevelId = currentLevel.id;
 
     // The server does not appear to use the user ID parameter,
     // so just pass 0, like some other milestone posts do.
@@ -368,7 +412,8 @@ export function sendSuccessReport(appType: string): ProgressThunkAction {
 const userProgressFromServer = (
   state: ProgressState,
   dispatch: ThunkDispatch<{progress: ProgressState}, undefined, AnyAction>,
-  userId: string | null = null
+  userId: string | null = null,
+  mergeProgress: boolean
 ) => {
   if (!state.scriptName) {
     const message = `Could not request progress for user ID ${userId} from server: scriptName must be present in progress redux.`;
@@ -422,12 +467,14 @@ const userProgressFromServer = (
     if (data.progress) {
       dispatch(setScriptProgress(data.progress));
 
-      // Note that we set the full progress object above in redux but also set
-      // a map containing just level results. This is the legacy code path and
-      // the goal is to eventually update all code paths to use unitProgress
-      // instead of levelResults.
-      const levelResults = _.mapValues(data.progress, getLevelResult);
-      dispatch(mergeResults(levelResults));
+      if (mergeProgress) {
+        // Note that we set the full progress object above in redux but also set
+        // a map containing just level results. This is the legacy code path and
+        // the goal is to eventually update all code paths to use unitProgress
+        // instead of levelResults.
+        const levelResults = _.mapValues(data.progress, getLevelResult);
+        dispatch(mergeResults(levelResults));
+      }
 
       if (data.peerReviewsPerformed) {
         dispatch(mergePeerReviewProgress(data.peerReviewsPerformed));
@@ -439,21 +486,6 @@ const userProgressFromServer = (
     }
   });
 };
-
-/**
- * Given an array of lessons, a lesson ID, and a level ID, returns
- * the requested level.
- */
-function getLevelById(
-  lessons: Lesson[] | null,
-  lessonId: number,
-  levelId: string
-) {
-  const lesson = lessons?.find(lesson => lesson.id === lessonId);
-  if (lesson) {
-    return lesson.levels.find(level => level.ids.find(id => id === levelId));
-  }
-}
 
 /**
  * Does some processing of our passed in lesson, namely
@@ -495,6 +527,7 @@ export const {
   setCurrentLessonId,
   setScriptCompleted,
   setLessonExtrasEnabled,
+  setViewAsUserId,
 } = progressSlice.actions;
 
 export default progressSlice.reducer;

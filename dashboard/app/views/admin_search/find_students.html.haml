@@ -7,6 +7,11 @@
   %table.filters
     %tr
       %td
+        Username
+      %td
+        %input{name: "usernameFilter", id: "usernameFilter", value: params[:usernameFilter]}
+    %tr
+      %td
         Student Name
       %td
         %input{name: "studentNameFilter", id: "studentNameFilter", value: params[:studentNameFilter]}
@@ -43,12 +48,12 @@
   = paginate @users, total_pages: (@total_count / AdminSearchController::MAX_PAGE_SIZE.to_f).ceil
   %table.users
     %tr
-      - ['ID', 'Name', 'Email', 'Provider', 'Can Share?', 'Deleted At', 'Undelete'].each do |field|
+      - ['ID', 'Name', 'Username', 'Email', 'Provider', 'Can Share?', 'Deleted At', 'Undelete', 'Delete'].each do |field|
         %th
           %span= field
     - @users.each do |user|
       %tr
-        - [:id, :name, :email, :provider].each do |field|
+        - [:id, :name, :username, :email, :provider].each do |field|
           %td
             %span= user[field]
         %td
@@ -58,5 +63,14 @@
             %span= user[:deleted_at]
           %td
             =link_to 'Undelete User', undelete_user_path(user_id: user[:id]), method: :post, class: "btn", data: {confirm: "Are you sure?"}
+        - else
+          %td
+          %td
+          %td
+            =link_to delete_user_path(user_id: user[:id]), method: :post, class: "btn", data: {confirm: "Are you sure you want to DELETE this user?"} do
+              %i.fa.fa-trash
+              Delete User
 - else
   No users met the specified search criteria.
+
+= render partial: 'home/admin'

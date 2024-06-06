@@ -1,11 +1,13 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
-import ReadonlyTeacherFeedback from '@cdo/apps/templates/instructions/teacherFeedback/ReadonlyTeacherFeedback';
+
+import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import Comment from '@cdo/apps/templates/instructions/teacherFeedback/Comment';
 import ReadOnlyReviewState from '@cdo/apps/templates/instructions/teacherFeedback/ReadOnlyReviewState';
+import ReadonlyTeacherFeedback from '@cdo/apps/templates/instructions/teacherFeedback/ReadonlyTeacherFeedback';
 import Rubric from '@cdo/apps/templates/instructions/teacherFeedback/Rubric';
-import {ReviewStates} from '@cdo/apps/templates/feedback/types';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   rubric: null,

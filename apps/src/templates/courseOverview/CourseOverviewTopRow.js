@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+
+import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
 import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
 
 export default class CourseOverviewTopRow extends Component {
   static propTypes = {
@@ -43,7 +44,7 @@ export default class CourseOverviewTopRow extends Component {
             sections={sectionsForDropdown}
             showAssignButton={showAssignButton}
             courseId={id}
-            isOnCoursePage={true}
+            isAssigningCourse={true}
             courseOfferingId={courseOfferingId}
             courseVersionId={courseVersionId}
             assignmentName={courseName}

@@ -258,9 +258,7 @@ class RedisTableTest < Minitest::Test
     refute_equal row1['uuid'], row1_c['uuid']
   end
 
-  private
-
-  def make_pubsub_event(channel, event, data)
+  private def make_pubsub_event(channel, event, data)
     {channel: channel, event: event, data: data}
   end
 end

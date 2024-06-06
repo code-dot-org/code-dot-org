@@ -1,9 +1,11 @@
-import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import sinon from 'sinon';
-import NpsSurveyBlock from '@cdo/apps/templates/studioHomepages/NpsSurveyBlock';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
+import React from 'react';
+import sinon from 'sinon';
+
+import NpsSurveyBlock from '@cdo/apps/templates/studioHomepages/NpsSurveyBlock';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const result = {
   props: JSON.stringify({

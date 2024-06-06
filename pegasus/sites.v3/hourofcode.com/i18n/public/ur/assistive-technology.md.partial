@@ -8,9 +8,9 @@ title: ایک گھنٹے بعد کوڈ ٹکنالوجی کے ساتھ مکمل �
 
 <h2>نابینا استعمال کرتے ہوئے</h2>
 
-<p>The Hour of Code activities page now includes a <a href="https://hourofcode.com/us/learn?platform=screenreader" target="_blank">filter for activities compatible with screen readers</a>.</p>
+<p>آور آف کوڈ سرگرمیوں کے صفحہ میں اب ایک <a href="https://hourofcode.com/us/learn?platform=screenreader" target="_blank">اسکرین ریڈرز کے ساتھ ہم آہنگ سرگرمیوں کے لیے فلٹر</a> شامل ہے۔</p>
 
-<p>If you use a screen reader, the <a href="https://quorumlanguage.com/hourofcode/astro1.html" target="_blank">Quorum tutorial for beginners</a> or the <a href="https://quorumlanguage.com/hourofcode/part1.html" target="_blank">Quorum tutorial for comfortable students</a> are great places to start an Hour of Code. Quorum started as an interpreted language originally designed to be accessible through screen readers. It has become a general purpose programming language designed for any user. اور اگر ایک گھنٹہ کوڈ سے آگے جانا چاہتے ہیں تو ٹیم کورم پر اضافی آلات اور نصاب ہے ۔</p>
+<p>اگر آپ اسکرین ریڈر استعمال کرتے ہیں تو <a href="https://quorumlanguage.com/hourofcode/astro1.html" target="_blank">ابتدائی طلباء کے لیے Quorum ٹیوٹوریل</a> یا <a href="https://quorumlanguage.com/hourofcode/part1.html" target="_blank">ماہر طلباء کے لیے Quorum ٹیوٹوریل</a> آور آف کوڈ شروع کرنے کے لیے بہترین جگہیں ہیں۔ Quorum started as an interpreted language originally designed to be accessible through screen readers. It has become a general purpose programming language designed for any user. اور اگر ایک گھنٹہ کوڈ سے آگے جانا چاہتے ہیں تو ٹیم کورم پر اضافی آلات اور نصاب ہے ۔</p>
 
 <p>If you use a screen reader and are interested in robotics, try the <a href="https://milnel2.github.io/blocks4alliOS/danceCircle1.html" target="_blank">Dash Joins a Dance Circle activity</a> (for grades K-5) or the <a href="https://milnel2.github.io/blocks4alliOS/danceCircle2.html" target="_blank">Dash Joins a Dance Circle with Functions activity</a> (for grades 6-8) from Lauren Milne.</p>
 
@@ -19,21 +19,21 @@ title: ایک گھنٹے بعد کوڈ ٹکنالوجی کے ساتھ مکمل �
 <div class="row">
     <div class="col-xs-4">
         <a href="https://quorumlanguage.com/hourofcode/astro1.html" target="_blank">
-        <img src="https://code.org/images/fill-300x225/tutorials/hoc2017/quorum_astronomy.jpg" alt="Tutorial for beginners">
+        <img src="https://code.org/images/fill-300x225/tutorials/hoc2017/quorum_astronomy.jpg" alt="ابتدائی طلباء کے لئے ٹیوٹوریل">
         </a>
     </div>
     <div class="col-xs-4">
         <a href="https://quorumlanguage.com/hourofcode/part1.html" target="_blank">
-        <img src="https://code.org/images/fill-300x225/quorum.jpg" alt="Tutorial for comfortable students">
+        <img src="https://code.org/images/fill-300x225/quorum.jpg" alt="ماہر طلباء کے لئے ٹیوٹوریل">
         </a>
     </div>
     <div class="col-xs-4">
         <a href="https://milnel2.github.io/blocks4alliOS/danceCircle1.html" target="_blank">
-        <img src="https://code.org/images/fill-300x225//tutorials/hoc2021/milne_dash.jpg" alt="Robotics tutorial for beginners">
+        <img src="https://code.org/images/fill-300x225//tutorials/hoc2021/milne_dash.jpg" alt="ابتدائی طلباء کے لیے روبوٹکس ٹیوٹوریل">
         </a>
-        <a href="https://milnel2.github.io/blocks4alliOS/danceCircle1.html" target="_blank">For grades K-5</a>
+        <a href="https://milnel2.github.io/blocks4alliOS/danceCircle1.html" target="_blank">گریڈ K-5 کے لیے</a>
         <br>
-        <a href="https://milnel2.github.io/blocks4alliOS/danceCircle2.html" target="_blank">For grades 6-8</a>
+        <a href="https://milnel2.github.io/blocks4alliOS/danceCircle2.html" target="_blank">گریڈ 6-8 کے لیے</a>
     </div>
 </div>
 
@@ -45,4 +45,4 @@ title: ایک گھنٹے بعد کوڈ ٹکنالوجی کے ساتھ مکمل �
 
 <h2>جوڑا پروگرامنگ</h2>
 
-<p>Pair programming is a tool computer scientists use to solve problems as a pair or team. Try working on Hour of Code challenges with a friend or classmate. Don’t forget to <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q" target="_blank">check out this video</a> to learn the best techniques for pair programming.</p>
+<p>پیئر پروگرامنگ ایک ایسا ٹول ہے جسے کمپیوٹر سائنس دان ایک جوڑے یا ٹیم کے طور پر مسائل کو حل کرنے کے لیے استعمال کرتے ہیں۔ اپنے کسی دوست یا ہم جماعت کے ساتھ آور آف کوڈ چیلنجز پر کام کرنے کی کوشش کریں۔ Don’t forget to <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q" target="_blank">check out this video</a> to learn the best techniques for pair programming.</p>

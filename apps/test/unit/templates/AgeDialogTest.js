@@ -1,15 +1,19 @@
 import {assert} from 'chai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {UnconnectedAgeDialog as AgeDialog} from '@cdo/apps/templates/AgeDialog';
-import {shallow} from 'enzyme';
 import sinon from 'sinon';
+
+import {UnconnectedAgeDialog as AgeDialog} from '@cdo/apps/templates/AgeDialog';
+
 import FakeStorage from '../../util/FakeStorage';
 
 describe('AgeDialog', () => {
   const defaultProps = {
     signedIn: false,
     turnOffFilter: () => {},
+    setOver21: () => {},
     storage: new FakeStorage(),
+    unitName: 'csd-2023',
   };
 
   it('renders null if user is signed in', () => {

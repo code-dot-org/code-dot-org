@@ -2,15 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {studio, pegasus} from '../util/urlHelpers';
-import {SectionLoginType} from '../../util/sharedConstants';
 import {queryParams} from '../../code-studio/utils';
 import color from '../../util/color';
 import i18n from '@cdo/locale';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {
+  EmailLinks,
+  SectionLoginType,
+} from '@cdo/generated-scripts/sharedConstants';
 
-const PRIVACY_PLEDGE_URL = 'https://studentprivacypledge.org/signatories/';
-const COMMON_SENSE_ARTICLE_URL =
-  'https://medium.com/@codeorg/code-orgs-commitment-to-student-privacy-earns-accolades-cae1cca35632';
 const RESEARCH_ARTICLE_URL =
   'https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536';
 const ENGAGEMENT_URL =
@@ -132,9 +132,9 @@ class ParentLetter extends React.Component {
           <h1>{i18n.parentLetterStudentPrivacy()}</h1>
           <SafeMarkdown
             markdown={i18n.parentLetterStudentPrivacyDetails({
-              pledgeLink: PRIVACY_PLEDGE_URL,
-              commonSenseLink: COMMON_SENSE_ARTICLE_URL,
-              privacyPolicyLink: pegasus('/privacy/student-privacy'),
+              pledgeLink: EmailLinks.STUDENT_PRIVACY_PLEDGE_URL,
+              commonSenseLink: EmailLinks.COMMON_SENSE_MEDIA_URL,
+              privacyPolicyLink: EmailLinks.PRIVACY_POLICY_URL,
             })}
           />
           <p>{i18n.parentLetterClosing()}</p>
@@ -158,7 +158,7 @@ export default connect(state => ({
 const Header = ({logoUrl}) => {
   return (
     <header style={styles.header}>
-      <img src={logoUrl} style={styles.codeOrgLogo} />
+      <img src={logoUrl} style={styles.codeOrgLogo} alt={i18n.codeLogo()} />
     </header>
   );
 };
@@ -194,6 +194,7 @@ const SignInInstructions = ({
             <img
               src="/shared/images/clever_code_org_logo.png"
               style={styles.cleverCodeOrgLogo}
+              alt={i18n.codeLogoClever()}
             />
           </li>
         </ol>
@@ -225,6 +226,7 @@ const SignInInstructions = ({
                 <img
                   src={pegasus(`/images/${secretPicturePath}`)}
                   style={{width: 60, margin: 10}}
+                  alt={i18n.parentLetterPicturePasswordImg()}
                 />
               </span>
             )}

@@ -4,7 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "curriculum_umbrella": "CSA Virtual PL",
+      "curriculum_umbrella": "PD Workshop Activity CSA",
       "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "vpl-csa",
-    "serialized_at": "2023-01-09 23:49:28 UTC",
+    "serialized_at": "2024-03-06 20:07:27 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "facilitator",
@@ -1961,6 +1961,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-7-overview_-f"
+        ],
         "progression": "Module 7 Overview (~5 minutes)"
       },
       "bonus": false,
@@ -1983,6 +1986,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-7-2022-what-is-pm-video_-f"
+        ],
         "progression": "Project Managment"
       },
       "bonus": false,
@@ -2005,6 +2011,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-7-2022-day-in-the-life-of-pm-video_-f"
+        ],
         "progression": "Project Managment"
       },
       "bonus": false,
@@ -2027,6 +2036,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-7-unit-7-project-text_-f"
+        ],
         "progression": "The Unit 7 Project"
       },
       "bonus": false,
@@ -2049,6 +2061,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-7-clone-projects-level_-f"
+        ],
         "progression": "The Unit 7 Project"
       },
       "bonus": false,
@@ -2071,6 +2086,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-7-unit-7-project-structure-2022-text_-f"
+        ],
         "progression": "The Unit 7 Project"
       },
       "bonus": false,
@@ -2093,6 +2111,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-7-2022-project-planning-reflection_-f"
+        ],
         "progression": "The Unit 7 Project"
       },
       "bonus": false,
@@ -2115,6 +2136,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-7-2022-vocabulary-of-pm-video_-f"
+        ],
         "progression": "Building Project Management Skills"
       },
       "bonus": false,
@@ -2137,6 +2161,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-7-2022-putting-it-all-together-reflection_-f"
+        ],
         "progression": "Building Project Management Skills"
       },
       "bonus": false,
@@ -2159,6 +2186,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-7-wrap-up_-f"
+        ],
         "progression": "Wrap-up (~5 minutes)"
       },
       "bonus": false,
@@ -2181,6 +2211,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-8-overviews_-f"
+        ],
         "progression": "Module 8 Overview (~5 minutes)"
       },
       "bonus": false,
@@ -2203,6 +2236,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-8-2022-feelings-reflection_-f"
+        ],
         "progression": "Preparing to support students (~5 minutes)"
       },
       "bonus": false,
@@ -2225,6 +2261,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-8-2022-what-you-expect-reflection_-f"
+        ],
         "progression": "Creating and using a pre-assessment (~45 minutes)"
       },
       "bonus": false,
@@ -2247,6 +2286,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-8-2022-ap-exam-breakdown_-f"
+        ],
         "progression": "Creating and using a pre-assessment (~45 minutes)"
       },
       "bonus": false,
@@ -2269,6 +2311,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-8-2022-administering-reflection_-f"
+        ],
         "progression": "Creating and using a pre-assessment (~45 minutes)"
       },
       "bonus": false,
@@ -2291,6 +2336,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-8-wrap-up_-f"
+        ],
         "progression": "Module 8 Wrap-up (~5 minutes)"
       },
       "bonus": false,
@@ -3154,6 +3202,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

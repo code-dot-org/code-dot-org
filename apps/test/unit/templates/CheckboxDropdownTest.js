@@ -1,7 +1,9 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
-import {assert, expect} from '../../util/reconfiguredChai';
+
 import CheckboxDropdown from '@cdo/apps/templates/CheckboxDropdown';
+
+import {assert, expect} from '../../util/reconfiguredChai';
 
 describe('CheckboxDropdown', function () {
   const colorOptions = {

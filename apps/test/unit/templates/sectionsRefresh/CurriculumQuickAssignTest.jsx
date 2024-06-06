@@ -1,8 +1,10 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import i18n from '@cdo/locale';
+
 import CurriculumQuickAssign from '@cdo/apps/templates/sectionsRefresh/CurriculumQuickAssign';
+import i18n from '@cdo/locale';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('CurriculumQuickAssign', () => {
   it('renders headers and the top row of buttons', () => {
@@ -53,17 +55,40 @@ describe('CurriculumQuickAssign', () => {
     expect(wrapper.find('VersionUnitDropdowns')).to.have.lengthOf(0);
   });
 
-  it('clears decide later when marketing audience selected', () => {
+  it('leaves dropdowns alone when decide later clicked', () => {
     const wrapper = mount(
       <CurriculumQuickAssign updateSection={() => {}} sectionCourse={{}} />
     );
 
+    // No dropdowns active at beginning
+    expect(wrapper.find('VersionUnitDropdowns')).to.have.lengthOf(0);
+
+    // Toggle decide later, verify its state changes.
     expect(wrapper.find('input').props().checked).to.equal(false);
     wrapper.find('input').simulate('change');
     expect(wrapper.find('input').props().checked).to.equal(true);
 
-    // Now, click on elementary school button and verify checkbox is deselected
-    wrapper.find('Button').at(0).simulate('click');
+    // Still no dropdowns active
+    expect(wrapper.find('VersionUnitDropdowns')).to.have.lengthOf(0);
+
+    // Uncheck decide later, still no dropdowns active
+    wrapper.find('input').simulate('change');
     expect(wrapper.find('input').props().checked).to.equal(false);
+    expect(wrapper.find('VersionUnitDropdowns')).to.have.lengthOf(0);
+
+    // Open elementary dropdown
+    wrapper
+      .find('Button')
+      .at(0)
+      .simulate('click', {preventDefault: () => {}});
+    expect(wrapper.find('VersionUnitDropdowns')).to.have.lengthOf(1);
+
+    // Toggle decide later on and off, dropdown remains active
+    wrapper.find('input').simulate('change');
+    expect(wrapper.find('input').props().checked).to.equal(true);
+    expect(wrapper.find('VersionUnitDropdowns')).to.have.lengthOf(1);
+    wrapper.find('input').simulate('change');
+    expect(wrapper.find('input').props().checked).to.equal(false);
+    expect(wrapper.find('VersionUnitDropdowns')).to.have.lengthOf(1);
   });
 });

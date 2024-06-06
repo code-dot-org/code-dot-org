@@ -1,5 +1,5 @@
 import {expect} from '../../../util/reconfiguredChai';
-import {costumeList} from '@cdo/apps/p5lab/spritelab/blocks';
+import {costumeList, customInputTypes} from '@cdo/apps/p5lab/spritelab/blocks';
 import {
   registerReducers,
   stubRedux,
@@ -65,6 +65,22 @@ describe('Gamelab blocks', () => {
         '"drawn"',
       ]);
       expect(items[1]).to.deep.equal(['/v3/library/test.png', '"library"']);
+    });
+  });
+});
+
+describe('Custom Input Types', () => {
+  describe('soundPicker.generateCode()', () => {
+    it('returns a valid json string with quotes escaped', () => {
+      const block = {
+        getFieldValue: function (arg) {
+          return arg;
+        },
+      };
+      const arg = {name: "te'st"};
+      expect(
+        customInputTypes['soundPicker'].generateCode(block, arg)
+      ).to.deep.equal(`"te\'st"`);
     });
   });
 });

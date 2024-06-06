@@ -3,6 +3,7 @@ import React from 'react';
 import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {isolateComponent} from 'isolate-react';
+import {PROGRAM_CSD} from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplicationConstants';
 import $ from 'jquery';
 
 let DummyPage1 = () => {
@@ -270,6 +271,82 @@ describe('FormController', () => {
       expect(form.findAll('Spinner')).to.have.length(0);
 
       server.restore();
+    });
+
+    it('Shows apps closed message if RP has closed applications', async () => {
+      sinon.stub(window, 'fetch').returns(
+        Promise.resolve({
+          ok: true,
+          json: () => {
+            return {id: 1, pl_programs_offered: ['CSD'], are_apps_closed: true};
+          },
+        })
+      );
+
+      const initialData = {
+        school: 'New School',
+        program: PROGRAM_CSD,
+      };
+      const clock = sinon.useFakeTimers();
+      form = isolateComponent(
+        <FormController {...defaultProps} getInitialData={() => initialData} />
+      );
+      await clock.runAllAsync();
+
+      const alerts = form.findAll('Alert');
+      expect(alerts).to.have.length(1);
+      expect(alerts[0].content()).to.contain(
+        'Applications are closed for this region'
+      );
+      clock.restore();
+    });
+
+    it('hides apps closed message if selecting a different RP with applications open', async () => {
+      const stub = sinon.stub(window, 'fetch');
+      stub.onCall(0).returns(
+        Promise.resolve({
+          ok: true,
+          json: () => {
+            return {id: 1, pl_programs_offered: ['CSD'], are_apps_closed: true};
+          },
+        })
+      );
+      stub.onCall(1).returns(
+        Promise.resolve({
+          ok: true,
+          json: () => {
+            return {
+              id: 2,
+              pl_programs_offered: ['CSD'],
+              are_apps_closed: false,
+            };
+          },
+        })
+      );
+
+      const initialData = {
+        school: 'New School',
+        program: PROGRAM_CSD,
+      };
+      const clock = sinon.useFakeTimers();
+      form = isolateComponent(
+        <FormController {...defaultProps} getInitialData={() => initialData} />
+      );
+      await clock.runAllAsync();
+
+      const alerts = form.findAll('Alert');
+      expect(alerts).to.have.length(1);
+      expect(alerts[0].content()).to.contain(
+        'Applications are closed for this region'
+      );
+
+      const page = form.findOne('DummyPage1');
+      page.props.onChange({school: 'Updated school'});
+      await clock.runAllAsync();
+
+      expect(form.findAll('Alert')).to.have.length(0);
+
+      clock.restore();
     });
 
     it('Shows error message if user tries to save an application that already exists', () => {

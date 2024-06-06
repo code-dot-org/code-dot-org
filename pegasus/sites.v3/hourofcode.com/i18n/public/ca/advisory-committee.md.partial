@@ -1,8 +1,8 @@
 ---
-title: Hour of Code and CSEdWeek Advisory Committee
+title: Comissió Assessora de l'Hora del Codi i CSEdWeek
 ---
 
-# Hour of Code and CSEdWeek Advisory Committee
+# Comissió Assessora de l'Hora del Codi i CSEdWeek
 
 {{ advisory-committee/about_headshots }}
 

@@ -7,8 +7,8 @@ fil-PH:
   accelerated_name: Pinabilis na Kurso
   account_sign_up_child_accept_terms: Kinukumpirma ko na may pahintulot ako ng aking
     magulang o ligal na tagapag-alaga na gamitin ang mga serbisyo ng Code.org.
-  account_sign_up_email_opt_in: Maaari ba kaming mag-email sa iyo tungkol sa mga pag-update
-    sa aming mga kurso, lokal na mga oportunidad, o iba pang balita sa agham ng computer?
+  account_sign_up_email_opt_in: Maaari ba kaming mag-email sa iyo tungkol sa mga update
+    sa mga kurso namin, lokal na mga oportunidad, o iba pang balita sa computer science?
     (halos isang beses sa isang buwan)
   ai_activity: Aktibidad
   ai_and_ethics: AI at Mga Etika
@@ -270,6 +270,7 @@ fil-PH:
   class_submission_out_of_school_summer_camp: Summer camp
   classicmaze_name: Klasiko na Maze
   code_hoc_coming: Ang Hour of Code ay andito na - Disyembre 08-14!
+  code_org_logo_alt: Code.org Home
   code_sign_up: Mag-sign up upang lumahok sa CS Edukasyon Week
   codea_beyond_gradelevel: High school +
   codea_beyond_longdescription: Ang Codea para sa iPad ay nagbibigay-daan sa iyo na
@@ -530,6 +531,7 @@ fil-PH:
     computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng
     iyong sariling laro o istorya na maaari mong ibahagi.
   coursea-2021_gradelevel: Baitang 5+
+  coursea-2021_name: Kursong A (2021)
   coursea-2021_shortdescription_congrats: Alamin ang mga pangunahing alituntunin sa
     computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng
     iyong sariling laro o istorya na maaari mong ibahagi.
@@ -563,6 +565,7 @@ fil-PH:
     computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng
     iyong sariling laro o istorya na maaari mong ibahagi.
   courseb-2021_gradelevel: Baitang 6+
+  courseb-2021_name: Kursong B (2021)
   courseb-2021_shortdescription_congrats: Alamin ang mga pangunahing alituntunin sa
     computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng
     iyong sariling laro o istorya na maaari mong ibahagi.
@@ -596,6 +599,7 @@ fil-PH:
     sa cyberbullying. Sa dulo ng kurso, lilikha ng sarili mong laro o istorya na maaari
     mong ibahagi!
   coursec-2021_gradelevel: Baitang 7+
+  coursec-2021_name: Kursong C (2021)
   coursec-2021_shortdescription_congrats: Lumikha ng mga programa gamit ang pagsunod-sunod,
     mga loops, at mga pangyayari. Isalin ang iyong mga inisyal sa binary, siyasatin
     ang iba't ibang mga pamamaraan sa paglutas ng problema, at matuto kung paano tutugon
@@ -665,6 +669,7 @@ fil-PH:
     function. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng capstone
     na proyekto na maaari mong ibahagi sa iyong mga kaibigan at pamilya.
   coursee-2021_gradelevel: Baitang 9+
+  coursee-2021_name: Kursong E (2021)
   coursee-2021_shortdescription_congrats: Magsimulang mag-code gamit ang mga algoritmo,
     mga loop, mga kondisyonal, at mga pangyayari at pagkatapos ay pupunta ka sa mga
     function. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng capstone
@@ -702,6 +707,7 @@ fil-PH:
     at internet sa lipunan. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha
     ng isang capstone na proyekto na maaari mong ibahagi sa mga kaibigan at pamilya.
   coursef-2021_gradelevel: Baitang 10+
+  coursef-2021_name: Kursong F (2021)
   coursef-2021_shortdescription_congrats: Matutong gumami sa iba't ibang uri ng mga
     loop, mga event, mga function, at mga kondisyonal. Siyasatin ang iba't ibang mga
     pamamaraan sa paglutas ng mga problema at talakayain ang mga epekto ng computing
@@ -1143,6 +1149,7 @@ fil-PH:
   express-2018_name: Mabilis na Kurso
   express-2019_name: Pinabilis na Kurso (2019)
   express-2020_name: Pinabilis na Kurso (2020)
+  express-2021_name: Express Kurso (2021)
   express_name: Mabilis na Kurso
   finch_beyond_gradelevel: Edad 8+
   finch_beyond_longdescription: Ang Finch ay isang bagong robot para sa edukasyon
@@ -1256,6 +1263,7 @@ fil-PH:
   header_about_us: Tungkol sa Amin
   header_course_catalog: Catalog ng Kurso
   header_courses: Mga kurso
+  header_districts: Distrito
   header_documentation: Dokumentasyon
   header_educate_beyond: Pagkatapos ng Code.org
   header_educate_community: Online na Komunidad
@@ -1271,8 +1279,10 @@ fil-PH:
   header_help_support: 'Tulong at suporta '
   header_help_us: Tulungan Kami
   header_home: Home
+  header_incubator: Incubator
   header_learn: Matuto
   header_legal: Pagkapribado at Legal
+  header_legal_cookie_notice: Paunawa ng Cookie
   header_legal_privacy: Patakaran sa Pagkapribado
   header_legal_tos: Mga Alituntunin ng Serbisyo
   header_my_dashboard: Aking Dashboard
@@ -1280,6 +1290,7 @@ fil-PH:
   header_project_gallery: Mga Proyekto
   header_report_abuse: I-report ang pag-abuso
   header_report_bug: I-report ang problema
+  header_schools: Paaralan
   header_screen_reader_hamburger: Menu
   header_screen_reader_help: Ang tulong na menu
   header_sections: Mga Seksyon
@@ -1736,6 +1747,7 @@ fil-PH:
   homepage_slot_text_link_k5: Mga kurso para sa nasa K-5 na baitang
   homepage_slot_text_link_local: Maghanap ng isang lokal na klase
   homepage_slot_text_link_middle: Middle school
+  homepage_slot_text_link_middle_and_high: Estudyante sa Gitna at Mataas na Paaralan
   homepage_slot_text_link_othercourses: Iba pang mga online na kurso
   homepage_slot_text_link_pd: Professional development
   homepage_slot_text_link_shop: Mga t-shirt, mga sombrero, & iba pa
@@ -2719,6 +2731,7 @@ fil-PH:
   user_header_applab: 'App na Lab '
   user_header_artist: 'Artista '
   user_header_create: 'Lumikha '
+  user_header_create_account_low_cap: Gumawa ng account
   user_header_dance: Dance Party
   user_header_flappy: Flappy
   user_header_gamelab: Game Lab
@@ -2843,30 +2856,15 @@ fil-PH:
     na kilusan para subukan ang isang oras na panimula sa computer science, umabot
     sa sampung milyong mga estudyante ang naabot sa 180+ na mga bansa. Sana makalahok
     ka sa Computer Science Education Week ngayong ika-7 hanggang ika-13 ng Disyembre.
-  volunteer_engineer_submission_intro_guide: Alamin pa ang tungkol sa ating <a href="%{volunteer_guide}">programa
-    sa pagboluntaryo dito</a>.
   volunteer_engineer_submission_intro_guide_markdown: Matuto nang higit pa tungkol
     sa aming [volunteer program dito](%{volunteer_guide}).
-  volunteer_engineer_submission_intro_links: Isa ka bang guro na naghahanap ng mga
-    boluntaryo? Maghanap ng boluntaryo sa ating <a href="%{volunteer_local}">mapa
-    ng boluntaryo</a>.
   volunteer_engineer_submission_intro_links_markdown: Isa ka bang guro na naghahanap
     ng mga boluntaryo? Maghanap ng lokal na boluntaryo sa aming [volunteer map](%{volunteer_local}).
-  volunteer_engineer_submission_intro_recruit: 'Gusto ng mga guro na magkaroon ng
-    isang tao na <span style="font-family: ''Gotham 7r'', sans-serif;">mainit tungkol
-    sa edukasyon sa computer science</span> na maaaring tumulong sa silid-aralan,
-    o kahit na sino na maaaring <span style="font-family: ''Gotham 7r'', sans-serif;">magbigay
-    inspirasyon</span> sa kanilang mga estudyante sa pamamagitan ng pakikipag-usap
-    sa lawak ng posibilidad sa computer science (na maaaring magawa sa pamamagitan
-    ng video chat).'
   volunteer_engineer_submission_intro_recruit_markdown: Gusto ng mga guro na magkaroon
     ng isang tao na **may pasyon tungkol sa edukasyon sa computer science ** na maaaring
     tumulong sa silid-aralan, o kahit na sino na maaaring magbigay **inspirasyon**
     sa kanilang mga mag-aaral sa pamamagitan ng pakikipag-usap sa lawak ng posibilidad
     sa computer science (na maaaring magawa sa pamamagitan ng video chat).
-  volunteer_engineer_submission_intro_signup: Pakilagyan ang sumusunod na mga impormasyon
-    kung ikaw ay isang estudyante sa computer sciece o isang software na propesyonal.
-    Ang mga patlang na may markang<span class="form-required-field">*</span> ay kinakailangan.
   volunteer_engineer_submission_intro_signup_markdown: Ilagay ang sumusunod na impormasyon
     kung ikaw ay isang computer science na mag-aaral o software professional. Ikaw
     ay dapat na hindi bababa sa 18 taong gulang upang mag-sign up bilang isang boluntaryo.

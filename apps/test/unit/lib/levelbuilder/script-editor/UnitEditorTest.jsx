@@ -1,5 +1,5 @@
 import React from 'react';
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import UnitEditor from '@cdo/apps/lib/levelbuilder/unit-editor/UnitEditor';
 import {assert, expect} from '../../../../util/reconfiguredChai';
 import {Provider} from 'react-redux';
@@ -19,6 +19,7 @@ import createResourcesReducer, {
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
 import $ from 'jquery';
+import {render, screen} from '@testing-library/react';
 import {
   PublishedState,
   InstructionType,
@@ -82,6 +83,7 @@ describe('UnitEditor', () => {
       initialInstructionType: InstructionType.teacher_led,
       initialInstructorAudience: InstructorAudience.teacher,
       initialParticipantAudience: ParticipantAudience.student,
+      initialSupportedLocales: [],
       hasCourse: false,
       scriptPath: '/s/test-unit',
       initialProfessionalLearningCourse: '',
@@ -103,17 +105,29 @@ describe('UnitEditor', () => {
     );
   };
 
+  function renderDefault(overrideProps = {}) {
+    const combinedProps = {...defaultProps, ...overrideProps};
+    render(
+      <Provider store={store}>
+        <UnitEditor {...combinedProps} />
+      </Provider>
+    );
+  }
+
   describe('Script Editor', () => {
     it('does not show publishing editor if hasCourse is true', () => {
-      const wrapper = createWrapper({hasCourse: true});
-      assert.equal(wrapper.find('CourseVersionPublishingEditor').length, 0);
+      renderDefault({hasCourse: true});
+      expect(screen.queryByTestId('course-version-publishing-editor')).to.not
+        .exist;
     });
 
     it('shows publishing editor if hasCourse is false', () => {
-      const wrapper = createWrapper({hasCourse: false});
-      assert.equal(wrapper.find('CourseVersionPublishingEditor').length, 1);
+      renderDefault({hasCourse: false});
+      screen.queryByTestId('course-version-publishing-editor');
     });
+  });
 
+  describe('Script Editor - Legacy (Enzyme)', () => {
     it('shows hide this unit in course if hasCourse and course is not in development', () => {
       const wrapper = createWrapper({
         hasCourse: true,
@@ -165,12 +179,56 @@ describe('UnitEditor', () => {
       expect(wrapper.find('input').length).to.equal(24);
       expect(wrapper.find('input[type="checkbox"]').length).to.equal(11);
       expect(wrapper.find('textarea').length).to.equal(4);
-      expect(wrapper.find('select').length).to.equal(6);
-      expect(wrapper.find('CollapsibleEditorSection').length).to.equal(10);
+      expect(wrapper.find('select').length).to.equal(5);
+      expect(wrapper.find('CollapsibleEditorSection').length).to.equal(11);
       expect(wrapper.find('SaveBar').length).to.equal(1);
       expect(wrapper.find('CourseTypeEditor').length).to.equal(1);
 
       expect(wrapper.find('UnitCard').length).to.equal(1);
+    });
+
+    it('locale selection is a multi select checkbox component with initial options selected', () => {
+      const wrapper = createWrapper({
+        initialLocales: [
+          ['Hindi', 'hi-IN'],
+          ['Tamil', 'ta-IN'],
+          ['Kannada', 'ka-IN'],
+          ['Bahasa', 'ms-MY'],
+        ],
+        initialSupportedLocales: ['hi-IN', 'ta-IN'],
+      });
+
+      expect(
+        wrapper
+          .find('li')
+          .filterWhere(
+            li =>
+              li.find('input[type="checkbox"]').length === 1 &&
+              li.find('strong').length === 1
+          ).length
+      ).to.equal(4);
+
+      expect(
+        wrapper
+          .find('li')
+          .filterWhere(
+            li =>
+              li.find('input[type="checkbox"]').length === 1 &&
+              li.find('strong').filterWhere(st => st.text() === 'hi-IN')
+                .length === 1
+          ).length
+      ).to.equal(1);
+
+      expect(
+        wrapper
+          .find('li')
+          .filterWhere(
+            li =>
+              li.find('input[type="checkbox"]').length === 1 &&
+              li.find('strong').filterWhere(st => st.text() === 'ta-IN')
+                .length === 1
+          ).length
+      ).to.equal(1);
     });
 
     it('disables changing student facing lesson plan checkbox when not allowed to make major curriculum changes', () => {

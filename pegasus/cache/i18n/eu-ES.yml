@@ -1536,20 +1536,6 @@ eu-ES:
     sarrera lortzeko mugimendu global bat da eta 180 herrialdetan baino gehiagotan
     hamarnaka milioi ikaslerengana heltzen da. Mesedez, Konputazio zientzien hezkuntza
     astean parte hartu, Abenduaren 7tik 13ra.
-  volunteer_engineer_submission_intro_links: Ez zaudela begiratzen bolondres lana
-    egiteko? <a href="%{learn_more}">Ikasi gehiago</a> zure Kode Ordu propioa antolatzeari
-    buruz eta bertako bolondresak aurkitu gure <a href="%{volunteer_local}">bolondres
-    mapan</a>.
-  volunteer_engineer_submission_intro_recruit: 'Irakasle hauek nahiko lukete <span
-    style="font-family: ''Gotham 7r'', sans-serif;">informatika gustuko duen baten
-    bat</span> eskoletan laguntzeko, edo haien ikasleak <span style="font-family:
-    ''Gotham 7r'', sans-serif;">animatu</span> ditzakeen baten bat Informatikaren
-    aukera zabalen berri ematen (bideo konferentzia bidez izan zitekeen). Ez baduzu
-    boluntarioren beharrik, <a href="%{url}">ikasi</a> nola antolatu zure Kode Orduaren
-    ekitaldia.'
-  volunteer_engineer_submission_intro_signup: Mesedez, informatika ikaslea edo programatzailea
-    bazara hurrengo informazioa bete ezazu. <span class="form-required-field">*</span>
-    batekin dauden eremuak beharrezkoak dira.
   volunteer_engineer_submission_location_flexibility_curriculum: kode irekiko proiektuei
     lagunduz
   volunteer_engineer_submission_location_flexibility_onsite: bertarako bisita eskolan

@@ -257,7 +257,7 @@ class Lesson < ApplicationRecord
 
   def student_lesson_plan_pdf_url
     if script.is_migrated && script.include_student_lesson_plans && has_lesson_plan
-      Services::CurriculumPdfs.get_lesson_plan_url(self, true)
+      Services::CurriculumPdfs.get_lesson_plan_url(self, student_facing: true)
     end
   end
 
@@ -431,7 +431,8 @@ class Lesson < ApplicationRecord
       standards: lesson_standards.map(&:summarize_for_lesson_edit),
       frameworks: Framework.all.map(&:summarize_for_lesson_edit),
       opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_edit),
-      lessonPath: get_uncached_show_path
+      lessonPath: get_uncached_show_path,
+      rubric: rubric,
     }
   end
 
@@ -504,6 +505,16 @@ class Lesson < ApplicationRecord
       displayName: localized_name,
       link: is_student ? script_lesson_student_path(script, self) : script_lesson_path(script, self),
       position: relative_position
+    }
+  end
+
+  def summarize_for_rubric_edit
+    {
+      id: id,
+      unitName: script.title_for_display,
+      lessonNumber: relative_position,
+      lessonName: name,
+      levels: levels
     }
   end
 
@@ -594,7 +605,7 @@ class Lesson < ApplicationRecord
     end
     next_level = next_level_for_lesson_extras(user)
     next_level ?
-      build_script_level_path(next_level) : script_completion_redirect(script)
+      build_script_level_path(next_level) : script_completion_redirect(user, script)
   end
 
   def next_level_number_for_lesson_extras(user)
@@ -890,7 +901,7 @@ class Lesson < ApplicationRecord
 
   def report_bug_url(request)
     message = "Bug in Lesson #{name}\n#{request.url}\n#{request.user_agent}\n"
-    "https://support.code.org/hc/en-us/requests/new?&description=#{CGI.escape(message)}"
+    "https://support.code.org/hc/en-us/requests/new?&tf_description=#{CGI.escape(message)}"
   end
 
   # Finds the LessonActivity by id, or creates a new one if id is not specified.

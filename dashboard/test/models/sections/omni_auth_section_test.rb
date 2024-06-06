@@ -93,6 +93,99 @@ class OmniAuthSectionTest < ActiveSupport::TestCase
     assert_equal new_owner.id, new_section.user_id
   end
 
+  test 'import section twice' do
+    # This happens when a google classroom/clever section with multiple teachers is imported twice.
+    owner = create :teacher
+    coteacher = create :teacher
+    students = [
+      OmniAuth::AuthHash.new(
+        uid: 111,
+        provider: 'google_oauth2',
+        info: {
+          name: 'Sample User',
+        },
+        )
+    ]
+
+    section = OmniAuthSection.from_omniauth(
+      code: 'G-222222',
+      type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM,
+      owner_id: owner.id,
+      students: students,
+      )
+    section.reload
+    assert_equal 'G-222222', section.code
+    assert_equal owner.id, section.user_id
+
+    new_section = OmniAuthSection.from_omniauth(
+      code: 'G-222222',
+      type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM,
+      owner_id: coteacher.id,
+      students: students,
+      )
+    new_section.reload
+    assert_equal section.id, new_section.id
+    assert_equal 'G-222222', new_section.code
+
+    # Section owner doesn't change
+    assert_equal owner.id, new_section.user_id
+    # Coteacher is added
+    assert_equal [owner.id, coteacher.id].sort, new_section.instructors.pluck(:id).sort
+  end
+
+  test 're-establish soft deleted coteacher' do
+    # This happens when a google classroom/clever section with multiple teachers is imported twice.
+    owner = create :teacher
+    coteacher = create :teacher
+    students = [
+      OmniAuth::AuthHash.new(
+        uid: 111,
+        provider: 'google_oauth2',
+        info: {
+          name: 'Sample User',
+        },
+        )
+    ]
+
+    section = OmniAuthSection.from_omniauth(
+      code: 'G-222222',
+      type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM,
+      owner_id: owner.id,
+      students: students,
+      )
+    section.reload
+    assert_equal 'G-222222', section.code
+    assert_equal owner.id, section.user_id
+
+    section_before_delete = OmniAuthSection.from_omniauth(
+      code: 'G-222222',
+      type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM,
+      owner_id: coteacher.id,
+      students: students,
+      )
+    section_before_delete.reload
+
+    coteacher_instructor = section_before_delete.section_instructors.where(instructor: coteacher).first
+
+    coteacher_instructor.destroy
+
+    new_section = OmniAuthSection.from_omniauth(
+      code: 'G-222222',
+      type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM,
+      owner_id: coteacher.id,
+      students: students,
+      )
+    new_section.reload
+    assert_equal section.id, new_section.id
+    assert_equal 'G-222222', new_section.code
+
+    # Section owner doesn't change
+    assert_equal owner.id, new_section.user_id
+    # Coteacher is restored
+    assert_equal 'active', new_section.section_instructors.where(id: coteacher_instructor.id).first.status
+    assert_equal [owner.id, coteacher.id].sort, new_section.instructors.pluck(:id).sort
+  end
+
   test 'set exact student list' do
     teacher = create :teacher
     section = create :section, user: teacher, login_type: 'clever'
@@ -111,5 +204,21 @@ class OmniAuthSectionTest < ActiveSupport::TestCase
 
     section.set_exact_student_list(updated_students)
     assert_equal updated_students.pluck(:id).sort, section.reload.students.pluck(:id).sort
+  end
+
+  test 'truncate section name when too long' do
+    owner = create :teacher
+    course_name = 'test' * 65
+
+    section = OmniAuthSection.from_omniauth(
+      code: 'G-222222',
+      type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM,
+      owner_id: owner.id,
+      students: [],
+      section_name: course_name
+    )
+    section.reload
+    assert_equal OmniAuthSection.column_for_attribute(:name).limit, section.name.length
+    assert section.name.end_with?('...')
   end
 end

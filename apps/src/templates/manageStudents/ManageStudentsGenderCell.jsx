@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+
 import i18n from '@cdo/locale';
+
 import {editStudent} from './manageStudentsRedux';
 
 const GENDERS = {
@@ -40,11 +42,11 @@ class ManageStudentGenderCell extends Component {
         )}
         {this.props.isEditing && (
           <select
+            style={{width: 100, marginBottom: 0}}
             ref={element => (this.root = element)}
             name="gender"
             value={this.props.editedValue}
             onChange={this.onChangeGender}
-            style={{width: 120}}
           >
             {Object.keys(GENDERS).map(gender => (
               <option key={gender} value={gender}>

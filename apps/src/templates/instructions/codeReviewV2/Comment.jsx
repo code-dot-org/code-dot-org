@@ -1,16 +1,18 @@
+import moment from 'moment';
+import PropTypes from 'prop-types';
 import React, {useState, useEffect, useRef} from 'react';
 import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
-import moment from 'moment';
-import javalabMsg from '@cdo/javalab/locale';
-import color from '@cdo/apps/util/color';
-import msg from '@cdo/locale';
-import {reviewCommentShape} from '@cdo/apps/templates/instructions/codeReviewV2/shapes';
-import InlineDropdownMenu from '@cdo/apps/templates/InlineDropdownMenu';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import fontConstants from '@cdo/apps/fontConstants';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import InlineDropdownMenu from '@cdo/apps/templates/InlineDropdownMenu';
+import {reviewCommentShape} from '@cdo/apps/templates/instructions/codeReviewV2/shapes';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import color from '@cdo/apps/util/color';
+import javalabMsg from '@cdo/javalab/locale';
+import msg from '@cdo/locale';
 import '@cdo/apps/templates/instructions/codeReviewV2/comment.scss';
 
 const FLASH_ERROR_TIME_MS = 5000;
@@ -195,6 +197,7 @@ function Comment({
                     '/blockly/media/templates/instructions/codeReview/ellipsis.svg'
                   }
                   style={{height: '3px', display: 'flex'}}
+                  alt=""
                 />
               }
             >
@@ -243,7 +246,7 @@ export default connect(
 
 const styles = {
   name: {
-    fontFamily: '"Gotham 5r"',
+    ...fontConstants['main-font-semi-bold'],
   },
   iconName: {
     marginLeft: '20px',

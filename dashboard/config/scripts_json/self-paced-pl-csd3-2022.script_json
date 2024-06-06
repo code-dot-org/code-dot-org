@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "curriculum_umbrella": "CSD Self Paced PL",
       "has_verified_resources": true,
       "is_migrated": true,
       "student_detail_progress_view": true,
@@ -11,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-07-05 20:14:45 UTC",
+    "serialized_at": "2024-03-26 19:05:16 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -92,6 +93,7 @@
       "key": "bed5e18d-61bf-44d2-960b-c27c6cbbeeeb",
       "position": 1,
       "properties": {
+        "duration": 30
       },
       "seeding_key": {
         "lesson_activity.key": "bed5e18d-61bf-44d2-960b-c27c6cbbeeeb",
@@ -104,6 +106,7 @@
       "key": "d22b9bfb-c4e5-4616-873c-8ae63caaa9d8",
       "position": 1,
       "properties": {
+        "duration": 20
       },
       "seeding_key": {
         "lesson_activity.key": "d22b9bfb-c4e5-4616-873c-8ae63caaa9d8",
@@ -116,6 +119,7 @@
       "key": "bac13c4c-e3ae-4bb6-8b1e-36db83c5ff59",
       "position": 1,
       "properties": {
+        "duration": 10
       },
       "seeding_key": {
         "lesson_activity.key": "bac13c4c-e3ae-4bb6-8b1e-36db83c5ff59",
@@ -1148,6 +1152,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

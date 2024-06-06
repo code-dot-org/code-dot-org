@@ -1,11 +1,13 @@
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow, mount} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
+
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {UnconnectedLevelDetailsDialog as LevelDetailsDialog} from '@cdo/apps/templates/lessonOverview/activities/LevelDetailsDialog';
 import * as utils from '@cdo/apps/utils';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('LevelDetailsDialogTest', () => {
   let handleCloseSpy, loadVideoSpy, defaultProps;

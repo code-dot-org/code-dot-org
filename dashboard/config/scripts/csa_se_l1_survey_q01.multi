@@ -1,0 +1,11 @@
+name 'CSA-SE-L1-Survey-Q01'
+
+question 'How well do you feel this lesson helped you understand the concepts and practical usage of Git and GitHub?'
+
+right 'Not at all: I don\'t feel the lesson helped me understand the concepts or practical usage of Git and GitHub.'
+right 'Somewhat: The lesson provided a basic understanding, but I\'m still confused about some aspects.'
+right 'Moderately: I gained a fair understanding but could use more clarification or practical examples.'
+right 'Quite Well: The lesson clarified many concepts and I feel confident in my understanding, although there are still some areas I\'d like to explore further.'
+right 'Extremely Well: The lesson was thorough and clear, and I feel very confident about using Git and GitHub in practice.'
+
+allow_multiple_attempts false

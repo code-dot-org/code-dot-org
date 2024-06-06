@@ -1,16 +1,18 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
-import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import React from 'react';
+
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import color from '@cdo/apps/util/color';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
 
 export default class SignInInstructions extends React.Component {
   static propTypes = {
     loginType: PropTypes.oneOf(Object.values(SectionLoginType)).isRequired,
     sectionCode: PropTypes.string,
     studioUrlPrefix: PropTypes.string,
+    sectionProviderName: PropTypes.string,
   };
   render() {
     const {loginType, sectionCode, studioUrlPrefix} = this.props;
@@ -84,6 +86,21 @@ export default class SignInInstructions extends React.Component {
             <img
               style={styles.sublistAlign}
               src="/shared/images/clever_code_org_logo.png"
+              alt=""
+            />
+          </div>
+        )}
+        {loginType === SectionLoginType.lti_v1 && (
+          <div>
+            <h2 style={styles.heading}>
+              {i18n.signingInLtiLoginHeader({
+                providerName: this.props.sectionProviderName,
+              })}
+            </h2>
+            <SafeMarkdown
+              markdown={i18n.signingInLtiLoginBody({
+                providerName: this.props.sectionProviderName,
+              })}
             />
           </div>
         )}

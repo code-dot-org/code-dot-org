@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "2021drafting-1",
-    "serialized_at": "2022-04-08 15:41:05 UTC",
+    "serialized_at": "2024-03-20 16:38:47 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1321,6 +1321,50 @@
     },
     {
       "chapter": 32,
+      "position": 14,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Blank Costumes Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_customize_grids_mike"
+        ],
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting",
+        "activity_section.key": "5cf9c413-1dce-46f5-a85d-577716e0b7da"
+      },
+      "level_keys": [
+        "game_development_customize_grids_mike"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 15,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Blank Costumes Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_customize_grids"
+        ],
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting",
+        "activity_section.key": "5cf9c413-1dce-46f5-a85d-577716e0b7da"
+      },
+      "level_keys": [
+        "game_development_customize_grids"
+      ]
+    },
+    {
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1345,7 +1389,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 35,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1370,7 +1414,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 36,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -1395,7 +1439,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 37,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -1795,6 +1839,30 @@
     },
     {
       "seeding_key": {
+        "level.key": "game_development_customize_grids_mike",
+        "script_level.level_keys": [
+          "game_development_customize_grids_mike"
+        ],
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting",
+        "activity_section.key": "5cf9c413-1dce-46f5-a85d-577716e0b7da"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_customize_grids",
+        "script_level.level_keys": [
+          "game_development_customize_grids"
+        ],
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting",
+        "activity_section.key": "5cf9c413-1dce-46f5-a85d-577716e0b7da"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "courseF_events_loom_sandbox",
         "script_level.level_keys": [
           "courseF_events_loom_sandbox"
@@ -1870,6 +1938,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

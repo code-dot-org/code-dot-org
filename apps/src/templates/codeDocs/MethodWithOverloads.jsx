@@ -1,13 +1,13 @@
-// TODO: Fix prop types for this file
-/* eslint-disable react/prop-types */
-import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import Example from './Example';
-import ParametersTable from './ParametersTable';
+import React, {useState} from 'react';
+
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
+import Example from './Example';
+import ParametersTable from './ParametersTable';
 
 export function SingleMethod({
   method,
@@ -131,6 +131,7 @@ const methodShape = PropTypes.shape({
   parameters: PropTypes.arrayOf(PropTypes.object),
   examples: PropTypes.arrayOf(PropTypes.object),
   overloads: PropTypes.arrayOf(PropTypes.object),
+  returnValue: PropTypes.string,
 });
 
 SingleMethod.propTypes = {

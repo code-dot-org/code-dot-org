@@ -1,5 +1,6 @@
-import {assert} from '../../../util/reconfiguredChai';
 import * as utils from '@cdo/apps/templates/lessonOverview/googleDocsUtils';
+
+import {assert} from '../../../util/reconfiguredChai';
 const {isGDocsUrl, gDocsBaseUrl, gDocsPdfUrl, gDocsMsOfficeUrl, gDocsCopyUrl} =
   utils;
 

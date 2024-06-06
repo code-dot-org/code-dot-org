@@ -1,14 +1,18 @@
-import React, {Component} from 'react';
-import i18n from '@cdo/locale';
-import color from '../../util/color';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import {selectGallery} from './projectsRedux';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {Galleries} from './projectConstants';
-import PublicGallery from '@cdo/apps/templates/projects/PublicGallery';
-import PersonalProjectsTable from '@cdo/apps/templates/projects/PersonalProjectsTable';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import LibraryTable from '@cdo/apps/templates/projects/LibraryTable';
+import PersonalProjectsTable from '@cdo/apps/templates/projects/PersonalProjectsTable';
+import PublicGallery from '@cdo/apps/templates/projects/PublicGallery';
+import i18n from '@cdo/locale';
+
+import color from '../../util/color';
+
+import {Galleries} from './projectConstants';
+import {selectGallery} from './projectsRedux';
 
 const galleryTabs = [
   {
@@ -24,7 +28,7 @@ const galleryTabs = [
   {
     key: Galleries.PUBLIC,
     url: '/projects/public',
-    headerText: i18n.publicProjects(),
+    headerText: i18n.featuredProjects(),
   },
 ];
 
@@ -89,7 +93,7 @@ const styles = {
     },
     border: 'none',
     borderRadius: 50,
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     fontSize: 20,
     backgroundColor: color.neutral_light,
     color: color.neutral_dark,

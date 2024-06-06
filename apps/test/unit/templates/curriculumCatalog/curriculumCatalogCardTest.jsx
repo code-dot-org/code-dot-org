@@ -1,24 +1,26 @@
-import React from 'react';
 import {fireEvent, render, screen} from '@testing-library/react';
 import {pull} from 'lodash';
-import {expect} from '../../../util/reconfiguredChai';
-import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
-import {
-  subjectsAndTopicsOrder,
-  translatedCourseOfferingCsTopics,
-  translatedLabels,
-} from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
-import {sections} from '../studioHomepages/fakeSectionUtils';
+import React from 'react';
 import {Provider} from 'react-redux';
+
 import {
   getStore,
   registerReducers,
   restoreRedux,
   stubRedux,
 } from '@cdo/apps/redux';
+import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
+import {
+  subjectsAndTopicsOrder,
+  translatedCourseOfferingCsTopics,
+  translatedLabels,
+} from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 import teacherSections, {
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+
+import {expect} from '../../../util/reconfiguredChai';
+import {sections} from '../studioHomepages/fakeSectionUtils';
 
 describe('CurriculumCatalogCard', () => {
   const translationIconTitle = 'Curriculum is available in your language';
@@ -62,6 +64,12 @@ describe('CurriculumCatalogCard', () => {
       pathToCourse: '/s/course',
       scriptId: 1,
       isSignedOut: true,
+      onQuickViewClick: () => {},
+      handleSetExpandedCardKey: () => {},
+      isTeacher: true,
+      setExpandedCardKey: () => {},
+      recommendedSimilarCurriculum: {},
+      recommendedStretchCurriculum: {},
     };
   });
 
@@ -119,7 +127,7 @@ describe('CurriculumCatalogCard', () => {
     const firstLabelText =
       translatedLabels[subjectsAndTopicsOrder[firstSubjectIndexUsed]];
     const firstLabelNode = screen.getByText(firstLabelText);
-    firstLabelNode.focus();
+    firstLabelNode.closest('div').focus();
     expect(screen.getAllByText(firstLabelText)).to.have.lengthOf(2);
   });
 
@@ -151,7 +159,7 @@ describe('CurriculumCatalogCard', () => {
     const plusSignText = screen.getByText(
       `+${subjects.length + topics.length - 1}`
     );
-    plusSignText.focus();
+    plusSignText.closest('div').focus();
     remainingLabels.forEach(label => screen.getByText(translatedLabels[label]));
   });
 
@@ -254,7 +262,10 @@ describe('CurriculumCatalogCard', () => {
   });
 
   it('renders Assign button with descriptive label', () => {
-    renderCurriculumCard();
+    renderCurriculumCard({
+      ...defaultProps,
+      isSignedOut: false,
+    });
 
     screen.getByRole('button', {
       name: new RegExp(
@@ -306,25 +317,6 @@ describe('CurriculumCatalogCard', () => {
     fireEvent.click(assignButton);
     screen.getByRole('heading', {
       name: 'Create class section to assign a curriculum',
-    });
-  });
-
-  it('clicking Assign button as a student shows dialog to upgrade account', () => {
-    renderCurriculumCard({
-      ...defaultProps,
-      isSignedOut: false,
-      isTeacher: false,
-    });
-
-    const assignButton = screen.getByRole('button', {
-      name: new RegExp(
-        `Assign ${defaultProps.courseDisplayName} to your classroom`
-      ),
-    });
-
-    fireEvent.click(assignButton);
-    screen.getByRole('heading', {
-      name: 'Use a teacher account to assign a curriculum',
     });
   });
 

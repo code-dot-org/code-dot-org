@@ -1,20 +1,18 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-
 import Parser from '@code-dot-org/redactable-markdown';
-
 import {
   details,
+  clickableText,
   expandableImages,
   visualCodeBlock,
   xmlAsTopLevelBlock,
 } from '@code-dot-org/remark-plugins';
-
-import remarkRehype from 'remark-rehype';
-import rehypeRaw from 'rehype-raw';
-import rehypeSanitize from 'rehype-sanitize';
-import rehypeReact from 'rehype-react';
 import defaultSanitizationSchema from 'hast-util-sanitize/lib/github.json';
+import PropTypes from 'prop-types';
+import React from 'react';
+import rehypeRaw from 'rehype-raw';
+import rehypeReact from 'rehype-react';
+import rehypeSanitize from 'rehype-sanitize';
+import remarkRehype from 'remark-rehype';
 
 import externalLinks from './plugins/externalLinks';
 
@@ -79,6 +77,9 @@ schema.attributes.span = ['dataUrl', 'className'];
 // semantically-significant content
 schema.attributes['*'].push('style', 'className');
 
+// ClickableText uses data-id on a bold tag.
+schema.attributes['b'] = ['dataId'];
+
 // Add support for Blockly XML
 schema.clobber = [];
 const blocklyTags = [
@@ -111,7 +112,13 @@ blocklyTags.forEach(tag => {
 const markdownToReact = Parser.create()
   .getParser()
   // include custom plugins
-  .use([expandableImages, visualCodeBlock, xmlAsTopLevelBlock, details])
+  .use([
+    clickableText,
+    expandableImages,
+    visualCodeBlock,
+    xmlAsTopLevelBlock,
+    details,
+  ])
   // convert markdown to an HTML Abstract Syntax Tree (HAST)
   .use(remarkRehype, {
     // include any raw HTML in the markdown as raw HTML nodes in the HAST

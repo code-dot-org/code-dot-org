@@ -125,7 +125,7 @@ module Pd::Application
         raise "invalid email address for application #{id}"
       end
 
-      "\"#{applicant_full_name}\" <#{applicant_email}>"
+      ActionMailer::Base.email_address_with_name(applicant_email, applicant_full_name)
     end
 
     # Sends an email for this application
@@ -177,6 +177,10 @@ module Pd::Application
         waitlisted
         withdrawn
       )
+    end
+
+    def status_including_enrolled
+      status
     end
 
     # We need to validate this inclusion explicitly in a function in order to support derived
@@ -255,18 +259,16 @@ module Pd::Application
 
     # Include additional text for all the multi-select fields that have the option
     def full_answers
-      @full_answers ||= begin
-        sanitized_form_data_hash.tap do |hash|
-          additional_text_fields.each do |field_name, option, additional_text_field_name|
-            next unless hash.key? field_name
+      @full_answers ||= sanitized_form_data_hash.tap do |hash|
+        additional_text_fields.each do |field_name, option, additional_text_field_name|
+          next unless hash.key? field_name
 
-            option ||= OTHER_WITH_TEXT
-            additional_text_field_name ||= "#{field_name}_other".to_sym
-            hash[field_name] = self.class.answer_with_additional_text hash, field_name, option, additional_text_field_name
-            hash.delete additional_text_field_name
-          end
-        end.slice(*(self.class.filtered_labels(course, status).keys + self.class.additional_labels).uniq)
-      end
+          option ||= OTHER_WITH_TEXT
+          additional_text_field_name ||= "#{field_name}_other".to_sym
+          hash[field_name] = self.class.answer_with_additional_text hash, field_name, option, additional_text_field_name
+          hash.delete additional_text_field_name
+        end
+      end.slice(*(self.class.filtered_labels(course, status).keys + self.class.additional_labels).uniq)
     end
 
     # Camelized (js-standard) format of the full_answers. The keys here will match the raw keys in form_data
@@ -344,9 +346,9 @@ module Pd::Application
       return nil if regional_partner&.contact_email_with_backup.blank?
 
       if regional_partner.contact_name.present? && regional_partner.contact_email.present?
-        "\"#{regional_partner.contact_name}\" <#{regional_partner.contact_email}>"
+        ActionMailer::Base.email_address_with_name(regional_partner.contact_email, regional_partner.contact_name)
       elsif regional_partner.program_managers&.first.present?
-        "\"#{regional_partner.program_managers.first.name}\" <#{regional_partner.program_managers.first.email}>"
+        ActionMailer::Base.email_address_with_name(regional_partner.program_managers.first.email, regional_partner.program_managers.first.name)
       end
     end
 

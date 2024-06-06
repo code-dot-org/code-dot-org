@@ -1,25 +1,26 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
-import Button from '@cdo/apps/templates/Button';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+
+import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
+import {loadLevelsWithProgress} from '@cdo/apps/code-studio/teacherPanelRedux';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+import Button from '@cdo/apps/templates/Button';
+import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import Comment from '@cdo/apps/templates/instructions/teacherFeedback/Comment';
-import EditableReviewState from '@cdo/apps/templates/instructions/teacherFeedback/EditableReviewState';
 import EditableFeedbackStatus from '@cdo/apps/templates/instructions/teacherFeedback/EditableFeedbackStatus';
+import EditableReviewState from '@cdo/apps/templates/instructions/teacherFeedback/EditableReviewState';
 import Rubric from '@cdo/apps/templates/instructions/teacherFeedback/Rubric';
+import {updateTeacherFeedback} from '@cdo/apps/templates/instructions/teacherFeedback/teacherFeedbackDataApi';
+import teacherFeedbackStyles from '@cdo/apps/templates/instructions/teacherFeedback/teacherFeedbackStyles';
 import {
   teacherFeedbackShape,
   rubricShape,
 } from '@cdo/apps/templates/instructions/teacherFeedback/types';
-import {ReviewStates} from '@cdo/apps/templates/feedback/types';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
-import {loadLevelsWithProgress} from '@cdo/apps/code-studio/teacherPanelRedux';
-import {updateTeacherFeedback} from '@cdo/apps/templates/instructions/teacherFeedback/teacherFeedbackDataApi';
-import teacherFeedbackStyles from '@cdo/apps/templates/instructions/teacherFeedback/teacherFeedbackStyles';
+import i18n from '@cdo/locale';
 
 const ErrorType = {
   NoError: 'NoError',
@@ -36,6 +37,7 @@ export class EditableTeacherFeedback extends Component {
     teacher: PropTypes.number,
     latestFeedback: teacherFeedbackShape,
     token: PropTypes.string,
+    allowUnverified: PropTypes.bool.isRequired,
     //Provided by Redux
     verifiedInstructor: PropTypes.bool,
     selectedSectionId: PropTypes.number,
@@ -49,7 +51,7 @@ export class EditableTeacherFeedback extends Component {
     this.studentId = queryString.parse(window.location.search).user_id;
     this.onRubricChange = this.onRubricChange.bind(this);
 
-    const {latestFeedback} = this.props;
+    const {latestFeedback, allowUnverified, verifiedInstructor} = this.props;
 
     this.state = {
       comment: latestFeedback?.comment || '',
@@ -59,6 +61,7 @@ export class EditableTeacherFeedback extends Component {
       reviewStateUpdated: false,
       submitting: false,
       errorState: ErrorType.NoError,
+      allowEditing: verifiedInstructor || allowUnverified,
     };
   }
 
@@ -203,8 +206,7 @@ export class EditableTeacherFeedback extends Component {
   }
 
   renderSubmitFeedbackButton() {
-    const {latestFeedback, submitting, errorState} = this.state;
-    const {verifiedInstructor} = this.props;
+    const {latestFeedback, submitting, errorState, allowEditing} = this.state;
 
     const buttonText = latestFeedback ? i18n.update() : i18n.saveAndShare();
 
@@ -212,7 +214,7 @@ export class EditableTeacherFeedback extends Component {
       !this.didFeedbackChange() ||
       submitting ||
       errorState === ErrorType.Load ||
-      !verifiedInstructor;
+      !allowEditing;
 
     return (
       <div style={styles.button}>
@@ -230,11 +232,12 @@ export class EditableTeacherFeedback extends Component {
   }
 
   render() {
-    const {verifiedInstructor, rubric, visible} = this.props;
+    const {rubric, visible} = this.props;
 
-    const {comment, performance, latestFeedback, errorState} = this.state;
+    const {comment, performance, latestFeedback, errorState, allowEditing} =
+      this.state;
 
-    const placeholderWarning = verifiedInstructor
+    const placeholderWarning = allowEditing
       ? i18n.feedbackPlaceholder()
       : i18n.feedbackPlaceholderNonVerified();
 

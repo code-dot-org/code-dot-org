@@ -54,12 +54,15 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     get :index, params: {user_q: other_submitter.email}
     assert_response :success
     response = JSON.parse(@response.body)
-    assert_equal [
+    assert_equal(
       [
-        [submissions.first.id, nil, submissions.first.updated_at],
-        [submissions.second.id, 'escalated', submissions.second.updated_at]
-      ]
-    ], response['submissions'].map {|submission| submission['review_ids']}
+        [
+          [submissions.first.id, nil, submissions.first.updated_at],
+          [submissions.second.id, 'escalated', submissions.second.updated_at]
+        ]
+      ],
+      response['submissions'].map {|submission| submission['review_ids']}
+    )
 
     # Verify expected pagination metadata
     assert_equal(
@@ -82,12 +85,15 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     get :index, params: {user_q: unmigrated_submitter.email}
     assert_response :success
     response = JSON.parse(@response.body)
-    assert_equal [
+    assert_equal(
       [
-        [submissions.first.id, nil, submissions.first.updated_at],
-        [submissions.second.id, 'escalated', submissions.second.updated_at]
-      ]
-    ], response['submissions'].map {|submission| submission['review_ids']}
+        [
+          [submissions.first.id, nil, submissions.first.updated_at],
+          [submissions.second.id, 'escalated', submissions.second.updated_at]
+        ]
+      ],
+      response['submissions'].map {|submission| submission['review_ids']}
+    )
 
     # Verify expected pagination metadata
     assert_equal(
@@ -115,17 +121,17 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
 
     # R. Daneel's submissions are found
     PeerReview.where(submitter: daneel).each do |pr|
-      assert response['submissions'].any? {|submission| submission['review_ids'].any? {|r| r[0] == pr.id}}
+      assert(response['submissions'].any? {|submission| submission['review_ids'].any? {|r| r[0] == pr.id}})
     end
 
     # Danielle's submissions are found
     PeerReview.where(submitter: danielle).each do |pr|
-      assert response['submissions'].any? {|submission| submission['review_ids'].any? {|r| r[0] == pr.id}}
+      assert(response['submissions'].any? {|submission| submission['review_ids'].any? {|r| r[0] == pr.id}})
     end
 
     # Toothy the Gerbil's submissions are not found
     PeerReview.where(submitter: gerbil).each do |pr|
-      refute response['submissions'].any? {|submission| submission['review_ids'].any? {|r| r[0] == pr.id}}
+      refute(response['submissions'].any? {|submission| submission['review_ids'].any? {|r| r[0] == pr.id}})
     end
   end
 
@@ -171,20 +177,23 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     get :index
     assert_response :success
     response = JSON.parse(@response.body)
-    assert_equal [
+    assert_equal(
       [
-        [@level_3_reviews.first.id, nil, @level_3_reviews.first.updated_at],
-        [@level_3_reviews.second.id, 'escalated', @level_3_reviews.second.updated_at]
+        [
+          [@level_3_reviews.first.id, nil, @level_3_reviews.first.updated_at],
+          [@level_3_reviews.second.id, 'escalated', @level_3_reviews.second.updated_at]
+        ],
+        [
+          [@level_2_reviews.first.id, nil, @level_2_reviews.first.updated_at],
+          [@level_2_reviews.second.id, 'accepted', @level_2_reviews.second.updated_at]
+        ],
+        [
+          [@level_1_reviews.first.id, nil, @level_1_reviews.first.updated_at],
+          [@level_1_reviews.second.id, 'escalated', @level_1_reviews.second.updated_at]
+        ]
       ],
-      [
-        [@level_2_reviews.first.id, nil, @level_2_reviews.first.updated_at],
-        [@level_2_reviews.second.id, 'accepted', @level_2_reviews.second.updated_at]
-      ],
-      [
-        [@level_1_reviews.first.id, nil, @level_1_reviews.first.updated_at],
-        [@level_1_reviews.second.id, 'escalated', @level_1_reviews.second.updated_at]
-      ]
-    ], response['submissions'].map {|submission| submission['review_ids']}
+      response['submissions'].map {|submission| submission['review_ids']}
+    )
 
     # Verify expected pagination metadata
     assert_equal(
@@ -434,9 +443,7 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     )
   end
 
-  private
-
-  def create_peer_review_module_for_learner(learner)
+  private def create_peer_review_module_for_learner(learner)
     # Create a one-level peer review module
     course_unit = create :plc_course_unit
     level = create :free_response, peer_reviewable: true
@@ -464,7 +471,7 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     [course_unit, level]
   end
 
-  def create_peer_reviews_for_user_and_level(user, level, course_unit = @course_unit)
+  private def create_peer_reviews_for_user_and_level(user, level, course_unit = @course_unit)
     level_source = create :level_source, level: level
     user_level = create :user_level,
       user: user,
@@ -476,7 +483,7 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     PeerReview.create_for_submission(user_level, level_source.id)
   end
 
-  def create_peer_reviews_for_user(user)
+  private def create_peer_reviews_for_user(user)
     course_unit = create :plc_course_unit
     level = create :free_response, peer_reviewable: true
     create :script_level, script: course_unit.script, levels: [level]

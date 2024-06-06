@@ -36,7 +36,6 @@ import logToCloud from './logToCloud';
 import msg from '@cdo/locale';
 import project from './code-studio/initApp/project';
 import puzzleRatingUtils from './puzzleRatingUtils';
-import userAgentParser from './code-studio/initApp/userAgentParser';
 import {
   KeyCodes,
   TestResults,
@@ -44,7 +43,11 @@ import {
   NOTIFICATION_ALERT_TYPE,
   START_BLOCKS,
 } from './constants';
-import {Renderers, stringIsXml} from '@cdo/apps/blockly/constants';
+import {
+  Renderers,
+  stringIsXml,
+  stripUserCreated,
+} from '@cdo/apps/blockly/constants';
 import {assets as assetsApi} from './clientApi';
 import {
   configCircuitPlayground,
@@ -87,6 +90,7 @@ import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
 import {closeWorkspaceAlert} from './code-studio/projectRedux';
+import KeyHandler from './util/KeyHandler';
 
 var copyrightStrings;
 
@@ -238,6 +242,11 @@ class StudioApp extends EventEmitter {
      * Stores the code at run. It's undefined if the code is not running.
      */
     this.executingCode = undefined;
+
+    /**
+     * Global key handler for the app.
+     */
+    this.keyHandler = new KeyHandler(document);
   }
 }
 /**
@@ -838,7 +847,7 @@ StudioApp.prototype.handleClearPuzzle = function (config) {
     if (Blockly.functionEditor) {
       Blockly.functionEditor.hideIfOpen();
     }
-    Blockly.mainBlockSpace.clear();
+    Blockly.clearAllStudentWorkspaces();
     this.setStartBlocks_(config, false);
     if (config.level.openFunctionDefinition) {
       this.openFunctionDefinition_(config);
@@ -1038,17 +1047,25 @@ StudioApp.prototype.addChangeHandler = function (newHandler) {
   this.changeHandlers.push(newHandler);
 };
 
-StudioApp.prototype.runChangeHandlers = function () {
+StudioApp.prototype.runChangeHandlers = function (e) {
   if (!this.changeHandlers) {
     return;
   }
-  this.changeHandlers.forEach(handler => handler());
+  this.changeHandlers.forEach(handler => handler(e));
 };
 
 StudioApp.prototype.setupChangeHandlers = function () {
   const runAllHandlers = this.runChangeHandlers.bind(this);
   if (this.isUsingBlockly()) {
     Blockly.addChangeListener(Blockly.mainBlockSpace, runAllHandlers);
+    if (Blockly.getHiddenDefinitionWorkspace()) {
+      // If we have a hidden definition workspace, run change listeners on it too.
+      // This ensures code changes in the hidden workspace trigger updates.
+      Blockly.addChangeListener(
+        Blockly.getHiddenDefinitionWorkspace(),
+        runAllHandlers
+      );
+    }
   } else {
     this.editor.on('change', runAllHandlers);
     // Droplet doesn't automatically bubble up aceEditor changes
@@ -1217,6 +1234,8 @@ StudioApp.prototype.inject = function (div, options) {
   } else if (experiments.isEnabled('geras')) {
     options.renderer = Renderers.GERAS;
   }
+
+  options.levelBlockIds = utils.findExplicitlySetBlockIds(window.appOptions);
   Blockly.inject(div, utils.extend(defaults, options), Sounds.getSingleton());
 };
 
@@ -1569,13 +1588,10 @@ StudioApp.prototype.resizeToolboxHeader = function () {
 StudioApp.prototype.highlight = function (id, spotlight) {
   if (this.isUsingBlockly() && !isEditWhileRun(getStore().getState())) {
     if (id) {
-      var m = id.match(/^block_id_(\d+)$/);
-      if (m) {
-        id = m[1];
-      }
+      id = id.replace(/^block_id_/, '');
     }
 
-    Blockly.mainBlockSpace.highlightBlock(id, spotlight);
+    Blockly.cdoUtils.highlightBlock(id, spotlight);
   }
 };
 
@@ -2085,6 +2101,13 @@ StudioApp.prototype.configureDom = function (config) {
   if (runButton && resetButton) {
     dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
     dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
+    this.keyHandler.registerEvent(['Control', 'Enter'], () => {
+      if (this.isRunning()) {
+        this.resetButtonClick();
+      } else {
+        throttledRunClick();
+      }
+    });
   }
   var skipButton = container.querySelector('#skipButton');
   if (skipButton) {
@@ -2114,7 +2137,6 @@ StudioApp.prototype.configureDom = function (config) {
       // Modify the arrangement of toolbox blocks so categories align left
       if (config.level.edit_blocks === TOOLBOX_EDIT_MODE) {
         this.blockYCoordinateInterval = 80;
-        config.blockArrangement = {category: {x: 20}};
       }
       // Enable if/else, param & var editing in levelbuilder, regardless of level setting
       config.level.disableIfElseEditing = false;
@@ -2232,29 +2254,6 @@ StudioApp.prototype.handleHideSource_ = function (options) {
         });
 
         buttonRow.appendChild(openWorkspace);
-
-        if (
-          ['algebra_game', 'calc', 'eval'].includes(
-            appOptions?.level?.projectType
-          )
-        ) {
-          const deprecationUrl =
-            'https://support.code.org/hc/en-us/articles/16268528601101-List-of-Deprecated-or-Non-Supported-Code-org-Courses';
-          ReactDOM.render(
-            <div style={{color: '#ff7a7a', textAlign: 'initial'}}>
-              {msg.deprecatedCalcAndEvalBrief()}
-              &nbsp;
-              <a
-                href={deprecationUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {msg.learnMore()}
-              </a>
-            </div>,
-            buttonRow.appendChild(document.createElement('div'))
-          );
-        }
       }
     }
   }
@@ -2272,7 +2271,17 @@ StudioApp.prototype.handleIframeEmbedAppAndCode_ = function () {
  * @param {object} config The object containing all metadata about the project
  */
 StudioApp.prototype.loadLibraryBlocks = function (config) {
-  if (!config.level.libraries && config.level.startLibraries) {
+  // We use start libaries if we should ignore last attempt, the level has contained levels,
+  // or if the level does not have libraries saved to it yet.
+  // Always use the source code from the level definition for contained and embed levels,
+  // so that changes made in levelbuilder will show up for users who have
+  // already run the level.
+  if (
+    (!config.level.libraries ||
+      config.ignoreLastAttempt ||
+      config.hasContainedLevels) &&
+    config.level.startLibraries
+  ) {
     config.level.libraries = JSON.parse(config.level.startLibraries);
   }
   if (!config.level.libraries) {
@@ -2733,27 +2742,34 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
     loadLastAttempt = false;
   }
   var startBlocks = config.level.startBlocks || '';
+  // When procedure definition blocks are set using the modal function editor,
+  // they will end up deletable by the student unless the XML is manually
+  // updated. Removing usercreated="true" ensures functions and behaviors
+  // are not deletable by the student using the modal editor.
+  if (stringIsXml(startBlocks)) {
+    startBlocks = stripUserCreated(startBlocks);
+  }
+  // TODO: When we start using json in levelbuilder, we will need to pull this from the level config.
   if (loadLastAttempt && config.levelGameName !== 'Jigsaw') {
     startBlocks = config.level.lastAttempt || startBlocks;
   }
 
+  // Only used in Sprite Lab.
+  if (config.level.sharedFunctions) {
+    startBlocks = Blockly.cdoUtils.appendSharedFunctions(
+      startBlocks,
+      config.level.sharedFunctions
+    );
+  }
   let isXml = stringIsXml(startBlocks);
 
   if (isXml) {
-    // Only used in Calc/Eval, Craft, Maze, and Artist
+    // Only used in Craft, Maze, and Artist
     if (config.forceInsertTopBlock) {
       // Adds a 'when_run' or similar block to workspace, if there isn't one.
       startBlocks = blockUtils.forceInsertTopBlock(
         startBlocks,
         config.forceInsertTopBlock
-      );
-    }
-    // Only used in Sprite Lab.
-    if (config.level.sharedFunctions) {
-      // TODO: Re-implement for JSON before migrating Sprite Lab
-      startBlocks = blockUtils.appendNewFunctions(
-        startBlocks,
-        config.level.sharedFunctions
       );
     }
     // Not needed if source is JSON, as these blocks will already have positions.
@@ -2767,7 +2783,7 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
   } catch (e) {
     if (loadLastAttempt) {
       try {
-        Blockly.mainBlockSpace.clear();
+        Blockly.clearAllStudentWorkspaces();
         // Try loading the default start blocks instead.
         this.setStartBlocks_(config, false);
       } catch (otherException) {
@@ -2821,18 +2837,31 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
 
   // If levelbuilder provides an empty toolbox, some apps (like artist)
   // replace it with a full toolbox. I think some levels may depend on this
-  // behavior. We want a way to specify no toolbox, which is <xml></xml>
+  // behavior. We want a way to specify no toolbox, which is <xml></xml>.
+  // Google Blockly may also add a xmlns attribute to this xml.
   if (config.level.toolbox) {
-    var toolboxWithoutWhitespace = config.level.toolbox.replace(/\s/g, '');
+    // Update CDO Blockly XML so it is compatible with mainline Google Blockly
+    // (Nothing is changed if we are using CDO Blockly.)
+    config.level.toolbox = Blockly.cdoUtils.processToolboxXml(
+      config.level.toolbox
+    );
+
+    const toolboxWithoutWhitespace = config.level.toolbox.replace(/\s/g, '');
+    const emptyToolboxOptionsWithoutWhitespace = [
+      '<xml></xml>',
+      '<xml/>',
+      '<xmlxmlns="https://developers.google.com/blockly/xml"/>',
+      '<xmlxmlns="https://developers.google.com/blockly/xml"></xml>',
+    ];
     if (
-      toolboxWithoutWhitespace === '<xml></xml>' ||
-      toolboxWithoutWhitespace === '<xml/>'
+      emptyToolboxOptionsWithoutWhitespace.includes(toolboxWithoutWhitespace)
     ) {
       config.level.toolbox = undefined;
     }
   }
 
   var div = document.getElementById('codeWorkspace');
+  // TODO: How many of these options apply to modal function editor?
   var options = {
     toolbox: config.level.toolbox,
     disableIfElseEditing: utils.valueOr(
@@ -2905,13 +2934,11 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
   }
   this.setStartBlocks_(config, true);
 
-  if (userAgentParser.isMobile() && userAgentParser.isSafari()) {
-    // Mobile Safari resize events fire too early, see:
-    // https://openradar.appspot.com/31725316
-    // Rerun the blockly resize handler after 500ms when clientWidth/Height
-    // should be correct
-    window.setTimeout(() => Blockly.fireUiEvent(window, 'resize'), 500);
-  }
+  // In some cases, resize events fire too early. For example, see:
+  // https://openradar.appspot.com/31725316
+  // Resize the Blockly workspace after 500ms when clientWidth/Height
+  // should be correct.
+  window.setTimeout(() => Blockly.fireUiEvent(window, 'resize'), 500);
 };
 
 /**
@@ -2992,11 +3019,6 @@ StudioApp.prototype.getFilteredUnfilledFunctionalBlock_ = function (filter) {
     var rootBlock = block.getRootBlock();
     if (!filter(rootBlock)) {
       return false;
-    }
-
-    if (block.hasUnfilledFunctionalInput()) {
-      unfilledBlock = block;
-      return true;
     }
   });
 
@@ -3240,6 +3262,8 @@ StudioApp.prototype.displayPlayspaceAlert = function (type, alertContents) {
 
   const playspaceAlert = React.createElement(Alert, alertProps, alertContents);
   ReactDOM.render(playspaceAlert, renderElement);
+
+  return renderElement;
 };
 
 /**
@@ -3434,6 +3458,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
       isK1: config.level.isK1,
       appType: config.app,
       nextLevelUrl: config.nextLevelUrl,
+      currentScriptLevelUrl: config.currentScriptLevelUrl,
       isProjectTemplateLevel:
         !!config.level.projectTemplateLevelName && !config.level.isK1,
       showProjectTemplateWorkspaceIcon:
@@ -3523,6 +3548,7 @@ if (IN_UNIT_TEST) {
   };
 
   module.exports.restoreStudioApp = function () {
+    instance = singleton();
     instance.removeAllListeners();
     instance.libraries = {};
     if (instance.changeListener) {

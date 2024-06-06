@@ -1,8 +1,10 @@
+import debounce from 'lodash/debounce';
 import PropTypes from 'prop-types';
 import React from 'react';
-import FilterGroupContainer from './filterGroupContainer';
+
 import SearchBar from '../templates/SearchBar';
-import debounce from 'lodash/debounce';
+
+import FilterGroupContainer from './filterGroupContainer';
 
 export default class Search extends React.Component {
   static propTypes = {

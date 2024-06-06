@@ -1,17 +1,20 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
+import React from 'react';
 import {connect} from 'react-redux';
-import DetailProgressTable from '@cdo/apps/templates/progress/DetailProgressTable';
-import SummaryProgressTable from '@cdo/apps/templates/progress/SummaryProgressTable';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {groupedLessonsType} from '@cdo/apps/templates/progress/progressTypes';
-import color from '@cdo/apps/util/color';
-import LessonGroupInfoDialog from '@cdo/apps/templates/progress/LessonGroupInfoDialog';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {lessonIsVisible} from './progressHelpers';
+
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import fontConstants from '@cdo/apps/fontConstants';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import DetailProgressTable from '@cdo/apps/templates/progress/DetailProgressTable';
 import LessonGroupInfo from '@cdo/apps/templates/progress/LessonGroupInfo';
+import LessonGroupInfoDialog from '@cdo/apps/templates/progress/LessonGroupInfoDialog';
+import {groupedLessonsType} from '@cdo/apps/templates/progress/progressTypes';
+import SummaryProgressTable from '@cdo/apps/templates/progress/SummaryProgressTable';
+import color from '@cdo/apps/util/color';
+
+import {lessonIsVisible} from './progressHelpers';
 
 /**
  * A component that shows a group of lessons. That group has a name and is
@@ -42,9 +45,9 @@ class LessonGroup extends React.Component {
 
   openLessonGroupInfoDialog = () => {
     /*
-    Because the info button is on the header which collapses when clicked we have to
-    reverse the collapsing when you click the info button
-    */
+        Because the info button is on the header which collapses when clicked we have to
+        reverse the collapsing when you click the info button
+        */
     this.setState({
       collapsed: !this.state.collapsed,
       lessonGroupInfoDialogOpen: true,
@@ -147,7 +150,7 @@ const styles = {
     padding: 20,
     backgroundColor: color.purple,
     fontSize: 18,
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     color: 'white',
     borderTopLeftRadius: 4,
     borderTopRightRadius: 4,

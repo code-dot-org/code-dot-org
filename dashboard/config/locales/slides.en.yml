@@ -2830,3 +2830,125 @@ en:
       10:
         image: 'notes/hoc_hello_world_2021_freeplay_10.jpg'
         text: "So what will you create? You could tell a story about yourself... or make one up with your own special characters. Maybe you'll even use your new computer science skills for your next school project! Stretch your imagination and have fun!"
+    hoc-dance-ai-warmup:
+      1:
+        image: 'notes/hoc_dance_ai_2023_intro_01.jpg'
+        text: "Hour of Code | Dance Party: AI Edition - Warm Up"
+      2:
+        image: 'notes/hoc_dance_ai_2023_intro_02.jpg'
+        text: "Hi! My name is Miral Kotb and I'm a dancer, software developer, and creator of iLuminate."
+      3:
+        image: 'notes/hoc_dance_ai_2023_intro_03.jpg'
+        text: "Computer science relates to creativity in numerous ways. Immeasurable, really. I mean, once you have the ability to write software you can put ideas into anything. I do it with light suits. There's so much you can do once you have the tools to write software, and the possibilities are really endless."
+      4:
+        image: 'notes/hoc_dance_ai_2023_intro_04.jpg'
+        text: "Over the next hour, you're going to get started with computer science and Artificial Intelligence by programming your own dance party! We've assembled some hit music and a team of great dancers for you to play with."
+      5:
+        image: 'notes/hoc_dance_ai_2023_intro_05.jpg'
+        text: "You'll be using blocks of code to choose different dancers, change their dance moves, make them respond to the music, and make them interactive."
+      6:
+        image: 'notes/hoc_dance_ai_2023_intro_06.jpg'
+        text: "As you code your dance party, you'll get to work with Artificial Intelligence to generate cool backgrounds."
+      7:
+        image: 'notes/hoc_dance_ai_2023_intro_07.jpg'
+        text: "The instructions for each level will be up here at the top of the screen."
+      8:
+        image: 'notes/hoc_dance_ai_2023_intro_08.jpg'
+        text: "When you start coding, you will drag blocks from the toolbox into the workspace. After you press 'Run', you will see your dance party in action in the playspace."
+      9:
+        image: 'notes/hoc_dance_ai_2023_intro_09.jpg'
+        text: "If you want a hint, click on the light bulb. If your code has a bug, feedback will show up here, under the instructions, to help you out."
+      10:
+        image: 'notes/hoc_dance_ai_2023_intro_10.jpg'
+        text: "Try it yourself! And if you're feeling stuck, it's okay, just get up and get moving. Keep coding and before you know it, you'll have made your own dance party. So, what will you create?"
+    dance_ai_intro_to_ai_v3:
+      1:
+        image: 'notes/hoc_dance_ai_2023_intro_ai_01.jpg'
+        text: "Hour of Code | Dance Party: AI Edition - Intro to AI"
+      2:
+        image: 'notes/hoc_dance_ai_2023_intro_ai_02.jpg'
+        text: "Hi, my name is Joaquin and I'm Head of the Music Search Platform at Amazon."
+      3:
+        image: 'notes/hoc_dance_ai_2023_intro_ai_03.jpg'
+        text: "I lead the team at Amazon Music that helps you find your favorite songs. We use advanced computer technology, like Artificial Intelligence, to make sure when you need a music recommendation, we give you the perfect match."
+      4:
+        image: 'notes/hoc_dance_ai_2023_intro_ai_04.jpg'
+        text: "Artificial Intelligence, or AI, is a computer program that works like a human's brain. It takes in a lot of data, learns patterns from that data, and then makes decisions based on what it has learned."
+      5:
+        image: 'notes/hoc_dance_ai_2023_intro_ai_05.jpg'
+        text: "AI is already being used in all sorts of ways, from small tasks (\"Alexa, tell me a joke!\", \"What do you call a big pile of kittens?  A Meow-ntain!\") to creative tasks, and even to professional tasks. At Amazon, we use AI to write code, suggest products you might like, and my team helps you find songs for you to enjoy."
+      6:
+        image: 'notes/hoc_dance_ai_2023_intro_ai_06.jpg'
+        text: "Today, you will use A.I. bot to code a combination of special effects for your dance. There are foreground effects, background effects, and color schemes to choose from. There are 11,000 different combinations of these effects."
+      7:
+        image: 'notes/hoc_dance_ai_2023_intro_ai_07.jpg'
+        text: "Don't worry, you won't have to try out each combination, A.I. will suggest the best one for you based on what it has learned."
+      8:
+        image: 'notes/hoc_dance_ai_2023_intro_ai_08.jpg'
+        text: "First, you'll choose three emojis."
+      9:
+        image: 'notes/hoc_dance_ai_2023_intro_ai_09.jpg'
+        text: "Then A.I. bot generates an effect that best matches your selection. It writes code to make this effect. Let's see what cool effects you and A.I. bot will create!"
+    dance_ai_how_ai_works:
+      1:
+        image: 'notes/hoc_dance_ai_2023_how_ai_01.jpg'
+        text: "Hour of Code | Dance Party: AI Edition - How AI works"
+      2:
+        image: 'notes/hoc_dance_ai_2023_how_ai_02.jpg'
+        text: "How do you think AI works? Can it read your mind? Is it magic? Is it randomly guessing? Actually, AI knows quite a lot! AI looks at billions of data points and finds associations between words. With some simple math concepts, applied billions of times, it calculates the strength between those associations."
+      3:
+        image: 'notes/hoc_dance_ai_2023_how_ai_03.jpg'
+        text: "Then, AI uses what it learned in order to make decisions on what to generate for you. My team uses AI to look for associations between songs and artists to make sure Amazon Music is recommending the best next song."
+      4:
+        image: 'notes/hoc_dance_ai_2023_how_ai_04.jpg'
+        text: "Sometimes those decisions aren't the same ones you would make because AI is making associations based on billions of data points. Imagine a sunset. What color do you see? If you asked this question to billions of people, you would get many different answers. "
+      5:
+        image: 'notes/hoc_dance_ai_2023_how_ai_05.jpg'
+        text: "When you choose your three emojis, A.I. might generate effects that are not quite what you imagined."
+      6:
+        image: 'notes/hoc_dance_ai_2023_how_ai_06.jpg'
+        text: "You have a few options! The first thing you can do is regenerate the effects based on the same emojis you already chose."
+      7:
+        image: 'notes/hoc_dance_ai_2023_how_ai_07.jpg'
+        text: "You can also customize the effects A.I. bot generated by clicking the 'Use code' button. This will give you two new code blocks in your workspace."
+      8:
+        image: 'notes/hoc_dance_ai_2023_how_ai_08.jpg'
+        text: "Last, you can click 'Start over' to choose a new set of emojis. You can work with A.I. to create the perfect effect. What customizations will you make?"
+    dance_ai_events_intro:
+      1:
+        image: 'notes/hoc_dance_ai_2023_events_01.jpg'
+        text: "Hour of Code | Dance Party: AI Edition - Intro to Events"
+      2:
+        image: 'notes/hoc_dance_ai_2023_events_02.jpg'
+        text: "Hello, I'm Hannah and I'm a software engineer at Code.org!"
+      3:
+        image: 'notes/hoc_dance_ai_2023_events_03.jpg'
+        text: "Choreographers give dancers directions on exactly when to do a dance move. In Dance Party, you'll use code to direct your dancers to move when you want them to. "
+      4:
+        image: 'notes/hoc_dance_ai_2023_events_04.jpg'
+        text: "How do you do this? Think of a situation where you do something, like press a doorbell, and then something else happens: the doorbell rings. When coding your dance party, you can use events to make your program respond to a key you press."
+      5:
+        image: 'notes/hoc_dance_ai_2023_events_05.jpg'
+        text: "For example, you can code an event in your dance so when the 'up' key is pressed your dancer does a dab. Or maybe when the 'down key is pressed a different dancer does the Star!"
+      6:
+        image: 'notes/hoc_dance_ai_2023_events_06.jpg'
+        text: "Events are like mini dance sequences that aren't connected to your main setup. They stand on their own, and the dancer only responds with the dance moves you coded when you press the right key on the keyboard."
+      7:
+        image: 'notes/hoc_dance_ai_2023_events_07.jpg'
+        text: "Be careful! When choosing dance moves, make sure the dancer you're coding is already on your stage. If your dancer isn't there, they won't get the command to dance! So, what kind of dance will you cue up? Press 'Run', hit those keys, and watch your dancer groove!"
+    dance_ai_events_measure_noST:
+      1:
+        image: 'notes/hoc_dance_ai_2023_measures_01.jpg'
+        text: "Hour of Code | Dance Party: AI Edition - Intro to Measures"
+      2:
+        image: 'notes/hoc_dance_ai_2023_measures_02.jpg'
+        text: "What if your dance party was more like a music video? You might want to change the background and special effects to match different parts of the song. Use this new event block to change your program's background at an exact measure."
+      3:
+        image: 'notes/hoc_dance_ai_2023_measures_03.jpg'
+        text: "In music, 'measures' are used as a way to keep track of time. See the measure counter at the top? It shows us exactly where we are in the song."
+      4:
+        image: 'notes/hoc_dance_ai_2023_measures_04.jpg'
+        text: "Just like other events, the computer is listening for a cue. And... there! Right on the fourth measure, your effect changes."
+      5:
+        image: 'notes/hoc_dance_ai_2023_measures_05.jpg'
+        text: "Make sure to connect and prompt a new AI block under your event, so the computer knows which new background to switch to. Try it out!"

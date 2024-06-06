@@ -1,6 +1,8 @@
 import React from 'react';
-import BaseDialog from './BaseDialog';
+
 import ExampleDialogButton from '../util/ExampleDialogButton';
+
+import BaseDialog from './BaseDialog';
 
 const EXAMPLE_DIALOG_BODY = (
   <div style={{border: '1px solid black'}}>
@@ -10,7 +12,6 @@ const EXAMPLE_DIALOG_BODY = (
 
 // There isn't a clear abstraction for a template, so each is built separately
 export default {
-  title: 'BaseDialog',
   component: BaseDialog,
 };
 

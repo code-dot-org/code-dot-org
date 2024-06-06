@@ -1,12 +1,19 @@
 /** @file Redux actions and reducer for the Projects Gallery */
-import {combineReducers} from 'redux';
+
 import $ from 'jquery';
 import _ from 'lodash';
-import {Galleries, MAX_PROJECTS_PER_CATEGORY} from './projectConstants';
+import {combineReducers} from 'redux';
+
+import {Galleries} from './projectConstants';
 import {PUBLISH_SUCCESS} from './publishDialog/publishDialogRedux';
+// Disabling import order due to a build error for circular dependencies errors.
+// Investigation is needed to determine where the circular dependency is coming from and whether
+// we can resolve it without the below specified order of imports.
+/* eslint-disable import/order */
 import {DELETE_SUCCESS} from './deleteDialog/deleteProjectDialogRedux';
 import {channels as channelsApi} from '../../clientApi';
 import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
+/* eslint-enable import/order */
 
 // Action types
 
@@ -30,16 +37,17 @@ const CANCEL_RENAMING_PROJECT = 'projects/CANCEL_RENAMING_PROJECT';
 const SAVE_SUCCESS = 'projects/SAVE_SUCCESS';
 const SAVE_FAILURE = 'project/SAVE_FAILURE';
 const UNSET_NAME_FAILURE = 'project/UNSET_NAME_FAILURE';
+const SET_CAPTCHA_KEY = 'projects/SET_CAPTCHA_KEY';
 
 // Action creators
 
 /**
  * Select a gallery to display on the projects page.
  * @param {string} projectType Default: 'PUBLIC'
- * @returns {{type: string, projectType: string}}
+ * @returns {{type: string, galleryType: string}}
  */
-export function selectGallery(projectType = Galleries.PUBLIC) {
-  return {type: TOGGLE_GALLERY, projectType};
+export function selectGallery(galleryType = Galleries.PUBLIC) {
+  return {type: TOGGLE_GALLERY, galleryType};
 }
 
 /**
@@ -122,6 +130,10 @@ export function unsetNameFailure(projectId) {
   return {type: UNSET_NAME_FAILURE, projectId};
 }
 
+export function setCaptchaKey(captchaSiteKey) {
+  return {type: SET_CAPTCHA_KEY, captchaSiteKey};
+}
+
 // Reducers
 
 const initialSelectedGalleryState = Galleries.PUBLIC;
@@ -129,7 +141,22 @@ const initialSelectedGalleryState = Galleries.PUBLIC;
 function selectedGallery(state = initialSelectedGalleryState, action) {
   switch (action.type) {
     case TOGGLE_GALLERY:
-      return action.projectType;
+      return action.galleryType;
+    default:
+      return state;
+  }
+}
+
+const initialCaptchaState = {
+  captchaSiteKey: '',
+};
+
+function captcha(state = initialCaptchaState, action) {
+  switch (action.type) {
+    case SET_CAPTCHA_KEY:
+      return {
+        captchaSiteKey: action.captchaSiteKey,
+      };
     default:
       return state;
   }
@@ -425,6 +452,7 @@ const reducer = combineReducers({
   projectLists,
   hasOlderProjects,
   personalProjectsList,
+  captcha,
 });
 export default reducer;
 
@@ -432,7 +460,7 @@ export const setPublicProjects = () => {
   return dispatch => {
     $.ajax({
       method: 'GET',
-      url: `/api/v1/projects/gallery/public/all/${MAX_PROJECTS_PER_CATEGORY}`,
+      url: `/api/v1/projects/gallery/public/all`,
       dataType: 'json',
     }).done(projectLists => {
       dispatch(setProjectLists(projectLists));

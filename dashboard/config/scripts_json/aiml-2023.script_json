@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2023-07-26 22:32:46 UTC",
+    "serialized_at": "2024-05-15 16:19:38 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -111,7 +111,7 @@
           {
             "notice": "AI/ML Professional Development",
             "details": "Before starting this unit, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
-            "link": "https://studio.code.org/s/self-paced-pl-csd5-2023",
+            "link": "https://studio.code.org/courses/self-paced-pl-aiml-2023",
             "type": "information",
             "visibility": "Teacher-only"
           }
@@ -139,15 +139,14 @@
           {
             "notice": "AI/ML Professional Development",
             "details": "Before starting this unit, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
-            "link": "https://studio.code.org/s/self-paced-pl-csd5-2021",
+            "link": "https://studio.code.org/courses/self-paced-pl-aiml-2023",
             "type": "information",
             "visibility": "Teacher-only"
           }
         ],
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students will consider how they create “mental” models when learning new concepts, and how those can be similar to a “machine learning” model. They participate in a color pattern activity to simulate building a machine learning model without help, then they play a game called \"Green Glass Door\" as an example of supervised learning, and finally, they will sort several scenarios into “supervised” or “unsupervised” learning.\n\n**Question of the Day:** What are different types of machine learning?",
-        "preparation": "- Review all materials for today’s lesson.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "- Review the Code Studio levels before the lesson so you know how to play the game called “the Green Glass Door”\n- Print or prepare to share online copies of the activity guide for each student",
+        "preparation": "- Review the Code Studio levels before the lesson so you know how to play the game called “the Green Glass Door”\n- Print or prepare to share online copies of the activity guide for each student\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Learn two different types of machine learning - supervised and unsupervised learning. Then compare how machine learning can be similar or different to how humans learn."
       },
       "seeding_key": {
@@ -4419,7 +4418,7 @@
         "tips": [
           {
             "type": "contentCorner",
-            "markdown": "**Real-World Connection:** These example model cards are exaggerated for pedagogical purposes, but similar phenomena can bee seen in this article: [Hundreds of AI tools have been built to catch covid. None of them helped](https://www.technologyreview.com/2021/07/30/1030329/machine-learning-ai-failed-covid-hospital-diagnosis-pandemic). A few relevant quotes from the article are:\n\n- \"Many unwittingly used a data set that contained chest scans of children who did not have covid as their examples of what non-covid cases looked like. But as a result, the AIs learned to identify kids, not covid.\"\n- \"In yet other cases, some AIs were found to be picking up on the text font that certain hospitals used to label the scans. As a result, fonts from hospitals with more serious caseloads became predictors of covid risk.\"\n\nAs an extension of this lesson, you may choose to share this article with students. However, the article is not intended for a middle-school audience, so additional scaffolds and supports may be necessary to support student understanding and connecting back to today's lesson."
+            "markdown": "**Real-World Connection:** These example model cards are exaggerated for pedagogical purposes, but similar phenomena can be seen in this article: [Hundreds of AI tools have been built to catch covid. None of them helped](https://www.technologyreview.com/2021/07/30/1030329/machine-learning-ai-failed-covid-hospital-diagnosis-pandemic). A few relevant quotes from the article are:\n\n- \"Many unwittingly used a data set that contained chest scans of children who did not have covid as their examples of what non-covid cases looked like. But as a result, the AIs learned to identify kids, not covid.\"\n- \"In yet other cases, some AIs were found to be picking up on the text font that certain hospitals used to label the scans. As a result, fonts from hospitals with more serious caseloads became predictors of covid risk.\"\n\nAs an extension of this lesson, you may choose to share this article with students. However, the article is not intended for a middle-school audience, so additional scaffolds and supports may be necessary to support student understanding and connecting back to today's lesson."
           }
         ]
       },
@@ -12426,7 +12425,7 @@
     },
     {
       "name": "Shoe Survey",
-      "url": "https://docs.google.com/forms/d/1PWlwQuyTn_7f4lQUXkujQRZQrDPXFQllw7y7IGd02VM/view",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSc7rkOHqoMHb2GLBW5tuTjVFPY7xblkCLnzCpGyF6UaX2mKpQ/viewform?usp=sharing",
       "key": "shoe_survey",
       "properties": {
         "audience": "Teacher",
@@ -14545,6 +14544,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

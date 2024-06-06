@@ -17,9 +17,11 @@ theme: responsive
 
 ## Minimalnie obsługiwane przeglądarki i platformy
 
+Od lipca 2024 roku będziemy aktualizować minimalne wersje wymagane dla przeglądarek i systemów operacyjnych. Chociaż stare wersje mogą nadal działać, nie będziemy w stanie obsługiwać żądań poprawek błędów w starszych wersjach.
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Przeglądarka
@@ -40,8 +42,30 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Przeglądarka lipiec '24
+        </th>
+        <tr>
+          <td>Chrome 103.x</td>
+        </tr>
+        <tr>
+          <td>Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Mobilny Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Krawędź 119,x</td>
+        </tr>
+        <tr>
+          <td>Firefox 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Platforma
@@ -62,24 +86,47 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Platforma lipiec '24
+        </th>
+        <tr>
+          <td>macOS 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 15.x</td>
+        </tr>
+        <tr>
+          <td>Windows 8</td>
+        </tr>
+        <tr>
+          <td>Android 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## Witryny do odblokowania
 
 Aby uzyskać jak najlepsze doświadczenia z całą zawartością Code.org, zalecamy skonsultowanie się z działem IT szkoły lub okręgu, aby upewnić się, że następujące witryny są dozwolone i nie są blokowane.
 
-| Priorytet                                                                                    | URL                                                                                                        |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| **Wymagane**                                                                                 | `https://code.org`<br/>`https://*.code.org`                                                          |
-| **Opcjonalnie**                                                                              | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
-| **Korzystanie z filmów wideo hostowanych w serwisie YouTube (rozszerzony tryb prywatności)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
-| **Aby korzystać z filmów hostowanych na Code.org**                                           | `https://videos.code.org`                                                                                  |
-| **Aby korzystać z internetowego symulatora**                                                 | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
-| **Aby korzystać z Web Lab**                                                                  | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
-| **Aby korzystać z Google Classroom Share Button**                                            | `https://apis.google.com`                                                                                  |
-| **Aby używać zestawów danych App Lab**                                                       | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
+| Priorytet                                                                                                                          | URL                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **Wymagane**                                                                                                                       | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **Aby mieć pewność, że systemy CAPTCHA będą w stanie odróżnić Twoje użycie od zautomatyzowanej, oszukańczej działalności („bot”)** | `https://www.google.com/recaptcha/api.js`                                                                  |
+| **Opcjonalnie**                                                                                                                    | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **Korzystanie z filmów wideo hostowanych w serwisie YouTube (rozszerzony tryb prywatności)**                                       | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **Aby korzystać z filmów hostowanych na Code.org**                                                                                 | `https://videos.code.org`                                                                                  |
+| **Aby korzystać z internetowego symulatora**                                                                                       | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **Aby korzystać z Web Lab**                                                                                                        | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **Aby korzystać z Google Classroom Share Button**                                                                                  | `https://apis.google.com`                                                                                  |
+| **Aby używać zestawów danych App Lab**                                                                                             | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
 
 ## Szczegóły wsparcia telefonów komórkowych i tabletów
 
@@ -104,7 +151,7 @@ Zanim rozpoczniesz kursy online Code.org, przetestuj odtwarzanie poniższego fil
 
 
 <!--
-The following HTML is a copy of video_with_fallback.haml. once this file can be converted to 
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to
 .md.erb without breaking i18n sync, this file should include that partial instead.
 -->
 <figure style="width:100%; height: 100%; margin: 0 auto;">

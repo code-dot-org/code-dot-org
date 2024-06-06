@@ -496,6 +496,7 @@
   "https://studio.code.org/s/course4/lessons/11/levels/4": {
     "short_instructions": "Can you change the **increment** in one of the loops so that the race is a tie?",
     "long_instructions": "Now, these two characters are going to race!  \n\nEach of them will move `counter` steps at a time, but their counters will have different values because of the `for` loops.  \n\nCan you change the **increment** in one of the loops so that the race is a tie?",
+    "failure_message_override": "Remember, both characters should get to their flags in the same number of moves!",
     "authored_hints": {
       "Course_4_Playlab_For_Loops_4b_a": "The flags are about 330 pixels away from the characters.",
       "Course_4_Playlab_For_Loops_4b_b": "How can you make each character reach 330 pixels in the same number of moves with different starting and stopping numbers?",
@@ -509,6 +510,7 @@
   "https://studio.code.org/s/course4/lessons/11/levels/5": {
     "short_instructions": "Adjust the interval on these `for` loops so that the two characters end in the exact same place.",
     "long_instructions": "Adjust the interval on these `for` loops so that the two characters end in the exact same place.",
+    "failure_message_override": "Remember, both characters need to stop in the same place.",
     "authored_hints": {
       "Course_4_Playlab_For_Loops_5b_a": "The characters are about 175 pixels away from the center.",
       "Course_4_Playlab_For_Loops_5b_b": "Remember, a character's next step will be longer than their last, since the counter keeps getting larger."

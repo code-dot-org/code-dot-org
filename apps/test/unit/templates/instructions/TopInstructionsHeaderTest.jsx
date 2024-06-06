@@ -1,12 +1,14 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import TopInstructionsHeader from '@cdo/apps/templates/instructions/TopInstructionsHeader';
-import {TabType} from '@cdo/apps/templates/instructions/TopInstructions';
-import InlineAudio from '@cdo/apps/templates/instructions/InlineAudio';
-import {PaneButton} from '@cdo/apps/templates/PaneHeader';
+
 import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
+import InlineAudio from '@cdo/apps/templates/instructions/InlineAudio';
+import {TabType} from '@cdo/apps/templates/instructions/TopInstructions';
+import TopInstructionsHeader from '@cdo/apps/templates/instructions/TopInstructionsHeader';
+import {PaneButton} from '@cdo/apps/templates/PaneHeader';
 import i18n from '@cdo/locale';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   teacherOnly: false,
@@ -14,7 +16,7 @@ const DEFAULT_PROPS = {
   isCSDorCSP: true,
   displayHelpTab: true,
   displayFeedback: true,
-  levelHasRubric: false,
+  levelHasMiniRubric: false,
   isViewingAsTeacher: false,
   isViewingAsInstructorInTraining: false,
   hasBackgroundMusic: false,
@@ -27,6 +29,7 @@ const DEFAULT_PROPS = {
   handleDocumentationTabClick: () => {},
   handleReviewTabClick: () => {},
   handleTeacherOnlyTabClick: () => {},
+  handleTaRubricTabClick: () => {},
   handleClickCollapser: () => {},
   isMinecraft: false,
   ttsLongInstructionsUrl: '',
@@ -78,9 +81,9 @@ describe('TopInstructionsHeader', () => {
     expect(commentTab.props().selected).to.be.true;
   });
 
-  it('on the comments tab selects when displayFeedback and levelHasRubric text is rubric', () => {
+  it('on the comments tab selects when displayFeedback and levelHasMiniRubric text is rubric', () => {
     const wrapper = setUp({
-      levelHasRubric: true,
+      levelHasMiniRubric: true,
       displayFeedback: true,
       tabSelected: TabType.COMMENTS,
     });
@@ -88,9 +91,9 @@ describe('TopInstructionsHeader', () => {
     expect(commentTab.props().text).to.equal(i18n.rubric());
   });
 
-  it('on the comments tab selects when displayFeedback and levelHasRubric = false text is feedback', () => {
+  it('on the comments tab selects when displayFeedback and levelHasMiniRubric = false text is feedback', () => {
     const wrapper = setUp({
-      levelHasRubric: false,
+      levelHasMiniRubric: false,
       displayFeedback: true,
       tabSelected: TabType.COMMENTS,
     });
@@ -104,6 +107,15 @@ describe('TopInstructionsHeader', () => {
       tabSelected: TabType.COMMENTS,
     });
     expect(wrapper.find('.uitest-feedback')).to.have.length(0);
+  });
+
+  it('shows comments tab for elementary-level lessons', () => {
+    const wrapper = setUp({
+      displayFeedback: true,
+      isCSDorCSP: false,
+      tabSelected: TabType.COMMENTS,
+    });
+    expect(wrapper.find('.uitest-feedback')).to.have.length(1);
   });
 
   it('does not show mute button when hasBackgroundMusic is false', () => {

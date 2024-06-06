@@ -1,10 +1,11 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
-import {makeEnum} from '@cdo/apps/utils';
+import React from 'react';
+
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
+import color from '@cdo/apps/util/color';
+import {makeEnum} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
 
 /**
  * StylizedBaseDialog
@@ -16,7 +17,7 @@ import Button from '@cdo/apps/templates/Button';
 const FooterButtonType = makeEnum('cancel', 'confirm', 'default');
 const FooterButtonColor = {
   [FooterButtonType.cancel]: Button.ButtonColor.gray,
-  [FooterButtonType.confirm]: Button.ButtonColor.orange,
+  [FooterButtonType.confirm]: Button.ButtonColor.brandSecondaryDefault,
 };
 
 const DialogStyle = makeEnum('default', 'simple');

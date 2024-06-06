@@ -1,17 +1,19 @@
 import PropTypes from 'prop-types';
-
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+
+import fontConstants from '@cdo/apps/fontConstants';
+import i18n from '@cdo/locale';
+
+import Notification, {NotificationType} from '../Notification';
+import SchoolAutocompleteDropdown from '../SchoolAutocompleteDropdown';
+
 import {
   UnconnectedCensusForm as CensusForm,
   censusFormPrefillDataShape,
 } from './CensusForm';
-import YourSchoolResources from './YourSchoolResources';
-import Notification, {NotificationType} from '../Notification';
-import {SpecialAnnouncementActionBlock} from '../studioHomepages/TwoColumnActionBlock';
-import i18n from '@cdo/locale';
-import SchoolAutocompleteDropdown from '../SchoolAutocompleteDropdown';
 import CensusMapReplacement from './CensusMapReplacement';
+import YourSchoolResources from './YourSchoolResources';
 
 class YourSchool extends Component {
   static propTypes = {
@@ -23,6 +25,7 @@ class YourSchool extends Component {
     hideMap: PropTypes.bool,
     currentCensusYear: PropTypes.number,
     teacherApplicationMode: PropTypes.string,
+    tileset: PropTypes.string.isRequired,
   };
 
   state = {
@@ -63,12 +66,8 @@ class YourSchool extends Component {
       schoolForMap = schoolDropdownOption.school;
     }
 
-    // Hide the special announcement.
-    const showSpecialAnnouncement = false;
-
     return (
       <div>
-        {showSpecialAnnouncement && <SpecialAnnouncementActionBlock />}
         {this.props.alertHeading &&
           this.props.alertText &&
           this.props.alertUrl && (
@@ -114,6 +113,7 @@ class YourSchool extends Component {
             <CensusMapReplacement
               school={schoolForMap}
               onTakeSurveyClick={this.handleTakeSurveyClick}
+              tileset={this.props.tileset}
             />
           </div>
         )}
@@ -137,11 +137,11 @@ const styles = {
     marginTop: 10,
     marginBottom: 20,
     fontSize: 14,
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     lineHeight: '1.5em',
   },
   mapFooter: {
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
     fontSize: 20,
     marginLeft: 25,
     marginRight: 25,

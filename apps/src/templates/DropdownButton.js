@@ -1,8 +1,10 @@
-import React, {Component} from 'react';
-import PropTypes from 'prop-types';
-import Button from '@cdo/apps/templates/Button';
-import onClickOutside from 'react-onclickoutside';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import onClickOutside from 'react-onclickoutside';
+
+import Button from '@cdo/apps/templates/Button';
+
 import style from './dropdown-button.module.scss';
 
 /**
@@ -113,7 +115,9 @@ export const DropdownButton = class DropdownButtonComponent extends Component {
                 style={{
                   ...child.props.style,
                 }}
-              />
+              >
+                {child.props.children}
+              </a>
             ))}
           </div>
         )}

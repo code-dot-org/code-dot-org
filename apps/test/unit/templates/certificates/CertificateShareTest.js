@@ -1,10 +1,14 @@
+import {render, screen, within} from '@testing-library/react';
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+
 import CertificateShare from '@cdo/apps/templates/certificates/CertificateShare';
 
+import {expect} from '../../../util/reconfiguredChai';
+
+const defaultImageAlt = 'certificate alt text';
 const defaultProps = {
   imageUrl: '/certificate-image',
+  imageAlt: defaultImageAlt,
   printUrl: '/certificate-print',
   announcement: {
     image: '/announcement-image',
@@ -31,15 +35,18 @@ describe('CertificateShare', () => {
   });
 
   it('renders announcement image url relative to pegasus', () => {
-    const wrapper = shallow(<CertificateShare {...defaultProps} />);
+    render(<CertificateShare {...defaultProps} />);
 
-    const printLink = wrapper.find('a');
-    expect(printLink.prop('href')).to.equal('/certificate-print');
-    const image = printLink.find('img');
-    expect(image.prop('src')).to.equal('/certificate-image');
+    const printLink = screen.getByRole('link', {name: defaultImageAlt});
+    expect(printLink.href).to.include('/certificate-print');
+    const image = screen.getByRole('img', {name: defaultImageAlt});
+    expect(image.src).to.include('/certificate-image');
 
-    const block = wrapper.find('Connect(UnconnectedTwoColumnActionBlock)');
-    expect(block.prop('imageUrl')).to.equal('//code.org/announcement-image');
+    const twoColumnActionBlock = screen.getByTestId('two-column-action-block');
+    const announcementImg = within(twoColumnActionBlock).getByTestId(
+      'two-column-action-block-img'
+    );
+    expect(announcementImg.src).to.include('//code.org/announcement-image');
   });
 
   it('renders no announcement without announcement prop', () => {
@@ -47,12 +54,10 @@ describe('CertificateShare', () => {
       ...defaultProps,
       announcement: null,
     };
-    const wrapper = shallow(<CertificateShare {...props} />);
+    render(<CertificateShare {...props} />);
 
-    const printLink = wrapper.find('a');
-    expect(printLink.length).to.equal(1);
+    screen.findByRole('link', {name: defaultImageAlt});
 
-    const block = wrapper.find('Connect(UnconnectedTwoColumnActionBlock)');
-    expect(block.length).to.equal(0);
+    expect(screen.queryByTestId('two-column-action-block')).to.not.exist;
   });
 });

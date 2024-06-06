@@ -1,13 +1,16 @@
-import React, {useState} from 'react';
-import PropTypes from 'prop-types';
-import Button from '../Button';
-import i18n from '@cdo/locale';
-import {getStore} from '../../redux';
-import {isEmail} from '@cdo/apps/util/formatValidation';
 import cookies from 'js-cookie';
+import PropTypes from 'prop-types';
+import React, {useState} from 'react';
+
+import {isEmail} from '@cdo/apps/util/formatValidation';
+import i18n from '@cdo/locale';
+import headerThanksImage from '@cdo/static/common_images/penguin/dancing.png';
+import headerImage from '@cdo/static/common_images/penguin/yelling.png';
+
+import {getStore} from '../../redux';
 import * as color from '../../util/color';
-import headerImage from './images/lockout_penguin.png';
-import headerThanksImage from './images/dancing_penguin.png';
+import {hashString} from '../../utils';
+import Button from '../Button';
 
 /**
  * This panel represents the page that is displayed to accounts that are being
@@ -16,14 +19,26 @@ import headerThanksImage from './images/dancing_penguin.png';
  * pending request for) parental permission.
  */
 export default function LockoutPanel(props) {
+  // Determine if we think the given email matches the child email
+  const isEmailDisallowed = email => {
+    return props.disallowedEmail === hashString(email);
+  };
+
+  // Determine if the email is allowed
+  const validateEmail = email => {
+    return isEmail(email) && !isEmailDisallowed(email);
+  };
+
   // Set the disabled state of the submit button based on the validity of the
   // email in the field.
-  const [disabled, setDisabled] = useState(() => !isEmail(props.pendingEmail));
+  const [disabled, setDisabled] = useState(
+    () => !validateEmail(props.pendingEmail)
+  );
 
   // When the email field is updated, also update the disability state of the
   // submit button.
   const onEmailUpdate = event => {
-    setDisabled(!isEmail(event.target.value));
+    setDisabled(!validateEmail(event.target.value));
   };
 
   // This will set the email to the current pending email and fire off the
@@ -83,6 +98,8 @@ export default function LockoutPanel(props) {
       <h2>
         {props.pendingEmail
           ? i18n.sessionLockoutPendingHeader()
+          : props.isPreLockoutUser
+          ? i18n.sessionLockoutNewPreLockoutAccountHeader()
           : i18n.sessionLockoutNewAccountHeader()}
       </h2>
 
@@ -97,7 +114,13 @@ export default function LockoutPanel(props) {
             {pendingPromptParts[1]}
           </p>
         )}
-        {!props.pendingEmail && <p>{i18n.sessionLockoutPrompt()}</p>}
+        {!props.pendingEmail && (
+          <p>
+            {props.isPreLockoutUser
+              ? i18n.sessionLockoutPreLockoutAccountPrompt()
+              : i18n.sessionLockoutPrompt()}
+          </p>
+        )}
 
         {/* The timezone is set to UTC to ensure that the exact date renders. */}
         <p>
@@ -220,6 +243,12 @@ LockoutPanel.propTypes = {
   deleteDate: PropTypes.instanceOf(Date).isRequired,
   pendingEmail: PropTypes.string,
   requestDate: PropTypes.instanceOf(Date),
+  disallowedEmail: PropTypes.string.isRequired,
+  isPreLockoutUser: PropTypes.bool,
+};
+
+LockoutPanel.defaultProps = {
+  isPreLockoutUser: false,
 };
 
 const styles = {

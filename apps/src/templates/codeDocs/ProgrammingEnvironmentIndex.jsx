@@ -1,9 +1,8 @@
-// TODO: Define all prop types for this file.
-/* eslint-disable react/prop-types */
-import React from 'react';
 import PropTypes from 'prop-types';
-import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
+import React from 'react';
+
 import Button from '@cdo/apps/templates/Button';
+import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import i18n from '@cdo/locale';
 
 export function ProgrammingEnvironmentCard({programmingEnvironment}) {
@@ -11,7 +10,13 @@ export function ProgrammingEnvironmentCard({programmingEnvironment}) {
     <div style={styles.card}>
       <div>
         {programmingEnvironment.imageUrl && (
-          <img style={styles.image} src={programmingEnvironment.imageUrl} />
+          // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+          // Verify or update this alt-text as necessary
+          <img
+            style={styles.image}
+            src={programmingEnvironment.imageUrl}
+            alt=""
+          />
         )}
         {programmingEnvironment.title && (
           <h2>{programmingEnvironment.title}</h2>
@@ -52,7 +57,7 @@ export default function ProgrammingEnvironmentIndex({programmingEnvironments}) {
 const ProgrammingEnvironmentShape = PropTypes.shape({
   name: PropTypes.string.isRequired,
   title: PropTypes.string,
-  descriotion: PropTypes.string,
+  description: PropTypes.string,
   imageUrl: PropTypes.string,
   showPath: PropTypes.string.isRequired,
 });

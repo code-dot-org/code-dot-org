@@ -70,3 +70,5 @@
               = hidden_field_tag :user_id, @target_user.id
               = hidden_field_tag :channel, project["channel"]
               %button.btn{type: 'submit'}= "Restore"
+
+= render partial: 'home/admin'

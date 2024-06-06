@@ -1,7 +1,7 @@
 /** @file Track the app's layout */
 import {PayloadAction, createSelector, createSlice} from '@reduxjs/toolkit';
 
-interface LayoutState {
+export interface LayoutState {
   visualizationScale: number | null;
 }
 

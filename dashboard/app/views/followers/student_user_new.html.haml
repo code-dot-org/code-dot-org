@@ -28,7 +28,7 @@
     before joining the section.
   %p{style: 'margin-bottom: 30px;'} If you don't have an account at Code.org yet, please fill out the fields below to create an account and join the section.
   - if @user.errors.any?
-    #error_explanation
+    #error_explanation.padded_container
       %ul
         - @user.errors.full_messages.each do |msg|
           %li= msg

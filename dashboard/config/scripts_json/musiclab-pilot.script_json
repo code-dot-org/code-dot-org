@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "musiclab-pilot",
-    "serialized_at": "2023-07-25 22:02:09 UTC",
+    "serialized_at": "2023-08-01 21:04:19 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -69,6 +69,7 @@
       "key": "16b02d16-0319-4005-a794-c508e9dd7acb",
       "position": 1,
       "properties": {
+        "name": "Music Lab Pilot"
       },
       "seeding_key": {
         "activity_section.key": "16b02d16-0319-4005-a794-c508e9dd7acb",
@@ -87,7 +88,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "music_lab_2023_melody_sequencing"
+          "musiclab_pilot_intro_video"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -95,7 +96,7 @@
         "activity_section.key": "16b02d16-0319-4005-a794-c508e9dd7acb"
       },
       "level_keys": [
-        "music_lab_2023_melody_sequencing"
+        "musiclab_pilot_intro_video"
       ]
     },
     {
@@ -104,14 +105,11 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music_lab_2023_2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "music_lab_2023_2"
+          "musiclab_add_play_to_sequence"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -119,7 +117,7 @@
         "activity_section.key": "16b02d16-0319-4005-a794-c508e9dd7acb"
       },
       "level_keys": [
-        "music_lab_2023_2"
+        "musiclab_add_play_to_sequence"
       ]
     },
     {
@@ -128,14 +126,11 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music_lab_2023_3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "music_lab_2023_3"
+          "musiclab_play_sound"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -143,7 +138,7 @@
         "activity_section.key": "16b02d16-0319-4005-a794-c508e9dd7acb"
       },
       "level_keys": [
-        "music_lab_2023_3"
+        "musiclab_play_sound"
       ]
     },
     {
@@ -152,14 +147,11 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music_lab_2023_4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "music_lab_2023_4"
+          "musiclab_use_repeat"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -167,7 +159,7 @@
         "activity_section.key": "16b02d16-0319-4005-a794-c508e9dd7acb"
       },
       "level_keys": [
-        "music_lab_2023_4"
+        "musiclab_use_repeat"
       ]
     },
     {
@@ -176,14 +168,11 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music_lab_2023_5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "music_lab_2023_5"
+          "musiclab_call_existing_function"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -191,7 +180,7 @@
         "activity_section.key": "16b02d16-0319-4005-a794-c508e9dd7acb"
       },
       "level_keys": [
-        "music_lab_2023_5"
+        "musiclab_call_existing_function"
       ]
     },
     {
@@ -200,14 +189,11 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music_lab_2023_6"
-        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "music_lab_2023_6"
+          "musiclab_play_functions_together"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -215,7 +201,7 @@
         "activity_section.key": "16b02d16-0319-4005-a794-c508e9dd7acb"
       },
       "level_keys": [
-        "music_lab_2023_6"
+        "musiclab_play_functions_together"
       ]
     },
     {
@@ -224,14 +210,11 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "mid-activity placeholder"
-        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "mid-activity placeholder"
+          "musiclab_make_a_mix"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -239,7 +222,7 @@
         "activity_section.key": "16b02d16-0319-4005-a794-c508e9dd7acb"
       },
       "level_keys": [
-        "mid-activity placeholder"
+        "musiclab_make_a_mix"
       ]
     },
     {
@@ -248,14 +231,11 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music_lab_2023_7"
-        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "music_lab_2023_7"
+          "musiclab_use_trigger"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -263,7 +243,7 @@
         "activity_section.key": "16b02d16-0319-4005-a794-c508e9dd7acb"
       },
       "level_keys": [
-        "music_lab_2023_7"
+        "musiclab_use_trigger"
       ]
     },
     {
@@ -272,14 +252,11 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music_lab_2203_8"
-        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "music_lab_2203_8"
+          "musiclab_mid_video"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -287,7 +264,7 @@
         "activity_section.key": "16b02d16-0319-4005-a794-c508e9dd7acb"
       },
       "level_keys": [
-        "music_lab_2203_8"
+        "musiclab_mid_video"
       ]
     },
     {
@@ -296,14 +273,11 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music_pilot_intro"
-        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "music_pilot_intro"
+          "musiclab_freeplay"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -311,16 +285,16 @@
         "activity_section.key": "16b02d16-0319-4005-a794-c508e9dd7acb"
       },
       "level_keys": [
-        "music_pilot_intro"
+        "musiclab_freeplay"
       ]
     }
   ],
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "music_lab_2023_melody_sequencing",
+        "level.key": "musiclab_pilot_intro_video",
         "script_level.level_keys": [
-          "music_lab_2023_melody_sequencing"
+          "musiclab_pilot_intro_video"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -330,9 +304,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "music_lab_2023_2",
+        "level.key": "musiclab_add_play_to_sequence",
         "script_level.level_keys": [
-          "music_lab_2023_2"
+          "musiclab_add_play_to_sequence"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -342,9 +316,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "music_lab_2023_3",
+        "level.key": "musiclab_play_sound",
         "script_level.level_keys": [
-          "music_lab_2023_3"
+          "musiclab_play_sound"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -354,9 +328,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "music_lab_2023_4",
+        "level.key": "musiclab_use_repeat",
         "script_level.level_keys": [
-          "music_lab_2023_4"
+          "musiclab_use_repeat"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -366,9 +340,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "music_lab_2023_5",
+        "level.key": "musiclab_call_existing_function",
         "script_level.level_keys": [
-          "music_lab_2023_5"
+          "musiclab_call_existing_function"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -378,9 +352,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "music_lab_2023_6",
+        "level.key": "musiclab_play_functions_together",
         "script_level.level_keys": [
-          "music_lab_2023_6"
+          "musiclab_play_functions_together"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -390,9 +364,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "mid-activity placeholder",
+        "level.key": "musiclab_make_a_mix",
         "script_level.level_keys": [
-          "mid-activity placeholder"
+          "musiclab_make_a_mix"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -402,9 +376,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "music_lab_2023_7",
+        "level.key": "musiclab_use_trigger",
         "script_level.level_keys": [
-          "music_lab_2023_7"
+          "musiclab_use_trigger"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -414,9 +388,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "music_lab_2203_8",
+        "level.key": "musiclab_mid_video",
         "script_level.level_keys": [
-          "music_lab_2203_8"
+          "musiclab_mid_video"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -426,9 +400,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "music_pilot_intro",
+        "level.key": "musiclab_freeplay",
         "script_level.level_keys": [
-          "music_pilot_intro"
+          "musiclab_freeplay"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -465,6 +439,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

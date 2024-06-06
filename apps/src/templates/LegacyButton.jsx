@@ -1,6 +1,6 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
+import React from 'react';
 
 import color from '../util/color';
 
@@ -108,6 +108,10 @@ export const BUTTON_TYPES = {
       borderColor: color.neutral_dark,
       color: color.neutral_dark,
       ':hover': {
+        backgroundColor: color.neutral_dark20,
+        boxShadow: 'none',
+      },
+      ':focus': {
         backgroundColor: color.neutral_dark20,
         boxShadow: 'none',
       },

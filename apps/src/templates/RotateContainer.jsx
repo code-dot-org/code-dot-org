@@ -1,7 +1,8 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import msg from '@cdo/locale';
-import _ from 'lodash';
 
 /**
  * "Rotate your device" overlay.

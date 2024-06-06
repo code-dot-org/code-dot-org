@@ -26,6 +26,7 @@ export default class NameFileDialog extends Component {
 
   componentDidUpdate(prevProps) {
     if (!prevProps.isOpen && this.props.isOpen) {
+      this.textInput.focus();
       this.textInput.setSelectionRange(0, 0);
     }
   }
@@ -85,7 +86,6 @@ export default class NameFileDialog extends Component {
               ...(displayTheme === DisplayTheme.DARK && styles.darkDialog),
             }}
             onKeyDown={this.onKeyDown}
-            autoFocus
           />
           <div>
             <button
