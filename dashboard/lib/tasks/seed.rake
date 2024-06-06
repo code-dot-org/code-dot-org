@@ -232,11 +232,7 @@ namespace :seed do
 
   timed_task_with_logging child_dsls: :environment do
     DSLDefined.transaction do
-      # Allow developers to seed just one dsl-defined level, e.g.
-      # rake seed:child_dsls DSL_FILENAME=k-1_Artistloops_multi1.multi
-      dsl_files = override_dsl_filenames(ENV['DSL_FILENAME'], CHILD_DSL_FILES)
-
-      parse_dsl_files(dsl_files, CHILD_DSL_TYPES)
+      parse_dsl_files(CHILD_DSL_FILES, CHILD_DSL_TYPES)
     end
   end
 
@@ -247,24 +243,25 @@ namespace :seed do
 
   timed_task_with_logging parent_dsls: :environment do
     DSLDefined.transaction do
-      # Allow developers to seed just one dsl-defined level, e.g.
-      # rake seed:parent_dsls DSL_FILENAME=csa_unit_6_assessment_2023.level_group
-      dsl_files = override_dsl_filenames(ENV['DSL_FILENAME'], PARENT_DSL_FILES)
-
-      parse_dsl_files(dsl_files, PARENT_DSL_TYPES)
+      parse_dsl_files(PARENT_DSL_FILES, PARENT_DSL_TYPES)
     end
   end
 
-  def override_dsl_filenames(filename_override, dsl_files)
-    dsl_files = filename_override ? Dir.glob("config/scripts/**/#{filename_override}") : dsl_files
+  # Allow developers to seed just one dsl-defined level, e.g.
+  # rake seed:single_dsl DSL_FILENAME=k-1_Artistloops_multi1.multi
+  # rake seed:single_dsl DSL_FILENAME=csa_unit_6_assessment_2023.level_group
+  timed_task_with_logging single_dsl: :environment do
+    DSLDefined.transaction do
+      dsl_files = Dir.glob("config/scripts/**/#{ENV['DSL_FILENAME']}")
 
-    # This is only expected to happen when DSL_FILENAME is set and the
-    # filename is not found
-    unless dsl_files.count > 0
-      raise 'no matching dsl-defined level files found. please check filename for exact case and spelling.'
+      unless dsl_files.count > 0
+        raise 'no matching dsl-defined level files found. please check filename for exact case and spelling.'
+      end
+
+      puts "seeding dsl files:\n#{dsl_files.join("\n")}"
+
+      parse_dsl_files(dsl_files, CHILD_DSL_TYPES + PARENT_DSL_TYPES)
     end
-
-    dsl_files
   end
 
   # Parse each .[dsl] file and setup its model.
