@@ -91,7 +91,7 @@ export default class AnalyticsReporter {
     });
   }
 
-  async startSession(sessionType: 'miniPlayer' | 'project' = 'project') {
+  async startSession() {
     // Capture start time before making init call
     this.sessionStartTime = Date.now();
 
@@ -99,9 +99,7 @@ export default class AnalyticsReporter {
       await this.initialize();
       setSessionId(this.sessionStartTime);
 
-      this.log(
-        `Session start. Session ID: ${this.sessionStartTime} Session type: ${sessionType}`
-      );
+      this.log(`Session start. Session ID: ${this.sessionStartTime}`);
       this.sessionInProgress = true;
     } catch (error) {
       const message = error instanceof Error ? error.message : String(error);
@@ -138,6 +136,8 @@ export default class AnalyticsReporter {
 
     this.identifyObj.set('userType', userType);
     this.identifyObj.set('signInState', signInState);
+
+    identify(this.identifyObj);
 
     this.log(
       `User properties: userId: ${userId}, userType: ${userType}, signInState: ${signInState}`
