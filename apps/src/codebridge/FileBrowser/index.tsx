@@ -7,12 +7,15 @@ import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {PopUpButton} from '@codebridge/PopUpButton/PopUpButton';
 import {ProjectType, FolderId} from '@codebridge/types';
 import {findFolder, getErrorMessage} from '@codebridge/utils';
-import React, {useMemo} from 'react';
+import React, {useContext, useMemo} from 'react';
 
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
-import DeleteConfirmationDialog from '@cdo/apps/lab2/views/dialogs/DeleteConfirmationDialog';
+import {
+  DialogContext,
+  DialogType,
+} from '@cdo/apps/lab2/views/dialogs/DialogManager';
 
 import {FileBrowserHeaderPopUpButton} from './FileBrowserHeaderPopUpButton';
 import {
@@ -53,30 +56,31 @@ const InnerFileBrowser = React.memo(
   }: FilesComponentProps) => {
     const {openFile, deleteFile, toggleOpenFolder, deleteFolder} =
       useCodebridgeContext();
+    const dialogControl = useContext(DialogContext);
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-    const [showDeleteConfirmation, setShowDeleteConfirmation] =
-      React.useState<boolean>(false);
-    const [nameToDelete, setNameToDelete] = React.useState<string | null>(null);
-    const [deleteCallback, setDeleteCallback] = React.useState<() => void>(
-      () => {}
-    );
-    const [isDeletingFolder, setIsDeletingFolder] =
-      React.useState<boolean>(false);
 
     const handleDeleteFile = (fileId: string) => {
-      const file = files[fileId];
-      setNameToDelete(file.name);
-      setDeleteCallback(() => deleteFile(fileId));
-      setIsDeletingFolder(false);
-      setShowDeleteConfirmation(true);
+      const filename = files[fileId].name;
+      const title = 'Delete File';
+      const message = `Are you sure you want to delete the file ${filename}?`;
+      dialogControl?.showGenericDialog(
+        DialogType.GenericConfirmation,
+        () => deleteFile(fileId),
+        title,
+        message
+      );
     };
 
     const handleDeleteFolder = (folderId: string) => {
-      const folder = folders[folderId];
-      setNameToDelete(folder.name);
-      setDeleteCallback(() => deleteFolder(folderId));
-      setIsDeletingFolder(true);
-      setShowDeleteConfirmation(true);
+      const folderName = folders[folderId].name;
+      const title = 'Delete Folder';
+      const message = `Are you sure you want to delete the folder ${folderName}? This will delete all files and folders inside ${folderName}.`;
+      dialogControl?.showGenericDialog(
+        DialogType.GenericConfirmation,
+        () => deleteFolder(folderId),
+        title,
+        message
+      );
     };
 
     return (
@@ -188,14 +192,6 @@ const InnerFileBrowser = React.memo(
               </span>
             </li>
           ))}
-        {showDeleteConfirmation && nameToDelete && (
-          <DeleteConfirmationDialog
-            handleCancel={() => setShowDeleteConfirmation(false)}
-            handleConfirm={deleteCallback}
-            isFolder={isDeletingFolder}
-            nameToDelete={nameToDelete}
-          />
-        )}
       </>
     );
   }
