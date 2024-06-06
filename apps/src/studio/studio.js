@@ -3166,8 +3166,15 @@ var registerHandlers = function (
     const block = blocks[x];
     // default field values to '0' for case when there is only one sprite
     // and no field value is set through a dropdown
-    const fieldVal1 = block.getFieldValue(String(nameParam1)) || '0';
-    const fieldVal2 = block.getFieldValue(String(nameParam2)) || '0';
+    const fieldVal1 =
+      typeof nameParam1 !== 'string'
+        ? '0'
+        : block.getFieldValue(nameParam1) || '0';
+    const fieldVal2 =
+      typeof nameParam2 !== 'string'
+        ? '0'
+        : block.getFieldValue(nameParam2) || '0';
+
     if (
       block.type === blockName &&
       (!nameParam1 || matchParam1Val === fieldVal1) &&
