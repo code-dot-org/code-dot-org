@@ -162,7 +162,7 @@ def load_submissions_csv_from_s3_into_redshift_table(client, s3_path, table_name
       submission_id    int,
       item_name        varchar,
       matrix_item_name varchar,
-      response_value   varchar(2000),
+      response_value   varchar(max),
       response_text    varchar(max)
     );
 
