@@ -133,7 +133,7 @@ class AichatControllerTest < ActionController::TestCase
         {
           role: "assistant",
           status: SharedConstants::AI_INTERACTION_STATUS[:ERROR],
-          chatMessageText: '[profane]',
+          chatMessageText: '[redacted - model generated profanity]',
         }
       ].map(&:stringify_keys)
   end
