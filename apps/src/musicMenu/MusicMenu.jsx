@@ -130,11 +130,11 @@ const optionsList = [
     ],
   },
   {
-    name: 'timeline-layout-2',
+    name: 'timeline-original-layout',
     type: 'radio',
     values: [
-      {value: 'false', description: 'Original timeline (default).'},
-      {value: 'true', description: 'New timeline.'},
+      {value: 'false', description: 'New timeline (default).'},
+      {value: 'true', description: 'Original timeline.'},
     ],
   },
   {
