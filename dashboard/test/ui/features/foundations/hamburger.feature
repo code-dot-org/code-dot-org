@@ -8,6 +8,7 @@ Feature: Hamburger dropdown
     Then I wait to see ".header_button"
     Then element "#hamburger-icon" is not visible
 
+  @eyes
   Scenario: Signed out user in English should see hamburger on small desktop
     Given I am on "http://code.org/"
     And I dismiss the language selector
@@ -15,6 +16,7 @@ Feature: Hamburger dropdown
     Then I wait to see "#hamburger-icon"
     And I click selector "#hamburger-icon"
     Then I wait to see "#hamburger-contents"
+    And I open my eyes to test "Signed out small desktop hamburger"
     And element "#learn" is not visible
     And element "#educate_entries" is not visible
     And element "#districts" is not visible
@@ -25,6 +27,8 @@ Feature: Hamburger dropdown
     And I see "#legal_entries"
     And I see "#support"
     And I see "#report-bug"
+    And I see no difference for "Signed out small desktop hamburger"
+    And I close my eyes
 
   Scenario: Signed out user in English should see hamburger on tablet
     Given I am on "http://code.org/"
