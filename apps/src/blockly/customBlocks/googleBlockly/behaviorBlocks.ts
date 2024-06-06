@@ -83,7 +83,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
     message0: '%1 %2',
     args0: [
       {
-        type: 'field_label_serializable',
+        type: 'field_label',
         name: 'NAME',
         text: '%{BKY_UNNAMED_KEY}',
       },
@@ -97,7 +97,6 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
     helpUrl: '/docs/spritelab/spritelab_adding-and-removing-behaviors',
     extensions: [
       'procedures_edit_button',
-      'procedure_caller_serialize_name',
       'procedure_caller_get_def_mixin',
       'behavior_caller_get_def_mixin',
       'procedure_caller_var_mixin',
