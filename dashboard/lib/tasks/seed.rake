@@ -174,8 +174,9 @@ namespace :seed do
     :check_migrations,
     :games,
     :deprecated_blockly_levels,
+    :child_dsls,
     :custom_levels,
-    :dsls,
+    :parent_dsls,
     :code_docs,
     :blocks,
     :standards,
@@ -225,44 +226,63 @@ namespace :seed do
     end
   end
 
-  # detect changes to dsldefined level files
-  # LevelGroup must be last here so that LevelGroups are seeded after all levels that they can contain
-  DSL_TYPES = %w(TextMatch ContractMatch External Match Multi EvaluationMulti BubbleChoice LevelGroup).freeze
-  DSLS_GLOB = DSL_TYPES.map {|x| Dir.glob("config/scripts/**/*.#{x.underscore}*").sort}.flatten.freeze
-  file 'config/scripts/.dsls_seeded' => DSLS_GLOB do |t|
-    Rake::Task['seed:dsls'].invoke
-    FileUtils.touch(t.name)
+  # multi and match files must be seeded before any custom levels which contain them
+  CHILD_DSL_TYPES = %w(TextMatch ContractMatch External Match Multi EvaluationMulti).freeze
+  CHILD_DSL_FILES = CHILD_DSL_TYPES.map {|x| Dir.glob("config/scripts/**/*.#{x.underscore}*").sort}.flatten.freeze
+
+  timed_task_with_logging child_dsls: :environment do
+    DSLDefined.transaction do
+      parse_dsl_files(CHILD_DSL_FILES, CHILD_DSL_TYPES)
+    end
   end
 
-  # explicit execution of "seed:dsls"
-  timed_task_with_logging dsls: :environment do
+  # bubble choice and level group files must be seeded last, since they can
+  # contain many other level types
+  PARENT_DSL_TYPES = %w(BubbleChoice LevelGroup).freeze
+  PARENT_DSL_FILES = PARENT_DSL_TYPES.map {|x| Dir.glob("config/scripts/**/*.#{x.underscore}*").sort}.flatten.freeze
+
+  timed_task_with_logging parent_dsls: :environment do
     DSLDefined.transaction do
-      level_md5s_by_name = DSLDefined.pluck(:name, :md5).to_h
+      parse_dsl_files(PARENT_DSL_FILES, PARENT_DSL_TYPES)
+    end
+  end
 
-      # Allow developers to seed just one dsl-defined level, e.g.
-      # rake seed:dsls DSL_FILENAME=k-1_Artistloops_multi1.multi
-      dsls_glob = ENV['DSL_FILENAME'] ? Dir.glob("config/scripts/**/#{ENV['DSL_FILENAME']}") : DSLS_GLOB
+  # Allow developers to seed just one dsl-defined level, e.g.
+  # rake seed:single_dsl DSL_FILENAME=k-1_Artistloops_multi1.multi
+  # rake seed:single_dsl DSL_FILENAME=csa_unit_6_assessment_2023.level_group
+  timed_task_with_logging single_dsl: :environment do
+    DSLDefined.transaction do
+      dsl_files = Dir.glob("config/scripts/**/#{ENV['DSL_FILENAME']}")
 
-      # This is only expected to happen when DSL_FILENAME is set and the
-      # filename is not found
-      unless dsls_glob.count > 0
+      unless dsl_files.count > 0
         raise 'no matching dsl-defined level files found. please check filename for exact case and spelling.'
       end
 
-      # Parse each .[dsl] file and setup its model.
-      dsls_glob.each do |filename|
-        dsl_class = DSL_TYPES.detect {|type| filename.include?(".#{type.underscore}")}.try(:constantize)
-        begin
-          contents = File.read(filename)
-          md5 = Digest::MD5.hexdigest(contents)
-          data, _i18n = dsl_class.parse(contents, filename)
-          unless md5 == level_md5s_by_name[data[:name]]
-            dsl_class.setup(data, md5)
-          end
-        rescue Exception
-          puts "Error parsing #{filename}"
-          raise
+      puts "seeding dsl files:\n#{dsl_files.join("\n")}"
+
+      parse_dsl_files(dsl_files, CHILD_DSL_TYPES + PARENT_DSL_TYPES)
+    end
+  end
+
+  # Parse each .[dsl] file and setup its model.
+  def parse_dsl_files(dsl_files, dsl_types)
+    level_md5s_by_name = DSLDefined.pluck(:name, :md5).to_h
+
+    dsl_files.each do |filename|
+      dsl_class = dsl_types.detect {|type| filename.include?(".#{type.underscore}")}.try(:constantize)
+      begin
+        contents = File.read(filename)
+        md5 = Digest::MD5.hexdigest(contents)
+        data, _i18n = dsl_class.parse(contents, filename)
+
+        # Skip any files which have not been updated since last seed. To force a
+        # a level to be reseeded, clear its md5 field in the database.
+        unless md5 == level_md5s_by_name[data[:name]]
+          dsl_class.setup(data, md5)
         end
+      rescue Exception
+        puts "Error parsing #{filename}"
+        raise
       end
     end
   end
