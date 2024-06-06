@@ -23,7 +23,7 @@ import {
   RenameFolderFunction,
   ToggleOpenFolderFunction,
   DeleteFolderFunction,
-  SetFileVisibilityFunction,
+  SetFileTypeFunction,
 } from './types';
 
 const DEFAULT_NEW_FILE_CONTENTS = 'Add your changes to ${fileName}';
@@ -131,10 +131,10 @@ export const useProjectUtilities = (
         });
       }),
 
-      setFileVisibility: <SetFileVisibilityFunction>((fileId, hide) => {
+      setFileType: <SetFileTypeFunction>((fileId, type) => {
         dispatch({
-          type: PROJECT_REDUCER_ACTIONS.SET_FILE_VISIBILITY,
-          payload: {fileId, hide},
+          type: PROJECT_REDUCER_ACTIONS.SET_FILE_TYPE,
+          payload: {fileId, type},
         });
       }),
 
