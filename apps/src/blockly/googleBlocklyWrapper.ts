@@ -574,7 +574,11 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   // and previewing blocks for levelbuilders.
   // We used to refer to these as "readOnlyBlockSpaces", which was confusing with normal,
   // read only workspaces.
-  blocklyWrapper.createEmbeddedWorkspace = function (container, xml, options) {
+  blocklyWrapper.createEmbeddedWorkspace = function (
+    container,
+    xml,
+    options = {}
+  ) {
     const theme = cdoUtils.getUserTheme(options.theme as Theme);
     const workspace = new Blockly.WorkspaceSvg({
       readOnly: true,
