@@ -71,6 +71,8 @@ export interface AiCustomizations {
 // The customizations will be included in request to LLM endpoint.
 export type AichatModelCustomizations = Omit<AiCustomizations, 'modelCardInfo'>;
 
+export type FieldVisibilities = {[key in keyof AiCustomizations]: Visibility};
+
 /** Chat bot Model Card information */
 export interface ModelCardInfo {
   botName: string;
@@ -109,3 +111,6 @@ export interface LevelAichatSettings {
   /** list of ModelDescription.ids to limit the models available to choose from in the level */
   availableModelIds: string[];
 }
+
+// The type of save action being performed (customization update, publish, model card save, etc).
+export type SaveType = 'updateChatbot' | 'publishModelCard' | 'saveModelCard';
