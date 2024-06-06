@@ -49,14 +49,8 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
     const library = await loadLibrary(libraryName);
     MusicLibrary.setCurrent(library);
     setIsLoading(false);
-    analyticsReporter.current.startSession().then(() => {
-      analyticsReporter.current.setUserProperties(
-        userId,
-        userType,
-        signInState
-      );
-    });
-  }, [analyticsReporter, libraryName, signInState, userId, userType]);
+    analyticsReporter.current.startSession();
+  }, [analyticsReporter, libraryName]);
 
   useEffect(() => {
     onMount();
