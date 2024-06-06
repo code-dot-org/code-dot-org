@@ -99,7 +99,8 @@ var copyrightStrings;
  */
 const MIN_WIDTH = 1400;
 const DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
-export const MAX_VISUALIZATION_WIDTH = 800;
+// export const MAX_VISUALIZATION_WIDTH = 800;
+export const MAX_VISUALIZATION_WIDTH = 0.75 * window.innerHeight;
 export const MIN_VISUALIZATION_WIDTH = 200;
 
 /**
