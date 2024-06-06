@@ -1,14 +1,19 @@
 import React from 'react';
 
 import aichatI18n from '@cdo/apps/aichat/locale';
-import moduleStyles from './warning-modal.module.scss';
 import {
   BodyTwoText,
   Heading3,
   StrongText,
 } from '@cdo/apps/componentLibrary/typography';
-import Button from '@cdo/apps/templates/Button';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
+import Button from '@cdo/apps/templates/Button';
+
+import moduleStyles from './warning-modal.module.scss';
+
+/**
+ * Renders a modal that warns the user to chat responsibly with AI.
+ */
 
 export interface ChatWarningModalProps {
   onClose: () => void;

@@ -28,9 +28,7 @@ const AITutorWarningModal = () => {
     return null;
   }
 
-  return (
-    <ChatWarningModal onClose={onClose} />
-  );
+  return <ChatWarningModal onClose={onClose} />;
 };
 
 export default AITutorWarningModal;
