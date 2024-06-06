@@ -1667,7 +1667,7 @@ ActiveRecord::Schema.define(version: 2024_05_22_163806) do
     t.index ["project_id"], name: "index_project_use_datablock_storages_on_project_id"
   end
 
-  create_table "projects", id: :integer, charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "projects", id: :integer, charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
     t.integer "storage_id"
     t.text "value", size: :medium
     t.datetime "updated_at", null: false
