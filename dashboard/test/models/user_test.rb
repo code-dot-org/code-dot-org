@@ -516,6 +516,38 @@ class UserTest < ActiveSupport::TestCase
     cannot_create_multi_auth_users_with_email COLLISION_EMAIL
   end
 
+  test "can create multi-auth LTI user with duplicate of multi-auth user's second email" do
+    create :student, email: COLLISION_EMAIL
+    # trigger the email validation by changing the email (partial registration has email as "" which becomes the actual
+    # email in the finish sign up flow)
+    user = create :student
+    user.authentication_options.destroy_all
+
+    lti_authentication_option = create(:lti_authentication_option, user: user, email: COLLISION_EMAIL)
+    user.authentication_options << lti_authentication_option
+    user.email = COLLISION_EMAIL
+
+    user.save!
+
+    user.valid?
+  end
+
+  test "cannot create multi-auth LTI user multiple auth options and duplicate of multi-auth user's second email" do
+    create :student, email: COLLISION_EMAIL
+    # trigger the email validation by changing the email (partial registration has email as "" which becomes the actual
+    # email in the finish sign up flow)
+    user = create :student
+    user.authentication_options.destroy_all
+
+    lti_authentication_option = create(:lti_authentication_option, user: user, email: COLLISION_EMAIL)
+    user.authentication_options << lti_authentication_option
+    user.email = COLLISION_EMAIL
+
+    user.save!
+    user.authentication_options << create(:lti_authentication_option, user: user, email: COLLISION_EMAIL)
+    cannot_create_user_with_email :google_authentication_option, user: user, email: COLLISION_EMAIL
+  end
+
   def cannot_create_multi_auth_users_with_email(email)
     cannot_create_user_with_email :teacher, email: email
     cannot_create_user_with_email :student, email: email
