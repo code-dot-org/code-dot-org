@@ -2672,6 +2672,7 @@ es-ES:
   user_header_artist: 'Artista '
   user_header_create: 'Crear '
   user_header_create_account: Crear una cuenta
+  user_header_create_account_low_cap: Crear cuenta
   user_header_dance: Fiesta de Baile
   user_header_flappy: Flappy
   user_header_gamelab: Laboratorio de Juegos

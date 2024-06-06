@@ -356,7 +356,7 @@
   "variableSetValue": "You need to set the value of your variable.",
   "variableChangeValue": "The value of your variable didn't change.",
   "variableIncreaseValue": "The value of your variable didn't increase.",
-  "gameDesignMissingDoEffectConditional": "There was no effect when you clicked. You need to add a `do effect` block under your event.",
+  "gameDesignMissingDoEffectConditional": "Be sure to add a `do effect` block inside the condition `if score = 3`.",
   "gameDesignEffectInsideConditional": "The effect happened every time you clicked. Make sure to nest the `do effect` block inside an if block that checks for a changing score.",
   "variableBubblesTwo": "Make sure to display two variables on screen.",
   "variableSetValueTwo": "You need to set the value of both your variables.",
@@ -372,5 +372,6 @@
   "gameDesignWhenTouchingEvent": "Make sure to add a `when sprite touches` event block in your code. Then make your player touch the collectible sprites.",
   "gameDesignTouchEventSpriteNotRemoved": "Your player sprite touched the collectible but didn't remove it. Make sure to add a `remove object` block under your event.",
   "gameDesignPlayerTouchVariableNotChanged": "Your variable needs to increase when the player sprite touches a collectible item.",
-  "gameDesignSetSpriteTypeToPlayer": "You need to set a sprite's type to player."
+  "gameDesignSetSpriteTypeToPlayer": "You need to set a sprite's type to player.",
+  "gameDesignPressUp": "Make sure to press the up arrow key after pressing *\"Run\"*. You can click the orange buttons under the play area or press the keys on your keyboard."
 }
