@@ -17,17 +17,19 @@ class EnrolledWorkshops extends React.Component {
       <WorkshopTableLoader
         queryUrl="/api/v1/pd/workshops_user_enrolled_in"
         hideNoWorkshopsMessage={true}
+        tableHeader="My Workshops"
       >
-        <EnrolledWorkshopsTable />
+        <WorkshopsTable />
       </WorkshopTableLoader>
     );
   }
 }
 
-class EnrolledWorkshopsTable extends React.Component {
+class WorkshopsTable extends React.Component {
   static propTypes = {
     workshops: PropTypes.arrayOf(workshopShape),
     forMyPlPage: PropTypes.bool,
+    tableHeader: PropTypes.string,
   };
 
   state = {
@@ -227,7 +229,7 @@ class EnrolledWorkshopsTable extends React.Component {
         </Modal>
         {this.props.workshops && (
           <section>
-            <h2>My Workshops</h2>
+            {this.props.tableHeader && <h2>{this.props.tableHeader}</h2>}
             {this.renderWorkshopsTable()}
           </section>
         )}
@@ -242,4 +244,4 @@ const styles = {
   },
 };
 
-export {EnrolledWorkshops, EnrolledWorkshopsTable};
+export {EnrolledWorkshops, WorkshopsTable};
