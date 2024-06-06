@@ -59,7 +59,7 @@ class AichatController < ApplicationController
         {
           role: "assistant",
           status: SharedConstants::AI_INTERACTION_STATUS[:ERROR],
-          chatMessageText: '[profane]',
+          chatMessageText: '[redacted - model generated profanity]',
         }
       ]
 

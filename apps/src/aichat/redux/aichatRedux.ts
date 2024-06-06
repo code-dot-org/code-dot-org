@@ -43,6 +43,12 @@ import {
   hasFilledOutModelCard,
 } from './utils';
 
+type MessageListKey = 'chatMessagesCurrent' | 'chatMessagesPast';
+type MessageLocation = {
+  index: number;
+  messageListKey: MessageListKey;
+};
+
 export interface AichatState {
   // Messages from previous chat sessions that we track purely for visibility to the user
   // and do not send to the model as history.
@@ -510,12 +516,6 @@ const aichatSlice = createSlice({
     });
   },
 });
-
-type MessageListKey = 'chatMessagesCurrent' | 'chatMessagesPast';
-type MessageLocation = {
-  index: number;
-  messageListKey: MessageListKey;
-};
 
 const findModelUpdateMessage = (
   id: number,
