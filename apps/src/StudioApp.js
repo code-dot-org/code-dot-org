@@ -99,8 +99,11 @@ var copyrightStrings;
  */
 const MIN_WIDTH = 1400;
 const DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
-// export const MAX_VISUALIZATION_WIDTH = 800;
-export const MAX_VISUALIZATION_WIDTH = 0.75 * window.innerHeight;
+export const MAX_VISUALIZATION_WIDTH = experiments.isEnabled(
+  experiments.BIG_PLAYSPACE
+)
+  ? 0.75 * window.innerHeight
+  : 400;
 export const MIN_VISUALIZATION_WIDTH = 200;
 
 /**
@@ -2009,8 +2012,10 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.startBlocks_ =
     config.level.lastAttempt || config.level.startBlocks || '';
   this.vizAspectRatio = config.vizAspectRatio || 1.0;
-  // this.nativeVizWidth = config.nativeVizWidth || this.maxVisualizationWidth;
-  this.nativeVizWidth = 400;
+  this.nativeVizWidth = config.nativeVizWidth || this.maxVisualizationWidth;
+  if (experiments.isEnabled(experiments.BIG_PLAYSPACE)) {
+    this.nativeVizWidth = 400;
+  }
 
   if (config.level.initializationBlocks) {
     var xml = parseXmlElement(config.level.initializationBlocks);
