@@ -230,6 +230,12 @@ img.video_thumbnail {
     }
   }
 
+  @media screen and (max-width: 1120px) {
+    .create_menu {
+      display: none !important;
+    }
+  }
+
   .headerlinks {
     margin-inline-start: 1rem;
     display: flex;
