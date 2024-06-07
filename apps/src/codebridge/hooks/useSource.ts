@@ -21,14 +21,13 @@ export const useSource = (defaultSources: ProjectSources) => {
     state => state.lab2Project.projectSource
   );
   const source = projectSource?.source as MultiFileSource;
-  const channelId = useAppSelector(state => state.lab.channel?.id);
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const isEditingExemplarMode = getAppOptionsEditingExemplar();
   const initialSources = useInitialSources(defaultSources);
   const levelStartSource = useAppSelector(
     state => state.lab.levelProperties?.source
   );
-  const previousChannelIdRef = useRef<string | null>(null);
+  const previousLevelIdRef = useRef<number | null>(null);
   const levelId = useAppSelector(state => state.lab.levelProperties?.id);
 
   const setSource = useMemo(
@@ -57,15 +56,16 @@ export const useSource = (defaultSources: ProjectSources) => {
   }, [isStartMode, isEditingExemplarMode, levelId, source]);
 
   useEffect(() => {
-    if (channelId && previousChannelIdRef.current !== channelId) {
-      // We reset the project when the channelId changes, as this means we are on a new level
-      // with a new project.
+    if (levelId && previousLevelIdRef.current !== levelId) {
+      // We reset the project when the levelId changes, as this means we are on a new level.
       if (initialSources) {
         dispatch(setAndSaveProjectSource(initialSources));
       }
-      previousChannelIdRef.current = channelId;
+      if (levelId) {
+        previousLevelIdRef.current = levelId;
+      }
     }
-  }, [channelId, initialSources, dispatch]);
+  }, [initialSources, dispatch, levelId]);
 
   return {source, setSource, resetToStartSource};
 };

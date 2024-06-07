@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "gen-ai-customizing-pilot-v1",
-    "serialized_at": "2024-05-25 00:28:12 UTC",
+    "serialized_at": "2024-06-04 22:01:56 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -6085,6 +6085,18 @@
       }
     },
     {
+      "name": "Model Cards - Exploration",
+      "url": "https://docs.google.com/presentation/d/1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA/template/preview",
+      "key": "model_cards_-_exploration",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "model_cards_-_exploration"
+      }
+    },
+    {
       "name": "Model Cards - Practice",
       "url": "https://docs.google.com/presentation/d/1SiSyjE8Smx58djB3qPLBr0sVSsPFxKMoLY1vZZR18DI/template/preview",
       "key": "model_cards_-_practice",
@@ -6229,6 +6241,12 @@
       "seeding_key": {
         "lesson.key": "lesson-10",
         "resource.key": "foresight_in_ai_chart"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "model_cards_-_exploration"
       }
     },
     {

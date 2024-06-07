@@ -26,7 +26,7 @@
   "image_url": "https://curriculum.code.org/media/blocks/equality.PNG",
   "palette_params": [
     {
-      "name": "value1",
+      "name": "value 1",
       "type": "",
       "required": true,
       "description": "Variable, number, color, text, or logic block to be compared with value 2"

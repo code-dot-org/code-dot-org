@@ -130,11 +130,22 @@ const optionsList = [
     ],
   },
   {
-    name: 'timeline-layout-2',
+    name: 'timeline-original-layout',
     type: 'radio',
     values: [
-      {value: 'false', description: 'Original timeline (default).'},
-      {value: 'true', description: 'New timeline.'},
+      {value: 'false', description: 'New timeline (default).'},
+      {value: 'true', description: 'Original timeline.'},
+    ],
+  },
+  {
+    name: 'clickable-text-with-glow',
+    type: 'radio',
+    values: [
+      {
+        value: 'false',
+        description: 'No glow for clickable text in instructions (default).',
+      },
+      {value: 'true', description: 'Glow for clickable text in instructions.'},
     ],
   },
 ];

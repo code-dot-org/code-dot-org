@@ -108,7 +108,7 @@ sq-AL:
   cargobot_beyond_platformtext: iPad
   cargobot_beyond_shortdescription: Programo një krah roboti në iPad-in tënd
   carousel_heading_apps_games: Bëj aplikacionet ose lojrat e tua
-  carousel_heading_beginners: Tutoriale për Fillestarët
+  carousel_heading_beginners: Tutoriale për klasat K-8
   carousel_heading_beyond_devices: Aplikacione për telefona dhe tableta
   carousel_heading_beyond_javascript: Mësoni JavaScript
   carousel_heading_beyond_languages: Mësoni gjuhë të tjera programimi
@@ -650,7 +650,7 @@ sq-AL:
   dashboard_sections_switch_section: 'Ndrysho seksionin:'
   dashboard_sections_table_code: Pjesë Kodi
   dashboard_sections_table_course: Kurs
-  dashboard_sections_table_grade: Notë
+  dashboard_sections_table_grade: Klasa
   dashboard_sections_table_pairing_allowed: Programimi në ekip
   dashboard_sections_table_secret: Mënyra e logimit
   dashboard_sections_table_section: Pjesë
@@ -970,7 +970,7 @@ sq-AL:
     &ldquo; Fëmijët tanë &mdash; duke përfshirë edhe vajzat tona &mdash;
     kanë nevojë t'ju jepet mundësia të mësojnë shkencat kompjuterike. &rdquo;
     Sheryl, COO në Facebook
-  homepage_hero_text_stat_loc: "#loc rreshtat e kodimit të përgatitura nga studentët"
+  homepage_hero_text_stat_loc: "#loc rreshtat e kodimit të përgatitura nga nxënësit"
   homepage_hero_text_stat_served: 'Ora e Kodimit: #served dorëzuar'
   homepage_hero_text_stat_students: "#student_count llogari studentësh në Code Studio"
   homepage_hero_text_student1: |-
@@ -1592,8 +1592,8 @@ sq-AL:
   third_party_gradelevel_5to12: Klasat 5-12
   third_party_gradelevel_6plus: Klasat 6+
   third_party_gradelevel_8plus: Klasat 8+
-  third_party_gradelevel_kto2: Klasat ParaShk-2
-  third_party_gradelevel_kto8: Klasat ParaShk-8
+  third_party_gradelevel_kto2: Klasat K-2
+  third_party_gradelevel_kto8: Klasat K-8
   third_party_khan_btn_forum: Forumi CS Akademia Khan
   third_party_khan_btn_learn: Mëso CS me Akademin Khan
   third_party_khan_desc: |-
