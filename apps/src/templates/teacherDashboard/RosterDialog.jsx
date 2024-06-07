@@ -221,7 +221,7 @@ class RosterDialog extends React.Component {
     this.setState({selectedId: id});
   };
 
-  // valid event names: 'Section Setup Complete', 'Section Setup Cancelled'.
+  // valid event names: 'Section Setup Completed', 'Section Setup Cancelled'.
   recordSectionSetupExitEvent = eventName => {
     const {rosterProvider} = this.props;
 
