@@ -25,7 +25,7 @@ const getMappedFiles = (files: KeyedFileRecord, folders: KeyedFolderRecord) =>
   );
 
 export const HTMLPreview = ({file}: HTMLPreviewProps) => {
-  const iframeRef = useRef<HTMLIFrameElement>();
+  const iframeRef = useRef<HTMLIFrameElement>(null);
   const serviceWorker = useRef<ServiceWorkerRegistration>();
 
   const {
@@ -33,10 +33,13 @@ export const HTMLPreview = ({file}: HTMLPreviewProps) => {
   } = useCodebridgeContext();
 
   useEffect(() => {
+    console.log('UE1');
     const asyncRegisterServiceWorker = async () => {
+      console.log('GONNA ATTEMPT');
       const worker =
         (await registerServiceWorker()) as ServiceWorkerRegistration;
       if (!worker) {
+        console.log('FAILED TO GET WORKER');
         return;
       }
       console.log('GOT WORKER : ', worker);
@@ -103,7 +106,7 @@ export const HTMLPreview = ({file}: HTMLPreviewProps) => {
     <>
       {file && (
         <iframe
-          sandbox=""
+          //sandbox=""
           allow="self"
           title="Web Preview"
           ref={iframeRef}

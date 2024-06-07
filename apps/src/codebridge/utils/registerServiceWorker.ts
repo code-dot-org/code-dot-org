@@ -5,10 +5,17 @@ export const registerServiceWorker = async ({
   activate = defaultCallback,
   waiting = defaultCallback,
 } = {}) => {
+  console.log(
+    'RSW1',
+    navigator.serviceWorker,
+    'serviceWorker' in navigator,
+    navigator
+  );
   if ('serviceWorker' in navigator) {
+    console.log('GOT IT');
     try {
       const registration = await navigator.serviceWorker.register(
-        '/worker.js',
+        '/codebridge_service_worker.js',
         {
           scope: '/',
         }
