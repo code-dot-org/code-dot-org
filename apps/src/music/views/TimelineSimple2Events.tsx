@@ -5,7 +5,8 @@ import {FunctionEvents} from '../player/interfaces/FunctionEvents';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 import AppConfig from '../appConfig';
 
-const useTimelineLayout2 = AppConfig.getValue('timeline-layout-2') === 'true';
+const useOriginalTimelineLayout =
+  AppConfig.getValue('timeline-original-layout') === 'true';
 
 /**
  * Compute the extents for the given function, given the list of unique sounds and all functions.
@@ -153,12 +154,12 @@ const TimelineSimple2Events: React.FunctionComponent<
   );
 
   // soundEventsOriginal has sounds sorted primarily by the immediate function
-  // that generates them, and next by when they are played.  If useTimelineLayout2
+  // that generates them, and next by when they are played.  Unless useOriginalTimelineLayout
   // is true, then they are resorted so that all sounds played somewhere under
   // "when run" are sorted by when they are played.
-  const soundEvents = useTimelineLayout2
-    ? getOrderedByWhenSoundEvents(soundEventsOriginal)
-    : soundEventsOriginal;
+  const soundEvents = useOriginalTimelineLayout
+    ? soundEventsOriginal
+    : getOrderedByWhenSoundEvents(soundEventsOriginal);
 
   const orderedFunctions = useMusicSelector(
     state => state.music.orderedFunctions

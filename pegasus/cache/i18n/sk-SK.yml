@@ -329,7 +329,7 @@ sk-SK:
   congratulations_on_completing_hoc: Gratulujeme ku absolvovaniu jednej Hodiny kódu
   congratulations_volunteer: 'Gratulujeme: Teraz keď si skúsil Hodinu kódu, <a href="https://code.org/volunteer">prihlás
     sa ako dobrovoľník </a> a oduč hodinu Hodinu kódu priamo na škole!'
-  contact_form_label_email: Váš e-mail
+  contact_form_label_email: Váš email
   contact_form_label_message: Správa
   contact_form_label_submit: Odoslať správu
   contact_form_label_topic: Predmet
@@ -714,7 +714,7 @@ sk-SK:
   dashboard_landing_watch_video: pre prehliadku nových funkcií!
   dashboard_landing_welcome: Vítame vás na novej a vylepšenej nástenke učiteľa.
   dashboard_lesson_plans: Plány hodín
-  dashboard_login_none: E-mailová adresa
+  dashboard_login_none: Emailová adresa
   dashboard_login_picture: Obrázok
   dashboard_login_word: Slovo
   dashboard_middle_courses: 20 hodinové kurzy pre druhý stupeň ZŠ
@@ -784,13 +784,13 @@ sk-SK:
     vyberte, či pre túto triedu budete používať tajné <b>slovo</b> alebo <b>obrázok</b>.
   dashboard_sections_close: Zatvoriť
   dashboard_sections_code_placeholder: 6-miestny kód (ABCDEF)
-  dashboard_sections_email_question: Majú všetci študenti platnú e-mailovú adresu?
+  dashboard_sections_email_question: Majú všetci študenti platnú emailovú adresu?
   dashboard_sections_enter_code: 'Zadajte kód triedy:'
   dashboard_sections_jumbotron_instruction: Vytvorte nové triedy a pridajte do nich
     študentov. Triedy pomáhajú organizovať študentov do menších skupín, sledovať ich
     postup a spravovať ich účty.
   dashboard_sections_login_type_explanation: Táto tabuľka pomáha vysvetliť, ktoré
-    z týchto typov prihlásenia <b>obrázok, slovo alebo e-mail</b> budete chcieť vybrať
+    z týchto typov prihlásenia <b>obrázok, slovo alebo email</b> budete chcieť vybrať
     pre vašu skupinu.
   dashboard_sections_move_students: Presunúť žiakov
   dashboard_sections_move_students_desc: Vyberte študentov, ktorých chcete presunúť
@@ -850,8 +850,8 @@ sk-SK:
     vyššie na tlačidlo <b>synchronizácia študentov v Učebni Google</b>.
   dashboard_students_new_section: Vytvorili ste novú triedu! Teraz pridajte vašich
     študentov pomocou tlačidla <b>Pridať študenta</b> a <b>Pridať viacerých študentov</b>.
-  dashboard_students_no_email: Ak vaši študenti nemajú e-mailové adresy alebo pre
-    nich chcete vytvoriť účty sami, zmeňte typ tajného hesla v tejto triede na <b>slovo</b>
+  dashboard_students_no_email: Ak vaši študenti nemajú emailové adresy alebo pre nich
+    chcete vytvoriť účty sami, zmeňte typ tajného hesla v tejto triede na <b>slovo</b>
     alebo <b>obrázok</b>.
   dashboard_students_print_info: Vytlačiť kartičky s prihlasovacími údajmi študentov.
   dashboard_students_print_page: Vytlačiť stránku
@@ -893,11 +893,11 @@ sk-SK:
   edx_beyond_name: Kurz Harvard CS50
   edx_beyond_platformtext: Moderné prehliadače
   edx_beyond_shortdescription: Najobľúbenejšia hodina na Harvarde
-  email: E-mail
+  email: Email
   en: Informatika
   enter_country: Zadaj krajinu ak si mimo Spojených štátov
   enter_valid_age: Zvoľte prosím platný vek
-  enter_valid_email: Prosím, zadajte platnú e-mailovú adresu
+  enter_valid_email: Prosím, zadajte platnú emailovú adresu
   express-2018_name: Zrýchlený kurz (2018)
   express-2019_name: Zrýchlený kurz (2019)
   express-2020_name: Zrýchlený kurz (2019)
@@ -1433,7 +1433,7 @@ sk-SK:
     %{section_code}.'
   joining_section_instruct_website: 'Vytvorte konto Code.org, ak tak už neurobili.
     Môžu tak na https://studio.code.org/users/sign_up. Všimnite si, že sa môžu buď
-    zaregistrovať použitím e-mailovej adresy a hesla, alebo prihlásiť sa cez Google,
+    zaregistrovať použitím emailovej adresy a hesla, alebo prihlásiť sa cez Google,
     Facebook alebo Microsoft kliknutím na jedno z týchto tlačidiel:'
   joining_section_overview: Ak sa študenti ešte nepridali ku vašej triede, požiadajte
     ich o vykonanie nasledujúcich krokov. Potrebujú ich vykonať len raz. Po pripojení
@@ -1718,8 +1718,8 @@ sk-SK:
     ohniska a skúste urobiť predpovede, čo sa stane so susedmi mesta Monster Town.
   outbreak_tile_title: Nákaza
   page_not_available_button: Späť na domovskú stránku
-  page_not_available_description: Ľutujeme, ale požadovaná stránka už nie je dostupná
-    na tejto adrese. Ak stále potrebujete prístup, pošlite e-mail na adresu [support@code.org]
+  page_not_available_description: Ľutujeme, ale požadovaná stránka už na tejto adrese
+    nie je dostupná. Ak stále potrebujete prístup, pošlite email na adresu [support@code.org]
     (%{support_email_link}).
   page_not_available_title: Stránka je nedostupná
   page_not_found_button: Späť na domovskú stránku
@@ -1814,7 +1814,7 @@ sk-SK:
     jazyk Quorum.
   reset_student_password: Obnova študentského hesla
   reset_student_password_email: Ak si vaši študenti vytvorili Code.org účet prostredníctvom
-    e-mailu a hesla (namiesto prihlásenia pomocou Google, Facebook, Microsoft, alebo
+    emailu a hesla (namiesto prihlásenia pomocou Google, Facebook, Microsoft, alebo
     Clever účtu), viete obnoviť ich heslo tak, že na záložke "Správa študentov" danej
     triedy kliknete na tlačidlo “Obnoviť heslo” v stĺpci "Heslo".
   reset_student_password_instructions: Pre ktoréhokoľvek z vašich študentov môžete
@@ -2190,6 +2190,7 @@ sk-SK:
   user_header_artist: 'Umelec '
   user_header_create: 'Vytvoriť '
   user_header_create_account: Vytvoriť účet
+  user_header_create_account_low_cap: Vytvoriť účet
   user_header_dance: Tanečná Párty
   user_header_flappy: Flappy
   user_header_gamelab: Game Lab
@@ -2199,6 +2200,7 @@ sk-SK:
   user_header_music: Music Lab
   user_header_my_projects: Moje projekty
   user_header_new_project: Nový projekt
+  user_header_new_project_low_cap: Nový projekt
   user_header_playlab: Play Lab
   user_header_settings: Nastavenia účtu
   user_header_signin: Prihlásiť sa
@@ -2242,7 +2244,7 @@ sk-SK:
   volunteer_engineer_submission_checkbox_age_18_plus: Potvrdzujem, že už som dovŕšil
     18 rokov.
   volunteer_engineer_submission_checkbox_contact: 'Súhlasím, že učitelia ma môžu kontaktovať
-    pre dobrovoľné priespievanie (Poznámka: Vaša e-mailová adresa nebude zverejnená)'
+    s ponukami na dobrovoľníctvo (Poznámka: Vaša emailová adresa nebude zverejnená)'
   volunteer_engineer_submission_commitment_annually: 2 - 3 krát ročne
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 hodín týždenne
   volunteer_engineer_submission_commitment_monthly: Pár hodín mesačne
@@ -2272,12 +2274,11 @@ sk-SK:
     účasti. Ak hovoríš iným jazykom (jazykmi) ako je Angličtina, uisti sa že si ich
     zahrnul.
   volunteer_engineer_submission_field_email: Emailová adresa
-  volunteer_engineer_submission_field_email_desc: Vaša e-mailová adresa nebude nikdy
+  volunteer_engineer_submission_field_email_desc: Vaša emailová adresa nebude nikdy
     zdieľaná, ale zašleme vám žiadosti od učiteľov.
   volunteer_engineer_submission_field_email_placeholder: Emailová adresa
-  volunteer_engineer_submission_field_email_preference: Môžeme vám zasielať emailom
-    aktualizácie o našich školeniach, možnostiach výučby vo Vašom okolí alebo iných
-    novinkách v informatike?
+  volunteer_engineer_submission_field_email_preference: Môžeme vám posielať email
+    s novinkami o našich kurzoch a o informatike?
   volunteer_engineer_submission_field_email_preference_no: Nie
   volunteer_engineer_submission_field_email_preference_privacy: "(Prezrite si naše
     Zásady ochrany osobných údajov)"
@@ -2299,10 +2300,10 @@ sk-SK:
   volunteer_engineer_submission_field_name: Meno
   volunteer_engineer_submission_field_name_placeholder: Celé meno
   volunteer_engineer_submission_field_time_commitment: Časový záväzok po Hodine Kódu
-  volunteer_engineer_submission_final_paragraph: Budete uvedení na mape, aby Vás miestni
-    učitelia mohli kontaktovať počas Hodiny Kódu alebo iné dobrovoľnícke príležitosti.
-    váš email a presnú adresu se nikdy nezdieľame. Ale ostatné informácie (vrátane
-    približného umiestnenia) budú verejne viditeľné.
+  volunteer_engineer_submission_final_paragraph: Budete uvedení na mape, aby vás miestni
+    učitelia mohli kontaktovať počas Hodiny Kódu alebo pri inej dobrovoľníckej príležitosti.
+    Váš email a presnú adresu nikdy nezdieľame. Ale ostatné informácie (vrátane približnej
+    lokality) budú verejne viditeľné.
   volunteer_engineer_submission_header_private: Informácie sú uschovávané v súkromí
     a nikdy nebudú zdieľané
   volunteer_engineer_submission_header_shared: Informácie zdielané s učitelmi na dobrovoľnickej
