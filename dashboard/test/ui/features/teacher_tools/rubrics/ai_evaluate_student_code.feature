@@ -1,4 +1,3 @@
-@skip
 # AI evaluation is stubbed out in UI tests via the /api/test/ai_proxy/assessment route.
 @no_firefox
 @no_mobile
@@ -87,7 +86,9 @@ Feature: Evaluate student code against rubrics using AI
     And element ".teacher-panel td:eq(1)" contains text "Aiden"
     And I click selector ".teacher-panel td:eq(1)" to load a new page
     And I wait for the page to fully load
+    And I wait until element "h1:contains(Getting Started with Your AI Teaching Assistant)" is visible
     And I click selector ".introjs-skipbutton" if it exists
+    And I wait for 2 seconds
     #Then I verify progress in the header of the current page is "attempted_assessment" for level 2
     And element "#ui-floatingActionButton" is visible
 
@@ -109,7 +110,6 @@ Feature: Evaluate student code against rubrics using AI
     And I wait until element ".uitest-ai-assessment" is visible
     Then element ".uitest-ai-assessment" contains text "Aiden has achieved Extensive or Convincing Evidence"
 
-  @skip
   Scenario: Student code is evaluated by AI when teacher requests evaluation for entire class
     Given I create a teacher-associated student named "Aiden"
     And I get debug info for the current user
@@ -138,7 +138,9 @@ Feature: Evaluate student code against rubrics using AI
     And element ".teacher-panel td:eq(1)" contains text "Aiden"
     And I click selector ".teacher-panel td:eq(1)" to load a new page
     And I wait for the page to fully load
+    And I wait until element "h1:contains(Getting Started with Your AI Teaching Assistant)" is visible
     And I click selector ".introjs-skipbutton" if it exists
+    And I wait for 2 seconds
     #Then I verify progress in the header of the current page is "attempted_assessment" for level 2
     And element "#ui-floatingActionButton" is visible
 
@@ -150,6 +152,7 @@ Feature: Evaluate student code against rubrics using AI
     # Teacher switches to Class Management tab
     When I click selector "button:contains('Class Data')"
     And I wait until element ".uitest-run-ai-assessment-all" is visible
+    And I wait for 2 seconds
     And element ".uitest-run-ai-assessment-all" is enabled
 
     # Teacher runs AI evaluation
