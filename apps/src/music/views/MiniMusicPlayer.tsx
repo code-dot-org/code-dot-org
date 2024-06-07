@@ -49,7 +49,7 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
     const library = await loadLibrary(libraryName);
     MusicLibrary.setCurrent(library);
     setIsLoading(false);
-    analyticsReporter.current.startSession();
+    await analyticsReporter.current.startSession();
   }, [analyticsReporter, libraryName]);
 
   useEffect(() => {
