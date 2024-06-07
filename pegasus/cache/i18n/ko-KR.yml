@@ -2096,6 +2096,8 @@ ko-KR:
   user_header_applab: '앱 랩 '
   user_header_artist: '아티스트 '
   user_header_create: 만들기
+  user_header_create_account: 계정 만들기
+  user_header_create_account_low_cap: 계정 만들기
   user_header_dance: 댄스 파티
   user_header_flappy: 플래피
   user_header_gamelab: 게임 랩
@@ -2103,6 +2105,8 @@ ko-KR:
   user_header_logout: 로그아웃
   user_header_minecraft: 마인크래프트
   user_header_my_projects: 내 프로젝트
+  user_header_new_project: 새 프로젝트
+  user_header_new_project_low_cap: 새로운 종합 프로젝트
   user_header_playlab: 플레이 랩
   user_header_settings: 계정 설정
   user_header_signin: 로그인

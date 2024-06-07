@@ -14,11 +14,12 @@ import i18n from '@cdo/locale';
 import {LtiProviderContext} from '../../context';
 
 const ExistingAccountCard = () => {
-  const {ltiProvider, ltiProviderName, existingAccountUrl} =
+  const {ltiProvider, ltiProviderName, existingAccountUrl, emailAddress} =
     useContext(LtiProviderContext)!;
   const urlParams = new URLSearchParams({
     lms_name: ltiProviderName,
     lti_provider: ltiProvider,
+    email: emailAddress,
   });
   existingAccountUrl.search = urlParams.toString();
 

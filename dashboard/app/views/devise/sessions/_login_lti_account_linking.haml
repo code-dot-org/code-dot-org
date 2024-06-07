@@ -20,15 +20,14 @@
 
   #email-side
     %h3= t('lti.account_linking.connect_with_email')
-    = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+    = form_with(url: :lti_v1_account_linking_link_email, method: :post) do |f|
       = show_flashes.html_safe
-      = f.hidden_field :hashed_email
 
       / Email
       .field
         = f.label :email
-        - email = @email || ''
-        = f.text_field :login, value: email, autofocus: email == '', required: true
+        - email = params[:email] || ''
+        = f.text_field :email, value: email, autofocus: email == '', required: true
 
       / Password
       .field#password_field

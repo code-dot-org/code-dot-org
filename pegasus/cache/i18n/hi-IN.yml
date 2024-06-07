@@ -2544,6 +2544,7 @@ hi-IN:
   user_header_applab: 'ऐप लैब '
   user_header_artist: 'कलाकार '
   user_header_create: 'बनाएं '
+  user_header_create_account: खाता बनाएं
   user_header_create_account_low_cap: खाता बनाएँ
   user_header_dance: डांस पार्टी
   user_header_flappy: फ्लैपी
@@ -2552,6 +2553,8 @@ hi-IN:
   user_header_logout: साइन आउट करें
   user_header_minecraft: माइनक्राफ्ट
   user_header_my_projects: मेरे प्रोजेक्ट
+  user_header_new_project: नया प्रोजेक्ट
+  user_header_new_project_low_cap: New project
   user_header_playlab: प्ले लैब
   user_header_settings: खाता सेटिंग्स
   user_header_signin: दाखिल करना
