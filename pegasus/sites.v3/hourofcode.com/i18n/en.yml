@@ -1744,8 +1744,8 @@
     ready:
       heading: "Ready to try the Code.org integration for %{website}?"
       title: "Install the Code.org integration on %{website}"
-      list_01: "Administrators: Streamline your school's digital learning by using a simple and straightforward installation process."
-      list_02: "Teachers: Use this guide to get started and encourage your administrator to integrate Code.org."
+      list_01: "**Administrators:** Streamline your school's digital learning by using a simple and straightforward installation process."
+      list_02: "**Teachers:** Use this guide to get started and encourage your administrator to integrate Code.org."
 
   pl_page:
     heading: "Professional learning that empowers"
