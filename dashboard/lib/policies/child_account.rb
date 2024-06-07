@@ -53,7 +53,8 @@ class Policies::ChildAccount
   # state missing
   # We use Colorado as it is the only start date we have for now
   def self.user_predates_state_collection?(user)
-    user.created_at < state_policy(user)[:start_date]
+    # The date is the same as when CPA first started.
+    user.created_at < state_policies['CO'][:start_date]
   end
 
   # 'cap-state-modal-rollout' should be a value in the range [0,100]
