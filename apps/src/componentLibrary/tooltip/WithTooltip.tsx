@@ -192,8 +192,6 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
       },
     });
 
-  console.log('render', tooltipProps.tooltipId, showTooltip, tooltipStyles);
-
   return (
     <TooltipOverlay className={tooltipOverlayClassName}>
       {componentToWrap}
