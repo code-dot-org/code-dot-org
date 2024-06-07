@@ -199,6 +199,15 @@ class LtiV1Controller < ApplicationController
         PartialRegistration.persist_attributes(session, user)
         session[:user_return_to] = destination_url
         if DCDO.get('lti_account_linking_enabled', false)
+          metadata = {
+            'user_type' => user.user_type,
+            'lms_name' => integration[:platform_name],
+          }
+          Metrics::Events.log_event(
+            user: user,
+            event_name: 'lti_account_linking_page_visit',
+            metadata: metadata,
+          )
           render 'lti/v1/account_linking/landing', locals: {lti_provider: integration[:platform_name], email: email_address} and return
         end
 
