@@ -59,7 +59,10 @@ class MusiclabController < ApplicationController
     channel_ids_from_params = channels_param.nil? ? [] : channels_param.split(',')
     channel_ids_from_featured_projects = CHANNELS
     if DCDO.get('get_channel_ids_from_featured_projects_gallery', true)
-      channel_ids_from_featured_projects = ProjectsList.fetch_active_published_featured_projects('music')[:music].map {|project| project['channel']}
+      featured_projects = ProjectsList.fetch_active_published_featured_projects('music')[:music]
+      if featured_projects
+        channel_ids_from_featured_projects = featured_projects.map {|project| project['channel']}
+      end
     end
     all_channel_ids = channel_ids_from_params.empty? ?
       channel_ids_from_featured_projects :
