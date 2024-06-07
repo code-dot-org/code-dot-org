@@ -39,11 +39,8 @@ class MusiclabController < ApplicationController
     view_options(no_header: true, no_footer: true, full_width: true, no_padding_container: true)
 
     selected_channel_ids = get_selected_channel_ids(params[:channels])
-    puts "Selected channel IDs: #{selected_channel_ids}"
 
     @projects = get_musiclab_projects(selected_channel_ids)
-    puts "@projects #{@projects}"
-    return @projects
   end
 
   # TODO: This is a temporary addition to serve the analytics API key
@@ -64,18 +61,13 @@ class MusiclabController < ApplicationController
 
   private def get_selected_channel_ids(channels_param = nil)
     channel_ids_from_params = channels_param.nil? ? [] : channels_param.split(',')
-    puts "channel_ids_from_params #{channel_ids_from_params}"
     channel_ids_from_featured_projects = CHANNELS
-    puts "music projects: #{ProjectsList.fetch_active_published_featured_projects('music')}"
     if get_channel_ids_from_featured_projects_gallery?
-      featured_projects = ProjectsList.fetch_active_published_featured_projects('music')["music"]
-      puts "featured projects: #{featured_projects}"
+      featured_projects = ProjectsList.fetch_active_published_featured_projects('music')[:music]
       if featured_projects
         channel_ids_from_featured_projects = featured_projects.map {|project| project['channel']}
       end      
     end
-    puts "channel_ids_from_params #{channel_ids_from_params}"
-    puts "channel_ids_from_params.empty? #{channel_ids_from_params.empty?}"
     all_channel_ids = channel_ids_from_params.empty? ?
       channel_ids_from_featured_projects :
       channel_ids_from_params
