@@ -55,14 +55,10 @@ class MusiclabController < ApplicationController
     render(json: {key: ANALYTICS_KEY})
   end
 
-  private def get_channel_ids_from_featured_projects_gallery?
-    DCDO.get('get_channel_ids_from_featured_projects_gallery', true)
-  end
-
   private def get_selected_channel_ids(channels_param = nil)
     channel_ids_from_params = channels_param.nil? ? [] : channels_param.split(',')
     channel_ids_from_featured_projects = CHANNELS
-    if get_channel_ids_from_featured_projects_gallery?
+    if DCDO.get('get_channel_ids_from_featured_projects_gallery', true)
       channel_ids_from_featured_projects = ProjectsList.fetch_active_published_featured_projects('music')[:music].map {|project| project['channel']}
     end
     all_channel_ids = channel_ids_from_params.empty? ?
