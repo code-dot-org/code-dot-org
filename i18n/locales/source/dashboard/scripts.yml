@@ -16064,7 +16064,7 @@ en:
               name: Share Your Voice
           lesson_groups: {}
           name: k5-ai-data-2024
-          title: How AI Makes Predictions
+          title: How AI Makes Decisions
           description_audience: ''
           description_short: ''
           description: ''
@@ -16796,3 +16796,150 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
+        sandbox-csf-a:
+          lessons: {}
+          lesson_groups: {}
+          name: sandbox-csf-a
+          title: 'SANDBOX CSF Course A '
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        sandbox-csf-intro:
+          lessons: {}
+          lesson_groups: {}
+          name: sandbox-csf-intro
+          title: SANDBOX CSF Intro
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        sandbox-csf-b:
+          lessons: {}
+          lesson_groups: {}
+          name: sandbox-csf-b
+          title: SANDBOX CSF Course B
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        sandbox-csf-c:
+          lessons: {}
+          lesson_groups: {}
+          name: sandbox-csf-c
+          title: SANDBOX CSF Course C
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        sandboc-csf-d:
+          lessons: {}
+          lesson_groups: {}
+        sandbox-csf-d:
+          lessons: {}
+          lesson_groups: {}
+          name: sandbox-csf-d
+          title: SANDBOX CSF Course D
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        sandbox-csf-e:
+          lessons: {}
+          lesson_groups: {}
+          name: sandbox-csf-e
+          title: SANDBOX CSF Course E
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        sandbox-csf-f:
+          lessons: {}
+          lesson_groups: {}
+          name: sandbox-csf-f
+          title: SANDBOX CSF Course F
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-foundations-unit1:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-foundations-unit1
+          title: Foundations of CS Unit 1
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-foundations-unit2:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-foundations-unit2
+          title: Foundations of CS Unit 2
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-foundations-unit3:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-foundations-unit3
+          title: Foundations of CS Unit 3
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-foundations-unit4:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-foundations-unit4
+          title: Foundations of CS Unit 4
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-foundations-unit5:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-foundations-unit5
+          title: Foundations of CS Unit 5
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-foundations-unit6:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-foundations-unit6
+          title: Foundations of CS Unit 6
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-foundations-unit1:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-foundations-unit1
+          title: Foundations of CS Unit 1
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-foundations-unit2:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-foundations-unit2
+          title: Foundations of CS Unit 2
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        gen-ai-customizing-pilot-v2:
+          lessons: {}
+          lesson_groups: {}
+          name: gen-ai-customizing-pilot-v2
+          title: Customizing Language Models
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

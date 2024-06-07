@@ -193,14 +193,13 @@ class Pd::ProfessionalLearningLandingControllerTest < ActionController::TestCase
     assert_equal application.id, response[:current_year_application_id]
   end
 
-  test 'enrolled workshops are passed down' do
+  test 'has_enrolled_in_workshops is true when user is enrolled workshops' do
     prepare_scenario
 
     load_pl_landing @teacher
 
     response = assigns(:landing_page_data)
-    assert_equal 3, response[:workshops_as_participant].length
-    assert_equal([@csf_workshop, @csd_workshop, @csp_workshop].map(&:course_name), response[:workshops_as_participant].map {|workshop| workshop[:course]})
+    assert response[:has_enrolled_in_workshop]
   end
 
   test 'facilitated workshops are passed down' do

@@ -7,3 +7,4 @@ export * from './getFullFilePath';
 export * from './previewFileType';
 export * from './registerServiceWorker';
 export * from './sortFilesByName';
+export * from './fileUtils';

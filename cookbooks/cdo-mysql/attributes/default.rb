@@ -1,4 +1,5 @@
 default['cdo-mysql'] = {
+  target_version: '5.7',
   proxy: {
     # Enable ProxySQL on non-daemon app-servers by default.
     enabled: node['cdo-apps'] && !node['cdo-apps']['daemon'],

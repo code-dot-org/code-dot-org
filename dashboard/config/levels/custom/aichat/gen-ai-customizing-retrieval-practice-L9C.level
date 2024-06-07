@@ -43,8 +43,11 @@
       "availableModelIds": [
 
       ]
-    }
+    },
+    "display_name": "Know Your Rights",
+    "bubble_choice_description": "Veronica wants to make a chatbot to help people understand their rights in certain situations.",
+    "thumbnail_url": "https://images.code.org/6cbdf39de5e1d6d256f6920ba6d05c12-Lesson 7 - Level 9C- Know Your Rights.png"
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-04T02:27:26.926+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L7\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L7\"},{\"changed_at\":\"2024-05-10 04:46:07 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-04T02:27:26.926+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L7\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L7\"},{\"changed_at\":\"2024-05-10 04:46:07 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-06-04 02:32:43 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>

@@ -26,7 +26,7 @@ $(() => {
         currentYearApplicationId={
           landingPageData['current_year_application_id']
         }
-        workshopsAsParticipant={landingPageData['workshops_as_participant']}
+        hasEnrolledInWorkshop={landingPageData['has_enrolled_in_workshop']}
         workshopsAsFacilitator={landingPageData['workshops_as_facilitator']}
         workshopsAsOrganizer={landingPageData['workshops_as_organizer']}
         workshopsAsRegionalPartner={
