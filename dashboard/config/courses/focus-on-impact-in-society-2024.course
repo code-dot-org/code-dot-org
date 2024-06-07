@@ -1,0 +1,24 @@
+{
+  "name": "focus-on-impact-in-society-2024",
+  "script_names": [
+    "focus-on-impact-in-society1-2024",
+    "focus-on-impact-in-society2-2024",
+    "focus-on-impact-in-society3-2024",
+    "focus-on-impact-in-society4-2024",
+    "focus-on-impact-in-society-post-survey-2024"
+  ],
+  "published_state": "preview",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "focus-on-impact-in-society",
+    "version_year": "2024"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

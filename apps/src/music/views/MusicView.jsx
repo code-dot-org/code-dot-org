@@ -28,7 +28,6 @@ import {
   getCurrentlyPlayingBlockIds,
   setSoundLoadingProgress,
   setUndoStatus,
-  showCallout,
   clearCallout,
   setSelectedTriggerId,
   clearSelectedTriggerId,
@@ -104,7 +103,6 @@ class UnconnectedMusicView extends React.Component {
     isReadOnlyWorkspace: PropTypes.bool,
     updateLoadProgress: PropTypes.func,
     setUndoStatus: PropTypes.func,
-    showCallout: PropTypes.func,
     clearCallout: PropTypes.func,
     isPlayView: PropTypes.bool,
   };
@@ -327,6 +325,23 @@ class UnconnectedMusicView extends React.Component {
         (AppConfig.getValue('show-sound-filters') === 'true' ||
           levelData?.showSoundFilters)
     );
+
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .incrementCounter('LevelLoad', [
+        {
+          name: 'Type',
+          value: this.props.isProjectLevel ? 'Project' : 'Level',
+        },
+        {
+          name: 'Mode',
+          value: this.props.isPlayView
+            ? 'Share'
+            : this.props.isReadOnlyWorkspace
+            ? 'View'
+            : 'Edit',
+        },
+      ]);
   }
 
   // Load the library and initialize the music player, if not already loaded.
@@ -753,7 +768,6 @@ const MusicView = connect(
     setPageError: pageError => dispatch(setPageError(pageError)),
     updateLoadProgress: value => dispatch(setSoundLoadingProgress(value)),
     setUndoStatus: value => dispatch(setUndoStatus(value)),
-    showCallout: id => dispatch(showCallout(id)),
     clearCallout: id => dispatch(clearCallout()),
   })
 )(UnconnectedMusicView);

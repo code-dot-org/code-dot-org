@@ -1,6 +1,6 @@
 import React, {useState, useCallback} from 'react';
 import style from './ai-tutor.module.scss';
-import Button from '@cdo/apps/templates/Button';
+import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {askAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
@@ -100,6 +100,14 @@ const AITutorFooter: React.FC<AITutorFooterProps> = ({renderAITutor}) => {
 
   const disabled = !renderAITutor || isWaitingForChatResponse;
 
+  const userMessageIsEmpty = userMessage.trim() === '';
+
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' && userMessage.trim() !== '') {
+      handleSubmit(ActionType.GENERAL_CHAT);
+    }
+  };
+
   return (
     <div className={style.aiTutorFooter}>
       <div className={style.aiTutorFooterInputArea}>
@@ -110,12 +118,14 @@ const AITutorFooter: React.FC<AITutorFooterProps> = ({renderAITutor}) => {
           onChange={e => setUserMessage(e.target.value)}
           value={userMessage}
           disabled={disabled}
+          onKeyDown={e => handleKeyPress(e)}
         />
         <Button
           className={style.submitButton}
-          color={Button.ButtonColor.brandSecondaryDefault}
-          disabled={disabled}
-          icon="arrow-up"
+          color={buttonColors.purple}
+          disabled={disabled || userMessageIsEmpty}
+          iconRight={{iconName: 'arrow-up', iconStyle: 'solid'}}
+          size="s"
           key="submit"
           onClick={() => handleSubmit(ActionType.GENERAL_CHAT)}
           text="Submit"
@@ -125,7 +135,9 @@ const AITutorFooter: React.FC<AITutorFooterProps> = ({renderAITutor}) => {
         {showCompilationOption && (
           <Button
             className={style.quickActionButton}
-            color={Button.ButtonColor.teal}
+            color={buttonColors.gray}
+            type={'secondary'}
+            size="s"
             disabled={disabled}
             key="compilation"
             text={QuickActions.compilation}
@@ -135,7 +147,9 @@ const AITutorFooter: React.FC<AITutorFooterProps> = ({renderAITutor}) => {
         {showValidationOption && (
           <Button
             className={style.quickActionButton}
-            color={Button.ButtonColor.teal}
+            color={buttonColors.gray}
+            type={'secondary'}
+            size="s"
             disabled={disabled}
             key="validation"
             text={QuickActions.validation}

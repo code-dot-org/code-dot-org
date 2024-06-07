@@ -63,6 +63,7 @@ const DEFAULT_PROPS = {
   levelProgressByStudent: LEVEL_PROGRESS,
   sortedStudents: STUDENTS,
   addExpandedLesson: () => {},
+  expandedMetadataStudentIds: [],
 };
 
 const setUp = overrideProps => {

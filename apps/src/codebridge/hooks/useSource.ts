@@ -1,8 +1,11 @@
-import {useMemo, useEffect, useCallback} from 'react';
+import {useMemo, useEffect, useCallback, useRef} from 'react';
 
 import header from '@cdo/apps/code-studio/header';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
-import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import {
+  getAppOptionsEditBlocks,
+  getAppOptionsEditingExemplar,
+} from '@cdo/apps/lab2/projects/utils';
 import {setAndSaveProjectSource} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -18,12 +21,14 @@ export const useSource = (defaultSources: ProjectSources) => {
     state => state.lab2Project.projectSource
   );
   const source = projectSource?.source as MultiFileSource;
-  const channelId = useAppSelector(state => state.lab.channel?.id);
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+  const isEditingExemplarMode = getAppOptionsEditingExemplar();
   const initialSources = useInitialSources(defaultSources);
   const levelStartSource = useAppSelector(
     state => state.lab.levelProperties?.source
   );
+  const previousLevelIdRef = useRef<number | null>(null);
+  const levelId = useAppSelector(state => state.lab.levelProperties?.id);
 
   const setSource = useMemo(
     () => (newSource: MultiFileSource) => {
@@ -41,15 +46,26 @@ export const useSource = (defaultSources: ProjectSources) => {
       header.showLevelBuilderSaveButton(() => {
         return {source};
       });
+    } else if (isEditingExemplarMode) {
+      header.showLevelBuilderSaveButton(
+        () => ({exemplar_sources: source}),
+        'Levelbuilder: Edit Exemplar',
+        `/levels/${levelId}/update_exemplar_code`
+      );
     }
-  }, [isStartMode, source]);
+  }, [isStartMode, isEditingExemplarMode, levelId, source]);
 
   useEffect(() => {
-    // We reset the project when the channelId changes, as this means we are on a new level.
-    if (initialSources) {
-      dispatch(setAndSaveProjectSource(initialSources));
+    if (levelId && previousLevelIdRef.current !== levelId) {
+      // We reset the project when the levelId changes, as this means we are on a new level.
+      if (initialSources) {
+        dispatch(setAndSaveProjectSource(initialSources));
+      }
+      if (levelId) {
+        previousLevelIdRef.current = levelId;
+      }
     }
-  }, [channelId, initialSources, dispatch]);
+  }, [initialSources, dispatch, levelId]);
 
   return {source, setSource, resetToStartSource};
 };

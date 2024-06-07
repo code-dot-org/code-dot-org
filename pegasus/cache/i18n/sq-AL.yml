@@ -108,10 +108,10 @@ sq-AL:
   cargobot_beyond_platformtext: iPad
   cargobot_beyond_shortdescription: Programo një krah roboti në iPad-in tënd
   carousel_heading_apps_games: Bëj aplikacionet ose lojrat e tua
-  carousel_heading_beginners: Tutoriale për Fillestarët
+  carousel_heading_beginners: Tutoriale për klasat K-8
   carousel_heading_beyond_devices: Aplikacione për telefona dhe tableta
   carousel_heading_beyond_javascript: Mësoni JavaScript
-  carousel_heading_beyond_languages: Tutoriale në gjuhë të tjera programimi
+  carousel_heading_beyond_languages: Mësoni gjuhë të tjera programimi
   carousel_heading_devices: Aplikacione me tutoriale për telefona dhe tableta
   carousel_heading_domestic: Tutorialet vetëm në Anglisht
   carousel_heading_ide: Platformat popullore ndërmjet mësuesëve
@@ -119,7 +119,7 @@ sq-AL:
   carousel_heading_javascript: Tutorialet që mësojnë JavaScript
   carousel_heading_languages: Tutoriale në gjuhë të tjera programimi
   carousel_heading_robots: Mëso të programosh me robota
-  carousel_heading_university: Kurse online të universitetit
+  carousel_heading_university: Kurset online dhe shkollat
   carousel_heading_unplugged: Nuk ke pajisje ose internet? Provo shkencën kompjuterike
     'unplugged'
   carousel_heading_webpages: Mëso të bësh faqe interneti
@@ -286,7 +286,7 @@ sq-AL:
     rreth programimit.
   codesters_gradelevel: Moshat 12-14
   codesters_platformtext: Browserat modern të webit
-  compatibility_hide_this_warning: Mbaj të fshehtë këtë paralajmërim
+  compatibility_hide_this_warning: Fshihni këtë paralajmërim
   compatibility_unsupported_browser: Shfletuesi juaj nuk suportohet. Ju lutem përmirësoni
     versionin e shfletuesit në <a href='%{supported_browsers_url}', target='_blank'>
     një nga shfletuesit që suportohen</a>. Ju mund të provoni ta shikoni faqen, por
@@ -627,6 +627,7 @@ sq-AL:
     lloje logimi, <b>figura, fjala ose email-i</b>, do të duash të zgjedhësh për një
     seksion.
   dashboard_sections_name: 'Emri i sesionit:'
+  dashboard_sections_new_google_section: Seksioni i importit nga Google Classroom
   dashboard_sections_new_section: Seksion i ri
   dashboard_sections_password_account_creation: Fjalëkalimi i krijuar nga studentet
   dashboard_sections_password_question: Çfarë përdorin studentët si një "fjalëkalim"?
@@ -649,7 +650,7 @@ sq-AL:
   dashboard_sections_switch_section: 'Ndrysho seksionin:'
   dashboard_sections_table_code: Pjesë Kodi
   dashboard_sections_table_course: Kurs
-  dashboard_sections_table_grade: Notë
+  dashboard_sections_table_grade: Klasa
   dashboard_sections_table_pairing_allowed: Programimi në ekip
   dashboard_sections_table_secret: Mënyra e logimit
   dashboard_sections_table_section: Pjesë
@@ -871,6 +872,7 @@ sq-AL:
   hoc2014_whatishoc: Çfarë është Ora e Kodimit?
   hoc2018_creativity_create: Krijo
   hoc2018_creativity_hoc_coming: Ora e kodimit po vjen…
+  hoc2018_creativity_what_will_you_create: Çfarë do të krijoni?
   hoc2018_dance_amazon_about_future_engineer_button: Mëso më shumë
   hoc2018_dance_keep_on_dancing_box_title: Vazhdoni të kërceni
   hoc2018_dance_party_box_title: Festë vallëzimi
@@ -891,11 +893,13 @@ sq-AL:
   hoc2018_mc_educators_box2_button: Shkarko
   hoc2018_mc_homepage_join_us: Na u bashko!
   hoc2018_mc_homepage_try_it: Provoje
+  hoc2018_mc_homepage_what_create: Çfarë do të krijoni?
   hoc2018_mc_page_title: Tutorialet e Orës së Kodimit Minecraft
   hoc2018_mc_start: Fillo
   hoc2018_mc_video_1min: 1 minutë
   hoc2018_mc_video_2min: 2 minutë
   hoc2018_mc_video_5min: 5 minutë
+  hoc2018_mc_video_title_cs_is_everything: Shkenca kompjuterike po ndryshon gjithçka
   hoc2018_mc_video_title_inspire_girl: Frymëzo një vajzë
   hoc2018_mc_video_title_sports: Shtyni veten. Çdokush mund të mësojë.
   hoc2018_mc_videos_more: Më shumë <a href='%{inspiring_videos_playlist}'>video inspiruese</a>duke
@@ -966,7 +970,7 @@ sq-AL:
     &ldquo; Fëmijët tanë &mdash; duke përfshirë edhe vajzat tona &mdash;
     kanë nevojë t'ju jepet mundësia të mësojnë shkencat kompjuterike. &rdquo;
     Sheryl, COO në Facebook
-  homepage_hero_text_stat_loc: "#loc rreshtat e kodimit të përgatitura nga studentët"
+  homepage_hero_text_stat_loc: "#loc rreshtat e kodimit të përgatitura nga nxënësit"
   homepage_hero_text_stat_served: 'Ora e Kodimit: #served dorëzuar'
   homepage_hero_text_stat_students: "#student_count llogari studentësh në Code Studio"
   homepage_hero_text_student1: |-
@@ -1027,6 +1031,7 @@ sq-AL:
   homepage_slot_text_title_hoc: Ora e Kodimit
   homepage_slot_text_title_students: Studentët
   homepage_solot_text_link_volunteer: Vullnetarizo për Orën e Kodimit
+  homepage_stats_teachers: mësimdhënësit përdorin Code.org
   hopscotch_beyond_gradelevel: Shkolla tetë vjeçare +
   hopscotch_beyond_longdescription: Tutorial për studentët në iPad duke përdorur gjuhën
     e programimit Hopscotch. Studentët do të ndërtojnë lojëra dhe aplikacione për
@@ -1217,25 +1222,24 @@ sq-AL:
   lynda_beyond_shortdescription: Kurse programimi online me shumicë
   make_app: Bëj një aplikacion
   makeschool_beyond_gradelevel: Shkolla e mesme
-  makeschool_beyond_longdescription: A di pak ObjectiveC? Mëso të bësh një lojë për
-    iPhone në një orë! Ne do t'ju udhëheqim ju drejt procesit, te kodimit, të testimit,
-    dhe për të luajtur lojën tënde në shfletues dhe më pas shpërndaje atë në Facebook
-    për ta provuar shokët e tu! Nuk kërkohet eksperiencë e mëparshme në zhvillimin
-    e kodit të iPhone. Ti duhet të kesh njohuri se çfarë janë variablat, metodat dhe
-    objektet.
+  makeschool_beyond_longdescription: Dini ndonjë objektiveC? Mësoni të bëni një lojë
+    iPhone brenda një ore! Ne do t'ju udhëzojmë përmes procesit, për të koduar, testuar
+    dhe luajtur lojën tuaj tërësisht në shfletues dhe pastaj ta ndajmë atë në Facebook
+    që miqtë të provojnë! Nuk kërkohet asnjë përvojë paraprake e zhvillimit të iPhone.
+    Ju duhet të kuptoni se cilat janë variablat, metodat dhe objektet.
   makeschool_beyond_name: Ndërto një lojë për iPhone në shefletuesin tënd!
   makeschool_beyond_platformtext: Shfletuesit modern të web-it
   makeschool_beyond_shortdescription: Mëso të bësh një lojë për iPhone në një orë
   makeschool_gradelevel: Shkolla e mesme
-  makeschool_longdescription: Mëso të kodosh duke bërë një lojë iPhone duke përdorur
-    një gjuhë programimit të quajtur Swift! Krijo një lojë Pok&eacute;moni dhe shkruaj
-    kod për t'i mësuar përbindëshave të tu lëvizje të reja. Ti do të mësosh si të
-    përdorësh variabla, metoda dhe objekte për të ndihmuar përbindëshin tënd që të
-    fitoj!
+  makeschool_longdescription: Mësoni të kodoni duke bërë një lojë në iPhone duke përdorur
+    një gjuhë programimi krejt të re dhe miqësore për fillestarët të quajtur Swift!
+    Krijoni një lojë veprimi të frymëzuar nga Pok&eacute;mon dhe shkruani kod për
+    të mësuar përbindësit tuaj lëvizje të reja. Ju do të mësoni se si të përdorni
+    variablat, metodat dhe objektet për të ndihmuar përbindësin tuaj të fitojë!
   makeschool_name: Ndërto një lojë për iPhone në shefletuesin tënd!
   makeschool_platformtext: Shfletuesit modern të web-it
-  makeschool_shortdescription: Bëj një lojë për iPhone! Mëso të shkruash kod që t'i
-    mësosh monstrës tuaj lëvizjet e rea!
+  makeschool_shortdescription: Bëni një lojë në iPhone! Mësoni duke shkruar kod për
+    të mësuar përbindësin tuaj lëvizje të reja!
   mc_gradelevel: Moshat 4-104
   mc_longdescription: Përdor blloqe të kodimit t'i dërgosh Steve ose Alex në një aventurë
     nëpër këtë botë Minecraft.
@@ -1492,6 +1496,9 @@ sq-AL:
   studiobar_title_nolink: Eksploro Code Studio
   submit: Dorëzo
   support_url: http://support.code.org/
+  syncing_students_instructions: 'Nëse seksioni juaj Code.org është i vjetëruar ndonjëherë
+    me listën tuaj të nxënësve në Google Classroom, klikoni në butonin “Sinkronizoni
+    nxënësit nga Google Classroom” në skedën “Menaxho nxënëst”:'
   teacherled_gradelevel: Moshat 5+
   teacherled_platformtext: Browserat e kohës, smartphones, tableta
   teachers_notes: Shënimet e Mësuesit
@@ -1585,8 +1592,8 @@ sq-AL:
   third_party_gradelevel_5to12: Klasat 5-12
   third_party_gradelevel_6plus: Klasat 6+
   third_party_gradelevel_8plus: Klasat 8+
-  third_party_gradelevel_kto2: Klasat ParaShk-2
-  third_party_gradelevel_kto8: Klasat ParaShk-8
+  third_party_gradelevel_kto2: Klasat K-2
+  third_party_gradelevel_kto8: Klasat K-8
   third_party_khan_btn_forum: Forumi CS Akademia Khan
   third_party_khan_btn_learn: Mëso CS me Akademin Khan
   third_party_khan_desc: |-
@@ -1726,6 +1733,7 @@ sq-AL:
   user_header_artist: 'Artisti '
   user_header_create: 'Krijo '
   user_header_create_account: Krijo llogari
+  user_header_create_account_low_cap: Krijo llogari
   user_header_dance: Festë vallëzimi
   user_header_flappy: Flappy
   user_header_gamelab: Game Lab
@@ -1744,6 +1752,7 @@ sq-AL:
   video_2min: 2 minutë
   video_5min: 5 minutë
   video_title_chris_bosh: Chris Bosh në Shkencat Kompjuterike
+  video_title_cs_is_everything: Shkenca kompjuterike po ndryshon gjithçka
   video_title_draymond_green: Ora e Kodimit me Draymond Green
   video_title_inspire_girl: Frymëzo një vajzë
   video_title_marco_belinelli: Ora e Koditit me Marco Belinelli

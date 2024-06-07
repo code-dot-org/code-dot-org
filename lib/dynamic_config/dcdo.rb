@@ -50,7 +50,11 @@ class DCDOBase < DynamicConfigBase
       'progress-table-v2-metadata-enabled': DCDO.get('progress-table-v2-metadata-enabled', false),
       'music-lab-launch-2024': DCDO.get('music-lab-launch-2024', false),
       'music-lab-samples-report': DCDO.get('music-lab-samples-report', true),
+      'disable-try-new-progress-view-modal': DCDO.get('disable-try-new-progress-view-modal', false),
       'music-lab-existing-projects-default-sounds': DCDO.get('music-lab-existing-projects-default-sounds', true),
+      'student-email-post-enabled': DCDO.get('student-email-post-enabled', false),
+      'progress-v2-metadata-enabled': DCDO.get('progress-v2-metadata-enabled', false),
+      'show-updated-lms-content': DCDO.get('show-updated-lms-content', false),
     }
   end
 end

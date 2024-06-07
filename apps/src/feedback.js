@@ -1443,14 +1443,6 @@ FeedbackUtils.prototype.throwOnInvalidExampleBlocks = function (
   if (!resultBlock) {
     throw new Error('Invalid Result Block');
   }
-
-  if (resultBlock.hasUnfilledFunctionalInput()) {
-    throw new Error('Result has unfilled inputs');
-  }
-
-  if (callBlock.hasUnfilledFunctionalInput()) {
-    throw new Error('Call has unfilled inputs');
-  }
 };
 
 /**

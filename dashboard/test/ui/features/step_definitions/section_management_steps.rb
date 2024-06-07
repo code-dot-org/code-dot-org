@@ -103,7 +103,7 @@ And(/^I create a(n authorized)? teacher-associated( under-13)? student named "([
   section = JSON.parse(browser_request(url: '/dashboardapi/sections', method: 'POST', body: {login_type: 'email', participant_type: 'student'}))
   section_code = section['code']
   @section_url = "http://studio.code.org/join/#{section_code}"
-  create_user(name, url: "/join/#{section_code}", code: 200, age: under_13 ? '10' : '16')
+  create_user(name, url: "/join/#{section_code}", age: under_13 ? '10' : '16')
 end
 
 And(/^I save the student section url$/) do

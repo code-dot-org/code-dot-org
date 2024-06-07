@@ -14,7 +14,7 @@ right 'Conduct a discussion on why certain breeds may be detected less often and
 
 wrong 'Have students take notes on the confidence scores without further analysis or discussion.'
 
-right 'Assign a reading on the theoretical aspects of machine learning without any practical application.'
+wrong 'Assign a reading on the theoretical aspects of machine learning without any practical application.'
 
 
 

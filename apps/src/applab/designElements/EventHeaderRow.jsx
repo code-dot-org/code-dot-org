@@ -1,7 +1,10 @@
 import React from 'react';
-import color from '../../util/color';
-import * as rowStyle from './rowStyle';
+
 import applabMsg from '@cdo/applab/locale';
+
+import color from '../../util/color';
+
+import * as rowStyle from './rowStyle';
 
 export default class EventHeaderRow extends React.Component {
   render() {

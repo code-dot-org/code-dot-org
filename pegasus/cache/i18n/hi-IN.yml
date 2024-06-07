@@ -1623,6 +1623,7 @@ hi-IN:
   homepage_slot_text_link_k5: ग्रेड K-5 के लिए कोर्स
   homepage_slot_text_link_local: स्थानीय कक्षा ढूंढें
   homepage_slot_text_link_middle: माध्यमिक विद्यालय
+  homepage_slot_text_link_middle_and_high: मिडिल और हाई स्कूल
   homepage_slot_text_link_othercourses: अन्य ऑनलाइन कोर्स
   homepage_slot_text_link_pd: पेशेवर विकास
   homepage_slot_text_link_shop: टी-शर्टें, टोप आदि
@@ -2543,6 +2544,8 @@ hi-IN:
   user_header_applab: 'ऐप लैब '
   user_header_artist: 'कलाकार '
   user_header_create: 'बनाएं '
+  user_header_create_account: खाता बनाएं
+  user_header_create_account_low_cap: खाता बनाएँ
   user_header_dance: डांस पार्टी
   user_header_flappy: फ्लैपी
   user_header_gamelab: गेम लैब
@@ -2550,6 +2553,8 @@ hi-IN:
   user_header_logout: साइन आउट करें
   user_header_minecraft: माइनक्राफ्ट
   user_header_my_projects: मेरे प्रोजेक्ट
+  user_header_new_project: नया प्रोजेक्ट
+  user_header_new_project_low_cap: New project
   user_header_playlab: प्ले लैब
   user_header_settings: खाता सेटिंग्स
   user_header_signin: दाखिल करना

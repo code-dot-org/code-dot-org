@@ -122,8 +122,8 @@
   position: relative;
 
   .help_icon {
-    padding: 9px 0 16px 0;
-    font-size: 26px;
+    padding: 11px 0 16px 0;
+    font-size: 22px;
     color: $white;
     cursor: pointer;
     height: 20px;
@@ -151,7 +151,7 @@
     }
   }
 
-  @media(max-width: 970px) {
+  @media(max-width: 1023px) {
     &.hide-mobile {
       display: none;
     }
@@ -192,5 +192,9 @@
       height: 70px;
       padding-left: 10px;
     }
+  }
+
+  @media (max-width: 1023px) {
+    display: none !important;
   }
 }

@@ -351,7 +351,7 @@ class ApplicationController < ActionController::Base
       users_set_student_information_path,
     ].include?(request.path)
 
-    redirect_to lockout_path unless Policies::ChildAccount.compliant?(current_user) || Policies::ChildAccount.user_predates_policy?(current_user)
+    redirect_to lockout_path if Policies::ChildAccount.locked_out?(current_user)
   end
 
   private def pairing_still_enabled

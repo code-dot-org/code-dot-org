@@ -235,7 +235,19 @@
           "name": "csb_how_likely_attend_inperson",
           "title": "After engaging in this self-paced professional learning module, how likely are you to attend a facilitator-led professional development workshop for teaching Code.org's K-5 curriculum, if one were offered in your region? ",
           "minRateDescription": "Not likely at all",
-          "maxRateDescription": "Very likely"
+          "maxRateDescription": "Extremely likely",
+          "visible": false,
+          "natalia_comment": "NOTE: removed by adding visible statement as this question is no longer relevant, we can track attendance to facilitator-led pd instead of asking about interest- 05/28/2024"
+        },
+        {
+          "type": "rating",
+          "name": "nps_self_paced_pd",
+          "title": "How likely are you to recommend this self-paced professional learning experience to a friend or colleague?",
+          "rateCount": 11,
+          "rateMin": 0,
+          "rateMax": 10,
+          "minRateDescription": "Not likely at all",
+          "maxRateDescription": "Extremely likely"
         },
         {
           "type": "comment",

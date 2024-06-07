@@ -281,7 +281,11 @@ class DatablockStorageTable < ApplicationRecord
     end
 
     # Second rename the column in the table definition
-    self.columns = columns.map {|column| column == old_column_name ? new_column_name : column}
+    if columns.include? old_column_name
+      self.columns = columns.map {|column| column == old_column_name ? new_column_name : column}
+    else
+      self.columns << new_column_name
+    end
   end
 
   # Convert all values in a column to a new type
