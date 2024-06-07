@@ -3283,14 +3283,6 @@ Studio.checkForBlocklyPreExecutionFailure = function () {
     Studio.preExecutionFailure = true;
     return true;
   }
-
-  var outcome = Studio.checkExamples_();
-  if (outcome.result !== undefined) {
-    Object.assign(Studio, outcome);
-    Studio.preExecutionFailure = true;
-    return true;
-  }
-
   return false;
 };
 
