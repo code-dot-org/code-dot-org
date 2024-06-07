@@ -39,7 +39,7 @@ GIT_BRANCH = GitUtils.current_branch
 COMMIT_HASH = RakeUtils.git_revision
 LOCAL_LOG_DIRECTORY = File.join(UI_TEST_DIR, 'log')
 S3_LOGS_BUCKET = 'cucumber-logs'
-S3_LOGS_PREFIX = ENV['CI'] ? "drone/#{ENV['DRONE_BUILD_NUM']}" : "#{Socket.gethostname}/#{GIT_BRANCH}"
+S3_LOGS_PREFIX = ENV['CI'] ? "circle/#{ENV['CIRCLE_BUILD_NUM']}" : "#{Socket.gethostname}/#{GIT_BRANCH}"
 LOG_UPLOADER = AWS::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX, make_public: true)
 
 #
@@ -175,8 +175,8 @@ def parse_options
       opts.on("-m", "--maximize", "Maximize local webdriver window on startup") do
         options.maximize = true
       end
-      opts.on("--drone", "Whether is DroneCI (skip failing Drone tests)") do
-        options.is_drone = true
+      opts.on("--drone", "Whether is Drone (skip failing Drone tests)") do
+        options.is_ci = true
       end
       opts.on("--html", "Use html reporter") do
         options.html = true
@@ -543,7 +543,7 @@ end
 
 def parallel_config(parallel_limit)
   {
-    # Run in parallel threads on Drone(less memory), processes on main test machine (better CPU utilization)
+    # Run in parallel threads on Drone (less memory), processes on main test machine (better CPU utilization)
     in_threads: ENV['CI'] ? parallel_limit : nil,
     in_processes: ENV['CI'] ? nil : parallel_limit,
 
@@ -673,12 +673,12 @@ def cucumber_arguments_for_browser(browser, options)
   arguments += skip_tag('@only_mobile') unless browser['mobile']
   arguments += skip_tag('@no_phone') if browser['name'] == 'iPhone'
   arguments += skip_tag('@only_phone') unless browser['name'] == 'iPhone'
-  arguments += skip_tag('@no_ci') if options.is_drone
+  arguments += skip_tag('@no_ci') if options.is_ci
 
-  # always run locally or during drone runs.
+  # always run locally or during Drone runs.
   # Note that you may end up running in more than one browser if you use flags
-  # like [test safari] or [test firefox] during a drone run.
-  arguments += skip_tag('@only_one_browser') if !options.local && !options.is_drone
+  # like [test safari] or [test firefox] during a Drone run.
+  arguments += skip_tag('@only_one_browser') if !options.local && !options.is_ci
 
   arguments += skip_tag('@chrome') if browser['browserName'] != 'chrome' && !options.local
   arguments += skip_tag('@no_chrome') if browser['browserName'] == 'chrome'
@@ -738,7 +738,7 @@ def run_feature(browser, feature, options)
   run_environment['MAXIMIZE_LOCAL'] = options.maximize ? "true" : "false"
   run_environment['MOBILE'] = browser['mobile'] ? "true" : "false"
   run_environment['TEST_RUN_NAME'] = test_run_string
-  run_environment['IS_CI'] = options.is_ci ? "true" : "false"
+  run_environment['IS_CI'] = options.is_circle ? "true" : "false"
   run_environment['PRIORITY'] = options.priority
 
   # disable some stuff to make require_rails_env run faster within cucumber.
