@@ -183,10 +183,6 @@ class GamelabJr < Gamelab
     false
   end
 
-  def uses_google_blockly?
-    true
-  end
-
   def age_13_required?
     false
   end

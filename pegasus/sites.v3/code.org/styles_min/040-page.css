@@ -611,6 +611,12 @@ nav.main #hamburger #hamburger-icon {
   margin-inline-start: 6px;
 }
 
+@media (max-width: 1023px) {
+  nav.main .create_menu {
+    display: none !important;
+  }
+}
+
 /* Show the hamburger on small desktop
   with appropriate links hidden */
 @media (min-width: 1024px) and (max-width: 1268px) {

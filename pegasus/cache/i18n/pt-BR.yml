@@ -2647,6 +2647,7 @@ pt-BR:
   user_header_artist: 'Artista '
   user_header_create: 'Criar '
   user_header_create_account: Criar Conta
+  user_header_create_account_low_cap: Criar conta
   user_header_dance: Festa dançante
   user_header_flappy: Flappy bird
   user_header_gamelab: Laboratório de Jogos
@@ -2654,6 +2655,8 @@ pt-BR:
   user_header_logout: Sair
   user_header_minecraft: Minecraft
   user_header_my_projects: Meus projetos
+  user_header_new_project: Novo Projeto
+  user_header_new_project_low_cap: Novo projeto
   user_header_playlab: Laboratório
   user_header_settings: Configurações da conta
   user_header_signin: Entrar
