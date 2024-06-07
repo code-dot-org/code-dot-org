@@ -38,26 +38,12 @@ class MusiclabController < ApplicationController
 
     view_options(no_header: true, no_footer: true, full_width: true, no_padding_container: true)
 
-    channel_ids_from_params = params[:channels].nil? ? [] : params[:channels].split(',')
-    channel_ids_from_featured_projects = CHANNELS
-    if get_channel_ids_from_featured_projects_gallery?
-      channel_ids_from_featured_projects = ProjectsList.fetch_active_published_featured_projects('music')["music"].map {|project| project['channel']}
-    end
-    all_channel_ids = channel_ids_from_params.empty? ?
-      channel_ids_from_featured_projects :
-      channel_ids_from_params
-    selected_channel_ids = all_channel_ids.sample(NUM_MINI_PLAYER_PROJECTS)
+    selected_channel_ids = get_selected_channel_ids(params[:channels])
+    puts "Selected channel IDs: #{selected_channel_ids}"
 
-    project_ids = selected_channel_ids.map do |channel_id|
-      _, project_id = storage_decrypt_channel_id(channel_id)
-      project_id
-    end
-
-    @projects = Project.
-      find(project_ids).
-      map {|project| {name: JSON.parse(project.value)["name"], id: JSON.parse(project.value)["id"], labConfig: JSON.parse(project.value)["labConfig"]}}.
-      compact_blank.
-      to_json
+    @projects = get_musiclab_projects(selected_channel_ids)
+    puts "@projects #{@projects}"
+    return @projects
   end
 
   # TODO: This is a temporary addition to serve the analytics API key
@@ -74,5 +60,37 @@ class MusiclabController < ApplicationController
 
   private def get_channel_ids_from_featured_projects_gallery?
     DCDO.get('get_channel_ids_from_featured_projects_gallery', true)
+  end
+
+  private def get_selected_channel_ids(channels_param = nil)
+    channel_ids_from_params = channels_param.nil? ? [] : channels_param.split(',')
+    puts "channel_ids_from_params #{channel_ids_from_params}"
+    channel_ids_from_featured_projects = CHANNELS
+    puts "music projects: #{ProjectsList.fetch_active_published_featured_projects('music')}"
+    if get_channel_ids_from_featured_projects_gallery?
+      featured_projects = ProjectsList.fetch_active_published_featured_projects('music')["music"]
+      puts "featured projects: #{featured_projects}"
+      if featured_projects
+        channel_ids_from_featured_projects = featured_projects.map {|project| project['channel']}
+      end      
+    end
+    puts "channel_ids_from_params #{channel_ids_from_params}"
+    puts "channel_ids_from_params.empty? #{channel_ids_from_params.empty?}"
+    all_channel_ids = channel_ids_from_params.empty? ?
+      channel_ids_from_featured_projects :
+      channel_ids_from_params
+    all_channel_ids.sample(NUM_MINI_PLAYER_PROJECTS)
+  end
+
+  private def get_musiclab_projects(project_channel_ids)
+    project_ids = project_channel_ids.map do |channel_id|
+      _, project_id = storage_decrypt_channel_id(channel_id)
+      project_id
+    end
+    Project.
+      find(project_ids).
+      map {|project| {name: JSON.parse(project.value)["name"], id: JSON.parse(project.value)["id"], labConfig: JSON.parse(project.value)["labConfig"]}}.
+      compact_blank.
+      to_json
   end
 end
