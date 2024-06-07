@@ -14,6 +14,7 @@ import {
 } from '@codebridge/utils';
 import React, {useMemo} from 'react';
 
+import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {ProjectFileType} from '@cdo/apps/lab2/types';
@@ -73,7 +74,8 @@ const InnerFileBrowser = React.memo(
             onClick={() => setFileType(file.id, ProjectFileType.VALIDATION)}
             key={'make-validation'}
           >
-            <i className={`fa-solid fa-flask`} /> Make validation file
+            <i className={`fa-solid fa-flask`} />{' '}
+            {codebridgeI18n.makeValidation()}
           </span>
         );
       }
@@ -86,7 +88,7 @@ const InnerFileBrowser = React.memo(
             onClick={() => setFileType(file.id, ProjectFileType.STARTER)}
             key={'make-starter'}
           >
-            <i className={`fa-solid fa-eye`} /> Make starter file
+            <i className={`fa-solid fa-eye`} /> {codebridgeI18n.makeStarter()}
           </span>
         );
       }
@@ -100,7 +102,8 @@ const InnerFileBrowser = React.memo(
             onClick={() => setFileType(file.id, ProjectFileType.SUPPORT)}
             key={'make-support'}
           >
-            <i className={`fa-solid fa-eye-slash`} /> Make support file
+            <i className={`fa-solid fa-eye-slash`} />{' '}
+            {codebridgeI18n.makeSupport()}
           </span>
         );
       }
@@ -138,16 +141,20 @@ const InnerFileBrowser = React.memo(
                   >
                     <span className={moduleStyles['button-bar']}>
                       <span onClick={() => renameFolderPrompt(f.id)}>
-                        <i className="fa-solid fa-pencil" /> Rename folder
+                        <i className="fa-solid fa-pencil" />{' '}
+                        {codebridgeI18n.renameFolder()}
                       </span>
                       <span onClick={() => newFolderPrompt(f.id)}>
-                        <i className="fa-solid fa-folder-plus" /> Add sub-folder
+                        <i className="fa-solid fa-folder-plus" />{' '}
+                        {codebridgeI18n.addSubFolder()}
                       </span>
                       <span onClick={() => newFilePrompt(f.id)}>
-                        <i className="fa-solid fa-plus" /> Add file
+                        <i className="fa-solid fa-plus" />{' '}
+                        {codebridgeI18n.addFile()}
                       </span>
                       <span onClick={() => deleteFolder(f.id)}>
-                        <i className="fa-solid fa-trash" /> Delete folder
+                        <i className="fa-solid fa-trash" />{' '}
+                        {codebridgeI18n.deleteFolder()}
                       </span>
                     </span>
                   </PopUpButton>
@@ -186,14 +193,16 @@ const InnerFileBrowser = React.memo(
                 >
                   <span className={moduleStyles['button-bar']}>
                     <span onClick={() => moveFilePrompt(f.id)}>
-                      <i className="fa-solid fa-arrow-right" />
-                      Move file
+                      <i className="fa-solid fa-arrow-right" />{' '}
+                      {codebridgeI18n.moveFile()}
                     </span>
                     <span onClick={() => renameFilePrompt(f.id)}>
-                      <i className="fa-solid fa-pencil" /> Rename file
+                      <i className="fa-solid fa-pencil" />{' '}
+                      {codebridgeI18n.renameFile()}
                     </span>
                     <span onClick={() => deleteFile(f.id)}>
-                      <i className="fa-solid fa-trash" /> Delete file
+                      <i className="fa-solid fa-trash" />{' '}
+                      {codebridgeI18n.deleteFile()}
                     </span>
                     {isStartMode && startModeFileDropdownOptions(f)}
                   </span>
@@ -223,7 +232,7 @@ export const FileBrowser = React.memo(() => {
       (parentId = DEFAULT_FOLDER_ID) => {
         const folderId = getNextFolderId(Object.values(project.folders));
 
-        const folderName = window.prompt('Please name your new folder');
+        const folderName = window.prompt(codebridgeI18n.newFolderPrompt());
         if (!folderName) {
           return;
         }
@@ -232,7 +241,7 @@ export const FileBrowser = React.memo(() => {
           f => f.name === folderName && f.parentId === parentId
         );
         if (existingFolder) {
-          alert('Folder already exists');
+          alert(codebridgeI18n.folderExistsError());
           return;
         }
 
@@ -245,7 +254,7 @@ export const FileBrowser = React.memo(() => {
     () =>
       (folderId = DEFAULT_FOLDER_ID) => {
         const fileName = window
-          .prompt('Please name your new file')
+          .prompt(codebridgeI18n.newFilePrompt())
           ?.replace(/[^\w.]+/g, '');
         if (!fileName) {
           return;
@@ -258,7 +267,7 @@ export const FileBrowser = React.memo(() => {
         /* eslint-disable-next-line */
         const [_, extension] = fileName.split('.');
         if (!extension) {
-          window.alert('Files must have extensions');
+          window.alert(codebridgeI18n.noFileExtensionError());
           return;
         }
 
@@ -277,7 +286,7 @@ export const FileBrowser = React.memo(() => {
       const file = project.files[fileId];
 
       const destinationFolder =
-        window.prompt('Please enter your destination folder') ?? '';
+        window.prompt(codebridgeI18n.moveFilePrompt()) ?? '';
 
       try {
         const folderId = findFolder(destinationFolder.split('/'), {
@@ -300,7 +309,7 @@ export const FileBrowser = React.memo(() => {
   const renameFilePrompt: FilesComponentProps['renameFilePrompt'] = useMemo(
     () => fileId => {
       const file = project.files[fileId];
-      const newName = window.prompt('Rename file', file.name);
+      const newName = window.prompt(codebridgeI18n.renameFile(), file.name);
       if (newName === null || newName === file.name) {
         return;
       }
@@ -326,12 +335,12 @@ export const FileBrowser = React.memo(() => {
       f => f.name === fileName && f.folderId === folderId
     );
     if (existingFile) {
-      message = `Filename ${fileName} is already in use in this folder. Please choose a different name.`;
+      message = codebridgeI18n.duplicateFileError({fileName});
       if (
         existingFile.type === ProjectFileType.SUPPORT ||
         existingFile.type === ProjectFileType.VALIDATION
       ) {
-        message = `Filename ${fileName} is already in use in this folder in the level's support code. Please choose a different name.`;
+        message = codebridgeI18n.duplicateSupportFileError({fileName});
       }
     }
     if (message) {
@@ -345,7 +354,7 @@ export const FileBrowser = React.memo(() => {
   const renameFolderPrompt: FilesComponentProps['renameFolderPrompt'] = useMemo(
     () => folderId => {
       const folder = project.folders[folderId];
-      const newName = window.prompt('Rename folder', folder.name);
+      const newName = window.prompt(codebridgeI18n.renameFolder(), folder.name);
       if (newName === null || newName === folder.name) {
         return;
       }
@@ -354,7 +363,7 @@ export const FileBrowser = React.memo(() => {
         f => f.name === newName && f.parentId === folder.parentId
       );
       if (existingFolder) {
-        alert('Folder already exists');
+        alert(codebridgeI18n.folderExistsError());
         return;
       }
 
