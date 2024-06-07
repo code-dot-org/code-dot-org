@@ -40,7 +40,7 @@ class MusiclabController < ApplicationController
 
     selected_channel_ids = get_selected_channel_ids(params[:channels])
 
-    @projects = get_musiclab_projects(selected_channel_ids)
+    @projects = get_project_details(selected_channel_ids)
   end
 
   # TODO: This is a temporary addition to serve the analytics API key
@@ -70,7 +70,7 @@ class MusiclabController < ApplicationController
     all_channel_ids.sample(NUM_MINI_PLAYER_PROJECTS)
   end
 
-  private def get_musiclab_projects(project_channel_ids)
+  private def get_project_details(project_channel_ids)
     project_ids = project_channel_ids.map do |channel_id|
       _, project_id = storage_decrypt_channel_id(channel_id)
       project_id
