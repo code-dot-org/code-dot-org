@@ -11,7 +11,7 @@ $(document).ready(function () {
   if (getScriptData('isSignedOut')) {
     analyticsReporter.sendEvent(
       EVENTS.SIGNED_OUT_USER_SEES_HEADER,
-      {pageUrl: pageUrl},
+      {pageUrl: pageUrl || 'studio page'},
       PLATFORMS.STATSIG
     );
   }
