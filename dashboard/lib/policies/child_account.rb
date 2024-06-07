@@ -53,7 +53,7 @@ class Policies::ChildAccount
   # state missing
   # We use Colorado as it is the only start date we have for now
   def self.user_predates_state_collection?(user)
-    user.created_at < state_policies['CO'][:start_date]
+    user.created_at < state_policy(user)[:start_date]
   end
 
   # 'cap-state-modal-rollout' should be a value in the range [0,100]
@@ -131,8 +131,8 @@ class Policies::ChildAccount
       'CO' => {
         name: 'CPA', # Colorado Privacy Act
         max_age: 12,
-        lockout_date: DateTime.parse(DCDO.get('cpa_schedule', {Cpa::ALL_USER_LOCKOUT => Cpa::ALL_USER_LOCKOUT_DATE.iso8601})[Cpa::ALL_USER_LOCKOUT]),
-        start_date: DateTime.parse(DCDO.get('cpa_schedule', {Cpa::NEW_USER_LOCKOUT => Cpa::NEW_USER_LOCKOUT_DATE.iso8601})[Cpa::NEW_USER_LOCKOUT])
+        lockout_date: DateTime.parse(DCDO.get('cpa_schedule', {})[Cpa::ALL_USER_LOCKOUT] || Cpa::ALL_USER_LOCKOUT_DATE.iso8601),
+        start_date: DateTime.parse(DCDO.get('cpa_schedule', {})[Cpa::NEW_USER_LOCKOUT] || Cpa::NEW_USER_LOCKOUT_DATE.iso8601),
       }
     }
   end
