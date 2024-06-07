@@ -467,5 +467,5 @@ Congrats.propTypes = {
   nextCourseScriptName: PropTypes.string,
   nextCourseTitle: PropTypes.string,
   nextCourseDesc: PropTypes.string,
-  currentDate: PropTypes.date,
+  currentDate: PropTypes.object,
 };
