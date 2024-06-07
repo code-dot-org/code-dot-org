@@ -24,6 +24,7 @@ function ExpandedProgressDataColumn({
   sortedStudents,
   removeExpandedLesson,
   sectionId,
+  expandedMetadataStudentIds,
 }) {
   const [expandedChoiceLevels, setExpandedChoiceLevels] = React.useState([]);
 
@@ -52,11 +53,12 @@ function ExpandedProgressDataColumn({
           studentLevelProgress={levelProgressByStudent[studentId][level.id]}
           key={studentId + '.' + lesson.id + '.' + level.id}
           lessonId={lesson.id}
+          metadataExpanded={expandedMetadataStudentIds.includes(studentId)}
           {...propOverrides}
         />
       );
     },
-    [levelProgressByStudent, lesson]
+    [levelProgressByStudent, lesson, expandedMetadataStudentIds]
   );
 
   const getExpandedChoiceLevel = React.useCallback(
@@ -136,6 +138,7 @@ ExpandedProgressDataColumn.propTypes = {
   lesson: PropTypes.object.isRequired,
   removeExpandedLesson: PropTypes.func.isRequired,
   sectionId: PropTypes.number,
+  expandedMetadataStudentIds: PropTypes.array,
 };
 
 export const UnconnectedExpandedProgressDataColumn = ExpandedProgressDataColumn;
@@ -145,4 +148,5 @@ export default connect(state => ({
     state.sectionProgress.studentLevelProgressByUnit[
       state.unitSelection.scriptId
     ],
+  expandedMetadataStudentIds: state.sectionProgress.expandedMetadataStudentIds,
 }))(ExpandedProgressDataColumn);
