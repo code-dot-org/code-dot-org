@@ -4,6 +4,8 @@ import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {connect} from 'react-redux';
 
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants.js';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import msg from '@cdo/locale';
 
 import blankImg from '../../static/common_images/1x1.gif';
@@ -19,12 +21,30 @@ export const FinishButton = () => (
   </button>
 );
 
+const sendAnalyticsEvent = () => {
+  const isSignedOut =
+    document
+      .querySelector('script[data-issignedout="true"]')
+      ?.getAttribute('data-issignedout') === 'true';
+
+  if (isSignedOut) {
+    analyticsReporter.sendEvent(
+      EVENTS.RUN_BUTTON_PRESSED_SIGNED_OUT,
+      {},
+      PLATFORMS.STATSIG
+    );
+  }
+};
+
 export const RunButton = Radium(props => (
   <button
     type="button"
     id="runButton"
     className={classNames(['launch', 'blocklyLaunch', props.hidden && 'hide'])}
     style={props.style}
+    onClick={() => {
+      sendAnalyticsEvent();
+    }}
   >
     <div>{props.runButtonText || msg.runProgram()}</div>
     <img src={blankImg} className="run26" alt="" />

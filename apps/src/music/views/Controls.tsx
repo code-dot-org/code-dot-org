@@ -11,6 +11,8 @@ import {
 import {useMusicSelector} from './types';
 import {commonI18n} from '@cdo/apps/types/locale';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants.js';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 
 const LoadingProgress: React.FunctionComponent = () => {
   const progressValue = useMusicSelector(
@@ -117,6 +119,22 @@ const Controls: React.FunctionComponent<ControlsProps> = ({
     state => state.music.soundLoadingProgress < 1
   );
 
+  // Sends a Statsig event with the Run button is pressed when a user is signed out
+  const sendAnalyticsEvent = (): void => {
+    const isSignedOut: boolean =
+      document
+        .querySelector('script[data-issignedout="true"]')
+        ?.getAttribute('data-issignedout') === 'true';
+
+    if (isSignedOut && !isPlaying) {
+      analyticsReporter.sendEvent(
+        EVENTS.RUN_BUTTON_PRESSED_SIGNED_OUT,
+        {},
+        PLATFORMS.STATSIG
+      );
+    }
+  };
+
   return (
     <div id="controls" className={moduleStyles.controlsContainer}>
       <div id="controls-section" className={moduleStyles.section}>
@@ -126,7 +144,10 @@ const Controls: React.FunctionComponent<ControlsProps> = ({
             moduleStyles.runButton,
             isLoading && moduleStyles.disabled
           )}
-          onClick={() => setPlaying(!isPlaying)}
+          onClick={() => {
+            setPlaying(!isPlaying);
+            sendAnalyticsEvent();
+          }}
           type="button"
           disabled={isLoading}
         >
