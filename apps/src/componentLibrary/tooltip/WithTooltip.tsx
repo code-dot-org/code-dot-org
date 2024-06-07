@@ -66,7 +66,7 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
 
       let styles: React.CSSProperties = {};
 
-      // Calculate the tooltip position based on the direction and it's tail length
+      // Calculate the tooltip position based on the direction and its tail length
       switch (tooltipProps.direction) {
         case 'onRight':
           styles = {
@@ -142,6 +142,7 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
     }
   }, [nodePosition, tailLength, tooltipProps.direction]);
 
+  // Effect to update tooltip styles when the tooltip is shown
   useEffect(() => {
     if (showTooltip) {
       updateTooltipStyles();
@@ -191,17 +192,20 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
       },
     });
 
+  console.log('render', tooltipProps.tooltipId, showTooltip, tooltipStyles);
+
   return (
     <TooltipOverlay className={tooltipOverlayClassName}>
       {componentToWrap}
-      {createPortal(
-        <Tooltip
-          {...tooltipProps}
-          ref={tooltipRef}
-          style={tooltipStyleProps}
-        />,
-        document.body
-      )}
+      {showTooltip &&
+        createPortal(
+          <Tooltip
+            {...tooltipProps}
+            ref={tooltipRef}
+            style={tooltipStyleProps}
+          />,
+          document.body
+        )}
     </TooltipOverlay>
   );
 };
