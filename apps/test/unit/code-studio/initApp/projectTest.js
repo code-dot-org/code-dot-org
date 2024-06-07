@@ -87,14 +87,6 @@ describe('project.js', () => {
       );
     });
 
-    it('for Big Game', () => {
-      window.appOptions.app = 'studio';
-      window.appOptions.level = {useContractEditor: true};
-      expect(project.getNewProjectName()).to.equal(
-        msg.defaultProjectNameBigGame()
-      );
-    });
-
     it('for Play Lab', () => {
       window.appOptions.app = 'studio';
       window.appOptions.skinId = 'studio';
@@ -270,12 +262,6 @@ describe('project.js', () => {
       window.appOptions.app = 'studio';
       window.appOptions.level = {isK1: true};
       expect(project.getStandaloneApp()).to.equal('playlab_k1');
-    });
-
-    it('for algebra_game', () => {
-      window.appOptions.app = 'studio';
-      window.appOptions.level = {useContractEditor: true};
-      expect(project.getStandaloneApp()).to.equal('algebra_game');
     });
 
     it('for starwars', () => {
@@ -885,15 +871,6 @@ describe('project.js', () => {
       await project.serverSideRemix();
 
       expect(project.getCurrentName()).to.equal('My Project');
-    });
-
-    it('sets a special default project name for Big Game', async () => {
-      project.getStandaloneApp.returns('algebra_game');
-      setData({name: undefined});
-
-      await project.serverSideRemix();
-
-      expect(project.getCurrentName()).to.equal('Big Game Template');
     });
 
     it('does not change the name if the project already has one', async () => {

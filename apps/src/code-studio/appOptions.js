@@ -96,13 +96,6 @@
  * @property {boolean} disableParamEditing
  * @property {boolean} disableVariableEditing
  * @property {boolean} useModalFunctionEditor
- * @property {boolean} useContractEditor
- * @property {boolean} contractHighlight
- * @property {boolean} contractCollapse
- * @property {boolean} examplesHighlight
- * @property {boolean} examplesCollapse
- * @property {boolean} definitionHighlight
- * @property {boolean} definitionCollapse
  * @property {boolean} freePlay
  * @property {number} appWidth
  * @property {number} appHeight
@@ -168,15 +161,8 @@
  * @property disableVariableEditing
  * @property disableProcedureAutopopulate
  * @property use_modalFunctionEditor
- * @property useContractEditor
  * @property defaultNumExampleBlocks
  * @property openFunctionDefinition
- * @property contractHighlight
- * @property contractCollapse
- * @property examplesHighlight
- * @property examplesCollapse
- * @property examplesRequired
- * @property definitionHighlight
  * @property definitionCollapse
  * @property disableExamples
  * @property projectTemplateLevelName

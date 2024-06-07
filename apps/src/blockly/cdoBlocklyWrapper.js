@@ -86,7 +86,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('BlockValueType');
   blocklyWrapper.wrapReadOnlyProperty('common_locale');
   blocklyWrapper.wrapReadOnlyProperty('Connection');
-  blocklyWrapper.wrapReadOnlyProperty('contractEditor');
   blocklyWrapper.wrapReadOnlyProperty('createSvgElement');
   blocklyWrapper.wrapReadOnlyProperty('Css');
   blocklyWrapper.wrapReadOnlyProperty('disableVariableEditing');
@@ -105,12 +104,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('FieldRectangularDropdown');
   blocklyWrapper.wrapReadOnlyProperty('FieldTextInput');
   blocklyWrapper.wrapReadOnlyProperty('FieldVariable');
-  blocklyWrapper.wrapReadOnlyProperty('findEmptyContainerBlock');
   blocklyWrapper.wrapReadOnlyProperty('fireUiEvent');
   blocklyWrapper.wrapReadOnlyProperty('fish_locale');
   blocklyWrapper.wrapReadOnlyProperty('Flyout');
-  blocklyWrapper.wrapReadOnlyProperty('FunctionalBlockUtils');
-  blocklyWrapper.wrapReadOnlyProperty('FunctionalTypeColors');
   blocklyWrapper.wrapReadOnlyProperty('FunctionEditor');
   blocklyWrapper.wrapReadOnlyProperty('functionEditor');
   blocklyWrapper.wrapReadOnlyProperty('gamelab_locale');
@@ -135,7 +131,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('selected');
   blocklyWrapper.wrapReadOnlyProperty('SVG_NS');
   blocklyWrapper.wrapReadOnlyProperty('tutorialExplorer_locale');
-  blocklyWrapper.wrapReadOnlyProperty('useContractEditor');
   blocklyWrapper.wrapReadOnlyProperty('useModalFunctionEditor');
   blocklyWrapper.wrapReadOnlyProperty('Variables');
   blocklyWrapper.wrapReadOnlyProperty('WidgetDiv');

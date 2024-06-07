@@ -820,9 +820,6 @@ var projects = (module.exports = {
         }
         break;
       case 'studio':
-        if (appOptions.level.useContractEditor) {
-          return msg.defaultProjectNameBigGame();
-        }
         switch (appOptions.skinId) {
           case 'studio':
             return msg.defaultProjectNamePlayLab();
@@ -888,9 +885,7 @@ var projects = (module.exports = {
         }
         return 'minecraft_adventurer';
       case 'studio':
-        if (appOptions.level.useContractEditor) {
-          return 'algebra_game';
-        } else if (appOptions.skinId === 'hoc2015') {
+        if (appOptions.skinId === 'hoc2015') {
           if (appOptions.droplet) {
             return 'starwars';
           } else {
@@ -1654,10 +1649,7 @@ var projects = (module.exports = {
   /** @returns {Promise} resolved after remix (for testing) */
   async serverSideRemix() {
     if (current && !current.name) {
-      const url = projects.appToProjectUrl();
-      this.setName(
-        url === '/projects/algebra_game' ? 'Big Game Template' : 'My Project'
-      );
+      this.setName('My Project');
     }
     function redirectToRemix() {
       utils.navigateToHref(`${projects.getPathName('remix')}`);

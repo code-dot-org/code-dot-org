@@ -210,7 +210,6 @@ describe('Level tests', function () {
       window.Maze.wordSearch = null;
     }
     if (window.Studio) {
-      window.Studio.customLogic = null;
       window.Studio.interpreter = null;
     }
 

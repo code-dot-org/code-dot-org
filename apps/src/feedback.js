@@ -710,10 +710,7 @@ FeedbackUtils.prototype.getFeedbackMessage = function (options) {
       case TestResults.EMPTY_FUNCTION_BLOCK_FAIL:
         if (options.level.emptyFunctionBlocksErrorMsg) {
           message = options.level.emptyFunctionBlocksErrorMsg;
-        } else if (
-          Blockly.useContractEditor ||
-          Blockly.useModalFunctionEditor
-        ) {
+        } else if (Blockly.useModalFunctionEditor) {
           message = msg.errorEmptyFunctionBlockModal();
         } else {
           message = msg.emptyFunctionBlocksErrorMsg();
@@ -1385,48 +1382,6 @@ FeedbackUtils.prototype.showToggleBlocksError = function () {
 };
 
 /**
- * Get an empty container block, if any are present.
- * @return {Blockly.Block} an empty container block, or null if none exist.
- */
-FeedbackUtils.prototype.getEmptyContainerBlock_ = function () {
-  var blocks = Blockly.mainBlockSpace.getAllUsedBlocks();
-  return Blockly.findEmptyContainerBlock(blocks);
-};
-
-/**
- * Check for empty container blocks, and return an appropriate failure
- * code if any are found.
- * @return {TestResult} ALL_PASS if no empty blocks are present, or
- *   EMPTY_BLOCK_FAIL or EMPTY_FUNCTION_BLOCK_FAIL if empty blocks
- *   are found.
- */
-FeedbackUtils.prototype.checkForEmptyContainerBlockFailure_ = function () {
-  const emptyBlock = this.getEmptyContainerBlock_();
-  if (!emptyBlock) {
-    return TestResults.ALL_PASS;
-  }
-
-  const type = emptyBlock.type;
-  if (type === 'procedures_defnoreturn' || type === 'procedures_defreturn') {
-    const emptyBlockInfo = emptyBlock.getProcedureInfo();
-    const findUsages = block =>
-      block.type === emptyBlockInfo.callType &&
-      block.getFieldValue('NAME') === emptyBlockInfo.name;
-
-    if (Blockly.mainBlockSpace.getAllUsedBlocks().filter(findUsages).length) {
-      return TestResults.EMPTY_FUNCTION_BLOCK_FAIL;
-    } else {
-      return TestResults.ALL_PASS;
-    }
-  }
-
-  // Block is assumed to be "if" or "repeat" if we reach here.
-  // This is where to add checks if you want a different TestResult
-  // for "controls_for_counter" blocks, for example.
-  return TestResults.EMPTY_BLOCK_FAIL;
-};
-
-/**
  * Throws errors with descriptive messages when example call or result blocks
  * don't exist or have unfilled functional inputs.
  * @param {Blockly.Block} callBlock
@@ -1671,12 +1626,6 @@ FeedbackUtils.prototype.getTestResults = function (
       return TestResults.TOO_FEW_BLOCKS_FAIL;
     }
   }
-  if (shouldCheckForEmptyBlocks) {
-    var emptyBlockFailure = this.checkForEmptyContainerBlockFailure_();
-    if (emptyBlockFailure !== TestResults.ALL_PASS) {
-      return emptyBlockFailure;
-    }
-  }
   if (
     !Blockly.showUnusedBlocks &&
     !options.allowTopBlocks &&
@@ -1687,7 +1636,7 @@ FeedbackUtils.prototype.getTestResults = function (
   if (this.studioApp_.hasDuplicateVariablesInForLoops()) {
     return TestResults.NESTED_FOR_SAME_VARIABLE;
   }
-  if (Blockly.useContractEditor || Blockly.useModalFunctionEditor) {
+  if (Blockly.useModalFunctionEditor) {
     if (this.hasUnusedParam_()) {
       return TestResults.UNUSED_PARAM;
     }

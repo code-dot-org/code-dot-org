@@ -61,9 +61,7 @@ class Studio < Grid
   )
 
   def project_type
-    if use_contract_editor == 'true'
-      'algebra_game'
-    elsif skin == 'hoc2015'
+    if skin == 'hoc2015'
       if uses_droplet?
         'starwars'
       else

@@ -119,7 +119,6 @@ export interface Level {
   projectType: ProjectType;
   isK1: boolean;
   standaloneAppName: StandaloneAppName;
-  useContractEditor: boolean;
   // Minecraft specific properties
   isAgentLevel: boolean;
   isEventLevel: boolean;

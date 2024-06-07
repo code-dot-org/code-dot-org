@@ -543,27 +543,6 @@ StudioApp.prototype.init = function (config) {
 
   this.initVersionHistoryUI(config);
 
-  if (this.isUsingBlockly() && Blockly.contractEditor) {
-    Blockly.contractEditor.registerTestsFailedOnCloseHandler(
-      function () {
-        this.feedback_.showSimpleDialog({
-          headerText: undefined,
-          bodyText: msg.examplesFailedOnClose(),
-          cancelText: msg.ignore(),
-          confirmText: msg.tryAgain(),
-          onConfirm: null,
-          onCancel: function () {
-            Blockly.contractEditor.hideIfOpen();
-          },
-        });
-
-        // return true to indicate to blockly-core that we'll own closing the
-        // contract editor
-        return true;
-      }.bind(this)
-    );
-  }
-
   if (config.legacyShareStyle && config.hideSource) {
     this.setupLegacyShareView();
   }
@@ -1976,12 +1955,6 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.isUS = config.isUS;
   this.noPadding = config.noPadding;
 
-  // contract editor requires more vertical space. set height to 1250 unless
-  // explicitly specified
-  if (config.level.useContractEditor) {
-    config.level.minWorkspaceHeight = config.level.minWorkspaceHeight || 1250;
-  }
-
   this.appMsg = config.appMsg;
   this.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
   if (experiments.isEnabled(experiments.BUBBLE_DIALOG)) {
@@ -2801,21 +2774,7 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
  * @param {AppOptionsConfig}
  */
 StudioApp.prototype.openFunctionDefinition_ = function (config) {
-  if (Blockly.contractEditor) {
-    Blockly.contractEditor.autoOpenWithLevelConfiguration({
-      autoOpenFunction: config.level.openFunctionDefinition,
-      contractCollapse: config.level.contractCollapse,
-      contractHighlight: config.level.contractHighlight,
-      examplesCollapse: config.level.examplesCollapse,
-      examplesHighlight: config.level.examplesHighlight,
-      definitionCollapse: config.level.definitionCollapse,
-      definitionHighlight: config.level.definitionHighlight,
-    });
-  } else {
-    Blockly.functionEditor.autoOpenFunction(
-      config.level.openFunctionDefinition
-    );
-  }
+  Blockly.functionEditor.autoOpenFunction(config.level.openFunctionDefinition);
 };
 
 /**
@@ -2884,7 +2843,6 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     useModalFunctionEditor:
       config.level.edit_blocks !== TOOLBOX_EDIT_MODE &&
       !!config.level.useModalFunctionEditor,
-    useContractEditor: utils.valueOr(config.level.useContractEditor, false),
     disableExamples: utils.valueOr(config.level.disableExamples, false),
     defaultNumExampleBlocks: utils.valueOr(
       config.level.defaultNumExampleBlocks,
@@ -2974,173 +2932,6 @@ StudioApp.prototype.hasUnwantedExtraTopBlocks = function () {
  */
 StudioApp.prototype.hasQuestionMarksInNumberField = function () {
   return this.feedback_.hasQuestionMarksInNumberField();
-};
-
-/**
- * @returns true if any non-example block in the workspace has an unfilled input
- */
-StudioApp.prototype.hasUnfilledFunctionalBlock = function () {
-  return !!this.getUnfilledFunctionalBlock();
-};
-
-/**
- * @returns {Block} The first block that has an unfilled input, or undefined
- *   if there isn't one.
- */
-StudioApp.prototype.getUnfilledFunctionalBlock = function () {
-  return this.getFilteredUnfilledFunctionalBlock_(function (rootBlock) {
-    return rootBlock.type !== 'functional_example';
-  });
-};
-
-/**
- * @returns {Block} The first example block that has an unfilled input, or
- *   undefined if there isn't one. Ignores example blocks that don't have a
- *   call portion, as these are considered invalid.
- */
-StudioApp.prototype.getUnfilledFunctionalExample = function () {
-  return this.getFilteredUnfilledFunctionalBlock_(function (rootBlock) {
-    if (rootBlock.type !== 'functional_example') {
-      return false;
-    }
-    var actual = rootBlock.getInputTargetBlock('ACTUAL');
-    return actual && actual.getFieldValue('NAME');
-  });
-};
-
-/**
- * @param {function} filter Run against root block in chain. Returns true if
- *   this is a block we care about
- */
-StudioApp.prototype.getFilteredUnfilledFunctionalBlock_ = function (filter) {
-  var unfilledBlock;
-  Blockly.mainBlockSpace.getAllUsedBlocks().some(function (block) {
-    // Get the root block in the chain
-    var rootBlock = block.getRootBlock();
-    if (!filter(rootBlock)) {
-      return false;
-    }
-  });
-
-  return unfilledBlock;
-};
-
-/**
- * @returns {string} The name of a function that doesn't have any examples, or
- *   undefined if all have at least one.
- */
-StudioApp.prototype.getFunctionWithoutTwoExamples = function () {
-  var definitionNames = Blockly.mainBlockSpace
-    .getTopBlocks()
-    .filter(function (block) {
-      return block.type === 'functional_definition' && !block.isVariable();
-    })
-    .map(function (definitionBlock) {
-      return definitionBlock.getProcedureInfo().name;
-    });
-
-  var exampleNames = Blockly.mainBlockSpace
-    .getTopBlocks()
-    .filter(function (block) {
-      if (block.type !== 'functional_example') {
-        return false;
-      }
-
-      // Only care about functional_examples that have an ACTUAL input (i.e. it's
-      // clear which function they're for
-      var actual = block.getInputTargetBlock('ACTUAL');
-      return actual && actual.getFieldValue('NAME');
-    })
-    .map(function (exampleBlock) {
-      return exampleBlock.getInputTargetBlock('ACTUAL').getFieldValue('NAME');
-    });
-
-  var definitionWithLessThanTwoExamples;
-  definitionNames.forEach(function (def) {
-    var definitionExamples = exampleNames.filter(function (example) {
-      return def === example;
-    });
-
-    if (definitionExamples.length < 2) {
-      definitionWithLessThanTwoExamples = def;
-    }
-  });
-  return definitionWithLessThanTwoExamples;
-};
-
-/**
- * Get the error message when we have an unfilled block
- * @param {string} topLevelType The block.type For our expected top level block
- */
-StudioApp.prototype.getUnfilledFunctionalBlockError = function (topLevelType) {
-  var unfilled = this.getUnfilledFunctionalBlock();
-
-  if (!unfilled) {
-    return null;
-  }
-
-  var topParent = unfilled;
-  while (topParent.getParent()) {
-    topParent = topParent.getParent();
-  }
-
-  if (unfilled.type === topLevelType) {
-    return msg.emptyTopLevelBlock({
-      topLevelBlockName: unfilled.getFieldValue(),
-    });
-  }
-
-  if (topParent.type !== 'functional_definition') {
-    return msg.emptyFunctionalBlock();
-  }
-
-  var procedureInfo = topParent.getProcedureInfo();
-  if (topParent.isVariable()) {
-    return msg.emptyBlockInVariable({name: procedureInfo.name});
-  } else {
-    return msg.emptyBlockInFunction({name: procedureInfo.name});
-  }
-};
-
-/**
- * Looks for failing examples, and updates the result text for them if they're
- * open in the contract editor
- * @param {function} failureChecker Apps example tester that takes in an example
- *   block, and outputs a failure string (or null if success)
- * @returns {string} Name of block containing first failing example we found, or
- *   empty string if no failures.
- */
-StudioApp.prototype.checkForFailingExamples = function (failureChecker) {
-  var failingBlockName = '';
-  Blockly.mainBlockSpace
-    .findFunctionExamples()
-    .forEach(function (exampleBlock) {
-      var failure = failureChecker(exampleBlock, false);
-
-      // Update the example result. No-op if we're not currently editing this
-      // function.
-      Blockly.contractEditor.updateExampleResult(exampleBlock, failure);
-
-      if (failure) {
-        failingBlockName = exampleBlock
-          .getInputTargetBlock('ACTUAL')
-          .getFieldValue('NAME');
-      }
-    });
-  return failingBlockName;
-};
-
-/**
- * @returns {boolean} True if we have a function or variable named "" (empty string)
- */
-StudioApp.prototype.hasEmptyFunctionOrVariableName = function () {
-  return Blockly.mainBlockSpace.getTopBlocks().some(function (block) {
-    if (block.type !== 'functional_definition') {
-      return false;
-    }
-
-    return !block.getProcedureInfo().name;
-  });
 };
 
 StudioApp.prototype.createCoordinateGridBackground = function (options) {
