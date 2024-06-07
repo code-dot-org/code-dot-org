@@ -73,14 +73,6 @@ const optionsList = [
     ],
   },
   {
-    name: 'pack-dialog-preview',
-    type: 'radio',
-    values: [
-      {value: 'false', description: 'Use original pack dialog (default).'},
-      {value: 'true', description: 'Use pack dialog with preview on select.'},
-    ],
-  },
-  {
     name: 'BPM',
     type: 'string',
     description: 'Set a specific BPM',
