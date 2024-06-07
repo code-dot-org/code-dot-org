@@ -1,6 +1,5 @@
 import React from 'react';
 
-import aichatI18n from '@cdo/apps/aichat/locale';
 import {
   BodyTwoText,
   Heading3,
@@ -8,6 +7,7 @@ import {
 } from '@cdo/apps/componentLibrary/typography';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import Button from '@cdo/apps/templates/Button';
+import i18n from '@cdo/locale';
 
 import moduleStyles from './warning-modal.module.scss';
 
@@ -23,7 +23,7 @@ const ChatWarningModal: React.FunctionComponent<ChatWarningModalProps> = ({
   onClose,
 }) => (
   <AccessibleDialog onClose={onClose} className={moduleStyles.chatWarningModal}>
-    <Heading3>{aichatI18n.warningModalHeader()}</Heading3>
+    <Heading3>{i18n.aiWarningModalHeader()}</Heading3>
 
     <button
       type="button"
@@ -34,17 +34,17 @@ const ChatWarningModal: React.FunctionComponent<ChatWarningModalProps> = ({
     </button>
     <hr />
     <BodyTwoText>
-      <StrongText>{aichatI18n.allMessagesSentAreRecorded()}</StrongText>
+      <StrongText>{i18n.aiWarningModalMessagesAreRecorded()}</StrongText>
     </BodyTwoText>
-    <BodyTwoText>{aichatI18n.inappropriateMessagesAreFlagged()}</BodyTwoText>
+    <BodyTwoText>{i18n.aiWarningModalInappropriateFlagged()}</BodyTwoText>
     <br />
-    <BodyTwoText>{aichatI18n.anythingPersonalCanNotBeSubmitted()}</BodyTwoText>
+    <BodyTwoText>{i18n.aiWarningModalPersonalNotSubmitted()}</BodyTwoText>
     <hr />
     <div className={moduleStyles.bottomSection}>
       <Button
         onClick={onClose}
         color={Button.ButtonColor.brandSecondaryDefault}
-        text={aichatI18n.warningModalOkButtonText()}
+        text={i18n.aiWarningModalOk()}
       />
     </div>
   </AccessibleDialog>
