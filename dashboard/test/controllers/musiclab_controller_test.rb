@@ -16,6 +16,7 @@ class MusiclabControllerTest < ActionController::TestCase
     ProjectsList.stubs(:fetch_active_published_featured_projects).returns({"music" => [published_musiclab_featured_project]})
     @controller.stubs(:get_musiclab_projects).returns([published_musiclab_featured_project])
   end
+
   test_user_gets_response_for(
     :embed,
     name: 'anonymous user can list all featured music projects',

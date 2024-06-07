@@ -127,7 +127,6 @@ module ProjectsList
       fetch_published_project_types([project_group.to_sym], limit: limit, published_before: published_before)
     end
 
-
     # @param project_group [String] Project group to retrieve. Must be one of
     #   PUBLISHED_PROJECT_TYPE_GROUPS.keys, or 'all' to retrieve all project groups.
     # @param featured_before [string] String representing a DateTime before
@@ -137,24 +136,24 @@ module ProjectsList
     #   If the project group is specified, we return a hash with one key/value pair where the
     #   key is the specified project group.
     def fetch_active_published_featured_projects(project_group, featured_before: nil)
-      if project_group != 'all'
-        raise ArgumentError, "invalid project type: #{project_group}" unless PUBLISHED_PROJECT_TYPE_GROUPS.key?(project_group.to_sym)
+      if project_group != 'all' && !PUBLISHED_PROJECT_TYPE_GROUPS.key?(project_group.to_sym)
+        raise ArgumentError, "invalid project type: #{project_group}"
       end
       all_active_published_featured_projects = {}
-      published_project_type_groups = project_group === 'all' ?
+      published_project_type_groups = project_group == 'all' ?
         PUBLISHED_PROJECT_TYPE_GROUPS.keys :
         [project_group.to_sym]
-      published_project_type_groups.each do |project_group|       
-        if project_group == :library
+      published_project_type_groups.each do |project_type_group|
+        if project_type_group == :library
           next
         end
         active_published_featured_projects_by_group = []
-        project_types = PUBLISHED_PROJECT_TYPE_GROUPS[project_group]
+        project_types = PUBLISHED_PROJECT_TYPE_GROUPS[project_type_group]
         project_types.each do |project_type|
           active_published_featured_projects_by_group <<
             fetch_active_published_featured_projects_by_type(project_type, featured_before: featured_before)
         end
-        all_active_published_featured_projects[project_group] = active_published_featured_projects_by_group.flatten!
+        all_active_published_featured_projects[project_type_group] = active_published_featured_projects_by_group.flatten!
       end
       all_active_published_featured_projects
     end
@@ -234,6 +233,7 @@ module ProjectsList
         :users__properties___properties,
       ]
     end
+
     def fetch_active_published_featured_projects_by_type(project_type, featured_before: nil)
       projects = "#{CDO.dashboard_db_name}__projects".to_sym
       user_project_storage_ids = "#{CDO.dashboard_db_name}__user_project_storage_ids".to_sym
