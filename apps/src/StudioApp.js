@@ -1525,6 +1525,10 @@ StudioApp.prototype.resizeVisualization = function (width) {
   visualizationColumn.style.maxWidth = newVizWidth + vizSideBorderWidth + 'px';
   visualization.style.maxWidth = newVizWidthString;
   visualization.style.maxHeight = newVizHeightString;
+  if (experiments.isEnabled(experiments.BIG_PLAYSPACE)) {
+    visualization.style.width = newVizWidthString;
+    visualization.style.height = newVizHeightString;
+  }
 
   var scale = newVizWidth / this.nativeVizWidth;
   getStore().dispatch(setVisualizationScale(scale));
