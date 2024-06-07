@@ -47,7 +47,6 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   imagePopOutDirection,
   handleInstructionsTextClick,
 }) => {
-  // Prefer using long instructions if available, otherwise fall back to level data text.
   const instructionsText = useSelector(
     (state: {lab: LabState}) => state.lab.levelProperties?.longInstructions
   );
