@@ -21,7 +21,11 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
     }
   }, [dialogControl, resetProject]);
 
-  return !isReadOnly ? (
+  if (isReadOnly) {
+    return null;
+  }
+
+  return (
     <div>
       <Button
         icon={{iconStyle: 'solid', iconName: 'refresh'}}
@@ -32,7 +36,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
         size={'xs'}
       />
     </div>
-  ) : null;
+  );
 };
 
 export default WorkspaceHeaderButtons;

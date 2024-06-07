@@ -37,12 +37,10 @@ export const useSource = (defaultSources: ProjectSources) => {
 
   const setSourceHelper = useMemo(
     () => (newProjectSource: ProjectSources) => {
-      if (isReadOnly) {
-        // Don't attempt to save in read-only mode.
-        dispatch(setProjectSource(newProjectSource));
-      } else {
-        dispatch(setAndSaveProjectSource(newProjectSource));
-      }
+      const saveFunction = isReadOnly
+        ? setProjectSource
+        : setAndSaveProjectSource;
+      dispatch(saveFunction(newProjectSource));
     },
     [dispatch, isReadOnly]
   );
