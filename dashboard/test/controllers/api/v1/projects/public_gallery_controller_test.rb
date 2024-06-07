@@ -14,7 +14,6 @@ class Api::V1::Projects::PublicGalleryControllerTest < ActionController::TestCas
       isFeatured: true
     }
     all_featured_projects = {applab: [published_applab_project], gamelab: [], spritelab: [], playlab: [], artist: [], minecraft: [], events: [], k1: [], dance: [], poetry: [], library: [], music: []}
-    applab_featured_projects = [published_applab_project]
     ProjectsList.stubs(:fetch_active_published_featured_projects).returns(all_featured_projects)
   end
 
