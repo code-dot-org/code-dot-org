@@ -47,9 +47,22 @@ module Metrics
       end
 
       def log_event_with_session(session:, event_name:, event_value: nil, metadata: {})
+        event_value = event_name if event_value.nil?
         statsig_user = StatsigUser.new({'userID' => session[:statsig_stable_id]})
 
-        log_statsig_event(statsig_user: statsig_user, event_name: event_name, event_value: event_value, metadata: metadata)
+        if CDO.rack_env?(:development)
+          log_event_to_stdout_with_session(session: session, event_name: event_name, event_value: event_value, metadata: metadata)
+        elsif CDO.rack_env?(:production) || managed_test_environment
+          log_statsig_event(statsig_user: statsig_user, event_name: event_name, event_value: event_value, metadata: metadata)
+        else
+          # We don't want to log in other environments, just return silently
+          return
+        end
+      rescue => exception
+        Honeybadger.notify(
+          exception,
+          error_message: 'Error logging session event',
+          )
       end
 
       # Logs an event to Statsig
@@ -87,6 +100,17 @@ module Metrics
             user_type: user_type,
             enabled_experiments: enabled_experiments,
           }.compact,
+          event_name: event_name,
+          event_value: event_value,
+          metadata: metadata,
+        }
+        puts "Logging Event: #{event_details.to_json}"
+      end
+
+      # Logs an event to stdout, useful for development and debugging
+      private def log_event_to_stdout_with_session(session:, event_name:, event_value:, metadata:)
+        event_details = {
+          user_id: session[:statsig_stable_id],
           event_name: event_name,
           event_value: event_value,
           metadata: metadata,
