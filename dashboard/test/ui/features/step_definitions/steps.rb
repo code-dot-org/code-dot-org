@@ -1066,7 +1066,7 @@ def set_cookie_dcdo(key, value)
   end
 end
 
-Given(/^I set the DCDO flag "([^"]*)" to "(.*)"$/) do |key, json|
+Given(/^I set the DCDO key "([^"]*)" to "(.*)"$/) do |key, json|
   begin
     value = JSON.parse(json)
   rescue JSON::ParserError
