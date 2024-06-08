@@ -516,10 +516,10 @@ Resources:
                 Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:db:production"
               - Effect: Allow
                 Action: rds:CopyDBSnapshot
-                Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:snapshot:rds:production-*"
+                Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:snapshot:rds:${AWS::StackName}*"
               - Effect: Allow
                 Action: rds:CopyDBClusterSnapshot
-                Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster-snapshot:rds:<%=CDO.db_cluster_id%>*"
+                Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster-snapshot:rds:${AWS::StackName}*"
               - Effect: Allow
                 Action:
                   - rds:ModifyDBClusterSnapshotAttribute
