@@ -508,15 +508,15 @@ Resources:
               - Effect: Allow
                 Action:
                   - rds:DescribeDBInstances
+                Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:db:${AWS::StackName}*"
+              - Effect: Allow
+                Action:
                   - rds:DescribeDBClusters
+                Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster:${AWS::StackName}*"
+              - Effect: Allow
+                Action:
                   - rds:DescribeDBClusterSnapshots
-                Resource: '*'
-              - Effect: Allow
-                Action: rds:DescribeDBSnapshots
-                Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:db:production"
-              - Effect: Allow
-                Action: rds:CopyDBSnapshot
-                Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:snapshot:rds:${AWS::StackName}*"
+                Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster-snapshot:${AWS::StackName}*"
               - Effect: Allow
                 Action: rds:CopyDBClusterSnapshot
                 # TODO: Once we have the production database in the stack, we should !Sub in the actual cluster name
@@ -528,14 +528,6 @@ Resources:
                   - rds:DeleteDBClusterSnapshot
                   - rds:DescribeDBClusterSnapshotAttributes
                 Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster-snapshot:temp-snapshot*"
-              - Effect: Allow
-                Action:
-                  - rds:CopyDBSnapshot
-                  - rds:DescribeDBSnapshots
-                  - rds:DescribeDBSnapshotAttributes
-                  - rds:ModifyDBSnapshotAttribute
-                  - rds:DeleteDBSnapshot
-                Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:snapshot:temp-snapshot-*"
               - Effect: Allow
                 Action:
                   - kms:CreateGrant
