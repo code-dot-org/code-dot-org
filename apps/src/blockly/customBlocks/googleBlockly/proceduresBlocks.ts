@@ -87,7 +87,6 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
     helpUrl: '/docs/spritelab/codestudio_callingFunction',
     extensions: [
       'procedures_edit_button',
-      'procedure_caller_serialize_name',
       'procedure_caller_get_def_mixin',
       'procedure_caller_var_mixin',
       'procedure_caller_update_shape_mixin',
@@ -135,17 +134,6 @@ GoogleBlockly.Extensions.register(
       button.EDITABLE = false;
       button.SERIALIZABLE = false;
       this.inputList[this.inputList.length - 1].appendField(button, 'EDIT');
-    }
-  }
-);
-
-// This extension make the NAME fields of caller/getter blocks serializable.
-GoogleBlockly.Extensions.register(
-  'procedure_caller_serialize_name',
-  function (this: ProcedureBlock) {
-    const labelField = this.getField('NAME');
-    if (labelField) {
-      labelField.SERIALIZABLE = true;
     }
   }
 );
