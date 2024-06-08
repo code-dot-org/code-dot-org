@@ -112,7 +112,6 @@ group :development, :test do
   gem 'minitest-spec-context', '~> 0.0.3'
   gem 'minitest-stub-const', '~> 0.6'
   gem 'net-http-persistent'
-  gem 'request_store', '~> 1.6.0', require: false
   gem 'rinku'
   gem 'rspec', require: false
   gem 'selenium-webdriver', '~> 4.0'
@@ -259,6 +258,7 @@ end
 # Reduce volume of production logs
 # Ref: https://github.com/roidrage/lograge/pull/252
 gem 'lograge', github: 'code-dot-org/lograge', ref: 'debug_exceptions'
+gem 'request_store', '~> 1.6.0', require: false
 
 # Enforce SSL
 gem 'rack-ssl-enforcer'
