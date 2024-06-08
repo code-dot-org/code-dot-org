@@ -327,6 +327,6 @@ export type LibraryJson = {
   packs: SoundFolder[];
 };
 
-interface Sounds {
-  [index: string]: [string];
+export interface Sounds {
+  [category: string]: string[];
 }

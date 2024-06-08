@@ -1,0 +1,17 @@
+@import 'color.scss';
+
+.soundSelectSection {
+  margin-left: 20px;
+}
+
+.packSectionSelected {
+  font-weight: bold;
+}
+
+.packSectionEmpty {
+  color: $neutral_dark60;
+}
+
+.soundsContainer {
+  margin-left: 20px;
+}

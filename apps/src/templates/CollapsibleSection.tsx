@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import React, {useState, useCallback} from 'react';
 
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
@@ -27,7 +28,7 @@ const CollapsibleSection: React.FunctionComponent<CollapsibleSectionProps> = ({
   children,
   titleSemanticTag = 'p',
   titleVisualAppearance = 'body-one',
-  titleStyle = moduleStyles.title,
+  titleStyle,
   titleIcon,
   titleIconStyle = moduleStyles.titleIcon,
   initiallyCollapsed = true,
@@ -74,7 +75,7 @@ const CollapsibleSection: React.FunctionComponent<CollapsibleSectionProps> = ({
           <Typography
             semanticTag={titleSemanticTag}
             visualAppearance={titleVisualAppearance}
-            className={titleStyle}
+            className={classNames(titleStyle, moduleStyles.title)}
           >
             {title}
           </Typography>
