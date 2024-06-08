@@ -1058,12 +1058,7 @@ def set_cookie_dcdo(key, value)
 
   cookie_dcdo[key] = value
 
-  begin
-    set_cookie('DCDO', cookie_dcdo.to_json)
-  rescue Selenium::WebDriver::Error::InvalidCookieDomainError
-    navigate_to replace_hostname('http://studio.code.org')
-    retry
-  end
+  set_cookie('DCDO', cookie_dcdo.to_json)
 end
 
 Given(/^I set the DCDO key "([^"]*)" to "(.*)"$/) do |key, json|
