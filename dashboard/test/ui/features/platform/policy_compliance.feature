@@ -80,7 +80,7 @@ Feature: Policy Compliance and Parental Permission
     Then I wait until I am on a different page than I noted before
 
     Then I wait to see "#lockout-panel-form"
-    And element "#permission-status" contains text "Pending"
+    Then I wait until element "#permission-status" contains text "Pending"
 
     # Perform a "resend"
     And I take note of the current loaded page
@@ -157,17 +157,15 @@ Feature: Policy Compliance and Parental Permission
     Then I wait to see "#manage-linked-accounts"
     Then I wait until "form[action=\'/users/auth/google_oauth2?action=connect\'] button" is disabled
 
-    # Navigate the lockout process
-    Given I am on "http://studio.code.org/lockout"
-    Then I wait to see "#lockout-panel-form"
+    # Navigate the lockout process via the Account Settings page
+    Then I wait to see "#lockout-linked-accounts-form"
     And element "#permission-status" contains text "Not Submitted"
     And I press keys "parent@example.com" for element "#parent-email"
     Then element "#lockout-submit" is enabled
 
     # Submit request
-    And I take note of the current loaded page
-    When I press "lockout-submit"
-    Then I wait until I am on a different page than I noted before
+    Then I press "lockout-submit"
+    Then I wait until element "#permission-status" contains text "Pending"
 
     # Accept request
     Then My parent permits my parental request

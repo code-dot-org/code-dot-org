@@ -379,6 +379,7 @@ class TestController < ApplicationController
       :parent_email_preference_email,
       :parent_email_preference_request_ip,
       :parent_email_preference_source,
+      :provider,
       :email_preference_opt_in,
       :email_preference_form_kind,
       :email_preference_request_ip,

@@ -131,7 +131,7 @@
     = f.hidden_field :lti_roster_sync_enabled
 
 -# The CPA checks for whether or not the account is a personal login... so we check everything except that
-- locked = current_user.student? && experiment_value('cpa-partial-lockout', request) && Cpa.cpa_experience(request) && Policies::ChildAccount.user_predates_policy?(current_user, assume_permission_required: true)
+- locked = experiment_value('cpa-partial-lockout', request) && Policies::ChildAccount.user_predates_policy?(current_user, assume_permission_required: true)
 - if locked
   %div#lockout-linked-accounts{
     data: {

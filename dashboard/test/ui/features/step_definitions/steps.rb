@@ -115,13 +115,20 @@ end
 And /^I take note of the current loaded page$/ do
   # Remember this page
   @current_page_body = @browser.find_element(:css, 'body')
+  @current_page_body_url = @browser.current_url
 end
 
 Then /^I wait until I am on a different page than I noted before$/ do
   # When we've seen a page before, look for a different page
   if @current_page_body
-    wait_until do
-      @current_page_body != @browser.find_element(:css, 'body')
+    begin
+      wait_until do
+        @current_page_body != @browser.find_element(:css, 'body')
+      end
+    rescue Selenium::WebDriver::Error::TimeoutError => exception
+      puts "Timeout: I am not still on #{@current_page_body_url} like I want."
+      puts "         I am on #{@browser.current_url} instead."
+      raise exception
     end
   end
 end
