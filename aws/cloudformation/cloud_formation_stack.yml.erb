@@ -519,6 +519,7 @@ Resources:
                 Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:snapshot:rds:${AWS::StackName}*"
               - Effect: Allow
                 Action: rds:CopyDBClusterSnapshot
+                # TODO: Once we have the production database in the stack, we should !Sub in the actual cluster name
                 Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster-snapshot:rds:${AWS::StackName}*"
               - Effect: Allow
                 Action:
