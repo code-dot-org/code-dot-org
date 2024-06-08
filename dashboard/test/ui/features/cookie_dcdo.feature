@@ -4,12 +4,12 @@ Feature: Cookie DCDO
     Then element "script[data-dcdo]" attr "data-dcdo" includes ""cookie_dcdo_test":null"
 
     # Tests assigning of a cookie DCDO flag
-    When I set the DCDO flag "cookie_dcdo_test" to "Cookie DCDO assigning works"
+    When I set the DCDO key "cookie_dcdo_test" to "Cookie DCDO assigning works"
     And I reload the page
     Then element "script[data-dcdo]" attr "data-dcdo" includes ""cookie_dcdo_test":"Cookie DCDO assigning works""
 
     # Tests re-assigning of a cookie DCDO flag
-    When I set the DCDO flag "cookie_dcdo_test" to "{"Cookie DCDO re-assigning":"works"}"
+    When I set the DCDO key "cookie_dcdo_test" to "{"Cookie DCDO re-assigning":"works"}"
     And I reload the page
     Then element "script[data-dcdo]" attr "data-dcdo" includes ""Cookie DCDO re-assigning":"works""
 
