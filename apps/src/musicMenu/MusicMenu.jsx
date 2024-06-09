@@ -59,14 +59,6 @@ const optionsList = [
     ],
   },
   {
-    name: 'pack-dialog-preview',
-    type: 'radio',
-    values: [
-      {value: 'false', description: 'Use original pack dialog (default).'},
-      {value: 'true', description: 'Use pack dialog with preview on select.'},
-    ],
-  },
-  {
     name: 'BPM',
     type: 'string',
     description: 'Set a specific BPM',
@@ -121,17 +113,6 @@ const optionsList = [
     values: [
       {value: 'false', description: 'New timeline (default).'},
       {value: 'true', description: 'Original timeline.'},
-    ],
-  },
-  {
-    name: 'clickable-text-with-glow',
-    type: 'radio',
-    values: [
-      {
-        value: 'false',
-        description: 'No glow for clickable text in instructions (default).',
-      },
-      {value: 'true', description: 'Glow for clickable text in instructions.'},
     ],
   },
 ];

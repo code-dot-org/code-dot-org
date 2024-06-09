@@ -4109,25 +4109,15 @@ a {
   }
 }
 
-$clickable-text-glow: 0 0 1px $realyellow,
-  0 0 2px $realyellow,
-  0 0 3px $realyellow,
-  0 0 4px $realyellow,
-  0 0 5px $realyellow,
-  0 0 6px $realyellow,
-  0 0 7px $realyellow,
-  0 0 8px $realyellow,
-  0 0 9px $realyellow;
-
 @keyframes clickable-text-glow-keyframes {
   0% {
-    text-shadow: none;
+    color: initial;
   }
   50% {
-    text-shadow: $clickable-text-glow;
+    color: $light_primary_500;
   }
   100% {
-    text-shadow: none;
+    color: initial;
   }
 }
 
@@ -4140,7 +4130,7 @@ $clickable-text-glow: 0 0 1px $realyellow,
       animation: clickable-text-glow-keyframes 2s ease-in-out;
 
       &:hover {
-        text-shadow: $clickable-text-glow;
+        color: $light_primary_500;
       }
     }
   }
