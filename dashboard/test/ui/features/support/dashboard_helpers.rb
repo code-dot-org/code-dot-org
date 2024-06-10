@@ -10,6 +10,9 @@ module DashboardHelpers
     @rails_loaded = true
   end
 
+  # Allows setting DCDO values per test scenario
+  # @see 'dashboard/test/ui/features/cookie_dcdo.rb'
+  # @see Rack::CookieDCDO
   def set_dcdo(key, value)
     cookie_dcdo =
       begin
