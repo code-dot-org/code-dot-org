@@ -96,6 +96,9 @@ export default function initPage(unitEditorData) {
         scriptPath={scriptData.scriptPath}
         courseOfferingEditorLink={scriptData.courseOfferingEditPath}
         isCSDCourseOffering={scriptData.isCSDCourseOffering}
+        courseOfferingDeviceCompatibilities={
+          scriptData.courseOfferingDeviceCompatibilities
+        }
       />
     </Provider>,
     document.querySelector('.edit_container')

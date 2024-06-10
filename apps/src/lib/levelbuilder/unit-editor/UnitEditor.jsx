@@ -94,6 +94,7 @@ class UnitEditor extends React.Component {
     scriptPath: PropTypes.string.isRequired,
     courseOfferingEditorLink: PropTypes.string,
     isCSDCourseOffering: PropTypes.bool,
+    courseOfferingDeviceCompatibilities: PropTypes.string,
 
     // from redux
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
@@ -154,6 +155,23 @@ class UnitEditor extends React.Component {
       participantAudience: this.props.initialParticipantAudience,
     };
   }
+
+  // Return if the given course offering's device compatibilities JSON string either:
+  // - Is null
+  // - Contains a device compatibility mapping to the (None) option
+  //   (which would appear like `{tablet: ""}`)
+  isMissingDeviceCompatibility = deviceCompatibilities => {
+    if (!deviceCompatibilities) {
+      return true;
+    }
+
+    const deviceCompatibilitiesValues = Object.values(
+      JSON.parse(deviceCompatibilities)
+    );
+    return deviceCompatibilitiesValues.some(
+      compatibility => compatibility === ''
+    );
+  };
 
   handleUpdateAnnouncements = newAnnouncements => {
     this.setState({announcements: newAnnouncements});
@@ -245,6 +263,20 @@ class UnitEditor extends React.Component {
       this.setState({
         isSaving: false,
         error: 'Please set both version year and family name.',
+      });
+      return;
+    } else if (
+      [PublishedState.preview, PublishedState.stable].includes(
+        this.state.publishedState
+      ) &&
+      this.isMissingDeviceCompatibility(
+        this.props.courseOfferingDeviceCompatibilities
+      )
+    ) {
+      this.setState({
+        isSaving: false,
+        error:
+          'Please set all device compatibilities in order to save with published state as preview or stable.',
       });
       return;
     }
