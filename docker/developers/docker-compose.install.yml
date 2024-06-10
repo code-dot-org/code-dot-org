@@ -1,0 +1,52 @@
+# These are commands that maintain the software in the container.
+
+# All of the install commands extend the isolated 'web-base' which
+# means they run without having to spin up a database, etc.
+# If any command depends on a service, it needs to specify that itself.
+
+services:
+  # This just installs / updates rbenv / Ruby inside the web instance
+  install-rbenv:
+    extends:
+      file: docker-compose.dashboard.yml
+      service: web-base
+    hostname: install-rbenv
+    volumes:
+      - rbenv:/home/cdodev/.rbenv
+      - ../../.ruby-version:/app/src/.ruby-version
+      - .:/app/src # This is not the application source code!
+    command: /bin/bash -l -c "./install-local-rbenv.sh"
+
+  # This just installs / updates nvm / Node / nvm inside the web instance
+  install-nvm:
+    extends:
+      file: docker-compose.dashboard.yml
+      service: web-base
+    hostname: install-nvm
+    volumes:
+      - nvm:/home/cdodev/.nvm
+      - ../../apps/package.json:/app/src/apps/package.json
+      - .:/app/src # This is not the application source code!
+    command: /bin/bash -l -c "./install-local-nvm.sh"
+
+  # This just installs the Ruby gems, in case they have changed
+  install-gems:
+    extends:
+      file: docker-compose.dashboard.yml
+      service: web-base
+    volumes:
+      - rbenv:/home/cdodev/.rbenv
+      - ../..:/app/src
+    command: /bin/bash -l -c "bundle install"
+
+  # Installs the node/npm/js libraries
+  install-js:
+    extends:
+      file: docker-compose.dashboard.yml
+      service: web-base
+    volumes:
+      - nvm:/home/cdodev/.nvm
+      - ../../docker:/app/src/docker
+      - ../../apps:/app/src/apps
+    working_dir: /app/src/apps
+    command: /bin/bash -l -c '../docker/developers/run.sh yarn install'

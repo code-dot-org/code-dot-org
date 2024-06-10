@@ -1,0 +1,36 @@
+include:
+  - path: ./docker-compose.networks.yml
+
+services:
+  # Docker-managed database
+  mysql-contained: &mysql-base
+    container_name: mysql
+    hostname: db
+    image: mysql/mysql-server:8.0
+    environment:
+      MYSQL_DATABASE: 'db'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'password'
+      MYSQL_ROOT_PASSWORD: 'password'
+      MYSQL_ROOT_HOST: '%'
+    expose:
+      - "3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    # Many default ulimits are just too high
+    # And, so, it will consume way too much memory (16GB+)
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536
+    networks:
+      cdo_network_test:
+      cdo_network:
+
+  mysql:
+    <<: *mysql-base
+    ports:
+      - "3306:3306"
+
+volumes:
+  mysql_data:

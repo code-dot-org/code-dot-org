@@ -63,6 +63,27 @@ module.exports = function (config) {
       {pattern: 'static/**/*', watched: false, included: false, nocache: true},
     ],
 
+    customLaunchers: {
+      // This is for the docker-based development environment
+      // See: ../docker/developers/docker-compose.testing.yml and the
+      // 'js-test' services.
+      'docker-selenium-firefox': {
+        base: 'SeleniumGrid',
+        gridUrl: 'http://selenium:4444/wd/hub',
+        browserName: 'firefox',
+      },
+      'docker-selenium-chrome': {
+        base: 'SeleniumGrid',
+        gridUrl: 'http://selenium:4444/wd/hub',
+        browserName: 'chrome',
+      },
+      'docker-selenium-edge': {
+        base: 'SeleniumGrid',
+        gridUrl: 'http://selenium:4444/wd/hub',
+        browserName: 'edge',
+      },
+    },
+
     // Configures the karma server to map urls to local file paths.
     proxies: {
       // e.g. "requests to /blockly/media/ should be served from ./static/"

@@ -130,6 +130,18 @@ FROM cdo-web AS cdo-test
 
 RUN sudo apt update
 RUN sudo apt install -y libgl1-mesa-dev libosmesa6-dev libpci-dev firefox --no-install-recommends
+RUN sudo apt install -y ssh --no-install-recommends
+
+# Generate a key and allow it to connect to any of our containers
+RUN mkdir /home/cdodev/.ssh
+RUN ssh-keygen -f /home/cdodev/.ssh/id_rsa
+RUN cp /home/cdodev/.ssh/id_rsa.pub /home/cdodev/.ssh/authorized_keys
+
+USER 0
+RUN echo 'PubkeyAuthentication yes' >> /etc/ssh/sshd_config
+RUN echo 'PasswordAuthentication no' >> /etc/ssh/sshd_config
+RUN echo 'StrictHostKeyChecking no' >> /etc/ssh/ssh_config
+USER ${USERNAME}
 
 # AWS Access Environment
 # ----------------------

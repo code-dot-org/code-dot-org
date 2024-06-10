@@ -1,0 +1,307 @@
+include:
+  # Just ensure we include the main web services
+  - path: ./docker-compose.dashboard.yml
+
+  # Selenium infrastructure to allow for local browser testing for our UI tests
+  - path: ./docker-compose.selenium.yml
+
+services:
+  # The base for all test servers
+  test-base: &cdo-test-base
+    image: codedotorg/codedotorg-test
+    build:
+      dockerfile: ./docker/developers/Dockerfile
+      context: ../..
+      target: cdo-test
+      args:
+        UID: ${FIXUID:-1000}
+        GID: ${FIXGID:-1000}
+
+  # This is a testing server environment. It is AWS-less.
+  # It spins up a contained version of the dashboard server accessible by the
+  # Selenium nodes.
+  test:
+    <<: *cdo-test-base
+    container_name: test-web
+    hostname: test-web
+    volumes:
+      - ../..:/app/src
+      - ./locals-container.yml:/app/src/locals.yml
+      - rbenv:/home/cdodev/.rbenv
+      - nvm:/home/cdodev/.nvm
+    depends_on:
+      mysql-contained:
+        condition: service_healthy
+      redis-contained:
+        condition: service_started
+    expose:
+      # The web server port
+      - "3000"
+      # SSH port for remote commands
+      - "22"
+      # Karma test server
+      - "9876"
+    environment:
+      # Ensure the local selenium is used
+      SELENIUM_URL: 'http://selenium:4444/wd/hub'
+    tty: true
+    working_dir: /app/src
+    command: /bin/bash -l -c "./docker/developers/test-entrypoint.sh"
+    healthcheck:
+      test: "curl --fail --head http://localhost:3000/"
+      interval: 2s
+      retries: 100
+      start_period: 30s
+      timeout: 10s
+    networks:
+      cdo_network_test:
+        aliases:
+          - localhost.code.org
+          - localhost-studio.code.org
+          - localhost-hourofcode.org
+
+  # Runs a UI test in Chrome
+  ui-test-chrome: &ui-test-chrome
+    extends:
+      file: ./docker-compose.commands.yml
+      service: shell-isolated
+    volumes:
+      - rbenv:/home/cdodev/.rbenv
+      - ../..:/app/src
+      - ./locals-container.yml:/app/src/locals.yml
+    environment:
+      SELENIUM_URL: 'http://selenium:4444/wd/hub'
+      ECHO_MESSAGE: 'To see the browser session: http://localhost:7910/?autoconnect=1&resize=scale&password=secret (VNC port 5910)'
+    depends_on:
+      selenium-chrome-node:
+        condition: service_started
+      test:
+        condition: service_healthy
+    entrypoint: ['/bin/bash', './docker/developers/run.sh', 'bundle', 'exec', 'rake', 'test:ui']
+    command: []
+    networks:
+      cdo_network_test:
+
+  # Runs a UI test (default is chrome)
+  ui-test:
+    <<: *ui-test-chrome
+
+  # Records a video for the UI test run in Chrome
+  record-ui-test-chrome: &record-ui-test-chrome
+    extends:
+      file: ./docker-compose.commands.yml
+      service: shell-isolated
+    volumes:
+      - rbenv:/home/cdodev/.rbenv
+      - ../..:/app/src
+      - ./locals-container.yml:/app/src/locals.yml
+    environment:
+      SELENIUM_URL: 'http://selenium:4444/wd/hub'
+      ECHO_MESSAGE: 'To see the browser session: http://localhost:7910/?autoconnect=1&resize=scale&password=secret (VNC port 5910)'
+      BEFORE: 'curl -s http://selenium-video:9001/start?FILE_NAME=${NAME:-test-video}.chrome.mp4\&DISPLAY_CONTAINER_NAME=selenium-chrome > /tmp/.selenium-video-pid'
+      AFTER: 'curl -s http://selenium-video:9001/stopall'
+    depends_on:
+      selenium-video:
+        condition: service_started
+      selenium-chrome-node:
+        condition: service_started
+      test:
+        condition: service_healthy
+    entrypoint: ['/bin/bash', './docker/developers/run.sh', 'bundle', 'exec', 'rake', 'test:ui']
+    command: []
+    networks:
+      cdo_network_test:
+
+  # Records a video for the UI test (default is Chrome)
+  record-ui-test:
+    <<: *record-ui-test-chrome
+
+  # Runs a UI test in Firefox
+  ui-test-firefox:
+    extends:
+      file: ./docker-compose.commands.yml
+      service: shell-isolated
+    volumes:
+      - rbenv:/home/cdodev/.rbenv
+      - ../..:/app/src
+      - ./locals-container.yml:/app/src/locals.yml
+    environment:
+      ECHO_MESSAGE: 'To see the browser session: http://localhost:7911/?autoconnect=1&resize=scale&password=secret (VNC port 5911)'
+      SELENIUM_URL: 'http://selenium:4444/wd/hub'
+    depends_on:
+      selenium-firefox-node:
+        condition: service_started
+      test:
+        condition: service_healthy
+    entrypoint: ['/bin/bash', './docker/developers/run.sh', 'bundle', 'exec', 'rake', 'test:ui', 'browser=firefox']
+    command: []
+    networks:
+      cdo_network_test:
+
+  # Records a video for the UI test run in Firefox
+  record-ui-test-firefox:
+    extends:
+      file: ./docker-compose.commands.yml
+      service: shell-isolated
+    volumes:
+      - rbenv:/home/cdodev/.rbenv
+      - ../..:/app/src
+      - ./locals-container.yml:/app/src/locals.yml
+    environment:
+      SELENIUM_URL: 'http://selenium:4444/wd/hub'
+      ECHO_MESSAGE: 'To see the browser session: http://localhost:7911/?autoconnect=1&resize=scale&password=secret (VNC port 5911)'
+      BEFORE: 'curl -s http://selenium-video:9001/start?FILE_NAME=${NAME:-test-video}.firefox.mp4\&DISPLAY_CONTAINER_NAME=selenium-firefox > /tmp/.selenium-video-pid'
+      AFTER: 'curl -s http://selenium-video:9001/stopall'
+    depends_on:
+      selenium-video:
+        condition: service_started
+      selenium-firefox-node:
+        condition: service_started
+      test:
+        condition: service_healthy
+    entrypoint: ['/bin/bash', './docker/developers/run.sh', 'bundle', 'exec', 'rake', 'test:ui', 'browser=firefox']
+    command: []
+    networks:
+      cdo_network_test:
+
+  # Runs a UI test in Microsoft Edge
+  ui-test-edge:
+    extends:
+      file: ./docker-compose.commands.yml
+      service: shell-isolated
+    volumes:
+      - rbenv:/home/cdodev/.rbenv
+      - ../..:/app/src
+      - ./locals-container.yml:/app/src/locals.yml
+    environment:
+      ECHO_MESSAGE: 'To see the browser session: http://localhost:7912/?autoconnect=1&resize=scale&password=secret (VNC port 5912)'
+      SELENIUM_URL: 'http://selenium:4444/wd/hub'
+    depends_on:
+      selenium-edge-node:
+        condition: service_started
+      test:
+        condition: service_healthy
+    entrypoint: ['/bin/bash', './docker/developers/run.sh', 'bundle', 'exec', 'rake', 'test:ui', 'browser=edge']
+    command: []
+    networks:
+      cdo_network_test:
+
+  # Records a video for the UI test run in Microsoft Edge
+  record-ui-test-edge:
+    extends:
+      file: ./docker-compose.commands.yml
+      service: shell-isolated
+    volumes:
+      - rbenv:/home/cdodev/.rbenv
+      - ../..:/app/src
+      - ./locals-container.yml:/app/src/locals.yml
+    environment:
+      SELENIUM_URL: 'http://selenium:4444/wd/hub'
+      ECHO_MESSAGE: 'To see the browser session: http://localhost:7912/?autoconnect=1&resize=scale&password=secret (VNC port 5912)'
+      BEFORE: 'curl -s http://selenium-video:9001/start?FILE_NAME=${NAME:-test-video}.edge.mp4\&DISPLAY_CONTAINER_NAME=selenium-edge > /tmp/.selenium-video-pid'
+      AFTER: 'curl -s http://selenium-video:9001/stopall'
+    depends_on:
+      selenium-video:
+        condition: service_started
+      selenium-edge-node:
+        condition: service_started
+      test:
+        condition: service_healthy
+    entrypoint: ['/bin/bash', './docker/developers/run.sh', 'bundle', 'exec', 'rake', 'test:ui', 'browser=edge']
+    command: []
+    networks:
+      cdo_network_test:
+
+  # Runs a Ruby-land dashboard unit test
+  unit-test:
+    extends:
+      file: ./docker-compose.commands.yml
+      service: shell-isolated
+    volumes:
+      - rbenv:/home/cdodev/.rbenv
+      - ../..:/app/src
+      - ./locals-container.yml:/app/src/locals.yml
+    tty: false
+    working_dir: /app/src/dashboard
+    entrypoint: ['/bin/bash', '../docker/developers/run.sh', 'bundle', 'exec', 'spring', 'testunit']
+    command: []
+    networks:
+      cdo_network_test:
+
+  # Runs a JavaScript browser-less (Jest) unit test
+  js-test:
+    extends:
+      file: ./docker-compose.commands.yml
+      service: shell-isolated
+    volumes:
+      - nvm:/home/cdodev/.nvm
+      - ../..:/app/src
+    tty: false
+    hostname: js-test
+    working_dir: /app/src/apps
+    entrypoint: ['/bin/bash', '../docker/developers/run.sh', 'yarn', 'test:unit', '--browser=FirefoxHeadless']
+    command: []
+    depends_on:
+      selenium-chrome-node:
+        condition: service_started
+    networks:
+      cdo_network_test:
+
+  # Runs a test remotely using a browser instance
+  # This is an odd case because the karma tests use the localhost-studio.code.org
+  # hostname and only the `test` container is mapped to that. So... we need to
+  # run the karma process on that container.
+  js-browser-test-chrome: &cdo-js-browser-test-chrome
+    hostname: js-browser-test-chrome
+    container_name: js-browser-test-chrome
+    build:
+      dockerfile: ./docker/developers/Dockerfile
+      context: ../..
+      target: cdo-test
+      args:
+        UID: ${FIXUID:-1000}
+        GID: ${FIXGID:-1000}
+    volumes:
+      - ../..:/app/src
+    environment:
+      # This is used in the 'run.sh' script to prepend to any argument that looks like a path
+      PATH_ARG_OPTION: '--entry='
+      HOST_PWD: ${PWD}
+    working_dir: /app/src
+    entrypoint: ['/bin/bash', './docker/developers/run.sh', 'ssh', 'test-web', 'WORKING_DIR=/app/src/apps', '/app/src/docker/developers/run.sh', 'yarn', 'test:unit', '--browser=docker-selenium-chrome']
+    command: []
+    depends_on:
+      test:
+        condition: service_healthy
+      selenium-chrome-node:
+        condition: service_started
+    networks:
+      cdo_network_test:
+
+  # Do that same complicated process, but with Firefox
+  js-browser-test-firefox:
+    <<: *cdo-js-browser-test-chrome
+    hostname: js-browser-test-firefox
+    container_name: js-browser-test-firefox
+    entrypoint: ['/bin/bash', './docker/developers/run.sh', 'ssh', 'test-web', 'WORKING_DIR=/app/src/apps', '/app/src/docker/developers/run.sh', 'yarn', 'test:unit', '--browser=docker-selenium-firefox']
+    depends_on:
+      test:
+        condition: service_started
+      selenium-firefox-node:
+        condition: service_started
+
+  # Do that same complicated process, but with Microsoft Edge
+  js-browser-test-edge:
+    <<: *cdo-js-browser-test-chrome
+    hostname: js-browser-test-edge
+    container_name: js-browser-test-edge
+    entrypoint: ['/bin/bash', './docker/developers/run.sh', 'ssh', 'test-web', 'WORKING_DIR=/app/src/apps', '/app/src/docker/developers/run.sh', 'yarn', 'test:unit', '--browser=docker-selenium-edge']
+    depends_on:
+      test:
+        condition: service_started
+      selenium-edge-node:
+        condition: service_started
+
+  # Chrome is the default
+  js-browser-test:
+    <<: *cdo-js-browser-test-chrome

@@ -1,0 +1,3 @@
+# Ignore bash/irb/etc histories that we map into docker environments
+.bash_history
+.irb_history

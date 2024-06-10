@@ -9015,6 +9015,7 @@ __metadata:
     karma-junit-reporter: ^2.0.1
     karma-mocha: ^2.0.1
     karma-mocha-reporter: ^2.2.5
+    karma-selenium-grid-launcher: ^0.3.0
     karma-sourcemap-loader: ^0.4.0
     karma-webpack: ^5.0.0
     lazysizes: ^4.0.0-rc1
@@ -18557,7 +18558,7 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"jszip@npm:3.10.1":
+"jszip@npm:3.10.1, jszip@npm:^3.10.1":
   version: 3.10.1
   resolution: "jszip@npm:3.10.1"
   dependencies:
@@ -18626,6 +18627,15 @@ es6-shim@latest:
   dependencies:
     minimist: ^1.2.3
   checksum: a09f4758758a899fb97836660624ccd1769325e05f6efca63c9132806cc8dfeb20eaf78b3bc4db7921dcb3c48384fbfd5cddfa3568ddaf00197c75852ec9b480
+  languageName: node
+  linkType: hard
+
+"karma-selenium-grid-launcher@npm:^0.3.0":
+  version: 0.3.0
+  resolution: "karma-selenium-grid-launcher@npm:0.3.0"
+  dependencies:
+    selenium-webdriver: ^4.0.0-alpha.1
+  checksum: 3b060882108fc4221f5cef608c7f81f81d59d559835dd28a235dab6e8b062cac03ec00f44198092af56b4f5e9f48835f47ce7ebf7431a162a049bae615a1c913
   languageName: node
   linkType: hard
 
@@ -25131,6 +25141,17 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
+"selenium-webdriver@npm:^4.0.0-alpha.1":
+  version: 4.21.0
+  resolution: "selenium-webdriver@npm:4.21.0"
+  dependencies:
+    jszip: ^3.10.1
+    tmp: ^0.2.3
+    ws: ">=8.16.0"
+  checksum: 9d6bd5337580d7f47cafc60df719c6fca5e8bba0ce1e1920da5ba06d8372533300e4b955cd50f1e35e8775d8e74c744a2c11e71f5920dec8362fbcb8910ad202
+  languageName: node
+  linkType: hard
+
 "selfsigned@npm:^2.4.1":
   version: 2.4.1
   resolution: "selfsigned@npm:2.4.1"
@@ -26995,7 +27016,7 @@ temporal@latest:
   languageName: node
   linkType: hard
 
-"tmp@npm:^0.2.1":
+"tmp@npm:^0.2.1, tmp@npm:^0.2.3":
   version: 0.2.3
   resolution: "tmp@npm:0.2.3"
   checksum: 73b5c96b6e52da7e104d9d44afb5d106bb1e16d9fa7d00dbeb9e6522e61b571fbdb165c756c62164be9a3bbe192b9b268c236d370a2a0955c7689cd2ae377b95
@@ -29178,6 +29199,21 @@ temporal@latest:
     imurmurhash: ^0.1.4
     signal-exit: ^4.0.1
   checksum: 8dbb0e2512c2f72ccc20ccedab9986c7d02d04039ed6e8780c987dc4940b793339c50172a1008eed7747001bfacc0ca47562668a069a7506c46c77d7ba3926a9
+  languageName: node
+  linkType: hard
+
+"ws@npm:>=8.16.0":
+  version: 8.17.0
+  resolution: "ws@npm:8.17.0"
+  peerDependencies:
+    bufferutil: ^4.0.1
+    utf-8-validate: ">=5.0.2"
+  peerDependenciesMeta:
+    bufferutil:
+      optional: true
+    utf-8-validate:
+      optional: true
+  checksum: 147ef9eab0251364e1d2c55338ad0efb15e6913923ccbfdf20f7a8a6cb8f88432bcd7f4d8f66977135bfad35575644f9983201c1a361019594a4e53977bf6d4e
   languageName: node
   linkType: hard
 

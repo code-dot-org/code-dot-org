@@ -22,18 +22,18 @@ fi
 
 # Determine the desired node version
 NODE_VERSION=`jq -r .engines.node < apps/package.json | sed "s/[\^]//g"`
-echo "Installing node v${NODE_VERSION}"
+echo " - Installing node v${NODE_VERSION}"
 nvm install ${NODE_VERSION}
 nvm alias default ${NODE_VERSION}
 nvm use default
 
 # Install the correct version of NPM
 NPM_VERSION=`jq -r .engines.npm < apps/package.json | sed "s/[\^]//g"`
-echo "Installing npm v${NPM_VERSION}"
+echo " - Installing npm v${NPM_VERSION}"
 npm install -g npm@${NPM_VERSION}
 
 # Install Yarn
 YARN_NPM_VERSION=1.22.19
 YARN_VERSION=`jq -r .packageManager < apps/package.json | sed "s/^yarn@//" | sed "s/[\^]//g"`
-echo "Installing yarn v${YARN_NPM_VERSION} (bootstrapped from npm)"
+echo " - Installing yarn v${YARN_NPM_VERSION} (bootstrapped from npm)"
 npm i -g yarn@${YARN_NPM_VERSION}

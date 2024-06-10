@@ -1,0 +1,180 @@
+include:
+  - path: ./docker-compose.networks.yml
+
+services:
+  # A Selenium grid hub that will run *-node services that are described below
+  selenium-grid:
+    image: selenium/hub
+    container_name: selenium-hub
+    hostname: selenium
+    expose:
+      # The Selenium 'Publish' port
+      - "4442:4442"
+      # The Selenium 'Subscribe' port
+      - "4443:4443"
+      # The Protocol port that our testing infrastructure connects to
+      - "4444:4444"  
+    environment: &selenium-grid-environment
+      SE_EVENT_BUS_HOST: selenium-hub
+      SE_EVENT_BUS_PUBLISH_PORT: 4442
+      SE_EVENT_BUS_SUBSCRIBE_PORT: 4443
+    ulimits: &selenium-ulimits
+      nofile:
+        soft: 32768
+        hard: 32768
+    networks:
+      cdo_network_test:
+
+  selenium-video:
+    container_name: selenium-video
+    hostname: selenium-video
+    image: codedotorg/selenium-video
+    build:
+      dockerfile: ./selenium-video.Dockerfile
+      context: ./selenium-video
+    environment:
+      DISPLAY_CONTAINER_NAME: selenium-chrome
+    volumes:
+      - /tmp:/videos
+    networks:
+      cdo_network_test:
+
+  # A Selenium server running Chrome for running UI tests contained in Docker
+  selenium-chrome-base: &selenium-chrome-base
+    container_name: selenium-chrome
+    hostname: selenium
+    image: seleniarm/standalone-chromium:latest
+    environment:
+      JAVA_OPTS: -Dwebdriver.chrome.whitelistedIps= -Dwebdriver.chrome.allowedIps=
+    shm_size: '2gb'
+    expose: &selenium-exposed-ports
+      - "5900" # The selenium direct VNC port
+      - "4444" # The selenium router port
+      - "7900" # The selenium NoVNC service port
+    # Many default ulimits are just too high
+    # And, so, it will consume way too much memory (16GB+)
+    ulimits: *selenium-ulimits
+
+  selenium-chrome-contained:
+    <<: *selenium-chrome-base
+    networks:
+      cdo_network_test:
+
+  # A Selenium server running Chrome for running UI tests locally
+  selenium-chrome:
+    <<: *selenium-chrome-base
+    network_mode: host
+    ports:
+      - "5910:5900" # The selenium direct VNC port
+      - "4444:4444" # The selenium router port
+      - "7910:7900" # The selenium NoVNC service port
+
+  # A Selenium server that connects through the selenium grid
+  selenium-chrome-node:
+    hostname: chrome
+    container_name: selenium-chrome
+    image: selenium/node-chrome
+    shm_size: 2gb
+    depends_on:
+      selenium-grid:
+        condition: service_started
+    environment:
+      <<: *selenium-grid-environment
+      JAVA_OPTS: -Dwebdriver.chrome.whitelistedIps= -Dwebdriver.chrome.allowedIps=
+    expose: *selenium-exposed-ports
+    ports:
+      - "5910:5900"
+      - "7910:7900"
+    ulimits: *selenium-ulimits
+    networks:
+      cdo_network_test:
+
+  # A Selenium server running Firefox for running UI tests contained in Docker
+  selenium-firefox-base: &selenium-firefox-base
+    container_name: selenium-firefox
+    hostname: selenium
+    image: seleniarm/standalone-firefox:latest
+    shm_size: '2gb'
+    expose: *selenium-exposed-ports
+    ports:
+      - "5911:5900" # The selenium direct VNC port
+      - "7911:7900" # The selenium NoVNC service port
+    ulimits: *selenium-ulimits
+
+  selenium-firefox-contained:
+    <<: *selenium-firefox-base
+    networks:
+      cdo_network_test:
+
+  # A Selenium server running Firefox for running UI tests locally
+  selenium-firefox:
+    <<: *selenium-firefox-base
+    ports:
+      - "5911:5900" # The selenium direct VNC port
+      - "4444:4444" # The selenium router port
+      - "7911:7900" # The selenium NoVNC service port
+    network_mode: host
+
+  # A Selenium server that connects through the selenium grid
+  selenium-firefox-node:
+    hostname: firefox
+    container_name: selenium-firefox
+    image: selenium/node-firefox
+    shm_size: 2gb
+    depends_on:
+      selenium-grid:
+        condition: service_started
+    environment:
+      <<: *selenium-grid-environment
+    ports:
+      - "5911:5900"
+      - "7911:7900"
+    expose: *selenium-exposed-ports
+    ulimits: *selenium-ulimits
+    networks:
+      cdo_network_test:
+
+  # A Selenium server running Edge for running UI tests contained in Docker
+  selenium-edge-base: &selenium-edge-base
+    container_name: selenium-edge
+    hostname: selenium
+    image: selenium/standalone-edge:latest
+    expose: *selenium-exposed-ports
+    ports:
+      - "5912:5900"
+      - "7912:7900"
+    shm_size: '2gb'
+    ulimits: *selenium-ulimits
+
+  selenium-edge-contained:
+    <<: *selenium-edge-base
+    networks:
+      cdo_network_test:
+
+  # A Selenium server running Firefox for running UI tests locally
+  selenium-edge:
+    <<: *selenium-edge-base
+    ports:
+      - "5912:5900" # The selenium direct VNC port
+      - "4444:4444" # The selenium router port
+      - "7912:7900" # The selenium NoVNC service port
+    network_mode: host
+
+  # A Selenium server that connects through the selenium grid
+  selenium-edge-node:
+    hostname: edge
+    container_name: selenium-edge
+    image: selenium/node-edge
+    shm_size: 2gb
+    depends_on:
+      selenium-grid:
+        condition: service_started
+    environment:
+      <<: *selenium-grid-environment
+    ports:
+      - "5912:5900"
+      - "7912:7900"
+    expose: *selenium-exposed-ports
+    ulimits: *selenium-ulimits
+    networks:
+      cdo_network_test:

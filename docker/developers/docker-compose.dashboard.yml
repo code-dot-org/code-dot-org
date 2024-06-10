@@ -1,0 +1,61 @@
+include:
+  - path: ./docker-compose.mysql.yml
+  - path: ./docker-compose.redis.yml
+  - path: ./docker-compose.networks.yml
+
+services:
+  # The base for all dashboard servers
+  web-base: &cdo-web-base
+    image: codedotorg/codedotorg-test
+    build:
+      dockerfile: ./docker/developers/Dockerfile
+      context: ../..
+      target: cdo-web
+      args:
+        UID: ${FIXUID:-1000}
+        GID: ${FIXGID:-1000}
+    cap_add:
+      - SYS_PTRACE
+    working_dir: /app/src
+
+  # Spins up a dashboard server with contributor access
+  web: &cdo-web
+    <<: *cdo-web-base
+    hostname: web
+    container_name: web
+    environment:
+      HOST_PWD: ${PWD}
+    volumes:
+      - rbenv:/home/cdodev/.rbenv
+      - nvm:/home/cdodev/.nvm
+      - ../..:/app/src
+      - ./locals-container.yml:/app/src/locals.yml
+    ports:
+      - "3000:3000"
+    depends_on:
+      mysql-contained:
+        condition: service_healthy
+      redis-contained:
+        condition: service_started
+    tty: true
+    command: /bin/bash -l -c './bin/dashboard-server'
+    networks:
+      cdo_network:
+
+  # This adds an AWS credential into the environment
+  web-aws:
+    <<: *cdo-web
+    environment:
+      AWS_PROFILE: 'cdo'
+    volumes:
+      - rbenv:/home/cdodev/.rbenv
+      - nvm:/home/cdodev/.nvm
+      - ../..:/app/src
+      - ~/.aws:/home/cdodev/.aws
+
+volumes:
+  # Holds the ruby interpreter and our gemset
+  rbenv:
+
+  # Holds nvm and our global node binaries
+  nvm:

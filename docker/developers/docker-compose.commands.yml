@@ -1,0 +1,102 @@
+services:
+  # Just run a bash shell with/without AWS access
+  # The 'shell-isolated' container has no connections to other services
+  shell-isolated: &command-isolated-base
+    extends:
+      file: docker-compose.dashboard.yml
+      service: web-base
+    command: /bin/bash -l
+  shell: &command-base
+    extends:
+      file: docker-compose.dashboard.yml
+      service: web
+    volumes: &common-shell-volumes
+      - ./.bash_history:/home/cdodev/.bash_history
+      - ./.irb_history:/home/cdodev/.irb_history
+    command: /bin/bash -l
+  shell-aws: &command-aws-base
+    extends:
+      file: docker-compose.dashboard.yml
+      service: web-aws
+    volumes: *common-shell-volumes
+    command: /bin/bash -l
+
+  # Spins up an environment to authenticate a Code.org staff engineer's
+  # AWS credentials.
+  aws-access:
+    <<: *command-aws-base
+    command: /bin/bash -l -c "./bin/aws_access"
+
+  # Spins up a dashboard server console with contributor access
+  console:
+    <<: *command-base
+    command: /bin/bash -l -c './bin/dashboard-console'
+  console-aws:
+    <<: *command-aws-base
+    command: /bin/bash -l -c './bin/dashboard-console'
+
+  # Open the MySQL client on the web instance to connect to the database
+  # service running in the other container.
+  mysql-client-admin:
+    <<: *command-base
+    command: /bin/bash -l -c './bin/mysql-client-admin'
+
+  # Run the 'rake install' step with/without AWS
+  install:
+    <<: *command-base
+    command: /bin/bash -i -c "bundle exec rake install"
+  install-aws:
+    <<: *command-aws-base
+    command: /bin/bash -i -c "bundle exec rake install"
+
+  # Run the 'rake build' step with/without AWS
+  build:
+    <<: *command-base
+    command: /bin/bash -i -c "bundle exec rake build"
+  build-aws:
+    <<: *command-aws-base
+    command: /bin/bash -i -c "bundle exec rake build"
+
+  # Run any rake task
+  rake:
+    <<: *command-base
+    entrypoint: ['/bin/bash', './docker/developers/run.sh', 'rake']
+    command: ['--tasks']
+
+  # Run any rake task within the dashboard project
+  dashboard-rake:
+    <<: *command-base
+    working_dir: /app/src/dashboard
+    entrypoint: ['/bin/bash', '../docker/developers/run.sh', 'rake']
+    command: ['--tasks']
+
+  # Run any rake task within the pegasus project
+  pegasus-rake:
+    <<: *command-base
+    working_dir: /app/src/pegasus
+    entrypoint: ['/bin/bash', '../docker/developers/run.sh', 'rake']
+    command: ['--tasks']
+
+  # Run any database migrations
+  migrations:
+    <<: *command-base
+    command: /bin/bash -l -c 'cd dashboard && ../docker/developers/run.sh bundle exec rake db:migrate && RAILS_ENV=test ../docker/developers/run.sh bundle exec rake db:migrate && cd ../pegasus && ../docker/developers/run.sh bundle exec rake db:migrate'
+
+  # Builds the JavaScript for the site
+  build-js:
+    <<: *command-isolated-base
+    volumes:
+      - nvm:/home/cdodev/.nvm
+      - ../..:/app/src
+    working_dir: /app/src/apps
+    command: /bin/bash -l -c '../docker/developers/run.sh yarn build'
+
+  # Runs a server that watches for changes made to JS code and rebuilds on update
+  build-js-server:
+    <<: *command-isolated-base
+    volumes:
+      - nvm:/home/cdodev/.nvm
+      - ../..:/app/src
+    tty: false
+    working_dir: /app/src/apps
+    command: /bin/bash -l -c '../docker/developers/run.sh yarn start'

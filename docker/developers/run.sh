@@ -18,6 +18,11 @@ eval "$(rbenv init -)"
 # init nvm
 . ${HOME}/.nvm/nvm.sh
 
+# If we are meant to go into a particular directory, do so
+if [[ ! -z "${WORKING_DIR}" ]]; then
+  cd ${WORKING_DIR}
+fi
+
 # Convert any path argument to a path absolute to the base /app/src path
 find_absolute_path()
 {
@@ -41,6 +46,7 @@ find_absolute_path()
     CHECK="${CHECK_ROOT}/${subpath}/${REL_PATH}${item}"
     if [ -e "${CHECK}" ]; then
       RESULT=`realpath "${CHECK}"`
+      RESULT="${PATH_ARG_OPTION}${RESULT}"
       return
     fi
     REL_PATH="${subpath}/${REL_PATH}"
@@ -58,5 +64,21 @@ for item in "${@}"; do
   fi
 done
 
+if [[ ! -z "${BEFORE}" ]]; then
+  echo running \""${BEFORE}"\" before
+  eval "${BEFORE}"
+fi
+
+if [[ ! -z "${ECHO_MESSAGE}" ]]; then
+  echo
+  echo "${ECHO_MESSAGE}"
+  echo
+fi
+
 echo running \""${cmd}"\"
 eval "${cmd[@]}"
+
+if [[ ! -z "${AFTER}" ]]; then
+  echo running \""${AFTER}"\" to finalize
+  eval "${AFTER}"
+fi
