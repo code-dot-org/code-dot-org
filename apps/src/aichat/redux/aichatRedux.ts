@@ -25,6 +25,7 @@ import {postAichatCompletionMessage} from '../aichatCompletionApi';
 import {
   AiCustomizations,
   ChatCompletionMessage,
+  AichatCompletionMessage,
   AichatContext,
   FieldVisibilities,
   LevelAichatSettings,
@@ -36,6 +37,7 @@ import {
 } from '../types';
 import {
   allFieldsHidden,
+  decorateMessageFromModelResponse,
   findChangedProperties,
   getNewMessageId,
   getCurrentTime,
@@ -259,22 +261,6 @@ export const onSaveFail = () => (dispatch: AppDispatch) => {
   dispatch(endSave());
 };
 
-type AichatCompletionMessage = {
-  role: Role;
-  chatMessageText: string;
-  status: string;
-};
-
-const decorateMessage = (
-  responseMessage: AichatCompletionMessage
-): ChatCompletionMessage => {
-  return {
-    ...responseMessage,
-    id: getNewMessageId(),
-    timestamp: getCurrentTimestamp(),
-  };
-};
-
 // This thunk's callback function submits a user's chat content and AI customizations to
 // the chat completion endpoint, then waits for a chat completion response, and updates
 // the user messages.
@@ -359,7 +345,9 @@ export const submitChatContents = createAsyncThunk(
 
     thunkAPI.dispatch(clearChatMessagePending());
     chatApiResponse?.messages.forEach((message: AichatCompletionMessage) =>
-      thunkAPI.dispatch(addChatMessage(decorateMessage(message)))
+      thunkAPI.dispatch(
+        addChatMessage(decorateMessageFromModelResponse(message))
+      )
     );
   }
 );
@@ -372,7 +360,7 @@ const aichatSlice = createSlice({
       state.chatMessagesCurrent.push(action.payload);
     },
     removeUpdateMessage: (state, action: PayloadAction<number>) => {
-      const modelUpdateMessageInfo = findModelUpdateMessage(
+      const modelUpdateMessageInfo = getUpdateMessageLocation(
         action.payload,
         state
       );
@@ -517,7 +505,7 @@ const aichatSlice = createSlice({
   },
 });
 
-const findModelUpdateMessage = (
+const getUpdateMessageLocation = (
   id: number,
   state: AichatState
 ): MessageLocation | undefined => {

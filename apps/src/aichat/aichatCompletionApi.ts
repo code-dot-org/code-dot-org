@@ -1,11 +1,12 @@
+import HttpClient from '@cdo/apps/util/HttpClient';
+
+import {trimMessageForModelInput} from './redux/utils';
 import {
-  Role,
   ChatCompletionMessage,
   AiCustomizations,
   AichatContext,
   AichatModelCustomizations,
 } from './types';
-import HttpClient from '@cdo/apps/util/HttpClient';
 
 const CHAT_COMPLETION_URL = '/aichat/chat_completion';
 
@@ -27,9 +28,9 @@ export async function postAichatCompletionMessage(
     retrievalContexts: aiCustomizations.retrievalContexts,
     systemPrompt: aiCustomizations.systemPrompt,
   };
-  const storedMessages = messagesToSend.map(formatMessageForAichatCompletion);
+  const storedMessages = messagesToSend.map(trimMessageForModelInput);
   const payload = {
-    newMessage: formatMessageForAichatCompletion(newMessage),
+    newMessage: trimMessageForModelInput(newMessage),
     storedMessages,
     aichatModelCustomizations,
     aichatContext,
@@ -46,19 +47,3 @@ export async function postAichatCompletionMessage(
 
   return await response.json();
 }
-
-const formatMessageForAichatCompletion = (
-  message: ChatCompletionMessage
-): AichatCompletionMessage => {
-  return {
-    role: message.role,
-    chatMessageText: message.chatMessageText,
-    status: message.status,
-  };
-};
-
-type AichatCompletionMessage = {
-  role: Role;
-  chatMessageText: string;
-  status: string;
-};

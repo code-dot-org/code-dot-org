@@ -12,6 +12,11 @@ export type ChatCompletionMessage = {
   timestamp?: string;
 };
 
+export type AichatCompletionMessage = Pick<
+  ChatCompletionMessage,
+  'role' | 'chatMessageText' | 'status'
+>;
+
 type ChatMessageSuffix = {
   text: string;
   boldtypeText?: string;
