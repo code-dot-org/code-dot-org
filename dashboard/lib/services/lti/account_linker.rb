@@ -1,3 +1,5 @@
+require 'metrics/events'
+
 module Services
   module Lti
     class AccountLinker < Services::Base
@@ -17,6 +19,18 @@ module Services
           PartialRegistration.delete(session)
           rehydrated_user.destroy if rehydrated_user.id
         end
+
+        lti_integration = user.lti_user_identities.first.lti_integration
+        metadata = {
+          'lms_name' => lti_integration[:platform_name],
+          'lms_client_id' => lti_integration[:client_id],
+          'login_type' => user.primary_contact_info&.credential_type,
+        }
+        Metrics::Events.log_event(
+          user: user,
+          event_name: 'lti_account_linked',
+          metadata: metadata,
+        )
       end
 
       private def rehydrated_user

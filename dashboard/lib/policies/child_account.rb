@@ -27,19 +27,7 @@ class Policies::ChildAccount
   # P20-937 - We had a regression which we have chosen to mitigate by allowing
   # accounts created before the below date to have their lock-out delayed until
   # the CAP policy is set to lockout all users.
-  CPA_CREATED_AT_EXCEPTION_DATE = Date.parse('2024-05-26T00:00:00MST')
-
-  # The individual US State child account policy configuration
-  # max_age: the oldest age of the child at which this policy applies.
-  # start_date: the date on which this policy first went into effect.
-  STATE_POLICY = {
-    'CO' => {
-      name: 'CPA', # Colorado Privacy Act
-      max_age: 12,
-      lockout_date: DateTime.parse(DCDO.get('cpa_schedule', {Cpa::ALL_USER_LOCKOUT => Cpa::ALL_USER_LOCKOUT_DATE.iso8601})[Cpa::ALL_USER_LOCKOUT]),
-      start_date: DateTime.parse(DCDO.get('cpa_schedule', {Cpa::NEW_USER_LOCKOUT => Cpa::NEW_USER_LOCKOUT_DATE.iso8601})[Cpa::NEW_USER_LOCKOUT])
-    }
-  }.freeze
+  CPA_CREATED_AT_EXCEPTION_DATE = DateTime.parse('2024-05-26T00:00:00MST')
 
   # The delay is intended to provide notice to a parent
   # when a student may no longer be monitoring the "parent's email."
@@ -65,7 +53,8 @@ class Policies::ChildAccount
   # state missing
   # We use Colorado as it is the only start date we have for now
   def self.user_predates_state_collection?(user)
-    user.created_at < STATE_POLICY['CO'][:start_date]
+    # The date is the same as when CPA first started.
+    user.created_at < state_policies['CO'][:start_date]
   end
 
   # 'cap-state-modal-rollout' should be a value in the range [0,100]
@@ -132,12 +121,29 @@ class Policies::ChildAccount
     end
   end
 
+  def self.state_policies
+    # The individual US State child account policy configuration
+    # name: the name of the policy
+    # max_age: the oldest age of the child at which this policy applies.
+    # lockout_date: the date at which we will begin to lockout all CPA users who
+    # are not in compliance with the policy.
+    # start_date: the date on which this policy first went into effect.
+    {
+      'CO' => {
+        name: 'CPA', # Colorado Privacy Act
+        max_age: 12,
+        lockout_date: DateTime.parse(DCDO.get('cpa_schedule', {})[Cpa::ALL_USER_LOCKOUT] || Cpa::ALL_USER_LOCKOUT_DATE.iso8601),
+        start_date: DateTime.parse(DCDO.get('cpa_schedule', {})[Cpa::NEW_USER_LOCKOUT] || Cpa::NEW_USER_LOCKOUT_DATE.iso8601),
+      }
+    }
+  end
+
   def self.state_policy(user)
     # If the country_code is not set, then us_state value was inherited
     # from the teacher and we don't trust it.
     return unless user.country_code
     return unless user.us_state
-    STATE_POLICY[user.us_state]
+    state_policies[user.us_state]
   end
 
   # Check if parent permission is required for this account according to our
