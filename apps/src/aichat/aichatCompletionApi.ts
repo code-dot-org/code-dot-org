@@ -1,6 +1,6 @@
 import HttpClient from '@cdo/apps/util/HttpClient';
 
-import {trimMessageForModelInput} from './redux/utils';
+import {prepMessageForModelInput} from './redux/utils';
 import {
   ChatCompletionMessage,
   AiCustomizations,
@@ -28,9 +28,9 @@ export async function postAichatCompletionMessage(
     retrievalContexts: aiCustomizations.retrievalContexts,
     systemPrompt: aiCustomizations.systemPrompt,
   };
-  const storedMessages = messagesToSend.map(trimMessageForModelInput);
+  const storedMessages = messagesToSend.map(prepMessageForModelInput);
   const payload = {
-    newMessage: trimMessageForModelInput(newMessage),
+    newMessage: prepMessageForModelInput(newMessage),
     storedMessages,
     aichatModelCustomizations,
     aichatContext,

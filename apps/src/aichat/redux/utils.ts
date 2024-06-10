@@ -83,7 +83,7 @@ export const allFieldsHidden = (fieldVisibilities: FieldVisibilities) =>
 
 // Opposite of decorateMessageFromModelResponse.
 // Preps messages to send to model for response.
-export const trimMessageForModelInput = (
+export const prepMessageForModelInput = (
   message: ChatCompletionMessage
 ): AichatCompletionMessage => {
   return {
