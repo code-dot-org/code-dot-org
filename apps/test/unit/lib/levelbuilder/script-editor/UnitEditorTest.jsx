@@ -492,6 +492,77 @@ describe('UnitEditor', () => {
       $.ajax.restore();
     });
 
+    it('shows error when published state is preview or stable and device compatibility JSON is null', () => {
+      sinon.stub($, 'ajax');
+      const wrapper = createWrapper({hasCourse: true});
+
+      const unitEditor = wrapper.find('UnitEditor');
+      unitEditor.setState({
+        publishedState: PublishedState.stable,
+        courseOfferingDeviceCompatibilities: null,
+      });
+
+      const saveBar = wrapper.find('SaveBar');
+
+      const saveAndKeepEditingButton = saveBar.find('button').at(1);
+      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+        .true;
+      saveAndKeepEditingButton.simulate('click');
+
+      expect($.ajax).to.not.have.been.called;
+
+      expect(unitEditor.state().isSaving).to.equal(false);
+      expect(unitEditor.state().error).to.equal(
+        'Please set all device compatibilities in order to save with published state as preview or stable.'
+      );
+
+      expect(
+        wrapper
+          .find('.saveBar')
+          .contains(
+            'Error Saving: Please set all device compatibilities in order to save with published state as preview or stable.'
+          )
+      ).to.be.true;
+
+      $.ajax.restore();
+    });
+
+    it('shows error when published state is preview or stable and at least one device compatibility is not set', () => {
+      sinon.stub($, 'ajax');
+      const wrapper = createWrapper({hasCourse: true});
+
+      const unitEditor = wrapper.find('UnitEditor');
+      unitEditor.setState({
+        publishedState: PublishedState.stable,
+        courseOfferingDeviceCompatibilities:
+          '{"computer":"","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}',
+      });
+
+      const saveBar = wrapper.find('SaveBar');
+
+      const saveAndKeepEditingButton = saveBar.find('button').at(1);
+      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+        .true;
+      saveAndKeepEditingButton.simulate('click');
+
+      expect($.ajax).to.not.have.been.called;
+
+      expect(unitEditor.state().isSaving).to.equal(false);
+      expect(unitEditor.state().error).to.equal(
+        'Please set all device compatibilities in order to save with published state as preview or stable.'
+      );
+
+      expect(
+        wrapper
+          .find('.saveBar')
+          .contains(
+            'Error Saving: Please set all device compatibilities in order to save with published state as preview or stable.'
+          )
+      ).to.be.true;
+
+      $.ajax.restore();
+    });
+
     it('saves successfully if unit is not a course and only version year is set', () => {
       const wrapper = createWrapper({initialIsCourse: false});
 
