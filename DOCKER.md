@@ -6,6 +6,28 @@
 * Run local UI acceptance tests in either Chrome, Firefox, or Edge browsers locally.
 * Record videos of UI acceptance tests in Chrome, Firefox, or Edge browsers locally.
 
+## Installing Docker
+
+Our Docker development environment requires at least Docker Compose version 2.22 or higher.
+
+To install Docker, consult your package management for your OS. For Ubuntu, for instance,
+install the `docker.io` package:
+
+```shell
+sudo apt update && sudo apt install docker.io
+```
+
+Then, install the `docker compose` plugin manually, as instructed by [this page](https://docs.docker.com/compose/install/linux/)
+or by running the following commands to install a known working version (which requires `curl` to be installed):
+
+```shell
+DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
+mkdir -p $DOCKER_CONFIG/cli-plugins
+curl -SL https://github.com/docker/compose/releases/download/v2.27.0/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
+```
+
+You can inspect that the version is appropriate by running `docker compose version` and inspecting the result.
+
 ## Initial setup
 
 Build the web and test containers takes 15 minutes or so.
