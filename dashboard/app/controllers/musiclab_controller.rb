@@ -41,6 +41,8 @@ class MusiclabController < ApplicationController
     selected_channel_ids = get_selected_channel_ids(params[:channels])
 
     @projects = get_project_details(selected_channel_ids)
+    puts "@projects = #{@projects}"
+    return @projects
   end
 
   # TODO: This is a temporary addition to serve the analytics API key
