@@ -137,6 +137,8 @@ export default class AnalyticsReporter {
     this.identifyObj.set('userType', userType);
     this.identifyObj.set('signInState', signInState);
 
+    identify(this.identifyObj);
+
     this.log(
       `User properties: userId: ${userId}, userType: ${userType}, signInState: ${signInState}`
     );
