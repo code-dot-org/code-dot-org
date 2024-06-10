@@ -20,7 +20,6 @@ module Services
 
         lti_integration = user.lti_user_identities.first.lti_integration
         metadata = {
-          'user_type' => user.user_type,
           'lms_name' => lti_integration[:platform_name],
           'lms_client_id' => lti_integration[:client_id],
           'login_type' => user.primary_contact_info&.credential_type,

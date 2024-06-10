@@ -200,7 +200,6 @@ class LtiV1Controller < ApplicationController
         session[:user_return_to] = destination_url
         if DCDO.get('lti_account_linking_enabled', false)
           metadata = {
-            'user_type' => user.user_type,
             'lms_name' => integration[:platform_name],
           }
           Metrics::Events.log_event(
