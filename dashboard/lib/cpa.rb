@@ -48,11 +48,11 @@ module Cpa
     new_user_lockout = DateTime.parse(schedule[Cpa::NEW_USER_LOCKOUT])
     new_user_lockout_warning = DateTime.parse(schedule[Cpa::ALL_USER_LOCKOUT_WARNING])
     all_user_lockout = DateTime.parse(schedule[Cpa::ALL_USER_LOCKOUT])
-    if current_time > all_user_lockout
+    if current_time >= all_user_lockout
       Cpa::ALL_USER_LOCKOUT
-    elsif current_time > new_user_lockout_warning
+    elsif current_time >= new_user_lockout_warning
       Cpa::ALL_USER_LOCKOUT_WARNING
-    elsif current_time > new_user_lockout
+    elsif current_time >= new_user_lockout
       Cpa::NEW_USER_LOCKOUT
     else
       nil
