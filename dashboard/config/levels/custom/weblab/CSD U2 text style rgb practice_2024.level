@@ -1,5 +1,6 @@
 <Weblab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 58,
   "created_at": "2023-11-28T16:58:37.000Z",
   "level_num": "custom",
@@ -7,7 +8,9 @@
   "properties": {
     "long_instructions": "# Using RGB\r\n\r\nExperiment with the RGB values in the CSS style sheet. \r\n\r\n# Do This\r\n1) Find the CSS rule-set in the style sheet that gives the h1 tag its style. Change *only* the first 0 to 255.\r\n* Find the CSS rule-set in the style sheet that gives the p tag its style. Change *only* the second 0 to 255.\r\n* Find the CSS rule-set in the style sheet that gives the h3 tag its style. Change *only* the third 0 to 255.\r\n\r\n::: details [🔎 **Show Me How** 🔍]\r\n\r\n```\r\nh1 {\r\n  color: rgb( 255 , 0, 0);\r\n}\r\nh3 {\r\n  color: rgb( 0 , 0 , 255);\r\n}\r\np {\r\n  color: rgb( 0 , 255, 0);\r\n}\r\n```\r\n\r\n**More resources are in the \"Help and Tips\" tab**\r\n\r\n:::\r\n\r\n<br>\r\n\r\n**Discuss the results with your neighbor:**\r\n1) What did each of those changes do to the color of your HTML components? \r\n* What do you think that means for each of those values in the RGB code?\r\n",
     "instructions_important": "false",
-    "encrypted_examples": "FQhy8gavcPhFoF2CNVAwYajbTr43kJy0CeyWqYwU8eiESVDakidN0tUXtswt\nphHJn7BFRBJtVG4xwgWFZes/6Q==\n",
+    "encrypted_examples": [
+
+    ],
     "hide_share_and_remix": "false",
     "parent_level_id": 23265,
     "name_suffix": "_2024",
@@ -29,8 +32,7 @@
     "thumbnail_url": "https://images.code.org/3bac6caac33a537914df55d840e8b345-image-1588269048057.44.47 AM.png",
     "validation_enabled": "false"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T16:58:37.678+00:00\",\"changed\":[\"cloned from \\\"CSD U2 text style rgb practice_2023\\\"\"],\"cloned_from\":\"CSD U2 text style rgb practice_2023\"},{\"changed_at\":\"2024-02-15 17:30:51 +0000\",\"changed\":[\"encrypted_examples\",\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-16 21:09:42 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T16:58:37.678+00:00\",\"changed\":[\"cloned from \\\"CSD U2 text style rgb practice_2023\\\"\"],\"cloned_from\":\"CSD U2 text style rgb practice_2023\"},{\"changed_at\":\"2024-02-15 17:30:51 +0000\",\"changed\":[\"encrypted_examples\",\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-16 21:09:42 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-31 15:18:30 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>

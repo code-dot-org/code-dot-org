@@ -15,6 +15,7 @@ $default-spacing: 2px;
   min-height: 30px;
   margin-bottom: $default-spacing;
   position: relative;
+  z-index: 1;
 }
 
 .panelContainerHeader-dark {

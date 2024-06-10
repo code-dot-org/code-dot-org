@@ -224,7 +224,7 @@ img.video_thumbnail {
     }
   }
 
-  @media screen and (max-width: 1010px) {
+  @media screen and (max-width: 1023px) {
     .hide_on_tablet {
       display: none !important;
     }
@@ -2423,6 +2423,12 @@ a.download-video {
       background-color: $microsoft_brand_color;
       border-color: $microsoft_brand_color;
     }
+
+    &.with-clever {
+      background-color: $clever_brand_color;
+      border-color: $clever_brand_color;
+      color: $neutral_white;
+    }
   }
 }
 
@@ -4103,9 +4109,36 @@ a {
   }
 }
 
+@keyframes clickable-text-glow-keyframes {
+  0% {
+    color: initial;
+  }
+  50% {
+    color: $light_primary_500;
+  }
+  100% {
+    color: initial;
+  }
+}
+
 #instructions {
   .clickable-text {
     cursor: pointer;
+    position: relative;
+
+    &-with-glow {
+      animation: clickable-text-glow-keyframes 2s ease-in-out;
+
+      &:hover {
+        color: $light_primary_500;
+      }
+    }
+  }
+
+  @for $i from 0 through 4 {
+    .clickable-text-#{$i} {
+      animation-delay: #{$i + 1}s;
+    }
   }
 }
 
