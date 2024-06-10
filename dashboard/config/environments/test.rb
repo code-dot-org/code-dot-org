@@ -91,4 +91,7 @@ Dashboard::Application.configure do
   end
 
   config.experiment_cache_time_seconds = 0
+
+  require 'cdo/rack/cookie_dcdo'
+  config.middleware.insert_after ActionDispatch::RequestId, Rack::CookieDCDO
 end
