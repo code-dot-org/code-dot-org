@@ -48,6 +48,7 @@ module Metrics
 
       def log_event_with_session(session:, event_name:, event_value: nil, metadata: {})
         event_value = event_name if event_value.nil?
+        managed_test_environment = CDO.running_web_application? && CDO.test_system?
         statsig_user = StatsigUser.new({'userID' => session[:statsig_stable_id]})
 
         if CDO.rack_env?(:development)
