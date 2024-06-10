@@ -170,6 +170,12 @@ class LtiV1Controller < ApplicationController
       destination_url = "#{target_link_uri}?#{redirect_params.to_query}"
 
       if user
+        # If this is the user's first login, send them into the account linking flow
+        if user.sign_in_count < 1 && DCDO.get('lti_account_linking_enabled', false)
+          PartialRegistration.persist_attributes(session, user)
+          render 'lti/v1/account_linking/landing', locals: {lti_provider: integration[:platform_name], email: Services::Lti.get_claim(decoded_jwt, :email)} and return
+        end
+
         sign_in user
 
         metadata = {
@@ -181,6 +187,7 @@ class LtiV1Controller < ApplicationController
           event_name: 'lti_user_signin',
           metadata: metadata,
         )
+
         # If on code.org, the user is a student and the LTI has the same user as a teacher, upgrade the student to a teacher.
         if lti_account_type == User::TYPE_TEACHER && user.user_type == User::TYPE_STUDENT
           @form_data = {
