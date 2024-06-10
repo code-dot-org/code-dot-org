@@ -1048,19 +1048,6 @@ def set_cookie(key, value)
   @browser.manage.add_cookie params
 end
 
-def set_cookie_dcdo(key, value)
-  cookie_dcdo =
-    begin
-      JSON.parse(@browser.manage.cookie_named('DCDO').try(:[], :value).presence || '{}')
-    rescue Selenium::WebDriver::Error::NoSuchCookieError
-      {}
-    end
-
-  cookie_dcdo[key] = value
-
-  set_cookie('DCDO', cookie_dcdo.to_json)
-end
-
 Given(/^I set the DCDO key "([^"]*)" to "(.*)"$/) do |key, json|
   begin
     value = JSON.parse(json)
@@ -1068,7 +1055,7 @@ Given(/^I set the DCDO key "([^"]*)" to "(.*)"$/) do |key, json|
     value = json
   end
 
-  set_cookie_dcdo(key, value)
+  set_dcdo(key, value)
 end
 
 And(/^I set the language cookie$/) do
