@@ -97,6 +97,20 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
     ],
     mutator: 'procedure_caller_mutator',
   },
+  {
+    type: 'parameters_get',
+    message0: '%1',
+    args0: [
+      {
+        type: 'field_variable',
+        name: 'VAR',
+        variable: '%{BKY_VARIABLES_DEFAULT_NAME}',
+      },
+    ],
+    output: null,
+    style: 'sprite_blocks',
+    extensions: ['contextMenu_variableSetterGetter'],
+  },
 ]);
 
 // Respond to the click of a call block's edit button
