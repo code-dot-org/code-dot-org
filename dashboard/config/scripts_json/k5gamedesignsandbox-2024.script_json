@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "k5gamedesignsandbox",
-    "serialized_at": "2024-06-06 19:38:49 UTC",
+    "serialized_at": "2024-06-07 20:27:14 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -318,6 +318,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_design_player_independent"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -339,6 +342,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_design_location_independent"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -360,6 +366,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_design_behavior_independent"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -381,6 +390,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_design_two_behaviors_independent"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -402,6 +414,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLpl-k5-2-eventsvideo_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -427,6 +442,30 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
+          "PLgame_design_panel_events_independent"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+      },
+      "level_keys": [
+        "PLgame_design_panel_events_independent"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PLgame_design_event_click_independent"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
           "PLgame_design_event_click_independent"
         ],
         "lesson.key": "lesson-4",
@@ -439,11 +478,14 @@
       ]
     },
     {
-      "chapter": 10,
-      "position": 10,
-      "activity_section_position": 10,
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_design_toolbox_object_independent"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -460,11 +502,14 @@
       ]
     },
     {
-      "chapter": 11,
-      "position": 11,
-      "activity_section_position": 11,
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL game_design_remove_object_independent"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -481,7 +526,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -505,11 +550,14 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLSP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5PLPL"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -526,11 +574,14 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLPLSP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5PLPL"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -547,11 +598,14 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_variables_intro_choices_course-e_independent"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -568,11 +622,14 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_variables_video_intro_independent"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -589,11 +646,14 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_variables_about_panel_independent"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -610,11 +670,14 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_variables_show_independent"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -631,11 +694,14 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_variables_increase_independent"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -652,11 +718,14 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 9,
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_variables_match_course-e_independent"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -673,11 +742,14 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 10,
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_conditional_about_panel_independent"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -694,11 +766,14 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 11,
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_variables_conditional_independent"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -715,11 +790,14 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 12,
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_variables_match_condition_course-e_independent"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -736,7 +814,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -760,11 +838,14 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLenvironmentPL"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -781,11 +862,14 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_development_environment_choices_course-e_independent"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -802,11 +886,14 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_development_sprites_type_panel_independent"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -823,11 +910,14 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_development_environment_type_independent"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -844,11 +934,14 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_development_environment_type2_independent"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -865,11 +958,14 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_development_player_type_panel_independent"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -886,11 +982,14 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_development_player_type_independent"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -907,11 +1006,14 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 9,
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_development_jump_independent"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -928,11 +1030,14 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 10,
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_development_types_independent"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -949,11 +1054,14 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 11,
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_development_matching_course-e_independent"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -970,11 +1078,14 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 12,
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_development_debug_choices_course-e_independent"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -991,7 +1102,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1015,11 +1126,14 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLGamejamPL"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1036,11 +1150,14 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_jam_theme_generator_independent"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1057,11 +1174,14 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_jam_create_plan_course-e_independent"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1078,11 +1198,14 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_jam_play_course-e_independent"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1099,7 +1222,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1124,7 +1247,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1149,7 +1272,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -1174,7 +1297,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -1199,7 +1322,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -1224,7 +1347,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -1339,6 +1462,18 @@
         "level.key": "PLpl-k5-2-eventsvideo_2024",
         "script_level.level_keys": [
           "PLpl-k5-2-eventsvideo_2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PLgame_design_panel_events_independent",
+        "script_level.level_keys": [
+          "PLgame_design_panel_events_independent"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "",

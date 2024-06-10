@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2024-06-06T18:42:40.000Z",
   "level_num": "custom",
@@ -23,7 +24,7 @@
     "encrypted": "false",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "**Try it: Animated sprites using behaviors!** \r\n\r\nBehaviors are actions that happen over and over while the program runs.\r\n\r\n1. Look over the code.\r\n2. Press `Run` to see the sprites in action!\r\n\r\n***\r\n\r\n**Bonus:** Try choosing a few different behaviors!",
+    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\r\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \r\n<b>Behavior Blocks</b> <br>Behavior blocks are a way to bringing your programs to life with words, movement, or even silly comments.\r\n\r\n</p>\r\n</div>\r\n\r\n**Try it: Animated sprites using behaviors!** \r\n\r\nBehaviors are actions that happen over and over while the program runs.\r\n\r\n1. Look over the code.\r\n2. Press `Run` to see the sprites in action!\r\n\r\n***\r\n\r\n**Bonus:** Try choosing a few different behaviors!",
     "submittable": "false",
     "hide_share_and_remix": "true",
     "never_autoplay_video": "false",
@@ -44,10 +45,14 @@
     "validation_code": "if (World.frameCount == 1) {\r\n  addCriteria(function() {\r\n    \r\n    setFailTime(200);\r\n    setDelayTime(200);\r\n    \r\n    return minimumSprites(1); // Check whether or not the student created a sprite.\r\n  }, \"noSprites\");  // Failure message: \"You need to make a sprite.\"\r\n\r\n}\r\ncheck();\r\n",
     "instructions_icon": "fox",
     "hint_prompt_attempts_threshold": "1",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-06-06T18:42:40.525+00:00\",\"changed\":[\"cloned from \\\"game_design_behavior_independent\\\"\"],\"cloned_from\":\"game_design_behavior_independent\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-06-06T18:42:40.525+00:00\",\"changed\":[\"cloned from \\\"game_design_behavior_independent\\\"\"],\"cloned_from\":\"game_design_behavior_independent\"},{\"changed_at\":\"2024-06-07 20:20:55 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-06-07 20:22:38 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>

@@ -3,70 +3,18 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Pedigogical approach 
-
-Pedagogical Approach: Use-Modify-Create 
-The "Use-Modify-Create" approach in computer science education involves three progressive stages to help students develop their programming skills. Initially, students use existing software to understand basic functionality. Next, they modify this software to explore how changes affect outcomes, deepening their understanding of the code's mechanics. Finally, they create their own projects from scratch, applying their acquired skills to design and implement original software. This method supports incremental learning, builds confidence, and mirrors real-world programming practices, making it an effective pedagogical strategy for teaching computer science.
-Use-Modify-Create in Game Design Module 
-In the game design module, students begin by using four pre-created games. 
-
-Then, they will practice coding with variables by modifying and building on existing code.
-
-To complete this lesson, students will have an opportunity to use what they learned to practice and free-play to create a game. 
-
-Let’s get started.
+# Pedagogical Approach: Use-Modify-Create  
+<p align="center">
+  <img src="https://images.code.org/787c345ede31df8f9c792eff29c72f6b-image-1717795118474.png" alt="The three steps in Use/Modify/Create">
+</p>
 
 
-What are Variables?
-Variables store information (data). The value stored in a variable can be updated throughout a program.
+#### The "Use-Modify-Create" approach in computer science education involves three progressive stages to help students develop their programming skills. Initially, students use existing software to understand basic functionality. Next, they modify this software to explore how changes affect outcomes, deepening their understanding of the code's mechanics. Finally, they create their own projects from scratch, applying their acquired skills to design and implement original software. This method supports incremental learning, builds confidence, and mirrors real-world programming practices, making it an effective pedagogical strategy for teaching computer science.
 
+##Use-Modify-Create in Game Design Module 
+####In the game design module, students begin by <b>using</b> four pre-created games. <br></brT>Then, they will practice coding with variables by <b>modifying</b> and building on existing code. <br>To complete this lesson, students will have an opportunity to use what they learned to practice and free-play to <b>create</b> a game. 
 
-
-
-Examples of Variables in Games
-Variables appear in games in a multitude of ways. If you have ever played a game that used player health, score, inventory of items, game time, character position, level status, resources, difficulty settings, or quest progress, you’ve used variables. 
-
-
-
-Games Designed by Students
-Cute food game
-Custom Cheetahs
-Hockey Game (doesn’t work but cool cuz it’s different)
-
-Funny plant game (used the random generator)
-Unicorn Jewels (score goes up and down)
-
-
-
-
-
-Unlock Student Creativity
-https://studio.code.org/projects/game_design/3AEcIRgkRrVBXMURS6637anoDL_92Tg2HZtPURAt3VU
-
-https://studio.code.org/projects/game_design/6IJhNDYPYqow4L4tSOIINTuefj_Qsy5ie1h-hfUdMro/view
-
-https://studio.code.org/projects/game_design/Z8W7yRqpXS29ye2J9sgWcbjdD3-EFmzz8CjPvE2OBtE
-
-https://studio.code.org/projects/game_design/HCreCXs4VSDQW6wkdle7qMsYvs17dE1SuQtnPz3iFR8
-
-
-##### So far, you have learned about players, background, and behaviors. In this lesson, you will learn how to use variables in game design. 
-
-
-<img src="https://images.code.org/1cd0ec71458414495502b9598efd2028-image-1639773441510.37.01 PM.png" alt="Image of AI bot and a model card" style="border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;">
-
-
-## In this lesson, you will:
-
-* ##### Learn about how variables can be used in games. 
-* ##### Practice using variables.
-* ##### Create programs using variables.
-
-
-### **Suggested time:** ??? minutes
-
-
-## Let's get started!
+##Let’s get started.
 
 <div style="clear:both"/>
 

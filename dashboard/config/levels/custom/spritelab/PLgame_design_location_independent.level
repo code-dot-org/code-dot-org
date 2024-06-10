@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2024-06-06T18:42:04.000Z",
   "level_num": "custom",
@@ -23,7 +24,7 @@
     "encrypted": "false",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "**Add more sprites and set their location.**\r\n1. Make another new sprite and choose a costume for player two<img src=\"https://images.code.org/51ad72f6ba72c16b8094566622e310ab-image-1683905416875.gif\" style=\"width: 20%; float: right; padding-top: 20px\">\r\n\r\n\r\n- Click the <code style=\"color:black; background-color:#EBD546\">location pin</code> to move the new sprite \r\n- Press `Run`\r\n\r\n\r\n\r\n",
+    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\r\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \r\n<b>Location Pin</b> <br>While adding your sprite, you may have noticed the X,Y coordinates in the play space. Note that this grid is different from coordinate grids you may have seen in math class. In this grid, the bottom left corner is the starting point, marked as 0,0. As your characters move to the right, the X number gets bigger, and as they go up, the Y number gets bigger.\r\n\r\n\r\n</p>\r\n</div>\r\n\r\n\r\n**Add more sprites and set their location.**\r\n1. Make another new sprite and choose a costume for player two<img src=\"https://images.code.org/51ad72f6ba72c16b8094566622e310ab-image-1683905416875.gif\" style=\"width: 20%; float: right; padding-top: 20px\">\r\n\r\n\r\n- Click the <code style=\"color:black; background-color:#EBD546\">location pin</code> to move the new sprite \r\n- Press `Run`\r\n\r\n\r\n\r\n",
     "submittable": "false",
     "hide_share_and_remix": "true",
     "never_autoplay_video": "true",
@@ -47,8 +48,9 @@
     "video_key": "CSF_SpriteLab_Intro_v2",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-06-06T18:42:04.922+00:00\",\"changed\":[\"cloned from \\\"game_design_location_independent\\\"\"],\"cloned_from\":\"game_design_location_independent\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-06-06T18:42:04.922+00:00\",\"changed\":[\"cloned from \\\"game_design_location_independent\\\"\"],\"cloned_from\":\"game_design_location_independent\"},{\"changed_at\":\"2024-06-07 20:11:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>

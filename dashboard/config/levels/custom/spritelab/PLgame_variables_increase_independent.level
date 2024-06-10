@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2024-06-06T19:18:37.000Z",
   "level_num": "custom",
@@ -25,7 +26,7 @@
     "encrypted": "false",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "**Click the sprite to change the score.**\r\n\r\n1. Add a `change score by 1` under the event `when sprite clicked`  \r\n\r\n- Click the coin after pressing `Run`.  Does the scoreboard change?",
+    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\r\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \r\n<b> Teacher Tip: </b> Point out to students that the name of the variable is “score”. Explain that it is important to choose meaningful labels when naming variables. \r\n</p>\r\n</div>\r\n\r\n\r\n**Click the sprite to change the score.**\r\n\r\n1. Add a `change score by 1` under the event `when sprite clicked`  \r\n\r\n- Click the coin after pressing `Run`.  Does the scoreboard change?",
     "submittable": "false",
     "hide_share_and_remix": "true",
     "never_autoplay_video": "true",
@@ -57,8 +58,9 @@
     "video_key": "variables_sprite_lab_games",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-06-06T19:18:37.502+00:00\",\"changed\":[\"cloned from \\\"game_variables_increase_independent\\\"\"],\"cloned_from\":\"game_variables_increase_independent\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-06-06T19:18:37.502+00:00\",\"changed\":[\"cloned from \\\"game_variables_increase_independent\\\"\"],\"cloned_from\":\"game_variables_increase_independent\"},{\"changed_at\":\"2024-06-07 21:17:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>

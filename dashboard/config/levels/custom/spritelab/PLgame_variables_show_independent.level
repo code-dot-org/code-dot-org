@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2024-06-06T19:18:08.000Z",
   "level_num": "custom",
@@ -24,7 +25,7 @@
     "encrypted": "false",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "**Scoreboard Setup**\r\n\r\n1.  Add `show variable score` block to the `when run` program\r\n- Then connect a `set score to 0` block \r\n\r\n- Press `Run` \r\n\r\nNext, we'll learn how to change the score!",
+    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\r\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \r\n<b>Teacher Tip: </b> If students struggle with the concept of variables, use real-life games as examples. For example, ask students what games they have played with scores, and how the score works in the games. \r\n</p>\r\n</div>  \r\n\r\n\r\n**Scoreboard Setup**\r\n\r\n1.  Add `show variable score` block to the `when run` program\r\n- Then connect a `set score to 0` block \r\n\r\n- Press `Run` \r\n\r\nNext, we'll learn how to change the score!",
     "submittable": "false",
     "hide_share_and_remix": "true",
     "never_autoplay_video": "true",
@@ -55,8 +56,9 @@
     "video_key": "variables_sprite_lab_games",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-06-06T19:18:08.409+00:00\",\"changed\":[\"cloned from \\\"game_variables_show_independent\\\"\"],\"cloned_from\":\"game_variables_show_independent\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-06-06T19:18:08.409+00:00\",\"changed\":[\"cloned from \\\"game_variables_show_independent\\\"\"],\"cloned_from\":\"game_variables_show_independent\"},{\"changed_at\":\"2024-06-07 21:11:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-06-07 21:12:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>

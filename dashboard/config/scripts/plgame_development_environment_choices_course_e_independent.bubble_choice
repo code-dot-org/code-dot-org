@@ -6,3 +6,7 @@ sublevels
 level 'game_mechanics_type_choice1_independent'
 level 'game_new3_environment_choice1_independent'
 level 'game_new3_environment_choice2_independent'
+
+markdown <<MARKDOWN
+
+MARKDOWN

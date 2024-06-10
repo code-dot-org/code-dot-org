@@ -3,7 +3,14 @@ title 'Making Counters'
 
 
 markdown <<MARKDOWN
+<div style="background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "> 
+<b>Teacher Tip:</b> If you have additional time after this lesson, give students an opportunity to iterate on their game based on feedback. 
+</p>
+</div>
+
 ##Time to play some games!
+
 
 <img src="https://images.code.org/876b68692526c02f120244c3ea2f1800-image-1711400418402.jpg" style= "width:40%; display: block; margin: auto;">
 
