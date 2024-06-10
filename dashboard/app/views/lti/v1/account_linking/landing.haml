@@ -1,8 +1,8 @@
 - content_for(:head) do
   :ruby
     script_data = {}
-    script_data[:lti_provider] = params[:lti_provider]
-    script_data[:lti_provider_name] = Policies::Lti::LMS_PLATFORMS[params[:lti_provider].to_sym][:name]
+    script_data[:lti_provider] = lti_provider
+    script_data[:lti_provider_name] = Policies::Lti::LMS_PLATFORMS[lti_provider.to_sym][:name]
     script_data[:new_account_url] = new_user_registration_url
     script_data[:existing_account_url] = CDO.studio_url(user_session_path, CDO.default_scheme)
     script_data[:email] = email
