@@ -366,3 +366,6 @@ gem 'statsig', '~> 1.33'
 
 gem 'mailgun-ruby', '~>1.2.14'
 gem 'mailjet', '~> 1.7.3'
+
+gem 'opentelemetry-instrumentation-all', '~> 0.60.0'
+gem 'opentelemetry-sdk', '~> 1.4'
