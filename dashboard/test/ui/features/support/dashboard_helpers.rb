@@ -9,6 +9,19 @@ module DashboardHelpers
     puts "Requiring rails env took #{finish - start} seconds"
     @rails_loaded = true
   end
+
+  def set_dcdo(key, value)
+    cookie_dcdo =
+      begin
+        JSON.parse(@browser.manage.cookie_named('DCDO').try(:[], :value).presence || '{}')
+      rescue Selenium::WebDriver::Error::NoSuchCookieError
+        {}
+      end
+
+    cookie_dcdo[key] = value
+
+    @browser.manage.add_cookie(name: 'DCDO', value: cookie_dcdo.to_json)
+  end
 end
 
 World(DashboardHelpers)
