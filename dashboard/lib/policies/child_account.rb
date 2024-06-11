@@ -92,8 +92,10 @@ class Policies::ChildAccount
     state_policy(user).try(:[], :lockout_date)
   end
 
-  # Checks if the user is locked out due to non-compliance with CAP.
-  def self.locked_out?(user)
+  # Checks if the user can be locked out due to non-compliance with CAP.
+  def self.lockable?(user)
+    return false if ComplianceState.locked_out?(user)
+
     user_lockout_date = lockout_date(user)
     return false unless user_lockout_date
 
