@@ -11,6 +11,7 @@ import {
   DATE_FORMAT,
   TIME_FORMAT,
 } from '../workshop_dashboard/workshopConstants';
+import {Heading2} from '@cdo/apps/componentLibrary/typography';
 
 class EnrolledWorkshops extends React.Component {
   render() {
@@ -230,7 +231,9 @@ class WorkshopsTable extends React.Component {
         </Modal>
         {this.props.workshops && (
           <section>
-            {this.props.tableHeader && <h2>{this.props.tableHeader}</h2>}
+            {this.props.tableHeader && (
+              <Heading2>{this.props.tableHeader}</Heading2>
+            )}
             {this.renderWorkshopsTable()}
           </section>
         )}
