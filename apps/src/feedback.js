@@ -1525,10 +1525,6 @@ FeedbackUtils.prototype.getCountableBlocks_ = function () {
       : []),
   ];
   const blocks = allBlocks.filter(FeedbackUtils.blockShouldBeCounted_);
-  console.log(
-    blocks.length,
-    blocks.map(b => b.type)
-  );
   return blocks;
 };
 
