@@ -40,6 +40,8 @@ module AnalyticsConstants
     INTL_PL_PARTNERS_PAGE_VISIT_EVENT = 'International Professional Learning Partners Page Visited'.freeze,
     MUSIC_PAGE_VISITED_EVENT = 'Music Lab Marketing Page Visited'.freeze,
     MUSIC_LAB_PAGE_VISITED_EVENT = 'Music Lab Tools Page Visited'.freeze,
-    LMS_PAGE_VISITED_EVENT = 'LMS Page Visited'.freeze
+    LMS_PAGE_VISITED_EVENT = 'LMS Page Visited'.freeze,
+    CANVAS_PAGE_VISITED_EVENT = 'Canvas Page Visited'.freeze,
+    SCHOOLOGY_PAGE_VISITED_EVENT = 'Schoology Page Visited'.freeze
   ].freeze
 end

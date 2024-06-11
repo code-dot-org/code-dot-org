@@ -53,12 +53,15 @@ describe('LTI Link Account Page Tests', () => {
         i18n.ltiLinkAccountExistingAccountCardContent({providerName: 'Canvas'})
       );
       // Should have button to link new account
-      expect(
-        withinExistingAccountCard
-          .getByText(i18n.ltiLinkAccountExistingAccountCardActionLabel())
-          .closest('a')!
-          .getAttribute('href')
-      ).to.equal(`https://example.com/existing-account?${urlParams}`);
+      const existingAccountButton = withinExistingAccountCard.getByText(
+        i18n.ltiLinkAccountExistingAccountCardActionLabel()
+      );
+
+      fireEvent.click(existingAccountButton);
+
+      expect(utils.navigateToHref).to.have.been.calledWith(
+        `https://example.com/existing-account?${urlParams}`
+      );
     });
   });
 
