@@ -20,10 +20,10 @@ export interface Channel {
   updatedAt: string;
   hidden?: boolean;
   thumbnailUrl?: string;
+  frozen?: boolean;
   // Optional lab-specific configuration for this project.  If provided, this will be saved
   // to the Project model in the database along with the other entries in this interface,
   // inside the value field JSON.
-  frozen?: boolean;
   labConfig?: {[key: string]: {[key: string]: string}};
 }
 
