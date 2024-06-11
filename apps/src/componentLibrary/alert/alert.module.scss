@@ -2,4 +2,61 @@
 @import "@cdo/apps/componentLibrary/typography/typography.module";
 @import "@cdo/apps/componentLibrary/common/styles/mixins";
 
-$todo-remove: 4px;
+.alert {
+  display: flex;
+  width: 100%;
+}
+
+// Types (colors)
+.alert-primary {
+  background-color: $light_secondary_100;
+}
+
+.alert-success {
+  background-color: $light_affirmative_100;
+}
+
+.alert-danger {
+  background-color: $light_negative_100;
+}
+
+.alert-warning {
+  background-color: $light_caution_100;
+}
+
+.alert-info {
+  background-color: $light_info_100;
+}
+
+.alert-gray {
+  background-color: $light_gray_50;
+}
+
+// Sizes
+.alert-l {
+  span {
+    @include body-one;
+    margin-bottom: 0;
+  }
+}
+
+.alert-m {
+  span {
+    @include body-two;
+    margin-bottom: 0;
+  }
+}
+
+.alert-s {
+  span {
+    @include body-three;
+    margin-bottom: 0;
+  }
+}
+
+.alert-xs {
+  span {
+    @include body-four;
+    margin-bottom: 0;
+  }
+}
