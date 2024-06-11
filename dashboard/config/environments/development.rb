@@ -83,7 +83,4 @@ Dashboard::Application.configure do
   # queue adapter in development, comment out this line and make sure you have
   # run `bin/delayed_job start` or rake build.
   config.active_job.queue_adapter = :async
-
-  require 'cdo/rack/cookie_dcdo'
-  config.middleware.insert_after ActionDispatch::RequestId, Rack::CookieDCDO
 end

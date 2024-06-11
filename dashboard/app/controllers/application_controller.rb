@@ -29,6 +29,8 @@ class ApplicationController < ActionController::Base
 
   before_action :clear_sign_up_session_vars
 
+  before_action :initialize_statsig_session
+
   def fix_crawlers_with_bad_accept_headers
     # append text/html as an acceptable response type for Edmodo and weebly-agent's malformed HTTP_ACCEPT header.
     if request.formats.include?("image/*") &&
@@ -352,6 +354,12 @@ class ApplicationController < ActionController::Base
     ].include?(request.path)
 
     redirect_to lockout_path if Policies::ChildAccount::ComplianceState.locked_out?(current_user)
+  end
+
+  # Creates a stable statsig id for use of session tracking (whether the user is logged in or not)
+  # Use this session variable when you want to track the user journey when the user is not logged in.
+  protected def initialize_statsig_session
+    session[:statsig_stable_id] ||= SecureRandom.uuid
   end
 
   private def pairing_still_enabled

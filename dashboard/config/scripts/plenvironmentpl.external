@@ -1,0 +1,21 @@
+name 'PLenvironmentPL'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Game Mechanics and Use-Modify-Create
+
+##What are game mechanics? 
+#### Game Mechanics define how the game works and what determines success or failure in the game.
+
+## Why are game mechanics important?
+#### Mechanics define the core interactions and experiences, making the game enjoyable, challenging, and replayable.
+
+## Use-Modify-Create 
+#### In this lesson, students begin by <b>using</b> four pre-created games. 
+
+#### Then, they will practice coding with variables by <b>modifying</b> and building on existing code.
+
+####  To complete this lesson, students will have an opportunity to use what they learned to practice and free-play to <b>create</b> a game. 
+
+MARKDOWN

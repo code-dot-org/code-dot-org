@@ -1,0 +1,28 @@
+name 'data-science-ch1-lesson1-level2'
+title 'Data Scientists Exploration'
+
+markdown <<MARKDOWN
+## Data Scientists Exploration
+
+| Image | Person            | Field Of Study          | Link                                                                              | Extra Link                                  |
+|-------|-------------------|-------------------------|-----------------------------------------------------------------------------------|---------------------------------------------|
+|![](https://images.code.org/36ed9538c1ed96eadaa3c154425d3929-image-1717704130670.jpg)       | Nathalie Miebach  | **Art**                     | [website](https://www.ted.com/talks/nathalie_miebach_art_made_of_storms)                     | https://www.nathaliemiebach.com/            |
+|![](https://images.code.org/6732bb8d8e84a4176900404aacfc98e6-image-1717704541821.png)       | Michelle Tat      | City Government         | https://towardsdatascience.com/on-being-a-civic-data-scientist-774c15232695       | https://mjtat.github.io/                    |
+|       | Jacob Campbell    | Dance                   | https://magazine.calpoly.edu/winter-2023/making-data-dance/                       |                                             |
+|       | Peaks Krafft      | Diversity, Social Media | https://www.oii.ox.ac.uk/people/profiles/krafft/                                  | https://people.csail.mit.edu/pkrafft/       |
+|       | Lydia Jennings    | Environment             | https://nativesoilnerd.com/                                                       |                                             |
+|       | Briana Vecchione  | Ethics                  | https://brianavecchione.org/                                                      |                                             |
+|       | Kelsey Campbell   | General                 | https://roadtripnation.com/leader/kelsey-campbell                                 |                                             |
+|       | Chris Chenet      | Homelessness            | https://www.datakind.org/2023/11/07/welcome-chris-chenet-datakinds-product-owner/ |                                             |
+|       | Kira Radinsky     | Medicine                | http://www.kiraradinsky.com/                                                      |                                             |
+|       | Christine Osazuwa | Music                   | https://christineosazuwa.com                                                      |                                             |
+|       | WEB DuBois        | Race                    | https://sparkmap.org/data/w-e-b-du-bois-data-visualization-history/               |                                             |
+|       | Kimberly Arcand   | Space                   | https://roadtripnation.com/interviews/kimberly-arcand                             | https://www.kimarcand.com/                  |
+|       | Ivana Seric       | Sports                  | https://www.smorescience.com/data-scientist-ivana-seric/                          | https://www.youtube.com/watch?v=N7WpMixTD-g |
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+This level exists to give students access to the links that they can follow to learn more about each person. You should have assigned each of the students one of these data scientists to find on this page and research. This spreadsheet (https://docs.google.com/spreadsheets/d/1wjbbdckWogsZAqgXmCuZoqAxdgqJrCo1KUP6P2TUS-Y/edit#gid=0) provides some basic information about which people also have videos students can watch in addition to reading, and which data scientists have shorter articles, so you can differentiate which student gets which data scientist from that.
+MARKDOWN

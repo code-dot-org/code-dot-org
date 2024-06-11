@@ -31,6 +31,8 @@ module Cpa
     #   “cpa_all_user_lockout”:         “2024-07-01T00:00:00MST”
     # }
     schedule = experiment_value('cpa_schedule', current_request)
+    # Ensure the schedule is a Hash
+    schedule = JSON.parse(schedule) unless schedule.nil? || schedule.is_a?(Hash)
     # override [String] configuration overrides if we are manually testing the
     # experiences. This parameter will default to the query string parameter or
     # cookie 'cpa_experience'.

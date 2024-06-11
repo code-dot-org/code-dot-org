@@ -1,0 +1,24 @@
+name 'PLGamejamPL'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# What is a game jam?
+
+#### A game jam is a creative event where people come together in teams to make video games based on a chosen theme within a limited amount of time.
+
+
+
+
+## Why Game Jams?
+#### Game developers participate in game jams to foster creativity and innovation, develop skills rapidly, network and collaborate with peers, build their portfolios, and boost productivity through focused, deadline-driven work. These events also provide a supportive community for feedback and are a fun way for developers to express their passion for game creation in a spirited environment.
+
+
+## You've made it to the game jam! 
+
+
+
+<div style="clear:both"/>
+
+
+MARKDOWN
