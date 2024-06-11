@@ -1,0 +1,26 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2024-06-06T19:28:09.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "####Sprite types\n\nSetting a sprite’s type determines how it interacts with other sprites. \n\nWatch this game in action. **What do you notice about the three sprites?**\n\n<img src=\"https://images.code.org/86695b7e9c4d73fa146bad283c3d8da4-image-1715799719293.jpg\" style=\"margin-right: 40px; width: 75%\">",
+        "imageUrl": "https://images.code.org/c6158cfd126f175d71c34e7400fd914c-panel.gif",
+        "key": "game_new_panel-dcd59a3f-edf7-45b3-af02-d61f32eb3e58"
+      },
+      {
+        "text": "####Environment sprites\n\nWhen sprites are set to environment, they stop all other sprites from moving.\n\n<img src=\"https://images.code.org/53d9d2dc7654fda0de590191b6b69935-image-1712165117321.jpg\" style=\"margin-right: 40px; width: 75%\">",
+        "imageUrl": "https://images.code.org/3a7a7dec2762b4d858042ca1aa0dd2f5-beespanel.gif",
+        "key": "game_new_panel-e5efed81-986d-4e21-8002-fc66f595b1e0"
+      }
+    ],
+    "name_suffix": "_independent"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-06-06T19:28:09.617+00:00\",\"changed\":[\"cloned from \\\"game_development_sprites_type_panel_independent\\\"\"],\"cloned_from\":\"game_development_sprites_type_panel_independent\"}]"
+}]]></config>
+</Panels>

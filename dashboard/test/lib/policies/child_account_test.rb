@@ -107,6 +107,67 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     assert failures.empty?, failures.join("\n")
   end
 
+  describe 'state_policies' do
+    let(:state_policies) {Policies::ChildAccount.state_policies}
+    let(:dcdo_cpa_schedule) {{}}
+
+    around do |test|
+      Timecop.freeze {test.call}
+    end
+
+    before do
+      DCDO.stubs(:get).with('cpa_schedule', {}).returns(dcdo_cpa_schedule)
+    end
+
+    describe 'for Colorado' do
+      let(:co_state_policy) {state_policies['CO']}
+      let(:default_start_date) {DateTime.parse('2023-07-01T00:00:00MST')}
+      let(:default_lockout_date) {DateTime.parse('2024-07-01T00:00:00MST')}
+
+      it 'contains expected max age' do
+        _(co_state_policy[:max_age]).must_equal 12
+      end
+
+      it 'contains expected name' do
+        _(co_state_policy[:name]).must_equal 'CPA'
+      end
+
+      it 'contains expected default start_date' do
+        _(co_state_policy[:start_date]).must_equal default_start_date
+      end
+
+      it 'contains expected default lockout_date' do
+        _(co_state_policy[:lockout_date]).must_equal default_lockout_date
+      end
+
+      context 'when DCDO cpa_schedule with only cpa_new_user_lockout is configured' do
+        let(:dcdo_cpa_schedule) do
+          {
+            'cpa_new_user_lockout' => cpa_new_user_lockout.iso8601
+          }
+        end
+        let(:cpa_new_user_lockout) {default_start_date.ago(100.days)}
+
+        it 'contains DCDO configured start_date' do
+          _(co_state_policy[:start_date]).must_equal cpa_new_user_lockout
+        end
+      end
+
+      context 'when DCDO cpa_schedule with only cpa_all_user_lockout is configured' do
+        let(:dcdo_cpa_schedule) do
+          {
+            'cpa_all_user_lockout' => cpa_all_user_lockout.iso8601
+          }
+        end
+        let(:cpa_all_user_lockout) {default_lockout_date.ago(21.days)}
+
+        it 'contains DCDO configured lockout_date' do
+          _(co_state_policy[:lockout_date]).must_equal cpa_all_user_lockout
+        end
+      end
+    end
+  end
+
   describe '.pre_lockout_user?' do
     let(:pre_lockout_user?) {Policies::ChildAccount.pre_lockout_user?(user)}
 
@@ -164,8 +225,8 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     end
   end
 
-  describe '.locked_out?' do
-    let(:locked_out?) {Policies::ChildAccount.locked_out?(user)}
+  describe '.lockable?' do
+    let(:lockable?) {Policies::ChildAccount.lockable?(user)}
 
     let(:user) {build_stubbed(:student)}
 
@@ -182,14 +243,22 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     end
 
     it 'returns true' do
-      _(locked_out?).must_equal true
+      _(lockable?).must_equal true
+    end
+
+    context 'when user is already locked out' do
+      let(:user) {build_stubbed(:locked_out_child)}
+
+      it 'returns false' do
+        _(lockable?).must_equal false
+      end
     end
 
     context 'when user does not have lockout date' do
       let(:user_lockout_date) {nil}
 
       it 'returns false' do
-        _(locked_out?).must_equal false
+        _(lockable?).must_equal false
       end
     end
 
@@ -197,14 +266,14 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       let(:user_lockout_date) {1.second.since}
 
       it 'returns false' do
-        _(locked_out?).must_equal false
+        _(lockable?).must_equal false
       end
 
       context 'if user does not predate policy' do
         let(:user_predates_policy?) {false}
 
         it 'returns true' do
-          _(locked_out?).must_equal true
+          _(lockable?).must_equal true
         end
       end
     end
