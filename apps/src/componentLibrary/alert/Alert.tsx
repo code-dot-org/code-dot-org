@@ -55,9 +55,14 @@ const Alert: React.FunctionComponent<AlertProps> = ({
       )}
       // role='alert'
     >
-      {icon && <FontAwesomeV6Icon {...icon} />}
-      <span className={moduleStyles.alertText}>{text}</span>
-      {link && <Link {...link} size={size} />}
+      <div className={moduleStyles.alertContentContainer}>
+        {icon && <FontAwesomeV6Icon {...icon} />}
+        <span className={moduleStyles.alertText}>{text}</span>
+        {link && <Link {...link} size={size} />}
+      </div>
+      <button type="button" onClick={() => console.log('close')}>
+        x
+      </button>
     </div>
   );
 };

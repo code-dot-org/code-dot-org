@@ -4,7 +4,17 @@
 
 .alert {
   display: flex;
-  width: 100%;
+  align-items: baseline;
+
+  .alertContentContainer {
+    display: flex;
+    flex: 1 0 0;
+    align-items: baseline;
+
+    a {
+      color: $light_black;
+    }
+  }
 }
 
 // Types (colors)
@@ -34,29 +44,53 @@
 
 // Sizes
 .alert-l {
-  span {
-    @include body-one;
-    margin-bottom: 0;
+  padding: 0.875rem 1.125rem;
+
+  .alertContentContainer {
+    gap: 0.75rem;
+
+    span {
+      @include body-one;
+      margin-bottom: 0;
+    }
   }
 }
 
 .alert-m {
-  span {
-    @include body-two;
-    margin-bottom: 0;
+  padding: 0.75rem 1rem;
+
+  .alertContentContainer {
+    gap: 0.625rem;
+
+    span {
+      @include body-two;
+      margin-bottom: 0;
+    }
   }
 }
 
 .alert-s {
-  span {
-    @include body-three;
-    margin-bottom: 0;
+  padding: 0.625rem 0.875rem;
+
+  .alertContentContainer {
+    gap: 0.5rem;
+
+    span {
+      @include body-three;
+      margin-bottom: 0;
+    }
   }
 }
 
 .alert-xs {
-  span {
-    @include body-four;
-    margin-bottom: 0;
+  padding: 0.5rem 0.75rem;
+
+  .alertContentContainer {
+    gap: 0.5rem;
+
+    span {
+      @include body-four;
+      margin-bottom: 0;
+    }
   }
 }
