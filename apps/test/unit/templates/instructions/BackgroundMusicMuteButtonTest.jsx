@@ -33,6 +33,8 @@ describe('SignedInUser', () => {
   });
 
   it('calls mute and unmute functions accordingly', () => {
+    const server = sinon.fakeServer.create();
+    server.respondWith('POST', '/api/v1/users/me/mute_music', 'ok');
     let onMuteSpy = sinon.spy();
     let onUnmuteSpy = sinon.spy();
     const wrapper = setUp({
@@ -40,9 +42,12 @@ describe('SignedInUser', () => {
       unmuteBackgroundMusic: onUnmuteSpy,
     });
     wrapper.find('.uitest-mute-music-button').simulate('click');
+    server.respond();
     expect(onMuteSpy).to.have.been.calledOnce;
     wrapper.find('.uitest-mute-music-button').simulate('click');
     expect(onUnmuteSpy).to.have.been.calledOnce;
+
+    server.restore();
   });
 
   describe('minecraft vs starwars styling', () => {
