@@ -781,6 +781,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     hiddenDefinitionWorkspace.noFunctionBlockFrame = true;
     blocklyWrapper.setHiddenDefinitionWorkspace(hiddenDefinitionWorkspace);
     blocklyWrapper.useModalFunctionEditor = options.useModalFunctionEditor;
+    blocklyWrapper.disableParamEditing = options.disableParamEditing;
 
     if (options.useModalFunctionEditor) {
       // If the modal function editor is enabled for this level,
