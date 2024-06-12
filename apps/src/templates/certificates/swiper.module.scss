@@ -1,0 +1,64 @@
+@import 'color';
+
+:root {
+  --swiper-pagination-color: #{$light_primary_500};
+  --swiper-pagination-bullet-size: 1rem;
+  --swiper-pagination-bullet-inactive-color: #{$light_primary_100};
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 0.5rem;
+}
+
+.swiperContainer {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  min-height: 0;
+  min-width: 0;
+}
+
+/* swiper-slide {
+  //display: flex;
+  //align-items: stretch;
+  //height: auto;
+
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  min-height: 0;
+  min-width: 0;
+} */
+
+.swiperSlide {
+  width: auto;
+  flex-shrink: 0;
+  display: block;
+  height: 100%;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.navButton {
+  position: absolute;
+  top: 40%;
+  border: 0;
+  height: 48px;
+}
+
+.prevElNav {
+  background: url('//localhost.code.org:3000/images/carousel/prev.svg')
+    no-repeat;
+  //left: -4rem;
+  border: 0;
+}
+
+.nextElNav {
+  background: url('//localhost.code.org:3000/images/carousel/next.svg')
+    no-repeat;
+  right: -4rem;
+}
+
+.carousel-wrapper .swiper-button-disabled {
+  opacity: 0.5;
+}

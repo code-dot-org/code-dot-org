@@ -19,6 +19,7 @@ import BackToFrontConfetti from '../BackToFrontConfetti';
 
 import LargeChevronLink from './LargeChevronLink';
 import SocialShare from './SocialShare';
+import SwiperCarousel from './SwiperCarousel';
 
 import style from './congrats.module.scss';
 
@@ -212,28 +213,27 @@ function Certificate(props) {
               className={style.confetti}
             />
           }
-          <swiper-container ref={swiperRef} class={style.swiperContainer}>
-            {certificateData.map(image => (
-              <swiper-slide key={image.courseName} class={style.swiperSlide}>
-                <a href={getCertificateSharePath(image.courseName)}>
-                  <img
-                    src={getCertificateImagePath(image.courseName)}
-                    alt={
-                      studentName
-                        ? i18n.certificateAltTextWithName({
-                            studentName,
-                            courseTitle: image.courseTitle,
-                          })
-                        : i18n.certificateAltTextNoName({
-                            courseTitle: image.courseTitle,
-                          })
-                    }
-                    style={{width: 470}}
-                  />
-                </a>
-              </swiper-slide>
-            ))}
-          </swiper-container>
+          <SwiperCarousel
+            slideSet={certificateData}
+            renderSlide={image => (
+              <a href={getCertificateSharePath(image.courseName)}>
+                <img
+                  src={getCertificateImagePath(image.courseName)}
+                  alt={
+                    studentName
+                      ? i18n.certificateAltTextWithName({
+                          studentName,
+                          courseTitle: image.courseTitle,
+                        })
+                      : i18n.certificateAltTextNoName({
+                          courseTitle: image.courseTitle,
+                        })
+                  }
+                  style={{width: 470}}
+                />
+              </a>
+            )}
+          />
         </div>
         <div className={`${certificateStyle} ${style.inputContainer}`}>
           {courseName && !personalized && (
