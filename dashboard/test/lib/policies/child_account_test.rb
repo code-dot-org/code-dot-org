@@ -222,13 +222,62 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     end
   end
 
+  describe '.lockout_date' do
+    let(:lockout_date) {Policies::ChildAccount.lockout_date(user)}
+
+    let(:user) {build_stubbed(:student)}
+
+    let(:user_cap_compliant?) {false}
+    let(:user_predates_cap_policy?) {false}
+    let(:user_state_policy_start_date) {1.year.ago}
+    let(:user_state_policy_lockout_date) {1.year.since}
+    let(:user_state_policy) {{start_date: user_state_policy_start_date, lockout_date: user_state_policy_lockout_date}}
+
+    around do |test|
+      Timecop.freeze {test.call}
+    end
+
+    before do
+      Policies::ChildAccount.stubs(:compliant?).with(user).returns(user_cap_compliant?)
+      Policies::ChildAccount.stubs(:user_predates_policy?).with(user).returns(user_predates_cap_policy?)
+      Policies::ChildAccount.stubs(:state_policy).with(user).returns(user_state_policy)
+    end
+
+    it 'returns state policy start date' do
+      _(lockout_date).must_equal user_state_policy_start_date
+    end
+
+    context 'when user was created before state policy took effect' do
+      let(:user_predates_cap_policy?) {true}
+
+      it 'returns all users lockout date from state policy' do
+        _(lockout_date).must_equal user_state_policy_lockout_date
+      end
+    end
+
+    context 'when user is not covered by a state policy' do
+      let(:user_state_policy) {nil}
+
+      it 'returns nil' do
+        _(lockout_date).must_be_nil
+      end
+    end
+
+    context 'when user is CAP compliant' do
+      let(:user_cap_compliant?) {true}
+
+      it 'returns nil' do
+        _(lockout_date).must_be_nil
+      end
+    end
+  end
+
   describe '.lockable?' do
     let(:lockable?) {Policies::ChildAccount.lockable?(user)}
 
     let(:user) {build_stubbed(:student)}
 
     let(:user_lockout_date) {DateTime.now}
-    let(:user_predates_policy?) {true}
 
     around do |test|
       Timecop.freeze {test.call}
@@ -236,7 +285,6 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
 
     before do
       Policies::ChildAccount.stubs(:lockout_date).with(user).returns(user_lockout_date)
-      Policies::ChildAccount.stubs(:user_predates_policy?).with(user).returns(user_predates_policy?)
     end
 
     it 'returns true' do
@@ -264,14 +312,6 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
 
       it 'returns false' do
         _(lockable?).must_equal false
-      end
-
-      context 'if user does not predate policy' do
-        let(:user_predates_policy?) {false}
-
-        it 'returns true' do
-          _(lockable?).must_equal true
-        end
       end
     end
   end

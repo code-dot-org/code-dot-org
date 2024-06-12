@@ -88,7 +88,14 @@ class Policies::ChildAccount
   # The date on which the student's account will be locked if the account is not compliant.
   def self.lockout_date(user)
     return if compliant?(user)
-    state_policy(user).try(:[], :lockout_date)
+
+    user_state_policy = state_policy(user)
+    return unless user_state_policy
+
+    # CAP non-compliant students who were created:
+    # - before the policy took effect - should be locked out during the all users lockout phase.
+    # - after the policy took effect - should be locked out immediately.
+    user_predates_policy?(user) ? user_state_policy[:lockout_date] : user_state_policy[:start_date]
   end
 
   # Checks if the user can be locked out due to non-compliance with CAP.
@@ -98,7 +105,7 @@ class Policies::ChildAccount
     user_lockout_date = lockout_date(user)
     return false unless user_lockout_date
 
-    DateTime.now >= user_lockout_date || !user_predates_policy?(user)
+    user_lockout_date <= DateTime.now
   end
 
   # Authentication option types which we consider to be "owned" by the school
