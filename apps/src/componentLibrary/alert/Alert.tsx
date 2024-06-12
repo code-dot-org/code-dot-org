@@ -18,6 +18,8 @@ export interface AlertProps {
   link?: LinkProps;
   /** Alert icon */
   icon?: FontAwesomeV6IconProps;
+  /** Show icon */
+  showIcon?: boolean;
   /** Alert custom className */
   type?: AlertType;
   /** Alert on Close callback */
@@ -56,6 +58,7 @@ const getDefaultAlertIconFromType = (
  */
 const Alert: React.FunctionComponent<AlertProps> = ({
   text,
+  showIcon = true,
   icon,
   link,
   className,
@@ -79,7 +82,7 @@ const Alert: React.FunctionComponent<AlertProps> = ({
       // role='alert'
     >
       <div className={moduleStyles.alertContentContainer}>
-        {iconToRender && <FontAwesomeV6Icon {...iconToRender} />}
+        {showIcon && iconToRender && <FontAwesomeV6Icon {...iconToRender} />}
         <span className={moduleStyles.alertText}>{text}</span>
         {link && <Link {...link} size={size} />}
       </div>
