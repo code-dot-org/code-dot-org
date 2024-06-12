@@ -46,8 +46,8 @@ const getDefaultAlertIconFromType = (
 /**
  * ## Production-ready Checklist:
  *  * (?) implementation of component approved by design team;
- *  * (?) has storybook, covered with stories and documentation;
- *  * (?) has tests: test every prop, every state and every interaction that's js related;
+ *  * (✔) has storybook, covered with stories and documentation;
+ *  * (✔) has tests: test every prop, every state and every interaction that's js related;
  *  * (see apps/test/unit/componentLibrary/AlertTest.jsx)
  *  * (?) passes accessibility checks;
  *
@@ -71,6 +71,11 @@ const Alert: React.FunctionComponent<AlertProps> = ({
     [icon, type]
   );
 
+  // TODO:
+  // 1. Add close button to the alert
+  // 2. Add role='alert' to the alert (?)
+  // 3. Update Link to support text prop, not only children props
+
   return (
     <div
       className={classnames(
@@ -87,7 +92,7 @@ const Alert: React.FunctionComponent<AlertProps> = ({
         {link && <Link {...link} size={size} />}
       </div>
       {onClose && (
-        <button type="button" onClick={() => console.log('close')}>
+        <button type="button" onClick={onClose}>
           x
         </button>
       )}
