@@ -47,6 +47,7 @@ AlertWithLink.args = {
     children: 'Click here',
     // text: 'Click here',
   },
+  onClose: () => console.log('close'),
 };
 
 export const AlertWithIcon = SingleTemplate.bind({});
@@ -54,9 +55,7 @@ AlertWithIcon.args = {
   text: 'This is an alert with an icon',
   type: 'success',
   size: 'm',
-  icon: {
-    iconName: 'check-circle',
-  },
+  icon: {iconName: 'house'},
 };
 
 export const AlertWithLinkAndIcon = SingleTemplate.bind({});
@@ -64,9 +63,6 @@ AlertWithLinkAndIcon.args = {
   text: 'This is an alert with a link and an icon',
   type: 'warning',
   size: 'm',
-  icon: {
-    iconName: 'exclamation-circle',
-  },
   link: {
     href: '#',
     children: 'Learn more',
@@ -116,21 +112,45 @@ GroupOfSizesOfAlerts.args = {
       text: 'Alert XS',
       type: 'primary',
       size: 'xs',
+      icon: {iconName: 'circle-check'},
+      link: {
+        href: '#',
+        children: 'This is a plink',
+      },
+      onClose: () => console.log('close'),
     },
     {
       text: 'Alert S',
       type: 'primary',
       size: 's',
+      icon: {iconName: 'circle-check'},
+      link: {
+        href: '#',
+        children: 'This is a plink',
+      },
+      onClose: () => console.log('close'),
     },
     {
       text: 'Alert M',
       type: 'primary',
       size: 'm',
+      icon: {iconName: 'circle-check'},
+      link: {
+        href: '#',
+        children: 'This is a plink',
+      },
+      onClose: () => console.log('close'),
     },
     {
       text: 'Alert L',
       type: 'primary',
       size: 'l',
+      icon: {iconName: 'circle-check'},
+      link: {
+        href: '#',
+        children: 'This is a plink',
+      },
+      onClose: () => console.log('close'),
     },
   ],
 };

@@ -11,6 +11,10 @@
     flex: 1 0 0;
     align-items: baseline;
 
+    i {
+      text-align: center;
+    }
+
     a {
       color: $light_black;
     }
@@ -24,18 +28,34 @@
 
 .alert-success {
   background-color: $light_affirmative_100;
+
+  i {
+    color: $light_primary_500;
+  }
 }
 
 .alert-danger {
   background-color: $light_negative_100;
+
+  i {
+    color: $light_negative_500;
+  }
 }
 
 .alert-warning {
   background-color: $light_caution_100;
+
+  i {
+    color: $light_caution_500;
+  }
 }
 
 .alert-info {
   background-color: $light_info_100;
+
+  i {
+    color: $light_info_500;
+  }
 }
 
 .alert-gray {
@@ -48,6 +68,12 @@
 
   .alertContentContainer {
     gap: 0.75rem;
+
+    i {
+      font-size: 1.1875rem;
+      line-height: 125%;
+      width: 1.5rem;
+    }
 
     span {
       @include body-one;
@@ -62,6 +88,12 @@
   .alertContentContainer {
     gap: 0.625rem;
 
+    i {
+      font-size: 1rem;
+      line-height: 125%;
+      width: 1.25rem;
+    }
+
     span {
       @include body-two;
       margin-bottom: 0;
@@ -75,6 +107,12 @@
   .alertContentContainer {
     gap: 0.5rem;
 
+    i {
+      font-size: 0.875rem;
+      line-height: 125%;
+      width: 1.125rem;
+    }
+
     span {
       @include body-three;
       margin-bottom: 0;
@@ -87,6 +125,12 @@
 
   .alertContentContainer {
     gap: 0.5rem;
+
+    i {
+      font-size: 0.8125rem;
+      line-height: 125%;
+      width: 1rem;
+    }
 
     span {
       @include body-four;

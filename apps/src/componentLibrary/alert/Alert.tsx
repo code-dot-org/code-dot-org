@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import React from 'react';
+import React, {useMemo} from 'react';
 
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 import FontAwesomeV6Icon, {
@@ -9,6 +9,8 @@ import Link, {LinkProps} from '@cdo/apps/componentLibrary/link';
 
 import moduleStyles from './alert.module.scss';
 
+type AlertType = 'primary' | 'success' | 'danger' | 'warning' | 'info' | 'gray';
+
 export interface AlertProps {
   /** Alert text */
   text: string;
@@ -17,12 +19,27 @@ export interface AlertProps {
   /** Alert icon */
   icon?: FontAwesomeV6IconProps;
   /** Alert custom className */
-  type?: 'primary' | 'success' | 'danger' | 'warning' | 'info' | 'gray';
+  type?: AlertType;
+  /** Alert on Close callback */
+  onClose?: () => void;
   /** Alert custom className */
   className?: string;
   /** Alert size */
   size?: ComponentSizeXSToL;
 }
+
+const getDefaultAlertIconFromType = (
+  type: AlertType
+): FontAwesomeV6IconProps | undefined => {
+  const iconMap: Partial<Record<AlertType, FontAwesomeV6IconProps>> = {
+    success: {iconName: 'check-circle'},
+    danger: {iconName: 'circle-xmark'},
+    warning: {iconName: 'exclamation-circle'},
+    info: {iconName: 'circle-info'},
+  };
+
+  return iconMap[type];
+};
 
 /**
  * ## Production-ready Checklist:
@@ -42,9 +59,15 @@ const Alert: React.FunctionComponent<AlertProps> = ({
   icon,
   link,
   className,
+  onClose,
   type = 'primary',
   size = 'm',
 }) => {
+  const iconToRender = useMemo(
+    () => icon || getDefaultAlertIconFromType(type),
+    [icon, type]
+  );
+
   return (
     <div
       className={classnames(
@@ -56,13 +79,15 @@ const Alert: React.FunctionComponent<AlertProps> = ({
       // role='alert'
     >
       <div className={moduleStyles.alertContentContainer}>
-        {icon && <FontAwesomeV6Icon {...icon} />}
+        {iconToRender && <FontAwesomeV6Icon {...iconToRender} />}
         <span className={moduleStyles.alertText}>{text}</span>
         {link && <Link {...link} size={size} />}
       </div>
-      <button type="button" onClick={() => console.log('close')}>
-        x
-      </button>
+      {onClose && (
+        <button type="button" onClick={() => console.log('close')}>
+          x
+        </button>
+      )}
     </div>
   );
 };
