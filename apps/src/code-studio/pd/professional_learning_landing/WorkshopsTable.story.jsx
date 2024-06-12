@@ -1,6 +1,6 @@
 import React from 'react';
 import reactBootstrapStoryDecorator from '../reactBootstrapStoryDecorator';
-import {EnrolledWorkshopsTable} from './EnrolledWorkshops';
+import {WorkshopsTable} from './EnrolledWorkshops';
 
 const workshops = [
   // Have all required and non-required data
@@ -38,12 +38,12 @@ const workshops = [
 ];
 
 export default {
-  component: EnrolledWorkshopsTable,
+  component: WorkshopsTable,
   decorators: [reactBootstrapStoryDecorator],
 };
 
 const Template = args => {
-  return <EnrolledWorkshopsTable {...args} />;
+  return <WorkshopsTable {...args} />;
 };
 
 export const Default = Template.bind({});

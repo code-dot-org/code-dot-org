@@ -3,7 +3,7 @@ include_recipe 'cdo-mysql::repo'
 apt_package 'mysql-server' do
   action :upgrade
 
-  version '8.0.36-0ubuntu0.20.04.1'
+  version '8.0.37-0ubuntu0.20.04.3'
 
   notifies :create, 'template[cdo.cnf]', :immediately
   notifies :start, 'service[mysql]', :immediately
