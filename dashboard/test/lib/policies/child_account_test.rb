@@ -278,4 +278,147 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       end
     end
   end
+
+  describe '.personal_account?' do
+    let(:personal_account?) {Policies::ChildAccount.personal_account?(user)}
+
+    let(:user_sponsored?) {false}
+    let(:user_migrated?) {false}
+    let(:user_provider) {'email'}
+    let(:user_auth_option_credential_type) {'email'}
+    let(:user_auth_option) {build_stubbed(:authentication_option, credential_type: user_auth_option_credential_type)}
+    let(:user) {build_stubbed(:user, provider: user_provider, authentication_options: [user_auth_option])}
+
+    before do
+      user.stubs(:sponsored?).returns(user_sponsored?)
+      user.stubs(:migrated?).returns(user_migrated?)
+    end
+
+    it 'returns true' do
+      _(personal_account?).must_equal true
+    end
+
+    context 'when user provider is Clever' do
+      let(:user_provider) {'clever'}
+
+      it 'returns false' do
+        _(personal_account?).must_equal false
+      end
+    end
+
+    context 'when user provider is LTI v1' do
+      let(:user_provider) {'lti_v1'}
+
+      it 'returns false' do
+        _(personal_account?).must_equal false
+      end
+    end
+
+    context 'when user is migrated' do
+      let(:user_migrated?) {true}
+      let(:user_provider) {'clever'}
+
+      it 'returns true' do
+        _(personal_account?).must_equal true
+      end
+
+      context 'when credential type of user auth option is Clever' do
+        let(:user_auth_option_credential_type) {'clever'}
+
+        it 'returns false' do
+          _(personal_account?).must_equal false
+        end
+      end
+
+      context 'when credential type of user auth option is LTI v1' do
+        let(:user_auth_option_credential_type) {'lti_v1'}
+
+        it 'returns false' do
+          _(personal_account?).must_equal false
+        end
+      end
+    end
+
+    context 'when user is sponsored' do
+      let(:user_sponsored?) {true}
+
+      it 'returns false' do
+        _(personal_account?).must_equal false
+      end
+    end
+  end
+
+  describe '.parent_permission_required?' do
+    let(:parent_permission_required?) {Policies::ChildAccount.parent_permission_required?(user)}
+
+    let(:user_type) {'student'}
+    let(:user_age) {user_state_policy_max_age}
+    let(:user) {build_stubbed(:user, user_type: user_type, birthday: user_age&.year&.ago)}
+
+    let(:user_account_is_personal?) {true}
+    let(:user_state_policy_start_date) {DateTime.now}
+    let(:user_state_policy_max_age) {12}
+    let(:user_state_policy) {{start_date: user_state_policy_start_date, max_age: user_state_policy_max_age}}
+
+    around do |test|
+      Timecop.freeze {test.call}
+    end
+
+    before do
+      Policies::ChildAccount.stubs(:state_policy).with(user).returns(user_state_policy)
+      Policies::ChildAccount.stubs(:personal_account?).with(user).returns(user_account_is_personal?)
+    end
+
+    it 'returns true' do
+      _(parent_permission_required?).must_equal true
+    end
+
+    context 'when user is not a personal account' do
+      let(:user_account_is_personal?) {false}
+
+      it 'returns false' do
+        _(parent_permission_required?).must_equal false
+      end
+    end
+
+    context 'when user is older than maximum age covered by the policy' do
+      let(:user_age) {user_state_policy_max_age.next}
+
+      it 'returns false' do
+        _(parent_permission_required?).must_equal false
+      end
+    end
+
+    context 'when user age cannot be identified' do
+      let(:user_age) {nil}
+
+      it 'returns false' do
+        _(parent_permission_required?).must_equal false
+      end
+    end
+
+    context 'when policy has not yet taken effect' do
+      let(:user_state_policy_start_date) {1.second.since}
+
+      it 'returns false' do
+        _(parent_permission_required?).must_equal false
+      end
+    end
+
+    context 'when user is not covered by a US State child account policy' do
+      let(:user_state_policy) {nil}
+
+      it 'returns false' do
+        _(parent_permission_required?).must_equal false
+      end
+    end
+
+    context 'when user is not a student' do
+      let(:user_type) {'teacher'}
+
+      it 'returns false' do
+        _(parent_permission_required?).must_equal false
+      end
+    end
+  end
 end

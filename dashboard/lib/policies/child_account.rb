@@ -152,16 +152,17 @@ class Policies::ChildAccount
   # Child Account Policy.
   def self.parent_permission_required?(user)
     return false unless user.student?
-    return false unless user.birthday
 
     policy = state_policy(user)
+    # Parent permission is not required for students who are not covered by a US State child account policy.
     return false unless policy
 
-    lockout_date = policy[:lockout_date]
-    student_birthday = user.birthday.in_time_zone(lockout_date.utc_offset)
-    min_required_age = policy[:max_age].next.years
-    # Checks if the student meets the minimum age requirement at the start of the lockout
-    return false if student_birthday.since(min_required_age) <= lockout_date
+    # Parental permission is not required until the policy is in effect.
+    return false if policy[:start_date] > DateTime.now
+
+    # Parental permission is not required for students
+    # whose age cannot be identified or who are older than the maximum age covered by the policy.
+    return false if user.age.nil? || user.age > policy[:max_age]
 
     personal_account?(user)
   end
