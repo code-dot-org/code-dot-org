@@ -1,4 +1,5 @@
 import {RowType} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
+import {ChildAccountComplianceStates} from '@cdo/generated-scripts/sharedConstants';
 
 export const MockStudentData = [
   {
@@ -12,7 +13,7 @@ export const MockStudentData = [
     rowType: RowType.STUDENT,
     age: 10,
     atRiskAgeGatedStudent: true,
-    childAccountComplianceState: 'l',
+    childAccountComplianceState: ChildAccountComplianceStates.LOCKED_OUT,
   },
   {
     id: 2,
@@ -38,7 +39,7 @@ export const MockStudentData = [
     rowType: RowType.STUDENT,
     age: 10,
     atRiskAgeGatedStudent: true,
-    childAccountComplianceState: 's',
+    childAccountComplianceState: '',
   },
   {
     id: 4,
@@ -51,7 +52,7 @@ export const MockStudentData = [
     rowType: RowType.STUDENT,
     age: 10,
     atRiskAgeGatedStudent: false,
-    childAccountComplianceState: 'p',
+    childAccountComplianceState: '',
   },
   {
     id: 5,
@@ -64,6 +65,7 @@ export const MockStudentData = [
     rowType: RowType.STUDENT,
     age: 10,
     atRiskAgeGatedStudent: true,
-    childAccountComplianceState: '',
+    childAccountComplianceState:
+      ChildAccountComplianceStates.PERMISSION_GRANTED,
   },
 ];
