@@ -7,7 +7,7 @@ import {connect, useDispatch} from 'react-redux';
 import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {Heading2} from '@cdo/apps/componentLibrary/typography';
-import {EnrolledWorkshops, EnrolledWorkshopsTable} from './EnrolledWorkshops';
+import {EnrolledWorkshops, WorkshopsTable} from './EnrolledWorkshops';
 import {
   COURSE_CSF,
   COURSE_CSD,
@@ -342,9 +342,10 @@ function LandingPage({
         </section>
         {RenderOwnedPlSections()}
         {workshopsAsFacilitator?.length > 0 && (
-          <EnrolledWorkshopsTable
+          <WorkshopsTable
             workshops={workshopsAsFacilitator}
             forMyPlPage={true}
+            tableHeader={i18n.inProgressAndUpcomingWorkshops()}
           />
         )}
       </>
@@ -364,9 +365,10 @@ function LandingPage({
           {RenderRegionalPartnerResources()}
         </section>
         {workshopsAsRegionalPartner?.length > 0 && (
-          <EnrolledWorkshopsTable
+          <WorkshopsTable
             workshops={workshopsAsRegionalPartner}
             forMyPlPage={true}
+            tableHeader={i18n.inProgressAndUpcomingWorkshops()}
           />
         )}
       </>
@@ -389,9 +391,10 @@ function LandingPage({
           />
         </section>
         {workshopsAsOrganizer?.length > 0 && (
-          <EnrolledWorkshopsTable
+          <WorkshopsTable
             workshops={workshopsAsOrganizer}
             forMyPlPage={true}
+            tableHeader={i18n.inProgressAndUpcomingWorkshops()}
           />
         )}
       </>
