@@ -23,7 +23,14 @@ h1.header {
 
 .certificateImageContainer {
   display: flex;
-  width: 50%;
+  position: relative;
+  width: 55%;
+}
+
+.certificateImage {
+  width: 450px;
+  margin-inline: auto;
+  display: flex;
 }
 
 h1.heading {

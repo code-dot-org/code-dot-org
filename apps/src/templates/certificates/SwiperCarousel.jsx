@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useEffect, useRef} from 'react';
 
@@ -27,7 +28,7 @@ export default function SwiperCarousel({slideSet, renderSlide}) {
           `
             :host .swiper-pagination {
               position: relative;
-              //margin-top: 2rem;
+              margin-top: -1rem;
 
               .swiper-pagination-bullet {
                 margin-block: 0.5rem;
@@ -53,15 +54,23 @@ export default function SwiperCarousel({slideSet, renderSlide}) {
         ref={swiperRef}
         class={style.swiperContainer}
         //navigation="true"
-        //navigation-next-el="#swiper-next-el"
-        //navigation-prev-el="#swiper-prev-el"
+        navigation-next-el="#swiper-next-el"
+        navigation-prev-el="#swiper-prev-el"
       >
         {slideSet.map((slide, index) => {
           return <swiper-slide key={index}>{renderSlide(slide)}</swiper-slide>;
         })}
       </swiper-container>
-      {/*<button id='swiper-prev-el' className={classNames(style.navButton, style.prevElNav)} type='button'/>*/}
-      {/*<button id='swiper-next-el' className={classNames(style.navButton, style.nextElNav)} type='button'/>*/}
+      <button
+        id="swiper-prev-el"
+        className={classNames(style.navButton, style.prevElNav)}
+        type="button"
+      />
+      <button
+        id="swiper-next-el"
+        className={classNames(style.navButton, style.nextElNav)}
+        type="button"
+      />
     </>
   );
 }

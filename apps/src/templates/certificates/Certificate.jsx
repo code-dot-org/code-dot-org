@@ -229,7 +229,7 @@ function Certificate(props) {
                           courseTitle: image.courseTitle,
                         })
                   }
-                  style={{width: 470}}
+                  className={style.certificateImage}
                 />
               </a>
             )}

@@ -34,7 +34,7 @@
   width: auto;
   flex-shrink: 0;
   display: block;
-  height: 100%;
+  height: 340px;
   max-height: 100%;
   max-width: 100%;
 }
@@ -44,19 +44,26 @@
   top: 40%;
   border: 0;
   height: 48px;
+  z-index: 1;
+
+  &:hover {
+    box-shadow: none;
+  }
 }
 
 .prevElNav {
   background: url('//localhost.code.org:3000/images/carousel/prev.svg')
     no-repeat;
-  //left: -4rem;
+  left: 1rem;
   border: 0;
+  background-size: contain;
 }
 
 .nextElNav {
   background: url('//localhost.code.org:3000/images/carousel/next.svg')
     no-repeat;
-  right: -4rem;
+  right: 1rem;
+  background-size: contain;
 }
 
 .carousel-wrapper .swiper-button-disabled {
