@@ -21,8 +21,6 @@ class AgeGatedTableConsentStatusCell extends Component<Props> {
     switch (this.props.consentStatus) {
       case ChildAccountComplianceStates.LOCKED_OUT:
         return i18n.childAccountPolicy_lockedOut();
-      case ChildAccountComplianceStates.REQUEST_SENT:
-        return i18n.childAccountPolicy_requestSent();
       case ChildAccountComplianceStates.PERMISSION_GRANTED:
         return i18n.childAccountPolicy_permissionGranted();
       default:

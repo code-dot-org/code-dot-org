@@ -8,14 +8,10 @@ class Policies::ChildAccount
     # The student's account has been used to issue a request to a parent.
     LOCKED_OUT = SharedConstants::CHILD_ACCOUNT_COMPLIANCE_STATES.LOCKED_OUT
 
-    # The student's account has been used to issue a request to a parent.
-    REQUEST_SENT = SharedConstants::CHILD_ACCOUNT_COMPLIANCE_STATES.REQUEST_SENT
-
     # The student's account has been approved by their parent.
     PERMISSION_GRANTED = SharedConstants::CHILD_ACCOUNT_COMPLIANCE_STATES.PERMISSION_GRANTED
 
     # def self.locked_out?(student)
-    # def self.request_sent?(student)
     # def self.permission_granted?(student)
     SharedConstants::CHILD_ACCOUNT_COMPLIANCE_STATES.to_h.each do |key, value|
       define_singleton_method("#{key.downcase}?") do |student|

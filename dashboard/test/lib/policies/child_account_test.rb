@@ -13,12 +13,6 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       end
     end
 
-    test 'request_sent?' do
-      assert_changes -> {Policies::ChildAccount::ComplianceState.request_sent?(@student)}, from: false, to: true do
-        @student.child_account_compliance_state = Policies::ChildAccount::ComplianceState::REQUEST_SENT
-      end
-    end
-
     test 'permission_granted?' do
       assert_changes -> {Policies::ChildAccount::ComplianceState.permission_granted?(@student)}, from: false, to: true do
         @student.child_account_compliance_state = Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED
@@ -37,10 +31,10 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       [[:non_compliant_child, :not_U13], true],
       [[:non_compliant_child, :migrated_imported_from_clever], true],
       [[:non_compliant_child, :with_lti_auth], true],
-      [[:non_compliant_child, :with_pending_parent_permission, {created_at: '2023-06-30T23:59:59MST'}], true],
-      [[:non_compliant_child, :with_pending_parent_permission, {created_at: '2023-07-01T00:00:00MST'}], true],
-      [[:non_compliant_child, :with_pending_parent_permission, :before_p20_937_exception_date], true],
-      [[:non_compliant_child, :with_pending_parent_permission, :p20_937_exception_date], false],
+      [[:non_compliant_child,  {created_at: '2023-06-30T23:59:59MST'}], true],
+      [[:non_compliant_child,  {created_at: '2023-07-01T00:00:00MST'}], true],
+      [[:non_compliant_child, :before_p20_937_exception_date], true],
+      [[:non_compliant_child,  :p20_937_exception_date], false],
       [[:non_compliant_child, :skip_validation, {birthday: nil}], true],
       [[:non_compliant_child, :with_interpolated_co], true],
       [[:non_compliant_child, :with_interpolated_colorado], true],
