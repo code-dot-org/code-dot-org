@@ -78,7 +78,7 @@ type GoogleBlocklyType = typeof GoogleBlockly;
 
 // Type for the Blockly instance created and modified by googleBlocklyWrapper.
 export interface BlocklyWrapperType extends GoogleBlocklyType {
-  disableParamEditing: boolean;
+  enableParamEditing: boolean;
   selected: BlockSvg;
   blockCountMap: Map<string, number> | undefined;
   blockLimitMap: Map<string, number> | undefined;

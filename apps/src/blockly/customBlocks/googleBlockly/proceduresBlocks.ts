@@ -149,7 +149,7 @@ GoogleBlockly.Extensions.register(
         miniToolboxBlocks.push(BLOCK_TYPES.spriteParameterGet);
         break;
       case BLOCK_TYPES.procedureDefinition:
-        if (!Blockly.disableParamEditing) {
+        if (Blockly.enableParamEditing) {
           miniToolboxBlocks.push(BLOCK_TYPES.parametersGet);
         }
         break;
