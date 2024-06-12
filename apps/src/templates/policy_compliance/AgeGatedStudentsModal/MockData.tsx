@@ -39,7 +39,7 @@ export const MockStudentData = [
     rowType: RowType.STUDENT,
     age: 10,
     atRiskAgeGatedStudent: true,
-    childAccountComplianceState: '',
+    childAccountComplianceState: ChildAccountComplianceStates.GRACE_PERIOD,
   },
   {
     id: 4,

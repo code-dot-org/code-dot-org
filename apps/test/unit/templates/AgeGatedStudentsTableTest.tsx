@@ -127,6 +127,8 @@ describe('AgeGatedStudentsTable', () => {
 
   const getConsentStatus = (consentStatus: string) => {
     switch (consentStatus) {
+      case ChildAccountComplianceStates.GRACE_PERIOD:
+        return i18n.childAccountPolicy_gracePeriod();
       case ChildAccountComplianceStates.LOCKED_OUT:
         return i18n.childAccountPolicy_lockedOut();
       case ChildAccountComplianceStates.PERMISSION_GRANTED:

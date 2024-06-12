@@ -7,15 +7,21 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       @student = build(:student)
     end
 
+    test 'grace_period?' do
+      assert_changes -> {Policies::ChildAccount::ComplianceState.grace_period?(@student)}, from: false, to: true do
+        @student.child_account_compliance_state = 'p'
+      end
+    end
+
     test 'locked_out?' do
       assert_changes -> {Policies::ChildAccount::ComplianceState.locked_out?(@student)}, from: false, to: true do
-        @student.child_account_compliance_state = Policies::ChildAccount::ComplianceState::LOCKED_OUT
+        @student.child_account_compliance_state = 'l'
       end
     end
 
     test 'permission_granted?' do
       assert_changes -> {Policies::ChildAccount::ComplianceState.permission_granted?(@student)}, from: false, to: true do
-        @student.child_account_compliance_state = Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED
+        @student.child_account_compliance_state = 'g'
       end
     end
   end

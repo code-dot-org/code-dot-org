@@ -5,12 +5,16 @@ require 'date'
 class Policies::ChildAccount
   # Values for the `child_account_compliance_state` attribute
   module ComplianceState
+    # The period for "existing" users before their accounts locked out.
+    GRACE_PERIOD = SharedConstants::CHILD_ACCOUNT_COMPLIANCE_STATES.GRACE_PERIOD
+
     # The student's account has been used to issue a request to a parent.
     LOCKED_OUT = SharedConstants::CHILD_ACCOUNT_COMPLIANCE_STATES.LOCKED_OUT
 
     # The student's account has been approved by their parent.
     PERMISSION_GRANTED = SharedConstants::CHILD_ACCOUNT_COMPLIANCE_STATES.PERMISSION_GRANTED
 
+    # def self.grace_period?(student)
     # def self.locked_out?(student)
     # def self.permission_granted?(student)
     SharedConstants::CHILD_ACCOUNT_COMPLIANCE_STATES.to_h.each do |key, value|
