@@ -44,7 +44,6 @@ class Policies::ChildAccount
   # parent permission before the student can start using their account.
   def self.compliant?(user)
     return true unless parent_permission_required?(user)
-    return true if user_predates_policy?(user)
     ComplianceState.permission_granted?(user)
   end
 
