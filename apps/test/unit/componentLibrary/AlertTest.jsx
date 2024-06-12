@@ -8,13 +8,13 @@ import Alert from '@cdo/apps/componentLibrary/alert';
 import {expect} from '../../util/reconfiguredChai';
 
 describe('Design System - Alert', () => {
-  it('renders with correct text', () => {
+  it('Alert - renders with correct text', () => {
     render(<Alert text="Alert text" />);
 
     expect(screen.getByText('Alert text')).to.exist;
   });
 
-  it('renders icon when passed', () => {
+  it('Alert - renders icon when passed', () => {
     const icon = {iconName: 'check-circle'};
     render(<Alert text="Alert text" icon={icon} />);
 
@@ -23,7 +23,7 @@ describe('Design System - Alert', () => {
     expect(iconElement.className).to.contain('fa-check-circle');
   });
 
-  it('renders default icon for specific types', () => {
+  it('Alert - renders default icon for specific types', () => {
     const {rerender} = render(<Alert text="Success Alert" type="success" />);
     expect(screen.getByTestId('font-awesome-v6-icon').className).to.contain(
       'fa-check-circle'
@@ -45,7 +45,7 @@ describe('Design System - Alert', () => {
     );
   });
 
-  it('renders link correctly', () => {
+  it('Alert - renders link correctly', () => {
     const link = {href: 'https://google.com/', children: 'Click here'};
     render(<Alert text="Alert with link" link={link} />);
 
@@ -54,7 +54,7 @@ describe('Design System - Alert', () => {
     expect(linkElement.href).to.equal(link.href);
   });
 
-  it('calls onClose', async () => {
+  it('Alert - calls onClose', async () => {
     const user = userEvent.setup();
     const spyOnClose = sinon.spy();
 
@@ -66,7 +66,7 @@ describe('Design System - Alert', () => {
     expect(spyOnClose).to.have.been.calledOnce;
   });
 
-  it('renders icon, text, link, and onClose at the same time', async () => {
+  it('Alert - renders icon, text, link, and onClose at the same time', async () => {
     const user = userEvent.setup();
     const spyOnClose = sinon.spy();
     const link = {href: 'https://google.com/', children: 'Click here'};

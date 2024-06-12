@@ -75,6 +75,7 @@ const Alert: React.FunctionComponent<AlertProps> = ({
   // 1. Add close button to the alert
   // 2. Add role='alert' to the alert (?)
   // 3. Update Link to support text prop, not only children props
+  // 4. Update README.md
 
   return (
     <div
