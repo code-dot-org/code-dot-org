@@ -248,7 +248,12 @@ class UnitEditor extends React.Component {
         error: 'Please set both version year and family name.',
       });
       return;
-    } else if (this.props.isMissingRequiredDeviceCompatibilities) {
+    } else if (
+      [PublishedState.preview, PublishedState.stable].includes(
+        this.state.publishedState
+      ) &&
+      this.props.isMissingRequiredDeviceCompatibilities
+    ) {
       this.setState({
         isSaving: false,
         error:
