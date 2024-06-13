@@ -342,7 +342,7 @@ def run_tests(env, feature, target_platform, arguments, log_prefix)
     eyes_succeeded = count_eyes_errors(stdout) == 0
     duration = Time.now - start_time
     extra_dimensions = {test_type: test_type,
-                        feature_name: feature.split(".feature")[0],
+                        feature_name: feature.include?(".feature") ? feature.split(".feature")[0] : feature,
                         target_browser: target_platform}
     # Metrics for individual feature runs. They will be flushed once all of them run
     Infrastructure::Logger.put("runner_feature_success", cucumber_succeeded ? 1 : 0, extra_dimensions)
