@@ -7,7 +7,7 @@ class MusiclabController < ApplicationController
     Ehnks69B0Whcn_YQQNCK4GUHAPU3WSG2jfilvQF1kfo
     6Xc53NIhwFxjjwsSaoj_eSiRbbXr97BYQ3W_7vIaAwY
     NwTkJSskTswEOtgy6TbaJ-8SonhhSxojrJjlJLBko4w
-    PCO7mvB5ylByrbpF7tEbzXdYOqrALhW3M5OlcDRIF7E
+    I3HQObQN0jiadlMqjleet5VEwQaFwGYHG6Ehxodbg7U
   )
 
   def menu
