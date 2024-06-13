@@ -8,7 +8,7 @@ import React, {
 } from 'react';
 import {createPortal} from 'react-dom';
 
-import Tooltip, {TooltipOverlay, TooltipProps} from './Tooltip';
+import Tooltip, {TooltipOverlay, TooltipProps} from './_Tooltip';
 
 // Define the tail offset and length values
 const tailOffset = 4;
