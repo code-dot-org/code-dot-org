@@ -25,7 +25,7 @@ export default function RubricsContainer({
   const [saveNotificationText, setSaveNotificationText] = useState('');
   const hasSubmittableLevels = submittableLevels.length > 0;
 
-  const [systemPrompt, setSystemPrompt] = useState('blank system prompt');
+  const [systemPrompt, setSystemPrompt] = useState(rubric.initialSystemPrompt);
 
   const generateLearningGoalKey = () => {
     let learningGoalNumber = learningGoalList.length + 1;
@@ -175,6 +175,11 @@ export default function RubricsContainer({
 
   const pageHeader = !!rubric ? 'Modify your rubric' : 'Create your rubric';
 
+  const systemPromptStyle = {
+    ...styles.textareaBoxes,
+    height: '200px',
+  };
+
   return (
     <div>
       <Heading1>{pageHeader}</Heading1>
@@ -196,7 +201,7 @@ export default function RubricsContainer({
           </div>
           <Heading2>System Prompt</Heading2>
           <textarea
-            style={styles.textareaBoxes}
+            style={systemPromptStyle}
             value={systemPrompt}
             onChange={event => setSystemPrompt(event.target.value)}
           />

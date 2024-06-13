@@ -54,6 +54,13 @@ class Rubric < ApplicationRecord
       lessonId: lesson_id,
       levelId: level_id,
       learningGoals: learning_goals.map(&:summarize_for_rubric_edit),
+      initialSystemPrompt: get_system_prompt
     }
+  end
+
+  private def get_system_prompt
+    script_level = get_script_level
+    s3_lesson_name = AiRubricConfig.get_lesson_s3_name(script_level)
+    AiRubricConfig.read_file_from_s3(s3_lesson_name, 'system_prompt.txt')
   end
 end
