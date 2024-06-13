@@ -228,6 +228,12 @@ GoogleBlockly.Extensions.register(
   function (this: ProcedureBlock) {
     const mixin = {
       /**
+       * Adds or removes the parameter label to match the state of the data model.
+       * No-op to avoid adding "with:" label to the block.
+       */
+      addParametersLabel__: function () {},
+
+      /**
        * Updates the shape of this block to reflect the state of the data model.
        */
       doProcedureUpdate: function (this: ProcedureBlock) {
