@@ -156,6 +156,10 @@ export default function RubricsContainer({
     );
   };
 
+  const computeAccuracy = () => {
+    console.log('Compute Accuracy');
+  };
+
   function renderOptions() {
     const selectOptions = submittableLevels.map(level => (
       <option key={level.id} value={level.id}>
@@ -203,6 +207,13 @@ export default function RubricsContainer({
             updateLearningGoal={updateLearningGoal}
           />
           <div style={styles.bottomRow}>
+            <Button
+              className="ui-test-compute-accuracy-button"
+              color={Button.ButtonColor.orange}
+              text="Compute Accuracy"
+              onClick={computeAccuracy}
+              size={Button.ButtonSize.narrow}
+            />
             <Button
               className="ui-test-save-button"
               color={Button.ButtonColor.brandSecondaryDefault}
