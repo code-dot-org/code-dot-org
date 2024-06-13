@@ -319,29 +319,29 @@ export function flyoutCategory(
     Blockly.getHiddenDefinitionWorkspace(),
   ];
 
-  const allFunctions: {name: string; id: string}[] = [];
+  const allFunctions: GoogleBlockly.serialization.procedures.State[] = [];
   workspaces.forEach(workspace => {
-    const procedureBlocks = workspace
-      .getTopBlocks()
-      .filter(topBlock => topBlock.type === BLOCK_TYPES.procedureDefinition);
+    const procedureBlocks = (
+      workspace.getTopBlocks() as ProcedureBlock[]
+    ).filter(block => block.type === BLOCK_TYPES.procedureDefinition);
+
     procedureBlocks.forEach(block => {
-      allFunctions.push({
-        name: block.getFieldValue('NAME'),
-        id: block.id,
-      });
+      allFunctions.push(
+        Blockly.serialization.procedures.saveProcedure(
+          block.getProcedureModel()
+        )
+      );
     });
   });
 
-  allFunctions.sort(nameComparator).forEach(({name, id}) => {
+  allFunctions.sort(nameComparator).forEach(({name, id, parameters}) => {
     blockList.push({
       kind: 'block',
       type: BLOCK_TYPES.procedureCall,
       extraState: {
         name: name,
         id: id,
-      },
-      fields: {
-        NAME: name,
+        params: parameters?.map(param => param.name),
       },
     });
   });
