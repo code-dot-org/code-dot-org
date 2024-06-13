@@ -125,8 +125,6 @@ class CodeWorkspace extends React.Component {
       />
     );
 
-    console.log('lfm', this.props.inToolboxBlocksMode);
-
     return [
       <PaneSection
         id="toolbox-header"
