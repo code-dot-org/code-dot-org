@@ -2023,6 +2023,16 @@ StudioApp.prototype.setConfigValues_ = function (config) {
       'JavaScript',
       xml
     );
+
+    // Generate code for the initialization blocks. Used at execution time
+    // for labs like Maze.
+    if (this.initializationBlocks.length) {
+      const generator = Blockly.getGenerator();
+      generator.init(this.initializationBlocks[0].workspace);
+      this.initializationCode = generator.finish(
+        Blockly.Generator.blocksToCode('JavaScript', this.initializationBlocks)
+      );
+    }
   }
 
   // enableShowCode defaults to true if not defined
