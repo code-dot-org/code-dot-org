@@ -110,7 +110,7 @@
         .widehero_do_not_hide#fullwidth0{style: "background-position: #{entry[:centering]}; background-image: url(#{entry[:image]});", class: entry[:classname]}
     - else
       -# Temp: for ai2020, heroes will show/hide responsively, so use widehero_do_not_hide
-      .widehero_do_not_hide.lazyload{id: "fullwidth#{index}", "data-bg"=> "#{entry[:image]}", style: "background-position: #{entry[:centering]}", class: entry[:classname]}
+      .widehero_do_not_hide.lazyload{id: "fullwidth#{index}", "data-bg"=> entry[:image], style: "background-position: #{entry[:centering]}", class: entry[:classname]}
 
   - if show_single_hero
     - if num_columns == 3
