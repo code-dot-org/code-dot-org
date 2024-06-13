@@ -101,6 +101,7 @@ function AddLevelDialogTop(props) {
                 currentPage={currentPage}
                 addLevel={props.addLevel}
                 levels={levels}
+                currentLevelIds={props.currentLevelIds}
                 numPages={numPages}
               />
             </div>
@@ -120,6 +121,7 @@ function AddLevelDialogTop(props) {
 
 AddLevelDialogTop.propTypes = {
   addLevel: PropTypes.func.isRequired,
+  currentLevelIds: PropTypes.array.isRequired,
 
   // from redux
   searchOptions: PropTypes.object.isRequired,

@@ -11,6 +11,7 @@ export default class AddLevelTable extends Component {
     currentPage: PropTypes.number.isRequired,
     setCurrentPage: PropTypes.func.isRequired,
     numPages: PropTypes.number.isRequired,
+    currentLevelIds: PropTypes.array.isRequired,
   };
 
   render() {
@@ -31,6 +32,7 @@ export default class AddLevelTable extends Component {
               <AddLevelTableRow
                 key={level.id}
                 addLevel={this.props.addLevel}
+                isInLesson={this.props.currentLevelIds.includes(level.id)}
                 level={level}
               />
             ))}
