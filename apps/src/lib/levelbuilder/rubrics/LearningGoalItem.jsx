@@ -79,6 +79,7 @@ export default function LearningGoalItem({
                 checked={exisitingLearningGoalData.aiEnabled}
                 onChange={handleCheckboxChange}
                 style={styles.checkbox}
+                disabled
               />
               {/* This span is used for checkbox styling;
               It is hidden from AT devices */}
@@ -96,45 +97,47 @@ export default function LearningGoalItem({
           </div>
         </div>
       </div>
-      <div style={styles.activityBody}>
-        <Heading6>AI Instructions</Heading6>
-        <textarea
-          value={aiInstructions}
-          onChange={event => setAiInstructions(event.target.value)}
-          style={{width: '97%', height: 100}}
-        />
-        <EvidenceDescriptions
-          learningGoalData={exisitingLearningGoalData}
-          updateLearningGoal={updateLearningGoal}
-        />
-        <label
-          style={{...styles.labelAndInput, ...styles.textboxLabelAndInput}}
-        >
-          Tips
+      {exisitingLearningGoalData.aiEnabled && (
+        <div style={styles.activityBody}>
+          <Heading6>AI Instructions</Heading6>
           <textarea
-            value={exisitingLearningGoalData.tips || ''}
-            onChange={event =>
-              updateLearningGoal(
-                exisitingLearningGoalData.id,
-                'tips',
-                event.target.value
-              )
-            }
-            style={{width: '100%', height: 100}}
+            value={aiInstructions}
+            onChange={event => setAiInstructions(event.target.value)}
+            style={{width: '97%', height: 100}}
           />
-        </label>
-        <label style={styles.labelAndInput}>
-          Unique Key: {exisitingLearningGoalData.key}
-        </label>
-        <Button
-          text="Delete key concept"
-          color={Button.ButtonColor.red}
-          onClick={handleDelete}
-          icon="trash"
-          iconClassName="fa-trash"
-          className="ui-test-delete-concept-button"
-        />
-      </div>
+          <EvidenceDescriptions
+            learningGoalData={exisitingLearningGoalData}
+            updateLearningGoal={updateLearningGoal}
+          />
+          <label
+            style={{...styles.labelAndInput, ...styles.textboxLabelAndInput}}
+          >
+            Tips
+            <textarea
+              value={exisitingLearningGoalData.tips || ''}
+              onChange={event =>
+                updateLearningGoal(
+                  exisitingLearningGoalData.id,
+                  'tips',
+                  event.target.value
+                )
+              }
+              style={{width: '100%', height: 100}}
+            />
+          </label>
+          <label style={styles.labelAndInput}>
+            Unique Key: {exisitingLearningGoalData.key}
+          </label>
+          <Button
+            text="Delete key concept"
+            color={Button.ButtonColor.red}
+            onClick={handleDelete}
+            icon="trash"
+            iconClassName="fa-trash"
+            className="ui-test-delete-concept-button"
+          />
+        </div>
+      )}
     </div>
   );
 }
