@@ -128,6 +128,9 @@ export default class CdoFieldParameter extends GoogleBlockly.FieldVariable {
       if (paramToRename) {
         paramToRename.setName(newName);
       }
+      // In case the block is disconnected from the definition, manually
+      // reset its field value.
+      this.getSourceBlock()?.setFieldValue(variable.getId(), 'VAR');
     }
   }
   /**
