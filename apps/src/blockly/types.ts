@@ -215,6 +215,7 @@ export interface ExtendedBlock extends Block {
 }
 
 export interface ExtendedWorkspaceSvg extends WorkspaceSvg {
+  flyoutParentBlock: Block | null;
   globalVariables: string[];
   noFunctionBlockFrame: boolean;
   events: {
