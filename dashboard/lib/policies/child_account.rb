@@ -44,7 +44,6 @@ class Policies::ChildAccount
   # parent permission before the student can start using their account.
   def self.compliant?(user)
     return true unless parent_permission_required?(user)
-    return true if user_predates_policy?(user)
     ComplianceState.permission_granted?(user)
   end
 
@@ -89,7 +88,14 @@ class Policies::ChildAccount
   # The date on which the student's account will be locked if the account is not compliant.
   def self.lockout_date(user)
     return if compliant?(user)
-    state_policy(user).try(:[], :lockout_date)
+
+    user_state_policy = state_policy(user)
+    return unless user_state_policy
+
+    # CAP non-compliant students who were created:
+    # - before the policy took effect - should be locked out during the all users lockout phase.
+    # - after the policy took effect - should be locked out immediately.
+    user_predates_policy?(user) ? user_state_policy[:lockout_date] : user_state_policy[:start_date]
   end
 
   # Checks if the user can be locked out due to non-compliance with CAP.
@@ -99,7 +105,7 @@ class Policies::ChildAccount
     user_lockout_date = lockout_date(user)
     return false unless user_lockout_date
 
-    DateTime.now >= user_lockout_date || !user_predates_policy?(user)
+    user_lockout_date <= DateTime.now
   end
 
   # Authentication option types which we consider to be "owned" by the school
@@ -152,16 +158,17 @@ class Policies::ChildAccount
   # Child Account Policy.
   def self.parent_permission_required?(user)
     return false unless user.student?
-    return false unless user.birthday
 
     policy = state_policy(user)
+    # Parent permission is not required for students who are not covered by a US State child account policy.
     return false unless policy
 
-    lockout_date = policy[:lockout_date]
-    student_birthday = user.birthday.in_time_zone(lockout_date.utc_offset)
-    min_required_age = policy[:max_age].next.years
-    # Checks if the student meets the minimum age requirement at the start of the lockout
-    return false if student_birthday.since(min_required_age) <= lockout_date
+    # Parental permission is not required until the policy is in effect.
+    return false if policy[:start_date] > DateTime.now
+
+    # Parental permission is not required for students
+    # whose age cannot be identified or who are older than the maximum age covered by the policy.
+    return false if user.age.nil? || user.age.to_i > policy[:max_age]
 
     personal_account?(user)
   end

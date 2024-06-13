@@ -37,10 +37,7 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       [[:non_compliant_child, :not_U13], true],
       [[:non_compliant_child, :migrated_imported_from_clever], true],
       [[:non_compliant_child, :with_lti_auth], true],
-      [[:non_compliant_child,  {created_at: '2023-06-30T23:59:59MST'}], true],
-      [[:non_compliant_child,  {created_at: '2023-07-01T00:00:00MST'}], true],
-      [[:non_compliant_child, :before_p20_937_exception_date], true],
-      [[:non_compliant_child,  :p20_937_exception_date], false],
+      [[:non_compliant_child, {created_at: '2023-06-30T23:59:59MST'}], false],
       [[:non_compliant_child, :skip_validation, {birthday: nil}], true],
       [[:non_compliant_child, :with_interpolated_co], true],
       [[:non_compliant_child, :with_interpolated_colorado], true],
@@ -225,13 +222,62 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     end
   end
 
+  describe '.lockout_date' do
+    let(:lockout_date) {Policies::ChildAccount.lockout_date(user)}
+
+    let(:user) {build_stubbed(:student)}
+
+    let(:user_cap_compliant?) {false}
+    let(:user_predates_cap_policy?) {false}
+    let(:user_state_policy_start_date) {1.year.ago}
+    let(:user_state_policy_lockout_date) {1.year.since}
+    let(:user_state_policy) {{start_date: user_state_policy_start_date, lockout_date: user_state_policy_lockout_date}}
+
+    around do |test|
+      Timecop.freeze {test.call}
+    end
+
+    before do
+      Policies::ChildAccount.stubs(:compliant?).with(user).returns(user_cap_compliant?)
+      Policies::ChildAccount.stubs(:user_predates_policy?).with(user).returns(user_predates_cap_policy?)
+      Policies::ChildAccount.stubs(:state_policy).with(user).returns(user_state_policy)
+    end
+
+    it 'returns state policy start date' do
+      _(lockout_date).must_equal user_state_policy_start_date
+    end
+
+    context 'when user was created before state policy took effect' do
+      let(:user_predates_cap_policy?) {true}
+
+      it 'returns all users lockout date from state policy' do
+        _(lockout_date).must_equal user_state_policy_lockout_date
+      end
+    end
+
+    context 'when user is not covered by a state policy' do
+      let(:user_state_policy) {nil}
+
+      it 'returns nil' do
+        _(lockout_date).must_be_nil
+      end
+    end
+
+    context 'when user is CAP compliant' do
+      let(:user_cap_compliant?) {true}
+
+      it 'returns nil' do
+        _(lockout_date).must_be_nil
+      end
+    end
+  end
+
   describe '.lockable?' do
     let(:lockable?) {Policies::ChildAccount.lockable?(user)}
 
     let(:user) {build_stubbed(:student)}
 
     let(:user_lockout_date) {DateTime.now}
-    let(:user_predates_policy?) {true}
 
     around do |test|
       Timecop.freeze {test.call}
@@ -239,7 +285,6 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
 
     before do
       Policies::ChildAccount.stubs(:lockout_date).with(user).returns(user_lockout_date)
-      Policies::ChildAccount.stubs(:user_predates_policy?).with(user).returns(user_predates_policy?)
     end
 
     it 'returns true' do
@@ -268,13 +313,148 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       it 'returns false' do
         _(lockable?).must_equal false
       end
+    end
+  end
 
-      context 'if user does not predate policy' do
-        let(:user_predates_policy?) {false}
+  describe '.personal_account?' do
+    let(:personal_account?) {Policies::ChildAccount.personal_account?(user)}
 
-        it 'returns true' do
-          _(lockable?).must_equal true
+    let(:user_sponsored?) {false}
+    let(:user_migrated?) {false}
+    let(:user_provider) {'email'}
+    let(:user_auth_option_credential_type) {'email'}
+    let(:user_auth_option) {build_stubbed(:authentication_option, credential_type: user_auth_option_credential_type)}
+    let(:user) {build_stubbed(:user, provider: user_provider, authentication_options: [user_auth_option])}
+
+    before do
+      user.stubs(:sponsored?).returns(user_sponsored?)
+      user.stubs(:migrated?).returns(user_migrated?)
+    end
+
+    it 'returns true' do
+      _(personal_account?).must_equal true
+    end
+
+    context 'when user provider is Clever' do
+      let(:user_provider) {'clever'}
+
+      it 'returns false' do
+        _(personal_account?).must_equal false
+      end
+    end
+
+    context 'when user provider is LTI v1' do
+      let(:user_provider) {'lti_v1'}
+
+      it 'returns false' do
+        _(personal_account?).must_equal false
+      end
+    end
+
+    context 'when user is migrated' do
+      let(:user_migrated?) {true}
+      let(:user_provider) {'clever'}
+
+      it 'returns true' do
+        _(personal_account?).must_equal true
+      end
+
+      context 'when credential type of user auth option is Clever' do
+        let(:user_auth_option_credential_type) {'clever'}
+
+        it 'returns false' do
+          _(personal_account?).must_equal false
         end
+      end
+
+      context 'when credential type of user auth option is LTI v1' do
+        let(:user_auth_option_credential_type) {'lti_v1'}
+
+        it 'returns false' do
+          _(personal_account?).must_equal false
+        end
+      end
+    end
+
+    context 'when user is sponsored' do
+      let(:user_sponsored?) {true}
+
+      it 'returns false' do
+        _(personal_account?).must_equal false
+      end
+    end
+  end
+
+  describe '.parent_permission_required?' do
+    let(:parent_permission_required?) {Policies::ChildAccount.parent_permission_required?(user)}
+
+    let(:user_type) {'student'}
+    let(:user_age) {user_state_policy_max_age}
+    let(:user) {build_stubbed(:user, user_type: user_type, birthday: user_age&.year&.ago)}
+
+    let(:user_account_is_personal?) {true}
+    let(:user_state_policy_start_date) {DateTime.now}
+    let(:user_state_policy_max_age) {12}
+    let(:user_state_policy) {{start_date: user_state_policy_start_date, max_age: user_state_policy_max_age}}
+
+    around do |test|
+      Timecop.freeze {test.call}
+    end
+
+    before do
+      Policies::ChildAccount.stubs(:state_policy).with(user).returns(user_state_policy)
+      Policies::ChildAccount.stubs(:personal_account?).with(user).returns(user_account_is_personal?)
+    end
+
+    it 'returns true' do
+      _(parent_permission_required?).must_equal true
+    end
+
+    context 'when user is not a personal account' do
+      let(:user_account_is_personal?) {false}
+
+      it 'returns false' do
+        _(parent_permission_required?).must_equal false
+      end
+    end
+
+    context 'when user is older than maximum age covered by the policy' do
+      let(:user_age) {user_state_policy_max_age.next}
+
+      it 'returns false' do
+        _(parent_permission_required?).must_equal false
+      end
+    end
+
+    context 'when user age cannot be identified' do
+      let(:user_age) {nil}
+
+      it 'returns false' do
+        _(parent_permission_required?).must_equal false
+      end
+    end
+
+    context 'when policy has not yet taken effect' do
+      let(:user_state_policy_start_date) {1.second.since}
+
+      it 'returns false' do
+        _(parent_permission_required?).must_equal false
+      end
+    end
+
+    context 'when user is not covered by a US State child account policy' do
+      let(:user_state_policy) {nil}
+
+      it 'returns false' do
+        _(parent_permission_required?).must_equal false
+      end
+    end
+
+    context 'when user is not a student' do
+      let(:user_type) {'teacher'}
+
+      it 'returns false' do
+        _(parent_permission_required?).must_equal false
       end
     end
   end
