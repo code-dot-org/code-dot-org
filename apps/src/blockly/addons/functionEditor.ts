@@ -1,4 +1,5 @@
 import {
+  ObservableParameterModel,
   ObservableProcedureModel,
   ProcedureBase,
 } from '@blockly/block-shareable-procedures';
@@ -585,11 +586,28 @@ export default class FunctionEditor {
     workspace: WorkspaceSvg,
     procedure: IProcedureModel
   ) {
-    return new ObservableProcedureModel(
+    const newProcedure = new ObservableProcedureModel(
       workspace,
       procedure.getName(),
       procedure.getId()
     );
+
+    // Copy parameters from the old procedure to the new one
+    procedure.getParameters().forEach((param, index) => {
+      // Type assertion to ensure we can get the variable model.
+      const observableParam = param as ObservableParameterModel;
+
+      const newParam = new ObservableParameterModel(
+        workspace,
+        observableParam.getName(),
+        observableParam.getId(),
+        observableParam.getVariableModel().getId()
+      );
+
+      newProcedure.insertParameter(newParam, index);
+    });
+
+    return newProcedure;
   }
 
   // Clear the editor workspace to prepare for a new function definition.
