@@ -15,8 +15,8 @@ export default function initializeGenerator(
   // This function was a custom addition in CDO Blockly, so we need to add it here
   // so that our code generation logic still works with Google Blockly
   blocklyWrapper.Generator.xmlToBlocks = function (_name, xml) {
-    const div = document.createElement('div');
-    const workspace = blocklyWrapper.createEmbeddedWorkspace(div, xml, {});
+    const workspace = new Blockly.Workspace();
+    Blockly.Xml.domToBlockSpace(workspace, xml);
     return workspace.getTopBlocks(true);
   };
 
@@ -48,7 +48,10 @@ export default function initializeGenerator(
       );
     }
     const generator = blocklyWrapper.getGenerator();
-    generator.init(blocklyWrapper.getMainWorkspace());
+    if (blocklyWrapper.getMainWorkspace()) {
+      generator.init(blocklyWrapper.getMainWorkspace());
+    }
+    generator.variableDB_ = generator.nameDB_;
     const code: string[] = [];
     blocksToGenerate.forEach(block => {
       code.push(blocklyWrapper.JavaScript.blockToCode(block));

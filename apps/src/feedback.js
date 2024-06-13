@@ -1443,14 +1443,6 @@ FeedbackUtils.prototype.throwOnInvalidExampleBlocks = function (
   if (!resultBlock) {
     throw new Error('Invalid Result Block');
   }
-
-  if (resultBlock.hasUnfilledFunctionalInput()) {
-    throw new Error('Result has unfilled inputs');
-  }
-
-  if (callBlock.hasUnfilledFunctionalInput()) {
-    throw new Error('Call has unfilled inputs');
-  }
 };
 
 /**
@@ -1474,9 +1466,14 @@ FeedbackUtils.prototype.hasAllBlocks_ = function (blocks) {
  * @return {Array<Object>} The blocks.
  */
 FeedbackUtils.prototype.getUserBlocks_ = function () {
-  var allBlocks = Blockly.mainBlockSpace.getAllUsedBlocks();
-  var blocks = allBlocks.filter(function (block) {
-    var blockValid = !block.disabled && block.type !== 'when_run';
+  const allBlocks = [
+    ...Blockly.mainBlockSpace.getAllUsedBlocks(),
+    ...(Blockly.getHiddenDefinitionWorkspace()
+      ? Blockly.getHiddenDefinitionWorkspace().getAllBlocks()
+      : []),
+  ];
+  const blocks = allBlocks.filter(function (block) {
+    let blockValid = !block.disabled && block.type !== 'when_run';
     // If Blockly is in readOnly mode, then all blocks are uneditable
     // so this filter would be useless. Ignore uneditable blocks only if
     // Blockly is in edit mode.
@@ -1521,8 +1518,13 @@ FeedbackUtils.blockShouldBeCounted_ = function (block) {
  * @return {Array<Object>} The blocks.
  */
 FeedbackUtils.prototype.getCountableBlocks_ = function () {
-  var allBlocks = Blockly.mainBlockSpace.getAllUsedBlocks();
-  var blocks = allBlocks.filter(FeedbackUtils.blockShouldBeCounted_);
+  const allBlocks = [
+    ...Blockly.mainBlockSpace.getAllUsedBlocks(),
+    ...(Blockly.getHiddenDefinitionWorkspace()
+      ? Blockly.getHiddenDefinitionWorkspace().getAllBlocks()
+      : []),
+  ];
+  const blocks = allBlocks.filter(FeedbackUtils.blockShouldBeCounted_);
   return blocks;
 };
 

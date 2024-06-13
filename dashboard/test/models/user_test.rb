@@ -84,6 +84,37 @@ class UserTest < ActiveSupport::TestCase
     @levelbuilder = create :levelbuilder
   end
 
+  class CAPEventLogging < ActiveSupport::TestCase
+    setup do
+      @student = create(:non_compliant_child)
+    end
+
+    test 'logs CAP event "account_locking" after student compliance state changed to "l"' do
+      Services::ChildAccount.update_compliance(@student, Policies::ChildAccount::ComplianceState::LOCKED_OUT)
+
+      Services::ChildAccount::EventLogger.expects(:log_account_locking).with(@student).once
+
+      @student.save!
+    end
+
+    test 'logs CAP event "permission_granting" after student compliance state changed to "g"' do
+      Services::ChildAccount.update_compliance(@student, Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED)
+
+      Services::ChildAccount::EventLogger.expects(:log_permission_granting).with(@student).once
+
+      @student.save!
+    end
+
+    test 'does not log any CAP events if compliance state was not changed' do
+      Services::ChildAccount.update_compliance(@student, Policies::ChildAccount::ComplianceState::LOCKED_OUT)
+      @student.save!
+
+      Services::ChildAccount::EventLogger.expects(:new).with(user: @student, event_name: anything).never
+
+      @student.save!
+    end
+  end
+
   test 'from_identifier finds user by id' do
     student = create :student
     assert_equal student, User.from_identifier(student.id.to_s)
@@ -3975,6 +4006,8 @@ class UserTest < ActiveSupport::TestCase
         sharing_disabled: false,
         has_ever_signed_in: @student.has_ever_signed_in?,
         ai_tutor_access_denied: !!@student.ai_tutor_access_denied,
+        at_risk_age_gated: false,
+        child_account_compliance_state: @student.child_account_compliance_state,
       },
       @student.summarize
     )
@@ -5194,19 +5227,6 @@ class UserTest < ActiveSupport::TestCase
   test "marketing_segment_data returns the same keys as marketing_segment_data_keys" do
     teacher = create :teacher
     assert_equal User.marketing_segment_data_keys.sort, teacher.marketing_segment_data.keys.map(&:to_s).sort
-  end
-
-  test "given a noncompliant child account, that account is locked out" do
-    student = create :non_compliant_child
-    student.save!
-    assert_equal Policies::ChildAccount::ComplianceState::LOCKED_OUT, student.child_account_compliance_state
-    refute_empty student.child_account_compliance_lock_out_date
-  end
-
-  test "given a compliant child account, that account is NOT locked out" do
-    student = create :non_compliant_child, :with_parent_permission
-    student.save!
-    assert_equal Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED, student.child_account_compliance_state
   end
 
   test "does not return deleted followers from the followers helper" do

@@ -1,14 +1,16 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import applabMsg from '@cdo/applab/locale';
-import msg from '@cdo/locale';
 import styleConstants from '@cdo/apps/styleConstants';
+import msg from '@cdo/locale';
+
 import commonStyles from '../commonStyles';
-import color from '../util/color';
-import PaneHeader, {PaneButton, PaneSection} from '../templates/PaneHeader';
 import SettingsCog from '../lib/ui/SettingsCog';
+import PaneHeader, {PaneButton, PaneSection} from '../templates/PaneHeader';
 import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
-import classNames from 'classnames';
+import color from '../util/color';
 
 export default class DesignModeHeaders extends React.Component {
   static propTypes = {

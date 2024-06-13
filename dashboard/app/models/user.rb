@@ -288,6 +288,8 @@ class User < ApplicationRecord
 
   after_save :save_email_reg_partner_preference, if: -> {share_teacher_email_reg_partner_opt_in_radio_choice.present?}
 
+  after_save :log_cap_event, if: -> {properties_previous_change&.dig(1, 'child_account_compliance_state')}
+
   after_create if: -> {Policies::Lti.lti? self} do
     Services::Lti.create_lti_user_identity(self)
   end
@@ -301,10 +303,6 @@ class User < ApplicationRecord
   end
 
   validate :validate_us_state, if: :should_validate_us_state?
-
-  before_create unless: -> {Policies::ChildAccount.compliant?(self)} do
-    Services::ChildAccount.lock_out(self)
-  end
 
   before_validation on: [:create, :update], if: -> {gender_teacher_input.present? && will_save_change_to_attribute?('properties')} do
     self.gender = Policies::Gender.normalize gender_teacher_input
@@ -2242,6 +2240,8 @@ class User < ApplicationRecord
       sharing_disabled: sharing_disabled?,
       has_ever_signed_in: has_ever_signed_in?,
       ai_tutor_access_denied: !!ai_tutor_access_denied,
+      at_risk_age_gated: Policies::ChildAccount.parent_permission_required?(self),
+      child_account_compliance_state: child_account_compliance_state,
     }
   end
 
@@ -2889,6 +2889,14 @@ class User < ApplicationRecord
     # Report an error if an invalid value was submitted (probably tampering).
     unless User.us_state_dropdown_options.include?(us_state)
       errors.add(:us_state, :invalid)
+    end
+  end
+
+  private def log_cap_event
+    if Policies::ChildAccount::ComplianceState.locked_out?(self)
+      Services::ChildAccount::EventLogger.log_account_locking(self)
+    elsif Policies::ChildAccount::ComplianceState.permission_granted?(self)
+      Services::ChildAccount::EventLogger.log_permission_granting(self)
     end
   end
 end

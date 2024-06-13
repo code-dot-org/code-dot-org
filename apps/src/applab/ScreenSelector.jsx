@@ -1,12 +1,15 @@
 /** @file Dropdown for selecting design mode screens */
 import PropTypes from 'prop-types';
 import React from 'react';
-import * as constants from './constants';
 import {connect} from 'react-redux';
-import style from './screen-selector.module.scss';
+
 import applabMsg from '@cdo/applab/locale';
+
+import * as constants from './constants';
 import * as elementUtils from './designElements/elementUtils';
 import * as screens from './redux/screens';
+
+import style from './screen-selector.module.scss';
 
 /**
  * The dropdown that appears above the visualization in design mode, used

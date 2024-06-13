@@ -17,7 +17,7 @@ end
     bind_address '0.0.0.0'
     port endpoint.port
     initial_root_password endpoint.password
-    version '5.7'
+    version '8.0'
     action :create
   end
 

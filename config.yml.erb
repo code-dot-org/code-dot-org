@@ -132,6 +132,10 @@ jotform_forms:
     post201:     90065524560150
     facilitator: 91405279991164
 
+# HubSpot
+hubspot_portal_id:              !Secret
+hubspot_admin_interest_form_id: !Secret
+
 # PagerDuty
 pagerduty_token: !Secret
 
@@ -215,6 +219,7 @@ azure_content_moderation_key:
 # multiple browsers
 saucelabs_username:
 saucelabs_authkey:
+saucelabs_tunnel_name:
 
 # Credentials for applitools.com, used for running automated visual tests
 applitools_eyes_api_key:      !Secret
@@ -324,6 +329,9 @@ netsim_shard_expiry_seconds: 7200
 # DynamoDB table names for dcdo/gatekeeper
 dcdo_table_name:       dcdo_<%=env%>
 gatekeeper_table_name: gatekeeper_<%=env%>
+
+# Allows DCDO settings via cookies. See: 'dashboard/test/ui/features/cookie_dcdo.rb'
+cookie_dcdo: false
 
 # Poste (internal transactional email processing framework)
 poste_host: '<%= code_org_url.sub('//', '') %>'

@@ -1685,6 +1685,7 @@ pt-BR:
   homepage_slot_text_link_k5: Cursos para turmas do pré ao 5º ano
   homepage_slot_text_link_local: Encontre uma turma na sua região
   homepage_slot_text_link_middle: Ensino Fundamental - 7º, 8º e 9º anos
+  homepage_slot_text_link_middle_and_high: Ensino Fundamental e Médio
   homepage_slot_text_link_othercourses: Outros cursos on-line
   homepage_slot_text_link_pd: Desenvolvimento profissional
   homepage_slot_text_link_shop: Camisetas, bonés e muito mais
@@ -2646,6 +2647,7 @@ pt-BR:
   user_header_artist: 'Artista '
   user_header_create: 'Criar '
   user_header_create_account: Criar Conta
+  user_header_create_account_low_cap: Criar conta
   user_header_dance: Festa dançante
   user_header_flappy: Flappy bird
   user_header_gamelab: Laboratório de Jogos
@@ -2653,6 +2655,8 @@ pt-BR:
   user_header_logout: Sair
   user_header_minecraft: Minecraft
   user_header_my_projects: Meus projetos
+  user_header_new_project: Novo Projeto
+  user_header_new_project_low_cap: Novo projeto
   user_header_playlab: Laboratório
   user_header_settings: Configurações da conta
   user_header_signin: Entrar

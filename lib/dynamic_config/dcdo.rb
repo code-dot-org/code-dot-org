@@ -52,6 +52,11 @@ class DCDOBase < DynamicConfigBase
       'music-lab-samples-report': DCDO.get('music-lab-samples-report', true),
       'disable-try-new-progress-view-modal': DCDO.get('disable-try-new-progress-view-modal', false),
       'music-lab-existing-projects-default-sounds': DCDO.get('music-lab-existing-projects-default-sounds', true),
+      'student-email-post-enabled': DCDO.get('student-email-post-enabled', false),
+      'progress-v2-metadata-enabled': DCDO.get('progress-v2-metadata-enabled', false),
+      'show-updated-lms-content': DCDO.get('show-updated-lms-content', false),
+      # Used to test DCDO setting via cookie. See: 'dashboard/test/ui/features/cookie_dcdo.rb'
+      cookie_dcdo_test: DCDO.get('cookie_dcdo_test', nil),
     }
   end
 end

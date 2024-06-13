@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import color from '../util/color';
-import DesignToolbox from './DesignToolbox';
+
 import DesignProperties from './designProperties';
+import DesignToolbox from './DesignToolbox';
 
 export default class DesignModeBox extends React.Component {
   static propTypes = {

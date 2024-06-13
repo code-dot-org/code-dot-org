@@ -78,6 +78,7 @@ type GoogleBlocklyType = typeof GoogleBlockly;
 
 // Type for the Blockly instance created and modified by googleBlocklyWrapper.
 export interface BlocklyWrapperType extends GoogleBlocklyType {
+  enableParamEditing: boolean;
   selected: BlockSvg;
   blockCountMap: Map<string, number> | undefined;
   blockLimitMap: Map<string, number> | undefined;
@@ -202,6 +203,11 @@ export interface ExtendedInput extends Input {
 }
 
 export interface ExtendedBlock extends Block {
+  interpolateMsg: (
+    this: ExtendedBlock,
+    msg: string,
+    ...inputArgs: [...([string, string, number] | (() => void))[], number]
+  ) => void;
   setStrictOutput: (isOutput: boolean, check: string | string[] | null) => void;
   // Blockly uses any for value.
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -244,6 +250,7 @@ export interface ExtendedBlocklyOptions extends BlocklyOptions {
   useModalFunctionEditor: boolean;
   useBlocklyDynamicCategories: boolean;
   grayOutUndeletableBlocks: boolean | undefined;
+  disableParamEditing: boolean;
 }
 
 export interface ExtendedWorkspace extends Workspace {
@@ -253,7 +260,7 @@ export interface ExtendedWorkspace extends Workspace {
 type CodeGeneratorType = typeof CodeGenerator;
 export interface ExtendedGenerator extends CodeGeneratorType {
   xmlToCode: (name: string, domBlocks: Element) => string;
-  xmlToBlocks: (name: string, xml: Node) => Block[];
+  xmlToBlocks: (name: string, xml: Element) => Block[];
   blockSpaceToCode: (
     name: string,
     opt_typeFilter?: string | string[]

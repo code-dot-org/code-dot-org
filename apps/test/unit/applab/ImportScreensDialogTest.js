@@ -1,14 +1,8 @@
 /* eslint no-unused-vars: "error" */
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon';
-import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../util/reconfiguredChai';
-import Dialog, {
-  Body,
-  Buttons,
-  Confirm,
-  Cancel,
-} from '@cdo/apps/templates/Dialog';
+
 import {
   ImportScreensDialog,
   ScreenListItem,
@@ -16,6 +10,14 @@ import {
   IMPORT_FAILURE_MESSAGE,
 } from '@cdo/apps/applab/ImportScreensDialog';
 import AssetThumbnail from '@cdo/apps/code-studio/components/AssetThumbnail';
+import Dialog, {
+  Body,
+  Buttons,
+  Confirm,
+  Cancel,
+} from '@cdo/apps/templates/Dialog';
+
+import {expect} from '../../util/reconfiguredChai';
 
 describe('AssetListItem', () => {
   var item;

@@ -321,6 +321,20 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     assert_equal [{"first_name" => 'bob', "age" => 8, "id" => 1}], JSON.parse(@response.body)
   end
 
+  test "rename_column creates a new column if the old column doesn't exist" do
+    create_bob_record
+
+    put _url(:rename_column), params: {
+      table_name: 'mytable',
+      old_column_name: 'nonexistent',
+      new_column_name: 'newcol'
+    }
+    assert_response :success
+
+    get _url(:get_columns_for_table), params: {table_name: 'mytable'}
+    assert_equal ['id', 'name', 'age', 'newcol'], JSON.parse(@response.body)
+  end
+
   test "get_column" do
     create_bob_record
     get _url(:get_column), params: {table_name: 'mytable', column_name: 'name'}
