@@ -143,13 +143,18 @@ GoogleBlockly.Extensions.register(
 GoogleBlockly.Extensions.register(
   'procedure_def_mini_toolbox',
   function (this: ProcedureBlock) {
-    // TODO: Add comment block here after https://codedotorg.atlassian.net/browse/CT-121
     const miniToolboxBlocks = [];
-    if (this.type === BLOCK_TYPES.behaviorDefinition) {
-      miniToolboxBlocks.push('sprite_parameter_get');
+    switch (this.type) {
+      case BLOCK_TYPES.behaviorDefinition:
+        miniToolboxBlocks.push(BLOCK_TYPES.spriteParameterGet);
+        break;
+      case BLOCK_TYPES.procedureDefinition:
+        if (Blockly.enableParamEditing) {
+          miniToolboxBlocks.push(BLOCK_TYPES.parametersGet);
+        }
+        break;
     }
 
-    // TODO: Remove this comment after https://codedotorg.atlassian.net/browse/CT-121
     if (!miniToolboxBlocks.length) {
       return;
     }

@@ -78,6 +78,7 @@ type GoogleBlocklyType = typeof GoogleBlockly;
 
 // Type for the Blockly instance created and modified by googleBlocklyWrapper.
 export interface BlocklyWrapperType extends GoogleBlocklyType {
+  enableParamEditing: boolean;
   selected: BlockSvg;
   blockCountMap: Map<string, number> | undefined;
   blockLimitMap: Map<string, number> | undefined;
@@ -249,6 +250,7 @@ export interface ExtendedBlocklyOptions extends BlocklyOptions {
   useModalFunctionEditor: boolean;
   useBlocklyDynamicCategories: boolean;
   grayOutUndeletableBlocks: boolean | undefined;
+  disableParamEditing: boolean;
 }
 
 export interface ExtendedWorkspace extends Workspace {
