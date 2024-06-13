@@ -30,6 +30,7 @@
     "sass": "^1.76.0",
     "typescript": "^5.2.2",
     "vite": "^5.2.0",
-    "vite-plugin-dts": "^3.9.0"
+    "vite-plugin-dts": "^3.9.0",
+    "vite-plugin-lib-inject-css": "^2.1.1"
   }
 }

@@ -1,9 +1,6 @@
 import React, {useEffect, useRef, memo} from 'react';
 
 import moduleStyles from './chip.module.scss';
-
-const commonI18n = require('@cdo/locale');
-
 interface ChipProps {
   /** Chip label */
   label: string;
@@ -59,7 +56,7 @@ const Chip: React.FunctionComponent<ChipProps> = ({
           }}
           onInvalid={e => {
             (e.target as HTMLInputElement).setCustomValidity(
-              commonI18n.chooseAtLeastOne()
+              "at least once"
             );
           }}
         />

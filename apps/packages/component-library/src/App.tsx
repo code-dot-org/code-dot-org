@@ -1,7 +1,10 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import {Button} from "@/button";
+import Chips from "@/chips";
+import {IconDropdown, SimpleDropdown} from "@/dropdown";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,16 +21,32 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+        <Button onClick={() => setCount((count) => count + 1)} text={`count is ${count}`}>
+        </Button>
         <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+          Code.org Button
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+        <div className="card">
+            <Chips
+                label={"Chips"}
+                name="chips"
+                required={true}
+                options={[{value: "Chip 1", label: "Chip A"}, {value: "2", label: "Chip 2"}, {value: "3", label: "Chip 3"}]}
+                values={[]}
+                setValues={() => {}}
+            />
+        </div>
+        <div className="card">
+            <SimpleDropdown
+                name="test1-dropdown"
+                items={[{value: "1", text: "option 1"}, {value: "2", text: "option 2"}]}
+                selectedValue={"1"}
+                onChange={() => {}}
+                labelText="Dropdown label"
+                size={'l'}
+            />
+        </div>
     </>
   )
 }
