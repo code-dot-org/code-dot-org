@@ -6,18 +6,20 @@ require 'dynamic_config/dcdo'
 # See: 'dashboard/test/ui/features/cookie_dcdo.rb'
 module Rack
   class CookieDCDO
+    KEY = 'DCDO'.freeze
+
     def initialize(app)
       @app = app
     end
 
     def call(env)
       # Stores the cookie DCDO data per request.
-      RequestStore.store[:DCDO] = JSON.parse(Rack::Request.new(env).cookies['DCDO'] || '{}')
+      RequestStore.store[KEY] = JSON.parse(Rack::Request.new(env).cookies[KEY] || '{}')
 
       unless DCDO.instance_variable_get(:@_redefined)
         # Redefines `DCDO#get` to return the cookie DCDO value if it exists.
         DCDO.define_singleton_method(:get) do |key, *args|
-          RequestStore.store[:DCDO]&.key?(key) ? RequestStore.store[:DCDO][key] : super(key, *args)
+          RequestStore.store[KEY]&.key?(key) ? RequestStore.store[KEY][key] : super(key, *args)
         end
 
         DCDO.instance_variable_set(:@_redefined, true)
@@ -26,7 +28,7 @@ module Rack
       @app.call(env)
     ensure
       # Clears the cookie DCDO after the request to avoid data leaking.
-      RequestStore.store[:DCDO] = nil
+      RequestStore.store[KEY] = nil
     end
   end
 end

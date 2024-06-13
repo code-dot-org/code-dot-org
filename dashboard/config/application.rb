@@ -90,7 +90,7 @@ module Dashboard
     require 'cdo/rack/upgrade_insecure_requests'
     config.middleware.use ::Rack::UpgradeInsecureRequests
 
-    if CDO.cookie_dcdo
+    if CDO.use_cookie_dcdo
       # Enables the setting of DCDO via cookies for testing purposes.
       require 'cdo/rack/cookie_dcdo'
       config.middleware.insert_after ActionDispatch::RequestId, Rack::CookieDCDO

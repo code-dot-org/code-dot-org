@@ -1,3 +1,5 @@
+require 'cdo/rack/cookie_dcdo'
+
 # HTTP Cache configuration.
 
 # Provides application-specific cache configuration used by all our various
@@ -136,6 +138,9 @@ class HttpCache
     # Whether admin has assumed current identity
     assumed_identity = "_assumed_identity#{env_suffix}"
     default_cookies = DEFAULT_COOKIES + [user_type, limit_project_types, assumed_identity]
+
+    # Allow the DCDO cookie if the cookie DCDO feature is enabled.
+    default_cookies << Rack::CookieDCDO::KEY if CDO.use_cookie_dcdo
 
     # These cookies are allowlisted on all session-specific (not cached) pages.
     allowlisted_cookies = [
