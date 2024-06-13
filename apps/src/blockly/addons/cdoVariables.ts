@@ -6,6 +6,8 @@ import {BlocklyWrapperType} from '../types';
 export default function initializeVariables(
   blocklyWrapper: BlocklyWrapperType
 ) {
+  blocklyWrapper.JavaScript.forBlock.parameters_get =
+    blocklyWrapper.JavaScript.forBlock.variables_get;
   blocklyWrapper.Variables.DEFAULT_CATEGORY = 'Default';
 
   // TODO: Removing support for sprite variables as a separate variable type is
