@@ -91,6 +91,7 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
     this.height_ = 0;
     this.width_ = 0;
     const topBlocks = this.workspace_.getTopBlocks(false);
+    // Adjust the size of the flyout for each block.
     topBlocks.forEach(block => {
       const blockHW = block.getHeightWidth();
       this.updateHeight_(blockHW.height);
@@ -101,7 +102,11 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
         this.moveRectToBlock_(rect, block);
       }
     });
-
+    // Adjust the size of the flyout for each button.
+    this.buttons_.forEach(button => {
+      this.updateHeight_(button.height);
+      this.updateWidth_(button.width);
+    });
     this.setBackgroundPath_(this.width_, this.height_);
     this.position();
   }

@@ -185,6 +185,14 @@ GoogleBlockly.Extensions.register(
     );
     // Open mini-toolbox by default
     flyoutToggleButton.setIcon(false);
+    // If we added a flyout, place a 'Parameters' label before it.
+    const flyoutInput = this.getInput('flyout_input');
+    if (flyoutInput) {
+      flyoutInput.insertFieldAt(
+        0,
+        new Blockly.FieldLabel(commonI18n.parameters(), 'PARAMATERS_LABEL')
+      );
+    }
   }
 );
 
