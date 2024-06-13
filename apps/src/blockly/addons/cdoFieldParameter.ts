@@ -87,14 +87,15 @@ export default class CdoFieldParameter extends GoogleBlockly.FieldVariable {
         procedureModel.deleteParameter(paramIndexToDelete);
       }
 
-      workspace
+      const parameterBlocks = workspace
         .getAllBlocks()
-        .filter(
-          b =>
-            b.type === 'parameters_get' &&
-            (b.getField('VAR') as FieldVariable)?.getVariable() === variable
-        )
-        .forEach(b => b.dispose(true));
+        .filter(block => block.type === 'parameters_get');
+      parameterBlocks.forEach(paramBlock => {
+        const varField = paramBlock?.getField('VAR') as FieldVariable | null;
+        if (varField && varField.getVariable()?.name === variable.name) {
+          paramBlock.dispose(true);
+        }
+      });
     } else {
       console.error(`Variable with name ${variableName} not found`);
     }
