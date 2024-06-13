@@ -1488,6 +1488,16 @@ class Unit < ApplicationRecord
     get_published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
   end
 
+  # Return if the given unit's course offering's device compatibilities JSON string either:
+  # - Is null
+  # - Contains a device compatibility mapping to the (None) option (which would appear like `{tablet: ""}`)
+  def missing_device_compatibility?(device_compatibilities)
+    return true unless device_compatibilities
+
+    device_compatibilities_values = JSON.parse(device_compatibilities).values
+    device_compatibilities_values.any?(&:blank?)
+  end
+
   def summarize(include_lessons = true, user = nil, include_bonus_levels = false, locale_code = 'en-us')
     ActiveRecord::Base.connected_to(role: :reading) do
       # TODO: Set up peer reviews to be more consistent with the rest of the system
@@ -1614,11 +1624,13 @@ class Unit < ApplicationRecord
   end
 
   def summarize_for_unit_edit
+    co = course_version&.course_offering
     include_lessons = false
     summary = summarize(include_lessons)
     summary[:lesson_groups] = lesson_groups.map(&:summarize_for_unit_edit)
-    summary[:courseOfferingEditPath] = edit_course_offering_path(course_version.course_offering.key) if course_version
-    summary[:courseOfferingDeviceCompatibilities] = course_version&.course_offering&.device_compatibility
+    summary[:courseOfferingEditPath] = edit_course_offering_path(co.key) if course_version
+    # Course offering device compatibilites are required for student courses that are assignable and published.
+    summary[:missingRequiredDeviceCompatibilities] = co&.assignable_published_for_students? && missing_device_compatibility?(co&.device_compatibility)
     summary[:coursePublishedState] = unit_group ? unit_group.published_state : published_state
     summary[:unitPublishedState] = unit_group ? published_state : nil
     summary[:isCSDCourseOffering] = unit_group&.course_version&.course_offering&.csd?
