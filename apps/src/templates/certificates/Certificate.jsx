@@ -220,8 +220,8 @@ function Certificate(props) {
             init="false"
             ref={swiperRef}
             class={style.swiperContainer}
-            navigation-next-el="#carousel-swiper-next-el"
-            navigation-prev-el="#carousel-swiper-prev-el"
+            navigation-next-el="#certificate-swiper-next-el"
+            navigation-prev-el="#certificate-swiper-prev-el"
           >
             {certificateData.map(image => (
               <swiper-slide key={image.courseName}>
