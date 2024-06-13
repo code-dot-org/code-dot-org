@@ -30,22 +30,6 @@ export default function UploadImageForm() {
     setFormDataForImage(formData);
     setIsUploading(false);
     setTempImageUrl(URL.createObjectURL(e.target.files[0]));
-
-    // // POST
-    // const csrfContainer = document.querySelector('meta[name="csrf-token"]');
-    // fetch('/level_assets/upload', {
-    //   method: 'post',
-    //   body: formData,
-    //   headers: {
-    //     'X-CSRF-Token': csrfContainer && csrfContainer.content,
-    //   },
-    // })
-    //   .then(response => response.json())
-    //   .then(handleResult)
-    //   .catch(err => {
-    //     setError(err);
-    //     setIsUploading(false);
-    //   });
   };
 
   const saveImageToS3 = () => {
@@ -87,22 +71,24 @@ export default function UploadImageForm() {
       {tempImageUrl && (
         <img src={tempImageUrl} alt="" style={{width: '100px'}} />
       )}
-      <input
-        type="file"
-        name="file"
-        onChange={handleChange}
-        disabled={isUploading}
-      />
+      <div>
+        <input
+          type="file"
+          name="file"
+          onChange={handleChange}
+          disabled={isUploading}
+        />
 
-      {error && (
-        <div className="alert alert-error" role="alert">
-          <span>{error.toString()}</span>
-        </div>
-      )}
+        {error && (
+          <div className="alert alert-error" role="alert">
+            <span>{error.toString()}</span>
+          </div>
+        )}
+      </div>
       <hr />
       <div style={{display: 'flex'}}>
         <Button
-          text={i18n.closeAndSave()}
+          text={i18n.saveAndViewUrl()}
           onClick={saveImageToS3}
           color={Button.ButtonColor.brandSecondaryDefault}
           className="save-upload-image-button"
