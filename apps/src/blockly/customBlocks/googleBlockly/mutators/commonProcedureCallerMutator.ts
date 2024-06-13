@@ -11,7 +11,15 @@ export const commonFunctions = {
     state['behaviorId'] = this.behaviorId;
     const model = this.getProcedureModel();
     if (!model) {
+      // We reached here because we've deserialized a caller into a workspace
+      // where its model did not already exist (no procedures array in the json,
+      // and deserialized before any definition block), and are reserializing
+      // it before the event delay has elapsed and change listeners have run.
+      // (If they had run, we would have found or created a model).
+      // Just reserialize any deserialized state. Nothing should have happened
+      // in-between to change it.
       state['name'] = this.getFieldValue('NAME');
+      state['params'] = this.paramsFromSerializedState_;
       return state;
     }
     state['name'] = model.getName();

@@ -257,7 +257,11 @@ export const isLabLoading = (state: {lab: LabState}) =>
 
 // This may depend on more factors, such as share.
 export const isReadOnlyWorkspace = (state: {lab: LabState}) => {
-  return !state.lab.channel?.isOwner;
+  const isOwner = state.lab.channel?.isOwner;
+  const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+  // We are in read-only mode if we are not the owner of the channel
+  // and we are not in start mode.
+  return !isStartMode && !isOwner;
 };
 
 // If there is an error present on the page.
