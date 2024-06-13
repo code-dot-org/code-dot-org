@@ -1,19 +1,18 @@
-import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
 import Button from '@cdo/apps/templates/Button';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import i18n from '@cdo/locale';
 
-export default function UploadImageForm({uploadImage}) {
+export default function UploadImageForm() {
   const [imgUrl, setImgUrl] = useState(undefined);
-  const [expandable, setExpandable] = useState(false);
   const [error, setError] = useState(undefined);
   const [isUploading, setIsUploading] = useState(false);
+  const [formDataForImage, setFormDataForImage] = useState(undefined);
+  const [tempImageUrl, setTempImageUrl] = useState(undefined);
 
   const resetState = () => {
     setImgUrl(undefined);
-    setExpandable(false);
     setError(undefined);
   };
 
@@ -28,12 +27,33 @@ export default function UploadImageForm({uploadImage}) {
     // assemble upload data
     const formData = new FormData();
     formData.append('file', e.target.files[0]);
+    setFormDataForImage(formData);
+    setIsUploading(false);
+    setTempImageUrl(URL.createObjectURL(e.target.files[0]));
 
+    // // POST
+    // const csrfContainer = document.querySelector('meta[name="csrf-token"]');
+    // fetch('/level_assets/upload', {
+    //   method: 'post',
+    //   body: formData,
+    //   headers: {
+    //     'X-CSRF-Token': csrfContainer && csrfContainer.content,
+    //   },
+    // })
+    //   .then(response => response.json())
+    //   .then(handleResult)
+    //   .catch(err => {
+    //     setError(err);
+    //     setIsUploading(false);
+    //   });
+  };
+
+  const saveImageToS3 = () => {
     // POST
     const csrfContainer = document.querySelector('meta[name="csrf-token"]');
     fetch('/level_assets/upload', {
       method: 'post',
-      body: formData,
+      body: formDataForImage,
       headers: {
         'X-CSRF-Token': csrfContainer && csrfContainer.content,
       },
@@ -57,19 +77,6 @@ export default function UploadImageForm({uploadImage}) {
     setIsUploading(false);
   };
 
-  const handleDialogClose = () => {
-    resetState();
-    // handleClose();
-  };
-
-  const handleCloseAndSave = () => {
-    if (imgUrl) {
-      uploadImage(imgUrl, expandable);
-    }
-
-    handleDialogClose();
-  };
-
   return (
     <>
       <h2>Upload Image</h2>
@@ -77,7 +84,9 @@ export default function UploadImageForm({uploadImage}) {
         // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
         // Verify or update this alt-text as necessary
       }
-      {imgUrl && <img src={imgUrl} alt="" />}
+      {tempImageUrl && (
+        <img src={tempImageUrl} alt="" style={{width: '100px'}} />
+      )}
       <input
         type="file"
         name="file"
@@ -90,29 +99,11 @@ export default function UploadImageForm({uploadImage}) {
           <span>{error.toString()}</span>
         </div>
       )}
-
-      {/* {allowExpandable && (
-        <label style={styles.label}>
-          Expandable
-          <input
-            type="checkbox"
-            checked={expandable}
-            style={styles.checkbox}
-            onChange={e => setExpandable(e.target.checked)}
-          />
-          <HelpTip>
-            <p>
-              Check if you want the image to be able to be enlarged in a dialog
-              over the page when clicked.
-            </p>
-          </HelpTip>
-        </label>
-      )} */}
       <hr />
       <div style={{display: 'flex'}}>
         <Button
           text={i18n.closeAndSave()}
-          onClick={handleCloseAndSave}
+          onClick={saveImageToS3}
           color={Button.ButtonColor.brandSecondaryDefault}
           className="save-upload-image-button"
           disabled={isUploading}
@@ -122,14 +113,13 @@ export default function UploadImageForm({uploadImage}) {
             <FontAwesome icon="spinner" className="fa-spin" />
           </div>
         )}
+        {imgUrl && <div>{imgUrl}</div>}
       </div>
     </>
   );
 }
 
-UploadImageForm.propTypes = {
-  uploadImage: PropTypes.func.isRequired,
-};
+UploadImageForm.propTypes = {};
 
 const styles = {
   checkbox: {
