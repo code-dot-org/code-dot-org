@@ -69,6 +69,8 @@ export const askAITutor = createAsyncThunk(
       scriptId: aiTutorState.aiTutor.scriptId,
     };
 
+    console.log("ask ai tutor was called!")
+    console.log("chatContext", chatContext)
     const levelInstructions = instructionsState.instructions.longInstructions;
 
     const storedMessages = aiTutorState.aiTutor.chatMessages;

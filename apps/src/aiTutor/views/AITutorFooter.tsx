@@ -10,6 +10,7 @@ import {
   AITutorTypes as ActionType,
   AITutorTypesValue,
 } from '@cdo/apps/aiTutor/types';
+import UserChatMessageEditor from '@cdo/apps/aiComponentLibrary/UserChatMessageEditor';
 
 const QuickActions = {
   [ActionType.COMPILATION]: "Why doesn't my code compile?",
@@ -57,7 +58,7 @@ const AITutorFooter: React.FC<AITutorFooterProps> = ({renderAITutor}) => {
     hasRunOrTestedCode && !hasCompilationError && !validationPassed;
 
   const handleSubmit = useCallback(
-    (actionType: AITutorTypesValue) => {
+    (actionType: AITutorTypesValue, userMessage: string) => {
       if (isWaitingForChatResponse) {
         return;
       }
@@ -80,6 +81,8 @@ const AITutorFooter: React.FC<AITutorFooterProps> = ({renderAITutor}) => {
           event = EVENTS.AI_TUTOR_ASK_GENERAL_CHAT;
           break;
       }
+
+      console.log("userMessage", userMessage)
 
       const chatContext = {
         studentInput,
@@ -111,6 +114,13 @@ const AITutorFooter: React.FC<AITutorFooterProps> = ({renderAITutor}) => {
   return (
     <div className={style.aiTutorFooter}>
       <div className={style.aiTutorFooterInputArea}>
+        <UserChatMessageEditor
+           isWaitingForChatResponse={isWaitingForChatResponse}
+           saveInProgress={false}
+           textInputDisabled={disabled}
+           buttonDisabled={disabled || userMessageIsEmpty}
+           handleSubmit={() => handleSubmit(ActionType.GENERAL_CHAT)}
+        /> 
         <textarea
           className={style.textArea}
           // TODO: Update to support i18n
