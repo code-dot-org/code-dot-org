@@ -168,7 +168,7 @@ class Policies::ChildAccount
 
     # Parental permission is not required for students
     # whose age cannot be identified or who are older than the maximum age covered by the policy.
-    return false if user.age.nil? || user.age > policy[:max_age]
+    return false if user.age.nil? || user.age.to_i > policy[:max_age]
 
     personal_account?(user)
   end
