@@ -255,6 +255,12 @@ GoogleBlockly.Extensions.register(
   function (this: ProcedureBlock) {
     const mixin = {
       /**
+       * Adds or removes the parameter label to match the state of the data model.
+       * No-op to avoid adding "with:" label to the block.
+       */
+      addParametersLabel__: function () {},
+
+      /**
        * Updates the shape of this block to reflect the state of the data model.
        */
       doProcedureUpdate: function (this: ProcedureBlock) {
@@ -346,29 +352,29 @@ export function flyoutCategory(
     Blockly.getHiddenDefinitionWorkspace(),
   ];
 
-  const allFunctions: {name: string; id: string}[] = [];
+  const allFunctions: GoogleBlockly.serialization.procedures.State[] = [];
   workspaces.forEach(workspace => {
-    const procedureBlocks = workspace
-      .getTopBlocks()
-      .filter(topBlock => topBlock.type === BLOCK_TYPES.procedureDefinition);
+    const procedureBlocks = (
+      workspace.getTopBlocks() as ProcedureBlock[]
+    ).filter(block => block.type === BLOCK_TYPES.procedureDefinition);
+
     procedureBlocks.forEach(block => {
-      allFunctions.push({
-        name: block.getFieldValue('NAME'),
-        id: block.id,
-      });
+      allFunctions.push(
+        Blockly.serialization.procedures.saveProcedure(
+          block.getProcedureModel()
+        )
+      );
     });
   });
 
-  allFunctions.sort(nameComparator).forEach(({name, id}) => {
+  allFunctions.sort(nameComparator).forEach(({name, id, parameters}) => {
     blockList.push({
       kind: 'block',
       type: BLOCK_TYPES.procedureCall,
       extraState: {
         name: name,
         id: id,
-      },
-      fields: {
-        NAME: name,
+        params: parameters?.map(param => param.name),
       },
     });
   });

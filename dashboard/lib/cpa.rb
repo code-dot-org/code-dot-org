@@ -31,6 +31,8 @@ module Cpa
     #   “cpa_all_user_lockout”:         “2024-07-01T00:00:00MST”
     # }
     schedule = experiment_value('cpa_schedule', current_request)
+    # Ensure the schedule is a Hash
+    schedule = JSON.parse(schedule) unless schedule.nil? || schedule.is_a?(Hash)
     # override [String] configuration overrides if we are manually testing the
     # experiences. This parameter will default to the query string parameter or
     # cookie 'cpa_experience'.
@@ -48,11 +50,11 @@ module Cpa
     new_user_lockout = DateTime.parse(schedule[Cpa::NEW_USER_LOCKOUT])
     new_user_lockout_warning = DateTime.parse(schedule[Cpa::ALL_USER_LOCKOUT_WARNING])
     all_user_lockout = DateTime.parse(schedule[Cpa::ALL_USER_LOCKOUT])
-    if current_time > all_user_lockout
+    if current_time >= all_user_lockout
       Cpa::ALL_USER_LOCKOUT
-    elsif current_time > new_user_lockout_warning
+    elsif current_time >= new_user_lockout_warning
       Cpa::ALL_USER_LOCKOUT_WARNING
-    elsif current_time > new_user_lockout
+    elsif current_time >= new_user_lockout
       Cpa::NEW_USER_LOCKOUT
     else
       nil

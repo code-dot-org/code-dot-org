@@ -333,7 +333,7 @@ class SessionsControllerTest < ActionController::TestCase
     end
 
     before do
-      Policies::ChildAccount.stubs(:locked_out?).with(user).returns(user_is_locked_out)
+      Policies::ChildAccount::ComplianceState.stubs(:locked_out?).with(user).returns(user_is_locked_out)
       Queries::ChildAccount.stubs(:latest_permission_request).with(user).returns(latest_permission_request)
 
       sign_in user
