@@ -88,6 +88,7 @@ describe('UnitEditor', () => {
       scriptPath: '/s/test-unit',
       initialProfessionalLearningCourse: '',
       isCSDCourseOffering: false,
+      isMissingRequiredDeviceCompatibilities: false,
     };
   });
 
@@ -494,11 +495,14 @@ describe('UnitEditor', () => {
 
     it('shows error when published state is preview or stable and device compatibility JSON is null', () => {
       sinon.stub($, 'ajax');
-      const wrapper = createWrapper({hasCourse: true});
+      const wrapper = createWrapper({
+        isMissingRequiredDeviceCompatibilities: true,
+        hasCourse: true,
+      });
 
       const unitEditor = wrapper.find('UnitEditor');
       unitEditor.setState({
-        publishedState: PublishedState.stable,
+        publishedState: PublishedState.preview,
         courseOfferingDeviceCompatibilities: null,
       });
 
@@ -529,7 +533,10 @@ describe('UnitEditor', () => {
 
     it('shows error when published state is preview or stable and at least one device compatibility is not set', () => {
       sinon.stub($, 'ajax');
-      const wrapper = createWrapper({hasCourse: true});
+      const wrapper = createWrapper({
+        isMissingRequiredDeviceCompatibilities: true,
+        hasCourse: true,
+      });
 
       const unitEditor = wrapper.find('UnitEditor');
       unitEditor.setState({

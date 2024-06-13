@@ -1488,10 +1488,11 @@ class Unit < ApplicationRecord
     get_published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
   end
 
-  # Return if the given unit's course offering's device compatibilities JSON string either:
+  # Return if the unit's course offering's device compatibilities JSON string either:
   # - Is null
   # - Contains a device compatibility mapping to the (None) option (which would appear like `{tablet: ""}`)
-  def missing_device_compatibility?(device_compatibilities)
+  def missing_device_compatibility?
+    device_compatibilities = course_version&.course_offering&.device_compatibility
     return true unless device_compatibilities
 
     device_compatibilities_values = JSON.parse(device_compatibilities).values
@@ -1630,7 +1631,7 @@ class Unit < ApplicationRecord
     summary[:lesson_groups] = lesson_groups.map(&:summarize_for_unit_edit)
     summary[:courseOfferingEditPath] = edit_course_offering_path(co.key) if course_version
     # Course offering device compatibilites are required to publish student courses that are assignable.
-    summary[:missingRequiredDeviceCompatibilities] = co.assignable? && co.get_participant_audience == 'student' && missing_device_compatibility?(co&.device_compatibility)
+    summary[:missingRequiredDeviceCompatibilities] = co.assignable? && co.get_participant_audience == 'student' && missing_device_compatibility?
     summary[:coursePublishedState] = unit_group ? unit_group.published_state : published_state
     summary[:unitPublishedState] = unit_group ? published_state : nil
     summary[:isCSDCourseOffering] = unit_group&.course_version&.course_offering&.csd?
