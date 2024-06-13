@@ -69,6 +69,19 @@ AlertWithLinkAndIcon.args = {
   },
 };
 
+export const AlertAlertVsStatusRole = MultipleTemplate.bind({});
+AlertAlertVsStatusRole.args = {
+  components: [
+    {
+      text: "Alert 'Alert' role",
+    },
+    {
+      text: "Alert 'Status' role",
+      isImmediateImportance: false,
+    },
+  ],
+};
+
 export const GroupOfTypesOfAlerts = MultipleTemplate.bind({});
 GroupOfTypesOfAlerts.args = {
   components: [

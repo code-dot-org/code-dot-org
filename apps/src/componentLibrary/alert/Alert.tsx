@@ -20,6 +20,17 @@ export interface AlertProps {
   icon?: FontAwesomeV6IconProps;
   /** Show icon */
   showIcon?: boolean;
+  /** Alert `isImmediateImportance`. Used to toggle between role='alert' and role='status'
+   * By default set to true, which means we'll render role='alert'
+   *
+   * For context - The `alert` role should only be used for information that requires the user's immediate attention, for example:
+   * - An invalid value was entered into a form field
+   * - The user's login session is about to expire
+   * - The connection to the server was lost so local changes will not be saved.
+   *
+   * `status` should be used for advisory information for the user that is not important enough to be an alert.
+   * */
+  isImmediateImportance?: boolean;
   /** Alert custom className */
   type?: AlertType;
   /** Alert on Close callback */
@@ -63,6 +74,7 @@ const Alert: React.FunctionComponent<AlertProps> = ({
   link,
   className,
   onClose,
+  isImmediateImportance = true,
   type = 'primary',
   size = 'm',
 }) => {
@@ -73,7 +85,6 @@ const Alert: React.FunctionComponent<AlertProps> = ({
 
   // TODO:
   // 1. Add close button to the alert
-  // 2. Add role='alert' to the alert (?)
   // 3. Update Link to support text prop, not only children props
   // 4. Update README.md
 
@@ -85,7 +96,7 @@ const Alert: React.FunctionComponent<AlertProps> = ({
         moduleStyles[`alert-${size}`],
         className
       )}
-      // role='alert'
+      role={isImmediateImportance ? 'alert' : 'status'}
     >
       <div className={moduleStyles.alertContentContainer}>
         {showIcon && iconToRender && <FontAwesomeV6Icon {...iconToRender} />}
