@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
+
+import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import color from '@cdo/apps/util/color';
 import {borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
 import EvidenceDescriptions from './EvidenceDescriptions';
@@ -11,6 +13,8 @@ export default function LearningGoalItem({
   updateLearningGoal,
 }) {
   const [canEditLearningGoalName, setCanEditLearningGoalName] = useState(false);
+
+  const [aiInstructions, setAiInstructions] = useState('blank instructions');
 
   const handleCheckboxChange = () => {
     const newAiEnabledValue = !exisitingLearningGoalData.aiEnabled;
@@ -93,6 +97,12 @@ export default function LearningGoalItem({
         </div>
       </div>
       <div style={styles.activityBody}>
+        <Heading6>AI Instructions</Heading6>
+        <textarea
+          value={aiInstructions}
+          onChange={event => setAiInstructions(event.target.value)}
+          style={{width: '97%', height: 100}}
+        />
         <EvidenceDescriptions
           learningGoalData={exisitingLearningGoalData}
           updateLearningGoal={updateLearningGoal}
