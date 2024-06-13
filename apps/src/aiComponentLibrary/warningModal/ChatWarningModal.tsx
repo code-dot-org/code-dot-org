@@ -6,7 +6,7 @@ import {
   StrongText,
 } from '@cdo/apps/componentLibrary/typography';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
-import Button from '@cdo/apps/templates/Button';
+import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
 import i18n from '@cdo/locale';
 
 import moduleStyles from './warning-modal.module.scss';
@@ -43,7 +43,7 @@ const ChatWarningModal: React.FunctionComponent<ChatWarningModalProps> = ({
     <div className={moduleStyles.bottomSection}>
       <Button
         onClick={onClose}
-        color={Button.ButtonColor.brandSecondaryDefault}
+        color={buttonColors.purple}
         text={i18n.aiWarningModalOk()}
       />
     </div>
