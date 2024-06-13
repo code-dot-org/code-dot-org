@@ -22,17 +22,16 @@ export default function UploadImageForm() {
       return;
     }
     resetState();
-    setIsUploading(true);
 
     // assemble upload data
     const formData = new FormData();
     formData.append('file', e.target.files[0]);
     setFormDataForImage(formData);
-    setIsUploading(false);
     setTempImageUrl(URL.createObjectURL(e.target.files[0]));
   };
 
   const saveImageToS3 = () => {
+    setIsUploading(true);
     // POST
     const csrfContainer = document.querySelector('meta[name="csrf-token"]');
     fetch('/level_assets/upload', {
@@ -62,14 +61,14 @@ export default function UploadImageForm() {
   };
 
   return (
-    <>
+    <div style={styles.topContainer}>
       <h2>Upload Image</h2>
       {
         // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
         // Verify or update this alt-text as necessary
       }
       {tempImageUrl && (
-        <img src={tempImageUrl} alt="" style={{width: '100px'}} />
+        <img src={tempImageUrl} alt="" style={styles.imagePreview} />
       )}
       <div>
         <input
@@ -86,22 +85,23 @@ export default function UploadImageForm() {
         )}
       </div>
       <hr />
-      <div style={{display: 'flex'}}>
+      <div style={styles.contentContainer}>
         <Button
           text={i18n.saveAndViewUrl()}
           onClick={saveImageToS3}
           color={Button.ButtonColor.brandSecondaryDefault}
           className="save-upload-image-button"
           disabled={isUploading}
+          style={styles.saveButton}
         />{' '}
         {isUploading && (
           <div style={styles.spinner}>
             <FontAwesome icon="spinner" className="fa-spin" />
           </div>
         )}
-        {imgUrl && <div>{imgUrl}</div>}
+        {imgUrl && <div>Y{i18n.imageURL() + imgUrl}</div>}
       </div>
-    </>
+    </div>
   );
 }
 
@@ -112,7 +112,22 @@ const styles = {
     margin: '0 0 0 7px',
   },
   label: {
-    margin: '10px 0',
+    margin: '12px 0',
+  },
+  imagePreview: {
+    width: '100px',
+    marginBottom: '4px',
+  },
+  saveButton: {
+    width: '200px',
+    marginBottom: '12px',
+  },
+  topContainer: {
+    marginLeft: '30px',
+  },
+  contentContainer: {
+    display: 'flex',
+    flexDirection: 'column',
   },
   spinner: {
     fontSize: 25,

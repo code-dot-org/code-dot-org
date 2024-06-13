@@ -1358,6 +1358,7 @@
   "imageURLInputInvalid": "Please provide a valid URL.",
   "imageURLInputDescription": "Don't have a file downloaded? Provide the link to an image on the web. This works for URLs that end with *.GIF*, *.PNG*, or *.JPG*.",
   "imageURLInputPrompt": "Image URL:",
+  "imageURL": "Image URL: ",
   "import": "Import",
   "importCSV": "Import csv",
   "importingWithEllipsis": "Importing...",
