@@ -55,8 +55,6 @@ class DCDOBase < DynamicConfigBase
       'student-email-post-enabled': DCDO.get('student-email-post-enabled', false),
       'progress-v2-metadata-enabled': DCDO.get('progress-v2-metadata-enabled', false),
       'show-updated-lms-content': DCDO.get('show-updated-lms-content', false),
-      # Used to test DCDO setting via cookie. See: 'dashboard/test/ui/features/cookie_dcdo.rb'
-      cookie_dcdo_test: DCDO.get('cookie_dcdo_test', nil),
     }
   end
 end
