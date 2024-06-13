@@ -46,7 +46,7 @@ describe('AgeGatedStudentsTable', () => {
     rowType: RowType.STUDENT,
     age: 10,
     atRiskAgeGatedStudent: true,
-    childAccountComplianceState: 'l',
+    childAccountComplianceState: ChildAccountComplianceStates.LOCKED_OUT,
   };
   const fakeStudent2 = {
     id: 2,
@@ -72,7 +72,7 @@ describe('AgeGatedStudentsTable', () => {
     rowType: RowType.STUDENT,
     age: 10,
     atRiskAgeGatedStudent: true,
-    childAccountComplianceState: 's',
+    childAccountComplianceState: ChildAccountComplianceStates.GRACE_PERIOD,
   };
   const fakeStudent4 = {
     id: 4,
@@ -85,7 +85,8 @@ describe('AgeGatedStudentsTable', () => {
     rowType: RowType.STUDENT,
     age: 10,
     atRiskAgeGatedStudent: true,
-    childAccountComplianceState: 'g',
+    childAccountComplianceState:
+      ChildAccountComplianceStates.PERMISSION_GRANTED,
   };
   const fakeStudent5 = {
     id: 5,
