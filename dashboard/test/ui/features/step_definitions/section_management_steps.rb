@@ -95,7 +95,7 @@ And /^I create a new "([^"]*)" student section with course "([^"]*)", version "(
   GHERKIN
 end
 
-And(/^I create a(n authorized)? teacher-associated( under-13)? student named "([^"]*)"$/) do |authorized, under_13, name|
+And(/^I create a(n authorized)? teacher-associated( under-13)? student( in Colorado)? named "([^"]*)"$/) do |authorized, under_13, in_colorado, name|
   steps "Given I create a teacher named \"Teacher_#{name}\""
   # enroll in a plc course as a way of becoming an authorized teacher
   steps 'And I am enrolled in a plc course' if authorized
@@ -103,7 +103,18 @@ And(/^I create a(n authorized)? teacher-associated( under-13)? student named "([
   section = JSON.parse(browser_request(url: '/dashboardapi/sections', method: 'POST', body: {login_type: 'email', participant_type: 'student'}))
   section_code = section['code']
   @section_url = "http://studio.code.org/join/#{section_code}"
-  create_user(name, url: "/join/#{section_code}", age: under_13 ? '10' : '16')
+
+  user_opts = {
+    age: under_13 ? '10' : '16',
+    url: "/join/#{section_code}",
+  }
+  if in_colorado
+    user_opts[:us_state] = 'CO'
+    user_opts[:country_code] = 'US'
+    user_opts[:parent_email_preference_email] = "[user-email]"
+  end
+
+  create_user(name, **user_opts)
 end
 
 And(/^I save the student section url$/) do

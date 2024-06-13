@@ -41,7 +41,7 @@ export const AgeGatedStudentsBanner: React.FC<Props> = ({
     toggleModal();
   };
   return (
-    <div>
+    <div id="uitest-age-gated-banner">
       <Notification
         type={NotificationType.warning}
         notice={i18n.headsUp()}

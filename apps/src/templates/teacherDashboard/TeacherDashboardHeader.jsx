@@ -44,7 +44,7 @@ function TeacherDashboardHeader({
   const inUSA =
     ['US', 'RD'].includes(currentUser.countryCode) || !!currentUser.usStateCode;
   const showAgeGatedStudentsBanner =
-    inUSA && currentUser.isTeacher && ageGatedStudentsCount;
+    inUSA && currentUser.isTeacher && ageGatedStudentsCount > 0;
 
   const toggleModal = () => {
     setModalOpen(!modalOpen);
