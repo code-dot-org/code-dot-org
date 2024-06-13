@@ -8,8 +8,15 @@ export default function RubricEditor({
   deleteLearningGoal,
   learningGoalList,
   updateLearningGoal,
+  aiRubric,
+  updateAiRubricInstructions,
 }) {
   const renderLearningGoalItems = learningGoalList?.map(goal => {
+    const aiRubricRow = aiRubric.find(
+      rubricRow => rubricRow['Key Concept'] === goal.learningGoal
+    );
+    const aiInstructions = aiRubricRow ? aiRubricRow['Instructions'] : '';
+
     if (!goal._destroy) {
       return (
         <LearningGoalItem
@@ -17,6 +24,8 @@ export default function RubricEditor({
           key={goal.id}
           exisitingLearningGoalData={goal}
           updateLearningGoal={updateLearningGoal}
+          aiInstructions={aiInstructions}
+          updateAiRubricInstructions={updateAiRubricInstructions}
         />
       );
     }
@@ -43,4 +52,6 @@ RubricEditor.propTypes = {
   deleteLearningGoal: PropTypes.func,
   addNewConcept: PropTypes.func,
   updateLearningGoal: PropTypes.func,
+  aiRubric: PropTypes.array,
+  updateAiRubricInstructions: PropTypes.func,
 };

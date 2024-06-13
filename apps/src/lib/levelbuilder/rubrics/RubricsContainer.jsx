@@ -26,6 +26,7 @@ export default function RubricsContainer({
   const hasSubmittableLevels = submittableLevels.length > 0;
 
   const [systemPrompt, setSystemPrompt] = useState(rubric.initialSystemPrompt);
+  const [aiRubric, setAiRubric] = useState(rubric.initialAiRubric);
 
   const generateLearningGoalKey = () => {
     let learningGoalNumber = learningGoalList.length + 1;
@@ -121,6 +122,15 @@ export default function RubricsContainer({
     setLearningGoalList(newLearningGoalData);
   };
 
+  const updateAiRubricInstructions = (keyConceptToUpdate, newValue) => {
+    const newAiRubric = [...aiRubric];
+    const rubricRowToUpdate = newAiRubric.find(
+      rubricRow => rubricRow['Key Concept'] === keyConceptToUpdate
+    );
+    rubricRowToUpdate['Instructions'] = newValue;
+    setAiRubric(newAiRubric);
+  };
+
   const deleteLearningGoal = idToDelete => {
     const newLearningGoalData = learningGoalList.map(learningGoal => {
       if (idToDelete === learningGoal.id) {
@@ -210,6 +220,8 @@ export default function RubricsContainer({
             addNewConcept={addNewConceptHandler}
             deleteLearningGoal={deleteLearningGoal}
             updateLearningGoal={updateLearningGoal}
+            aiRubric={aiRubric}
+            updateAiRubricInstructions={updateAiRubricInstructions}
           />
           <div style={styles.bottomRow}>
             <Button

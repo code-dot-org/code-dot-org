@@ -54,7 +54,8 @@ class Rubric < ApplicationRecord
       lessonId: lesson_id,
       levelId: level_id,
       learningGoals: learning_goals.map(&:summarize_for_rubric_edit),
-      initialSystemPrompt: get_system_prompt
+      initialSystemPrompt: get_system_prompt,
+      initialAiRubric: get_ai_rubric,
     }
   end
 
@@ -62,5 +63,24 @@ class Rubric < ApplicationRecord
     script_level = get_script_level
     s3_lesson_name = AiRubricConfig.get_lesson_s3_name(script_level)
     AiRubricConfig.read_file_from_s3(s3_lesson_name, 'system_prompt.txt')
+  end
+
+  # returns an array of hashes, each hash representing a row in the rubric:
+  # [
+  #   {
+  #     "Key Concept": "Modularity - Multiple Sprites",
+  #     "Instructions": "(1) list the name of each sprite created. (2) ...",
+  #     "Extensive Evidence": "At least 3 sprites created ...",
+  #     "Convincing Evidence": "At least 2 sprite created ...",
+  #     "Limited Evidence": "At least 1 sprite created...",
+  #     "No Evidence": "No sprites are used in the program."
+  #   },
+  #   ...
+  # ]
+  private def get_ai_rubric
+    script_level = get_script_level
+    s3_lesson_name = AiRubricConfig.get_lesson_s3_name(script_level)
+    ai_rubric_csv = AiRubricConfig.read_file_from_s3(s3_lesson_name, 'standard_rubric.csv')
+    CSV.parse(ai_rubric_csv, headers: true).map(&:to_h)
   end
 end

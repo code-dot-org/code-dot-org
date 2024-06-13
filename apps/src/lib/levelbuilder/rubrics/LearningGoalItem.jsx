@@ -11,10 +11,10 @@ export default function LearningGoalItem({
   deleteLearningGoal,
   exisitingLearningGoalData,
   updateLearningGoal,
+  aiInstructions,
+  updateAiRubricInstructions,
 }) {
   const [canEditLearningGoalName, setCanEditLearningGoalName] = useState(false);
-
-  const [aiInstructions, setAiInstructions] = useState('blank instructions');
 
   const handleCheckboxChange = () => {
     const newAiEnabledValue = !exisitingLearningGoalData.aiEnabled;
@@ -49,6 +49,13 @@ export default function LearningGoalItem({
 
   const handleDelete = event => {
     deleteLearningGoal(exisitingLearningGoalData.id);
+  };
+
+  const handleAiInstructionsChange = event => {
+    updateAiRubricInstructions(
+      exisitingLearningGoalData.learningGoal,
+      event.target.value
+    );
   };
 
   return (
@@ -102,7 +109,7 @@ export default function LearningGoalItem({
           <Heading6>AI Instructions</Heading6>
           <textarea
             value={aiInstructions}
-            onChange={event => setAiInstructions(event.target.value)}
+            onChange={handleAiInstructionsChange}
             style={{width: '97%', height: 100}}
           />
           <EvidenceDescriptions
@@ -146,6 +153,8 @@ LearningGoalItem.propTypes = {
   deleteLearningGoal: PropTypes.func,
   exisitingLearningGoalData: PropTypes.object,
   updateLearningGoal: PropTypes.func,
+  aiInstructions: PropTypes.string,
+  updateAiRubricInstructions: PropTypes.func,
 };
 
 const styles = {
