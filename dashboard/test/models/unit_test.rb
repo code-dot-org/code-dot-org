@@ -682,17 +682,17 @@ class UnitTest < ActiveSupport::TestCase
   test 'missing_device_compatibility?' do
     unit = create :script, family_name: 'fake', version_year: '2017', is_course: true
     co = CourseOffering.add_course_offering(unit)
-    device_compatibilities_missing_one = "{'computer':'','chromebook':'not_recommended','tablet':'incompatible','mobile':'incompatible','no_device':'incompatible'}"
-    device_compatibilities_full = "{'computer':'ideal','chromebook':'not_recommended','tablet':'incompatible','mobile':'incompatible','no_device':'incompatible'}"
+    device_compatibilities_missing_one = '{"computer":"","chromebook":"not_recommended","tablet":"incompatible","mobile":"incompatible","no_device":"incompatible"}'
+    device_compatibilities_full = '{"computer":"ideal","chromebook":"not_recommended","tablet":"incompatible","mobile":"incompatible","no_device":"incompatible"}'
 
     co.update!(device_compatibility: nil)
-    assert(co.missing_device_compatibility?)
+    assert(unit.missing_device_compatibility?)
 
     co.update!(device_compatibility: device_compatibilities_missing_one)
-    assert(co.missing_device_compatibility?)
+    assert(unit.missing_device_compatibility?)
 
     co.update!(device_compatibility: device_compatibilities_full)
-    assert(co.missing_device_compatibility?)
+    refute(unit.missing_device_compatibility?)
   end
 
   test 'should summarize migrated unit' do
