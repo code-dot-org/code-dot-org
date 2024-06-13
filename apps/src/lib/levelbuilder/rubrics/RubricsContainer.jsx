@@ -4,6 +4,7 @@ import {
   BodyThreeText,
   BodyTwoText,
   Heading1,
+  Heading2,
 } from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/templates/Button';
 import RubricEditor from './RubricEditor';
@@ -23,6 +24,8 @@ export default function RubricsContainer({
 
   const [saveNotificationText, setSaveNotificationText] = useState('');
   const hasSubmittableLevels = submittableLevels.length > 0;
+
+  const [systemPrompt, setSystemPrompt] = useState('blank system prompt');
 
   const generateLearningGoalKey = () => {
     let learningGoalNumber = learningGoalList.length + 1;
@@ -187,6 +190,12 @@ export default function RubricsContainer({
               {renderOptions()}
             </select>
           </div>
+          <Heading2>System Prompt</Heading2>
+          <textarea
+            style={styles.textareaBoxes}
+            value={systemPrompt}
+            onChange={event => setSystemPrompt(event.target.value)}
+          />
           <RubricEditor
             learningGoalList={learningGoalList}
             addNewConcept={addNewConceptHandler}

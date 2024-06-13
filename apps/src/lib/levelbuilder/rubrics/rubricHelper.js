@@ -144,4 +144,11 @@ export const styles = {
     display: 'flex',
     justifyContent: 'end',
   },
+  textareaBoxes: {
+    width: '90%',
+    height: '80px',
+    resize: 'none',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  },
 };
