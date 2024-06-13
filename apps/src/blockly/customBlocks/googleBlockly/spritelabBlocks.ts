@@ -153,7 +153,7 @@ export const blocks = {
               };
             }
             if (blockType === BLOCK_TYPES.parametersGet) {
-              // Set up the "new procedure" button in the toolbox
+              // Set up the "new parameter" button in the mini-toolbox
               const newParamButton = getAddParameterButtonWithCallback(
                 this.workspace as WorkspaceSvg,
                 (
