@@ -145,6 +145,7 @@ en:
     facebook: 'Facebook'
     windowslive: 'Microsoft'
     microsoft_v2_auth: 'Microsoft'
+    auth0: 'Auth0'
     clever: 'Clever'
     powerschool: 'Powerschool'
     forgot_password: 'Forgot your password?'

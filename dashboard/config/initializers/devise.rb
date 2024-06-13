@@ -329,6 +329,11 @@ Devise.setup do |config|
     ).freeze
   }
 
+  config.omniauth :auth0, CDO.dashboard_auth0_client_id, CDO.dashboard_auth0_secret, CDO.dashboard_auth0_domain, callback_path: '/users/auth/auth0/callback',
+                  authorize_params: {
+                    scope: 'openid profile email'
+                  }
+
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.

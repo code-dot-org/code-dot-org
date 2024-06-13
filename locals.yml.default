@@ -136,3 +136,7 @@ use_my_apps: true
 # instance of Javabuilder. This will likely be 'javabuilder-dev-<your_branch_name>'
 # use_localhost_javabuilder: true
 # local_javabuilder_stack_name: javabuilder-dev-<your_branch_name>
+
+dashboard_auth0_client_id: ''
+dashboard_auth0_secret: ''
+dashboard_auth0_domain: ''

@@ -91,7 +91,7 @@ group :development, :test do
   gem 'brakeman'
   gem 'database_cleaner-active_record', '~> 2.1.0'
   gem 'haml-rails' # haml (instead of erb) generators
-  gem 'ruby-prof'
+  #gem 'ruby-prof'
   gem 'vcr', require: false
   # For unit testing.
   gem 'webmock', '~> 3.8', require: false
@@ -169,6 +169,8 @@ gem 'omniauth-microsoft_v2_auth', github: 'dooly-ai/omniauth-microsoft_v2_auth'
 # Ref: https://github.com/joel/omniauth-windowslive/pull/16
 # Ref: https://github.com/joel/omniauth-windowslive/pull/17
 gem 'omniauth-windowslive', '~> 0.0.11', github: 'code-dot-org/omniauth-windowslive', ref: 'cdo'
+gem 'omniauth-auth0', '~> 2.0'
+
 
 # Resolve CVE 2015 9284
 # see: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-9284

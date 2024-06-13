@@ -7,8 +7,17 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   skip_before_action :clear_sign_up_session_vars
 
   # Note: We can probably remove these once we've broken out all providers
-  BROKEN_OUT_TYPES = [AuthenticationOption::CLEVER, AuthenticationOption::GOOGLE]
+  BROKEN_OUT_TYPES = [AuthenticationOption::CLEVER, AuthenticationOption::GOOGLE, AuthenticationOption::AUTH0]
   TYPES_ROUTED_TO_ALL = AuthenticationOption::OAUTH_CREDENTIAL_TYPES - BROKEN_OUT_TYPES
+
+  def auth0
+    user = find_user_by_credential
+    if user
+      sign_in_auth0 user
+    else
+      sign_up_auth0
+    end
+  end
 
   # GET /users/auth/clever/callback
   def clever
@@ -227,6 +236,41 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     SignUpTracking.log_oauth_callback AuthenticationOption::CLEVER, session
 
     auth_hash = inject_clever_data(auth_hash())
+    user = User.from_omniauth(auth_hash, auth_params, session)
+    prepare_locale_cookie user
+
+    # if the registration credentials identify us as an existing user, simply
+    # sign in as that user.
+    return sign_in_user user if user.persisted?
+
+    # if a user account with the same email (that could not be authenticated
+    # with the given registration credentals) exists, display an interim page
+    # prompting the user to either log in to that account or create a new one
+    # with a manually-provided email.
+    existing_account = User.find_by_email_or_hashed_email(user.email).present?
+    return redirect_to users_existing_account_path({provider: auth_hash.provider, email: user.email}) if existing_account
+
+    # otherwise, this is a new registration
+    register_new_user user
+  end
+
+
+  private def sign_in_auth0(user)
+    SignUpTracking.log_oauth_callback AuthenticationOption::AUTH0, session
+    prepare_locale_cookie user
+    user.update_oauth_credential_tokens auth_hash
+    sign_in_user user
+  end
+
+  private def sign_up_auth0
+    session[:sign_up_type] = AuthenticationOption::AUTH0
+
+    # For some providers, signups can happen without ever having hit the sign_up page, where
+    # our tracking data is usually populated, so do it here
+    # Clever performed poorly in our split test, so never send it to the experiment
+    SignUpTracking.begin_sign_up_tracking(session, split_test: false)
+    SignUpTracking.log_oauth_callback AuthenticationOption::CLEVER, session
+
     user = User.from_omniauth(auth_hash, auth_params, session)
     prepare_locale_cookie user
 

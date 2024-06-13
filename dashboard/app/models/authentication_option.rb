@@ -50,6 +50,7 @@ class AuthenticationOption < ApplicationRecord
     TWITTER = 'twitter',
     WINDOWS_LIVE = 'windowslive',
     MICROSOFT = 'microsoft_v2_auth',
+    AUTH0 = 'auth0'
   ].freeze
 
   CREDENTIAL_TYPES = [
