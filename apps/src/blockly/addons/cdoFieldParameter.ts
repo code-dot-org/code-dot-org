@@ -1,3 +1,7 @@
+import {
+  ObservableParameterModel,
+  ObservableProcedureModel,
+} from '@blockly/block-shareable-procedures';
 import GoogleBlockly, {
   Block,
   FieldDropdown,
@@ -137,7 +141,7 @@ export default class CdoFieldParameter extends GoogleBlockly.FieldVariable {
    * For a given parameter block, find the definition block and its workspace.
    * If the block is part of the function definition, we want the root (top-most) block.
    * If this block is in a mini-toolbox, we want the flyout's parent block.
-   * If neither of these are true (e.g. the block is disconnected on the workspace,
+   * If neither of these are true (e.g. the block is disconnected on the workspace),
    * we will attempt to find the first definition block on the same workspace that
    * includes the parameter.
    * @returns An object containing:
@@ -263,3 +267,32 @@ export default class CdoFieldParameter extends GoogleBlockly.FieldVariable {
     });
   };
 }
+
+export const getAddParameterButtonWithCallback = (
+  workspace: WorkspaceSvg,
+  procedure: ObservableProcedureModel
+) => {
+  const addParameterCallbackKey = 'addParameterCallback';
+  workspace.registerButtonCallback(addParameterCallbackKey, () => {
+    CdoFieldParameter.modalDialogName(
+      commonI18n.newParameterTitle(),
+      commonI18n.create(),
+      parameterName => {
+        const newParameter = new ObservableParameterModel(
+          workspace,
+          parameterName
+        );
+        const newIndex = procedure.getParameters().length;
+        procedure.insertParameter(newParameter, newIndex);
+      },
+      true,
+      false
+    );
+  });
+
+  return {
+    kind: 'button',
+    text: '+',
+    callbackKey: addParameterCallbackKey,
+  };
+};
