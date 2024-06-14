@@ -20,12 +20,10 @@ class AichatControllerTest < ActionController::TestCase
         channelId: "test"
       }
     }
-    valid_message = {role: 'user', chatMessageText: 'hello'}
-    @profanity_violation_message = {role: 'user', chatMessageText: 'Damn you, robot'}
+    valid_message = "hello"
+    @profanity_violation_message = "Damn you, robot"
     @valid_params = @common_params.merge(newMessage: valid_message)
-    @profanity_violation_params = @common_params.merge(
-      newMessage: @profanity_violation_message
-    )
+    @profanity_violation_params = @common_params.merge(newMessage: @profanity_violation_message)
     @missing_stored_messages_params = @common_params.except(:storedMessages)
   end
 
@@ -78,22 +76,24 @@ class AichatControllerTest < ActionController::TestCase
     post :chat_completion, params: @profanity_violation_params, as: :json
 
     assert_response :success
+    assert_equal SharedConstants::AICHAT_ERROR_TYPE[:PROFANITY_USER], json_response["status"]
     assert_equal "damn", json_response["flagged_content"]
-    assert_equal json_response.keys, ['messages', 'flagged_content', 'session_id']
+    assert_equal json_response.keys, ['status', 'flagged_content', 'session_id']
 
     session = AichatSession.find(json_response['session_id'])
     stored_message = JSON.parse(session.messages)[0]
-    assert_equal stored_message,
-      @profanity_violation_message.merge(
-        status: SharedConstants::AI_INTERACTION_STATUS[:PROFANITY_VIOLATION]
-      ).stringify_keys
+    assert_equal stored_message, {
+      role: 'user',
+      content: @profanity_violation_message,
+      status: 'profanity_violation'
+    }.stringify_keys
   end
 
   test 'filters previous profanity when sending previous messages to Sagemaker but still logs' do
-    ok_message = {status: 'ok', role: 'user', chatMessageText: 'another message'}.stringify_keys
+    ok_message = {status: 'ok', role: 'user', content: 'another message'}.stringify_keys
     params = @valid_params.merge(
       storedMessages: [
-        {status: 'profanity_violation', role: 'user', chatMessageText: 'damn'},
+        {status: 'profanity_violation', role: 'user', content: 'damn'},
         ok_message
       ]
     )
@@ -101,7 +101,7 @@ class AichatControllerTest < ActionController::TestCase
     # Note that second expected argument filters out the previous profane message
     # in what we send to Sagemaker.
     AichatSagemakerHelper.expects(:format_inputs_for_sagemaker_request).
-      with(params[:aichatModelCustomizations], [ok_message], params[:newMessage].stringify_keys).once
+      with(params[:aichatModelCustomizations], [ok_message], params[:newMessage]).once
 
     sign_in(@genai_pilot_student)
     post :chat_completion, params: params, as: :json
@@ -121,21 +121,16 @@ class AichatControllerTest < ActionController::TestCase
     post :chat_completion, params: @valid_params, as: :json
 
     assert_response :success
-    assert_equal json_response.keys, ['messages', 'session_id']
+    assert_equal SharedConstants::AICHAT_ERROR_TYPE[:PROFANITY_MODEL], json_response["status"]
+    assert_equal json_response.keys, ['status', 'session_id']
 
     session = AichatSession.find(json_response['session_id'])
-    assert_equal 2, JSON.parse(session.messages).length
-    assert_equal JSON.parse(session.messages),
-      [
-        @valid_params[:newMessage].merge(
-          status: SharedConstants::AI_INTERACTION_STATUS[:ERROR]
-        ),
-        {
-          role: "assistant",
-          status: SharedConstants::AI_INTERACTION_STATUS[:ERROR],
-          chatMessageText: '[redacted - model generated profanity]',
-        }
-      ].map(&:stringify_keys)
+    stored_message = JSON.parse(session.messages)[0]
+    assert_equal stored_message, {
+      role: 'user',
+      content: @valid_params[:newMessage],
+      status: 'error'
+    }.stringify_keys
   end
 
   test 'can_request_aichat_chat_completion returns false when DCDO flag is set to `false`' do
@@ -161,8 +156,8 @@ class AichatControllerTest < ActionController::TestCase
     assert_equal @valid_params[:aichatContext][:scriptId], session.script_id
     assert_equal 456, session.project_id
     assert_equal [
-      @valid_params[:newMessage].merge(status: 'ok').stringify_keys,
-      {role: 'assistant', chatMessageText: @assistant_response, status: 'ok'}.stringify_keys
+      {role: 'user', content: @valid_params[:newMessage], status: 'ok'}.stringify_keys,
+      {role: 'assistant', content: @assistant_response, status: 'ok'}.stringify_keys
     ],
       JSON.parse(session.messages)
     assert_equal @valid_params[:aichatModelCustomizations].stringify_keys,
@@ -179,8 +174,8 @@ class AichatControllerTest < ActionController::TestCase
       {
         sessionId: session.id,
         storedMessages: [
-          @valid_params[:newMessage].merge(status: 'ok').stringify_keys,
-          {role: 'assistant', chatMessageText: @assistant_response, status: 'ok'}.stringify_keys
+          {role: 'user', content: @valid_params[:newMessage], status: 'ok'}.stringify_keys,
+          {role: 'assistant', content: @assistant_response, status: 'ok'}.stringify_keys
         ]
       }
     ),
@@ -203,8 +198,8 @@ class AichatControllerTest < ActionController::TestCase
       {
         sessionId: session.id,
         storedMessages: [
-          @valid_params[:newMessage].merge(status: 'ok').stringify_keys,
-          {role: 'assistant', chatMessageText: @assistant_response, status: 'ok'}.stringify_keys
+          {role: 'user', content: @valid_params[:newMessage], status: 'ok'}.stringify_keys,
+          {role: 'assistant', content: @assistant_response, status: 'ok'}.stringify_keys
         ],
         aichatModelCustomizations: @default_model_customizations.merge(
           retrievalContexts: ["test", "mismatched retrieval context item"],
