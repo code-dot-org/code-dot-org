@@ -55,8 +55,8 @@ class I18nSmartTranslateTest < Minitest::Test
   def test_smart_translate_option_not_passed_to_super
     test_locale = :'te-ST'
     backend = TestI18nSmartTranslateBackend.new
-    backend.store_translations(test_locale, test_interpolation: "test %{smart}")
-    assert_equal "test %{smart}", backend.translate(test_locale, :test_interpolation, smart: true)
+    backend.store_translations(test_locale, test_interpolation: "test %<smart>s")
+    assert_equal "test %<smart>s", backend.translate(test_locale, :test_interpolation, smart: true)
   end
 
   def test_smart_translate
@@ -118,8 +118,8 @@ class I18nMarkdownTranslateTest < Minitest::Test
   def test_markdown_translate_option_not_passed_to_super
     test_locale = :'te-ST'
     backend = TestI18nMarkdownTranslateBackend.new
-    backend.store_translations(test_locale, test_interpolation: "test %{markdown}")
-    assert_equal "test %{markdown}", backend.translate(test_locale, :test_interpolation, markdown: false)
+    backend.store_translations(test_locale, test_interpolation: "test %<markdown>s")
+    assert_equal "test %<markdown>s", backend.translate(test_locale, :test_interpolation, markdown: false)
   end
 end
 
@@ -136,27 +136,27 @@ class I18nSafeInterpolationTest < Minitest::Test
   def test_string_can_render_with_missing_interpolation_argument
     @backend.store_translations(
       @locale,
-      test_missing_interpolation_argument: "Hello %{world}"
+      test_missing_interpolation_argument: "Hello %<world>s"
     )
 
-    assert_equal "Hello %{world}", @backend.translate(@locale, 'test_missing_interpolation_argument')
+    assert_equal "Hello %<world>s", @backend.translate(@locale, 'test_missing_interpolation_argument')
   end
 
   def test_string_can_render_with_some_missing_interpolation_arguments
     @backend.store_translations(
       @locale,
-      test_missing_interpolation_argument: "%{hello} %{world}"
+      test_missing_interpolation_argument: "%<hello>s %<world>s"
     )
 
-    assert_equal "%{hello} %{world}", @backend.translate(@locale, 'test_missing_interpolation_argument')
-    assert_equal "Hello %{world}", @backend.translate(@locale, 'test_missing_interpolation_argument', hello: "Hello")
-    assert_equal "%{hello} World", @backend.translate(@locale, 'test_missing_interpolation_argument', world: "World")
+    assert_equal "%<hello>s %<world>s", @backend.translate(@locale, 'test_missing_interpolation_argument')
+    assert_equal "Hello %<world>s", @backend.translate(@locale, 'test_missing_interpolation_argument', hello: "Hello")
+    assert_equal "%<hello>s World", @backend.translate(@locale, 'test_missing_interpolation_argument', world: "World")
   end
 
   def test_missing_interpolation_arguments_are_logged
     @backend.store_translations(
       @locale,
-      test_missing_interpolation_argument: "Hello %{world}"
+      test_missing_interpolation_argument: "Hello %<world>s"
     )
 
     Honeybadger.expects(:notify)

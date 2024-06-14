@@ -319,7 +319,7 @@ class TestI18nStringUrlTracker < Minitest::Test
   def test_string_key_exists
     custom_i18n = {
       'simple_string' => "hello",
-      'interpolated_string' => "unit %{n}",
+      'interpolated_string' => "unit %<n>s",
       'parent_key' => {
         'child_key' => 'test'
       },

@@ -78,7 +78,7 @@ module Pd::Application
 
     before_validation :set_course_from_program, if: -> {form_data_changed?}
     before_validation :set_status_from_admin_approval, if: -> {properties_changed?}
-    validates :status, exclusion: {in: ['interview'], message: '%{value} is reserved for facilitator applications.'}
+    validates :status, exclusion: {in: ['interview'], message: '%<value>s is reserved for facilitator applications.'}
     validates :course, presence: true, inclusion: {in: VALID_COURSES}, unless: -> {status == 'incomplete'}
     validate :workshop_present_if_required_for_status, if: -> {status_changed?}
 

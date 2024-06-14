@@ -63,7 +63,7 @@ module AWS
       stack.dry_run = true
       template = stack.render
       if options[:verbose]
-        log.info template.lines.map.with_index(1) {|line, i| format("[%4d] %s", i, line)}.join
+        log.info template.lines.map.with_index(1) {|line, i| format("[%<i>4d] %<line>s", i: i, line: line)}.join
       end
       Tempfile.create(['template', '.yml']) do |tempfile|
         tempfile.write(template)
@@ -111,7 +111,7 @@ module AWS
     private def change_stack
       template = stack.render
       if options[:verbose]
-        log.info template.lines.map.with_index(1) {|line, i| format("[%4d] %s", i, line)}.join
+        log.info template.lines.map.with_index(1) {|line, i| format("[%<i>4d] %<line>s", i: i, line: line)}.join
       end
       stack_options = change_set_options(template)
       params = stack_options[:parameters].reject {|x| x[:parameter_value].nil?}

@@ -153,11 +153,11 @@ Dashboard::Application.routes.draw do
     post '/dashboardapi/sections/transfers', to: 'transfers#create'
     post '/api/sections/transfers', to: 'transfers#create'
 
-    get '/sh/:id', to: redirect('/c/%{id}')
-    get '/sh/:id/:action_id', to: redirect('/c/%{id}/%{action_id}')
+    get '/sh/:id', to: redirect('/c/%<id>s')
+    get '/sh/:id/:action_id', to: redirect('/c/%<id>s/%<action_id>s')
 
-    get '/u/:id', to: redirect('/c/%{id}')
-    get '/u/:id/:action_id', to: redirect('/c/%{id}/%{action_id}')
+    get '/u/:id', to: redirect('/c/%<id>s')
+    get '/u/:id/:action_id', to: redirect('/c/%<id>s/%<action_id>s')
 
     # These links should no longer be created (August 2017), though we will continue to support
     # existing links. Instead, create /r/ links.
@@ -177,7 +177,7 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    get '/share/:id', to: redirect('/c/%{id}')
+    get '/share/:id', to: redirect('/c/%<id>s')
 
     devise_scope :user do
       get '/oauth_sign_out/:provider', to: 'sessions#oauth_sign_out', as: :oauth_sign_out
@@ -243,7 +243,7 @@ Dashboard::Application.routes.draw do
           # Weblab projects are shared on a codeprojects path. The share URL on code studio doesn't mean anything and instead
           # should be redirected to the corresponding codeprojects path.
           if key == 'weblab'
-            get "/#{key}/:channel_id", constraints: {host: CDO.dashboard_hostname}, to: redirect("//#{CDO.site_host('codeprojects.org')}/%{channel_id}/")
+            get "/#{key}/:channel_id", constraints: {host: CDO.dashboard_hostname}, to: redirect("//#{CDO.site_host('codeprojects.org')}/%<channel_id>s/")
           else
             get "/#{key}/:channel_id", to: 'projects#show', key: key.to_s, as: "#{key}_project_share", share: true
           end
@@ -345,7 +345,7 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    get '/course/:course_name', to: redirect('/courses/%{course_name}')
+    get '/course/:course_name', to: redirect('/courses/%<course_name>s')
     get '/courses/:course_name/vocab/edit', to: 'vocabularies#edit'
     # these routes use course_course_name to match generated routes below that are nested within courses
     get '/courses/:course_course_name/guides/edit', to: 'reference_guides#edit_all', as: :edit_all_reference_guides
@@ -366,15 +366,15 @@ Dashboard::Application.routes.draw do
     get '/potential_teachers/:id', param: :id, to: 'potential_teachers#show'
 
     # CSP 20-21 lockable lessons with lesson plan redirects
-    get '/s/csp1-2020/lockable/2(*all)', to: redirect(path: '/s/csp1-2020/lessons/14%{all}')
-    get '/s/csp2-2020/lockable/1(*all)', to: redirect(path: '/s/csp2-2020/lessons/9%{all}')
-    get '/s/csp3-2020/lockable/1(*all)', to: redirect(path: '/s/csp3-2020/lessons/11%{all}')
-    get '/s/csp4-2020/lockable/1(*all)', to: redirect(path: '/s/csp4-2020/lessons/15%{all}')
-    get '/s/csp5-2020/lockable/1(*all)', to: redirect(path: '/s/csp5-2020/lessons/18%{all}')
-    get '/s/csp6-2020/lockable/1(*all)', to: redirect(path: '/s/csp6-2020/lessons/6%{all}')
-    get '/s/csp7-2020/lockable/1(*all)', to: redirect(path: '/s/csp7-2020/lessons/11%{all}')
-    get '/s/csp9-2020/lockable/1(*all)', to: redirect(path: '/s/csp9-2020/lessons/9%{all}')
-    get '/s/csp10-2020/lockable/1(*all)', to: redirect(path: '/s/csp10-2020/lessons/14%{all}')
+    get '/s/csp1-2020/lockable/2(*all)', to: redirect(path: '/s/csp1-2020/lessons/14%<all>s')
+    get '/s/csp2-2020/lockable/1(*all)', to: redirect(path: '/s/csp2-2020/lessons/9%<all>s')
+    get '/s/csp3-2020/lockable/1(*all)', to: redirect(path: '/s/csp3-2020/lessons/11%<all>s')
+    get '/s/csp4-2020/lockable/1(*all)', to: redirect(path: '/s/csp4-2020/lessons/15%<all>s')
+    get '/s/csp5-2020/lockable/1(*all)', to: redirect(path: '/s/csp5-2020/lessons/18%<all>s')
+    get '/s/csp6-2020/lockable/1(*all)', to: redirect(path: '/s/csp6-2020/lessons/6%<all>s')
+    get '/s/csp7-2020/lockable/1(*all)', to: redirect(path: '/s/csp7-2020/lessons/11%<all>s')
+    get '/s/csp9-2020/lockable/1(*all)', to: redirect(path: '/s/csp9-2020/lessons/9%<all>s')
+    get '/s/csp10-2020/lockable/1(*all)', to: redirect(path: '/s/csp10-2020/lessons/14%<all>s')
 
     resources :data_docs, param: :key do
       collection do
@@ -440,15 +440,15 @@ Dashboard::Application.routes.draw do
     end
 
     # Redirects from old /stage/x/extras url to new /lessons/x/extras url
-    get '/s/:script_name/stage/:position/extras', to: redirect(path: '/s/%{script_name}/lessons/%{position}/extras')
+    get '/s/:script_name/stage/:position/extras', to: redirect(path: '/s/%<script_name>s/lessons/%<position>s/extras')
 
     # Redirects from old /stage/x/puzzle url to new /lessons/x/levels url
-    get '/s/:script_name/stage/:position/puzzle', to: redirect(path: '/s/%{script_name}/lessons/%{position}/levels')
-    get '/s/:script_name/stage/:position/puzzle/(*all)', to: redirect(path: '/s/%{script_name}/lessons/%{position}/levels/%{all}')
+    get '/s/:script_name/stage/:position/puzzle', to: redirect(path: '/s/%<script_name>s/lessons/%<position>s/levels')
+    get '/s/:script_name/stage/:position/puzzle/(*all)', to: redirect(path: '/s/%<script_name>s/lessons/%<position>s/levels/%<all>s')
 
     # Redirects from old /lockable/x/puzzle url to new /lockable/x/levels url
-    get '/s/:script_name/lockable/:position/puzzle', to: redirect(path: '/s/%{script_name}/lockable/%{position}/levels')
-    get '/s/:script_name/lockable/:position/puzzle/(*all)', to: redirect(path: '/s/%{script_name}/lockable/%{position}/levels/%{all}')
+    get '/s/:script_name/lockable/:position/puzzle', to: redirect(path: '/s/%<script_name>s/lockable/%<position>s/levels')
+    get '/s/:script_name/lockable/:position/puzzle/(*all)', to: redirect(path: '/s/%<script_name>s/lockable/%<position>s/levels/%<all>s')
 
     resources :scripts, path: '/s/' do
       # /s/xxx/reset

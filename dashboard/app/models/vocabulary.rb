@@ -26,7 +26,7 @@ class Vocabulary < ApplicationRecord
   KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
   validates_format_of :key,
     with: KEY_RE,
-    message: "must contain only lowercase alphabetic characters and underscores; got \"%{value}\"."
+    message: "must contain only lowercase alphabetic characters and underscores; got \"%<value>s\"."
 
   before_validation :generate_key, on: :create
 

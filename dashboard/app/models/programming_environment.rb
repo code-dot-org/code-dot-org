@@ -19,7 +19,7 @@ class ProgrammingEnvironment < ApplicationRecord
 
   NAME_CHAR_RE = /[a-z0-9\-]/
   NAME_RE = /\A#{NAME_CHAR_RE}+\Z/
-  validates_format_of :name, with: NAME_RE, message: "must contain only lowercase alphanumeric characters and dashes; got \"%{value}\"."
+  validates_format_of :name, with: NAME_RE, message: "must contain only lowercase alphanumeric characters and dashes; got \"%<value>s\"."
 
   validates_uniqueness_of :name, case_sensitive: false
 

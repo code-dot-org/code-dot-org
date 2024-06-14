@@ -48,7 +48,7 @@
 #
 class Census::CensusTeacherBannerV1 < Census::CensusSubmission
   # Note: the value of submitter_role that gets validated is the key from the ROLES hash, not the value
-  validates_inclusion_of :submitter_role, in: %w(teacher), message: "%{value} is not allowed"
+  validates_inclusion_of :submitter_role, in: %w(teacher), message: "%<value>s is not allowed"
   validate :how_many_10_20_or_afterschool
 
   def how_many_10_20_or_afterschool

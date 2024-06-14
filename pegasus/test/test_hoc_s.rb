@@ -31,17 +31,17 @@ class HocI18nTest < Minitest::Test
   end
 
   def test_interpolation
-    I18n.backend.store_translations 'en', {"test" => "%{first}"}
+    I18n.backend.store_translations 'en', {"test" => "%<first>s"}
     resp = get('/hoc_s/interpolation')
     assert_equal 200, resp.status
     assert_match "<h1>primary</h1>", resp.body
 
-    I18n.backend.store_translations 'en', {"test" => "%{first} %{second}"}
+    I18n.backend.store_translations 'en', {"test" => "%<first>s %<second>s"}
     resp = get('/hoc_s/interpolation')
     assert_equal 200, resp.status
     assert_match "<h1>primary secondary</h1>", resp.body
 
-    I18n.backend.store_translations 'en', {"test" => "%{first} %{second} %{first} again"}
+    I18n.backend.store_translations 'en', {"test" => "%<first>s %<second>s %<first>s again"}
     resp = get('/hoc_s/interpolation')
     assert_equal 200, resp.status
     assert_match "<h1>primary secondary primary again</h1>", resp.body
@@ -60,7 +60,7 @@ class HocI18nTest < Minitest::Test
   end
 
   def test_interpolated_markdown
-    I18n.backend.store_translations 'en', {"test" => "string with an [interpolated link](%{url})"}
+    I18n.backend.store_translations 'en', {"test" => "string with an [interpolated link](%<url>s)"}
     resp = get('/hoc_s/interpolated_markdown')
     assert_equal 200, resp.status
     assert_match "<h1><p>string with an <a href=\"http://test.com\">interpolated link</a></p>\n</h1>", resp.body

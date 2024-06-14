@@ -32,7 +32,7 @@ class Resource < ApplicationRecord
 
   KEY_CHAR_RE = /[a-z0-9\-\_]/
   KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
-  validates_format_of :key, with: KEY_RE, message: "must contain only lowercase alphanumeric characters, dashes, and underscores; got \"%{value}\"."
+  validates_format_of :key, with: KEY_RE, message: "must contain only lowercase alphanumeric characters, dashes, and underscores; got \"%<value>s\"."
 
   validates_presence_of :name
 

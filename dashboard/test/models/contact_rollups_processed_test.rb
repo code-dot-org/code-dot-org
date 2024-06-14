@@ -714,7 +714,7 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
       {
         # input data is null
         input: format(
-          '[{"%{sources_key}": "table1", "%{data_key}": null, "%{data_updated_at_key}": "%{time_str}"}]',
+          '[{"%<sources_key>s": "table1", "%<data_key>s": null, "%<data_updated_at_key>s": "%<time_str>s"}]',
           format_values
         ),
         expected_output: {'table1' => {'last_data_updated_at' => time_parsed}}
@@ -722,7 +722,7 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
       # input data is an empty hash
       {
         input: format(
-          '[{"%{sources_key}": "table1", "%{data_key}": {}, "%{data_updated_at_key}": "%{time_str}"}]',
+          '[{"%<sources_key>s": "table1", "%<data_key>s": {}, "%<data_updated_at_key>s": "%<time_str>s"}]',
           format_values
         ),
         expected_output: {'table1' => {'last_data_updated_at' => time_parsed}}
@@ -730,7 +730,7 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
       # input data has a valid key but its value is null
       {
         input: format(
-          '[{"%{sources_key}": "table2", "%{data_key}": {"state": null}, "%{data_updated_at_key}": "%{time_str}"}]',
+          '[{"%<sources_key>s": "table2", "%<data_key>s": {"state": null}, "%<data_updated_at_key>s": "%<time_str>s"}]',
           format_values
         ),
         expected_output: {
@@ -743,7 +743,7 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
       # input data has valid key and value
       {
         input: format(
-          '[{"%{sources_key}": "table1", "%{data_key}": {"opt_in": 1}, "%{data_updated_at_key}": "%{time_str}"}]',
+          '[{"%<sources_key>s": "table1", "%<data_key>s": {"opt_in": 1}, "%<data_updated_at_key>s": "%<time_str>s"}]',
           format_values
         ),
         expected_output: {
@@ -757,8 +757,8 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
       {
         input: format(
           '[' \
-          '{"%{sources_key}": "table2", "%{data_key}": {"state": "WA"}, "%{data_updated_at_key}": "%{time_str}"},' \
-          '{"%{sources_key}": "table2", "%{data_key}": {"state": "OR"}, "%{data_updated_at_key}": "%{time_str_2}"}' \
+          '{"%<sources_key>s": "table2", "%<data_key>s": {"state": "WA"}, "%<data_updated_at_key>s": "%<time_str>s"},' \
+          '{"%<sources_key>s": "table2", "%<data_key>s": {"state": "OR"}, "%<data_updated_at_key>s": "%<time_str_2>s"}' \
           ']',
           format_values
         ),
@@ -775,8 +775,8 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
       # input data comes from 2 tables with different valid keys
       {
         input: format('[' \
-          '{"%{sources_key}": "table1", "%{data_key}": {"opt_in": 1}, "%{data_updated_at_key}": "%{time_str}"},' \
-          '{"%{sources_key}": "table2", "%{data_key}": {"state": "WA"}, "%{data_updated_at_key}": "%{time_str}"}]',
+          '{"%<sources_key>s": "table1", "%<data_key>s": {"opt_in": 1}, "%<data_updated_at_key>s": "%<time_str>s"},' \
+          '{"%<sources_key>s": "table2", "%<data_key>s": {"state": "WA"}, "%<data_updated_at_key>s": "%<time_str>s"}]',
           format_values
         ),
         expected_output: {
