@@ -93,6 +93,11 @@ p.enterName {
   display: flex;
 }
 
+.courseAssignCarouselWrapper {
+  position: relative;
+  margin: 2rem 0 0;
+}
+
 .swiperContainer {
   display: flex;
   width: 100%;
@@ -138,15 +143,32 @@ p.enterName {
   top: 42%;
   border: 0;
   height: 48px;
+  z-index: 1;
+
+  &:hover {
+    box-shadow: none;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
 }
 
-.swiperNavPrev {
-  background: url("//localhost.code.org:3000/images/carousel/prev.svg") no-repeat;
-  left: -4rem;
+.prevElNav {
+  background: url('//code.org/images/carousel/prev.svg')
+    no-repeat;
+  left: -3rem;
   border: 0;
+  background-size: contain;
 }
 
-.swiperNavNext {
-  background: url("//localhost.code.org:3000/images/carousel/next.svg") no-repeat;
-  right: -4rem;
+.nextElNav {
+  background: url('//code.org/images/carousel/next.svg')
+    no-repeat;
+  right: -3rem;
+  background-size: contain;
+}
+
+.swiper-button-disabled {
+  opacity: 0.5;
 }
