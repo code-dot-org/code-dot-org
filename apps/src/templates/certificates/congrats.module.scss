@@ -112,6 +112,10 @@ p.enterName {
   &:hover {
     box-shadow: none;
   }
+
+  &:disabled {
+    opacity: 0.5;
+  }
 }
 
 .prevElNav {
