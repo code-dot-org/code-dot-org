@@ -99,7 +99,12 @@ export default function UploadImageForm() {
             <FontAwesome icon="spinner" className="fa-spin" />
           </div>
         )}
-        {imgUrl && <div>Y{i18n.imageURL() + imgUrl}</div>}
+        {imgUrl && (
+          <div>
+            <strong>{i18n.imageURL()}</strong>
+            {imgUrl}
+          </div>
+        )}
       </div>
     </div>
   );
