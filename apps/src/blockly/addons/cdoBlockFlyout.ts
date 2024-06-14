@@ -1,15 +1,19 @@
-import GoogleBlockly, {IDraggable, Options} from 'blockly/core';
+import GoogleBlockly, {Block, IDraggable, Options} from 'blockly/core';
 import {FlyoutItem} from 'blockly/core/flyout_base';
 import {Svg} from 'blockly/core/utils';
+
+import {ExtendedWorkspaceSvg} from '../types';
 
 const svgPaths = GoogleBlockly.utils.svgPaths;
 interface CdoBlockFlyoutOptions extends Options {
   minWidth: number;
   maxWidth: number;
+  parentBlock: Block | null;
 }
 
 export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
   private svgClipPath_: SVGElement | undefined;
+  parentBlock: GoogleBlockly.Block | null;
 
   /**
    * This is a customized flyout class that extends the HorizontalFlyout class.
@@ -19,8 +23,11 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
    */
   constructor(workspaceOptions: CdoBlockFlyoutOptions) {
     super(workspaceOptions);
+    this.parentBlock = workspaceOptions.parentBlock;
     this.minWidth_ = workspaceOptions.minWidth || this.minWidth_;
     this.maxWidth_ = workspaceOptions.maxWidth || this.maxWidth_;
+    (this.workspace_ as ExtendedWorkspaceSvg).flyoutParentBlock =
+      this.parentBlock;
   }
 
   autoClose = false;

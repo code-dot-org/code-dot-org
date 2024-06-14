@@ -12,7 +12,7 @@ import {
   getFileIcon,
   shouldShowFile,
 } from '@codebridge/utils';
-import React, {useMemo} from 'react';
+import React, {useContext, useMemo} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
@@ -20,6 +20,10 @@ import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {ProjectFileType} from '@cdo/apps/lab2/types';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import {
+  DialogContext,
+  DialogType,
+} from '@cdo/apps/lab2/views/dialogs/DialogManager';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {FileBrowserHeaderPopUpButton} from './FileBrowserHeaderPopUpButton';
@@ -61,7 +65,35 @@ const InnerFileBrowser = React.memo(
   }: FilesComponentProps) => {
     const {openFile, deleteFile, toggleOpenFolder, deleteFolder} =
       useCodebridgeContext();
+    const dialogControl = useContext(DialogContext);
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+
+    const handleDeleteFile = (fileId: string) => {
+      const filename = files[fileId].name;
+      const title = `Are you sure?`;
+      const message = `Are you sure you want to delete the file ${filename}?`;
+      dialogControl?.showDialog(
+        DialogType.GenericConfirmation,
+        () => deleteFile(fileId),
+        title,
+        message,
+        'Delete'
+      );
+    };
+
+    const handleDeleteFolder = (folderId: string) => {
+      const folderName = folders[folderId].name;
+      const title = `Are you sure?`;
+      const message = `Are you sure you want to delete the folder ${folderName}? This will delete all files and folders inside ${folderName}.`;
+      dialogControl?.showDialog(
+        DialogType.GenericConfirmation,
+        () => deleteFolder(folderId),
+        title,
+        message,
+        'Delete'
+      );
+    };
+
     const hasValidationFile = Object.values(files).find(
       f => f.type === ProjectFileType.VALIDATION
     );
@@ -156,7 +188,7 @@ const InnerFileBrowser = React.memo(
                           <i className="fa-solid fa-plus" />{' '}
                           {codebridgeI18n.addFile()}
                         </span>
-                        <span onClick={() => deleteFolder(f.id)}>
+                        <span onClick={() => handleDeleteFolder(f.id)}>
                           <i className="fa-solid fa-trash" />{' '}
                           {codebridgeI18n.deleteFolder()}
                         </span>
@@ -206,7 +238,7 @@ const InnerFileBrowser = React.memo(
                         <i className="fa-solid fa-pencil" />{' '}
                         {codebridgeI18n.renameFile()}
                       </span>
-                      <span onClick={() => deleteFile(f.id)}>
+                      <span onClick={() => handleDeleteFile(f.id)}>
                         <i className="fa-solid fa-trash" />{' '}
                         {codebridgeI18n.deleteFile()}
                       </span>
