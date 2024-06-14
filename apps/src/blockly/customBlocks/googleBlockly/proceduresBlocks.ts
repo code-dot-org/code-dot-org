@@ -102,7 +102,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
     message0: '%1',
     args0: [
       {
-        type: 'field_variable',
+        type: 'field_parameter',
         name: 'VAR',
         variable: '%{BKY_VARIABLES_DEFAULT_NAME}',
       },
