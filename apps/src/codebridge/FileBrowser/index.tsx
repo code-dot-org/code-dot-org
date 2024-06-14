@@ -16,9 +16,11 @@ import React, {useMemo} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {ProjectFileType} from '@cdo/apps/lab2/types';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {FileBrowserHeaderPopUpButton} from './FileBrowserHeaderPopUpButton';
 import {
@@ -63,6 +65,7 @@ const InnerFileBrowser = React.memo(
     const hasValidationFile = Object.values(files).find(
       f => f.type === ProjectFileType.VALIDATION
     );
+    const isReadOnly = useAppSelector(isReadOnlyWorkspace);
 
     const startModeFileDropdownOptions = (file: ProjectFile) => {
       // We only support one validation file per project, so if we already have one,
@@ -135,29 +138,31 @@ const InnerFileBrowser = React.memo(
                     </span>
                     <span>{f.name}</span>
                   </span>
-                  <PopUpButton
-                    iconName="ellipsis-v"
-                    className={moduleStyles['button-kebab']}
-                  >
-                    <span className={moduleStyles['button-bar']}>
-                      <span onClick={() => renameFolderPrompt(f.id)}>
-                        <i className="fa-solid fa-pencil" />{' '}
-                        {codebridgeI18n.renameFolder()}
+                  {!isReadOnly && (
+                    <PopUpButton
+                      iconName="ellipsis-v"
+                      className={moduleStyles['button-kebab']}
+                    >
+                      <span className={moduleStyles['button-bar']}>
+                        <span onClick={() => renameFolderPrompt(f.id)}>
+                          <i className="fa-solid fa-pencil" />{' '}
+                          {codebridgeI18n.renameFolder()}
+                        </span>
+                        <span onClick={() => newFolderPrompt(f.id)}>
+                          <i className="fa-solid fa-folder-plus" />{' '}
+                          {codebridgeI18n.addSubFolder()}
+                        </span>
+                        <span onClick={() => newFilePrompt(f.id)}>
+                          <i className="fa-solid fa-plus" />{' '}
+                          {codebridgeI18n.addFile()}
+                        </span>
+                        <span onClick={() => deleteFolder(f.id)}>
+                          <i className="fa-solid fa-trash" />{' '}
+                          {codebridgeI18n.deleteFolder()}
+                        </span>
                       </span>
-                      <span onClick={() => newFolderPrompt(f.id)}>
-                        <i className="fa-solid fa-folder-plus" />{' '}
-                        {codebridgeI18n.addSubFolder()}
-                      </span>
-                      <span onClick={() => newFilePrompt(f.id)}>
-                        <i className="fa-solid fa-plus" />{' '}
-                        {codebridgeI18n.addFile()}
-                      </span>
-                      <span onClick={() => deleteFolder(f.id)}>
-                        <i className="fa-solid fa-trash" />{' '}
-                        {codebridgeI18n.deleteFolder()}
-                      </span>
-                    </span>
-                  </PopUpButton>
+                    </PopUpButton>
+                  )}
                 </span>
                 {f.open && (
                   <ul>
@@ -187,26 +192,28 @@ const InnerFileBrowser = React.memo(
                   <i className={getFileIcon(f)} />
                   {f.name}
                 </span>
-                <PopUpButton
-                  iconName="ellipsis-v"
-                  className={moduleStyles['button-kebab']}
-                >
-                  <span className={moduleStyles['button-bar']}>
-                    <span onClick={() => moveFilePrompt(f.id)}>
-                      <i className="fa-solid fa-arrow-right" />{' '}
-                      {codebridgeI18n.moveFile()}
+                {!isReadOnly && (
+                  <PopUpButton
+                    iconName="ellipsis-v"
+                    className={moduleStyles['button-kebab']}
+                  >
+                    <span className={moduleStyles['button-bar']}>
+                      <span onClick={() => moveFilePrompt(f.id)}>
+                        <i className="fa-solid fa-arrow-right" />{' '}
+                        {codebridgeI18n.moveFile()}
+                      </span>
+                      <span onClick={() => renameFilePrompt(f.id)}>
+                        <i className="fa-solid fa-pencil" />{' '}
+                        {codebridgeI18n.renameFile()}
+                      </span>
+                      <span onClick={() => deleteFile(f.id)}>
+                        <i className="fa-solid fa-trash" />{' '}
+                        {codebridgeI18n.deleteFile()}
+                      </span>
+                      {isStartMode && startModeFileDropdownOptions(f)}
                     </span>
-                    <span onClick={() => renameFilePrompt(f.id)}>
-                      <i className="fa-solid fa-pencil" />{' '}
-                      {codebridgeI18n.renameFile()}
-                    </span>
-                    <span onClick={() => deleteFile(f.id)}>
-                      <i className="fa-solid fa-trash" />{' '}
-                      {codebridgeI18n.deleteFile()}
-                    </span>
-                    {isStartMode && startModeFileDropdownOptions(f)}
-                  </span>
-                </PopUpButton>
+                  </PopUpButton>
+                )}
               </span>
             </li>
           ))}
@@ -226,6 +233,7 @@ export const FileBrowser = React.memo(() => {
     newFolder,
     setFileType,
   } = useCodebridgeContext();
+  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
 
   const newFolderPrompt: FilesComponentProps['newFolderPrompt'] = useMemo(
     () =>
@@ -378,10 +386,12 @@ export const FileBrowser = React.memo(() => {
       headerContent={'Files'}
       className={moduleStyles['file-browser']}
       rightHeaderContent={
-        <FileBrowserHeaderPopUpButton
-          newFolderPrompt={newFolderPrompt}
-          newFilePrompt={newFilePrompt}
-        />
+        !isReadOnly && (
+          <FileBrowserHeaderPopUpButton
+            newFolderPrompt={newFolderPrompt}
+            newFilePrompt={newFilePrompt}
+          />
+        )
       }
     >
       <ul>

@@ -48,6 +48,12 @@ EnglishStudentOtherTutorial.args = {
   isHocTutorial: false,
 };
 
+export const EnglishStudentExtraLink = Template.bind({});
+EnglishStudentExtraLink.args = {
+  userType: 'student',
+  currentDate: new Date('2000-01-02T00:00:00Z'),
+};
+
 export const NonEnglishStudentHOCTutorial = Template.bind({});
 NonEnglishStudentHOCTutorial.args = {
   userType: 'student',
