@@ -26,6 +26,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     user = find_user_by_credential
     if user
+      return link_accounts user if should_link_accounts?
       sign_in_clever user
     else
       sign_up_clever

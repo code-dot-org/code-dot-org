@@ -1,6 +1,8 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
+import {getStore} from '@cdo/apps/redux';
 import MiniMusicPlayer from '@cdo/apps/music/views/MiniMusicPlayer';
 
 $(document).ready(function () {
@@ -9,7 +11,9 @@ $(document).ready(function () {
   );
 
   ReactDOM.render(
-    <MiniMusicPlayer projects={projects} libraryName="launch2024" />,
+    <Provider store={getStore()}>
+      <MiniMusicPlayer projects={projects} libraryName="launch2024" />
+    </Provider>,
     document.getElementById('musiclab-container')
   );
 });
