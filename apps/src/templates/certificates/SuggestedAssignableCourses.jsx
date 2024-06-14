@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useEffect, useRef} from 'react';
 
@@ -171,12 +172,14 @@ function SuggestedAssignableCoursesCarousel({assignableCourseSuggestions}) {
         },
         injectStyles: [
           `
-            :host .swiper-pagination {
-              position: relative;
-              margin-top: 3rem;
+          :host .swiper-pagination {
+            position: relative;
+            margin-top: 4rem;
+            .swiper-pagination-bullet {
+              margin-block: 0.5rem;
             }
-            
-            `,
+          }
+          `,
         ],
       };
       Object.assign(swiperRef.current, swiperParams);
@@ -185,12 +188,13 @@ function SuggestedAssignableCoursesCarousel({assignableCourseSuggestions}) {
   }, []);
 
   return (
-    <div>
+    <div className={style.courseAssignCarouselWrapper}>
       <swiper-container
         init="false"
         ref={swiperRef}
-        navigation-next-el=".swiper-nav-next"
-        navigation-prev-el=".swiper-nav-prev"
+        className={style.swiperContainer}
+        navigation-next-el="#assignable-course-swiper-nav-next"
+        navigation-prev-el="#assignable-course-swiper-nav-prev"
       >
         {assignableCourseSuggestions.map(course => (
           <swiper-slide key={course.key}>
@@ -199,11 +203,13 @@ function SuggestedAssignableCoursesCarousel({assignableCourseSuggestions}) {
         ))}
       </swiper-container>
       <button
-        className={`.swiper-nav-prev ${style.swiperNav} ${style.swiperNavPrev}`}
+        id="assignable-course-swiper-nav-prev"
+        className={classNames(style.navButton, style.prevElNav)}
         type="button"
       />
       <button
-        className={`.swiper-nav-next ${style.swiperNav} ${style.swiperNavNext}`}
+        id="assignable-course-swiper-nav-next"
+        className={classNames(style.navButton, style.nextElNav)}
         type="button"
       />
     </div>
