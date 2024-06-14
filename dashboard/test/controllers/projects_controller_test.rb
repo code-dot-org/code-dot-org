@@ -537,7 +537,7 @@ class ProjectsControllerTest < ActionController::TestCase
 
   test 'on lab2 levels navigating to /edit redirects to /view if project is frozen' do
     channel_id = '12345'
-    Projects.any_instance.stubs(:get).returns({isFrozen: true, isOwner: false})
+    Projects.any_instance.stubs(:get).returns({isFrozen: true})
 
     get :edit, params: {path: "/projects/music/#{channel_id}/edit", key: 'music', channel_id: channel_id}
     assert_response :redirect
