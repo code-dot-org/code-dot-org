@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import {createPortal} from 'react-dom';
 import {concat, intersection} from 'lodash';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from '@cdo/apps/templates/Button';
@@ -31,6 +32,7 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import ExpandedCurriculumCatalogCard from './ExpandedCurriculumCatalogCard';
 import {defaultImageSrc} from './curriculumCatalogConstants';
+import {BodyThreeText, Heading4} from '@cdo/apps/componentLibrary/typography';
 
 const CurriculumCatalogCard = ({
   courseKey,
@@ -152,7 +154,7 @@ CurriculumCatalogCard.propTypes = {
   recommendedStretchCurriculum: PropTypes.object,
 };
 
-const CustomizableCurriculumCatalogCard = ({
+export const CustomizableCurriculumCatalogCard = ({
   courseKey,
   assignButtonDescription,
   assignButtonText,
@@ -187,6 +189,7 @@ const CustomizableCurriculumCatalogCard = ({
   availableResources,
   recommendedSimilarCurriculum,
   recommendedStretchCurriculum,
+  wide,
   ...props
 }) => {
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
@@ -241,6 +244,85 @@ const CustomizableCurriculumCatalogCard = ({
       );
     }
   };
+
+  if (wide) {
+    return (
+      <div className={style.wideCard}>
+        <img src={imageSrc} alt={imageAltText} className={style.wideCardImg} />
+        <div className={style.wideCardContentAndButtons}>
+          <div className={style.wideCardContent}>
+            {<CardLabels subjectsAndTopics={subjectsAndTopics} />}
+            <Heading4>{courseDisplayName}</Heading4>
+            <BodyThreeText className={style.wideCardDescription}>
+              {description}
+            </BodyThreeText>
+            <div className={style.iconWithDescription}>
+              <FontAwesome icon="user" className="fa-solid" />
+              <p>{gradeRange}</p>
+            </div>
+            <div className={style.iconWithDescription}>
+              <FontAwesome icon="clock" className="fa-solid" />
+              <p>{duration}</p>
+            </div>
+          </div>
+          <div
+            className={classNames(
+              style.wideCardButtonsContainer,
+              isEnglish
+                ? style.buttonsContainer_english
+                : style.buttonsContainer_notEnglish
+            )}
+          >
+            <Button
+              color={Button.ButtonColor.neutralDark}
+              type="button"
+              onClick={onQuickViewClick}
+              aria-label={quickViewButtonDescription}
+              text={i18n.quickView()}
+              className={`${style.buttonFlex} ${style.quickViewButton}`}
+            />
+            {isTeacherOrSignedOut && (
+              <>
+                <Button
+                  __useDeprecatedTag
+                  color={Button.ButtonColor.neutralDark}
+                  type="button"
+                  href={pathToCourse}
+                  aria-label={i18n.learnMoreDescription({
+                    course_name: courseDisplayName,
+                  })}
+                  text={i18n.learnMore()}
+                  className={`${style.buttonFlex} ${style.teacherAndSignedOutLearnMoreButton}`}
+                />
+                <Button
+                  color={Button.ButtonColor.brandSecondaryDefault}
+                  type="button"
+                  onClick={() => handleClickAssign('wide-card')}
+                  aria-label={assignButtonDescription}
+                  text={assignButtonText}
+                  className={style.buttonFlex}
+                />
+              </>
+            )}
+            {!isTeacherOrSignedOut && (
+              <Button
+                __useDeprecatedTag
+                color={Button.ButtonColor.brandSecondaryDefault}
+                type="button"
+                href={pathToCourse}
+                aria-label={i18n.tryCourseNow({
+                  course_name: courseDisplayName,
+                })}
+                text={i18n.tryNow()}
+                className={`${style.buttonFlex} ${style.studentLearnMoreButton}`}
+              />
+            )}
+          </div>
+        </div>
+        {isAssignDialogOpen && renderAssignDialog()}
+      </div>
+    );
+  }
 
   return (
     <div className={style.cardsContainer}>
@@ -330,7 +412,8 @@ const CustomizableCurriculumCatalogCard = ({
             </div>
           </div>
         </div>
-        {isAssignDialogOpen && renderAssignDialog()}
+        {isAssignDialogOpen &&
+          createPortal(renderAssignDialog(), document.body)}
       </div>
       {isExpanded && (
         <ExpandedCurriculumCatalogCard
@@ -405,6 +488,8 @@ CustomizableCurriculumCatalogCard.propTypes = {
   availableResources: PropTypes.object,
   recommendedSimilarCurriculum: PropTypes.object,
   recommendedStretchCurriculum: PropTypes.object,
+
+  wide: PropTypes.bool,
 };
 
 export default connect(

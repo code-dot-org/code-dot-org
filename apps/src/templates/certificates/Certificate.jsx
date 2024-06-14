@@ -146,7 +146,7 @@ function Certificate(props) {
           `
             :host .swiper-pagination {
               position: relative;
-              margin-top: 2rem;
+              margin-top: -1rem;
             }
             `,
         ],
@@ -212,7 +212,11 @@ function Certificate(props) {
               className={style.confetti}
             />
           }
-          <swiper-container ref={swiperRef} class={style.swiperContainer}>
+          <swiper-container
+            init="false"
+            ref={swiperRef}
+            class={style.swiperContainer}
+          >
             {certificateData.map(image => (
               <swiper-slide key={image.courseName} class={style.swiperSlide}>
                 <a href={getCertificateSharePath(image.courseName)}>

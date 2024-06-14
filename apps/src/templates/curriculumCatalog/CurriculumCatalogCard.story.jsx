@@ -20,6 +20,7 @@ const defaultArgs = {
   duration: 'school_year',
   gradesArray: ['1', '2', '3', '4'],
   topics: ['programming', 'artificial_intelligence', 'art_and_design'],
+  description: 'A description of this curriculum',
   isTranslated: true,
   isEnglish: true,
   pathToCourse: '/s/course',
@@ -50,3 +51,7 @@ OneGradeCard.storyName = 'CurriculumCatalogCard – One Grade';
 export const NoLabelsCard = Template.bind({});
 NoLabelsCard.args = {...defaultArgs, topics: []};
 NoLabelsCard.storyName = 'CurriculumCatalogCard – No Labels';
+
+export const WideCard = Template.bind({});
+WideCard.args = {...defaultArgs, wide: true};
+WideCard.storyName = 'CurriculumCatalogCard – Wide Card';
