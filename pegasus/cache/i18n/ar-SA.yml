@@ -2338,6 +2338,7 @@ ar-SA:
   user_header_artist: 'فنان '
   user_header_create: 'إشاء '
   user_header_create_account: إنشاء حساب
+  user_header_create_account_low_cap: إنشاء حساب
   user_header_dance: حفلة الرقص
   user_header_flappy: فلابي
   user_header_gamelab: مختبر التطبيقات
@@ -2346,6 +2347,7 @@ ar-SA:
   user_header_minecraft: Minecraft
   user_header_my_projects: مشاريعي
   user_header_new_project: مشروع جديد
+  user_header_new_project_low_cap: مشروع جديد
   user_header_playlab: مختبر اللعب
   user_header_settings: حسابي
   user_header_signin: تسجيل الدخول

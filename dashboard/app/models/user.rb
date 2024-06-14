@@ -304,10 +304,6 @@ class User < ApplicationRecord
 
   validate :validate_us_state, if: :should_validate_us_state?
 
-  before_create unless: -> {Policies::ChildAccount.compliant?(self)} do
-    Services::ChildAccount.lock_out(self)
-  end
-
   before_validation on: [:create, :update], if: -> {gender_teacher_input.present? && will_save_change_to_attribute?('properties')} do
     self.gender = Policies::Gender.normalize gender_teacher_input
   end
@@ -2244,6 +2240,8 @@ class User < ApplicationRecord
       sharing_disabled: sharing_disabled?,
       has_ever_signed_in: has_ever_signed_in?,
       ai_tutor_access_denied: !!ai_tutor_access_denied,
+      at_risk_age_gated: Policies::ChildAccount.parent_permission_required?(self),
+      child_account_compliance_state: child_account_compliance_state,
     }
   end
 

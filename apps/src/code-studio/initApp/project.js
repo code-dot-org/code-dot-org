@@ -862,9 +862,7 @@ var projects = (module.exports = {
     }
     switch (appOptions.app) {
       case 'applab':
-      case 'calc':
       case 'dance':
-      case 'eval':
       case 'flappy':
       case 'weblab':
       case 'gamelab':

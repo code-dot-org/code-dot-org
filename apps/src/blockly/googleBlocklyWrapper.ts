@@ -44,6 +44,7 @@ import CdoFieldFlyout from './addons/cdoFieldFlyout';
 import CdoFieldImage from './addons/cdoFieldImage';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
 import CdoFieldLabel from './addons/cdoFieldLabel';
+import CdoFieldParameter from './addons/cdoFieldParameter';
 import CdoFieldToggle from './addons/cdoFieldToggle';
 import CdoFieldVariable from './addons/cdoFieldVariable';
 import initializeGenerator from './addons/cdoGenerator';
@@ -102,6 +103,7 @@ import {
   LOOP_HIGHLIGHT,
   handleCodeGenerationFailure,
   strip,
+  interpolateMsg,
 } from './utils';
 
 const options = {
@@ -261,6 +263,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     // We know it's a field, so it's safe to cast as unknown.
     ['field_bitmap', 'FieldBitmap', CdoFieldBitmap as unknown as FieldProto],
     ['field_label', 'FieldLabel', CdoFieldLabel],
+    ['field_parameter', 'FieldParameter', CdoFieldParameter],
   ];
   blocklyWrapper.overrideFields(fieldOverrides);
 
@@ -459,6 +462,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
 
   const extendedBlock = blocklyWrapper.Block.prototype as ExtendedBlock;
 
+  extendedBlock.interpolateMsg = interpolateMsg;
   extendedBlock.setStrictOutput = function (isOutput, check) {
     return this.setOutput(isOutput, check);
   };
@@ -572,7 +576,11 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   // and previewing blocks for levelbuilders.
   // We used to refer to these as "readOnlyBlockSpaces", which was confusing with normal,
   // read only workspaces.
-  blocklyWrapper.createEmbeddedWorkspace = function (container, xml, options) {
+  blocklyWrapper.createEmbeddedWorkspace = function (
+    container,
+    xml,
+    options = {}
+  ) {
     const theme = cdoUtils.getUserTheme(options.theme as Theme);
     const workspace = new Blockly.WorkspaceSvg({
       readOnly: true,
@@ -775,6 +783,8 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     hiddenDefinitionWorkspace.noFunctionBlockFrame = true;
     blocklyWrapper.setHiddenDefinitionWorkspace(hiddenDefinitionWorkspace);
     blocklyWrapper.useModalFunctionEditor = options.useModalFunctionEditor;
+    // Disable parameter editing by default (e.g. Lab2)
+    blocklyWrapper.enableParamEditing = options.disableParamEditing === false;
 
     if (options.useModalFunctionEditor) {
       // If the modal function editor is enabled for this level,

@@ -51,14 +51,6 @@ const optionsList = [
     ],
   },
   {
-    name: 'sounds-panel-1-preview',
-    type: 'radio',
-    values: [
-      {value: 'false', description: 'Use original sounds panel (default).'},
-      {value: 'true', description: 'Use original sounds panel with preview.'},
-    ],
-  },
-  {
     name: 'sounds-panel-2',
     type: 'radio',
     values: [
@@ -113,6 +105,14 @@ const optionsList = [
         value: 'true',
         description: 'Enable advanced controls for the ToneJS player.',
       },
+    ],
+  },
+  {
+    name: 'timeline-original-layout',
+    type: 'radio',
+    values: [
+      {value: 'false', description: 'New timeline (default).'},
+      {value: 'true', description: 'Original timeline.'},
     ],
   },
 ];

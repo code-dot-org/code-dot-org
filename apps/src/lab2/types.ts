@@ -18,6 +18,8 @@ export interface Channel {
   publishedAt: string | null;
   createdAt: string;
   updatedAt: string;
+  hidden?: boolean;
+  thumbnailUrl?: string;
   // Optional lab-specific configuration for this project.  If provided, this will be saved
   // to the Project model in the database along with the other entries in this interface,
   // inside the value field JSON.
@@ -80,7 +82,13 @@ export interface ProjectFile {
   open?: boolean;
   active?: boolean;
   folderId: string;
-  hidden?: boolean;
+  type?: ProjectFileType;
+}
+
+export enum ProjectFileType {
+  STARTER = 'starter',
+  SUPPORT = 'support',
+  VALIDATION = 'validation',
 }
 
 export interface ProjectFolder {
@@ -148,6 +156,9 @@ export interface LevelProperties {
   // Help and Tips values
   mapReference?: string;
   referenceLinks?: string[];
+  // Exemplars
+  exampleSolutions?: string[];
+  exemplarSources?: MultiFileSource;
   // For Teachers Only value
   teacherMarkdown?: string;
 }
