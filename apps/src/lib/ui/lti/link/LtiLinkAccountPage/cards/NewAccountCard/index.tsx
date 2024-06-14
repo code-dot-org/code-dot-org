@@ -14,6 +14,8 @@ import {LtiProviderContext} from '../../context';
 import DCDO from '@cdo/apps/dcdo';
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import {navigateToHref} from '@cdo/apps/utils';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const NewAccountCard = () => {
   const {ltiProviderName, newAccountUrl, emailAddress} =
@@ -25,6 +27,14 @@ const NewAccountCard = () => {
   );
 
   const handleNewAccountSubmit = () => {
+    const eventPayload = {
+      lms_name: ltiProviderName,
+    };
+    analyticsReporter.sendEvent(
+      'lti_new_account_click',
+      eventPayload,
+      PLATFORMS.STATSIG
+    );
     if (isStudentEmailPostEnabled) {
       finishSignupFormRef.current?.submit();
     } else {

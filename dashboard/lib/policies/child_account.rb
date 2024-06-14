@@ -27,19 +27,7 @@ class Policies::ChildAccount
   # P20-937 - We had a regression which we have chosen to mitigate by allowing
   # accounts created before the below date to have their lock-out delayed until
   # the CAP policy is set to lockout all users.
-  CPA_CREATED_AT_EXCEPTION_DATE = Date.parse('2024-05-26T00:00:00MST')
-
-  # The individual US State child account policy configuration
-  # max_age: the oldest age of the child at which this policy applies.
-  # start_date: the date on which this policy first went into effect.
-  STATE_POLICY = {
-    'CO' => {
-      name: 'CPA', # Colorado Privacy Act
-      max_age: 12,
-      lockout_date: DateTime.parse(DCDO.get('cpa_schedule', {Cpa::ALL_USER_LOCKOUT => Cpa::ALL_USER_LOCKOUT_DATE.iso8601})[Cpa::ALL_USER_LOCKOUT]),
-      start_date: DateTime.parse(DCDO.get('cpa_schedule', {Cpa::NEW_USER_LOCKOUT => Cpa::NEW_USER_LOCKOUT_DATE.iso8601})[Cpa::NEW_USER_LOCKOUT])
-    }
-  }.freeze
+  CPA_CREATED_AT_EXCEPTION_DATE = DateTime.parse('2024-05-26T00:00:00MST')
 
   # The delay is intended to provide notice to a parent
   # when a student may no longer be monitoring the "parent's email."
@@ -56,7 +44,6 @@ class Policies::ChildAccount
   # parent permission before the student can start using their account.
   def self.compliant?(user)
     return true unless parent_permission_required?(user)
-    return true if user_predates_policy?(user)
     ComplianceState.permission_granted?(user)
   end
 
@@ -65,7 +52,8 @@ class Policies::ChildAccount
   # state missing
   # We use Colorado as it is the only start date we have for now
   def self.user_predates_state_collection?(user)
-    user.created_at < STATE_POLICY['CO'][:start_date]
+    # The date is the same as when CPA first started.
+    user.created_at < state_policies['CO'][:start_date]
   end
 
   # 'cap-state-modal-rollout' should be a value in the range [0,100]
@@ -100,15 +88,24 @@ class Policies::ChildAccount
   # The date on which the student's account will be locked if the account is not compliant.
   def self.lockout_date(user)
     return if compliant?(user)
-    state_policy(user).try(:[], :lockout_date)
+
+    user_state_policy = state_policy(user)
+    return unless user_state_policy
+
+    # CAP non-compliant students who were created:
+    # - before the policy took effect - should be locked out during the all users lockout phase.
+    # - after the policy took effect - should be locked out immediately.
+    user_predates_policy?(user) ? user_state_policy[:lockout_date] : user_state_policy[:start_date]
   end
 
-  # Checks if the user is locked out due to non-compliance with CAP.
-  def self.locked_out?(user)
+  # Checks if the user can be locked out due to non-compliance with CAP.
+  def self.lockable?(user)
+    return false if ComplianceState.locked_out?(user)
+
     user_lockout_date = lockout_date(user)
     return false unless user_lockout_date
 
-    DateTime.now >= user_lockout_date || !user_predates_policy?(user)
+    user_lockout_date <= DateTime.now
   end
 
   # Authentication option types which we consider to be "owned" by the school
@@ -132,28 +129,46 @@ class Policies::ChildAccount
     end
   end
 
+  def self.state_policies
+    # The individual US State child account policy configuration
+    # name: the name of the policy
+    # max_age: the oldest age of the child at which this policy applies.
+    # lockout_date: the date at which we will begin to lockout all CPA users who
+    # are not in compliance with the policy.
+    # start_date: the date on which this policy first went into effect.
+    {
+      'CO' => {
+        name: 'CPA', # Colorado Privacy Act
+        max_age: 12,
+        lockout_date: DateTime.parse(DCDO.get('cpa_schedule', {})[Cpa::ALL_USER_LOCKOUT] || Cpa::ALL_USER_LOCKOUT_DATE.iso8601),
+        start_date: DateTime.parse(DCDO.get('cpa_schedule', {})[Cpa::NEW_USER_LOCKOUT] || Cpa::NEW_USER_LOCKOUT_DATE.iso8601),
+      }
+    }
+  end
+
   def self.state_policy(user)
     # If the country_code is not set, then us_state value was inherited
     # from the teacher and we don't trust it.
     return unless user.country_code
     return unless user.us_state
-    STATE_POLICY[user.us_state]
+    state_policies[user.us_state]
   end
 
   # Check if parent permission is required for this account according to our
   # Child Account Policy.
   def self.parent_permission_required?(user)
     return false unless user.student?
-    return false unless user.birthday
 
     policy = state_policy(user)
+    # Parent permission is not required for students who are not covered by a US State child account policy.
     return false unless policy
 
-    lockout_date = policy[:lockout_date]
-    student_birthday = user.birthday.in_time_zone(lockout_date.utc_offset)
-    min_required_age = policy[:max_age].next.years
-    # Checks if the student meets the minimum age requirement at the start of the lockout
-    return false if student_birthday.since(min_required_age) <= lockout_date
+    # Parental permission is not required until the policy is in effect.
+    return false if policy[:start_date] > DateTime.now
+
+    # Parental permission is not required for students
+    # whose age cannot be identified or who are older than the maximum age covered by the policy.
+    return false if user.age.nil? || user.age.to_i > policy[:max_age]
 
     personal_account?(user)
   end

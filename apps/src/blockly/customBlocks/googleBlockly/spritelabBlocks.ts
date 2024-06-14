@@ -150,7 +150,24 @@ export const blocks = {
                 imageSourceId: this.id,
               };
             }
-            blocks.push(block);
+            if (blockType === BLOCK_TYPES.parametersGet) {
+              const parameters = (this as ProcedureBlock)
+                .getProcedureModel()
+                .getParameters();
+              parameters.forEach(parameter => {
+                blocks.push({
+                  ...block,
+                  fields: {
+                    VAR: {
+                      name: parameter.getName(),
+                      type: parameter.getTypes(),
+                    },
+                  },
+                });
+              });
+            } else {
+              blocks.push(block);
+            }
           });
           return blocks;
         }

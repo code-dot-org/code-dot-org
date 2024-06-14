@@ -57,7 +57,8 @@ module SignUpTracking
       }
     )
 
-    Metrics::Events.log_event(
+    Metrics::Events.log_event_with_session(
+      session: session,
       event_name: event_name,
       metadata: {
         study: STUDY_NAME,
@@ -80,7 +81,8 @@ module SignUpTracking
     }
     FirehoseClient.instance.put_record(:analysis, tracking_data)
 
-    Metrics::Events.log_event(
+    Metrics::Events.log_event_with_session(
+      session: session,
       event_name: "begin-sign-up-#{result}",
       metadata: {
         study: STUDY_NAME,
@@ -100,7 +102,8 @@ module SignUpTracking
       }
     )
 
-    Metrics::Events.log_event(
+    Metrics::Events.log_event_with_session(
+      session: session,
       event_name: "#{provider}-load-finish-sign-up",
       metadata: {
         study: STUDY_NAME,
@@ -120,7 +123,8 @@ module SignUpTracking
       }
     )
 
-    Metrics::Events.log_event(
+    Metrics::Events.log_event_with_session(
+      session: session,
       event_name: "#{provider}-cancel-finish-sign-up",
       metadata: {
         study: STUDY_NAME,
@@ -145,7 +149,8 @@ module SignUpTracking
       )
     end
 
-    Metrics::Events.log_event(
+    Metrics::Events.log_event_with_session(
+      session: session,
       event_name: event_name,
       metadata: {
         study: STUDY_NAME,
@@ -166,7 +171,8 @@ module SignUpTracking
       }
       FirehoseClient.instance.put_record(:analysis, tracking_data)
 
-      Metrics::Events.log_event(
+      Metrics::Events.log_event_with_session(
+        session: session,
         event_name: "#{provider}-sign-in",
         metadata: {
           study: STUDY_NAME,
@@ -194,7 +200,8 @@ module SignUpTracking
     }
     FirehoseClient.instance.put_record(:analysis, tracking_data)
 
-    Metrics::Events.log_event(
+    Metrics::Events.log_event_with_session(
+      session: session,
       event_name: "#{sign_up_type}-sign-up-#{result}",
       metadata: {
         study: STUDY_NAME,
