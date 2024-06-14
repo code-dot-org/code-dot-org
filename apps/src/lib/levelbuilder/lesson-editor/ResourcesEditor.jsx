@@ -14,6 +14,7 @@ import {
 import * as Table from 'reactabular-table';
 import {lessonEditorTableStyles} from './TableConstants';
 import $ from 'jquery';
+import ResourcesSectionCard from './ResourcesSectionCard';
 
 class ResourcesEditor extends Component {
   static propTypes = {
@@ -308,6 +309,15 @@ class ResourcesEditor extends Component {
             </button>
           )}
           {this.state.error && <h3>{this.state.error}</h3>}
+          {this.props.resources.map(resource => (
+            <ResourcesSectionCard
+              resource={resource}
+              handleRemoveResource={resource =>
+                this.handleRemoveResourceDialogOpen(resource)
+              }
+              courseVersionId={this.props.courseVersionId}
+            />
+          ))}
         </div>
       </div>
     );
