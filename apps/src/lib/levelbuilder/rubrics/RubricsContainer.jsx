@@ -166,8 +166,36 @@ export default function RubricsContainer({
     );
   };
 
-  const computeAccuracy = () => {
+  const computeAccuracy = async event => {
     console.log('Compute Accuracy');
+    event.preventDefault();
+
+    const csrfToken = document.querySelector('meta[name="csrf-token"]')
+      ? document.querySelector('meta[name="csrf-token"]').attributes['content']
+          .value
+      : null;
+
+    const dataUrl = `/rubrics/${rubric.id}/compute_accuracy`;
+
+    const bodyParams = {
+      systemPrompt,
+    };
+
+    let response = await fetch(dataUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': csrfToken,
+      },
+      body: JSON.stringify(bodyParams),
+    });
+    if (!response.ok) {
+      console.error('Error computing accuracy');
+    } else {
+      const responseData = await response.json();
+      const htmlBodyText = responseData.htmlBodyText;
+      document.getElementById('report').innerHTML = htmlBodyText;
+    }
   };
 
   function renderOptions() {

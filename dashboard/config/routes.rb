@@ -1114,6 +1114,7 @@ Dashboard::Application.routes.draw do
         post 'run_ai_evaluations_for_user'
         post 'run_ai_evaluations_for_all'
         post 'submit_evaluations'
+        post 'compute_accuracy'
       end
     end
 

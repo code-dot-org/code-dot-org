@@ -2,9 +2,11 @@ class RubricsController < ApplicationController
   include Rails.application.routes.url_helpers
   include SharedConstants
 
+  STUB_AI_PROXY_PATH = '/api/test/ai_proxy'.freeze
+
   before_action :require_levelbuilder_mode_or_test_env, except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :get_teacher_evaluations_for_all, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all, :get_ai_rubrics_tour_seen, :update_ai_rubrics_tour_seen]
   load_resource only: [:get_teacher_evaluations, :get_teacher_evaluations_for_all, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all, :get_ai_rubrics_tour_seen, :update_ai_rubrics_tour_seen]
-  load_and_authorize_resource except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :get_teacher_evaluations_for_all, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all, :get_ai_rubrics_tour_seen, :update_ai_rubrics_tour_seen]
+  load_and_authorize_resource except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :get_teacher_evaluations_for_all, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all, :get_ai_rubrics_tour_seen, :update_ai_rubrics_tour_seen, :compute_accuracy]
 
   # GET /rubrics/:rubric_id/edit
   def edit
@@ -41,6 +43,40 @@ class RubricsController < ApplicationController
     else
       render json: @rubric.errors, status: :bad_request
     end
+  end
+
+  def compute_accuracy
+    @rubric = Rubric.find(params[:id])
+    system_prompt = params[:systemPrompt]
+    script_level = @rubric.get_script_level
+    lesson_s3_name = AiRubricConfig.get_lesson_s3_name(script_level)
+    ai_params = JSON.parse(AiRubricConfig.read_file_from_s3(lesson_s3_name, 'params.json'))
+    standard_rubric = AiRubricConfig.read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
+
+    openai_params = {
+      prompt: system_prompt,
+      rubric: standard_rubric,
+      api_key: CDO.openai_evaluate_rubric_api_key,
+      llm_model: ai_params['llm-model'],
+      num_responses: ai_params['num-responses'],
+      temperature: ai_params['temperature'],
+      remove_comments: ai_params['remove-comments'],
+      response_type: ai_params['response-type'],
+      lesson: lesson_s3_name,
+    }
+
+    origin = get_ai_proxy_origin
+    uri = URI.parse("#{origin}/assessment/report")
+    response = HTTParty.post(
+      uri,
+      body: URI.encode_www_form(openai_params),
+      headers: {'Content-Type' => 'application/x-www-form-urlencoded'},
+      timeout: 165
+    )
+
+    # extract the contents of the body from the string of html in the response using regex
+    html_body_text = response.body.match(/<body style="-webkit-print-color-adjust: exact;">(.*)<\/body>/m)[1]
+    render json: {htmlBodyText: html_body_text}
   end
 
   # POST /rubrics/:id/submit_evaluations
@@ -360,5 +396,12 @@ class RubricsController < ApplicationController
     )
     return nil unless channel_token
     channel_token.channel
+  end
+
+  private def get_ai_proxy_origin
+    unless CDO.ai_proxy_origin || [:development, :test].include?(rack_env)
+      raise "CDO.ai_proxy_origin is required outside of development and test environments"
+    end
+    CDO.ai_proxy_origin || CDO.studio_url(STUB_AI_PROXY_PATH, CDO.default_scheme)
   end
 end
