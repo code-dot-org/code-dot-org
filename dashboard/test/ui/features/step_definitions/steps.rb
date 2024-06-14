@@ -844,22 +844,6 @@ Then /^element "([^"]*)" is (not )?displayed$/ do |selector, negation|
   expect(element_displayed?(selector)).to eq(negation.nil?)
 end
 
-Then /^element "([^"]*)" attr "([^"]*)" includes (no )?"(.*)"$/ do |selector, attr, negation, attr_json|
-  actual_attr_value = @browser.find_element(:css, selector).attribute(attr)
-  expected_attr_value =
-    begin
-      JSON.parse(attr_json)
-    rescue JSON::ParserError
-      attr_json
-    end
-
-  if negation
-    expect(actual_attr_value).not_to include(expected_attr_value)
-  else
-    expect(actual_attr_value).to include(expected_attr_value)
-  end
-end
-
 And(/^I select age (\d+) in the age dialog/) do |age|
   dropdown_selection = age
   if age == 21
