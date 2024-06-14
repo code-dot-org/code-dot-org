@@ -12,9 +12,11 @@ module DashboardHelpers
     @rails_loaded = true
   end
 
-  # Sets DCDO for a test scenario.
+  # Stubs DCDO for a test scenario by setting the DCDO cookie which will override the actual value set in DCDO.
+  # @param key [String] DCDO key
+  # @param value [Object] DCDO value
   # @see Rack::CookieDCDO
-  def set_dcdo(key, value)
+  def mock_dcdo(key, value)
     dcdo_cookie = JSON.parse(get_cookie(Rack::CookieDCDO::KEY).try(:[], :value).presence || '{}')
 
     dcdo_cookie[key] = value

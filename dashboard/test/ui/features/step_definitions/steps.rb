@@ -1048,10 +1048,10 @@ def set_cookie(key, value)
   @browser.manage.add_cookie params
 end
 
-Given(/^I set the DCDO key "([^"]*)" to "(.*)"$/) do |key, json|
-  set_dcdo(key, JSON.parse(json))
+Given(/^I use a cookie to mock the DCDO key "([^"]*)" as "(.*)"$/) do |key, json|
+  mock_dcdo(key, JSON.parse(json))
 rescue JSON::ParserError
-  set_dcdo(key, json)
+  mock_dcdo(key, json)
 end
 
 And(/^I set the language cookie$/) do
