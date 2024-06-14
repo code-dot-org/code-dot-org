@@ -62,7 +62,7 @@ export default function UploadImageForm() {
 
   return (
     <div style={styles.topContainer}>
-      <h2>Upload Image</h2>
+      <h2>{i18n.uploadImage()}</h2>
       {
         // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
         // Verify or update this alt-text as necessary
