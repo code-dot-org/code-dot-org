@@ -294,3 +294,19 @@ export function getCodeBlocks(): BlockList {
 
   return codeBlocks;
 }
+
+/**
+ * Retrieves all Blockly blocks from the student's Blockly workspaces.
+ * This is useful for providing the student with feedback about the total
+ * number of blocks they have used or added.
+ *
+ * @returns {BlockList} An array of all blocks.
+ */
+export function getAllBlocks(): BlockList {
+  return [
+    ...Blockly.mainBlockSpace.getAllUsedBlocks(),
+    ...(Blockly.getHiddenDefinitionWorkspace()
+      ? Blockly.getHiddenDefinitionWorkspace().getAllBlocks()
+      : []),
+  ];
+}
