@@ -1,3 +1,5 @@
+require 'cdo/rack/cookie_dcdo'
+
 module DashboardHelpers
   # Requires the full rails environment. Use sparingly, known to take 20-30s.
   def require_rails_env
@@ -13,16 +15,11 @@ module DashboardHelpers
   # Sets DCDO for a test scenario.
   # @see Rack::CookieDCDO
   def set_dcdo(key, value)
-    cookie_dcdo =
-      begin
-        JSON.parse(@browser.manage.cookie_named('DCDO').try(:[], :value).presence || '{}')
-      rescue Selenium::WebDriver::Error::NoSuchCookieError
-        {}
-      end
+    dcdo_cookie = JSON.parse(get_cookie(Rack::CookieDCDO::KEY).try(:[], :value).presence || '{}')
 
-    cookie_dcdo[key] = value
+    dcdo_cookie[key] = value
 
-    @browser.manage.add_cookie(name: 'DCDO', value: cookie_dcdo.to_json)
+    @browser.manage.add_cookie(name: Rack::CookieDCDO::KEY, value: dcdo_cookie.to_json)
   end
 end
 
