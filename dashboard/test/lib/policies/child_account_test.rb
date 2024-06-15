@@ -106,6 +106,7 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
 
   describe 'state_policies' do
     let(:state_policies) {Policies::ChildAccount.state_policies}
+    let(:dcdo_cpa_grace_period_duration) {99.days}
     let(:dcdo_cpa_schedule) {{}}
 
     around do |test|
@@ -113,6 +114,7 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     end
 
     before do
+      DCDO.stubs(:get).with('cpa_grace_period_duration', 14.days).returns(dcdo_cpa_grace_period_duration)
       DCDO.stubs(:get).with('cpa_schedule', {}).returns(dcdo_cpa_schedule)
     end
 
@@ -127,6 +129,10 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
 
       it 'contains expected name' do
         _(co_state_policy[:name]).must_equal 'CPA'
+      end
+
+      it 'contains expected grace_period_duration' do
+        _(co_state_policy[:grace_period_duration]).must_equal dcdo_cpa_grace_period_duration
       end
 
       it 'contains expected default start_date' do
@@ -222,12 +228,94 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     end
   end
 
+  describe '.grace_period_end_date' do
+    let(:grace_period_end_date) {Policies::ChildAccount.grace_period_end_date(user)}
+
+    let(:user_cap_compliance_state) {Policies::ChildAccount::ComplianceState::GRACE_PERIOD}
+    let(:user_cap_compliance_state_updated_at) {1.day.ago}
+
+    let(:user_state_policy_lockout_date) {2.days.ago}
+    let(:user_state_policy_grace_period_duration) {14.days}
+    let(:user_state_policy) do
+      {
+        lockout_date: user_state_policy_lockout_date,
+        grace_period_duration: user_state_policy_grace_period_duration,
+      }
+    end
+
+    let(:user) do
+      build_stubbed(
+        :non_compliant_child,
+        child_account_compliance_state: user_cap_compliance_state,
+        child_account_compliance_state_last_updated: user_cap_compliance_state_updated_at
+      )
+    end
+
+    before do
+      Policies::ChildAccount.stubs(:state_policy).with(user).returns(user_state_policy)
+    end
+
+    it 'returns end date of user grace period based on its start time' do
+      _(grace_period_end_date).must_be_close_to user_cap_compliance_state_updated_at.since(user_state_policy_grace_period_duration), 1.second
+    end
+
+    context 'when user is not in grace period' do
+      let(:user_cap_compliance_state) {nil}
+
+      it 'returns nil' do
+        _(grace_period_end_date).must_be_nil
+      end
+    end
+
+    context 'when policy does not have grace period' do
+      let(:user_state_policy_grace_period_duration) {nil}
+
+      it 'returns nil' do
+        _(grace_period_end_date).must_be_nil
+      end
+    end
+
+    context 'when user is not affected by state policy' do
+      let(:user_state_policy) {nil}
+
+      it 'returns nil' do
+        _(grace_period_end_date).must_be_nil
+      end
+    end
+
+    describe 'approximate' do
+      let(:grace_period_end_date) {Policies::ChildAccount.grace_period_end_date(user, approximate: true)}
+
+      it 'returns end date of user grace period based on its start time' do
+        _(grace_period_end_date).must_be_close_to user_cap_compliance_state_updated_at.since(user_state_policy_grace_period_duration), 1.second
+      end
+
+      context 'when user is not in grace period' do
+        let(:user_cap_compliance_state) {nil}
+
+        it 'returns approximate value based on state policy all users lockout phase date' do
+          _(grace_period_end_date).must_equal user_state_policy_lockout_date.since(user_state_policy_grace_period_duration)
+        end
+
+        context 'if state policy does not exist' do
+          let(:user_state_policy) {nil}
+
+          it 'returns nil' do
+            _(grace_period_end_date).must_be_nil
+          end
+        end
+      end
+    end
+  end
+
   describe '.lockout_date' do
-    let(:lockout_date) {Policies::ChildAccount.lockout_date(user)}
+    let(:lockout_date) {Policies::ChildAccount.lockout_date(user, approximate: approximate)}
 
     let(:user) {build_stubbed(:student)}
+    let(:approximate) {true}
 
     let(:user_cap_compliant?) {false}
+    let(:user_grace_period_end_date) {14.days.since}
     let(:user_predates_cap_policy?) {false}
     let(:user_state_policy_start_date) {1.year.ago}
     let(:user_state_policy_lockout_date) {1.year.since}
@@ -239,6 +327,7 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
 
     before do
       Policies::ChildAccount.stubs(:compliant?).with(user).returns(user_cap_compliant?)
+      Policies::ChildAccount.stubs(:grace_period_end_date).with(user, approximate: approximate).returns(user_grace_period_end_date)
       Policies::ChildAccount.stubs(:user_predates_policy?).with(user).returns(user_predates_cap_policy?)
       Policies::ChildAccount.stubs(:state_policy).with(user).returns(user_state_policy)
     end
@@ -250,8 +339,8 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     context 'when user was created before state policy took effect' do
       let(:user_predates_cap_policy?) {true}
 
-      it 'returns all users lockout date from state policy' do
-        _(lockout_date).must_equal user_state_policy_lockout_date
+      it 'returns end date of their grace period' do
+        _(lockout_date).must_equal user_grace_period_end_date
       end
     end
 
@@ -270,48 +359,12 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
         _(lockout_date).must_be_nil
       end
     end
-  end
-
-  describe '.lockable?' do
-    let(:lockable?) {Policies::ChildAccount.lockable?(user)}
-
-    let(:user) {build_stubbed(:student)}
-
-    let(:user_lockout_date) {DateTime.now}
-
-    around do |test|
-      Timecop.freeze {test.call}
-    end
-
-    before do
-      Policies::ChildAccount.stubs(:lockout_date).with(user).returns(user_lockout_date)
-    end
-
-    it 'returns true' do
-      _(lockable?).must_equal true
-    end
 
     context 'when user is already locked out' do
       let(:user) {build_stubbed(:locked_out_child)}
 
-      it 'returns false' do
-        _(lockable?).must_equal false
-      end
-    end
-
-    context 'when user does not have lockout date' do
-      let(:user_lockout_date) {nil}
-
-      it 'returns false' do
-        _(lockable?).must_equal false
-      end
-    end
-
-    context 'when lockdown has not yet come' do
-      let(:user_lockout_date) {1.second.since}
-
-      it 'returns false' do
-        _(lockable?).must_equal false
+      it 'returns nil' do
+        _(lockout_date).must_be_nil
       end
     end
   end

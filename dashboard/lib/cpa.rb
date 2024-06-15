@@ -2,6 +2,9 @@ require_relative '../../shared/middleware/helpers/experiments'
 require 'date'
 # Support for the Colorado Privacy Act (CPA) compliance.
 module Cpa
+  NAME = 'CPA'.freeze
+  GRACE_PERIOD_DURATION = 14.days.freeze
+
   NEW_USER_LOCKOUT = 'cpa_new_user_lockout'
   ALL_USER_LOCKOUT_WARNING = 'cpa_all_user_lockout_warning'
   ALL_USER_LOCKOUT = 'cpa_all_user_lockout'

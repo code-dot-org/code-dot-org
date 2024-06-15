@@ -4,22 +4,19 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
   describe 'CAP lockout' do
     let(:user) {create(:student)}
 
-    let(:user_lockable?) {true}
-    let(:user_locked_out?) {true}
     let(:cpa_experience_phase) {Cpa::ALL_USER_LOCKOUT}
+    let(:user_is_locked_out?) {true}
+
+    let(:expect_grace_period_handler_call) {Services::ChildAccount::GracePeriodHandler.expects(:call).with(user: user)}
+    let(:expect_lockout_handler_call) {Services::ChildAccount::LockoutHandler.expects(:call).with(user: user)}
 
     before do
       Cpa.stubs(:cpa_experience).returns(cpa_experience_phase)
 
-      Policies::ChildAccount.stubs(:lockable?).with(user).returns(user_lockable?)
-      Policies::ChildAccount::ComplianceState.stubs(:locked_out?).with(user).returns(user_locked_out?)
+      expect_grace_period_handler_call.once
+      expect_lockout_handler_call.returns(user_is_locked_out?)
 
       sign_in user
-    end
-
-    it 'locks out user' do
-      Services::ChildAccount.expects(:lock_out).with(user).once
-      get root_path
     end
 
     it 'redirects to the lockout page' do
@@ -55,6 +52,9 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
     context 'when user is not sign in' do
       before do
         sign_out user
+
+        expect_grace_period_handler_call.never
+        expect_lockout_handler_call.never
       end
 
       it 'does not redirect to lockout page' do
@@ -63,21 +63,50 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
       end
     end
 
-    context 'when user is not lockable' do
-      let(:user_lockable?) {false}
+    context 'when user is locked out' do
+      let(:user_is_locked_out?) {false}
 
-      it 'does not lock out user' do
-        Services::ChildAccount.expects(:lock_out).with(user).never
+      it 'does not redirect to lockout page' do
         get root_path
+        refute_redirect_to lockout_path
       end
     end
 
     context 'when no CPA experience' do
       let(:cpa_experience_phase) {nil}
 
-      it 'does not lock out user' do
-        Services::ChildAccount.expects(:lock_out).with(user).never
+      before do
+        expect_grace_period_handler_call.never
+        expect_lockout_handler_call.never
+      end
+
+      it 'does not redirect to lockout page' do
         get root_path
+        refute_redirect_to lockout_path
+      end
+    end
+
+    context 'when error is raised during locking out' do
+      let(:error) {StandardError.new('expected_error')}
+
+      before do
+        expect_lockout_handler_call.never
+        Services::ChildAccount::LockoutHandler.expects(:call).with(user: user).raises(error)
+      end
+
+      it 'notifies Honeybadger about error' do
+        request_path = root_path
+
+        Honeybadger.expects(:notify).with(
+          error,
+          error_message: 'Failed to lock out user',
+          context: {
+            user_id: user.id,
+            request_path: request_path,
+          }
+        ).once
+
+        get request_path
       end
 
       it 'does not redirect to lockout page' do

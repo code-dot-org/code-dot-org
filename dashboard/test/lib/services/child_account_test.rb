@@ -84,6 +84,27 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
     end
   end
 
+  describe '.start_grace_period' do
+    let(:start_grace_period) {Services::ChildAccount.start_grace_period(user)}
+
+    let(:user) {create(:non_compliant_child)}
+
+    around do |test|
+      Timecop.freeze {test.call}
+    end
+
+    it 'updates user CAP attributes with "grace period" compliance state' do
+      assert_changes -> {user.properties} do
+        start_grace_period
+      end
+
+      assert_attributes user, {
+        child_account_compliance_state: 'p',
+        child_account_compliance_state_last_updated: DateTime.now.iso8601(3),
+      }
+    end
+  end
+
   describe '.lock_out' do
     let(:lock_out) {Services::ChildAccount.lock_out(user)}
 

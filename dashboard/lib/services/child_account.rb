@@ -1,4 +1,11 @@
 module Services::ChildAccount
+  # Transits the child's account to the grace period state.
+  # @param user [User] the student account
+  def self.start_grace_period(user)
+    update_compliance(user, Policies::ChildAccount::ComplianceState::GRACE_PERIOD)
+    user.save!
+  end
+
   # Sets the child's account to a lock_out state according to our Child Account
   # Policy.
   def self.lock_out(user)
