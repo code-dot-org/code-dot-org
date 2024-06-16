@@ -42,12 +42,18 @@ services:
     command: /bin/bash -l -c './bin/mysql-client-admin'
 
   # Run the 'rake install' step with/without AWS
-  install:
+  install: &install-base
     <<: *command-base
-    command: /bin/bash -i -c "bundle exec rake install"
+    command: /bin/bash -l -c './docker/developers/run.sh bundle exec rake install'
   install-aws:
     <<: *command-aws-base
-    command: /bin/bash -i -c "bundle exec rake install"
+    command: /bin/bash -l -c './docker/developers/run.sh bundle exec rake install'
+
+  install-low-memory:
+    <<: *install-base
+    environment:
+      # Level seeding batch size to be more appropriate for lower-memory situations
+      CDO_LEVEL_SEED_BATCH_SIZE: 500
 
   # Run the 'rake build' step with/without AWS
   build:

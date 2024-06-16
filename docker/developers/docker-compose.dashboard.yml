@@ -13,7 +13,7 @@ services:
       target: cdo-web
       args:
         UID: ${FIXUID:-1000}
-        GID: ${FIXGID:-1000}
+        GID: ${FIXGID:-${FIXUID:-1000}}
     cap_add:
       - SYS_PTRACE
     working_dir: /app/src
@@ -52,6 +52,27 @@ services:
       - nvm:/home/cdodev/.nvm
       - ../..:/app/src
       - ~/.aws:/home/cdodev/.aws
+
+  # Runs just a pegasus server on its own.
+  # Currently, it will run into some trouble since it does try to load some
+  # assets that are served by dashboard but assumes that dashboard is on the
+  # same host and port.
+  pegasus:
+    <<: *cdo-web-base
+    hostname: pegasus
+    container_name: pegasus
+    volumes:
+      - ../..:/app/src
+      - ./locals-container.yml:/app/src/locals.yml
+    ports:
+      - "3001:3000"
+    depends_on:
+      mysql-contained:
+        condition: service_healthy
+    working_dir: /app/src/pegasus
+    command: /bin/bash -l -c '../docker/developers/run.sh bundle exec thin start'
+    networks:
+      cdo_network:
 
 volumes:
   # Holds the ruby interpreter and our gemset

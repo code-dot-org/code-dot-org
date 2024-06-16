@@ -34,7 +34,7 @@ You can inspect that the version is appropriate by running `docker compose versi
 Build the web and test containers takes 15 minutes or so.
 
 ```shell
-docker compose build web test selenium-video
+FIXUID=$(id -u) docker compose build web test selenium-video
 ```
 
 Now we can install the environment inside the container.

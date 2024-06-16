@@ -17,3 +17,6 @@ include:
 
   # Commands that are useful for developers
   - path: ./docker/developers/docker-compose.commands.yml
+
+  # Commands that serve as git hooks
+  - path: ./docker/developers/docker-compose.hooks.yml

@@ -13,6 +13,9 @@ services:
       MYSQL_PASSWORD: 'password'
       MYSQL_ROOT_PASSWORD: 'password'
       MYSQL_ROOT_HOST: '%'
+    # You can add default options via the 'command':
+    #command:
+    # - '--log-error-verbosity=3'
     expose:
       - "3306"
     volumes:

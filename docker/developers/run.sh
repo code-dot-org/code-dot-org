@@ -13,7 +13,9 @@ set -e
 # get correctly referenced in the container.
 
 # init rbenv
+set +e
 eval "$(rbenv init -)"
+set -e
 
 # init nvm
 . ${HOME}/.nvm/nvm.sh

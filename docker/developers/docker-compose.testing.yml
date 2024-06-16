@@ -15,7 +15,7 @@ services:
       target: cdo-test
       args:
         UID: ${FIXUID:-1000}
-        GID: ${FIXGID:-1000}
+        GID: ${FIXGID:-${FIXUID:-1000}}
 
   # This is a testing server environment. It is AWS-less.
   # It spins up a contained version of the dashboard server accessible by the
@@ -259,8 +259,8 @@ services:
       context: ../..
       target: cdo-test
       args:
-        UID: ${FIXUID:-1000}
-        GID: ${FIXGID:-1000}
+        UID: ${UID:-1000}
+        GID: ${GID:-${UID:-1000}}
     volumes:
       - ../..:/app/src
     environment:
