@@ -57,8 +57,23 @@ docker compose up web
 
 ## Running Tests
 
+To run a basic UI test:
+
 ```shell
-docker compose up selenium-chrome
+docker compose run ui-test-firefox dashboard/test/ui/features/platform/signing_in.feature
+```
+
+You can run a UI test against a few types of browsers like this: The `ui-test-firefox` runs it against
+the Firefox browser.
+
+```shell
+docker compose run ui-test-firefox dashboard/test/ui/features/platform/signing_in.feature
+```
+
+This will record a video of the given UI test running in Firefox and you will find it in `/tmp/my-video.firefox.mp4`.
+
+```shell
+NAME=my-video docker compose run record-ui-test-firefox dashboard/test/ui/features/platform/signing_in.feature
 ```
 
 ## Troubleshooting

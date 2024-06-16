@@ -70,6 +70,7 @@ services:
       - ../..:/app/src
       - ./locals-container.yml:/app/src/locals.yml
     environment:
+      PATH_ARG_OPTION: 'feature='
       SELENIUM_URL: 'http://selenium:4444/wd/hub'
       ECHO_MESSAGE: 'To see the browser session: http://localhost:7910/?autoconnect=1&resize=scale&password=secret (VNC port 5910)'
     depends_on:
@@ -97,6 +98,7 @@ services:
       - ./locals-container.yml:/app/src/locals.yml
     environment:
       SELENIUM_URL: 'http://selenium:4444/wd/hub'
+      PATH_ARG_OPTION: 'feature='
       ECHO_MESSAGE: 'To see the browser session: http://localhost:7910/?autoconnect=1&resize=scale&password=secret (VNC port 5910)'
       BEFORE: 'curl -s http://selenium-video:9001/start?FILE_NAME=${NAME:-test-video}.chrome.mp4\&DISPLAY_CONTAINER_NAME=selenium-chrome > /tmp/.selenium-video-pid'
       AFTER: 'curl -s http://selenium-video:9001/stopall'
@@ -126,6 +128,7 @@ services:
       - ../..:/app/src
       - ./locals-container.yml:/app/src/locals.yml
     environment:
+      PATH_ARG_OPTION: 'feature='
       ECHO_MESSAGE: 'To see the browser session: http://localhost:7911/?autoconnect=1&resize=scale&password=secret (VNC port 5911)'
       SELENIUM_URL: 'http://selenium:4444/wd/hub'
     depends_on:
@@ -149,6 +152,7 @@ services:
       - ./locals-container.yml:/app/src/locals.yml
     environment:
       SELENIUM_URL: 'http://selenium:4444/wd/hub'
+      PATH_ARG_OPTION: 'feature='
       ECHO_MESSAGE: 'To see the browser session: http://localhost:7911/?autoconnect=1&resize=scale&password=secret (VNC port 5911)'
       BEFORE: 'curl -s http://selenium-video:9001/start?FILE_NAME=${NAME:-test-video}.firefox.mp4\&DISPLAY_CONTAINER_NAME=selenium-firefox > /tmp/.selenium-video-pid'
       AFTER: 'curl -s http://selenium-video:9001/stopall'
@@ -174,6 +178,7 @@ services:
       - ../..:/app/src
       - ./locals-container.yml:/app/src/locals.yml
     environment:
+      PATH_ARG_OPTION: 'feature='
       ECHO_MESSAGE: 'To see the browser session: http://localhost:7912/?autoconnect=1&resize=scale&password=secret (VNC port 5912)'
       SELENIUM_URL: 'http://selenium:4444/wd/hub'
     depends_on:
@@ -197,6 +202,7 @@ services:
       - ./locals-container.yml:/app/src/locals.yml
     environment:
       SELENIUM_URL: 'http://selenium:4444/wd/hub'
+      PATH_ARG_OPTION: 'feature='
       ECHO_MESSAGE: 'To see the browser session: http://localhost:7912/?autoconnect=1&resize=scale&password=secret (VNC port 5912)'
       BEFORE: 'curl -s http://selenium-video:9001/start?FILE_NAME=${NAME:-test-video}.edge.mp4\&DISPLAY_CONTAINER_NAME=selenium-edge > /tmp/.selenium-video-pid'
       AFTER: 'curl -s http://selenium-video:9001/stopall'
