@@ -125,7 +125,7 @@
 }
 
 %message {
-  padding: 15px 20px 5px 20px;
+  //padding: 15px 20px 5px 20px;
   border-radius: 4px;
   border: dashed $neutral_dark 2px;
   animation: slidein 0.5s;
@@ -145,6 +145,25 @@
   border: dashed $neutral_white 2px;
 }
 
+.aiHelp {
+  display: flex;
+  align-items: center;
+}
+
+.feedbackBottom {
+  margin-top: auto;
+}
+
+.buttonAiHelp {
+  width: 240px;
+  margin-bottom: 0px;
+  margin-left: 20px;
+}
+
+.textAiHelp {
+  margin-left: 20px;
+}
+
 .buttonInstruction {
   font-size: 14px;
   background-color: $brand_secondary_default;
@@ -162,6 +181,25 @@
     background-color: $light_gray_200;
     color: $light_white;
   }
+  &Bottom {
+    margin-top: auto;
+  }
+  &Continue {
+    width: 120px;
+    margin-left: auto;
+    margin-bottom: 0;
+  }
+}
+
+.horizontalButtons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 5px;
+}
+
+.fullMessage {
+  padding-bottom: 10px;
 }
 
 .markdownText {

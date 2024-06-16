@@ -47,12 +47,14 @@ const Console: React.FunctionComponent = () => {
     <PanelContainer
       id="codebridge-console"
       className={moduleStyles.consoleContainer}
-      headerContent={'Console'}
       rightHeaderContent={headerButton()}
+      hideHeaders={true}
     >
       <div className={moduleStyles.console}>
         {codeOutput.map((outputLine, index) => {
-          if (outputLine.type === 'img') {
+          if (outputLine.contents.includes('---------')) {
+            return null;
+          } else if (outputLine.type === 'img') {
             return (
               <img
                 key={index}
@@ -72,6 +74,8 @@ const Console: React.FunctionComponent = () => {
               </div>
             );
           } else {
+            return null;
+
             return (
               <div key={index}>
                 {systemMessagePrefix}
