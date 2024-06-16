@@ -85,9 +85,12 @@ class LevelLoader
 
       # Bulk-import changed levels.
       immutable_level_columns = %i(id name created_at)
+
+      batch_size = CDO.level_seed_batch_size&.to_i
+
       update_columns = Level.columns.map(&:name).map(&:to_sym).
         reject {|column| immutable_level_columns.include? column}
-      Level.import! changed_levels, on_duplicate_key_update: update_columns
+      Level.import! changed_levels, on_duplicate_key_update: update_columns, batch_size: batch_size
 
       # now we want to run some after_save callbacks, which didn't get run when
       # by run_callbacks earlier. it seems too risky to run all after_save

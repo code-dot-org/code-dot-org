@@ -400,6 +400,12 @@ load_locales:
 # callouts, hints, secret words, or secret pictures.
 skip_seed_all:
 
+# The batch size for seeding levels.
+# Sometimes, in low-memory situations, batch importing 40k+ queries at a time
+# is a little much and fails the seed. This optionally limits the number of
+# queries to import at a time to the given amount. (Default: all at once)
+level_seed_batch_size:
+
 # Whether to store sprocket asset cache on disk or in memory. Setting this to
 # false reduces memory usage, but significantly slows down dev server startup.
 cache_assets_in_memory:
