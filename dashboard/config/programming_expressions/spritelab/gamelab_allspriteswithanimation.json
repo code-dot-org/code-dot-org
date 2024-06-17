@@ -12,7 +12,7 @@
       "app": "https://studio.code.org/projects/spritelab/wtBH6tieviQLkoOT1xgnAWMW1EXM0jlWOOwhfnJtmfA",
       "image": null,
       "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 310
+      "embed_app_with_code_height": "150"
     },
     {
       "name": "Example 2",
@@ -20,7 +20,7 @@
       "app": "https://studio.code.org/projects/spritelab/VnW0KcCZW0FagPqT6YW9LUFNlxz1NbDmM4suBczWLw8",
       "image": null,
       "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 310
+      "embed_app_with_code_height": "150"
     }
   ],
   "image_url": "https://curriculum.code.org/media/blocks/costume.PNG",
