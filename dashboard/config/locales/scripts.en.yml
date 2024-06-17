@@ -17029,6 +17029,8 @@ en:
               name: 'Lesson 2: Making Sense of Data'
             lesson-3:
               name: Crafting Effective Questions From Data
+            lesson-4:
+              name: Cleaning Data
           lesson_groups: {}
           name: data-science-playground
           title: Data Science Playground!
@@ -17848,6 +17850,26 @@ en:
           lesson_groups: {}
           name: gen-ai-customizing-pilot-v2
           title: Customizing Language Models
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-computer-vision:
+          lessons:
+            lesson-1:
+              name: Introduction to Computer Vision
+          lesson_groups: {}
+          name: self-paced-pl-computer-vision
+          title: self-paced-pl-computer-vision
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-coding-with-ai:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-coding-with-ai
+          title: self-paced-pl-coding-with-ai
           description_audience: ''
           description_short: ''
           description: ''
