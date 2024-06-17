@@ -2,15 +2,13 @@ module Services::ChildAccount
   # Sets the child's account to a lock_out state according to our Child Account
   # Policy.
   def self.lock_out(user)
-    return unless user
-    # Verify the account has not already started the lock out process.
-    return if user.child_account_compliance_state
     # Set the child's account to be locked out
     update_compliance(
       user,
       Policies::ChildAccount::ComplianceState::LOCKED_OUT
     )
     user.child_account_compliance_lock_out_date = DateTime.now
+    user.save!
   end
 
   # Updates the child_account_compliance_state attribute to the given state.
