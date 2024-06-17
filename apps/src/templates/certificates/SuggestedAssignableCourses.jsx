@@ -1,12 +1,21 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 
 import style from './congrats.module.scss';
 
 function SuggestedAssignableCourses({assignableCourseSuggestions}) {
+  const [expandedCardKey, setExpandedCardKey] = useState(null);
+  const handleQuickViewClicked = key => {
+    if (expandedCardKey === key) {
+      setExpandedCardKey(null);
+    } else {
+      setExpandedCardKey(key);
+    }
+  };
+
   if (assignableCourseSuggestions.length === 0) {
     return null;
   }
@@ -63,10 +72,10 @@ function SuggestedAssignableCourses({assignableCourseSuggestions}) {
         video={video}
         publishedDate={published_date}
         selfPacedPlCourseOfferingPath={self_paced_pl_course_offering_path}
-        // isExpanded={expandedCardKey === key}
+        isExpanded={expandedCardKey === key}
         handleSetExpandedCardKey={() => console.log('handleSetExpandedCardKey')}
-        //onQuickViewClick={() => handleQuickViewClicked(key)}
-        onQuickViewClick={() => console.log('onQuickViewClick')}
+        onQuickViewClick={() => handleQuickViewClicked(key)}
+        //onQuickViewClick={() => console.log('onQuickViewClick')}
         //isInUS={isInUS}
         availableResources={available_resources}
         isSignedOut={false}
@@ -144,7 +153,7 @@ function SuggestedAssignableCoursesCarousel({assignableCourseSuggestions}) {
         // isExpanded={expandedCardKey === key}
         handleSetExpandedCardKey={() => console.log('handleSetExpandedCardKey')}
         //onQuickViewClick={() => handleQuickViewClicked(key)}
-        onQuickViewClick={() => console.log('onQuickViewClick')}
+        //onQuickViewClick={() => console.log('onQuickViewClick')}
         //isInUS={isInUS}
         availableResources={available_resources}
         isSignedOut={false}
@@ -174,7 +183,7 @@ function SuggestedAssignableCoursesCarousel({assignableCourseSuggestions}) {
           `
           :host .swiper-pagination {
             position: relative;
-            margin-top: 4rem;
+            margin-top: 2rem;
             .swiper-pagination-bullet {
               margin-block: 0.5rem;
             }
