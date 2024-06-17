@@ -34,7 +34,6 @@ class CoursesController < ApplicationController
     @is_english = request.language == 'en'
     @is_signed_out = current_user.nil?
     @force_race_interstitial = params[:forceRaceInterstitial]
-    @modern_elementary_courses_available = Unit.modern_elementary_courses_available?(request.locale)
   end
 
   def show
