@@ -1,12 +1,16 @@
-import ConfirmDeleteButton from './ConfirmDeleteButton';
-import {DataView} from '../constants';
-import EditLink from './EditLink';
 import PropTypes from 'prop-types';
 import React from 'react';
-import dataStyles from './data-styles.module.scss';
+
 import msg from '@cdo/locale';
-import {refreshCurrentDataView} from './loadDataForView';
+
+import {DataView} from '../constants';
 import {storageBackend, isFirebaseStorage} from '../storage';
+
+import ConfirmDeleteButton from './ConfirmDeleteButton';
+import EditLink from './EditLink';
+import {refreshCurrentDataView} from './loadDataForView';
+
+import dataStyles from './data-styles.module.scss';
 
 class EditTableListRow extends React.Component {
   static propTypes = {

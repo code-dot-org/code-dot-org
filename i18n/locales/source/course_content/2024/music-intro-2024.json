@@ -1,7 +1,7 @@
 {
   "https://studio.code.org/s/music-intro-2024/lessons/1/levels/1": {
     "panels": {
-      "musiclab_intro_panels_start-421d64b2-c4db-42cb-ac1f-de66a4d22fa7": "#### Welcome to Project Beats!\n\nProject Beats lets you mix, remix, and even perform music using code. Don’t worry if you don’t know much about code, or even music! All you need is a little time and some curiosity to start making your own creations."
+      "musiclab_intro_panels_start-421d64b2-c4db-42cb-ac1f-de66a4d22fa7": "#### Welcome to Music Lab!\n\nMusic Lab lets you mix, remix, and even perform music using code. Don’t worry if you don’t know much about code, or even music! All you need is a little time and some curiosity to start making your own creations."
     }
   },
   "https://studio.code.org/s/music-intro-2024/lessons/1/levels/2": {
@@ -35,12 +35,12 @@
       "musiclab_intro_repeat_eaf348ed-21a0-499e-89a8-2f5beff52dd7": "Nice work.  You successfully played three sounds.",
       "musiclab_intro_repeat_28936cc0-3bfc-4c00-8319-5886b587b29c": "It's good that you've played a sound twice.  Please play it three times.",
       "musiclab_intro_repeat_41276380-4fc4-48cb-be28-b6be5dfb8dd5": "You've played a sound once.  Please play it three times by using the [repeat][0] block.",
-      "musiclab_intro_repeat_b2a9ed31-f16f-45ac-9aaa-ab45620d6cd6": "Please play a sound three times.  Attached a [repeat][0] block to [when run][1]. Then put a [play][2] block inside of it."
+      "musiclab_intro_repeat_b2a9ed31-f16f-45ac-9aaa-ab45620d6cd6": "Please play a sound three times.  Attach a [repeat][0] block to [when run][1]. Then put a [play][2] block inside of it."
     }
   },
   "https://studio.code.org/s/music-intro-2024/lessons/1/levels/6": {
     "panels": {
-      "musiclab_intro_panels_function-b2da9c67-9c99-42b2-9c72-c2e576663899": "A cool feature in Project Beats is that you can take a set of blocks and put them into your own block.  In coding, this is called making a _function_.",
+      "musiclab_intro_panels_function-b2da9c67-9c99-42b2-9c72-c2e576663899": "A cool feature in Music Lab is that you can take a set of blocks and put them into your own block.  In coding, this is called making a _function_.",
       "musiclab_intro_panels_function-e62e1783-6e0c-4dfb-9300-5dd081a80614": "You can \"call\" your new function by using the block with the matching name, like this."
     }
   },
@@ -60,8 +60,7 @@
   },
   "https://studio.code.org/s/music-intro-2024/lessons/1/levels/9": {
     "panels": {
-      "musiclab_intro_panels_end-70b08fdd-abbf-42bb-bdc9-d406bb513faf": "#### You're good to go!\n\nYou've learned the basics, and now you're ready to make your own mix! Be sure to explore the sound library - there is a lot to explore and use to make an amazing track.",
-      "musiclab_intro_panels_end-9872e398-6756-4bed-aa76-11ad18dba581": "You'll see even more new things in the toolbox, including:\n\n-   A beat-making block\n\n-   Sound effects like reverb and filter\n\n-   A synthesizer block\n\n-   A block for randomizing what gets played\n\n-   ...and more!\n\nHave fun!"
+      "musiclab_intro_panels_end-70b08fdd-abbf-42bb-bdc9-d406bb513faf": "#### You're good to go!\n\nYou've learned the basics, and now you're ready to make your own mix! Be sure to explore the sound library - there is a lot to explore and use to make an amazing track.\n\nYou'll see even more new things in the toolbox, including:\n\n-   A beat-making block\n\n-   Sound effects like reverb and filter\n\n-   A synthesizer block\n\n-   A block for randomizing what gets played\n\n ...and more! Have fun!"
     }
   }
 }

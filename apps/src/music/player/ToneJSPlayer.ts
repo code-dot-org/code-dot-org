@@ -1,6 +1,7 @@
 import {SoundLoadCallbacks} from '../types';
 import SoundCache from './SoundCache';
 import {
+  Clock,
   Filter,
   GrainPlayer,
   PingPongDelay,
@@ -32,7 +33,6 @@ const EMPTY_EFFECTS_KEY = '';
  * An {@link AudioPlayer} implementation using the Tone.js library.
  *
  * TODO:
- * - Effects
  * - Sample sequences
  */
 class ToneJSPlayer implements AudioPlayer {
@@ -47,6 +47,7 @@ class ToneJSPlayer implements AudioPlayer {
     [event in PlayerEvent]?: ((payload?: string) => void)[];
   };
   private loadingInstruments: {[instrumentName: string]: boolean};
+  private currentSequencePreviewClock: Clock | null;
 
   constructor(
     bpm = DEFAULT_BPM,
@@ -60,6 +61,7 @@ class ToneJSPlayer implements AudioPlayer {
     this.effectBusses = {};
     this.registeredCallbacks = {};
     this.loadingInstruments = {};
+    this.currentSequencePreviewClock = null;
     this.generateEffectBusses();
   }
 
@@ -154,9 +156,7 @@ class ToneJSPlayer implements AudioPlayer {
 
   async playSampleImmediately(sample: SampleEvent, onStop?: () => void) {
     await this.startContextIfNeeded();
-    if (this.currentPreview) {
-      this.currentPreview.player.stop();
-    }
+    this.cancelPreviews();
 
     const buffer = await this.soundCache.loadSound(sample.sampleUrl);
     if (!buffer) {
@@ -197,27 +197,54 @@ class ToneJSPlayer implements AudioPlayer {
     );
   }
 
-  async playSequenceImmediately({instrument, events}: SamplerSequence) {
+  async playSequenceImmediately(
+    {instrument, events}: SamplerSequence,
+    onTick?: (tick: number) => void,
+    onStop?: () => void
+  ) {
+    this.cancelPreviews();
     if (this.samplers[instrument] === undefined) {
       this.metricsReporter.logError(`Instrument not loaded: ${instrument}`);
       return;
     }
 
+    let lastSampleStart = 0;
     await this.startContextIfNeeded();
     events.forEach(({notes, playbackPosition}) => {
-      this.samplers[instrument][EMPTY_EFFECTS_KEY].triggerAttack(
+      const offsetSeconds = Transport.toSeconds(
+        this.playbackTimeToTransportTime(playbackPosition)
+      );
+      lastSampleStart = Math.max(lastSampleStart, offsetSeconds);
+      this.samplers[instrument][EMPTY_EFFECTS_KEY].unsync().triggerAttack(
         notes,
-        `+${Transport.toSeconds(
-          this.playbackTimeToTransportTime(playbackPosition)
-        )}`,
+        `+${offsetSeconds}`,
         1
       );
     });
+
+    // Create a clock that ticks forward every 16th note, and stops when the sequence finishes.
+    // We can assume the sequence will finish one 16th note after the last sample starts.
+    const clockEnd = lastSampleStart + Transport.toSeconds('16n');
+    let tick = 1;
+    const clock = new Clock(() => {
+      onTick?.(tick++);
+    }, Transport.toFrequency('16n'))
+      .on('stop', () => {
+        this.currentSequencePreviewClock = null;
+        onStop?.();
+      })
+      .start()
+      .stop(`+${clockEnd}`);
+    this.currentSequencePreviewClock = clock;
   }
 
   cancelPreviews() {
     if (this.currentPreview) {
       this.currentPreview.player.stop();
+    }
+
+    if (this.currentSequencePreviewClock) {
+      this.currentSequencePreviewClock.stop();
     }
 
     this.stopAllSamplers();
@@ -232,7 +259,7 @@ class ToneJSPlayer implements AudioPlayer {
     this.generateEffectBusses();
   }
 
-  scheduleSample(sample: SampleEvent) {
+  scheduleSample(sample: SampleEvent, onSampleStart: (id: string) => void) {
     const buffer = this.soundCache.getSound(sample.sampleUrl);
     if (!buffer) {
       this.metricsReporter.logWarning(
@@ -259,6 +286,12 @@ class ToneJSPlayer implements AudioPlayer {
       .start(this.playbackTimeToTransportTime(sample.playbackPosition));
 
     this.activePlayers.push(player);
+
+    // Schedule a callback to report the sound ID after the sound has been played.
+    Transport.scheduleOnce(
+      () => onSampleStart(sample.id),
+      this.playbackTimeToTransportTime(sample.playbackPosition)
+    );
   }
 
   scheduleSamplerSequence({instrument, events, effects}: SamplerSequence) {
@@ -342,8 +375,10 @@ class ToneJSPlayer implements AudioPlayer {
   ): BarsBeatsSixteenths {
     const bar = Math.floor(playbackPosition);
     const beat = Math.floor((playbackPosition - bar) * 4);
-    const sixteenths = Math.floor((playbackPosition - bar - beat / 4) * 16);
-    return `${bar - 1}:${beat}:${sixteenths}`;
+    const sixteenths = (playbackPosition - bar - beat / 4) * 16;
+    // Round sixteenths note value to 3 decimal places.
+    const sixteenthsRounded = Math.round(sixteenths * 1000) / 1000;
+    return `${bar - 1}:${beat}:${sixteenthsRounded}`;
   }
 
   private createPlayer(
@@ -372,6 +407,8 @@ class ToneJSPlayer implements AudioPlayer {
   }
 
   private generateEffectBusses() {
+    // Dispose of all existing effect busses
+    Object.values(this.effectBusses).forEach(node => node.dispose());
     BUS_EFFECT_COMBINATIONS.forEach(effects => {
       const {filter, delay} = effects;
       let firstNode, lastNode;

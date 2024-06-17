@@ -184,7 +184,8 @@ export class Annotator {
     logLevel = 'INFO',
     color = null,
     icon = null,
-    tipStyle = {}
+    tipStyle = {},
+    hoverCallback = null
   ) {}
 
   /**
@@ -551,7 +552,8 @@ export class DropletAnnotator extends Annotator {
     logLevel = 'INFO',
     color = null,
     icon = null,
-    tipStyle = {}
+    tipStyle = {},
+    hoverCallback = null
   ) {
     const hash = md5((color || '') + (icon || ''));
     if (color || icon) {
@@ -609,6 +611,7 @@ export class DropletAnnotator extends Annotator {
       message: message,
       hash: hash,
       tipStyle: tipStyle,
+      hoverCallback: hoverCallback,
     });
     this.annotationList_().addRuntimeAnnotation(logLevel, lineNumber, message);
 
@@ -639,9 +642,11 @@ export class DropletAnnotator extends Annotator {
               // See if it is one of our known annotations
               for (const annotation of this.knownAnnotations_) {
                 if (el.textContent.trim() === annotation.message.trim()) {
-                  el.classList.add(
-                    `editor-annotator-tooltip-${annotation.hash}`
-                  );
+                  const annotationClass = `editor-annotator-tooltip-${annotation.hash}`;
+                  el.classList.add(annotationClass);
+                  if (annotation.hoverCallback) {
+                    annotation.hoverCallback(annotation);
+                  }
                   Object.keys(annotation.tipStyle || {}).forEach(k => {
                     el.style[k] = annotation.tipStyle[k];
                   });
@@ -1110,7 +1115,8 @@ export default class EditorAnnotator {
     logLevel = 'INFO',
     color = null,
     icon = null,
-    tipStyle = {}
+    tipStyle = {},
+    hoverCallback = null
   ) {
     EditorAnnotator.annotator()?.annotateLine(
       lineNumber,

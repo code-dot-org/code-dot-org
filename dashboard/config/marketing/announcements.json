@@ -1,6 +1,6 @@
 {
   "pages": {
-    "/home": "music-lab-launch",
+    "/home": "lms-launch",
     "/student-home": "music-lab-launch"
   },
   "banners": {
@@ -28,6 +28,15 @@
       "buttonText": "Learn more",
       "buttonUrl": "https://code.org/music",
       "buttonId": "music-lab-launch"
+    },
+    "lms-launch": {
+      "dcdo": "show-updated-lms-content",
+      "image": "/shared/images/banners/banner-lms-launch.png",
+      "title": "Discover our new LMS integrations",
+      "body": "We've added new LMS integrations for Canvas and Schoology! Connect existing LMS classrooms in your school to Code.org with one-click Roster Syncing, Single Sign-On, and integrated access to curriculum.",
+      "buttonText": "Learn more",
+      "buttonUrl": "https://code.org/lms",
+      "buttonId": "lms-launch"
     }
   }
 }

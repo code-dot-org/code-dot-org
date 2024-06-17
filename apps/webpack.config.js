@@ -196,6 +196,7 @@ const WEBPACK_BASE_CONFIG = {
       ...Object.fromEntries([
         localeDoNotImport('@cdo/aichat/locale'),
         localeDoNotImport('@cdo/applab/locale'),
+        localeDoNotImport('@cdo/codebridge/locale'),
         localeDoNotImport('@cdo/javalab/locale'),
         localeDoNotImport('@cdo/music/locale'),
         localeDoNotImport('@cdo/netsim/locale'),
@@ -699,7 +700,11 @@ function createWebpackConfig({
     ],
     devServer: envConstants.DEV
       ? {
-          allowedHosts: ['localhost-studio.code.org', 'localhost.code.org'],
+          allowedHosts: [
+            'localhost-studio.code.org',
+            'localhost.code.org',
+            'localhost.hourofcode.com',
+          ],
           client: {overlay: false},
           port: WEBPACK_DEV_SERVER_PORT,
           proxy: [

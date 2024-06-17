@@ -1,6 +1,6 @@
 import React from 'react';
 import {assert} from '../../../../util/reconfiguredChai';
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Announcements from '@cdo/apps/code-studio/components/progress/Announcements';
 import Notification from '@cdo/apps/templates/Notification';

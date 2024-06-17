@@ -1,16 +1,14 @@
-class Services::ChildAccount
+module Services::ChildAccount
   # Sets the child's account to a lock_out state according to our Child Account
   # Policy.
   def self.lock_out(user)
-    return unless user
-    # Verify the account has not already started the lock out process.
-    return if user.child_account_compliance_state
     # Set the child's account to be locked out
     update_compliance(
       user,
       Policies::ChildAccount::ComplianceState::LOCKED_OUT
     )
     user.child_account_compliance_lock_out_date = DateTime.now
+    user.save!
   end
 
   # Updates the child_account_compliance_state attribute to the given state.
@@ -36,14 +34,5 @@ class Services::ChildAccount
         parent_permission_confirmation(parent_email).
         deliver_later(wait: Policies::ChildAccount::PERMISSION_GRANTED_MAIL_DELAY)
     end
-  end
-
-  # The US state field was added in July 2023. Accounts created prior to that
-  # do not have state location data, so we can try to infer it from their teacher's
-  # state, if that teacher is associated with a school.
-  def self.update_us_state_from_teacher!(user)
-    return unless user
-    teacher_us_state = Queries::ChildAccount.teacher_us_state(user)
-    user.update(us_state: teacher_us_state) if teacher_us_state
   end
 end

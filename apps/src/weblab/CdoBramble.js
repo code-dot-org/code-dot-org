@@ -1,11 +1,12 @@
 // This is needed to support jQuery binary downloads
 import '../assetManagement/download';
-import {makeEnum} from '../utils';
-import {FatalErrorType} from './constants';
-import logToCloud from '../logToCloud';
 import {Buffer} from 'buffer';
 
 import testImageAccess from '../code-studio/url_test';
+import logToCloud from '../logToCloud';
+import {makeEnum} from '../utils';
+
+import {FatalErrorType} from './constants';
 
 export const BRAMBLE_CONTAINER = '#bramble';
 

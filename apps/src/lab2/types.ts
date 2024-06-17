@@ -18,6 +18,9 @@ export interface Channel {
   publishedAt: string | null;
   createdAt: string;
   updatedAt: string;
+  hidden?: boolean;
+  thumbnailUrl?: string;
+  frozen?: boolean;
   // Optional lab-specific configuration for this project.  If provided, this will be saved
   // to the Project model in the database along with the other entries in this interface,
   // inside the value field JSON.
@@ -80,7 +83,13 @@ export interface ProjectFile {
   open?: boolean;
   active?: boolean;
   folderId: string;
-  hidden?: boolean;
+  type?: ProjectFileType;
+}
+
+export enum ProjectFileType {
+  STARTER = 'starter',
+  SUPPORT = 'support',
+  VALIDATION = 'validation',
 }
 
 export interface ProjectFolder {
@@ -145,6 +154,14 @@ export interface LevelProperties {
   skipUrl?: string;
   // Project Template level name for the level if it exists.
   projectTemplateLevelName?: string;
+  // Help and Tips values
+  mapReference?: string;
+  referenceLinks?: string[];
+  // Exemplars
+  exampleSolutions?: string[];
+  exemplarSources?: MultiFileSource;
+  // For Teachers Only value
+  teacherMarkdown?: string;
 }
 
 // Level configuration data used by project-backed labs that don't require
@@ -264,3 +281,6 @@ export interface ExtraLinksData {
     path: string;
   }[];
 }
+
+// Text-based labs that are currently supported by lab2.
+export const TEXT_BASED_LABS: AppName[] = ['aichat', 'pythonlab', 'weblab2'];

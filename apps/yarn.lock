@@ -3042,12 +3042,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@blockly/field-bitmap@npm:^4.0.13":
-  version: 4.0.13
-  resolution: "@blockly/field-bitmap@npm:4.0.13"
+"@blockly/field-bitmap@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "@blockly/field-bitmap@npm:4.1.0"
   peerDependencies:
     blockly: ^10.0.0
-  checksum: e66329f66b4f53024143b1570c788bab8e8d50360aa23e8e67f2132134fc36afaf70d4a1169dfb2bcd693b3be144f3361164b42a345ac1d4a26f1e845dac2466
+  checksum: 0e1daf5180f54e1d65e7834bee8c5cf95a85a6edbaa15fe283bead84efe10f181107740df425c6bd9179a2ab40248e4aa91229ce3c91221f53f5733f7d0eac8a
   languageName: node
   linkType: hard
 
@@ -8041,7 +8041,7 @@ __metadata:
     "@babel/preset-react": ^7.24.1
     "@blockly/block-shareable-procedures": ~4.0.5
     "@blockly/field-angle": ^4.0.0
-    "@blockly/field-bitmap": ^4.0.13
+    "@blockly/field-bitmap": ^4.1.0
     "@blockly/field-colour": ^4.0.0
     "@blockly/field-grid-dropdown": ~4.0.9
     "@blockly/keyboard-navigation": ~0.5.6

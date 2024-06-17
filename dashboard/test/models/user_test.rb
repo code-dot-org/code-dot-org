@@ -7,6 +7,38 @@ class UserTest < ActiveSupport::TestCase
   include ProjectsTestUtils
   self.use_transactional_test_case = true
 
+  class UsStateCodeTest < ActiveSupport::TestCase
+    test 'returns student us_state if present' do
+      student = create(:student, :in_colorado)
+      assert_equal 'CO', student.us_state_code
+    end
+
+    test 'returns nil if student us_state is unknown' do
+      student = create(:student, :unknown_us_region)
+      assert_nil student.us_state_code
+    end
+
+    test 'returns teacher school US state code' do
+      teacher = create(:teacher, school_info: create(:school_info, country: 'US', state: 'ny'))
+      assert_equal 'NY', teacher.us_state_code
+    end
+
+    test 'returns teacher school US state code when state is name' do
+      teacher = create(:teacher, school_info: create(:school_info, country: 'USA', state: 'washington dc'))
+      assert_equal 'DC', teacher.us_state_code
+    end
+
+    test 'returns nil if teacher school state is not set' do
+      teacher = create(:teacher, school_info: create(:school_info, :skip_validation, state: ''))
+      assert_nil teacher.us_state_code
+    end
+
+    test 'returns nil if teacher school is not in USA' do
+      teacher = create(:teacher, school_info: create(:school_info, :skip_validation, country: 'CA', state: 'AL')) # Alberta, Canada
+      assert_nil teacher.us_state_code
+    end
+  end
+
   setup_all do
     @good_data = {
       email: 'foo@bar.com',
@@ -50,6 +82,37 @@ class UserTest < ActiveSupport::TestCase
     @universal_instructor = create :universal_instructor
     @plc_reviewer = create :plc_reviewer
     @levelbuilder = create :levelbuilder
+  end
+
+  class CAPEventLogging < ActiveSupport::TestCase
+    setup do
+      @student = create(:non_compliant_child)
+    end
+
+    test 'logs CAP event "account_locking" after student compliance state changed to "l"' do
+      Services::ChildAccount.update_compliance(@student, Policies::ChildAccount::ComplianceState::LOCKED_OUT)
+
+      Services::ChildAccount::EventLogger.expects(:log_account_locking).with(@student).once
+
+      @student.save!
+    end
+
+    test 'logs CAP event "permission_granting" after student compliance state changed to "g"' do
+      Services::ChildAccount.update_compliance(@student, Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED)
+
+      Services::ChildAccount::EventLogger.expects(:log_permission_granting).with(@student).once
+
+      @student.save!
+    end
+
+    test 'does not log any CAP events if compliance state was not changed' do
+      Services::ChildAccount.update_compliance(@student, Policies::ChildAccount::ComplianceState::LOCKED_OUT)
+      @student.save!
+
+      Services::ChildAccount::EventLogger.expects(:new).with(user: @student, event_name: anything).never
+
+      @student.save!
+    end
   end
 
   test 'from_identifier finds user by id' do
@@ -451,6 +514,38 @@ class UserTest < ActiveSupport::TestCase
   test "cannot create multi-auth user with duplicate of multi-auth user's second email" do
     create_multi_auth_user_with_second_email COLLISION_EMAIL
     cannot_create_multi_auth_users_with_email COLLISION_EMAIL
+  end
+
+  test "can create multi-auth LTI user with duplicate of multi-auth user's second email" do
+    create :student, email: COLLISION_EMAIL
+    # trigger the email validation by changing the email (partial registration has email as "" which becomes the actual
+    # email in the finish sign up flow)
+    user = create :student
+    user.authentication_options.destroy_all
+
+    lti_authentication_option = create(:lti_authentication_option, user: user, email: COLLISION_EMAIL)
+    user.authentication_options << lti_authentication_option
+    user.email = COLLISION_EMAIL
+
+    user.save!
+
+    user.valid?
+  end
+
+  test "cannot create multi-auth LTI user multiple auth options and duplicate of multi-auth user's second email" do
+    create :student, email: COLLISION_EMAIL
+    # trigger the email validation by changing the email (partial registration has email as "" which becomes the actual
+    # email in the finish sign up flow)
+    user = create :student
+    user.authentication_options.destroy_all
+
+    lti_authentication_option = create(:lti_authentication_option, user: user, email: COLLISION_EMAIL)
+    user.authentication_options << lti_authentication_option
+    user.email = COLLISION_EMAIL
+
+    user.save!
+    user.authentication_options << create(:lti_authentication_option, user: user, email: COLLISION_EMAIL)
+    cannot_create_user_with_email :google_authentication_option, user: user, email: COLLISION_EMAIL
   end
 
   def cannot_create_multi_auth_users_with_email(email)
@@ -3943,6 +4038,8 @@ class UserTest < ActiveSupport::TestCase
         sharing_disabled: false,
         has_ever_signed_in: @student.has_ever_signed_in?,
         ai_tutor_access_denied: !!@student.ai_tutor_access_denied,
+        at_risk_age_gated: false,
+        child_account_compliance_state: @student.child_account_compliance_state,
       },
       @student.summarize
     )
@@ -5164,19 +5261,6 @@ class UserTest < ActiveSupport::TestCase
     assert_equal User.marketing_segment_data_keys.sort, teacher.marketing_segment_data.keys.map(&:to_s).sort
   end
 
-  test "given a noncompliant child account, that account is locked out" do
-    student = create :non_compliant_child
-    student.save!
-    assert_equal Policies::ChildAccount::ComplianceState::LOCKED_OUT, student.child_account_compliance_state
-    refute_empty student.child_account_compliance_lock_out_date
-  end
-
-  test "given a compliant child account, that account is NOT locked out" do
-    student = create :non_compliant_child, :with_parent_permission
-    student.save!
-    assert_equal Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED, student.child_account_compliance_state
-  end
-
   test "does not return deleted followers from the followers helper" do
     student = create :student
     teacher = create :teacher
@@ -5265,5 +5349,80 @@ class UserTest < ActiveSupport::TestCase
 
     pl_units_started = user.pl_units_started
     assert_equal 100, pl_units_started[0][:percent_completed]
+  end
+
+  test "username characters are only validated when changed" do
+    student = create :student
+    # White spaces are not allowed in usernames
+    student.username = "big husky"
+    student.save!(validate: false)
+
+    # We only want to validate the username if it changes.
+    # An invalid username should not block other attributes of the user from
+    # changing.
+    # This is a temporary behavior while we investigate why users have invalid
+    # usernames.
+    student.update!(name: "#{student.name} Jr.")
+
+    # The username has changed to a new invalid value, so we expected validation
+    # to fail.
+    assert_raises(ActiveRecord::RecordInvalid) do
+      student.update!(username: "very big husky")
+    end
+  end
+
+  test "validate_us_state" do
+    # If we don't know what country they are in, we don't require US State.
+    student = create :student
+    student.update!(name: 'test_coder')
+    assert_equal 'test_coder', student.name
+
+    # If the student is not in the US, we don't require US State
+    student = create :student, country_code: "JP"
+    student.update!(name: 'test_coder')
+    assert_equal 'test_coder', student.name
+
+    # If the student is in the US, they must tell us what US State they live in
+    assert_raises(ActiveRecord::RecordInvalid) do
+      create :student, country_code: "US"
+    end
+    # If us_state is invalid, error should be raised
+    assert_raises(ActiveRecord::RecordInvalid) do
+      create :student, country_code: "US", us_state: 'INVALID_STATE'
+    end
+    # Can create student with valid country_code and valid us_state
+    student = create :student, country_code: "US", us_state: 'CO'
+    # Updating to an invalid us_state should raise an error
+    assert_raises(ActiveRecord::RecordInvalid) do
+      student.update!(us_state: 'INVALID_STATE')
+    end
+    # Can update us_state to valid us_state
+    student.update!(us_state: 'WA')
+    assert_equal 'WA', student.us_state
+
+    # country_code set, us_state nil
+    student = create :student, country_code: "US", us_state: 'CO'
+    # set us_state to invalid value, some of our current users have nil us_state and no country_code
+    # Jira P20-939: On account creation, students in the US were allowed to sign up without providing us_state.
+    # Users should still be able to update other attributes even thought they have a nil us_state.
+    student.update_attribute(:us_state, nil) # bypass validation
+    student.update!(name: 'test_coder')
+    assert_equal 'test_coder', student.name
+
+    # country_code nil, us_state set
+    student = create :student
+    # set us_state to invalid value, some of our current users have invalid us_state and no country_code
+    # Jira P20-939: We had a feature where we automatically filled the us_state but sometimes it put in the full state name instead of
+    # the two letter code. Users should still be able to update other attributes even thought they have an invalid us_state value
+    student.update_attribute(:us_state, 'Washington D.C.') # bypass validation
+    student.update!(name: 'test_coder')
+    assert_equal 'test_coder', student.name
+  end
+
+  test "us_state_changed?" do
+    student = create :student, country_code: "US", us_state: 'CO'
+    refute student.us_state_changed?
+    student.us_state = 'WA'
+    assert student.us_state_changed?
   end
 end

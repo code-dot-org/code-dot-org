@@ -1,4 +1,4 @@
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import {
@@ -63,6 +63,7 @@ const DEFAULT_PROPS = {
   levelProgressByStudent: LEVEL_PROGRESS,
   sortedStudents: STUDENTS,
   addExpandedLesson: () => {},
+  expandedMetadataStudentIds: [],
 };
 
 const setUp = overrideProps => {

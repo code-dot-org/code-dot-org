@@ -1,6 +1,6 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import {shallow, mount} from 'enzyme';
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {act} from 'react-dom/test-utils';
 import sinon from 'sinon';
@@ -102,6 +102,12 @@ const studentLevelInfo = {
   attempts: 3,
   timeSpent: 100,
   lastAttempt: '2024-03-02',
+};
+
+const reportingData = {
+  unitName: 'test-2023',
+  courseName: 'course-2023',
+  levelName: 'Test Blah Blah Blah',
 };
 
 describe('LearningGoals - React Testing Library', () => {
@@ -293,6 +299,49 @@ describe('LearningGoals - React Testing Library', () => {
       );
       screen.getByText('AI Confidence: medium');
     });
+  });
+
+  it('should send an event if the annotation tooltip is hovered', () => {
+    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
+
+    // We need to check that the callback we give to the annotator would create
+    // the event report.
+    let hoverCallback = undefined;
+    annotateLineStub.callsFake((a, b, c, d, e, f, callback) => {
+      hoverCallback = callback;
+    });
+
+    render(
+      <LearningGoals
+        learningGoals={learningGoals}
+        aiEvaluations={aiEvaluations}
+        reportingData={reportingData}
+        studentLevelInfo={studentLevelInfo}
+        teacherHasEnabledAi
+        canProvideFeedback
+      />
+    );
+
+    const evidence = /The sprite is defined here/;
+    screen.getByText(evidence);
+
+    // There should be /some/ kind of callback registered
+    expect(hoverCallback).to.not.be.undefined;
+
+    // Call the callback ourselves
+    hoverCallback({});
+
+    // We should have triggered the sending of the event with the given data.
+    const eventName = EVENTS.TA_RUBRIC_EVIDENCE_TOOLTIP_HOVERED;
+    expect(sendEventSpy).to.have.been.calledWith(eventName, {
+      ...reportingData,
+      learningGoalKey: learningGoals[0].key,
+      learningGoal: learningGoals[0].learningGoal,
+      studentId: studentLevelInfo.user_id,
+    });
+
+    // Restore stubs
+    sendEventSpy.restore();
   });
 });
 

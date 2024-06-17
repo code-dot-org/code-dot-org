@@ -1,6 +1,6 @@
 import {expect} from '../../../util/reconfiguredChai';
 import React from 'react';
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import AssetRow from '@cdo/apps/code-studio/components/AssetRow';
 
 const DEFAULT_PROPS = {

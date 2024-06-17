@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import DesignToolboxElement from './DesignToolboxElement';
+
 import applabMsg from '@cdo/applab/locale';
+
 import ThemeDropdown from './designElements/ThemeDropdown';
+import DesignToolboxElement from './DesignToolboxElement';
 
 const IMAGE_BASE_URL = '/blockly/media/applab/design_toolbox/';
 

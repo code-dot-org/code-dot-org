@@ -27,6 +27,7 @@ class PublicGallery extends Component {
       minecraft: PropTypes.arrayOf(publishedFeaturedProjectPropType),
       dance: PropTypes.arrayOf(publishedFeaturedProjectPropType),
       poetry: PropTypes.arrayOf(publishedFeaturedProjectPropType),
+      music: PropTypes.arrayOf(publishedFeaturedProjectPropType),
     }),
   };
 

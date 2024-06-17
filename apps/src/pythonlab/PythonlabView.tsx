@@ -2,14 +2,13 @@
 import React, {useState} from 'react';
 import moduleStyles from './pythonlab-view.module.scss';
 import {ConfigType} from '@codebridge/types';
-import {Editor} from '@codebridge/Editor';
 import {LanguageSupport} from '@codemirror/language';
 import {python} from '@codemirror/lang-python';
 import {Codebridge} from '@codebridge/Codebridge';
 import {ProjectSources} from '@cdo/apps/lab2/types';
-import PythonConsole from './PythonConsole';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
-import {useSource} from '../codebridge/hooks/useSource';
+import {useSource} from '@codebridge/hooks/useSource';
+import {handleRunClick} from './pyodideRunner';
 
 const pythonlabLangMapping: {[key: string]: LanguageSupport} = {
   py: python(),
@@ -23,28 +22,23 @@ const defaultProject: ProjectSources = {
         name: MAIN_PYTHON_FILE,
         language: 'py',
         contents: 'print("Hello world!")',
-        folderId: '1',
+        folderId: '0',
         active: true,
         open: true,
       },
     },
-    folders: {
-      '1': {
-        id: '1',
-        name: 'src',
-        parentId: '0',
-      },
-    },
+    folders: {},
   },
 };
 
 const defaultConfig: ConfigType = {
   activeLeftNav: 'Files',
-  EditorComponent: () => Editor(pythonlabLangMapping, ['py', 'csv', 'txt']),
+  languageMapping: pythonlabLangMapping,
+  editableFileTypes: ['py', 'csv', 'txt'],
   leftNav: [
     {
       icon: 'fa-square-check',
-      component: 'Instructions',
+      component: 'info-panel',
     },
     {
       icon: 'fa-file',
@@ -67,35 +61,32 @@ const defaultConfig: ConfigType = {
       action: () => window.alert('You are already on the file browser'),
     },
   ],
-  gridLayoutRows: '32px 232px auto',
-  gridLayoutColumns: '300px auto',
+  gridLayoutRows: '1fr 1fr 1fr 48px',
+  gridLayoutColumns: '300px minmax(0, 1fr)',
   gridLayout: `
-    "instructions file-tabs"
-    "instructions editor"
-    "file-browser editor"
+    "info-panel workspace"
+    "file-browser workspace"
+    "file-browser console"
+    "file-browser control-buttons"
   `,
 };
 
 const PythonlabView: React.FunctionComponent = () => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const {source, setSource} = useSource(defaultProject);
+  const {source, setSource, resetToStartSource} = useSource(defaultProject);
 
   return (
     <div className={moduleStyles.pythonlab}>
-      <div className={moduleStyles.editor}>
-        {source && (
-          <Codebridge
-            project={source}
-            config={config}
-            setProject={setSource}
-            setConfig={setConfig}
-          />
-        )}
-      </div>
-      {/** TODO: Should the console be a part of CDOIDE? */}
-      <div className={moduleStyles.console}>
-        <PythonConsole />
-      </div>
+      {source && (
+        <Codebridge
+          project={source}
+          config={config}
+          setProject={setSource}
+          setConfig={setConfig}
+          resetProject={resetToStartSource}
+          onRun={handleRunClick}
+        />
+      )}
     </div>
   );
 };

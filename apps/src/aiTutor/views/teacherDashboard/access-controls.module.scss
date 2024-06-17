@@ -1,0 +1,10 @@
+.toolTipContainer {
+  display: flex;
+  align-items: center;
+
+  button {
+    .toggle-display {
+      margin-left: 5px;
+    }
+  }
+}

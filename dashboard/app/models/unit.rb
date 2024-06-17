@@ -1238,7 +1238,7 @@ class Unit < ApplicationRecord
         end
 
         source_course_version&.reference_guides&.each do |reference_guide|
-          reference_guide.copy_to_course_version(destination_unit_group.course_version)
+          reference_guide.copy_to_course_version(copied_unit.get_course_version)
         end
 
         if destination_professional_learning_course.nil?
@@ -1924,11 +1924,6 @@ class Unit < ApplicationRecord
     }
   end
 
-  private def teacher_feedback_enabled?
-    initiative = get_course_version&.course_offering&.marketing_initiative
-    TEACHER_FEEDBACK_INITIATIVES.include? initiative
-  end
-
   def summarize_for_assignment_dropdown
     [
       id,
@@ -2104,5 +2099,10 @@ class Unit < ApplicationRecord
   # send students on the last level of a lesson to the unit overview page.
   def show_unit_overview_between_lessons?
     middle_high? || ['vpl-csd-summer-pilot'].include?(get_course_version&.course_offering&.key)
+  end
+
+  private def teacher_feedback_enabled?
+    initiative = get_course_version&.course_offering&.marketing_initiative
+    TEACHER_FEEDBACK_INITIATIVES.include? initiative
   end
 end

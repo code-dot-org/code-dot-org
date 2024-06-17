@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
-import './styles/config.css';
-
 import {ProjectType, ConfigType} from '@codebridge/types';
+import React, {useState} from 'react';
+
+import './styles/config.css';
 
 type BaseConfigProps = {configName: string; cancelConfig: () => void};
 

@@ -7,7 +7,6 @@ import Button from '@cdo/apps/componentLibrary/button/Button';
 import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import {default as LinkedButton} from '@cdo/apps/templates/Button';
 import {
@@ -25,6 +24,7 @@ const MILLISECONDS_IN_ONE_DAY = 1000 * 3600 * 24;
 
 function InviteToV2ProgressModal({
   sectionId,
+  setHasJustSwitchedToV2,
 
   // from redux
   dateProgressTableInvitationDelayed,
@@ -80,7 +80,7 @@ function InviteToV2ProgressModal({
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_DISMISS_INVITATION, {
       sectionId,
     });
-    setHasSeenProgressTableInviteData();
+    setHasSeenProgressTableInviteData(false);
     setHasSeenProgressTableInvite(true);
     setInvitationOpen(false);
   }, [sectionId, setHasSeenProgressTableInvite]);
@@ -89,11 +89,16 @@ function InviteToV2ProgressModal({
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_ACCEPT_INVITATION, {
       sectionId,
     });
-    setHasSeenProgressTableInviteData();
+    setHasSeenProgressTableInviteData(true);
     setHasSeenProgressTableInvite(true);
-    new UserPreferences().setShowProgressTableV2(true);
     setShowProgressTableV2(true);
-  }, [sectionId, setHasSeenProgressTableInvite, setShowProgressTableV2]);
+    setHasJustSwitchedToV2(true);
+  }, [
+    sectionId,
+    setHasSeenProgressTableInvite,
+    setShowProgressTableV2,
+    setHasJustSwitchedToV2,
+  ]);
 
   const handleDelayInvitation = React.useCallback(() => {
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_DELAY_INVITATION, {
@@ -110,9 +115,10 @@ function InviteToV2ProgressModal({
     });
   };
 
-  const setHasSeenProgressTableInviteData = () => {
+  const setHasSeenProgressTableInviteData = acceptedInvitation => {
     return $.post(`/api/v1/users/has_seen_progress_table_v2_invitation`, {
       has_seen_progress_table_v2_invitation: true,
+      show_progress_table_v2: acceptedInvitation,
     });
   };
 
@@ -165,6 +171,7 @@ function InviteToV2ProgressModal({
 InviteToV2ProgressModal.propTypes = {
   setHasSeenProgressTableInvite: PropTypes.func.isRequired,
   sectionId: PropTypes.number,
+  setHasJustSwitchedToV2: PropTypes.func.isRequired,
   dateProgressTableInvitationDelayed: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,

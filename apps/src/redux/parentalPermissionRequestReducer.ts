@@ -19,7 +19,9 @@ export const REQUEST_PARENTAL_PERMISSION_SUCCESS =
   'requestParentalPermission/success';
 const REQUEST_PARENTAL_PERMISSION_FAILURE = 'requestParentalPermission/failure';
 
-interface ParentalPermissionRequest {
+const RESET_PARENTAL_PERMISSION_REQUEST = 'resetParentalPermissionRequest';
+
+export interface ParentalPermissionRequest {
   parent_email: string;
   requested_at: string;
   resends_sent: number;
@@ -27,6 +29,9 @@ interface ParentalPermissionRequest {
 }
 
 type ParentalPermissionRequestAction =
+  | {
+      type: typeof RESET_PARENTAL_PERMISSION_REQUEST;
+    }
   | {
       type: typeof FETCH_PENDING_PERMISSION_REQUEST_PERFORM;
     }
@@ -62,6 +67,10 @@ export default function parentalPermissionRequestReducer(
   action: ParentalPermissionRequestAction
 ): ParentalPermissionRequestState {
   switch (action.type) {
+    case RESET_PARENTAL_PERMISSION_REQUEST:
+      return {
+        isLoading: false,
+      };
     case FETCH_PENDING_PERMISSION_REQUEST_PERFORM:
       return {
         ...state,
@@ -169,3 +178,7 @@ export const requestParentalPermission = async (
     });
   }
 };
+
+export const resetParentalPermissionRequest = (
+  dispatch: Dispatch<ParentalPermissionRequestAction>
+) => dispatch({type: RESET_PARENTAL_PERMISSION_REQUEST});

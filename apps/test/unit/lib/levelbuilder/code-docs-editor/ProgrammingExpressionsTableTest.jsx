@@ -1,5 +1,5 @@
 import React from 'react';
-import {shallow, mount} from 'enzyme';
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import ProgrammingExpressionsTable from '@cdo/apps/lib/levelbuilder/code-docs-editor/ProgrammingExpressionsTable';
 import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
@@ -30,6 +30,7 @@ describe('ProgrammingExpressionsTable', () => {
           environmentTitle: 'App Lab',
           categoryName: 'UI Controls',
           editPath: '/programming_expressions/2/edit',
+          deletable: true,
         },
         {
           id: 3,
@@ -39,6 +40,7 @@ describe('ProgrammingExpressionsTable', () => {
           environmentTitle: 'Game Lab',
           categoryName: 'Sprites',
           editPath: '/programming_expressions/3/edit',
+          deletable: false,
         },
         {
           id: 4,
@@ -185,6 +187,22 @@ describe('ProgrammingExpressionsTable', () => {
       const destroyButton = wrapper.find('BodyRow').at(1).find('Button').at(2);
       destroyButton.simulate('click');
       expect(wrapper.find('StylizedBaseDialog').length).to.equal(1);
+      expect(fetchStub.callCount).to.equal(fetchCount);
+    });
+  });
+
+  it('does not show confirmation dialog for disabled destroy button', () => {
+    fetchStub
+      .withArgs('/programming_expressions/get_filtered_results?page=1')
+      .returns(Promise.resolve({ok: true, json: () => returnData}));
+    const wrapper = mount(<ProgrammingExpressionsTable {...defaultProps} />);
+    return new Promise(resolve => setImmediate(resolve)).then(() => {
+      const fetchCount = fetchStub.callCount;
+      expect(fetchCount).to.equal(1);
+      wrapper.update();
+      const destroyButton = wrapper.find('BodyRow').at(2).find('Button').at(2);
+      destroyButton.simulate('click');
+      expect(wrapper.find('StylizedBaseDialog').length).to.equal(0);
       expect(fetchStub.callCount).to.equal(fetchCount);
     });
   });

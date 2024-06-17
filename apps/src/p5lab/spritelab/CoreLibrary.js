@@ -576,6 +576,7 @@ export default class CoreLibrary {
       sprite.initialAngle = opts.initialAngle;
     }
 
+    const minimumScale = opts.minimumScale || 100;
     sprite.baseScale = 1;
     sprite.setScale = function (scale) {
       sprite.scale = scale * sprite.baseScale;
@@ -589,7 +590,7 @@ export default class CoreLibrary {
       sprite.baseScale =
         100 /
         Math.max(
-          100,
+          minimumScale,
           sprite.animation.getHeight(),
           sprite.animation.getWidth()
         );

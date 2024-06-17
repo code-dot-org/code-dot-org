@@ -71,6 +71,8 @@ function UnitSelectorV2({
       isLabelVisible={false}
       size="s"
       dropdownTextThickness="thin"
+      id="unit-selector-v2"
+      color="gray"
     />
   );
 }

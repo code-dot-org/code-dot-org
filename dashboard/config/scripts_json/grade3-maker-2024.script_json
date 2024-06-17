@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "grade3-maker",
-    "serialized_at": "2024-05-10 02:01:27 UTC",
+    "serialized_at": "2024-06-12 21:07:08 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -516,8 +516,21 @@
       }
     },
     {
-      "key": "c337e6a3-b27b-48e2-a187-f84748d6d340",
+      "key": "561f078c-261e-4b5f-98de-2468a785914c",
       "position": 4,
+      "properties": {
+        "name": "[Optional] Extension"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "561f078c-261e-4b5f-98de-2468a785914c",
+        "lesson.key": "Cristina - Saving sea turtles with micro:bit",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "grade3-maker-2024"
+      }
+    },
+    {
+      "key": "c337e6a3-b27b-48e2-a187-f84748d6d340",
+      "position": 5,
       "properties": {
         "name": "[Optional] Extended learning"
       },
@@ -626,8 +639,21 @@
       }
     },
     {
-      "key": "27adcef9-1567-4ad7-a228-0049b93a4b4c",
+      "key": "647bb0af-d9c6-4297-beff-e98ea06574c6",
       "position": 4,
+      "properties": {
+        "name": "[Optional] Extension"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "647bb0af-d9c6-4297-beff-e98ea06574c6",
+        "lesson.key": "Cristina - Rock, Paper, Scissors with micro:bit",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade3-maker-2024"
+      }
+    },
+    {
+      "key": "27adcef9-1567-4ad7-a228-0049b93a4b4c",
+      "position": 5,
       "properties": {
         "name": "[Optional] Extended Learning"
       },
@@ -723,8 +749,21 @@
       }
     },
     {
-      "key": "63febeb9-64cb-4f24-a0ae-5c89e9d44aa1",
+      "key": "b397b0f8-dd0c-4edd-add1-eb9dc7bc3a63",
       "position": 4,
+      "properties": {
+        "name": "[Optional] Extension"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b397b0f8-dd0c-4edd-add1-eb9dc7bc3a63",
+        "lesson.key": "Cristina - Activity picker with micro:bit",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "grade3-maker-2024"
+      }
+    },
+    {
+      "key": "63febeb9-64cb-4f24-a0ae-5c89e9d44aa1",
+      "position": 5,
       "properties": {
         "name": "[Optional] Extended Learning"
       },
@@ -1522,7 +1561,8 @@
       "position": 1,
       "properties": {
         "description": "Students will make the project themselves using the MakeCode editor and micro:bit simulator. Once they have tested their code in the simulator, they will download their code onto the micro:bits.\n\nPick one:\n- Step by step coding **<a href=\"https://mbit.io/csf-d2-coding\" target=\"_blank\">video</a>**\n- Live micro:bit **<a href=\"https://mbit.io/csf-d2-classroom\" target=\"_blank\">classroom session</a>** ",
-        "name": "Student Coding"
+        "name": "Student Coding",
+        "progression_name": "Saving sea turtles with micro:bit"
       },
       "seeding_key": {
         "activity_section.key": "b572a02b-6ae0-4602-bb1d-96a7ccdb07c5",
@@ -1553,6 +1593,18 @@
       "seeding_key": {
         "activity_section.key": "70249673-04bb-41ed-8454-2b3705ea71c7",
         "lesson_activity.key": "d583f55b-bbb7-449d-9aee-5624f531d55f"
+      }
+    },
+    {
+      "key": "546a0e32-424e-4826-a46f-ca1cbee17a88",
+      "position": 1,
+      "properties": {
+        "description": "Today we'll use your micro:bit to create mini weather stations, to help gardeners protect their plants. Plants thrive in specific temperature ranges. Some prefer warm, sunny spots, while others do better in cooler, shadier areas. By monitoring the air temperature with your micro:bit, you can ensure your plants are getting the right environment to flourish and keep them happy and healthy!\n\n**Find the student handout for this project <a href=\"https://docs.google.com/document/d/1xjTj9JoJj2Dp03s0iJQnMZ1VTHyzJhpXA2_s5f9Lpnw/template/preview\" target=\"_blank\">here.</a>**\n\n<i> Note: Pages 3-5 of the student handout include step by step coding directions and are an optional support to provide students. \n\n**Find the code for this project <a href=\"https://makecode.microbit.org/S74177-81726-90206-68462\" target=\"_blank\">here.</a>**",
+        "name": "Plant Protector"
+      },
+      "seeding_key": {
+        "activity_section.key": "546a0e32-424e-4826-a46f-ca1cbee17a88",
+        "lesson_activity.key": "561f078c-261e-4b5f-98de-2468a785914c"
       }
     },
     {
@@ -1760,7 +1812,8 @@
       "position": 1,
       "properties": {
         "description": "Students will make the project themselves using the MakeCode editor and micro:bit simulator. Once they have tested their code in the simulator, they will download their code onto the micro:bits.\n\nPick one:\n- Step by step coding **<a href=\"https://mbit.io/csf-d3-coding\" target=\"_blank\">video</a>**\n- Live micro:bit **<a href=\"https://mbit.io/csf-d3-classroom\" target=\"_blank\">classroom session</a>** ",
-        "name": "Student Coding"
+        "name": "Student Coding",
+        "progression_name": "Rock, paper, scissors with micro:bit"
       },
       "seeding_key": {
         "activity_section.key": "802fbb6b-430b-4603-a502-6f5a86a087c3",
@@ -1791,6 +1844,18 @@
       "seeding_key": {
         "activity_section.key": "1e696ef7-091b-460b-a0a0-1d461e425dc8",
         "lesson_activity.key": "0b7c7490-15d0-4a39-813b-408336e55fe6"
+      }
+    },
+    {
+      "key": "904110ee-d27b-4d2b-8195-c5a9ce5e99e9",
+      "position": 1,
+      "properties": {
+        "description": "Take your micro:bit game skills to the next level with the mystery number guessing game! Code \"if\" statements to check your guess and use variables to store clues. Will you unlock the happy face and victory sound? This activity helps you master events, conditions (if/else), and variables in coding.\n\n**Find the student handout for this project <a href=\"https://docs.google.com/document/d/15441P7GHifYUt9q5r_OIoA0je8sIGfKr10GDLcquOD8/template/preview\" target=\"_blank\">here.</a>**\n\n**Find the code for this project <a href=\"https://makecode.microbit.org/S45914-90251-95525-35036\" target=\"_blank\">here.</a>**",
+        "name": "Shake and Guess"
+      },
+      "seeding_key": {
+        "activity_section.key": "904110ee-d27b-4d2b-8195-c5a9ce5e99e9",
+        "lesson_activity.key": "647bb0af-d9c6-4297-beff-e98ea06574c6"
       }
     },
     {
@@ -1965,7 +2030,8 @@
       "properties": {
         "description": "Students will make the project themselves using the MakeCode editor and micro:bit simulator. Once they have tested their code in the simulator, they will download their code onto the micro:bits.\n\nPick one:\n- Step by step coding **<a href=\"https://mbit.io/csf-d4-coding\" target=\"_blank\">video</a>**\n- Live micro:bit **<a href=\"https://mbit.io/csf-d4-classroom\" target=\"_blank\">classroom session</a>** ",
         "duration": "20",
-        "name": "Student Coding"
+        "name": "Student Coding",
+        "progression_name": "Activity picker with micro:bit"
       },
       "seeding_key": {
         "activity_section.key": "0f41c2d0-c42f-4387-9c8d-c5f9d8f7d0f9",
@@ -1996,6 +2062,18 @@
       "seeding_key": {
         "activity_section.key": "fe76939f-d06f-450f-a6e5-8433eebf43b6",
         "lesson_activity.key": "f2247cf2-35a1-4ca7-9917-b07c53a05e75"
+      }
+    },
+    {
+      "key": "502024ad-a25c-4217-adc5-2b06f0ebe7df",
+      "position": 1,
+      "properties": {
+        "description": "Feeling a little down? Or maybe you're having a great day! Your micro:bit can be your personal companion checking in on your mood and giving suggestions to keep those smiles bright. By utilizing your knowledge of events, conditionals (if/then/else), and variables, you can create a helpful tool for everyday use!\n\n**Find the student handout for this project <a href=\"https://docs.google.com/document/d/1-AEjKmyu0XbFUwgUJVyMHruU8_Axovya-T8IWFz_gcI/template/preview\" target=\"_blank\">here.</a>**\n\n**Find the code for this project <a href=\"https://makecode.microbit.org/S96335-74640-88654-67402\" target=\"_blank\">here.</a>**",
+        "name": "Mood Tracker"
+      },
+      "seeding_key": {
+        "activity_section.key": "502024ad-a25c-4217-adc5-2b06f0ebe7df",
+        "lesson_activity.key": "b397b0f8-dd0c-4edd-add1-eb9dc7bc3a63"
       }
     },
     {
@@ -2806,7 +2884,7 @@
         "lesson.key": "Cristina - Saving sea turtles with micro:bit",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
-        "activity_section.key": "939b383a-716c-4c45-bd4e-0600c3972a1d"
+        "activity_section.key": "b572a02b-6ae0-4602-bb1d-96a7ccdb07c5"
       },
       "level_keys": [
         "course_d_maker_saving_sea_turtles_grade3"
@@ -3181,7 +3259,7 @@
         "lesson.key": "Cristina - Rock, Paper, Scissors with micro:bit",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "grade3-maker-2024",
-        "activity_section.key": "3b38b9e1-9195-420a-96eb-5bc920caa0fc"
+        "activity_section.key": "802fbb6b-430b-4603-a502-6f5a86a087c3"
       },
       "level_keys": [
         "course_d_maker_rock_paper_scissors_grade3"
@@ -3431,7 +3509,7 @@
         "lesson.key": "Cristina - Activity picker with micro:bit",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "grade3-maker-2024",
-        "activity_section.key": "a21f08f9-770a-43ac-be7d-3bc6c9587753"
+        "activity_section.key": "0f41c2d0-c42f-4387-9c8d-c5f9d8f7d0f9"
       },
       "level_keys": [
         "course_d_maker_activity_picker_grade3"
@@ -3820,7 +3898,7 @@
         "lesson.key": "Cristina - Saving sea turtles with micro:bit",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
-        "activity_section.key": "939b383a-716c-4c45-bd4e-0600c3972a1d"
+        "activity_section.key": "b572a02b-6ae0-4602-bb1d-96a7ccdb07c5"
       }
     },
     {
@@ -4000,7 +4078,7 @@
         "lesson.key": "Cristina - Rock, Paper, Scissors with micro:bit",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "grade3-maker-2024",
-        "activity_section.key": "3b38b9e1-9195-420a-96eb-5bc920caa0fc"
+        "activity_section.key": "802fbb6b-430b-4603-a502-6f5a86a087c3"
       }
     },
     {
@@ -4120,7 +4198,7 @@
         "lesson.key": "Cristina - Activity picker with micro:bit",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "grade3-maker-2024",
-        "activity_section.key": "a21f08f9-770a-43ac-be7d-3bc6c9587753"
+        "activity_section.key": "0f41c2d0-c42f-4387-9c8d-c5f9d8f7d0f9"
       }
     }
   ],

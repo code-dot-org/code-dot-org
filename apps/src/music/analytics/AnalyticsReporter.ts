@@ -16,6 +16,7 @@ import {
 import {Block} from 'blockly';
 import {BlockTypes} from '../blockly/blockTypes';
 import {FIELD_SOUNDS_NAME} from '../blockly/constants';
+import DCDO from '@cdo/apps/dcdo';
 
 const API_KEY_ENDPOINT = '/musiclab/analytics_key';
 
@@ -52,6 +53,7 @@ interface SessionEndPayload {
   soundsUsed: string[];
   blockStats: BlockStats;
   featuresUsed: {[feature: string]: boolean};
+  soundsPlayed: {[id: string]: number};
 }
 
 /**
@@ -64,6 +66,7 @@ export default class AnalyticsReporter {
   private identifyObj: Identify;
   private sessionStartTime: number;
   private soundsUsed: Set<string>;
+  private soundsPlayed: {[id: string]: number};
   private blockStats: BlockStats;
   private featuresUsed: {[feature: string]: boolean};
 
@@ -72,6 +75,7 @@ export default class AnalyticsReporter {
     this.identifyObj = new Identify();
     this.sessionStartTime = -1;
     this.soundsUsed = new Set();
+    this.soundsPlayed = {};
     this.blockStats = {
       endingBlockCount: 0,
       endingTriggerBlockCount: 0,
@@ -133,6 +137,8 @@ export default class AnalyticsReporter {
     this.identifyObj.set('userType', userType);
     this.identifyObj.set('signInState', signInState);
 
+    identify(this.identifyObj);
+
     this.log(
       `User properties: userId: ${userId}, userType: ${userType}, signInState: ${signInState}`
     );
@@ -163,6 +169,19 @@ export default class AnalyticsReporter {
     }
 
     track(eventType, payload).promise;
+  }
+
+  onSoundPlayed(id: string) {
+    const shouldReport = DCDO.get('music-lab-samples-report', true);
+    if (!shouldReport) {
+      return;
+    }
+    if (!this.sessionInProgress) {
+      this.log('No session in progress');
+      return;
+    }
+
+    this.soundsPlayed[id] = 1 + (this.soundsPlayed[id] ?? 0);
   }
 
   onBlocksUpdated(blocks: Block[]) {
@@ -227,6 +246,7 @@ export default class AnalyticsReporter {
       soundsUsed: Array.from(this.soundsUsed),
       blockStats: this.blockStats,
       featuresUsed: this.featuresUsed,
+      soundsPlayed: this.soundsPlayed,
     };
 
     track('Session end', payload);

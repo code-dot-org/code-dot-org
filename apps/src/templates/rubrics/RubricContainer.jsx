@@ -255,7 +255,7 @@ export default function RubricContainer({
         })}
       >
         <Steps
-          enabled={canProvideFeedback && productTour}
+          enabled={canProvideFeedback && productTour && teacherHasEnabledAi}
           initialStep={INITIAL_STEP}
           steps={STEPS}
           onStart={onTourStart}
@@ -284,7 +284,7 @@ export default function RubricContainer({
             <span>{i18n.rubricAiHeaderText()}</span>
           </div>
           <div className={style.rubricHeaderRightSide}>
-            {canProvideFeedback && (
+            {canProvideFeedback && teacherHasEnabledAi && (
               <button
                 id="ui-restart-product-tour"
                 aria-label="restart product tour"
@@ -320,13 +320,13 @@ export default function RubricContainer({
           <RubricContent
             productTour={productTour}
             rubric={
-              canProvideFeedback && productTour
+              canProvideFeedback && productTour && teacherHasEnabledAi
                 ? DUMMY_PROPS['rubricDummy']
                 : rubric
             }
             open={open}
             studentLevelInfo={
-              canProvideFeedback && productTour
+              canProvideFeedback && productTour && teacherHasEnabledAi
                 ? DUMMY_PROPS['studentLevelInfoDummy']
                 : studentLevelInfo
             }
@@ -336,7 +336,7 @@ export default function RubricContainer({
             reportingData={reportingData}
             visible={selectedTab === TAB_NAMES.RUBRIC}
             aiEvaluations={
-              canProvideFeedback && productTour
+              canProvideFeedback && productTour && teacherHasEnabledAi
                 ? DUMMY_PROPS['aiEvaluationsDummy']
                 : aiEvaluations
             }

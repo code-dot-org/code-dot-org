@@ -1,7 +1,7 @@
 import QuestionAveragesTable from '@cdo/apps/code-studio/pd/workshop_dashboard/components/survey_results/question_averages_table';
 import React from 'react';
 import {expect} from 'chai';
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 
 describe('Question Averages Table', () => {
   const questions = [

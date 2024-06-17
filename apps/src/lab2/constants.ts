@@ -3,9 +3,7 @@ import {AppName} from './types';
 export const SOURCE_FILE = 'main.json';
 
 export const BLOCKLY_LABS: AppName[] = [
-  'calc',
   'dance',
-  'eval',
   'flappy',
   'music',
   'thebadguys',
@@ -27,3 +25,5 @@ export enum PERMISSIONS {
 }
 
 export const START_SOURCES = 'start_sources';
+
+export const LABS_USING_NEW_SHARE_DIALOG = ['music', 'pythonlab'];

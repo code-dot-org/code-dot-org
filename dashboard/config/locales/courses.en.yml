@@ -693,8 +693,11 @@ en:
         foundations-of-cs-beta-2024:
           title: Foundations of Computer Science BETA
           description_short: ''
-          description_student: ''
-          description_teacher: ''
+          description_student: |-
+            Welcome to Foundations of Computer Science! This exciting course is your gateway to the powerful world of computer science. Whether you're curious about how apps work or want to know more about the impact of technology on society, this course has something for you. Over the semester, you'll learn the basics of programming, dive into how the Internet functions, and even create your own projects that could solve real-world problems.
+
+            ⚠️ **Note:** This is a beta version of the Foundations of CS curriculum that consists primarily of content from our existing Computer Science Discoveries and Computer Science Principles curricula. As such, you will see CSD and CSP labels on activity guides, resources, and slide decks. This will not be the case on the final version of the curriculum!
+          description_teacher: The Foundations of Computer Science (FCS) course is a comprehensive introduction to the vast field of computer science. Designed for high school students, this course integrates fundamental concepts with hands-on practical experience to foster a deep understanding of computing, its capabilities, and its impacts. The curriculum is structured to align with state requirements and CSTA standards, offering a solid foundation in computer science that prepares students for further study and future careers in technology.
           version_title: "'24-'25"
         self-paced-pl-csd-2024:
           title: Teaching CS Discoveries
@@ -897,4 +900,46 @@ en:
             * Professional development is available to help you get started teaching CSA. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Click here</a> to learn more about professional learning opportunities in your region.
 
             * You can find the *Syllabus*, *Course Vocab*, and other resources to help you implement this curriculum in the Teacher Resources menu below.
+          version_title: "'24-'25"
+        focus-on-coding-2024:
+          title: Focus on Coding ('24-'25)
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        focus-on-creativity-2024:
+          title: Focus on Creativity ('24-'25)
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        focus-on-hardware-2024:
+          title: Focus on Hardware ('24-'25)
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        focus-on-design-with-purpose-2024:
+          title: Focus on Design with Purpose ('24-'25)
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        focus-on-impact-in-society-2024:
+          title: Focus on Impact in Society ('24-'25)
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        focus-on-data-2024:
+          title: Focus on Data ('24-'25)
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        self-paced-foundations-cs-2024:
+          title: Foundations of CS
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
           version_title: "'24-'25"

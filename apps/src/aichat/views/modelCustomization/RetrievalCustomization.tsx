@@ -7,10 +7,10 @@ import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElemen
 import modelCustomizationStyles from '../model-customization-workspace.module.scss';
 import styles from './retrieval-customization.module.scss';
 import {isDisabled} from './utils';
-import {
-  setAiCustomizationProperty,
-  updateAiCustomization,
-} from '@cdo/apps/aichat/redux/aichatRedux';
+import {setAiCustomizationProperty} from '@cdo/apps/aichat/redux/aichatRedux';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
+import {useSelector} from 'react-redux';
+import UpdateButton from './UpdateButton';
 
 const RetrievalCustomization: React.FunctionComponent = () => {
   const [newRetrievalContext, setNewRetrievalContext] = useState('');
@@ -23,10 +23,7 @@ const RetrievalCustomization: React.FunctionComponent = () => {
     state => state.aichat.currentAiCustomizations
   );
 
-  const onUpdate = useCallback(
-    () => dispatch(updateAiCustomization()),
-    [dispatch]
-  );
+  const isReadOnly = useSelector(isReadOnlyWorkspace) || isDisabled(visibility);
 
   const onAdd = useCallback(() => {
     dispatch(
@@ -69,7 +66,7 @@ const RetrievalCustomization: React.FunctionComponent = () => {
             id="retrieval-input"
             onChange={event => setNewRetrievalContext(event.target.value)}
             value={newRetrievalContext}
-            disabled={isDisabled(visibility)}
+            disabled={isReadOnly}
           />
         </div>
         <div className={styles.addItemContainer}>
@@ -78,7 +75,7 @@ const RetrievalCustomization: React.FunctionComponent = () => {
             type="secondary"
             onClick={onAdd}
             iconLeft={{iconName: 'plus'}}
-            disabled={!newRetrievalContext || isDisabled(visibility)}
+            disabled={!newRetrievalContext || isReadOnly}
           />
         </div>
         <div className={styles.addedItemsHeaderContainer}>
@@ -88,29 +85,25 @@ const RetrievalCustomization: React.FunctionComponent = () => {
           return (
             <div key={index} className={styles.itemContainer}>
               <span>{message}</span>
-              <button
-                type="button"
-                onClick={() => onRemove(index)}
-                className={styles.removeItemButton}
-                disabled={isDisabled(visibility)}
-              >
-                <FontAwesomeV6Icon
-                  iconName="circle-xmark"
-                  className={styles.removeItemIcon}
-                />
-              </button>
+              {!isReadOnly && (
+                <button
+                  type="button"
+                  onClick={() => onRemove(index)}
+                  className={styles.removeItemButton}
+                  disabled={isDisabled(visibility)}
+                >
+                  <FontAwesomeV6Icon
+                    iconName="circle-xmark"
+                    className={styles.removeItemIcon}
+                  />
+                </button>
+              )}
             </div>
           );
         })}
       </div>
       <div className={modelCustomizationStyles.footerButtonContainer}>
-        <Button
-          text="Update"
-          onClick={onUpdate}
-          iconLeft={{iconName: 'edit'}}
-          className={modelCustomizationStyles.updateButton}
-          disabled={isDisabled(visibility)}
-        />
+        <UpdateButton isDisabledDefault={isReadOnly} />
       </div>
     </div>
   );

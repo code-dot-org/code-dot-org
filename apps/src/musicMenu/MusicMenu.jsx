@@ -1,5 +1,4 @@
 import React from 'react';
-const baseUrl = window.location.origin + '/projectbeats';
 
 const optionsList = [
   {
@@ -108,6 +107,14 @@ const optionsList = [
       },
     ],
   },
+  {
+    name: 'timeline-original-layout',
+    type: 'radio',
+    values: [
+      {value: 'false', description: 'New timeline (default).'},
+      {value: 'true', description: 'Original timeline.'},
+    ],
+  },
 ];
 
 export default class MusicMenu extends React.Component {
@@ -199,7 +206,7 @@ export default class MusicMenu extends React.Component {
           userSelect: 'all',
         }}
       >
-        {baseUrl}?
+        ?
         {optionsList
           .map(option => {
             return (
