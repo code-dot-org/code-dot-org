@@ -1,13 +1,18 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
 
 import LessonProgressColumnHeader from './LessonProgressColumnHeader';
 
 import styles from './progress-table-v2.module.scss';
 import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
 
-export default function SkeletonProgressDataColumn({lesson, sortedStudents}) {
+function SkeletonProgressDataColumn({
+  lesson,
+  sortedStudents,
+  expandedMetadataStudentIds,
+}) {
   return (
     <div className={styles.lessonColumn}>
       <LessonProgressColumnHeader
@@ -25,6 +30,7 @@ export default function SkeletonProgressDataColumn({lesson, sortedStudents}) {
                 styles.lessonSkeletonCell,
                 skeletonizeContent.skeletonizeContent
               )}
+              data-testid={`lesson-skeleton-cell-${student.id}`}
             />
           </div>
         ))}
@@ -36,4 +42,11 @@ export default function SkeletonProgressDataColumn({lesson, sortedStudents}) {
 SkeletonProgressDataColumn.propTypes = {
   sortedStudents: PropTypes.array,
   lesson: PropTypes.object.isRequired,
+  expandedMetadataStudentIds: PropTypes.array,
 };
+
+export const UnconnectedSkeletonProgressDataColumn = SkeletonProgressDataColumn;
+
+export default connect(state => ({
+  expandedMetadataStudentIds: state.sectionProgress.expandedMetadataStudentIds,
+}))(SkeletonProgressDataColumn);
