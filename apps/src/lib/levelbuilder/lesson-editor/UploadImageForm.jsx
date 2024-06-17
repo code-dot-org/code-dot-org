@@ -19,11 +19,10 @@ export default function UploadImageForm() {
   };
 
   const handleChange = e => {
+    resetState();
     if (!e.target.files[0]) {
-      resetState();
       return;
     }
-    resetState();
 
     // assemble upload data
     const formData = new FormData();
