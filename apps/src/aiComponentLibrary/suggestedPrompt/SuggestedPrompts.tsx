@@ -5,7 +5,7 @@ import SuggestedPrompt, {SuggestedPromptProps} from './SuggestedPrompt';
 import moduleStyles from './suggested-prompt.module.scss';
 
 /**
- * Renders a clickable tags that can be customized with a suggested prompt.
+ * Renders clickable tags that can be customized with list of suggested prompts.
  */
 
 interface SuggestedPromptsProps {
