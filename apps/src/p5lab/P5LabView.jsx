@@ -4,8 +4,18 @@ import classNames from 'classnames';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import React from 'react';
-import AnimationTab from './AnimationTab/AnimationTab';
+
+import experiments from '@cdo/apps/util/experiments';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
+import InstructionsWithWorkspace from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
+import {isResponsiveFromState} from '@cdo/apps/templates/ProtectedVisualizationDiv';
+import CodeWorkspace from '@cdo/apps/templates/CodeWorkspace';
+import {getManifest} from '@cdo/apps/assetManagement/animationLibraryApi';
+import ModalFunctionEditor from '@cdo/apps/blockly/components/ModalFunctionEditor';
+import IFrameEmbedOverlay from '@cdo/apps/templates/IFrameEmbedOverlay';
+import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
+
+import AnimationTab from './AnimationTab/AnimationTab';
 import ErrorDialogStack from './ErrorDialogStack';
 import AnimationJsonViewer from './AnimationJsonViewer';
 import {
@@ -16,15 +26,8 @@ import {
 } from './constants';
 import P5LabVisualizationHeader from './P5LabVisualizationHeader';
 import P5LabVisualizationColumn from './P5LabVisualizationColumn';
-import InstructionsWithWorkspace from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
-import {isResponsiveFromState} from '@cdo/apps/templates/ProtectedVisualizationDiv';
-import CodeWorkspace from '@cdo/apps/templates/CodeWorkspace';
 import {allowAnimationMode} from './stateQueries';
-import IFrameEmbedOverlay from '@cdo/apps/templates/IFrameEmbedOverlay';
-import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
 import AnimationPicker, {PICKER_TYPE} from './AnimationPicker/AnimationPicker';
-import {getManifest} from '@cdo/apps/assetManagement/animationLibraryApi';
-import ModalFunctionEditor from '@cdo/apps/blockly/components/ModalFunctionEditor';
 
 /**
  * Top-level React wrapper for GameLab
@@ -138,7 +141,11 @@ class P5LabView extends React.Component {
         <div
           id="visualizationColumn"
           className={visualizationColumnClassNames}
-          style={visualizationColumnStyle}
+          style={
+            experiments.isEnabled(experiments.BIG_PLAYSPACE)
+              ? {}
+              : visualizationColumnStyle
+          }
         >
           <P5LabVisualizationHeader labType={this.props.labType} />
           <P5LabVisualizationColumn
