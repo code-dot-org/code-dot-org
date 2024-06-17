@@ -96,7 +96,13 @@ end
 
 Given /^I am on "([^"]*)"$/ do |url|
   check_window_for_js_errors('before navigation')
-  navigate_to replace_hostname(url)
+  begin
+    navigate_to replace_hostname(url)
+  rescue Selenium::WebDriver::Error::TimeoutError => exception
+    puts "Timeout: I am not on #{url} like I want."
+    puts "         I am on #{@browser.current_url} instead."
+    raise exception
+  end
 end
 
 And /^I take note of the current loaded page$/ do
