@@ -46,30 +46,3 @@ git git_path do
   user node[:user]
   group node[:user]
 end
-
-# The staging server requires a special worktree at a hardcoded location in
-# order to successfully run the `deploy_to_levelbuilder` and
-# `merge_lb_to_staging` scripts.
-if node.chef_environment == 'staging'
-  worktree_path = File.join(home_path, 'deploy-management-repo')
-
-  execute 'create worktree for managing deployment scripts' do
-    command "git worktree add #{worktree_path}"
-    cwd git_path
-    user node[:user]
-    group node[:user]
-    not_if {File.exist? worktree_path}
-  end
-end
-
-if node.chef_environment == 'adhoc'
-  worktree_path = File.join(home_path, 'content-push')
-
-  execute 'create worktree for seeding curriculum content' do
-    command "git worktree add #{worktree_path}"
-    cwd git_path
-    user node[:user]
-    group node[:user]
-    not_if {File.exist? worktree_path}
-  end
-end
