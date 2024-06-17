@@ -1,6 +1,7 @@
 import classnames from 'classnames';
 import React, {useMemo} from 'react';
 
+import CloseButton from '@cdo/apps/componentLibrary/closeButton';
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
@@ -103,11 +104,7 @@ const Alert: React.FunctionComponent<AlertProps> = ({
         <span className={moduleStyles.alertText}>{text}</span>
         {link && <Link {...link} size={size} />}
       </div>
-      {onClose && (
-        <button type="button" onClick={onClose}>
-          x
-        </button>
-      )}
+      {onClose && <CloseButton onClick={onClose} size={'m'} />}
     </div>
   );
 };
