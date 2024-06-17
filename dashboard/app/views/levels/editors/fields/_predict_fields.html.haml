@@ -1,0 +1,64 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#enable_predict"}}
+  Predict Level Settings
+  %p
+    Predict levels are read only for students. Either a free response or multiple choice question is shown to students
+    in the instructions panel. The student must answer the question before they run their code.
+
+#enable_predict.in.collapse
+  #predictCheckbox
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :is_predict_level, description: "Mark as predict level"}
+
+  #predictQuestionType{class: ('collapse' if !@level.is_predict_level)}
+    .field
+      = f.label :predict_question_type, 'Question Type'
+      = f.select :predict_question_type, options_for_select(@level.class.predict_question_types, @level.predict_question_type), {}, onchange: 'toggleFields(this.value);'
+
+  #freeResponseFields{class: ('collapse' if !@level.is_predict_level || @level.predict_question_type != 'free_response')}
+    .field
+      = f.label :predict_placeholder_text
+      %p Placeholder text to show in the answer textarea.
+      = f.text_field :predict_placeholder_text
+    .field
+      = f.label :predict_solution
+      %p Optional solution markdown to display to teachers.
+      = f.text_area :predict_solution, rows: 3, class: "input-block-level"
+
+
+  #multipleChoiceFields{class: ('collapse' if !@level.is_predict_level || @level.predict_question_type != 'multiple_choice')}
+    %p
+      Multiple choice
+
+
+:javascript
+   $('#level_is_predict_level').change(function() {
+    const predictQuestionTypeDropdown = document.getElementById('predictQuestionType');
+    const freeResponseFields = document.getElementById('freeResponseFields');
+    const multipleChoiceFields = document.getElementById('multipleChoiceFields');
+    const predictDropdownValue = document.getElementById('level_predict_question_type').value;
+    if (this.checked) {
+      predictQuestionTypeDropdown.classList.remove('collapse');
+      if (predictDropdownValue == 'free_response') {
+        freeResponseFields.classList.remove('collapse');
+        multipleChoiceFields.classList.add('collapse');
+      } else {
+        freeResponseFields.classList.add('collapse');
+        multipleChoiceFields.classList.remove('collapse');
+      }
+    } else {
+      predictQuestionTypeDropdown.classList.add('collapse');
+      freeResponseFields.classList.add('collapse');
+      multipleChoiceFields.classList.add('collapse');
+    }
+   })
+
+   function toggleFields(val) {
+    const freeResponseFields = document.getElementById('freeResponseFields');
+    const multipleChoiceFields = document.getElementById('multipleChoiceFields');
+    if (val.toLowerCase() === 'free_response') {
+      freeResponseFields.classList.remove('collapse');
+      multipleChoiceFields.classList.add('collapse');
+    } else {
+      freeResponseFields.classList.add('collapse');
+      multipleChoiceFields.classList.remove('collapse');
+    }
+   }

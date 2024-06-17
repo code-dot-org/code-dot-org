@@ -33,7 +33,15 @@ class Pythonlab < Level
     submittable
     starter_assets
     contained_level_names
+    is_predict_level
+    predict_placeholder_text
+    predict_solution
+    predict_question_type
   )
+
+  def self.predict_question_types
+    [['Free response', 'free_response'], ['Multiple choice', 'multiple_choice']]
+  end
 
   def self.create_from_level_builder(params, level_params)
     create!(
