@@ -2,7 +2,8 @@
   Predict Level Settings
   %p
     Predict levels are read only for students. Either a free response or multiple choice question is shown to students
-    in the instructions panel. The student must answer the question before they run their code.
+    in the instructions panel. The student must answer the question before they run their code. Specify the question in
+    long instructions.
 
 #enable_predict.in.collapse
   #predictCheckbox
@@ -23,10 +24,16 @@
       %p Optional solution markdown to display to teachers.
       = f.text_area :predict_solution, rows: 3, class: "input-block-level"
 
-
   #multipleChoiceFields{class: ('collapse' if !@level.is_predict_level || @level.predict_question_type != 'multiple_choice')}
-    %p
-      Multiple choice
+    .field
+      = f.label :predict_question_options, 'Multiple choice options'
+      %p The options for the multiple choice question (click the plus sign to add another option)
+      - @level.predict_question_options = [''] unless @level.predict_question_options.try(:present?)
+      - @level.predict_question_options.each do |option|
+        = text_field_tag 'level[predict_question_options][]', option
+      #plusPredictOption
+        %i.fa.fa-plus-circle
+
 
 
 :javascript
@@ -62,3 +69,10 @@
       multipleChoiceFields.classList.remove('collapse');
     }
    }
+
+  $('#plusPredictOption').on('click', () => {
+    $('#plusPredictOption')
+      .prev()
+      .clone()
+      .insertBefore('#plusPredictOption');
+  });

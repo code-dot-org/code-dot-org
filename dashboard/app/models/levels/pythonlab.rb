@@ -37,6 +37,8 @@ class Pythonlab < Level
     predict_placeholder_text
     predict_solution
     predict_question_type
+    predict_question_options
+    predict_single_correct_answer
   )
 
   def self.predict_question_types
