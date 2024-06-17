@@ -256,78 +256,114 @@ export const CustomizableCurriculumCatalogCard = ({
 
   if (wide) {
     return (
-      <div className={style.wideCard}>
-        <img src={imageSrc} alt={imageAltText} className={style.wideCardImg} />
-        <div className={style.wideCardContentAndButtons}>
-          <div className={style.wideCardContent}>
-            {<CardLabels subjectsAndTopics={subjectsAndTopics} />}
-            <Heading4>{courseDisplayName}</Heading4>
-            <BodyThreeText className={style.wideCardDescription}>
-              {description}
-            </BodyThreeText>
-            <div className={style.iconWithDescription}>
-              <FontAwesome icon="user" className="fa-solid" />
-              <p>{gradeRange}</p>
+      <div className={style.cardsContainer}>
+        <div className={style.wideCard}>
+          <img
+            src={imageSrc}
+            alt={imageAltText}
+            className={style.wideCardImg}
+          />
+          <div className={style.wideCardContentAndButtons}>
+            <div className={style.wideCardContent}>
+              {<CardLabels subjectsAndTopics={subjectsAndTopics} />}
+              <Heading4>{courseDisplayName}</Heading4>
+              <BodyThreeText className={style.wideCardDescription}>
+                {description}
+              </BodyThreeText>
+              <div className={style.iconWithDescription}>
+                <FontAwesome icon="user" className="fa-solid" />
+                <p>{gradeRange}</p>
+              </div>
+              <div className={style.iconWithDescription}>
+                <FontAwesome icon="clock" className="fa-solid" />
+                <p>{duration}</p>
+              </div>
             </div>
-            <div className={style.iconWithDescription}>
-              <FontAwesome icon="clock" className="fa-solid" />
-              <p>{duration}</p>
-            </div>
-          </div>
-          <div
-            className={classNames(
-              style.wideCardButtonsContainer,
-              isEnglish
-                ? style.buttonsContainer_english
-                : style.buttonsContainer_notEnglish
-            )}
-          >
-            <Button
-              color={Button.ButtonColor.neutralDark}
-              type="button"
-              onClick={onQuickViewClick}
-              aria-label={quickViewButtonDescription}
-              text={i18n.quickView()}
-              className={`${style.buttonFlex} ${style.quickViewButton}`}
-            />
-            {isTeacherOrSignedOut && (
-              <>
+            <div
+              className={classNames(
+                style.wideCardButtonsContainer,
+                isEnglish
+                  ? style.buttonsContainer_english
+                  : style.buttonsContainer_notEnglish
+              )}
+            >
+              {onQuickViewClick && (
                 <Button
-                  __useDeprecatedTag
                   color={Button.ButtonColor.neutralDark}
                   type="button"
-                  href={pathToCourse}
-                  aria-label={i18n.learnMoreDescription({
-                    course_name: courseDisplayName,
-                  })}
-                  text={i18n.learnMore()}
-                  className={`${style.buttonFlex} ${style.teacherAndSignedOutLearnMoreButton}`}
+                  onClick={onQuickViewClick}
+                  aria-label={quickViewButtonDescription}
+                  text={i18n.quickView()}
+                  className={`${style.buttonFlex} ${style.quickViewButton}`}
                 />
+              )}
+              {isTeacherOrSignedOut && (
+                <>
+                  <Button
+                    __useDeprecatedTag
+                    color={Button.ButtonColor.neutralDark}
+                    type="button"
+                    href={pathToCourse}
+                    aria-label={i18n.learnMoreDescription({
+                      course_name: courseDisplayName,
+                    })}
+                    text={i18n.learnMore()}
+                    className={`${style.buttonFlex} ${style.teacherAndSignedOutLearnMoreButton}`}
+                  />
+                  <Button
+                    color={Button.ButtonColor.brandSecondaryDefault}
+                    type="button"
+                    onClick={() => handleClickAssign('wide-card')}
+                    aria-label={assignButtonDescription}
+                    text={assignButtonText}
+                    className={style.buttonFlex}
+                  />
+                </>
+              )}
+              {!isTeacherOrSignedOut && (
                 <Button
+                  __useDeprecatedTag
                   color={Button.ButtonColor.brandSecondaryDefault}
                   type="button"
-                  onClick={() => handleClickAssign('wide-card')}
-                  aria-label={assignButtonDescription}
-                  text={assignButtonText}
-                  className={style.buttonFlex}
+                  href={pathToCourse}
+                  aria-label={i18n.tryCourseNow({
+                    course_name: courseDisplayName,
+                  })}
+                  text={i18n.tryNow()}
+                  className={`${style.buttonFlex} ${style.studentLearnMoreButton}`}
                 />
-              </>
-            )}
-            {!isTeacherOrSignedOut && (
-              <Button
-                __useDeprecatedTag
-                color={Button.ButtonColor.brandSecondaryDefault}
-                type="button"
-                href={pathToCourse}
-                aria-label={i18n.tryCourseNow({
-                  course_name: courseDisplayName,
-                })}
-                text={i18n.tryNow()}
-                className={`${style.buttonFlex} ${style.studentLearnMoreButton}`}
-              />
-            )}
+              )}
+            </div>
           </div>
         </div>
+        {isExpanded && (
+          <ExpandedCurriculumCatalogCard
+            courseKey={courseKey}
+            courseDisplayName={courseDisplayName}
+            duration={duration}
+            gradeRange={gradeRange}
+            subjectsAndTopics={subjectsAndTopics}
+            deviceCompatibility={deviceCompatibility}
+            description={description}
+            professionalLearningProgram={professionalLearningProgram}
+            video={video}
+            publishedDate={publishedDate}
+            selfPacedPlCourseOfferingPath={selfPacedPlCourseOfferingPath}
+            pathToCourse={pathToCourse}
+            assignButtonOnClick={handleClickAssign}
+            assignButtonDescription={assignButtonDescription}
+            onClose={onQuickViewClick}
+            handleSetExpandedCardKey={handleSetExpandedCardKey}
+            isInUS={isInUS}
+            imageSrc={imageSrc}
+            imageAltText={imageAltText}
+            availableResources={availableResources}
+            isSignedOut={isSignedOut}
+            isTeacher={isTeacher}
+            recommendedSimilarCurriculum={recommendedSimilarCurriculum}
+            recommendedStretchCurriculum={recommendedStretchCurriculum}
+          />
+        )}
         {isAssignDialogOpen && renderAssignDialog()}
       </div>
     );
@@ -377,14 +413,16 @@ export const CustomizableCurriculumCatalogCard = ({
                   : style.buttonsContainer_notEnglish
               )}
             >
-              <Button
-                onClick={onQuickViewClick}
-                ariaLabel={quickViewButtonDescription}
-                text={i18n.quickView()}
-                className={`${style.buttonFlex} ${style.quickViewButton}`}
-                type="secondary"
-                color={buttonColors.black}
-              />
+              {onQuickViewClick && (
+                <Button
+                  onClick={onQuickViewClick}
+                  ariaLabel={quickViewButtonDescription}
+                  text={i18n.quickView()}
+                  className={`${style.buttonFlex} ${style.quickViewButton}`}
+                  type="secondary"
+                  color={buttonColors.black}
+                />
+              )}
               {isTeacherOrSignedOut && (
                 <>
                   <LinkButton
