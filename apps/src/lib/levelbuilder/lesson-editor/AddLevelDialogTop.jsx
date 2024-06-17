@@ -121,7 +121,7 @@ function AddLevelDialogTop(props) {
 
 AddLevelDialogTop.propTypes = {
   addLevel: PropTypes.func.isRequired,
-  currentLevelIds: PropTypes.array.isRequired,
+  currentLevelIds: PropTypes.array,
 
   // from redux
   searchOptions: PropTypes.object.isRequired,
