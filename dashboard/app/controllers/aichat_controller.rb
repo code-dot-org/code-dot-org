@@ -18,6 +18,11 @@ class AichatController < ApplicationController
 
     response_body = get_response_body
     response_body[:session_id] = log_chat_session(response_body[:messages])
+
+    # Rails controller tests reuse the same controller instance across requests within a test,
+    # which causes tests to fail. Nulling out the session ID before responding fixes this issue.
+    # More detail/other confused developers here: https://github.com/rails/rails/issues/24566
+    @session_id = nil
     render(status: :ok, json: response_body)
   end
 
@@ -68,7 +73,7 @@ class AichatController < ApplicationController
         context: {
           model_response: latest_assistant_response,
           flagged_content: filter_result.content,
-          aichat_session_id: session_id
+          aichat_session_id: log_chat_session(messages)
         }
       )
 
@@ -101,15 +106,20 @@ class AichatController < ApplicationController
   end
 
   private def log_chat_session(new_messages)
+    # Allows us to create/update a new session when we log to Honeybadger
+    # and reuse it when we respond to the client.
+    return @session_id if @session_id
+
     if params[:sessionId].present?
       session_id = params[:sessionId]
       session = AichatSession.find_by(id: session_id)
       if session && matches_existing_session?(session)
-        return update_session(session, new_messages)
+        @session_id = update_session(session, new_messages)
+        return @session_id
       end
     end
 
-    create_session(new_messages)
+    @session_id = create_session(new_messages)
   end
 
   private def matches_existing_session?(session)
