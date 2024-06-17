@@ -61,6 +61,8 @@ const defaultConfig: ConfigType = {
       action: () => window.alert('You are already on the file browser'),
     },
   ],
+
+  /*
   gridLayoutRows: '1fr 1fr 1fr 48px',
   gridLayoutColumns: '300px minmax(0, 1fr)',
   gridLayout: `
@@ -68,7 +70,12 @@ const defaultConfig: ConfigType = {
     "file-browser workspace"
     "file-browser console"
     "file-browser control-buttons"
-  `,
+ `,
+ */
+
+  gridLayoutRows: '1fr',
+  gridLayoutColumns: '1.2fr 0.8fr',
+  gridLayout: '"workspace info-panel"',
 };
 
 const PythonlabView: React.FunctionComponent = () => {

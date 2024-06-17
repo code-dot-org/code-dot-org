@@ -12,6 +12,12 @@ import {ProjectLevelData} from '../../types';
 import {ThemeContext} from '../ThemeWrapper';
 const commonI18n = require('@cdo/locale');
 
+import ControlButtons from '../../../codebridge/ControlButtons';
+import Console from '../../../codebridge/Console';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import aiBotIcon from '@cdo/static/aichat/ai-bot-icon.svg';
+const Typist = require('react-typist').default;
+
 interface InstructionsProps {
   /** Additional callback to fire before navigating to the next level. */
   beforeNextLevel?: () => void;
@@ -152,6 +158,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
 }) => {
   const [showBigImage, setShowBigImage] = useState(false);
   const [isFinished, setIsFinished] = useState(false);
+  const [showAiHelp, setShowAiHelp] = useState(false);
 
   const imageClicked = () => {
     setShowBigImage(!showBigImage);
@@ -177,6 +184,19 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
 
   const finalMessage =
     'You finished this lesson! Check in with your teacher for the next activity';
+
+  const codeOutput = useAppSelector(
+    state => state.codebridgeConsole.output
+  ).filter(text => ['system_out', 'system_in'].includes(text.type));
+
+  const done = codeOutput.find(
+    text => text.contents.includes('FAILED') || text.contents.includes('OK')
+  );
+  const succeeded = !codeOutput.find(text => text.contents.includes('FAILED'));
+
+  if (done) {
+    console.log(succeeded);
+  }
 
   return (
     <div
@@ -243,15 +263,92 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
             />
           </div>
         )}
-        {(message || canShowContinueButton || canShowFinishButton) && (
+
+        {codeOutput.length > 0 && (
+          <div id="instructions-text" className={moduleStyles['text-' + theme]}>
+            <div
+              id="instructions-feedback-message"
+              className={moduleStyles['message-' + theme]}
+            >
+              <Console />
+            </div>
+          </div>
+        )}
+
+        {done && succeeded && (
           <div
-            key={messageIndex + ' - ' + message}
-            id="instructions-feedback"
-            className={moduleStyles.feedback}
+            id="instructions-text"
+            className={classNames(
+              moduleStyles['text-' + theme],
+              moduleStyles.fullMessage
+            )}
           >
             <div
               id="instructions-feedback-message"
               className={moduleStyles['message-' + theme]}
+            >
+              Nice work. You passed all the tests.
+            </div>
+          </div>
+        )}
+
+        {done && !succeeded && (
+          <div
+            id="instructions-text"
+            className={classNames(
+              moduleStyles['text-' + theme],
+              moduleStyles.fullMessage
+            )}
+          >
+            <div
+              id="instructions-feedback-message"
+              className={moduleStyles['message-' + theme]}
+            >
+              <div className={moduleStyles.aiHelp}>
+                <img src={aiBotIcon} alt="An icon depicting a robot" />
+                {!showAiHelp && (
+                  <button
+                    id="ai-help"
+                    type="button"
+                    onClick={() => setShowAiHelp(true)}
+                    className={classNames(
+                      moduleStyles.buttonInstruction,
+                      moduleStyles.buttonAiHelp
+                    )}
+                  >
+                    I would like some help
+                  </button>
+                )}
+                {showAiHelp && (
+                  <Typist
+                    cursor={{show: false}}
+                    className={moduleStyles.textAiHelp}
+                  >
+                    Okay, let's take a look at what's going on. You seem to have
+                    some tests that are failing. Read the error messages
+                    carefully.
+                  </Typist>
+                )}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {(message || canShowContinueButton || canShowFinishButton) && (
+          <div
+            key={messageIndex + ' - ' + message}
+            id="instructions-feedback"
+            className={classNames(
+              moduleStyles.feedback,
+              moduleStyles.feedbackBottom
+            )}
+          >
+            <div
+              id="instructions-feedback-message"
+              className={classNames(
+                moduleStyles['message-' + theme],
+                moduleStyles.horizontalButtons
+              )}
             >
               {message && (
                 <EnhancedSafeMarkdown
@@ -260,12 +357,16 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                   handleInstructionsTextClick={handleInstructionsTextClick}
                 />
               )}
-              {canShowContinueButton && (
+              {canShowContinueButton && <ControlButtons />}
+              {done && succeeded && canShowContinueButton && (
                 <button
                   id="instructions-continue-button"
                   type="button"
                   onClick={onNextPanel}
-                  className={moduleStyles.buttonInstruction}
+                  className={classNames(
+                    moduleStyles.buttonInstruction,
+                    moduleStyles.buttonInstructionContinue
+                  )}
                 >
                   {commonI18n.continue()}
                 </button>

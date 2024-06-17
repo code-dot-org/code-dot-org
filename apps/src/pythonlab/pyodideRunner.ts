@@ -5,6 +5,7 @@ import {getTestRunnerScript} from './pythonHelpers/scripts';
 import {appendSystemMessage} from '@codebridge/redux/consoleRedux';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import {getFileByName} from '@cdo/apps/lab2/projects/utils';
+import {resetOutput} from '@codebridge/redux/consoleRedux';
 
 export function handleRunClick(
   runTests: boolean,
@@ -13,12 +14,17 @@ export function handleRunClick(
   source: MultiFileSource | undefined
 ) {
   // For now, restrict running python code to levelbuilders.
+  /*
   if (!permissions.includes('levelbuilder')) {
     dispatch(
       appendSystemMessage('You do not have permission to run python code.')
     );
     return;
   }
+  */
+
+  dispatch(resetOutput());
+
   if (!source) {
     dispatch(appendSystemMessage('You have no code to run.'));
     return;
