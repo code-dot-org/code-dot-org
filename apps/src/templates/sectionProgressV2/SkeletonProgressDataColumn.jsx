@@ -10,18 +10,22 @@ import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.m
 
 const getId = (student, lesson) => student.id + '.' + lesson.id;
 
-const getSkeletonCell = id => (
+const skeletonContent = (
+  <div
+    className={classNames(
+      styles.lessonSkeletonCell,
+      skeletonizeContent.skeletonizeContent
+    )}
+  />
+);
+
+const getSkeletonCell = (id, key = undefined) => (
   <div
     className={classNames(styles.gridBox, styles.gridBoxLesson)}
-    key={id}
+    key={key}
     data-testid={'lesson-skeleton-cell-' + id}
   >
-    <div
-      className={classNames(
-        styles.lessonSkeletonCell,
-        skeletonizeContent.skeletonizeContent
-      )}
-    />
+    {skeletonContent}
   </div>
 );
 
@@ -32,23 +36,13 @@ const getMetadataExpandedSkeletonCell = id => (
       className={classNames(styles.gridBox, styles.gridBoxMetadata)}
       data-testid={'lesson-skeleton-cell-' + id + '-time-spent'}
     >
-      <div
-        className={classNames(
-          styles.lessonSkeletonCell,
-          skeletonizeContent.skeletonizeContent
-        )}
-      />
+      {skeletonContent}
     </div>
     <div
       className={classNames(styles.gridBox, styles.gridBoxMetadata)}
       data-testid={'lesson-skeleton-cell-' + id + '-last-updated'}
     >
-      <div
-        className={classNames(
-          styles.lessonSkeletonCell,
-          skeletonizeContent.skeletonizeContent
-        )}
-      />
+      {skeletonContent}
     </div>
   </div>
 );
@@ -68,7 +62,7 @@ function SkeletonProgressDataColumn({
         {sortedStudents.map(student =>
           expandedMetadataStudentIds.includes(student.id)
             ? getMetadataExpandedSkeletonCell(getId(student, lesson))
-            : getSkeletonCell(getId(student, lesson))
+            : getSkeletonCell(getId(student, lesson), getId(student, lesson))
         )}
       </div>
     </div>
