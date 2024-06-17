@@ -35,10 +35,17 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
   const [linkData, setLinkData] = useState<ExtraLinksResponse | null>(null);
 
   useEffect(() => {
+    const extraLinksPermissions = [
+      PERMISSIONS.LEVELBUILDER,
+      PERMISSIONS.PROJECT_VALIDATOR,
+    ];
     const permissionData = data
       ? (data as PermissionResponse)
       : {permissions: []};
-    if (permissionData.permissions.includes(PERMISSIONS.LEVELBUILDER)) {
+    const hasExtraLinksPermission = extraLinksPermissions.some(permission =>
+      permissionData.permissions.includes(permission)
+    );
+    if (hasExtraLinksPermission) {
       try {
         HttpClient.fetchJson<ExtraLinksResponse>(
           `/levels/${levelId}/extra_links`
@@ -46,7 +53,7 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
           setLinkData(response.value);
         });
       } catch (e) {
-        console.error('Error fetching extra links', e);
+        console.error('Error fetching levelbuilder extra links', e);
       }
     }
   }, [data, levelId]);
@@ -55,7 +62,10 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
     ? (data as PermissionResponse)
     : {permissions: []};
 
-  if (!permissionData.permissions.includes(PERMISSIONS.LEVELBUILDER)) {
+  if (
+    !permissionData.permissions.includes(PERMISSIONS.LEVELBUILDER) &&
+    !permissionData.permissions.includes(PERMISSIONS.PROJECT_VALIDATOR)
+  ) {
     return <></>;
   }
 
