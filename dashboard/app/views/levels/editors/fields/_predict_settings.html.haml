@@ -1,0 +1,85 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#predict-settings-container"}}
+  Predict Level Settings
+
+  #predict-settings-container.in.collapse
+
+
+- content_for :body_scripts do
+  %script{src: webpack_asset_path('js/levels/editors/fields/_predict_settings.js'),
+        data: {predictsettings: (@level.properties["predict_settings"]).to_json}}
+-#   %p
+-#     Predict levels are read only for students. Either a free response or multiple choice question is shown to students
+-#     in the instructions panel. The student must answer the question before they run their code. Specify the question in
+-#     long instructions.
+
+-# #enable_predict.in.collapse
+-#   #predictCheckbox
+-#     = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :is_predict_level, description: "Mark as predict level"}
+
+-#   #predictQuestionType{class: ('collapse' if !@level.is_predict_level)}
+-#     .field
+-#       = f.label :predict_question_type, 'Question Type'
+-#       = f.select :predict_question_type, options_for_select(@level.class.predict_question_types, @level.predict_question_type), {}, onchange: 'toggleFields(this.value);'
+
+-#   #freeResponseFields{class: ('collapse' if !@level.is_predict_level || @level.predict_question_type != 'free_response')}
+-#     .field
+-#       = f.label :predict_placeholder_text
+-#       %p Placeholder text to show in the answer textarea.
+-#       = f.text_field :predict_placeholder_text
+-#     .field
+-#       = f.label :predict_solution
+-#       %p Optional solution markdown to display to teachers.
+-#       = f.text_area :predict_solution, rows: 3, class: "input-block-level"
+
+-#   #multipleChoiceFields{class: ('collapse' if !@level.is_predict_level || @level.predict_question_type != 'multiple_choice')}
+-#     .field
+-#       = f.label :predict_question_options, 'Multiple choice options'
+-#       %p The options for the multiple choice question (click the plus sign to add another option)
+-#       - @level.predict_question_options = [''] unless @level.predict_question_options.try(:present?)
+-#       - @level.predict_question_options.each do |option|
+-#         = text_field_tag 'level[predict_question_options][]', option
+-#       #plusPredictOption
+-#         %i.fa.fa-plus-circle
+
+
+
+-# :javascript
+-#    $('#level_is_predict_level').change(function() {
+-#     const predictQuestionTypeDropdown = document.getElementById('predictQuestionType');
+-#     const freeResponseFields = document.getElementById('freeResponseFields');
+-#     const multipleChoiceFields = document.getElementById('multipleChoiceFields');
+-#     const predictDropdownValue = document.getElementById('level_predict_question_type').value;
+-#     if (this.checked) {
+-#       predictQuestionTypeDropdown.classList.remove('collapse');
+-#       if (predictDropdownValue == 'free_response') {
+-#         freeResponseFields.classList.remove('collapse');
+-#         multipleChoiceFields.classList.add('collapse');
+-#       } else {
+-#         freeResponseFields.classList.add('collapse');
+-#         multipleChoiceFields.classList.remove('collapse');
+-#       }
+-#     } else {
+-#       predictQuestionTypeDropdown.classList.add('collapse');
+-#       freeResponseFields.classList.add('collapse');
+-#       multipleChoiceFields.classList.add('collapse');
+-#     }
+-#    })
+
+-#    function toggleFields(val) {
+-#     const freeResponseFields = document.getElementById('freeResponseFields');
+-#     const multipleChoiceFields = document.getElementById('multipleChoiceFields');
+-#     if (val.toLowerCase() === 'free_response') {
+-#       freeResponseFields.classList.remove('collapse');
+-#       multipleChoiceFields.classList.add('collapse');
+-#     } else {
+-#       freeResponseFields.classList.add('collapse');
+-#       multipleChoiceFields.classList.remove('collapse');
+-#     }
+-#    }
+
+-#   $('#plusPredictOption').on('click', () => {
+-#     $('#plusPredictOption')
+-#       .prev()
+-#       .clone()
+-#       .insertBefore('#plusPredictOption');
+-#   });

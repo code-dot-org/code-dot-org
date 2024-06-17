@@ -32,8 +32,8 @@ class Pythonlab < Level
     is_project_level
     submittable
     starter_assets
-    contained_level_names
     is_predict_level
+    predict_settings
     predict_placeholder_text
     predict_solution
     predict_question_type
