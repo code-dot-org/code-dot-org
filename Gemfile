@@ -365,3 +365,6 @@ gem 'http', '~> 5.0'
 gem 'statsig', '~> 1.33'
 
 gem 'mailjet', '~> 1.7.3'
+
+gem 'graphql'
+
