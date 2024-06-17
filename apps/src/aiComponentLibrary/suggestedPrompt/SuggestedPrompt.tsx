@@ -9,21 +9,20 @@ import moduleStyles from './suggested-prompt.module.scss';
 export interface SuggestedPromptProps {
   onClick: () => void;
   label: string;
-  hide: boolean;
+  show: boolean;
 }
 
 const SuggestedPrompt: React.FunctionComponent<SuggestedPromptProps> = ({
   onClick,
   label,
-  hide
+  show,
 }) => (
   <>
-  {!hide ? (
-    <div onClick={onClick} className={moduleStyles.tag}>
-    <span>{label}</span>
-  </div>
-  ): null 
-  }
+    {show ? (
+      <div onClick={onClick} className={moduleStyles.prompt}>
+        <span>{label}</span>
+      </div>
+    ) : null}
   </>
 );
 export default SuggestedPrompt;

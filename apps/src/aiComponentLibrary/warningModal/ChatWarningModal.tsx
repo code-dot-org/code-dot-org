@@ -1,12 +1,12 @@
 import React from 'react';
 
+import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
 import {
   BodyTwoText,
   Heading3,
   StrongText,
 } from '@cdo/apps/componentLibrary/typography';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
-import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
 import i18n from '@cdo/locale';
 
 import moduleStyles from './warning-modal.module.scss';
