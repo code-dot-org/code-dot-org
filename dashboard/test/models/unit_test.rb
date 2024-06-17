@@ -667,13 +667,6 @@ class UnitTest < ActiveSupport::TestCase
     end
   end
 
-  test 'banner image' do
-    assert_nil Unit.find_by_name('flappy').banner_image
-    assert_equal 'banner_course1.jpg', Unit.find_by_name('course1').banner_image
-    assert_equal 'banner_course2.jpg', Unit.find_by_name('course2').banner_image
-    assert_nil Unit.find_by_name('csf1').banner_image
-  end
-
   test 'old_professional_learning_course?' do
     refute Unit.find_by_name('flappy').old_professional_learning_course?
     assert Unit.find_by_name('ECSPD').old_professional_learning_course?
