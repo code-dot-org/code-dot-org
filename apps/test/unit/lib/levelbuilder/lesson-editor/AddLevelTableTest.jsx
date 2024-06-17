@@ -14,6 +14,7 @@ describe('AddLevelTable', () => {
       currentPage: 1,
       setCurrentPage,
       numPages: 7,
+      isInLesson: false,
       levels: [
         {
           id: 1,
