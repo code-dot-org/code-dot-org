@@ -999,27 +999,6 @@ class Unit < ApplicationRecord
     name == 'algebra'
   end
 
-  def banner_image
-    if has_banner?
-      "banner_#{name}.jpg"
-    end
-  end
-
-  def has_banner?
-    # Temporarily remove Course A-F banner (wrong size) - Josh L.
-    return true if csf_international?
-    return false if csf?
-
-    [
-      Unit::CSP17_UNIT1_NAME,
-      Unit::CSP17_UNIT2_NAME,
-      Unit::CSP17_UNIT3_NAME,
-      Unit::CSP_UNIT1_NAME,
-      Unit::CSP_UNIT2_NAME,
-      Unit::CSP_UNIT3_NAME,
-    ].include?(name)
-  end
-
   def has_peer_reviews?
     peer_reviews_to_complete.try(:>, 0)
   end
