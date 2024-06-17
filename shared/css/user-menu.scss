@@ -200,4 +200,16 @@
       padding-left: 10px;
     }
   }
+
+  @media screen and (max-width: 1023px) {
+    &.show-small-desktop {
+      display: none !important;
+    }
+  }
+
+  @media screen and (max-width: 1120px) {
+    &.hide-mobile {
+      display: none;
+    }
+  }
 }

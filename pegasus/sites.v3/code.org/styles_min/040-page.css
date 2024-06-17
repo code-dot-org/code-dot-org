@@ -607,10 +607,9 @@ nav.main #hamburger #hamburger-icon {
   margin-inline-start: 6px;
 }
 
-@media (max-width: 1023px) {
-  nav.main .create_menu {
-    display: none !important;
-  }
+nav.main #hamburger #hamburger-contents {
+  top: 51px;
+  right: -3px;
 }
 
 /* Show the hamburger on small desktop
