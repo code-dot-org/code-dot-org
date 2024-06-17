@@ -12,6 +12,7 @@ describe('AddLevelDialogTop', () => {
     defaultProps = {
       addLevel,
       searchOptions: searchOptions,
+      currentLevelIds: [],
     };
   });
 
