@@ -16,6 +16,8 @@ import {
 // import style from '@cdo/apps/applab/designElements/copy-element-to-screen-button.module.scss';
 import style from './expand-all-rows-dropdown.module.scss';
 
+const DROPDOWN_OFFSET = 184;
+
 // based on CopyElementToScreenButton
 function OpenAllStudentProgressButton({
   students,
@@ -39,12 +41,15 @@ function OpenAllStudentProgressButton({
 
   const getMenuLocation = () => {
     const rect = elementRef.current.firstChild.getBoundingClientRect();
+    console.log(
+      rect.bottom,
+      window.pageYOffset,
+      rect.right,
+      window.pageXOffset
+    );
     return {
       menuTop: rect.bottom + window.pageYOffset,
-      menuLeft:
-        rect.left +
-        window.pageXOffset -
-        elementRef.current.firstChild.offsetWidth,
+      menuLeft: rect.right + window.pageXOffset - DROPDOWN_OFFSET,
     };
   };
 
@@ -96,7 +101,7 @@ function OpenAllStudentProgressButton({
         <PopUpMenu
           isOpen={opened}
           targetPoint={targetPoint}
-          offset={{x: 0, y: 0}}
+          offset={{x: -elementRef.current.firstChild.offsetWidth, y: 5}}
           onClose={onClose}
           className={style.menu}
         >
