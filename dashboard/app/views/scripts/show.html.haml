@@ -24,11 +24,6 @@
     #notification
     -# This div ends up being owned by UnitOverviewHeader in react
     #lesson-heading-extras
-      - if @script.banner_image
-        %p
-          - path = script_next_path(@script)
-          - path += "?section_id=#{params[:section_id]}" if params[:section_id]
-          = link_to image_tag(@script.banner_image), path, class: 'uitest-script-next-banner'
 
     #stats
       .user-stats-block
