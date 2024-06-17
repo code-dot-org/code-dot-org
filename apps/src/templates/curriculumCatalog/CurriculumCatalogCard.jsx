@@ -4,6 +4,10 @@ import classNames from 'classnames';
 import {concat, intersection} from 'lodash';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from '@cdo/apps/templates/Button';
+import {
+  Button as DesignSystemButton,
+  LinkButton as DesignSystemLinkButton,
+} from '@cdo/apps/componentLibrary/button';
 import i18n from '@cdo/locale';
 import {
   translatedCourseOfferingCsTopics,
@@ -31,6 +35,7 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import ExpandedCurriculumCatalogCard from './ExpandedCurriculumCatalogCard';
 import {defaultImageSrc} from './curriculumCatalogConstants';
+import {BodyThreeText, Heading4} from '@cdo/apps/componentLibrary/typography';
 
 const CurriculumCatalogCard = ({
   courseKey,
@@ -187,6 +192,7 @@ const CustomizableCurriculumCatalogCard = ({
   availableResources,
   recommendedSimilarCurriculum,
   recommendedStretchCurriculum,
+  wide,
   ...props
 }) => {
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
@@ -241,6 +247,124 @@ const CustomizableCurriculumCatalogCard = ({
       );
     }
   };
+
+  if (wide) {
+    return (
+      <div className={style.cardsContainer}>
+        <div className={style.wideCard}>
+          <img
+            src={imageSrc}
+            alt={imageAltText}
+            className={style.wideCardImg}
+          />
+          <div className={style.wideCardContentAndButtons}>
+            <div className={style.wideCardContent}>
+              {<CardLabels subjectsAndTopics={subjectsAndTopics} />}
+              <Heading4>{courseDisplayName}</Heading4>
+              <BodyThreeText className={style.wideCardDescription}>
+                {description}
+              </BodyThreeText>
+              <div className={style.wideCardAspects}>
+                <div className={style.iconWithDescription}>
+                  <FontAwesome icon="user" className="fa-solid" />
+                  <p>{gradeRange}</p>
+                </div>
+                <div className={style.iconWithDescription}>
+                  <FontAwesome icon="clock" className="fa-solid" />
+                  <p>{duration}</p>
+                </div>
+              </div>
+            </div>
+            <div
+              className={classNames(
+                style.wideCardButtonsContainer,
+                isEnglish
+                  ? style.buttonsContainer_english
+                  : style.buttonsContainer_notEnglish
+              )}
+            >
+              {onQuickViewClick && (
+                <DesignSystemButton
+                  color="gray"
+                  type="secondary"
+                  size="m"
+                  onClick={onQuickViewClick}
+                  aria-label={quickViewButtonDescription}
+                  text={i18n.quickView()}
+                  className={`${style.buttonFlex} ${style.quickViewButton}`}
+                />
+              )}
+              {isTeacherOrSignedOut && (
+                <>
+                  <DesignSystemLinkButton
+                    color="gray"
+                    type="secondary"
+                    size="m"
+                    href={pathToCourse}
+                    aria-label={i18n.learnMoreDescription({
+                      course_name: courseDisplayName,
+                    })}
+                    text={i18n.learnMore()}
+                    className={`${style.buttonFlex} ${style.teacherAndSignedOutLearnMoreButton}`}
+                  />
+                  <DesignSystemButton
+                    color="purple"
+                    type="primary"
+                    size="m"
+                    onClick={() => handleClickAssign('wide-card')}
+                    aria-label={assignButtonDescription}
+                    text={assignButtonText}
+                    className={style.buttonFlex}
+                  />
+                </>
+              )}
+              {!isTeacherOrSignedOut && (
+                <DesignSystemLinkButton
+                  color="purple"
+                  type="primary"
+                  href={pathToCourse}
+                  aria-label={i18n.tryCourseNow({
+                    course_name: courseDisplayName,
+                  })}
+                  text={i18n.tryNow()}
+                  className={`${style.buttonFlex} ${style.studentLearnMoreButton}`}
+                />
+              )}
+            </div>
+          </div>
+        </div>
+        {isExpanded && (
+          <ExpandedCurriculumCatalogCard
+            courseKey={courseKey}
+            courseDisplayName={courseDisplayName}
+            duration={duration}
+            gradeRange={gradeRange}
+            subjectsAndTopics={subjectsAndTopics}
+            deviceCompatibility={deviceCompatibility}
+            description={description}
+            professionalLearningProgram={professionalLearningProgram}
+            video={video}
+            publishedDate={publishedDate}
+            selfPacedPlCourseOfferingPath={selfPacedPlCourseOfferingPath}
+            pathToCourse={pathToCourse}
+            assignButtonOnClick={handleClickAssign}
+            assignButtonDescription={assignButtonDescription}
+            onClose={onQuickViewClick}
+            handleSetExpandedCardKey={handleSetExpandedCardKey}
+            isInUS={isInUS}
+            imageSrc={imageSrc}
+            imageAltText={imageAltText}
+            availableResources={availableResources}
+            isSignedOut={isSignedOut}
+            isTeacher={isTeacher}
+            recommendedSimilarCurriculum={recommendedSimilarCurriculum}
+            recommendedStretchCurriculum={recommendedStretchCurriculum}
+          />
+        )}
+        {isAssignDialogOpen && renderAssignDialog()}
+      </div>
+    );
+  }
 
   return (
     <div className={style.cardsContainer}>
@@ -405,6 +529,8 @@ CustomizableCurriculumCatalogCard.propTypes = {
   availableResources: PropTypes.object,
   recommendedSimilarCurriculum: PropTypes.object,
   recommendedStretchCurriculum: PropTypes.object,
+
+  wide: PropTypes.bool,
 };
 
 export default connect(
