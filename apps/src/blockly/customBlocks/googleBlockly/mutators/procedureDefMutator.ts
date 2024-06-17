@@ -159,9 +159,11 @@ export const procedureDefMutator = {
 
     setBlockDescription(this, state['description']);
     this.doProcedureUpdate();
-    this.setDeletable(state['initialDeleteConfig'] === false ? false : true);
-    this.setEditable(state['initialEditConfig'] === false ? false : true);
-    this.setMovable(state['initialMoveConfig'] === false ? false : true);
+    if (!Blockly.useModalFunctionEditor) {
+      this.setDeletable(state['initialDeleteConfig'] === false ? false : true);
+      this.setEditable(state['initialEditConfig'] === false ? false : true);
+      this.setMovable(state['initialMoveConfig'] === false ? false : true);
+    }
     this.setStatements_(state['hasStatements'] === false ? false : true);
     this.userCreated = state['userCreated'];
   },

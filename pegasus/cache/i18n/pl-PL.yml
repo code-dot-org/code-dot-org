@@ -2605,6 +2605,7 @@ pl-PL:
   user_header_artist: 'Artysta '
   user_header_create: 'Twórz '
   user_header_create_account: Utwórz konto
+  user_header_create_account_low_cap: Utwórz konto
   user_header_dance: Potańcówka
   user_header_flappy: Flappy
   user_header_gamelab: Laboratorium Gier (Game Lab)
@@ -2614,6 +2615,7 @@ pl-PL:
   user_header_music: Laboratorium muzyczne
   user_header_my_projects: Moje projekty
   user_header_new_project: Nowy projekt
+  user_header_new_project_low_cap: Nowy projekt
   user_header_playlab: Lab Gier
   user_header_settings: Ustawienia konta
   user_header_signin: Zaloguj się

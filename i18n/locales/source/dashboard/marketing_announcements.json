@@ -14,6 +14,9 @@
       "title": "Introducing Music Lab",
       "body": "Get creative with your favorite artist's music and code new songs and mixes!",
       "buttonText": "Learn more"
+    },
+    "lms-launch": {
+      "buttonText": "Learn more"
     }
   }
 }
