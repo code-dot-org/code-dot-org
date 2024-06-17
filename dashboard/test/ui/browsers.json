@@ -31,6 +31,7 @@
     "appium:deviceName": "iPhone Simulator",
     "appium:automationName": "XCUITest",
     "appium:mobile": true,
+    "appium:orientation": "LANDSCAPE",
     "sauce:options": {
       "deviceOrientation": "LANDSCAPE"
     }
@@ -43,6 +44,7 @@
     "appium:deviceName": "iPad Simulator",
     "appium:mobile": true,
     "appium:automationName": "XCUITest",
+    "appium:orientation": "LANDSCAPE",
     "sauce:options": {
       "deviceOrientation": "LANDSCAPE"
     }
