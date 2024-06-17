@@ -64,12 +64,12 @@ export default function UploadImageForm() {
   return (
     <div className={styles.topContainer}>
       <h2>{i18n.uploadImage()}</h2>
-      {
-        // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
-        // Verify or update this alt-text as necessary
-      }
       {tempImageUrl && (
-        <img src={tempImageUrl} alt="" className={styles.imagePreview} />
+        <img
+          src={tempImageUrl}
+          alt="uploaded image preview"
+          className={styles.imagePreview}
+        />
       )}
       <div>
         <input
