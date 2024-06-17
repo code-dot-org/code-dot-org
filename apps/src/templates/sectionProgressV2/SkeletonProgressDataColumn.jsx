@@ -8,6 +8,51 @@ import LessonProgressColumnHeader from './LessonProgressColumnHeader';
 import styles from './progress-table-v2.module.scss';
 import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
 
+const getId = (student, lesson) => student.id + '.' + lesson.id;
+
+const getSkeletonCell = id => (
+  <div
+    className={classNames(styles.gridBox, styles.gridBoxLesson)}
+    key={id}
+    data-testid={'lesson-skeleton-cell-' + id}
+  >
+    <div
+      className={classNames(
+        styles.lessonSkeletonCell,
+        skeletonizeContent.skeletonizeContent
+      )}
+    />
+  </div>
+);
+
+const getMetadataExpandedSkeletonCell = id => (
+  <div className={styles.lessonDataCellExpanded} key={id}>
+    {getSkeletonCell(id)}
+    <div
+      className={classNames(styles.gridBox, styles.gridBoxMetadata)}
+      data-testid={'lesson-skeleton-cell-' + id + '-time-spent'}
+    >
+      <div
+        className={classNames(
+          styles.lessonSkeletonCell,
+          skeletonizeContent.skeletonizeContent
+        )}
+      />
+    </div>
+    <div
+      className={classNames(styles.gridBox, styles.gridBoxMetadata)}
+      data-testid={'lesson-skeleton-cell-' + id + '-last-updated'}
+    >
+      <div
+        className={classNames(
+          styles.lessonSkeletonCell,
+          skeletonizeContent.skeletonizeContent
+        )}
+      />
+    </div>
+  </div>
+);
+
 function SkeletonProgressDataColumn({
   lesson,
   sortedStudents,
@@ -20,20 +65,11 @@ function SkeletonProgressDataColumn({
         addExpandedLesson={() => {}}
       />
       <div className={styles.lessonDataColumn}>
-        {sortedStudents.map(student => (
-          <div
-            className={classNames(styles.gridBox, styles.gridBoxLesson)}
-            key={student.id + '.' + lesson.id}
-          >
-            <div
-              className={classNames(
-                styles.lessonSkeletonCell,
-                skeletonizeContent.skeletonizeContent
-              )}
-              data-testid={`lesson-skeleton-cell-${student.id}`}
-            />
-          </div>
-        ))}
+        {sortedStudents.map(student =>
+          expandedMetadataStudentIds.includes(student.id)
+            ? getMetadataExpandedSkeletonCell(getId(student, lesson))
+            : getSkeletonCell(getId(student, lesson))
+        )}
       </div>
     </div>
   );
@@ -42,7 +78,7 @@ function SkeletonProgressDataColumn({
 SkeletonProgressDataColumn.propTypes = {
   sortedStudents: PropTypes.array,
   lesson: PropTypes.object.isRequired,
-  expandedMetadataStudentIds: PropTypes.array,
+  expandedMetadataStudentIds: PropTypes.array.isRequired,
 };
 
 export const UnconnectedSkeletonProgressDataColumn = SkeletonProgressDataColumn;

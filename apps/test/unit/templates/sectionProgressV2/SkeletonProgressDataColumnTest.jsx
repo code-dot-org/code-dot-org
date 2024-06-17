@@ -14,7 +14,11 @@ const LESSON = fakeLessonWithLevels({}, 1);
 const DEFAULT_PROPS = {
   lesson: LESSON,
   sortedStudents: STUDENTS,
+  expandedMetadataStudentIds: [],
 };
+
+const getTestId = (lessonId, studentId, suffix = '') =>
+  `lesson-skeleton-cell-${studentId}.${lessonId}${suffix}`;
 
 function renderDefault(overrideProps = {}) {
   render(
@@ -29,26 +33,34 @@ describe('SkeletonProgressDataColumn', () => {
   it('Shows skeleton if fake lesson', () => {
     renderDefault({lesson: {id: 1, isFake: true}});
 
-    screen.getByTestId('lesson-skeleton-cell-1');
-    screen.getByTestId('lesson-skeleton-cell-2');
+    screen.getByTestId(getTestId(LESSON.id, STUDENT_1.id));
+    screen.getByTestId(getTestId(LESSON.id, STUDENT_2.id));
     screen.getByLabelText('Loading lesson');
-    expect(screen.getAllByTestId(/lesson-skeleton-cell-.*/)).to.have.length(2);
+    expect(
+      screen.getAllByTestId('lesson-skeleton-cell', {exact: false})
+    ).to.have.length(2);
   });
 
   it('Shows real header', () => {
     renderDefault();
 
-    screen.getByTestId('lesson-skeleton-cell-1');
-    screen.getByTestId('lesson-skeleton-cell-2');
+    screen.getByTestId(getTestId(LESSON.id, STUDENT_1.id));
+    screen.getByTestId(getTestId(LESSON.id, STUDENT_2.id));
     expect(screen.queryByLabelText('Loading lesson')).to.not.exist;
-    expect(screen.getAllByTestId(/lesson-skeleton-cell-.*/)).to.have.length(2);
+    expect(
+      screen.getAllByTestId('lesson-skeleton-cell', {exact: false})
+    ).to.have.length(2);
   });
 
   it('Shows expanded metadata rows', () => {
     renderDefault({expandedMetadataStudentIds: [1]});
 
-    screen.getByTestId('lesson-skeleton-cell-1');
-    screen.getByTestId('lesson-skeleton-cell-2');
-    expect(screen.getAllByTestId(/lesson-skeleton-cell-.*/)).to.have.length(4);
+    screen.getByTestId(getTestId(LESSON.id, STUDENT_1.id));
+    screen.getByTestId(getTestId(LESSON.id, STUDENT_1.id, '-last-updated'));
+    screen.getByTestId(getTestId(LESSON.id, STUDENT_1.id, '-time-spent'));
+    screen.getByTestId(getTestId(LESSON.id, STUDENT_2.id));
+    expect(
+      screen.getAllByTestId('lesson-skeleton-cell', {exact: false})
+    ).to.have.length(4);
   });
 });
