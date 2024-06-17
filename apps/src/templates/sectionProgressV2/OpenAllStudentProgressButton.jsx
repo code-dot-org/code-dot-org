@@ -6,7 +6,9 @@ import {connect} from 'react-redux';
 import commonStyles from '@cdo/apps/commonStyles';
 import PopUpMenu from '@cdo/apps/lib/ui/PopUpMenu';
 import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import i18n from '@cdo/locale';
 
+import FontAwesome from '../FontAwesome';
 import {
   collapseMetadataForStudents,
   expandMetadataForStudents,
@@ -39,7 +41,10 @@ function OpenAllStudentProgressButton({
     const rect = elementRef.current.firstChild.getBoundingClientRect();
     return {
       menuTop: rect.bottom + window.pageYOffset,
-      menuLeft: rect.left + window.pageXOffset,
+      menuLeft:
+        rect.left +
+        window.pageXOffset -
+        elementRef.current.firstChild.offsetWidth,
     };
   };
 
@@ -102,10 +107,12 @@ function OpenAllStudentProgressButton({
           className={style.menu}
         >
           <PopUpMenu.Item onClick={expandMetaDataForAllStudents}>
-            {'Expand all'}
+            <FontAwesome icon="arrows-from-line" />
+            {i18n.expandAll()}
           </PopUpMenu.Item>
           <PopUpMenu.Item onClick={collapseMetaDataForAllStudents}>
-            {'Collapse all'}
+            <FontAwesome icon="arrows-to-line" />
+            {i18n.collapseAll()}
           </PopUpMenu.Item>
         </PopUpMenu>
       )}
