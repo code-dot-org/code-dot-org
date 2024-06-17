@@ -5,6 +5,7 @@ Feature: Hamburger dropdown
   Scenario: Signed out user in English should not see hamburger on large desktop
     Given I am on "http://code.org/"
     And I dismiss the language selector
+    And I change the browser window size to 1300 by 768
     Then I wait to see ".header_button"
     Then element "#hamburger-icon" is not visible
 
