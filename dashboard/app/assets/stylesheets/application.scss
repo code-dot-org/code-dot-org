@@ -259,6 +259,12 @@ img.video_thumbnail {
         margin-top: 3px;
         padding-bottom: 2px;
       }
+
+      @media (min-width: 1024px) and (max-width: 1268px) {
+        &.hide-small-desktop {
+          display: none !important;
+        }
+      }
     }
 
     html[dir=rtl] & {
