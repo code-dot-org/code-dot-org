@@ -31,12 +31,6 @@
     %div{style: 'clear: both;'}
     %br/
     %br/
-    - if @current_user.try(:teacher?)
-      - if @script.csf_international?
-        %a{href: CDO.code_org_url('/curriculum/docs/k-5/overview')}
-          = t('home.all_courses')
-        %br/
-        %br/
 
   - if current_user.try(:levelbuilder?)
     -# Show all the levels, their names, and instructions in the extra links box.
