@@ -43,6 +43,11 @@ $arrow-size: 1.5rem;
     display: block;
   }
 
+  &.show-small-desktop,
+  .show-small-desktop {
+    display: none;
+  }
+
   #hamburger-icon {
     cursor: pointer;
     height: 20px;
@@ -149,6 +154,19 @@ $arrow-size: 1.5rem;
       height: 1px;
       background: $light_primary_700;
       margin: 0.75rem 0;
+    }
+  }
+
+  @media (max-width: 1268px) {
+    &.show-small-desktop,
+    .show-small-desktop {
+      display: block;
+    }
+  }
+
+  @media (min-width: 1024px) and (max-width: 1268px) {
+    #hamburger-contents > div:nth-child(-n+4) {
+      display: none !important;
     }
   }
 

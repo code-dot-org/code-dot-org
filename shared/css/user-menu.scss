@@ -116,6 +116,13 @@
     display: block;
   }
 
+  @media (max-width: 1268px) {
+    &.show-small-desktop,
+    .show-small-desktop {
+      display: none;
+    }
+  }
+
   display: inline-block;
   float: left;
   z-index: 99;
