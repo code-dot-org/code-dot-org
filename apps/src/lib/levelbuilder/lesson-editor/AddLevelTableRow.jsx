@@ -66,7 +66,9 @@ export default class AddLevelTableRow extends Component {
     return (
       <tr
         key={level.id}
-        style={isInLesson ? {border: '2px solid', borderColor: color.teal} : {}}
+        style={
+          isInLesson ? {color: color.white, backgroundColor: color.teal} : {}
+        }
       >
         <td>
           <button onClick={this.handleAddLevel.bind(this, level)} type="button">
