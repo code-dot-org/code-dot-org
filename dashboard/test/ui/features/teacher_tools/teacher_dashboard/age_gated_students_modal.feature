@@ -7,8 +7,6 @@ Feature: Age Gated Students Modal and Banner
     And I wait until element "a:contains('Untitled Section')" is visible
     And I save the section id from row 0 of the section table
     Then I navigate to teacher dashboard for the section I saved
-    And I click selector "#uitest-teacher-dashboard-nav a:contains(Manage Students)" once I see it
-    And I wait until element "#uitest-manage-students-table" is visible
     And I wait until element "#uitest-age-gated-banner" is not visible
   
   Scenario: Teacher viewing a section with at risk age gated students should see age gated students banner and can click and see modal
@@ -21,8 +19,6 @@ Feature: Age Gated Students Modal and Banner
     Then I navigate to teacher dashboard for the section I saved
 
     # Click on Age Gated Banner Learn More button to view Age Gated Students Modal
-    And I click selector "#uitest-teacher-dashboard-nav a:contains(Manage Students)" once I see it
-    And I wait until element "#uitest-manage-students-table" is visible
     And I wait until element "#uitest-age-gated-banner" is visible
     And I click selector "a:contains(Learn more)"
     And I wait until element "#uitest-age-gated-students-modal" is visible

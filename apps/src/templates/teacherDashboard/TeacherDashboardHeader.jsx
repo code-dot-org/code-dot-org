@@ -14,6 +14,7 @@ import DropdownButton from '../DropdownButton';
 import {
   convertStudentDataToArray,
   filterAgeGatedStudents,
+  loadSectionStudentData,
 } from '../manageStudents/manageStudentsRedux';
 import Notification, {NotificationType} from '../Notification';
 import {AgeGatedStudentsBanner} from '../policy_compliance/AgeGatedStudentsModal/AgeGatedStudentsBanner';
@@ -37,6 +38,8 @@ function TeacherDashboardHeader({
   asyncLoadCourseOfferings,
   isRtl,
   ageGatedStudentsCount,
+  sectionId,
+  loadSectionStudentData,
 }) {
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -52,7 +55,8 @@ function TeacherDashboardHeader({
 
   React.useEffect(() => {
     asyncLoadCourseOfferings();
-  }, [asyncLoadCourseOfferings]);
+    loadSectionStudentData(sectionId);
+  }, [asyncLoadCourseOfferings, loadSectionStudentData, sectionId]);
 
   const getDropdownOptions = optionMetricName => {
     let options = sections.map(function (section, i) {
@@ -186,6 +190,8 @@ TeacherDashboardHeader.propTypes = {
   asyncLoadCourseOfferings: PropTypes.func.isRequired,
   isRtl: PropTypes.bool,
   ageGatedStudentsCount: PropTypes.number,
+  sectionId: PropTypes.number,
+  loadSectionStudentData: PropTypes.func,
 };
 
 const styles = {
@@ -212,6 +218,7 @@ export default connect(
       state.teacherSections.selectedSectionId
     ),
     isRtl: state.isRtl,
+    sectionId: state.teacherSections.selectedSectionId,
     ageGatedStudentsCount: filterAgeGatedStudents(
       convertStudentDataToArray(state.manageStudents.studentData)
     ).length,
@@ -220,6 +227,9 @@ export default connect(
     return {
       openEditSectionDialog: id => dispatch(beginEditingSection(id)),
       asyncLoadCourseOfferings: () => dispatch(asyncLoadCourseOfferings()),
+      loadSectionStudentData: sectionId => {
+        dispatch(loadSectionStudentData(sectionId));
+      },
     };
   }
 )(TeacherDashboardHeader);
