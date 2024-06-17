@@ -20,7 +20,7 @@ Feature: Using the teacher homepage sections feature
     Given I create a teacher named "Belle" and go home
     And I wait until I am on "http://studio.code.org/home"
     And element ".modal" is not visible
-  
+
   Scenario: Loading the teacher homepage with new sections
     # Create my first section (via the SetUpSections component)
     When I create a new student section and go home
@@ -63,16 +63,15 @@ Feature: Using the teacher homepage sections feature
     And I wait until current URL contains "/courses/csp-2017"
 
     When I click selector ".uitest-CourseScript:contains(CSP Unit 2) .uitest-go-to-unit-button" to load a new page
-    And I wait to see ".uitest-script-next-banner"
+    And I wait to see ".progress-bubble-link"
     Then the url contains the section id
 
-    And the href of selector ".uitest-script-next-banner" contains the section id
     And I wait for 3 seconds
     And the href of selector ".progress-bubble-link:first" contains the section id
     And the href of selector "a:contains(Computer Science Principles)" contains the section id
 
     # navigate to a script level
-    When I click selector ".uitest-script-next-banner" to load a new page
+    When I click selector ".progress-bubble-link:first" to load a new page
     And I wait to see ".header_popup_link"
     Then the url contains the section id
 
@@ -134,7 +133,7 @@ Feature: Using the teacher homepage sections feature
     And I wait until element "#uitest-secondary-assignment" is visible
     And I select the "CSP Unit 2 - Digital Information ('17-'18)" option in dropdown "uitest-secondary-assignment"
     And I press the first "#uitest-save-section-changes" element to load a new page
-    And I wait until element "#classroom-sections" is visible 
+    And I wait until element "#classroom-sections" is visible
 
     # TODO: TEACH-537 If we add in this confirmation dialogue later, uncomment this test
     # Then I wait to see a dialog containing text "unit is currently hidden"
@@ -142,7 +141,7 @@ Feature: Using the teacher homepage sections feature
     # Confirm the assignment
     # When I press "confirm-assign"
     # And I wait for the dialog to close
-    
+
     # Verify the unit was unhidden
     When I am on "http://studio.code.org/courses/csp-2017"
     And I wait until element ".uitest-CourseScript" is visible
