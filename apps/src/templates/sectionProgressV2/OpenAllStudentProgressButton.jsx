@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import React, {useState, useEffect, useRef} from 'react';
 import {connect} from 'react-redux';
 
-import commonStyles from '@cdo/apps/commonStyles';
 import PopUpMenu from '@cdo/apps/lib/ui/PopUpMenu';
 import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
@@ -14,7 +13,8 @@ import {
   expandMetadataForStudents,
 } from '../sectionProgress/sectionProgressRedux';
 
-import style from '@cdo/apps/applab/designElements/copy-element-to-screen-button.module.scss';
+// import style from '@cdo/apps/applab/designElements/copy-element-to-screen-button.module.scss';
+import style from './expand-all-rows-dropdown.module.scss';
 
 // based on CopyElementToScreenButton
 function OpenAllStudentProgressButton({
@@ -73,11 +73,6 @@ function OpenAllStudentProgressButton({
     setOpened(!opened);
   };
 
-  //   const handleMenuClick = () => {
-  //     closeMenu();
-  //     console.log('do a thing');
-  //   };
-
   const closeMenu = () => {
     if (opened) setOpened(false);
   };
@@ -92,11 +87,10 @@ function OpenAllStudentProgressButton({
     <div className={style.main} ref={elementRef}>
       <button
         type="button"
-        style={{...commonStyles.button}}
-        className={style.copyElementToScreenButton}
+        className={style.expandButton}
         onClick={handleDropdownClick}
       >
-        <i className="fa fa-chevron-down" />
+        <FontAwesome icon="ellipsis-vertical" />
       </button>
       {opened && (
         <PopUpMenu
@@ -106,13 +100,19 @@ function OpenAllStudentProgressButton({
           onClose={onClose}
           className={style.menu}
         >
-          <PopUpMenu.Item onClick={expandMetaDataForAllStudents}>
+          <PopUpMenu.Item
+            className={style.menuItem}
+            onClick={expandMetaDataForAllStudents}
+          >
             <FontAwesome icon="arrows-from-line" />
-            {i18n.expandAll()}
+            <div>{i18n.expandAll()}</div>
           </PopUpMenu.Item>
-          <PopUpMenu.Item onClick={collapseMetaDataForAllStudents}>
+          <PopUpMenu.Item
+            className={style.menuItem}
+            onClick={collapseMetaDataForAllStudents}
+          >
             <FontAwesome icon="arrows-to-line" />
-            {i18n.collapseAll()}
+            <div>{i18n.collapseAll()}</div>
           </PopUpMenu.Item>
         </PopUpMenu>
       )}
