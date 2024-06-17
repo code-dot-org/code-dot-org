@@ -270,13 +270,15 @@ export const CustomizableCurriculumCatalogCard = ({
               <BodyThreeText className={style.wideCardDescription}>
                 {description}
               </BodyThreeText>
-              <div className={style.iconWithDescription}>
-                <FontAwesome icon="user" className="fa-solid" />
-                <p>{gradeRange}</p>
-              </div>
-              <div className={style.iconWithDescription}>
-                <FontAwesome icon="clock" className="fa-solid" />
-                <p>{duration}</p>
+              <div className={style.wideCardAspects}>
+                <div className={style.iconWithDescription}>
+                  <FontAwesome icon="user" className="fa-solid" />
+                  <p>{gradeRange}</p>
+                </div>
+                <div className={style.iconWithDescription}>
+                  <FontAwesome icon="clock" className="fa-solid" />
+                  <p>{duration}</p>
+                </div>
               </div>
             </div>
             <div
@@ -289,8 +291,9 @@ export const CustomizableCurriculumCatalogCard = ({
             >
               {onQuickViewClick && (
                 <Button
-                  color={Button.ButtonColor.neutralDark}
-                  type="button"
+                  color="gray"
+                  type="secondary"
+                  size="m"
                   onClick={onQuickViewClick}
                   aria-label={quickViewButtonDescription}
                   text={i18n.quickView()}
@@ -299,10 +302,10 @@ export const CustomizableCurriculumCatalogCard = ({
               )}
               {isTeacherOrSignedOut && (
                 <>
-                  <Button
-                    __useDeprecatedTag
-                    color={Button.ButtonColor.neutralDark}
-                    type="button"
+                  <LinkButton
+                    color="gray"
+                    type="secondary"
+                    size="m"
                     href={pathToCourse}
                     aria-label={i18n.learnMoreDescription({
                       course_name: courseDisplayName,
@@ -311,8 +314,9 @@ export const CustomizableCurriculumCatalogCard = ({
                     className={`${style.buttonFlex} ${style.teacherAndSignedOutLearnMoreButton}`}
                   />
                   <Button
-                    color={Button.ButtonColor.brandSecondaryDefault}
-                    type="button"
+                    color="purple"
+                    type="primary"
+                    size="m"
                     onClick={() => handleClickAssign('wide-card')}
                     aria-label={assignButtonDescription}
                     text={assignButtonText}
@@ -321,10 +325,9 @@ export const CustomizableCurriculumCatalogCard = ({
                 </>
               )}
               {!isTeacherOrSignedOut && (
-                <Button
-                  __useDeprecatedTag
-                  color={Button.ButtonColor.brandSecondaryDefault}
-                  type="button"
+                <LinkButton
+                  color="purple"
+                  type="primary"
                   href={pathToCourse}
                   aria-label={i18n.tryCourseNow({
                     course_name: courseDisplayName,

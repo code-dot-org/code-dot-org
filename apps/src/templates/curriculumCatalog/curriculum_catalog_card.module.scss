@@ -17,6 +17,10 @@ $container-width: 309px;
     object-fit: cover;
     border-radius: $border-radius $border-radius 0 0;
   }
+
+  .iconWithDescription {
+    margin: 0 0 0.5em 0;
+  }
 }
 
 .curriculumCatalogCardContainer_english {
@@ -69,7 +73,8 @@ $container-width: 309px;
   display: flex;
   align-items: center;
   column-gap: 0.5em;
-  margin: 0 0 0.5em 0;
+  //margin: 0 0 0.5em 0;
+  //margin: 0;
 
   > p {
     font-size: 0.875em;
@@ -238,4 +243,13 @@ button.buttonFlex {
 
 p.wideCardDescription {
   margin-bottom: 0.5em;
+}
+
+.wideCardAspects {
+  display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 8px;
+align-self: stretch;
 }
