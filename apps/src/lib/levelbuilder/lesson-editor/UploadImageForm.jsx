@@ -3,6 +3,8 @@ import React, {useState} from 'react';
 import Button from '@cdo/apps/templates/Button';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import i18n from '@cdo/locale';
+import styles from './uploadImage.module.scss';
+import classnames from 'classnames';
 
 export default function UploadImageForm() {
   const [imgUrl, setImgUrl] = useState(undefined);
@@ -61,14 +63,14 @@ export default function UploadImageForm() {
   };
 
   return (
-    <div style={styles.topContainer}>
+    <div className={styles.topContainer}>
       <h2>{i18n.uploadImage()}</h2>
       {
         // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
         // Verify or update this alt-text as necessary
       }
       {tempImageUrl && (
-        <img src={tempImageUrl} alt="" style={styles.imagePreview} />
+        <img src={tempImageUrl} alt="" className={styles.imagePreview} />
       )}
       <div>
         <input
@@ -85,17 +87,16 @@ export default function UploadImageForm() {
         )}
       </div>
       <hr />
-      <div style={styles.contentContainer}>
+      <div className={styles.contentContainer}>
         <Button
           text={i18n.saveAndViewUrl()}
           onClick={saveImageToS3}
           color={Button.ButtonColor.brandSecondaryDefault}
-          className="save-upload-image-button"
+          className={classnames(styles.saveButton, 'save-upload-image-button')}
           disabled={isUploading}
-          style={styles.saveButton}
         />{' '}
         {isUploading && (
-          <div style={styles.spinner}>
+          <div className={styles.spinner}>
             <FontAwesome icon="spinner" className="fa-spin" />
           </div>
         )}
@@ -111,31 +112,3 @@ export default function UploadImageForm() {
 }
 
 UploadImageForm.propTypes = {};
-
-const styles = {
-  checkbox: {
-    margin: '0 0 0 7px',
-  },
-  label: {
-    margin: '12px 0',
-  },
-  imagePreview: {
-    width: '100px',
-    marginBottom: '4px',
-  },
-  saveButton: {
-    width: '200px',
-    marginBottom: '12px',
-  },
-  topContainer: {
-    marginLeft: '30px',
-  },
-  contentContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  spinner: {
-    fontSize: 25,
-    padding: 10,
-  },
-};
