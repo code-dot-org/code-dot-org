@@ -1,6 +1,7 @@
 module Devise
   module Models
     module CustomLockable
+      # @override https://github.com/heartcombo/devise/blob/v4.9.3/lib/devise/models/lockable.rb#L122-L125
       def increment_failed_attempts
         # Only track failed attempts for teachers
         return unless user_type == User::TYPE_TEACHER
