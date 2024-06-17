@@ -2393,6 +2393,7 @@ ActiveRecord::Schema.define(version: 2024_07_02_214406) do
     t.boolean "urm"
     t.string "races"
     t.integer "primary_contact_info_id"
+    t.string "unlock_token"
     t.index ["birthday"], name: "index_users_on_birthday"
     t.index ["current_sign_in_at"], name: "index_users_on_current_sign_in_at"
     t.index ["deleted_at"], name: "index_users_on_deleted_at"
