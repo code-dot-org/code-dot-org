@@ -528,58 +528,6 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     end
   end
 
-  describe '.parent_permission_required?' do
-    let(:parent_permission_required?) {Policies::ChildAccount.parent_permission_required?(user)}
-
-    let(:user_birthday) {DateTime.now}
-    let(:user) {build_stubbed(:student, birthday: user_birthday)}
-    let(:underage?) {true}
-    let(:personal_account?) {true}
-
-    before do
-      Policies::ChildAccount.stubs(:underage?).with(user).returns(underage?)
-      Policies::ChildAccount.stubs(:personal_account?).with(user).returns(personal_account?)
-    end
-
-    context 'when the user is a teacher' do
-      let(:user) {build_stubbed(:teacher)}
-
-      it 'returns false' do
-        _(parent_permission_required?).must_equal false
-      end
-    end
-
-    context 'when the user is a student without a birthday' do
-      let(:user_birthday) {nil}
-
-      it 'returns false' do
-        _(parent_permission_required?).must_equal false
-      end
-    end
-
-    context 'when the user is a student that is not underage' do
-      let(:underage?) {false}
-
-      it 'returns false' do
-        _(parent_permission_required?).must_equal false
-      end
-    end
-
-    context 'when the user is a student without a personal account' do
-      let(:personal_account?) {false}
-
-      it 'returns false' do
-        _(parent_permission_required?).must_equal false
-      end
-    end
-
-    context 'when an underage student has a personal account' do
-      it 'returns true' do
-        _(parent_permission_required?).must_equal true
-      end
-    end
-  end
-
   describe '.lockable?' do
     let(:lockable?) {Policies::ChildAccount.lockable?(user)}
 
@@ -672,14 +620,26 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
   describe '.parent_permission_required?' do
     let(:parent_permission_required?) {Policies::ChildAccount.parent_permission_required?(user)}
 
+    before do
+    end
+  end
+
+  describe '.parent_permission_required?' do
+    let(:parent_permission_required?) {Policies::ChildAccount.parent_permission_required?(user)}
+
+    # Create, initially, a student that does require parent permission
     let(:user_type) {'student'}
-    let(:user_age) {user_state_policy_max_age}
+    # So, their age makes them younger than the policy max age
+    let(:user_age) {user_state_policy_max_age - 1.year}
+    # With a personal account
+    let(:user_account_is_personal?) {true}
     let(:user) {build_stubbed(:user, user_type: user_type, birthday: user_age&.year&.ago)}
 
-    let(:user_account_is_personal?) {true}
+    # This is the policy: max age of 12 with a lockout date 1 year after the start date
     let(:user_state_policy_start_date) {DateTime.now}
     let(:user_state_policy_max_age) {12}
-    let(:user_state_policy) {{start_date: user_state_policy_start_date, max_age: user_state_policy_max_age}}
+    let(:user_lockout_date) {user_state_policy_start_date + 1.year}
+    let(:user_state_policy) {{start_date: user_state_policy_start_date, lockout_date: user_lockout_date, max_age: user_state_policy_max_age}}
 
     around do |test|
       Timecop.freeze {test.call}
