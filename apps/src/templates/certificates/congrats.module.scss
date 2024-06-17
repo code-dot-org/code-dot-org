@@ -2,6 +2,14 @@
 @import 'color', 'font', 'typography', 'breakpoints',
   'barlow-semi-condensed-font';
 
+  :root {
+    --swiper-pagination-color: #{$light_primary_500};
+    --swiper-pagination-bullet-size: 1rem;
+    --swiper-pagination-bullet-inactive-color: #{$light_primary_100};
+    --swiper-pagination-bullet-inactive-opacity: 1;
+    --swiper-pagination-bullet-horizontal-gap: 0.5rem;
+  }
+
 .headerContainer {
   margin-top: 50px;
 }
@@ -23,7 +31,14 @@ h1.header {
 
 .certificateImageContainer {
   display: flex;
-  width: 50%;
+  position: relative;
+  width: 55%;
+}
+
+.certificateImage {
+  width: 450px;
+  margin-inline: auto;
+  display: flex;
 }
 
 h1.heading {
@@ -87,11 +102,33 @@ p.enterName {
   min-width: 0;
 }
 
-.swiperSlide {
-  width: auto;
-  flex-shrink: 0;
-  display: block;
-  height: 100%;
-  max-height: 100%;
-  max-width: 100%;
+.navButton {
+  position: absolute;
+  top: 40%;
+  border: 0;
+  height: 48px;
+  z-index: 1;
+
+  &:hover {
+    box-shadow: none;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}
+
+.prevElNav {
+  background: url('//code.org/images/carousel/prev.svg')
+    no-repeat;
+  left: 1rem;
+  border: 0;
+  background-size: contain;
+}
+
+.nextElNav {
+  background: url('//code.org/images/carousel/next.svg')
+    no-repeat;
+  right: 1rem;
+  background-size: contain;
 }
