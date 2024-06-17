@@ -10,13 +10,6 @@ module ScriptConstants
   ALGEBRA_NAME = 'algebra'.freeze
   AIML_2021_NAME = 'aiml-2021'.freeze
 
-  CSP_UNIT1_NAME = 'cspunit1'.freeze
-  CSP_UNIT2_NAME = 'cspunit2'.freeze
-  CSP_UNIT3_NAME = 'cspunit3'.freeze
-  CSP17_UNIT1_NAME = 'csp1-2017'.freeze
-  CSP17_UNIT2_NAME = 'csp2-2017'.freeze
-  CSP17_UNIT3_NAME = 'csp3-2017'.freeze
-
   # CSF family names
   COURSEA = 'coursea'.freeze
   COURSEB = 'courseb'.freeze
