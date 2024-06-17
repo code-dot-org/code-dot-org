@@ -33,7 +33,7 @@ export default class AddLevelTable extends Component {
                 key={level.id}
                 addLevel={this.props.addLevel}
                 isInLesson={
-                  this.props.currentLevelIds &&
+                  !!this.props.currentLevelIds &&
                   this.props.currentLevelIds.includes(level.id)
                 }
                 level={level}
