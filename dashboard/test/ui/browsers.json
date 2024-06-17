@@ -39,7 +39,7 @@
   {
     "name": "iPad",
     "platformName": "iOS",
-    "appium:platformVersion": "16.2",
+    "appium:platformVersion": "14.5",
     "browserName": "safari",
     "appium:deviceName": "iPad Simulator",
     "appium:mobile": true,
