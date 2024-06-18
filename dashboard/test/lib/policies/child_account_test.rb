@@ -78,14 +78,14 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       [[:student], false],
       [[:student, :U13], false],
       [[:student, :U13, :unknown_us_region], false],
-      [[:non_compliant_child, {created_at: '2023-06-29T23:59:59MST'}], true],
-      [[:non_compliant_child, {created_at: '2024-06-29T23:59:59MST'}], false],
-      [[:non_compliant_child, {created_at: '2024-07-01T00:00:00MST'}], false],
-      [[:non_compliant_child, :migrated_imported_from_clever, {created_at: '2023-06-29T23:59:59MST'}], false],
-      [[:non_compliant_child, :migrated_imported_from_clever, {created_at: '2024-06-29T23:59:59MST'}], false],
-      [[:non_compliant_child, :migrated_imported_from_google_classroom, {created_at: '2023-06-29T23:59:59MST'}], true],
-      [[:non_compliant_child, :migrated_imported_from_google_classroom, {created_at: '2024-06-29T23:59:59MST'}], true],
-      [[:non_compliant_child, :with_google_authentication_option, {created_at: '2024-06-29T23:59:59MST'}], true],
+      [[:non_compliant_child, {created_at: '2023-06-29T23:59:59MDT'}], true],
+      [[:non_compliant_child, {created_at: '2024-06-29T23:59:59MDT'}], false],
+      [[:non_compliant_child, {created_at: '2024-07-01T00:00:00MDT'}], false],
+      [[:non_compliant_child, :migrated_imported_from_clever, {created_at: '2023-06-29T23:59:59MDT'}], false],
+      [[:non_compliant_child, :migrated_imported_from_clever, {created_at: '2024-06-29T23:59:59MDT'}], false],
+      [[:non_compliant_child, :migrated_imported_from_google_classroom, {created_at: '2023-06-29T23:59:59MDT'}], true],
+      [[:non_compliant_child, :migrated_imported_from_google_classroom, {created_at: '2024-06-29T23:59:59MDT'}], true],
+      [[:non_compliant_child, :with_google_authentication_option, {created_at: '2024-06-29T23:59:59MDT'}], true],
       # The following test cases address P20-937
       [[:non_compliant_child, :before_p20_937_exception_date], true],
       [[:non_compliant_child, :microsoft_v2_sso_provider, :before_p20_937_exception_date], true],
@@ -118,8 +118,8 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
 
     describe 'for Colorado' do
       let(:co_state_policy) {state_policies['CO']}
-      let(:default_start_date) {DateTime.parse('2023-07-01T00:00:00MST')}
-      let(:default_lockout_date) {DateTime.parse('2024-07-01T00:00:00MST')}
+      let(:default_start_date) {DateTime.parse('2023-07-01T00:00:00MDT')}
+      let(:default_lockout_date) {DateTime.parse('2024-07-01T00:00:00MDT')}
 
       it 'contains expected max age' do
         _(co_state_policy[:max_age]).must_equal 12
