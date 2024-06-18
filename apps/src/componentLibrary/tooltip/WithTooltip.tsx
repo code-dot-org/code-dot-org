@@ -36,24 +36,12 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
   const tooltipRef = useRef<HTMLDivElement | null>(null);
 
   // Define the additional event handlers
-  const handleFocus = (event: React.FocusEvent<HTMLElement>) => {
-    setShowTooltip(true);
-    setNodePosition(event.target);
-  };
-
-  const handleBlur = (event: React.FocusEvent<HTMLElement>) => {
-    setShowTooltip(false);
-    setNodePosition(null);
-  };
-
-  const handleMouseEnter = (event: React.MouseEvent<HTMLElement>) => {
-    setShowTooltip(true);
-    setNodePosition(event.target as HTMLElement);
-  };
-
-  const handleMouseLeave = (event: React.MouseEvent<HTMLElement>) => {
-    setShowTooltip(false);
-    setNodePosition(null);
+  const handleShowTooltip = (
+    show: boolean,
+    event: React.SyntheticEvent<HTMLElement>
+  ) => {
+    setShowTooltip(show);
+    setNodePosition(show ? (event.target as HTMLElement) : null);
   };
 
   const tailLength = tailLengths[tooltipProps.size || 'm'];
@@ -144,9 +132,18 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
 
   // Effect to update tooltip styles when the tooltip is shown
   useEffect(() => {
-    if (showTooltip) {
-      updateTooltipStyles();
-    }
+    const updateTooltipPositionIfShown = () => {
+      if (showTooltip) {
+        updateTooltipStyles();
+      }
+    };
+
+    updateTooltipPositionIfShown();
+
+    window.addEventListener('resize', updateTooltipPositionIfShown);
+    return () => {
+      window.removeEventListener('resize', updateTooltipPositionIfShown);
+    };
   }, [
     showTooltip,
     nodePosition,
@@ -167,28 +164,20 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
     React.cloneElement(children, {
       'aria-describedby': tooltipProps.tooltipId,
       onFocus: (event: React.FocusEvent<HTMLElement>) => {
-        handleFocus(event);
-        if (children.props.onFocus) {
-          children.props.onFocus(event);
-        }
+        handleShowTooltip(true, event);
+        children.props.onFocus?.(event);
       },
       onBlur: (event: React.FocusEvent<HTMLElement, Element>) => {
-        handleBlur(event);
-        if (children.props.onBlur) {
-          children.props.onBlur(event);
-        }
+        handleShowTooltip(false, event);
+        children.props.onBlur?.(event);
       },
       onMouseEnter: (event: React.MouseEvent<HTMLElement, MouseEvent>) => {
-        handleMouseEnter(event);
-        if (children.props.onMouseEnter) {
-          children.props.onMouseEnter(event);
-        }
+        handleShowTooltip(true, event);
+        children.props.onMouseEnter?.(event);
       },
       onMouseLeave: (event: React.MouseEvent<HTMLElement, MouseEvent>) => {
-        handleMouseLeave(event);
-        if (children.props.onMouseLeave) {
-          children.props.onMouseLeave(event);
-        }
+        handleShowTooltip(false, event);
+        children.props.onMouseLeave?.(event);
       },
     });
 
