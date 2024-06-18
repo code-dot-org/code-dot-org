@@ -33,6 +33,7 @@ import {
   hiddenPlSectionIds,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import shapes from '@cdo/apps/templates/studioHomepages/shapes';
+import DCDO from '@cdo/apps/dcdo';
 
 const getAvailableTabs = permissions => {
   let tabs = [
@@ -99,11 +100,6 @@ function LandingPage({
       ? style.headerWithTabsContainer
       : style.headerWithoutTabsContainer;
 
-  const showGettingStartedBanner =
-    !currentYearApplicationId &&
-    !hasEnrolledInWorkshop &&
-    plCoursesStarted?.length === 0;
-
   const joinedPlSectionsStyling =
     joinedPlSections?.length > 0 ? '' : style.joinedPlSectionsWithNoSections;
 
@@ -113,23 +109,6 @@ function LandingPage({
     dispatch(asyncLoadSectionData());
     dispatch(asyncLoadCoteacherInvite());
   }, [dispatch]);
-
-  const RenderGettingStartedBanner = () => (
-    <TwoColumnActionBlock
-      imageUrl={pegasus(
-        '/images/fill-540x300/professional-learning/pl-superhero-girl-crop.png'
-      )}
-      heading={i18n.plLandingGettingStartedHeading()}
-      subHeading={i18n.plLandingGettingStartedSubHeading()}
-      description={i18n.plLandingGettingStartedDescription()}
-      buttons={[
-        {
-          url: pegasus('/educate/professional-learning'),
-          text: i18n.plLandingGettingStartedButton(),
-        },
-      ]}
-    />
-  );
 
   const RenderLastWorkshopSurveyBanner = () => (
     <TwoColumnActionBlock
@@ -147,6 +126,54 @@ function LandingPage({
       ]}
     />
   );
+
+  // Renders at most one banner for a user:
+  // - if the user hasn't used any PL resources yet, show the Getting Started banner
+  // - if the user has a pending workshop survery (mutually exclusive from the above), show a banner to fill out the survey
+  // - else, render either nothing or an announcement banner
+  const RenderBanner = () => {
+    const showGettingStartedBanner =
+      !currentYearApplicationId &&
+      !hasEnrolledInWorkshop &&
+      plCoursesStarted?.length === 0;
+
+    if (showGettingStartedBanner) {
+      return (
+        <TwoColumnActionBlock
+          imageUrl={pegasus(
+            '/images/fill-540x300/professional-learning/pl-superhero-girl-crop.png'
+          )}
+          heading={i18n.plLandingGettingStartedHeading()}
+          subHeading={i18n.plLandingGettingStartedSubHeading()}
+          description={i18n.plLandingGettingStartedDescription()}
+          buttons={[
+            {
+              url: pegasus('/educate/professional-learning'),
+              text: i18n.plLandingGettingStartedButton(),
+            },
+          ]}
+        />
+      );
+    } else if (lastWorkshopSurveyUrl) {
+      return RenderLastWorkshopSurveyBanner();
+    } else if (!!DCDO.get('curriculum-launch-2024', false)) {
+      return (
+        <TwoColumnActionBlock
+          imageUrl={pegasus(
+            '/images/fill-540x300/professional-learning/banner-books-with-background.png'
+          )}
+          subHeading={i18n.plLandingCurriculumLaunchBannerSubHeading()}
+          description={i18n.plLandingCurriculumLaunchBannerDescription()}
+          buttons={[
+            {
+              url: pegasus('/educate/professional-learning'),
+              text: i18n.plLandingCurriculumLaunchBannerButtonText(),
+            },
+          ]}
+        />
+      );
+    }
+  };
 
   const RenderSelfPacedPL = () => {
     return (
@@ -312,8 +339,7 @@ function LandingPage({
   const RenderMyPlTab = () => {
     return (
       <>
-        {showGettingStartedBanner && RenderGettingStartedBanner()}
-        {lastWorkshopSurveyUrl && RenderLastWorkshopSurveyBanner()}
+        {RenderBanner()}
         {plCoursesStarted?.length >= 1 && RenderSelfPacedPL()}
         <div className={joinedPlSectionsStyling}>
           <JoinSectionArea

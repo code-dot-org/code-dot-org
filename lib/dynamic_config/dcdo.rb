@@ -55,6 +55,7 @@ class DCDOBase < DynamicConfigBase
       'student-email-post-enabled': DCDO.get('student-email-post-enabled', false),
       'progress-v2-metadata-enabled': DCDO.get('progress-v2-metadata-enabled', false),
       'show-updated-lms-content': DCDO.get('show-updated-lms-content', false),
+      'curriculum-launch-2024': DCDO.get('curriculum-launch-2024', false),
     }
   end
 end
