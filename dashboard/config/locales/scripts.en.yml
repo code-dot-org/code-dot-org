@@ -17846,7 +17846,13 @@ en:
           description: ''
           student_description: ''
         gen-ai-customizing-pilot-v2:
-          lessons: {}
+          lessons:
+            lesson-11:
+              name: Issue Statements
+            lesson-12:
+              name: User Feedback
+            lesson-13:
+              name: 'Project: Solving Community Problems with Chatbots'
           lesson_groups: {}
           name: gen-ai-customizing-pilot-v2
           title: Customizing Language Models
@@ -17880,3 +17886,14 @@ en:
           student_description: In this unit, you'll dive into how computers interpret and understand visual information from the world around us. You'll start with the basics of how images are captured and processed and move on to more complex topics like training data, model development, and the ethical implications of artificial intelligence. Through a series of interactive lessons, hands-on activities, and project-based learning, you'll get to design your own computer vision app. Along the way, you'll learn not only about the technology itself but also how it can be used responsibly to make a positive impact in various fields like healthcare, automotive, and public safety.
           description_short: ''
           description_audience: ''
+        gen-ai-standalone:
+          lessons:
+            lesson-1:
+              name: Explore Chatbots and Large Language Models
+          lesson_groups: {}
+          name: gen-ai-standalone
+          title: Generative AI Goes to Congress
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
