@@ -11,6 +11,9 @@ register();
 const swiperActionBlocksMiddleHigh = document.querySelector(
   'swiper-container.swiper-middle-high'
 );
+const swiperActionBlocksPl = document.querySelector(
+  'swiper-container.swiper-pl'
+);
 const swiperQuotes = document.querySelector('swiper-container.swiper-quotes');
 const swiperVideos = document.querySelector('swiper-container.how-ai-works');
 
@@ -83,5 +86,11 @@ const swipers = [
   {swiper: swiperQuotes, params: quotesParams},
   {swiper: swiperVideos, params: videosParams},
 ];
+
+// TODO - Move this object to the list above once the
+// DCDO flag curriculum-launch-2024 in launched
+if (swiperActionBlocksPl) {
+  swipers.push({swiper: swiperActionBlocksPl, params: actionBlocksParams});
+}
 
 swipers.forEach(({swiper, params}) => setSwiperParams(swiper, params));

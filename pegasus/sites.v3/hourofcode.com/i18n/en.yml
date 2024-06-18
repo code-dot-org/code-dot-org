@@ -1095,6 +1095,22 @@
           duration: "1 hour"
           button: "Start module"
           aria_label: "Start the Teaching How AI Makes Decisions module"
+        coding_with_ai:
+          overline: "6-12 Teachers"
+          title: "Teaching Coding with AI"
+          desc: "This professional learning module prepares teachers to guide students through Code.org's Coding with AI unit, where students leverage Large Language Models to write more powerful code while exploring ethical considerations and responsible AI use."
+          duration: "2 hours"
+          aria_label: "Start the Teaching Coding with AI module"
+          button: "Start module"
+        computer_vision:
+          overline: "9-12 Teachers"
+          title: "Teaching Computer Vision"
+          desc: "This professional learning module equips educators to teach Code.org's Computer Vision unit, where students (grades 6-12) explore image and video analysis through engaging activities and discussions on ethics and real-world applications."
+          duration: "1.5 hours"
+          aria_label: "Start the Teaching Computer Vision module"
+          button: "Start module"
+        ai_101:
+          aria_label: "Start the AI 101 for Teachers module"
 
   ai_integrations:
     heading: "AI Integrations"
