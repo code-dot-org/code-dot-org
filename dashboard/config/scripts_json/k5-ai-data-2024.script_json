@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "k5-ai-data",
-    "serialized_at": "2024-06-04 15:32:26 UTC",
+    "serialized_at": "2024-06-17 16:54:32 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -571,8 +571,19 @@
       }
     },
     {
-      "key": "7f8890c5-c4bf-4da2-976a-bba3d45a3009",
+      "key": "4f674c1b-eb38-45b6-a423-cccaae897f15",
       "position": 5,
+      "properties": {
+        "progression_name": "Video: How AI Works"
+      },
+      "seeding_key": {
+        "activity_section.key": "4f674c1b-eb38-45b6-a423-cccaae897f15",
+        "lesson_activity.key": "6cb4f638-b71d-46fb-bf91-7a4f0e73a7f7"
+      }
+    },
+    {
+      "key": "7f8890c5-c4bf-4da2-976a-bba3d45a3009",
+      "position": 6,
       "properties": {
         "progression_name": "Let AI Bot Choose Your Effects"
       },
@@ -583,7 +594,7 @@
     },
     {
       "key": "15cf491f-b460-4aa2-83d6-f9d3f1b0bccb",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "| Slide                                                                                                        | Lesson Guide                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |\n| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide66.png) | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide67.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Transition students to their devices. Have them go to <a href=“studio.code.org/s/pilot-k5-ai/lessons/3/levels/1” target=\"_blank\">Level 1</a> and wait for next instructions.<br><br>Tell students to click the orange Run button under the playspace and choose a food item at the bottom of the screen. Have students store each food item in their feature vector by clicking and dragging it into the box.<br><br>First, have students move the item along the horizontal “Sweetness” axis, from Not Sweet to Really Sweet. Then, have students move the item up the vertical “Like to eat” axis depending on how much they like the food, from Not for me! To Love it!<br><br>If they disagree with where you’ve placed the item, remind them that this is based on individual opinion and they should reflect their own opinions in their answers.<br><br>You can use the following slide to demo for students how to do this.<br><br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide68.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> You can use this slide to demo for students how to click and drag items onto their feature vector.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide69.png) | <p><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> You just made what’s called a feature vector! You assigned a numerical value to an item based on its features.<br><br>Now, we’re going to act as an AI snack picker. I’m looking for a food you like to eat that is sweet. Find the item that’s closest to a 10 on the “Sweetness” scale and a 10 on the “Like to eat” scale. In other words, go to the top right corner of your feature vector and choose one item from that corner. For example, Carla would choose “pineapple” because that is the food that she thinks is the sweetest and that she likes to eat the most.<br><br><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have each student identify one item in the top right corner of their feature vector .<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide70.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students raise their hands to share what item they picked. If someone says an item that multiple people have chosen, have all of those students raise their hands and add the total count to the chart.<br><br>For example:</p><ul><li>Strawberries: 10</li><li>Pineapple: 5</li><li>Watermelon: 8</li><li>Banana: 2</li></ul><p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Have students determine which is the most popular result. For example, according to the tally above, strawberries is the most popular with 10 votes. Then, have students determine which is the second most popular result. In this example, watermelon with 8 votes is the second most popular.<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Since AI chooses based on probabilities, students should know that strawberries are most likely to be chosen by AI snack picker with watermelon being second most likely. Strawberries and watermelon will not always get chosen, but they will get chosen more often than pineapple or banana.</p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide71.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Play the video for students.<br><br>Pause at 0:20<br><br><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> What information was this AI Bot trained on?<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> AI is learning to recognize different emojis and associate words with them. It’s using information taken from the internet to determine what words fit with each emoji.<br><br>Pause at 1:15<br><br><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Why does AI Bot sometimes make a prediction that’s different from one that you or I would make?<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Make sure students understand that AI is trained on billions of data points representing many different opinions. Since not everyone agrees on for example, what colors are in a sunset, AI will make a prediction based on the probabilities of different responses. If most people say that a sunset contains the color orange, then AI will usually say “orange”. But since sometimes people see purple in a sunset, occasionally AI will say “purple”.<br><br>Have students reflect on the previous activity where they sorted food. Point out how each student arranged their items differently on the chart. What would happen if an AI snack picker was trained on ALL the charts in the class? It might not pick the snack that you or I picked, but it would certainly reflect someone’s opinion in the class.<br><br>Additionally, in our food example, AI snack picker was only trained to recognize food on a scale from Not sweet to Very sweet and Not for me! to Love it! In reality, an AI snack picker might be trained on many more features of an item such as: healthiness, cost, availability, size, salty, spicy, etc. Taking into consideration all of these factors will lead AI to sometimes make different predictions than you or I would make.<br><br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide72.png) | <p><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> In this level, you will use a block to make AI Bot generate foreground and background effects for your dance. You choose 3 emojis and AI Bot will choose the effects that best match those emojis.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide73.png) | <p><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> In this example, the user has chosen the effects: <i class=\"fa-solid fa-flag-checkered\"></i> (checkered flag), <i class=\"fa-solid fa-party-horn\"></i> (party), and <i class=\"fa-regular fa-gem\"></i> (gem). AI Bot has chosen the effects: confetti (foreground) and black and white diamonds (background). The image on the left represents how these effects look and the image on the right represents these effects in code blocks.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide74.png) | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> This screen appears in the video after AI has generated the background effects. See if students can explain why the three emojis at the top <i class=\"fa-solid fa-flag-checkered\"></i> (checkered flag)<i class=\"fa-solid fa-party-horn\"></i> (party), and <i class=\"fa-regular fa-gem\"></i> (gem) led AI Bot to generate the background effects Black and White, Diamonds, and Confetti, as shown in code and in the bottom right effects square. Why did AI Bot not choose one of the other 4 options?<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Connect this screen back to the activity students did with sorting fruit and vegetables. AI Bot had multiple options that would have fit for “sweet” and “like to eat”. For example, it was more likely to pick strawberries and watermelon over pineapple and banana. Just as there could be multiple options for AI snack picker to choose from, AI Bot had different effects to choose from that were associated with the three emojis.<br><br>For example, if we were to run this again with the same emojis, we might find that instead of choosing “Black and White”, AI Bot could have chosen a “Grayscale” color scheme. Or instead of choosing “Confetti” for the foreground effect, it might have chosen “Starburst”. When clicking “Regenerate” students are able to see other choices that AI Bot has made given the same set of 3 emojis.<br><br>On the flip side, AI Bot did not choose the other four options because they were much less associated with <i class=\"fa-solid fa-flag-checkered\"></i> (checkered flag), <i class=\"fa-solid fa-party-horn\"></i> (party), and <i class=\"fa-regular fa-gem\"></i> (gem). Specifically, AI Bot passed over the “Rose Squiggles”, “Autumn Clouds”, “Sunrise Disco Ball”, and “Sky Frosted Grid” background effects in favor of “Black and White Diamonds”. Note that in most of the other 4 options AI still chose the “Confetti” foreground effect. This effect is closely associated with the <i class=\"fa-solid fa-party-horn\"></i> (party) emoji, as evidenced by the thicker pink bar in the different association bar charts.<br></p>|\n| ![](https://docs.google.com/presentation/d/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/export/png?id=1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI&pageid=g26c0b787507_2_35) | <p><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say: </strong>Here’s what a feature vector might look like for the effects that AI Bot chose. Notice that the X-axis shows how strongly associated the effects are with the gem emoji and the Y-axis shows how strongly associated the effects are with the checkered flag. We chose those emojis as the two features of this chart because those factored most heavily into AI Bot’s decision compared to the party emoji, as shown by the bar graph in the previous slide.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide75.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Open <a href=“studio.code.org/s/pilot-k5-ai/lessons/3/levels/2” target=\"_blank\">Level 2</a> on your screen and display it to the whole class. Model how Level 2 works for students:<br></p><ol><li>Choose one of the songs from the level and click Play.</li><li>Survey students to see what emojis they would choose based on the song.</li><li>Point out how choosing an emoji to match the mood of the song is subjective and students can have different answers. Based on which 3 emojis are chosen, AI Bot might recommend different background effects for the same song.</li><li>Click “Generate” and see what effects get chosen. Explain that if students don’t like the effects, they can Regenerate effects using the same 3 emojis, Use the code and update the dropdown fields themselves, or Start over with 3 new emojis.<br></li></ol>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide76.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Once AI Bot has generated its effects, model the explanation screen for students:</p><ol><li>After AI has generated effects, and on the screen that says “AI thinks this is the best effect for your emojis and generated the code!” click the bar graph icon in the top right corner</li><li>Note for students how AI rejected 4 possible combinations of effects that weren’t a good match before choosing the fifth set of effects.</li></ol><p>Then transition students back to their devices. Have them go to Level 2 and try out the AI Bot on their own.<br></p>|"
       },
@@ -1097,6 +1108,28 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Video: How AI Works"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai_data_dance_party_video_level"
+        ],
+        "lesson.key": "How AI Makes Decisions",
+        "lesson_group.key": "",
+        "script.name": "k5-ai-data-2024",
+        "activity_section.key": "4f674c1b-eb38-45b6-a423-cccaae897f15"
+      },
+      "level_keys": [
+        "ai_data_dance_party_video_level"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "dance_ai_customize_effect_2024"
         ],
@@ -1117,7 +1150,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -1142,11 +1175,14 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "k5_ai_data_student_data_questions_level"
+        ],
         "progression": "Using AI Tools in School (Online Version)"
       },
       "bonus": false,
@@ -1164,7 +1200,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1380,6 +1416,18 @@
         "lesson_group.key": "",
         "script.name": "k5-ai-data-2024",
         "activity_section.key": "af4a6c35-0bbb-443e-b9ca-1271c0f3e1d0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai_data_dance_party_video_level",
+        "script_level.level_keys": [
+          "ai_data_dance_party_video_level"
+        ],
+        "lesson.key": "How AI Makes Decisions",
+        "lesson_group.key": "",
+        "script.name": "k5-ai-data-2024",
+        "activity_section.key": "4f674c1b-eb38-45b6-a423-cccaae897f15"
       }
     },
     {
