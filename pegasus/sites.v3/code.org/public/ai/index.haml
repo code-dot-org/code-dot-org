@@ -74,18 +74,11 @@ theme: responsive_full_width
 
 %section#ai-curricula
   .wrapper
-    %h2=hoc_s(:ai_curricula_heading)
+    %h2=hoc_s("ai_page.curricula.heading_elementary")
     = view :"ai_landing_page/ai_carousel_curricula_elementary"
     %hr.light
-    %h2=hoc_s(:ai_curricula_heading)
+    %h2=hoc_s("ai_page.curricula.heading_middle_high")
     = view :"ai_landing_page/ai_carousel_curricula_middle_high"
-    %hr.light
-    %h3.heading-lg
-      =hoc_s("ai_curriculum_offerings.heading")
-    %p.wrap-pretty
-      =hoc_s("ai_curriculum_offerings.desc")
-    %a.link-button.secondary{href: CDO.studio_url("/catalog?topic=artificial_intelligence")}
-      =hoc_s("ai_curriculum_offerings.button")
 
 %section.bg-neutral-light
   .wrapper

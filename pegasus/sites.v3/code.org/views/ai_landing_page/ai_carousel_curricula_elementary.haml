@@ -25,14 +25,14 @@
   # TODO - Remove this DCDO logic once the 2024 curriculum is live and add this to the top of the main list
   if !!DCDO.get('curriculum-launch-2024', false)
     block_items.unshift(
-      overline: hoc_s("ai_curriculum_tile.decisions.overline"),
-      title: hoc_s("ai_curriculum_tile.decisions.title"),
+      overline: hoc_s("ai_page.curricula.tile.decisions.overline"),
+      title: hoc_s("ai_page.curricula.tile.decisions.title"),
       img: "/images/action-blocks/action-block-ai-decisions.png",
-      desc: hoc_s("ai_curriculum_tile.decisions.desc"),
-      duration: hoc_s("ai_curriculum_tile.decisions.duration"),
+      desc: hoc_s("ai_page.curricula.tile.decisions.desc"),
+      duration: hoc_s("ai_page.curricula.tile.decisions.duration"),
       url: CDO.studio_url("/s/k5-ai-data-2024"),
-      aria_label: hoc_s("ai_curriculum_tile.decisions.aria_label"),
-      button_label: hoc_s("ai_curriculum_tile.decisions.button"),
+      aria_label: hoc_s("ai_page.curricula.tile.decisions.aria_label"),
+      button_label: hoc_s("ai_page.curricula.tile.decisions.button"),
       new: true,
     )
   end
