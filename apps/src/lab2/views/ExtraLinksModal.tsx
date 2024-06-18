@@ -34,6 +34,9 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
   const [clonedLevelName, setClonedLevelName] = useState('');
   const [cloneError, setCloneError] = useState('');
   const [deleteError, setDeleteError] = useState('');
+  const [featuredProjectStatus, setFeaturedProjectStatus] = useState<
+    string | undefined
+  >('');
 
   const channelId: string | undefined = useAppSelector(
     state => state.lab.channel && state.lab.channel.id
@@ -45,6 +48,12 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
   useEffect(() => {
     setClonedLevelName(levelbuilderLinkData.level_name);
   }, [levelbuilderLinkData]);
+
+  useEffect(() => {
+    setFeaturedProjectStatus(
+      projectValidatorLinkData?.project_info.featured_status
+    );
+  }, [projectValidatorLinkData]);
 
   const onClose = () => {
     closeModal();
@@ -187,17 +196,13 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
         true,
         {contentType: 'application/json;charset=UTF-8'}
       );
+      setFeaturedProjectStatus('bookmarked');
     } catch (e) {
-      if (e instanceof NetworkError) {
-        const responseText = await e.response.text();
-        setCloneError(responseText);
-      } else {
-        setCloneError((e as Error).message);
-      }
+      console.log('Error bookmarking project', e);
     }
   };
 
-  const displayFeaturedProjectInfo = (featuredProjectStatus: string) => {
+  const displayFeaturedProjectInfo = () => {
     if (featuredProjectStatus === 'n/a') {
       return (
         <>
@@ -234,11 +239,7 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
             Remix ancestry:
             <ul>{displayRemixAncestry(projectInfo.remix_ancestry)}</ul>
           </li>
-          <li>
-            {displayFeaturedProjectInfo(
-              projectValidatorLinkData.project_info.featured_status
-            )}
-          </li>
+          <li>{displayFeaturedProjectInfo()}</li>
         </ul>
       </>
     );

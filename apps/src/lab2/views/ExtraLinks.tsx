@@ -36,7 +36,6 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
   const channelId = useAppSelector(
     state => state.lab.channel && state.lab.channel.id
   );
-  console.log('channelId', channelId);
 
   useEffect(() => {
     const permissionData = data
@@ -61,7 +60,6 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
         HttpClient.fetchJson<ExtraLinksProjectValidatorData>(
           `/projects/${channelId}/extra_links`
         ).then(response => {
-          console.log('response.value - project validator', response.value);
           setProjectValidatorLinkData(response.value);
         });
       } catch (e) {
