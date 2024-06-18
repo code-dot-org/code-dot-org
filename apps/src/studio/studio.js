@@ -50,9 +50,6 @@ import blocks from './blocks';
 import studioCell from './cell';
 import CollisionMaskWalls from './collisionMaskWalls';
 import * as constants from './constants';
-import BigGameLogic from './customLogic/bigGameLogic';
-import RocketHeightLogic from './customLogic/rocketHeightLogic';
-import SamBatLogic from './customLogic/samBatLogic';
 import dropletConfig from './dropletConfig';
 import Item from './Item';
 import studioMsg from './locale';
@@ -400,26 +397,6 @@ Studio.loadLevel = function () {
     level.protagonistSpriteIndex,
     level.protaganistSpriteIndex
   );
-
-  switch (level.customGameType) {
-    case 'Big Game':
-      Studio.customLogic = new BigGameLogic(Studio);
-      break;
-    case 'Rocket Height':
-      Studio.customLogic = new RocketHeightLogic(Studio);
-      break;
-    case 'Sam the Bat':
-      Studio.customLogic = new SamBatLogic(Studio);
-      break;
-    case 'Ninja Cat':
-      Studio.customLogic = new BigGameLogic(Studio, {
-        staticPlayer: true,
-      });
-  }
-  blocks.registerCustomGameLogic(Studio.customLogic);
-
-  // Custom game logic doesn't work yet in the interpreter.
-  Studio.legacyRuntime = !!Studio.customLogic;
 
   if (level.avatarList) {
     Studio.startAvatars = level.avatarList.slice();
@@ -1330,10 +1307,6 @@ Studio.onTick = function () {
     Studio.yieldExecutionTicks--;
   }
 
-  if (Studio.customLogic) {
-    Studio.customLogic.onTick();
-  }
-
   if (Studio.tickCount === 1) {
     callHandler('whenGameStarts');
   }
@@ -2163,22 +2136,9 @@ Studio.init = function (config) {
   // Initialize paramLists with skin and level data:
   paramLists.initWithSkinAndLevel(skin, level);
 
-  // In our Algebra course, we want to gray out undeletable blocks. I'm not sure
-  // whether or not that's desired in our other courses.
-  var isAlgebraLevel = !!level.useContractEditor;
-  config.grayOutUndeletableBlocks = isAlgebraLevel;
-
   Studio.loadLevel();
 
   Studio.background = getDefaultBackgroundName();
-
-  if (Studio.customLogic) {
-    // We don't want icons in instructions for our custom logic base games
-    skin.staticAvatar = null;
-    skin.smallStaticAvatar = null;
-    skin.failureAvatar = null;
-    skin.winAvatar = null;
-  }
 
   window.addEventListener('keydown', Studio.onKey, false);
   window.addEventListener('keyup', Studio.onKey, false);
@@ -2282,12 +2242,6 @@ Studio.init = function (config) {
       Blockly.HSV_SATURATION = 0.6;
 
       Blockly.SNAP_RADIUS *= Studio.scale.snapRadius;
-
-      if (Blockly.contractEditor) {
-        Blockly.contractEditor.registerTestHandler(
-          Studio.getStudioExampleFailure
-        );
-      }
     }
 
     drawMap();
@@ -2655,10 +2609,6 @@ Studio.reset = function (first) {
 
   var svg = document.getElementById('svgStudio');
 
-  if (Studio.customLogic) {
-    Studio.customLogic.reset();
-  }
-
   // Soft buttons
   var softButtonCount = 0;
   for (i = 0; i < Studio.softButtons_.length; i++) {
@@ -2935,45 +2885,6 @@ Studio.getGoalAssetFromSkin = function () {
 };
 
 /**
- * Runs test of a given example
- * @param exampleBlock
- * @returns {string} string to display after example execution
- */
-Studio.getStudioExampleFailure = function (exampleBlock) {
-  try {
-    var actualBlock = exampleBlock.getInputTargetBlock('ACTUAL');
-    var expectedBlock = exampleBlock.getInputTargetBlock('EXPECTED');
-
-    studioApp().feedback_.throwOnInvalidExampleBlocks(
-      actualBlock,
-      expectedBlock
-    );
-
-    var defCode = Blockly.Generator.blockSpaceToCode('JavaScript', [
-      'functional_definition',
-    ]);
-    var exampleCode = Blockly.Generator.blocksToCode('JavaScript', [
-      exampleBlock,
-    ]);
-    if (exampleCode) {
-      var resultBoolean = CustomMarshalingInterpreter.evalWith(
-        defCode + '; return' + exampleCode,
-        {
-          Studio: api,
-          Globals: Studio.Globals,
-        },
-        {legacy: true}
-      );
-      return resultBoolean ? null : 'Does not match definition.';
-    } else {
-      return 'No example code.';
-    }
-  } catch (error) {
-    return 'Execution error: ' + error.message;
-  }
-};
-
-/**
  * Click the run button.  Start the program.
  */
 // XXX This is the only method used by the templates!
@@ -3043,11 +2954,10 @@ Studio.runButtonClick = function () {
  */
 Studio.displayFeedback = function () {
   var tryAgainText;
-  // For free play, show keep playing, unless it's a big game level
+  // For free play, show keep playing
   if (
-    (level.freePlay ||
-      Studio.testResults >= TestResults.MINIMUM_OPTIMAL_RESULT) &&
-    !(Studio.customLogic instanceof BigGameLogic)
+    level.freePlay ||
+    Studio.testResults >= TestResults.MINIMUM_OPTIMAL_RESULT
   ) {
     tryAgainText = commonMsg.keepPlaying();
   } else {
@@ -3367,91 +3277,13 @@ var defineProcedures = function (blockType) {
  * @returns {boolean} True if we have a pre-execution failure
  */
 Studio.checkForBlocklyPreExecutionFailure = function () {
-  if (studioApp().hasUnfilledFunctionalBlock()) {
-    Studio.result = false;
-    Studio.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
-    // Some of our levels (i.e. big game) have a different top level block, but
-    // those should be undeletable/unmovable and not hit this. If they do,
-    // they'll still get the generic unfilled block message
-    Studio.message = studioApp().getUnfilledFunctionalBlockError(
-      'functional_start_setValue'
-    );
-    Studio.preExecutionFailure = true;
-    return true;
-  }
-
   if (studioApp().hasUnwantedExtraTopBlocks()) {
     Studio.result = false;
     Studio.testResults = TestResults.EXTRA_TOP_BLOCKS_FAIL;
     Studio.preExecutionFailure = true;
     return true;
   }
-
-  if (studioApp().hasEmptyFunctionOrVariableName()) {
-    Studio.result = false;
-    Studio.testResults = TestResults.EMPTY_FUNCTION_NAME;
-    Studio.message = commonMsg.unnamedFunction();
-    Studio.preExecutionFailure = true;
-    return true;
-  }
-
-  var outcome = Studio.checkExamples_();
-  if (outcome.result !== undefined) {
-    Object.assign(Studio, outcome);
-    Studio.preExecutionFailure = true;
-    return true;
-  }
-
   return false;
-};
-
-/**
- * @returns {Object} outcome
- * @returns {boolean} outcome.result
- * @returns {number} outcome.testResults
- * @returns {string} outcome.message
- */
-Studio.checkExamples_ = function () {
-  var outcome = {};
-  if (!level.examplesRequired) {
-    return outcome;
-  }
-
-  var exampleless = studioApp().getFunctionWithoutTwoExamples();
-  if (exampleless) {
-    outcome.result = ResultType.FAILURE;
-    outcome.testResults = TestResults.EXAMPLE_FAILED;
-    outcome.message = commonMsg.emptyExampleBlockErrorMsg({
-      functionName: exampleless,
-    });
-    return outcome;
-  }
-
-  var unfilled = studioApp().getUnfilledFunctionalExample();
-  if (unfilled) {
-    outcome.result = ResultType.FAILURE;
-    outcome.testResults = TestResults.EXAMPLE_FAILED;
-
-    var name = unfilled
-      .getRootBlock()
-      .getInputTargetBlock('ACTUAL')
-      .getFieldValue('NAME');
-    outcome.message = commonMsg.emptyExampleBlockErrorMsg({functionName: name});
-    return outcome;
-  }
-
-  var failingBlockName = studioApp().checkForFailingExamples(
-    Studio.getStudioExampleFailure
-  );
-  if (failingBlockName) {
-    outcome.result = false;
-    outcome.testResults = TestResults.EXAMPLE_FAILED;
-    outcome.message = commonMsg.exampleErrorMessage({
-      functionName: failingBlockName,
-    });
-  }
-
-  return outcome;
 };
 
 /**

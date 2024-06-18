@@ -555,8 +555,6 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     return this.embeddedWorkspaces.includes(workspace.id);
   };
 
-  // TODO - used for validation in CS in Algebra.
-  blocklyWrapper.findEmptyContainerBlock = function () {};
   blocklyWrapper.BlockSpace = {
     EVENTS: WORKSPACE_EVENTS,
     onMainBlockSpaceCreated: callback => {
