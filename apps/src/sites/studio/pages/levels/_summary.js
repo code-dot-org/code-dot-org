@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom';
 import {getStore} from '@cdo/apps/redux';
 import {Provider} from 'react-redux';
 import getScriptData from '@cdo/apps/util/getScriptData';
-import i18n from '@cdo/locale';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SummaryTopLinks from '@cdo/apps/templates/levelSummary/SummaryTopLinks';
 import SummaryResponses from '@cdo/apps/templates/levelSummary/SummaryResponses';
