@@ -313,11 +313,10 @@ module.exports = class Maze {
     let code = '';
     if (studioApp().isUsingBlockly()) {
       let codeBlocks = getCodeBlocks();
-      if (studioApp().initializationBlocks) {
-        codeBlocks = studioApp().initializationBlocks.concat(codeBlocks);
+      if (studioApp().initializationCode) {
+        code = studioApp().initializationCode;
       }
-
-      code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
+      code += Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
     } else {
       code = generateCodeAliases(dropletConfig, 'Maze');
       code += studioApp().editor.getValue();

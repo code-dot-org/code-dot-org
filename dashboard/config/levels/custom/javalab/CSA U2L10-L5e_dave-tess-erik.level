@@ -1,0 +1,25 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-06-12T22:58:47.000Z",
+  "level_num": "custom",
+  "user_id": 18,
+  "properties": {
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "SoccerGame.java": {
+        "text": "// this is starter code",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-06-12 22:59:19 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"},{\"changed_at\":\"2024-06-12 23:19:31 +0000\",\"changed\":[],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"},{\"changed_at\":\"2024-06-12 23:20:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"}]"
+}]]></config>
+</Javalab>
