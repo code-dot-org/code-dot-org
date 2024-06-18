@@ -20,7 +20,7 @@ Feature: Age Gated Students Modal and Banner
 
     # Click on Age Gated Banner Learn More button to view Age Gated Students Modal
     And I wait until element "#uitest-age-gated-banner" is visible
-    And I click selector "a:contains(Learn more)"
+    And I click selector "a:contains(Not Started)"
     And I wait until element "#uitest-age-gated-students-modal" is visible
     And I wait until element "div:contains(Locked Out)" is visible
 
