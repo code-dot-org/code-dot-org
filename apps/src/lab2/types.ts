@@ -280,6 +280,20 @@ export interface ExtraLinksLevelbuilderData {
     path: string;
   }[];
 }
+export interface ExtraLinksProjectValidatorData {
+  owner_info: {[key: string]: {storage_id: number; name: string}};
+  project_info: {
+    [key: string]: {
+      id: number;
+      sources_link: string;
+      assets_link: string;
+      animations_link: string;
+      files_link: string;
+      is_featured_project: boolean;
+      featured_status?: string;
+    };
+  };
+}
 
 // Text-based labs that are currently supported by lab2.
 export const TEXT_BASED_LABS: AppName[] = ['aichat', 'pythonlab', 'weblab2'];

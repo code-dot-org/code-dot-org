@@ -3,6 +3,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import Button from '@cdo/apps/templates/Button';
 import {useFetch} from '@cdo/apps/util/useFetch';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import {ExtraLinksLevelbuilderData} from '@cdo/apps/lab2/types';
 import moduleStyles from './extra-links.module.scss';
 import ExtraLinksModal from './ExtraLinksModal';
 import {PERMISSIONS} from '../constants';
@@ -15,17 +16,6 @@ interface PermissionResponse {
   permissions: string[];
 }
 
-interface ExtraLinksResponse {
-  links: {[key: string]: {text: string; url: string; access_key?: string}[]};
-  can_clone: boolean;
-  can_delete: boolean;
-  level_name: string;
-  script_level_path_links: {
-    script: string;
-    path: string;
-  }[];
-}
-
 // If the user has permission to see extra links, fetch extra links for the level,
 // then display a modal with the link data.
 const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
@@ -33,7 +23,8 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
 }: ExtraLinksProps) => {
   const {loading, data} = useFetch('/api/v1/users/current/permissions');
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [linkData, setLinkData] = useState<ExtraLinksResponse | null>(null);
+  const [levelbuilderLinkData, setLevelbuilderLinkData] =
+    useState<ExtraLinksLevelbuilderData | null>(null);
   const permissionData = data
     ? (data as PermissionResponse)
     : {permissions: []};
@@ -51,11 +42,11 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
       permissionData.permissions.includes(PERMISSIONS.PROJECT_VALIDATOR)
     ) {
       try {
-        HttpClient.fetchJson<ExtraLinksResponse>(
+        HttpClient.fetchJson<ExtraLinksLevelbuilderData>(
           `/levels/${levelId}/extra_links`
         ).then(response => {
           console.log('response.value - levelbuilder', response.value);
-          setLinkData(response.value);
+          setLevelbuilderLinkData(response.value);
         });
       } catch (e) {
         console.error('Error fetching levelbuilder extra links', e);
@@ -82,16 +73,16 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
     return <></>;
   }
 
-  return loading || !linkData ? null : (
+  return loading || !levelbuilderLinkData ? null : (
     <>
       <Button
         onClick={() => setIsModalOpen(true)}
         text={'Extra Links'}
         className={moduleStyles.extraLinksButton}
       />
-      {linkData && (
+      {levelbuilderLinkData && (
         <ExtraLinksModal
-          linkData={linkData}
+          levelbuilderLinkData={levelbuilderLinkData}
           isOpen={isModalOpen}
           closeModal={() => setIsModalOpen(false)}
           levelId={levelId}
