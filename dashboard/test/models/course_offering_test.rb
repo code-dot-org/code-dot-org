@@ -676,8 +676,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
 
   test 'missing_device_compatibility?' do
     co_device_comp_nil = create :course_offering, key: 'course-offering-dc-nil', device_compatibility: nil
-    co_device_comp_missing_one = create :course_offering, key: 'course-offering-dc-missing-one', device_compatibility: "{'computer':'','chromebook':'not_recommended','tablet':'incompatible','mobile':'incompatible','no_device':'incompatible'}"
-    co_device_comp_full = create :course_offering, key: 'course-offering-dc-full', device_compatibility: "{'computer':'ideal','chromebook':'not_recommended','tablet':'incompatible','mobile':'incompatible','no_device':'incompatible'}"
+    co_device_comp_missing_one = create :course_offering, key: 'course-offering-dc-missing-one', device_compatibility: '{"computer":"","chromebook":"not_recommended","tablet":"incompatible","mobile":"incompatible","no_device":"incompatible"}'
+    co_device_comp_full = create :course_offering, key: 'course-offering-dc-full', device_compatibility: '{"computer":"ideal","chromebook":"not_recommended","tablet":"incompatible","mobile":"incompatible","no_device":"incompatible"}'
 
     assert(co_device_comp_nil.missing_device_compatibility?)
     assert(co_device_comp_missing_one.missing_device_compatibility?)
