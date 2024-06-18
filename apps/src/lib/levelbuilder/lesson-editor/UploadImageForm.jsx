@@ -67,7 +67,7 @@ export default function UploadImageForm() {
       {tempImageUrl && (
         <img
           src={tempImageUrl}
-          alt="uploaded image preview"
+          alt="preview of uploaded document"
           className={styles.imagePreview}
         />
       )}
