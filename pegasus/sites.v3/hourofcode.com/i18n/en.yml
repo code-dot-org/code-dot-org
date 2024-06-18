@@ -1085,6 +1085,13 @@
           duration: "Two, 45-minute lessons"
           button: "Explore unit"
           aria_label: "Explore the Generative AI for Humanities unit"
+        computer_vision:
+          overline: "9-12"
+          title: "Computer Vision"
+          desc: "Explore how artificial intelligence interprets visual data through our computer vision units."
+          duration: "5+ hours"
+          button: "Explore units"
+          aria_label: "Explore the Computer Vision units"
     pl:
       desc: "Empower yourself with the knowledge and tools to effectively teach AI and machine learning in the classroom."
       tile:
