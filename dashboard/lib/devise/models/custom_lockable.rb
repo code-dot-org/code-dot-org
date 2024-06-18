@@ -17,6 +17,12 @@ module Devise
         update!(failed_attempts: updated_failed_attempts)
         reload
       end
+
+      # Add support for `nil` values
+      # @override https://github.com/heartcombo/devise/blob/v4.9.3/lib/devise/models/lockable.rb#L143-L145
+      protected def attempts_exceeded?
+        (failed_attempts || 0) >= self.class.maximum_attempts
+      end
     end
   end
 end
