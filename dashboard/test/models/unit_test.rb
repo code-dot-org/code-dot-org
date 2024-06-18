@@ -679,22 +679,6 @@ class UnitTest < ActiveSupport::TestCase
     assert Unit.find_by_name('ECSPD').old_professional_learning_course?
   end
 
-  test 'missing_device_compatibility?' do
-    unit = create :script, family_name: 'fake', version_year: '2017', is_course: true
-    co = CourseOffering.add_course_offering(unit)
-    device_compatibilities_missing_one = '{"computer":"","chromebook":"not_recommended","tablet":"incompatible","mobile":"incompatible","no_device":"incompatible"}'
-    device_compatibilities_full = '{"computer":"ideal","chromebook":"not_recommended","tablet":"incompatible","mobile":"incompatible","no_device":"incompatible"}'
-
-    co.update!(device_compatibility: nil)
-    assert(unit.missing_device_compatibility?)
-
-    co.update!(device_compatibility: device_compatibilities_missing_one)
-    assert(unit.missing_device_compatibility?)
-
-    co.update!(device_compatibility: device_compatibilities_full)
-    refute(unit.missing_device_compatibility?)
-  end
-
   test 'should summarize migrated unit' do
     unit = create(:script, name: 'single-lesson-script', instruction_type: Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
     lesson_group = create(:lesson_group, key: 'key1', script: unit)

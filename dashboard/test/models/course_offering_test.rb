@@ -674,6 +674,22 @@ class CourseOfferingTest < ActiveSupport::TestCase
     Unit.clear_cache
   end
 
+  test 'missing_device_compatibility?' do
+    unit = create :script, family_name: 'fake', version_year: '2017', is_course: true
+    co = CourseOffering.add_course_offering(unit)
+    device_compatibilities_missing_one = '{"computer":"","chromebook":"not_recommended","tablet":"incompatible","mobile":"incompatible","no_device":"incompatible"}'
+    device_compatibilities_full = '{"computer":"ideal","chromebook":"not_recommended","tablet":"incompatible","mobile":"incompatible","no_device":"incompatible"}'
+
+    co.update!(device_compatibility: nil)
+    assert(unit.missing_device_compatibility?)
+
+    co.update!(device_compatibility: device_compatibilities_missing_one)
+    assert(unit.missing_device_compatibility?)
+
+    co.update!(device_compatibility: device_compatibilities_full)
+    refute(unit.missing_device_compatibility?)
+  end
+
   test 'duration returns nil if latest_published_version does not exist' do
     unit = create(:script, family_name: 'test-duration', version_year: '1997', is_course: true, published_state: 'in_development')
     co = CourseOffering.add_course_offering(unit)
