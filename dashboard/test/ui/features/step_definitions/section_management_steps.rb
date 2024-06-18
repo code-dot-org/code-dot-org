@@ -108,10 +108,12 @@ And(/^I create a(n authorized)? teacher-associated( under-13)? student( in Color
     age: under_13 ? '10' : '16',
     url: "/join/#{section_code}",
   }
+
   if in_colorado
     user_opts[:us_state] = 'CO'
     user_opts[:country_code] = 'US'
     user_opts[:parent_email_preference_email] = "[user-email]"
+    user_opts[:user_provided_us_state] = true
   end
 
   create_user(name, **user_opts)
