@@ -169,12 +169,11 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
       <>
         <StrongText>Project Info</StrongText>
         <ul>
-          <li>{`Project owner: ${ownerInfo.name}`}</li>
-          <li>{`Owner storage id: ${ownerInfo.storage_id}`}</li>
-          <li>{`Project id: ${projectInfo.id}`}</li>
+          <li>Project owner: {ownerInfo.name}</li>
+          <li>Owner storage id: {ownerInfo.storage_id}</li>
+          <li>Project id: {projectInfo.id}</li>
           <li>
-            {`S3 links: `}
-            <a href={`${projectInfo.sources_link}`}>{`Sources`}</a>
+            S3 links: <a href={`${projectInfo.sources_link}`}>Sources</a>
           </li>
           <li>
             Remix ancestry:
@@ -186,8 +185,10 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
               ))}
             </ul>
           </li>
-
-          <li>{`Featured project info: ${projectValidatorLinkData.project_info.featured_status}`}</li>
+          <li>
+            Featured project info:
+            {projectValidatorLinkData.project_info.featured_status}
+          </li>
         </ul>
       </>
     );

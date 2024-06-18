@@ -281,15 +281,13 @@ export interface ExtraLinksLevelbuilderData {
   }[];
 }
 export interface ExtraLinksProjectValidatorData {
-  owner_info: {[key: string]: {storage_id: number; name: string}};
+  owner_info: {storage_id: number; name: string};
   project_info: {
-    [key: string]: {
-      id: number;
-      sources_link: string;
-      is_featured_project: boolean;
-      featured_status: string;
-      remix_ancestry: string[];
-    };
+    id: number;
+    sources_link: string;
+    is_featured_project: boolean;
+    featured_status: string;
+    remix_ancestry: string[];
   };
 }
 
