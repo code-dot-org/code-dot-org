@@ -67,6 +67,7 @@
 #  index_users_on_reset_password_token_and_deleted_at  (reset_password_token,deleted_at) UNIQUE
 #  index_users_on_school_info_id                       (school_info_id)
 #  index_users_on_studio_person_id                     (studio_person_id)
+#  index_users_on_unlock_token                         (unlock_token) UNIQUE
 #  index_users_on_username_and_deleted_at              (username,deleted_at) UNIQUE
 #
 

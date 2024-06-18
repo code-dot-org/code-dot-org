@@ -2408,6 +2408,7 @@ ActiveRecord::Schema.define(version: 2024_07_02_214406) do
     t.index ["reset_password_token", "deleted_at"], name: "index_users_on_reset_password_token_and_deleted_at", unique: true
     t.index ["school_info_id"], name: "index_users_on_school_info_id"
     t.index ["studio_person_id"], name: "index_users_on_studio_person_id"
+    t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
     t.index ["username", "deleted_at"], name: "index_users_on_username_and_deleted_at", unique: true
   end
 
