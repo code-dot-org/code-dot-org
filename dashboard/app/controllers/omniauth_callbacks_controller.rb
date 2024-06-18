@@ -537,7 +537,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     lock_reason = account_linking_lock_reason(user)
     return unless lock_reason
 
-    redirect_to edit_user_registration_path, alert: lock_reason
+    redirect_back fallback_location: new_user_session_path, alert: lock_reason
   end
 
   # Determine whether to link a new LTI auth option to an existing account

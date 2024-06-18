@@ -1691,13 +1691,28 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
         context 'if account linking is locked for user' do
           let(:user_account_linking_lock_reason) {'expected_user_account_linking_lock_reason'}
 
-          it 'redirects to users edit page with alert about lock reason' do
+          it 'redirects to the sign in page with alert about lock reason' do
             assert_does_not_create(AuthenticationOption) do
               get provider
             end
 
-            assert_redirected_to edit_user_registration_path
+            assert_redirected_to new_user_session_path
             _(flash.alert).must_equal user_account_linking_lock_reason
+          end
+
+          context 'and the user has a referrer page' do
+            before do
+              @request.env['HTTP_REFERER'] = 'https://example.com/where-i-came-from'
+            end
+
+            it 'redirects back to where the user came from with alert about lock reason' do
+              assert_does_not_create(AuthenticationOption) do
+                get provider
+              end
+
+              assert_redirected_to 'https://example.com/where-i-came-from'
+              _(flash.alert).must_equal user_account_linking_lock_reason
+            end
           end
         end
       end
@@ -1762,14 +1777,30 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
         context 'if account linking is locked for user' do
           let(:user_account_linking_lock_reason) {'expected_user_account_linking_lock_reason'}
 
-          it 'redirects to users edit page with alert about lock reason' do
+          it 'redirects to the sign in page by default with alert about lock reason' do
             get provider
 
             _(user.authentication_options.count).must_equal 2
             _(user.authentication_options).wont_include lti_auth_option
 
-            assert_redirected_to edit_user_registration_path
+            assert_redirected_to new_user_session_path
             _(flash.alert).must_equal user_account_linking_lock_reason
+          end
+
+          context 'and the user has a referrer page' do
+            before do
+              @request.env['HTTP_REFERER'] = 'https://example.com/where-i-came-from'
+            end
+
+            it 'redirects back to where we came from with alert about lock reason' do
+              get provider
+
+              _(user.authentication_options.count).must_equal 2
+              _(user.authentication_options).wont_include lti_auth_option
+
+              assert_redirected_to 'https://example.com/where-i-came-from'
+              _(flash.alert).must_equal user_account_linking_lock_reason
+            end
           end
         end
       end
