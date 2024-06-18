@@ -12,15 +12,3 @@ chef_server_url          @chef_server_url = ENV['CDO_CHEF_SERVER_URL'] || "https
 cache_type               'BasicFile'
 cache_options( :path => "#{ENV['HOME']}/.chef/checksums" )
 cookbook_path            ["#{current_dir}/../cookbooks"]
-
-
-
-echo $CDO_CHEF_NODE_NAME
-echo $CDO_CHEF_ORG_NAME
-echo $CDO_CHEF_CLIENT_KEY
-echo $HOME
-echo $CDO_CHEF_VALIDATION_CLIENT_NAME
-echo $CDO_CHEF_VALIDATION_KEY
-echo $HOME
-echo $CDO_CHEF_SERVER_URL
-echo $HOME
