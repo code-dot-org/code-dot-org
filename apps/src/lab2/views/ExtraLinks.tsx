@@ -3,7 +3,10 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import Button from '@cdo/apps/templates/Button';
 import {useFetch} from '@cdo/apps/util/useFetch';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {ExtraLinksLevelbuilderData} from '@cdo/apps/lab2/types';
+import {
+  ExtraLinksLevelbuilderData,
+  ExtraLinksProjectValidatorData,
+} from '@cdo/apps/lab2/types';
 import moduleStyles from './extra-links.module.scss';
 import ExtraLinksModal from './ExtraLinksModal';
 import {PERMISSIONS} from '../constants';
@@ -25,6 +28,8 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [levelbuilderLinkData, setLevelbuilderLinkData] =
     useState<ExtraLinksLevelbuilderData | null>(null);
+  const [projectValidatorLinkData, setProjectValidatorLinkData] =
+    useState<ExtraLinksProjectValidatorData | null>(null);
   const permissionData = data
     ? (data as PermissionResponse)
     : {permissions: []};
@@ -45,7 +50,6 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
         HttpClient.fetchJson<ExtraLinksLevelbuilderData>(
           `/levels/${levelId}/extra_links`
         ).then(response => {
-          console.log('response.value - levelbuilder', response.value);
           setLevelbuilderLinkData(response.value);
         });
       } catch (e) {
@@ -54,12 +58,12 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
     }
     if (permissionData.permissions.includes(PERMISSIONS.PROJECT_VALIDATOR)) {
       try {
-        console.log('try p.v.');
-        HttpClient.fetchJson(`/projects/${channelId}/extra_links`).then(
-          response => {
-            console.log('response.value - project validator', response.value);
-          }
-        );
+        HttpClient.fetchJson<ExtraLinksProjectValidatorData>(
+          `/projects/${channelId}/extra_links`
+        ).then(response => {
+          console.log('response.value - project validator', response.value);
+          setProjectValidatorLinkData(response.value);
+        });
       } catch (e) {
         console.error('Error fetching levelbuilder extra links', e);
       }
@@ -73,7 +77,8 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
     return <></>;
   }
 
-  return loading || !levelbuilderLinkData ? null : (
+  return loading ||
+    (!levelbuilderLinkData && !projectValidatorLinkData) ? null : (
     <>
       <Button
         onClick={() => setIsModalOpen(true)}
@@ -83,6 +88,7 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
       {levelbuilderLinkData && (
         <ExtraLinksModal
           levelbuilderLinkData={levelbuilderLinkData}
+          projectValidatorLinkData={projectValidatorLinkData}
           isOpen={isModalOpen}
           closeModal={() => setIsModalOpen(false)}
           levelId={levelId}

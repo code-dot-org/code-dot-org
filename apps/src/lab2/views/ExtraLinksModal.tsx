@@ -3,7 +3,10 @@ import {Heading3, StrongText} from '@cdo/apps/componentLibrary/typography';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import Button from '@cdo/apps/templates/Button';
 import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
-import {ExtraLinksLevelbuilderData} from '../types';
+import {
+  ExtraLinksLevelbuilderData,
+  ExtraLinksProjectValidatorData,
+} from '../types';
 import moduleStyles from './extra-links.module.scss';
 
 // Extra Links modal. This is used to display helpful links for levelbuilders, and should
@@ -11,6 +14,7 @@ import moduleStyles from './extra-links.module.scss';
 // version of extra links, which doesn't work on lab2 after a level change.
 interface ExtraLinksModalProps {
   levelbuilderLinkData: ExtraLinksLevelbuilderData;
+  projectValidatorLinkData: ExtraLinksProjectValidatorData | null;
   isOpen: boolean;
   closeModal: () => void;
   levelId: number;
@@ -19,6 +23,7 @@ interface ExtraLinksModalProps {
 
 const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
   levelbuilderLinkData,
+  projectValidatorLinkData,
   isOpen,
   closeModal,
   levelId,
@@ -85,7 +90,7 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
       }
     }
   };
-
+  console.log('projectValidatorLinkData', projectValidatorLinkData);
   return isOpen ? (
     <AccessibleDialog onClose={onClose}>
       <Heading3>Extra links</Heading3>
@@ -192,7 +197,7 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
         <>
           <StrongText>Project Info</StrongText>
           <ul>
-            <li>Project owner: </li>
+            <li>{`Project owner: ${projectValidatorLinkData?.owner_info.name}`}</li>
             <li>Owner storage id</li>
             <li>Project id</li>
             <li>S3 links: sources</li>
