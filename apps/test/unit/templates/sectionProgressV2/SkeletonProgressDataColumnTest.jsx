@@ -33,8 +33,8 @@ describe('SkeletonProgressDataColumn', () => {
   it('Shows skeleton if fake lesson', () => {
     renderDefault({lesson: {id: 1, isFake: true}});
 
-    screen.getByTestId(getTestId(LESSON.id, STUDENT_1.id));
-    screen.getByTestId(getTestId(LESSON.id, STUDENT_2.id));
+    screen.getByTestId(getTestId(1, STUDENT_1.id));
+    screen.getByTestId(getTestId(1, STUDENT_2.id));
     screen.getByLabelText('Loading lesson');
     expect(
       screen.getAllByTestId('lesson-skeleton-cell', {exact: false})
