@@ -88,7 +88,7 @@ Feature: Evaluate student code against rubrics using AI
     And I wait for the page to fully load
     And I wait until element "h1:contains(Getting Started with Your AI Teaching Assistant)" is visible
     And I click selector ".introjs-skipbutton" if it exists
-    And I wait for 2 seconds
+    And I wait until element ".congrats" is gone
     #Then I verify progress in the header of the current page is "attempted_assessment" for level 2
     And element "#ui-floatingActionButton" is visible
 
@@ -140,7 +140,7 @@ Feature: Evaluate student code against rubrics using AI
     And I wait for the page to fully load
     And I wait until element "h1:contains(Getting Started with Your AI Teaching Assistant)" is visible
     And I click selector ".introjs-skipbutton" if it exists
-    And I wait for 2 seconds
+    And I wait until element ".congrats" is gone 
     #Then I verify progress in the header of the current page is "attempted_assessment" for level 2
     And element "#ui-floatingActionButton" is visible
 
