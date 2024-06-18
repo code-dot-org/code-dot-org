@@ -6,15 +6,9 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {setPackId} from '../redux/musicRedux';
 import MusicLibrary, {SoundFolder} from '../player/MusicLibrary';
 import classNames from 'classnames';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import MusicPlayer from '../player/MusicPlayer';
 import {DEFAULT_PACK} from '../constants';
-import AppConfig from '../appConfig';
 import musicI18n from '../locale';
-
-// A variant for PackDialog that plays previews as sounds are selected.
-const usePackDialogPreview =
-  AppConfig.getValue('pack-dialog-preview') === 'true';
 
 interface PackEntryProps {
   playingPreview: string | null;
@@ -43,24 +37,10 @@ const PackEntry: React.FunctionComponent<PackEntryProps> = ({
   const onEntryClick = useCallback(() => {
     onSelect(folder);
 
-    if (usePackDialogPreview) {
-      if (soundPath && !isPlayingPreview) {
-        onPreview(soundPath);
-      }
+    if (soundPath && !isPlayingPreview) {
+      onPreview(soundPath);
     }
   }, [folder, isPlayingPreview, onPreview, onSelect, soundPath]);
-
-  const onPreviewClick = useCallback(
-    (e: Event) => {
-      if (isPlayingPreview) {
-        onStopPreview();
-      } else if (soundPath && !isPlayingPreview) {
-        onPreview(soundPath);
-      }
-      e.stopPropagation();
-    },
-    [isPlayingPreview, onPreview, soundPath, onStopPreview]
-  );
 
   return (
     <div
@@ -95,16 +75,6 @@ const PackEntry: React.FunctionComponent<PackEntryProps> = ({
             <div className={styles.packFooteArtist}>{folder.artist}</div>
           )}
         </div>
-        {!usePackDialogPreview && previewSound && (
-          <div className={styles.packFooterPreview}>
-            <FontAwesome
-              title={undefined}
-              icon={isPlayingPreview ? 'stop-circle' : 'play-circle'}
-              className={styles.preview}
-              onClick={onPreviewClick}
-            />
-          </div>
-        )}
       </div>
     </div>
   );

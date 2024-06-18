@@ -51,33 +51,11 @@ const optionsList = [
     ],
   },
   {
-    name: 'sounds-panel-1-preview',
-    type: 'radio',
-    values: [
-      {
-        value: 'false',
-        description: 'Use original sounds panel with preview (default).',
-      },
-      {
-        value: 'true',
-        description: 'Use original sounds panel with preview on select.',
-      },
-    ],
-  },
-  {
     name: 'sounds-panel-2',
     type: 'radio',
     values: [
       {value: 'false', description: 'Use original sounds panel (default).'},
       {value: 'true', description: 'Use new sounds panel.'},
-    ],
-  },
-  {
-    name: 'pack-dialog-preview',
-    type: 'radio',
-    values: [
-      {value: 'false', description: 'Use original pack dialog (default).'},
-      {value: 'true', description: 'Use pack dialog with preview on select.'},
     ],
   },
   {
@@ -135,17 +113,6 @@ const optionsList = [
     values: [
       {value: 'false', description: 'New timeline (default).'},
       {value: 'true', description: 'Original timeline.'},
-    ],
-  },
-  {
-    name: 'clickable-text-with-glow',
-    type: 'radio',
-    values: [
-      {
-        value: 'false',
-        description: 'No glow for clickable text in instructions (default).',
-      },
-      {value: 'true', description: 'Glow for clickable text in instructions.'},
     ],
   },
 ];

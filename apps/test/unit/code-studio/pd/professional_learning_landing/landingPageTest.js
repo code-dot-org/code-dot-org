@@ -280,7 +280,7 @@ describe('LandingPage', () => {
     screen.getByText(i18n.plSectionsInstructorTitle());
 
     // Facilitated workshop table
-    screen.getByText('My Workshops');
+    screen.getByText('In Progress and Upcoming Workshops');
   });
 
   it('page shows expected sections in Instructor Center tab (for universal instructor)', () => {
@@ -318,7 +318,7 @@ describe('LandingPage', () => {
     screen.getByText(i18n.plSectionsRegionalPartnerPlaybookTitle());
 
     // Regional Partner workshop table
-    screen.getByText('My Workshops');
+    screen.getByText('In Progress and Upcoming Workshops');
   });
 
   it('page shows expected sections in Workshop Organizer Center tab', () => {
@@ -334,6 +334,6 @@ describe('LandingPage', () => {
     screen.getByText(i18n.plSectionsWorkshopResources());
 
     // Workshop Organizer workshop table
-    screen.getByText('My Workshops');
+    screen.getByText('In Progress and Upcoming Workshops');
   });
 });

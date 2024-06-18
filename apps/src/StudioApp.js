@@ -99,7 +99,11 @@ var copyrightStrings;
  */
 const MIN_WIDTH = 1400;
 const DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
-export const MAX_VISUALIZATION_WIDTH = 400;
+export const MAX_VISUALIZATION_WIDTH = experiments.isEnabled(
+  experiments.BIG_PLAYSPACE
+)
+  ? 0.75 * window.innerHeight
+  : 400;
 export const MIN_VISUALIZATION_WIDTH = 200;
 
 /**
@@ -1524,6 +1528,10 @@ StudioApp.prototype.resizeVisualization = function (width) {
   visualizationColumn.style.maxWidth = newVizWidth + vizSideBorderWidth + 'px';
   visualization.style.maxWidth = newVizWidthString;
   visualization.style.maxHeight = newVizHeightString;
+  if (experiments.isEnabled(experiments.BIG_PLAYSPACE)) {
+    visualization.style.width = newVizWidthString;
+    visualization.style.height = newVizHeightString;
+  }
 
   var scale = newVizWidth / this.nativeVizWidth;
   getStore().dispatch(setVisualizationScale(scale));
@@ -2005,6 +2013,9 @@ StudioApp.prototype.setConfigValues_ = function (config) {
     config.level.lastAttempt || config.level.startBlocks || '';
   this.vizAspectRatio = config.vizAspectRatio || 1.0;
   this.nativeVizWidth = config.nativeVizWidth || this.maxVisualizationWidth;
+  if (experiments.isEnabled(experiments.BIG_PLAYSPACE)) {
+    this.nativeVizWidth = 400;
+  }
 
   if (config.level.initializationBlocks) {
     var xml = parseXmlElement(config.level.initializationBlocks);
@@ -2012,6 +2023,16 @@ StudioApp.prototype.setConfigValues_ = function (config) {
       'JavaScript',
       xml
     );
+
+    // Generate code for the initialization blocks. Used at execution time
+    // for labs like Maze.
+    if (this.initializationBlocks.length) {
+      const generator = Blockly.getGenerator();
+      generator.init(this.initializationBlocks[0].workspace);
+      this.initializationCode = generator.finish(
+        Blockly.Generator.blocksToCode('JavaScript', this.initializationBlocks)
+      );
+    }
   }
 
   // enableShowCode defaults to true if not defined
@@ -3429,6 +3450,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
       locale: config.locale,
       assetUrl: this.assetUrl,
       inStartBlocksMode: level.edit_blocks === START_BLOCKS,
+      inToolboxBlocksMode: level.edit_blocks === TOOLBOX_EDIT_MODE,
       isReadOnlyWorkspace: !!config.readonlyWorkspace,
       isDroplet: !!level.editCode,
       isBlockly: this.isUsingBlockly(),

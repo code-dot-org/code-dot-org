@@ -3,14 +3,10 @@
 .soundsPanel {
   user-select: none;
   width: 600px;
-  height: 290px;
+  height: 340px;
   display: flex;
   flex-direction: column;
   gap: 5px;
-
-  &ExtraHeight {
-    height: 340px;
-  }
 
   &Top {
     display: flex;
@@ -99,17 +95,13 @@
 
   .soundRow {
     overflow: hidden;
-    padding: 4px 0;
     font-size: 14px;
     margin: 1px;
+    padding: 6px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-
-    &ExtraHeight {
-      padding: 6px 0;
-    }
 
     &:hover {
       background-color: $neutral_dark90;

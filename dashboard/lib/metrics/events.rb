@@ -34,7 +34,7 @@ module Metrics
         if CDO.rack_env?(:development)
           log_event_to_stdout(user: user, event_name: event_name, event_value: event_value, metadata: metadata, enabled_experiments: enabled_experiments)
         elsif CDO.rack_env?(:production) || managed_test_environment
-          log_event_with_statsig(user: user, event_name: event_name, event_value: event_value, metadata: metadata, enabled_experiments: enabled_experiments)
+          log_statsig_event_with_cdo_user(user: user, event_name: event_name, event_value: event_value, metadata: metadata, enabled_experiments: enabled_experiments)
         else
           # We don't want to log in other environments, just return silently
           return
@@ -46,11 +46,35 @@ module Metrics
       )
       end
 
+      def log_event_with_session(session:, event_name:, event_value: nil, metadata: {})
+        event_value = event_name if event_value.nil?
+        managed_test_environment = CDO.running_web_application? && CDO.test_system?
+        statsig_user = StatsigUser.new({'userID' => session[:statsig_stable_id]})
+
+        if CDO.rack_env?(:development)
+          log_event_to_stdout_with_session(session: session, event_name: event_name, event_value: event_value, metadata: metadata)
+        elsif CDO.rack_env?(:production) || managed_test_environment
+          log_statsig_event(statsig_user: statsig_user, event_name: event_name, event_value: event_value, metadata: metadata)
+        else
+          # We don't want to log in other environments, just return silently
+          return
+        end
+      rescue => exception
+        Honeybadger.notify(
+          exception,
+          error_message: 'Error logging session event',
+          )
+      end
+
       # Logs an event to Statsig
-      private def log_event_with_statsig(user:, event_name:, event_value:, metadata:, enabled_experiments:)
-        # Re-initialize Statsig to make sure it's avaiable in current thread.
-        Cdo::StatsigInitializer.init
+      private def log_statsig_event_with_cdo_user(user:, event_name:, event_value:, metadata:, enabled_experiments:)
         statsig_user = build_statsig_user(user: user, enabled_experiments: enabled_experiments)
+        log_statsig_event(statsig_user: statsig_user, event_name: event_name, event_value: event_value, metadata: metadata)
+      end
+
+      private def log_statsig_event(statsig_user:, event_name:, event_value:, metadata:)
+        # Re-initialize Statsig to make sure it's available in current thread.
+        Cdo::StatsigInitializer.init
         Statsig.log_event(statsig_user, event_name, event_value, metadata)
       end
 
@@ -77,6 +101,17 @@ module Metrics
             user_type: user_type,
             enabled_experiments: enabled_experiments,
           }.compact,
+          event_name: event_name,
+          event_value: event_value,
+          metadata: metadata,
+        }
+        puts "Logging Event: #{event_details.to_json}"
+      end
+
+      # Logs an event to stdout, useful for development and debugging
+      private def log_event_to_stdout_with_session(session:, event_name:, event_value:, metadata:)
+        event_details = {
+          user_id: session[:statsig_stable_id],
           event_name: event_name,
           event_value: event_value,
           metadata: metadata,
