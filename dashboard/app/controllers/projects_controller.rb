@@ -596,7 +596,6 @@ class ProjectsController < ApplicationController
       end
     end
     if project_info['is_featured_project']
-      featured_project = FeaturedProject.find_by_project_id(project_info['id'])
       project = FeaturedProject.find_by project_id: project_info['id']
       project_info['featured_status'] = project.status
     else
