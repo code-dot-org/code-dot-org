@@ -1,5 +1,16 @@
 :ruby
   block_items = [
+     {
+      overline: hoc_s(:module_label_self_paced),
+      title: hoc_s(:ai_pl_101_title),
+      img: "/images/self-paced-pl-tile-ai-101.jpg",
+      desc: hoc_s(:ai_pl_101_desc),
+      duration: hoc_s(:module_duration_5_hrs),
+      url: CDO.studio_url("/courses/self-paced-pl-ai-101"),
+      aria_label: hoc_s("ai_page.pl.tile.ai_101.aria_label"),
+      button_label: hoc_s(:call_to_action_start_module),
+      new: true,
+    },
     {
       overline: hoc_s("ai_page.pl.tile.decisions.overline"),
       title: hoc_s("ai_page.pl.tile.decisions.title"),
@@ -32,18 +43,6 @@
       aria_label: hoc_s("ai_page.pl.tile.computer_vision.aria_label"),
       button_label: hoc_s("ai_page.pl.tile.computer_vision.button"),
       new: true,
-    },
-    {
-      # Move this to the top of the list once enough time
-      # has passed after the 2024 curriculum launch
-      overline: hoc_s(:module_label_self_paced),
-      title: hoc_s(:ai_pl_101_title),
-      img: "/images/self-paced-pl-tile-ai-101.jpg",
-      desc: hoc_s(:ai_pl_101_desc),
-      duration: hoc_s(:module_duration_5_hrs),
-      url: CDO.studio_url("/courses/self-paced-pl-ai-101"),
-      aria_label: hoc_s("ai_page.pl.tile.ai_101.aria_label"),
-      button_label: hoc_s(:call_to_action_start_module),
     },
     {
       overline: hoc_s(:module_label_video_series),
