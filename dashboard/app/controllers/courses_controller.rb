@@ -99,7 +99,8 @@ class CoursesController < ApplicationController
       course_summary: @unit_group.summarize(@current_user, for_edit: true),
       script_names: Unit.all.select {|unit| unit.is_course? == false}.map(&:name),
       course_families: UnitGroup.family_names,
-      version_year_options: UnitGroup.get_version_year_options
+      version_year_options: UnitGroup.get_version_year_options,
+      missing_required_device_compatibilities: @unit_group&.course_version&.course_offering&.missing_required_device_compatibility?
     }
     render 'edit', locals: {unit_group: @unit_group}
   end
