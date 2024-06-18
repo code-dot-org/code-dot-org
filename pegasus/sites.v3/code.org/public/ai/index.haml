@@ -54,8 +54,6 @@ theme: responsive_full_width
             %p.no-margin-bottom=hoc_s(:ai_intro_list_desc_03)
     .clear
 
-= view :dance_party_ai_skinny_banner
-
 %section.bg-neutral-light
   .wrapper
     %h2=hoc_s(:ai_why_heading)
@@ -67,11 +65,9 @@ theme: responsive_full_width
       %li
         %i{class: "#{icon_person_chalkboard}"}
         %a{href:"#ai-pl"}=hoc_s(:ai_why_link_02)
-      -# TODO - Remove the DCDO logic after the AI Teaching Assistant launch
-      - if !!DCDO.get('ai-teaching-assistant-launch', false)
-        %li
-          %i{class: "#{icon_robot}"}
-          %a{href:"#ai-integrations"}=hoc_s("ai_integrations.heading")
+      %li
+        %i{class: "#{icon_robot}"}
+        %a{href:"#ai-integrations"}=hoc_s("ai_integrations.heading")
       %li
         %i{class: "#{icon_video}"}
         %a{href:"#ai-videos"}=hoc_s(:ai_why_link_03)
@@ -142,15 +138,13 @@ theme: responsive_full_width
           %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-aiml")}
             =hoc_s(:call_to_action_start_module)
 
--# TODO - Remove the DCDO logic after the AI Teaching Assistant launch
-- if !!DCDO.get('ai-teaching-assistant-launch', false)
-  = view :section_divider_line
+= view :section_divider_line
 
-  %section#ai-integrations
-    .wrapper
-      %h2=hoc_s("ai_integrations.heading")
-      %p=hoc_s("ai_integrations.desc")
-      = view :ai_integrations
+%section#ai-integrations
+  .wrapper
+    %h2=hoc_s("ai_integrations.heading")
+    %p=hoc_s("ai_integrations.desc")
+    = view :ai_integrations
 
 %section#ai-videos.bg-neutral-light
   .wrapper
