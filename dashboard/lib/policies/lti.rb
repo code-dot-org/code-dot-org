@@ -162,6 +162,11 @@ class Policies::Lti
     LMS_PLATFORMS.values.find {|platform| platform[:issuer] == issuer}
   end
 
+  def self.find_platform_name_by_issuer(issuer)
+    platform_name, _ = LMS_PLATFORMS.find {|_, platform| platform[:issuer] == issuer}
+    platform_name.to_s
+  end
+
   # Returns the email provided by the LMS when creating the User through LTI
   # provisioning.
   def self.lti_provided_email(user)
