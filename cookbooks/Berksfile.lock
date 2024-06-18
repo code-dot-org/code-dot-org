@@ -113,7 +113,7 @@ GRAPH
   cdo-syslog (0.1.14)
   cdo-tippecanoe (0.1.15)
     ark (>= 0.0.0)
-  cdo-users (0.1.50)
+  cdo-users (0.1.51)
     apt (>= 0.0.0)
   chef-client (12.3.4)
     cron (>= 4.2.0)
