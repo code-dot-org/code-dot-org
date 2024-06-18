@@ -943,3 +943,33 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: "'24-'25"
+        self-paced-pl-computer-vision:
+          title: self-paced-pl-computer-vision
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        self-paced-pl-coding-with-ai:
+          title: self-paced-pl-coding-with-ai
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        3-5gamedesign-2024:
+          title: 3-5gamedesign-2024
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        microbitmakermodule-2024:
+          title: microbitmakermodule-2024
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        elementaryai-2024:
+          title: elementaryai-2024
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
