@@ -106,7 +106,21 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
     }
   };
 
-  const cloneLevelDisplay = (
+  const onBookmark = async () => {
+    try {
+      await HttpClient.put(
+        `/featured_projects/${channelId}/bookmark`,
+        undefined,
+        true,
+        {contentType: 'application/json;charset=UTF-8'}
+      );
+      setFeaturedProjectStatus('bookmarked');
+    } catch (e) {
+      console.log('Error bookmarking project', e);
+    }
+  };
+
+  const renderCloneLevel = (
     <div>
       <Button
         size={Button.ButtonSize.small}
@@ -135,7 +149,7 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
     </div>
   );
 
-  const deleteLevelDisplay = (
+  const renderDeleteLevel = (
     <div>
       <Button
         size={Button.ButtonSize.small}
@@ -159,7 +173,7 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
     </div>
   );
 
-  const scriptLevelPathLinksDisplay = (
+  const renderScriptLevelPathLinks = (
     <>
       <StrongText>
         This level is in{' '}
@@ -177,7 +191,7 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
     </>
   );
 
-  const displayRemixAncestry = (remixList: string[]) => {
+  const renderRemixAncestry = (remixList: string[]) => {
     if (remixList.length === 0) {
       return <li>Not a remix.</li>;
     }
@@ -188,21 +202,7 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
     ));
   };
 
-  const onBookmark = async () => {
-    try {
-      await HttpClient.put(
-        `/featured_projects/${channelId}/bookmark`,
-        undefined,
-        true,
-        {contentType: 'application/json;charset=UTF-8'}
-      );
-      setFeaturedProjectStatus('bookmarked');
-    } catch (e) {
-      console.log('Error bookmarking project', e);
-    }
-  };
-
-  const displayFeaturedProjectInfo = () => {
+  const renderFeaturedProjectInfo = () => {
     if (featuredProjectStatus === 'n/a') {
       return (
         <>
@@ -219,7 +219,7 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
     return <div>Featured project status: {featuredProjectStatus}</div>;
   };
 
-  const projectValidatorDataDisplay = (
+  const renderProjectValidatorData = (
     projectValidatorLinkData: ExtraLinksProjectValidatorData
   ) => {
     const ownerInfo = projectValidatorLinkData.owner_info;
@@ -237,9 +237,9 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
           </li>
           <li>
             Remix ancestry:
-            <ul>{displayRemixAncestry(projectInfo.remix_ancestry)}</ul>
+            <ul>{renderRemixAncestry(projectInfo.remix_ancestry)}</ul>
           </li>
-          <li>{displayFeaturedProjectInfo()}</li>
+          <li>{renderFeaturedProjectInfo()}</li>
         </ul>
       </>
     );
@@ -280,15 +280,15 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
       ))}
       {levelbuilderLinkData.can_clone &&
         !isStandaloneProject &&
-        cloneLevelDisplay}
+        renderCloneLevel}
       {levelbuilderLinkData.can_delete &&
         !isStandaloneProject &&
-        deleteLevelDisplay}
+        renderDeleteLevel}
       {levelbuilderLinkData.script_level_path_links &&
-        scriptLevelPathLinksDisplay}
+        renderScriptLevelPathLinks}
       {projectValidatorLinkData &&
         isStandaloneProject &&
-        projectValidatorDataDisplay(projectValidatorLinkData)}
+        renderProjectValidatorData(projectValidatorLinkData)}
     </AccessibleDialog>
   ) : null;
 };
