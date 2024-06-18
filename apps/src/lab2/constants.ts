@@ -28,3 +28,8 @@ export enum PERMISSIONS {
 export const START_SOURCES = 'start_sources';
 
 export const LABS_USING_NEW_SHARE_DIALOG = ['music', 'pythonlab'];
+
+export const LAB2_STANDALONE_PROJECT_LEVEL_NAMES = [
+  'New Music Lab Project',
+  'New Python Lab Project',
+];

@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {Heading3, StrongText} from '@cdo/apps/componentLibrary/typography';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import Button from '@cdo/apps/templates/Button';
@@ -8,6 +9,7 @@ import {
   ExtraLinksProjectValidatorData,
 } from '../types';
 import moduleStyles from './extra-links.module.scss';
+import {LAB2_STANDALONE_PROJECT_LEVEL_NAMES} from '../constants';
 
 // Extra Links modal. This is used to display helpful links for levelbuilders, and should
 // be extended to also include links for project validators as well. It replaces the haml
@@ -32,6 +34,13 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
   const [clonedLevelName, setClonedLevelName] = useState('');
   const [cloneError, setCloneError] = useState('');
   const [deleteError, setDeleteError] = useState('');
+
+  const channelId: string | undefined = useAppSelector(
+    state => state.lab.channel && state.lab.channel.id
+  );
+  const levelName = levelbuilderLinkData.level_name;
+  const isStandaloneProject =
+    LAB2_STANDALONE_PROJECT_LEVEL_NAMES.includes(levelName);
 
   useEffect(() => {
     setClonedLevelName(levelbuilderLinkData.level_name);
@@ -159,6 +168,52 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
     </>
   );
 
+  const displayRemixAncestry = (remixList: string[]) => {
+    if (remixList.length === 0) {
+      return <li>Not a remix.</li>;
+    }
+    return remixList.map((link: string, index: number) => (
+      <li key={index}>
+        <a href={link}>{link}</a>
+      </li>
+    ));
+  };
+
+  const onBookmark = async () => {
+    try {
+      await HttpClient.put(
+        `/featured_projects/${channelId}/bookmark`,
+        undefined,
+        true,
+        {contentType: 'application/json;charset=UTF-8'}
+      );
+    } catch (e) {
+      if (e instanceof NetworkError) {
+        const responseText = await e.response.text();
+        setCloneError(responseText);
+      } else {
+        setCloneError((e as Error).message);
+      }
+    }
+  };
+
+  const displayFeaturedProjectInfo = (featuredProjectStatus: string) => {
+    if (featuredProjectStatus === 'n/a') {
+      return (
+        <>
+          <div>Not a featured project</div>
+          <Button
+            size={Button.ButtonSize.small}
+            color={Button.ButtonColor.purple}
+            onClick={onBookmark}
+            text={'Bookmark as featured'}
+          />
+        </>
+      );
+    }
+    return <div>Featured project status: {featuredProjectStatus}</div>;
+  };
+
   const projectValidatorDataDisplay = (
     projectValidatorLinkData: ExtraLinksProjectValidatorData
   ) => {
@@ -177,17 +232,12 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
           </li>
           <li>
             Remix ancestry:
-            <ul>
-              {projectInfo.remix_ancestry.map((link: string, index: number) => (
-                <li key={index}>
-                  <a href={link}>{link}</a>
-                </li>
-              ))}
-            </ul>
+            <ul>{displayRemixAncestry(projectInfo.remix_ancestry)}</ul>
           </li>
           <li>
-            Featured project info:
-            {projectValidatorLinkData.project_info.featured_status}
+            {displayFeaturedProjectInfo(
+              projectValidatorLinkData.project_info.featured_status
+            )}
           </li>
         </ul>
       </>
@@ -227,11 +277,16 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
           </ul>
         </div>
       ))}
-      {levelbuilderLinkData.can_clone && cloneLevelDisplay}
-      {levelbuilderLinkData.can_delete && deleteLevelDisplay}
+      {levelbuilderLinkData.can_clone &&
+        !isStandaloneProject &&
+        cloneLevelDisplay}
+      {levelbuilderLinkData.can_delete &&
+        !isStandaloneProject &&
+        deleteLevelDisplay}
       {levelbuilderLinkData.script_level_path_links &&
         scriptLevelPathLinksDisplay}
       {projectValidatorLinkData &&
+        isStandaloneProject &&
         projectValidatorDataDisplay(projectValidatorLinkData)}
     </AccessibleDialog>
   ) : null;
