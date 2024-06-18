@@ -2615,6 +2615,7 @@ vi-VN:
   user_header_applab: Phòng thí nghiệm ứng dụng
   user_header_artist: Họa sĩ
   user_header_create: Tạo
+  user_header_create_account: Tạo Tài Khoản
   user_header_create_account_low_cap: Tạo tài khoản
   user_header_dance: Bữa Tiệc Khiêu Vũ
   user_header_flappy: Flappy bird
@@ -2623,6 +2624,8 @@ vi-VN:
   user_header_logout: Đăng xuất
   user_header_minecraft: Minecraft
   user_header_my_projects: Chương trình của tôi
+  user_header_new_project: Dự Án Mới
+  user_header_new_project_low_cap: New project
   user_header_playlab: Phòng trò chơi
   user_header_settings: Cài đặt tài khoản
   user_header_signin: Đăng nhập

@@ -1625,12 +1625,16 @@ fa-IR:
   user_header_applab: 'آزمایشگاه نرم افزار '
   user_header_artist: 'هنرمند '
   user_header_create: 'ایجاد '
+  user_header_create_account: بساز حساب کاربری
+  user_header_create_account_low_cap: بساز حساب کاربری
   user_header_dance: مهمانی رقص
   user_header_flappy: فلاپی
   user_header_gamelab: لابراتوار بازی
   user_header_label: سلام %{username}
   user_header_logout: خروج
   user_header_minecraft: ماین‌کرفت
+  user_header_new_project: پروژه جدید
+  user_header_new_project_low_cap: پروژه جدید
   user_header_playlab: لابراتوار بازی
   user_header_settings: حساب کاربری من
   user_header_signin: ورود

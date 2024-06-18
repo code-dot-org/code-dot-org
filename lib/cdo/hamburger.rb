@@ -21,7 +21,6 @@ class Hamburger
   def self.get_visibility(options)
     show_teacher_options = HIDE_ALWAYS
     show_student_options = HIDE_ALWAYS
-    show_signed_out_options = HIDE_ALWAYS
     show_pegasus_options = HIDE_ALWAYS
     show_intl_about = SHOW_MOBILE
     show_help_options = SHOW_MOBILE
@@ -35,8 +34,6 @@ class Hamburger
         show_teacher_options = SHOW_ALWAYS
       when 'student'
         show_student_options = SHOW_ALWAYS
-      else
-        show_signed_out_options = SHOW_ALWAYS
       end
 
       # Regardless of user type, then they also need the pegasus
@@ -52,8 +49,6 @@ class Hamburger
         show_teacher_options = SHOW_MOBILE
       when 'student'
         show_student_options = SHOW_MOBILE
-      else
-        show_signed_out_options = SHOW_MOBILE
       end
 
       # We want to show the pegasus options.  They're in the hamburger for desktop
@@ -63,7 +58,7 @@ class Hamburger
     end
 
     # Do we show hamburger on all widths, only mobile, or not at all?
-    show_set = [show_teacher_options, show_student_options, show_signed_out_options, show_pegasus_options]
+    show_set = [show_teacher_options, show_student_options, show_pegasus_options]
     hamburger_class =
       if show_set.include? SHOW_ALWAYS
         SHOW_ALWAYS
@@ -78,7 +73,6 @@ class Hamburger
       hamburger_class: hamburger_class,
       show_teacher_options: show_teacher_options,
       show_student_options: show_student_options,
-      show_signed_out_options: show_signed_out_options,
       show_pegasus_options: show_pegasus_options,
       show_intl_about: show_intl_about,
       show_help_options: show_help_options
@@ -87,7 +81,9 @@ class Hamburger
 
   def self.get_hamburger_contents(options)
     loc_prefix = options[:loc_prefix]
+    is_teacher_or_student = options[:user_type] == "teacher" || options[:user_type] == "student"
 
+    # Teacher-specific hamburger dropdown links.
     teacher_entries = [
       {title: "my_dashboard", url: CDO.studio_url("/home")},
       {title: "course_catalog", url: CDO.studio_url("/catalog")},
@@ -98,6 +94,7 @@ class Hamburger
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
     end
 
+    # Student-specific hamburger dropdown links.
     student_entries = [
       {title: "my_dashboard", url: CDO.studio_url("/home"), id: "hamburger-student-home"},
       {title: "course_catalog", url: CDO.code_org_url("/students")},
@@ -107,16 +104,10 @@ class Hamburger
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
     end
 
-    signed_out_entries = [
-      {title: "course_catalog", url: CDO.studio_url("/catalog")},
-      {title: "districts", url: CDO.code_org_url("/administrators"), id: "hamburger-districts"},
-      {title: "incubator", url: CDO.studio_url("/incubator")}
-    ].each do |entry|
-      entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
-    end
-
+    # Teach hamburger dropdown links.
     educate_entries = [
       {title: "educate_overview", url: CDO.code_org_url("/teach"), id: "educate-overview"},
+      {title: "course_catalog", url: CDO.studio_url("/catalog"), id: "course-catalog"},
       {title: "educate_elementary", url: CDO.code_org_url("/educate/curriculum/elementary-school")},
       {title: "educate_middle", url: CDO.code_org_url("/educate/curriculum/middle-school")},
       {title: "educate_high", url: CDO.code_org_url("/educate/curriculum/high-school")},
@@ -126,10 +117,22 @@ class Hamburger
       {title: "educate_community", url: CDO.code_org_url("/educate/community")},
       {title: "educate_requirements", url: CDO.code_org_url("/educate/it")},
       {title: "educate_tools", url: CDO.code_org_url("/educate/resources/videos")},
-    ].each do |entry|
-      entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
-    end.freeze
+    ]
 
+    # Remove Course Catalog link for teachers and students.
+    # This link is already in the teacher and student entries above.
+    if is_teacher_or_student
+      educate_entries.delete_if {|e| e[:title] == "course_catalog"}
+    end
+
+    # Return the rest of the educate links.
+    educate_entries.each do |entry|
+      entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
+    end
+
+    educate_entries.freeze
+
+    # About hamburger dropdown links.
     about_entries = [
       {title: "about_us", url: CDO.code_org_url("/about"), id: "about-us"},
       {title: "about_leadership", url: CDO.code_org_url("/about/leadership")},
@@ -145,6 +148,7 @@ class Hamburger
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
     end.freeze
 
+    # Privacy & Legal hamburger dropdown links.
     legal_entries = [
       {title: "legal_privacy", url: CDO.code_org_url("/privacy")},
       {title: "legal_cookie_notice", url: CDO.code_org_url("/cookies")},
@@ -158,11 +162,9 @@ class Hamburger
     visibility = Hamburger.get_visibility(visibility_options)
 
     # Generate the list of entries.
-
     entries = []
 
     # user_type-specific.
-
     case options[:user_type]
     when 'teacher'
       entries = entries.concat(teacher_entries.each {|e| e[:class] = visibility[:show_teacher_options]})
@@ -170,17 +172,16 @@ class Hamburger
     when 'student'
       entries = entries.concat(student_entries.each {|e| e[:class] = visibility[:show_student_options]})
       entries << {type: "divider", class: get_divider_visibility(visibility[:show_student_options], visibility[:show_help_options]), id: "after-student"}
-    else
-      entries = entries.concat(signed_out_entries.each {|e| e[:class] = visibility[:show_signed_out_options]})
-      entries << {type: "divider", class: get_divider_visibility(visibility[:show_signed_out_options], visibility[:show_help_options]), id: "after-signed-out"}
     end
 
+    # Show help links before Pegasus links for signed in users.
     help_contents = HelpHeader.get_help_contents(options)
-    entries.concat(help_contents.each {|e| e[:class] = visibility[:show_help_options]})
-    entries << {type: "divider", class: get_divider_visibility(visibility[:show_help_options], visibility[:show_pegasus_options]), id: "after-help"}
+    if is_teacher_or_student
+      entries.concat(help_contents.each {|e| e[:class] = visibility[:show_help_options]})
+      entries << {type: "divider", class: get_divider_visibility(visibility[:show_help_options], visibility[:show_pegasus_options]), id: "after-help"}
+    end
 
-    # Pegasus options.
-
+    # Pegasus links.
     entries << {
       title: I18n.t("#{loc_prefix}learn"),
       url: CDO.code_org_url("/students"),
@@ -197,6 +198,13 @@ class Hamburger
     }
 
     entries << {
+      title: I18n.t("#{loc_prefix}districts"),
+      url: CDO.code_org_url("/administrators"),
+      class: visibility[:show_pegasus_options],
+      id: "districts"
+    }
+
+    entries << {
       title: I18n.t("#{loc_prefix}stats"),
       url: CDO.code_org_url("/promote"),
       class: visibility[:show_pegasus_options],
@@ -209,6 +217,15 @@ class Hamburger
       class: visibility[:show_pegasus_options],
       id: "help-us"
     }
+
+    unless is_teacher_or_student
+      entries << {
+        title: I18n.t("#{loc_prefix}incubator"),
+        url: CDO.studio_url("/incubator"),
+        class: visibility[:show_pegasus_options],
+        id: "incubator"
+      }
+    end
 
     entries << {
       type: "expander",
@@ -226,9 +243,16 @@ class Hamburger
       class: visibility[:show_pegasus_options]
     }
 
+    # Show help links at the bottom of the list for signed out users.
+    unless is_teacher_or_student
+      entries << {type: "divider", class: get_divider_visibility(visibility[:show_help_options], visibility[:show_pegasus_options]), id: "before-help"}
+      entries.concat(help_contents.each {|e| e[:class] = visibility[:show_help_options]})
+    end
+
     {entries: entries, visibility: visibility[:hamburger_class]}
   end
 
+  # Main header navigation links next to the Code.org logo.
   def self.get_header_contents(options)
     loc_prefix = options[:loc_prefix]
 

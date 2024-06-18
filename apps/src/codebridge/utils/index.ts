@@ -5,3 +5,4 @@ export * from './getEmptyProject';
 export * from './getErrorMessage';
 export * from './previewFileType';
 export * from './sortFilesByName';
+export * from './fileUtils';

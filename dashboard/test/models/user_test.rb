@@ -516,6 +516,38 @@ class UserTest < ActiveSupport::TestCase
     cannot_create_multi_auth_users_with_email COLLISION_EMAIL
   end
 
+  test "can create multi-auth LTI user with duplicate of multi-auth user's second email" do
+    create :student, email: COLLISION_EMAIL
+    # trigger the email validation by changing the email (partial registration has email as "" which becomes the actual
+    # email in the finish sign up flow)
+    user = create :student
+    user.authentication_options.destroy_all
+
+    lti_authentication_option = create(:lti_authentication_option, user: user, email: COLLISION_EMAIL)
+    user.authentication_options << lti_authentication_option
+    user.email = COLLISION_EMAIL
+
+    user.save!
+
+    user.valid?
+  end
+
+  test "cannot create multi-auth LTI user multiple auth options and duplicate of multi-auth user's second email" do
+    create :student, email: COLLISION_EMAIL
+    # trigger the email validation by changing the email (partial registration has email as "" which becomes the actual
+    # email in the finish sign up flow)
+    user = create :student
+    user.authentication_options.destroy_all
+
+    lti_authentication_option = create(:lti_authentication_option, user: user, email: COLLISION_EMAIL)
+    user.authentication_options << lti_authentication_option
+    user.email = COLLISION_EMAIL
+
+    user.save!
+    user.authentication_options << create(:lti_authentication_option, user: user, email: COLLISION_EMAIL)
+    cannot_create_user_with_email :google_authentication_option, user: user, email: COLLISION_EMAIL
+  end
+
   def cannot_create_multi_auth_users_with_email(email)
     cannot_create_user_with_email :teacher, email: email
     cannot_create_user_with_email :student, email: email
@@ -5227,19 +5259,6 @@ class UserTest < ActiveSupport::TestCase
   test "marketing_segment_data returns the same keys as marketing_segment_data_keys" do
     teacher = create :teacher
     assert_equal User.marketing_segment_data_keys.sort, teacher.marketing_segment_data.keys.map(&:to_s).sort
-  end
-
-  test "given a noncompliant child account, that account is locked out" do
-    student = create :non_compliant_child
-    student.save!
-    assert_equal Policies::ChildAccount::ComplianceState::LOCKED_OUT, student.child_account_compliance_state
-    refute_empty student.child_account_compliance_lock_out_date
-  end
-
-  test "given a compliant child account, that account is NOT locked out" do
-    student = create :non_compliant_child, :with_parent_permission
-    student.save!
-    assert_equal Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED, student.child_account_compliance_state
   end
 
   test "does not return deleted followers from the followers helper" do

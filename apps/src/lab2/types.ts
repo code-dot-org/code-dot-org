@@ -20,6 +20,7 @@ export interface Channel {
   updatedAt: string;
   hidden?: boolean;
   thumbnailUrl?: string;
+  frozen?: boolean;
   // Optional lab-specific configuration for this project.  If provided, this will be saved
   // to the Project model in the database along with the other entries in this interface,
   // inside the value field JSON.
@@ -82,7 +83,13 @@ export interface ProjectFile {
   open?: boolean;
   active?: boolean;
   folderId: string;
-  hidden?: boolean;
+  type?: ProjectFileType;
+}
+
+export enum ProjectFileType {
+  STARTER = 'starter',
+  SUPPORT = 'support',
+  VALIDATION = 'validation',
 }
 
 export interface ProjectFolder {

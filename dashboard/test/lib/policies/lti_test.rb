@@ -58,6 +58,13 @@ class Policies::LtiTest < ActiveSupport::TestCase
     assert_nil Policies::Lti.find_platform_by_issuer(invalid_issuer)
   end
 
+  test 'find_platform_name_by_issuer should return the platform name (string) or empty string if it does not exist' do
+    valid_issuer = 'https://canvas.instructure.com'
+    invalid_issuer = 'https://fake.com'
+    assert Policies::Lti.find_platform_name_by_issuer(valid_issuer)
+    assert_empty Policies::Lti.find_platform_name_by_issuer(invalid_issuer)
+  end
+
   test 'lti_provided_email should return the :email stored in the LTI option given LTI user' do
     user = create :teacher, :with_lti_auth
     assert_equal user.email, Policies::Lti.lti_provided_email(user)
