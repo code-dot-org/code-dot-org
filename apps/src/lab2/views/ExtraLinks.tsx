@@ -92,7 +92,6 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
           isOpen={isModalOpen}
           closeModal={() => setIsModalOpen(false)}
           levelId={levelId}
-          permissions={permissionData.permissions}
         />
       )}
     </>

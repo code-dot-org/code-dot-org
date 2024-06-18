@@ -591,6 +591,8 @@ class ProjectsController < ApplicationController
       featured_project = FeaturedProject.find_by_project_id(project_info['id'])
       project = FeaturedProject.find_by project_id: project_info['id']
       project_info['featured_status'] = project.status
+    else
+      project_info['featured_status'] = 'n/a'
     end
     #remix info
     return render json: {owner_info: owner_info, project_info: project_info}

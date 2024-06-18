@@ -290,7 +290,7 @@ export interface ExtraLinksProjectValidatorData {
       animations_link: string;
       files_link: string;
       is_featured_project: boolean;
-      featured_status?: string;
+      featured_status: string;
     };
   };
 }

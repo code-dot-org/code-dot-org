@@ -18,7 +18,6 @@ interface ExtraLinksModalProps {
   isOpen: boolean;
   closeModal: () => void;
   levelId: number;
-  permissions: string[];
 }
 
 const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
@@ -27,14 +26,12 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
   isOpen,
   closeModal,
   levelId,
-  permissions,
 }) => {
   const [showCloneField, setShowCloneField] = useState(false);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
   const [clonedLevelName, setClonedLevelName] = useState('');
   const [cloneError, setCloneError] = useState('');
   const [deleteError, setDeleteError] = useState('');
-  const isProjectValidator = permissions.includes('project_validator');
 
   useEffect(() => {
     setClonedLevelName(levelbuilderLinkData.level_name);
@@ -90,7 +87,96 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
       }
     }
   };
-  console.log('projectValidatorLinkData', projectValidatorLinkData);
+
+  const cloneLevelDisplay = (
+    <div>
+      <Button
+        size={Button.ButtonSize.small}
+        color={Button.ButtonColor.purple}
+        onClick={() => setShowCloneField(!showCloneField)}
+        text={showCloneField ? 'Cancel Clone' : 'Clone'}
+      />
+      {showCloneField && (
+        <div>
+          {'New level name: '}
+          <input
+            type="text"
+            value={clonedLevelName}
+            onChange={event => setClonedLevelName(event.target.value)}
+          />
+          <Button
+            onClick={handleClone}
+            text={'Clone'}
+            size={Button.ButtonSize.small}
+          />
+          {cloneError && (
+            <p className={moduleStyles.errorMessage}>{cloneError}</p>
+          )}
+        </div>
+      )}
+    </div>
+  );
+
+  const deleteLevelDisplay = (
+    <div>
+      <Button
+        size={Button.ButtonSize.small}
+        text={showDeleteConfirm ? 'Cancel Delete' : 'Delete'}
+        color={Button.ButtonColor.red}
+        onClick={() => setShowDeleteConfirm(!showDeleteConfirm)}
+      />
+      {showDeleteConfirm && (
+        <div>
+          {'Are you sure you want to delete this level? '}
+          <Button
+            onClick={handleDelete}
+            text={'Confirm Delete'}
+            size={Button.ButtonSize.small}
+          />
+          {deleteError && (
+            <p className={moduleStyles.errorMessage}>{deleteError}</p>
+          )}
+        </div>
+      )}
+    </div>
+  );
+
+  const scriptLevelPathLinksDisplay = (
+    <>
+      <StrongText>
+        This level is in{' '}
+        {Object.entries(levelbuilderLinkData.script_level_path_links).length}{' '}
+        scripts:
+      </StrongText>
+      <ul>
+        {levelbuilderLinkData.script_level_path_links.map((link, index) => (
+          <li key={index}>
+            <a href={'/s/' + link.script}>{link.script}</a> as{' '}
+            <a href={link.path}>{link.path}</a>
+          </li>
+        ))}
+      </ul>
+    </>
+  );
+
+  const projectValidatorDataDisplay = (
+    projectValidatorLinkData: ExtraLinksProjectValidatorData
+  ) => (
+    <>
+      <StrongText>Project Info</StrongText>
+      <ul>
+        <li>{`Project owner: ${projectValidatorLinkData.owner_info.name}`}</li>
+        <li>
+          {`Owner storage id: ${projectValidatorLinkData.owner_info.storage_id}`}
+        </li>
+        <li>{`Project id: ${projectValidatorLinkData.project_info.id}`}</li>
+        <li>{`S3 links: sources`}</li>
+        <li>{`Remix info`}</li>
+        <li>{`Featured project info: ${projectValidatorLinkData.project_info.featured_status}`}</li>
+      </ul>
+    </>
+  );
+
   return isOpen ? (
     <AccessibleDialog onClose={onClose}>
       <Heading3>Extra links</Heading3>
@@ -103,6 +189,8 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
         <i id="x-close" className="fa-solid fa-xmark" />
       </button>
       {Object.entries(levelbuilderLinkData.links).map(([listTitle, links]) => (
+        // Levels can be part of level groups (sublevels) and/or can be a template level
+        // so we list these here as well.
         <div key={`${listTitle}-div`}>
           <StrongText key={`${listTitle}-title`}>{listTitle}</StrongText>
           <ul key={`${listTitle}-list`}>
@@ -122,90 +210,12 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
           </ul>
         </div>
       ))}
-      {levelbuilderLinkData.can_clone && (
-        <div>
-          <Button
-            size={Button.ButtonSize.small}
-            color={Button.ButtonColor.purple}
-            onClick={() => setShowCloneField(!showCloneField)}
-            text={showCloneField ? 'Cancel Clone' : 'Clone'}
-          />
-          {showCloneField && (
-            <div>
-              {'New level name: '}
-              <input
-                type="text"
-                value={clonedLevelName}
-                onChange={event => setClonedLevelName(event.target.value)}
-              />
-              <Button
-                onClick={handleClone}
-                text={'Clone'}
-                size={Button.ButtonSize.small}
-              />
-              {cloneError && (
-                <p className={moduleStyles.errorMessage}>{cloneError}</p>
-              )}
-            </div>
-          )}
-        </div>
-      )}
-      {levelbuilderLinkData.can_delete && (
-        <div>
-          <Button
-            size={Button.ButtonSize.small}
-            text={showDeleteConfirm ? 'Cancel Delete' : 'Delete'}
-            color={Button.ButtonColor.red}
-            onClick={() => setShowDeleteConfirm(!showDeleteConfirm)}
-          />
-          {showDeleteConfirm && (
-            <div>
-              {'Are you sure you want to delete this level? '}
-              <Button
-                onClick={handleDelete}
-                text={'Confirm Delete'}
-                size={Button.ButtonSize.small}
-              />
-              {deleteError && (
-                <p className={moduleStyles.errorMessage}>{deleteError}</p>
-              )}
-            </div>
-          )}
-        </div>
-      )}
-      {levelbuilderLinkData.script_level_path_links && (
-        <>
-          <StrongText>
-            This level is in{' '}
-            {
-              Object.entries(levelbuilderLinkData.script_level_path_links)
-                .length
-            }{' '}
-            scripts:
-          </StrongText>
-          <ul>
-            {levelbuilderLinkData.script_level_path_links.map((link, index) => (
-              <li key={index}>
-                <a href={'/s/' + link.script}>{link.script}</a> as{' '}
-                <a href={link.path}>{link.path}</a>
-              </li>
-            ))}
-          </ul>
-        </>
-      )}
-      {isProjectValidator && (
-        <>
-          <StrongText>Project Info</StrongText>
-          <ul>
-            <li>{`Project owner: ${projectValidatorLinkData?.owner_info.name}`}</li>
-            <li>Owner storage id</li>
-            <li>Project id</li>
-            <li>S3 links: sources</li>
-            <li>Remix info</li>
-            <li>Featured project info</li>
-          </ul>
-        </>
-      )}
+      {levelbuilderLinkData.can_clone && cloneLevelDisplay}
+      {levelbuilderLinkData.can_delete && deleteLevelDisplay}
+      {levelbuilderLinkData.script_level_path_links &&
+        scriptLevelPathLinksDisplay}
+      {projectValidatorLinkData &&
+        projectValidatorDataDisplay(projectValidatorLinkData)}
     </AccessibleDialog>
   ) : null;
 };
