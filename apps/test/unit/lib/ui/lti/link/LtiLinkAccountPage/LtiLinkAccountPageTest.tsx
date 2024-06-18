@@ -124,4 +124,20 @@ describe('LTI Link Account Page Tests', () => {
       );
     });
   });
+
+  describe('cancel button', () => {
+    it('should link to the cancel controller', () => {
+      render(
+        <LtiProviderContext.Provider value={DEFAULT_CONTEXT}>
+          <LtiLinkAccountPage />
+        </LtiProviderContext.Provider>
+      );
+
+      const cancelButton = screen.getByText(i18n.cancel());
+
+      fireEvent.click(cancelButton);
+
+      expect(utils.navigateToHref).to.have.been.calledWith(`/users/cancel`);
+    });
+  });
 });

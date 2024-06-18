@@ -1,5 +1,9 @@
 %link{href: "/shared/css/phase1-design-system.css", rel: "stylesheet"}
 
+%div.buttons-right-aligned{style: "margin-bottom: 0"}
+  %a{href: users_cancel_path}
+    %button#link-account-cancel-button= t('cancel')
+
 %h2#linking-page-header= t('lti.account_linking.linking_page_header', provider: params[:lms_name])
 %p#linking-page-description= t('lti.account_linking.linking_page_description')
 
@@ -10,9 +14,10 @@
       = button_to omniauth_authorize_path(resource_name, provider), id: "#{provider}-sign-in", class: "oauth-sign-in with-#{provider}" do
         = image_tag("oauth/#{provider}.svg")
         = t('lti.account_linking.connect_button', provider: t("auth.#{provider}"))
-    %a.go-back-link{href: lti_v1_account_linking_landing_path(lti_provider: params[:lti_provider], email: params[:email])}
-      %i.fa.fa-arrow-left
-      = t('lti.account_linking.go_back')
+    - if params[:lti_provider].present? && params[:email].present?
+      %a.go-back-link{href: lti_v1_account_linking_landing_path(lti_provider: params[:lti_provider], email: params[:email])}
+        %i.fa.fa-arrow-left
+        = t('lti.account_linking.go_back')
   %div.vertical-or
     %hr
     = t("or").upcase
