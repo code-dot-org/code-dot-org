@@ -9,7 +9,7 @@ components: [WithTooltip](./WithTooltip.tsx), [Tooltip](Tooltip.tsx), [TooltipOv
 way to add tooltip to any element, handles all the logic behind showing and hiding, positioning and accessibility of the
 tooltip.
 
-Here's a recommended way to use `WithTooltip` component and adding Tooltips where needed in general:
+***Here's a recommended way*** to use `WithTooltip` component and adding Tooltips where needed in general:
 
 ```javascript
 import {WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
