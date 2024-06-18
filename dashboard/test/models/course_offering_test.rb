@@ -675,19 +675,13 @@ class CourseOfferingTest < ActiveSupport::TestCase
   end
 
   test 'missing_device_compatibility?' do
-    unit = create :script, family_name: 'fake', version_year: '2017', is_course: true
-    co = CourseOffering.add_course_offering(unit)
-    device_compatibilities_missing_one = '{"computer":"","chromebook":"not_recommended","tablet":"incompatible","mobile":"incompatible","no_device":"incompatible"}'
-    device_compatibilities_full = '{"computer":"ideal","chromebook":"not_recommended","tablet":"incompatible","mobile":"incompatible","no_device":"incompatible"}'
+    co_device_comp_nil = create :course_offering, key: 'course-offering-dc-nil', device_compatibility: nil
+    co_device_comp_missing_one = create :course_offering, key: 'course-offering-dc-missing-one', device_compatibility: "{'computer':'','chromebook':'not_recommended','tablet':'incompatible','mobile':'incompatible','no_device':'incompatible'}"
+    co_device_comp_full = create :course_offering, key: 'course-offering-dc-full', device_compatibility: "{'computer':'ideal','chromebook':'not_recommended','tablet':'incompatible','mobile':'incompatible','no_device':'incompatible'}"
 
-    co.update!(device_compatibility: nil)
-    assert(unit.missing_device_compatibility?)
-
-    co.update!(device_compatibility: device_compatibilities_missing_one)
-    assert(unit.missing_device_compatibility?)
-
-    co.update!(device_compatibility: device_compatibilities_full)
-    refute(unit.missing_device_compatibility?)
+    assert(co_device_comp_nil.missing_device_compatibility?)
+    assert(co_device_comp_missing_one.missing_device_compatibility?)
+    refute(co_device_comp_full.missing_device_compatibility?)
   end
 
   test 'duration returns nil if latest_published_version does not exist' do
