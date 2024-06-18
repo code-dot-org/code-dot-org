@@ -82,15 +82,38 @@
     },
   ]
 
+  # TODO - Remove this DCDO logic once the 2024 curriculum is live and add this to the top of the main list
+  if !!DCDO.get('curriculum-launch-2024', false)
+    block_items.unshift(
+      overline: hoc_s("ai_curriculum_tile.humanities.overline"),
+      title: hoc_s("ai_curriculum_tile.humanities.title"),
+      img: "/images/action-blocks/action-block-ai-humanities.png",
+      desc: hoc_s("ai_curriculum_tile.humanities.desc"),
+      duration: hoc_s("ai_curriculum_tile.humanities.duration"),
+      url: CDO.studio_url("/s/gen-ai-humanities"),
+      aria_label: hoc_s("ai_curriculum_tile.humanities.aria_label"),
+      button_label: hoc_s("ai_curriculum_tile.humanities.button"),
+      new: true,
+    )
+  end
+
 .carousel-wrapper
-  %swiper-container.swiper-01{navigation: "true", "navigation-next-el": ".nav-next-01", "navigation-prev-el": ".nav-prev-01", pagination: "true", init: "false"}
+  %swiper-container.swiper-middle-high{navigation: "true", "navigation-next-el": ".nav-next-01", "navigation-prev-el": ".nav-prev-01", pagination: "true", init: "false"}
     - block_items.each do |block_item|
       %swiper-slide
         .action-block.action-block--one-col.flex-space-between
           .content-wrapper
-            %p.overline
-              =hoc_s(:module_label_grades)
-              = block_item[:overline]
+            - if block_item[:new]
+              .flex-container.justify-space-between.align-items-start
+                %p.overline
+                  =hoc_s(:module_label_grades)
+                  = block_item[:overline]
+                %p.new
+                  =hoc_s(:new)
+            - else
+              %p.overline
+                =hoc_s(:module_label_grades)
+                = block_item[:overline]
             %h3
               = block_item[:title]
             %img{src: "#{block_item[:img]}", alt: ""}

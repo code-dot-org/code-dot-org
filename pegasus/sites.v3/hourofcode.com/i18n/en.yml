@@ -1066,6 +1066,29 @@
     desc: "Find our entire selection of AI curriculum offerings and filter to see what works best for your classroom in the curriculum catalog."
     button: "Explore all AI curricula"
 
+  ai_curriculum_tile:
+    decisions:
+      overline: "3-5"
+      title: "How AI Makes Decisions"
+      desc: "Introduce young students to AI and machine learning with hands-on activities using predictive data models. Students will practice making their own predictions and learn about data categorization and sorting."
+      duration: "1 hour"
+      button: "Explore unit"
+      aria_label: "Explore the How AI Makes Decisions unit"
+      teaching:
+        overline: "3-5 Teachers"
+        title: "Teaching How AI Makes Decisions"
+        desc: "This professional learning module equips educators to teach Code.org's How AI Makes Decisions module, where students (grades 3-5) explore AI concepts through engaging activities, data exploration, and decision making."
+        duration: "1 hour"
+        button: "Start module"
+        aria_label: "Start the Teaching How AI Makes Decisions module"
+    humanities:
+      overline: "6-12"
+      title: "Generative AI for Humanities"
+      desc: "This unit includes two standalone lessons—one on writing with AI and one on researching with AI—designed for Humanities classes to demystify ethical and effective chatbot use, encouraging students to explore and reflect on these technologies."
+      duration: "Two, 45-minute lessons"
+      button: "Explore unit"
+      aria_label: "Explore the Generative AI for Humanities unit"
+
   ai_integrations:
     heading: "AI Integrations"
     desc: "We are working on some exciting new technologies to empower students and teachers in the classroom."
@@ -1722,7 +1745,7 @@
     skinny_banner:
       heading: "Discover our new LMS integrations!"
       desc: "We've added new LMS integrations for %{canvas} and %{schoology}! Learn how to get started!"
-  
+
   lms_partner_page:
     heading: "Integrate Code.org with %{website}"
     desc: "Sync your rosters and sign in to code.org with one-click. Plus, Code.org content is now available directly on %{website}."
