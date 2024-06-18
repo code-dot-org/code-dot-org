@@ -1,13 +1,14 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useMemo, useRef, useState} from 'react';
 import classNames from 'classnames';
-import {EditorState, Extension} from '@codemirror/state';
+import {Compartment, EditorState, Extension} from '@codemirror/state';
 import {EditorView, ViewUpdate} from '@codemirror/view';
-import PanelContainer from '../PanelContainer';
 import {useDispatch} from 'react-redux';
 import {editorConfig} from './editorConfig';
 import {darkMode as darkModeTheme} from './editorThemes';
 import {autocompletion} from '@codemirror/autocomplete';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import moduleStyles from './code-editor.module.scss';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 
 interface CodeEditorProps {
   onCodeChange: (code: string) => void;
@@ -27,6 +28,13 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   const [didInit, setDidInit] = useState(false);
   const [editorView, setEditorView] = useState<EditorView | null>(null);
   const channelId = useAppSelector(state => state.lab.channel?.id);
+  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
+
+  // These two compartments control read-only settings.
+  // Controls if you can type in the editor or not.
+  const editorReadOnlyCompartment = useMemo(() => new Compartment(), []);
+  // Controls if the dom is focusable or not (and therefore if a cursor is visible in the editor or not).
+  const editorEditableCompartment = useMemo(() => new Compartment(), []);
 
   useEffect(() => {
     if (editorRef.current === null || didInit) {
@@ -46,6 +54,11 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
       autocompletion(),
       ...editorConfigExtensions,
     ];
+
+    editorExtensions.push(
+      editorReadOnlyCompartment.of(EditorState.readOnly.of(isReadOnly)),
+      editorEditableCompartment.of(EditorView.editable.of(!isReadOnly))
+    );
     if (darkMode) {
       editorExtensions.push(darkModeTheme);
     }
@@ -67,6 +80,9 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
     startCode,
     didInit,
     darkMode,
+    editorReadOnlyCompartment,
+    isReadOnly,
+    editorEditableCompartment,
   ]);
 
   // When we have a new channelId and/or start code, reset the editor with the start code.
@@ -83,10 +99,34 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
     }
   }, [startCode, editorView, channelId]);
 
+  useEffect(() => {
+    if (editorView) {
+      editorView.dispatch({
+        effects: [
+          editorReadOnlyCompartment.reconfigure(
+            EditorState.readOnly.of(isReadOnly)
+          ),
+          editorEditableCompartment.reconfigure(
+            EditorView.editable.of(!isReadOnly)
+          ),
+        ],
+      });
+    }
+  }, [
+    isReadOnly,
+    editorView,
+    editorReadOnlyCompartment,
+    editorEditableCompartment,
+  ]);
+
   return (
-    <PanelContainer id="code-editor" headerContent="Editor" hideHeaders={false}>
-      <div ref={editorRef} className={classNames('codemirror-container')} />
-    </PanelContainer>
+    <div
+      ref={editorRef}
+      className={classNames(
+        'codemirror-container',
+        moduleStyles.codeEditorContainer
+      )}
+    />
   );
 };
 

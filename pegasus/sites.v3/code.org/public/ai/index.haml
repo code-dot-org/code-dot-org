@@ -98,7 +98,21 @@ theme: responsive_full_width
 %section#ai-pl
   .wrapper
     %h2=hoc_s(:ai_pl_heading)
-    .action-block__wrapper.action-block__wrapper--two-col
+    .action-block__wrapper.action-block__wrapper--three-col
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline
+            =hoc_s(:module_label_self_paced)
+          %h3=hoc_s(:ai_pl_101_title)
+          %img{src: "/images/self-paced-pl-tile-ai-101.jpg", alt: ""}
+          %p=hoc_s(:ai_pl_101_desc)
+        .content-footer
+          %p
+            %strong
+              =hoc_s(:module_label_duration)
+            =hoc_s(:module_duration_5_hrs)
+          %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-ai-101")}
+            =hoc_s(:call_to_action_start_module)
       .action-block.action-block--one-col.flex-space-between
         .content-wrapper
           %p.overline
@@ -126,7 +140,7 @@ theme: responsive_full_width
               =hoc_s(:module_label_duration)
             =hoc_s(:module_duration_2_hrs)
           %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-aiml")}
-            =hoc_s(:call_to_action_self_paced_pl)
+            =hoc_s(:call_to_action_start_module)
 
 -# TODO - Remove the DCDO logic after the AI Teaching Assistant launch
 - if !!DCDO.get('ai-teaching-assistant-launch', false)
@@ -142,16 +156,7 @@ theme: responsive_full_width
   .wrapper
     %h2=hoc_s(:ai_video_series_title)
     %p=hoc_s(:ai_video_series_desc, markdown: :inline, locals: {how_ai_works_url: "/ai/how-ai-works"})
-    .video-series
-      = view :ai_vid_intro
-      = view :ai_vid_mlintro
-      = view :ai_vid_trainingdata
-      = view :ai_vid_neuralnetworks
-      = view :ai_vid_computervision
-      = view :ai_vid_chatbots
-      = view :ai_vid_creativity
-      = view :ai_vid_ethics1
-      = view :ai_vid_ethics2
+    = view :carousel_how_ai_works_video
 
 %section
   .wrapper

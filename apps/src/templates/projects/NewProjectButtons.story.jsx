@@ -1,7 +1,9 @@
 import React from 'react';
 import {Provider} from 'react-redux';
+
 import i18n from '@cdo/locale';
 import {reduxStore} from '@cdo/storybook/decorators';
+
 import NewProjectButtons from './NewProjectButtons';
 
 const Template = args => (

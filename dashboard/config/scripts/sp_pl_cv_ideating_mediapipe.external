@@ -1,0 +1,52 @@
+name 'sp-pl-CV_ideating_MediaPipe'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# MediaPipe Object Detection
+
+
+#### After watching a video and discussing bias in data sets, students will use MediaPipe Studio's **Machine Learning Object Detection** to analyze dog images for training an Auto-Doggie Door.
+
+## MediaPipe Studios
+#### The next level will give you access to a set of dog images and MediaPipe Studios.
+
+### **You will:** 
+- #### Save the images to your computer
+- #### Upload the images on the MediaPipe website
+- #### Examine the results of the object detection algorithm
+
+#### As you explore the website, try adjusting the max results and score threshold to change the output of your results. You can also try changing the model / inference type that is being used within the model. If you have extra time at the end of the exploration, see if you can find your own image of a dog and upload it.
+
+ <table style="width: 100%; height: 100%; border: none;">
+        <tr>
+            <td style="text-align: center; vertical-align: middle;">
+                <img src="https://images.code.org/a9f105cd8430b7d2ce3bceaf0fe17bbf-image-1715024311470.png" alt="top portion of handout" width="350px" style="border-radius:10px; border: 2px solid black;">
+            </td>
+        </tr>
+    </table>
+<br>
+
+#### As you explore these images, remember the original premise of the scenario: building an Auto-Dog Door that will unlock when the camera built into the door recognizes a dog and stay locked if it doesn’t recognize a dog. Therefore, you should pay close attention to the **confidence score** that is related to the dog images that you are uploading into the model.
+
+<table style="width: 100%; height: 100%; border: none;">
+        <tr>
+            <td style="text-align: center; vertical-align: middle;">
+                <img src="https://images.code.org/88f5470aba0b3d1de9d48fbce3138f5c-image-1715023876322.png" alt="top portion of handout" width="350px" style="border-radius:10px; border: 2px solid black;">
+            </td>
+        </tr>
+    </table>
+<br>
+
+
+#### While working through this activity, students should note which images yield high or low confidence scores and share their findings about the model's accuracy in identifying different dogs and any potential patterns or biases in its decisions. 
+
+#### Students may also bring up that they notice certain types of dogs (breed, size, face shape, color etc.) were detected less often, which could be an opportunity to reinforce the concept of bias.
+
+## Give it a try.
+
+
+#### Continue to the next level to analyze the images. After making observations, students will brainstorm on this activity guide <a href="https://docs.google.com/document/d/122nvyvxl6aLdoSi73SppG6MOU5tgONVbkURwMCIS0Fo/copy" target="blank" rel="noopener noreferrer"><b>Idea Outline</b></a> 
+
+
+MARKDOWN

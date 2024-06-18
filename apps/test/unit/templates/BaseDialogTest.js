@@ -1,5 +1,5 @@
 /** @file Tests for BaseDialog component */
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import BaseDialog from '@cdo/apps/templates/BaseDialog';

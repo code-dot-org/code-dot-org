@@ -1,6 +1,6 @@
 import React from 'react';
 import {expect} from '../../util/reconfiguredChai';
-import {shallow, mount} from 'enzyme';
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import sinon from 'sinon';
 import {Provider} from 'react-redux';
 import {

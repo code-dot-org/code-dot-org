@@ -1,5 +1,6 @@
 <StandaloneVideo>
   <config><![CDATA[{
+  "published": true,
   "game_id": 54,
   "created_at": "2024-03-28T21:10:38.000Z",
   "level_num": "custom",
@@ -11,10 +12,9 @@
     "skip_dialog": true,
     "skip_sound": true,
     "name_suffix": "_2024",
-    "long_instructions": "## Designing Your Own App\r\n\r\n##### The next several levels will guide you through how to design your own app in App Lab. Watch the video for more specifics on how to get started. Then, click \"Continue\" to start designing!"
+    "long_instructions": "## Designing Your Own App\r\n\r\n#### The next several levels will guide you through how to design your own app in App Lab. Watch the video for more specifics on how to get started. Then, click \"Continue\" to start designing!"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-03-28T21:10:38.838+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-PILOT-S22-CI-CSD U4 App Lab Design Mode Video_self-paced-4\\\"\"],\"cloned_from\":\"VPL-CSD-PILOT-S22-CI-CSD U4 App Lab Design Mode Video_self-paced-4\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-28T21:10:38.838+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-PILOT-S22-CI-CSD U4 App Lab Design Mode Video_self-paced-4\\\"\"],\"cloned_from\":\"VPL-CSD-PILOT-S22-CI-CSD U4 App Lab Design Mode Video_self-paced-4\"},{\"changed_at\":\"2024-05-06 00:47:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

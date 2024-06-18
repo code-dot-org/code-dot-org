@@ -26,11 +26,17 @@ $(() => {
         currentYearApplicationId={
           landingPageData['current_year_application_id']
         }
-        workshopsAsParticipant={landingPageData['workshops_as_participant']}
+        hasEnrolledInWorkshop={landingPageData['has_enrolled_in_workshop']}
+        workshopsAsFacilitator={landingPageData['workshops_as_facilitator']}
+        workshopsAsOrganizer={landingPageData['workshops_as_organizer']}
+        workshopsAsRegionalPartner={
+          landingPageData['workshops_for_regional_partner']
+        }
         plCoursesStarted={landingPageData['pl_courses_started']}
         userPermissions={landingPageData['user_permissions']}
         joinedStudentSections={landingPageData['joined_student_sections']}
         joinedPlSections={landingPageData['joined_pl_sections']}
+        coursesAsFacilitator={landingPageData['courses_as_facilitator']}
       />
     </Provider>,
     document.getElementById('pl-landing-page-container')

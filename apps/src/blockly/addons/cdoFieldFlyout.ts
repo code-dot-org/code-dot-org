@@ -1,4 +1,5 @@
 import GoogleBlockly, {Block, FieldConfig, WorkspaceSvg} from 'blockly/core';
+
 import CdoBlockFlyout from './cdoBlockFlyout';
 
 interface FieldFlyoutConfig extends FieldConfig {
@@ -52,7 +53,7 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
       Blockly.getMainWorkspace()?.options || this.workspace_?.options || {};
     this.flyout_ = new CdoBlockFlyout({
       ...options,
-      parentWorkspace: this.workspace_,
+      parentBlock: this.sourceBlock_,
       RTL: this.workspace_.RTL,
       minWidth: this.minWidth_,
       maxWidth: this.maxWidth_,

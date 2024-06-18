@@ -1,0 +1,17 @@
+!!!
+%html{lang: "en"}
+  %head
+    %meta{charset: "UTF-8"}
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1.0"}
+    %title= t('nav.user.loading')
+
+    = form_with(url: users_finish_sign_up_path, method: :post, html: {id: 'redirect-form'}) do |f|
+      = f.hidden_field "user[email]", value: @form_data[:email]
+
+    :javascript
+      window.onload = function() {
+        document.getElementById("redirect-form").submit()
+      };
+
+  %body
+    %p=t('nav.user.loading')

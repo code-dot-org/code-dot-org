@@ -66,7 +66,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-04-03T21:23:26.962+00:00\",\"changed\":[\"cloned from \\\"courseB_playlab_eventsFP_2023\\\"\"],\"cloned_from\":\"courseB_playlab_eventsFP_2023\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-04-03T21:23:26.962+00:00\",\"changed\":[\"cloned from \\\"courseB_playlab_eventsFP_2023\\\"\"],\"cloned_from\":\"courseB_playlab_eventsFP_2023\"},{\"changed_at\":\"2024-05-01 17:53:18 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 1,
     "events": 1
@@ -183,43 +183,46 @@
     <toolbox_blocks>
       <xml>
         <block type="studio_whenArrow">
-          <title name="VALUE">up</title>
+          <field name="VALUE">up</field>
         </block>
         <block type="studio_whenSpriteClicked">
-          <title name="SPRITE">0</title>
+          <field name="SPRITE">0</field>
         </block>
         <block type="studio_whenSpriteCollided">
-          <title name="SPRITE1">0</title>
-          <title name="SPRITE2">1</title>
+          <field name="SPRITE1">0</field>
+          <field name="SPRITE2">1</field>
         </block>
         <block type="studio_setBackground">
-          <title name="VALUE">"cave"</title>
+          <field name="VALUE">"cave"</field>
         </block>
         <block type="studio_move">
-          <title name="SPRITE">0</title>
-          <title name="DIR">1</title>
+          <field name="SPRITE">0</field>
+          <field name="DIR">1</field>
         </block>
         <block type="studio_playSound">
-          <title name="SOUND">slap</title>
+          <field name="SOUND">slap</field>
         </block>
         <block type="studio_changeScore"/>
+        <block type="studio_wait">
+          <field name="VALUE">1000</field>
+        </block>
         <block type="studio_saySpriteChoices">
-          <title name="SPRITE">0</title>
-          <title name="VALUE">Hi there.</title>
+          <field name="SPRITE">0</field>
+          <field name="VALUE">Hi there.</field>
         </block>
         <block type="studio_setSpriteSpeed">
-          <title name="SPRITE">0</title>
-          <title name="VALUE">Studio.SpriteSpeed.NORMAL</title>
+          <field name="SPRITE">0</field>
+          <field name="VALUE">Studio.SpriteSpeed.NORMAL</field>
         </block>
         <block type="studio_setSpriteEmotion">
-          <title name="SPRITE">0</title>
-          <title name="VALUE">0</title>
+          <field name="SPRITE">0</field>
+          <field name="VALUE">0</field>
         </block>
         <block type="studio_vanish">
-          <title name="SPRITE">1</title>
+          <field name="SPRITE">1</field>
         </block>
         <block type="controls_repeat_simplified_dropdown">
-          <title name="TIMES" config="3-10">3</title>
+          <field name="TIMES" config="3-10">3</field>
         </block>
       </xml>
     </toolbox_blocks>

@@ -37,7 +37,7 @@
       "name": "when/while",
       "type": "",
       "required": true,
-      "description": "Determines if the code is run when the key is pressed (runs once at a time) or continuously while the key is pressed"
+      "description": "Determines if the code runs once when the key is pressed or continuously while the key is pressed"
     },
     {
       "name": "key",

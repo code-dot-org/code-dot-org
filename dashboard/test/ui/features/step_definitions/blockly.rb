@@ -70,6 +70,11 @@ When /^I drag block "([^"]*)" into first position in repeat block "([^"]*)"$/ do
   @browser.execute_script code
 end
 
+When /^I drag block number (\d+) to offset "([^"]*), ([^"]*)"$/ do |index, dx, dy|
+  block_selector = get_indexed_blockly_draggable_selector(index.to_i)
+  drag_indexed_block_to_offset(block_selector, dx, dy)
+end
+
 Then /^block "([^"]*)" is near offset "([^"]*), ([^"]*)"$/ do |block, x, y|
   point = get_block_coordinates(get_block_id(block))
   expect(point.x).to be_within(3).of(x.to_i)

@@ -258,6 +258,7 @@ module ScriptConstants
     K1HOC_2017 = 'k1hoc2017'.freeze,
     MUSIC_INTRO_2024 = 'music-intro-2024'.freeze,
     MUSIC_ONBOARD = 'music-onboard'.freeze,
+    MUSIC_TUTORIAL_2024 = 'music-tutorial-2024'.freeze,
     NETSIM = 'netsim'.freeze,
     ODOMETER = 'odometer'.freeze,
     OUTBREAK = 'outbreak'.freeze,

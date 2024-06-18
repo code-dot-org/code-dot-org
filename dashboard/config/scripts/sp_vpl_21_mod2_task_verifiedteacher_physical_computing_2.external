@@ -1,0 +1,25 @@
+name 'SP-VPL-21-mod2-Task-VerifiedTeacher_physical-computing_2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Task: Become a Verified Teacher
+
+#### Code.org’s curricula offers additional materials for **verified teachers.** 
+
+#### These materials include:
+
+* #### Student assessments and surveys.
+* #### Example solutions and answer keys.
+* #### The ability to leave feedback for students on levels.
+* #### Teaching tips and more!
+
+#### If you are not already a verified teacher, <a href="https://form.jotform.com/240863841362155" target="blank" rel="noopener noreferrer" >click here</a> to complete the form to become a verified teacher. 
+
+___
+
+#### **Note:** We try to process requests for teacher verification as fast as we can but because it is a manual process, it can take up to 7 business days to complete. <a href="https://support.code.org/hc/en-us/articles/115001550131-How-to-Become-a-Verified-Teacher" target="blank" rel="noopener noreferrer" >Click here</a> for more information, including a list of frequently asked questions.
+
+
+
+MARKDOWN

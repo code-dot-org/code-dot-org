@@ -9,7 +9,7 @@ class AiTutorInteractionsController < ApplicationController
     return render(status: :not_acceptable, json: {error: 'Status is unacceptable.'}) unless valid_status
     @ai_tutor_interaction = AiTutorInteraction.new(ai_tutor_interaction_params)
     if @ai_tutor_interaction.save
-      render json: {message: "successfully created AiTutorInteraction with id: #{@ai_tutor_interaction.id}"}, status: :created
+      render json: {message: "successfully created AiTutorInteraction", id: @ai_tutor_interaction.id}, status: :created
     else
       render(status: :not_acceptable, json: {error: 'There was an error creating a new AiTutorInteraction.'})
     end

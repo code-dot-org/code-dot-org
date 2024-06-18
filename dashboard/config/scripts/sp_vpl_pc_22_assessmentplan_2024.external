@@ -5,27 +5,24 @@ description 'description here'
 markdown <<MARKDOWN
 # Assessment and Grading
 
+<img src="https://images.code.org/71d3b4ab7a1416c43d67811642dfb473-image-1628537327574.jpg" alt="Three students look on a desktop computer while a teacher kneels down to help them." width="370px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
 ## How do I assign grades in CS Discoveries? 
 
-##### Although the curriculum does provide guidance on opportunities to assess whether or not a student has met a specific learning objective, it is up to the teacher to:
+#### Although the curriculum does provide guidance on opportunities to assess whether or not a student has met a specific learning objective, it is up to the teacher to:
 
-
-
-* ##### Determine the appropriateness of the assessments for their students. 
-* ##### Decide how to use, or not use, the suggested assessments for grading purposes. 
-
-
+* #### Determine the appropriateness of the assessments for their students. 
+* #### Decide how to use, or not use, the suggested assessments for grading purposes. 
 
 ## Consider the following:
 
-<img src="https://images.code.org/71d3b4ab7a1416c43d67811642dfb473-image-1628537327574.jpg" alt="Three students look on a desktop computer while a teacher kneels down to help them." width="370px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+* #### What do I believe about the purpose of assessment and the relationship between assessment and grading? 
+* #### What does my school require of me regarding assessment of student learning and grading? 
+* #### What tools are available within the curriculum to support me in assessing student learning?
+* #### How will I assess student learning while implementing a lesson with students?
+* #### How will I assess student learning at the end of a chapter or unit?
+<br>
 
-* ##### What do I believe about the purpose of assessment and the relationship between assessment and grading? 
-* ##### What does my school require of me regarding assessment of student learning and grading? 
-* ##### What tools are available within the curriculum to support me in assessing student learning?
-* ##### How will I assess student learning while implementing a lesson with students?
-* ##### How will I assess student learning at the end of a chapter or unit?
-
-<a href="https://tanginstitute.andover.edu/files/Feedback-in-Practice.pdf" target="blank" rel="noopener noreferrer">Click here</a> to access a resource on feedback from the Tang Institute at Andover. 
+#### <a href="https://stage-tang.andover.edu/files/Feedback-in-Practice-1.pdf" target="blank" rel="noopener noreferrer">Click here</a> to access a resource on feedback from the Tang Institute at Andover. 
 
 MARKDOWN

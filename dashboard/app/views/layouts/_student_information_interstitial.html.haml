@@ -1,3 +1,5 @@
+- location = Geocoder.search(request.ip).try(:first)
+- country_code = location&.country_code.to_s.upcase
 .modal#student-information-modal{'data-backdrop' => 'static', 'data-keyboard' => 'false', style: 'display: none'}
   .modal-dialog
     .modal-content.no-modal-icon
@@ -6,70 +8,30 @@
       %p{style: 'font-size: 13px; line-height: 18px; color: #333'}
         = t('parent_mailer.parent_email_added_subject')
         = t('activerecord.attributes.user.finish_sign_up_header_account_information')
-        = t('age_interstitial.disclaimer', url: SharedConstants::EMAIL_LINKS.PRIVACY_POLICY_URL, markdown: :inline).html_safe
-      = form_for(current_user, url: registration_url('user'), html: {id: 'edit_user'}) do |f|
-        .form-group
-          %div{style: 'display: flex;'}
-            = f.label :age, t('signup_form.age'), class: 'label-title'
-            .age-required *
-          = f.select :age, User::AGE_DROPDOWN_OPTIONS, include_blank: t('signup_form.select_age')
-          .required-message.age-required= t('activerecord.attributes.user.required')
-        - if Policies::Lti.lti?(current_user)
+        %a{href: SharedConstants::EMAIL_LINKS.PRIVACY_POLICY_URL, target: '_blank'}
+          = t('age_interstitial.disclaimer', markdown: :inline).html_safe
+      = form_for(student, url: users_set_student_information_url, remote: true, html: {id: 'edit_user'}) do |f|
+        - if student.age.nil?
+          .form-group
+            %div{style: 'display: flex;'}
+              = f.label :age, t('signup_form.age'), class: 'label-title'
+              .age-required *
+            = f.select :age, User::AGE_DROPDOWN_OPTIONS, {include_blank: t('signup_form.select_age')}, required: true
+            .required-message.age-required= t('activerecord.attributes.user.required')
+        - if lti_user_info_required?(student) || cap_user_info_required?(student, country) || forceStudentInterstitial
           .form-group
             %div{style: 'display: flex;'}
               = f.label :us_state, t('activerecord.attributes.user.us_state'), class: 'label-title'
+              = f.hidden_field :country_code, value: country_code
               .state-required *
-            = f.select :us_state, us_state_options, include_blank: t('school_info.select_state')
+            = f.select :us_state, us_state_options, {include_blank: t('school_info.select_state')}, required: true
             .required-message.state-required= t('activerecord.attributes.user.required')
+        -if lti_user_info_required?(student)
           .field
             = f.label :gender_student_input, t('gender'), class: 'label-title'
             = f.text_field :gender_student_input
         - haml_tag :hr, class: 'header-divider'
         .form-group#information_form_buttons
-          = f.button t('nav.user.logout'), type: 'button', class: 'btn primary-button', disabled: false, id: 'sign-out-btn'
-          = f.submit t('continue'), class: 'btn primary-button', disabled: true, id: 'submit-btn'
-:javascript
-  $().ready(function() {
-    const pathName = window.location.pathname;
-
-    if (pathName !== "/lti/v1/authenticate") {
-      $("#student-information-modal").modal('show');
-    }
-
-     function checkInputs() {
-      const ageValue = $("#user_age").val();
-      const stateValue = $("#user_us_state").val();
-      if (ageValue !== '') {
-        $('.age-required').hide();
-      } else {
-        $('.age-required').show();
-      }
-      if (stateValue !== '') {
-        $('.state-required').hide();
-      } else {
-        $('.state-required').show();
-      }
-      $("#edit_user #submit-btn").prop('disabled', ageValue === '' || stateValue === '');
-    }
-
-    $("#edit_user select").on('change', function(event) {
-      checkInputs();
-    });
-
-    $( "#edit_user" ).submit(function( event ) {
-      event.preventDefault($(this).serialize());
-      $.ajax({
-        type: 'POST',
-        url: $(this).attr('action') + '/set_student_information',
-        data: $(this).serialize(),
-        dataType: 'json',
-        success: function(data) {$("#student-information-modal").modal('hide');}
-      });
-    });
-
-    $( "#sign-out-btn" ).click(function( event ) {
-      window.location = '#{destroy_user_session_url}'
-    });
-
-    checkInputs();
-  });
+          = link_to t('nav.user.logout'), destroy_user_session_url, class: 'btn primary-button', id: 'sign-out-btn'
+          = f.submit I18n.locale == :'en-US' ? t('submit') : t('continue'), class: 'btn primary-button', id: 'submit-btn'
+%script{src: webpack_asset_path('js/layouts/_student_information_interstitial.js'), data: {retrieveInfoForCap: cap_user_info_required?(student, country).to_json, userId: student.id.to_json, inSection: (!student.sections_as_student.empty?).to_json, currentUsState: student.us_state.to_json, selectedLanguage: request.locale.to_json, studentAge: student.age.to_json}}

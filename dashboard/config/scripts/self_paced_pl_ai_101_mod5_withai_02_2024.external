@@ -18,7 +18,7 @@ markdown <<MARKDOWN
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
     <p>
 
-#### Check out TeachAI’s <a href="https://www.teachai.org/toolkit-guidance">Guidance on the Use of AI in Our Schools Toolkit</a>
+#### Check out TeachAI’s <a href="https://www.teachai.org/toolkit-guidance" target="_blank">Guidance on the Use of AI in Our Schools Toolkit</a>
 </p></div>
 </details>
 MARKDOWN

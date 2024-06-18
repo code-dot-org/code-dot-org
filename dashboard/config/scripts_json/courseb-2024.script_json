@@ -19,8 +19,8 @@
     },
     "new_name": null,
     "family_name": "courseb",
-    "serialized_at": "2024-04-19 17:14:15 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2024-05-29 18:22:59 UTC",
+    "published_state": "preview",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -6517,7 +6517,7 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/courseb-2023/resources",
+      "url": "/s/courseb-2024/resources",
       "key": "all_resources",
       "properties": {
         "is_rollup": true
@@ -6528,7 +6528,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/courseb-2023/standards",
+      "url": "/s/courseb-2024/standards",
       "key": "all_standards",
       "properties": {
         "is_rollup": true
@@ -6539,7 +6539,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/courseb-2023/vocab",
+      "url": "/s/courseb-2024/vocab",
       "key": "all_vocabulary",
       "properties": {
         "is_rollup": true

@@ -21,11 +21,9 @@
     "display_name": "ASCII Art",
     "bubble_choice_description": "ASCII Art is a type of artwork what just uses keyboard characters to create images. Each image is just a combination of letters or symbols or piece of punctuation from the keyboard.",
     "thumbnail_url": "https://images.code.org/5392b99f7b64b32b7eec26473a87410a-image-1665180946859.png",
-    "encrypted_examples": [
-
-    ]
+    "encrypted_examples": "RmVCaEMoqFUcJ6lLmZ1VWi8vSjAVUDy5QdR+gFjEpOHysM4KN7sMHhZZ/uGT\nilQz+40tLFRo6HZqn2pA2Cwbtw==\n"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T16:58:28.285+00:00\",\"changed\":[\"cloned from \\\"CSD U2L2 - ChalE_2023\\\"\"],\"cloned_from\":\"CSD U2L2 - ChalE_2023\"},{\"changed_at\":\"2024-01-10 18:15:06 +0000\",\"changed\":[\"hide_share_and_remix\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-28 18:14:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T16:58:28.285+00:00\",\"changed\":[\"cloned from \\\"CSD U2L2 - ChalE_2023\\\"\"],\"cloned_from\":\"CSD U2L2 - ChalE_2023\"},{\"changed_at\":\"2024-01-10 18:15:06 +0000\",\"changed\":[\"hide_share_and_remix\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-28 18:14:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-09 18:22:53 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>

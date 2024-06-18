@@ -1,4 +1,5 @@
 import {Block} from 'blockly';
+
 import {BlockColors} from '../constants';
 
 export const UNKNOWN_BLOCK = {

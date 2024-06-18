@@ -20,7 +20,7 @@ theme: responsive_full_width
         =hoc_s(:self_paced_pl_hero_desc)
     %img{src: "../shared/images/banners/self-paced-pl-hero.png", alt: ""}
 
-%section
+%section.bg-neutral-light
   .wrapper
     %h2=hoc_s(:self_paced_pl_intro_heading)
     %p=hoc_s(:self_paced_pl_intro_desc)
@@ -80,7 +80,7 @@ theme: responsive_full_width
 %section#elementary-school
   .wrapper
     %h2=hoc_s(:self_paced_pl_elementary_school_teachers)
-    = view :"self_paced_pl/self_paced_pl_modules_elementary"
+    = view :"self_paced_pl/self_paced_pl_modules_carousel_elementary"
 
 = view :section_divider_line
 

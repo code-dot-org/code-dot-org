@@ -1,7 +1,7 @@
 name 'VPL-CSD-PILOT-S22-CI-PSP-C4U_-self-paced-unit1_2024'
 title 'Check for Understanding - Test Your Knowledge!'
 height '75'
-description 'Field day is coming up and a group of students will be making a new, special game for it. You suggested that they use the Problem Solving Process to design their new game. Match what they are doing with a step of the Problem Solving Process.'
+description ''
 
 question 'Define'
 answer 'We want everyone to play and that is a goal.'
@@ -15,3 +15,6 @@ answer 'Putting our ideas together helped us make a game that everyone can play.
 
 
 allow_multiple_attempts true
+markdown <<MARKDOWN
+#### Field day is coming up and a group of students will be making a new, special game for it. You suggested that they use the Problem Solving Process to design their new game. Match what they are doing with a step of the Problem Solving Process.
+MARKDOWN

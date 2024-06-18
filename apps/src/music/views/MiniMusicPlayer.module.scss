@@ -6,6 +6,7 @@
   flex-direction: column;
   gap: 10px;
   padding: 10px;
+  user-select: none;
 
   .entry {
     background-color: $neutral_dark80;
@@ -15,12 +16,14 @@
     display: flex;
     align-items: center;
     box-sizing: border-box;
-    padding: 10px;
+    padding: 4px;
+    padding-inline-end: 15px;
+    gap: 20px;
 
     .control {
-      width: 60px;
-      padding-left: 10px;
+      display: contents;
       box-sizing: border-box;
+      text-align: center;
 
       .icon {
         transition: opacity 0.1s ease-in;
@@ -28,20 +31,50 @@
       }
     }
 
-    .name {
+    .pack {
+      width: 42px;
+      height: 42px;
+
+      &Image {
+        height: 42px;
+        width: 42px;
+        max-width: initial;
+        border-radius: 4px;
+        background-color: $black;
+      }
+    }
+
+    .body {
       flex-grow: 1;
+      overflow: hidden;
+
+      .name {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 18px;
+        line-height: 1.5em;
+      }
+
+      .details {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 12px;
+      }
     }
 
     .other {
-      width: 60px;
-      display: flex;
-      justify-content: flex-end;
-      margin-right: 10px;
+      display: contents;
 
-      .icon {
-        transition: opacity 0.1s ease-in;
-        color: $neutral_light;
-        font-size: 16px;
+      &Link {
+        display: contents;
+
+        .icon {
+          transition: opacity 0.1s ease-in;
+          color: $neutral_light;
+          font-size: 16px;
+        }
       }
     }
   }

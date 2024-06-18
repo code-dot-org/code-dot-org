@@ -2,6 +2,7 @@
   "category": "Groups",
   "config": {
     "func": "setPropEach",
+    "docFunc": "gamelab_setProp",
     "blockText": "set {GROUP} {PROPERTY} to {VAL}",
     "args": [
       {

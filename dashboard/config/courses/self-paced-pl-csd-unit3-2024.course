@@ -4,13 +4,13 @@
     "self-paced-pl-csd-unit3-1-2024",
     "self-paced-pl-csd-unit3-2-2024"
   ],
-  "published_state": "in_development",
+  "published_state": "stable",
   "instruction_type": "self_paced",
   "participant_audience": "teacher",
   "instructor_audience": "facilitator",
   "properties": {
     "family_name": "self-paced-pl-csd-unit3",
-    "has_numbered_units": true,
+    "has_verified_resources": true,
     "version_year": "2024"
   },
   "resources": [

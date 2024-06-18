@@ -1,5 +1,5 @@
 import React from 'react';
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import {assert, expect} from '../../../util/reconfiguredChai';
 import SublevelCard from '@cdo/apps/code-studio/components/SublevelCard';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';

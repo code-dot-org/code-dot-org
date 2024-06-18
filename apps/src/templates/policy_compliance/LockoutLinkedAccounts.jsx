@@ -1,14 +1,16 @@
-import React, {useState} from 'react';
-import PropTypes from 'prop-types';
-import Button from '../Button';
-import i18n from '@cdo/locale';
-import {getStore} from '../../redux';
-import {isEmail} from '@cdo/apps/util/formatValidation';
 import cookies from 'js-cookie';
+import PropTypes from 'prop-types';
+import React, {useState} from 'react';
+
+import {isEmail} from '@cdo/apps/util/formatValidation';
+import {ChildAccountComplianceStates} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
+
+import Spinner from '../../code-studio/pd/components/spinner';
+import {getStore} from '../../redux';
 import * as color from '../../util/color';
 import {hashString} from '../../utils';
-import {ChildAccountComplianceStates} from '@cdo/generated-scripts/sharedConstants';
-import Spinner from '../../code-studio/pd/components/spinner';
+import Button from '../Button';
 
 /**
  * This component allows students whose personal account linking has been

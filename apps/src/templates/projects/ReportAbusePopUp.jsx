@@ -1,15 +1,18 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import i18n from '@cdo/locale';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {connect} from 'react-redux';
+
+import CheckBox from '@cdo/apps/componentLibrary/checkbox';
+import {Heading3, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import fontConstants from '@cdo/apps/fontConstants';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
-import RailsAuthenticityToken from '../../lib/util/RailsAuthenticityToken';
-import style from './report-abuse-pop-up.module.scss';
 import Button from '@cdo/apps/templates/Button';
-import CheckBox from '@cdo/apps/componentLibrary/checkbox';
-import {connect} from 'react-redux';
-import {Heading3, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import i18n from '@cdo/locale';
+
+import RailsAuthenticityToken from '../../lib/util/RailsAuthenticityToken';
+
+import style from './report-abuse-pop-up.module.scss';
 
 const initialCheckboxes = [
   {

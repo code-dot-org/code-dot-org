@@ -1,0 +1,85 @@
+@import 'color';
+@import 'font';
+
+.dialog {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  max-width: 670px;
+  margin: 12px;
+
+  h2 {
+    margin: 8px 0 20px 0;
+  }
+}
+
+.modal {
+  max-width: 980px !important;
+  max-height: 90% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 980px) {
+  .modal {
+    width: 90% !important; /* Set width to 90% of the viewport width */
+  }
+}
+
+img {
+  max-width: 100%;
+  max-height: 50vh;
+  height: auto;
+}
+
+.remindMeLaterButton {
+  color: $neutral_dark !important;
+  text-decoration: underline !important;
+  margin: 12px 0 !important;
+}
+
+.xCloseButton {
+  // Clear default button styles
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  box-shadow: none;
+
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+  i {
+    color: $light_gray_300;
+    font-size: 1.1875rem;
+    line-height: 1.4844rem;
+    width: 1.4844rem;
+  }
+
+  &:hover {
+    // Clear default button styles
+    box-shadow: none;
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+
+    i {
+      color: $light_gray_500;
+    }
+  }
+
+  &:focus {
+    outline: $brand_primary_default solid 2px;
+    outline-offset: 2px;
+  }
+}

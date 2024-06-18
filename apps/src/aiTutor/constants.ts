@@ -3,9 +3,6 @@ import {
   AITutorInteractionStatus as Status,
 } from '@cdo/apps/aiTutor/types';
 
-export const systemPrompt =
-  'You are a tutor in a high school classroom where the students are learning Java using the Code.org curriculum. Answer their questions in plain, easy-to-understand English. Do not write any code. Do not answer the question if it is not about Java or computer programming.';
-
 // Initial messages we set when the user selects a tutor type.
 // General Chat
 export const generalChatMessage = {

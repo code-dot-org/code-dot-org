@@ -1,7 +1,7 @@
 import React from 'react';
 import {expect} from '../../util/reconfiguredChai';
 import sinon from 'sinon';
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import JavalabEditor from '@cdo/apps/javalab/JavalabEditor';
 import {Provider} from 'react-redux';
 import {

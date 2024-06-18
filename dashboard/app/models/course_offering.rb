@@ -35,7 +35,6 @@ class CourseOffering < ApplicationRecord
   has_many :course_versions, -> {where(content_root_type: ['UnitGroup', 'Unit'])}
   belongs_to :self_paced_pl_course_offering, class_name: 'CourseOffering', optional: true
 
-  validates :category, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CATEGORIES, message: "must be one of the course offering categories. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CATEGORIES}. Got: \"%{value}\"."}
   validates :curriculum_type, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values, message: "must be one of the course offering curriculum types. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values}. Got: \"%{value}\"."}, allow_nil: true
   validates :marketing_initiative, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values, message: "must be one of the course offering marketing initiatives. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values}. Got: \"%{value}\"."}, allow_nil: true
   validate :grade_levels_format
@@ -246,7 +245,6 @@ class CourseOffering < ApplicationRecord
       {
         id: id,
         display_name: any_versions_launched? ? localized_display_name : localized_display_name + ' *',
-        category: category,
         is_featured: is_featured?,
         participant_audience: course_versions.first.content_root.participant_audience,
         course_versions: course_versions.select {|cv| cv.course_assignable?(user)}.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
@@ -291,7 +289,6 @@ class CourseOffering < ApplicationRecord
     {
       key: key,
       is_featured: is_featured?,
-      category: category,
       display_name: display_name,
       assignable: assignable?,
       curriculum_type: curriculum_type,
@@ -342,7 +339,6 @@ class CourseOffering < ApplicationRecord
     {
       key: key,
       display_name: display_name,
-      category: category,
       is_featured: is_featured,
       assignable: assignable?,
       curriculum_type: curriculum_type,
@@ -461,6 +457,33 @@ class CourseOffering < ApplicationRecord
     find_corresponding_offerings_for_pl_course.any?(&:elementary_school_level?)
   end
 
+  def get_available_resources(locale_code = 'en-us')
+    latest_version = latest_published_version(locale_code)
+    units = latest_version&.units
+    lessons = units&.first&.lessons
+
+    return nil unless lessons
+    expanded_card_resources = {}
+
+    lessons.each do |lesson|
+      break if expanded_card_resources.size >= 5
+      if lesson.has_lesson_plan
+        expanded_card_resources["Lesson Plan"] ||= lesson.lesson_plan_html_url
+      end
+      lesson.resources&.each do |resource|
+        properties = resource.properties
+        next unless properties&.key?('type')
+        type = properties['type']
+        type = "Slide Deck" if type == "Slides"
+        type = "Answer Key" if type == "Exemplar"
+        if ACCEPTABLE_RESOURCE_TYPES.include?(type) && !expanded_card_resources.key?(type)
+          expanded_card_resources[type] ||= resource["url"]
+        end
+      end
+    end
+    expanded_card_resources
+  end
+
   private def grade_levels_format
     return true if grade_levels.nil?
 
@@ -492,32 +515,5 @@ class CourseOffering < ApplicationRecord
     end
 
     true
-  end
-
-  def get_available_resources(locale_code = 'en-us')
-    latest_version = latest_published_version(locale_code)
-    units = latest_version&.units
-    lessons = units&.first&.lessons
-
-    return nil unless lessons
-    expanded_card_resources = {}
-
-    lessons.each do |lesson|
-      break if expanded_card_resources.size >= 5
-      if lesson.has_lesson_plan
-        expanded_card_resources["Lesson Plan"] ||= lesson.lesson_plan_html_url
-      end
-      lesson.resources&.each do |resource|
-        properties = resource.properties
-        next unless properties&.key?('type')
-        type = properties['type']
-        type = "Slide Deck" if type == "Slides"
-        type = "Answer Key" if type == "Exemplar"
-        if ACCEPTABLE_RESOURCE_TYPES.include?(type) && !expanded_card_resources.key?(type)
-          expanded_card_resources[type] ||= resource["url"]
-        end
-      end
-    end
-    expanded_card_resources
   end
 end

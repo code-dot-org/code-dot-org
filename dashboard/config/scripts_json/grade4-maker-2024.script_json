@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "grade4-maker",
-    "serialized_at": "2024-04-23 22:08:48 UTC",
+    "serialized_at": "2024-06-05 15:35:41 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -21,11 +21,23 @@
   },
   "lesson_groups": [
     {
-      "key": "lessonGroup-2",
+      "key": "lessonGroup-4",
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Events, Conditionals, and Designing for Accessibility"
+        "display_name": "Sensory Toy with micro:bit - Events and Designing for Accessibility"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "grade4-maker-2024"
+      }
+    },
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Simple Door Alarm Coding with micro:bit - Conditionals"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-2",
@@ -35,9 +47,9 @@
     {
       "key": "lessonGroup-3",
       "user_facing": true,
-      "position": 2,
+      "position": 3,
       "properties": {
-        "display_name": "[Optional] Extension: Functions"
+        "display_name": "Tilt alarm with micro:bit - Functions"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
@@ -62,7 +74,7 @@
       },
       "seeding_key": {
         "lesson.key": "Dance Party: Unplugged",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
@@ -82,7 +94,7 @@
       },
       "seeding_key": {
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
@@ -101,7 +113,7 @@
       },
       "seeding_key": {
         "lesson.key": "Designing for Accessibility",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
@@ -115,22 +127,39 @@
       "properties": {
         "overview": "This lesson gives your students an early hands-on experience to discover the excitement that learning with the micro:bit offers. It helps reinforce what your students already know about code and computing concepts by transferring them to the physical world through exploring preprogrammed micro:bits. The exploration is also designed for you to model reviewing code together, helping your students make links between familiar computing concepts and their practical application by programming a physical device. This lesson is a pre-requisite before moving on to the rest of the activities in this unit.",
         "preparation": "- Watch **<a href=\"https://www.youtube.com/watch?v=G46PU1K1wBA&feature=youtu.be&themeRefresh=1\" target=\"_blank\"> Meet your micro:bit video</a>**\n\n- Get to know the **<a href=\"https://makecode.microbit.org/#editor\" target=\"_blank\"> MakeCode editor</a>**\n\n- Load **<a href=\"https://mbit.io/csf-1-project\" target=\"_blank\">Meet your micro:bit</a>** code onto micro:bits\n\n**Materials:**\n- micro:bits with micro USB cords (one for every two to three students is ideal)\n\n- Power source for the micro:bits (battery packs are best, but you can also power from the computer USB port)",
-        "purpose": "The micro:bit is a tiny computer packed with **inputs** like buttons and sensors for light, movement, temperature, magnetism, and sound. It can also **output** pictures, numbers, and words on it's LED display, make sound and music, and even communicate with other micro:bits using radio. \n\nThe micro:bit needs instructions -**programs**- to tell it what to do. Your students will be able to create working code which they can test out in the simulator before transferring them to a real micro:bit over a USD cable. They can then unplug the micro:bit from the computer, attach a battery pack, and use their projects anywhere.\n\nBy making micro:bit projects, your students can take their code off the screen and make self-contained physical devices they can hold in the palm of their hands, making abstract computing concepts tangible.",
+        "purpose": "The micro:bit is a tiny computer packed with **inputs** like buttons and sensors for light, movement, temperature, magnetism, and sound. It can also **output** pictures, numbers, and words on its LED display, make sound and music, and even communicate with other micro:bits using radio. \n\nThe micro:bit needs instructions -**programs**- to tell it what to do. Your students will be able to create working code which they can test out in the simulator before transferring them to a real micro:bit over a USB cable. They can then unplug the micro:bit from the computer, attach a battery pack, and use their projects anywhere.\n\nBy making micro:bit projects, your students can take their code off the screen and make self-contained physical devices they can hold in the palm of their hands, making abstract computing concepts tangible.",
         "student_overview": "In this lesson you will be introduced to the micro:bit. A micro:bit is a tiny computer. Today you will explore a pre-programmed micro:bit."
       },
       "seeding_key": {
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "grade4-maker-2024"
+      }
+    },
+    {
+      "key": "Cristina - Sensory Toy with micro:bit",
+      "name": "Sensory Toy with micro:bit",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+        "overview": "In today's **skill-building** lesson, the goal is to use micro:bit's accelerometer to make a toy that reacts to different movements by making different sounds and showing different pictures on the LED display output. The key concepts are **events**, **impacts of computing** and **designing for accessibility.**",
+        "preparation": "- Make sure students have completed the **Meet your micro:bit** exploratory lesson.\n\n- Make sure you know how to create **<a href=\"https://www.youtube.com/watch?v=QD8kpuSC0Vc\" target=\"_blank\">a new classroom section </a>** where students will code their micro:bit project.\n\n- Note: Variables are not covered explicitly in CS Fundamentals Course D, but your students may have used them as a game score counter in Course C **<a href=\"https://mbit.io/csf-chase-game\" target=\"_blank\">Lesson 13: Mini-Project: Chase Game.</a>**  "
+      },
+      "seeding_key": {
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
     {
       "key": "Conditionals with Cards",
       "name": "Conditionals with Cards",
-      "absolute_position": 5,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 5,
+      "relative_position": 6,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **context-setting** lesson, students will write *conditional (if/else) statements* to state the rules of simple card games. ",
@@ -148,10 +177,10 @@
     {
       "key": "If/Else with Bee",
       "name": "If/Else with Bee",
-      "absolute_position": 6,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 6,
+      "relative_position": 7,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, your class will continue to code with conditionals, allowing them to write code that functions differently depending on the specific conditions the program encounters.",
@@ -166,12 +195,29 @@
       }
     },
     {
-      "key": "Songwriting",
-      "name": "Songwriting",
-      "absolute_position": 7,
+      "key": "Cristina - Simple Door Alarm Coding with micro:bit",
+      "name": "Simple Door Alarm Coding with micro:bit",
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 7,
+      "relative_position": 8,
+      "properties": {
+        "overview": "In today's **skill-building** lesson, the goal is to create an alarm to show when someone has been in a room using a magnet and the micro:bit's compass as a magnetometer to measure the strength of magnetic fields. The key concepts are: **loops** and **conditionals (if.. then.. else..)**.",
+        "preparation": "- Make sure students have completed the **Meet your micro:bit** exploration lesson.\n\n- “Make sure you know how to create **<a href=\"https://www.youtube.com/watch?v=QD8kpuSC0Vc\" target=\"_blank\">a new classroom section </a>** where students will code their micro:bit project.”\n\n- Note: Variables are not covered explicitly in CS Fundamentals Course D, but your students may have used them as a game score counter in Course C **<a href=\"https://mbit.io/csf-chase-game\" target=\"_blank\"> Lesson 13: Mini-Project: Chase Game.</a>**  "
+      },
+      "seeding_key": {
+        "lesson.key": "Cristina - Simple Door Alarm Coding with micro:bit",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade4-maker-2024"
+      }
+    },
+    {
+      "key": "Songwriting",
+      "name": "Songwriting",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This **context-setting** lesson will help students understand why combining chunks of code into functions can be a helpful practice.",
@@ -189,10 +235,10 @@
     {
       "key": "Functions in Minecraft",
       "name": "Functions in Minecraft",
-      "absolute_position": 8,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 8,
+      "relative_position": 10,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, students will begin to understand how functions can be helpful!",
@@ -209,10 +255,10 @@
     {
       "key": "Functions with Artist",
       "name": "Functions with Artist",
-      "absolute_position": 9,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 9,
+      "relative_position": 11,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, students will use functions with the Artist.",
@@ -222,6 +268,24 @@
       },
       "seeding_key": {
         "lesson.key": "Functions with Artist",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "grade4-maker-2024"
+      }
+    },
+    {
+      "key": "Cristina - Tilt Alarm with micro:bit",
+      "name": "Tilt Alarm with micro:bit",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+        "overview": "In today's skill-building lesson, the goal is to use the micro:bit's accelerometer and radio features to make an alarm that warns you when something has been moved - and learn how functions can make code more compact and easier to read and modify. Note: This project works best with two students working in pairs, each with their own micro:bit (two micro:bits per pair of students). The key concepts are: **functions**.",
+        "preparation": "- Make sure students have completed the **Meet your micro:bit** exploration lesson.\n\n- Make sure you know how to create **<a href=\"https://www.youtube.com/watch?v=QD8kpuSC0Vc\" target=\"_blank\">a new classroom section </a>** where students will code their micro:bit project.",
+        "student_overview": "Today you will make an alarm to tell if an object has been moved. "
+      },
+      "seeding_key": {
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "grade4-maker-2024"
       }
@@ -238,7 +302,7 @@
       "seeding_key": {
         "lesson_activity.key": "e6d29afa-cd7e-4dea-81b8-d3e699aa3b85",
         "lesson.key": "Dance Party: Unplugged",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
@@ -252,7 +316,7 @@
       "seeding_key": {
         "lesson_activity.key": "18d352b3-04c6-4b9a-bc94-8857708868bd",
         "lesson.key": "Dance Party: Unplugged",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
@@ -266,7 +330,7 @@
       "seeding_key": {
         "lesson_activity.key": "de0ed543-4cd1-4587-90a8-002f2a3e0aa1",
         "lesson.key": "Dance Party: Unplugged",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
@@ -280,7 +344,7 @@
       "seeding_key": {
         "lesson_activity.key": "acfce5b7-eb91-49c9-957f-7ad06b858a1c",
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
@@ -294,7 +358,7 @@
       "seeding_key": {
         "lesson_activity.key": "839531da-49bd-40f0-ad19-9ff5000c39a3",
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
@@ -308,7 +372,7 @@
       "seeding_key": {
         "lesson_activity.key": "57bad2c7-fab6-4886-b9b9-69ba11b0c923",
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
@@ -320,7 +384,7 @@
       "seeding_key": {
         "lesson_activity.key": "f7bf3266-a12b-442b-b060-3170b4c6157a",
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
@@ -333,7 +397,7 @@
       "seeding_key": {
         "lesson_activity.key": "c33f4bbf-ed90-4540-b5a9-eb7a755916c1",
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
@@ -347,7 +411,7 @@
       "seeding_key": {
         "lesson_activity.key": "230f79a0-f540-4c50-926e-da5acf9e4958",
         "lesson.key": "Designing for Accessibility",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
@@ -361,7 +425,7 @@
       "seeding_key": {
         "lesson_activity.key": "5db17a19-935b-498c-86c5-c917e5466b69",
         "lesson.key": "Designing for Accessibility",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
@@ -375,7 +439,7 @@
       "seeding_key": {
         "lesson_activity.key": "8b026237-24bc-4046-807d-c1d6f1788726",
         "lesson.key": "Designing for Accessibility",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
@@ -389,7 +453,7 @@
       "seeding_key": {
         "lesson_activity.key": "2765d8ef-da06-451f-b457-235f691d7327",
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
@@ -403,7 +467,7 @@
       "seeding_key": {
         "lesson_activity.key": "d1ac5724-be34-464b-9700-2623131ffdb9",
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
@@ -417,7 +481,7 @@
       "seeding_key": {
         "lesson_activity.key": "ff3c7c7c-c637-499d-8cf9-0d1801beb7bf",
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
@@ -430,7 +494,75 @@
       "seeding_key": {
         "lesson_activity.key": "ed12ade2-c6a6-49e0-854d-9548f05fee85",
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "grade4-maker-2024"
+      }
+    },
+    {
+      "key": "df3eaf2b-33d0-445c-b96a-42265307c0c0",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up "
+      },
+      "seeding_key": {
+        "lesson_activity.key": "df3eaf2b-33d0-445c-b96a-42265307c0c0",
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "grade4-maker-2024"
+      }
+    },
+    {
+      "key": "50dfcb58-8e62-41d3-884e-8390007fdb33",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "50dfcb58-8e62-41d3-884e-8390007fdb33",
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "grade4-maker-2024"
+      }
+    },
+    {
+      "key": "6965fcf1-344e-4b23-8f40-cb5d41ef7175",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6965fcf1-344e-4b23-8f40-cb5d41ef7175",
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "grade4-maker-2024"
+      }
+    },
+    {
+      "key": "8d2478cc-cf63-4259-9f11-bcb9c9179734",
+      "position": 4,
+      "properties": {
+        "name": "[Optional] Extension Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8d2478cc-cf63-4259-9f11-bcb9c9179734",
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "grade4-maker-2024"
+      }
+    },
+    {
+      "key": "981706cd-b1f7-40cf-b5fe-160f976e8457",
+      "position": 5,
+      "properties": {
+        "name": "[Optional] Extended Learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "981706cd-b1f7-40cf-b5fe-160f976e8457",
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024"
       }
     },
@@ -477,8 +609,21 @@
       }
     },
     {
-      "key": "56f634ce-f487-4f2f-aa9f-446ff935bde0",
+      "key": "5a561926-f993-4943-a971-768ef7614563",
       "position": 4,
+      "properties": {
+        "name": "[Optional] Extension"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5a561926-f993-4943-a971-768ef7614563",
+        "lesson.key": "Conditionals with Cards",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade4-maker-2024"
+      }
+    },
+    {
+      "key": "56f634ce-f487-4f2f-aa9f-446ff935bde0",
+      "position": 5,
       "properties": {
         "name": "Extended Learning"
       },
@@ -491,7 +636,7 @@
     },
     {
       "key": "25dd0a1f-5a24-47e0-a002-eab3088cba32",
-      "position": 5,
+      "position": 6,
       "properties": {
         "name": "Cross-Curricular Opportunity"
       },
@@ -553,6 +698,61 @@
       "seeding_key": {
         "lesson_activity.key": "80e0aae6-d49f-4cf8-8b2f-0218ebbe5731",
         "lesson.key": "If/Else with Bee",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade4-maker-2024"
+      }
+    },
+    {
+      "key": "564aeabe-39ef-4cd1-9b97-0d13ec371e14",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "564aeabe-39ef-4cd1-9b97-0d13ec371e14",
+        "lesson.key": "Cristina - Simple Door Alarm Coding with micro:bit",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade4-maker-2024"
+      }
+    },
+    {
+      "key": "27fb9f57-c754-42f5-974d-6c290a27efe7",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "27fb9f57-c754-42f5-974d-6c290a27efe7",
+        "lesson.key": "Cristina - Simple Door Alarm Coding with micro:bit",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade4-maker-2024"
+      }
+    },
+    {
+      "key": "9de5e602-aa24-4bd2-bcc3-3375b4e8fb12",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9de5e602-aa24-4bd2-bcc3-3375b4e8fb12",
+        "lesson.key": "Cristina - Simple Door Alarm Coding with micro:bit",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade4-maker-2024"
+      }
+    },
+    {
+      "key": "13457777-07b5-48e7-ab34-105d4e62c8bd",
+      "position": 4,
+      "properties": {
+        "name": "[Optional] Extended learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "13457777-07b5-48e7-ab34-105d4e62c8bd",
+        "lesson.key": "Cristina - Simple Door Alarm Coding with micro:bit",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "grade4-maker-2024"
       }
@@ -758,6 +958,74 @@
       "seeding_key": {
         "lesson_activity.key": "5bfde588-9908-49b6-98ec-fd67e99354e2",
         "lesson.key": "Functions with Artist",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "grade4-maker-2024"
+      }
+    },
+    {
+      "key": "d2636eab-5145-47b4-9453-fd19690ff418",
+      "position": 1,
+      "properties": {
+        "name": "[Optional] Pre-requisites"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d2636eab-5145-47b4-9453-fd19690ff418",
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "grade4-maker-2024"
+      }
+    },
+    {
+      "key": "a217aa32-7d5a-4322-a33d-56b1d3012dd0",
+      "position": 2,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a217aa32-7d5a-4322-a33d-56b1d3012dd0",
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "grade4-maker-2024"
+      }
+    },
+    {
+      "key": "d21a6fc8-d473-4847-b0d9-8722fb320626",
+      "position": 3,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d21a6fc8-d473-4847-b0d9-8722fb320626",
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "grade4-maker-2024"
+      }
+    },
+    {
+      "key": "7dbfa582-703f-4e60-97da-bc742a36ef59",
+      "position": 4,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7dbfa582-703f-4e60-97da-bc742a36ef59",
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "grade4-maker-2024"
+      }
+    },
+    {
+      "key": "0af43712-2621-42d1-be20-0d796898d56e",
+      "position": 5,
+      "properties": {
+        "name": "[Optional] Extended learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0af43712-2621-42d1-be20-0d796898d56e",
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "grade4-maker-2024"
       }
@@ -1218,7 +1486,7 @@
       "key": "bbefd11a-7eae-4507-b627-3b5509e86d53",
       "position": 1,
       "properties": {
-        "description": "**Say:** The micro:bit is a tiny computer you can program to make self-contained projects to do different things. For it to work, it first needs to be programmed to tell it what to do. Today you'll be given micro:bits that have already been programmed. \n\n**Discuss:**\n\n - _What can you figure out about the micro:bit and the code that makes it work?_\n\n- _The program responds to different **events** - can you work out what they are?_\n\n- _What **inputs** is the micro:bit using?_\n\n- _What **outputs** is it using?_\n",
+        "description": "**Say:** The micro:bit is a tiny computer you can program to make self-contained projects to do different things. For it to work, it first needs to be programmed to tell it what to do. Today, you'll be given micro:bits that have already been programmed. What can you figure out about the micro:bit and the code that makes it work?\n\n**Discuss:**\n\n- _The program responds to different **events** - can you figure out what they are?_\n\n- _What **inputs** is the micro:bit using?_\n\n- _What **outputs** is it showing or playing?_\n",
         "duration": "5",
         "name": "Introduction"
       },
@@ -1231,7 +1499,7 @@
       "key": "c1119b0c-8762-4fed-be4a-292eb861a125",
       "position": 1,
       "properties": {
-        "description": "Students work in pairs of small groups to investigate the micro:bit and identify events, inputs, outputs and any coding concepts they recognize. \n\n[Optional] They can record their findings with paper, whiteboards or electronically. For example it could be recorded in a table like below.\n\n![](https://images.code.org/085db8b0775f530475d79ca87f87a4dd-Screenshot 2024-04-18 at 8.29.07 AM.png)",
+        "description": "Students work in pairs of small groups to investigate the micro:bit and identify events, inputs, outputs and any coding concepts they recognize. \n\nThey can record their findings on the **<a href=\"https://docs.google.com/document/d/1aiCZucwRULkV7zhEwp-BUUVzwBXsIbBCr7Hv_EgWDro/template/preview\" target=\"_blank\">Meet your micro:bit Activity Guide</a>** or using whiteboards or electronically. \n\n![](https://images.code.org/085db8b0775f530475d79ca87f87a4dd-Screenshot 2024-04-18 at 8.29.07 AM.png)",
         "duration": "20",
         "name": "Examine the micro:bit"
       },
@@ -1241,11 +1509,22 @@
       }
     },
     {
-      "key": "28142350-57a9-412d-8688-104ee13f2dab",
+      "key": "b59723f9-f036-46f6-bfa9-a7b8bee64247",
       "position": 2,
       "properties": {
-        "description": "**Do this:** Students should...\n- Connect to a power source (battery pack) and notice what happens to the micro:bit.\n- Press button A to see a zooming square animation. _Does it repeat?_ _How many times?_ _Does it get faster or slower?_ _What computing concepts might be making this work?_\n- Press button B to see text scroll accross the display. _Where else do you see visual information displayed like this?_ _What might they use it for on the micro:bit?_\n- Press buttons A and B together to make a sun or moon appear. _Can you figure out what is making the image appear?_ ",
-        "duration": "10",
+        "description": "**Do this:** Students should...\n- Connect to a power source (battery pack) and notice what happens to the micro:bit:\n    -  A happy face appears on the LED display **output**\n\n</n>\n\n- Press button A to see a zooming square animation. _Does it repeat?_ _How many times?_ _Does it get faster or slower?_ _What computing concepts might be making this work?_\n    -   A **sequence** has been coded to make the animation\n    - **Loops** make the animation repeat\n\n</n>\n\n- Press button B to see text scroll accross the display. _Where else do you see visual information displayed like this?_ _What might they use it for on the micro:bit?_\n\n</n>\n\n- Press buttons A and B together to make a sun or moon appear. _Can you figure out what is making the image appear?_ \n    - The LED display output can also work as a light sensor **input**, so if students cover the micro:bit they’ll see a moon, and if they shine light on it they’ll see a sun."
+      },
+      "seeding_key": {
+        "activity_section.key": "b59723f9-f036-46f6-bfa9-a7b8bee64247",
+        "lesson_activity.key": "d1ac5724-be34-464b-9700-2623131ffdb9"
+      }
+    },
+    {
+      "key": "28142350-57a9-412d-8688-104ee13f2dab",
+      "position": 3,
+      "properties": {
+        "description": "**Display**: Show the code for the **<a href=\"https://mbit.io/csf-1-project\" target=\"_blank\">Meet your micro:bit project</a>** with your students. Students can also access this code by clicking on the image in Level 1.\n\n**Do This:** See how many of the project's computing concepts they already know. You can use the online simulator as you go to demonstrate each event in the code.",
+        "duration": "8",
         "name": "Explore the “Meet your micro:bit” project"
       },
       "seeding_key": {
@@ -1255,7 +1534,7 @@
     },
     {
       "key": "754d044a-1055-4742-9bf1-91abce68d6f2",
-      "position": 3,
+      "position": 4,
       "properties": {
         "progression_name": "Meet your micro:bit"
       },
@@ -1266,8 +1545,11 @@
     },
     {
       "key": "5a9c2269-e8e1-4677-a127-6bea6aad6c28",
-      "position": 4,
+      "position": 5,
       "properties": {
+        "description": "**[Optional] Do This:** Students can test their block-coding knowledge in this matching level, where they match Code.org blocks to the corresponding micro:bit block.\n",
+        "duration": "2",
+        "name": "Matching Activity",
         "progression_name": "Matching Activity"
       },
       "seeding_key": {
@@ -1279,7 +1561,7 @@
       "key": "30fa6698-b852-415b-86b2-2aaa56b4f00d",
       "position": 1,
       "properties": {
-        "description": "**Do this**: Show the code for the **<a href=\"https://mbit.io/csf-1-project\" target=\"_blank\">Meet your micro:bit project.</a>**  \n\n**Discuss:** \n- _What did you discover today when using the micro:bits?_\n- _What computing concepts do you already know that are used to make this project work?_ \n\n**Discussion Goal:** Talk about as many of the event blocks as is appropriate to the time available and students' prior learning.",
+        "description": "**Discuss:** \n- _What did you discover today when using the micro:bits?_\n- _What computing concepts do you already know that are used to make this project work?_ \n\n**Discussion Goal:** Talk about as many of the event blocks as is appropriate to the time available and students' prior learning.",
         "duration": "10",
         "name": "Discussion"
       },
@@ -1297,6 +1579,81 @@
       "seeding_key": {
         "activity_section.key": "8cdd52c1-541c-4c41-98aa-d874b21a692a",
         "lesson_activity.key": "ed12ade2-c6a6-49e0-854d-9548f05fee85"
+      }
+    },
+    {
+      "key": "2d4a0193-76f9-49c7-9975-cf7bf80ffe60",
+      "position": 1,
+      "properties": {
+        "description": "**Say**: Today's aim is to use the micro:bit's accelerometer to make a toy that reacts to different movements by making different sounds and showing different pictures on the LED display outfit.\n\n[Option 1] **Do this**: Watch the **<a href=\"https://mbit.io/csf-e2-intro\" target=\"_blank\">introduction video.</a>**  \n\n[Option 2] **Do this:** Explore the **<a href=\"https://mbit.io/csf-e2-project\" target=\"_blank\">project</a>** uploaded onto micro:bits prior to the lesson. \n\n**Discuss** how a project like this could help learners who respond well to stimulation through touch, light, and sound.\n\n**Discuss** where these concepts are being used and where students may have used them before:\n\n- **Events**: an action that causes something to happen\n- **Impacts of computing**: understanding the good and bad effects computing can have on different groups of people\n- **Designing for accessibility**: making design decisions that are driven by the needs of different groups of people\n\n**Do this:** Share the **<a href=\"https://mbit.io/csf-e2-project\" target=\"_blank\">project</a>**  working in the simulator with your students and look at the code together prior to students coding the main activity.\n\nNote that the code for this project uses the \"play 'giggle', etc.\" block that works in the simulator and on the BBC micro:bit V2 with the built-in speaker. If you have the micro:bit V1, you can code this project without sound, or use the \"play melody\" block instead and connect headphones or an amplified speaker to pins 0 and GND.",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "2d4a0193-76f9-49c7-9975-cf7bf80ffe60",
+        "lesson_activity.key": "df3eaf2b-33d0-445c-b96a-42265307c0c0"
+      }
+    },
+    {
+      "key": "72170bb5-32d9-4ed1-a847-91aac1548ff3",
+      "position": 1,
+      "properties": {
+        "description": "Students will make the project themselves using the MakeCode editor and micro:bit simulator. Once they have tested their code in the simulator, they will download their code onto the micro:bits.\n\nPick one:\n- Step by step coding **<a href=\"https://mbit.io/csf-e2-coding\" target=\"_blank\">video</a>**\n- Live micro:bit **<a href=\"https://mbit.io/csf-e2-classroom\" target=\"_blank\">classroom session</a>** ",
+        "duration": "20",
+        "name": "Student Coding",
+        "progression_name": "Sensory toy with micro:bit"
+      },
+      "seeding_key": {
+        "activity_section.key": "72170bb5-32d9-4ed1-a847-91aac1548ff3",
+        "lesson_activity.key": "50dfcb58-8e62-41d3-884e-8390007fdb33"
+      }
+    },
+    {
+      "key": "0d18a755-7efb-46b7-b3f0-f4ffc99ad443",
+      "position": 2,
+      "properties": {
+        "description": "After completing the lesson, assess students' knowledge of the concepts covered by going through the assessment slides in the \n**<a href=\"https://docs.google.com/presentation/d/1Wg2MNjg2UFtHtLGyE5KLckGMUUoanshkvEKY8-F77bc/edit#slide=id.g26f3d2b7241_0_2018/template/preview\"  target=\"_blank\">slide deck</a>**. You can also assign students a content assessment hosted on the JuiceMind platform. To assign the assessment to your students, click <a href=\"https://play.juicemind.com/dashboard/explore/class/codeorg-microbit/unitNumber/3/topicNumber/2/quizId/6oMwA50HfQPKS9S6hd5I\" target=\"_blank\">here.</a>\n\n::: details [**Setting up a JuiceMind assessment**]\nClick \"Assign\" on the assessment page, then have students join your unique class session. Students have a link to the Join page on level 2, and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note**: You will need to <a href=\"https://play.juicemind.com/signup\" target=\"_blank\">sign up</a> for an account on JuiceMind to assign the assessment.\n:::\n",
+        "duration": "10",
+        "name": "Assessment",
+        "progression_name": "Sensory toy coding with micro:bit"
+      },
+      "seeding_key": {
+        "activity_section.key": "0d18a755-7efb-46b7-b3f0-f4ffc99ad443",
+        "lesson_activity.key": "50dfcb58-8e62-41d3-884e-8390007fdb33"
+      }
+    },
+    {
+      "key": "097ed850-442b-4731-a43f-de951d638584",
+      "position": 1,
+      "properties": {
+        "description": "Share student work, revisit key concepts used, and explore ideas for extended learning.",
+        "name": "Discussion"
+      },
+      "seeding_key": {
+        "activity_section.key": "097ed850-442b-4731-a43f-de951d638584",
+        "lesson_activity.key": "6965fcf1-344e-4b23-8f40-cb5d41ef7175"
+      }
+    },
+    {
+      "key": "851d89ff-b010-4711-b323-697bf8ba7f2e",
+      "position": 1,
+      "properties": {
+        "description": "After students have created a sensory toy, this concept can be expanded to further teach students about the importance of accessibility and how technology can help support people in different ways. For individuals with physical limitations that make speaking or writing difficult, sensory apps can provide alternative communication channels. This fosters independence and allows them to participate more actively in daily life.\n\nThese devices are called Augmentative and Alternative communication devices and are frequently used by non-verbal students in schools. Here is a <a href=\"https://youtu.be/qB2Fk0KdUuo?si=OmiaPxGRFkbUYFwm\" target=\"_blank\">video</a> of students using an AAC device in the classroom. \n\n**Find the code for this project <a href=\"https://makecode.microbit.org/81839-69759-10729-78574\" target=\"_blank\">here.</a>**\n\n**Find the student handout for this project <a href=\"https://docs.google.com/document/d/1PwmD5psnqURJTWIsry7d4lHlMHEbwuRqyddhKrASZ7E/template/preview\" target=\"_blank\">here.</a>**\n\n**Find a list of frequently used core words for this project <a href=\"https://aaclanguagelab.com/materials/100highfrequencycorewords21.pdf\" target=\"_blank\">here.</a>**",
+        "name": "Sensory Communication Device"
+      },
+      "seeding_key": {
+        "activity_section.key": "851d89ff-b010-4711-b323-697bf8ba7f2e",
+        "lesson_activity.key": "8d2478cc-cf63-4259-9f11-bcb9c9179734"
+      }
+    },
+    {
+      "key": "ebb829d0-28f4-4872-9e3c-4aa35be9af7c",
+      "position": 1,
+      "properties": {
+        "description": "**Make animations:** Use loops to create animations when the micro:bit is moved in different ways.\n\n**Touch sensing:** Add more inputs such as touching the logo on the micro:bit V2, touching the pins, or making touchable buttons out of tin foil and attaching those to the pins. \n\nLearn more about touch pins <a href=\"https://mbit.io/csf-pins\" target=\"_blank\">here.</a>\n\n**Find this project and more on <a href=\"https://mbit.io/csf-e2-make\" target=\"_blank\">microbit.org</a>**"
+      },
+      "seeding_key": {
+        "activity_section.key": "ebb829d0-28f4-4872-9e3c-4aa35be9af7c",
+        "lesson_activity.key": "981706cd-b1f7-40cf-b5fe-160f976e8457"
       }
     },
     {
@@ -1409,6 +1766,18 @@
       "seeding_key": {
         "activity_section.key": "96153400-c384-46e2-8933-eca5996e8f6f",
         "lesson_activity.key": "88d8fa6e-39bc-42b4-8325-0d838736ab00"
+      }
+    },
+    {
+      "key": "8514ceee-3644-46a5-8ec6-7d858f4473ef",
+      "position": 1,
+      "properties": {
+        "description": "This activity introduces the concepts of If/Then using the familiar fairytale of the Three Little Pigs. The story clearly demonstrates the \"if\" and \"then\" relationship that forms the core of conditional statements. By seeing the pigs make choices (building with different materials) and the resulting consequences (strong house vs. weak house), students grasp the concept in a real-world way. By creating a storyboard students will visualize the \"if\" and \"then\" scenarios. This visual aid helps solidify their understanding and provides a clear reference point when writing their own conditional statements with the micro:bit. It provides a fun and engaging context for them to learn about conditionals. They can connect with the characters and the cause-and-effect nature of the story.\n\n**Find the student handout for this project <a href=\"https://docs.google.com/document/d/1xNxJFtpb9VI8miyTx3TitTUJGPYNMl1j-ALE1e2Qk2s/template/preview\" target=\"_blank\">here.</a>**\n\n**Find the Three Little Pigs story <a href=\"https://youtu.be/CtP83CWOMwc?si=bVG-sYcYeaBTrAfL\" target=\"_blank\">here.</a>**",
+        "name": "Three Little Pigs"
+      },
+      "seeding_key": {
+        "activity_section.key": "8514ceee-3644-46a5-8ec6-7d858f4473ef",
+        "lesson_activity.key": "5a561926-f993-4943-a971-768ef7614563"
       }
     },
     {
@@ -1621,6 +1990,69 @@
       "seeding_key": {
         "activity_section.key": "73d66ad5-9f09-47fb-aac8-4053e3b82cbf",
         "lesson_activity.key": "80e0aae6-d49f-4cf8-8b2f-0218ebbe5731"
+      }
+    },
+    {
+      "key": "17b834c1-c805-467e-9d19-a6942eb7d672",
+      "position": 1,
+      "properties": {
+        "description": "**Say**: Today's aim is to create an alarm to show when someone has been in a room using a magnet and the micro:bit's compass as a magnetometer to measure the strength of magnetic fields.\n\n[Option 1] **Do this**: Watch the **<a href=\"https://mbit.io/csf-e3-intro\" target=\"_blank\">introduction video.</a>**  \n\n[Option 2] **Do this:** Explore the **<a href=\"https://mbit.io/csf-e3-project\" target=\"_blank\">project</a>** uploaded onto micro:bits prior to the lesson. \n\nInstead of using real doors, you can model this project in class using a magnet and any box with a lid - for example, a shoe box.\n\n**Discuss** possible uses for an alarm like this. For example, making sure doors are kept closed to keep warm or cool air in a room.\n\n**Discuss** where these concepts are being used and where students may have used them before:\n- **Loop**: The action of doing something over and over again (e.g., the \"forever\" block keeps running the code to check the light level)\n- **Conditional**: A statement that only runs under certain conditions (e.g., if the light level is below 100, show the turtle image on the LED display)\n\n\n**Do this**: Share the **<a href=\"https://mbit.io/csf-e3-project\" target=\"_blank\">project</a>**  working in the simulator with your students and look at the code together prior to students coding the main activity.\n\nNote that the value you use to trigger the alarm may be different depending on how strong your magnet is, so there are a few steps to making this project:\n- Coding\n- Transfer and test code on a real micro:bit: does moving the magnet away trigger the alarm? If not, press button A to measure the strength of your magnet when it's close and far away to decide what number to use.\n- Modify the code to work with your magnet.\n- Transfer the code and test again.",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "17b834c1-c805-467e-9d19-a6942eb7d672",
+        "lesson_activity.key": "564aeabe-39ef-4cd1-9b97-0d13ec371e14"
+      }
+    },
+    {
+      "key": "c1f09e04-0a74-42c1-a50f-e27880b0184a",
+      "position": 1,
+      "properties": {
+        "description": "Students will make the project themselves using the MakeCode editor and micro:bit simulator. Once they have tested their code in the simulator, they will download their code onto the micro:bits.\n\nPick one:\n- Step by step coding **<a href=\"https://mbit.io/csf-e3-coding\" target=\"_blank\">video</a>**\n- Live micro:bit **<a href=\"https://mbit.io/csf-e3-classroom\" target=\"_blank\">classroom session</a>** ",
+        "duration": "20",
+        "name": "Student Coding",
+        "progression_name": "Simple door alarm coding"
+      },
+      "seeding_key": {
+        "activity_section.key": "c1f09e04-0a74-42c1-a50f-e27880b0184a",
+        "lesson_activity.key": "27fb9f57-c754-42f5-974d-6c290a27efe7"
+      }
+    },
+    {
+      "key": "8cf80047-3106-41be-8993-f050b974fc88",
+      "position": 2,
+      "properties": {
+        "description": "After completing the lesson, assess students' knowledge of the concepts covered by going through the assessment slides in the \n**<a href=\"https://docs.google.com/presentation/d/1Wg2MNjg2UFtHtLGyE5KLckGMUUoanshkvEKY8-F77bc/edit#slide=id.g26f3d2b7241_0_2018/template/preview\"  target=\"_blank\">slide deck</a>**. You can also assign students a content assessment hosted on the JuiceMind platform. To assign the assessment to your students, click <a href=\"https://play.juicemind.com/dashboard/explore/class/codeorg-microbit/unitNumber/3/topicNumber/2/quizId/Zqv1nqglDFqXHrfG8pZv\" target=\"_blank\">here.</a>\n\n::: details [**Setting up a JuiceMind assessment**]\nClick \"Assign\" on the assessment page, then have students join your unique class session. Students have a link to the Join page on level 2, and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note**: You will need to <a href=\"https://play.juicemind.com/signup\" target=\"_blank\">sign up</a> for an account on JuiceMind to assign the assessment.\n:::\n",
+        "duration": "10",
+        "name": "Assessment",
+        "progression_name": "Simple Door Alarm with micro:bit"
+      },
+      "seeding_key": {
+        "activity_section.key": "8cf80047-3106-41be-8993-f050b974fc88",
+        "lesson_activity.key": "27fb9f57-c754-42f5-974d-6c290a27efe7"
+      }
+    },
+    {
+      "key": "63850656-89d0-4271-960e-6ff591a07692",
+      "position": 1,
+      "properties": {
+        "description": "Share student work, revisit key concepts used, and explore ideas for extended learning.",
+        "name": "Discussion"
+      },
+      "seeding_key": {
+        "activity_section.key": "63850656-89d0-4271-960e-6ff591a07692",
+        "lesson_activity.key": "9de5e602-aa24-4bd2-bcc3-3375b4e8fb12"
+      }
+    },
+    {
+      "key": "0c02ca25-e0c1-4cb7-97e4-a3fa05f1fb31",
+      "position": 1,
+      "properties": {
+        "description": "**Test different magnets**: Test the alarm with different magnets and modify the code according to how strong they are.\n\n**Make some noise**: Add an audible alarm.\n\n**Reset:** Make the alarm reset itself when the door is closed.\n\n**Find this project and more on <a href=\"https://mbit.io/csf-e3-make\" target=\"_blank\">microbit.org</a>**"
+      },
+      "seeding_key": {
+        "activity_section.key": "0c02ca25-e0c1-4cb7-97e4-a3fa05f1fb31",
+        "lesson_activity.key": "13457777-07b5-48e7-ab34-105d4e62c8bd"
       }
     },
     {
@@ -2107,6 +2539,83 @@
         "activity_section.key": "6b76c1a8-4e15-4926-b014-a52224148ad3",
         "lesson_activity.key": "5bfde588-9908-49b6-98ec-fd67e99354e2"
       }
+    },
+    {
+      "key": "8dae7e3a-abd2-47c4-8075-3dc7b15b3030",
+      "position": 1,
+      "properties": {
+        "description": "**Option 1:** This activity helps students understand how physical devices use sensors to track data and solve problems. Students will create a sound meter to gauge the classroom's noise level. Each student will program their micro:bit to react to the volume in the classroom. Once the sound meters are created, you can challenge the whole class to see how long they can stay quiet enough to get all the smiley faces to show up.\n\n**Find the code for the Sound Meter project <a href=\"https://makecode.microbit.org/33947-11529-24623-19370\" target=\"_blank\">here.</a>**\n\n**Find the student handout for the Sound Meter project <a href=\"https://docs.google.com/document/d/1S1kRg6drPBum6AivOqMoY9z_6r6257YsEdXJ4Li5la8/template/preview\" target=\"_blank\">here.</a>**\n\n\n**Option 2:** This could also be an opportunity to have students explore the light sensor on the micro:bit and create an alarm clock that shines and plays music when the sun rises but when it is dark it turns into a night light.\n\n**Find the code for the Alarm Clock project <a href=\"https://makecode.microbit.org/_7x7AdjUL8Awf\" target=\"_blank\">here.</a>**\n\n**Find the student handout for the Alarm Clock project <a href=\"https://docs.google.com/document/d/1z-H_thK_2rCLiJ6bHRKQL5_8hEL17bOVPzCafNApN9U/template/preview\" target=\"_blank\">here.</a>**",
+        "name": "Sound Meter and Alarm Clock"
+      },
+      "seeding_key": {
+        "activity_section.key": "8dae7e3a-abd2-47c4-8075-3dc7b15b3030",
+        "lesson_activity.key": "d2636eab-5145-47b4-9453-fd19690ff418"
+      }
+    },
+    {
+      "key": "12e848b9-d50e-49c8-a9d4-7829fa811285",
+      "position": 1,
+      "properties": {
+        "description": "**Say**: Today's aim is to use the micro:bit's accelerometer and radio features to make an alarm that warns you when something has been moved - and learn how functions can make code more compact and easier to read and modify.\n\n[Option 1] **Do this:** Watch the **<a href=\"https://mbit.io/csf-e4-intro\" target=\"_blank\">introduction video.</a>** \n\n[Option 2] **Do this:** Explore the **<a href=\"https://mbit.io/csf-e4-project\" target=\"_blank\"> project </a>** uploaded onto micro:bits prior to the lesson.\n\n**Discuss** where these concepts are being used and where students have used them before:\n\n- **Functions:** a piece of code that you can call over and over again (e.g., the alarm showing an image on the LED display and playing an audible alert is in a function because it's used twice: when the micro:bit is moved and when is receives an alert message by radio)\n\n**Do this:** Share the **<a href=\"https://mbit.io/csf-e4-project\" target=\"_blank\"> project </a>** working in the simulator with your students and look at the code together prior to students coding the main activity.",
+        "duration": "10",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "12e848b9-d50e-49c8-a9d4-7829fa811285",
+        "lesson_activity.key": "a217aa32-7d5a-4322-a33d-56b1d3012dd0"
+      }
+    },
+    {
+      "key": "34a123da-6ff8-4056-a9de-a8732c4ce824",
+      "position": 1,
+      "properties": {
+        "description": "Students will make the project themselves using the MakeCode editor and micro:bit simulator. Once they have tested their code in the simulator, they will download their code onto the micro:bits.\n\nPick one:\n\n- Step by step coding **<a href=\"https://mbit.io/csf-e4-coding\" target=\"_blank\"> video </a>**\n- Live micro:bit **<a href=\"https://mbit.io/csf-e4-classroom\" target=\"_blank\"> classroom session </a>**",
+        "duration": "20",
+        "name": "Student Coding",
+        "progression_name": "Tilt alarm with micro:bit"
+      },
+      "seeding_key": {
+        "activity_section.key": "34a123da-6ff8-4056-a9de-a8732c4ce824",
+        "lesson_activity.key": "d21a6fc8-d473-4847-b0d9-8722fb320626"
+      }
+    },
+    {
+      "key": "3c40e596-fbab-417c-bd25-dedd637bc759",
+      "position": 2,
+      "properties": {
+        "description": "After completing the lesson, assess students' knowledge of the concepts covered by going through the assessment slides in the \n**<a href=\"https://docs.google.com/presentation/d/1Wg2MNjg2UFtHtLGyE5KLckGMUUoanshkvEKY8-F77bc/edit#slide=id.g26f3d2b7241_0_2018/template/preview\"  target=\"_blank\">slide deck</a>**. You can also assign students a content assessment hosted on the JuiceMind platform. To assign the assessment to your students, click <a href=\"https://play.juicemind.com/dashboard/explore/class/codeorg-microbit/unitNumber/3/topicNumber/2/quizId/GbTQuzI2M5mkqR5IkDgP\" target=\"_blank\">here.</a>\n\n::: details [**Setting up a JuiceMind assessment**]\nClick \"Assign\" on the assessment page, then have students join your unique class session. Students have a link to the Join page on level 2, and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note**: You will need to <a href=\"https://play.juicemind.com/signup\" target=\"_blank\">sign up</a> for an account on JuiceMind to assign the assessment.\n:::\n",
+        "duration": "10",
+        "name": "Assessment",
+        "progression_name": "Tilt Alarm with micro:bit"
+      },
+      "seeding_key": {
+        "activity_section.key": "3c40e596-fbab-417c-bd25-dedd637bc759",
+        "lesson_activity.key": "d21a6fc8-d473-4847-b0d9-8722fb320626"
+      }
+    },
+    {
+      "key": "6cf28620-dca9-423c-a60d-2f5e5548710d",
+      "position": 1,
+      "properties": {
+        "description": "Share student work, revisit key concepts used, and explore ideas for extended learning.",
+        "duration": "5",
+        "name": "Discussion"
+      },
+      "seeding_key": {
+        "activity_section.key": "6cf28620-dca9-423c-a60d-2f5e5548710d",
+        "lesson_activity.key": "7dbfa582-703f-4e60-97da-bc742a36ef59"
+      }
+    },
+    {
+      "key": "95b56e4f-d948-47ea-8ea6-1a124917545b",
+      "position": 1,
+      "properties": {
+        "description": "**Change the alert:** Edit the function to change the alert - for example, you could use animations, scrolling text, or different sounds.\n\n**Radio distance:** Test how far away you can get before the radio messages stop working.\n\n**Split the code:** Split the code into two different programs - one just to send a radio signal when shaken which can be kept in the object you want to keep safe, and another that just receives messages and alerts you.\n\n**Find this project and more on <a href=\"https://mbit.io/csf-e4-make\" target=\"_blank\"> microbit.org </a>**"
+      },
+      "seeding_key": {
+        "activity_section.key": "95b56e4f-d948-47ea-8ea6-1a124917545b",
+        "lesson_activity.key": "0af43712-2621-42d1-be20-0d796898d56e"
+      }
     }
   ],
   "script_levels": [
@@ -2116,6 +2625,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_e_maker_dance_party_unplugged_grade4"
+        ],
         "progression": "Dance Party: Unplugged"
       },
       "bonus": false,
@@ -2124,7 +2636,7 @@
           "course_e_maker_dance_party_unplugged_grade4"
         ],
         "lesson.key": "Dance Party: Unplugged",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "1d007c8e-164c-4bcf-9164-a2cb02a27e18"
       },
@@ -2138,6 +2650,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_vid1_grade4"
+        ],
         "progression": "Video: Warm Up"
       },
       "bonus": false,
@@ -2146,7 +2661,7 @@
           "CourseD_Dance_2020_vid1_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "52f2af84-fa65-485b-a4bf-d2e77a0f759a"
       },
@@ -2160,6 +2675,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_01_grade4"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2168,7 +2686,7 @@
           "CourseD_Dance_2020_01_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "f11d0d50-de86-46a8-a05c-2a607d6dc387"
       },
@@ -2182,6 +2700,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_vid2_grade4"
+        ],
         "progression": "Video: Events"
       },
       "bonus": false,
@@ -2190,7 +2711,7 @@
           "CourseD_Dance_2020_vid2_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "2633b326-4805-4751-a579-22a69fde880f"
       },
@@ -2204,6 +2725,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_02_grade4"
+        ],
         "progression": "Events"
       },
       "bonus": false,
@@ -2212,7 +2736,7 @@
           "CourseD_Dance_2020_02_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "3235ee66-a242-4c95-80d9-293b19dd486a"
       },
@@ -2226,6 +2750,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_03_grade4"
+        ],
         "progression": "Events"
       },
       "bonus": false,
@@ -2234,7 +2761,7 @@
           "CourseD_Dance_2020_03_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "3235ee66-a242-4c95-80d9-293b19dd486a"
       },
@@ -2248,6 +2775,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_vid3_grade4"
+        ],
         "progression": "Video: Measures"
       },
       "bonus": false,
@@ -2256,7 +2786,7 @@
           "CourseD_Dance_2020_vid3_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "32439074-3a4e-4185-9e66-6f2c51d4fa4b"
       },
@@ -2270,6 +2800,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_04_grade4"
+        ],
         "progression": "Measures"
       },
       "bonus": false,
@@ -2278,7 +2811,7 @@
           "CourseD_Dance_2020_04_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "9d6d87e2-ea3b-42e1-bd9b-63344ae00ffd"
       },
@@ -2292,6 +2825,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_05_grade4"
+        ],
         "progression": "Measures"
       },
       "bonus": false,
@@ -2300,7 +2836,7 @@
           "CourseD_Dance_2020_05_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "9d6d87e2-ea3b-42e1-bd9b-63344ae00ffd"
       },
@@ -2314,6 +2850,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_06_grade4"
+        ],
         "progression": "Measures"
       },
       "bonus": false,
@@ -2322,7 +2861,7 @@
           "CourseD_Dance_2020_06_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "9d6d87e2-ea3b-42e1-bd9b-63344ae00ffd"
       },
@@ -2336,6 +2875,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_vid4_grade4"
+        ],
         "progression": "Video: Properties"
       },
       "bonus": false,
@@ -2344,7 +2886,7 @@
           "CourseD_Dance_2020_vid4_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "c386f5c1-1139-4fd7-9f7e-6fce0ee3f95c"
       },
@@ -2358,6 +2900,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_07_grade4"
+        ],
         "progression": "Properties"
       },
       "bonus": false,
@@ -2366,7 +2911,7 @@
           "CourseD_Dance_2020_07_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "b7a774cc-424c-4212-b35f-be0572579d64"
       },
@@ -2380,6 +2925,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_08_grade4"
+        ],
         "progression": "Properties"
       },
       "bonus": false,
@@ -2388,7 +2936,7 @@
           "CourseD_Dance_2020_08_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "b7a774cc-424c-4212-b35f-be0572579d64"
       },
@@ -2402,6 +2950,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_09_grade4"
+        ],
         "progression": "Properties"
       },
       "bonus": false,
@@ -2410,7 +2961,7 @@
           "CourseD_Dance_2020_09_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "b7a774cc-424c-4212-b35f-be0572579d64"
       },
@@ -2424,6 +2975,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_vid5_grade4"
+        ],
         "progression": "Video: Wrap-up"
       },
       "bonus": false,
@@ -2432,7 +2986,7 @@
           "CourseD_Dance_2020_vid5_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "21b749df-8c39-48cf-9234-b1212e35a22d"
       },
@@ -2446,6 +3000,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_10_grade4"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -2454,7 +3011,7 @@
           "CourseD_Dance_2020_10_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "ec9e7095-8d44-4344-aaa9-965f50266a16"
       },
@@ -2468,6 +3025,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_bonus1_grade4"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -2476,7 +3036,7 @@
           "CourseD_Dance_2020_bonus1_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "3adbeff1-aecc-41a7-8cdd-4017fa8bd9e8"
       },
@@ -2490,6 +3050,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_bonus3_grade4"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -2498,7 +3061,7 @@
           "CourseD_Dance_2020_bonus3_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "3adbeff1-aecc-41a7-8cdd-4017fa8bd9e8"
       },
@@ -2512,6 +3075,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "DesigningForAccessibilityMarkdownLevel2022_maker_grade4"
+        ],
         "progression": "Designing for Accessibility"
       },
       "bonus": false,
@@ -2520,7 +3086,7 @@
           "DesigningForAccessibilityMarkdownLevel2022_maker_grade4"
         ],
         "lesson.key": "Designing for Accessibility",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "4b5bc9ab-0487-4e8f-b8b4-51dac583d02d"
       },
@@ -2534,6 +3100,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_c_maker_meet_your_microbit_grade4"
+        ],
         "progression": "Meet your micro:bit"
       },
       "bonus": false,
@@ -2542,7 +3111,7 @@
           "course_c_maker_meet_your_microbit_grade4"
         ],
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "754d044a-1055-4742-9bf1-91abce68d6f2"
       },
@@ -2556,6 +3125,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade4-maker-matching-1"
+        ],
         "progression": "Matching Activity"
       },
       "bonus": false,
@@ -2564,7 +3136,7 @@
           "grade4-maker-matching-1"
         ],
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "5a9c2269-e8e1-4677-a127-6bea6aad6c28"
       },
@@ -2578,6 +3150,34 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_e_maker_sensory_toy_grade4"
+        ],
+        "progression": "Sensory toy with micro:bit"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course_e_maker_sensory_toy_grade4"
+        ],
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "grade4-maker-2024",
+        "activity_section.key": "72170bb5-32d9-4ed1-a847-91aac1548ff3"
+      },
+      "level_keys": [
+        "course_e_maker_sensory_toy_grade4"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ConditionalsWithCards-Unplugged2022_maker_grade4"
+        ],
         "progression": "Conditionals with Cards - Unplugged Activity"
       },
       "bonus": false,
@@ -2595,11 +3195,14 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionalsVid1_grade4"
+        ],
         "progression": "Video: Conditionals: If Statements"
       },
       "bonus": false,
@@ -2617,11 +3220,14 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals1_predict1_grade4"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -2639,11 +3245,14 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals2_grade4"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2661,11 +3270,14 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals3_grade4"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2683,11 +3295,14 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals4_grade4"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2705,11 +3320,14 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals5_grade4"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2727,11 +3345,14 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals6_grade4"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2749,11 +3370,14 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionalsVidIfElse_grade4"
+        ],
         "progression": "Video: Conditionals: If and If/Else Statements"
       },
       "bonus": false,
@@ -2771,11 +3395,14 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals7_grade4"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2793,11 +3420,14 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals7_predict2_grade4"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -2815,12 +3445,15 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "courseD_bee_conditionals8_grade4"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -2838,11 +3471,14 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals9_grade4"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2860,11 +3496,14 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 13,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals10_grade4"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2882,11 +3521,14 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals_challenge1_grade4"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -2904,11 +3546,14 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 15,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals_challenge2_grade4"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -2926,11 +3571,14 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 16,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_2022LessonExtra14a_grade4"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -2948,11 +3596,14 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 17,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_2022_LessonExtra14b_grade4"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -2970,11 +3621,39 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_e_maker_simple_door_alarm_grade4"
+        ],
+        "progression": "Simple door alarm coding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course_e_maker_simple_door_alarm_grade4"
+        ],
+        "lesson.key": "Cristina - Simple Door Alarm Coding with micro:bit",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade4-maker-2024",
+        "activity_section.key": "c1f09e04-0a74-42c1-a50f-e27880b0184a"
+      },
+      "level_keys": [
+        "course_e_maker_simple_door_alarm_grade4"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Songwriting-Unplugged2022_maker_grade4"
+        ],
         "progression": "Songwriting - Functions Unplugged Activity"
       },
       "bonus": false,
@@ -2992,11 +3671,14 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 43,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_hero_vid1_grade4"
+        ],
         "progression": "Video: Minecraft - The Agent"
       },
       "bonus": false,
@@ -3014,11 +3696,14 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 44,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_01_RETRY_grade4"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3036,11 +3721,14 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 45,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_02_Cole_grade4"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3058,11 +3746,14 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 46,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_hero_vid2_grade4"
+        ],
         "progression": "Video: Minecraft - Repeat Loops"
       },
       "bonus": false,
@@ -3080,11 +3771,14 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 47,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_03_Cole_grade4"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3102,11 +3796,14 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 48,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_04_Cole_grade4"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3124,11 +3821,14 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 49,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_04POINT5_RYAN_grade4"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3146,11 +3846,14 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 50,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_05_Cole_grade4"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3168,11 +3871,14 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 51,
       "position": 9,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_06_Cole_grade4"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3190,11 +3896,14 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 52,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_hero_vid3_grade4"
+        ],
         "progression": "Video: Minecraft - Functions"
       },
       "bonus": false,
@@ -3212,11 +3921,14 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 53,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Function intro Ryan_grade4"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3234,11 +3946,14 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 54,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_07_Cole_grade4"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3256,11 +3971,14 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 55,
       "position": 13,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_10_RETRY_grade4"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3278,11 +3996,14 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 56,
       "position": 14,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_Ali_grade4"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3300,11 +4021,14 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 57,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_hero_vid4_grade4"
+        ],
         "progression": "Video: Minecraft - Congratulations"
       },
       "bonus": false,
@@ -3322,11 +4046,14 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 58,
       "position": 16,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_FP20x20_grade4"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -3344,11 +4071,14 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions_predict1_grade4"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -3366,11 +4096,14 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 60,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions2_grade4"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3388,11 +4121,14 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 61,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions3_grade4"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3410,11 +4146,14 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 62,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions5_grade4"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3432,11 +4171,14 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 63,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions7_grade4"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3454,11 +4196,14 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 64,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions8a_grade4"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3476,11 +4221,14 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 65,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions8b_grade4"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3498,11 +4246,14 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 66,
       "position": 8,
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions8c_grade4"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3520,11 +4271,14 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 67,
       "position": 9,
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions8_grade4"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3542,11 +4296,14 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 68,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_Lesson_11_Artist_Practice_maker_grade4"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3564,11 +4321,14 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 69,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions_challenge1_grade4"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -3586,11 +4346,14 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 70,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions_challenge2_grade4"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -3606,6 +4369,31 @@
       "level_keys": [
         "courseE_artist_functions_challenge2_grade4"
       ]
+    },
+    {
+      "chapter": 71,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "course_e_maker_tilt_alarm_grade4"
+        ],
+        "progression": "Tilt alarm with micro:bit"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course_e_maker_tilt_alarm_grade4"
+        ],
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "grade4-maker-2024",
+        "activity_section.key": "34a123da-6ff8-4056-a9de-a8732c4ce824"
+      },
+      "level_keys": [
+        "course_e_maker_tilt_alarm_grade4"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -3616,7 +4404,7 @@
           "course_e_maker_dance_party_unplugged_grade4"
         ],
         "lesson.key": "Dance Party: Unplugged",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "1d007c8e-164c-4bcf-9164-a2cb02a27e18"
       }
@@ -3628,7 +4416,7 @@
           "CourseD_Dance_2020_vid1_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "52f2af84-fa65-485b-a4bf-d2e77a0f759a"
       }
@@ -3640,7 +4428,7 @@
           "CourseD_Dance_2020_01_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "f11d0d50-de86-46a8-a05c-2a607d6dc387"
       }
@@ -3652,7 +4440,7 @@
           "CourseD_Dance_2020_vid2_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "2633b326-4805-4751-a579-22a69fde880f"
       }
@@ -3664,7 +4452,7 @@
           "CourseD_Dance_2020_02_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "3235ee66-a242-4c95-80d9-293b19dd486a"
       }
@@ -3676,7 +4464,7 @@
           "CourseD_Dance_2020_03_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "3235ee66-a242-4c95-80d9-293b19dd486a"
       }
@@ -3688,7 +4476,7 @@
           "CourseD_Dance_2020_vid3_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "32439074-3a4e-4185-9e66-6f2c51d4fa4b"
       }
@@ -3700,7 +4488,7 @@
           "CourseD_Dance_2020_04_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "9d6d87e2-ea3b-42e1-bd9b-63344ae00ffd"
       }
@@ -3712,7 +4500,7 @@
           "CourseD_Dance_2020_05_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "9d6d87e2-ea3b-42e1-bd9b-63344ae00ffd"
       }
@@ -3724,7 +4512,7 @@
           "CourseD_Dance_2020_06_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "9d6d87e2-ea3b-42e1-bd9b-63344ae00ffd"
       }
@@ -3736,7 +4524,7 @@
           "CourseD_Dance_2020_vid4_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "c386f5c1-1139-4fd7-9f7e-6fce0ee3f95c"
       }
@@ -3748,7 +4536,7 @@
           "CourseD_Dance_2020_07_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "b7a774cc-424c-4212-b35f-be0572579d64"
       }
@@ -3760,7 +4548,7 @@
           "CourseD_Dance_2020_08_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "b7a774cc-424c-4212-b35f-be0572579d64"
       }
@@ -3772,7 +4560,7 @@
           "CourseD_Dance_2020_09_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "b7a774cc-424c-4212-b35f-be0572579d64"
       }
@@ -3784,7 +4572,7 @@
           "CourseD_Dance_2020_vid5_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "21b749df-8c39-48cf-9234-b1212e35a22d"
       }
@@ -3796,7 +4584,7 @@
           "CourseD_Dance_2020_10_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "ec9e7095-8d44-4344-aaa9-965f50266a16"
       }
@@ -3808,7 +4596,7 @@
           "CourseD_Dance_2020_bonus1_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "3adbeff1-aecc-41a7-8cdd-4017fa8bd9e8"
       }
@@ -3820,7 +4608,7 @@
           "CourseD_Dance_2020_bonus3_grade4"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "3adbeff1-aecc-41a7-8cdd-4017fa8bd9e8"
       }
@@ -3832,7 +4620,7 @@
           "DesigningForAccessibilityMarkdownLevel2022_maker_grade4"
         ],
         "lesson.key": "Designing for Accessibility",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "4b5bc9ab-0487-4e8f-b8b4-51dac583d02d"
       }
@@ -3844,7 +4632,7 @@
           "course_c_maker_meet_your_microbit_grade4"
         ],
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "754d044a-1055-4742-9bf1-91abce68d6f2"
       }
@@ -3856,9 +4644,21 @@
           "grade4-maker-matching-1"
         ],
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "5a9c2269-e8e1-4677-a127-6bea6aad6c28"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "course_e_maker_sensory_toy_grade4",
+        "script_level.level_keys": [
+          "course_e_maker_sensory_toy_grade4"
+        ],
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "grade4-maker-2024",
+        "activity_section.key": "72170bb5-32d9-4ed1-a847-91aac1548ff3"
       }
     },
     {
@@ -4075,6 +4875,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "grade4-maker-2024",
         "activity_section.key": "c9b8ff0c-487f-472a-9c11-f82d431518ae"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "course_e_maker_simple_door_alarm_grade4",
+        "script_level.level_keys": [
+          "course_e_maker_simple_door_alarm_grade4"
+        ],
+        "lesson.key": "Cristina - Simple Door Alarm Coding with micro:bit",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade4-maker-2024",
+        "activity_section.key": "c1f09e04-0a74-42c1-a50f-e27880b0184a"
       }
     },
     {
@@ -4424,6 +5236,18 @@
         "script.name": "grade4-maker-2024",
         "activity_section.key": "3f3f0b27-d9cb-40f4-8aad-b30e3be4ab1b"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "course_e_maker_tilt_alarm_grade4",
+        "script_level.level_keys": [
+          "course_e_maker_tilt_alarm_grade4"
+        ],
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "grade4-maker-2024",
+        "activity_section.key": "34a123da-6ff8-4056-a9de-a8732c4ce824"
+      }
     }
   ],
   "resources": [
@@ -4541,6 +5365,42 @@
       }
     },
     {
+      "name": "CS Talking Points for Code",
+      "url": "https://drive.google.com/file/d/1Cq8y4MlTI9lB88oXXd9Qf5MMK6e-mZ72/view?usp=drive_link",
+      "key": "cs_talking_points_for_code",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "cs_talking_points_for_code"
+      }
+    },
+    {
+      "name": "CS talking points for code",
+      "url": "https://drive.google.com/file/d/1w6YFipVPOwj9BlJPDZOA-l2sbqcurrmk/view?usp=drive_link",
+      "key": "cs_talking_points_for_code_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "cs_talking_points_for_code_1"
+      }
+    },
+    {
+      "name": "CS talking points for code",
+      "url": "https://drive.google.com/file/d/1l5AOuR1ZBgrVdRzoT9AQbo7sk6jdM6gv/view?usp=drive_link",
+      "key": "cs_talking_points_for_code_2",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "cs_talking_points_for_code_2"
+      }
+    },
+    {
       "name": "Dance Party Project Guide",
       "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit",
       "key": "dance_party_project_guide",
@@ -4627,6 +5487,42 @@
       }
     },
     {
+      "name": "Live micro:bit classroom session",
+      "url": "https://mbit.io/csf-e2-classroom",
+      "key": "live_micro_bit_classroom_session",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "live_micro_bit_classroom_session"
+      }
+    },
+    {
+      "name": "Live micro:bit classroom session",
+      "url": "https://mbit.io/csf-e3-classroom",
+      "key": "live_micro_bit_classroom_session_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "live_micro_bit_classroom_session_1"
+      }
+    },
+    {
+      "name": "Live micro:bit classroom session",
+      "url": "https://mbit.io/csf-e4-classroom",
+      "key": "live_micro_bit_classroom_session_2",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "live_micro_bit_classroom_session_2"
+      }
+    },
+    {
       "name": "MakeCode editor",
       "url": "https://makecode.microbit.org/#editor",
       "key": "makecode_editor",
@@ -4648,6 +5544,19 @@
       },
       "seeding_key": {
         "resource.key": "meet_your_micro_bit_-_finished_project"
+      }
+    },
+    {
+      "name": "Meet your micro:bit Activity Guide",
+      "url": "https://docs.google.com/document/d/1aiCZucwRULkV7zhEwp-BUUVzwBXsIbBCr7Hv_EgWDro/template/preview",
+      "key": "meet_your_micro_bit_activity_guide",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://docs.google.com/document/d/1aiCZucwRULkV7zhEwp-BUUVzwBXsIbBCr7Hv_EgWDro/export/pdf",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "meet_your_micro_bit_activity_guide"
       }
     },
     {
@@ -4675,6 +5584,78 @@
       }
     },
     {
+      "name": "Sensory Toy: Finished project",
+      "url": "https://mbit.io/csf-e2-project",
+      "key": "sensory_toy_finished_project",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "sensory_toy_finished_project"
+      }
+    },
+    {
+      "name": "Sensory Toy: Introduction video",
+      "url": "https://mbit.io/csf-e2-intro",
+      "key": "sensory_toy_introduction_video",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "sensory_toy_introduction_video"
+      }
+    },
+    {
+      "name": "Sensory Toy: Step by step coding video",
+      "url": "https://mbit.io/csf-e2-coding",
+      "key": "sensory_toy_step_by_step_coding_video",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "sensory_toy_step_by_step_coding_video"
+      }
+    },
+    {
+      "name": "Simple Door Alarm: Finished project",
+      "url": "https://mbit.io/csf-e3-project",
+      "key": "simple_door_alarm_finished_project",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "simple_door_alarm_finished_project"
+      }
+    },
+    {
+      "name": "Simple Door Alarm: Introduction Video",
+      "url": "https://mbit.io/csf-e3-intro",
+      "key": "simple_door_alarm_introduction_video",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "simple_door_alarm_introduction_video"
+      }
+    },
+    {
+      "name": "Simple Door Alarm: Step by step coding video",
+      "url": "https://mbit.io/csf-e3-coding",
+      "key": "simple_door_alarm_step_by_step_coding_video",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "simple_door_alarm_step_by_step_coding_video"
+      }
+    },
+    {
       "name": "Songwriting with Functions",
       "url": "https://youtu.be/5iDCKkI6y2Y",
       "key": "songwriting_with_functions",
@@ -4696,6 +5677,42 @@
       },
       "seeding_key": {
         "resource.key": "spotify_playlist_all_ages_"
+      }
+    },
+    {
+      "name": "Tilt Alarm: Finished project",
+      "url": "https://mbit.io/csf-e4-project",
+      "key": "tilt_alarm_finished_project",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "tilt_alarm_finished_project"
+      }
+    },
+    {
+      "name": "Tilt Alarm: Introduction Video",
+      "url": "https://mbit.io/csf-e4-intro",
+      "key": "tilt_alarm_introduction_video",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "tilt_alarm_introduction_video"
+      }
+    },
+    {
+      "name": "Tilt Alarm: Step by step coding video",
+      "url": "https://mbit.io/csf-e4-coding",
+      "key": "tilt_alarm_step_by_step_coding_video",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "tilt_alarm_step_by_step_coding_video"
       }
     },
     {
@@ -4799,7 +5816,121 @@
     {
       "seeding_key": {
         "lesson.key": "Cristina - Meet your micro:bit",
+        "resource.key": "meet_your_micro_bit_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Meet your micro:bit",
         "resource.key": "meet_your_micro_bit_video_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
+        "resource.key": "_grade_4_-_maker_with_micro_bit_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
+        "resource.key": "cs_talking_points_for_code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
+        "resource.key": "live_micro_bit_classroom_session"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
+        "resource.key": "sensory_toy_finished_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
+        "resource.key": "sensory_toy_introduction_video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
+        "resource.key": "sensory_toy_step_by_step_coding_video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Simple Door Alarm Coding with micro:bit",
+        "resource.key": "_grade_4_-_maker_with_micro_bit_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Simple Door Alarm Coding with micro:bit",
+        "resource.key": "cs_talking_points_for_code_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Simple Door Alarm Coding with micro:bit",
+        "resource.key": "live_micro_bit_classroom_session_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Simple Door Alarm Coding with micro:bit",
+        "resource.key": "simple_door_alarm_finished_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Simple Door Alarm Coding with micro:bit",
+        "resource.key": "simple_door_alarm_introduction_video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Simple Door Alarm Coding with micro:bit",
+        "resource.key": "simple_door_alarm_step_by_step_coding_video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
+        "resource.key": "_grade_4_-_maker_with_micro_bit_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
+        "resource.key": "cs_talking_points_for_code_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
+        "resource.key": "live_micro_bit_classroom_session_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
+        "resource.key": "tilt_alarm_finished_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
+        "resource.key": "tilt_alarm_introduction_video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
+        "resource.key": "tilt_alarm_step_by_step_coding_video"
       }
     },
     {
@@ -5008,6 +6139,16 @@
       }
     },
     {
+      "key": "gestures",
+      "word": "Gestures",
+      "definition": "Different ways of moving the micro:bit, for example shaking it, placing it display-side up flat on a table, turning it face down, and so on. ",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "gestures"
+      }
+    },
+    {
       "key": "input",
       "word": "Input",
       "definition": "The information computers get from users or sensors. ",
@@ -5015,6 +6156,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "input"
+      }
+    },
+    {
+      "key": "loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "loop"
       }
     },
     {
@@ -5056,6 +6207,26 @@
       "seeding_key": {
         "vocabulary.key": "pseudocode"
       }
+    },
+    {
+      "key": "radio",
+      "word": "Radio",
+      "definition": "A way to send signals over a long distance, to deliver information from one place to another.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "radio"
+      }
+    },
+    {
+      "key": "sensor",
+      "word": "Sensor",
+      "definition": "A device that detects or records changes in the environment, such as the micro:bit's sensors for temperature, light, movement, and magnetism. ",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sensor"
+      }
     }
   ],
   "lessons_vocabularies": [
@@ -5093,6 +6264,48 @@
       "seeding_key": {
         "lesson.key": "Cristina - Meet your micro:bit",
         "vocabulary.key": "output"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
+        "vocabulary.key": "gestures"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Simple Door Alarm Coding with micro:bit",
+        "vocabulary.key": "conditionals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Simple Door Alarm Coding with micro:bit",
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Simple Door Alarm Coding with micro:bit",
+        "vocabulary.key": "sensor"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
+        "vocabulary.key": "function"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
+        "vocabulary.key": "radio"
       }
     },
     {
@@ -5221,6 +6434,16 @@
       }
     },
     {
+      "key": "46955c42-0a6e-4062-8ec9-65053cb3f5f0",
+      "properties": {
+        "description": "Write code that includes loops and conditionals."
+      },
+      "seeding_key": {
+        "lesson.key": "Cristina - Simple Door Alarm Coding with micro:bit",
+        "objective.key": "46955c42-0a6e-4062-8ec9-65053cb3f5f0"
+      }
+    },
+    {
       "key": "48722acf-43dc-4cf0-9152-7e804b13cc7e",
       "properties": {
         "description": "Identify sections of a song to pull into a function."
@@ -5228,6 +6451,16 @@
       "seeding_key": {
         "lesson.key": "Songwriting",
         "objective.key": "48722acf-43dc-4cf0-9152-7e804b13cc7e"
+      }
+    },
+    {
+      "key": "4ab80d7a-057c-426e-ad9d-ab1f8141ae4e",
+      "properties": {
+        "description": "Collaborate with a partner to complete the project."
+      },
+      "seeding_key": {
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
+        "objective.key": "4ab80d7a-057c-426e-ad9d-ab1f8141ae4e"
       }
     },
     {
@@ -5248,6 +6481,16 @@
       "seeding_key": {
         "lesson.key": "Conditionals with Cards",
         "objective.key": "4d52bc64-806e-45b0-af70-ba43a5577821"
+      }
+    },
+    {
+      "key": "4e09d491-95e9-4c84-ba45-ecde5089e480",
+      "properties": {
+        "description": "Discuss real-world uses for a program like this."
+      },
+      "seeding_key": {
+        "lesson.key": "Cristina - Simple Door Alarm Coding with micro:bit",
+        "objective.key": "4e09d491-95e9-4c84-ba45-ecde5089e480"
       }
     },
     {
@@ -5288,6 +6531,26 @@
       "seeding_key": {
         "lesson.key": "Dance Party",
         "objective.key": "58ed334c-80b8-46fc-a138-f63b4b2df23f"
+      }
+    },
+    {
+      "key": "596e73fa-e43c-405d-8ed8-af3de754a43c",
+      "properties": {
+        "description": "Write code with events and loops."
+      },
+      "seeding_key": {
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
+        "objective.key": "596e73fa-e43c-405d-8ed8-af3de754a43c"
+      }
+    },
+    {
+      "key": "59719996-a946-478f-9d11-0390aba4804b",
+      "properties": {
+        "description": "Use functions to make code more compact and easier to read and modify."
+      },
+      "seeding_key": {
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
+        "objective.key": "59719996-a946-478f-9d11-0390aba4804b"
       }
     },
     {
@@ -5351,6 +6614,36 @@
       }
     },
     {
+      "key": "96f0f277-2785-4f6c-aefa-c49a6eb05bc8",
+      "properties": {
+        "description": "Program events on MakeCode."
+      },
+      "seeding_key": {
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
+        "objective.key": "96f0f277-2785-4f6c-aefa-c49a6eb05bc8"
+      }
+    },
+    {
+      "key": "aa4009e8-50c9-48ae-8a3e-ca1264b21a3a",
+      "properties": {
+        "description": "Program the input of the micro:bit to sense magnetic fields."
+      },
+      "seeding_key": {
+        "lesson.key": "Cristina - Simple Door Alarm Coding with micro:bit",
+        "objective.key": "aa4009e8-50c9-48ae-8a3e-ca1264b21a3a"
+      }
+    },
+    {
+      "key": "b238ae78-c402-400a-b599-278cb29b035c",
+      "properties": {
+        "description": "Write code that uses micro:bit's accelerometer and radio functions."
+      },
+      "seeding_key": {
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
+        "objective.key": "b238ae78-c402-400a-b599-278cb29b035c"
+      }
+    },
+    {
       "key": "c4facf8e-ff83-4164-9b61-f65ddbb427a0",
       "properties": {
         "description": "Locate repeating phrases inside song lyrics."
@@ -5361,6 +6654,16 @@
       }
     },
     {
+      "key": "d1998718-49f7-4209-9a88-1195ded25a50",
+      "properties": {
+        "description": "Identify and fix bugs in the algorithm."
+      },
+      "seeding_key": {
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
+        "objective.key": "d1998718-49f7-4209-9a88-1195ded25a50"
+      }
+    },
+    {
       "key": "dc93ec6a-93c6-4aec-bced-9f4583be0292",
       "properties": {
         "description": "Explain why accessibility is an important part of designing an app for users."
@@ -5368,6 +6671,16 @@
       "seeding_key": {
         "lesson.key": "Designing for Accessibility",
         "objective.key": "dc93ec6a-93c6-4aec-bced-9f4583be0292"
+      }
+    },
+    {
+      "key": "e44eec95-1e3a-4d03-b6cf-7f3e8e7db45e",
+      "properties": {
+        "description": "Use blocks in the Toolbox to write code on MakeCode, view the program on the Simulator and then transfer the program to the micro:bit."
+      },
+      "seeding_key": {
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
+        "objective.key": "e44eec95-1e3a-4d03-b6cf-7f3e8e7db45e"
       }
     },
     {
@@ -5404,6 +6717,34 @@
         "lesson.key": "Cristina - Meet your micro:bit",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Simple Door Alarm Coding with micro:bit",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
       }
     },
     {

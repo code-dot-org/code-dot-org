@@ -7,11 +7,12 @@
       "has_verified_resources": true,
       "hideable_lessons": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-27 21:50:55 UTC",
+    "serialized_at": "2024-05-07 22:26:09 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -79,7 +80,7 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "**Purpose:**\nThis session is intended to welcome and orient participants to the day.\n\n\n**Objectives:**\n* Participants are oriented to the day\n\n**Suggested Time:** 15 minutes",
+        "overview": "**Purpose:**\nThis session is intended to welcome and orient participants to the day.\n\n\n**Objectives:**\n* Participants are oriented to the day\n\n**Suggested Time:** 10 minutes",
         "student_overview": "**You will:**\n* Get an orientation to the day"
       },
       "seeding_key": {
@@ -89,35 +90,18 @@
       }
     },
     {
-      "key": "Being a Lead Learner",
-      "name": "Being a Lead Learner",
+      "key": "Classroom Culture",
+      "name": "Classroom Culture",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "**Purpose:**\nBy this point in the workshop, participants have had experience with the computer science concepts in Units 1-3. This session invites participants to consider what it might feel like to teach these concepts to their students and act as the “lead learner” during the school year.\n\n\n**Objectives:**\n* Participants reflect on how being a lead learner in the classroom is similar to and different from how they have previously taught.\n* Participants understand the importance of modeling as a lead learner in the CS classroom.\n\n**Suggested Time:** 30 minutes",
-        "student_overview": "**You will:**\n* Reflect on how being a lead learner in the classroom is similar to and different from how you have previously taught\n* Understand the importance of modeling as a lead learner in the CS classroom"
+        "overview": "**Purpose:**\nThis session serves as a bridge to the Asynchronous Part 2 session. Participants will get an overview of the work they’ll be completing in their cohort’s shared slide deck.\n\n**Objectives:**\n\n* Participants prepare to engage in thinking about their classroom culture.\n* Participants know where they will complete their Asynchronous Work in their cohort’s shared slide deck.\n\n**Suggested time:** 20 minutes",
+        "student_overview": "**You will:**\n\n* Prepare to engage in thinking about your classroom culture.\n* Know where you will complete your Asynchronous Work in your cohort’s shared slide deck.\n"
       },
       "seeding_key": {
-        "lesson.key": "Being a Lead Learner",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "virtual-pl-csd-summer-2024-day3"
-      }
-    },
-    {
-      "key": "Unit 3 Curriculum Investigation: Sprites",
-      "name": "Unit 3 Curriculum Investigation: Sprites",
-      "absolute_position": 3,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 3,
-      "properties": {
-        "overview": "**Purpose:**\nThis session is a preparation for the next two TLOs that participants will engage in: U3L6 Random Numbers and U3L8 Sprites. This curriculum investigation builds on the Summer Workshop focus of preparing participants to teach units 1-3 (the most heavily implemented units).\n\n\n**Objectives:**\n* Participants learn how to use variables in Game Lab to prepare for their model lesson and TLOs\n* Participants know what sprites are in Game Lab \n\n**Suggested Time:** 40 minutes",
-        "student_overview": "**You will:**\n* Learn how to use variables in Game Lab to prepare for their model lesson and TLOs\n* Learn what sprites are in Game Lab "
-      },
-      "seeding_key": {
-        "lesson.key": "Unit 3 Curriculum Investigation: Sprites",
+        "lesson.key": "Classroom Culture",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "virtual-pl-csd-summer-2024-day3"
       }
@@ -125,18 +109,37 @@
     {
       "key": "TLO 1: U3L6 Random Numbers",
       "name": "TLO 1: U3L6 Random Numbers",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "**Purpose:**\n\n**Essential Practice:** Students have strategies for debugging\n\n**Potential Teaching Group Decisions:**\n  * The teacher directs participants to the student version of the “Guide to Debugging” (page 24 of the Resource Packet) and prompts them to use the debugging process when they encounter bugs.\n  * Teacher instructs participants to complete at least one debugging level in the practice choice level (Level 6b)\n  * Teacher has participants document bugs in their journals\n  * In the wrap up, after students have written about things that might like to be random in their programs, teachers lead a discussion on potential bugs that might arise.\n\n\n**Objectives:**\n* Participants have brainstormed ways to support students in the process of debugging\n* Participants can generate and use random numbers in a program and update a value stored in a variable\n\n**Suggested Time:** 50 minutes\n\n<a href=\"https://studio.code.org/s/csd3-2024/lessons/6\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n",
+        "preparation": "- Review the level progression in Code Studio\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+        "student_overview": "**Question of the Day:** How can we make our programs behave differently each time they are run?\n\nIn this lesson, you will learn how to use the randomNumber() block to create new behaviors in your programs!\n\n<a href=\"https://studio.code.org/s/csd3-2024/lessons/6\" target=\"blank\" rel=\"noopener noreferrer\">Link to lesson plan</a> "
+      },
+      "seeding_key": {
+        "lesson.key": "TLO 1: U3L6 Random Numbers",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-2024-day3"
+      }
+    },
+    {
+      "key": "TLO 2: U3L8 Sprites",
+      "name": "TLO 2: U3L8 Sprites",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\n* **Essential Practice:** Students have strategies for debugging\n\n\n* **Potential Teaching Group Decisions:**\n  * The teacher directs participants to the student version of the “Guide to Debugging” (page 24 of the Resource Packet) and prompts them to use the debugging process when they encounter bugs.\n  * Teacher instructs participants to complete at least one debugging level in the practice choice level (Level 6b)\n  * Teacher has participants document bugs in their journals\n  * In the wrap up, after students have written about things that might like to be random in their programs, teachers lead a discussion on potential bugs that might arise.\n\n\n**Objectives:**\n* Participants have brainstormed ways to support students in the process of debugging\n* Participants can generate and use random numbers in a program and update a value stored in a variable\n\n**Suggested Time:** 45 minutes\n\n<a href=\"https://studio.code.org/s/csd3-2023/lessons/6\" target=\"blank\" rel=\"noopener noreferrer\">Link to lesson plan</a> \n",
-        "preparation": "- Review the level progression in Code Studio\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
-        "student_overview": "**Question of the Day:** How can we make our programs behave differently each time they are run?\n\nIn this lesson, you will learn how to use the randomNumber() block to create new behaviors in your programs!\n\n<a href=\"https://studio.code.org/s/csd3-2023/lessons/6\" target=\"blank\" rel=\"noopener noreferrer\">Link to lesson plan</a> "
+        "overview": "**Purpose:**\n\n**Essential Practice:** The teacher uses journaling for individual reflection and sensemaking along with discussion for group reflection and sensemaking.\n\n\n**Potential Teaching Group Decisions:**\n  * Have participants respond to prompts using a journal\n  * Have participants add key vocabulary to their journal\n  * Facilitate discussion providing time for individual reflection before group sharing - the Think-Pair-Share strategy does not always need to include all three steps, but at a minimum it should include some individual think time\n\n\n**Objectives:**\n* Participants have reflected on the role of journaling and discussion as a metacognitive opportunity for students to make connections between the activities they are doing and the new knowledge and skills they are gaining\n* Participants can create and use a sprite.\n\n**Suggested Time:** 50 minutes\n\n<a href=\"https://studio.code.org/s/csd3-2024/lessons/8\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a>",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+        "student_overview": "**Question of the Day:**  How can we use sprites to help us keep track of lots of information in our programs?\n\nToday you will learn about sprites, which will not only give you a way to keep track of various pieces of information in your programs but will also allow you to create more interesting and fun images!\n\n<a href=\"https://studio.code.org/s/csd3-2024/lessons/8\" target=\"blank\" rel=\"noopener noreferrer\">Link to lesson plan</a>"
       },
       "seeding_key": {
-        "lesson.key": "TLO 1: U3L6 Random Numbers",
+        "lesson.key": "TLO 2: U3L8 Sprites",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "virtual-pl-csd-summer-2024-day3"
       }
@@ -193,20 +196,18 @@
       }
     },
     {
-      "key": "TLO 2: U3L8 Sprites",
-      "name": "TLO 2: U3L8 Sprites",
+      "key": "Unit 3 Curriculum Investigation: Sprites",
+      "name": "Unit 3 Curriculum Investigation: Sprites",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\n* **Essential Practice:** The teacher uses journaling for individual reflection and sensemaking along with discussion for group reflection and sensemaking.\n\n\n* **Potential Teaching Group Decisions:**\n  * Have participants respond to prompts using a journal\n  * Have participants add key vocabulary to their journal\n  * Facilitate discussion providing time for individual reflection before group sharing - the Think-Pair-Share strategy does not always need to include all three steps, but at a minimum it should include some individual think time\n\n\n**Objectives:**\n* Participants have reflected on the role of journaling and discussion as a metacognitive opportunity for students to make connections between the activities they are doing and the new knowledge and skills they are gaining\n* Participants can create and use a sprite.\n\n**Suggested Time:** 45 minutes\n\n<a href=\"https://studio.code.org/s/csd3-2023/lessons/8\" target=\"blank\" rel=\"noopener noreferrer\">Link to lesson plan</a>",
-        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
-        "student_overview": "**Question of the Day:**  How can we use sprites to help us keep track of lots of information in our programs?\n\nToday you will learn about sprites, which will not only give you a way to keep track of various pieces of information in your programs but will also allow you to create more interesting and fun images!\n\n<a href=\"https://studio.code.org/s/csd3-2023/lessons/8\" target=\"blank\" rel=\"noopener noreferrer\">Link to lesson plan</a>"
+        "overview": "**Purpose:**\nThis curriculum investigation builds on the Summer Workshop focus of preparing participants to teach units 1-3 (the most heavily implemented units).\n\n\n**Objectives:**\n* Participants learn how to use variables in Game Lab to prepare for their model lesson and TLOs\n* Participants know what sprites are in Game Lab \n\n**Suggested Time:** 50 minutes",
+        "student_overview": "**You will:**\n* Learn how to use variables in Game Lab to prepare for their model lesson and TLOs\n* Learn what sprites are in Game Lab "
       },
       "seeding_key": {
-        "lesson.key": "TLO 2: U3L8 Sprites",
+        "lesson.key": "Unit 3 Curriculum Investigation: Sprites",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "virtual-pl-csd-summer-2024-day3"
       }
@@ -237,9 +238,9 @@
       "relative_position": 10,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\n* **Essential Practice:** Teachers incorporate opportunities for student collaboration into the lesson.\n\n\n* **Potential Teaching Group Decisions:* \n  * Group students and allow them to work together while circulating around the entire class.\n  * Encourage students to discuss questions with a partner before asking for help from the teacher\n  * When students have to come to a decision about the user they’ve chosen and how they will design their smart clothing, allow them to come to an answer together and facilitate letting all students have a say.\n\n\n**Objectives:**\n* Participants engage in Unit 4 Lesson 3 while playing the role of the student\n* Participants reflect on their experience as a student engaging in the lesson\n* Participants discuss the role of teamwork and collaboration in the CS Discoveries curriculum\n\n**Suggested Time:** 45 minutes\n\n<a href=\"https://studio.code.org/s/csd4-2023/lessons/3\" target=\"blank\" rel=\"noopener noreferrer\">Link to lesson plan</a>  ",
+        "overview": "**Purpose:**\n\n**Essential Practice:** Teachers incorporate opportunities for student collaboration into the lesson.\n\n\n**Potential Teaching Group Decisions:* \n  * Group students and allow them to work together while circulating around the entire class.\n  * Encourage students to discuss questions with a partner before asking for help from the teacher\n  * When students have to come to a decision about the user they’ve chosen and how they will design their smart clothing, allow them to come to an answer together and facilitate letting all students have a say.\n\n\n**Objectives:**\n* Participants engage in Unit 4 Lesson 3 while playing the role of the student\n* Participants reflect on their experience as a student engaging in the lesson\n* Participants discuss the role of teamwork and collaboration in the CS Discoveries curriculum\n\n**Suggested Time:** 50 minutes\n\n<a href=\"https://studio.code.org/s/csd4-2024/lessons/3\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a>  ",
         "preparation": "* Ensure you have plenty of sticky notes, pens and large poster paper for students to work on\n* Set up groups with preferably 3 students each\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)",
-        "student_overview": "**Question of the Day:** How can we design for people other than ourselves?\n\nIn this lesson, you will use the design process to come up with ideas for smart clothing. \n\n<a href=\"https://studio.code.org/s/csd4-2023/lessons/3\" target=\"blank\" rel=\"noopener noreferrer\">Link to lesson plan</a>  "
+        "student_overview": "**Question of the Day:** How can we design for people other than ourselves?\n\nIn this lesson, you will use the design process to come up with ideas for smart clothing. \n\n<a href=\"https://studio.code.org/s/csd4-2024/lessons/3\" target=\"blank\" rel=\"noopener noreferrer\">Link to lesson plan</a>  "
       },
       "seeding_key": {
         "lesson.key": "TLO 3: U4L3 User-Centered Design Define & Prepare",
@@ -248,29 +249,12 @@
       }
     },
     {
-      "key": "Classroom Culture",
-      "name": "Classroom Culture",
+      "key": "Day 3 Wrap Up",
+      "name": "Day 3 Wrap Up",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 11,
-      "properties": {
-        "overview": "**Purpose:**\nThis session serves as a bridge to the Asynchronous Part 2 session. Participants will get an overview of the work they’ll be completing in their cohort’s shared slide deck.\n\n**Objectives:**\n\n* Participants prepare to engage in thinking about their classroom culture.\n* Participants know where they will complete their Asynchronous Work in their cohort’s shared slide deck.\n\n**Suggested time:** 10 minutes",
-        "student_overview": "**You will:**\n\n* Prepare to engage in thinking about your classroom culture.\n* Know where you will complete your Asynchronous Work in your cohort’s shared slide deck.\n"
-      },
-      "seeding_key": {
-        "lesson.key": "Classroom Culture",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "virtual-pl-csd-summer-2024-day3"
-      }
-    },
-    {
-      "key": "Day 3 Wrap Up",
-      "name": "Day 3 Wrap Up",
-      "absolute_position": 12,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 12,
       "properties": {
         "overview": "**Purpose:**\n* Wrap up the themes of the day\n* Pulse check on teachers through gots and needs/survey\n\n\n**Objectives:**\n* Share gots and needs for the day.\n* Take the daily survey\n\n**Suggested Time:** 10 minutes",
         "student_overview": "**You will:**\n* Share gots and needs for the day\n* Take the daily survey\n\n<a href=\"https://studio.code.org/pd/workshop_survey/day/3\" target=\"blank\" rel=\"noopener noreferrer\">Link to Day 3 Survey</a> \n\n"
@@ -284,10 +268,10 @@
     {
       "key": "Asynchronous Part 2",
       "name": "Asynchronous Part 2",
-      "absolute_position": 13,
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 13,
+      "relative_position": 12,
       "properties": {
         "overview": "**Purpose:**\nParticipants will build on the synchronous Classroom Culture session by learning more about how to create an inclusive classroom culture.\n\n**Objectives:**\n\n* Participants create an artifact that represents a positive classroom culture.\n* Participants reflect on the role of the teacher in creating a positive classroom culture.\n* Participants get an overview of how teamwork is incorporated into the CS Discoveries curriculum.\n* Participants complete any remaining challenges from the TLOs.\n\n**Suggested time:** 60 minutes",
         "student_overview": "**You will:**\n\n* Create an artifact that represents a positive classroom culture.\n* Reflect on the role of the teacher in creating a positive classroom culture.\n* Get an overview of how teamwork is incorporated into the CS Discoveries curriculum.\n* Complete any remaining challenges from the TLOs."
@@ -313,25 +297,13 @@
       }
     },
     {
-      "key": "9e1535f0-b8cc-43ed-8ff1-87c2e39dba31",
+      "key": "92d50404-ed54-42a2-8596-5937aa01328b",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "lesson_activity.key": "9e1535f0-b8cc-43ed-8ff1-87c2e39dba31",
-        "lesson.key": "Being a Lead Learner",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "virtual-pl-csd-summer-2024-day3"
-      }
-    },
-    {
-      "key": "66ff16d5-5473-4940-b51b-560bd89b9d93",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "66ff16d5-5473-4940-b51b-560bd89b9d93",
-        "lesson.key": "Unit 3 Curriculum Investigation: Sprites",
+        "lesson_activity.key": "92d50404-ed54-42a2-8596-5937aa01328b",
+        "lesson.key": "Classroom Culture",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "virtual-pl-csd-summer-2024-day3"
       }
@@ -379,6 +351,48 @@
       }
     },
     {
+      "key": "bce75245-6cc9-4e50-9a4c-83106c38c399",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bce75245-6cc9-4e50-9a4c-83106c38c399",
+        "lesson.key": "TLO 2: U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-2024-day3"
+      }
+    },
+    {
+      "key": "26b1304f-5590-4dda-94ea-fc4dac2362da",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "26b1304f-5590-4dda-94ea-fc4dac2362da",
+        "lesson.key": "TLO 2: U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-2024-day3"
+      }
+    },
+    {
+      "key": "d3a4356b-12e9-4d18-bdca-b01efc3969a4",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d3a4356b-12e9-4d18-bdca-b01efc3969a4",
+        "lesson.key": "TLO 2: U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-2024-day3"
+      }
+    },
+    {
       "key": "affbe622-0963-47a7-a6bc-c26446022ea0",
       "position": 1,
       "properties": {
@@ -394,6 +408,7 @@
       "key": "72d0d018-b1ce-43dd-bc42-ecec9a6f1894",
       "position": 1,
       "properties": {
+        "duration": 60
       },
       "seeding_key": {
         "lesson_activity.key": "72d0d018-b1ce-43dd-bc42-ecec9a6f1894",
@@ -415,43 +430,13 @@
       }
     },
     {
-      "key": "bce75245-6cc9-4e50-9a4c-83106c38c399",
+      "key": "66ff16d5-5473-4940-b51b-560bd89b9d93",
       "position": 1,
       "properties": {
-        "duration": 5,
-        "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "bce75245-6cc9-4e50-9a4c-83106c38c399",
-        "lesson.key": "TLO 2: U3L8 Sprites",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "virtual-pl-csd-summer-2024-day3"
-      }
-    },
-    {
-      "key": "26b1304f-5590-4dda-94ea-fc4dac2362da",
-      "position": 2,
-      "properties": {
-        "duration": 35,
-        "name": "Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "26b1304f-5590-4dda-94ea-fc4dac2362da",
-        "lesson.key": "TLO 2: U3L8 Sprites",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "virtual-pl-csd-summer-2024-day3"
-      }
-    },
-    {
-      "key": "d3a4356b-12e9-4d18-bdca-b01efc3969a4",
-      "position": 3,
-      "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "d3a4356b-12e9-4d18-bdca-b01efc3969a4",
-        "lesson.key": "TLO 2: U3L8 Sprites",
+        "lesson_activity.key": "66ff16d5-5473-4940-b51b-560bd89b9d93",
+        "lesson.key": "Unit 3 Curriculum Investigation: Sprites",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "virtual-pl-csd-summer-2024-day3"
       }
@@ -511,18 +496,6 @@
       }
     },
     {
-      "key": "92d50404-ed54-42a2-8596-5937aa01328b",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "92d50404-ed54-42a2-8596-5937aa01328b",
-        "lesson.key": "Classroom Culture",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "virtual-pl-csd-summer-2024-day3"
-      }
-    },
-    {
       "key": "220053cb-345d-4faf-bd80-bdd8168ba36e",
       "position": 1,
       "properties": {
@@ -538,6 +511,7 @@
       "key": "ff07ccbc-5de1-4b36-953f-4ade25756b44",
       "position": 1,
       "properties": {
+        "duration": 60
       },
       "seeding_key": {
         "lesson_activity.key": "ff07ccbc-5de1-4b36-953f-4ade25756b44",
@@ -559,23 +533,13 @@
       }
     },
     {
-      "key": "55b33849-40ad-4320-9678-6ababaf633b9",
+      "key": "46283106-fa1a-498e-ac3c-1502190a3bb2",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "activity_section.key": "55b33849-40ad-4320-9678-6ababaf633b9",
-        "lesson_activity.key": "9e1535f0-b8cc-43ed-8ff1-87c2e39dba31"
-      }
-    },
-    {
-      "key": "fc3cce05-6388-44f5-8657-aaec1eee1342",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "fc3cce05-6388-44f5-8657-aaec1eee1342",
-        "lesson_activity.key": "66ff16d5-5473-4940-b51b-560bd89b9d93"
+        "activity_section.key": "46283106-fa1a-498e-ac3c-1502190a3bb2",
+        "lesson_activity.key": "92d50404-ed54-42a2-8596-5937aa01328b"
       }
     },
     {
@@ -755,59 +719,6 @@
       "seeding_key": {
         "activity_section.key": "38311cf2-d6d1-4f55-bd7a-c1ad427fc65a",
         "lesson_activity.key": "bcf8da8f-c8b5-4d0c-ad85-c2229db5fd43"
-      }
-    },
-    {
-      "key": "dc4f10ff-1691-4989-b07d-00d5f02caec6",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "dc4f10ff-1691-4989-b07d-00d5f02caec6",
-        "lesson_activity.key": "affbe622-0963-47a7-a6bc-c26446022ea0"
-      }
-    },
-    {
-      "key": "20e822dd-66ef-4c40-abe0-f26cd9a13162",
-      "position": 1,
-      "properties": {
-        "progression_name": "Asynchronous Overview"
-      },
-      "seeding_key": {
-        "activity_section.key": "20e822dd-66ef-4c40-abe0-f26cd9a13162",
-        "lesson_activity.key": "72d0d018-b1ce-43dd-bc42-ecec9a6f1894"
-      }
-    },
-    {
-      "key": "0c7cfe34-b14a-41d6-93d4-edcff866327b",
-      "position": 2,
-      "properties": {
-        "progression_name": "Understanding Context"
-      },
-      "seeding_key": {
-        "activity_section.key": "0c7cfe34-b14a-41d6-93d4-edcff866327b",
-        "lesson_activity.key": "72d0d018-b1ce-43dd-bc42-ecec9a6f1894"
-      }
-    },
-    {
-      "key": "cd01c8c9-b6f4-45c2-a65c-3aa44a2dbf26",
-      "position": 3,
-      "properties": {
-        "progression_name": "Completing TLO Lesson Levels"
-      },
-      "seeding_key": {
-        "activity_section.key": "cd01c8c9-b6f4-45c2-a65c-3aa44a2dbf26",
-        "lesson_activity.key": "72d0d018-b1ce-43dd-bc42-ecec9a6f1894"
-      }
-    },
-    {
-      "key": "55f6e8ab-064c-44b5-9584-9e1ce216a15f",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "55f6e8ab-064c-44b5-9584-9e1ce216a15f",
-        "lesson_activity.key": "ac92012e-1d2e-4f38-ae37-99b57f4b1f2b"
       }
     },
     {
@@ -1059,6 +970,69 @@
       "seeding_key": {
         "activity_section.key": "38c5950d-dc2a-4943-99ed-29056ac8fd88",
         "lesson_activity.key": "d3a4356b-12e9-4d18-bdca-b01efc3969a4"
+      }
+    },
+    {
+      "key": "dc4f10ff-1691-4989-b07d-00d5f02caec6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "dc4f10ff-1691-4989-b07d-00d5f02caec6",
+        "lesson_activity.key": "affbe622-0963-47a7-a6bc-c26446022ea0"
+      }
+    },
+    {
+      "key": "20e822dd-66ef-4c40-abe0-f26cd9a13162",
+      "position": 1,
+      "properties": {
+        "progression_name": "Asynchronous Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "20e822dd-66ef-4c40-abe0-f26cd9a13162",
+        "lesson_activity.key": "72d0d018-b1ce-43dd-bc42-ecec9a6f1894"
+      }
+    },
+    {
+      "key": "0c7cfe34-b14a-41d6-93d4-edcff866327b",
+      "position": 2,
+      "properties": {
+        "progression_name": "Understanding Context"
+      },
+      "seeding_key": {
+        "activity_section.key": "0c7cfe34-b14a-41d6-93d4-edcff866327b",
+        "lesson_activity.key": "72d0d018-b1ce-43dd-bc42-ecec9a6f1894"
+      }
+    },
+    {
+      "key": "cd01c8c9-b6f4-45c2-a65c-3aa44a2dbf26",
+      "position": 3,
+      "properties": {
+        "progression_name": "Completing TLO Lesson Levels"
+      },
+      "seeding_key": {
+        "activity_section.key": "cd01c8c9-b6f4-45c2-a65c-3aa44a2dbf26",
+        "lesson_activity.key": "72d0d018-b1ce-43dd-bc42-ecec9a6f1894"
+      }
+    },
+    {
+      "key": "55f6e8ab-064c-44b5-9584-9e1ce216a15f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "55f6e8ab-064c-44b5-9584-9e1ce216a15f",
+        "lesson_activity.key": "ac92012e-1d2e-4f38-ae37-99b57f4b1f2b"
+      }
+    },
+    {
+      "key": "fc3cce05-6388-44f5-8657-aaec1eee1342",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "fc3cce05-6388-44f5-8657-aaec1eee1342",
+        "lesson_activity.key": "66ff16d5-5473-4940-b51b-560bd89b9d93"
       }
     },
     {
@@ -1422,16 +1396,6 @@
       }
     },
     {
-      "key": "46283106-fa1a-498e-ac3c-1502190a3bb2",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "46283106-fa1a-498e-ac3c-1502190a3bb2",
-        "lesson_activity.key": "92d50404-ed54-42a2-8596-5937aa01328b"
-      }
-    },
-    {
       "key": "9c1708a4-1eb9-445d-a608-dada799ee60f",
       "position": 1,
       "properties": {
@@ -1482,6 +1446,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3L6 - Predict_2024"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -1504,6 +1471,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random random ellipse_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1526,6 +1496,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random random ellipse2_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1548,6 +1521,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables random with assignment_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1570,6 +1546,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables random reassign_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1592,6 +1571,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games random practice_csd-vpl-23_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1614,6 +1596,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random rainbow snake_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1636,6 +1621,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games random challenge_csd-vpl-23_2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -1658,6 +1646,284 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3L7 - Predict_2024"
+        ],
+        "progression": "Predict"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3L7 - Predict_2024"
+        ],
+        "lesson.key": "TLO 2: U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-2024-day3",
+        "activity_section.key": "e23cb4ce-eab5-47b6-a4d7-0133569f453a"
+      },
+      "level_keys": [
+        "CSD U3L7 - Predict_2024"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Sprites intro sprites_2024"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Sprites intro sprites_2024"
+        ],
+        "lesson.key": "TLO 2: U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-2024-day3",
+        "activity_section.key": "851d4c5e-e2a9-46f9-9751-cd95d7c8ee94"
+      },
+      "level_keys": [
+        "CSD U3 Sprites intro sprites_2024"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Sprites intro debug_2024"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Sprites intro debug_2024"
+        ],
+        "lesson.key": "TLO 2: U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-2024-day3",
+        "activity_section.key": "851d4c5e-e2a9-46f9-9751-cd95d7c8ee94"
+      },
+      "level_keys": [
+        "CSD U3 Sprites intro debug_2024"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Sprites Exploration_2024"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Sprites Exploration_2024"
+        ],
+        "lesson.key": "TLO 2: U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-2024-day3",
+        "activity_section.key": "0576b19b-6115-4b13-a231-026b626f281d"
+      },
+      "level_keys": [
+        "CSD U3 Sprites Exploration_2024"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Sprites intro sprites 2_csd-vpl-23_2024"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Sprites intro sprites 2_csd-vpl-23_2024"
+        ],
+        "lesson.key": "TLO 2: U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-2024-day3",
+        "activity_section.key": "0576b19b-6115-4b13-a231-026b626f281d"
+      },
+      "level_keys": [
+        "CSD U3 Sprites intro sprites 2_csd-vpl-23_2024"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Sprites anitab 1_2024"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Sprites anitab 1_2024"
+        ],
+        "lesson.key": "TLO 2: U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-2024-day3",
+        "activity_section.key": "0576b19b-6115-4b13-a231-026b626f281d"
+      },
+      "level_keys": [
+        "CSD U3 Sprites anitab 1_2024"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 7,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Sprites sequencing_2024"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Sprites sequencing_2024"
+        ],
+        "lesson.key": "TLO 2: U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-2024-day3",
+        "activity_section.key": "0576b19b-6115-4b13-a231-026b626f281d"
+      },
+      "level_keys": [
+        "CSD U3 Sprites sequencing_2024"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 drawSprites placement match_csd-vpl-23_2024"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 drawSprites placement match_csd-vpl-23_2024"
+        ],
+        "lesson.key": "TLO 2: U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-2024-day3",
+        "activity_section.key": "5af5ec33-0c6d-4706-8951-7299e9c426ab"
+      },
+      "level_keys": [
+        "CSD U3 drawSprites placement match_csd-vpl-23_2024"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD Games Sprites practice_csd-vpl-23_2024"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Games Sprites practice_csd-vpl-23_2024"
+        ],
+        "lesson.key": "TLO 2: U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-2024-day3",
+        "activity_section.key": "dd683092-2fa3-446b-9be0-71511e672bbb"
+      },
+      "level_keys": [
+        "CSD Games Sprites practice_csd-vpl-23_2024"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Sprites assessment_2024"
+        ],
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Sprites assessment_2024"
+        ],
+        "lesson.key": "TLO 2: U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-2024-day3",
+        "activity_section.key": "22c78b1b-0839-4077-9292-0d57c9d77ce1"
+      },
+      "level_keys": [
+        "CSD U3 Sprites assessment_2024"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD Games Sprites Challenges_csd-vpl-23_2024"
+        ],
+        "progression": "Challenges"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Games Sprites Challenges_csd-vpl-23_2024"
+        ],
+        "lesson.key": "TLO 2: U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-2024-day3",
+        "activity_section.key": "151fb482-18c9-409b-b4f2-298b2cd0032e"
+      },
+      "level_keys": [
+        "CSD Games Sprites Challenges_csd-vpl-23_2024"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Context1_2024"
+        ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
@@ -1675,11 +1941,14 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 21,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-UnderstandingContext2_2024"
+        ],
         "progression": "Understanding Context"
       },
       "bonus": false,
@@ -1697,11 +1966,14 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 22,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Context3_2024"
+        ],
         "progression": "Understanding Context"
       },
       "bonus": false,
@@ -1719,11 +1991,14 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 23,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Context4_2024"
+        ],
         "progression": "Understanding Context"
       },
       "bonus": false,
@@ -1741,11 +2016,14 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 24,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Context5_2024"
+        ],
         "progression": "Understanding Context"
       },
       "bonus": false,
@@ -1763,11 +2041,14 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 25,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Context6_2024"
+        ],
         "progression": "Understanding Context"
       },
       "bonus": false,
@@ -1785,11 +2066,14 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 26,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Levels1_2024"
+        ],
         "progression": "Completing TLO Lesson Levels"
       },
       "bonus": false,
@@ -1807,253 +2091,14 @@
       ]
     },
     {
-      "chapter": 16,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Predict"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD U3L7 - Predict_2024"
-        ],
-        "lesson.key": "TLO 2: U3L8 Sprites",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "virtual-pl-csd-summer-2024-day3",
-        "activity_section.key": "e23cb4ce-eab5-47b6-a4d7-0133569f453a"
-      },
-      "level_keys": [
-        "CSD U3L7 - Predict_2024"
-      ]
-    },
-    {
-      "chapter": 17,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD U3 Sprites intro sprites_2024"
-        ],
-        "lesson.key": "TLO 2: U3L8 Sprites",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "virtual-pl-csd-summer-2024-day3",
-        "activity_section.key": "851d4c5e-e2a9-46f9-9751-cd95d7c8ee94"
-      },
-      "level_keys": [
-        "CSD U3 Sprites intro sprites_2024"
-      ]
-    },
-    {
-      "chapter": 18,
-      "position": 3,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD U3 Sprites intro debug_2024"
-        ],
-        "lesson.key": "TLO 2: U3L8 Sprites",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "virtual-pl-csd-summer-2024-day3",
-        "activity_section.key": "851d4c5e-e2a9-46f9-9751-cd95d7c8ee94"
-      },
-      "level_keys": [
-        "CSD U3 Sprites intro debug_2024"
-      ]
-    },
-    {
-      "chapter": 19,
-      "position": 4,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD U3 Sprites Exploration_2024"
-        ],
-        "lesson.key": "TLO 2: U3L8 Sprites",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "virtual-pl-csd-summer-2024-day3",
-        "activity_section.key": "0576b19b-6115-4b13-a231-026b626f281d"
-      },
-      "level_keys": [
-        "CSD U3 Sprites Exploration_2024"
-      ]
-    },
-    {
-      "chapter": 20,
-      "position": 5,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD U3 Sprites intro sprites 2_csd-vpl-23_2024"
-        ],
-        "lesson.key": "TLO 2: U3L8 Sprites",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "virtual-pl-csd-summer-2024-day3",
-        "activity_section.key": "0576b19b-6115-4b13-a231-026b626f281d"
-      },
-      "level_keys": [
-        "CSD U3 Sprites intro sprites 2_csd-vpl-23_2024"
-      ]
-    },
-    {
-      "chapter": 21,
-      "position": 6,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD U3 Sprites anitab 1_2024"
-        ],
-        "lesson.key": "TLO 2: U3L8 Sprites",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "virtual-pl-csd-summer-2024-day3",
-        "activity_section.key": "0576b19b-6115-4b13-a231-026b626f281d"
-      },
-      "level_keys": [
-        "CSD U3 Sprites anitab 1_2024"
-      ]
-    },
-    {
-      "chapter": 22,
-      "position": 7,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD U3 Sprites sequencing_2024"
-        ],
-        "lesson.key": "TLO 2: U3L8 Sprites",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "virtual-pl-csd-summer-2024-day3",
-        "activity_section.key": "0576b19b-6115-4b13-a231-026b626f281d"
-      },
-      "level_keys": [
-        "CSD U3 Sprites sequencing_2024"
-      ]
-    },
-    {
-      "chapter": 23,
-      "position": 8,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Check for Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD U3 drawSprites placement match_csd-vpl-23_2024"
-        ],
-        "lesson.key": "TLO 2: U3L8 Sprites",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "virtual-pl-csd-summer-2024-day3",
-        "activity_section.key": "5af5ec33-0c6d-4706-8951-7299e9c426ab"
-      },
-      "level_keys": [
-        "CSD U3 drawSprites placement match_csd-vpl-23_2024"
-      ]
-    },
-    {
-      "chapter": 24,
-      "position": 9,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Practice"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD Games Sprites practice_csd-vpl-23_2024"
-        ],
-        "lesson.key": "TLO 2: U3L8 Sprites",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "virtual-pl-csd-summer-2024-day3",
-        "activity_section.key": "dd683092-2fa3-446b-9be0-71511e672bbb"
-      },
-      "level_keys": [
-        "CSD Games Sprites practice_csd-vpl-23_2024"
-      ]
-    },
-    {
-      "chapter": 25,
-      "position": 10,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "progression": "Assessment"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD U3 Sprites assessment_2024"
-        ],
-        "lesson.key": "TLO 2: U3L8 Sprites",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "virtual-pl-csd-summer-2024-day3",
-        "activity_section.key": "22c78b1b-0839-4077-9292-0d57c9d77ce1"
-      },
-      "level_keys": [
-        "CSD U3 Sprites assessment_2024"
-      ]
-    },
-    {
-      "chapter": 26,
-      "position": 11,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Challenges"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD Games Sprites Challenges_csd-vpl-23_2024"
-        ],
-        "lesson.key": "TLO 2: U3L8 Sprites",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "virtual-pl-csd-summer-2024-day3",
-        "activity_section.key": "151fb482-18c9-409b-b4f2-298b2cd0032e"
-      },
-      "level_keys": [
-        "CSD Games Sprites Challenges_csd-vpl-23_2024"
-      ]
-    },
-    {
       "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL-summer- CSD U3 L7 mini project_2024"
+        ],
         "progression": "Lesson 7: Mini-Project - Robot Faces"
       },
       "bonus": false,
@@ -2076,6 +2121,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL summer - CSD U3 Scene Example_2024"
+        ],
         "progression": "Lesson 11: Mini-Project - Captioned Scenes"
       },
       "bonus": false,
@@ -2098,6 +2146,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL Summer - CSD web project animated example_2024"
+        ],
         "progression": "Lesson 14: Mini-Project - Animation"
       },
       "bonus": false,
@@ -2120,6 +2171,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL Summer CSD U3 - Interactive Card - ExampleChoice_2024"
+        ],
         "progression": "Lesson 18: Project - Interactive Card"
       },
       "bonus": false,
@@ -2142,6 +2196,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Pt2_2024"
+        ],
         "progression": "Asynchronous Work Overview"
       },
       "bonus": false,
@@ -2164,6 +2221,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-ClassroomCulture2_2024"
+        ],
         "progression": "Classroom Culture"
       },
       "bonus": false,
@@ -2186,6 +2246,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-ClassroomCulture3_2024"
+        ],
         "progression": "Classroom Culture"
       },
       "bonus": false,
@@ -2208,6 +2271,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-ClassroomCulture4_2024"
+        ],
         "progression": "Classroom Culture"
       },
       "bonus": false,
@@ -2230,6 +2296,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-ClassroomCulture5_2024"
+        ],
         "progression": "Classroom Culture"
       },
       "bonus": false,
@@ -2252,6 +2321,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-ClassroomCulture1_2024"
+        ],
         "progression": "Classroom Culture"
       },
       "bonus": false,
@@ -2274,6 +2346,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Pt2end_2024"
+        ],
         "progression": "Completing TLO Levels"
       },
       "bonus": false,
@@ -2390,6 +2465,138 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSD U3L7 - Predict_2024",
+        "script_level.level_keys": [
+          "CSD U3L7 - Predict_2024"
+        ],
+        "lesson.key": "TLO 2: U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-2024-day3",
+        "activity_section.key": "e23cb4ce-eab5-47b6-a4d7-0133569f453a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Sprites intro sprites_2024",
+        "script_level.level_keys": [
+          "CSD U3 Sprites intro sprites_2024"
+        ],
+        "lesson.key": "TLO 2: U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-2024-day3",
+        "activity_section.key": "851d4c5e-e2a9-46f9-9751-cd95d7c8ee94"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Sprites intro debug_2024",
+        "script_level.level_keys": [
+          "CSD U3 Sprites intro debug_2024"
+        ],
+        "lesson.key": "TLO 2: U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-2024-day3",
+        "activity_section.key": "851d4c5e-e2a9-46f9-9751-cd95d7c8ee94"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Sprites Exploration_2024",
+        "script_level.level_keys": [
+          "CSD U3 Sprites Exploration_2024"
+        ],
+        "lesson.key": "TLO 2: U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-2024-day3",
+        "activity_section.key": "0576b19b-6115-4b13-a231-026b626f281d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Sprites intro sprites 2_csd-vpl-23_2024",
+        "script_level.level_keys": [
+          "CSD U3 Sprites intro sprites 2_csd-vpl-23_2024"
+        ],
+        "lesson.key": "TLO 2: U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-2024-day3",
+        "activity_section.key": "0576b19b-6115-4b13-a231-026b626f281d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Sprites anitab 1_2024",
+        "script_level.level_keys": [
+          "CSD U3 Sprites anitab 1_2024"
+        ],
+        "lesson.key": "TLO 2: U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-2024-day3",
+        "activity_section.key": "0576b19b-6115-4b13-a231-026b626f281d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Sprites sequencing_2024",
+        "script_level.level_keys": [
+          "CSD U3 Sprites sequencing_2024"
+        ],
+        "lesson.key": "TLO 2: U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-2024-day3",
+        "activity_section.key": "0576b19b-6115-4b13-a231-026b626f281d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 drawSprites placement match_csd-vpl-23_2024",
+        "script_level.level_keys": [
+          "CSD U3 drawSprites placement match_csd-vpl-23_2024"
+        ],
+        "lesson.key": "TLO 2: U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-2024-day3",
+        "activity_section.key": "5af5ec33-0c6d-4706-8951-7299e9c426ab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Games Sprites practice_csd-vpl-23_2024",
+        "script_level.level_keys": [
+          "CSD Games Sprites practice_csd-vpl-23_2024"
+        ],
+        "lesson.key": "TLO 2: U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-2024-day3",
+        "activity_section.key": "dd683092-2fa3-446b-9be0-71511e672bbb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Sprites assessment_2024",
+        "script_level.level_keys": [
+          "CSD U3 Sprites assessment_2024"
+        ],
+        "lesson.key": "TLO 2: U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-2024-day3",
+        "activity_section.key": "22c78b1b-0839-4077-9292-0d57c9d77ce1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Games Sprites Challenges_csd-vpl-23_2024",
+        "script_level.level_keys": [
+          "CSD Games Sprites Challenges_csd-vpl-23_2024"
+        ],
+        "lesson.key": "TLO 2: U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-2024-day3",
+        "activity_section.key": "151fb482-18c9-409b-b4f2-298b2cd0032e"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "virtual-pl-csd-summer-day3-Context1_2024",
         "script_level.level_keys": [
           "virtual-pl-csd-summer-day3-Context1_2024"
@@ -2470,138 +2677,6 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "virtual-pl-csd-summer-2024-day3",
         "activity_section.key": "cd01c8c9-b6f4-45c2-a65c-3aa44a2dbf26"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSD U3L7 - Predict_2024",
-        "script_level.level_keys": [
-          "CSD U3L7 - Predict_2024"
-        ],
-        "lesson.key": "TLO 2: U3L8 Sprites",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "virtual-pl-csd-summer-2024-day3",
-        "activity_section.key": "e23cb4ce-eab5-47b6-a4d7-0133569f453a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSD U3 Sprites intro sprites_2024",
-        "script_level.level_keys": [
-          "CSD U3 Sprites intro sprites_2024"
-        ],
-        "lesson.key": "TLO 2: U3L8 Sprites",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "virtual-pl-csd-summer-2024-day3",
-        "activity_section.key": "851d4c5e-e2a9-46f9-9751-cd95d7c8ee94"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSD U3 Sprites intro debug_2024",
-        "script_level.level_keys": [
-          "CSD U3 Sprites intro debug_2024"
-        ],
-        "lesson.key": "TLO 2: U3L8 Sprites",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "virtual-pl-csd-summer-2024-day3",
-        "activity_section.key": "851d4c5e-e2a9-46f9-9751-cd95d7c8ee94"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSD U3 Sprites Exploration_2024",
-        "script_level.level_keys": [
-          "CSD U3 Sprites Exploration_2024"
-        ],
-        "lesson.key": "TLO 2: U3L8 Sprites",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "virtual-pl-csd-summer-2024-day3",
-        "activity_section.key": "0576b19b-6115-4b13-a231-026b626f281d"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSD U3 Sprites intro sprites 2_csd-vpl-23_2024",
-        "script_level.level_keys": [
-          "CSD U3 Sprites intro sprites 2_csd-vpl-23_2024"
-        ],
-        "lesson.key": "TLO 2: U3L8 Sprites",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "virtual-pl-csd-summer-2024-day3",
-        "activity_section.key": "0576b19b-6115-4b13-a231-026b626f281d"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSD U3 Sprites anitab 1_2024",
-        "script_level.level_keys": [
-          "CSD U3 Sprites anitab 1_2024"
-        ],
-        "lesson.key": "TLO 2: U3L8 Sprites",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "virtual-pl-csd-summer-2024-day3",
-        "activity_section.key": "0576b19b-6115-4b13-a231-026b626f281d"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSD U3 Sprites sequencing_2024",
-        "script_level.level_keys": [
-          "CSD U3 Sprites sequencing_2024"
-        ],
-        "lesson.key": "TLO 2: U3L8 Sprites",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "virtual-pl-csd-summer-2024-day3",
-        "activity_section.key": "0576b19b-6115-4b13-a231-026b626f281d"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSD U3 drawSprites placement match_csd-vpl-23_2024",
-        "script_level.level_keys": [
-          "CSD U3 drawSprites placement match_csd-vpl-23_2024"
-        ],
-        "lesson.key": "TLO 2: U3L8 Sprites",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "virtual-pl-csd-summer-2024-day3",
-        "activity_section.key": "5af5ec33-0c6d-4706-8951-7299e9c426ab"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSD Games Sprites practice_csd-vpl-23_2024",
-        "script_level.level_keys": [
-          "CSD Games Sprites practice_csd-vpl-23_2024"
-        ],
-        "lesson.key": "TLO 2: U3L8 Sprites",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "virtual-pl-csd-summer-2024-day3",
-        "activity_section.key": "dd683092-2fa3-446b-9be0-71511e672bbb"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSD U3 Sprites assessment_2024",
-        "script_level.level_keys": [
-          "CSD U3 Sprites assessment_2024"
-        ],
-        "lesson.key": "TLO 2: U3L8 Sprites",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "virtual-pl-csd-summer-2024-day3",
-        "activity_section.key": "22c78b1b-0839-4077-9292-0d57c9d77ce1"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSD Games Sprites Challenges_csd-vpl-23_2024",
-        "script_level.level_keys": [
-          "CSD Games Sprites Challenges_csd-vpl-23_2024"
-        ],
-        "lesson.key": "TLO 2: U3L8 Sprites",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "virtual-pl-csd-summer-2024-day3",
-        "activity_section.key": "151fb482-18c9-409b-b4f2-298b2cd0032e"
       }
     },
     {
@@ -2739,26 +2814,6 @@
   ],
   "resources": [
     {
-      "name": "2023 Virtual CSD Summer Workshop - Day 3 Agenda",
-      "url": "https://docs.google.com/document/d/17qrQzmNP9AbN1zg5yBrBPf2Z1nctaG0V33n17m-55G8/edit?usp=sharing",
-      "key": "2023_virtual_csd_summer_workshop_-_day_3_agenda",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "2023_virtual_csd_summer_workshop_-_day_3_agenda"
-      }
-    },
-    {
-      "name": "2023 Virtual CSD Summer Workshop - Day 3 Slides",
-      "url": "https://docs.google.com/presentation/d/1WMKc9_wt3GONzbOnkviQhUP4xE1USoib5_u_4klNHFQ/edit?usp=sharing",
-      "key": "2023_virtual_csd_summer_workshop_-_day_3_slides",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "2023_virtual_csd_summer_workshop_-_day_3_slides"
-      }
-    },
-    {
       "name": "Animation Tab",
       "url": "https://drive.google.com/file/d/1ytsY-Hv17uCKmwY4Af7OpljWdsLtGfTn/view",
       "key": "animation_tab",
@@ -2768,6 +2823,26 @@
       },
       "seeding_key": {
         "resource.key": "animation_tab"
+      }
+    },
+    {
+      "name": "CSD Virtual Summer Workshop Day 3 Agenda",
+      "url": "https://docs.google.com/document/d/15yqWZ9tthhTE86bCyYXZzztgPUtFKnc2DstALfxl-pM/edit?usp=drive_link",
+      "key": "csd_virtual_summer_workshop_day_3_agenda",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_virtual_summer_workshop_day_3_agenda"
+      }
+    },
+    {
+      "name": "CSD Virtual Summer Workshop Day 3 Slides",
+      "url": "https://docs.google.com/presentation/d/1KgLJUemLBF1vjM4SGkfH1JSV0TCb5xuspVnkvQWHJpo/edit?usp=drive_link",
+      "key": "csd_virtual_summer_workshop_day_3_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_virtual_summer_workshop_day_3_slides"
       }
     },
     {
@@ -2965,13 +3040,13 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "2023_virtual_csd_summer_workshop_-_day_3_agenda",
+        "resource.key": "csd_virtual_summer_workshop_day_3_agenda",
         "script.name": "virtual-pl-csd-summer-2024-day3"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "2023_virtual_csd_summer_workshop_-_day_3_slides",
+        "resource.key": "csd_virtual_summer_workshop_day_3_slides",
         "script.name": "virtual-pl-csd-summer-2024-day3"
       }
     }

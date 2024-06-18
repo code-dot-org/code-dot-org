@@ -62,15 +62,19 @@ class JoinSection extends React.Component {
       dataType: 'json',
     })
       .done(data => {
-        const sectionName = data.sections.find(
+        const section = data.sections.find(
           s => s.code === normalizedSectionCode
-        ).name;
+        );
+        const sectionName = section.name;
+        const joiningPlSection = section.grades?.includes('pl');
         this.props.updateSections(data.studentSections, data.plSections);
         this.props.updateSectionsResult(
           'join',
           data.result,
           sectionName,
-          sectionCode
+          sectionCode,
+          null,
+          joiningPlSection
         );
       })
       .fail(data => {

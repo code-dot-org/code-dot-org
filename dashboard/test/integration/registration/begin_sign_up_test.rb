@@ -25,6 +25,25 @@ module RegistrationsControllerTests
       assert_redirected_to new_user_registration_path
     end
 
+    test 'persists user attributes on success - POST flow' do
+      SignUpTracking.expects(:log_begin_sign_up)
+      PartialRegistration.expects(:persist_attributes)
+      Cpa.stubs(:cpa_experience).with(any_parameters).returns(false)
+      DCDO.stubs(:get).with('student-email-post-enabled', false).returns(true)
+      DCDO.stubs(:get).with(I18nStringUrlTracker::I18N_STRING_TRACKING_DCDO_KEY, false).returns(false)
+
+      params = {
+        user: {
+          email: 'myemail@example.com',
+          password: 'mypassword',
+          password_confirmation: 'mypassword'
+        }
+      }
+      post '/users/begin_sign_up', params: params
+
+      assert_template 'new'
+    end
+
     test 'renders signup page with error if email is empty' do
       SignUpTracking.expects(:log_begin_sign_up)
       PartialRegistration.expects(:persist_attributes).never

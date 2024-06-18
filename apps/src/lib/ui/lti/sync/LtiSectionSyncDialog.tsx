@@ -74,7 +74,11 @@ export default function LtiSectionSyncDialog({
       <div>
         <h2 style={styles.dialogHeader}>{i18n.errorOccurredTitle()}</h2>
         {errorMessages.map((errorMessage: string, index: React.Key) => (
-          <SafeMarkdown key={index} markdown={errorMessage} />
+          <SafeMarkdown
+            openExternalLinksInNewTab={true}
+            key={index}
+            markdown={errorMessage}
+          />
         ))}
       </div>
     );
@@ -181,7 +185,10 @@ export default function LtiSectionSyncDialog({
             {dialogTitle}
           </h2>
           <div onClick={handleDocsClick}>
-            <SafeMarkdown markdown={dialogDescription} />
+            <SafeMarkdown
+              openExternalLinksInNewTab={true}
+              markdown={dialogDescription}
+            />
           </div>
           <div
             style={styles.summaryContainer}

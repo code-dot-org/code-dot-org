@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 
 #### Now that you are familiar with an LLM, let’s dive into some prompting best practices. 
 
-#### Take some time to read over the  <a href="url" target="blank" rel="noopener noreferrer"> AI Chatbot Prompting Guide Handout</a> 
+#### Take some time to read over the  <a href="https://docs.google.com/document/d/10bo49TaCHgA-UZ_nOHRKRbXFCC9F7g2646dfnFP0vjs/edit#heading=h.2irny8ojv9hy" target="blank" rel="noopener noreferrer"> AI Chatbot Prompting Guide Handout</a> 
 
 
 #### Then, return to the Chatbot of your choice (<a href="https://chat.openai.com/" target="blank" rel="noopener noreferrer">ChatGPT</a>, <a href="https://www.bing.com/chat" target="blank" rel="noopener noreferrer"> Copilot</a>, <a href="https://gemini.google.com" target="blank" rel="noopener noreferrer"> Gemini</a> ) and practice using the elevated prompt format:

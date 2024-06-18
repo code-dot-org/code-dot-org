@@ -6,12 +6,7 @@ markdown <<MARKDOWN
 
 # Problem Solving Process
 
-<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
-
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">Having a strategy for approaching problems can help students develop new insights and come up with new and better solutions. This is an iterative process that is broadly useful for solving all kinds of problems.
-</p>
-</div>
-
+#### Having a strategy for approaching problems can help students develop new insights and come up with new and better solutions. This is an iterative process that is broadly useful for solving all kinds of problems.
 
 <img src="https://code.org/curriculum/docs/csd/PSPE.png" alt="Cycle diagram with the steps Define, Prepare, Try, and Reflect. In the middle of the cycle is the word 'Empathize'." style="float: right; width: 30%" />
 
@@ -23,14 +18,14 @@ markdown <<MARKDOWN
 * #### **The Problem Solving Process** is used in Unit 1: Problem Solving and Computing and is the template for each of the other problem solving processes used throughout the course.
 <br>
 
-* #### **The Problem Solving Process with Programming** is used in mini-projects and chapter projects of Unit 2: Web Development, Unit 3: Animations and Games, and Unit 6: Creating Apps with Devices. 
+* #### <a href="https://docs.google.com/document/d/1q10YfeMqY95SAq0VAB3wnLPK2aDuJEoD2j82n-i183Y/edit?usp=sharing" target="blank" rel="noopener noreferrer">**The Problem Solving Process with Programming**</a> is used in mini-projects and chapter projects of Unit 2: Web Development, Unit 3: Animations and Games, and Unit 6: Creating Apps with Devices. 
 <br>
 
-* #### **The Problem Solving Process for Design** is primarily used in Unit 4: The Design Process. 
-##### _This version of the Problem Solving Process does appear in the first lesson of Unit 2: Web Development, Unit 3: Animations and Games, and Unit 6: Creating Apps with Devices._
+* #### <a href="https://docs.google.com/document/d/1qgiwCyO7948qPSWbTvYmR7DjH0nkh8HpfxP1HxubDis/edit?usp=sharing" target="blank" rel="noopener noreferrer">**The Problem Solving Process with Design**</a> is primarily used in Unit 4: The Design Process. 
+#### _This version of the Problem Solving Process does appear in the first lesson of Unit 2: Web Development, Unit 3: Animations and Games, and Unit 6: Creating Apps with Devices._
 <br>
 
-* #### **The Problem Solving Process for Data** is used in Unit 5: Data and Society and Unit 7: AI and Machine Learning.
+* #### <a href="https://docs.google.com/document/d/1e7jo729LFa6J_YoFIEDKSQHUA86_1rIILxZTdmRYQLQ/edit?usp=sharing" target="blank" rel="noopener noreferrer">**The Problem Solving Process with Data**</a> is used in Unit 5: Data and Society and Unit 7: AI and Machine Learning.
 
 
 

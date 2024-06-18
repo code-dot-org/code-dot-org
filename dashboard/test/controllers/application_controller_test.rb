@@ -1,76 +1,90 @@
 require 'test_helper'
 
 class ApplicationControllerTest < ActionDispatch::IntegrationTest
-  def setup
-    Cpa.stubs(:cpa_experience).
-      with(any_parameters).
-      returns(Cpa::NEW_USER_LOCKOUT)
-  end
+  describe 'CAP lockout' do
+    let(:user) {create(:student)}
 
-  test "accounts needing permission should be locked out" do
-    # Test matrix for the user states which require parent permission.
-    [
-      [:U13, :in_colorado, :without_parent_permission],
-      [:U13, :in_colorado, :without_parent_permission, :google_sso_provider],
-      [:U13, :in_colorado, :migrated_imported_from_clever, :with_google_authentication_option],
-    ].each do |traits|
-      user = create(:student, *traits)
+    let(:user_lockable?) {true}
+    let(:user_locked_out?) {true}
+    let(:cpa_experience_phase) {Cpa::ALL_USER_LOCKOUT}
+
+    before do
+      Cpa.stubs(:cpa_experience).returns(cpa_experience_phase)
+
+      Policies::ChildAccount.stubs(:lockable?).with(user).returns(user_lockable?)
+      Policies::ChildAccount::ComplianceState.stubs(:locked_out?).with(user).returns(user_locked_out?)
+
       sign_in user
-      get '/home'
-      assert_redirected_to '/lockout', "failed to redirect to /lockout for user with traits #{traits}"
     end
-  end
 
-  test "account with permission should NOT be locked out" do
-    user = create(:locked_out_child, :with_parent_permission)
-    sign_in user
-    get '/home'
-    assert_response :success
-  end
-
-  test "accounts NOT needing permission should NOT be locked out" do
-    # Test matrix for the user states which don't require parent permission.
-    [
-      [:student_in_word_section, :U13, :in_colorado],
-      [:student_in_picture_section, :U13, :in_colorado],
-      [:student, :U13, :in_colorado, :migrated_imported_from_clever],
-      [:student, :U13, :unknown_us_region],
-      [:student, :not_U13, :in_colorado],
-    ].each do |traits|
-      user = create(*traits)
-      sign_in user
-      get '/home'
-      assert_response :success, "expected 200 response for user with traits #{traits}"
+    it 'locks out user' do
+      Services::ChildAccount.expects(:lock_out).with(user).once
+      get root_path
     end
-  end
 
-  test "locked out account can still sign out" do
-    user = create(:locked_out_child)
-    sign_in user
-    sign_in user
-    get '/users/sign_out'
-    refute_redirect_to '/lockout'
-  end
+    it 'redirects to the lockout page' do
+      get root_path
+      assert_redirected_to lockout_path
+    end
 
-  test "locked out account can still change the language" do
-    user = create(:locked_out_child)
-    sign_in user
-    post '/locale'
-    refute_redirect_to '/lockout'
-  end
+    it 'allows sign out' do
+      get destroy_user_session_path
+      refute_redirect_to lockout_path
+    end
 
-  test "locked out account can access the policy consent routes" do
-    user = create(:locked_out_child)
-    sign_in user
-    get '/policy_compliance/child_account_consent'
-    refute_redirect_to '/lockout'
-    post '/policy_compliance/child_account_consent'
-    refute_redirect_to '/lockout'
-  end
+    it 'allows changing language' do
+      post locale_path
+      refute_redirect_to lockout_path
+    end
 
-  test "an anonymous user should not be redirected to the lockout page." do
-    get '/'
-    refute_redirect_to '/lockout'
+    it 'avoids infinite redirect loop to lockout page' do
+      get lockout_path
+      refute_redirect_to lockout_path
+    end
+
+    it 'allows access to policy consent API' do
+      get policy_compliance_child_account_consent_path
+      refute_redirect_to lockout_path
+    end
+
+    it 'allows student change account information' do
+      patch users_set_student_information_path
+      refute_redirect_to lockout_path
+    end
+
+    context 'when user is not sign in' do
+      before do
+        sign_out user
+      end
+
+      it 'does not redirect to lockout page' do
+        get root_path
+        refute_redirect_to lockout_path
+      end
+    end
+
+    context 'when user is not lockable' do
+      let(:user_lockable?) {false}
+
+      it 'does not lock out user' do
+        Services::ChildAccount.expects(:lock_out).with(user).never
+        get root_path
+      end
+    end
+
+    context 'when no CPA experience' do
+      let(:cpa_experience_phase) {nil}
+
+      it 'does not lock out user' do
+        Services::ChildAccount.expects(:lock_out).with(user).never
+        get root_path
+      end
+
+      it 'does not redirect to lockout page' do
+        get root_path
+        refute_redirect_to lockout_path
+      end
+    end
   end
 
   # Assert that the response is not a redirection to the given path.

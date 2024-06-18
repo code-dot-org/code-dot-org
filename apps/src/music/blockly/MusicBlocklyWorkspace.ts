@@ -383,7 +383,10 @@ export default class MusicBlocklyWorkspace {
   }
 
   updateHighlightedBlocks(playingBlockIds: string[]) {
-    if (this.headlessMode || !this.workspace) {
+    if (this.headlessMode) {
+      return;
+    }
+    if (!this.workspace) {
       this.metricsReporter.logWarning(
         'updateHighlightedBlocks called before workspace initialized.'
       );

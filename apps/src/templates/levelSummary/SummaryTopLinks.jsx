@@ -1,10 +1,12 @@
-import React, {useCallback} from 'react';
 import PropTypes from 'prop-types';
+import React, {useCallback} from 'react';
 import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
-import styles from './summary.module.scss';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import i18n from '@cdo/locale';
+
+import styles from './summary.module.scss';
 
 const SummaryTopLinks = ({
   scriptData,

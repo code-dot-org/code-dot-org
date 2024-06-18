@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2024-03-22T19:10:05.000Z",
   "level_num": "custom",
@@ -8,7 +9,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "true",
-    "long_instructions": "## AI Training Data and Bias\r\n\r\n##### In Lesson 8, students will investigate a medical priority app. When completing this activity, students will notice that certain features are more likely to lead to a priority recommendation, specifically: a patient that is bleeding, is short of breath, and has pain in their head or chest is highly likely to have a priority recommendation. Students may also notice that certain demographic information also seems to affect the recommendation. This is an example of how biased training data can lead to a machine learning model that favors some things and deprioritizes or excludes others.\r\n\r\n## Medical Priority App\r\n\r\n##### A hospital hired a company to create an app to help prioritize patients when they come in. The app uses a machine learning model that is 80% accurate. The model was trained on data from 1000 people who entered an emergency room in June 2020.  Students will start by testing the app and see how it performs when new people enter the hospital.\r\n\r\n## Do This\r\n\r\n* ##### Click the orange \"Run\" button under the app to the left of the screen. \r\n* ##### Enter different feature information and press \"Sign In\" to determine the patient's medical priority. \r\n* ##### Change the features of the app and test what happens when different people enter the hospital.\r\n\t* ##### Find a person who will be admitted as “priority”.\r\n    * ##### Find a person who will be admitted as “normal”\r\n    * ##### Find a person who will be admitted as “return later”\r\n* ##### When you are finished, click on the orange \"Finish\" button below the app to move to the next activity.\r\n\r\n## Abbreviations\r\n\r\n* ##### A - Asian\r\n* ##### AIAN - American Indian / Alaska Native\r\n* ##### BAM - Black and African American\r\n* ##### NHPI - Native Hawaiian / Pacific Island\r\n* ##### W - White",
+    "long_instructions": "## AI Training Data and Bias\r\n\r\n#### In Lesson 8, students will investigate a medical priority app. When completing this activity, students will notice that certain features are more likely to lead to a priority recommendation, specifically: a patient that is bleeding, is short of breath, and has pain in their head or chest is highly likely to have a priority recommendation. Students may also notice that certain demographic information also seems to affect the recommendation. This is an example of how biased training data can lead to a machine learning model that favors some things and deprioritizes or excludes others.\r\n\r\n## Medical Priority App\r\n\r\n#### A hospital hired a company to create an app to help prioritize patients when they come in. The app uses a machine learning model that is 80% accurate. The model was trained on data from 1000 people who entered an emergency room in June 2020.  Students will start by testing the app and see how it performs when new people enter the hospital.\r\n\r\n## Do This\r\n\r\n* #### Click the orange \"Run\" button under the app to the left of the screen. \r\n* #### Enter different feature information and press \"Sign In\" to determine the patient's medical priority. \r\n* #### Change the features of the app and test what happens when different people enter the hospital.\r\n\t* #### Find a person who will be admitted as “priority”.\r\n    * #### Find a person who will be admitted as “normal”\r\n    * #### Find a person who will be admitted as “return later”\r\n* #### When you are finished, click on the orange \"Finish\" button below the app to move to the next activity.\r\n\r\n## Abbreviations\r\n\r\n* #### A - Asian\r\n* #### AIAN - American Indian / Alaska Native\r\n* #### BAM - Black and African American\r\n* #### NHPI - Native Hawaiian / Pacific Island\r\n* #### W - White",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",
@@ -43,7 +44,6 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "true",
-    "makerlab_enabled": "false",
     "parent_level_id": 27149,
     "encrypted": "false",
     "mini_rubric": "false",
@@ -56,11 +56,13 @@
     "ai_enabled": "true",
     "teacher_markdown": "**Additional Resources:** This level is _not_ intended to be completed independently by students or in a self-paced manner - students should be following along with instructions from a teacher and completing information in an activity guide. [See the lesson plan](.././) for more information about how to support students in completing this level.",
     "name_suffix": "_2024",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-22T19:10:05.447+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-CSD-21-mod5-ml-model card-medical app v2 2021-2_-22\\\"\"],\"cloned_from\":\"SP-VPL-CSD-21-mod5-ml-model card-medical app v2 2021-2_-22\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-03-22T19:10:05.447+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-CSD-21-mod5-ml-model card-medical app v2 2021-2_-22\\\"\"],\"cloned_from\":\"SP-VPL-CSD-21-mod5-ml-model card-medical app v2 2021-2_-22\"},{\"changed_at\":\"2024-05-06 18:39:50 +0000\",\"changed\":[\"long_instructions\",\"makerlab_enabled\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

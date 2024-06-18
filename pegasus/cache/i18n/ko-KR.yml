@@ -1349,6 +1349,7 @@ ko-KR:
   homepage_slot_text_link_k5: 초등학교 4학년 학생을 위한 과정
   homepage_slot_text_link_local: 현지 수업 찾기
   homepage_slot_text_link_middle: 중학교
+  homepage_slot_text_link_middle_and_high: 중고등학교를 위한 툴
   homepage_slot_text_link_othercourses: 다른 온라인 코스
   homepage_slot_text_link_pd: 전문 개발
   homepage_slot_text_link_shop: T-셔츠, 모자 등
@@ -2095,6 +2096,8 @@ ko-KR:
   user_header_applab: '앱 랩 '
   user_header_artist: '아티스트 '
   user_header_create: 만들기
+  user_header_create_account: 계정 만들기
+  user_header_create_account_low_cap: 계정 만들기
   user_header_dance: 댄스 파티
   user_header_flappy: 플래피
   user_header_gamelab: 게임 랩
@@ -2102,6 +2105,8 @@ ko-KR:
   user_header_logout: 로그아웃
   user_header_minecraft: 마인크래프트
   user_header_my_projects: 내 프로젝트
+  user_header_new_project: 새 프로젝트
+  user_header_new_project_low_cap: 새로운 종합 프로젝트
   user_header_playlab: 플레이 랩
   user_header_settings: 계정 설정
   user_header_signin: 로그인

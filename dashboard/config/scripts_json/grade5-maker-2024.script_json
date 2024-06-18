@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "grade5-maker",
-    "serialized_at": "2024-04-23 22:08:57 UTC",
+    "serialized_at": "2024-06-06 15:45:24 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -21,11 +21,23 @@
   },
   "lesson_groups": [
     {
-      "key": "lessonGroup-2",
+      "key": "lessonGroup-4",
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Events, Variables, Conditionals, and Sounds"
+        "display_name": "Step Counter with micro:bit - Events and Variables"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "grade5-maker-2024"
+      }
+    },
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "micro:bit pet - Conditionals, Events, and Sounds"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-2",
@@ -35,9 +47,9 @@
     {
       "key": "lessonGroup-3",
       "user_facing": true,
-      "position": 2,
+      "position": 3,
       "properties": {
-        "display_name": "[Optional] Extension: Events, Conditionals, and Variables"
+        "display_name": "Max-min thermometer with micro:bit - Events, Conditionals, and Variables"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
@@ -62,7 +74,7 @@
       },
       "seeding_key": {
         "lesson.key": "Dance Party: Unplugged",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
@@ -82,7 +94,7 @@
       },
       "seeding_key": {
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
@@ -101,7 +113,7 @@
       },
       "seeding_key": {
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
@@ -115,22 +127,40 @@
       "properties": {
         "overview": "This lesson gives your students an early hands-on experience to discover the excitement that learning with the micro:bit offers. It helps reinforce what your students already know about code and computing concepts by transferring them to the physical world through exploring preprogrammed micro:bits. The exploration is also designed for you to model reviewing code together, helping your students make links between familiar computing concepts and their practical application by programming a physical device. This lesson is a pre-requisite before moving on to the rest of the activities in this unit.",
         "preparation": "- Watch **<a href=\"https://www.youtube.com/watch?v=G46PU1K1wBA&feature=youtu.be&themeRefresh=1\" target=\"_blank\"> Meet your micro:bit video</a>**\n\n- Get to know the **<a href=\"https://makecode.microbit.org/#editor\" target=\"_blank\"> MakeCode editor</a>**\n\n- Load **<a href=\"https://mbit.io/csf-1-project\" target=\"_blank\">Meet your micro:bit</a>** code onto micro:bits\n\n**Materials:**\n- micro:bits with micro USB cords (one for every two to three students is ideal)\n\n- Power source for the micro:bits (battery packs are best, but you can also power from the computer USB port)",
-        "purpose": "The micro:bit is a tiny computer packed with **inputs** like buttons and sensors for light, movement, temperature, magnetism, and sound. It can also **output** pictures, numbers, and words on it's LED display, make sound and music, and even communicate with other micro:bits using radio. \n\nThe micro:bit needs instructions -**programs**- to tell it what to do. Your students will be able to create working code which they can test out in the simulator before transferring them to a real micro:bit over a USD cable. They can then unplug the micro:bit from the computer, attach a battery pack, and use their projects anywhere.\n\nBy making micro:bit projects, your students can take their code off the screen and make self-contained physical devices they can hold in the palm of their hands, making abstract computing concepts tangible.",
+        "purpose": "The micro:bit is a tiny computer packed with **inputs** like buttons and sensors for light, movement, temperature, magnetism, and sound. It can also **output** pictures, numbers, and words on its LED display, make sound and music, and even communicate with other micro:bits using radio. \n\nThe micro:bit needs instructions -**programs**- to tell it what to do. Your students will be able to create working code which they can test out in the simulator before transferring them to a real micro:bit over a USB cable. They can then unplug the micro:bit from the computer, attach a battery pack, and use their projects anywhere.\n\nBy making micro:bit projects, your students can take their code off the screen and make self-contained physical devices they can hold in the palm of their hands, making abstract computing concepts tangible.",
         "student_overview": "In this lesson you will be introduced to the micro:bit. A micro:bit is a tiny computer. Today you will explore a pre-programmed micro:bit."
       },
       "seeding_key": {
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "grade5-maker-2024"
+      }
+    },
+    {
+      "key": "Cristina - Step Counter Coding with micro:bit",
+      "name": "Step Counter Coding with micro:bit",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+        "overview": "In today's skill-building lesson, the goal is code and make a simple fitness tracker using variables to show how many steps you've taken.  The key concepts are **variables**, **data**, and **events.**",
+        "preparation": "- Make sure students have completed the **Meet your micro:bit** exploration lesson.\n\n- Make sure you know how to create **<a href=\"https://www.youtube.com/watch?v=QD8kpuSC0Vc\" target=\"_blank\">a new classroom section </a>** where students will code their micro:bit project.",
+        "student_overview": "Today you will make a simple fitness tracker."
+      },
+      "seeding_key": {
+        "lesson.key": "Cristina - Step Counter Coding with micro:bit",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
     {
       "key": "Conditionals with Cards",
       "name": "Conditionals with Cards",
-      "absolute_position": 5,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 5,
+      "relative_position": 6,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **context-setting** lesson, students will write *conditional (if/else) statements* to state the rules of simple card games. ",
@@ -148,10 +178,10 @@
     {
       "key": "If/Else with Bee",
       "name": "If/Else with Bee",
-      "absolute_position": 6,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 6,
+      "relative_position": 7,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, your class will continue to code with conditionals, allowing them to write code that functions differently depending on the specific conditions the program encounters.",
@@ -168,10 +198,10 @@
     {
       "key": "Poem Art",
       "name": "Poem Art",
-      "absolute_position": 7,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 7,
+      "relative_position": 8,
       "properties": {
         "overview": "In this CS and ELA integrated lesson, students will animate a poem with code to illustrate the mood of a poem. Students will read and detect the mood of a poem. They will then find corresponding effects and images to help illustrate the poem's mood. Finally, students will use events (code) to illustrate a shift in mood or animate the introduction of new images in a poem. \n\nThis lesson can be completed as a 1-hour standalone lesson. There is also an option to use this lesson as the first lesson of the multi-lesson module called [Coding with Poetry](http://studio.code.org/s/poetry-2021).",
         "preparation": "- Review and complete the online tutorial yourself: [Poem Art](http://studio.code.org/s/poem-art).\n \n- Be sure to try the activities first before asking your students to complete them. \n- Check your technology and decide if you need to troubleshoot anything in advance.\n- Some levels require sound to play. Hand out headphones ahead of time. \n\n- [Optional] 2 sticky notes per student for the Assessment.\n- [Optional] Pair Programming - Decide if you want students to engage in pair programming. Watch this [video](https://www.youtube.com/watch?v=sxToW3ixrwo) and visit this [Support](https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-) page for more information about pair programming.\n",
@@ -184,12 +214,29 @@
       }
     },
     {
-      "key": "Text and Prompts",
-      "name": "Text and Prompts",
-      "absolute_position": 8,
+      "key": "Cristina - Micro:bit pet with micro:bit",
+      "name": "Micro:bit pet with micro:bit",
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 8,
+      "relative_position": 9,
+      "properties": {
+        "overview": "In today's **skill-building** lesson, the goal is to create an electronic pet and learn how variables can be used to make computer simulations of the real world. The key concepts are **simulation**, **variables**, **loops**, **events**, and **conditionals.**",
+        "preparation": "- Make sure students have completed the **Meet your micro:bit** exploration lesson.\n\n- “Make sure you know how to create **<a href=\"https://www.youtube.com/watch?v=QD8kpuSC0Vc\" target=\"_blank\">a new classroom section </a>** where students will code their micro:bit project.”"
+      },
+      "seeding_key": {
+        "lesson.key": "Cristina - Micro:bit pet with micro:bit",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade5-maker-2024"
+      }
+    },
+    {
+      "key": "Text and Prompts",
+      "name": "Text and Prompts",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
       "properties": {
         "overview": "In this **skill-building** lesson, students will get practice with variables in Sprite Lab. ",
         "preparation": "Play through the levels and review the lesson slides.",
@@ -205,10 +252,10 @@
     {
       "key": "Mini-Project: Collector Game",
       "name": "Mini-Project: Collector Game",
-      "absolute_position": 9,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 9,
+      "relative_position": 11,
       "properties": {
         "overview": "In this **mini-project** lesson, students will create a customized \"collector game\", in which the user moves a sprite around to collect objects.",
         "preparation": "Play through the levels and review the **lesson slides**.\n\n",
@@ -217,6 +264,23 @@
       },
       "seeding_key": {
         "lesson.key": "Mini-Project: Collector Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "grade5-maker-2024"
+      }
+    },
+    {
+      "key": "Cristina - Max-min thermometer with micro:bit",
+      "name": "Max-min thermometer with micro:bit",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+        "overview": "In today's **skill-building** lesson, the goal is to make a thermometer that records highs and lows using conditionals and more advanced used of variables. The key concepts are **variables**, **data**, **loops**, **events**, and **conditionals.**",
+        "preparation": "- Make sure students have completed the **Meet your micro:bit** exploratory lesson.\n\n- Make sure you know how to create **<a href=\"https://www.youtube.com/watch?v=QD8kpuSC0Vc\" target=\"_blank\">a new classroom section </a>** where students will code their micro:bit project."
+      },
+      "seeding_key": {
+        "lesson.key": "Cristina - Max-min thermometer with micro:bit",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "grade5-maker-2024"
       }
@@ -233,7 +297,7 @@
       "seeding_key": {
         "lesson_activity.key": "f4fc6217-f6db-4a46-b852-74131358f04a",
         "lesson.key": "Dance Party: Unplugged",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
@@ -247,7 +311,7 @@
       "seeding_key": {
         "lesson_activity.key": "6cf6207a-3724-4152-8896-df2c86e41375",
         "lesson.key": "Dance Party: Unplugged",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
@@ -261,7 +325,7 @@
       "seeding_key": {
         "lesson_activity.key": "e0937b74-2028-4342-b5f9-fd47c7ff6681",
         "lesson.key": "Dance Party: Unplugged",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
@@ -275,7 +339,7 @@
       "seeding_key": {
         "lesson_activity.key": "679cb898-3584-4b61-a94f-4d98431cd179",
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
@@ -289,7 +353,7 @@
       "seeding_key": {
         "lesson_activity.key": "c99e1b89-399c-4a17-b3d4-281c4c1cb925",
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
@@ -303,7 +367,7 @@
       "seeding_key": {
         "lesson_activity.key": "c1136f08-3874-4a99-9e0e-87952cd45de5",
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
@@ -315,7 +379,7 @@
       "seeding_key": {
         "lesson_activity.key": "b5da0146-a4a1-4ab2-b627-89e216fe87cf",
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
@@ -328,7 +392,7 @@
       "seeding_key": {
         "lesson_activity.key": "b51b35b5-2259-419a-bac8-5c918eb16bdf",
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
@@ -342,7 +406,7 @@
       "seeding_key": {
         "lesson_activity.key": "28f70105-59df-4bc7-9078-c33596303ad4",
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
@@ -356,7 +420,7 @@
       "seeding_key": {
         "lesson_activity.key": "92e00c85-cacd-4481-be4b-74e676c5d7d5",
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
@@ -370,7 +434,7 @@
       "seeding_key": {
         "lesson_activity.key": "69a137a6-3c91-4153-ac5d-3f2ee029f6b2",
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
@@ -384,7 +448,7 @@
       "seeding_key": {
         "lesson_activity.key": "90e78118-feb4-4e20-9f9f-75e12c0c4910",
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
@@ -398,7 +462,7 @@
       "seeding_key": {
         "lesson_activity.key": "a5ffe97a-e16b-4750-a06b-ae9d14c9a56b",
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
@@ -412,7 +476,7 @@
       "seeding_key": {
         "lesson_activity.key": "ebf79f14-0a01-41b0-8f2d-a894080278d9",
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
@@ -425,7 +489,75 @@
       "seeding_key": {
         "lesson_activity.key": "37bdefd0-b8de-4e9b-9553-16923a38343c",
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "grade5-maker-2024"
+      }
+    },
+    {
+      "key": "1d91418b-1ca3-442e-9141-9a3858604618",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1d91418b-1ca3-442e-9141-9a3858604618",
+        "lesson.key": "Cristina - Step Counter Coding with micro:bit",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "grade5-maker-2024"
+      }
+    },
+    {
+      "key": "529243ba-7b96-4b93-919d-984450783d97",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "529243ba-7b96-4b93-919d-984450783d97",
+        "lesson.key": "Cristina - Step Counter Coding with micro:bit",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "grade5-maker-2024"
+      }
+    },
+    {
+      "key": "1d10e3ce-e460-415d-9b35-5dc2d757ad5f",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1d10e3ce-e460-415d-9b35-5dc2d757ad5f",
+        "lesson.key": "Cristina - Step Counter Coding with micro:bit",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "grade5-maker-2024"
+      }
+    },
+    {
+      "key": "7b1e2059-a7f0-47f4-80ac-bfe9cdcf813d",
+      "position": 4,
+      "properties": {
+        "name": "[Optional] Extension"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7b1e2059-a7f0-47f4-80ac-bfe9cdcf813d",
+        "lesson.key": "Cristina - Step Counter Coding with micro:bit",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "grade5-maker-2024"
+      }
+    },
+    {
+      "key": "0b271ae2-cdfc-47c6-adb3-922ec658b708",
+      "position": 5,
+      "properties": {
+        "name": "[Optional] Extended learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0b271ae2-cdfc-47c6-adb3-922ec658b708",
+        "lesson.key": "Cristina - Step Counter Coding with micro:bit",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
@@ -472,8 +604,21 @@
       }
     },
     {
-      "key": "63fda4f3-ee4f-4ae3-8dd3-18424c67f6fb",
+      "key": "349aea24-cc98-4afe-a9c0-874d06b7957e",
       "position": 4,
+      "properties": {
+        "name": "[Optional] Extention"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "349aea24-cc98-4afe-a9c0-874d06b7957e",
+        "lesson.key": "Conditionals with Cards",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade5-maker-2024"
+      }
+    },
+    {
+      "key": "63fda4f3-ee4f-4ae3-8dd3-18424c67f6fb",
+      "position": 5,
       "properties": {
         "name": "Extended Learning"
       },
@@ -486,7 +631,7 @@
     },
     {
       "key": "d92ef2d0-698c-4788-9933-18ff170ef6d7",
-      "position": 5,
+      "position": 6,
       "properties": {
         "name": "Cross-Curricular Opportunity"
       },
@@ -595,6 +740,87 @@
       }
     },
     {
+      "key": "62671da3-6c10-4118-9fd0-6a069c4016be",
+      "position": 1,
+      "properties": {
+        "name": "[Optional] Pre-requisite"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "62671da3-6c10-4118-9fd0-6a069c4016be",
+        "lesson.key": "Cristina - Micro:bit pet with micro:bit",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade5-maker-2024"
+      }
+    },
+    {
+      "key": "76a64823-1908-4e57-8d1a-c19e0c9fb435",
+      "position": 2,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "76a64823-1908-4e57-8d1a-c19e0c9fb435",
+        "lesson.key": "Cristina - Micro:bit pet with micro:bit",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade5-maker-2024"
+      }
+    },
+    {
+      "key": "909fdda6-c847-47d6-bc98-36c773cf259e",
+      "position": 3,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "909fdda6-c847-47d6-bc98-36c773cf259e",
+        "lesson.key": "Cristina - Micro:bit pet with micro:bit",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade5-maker-2024"
+      }
+    },
+    {
+      "key": "ea67305d-8687-4787-affe-803e70cc46ba",
+      "position": 4,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ea67305d-8687-4787-affe-803e70cc46ba",
+        "lesson.key": "Cristina - Micro:bit pet with micro:bit",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade5-maker-2024"
+      }
+    },
+    {
+      "key": "03e72faa-9719-40af-99e2-61e97c3cda64",
+      "position": 5,
+      "properties": {
+        "name": "[Optional] Extension"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "03e72faa-9719-40af-99e2-61e97c3cda64",
+        "lesson.key": "Cristina - Micro:bit pet with micro:bit",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade5-maker-2024"
+      }
+    },
+    {
+      "key": "89184511-51ff-44ea-a0fe-f3847ecb1db6",
+      "position": 6,
+      "properties": {
+        "name": "[Optional] Extended learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "89184511-51ff-44ea-a0fe-f3847ecb1db6",
+        "lesson.key": "Cristina - Micro:bit pet with micro:bit",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade5-maker-2024"
+      }
+    },
+    {
       "key": "8208c4ea-1e38-48a5-a732-3012ca40cb44",
       "position": 1,
       "properties": {
@@ -674,6 +900,74 @@
       "seeding_key": {
         "lesson_activity.key": "2cca5da7-c692-4f50-b5e8-78ff587a2d44",
         "lesson.key": "Mini-Project: Collector Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "grade5-maker-2024"
+      }
+    },
+    {
+      "key": "c6b5ece9-d22a-4833-9820-d74361653ba6",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up "
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c6b5ece9-d22a-4833-9820-d74361653ba6",
+        "lesson.key": "Cristina - Max-min thermometer with micro:bit",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "grade5-maker-2024"
+      }
+    },
+    {
+      "key": "d38ac55a-9e57-41f2-925d-ed23c37737ed",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d38ac55a-9e57-41f2-925d-ed23c37737ed",
+        "lesson.key": "Cristina - Max-min thermometer with micro:bit",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "grade5-maker-2024"
+      }
+    },
+    {
+      "key": "147f6e69-d327-495c-bf1a-bea41d9f1163",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "147f6e69-d327-495c-bf1a-bea41d9f1163",
+        "lesson.key": "Cristina - Max-min thermometer with micro:bit",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "grade5-maker-2024"
+      }
+    },
+    {
+      "key": "b5959298-7d69-46e4-abf1-337d886fd4c8",
+      "position": 4,
+      "properties": {
+        "name": "[Optional] Extension"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b5959298-7d69-46e4-abf1-337d886fd4c8",
+        "lesson.key": "Cristina - Max-min thermometer with micro:bit",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "grade5-maker-2024"
+      }
+    },
+    {
+      "key": "e0f3be13-0b28-4e61-b997-04680efac4aa",
+      "position": 5,
+      "properties": {
+        "name": "[Optional] Extended Learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e0f3be13-0b28-4e61-b997-04680efac4aa",
+        "lesson.key": "Cristina - Max-min thermometer with micro:bit",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "grade5-maker-2024"
       }
@@ -1265,7 +1559,7 @@
       "key": "a63efb10-e801-4b57-a794-809d037fec6f",
       "position": 1,
       "properties": {
-        "description": "**Say:** The micro:bit is a tiny computer you can program to make self-contained projects to do different things. For it to work, it first needs to be programmed to tell it what to do. Today you'll be given micro:bits that have already been programmed. \n\n**Discuss:**\n\n - _What can you figure out about the micro:bit and the code that makes it work?_\n\n- _The program responds to different **events** - can you work out what they are?_\n\n- _What **inputs** is the micro:bit using?_\n\n- _What **outputs** is it using?_\n",
+        "description": "**Say:** The micro:bit is a tiny computer you can program to make self-contained projects to do different things. For it to work, it first needs to be programmed to tell it what to do. Today, you'll be given micro:bits that have already been programmed. What can you figure out about the micro:bit and the code that makes it work?\n\n**Discuss:**\n\n- _The program responds to different **events** - can you figure out what they are?_\n\n- _What **inputs** is the micro:bit using?_\n\n- _What **outputs** is it showing or playing?_\n",
         "duration": "5",
         "name": "Introduction"
       },
@@ -1278,7 +1572,7 @@
       "key": "2322737d-72e5-4074-9d9c-ccdf2798c85b",
       "position": 1,
       "properties": {
-        "description": "Students work in pairs of small groups to investigate the micro:bit and identify events, inputs, outputs and any coding concepts they recognize. \n\n[Optional] They can record their findings with paper, whiteboards or electronically. For example it could be recorded in a table like below.\n\n![](https://images.code.org/085db8b0775f530475d79ca87f87a4dd-Screenshot 2024-04-18 at 8.29.07 AM.png)",
+        "description": "Students work in pairs of small groups to investigate the micro:bit and identify events, inputs, outputs and any coding concepts they recognize. \n\nThey can record their findings on the **<a href=\"https://docs.google.com/document/d/1aiCZucwRULkV7zhEwp-BUUVzwBXsIbBCr7Hv_EgWDro/template/preview\" target=\"_blank\">Meet your micro:bit Activity Guide</a>** or using whiteboards or electronically. \n\n![](https://images.code.org/085db8b0775f530475d79ca87f87a4dd-Screenshot 2024-04-18 at 8.29.07 AM.png)",
         "duration": "20",
         "name": "Examine the micro:bit"
       },
@@ -1288,11 +1582,22 @@
       }
     },
     {
-      "key": "0fac8302-d14c-40ee-857c-6104269c36d6",
+      "key": "a3d793fe-1fd1-46ca-8ee8-78f9435a4b35",
       "position": 2,
       "properties": {
-        "description": "**Do this:** Students should...\n- Connect to a power source (battery pack) and notice what happens to the micro:bit.\n- Press button A to see a zooming square animation. _Does it repeat?_ _How many times?_ _Does it get faster or slower?_ _What computing concepts might be making this work?_\n- Press button B to see text scroll accross the display. _Where else do you see visual information displayed like this?_ _What might they use it for on the micro:bit?_\n- Press buttons A and B together to make a sun or moon appear. _Can you figure out what is making the image appear?_ ",
-        "duration": "10",
+        "description": "**Do this:** Students should...\n- Connect to a power source (battery pack) and notice what happens to the micro:bit:\n    -  A happy face appears on the LED display **output**\n\n</n>\n\n- Press button A to see a zooming square animation. _Does it repeat?_ _How many times?_ _Does it get faster or slower?_ _What computing concepts might be making this work?_\n    -   A **sequence** has been coded to make the animation\n    - **Loops** make the animation repeat\n\n</n>\n\n- Press button B to see text scroll accross the display. _Where else do you see visual information displayed like this?_ _What might they use it for on the micro:bit?_\n\n</n>\n\n- Press buttons A and B together to make a sun or moon appear. _Can you figure out what is making the image appear?_ \n    - The LED display output can also work as a light sensor **input**, so if students cover the micro:bit they’ll see a moon, and if they shine light on it they’ll see a sun."
+      },
+      "seeding_key": {
+        "activity_section.key": "a3d793fe-1fd1-46ca-8ee8-78f9435a4b35",
+        "lesson_activity.key": "a5ffe97a-e16b-4750-a06b-ae9d14c9a56b"
+      }
+    },
+    {
+      "key": "0fac8302-d14c-40ee-857c-6104269c36d6",
+      "position": 3,
+      "properties": {
+        "description": "**Display**: Show the code for the **<a href=\"https://mbit.io/csf-1-project\" target=\"_blank\">Meet your micro:bit project</a>** with your students. Students can also access this code by clicking on the image in Level 1.\n\n**Do This:** See how many of the project's computing concepts they already know. You can use the online simulator as you go to demonstrate each event in the code.",
+        "duration": "8",
         "name": "Explore the “Meet your micro:bit” project"
       },
       "seeding_key": {
@@ -1302,7 +1607,7 @@
     },
     {
       "key": "72786804-aa93-4fb5-a764-f493eb5c0fe8",
-      "position": 3,
+      "position": 4,
       "properties": {
         "progression_name": "Meet your micro:bit"
       },
@@ -1313,8 +1618,11 @@
     },
     {
       "key": "f325180d-269d-40f8-b36b-7608f1ab05e1",
-      "position": 4,
+      "position": 5,
       "properties": {
+        "description": "**[Optional] Do This:** Students can test their block-coding knowledge in this matching level, where they match Code.org blocks to the corresponding micro:bit block.\n",
+        "duration": "2",
+        "name": "Matching Activity",
         "progression_name": "Matching Activity"
       },
       "seeding_key": {
@@ -1326,7 +1634,7 @@
       "key": "7d73c0dd-64aa-4313-b198-f067703339df",
       "position": 1,
       "properties": {
-        "description": "**Do this**: Show the code for the **<a href=\"https://mbit.io/csf-1-project\" target=\"_blank\">Meet your micro:bit project.</a>**  \n\n**Discuss:** \n- _What did you discover today when using the micro:bits?_\n- _What computing concepts do you already know that are used to make this project work?_ \n\n**Discussion Goal:** Talk about as many of the event blocks as is appropriate to the time available and students' prior learning.",
+        "description": "**Discuss:** \n- _What did you discover today when using the micro:bits?_\n- _What computing concepts do you already know that are used to make this project work?_ \n\n**Discussion Goal:** Talk about as many of the event blocks as is appropriate to the time available and students' prior learning.",
         "duration": "10",
         "name": "Discussion"
       },
@@ -1344,6 +1652,83 @@
       "seeding_key": {
         "activity_section.key": "e132c400-1f6a-4cf6-b83d-b0fffc283beb",
         "lesson_activity.key": "37bdefd0-b8de-4e9b-9553-16923a38343c"
+      }
+    },
+    {
+      "key": "33e505ee-c0ac-471f-a575-7f7006f2de2f",
+      "position": 1,
+      "properties": {
+        "description": "**Say**: Today's aim is to code and make a simple fitness tracker using variables to record how many steps you've taken.\n\n[Option 1] **Do this:** Watch the **<a href=\"https://mbit.io/csf-f2-intro\" target=\"_blank\">introduction video.</a>** \n\n[Option 2] **Do this:** Explore the **<a href=\"https://mbit.io/csf-f2-project\" target=\"_blank\"> project </a>** uploaded onto micro:bits prior to the lesson.\n\n**Discuss** how you might wear the micro:bit and battery pack - for example, by putting it in a pocket or attaching it to your arm, shoe or leg.\n\n**Discuss** where these concepts are being used and where students have used them before:\n\n- **Variable:** a label for a piece of information used in a program (e.g., the number of steps taken is stored in a variable)\n\n- **Data:** a collection of information (e.g., the number of steps taken is data - you might collect your own step counts over several days, or compare step counts with other people; this is all data)\n\n- **Event:** an action that causes something to happen (e.g., when the micro:bit's accelerometer detects movement, it triggers code to increase the step count variable by 1 and show it on the LED display)\n\n**Do this:** Share the **<a href=\"https://mbit.io/csf-f2-project\" target=\"_blank\"> project </a>** working in the simulator with your students and look at the code together prior to students coding the main activity.",
+        "duration": "10",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "33e505ee-c0ac-471f-a575-7f7006f2de2f",
+        "lesson_activity.key": "1d91418b-1ca3-442e-9141-9a3858604618"
+      }
+    },
+    {
+      "key": "2dd46e9e-3c96-4999-8505-1304bcc04380",
+      "position": 1,
+      "properties": {
+        "description": "Students will make the project themselves using the MakeCode editor and micro:bit simulator. Once they have tested their code in the simulator, they will download their code onto the micro:bits.\n\nPick one:\n\n- Step by step coding **<a href=\"https://mbit.io/csf-f2-coding\" target=\"_blank\"> video </a>**\n- Live micro:bit **<a href=\"https://mbit.io/csf-f2-classroom\" target=\"_blank\"> classroom session </a>**",
+        "duration": "20",
+        "name": "Student Coding",
+        "progression_name": "Step counter coding with micro:bit"
+      },
+      "seeding_key": {
+        "activity_section.key": "2dd46e9e-3c96-4999-8505-1304bcc04380",
+        "lesson_activity.key": "529243ba-7b96-4b93-919d-984450783d97"
+      }
+    },
+    {
+      "key": "29b63ed3-1b89-4944-a186-6c2cdd55a0ea",
+      "position": 2,
+      "properties": {
+        "description": "After completing the lesson, assess students' knowledge of the concepts covered by going through the assessment slides in the \n**<a href=\"https://docs.google.com/presentation/d/1CrNrbnG4-DuDf4Pejrcnz1ZStBotO-Oq59aik-iq4DE/edit#slide=id.g26f3d2b7307_0_69/template/preview\"  target=\"_blank\">slide deck</a>**. You can also assign students a content assessment hosted on the JuiceMind platform. To assign the assessment to your students, click <a href=\"https://play.juicemind.com/dashboard/explore/class/codeorg-microbit/unitNumber/4/topicNumber/2/quizId/2V1iaNQ41eZVWHqvrAEM\" target=\"_blank\">here.</a>\n\n::: details [**Setting up a JuiceMind assessment**]\nClick \"Assign\" on the assessment page, then have students join your unique class session. Students have a link to the Join page on level 2, and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note**: You will need to <a href=\"https://play.juicemind.com/signup\" target=\"_blank\">sign up</a> for an account on JuiceMind to assign the assessment.\n:::\n",
+        "duration": "10",
+        "name": "Assessment",
+        "progression_name": "Step Counter Coding with micro:bit"
+      },
+      "seeding_key": {
+        "activity_section.key": "29b63ed3-1b89-4944-a186-6c2cdd55a0ea",
+        "lesson_activity.key": "529243ba-7b96-4b93-919d-984450783d97"
+      }
+    },
+    {
+      "key": "ca286d88-399a-40b9-bce2-e50ca6b2553b",
+      "position": 1,
+      "properties": {
+        "description": "Share student work, revisit key concepts used, and explore ideas for extended learning.",
+        "duration": "5",
+        "name": "Discussion"
+      },
+      "seeding_key": {
+        "activity_section.key": "ca286d88-399a-40b9-bce2-e50ca6b2553b",
+        "lesson_activity.key": "1d10e3ce-e460-415d-9b35-5dc2d757ad5f"
+      }
+    },
+    {
+      "key": "4a2dfff0-a49e-499c-a090-cdc3721a11f2",
+      "position": 1,
+      "properties": {
+        "description": "This extension is perfect for students working online at makecode.microbit.org without a physical micro:bit device. While the step counter activity might not give them a chance to directly test their code on a physical device, creating a scoreboard counter offers a fantastic way to engage them and create a program they can test and use.\n\nOnce their programs are up and running, students can use their apps in a Rock, Paper, Scissors tournament with classmates, their scores tracked and displayed on the custom scoreboards they created. It's a fun and interactive way to test their programming skills and a bit of friendly competition.\n\n**Find the code for this project <a href=\"https://makecode.microbit.org/_2sqKyg4Tb2Tb\" target=\"_blank\">here.</a>**\n\n**Find the student handout for this project <a href=\"https://docs.google.com/document/d/1Yv_Hqk4pWRp4e0gpFS_iuRIry2LIlPfn5fCp8flZkYc/template/preview\" target=\"_blank\">here.</a>**",
+        "name": "Scoreboard"
+      },
+      "seeding_key": {
+        "activity_section.key": "4a2dfff0-a49e-499c-a090-cdc3721a11f2",
+        "lesson_activity.key": "7b1e2059-a7f0-47f4-80ac-bfe9cdcf813d"
+      }
+    },
+    {
+      "key": "ae317937-a750-44fd-8f50-e8b58ea1dabf",
+      "position": 1,
+      "properties": {
+        "description": "**Reset:** Make a reset button by adding a \"on button A pressed\" event block to reset the step counter variable back to 0.\n\n**Daily trends:** Collect step count data over several days and see if you can spot any patterns suggesting when you are most active.\n\n**Calculate the distance:** Measure the length of your average step and multiply this by your step count to find out how far you have walked. Can you code your micro:bit to work this out for you using one of the Math blocks in MakeCode?\n\n**Make a more sensitive counter:** Code a more advanced **<a href=\"https://mbit.io/csf-step-counter-2\" target=\"_blank\"> Sensitive step counter project  </a>** which uses accelerometer strength readings.\n\n**Data logging:** If you have the micro:bit V2 (the version with the built in speaker), use data logging to make a **<a href=\"https://mbit.io/csf-movement-data\" target=\"_blank\"> personalized step counter</a>**.\n\n**Find this project and more on <a href=\"https://mbit.io/csf-f2-make\" target=\"_blank\"> microbit.org </a>**"
+      },
+      "seeding_key": {
+        "activity_section.key": "ae317937-a750-44fd-8f50-e8b58ea1dabf",
+        "lesson_activity.key": "0b271ae2-cdfc-47c6-adb3-922ec658b708"
       }
     },
     {
@@ -1456,6 +1841,18 @@
       "seeding_key": {
         "activity_section.key": "224c6601-11a7-42a6-a842-381c3799f10a",
         "lesson_activity.key": "0c1ed7dd-ddf4-46f8-8964-ee4fbf9a909d"
+      }
+    },
+    {
+      "key": "22076275-cab9-4d04-a740-52051335f928",
+      "position": 1,
+      "properties": {
+        "description": "This activity introduces the concepts of If/Then using the familiar fairytale of the Three Little Pigs. The story clearly demonstrates the \"if\" and \"then\" relationship that forms the core of conditional statements. By seeing the pigs make choices (building with different materials) and the resulting consequences (strong house vs. weak house), students grasp the concept in a real-world way. By creating a storyboard students will visualize the \"if\" and \"then\" scenarios. This visual aid helps solidify their understanding and provides a clear reference point when writing their own conditional statements with the micro:bit. It provides a fun and engaging context for them to learn about conditionals. They can connect with the characters and the cause-and-effect nature of the story.\n\n**Find the student handout for this project <a href=\"https://docs.google.com/document/d/1xNxJFtpb9VI8miyTx3TitTUJGPYNMl1j-ALE1e2Qk2s/template/preview\" target=\"_blank\">here.</a>**\n\n**Find The Three Little Pigs story <a href=\"https://youtu.be/CtP83CWOMwc?si=bVG-sYcYeaBTrAfL\" target=\"_blank\">here.</a>**",
+        "name": "Three Little Pigs"
+      },
+      "seeding_key": {
+        "activity_section.key": "22076275-cab9-4d04-a740-52051335f928",
+        "lesson_activity.key": "349aea24-cc98-4afe-a9c0-874d06b7957e"
       }
     },
     {
@@ -1865,6 +2262,93 @@
       }
     },
     {
+      "key": "88bc42e7-ca10-4c3c-8581-6dfc786029a0",
+      "position": 1,
+      "properties": {
+        "description": "Building on the understanding of If/Then statements from the conditionals with cards activity, this exercise allows students to immediately apply that knowledge in a practical and engaging way. \n\nStudents will combine their understanding of If/Then statements with the micro:bit's capabilities to create a musical and animated experience. Using If/Then statements, students will program the micro:bit to play specific notes (a simple 3-note song like \"Mary Had a Little Lamb\") when specific buttons are pressed (A, B, or A & B pressed together).\n\nTo further the engagement, students will create a stick figure animation using the micro:bit's LED display. This animation will come dance whenever a sound is played!\n\nThis activity serves as a bridge between the conditional statements concepts and the Micro:bit pet activity. It allows them to experiment with the micro:bit's functions earlier, solidifying their understanding of If/Then statements through a fun and interactive experience.This activity can be adapted to different skill levels. You may adjust the complexity of the song or the dancing animation based on your students' progress.\n\n**Find the code for this project <a href=\"https://makecode.microbit.org/_38sKbu4ivDzu\" target=\"_blank\">here.</a>**\n\n**Find the student handout for this project <a href=\"https://docs.google.com/document/d/1_XtzfuSqh16dNVyW2QTKD75N9jyXQzXCf6VKEAnEIv8/template/preview\" target=\"_blank\">here.</a>**",
+        "name": "Music and Dance"
+      },
+      "seeding_key": {
+        "activity_section.key": "88bc42e7-ca10-4c3c-8581-6dfc786029a0",
+        "lesson_activity.key": "62671da3-6c10-4118-9fd0-6a069c4016be"
+      }
+    },
+    {
+      "key": "a173c9a3-3097-485d-bdc0-a4f9a0a888c4",
+      "position": 1,
+      "properties": {
+        "description": "**Say**: Today's aim is to code your own electronic pet and learn how loops, variables, events, and conditionals can work together to create a simulation of a pet that craves attention and gets sad if you ignore it.\n\n[Option 1] **Do this**: Watch the **<a href=\"https://mbit.io/csf-f3-intro\" target=\"_blank\">introduction video.</a>**  \n\n[Option 2] **Do this:** Explore the **<a href=\"https://mbit.io/csf-f3-project\" target=\"_blank\">project</a>** uploaded onto micro:bits prior to the lesson. \n\n**Discuss** where these concepts are being used and where students may have used them before:\n- **Simulation**: a program that replicates or mimics key features of a real world event (e.g., the micro:bit code mimics the behavior of an animal)\n- **Variable**: a label for a piece of information used in a program (e.g., a variable is used to store how long you have ignored your pet for)\n\n- **Loop:** the action of doing something over and over again (e.g., a loop keeps the timer running)\n\n- **Event:** an action that causes something to happen (e.g., shaking or touching the micro:bit keeps the pet happy)\n\n- **Conditional:** a statement that only runs under certain conditions (e.g., if the timer count reaches different numbers, the pet gets sad, falls asleep, or even dies)\n\n\n**Do this**: Share the **<a href=\"https://mbit.io/csf-f3-project\" target=\"_blank\">project</a>**  working in the simulator with your students and look at the code together prior to students coding the main activity.\n\nNote that the code for this project is designed to work in the MakeCode simulator and on the micro:bit V2 (the version with the built-in speaker and gold touch logo). \n\nIf you have the micro:bit V1, you'll need to make the following changes:\n\n- Delete the \"play 'giggle', etc.\" blocks or replace them with \"play melody\"\n\n- Replace the \"on logo pressed\" block with \"on button A pressed\"",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "a173c9a3-3097-485d-bdc0-a4f9a0a888c4",
+        "lesson_activity.key": "76a64823-1908-4e57-8d1a-c19e0c9fb435"
+      }
+    },
+    {
+      "key": "d258590f-9bcb-40d1-9043-dd3e44281a42",
+      "position": 1,
+      "properties": {
+        "description": "Students will make the project themselves using the MakeCode editor and micro:bit simulator. Once they have tested their code in the simulator, they will download their code onto the micro:bits.\n\nPick one:\n- Step by step coding **<a href=\"https://mbit.io/csf-f3-coding\" target=\"_blank\">video</a>**\n- Live micro:bit **<a href=\"https://mbit.io/csf-f3-classroom\" target=\"_blank\">classroom session</a>** ",
+        "duration": "20",
+        "name": "Student Coding",
+        "progression_name": "Micro:bit pet with micro:bit"
+      },
+      "seeding_key": {
+        "activity_section.key": "d258590f-9bcb-40d1-9043-dd3e44281a42",
+        "lesson_activity.key": "909fdda6-c847-47d6-bc98-36c773cf259e"
+      }
+    },
+    {
+      "key": "8ee2158e-9009-47e2-b64b-a3c9c4b49a9c",
+      "position": 2,
+      "properties": {
+        "description": "After completing the lesson, assess students' knowledge of the concepts covered by going through the assessment slides in the \n**<a href=\"https://docs.google.com/presentation/d/1CrNrbnG4-DuDf4Pejrcnz1ZStBotO-Oq59aik-iq4DE/edit#slide=id.g26f3d2b7307_0_69/template/preview\"  target=\"_blank\">slide deck</a>**. You can also assign students a content assessment hosted on the JuiceMind platform. To assign the assessment to your students, click <a href=\"https://play.juicemind.com/dashboard/explore/class/codeorg-microbit/unitNumber/4/topicNumber/2/quizId/c4GLaOb8w0DgdZwbNPr2\" target=\"_blank\">here.</a>\n\n::: details [**Setting up a JuiceMind assessment**]\nClick \"Assign\" on the assessment page, then have students join your unique class session. Students have a link to the Join page on level 2, and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note**: You will need to <a href=\"https://play.juicemind.com/signup\" target=\"_blank\">sign up</a> for an account on JuiceMind to assign the assessment.\n:::\n",
+        "duration": "10",
+        "name": "Assessment",
+        "progression_name": "Micro:bit pet"
+      },
+      "seeding_key": {
+        "activity_section.key": "8ee2158e-9009-47e2-b64b-a3c9c4b49a9c",
+        "lesson_activity.key": "909fdda6-c847-47d6-bc98-36c773cf259e"
+      }
+    },
+    {
+      "key": "8993d594-f023-489f-95ab-18ccde343039",
+      "position": 1,
+      "properties": {
+        "description": "Share student work, revisit key concepts used, and explore ideas for extended learning.",
+        "name": "Discussion"
+      },
+      "seeding_key": {
+        "activity_section.key": "8993d594-f023-489f-95ab-18ccde343039",
+        "lesson_activity.key": "ea67305d-8687-4787-affe-803e70cc46ba"
+      }
+    },
+    {
+      "key": "fddf296b-272f-4ca2-8090-6f159b33cc9b",
+      "position": 1,
+      "properties": {
+        "description": "This activity strengthens students' grasp of conditionals and utilizes functions to help them creating an interactive pet. The pet uses the LED screen and sounds to provide an engaging and creative experience. Students will program their micro:bit's LED screen to generate visual and auditory responses for their virtual pet.\n\nThis project extends beyond traditional programming, offering a fantastic opportunity for students with artistic and creative inclinations. It empowers them to design a physical \"body\" for the micro:bit, transforming it from a circuit board into a playful companion.\n\nOnce the micro:bit is programmed and the body is built, encourage students to write a short story featuring their micro:pet. The story should incorporate the pet's emotions to reflect the events in the story. Students can then share their stories, making their micro:bit pets react accordingly throughout the reading.\n\n**Find the code for this project <a href=\"https://makecode.microbit.org/_7b5cU2JDYJiv\" target=\"_blank\">here.</a>**\n\n**Find the student handout for this project <a href=\"https://docs.google.com/document/d/1D6A2bgwedQmLcz9a3z7_Qhestcx_NLimuGvINwqKbnE/template/preview\" target=\"_blank\">here.**\n\n**Find a micro:bit character demo video <a href=\"https://www.youtube.com/watch?v=yIig7oIYNZw\" target=\"_blank\">here.</a>** You may need to watch the video two times.",
+        "name": "Storytelling"
+      },
+      "seeding_key": {
+        "activity_section.key": "fddf296b-272f-4ca2-8090-6f159b33cc9b",
+        "lesson_activity.key": "03e72faa-9719-40af-99e2-61e97c3cda64"
+      }
+    },
+    {
+      "key": "ca0b6b23-8837-44d2-92da-32ebb8c6ecb9",
+      "position": 1,
+      "properties": {
+        "description": "**Add new pet reactions**: Add your own expressions and sounds at different values of the \"timer\" variable.\n\n**Talk to your pet**: If you have a micro:bit V2 (the version with the built-in speaker), add an \"on loud sound\" input block so your pet can respond when you talk or sing to it using the built-in microphone.\n\n**Two pets are better than one:** If you have previously used the micro:bit's <a href=\"https://mbit.io/csf-radio\" target=\"_blank\">radio feature</a>**, you can make pets interact with each other; for instance, by making a pet happy when it's close to another micro:pet. You can use the \"radio set transmit power\" block to reduce the power to 0 so pets have to be very close to each other for this work.\n\n**Find this project and more on <a href=\"https://mbit.io/csf-e3-make\" target=\"_blank\">microbit.org</a>**"
+      },
+      "seeding_key": {
+        "activity_section.key": "ca0b6b23-8837-44d2-92da-32ebb8c6ecb9",
+        "lesson_activity.key": "89184511-51ff-44ea-a0fe-f3847ecb1db6"
+      }
+    },
+    {
       "key": "b728a8dd-8e8a-4002-9b0c-c1f3160d65a4",
       "position": 1,
       "properties": {
@@ -2090,6 +2574,81 @@
         "activity_section.key": "32bd29f7-096d-4ee0-b461-8db29b7d2ea7",
         "lesson_activity.key": "2cca5da7-c692-4f50-b5e8-78ff587a2d44"
       }
+    },
+    {
+      "key": "fa44ee09-44bf-45b4-9ae1-e1ff1c2181e5",
+      "position": 1,
+      "properties": {
+        "description": "**Say**: Today's aim is to make a thermometer that records high and low temperatures using conditionals and more advanced use of variables.\n\n[Option 1] **Do this**: Watch the **<a href=\"https://mbit.io/csf-f4-intro\" target=\"_blank\">introduction video.</a>**  \n\n[Option 2] **Do this:** Explore the **<a href=\"https://mbit.io/csf-f4-project\" target=\"_blank\">project</a>** uploaded onto micro:bits prior to the lesson. \n\n**Discuss** how you might use this - where would you place micro:bits to collect this data? How might you gather, visualize, and interpret the data?\n\n**Discuss** where these concepts are being used and where students may have used them before:\n\n- **Variable**: a label for a piece of information used in a program (e.g., the maximum and minimum temperatures are stored in variables so we can keep them updated and recall the information when we need it)\n- **Data**: a collection of information (e.g., the values of the maximum and minimum temperature are data)\n- **Events**: an action that causes something to happen (e.g., the event of pressing button A or B causes the minimum or maximum temperature to be displayed)\n- **Loops:** the action of doing something over and over again (e.g., the micro:bit uses a loop to keep showing a flashing period and checking if the temperature is lower than the previous minimum or higher than the previous maximum)\n- **Conditional:** a statement that only runs under certain conditions (e.g., if the current temperature is lower than the minimum, update the record of the minimum; else if it is higher than the maximum, update the record of the maximum temperature)\n\n\n**Do this:** Share the **<a href=\"https://mbit.io/csf-f4-project\" target=\"_blank\">project</a>**  working in the simulator with your students and look at the code together prior to students coding the main activity.",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "fa44ee09-44bf-45b4-9ae1-e1ff1c2181e5",
+        "lesson_activity.key": "c6b5ece9-d22a-4833-9820-d74361653ba6"
+      }
+    },
+    {
+      "key": "f5e6eab1-df3f-413d-9a92-1b10d69d060e",
+      "position": 1,
+      "properties": {
+        "description": "Students will make the project themselves using the MakeCode editor and micro:bit simulator. Once they have tested their code in the simulator, they will download their code onto the micro:bits.\n\nPick one:\n- Step by step coding **<a href=\"https://mbit.io/csf-f4-coding\" target=\"_blank\">video</a>**\n- Live micro:bit **<a href=\"https://mbit.io/csf-f4-classroom\" target=\"_blank\">classroom session</a>** ",
+        "duration": "20",
+        "name": "Student Coding",
+        "progression_name": "Max-min thermometer with micro:bit"
+      },
+      "seeding_key": {
+        "activity_section.key": "f5e6eab1-df3f-413d-9a92-1b10d69d060e",
+        "lesson_activity.key": "d38ac55a-9e57-41f2-925d-ed23c37737ed"
+      }
+    },
+    {
+      "key": "82121ccc-b178-425d-821c-d5a098d6e562",
+      "position": 2,
+      "properties": {
+        "description": "After completing the lesson, assess students' knowledge of the concepts covered by going through the assessment slides in the \n**<a href=\"https://docs.google.com/presentation/d/1CrNrbnG4-DuDf4Pejrcnz1ZStBotO-Oq59aik-iq4DE/edit#slide=id.g26f3d2b7307_0_69/template/preview\"  target=\"_blank\">slide deck</a>**. You can also assign students a content assessment hosted on the JuiceMind platform. To assign the assessment to your students, click <a href=\"https://play.juicemind.com/dashboard/explore/class/codeorg-microbit/unitNumber/4/topicNumber/2/quizId/jeU0ooLL5dfz1eYiXeHW\" target=\"_blank\">here.</a>\n\n::: details [**Setting up a JuiceMind assessment**]\nClick \"Assign\" on the assessment page, then have students join your unique class session. Students have a link to the Join page on level 2, and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note**: You will need to <a href=\"https://play.juicemind.com/signup\" target=\"_blank\">sign up</a> for an account on JuiceMind to assign the assessment.\n:::\n",
+        "duration": "10",
+        "name": "Assessment",
+        "progression_name": "Max-min thermometer"
+      },
+      "seeding_key": {
+        "activity_section.key": "82121ccc-b178-425d-821c-d5a098d6e562",
+        "lesson_activity.key": "d38ac55a-9e57-41f2-925d-ed23c37737ed"
+      }
+    },
+    {
+      "key": "0132b48f-97e2-4e3d-8e1d-d8408d82b4ad",
+      "position": 1,
+      "properties": {
+        "description": "Share student work, revisit key concepts used, and explore ideas for extended learning.",
+        "name": "Discussion"
+      },
+      "seeding_key": {
+        "activity_section.key": "0132b48f-97e2-4e3d-8e1d-d8408d82b4ad",
+        "lesson_activity.key": "147f6e69-d327-495c-bf1a-bea41d9f1163"
+      }
+    },
+    {
+      "key": "7f8645d2-be1b-4236-9cfe-c168549670a1",
+      "position": 1,
+      "properties": {
+        "description": "In this activity, students create a digital bubble level using a micro:bit. This project introduces them to engineering concepts and practical tool building through the micro:bit. More importantly, the digital bubble level allows them to explore their surroundings – the classroom, hallways, or even outside – investigating real-world applications of levels. This activity will engage their curiosity and encourage discovery, all while introducing the concept of engineering in an interactive and exploratory way.\n\nStudents will incorporate the concepts of **variables**, **loops**, **conditionals**, **sensors**, **LEDs**, and **sounds** to create and realistic tool.\n\n**Find the code for this project <a href=\"https://makecode.microbit.org/_6fzRY7Fy927C\" target=\"_blank\">here.</a>**\n\n**Find the student handout for this project <a href=\"https://docs.google.com/document/d/1m_PC49F-oObDxS7XdZAmX5Akq0aTG4FZDjVe535whlY/template/preview\" target=\"_blank\">here.</a>**",
+        "name": "Digital Bubble Level"
+      },
+      "seeding_key": {
+        "activity_section.key": "7f8645d2-be1b-4236-9cfe-c168549670a1",
+        "lesson_activity.key": "b5959298-7d69-46e4-abf1-337d886fd4c8"
+      }
+    },
+    {
+      "key": "3f41292a-296d-48b8-b99e-fcc61af016df",
+      "position": 1,
+      "properties": {
+        "description": "**Show the correct temperature:** Add an \"on button A+B pressed\" input block to show the current temperature.\n\n**Convert Celsius to Fahrenheit:** The micro:bit thermometer works in the Celsius temperature scale. Add some code to convert the temperature to Fahrenheit when it's displayed. You can use a function like in this <a href=\"https://mbit.io/csf-fahrenheit\" target=\"_blank\">project</a> or borrow the math blocks from it.\n\n**Data logging:** The micro:bit will lose its maximum-minimum data when the power is disconnected. If you have the micro:bit V2 (the version with the built-in speaker), you can use its data logging feature to record data that stays on the micro:bit even when the power is removed, such as in this <a href=\"https://mbit.io/csf-fahrenheit\" target=\"_blank\">project</a>  that records temperature and light levels.\n\n**Find this project and more on <a href=\"https://mbit.io/csf-f4-make\" target=\"_blank\">microbit.org</a>**"
+      },
+      "seeding_key": {
+        "activity_section.key": "3f41292a-296d-48b8-b99e-fcc61af016df",
+        "lesson_activity.key": "e0f3be13-0b28-4e61-b997-04680efac4aa"
+      }
     }
   ],
   "script_levels": [
@@ -2099,6 +2658,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_f_maker_dance_party_unplugged_grade5"
+        ],
         "progression": "Dance Party: Unplugged"
       },
       "bonus": false,
@@ -2107,7 +2669,7 @@
           "course_f_maker_dance_party_unplugged_grade5"
         ],
         "lesson.key": "Dance Party: Unplugged",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "2c71f35d-7887-4c54-b923-424e2c7c6cbe"
       },
@@ -2121,6 +2683,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_vid1_grade5"
+        ],
         "progression": "Video: Warm Up"
       },
       "bonus": false,
@@ -2129,7 +2694,7 @@
           "CourseD_Dance_2020_vid1_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "1e7e4437-f8be-46cf-9f4d-53bd1e8c789f"
       },
@@ -2143,6 +2708,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_01_grade5"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2151,7 +2719,7 @@
           "CourseD_Dance_2020_01_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "454d4fc1-35fc-4683-942d-5005b8bbabca"
       },
@@ -2165,6 +2733,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_vid2_grade5"
+        ],
         "progression": "Video: Events"
       },
       "bonus": false,
@@ -2173,7 +2744,7 @@
           "CourseD_Dance_2020_vid2_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "b1367eff-c58d-4a3d-bad0-e8b13ee59950"
       },
@@ -2187,6 +2758,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_02_grade5"
+        ],
         "progression": "Events"
       },
       "bonus": false,
@@ -2195,7 +2769,7 @@
           "CourseD_Dance_2020_02_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "6a0c4aa4-c565-46c9-bd1d-4a56b7b585f2"
       },
@@ -2209,6 +2783,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_03_grade5"
+        ],
         "progression": "Events"
       },
       "bonus": false,
@@ -2217,7 +2794,7 @@
           "CourseD_Dance_2020_03_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "6a0c4aa4-c565-46c9-bd1d-4a56b7b585f2"
       },
@@ -2231,6 +2808,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_vid3_grade5"
+        ],
         "progression": "Video: Measures"
       },
       "bonus": false,
@@ -2239,7 +2819,7 @@
           "CourseD_Dance_2020_vid3_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "02d215c9-8566-4a21-991f-11a848988b0d"
       },
@@ -2253,6 +2833,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_04_grade5"
+        ],
         "progression": "Measures"
       },
       "bonus": false,
@@ -2261,7 +2844,7 @@
           "CourseD_Dance_2020_04_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "39b5b390-86ac-4e06-a2a1-2b9828482870"
       },
@@ -2275,6 +2858,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_05_grade5"
+        ],
         "progression": "Measures"
       },
       "bonus": false,
@@ -2283,7 +2869,7 @@
           "CourseD_Dance_2020_05_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "39b5b390-86ac-4e06-a2a1-2b9828482870"
       },
@@ -2297,6 +2883,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_06_grade5"
+        ],
         "progression": "Measures"
       },
       "bonus": false,
@@ -2305,7 +2894,7 @@
           "CourseD_Dance_2020_06_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "39b5b390-86ac-4e06-a2a1-2b9828482870"
       },
@@ -2319,6 +2908,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_vid4_grade5"
+        ],
         "progression": "Video: Properties"
       },
       "bonus": false,
@@ -2327,7 +2919,7 @@
           "CourseD_Dance_2020_vid4_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "23c5f2de-59ab-4b0d-a95f-49e469d20096"
       },
@@ -2341,6 +2933,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_07_grade5"
+        ],
         "progression": "Properties"
       },
       "bonus": false,
@@ -2349,7 +2944,7 @@
           "CourseD_Dance_2020_07_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "e16d16a7-d4ea-4a4c-88ed-bb7910db2fe7"
       },
@@ -2363,6 +2958,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_08_grade5"
+        ],
         "progression": "Properties"
       },
       "bonus": false,
@@ -2371,7 +2969,7 @@
           "CourseD_Dance_2020_08_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "e16d16a7-d4ea-4a4c-88ed-bb7910db2fe7"
       },
@@ -2385,6 +2983,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_09_grade5"
+        ],
         "progression": "Properties"
       },
       "bonus": false,
@@ -2393,7 +2994,7 @@
           "CourseD_Dance_2020_09_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "e16d16a7-d4ea-4a4c-88ed-bb7910db2fe7"
       },
@@ -2407,6 +3008,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_vid5_grade5"
+        ],
         "progression": "Video: Wrap-up"
       },
       "bonus": false,
@@ -2415,7 +3019,7 @@
           "CourseD_Dance_2020_vid5_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "cadb2ee2-9b1d-4c9e-9f71-bb1471e28b44"
       },
@@ -2429,6 +3033,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_10_grade5"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -2437,7 +3044,7 @@
           "CourseD_Dance_2020_10_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "6e0c86dc-890e-4a17-bea6-48228470017e"
       },
@@ -2451,6 +3058,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_bonus1_grade5"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -2459,7 +3069,7 @@
           "CourseD_Dance_2020_bonus1_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "a0e9a13e-b83d-4679-bb2f-7b452d7805af"
       },
@@ -2473,6 +3083,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_bonus3_grade5"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -2481,7 +3094,7 @@
           "CourseD_Dance_2020_bonus3_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "a0e9a13e-b83d-4679-bb2f-7b452d7805af"
       },
@@ -2495,6 +3108,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_predict_grade5"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -2503,7 +3119,7 @@
           "courseF_variables2_predict_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "35814670-1a95-4b95-849e-2c577eb54b4a"
       },
@@ -2517,6 +3133,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_predict2_grade5"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -2525,7 +3144,7 @@
           "courseF_variables2_predict2_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "35814670-1a95-4b95-849e-2c577eb54b4a"
       },
@@ -2539,6 +3158,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_set_grade5"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2547,7 +3169,7 @@
           "courseF_variables2_set_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "60772d61-edfc-41e7-a16c-d20e9307a82d"
       },
@@ -2561,6 +3183,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_change_grade5"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2569,7 +3194,7 @@
           "courseF_variables2_change_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "60772d61-edfc-41e7-a16c-d20e9307a82d"
       },
@@ -2583,6 +3208,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_click_grade5"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2591,7 +3219,7 @@
           "courseF_variables2_click_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "60772d61-edfc-41e7-a16c-d20e9307a82d"
       },
@@ -2605,6 +3233,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_explore_grade5"
+        ],
         "progression": "Exploration: Clicker Game"
       },
       "bonus": false,
@@ -2613,7 +3244,7 @@
           "courseF_clicker_explore_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "74f60e20-b39e-41da-9aa4-ed6d6b980d08"
       },
@@ -2627,6 +3258,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_sprites_grade5"
+        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
@@ -2635,7 +3269,7 @@
           "courseF_clicker_sprites_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "ae8d0d07-4a8b-4736-a0f2-78e509814ddb"
       },
@@ -2649,6 +3283,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_remove_grade5"
+        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
@@ -2657,7 +3294,7 @@
           "courseF_clicker_remove_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "ae8d0d07-4a8b-4736-a0f2-78e509814ddb"
       },
@@ -2671,6 +3308,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_variable_grade5"
+        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
@@ -2679,7 +3319,7 @@
           "courseF_clicker_variable_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "ae8d0d07-4a8b-4736-a0f2-78e509814ddb"
       },
@@ -2693,6 +3333,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_score_grade5"
+        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
@@ -2701,7 +3344,7 @@
           "courseF_clicker_score_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "ae8d0d07-4a8b-4736-a0f2-78e509814ddb"
       },
@@ -2715,6 +3358,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_finish_grade5"
+        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
@@ -2723,7 +3369,7 @@
           "courseF_clicker_finish_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "ae8d0d07-4a8b-4736-a0f2-78e509814ddb"
       },
@@ -2737,6 +3383,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_c_maker_meet_your_microbit_grade5"
+        ],
         "progression": "Meet your micro:bit"
       },
       "bonus": false,
@@ -2745,7 +3394,7 @@
           "course_c_maker_meet_your_microbit_grade5"
         ],
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "72786804-aa93-4fb5-a764-f493eb5c0fe8"
       },
@@ -2759,6 +3408,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade5-maker-matching-1"
+        ],
         "progression": "Matching Activity"
       },
       "bonus": false,
@@ -2767,7 +3419,7 @@
           "grade5-maker-matching-1"
         ],
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "f325180d-269d-40f8-b36b-7608f1ab05e1"
       },
@@ -2781,6 +3433,34 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_f_maker_step_counter_grade5"
+        ],
+        "progression": "Step counter coding with micro:bit"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course_f_maker_step_counter_grade5"
+        ],
+        "lesson.key": "Cristina - Step Counter Coding with micro:bit",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "grade5-maker-2024",
+        "activity_section.key": "2dd46e9e-3c96-4999-8505-1304bcc04380"
+      },
+      "level_keys": [
+        "course_f_maker_step_counter_grade5"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ConditionalsWithCards-Unplugged2022_maker_grade5"
+        ],
         "progression": "Conditionals with Cards - Unplugged Activity"
       },
       "bonus": false,
@@ -2798,11 +3478,14 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionalsVid1_grade5"
+        ],
         "progression": "Video: Conditionals: If Statements"
       },
       "bonus": false,
@@ -2820,11 +3503,14 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals1_predict1_grade5"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -2842,11 +3528,14 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals2_grade5"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2864,11 +3553,14 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals3_grade5"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2886,11 +3578,14 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals4_grade5"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2908,11 +3603,14 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals5_grade5"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2930,11 +3628,14 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals6_grade5"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2952,11 +3653,14 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionalsVidIfElse_grade5"
+        ],
         "progression": "Video: Conditionals: If and If/Else Statements"
       },
       "bonus": false,
@@ -2974,11 +3678,14 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals7_grade5"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2996,11 +3703,14 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals7_predict2_grade5"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -3018,12 +3728,15 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "courseD_bee_conditionals8_grade5"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -3041,11 +3754,14 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals9_grade5"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3063,11 +3779,14 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 13,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals10_grade5"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3085,11 +3804,14 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals_challenge1_grade5"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -3107,11 +3829,14 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 15,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals_challenge2_grade5"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -3129,11 +3854,14 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 16,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_2022LessonExtra14a_grade5"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -3151,11 +3879,14 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 17,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_2022_LessonExtra14b_grade5"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -3173,11 +3904,14 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_backgroundEffects_grade5"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3195,11 +3929,14 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_exemplar1_grade5"
+        ],
         "progression": "Example"
       },
       "bonus": false,
@@ -3217,11 +3954,14 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_sounds_grade5"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3239,11 +3979,14 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_events1_grade5"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3261,11 +4004,14 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_exemplar2_grade5"
+        ],
         "progression": "Example"
       },
       "bonus": false,
@@ -3283,11 +4029,14 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_addSprites_grade5"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3305,11 +4054,14 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_spriteBehaviors_grade5"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3327,11 +4079,14 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_spriteSizes_grade5"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3349,11 +4104,14 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_freeplay_grade5"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -3371,11 +4129,39 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_f_maker_microbit_pet_grade5"
+        ],
+        "progression": "Micro:bit pet with micro:bit"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course_f_maker_microbit_pet_grade5"
+        ],
+        "lesson.key": "Cristina - Micro:bit pet with micro:bit",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade5-maker-2024",
+        "activity_section.key": "d258590f-9bcb-40d1-9043-dd3e44281a42"
+      },
+      "level_keys": [
+        "course_f_maker_microbit_pet_grade5"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_variables_predict_grade5"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -3393,11 +4179,14 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 62,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_pilotVideo_prompts_grade5"
+        ],
         "progression": "Video: Text and Prompts"
       },
       "bonus": false,
@@ -3415,11 +4204,14 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 63,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_review_grade5"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3437,11 +4229,14 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 64,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_print_grade5"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3459,11 +4254,14 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 65,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_events_grade5"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3481,11 +4279,14 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 66,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_prompts_grade5"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3503,11 +4304,14 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 67,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_answer_grade5"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3525,11 +4329,14 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 68,
       "position": 8,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_concat_grade5"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3547,11 +4354,14 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 69,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_practice2022_2022_pilot_-2022-2_maker_grade5"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3569,11 +4379,14 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 70,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_collector_samples_2022_pilot_-2022-2_maker_grade5"
+        ],
         "progression": "Exploration: Sample Programs"
       },
       "bonus": false,
@@ -3591,11 +4404,14 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 71,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_collector_player_move_grade5"
+        ],
         "progression": "Mini-Project: Collector Game"
       },
       "bonus": false,
@@ -3613,11 +4429,14 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 72,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_collector_items_grade5"
+        ],
         "progression": "Mini-Project: Collector Game"
       },
       "bonus": false,
@@ -3635,11 +4454,14 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 73,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_collector_score_variable_grade5"
+        ],
         "progression": "Mini-Project: Collector Game"
       },
       "bonus": false,
@@ -3657,11 +4479,14 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 74,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_collector_remove_grade5"
+        ],
         "progression": "Mini-Project: Collector Game"
       },
       "bonus": false,
@@ -3679,11 +4504,14 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 75,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_collector_more_sprites_grade5"
+        ],
         "progression": "Mini-Project: Collector Game"
       },
       "bonus": false,
@@ -3701,11 +4529,14 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 76,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_collector_score_grade5"
+        ],
         "progression": "Mini-Project: Collector Game"
       },
       "bonus": false,
@@ -3723,11 +4554,14 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 77,
       "position": 8,
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_collector_freeplay_grade5"
+        ],
         "progression": "Mini-Project: Collector Game"
       },
       "bonus": false,
@@ -3743,6 +4577,31 @@
       "level_keys": [
         "courseF_collector_freeplay_grade5"
       ]
+    },
+    {
+      "chapter": 78,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "course_f_maker_max_min_thermometer_grade5"
+        ],
+        "progression": "Max-min thermometer with micro:bit"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course_f_maker_max_min_thermometer_grade5"
+        ],
+        "lesson.key": "Cristina - Max-min thermometer with micro:bit",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "grade5-maker-2024",
+        "activity_section.key": "f5e6eab1-df3f-413d-9a92-1b10d69d060e"
+      },
+      "level_keys": [
+        "course_f_maker_max_min_thermometer_grade5"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -3753,7 +4612,7 @@
           "course_f_maker_dance_party_unplugged_grade5"
         ],
         "lesson.key": "Dance Party: Unplugged",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "2c71f35d-7887-4c54-b923-424e2c7c6cbe"
       }
@@ -3765,7 +4624,7 @@
           "CourseD_Dance_2020_vid1_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "1e7e4437-f8be-46cf-9f4d-53bd1e8c789f"
       }
@@ -3777,7 +4636,7 @@
           "CourseD_Dance_2020_01_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "454d4fc1-35fc-4683-942d-5005b8bbabca"
       }
@@ -3789,7 +4648,7 @@
           "CourseD_Dance_2020_vid2_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "b1367eff-c58d-4a3d-bad0-e8b13ee59950"
       }
@@ -3801,7 +4660,7 @@
           "CourseD_Dance_2020_02_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "6a0c4aa4-c565-46c9-bd1d-4a56b7b585f2"
       }
@@ -3813,7 +4672,7 @@
           "CourseD_Dance_2020_03_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "6a0c4aa4-c565-46c9-bd1d-4a56b7b585f2"
       }
@@ -3825,7 +4684,7 @@
           "CourseD_Dance_2020_vid3_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "02d215c9-8566-4a21-991f-11a848988b0d"
       }
@@ -3837,7 +4696,7 @@
           "CourseD_Dance_2020_04_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "39b5b390-86ac-4e06-a2a1-2b9828482870"
       }
@@ -3849,7 +4708,7 @@
           "CourseD_Dance_2020_05_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "39b5b390-86ac-4e06-a2a1-2b9828482870"
       }
@@ -3861,7 +4720,7 @@
           "CourseD_Dance_2020_06_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "39b5b390-86ac-4e06-a2a1-2b9828482870"
       }
@@ -3873,7 +4732,7 @@
           "CourseD_Dance_2020_vid4_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "23c5f2de-59ab-4b0d-a95f-49e469d20096"
       }
@@ -3885,7 +4744,7 @@
           "CourseD_Dance_2020_07_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "e16d16a7-d4ea-4a4c-88ed-bb7910db2fe7"
       }
@@ -3897,7 +4756,7 @@
           "CourseD_Dance_2020_08_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "e16d16a7-d4ea-4a4c-88ed-bb7910db2fe7"
       }
@@ -3909,7 +4768,7 @@
           "CourseD_Dance_2020_09_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "e16d16a7-d4ea-4a4c-88ed-bb7910db2fe7"
       }
@@ -3921,7 +4780,7 @@
           "CourseD_Dance_2020_vid5_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "cadb2ee2-9b1d-4c9e-9f71-bb1471e28b44"
       }
@@ -3933,7 +4792,7 @@
           "CourseD_Dance_2020_10_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "6e0c86dc-890e-4a17-bea6-48228470017e"
       }
@@ -3945,7 +4804,7 @@
           "CourseD_Dance_2020_bonus1_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "a0e9a13e-b83d-4679-bb2f-7b452d7805af"
       }
@@ -3957,7 +4816,7 @@
           "CourseD_Dance_2020_bonus3_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "a0e9a13e-b83d-4679-bb2f-7b452d7805af"
       }
@@ -3969,7 +4828,7 @@
           "courseF_variables2_predict_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "35814670-1a95-4b95-849e-2c577eb54b4a"
       }
@@ -3981,7 +4840,7 @@
           "courseF_variables2_predict2_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "35814670-1a95-4b95-849e-2c577eb54b4a"
       }
@@ -3993,7 +4852,7 @@
           "courseF_variables2_set_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "60772d61-edfc-41e7-a16c-d20e9307a82d"
       }
@@ -4005,7 +4864,7 @@
           "courseF_variables2_change_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "60772d61-edfc-41e7-a16c-d20e9307a82d"
       }
@@ -4017,7 +4876,7 @@
           "courseF_variables2_click_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "60772d61-edfc-41e7-a16c-d20e9307a82d"
       }
@@ -4029,7 +4888,7 @@
           "courseF_clicker_explore_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "74f60e20-b39e-41da-9aa4-ed6d6b980d08"
       }
@@ -4041,7 +4900,7 @@
           "courseF_clicker_sprites_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "ae8d0d07-4a8b-4736-a0f2-78e509814ddb"
       }
@@ -4053,7 +4912,7 @@
           "courseF_clicker_remove_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "ae8d0d07-4a8b-4736-a0f2-78e509814ddb"
       }
@@ -4065,7 +4924,7 @@
           "courseF_clicker_variable_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "ae8d0d07-4a8b-4736-a0f2-78e509814ddb"
       }
@@ -4077,7 +4936,7 @@
           "courseF_clicker_score_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "ae8d0d07-4a8b-4736-a0f2-78e509814ddb"
       }
@@ -4089,7 +4948,7 @@
           "courseF_clicker_finish_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "ae8d0d07-4a8b-4736-a0f2-78e509814ddb"
       }
@@ -4101,7 +4960,7 @@
           "course_c_maker_meet_your_microbit_grade5"
         ],
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "72786804-aa93-4fb5-a764-f493eb5c0fe8"
       }
@@ -4113,9 +4972,21 @@
           "grade5-maker-matching-1"
         ],
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "f325180d-269d-40f8-b36b-7608f1ab05e1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "course_f_maker_step_counter_grade5",
+        "script_level.level_keys": [
+          "course_f_maker_step_counter_grade5"
+        ],
+        "lesson.key": "Cristina - Step Counter Coding with micro:bit",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "grade5-maker-2024",
+        "activity_section.key": "2dd46e9e-3c96-4999-8505-1304bcc04380"
       }
     },
     {
@@ -4444,6 +5315,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "course_f_maker_microbit_pet_grade5",
+        "script_level.level_keys": [
+          "course_f_maker_microbit_pet_grade5"
+        ],
+        "lesson.key": "Cristina - Micro:bit pet with micro:bit",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade5-maker-2024",
+        "activity_section.key": "d258590f-9bcb-40d1-9043-dd3e44281a42"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "courseF_variables_predict_grade5",
         "script_level.level_keys": [
           "courseF_variables_predict_grade5"
@@ -4645,6 +5528,18 @@
         "script.name": "grade5-maker-2024",
         "activity_section.key": "682131ec-87cf-47ba-a75b-2cbd5f51a0b4"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "course_f_maker_max_min_thermometer_grade5",
+        "script_level.level_keys": [
+          "course_f_maker_max_min_thermometer_grade5"
+        ],
+        "lesson.key": "Cristina - Max-min thermometer with micro:bit",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "grade5-maker-2024",
+        "activity_section.key": "f5e6eab1-df3f-413d-9a92-1b10d69d060e"
+      }
     }
   ],
   "resources": [
@@ -4762,6 +5657,42 @@
       }
     },
     {
+      "name": "CS talking points for code",
+      "url": "https://drive.google.com/file/d/1t-vFk_eeq4AE1uaNsgWRr3i40fJf65i6/view?usp=drive_link",
+      "key": "cs_talking_points_for_code",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "cs_talking_points_for_code"
+      }
+    },
+    {
+      "name": "CS talking points for code",
+      "url": "https://drive.google.com/file/d/1yaGqykB1ZwfK86UJZ7PIg2wFLtlL95oj/view?usp=drive_link",
+      "key": "cs_talking_points_for_code_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "cs_talking_points_for_code_1"
+      }
+    },
+    {
+      "name": "CS Talking Points for Code",
+      "url": "https://drive.google.com/file/d/104R5jirxgZwiHxSNR6rYIxFcNng3Q3lE/view?usp=drive_link",
+      "key": "cs_talking_points_for_code_2",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "cs_talking_points_for_code_2"
+      }
+    },
+    {
       "name": "Dance Party Project Guide",
       "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit",
       "key": "dance_party_project_guide",
@@ -4798,6 +5729,42 @@
       }
     },
     {
+      "name": "Live micro:bit classroom session",
+      "url": "https://mbit.io/csf-f2-classroom",
+      "key": "live_micro_bit_classroom_session",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "live_micro_bit_classroom_session"
+      }
+    },
+    {
+      "name": "Live micro:bit classroom session",
+      "url": "https://mbit.io/csf-f3-classroom",
+      "key": "live_micro_bit_classroom_session_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "live_micro_bit_classroom_session_1"
+      }
+    },
+    {
+      "name": "Live micro:bit classroom session",
+      "url": "https://mbit.io/csf-f4-classroom",
+      "key": "live_micro_bit_classroom_session_2",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "live_micro_bit_classroom_session_2"
+      }
+    },
+    {
       "name": "MakeCode editor",
       "url": "https://makecode.microbit.org/#editor",
       "key": "makecode_editor",
@@ -4807,6 +5774,42 @@
       },
       "seeding_key": {
         "resource.key": "makecode_editor"
+      }
+    },
+    {
+      "name": "Max-min thermometer: Finished project",
+      "url": "https://mbit.io/csf-f4-project",
+      "key": "max-min_thermometer_finished_project",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "max-min_thermometer_finished_project"
+      }
+    },
+    {
+      "name": "Max-min thermometer: Introduction video",
+      "url": "https://mbit.io/csf-f4-intro",
+      "key": "max-min_thermometer_introduction_video",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "max-min_thermometer_introduction_video"
+      }
+    },
+    {
+      "name": "Max-min thermometer: Step by step coding video",
+      "url": "https://mbit.io/csf-f4-coding",
+      "key": "max-min_thermometer_step_by_step_coding_video",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "max-min_thermometer_step_by_step_coding_video"
       }
     },
     {
@@ -4822,6 +5825,19 @@
       }
     },
     {
+      "name": "Meet your micro:bit Activity Guide",
+      "url": "https://docs.google.com/document/d/1aiCZucwRULkV7zhEwp-BUUVzwBXsIbBCr7Hv_EgWDro/template/preview",
+      "key": "meet_your_micro_bit_activity_guide",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://docs.google.com/document/d/1aiCZucwRULkV7zhEwp-BUUVzwBXsIbBCr7Hv_EgWDro/export/pdf",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "meet_your_micro_bit_activity_guide"
+      }
+    },
+    {
       "name": "Meet your micro:bit video guide",
       "url": "https://mbit.io/csf-1-lesson-guide",
       "key": "meet_your_micro_bit_video_guide",
@@ -4831,6 +5847,42 @@
       },
       "seeding_key": {
         "resource.key": "meet_your_micro_bit_video_guide"
+      }
+    },
+    {
+      "name": "micro:bit pet: Finished project",
+      "url": "https://mbit.io/csf-f3-project",
+      "key": "micro_bit_pet_finished_project",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "micro_bit_pet_finished_project"
+      }
+    },
+    {
+      "name": "micro:bit pet: Introduction Video",
+      "url": "https://mbit.io/csf-f3-intro",
+      "key": "micro_bit_pet_introduction_video",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "micro_bit_pet_introduction_video"
+      }
+    },
+    {
+      "name": "micro:bit pet: Step by step coding video",
+      "url": "https://mbit.io/csf-f3-coding",
+      "key": "micro_bit_pet_step_by_step_coding_video",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "micro_bit_pet_step_by_step_coding_video"
       }
     },
     {
@@ -4917,6 +5969,42 @@
       }
     },
     {
+      "name": "Step Counter: Finished project",
+      "url": "https://mbit.io/csf-f2-project",
+      "key": "step_counter_finished_project",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "step_counter_finished_project"
+      }
+    },
+    {
+      "name": "Step Counter: Introduction Video",
+      "url": "https://mbit.io/csf-f2-intro",
+      "key": "step_counter_introduction_video",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "step_counter_introduction_video"
+      }
+    },
+    {
+      "name": "Step Counter: Step by step coding video",
+      "url": "https://mbit.io/csf-f2-coding",
+      "key": "step_counter_step_by_step_coding_video",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "step_counter_step_by_step_coding_video"
+      }
+    },
+    {
       "name": " Unplugged Blocks (Courses C-F)",
       "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
       "key": "unplugged_blocks_courses_c-f_",
@@ -4980,6 +6068,42 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Cristina - Max-min thermometer with micro:bit",
+        "resource.key": "_grade_5_-_maker_with_micro_bit_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Max-min thermometer with micro:bit",
+        "resource.key": "cs_talking_points_for_code_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Max-min thermometer with micro:bit",
+        "resource.key": "live_micro_bit_classroom_session_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Max-min thermometer with micro:bit",
+        "resource.key": "max-min_thermometer_finished_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Max-min thermometer with micro:bit",
+        "resource.key": "max-min_thermometer_introduction_video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Max-min thermometer with micro:bit",
+        "resource.key": "max-min_thermometer_step_by_step_coding_video"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Cristina - Meet your micro:bit",
         "resource.key": "_grade_5_-_maker_with_micro_bit_slides"
       }
@@ -5011,7 +6135,85 @@
     {
       "seeding_key": {
         "lesson.key": "Cristina - Meet your micro:bit",
+        "resource.key": "meet_your_micro_bit_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Meet your micro:bit",
         "resource.key": "meet_your_micro_bit_video_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Micro:bit pet with micro:bit",
+        "resource.key": "_grade_5_-_maker_with_micro_bit_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Micro:bit pet with micro:bit",
+        "resource.key": "cs_talking_points_for_code_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Micro:bit pet with micro:bit",
+        "resource.key": "live_micro_bit_classroom_session_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Micro:bit pet with micro:bit",
+        "resource.key": "micro_bit_pet_finished_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Micro:bit pet with micro:bit",
+        "resource.key": "micro_bit_pet_introduction_video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Micro:bit pet with micro:bit",
+        "resource.key": "micro_bit_pet_step_by_step_coding_video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Step Counter Coding with micro:bit",
+        "resource.key": "_grade_5_-_maker_with_micro_bit_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Step Counter Coding with micro:bit",
+        "resource.key": "cs_talking_points_for_code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Step Counter Coding with micro:bit",
+        "resource.key": "live_micro_bit_classroom_session"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Step Counter Coding with micro:bit",
+        "resource.key": "step_counter_finished_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Step Counter Coding with micro:bit",
+        "resource.key": "step_counter_introduction_video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Step Counter Coding with micro:bit",
+        "resource.key": "step_counter_step_by_step_coding_video"
       }
     },
     {
@@ -5156,6 +6358,16 @@
       }
     },
     {
+      "key": "data",
+      "word": "Data",
+      "definition": "A collection of information.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data"
+      }
+    },
+    {
       "key": "event",
       "word": "Event",
       "definition": "An action that causes something to happen.",
@@ -5163,6 +6375,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "event"
+      }
+    },
+    {
+      "key": "hardware",
+      "word": "Hardware",
+      "definition": "The physical, electronic parts of a computer system.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "hardware"
       }
     },
     {
@@ -5183,6 +6405,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "line"
+      }
+    },
+    {
+      "key": "loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "loop"
       }
     },
     {
@@ -5246,6 +6478,26 @@
       }
     },
     {
+      "key": "simulation",
+      "word": "Simulation",
+      "definition": "A program which replicates or mimics key features of a real world event.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "simulation"
+      }
+    },
+    {
+      "key": "software",
+      "word": "Software",
+      "definition": "Programs made of code that tell computers what to do.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "software"
+      }
+    },
+    {
       "key": "variable",
       "word": "Variable",
       "definition": "A label for a piece of information used in a program.",
@@ -5271,6 +6523,30 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Cristina - Max-min thermometer with micro:bit",
+        "vocabulary.key": "conditionals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Max-min thermometer with micro:bit",
+        "vocabulary.key": "hardware"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Max-min thermometer with micro:bit",
+        "vocabulary.key": "software"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Max-min thermometer with micro:bit",
+        "vocabulary.key": "variable"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Cristina - Meet your micro:bit",
         "vocabulary.key": "event"
       }
@@ -5291,6 +6567,36 @@
       "seeding_key": {
         "lesson.key": "Cristina - Meet your micro:bit",
         "vocabulary.key": "output"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Micro:bit pet with micro:bit",
+        "vocabulary.key": "conditionals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Micro:bit pet with micro:bit",
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Micro:bit pet with micro:bit",
+        "vocabulary.key": "simulation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Step Counter Coding with micro:bit",
+        "vocabulary.key": "data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Step Counter Coding with micro:bit",
+        "vocabulary.key": "variable"
       }
     },
     {
@@ -5381,6 +6687,16 @@
       }
     },
     {
+      "key": "0edb525e-c8fb-4171-b999-070ebbd191ea",
+      "properties": {
+        "description": "Explore ways to use the micro:bit with a battery pack."
+      },
+      "seeding_key": {
+        "lesson.key": "Cristina - Step Counter Coding with micro:bit",
+        "objective.key": "0edb525e-c8fb-4171-b999-070ebbd191ea"
+      }
+    },
+    {
       "key": "18a07bc0-c6bf-4147-938f-7754a39fd154",
       "properties": {
         "description": "Create a clicker game in Sprite Lab where sprites can be removed to score points"
@@ -5388,6 +6704,16 @@
       "seeding_key": {
         "lesson.key": "Counting with Variables",
         "objective.key": "18a07bc0-c6bf-4147-938f-7754a39fd154"
+      }
+    },
+    {
+      "key": "1bbaf72c-1738-4cee-b510-4a562639040a",
+      "properties": {
+        "description": "Discuss real applications of a thermometer project."
+      },
+      "seeding_key": {
+        "lesson.key": "Cristina - Max-min thermometer with micro:bit",
+        "objective.key": "1bbaf72c-1738-4cee-b510-4a562639040a"
       }
     },
     {
@@ -5411,6 +6737,16 @@
       }
     },
     {
+      "key": "3aa3115c-a037-4985-9c96-df373104bf80",
+      "properties": {
+        "description": "Recall previous learning about variables, data and events."
+      },
+      "seeding_key": {
+        "lesson.key": "Cristina - Step Counter Coding with micro:bit",
+        "objective.key": "3aa3115c-a037-4985-9c96-df373104bf80"
+      }
+    },
+    {
       "key": "4b242478-48d3-4782-8d97-0cff25c15da4",
       "properties": {
         "description": "Respond to commands given by an instructor."
@@ -5418,6 +6754,26 @@
       "seeding_key": {
         "lesson.key": "Dance Party: Unplugged",
         "objective.key": "4b242478-48d3-4782-8d97-0cff25c15da4"
+      }
+    },
+    {
+      "key": "5455d11d-eec1-4525-aa5b-c11774462f7b",
+      "properties": {
+        "description": "Make sense of how hardware and software function together."
+      },
+      "seeding_key": {
+        "lesson.key": "Cristina - Micro:bit pet with micro:bit",
+        "objective.key": "5455d11d-eec1-4525-aa5b-c11774462f7b"
+      }
+    },
+    {
+      "key": "5ef36124-e256-4790-9b71-f8f6810ecbe0",
+      "properties": {
+        "description": "Use variables as a way to record steps taken."
+      },
+      "seeding_key": {
+        "lesson.key": "Cristina - Step Counter Coding with micro:bit",
+        "objective.key": "5ef36124-e256-4790-9b71-f8f6810ecbe0"
       }
     },
     {
@@ -5441,6 +6797,16 @@
       }
     },
     {
+      "key": "6a774f46-bb33-43e7-a1cb-deb316cff08a",
+      "properties": {
+        "description": "Share final projects with other classmates."
+      },
+      "seeding_key": {
+        "lesson.key": "Cristina - Step Counter Coding with micro:bit",
+        "objective.key": "6a774f46-bb33-43e7-a1cb-deb316cff08a"
+      }
+    },
+    {
       "key": "6fc3e0e0-598f-4b82-a22b-7105f36032b8",
       "properties": {
         "description": "Use variables to hold words and phrases."
@@ -5458,6 +6824,16 @@
       "seeding_key": {
         "lesson.key": "Counting with Variables",
         "objective.key": "83991f49-8aed-41f7-b9f9-d22cf8871fe1"
+      }
+    },
+    {
+      "key": "8854ee53-1d70-4ef7-9eec-fb2bfa81c85e",
+      "properties": {
+        "description": "Write code using loops, variables, events, and conditionals."
+      },
+      "seeding_key": {
+        "lesson.key": "Cristina - Micro:bit pet with micro:bit",
+        "objective.key": "8854ee53-1d70-4ef7-9eec-fb2bfa81c85e"
       }
     },
     {
@@ -5488,6 +6864,16 @@
       "seeding_key": {
         "lesson.key": "Poem Art",
         "objective.key": "a96bd379-adc4-44a4-9b42-1e48b3995c70"
+      }
+    },
+    {
+      "key": "b159413e-36af-4a0e-95f7-24e42db26b81",
+      "properties": {
+        "description": "Program using conditionals and more advanced variables."
+      },
+      "seeding_key": {
+        "lesson.key": "Cristina - Max-min thermometer with micro:bit",
+        "objective.key": "b159413e-36af-4a0e-95f7-24e42db26b81"
       }
     },
     {
@@ -5571,6 +6957,16 @@
       }
     },
     {
+      "key": "ea0126b7-759a-42fc-a4dc-d0c725c76112",
+      "properties": {
+        "description": "Write code that includes variables and events."
+      },
+      "seeding_key": {
+        "lesson.key": "Cristina - Step Counter Coding with micro:bit",
+        "objective.key": "ea0126b7-759a-42fc-a4dc-d0c725c76112"
+      }
+    },
+    {
       "key": "f73cef7b-801a-4a41-b175-be6683c56c59",
       "properties": {
         "description": "Create their own collector game in Sprite Lab using multiple sprites which are controlled individually and variables to track the player’s score"
@@ -5605,9 +7001,79 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Cristina - Max-min thermometer with micro:bit",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Max-min thermometer with micro:bit",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Max-min thermometer with micro:bit",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Max-min thermometer with micro:bit",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-DA-07"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Cristina - Meet your micro:bit",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Micro:bit pet with micro:bit",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Micro:bit pet with micro:bit",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Micro:bit pet with micro:bit",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Step Counter Coding with micro:bit",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Step Counter Coding with micro:bit",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Step Counter Coding with micro:bit",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-CS-02"
       }
     },
     {

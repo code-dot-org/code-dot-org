@@ -222,6 +222,15 @@ export default class ProjectManager {
     this.channelsStore.redirectToRemix(this.lastChannel);
   }
 
+  redirectToView() {
+    this.throwErrorIfDestroyed('redirectToView');
+    if (!this.lastChannel || !this.lastChannel.projectType) {
+      this.logAndThrowError('Cannot view without channel');
+      return;
+    }
+    this.channelsStore.redirectToView(this.lastChannel);
+  }
+
   /**
    * Publish the current channel.
    */
@@ -348,12 +357,13 @@ export default class ProjectManager {
   private onSaveFail(errorMessage: string, error: Error) {
     this.saveInProgress = false;
     this.executeSaveFailListeners(error);
-    if (error.message.includes('409')) {
-      // If this is a conflict, we need to reload the page.
+    if (error.message.includes('409') || error.message.includes('401')) {
+      // If this is a conflict or the user has somehow become unauthorized,
+      // we need to reload the page.
       // We set forceReloading to true so the client can skip
       // showing the user a dialog before reload.
       this.forceReloading = true;
-      this.metricsReporter.logWarning('Conflict on save, reloading page');
+      this.metricsReporter.logWarning(`${error.message}. Reloading page.`);
       reload();
     } else {
       // Otherwise, we log the error.

@@ -3,17 +3,14 @@ import classNames from 'classnames';
 
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {StrongText} from '@cdo/apps/componentLibrary/typography';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
-import Button from '@cdo/apps/componentLibrary/button';
 import aiBotIcon from '@cdo/static/aichat/ai-bot-icon.svg';
+import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
-import {removeModelUpdateMessage} from '../redux/aichatRedux';
-import {
-  ChatCompletionMessage,
-  Role,
-  AichatInteractionStatus as Status,
-} from '../types';
+import {removeUpdateMessage} from '../redux/aichatRedux';
+import {ChatCompletionMessage, Role} from '../types';
 import aichatI18n from '../locale';
+import ChatNotificationMessage from './ChatNotificationMessage';
 import moduleStyles from './chatMessage.module.scss';
 
 interface ChatMessageProps {
@@ -26,9 +23,14 @@ const TOO_PERSONAL_MESSAGE = aichatI18n.tooPersonalUserMessage();
 const isAssistant = (role: string) => role === Role.ASSISTANT;
 const isUser = (role: string) => role === Role.USER;
 const isModelUpdate = (role: string) => role === Role.MODEL_UPDATE;
+const isError = (role: string) => role === Role.ERROR_NOTIFICATION;
 
 const displayUserMessage = (status: string, chatMessageText: string) => {
-  if (status === Status.OK || status === Status.UNKNOWN) {
+  if (
+    status === Status.OK ||
+    status === Status.UNKNOWN ||
+    status === Status.ERROR
+  ) {
     return (
       <div
         className={classNames(moduleStyles.message, moduleStyles.userMessage)}
@@ -38,14 +40,12 @@ const displayUserMessage = (status: string, chatMessageText: string) => {
     );
   } else if (status === Status.PROFANITY_VIOLATION) {
     return (
-      <div
-        className={classNames(
-          moduleStyles.message,
-          moduleStyles.inappropriateMessage
-        )}
-      >
-        {INAPPROPRIATE_MESSAGE}
-      </div>
+      <ChatNotificationMessage
+        content={INAPPROPRIATE_MESSAGE}
+        iconName="circle-xmark"
+        iconClass={moduleStyles.danger}
+        containerClass={moduleStyles.dangerContainer}
+      />
     );
   } else if (status === Status.PII_VIOLATION) {
     return (
@@ -56,18 +56,6 @@ const displayUserMessage = (status: string, chatMessageText: string) => {
         )}
       >
         {TOO_PERSONAL_MESSAGE}
-      </div>
-    );
-  } else if (status === Status.ERROR) {
-    return (
-      <div
-        className={classNames(
-          moduleStyles.message,
-          // TODO: Add dedicated error message styling.
-          moduleStyles.tooPersonalMessage
-        )}
-      >
-        {'There was an error getting a response. Please try again.'}
       </div>
     );
   } else {
@@ -84,6 +72,18 @@ const displayAssistantMessage = (status: string, chatMessageText: string) => {
           moduleStyles.assistantMessage
         )}
       >
+        <SafeMarkdown markdown={chatMessageText} />
+      </div>
+    );
+  } else if (status === Status.ERROR) {
+    return (
+      <div
+        className={classNames(
+          moduleStyles.message,
+          moduleStyles.assistantMessage,
+          moduleStyles.dangerContainer
+        )}
+      >
         {chatMessageText}
       </div>
     );
@@ -94,25 +94,50 @@ const displayModelUpdateMessage = (
   message: ChatCompletionMessage,
   onRemove: () => void
 ) => {
-  const {chatMessageText, timestamp} = message;
+  const {chatMessageText, chatMessageSuffix, timestamp} = message;
 
   return (
-    <>
-      <div>
-        <FontAwesomeV6Icon iconName="check" className={moduleStyles.check} />
-        <span className={moduleStyles.modelUpdateMessageTextContainer}>
-          <StrongText>{chatMessageText}</StrongText> has been updated
-        </span>
-        <StrongText>{timestamp}</StrongText>
-      </div>
-      <Button
-        onClick={onRemove}
-        isIconOnly
-        icon={{iconName: 'xmark'}}
-        size="s"
-        className={moduleStyles.removeStatusUpdate}
-      />
-    </>
+    <ChatNotificationMessage
+      onRemove={onRemove}
+      content={
+        <>
+          <span className={moduleStyles.modelUpdateMessageTextContainer}>
+            <StrongText>{chatMessageText}</StrongText>
+            {chatMessageSuffix?.text}
+            {chatMessageSuffix?.boldtypeText && (
+              <StrongText>{chatMessageSuffix?.boldtypeText}</StrongText>
+            )}
+          </span>
+          <StrongText>{timestamp}</StrongText>
+        </>
+      }
+      iconName="check"
+      iconClass={moduleStyles.check}
+      containerClass={moduleStyles.modelUpdateContainer}
+    />
+  );
+};
+
+const displayErrorMessage = (
+  message: ChatCompletionMessage,
+  onRemove: () => void
+) => {
+  const {chatMessageText} = message;
+
+  return (
+    <ChatNotificationMessage
+      onRemove={onRemove}
+      content={
+        <>
+          <span className={moduleStyles.modelUpdateMessageTextContainer}>
+            <StrongText>{chatMessageText}</StrongText>
+          </span>
+        </>
+      }
+      iconName="circle-xmark"
+      iconClass={moduleStyles.danger}
+      containerClass={moduleStyles.dangerContainer}
+    />
   );
 };
 
@@ -121,11 +146,8 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({message}) => {
 
   return (
     <div id={`ChatMessage id: ${message.id}`}>
-      {isUser(message.role) && (
-        <div className={moduleStyles.userMessageContainer}>
-          {displayUserMessage(message.status, message.chatMessageText)}
-        </div>
-      )}
+      {isUser(message.role) &&
+        displayUserMessage(message.status, message.chatMessageText)}
 
       {isAssistant(message.role) && (
         <div className={moduleStyles.assistantMessageContainer}>
@@ -134,13 +156,15 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({message}) => {
         </div>
       )}
 
-      {isModelUpdate(message.role) && (
-        <div className={moduleStyles.modelUpdateMessageContainer}>
-          {displayModelUpdateMessage(message, () =>
-            dispatch(removeModelUpdateMessage(message.id))
-          )}
-        </div>
-      )}
+      {isModelUpdate(message.role) &&
+        displayModelUpdateMessage(message, () =>
+          dispatch(removeUpdateMessage(message.id))
+        )}
+
+      {isError(message.role) &&
+        displayErrorMessage(message, () =>
+          dispatch(removeUpdateMessage(message.id))
+        )}
     </div>
   );
 };

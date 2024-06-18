@@ -1,10 +1,12 @@
-import CdoFieldDropdown from './cdoFieldDropdown';
 import {
   FieldDropdownConfig,
   FieldDropdownValidator,
   MenuGeneratorFunction,
 } from 'blockly/core';
+
 import {EMPTY_OPTION} from '../constants';
+
+import CdoFieldDropdown from './cdoFieldDropdown';
 
 type CustomMenuGenerator = CustomMenuOption[] | MenuGeneratorFunction;
 type CustomMenuOption = [string, string];

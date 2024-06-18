@@ -5,15 +5,11 @@ description 'description here'
 markdown <<MARKDOWN
 # App Lab + Circuit Playground or micro:bit
 
-<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+#### Both the Circuit Playground and the micro:bit use a set of additional commands available in App Lab. Using the same drag-and-drop editor that students have become comfortable with in App Lab and Game Lab, students can turn on LEDs, read sensors, and write programs that use physical hardware for user input and output. 
 
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">Both the Circuit Playground and the micro:bit use a set of additional commands available in App Lab. Using the same drag-and-drop editor that students have become comfortable with in App Lab and Game Lab, students can turn on LEDs, read sensors, and write programs that use physical hardware for user input and output. 
-</p>
-</div>
 
 <img src="https://images.code.org/6b0b6c51f8455f04d276ecf6a58f2f43-image-1682464042240.gif" style="margin: 20px 10px 0px 142px; float:left;">
 <img src="https://images.code.org/a046b9bb9c5ac3faed6ea9ee7d457bd7-image-1682464490951.gif" style="float:right; margin: 45px 142px 0px 10px; width:250px;">
-
 <div style="clear:both;">
 
 <table style="width:85%;">
@@ -26,6 +22,8 @@ markdown <<MARKDOWN
 #### **micro:bit**</td>
 </tr>
 </table>
+<br>
+
 
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
@@ -33,9 +31,9 @@ markdown <<MARKDOWN
  <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
-##### The **Circuit Playground** is a small microcontroller board with LEDs, buttons, and sensors built in. It is designed specifically for novice programmers, enabling students to get up and running quickly with physical computing without worrying about many of the traditional barriers to entry.
+#### The **Circuit Playground** is a small microcontroller board with LEDs, buttons, and sensors built in. It is designed specifically for novice programmers, enabling students to get up and running quickly with physical computing without worrying about many of the traditional barriers to entry.
 
-##### The **micro:bit** is a pocket-sized computer with an LED light display, buttons, sensors, and many input/output features that, when programmed, let students interact with the device and the world. The many built in features of the micro:bit allow beginners to do interesting things immediately without wiring. 
+#### The **micro:bit** is a pocket-sized computer with an LED light display, buttons, sensors, and many input/output features that, when programmed, let students interact with the device and the world. The many built in features of the micro:bit allow beginners to do interesting things immediately without wiring. 
 
 </p>
 </div>
@@ -48,16 +46,16 @@ markdown <<MARKDOWN
 
 ## WebSerial
 
-##### The Circuit Playground and micro:bit can connect directly to computers while using Google Chrome or Microsoft Edge browsers. WebSerial is the recommended way to connect to your board.
+#### The Circuit Playground and micro:bit can connect directly to computers while using Google Chrome or Microsoft Edge browsers. WebSerial is the recommended way to connect to your board.
 
-##### 1. Connect the board to your computer.
-##### 2. Press the “Connect to Board” button.
-##### 3. A window should pop up with a row that includes "Circuit Playground" or "micro:bit". Select that row, then click "Connect".
-##### 4. You should see several green checkmarks below. When full connected, the Circuit Playground will display a sequence of green lights and emit a series of beeps, and the micro:bit will show a short animation.
+### **Set Up**
 
-##### That's it!! Just those **four** easy steps! 
+#### 1. Connect the board to your computer.
+#### 2. Press the “Connect to Board” button.
+#### 3. A window should pop up with a row that includes "Circuit Playground" or "micro:bit". Select that row, then click "Connect".
+#### 4. You should see several green checkmarks below. When full connected, the Circuit Playground will display a sequence of green lights and emit a series of beeps, and the micro:bit will show a short animation.
 
-##### If you have any issues, please refer to our <a href="https://support.code.org/hc/en-us/articles/9953258694669" target="blank" rel="noopener noreferrer">WebSerial Support Article</a>.
+#### That's it! Just those **four** easy steps! If you have any issues, please refer to our <a href="https://support.code.org/hc/en-us/articles/9953258694669" target="blank" rel="noopener noreferrer">Support Article</a>.
 
 </p>
 </div>
@@ -69,13 +67,14 @@ markdown <<MARKDOWN
  <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
-##### You **will** need a class set of the Circuit Playgrounds to teach Unit 6 - Option A OR a class set of the micro:bits to each Unit 6 - Option B of CS Discoveries. 
+#### You **will** need a class set of the Circuit Playgrounds to teach Unit 6 - Option A OR a class set of the micro:bits to each Unit 6 - Option B of CS Discoveries. 
 
-##### If you do not have access to either Circuit Playgrounds or micro:bits, you will be able to teach all units of CS Discoveries except Unit 6: Creating Apps with Devices. 
+#### If you do not have access to either Circuit Playgrounds or micro:bits, you will be able to teach all units of CS Discoveries except Unit 6: Creating Apps with Devices. 
+<br>
 
-<a href="https://code.org/circuitplayground" target="blank" rel="noopener noreferrer" >Click here</a> to learn more about the **Circuit Playground** and how to purchase Circuit Playgrounds for your classroom.
+#### <a href="https://code.org/circuitplayground" target="blank" rel="noopener noreferrer" >Click here</a> to learn more about the **Circuit Playground** and how to purchase Circuit Playgrounds for your classroom.
 
-<a href="https://code.org/maker/microbit" target="blank" rel="noopener noreferrer" >Click here</a> to learn more about the **micro:bit** and how to purchase micro:bits for your classroom.
+#### <a href="https://code.org/maker/microbit" target="blank" rel="noopener noreferrer" >Click here</a> to learn more about the **micro:bit** and how to purchase micro:bits for your classroom.
 
 </p>
 </div>

@@ -1269,7 +1269,7 @@ it-IT:
   header_help_support: Help and support
   header_help_us: Aiutaci
   header_home: Home
-  header_incubator: Incubatrice
+  header_incubator: Incubatore
   header_learn: Impara
   header_legal: Privacy & Legale
   header_legal_cookie_notice: Informativa sui cookie
@@ -1729,6 +1729,7 @@ it-IT:
   homepage_slot_text_link_k5: Corsi pensati per studenti da 5 a 10 anni
   homepage_slot_text_link_local: Trova una classe nella tua zona
   homepage_slot_text_link_middle: Scuola media
+  homepage_slot_text_link_middle_and_high: Scuole Medie e Superiori
   homepage_slot_text_link_othercourses: Altri corsi online
   homepage_slot_text_link_pd: Professional Development
   homepage_slot_text_link_shop: T-shirts, cappellini & altro
@@ -2679,6 +2680,8 @@ it-IT:
   user_header_applab: 'Sviluppo App '
   user_header_artist: 'Artista '
   user_header_create: 'Crea '
+  user_header_create_account: Crea un account
+  user_header_create_account_low_cap: Crea account
   user_header_dance: Ballando col codice
   user_header_flappy: Flappy
   user_header_gamelab: Sviluppo Giochi
@@ -2686,6 +2689,8 @@ it-IT:
   user_header_logout: Esci
   user_header_minecraft: Minecraft
   user_header_my_projects: I miei progetti
+  user_header_new_project: Nuovo progetto
+  user_header_new_project_low_cap: Nuovo progetto
   user_header_playlab: Laboratorio
   user_header_settings: Il mio account
   user_header_signin: Accedi

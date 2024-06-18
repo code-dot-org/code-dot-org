@@ -5,11 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Tools Across The Course
 
-<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
-
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">CS Discoveries introduces students to tools and programming languages that are accessible for beginners while offering more advanced students opportunities to create sophisticated projects. All of the tools below are integrated directly into the Code.org website, allowing teachers to have visibility into all student work and progress. 
-</p>
-</div>
+#### CS Discoveries introduces students to **tools and programming languages that are accessible for beginners** while offering more advanced students opportunities to create sophisticated projects. All of the tools below are integrated directly into the Code.org website, allowing teachers to have visibility into all student work and progress. 
 
 <div style="clear:both"/>
 
@@ -17,11 +13,11 @@ markdown <<MARKDOWN
 
 ## Web Lab
 
-##### Web Lab is a browser-based tool for creating and publishing HTML and CSS web sites. 
+#### Web Lab is a browser-based tool for creating and publishing HTML and CSS web sites. 
 
-##### **Units that use Web Lab:** 
+### **Units that use Web Lab:** 
 
-##### Web Development
+#### Web Development
 
 
 <hr style="clear:both">
@@ -31,11 +27,11 @@ markdown <<MARKDOWN
 
 ## Game Lab
 
-##### Game Lab is a browser-based JavaScript programming environment designed to create sprite-based drawings, animations, and games. Students are able to switch between programming in blocks or text. 
+#### Game Lab is a browser-based JavaScript programming environment designed to create sprite-based drawings, animations, and games. Students are able to switch between programming in blocks or text. 
 
-##### **Units that use Game Lab:** 
+### **Units that use Game Lab:** 
 
-##### Interactive Animations and Games
+#### Interactive Animations and Games
 
 <hr style="clear:both">
 
@@ -43,16 +39,16 @@ markdown <<MARKDOWN
 
 ## App Lab
 
-##### App Lab is a browser-based JavaScript programming environment for creating interactive apps. Students are able to switch between programming in blocks or text. 
+#### App Lab is a browser-based JavaScript programming environment for creating interactive apps. Students are able to switch between programming in blocks or text. 
 
-##### **Units that use App Lab:** 
+### **Units that use App Lab:** 
 
-##### The Design Process 
-##### Creating Apps with Devices - Option A: Circuit Playground
-##### Creating Apps with Devices - Option B: micro:bit
-##### AI and Machine Learning
+#### The Design Process 
+#### Creating Apps with Devices - Option A: Circuit Playground
+#### Creating Apps with Devices - Option B: micro:bit
+#### AI and Machine Learning
 
-_**Note:** Teachers should **not** teach both Creating Apps with Devices options as they are the same basic lessons. Instead, teachers should decide which version of this unit they wish to teach based on the device they would like to use._
+##### _**Note:** Teachers should **not** teach both Creating Apps with Devices options as they are the same basic lessons. Instead, teachers should decide which version of this unit they wish to teach based on the device they would like to use._
 
 <hr style="clear:both">
 
@@ -60,11 +56,11 @@ _**Note:** Teachers should **not** teach both Creating Apps with Devices options
 
 ## AI Lab
 
-AI Lab is a browser-based tool for creating machine learning models from tabular data. 
+#### AI Lab is a browser-based tool for creating machine learning models from tabular data. 
 
-##### **Units that use AI Lab:** 
+### **Units that use AI Lab:** 
 
-##### AI and Machine Learning
+#### AI and Machine Learning
 
 <div style="clear:both"/>
 

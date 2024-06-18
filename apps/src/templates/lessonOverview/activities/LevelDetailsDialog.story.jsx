@@ -1,8 +1,10 @@
 import React from 'react';
-import {UnconnectedLevelDetailsDialog as LevelDetailsDialog} from './LevelDetailsDialog';
 import {Provider} from 'react-redux';
+
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {reduxStore} from '@cdo/storybook/decorators';
+
+import {UnconnectedLevelDetailsDialog as LevelDetailsDialog} from './LevelDetailsDialog';
 
 const defaultProps = {
   handleClose: () => {

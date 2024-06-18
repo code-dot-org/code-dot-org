@@ -1,6 +1,6 @@
-import {expect} from '../../../util/reconfiguredChai';
-
 import * as elementUtils from '@cdo/apps/applab/designElements/elementUtils';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('Applab designElements/elementUtils', function () {
   describe('calculatePadding', () => {

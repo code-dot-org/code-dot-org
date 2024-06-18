@@ -9,22 +9,18 @@ markdown <<MARKDOWN
 
 #### In the synchronous portion of our workshop, you learned about Unit 1: Problem Solving and Computing. This portion of the asynchronous work will give you an overview of each of the seven units. While you work through these levels, consider which of these units you'd like to begin the school year with. You can always change your mind later.
 
+#### CS Discoveries is divided into seven units.</strong> Units are structured to give students context and motivation for the content before skill building. Units begin with a lesson that leverages students’ knowledge and experience in problem solving and technology. This lays the foundation for the skills and content that the unit introduces.
+
 ___
 
-<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
-
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>CS Discoveries is divided into seven units.</strong> Units are structured to give students context and motivation for the content before skill building. Units begin with a lesson that leverages students’ knowledge and experience in problem solving and technology. This lays the foundation for the skills and content that the unit introduces.  
-</p>
-</div>
-
-## Click on the units below to learn about the course content:
+#### Click on the units below to learn about the course content:
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em; font-weight: bold;">💡 Unit 1: Problem Solving and Computing</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;">
     <p><img src="https://images.code.org/e3c1657cf964074988978e0c7a3810c1-image-1627696634858.54.44 PM.png" alt="Cycle diagram including the steps Define, Prepare, Reflect, and Try" width="200px" style="border-radius:10px; float:left; margin: 0 0 40px 20px;  padding-right: 30px;">
 
-##### The **Problem Solving and Computing** unit is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. Through a series of puzzles, challenges, and real world scenarios, students are introduced to a problem solving process that they will return to repeatedly throughout the course. Students then learn how computers input, output, store, and process information to help humans solve problems within the context of apps. The unit concludes with students designing an app that helps solve a problem of their choosing.
+#### The **Problem Solving and Computing** unit is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. Through a series of puzzles, challenges, and real world scenarios, students are introduced to a problem solving process that they will return to repeatedly throughout the course. Students then learn how computers input, output, store, and process information to help humans solve problems within the context of apps. The unit concludes with students designing an app that helps solve a problem of their choosing.
 </p>
 </div>
 </details>
@@ -36,7 +32,7 @@ ___
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:50px;">
     <p><img src="https://images.code.org/021557b4db42e48d661db7f955f906e1-image-1627696691880.54.53 PM.png" alt="Splitscreen image showing HTML code on the left and the corresponding webpage on the right." width="200px" style="border-radius:10px; float:left; margin: 0 0 40px 20px;  padding-right: 30px;">
 
-##### In **Web Development**, students are empowered to create and share content on their own web pages. They begin by thinking about the role of the web and how it can be used as a medium for creative expression. As students develop their pages and begin to see themselves as programmers, they are encouraged to think critically about the impact of sharing information online and how to be more critical consumers of content. They are also introduced to problem solving as it relates to programming while they learn valuable skills such as debugging, using resources, and teamwork. At the conclusion of the unit, students will have created a personal website they can publish and share.
+#### In **Web Development**, students are empowered to create and share content on their own web pages. They begin by thinking about the role of the web and how it can be used as a medium for creative expression. As students develop their pages and begin to see themselves as programmers, they are encouraged to think critically about the impact of sharing information online and how to be more critical consumers of content. They are also introduced to problem solving as it relates to programming while they learn valuable skills such as debugging, using resources, and teamwork. At the conclusion of the unit, students will have created a personal website they can publish and share.
 </p>
 </div>
 </details>
@@ -49,7 +45,7 @@ ___
     <p><img src="https://images.code.org/830b47fb2be2f985c24e41aaf792336d-image-1647985813820.png" alt="Image of a game showing two sprites." width="200px" style="border-radius:10px; float:left; margin: 0 0 40px 20px;  padding-right: 30px;">
 
 
-##### In the **Interactive Animations and Games** unit, students build on their coding experience as they create programmatic images, animations, interactive art, and games. Starting off with simple, primitive shapes and building up to more sophisticated sprite-based games, students become familiar with the programming concepts and the design process computer scientists use daily. They then learn how these simpler constructs can be combined to create more complex programs. In the final project, students develop a personalized, interactive program. Along the way, they practice design, testing, and iteration, as they come to see that failure and debugging are an expected and valuable part of the programming process.
+#### In the **Interactive Animations and Games** unit, students build on their coding experience as they create programmatic images, animations, interactive art, and games. Starting off with simple, primitive shapes and building up to more sophisticated sprite-based games, students become familiar with the programming concepts and the design process computer scientists use daily. They then learn how these simpler constructs can be combined to create more complex programs. In the final project, students develop a personalized, interactive program. Along the way, they practice design, testing, and iteration, as they come to see that failure and debugging are an expected and valuable part of the programming process.
 </p>
 </div>
 </details>
@@ -62,7 +58,7 @@ ___
     <p><img src="https://images.code.org/48e27092cda033443a87f20ff676ed1a-image-1627696811180.55.01 PM.png" alt="Image of student handwritten work showing the design process." width="200px" style="border-radius:10px; float:left; margin: 0 0 40px 20px;  padding-right: 30px;">
 
 
-##### The **Design Process** unit transitions students from thinking about computer science as a tool to solve their own problems towards considering the broader social impacts of computing. Through a series of design challenges, students are asked to consider and understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which students have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test their solutions with real users to get feedback and drive further iteration.
+#### The **Design Process** unit transitions students from thinking about computer science as a tool to solve their own problems towards considering the broader social impacts of computing. Through a series of design challenges, students are asked to consider and understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which students have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test their solutions with real users to get feedback and drive further iteration.
 </p>
 </div>
 </details>
@@ -75,7 +71,7 @@ ___
     <p><img src="https://images.code.org/7e0d1afd85042d8f59af7932cc375337-image-1627697140990.55.11 PM.png" alt="Images of a bicycle and tree, both shown with progressively lower resolution." width="200px" style="border-radius:10px; float:left; margin: 0 0 40px 20px;  padding-right: 30px;">
 
 
-##### The **Data and Society** unit is about the importance of using data to solve problems and it highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter, students learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. In the final project, students gather their own data and use it to develop an automated solution to a problem.
+#### The **Data and Society** unit is about the importance of using data to solve problems and it highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter, students learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. In the final project, students gather their own data and use it to develop an automated solution to a problem.
 </p>
 </div>
 </details>
@@ -88,11 +84,11 @@ ___
     <p><img src="https://images.code.org/b190716a912798f6ba7a4b4d9d040e2a-image-1682448965513.png" alt="Image of a Circuit playground" width="400px" style="border-radius:10px; float:left; margin: 0 0 20px 20px;  padding-right: 30px;">
 
 
-##### In the **Physical Computing** unit, students explore the role of physical devices in computing. Using App Lab and **either** Adafruit’s Circuit Playground **or** the BBC micro:bit, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.
+#### In the **Physical Computing** unit, students explore the role of physical devices in computing. Using App Lab and **either** Adafruit’s Circuit Playground **or** the BBC micro:bit, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.
 
 <br>
 
-_**Note:** Unit 6 has **two** options - Option A with the Circuit Playground and Option B with the micro:bit. Teachers should **not** complete both options as they are the same basic lessons._
+##### _**Note:** Unit 6 has **two** options - Option A with the Circuit Playground and Option B with the micro:bit. Teachers should **not** complete both options as they are the same basic lessons._
 </p>
 </div>
 </details>
@@ -105,7 +101,7 @@ _**Note:** Unit 6 has **two** options - Option A with the Circuit Playground and
     <p><img src="https://images.code.org/7980152abc6fb3bc99d3f986f4071baa-image-1628699865854.png" alt="Image of an AI bot." width="200px" style="border-radius:10px; float:left; margin: 0 0 40px 20px;  padding-right: 30px;">
 
 
-##### In the **AI and Machine Learning** unit, students learn how computers can find patterns in data to make decisions. Students use the Problem Solving Process for machine learning to define a problem, prepare their data, train a model, then test and evaluate their model for accuracy and potential bias. Students explore a variety of scenarios and datasets that lend themselves to machine learning. They also explore some of the modern problems with machine learning, especially around bias and impact.
+#### In the **AI and Machine Learning** unit, students learn how computers can find patterns in data to make decisions. Students use the Problem Solving Process for machine learning to define a problem, prepare their data, train a model, then test and evaluate their model for accuracy and potential bias. Students explore a variety of scenarios and datasets that lend themselves to machine learning. They also explore some of the modern problems with machine learning, especially around bias and impact.
 </p>
 </div>
 </details>

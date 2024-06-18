@@ -2,11 +2,13 @@
  * A button that opens our LessonLockDialog component, using our redesigned button.
  */
 
-import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import Button from '../Button';
-import i18n from '@cdo/locale';
+import React, {useState} from 'react';
+
 import LessonLockDialog from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDialog';
+import i18n from '@cdo/locale';
+
+import Button from '../Button';
 
 const LessonLock = ({unitId, lessonId, isHidden}) => {
   const [dialogOpen, setDialogOpen] = useState(false);

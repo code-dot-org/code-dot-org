@@ -145,7 +145,7 @@ class RubricsController < ApplicationController
     is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, script: script_level.script, experiment_name: 'ai-rubrics')
     return head :forbidden unless is_ai_experiment_enabled
 
-    is_level_ai_enabled = EvaluateRubricJob.ai_enabled?(script_level)
+    is_level_ai_enabled = AiRubricConfig.ai_enabled?(script_level)
     return head :bad_request unless is_level_ai_enabled
 
     attempted = attempted_at
@@ -172,7 +172,7 @@ class RubricsController < ApplicationController
     is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, script: script_level.script, experiment_name: 'ai-rubrics')
     return head :forbidden unless is_ai_experiment_enabled
 
-    is_level_ai_enabled = EvaluateRubricJob.ai_enabled?(script_level)
+    is_level_ai_enabled = AiRubricConfig.ai_enabled?(script_level)
     return head :bad_request unless is_level_ai_enabled
 
     user_ids = Section.find_by(id: section_id).followers.pluck(:student_user_id)
@@ -223,7 +223,7 @@ class RubricsController < ApplicationController
     is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, script: script_level&.script, experiment_name: 'ai-rubrics')
     return head :forbidden unless is_ai_experiment_enabled
 
-    is_level_ai_enabled = EvaluateRubricJob.ai_enabled?(script_level)
+    is_level_ai_enabled = AiRubricConfig.ai_enabled?(script_level)
     return head :bad_request unless is_level_ai_enabled
 
     rubric_ai_evaluation = RubricAiEvaluation.where(
@@ -254,7 +254,7 @@ class RubricsController < ApplicationController
     is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, script: script_level&.script, experiment_name: 'ai-rubrics')
     return head :forbidden unless is_ai_experiment_enabled
 
-    is_level_ai_enabled = EvaluateRubricJob.ai_enabled?(script_level)
+    is_level_ai_enabled = AiRubricConfig.ai_enabled?(script_level)
     return head :bad_request unless is_level_ai_enabled
     attempted_count = 0
     attempted_unevaluated_count = 0

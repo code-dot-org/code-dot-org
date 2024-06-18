@@ -1,5 +1,5 @@
 /** @file Test of Log Browser Filters component. */
-import {shallow, mount} from 'enzyme';
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import React from 'react';
 import {spy} from 'sinon';

@@ -67,5 +67,9 @@ echo "cleaning up!"
 # clean up after ourselves
 popd
 rm -rf $DIR_TO_DEPLOY
+# Remove these files manually copied over above
+# so they are not retained in our staging apps build package.
+rm ./build/package/css/application.css
+rm ./build/package/css/font-awesome.css
 
 echo "if everything worked, your changes should be up on https://code-dot-org.github.io/cdo-styleguide/"

@@ -1,9 +1,11 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
-import Button from '@cdo/apps/templates/Button';
+
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
+
 import styles from './summary-entry-point.module.scss';
 
 const SUMMARY_PATH = '/summary';

@@ -64,13 +64,6 @@ class SectionProgress extends Component {
 
   componentDidMount() {
     loadUnitProgress(this.props.scriptId, this.props.sectionId);
-
-    analyticsReporter.sendEvent(EVENTS.PROGRESS_VIEWED, {
-      sectionId: this.props.sectionId,
-      unitId: this.props.scriptId,
-      windowWidth: window.innerWidth,
-      windowHeight: window.innerHeight,
-    });
   }
 
   componentDidUpdate(prevProps) {
@@ -86,10 +79,14 @@ class SectionProgress extends Component {
     }
 
     if (
-      prevProps.scriptId !== this.props.scriptId ||
-      prevProps.sectionId !== this.props.sectionId
+      (prevProps.scriptId !== this.props.scriptId ||
+        prevProps.sectionId !== this.props.sectionId ||
+        prevProps.isLoadingProgress !== this.props.isLoadingProgress ||
+        prevProps.isRefreshingProgress !== this.props.isRefreshingProgress) &&
+      !this.props.isLoadingProgress &&
+      !this.props.isRefreshingProgress
     ) {
-      analyticsReporter.sendEvent(EVENTS.PROGRESS_VIEWED, {
+      analyticsReporter.sendEvent(EVENTS.PROGRESS_VIEWED_FIXED, {
         sectionId: this.props.sectionId,
         unitId: this.props.scriptId,
         windowWidth: window.innerWidth,

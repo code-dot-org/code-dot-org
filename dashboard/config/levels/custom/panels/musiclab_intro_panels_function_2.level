@@ -9,18 +9,6 @@
     "encrypted": "false",
     "background": "music-black",
     "skipUrl": "/projects/music/new",
-    "level_data": {
-      "panels": [
-        {
-          "imageUrl": "https://images.code.org/e8cf0ed0263af03d3bed73749081b995-musiclab_intro_function_0.png",
-          "text": "A cool feature in Project Beats is that you can take a set of blocks and put them into your own block.  In coding, this is called making a *function*."
-        },
-        {
-          "imageUrl": "https://images.code.org/79cffd279632872b91b162a1fe460e15-musiclab_intro_function_1.png",
-          "text": "You can \"call\" your new function by using the block with the matching name, like this."
-        }
-      ]
-    },
     "panels": [
       {
         "imageUrl": "https://images.code.org/b70f091d88e6fd1d9f5e426b17b41bb2-functions1.png",

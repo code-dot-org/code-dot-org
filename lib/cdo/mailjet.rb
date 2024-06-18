@@ -1,4 +1,5 @@
 require 'mailjet'
+require 'mailgun-ruby'
 require 'honeybadger/ruby'
 require_relative './shared_constants/mailjet_constants'
 
@@ -7,6 +8,7 @@ module MailJet
 
   API_KEY = CDO.try(:mailjet_api_key).freeze
   SECRET_KEY = CDO.try(:mailjet_secret_key).freeze
+  MAILGUN_API_KEY = CDO.try(:mailgun_api_key).freeze
 
   # We use MailJet when the following are true:
   # - The use_mailjet DCDO is true
@@ -16,7 +18,8 @@ module MailJet
     DCDO.get('use_mailjet', false) &&
       !Rails.env.test? &&
       API_KEY.present? &&
-      SECRET_KEY.present?
+      SECRET_KEY.present? &&
+      MAILGUN_API_KEY.present?
   end
 
   def self.subaccount
@@ -39,16 +42,17 @@ module MailJet
     return unless user&.id.present?
     return unless user.teacher?
 
-    create_contact(user.email, user.name, user.created_at.to_datetime)
+    contact = find_or_create_contact(user.email, user.name)
+    update_contact_field(contact, 'sign_up_date', user.created_at.to_datetime.rfc3339)
     send_template_email(
-      user.email,
-      user.name,
+      contact,
       EMAILS[:welcome]
     )
   end
 
-  def self.create_contact(email, name, sign_up_date)
-    return unless enabled?
+  def self.find_or_create_contact(email, name)
+    return nil unless enabled?
+    return nil unless valid_email?(email)
 
     Mailjet.configure do |config|
       config.api_key = API_KEY
@@ -56,23 +60,27 @@ module MailJet
       config.api_version = "v3"
     end
 
-    contact = Mailjet::Contactdata.find(email)
+    contact = Mailjet::Contact.find(email)
+    return contact if contact&.id.present?
 
-    if contact&.id.nil?
-      Mailjet::Contact.create(
-        is_excluded_from_campaigns: true,
-        email: email,
-        name: name
-      )
-      contact = Mailjet::Contactdata.find(email)
-    end
+    Mailjet::Contact.create(
+      is_excluded_from_campaigns: true,
+      email: email,
+      name: name
+    )
+    Mailjet::Contact.find(email)
+  end
 
-    sign_up_date_rfc3339 = sign_up_date.rfc3339
-    contact.update_attributes(
+  def self.update_contact_field(contact, field_name, field_value)
+    return unless enabled?
+    return if contact.nil?
+
+    contactdata = Mailjet::Contactdata.find(contact.id)
+    contactdata.update_attributes(
       data: [
         {
-          name: 'sign_up_date',
-          value: sign_up_date_rfc3339
+          name: field_name,
+          value: field_value
         }
       ]
     )
@@ -99,8 +107,9 @@ module MailJet
     end
   end
 
-  def self.send_template_email(to_email, to_name, email_config)
+  def self.send_template_email(contact, email_config)
     return unless enabled?
+    return unless contact&.email.present?
 
     Mailjet.configure do |config|
       config.api_key = API_KEY
@@ -120,13 +129,25 @@ module MailJet
         },
         To: [
           {
-            Email: to_email,
-            Name: to_name
+            Email: contact.email,
+            Name: contact.name
           }
         ],
         TemplateID: template_id,
         TemplateLanguage: true,
       }]
     )
+  end
+
+  def self.valid_email?(email)
+    return false unless enabled?
+
+    Mailgun.api_key = MAILGUN_API_KEY
+    email_validator = Mailgun::Address.new
+
+    validation_response = email_validator.validate(email)
+    # Description of values in the result field described here: https://documentation.mailgun.com/docs/inboxready/mailgun-validate/single-valid-ir/#result-types
+    return false if %w(do_not_send undeliverable).include?(validation_response['result'])
+    return true
   end
 end

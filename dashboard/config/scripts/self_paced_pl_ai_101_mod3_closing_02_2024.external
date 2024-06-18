@@ -5,5 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Additional Practice and Resources
 
-#### This section is not available for the pilot.
+* #### <a href="https://docs.google.com/presentation/d/1WXvjG9TscUuH5Xz8Pj2okz6lMIKV__g0v6AoYVXKb40/copy " target="_blank">Large Language Model Prompts for Educators</a> from Code.org. 
+* #### <a href="https://www.aiforeducation.io/prompt-library " target="_blank">Educator's Prompt Library</a> from AI for Education.
+
+## Take it Further
+#### Level-up your prompting skills. Check out the <a href="https://docs.google.com/presentation/d/1WXvjG9TscUuH5Xz8Pj2okz6lMIKV__g0v6AoYVXKb40/copy" target="_blank">Large Language Model Prompts for Educators</a>, by Code.org. Try out the starter prompts or use the advanced tools in a LLM of your choice (such as <a href="https://chat.openai.com/" target="_blank">ChatGPT</a>, <a href="https://www.bing.com/chat" target="_blank">Copilot</a>, or <a href="https://gemini.google.com/" target="_blank">Gemini</a>). Then, craft your own prompt and test it.
 MARKDOWN

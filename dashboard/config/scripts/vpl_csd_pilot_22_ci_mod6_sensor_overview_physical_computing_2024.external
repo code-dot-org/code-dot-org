@@ -5,29 +5,27 @@ description 'description here'
 markdown <<MARKDOWN
 # Physical Outputs with LEDs
 
-<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
-
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">Later in the unit, students will learn how to to attach external LEDs to their circuit playground and use code to light up these LEDs. This allows students to create more flexible devices that mimic real-world products. 
-</p></div>
+#### Later in the unit, students will learn how to to attach external LEDs to their Circuit Playground and use code to light up these LEDs. This allows students to create more flexible devices that mimic real-world products. 
 
 <img src="https://images.code.org/8d4e6bf32f996967eb728990bd5b3d14-image-1654739732487.55.12 PM.png" alt="image of circuit playground with extrnal LED" style="float: right; height: 250px; margin-left:10px; margin-right:10px; margin-top:25px; border-radius:20px;">
 
 ## Connecting to an LED
 
-##### To connect an external LED to the Circuit Playground, students will need an LED and two wires.
+#### To connect an external LED to the Circuit Playground, students will need an LED and two wires.
 
-##### 1) Students will need to make sure their Circuit Playground is unplugged from the computer. This helps make sure there isn't any accidental electricity that can damage your board.
+#### 1) Students will need to make sure their Circuit Playground is unplugged from the computer. This helps make sure there isn't any accidental electricity that can damage your board.
 
-##### 2) They will attach a wire so one end is connected to the `A0` pad on the Circuit Playground, and the other end is connected to the positive end of an LED.
+#### 2) They will attach a wire so one end is connected to the `A0` pad on the Circuit Playground, and the other end is connected to the positive end of an LED.
 
-##### 3) They will attach a wire so one end is connected to the `GND` pad on the Circuit Playground, and the other end is connected to the negative end of an LED
+#### 3) They will attach a wire so one end is connected to the `GND` pad on the Circuit Playground, and the other end is connected to the negative end of an LED
 
 ## How can you tell which end is positive and negative?
-##### A standard LED has two wires coming out of the top: a longer wire and a shorter wire. The longer wire is always **positive** and should be connected to a numbered pin on the circuit playground. The shorter wire is always **negative** and should be connected to a `GND` pad on the circuit playground.
+
+#### A standard LED has two wires coming out of the top: a longer wire and a shorter wire. The longer wire is always **positive** and should be connected to a numbered pin on the circuit playground. The shorter wire is always **negative** and should be connected to a `GND` pad on the circuit playground.
 
 <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/sequin.png" width="300px" />
 
-##### Some LEDs have the positive and negative sides labeled with a + and -
+#### Some LEDs have the positive and negative sides labeled with a `+` and `-`.
 
 
 MARKDOWN

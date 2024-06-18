@@ -5,11 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Chapters
 
-<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
-
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Units are divided into two chapters.</strong> Chapters often include several small projects and activities that provide an opportunity for students to practice new skills. If you are short on time, you may choose to complete only the first chapter of a unit.
-</p>
-</div>
+#### <strong>Units are divided into two chapters.</strong> Chapters often include several small projects and activities that provide an opportunity for students to practice new skills. If you are short on time, you may choose to complete only the first chapter of a unit.
 
 ## Click on the units below to learn about the big questions addressed in each chapter:
 
@@ -20,13 +16,13 @@ markdown <<MARKDOWN
 
 ### **Chapter 1 - The Problem Solving Process**
 
-* ##### What strategies and processes can I use to become a more effective problem solver? 
+* #### What strategies and processes can I use to become a more effective problem solver? 
 
 ### **Chapter 2 - Computers and Problem Solving**
 
-* ##### How do computers help people to solve problems? 
-* ##### How do people and computers approach problems differently?
-* ##### What does a computer need from people in order to solve problems? 
+* #### How do computers help people to solve problems? 
+* #### How do people and computers approach problems differently?
+* #### What does a computer need from people in order to solve problems? 
 </p></div>
 </details>
 
@@ -38,15 +34,15 @@ markdown <<MARKDOWN
     <p><img src="https://images.code.org/021557b4db42e48d661db7f955f906e1-image-1627696691880.54.53 PM.png" alt="Splitscreen image showing HTML code on the left and the corresponding webpage on the right." width="200px" style="border-radius:10px; float:left; margin: 40px 0 40px 20px;  padding-right: 30px;">
 
 ### **Chapter 1 - Creating Web Pages** 
-* ##### Why do people create websites?
-* ##### How can text communicate content and structure on a web page?
-* ##### How do I safely and appropriately make use of the content published on the internet?
-* ##### What strategies can I use when coding to find and fix issues?
+* #### How do web developers create web pages for users?
+* #### How can text communicate a web page's content, structure, and style?
+* #### How do I safely and appropriately create content for the Internet?
+* #### What strategies can I use when coding to find and fix issues?
 
 ### **Chapter 2 - Multi-Page Websites**
-* ##### How can websites be used to address problems in the world?
-* ##### What strategies can teams use to work better together?
-* ##### How do I know what information can be trusted online?
+* #### How can websites be used to address problems in the world?
+* #### What strategies can teams use to work better together?
+* #### How do I know what information can be trusted online?
 
 </p></div>
 </details>
@@ -59,15 +55,15 @@ markdown <<MARKDOWN
     <p><img src="https://images.code.org/830b47fb2be2f985c24e41aaf792336d-image-1647985813820.png" alt="Image of a game showing two sprites." width="200px" style="border-radius:10px; float:left; margin: 55px 0 50px 20px;  padding-right: 30px;">
 
 ### **Chapter 1 - Images and Animations**
-* ##### What is a computer program?
-* ##### What are the core features of most programming languages?
-* ##### How does programming enable creativity and individual expression?
-* ##### What practices and strategies will help me as I write programs?
+* #### What is a computer program?
+* #### What are the core features of most programming languages?
+* #### How does programming enable creativity and individual expression?
+* #### What practices and strategies will help me as I write programs?
 
 ### **Chapter 2 - Building Games**
-* ##### How do software developers manage complexity and scale?
-* ##### How can programs be organized so that common problems only need to be solved once?
-* ##### How can I build on previous solutions to create even more complex behavior?
+* #### How do software developers manage complexity and scale?
+* #### How can programs be organized so that common problems only need to be solved once?
+* #### How can I build on previous solutions to create even more complex behavior?
 
 </p></div>
 </details>
@@ -81,14 +77,14 @@ markdown <<MARKDOWN
 
 
 ### **Chapter 1: User Centered Design**
-* ##### How do computer scientists identify the needs of their users?
-* ##### How can we ensure that a user's needs are met by our designs?
-* ##### What processes will best allow us to efficiently create, test, and iterate upon our design?
+* #### How do computer scientists identify the needs of their users?
+* #### How can we ensure that a user's needs are met by our designs?
+* #### What processes will best allow us to efficiently create, test, and iterate upon our design?
 
 ### **Chapter 2: App Prototyping**
-* ##### How do teams effectively work together to develop software?
-* ##### What roles beyond programming are necessary to design and develop software?
-* ##### How do designers incorporate feedback into multiple iterations of a product?
+* #### How do teams effectively work together to develop software?
+* #### What roles beyond programming are necessary to design and develop software?
+* #### How do designers incorporate feedback into multiple iterations of a product?
 
 </p></div>
 </details>
@@ -101,16 +97,16 @@ markdown <<MARKDOWN
     <p><img src="https://images.code.org/7e0d1afd85042d8f59af7932cc375337-image-1627697140990.55.11 PM.png" alt="Images of a bicycle and tree, both shown with progressively lower resolution." width="200px" style="border-radius:10px; float:left; margin: 60px 0 65px 20px;  padding-right: 30px;">
 
 ### **Chapter 1: Representing Information**
-* ##### Why is representation important in problem solving?
-* ##### What features does a representation system need to be useful?
-* ##### What is necessary to create usable binary representation systems?
-* ##### How can we combine systems together to get more complex information?
+* #### Why is representation important in problem solving?
+* #### What features does a representation system need to be useful?
+* #### What is necessary to create usable binary representation systems?
+* #### How can we combine systems together to get more complex information?
 
 ### **Chapter 2: Solving Data Problems**
-* ##### How does data help us to solve problems?
-* ##### How do computers and humans use data differently?
-* ##### What parts of the data problem solving process can be automated?
-* ##### What kinds of real world problems do computers solve by using data?
+* #### How does data help us to solve problems?
+* #### How do computers and humans use data differently?
+* #### What parts of the data problem solving process can be automated?
+* #### What kinds of real world problems do computers solve by using data?
 
 </p></div>
 </details>
@@ -123,14 +119,14 @@ markdown <<MARKDOWN
     <p><img src="https://images.code.org/b190716a912798f6ba7a4b4d9d040e2a-image-1682448965513.png" alt="Image of a Circuit playground" width="400px" style="border-radius:10px; float:left; margin: 50px 0 50px 20px;  padding-right: 30px;">
 
 ### **Chapter 1: Inputs and Outputs**
-* ##### What inputs and outputs are available on a physical device?
-* ##### What inputs and outputs are available on an app?
-* ##### How can we create apps that use a physical device to control a digital app?
+* #### What inputs and outputs are available on a physical device?
+* #### What inputs and outputs are available on an app?
+* #### How can we create apps that use a physical device to control a digital app?
 
 
 ### **Chapter 2: Building Physical Prototypes**
-* ##### How can a physical device use sensors to react to a physical environment?
-* ##### How can simple hardware be used to develop innovative new products?
+* #### How can a physical device use sensors to react to a physical environment?
+* #### How can simple hardware be used to develop innovative new products?
 
 
 </p></div>
@@ -145,11 +141,11 @@ markdown <<MARKDOWN
 
 
 ### **Chapter 1 - Understanding Machine Learning**
-* ##### How does machine learning find patterns in data to make decisions?
-* ##### How can we avoid bias when training a machine learning model?
+* #### How does machine learning find patterns in data to make decisions?
+* #### How can we avoid bias when training a machine learning model?
 
 ### **Chapter 2 - Design a Machine Learning App**
-* ##### How can machine learning be used to solve problems in our community?
+* #### How can machine learning be used to solve problems in our community?
 </p></div>
 </details>
 

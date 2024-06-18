@@ -6,7 +6,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "long_instructions": "## Reflection\r\n\r\nWhat was one challenge and one success you had?",
+    "long_instructions": "# Reflection\r\n\r\n#### What was one challenge and one success you had?",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 19619,
@@ -20,7 +20,7 @@
     "allow_multiple_attempts": "true"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-04-12T19:14:23.533+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-ai-101-mod1-impact_2024\\\"\"],\"cloned_from\":\"self-paced-pl-ai-101-mod1-impact_2024\"},{\"changed_at\":\"2024-04-12 19:14:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-04-12T19:14:23.533+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-ai-101-mod1-impact_2024\\\"\"],\"cloned_from\":\"self-paced-pl-ai-101-mod1-impact_2024\"},{\"changed_at\":\"2024-04-12 19:14:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 14:48:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -20,4 +20,8 @@ export const UpdateContext = createContext({
     property: keyof ModelCardInfo,
     value: ModelCardInfo[keyof ModelCardInfo]
   ) => {},
+  setModelSelectionValues: (
+    additionalModelIds: string[],
+    selectedModelId: string
+  ) => {},
 });

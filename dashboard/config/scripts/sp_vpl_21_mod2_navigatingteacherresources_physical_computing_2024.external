@@ -5,21 +5,16 @@ description 'description here'
 markdown <<MARKDOWN
 # Task: Navigate to Additional Teacher Resources
 
+<img src="https://images.code.org/0d502b90a9f9fba7ccba145ad22b645a-image-1714073818864.36.46 PM.png" alt="Screenshot of the Unit 2 Overview page with an orange arrow pointing to the 'Teacher Resources' drop down menu." style="float: left; height: 395px; clear: both; margin: 0 20px 20px 0;">
 
+## Steps to Access Unit-Level Resources
 
-<img src="https://docs.google.com/drawings/d/e/2PACX-1vSRjU8M0lYn1n_L7gB5KALnTgBfXHXAxpU0AfJ8_CP-Mqt6dg1vxETRWF_JRlBMYxd1aGkW5A2IUsoQ/pub?w=707&h=552" alt="Screenshot of the Unit 2 Overview page with an orange arrow pointing to the 'Teacher Resources' drop down menu." style="float: left; height: 395px; clear: both; margin: 0 20px 20px 0;">
+#### **Step 1:** From the Unit Overview page, navigate to your unit of choice. 
 
-## Steps to access unit level resources
+#### **Step 2:** Click on the "Go to Unit" button of the Unit you would like to view. 
 
-##### **Step 1:** From the Unit Overview page, navigate to your unit of choice. 
+#### **Step 3:** When you reach the Unit Overview page, click on the blue "Teacher Resources" button. 
 
-##### **Step 2:** Click on the "Go to Unit" button of the Unit you would like to view. 
-
-##### **Step 3:** When you reach the Unit Overview page, click on the blue "Teacher Resources" button. 
-
-##### **Step 4:** Select the resource that you would like to view from the dropdown menu. 
-
-<div style="clear:both"/>
-
-
+#### **Step 4:** Select the resource that you would like to view from the dropdown menu. 
+<br><Br><br><br>
 MARKDOWN

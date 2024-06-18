@@ -1,4 +1,5 @@
 import _ from 'lodash';
+
 import {FeaturedProjectStatus} from '@cdo/generated-scripts/sharedConstants';
 
 // Generate n fake personal projects for the project widget.

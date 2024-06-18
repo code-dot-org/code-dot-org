@@ -1,7 +1,9 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, {AriaAttributes} from 'react';
 
-export interface FontAwesomeV6IconProps {
+import {getAriaPropsFromProps} from '@cdo/apps/componentLibrary/common/helpers';
+
+export interface FontAwesomeV6IconProps extends AriaAttributes {
   /**
    * Icon style.
    * Style vs Figma font-weight:
@@ -53,7 +55,10 @@ const FontAwesomeV6Icon: React.FunctionComponent<FontAwesomeV6IconProps> = ({
   className,
   title,
   animationType,
+  ...rest
 }) => {
+  const ariaProps = getAriaPropsFromProps(rest);
+
   return (
     <i
       data-testid="font-awesome-v6-icon"
@@ -64,6 +69,7 @@ const FontAwesomeV6Icon: React.FunctionComponent<FontAwesomeV6IconProps> = ({
         className
       )}
       title={title}
+      {...ariaProps}
     />
   );
 };

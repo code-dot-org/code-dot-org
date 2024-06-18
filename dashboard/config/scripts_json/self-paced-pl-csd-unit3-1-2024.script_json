@@ -2,14 +2,16 @@
   "script": {
     "name": "self-paced-pl-csd-unit3-1-2024",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
       "curriculum_umbrella": "CSD Self Paced PL",
-      "is_migrated": true
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-25 22:26:12 UTC",
+    "serialized_at": "2024-05-06 19:05:33 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -103,52 +105,52 @@
   ],
   "lesson_activities": [
     {
-      "key": "1978c03c-f1ab-482e-a93c-1d12d0df94f4",
+      "key": "ce4f8823-0f1f-4ff5-b99d-f2b78340c797",
       "position": 1,
       "properties": {
         "duration": 10
       },
       "seeding_key": {
-        "lesson_activity.key": "1978c03c-f1ab-482e-a93c-1d12d0df94f4",
+        "lesson_activity.key": "ce4f8823-0f1f-4ff5-b99d-f2b78340c797",
         "lesson.key": "Welcome to Codeorg",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024"
       }
     },
     {
-      "key": "2fe7e584-81e5-41e1-b58d-596e9056e204",
+      "key": "e537f706-15e6-4124-b958-75684c43ac11",
       "position": 1,
       "properties": {
         "duration": 35
       },
       "seeding_key": {
-        "lesson_activity.key": "2fe7e584-81e5-41e1-b58d-596e9056e204",
+        "lesson_activity.key": "e537f706-15e6-4124-b958-75684c43ac11",
         "lesson.key": "Navigating the Codeorg Learning Platform",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024"
       }
     },
     {
-      "key": "ce29c240-cb35-4f95-9ea6-4365314b6409",
+      "key": "87041a30-bb62-4f2d-82da-b04e63f10419",
       "position": 1,
       "properties": {
         "duration": 20
       },
       "seeding_key": {
-        "lesson_activity.key": "ce29c240-cb35-4f95-9ea6-4365314b6409",
+        "lesson_activity.key": "87041a30-bb62-4f2d-82da-b04e63f10419",
         "lesson.key": "Navigating Lesson Plans and Resources",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024"
       }
     },
     {
-      "key": "36e4598a-cd6a-4a92-8bcf-c7ca198a16d5",
+      "key": "092ea74b-ed37-4b33-8e62-d9803e76cecb",
       "position": 1,
       "properties": {
         "duration": 15
       },
       "seeding_key": {
-        "lesson_activity.key": "36e4598a-cd6a-4a92-8bcf-c7ca198a16d5",
+        "lesson_activity.key": "092ea74b-ed37-4b33-8e62-d9803e76cecb",
         "lesson.key": "Navigating Support",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024"
@@ -157,157 +159,157 @@
   ],
   "activity_sections": [
     {
-      "key": "dd07b63a-9672-43b5-8b6e-84c3ce6d3c6a",
+      "key": "c0468ad2-abfe-4222-81b6-e613e05cbcc1",
       "position": 1,
       "properties": {
         "progression_name": "Overview"
       },
       "seeding_key": {
-        "activity_section.key": "dd07b63a-9672-43b5-8b6e-84c3ce6d3c6a",
-        "lesson_activity.key": "1978c03c-f1ab-482e-a93c-1d12d0df94f4"
+        "activity_section.key": "c0468ad2-abfe-4222-81b6-e613e05cbcc1",
+        "lesson_activity.key": "ce4f8823-0f1f-4ff5-b99d-f2b78340c797"
       }
     },
     {
-      "key": "9f935fc4-c72a-41a2-98d6-644309114377",
+      "key": "2ce08355-7f0c-4b39-987b-07525770269b",
       "position": 2,
       "properties": {
         "progression_name": "Welcome to Code.org"
       },
       "seeding_key": {
-        "activity_section.key": "9f935fc4-c72a-41a2-98d6-644309114377",
-        "lesson_activity.key": "1978c03c-f1ab-482e-a93c-1d12d0df94f4"
+        "activity_section.key": "2ce08355-7f0c-4b39-987b-07525770269b",
+        "lesson_activity.key": "ce4f8823-0f1f-4ff5-b99d-f2b78340c797"
       }
     },
     {
-      "key": "2cc7311f-5fb2-4979-b7bc-f1de0915bc71",
+      "key": "0de88e5b-c8c7-49a6-b809-64f0343a2adf",
       "position": 3,
       "properties": {
         "progression_name": "Welcome to Creating Apps for Devices"
       },
       "seeding_key": {
-        "activity_section.key": "2cc7311f-5fb2-4979-b7bc-f1de0915bc71",
-        "lesson_activity.key": "1978c03c-f1ab-482e-a93c-1d12d0df94f4"
+        "activity_section.key": "0de88e5b-c8c7-49a6-b809-64f0343a2adf",
+        "lesson_activity.key": "ce4f8823-0f1f-4ff5-b99d-f2b78340c797"
       }
     },
     {
-      "key": "1df0d5d5-4741-443e-90a2-9643d6b27fd6",
+      "key": "e278b956-d770-4a2d-ab92-7a43baa2e663",
       "position": 1,
       "properties": {
         "progression_name": "Overview"
       },
       "seeding_key": {
-        "activity_section.key": "1df0d5d5-4741-443e-90a2-9643d6b27fd6",
-        "lesson_activity.key": "2fe7e584-81e5-41e1-b58d-596e9056e204"
+        "activity_section.key": "e278b956-d770-4a2d-ab92-7a43baa2e663",
+        "lesson_activity.key": "e537f706-15e6-4124-b958-75684c43ac11"
       }
     },
     {
-      "key": "d4be9372-215a-4d48-be63-7730f5d92306",
+      "key": "797f150b-e8e0-468b-a766-4df797410da7",
       "position": 2,
       "properties": {
-        "progression_name": "Tour the Code.org learning platform"
+        "progression_name": "Tour the Code.org Learning Platform"
       },
       "seeding_key": {
-        "activity_section.key": "d4be9372-215a-4d48-be63-7730f5d92306",
-        "lesson_activity.key": "2fe7e584-81e5-41e1-b58d-596e9056e204"
+        "activity_section.key": "797f150b-e8e0-468b-a766-4df797410da7",
+        "lesson_activity.key": "e537f706-15e6-4124-b958-75684c43ac11"
       }
     },
     {
-      "key": "d77359fb-851a-4aaf-b41d-c5bb6c644f8d",
+      "key": "d6701931-df69-41d3-8390-5ab0d917b927",
       "position": 3,
       "properties": {
-        "progression_name": "Set-up a class section"
+        "progression_name": "Set Up a Class Section"
       },
       "seeding_key": {
-        "activity_section.key": "d77359fb-851a-4aaf-b41d-c5bb6c644f8d",
-        "lesson_activity.key": "2fe7e584-81e5-41e1-b58d-596e9056e204"
+        "activity_section.key": "d6701931-df69-41d3-8390-5ab0d917b927",
+        "lesson_activity.key": "e537f706-15e6-4124-b958-75684c43ac11"
       }
     },
     {
-      "key": "289fda0b-eab3-43fd-9414-982a42a4c355",
+      "key": "b26f7007-9e4e-4b05-b9d0-bce1ec5ea73f",
       "position": 4,
       "properties": {
-        "progression_name": "Explore the student view"
+        "progression_name": "Explore the Student View"
       },
       "seeding_key": {
-        "activity_section.key": "289fda0b-eab3-43fd-9414-982a42a4c355",
-        "lesson_activity.key": "2fe7e584-81e5-41e1-b58d-596e9056e204"
+        "activity_section.key": "b26f7007-9e4e-4b05-b9d0-bce1ec5ea73f",
+        "lesson_activity.key": "e537f706-15e6-4124-b958-75684c43ac11"
       }
     },
     {
-      "key": "b6e07c2a-412f-46dd-a47d-f6a46964b3a3",
+      "key": "c450399f-6445-4a6e-86ed-62f2d83d409a",
       "position": 5,
       "properties": {
-        "progression_name": "Track student progress and provide feedback"
+        "progression_name": "Track Student Progress and Provide Feedback"
       },
       "seeding_key": {
-        "activity_section.key": "b6e07c2a-412f-46dd-a47d-f6a46964b3a3",
-        "lesson_activity.key": "2fe7e584-81e5-41e1-b58d-596e9056e204"
+        "activity_section.key": "c450399f-6445-4a6e-86ed-62f2d83d409a",
+        "lesson_activity.key": "e537f706-15e6-4124-b958-75684c43ac11"
       }
     },
     {
-      "key": "ad44967f-42a0-4446-be6a-a1405f233c64",
+      "key": "e29474ce-735c-4dcd-84e0-22e8160d4f1a",
       "position": 1,
       "properties": {
         "progression_name": "Overview"
       },
       "seeding_key": {
-        "activity_section.key": "ad44967f-42a0-4446-be6a-a1405f233c64",
-        "lesson_activity.key": "ce29c240-cb35-4f95-9ea6-4365314b6409"
+        "activity_section.key": "e29474ce-735c-4dcd-84e0-22e8160d4f1a",
+        "lesson_activity.key": "87041a30-bb62-4f2d-82da-b04e63f10419"
       }
     },
     {
-      "key": "92f47162-a83e-42e2-8bfc-64b59fbae6c6",
+      "key": "2e3fe5ba-a4a5-49cb-bcf1-5ed701a011e0",
       "position": 2,
       "properties": {
         "progression_name": "Explore Course Lesson Plans"
       },
       "seeding_key": {
-        "activity_section.key": "92f47162-a83e-42e2-8bfc-64b59fbae6c6",
-        "lesson_activity.key": "ce29c240-cb35-4f95-9ea6-4365314b6409"
+        "activity_section.key": "2e3fe5ba-a4a5-49cb-bcf1-5ed701a011e0",
+        "lesson_activity.key": "87041a30-bb62-4f2d-82da-b04e63f10419"
       }
     },
     {
-      "key": "372a68f0-65b3-4c24-b78f-b90935603ed9",
+      "key": "60fe003a-b801-4e23-b7b0-741e15da6ac7",
       "position": 3,
       "properties": {
         "progression_name": "Explore Additional Teacher Resources"
       },
       "seeding_key": {
-        "activity_section.key": "372a68f0-65b3-4c24-b78f-b90935603ed9",
-        "lesson_activity.key": "ce29c240-cb35-4f95-9ea6-4365314b6409"
+        "activity_section.key": "60fe003a-b801-4e23-b7b0-741e15da6ac7",
+        "lesson_activity.key": "87041a30-bb62-4f2d-82da-b04e63f10419"
       }
     },
     {
-      "key": "2bd0fab6-8268-4fa4-8489-b32a5fbc0427",
+      "key": "43b0eb05-ed3a-477b-bed2-96a7a29ad684",
       "position": 1,
       "properties": {
         "progression_name": "Overview"
       },
       "seeding_key": {
-        "activity_section.key": "2bd0fab6-8268-4fa4-8489-b32a5fbc0427",
-        "lesson_activity.key": "36e4598a-cd6a-4a92-8bcf-c7ca198a16d5"
+        "activity_section.key": "43b0eb05-ed3a-477b-bed2-96a7a29ad684",
+        "lesson_activity.key": "092ea74b-ed37-4b33-8e62-d9803e76cecb"
       }
     },
     {
-      "key": "eefca120-4b41-401b-a957-df7ba2c9ea35",
+      "key": "cfc88ad6-55f8-4471-9988-7ae46bf5e73a",
       "position": 2,
       "properties": {
         "progression_name": "Additional support for teachers"
       },
       "seeding_key": {
-        "activity_section.key": "eefca120-4b41-401b-a957-df7ba2c9ea35",
-        "lesson_activity.key": "36e4598a-cd6a-4a92-8bcf-c7ca198a16d5"
+        "activity_section.key": "cfc88ad6-55f8-4471-9988-7ae46bf5e73a",
+        "lesson_activity.key": "092ea74b-ed37-4b33-8e62-d9803e76cecb"
       }
     },
     {
-      "key": "3f6bd578-5e53-48ed-8322-07c4acbfcbc8",
+      "key": "3015fb41-e2fb-4d41-9407-a21e7f1fbc2a",
       "position": 3,
       "properties": {
         "progression_name": "Wrap Up"
       },
       "seeding_key": {
-        "activity_section.key": "3f6bd578-5e53-48ed-8322-07c4acbfcbc8",
-        "lesson_activity.key": "36e4598a-cd6a-4a92-8bcf-c7ca198a16d5"
+        "activity_section.key": "3015fb41-e2fb-4d41-9407-a21e7f1fbc2a",
+        "lesson_activity.key": "092ea74b-ed37-4b33-8e62-d9803e76cecb"
       }
     }
   ],
@@ -318,6 +320,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-Overview-Welcome_physical-computing_2024"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -328,7 +333,7 @@
         "lesson.key": "Welcome to Codeorg",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "dd07b63a-9672-43b5-8b6e-84c3ce6d3c6a"
+        "activity_section.key": "c0468ad2-abfe-4222-81b6-e613e05cbcc1"
       },
       "level_keys": [
         "SP-VPL-21-mod1-Overview-Welcome_physical-computing_2024"
@@ -337,9 +342,62 @@
     {
       "chapter": 2,
       "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-Overview-Welcome_ModuleOverview"
+        ],
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-Overview-Welcome_ModuleOverview"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit3-1-2024",
+        "activity_section.key": "c0468ad2-abfe-4222-81b6-e613e05cbcc1"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod1-Overview-Welcome_ModuleOverview"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-24-mod1-Certificate"
+        ],
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-24-mod1-Certificate"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit3-1-2024",
+        "activity_section.key": "c0468ad2-abfe-4222-81b6-e613e05cbcc1"
+      },
+      "level_keys": [
+        "SP-VPL-24-mod1-Certificate"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-welcome-vid_2024"
+        ],
         "progression": "Welcome to Code.org"
       },
       "bonus": false,
@@ -350,18 +408,21 @@
         "lesson.key": "Welcome to Codeorg",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "9f935fc4-c72a-41a2-98d6-644309114377"
+        "activity_section.key": "2ce08355-7f0c-4b39-987b-07525770269b"
       },
       "level_keys": [
         "SP-VPL-21-mod1-welcome-vid_2024"
       ]
     },
     {
-      "chapter": 3,
-      "position": 3,
+      "chapter": 5,
+      "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-CSisFoundational_physical-computing_2024"
+        ],
         "progression": "Welcome to Code.org"
       },
       "bonus": false,
@@ -372,18 +433,21 @@
         "lesson.key": "Welcome to Codeorg",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "9f935fc4-c72a-41a2-98d6-644309114377"
+        "activity_section.key": "2ce08355-7f0c-4b39-987b-07525770269b"
       },
       "level_keys": [
         "SP-VPL-21-mod1-CSisFoundational_physical-computing_2024"
       ]
     },
     {
-      "chapter": 4,
-      "position": 4,
+      "chapter": 6,
+      "position": 6,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-Advice-TipVid_2024"
+        ],
         "progression": "Welcome to Code.org"
       },
       "bonus": false,
@@ -394,18 +458,21 @@
         "lesson.key": "Welcome to Codeorg",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "9f935fc4-c72a-41a2-98d6-644309114377"
+        "activity_section.key": "2ce08355-7f0c-4b39-987b-07525770269b"
       },
       "level_keys": [
         "SP-VPL-21-mod1-Advice-TipVid_2024"
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-Overview-WebsiteNavigation_physical-computing_2024"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -416,19 +483,22 @@
         "lesson.key": "Navigating the Codeorg Learning Platform",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "1df0d5d5-4741-443e-90a2-9643d6b27fd6"
+        "activity_section.key": "e278b956-d770-4a2d-ab92-7a43baa2e663"
       },
       "level_keys": [
         "SP-VPL-21-mod2-Overview-WebsiteNavigation_physical-computing_2024"
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 8,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Tour the Code.org learning platform"
+        "level_keys": [
+          "SP-VPL-21-mod2-tour-vid_2024"
+        ],
+        "progression": "Tour the Code.org Learning Platform"
       },
       "bonus": false,
       "seeding_key": {
@@ -438,19 +508,22 @@
         "lesson.key": "Navigating the Codeorg Learning Platform",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "d4be9372-215a-4d48-be63-7730f5d92306"
+        "activity_section.key": "797f150b-e8e0-468b-a766-4df797410da7"
       },
       "level_keys": [
         "SP-VPL-21-mod2-tour-vid_2024"
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 9,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Tour the Code.org learning platform"
+        "level_keys": [
+          "SP-VPL-21-mod2-Task-VerifiedTeacher_physical-computing_2024"
+        ],
+        "progression": "Tour the Code.org Learning Platform"
       },
       "bonus": false,
       "seeding_key": {
@@ -460,19 +533,22 @@
         "lesson.key": "Navigating the Codeorg Learning Platform",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "d4be9372-215a-4d48-be63-7730f5d92306"
+        "activity_section.key": "797f150b-e8e0-468b-a766-4df797410da7"
       },
       "level_keys": [
         "SP-VPL-21-mod2-Task-VerifiedTeacher_physical-computing_2024"
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 10,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Set-up a class section"
+        "level_keys": [
+          "SP-VPL-21-mod2-ClassSection-vid_2024"
+        ],
+        "progression": "Set Up a Class Section"
       },
       "bonus": false,
       "seeding_key": {
@@ -482,19 +558,47 @@
         "lesson.key": "Navigating the Codeorg Learning Platform",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "d77359fb-851a-4aaf-b41d-c5bb6c644f8d"
+        "activity_section.key": "d6701931-df69-41d3-8390-5ab0d917b927"
       },
       "level_keys": [
         "SP-VPL-21-mod2-ClassSection-vid_2024"
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 11,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Set-up a class section"
+        "level_keys": [
+          "SP-VPL-21-mod2-LMSIntegrations"
+        ],
+        "progression": "Set Up a Class Section"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-LMSIntegrations"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit3-1-2024",
+        "activity_section.key": "d6701931-df69-41d3-8390-5ab0d917b927"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-LMSIntegrations"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-Task-ClassSection_physical-computing_2024"
+        ],
+        "progression": "Set Up a Class Section"
       },
       "bonus": false,
       "seeding_key": {
@@ -504,19 +608,22 @@
         "lesson.key": "Navigating the Codeorg Learning Platform",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "d77359fb-851a-4aaf-b41d-c5bb6c644f8d"
+        "activity_section.key": "d6701931-df69-41d3-8390-5ab0d917b927"
       },
       "level_keys": [
         "SP-VPL-21-mod2-Task-ClassSection_physical-computing_2024"
       ]
     },
     {
-      "chapter": 10,
-      "position": 6,
-      "activity_section_position": 3,
+      "chapter": 13,
+      "position": 7,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Set-up a class section"
+        "level_keys": [
+          "SP-VPL_21-mod2-MakeAPlan-StudentLogIn_physical-computing_2024"
+        ],
+        "progression": "Set Up a Class Section"
       },
       "bonus": false,
       "seeding_key": {
@@ -526,19 +633,22 @@
         "lesson.key": "Navigating the Codeorg Learning Platform",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "d77359fb-851a-4aaf-b41d-c5bb6c644f8d"
+        "activity_section.key": "d6701931-df69-41d3-8390-5ab0d917b927"
       },
       "level_keys": [
         "SP-VPL_21-mod2-MakeAPlan-StudentLogIn_physical-computing_2024"
       ]
     },
     {
-      "chapter": 11,
-      "position": 7,
+      "chapter": 14,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Explore the student view"
+        "level_keys": [
+          "SP-VPL-21-mod2-StudentExperience-vid_2024"
+        ],
+        "progression": "Explore the Student View"
       },
       "bonus": false,
       "seeding_key": {
@@ -548,19 +658,22 @@
         "lesson.key": "Navigating the Codeorg Learning Platform",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "289fda0b-eab3-43fd-9414-982a42a4c355"
+        "activity_section.key": "b26f7007-9e4e-4b05-b9d0-bce1ec5ea73f"
       },
       "level_keys": [
         "SP-VPL-21-mod2-StudentExperience-vid_2024"
       ]
     },
     {
-      "chapter": 12,
-      "position": 8,
+      "chapter": 15,
+      "position": 9,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Explore the student view"
+        "level_keys": [
+          "SP-VPL-21-mod2-Task-StudentView_physical-computing_2024"
+        ],
+        "progression": "Explore the Student View"
       },
       "bonus": false,
       "seeding_key": {
@@ -570,19 +683,22 @@
         "lesson.key": "Navigating the Codeorg Learning Platform",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "289fda0b-eab3-43fd-9414-982a42a4c355"
+        "activity_section.key": "b26f7007-9e4e-4b05-b9d0-bce1ec5ea73f"
       },
       "level_keys": [
         "SP-VPL-21-mod2-Task-StudentView_physical-computing_2024"
       ]
     },
     {
-      "chapter": 13,
-      "position": 9,
+      "chapter": 16,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Track student progress and provide feedback"
+        "level_keys": [
+          "SP-VPL-21-mod2-ProgessAndFeedback-vid_2024"
+        ],
+        "progression": "Track Student Progress and Provide Feedback"
       },
       "bonus": false,
       "seeding_key": {
@@ -592,19 +708,22 @@
         "lesson.key": "Navigating the Codeorg Learning Platform",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "b6e07c2a-412f-46dd-a47d-f6a46964b3a3"
+        "activity_section.key": "c450399f-6445-4a6e-86ed-62f2d83d409a"
       },
       "level_keys": [
         "SP-VPL-21-mod2-ProgessAndFeedback-vid_2024"
       ]
     },
     {
-      "chapter": 14,
-      "position": 10,
+      "chapter": 17,
+      "position": 11,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Track student progress and provide feedback"
+        "level_keys": [
+          "SP-VPL-21-mod2-progress-c4u_physical-computing_2024"
+        ],
+        "progression": "Track Student Progress and Provide Feedback"
       },
       "bonus": false,
       "seeding_key": {
@@ -614,19 +733,22 @@
         "lesson.key": "Navigating the Codeorg Learning Platform",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "b6e07c2a-412f-46dd-a47d-f6a46964b3a3"
+        "activity_section.key": "c450399f-6445-4a6e-86ed-62f2d83d409a"
       },
       "level_keys": [
         "SP-VPL-21-mod2-progress-c4u_physical-computing_2024"
       ]
     },
     {
-      "chapter": 15,
-      "position": 11,
+      "chapter": 18,
+      "position": 12,
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "progression": "Track student progress and provide feedback"
+        "level_keys": [
+          "SP-VPL-21-mod2-feedback-c4u_physical-computing_2024"
+        ],
+        "progression": "Track Student Progress and Provide Feedback"
       },
       "bonus": false,
       "seeding_key": {
@@ -636,18 +758,21 @@
         "lesson.key": "Navigating the Codeorg Learning Platform",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "b6e07c2a-412f-46dd-a47d-f6a46964b3a3"
+        "activity_section.key": "c450399f-6445-4a6e-86ed-62f2d83d409a"
       },
       "level_keys": [
         "SP-VPL-21-mod2-feedback-c4u_physical-computing_2024"
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 19,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-TeachersInClassrooms_physical-computing_2024"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -658,18 +783,21 @@
         "lesson.key": "Navigating Lesson Plans and Resources",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "ad44967f-42a0-4446-be6a-a1405f233c64"
+        "activity_section.key": "e29474ce-735c-4dcd-84e0-22e8160d4f1a"
       },
       "level_keys": [
         "SP-VPL-21-mod2-TeachersInClassrooms_physical-computing_2024"
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 20,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-NavigatingLessonPlans_physical-computing_2024"
+        ],
         "progression": "Explore Course Lesson Plans"
       },
       "bonus": false,
@@ -680,18 +808,21 @@
         "lesson.key": "Navigating Lesson Plans and Resources",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "92f47162-a83e-42e2-8bfc-64b59fbae6c6"
+        "activity_section.key": "2e3fe5ba-a4a5-49cb-bcf1-5ed701a011e0"
       },
       "level_keys": [
         "SP-VPL-21-mod2-NavigatingLessonPlans_physical-computing_2024"
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 21,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-ExploreLessonPlan_physical-computing_2024"
+        ],
         "progression": "Explore Course Lesson Plans"
       },
       "bonus": false,
@@ -702,18 +833,21 @@
         "lesson.key": "Navigating Lesson Plans and Resources",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "92f47162-a83e-42e2-8bfc-64b59fbae6c6"
+        "activity_section.key": "2e3fe5ba-a4a5-49cb-bcf1-5ed701a011e0"
       },
       "level_keys": [
         "SP-VPL-21-mod2-ExploreLessonPlan_physical-computing_2024"
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 22,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL_21-mod2-MakeAPlan-LessonPlanning_physical-computing_2024"
+        ],
         "progression": "Explore Course Lesson Plans"
       },
       "bonus": false,
@@ -724,18 +858,21 @@
         "lesson.key": "Navigating Lesson Plans and Resources",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "92f47162-a83e-42e2-8bfc-64b59fbae6c6"
+        "activity_section.key": "2e3fe5ba-a4a5-49cb-bcf1-5ed701a011e0"
       },
       "level_keys": [
         "SP-VPL_21-mod2-MakeAPlan-LessonPlanning_physical-computing_2024"
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 23,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-NavigatingTeacherResources_physical-computing_2024"
+        ],
         "progression": "Explore Additional Teacher Resources"
       },
       "bonus": false,
@@ -746,18 +883,21 @@
         "lesson.key": "Navigating Lesson Plans and Resources",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "372a68f0-65b3-4c24-b78f-b90935603ed9"
+        "activity_section.key": "60fe003a-b801-4e23-b7b0-741e15da6ac7"
       },
       "level_keys": [
         "SP-VPL-21-mod2-NavigatingTeacherResources_physical-computing_2024"
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 24,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-UnitCalendar_physical-computing_2024"
+        ],
         "progression": "Explore Additional Teacher Resources"
       },
       "bonus": false,
@@ -768,18 +908,21 @@
         "lesson.key": "Navigating Lesson Plans and Resources",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "372a68f0-65b3-4c24-b78f-b90935603ed9"
+        "activity_section.key": "60fe003a-b801-4e23-b7b0-741e15da6ac7"
       },
       "level_keys": [
         "SP-VPL-21-mod2-UnitCalendar_physical-computing_2024"
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-TaskResources_physical-computing_2024"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -790,18 +933,21 @@
         "lesson.key": "Navigating Support",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "2bd0fab6-8268-4fa4-8489-b32a5fbc0427"
+        "activity_section.key": "43b0eb05-ed3a-477b-bed2-96a7a29ad684"
       },
       "level_keys": [
         "SP-VPL-21-mod2-TaskResources_physical-computing_2024"
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 26,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-navigating support_physical-computing_2024"
+        ],
         "progression": "Additional support for teachers"
       },
       "bonus": false,
@@ -812,18 +958,21 @@
         "lesson.key": "Navigating Support",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "eefca120-4b41-401b-a957-df7ba2c9ea35"
+        "activity_section.key": "cfc88ad6-55f8-4471-9988-7ae46bf5e73a"
       },
       "level_keys": [
         "SP-VPL-21-mod2-navigating support_physical-computing_2024"
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 27,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-ReadSupportArticles_physical-computing_2024"
+        ],
         "progression": "Additional support for teachers"
       },
       "bonus": false,
@@ -834,18 +983,21 @@
         "lesson.key": "Navigating Support",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "eefca120-4b41-401b-a957-df7ba2c9ea35"
+        "activity_section.key": "cfc88ad6-55f8-4471-9988-7ae46bf5e73a"
       },
       "level_keys": [
         "SP-VPL-21-mod2-ReadSupportArticles_physical-computing_2024"
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 28,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-ReportAProblem_physical-computing_2024"
+        ],
         "progression": "Additional support for teachers"
       },
       "bonus": false,
@@ -856,18 +1008,21 @@
         "lesson.key": "Navigating Support",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "eefca120-4b41-401b-a957-df7ba2c9ea35"
+        "activity_section.key": "cfc88ad6-55f8-4471-9988-7ae46bf5e73a"
       },
       "level_keys": [
         "SP-VPL-21-mod2-ReportAProblem_physical-computing_2024"
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 29,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-JoinTheTeacherCommunity_physical-computing_2024"
+        ],
         "progression": "Additional support for teachers"
       },
       "bonus": false,
@@ -878,18 +1033,21 @@
         "lesson.key": "Navigating Support",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "eefca120-4b41-401b-a957-df7ba2c9ea35"
+        "activity_section.key": "cfc88ad6-55f8-4471-9988-7ae46bf5e73a"
       },
       "level_keys": [
         "SP-VPL-21-mod2-JoinTheTeacherCommunity_physical-computing_2024"
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 30,
       "position": 6,
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-Support-c4u_physical-computing_2024"
+        ],
         "progression": "Additional support for teachers"
       },
       "bonus": false,
@@ -900,32 +1058,35 @@
         "lesson.key": "Navigating Support",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "eefca120-4b41-401b-a957-df7ba2c9ea35"
+        "activity_section.key": "cfc88ad6-55f8-4471-9988-7ae46bf5e73a"
       },
       "level_keys": [
         "SP-VPL-21-mod2-Support-c4u_physical-computing_2024"
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 31,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-CSD-Unit1-Module1WrapUp_2024"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-VPL-U3-GettingStarted-WrapUp_2024"
+          "SP-CSD-Unit1-Module1WrapUp_2024"
         ],
         "lesson.key": "Navigating Support",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "3f6bd578-5e53-48ed-8322-07c4acbfcbc8"
+        "activity_section.key": "3015fb41-e2fb-4d41-9407-a21e7f1fbc2a"
       },
       "level_keys": [
-        "SP-VPL-U3-GettingStarted-WrapUp_2024"
+        "SP-CSD-Unit1-Module1WrapUp_2024"
       ]
     }
   ],
@@ -939,7 +1100,31 @@
         "lesson.key": "Welcome to Codeorg",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "dd07b63a-9672-43b5-8b6e-84c3ce6d3c6a"
+        "activity_section.key": "c0468ad2-abfe-4222-81b6-e613e05cbcc1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod1-Overview-Welcome_ModuleOverview",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-Overview-Welcome_ModuleOverview"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit3-1-2024",
+        "activity_section.key": "c0468ad2-abfe-4222-81b6-e613e05cbcc1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-24-mod1-Certificate",
+        "script_level.level_keys": [
+          "SP-VPL-24-mod1-Certificate"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit3-1-2024",
+        "activity_section.key": "c0468ad2-abfe-4222-81b6-e613e05cbcc1"
       }
     },
     {
@@ -951,7 +1136,7 @@
         "lesson.key": "Welcome to Codeorg",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "9f935fc4-c72a-41a2-98d6-644309114377"
+        "activity_section.key": "2ce08355-7f0c-4b39-987b-07525770269b"
       }
     },
     {
@@ -963,7 +1148,7 @@
         "lesson.key": "Welcome to Codeorg",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "9f935fc4-c72a-41a2-98d6-644309114377"
+        "activity_section.key": "2ce08355-7f0c-4b39-987b-07525770269b"
       }
     },
     {
@@ -975,7 +1160,7 @@
         "lesson.key": "Welcome to Codeorg",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "9f935fc4-c72a-41a2-98d6-644309114377"
+        "activity_section.key": "2ce08355-7f0c-4b39-987b-07525770269b"
       }
     },
     {
@@ -987,7 +1172,7 @@
         "lesson.key": "Navigating the Codeorg Learning Platform",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "1df0d5d5-4741-443e-90a2-9643d6b27fd6"
+        "activity_section.key": "e278b956-d770-4a2d-ab92-7a43baa2e663"
       }
     },
     {
@@ -999,7 +1184,7 @@
         "lesson.key": "Navigating the Codeorg Learning Platform",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "d4be9372-215a-4d48-be63-7730f5d92306"
+        "activity_section.key": "797f150b-e8e0-468b-a766-4df797410da7"
       }
     },
     {
@@ -1011,7 +1196,7 @@
         "lesson.key": "Navigating the Codeorg Learning Platform",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "d4be9372-215a-4d48-be63-7730f5d92306"
+        "activity_section.key": "797f150b-e8e0-468b-a766-4df797410da7"
       }
     },
     {
@@ -1023,7 +1208,19 @@
         "lesson.key": "Navigating the Codeorg Learning Platform",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "d77359fb-851a-4aaf-b41d-c5bb6c644f8d"
+        "activity_section.key": "d6701931-df69-41d3-8390-5ab0d917b927"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-LMSIntegrations",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-LMSIntegrations"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit3-1-2024",
+        "activity_section.key": "d6701931-df69-41d3-8390-5ab0d917b927"
       }
     },
     {
@@ -1035,7 +1232,7 @@
         "lesson.key": "Navigating the Codeorg Learning Platform",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "d77359fb-851a-4aaf-b41d-c5bb6c644f8d"
+        "activity_section.key": "d6701931-df69-41d3-8390-5ab0d917b927"
       }
     },
     {
@@ -1047,7 +1244,7 @@
         "lesson.key": "Navigating the Codeorg Learning Platform",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "d77359fb-851a-4aaf-b41d-c5bb6c644f8d"
+        "activity_section.key": "d6701931-df69-41d3-8390-5ab0d917b927"
       }
     },
     {
@@ -1059,7 +1256,7 @@
         "lesson.key": "Navigating the Codeorg Learning Platform",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "289fda0b-eab3-43fd-9414-982a42a4c355"
+        "activity_section.key": "b26f7007-9e4e-4b05-b9d0-bce1ec5ea73f"
       }
     },
     {
@@ -1071,7 +1268,7 @@
         "lesson.key": "Navigating the Codeorg Learning Platform",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "289fda0b-eab3-43fd-9414-982a42a4c355"
+        "activity_section.key": "b26f7007-9e4e-4b05-b9d0-bce1ec5ea73f"
       }
     },
     {
@@ -1083,7 +1280,7 @@
         "lesson.key": "Navigating the Codeorg Learning Platform",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "b6e07c2a-412f-46dd-a47d-f6a46964b3a3"
+        "activity_section.key": "c450399f-6445-4a6e-86ed-62f2d83d409a"
       }
     },
     {
@@ -1095,7 +1292,7 @@
         "lesson.key": "Navigating the Codeorg Learning Platform",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "b6e07c2a-412f-46dd-a47d-f6a46964b3a3"
+        "activity_section.key": "c450399f-6445-4a6e-86ed-62f2d83d409a"
       }
     },
     {
@@ -1107,7 +1304,7 @@
         "lesson.key": "Navigating the Codeorg Learning Platform",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "b6e07c2a-412f-46dd-a47d-f6a46964b3a3"
+        "activity_section.key": "c450399f-6445-4a6e-86ed-62f2d83d409a"
       }
     },
     {
@@ -1119,7 +1316,7 @@
         "lesson.key": "Navigating Lesson Plans and Resources",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "ad44967f-42a0-4446-be6a-a1405f233c64"
+        "activity_section.key": "e29474ce-735c-4dcd-84e0-22e8160d4f1a"
       }
     },
     {
@@ -1131,7 +1328,7 @@
         "lesson.key": "Navigating Lesson Plans and Resources",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "92f47162-a83e-42e2-8bfc-64b59fbae6c6"
+        "activity_section.key": "2e3fe5ba-a4a5-49cb-bcf1-5ed701a011e0"
       }
     },
     {
@@ -1143,7 +1340,7 @@
         "lesson.key": "Navigating Lesson Plans and Resources",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "92f47162-a83e-42e2-8bfc-64b59fbae6c6"
+        "activity_section.key": "2e3fe5ba-a4a5-49cb-bcf1-5ed701a011e0"
       }
     },
     {
@@ -1155,7 +1352,7 @@
         "lesson.key": "Navigating Lesson Plans and Resources",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "92f47162-a83e-42e2-8bfc-64b59fbae6c6"
+        "activity_section.key": "2e3fe5ba-a4a5-49cb-bcf1-5ed701a011e0"
       }
     },
     {
@@ -1167,7 +1364,7 @@
         "lesson.key": "Navigating Lesson Plans and Resources",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "372a68f0-65b3-4c24-b78f-b90935603ed9"
+        "activity_section.key": "60fe003a-b801-4e23-b7b0-741e15da6ac7"
       }
     },
     {
@@ -1179,7 +1376,7 @@
         "lesson.key": "Navigating Lesson Plans and Resources",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "372a68f0-65b3-4c24-b78f-b90935603ed9"
+        "activity_section.key": "60fe003a-b801-4e23-b7b0-741e15da6ac7"
       }
     },
     {
@@ -1191,7 +1388,7 @@
         "lesson.key": "Navigating Support",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "2bd0fab6-8268-4fa4-8489-b32a5fbc0427"
+        "activity_section.key": "43b0eb05-ed3a-477b-bed2-96a7a29ad684"
       }
     },
     {
@@ -1203,7 +1400,7 @@
         "lesson.key": "Navigating Support",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "eefca120-4b41-401b-a957-df7ba2c9ea35"
+        "activity_section.key": "cfc88ad6-55f8-4471-9988-7ae46bf5e73a"
       }
     },
     {
@@ -1215,7 +1412,7 @@
         "lesson.key": "Navigating Support",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "eefca120-4b41-401b-a957-df7ba2c9ea35"
+        "activity_section.key": "cfc88ad6-55f8-4471-9988-7ae46bf5e73a"
       }
     },
     {
@@ -1227,7 +1424,7 @@
         "lesson.key": "Navigating Support",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "eefca120-4b41-401b-a957-df7ba2c9ea35"
+        "activity_section.key": "cfc88ad6-55f8-4471-9988-7ae46bf5e73a"
       }
     },
     {
@@ -1239,7 +1436,7 @@
         "lesson.key": "Navigating Support",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "eefca120-4b41-401b-a957-df7ba2c9ea35"
+        "activity_section.key": "cfc88ad6-55f8-4471-9988-7ae46bf5e73a"
       }
     },
     {
@@ -1251,19 +1448,19 @@
         "lesson.key": "Navigating Support",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "eefca120-4b41-401b-a957-df7ba2c9ea35"
+        "activity_section.key": "cfc88ad6-55f8-4471-9988-7ae46bf5e73a"
       }
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-U3-GettingStarted-WrapUp_2024",
+        "level.key": "SP-CSD-Unit1-Module1WrapUp_2024",
         "script_level.level_keys": [
-          "SP-VPL-U3-GettingStarted-WrapUp_2024"
+          "SP-CSD-Unit1-Module1WrapUp_2024"
         ],
         "lesson.key": "Navigating Support",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-1-2024",
-        "activity_section.key": "3f6bd578-5e53-48ed-8322-07c4acbfcbc8"
+        "activity_section.key": "3015fb41-e2fb-4d41-9407-a21e7f1fbc2a"
       }
     }
   ],

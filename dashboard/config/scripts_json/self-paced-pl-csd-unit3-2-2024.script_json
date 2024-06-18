@@ -2,14 +2,16 @@
   "script": {
     "name": "self-paced-pl-csd-unit3-2-2024",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
       "curriculum_umbrella": "CSD Self Paced PL",
-      "is_migrated": true
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-25 22:26:49 UTC",
+    "serialized_at": "2024-05-06 22:07:21 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -51,7 +53,7 @@
     },
     {
       "key": "Create a scene",
-      "name": "Create a scene",
+      "name": "Create a Scene",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -68,7 +70,7 @@
     },
     {
       "key": "Animate a scene using sprites",
-      "name": "Animate a scene using sprites",
+      "name": "Animate a Scene Using Sprites",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": false,
@@ -85,7 +87,7 @@
     },
     {
       "key": "Explore game design",
-      "name": "Explore game design",
+      "name": "Explore Game Design",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": false,
@@ -102,7 +104,7 @@
     },
     {
       "key": "Unit wrap up",
-      "name": "Unit wrap up",
+      "name": "Unit Wrap Up",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": false,
@@ -219,10 +221,21 @@
       }
     },
     {
-      "key": "6af81466-5038-4d09-afaf-f810389da413",
+      "key": "a4b25b9b-f9f6-48b2-9655-49fab0b7c48f",
       "position": 4,
       "properties": {
-        "progression_name": "Explore the first week of curriculum"
+        "progression_name": "Teaching Tools"
+      },
+      "seeding_key": {
+        "activity_section.key": "a4b25b9b-f9f6-48b2-9655-49fab0b7c48f",
+        "lesson_activity.key": "cf04e23f-d37c-4aa6-a6ac-41afe782b4fd"
+      }
+    },
+    {
+      "key": "6af81466-5038-4d09-afaf-f810389da413",
+      "position": 5,
+      "properties": {
+        "progression_name": "Explore the First Week of Curriculum"
       },
       "seeding_key": {
         "activity_section.key": "6af81466-5038-4d09-afaf-f810389da413",
@@ -244,7 +257,7 @@
       "key": "3144992d-fc65-46f9-8c87-4bddfcf1ebaa",
       "position": 2,
       "properties": {
-        "progression_name": "Position shapes on the grid"
+        "progression_name": "Position Shapes on the Grid"
       },
       "seeding_key": {
         "activity_section.key": "3144992d-fc65-46f9-8c87-4bddfcf1ebaa",
@@ -255,7 +268,7 @@
       "key": "852c4a4d-8419-4496-811b-4757382df0ce",
       "position": 3,
       "properties": {
-        "progression_name": "Add color to shapes "
+        "progression_name": "Add Color to Shapes"
       },
       "seeding_key": {
         "activity_section.key": "852c4a4d-8419-4496-811b-4757382df0ce",
@@ -266,7 +279,7 @@
       "key": "f3ada8c1-73f9-41ee-84e0-f68de55cb392",
       "position": 4,
       "properties": {
-        "progression_name": "Add parameters"
+        "progression_name": "Add Parameters"
       },
       "seeding_key": {
         "activity_section.key": "f3ada8c1-73f9-41ee-84e0-f68de55cb392",
@@ -277,7 +290,7 @@
       "key": "ef4be754-4d68-469e-aa7f-0d746586f554",
       "position": 5,
       "properties": {
-        "progression_name": "Add variables"
+        "progression_name": "Add Variables"
       },
       "seeding_key": {
         "activity_section.key": "ef4be754-4d68-469e-aa7f-0d746586f554",
@@ -310,7 +323,7 @@
       "key": "0eeb3f17-5160-4694-9700-e72d3a8ffef5",
       "position": 2,
       "properties": {
-        "progression_name": "Create a sprite"
+        "progression_name": "Create a Sprite"
       },
       "seeding_key": {
         "activity_section.key": "0eeb3f17-5160-4694-9700-e72d3a8ffef5",
@@ -321,7 +334,7 @@
       "key": "0b4a6960-a69f-40b7-ad4c-3280e30dd53c",
       "position": 3,
       "properties": {
-        "progression_name": "Animate a sprite"
+        "progression_name": "Animate a Sprite"
       },
       "seeding_key": {
         "activity_section.key": "0b4a6960-a69f-40b7-ad4c-3280e30dd53c",
@@ -332,7 +345,7 @@
       "key": "8a5fb540-25da-4a9e-bcf1-14c80b5818a3",
       "position": 4,
       "properties": {
-        "progression_name": "Add movement to a sprite"
+        "progression_name": "Add Movement to a Sprite"
       },
       "seeding_key": {
         "activity_section.key": "8a5fb540-25da-4a9e-bcf1-14c80b5818a3",
@@ -343,7 +356,7 @@
       "key": "077ffaa6-4443-41ed-b784-5693a0c88022",
       "position": 5,
       "properties": {
-        "progression_name": "Move a sprite across the screen "
+        "progression_name": "Move a Sprite Across the Screen"
       },
       "seeding_key": {
         "activity_section.key": "077ffaa6-4443-41ed-b784-5693a0c88022",
@@ -376,7 +389,7 @@
       "key": "238af64b-773e-487f-b1d4-5e36f515c5c5",
       "position": 2,
       "properties": {
-        "progression_name": "React to changes using conditional statements"
+        "progression_name": "React to Changes Using Conditional Statements"
       },
       "seeding_key": {
         "activity_section.key": "238af64b-773e-487f-b1d4-5e36f515c5c5",
@@ -387,7 +400,7 @@
       "key": "9a56d412-512e-4719-87d8-c0f77f5b9a46",
       "position": 3,
       "properties": {
-        "progression_name": "Change conditions using inputs"
+        "progression_name": "Change Conditions Using Inputs"
       },
       "seeding_key": {
         "activity_section.key": "9a56d412-512e-4719-87d8-c0f77f5b9a46",
@@ -398,7 +411,7 @@
       "key": "97eb8a59-49d7-41d9-aceb-24e2851e6b85",
       "position": 4,
       "properties": {
-        "progression_name": "Hide details with abstractions"
+        "progression_name": "Hide Details with Abstractions"
       },
       "seeding_key": {
         "activity_section.key": "97eb8a59-49d7-41d9-aceb-24e2851e6b85",
@@ -457,6 +470,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-U3_self-paced-unit3_2024"
+        ],
         "progression": "Introduction to this Module"
       },
       "bonus": false,
@@ -484,6 +500,31 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
+          "SP-VPL-24-mod1-Certificate"
+        ],
+        "lesson.key": "Introduction to Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit3-2-2024",
+        "activity_section.key": "e931ec39-146f-4f3f-9e84-813a9d71ed39"
+      },
+      "level_keys": [
+        "SP-VPL-24-mod1-Certificate"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit3_2024"
+        ],
+        "progression": "Introduction to this Module"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
           "VPL-CSD-PL Overview-self-paced-unit3_2024"
         ],
         "lesson.key": "Introduction to Interactive Animations and Games",
@@ -496,11 +537,14 @@
       ]
     },
     {
-      "chapter": 3,
-      "position": 3,
+      "chapter": 4,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview_U3L2_self-paced-unit3_2024"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -518,11 +562,14 @@
       ]
     },
     {
-      "chapter": 4,
-      "position": 4,
+      "chapter": 5,
+      "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CI-LessonTypes-U3_self-paced-unit3_2024"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -540,11 +587,14 @@
       ]
     },
     {
-      "chapter": 5,
-      "position": 5,
+      "chapter": 6,
+      "position": 6,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-Project Overview_U3L2_self-paced-unit3_2024"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -562,11 +612,14 @@
       ]
     },
     {
-      "chapter": 6,
-      "position": 6,
+      "chapter": 7,
+      "position": 7,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-U3L3_self-paced-unit3_2024"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -584,11 +637,14 @@
       ]
     },
     {
-      "chapter": 7,
-      "position": 7,
+      "chapter": 8,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_tools-U3_self-paced-unit3_2024"
+        ],
         "progression": "Learning Tools"
       },
       "bonus": false,
@@ -606,12 +662,59 @@
       ]
     },
     {
-      "chapter": 8,
-      "position": 8,
+      "chapter": 9,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Explore the first week of curriculum"
+        "progression": "Teaching Tools"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-U3-TeacherTools"
+        ],
+        "lesson.key": "Introduction to Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit3-2-2024",
+        "activity_section.key": "a4b25b9b-f9f6-48b2-9655-49fab0b7c48f"
+      },
+      "level_keys": [
+        "VPL-CSD-U3-TeacherTools"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Teaching Tools"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-U3-TeacherTools-AITAVid"
+        ],
+        "lesson.key": "Introduction to Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit3-2-2024",
+        "activity_section.key": "a4b25b9b-f9f6-48b2-9655-49fab0b7c48f"
+      },
+      "level_keys": [
+        "VPL-CSD-U3-TeacherTools-AITAVid"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-2-week1-exU3L5_self-paced-unit3_2024"
+        ],
+        "progression": "Explore the First Week of Curriculum"
       },
       "bonus": false,
       "seeding_key": {
@@ -628,11 +731,14 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-lesson2-overview_self-paced-unit3_2024"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -650,12 +756,15 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 13,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Position shapes on the grid"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-grid-overview_self-paced-unit3_2024"
+        ],
+        "progression": "Position Shapes on the Grid"
       },
       "bonus": false,
       "seeding_key": {
@@ -672,12 +781,15 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 14,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Position shapes on the grid"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD: Drawing in Game Lab 1_2024"
+        ],
+        "progression": "Position Shapes on the Grid"
       },
       "bonus": false,
       "seeding_key": {
@@ -694,12 +806,15 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 15,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Position shapes on the grid"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Drawing Squares to Corner_2024"
+        ],
+        "progression": "Position Shapes on the Grid"
       },
       "bonus": false,
       "seeding_key": {
@@ -716,12 +831,15 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 16,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Add color to shapes "
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD: Drawing in Game Lab 2_2024"
+        ],
+        "progression": "Add Color to Shapes"
       },
       "bonus": false,
       "seeding_key": {
@@ -738,12 +856,15 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 17,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Add color to shapes "
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 sequence_2024"
+        ],
+        "progression": "Add Color to Shapes"
       },
       "bonus": false,
       "seeding_key": {
@@ -760,12 +881,15 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 18,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Add parameters"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-DrawingShapes-overview_self-paced-unit3_2024"
+        ],
+        "progression": "Add Parameters"
       },
       "bonus": false,
       "seeding_key": {
@@ -782,12 +906,15 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 19,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Add parameters"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Random Taller Rectangle_2024"
+        ],
+        "progression": "Add Parameters"
       },
       "bonus": false,
       "seeding_key": {
@@ -804,12 +931,15 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 20,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Add parameters"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Random Debug Grass_2024"
+        ],
+        "progression": "Add Parameters"
       },
       "bonus": false,
       "seeding_key": {
@@ -826,12 +956,15 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 21,
       "position": 10,
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
-        "progression": "Add parameters"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-matching-c4u-DrawingShapes_self-paced-unit3_2024"
+        ],
+        "progression": "Add Parameters"
       },
       "bonus": false,
       "seeding_key": {
@@ -848,12 +981,15 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 22,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Add variables"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Introduction to Variables - Part_2024"
+        ],
+        "progression": "Add Variables"
       },
       "bonus": false,
       "seeding_key": {
@@ -870,12 +1006,15 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 23,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Add variables"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Variables Draw Poppy_2024"
+        ],
+        "progression": "Add Variables"
       },
       "bonus": false,
       "seeding_key": {
@@ -892,12 +1031,15 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 24,
       "position": 13,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Add variables"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-variaables-overview_self-paced-unit3_2024"
+        ],
+        "progression": "Add Variables"
       },
       "bonus": false,
       "seeding_key": {
@@ -914,12 +1056,15 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 25,
       "position": 14,
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
-        "progression": "Add variables"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-lesson2-C4U-variables_self-paced-unit3_2024"
+        ],
+        "progression": "Add Variables"
       },
       "bonus": false,
       "seeding_key": {
@@ -936,12 +1081,15 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 26,
       "position": 15,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Add variables"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Variables random with ass_2024"
+        ],
+        "progression": "Add Variables"
       },
       "bonus": false,
       "seeding_key": {
@@ -958,11 +1106,14 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 27,
       "position": 16,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD_Lesson2WrapUp_U3_self-paced-unit3_2024"
+        ],
         "progression": "Section Wrap Up"
       },
       "bonus": false,
@@ -980,11 +1131,14 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-lesson3-overview_self-paced-unit3_2024"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -1002,12 +1156,15 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 29,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Create a sprite"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Sprites Exploration_2024"
+        ],
+        "progression": "Create a Sprite"
       },
       "bonus": false,
       "seeding_key": {
@@ -1024,12 +1181,15 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 30,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Create a sprite"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD: Sprites in Game Lab_2024"
+        ],
+        "progression": "Create a Sprite"
       },
       "bonus": false,
       "seeding_key": {
@@ -1046,12 +1206,15 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 31,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Create a sprite"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-2-CSD U3 Sprites intro sprites_2024"
+        ],
+        "progression": "Create a Sprite"
       },
       "bonus": false,
       "seeding_key": {
@@ -1068,12 +1231,15 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 32,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Animate a sprite"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD: Animation Tab_2024"
+        ],
+        "progression": "Animate a Sprite"
       },
       "bonus": false,
       "seeding_key": {
@@ -1090,12 +1256,15 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 33,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Animate a sprite"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-2-CSD U3 Sprites sequencing_2024"
+        ],
+        "progression": "Animate a Sprite"
       },
       "bonus": false,
       "seeding_key": {
@@ -1112,12 +1281,15 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 34,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Animate a sprite"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-spriteOverview_self-paced-unit3_2024"
+        ],
+        "progression": "Animate a Sprite"
       },
       "bonus": false,
       "seeding_key": {
@@ -1134,12 +1306,15 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 35,
       "position": 8,
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
-        "progression": "Animate a sprite"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-matching-c4u-mod3-lesson3-Making_self-paced-_2024"
+        ],
+        "progression": "Animate a Sprite"
       },
       "bonus": false,
       "seeding_key": {
@@ -1156,12 +1331,15 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 36,
       "position": 9,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Animate a sprite"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD Games properties xy_2024"
+        ],
+        "progression": "Animate a Sprite"
       },
       "bonus": false,
       "seeding_key": {
@@ -1178,12 +1356,15 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 37,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Add movement to a sprite"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD: Introduction to the Draw Lo_2024"
+        ],
+        "progression": "Add Movement to a Sprite"
       },
       "bonus": false,
       "seeding_key": {
@@ -1200,12 +1381,15 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 38,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Add movement to a sprite"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Draw Loop Plugged orange _2024"
+        ],
+        "progression": "Add Movement to a Sprite"
       },
       "bonus": false,
       "seeding_key": {
@@ -1222,12 +1406,15 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 39,
       "position": 12,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Add movement to a sprite"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 dancing alien_2024"
+        ],
+        "progression": "Add Movement to a Sprite"
       },
       "bonus": false,
       "seeding_key": {
@@ -1244,12 +1431,15 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 40,
       "position": 13,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Add movement to a sprite"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-drawLoop-overview_self-paced-unit3_2024"
+        ],
+        "progression": "Add Movement to a Sprite"
       },
       "bonus": false,
       "seeding_key": {
@@ -1266,12 +1456,15 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 41,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Move a sprite across the screen "
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD: Animating Sprite Movement_2024"
+        ],
+        "progression": "Move a Sprite Across the Screen"
       },
       "bonus": false,
       "seeding_key": {
@@ -1288,12 +1481,15 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 42,
       "position": 15,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Move a sprite across the screen "
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-2-CSD U3 Sprite Movement Right_2024"
+        ],
+        "progression": "Move a Sprite Across the Screen"
       },
       "bonus": false,
       "seeding_key": {
@@ -1310,12 +1506,15 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 43,
       "position": 16,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Move a sprite across the screen "
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Diagonal Movement_2024"
+        ],
+        "progression": "Move a Sprite Across the Screen"
       },
       "bonus": false,
       "seeding_key": {
@@ -1332,12 +1531,15 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 44,
       "position": 17,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Move a sprite across the screen "
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-counterPattern-overview_self-paced-unit_2024"
+        ],
+        "progression": "Move a Sprite Across the Screen"
       },
       "bonus": false,
       "seeding_key": {
@@ -1354,12 +1556,15 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 45,
       "position": 18,
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
-        "progression": "Move a sprite across the screen "
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-lesson3-C4U-spriteMovement_self-paced-u_2024"
+        ],
+        "progression": "Move a Sprite Across the Screen"
       },
       "bonus": false,
       "seeding_key": {
@@ -1376,11 +1581,14 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 46,
       "position": 19,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD_Lesson3WrapUp_U3_self-paced-unit3_2024"
+        ],
         "progression": "Section Wrap Up"
       },
       "bonus": false,
@@ -1398,11 +1606,14 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 47,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-lesson4-overview_self-paced-unit3_2024"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -1420,12 +1631,15 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 48,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "React to changes using conditional statements"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 - Booleans Video_2024"
+        ],
+        "progression": "React to Changes Using Conditional Statements"
       },
       "bonus": false,
       "seeding_key": {
@@ -1442,12 +1656,15 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 49,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "React to changes using conditional statements"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-lesson4-booleanOverview_self-paced-unit_2024"
+        ],
+        "progression": "React to Changes Using Conditional Statements"
       },
       "bonus": false,
       "seeding_key": {
@@ -1464,12 +1681,15 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 50,
       "position": 4,
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "progression": "React to changes using conditional statements"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-vocab-c4u-mod3-c4u-booleans_self-paced-unit3_2024"
+        ],
+        "progression": "React to Changes Using Conditional Statements"
       },
       "bonus": false,
       "seeding_key": {
@@ -1486,12 +1706,15 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 51,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "React to changes using conditional statements"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-csd U3 conditional statements vi_2024"
+        ],
+        "progression": "React to Changes Using Conditional Statements"
       },
       "bonus": false,
       "seeding_key": {
@@ -1508,12 +1731,15 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 52,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "React to changes using conditional statements"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Conditionals Apple 2_2024"
+        ],
+        "progression": "React to Changes Using Conditional Statements"
       },
       "bonus": false,
       "seeding_key": {
@@ -1530,12 +1756,15 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 53,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Change conditions using inputs"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Input Fish_2024"
+        ],
+        "progression": "Change Conditions Using Inputs"
       },
       "bonus": false,
       "seeding_key": {
@@ -1552,12 +1781,15 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 54,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Change conditions using inputs"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 - Conditionals Video_2024"
+        ],
+        "progression": "Change Conditions Using Inputs"
       },
       "bonus": false,
       "seeding_key": {
@@ -1574,12 +1806,15 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 55,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Change conditions using inputs"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 - complex - mouse down_2024"
+        ],
+        "progression": "Change Conditions Using Inputs"
       },
       "bonus": false,
       "seeding_key": {
@@ -1596,12 +1831,15 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 56,
       "position": 10,
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
-        "progression": "Change conditions using inputs"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-lesson4-conditionals-C4U_self-paced-uni_2024"
+        ],
+        "progression": "Change Conditions Using Inputs"
       },
       "bonus": false,
       "seeding_key": {
@@ -1618,12 +1856,15 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 57,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Hide details with abstractions"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-lesson4-Abstraction_self-paced-unit3_2024"
+        ],
+        "progression": "Hide Details with Abstractions"
       },
       "bonus": false,
       "seeding_key": {
@@ -1640,12 +1881,15 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 58,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Hide details with abstractions"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-2-CSD: Sprite Velocity_2024"
+        ],
+        "progression": "Hide Details with Abstractions"
       },
       "bonus": false,
       "seeding_key": {
@@ -1662,12 +1906,15 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 59,
       "position": 13,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Hide details with abstractions"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 abstraction velocityX_2024"
+        ],
+        "progression": "Hide Details with Abstractions"
       },
       "bonus": false,
       "seeding_key": {
@@ -1684,12 +1931,15 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 60,
       "position": 14,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Hide details with abstractions"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 collisions isTouching int_2024"
+        ],
+        "progression": "Hide Details with Abstractions"
       },
       "bonus": false,
       "seeding_key": {
@@ -1706,12 +1956,15 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 61,
       "position": 15,
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
-        "progression": "Hide details with abstractions"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-lesson4-abstraction-C4U_self-paced-unit_2024"
+        ],
+        "progression": "Hide Details with Abstractions"
       },
       "bonus": false,
       "seeding_key": {
@@ -1728,11 +1981,14 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 62,
       "position": 16,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD_Lesson4WrapUp_U3_self-paced-unit3_2024"
+        ],
         "progression": "Section Wrap Up"
       },
       "bonus": false,
@@ -1750,11 +2006,14 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 63,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-UnitWrapUp-Overview-U3_self-paced-unit3_2024"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -1772,11 +2031,14 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 64,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-Summer-CI-CSD U3-Mini-ProjectsOverview_self-paced-unit3_2024"
+        ],
         "progression": "Unit Projects"
       },
       "bonus": false,
@@ -1794,11 +2056,14 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 65,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U3L5C1_self-paced-u_2024"
+        ],
         "progression": "Unit Projects"
       },
       "bonus": false,
@@ -1816,11 +2081,14 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 66,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Chapter2-ProjectOverview-U3L5C2_self-paced-u_2024"
+        ],
         "progression": "Unit Projects"
       },
       "bonus": false,
@@ -1838,11 +2106,14 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 67,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-Unit3_WrapUp_2024"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -1866,6 +2137,18 @@
         "level.key": "VPL-CSD-PILOT-S22-CI-ModuleOverview-U3_self-paced-unit3_2024",
         "script_level.level_keys": [
           "VPL-CSD-PILOT-S22-CI-ModuleOverview-U3_self-paced-unit3_2024"
+        ],
+        "lesson.key": "Introduction to Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit3-2-2024",
+        "activity_section.key": "e931ec39-146f-4f3f-9e84-813a9d71ed39"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-24-mod1-Certificate",
+        "script_level.level_keys": [
+          "SP-VPL-24-mod1-Certificate"
         ],
         "lesson.key": "Introduction to Interactive Animations and Games",
         "lesson_group.key": "",
@@ -1943,6 +2226,30 @@
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit3-2-2024",
         "activity_section.key": "a7f4ccec-e7da-489d-a1bd-254f2b97e13d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-U3-TeacherTools",
+        "script_level.level_keys": [
+          "VPL-CSD-U3-TeacherTools"
+        ],
+        "lesson.key": "Introduction to Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit3-2-2024",
+        "activity_section.key": "a4b25b9b-f9f6-48b2-9655-49fab0b7c48f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-U3-TeacherTools-AITAVid",
+        "script_level.level_keys": [
+          "VPL-CSD-U3-TeacherTools-AITAVid"
+        ],
+        "lesson.key": "Introduction to Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit3-2-2024",
+        "activity_section.key": "a4b25b9b-f9f6-48b2-9655-49fab0b7c48f"
       }
     },
     {

@@ -1,0 +1,69 @@
+@import 'color';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: $light_black;
+  border-radius: 4px;
+
+  .cardContainer {
+    max-width: 360px;
+    border-radius: 4px;
+    box-shadow: 3px 3px 6px black;
+  }
+
+  .playViewImage {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    border-radius: 4px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    background-color: $light_gray_900;
+    gap: .5rem;
+    padding: 1.5rem;
+    border-radius: 4px;
+
+    .infoSection {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      .infoText {
+        color: $light_white;
+        margin-bottom: 0;
+      }
+    }
+
+    .playSection {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: $neutral_dark;
+      padding: 10px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: $light_gray_700;
+      border-radius: 4px;
+
+      .playViewButton {
+        border-color: transparent;
+      }
+    }
+
+    .buttonsSection {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+  }
+}

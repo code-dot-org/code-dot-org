@@ -6,7 +6,7 @@
     "self-paced-pl-csp3-2024",
     "self-paced-pl-csp4-2024"
   ],
-  "published_state": "in_development",
+  "published_state": "stable",
   "instruction_type": "self_paced",
   "participant_audience": "teacher",
   "instructor_audience": "facilitator",

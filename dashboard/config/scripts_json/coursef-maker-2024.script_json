@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "coursef-maker",
-    "serialized_at": "2024-04-17 23:49:06 UTC",
+    "serialized_at": "2024-05-03 15:13:53 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -118,16 +118,19 @@
       }
     },
     {
-      "key": "lesson-8",
-      "name": "Cristina - Step counter with micro:bit",
+      "key": "Cristina - Tilt Alarm with micro:bit",
+      "name": "Cristina - Step Counter Coding with micro:bit",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
+        "overview": "In today's skill-building lesson, the goal is code and make a simple fitness tracker using variables to show how many steps you've taken.  The key concepts are **variables**, **data**, and **events.**",
+        "preparation": "- Make sure students have completed the **Meet your micro:bit** exploration lesson.\n\n- Make sure you know how to create **<a href=\"https://www.youtube.com/watch?v=QD8kpuSC0Vc\" target=\"_blank\">a new classroom section </a>** where students will code their micro:bit project.",
+        "student_overview": "Today you will make a simple fitness tracker."
       },
       "seeding_key": {
-        "lesson.key": "lesson-8",
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "coursef-maker-2024"
       }
@@ -192,16 +195,18 @@
       }
     },
     {
-      "key": "lesson-9",
+      "key": "Cristina - Simple Door Alarm Coding with micro:bit",
       "name": "Cristina - Micro:bit pet with micro:bit",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
+        "overview": "In today's **skill-building** lesson, the goal is to create an electronic pet and learn how variables can be used to make computer simulations of the real world. The key concepts are **simulation**, **variables**, **loops**, **events**, and **conditionals.**",
+        "preparation": "- Make sure students have completed the **Meet your micro:bit** exploration lesson.\n\n- “Make sure you know how to create **<a href=\"https://www.youtube.com/watch?v=QD8kpuSC0Vc\" target=\"_blank\">a new classroom section </a>** where students will code their micro:bit project.”"
       },
       "seeding_key": {
-        "lesson.key": "lesson-9",
+        "lesson.key": "Cristina - Simple Door Alarm Coding with micro:bit",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "coursef-maker-2024"
       }
@@ -245,16 +250,18 @@
       }
     },
     {
-      "key": "lesson-10",
+      "key": "Cristina - Sensory Toy with micro:bit",
       "name": "Cristina - Max-min thermometer with micro:bit",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
+        "overview": "In today's **skill-building** lesson, the goal is to make a thermometer that records highs and lows using conditionals and more advanced used of variables. The key concepts are **variables**, **data**, **loops**, **events**, and **conditionals.**",
+        "preparation": "- Make sure students have completed the **Meet your micro:bit** exploratory lesson.\n\n- Make sure you know how to create **<a href=\"https://www.youtube.com/watch?v=QD8kpuSC0Vc\" target=\"_blank\">a new classroom section </a>** where students will code their micro:bit project."
       },
       "seeding_key": {
-        "lesson.key": "lesson-10",
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "coursef-maker-2024"
       }
@@ -413,13 +420,56 @@
       }
     },
     {
-      "key": "a17b5740-9d92-435f-8cdb-1b74a93d3fd9",
+      "key": "37744b44-8c01-4ec7-a157-bbef643754c6",
       "position": 1,
       "properties": {
+        "duration": 10,
+        "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "a17b5740-9d92-435f-8cdb-1b74a93d3fd9",
-        "lesson.key": "lesson-8",
+        "lesson_activity.key": "37744b44-8c01-4ec7-a157-bbef643754c6",
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursef-maker-2024"
+      }
+    },
+    {
+      "key": "a224aeb6-662e-4bb7-b970-9179ef3ce909",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a224aeb6-662e-4bb7-b970-9179ef3ce909",
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursef-maker-2024"
+      }
+    },
+    {
+      "key": "8c29a33a-0775-47c0-8701-707ac7602db6",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8c29a33a-0775-47c0-8701-707ac7602db6",
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursef-maker-2024"
+      }
+    },
+    {
+      "key": "5b8a2b02-45c5-4e80-bc15-6d5111a811f4",
+      "position": 4,
+      "properties": {
+        "name": "[Optional] Extended learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5b8a2b02-45c5-4e80-bc15-6d5111a811f4",
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "coursef-maker-2024"
       }
@@ -590,13 +640,56 @@
       }
     },
     {
-      "key": "4b305923-a741-410b-b60b-e6e676fa5dae",
+      "key": "8f2f363f-7905-4e3c-9cfa-50d6392ff45d",
       "position": 1,
       "properties": {
+        "duration": 10,
+        "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "4b305923-a741-410b-b60b-e6e676fa5dae",
-        "lesson.key": "lesson-9",
+        "lesson_activity.key": "8f2f363f-7905-4e3c-9cfa-50d6392ff45d",
+        "lesson.key": "Cristina - Simple Door Alarm Coding with micro:bit",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursef-maker-2024"
+      }
+    },
+    {
+      "key": "670444a6-d7be-4de8-afef-f2c40cb1033a",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "670444a6-d7be-4de8-afef-f2c40cb1033a",
+        "lesson.key": "Cristina - Simple Door Alarm Coding with micro:bit",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursef-maker-2024"
+      }
+    },
+    {
+      "key": "026b66a0-77b5-48c6-a8eb-788fcc888aab",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "026b66a0-77b5-48c6-a8eb-788fcc888aab",
+        "lesson.key": "Cristina - Simple Door Alarm Coding with micro:bit",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursef-maker-2024"
+      }
+    },
+    {
+      "key": "166e5b70-830f-414d-bec3-8a8890b9bcff",
+      "position": 4,
+      "properties": {
+        "name": "[Optional] Extended learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "166e5b70-830f-414d-bec3-8a8890b9bcff",
+        "lesson.key": "Cristina - Simple Door Alarm Coding with micro:bit",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "coursef-maker-2024"
       }
@@ -686,13 +779,56 @@
       }
     },
     {
-      "key": "3ef161e4-3b56-41b2-ac73-6c18fb9930f6",
+      "key": "0bcd3b62-97fc-4c38-b2d5-c315f4a1b577",
       "position": 1,
       "properties": {
+        "duration": 10,
+        "name": "Warm Up "
       },
       "seeding_key": {
-        "lesson_activity.key": "3ef161e4-3b56-41b2-ac73-6c18fb9930f6",
-        "lesson.key": "lesson-10",
+        "lesson_activity.key": "0bcd3b62-97fc-4c38-b2d5-c315f4a1b577",
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "coursef-maker-2024"
+      }
+    },
+    {
+      "key": "8083e412-2783-48bf-9ddb-8688ca1a5a24",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8083e412-2783-48bf-9ddb-8688ca1a5a24",
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "coursef-maker-2024"
+      }
+    },
+    {
+      "key": "2c2b45cd-18ed-4334-a94b-e2b35c726bd3",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2c2b45cd-18ed-4334-a94b-e2b35c726bd3",
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "coursef-maker-2024"
+      }
+    },
+    {
+      "key": "c0558b09-faa2-4b3e-ad35-12593e0d8dad",
+      "position": 4,
+      "properties": {
+        "name": "[Optional] Extended Learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c0558b09-faa2-4b3e-ad35-12593e0d8dad",
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "coursef-maker-2024"
       }
@@ -1281,23 +1417,63 @@
       }
     },
     {
-      "key": "bceb7e75-3f4d-403f-8ec7-f9ddb54fd885",
+      "key": "7908dcbd-6601-4a4a-be7c-29cd6c78d27e",
       "position": 1,
       "properties": {
+        "description": "**Say**: Today's aim is to code and make a simple fitness tracker using variables to record how many steps you've taken.\n\n[Option 1] **Do this:** Watch the **<a href=\"https://mbit.io/csf-f2-intro\" target=\"_blank\">introduction video.</a>** \n\n[Option 2] **Do this:** Explore the **<a href=\"https://mbit.io/csf-f2-project\" target=\"_blank\"> project </a>** uploaded onto micro:bits prior to the lesson.\n\n**Discuss** how you might wear the micro:bit and battery pack - for example, by putting it in a pocket or attaching it to your arm, shoe or leg.\n\n**Discuss** where these concepts are being used and where students have used them before:\n\n- **Variable:** a label for a piece of information used in a program (e.g., the number of steps taken is stored in a variable)\n\n- **Data:** a collection of information (e.g., the number of steps taken is data - you might collect your own step counts over several days, or compare step counts with other people; this is all data)\n\n- **Event:** an action that causes something to happen (e.g., when the micro:bit's accelerometer detects movement, it triggers code to increase the step count variable by 1 and show it on the LED display)\n\n**Do this:** Share the **<a href=\"https://mbit.io/csf-f2-project\" target=\"_blank\"> project </a>** working in the simulator with your students and look at the code together prior to students coding the main activity.",
+        "duration": "10",
+        "name": "Warm Up"
       },
       "seeding_key": {
-        "activity_section.key": "bceb7e75-3f4d-403f-8ec7-f9ddb54fd885",
-        "lesson_activity.key": "a17b5740-9d92-435f-8cdb-1b74a93d3fd9"
+        "activity_section.key": "7908dcbd-6601-4a4a-be7c-29cd6c78d27e",
+        "lesson_activity.key": "37744b44-8c01-4ec7-a157-bbef643754c6"
       }
     },
     {
-      "key": "84dbc175-a027-46bb-bfda-a823efe9616e",
-      "position": 2,
+      "key": "a62e0b55-b3f9-4b18-92e5-2f505d71feff",
+      "position": 1,
       "properties": {
+        "description": "Students will make the project themselves using the MakeCode editor and micro:bit simulator. Once they have tested their code in the simulator, they will download their code onto the micro:bits.\n\nPick one:\n\n- Step by step coding **<a href=\"https://mbit.io/csf-f2-coding\" target=\"_blank\"> video </a>**\n- Live micro:bit **<a href=\"https://mbit.io/csf-f2-classroom\" target=\"_blank\"> classroom session </a>**",
+        "name": "Student Coding"
       },
       "seeding_key": {
-        "activity_section.key": "84dbc175-a027-46bb-bfda-a823efe9616e",
-        "lesson_activity.key": "a17b5740-9d92-435f-8cdb-1b74a93d3fd9"
+        "activity_section.key": "a62e0b55-b3f9-4b18-92e5-2f505d71feff",
+        "lesson_activity.key": "a224aeb6-662e-4bb7-b970-9179ef3ce909"
+      }
+    },
+    {
+      "key": "8ad1cefa-7ea4-4817-8f3c-12c09b283cf8",
+      "position": 2,
+      "properties": {
+        "progression_name": "Step Counter Coding with micro:bit"
+      },
+      "seeding_key": {
+        "activity_section.key": "8ad1cefa-7ea4-4817-8f3c-12c09b283cf8",
+        "lesson_activity.key": "a224aeb6-662e-4bb7-b970-9179ef3ce909"
+      }
+    },
+    {
+      "key": "ee265531-382c-4348-89de-4e0204f134d3",
+      "position": 1,
+      "properties": {
+        "description": "Share student work, revisit key concepts used, and explore ideas for extended learning.",
+        "duration": "5",
+        "name": "Discussion"
+      },
+      "seeding_key": {
+        "activity_section.key": "ee265531-382c-4348-89de-4e0204f134d3",
+        "lesson_activity.key": "8c29a33a-0775-47c0-8701-707ac7602db6"
+      }
+    },
+    {
+      "key": "7b94fd50-b2ed-4498-ab17-6ca585c36fac",
+      "position": 1,
+      "properties": {
+        "description": "**Reset:** Make a reset button by adding a \"on button A pressed\" event block to reset the step counter variable back to 0.\n\n**Daily trends:** Collect step count data over several days and see if you can spot any patterns suggesting when you are most active.\n\n**Calculate the distance:** Measure the length of your average step and multiply this by your step count to find out how far you have walked. Can you code your micro:bit to work this out for you using one of the Math blocks in MakeCode?\n\n**Make a more sensitive counter:** Code a more advanced **<a href=\"https://mbit.io/csf-step-counter-2\" target=\"_blank\"> Sensitive step counter project  </a>** which uses accelerometer strength readings.\n\n**Data logging:** If you have the micro:bit V2 (the version with the built in speaker), use data logging to make a **<a href=\"https://mbit.io/csf-movement-data\" target=\"_blank\"> personalized step counter</a>**.\n\n**Find this project and more on <a href=\"https://mbit.io/csf-f2-make\" target=\"_blank\"> microbit.org </a>**"
+      },
+      "seeding_key": {
+        "activity_section.key": "7b94fd50-b2ed-4498-ab17-6ca585c36fac",
+        "lesson_activity.key": "5b8a2b02-45c5-4e80-bc15-6d5111a811f4"
       }
     },
     {
@@ -1819,23 +1995,61 @@
       }
     },
     {
-      "key": "5d794e46-fac4-4874-a364-3bd77b932feb",
+      "key": "04b939a5-d2ce-4e12-8837-823ca5214714",
       "position": 1,
       "properties": {
+        "description": "**Say**: Today's aim is to code your own electronic pet and learn how loops, variables, events, and conditionals can work together to create a simulation of a pet that craves attention and gets sad if you ignore it.\n\n[Option 1] **Do this**: Watch the **<a href=\"https://mbit.io/csf-f3-intro\" target=\"_blank\">introduction video.</a>**  \n\n[Option 2] **Do this:** Explore the **<a href=\"https://mbit.io/csf-f3-project\" target=\"_blank\">project</a>** uploaded onto micro:bits prior to the lesson. \n\n**Discuss** where these concepts are being used and where students may have used them before:\n- **Simulation**: a program that replicates or mimics key features of a real world event (e.g., the micro:bit code mimics the behavior of an animal)\n- **Variable**: a label for a piece of information used in a program (e.g., a variable is used to store how long you have ignored your pet for)\n\n- **Loop:** the action of doing something over and over again (e.g., a loop keeps the timer running)\n\n- **Event:** an action that causes something to happen (e.g., shaking or touching the micro:bit keeps the pet happy)\n\n- **Conditional:** a statement that only runs under certain conditions (e.g., if the timer count reaches different numbers, the pet gets sad, falls asleep, or even dies)\n\n\n**Do this**: Share the **<a href=\"https://mbit.io/csf-f3-project\" target=\"_blank\">project</a>**  working in the simulator with your students and look at the code together prior to students coding the main activity.\n\nNote that the code for this project is designed to work in the MakeCode simulator and on the micro:bit V2 (the version with the built-in speaker and gold touch logo). \n\nIf you have the micro:bit V1, you'll need to make the following changes:\n\n- Delete the \"play 'giggle', etc.\" blocks or replace them with \"play melody\"\n\n- Replace the \"on logo pressed\" block with \"on button A pressed\"",
+        "name": "Warm Up"
       },
       "seeding_key": {
-        "activity_section.key": "5d794e46-fac4-4874-a364-3bd77b932feb",
-        "lesson_activity.key": "4b305923-a741-410b-b60b-e6e676fa5dae"
+        "activity_section.key": "04b939a5-d2ce-4e12-8837-823ca5214714",
+        "lesson_activity.key": "8f2f363f-7905-4e3c-9cfa-50d6392ff45d"
       }
     },
     {
-      "key": "f6b6acc2-1396-4d08-83b3-8725e9fbef10",
-      "position": 2,
+      "key": "9c7d3a25-57a1-4e4d-8f88-43f530f276be",
+      "position": 1,
       "properties": {
+        "description": "Students will make the project themselves using the MakeCode editor and micro:bit simulator. Once they have tested their code in the simulator, they will download their code onto the micro:bits.\n\nPick one:\n- Step by step coding **<a href=\"https://mbit.io/csf-f3-coding\" target=\"_blank\">video</a>**\n- Live micro:bit **<a href=\"https://mbit.io/csf-f3-classroom\" target=\"_blank\">classroom session</a>** ",
+        "name": "Student Coding"
       },
       "seeding_key": {
-        "activity_section.key": "f6b6acc2-1396-4d08-83b3-8725e9fbef10",
-        "lesson_activity.key": "4b305923-a741-410b-b60b-e6e676fa5dae"
+        "activity_section.key": "9c7d3a25-57a1-4e4d-8f88-43f530f276be",
+        "lesson_activity.key": "670444a6-d7be-4de8-afef-f2c40cb1033a"
+      }
+    },
+    {
+      "key": "a53fb1c1-c694-4f58-b328-2e544ba14c0c",
+      "position": 2,
+      "properties": {
+        "progression_name": "Micro:bit pet"
+      },
+      "seeding_key": {
+        "activity_section.key": "a53fb1c1-c694-4f58-b328-2e544ba14c0c",
+        "lesson_activity.key": "670444a6-d7be-4de8-afef-f2c40cb1033a"
+      }
+    },
+    {
+      "key": "8aa3cd1c-1eef-493b-b084-1214f4037811",
+      "position": 1,
+      "properties": {
+        "description": "Share student work, revisit key concepts used, and explore ideas for extended learning.",
+        "name": "Discussion"
+      },
+      "seeding_key": {
+        "activity_section.key": "8aa3cd1c-1eef-493b-b084-1214f4037811",
+        "lesson_activity.key": "026b66a0-77b5-48c6-a8eb-788fcc888aab"
+      }
+    },
+    {
+      "key": "8f718275-ef0a-4b08-a1e1-e44091f738e4",
+      "position": 1,
+      "properties": {
+        "description": "**Add new pet reactions**: Add your own expressions and sounds at different values of the \"timer\" variable.\n\n**Talk to your pet**: If you have a micro:bit V2 (the version with the built-in speaker), add an \"on loud sound\" input block so your pet can respond when you talk or sing to it using the built-in microphone.\n\n**Two pets are better than one:** If you have previously used the micro:bit's <a href=\"https://mbit.io/csf-radio\" target=\"_blank\">radio feature</a>**, you can make pets interact with each other; for instance, by making a pet happy when it's close to another micro:pet. You can use the \"radio set transmit power\" block to reduce the power to 0 so pets have to be very close to each other for this work.\n\n**Find this project and more on <a href=\"https://mbit.io/csf-e3-make\" target=\"_blank\">microbit.org</a>**"
+      },
+      "seeding_key": {
+        "activity_section.key": "8f718275-ef0a-4b08-a1e1-e44091f738e4",
+        "lesson_activity.key": "166e5b70-830f-414d-bec3-8a8890b9bcff"
       }
     },
     {
@@ -2066,23 +2280,61 @@
       }
     },
     {
-      "key": "a49f93fb-a01b-44e6-911b-5a9dedd102c1",
+      "key": "f6aa1652-3bbb-4ba6-bfd2-ed6306819a7b",
       "position": 1,
       "properties": {
+        "description": "**Say**: Today's aim is to make a thermometer that records high and low temperatures using conditionals and more advanced use of variables.\n\n[Option 1] **Do this**: Watch the **<a href=\"https://mbit.io/csf-f4-intro\" target=\"_blank\">introduction video.</a>**  \n\n[Option 2] **Do this:** Explore the **<a href=\"https://mbit.io/csf-f4-project\" target=\"_blank\">project</a>** uploaded onto micro:bits prior to the lesson. \n\n**Discuss** how you might use this - where would you place micro:bits to collect this data? How might you gather, visualize, and interpret the data?\n\n**Discuss** where these concepts are being used and where students may have used them before:\n\n- **Variable**: a label for a piece of information used in a program (e.g., the maximum and minimum temperatures are stored in variables so we can keep them updated and recall the information when we need it)\n- **Data**: a collection of information (e.g., the values of the maximum and minimum temperature are data)\n- **Events**: an action that causes something to happen (e.g., the event of pressing button A or B causes the minimum or maximum temperature to be displayed)\n- **Loops:** the action of doing something over and over again (e.g., the micro:bit uses a loop to keep showing a flashing period and checking if the temperature is lower than the previous minimum or higher than the previous maximum)\n- **Conditional:** a statement that only runs under certain conditions (e.g., if the current temperature is lower than the minimum, update the record of the minimum; else if it is higher than the maximum, update the record of the maximum temperature)\n\n\n**Do this:** Share the **<a href=\"https://mbit.io/csf-f4-project\" target=\"_blank\">project</a>**  working in the simulator with your students and look at the code together prior to students coding the main activity.",
+        "name": "Warm Up"
       },
       "seeding_key": {
-        "activity_section.key": "a49f93fb-a01b-44e6-911b-5a9dedd102c1",
-        "lesson_activity.key": "3ef161e4-3b56-41b2-ac73-6c18fb9930f6"
+        "activity_section.key": "f6aa1652-3bbb-4ba6-bfd2-ed6306819a7b",
+        "lesson_activity.key": "0bcd3b62-97fc-4c38-b2d5-c315f4a1b577"
       }
     },
     {
-      "key": "728527c0-6058-4454-9ec2-a35b3c4578d3",
-      "position": 2,
+      "key": "789e36e7-a418-4f3c-9381-fa4d40c08ee0",
+      "position": 1,
       "properties": {
+        "description": "Students will make the project themselves using the MakeCode editor and micro:bit simulator. Once they have tested their code in the simulator, they will download their code onto the micro:bits.\n\nPick one:\n- Step by step coding **<a href=\"https://mbit.io/csf-f4-coding\" target=\"_blank\">video</a>**\n- Live micro:bit **<a href=\"https://mbit.io/csf-f4-classroom\" target=\"_blank\">classroom session</a>** ",
+        "name": "Student Coding"
       },
       "seeding_key": {
-        "activity_section.key": "728527c0-6058-4454-9ec2-a35b3c4578d3",
-        "lesson_activity.key": "3ef161e4-3b56-41b2-ac73-6c18fb9930f6"
+        "activity_section.key": "789e36e7-a418-4f3c-9381-fa4d40c08ee0",
+        "lesson_activity.key": "8083e412-2783-48bf-9ddb-8688ca1a5a24"
+      }
+    },
+    {
+      "key": "9f6a6c98-62fb-4df6-a362-0f1d2604066f",
+      "position": 2,
+      "properties": {
+        "progression_name": "Max-min thermometer"
+      },
+      "seeding_key": {
+        "activity_section.key": "9f6a6c98-62fb-4df6-a362-0f1d2604066f",
+        "lesson_activity.key": "8083e412-2783-48bf-9ddb-8688ca1a5a24"
+      }
+    },
+    {
+      "key": "04dc51da-ddba-4694-a8b1-ca08692b220a",
+      "position": 1,
+      "properties": {
+        "description": "Share student work, revisit key concepts used, and explore ideas for extended learning.",
+        "name": "Discussion"
+      },
+      "seeding_key": {
+        "activity_section.key": "04dc51da-ddba-4694-a8b1-ca08692b220a",
+        "lesson_activity.key": "2c2b45cd-18ed-4334-a94b-e2b35c726bd3"
+      }
+    },
+    {
+      "key": "4e2a6dcb-cde4-4b22-8a13-c48e852ba5c7",
+      "position": 1,
+      "properties": {
+        "description": "**Show the correct temperature:** Add an \"on button A+B pressed\" input block to show the current temperature.\n\n**Convert Celsius to Fahrenheit:** The micro:bit thermometer works in the Celsius temperature scale. Add some code to convert the temperature to Fahrenheit when it's displayed. You can use a function like in this <a href=\"https://mbit.io/csf-fahrenheit\" target=\"_blank\">project</a> or borrow the math blocks from it.\n\n**Data logging:** The micro:bit will lose its maximum-minimum data when the power is disconnected. If you have the micro:bit V2 (the version with the built-in speaker), you can use its data logging feature to record data that stays on the micro:bit even when the power is removed, such as in this <a href=\"https://mbit.io/csf-fahrenheit\" target=\"_blank\">project</a>  that records temperature and light levels.\n\n**Find this project and more on <a href=\"https://mbit.io/csf-f4-make\" target=\"_blank\">microbit.org</a>**"
+      },
+      "seeding_key": {
+        "activity_section.key": "4e2a6dcb-cde4-4b22-8a13-c48e852ba5c7",
+        "lesson_activity.key": "c0558b09-faa2-4b3e-ad35-12593e0d8dad"
       }
     }
   ],
@@ -2818,16 +3070,17 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Step Counter Coding with micro:bit"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "course_f_maker_step_counter"
         ],
-        "lesson.key": "lesson-8",
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "coursef-maker-2024",
-        "activity_section.key": "84dbc175-a027-46bb-bfda-a823efe9616e"
+        "activity_section.key": "8ad1cefa-7ea4-4817-8f3c-12c09b283cf8"
       },
       "level_keys": [
         "course_f_maker_step_counter"
@@ -3515,16 +3768,17 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Micro:bit pet"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "course_f_maker_microbit_pet"
         ],
-        "lesson.key": "lesson-9",
+        "lesson.key": "Cristina - Simple Door Alarm Coding with micro:bit",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "coursef-maker-2024",
-        "activity_section.key": "f6b6acc2-1396-4d08-83b3-8725e9fbef10"
+        "activity_section.key": "a53fb1c1-c694-4f58-b328-2e544ba14c0c"
       },
       "level_keys": [
         "course_f_maker_microbit_pet"
@@ -3961,16 +4215,17 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Max-min thermometer"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "course_f_maker_max_min_thermometer"
         ],
-        "lesson.key": "lesson-10",
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "coursef-maker-2024",
-        "activity_section.key": "728527c0-6058-4454-9ec2-a35b3c4578d3"
+        "activity_section.key": "9f6a6c98-62fb-4df6-a362-0f1d2604066f"
       },
       "level_keys": [
         "course_f_maker_max_min_thermometer"
@@ -4332,10 +4587,10 @@
         "script_level.level_keys": [
           "course_f_maker_step_counter"
         ],
-        "lesson.key": "lesson-8",
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "coursef-maker-2024",
-        "activity_section.key": "84dbc175-a027-46bb-bfda-a823efe9616e"
+        "activity_section.key": "8ad1cefa-7ea4-4817-8f3c-12c09b283cf8"
       }
     },
     {
@@ -4668,10 +4923,10 @@
         "script_level.level_keys": [
           "course_f_maker_microbit_pet"
         ],
-        "lesson.key": "lesson-9",
+        "lesson.key": "Cristina - Simple Door Alarm Coding with micro:bit",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "coursef-maker-2024",
-        "activity_section.key": "f6b6acc2-1396-4d08-83b3-8725e9fbef10"
+        "activity_section.key": "a53fb1c1-c694-4f58-b328-2e544ba14c0c"
       }
     },
     {
@@ -4884,10 +5139,10 @@
         "script_level.level_keys": [
           "course_f_maker_max_min_thermometer"
         ],
-        "lesson.key": "lesson-10",
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "coursef-maker-2024",
-        "activity_section.key": "728527c0-6058-4454-9ec2-a35b3c4578d3"
+        "activity_section.key": "9f6a6c98-62fb-4df6-a362-0f1d2604066f"
       }
     }
   ],
@@ -4969,6 +5224,42 @@
       }
     },
     {
+      "name": "CS talking points for code",
+      "url": "https://drive.google.com/file/d/1t-vFk_eeq4AE1uaNsgWRr3i40fJf65i6/view?usp=drive_link",
+      "key": "cs_talking_points_for_code",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "cs_talking_points_for_code"
+      }
+    },
+    {
+      "name": "CS talking points for code",
+      "url": "https://drive.google.com/file/d/1yaGqykB1ZwfK86UJZ7PIg2wFLtlL95oj/view?usp=drive_link",
+      "key": "cs_talking_points_for_code_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "cs_talking_points_for_code_1"
+      }
+    },
+    {
+      "name": "CS Talking Points for Code",
+      "url": "https://drive.google.com/file/d/104R5jirxgZwiHxSNR6rYIxFcNng3Q3lE/view?usp=drive_link",
+      "key": "cs_talking_points_for_code_2",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "cs_talking_points_for_code_2"
+      }
+    },
+    {
       "name": "CSF - Course D - Slides 2022-2023",
       "url": "https://docs.google.com/presentation/d/1QZjvTpft-xc7uU-rccLHsA2D-YFD8LgONjXwAjJ4nCQ/template/preview",
       "key": "csf_-_course_d_-_slides_2022-2023",
@@ -5043,6 +5334,42 @@
       }
     },
     {
+      "name": "Live micro:bit classroom session",
+      "url": "https://mbit.io/csf-f2-classroom",
+      "key": "live_micro_bit_classroom_session",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "live_micro_bit_classroom_session"
+      }
+    },
+    {
+      "name": "Live micro:bit classroom session",
+      "url": "https://mbit.io/csf-f3-classroom",
+      "key": "live_micro_bit_classroom_session_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "live_micro_bit_classroom_session_1"
+      }
+    },
+    {
+      "name": "Live micro:bit classroom session",
+      "url": "https://mbit.io/csf-f4-classroom",
+      "key": "live_micro_bit_classroom_session_2",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "live_micro_bit_classroom_session_2"
+      }
+    },
+    {
       "name": "Open-ended Programming Levels",
       "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view",
       "key": "open-ended_programming_levels",
@@ -5103,6 +5430,78 @@
       }
     },
     {
+      "name": "Max-min thermometer: Finished project",
+      "url": "https://mbit.io/csf-f4-project",
+      "key": "sensory_toy_finished_project",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "sensory_toy_finished_project"
+      }
+    },
+    {
+      "name": "Max-min thermometer: Introduction video",
+      "url": "https://mbit.io/csf-f4-intro",
+      "key": "sensory_toy_introduction_video",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "sensory_toy_introduction_video"
+      }
+    },
+    {
+      "name": "Max-min thermometer: Step by step coding video",
+      "url": "https://mbit.io/csf-f4-coding",
+      "key": "sensory_toy_step_by_step_coding_video",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "sensory_toy_step_by_step_coding_video"
+      }
+    },
+    {
+      "name": "micro:bit pet: Finished project",
+      "url": "https://mbit.io/csf-f3-project",
+      "key": "simple_door_alarm_finished_project",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "simple_door_alarm_finished_project"
+      }
+    },
+    {
+      "name": "micro:bit pet: Introduction Video",
+      "url": "https://mbit.io/csf-f3-intro",
+      "key": "simple_door_alarm_introduction_video",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "simple_door_alarm_introduction_video"
+      }
+    },
+    {
+      "name": "micro:bit pet: Step by step coding video",
+      "url": "https://mbit.io/csf-f3-coding",
+      "key": "simple_door_alarm_step_by_step_coding_video",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "simple_door_alarm_step_by_step_coding_video"
+      }
+    },
+    {
       "name": "Spotify Playlist (all ages)",
       "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw",
       "key": "spotify_playlist_all_ages_",
@@ -5134,6 +5533,42 @@
       },
       "seeding_key": {
         "resource.key": "the_big_dance_party_slides"
+      }
+    },
+    {
+      "name": "Step Counter: Finished project",
+      "url": "https://mbit.io/csf-f2-project",
+      "key": "tilt_alarm_finished_project",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "tilt_alarm_finished_project"
+      }
+    },
+    {
+      "name": "Step Counter: Introduction Video",
+      "url": "https://mbit.io/csf-f2-intro",
+      "key": "tilt_alarm_introduction_video",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "tilt_alarm_introduction_video"
+      }
+    },
+    {
+      "name": "Step Counter: Step by step coding video",
+      "url": "https://mbit.io/csf-f2-coding",
+      "key": "tilt_alarm_step_by_step_coding_video",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "tilt_alarm_step_by_step_coding_video"
       }
     },
     {
@@ -5196,6 +5631,96 @@
       "seeding_key": {
         "lesson.key": "Counting with Variables",
         "resource.key": "csf_-_course_f_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
+        "resource.key": "cs_talking_points_for_code_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
+        "resource.key": "live_micro_bit_classroom_session_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
+        "resource.key": "sensory_toy_finished_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
+        "resource.key": "sensory_toy_introduction_video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
+        "resource.key": "sensory_toy_step_by_step_coding_video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Simple Door Alarm Coding with micro:bit",
+        "resource.key": "cs_talking_points_for_code_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Simple Door Alarm Coding with micro:bit",
+        "resource.key": "live_micro_bit_classroom_session_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Simple Door Alarm Coding with micro:bit",
+        "resource.key": "simple_door_alarm_finished_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Simple Door Alarm Coding with micro:bit",
+        "resource.key": "simple_door_alarm_introduction_video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Simple Door Alarm Coding with micro:bit",
+        "resource.key": "simple_door_alarm_step_by_step_coding_video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
+        "resource.key": "cs_talking_points_for_code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
+        "resource.key": "live_micro_bit_classroom_session"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
+        "resource.key": "tilt_alarm_finished_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
+        "resource.key": "tilt_alarm_introduction_video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
+        "resource.key": "tilt_alarm_step_by_step_coding_video"
       }
     },
     {
@@ -5335,6 +5860,16 @@
       }
     },
     {
+      "key": "data",
+      "word": "Data",
+      "definition": "A collection of information.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data"
+      }
+    },
+    {
       "key": "event",
       "word": "Event",
       "definition": "An action that causes something to happen.",
@@ -5345,6 +5880,16 @@
       }
     },
     {
+      "key": "hardware",
+      "word": "Hardware",
+      "definition": "The physical, electronic parts of a computer system.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "hardware"
+      }
+    },
+    {
       "key": "line",
       "word": "Line",
       "definition": "(poetry) - a subdivision of a poem arranged in a row that ends at the right-hand margin. ",
@@ -5352,6 +5897,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "line"
+      }
+    },
+    {
+      "key": "loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "loop"
       }
     },
     {
@@ -5395,6 +5950,26 @@
       }
     },
     {
+      "key": "simulation",
+      "word": "Simulation",
+      "definition": "A program which replicates or mimics key features of a real world event.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "simulation"
+      }
+    },
+    {
+      "key": "software",
+      "word": "Software",
+      "definition": "Programs made of code that tell computers what to do.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "software"
+      }
+    },
+    {
       "key": "variable",
       "word": "Variable",
       "definition": "A label for a piece of information used in a program.",
@@ -5416,6 +5991,60 @@
       "seeding_key": {
         "lesson.key": "Conditionals with Cards",
         "vocabulary.key": "pseudocode"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
+        "vocabulary.key": "conditionals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
+        "vocabulary.key": "hardware"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
+        "vocabulary.key": "software"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
+        "vocabulary.key": "variable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Simple Door Alarm Coding with micro:bit",
+        "vocabulary.key": "conditionals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Simple Door Alarm Coding with micro:bit",
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Simple Door Alarm Coding with micro:bit",
+        "vocabulary.key": "simulation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
+        "vocabulary.key": "data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
+        "vocabulary.key": "variable"
       }
     },
     {
@@ -5496,6 +6125,26 @@
   ],
   "objectives": [
     {
+      "key": "1cc3f5c9-94c2-4c53-8a9f-20785c38c47c",
+      "properties": {
+        "description": "Write code that includes variables and events."
+      },
+      "seeding_key": {
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
+        "objective.key": "1cc3f5c9-94c2-4c53-8a9f-20785c38c47c"
+      }
+    },
+    {
+      "key": "1f5848b4-a1dd-451a-8b0f-0250e054e9f6",
+      "properties": {
+        "description": "Recall previous learning about variables, data and events."
+      },
+      "seeding_key": {
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
+        "objective.key": "1f5848b4-a1dd-451a-8b0f-0250e054e9f6"
+      }
+    },
+    {
       "key": "2f4252f8-d886-4253-998a-bc8f95be20f1",
       "properties": {
         "description": "Translate spoken language conditional statements into a program."
@@ -5503,6 +6152,26 @@
       "seeding_key": {
         "lesson.key": "If/Else with Bee",
         "objective.key": "2f4252f8-d886-4253-998a-bc8f95be20f1"
+      }
+    },
+    {
+      "key": "4653d7c6-454b-46ec-93ca-eac6c885e9bc",
+      "properties": {
+        "description": "Use variables as a way to record steps taken."
+      },
+      "seeding_key": {
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
+        "objective.key": "4653d7c6-454b-46ec-93ca-eac6c885e9bc"
+      }
+    },
+    {
+      "key": "46f48ea3-3bfd-4fbd-8f22-8b5550d9f959",
+      "properties": {
+        "description": "Write code using loops, variables, events, and conditionals."
+      },
+      "seeding_key": {
+        "lesson.key": "Cristina - Simple Door Alarm Coding with micro:bit",
+        "objective.key": "46f48ea3-3bfd-4fbd-8f22-8b5550d9f959"
       }
     },
     {
@@ -5523,6 +6192,16 @@
       "seeding_key": {
         "lesson.key": "Text and Prompts",
         "objective.key": "576c0217-af07-4d88-9622-524a0eba8ebd"
+      }
+    },
+    {
+      "key": "57f9b7c8-00a7-4e68-8246-29cb0897af6e",
+      "properties": {
+        "description": "Discuss real applications of a thermometer project."
+      },
+      "seeding_key": {
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
+        "objective.key": "57f9b7c8-00a7-4e68-8246-29cb0897af6e"
       }
     },
     {
@@ -5556,6 +6235,16 @@
       }
     },
     {
+      "key": "813add1e-7cda-4a6a-8d0a-b974563a74dc",
+      "properties": {
+        "description": "Explore ways to use the micro:bit with a battery pack."
+      },
+      "seeding_key": {
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
+        "objective.key": "813add1e-7cda-4a6a-8d0a-b974563a74dc"
+      }
+    },
+    {
       "key": "85c099a4-1ee9-4873-ae86-3bd3f0ec98e7",
       "properties": {
         "description": "Develop programs that respond to timed events"
@@ -5566,6 +6255,16 @@
       }
     },
     {
+      "key": "a304f64d-ce01-4641-9f3c-3d2297e36121",
+      "properties": {
+        "description": "Program using conditionals and more advanced variables."
+      },
+      "seeding_key": {
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
+        "objective.key": "a304f64d-ce01-4641-9f3c-3d2297e36121"
+      }
+    },
+    {
       "key": "b1488bf6-1cc2-474a-8893-0d6c60cd2982",
       "properties": {
         "description": "Create dance animations with code"
@@ -5573,6 +6272,26 @@
       "seeding_key": {
         "lesson.key": "Dance Party",
         "objective.key": "b1488bf6-1cc2-474a-8893-0d6c60cd2982"
+      }
+    },
+    {
+      "key": "b3a3603c-ddbf-4473-9d16-45a9b4c50dcd",
+      "properties": {
+        "description": "Make sense of how hardware and software function together."
+      },
+      "seeding_key": {
+        "lesson.key": "Cristina - Simple Door Alarm Coding with micro:bit",
+        "objective.key": "b3a3603c-ddbf-4473-9d16-45a9b4c50dcd"
+      }
+    },
+    {
+      "key": "bf25331b-e406-4314-a898-4fb58186626b",
+      "properties": {
+        "description": "Share final projects with other classmates."
+      },
+      "seeding_key": {
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
+        "objective.key": "bf25331b-e406-4314-a898-4fb58186626b"
       }
     },
     {
@@ -5706,6 +6425,76 @@
         "lesson.key": "Counting with Variables",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Sensory Toy with micro:bit",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-DA-07"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Simple Door Alarm Coding with micro:bit",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Simple Door Alarm Coding with micro:bit",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Simple Door Alarm Coding with micro:bit",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Tilt Alarm with micro:bit",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-CS-02"
       }
     },
     {

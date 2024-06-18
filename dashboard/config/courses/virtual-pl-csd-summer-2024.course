@@ -7,17 +7,25 @@
     "virtual-pl-csd-summer-2024-day4",
     "virtual-pl-csd-summer-2024-day5"
   ],
-  "published_state": "in_development",
+  "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "teacher",
   "instructor_audience": "facilitator",
   "properties": {
     "family_name": "virtual-pl-csd-summer",
-    "has_numbered_units": true,
     "version_year": "2024"
   },
   "resources": [
-
+    {
+      "name": "2024 Summer Workshop Virtual Overview",
+      "url": "https://docs.google.com/document/d/1djP0Rnow-dXJnCO8nKZ8LXWOeF0QwnqfhAO1yu15p08/edit?usp=sharing",
+      "key": "2024_summer_workshop_virtual_overview",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "2024_summer_workshop_virtual_overview"
+      }
+    }
   ],
   "student_resources": [
 

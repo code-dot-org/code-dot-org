@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-04-04 19:59:55 UTC",
+    "serialized_at": "2024-05-09 17:58:05 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -64,6 +64,23 @@
         "lesson_group.key": "",
         "script.name": "self-paced-pl-microbit-2024-1"
       }
+    },
+    {
+      "key": "Welcome to Codeorg",
+      "name": "Welcome to Code.org",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+        "overview": "**You will:**\n\n* Get an introduction to Code.org's mission.\n\n**Suggested Time:** 10 minutes",
+        "student_overview": "**You will:**\n\n* Get an introduction to Code.org's mission.\n\n**Suggested Time:** 10 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-microbit-2024-1"
+      }
     }
   ],
   "lesson_activities": [
@@ -89,6 +106,19 @@
       "seeding_key": {
         "lesson_activity.key": "0d107534-83e4-449a-bad9-55cd393710a3",
         "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-microbit-2024-1"
+      }
+    },
+    {
+      "key": "ce59d828-8a4f-4122-854c-15b1aba87529",
+      "position": 1,
+      "properties": {
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ce59d828-8a4f-4122-854c-15b1aba87529",
+        "lesson.key": "Welcome to Codeorg",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-microbit-2024-1"
       }
@@ -137,6 +167,39 @@
       "seeding_key": {
         "activity_section.key": "cff0f4f8-d58d-46b2-a32f-61b5b2fb4ae5",
         "lesson_activity.key": "0d107534-83e4-449a-bad9-55cd393710a3"
+      }
+    },
+    {
+      "key": "b0aaa502-fccc-42c9-ad96-25c9ae0b7a2e",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "b0aaa502-fccc-42c9-ad96-25c9ae0b7a2e",
+        "lesson_activity.key": "ce59d828-8a4f-4122-854c-15b1aba87529"
+      }
+    },
+    {
+      "key": "ae54944b-cc4d-449a-81a0-b444abd4d900",
+      "position": 2,
+      "properties": {
+        "progression_name": "Welcome to Code.org"
+      },
+      "seeding_key": {
+        "activity_section.key": "ae54944b-cc4d-449a-81a0-b444abd4d900",
+        "lesson_activity.key": "ce59d828-8a4f-4122-854c-15b1aba87529"
+      }
+    },
+    {
+      "key": "91108138-5693-4433-91d5-3c0641cc7637",
+      "position": 3,
+      "properties": {
+        "progression_name": "Welcome to Creating Apps for Devices"
+      },
+      "seeding_key": {
+        "activity_section.key": "91108138-5693-4433-91d5-3c0641cc7637",
+        "lesson_activity.key": "ce59d828-8a4f-4122-854c-15b1aba87529"
       }
     }
   ],
@@ -690,6 +753,138 @@
       "level_keys": [
         "CSF_maker_microbit_PL_end_naviagtion_certificate"
       ]
+    },
+    {
+      "chapter": 23,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-Overview-Welcome_physical-computing_1"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-microbit-2024-1",
+        "activity_section.key": "b0aaa502-fccc-42c9-ad96-25c9ae0b7a2e"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod1-Overview-Welcome_physical-computing_1"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-Overview-Welcome_ModuleOverview_1"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-microbit-2024-1",
+        "activity_section.key": "b0aaa502-fccc-42c9-ad96-25c9ae0b7a2e"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod1-Overview-Welcome_ModuleOverview_1"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-24-mod1-Certificate_1"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-microbit-2024-1",
+        "activity_section.key": "b0aaa502-fccc-42c9-ad96-25c9ae0b7a2e"
+      },
+      "level_keys": [
+        "SP-VPL-24-mod1-Certificate_1"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Welcome to Code.org"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-welcome-vid_1"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-microbit-2024-1",
+        "activity_section.key": "ae54944b-cc4d-449a-81a0-b444abd4d900"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod1-welcome-vid_1"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Welcome to Code.org"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-CSisFoundational_physical-computing_1"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-microbit-2024-1",
+        "activity_section.key": "ae54944b-cc4d-449a-81a0-b444abd4d900"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod1-CSisFoundational_physical-computing_1"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Welcome to Code.org"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-Advice-TipVid_1"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-microbit-2024-1",
+        "activity_section.key": "ae54944b-cc4d-449a-81a0-b444abd4d900"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod1-Advice-TipVid_1"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -955,6 +1150,78 @@
         "lesson_group.key": "",
         "script.name": "self-paced-pl-microbit-2024-1",
         "activity_section.key": "cff0f4f8-d58d-46b2-a32f-61b5b2fb4ae5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod1-Overview-Welcome_physical-computing_1",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-Overview-Welcome_physical-computing_1"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-microbit-2024-1",
+        "activity_section.key": "b0aaa502-fccc-42c9-ad96-25c9ae0b7a2e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod1-Overview-Welcome_ModuleOverview_1",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-Overview-Welcome_ModuleOverview_1"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-microbit-2024-1",
+        "activity_section.key": "b0aaa502-fccc-42c9-ad96-25c9ae0b7a2e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-24-mod1-Certificate_1",
+        "script_level.level_keys": [
+          "SP-VPL-24-mod1-Certificate_1"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-microbit-2024-1",
+        "activity_section.key": "b0aaa502-fccc-42c9-ad96-25c9ae0b7a2e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod1-welcome-vid_1",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-welcome-vid_1"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-microbit-2024-1",
+        "activity_section.key": "ae54944b-cc4d-449a-81a0-b444abd4d900"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod1-CSisFoundational_physical-computing_1",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-CSisFoundational_physical-computing_1"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-microbit-2024-1",
+        "activity_section.key": "ae54944b-cc4d-449a-81a0-b444abd4d900"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod1-Advice-TipVid_1",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-Advice-TipVid_1"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-microbit-2024-1",
+        "activity_section.key": "ae54944b-cc4d-449a-81a0-b444abd4d900"
       }
     }
   ],

@@ -7,7 +7,7 @@
     "self-paced-pl-ai-101-mod4",
     "self-paced-pl-ai-101-mod5"
   ],
-  "published_state": "beta",
+  "published_state": "stable",
   "instruction_type": "self_paced",
   "participant_audience": "teacher",
   "instructor_audience": "universal_instructor",

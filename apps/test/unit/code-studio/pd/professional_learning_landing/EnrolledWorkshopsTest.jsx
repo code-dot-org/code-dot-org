@@ -1,6 +1,6 @@
 import React from 'react';
-import {shallow} from 'enzyme';
-import {EnrolledWorkshopsTable} from '@cdo/apps/code-studio/pd/professional_learning_landing/EnrolledWorkshops';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import {WorkshopsTable} from '@cdo/apps/code-studio/pd/professional_learning_landing/EnrolledWorkshops';
 import sinon from 'sinon';
 import {assert, expect} from 'chai';
 import * as utils from '@cdo/apps/utils';
@@ -34,7 +34,7 @@ describe('EnrolledWorkshops', () => {
 
   it('Clicking cancel enrollment cancels the enrollment', () => {
     const enrolledWorkshopsTable = shallow(
-      <EnrolledWorkshopsTable workshops={workshops} />
+      <WorkshopsTable workshops={workshops} />
     );
 
     // We expect there to be a table with 4 rows in the body, three of which have two buttons
@@ -60,7 +60,7 @@ describe('EnrolledWorkshops', () => {
 
   it('Clicking "Print Certificate" opens the certificate in a new tab if user attended workshop', function () {
     const enrolledWorkshopsTable = shallow(
-      <EnrolledWorkshopsTable workshops={workshops} />
+      <WorkshopsTable workshops={workshops} />
     );
 
     // Click the "Print Certificate" button
@@ -81,7 +81,7 @@ describe('EnrolledWorkshops', () => {
 
   it('"Print Certificate" button is disabled if user did not attend workshop', function () {
     const enrolledWorkshopsTable = shallow(
-      <EnrolledWorkshopsTable workshops={workshops} />
+      <WorkshopsTable workshops={workshops} />
     );
 
     // Get disabled "Print Certificate" React Button component
@@ -96,7 +96,7 @@ describe('EnrolledWorkshops', () => {
 
   it('Pre-survey link button shown in workshops that have not started', function () {
     const enrolledWorkshopsTable = shallow(
-      <EnrolledWorkshopsTable workshops={workshops} />
+      <WorkshopsTable workshops={workshops} />
     );
 
     enrolledWorkshopsTable
@@ -111,7 +111,7 @@ describe('EnrolledWorkshops', () => {
 
   it('Pre-survey link button not shown in ended workshop', function () {
     const enrolledWorkshopsTable = shallow(
-      <EnrolledWorkshopsTable workshops={workshops} />
+      <WorkshopsTable workshops={workshops} />
     );
 
     const preWorkshopSurveyButton = enrolledWorkshopsTable
@@ -129,7 +129,7 @@ describe('EnrolledWorkshops', () => {
     );
 
     const enrolledWorkshopsTable = shallow(
-      <EnrolledWorkshopsTable workshops={workshops} />
+      <WorkshopsTable workshops={workshops} />
     );
 
     const preWorkshopSurveyButton = enrolledWorkshopsTable
@@ -139,5 +139,23 @@ describe('EnrolledWorkshops', () => {
       .first();
 
     expect(preWorkshopSurveyButton.props().disabled).to.be.true;
+  });
+
+  it('shows Status column and only has Workshop Details button when forMyPlPage is true', function () {
+    const enrolledWorkshopsTable = shallow(
+      <WorkshopsTable workshops={workshops} forMyPlPage={true} />
+    );
+
+    expect(enrolledWorkshopsTable.find('thead tr').text()).to.contain('Status');
+
+    const numButtonsInTable = enrolledWorkshopsTable
+      .find('tbody tr')
+      .find('Button').length;
+    expect(
+      enrolledWorkshopsTable
+        .find('tbody tr')
+        .find('Button')
+        .findWhere(n => n.text() === 'Workshop Details').length
+    ).to.equal(numButtonsInTable);
   });
 });

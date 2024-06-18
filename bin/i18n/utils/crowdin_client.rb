@@ -18,6 +18,7 @@ module I18n
       REQUEST_RETRY_DELAY = 2 # Number of seconds to wait before retrying a failed request
       RETRIABLE_ERRORS = [
         '408 Request Timeout',
+        '409 This file is currently being updated',
         '429 Too Many Requests',
         '500 Internal Server Error',
         '503 Service Unavailable',

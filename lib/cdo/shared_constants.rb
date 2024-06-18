@@ -10,6 +10,8 @@ require_relative 'http_cache'
 # result in changes to these other files.
 
 module SharedConstants
+  DEFAULT_LOCALE = 'en-US'.freeze
+
   # Used to communicate different types of levels
   LEVEL_KIND = OpenStruct.new(
     {
@@ -101,6 +103,7 @@ module SharedConstants
     poetry
     poetry_hoc
     thebadguys
+    music
   ).freeze
 
   # For privacy reasons, App Lab and Game Lab can only be shared if certain conditions are met. These project types can be shared if: the user is >= 13 years old and their teacher has NOT disabled sharing OR the user is < 13 and their teacher has enabled sharing.
@@ -706,10 +709,11 @@ module SharedConstants
 
   # We should always specify a version for the LLM so the results don't unexpectedly change.
   # reference: https://platform.openai.com/docs/models/gpt-3-5
-  AI_TUTOR_CHAT_MODEL_VERISON = 'gpt-3.5-turbo-1106'
+  AI_TUTOR_CHAT_MODEL_VERISON = 'gpt-4o-2024-05-13'
 
-  # These reflect the 'status' of an AI Tutor Interaction
-  AI_TUTOR_INTERACTION_STATUS = {
+  # These reflect the 'status' of an AI Interaction,
+  # and are used in both AI Tutor and AI Chat.
+  AI_INTERACTION_STATUS = {
     ERROR: 'error',
     PII_VIOLATION: 'pii_violation',
     PROFANITY_VIOLATION: 'profanity_violation',
@@ -717,17 +721,17 @@ module SharedConstants
     UNKNOWN: 'unknown',
   }.freeze
 
-  # These are the types of assistance AI Tutor can provide
+  AI_TUTOR_INTERACTION_STATUS = AI_INTERACTION_STATUS
+
   AI_TUTOR_TYPES = {
     COMPILATION: 'compilation',
     VALIDATION: 'validation',
     GENERAL_CHAT: 'general_chat',
   }.freeze
 
-  PII_TYPES = {
-    EMAIL: 'email',
-    PHONE: 'phone',
-    ADDRESS: 'address',
+  AICHAT_ERROR_TYPE = {
+    PROFANITY_MODEL: 'profanity_model',
+    PROFANITY_USER: 'profanity_user'
   }.freeze
 
   USER_TYPES = OpenStruct.new(

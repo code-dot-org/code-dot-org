@@ -14,13 +14,15 @@ import {
   ObservableParameterModel,
   isProcedureBlock,
 } from '@blockly/block-shareable-procedures';
+import {Block} from 'blockly';
+
+import {ProcedureBlock} from '@cdo/apps/blockly/types';
 import {FALSEY_DEFAULT, readBooleanAttribute} from '@cdo/apps/blockly/utils';
+
 import {
   getBlockDescription,
   setBlockDescription,
 } from './functionMutatorHelpers';
-import {ProcedureBlock} from '@cdo/apps/blockly/types';
-import {Block} from 'blockly';
 
 export const procedureDefMutator = {
   hasStatements_: true,
@@ -157,9 +159,11 @@ export const procedureDefMutator = {
 
     setBlockDescription(this, state['description']);
     this.doProcedureUpdate();
-    this.setDeletable(state['initialDeleteConfig'] === false ? false : true);
-    this.setEditable(state['initialEditConfig'] === false ? false : true);
-    this.setMovable(state['initialMoveConfig'] === false ? false : true);
+    if (!Blockly.useModalFunctionEditor) {
+      this.setDeletable(state['initialDeleteConfig'] === false ? false : true);
+      this.setEditable(state['initialEditConfig'] === false ? false : true);
+      this.setMovable(state['initialMoveConfig'] === false ? false : true);
+    }
     this.setStatements_(state['hasStatements'] === false ? false : true);
     this.userCreated = state['userCreated'];
   },

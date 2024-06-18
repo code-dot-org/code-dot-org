@@ -1,5 +1,6 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 50,
   "created_at": "2023-11-28T21:14:00.000Z",
   "level_num": "custom",
@@ -44,7 +45,7 @@
     "expand_debugger": "false",
     "parent_level_id": 20911,
     "name_suffix": "_2024",
-    "long_instructions": "# Create your Player\r\n\r\n<img src=\"https://images.code.org/8358b8d2eef2461e113e0b3093da7403-image-1476212944204.gif\" style=\"float:right\">\r\n\r\nNow you can create your player sprite.  Just like the item sprites, the player sprite will fall from the top of the screen.  Unlike the items, your player sprite will get faster as it falls, just like real falling objects.  This is what allows it to jump up, and fall back down.\r\n\r\n# Do This\r\n\r\n* Use the `createSprite` block to make a player sprite with the label and starting position that you put on your worksheet.\r\n* Use `setAnimation` to give it the correct image.\r\n* Create a `playerFall` function that makes the sprite fall from the top of the screen.  The code inside the function should use `velocityY` in a counter pattern, just as when you made the falling rock in [Lesson 21 Level 3](../../21/levels/3).\r\n* Call the `playerFall` function inside the draw loop.\r\n* Run the code to test your sprite.",
+    "long_instructions": "# Create your Player\r\n\r\n<img src=\"https://images.code.org/8358b8d2eef2461e113e0b3093da7403-image-1476212944204.gif\" style=\"float:right\">\r\n\r\nNow you can create your player sprite.  Just like the item sprites, the player sprite will fall from the top of the screen.  Unlike the items, your player sprite will get faster as it falls, just like real falling objects.  This is what allows it to jump up, and fall back down.\r\n\r\n# Do This\r\n\r\n* Use the `createSprite` block to make a player sprite with the label and starting position that you put on your worksheet.\r\n* Use `setAnimation` to give it the correct image.\r\n* Create a `playerFall` function that makes the sprite fall from the top of the screen.  The code inside the function should use `velocityY` in a counter pattern, just as when you made the falling rock in [Lesson 22 Level 3](../../22/levels/3).\r\n* Call the `playerFall` function inside the draw loop.\r\n* Run the code to test your sprite.",
     "reference_links": [
       "/courses/csd-2024/guides/velocity-and-the-counter-pattern",
       "/courses/csd-2024/guides/sprites",
@@ -64,9 +65,8 @@
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T21:14:00.810+00:00\",\"changed\":[\"cloned from \\\"CSD U3 platform player1_2023\\\"\"],\"cloned_from\":\"CSD U3 platform player1_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T21:14:00.810+00:00\",\"changed\":[\"cloned from \\\"CSD U3 platform player1_2023\\\"\"],\"cloned_from\":\"CSD U3 platform player1_2023\"},{\"changed_at\":\"2024-05-13 15:13:15 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

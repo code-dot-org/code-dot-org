@@ -1,0 +1,19 @@
+<Fish>
+  <config><![CDATA[{
+  "game_id": 66,
+  "created_at": "2024-05-08T17:59:38.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "mode": "creaturesvtrashdemo",
+    "parent_level_id": 22321,
+    "encrypted": "false",
+    "instructions_important": "false",
+    "name_suffix": "_-2022-2",
+    "background": "oceans-blue"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-05-08T17:59:38.836+00:00\",\"changed\":[\"cloned from \\\"CourseF_Oceans_CreaturesVTrashDemo_-2022-2\\\"\"],\"cloned_from\":\"CourseF_Oceans_CreaturesVTrashDemo_-2022-2\"}]"
+}]]></config>
+</Fish>

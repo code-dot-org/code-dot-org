@@ -1,50 +1,44 @@
 // Pythonlab view
-import React, {useEffect, useMemo, useState} from 'react';
+import React, {useState} from 'react';
 import moduleStyles from './pythonlab-view.module.scss';
-import {ConfigType} from '@cdo/apps/weblab2/CDOIDE/types';
-import Editor from '@cdo/apps/weblab2/CDOIDE/CenterPane/Editor';
+import {ConfigType} from '@codebridge/types';
 import {LanguageSupport} from '@codemirror/language';
 import {python} from '@codemirror/lang-python';
-import {CDOIDE} from '@cdo/apps/weblab2/CDOIDE';
-import {MultiFileSource} from '@cdo/apps/lab2/types';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {setAndSaveSource, setSource} from './pythonlabRedux';
-import PythonConsole from './PythonConsole';
+import {Codebridge} from '@codebridge/Codebridge';
+import {ProjectSources} from '@cdo/apps/lab2/types';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
+import {useSource} from '@codebridge/hooks/useSource';
+import {handleRunClick} from './pyodideRunner';
 
 const pythonlabLangMapping: {[key: string]: LanguageSupport} = {
   py: python(),
 };
 
-const defaultProject: MultiFileSource = {
-  files: {
-    '0': {
-      id: '0',
-      name: MAIN_PYTHON_FILE,
-      language: 'py',
-      contents: 'print("Hello world!")',
-      folderId: '1',
-      active: true,
-      open: true,
+const defaultProject: ProjectSources = {
+  source: {
+    files: {
+      '0': {
+        id: '0',
+        name: MAIN_PYTHON_FILE,
+        language: 'py',
+        contents: 'print("Hello world!")',
+        folderId: '0',
+        active: true,
+        open: true,
+      },
     },
-  },
-  folders: {
-    '1': {
-      id: '1',
-      name: 'src',
-      parentId: '0',
-    },
+    folders: {},
   },
 };
 
 const defaultConfig: ConfigType = {
-  showPreview: false,
   activeLeftNav: 'Files',
-  EditorComponent: () => Editor(pythonlabLangMapping, ['py', 'csv', 'txt']),
+  languageMapping: pythonlabLangMapping,
+  editableFileTypes: ['py', 'csv', 'txt'],
   leftNav: [
     {
       icon: 'fa-square-check',
-      component: 'Instructions',
+      component: 'info-panel',
     },
     {
       icon: 'fa-file',
@@ -67,48 +61,32 @@ const defaultConfig: ConfigType = {
       action: () => window.alert('You are already on the file browser'),
     },
   ],
-  instructions: 'Welcome to Python Lab!',
+  gridLayoutRows: '1fr 1fr 1fr 48px',
+  gridLayoutColumns: '300px minmax(0, 1fr)',
+  gridLayout: `
+    "info-panel workspace"
+    "file-browser workspace"
+    "file-browser console"
+    "file-browser control-buttons"
+  `,
 };
 
 const PythonlabView: React.FunctionComponent = () => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const initialSources = useAppSelector(state => state.lab.initialSources);
-  const channelId = useAppSelector(state => state.lab.channel?.id);
-  const dispatch = useAppDispatch();
-  const source = useAppSelector(state => state.pythonlab.source);
-
-  // TODO: This is (mostly) repeated in Weblab2View. Can we extract this out somewhere?
-  // https://codedotorg.atlassian.net/browse/CT-499
-  const setProject = useMemo(
-    () => (newProject: MultiFileSource) => {
-      dispatch(setAndSaveSource(newProject));
-    },
-    [dispatch]
-  );
-
-  useEffect(() => {
-    // We reset the project when the channelId changes, as this means we are on a new level.
-    dispatch(
-      setSource((initialSources?.source as MultiFileSource) || defaultProject)
-    );
-  }, [channelId, dispatch, initialSources]);
+  const {source, setSource, resetToStartSource} = useSource(defaultProject);
 
   return (
     <div className={moduleStyles.pythonlab}>
-      <div className={moduleStyles.editor}>
-        {source && (
-          <CDOIDE
-            project={source}
-            config={config}
-            setProject={setProject}
-            setConfig={setConfig}
-          />
-        )}
-      </div>
-      {/** TODO: Should the console be a part of CDOIDE? */}
-      <div className={moduleStyles.console}>
-        <PythonConsole />
-      </div>
+      {source && (
+        <Codebridge
+          project={source}
+          config={config}
+          setProject={setSource}
+          setConfig={setConfig}
+          resetProject={resetToStartSource}
+          onRun={handleRunClick}
+        />
+      )}
     </div>
   );
 };

@@ -1,7 +1,9 @@
+import {BlockSvg} from 'blockly';
+
 import {commonI18n} from '@cdo/apps/types/locale';
+
 import {frameSizes} from './cdoConstants';
 import SvgFrame from './svgFrame';
-import {BlockSvg} from 'blockly';
 
 /**
  * Represents an SVG frame specifically designed for blocks, rather than workspaces.

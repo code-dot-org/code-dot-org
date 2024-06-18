@@ -4,6 +4,8 @@ import MusicPlayer from '../player/MusicPlayer';
 import {Condition, ConditionType} from '@cdo/apps/lab2/types';
 import ConditionsChecker from '@cdo/apps/lab2/progress/ConditionsChecker';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
+import {ChordEvent} from '../player/interfaces/ChordEvent';
+import {PatternEvent} from '../player/interfaces/PatternEvent';
 import {Validator} from '@cdo/apps/lab2/progress/ProgressManager';
 
 export interface ConditionNames {
@@ -15,6 +17,10 @@ export const MusicConditions: ConditionNames = {
   PLAYED_SOUND_TRIGGERED: {name: 'played_sound_triggered'},
   PLAYED_SOUNDS: {name: 'played_sounds', valueType: 'number'},
   PLAYED_SOUND_ID: {name: 'played_sound_id', valueType: 'string'},
+  PLAYED_EMPTY_CHORDS: {name: 'played_empty_chords', valueType: 'number'},
+  PLAYED_CHORDS: {name: 'played_chords', valueType: 'number'},
+  PLAYED_EMPTY_PATTERNS: {name: 'played_empty_patterns', valueType: 'number'},
+  PLAYED_PATTERNS: {name: 'played_patterns', valueType: 'number'},
 };
 
 export default class MusicValidator extends Validator {
@@ -47,29 +53,56 @@ export default class MusicValidator extends Validator {
     // Get number of sounds that have been started.
     let playedNumberSounds = 0;
 
+    // Get number of patterns that have been started, separately counting those
+    // that are empty and those with events.
+    let playedNumberEmptyPatterns = 0;
+    let playedNumberPatterns = 0;
+
+    // Get number of chords that have been started, separately counting those
+    // that are empty and those with notes.
+    let playedNumberEmptyChords = 0;
+    let playedNumberChords = 0;
+
     const currentPlayheadPosition = this.player.getCurrentPlayheadPosition();
     this.getPlaybackEvents().forEach((eventData: PlaybackEvent) => {
-      const length = eventData.length;
-      if (
-        eventData.when <= currentPlayheadPosition &&
-        eventData.when + length > currentPlayheadPosition
-      ) {
-        currentNumberSounds++;
+      // Skip events that we haven't gotten to yet.
+      if (eventData.when > currentPlayheadPosition) {
+        return;
+      }
 
-        if (eventData.triggered) {
+      const length = eventData.length;
+
+      if (eventData.type === 'sound') {
+        if (eventData.when + length > currentPlayheadPosition) {
+          currentNumberSounds++;
+
+          if (eventData.triggered) {
+            this.conditionsChecker.addSatisfiedCondition({
+              name: MusicConditions.PLAYED_SOUND_TRIGGERED.name,
+            });
+          }
+
           this.conditionsChecker.addSatisfiedCondition({
-            name: MusicConditions.PLAYED_SOUND_TRIGGERED.name,
+            name: MusicConditions.PLAYED_SOUND_ID.name,
+            value: eventData.id,
           });
         }
 
-        this.conditionsChecker.addSatisfiedCondition({
-          name: MusicConditions.PLAYED_SOUND_ID.name,
-          value: eventData.id,
-        });
-      }
-
-      if (eventData.when <= currentPlayheadPosition) {
         playedNumberSounds++;
+      } else if (eventData.type === 'pattern') {
+        const patternEvent = eventData as PatternEvent;
+        if (patternEvent.value.events.length === 0) {
+          playedNumberEmptyPatterns++;
+        } else {
+          playedNumberPatterns++;
+        }
+      } else if (eventData.type === 'chord') {
+        const chordEvent = eventData as ChordEvent;
+        if (chordEvent.value.notes.length === 0) {
+          playedNumberEmptyChords++;
+        } else {
+          playedNumberChords++;
+        }
       }
     });
 
@@ -87,14 +120,39 @@ export default class MusicValidator extends Validator {
       });
     }
 
-    // Check for up to a certain number of sounds played.
-    for (
-      let numberSounds = playedNumberSounds;
-      numberSounds >= 1;
-      numberSounds--
-    ) {
+    // Add satisfied conditions for the played sounds.
+    this.addPlayedConditions(
+      MusicConditions.PLAYED_SOUNDS.name,
+      playedNumberSounds
+    );
+
+    // Add satisfied conditions for the played patterns.
+    this.addPlayedConditions(
+      MusicConditions.PLAYED_EMPTY_PATTERNS.name,
+      playedNumberEmptyPatterns
+    );
+    this.addPlayedConditions(
+      MusicConditions.PLAYED_PATTERNS.name,
+      playedNumberPatterns
+    );
+
+    // Add satisfied conditions for the played chords.
+    this.addPlayedConditions(
+      MusicConditions.PLAYED_EMPTY_CHORDS.name,
+      playedNumberEmptyChords
+    );
+    this.addPlayedConditions(
+      MusicConditions.PLAYED_CHORDS.name,
+      playedNumberChords
+    );
+  }
+
+  // Add satisfied conditions for a given played condition, for the number of times
+  // it was played.
+  private addPlayedConditions(conditionName: string, playedNumber: number) {
+    for (let numberSounds = playedNumber; numberSounds >= 1; numberSounds--) {
       this.conditionsChecker.addSatisfiedCondition({
-        name: MusicConditions.PLAYED_SOUNDS.name,
+        name: conditionName,
         value: numberSounds,
       });
     }

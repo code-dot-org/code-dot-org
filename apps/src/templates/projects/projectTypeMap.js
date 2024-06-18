@@ -39,6 +39,7 @@ export const PROJECT_TYPE_MAP = {
   music: i18n.projectTypeMusic(),
   poetry: i18n.projectTypePoetry(),
   poetry_hoc: i18n.projectTypePoetry(),
+  pythonlab: i18n.projectTypePythonlab(),
   thebadguys: i18n.projectTypeThebadguys(),
   science: i18n.projectTypeScience(),
   story: i18n.projectTypeStory(),
@@ -70,4 +71,5 @@ export const FEATURED_PROJECT_TYPE_MAP = {
   poetry: i18n.projectTypePoetry(),
   thebadguys: i18n.projectTypeThebadguys(),
   spritelab: i18n.projectTypeSpriteLab(),
+  music: i18n.projectTypeMusic(),
 };

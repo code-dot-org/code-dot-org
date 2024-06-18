@@ -108,7 +108,7 @@ DefaultIconDropdown.args = {
 
 export const DisabledIconDropdown = SingleTemplate.bind({});
 DisabledIconDropdown.args = {
-  name: 'default-dropdown',
+  name: 'disabled-dropdown',
   options: [
     {
       value: 'option-1',
@@ -135,7 +135,7 @@ DisabledIconDropdown.args = {
 
 export const WithDisabledOptionIconDropdown = SingleTemplate.bind({});
 WithDisabledOptionIconDropdown.args = {
-  name: 'default-dropdown',
+  name: 'withDisabledOption-dropdown',
   options: [
     {
       value: 'option-1',
@@ -273,6 +273,31 @@ GroupOfIconDropdownColors.args = {
       onChange: args => null,
       size: 'm',
       color: dropdownColors.black,
+      disabled: false,
+    },
+    {
+      name: 'default-dropdown-gray',
+      options: [
+        {
+          value: 'option-1',
+          label: 'Option 1',
+          icon: {iconName: 'check', iconStyle: 'solid'},
+        },
+        {
+          value: 'option-2',
+          label: 'Option 2',
+          icon: {iconName: 'xmark', iconStyle: 'solid'},
+        },
+      ],
+      selectedOption: {
+        value: 'option-1',
+        label: 'Option 1',
+        icon: {iconName: 'check', iconStyle: 'solid'},
+      },
+      labelText: 'Gray Dropdown',
+      onChange: args => null,
+      size: 'm',
+      color: dropdownColors.gray,
       disabled: false,
     },
   ],

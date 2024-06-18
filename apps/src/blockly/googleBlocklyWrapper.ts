@@ -1,14 +1,21 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import './addons/plusMinusBlocks/if';
 import './addons/plusMinusBlocks/text_join';
-import {javascriptGenerator} from 'blockly/javascript';
+import {
+  ObservableProcedureModel,
+  ObservableParameterModel,
+} from '@blockly/block-shareable-procedures';
+import {installAllBlocks as installColourBlocks} from '@blockly/field-colour';
+import {LineCursor, NavigationController} from '@blockly/keyboard-navigation';
+import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
 import {
   ScrollBlockDragger,
   ScrollOptions,
 } from '@blockly/plugin-scroll-options';
-import {LineCursor, NavigationController} from '@blockly/keyboard-navigation';
-import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
-import {installAllBlocks as installColourBlocks} from '@blockly/field-colour';
+import {Options, Theme, Workspace} from 'blockly';
+import {FieldProto} from 'blockly/core/field';
+import {javascriptGenerator} from 'blockly/javascript';
+
 import {
   BlockColors,
   BlocklyVersion,
@@ -16,78 +23,70 @@ import {
   SETTABLE_PROPERTIES,
   WORKSPACE_EVENTS,
 } from '@cdo/apps/blockly/constants';
+import {MetricEvent} from '@cdo/apps/lib/metrics/events';
+import {getStore} from '@cdo/apps/redux';
+import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
 import styleConstants from '@cdo/apps/styleConstants';
 import * as utils from '@cdo/apps/utils';
+
+import CdoBlockSerializer from './addons/cdoBlockSerializer';
+import CdoConnectionChecker from './addons/cdoConnectionChecker';
 import initializeCdoConstants from './addons/cdoConstants';
+import initializeCss from './addons/cdoCss';
 import CdoFieldAngleDropdown from './addons/cdoFieldAngleDropdown';
 import CdoFieldAngleTextInput from './addons/cdoFieldAngleTextInput';
 import CdoFieldAnimationDropdown from './addons/cdoFieldAnimationDropdown';
 import CdoFieldBehaviorPicker from './addons/cdoFieldBehaviorPicker';
+import {CdoFieldBitmap} from './addons/cdoFieldBitmap';
 import CdoFieldButton from './addons/cdoFieldButton';
 import CdoFieldDropdown from './addons/cdoFieldDropdown';
-import CdoFieldLabel from './addons/cdoFieldLabel';
-import CdoFieldToggle from './addons/cdoFieldToggle';
-import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
 import CdoFieldFlyout from './addons/cdoFieldFlyout';
+import CdoFieldImage from './addons/cdoFieldImage';
+import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
+import CdoFieldLabel from './addons/cdoFieldLabel';
+import CdoFieldParameter from './addons/cdoFieldParameter';
+import CdoFieldToggle from './addons/cdoFieldToggle';
 import CdoFieldVariable from './addons/cdoFieldVariable';
-import {CdoFieldBitmap} from './addons/cdoFieldBitmap';
-import FunctionEditor from './addons/functionEditor';
 import initializeGenerator from './addons/cdoGenerator';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoRendererGeras from './addons/cdoRendererGeras';
 import CdoRendererThrasos from './addons/cdoRendererThrasos';
 import CdoRendererZelos from './addons/cdoRendererZelos';
-import CdoTheme from './themes/cdoTheme';
-import CdoDarkTheme from './themes/cdoDark';
-import CdoHighContrastTheme from './themes/cdoHighContrast';
-import CdoHighContrastDarkTheme from './themes/cdoHighContrastDark';
-import {
-  CdoProtanopiaTheme,
-  CdoDeuteranopiaTheme,
-  CdoTritanopiaTheme,
-} from './themes/cdoAccessibleThemes';
-import {
-  CdoProtanopiaDarkTheme,
-  CdoDeuteranopiaDarkTheme,
-  CdoTritanopiaDarkTheme,
-} from './themes/cdoAccessibleDarkThemes';
+import {initializeScrollbarPair} from './addons/cdoScrollbar';
+import {getPointerBlockImageUrl} from './addons/cdoSpritePointer';
 import CdoTrashcan from './addons/cdoTrashcan';
 import * as cdoUtils from './addons/cdoUtils';
 import initializeVariables from './addons/cdoVariables';
 import CdoVerticalFlyout from './addons/cdoVerticalFlyout';
 import initializeBlocklyXml from './addons/cdoXml';
-import initializeCss from './addons/cdoCss';
-import CdoConnectionChecker from './addons/cdoConnectionChecker';
-import {UNKNOWN_BLOCK} from './addons/unknownBlock';
 import {registerAllContextMenuItems} from './addons/contextMenu';
+import FunctionEditor from './addons/functionEditor';
+import {UNKNOWN_BLOCK} from './addons/unknownBlock';
 import {Themes, Renderers} from './constants';
+import {flyoutCategory as behaviorsFlyoutCategory} from './customBlocks/googleBlockly/behaviorBlocks';
+import customBlocks from './customBlocks/googleBlockly/index';
 import {flyoutCategory as functionsFlyoutCategory} from './customBlocks/googleBlockly/proceduresBlocks';
 import {flyoutCategory as variablesFlyoutCategory} from './customBlocks/googleBlockly/variableBlocks';
-import {flyoutCategory as behaviorsFlyoutCategory} from './customBlocks/googleBlockly/behaviorBlocks';
-import CdoBlockSerializer from './addons/cdoBlockSerializer';
-import customBlocks from './customBlocks/googleBlockly/index';
-import CdoFieldImage from './addons/cdoFieldImage';
-import {getPointerBlockImageUrl} from './addons/cdoSpritePointer';
-import {
-  ObservableProcedureModel,
-  ObservableParameterModel,
-} from '@blockly/block-shareable-procedures';
 import {
   adjustCalloutsOnViewportChange,
   disableOrphans,
   reflowToolbox,
   updateBlockLimits,
 } from './eventHandlers';
-import {initializeScrollbarPair} from './addons/cdoScrollbar';
-import {getStore} from '@cdo/apps/redux';
-import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
 import {
-  INFINITE_LOOP_TRAP,
-  LOOP_HIGHLIGHT,
-  handleCodeGenerationFailure,
-  strip,
-} from './utils';
-import {MetricEvent} from '@cdo/apps/lib/metrics/events';
+  CdoProtanopiaDarkTheme,
+  CdoDeuteranopiaDarkTheme,
+  CdoTritanopiaDarkTheme,
+} from './themes/cdoAccessibleDarkThemes';
+import {
+  CdoProtanopiaTheme,
+  CdoDeuteranopiaTheme,
+  CdoTritanopiaTheme,
+} from './themes/cdoAccessibleThemes';
+import CdoDarkTheme from './themes/cdoDark';
+import CdoHighContrastTheme from './themes/cdoHighContrast';
+import CdoHighContrastDarkTheme from './themes/cdoHighContrastDark';
+import CdoTheme from './themes/cdoTheme';
 import {
   BlocklyWrapperType,
   ExtendedBlock,
@@ -99,8 +98,13 @@ import {
   ExtendedWorkspaceSvg,
   GoogleBlocklyInstance,
 } from './types';
-import {FieldProto} from 'blockly/core/field';
-import {Options, Theme, Workspace} from 'blockly';
+import {
+  INFINITE_LOOP_TRAP,
+  LOOP_HIGHLIGHT,
+  handleCodeGenerationFailure,
+  strip,
+  interpolateMsg,
+} from './utils';
 
 const options = {
   contextMenu: true,
@@ -259,6 +263,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     // We know it's a field, so it's safe to cast as unknown.
     ['field_bitmap', 'FieldBitmap', CdoFieldBitmap as unknown as FieldProto],
     ['field_label', 'FieldLabel', CdoFieldLabel],
+    ['field_parameter', 'FieldParameter', CdoFieldParameter],
   ];
   blocklyWrapper.overrideFields(fieldOverrides);
 
@@ -457,6 +462,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
 
   const extendedBlock = blocklyWrapper.Block.prototype as ExtendedBlock;
 
+  extendedBlock.interpolateMsg = interpolateMsg;
   extendedBlock.setStrictOutput = function (isOutput, check) {
     return this.setOutput(isOutput, check);
   };
@@ -570,7 +576,11 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   // and previewing blocks for levelbuilders.
   // We used to refer to these as "readOnlyBlockSpaces", which was confusing with normal,
   // read only workspaces.
-  blocklyWrapper.createEmbeddedWorkspace = function (container, xml, options) {
+  blocklyWrapper.createEmbeddedWorkspace = function (
+    container,
+    xml,
+    options = {}
+  ) {
     const theme = cdoUtils.getUserTheme(options.theme as Theme);
     const workspace = new Blockly.WorkspaceSvg({
       readOnly: true,
@@ -773,6 +783,8 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     hiddenDefinitionWorkspace.noFunctionBlockFrame = true;
     blocklyWrapper.setHiddenDefinitionWorkspace(hiddenDefinitionWorkspace);
     blocklyWrapper.useModalFunctionEditor = options.useModalFunctionEditor;
+    // Disable parameter editing by default (e.g. Lab2)
+    blocklyWrapper.enableParamEditing = options.disableParamEditing === false;
 
     if (options.useModalFunctionEditor) {
       // If the modal function editor is enabled for this level,

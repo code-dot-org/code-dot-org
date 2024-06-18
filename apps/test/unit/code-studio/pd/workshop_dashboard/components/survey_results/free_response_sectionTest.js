@@ -1,7 +1,7 @@
 import FreeResponseSection from '@cdo/apps/code-studio/pd/workshop_dashboard/components/survey_results/free_response_section';
 import React from 'react';
 import {expect} from 'chai';
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 
 describe('Free Response Section', () => {
   const questions = [

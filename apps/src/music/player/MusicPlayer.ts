@@ -13,6 +13,7 @@ import {getPitchName, getTranposedNote, Key} from '../utils/Notes';
 import {Effects} from './interfaces/Effects';
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
 import {LoadFinishedCallback, UpdateLoadProgressCallback} from '../types';
 import {
   AudioPlayer,
@@ -40,6 +41,7 @@ const DEFAULT_KEY = Key.C;
  */
 export default class MusicPlayer {
   private readonly metricsReporter: LabMetricsReporter;
+  private readonly analyticsReporter: AnalyticsReporter | undefined;
   private readonly audioPlayer: AudioPlayer;
   private updateLoadProgress: UpdateLoadProgressCallback | undefined;
 
@@ -49,6 +51,7 @@ export default class MusicPlayer {
   constructor(
     bpm: number = DEFAULT_BPM,
     key: Key = DEFAULT_KEY,
+    analyticsReporter?: AnalyticsReporter | undefined,
     audioPlayer?: AudioPlayer,
     metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
   ) {
@@ -61,6 +64,7 @@ export default class MusicPlayer {
       this.audioPlayer = new ToneJSPlayer() || audioPlayer;
     }
     this.metricsReporter = metricsReporter;
+    this.analyticsReporter = analyticsReporter;
     this.updateConfiguration(bpm, key);
   }
 
@@ -180,14 +184,18 @@ export default class MusicPlayer {
       blockId: 'preview',
       soundType: 'beat',
     };
-
+    this.analyticsReporter?.onSoundPlayed(id);
     this.audioPlayer.playSampleImmediately(
       this.convertEventToSamples(preview)[0],
       onStop
     );
   }
 
-  previewChord(chordValue: ChordEventValue, onStop?: () => void) {
+  previewChord(
+    chordValue: ChordEventValue,
+    onTick?: (tick: number) => void,
+    onStop?: () => void
+  ) {
     const chordEvent: ChordEvent = {
       type: 'chord',
       when: 1,
@@ -201,7 +209,7 @@ export default class MusicPlayer {
     if (this.audioPlayer.supportsSamplers()) {
       const sequence = this.convertChordEventToSequence(chordEvent);
       if (sequence) {
-        this.audioPlayer.playSequenceImmediately(sequence);
+        this.audioPlayer.playSequenceImmediately(sequence, onTick, onStop);
       }
     } else {
       this.audioPlayer.playSamplesImmediately(
@@ -221,7 +229,11 @@ export default class MusicPlayer {
     this.previewChord(singleNoteEvent);
   }
 
-  previewPattern(patternValue: PatternEventValue, onStop?: () => void) {
+  previewPattern(
+    patternValue: PatternEventValue,
+    onTick?: (tick: number) => void,
+    onStop?: () => void
+  ) {
     const patternEvent: PatternEvent = {
       type: 'pattern',
       when: 1,
@@ -235,7 +247,7 @@ export default class MusicPlayer {
     if (this.audioPlayer.supportsSamplers()) {
       const sequence = this.patternEventToSequence(patternEvent);
       if (sequence) {
-        this.audioPlayer.playSequenceImmediately(sequence);
+        this.audioPlayer.playSequenceImmediately(sequence, onTick, onStop);
       }
     } else {
       this.audioPlayer.playSamplesImmediately(
@@ -280,8 +292,11 @@ export default class MusicPlayer {
   private scheduleEvents(events: PlaybackEvent[]) {
     for (const event of events) {
       if (event.type === 'sound' || !this.audioPlayer.supportsSamplers()) {
+        const reportCallback = (soundId: string) => {
+          this.analyticsReporter?.onSoundPlayed(soundId);
+        };
         for (const sample of this.convertEventToSamples(event)) {
-          this.audioPlayer.scheduleSample(sample);
+          this.audioPlayer.scheduleSample(sample, reportCallback);
         }
       } else {
         // Use samplers for chords and patterns if supported
@@ -347,12 +362,14 @@ export default class MusicPlayer {
 
       return [
         {
+          id: soundEvent.id,
           sampleUrl: library.generateSoundUrl(folder, soundData),
           playbackPosition: event.when,
           triggered: soundEvent.triggered,
           effects: soundEvent.effects,
           originalBpm: soundData.bpm || DEFAULT_BPM,
           pitchShift: this.calculatePitchShift(soundData),
+          disableTempoAdjustment: soundData.type === 'preview',
         },
       ];
     } else if (event.type === 'pattern') {
@@ -376,6 +393,7 @@ export default class MusicPlayer {
         }
 
         const resultEvent = {
+          id: `${folder.id}/${event.src}`,
           sampleUrl: library.generateSoundUrl(folder, soundData),
           playbackPosition: patternEvent.when + (event.tick - 1) / 16,
           triggered: patternEvent.triggered,
@@ -469,6 +487,7 @@ export default class MusicPlayer {
       if (sampleUrl !== null) {
         const eventWhen = eventStart + (event.position - 1) / 16;
         samples.push({
+          id: sampleUrl,
           sampleUrl,
           playbackPosition: eventWhen,
           length: event.length,
@@ -550,7 +569,17 @@ export default class MusicPlayer {
   }
 
   private calculatePitchShift(soundData: SoundData) {
-    return soundData.type === 'beat' ? 0 : this.key - (soundData.key || Key.C);
+    if (['beat', 'preview'].includes(soundData.type)) {
+      return 0;
+    }
+    const diff = this.key - (soundData.key || Key.C);
+    if (diff > 6) {
+      return diff - 12;
+    }
+    if (diff < -6) {
+      return diff + 12;
+    }
+    return diff;
   }
 
   isInstrumentLoading(instrument: string): boolean {

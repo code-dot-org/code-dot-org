@@ -1530,9 +1530,9 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert workshop.require_application?
   end
 
-  test 'CSD academic year workshop must not require teacher application' do
+  test 'CSD academic year workshop must require teacher application' do
     workshop = create :csd_academic_year_workshop, regional_partner: @regional_partner
-    refute workshop.require_application?
+    assert workshop.require_application?
   end
 
   test 'CSA summer workshop must require teacher application' do
@@ -1585,6 +1585,11 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
       with(workshop.enrollments.first)
 
     Pd::Workshop.send_automated_emails
+  end
+
+  test 'workshop date range string is NA when no sessions' do
+    workshop = create :workshop, num_sessions: 0
+    assert_equal 'N/A', workshop.workshop_date_range_string
   end
 
   private def session_on_day(day_offset)

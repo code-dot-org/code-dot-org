@@ -14,12 +14,14 @@
     "disable_projects": true,
     "aichat_settings": {
       "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
         "temperature": "0.8",
         "systemPrompt": "",
         "retrievalContexts": [
 
         ],
         "modelCardInfo": {
+          "botName": "",
           "description": "",
           "intendedUse": "",
           "limitationsAndWarnings": "",
@@ -27,18 +29,22 @@
           "exampleTopics": [
 
           ],
-          "botName": ""
+          "isPublished": false
         }
       },
       "visibilities": {
+        "selectedModelId": "readonly",
         "temperature": "editable",
         "systemPrompt": "editable",
         "retrievalContexts": "editable",
         "modelCardInfo": "editable"
       },
-      "hidePresentationPanel": false
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+
+      ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2024-04-18T19:25:25.273+00:00\",\"changed\":[\"cloned from \\\"gen-ai-chatbot-template\\\"\"],\"cloned_from\":\"gen-ai-chatbot-template\"},{\"changed_at\":\"2024-04-18 19:25:40 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-04-18T19:25:25.273+00:00\",\"changed\":[\"cloned from \\\"gen-ai-chatbot-template\\\"\"],\"cloned_from\":\"gen-ai-chatbot-template\"},{\"changed_at\":\"2024-04-18 19:25:40 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-03 17:34:09 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>

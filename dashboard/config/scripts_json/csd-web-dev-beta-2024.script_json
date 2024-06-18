@@ -17,8 +17,8 @@
     },
     "new_name": null,
     "family_name": "csd-web-dev-beta-2024",
-    "serialized_at": "2024-04-18 18:12:10 UTC",
-    "published_state": "beta",
+    "serialized_at": "2024-05-23 17:29:19 UTC",
+    "published_state": "preview",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -272,7 +272,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson introduces students to two new web development tools: div tags and Flexbox styling. This lesson introduces students to div tags to organize their HTML code into sections. They then learn about Flexbox and how it can be used with their div containers to style and position items. Students practice using Flexbox properties to control the layout of web pages.\n\n**Question of the Day:** What are div tags and Flexbox and why are they important in web design?\n",
-        "preparation": "* Prepare journals or optionally print copies of the activity guide\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Prepare journals or optionally print copies of the activity guide\n- If you would like more information on what Flexbox is and how to use it with CSS, **check out [this video](https://youtu.be/H2O5NcXhBPc)!**\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**Question of the Day:** What are div tags and Flexbox and why are they important in web design?\n\nIn this lesson, you will explore two new concepts that will help you solve design and layout issues: `div` tags and Flexbox. "
       },
       "seeding_key": {
@@ -291,7 +291,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson introduces students to advanced Flexbox child properties including `order`, `align-self`, `flex-grow`, and `flex-shrink` through an interactive warm-up and the various level exercises. They’ll deepen their understanding of how these properties affect web page layouts and conclude with a creative group drawing game to reinforce their learning.\n\n**Question of the Day:** How do Flexbox child properties affect the layout and organization of elements within a webpage?\n",
-        "preparation": "* Print out one copy of the activity guide and handout for each student.\n* Print and cut out the Pictionary Terms slips.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
+        "preparation": "* Print out one copy of the activity guide and handout for each student.\n* Print and cut out the Pictionary Terms slips.\n- If you would like more information on how to use Flexbox Children **check out [this video](https://youtu.be/pPdEXY_LfcU)!**\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "student_overview": "**Question of the Day:** How do Flexbox child properties affect the layout and organization of elements within a webpage?\n\nIn this lesson, you will learn about \"child\" Flexbox properties that can be applied directly to items within a container. \n\n"
       },
       "seeding_key": {

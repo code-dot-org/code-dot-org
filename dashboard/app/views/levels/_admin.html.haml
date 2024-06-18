@@ -26,10 +26,11 @@
                   %li= link_to "initialization (#{Blockly.count_xml_blocks(@level.initialization_blocks)})", edit_blocks_level_path(@level, :initialization_blocks)
                 - if @level.is_a? Artist
                   %li= link_to 'pre-draw', edit_blocks_level_path(@level, :predraw_blocks)
-            - elsif @level.is_a? Javalab
+            - elsif [Javalab, Pythonlab].include?(@level.class)
               %ul
                 %li= link_to "[s]tart", edit_blocks_level_path(@level, :start_sources), { accesskey: 's' }
-                %li= link_to "e[x]emplar", edit_exemplar_level_path(@level), { accesskey: 'x'}
+                - if @level.is_a? Javalab
+                  %li= link_to "e[x]emplar", edit_exemplar_level_path(@level), { accesskey: 'x'}
         - else
           %li (Cannot edit)
         - if can? :delete, @level

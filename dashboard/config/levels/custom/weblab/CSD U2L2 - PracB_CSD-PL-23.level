@@ -1,0 +1,28 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2024-05-05T01:30:26.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "instructions_important": "false",
+    "start_sources": "              {\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\n<html>\\n  <head>\\n    \\n  </head>\\n  <body>\\n    \\n    \\n    \\n    \\n  </body>\\n</html>\"\r\n    }\r\n  ]\r\n}\r\n            ",
+    "hide_share_and_remix": "false",
+    "long_instructions": "# Fortunately / Unfortunately Stories\r\n\r\nA Fortunately / Unfortunately story is a story that starts with an initial sentence, and then alternates between sentences that start with \"fortunately\" and \"unfortunately\". For example:\r\n- A man needed to go to the grocery store to buy some milk\r\n- Fortunately, he had a car that he could drive to the store\r\n- Unfortunately, the car was out of gas\r\n- Fortunately, there was a gas station nearby that he could walk to\r\n- Unfortunately, the path to the gas station went through the swamp that was infested with crocodiles\r\n\r\n# Do This\r\n\r\n1) Work with your partner to add alternating sentences to the story below. One person should add the \"fortunately\" sentences, and the other person should add the \"unfortunately\" sentences\r\n\t- Be sure to use `<p>` and `</p>` tags so each line of the story appears as a separate line\r\n- Repeat this until the story is at least 8 lines long",
+    "submittable": "false",
+    "parent_level_id": 20000,
+    "name_suffix": "_CSD-PL-23",
+    "map_reference": "/courses/csd-2022/guides/html-tags",
+    "video_key": "csd_weblab_intro_2",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "validation_enabled": "true",
+    "display_name": "Alternating Stories",
+    "bubble_choice_description": "Work with your neighbor to tell a Fortunately / Unfortunately story using paragraph tags",
+    "thumbnail_url": "https://images.code.org/48802311f2971492861763e3b59d4603-fortunately.png"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-05-05T01:30:26.715+00:00\",\"changed\":[\"cloned from \\\"CSD U2L2 - PracB_2024\\\"\"],\"cloned_from\":\"CSD U2L2 - PracB_2024\"}]"
+}]]></config>
+</Weblab>

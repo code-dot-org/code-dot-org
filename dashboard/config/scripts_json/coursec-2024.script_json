@@ -20,8 +20,8 @@
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2024-04-16 19:53:16 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2024-05-29 18:23:20 UTC",
+    "published_state": "preview",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -385,12 +385,30 @@
       }
     },
     {
-      "key": "Binary Bracelets",
-      "name": "Binary Bracelets",
+      "key": "lesson-3",
+      "name": "Pattern Block Data",
       "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 15,
+      "properties": {
+        "overview": "In this unplugged lesson, students will practice storing, searching, retrieving, modifying and deleting the pattern blocks to simulate what computers do with data. ",
+        "preparation": "The data analogy can be made with various objects. Select an alternate from the list below if you don’t have pattern blocks:\n- Toy cars\n- Toy animals\n- Letter tiles\n- Counting bears\n- Unifix cubes\n- Buttons or beads\n- Other small items with sortable attributes\n\n",
+        "purpose": "In this Unplugged lesson, students will use pattern blocks inside a box as an analogy for data inside a computer. Students will practice storing, searching, retrieving, modifying and deleting the (data) pattern blocks. At the end of the lesson, students will create various bar graphs based on the attributes of their (data) pattern blocks. \n"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "csf_data",
+        "script.name": "coursec-2024"
+      }
+    },
+    {
+      "key": "Binary Bracelets",
+      "name": "Binary Bracelets",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 16,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This **exploratory** lesson introduces the concept of binary which is how computers today store all sorts of information.",
@@ -407,10 +425,10 @@
     {
       "key": "End of Course Project",
       "name": "End of Course Project",
-      "absolute_position": 16,
+      "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 16,
+      "relative_position": 17,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This **project** lesson takes students through designing, developing, and showcasing new Play Lab projects.",
@@ -1338,6 +1356,61 @@
       "seeding_key": {
         "lesson_activity.key": "bbca7308-d45b-4489-b22b-307a935c09c4",
         "lesson.key": "Picturing Data",
+        "lesson_group.key": "csf_data",
+        "script.name": "coursec-2024"
+      }
+    },
+    {
+      "key": "ec7a5daa-f85a-4c25-a8e4-f72a89e90650",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ec7a5daa-f85a-4c25-a8e4-f72a89e90650",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "csf_data",
+        "script.name": "coursec-2024"
+      }
+    },
+    {
+      "key": "afb46df2-a465-477b-b122-7f6f4ba80884",
+      "position": 2,
+      "properties": {
+        "duration": 25,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "afb46df2-a465-477b-b122-7f6f4ba80884",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "csf_data",
+        "script.name": "coursec-2024"
+      }
+    },
+    {
+      "key": "6731a30b-6cf0-4c3c-b8d3-596e83af8382",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6731a30b-6cf0-4c3c-b8d3-596e83af8382",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "csf_data",
+        "script.name": "coursec-2024"
+      }
+    },
+    {
+      "key": "bf2df2a0-20ac-4820-a54f-e08b304771f4",
+      "position": 4,
+      "properties": {
+        "name": "[Optional] Assessment"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bf2df2a0-20ac-4820-a54f-e08b304771f4",
+        "lesson.key": "lesson-3",
         "lesson_group.key": "csf_data",
         "script.name": "coursec-2024"
       }
@@ -3646,6 +3719,185 @@
       "seeding_key": {
         "activity_section.key": "92640c5a-0aad-450f-9635-d2fd01d8c595",
         "lesson_activity.key": "bbca7308-d45b-4489-b22b-307a935c09c4"
+      }
+    },
+    {
+      "key": "e0578aea-5e09-4240-ae15-2b809330779e",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Warm Up” slide\n\n**Discuss:** Which one doesn’t belong?\n\n**Discussion Goal:** Students discuss the attributes of the object in each square. The teacher labels each square with its shape, color and what it is. Students form opinions about which one doesn’t belong. There is no right answer. The focus is on students explaining their thinking and justifying their choice.",
+        "duration": "10",
+        "name": "Which one doesn’t belong?"
+      },
+      "seeding_key": {
+        "activity_section.key": "e0578aea-5e09-4240-ae15-2b809330779e",
+        "lesson_activity.key": "ec7a5daa-f85a-4c25-a8e4-f72a89e90650"
+      }
+    },
+    {
+      "key": "57573bb7-ea80-4c13-8392-ac9fe6353796",
+      "position": 2,
+      "properties": {
+        "description": "Which one doesn’t belong? I’m going to give you some silent think time. Show a thumbs up if you have an idea.\n\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "57573bb7-ea80-4c13-8392-ac9fe6353796",
+        "lesson_activity.key": "ec7a5daa-f85a-4c25-a8e4-f72a89e90650"
+      }
+    },
+    {
+      "key": "8a4c7538-3951-4907-93c5-ea20a40e3ad4",
+      "position": 3,
+      "properties": {
+        "description": "**Do This:** First, have students turn and talk to a neighbor about which one doesn’t belong. Provide a sentence frame to encourage students to justify their choice. “The ________ doesn’t belong because ____________.” Then, have students share their ideas with the whole group. Make sure to call on students so that each square is discussed as to why it might not belong. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "8a4c7538-3951-4907-93c5-ea20a40e3ad4",
+        "lesson_activity.key": "ec7a5daa-f85a-4c25-a8e4-f72a89e90650"
+      }
+    },
+    {
+      "key": "3d2e8fac-4079-40c9-a154-5d5d442e164f",
+      "position": 1,
+      "properties": {
+        "description": "Today we will be using boxes and pattern blocks to represent data in a computer. Pattern blocks have many different attributes just like ones we were just discussing! You could describe the pattern blocks using colors, sizes and shapes. ",
+        "duration": "15",
+        "name": "Sorting Data",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3d2e8fac-4079-40c9-a154-5d5d442e164f",
+        "lesson_activity.key": "afb46df2-a465-477b-b122-7f6f4ba80884"
+      }
+    },
+    {
+      "key": "78e0def6-4a78-40ce-ae09-5ab171c07905",
+      "position": 2,
+      "properties": {
+        "description": "**Do This:** Students will be working in groups of about four. Pass out “computers” and “data” to each group. Define each of the items in this way. The computer is a box. The data is pattern blocks. Each group should have around 20 pattern blocks, make sure there is a random assortment of shapes for each group. As you pass out the materials, prompt students to store the data in their computer. "
+      },
+      "seeding_key": {
+        "activity_section.key": "78e0def6-4a78-40ce-ae09-5ab171c07905",
+        "lesson_activity.key": "afb46df2-a465-477b-b122-7f6f4ba80884"
+      }
+    },
+    {
+      "key": "697ba637-66ba-423f-ab1b-633ed9e82fc0",
+      "position": 3,
+      "properties": {
+        "description": "First we’re going to sort the data in the computer by **color**. Work with your group to organize the data inside your computer.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "697ba637-66ba-423f-ab1b-633ed9e82fc0",
+        "lesson_activity.key": "afb46df2-a465-477b-b122-7f6f4ba80884"
+      }
+    },
+    {
+      "key": "8221b3ba-cd81-4bdf-93af-d2f24322b670",
+      "position": 4,
+      "properties": {
+        "description": "**Do This:** Ask students to search for and retrieve pieces of data from their computer. \n\n**Say:** \n- Find a red block and hold it up. \n- Find a blue block and hold it up. \n- Find a yellow block and hold it up. \n\nNote: You can continue based on other colors of pattern blocks."
+      },
+      "seeding_key": {
+        "activity_section.key": "8221b3ba-cd81-4bdf-93af-d2f24322b670",
+        "lesson_activity.key": "afb46df2-a465-477b-b122-7f6f4ba80884"
+      }
+    },
+    {
+      "key": "94d1aa9d-5969-48f4-a2bf-f56ab2fc12c7",
+      "position": 5,
+      "properties": {
+        "description": "We are going to modify the data and sort it in a new way. This time sort the data in the computer by **shape**. Work with your group to organize the data inside your computer.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "94d1aa9d-5969-48f4-a2bf-f56ab2fc12c7",
+        "lesson_activity.key": "afb46df2-a465-477b-b122-7f6f4ba80884"
+      }
+    },
+    {
+      "key": "41e6a2e4-b366-4aae-a813-e8faca1ef8cc",
+      "position": 6,
+      "properties": {
+        "description": "**Do This:** Ask students to search for and retrieve pieces of data from their computer. \n\n**Say:** \n- Find a triangle and hold it up. \n- Find a square and hold it up. \n- Find a hexagon and hold it up. \n\nNote: You can continue based on other shapes of pattern blocks.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "41e6a2e4-b366-4aae-a813-e8faca1ef8cc",
+        "lesson_activity.key": "afb46df2-a465-477b-b122-7f6f4ba80884"
+      }
+    },
+    {
+      "key": "c13aac16-4f10-46a8-942a-67410f86fda8",
+      "position": 7,
+      "properties": {
+        "description": "We are going to delete some of the data. This box here is the trash. Bring me all of the squares.  \n\nNow, we are going to modify the data and sort it one last way. This time sort the data in the computer by **size**. Work with your group to organize the data inside your computer.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c13aac16-4f10-46a8-942a-67410f86fda8",
+        "lesson_activity.key": "afb46df2-a465-477b-b122-7f6f4ba80884"
+      }
+    },
+    {
+      "key": "7b2ca10e-c390-4ef9-8945-508b5594c1b6",
+      "position": 8,
+      "properties": {
+        "description": "**Do This:** Ask students to search for and retrieve pieces of data from their computer. \n\n**Say:** \n- Find a big shape and hold it up. \n- Find a medium shape and hold it up. \n- Find a small shape and hold it up. "
+      },
+      "seeding_key": {
+        "activity_section.key": "7b2ca10e-c390-4ef9-8945-508b5594c1b6",
+        "lesson_activity.key": "afb46df2-a465-477b-b122-7f6f4ba80884"
+      }
+    },
+    {
+      "key": "d497bf9b-b6ed-4c99-9902-a95d06e21af1",
+      "position": 9,
+      "properties": {
+        "progression_name": "Pattern Block Data - Unplugged Activity"
+      },
+      "seeding_key": {
+        "activity_section.key": "d497bf9b-b6ed-4c99-9902-a95d06e21af1",
+        "lesson_activity.key": "afb46df2-a465-477b-b122-7f6f4ba80884"
+      }
+    },
+    {
+      "key": "30ee554e-e561-4544-80c7-d55b976785c3",
+      "position": 10,
+      "properties": {
+        "description": "**Do This:** Each group of students will be assigned a different graph to create: color, shape, size. Students should create a title for their graph, labels on the x axis and then record their data by coloring in squares. After explaining the instructions, pass out the graphing templates to the groups. ",
+        "duration": "10",
+        "name": "Graphing Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "30ee554e-e561-4544-80c7-d55b976785c3",
+        "lesson_activity.key": "afb46df2-a465-477b-b122-7f6f4ba80884"
+      }
+    },
+    {
+      "key": "58bd85d9-4495-4df6-8287-3a6b881c312b",
+      "position": 1,
+      "properties": {
+        "description": "**Do This:** Post each group’s data on the whiteboard. \n\n**Discuss:** \n- _What was the process you used to create your graph?_ \n- _Why was it easier to create a graph once the data was sorted?_\n- _Observe the different graphs: shape, size, color. What is the same and what is different?_\n",
+        "name": "Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "58bd85d9-4495-4df6-8287-3a6b881c312b",
+        "lesson_activity.key": "6731a30b-6cf0-4c3c-b8d3-596e83af8382"
+      }
+    },
+    {
+      "key": "36c0366a-a6af-4cd1-868b-355b04ceeed0",
+      "position": 1,
+      "properties": {
+        "description": "**Question:** What actions can computers do with data?\n\n**Discussion Goal:** Review the activities that students did today with their pattern blocks and relate it to computers: store, sort, search, retrieve, modify and delete. ",
+        "duration": "5",
+        "name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "36c0366a-a6af-4cd1-868b-355b04ceeed0",
+        "lesson_activity.key": "bf2df2a0-20ac-4820-a54f-e08b304771f4"
       }
     },
     {
@@ -7137,6 +7389,31 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "PatternBlock-Unplugged2022_2024"
+        ],
+        "progression": "Pattern Block Data - Unplugged Activity"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PatternBlock-Unplugged2022_2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "csf_data",
+        "script.name": "coursec-2024",
+        "activity_section.key": "d497bf9b-b6ed-4c99-9902-a95d06e21af1"
+      },
+      "level_keys": [
+        "PatternBlock-Unplugged2022_2024"
+      ]
+    },
+    {
+      "chapter": 124,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "BinaryBracelets-Unplugged2022_2024"
         ],
         "progression": "Binary Bracelets - Unplugged Activity"
@@ -7156,7 +7433,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 125,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7181,7 +7458,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 126,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7206,7 +7483,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 127,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -7231,7 +7508,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 128,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -7256,7 +7533,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 129,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -7281,7 +7558,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 130,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -7306,7 +7583,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 131,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -7331,7 +7608,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 132,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -8823,6 +9100,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "PatternBlock-Unplugged2022_2024",
+        "script_level.level_keys": [
+          "PatternBlock-Unplugged2022_2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "csf_data",
+        "script.name": "coursec-2024",
+        "activity_section.key": "d497bf9b-b6ed-4c99-9902-a95d06e21af1"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "BinaryBracelets-Unplugged2022_2024",
         "script_level.level_keys": [
           "BinaryBracelets-Unplugged2022_2024"
@@ -8933,7 +9222,7 @@
   "resources": [
     {
       "name": "All Resources",
-      "url": "/s/coursec-2023/resources",
+      "url": "/s/coursec-2024/resources",
       "key": "all_resources",
       "properties": {
         "is_rollup": true
@@ -8944,7 +9233,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/coursec-2023/standards",
+      "url": "/s/coursec-2024/standards",
       "key": "all_standards",
       "properties": {
         "is_rollup": true
@@ -8955,7 +9244,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/coursec-2023/vocab",
+      "url": "/s/coursec-2024/vocab",
       "key": "all_vocabulary",
       "properties": {
         "is_rollup": true
@@ -9859,6 +10148,12 @@
         "lesson.key": "The Big Event",
         "resource.key": "the_big_event_course_c_"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "csf_-_course_c_-_slides_2022-2023"
+      }
     }
   ],
   "scripts_resources": [
@@ -10006,6 +10301,16 @@
       }
     },
     {
+      "key": "delete",
+      "word": "Delete",
+      "definition": "To remove or take something away",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "delete"
+      }
+    },
+    {
       "key": "event",
       "word": "Event",
       "definition": "An action that causes something to happen.",
@@ -10033,6 +10338,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "loop"
+      }
+    },
+    {
+      "key": "modify",
+      "word": "Modify",
+      "definition": "To change or make something different",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "modify"
       }
     },
     {
@@ -10086,6 +10401,26 @@
       }
     },
     {
+      "key": "retrieve",
+      "word": "Retrieve",
+      "definition": "To get back something you stored or put away",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "retrieve"
+      }
+    },
+    {
+      "key": "search",
+      "word": "Search",
+      "definition": "To look for something you need",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "search"
+      }
+    },
+    {
       "key": "sequencing",
       "word": "Sequencing",
       "definition": "Putting commands in correct order so computers can read the commands.",
@@ -10093,6 +10428,26 @@
       },
       "seeding_key": {
         "vocabulary.key": "sequencing"
+      }
+    },
+    {
+      "key": "sort",
+      "word": "Sort",
+      "definition": "To put things in groups",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sort"
+      }
+    },
+    {
+      "key": "store",
+      "word": "Store",
+      "definition": "To keep something in a safe place",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "store"
       }
     }
   ],
@@ -10288,6 +10643,48 @@
         "lesson.key": "The Big Event",
         "vocabulary.key": "event"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "delete"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "modify"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "retrieve"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "search"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "sort"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "store"
+      }
     }
   ],
   "lessons_programming_expressions": [
@@ -10372,6 +10769,16 @@
       "seeding_key": {
         "lesson.key": "Programming with Angry Birds",
         "objective.key": "2a5f0eed-656d-4bc7-9c96-18211fcdb353"
+      }
+    },
+    {
+      "key": "3a57b42a-5844-4161-924d-3d3838694ad9",
+      "properties": {
+        "description": "Search for and accurately retrieve data based on specific criteria "
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "3a57b42a-5844-4161-924d-3d3838694ad9"
       }
     },
     {
@@ -10472,6 +10879,16 @@
       "seeding_key": {
         "lesson.key": "Picturing Data",
         "objective.key": "90ccc2a1-de5a-471a-9748-4877764cea5d"
+      }
+    },
+    {
+      "key": "93bf1942-f40d-449d-947e-be09219ae356",
+      "properties": {
+        "description": "Classify and sort data into predefined categories based on different attributes"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "93bf1942-f40d-449d-947e-be09219ae356"
       }
     },
     {
@@ -10682,6 +11099,16 @@
       "seeding_key": {
         "lesson.key": "Harvesting Crops with Loops",
         "objective.key": "e9347319-36c0-469d-9da6-a4df1686a7fe"
+      }
+    },
+    {
+      "key": "eeeb9638-035d-4f63-8202-ef35a651219a",
+      "properties": {
+        "description": "Create bar graphs to present data"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "eeeb9638-035d-4f63-8202-ef35a651219a"
       }
     },
     {
@@ -11074,6 +11501,27 @@
         "lesson.key": "The Big Event",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "ccmath",
+        "standard.shortcode": "K.MD.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-DA-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-DA-06"
       }
     }
   ],

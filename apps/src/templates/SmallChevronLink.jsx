@@ -1,7 +1,8 @@
+import {TextLink} from '@dsco_/link';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import {TextLink} from '@dsco_/link';
+
 import FontAwesome from './FontAwesome';
 
 export function SmallChevronLink({

@@ -1198,6 +1198,7 @@ ja-JP:
   homepage_slot_text_link_k5: 小学生以下向けのコース
   homepage_slot_text_link_local: 地元のクラスを探す
   homepage_slot_text_link_middle: 中学校
+  homepage_slot_text_link_middle_and_high: 中学生・高校生
   homepage_slot_text_link_othercourses: その他のオンラインコース
   homepage_slot_text_link_pd: プロになるために
   homepage_slot_text_link_shop: T シャツ、帽子、その他
@@ -1870,6 +1871,8 @@ ja-JP:
   user_header_applab: 'アプリラボ '
   user_header_artist: 'アーティスト '
   user_header_create: 'つくる '
+  user_header_create_account: アカウントを作成
+  user_header_create_account_low_cap: アカウントを作成
   user_header_dance: ダンスパーティー
   user_header_flappy: フラッピー
   user_header_gamelab: ゲーム ラボ
@@ -1877,6 +1880,8 @@ ja-JP:
   user_header_logout: サインアウト
   user_header_minecraft: マインクラフト
   user_header_my_projects: 私のプロジェクト
+  user_header_new_project: 新しいプロジェクト
+  user_header_new_project_low_cap: 新しいプロジェクト
   user_header_playlab: プレイラボ
   user_header_settings: アカウント
   user_header_signin: サインイン

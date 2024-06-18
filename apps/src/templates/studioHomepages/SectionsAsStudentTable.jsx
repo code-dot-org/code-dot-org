@@ -10,7 +10,7 @@ import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import styleConstants from '../../styleConstants';
-import {tableLayoutStyles, plTableLayoutStyles} from '../tables/tableConstants';
+import {plTableLayoutStyles} from '../tables/tableConstants';
 
 import shapes from './shapes';
 
@@ -32,7 +32,7 @@ class SectionsAsStudentTable extends React.Component {
     } else {
       return this.props.isPlSections ? (
         <a
-          style={plTableLayoutStyles.link}
+          style={plTableLayoutStyles.sectionCodeLink}
           href={teacherDashboardUrl(`${section.id}/login_info`)}
         >
           {section.code}
@@ -125,10 +125,7 @@ class SectionsAsStudentTable extends React.Component {
             >
               <td style={{...styles.col, ...styles.sectionNameCol}}>
                 {this.props.isPlSections ? (
-                  <a
-                    style={plTableLayoutStyles.sectionLink}
-                    href={teacherDashboardUrl(section.id)}
-                  >
+                  <a style={styles.link} href={teacherDashboardUrl(section.id)}>
                     {section.name}
                   </a>
                 ) : (
@@ -142,10 +139,7 @@ class SectionsAsStudentTable extends React.Component {
                 {section.currentUnitTitle && (
                   <div style={styles.currentUnit}>
                     <div>{i18n.currentUnit()}</div>
-                    <a
-                      href={section.linkToCurrentUnit}
-                      style={tableLayoutStyles.link}
-                    >
+                    <a href={section.linkToCurrentUnit} style={styles.link}>
                       {section.currentUnitTitle}
                     </a>
                   </div>
