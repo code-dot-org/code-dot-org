@@ -69,7 +69,7 @@
               %a.link-button{href: CDO.studio_url(entry[:studio_button_link])}
                 = I18n.t(entry[:button_text])
             - else
-              %a.link-button{href: entry[:button_link]}
+              %a.link-button{href: entry[:button_link], class: [(entry[:external_link] ? "has-external-link" : nil), (entry[:button_color_white] ? "white" : nil)].compact.join(' ')}
                 = I18n.t(entry[:button_text])
           %figure
             %img{src: entry[:img_src], alt: ""}
