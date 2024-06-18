@@ -1078,13 +1078,6 @@
           duration: "1 hour"
           button: "Explore unit"
           aria_label: "Explore the How AI Makes Decisions unit"
-          teaching:
-            overline: "3-5 Teachers"
-            title: "Teaching How AI Makes Decisions"
-            desc: "This professional learning module equips educators to teach Code.org's How AI Makes Decisions module, where students (grades 3-5) explore AI concepts through engaging activities, data exploration, and decision making."
-            duration: "1 hour"
-            button: "Start module"
-            aria_label: "Start the Teaching How AI Makes Decisions module"
         humanities:
           overline: "6-12"
           title: "Generative AI for Humanities"
@@ -1092,6 +1085,16 @@
           duration: "Two, 45-minute lessons"
           button: "Explore unit"
           aria_label: "Explore the Generative AI for Humanities unit"
+    pl:
+      desc: "Empower yourself with the knowledge and tools to effectively teach AI and machine learning in the classroom."
+      tile:
+        decisions:
+          overline: "3-5 Teachers"
+          title: "Teaching How AI Makes Decisions"
+          desc: "This professional learning module equips educators to teach Code.org's How AI Makes Decisions module, where students (grades 3-5) explore AI concepts through engaging activities, data exploration, and decision making."
+          duration: "1 hour"
+          button: "Start module"
+          aria_label: "Start the Teaching How AI Makes Decisions module"
 
   ai_integrations:
     heading: "AI Integrations"
