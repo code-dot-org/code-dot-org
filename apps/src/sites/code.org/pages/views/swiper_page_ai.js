@@ -87,8 +87,8 @@ const swipers = [
   {swiper: swiperVideos, params: videosParams},
 ];
 
-// TODO - Move this object to the list above once the
-// DCDO flag curriculum-launch-2024 in launched
+// TODO - Move this object to the array above once the
+// DCDO flag curriculum-launch-2024 is launched
 if (swiperActionBlocksPl) {
   swipers.push({swiper: swiperActionBlocksPl, params: actionBlocksParams});
 }

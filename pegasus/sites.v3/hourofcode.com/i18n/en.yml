@@ -1081,7 +1081,7 @@
         humanities:
           overline: "6-12"
           title: "Generative AI for Humanities"
-          desc: "This unit includes two standalone lessons—one on writing with AI and one on researching with AI—designed for Humanities classes to demystify ethical and effective chatbot use, encouraging students to explore and reflect on these technologies."
+          desc: "This unit includes two standalone lessons — one on writing with AI and one on researching with AI—designed for Humanities classes to demystify ethical and effective chatbot use, encouraging students to explore and reflect on these technologies."
           duration: "Two, 45-minute lessons"
           button: "Explore unit"
           aria_label: "Explore the Generative AI for Humanities unit"
