@@ -6,8 +6,6 @@ theme: responsive_full_width
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/page/professional-learning-styles.css", rel: "stylesheet"}
 
-= view :pl_curriculum_launch_banner
-
 %section.top
   .wrapper
     .text-wrapper.col-50
@@ -17,6 +15,8 @@ theme: responsive_full_width
     %figure.col-45{style: "float: right; margin-top: 1.25rem;"}
       %img.rounded-corners.box-shadow-primary{src: "/images/professional-learning/pl-superhero-girl-crop-448x289.png", alt: "", style: "position: relative; width: 100%;"}
     .clear
+
+= view :pl_curriculum_launch_banner
 
 %section.bg-neutral-light
   .wrapper

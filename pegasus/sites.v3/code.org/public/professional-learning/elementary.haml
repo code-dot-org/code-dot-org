@@ -8,8 +8,6 @@ theme: responsive_full_width
 
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 
-= view :pl_curriculum_launch_banner
-
 %section
   .wrapper
     %h1=hoc_s("pl_page_k5.heading")
@@ -27,6 +25,8 @@ theme: responsive_full_width
           =button_string
       %figure
         %img.rounded-corners{src: "/images/self-paced-pl-tile-csf.png", alt: "", style: "width: 100%; margin-block: 0.5rem 0"}
+
+= view :pl_curriculum_launch_banner
 
 %section.bg-neutral-light
   .wrapper.centered
