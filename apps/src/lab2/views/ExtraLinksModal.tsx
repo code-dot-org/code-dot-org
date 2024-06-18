@@ -1,10 +1,11 @@
 import React, {useEffect, useState} from 'react';
-import {ExtraLinksData} from '../types';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {Heading3, StrongText} from '@cdo/apps/componentLibrary/typography';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
-import moduleStyles from './extra-links.module.scss';
 import Button from '@cdo/apps/templates/Button';
 import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
+import {ExtraLinksData} from '../types';
+import moduleStyles from './extra-links.module.scss';
 
 // Extra Links modal. This is used to display helpful links for levelbuilders, and should
 // be extended to also include links for project validators as well. It replaces the haml
@@ -14,6 +15,7 @@ interface ExtraLinksModalProps {
   isOpen: boolean;
   closeModal: () => void;
   levelId: number;
+  permissions: string[];
 }
 
 const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
@@ -21,12 +23,14 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
   isOpen,
   closeModal,
   levelId,
+  permissions,
 }) => {
   const [showCloneField, setShowCloneField] = useState(false);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
   const [clonedLevelName, setClonedLevelName] = useState('');
   const [cloneError, setCloneError] = useState('');
   const [deleteError, setDeleteError] = useState('');
+  const isProjectValidator = permissions.includes('project_validator');
 
   useEffect(() => {
     setClonedLevelName(linkData.level_name);
@@ -178,6 +182,19 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
                 <a href={link.path}>{link.path}</a>
               </li>
             ))}
+          </ul>
+        </>
+      )}
+      {isProjectValidator && (
+        <>
+          <StrongText>Project Info</StrongText>
+          <ul>
+            <li>Project owner: </li>
+            <li>Owner storage id</li>
+            <li>Project id</li>
+            <li>S3 links: sources</li>
+            <li>Remix info</li>
+            <li>Featured project info</li>
           </ul>
         </>
       )}

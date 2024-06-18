@@ -571,6 +571,33 @@ class ProjectsController < ApplicationController
     !project_validator && limited_project_gallery
   end
 
+  # GET /projects/:channel_id/extra_links
+  # Get the extra links for the project for use by project validators.
+  # This is used by lab2 levels that cannot use the haml 'extra links' box since
+  # this box will not refresh when changing levels.
+  def extra_links
+    src_channel_id = params[:channel_id]
+    project_info = {}
+    project_info['sources_link'] = "https://s3.console.aws.amazon.com/s3/buckets/#{CDO.sources_s3_bucket}/#{CDO.sources_s3_directory}/#{owner_info['storage_id']}/#{project_info['id']}/"
+    project_info['assets_link'] = "https://s3.console.aws.amazon.com/s3/buckets/#{CDO.assets_s3_bucket}/#{CDO.assets_s3_directory}/#{owner_info['storage_id']}/#{project_info['id']}/"
+    project_info['animations_link'] = "https://s3.console.aws.amazon.com/s3/buckets/#{CDO.animations_s3_bucket}/#{CDO.animations_s3_directory}/#{owner_info['storage_id']}/#{project_info['id']}/"
+    project_info['files_link'] = "https://s3.console.aws.amazon.com/s3/buckets/#{CDO.files_s3_bucket}/#{CDO.files_s3_directory}/#{owner_info['storage_id']}/#{project_info['id']}/"
+    project_info['is_featured_project'] = FeaturedProject.exists?(storage_app_id: project_info['id'])
+    puts "project_info['is_featured_project'] #{project_info['is_featured_project']}"
+    if project_info['is_featured_project']
+      featured_project = FeaturedProject.find_by_project_id(project_info['id'])
+      project = FeaturedProject.find_by project_id: project_info['id']
+      project_info['featured_status'] = project.status
+    end
+    owner_info = {}
+    owner_info['storage_id'], project_info['id'] = storage_decrypt_channel_id(src_channel_id)
+    owner_info['name'] = User.find_channel_owner(src_channel_id).try(:username)   
+    puts "owner_info: #{owner_info}"
+    puts "project_info: #{project_info}"
+    #remix info
+    return render json: {owner_info: owner_info, project_info: project_info}
+  end
+
   # Automatically catch authorization exceptions on any methods in this controller
   # Overrides handler defined in application_controller.rb.
   # Special for projects controller - when forbidden, redirect to home instead

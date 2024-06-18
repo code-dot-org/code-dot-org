@@ -1,10 +1,11 @@
+import React, {useEffect, useState} from 'react';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import Button from '@cdo/apps/templates/Button';
 import {useFetch} from '@cdo/apps/util/useFetch';
-import React, {useEffect, useState} from 'react';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import moduleStyles from './extra-links.module.scss';
 import ExtraLinksModal from './ExtraLinksModal';
 import {PERMISSIONS} from '../constants';
-import HttpClient from '@cdo/apps/util/HttpClient';
 
 interface ExtraLinksProps {
   levelId: number;
@@ -33,34 +34,46 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
   const {loading, data} = useFetch('/api/v1/users/current/permissions');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [linkData, setLinkData] = useState<ExtraLinksResponse | null>(null);
+  const permissionData = data
+    ? (data as PermissionResponse)
+    : {permissions: []};
+  const channelId = useAppSelector(
+    state => state.lab.channel && state.lab.channel.id
+  );
+  console.log('channelId', channelId);
 
   useEffect(() => {
-    const extraLinksPermissions = [
-      PERMISSIONS.LEVELBUILDER,
-      PERMISSIONS.PROJECT_VALIDATOR,
-    ];
     const permissionData = data
       ? (data as PermissionResponse)
       : {permissions: []};
-    const hasExtraLinksPermission = extraLinksPermissions.some(permission =>
-      permissionData.permissions.includes(permission)
-    );
-    if (hasExtraLinksPermission) {
+    if (
+      permissionData.permissions.includes(PERMISSIONS.LEVELBUILDER) ||
+      permissionData.permissions.includes(PERMISSIONS.PROJECT_VALIDATOR)
+    ) {
       try {
         HttpClient.fetchJson<ExtraLinksResponse>(
           `/levels/${levelId}/extra_links`
         ).then(response => {
+          console.log('response.value - levelbuilder', response.value);
           setLinkData(response.value);
         });
       } catch (e) {
         console.error('Error fetching levelbuilder extra links', e);
       }
     }
-  }, [data, levelId]);
-
-  const permissionData = data
-    ? (data as PermissionResponse)
-    : {permissions: []};
+    if (permissionData.permissions.includes(PERMISSIONS.PROJECT_VALIDATOR)) {
+      try {
+        console.log('try p.v.');
+        HttpClient.fetchJson(`/projects/${channelId}/extra_links`).then(
+          response => {
+            console.log('response.value - project validator', response.value);
+          }
+        );
+      } catch (e) {
+        console.error('Error fetching levelbuilder extra links', e);
+      }
+    }
+  }, [data, levelId, channelId]);
 
   if (
     !permissionData.permissions.includes(PERMISSIONS.LEVELBUILDER) &&
@@ -82,6 +95,7 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
           isOpen={isModalOpen}
           closeModal={() => setIsModalOpen(false)}
           levelId={levelId}
+          permissions={permissionData.permissions}
         />
       )}
     </>
