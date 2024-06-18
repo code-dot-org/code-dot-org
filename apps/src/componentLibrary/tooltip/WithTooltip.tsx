@@ -50,80 +50,49 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
     if (nodePosition && tooltipRef.current) {
       const rect = nodePosition.getBoundingClientRect();
       const tooltipRect = tooltipRef.current.getBoundingClientRect();
+      const scrollY = window.scrollY;
+      const scrollX = window.scrollX;
       const direction = document.documentElement.dir || 'ltr'; // Default to 'ltr' if not specified
+      const isLtr = direction === 'ltr';
 
-      let styles: React.CSSProperties = {};
+      const styles: React.CSSProperties = {};
+
+      const verticalMiddlePosition =
+        rect.top + scrollY + rect.height / 2 - tooltipRect.height / 2;
+      const verticalTopPosition =
+        rect.top + scrollY - tooltipRect.height - tailOffset - tailLength;
+      const verticalBottomPosition =
+        rect.bottom + scrollY + tailOffset + tailLength;
+
+      const horizontalMiddlePosition =
+        rect.left + scrollX + rect.width / 2 - tooltipRect.width / 2;
+      const horizontalLeftPosition =
+        rect.left + scrollX - tooltipRect.width - tailOffset - tailLength;
+      const horizontalRightPosition =
+        rect.right + scrollX + tailOffset + tailLength;
 
       // Calculate the tooltip position based on the direction and its tail length
       switch (tooltipProps.direction) {
         case 'onRight':
-          styles = {
-            top: `${
-              rect.top +
-              window.scrollY +
-              rect.height / 2 -
-              tooltipRect.height / 2
-            }px`,
-            left:
-              direction === 'ltr'
-                ? `${rect.right + window.scrollX + tailOffset + tailLength}px`
-                : `${
-                    rect.left +
-                    window.scrollX -
-                    tooltipRect.width -
-                    tailOffset -
-                    tailLength
-                  }px`,
-          };
+          styles.top = verticalMiddlePosition;
+          styles.left = isLtr
+            ? horizontalRightPosition
+            : horizontalLeftPosition;
           break;
         case 'onBottom':
-          styles = {
-            top: `${rect.bottom + window.scrollY + tailOffset + tailLength}px`,
-            left: `${
-              rect.left +
-              window.scrollX +
-              rect.width / 2 -
-              tooltipRect.width / 2
-            }px`,
-          };
+          styles.top = verticalBottomPosition;
+          styles.left = horizontalMiddlePosition;
           break;
         case 'onLeft':
-          styles = {
-            top: `${
-              rect.top +
-              window.scrollY +
-              rect.height / 2 -
-              tooltipRect.height / 2
-            }px`,
-            left:
-              direction === 'ltr'
-                ? `${
-                    rect.left +
-                    window.scrollX -
-                    tooltipRect.width -
-                    tailOffset -
-                    tailLength
-                  }px`
-                : `${rect.right + window.scrollX + tailOffset + tailLength}px`,
-          };
+          styles.top = verticalMiddlePosition;
+          styles.left = isLtr
+            ? horizontalLeftPosition
+            : horizontalRightPosition;
           break;
         case 'onTop':
         default:
-          styles = {
-            top: `${
-              rect.top +
-              window.scrollY -
-              tooltipRect.height -
-              tailOffset -
-              tailLength
-            }px`,
-            left: `${
-              rect.left +
-              window.scrollX +
-              rect.width / 2 -
-              tooltipRect.width / 2
-            }px`,
-          };
+          styles.top = verticalTopPosition;
+          styles.left = horizontalMiddlePosition;
           break;
       }
       setTooltipStyles(styles);
