@@ -161,21 +161,37 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
 
   const projectValidatorDataDisplay = (
     projectValidatorLinkData: ExtraLinksProjectValidatorData
-  ) => (
-    <>
-      <StrongText>Project Info</StrongText>
-      <ul>
-        <li>{`Project owner: ${projectValidatorLinkData.owner_info.name}`}</li>
-        <li>
-          {`Owner storage id: ${projectValidatorLinkData.owner_info.storage_id}`}
-        </li>
-        <li>{`Project id: ${projectValidatorLinkData.project_info.id}`}</li>
-        <li>{`S3 links: sources`}</li>
-        <li>{`Remix info`}</li>
-        <li>{`Featured project info: ${projectValidatorLinkData.project_info.featured_status}`}</li>
-      </ul>
-    </>
-  );
+  ) => {
+    const ownerInfo = projectValidatorLinkData.owner_info;
+    const projectInfo = projectValidatorLinkData.project_info;
+
+    return (
+      <>
+        <StrongText>Project Info</StrongText>
+        <ul>
+          <li>{`Project owner: ${ownerInfo.name}`}</li>
+          <li>{`Owner storage id: ${ownerInfo.storage_id}`}</li>
+          <li>{`Project id: ${projectInfo.id}`}</li>
+          <li>
+            {`S3 links: `}
+            <a href={`${projectInfo.sources_link}`}>{`Sources`}</a>
+          </li>
+          <li>
+            Remix ancestry:
+            <ul>
+              {projectInfo.remix_ancestry.map((link: string, index: number) => (
+                <li key={index}>
+                  <a href={link}>{link}</a>
+                </li>
+              ))}
+            </ul>
+          </li>
+
+          <li>{`Featured project info: ${projectValidatorLinkData.project_info.featured_status}`}</li>
+        </ul>
+      </>
+    );
+  };
 
   return isOpen ? (
     <AccessibleDialog onClose={onClose}>

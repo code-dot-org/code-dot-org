@@ -286,11 +286,9 @@ export interface ExtraLinksProjectValidatorData {
     [key: string]: {
       id: number;
       sources_link: string;
-      assets_link: string;
-      animations_link: string;
-      files_link: string;
       is_featured_project: boolean;
       featured_status: string;
+      remix_ancestry: string[];
     };
   };
 }
