@@ -2081,7 +2081,7 @@ function runButtonClickWrapper(callback) {
     );
     Blockly.mainBlockSpace.getCanvas().dispatchEvent(customEvent);
   }
-
+  getStore().dispatch(setFeedback(null));
   callback();
 }
 
