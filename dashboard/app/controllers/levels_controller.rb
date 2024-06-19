@@ -524,7 +524,7 @@ class LevelsController < ApplicationController
             {text: project_template_level_name, url: level_path(project_template_level)}
         ]
         if can? :edit, project_template_level
-          links["Template Level"] << {text: '[E]dit', url: edit_level_path(project_template_level)}
+          links["Template Level"] << {text: 'Edit', url: edit_level_path(project_template_level)}
         else
           links["Template Level"] << {text: '(Cannot edit)', url: ''}
         end
