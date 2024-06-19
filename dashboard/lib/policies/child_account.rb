@@ -27,7 +27,7 @@ class Policies::ChildAccount
   # P20-937 - We had a regression which we have chosen to mitigate by allowing
   # accounts created before the below date to have their lock-out delayed until
   # the CAP policy is set to lockout all users.
-  CPA_CREATED_AT_EXCEPTION_DATE = DateTime.parse('2024-05-26T00:00:00MST')
+  CPA_CREATED_AT_EXCEPTION_DATE = DateTime.parse('2024-05-26T00:00:00MDT')
 
   # The delay is intended to provide notice to a parent
   # when a student may no longer be monitoring the "parent's email."
