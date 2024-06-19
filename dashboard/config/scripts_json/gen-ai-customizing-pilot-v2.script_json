@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "gen-ai-customizing-pilot-v2",
-    "serialized_at": "2024-06-18 03:49:36 UTC",
+    "serialized_at": "2024-06-19 03:31:02 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -823,6 +823,48 @@
       "seeding_key": {
         "lesson_activity.key": "b2918152-1af6-4519-badc-65a86aec068d",
         "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2"
+      }
+    },
+    {
+      "key": "97a4860f-8d6e-431c-9359-16ee0d368746",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "97a4860f-8d6e-431c-9359-16ee0d368746",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2"
+      }
+    },
+    {
+      "key": "15b3f3e3-a496-4492-8bd9-2ac80d5d27bf",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "15b3f3e3-a496-4492-8bd9-2ac80d5d27bf",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2"
+      }
+    },
+    {
+      "key": "e92b96ac-6147-405c-8fd5-90053233fcf6",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e92b96ac-6147-405c-8fd5-90053233fcf6",
+        "lesson.key": "lesson-12",
         "lesson_group.key": "",
         "script.name": "gen-ai-customizing-pilot-v2"
       }
@@ -2544,6 +2586,50 @@
         "activity_section.key": "c90cf3ac-388d-41ef-baf6-552bb450b10d",
         "lesson_activity.key": "b2918152-1af6-4519-badc-65a86aec068d"
       }
+    },
+    {
+      "key": "a13326fd-4620-41a2-b020-d9b6e5d46690",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a13326fd-4620-41a2-b020-d9b6e5d46690",
+        "lesson_activity.key": "97a4860f-8d6e-431c-9359-16ee0d368746"
+      }
+    },
+    {
+      "key": "aca751d8-a3b3-404a-af61-da3d448903e1",
+      "position": 1,
+      "properties": {
+        "description": "**Getting Familiar:** These are the levels students will complete throughout the lesson. We recommend briefly exploring the levels yourself before reading the rest of the lesson plan. Some levels are meant to be completed independently by students, but others are meant to motivate class discussion or lead to moments of direct instruction in the slides. Very rarely should students be working through levels completely self-paced.",
+        "name": "Student Levels",
+        "progression_name": "User Testing"
+      },
+      "seeding_key": {
+        "activity_section.key": "aca751d8-a3b3-404a-af61-da3d448903e1",
+        "lesson_activity.key": "15b3f3e3-a496-4492-8bd9-2ac80d5d27bf"
+      }
+    },
+    {
+      "key": "4c261f4c-dc5c-43c7-8e3d-494d89388274",
+      "position": 2,
+      "properties": {
+        "name": "Teaching Guide"
+      },
+      "seeding_key": {
+        "activity_section.key": "4c261f4c-dc5c-43c7-8e3d-494d89388274",
+        "lesson_activity.key": "15b3f3e3-a496-4492-8bd9-2ac80d5d27bf"
+      }
+    },
+    {
+      "key": "81eb39ec-a480-4c9a-a2d8-2c3698eeda54",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "81eb39ec-a480-4c9a-a2d8-2c3698eeda54",
+        "lesson_activity.key": "e92b96ac-6147-405c-8fd5-90053233fcf6"
+      }
     }
   ],
   "script_levels": [
@@ -2553,6 +2639,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L1"
+        ],
         "progression": "Explore a Chatbot"
       },
       "bonus": false,
@@ -2575,6 +2664,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L2"
+        ],
         "progression": "Explore a Chatbot"
       },
       "bonus": false,
@@ -2597,6 +2689,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L3"
+        ],
         "progression": "Temperature"
       },
       "bonus": false,
@@ -2619,6 +2714,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L4"
+        ],
         "progression": "Temperature"
       },
       "bonus": false,
@@ -2641,6 +2739,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L5"
+        ],
         "progression": "Temperature"
       },
       "bonus": false,
@@ -2663,6 +2764,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L6"
+        ],
         "progression": "Temperature"
       },
       "bonus": false,
@@ -2685,6 +2789,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L7"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -2707,6 +2814,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L8V2"
+        ],
         "progression": "Investigating Hallucinations"
       },
       "bonus": false,
@@ -2729,6 +2839,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L8"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2751,6 +2864,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L1"
+        ],
         "progression": "Using a System Prompt"
       },
       "bonus": false,
@@ -2773,6 +2889,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L2"
+        ],
         "progression": "Using a System Prompt"
       },
       "bonus": false,
@@ -2795,6 +2914,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L3"
+        ],
         "progression": "Using a System Prompt"
       },
       "bonus": false,
@@ -2817,6 +2939,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L4"
+        ],
         "progression": "Role & Tone"
       },
       "bonus": false,
@@ -2839,6 +2964,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L5"
+        ],
         "progression": "Role & Tone"
       },
       "bonus": false,
@@ -2861,6 +2989,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L6"
+        ],
         "progression": "Role & Tone"
       },
       "bonus": false,
@@ -2883,6 +3014,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L7"
+        ],
         "progression": "Audience & Delivery"
       },
       "bonus": false,
@@ -2905,6 +3039,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L8"
+        ],
         "progression": "Audience & Delivery"
       },
       "bonus": false,
@@ -2927,6 +3064,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L9"
+        ],
         "progression": "Audience & Delivery"
       },
       "bonus": false,
@@ -2949,6 +3089,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L10"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -2971,6 +3114,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L11"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2993,6 +3139,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L12"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -3015,6 +3164,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L13"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -3037,6 +3189,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L1"
+        ],
         "progression": "Chain of Reasoning"
       },
       "bonus": false,
@@ -3059,6 +3214,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L2"
+        ],
         "progression": "Chain of Reasoning"
       },
       "bonus": false,
@@ -3081,6 +3239,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L3"
+        ],
         "progression": "Chain of Reasoning"
       },
       "bonus": false,
@@ -3103,6 +3264,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L4"
+        ],
         "progression": "Chain of Reasoning"
       },
       "bonus": false,
@@ -3125,6 +3289,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L5"
+        ],
         "progression": "Giving Examples"
       },
       "bonus": false,
@@ -3147,6 +3314,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L6"
+        ],
         "progression": "Giving Examples"
       },
       "bonus": false,
@@ -3169,6 +3339,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L7"
+        ],
         "progression": "Giving Examples"
       },
       "bonus": false,
@@ -3191,6 +3364,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L9"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3213,6 +3389,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L8"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -3235,6 +3414,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-10V2"
+        ],
         "progression": "Show What You Know"
       },
       "bonus": false,
@@ -3257,6 +3439,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L1"
+        ],
         "progression": "Explore"
       },
       "bonus": false,
@@ -3279,6 +3464,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L2V2"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -3301,6 +3489,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L3V2"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -3323,6 +3514,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L4"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -3345,6 +3539,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L5"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -3367,6 +3564,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L6"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -3389,6 +3589,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L7A"
+        ],
         "progression": "Modify"
       },
       "bonus": false,
@@ -3411,6 +3614,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L8"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -3433,6 +3639,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L9"
+        ],
         "progression": "Make"
       },
       "bonus": false,
@@ -3455,6 +3664,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L1"
+        ],
         "progression": "Current Information"
       },
       "bonus": false,
@@ -3477,6 +3689,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L2"
+        ],
         "progression": "Current Information"
       },
       "bonus": false,
@@ -3499,6 +3714,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L3"
+        ],
         "progression": "Specialized Information"
       },
       "bonus": false,
@@ -3521,6 +3739,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L4"
+        ],
         "progression": "Specialized Information"
       },
       "bonus": false,
@@ -3543,6 +3764,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L5"
+        ],
         "progression": "Accurate Information"
       },
       "bonus": false,
@@ -3565,6 +3789,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L6"
+        ],
         "progression": "Accurate Information"
       },
       "bonus": false,
@@ -3587,6 +3814,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L7"
+        ],
         "progression": "Accurate Information"
       },
       "bonus": false,
@@ -3609,6 +3839,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L8"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -3631,6 +3864,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L9"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3653,6 +3889,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L10"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -3675,6 +3914,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L11"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -3697,6 +3939,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L1"
+        ],
         "progression": "User Story #1: Sarah Thompson"
       },
       "bonus": false,
@@ -3719,6 +3964,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L1.1"
+        ],
         "progression": "User Story #1: Sarah Thompson"
       },
       "bonus": false,
@@ -3741,6 +3989,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L2"
+        ],
         "progression": "User Story #1: Sarah Thompson"
       },
       "bonus": false,
@@ -3763,6 +4014,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L4"
+        ],
         "progression": "User Story #2: Janet Lee"
       },
       "bonus": false,
@@ -3785,6 +4039,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L4.1"
+        ],
         "progression": "User Story #2: Janet Lee"
       },
       "bonus": false,
@@ -3807,6 +4064,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L5"
+        ],
         "progression": "User Story #2: Janet Lee"
       },
       "bonus": false,
@@ -3829,6 +4089,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L7"
+        ],
         "progression": "User Story #3: Alex Martinez"
       },
       "bonus": false,
@@ -3851,6 +4114,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L7.1"
+        ],
         "progression": "User Story #3: Alex Martinez"
       },
       "bonus": false,
@@ -3873,6 +4139,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L8"
+        ],
         "progression": "User Story #3: Alex Martinez"
       },
       "bonus": false,
@@ -3895,6 +4164,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L10"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -3917,6 +4189,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L11"
+        ],
         "progression": "Show What You Know"
       },
       "bonus": false,
@@ -3939,6 +4214,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-L1"
+        ],
         "progression": "Explore"
       },
       "bonus": false,
@@ -3961,6 +4239,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-L2V2"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -3983,6 +4264,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-L3V2"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -4005,6 +4289,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-L4"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -4027,6 +4314,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-L5"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -4049,6 +4339,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-L6"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -4071,6 +4364,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-modelcards-practice-L1"
+        ],
         "progression": "Initial Scenario"
       },
       "bonus": false,
@@ -4093,6 +4389,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-modelcards-practice-L2"
+        ],
         "progression": "You Decide!"
       },
       "bonus": false,
@@ -4107,6 +4406,28 @@
       },
       "level_keys": [
         "gen-ai-customizing-modelcards-practice-L2"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "User Testing"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-usertesting-L1"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "aca751d8-a3b3-404a-af61-da3d448903e1"
+      },
+      "level_keys": [
+        "gen-ai-customizing-usertesting-L1"
       ]
     }
   ],
@@ -4961,6 +5282,18 @@
         "lesson_group.key": "",
         "script.name": "gen-ai-customizing-pilot-v2",
         "activity_section.key": "375df491-dfe5-4aa4-92cd-6103bf01efd6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-usertesting-L1",
+        "script_level.level_keys": [
+          "gen-ai-customizing-usertesting-L1"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "aca751d8-a3b3-404a-af61-da3d448903e1"
       }
     }
   ],
