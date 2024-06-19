@@ -1,12 +1,13 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, {AriaAttributes} from 'react';
 
+import {getAriaPropsFromProps} from '@cdo/apps/componentLibrary/common/helpers';
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 
 import moduleStyles from './closeButton.module.scss';
 
-export interface CloseButtonProps {
+export interface CloseButtonProps extends AriaAttributes {
   /** Close Button onClick */
   onClick: () => void;
   /** Close Button size */
@@ -36,7 +37,10 @@ const CloseButton: React.FunctionComponent<CloseButtonProps> = ({
   size = 'm',
   color = 'dark',
   className,
+  ...rest
 }) => {
+  const ariaProps = getAriaPropsFromProps(rest);
+
   return (
     <button
       type="button"
@@ -47,6 +51,7 @@ const CloseButton: React.FunctionComponent<CloseButtonProps> = ({
         className
       )}
       onClick={onClick}
+      {...ariaProps}
     >
       <FontAwesomeV6Icon iconName={'close'} />
     </button>
