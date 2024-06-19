@@ -18,7 +18,7 @@ Scenario: Edit a function
   # Open Sprites flyout
   And I press "blockly-d"
   # Drag new sprite block to top of function
-  And I drag block number 3 to offset "40, 100"
+  And I drag block number 2 to offset "40, 100"
   And I see no difference for "add a new block to the function"
   # Close function
   And I press "closeModalFunctionEditor"

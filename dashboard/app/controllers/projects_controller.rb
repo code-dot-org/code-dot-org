@@ -683,8 +683,10 @@ class ProjectsController < ApplicationController
 
     project = Projects.new(get_storage_id).get(params[:channel_id])
     is_owner = project[:isOwner]
+    is_frozen = project[:frozen]
 
-    return redirect_to "/projects/#{params[:key]}/#{params[:channel_id]}/edit" if is_owner && request.path.ends_with?('/view')
+    return redirect_to "/projects/#{params[:key]}/#{params[:channel_id]}/edit" if is_owner && request.path.ends_with?('/view') && !is_frozen
+    return redirect_to "/projects/#{params[:key]}/#{params[:channel_id]}/view" if is_frozen && request.path.ends_with?('/edit')
     return redirect_to "/projects/#{params[:key]}/#{params[:channel_id]}/view" if !is_owner && request.path.ends_with?('/edit')
   end
 
