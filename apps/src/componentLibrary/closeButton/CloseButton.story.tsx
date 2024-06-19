@@ -35,20 +35,21 @@ const MultipleTemplate: StoryFn<{
 export const DefaultCloseButton = SingleTemplate.bind({});
 DefaultCloseButton.args = {
   onClick: () => null,
+  'aria-label': 'Close',
 };
 
 export const GroupOfColorsOfCloseButton = MultipleTemplate.bind({});
 GroupOfColorsOfCloseButton.args = {
   components: [
-    {onClick: () => null, color: 'light'},
-    {onClick: () => null, color: 'dark'},
+    {onClick: () => null, color: 'light', 'aria-label': 'Close light'},
+    {onClick: () => null, color: 'dark', 'aria-label': 'Close dark'},
   ],
 };
 
 export const GroupOfSizesOfCloseButton = MultipleTemplate.bind({});
 GroupOfSizesOfCloseButton.args = {
   components: [
-    {onClick: () => null, size: 'm'},
-    {onClick: () => null, size: 'l'},
+    {onClick: () => null, size: 'm', 'aria-label': 'Close m'},
+    {onClick: () => null, size: 'l', 'aria-label': 'Close l'},
   ],
 };

@@ -9,7 +9,7 @@ import {expect} from '../../util/reconfiguredChai';
 
 describe('Design System - CloseButton', () => {
   it('renders with default props', () => {
-    render(<CloseButton onClick={() => {}} />);
+    render(<CloseButton onClick={() => {}} aria-label="default close" />);
 
     const button = screen.getByRole('button');
     expect(button).to.exist;
@@ -17,7 +17,13 @@ describe('Design System - CloseButton', () => {
 
   it('applies custom class name', () => {
     const className = 'custom-class';
-    render(<CloseButton onClick={() => {}} className={className} />);
+    render(
+      <CloseButton
+        aria-label="custom className close"
+        onClick={() => {}}
+        className={className}
+      />
+    );
 
     const button = screen.getByRole('button');
     expect(button.classList.contains(className)).to.be.true;
@@ -27,7 +33,9 @@ describe('Design System - CloseButton', () => {
     const user = userEvent.setup();
     const handleClick = sinon.spy();
 
-    render(<CloseButton onClick={handleClick} />);
+    render(
+      <CloseButton aria-label="Close to test onClick" onClick={handleClick} />
+    );
 
     const button = screen.getByRole('button');
     await user.click(button);

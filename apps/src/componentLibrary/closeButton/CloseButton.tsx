@@ -16,6 +16,8 @@ export interface CloseButtonProps extends AriaAttributes {
   color?: 'light' | 'dark';
   /** Close Button Custom class name */
   className?: string;
+  /** Close Button an accessible label indicating invisible label for the Close Button */
+  'aria-label': string;
 }
 
 /**
@@ -35,6 +37,7 @@ export interface CloseButtonProps extends AriaAttributes {
 const CloseButton: React.FunctionComponent<CloseButtonProps> = ({
   onClick,
   size = 'm',
+  'aria-label': ariaLabel,
   color = 'dark',
   className,
   ...rest
@@ -44,6 +47,7 @@ const CloseButton: React.FunctionComponent<CloseButtonProps> = ({
   return (
     <button
       type="button"
+      aria-label={ariaLabel}
       className={classNames(
         moduleStyles.closeButton,
         moduleStyles[`closeButton-${color}`],
