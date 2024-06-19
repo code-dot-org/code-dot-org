@@ -126,4 +126,32 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
       }
     end
   end
+
+  describe '.remove_compliance' do
+    let(:remove_user_cap_compliance_state) {Services::ChildAccount.remove_compliance(user)}
+
+    let(:user_cap_compliance_updated_at) {1.day.ago}
+    let(:user) do
+      create(
+        :non_compliant_child, :in_grace_period,
+        child_account_compliance_state_last_updated: user_cap_compliance_updated_at,
+      )
+    end
+
+    around do |test|
+      Timecop.freeze {test.call}
+    end
+
+    it 'removes user CAP compliance state' do
+      assert_changes -> {user.reload.child_account_compliance_state}, from: Policies::ChildAccount::ComplianceState::GRACE_PERIOD, to: nil do
+        remove_user_cap_compliance_state
+      end
+    end
+
+    it 'updates user CAP compliance state last updated date' do
+      assert_changes -> {user.reload.child_account_compliance_state_last_updated}, from: user_cap_compliance_updated_at.iso8601(3), to: DateTime.now.iso8601(3) do
+        remove_user_cap_compliance_state
+      end
+    end
+  end
 end

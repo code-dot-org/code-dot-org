@@ -11,8 +11,27 @@ module Services
       end
 
       def call
-        return false unless eligible?
+        return if Policies::ChildAccount::ComplianceState.locked_out?(user)
+        # Only "pre-policy" created students can be transited to the grace period.
+        return unless Policies::ChildAccount.user_predates_policy?(user)
+        # Users can be transitioned to the grace period only after the "all users' lockout" phase has started.
+        return if all_users_lockout_start_date.nil? || all_users_lockout_start_date > DateTime.now
 
+        if Policies::ChildAccount.compliant?(user)
+          # Removes the "grace period" state if the user is now CAP compliant.
+          Services::ChildAccount.remove_compliance(user) if Policies::ChildAccount::ComplianceState.grace_period?(user)
+        else
+          # Transits the user to the "grace period" state if they are not already in it.
+          start_grace_period unless Policies::ChildAccount::ComplianceState.grace_period?(user)
+        end
+      end
+
+      private def all_users_lockout_start_date
+        return @all_users_lockout_start_date if defined? @all_users_lockout_start_date
+        @all_users_lockout_start_date = Policies::ChildAccount.state_policy(user).try(:[], :lockout_date)
+      end
+
+      private def start_grace_period
         user.transaction do
           Services::ChildAccount.start_grace_period(user)
 
@@ -21,24 +40,6 @@ module Services
 
           CAP::LockoutJob.set(wait_until: estimated_lockout_date).perform_later(user_id: user.id)
         end
-
-        true
-      end
-
-      # Checks if the user can be transited to the grace period state.
-      private def eligible?
-        return false if Policies::ChildAccount.compliant?(user)
-        return false if Policies::ChildAccount::ComplianceState.locked_out?(user)
-        # If the user is already in the grace period, it cannot be started again.
-        return false if Policies::ChildAccount::ComplianceState.grace_period?(user)
-        # Only "pre-policy" created students can be transited to the grace period.
-        return false unless Policies::ChildAccount.user_predates_policy?(user)
-
-        user_state_policy = Policies::ChildAccount.state_policy(user)
-        return false unless user_state_policy
-
-        # The grace period can only begin after the "all users' lockout" phase starts.
-        user_state_policy[:lockout_date] <= DateTime.now
       end
     end
   end

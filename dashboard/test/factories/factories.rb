@@ -445,6 +445,11 @@ FactoryBot.define do
       end
 
       factory :non_compliant_child, traits: [:U13, :in_colorado, :p20_937_exception_date] do
+        trait :in_grace_period do
+          child_account_compliance_state {Policies::ChildAccount::ComplianceState::GRACE_PERIOD}
+          child_account_compliance_state_last_updated {DateTime.now}
+        end
+
         factory :locked_out_child do
           child_account_compliance_state {Policies::ChildAccount::ComplianceState::LOCKED_OUT}
           child_account_compliance_state_last_updated {DateTime.now}

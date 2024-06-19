@@ -18,6 +18,12 @@ module Services::ChildAccount
     user.save!
   end
 
+  # Removes the current child's account compliance state.
+  def self.remove_compliance(user)
+    update_compliance(user, nil)
+    user.save!
+  end
+
   # Updates the child_account_compliance_state attribute to the given state.
   # @param {String} new_state - A constant from Policies::ChildAccount::ComplianceState
   def self.update_compliance(user, new_state)
