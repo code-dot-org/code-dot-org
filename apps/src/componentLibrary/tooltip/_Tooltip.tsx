@@ -26,6 +26,8 @@ export interface TooltipProps {
   className?: string;
   /** Tooltip size */
   size?: ComponentSizeXSToL;
+  /** Tooltip custom styles (used for positioning the tooltip on the go) */
+  style?: React.CSSProperties;
 }
 
 export interface TooltipOverlayProps {
@@ -60,31 +62,39 @@ export const TooltipOverlay: React.FunctionComponent<TooltipOverlayProps> = ({
  * Design System: Tooltip Component.
  * Renders Tooltip for a given html element (Needs to be wrapped in TooltipOverlay, see stories or README.md).
  */
-const Tooltip: React.FunctionComponent<TooltipProps> = ({
-  text,
-  tooltipId,
-  iconLeft,
-  iconRight,
-  direction = 'onTop',
-  className,
-  size = 'm',
-}) => {
-  return (
-    <div
-      id={tooltipId}
-      className={classnames(
-        moduleStyles.tooltip,
-        moduleStyles[`tooltip-${direction}`],
-        moduleStyles[`tooltip-${size}`],
-        className
-      )}
-      role="tooltip"
-    >
-      {iconLeft && <FontAwesomeV6Icon {...iconLeft} />}
-      <span className={moduleStyles.tooltipText}>{text}</span>
-      {iconRight && <FontAwesomeV6Icon {...iconRight} />}
-    </div>
-  );
-};
+const Tooltip = React.forwardRef<HTMLDivElement, TooltipProps>(
+  (
+    {
+      text,
+      tooltipId,
+      iconLeft,
+      iconRight,
+      direction = 'onTop',
+      className,
+      size = 'm',
+      style = {},
+    },
+    ref
+  ) => {
+    return (
+      <div
+        ref={ref}
+        id={tooltipId}
+        className={classnames(
+          moduleStyles.tooltip,
+          moduleStyles[`tooltip-${direction}`],
+          moduleStyles[`tooltip-${size}`],
+          className
+        )}
+        style={style}
+        role="tooltip"
+      >
+        {iconLeft && <FontAwesomeV6Icon {...iconLeft} />}
+        <span className={moduleStyles.tooltipText}>{text}</span>
+        {iconRight && <FontAwesomeV6Icon {...iconRight} />}
+      </div>
+    );
+  }
+);
 
 export default Tooltip;

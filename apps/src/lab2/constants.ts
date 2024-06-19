@@ -33,3 +33,5 @@ export const LAB2_STANDALONE_PROJECT_LEVEL_NAMES = [
   'New Music Lab Project',
   'New Python Lab Project',
 ];
+// Text-based labs that are currently supported by lab2.
+export const TEXT_BASED_LABS: AppName[] = ['aichat', 'pythonlab', 'weblab2'];

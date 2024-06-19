@@ -61,6 +61,8 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    resources :images, only: [:new]
+
     get 'maker/home', to: 'maker#home'
     get 'maker/setup', to: 'maker#setup'
 
