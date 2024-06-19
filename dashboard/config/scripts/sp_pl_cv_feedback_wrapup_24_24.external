@@ -1,0 +1,18 @@
+name 'sp-pl-CV_feedback_wrapUp_24_24'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Wrapping up
+
+<img src="https://images.code.org/395ac1562aade16e680fe37ef96b290c-image-1715026230678.png" alt="teachable machine sample with girl and stuffed dog" width="200px"  style="border-radius:10px; float:right; margin: 0px 20px 10px 0px;">
+
+#### This unit on **computer vision** and the **design thinking process** illustrated the potent combination of technology with creative problem-solving. So far you have explored computer vision fundamentals and applied these to develop prototypes focused on real-world challenges using a user-centered approach. 
+
+#### The following lesson focuses on **resources for teaching** the Computer Vision Unit. 
+
+
+
+ 
+
+MARKDOWN

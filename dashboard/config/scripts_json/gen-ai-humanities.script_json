@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "gen-ai-humanities",
-    "serialized_at": "2024-04-06 00:14:24 UTC",
+    "serialized_at": "2024-06-18 20:51:31 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -48,9 +48,9 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "Large Language Models are a powerful new technology. There are many ways to use it that can help student learning and other ways that might harm their learning. In this lesson, students will reflect meaningfully on using technology to help their learning through discussion and debate. In the process, they will explore a large language model and begin learning how to prompt it to help them complete tasks.\n",
-        "preparation": "* Choose which chatbot you will use with your class, and read the appropriate guide: [r guide_to_microsoft_copilot/gen-ai-humanities/unversioned], [r guide_to_google_gemini/gen-ai-humanities/unversioned], or [r guide_to_chatgpt/gen-ai-humanities/unversioned]\n* Watch the [How Chatbots and Large Language Models Work video](https://www.youtube.com/watch?v=X-AWdfSFCHQ) to become familiar with how each tool works, which may help you facilitate discussions with your students\n* Run through the activities to have a basic idea of what students are likely to get out of the search engine and a chatbot using a large language model\n* Print copies of the [r writing_process_activity_guide/gen-ai-humanities/unversioned] for all students\n* Print enough copies of each [r chatbot_persona_exploration_jigsaw/gen-ai-humanities/unversioned] jigsaw activity for each student to get one, and the class to be somewhat evenly distributed amongst the three bots.\n* Ensure all students have access to computers connected to the internet and accounts for the chosen chatbot and digital resources.",
-        "student_overview": "Explore how AI chatbots can help and hinder our learning during the writing process\n"
+        "overview": "Large language models (LLMs) are a powerful new technology. There are many ways to use it that can help student learning and other ways that might harm their learning. In this lesson, students reflect on using technology to help their learning through discussion and debate. In the process, they explore an LLM and begin learning how to prompt it to help them complete tasks.\n",
+        "preparation": "* Choose which chatbot you will use with your class.\n* Print copies of the Writing Process activity guide (one for each student)\n* Print copies of the Chatbot Persona Exploration Jigsaw activity guide (one for each student)",
+        "student_overview": "Explore how AI chatbots can help and hinder our learning during the writing process."
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -1307,12 +1307,12 @@
       }
     },
     {
-      "name": "[KEY] Wrting Process Activity Guide Exemplar",
+      "name": "[KEY] Writing Process",
       "url": "https://docs.google.com/document/d/1VeOt_5jbygIID0NkCFmtEwlsjC8QKDFxMZ35bu_n5iI/",
       "key": "_key_wrting_process_activity_guide_exemplar",
       "properties": {
         "audience": "Teacher",
-        "type": "Exemplar"
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_wrting_process_activity_guide_exemplar"
@@ -1336,6 +1336,7 @@
       "key": "ai_chatbot_prompting_guide_1",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {
@@ -1348,6 +1349,7 @@
       "key": "bot_personas_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Slides"
       },
       "seeding_key": {
@@ -1360,6 +1362,7 @@
       "key": "chatbot_persona_exploration_jigsaw",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Activity Guide"
       },
       "seeding_key": {
@@ -1511,6 +1514,18 @@
       }
     },
     {
+      "name": "How Chatbots and Large Language Models Work",
+      "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
+      "key": "how_chatbots_and_large_language_models_work",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "how_chatbots_and_large_language_models_work"
+      }
+    },
+    {
       "name": "Reflection Stations Setup Guide",
       "url": "https://docs.google.com/document/d/1LP4VtH4fRAM-2aW0APydKUj5pVGlS6q3Gq2Bzw4qKb8/",
       "key": "reflection_stations",
@@ -1547,11 +1562,12 @@
       }
     },
     {
-      "name": "Writing Process Activity Guide",
+      "name": "Writing Process",
       "url": "https://docs.google.com/document/d/1u44qVE8kZD584Dx3NN0GGH4zQK9QNhh3BUfMzrcvkCk/",
       "key": "writing_process_activity_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Activity Guide"
       },
       "seeding_key": {
@@ -1612,6 +1628,12 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "guide_to_microsoft_copilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "how_chatbots_and_large_language_models_work"
       }
     },
     {
@@ -1724,6 +1746,16 @@
   ],
   "vocabularies": [
     {
+      "key": "large_language_model_llm_",
+      "word": "large language model (LLM)",
+      "definition": "a trained model that can recognize, summarize, translate, predict, and generate text in a human-like fashion",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "large_language_model_llm_"
+      }
+    },
+    {
       "key": "large_language_models",
       "word": "Large Language Models",
       "definition": "Trained models that can recognize, summarize, translate, predict, and generate text in a human-like fashion",
@@ -1738,7 +1770,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
-        "vocabulary.key": "large_language_models"
+        "vocabulary.key": "large_language_model_llm_"
       }
     },
     {
@@ -1752,16 +1784,6 @@
 
   ],
   "objectives": [
-    {
-      "key": "2f252494-0e66-42ab-b9b9-ec6c48f5bfe0",
-      "properties": {
-        "description": "Build Values for using AI with your class"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "objective.key": "2f252494-0e66-42ab-b9b9-ec6c48f5bfe0"
-      }
-    },
     {
       "key": "9f8ce5d8-bb91-452b-bb66-5542c01b9dde",
       "properties": {
