@@ -12,11 +12,19 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
 
     before do
       Cpa.stubs(:cpa_experience).returns(cpa_experience_phase)
-
-      expect_grace_period_handler_call.once
-      expect_lockout_handler_call.returns(user_is_locked_out?)
+      Services::ChildAccount::LockoutHandler.stubs(:call).with(user: user).returns(user_is_locked_out?)
 
       sign_in user
+    end
+
+    it 'calls CAP grace period handler' do
+      expect_grace_period_handler_call.once
+      get root_path
+    end
+
+    it 'calls CAP lockout handler' do
+      expect_lockout_handler_call.once
+      get root_path
     end
 
     it 'redirects to the lockout page' do
@@ -75,9 +83,14 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
     context 'when no CPA experience' do
       let(:cpa_experience_phase) {nil}
 
-      before do
+      it 'does not call CAP grace period handler' do
         expect_grace_period_handler_call.never
+        get root_path
+      end
+
+      it 'does not call CAP lockout handler' do
         expect_lockout_handler_call.never
+        get root_path
       end
 
       it 'does not redirect to lockout page' do
@@ -86,12 +99,21 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
       end
     end
 
-    context 'when error is raised during locking out' do
+    context 'when error is raised during grace period handling' do
       let(:error) {StandardError.new('expected_error')}
 
       before do
+        Services::ChildAccount::GracePeriodHandler.stubs(:call).with(user: user).raises(error)
+      end
+
+      it 'does not call CAP grace period handler' do
+        expect_grace_period_handler_call.never
+        get root_path
+      end
+
+      it 'does not call CAP lockout handler' do
         expect_lockout_handler_call.never
-        Services::ChildAccount::LockoutHandler.expects(:call).with(user: user).raises(error)
+        get root_path
       end
 
       it 'notifies Honeybadger about error' do
