@@ -63,7 +63,7 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
       end
     end
 
-    context 'when user is locked out' do
+    context 'when user is not locked out' do
       let(:user_is_locked_out?) {false}
 
       it 'does not redirect to lockout page' do
