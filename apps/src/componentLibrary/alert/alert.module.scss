@@ -2,15 +2,17 @@
 @import "@cdo/apps/componentLibrary/typography/typography.module";
 @import "@cdo/apps/componentLibrary/common/styles/mixins";
 
+$alert-span-vertical-top-spacing: 2px;
+
 .alert {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   border-radius: 0.25rem;
 
   .alertContentContainer {
     display: flex;
     flex: 1 0 0;
-    align-items: baseline;
+    align-items: center;
 
     i {
       text-align: center;
@@ -31,7 +33,7 @@
   background-color: $light_affirmative_100;
 
   .alertContentContainer i {
-    color: $light_primary_500;
+    color: $light_affirmative_500;
   }
 }
 
@@ -78,6 +80,7 @@
 
     span {
       @include body-one;
+      margin-top: $alert-span-vertical-top-spacing;
       margin-bottom: 0;
     }
   }
@@ -97,6 +100,7 @@
 
     span {
       @include body-two;
+      margin-top: $alert-span-vertical-top-spacing;
       margin-bottom: 0;
     }
   }
@@ -116,6 +120,7 @@
 
     span {
       @include body-three;
+      margin-top: $alert-span-vertical-top-spacing;
       margin-bottom: 0;
     }
   }
@@ -135,6 +140,7 @@
 
     span {
       @include body-four;
+      margin-top: $alert-span-vertical-top-spacing;
       margin-bottom: 0;
     }
   }
