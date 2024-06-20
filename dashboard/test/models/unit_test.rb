@@ -1678,18 +1678,6 @@ class UnitTest < ActiveSupport::TestCase
     assert_equal assessment_script_levels[0], script_level
   end
 
-  test "self.modern_elementary_courses_available?" do
-    course1_modern = create(:script, name: 'course1-modern', supported_locales: ["en-us", "it-it"])
-    course2_modern = create(:script, name: 'course2-modern', supported_locales: ["fr-fr", "en-us"])
-
-    Unit.stubs(:modern_elementary_courses).returns([course1_modern, course2_modern])
-
-    assert Unit.modern_elementary_courses_available?("en-us")
-    refute Unit.modern_elementary_courses_available?("ch-ch")
-    refute Unit.modern_elementary_courses_available?("it-it")
-    refute Unit.modern_elementary_courses_available?("fr-fr")
-  end
-
   test 'locale_english_name_map' do
     english_names = Unit.locale_english_name_map
     assert english_names.key?('en-US')
