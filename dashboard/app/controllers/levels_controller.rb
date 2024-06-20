@@ -505,7 +505,8 @@ class LevelsController < ApplicationController
     # Curriculum writers rarely need to edit STANDALONE_PROJECTS levels, and accidental edits to these levels
     # can be quite disruptive. As a workaround you can navigate directly to the edit url for these levels.
     if Rails.application.config.levelbuilder_mode && !is_standalone_project
-      if can? :edit, @level
+      can_edit_level = can? :edit, @level
+      if can_edit_level
         links[@level.name] << {text: '[E]dit', url: edit_level_path(@level), access_key: 'e'}
         if @level.is_a?(Javalab) || @level.is_a?(Pythonlab) || @level.is_a?(Weblab2)
           links[@level.name] << {text: "[s]tart", url: edit_blocks_level_path(@level, :start_sources), access_key: 's'}
@@ -523,7 +524,7 @@ class LevelsController < ApplicationController
         links["Template Level"] = [
           {text: project_template_level_name, url: level_path(project_template_level)}
         ]
-        if can? :edit, @level
+        if can_edit_level
           links["Template Level"] << {text: 'Edit', url: edit_level_path(project_template_level)}
         else
           links["Template Level"] << {text: '(Cannot edit)', url: ''}
