@@ -256,7 +256,7 @@ export enum ProjectManagerStorageType {
   REMOTE = 'REMOTE',
 }
 
-export interface ExtraLinksLevelbuilderData {
+export interface ExtraLinksLevelData {
   links: {[key: string]: {text: string; url: string; access_key?: string}[]};
   can_clone: boolean;
   can_delete: boolean;
@@ -267,7 +267,7 @@ export interface ExtraLinksLevelbuilderData {
   }[];
   is_standalone_project: boolean;
 }
-export interface ExtraLinksProjectValidatorData {
+export interface ExtraLinksProjectData {
   owner_info: {storage_id: number; name: string};
   project_info: {
     id: number;

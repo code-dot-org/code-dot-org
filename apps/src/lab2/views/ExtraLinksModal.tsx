@@ -4,18 +4,15 @@ import {Heading3, StrongText} from '@cdo/apps/componentLibrary/typography';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import Button from '@cdo/apps/templates/Button';
 import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
-import {
-  ExtraLinksLevelbuilderData,
-  ExtraLinksProjectValidatorData,
-} from '../types';
+import {ExtraLinksLevelData, ExtraLinksProjectData} from '../types';
 import moduleStyles from './extra-links.module.scss';
 
 // Extra Links modal. This is used to display helpful links for levelbuilders, and should
 // be extended to also include links for project validators as well. It replaces the haml
 // version of extra links, which doesn't work on lab2 after a level change.
 interface ExtraLinksModalProps {
-  levelbuilderLinkData: ExtraLinksLevelbuilderData;
-  projectValidatorLinkData: ExtraLinksProjectValidatorData | null;
+  levelbuilderLinkData: ExtraLinksLevelData;
+  projectValidatorLinkData: ExtraLinksProjectData | null;
   isOpen: boolean;
   closeModal: () => void;
   levelId: number;
@@ -218,7 +215,7 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
   };
 
   const renderProjectValidatorData = (
-    projectValidatorLinkData: ExtraLinksProjectValidatorData
+    projectValidatorLinkData: ExtraLinksProjectData
   ) => {
     const ownerInfo = projectValidatorLinkData.owner_info;
     const projectInfo = projectValidatorLinkData.project_info;

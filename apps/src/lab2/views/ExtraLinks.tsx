@@ -3,10 +3,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import Button from '@cdo/apps/templates/Button';
 import {useFetch} from '@cdo/apps/util/useFetch';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {
-  ExtraLinksLevelbuilderData,
-  ExtraLinksProjectValidatorData,
-} from '@cdo/apps/lab2/types';
+import {ExtraLinksLevelData, ExtraLinksProjectData} from '@cdo/apps/lab2/types';
 import moduleStyles from './extra-links.module.scss';
 import ExtraLinksModal from './ExtraLinksModal';
 import {PERMISSIONS} from '../constants';
@@ -27,9 +24,9 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
   const {loading, data} = useFetch('/api/v1/users/current/permissions');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [levelbuilderLinkData, setLevelbuilderLinkData] =
-    useState<ExtraLinksLevelbuilderData | null>(null);
+    useState<ExtraLinksLevelData | null>(null);
   const [projectValidatorLinkData, setProjectValidatorLinkData] =
-    useState<ExtraLinksProjectValidatorData | null>(null);
+    useState<ExtraLinksProjectData | null>(null);
   const permissionData = data
     ? (data as PermissionResponse)
     : {permissions: []};
@@ -46,7 +43,7 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
       permissionData.permissions.includes(PERMISSIONS.PROJECT_VALIDATOR)
     ) {
       try {
-        HttpClient.fetchJson<ExtraLinksLevelbuilderData>(
+        HttpClient.fetchJson<ExtraLinksLevelData>(
           `/levels/${levelId}/extra_links`
         ).then(response => {
           setLevelbuilderLinkData(response.value);
@@ -57,7 +54,7 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
     }
     if (permissionData.permissions.includes(PERMISSIONS.PROJECT_VALIDATOR)) {
       try {
-        HttpClient.fetchJson<ExtraLinksProjectValidatorData>(
+        HttpClient.fetchJson<ExtraLinksProjectData>(
           `/projects/${channelId}/extra_links`
         ).then(response => {
           setProjectValidatorLinkData(response.value);
