@@ -375,20 +375,6 @@ class Unit < ApplicationRecord
     end
   end
 
-  # @return [Array<Unit>] An array of modern elementary units.
-  def self.modern_elementary_courses
-    Unit::CATEGORIES[:csf].map {|name| Unit.get_from_cache(name)}
-  end
-
-  # @param locale [String] An "xx-YY" locale string.
-  # @return [Boolean] Whether all the modern elementary courses are available in the given locale.
-  def self.modern_elementary_courses_available?(locale)
-    @modern_elementary_courses_available = modern_elementary_courses.all? do |unit|
-      supported_languages = unit.supported_locales || []
-      supported_languages.any? {|s| locale.casecmp?(s)}
-    end
-  end
-
   def starting_level
     raise "Unit #{name} has no level to start at" if script_levels.empty?
     candidate_level = script_levels.first.or_next_progression_level
