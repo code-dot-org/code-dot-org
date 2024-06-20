@@ -508,9 +508,11 @@ ul {
   }
 }
 
-// Ordered lists
-// Step-by-step section
-ol.steps-list {
+// Step-by-step lists
+// These styles can be used with an ordered list as seen on code.org/professional-learning/middle-high
+// or an unordered list that uses icons as seen on code.org/curriculum/game-design.
+ol.steps-list,
+ul.steps-list {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -552,9 +554,14 @@ ol.steps-list {
     .btn {
       min-width: unset;
     }
+
+    &::before {
+      content: "";
+    }
   }
 
-  h3 {
+  h3,
+  .icon-wrapper {
     width: 100%;
 
     & > span {
@@ -581,10 +588,20 @@ ol.steps-list {
         border: 6px solid var(--brand_primary_light);
         border-radius: 100%;
       }
+
+      &:has(i) {
+        font-size: 1.75rem;
+        line-height: 2;
+      }
+    }
+
+    &:has(i) {
+      margin-bottom: 1rem;
     }
   }
 
-  h4 {
+  h4,
+  &:has(.icon-wrapper) h3 {
     @include heading-sm;
     width: 100%;
   }

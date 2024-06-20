@@ -17,3 +17,14 @@ theme: responsive_full_width
         =hoc_s("game_design_page.button.explore_curriculum")
     %figure
       %img{src: "/images/game-design/game-design-banner-graphic.png", alt: "", style: "width: 100%"}
+
+%section
+  .wrapper.centered
+    %h2=hoc_s("game_design_page.why.heading")
+    %p=hoc_s("game_design_page.why.desc")
+    = view :"game_design/why_list"
+    .button-wrapper.centered
+      %a.link-button{href: "#"}
+        =hoc_s("game_design_page.button.explore_curriculum")
+      %a.link-button.secondary{href: "#"}
+        =hoc_s("game_design_page.button.see_pl")
