@@ -25,8 +25,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     return connect_provider if should_connect_provider?
 
     user = find_user_by_credential
+    return link_accounts user if should_link_accounts?
     if user
-      return link_accounts user if should_link_accounts?
       sign_in_clever user
     else
       sign_up_clever
@@ -38,7 +38,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     user = find_user_by_credential
     user&.update_oauth_credential_tokens auth_hash
 
-    return link_accounts user if user && should_link_accounts?
+    return link_accounts user if should_link_accounts?
     return connect_provider if should_connect_provider?
     login
   end
@@ -48,7 +48,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     user = find_user_by_credential
     user&.update_oauth_credential_tokens auth_hash
 
-    return link_accounts user if user && should_link_accounts?
+    return link_accounts user if should_link_accounts?
 
     # Redirect to open roster dialog on home page if user just authorized access
     # to Google Classroom courses and rosters
