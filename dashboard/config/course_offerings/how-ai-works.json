@@ -1,7 +1,6 @@
 {
   "key": "how-ai-works",
   "display_name": "How AI Works",
-  "category": "aiml",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Standalone Unit",

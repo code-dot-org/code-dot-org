@@ -25,9 +25,13 @@
   color: $white;
 }
 
+.call-to-action-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .go-back-link {
   display: block;
-  margin-top: 60px;
 }
 
 .oauth-sign-in {
