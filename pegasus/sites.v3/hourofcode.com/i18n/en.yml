@@ -1581,6 +1581,7 @@
   csf_page_intro_list_02: "Equitable introductory CS courses"
   csf_page_intro_list_03: "Use the same course for all students in the same grade, regardless of their experience"
   csf_page_intro_list_04: "All courses make suitable entry points for students"
+  csf_page_intro_list_05: "Aligned to K-5 CSTA curriculum standards"
   csf_page_quote: "I've been teaching the course since the Monday after the workshop. The students and I LOVE it (and so do their classroom teachers!!!)"
   csf_page_curriculum_glance_topics: "Programming, Internet, Games and Animation, Art and Design, App Design"
   csf_page_curriculum_glance_devices: "Laptop, Chromebook, Tablet"
@@ -1613,6 +1614,22 @@
   csf_page_faq_answer_05: "Each CSF course includes 13-17 lessons designed for 45-minute periods. We recommend all students move from lesson to lesson at a pace set by the teacher. There are many teacher-led project levels designed to be experienced in unison while the skill-building lessons can be completed by students at their own pace."
   csf_page_faq_question_06: "What materials do I need for CS Fundamentals?"
   csf_page_faq_answer_06: "Many lessons have handouts that guide students through activities. These resources can be printed or assigned digitally. Some lessons call for typical classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url})."
+  csf_page:
+    additional_resources:
+      heading: "Additional resources"
+      desc: "Beyond curriculum and professional learning, we have many materials to support your classroom."
+      catalog:
+        title: "Curriculum Catalog"
+        desc: "Comprehensive curriculum offerings for every grade and experience level featuring robust structured and self-paced learning options."
+        button: "Explore the catalog"
+      videos:
+        title: "Explore Videos"
+        desc: "We offer a growing library of educational videos for use by educators worldwide, online or in classrooms."
+        button: "View video library"
+      support:
+        title: "Get Support"
+        desc: "Our customer support team is ready to answer your questions. Email us at [support@code.org](%{email_url}) or check out our support center, which offers useful guides and answers!"
+        button: "Visit our support center"
 
   csa_page_top_desc: "Introduce students to software engineering and object-oriented design while they learn the Java programming language in this free curriculum for [AP® Computer Science A (AP® CSA)](%{csa_url})."
   csa_page_intro_heading: "A new approach to AP® CSA"
