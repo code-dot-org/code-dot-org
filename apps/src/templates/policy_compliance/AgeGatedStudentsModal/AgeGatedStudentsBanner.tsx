@@ -33,13 +33,6 @@ export const AgeGatedStudentsBanner: React.FC<Props> = ({
     });
   }, [currentUser.userId, ageGatedStudentsCount]);
 
-  const bannerLearnMoreClicked = () => {
-    reportEvent(EVENTS.CAP_AGE_GATED_BANNER_CLICKED, {
-      user_id: currentUser.userId,
-      number_of_gateable_students: ageGatedStudentsCount,
-    });
-    toggleModal();
-  };
   return (
     <div id="uitest-age-gated-banner">
       <Notification
@@ -48,7 +41,7 @@ export const AgeGatedStudentsBanner: React.FC<Props> = ({
         details={i18n.childAccountPolicy_ageGatedStudentsWarning()}
         buttonText={i18n.learnMore()}
         buttonLink={'#'}
-        onButtonClick={bannerLearnMoreClicked}
+        onButtonClick={toggleModal}
         dismissible={false}
       />
       {modalOpen && (

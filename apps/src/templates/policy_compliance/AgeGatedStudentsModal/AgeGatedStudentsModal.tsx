@@ -48,6 +48,14 @@ const AgeGatedStudentsModal: React.FC<Props> = ({
     });
   };
 
+  const modalClosed = () => {
+    reportEvent(EVENTS.CAP_AGE_GATED_MODAL_CLOSED, {
+      user_id: currentUser.userId,
+      number_of_gateable_students: ageGatedStudentsCount,
+    });
+    onClose();
+  };
+
   useEffect(() => {
     reportEvent(EVENTS.CAP_AGE_GATED_MODAL_SHOWN, {
       user_id: currentUser.userId,
@@ -57,7 +65,7 @@ const AgeGatedStudentsModal: React.FC<Props> = ({
   return (
     <BaseDialog
       isOpen={isOpen}
-      handleClose={onClose}
+      handleClose={modalClosed}
       useUpdatedStyles={true}
       fixedWidth={800}
     >
@@ -91,7 +99,7 @@ const AgeGatedStudentsModal: React.FC<Props> = ({
           {!isLoadingStudents && <AgeGatedStudentsTable />}
           <hr />
           <div className={styles.modalButton}>
-            <button type="button" onClick={onClose}>
+            <button type="button" onClick={modalClosed}>
               {i18n.closeDialog()}
             </button>
           </div>
