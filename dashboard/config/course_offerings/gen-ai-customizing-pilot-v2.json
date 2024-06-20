@@ -1,7 +1,6 @@
 {
   "key": "gen-ai-customizing-pilot-v2",
   "display_name": "[Create and Learn] Customizing Language Models",
-  "category": "aiml",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Standalone Unit",
