@@ -10,10 +10,7 @@ import {
 import {registerReducers} from '@cdo/apps/redux';
 import {RootState} from '@cdo/apps/types/redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {
-  AiInteractionStatus as Status,
-  AichatErrorType,
-} from '@cdo/generated-scripts/sharedConstants';
+import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
@@ -27,8 +24,8 @@ import {saveTypeToAnalyticsEvent} from '../constants';
 import {postAichatCompletionMessage} from '../aichatCompletionApi';
 import {
   AiCustomizations,
-  AichatInteractionStatusValue,
   ChatCompletionMessage,
+  AichatCompletionMessage,
   AichatContext,
   FieldVisibilities,
   LevelAichatSettings,
@@ -40,6 +37,7 @@ import {
 } from '../types';
 import {
   allFieldsHidden,
+  decorateMessageFromModelResponse,
   findChangedProperties,
   getNewMessageId,
   getCurrentTime,
@@ -48,10 +46,20 @@ import {
 } from './utils';
 import {validateModelId} from '../views/modelCustomization/utils';
 
+type MessageListKey = 'chatMessagesCurrent' | 'chatMessagesPast';
+type MessageLocation = {
+  index: number;
+  messageListKey: MessageListKey;
+};
+
 export interface AichatState {
-  // All user and assistant chat messages - includes too personal and inappropriate user messages.
-  // Messages will be logged and stored.
-  chatMessages: ChatCompletionMessage[];
+  // Messages from previous chat sessions that we track purely for visibility to the user
+  // and do not send to the model as history.
+  chatMessagesPast: ChatCompletionMessage[];
+  // Messages in the current chat session that we want to provide as history to the model.
+  chatMessagesCurrent: ChatCompletionMessage[];
+  // The user message currently awaiting response from the model (if any).
+  chatMessagePending?: ChatCompletionMessage;
   // Denotes whether we are waiting for a chat completion response from the backend
   isWaitingForChatResponse: boolean;
   // Denotes whether we should show the warning modal
@@ -70,7 +78,9 @@ export interface AichatState {
 }
 
 const initialState: AichatState = {
-  chatMessages: [],
+  chatMessagesPast: [],
+  chatMessagesCurrent: [],
+  chatMessagePending: undefined,
   isWaitingForChatResponse: false,
   showWarningModal: true,
   chatMessageError: false,
@@ -261,7 +271,7 @@ export const submitChatContents = createAsyncThunk(
     const state = thunkAPI.getState() as RootState;
     const {
       savedAiCustomizations: aiCustomizations,
-      chatMessages: storedMessages,
+      chatMessagesCurrent,
       currentSessionId,
     } = state.aichat;
 
@@ -277,22 +287,20 @@ export const submitChatContents = createAsyncThunk(
       status: Status.UNKNOWN,
       chatMessageText: newUserMessageText,
       timestamp: getCurrentTimestamp(),
-      sessionId: currentSessionId,
     };
-    thunkAPI.dispatch(addChatMessage(newMessage));
+    thunkAPI.dispatch(setChatMessagePending(newMessage));
 
     // Post user content and messages to backend and retrieve assistant response.
     const startTime = Date.now();
 
     let chatApiResponse;
     try {
+      const conversationMessages = chatMessagesCurrent.filter(
+        message => message.role === Role.USER || message.role === Role.ASSISTANT
+      );
       chatApiResponse = await postAichatCompletionMessage(
-        newUserMessageText,
-        currentSessionId
-          ? storedMessages.filter(
-              message => message.sessionId === currentSessionId
-            )
-          : [],
+        newMessage,
+        conversationMessages,
         aiCustomizations,
         aichatContext,
         currentSessionId
@@ -302,7 +310,17 @@ export const submitChatContents = createAsyncThunk(
         .getMetricsReporter()
         .logError('Error in aichat completion request', error as Error);
 
-      updateMessagesOnError(newMessage, thunkAPI.dispatch);
+      thunkAPI.dispatch(clearChatMessagePending());
+      thunkAPI.dispatch(addChatMessage({...newMessage, status: Status.ERROR}));
+
+      const assistantChatMessage: ChatCompletionMessage = {
+        id: getNewMessageId(),
+        role: Role.ASSISTANT,
+        status: Status.ERROR,
+        chatMessageText: 'error',
+        timestamp: getCurrentTimestamp(),
+      };
+      thunkAPI.dispatch(addChatMessage(assistantChatMessage));
 
       return;
     }
@@ -316,114 +334,59 @@ export const submitChatContents = createAsyncThunk(
         },
       ]);
 
-    // Regardless of response type,
-    // assign last user message to session.
     if (chatApiResponse.session_id) {
       thunkAPI.dispatch(setChatSessionId(chatApiResponse.session_id));
-      thunkAPI.dispatch(
-        updateChatMessageSession({
-          id: newMessage.id,
-          sessionId: chatApiResponse.session_id,
-        })
+    }
+
+    if (chatApiResponse?.flagged_content) {
+      console.log(
+        `Content flagged by profanity filter: ${chatApiResponse?.flagged_content}`
       );
     }
 
-    // success state: received response from model ("assistant")
-    if (chatApiResponse?.role === Role.ASSISTANT) {
-      const assistantChatMessage: ChatCompletionMessage = {
-        id: getNewMessageId(),
-        role: Role.ASSISTANT,
-        status: Status.OK,
-        chatMessageText: chatApiResponse.content,
-        timestamp: getCurrentTimestamp(),
-        sessionId: chatApiResponse.session_id,
-      };
-      thunkAPI.dispatch(addChatMessage(assistantChatMessage));
-
+    thunkAPI.dispatch(clearChatMessagePending());
+    chatApiResponse?.messages.forEach((message: AichatCompletionMessage) =>
       thunkAPI.dispatch(
-        updateUserChatMessageStatus({
-          id: newMessage.id,
-          status: Status.OK,
-        })
-      );
-
-      // error state #1: model generated profanity
-    } else if (chatApiResponse?.status === AichatErrorType.PROFANITY_MODEL) {
-      updateMessagesOnError(newMessage, thunkAPI.dispatch);
-
-      // error state #2: user message contained profanity
-    } else if (chatApiResponse?.status === AichatErrorType.PROFANITY_USER) {
-      // Logging to allow visibility into flagged content.
-      console.log(chatApiResponse);
-
-      thunkAPI.dispatch(
-        updateUserChatMessageStatus({
-          id: newMessage.id,
-          status: Status.PROFANITY_VIOLATION,
-        })
-      );
-    }
+        addChatMessage(decorateMessageFromModelResponse(message))
+      )
+    );
   }
 );
-
-// Helper that is used when we receive an error response
-// (or a handled "error" state, like the model producing profanity).
-const updateMessagesOnError = (
-  newMessage: ChatCompletionMessage,
-  dispatch: ThunkDispatch<unknown, unknown, AnyAction>
-) => {
-  const assistantChatMessage: ChatCompletionMessage = {
-    id: getNewMessageId(),
-    role: Role.ASSISTANT,
-    status: Status.ERROR,
-    chatMessageText: 'There was an error getting a response. Please try again.',
-    timestamp: getCurrentTimestamp(),
-  };
-  dispatch(addChatMessage(assistantChatMessage));
-
-  dispatch(
-    updateUserChatMessageStatus({
-      id: newMessage.id,
-      status: Status.ERROR,
-    })
-  );
-};
 
 const aichatSlice = createSlice({
   name: 'aichat',
   initialState,
   reducers: {
     addChatMessage: (state, action: PayloadAction<ChatCompletionMessage>) => {
-      state.chatMessages.push(action.payload);
+      state.chatMessagesCurrent.push(action.payload);
     },
     removeUpdateMessage: (state, action: PayloadAction<number>) => {
-      const updatedMessages = [...state.chatMessages];
-      const messageToRemovePosition = updatedMessages.findIndex(
-        message => message.id === action.payload
+      const modelUpdateMessageInfo = getUpdateMessageLocation(
+        action.payload,
+        state
       );
-
-      // Only allow removing individual messages that are model updates and error notifications,
-      // as we want to retain user and bot message history
-      // when requesting model responses within a chat session.
-      // If we want to clear all history
-      // and start a new session, see clearChatMessages.
-      if (
-        messageToRemovePosition < 0 ||
-        (updatedMessages[messageToRemovePosition].role !== Role.MODEL_UPDATE &&
-          updatedMessages[messageToRemovePosition].role !==
-            Role.ERROR_NOTIFICATION)
-      ) {
+      if (!modelUpdateMessageInfo) {
         return;
       }
-      updatedMessages.splice(messageToRemovePosition, 1);
 
-      state.chatMessages = updatedMessages;
+      const {index, messageListKey} = modelUpdateMessageInfo;
+      state[messageListKey].splice(index, 1);
     },
     clearChatMessages: state => {
-      state.chatMessages = [];
+      state.chatMessagesPast = [];
+      state.chatMessagesCurrent = [];
       state.currentSessionId = undefined;
     },
+    setChatMessagePending: (
+      state,
+      action: PayloadAction<ChatCompletionMessage>
+    ) => {
+      state.chatMessagePending = action.payload;
+    },
+    clearChatMessagePending: state => (state.chatMessagePending = undefined),
     setNewChatSession: state => {
+      state.chatMessagesPast.push(...state.chatMessagesCurrent);
+      state.chatMessagesCurrent = [];
       state.currentSessionId = undefined;
     },
     setChatSessionId: (state, action: PayloadAction<number>) => {
@@ -431,26 +394,6 @@ const aichatSlice = createSlice({
     },
     setShowWarningModal: (state, action: PayloadAction<boolean>) => {
       state.showWarningModal = action.payload;
-    },
-    updateUserChatMessageStatus: (
-      state,
-      action: PayloadAction<{id: number; status: AichatInteractionStatusValue}>
-    ) => {
-      const {id, status} = action.payload;
-      const chatMessage = state.chatMessages.find(msg => msg.id === id);
-      if (chatMessage && chatMessage.role === Role.USER) {
-        chatMessage.status = status;
-      }
-    },
-    updateChatMessageSession: (
-      state,
-      action: PayloadAction<{id: number; sessionId: number}>
-    ) => {
-      const {id, sessionId} = action.payload;
-      const chatMessage = state.chatMessages.find(msg => msg.id === id);
-      if (chatMessage) {
-        chatMessage.sessionId = sessionId;
-      }
     },
     setViewMode: (state, action: PayloadAction<ViewMode>) => {
       state.viewMode = action.payload;
@@ -573,6 +516,32 @@ const aichatSlice = createSlice({
   },
 });
 
+const getUpdateMessageLocation = (
+  id: number,
+  state: AichatState
+): MessageLocation | undefined => {
+  for (const messageListKey of ['chatMessagesCurrent', 'chatMessagesPast']) {
+    const typedKey = messageListKey as MessageListKey;
+    const messageList = state[typedKey] as ChatCompletionMessage[];
+
+    // Only allow removing individual messages that are model updates and error notifications,
+    // as we want to retain user and bot message history
+    // when requesting model responses within a chat session.
+    // If we want to clear all history
+    // and start a new session, see clearChatMessages.
+    const messageToRemovePosition = messageList.findIndex(
+      message =>
+        message.id === id &&
+        (message.role === Role.MODEL_UPDATE ||
+          message.role === Role.ERROR_NOTIFICATION)
+    );
+
+    if (messageToRemovePosition >= 0) {
+      return {index: messageToRemovePosition, messageListKey: typedKey};
+    }
+  }
+};
+
 // Selectors
 export const selectHasFilledOutModelCard = createSelector(
   (state: RootState) => state.aichat.currentAiCustomizations.modelCardInfo,
@@ -584,6 +553,16 @@ export const selectAllFieldsHidden = createSelector(
   allFieldsHidden
 );
 
+export const selectAllMessages = (state: {aichat: AichatState}) => {
+  const {chatMessagesPast, chatMessagesCurrent, chatMessagePending} =
+    state.aichat;
+  const messages = [...chatMessagesPast, ...chatMessagesCurrent];
+  if (chatMessagePending) {
+    messages.push(chatMessagePending);
+  }
+  return messages;
+};
+
 // Actions not to be used outside of this file
 const {startSave} = aichatSlice.actions;
 
@@ -593,10 +572,10 @@ export const {
   removeUpdateMessage,
   setNewChatSession,
   setChatSessionId,
+  setChatMessagePending,
   clearChatMessages,
+  clearChatMessagePending,
   setShowWarningModal,
-  updateUserChatMessageStatus,
-  updateChatMessageSession,
   resetToDefaultAiCustomizations,
   setViewMode,
   setStartingAiCustomizations,
