@@ -2193,7 +2193,7 @@
         desc: "Help develop problem-solving and computational thinking skills through the engaging process of game design, empowering students in the digital age."
     resources:
       heading: "Resources to support you every step of the way"
-      desc: "Get access to materials that will help you teach computer science with confidence—even without prior CS teaching experience — when you create a **free** Code.org account."
+      desc: "Get access to materials that will help you teach computer science with confidence — even without prior CS teaching experience — when you create a **free** Code.org account."
       button: "Create a free account"
     elementary_curricula:
       heading: "Elementary game design curricula"
@@ -2207,19 +2207,19 @@
         overline: "Grades 2-12"
         title: "Code Your Own Sports Game"
         desc: "Score big with a sports game coded by you! Learn all about events in programming, work through puzzles, and customize the fun. Let's play and code like champs!"
-        duration: "1 hours"
+        duration: "1 hour"
         button: "Try activity"
       flappy:
         overline: "Grades 2-12"
         title: "Flappy Code"
         desc: "Create a game using basic block code in this introductory computer science activity."
-        duration: "1 hours"
+        duration: "1 hour"
         button: "Try activity"
       basketball:
         overline: "Grades 2-12"
         title: "Choose Your Team and Make a Basketball Game"
-        desc: "Learn what "events" are and how computers use them in programs like video games! Students work through puzzles and customize their games with speed and sound."
-        duration: "1 hours"
+        desc: "Learn what \"events\" are and how computers use them in programs like video games! Students work through puzzles and customize their games with speed and sound."
+        duration: "1 hour"
         button: "Try activity"
     mid_high_curricula:
       heading: "Middle and high school game design curricula"
