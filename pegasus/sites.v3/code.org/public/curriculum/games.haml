@@ -1,0 +1,19 @@
+---
+title: Game Design
+theme: responsive_full_width
+---
+
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
+%link{href: "/css/generated/page/games-styles.css", rel: "stylesheet"}
+
+%section.hero-banner-basic.overlay
+  .wrapper.grid-container.justify-space-between.align-items-center.gap-4
+    .text-wrapper
+      %h1.white
+        =hoc_s("music_lab.banner.heading")
+      %p.body-one.white
+        =hoc_s("music_lab.banner.desc")
+      %a.link-button.white{href: "#"}
+        Button
+    %figure
+      %img{src: "/images/music-lab/music-lab-banner-graphic.png", alt: "", style: "width: 100%"}
