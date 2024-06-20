@@ -212,6 +212,14 @@
   curricula_desc_middle: "Browse the engaging offerings that enable you and your middle school students to explore computer science together."
   curricula_title_high: "High School Curricula"
   curricula_desc_high: "Browse the compelling courses and activities that invite you and your high school students to dig deeper into computer science."
+  curricula_additional_resources_desc: "Beyond curriculum and professional learning, we have helpful materials to support your classroom."
+  curricula_additional_resources_self_paced_title: "Self-Paced Learning"
+  curricula_additional_resources_self_paced_desc: "These modules allow you to engage at your own pace and on your own time while focusing on areas most important to your needs and teaching context."
+  curricula_additional_resources_self_paced_button: "Discover the district program"
+  curricula_additional_resources_k_5_title: "K-5 Workshops"
+  curricula_additional_resources_6_12_title: "6-12 Workshops"
+  curricula_additional_resources_workshop_desc: "With our Regional Partners as hosts and our Code.org facilitators as guides, our workshops around the country focus on reflection, discussion, and growth-oriented learning."
+  curricula_additional_resources_workshop_button: "Explore professional learning"
 
   facilitator_led_pl_heading: "Facilitator-Led Professional Learning Workshops"
   facilitator_led_pl_desc: "Learn about our professional learning workshops for elementary, middle, and high school teachers."
@@ -421,6 +429,7 @@
   call_to_action_learn_about_pl: "Learn about Professional Learning"
   call_to_action_pilot_web_dev_unit: "Pilot our newly updated Web Development unit!"
   call_to_action_hide_banner: "Hide banner"
+  call_to_action_explore_game_design: "Explore Game Design curricula"
 
   aria_label_call_to_action_hoc_how_to_educators: "View how-to guide for Educators"
   aria_label_call_to_action_hoc_how_to_companies: "View how-to guide for Companies"
@@ -576,6 +585,7 @@
   curriculum_name_design_process: "The Design Process"
   curriculum_name_data_society: "Data & Society"
   curriculum_name_data_and_society: "Data and Society"
+  curriculum_name_game_design: "Game Design"
   curriculum_desc_dance_party_01: "In this introductory activity, use code to make a variety of colorful characters bust a move to animated backgrounds and upbeat music."
   curriculum_desc_dance_party_02: "Go beyond the introductory tutorial with extended project ideas. Browse a library of examples of more complex dance parties."
   curriculum_desc_dance_party_unplugged: "Get your groove on—no computer needed! Learn how coding concepts, like events, can be used to synchronize dancer choreography."
@@ -603,6 +613,7 @@
   curriculum_desc_csa_ai_long: "This two-chapter post-AP® CSA module offers high school students hands-on experience with professional software development tools, including GitHub and GitHub Copilot, and imparts them with the real-world skills to develop a computer vision program."
   curriculum_desc_csa_ai_short: "This post-AP® CSA module offers high school students hands-on experience with professional software development tools."
   curriculum_desc_catalog: "Explore our robust catalog of curriculum offerings for all ages and levels — completely free."
+  curriculum_desc_game_design: "Discover the exciting world of game design with Code.org's curriculum. Our game design units foster creativity, problem-solving, and critical thinking skills, empowering students to bring their own interactive experiences to life."
 
   collection_hardware: "Focus on Hardware"
   collection_hardware_desc: "Empowers students to use data and physical devices to solve problems."
