@@ -168,15 +168,17 @@ class LtiV1Controller < ApplicationController
       }
 
       destination_url = "#{target_link_uri}?#{redirect_params.to_query}"
+      session[:user_return_to] = destination_url
 
       if user
-        # If this is the user's first login, send them into the account linking flow
-        if user.sign_in_count < 1 && DCDO.get('lti_account_linking_enabled', false)
-          PartialRegistration.persist_attributes(session, user)
-          render 'lti/v1/account_linking/landing', locals: {lti_provider: integration[:platform_name], email: Services::Lti.get_claim(decoded_jwt, :email)} and return
-        end
-
+        original_sign_in_count = user.sign_in_count
         sign_in user
+
+        # If this is the user's first login, send them into the account linking flow
+        if original_sign_in_count < 1 && DCDO.get('lti_account_linking_enabled', false)
+          PartialRegistration.persist_attributes(session, user)
+          render 'lti/v1/account_linking/landing', locals: {lti_provider: integration[:platform_name], email: Services::Lti.get_claim(decoded_jwt, :email), new_cta_type: 'continue'} and return
+        end
 
         metadata = {
           'user_type' => user.user_type,
@@ -204,7 +206,6 @@ class LtiV1Controller < ApplicationController
         # PartialRegistration removes the email address, so store it in a local variable first
         email_address = Services::Lti.get_claim(decoded_jwt, :email)
         PartialRegistration.persist_attributes(session, user)
-        session[:user_return_to] = destination_url
         if DCDO.get('lti_account_linking_enabled', false)
           metadata = {
             'lms_name' => integration[:platform_name],
@@ -214,7 +215,7 @@ class LtiV1Controller < ApplicationController
             event_name: 'lti_account_linking_page_visit',
             metadata: metadata,
           )
-          render 'lti/v1/account_linking/landing', locals: {lti_provider: integration[:platform_name], email: email_address} and return
+          render 'lti/v1/account_linking/landing', locals: {lti_provider: integration[:platform_name], email: email_address, new_cta_type: 'new'} and return
         end
 
         if DCDO.get('student-email-post-enabled', false)

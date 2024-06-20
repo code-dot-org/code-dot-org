@@ -12,6 +12,20 @@ module Lti
         @user = User.new_with_session(ActionController::Parameters.new, session)
       end
 
+      # GET /lti/v1/account_linking/finish_link
+      def finish_link
+        # If the user is logged in, we need to log them out. Signing them out will
+        # clear the session, so we need to store cache key first, sign them out,
+        # then set it again in their now empty session.
+        if current_user
+          partial_registration_cache_key = PartialRegistration.cache_key(current_user)
+          sign_out
+          session[PartialRegistration::SESSION_KEY] = partial_registration_cache_key
+        end
+
+        redirect_to user_session_path
+      end
+
       # POST /lti/v1/account_linking/link_email
       def link_email
         head :bad_request unless PartialRegistration.in_progress?(session)

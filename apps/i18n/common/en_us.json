@@ -1653,6 +1653,7 @@
   "ltiLinkAccountNewAccountCardHeaderLabel": "I am new to Code.org",
   "ltiLinkAccountNewAccountCardContent": "You'll need to finish creating an account on Code.org to connect with {providerName}",
   "ltiLinkAccountNewAccountCardActionLabel": "Finish creating my account",
+  "ltiLinkAccountContinueAccountCardContent": "Continue to Code.org without linking to another existing Code.org account.",
   "ltiLinkAccountWelcomeBannerHeaderLabel": "Welcome to Code.org!",
   "ltiLinkAccountWelcomeBannerContent": "Looks like this is your first time logging in from {providerName}, select one of the options below to continue.",
   "ltiSectionSyncButtonDisabledAltText": "Roster sync is disabled. To re-enable, go to your account settings.",
