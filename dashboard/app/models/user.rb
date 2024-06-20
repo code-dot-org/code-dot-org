@@ -304,10 +304,6 @@ class User < ApplicationRecord
 
   validate :validate_us_state, if: :should_validate_us_state?
 
-  before_create unless: -> {Policies::ChildAccount.compliant?(self)} do
-    Services::ChildAccount.lock_out(self)
-  end
-
   before_validation on: [:create, :update], if: -> {gender_teacher_input.present? && will_save_change_to_attribute?('properties')} do
     self.gender = Policies::Gender.normalize gender_teacher_input
   end
@@ -816,6 +812,8 @@ class User < ApplicationRecord
   def email_and_hashed_email_must_be_unique
     # skip the db lookup if we are already invalid
     return if errors.present?
+    # allow duplicate accounts to be created for LMS users that are unlinked
+    return if authentication_options.length == 1 && authentication_options.first&.lti?
 
     if ((email.present? && (other_user = User.find_by_email_or_hashed_email(email))) ||
         (hashed_email.present? && (other_user = User.find_by_hashed_email(hashed_email)))) &&

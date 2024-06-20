@@ -59,7 +59,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-05-15T19:51:26.049+00:00\",\"changed\":[\"cloned from \\\"sorting_items_prediction_2\\\"\"],\"cloned_from\":\"sorting_items_prediction_2\"},{\"changed_at\":\"2024-05-15 19:51:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 19:51:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 19:53:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 22:20:33 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 22:22:04 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 22:36:17 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 17:04:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 17:07:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"callout_json\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 17:09:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 17:13:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"callout_json\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 22:16:07 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 22:18:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 22:20:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 23:07:31 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 23:12:04 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 23:19:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-17 17:39:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-29 22:39:12 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-29 22:40:01 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-29 22:40:50 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-15T19:51:26.049+00:00\",\"changed\":[\"cloned from \\\"sorting_items_prediction_2\\\"\"],\"cloned_from\":\"sorting_items_prediction_2\"},{\"changed_at\":\"2024-05-15 19:51:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 19:51:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 19:53:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 22:20:33 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 22:22:04 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 22:36:17 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 17:04:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 17:07:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"callout_json\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 17:09:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 17:13:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"callout_json\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 22:16:07 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 22:18:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 22:20:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 23:07:31 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 23:12:04 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 23:19:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-17 17:39:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-29 22:39:12 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-29 22:40:01 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-29 22:40:50 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-06-17 15:56:26 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-06-17 15:57:19 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-06-17 15:58:09 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -1058,6 +1058,11 @@
                   <field name="NUM">2</field>
                 </block>
               </value>
+              <next>
+                <block type="gamelab_playSound">
+                  <field name="SOUND">sound://category_bell/vibrant_game_bell_ding.mp3</field>
+                </block>
+              </next>
             </block>
           </next>
         </block>
@@ -1090,38 +1095,11 @@
                   <field name="NUM">2</field>
                 </block>
               </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_checkTouching" x="448" y="1788">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"square_white"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"card_white_2"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSayTime">
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"emoji_19"</field>
+              <next>
+                <block type="gamelab_playSound">
+                  <field name="SOUND">sound://category_bell/vibrant_game_bell_ding.mp3</field>
                 </block>
-              </value>
-              <value name="TEXT1">
-                <block type="text">
-                  <field name="TEXT">Try again!</field>
-                </block>
-              </value>
-              <value name="NUM">
-                <block type="math_number">
-                  <field name="NUM">2</field>
-                </block>
-              </value>
+              </next>
             </block>
           </next>
         </block>
@@ -1154,10 +1132,52 @@
                   <field name="NUM">2</field>
                 </block>
               </value>
+              <next>
+                <block type="gamelab_playSound">
+                  <field name="SOUND">sound://category_bell/vibrant_game_bell_ding.mp3</field>
+                </block>
+              </next>
             </block>
           </next>
         </block>
-        <block type="gamelab_checkTouching" x="1396" y="1775">
+        <block type="gamelab_checkTouching" x="439" y="1841">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"square_white"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"card_white_2"</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_spriteSayTime">
+              <value name="SPRITE">
+                <block type="gamelab_allSpritesWithAnimation">
+                  <field name="ANIMATION">"emoji_19"</field>
+                </block>
+              </value>
+              <value name="TEXT1">
+                <block type="text">
+                  <field name="TEXT">Try again!</field>
+                </block>
+              </value>
+              <value name="NUM">
+                <block type="math_number">
+                  <field name="NUM">2</field>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_playSound">
+                  <field name="SOUND">sound://category_retro/retro_game_ui_select_12.mp3</field>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_checkTouching" x="1394" y="1811">
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation">
@@ -1186,38 +1206,11 @@
                   <field name="NUM">2</field>
                 </block>
               </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_checkTouching" x="446" y="1957">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"square_white"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"card_white_3"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSayTime">
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"emoji_19"</field>
+              <next>
+                <block type="gamelab_playSound">
+                  <field name="SOUND">sound://category_bell/vibrant_game_bell_ding.mp3</field>
                 </block>
-              </value>
-              <value name="TEXT1">
-                <block type="text">
-                  <field name="TEXT">Try again!</field>
-                </block>
-              </value>
-              <value name="NUM">
-                <block type="math_number">
-                  <field name="NUM">2</field>
-                </block>
-              </value>
+              </next>
             </block>
           </next>
         </block>
@@ -1250,10 +1243,52 @@
                   <field name="NUM">2</field>
                 </block>
               </value>
+              <next>
+                <block type="gamelab_playSound">
+                  <field name="SOUND">sound://category_bell/vibrant_game_bell_ding.mp3</field>
+                </block>
+              </next>
             </block>
           </next>
         </block>
-        <block type="gamelab_checkTouching" x="1389" y="1932">
+        <block type="gamelab_checkTouching" x="446" y="2021">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"square_white"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"card_white_3"</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_spriteSayTime">
+              <value name="SPRITE">
+                <block type="gamelab_allSpritesWithAnimation">
+                  <field name="ANIMATION">"emoji_19"</field>
+                </block>
+              </value>
+              <value name="TEXT1">
+                <block type="text">
+                  <field name="TEXT">Try again!</field>
+                </block>
+              </value>
+              <value name="NUM">
+                <block type="math_number">
+                  <field name="NUM">2</field>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_playSound">
+                  <field name="SOUND">sound://category_retro/retro_game_ui_select_12.mp3</field>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_checkTouching" x="1387" y="1997">
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation">
@@ -1282,10 +1317,21 @@
                   <field name="NUM">2</field>
                 </block>
               </value>
+              <next>
+                <block type="gamelab_playSound">
+                  <field name="SOUND">sound://category_retro/retro_game_ui_select_12.mp3</field>
+                </block>
+              </next>
             </block>
           </next>
         </block>
-        <block type="gamelab_checkTouching" x="1387" y="2085">
+        <block type="gamelab_spriteClicked" x="40" y="2266">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE">
+            <block type="gamelab_getAllSprites"/>
+          </value>
+        </block>
+        <block type="gamelab_checkTouching" x="1388" y="2196">
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation">
@@ -1314,48 +1360,15 @@
                   <field name="NUM">2</field>
                 </block>
               </value>
+              <next>
+                <block type="gamelab_playSound">
+                  <field name="SOUND">sound://category_retro/retro_game_ui_select_12.mp3</field>
+                </block>
+              </next>
             </block>
           </next>
         </block>
-        <block type="gamelab_spriteClicked" x="40" y="2266">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE">
-            <block type="gamelab_getAllSprites"/>
-          </value>
-        </block>
-        <block type="gamelab_checkTouching" x="1412" y="2273">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"square_yellow"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"card_white"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSayTime">
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"emoji_19"</field>
-                </block>
-              </value>
-              <value name="TEXT1">
-                <block type="text">
-                  <field name="TEXT">Try again!</field>
-                </block>
-              </value>
-              <value name="NUM">
-                <block type="math_number">
-                  <field name="NUM">2</field>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_checkTouching" x="900" y="2424">
+        <block type="gamelab_checkTouching" x="895" y="2364">
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation">
@@ -1384,10 +1397,15 @@
                   <field name="NUM">2</field>
                 </block>
               </value>
+              <next>
+                <block type="gamelab_playSound">
+                  <field name="SOUND">sound://category_retro/retro_game_ui_select_12.mp3</field>
+                </block>
+              </next>
             </block>
           </next>
         </block>
-        <block type="gamelab_checkTouching" x="1412" y="2446">
+        <block type="gamelab_checkTouching" x="1402" y="2386">
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation">
@@ -1396,7 +1414,7 @@
           </value>
           <value name="SPRITE2">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"card_white_2"</field>
+              <field name="ANIMATION">"card_white"</field>
             </block>
           </value>
           <next>
@@ -1416,10 +1434,15 @@
                   <field name="NUM">2</field>
                 </block>
               </value>
+              <next>
+                <block type="gamelab_playSound">
+                  <field name="SOUND">sound://category_retro/retro_game_ui_select_12.mp3</field>
+                </block>
+              </next>
             </block>
           </next>
         </block>
-        <block type="gamelab_checkTouching" x="904" y="2586">
+        <block type="gamelab_checkTouching" x="897" y="2557">
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation">
@@ -1448,10 +1471,52 @@
                   <field name="NUM">2</field>
                 </block>
               </value>
+              <next>
+                <block type="gamelab_playSound">
+                  <field name="SOUND">sound://category_retro/retro_game_ui_select_12.mp3</field>
+                </block>
+              </next>
             </block>
           </next>
         </block>
-        <block type="gamelab_checkTouching" x="912" y="2756">
+        <block type="gamelab_checkTouching" x="1412" y="2583">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"square_yellow"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"card_white_2"</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_spriteSayTime">
+              <value name="SPRITE">
+                <block type="gamelab_allSpritesWithAnimation">
+                  <field name="ANIMATION">"emoji_19"</field>
+                </block>
+              </value>
+              <value name="TEXT1">
+                <block type="text">
+                  <field name="TEXT">Try again!</field>
+                </block>
+              </value>
+              <value name="NUM">
+                <block type="math_number">
+                  <field name="NUM">2</field>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_playSound">
+                  <field name="SOUND">sound://category_retro/retro_game_ui_select_12.mp3</field>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_checkTouching" x="897" y="2731">
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation">
@@ -1480,6 +1545,11 @@
                   <field name="NUM">2</field>
                 </block>
               </value>
+              <next>
+                <block type="gamelab_playSound">
+                  <field name="SOUND">sound://category_retro/retro_game_ui_select_12.mp3</field>
+                </block>
+              </next>
             </block>
           </next>
         </block>
@@ -1512,6 +1582,11 @@
                   <field name="NUM">2</field>
                 </block>
               </value>
+              <next>
+                <block type="gamelab_playSound">
+                  <field name="SOUND">sound://category_retro/retro_game_ui_select_12.mp3</field>
+                </block>
+              </next>
             </block>
           </next>
         </block>

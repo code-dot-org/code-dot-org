@@ -17,12 +17,14 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
       credential_type: AuthenticationOption::LTI_V1,
       email: @user.email,
     )
+    target_url = "some/test/path"
+    session[:user_return_to] = target_url
     partial_lti_teacher.authentication_options = [ao]
     PartialRegistration.persist_attributes session, partial_lti_teacher
     User.any_instance.stubs(:valid_password?).returns(true)
 
     post :link_email, params: {email: @user.email, password: 'password'}
-    assert_redirected_to home_path
+    assert_redirected_to target_url
     assert Policies::Lti.lti?(@user)
   end
 

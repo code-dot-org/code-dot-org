@@ -137,6 +137,13 @@
   curriculum_launch_2023_title: "Introducing incredible updates to our curriculum"
   curriculum_launch_2023_desc: "Updates to CSC, CSP, CSD, and more — plus a new Curriculum Catalog and redesigned Teach page to help you find it all!"
 
+  curriculum_launch_2024:
+    banner:
+      heading: "Discover new and updated curriculum!"
+      desc: "Explore our latest units and professional learning resources to inspire future tech innovators."
+      button_learn_more_here: "Learn more here!"
+      button_learn_more: "Learn more"
+
   in_partnership_with: "In partnership with"
 
   shop_code_dot_org_heading: "Shop Code.org"
@@ -1722,7 +1729,7 @@
     skinny_banner:
       heading: "Discover our new LMS integrations!"
       desc: "We've added new LMS integrations for %{canvas} and %{schoology}! Learn how to get started!"
-  
+
   lms_partner_page:
     heading: "Integrate Code.org with %{website}"
     desc: "Sync your rosters and sign in to code.org with one-click. Plus, Code.org content is now available directly on %{website}."

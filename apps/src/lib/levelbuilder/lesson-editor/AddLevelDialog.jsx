@@ -45,7 +45,12 @@ export default class AddLevelDialog extends Component {
           style={styles.dialogContent}
           className="uitest-level-dialog-content"
         >
-          <AddLevelDialogTop addLevel={this.props.addLevel} />
+          <AddLevelDialogTop
+            addLevel={this.props.addLevel}
+            currentLevelIds={this.props.activitySection.scriptLevels.map(
+              scriptLevel => scriptLevel.activeId
+            )}
+          />
           <div style={styles.bottomArea}>
             <h4>Levels in Progression</h4>
             <div style={styles.levelsBox}>

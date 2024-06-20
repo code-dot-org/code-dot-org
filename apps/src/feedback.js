@@ -35,6 +35,7 @@ import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import color from '@cdo/apps/util/color';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {getAllBlocks} from './blockly/utils';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
@@ -1466,9 +1467,9 @@ FeedbackUtils.prototype.hasAllBlocks_ = function (blocks) {
  * @return {Array<Object>} The blocks.
  */
 FeedbackUtils.prototype.getUserBlocks_ = function () {
-  var allBlocks = Blockly.mainBlockSpace.getAllUsedBlocks();
-  var blocks = allBlocks.filter(function (block) {
-    var blockValid = !block.disabled && block.type !== 'when_run';
+  const allBlocks = getAllBlocks();
+  const blocks = allBlocks.filter(function (block) {
+    let blockValid = !block.disabled && block.type !== 'when_run';
     // If Blockly is in readOnly mode, then all blocks are uneditable
     // so this filter would be useless. Ignore uneditable blocks only if
     // Blockly is in edit mode.
@@ -1513,8 +1514,8 @@ FeedbackUtils.blockShouldBeCounted_ = function (block) {
  * @return {Array<Object>} The blocks.
  */
 FeedbackUtils.prototype.getCountableBlocks_ = function () {
-  var allBlocks = Blockly.mainBlockSpace.getAllUsedBlocks();
-  var blocks = allBlocks.filter(FeedbackUtils.blockShouldBeCounted_);
+  const allBlocks = getAllBlocks();
+  const blocks = allBlocks.filter(FeedbackUtils.blockShouldBeCounted_);
   return blocks;
 };
 

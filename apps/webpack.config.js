@@ -196,6 +196,7 @@ const WEBPACK_BASE_CONFIG = {
       ...Object.fromEntries([
         localeDoNotImport('@cdo/aichat/locale'),
         localeDoNotImport('@cdo/applab/locale'),
+        localeDoNotImport('@cdo/codebridge/locale'),
         localeDoNotImport('@cdo/javalab/locale'),
         localeDoNotImport('@cdo/music/locale'),
         localeDoNotImport('@cdo/netsim/locale'),

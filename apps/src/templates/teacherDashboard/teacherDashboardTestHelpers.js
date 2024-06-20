@@ -37,7 +37,6 @@ export const courseOfferings = {
   1: {
     id: 1,
     display_name: 'Course A',
-    category: 'csf',
     is_featured: false,
     participant_audience: 'student',
     course_versions: {
@@ -88,7 +87,6 @@ export const courseOfferings = {
   2: {
     id: 2,
     display_name: 'Computer Science Discoveries',
-    category: 'full_course',
     is_featured: false,
     participant_audience: 'student',
     course_versions: {
@@ -157,7 +155,6 @@ export const courseOfferings = {
   3: {
     id: 3,
     display_name: 'Computer Science A',
-    category: 'full_course',
     is_featured: false,
     participant_audience: 'student',
     course_versions: {
@@ -196,7 +193,6 @@ export const courseOfferings = {
   4: {
     id: 4,
     display_name: 'Flappy',
-    category: 'hoc',
     is_featured: false,
     participant_audience: 'student',
     course_versions: {
@@ -227,7 +223,6 @@ export const courseOfferings = {
   5: {
     id: 5,
     display_name: 'Hello World',
-    category: 'hoc',
     is_featured: true,
     participant_audience: 'student',
     course_versions: {
@@ -258,7 +253,6 @@ export const courseOfferings = {
   6: {
     id: 6,
     display_name: 'Poem Art',
-    category: 'hoc',
     is_featured: true,
     participant_audience: 'student',
     course_versions: {
@@ -289,7 +283,6 @@ export const courseOfferings = {
   7: {
     id: 7,
     display_name: 'Artist',
-    category: 'hoc',
     is_featured: false,
     participant_audience: 'student',
     course_versions: {
@@ -320,7 +313,6 @@ export const courseOfferings = {
   8: {
     id: 8,
     display_name: 'Self Paced PL CSP',
-    category: 'self_paced_pl',
     is_featured: false,
     participant_audience: 'teacher',
     course_versions: {
@@ -359,7 +351,6 @@ export const courseOfferings = {
   9: {
     id: 9,
     display_name: 'Virtual PL CSP',
-    category: 'virtual_pl',
     is_featured: false,
     participant_audience: 'teacher',
     course_versions: {
