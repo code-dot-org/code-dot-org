@@ -521,9 +521,9 @@ class LevelsController < ApplicationController
       if project_template_level_name = @level.properties['project_template_level_name']
         project_template_level = Level.find_by_name(project_template_level_name)
         links["Template Level"] = [
-            {text: project_template_level_name, url: level_path(project_template_level)}
+          {text: project_template_level_name, url: level_path(project_template_level)}
         ]
-        if can? :edit, project_template_level
+        if can? :edit, @level
           links["Template Level"] << {text: 'Edit', url: edit_level_path(project_template_level)}
         else
           links["Template Level"] << {text: '(Cannot edit)', url: ''}
