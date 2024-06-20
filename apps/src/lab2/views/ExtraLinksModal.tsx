@@ -11,16 +11,16 @@ import moduleStyles from './extra-links.module.scss';
 // be extended to also include links for project validators as well. It replaces the haml
 // version of extra links, which doesn't work on lab2 after a level change.
 interface ExtraLinksModalProps {
-  levelbuilderLinkData: ExtraLinksLevelData;
-  projectValidatorLinkData: ExtraLinksProjectData | null;
+  levelLinkData: ExtraLinksLevelData;
+  projectLinkData: ExtraLinksProjectData | null;
   isOpen: boolean;
   closeModal: () => void;
   levelId: number;
 }
 
 const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
-  levelbuilderLinkData,
-  projectValidatorLinkData,
+  levelLinkData,
+  projectLinkData,
   isOpen,
   closeModal,
   levelId,
@@ -38,17 +38,15 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
     state => state.lab.channel && state.lab.channel.id
   );
 
-  const isStandaloneProject = levelbuilderLinkData.is_standalone_project;
+  const isStandaloneProject = levelLinkData.is_standalone_project;
 
   useEffect(() => {
-    setClonedLevelName(levelbuilderLinkData.level_name);
-  }, [levelbuilderLinkData]);
+    setClonedLevelName(levelLinkData.level_name);
+  }, [levelLinkData]);
 
   useEffect(() => {
-    setFeaturedProjectStatus(
-      projectValidatorLinkData?.project_info.featured_status
-    );
-  }, [projectValidatorLinkData]);
+    setFeaturedProjectStatus(projectLinkData?.project_info.featured_status);
+  }, [projectLinkData]);
 
   const onClose = () => {
     closeModal();
@@ -172,11 +170,10 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
     <>
       <StrongText>
         This level is in{' '}
-        {Object.entries(levelbuilderLinkData.script_level_path_links).length}{' '}
-        scripts:
+        {Object.entries(levelLinkData.script_level_path_links).length} scripts:
       </StrongText>
       <ul>
-        {levelbuilderLinkData.script_level_path_links.map((link, index) => (
+        {levelLinkData.script_level_path_links.map((link, index) => (
           <li key={index}>
             <a href={'/s/' + link.script}>{link.script}</a> as{' '}
             <a href={link.path}>{link.path}</a>
@@ -251,7 +248,7 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
       >
         <i id="x-close" className="fa-solid fa-xmark" />
       </button>
-      {Object.entries(levelbuilderLinkData.links).map(([listTitle, links]) => (
+      {Object.entries(levelLinkData.links).map(([listTitle, links]) => (
         // Levels can be part of level groups (sublevels) and/or can be a template level
         // so we list these here as well.
         <div key={`${listTitle}-div`}>
@@ -273,17 +270,12 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
           </ul>
         </div>
       ))}
-      {levelbuilderLinkData.can_clone &&
-        !isStandaloneProject &&
-        renderCloneLevel}
-      {levelbuilderLinkData.can_delete &&
-        !isStandaloneProject &&
-        renderDeleteLevel}
-      {levelbuilderLinkData.script_level_path_links &&
-        renderScriptLevelPathLinks}
-      {projectValidatorLinkData &&
+      {levelLinkData.can_clone && !isStandaloneProject && renderCloneLevel}
+      {levelLinkData.can_delete && !isStandaloneProject && renderDeleteLevel}
+      {levelLinkData.script_level_path_links && renderScriptLevelPathLinks}
+      {projectLinkData &&
         isStandaloneProject &&
-        renderProjectValidatorData(projectValidatorLinkData)}
+        renderProjectValidatorData(projectLinkData)}
     </AccessibleDialog>
   ) : null;
 };

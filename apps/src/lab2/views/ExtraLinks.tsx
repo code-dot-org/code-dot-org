@@ -23,9 +23,9 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
 }: ExtraLinksProps) => {
   const {loading, data} = useFetch('/api/v1/users/current/permissions');
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [levelbuilderLinkData, setLevelbuilderLinkData] =
+  const [levelLinkData, setLevelLinkData] =
     useState<ExtraLinksLevelData | null>(null);
-  const [projectValidatorLinkData, setProjectValidatorLinkData] =
+  const [projectLinkData, setProjectLinkData] =
     useState<ExtraLinksProjectData | null>(null);
   const permissionData = data
     ? (data as PermissionResponse)
@@ -46,7 +46,7 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
         HttpClient.fetchJson<ExtraLinksLevelData>(
           `/levels/${levelId}/extra_links`
         ).then(response => {
-          setLevelbuilderLinkData(response.value);
+          setLevelLinkData(response.value);
         });
       } catch (e) {
         console.error('Error fetching levelbuilder extra links', e);
@@ -57,7 +57,7 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
         HttpClient.fetchJson<ExtraLinksProjectData>(
           `/projects/${channelId}/extra_links`
         ).then(response => {
-          setProjectValidatorLinkData(response.value);
+          setProjectLinkData(response.value);
         });
       } catch (e) {
         console.error('Error fetching project validator extra links', e);
@@ -72,18 +72,17 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
     return <></>;
   }
 
-  return loading ||
-    (!levelbuilderLinkData && !projectValidatorLinkData) ? null : (
+  return loading || (!levelLinkData && !projectLinkData) ? null : (
     <>
       <Button
         onClick={() => setIsModalOpen(true)}
         text={'Extra Links'}
         className={moduleStyles.extraLinksButton}
       />
-      {levelbuilderLinkData && (
+      {levelLinkData && (
         <ExtraLinksModal
-          levelbuilderLinkData={levelbuilderLinkData}
-          projectValidatorLinkData={projectValidatorLinkData}
+          levelLinkData={levelLinkData}
+          projectLinkData={projectLinkData}
           isOpen={isModalOpen}
           closeModal={() => setIsModalOpen(false)}
           levelId={levelId}
