@@ -228,6 +228,12 @@ end
 
 Then /^the section table row at index (\d+) has (primary|secondary) assignment path "([^"]+)"$/ do |row_index, assignment_type, expected_path|
   link_index = (assignment_type == 'primary') ? 0 : 1
+  # Wait until the link loads in the table
+  wait_until do
+    @browser.execute_script("return $('.uitest-owned-sections tbody tr:eq(#{row_index}) td:eq(3) a:eq(#{link_index})').attr('href') !== null;")
+  end
+
+  # Then grab it
   href = @browser.execute_script(
     "return $('.uitest-owned-sections tbody tr:eq(#{row_index}) td:eq(3) a:eq(#{link_index})').attr('href');"
   )
