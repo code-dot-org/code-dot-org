@@ -23,7 +23,8 @@ module Lti
           target_url = session[:user_return_to] || home_path
           redirect_to target_url
         else
-          head :unauthorized
+          flash.alert = I18n.t('lti.account_linking.invalid_credentials')
+          redirect_to user_session_path(lti_provider: params[:lti_provider], lms_name: params[:lms_name]) and return
         end
       end
 
