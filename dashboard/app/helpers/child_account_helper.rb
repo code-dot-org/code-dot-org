@@ -40,7 +40,7 @@ module ChildAccountHelper
     else
       return unless student_lockout_date
       return unless Cpa.cpa_experience(request) == Cpa::ALL_USER_LOCKOUT_WARNING
-      return if Policies::ChildAccount::ComplianceState.request_sent?(user)
+      return if Queries::ChildAccount.latest_permission_request(user)
     end
 
     render partial: 'policy_compliance/parental_permission/modal',
