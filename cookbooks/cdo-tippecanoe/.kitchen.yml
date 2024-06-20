@@ -7,13 +7,17 @@ transport:
 provisioner:
   name: dokken
 verifier:
-  name:  inspec
+  name: inspec
 platforms:
-  - name: ubuntu-18.04
+  - name: ubuntu-20.04
     driver:
-      image: dokken/ubuntu-18.04
-      pid_one_command: /bin/systemd
+      image: dokken/ubuntu-20.04
+      privileged: true
 suites:
   - name: default
     run_list:
       - recipe[cdo-tippecanoe]
+    verifier:
+      inspec_tests:
+        - test/integration/default
+    attributes:
