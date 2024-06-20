@@ -89,9 +89,6 @@ const Alert: React.FunctionComponent<AlertProps> = ({
 
   const closeButtonSize = size === 'l' ? 'l' : 'm';
 
-  // TODO:
-  // 4. Update README.md
-
   return (
     <div
       className={classnames(
