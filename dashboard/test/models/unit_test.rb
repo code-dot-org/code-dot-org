@@ -35,16 +35,8 @@ class UnitTest < ActiveSupport::TestCase
     @csa_unit = create :csa_script, name: 'csa1'
 
     @csc_unit = create :csc_script, name: 'csc1', is_course: true, family_name: 'csc-test-unit', version_year: 'unversioned'
-    CourseOffering.add_course_offering(@csc_unit)
-    @csc_unit.course_version.course_offering.category = 'csc'
-    @csc_unit.course_version.course_offering.save!
-    @csc_unit.reload
 
     @hoc_unit = create :hoc_script, name: 'hoc1', is_course: true, family_name: 'hoc-test-unit', version_year: 'unversioned'
-    CourseOffering.add_course_offering(@hoc_unit)
-    @hoc_unit.course_version.course_offering.category = 'hoc'
-    @hoc_unit.course_version.course_offering.save!
-    @hoc_unit.reload
 
     @csf_unit_2019 = create :csf_script, name: 'csf-2019', version_year: '2019'
 
