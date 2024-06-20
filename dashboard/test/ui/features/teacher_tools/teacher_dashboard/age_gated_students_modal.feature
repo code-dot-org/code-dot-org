@@ -17,6 +17,7 @@ Feature: Age Gated Students Modal and Banner
     And I click selector "a:contains(Learn more)"
     And I wait until element "#uitest-age-gated-students-modal" is visible
     Then I see no difference for "age gated students modal"
+    And I close my eyes
 
   Scenario: Teacher viewing a section with no at risk age gated students should not see age gated students banner
     Given I create a teacher-associated under-13 student named "Sally"
