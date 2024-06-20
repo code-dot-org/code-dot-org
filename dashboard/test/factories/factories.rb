@@ -431,11 +431,6 @@ FactoryBot.define do
         child_account_compliance_state_last_updated {DateTime.now}
       end
 
-      trait :with_pending_parent_permission do
-        child_account_compliance_state {Policies::ChildAccount::ComplianceState::REQUEST_SENT}
-        child_account_compliance_state_last_updated {DateTime.now}
-      end
-
       trait :without_parent_permission do
         child_account_compliance_state {nil}
         child_account_compliance_state_last_updated {DateTime.now}

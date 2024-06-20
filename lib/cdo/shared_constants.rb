@@ -103,6 +103,7 @@ module SharedConstants
     poetry
     poetry_hoc
     thebadguys
+    music
   ).freeze
 
   # For privacy reasons, App Lab and Game Lab can only be shared if certain conditions are met. These project types can be shared if: the user is >= 13 years old and their teacher has NOT disabled sharing OR the user is < 13 and their teacher has enabled sharing.
@@ -650,8 +651,8 @@ module SharedConstants
 
   CHILD_ACCOUNT_COMPLIANCE_STATES = OpenStruct.new(
     {
+      GRACE_PERIOD: 'p',
       LOCKED_OUT: 'l',
-      REQUEST_SENT: 's',
       PERMISSION_GRANTED: 'g'
     }
   ).freeze

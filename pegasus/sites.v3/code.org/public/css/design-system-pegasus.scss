@@ -65,15 +65,21 @@ section.bg-pattern-dark {
   }
 }
 
-// Removes the bottom margin or padding —
+// Removes the block margin or padding —
 // often helpful on a last paragraphs or list elements
 // to maintain consistent white space between sections
 
 // !important is used here to override existing margin
 // or padding bottom styles – this allows this class to
 // work on any element
+.no-margin-top {
+  margin-top: 0 !important;
+}
 .no-margin-bottom {
   margin-bottom: 0 !important;
+}
+.no-padding-top {
+  padding-top: 0 !important;
 }
 .no-padding-bottom {
   padding-bottom: 0 !important;

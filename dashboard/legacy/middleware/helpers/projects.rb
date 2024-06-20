@@ -370,6 +370,7 @@ class Projects
         updatedAt: row[:updated_at],
         publishedAt: row[:published_at],
         projectType: row[:project_type],
+        frozen: JSON.parse(row[:value])['frozen'],
       }
     )
   end

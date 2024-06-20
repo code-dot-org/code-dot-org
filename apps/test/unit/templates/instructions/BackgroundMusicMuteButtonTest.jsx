@@ -25,6 +25,14 @@ describe('SignedInUser', () => {
     return mount(<BackgroundMusicMuteButton {...props} />);
   };
 
+  let server;
+  beforeEach(() => {
+    server = sinon.fakeServer.create();
+    server.respondWith('POST', '/api/v1/users/me/mute_music', 'ok');
+  });
+
+  afterEach(() => server.restore());
+
   it('switches label and icon when button is pressed', () => {
     const wrapper = setUp();
     assert(wrapper.text() === i18n.backgroundMusicOn());
@@ -40,6 +48,7 @@ describe('SignedInUser', () => {
       unmuteBackgroundMusic: onUnmuteSpy,
     });
     wrapper.find('.uitest-mute-music-button').simulate('click');
+    server.respond();
     expect(onMuteSpy).to.have.been.calledOnce;
     wrapper.find('.uitest-mute-music-button').simulate('click');
     expect(onUnmuteSpy).to.have.been.calledOnce;

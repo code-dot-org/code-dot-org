@@ -1,4 +1,3 @@
-import moment from 'moment';
 import {
   createAsyncThunk,
   createSlice,
@@ -16,68 +15,38 @@ import {
   AichatErrorType,
 } from '@cdo/generated-scripts/sharedConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {
   AI_CUSTOMIZATIONS_LABELS,
   DEFAULT_VISIBILITIES,
   EMPTY_AI_CUSTOMIZATIONS,
 } from '../views/modelCustomization/constants';
+import {saveTypeToAnalyticsEvent} from '../constants';
 import {postAichatCompletionMessage} from '../aichatCompletionApi';
 import {
   AiCustomizations,
   AichatInteractionStatusValue,
   ChatCompletionMessage,
   AichatContext,
+  FieldVisibilities,
   LevelAichatSettings,
   ModelCardInfo,
   Role,
+  SaveType,
   ViewMode,
   Visibility,
 } from '../types';
-import {getTypedKeys} from '@cdo/apps/types/utils';
-import {AppDispatch} from '@cdo/apps/util/reduxHooks';
-
-const haveDifferentValues = (
-  value1: AiCustomizations[keyof AiCustomizations],
-  value2: AiCustomizations[keyof AiCustomizations]
-): boolean => {
-  if (typeof value1 === 'object' && typeof value2 === 'object') {
-    return JSON.stringify(value1) !== JSON.stringify(value2);
-  }
-
-  return value1 !== value2;
-};
-
-const findChangedProperties = (
-  previous: AiCustomizations | undefined,
-  next: AiCustomizations
-) => {
-  if (!previous) {
-    return Object.keys(next);
-  }
-
-  const changedProperties: string[] = [];
-  Object.keys(next).forEach(key => {
-    const typedKey = key as keyof AiCustomizations;
-    if (haveDifferentValues(previous[typedKey], next[typedKey])) {
-      changedProperties.push(key);
-    }
-  });
-
-  return changedProperties;
-};
-
-const getCurrentTimestamp = () => moment(Date.now()).format('YYYY-MM-DD HH:mm');
-const getCurrentTime = () => moment(Date.now()).format('LT');
-
-const saveTypeToAnalyticsEvent: {[key in SaveType]: string} = {
-  updateChatbot: EVENTS.UPDATE_CHATBOT,
-  publishModelCard: EVENTS.PUBLISH_MODEL_CARD_INFO,
-  saveModelCard: EVENTS.SAVE_MODEL_CARD_INFO,
-};
-
-type SaveType = 'updateChatbot' | 'publishModelCard' | 'saveModelCard';
+import {
+  allFieldsHidden,
+  findChangedProperties,
+  getNewMessageId,
+  getCurrentTime,
+  getCurrentTimestamp,
+  hasFilledOutModelCard,
+} from './utils';
+import {validateModelId} from '../views/modelCustomization/utils';
 
 export interface AichatState {
   // All user and assistant chat messages - includes too personal and inappropriate user messages.
@@ -91,7 +60,7 @@ export interface AichatState {
   chatMessageError: boolean;
   currentAiCustomizations: AiCustomizations;
   savedAiCustomizations: AiCustomizations;
-  fieldVisibilities: {[key in keyof AiCustomizations]: Visibility};
+  fieldVisibilities: FieldVisibilities;
   viewMode: ViewMode;
   currentSessionId?: number;
   // If a save is currently in progress
@@ -162,23 +131,6 @@ export const saveModelCard = createAsyncThunk(
     );
   }
 );
-
-// This variable keeps track of the most recent message ID so that we can
-// assign a unique message id in increasing sequence to a new message.
-let latestMessageId = 0;
-const getNewMessageId = () => {
-  latestMessageId += 1;
-  return latestMessageId;
-};
-
-export const RESET_MODEL_NOTIFICATION: ChatCompletionMessage = {
-  id: getNewMessageId(),
-  role: Role.MODEL_UPDATE,
-  chatMessageText: 'Model customizations and model card information',
-  chatMessageSuffix: {text: ' have been reset to default settings.'},
-  status: Status.OK,
-  timestamp: getCurrentTime(),
-};
 
 // This is the "core" update logic that is shared when a student saves their
 // model customizations (setup, retrieval, and "publish" tab)
@@ -414,6 +366,29 @@ export const submitChatContents = createAsyncThunk(
   }
 );
 
+// Helper that is used when we receive an error response
+// (or a handled "error" state, like the model producing profanity).
+const updateMessagesOnError = (
+  newMessage: ChatCompletionMessage,
+  dispatch: ThunkDispatch<unknown, unknown, AnyAction>
+) => {
+  const assistantChatMessage: ChatCompletionMessage = {
+    id: getNewMessageId(),
+    role: Role.ASSISTANT,
+    status: Status.ERROR,
+    chatMessageText: 'There was an error getting a response. Please try again.',
+    timestamp: getCurrentTimestamp(),
+  };
+  dispatch(addChatMessage(assistantChatMessage));
+
+  dispatch(
+    updateUserChatMessageStatus({
+      id: newMessage.id,
+      status: Status.ERROR,
+    })
+  );
+};
+
 const aichatSlice = createSlice({
   name: 'aichat',
   initialState,
@@ -453,9 +428,6 @@ const aichatSlice = createSlice({
     },
     setChatSessionId: (state, action: PayloadAction<number>) => {
       state.currentSessionId = action.payload;
-    },
-    setIsWaitingForChatResponse: (state, action: PayloadAction<boolean>) => {
-      state.isWaitingForChatResponse = action.payload;
     },
     setShowWarningModal: (state, action: PayloadAction<boolean>) => {
       state.showWarningModal = action.payload;
@@ -513,6 +485,11 @@ const aichatSlice = createSlice({
         }
       }
 
+      // Make sure model ID is valid
+      reconciledAiCustomizations.selectedModelId = validateModelId(
+        reconciledAiCustomizations.selectedModelId
+      );
+
       state.savedAiCustomizations = reconciledAiCustomizations;
       state.currentAiCustomizations = reconciledAiCustomizations;
       state.fieldVisibilities =
@@ -526,6 +503,11 @@ const aichatSlice = createSlice({
 
       const defaultAiCustomizations: AiCustomizations =
         levelAichatSettings?.initialCustomizations || EMPTY_AI_CUSTOMIZATIONS;
+
+      // Make sure model ID is valid
+      defaultAiCustomizations.selectedModelId = validateModelId(
+        defaultAiCustomizations.selectedModelId
+      );
 
       state.savedAiCustomizations = defaultAiCustomizations;
       state.currentAiCustomizations = defaultAiCustomizations;
@@ -591,50 +573,6 @@ const aichatSlice = createSlice({
   },
 });
 
-const hasFilledOutModelCard = (modelCardInfo: ModelCardInfo) => {
-  for (const key of getTypedKeys(modelCardInfo)) {
-    if (key === 'isPublished') {
-      continue;
-    } else if (key === 'exampleTopics') {
-      if (
-        !modelCardInfo['exampleTopics'].filter(topic => topic.length).length
-      ) {
-        return false;
-      }
-    } else if (!modelCardInfo[key].length) {
-      return false;
-    }
-  }
-
-  return true;
-};
-
-const allFieldsHidden = (fieldVisibilities: AichatState['fieldVisibilities']) =>
-  getTypedKeys(fieldVisibilities).every(
-    key => fieldVisibilities[key] === Visibility.HIDDEN
-  );
-
-const updateMessagesOnError = (
-  newMessage: ChatCompletionMessage,
-  dispatch: ThunkDispatch<unknown, unknown, AnyAction>
-) => {
-  const assistantChatMessage: ChatCompletionMessage = {
-    id: getNewMessageId(),
-    role: Role.ASSISTANT,
-    status: Status.ERROR,
-    chatMessageText: 'There was an error getting a response. Please try again.',
-    timestamp: getCurrentTimestamp(),
-  };
-  dispatch(addChatMessage(assistantChatMessage));
-
-  dispatch(
-    updateUserChatMessageStatus({
-      id: newMessage.id,
-      status: Status.ERROR,
-    })
-  );
-};
-
 // Selectors
 export const selectHasFilledOutModelCard = createSelector(
   (state: RootState) => state.aichat.currentAiCustomizations.modelCardInfo,
@@ -656,7 +594,6 @@ export const {
   setNewChatSession,
   setChatSessionId,
   clearChatMessages,
-  setIsWaitingForChatResponse,
   setShowWarningModal,
   updateUserChatMessageStatus,
   updateChatMessageSession,

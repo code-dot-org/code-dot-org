@@ -46,7 +46,7 @@ describe('AgeGatedStudentsTable', () => {
     rowType: RowType.STUDENT,
     age: 10,
     atRiskAgeGatedStudent: true,
-    childAccountComplianceState: 'l',
+    childAccountComplianceState: ChildAccountComplianceStates.LOCKED_OUT,
   };
   const fakeStudent2 = {
     id: 2,
@@ -72,7 +72,7 @@ describe('AgeGatedStudentsTable', () => {
     rowType: RowType.STUDENT,
     age: 10,
     atRiskAgeGatedStudent: true,
-    childAccountComplianceState: 's',
+    childAccountComplianceState: ChildAccountComplianceStates.GRACE_PERIOD,
   };
   const fakeStudent4 = {
     id: 4,
@@ -85,7 +85,8 @@ describe('AgeGatedStudentsTable', () => {
     rowType: RowType.STUDENT,
     age: 10,
     atRiskAgeGatedStudent: true,
-    childAccountComplianceState: 'g',
+    childAccountComplianceState:
+      ChildAccountComplianceStates.PERMISSION_GRANTED,
   };
   const fakeStudent5 = {
     id: 5,
@@ -127,10 +128,10 @@ describe('AgeGatedStudentsTable', () => {
 
   const getConsentStatus = (consentStatus: string) => {
     switch (consentStatus) {
+      case ChildAccountComplianceStates.GRACE_PERIOD:
+        return i18n.childAccountPolicy_gracePeriod();
       case ChildAccountComplianceStates.LOCKED_OUT:
         return i18n.childAccountPolicy_lockedOut();
-      case ChildAccountComplianceStates.REQUEST_SENT:
-        return i18n.childAccountPolicy_requestSent();
       case ChildAccountComplianceStates.PERMISSION_GRANTED:
         return i18n.childAccountPolicy_permissionGranted();
       default:

@@ -1,0 +1,9 @@
+name 'game_development_debug_choices_course-e_independent'
+display_name 'These games do not work!'
+description 'Choose a game to fix.'
+
+sublevels
+level 'game_development_try_it_independent'
+level 'game_development_environ_independent'
+level 'game_development_player_independent'
+level 'game_development_platform_independent'
