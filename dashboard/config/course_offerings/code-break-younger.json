@@ -1,7 +1,6 @@
 {
   "key": "code-break-younger",
   "display_name": "Code Break for Younger Students",
-  "category": "other",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Hour of Code",
