@@ -1,5 +1,11 @@
-.checkboxLabel {
-  display: flex;
-  gap: 8px;
-  align-items: flex-start;
+.fieldArea {
+  margin: 5px 0;
+}
+
+.label {
+  font-family: Metropolis,sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1.64;
+  margin-bottom: .37rem;
 }
