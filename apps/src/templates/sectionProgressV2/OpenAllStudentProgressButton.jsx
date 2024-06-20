@@ -94,6 +94,7 @@ function OpenAllStudentProgressButton({
         type="button"
         className={style.expandButton}
         onClick={handleDropdownClick}
+        aria-label={i18n.additionalOptions()}
       >
         <FontAwesome icon="ellipsis-vertical" />
       </button>
