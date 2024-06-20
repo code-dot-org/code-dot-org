@@ -1,23 +1,28 @@
 import styles from './link-account.module.scss';
-import React from 'react';
+import React, {useContext} from 'react';
 
 import NewAccountCard from './cards/NewAccountCard';
 import ExistingAccountCard from './cards/ExistingAccountCard';
+import ContinueCard from './cards/ContinueCard';
 import WelcomeBanner from './WelcomeBanner';
 import i18n from '@cdo/locale';
 import {navigateToHref} from '@cdo/apps/utils';
 import Link from '@cdo/apps/componentLibrary/link';
+import {LtiProviderContext} from '@cdo/apps/lib/ui/lti/link/LtiLinkAccountPage/context';
 
 const LtiLinkAccountPage = () => {
   const handleCancel = () => {
     navigateToHref(`/users/cancel`);
   };
 
+const LtiLinkAccountPage = () => {
+  const {newCtaType} = useContext(LtiProviderContext)!;
+
   return (
     <main className={styles.mainContainer}>
       <WelcomeBanner />
       <div className={styles.cardContainer}>
-        <NewAccountCard />
+        {newCtaType === 'new' ? <NewAccountCard /> : <ContinueCard />}
         <ExistingAccountCard />
       </div>
       <div className={styles.cancelButtonContainer}>
