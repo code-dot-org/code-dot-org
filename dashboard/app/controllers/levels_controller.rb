@@ -525,11 +525,13 @@ class LevelsController < ApplicationController
         links["Template Level"] = [
           {text: project_template_level_name, url: level_path(project_template_level)}
         ]
-        if can_edit_level
-          links["Template Level"] << {text: 'Edit', url: edit_level_path(project_template_level)}
-        else
-          links["Template Level"] << {text: '(Cannot edit)', url: ''}
-        end
+        template_level_edit_link =
+          if can_edit_level
+            {text: 'Edit', url: edit_level_path(project_template_level)}
+          else
+            {text: '(Cannot edit)', url: ''}
+          end
+        links["Template Level"] << template_level_edit_link
       end
 
     elsif @script_level
