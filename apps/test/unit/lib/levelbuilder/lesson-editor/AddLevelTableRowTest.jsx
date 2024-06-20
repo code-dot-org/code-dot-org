@@ -10,6 +10,7 @@ describe('AddLevelTableRow', () => {
     addLevel = sinon.spy();
     defaultProps = {
       addLevel,
+      isInLesson: false,
       level: {
         id: 1,
         name: 'Level 1',

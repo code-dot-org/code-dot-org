@@ -9,8 +9,8 @@ module Cpa
   ALL_USER_LOCKOUT_WARNING = 'cpa_all_user_lockout_warning'
   ALL_USER_LOCKOUT = 'cpa_all_user_lockout'
 
-  NEW_USER_LOCKOUT_DATE = DateTime.parse('2023-07-01T00:00:00MST').freeze
-  ALL_USER_LOCKOUT_DATE = DateTime.parse('2024-07-01T00:00:00MST').freeze
+  NEW_USER_LOCKOUT_DATE = DateTime.parse('2023-07-01T00:00:00MDT').freeze
+  ALL_USER_LOCKOUT_DATE = DateTime.parse('2024-07-01T00:00:00MDT').freeze
 
   # There are four phases for the Colorado Privacy Act:
   # 1. Nothing - nil
@@ -30,8 +30,8 @@ module Cpa
     # schedule [Map] A map of the CPA phases to dates. Example:
     # {
     #   “cpa_new_user_lockout”:         “2023-07-05T23:15:00+00:00”,
-    #   “cpa_all_user_lockout_warning”: “2024-05-01T00:00:00MST”,
-    #   “cpa_all_user_lockout”:         “2024-07-01T00:00:00MST”
+    #   “cpa_all_user_lockout_warning”: “2024-05-01T00:00:00MDT”,
+    #   “cpa_all_user_lockout”:         “2024-07-01T00:00:00MDT”
     # }
     schedule = experiment_value('cpa_schedule', current_request)
     # Ensure the schedule is a Hash

@@ -1,7 +1,7 @@
 {
   "key": "gamelab_jumpTo",
   "name": "jump to",
-  "category": "Sprites",
+  "category": "Actions",
   "category_key": "actions",
   "block_name": "gamelab_jumpTo",
   "content": "Sprite jumps instantly to a specified location.",
@@ -13,6 +13,12 @@
       "image": null,
       "app_display_type": "embedAppWithCode",
       "embed_app_with_code_height": 310
+    },
+    {
+      "name": "Example 2",
+      "description": "Every time the brown bunny is clicked, it will jump to the location of the purple bunny.",
+      "app": "https://studio.code.org/projects/spritelab/C8_-7VS1t-9dsM-iFR6tkR0CotiR4f-RgmtuKEkcbfI",
+      "embed_app_with_code_height": "450"
     }
   ],
   "image_url": "https://curriculum.code.org/media/blocks/jumpTo.PNG",
