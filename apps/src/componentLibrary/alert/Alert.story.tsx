@@ -44,8 +44,7 @@ AlertWithLink.args = {
   size: 'm',
   link: {
     href: '#',
-    children: 'Click here',
-    // text: 'Click here',
+    text: 'Click here',
   },
   onClose: () => console.log('close'),
 };
@@ -65,7 +64,7 @@ AlertWithLinkAndIcon.args = {
   size: 'm',
   link: {
     href: '#',
-    children: 'Learn more',
+    text: 'Learn more',
   },
 };
 
@@ -128,7 +127,7 @@ GroupOfSizesOfAlerts.args = {
       icon: {iconName: 'circle-check'},
       link: {
         href: '#',
-        children: 'This is a plink',
+        text: 'This is a plink',
       },
       onClose: () => console.log('close'),
     },
