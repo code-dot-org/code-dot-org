@@ -19,7 +19,7 @@ module BrowserHelpers
     text = @browser.execute_script("return $(\"#{selector}\").text().replace(/\u00a0/g, ' ');").strip
     # Get localized text from server
     response = HTTParty.get(replace_hostname("http://studio.code.org/api/test/get_i18n_t?key=#{loc_key}&locale=#{language}")).parsed_response
-    text.should eq response
+    text.should eq response.strip
   end
 
   # This function checks that the text within the given selector matches the
