@@ -651,8 +651,8 @@ module SharedConstants
 
   CHILD_ACCOUNT_COMPLIANCE_STATES = OpenStruct.new(
     {
+      GRACE_PERIOD: 'p',
       LOCKED_OUT: 'l',
-      REQUEST_SENT: 's',
       PERMISSION_GRANTED: 'g'
     }
   ).freeze

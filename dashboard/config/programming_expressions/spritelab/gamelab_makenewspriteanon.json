@@ -12,7 +12,7 @@
       "app": "https://studio.code.org/projects/spritelab/urrtCeUSn8OCCexM3ueoBbQN0f6vzydtME2g8a_JJI4",
       "image": null,
       "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 310
+      "embed_app_with_code_height": "150"
     },
     {
       "name": "Example 2",
@@ -20,7 +20,7 @@
       "app": "https://studio.code.org/projects/spritelab/0PeIG8da8W2sfQXLz_cZ-hvIvj3Izq20IdHqUa305mg",
       "image": null,
       "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 310
+      "embed_app_with_code_height": "150"
     }
   ],
   "image_url": "https://curriculum.code.org/media/blocks/Screen_Shot_2019-07-29_at_3.23.00_PM_AGOAddm.png",

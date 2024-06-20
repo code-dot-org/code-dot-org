@@ -1,0 +1,20 @@
+name 'sp-pl-Code_w_AI-chk_lessons_24'
+editor_experiment ''
+title 'Check for Understanding: Coding with AI'
+type 'multi1'
+question 'In what ways can AI be used to ethically assist with coding?'
+
+
+
+wrong 'AI can be used as an ideation partner to brainstorm ideas for coding applications.'
+wrong 'AI can be used to help plan and explain algorithms in complex parts of code.'
+wrong 'AI can be used to help debug code.'
+wrong 'AI can be used to suggest improvements and expand features on existing code.'
+right 'All of the above'
+
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+allow_multiple_attempts true

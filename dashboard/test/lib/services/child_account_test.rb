@@ -24,14 +24,6 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
 
       last_updated = user.child_account_compliance_state_last_updated
       Timecop.travel 5.minutes
-      new_state = Policies::ChildAccount::ComplianceState::REQUEST_SENT
-      Services::ChildAccount.update_compliance(user, new_state)
-
-      assert_equal new_state, user.child_account_compliance_state
-      refute_equal last_updated, user.child_account_compliance_state_last_updated
-
-      last_updated = user.child_account_compliance_state_last_updated
-      Timecop.travel 5.minutes
       new_state = Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED
       Services::ChildAccount.update_compliance(user, new_state)
 

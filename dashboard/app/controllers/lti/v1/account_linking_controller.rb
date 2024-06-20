@@ -20,7 +20,8 @@ module Lti
         if existing_user&.valid_password?(params[:password])
           Services::Lti::AccountLinker.call(user: existing_user, session: session)
           sign_in existing_user
-          redirect_to home_path
+          target_url = session[:user_return_to] || home_path
+          redirect_to target_url
         else
           head :unauthorized
         end

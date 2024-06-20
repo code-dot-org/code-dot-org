@@ -3450,6 +3450,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
       locale: config.locale,
       assetUrl: this.assetUrl,
       inStartBlocksMode: level.edit_blocks === START_BLOCKS,
+      inToolboxBlocksMode: level.edit_blocks === TOOLBOX_EDIT_MODE,
       isReadOnlyWorkspace: !!config.readonlyWorkspace,
       isDroplet: !!level.editCode,
       isBlockly: this.isUsingBlockly(),
