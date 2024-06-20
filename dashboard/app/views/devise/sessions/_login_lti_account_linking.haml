@@ -33,6 +33,9 @@
           = f.label :password
           = f.password_field :password, autofocus: email != '', required: true
 
+        = f.hidden_field :lti_provider, value: params[:lti_provider]
+        = f.hidden_field :lms_name, value: params[:lms_name]
+
         / Sign in button
         %button#signin-connect-button= t('lti.account_linking.sign_in_and_connect')
 
