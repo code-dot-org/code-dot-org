@@ -96,7 +96,7 @@
               - if @user.errors[:parent_email_preference_email].present?
                 %p.error= @user.errors[:parent_email_preference_email]&.first
             .span4.parent-email-field-input
-              = f.email_field :parent_email_preference_email, maxlength: 255, value: @user.parent_email_preference_email || @user.email
+              = f.email_field :parent_email_preference_email, maxlength: 255, value: @user.parent_email_preference_email
           .row.parent-email-field
             .span6.signup-field-label
               .required= t('signup_form.parent_account_email_progress_permission', privacy_policy_url: CDO.code_org_url('/privacy'), markdown: true).html_safe
