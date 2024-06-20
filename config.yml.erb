@@ -346,7 +346,7 @@ chef_org_name: code-dot-org
 chef_client_key: <%="#{ENV['HOME']}/.chef/#{chef_node_name}.pem"%>
 chef_validation_client_name: <%="#{chef_org_name}-validator"%>
 chef_validation_key: <%="#{ENV['HOME']}/.chef/#{chef_validation_client_name}.pem"%>
-chef_server_url: '<%="https://#{['staging', 'test', 'levelbuilder'].include?(env) ? 'code-org.saas.chef.io' : 'api.opscode.com'}/organizations/#{chef_org_name}"%>'
+chef_server_url: '<%="https://#{['staging', 'test', 'levelbuilder', 'production'].include?(env) ? 'code-org.saas.chef.io' : 'api.opscode.com'}/organizations/#{chef_org_name}"%>'
 
 # Cloudfront keys for private content
 cloudfront_key_pair_id: !Secret
