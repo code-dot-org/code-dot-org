@@ -49,6 +49,11 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
   const publishIcon =
     isDisabled(modelCardInfo) || isReadOnly ? iconValue : undefined;
 
+  const viewOnlyTooltip = {
+    text: 'View Only',
+    tooltipId: 'viewOnlyTooltip',
+    direction: 'onBottom',
+  };
   const visibleTabs = [];
   if (showSetupCustomization) {
     visibleTabs.push({
@@ -56,6 +61,7 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
       text: 'Setup',
       tabContent: <SetupCustomization />,
       iconRight: setupCustomizationIcon,
+      tooltip: viewOnlyTooltip,
     });
   }
   if (isVisible(retrievalContexts)) {
@@ -64,6 +70,7 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
       text: 'Retrieval',
       tabContent: <RetrievalCustomization />,
       iconRight: retrievalIcon,
+      tooltip: viewOnlyTooltip,
     });
   }
   if (isVisible(modelCardInfo) && !hidePresentationPanel) {
@@ -72,6 +79,7 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
       text: 'Publish',
       tabContent: <PublishNotes />,
       iconRight: publishIcon,
+      tooltip: viewOnlyTooltip,
     });
   }
 
