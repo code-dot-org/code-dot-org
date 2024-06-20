@@ -5,6 +5,7 @@
 .alert {
   display: flex;
   align-items: baseline;
+  border-radius: 0.25rem;
 
   .alertContentContainer {
     display: flex;
@@ -29,7 +30,7 @@
 .alert-success {
   background-color: $light_affirmative_100;
 
-  i {
+  .alertContentContainer i {
     color: $light_primary_500;
   }
 }
@@ -37,7 +38,7 @@
 .alert-danger {
   background-color: $light_negative_100;
 
-  i {
+  .alertContentContainer i {
     color: $light_negative_500;
   }
 }
@@ -45,7 +46,7 @@
 .alert-warning {
   background-color: $light_caution_100;
 
-  i {
+  .alertContentContainer i {
     color: $light_caution_500;
   }
 }
@@ -53,7 +54,7 @@
 .alert-info {
   background-color: $light_info_100;
 
-  i {
+  .alertContentContainer i {
     color: $light_info_500;
   }
 }
