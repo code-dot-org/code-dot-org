@@ -35,10 +35,9 @@ module Services
         user.transaction do
           Services::ChildAccount.start_grace_period(user)
 
-          estimated_lockout_date = Policies::ChildAccount.lockout_date(user)
-          raise LockoutSchedulingError, 'Lockout date is not set' unless estimated_lockout_date
+          scheduled_lockout_job = CAP::LockoutJob.schedule_for(user)
 
-          CAP::LockoutJob.set(wait_until: estimated_lockout_date).perform_later(user_id: user.id)
+          raise LockoutSchedulingError, 'Failed to start grace period due to lockout not being scheduled' unless scheduled_lockout_job
         end
       end
     end

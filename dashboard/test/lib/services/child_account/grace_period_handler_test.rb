@@ -123,37 +123,27 @@ class Services::ChildAccount::GracePeriodHandlerTest < ActiveSupport::TestCase
   describe '#start_grace_period' do
     let(:start_grace_period) {described_instance.send(:start_grace_period)}
 
-    let(:user_lockout_date) {14.days.from_now}
+    let(:scheduled_lockout_job) {stub(:scheduled_lockout_job)}
 
     let(:expect_grace_period_starting) {Services::ChildAccount.expects(:start_grace_period).with(user)}
-    let(:expect_lockout_date_estimating) {Policies::ChildAccount.expects(:lockout_date).with(user).returns(user_lockout_date)}
-    let(:expect_lockout_scheduling) do
-      cap_lockout_job = mock
-      CAP::LockoutJob.stubs(:set).with(wait_until: user_lockout_date).returns(cap_lockout_job)
-      cap_lockout_job.expects(:perform_later).with(user_id: user.id)
-    end
-
-    before do
-      Services::ChildAccount.stubs(:start_grace_period).with(user)
-      Services::ChildAccount.stubs(:lockout_date).with(user).returns(user_lockout_date)
-      CAP::LockoutJob.stubs(:set).returns(stub(perform_later: nil))
-    end
+    let(:expect_lockout_scheduling) {CAP::LockoutJob.expects(:schedule_for).with(user).returns(scheduled_lockout_job)}
 
     it 'starts grace period then schedules lockout job' do
       execution_sequence = sequence('execution')
 
       expect_grace_period_starting.in_sequence(execution_sequence)
-      expect_lockout_date_estimating.in_sequence(execution_sequence)
       expect_lockout_scheduling.in_sequence(execution_sequence)
 
       start_grace_period
     end
 
-    context 'when user has no lockout date after start of grace period' do
-      let(:user_lockout_date) {nil}
+    context 'when lockout was not scheduled' do
+      let(:scheduled_lockout_job) {nil}
 
-      it 'raises LockoutSchedulingError and does not schedule lockout job' do
-        expect_lockout_scheduling.never
+      it 'raises LockoutSchedulingError' do
+        expect_grace_period_starting.once
+        expect_lockout_scheduling.once
+
         _ {start_grace_period}.must_raise described_class::LockoutSchedulingError
       end
     end
