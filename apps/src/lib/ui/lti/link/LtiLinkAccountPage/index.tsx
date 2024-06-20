@@ -11,12 +11,10 @@ import Link from '@cdo/apps/componentLibrary/link';
 import {LtiProviderContext} from '@cdo/apps/lib/ui/lti/link/LtiLinkAccountPage/context';
 
 const LtiLinkAccountPage = () => {
+  const {newCtaType} = useContext(LtiProviderContext)!;
   const handleCancel = () => {
     navigateToHref(`/users/cancel`);
   };
-
-const LtiLinkAccountPage = () => {
-  const {newCtaType} = useContext(LtiProviderContext)!;
 
   return (
     <main className={styles.mainContainer}>
