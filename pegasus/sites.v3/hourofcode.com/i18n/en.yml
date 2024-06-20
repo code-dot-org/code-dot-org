@@ -2173,6 +2173,106 @@
       videos:
         heading: "Videos to help you get started with Music Lab"
 
+  game_design_page:
+    heading: "Game design"
+    desc: "Discover the exciting world of game design with Code.org's curriculum. Our game design units foster creativity, problem-solving, and critical thinking skills, empowering students to bring their own interactive experiences to life."
+    button:
+      explore_curriculum: "Explore curriculum"
+      see_pl: "See professional learning"
+    why:
+      heading: "Why teach game design?"
+      desc: "Game design fosters engagement and creativity while unlocking skills for the future."
+      inclusive:
+        title: "Inclusive learning"
+        desc: "Game design engages students by aligning with their interests, creating a motivating environment where every student is excited to participate and succeed."
+      creative:
+        title: "Creative expression"
+        desc: "Students can explore their imagination as they design unique, interactive experiences, making game design a powerful tool for artistic expression."
+      problem_solving:
+        title: "Problem-solving skills"
+        desc: "Help develop problem-solving and computational thinking skills through the engaging process of game design, empowering students in the digital age."
+    resources:
+      heading: "Resources to support you every step of the way"
+      desc: "Get access to materials that will help you teach computer science with confidence—even without prior CS teaching experience — when you create a **free** Code.org account."
+      button: "Create a free account"
+    elementary_curricula:
+      heading: "Elementary game design curricula"
+      game_design:
+        overline: "Grades 3-5"
+        title: "Elementary Game Design"
+        desc: "Dive into game development with our 5-hour Game Design module, teaching students to create games using Sprite Lab while mastering key concepts and culminating in a Game Jam showcase."
+        duration: "5 hours"
+        button: "Explore unit"
+      sports:
+        overline: "Grades 2-12"
+        title: "Code Your Own Sports Game"
+        desc: "Score big with a sports game coded by you! Learn all about events in programming, work through puzzles, and customize the fun. Let's play and code like champs!"
+        duration: "1 hours"
+        button: "Try activity"
+      flappy:
+        overline: "Grades 2-12"
+        title: "Flappy Code"
+        desc: "Create a game using basic block code in this introductory computer science activity."
+        duration: "1 hours"
+        button: "Try activity"
+      basketball:
+        overline: "Grades 2-12"
+        title: "Choose Your Team and Make a Basketball Game"
+        desc: "Learn what "events" are and how computers use them in programs like video games! Students work through puzzles and customize their games with speed and sound."
+        duration: "1 hours"
+        button: "Try activity"
+    mid_high_curricula:
+      heading: "Middle and high school game design curricula"
+      interactive:
+        overline: "Grades 6-10"
+        title: "Interactive Animations and Games"
+        desc: "Engaging the same design process that computer scientists use, students learn programming concepts and develop images, animations, interactive art, and games."
+        duration: "3 hours, 20 minutes"
+        button: "Explore unit"
+      game_lab:
+        overline: "Grades 6-12"
+        title: "Self-Paced Introduction to Game Lab"
+        desc: "Move at your own pace in this introduction to our Game Lab environment as you program animations, interactive art, and games."
+        duration: "Month"
+        button: "Explore unit"
+      star_wars:
+        overline: "Grades 6-12"
+        title: "Star Wars: Building a Galaxy With Code (JavaScript)"
+        desc: "Use JavaScript to learn to program droids, and create your own Star Wars game in a galaxy far, far away."
+        duration: "1 hour"
+        button: "Try activity"
+    quote:
+      text: "This curriculum is all inclusive, well organized, and student centered! The incredible organization in the curriculum is what makes me use it year after year."
+      byline: "AP® CSA Teacher"
+    teach:
+      heading: "Preparing to teach game design"
+      desc: "Empower yourself with the knowledge and tools to effectively teach game design in the classroom."
+      elementary:
+        overline: "3-5 Teachers"
+        title: "Teaching Elementary Game Design"
+        desc: "Prepare to teach Code.org's game design module, where students explore game design through engaging activities, exploring concepts, and collaboratively building games."
+        button: "Start professional learning"
+      interactive:
+        overline: "6-12 Teachers"
+        title: "Teaching Interactive Animations and Games"
+        desc: "Prepare to teach Code.org's CSD Unit 3 - Interactive Animations and Games, allowing you to engage with the content at your own pace and in the order that best suits your needs."
+        button: "Start professional learning"
+    additional_resources:
+      heading: "Additional resources"
+      desc: "Beyond curriculum and professional learning, we have many materials to support your classroom."
+      catalog:
+        title: "Curriculum Catalog"
+        desc: "Comprehensive curriculum offerings for every grade and experience level featuring robust structured and self-paced learning options."
+        button: "Explore the catalog"
+      professional_learning:
+        title: "Professional Learning"
+        desc: "Help today's students become tomorrow's superheroes with professional learning that meets your needs."
+        button: "Explore professional learning"
+      hour_of_code:
+        title: "Hour of Code Activities"
+        desc: "One-hour tutorials in over 45 languages. No experience needed. Hour of Code activities are available for free year-round."
+        button: "Explore activities"
+
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'
   hoc_live_learn_title: 'Learn with Hour of Code Live'
