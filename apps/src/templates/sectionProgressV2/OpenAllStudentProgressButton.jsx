@@ -13,12 +13,10 @@ import {
   expandMetadataForStudents,
 } from '../sectionProgress/sectionProgressRedux';
 
-// import style from '@cdo/apps/applab/designElements/copy-element-to-screen-button.module.scss';
 import style from './expand-all-rows-dropdown.module.scss';
 
-const DROPDOWN_OFFSET = 184;
+const DROPDOWN_OFFSET = 172;
 
-// based on CopyElementToScreenButton
 function OpenAllStudentProgressButton({
   students,
   expandMetadataForStudents,
@@ -109,6 +107,7 @@ function OpenAllStudentProgressButton({
           <PopUpMenu.Item
             className={style.menuItem}
             onClick={expandMetaDataForAllStudents}
+            style={{marginTop: '4px', padding: '5px 14px'}}
           >
             <FontAwesome icon="arrows-from-line" />
             <div>{i18n.expandAll()}</div>
@@ -116,6 +115,7 @@ function OpenAllStudentProgressButton({
           <PopUpMenu.Item
             className={style.menuItem}
             onClick={collapseMetaDataForAllStudents}
+            style={{marginBottom: '4px', padding: '5px 14px'}}
           >
             <FontAwesome icon="arrows-to-line" />
             <div>{i18n.collapseAll()}</div>
