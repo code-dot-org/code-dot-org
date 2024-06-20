@@ -189,12 +189,6 @@ describe('TeacherHomepage', () => {
     });
   });
 
-  // TODO - This test can be removed when the corresponding section is removed
-  it('renders PL has moved section if plCourses exist', () => {
-    const wrapper = setUp();
-    wrapper.find('pl-courses-placeholder');
-  });
-
   it('renders a TeacherResources component', () => {
     const wrapper = setUp();
     assert(wrapper.find('TeacherResources').exists());
