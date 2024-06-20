@@ -229,12 +229,9 @@
         title: "Self-Paced Learning"
         desc: "These modules allow you to engage at your own pace and on your own time while focusing on areas most important to your needs and teaching context."
         button: "Discover the district program"
-      k_5_workshops:
-        title: "K-5 Workshops"
-        desc: "With our Regional Partners as hosts and our Code.org facilitators as guides, our workshops around the country focus on reflection, discussion, and growth-oriented learning."
-        button: "Explore professional learning"
-      6_12_workshops:
-        title: "6-12 Workshops"
+      workshops:
+        title_K_5: "K-5 Workshops"
+        title_6_12: "6-12 Workshops"
         desc: "With our Regional Partners as hosts and our Code.org facilitators as guides, our workshops around the country focus on reflection, discussion, and growth-oriented learning."
         button: "Explore professional learning"
 
