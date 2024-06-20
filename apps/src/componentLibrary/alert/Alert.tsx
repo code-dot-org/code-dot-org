@@ -36,6 +36,8 @@ export interface AlertProps {
   type?: AlertType;
   /** Alert on Close callback */
   onClose?: () => void;
+  /** Alert close label */
+  closeLabel?: string;
   /** Alert custom className */
   className?: string;
   /** Alert size */
@@ -75,6 +77,7 @@ const Alert: React.FunctionComponent<AlertProps> = ({
   link,
   className,
   onClose,
+  closeLabel = 'Close alert',
   isImmediateImportance = true,
   type = 'primary',
   size = 'm',
@@ -84,9 +87,9 @@ const Alert: React.FunctionComponent<AlertProps> = ({
     [icon, type]
   );
 
+  const closeButtonSize = size === 'l' ? 'l' : 'm';
+
   // TODO:
-  // 1. Add close button to the alert
-  // 3. Update Link to support text prop, not only children props
   // 4. Update README.md
 
   return (
@@ -104,7 +107,13 @@ const Alert: React.FunctionComponent<AlertProps> = ({
         <span className={moduleStyles.alertText}>{text}</span>
         {link && <Link {...link} size={size} />}
       </div>
-      {onClose && <CloseButton onClick={onClose} size={'m'} />}
+      {onClose && (
+        <CloseButton
+          aria-label={closeLabel}
+          onClick={onClose}
+          size={closeButtonSize}
+        />
+      )}
     </div>
   );
 };
