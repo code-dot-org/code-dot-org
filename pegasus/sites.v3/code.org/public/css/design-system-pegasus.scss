@@ -271,6 +271,10 @@ hr {
   & > .grid-container {
     @media (min-width: $width-sm) {
       grid-template-columns: repeat(2, 1fr);
+
+      &.wider-text {
+        grid-template-columns: 1.5fr 1fr;
+      }
     }
   }
 

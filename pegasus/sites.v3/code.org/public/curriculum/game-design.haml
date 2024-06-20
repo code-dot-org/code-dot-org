@@ -4,16 +4,16 @@ theme: responsive_full_width
 ---
 
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
-%link{href: "/css/generated/page/games-styles.css", rel: "stylesheet"}
+%link{href: "/css/generated/page/game-design-styles.css", rel: "stylesheet"}
 
 %section.hero-banner-basic.overlay
-  .wrapper.grid-container.justify-space-between.align-items-center.gap-4
+  .wrapper.grid-container.justify-space-between.align-items-center.gap-4.wider-text
     .text-wrapper
       %h1.white
-        =hoc_s("music_lab.banner.heading")
-      %p.body-one.white
-        =hoc_s("music_lab.banner.desc")
+        =hoc_s("game_design_page.heading")
+      %p.body-two.white
+        =hoc_s("game_design_page.desc")
       %a.link-button.white{href: "#"}
-        Button
+        =hoc_s("game_design_page.button.explore_curriculum")
     %figure
-      %img{src: "/images/music-lab/music-lab-banner-graphic.png", alt: "", style: "width: 100%"}
+      %img{src: "/images/game-design/game-design-banner-graphic.png", alt: "", style: "width: 100%"}
