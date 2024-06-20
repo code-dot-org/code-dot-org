@@ -1,7 +1,6 @@
 {
   "key": "foundations-of-cs-beta",
   "display_name": "Foundations of Computer Science (Beta)",
-  "category": "full_course",
   "is_featured": true,
   "assignable": true,
   "curriculum_type": "Course",

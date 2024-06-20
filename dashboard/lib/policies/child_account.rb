@@ -5,17 +5,17 @@ require 'date'
 class Policies::ChildAccount
   # Values for the `child_account_compliance_state` attribute
   module ComplianceState
-    # The student's account has been used to issue a request to a parent.
-    LOCKED_OUT = SharedConstants::CHILD_ACCOUNT_COMPLIANCE_STATES.LOCKED_OUT
+    # The period for "existing" users before their accounts locked out.
+    GRACE_PERIOD = SharedConstants::CHILD_ACCOUNT_COMPLIANCE_STATES.GRACE_PERIOD
 
     # The student's account has been used to issue a request to a parent.
-    REQUEST_SENT = SharedConstants::CHILD_ACCOUNT_COMPLIANCE_STATES.REQUEST_SENT
+    LOCKED_OUT = SharedConstants::CHILD_ACCOUNT_COMPLIANCE_STATES.LOCKED_OUT
 
     # The student's account has been approved by their parent.
     PERMISSION_GRANTED = SharedConstants::CHILD_ACCOUNT_COMPLIANCE_STATES.PERMISSION_GRANTED
 
+    # def self.grace_period?(student)
     # def self.locked_out?(student)
-    # def self.request_sent?(student)
     # def self.permission_granted?(student)
     SharedConstants::CHILD_ACCOUNT_COMPLIANCE_STATES.to_h.each do |key, value|
       define_singleton_method("#{key.downcase}?") do |student|
@@ -27,7 +27,7 @@ class Policies::ChildAccount
   # P20-937 - We had a regression which we have chosen to mitigate by allowing
   # accounts created before the below date to have their lock-out delayed until
   # the CAP policy is set to lockout all users.
-  CPA_CREATED_AT_EXCEPTION_DATE = DateTime.parse('2024-05-26T00:00:00MST')
+  CPA_CREATED_AT_EXCEPTION_DATE = DateTime.parse('2024-05-26T00:00:00MDT')
 
   # The delay is intended to provide notice to a parent
   # when a student may no longer be monitoring the "parent's email."

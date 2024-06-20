@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "gen-ai-humanities",
-    "serialized_at": "2024-04-06 00:14:24 UTC",
+    "serialized_at": "2024-06-19 22:11:26 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -48,9 +48,8 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "Large Language Models are a powerful new technology. There are many ways to use it that can help student learning and other ways that might harm their learning. In this lesson, students will reflect meaningfully on using technology to help their learning through discussion and debate. In the process, they will explore a large language model and begin learning how to prompt it to help them complete tasks.\n",
-        "preparation": "* Choose which chatbot you will use with your class, and read the appropriate guide: [r guide_to_microsoft_copilot/gen-ai-humanities/unversioned], [r guide_to_google_gemini/gen-ai-humanities/unversioned], or [r guide_to_chatgpt/gen-ai-humanities/unversioned]\n* Watch the [How Chatbots and Large Language Models Work video](https://www.youtube.com/watch?v=X-AWdfSFCHQ) to become familiar with how each tool works, which may help you facilitate discussions with your students\n* Run through the activities to have a basic idea of what students are likely to get out of the search engine and a chatbot using a large language model\n* Print copies of the [r writing_process_activity_guide/gen-ai-humanities/unversioned] for all students\n* Print enough copies of each [r chatbot_persona_exploration_jigsaw/gen-ai-humanities/unversioned] jigsaw activity for each student to get one, and the class to be somewhat evenly distributed amongst the three bots.\n* Ensure all students have access to computers connected to the internet and accounts for the chosen chatbot and digital resources.",
-        "student_overview": "Explore how AI chatbots can help and hinder our learning during the writing process\n"
+        "overview": "**How do AI tools like ChatGPT change the way we write and learn in school?**\n\nLarge language models (LLMs) are a powerful new technology that can significantly impact student learning. In this lesson, students reflect on the benefits and potential drawbacks of using AI tools like ChatGPT, Google Gemini, and Microsoft Copilot in their writing process. They explore crafting prompts tailored to different writing tasks, inputting these prompts into an AI tool, and evaluating the AI-generated responses. Throughout the lesson, students critically analyze the quality of their prompts and the AI's responses, discussing improvements and ethical considerations.",
+        "student_overview": "**How do AI tools like ChatGPT change the way we write and learn in school?**\n\nLarge language models (LLMs) are a powerful new technology that can significantly impact our learning. In this lesson, you reflect on the benefits and potential drawbacks of using AI tools like ChatGPT, Google Gemini, and Microsoft Copilot in your writing process. You explore crafting prompts tailored to different writing tasks, inputting these prompts into an AI tool, and evaluating the AI-generated responses. Throughout the lesson, you critically analyze the quality of your prompts and the AI's responses, discussing improvements and ethical considerations."
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -95,7 +94,7 @@
       "key": "d3fa0fb4-77be-4423-97a6-3d299be0a210",
       "position": 2,
       "properties": {
-        "duration": 5,
+        "duration": 10,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -123,7 +122,7 @@
       "key": "af8c6013-4159-4c51-a98b-93acc0859ee3",
       "position": 4,
       "properties": {
-        "duration": 10,
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -214,723 +213,179 @@
       }
     },
     {
-      "key": "64801705-9712-484c-9b70-1c717021ab6b",
+      "key": "a1df6396-d005-41e0-94ce-c5ccfe1f708e",
       "position": 1,
       "properties": {
-        "description": "Today we are going to explore how technology can be supportive of or limit learning. Consider times in your life where you have used tools in learning. How were they supportive, and how did they detract? We’ll do a think/pair/share with this question.\n",
-        "remarks": true
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce ***artificial intelligence (AI)***.",
+        "name": "AI in the Writing Process",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Consider prompting students to share additional examples of AI they have encountered or use. Briefly discuss how each example uses AI to perform its task and the impact it has on individuals or society."
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "64801705-9712-484c-9b70-1c717021ab6b",
+        "activity_section.key": "a1df6396-d005-41e0-94ce-c5ccfe1f708e",
         "lesson_activity.key": "d3fa0fb4-77be-4423-97a6-3d299be0a210"
       }
     },
     {
-      "key": "9eb3a69e-7480-49fa-8228-2253cd047a19",
+      "key": "c6035a94-8f10-498f-8bf6-e3aae85682ee",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Using AI in the Writing Process Activity Guide.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i>  **Prompt**:  Think of a tool (for example: calculator, search engine, typing) you use in school. How does it help your learning? How does it limit your learning?\n\n**Discussion:** Think/Pair/Share - Give students ~2 minutes to think and write, then ~2 minutes to share with a neighbor. After those two minutes, call on some students to share the answers.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen to students as they share with their neighbor. If students are stuck and can’t think of anything, ask them to consider technology like “a calculator” or “search engines” or “typing.” Ask them to consider what the technology might have done for them that they would have to learn, and what it allowed them to learn that might have been harder. Look for students with important or interesting points to pull up, and tell them you’d like them to share that answer when you reconvene as a class.  \n\n**Discussion Goal:** The class is going to be about how AI can be used as a tool in the writing process, and when that use is helpful vs harmful for learning. This discussion is meant to get students thinking about technology more broadly before narrowing in on AI. Generally, technology can replace learning specific skills, which might have a downside, but might also allow students to focus on higher order thinking skills rather than memorization and mechanics. \n\nPossible examples include:\n* Search Engine\n   * Detracts from learning\n      * Using a search engine rather than memorizing facts means that you do not know the facts if you need access to them without the internet. Knowing the facts by heart can help you form conclusions based on other facts.\n      * Not actually knowing the facts might make you more likely to believe misinformation available on the internet.\n      * Some people use search engines to find pre-written essays, which means they do not learn the things that writing the essay would have taught them.\n  * Supports learning\n       * Using a search engine for facts allows classes to focus on synthesizing those facts into higher-order conclusions rather than memorizing them.\n       * Search engines have access to more facts than a person can keep in their memory, which allows for more information.\n       * Search engines make checking the information you believe you know against other sources easier.\n* Typing. \n  * Detracts from learning\n       * Typing instead of handwriting does not help you develop manual dexterity.\n       * Typing instead of handwriting does not provide practice handwriting.\n       * Some studies have shown writing things by hand helps you remember them.\n  * Supports learning\n       * Typing instead of handwriting makes the content of your writing easier to read for others.\n       * Many people can type faster than they can handwrite, allowing them to work on other things faster, and allowing them to keep up with their thoughts as they write.\n"
       },
       "seeding_key": {
-        "activity_section.key": "9eb3a69e-7480-49fa-8228-2253cd047a19",
+        "activity_section.key": "c6035a94-8f10-498f-8bf6-e3aae85682ee",
         "lesson_activity.key": "d3fa0fb4-77be-4423-97a6-3d299be0a210"
       }
     },
     {
-      "key": "0d1091d4-dc7a-4b89-8f0d-c8c094c97c92",
-      "position": 1,
-      "properties": {
-        "description": "Throughout time, people have created new tools to help them learn and create. Different uses of those tools can either help them, or keep them from learning what they need to know. Today we will be exploring one such tool – AI Chatbots using Large Language models such as ChatGPT, Bard, or BingChat.",
-        "duration": "5",
-        "name": "Introducing Chatbots",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "0d1091d4-dc7a-4b89-8f0d-c8c094c97c92",
-        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
-      }
-    },
-    {
-      "key": "cbaf5e2d-80ac-4df4-b188-4a324049d9b1",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt**: What do you know about chatbots like ChatGPT, Bard, or BingChat?\n\n**Discussion:** Call on students who raise their hand.\n\n**Discussion guide:** This question is meant to collect a basic understanding of what prior knowledge students have. Many will have heard of ChatGPT and that it can write things that sound like a human. some might have heard of it being used for “cheating.” You may wish to ask follow-up questions to see what they know about how these chatbots work, so you know how in-depth you should go with the explanatory lecture in the following remarks.\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "cbaf5e2d-80ac-4df4-b188-4a324049d9b1",
-        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
-      }
-    },
-    {
-      "key": "658fe2df-b2ff-4ddb-ae16-f0088d2e5cf3",
+      "key": "6244a551-86f9-4306-a206-381a2ee40522",
       "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Have you ever used an AI tool for writing? If so, what was your experience like? If not, why not?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Gauge students' familiarity with AI tools, understand their experiences and perceptions, and identify any misconceptions or concerns they may have. Look for positive, negative, or neutral experiences with AI tools, reasons for not using them (such as lack of awareness, accessibility issues, skepticism, or concerns), and students' perceptions and attitudes, including curiosity, hesitation, and ethical considerations.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What is one way you think AI could help or harm your writing process?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students' insights on how AI could enhance their writing by assisting with idea generation, grammar and style improvements, and overall writing efficiency. Additionally, it's important to note concerns about over-reliance on AI, potential impacts on creativity and originality, and the ethical implications of using AI for academic work.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
-        "activity_section.key": "658fe2df-b2ff-4ddb-ae16-f0088d2e5cf3",
+        "activity_section.key": "6244a551-86f9-4306-a206-381a2ee40522",
+        "lesson_activity.key": "d3fa0fb4-77be-4423-97a6-3d299be0a210"
+      }
+    },
+    {
+      "key": "9888cd81-eec0-4b92-80c0-ecb19b23bce2",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce ***generative AI***.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce ***large language models (LLMs)***.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to briefly explain how LLMs work.",
+        "duration": "10",
+        "name": "Introduction to Generative AI"
+      },
+      "seeding_key": {
+        "activity_section.key": "9888cd81-eec0-4b92-80c0-ecb19b23bce2",
         "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
       }
     },
     {
-      "key": "065d2f2f-d47d-4cde-bc67-a0c508a3a8ce",
-      "position": 4,
+      "key": "2b6199c4-4e14-4bf9-9184-8e2acdc3c902",
+      "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:** Vocabulary slide"
-      },
-      "seeding_key": {
-        "activity_section.key": "065d2f2f-d47d-4cde-bc67-a0c508a3a8ce",
-        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
-      }
-    },
-    {
-      "key": "764bf730-38c1-4ffa-9525-5d05be05ab7a",
-      "position": 5,
-      "properties": {
-        "description": "Each of these chatbots – ChatGPT, Bard, and BingChat are examples of Large Language Models. Can someone read for me the definition of Large Language Models on this slide? Can someone summarize that for me?\n\nTake a minute and write down, in your own words, what a Large Language Model is on your activity guide.",
+        "description": "Large Language Models do not “understand” what they are saying; they see word choice in numbers. This means not everything that a large language model says will be truthful, even though almost all of it will sound like something a human might have created.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "764bf730-38c1-4ffa-9525-5d05be05ab7a",
+        "activity_section.key": "2b6199c4-4e14-4bf9-9184-8e2acdc3c902",
         "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
       }
     },
     {
-      "key": "a54d7354-96e1-459c-a064-6f1c14a782ff",
+      "key": "3907bd17-8f34-48e0-85b7-da6bcdaf4b40",
+      "position": 3,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you'd like to give students additional context about how LLMs work, you may want to show parts or all of our [**How AI Works: Chatbots and Large Language Models**](https://youtu.be/X-AWdfSFCHQ) video. If so, you may consider using some of the strategies and resources for watching this video from our [**Chatbots and Large Language Models**](https://studio.code.org/s/how-ai-works-2023/lessons/4?viewAs=Instructor) lesson."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3907bd17-8f34-48e0-85b7-da6bcdaf4b40",
+        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
+      }
+    },
+    {
+      "key": "28b5e96f-19f1-4004-b00a-e0c0b8952d12",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce ***prompt engineering***. Have students call out differences in the prompts and the AI's response in the example shown.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What makes this prompt effective or ineffective?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Encourage students to critically evaluate the given prompt and response. Listen for students' observations on how well the prompt directs the AI to produce a focused and coherent introduction, the completeness and relevance of the AI's response, and any potential improvements to the prompt for better results."
+      },
+      "seeding_key": {
+        "activity_section.key": "28b5e96f-19f1-4004-b00a-e0c0b8952d12",
+        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
+      }
+    },
+    {
+      "key": "ede884c4-3843-4340-988e-044bbbade2ad",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1. You can either assign each pair one of the writing tasks or allow pairs to choose their own. Students should think about what information they need from the AI and how to phrase their prompts clearly, and each write different prompts for their task on the level.",
+        "duration": "15",
+        "name": "Crafting Prompts and Evaluating Responses"
+      },
+      "seeding_key": {
+        "activity_section.key": "ede884c4-3843-4340-988e-044bbbade2ad",
+        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
+      }
+    },
+    {
+      "key": "157720b6-ed4a-48e5-b7bc-95752244f163",
       "position": 6,
       "properties": {
-        "description": "**Do This:** Direct students to write their understanding of the definition of Large Language Model in the provided section of the activity guide. Give students approximately 30 seconds to do this.\n"
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for active engagement and collaboration, with students experimenting with different strategies and refining their prompts based on AI feedback. Identify and support students who may need additional guidance in developing effective prompt engineering strategies.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 to enter their prompt and the AI's response. Have students continue to Level 3 to discuss how the response they got from the AI compared to the response their partner got."
       },
       "seeding_key": {
-        "activity_section.key": "a54d7354-96e1-459c-a064-6f1c14a782ff",
+        "activity_section.key": "157720b6-ed4a-48e5-b7bc-95752244f163",
         "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
       }
     },
     {
-      "key": "b2307b10-6cf3-4da6-9387-2985c1dd61f1",
+      "key": "82f07da1-e75d-4ef9-87ca-5059e21db3d3",
       "position": 7,
       "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Make sure students are evaluating the quality of AI-generated responses, discussing strengths and weaknesses, and refining their prompts for better results.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce criteria for evaluating AI responses. Prompt students to share questions they might ask when evaluating AI responses for each criteria. For example:\n* Clarity and relevance\n   * Does the AI response directly address the prompt?\n   * Is the response clear and easy to understand?\n   * Does the response stay on topic throughout?\n* Accuracy\n   * Are the facts and information provided by the AI correct?\n   * Does the response avoid any obvious errors or misunderstandings?\n* Completeness\n   * Does the response fully answer the prompt, covering all necessary points?\n   * Are any key details or elements missing from the response?",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "These are certainly not the only criteria and questions to use for evaluating AI responses. Have students share additional criteria and questions they might have used when evaluating their own responses or that they think are important to add to this list."
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "b2307b10-6cf3-4da6-9387-2985c1dd61f1",
+        "activity_section.key": "82f07da1-e75d-4ef9-87ca-5059e21db3d3",
         "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
       }
     },
     {
-      "key": "426a736a-7132-42ec-8a05-12e6f8373783",
+      "key": "3aba92e2-e5bf-4a9a-bd82-17e11cc96578",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:** How LLMs work"
       },
       "seeding_key": {
-        "activity_section.key": "426a736a-7132-42ec-8a05-12e6f8373783",
+        "activity_section.key": "3aba92e2-e5bf-4a9a-bd82-17e11cc96578",
         "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
       }
     },
     {
-      "key": "c7b7be61-b435-4e50-a5af-438bed831f95",
+      "key": "b30b546c-3d25-40eb-beef-c476e373483e",
       "position": 9,
       "properties": {
-        "description": "Large Language Models can do all of these things because they were built by programs that created models of what words tend to go together in text.Those programs learned these patterns from building probabilities on lots of text (like everything on Wikipedia and Google Books and other sources freely available on the internet). \n\nLarge Language Models do not “understand” what they are saying; they see word choice in numbers. This means not everything that a large language model says will be truthful, even though almost all of it will sound like something a human might have created.\n\nTake a minute and complete the Notes/Images section of your activity guide.\n",
-        "remarks": true
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Open Level 2 and show the student responses to the class.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Let's take a look at your prompts and the AI's responses. Based on our criteria, what improvements would you make to these prompts?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should critically evaluate their own prompts and the AI's responses, identifying specific areas for improvement in their prompts to enhance clarity, accuracy, and completeness. Students should also discuss how changes to their prompts could lead to better responses from the AI."
       },
       "seeding_key": {
-        "activity_section.key": "c7b7be61-b435-4e50-a5af-438bed831f95",
+        "activity_section.key": "b30b546c-3d25-40eb-beef-c476e373483e",
         "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
       }
     },
     {
-      "key": "043f6074-cf4f-4977-b2c1-6e356f7f96a1",
+      "key": "e3d1b588-4905-49a5-99f7-02868ed6d048",
       "position": 10,
       "properties": {
-        "description": "**Do This:** Direct students to fill out the Notes / Images section of the activity guide for 1 minute.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Pre-work extension:** The above is a super quick introduction to how Large Language Models Work; as mentioned in the optional prerequisites, this lesson might benefit from the context of having had a full lesson on how large language models work. Regardless of how much time you have with your class, it will be helpful for you to watch the video to gain context for the remarks above.\n\n**Video:** If you do not have time for a full 45 minute lesson, but do have time for a 7 minute video during this lesson, you may show your students the [“How Chatbots and Large Language Models Work” video](https://youtu.be/X-AWdfSFCHQ).\n\n**Lesson:** If you have the time for it, there is another 45 minute lesson you can do before this lesson on How [**Chatbots and Large Language Models (LLMs)**](https://studio.code.org/s/how-ai-works-2023/lessons/4) work."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "043f6074-cf4f-4977-b2c1-6e356f7f96a1",
-        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
-      }
-    },
-    {
-      "key": "4d416ef6-e3d1-41a6-acbe-3dcf56550979",
-      "position": 11,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "4d416ef6-e3d1-41a6-acbe-3dcf56550979",
-        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
-      }
-    },
-    {
-      "key": "c07a1fb8-2597-4b9e-bbba-1d1b30e1958c",
-      "position": 12,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:** Swiss Army Knife vs. Specific Tool analogy example"
-      },
-      "seeding_key": {
-        "activity_section.key": "c07a1fb8-2597-4b9e-bbba-1d1b30e1958c",
-        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
-      }
-    },
-    {
-      "key": "7b25bccb-50b1-4079-aad9-feb15a194de7",
-      "position": 13,
-      "properties": {
-        "description": "You can give Chatbots specific directions about what kind of help you want by giving them a persona. All of you will be using the same chatbot, but a different persona. An analogy might be that our chatbots are like a specific tool– good at accomplishing one specific task– rather than a Swiss Army Knife which might be used to accomplish a much wider variety of tasks.\n\nFor the next several minutes, the class will be exploring personas a chatbot might take to help with the writing process. Overall, the class will look at 3, but you will only be exploring one of those three, so pay close attention because you’ll be the expert!\nFor the next several minutes, the class will be exploring personas a chatbot might take to help with the writing process. Overall, the class will look at 3, but you will only be exploring one of those three, so pay close attention because you’ll be the expert!\n",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "7b25bccb-50b1-4079-aad9-feb15a194de7",
-        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
-      }
-    },
-    {
-      "key": "ba84ecf8-2ae7-4564-b78f-5862ebcc2f75",
-      "position": 14,
-      "properties": {
-        "description": "**Group:** There should be one group for each of the 3 available personas in the Jigsaw. Students in the same Persona group should work together in pairs when they are exploring the chatbot.\n",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Differentiation:** Some of the personas require a lot more input than others – for instance, Rashida the Revising Robot’s input is an entire piece of writing, whereas Belin the Brainstorming Bot only requires a question to write an outline for. Dan the Draft Developer is in between the two for amount of typing, though Dan requires more inventive thought for what to write a draft about. Consider which students will have an easier time with which persona when you assign the groups."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "ba84ecf8-2ae7-4564-b78f-5862ebcc2f75",
-        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
-      }
-    },
-    {
-      "key": "6fbee1d9-45e4-4edd-823d-f9ee34eff1fe",
-      "position": 15,
-      "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Chatbot Persona Jigsaw Activity Guide. Each group should get the guide for the chatbot they will be using: Dan the Draft Developer, Belin the Brainstorming Bot, or Rashida the Revising Robot."
-      },
-      "seeding_key": {
-        "activity_section.key": "6fbee1d9-45e4-4edd-823d-f9ee34eff1fe",
-        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
-      }
-    },
-    {
-      "key": "1df54baf-6757-4613-b510-aa2c337f1620",
-      "position": 16,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "1df54baf-6757-4613-b510-aa2c337f1620",
-        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
-      }
-    },
-    {
-      "key": "753b60b6-c66f-4e6f-adc2-6fea45b88a98",
-      "position": 17,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:** Creating a Chatbot Persona"
-      },
-      "seeding_key": {
-        "activity_section.key": "753b60b6-c66f-4e6f-adc2-6fea45b88a98",
-        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
-      }
-    },
-    {
-      "key": "27c05aba-7433-4f9f-af63-a87f4d97dfba",
-      "position": 18,
-      "properties": {
-        "description": " Remarks\nIn order to create a chatbot persona, we need two different components. The first is a generative AI chatbot. Some of the more common ones might include ChatGPT, BingChat, or Google Bard. We will be using <the chatbot you will be using>. .",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "27c05aba-7433-4f9f-af63-a87f4d97dfba",
-        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
-      }
-    },
-    {
-      "key": "ded07e1a-8730-4369-838b-b9e385575249",
-      "position": 19,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "ded07e1a-8730-4369-838b-b9e385575249",
-        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
-      }
-    },
-    {
-      "key": "b724a0b9-bc46-452e-aa53-9e2810dbbae5",
-      "position": 20,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:** System Prompt"
-      },
-      "seeding_key": {
-        "activity_section.key": "b724a0b9-bc46-452e-aa53-9e2810dbbae5",
-        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
-      }
-    },
-    {
-      "key": "9a4d7cdd-8239-48c7-9393-37c05157d076",
-      "position": 21,
-      "properties": {
-        "description": " We will also need to provide the chatbot with a system prompt. This is a set of instructions that explains how a chatbot should respond to a user and what its function is. The system prompt will include the persona.\n\nThere are three chatbot personas we will explore in this class; each of you have been given one of them to explore for the next 10 minutes. It will not be the one I am using on the projector, but you will use your persona the way I am using this one.\n\nLet’s start by entering the system system prompt into the chatbot, to give it its persona.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "9a4d7cdd-8239-48c7-9393-37c05157d076",
-        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
-      }
-    },
-    {
-      "key": "bb7b9edf-f9aa-40bd-b931-13fd9a059ad9",
-      "position": 22,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "bb7b9edf-f9aa-40bd-b931-13fd9a059ad9",
-        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
-      }
-    },
-    {
-      "key": "fe062ddd-8c9c-4621-8a33-851e1b93826b",
-      "position": 23,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:** Assume the Persona"
-      },
-      "seeding_key": {
-        "activity_section.key": "fe062ddd-8c9c-4621-8a33-851e1b93826b",
-        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
-      }
-    },
-    {
-      "key": "f84736f4-2428-4a2d-a912-6b4492b8b213",
-      "position": 24,
-      "properties": {
-        "description": "**Do This:** Have students navigate to the AI chatbot you will be using for these lessons (ChatGPT, BingChat, Bard, etc.). Show students where to find the prompt in their Activity Guide, or in the [r bot_personas_guide/gen-ai-humanities/unversioned] online. Copy the system prompt into the AI chatbot you will be using. Demonstrate doing this on the projector.\n",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Typing can be hard for some students, and these prompts can be very long. We highly recommend you give students digital access to the bot prompts resource so they can copy/paste, in addition to the printed bot Jigsaw activity guide for students to look at off-screen."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "f84736f4-2428-4a2d-a912-6b4492b8b213",
-        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
-      }
-    },
-    {
-      "key": "b4f9d399-bf7c-4d02-bedb-835317aee0e0",
-      "position": 25,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "b4f9d399-bf7c-4d02-bedb-835317aee0e0",
-        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
-      }
-    },
-    {
-      "key": "52220053-c105-4c03-9914-4fefe8de7030",
-      "position": 26,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:** Testing the Bot"
-      },
-      "seeding_key": {
-        "activity_section.key": "52220053-c105-4c03-9914-4fefe8de7030",
-        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
-      }
-    },
-    {
-      "key": "a2e974e2-2d20-433b-8e03-63573ae9b3ae",
-      "position": 27,
-      "properties": {
-        "description": "Now that the chatbot knows its job, and will take on this persona, we can use it to help us with our writing. Your activity guide has a first example text to get you started with your bot. Copy and paste this text and share how the chatbot responds with your neighbor.\n",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "a2e974e2-2d20-433b-8e03-63573ae9b3ae",
-        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
-      }
-    },
-    {
-      "key": "7312327b-227e-4c7e-b0a4-1f2012eedbae",
-      "position": 28,
-      "properties": {
-        "description": "**Do This:** Demonstrate how to “talk” to the persona by copy/pasting the example text into the example chatbot persona from the [r bot_personas_guide/gen-ai-humanities/unversioned] on the projector. The students will be typing in the examples provided to them by the jigsaw; you should type in the Seussbot example. Show the students how and where the chatbots respond. Have students enter in the sample input (found in the Activity Guide for their specific bot and the bot prompts resource online) and share their chatbot’s output with their partners. After about 2 minutes (or when it seems like people have finished this first prompt), move on to the next section."
-      },
-      "seeding_key": {
-        "activity_section.key": "7312327b-227e-4c7e-b0a4-1f2012eedbae",
-        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
-      }
-    },
-    {
-      "key": "34f479dc-73db-4d33-a1af-fc8edd2dfaea",
-      "position": 29,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "34f479dc-73db-4d33-a1af-fc8edd2dfaea",
-        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
-      }
-    },
-    {
-      "key": "34f77d44-8dad-4d96-9c21-31264df6838f",
-      "position": 30,
-      "properties": {
-        "description": "We’ll spend the next several minutes chatting with our assigned personas. You may come up with your own examples to see what else the chatbot persona responds to. Afterwards, we’ll discuss whether each of these personas are helpful to learning to use in classwork. Remember, only ⅓ of you will have seen any of these bots, it will be your job to be an expert in how the chatbot persona responds, so please keep track of what you notice in your activity guides!",
-        "duration": "10",
-        "name": "Exploring a Chatbot Persona",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "34f77d44-8dad-4d96-9c21-31264df6838f",
-        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
-      }
-    },
-    {
-      "key": "9bf94e86-58a7-4df3-9a38-27cb29a79035",
-      "position": 31,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:** Explore the Persona"
-      },
-      "seeding_key": {
-        "activity_section.key": "9bf94e86-58a7-4df3-9a38-27cb29a79035",
-        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
-      }
-    },
-    {
-      "key": "14a3977c-f79a-43b3-aae3-ad231bc48c02",
-      "position": 32,
-      "properties": {
-        "description": "**Do This:** Have students generate their own interactions with the chatbot persona they are exploring, using the initial examples as a guide. Students should keep track of what they are finding on the activity guide.\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "14a3977c-f79a-43b3-aae3-ad231bc48c02",
-        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
-      }
-    },
-    {
-      "key": "fe996a26-c1c0-4d19-8f73-9c3bb9fc80c8",
-      "position": 33,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "fe996a26-c1c0-4d19-8f73-9c3bb9fc80c8",
-        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
-      }
-    },
-    {
-      "key": "78457496-1fa2-43d1-b7fc-3d1c82d0d59c",
-      "position": 34,
-      "properties": {
-        "description": "Now that you’ve explored what the chatbot can do with this persona, consider – would it help your learning? Why or Why not? Remember, you’ll be the experts on this persona when we discuss them as a class! Complete Step 4 of the Explore the Personas Activity Guide – Judging the Bot! You may talk to your partner about their observations.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "78457496-1fa2-43d1-b7fc-3d1c82d0d59c",
-        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
-      }
-    },
-    {
-      "key": "355b9371-cef7-40b0-85e3-7bf9e9e03a4e",
-      "position": 35,
-      "properties": {
-        "description": "**Do This:** Direct students to complete step 4 of the Explore Personas activity guide.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Timing note:** Feel free to end this section early if you notice while you circulate that students have had enough time to explore ~2 of their own prompts, and write down a few things they notice in their Persona Exploration Activity Guide."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "355b9371-cef7-40b0-85e3-7bf9e9e03a4e",
-        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
-      }
-    },
-    {
-      "key": "1ab766f5-1a64-4031-9462-caf713dfa71b",
-      "position": 36,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "1ab766f5-1a64-4031-9462-caf713dfa71b",
-        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
-      }
-    },
-    {
-      "key": "103bf8d3-f0a2-4ccc-bf99-7c8dd4e62fb2",
-      "position": 37,
-      "properties": {
-        "description": "Now it’s time to use what you’ve learned, to help your classmates come to their own conclusions about how this chatbot persona could support or not support their learning. We will go through each chatbot persona one at a time. The person in your group that used that chatbot will describe their experience – you may refer to your Jigsaw Activity Guide. Then, everyone will silently write in their Lesson Activity Guide their thoughts on whether or not they agree that the chatbot would support their learning, and why. Be succinct; you don’t have much time!",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce examples of using AI for writing in the news. Have students briefly react and discuss their thoughts about these examples and to share others they might have heard about.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are some ethical implications of using AI tools in writing?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students' awareness and understanding of the potential ethical issues involved. This includes considerations of originality and plagiarism, the balance between human creativity and AI assistance, and the importance of maintaining academic integrity. Students should discuss how relying too heavily on AI might impact their learning and the development of their writing skills. Encourage students to consider issues of fairness, such as equal access to AI tools and the potential for AI to perpetuate biases.",
         "duration": "5",
-        "name": "Expert Group Discussion",
-        "remarks": true
+        "name": "Ethical Implications"
       },
       "seeding_key": {
-        "activity_section.key": "103bf8d3-f0a2-4ccc-bf99-7c8dd4e62fb2",
+        "activity_section.key": "e3d1b588-4905-49a5-99f7-02868ed6d048",
         "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
       }
     },
     {
-      "key": "30f31fdf-55bd-4fa8-9aca-5c70c113af86",
-      "position": 38,
-      "properties": {
-        "description": "**Group:** Group students into “expert” groups of 3 where at least one person was exploring each persona.\n",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Differentiation:** It may be helpful to make groups of 6, where there are 2 people who have experienced a given persona, so they can support each other. This may ease some student nerves, and may also help ensure more information about each persona gets out to the students who didn’t explore it. This might also take more time, however."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "30f31fdf-55bd-4fa8-9aca-5c70c113af86",
-        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
-      }
-    },
-    {
-      "key": "7d411e4f-0e3c-4e32-b6d6-1193621ac328",
-      "position": 39,
-      "properties": {
-        "description": "**Do this:** Complete Columns 2 and 3 of Chatbot Persona uses on the Activity Guide for the writing process while in expert round table groups.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Timing:** Make sure students have enough time to discuss each persona. If you’d like, you may use slides 15-17 to show which bot they should be talking about on the screen. If you do this, you will need to time by some method that is not the timer on slide 14, and you will need to go back to slide 15-17 for the four corners activity."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "7d411e4f-0e3c-4e32-b6d6-1193621ac328",
-        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
-      }
-    },
-    {
-      "key": "50fee6c1-86e2-4025-a6ca-db7b2e3d7291",
-      "position": 40,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "50fee6c1-86e2-4025-a6ca-db7b2e3d7291",
-        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
-      }
-    },
-    {
-      "key": "513931b8-de0a-4fde-bdf0-7e7f881f7c3f",
-      "position": 41,
-      "properties": {
-        "description": "Next, you are going to get up out of your seat and position yourself in one of the four corners of the room that you see here based on whether you feel as though using this bot would support student learning. The responses range from Strongly Agree to Strongly Disagree. \n\nAfter you find the corner that aligns with your values, take some time to discuss **why** you chose to stand where you did and **how** your experiences with Bot Two affected your stance with those around you.\n\nI will ask one volunteer from each group to share out one reason with the whole class.\n",
-        "duration": "10",
-        "name": "Classroom Discussion",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "513931b8-de0a-4fde-bdf0-7e7f881f7c3f",
-        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
-      }
-    },
-    {
-      "key": "42564994-120a-4934-9e50-26cce948a170",
-      "position": 42,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:** Dan the Draft Developer",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Dan the Draft Developer: What Does it Do?***\n\nDan the Draft Developer will take a topic along with a bulleted list of main ideas as seen in the two sample inputs below:\n\n * Topic - College Admission Essay:\n   * I raised a large goat\n   * I make marmalade\n   * I have three hundred shoelaces in my collection\n\n* Topic - Persuasive Essay:\n   * School uniforms restrict students' freedom of expression\n   * School uniforms do not improve attendance, academic preparedness, or exam results\n   * Students prefer to wear their own outfits \n\n\nIt will output an essay draft centered around the topic, complete with an introductory and concluding paragraph. The body paragraphs of the essay will be centered around the main ideas that were provided.\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "42564994-120a-4934-9e50-26cce948a170",
-        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
-      }
-    },
-    {
-      "key": "fcb8b1e2-5c44-4cd7-acfd-98bbc96a4883",
-      "position": 43,
-      "properties": {
-        "description": "**Do This:** Do a Four Corners activity. \n* Each corner of the classroom should represent a different response (Strongly Agree / Agree / Disagree / Strongly Disagree). \n* Students walk to the corner that is associated with how much they agree or disagree with the statement “This persona would aid learning in a classroom.”\n* Students briefly discuss rationale for their choice with their other classmates that are in their similar corner.\n* One reporter from each corner shares a rationale for their choice.\n* Allow students to move and change their mind as they hear the rationale\n* Students return to their seats to write notes about the discussion.\n",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Asking Probing questions** - What if there is too much consensus?\n\nIf the student responses to this activity are not as diverse as one would expect, try asking students a few probing questions to elicit deeper thinking about the issue:\n\nQuestions we can ask about any of the chatbot personas:\n* How does Dan the Draft Developer support learning (or not)?\n* Would it be any different if you use this persona for an ungraded assignment vs. a graded assignment?\n* What if the class you are taking has nothing to do with writing? Is it OK to use the chatbot with this persona in that instance?\n* Would using a chatbot with this persona support a student who is an English Language Learner?\n( What if the chatbot produces incorrect information or information that is biased?\n* Does this chatbot mean that essays are going away? What would replace them? How would a teacher be able to assess your learning?\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "fcb8b1e2-5c44-4cd7-acfd-98bbc96a4883",
-        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
-      }
-    },
-    {
-      "key": "b6cdb2f8-5be6-4c53-9998-b6c601082a75",
-      "position": 44,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "b6cdb2f8-5be6-4c53-9998-b6c601082a75",
-        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
-      }
-    },
-    {
-      "key": "a069180c-2cb4-4277-a4b9-7d880db1a312",
-      "position": 45,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:** Belin the Brainstorming Bot",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Belin the Brainstorming Bot: What Does it Do?**\n\nBelin the Brainstorming Bot will take a topic / theme / issue (e.g. School Dress Code; Using Cellphones in School) and it will output two bulleted lists. One list will provide arguments that *defend* the issue and the other will provide arguments that *challenge* the issue. "
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "a069180c-2cb4-4277-a4b9-7d880db1a312",
-        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
-      }
-    },
-    {
-      "key": "22979caf-2e07-42ed-9f38-b94a91222072",
-      "position": 46,
-      "properties": {
-        "description": "**Do this:** Follow the same instructions for the 4 corners activity under Dan the Draft Developer with Belin the Brainstorming Bot.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Asking Probing Questions**  - What if there is too much consensus?\n\nThe teaching tip under the exploration of the four corners activity after Dan the Draft Developer has some questions that can be asked about *any* of the personas.\n\nYou may also use some of the questions that are more built for Belin the Brainstorming Bot:\n* Does this chatbot mean that humans no longer have to make arguments? \n* Might a human write more compellingly than a bot? Less?\n* Who might this bot support?\n* Would using this bot support a student who is an English Language Learner? Would it impede their ability to learn to express themselves in English?\n\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "22979caf-2e07-42ed-9f38-b94a91222072",
-        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
-      }
-    },
-    {
-      "key": "8ee53ff9-553b-4b17-961b-18532dc091c3",
-      "position": 47,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "8ee53ff9-553b-4b17-961b-18532dc091c3",
-        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
-      }
-    },
-    {
-      "key": "b59ae889-f81f-4cb5-a9a4-2b9e068cc428",
-      "position": 48,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:** Rashida the Revising Bot",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Rashida The Revising Robot: What Does it Do?**\n\nRashida The Revising Robot will give targeted suggestions for how students might improve the syntax, diction, and structure of their writing. It has been prompted to give advice that will make the input sound as though it was *written by a college professor.* \n\nThere might be great variability in the outputs that Rashida The Revising Robot gives depending on the length of the input and the complexity of the writing. This can range from very specific and targeted suggestions to generalities about good practice with writing.\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "b59ae889-f81f-4cb5-a9a4-2b9e068cc428",
-        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
-      }
-    },
-    {
-      "key": "b63cc9b8-70d3-42fe-9036-df3598b93ada",
-      "position": 49,
-      "properties": {
-        "description": "**Do This:** Follow the same instructions for the 4 corners activity under Dan the Draft Developer with Rashida.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Asking Probing questions** - What if there is too much consensus?\n\nThe teaching tip under the exploration of the four corners activity after Dan the Draft Developer has some questions that can be asked about any of the personas.\n\nYou may also use some of the questions that are more built for Rashida the Revising Robot, below:\n* How will the teacher know if the student needs help developing the skills the bot is revising for?\n* How is this similar to having a human edit a student’s work? How is it different?\n* Does it matter that the bot was prompted to “sound like a professor”? Would you feel differently about this bot if it was prompted to sound like a middle school student?\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "b63cc9b8-70d3-42fe-9036-df3598b93ada",
-        "lesson_activity.key": "3042ea20-9a72-4615-bdb7-430ec112dad2"
-      }
-    },
-    {
-      "key": "5ff8da47-87eb-433d-a2b9-bdad610f6c10",
+      "key": "0c8b742e-65f7-40da-a31c-0c21ce91e959",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:** Writing My AI Values",
-        "duration": "5",
-        "name": "Write Your Values",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "You may wish to pass out the [r ai_chatbot_prompting_guide_1/gen-ai-humanities/unversioned] to help students develop possible prompts, though it may be overwhelming."
-          }
-        ]
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What is one way you plan to use AI tools like ChatGPT to improve your writing while keeping it original and ethical?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should share practical strategies for integrating AI into their writing process in a way that enhances their work without compromising originality or ethical standards, such as for idea generation, grammar checks, or refining their writing, while ensuring they maintain their own voice and avoid plagiarism. Listen for reflections on balancing AI assistance with personal effort, and how students plan to credit or acknowledge AI contributions appropriately.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 4 to complete the End of Lesson survey."
       },
       "seeding_key": {
-        "activity_section.key": "5ff8da47-87eb-433d-a2b9-bdad610f6c10",
-        "lesson_activity.key": "af8c6013-4159-4c51-a98b-93acc0859ee3"
-      }
-    },
-    {
-      "key": "533b1266-26cd-42f5-a92b-1d13da2b5fa1",
-      "position": 2,
-      "properties": {
-        "description": "Based on your experience today, draft two initial statements that you feel should be included in a My AI Values draft. They can be generalized or quite specific. For example, you may think that it is helpful to generate drafts when the lesson is about the arguments and not about how you write them, but limiting when you are learning to write an essay.\n\nUse your notes from the activity to help guide your drafting of these statements. \n\nFor each value statement, write an example prompt related to that value.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "533b1266-26cd-42f5-a92b-1d13da2b5fa1",
-        "lesson_activity.key": "af8c6013-4159-4c51-a98b-93acc0859ee3"
-      }
-    },
-    {
-      "key": "926b2923-9307-46ba-ae48-336396cd88de",
-      "position": 3,
-      "properties": {
-        "description": "**Do This:** Direct students to complete the “Wrap Up Values Statement” section of their lesson activity guides.",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "Use these initial student responses as a formative assessment to determine how students are understanding and progressing in their ideas of what their AI values are and how they apply to work in an ELA classroom. \n"
-          },
-          {
-            "type": "teachingTip",
-            "markdown": "**Timing**: It is possible this section will take more than 5 minutes. It is ok not to get to the discussion. You may also just have students share their values, and have the rest of the class consider if their prompt would work with this value."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "926b2923-9307-46ba-ae48-336396cd88de",
-        "lesson_activity.key": "af8c6013-4159-4c51-a98b-93acc0859ee3"
-      }
-    },
-    {
-      "key": "01399a23-b259-497d-82fb-0b73cd6104d4",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "01399a23-b259-497d-82fb-0b73cd6104d4",
-        "lesson_activity.key": "af8c6013-4159-4c51-a98b-93acc0859ee3"
-      }
-    },
-    {
-      "key": "a699e36f-1e1f-4121-a3d4-e6bba1ec87a8",
-      "position": 5,
-      "properties": {
-        "description": "**Discuss:** Use the Snowball protocol to have students build a values statement as a class.\n* Students share their values in pairs for a moment, and come up with a values statement for the pair\n* Pair up pairs of students to share their paired values, and then come up with a values statement for the four of them\n* Continue 3-4 times (or what you have time for / is feasible)\n* When groups have their final values statements, share with the class.\n",
-        "duration": "5",
-        "name": "Share Your Values",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Extension:** In this activity, the students have come together to pick one Values Statement. If you have extra time and would like to make their values statements into a more official class document. \n\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "a699e36f-1e1f-4121-a3d4-e6bba1ec87a8",
+        "activity_section.key": "0c8b742e-65f7-40da-a31c-0c21ce91e959",
         "lesson_activity.key": "af8c6013-4159-4c51-a98b-93acc0859ee3"
       }
     },
@@ -1307,18 +762,6 @@
       }
     },
     {
-      "name": "[KEY] Wrting Process Activity Guide Exemplar",
-      "url": "https://docs.google.com/document/d/1VeOt_5jbygIID0NkCFmtEwlsjC8QKDFxMZ35bu_n5iI/",
-      "key": "_key_wrting_process_activity_guide_exemplar",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_key_wrting_process_activity_guide_exemplar"
-      }
-    },
-    {
       "name": "AI Chatbot Prompting Guide",
       "url": "https://docs.google.com/document/d/16Z61Blt2ZcaKkjM9UURl_D8c2VKjz40dovTLEXWgxlE/",
       "key": "ai_chatbot_prompting_guide",
@@ -1328,42 +771,6 @@
       },
       "seeding_key": {
         "resource.key": "ai_chatbot_prompting_guide"
-      }
-    },
-    {
-      "name": "AI Chatbot Prompting Guide",
-      "url": "https://docs.google.com/document/d/16Z61Blt2ZcaKkjM9UURl_D8c2VKjz40dovTLEXWgxlE/",
-      "key": "ai_chatbot_prompting_guide_1",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "ai_chatbot_prompting_guide_1"
-      }
-    },
-    {
-      "name": "Bot Personas Digital Resource",
-      "url": "https://docs.google.com/presentation/d/1ElNaBTTArvsfqE8lCBlBj_1XEwiq2Vwz3-26vBuj31c/",
-      "key": "bot_personas_guide",
-      "properties": {
-        "audience": "Student",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "bot_personas_guide"
-      }
-    },
-    {
-      "name": "Chatbot Persona Exploration Jigsaw",
-      "url": "https://drive.google.com/file/d/1xmov023yxjcMZIvThelZFBlUKvWZ1sF5/view",
-      "key": "chatbot_persona_exploration_jigsaw",
-      "properties": {
-        "audience": "Student",
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "chatbot_persona_exploration_jigsaw"
       }
     },
     {
@@ -1535,6 +942,18 @@
       }
     },
     {
+      "name": "The Writing Process",
+      "url": "https://docs.google.com/presentation/d/1iaCWyWDm7NgI7UgNqoeoQeQ6MrryrEyvp34fQxtAnhY/edit?usp=sharing",
+      "key": "the_writing_process",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "the_writing_process"
+      }
+    },
+    {
       "name": "Verify Quotes Activity Guide",
       "url": "https://docs.google.com/document/d/1jeFAxPKQbConJ0yEhilWDAGkti7PbqjW2Y4STcLwN5o/",
       "key": "verify_quotes_activity_guide",
@@ -1545,57 +964,9 @@
       "seeding_key": {
         "resource.key": "verify_quotes_activity_guide"
       }
-    },
-    {
-      "name": "Writing Process Activity Guide",
-      "url": "https://docs.google.com/document/d/1u44qVE8kZD584Dx3NN0GGH4zQK9QNhh3BUfMzrcvkCk/",
-      "key": "writing_process_activity_guide",
-      "properties": {
-        "audience": "Student",
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "writing_process_activity_guide"
-      }
-    },
-    {
-      "name": "Writing Process Slides",
-      "url": "https://docs.google.com/presentation/d/10zFk07WezfMl22jCe8j7R1RjCo8vCI7YTJePN8-nnDw/",
-      "key": "writing_process_slides",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "writing_process_slides"
-      }
     }
   ],
   "lessons_resources": [
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "_key_wrting_process_activity_guide_exemplar"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "ai_chatbot_prompting_guide_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "bot_personas_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "chatbot_persona_exploration_jigsaw"
-      }
-    },
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -1617,13 +988,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
-        "resource.key": "writing_process_activity_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "writing_process_slides"
+        "resource.key": "the_writing_process"
       }
     },
     {
@@ -1724,6 +1089,36 @@
   ],
   "vocabularies": [
     {
+      "key": "artificial_intelligence_ai_",
+      "word": "artificial intelligence (AI)",
+      "definition": "machines that can mimic human intelligence to perform tasks",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "artificial_intelligence_ai_"
+      }
+    },
+    {
+      "key": "generative_ai",
+      "word": "generative AI",
+      "definition": "an AI that can create content, such as text, images, and music",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "generative_ai"
+      }
+    },
+    {
+      "key": "large_language_model_llm_",
+      "word": "large language model (LLM)",
+      "definition": "a general purpose form of AI that is trained on a very, very large body of knowledge",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "large_language_model_llm_"
+      }
+    },
+    {
       "key": "large_language_models",
       "word": "Large Language Models",
       "definition": "Trained models that can recognize, summarize, translate, predict, and generate text in a human-like fashion",
@@ -1732,13 +1127,41 @@
       "seeding_key": {
         "vocabulary.key": "large_language_models"
       }
+    },
+    {
+      "key": "prompt_engineering",
+      "word": "prompt engineering",
+      "definition": "crafting specific and clear instructions (prompts) for LLMs",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "prompt_engineering"
+      }
     }
   ],
   "lessons_vocabularies": [
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
-        "vocabulary.key": "large_language_models"
+        "vocabulary.key": "artificial_intelligence_ai_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "generative_ai"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "large_language_model_llm_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "prompt_engineering"
       }
     },
     {
@@ -1752,16 +1175,6 @@
 
   ],
   "objectives": [
-    {
-      "key": "2f252494-0e66-42ab-b9b9-ec6c48f5bfe0",
-      "properties": {
-        "description": "Build Values for using AI with your class"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "objective.key": "2f252494-0e66-42ab-b9b9-ec6c48f5bfe0"
-      }
-    },
     {
       "key": "9f8ce5d8-bb91-452b-bb66-5542c01b9dde",
       "properties": {
@@ -1785,7 +1198,7 @@
     {
       "key": "d299e860-4291-438c-924c-2df2e1c4e0f3",
       "properties": {
-        "description": "Prompt a chatbot to help brainstorm, draft or revise an essay"
+        "description": "Assess the ethical implications of using AI for writing assistance, considering issues such as originality, intellectual integrity, and the balance between human creativity and AI assistance"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -1795,7 +1208,7 @@
     {
       "key": "f78505db-7830-4415-b3ac-5e0380d8c692",
       "properties": {
-        "description": "Discuss with your classmates which of these uses supported your learning, versus detracted from it, and why"
+        "description": "Craft effective prompts to interact with LLMs to generate useful and relevant responses for various writing tasks"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
