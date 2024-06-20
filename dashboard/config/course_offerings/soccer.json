@@ -1,7 +1,6 @@
 {
   "key": "soccer",
   "display_name": "soccer",
-  "category": "other",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": null,
