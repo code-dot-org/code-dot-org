@@ -265,6 +265,7 @@ export interface ExtraLinksLevelbuilderData {
     script: string;
     path: string;
   }[];
+  is_standalone_project: boolean;
 }
 export interface ExtraLinksProjectValidatorData {
   owner_info: {storage_id: number; name: string};

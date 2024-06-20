@@ -63,7 +63,7 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
           setProjectValidatorLinkData(response.value);
         });
       } catch (e) {
-        console.error('Error fetching levelbuilder extra links', e);
+        console.error('Error fetching project validator extra links', e);
       }
     }
   }, [data, levelId, channelId]);

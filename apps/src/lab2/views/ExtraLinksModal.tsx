@@ -9,7 +9,6 @@ import {
   ExtraLinksProjectValidatorData,
 } from '../types';
 import moduleStyles from './extra-links.module.scss';
-import {LAB2_STANDALONE_PROJECT_LEVEL_NAMES} from '../constants';
 
 // Extra Links modal. This is used to display helpful links for levelbuilders, and should
 // be extended to also include links for project validators as well. It replaces the haml
@@ -41,9 +40,8 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
   const channelId: string | undefined = useAppSelector(
     state => state.lab.channel && state.lab.channel.id
   );
-  const levelName = levelbuilderLinkData.level_name;
-  const isStandaloneProject =
-    LAB2_STANDALONE_PROJECT_LEVEL_NAMES.includes(levelName);
+
+  const isStandaloneProject = levelbuilderLinkData.is_standalone_project;
 
   useEffect(() => {
     setClonedLevelName(levelbuilderLinkData.level_name);

@@ -491,7 +491,8 @@ class LevelsController < ApplicationController
   end
 
   # GET /levels/:id/extra_links
-  # Get the extra links for the level, for use by levelbuilders.
+  # Get the "extra links" for the level, for use by levelbuilders and project validators.
+  # Project validators can view a subset of the links/information.
   # This is used by lab2 levels that cannot use the haml "extra links" box
   # as that box will not refresh when changing levels.
   def extra_links
@@ -559,7 +560,8 @@ class LevelsController < ApplicationController
       can_clone: can?(:clone, @level),
       can_delete: can?(:delete, @level),
       level_name: @level.name,
-      script_level_path_links: script_level_path_links
+      script_level_path_links: script_level_path_links,
+      is_standalone_project: is_standalone_project
     }
   end
 
