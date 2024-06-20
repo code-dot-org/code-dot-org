@@ -17,11 +17,15 @@ Parameters:
     Type: String
   # MySQL user must have granted REPLICATION CLIENT and REPLICATION SLAVE permissions.
   # Ref: http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MySQL.html#CHAP_Source.MySQL.Security
+  # and must have SELECT permissions on all tables and must have permissions to connect to the Production Reporting
+  # RDS Proxy.
   RDSUsername:
     Type: String
   RDSPassword:
     Type: String
     NoEcho: true
+  # Production MySQL database servername to use for exporting data to Redshift. Typically set to production Reporting
+  # RDS Proxy endpoint.
   RDSHost:
     Type: String
   # Typically in the form: `cluster-[random-AWS-assigned-string].[region].rds.amazonaws.com` without leading dot.
@@ -34,7 +38,7 @@ Parameters:
     Default: dashboard
   RedshiftUsername:
     Type: String
-    Default: dev
+    Default: etl_client
   RedshiftPassword:
     Type: String
     NoEcho: true
@@ -97,13 +101,12 @@ Resources:
             Resource:
               - 'arn:aws:s3:::cdo-data-sharing-internal/*'
               - 'arn:aws:s3:::cdo-data-sharing-internal'
-  ProductionMySQLDatabaseReportingEndpoint:
+  MySQLDatabaseSourceEndpoint:
     Type: AWS::DMS::Endpoint
     Properties:
       EndpointIdentifier: !Sub "MySQLReportingEndpoint-${AWS::StackName}"
       EndpointType: source
       EngineName: aurora
-      # The Stack Parameter RDSHost must be set to the domain name of the production RDS Proxy reporting endpoint.
       ServerName: !Ref RDSHost
       Port: 3306
       # The RDSUsername and RDSPassword Stack Parameters must be set to a read only user that can authenticate on the
@@ -147,7 +150,7 @@ Resources:
       MigrationType: full-load
       ReplicationInstanceArn: !Ref DMSReplicationInstance
       ReplicationTaskIdentifier: <%= task_name %>
-      SourceEndpointArn: !Ref ProductionMySQLDatabaseReportingEndpoint
+      SourceEndpointArn: !Ref MySQLDatabaseSourceEndpoint
       TargetEndpointArn: !Ref RedshiftEndpoint
       ReplicationTaskSettings: !Sub |
         <%= YAML.load(erb_file(aws_dir('dms/replication-task-settings.yml.erb'))).to_json %>
