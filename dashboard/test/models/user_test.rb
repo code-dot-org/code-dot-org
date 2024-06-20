@@ -4018,6 +4018,10 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'summarize' do
+    latest_permission_request_sent_at = 1.month.ago
+
+    create(:parental_permission_request, user: @student, updated_at: latest_permission_request_sent_at)
+
     assert_equal(
       {
         id: @student.id,
@@ -4040,6 +4044,7 @@ class UserTest < ActiveSupport::TestCase
         ai_tutor_access_denied: !!@student.ai_tutor_access_denied,
         at_risk_age_gated: false,
         child_account_compliance_state: @student.child_account_compliance_state,
+        latest_permission_request_sent_at: latest_permission_request_sent_at,
       },
       @student.summarize
     )

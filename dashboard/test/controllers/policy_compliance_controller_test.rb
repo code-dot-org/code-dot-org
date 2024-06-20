@@ -246,10 +246,7 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
         resends_sent: resends_sent
       )
 
-      Queries::ChildAccount.
-        expects(:latest_permission_request).
-        with(user).
-        returns(parental_permission_request)
+      user.expects(:latest_parental_permission_request).returns(parental_permission_request)
 
       sign_in user
       get policy_compliance_pending_permission_request_path, as: :json
@@ -266,10 +263,7 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
     test 'json format - returns no content when no pending permission request' do
       user = create(:young_student)
 
-      Queries::ChildAccount.
-        expects(:latest_permission_request).
-        with(user).
-        returns(nil)
+      user.expects(:latest_parental_permission_request).returns(nil)
 
       sign_in user
       get policy_compliance_pending_permission_request_path, as: :json
