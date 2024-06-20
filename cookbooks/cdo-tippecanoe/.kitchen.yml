@@ -13,6 +13,14 @@ platforms:
     driver:
       image: dokken/ubuntu-20.04
       privileged: true
+  - name: ubuntu-22.04
+    driver:
+      image: dokken/ubuntu-22.04
+      privileged: true
+  - name: ubuntu-24.04
+    driver:
+      image: dokken/ubuntu-24.04
+      privileged: true
 suites:
   - name: default
     run_list:
