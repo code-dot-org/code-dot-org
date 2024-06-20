@@ -16,13 +16,10 @@ const SuggestedPrompt: React.FunctionComponent<SuggestedPromptProps> = ({
   onClick,
   label,
   show,
-}) => (
-  <>
-    {show ? (
-      <div onClick={onClick} className={moduleStyles.prompt}>
-        <span>{label}</span>
-      </div>
-    ) : null}
-  </>
-);
+}) =>
+  !show ? null : (
+    <div onClick={onClick} className={moduleStyles.prompt}>
+      <span>{label}</span>
+    </div>
+  );
 export default SuggestedPrompt;

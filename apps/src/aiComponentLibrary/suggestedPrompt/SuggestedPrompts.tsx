@@ -14,17 +14,15 @@ interface SuggestedPromptsProps {
 
 const SuggestedPrompts: React.FC<SuggestedPromptsProps> = ({
   suggestedPrompts,
-}) => {
-  return (
-    <div className={moduleStyles.prompts}>
-      {suggestedPrompts.map(prompt => (
-        <SuggestedPrompt
-          onClick={prompt.onClick}
-          label={prompt.label}
-          show={prompt.show}
-        />
-      ))}
-    </div>
-  );
-};
+}) => (
+  <div className={moduleStyles.prompts}>
+    {suggestedPrompts.map(prompt => (
+      <SuggestedPrompt
+        onClick={prompt.onClick}
+        label={prompt.label}
+        show={prompt.show}
+      />
+    ))}
+  </div>
+);
 export default SuggestedPrompts;

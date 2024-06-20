@@ -105,11 +105,7 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
     },
   ];
 
-  return (
-    <>
-      <SuggestedPrompts suggestedPrompts={suggestedPrompts} />
-    </>
-  );
+  return <SuggestedPrompts suggestedPrompts={suggestedPrompts} />;
 };
 
 export default AITutorSuggestedPrompts;
