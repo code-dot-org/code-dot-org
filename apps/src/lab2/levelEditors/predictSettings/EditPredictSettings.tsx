@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import {LevelPredictSettings} from '../types';
+import Typography from '@cdo/apps/componentLibrary/typography/Typography';
+import moduleStyles from './edit-predict-settings.module.scss';
 
 interface EditPredictSettingsProps {
   initialSettings: LevelPredictSettings;
@@ -8,8 +10,9 @@ interface EditPredictSettingsProps {
 const EditPredictSettings: React.FunctionComponent<
   EditPredictSettingsProps
 > = ({initialSettings}) => {
-  const [predictSettings, setPredictSettings] =
-    useState<LevelPredictSettings>(initialSettings);
+  const [predictSettings, setPredictSettings] = useState<LevelPredictSettings>(
+    initialSettings || {is_predict_level: false}
+  );
 
   const handlePredictEnabledToggle = () => {
     setPredictSettings({
@@ -21,15 +24,23 @@ const EditPredictSettings: React.FunctionComponent<
   return (
     <div>
       <input
-        id="level_is_predict_level"
-        name={'level[is_predict_level]'}
-        type="checkbox"
-        checked={predictSettings.is_predict_level}
-        onChange={handlePredictEnabledToggle}
+        id="level_predict_settings"
+        name={'level[predict_settings]'}
+        type="hidden"
+        value={JSON.stringify(predictSettings)}
       />
-      <label htmlFor="level_is_predict_level">
-        Mark level as predict level
+      <label className={moduleStyles.checkboxLabel}>
+        <input
+          id="is_predict_level"
+          type="checkbox"
+          onChange={handlePredictEnabledToggle}
+          checked={predictSettings.is_predict_level}
+        />
+        <Typography semanticTag="span" visualAppearance="body-three">
+          Set this level as a predict level
+        </Typography>
       </label>
+      {predictSettings?.is_predict_level && <div>Hello</div>}
     </div>
   );
 };

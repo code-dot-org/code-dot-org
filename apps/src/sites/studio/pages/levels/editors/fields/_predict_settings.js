@@ -6,13 +6,9 @@ import EditPredictSettings from '@cdo/apps/lab2/levelEditors/predictSettings/Edi
 
 $(document).ready(function () {
   const initialSettings = getScriptData('predictsettings');
-  const isPredictLevel = getScriptData('ispredictlevel');
 
   ReactDOM.render(
-    <EditPredictSettings
-      isPredictLevel={isPredictLevel}
-      initialSettings={initialSettings}
-    />,
+    <EditPredictSettings initialSettings={initialSettings} />,
     document.getElementById('predict-settings-container')
   );
 });
