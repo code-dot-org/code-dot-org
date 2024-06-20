@@ -1,7 +1,6 @@
 {
   "key": "outbreak",
   "display_name": "Outbreak Simulator",
-  "category": "hoc",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": null,

@@ -46,6 +46,7 @@ import {
   getCurrentTimestamp,
   hasFilledOutModelCard,
 } from './utils';
+import {validateModelId} from '../views/modelCustomization/utils';
 
 export interface AichatState {
   // All user and assistant chat messages - includes too personal and inappropriate user messages.
@@ -484,6 +485,11 @@ const aichatSlice = createSlice({
         }
       }
 
+      // Make sure model ID is valid
+      reconciledAiCustomizations.selectedModelId = validateModelId(
+        reconciledAiCustomizations.selectedModelId
+      );
+
       state.savedAiCustomizations = reconciledAiCustomizations;
       state.currentAiCustomizations = reconciledAiCustomizations;
       state.fieldVisibilities =
@@ -497,6 +503,11 @@ const aichatSlice = createSlice({
 
       const defaultAiCustomizations: AiCustomizations =
         levelAichatSettings?.initialCustomizations || EMPTY_AI_CUSTOMIZATIONS;
+
+      // Make sure model ID is valid
+      defaultAiCustomizations.selectedModelId = validateModelId(
+        defaultAiCustomizations.selectedModelId
+      );
 
       state.savedAiCustomizations = defaultAiCustomizations;
       state.currentAiCustomizations = defaultAiCustomizations;
