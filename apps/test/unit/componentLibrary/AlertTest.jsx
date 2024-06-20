@@ -60,7 +60,7 @@ describe('Design System - Alert', () => {
 
     render(<Alert text="Closable Alert" onClose={spyOnClose} />);
 
-    const closeButton = screen.getByText('x');
+    const closeButton = screen.getByRole('button', {name: 'Close alert'});
     await user.click(closeButton);
 
     expect(spyOnClose).to.have.been.calledOnce;
@@ -72,7 +72,7 @@ describe('Design System - Alert', () => {
     const link = {href: 'https://google.com/', children: 'Click here'};
     const icon = {iconName: 'check-circle'};
 
-    render(
+    const {container} = render(
       <Alert
         text="Full Alert"
         icon={icon}
@@ -82,13 +82,13 @@ describe('Design System - Alert', () => {
       />
     );
 
+    const iconElement = container.querySelector('.fa-check-circle');
+
     expect(screen.getByText('Full Alert')).to.exist;
     expect(screen.getByText('Click here')).to.exist;
-    expect(screen.getByTestId('font-awesome-v6-icon').className).to.contain(
-      'fa-check-circle'
-    );
+    expect(iconElement).to.exist;
 
-    const closeButton = screen.getByRole('button', {name: /x/i});
+    const closeButton = screen.getByRole('button', {name: 'Close alert'});
     await user.click(closeButton);
 
     expect(spyOnClose).to.have.been.calledOnce;
