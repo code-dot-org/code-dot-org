@@ -121,7 +121,7 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
 
         Honeybadger.expects(:notify).with(
           error,
-          error_message: 'Failed to lock out user',
+          error_message: 'Failed to apply the Child Account Policy to the user',
           context: {
             user_id: user.id,
             request_path: request_path,

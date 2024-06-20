@@ -360,7 +360,7 @@ class ApplicationController < ActionController::Base
   rescue StandardError => exception
     Honeybadger.notify(
       exception,
-      error_message: 'Failed to lock out user',
+      error_message: 'Failed to apply the Child Account Policy to the user',
       context: {
         user_id: current_user.id,
         request_path: request.path,
