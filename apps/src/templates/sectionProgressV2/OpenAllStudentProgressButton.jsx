@@ -131,6 +131,9 @@ OpenAllStudentProgressButton.propTypes = {
   collapseMetadataForStudents: PropTypes.func,
 };
 
+export const UnconnectedOpenAllStudentProgressButton =
+  OpenAllStudentProgressButton;
+
 export default connect(
   state => ({
     students: state.teacherSections.selectedStudents,
