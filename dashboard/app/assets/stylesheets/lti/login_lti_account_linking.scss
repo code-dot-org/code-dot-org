@@ -25,6 +25,13 @@
   color: $white;
 }
 
+#flash-messages {
+  text-align: center;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .call-to-action-container {
   display: flex;
   justify-content: space-between;
