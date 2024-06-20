@@ -43,7 +43,7 @@ export async function postOpenaiChatCompletion(
   levelId?: number,
   tutorType?: AITutorTypesValue,
   levelInstructions?: string,
-  skipPIIFilter?: boolean,
+  skipPIIFilter?: boolean
 ): Promise<OpenaiChatCompletionMessage | null> {
   const payload = levelId
     ? {
@@ -51,9 +51,14 @@ export async function postOpenaiChatCompletion(
         messages: messagesToSend,
         type: tutorType,
         levelInstructions,
-        skipPIIFilter
+        skipPIIFilter,
       }
-    : {messages: messagesToSend, type: tutorType, levelInstructions, skipPIIFilter};
+    : {
+        messages: messagesToSend,
+        type: tutorType,
+        levelInstructions,
+        skipPIIFilter,
+      };
 
   const response = await HttpClient.post(
     CHAT_COMPLETION_URL,
@@ -97,7 +102,7 @@ export async function getChatCompletionMessage(
 
   // Some level instructions include data that looks like PII, optionally skip the PII filter for those levels.
   // For example s/csa6-2023/lessons/6/levels/7/sublevel/4
-  const skipPIIFilter = levelInstructions?.includes("email");
+  const skipPIIFilter = levelInstructions?.includes('email');
 
   try {
     response = await postOpenaiChatCompletion(
