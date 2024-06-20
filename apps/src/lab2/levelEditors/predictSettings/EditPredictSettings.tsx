@@ -4,6 +4,8 @@ import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox';
 import TextField from '@cdo/apps/componentLibrary/textField/TextField';
 import moduleStyles from './edit-predict-settings.module.scss';
+import {BodyThreeText} from '@cdo/apps/componentLibrary/typography';
+import {Button} from '@cdo/apps/componentLibrary/button';
 
 interface EditPredictSettingsProps {
   initialSettings: LevelPredictSettings;
@@ -31,6 +33,27 @@ const EditPredictSettings: React.FunctionComponent<
     setPredictSettings({
       ...predictSettings,
       question_type: e.target.value as PredictQuestionType,
+    });
+  };
+
+  const handleToggleMultipleChoiceAnswer = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const newCorrectAnswers = predictSettings.multiple_choice_answers
+      ? [...predictSettings.multiple_choice_answers]
+      : [];
+    if (e.target.checked && !newCorrectAnswers.includes(e.target.value)) {
+      newCorrectAnswers.push(e.target.value);
+    } else if (
+      !e.target.checked &&
+      newCorrectAnswers.includes(e.target.value)
+    ) {
+      newCorrectAnswers.splice(newCorrectAnswers.indexOf(e.target.value), 1);
+    }
+    console.log({newCorrectAnswers});
+    setPredictSettings({
+      ...predictSettings,
+      multiple_choice_answers: newCorrectAnswers,
     });
   };
 
@@ -89,11 +112,94 @@ const EditPredictSettings: React.FunctionComponent<
   };
 
   const renderMultipleChoiceOptions = () => {
-    return <div>hi multiple choice</div>;
+    if (!predictSettings.multiple_choice_options) {
+      setPredictSettings({
+        ...predictSettings,
+        multiple_choice_options: [''],
+      });
+    }
+    return (
+      <div>
+        <label className={moduleStyles.fieldArea}>
+          <div className={moduleStyles.label}>Multiple Choice Options</div>
+          {predictSettings.multiple_choice_options &&
+            predictSettings.multiple_choice_options.map((option, index) => (
+              <div key={index} className={moduleStyles.multipleChoiceOption}>
+                <input
+                  type="text"
+                  value={option}
+                  onChange={e => {
+                    const newOptions = [
+                      ...predictSettings.multiple_choice_options!,
+                    ];
+                    newOptions[index] = e.target.value;
+                    setPredictSettings({
+                      ...predictSettings,
+                      multiple_choice_options: newOptions,
+                    });
+                  }}
+                  name={`multiple_choice_option_${index}`}
+                />
+                <Checkbox
+                  label="Mark as correct answer"
+                  checked={
+                    predictSettings.multiple_choice_answers?.includes(option) ||
+                    false
+                  }
+                  onChange={handleToggleMultipleChoiceAnswer}
+                  name={`mark_correct_answer_${index}`}
+                  value={option}
+                />
+                {index > 0 && (
+                  <Button
+                    onClick={() => {
+                      const newOptions = [
+                        ...predictSettings.multiple_choice_options!,
+                      ];
+                      newOptions.splice(index, 1);
+                      setPredictSettings({
+                        ...predictSettings,
+                        multiple_choice_options: newOptions,
+                      });
+                    }}
+                    ariaLabel={'Delete option'}
+                    color={'black'}
+                    size={'xs'}
+                    isIconOnly={true}
+                    icon={{iconName: 'trash'}}
+                  />
+                )}
+              </div>
+            ))}
+          <Button
+            onClick={() =>
+              setPredictSettings({
+                ...predictSettings,
+                multiple_choice_options: [
+                  ...predictSettings.multiple_choice_options!,
+                  '',
+                ],
+              })
+            }
+            isIconOnly={true}
+            color={'black'}
+            size={'s'}
+            icon={{iconName: 'plus'}}
+            ariaLabel={'Add Option'}
+          />
+        </label>
+      </div>
+    );
   };
 
   return (
     <div>
+      <BodyThreeText>
+        Predict levels are read only for students. Either a free response or
+        multiple choice question is shown to students in the instructions panel.
+        The student must answer the question before they can run the code.
+        Specify the question in the long instructions.
+      </BodyThreeText>
       <input
         id="level_predict_settings"
         name={'level[predict_settings]'}

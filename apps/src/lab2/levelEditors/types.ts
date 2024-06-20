@@ -4,7 +4,7 @@ export interface LevelPredictSettings {
   solution?: string | string[];
   question_type?: PredictQuestionType;
   multiple_choice_options?: string[];
-  single_correct_answer?: boolean;
+  multiple_choice_answers?: string[];
   allow_multiple_attempts?: boolean;
   free_response_height?: number;
 }

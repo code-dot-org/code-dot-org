@@ -9,3 +9,10 @@
   line-height: 1.64;
   margin-bottom: .37rem;
 }
+
+.multipleChoiceOption {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin: 5px 0;
+}
