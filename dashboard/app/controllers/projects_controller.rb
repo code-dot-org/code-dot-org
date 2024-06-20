@@ -577,6 +577,9 @@ class ProjectsController < ApplicationController
   # this box will not refresh when changing levels.
   def extra_links
     src_channel_id = params[:channel_id]
+    if src_channel_id == "undefined"
+      return render json: {error: 'No channel id provided.'}, status: 200
+    end
     project_info = {}
     owner_info = {}
     owner_info['storage_id'], project_info['id'] = storage_decrypt_channel_id(src_channel_id)

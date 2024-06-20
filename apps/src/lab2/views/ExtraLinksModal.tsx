@@ -45,7 +45,9 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
   }, [levelLinkData]);
 
   useEffect(() => {
-    setFeaturedProjectStatus(projectLinkData?.project_info.featured_status);
+    if (projectLinkData?.project_info) {
+      setFeaturedProjectStatus(projectLinkData?.project_info.featured_status);
+    }
   }, [projectLinkData]);
 
   const onClose = () => {
