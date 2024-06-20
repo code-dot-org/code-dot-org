@@ -4,6 +4,7 @@ import {Heading3, StrongText} from '@cdo/apps/componentLibrary/typography';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import Button from '@cdo/apps/templates/Button';
 import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
+import {FeaturedProjectStatus} from '@cdo/generated-scripts/sharedConstants';
 import {ExtraLinksLevelData, ExtraLinksProjectData} from '../types';
 import moduleStyles from './extra-links.module.scss';
 
@@ -109,7 +110,7 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
         true,
         {contentType: 'application/json;charset=UTF-8'}
       );
-      setFeaturedProjectStatus('bookmarked');
+      setFeaturedProjectStatus(FeaturedProjectStatus.bookmarked);
     } catch (e) {
       console.log('Error bookmarking project', e);
     }

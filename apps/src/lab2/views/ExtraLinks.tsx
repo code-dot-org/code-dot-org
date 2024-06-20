@@ -38,6 +38,8 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
     const permissionData = data
       ? (data as PermissionResponse)
       : {permissions: []};
+    setLevelLinkData(null);
+    setProjectLinkData(null);
     if (
       permissionData.permissions.includes(PERMISSIONS.LEVELBUILDER) ||
       permissionData.permissions.includes(PERMISSIONS.PROJECT_VALIDATOR)
