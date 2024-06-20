@@ -6,9 +6,12 @@ module ChildAccountHelper
   def parental_permission_banner_data(user, request)
     student_lockout_date = Policies::ChildAccount.lockout_date(user, approximate: true)
 
-    student_lockout_date ||= Cpa::ALL_USER_LOCKOUT_DATE if request.params.key?(:show_parental_permission_banner)
-
-    return unless student_lockout_date
+    if request.params.key?(:show_parental_permission_banner)
+      student_lockout_date ||= Cpa::ALL_USER_LOCKOUT_DATE
+    else
+      return unless student_lockout_date
+      return unless DCDO.get('cap_student_warnings_enabled', false)
+    end
 
     {
       lockoutDate: student_lockout_date.iso8601,
@@ -36,6 +39,7 @@ module ChildAccountHelper
       student_lockout_date ||= Cpa::ALL_USER_LOCKOUT_DATE
     else
       return unless student_lockout_date
+      return unless DCDO.get('cap_student_warnings_enabled', false)
       return if Queries::ChildAccount.latest_permission_request(user)
     end
 
