@@ -42,7 +42,7 @@ require_relative '../../dashboard/config/environment'
 options.unit_names.each do |unit_nm|
   unit_to_del = Unit.find_by(name: unit_nm)
   raise "Unit with name #{unit_nm} not found" if unit_to_del.nil?
-  raise "Only units in_development can be deleted as they wouldn't have usage and hence any DB references." unless unit_to_del.published_state == "in_development"
+  raise "Published units (state set as 'Stable') cannot be deleted as they could have active sections and progress." unless unit_to_del.published_state != "stable"
 
   assigned_section_count = Section.where(script_id: unit_to_del.id).count
   raise "Unit is currently assigned to some sections, deleting will break loading dashboard for those teachers." unless assigned_section_count == 0
