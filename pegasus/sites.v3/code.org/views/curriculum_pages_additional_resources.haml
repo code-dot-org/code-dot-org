@@ -1,0 +1,37 @@
+:ruby
+  additional_resources = [
+    {
+      title: hoc_s('curricula_pages.additional_resources.catalog.title'),
+      image: "/images/course-catalog-illustration.png",
+      desc: hoc_s('curricula_pages.additional_resources.catalog.desc'),
+      url: CDO.studio_url("/catalog"),
+      button_label: hoc_s('curricula_pages.additional_resources.catalog.button')
+    },
+    {
+      title: hoc_s('curricula_pages.additional_resources.self_paced.title'),
+      image: "/images/course-catalog-illustration.png",
+      desc: hoc_s('curricula_pages.additional_resources.self_paced.desc'),
+      url: "/online-pl",
+      button_label: hoc_s('curricula_pages.additional_resources.self_paced.button')
+    },
+    {
+      title: hoc_s(:teach_page_additional_materials_list_heading_02),
+      image: "/images/course-catalog-illustration.png",
+      desc: hoc_s(:admins_page_resources_desc_videos),
+      url: is_elementary_page ? "/professional-learning/elementary" : "/professional-learning/middle-high",
+      button_label: hoc_s('curricula_pages.additional_resources.self_paced.button')
+    },
+  ]
+
+.action-block__wrapper.action-block__wrapper--three-col
+  - additional_resources.each do |resource_item|
+    .action-block.action-block--one-col.flex-space-between
+      .content-wrapper
+        %h3
+          = resource_item[:title]
+        %img{src: resource_item[:image], alt: ""}
+        %p
+          = resource_item[:desc]
+      .content-footer
+        %a.link-button{href: resource_item[:url]}
+          = resource_item[:button_label]
