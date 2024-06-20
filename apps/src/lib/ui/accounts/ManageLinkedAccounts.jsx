@@ -46,6 +46,7 @@ class ManageLinkedAccounts extends React.Component {
     isGoogleClassroomStudent: PropTypes.bool.isRequired,
     isCleverStudent: PropTypes.bool.isRequired,
     personalAccountLinkingEnabled: PropTypes.bool.isRequired,
+    usStateCode: PropTypes.string,
   };
 
   cannotDisconnectGoogle = authOption => {
@@ -209,7 +210,9 @@ class ManageLinkedAccounts extends React.Component {
         {lockedOptions.length > 0 && (
           <>
             <p style={styles.message}>
-              {i18n.manageLinkedAccounts_parentalPermissionRequired()}
+              {this.props.usStateCode
+                ? i18n.manageLinkedAccounts_parentalPermissionRequired()
+                : i18n.manageLinkedAccounts_stateRequired()}
             </p>
             <div style={styles.lockContainer}>
               <table style={{...styles.table, ...styles.lockedTable}}>
@@ -257,6 +260,7 @@ export default connect(state => ({
   isCleverStudent: state.manageLinkedAccounts.isCleverStudent,
   personalAccountLinkingEnabled:
     state.manageLinkedAccounts.personalAccountLinkingEnabled,
+  usStateCode: state.currentUser.usStateCode,
 }))(ManageLinkedAccounts);
 
 class OauthConnection extends React.Component {

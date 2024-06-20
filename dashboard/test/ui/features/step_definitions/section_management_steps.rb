@@ -95,7 +95,7 @@ And /^I create a new "([^"]*)" student section with course "([^"]*)", version "(
   GHERKIN
 end
 
-And(/^I create a(n authorized)? teacher-associated( under-13)?( old account)?( sponsored)? student( in Colorado)? named "([^"]*)"$/) do |authorized, under_13, old_account, sponsored, locked, name|
+And(/^I create a(n authorized)? teacher-associated( under-13)?( sponsored)? student( in Colorado)? named "([^"]*)"( after CPA exception)?( before CPA exception)?$/) do |authorized, under_13, sponsored, locked, name, after_cpa_exception, before_cpa_exception|
   steps "Given I create a teacher named \"Teacher_#{name}\""
   # enroll in a plc course as a way of becoming an authorized teacher
   steps 'And I am enrolled in a plc course' if authorized
@@ -120,8 +120,15 @@ And(/^I create a(n authorized)? teacher-associated( under-13)?( old account)?( s
     user_opts[:us_state] = "CO"
   end
 
-  if old_account
-    user_opts[:created_at] = DateTime.new(2020)
+  # See Policies::ChildAccount::CPA_CREATED_AT_EXCEPTION_DATE
+  cpa_exception_date = DateTime.parse('2024-05-26T00:00:00MST')
+
+  if after_cpa_exception
+    user_opts[:created_at] = cpa_exception_date
+  end
+
+  if before_cpa_exception
+    user_opts[:created_at] = cpa_exception_date - 1.second
   end
 
   create_user(name, **user_opts)

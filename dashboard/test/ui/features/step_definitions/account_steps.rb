@@ -135,7 +135,7 @@ def create_user(name, url: '/api/test/create_user', **user_opts)
   end
 end
 
-And(/^I create( as a parent)?( an old account for)? a (young )?student( in Colorado)?( who has never signed in)? named "([^"]*)"( after CPA exception)?( before CPA exception)?( and go home)?$/) do |parent_created, old_account, young, locked, new_account, name, after_cpa_exception, before_cpa_exception, home|
+And(/^I create( as a parent)? a (young )?student( in Colorado)?( who has never signed in)? named "([^"]*)"( after CPA exception)?( before CPA exception)?( and go home)?$/) do |parent_created, young, locked, new_account, name, after_cpa_exception, before_cpa_exception, home|
   age = young ? '10' : '16'
   sign_in_count = new_account ? 0 : 2
 
@@ -144,10 +144,6 @@ And(/^I create( as a parent)?( an old account for)? a (young )?student( in Color
     age: age,
     sign_in_count: sign_in_count,
   }
-
-  if old_account
-    user_opts[:created_at] = DateTime.new(2020)
-  end
 
   if locked
     user_opts[:country_code] = "US"
