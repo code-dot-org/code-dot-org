@@ -5,7 +5,7 @@ import {
   AichatState,
   setShowWarningModal,
 } from '@cdo/apps/aichat/redux/aichatRedux';
-import ChatWarningModal from '@cdo/apps/aichat/views/ChatWarningModal';
+import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import ChatMessage from './ChatMessage';

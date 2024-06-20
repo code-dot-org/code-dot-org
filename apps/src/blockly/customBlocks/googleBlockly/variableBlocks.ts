@@ -16,10 +16,15 @@ export function flyoutCategory(workspace: WorkspaceSvg) {
 
   const categoryBlocks = flyoutCategoryBlocks(workspace);
   blockList.push(...categoryBlocks);
+
+  // Add blocks from the level toolbox XML, if present.
   const levelToolboxBlocks = Blockly.cdoUtils.getLevelToolboxBlocks('VARIABLE');
-  if (!levelToolboxBlocks) {
-    return [];
+  if (!levelToolboxBlocks?.querySelector('xml')?.hasChildNodes()) {
+    return blockList;
   }
+
+  // Blockly supports XML or JSON, but not a combination of both.
+  // We convert to JSON here because the behavior_get blocks are JSON.
   const blocksConvertedJson = convertXmlToJson(
     levelToolboxBlocks.documentElement
   );
@@ -28,7 +33,7 @@ export function flyoutCategory(workspace: WorkspaceSvg) {
 
   blockList.push(...flyoutJson);
 
-  // The may include "change [var] by" blocks with custom default values.
+  // The toolox may include "change [var] by" blocks with custom default values.
   // If any of these blocks are found, we can remove the auto-generated block.
   // Count the 'math_change' blocks in blockList.
   const mathChangeBlocksCount = blockList.filter(

@@ -8,7 +8,8 @@
       %p{style: 'font-size: 13px; line-height: 18px; color: #333'}
         = t('parent_mailer.parent_email_added_subject')
         = t('activerecord.attributes.user.finish_sign_up_header_account_information')
-        = t('age_interstitial.disclaimer', url: SharedConstants::EMAIL_LINKS.PRIVACY_POLICY_URL, markdown: :inline).html_safe
+        %a{href: SharedConstants::EMAIL_LINKS.PRIVACY_POLICY_URL, target: '_blank'}
+          = t('age_interstitial.disclaimer', markdown: :inline).html_safe
       = form_for(student, url: users_set_student_information_url, remote: true, html: {id: 'edit_user'}) do |f|
         - if student.age.nil?
           .form-group

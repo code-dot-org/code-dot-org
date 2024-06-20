@@ -442,6 +442,7 @@ en:
       navigator: 'Partner'
       create: 'Create'
       new_project: "New Project"
+      new_project_low_cap: "New project"
       algebra_game: 'Algebra'
       applab: 'App Lab'
       artist: 'Artist'
@@ -951,7 +952,7 @@ en:
     age: Your age
     header: Account Information Update
     warning: "We're in the process of updating our experience to provide you with even stronger privacy protections. To do this, we need existing users to enter their age here."
-    disclaimer: 'Code.org [will never rent, sell or share this information with any third parties](%{url}).'
+    disclaimer: 'Code.org will never rent, sell or share this information with any third parties.'
     sign_out_markdown: 'If you do not wish to provide your age you may [sign out](%{url}).'
   terms_interstitial:
     title: "Updated Terms of Service and Privacy Policy"

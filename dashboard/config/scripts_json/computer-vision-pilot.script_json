@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "computer-vision-pilot",
-    "serialized_at": "2024-04-30 15:40:43 UTC",
+    "serialized_at": "2024-06-17 18:32:28 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1090,7 +1090,7 @@
       "key": "5f7155eb-40da-438e-8db2-062b6cc4786b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 2 to complete the reflection question:\n\n* _What is your definition of computer vision?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goal:** Allows students to share what they have constructed as their working definition of computer vision thus far. This definition is sure to evolve and grow as the module progresses. Some possible examples for a working definition might include: Computer vision is like when your computer tries to figure out what's in a picture, kind of like how we recognize our friends' faces or stuff in photos Computer vision helps computers 'see' and understand the images and videos like we do, but through cameras and algorithms It's like teaching a computer to see and interpret the world around it, so it can recognize objects, people, and even actions It's a part of artificial intelligence where computers are trained to interpret and understand the visual world.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 2 to complete the reflection question:\n\n* _What is your definition of computer vision?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goal:** This activity allows students to share what they have constructed as their working definition of computer vision thus far. This definition is sure to evolve and grow as the module progresses. Some possible examples for a working definition that students might construct include: \n* Computer vision is like when your computer tries to figure out what's in a picture, kind of like how we recognize our friends' faces or stuff in photos \n* Computer vision helps computers 'see' and understand the images and videos like we do, but through cameras and algorithms \n* It's like teaching a computer to see and interpret the world around it, so it can recognize objects, people, and even actions \n* It's a part of artificial intelligence where computers are trained to interpret and understand the visual world.",
         "progression_name": "Reflection",
         "tips": [
           {

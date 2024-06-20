@@ -1,4 +1,3 @@
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {
@@ -37,26 +36,16 @@ export async function postAichatCompletionMessage(
     aichatContext,
     ...(sessionId ? {sessionId} : {}),
   };
-  try {
-    const response = await HttpClient.post(
-      CHAT_COMPLETION_URL,
-      JSON.stringify(payload),
-      true,
-      {
-        'Content-Type': 'application/json; charset=UTF-8',
-      }
-    );
-    // For now, response will be null if there was an error.
-    if (response.ok) {
-      return await response.json();
-    } else {
-      return null;
+  const response = await HttpClient.post(
+    CHAT_COMPLETION_URL,
+    JSON.stringify(payload),
+    true,
+    {
+      'Content-Type': 'application/json; charset=UTF-8',
     }
-  } catch (error) {
-    Lab2Registry.getInstance()
-      .getMetricsReporter()
-      .logError('Error in aichat completion request', error as Error);
-  }
+  );
+
+  return await response.json();
 }
 
 const formatMessagesForAichatCompletion = (

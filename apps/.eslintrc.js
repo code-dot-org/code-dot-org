@@ -187,7 +187,6 @@ module.exports = {
         'src/*',
         'src/code-studio/**',
         'src/dance/**',
-        'src/eval/*',
         'src/fish/*',
         'src/flappy/*',
         'src/generated/**',

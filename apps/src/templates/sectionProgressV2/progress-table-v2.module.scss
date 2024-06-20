@@ -1,4 +1,4 @@
-@import "color.scss";
+@import 'color.scss';
 
 .progressV2Page {
   background-color: white;
@@ -75,7 +75,7 @@ $level-cell-width: 52;
     height: 47px;
     line-height: 47px;
     padding-inline-start: 12px;
-    padding-inline-end: .5em;
+    padding-inline-end: 0.5em;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
@@ -87,20 +87,31 @@ $level-cell-width: 52;
   &Lesson {
     text-align: center;
     min-width: 52px;
-    max-width: 52px;  
+    max-width: 52px;
     height: 47px;
     line-height: 47px !important;
+  }
+
+  &Metadata {
+    text-align: center;
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
   }
 
   &Skeleton {
     vertical-align: middle;
   }
-  
+
   &Level {
     width: $level-cell-width + px;
     height: 47px;
     color: inherit !important;
     padding: 0;
+  }
+
+  &ChoiceSubLevel {
+    border-left: 0;
   }
 }
 
@@ -135,7 +146,7 @@ $level-cell-width: 52;
     flex-direction: column;
     justify-content: flex-end;
   }
-  
+
   &UnitSelector {
     display: flex;
     flex-direction: row;
@@ -183,7 +194,6 @@ $level-cell-width: 52;
     font-weight: 600;
   }
 
-  
   &HeaderTooltip {
     height: 18px;
     line-height: 18px;
@@ -241,7 +251,7 @@ $level-cell-width: 52;
         border: none !important;
       }
     }
-    
+
     &LessonText {
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -321,7 +331,7 @@ $level-cell-width: 52;
       }
     }
 
-    &ExpandedLevelCellFirst { 
+    &ExpandedLevelCellFirst {
       border-left: 1px solid $neutral_dark40;
       width: 52px;
     }
@@ -352,7 +362,7 @@ $level-cell-width: 52;
   &LevelLink {
     height: 100%;
     width: 100%;
-    text-align: center; 
+    text-align: center;
     line-height: 47px !important;
   }
 
@@ -420,7 +430,7 @@ $level-cell-width: 52;
   width: calc(100% - 20px);
   line-height: 47px;
   padding-inline-start: 12px;
-  padding-inline-end: .5em;
+  padding-inline-end: 0.5em;
   text-align: start;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -450,4 +460,9 @@ $level-cell-width: 52;
   padding-left: 12px;
   padding-right: 12px;
   font-size: 14px;
+}
+
+.lessonDataCellExpanded {
+  display: flex;
+  flex-direction: column;
 }

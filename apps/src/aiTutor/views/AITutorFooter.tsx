@@ -5,9 +5,9 @@ import {
   AITutorTypes as ActionType,
   AITutorTypesValue,
 } from '@cdo/apps/aiTutor/types';
+import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import Button from '@cdo/apps/templates/Button';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import style from './ai-tutor.module.scss';
@@ -123,9 +123,10 @@ const AITutorFooter: React.FC<AITutorFooterProps> = ({renderAITutor}) => {
         />
         <Button
           className={style.submitButton}
-          color={Button.ButtonColor.brandSecondaryDefault}
+          color={buttonColors.purple}
           disabled={disabled || userMessageIsEmpty}
-          icon="arrow-up"
+          iconRight={{iconName: 'arrow-up', iconStyle: 'solid'}}
+          size="s"
           key="submit"
           onClick={() => handleSubmit(ActionType.GENERAL_CHAT)}
           text="Submit"
@@ -135,7 +136,9 @@ const AITutorFooter: React.FC<AITutorFooterProps> = ({renderAITutor}) => {
         {showCompilationOption && (
           <Button
             className={style.quickActionButton}
-            color={Button.ButtonColor.teal}
+            color={buttonColors.gray}
+            type={'secondary'}
+            size="s"
             disabled={disabled}
             key="compilation"
             text={QuickActions.compilation}
@@ -145,7 +148,9 @@ const AITutorFooter: React.FC<AITutorFooterProps> = ({renderAITutor}) => {
         {showValidationOption && (
           <Button
             className={style.quickActionButton}
-            color={Button.ButtonColor.teal}
+            color={buttonColors.gray}
+            type={'secondary'}
+            size="s"
             disabled={disabled}
             key="validation"
             text={QuickActions.validation}

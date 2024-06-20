@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "grade2-maker",
-    "serialized_at": "2024-05-13 22:00:20 UTC",
+    "serialized_at": "2024-06-12 21:07:52 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -561,8 +561,21 @@
       }
     },
     {
-      "key": "9332f071-9518-4438-9c7c-b6aa975610df",
+      "key": "c6738c15-b870-433f-b0ea-0fa32e1a6688",
       "position": 4,
+      "properties": {
+        "name": "[Optional] Extension"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c6738c15-b870-433f-b0ea-0fa32e1a6688",
+        "lesson.key": "Cristina - Emotion badge with micro:bit",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade2-maker-2024"
+      }
+    },
+    {
+      "key": "9332f071-9518-4438-9c7c-b6aa975610df",
+      "position": 5,
       "properties": {
         "name": "[Optional] Extended learning"
       },
@@ -738,8 +751,21 @@
       }
     },
     {
-      "key": "6d2e7237-0f98-4de3-b575-f9230d76d557",
+      "key": "22d1d2b3-20c0-461a-83a1-a5c439fb7bde",
       "position": 4,
+      "properties": {
+        "name": "[Optional] Extension"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "22d1d2b3-20c0-461a-83a1-a5c439fb7bde",
+        "lesson.key": "Cristina - Calming LEDs with micro:bit",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "grade2-maker-2024"
+      }
+    },
+    {
+      "key": "6d2e7237-0f98-4de3-b575-f9230d76d557",
+      "position": 5,
       "properties": {
         "name": "[Optional] Extended learning"
       },
@@ -889,8 +915,21 @@
       }
     },
     {
-      "key": "a8ce412d-de4d-4ee1-9d0e-f01f2900b6b8",
+      "key": "d6c1c919-388f-4bfc-8e3b-c2e8d8179db4",
       "position": 4,
+      "properties": {
+        "name": "[Optional] Extension"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d6c1c919-388f-4bfc-8e3b-c2e8d8179db4",
+        "lesson.key": "Cristina - Counter with micro:bit",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "grade2-maker-2024"
+      }
+    },
+    {
+      "key": "a8ce412d-de4d-4ee1-9d0e-f01f2900b6b8",
+      "position": 5,
       "properties": {
         "name": "[Optional] Extended learning"
       },
@@ -1465,6 +1504,18 @@
       }
     },
     {
+      "key": "b56c19fc-c460-4235-941d-0d51db1f6ef6",
+      "position": 1,
+      "properties": {
+        "description": "In this extension, we're taking our micro:bit skills to the next level! You've already mastered communicating emotions, but now it's time to unleash the true power of communication with your micro:bit. Get ready to answer questions, give directions, and even play games – all with just a few buttons!\n\n**Find the student handout for this project <a href=\"https://docs.google.com/document/d/1xaE_BZ80mG6Z8ghd8n-FgZas1LIi7NYmlawdSZr15Cc/template/preview\" target=\"_blank\">here.</a>**\n\n**Find the code for this project <a href=\"https://makecode.microbit.org/_dY2P4xddHbRk\" target=\"_blank\">here.</a>**\n\n",
+        "name": "Robot Response"
+      },
+      "seeding_key": {
+        "activity_section.key": "b56c19fc-c460-4235-941d-0d51db1f6ef6",
+        "lesson_activity.key": "c6738c15-b870-433f-b0ea-0fa32e1a6688"
+      }
+    },
+    {
       "key": "09321b59-7888-43c8-b7cb-4862d6c99c0d",
       "position": 1,
       "properties": {
@@ -1808,6 +1859,18 @@
       "seeding_key": {
         "activity_section.key": "97c5b990-a298-4d60-a312-138456512857",
         "lesson_activity.key": "af71f0fd-78ad-4db4-872a-d68545d19dbc"
+      }
+    },
+    {
+      "key": "6c980c11-5311-4d31-bff6-17cd2341b1f6",
+      "position": 1,
+      "properties": {
+        "description": "It is time for a dance party with micro:bit and Drew the Dancing Giraffe. Use sequences and loops to program a dancing giraffe on the micro:bit. You can even add music to really get the party started!\n\n**Find the student handout for this project <a href=\"https://docs.google.com/document/d/1mur9Y6FHc4FW0G8VtTWk6wRr5GuE01oy2bao08yYULo/template/preview\" target=\"_blank\">here.</a>**\n\n<i> Note: Pages 2-4 of the student handout include step by step coding directions and are an optional support to provide students. \n\n**Find the code for this project <a href=\"https://makecode.microbit.org/_Am9K17D6Ua1s\" target=\"_blank\">here.</a>**",
+        "name": "Drew the Dancing Giraffe"
+      },
+      "seeding_key": {
+        "activity_section.key": "6c980c11-5311-4d31-bff6-17cd2341b1f6",
+        "lesson_activity.key": "22d1d2b3-20c0-461a-83a1-a5c439fb7bde"
       }
     },
     {
@@ -2216,6 +2279,18 @@
       "seeding_key": {
         "activity_section.key": "b3f36f9a-d2c9-4219-8959-f74da909be8c",
         "lesson_activity.key": "32841f1b-66ba-4d0b-9a2a-20708fae7cda"
+      }
+    },
+    {
+      "key": "170f4d53-c4a0-4db2-ba28-adb4d30655a9",
+      "position": 1,
+      "properties": {
+        "description": "The world is overflowing with data! Now that you've mastered counting data with your micro:bit, it's time to unleash its hidden powers. Use the built-in sensors to explore your surroundings -  discover how hot or cold it is, listen to the sounds around you, and even measure the brightness!\n\n**Find the student handout for this project <a href=\"https://docs.google.com/document/d/1S9XP9Isxw3eLIsAo7M9-qTvyQaY_hTddHX1jjRpulfA/template/preview\" target=\"_blank\">here.</a>**\n\n**Find the code for this project <a href=\"https://makecode.microbit.org/_h50V13KVT6yC\" target=\"_blank\">here.</a>**",
+        "name": "Data Detective"
+      },
+      "seeding_key": {
+        "activity_section.key": "170f4d53-c4a0-4db2-ba28-adb4d30655a9",
+        "lesson_activity.key": "d6c1c919-388f-4bfc-8e3b-c2e8d8179db4"
       }
     },
     {
@@ -3188,6 +3263,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_c_maker_calming_leds_grade2"
+        ],
         "progression": "Calming LEDs with micro:bit"
       },
       "bonus": false,
@@ -3510,6 +3588,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_c_maker_counter_grade2"
+        ],
         "progression": "Counter with micro:bit"
       },
       "bonus": false,

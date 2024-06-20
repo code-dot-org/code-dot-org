@@ -14,6 +14,11 @@
       "title": "Introducing Music Lab",
       "body": "Get creative with your favorite artist's music and code new songs and mixes!",
       "buttonText": "Learn more"
+    },
+    "lms-launch": {
+      "title": "Discover our new LMS integrations",
+      "body": "We've added new LMS integrations for Canvas and Schoology! Connect existing LMS classrooms in your school to Code.org with one-click Roster Syncing, Single Sign-On, and integrated access to curriculum.",
+      "buttonText": "Learn more"
     }
   }
 }

@@ -1,4 +1,4 @@
-import {WorkspaceSvg} from 'blockly';
+import {Block, BlockSvg, WorkspaceSvg} from 'blockly';
 import _ from 'lodash';
 
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
@@ -14,6 +14,7 @@ type xmlAttribute = string | null;
 type InputTuple = [string, string, number];
 type InputCallback = () => void;
 type InputArgs = [...(InputTuple | InputCallback)[], number];
+type BlockList = Array<Block | BlockSvg>;
 
 // Considers an attribute true only if it is explicitly set to 'true' (i.e. defaults to false if unset).
 export const FALSEY_DEFAULT = (attributeValue: xmlAttribute) =>
@@ -266,4 +267,46 @@ export function interpolateMsg(
 
   // Make the inputs inline unless there is only one input and no text follows it.
   this.setInputsInline(!msg.match(/%1\s*$/));
+}
+
+/**
+ * Retrieves the top-level Blockly blocks from the students Blockly workspace and
+ * potentially includes the top-level blocks from the hidden definition workspace.
+ *
+ * @returns {BlockList} An array of the top-level blocks.
+ */
+export function getCodeBlocks(): BlockList {
+  let codeBlocks: BlockList = [];
+  let hiddenBlocks: BlockList = [];
+  const mainBlocks = Blockly.mainBlockSpace.getTopBlocks(true) as BlockList;
+
+  // The hidden workspace is only present in Google Blockly labs where the modal
+  // function editor is enabled.
+  if (Blockly.getHiddenDefinitionWorkspace()) {
+    hiddenBlocks = Blockly.getHiddenDefinitionWorkspace().getTopBlocks(
+      true
+    ) as BlockList;
+  }
+
+  // Hidden blocks need to be listed first in case they would set the
+  // value of global variables.
+  codeBlocks = [...hiddenBlocks, ...mainBlocks];
+
+  return codeBlocks;
+}
+
+/**
+ * Retrieves all Blockly blocks from the student's Blockly workspaces.
+ * This is useful for providing the student with feedback about the total
+ * number of blocks they have used or added.
+ *
+ * @returns {BlockList} An array of all blocks.
+ */
+export function getAllBlocks(): BlockList {
+  return [
+    ...Blockly.mainBlockSpace.getAllUsedBlocks(),
+    ...(Blockly.getHiddenDefinitionWorkspace()
+      ? Blockly.getHiddenDefinitionWorkspace().getAllBlocks()
+      : []),
+  ];
 }

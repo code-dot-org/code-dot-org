@@ -20,12 +20,12 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import ProjectTemplateWorkspaceIcon from '@cdo/apps/templates/ProjectTemplateWorkspaceIcon';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
 import aichatI18n from '../locale';
 import {
   addChatMessage,
   clearChatMessages,
-  RESET_MODEL_NOTIFICATION,
   resetToDefaultAiCustomizations,
   setStartingAiCustomizations,
   setViewMode,
@@ -34,7 +34,13 @@ import {
   onSaveFail,
   endSave,
 } from '../redux/aichatRedux';
-import {AichatLevelProperties, ViewMode} from '../types';
+import {getCurrentTime, getNewMessageId} from '../redux/utils';
+import {
+  AichatLevelProperties,
+  ChatCompletionMessage,
+  Role,
+  ViewMode,
+} from '../types';
 
 import ChatWorkspace from './ChatWorkspace';
 import CopyButton from './CopyButton';
@@ -43,6 +49,15 @@ import ModelCustomizationWorkspace from './ModelCustomizationWorkspace';
 import PresentationView from './presentation/PresentationView';
 
 import moduleStyles from './aichatView.module.scss';
+
+const RESET_MODEL_NOTIFICATION: ChatCompletionMessage = {
+  id: getNewMessageId(),
+  role: Role.MODEL_UPDATE,
+  chatMessageText: 'Model customizations and model card information',
+  chatMessageSuffix: {text: ' have been reset to default settings.'},
+  status: Status.OK,
+  timestamp: getCurrentTime(),
+};
 
 const AichatView: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();

@@ -40,6 +40,9 @@ Scenario Outline: Dragging play sound block
   # Click on the second sound inside the sounds panel.
   And I click selector "#sounds-panel .sounds-panel-sound-row:nth-of-type(2)"
 
+  # Dismiss the sounds panel.
+  And I press keys ":escape"
+
   # The sounds panel should be dismissed.
   And I wait until element "#sounds-panel" is not visible
 

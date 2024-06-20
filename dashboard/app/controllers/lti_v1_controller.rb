@@ -4,10 +4,8 @@ require "services/lti"
 require "policies/lti"
 require "concerns/partial_registration"
 require "clients/lti_advantage_client"
-require 'clients/lti_dynamic_registration_client'
 require "cdo/honeybadger"
 require 'metrics/events'
-require 'securerandom'
 
 class LtiV1Controller < ApplicationController
   before_action -> {redirect_to lti_v1_integrations_path, alert: I18n.t('lti.integration.early_access.closed')},
@@ -172,6 +170,12 @@ class LtiV1Controller < ApplicationController
       destination_url = "#{target_link_uri}?#{redirect_params.to_query}"
 
       if user
+        # If this is the user's first login, send them into the account linking flow
+        if user.sign_in_count < 1 && DCDO.get('lti_account_linking_enabled', false)
+          PartialRegistration.persist_attributes(session, user)
+          render 'lti/v1/account_linking/landing', locals: {lti_provider: integration[:platform_name], email: Services::Lti.get_claim(decoded_jwt, :email)} and return
+        end
+
         sign_in user
 
         metadata = {
@@ -183,6 +187,7 @@ class LtiV1Controller < ApplicationController
           event_name: 'lti_user_signin',
           metadata: metadata,
         )
+
         # If on code.org, the user is a student and the LTI has the same user as a teacher, upgrade the student to a teacher.
         if lti_account_type == User::TYPE_TEACHER && user.user_type == User::TYPE_STUDENT
           @form_data = {
@@ -201,6 +206,14 @@ class LtiV1Controller < ApplicationController
         PartialRegistration.persist_attributes(session, user)
         session[:user_return_to] = destination_url
         if DCDO.get('lti_account_linking_enabled', false)
+          metadata = {
+            'lms_name' => integration[:platform_name],
+          }
+          Metrics::Events.log_event(
+            user: user,
+            event_name: 'lti_account_linking_page_visit',
+            metadata: metadata,
+          )
           render 'lti/v1/account_linking/landing', locals: {lti_provider: integration[:platform_name], email: email_address} and return
         end
 
@@ -408,6 +421,14 @@ class LtiV1Controller < ApplicationController
 
       @integration_status = :created
       LtiMailer.lti_integration_confirmation(admin_email).deliver_now
+
+      metadata = {
+        lms_name: platform_name,
+      }
+      Metrics::Events.log_event(
+        event_name: 'lti_portal_registration_completed',
+        metadata: metadata,
+      )
     end
     render 'lti/v1/integration_status'
   end
