@@ -42,6 +42,8 @@ describe('OpenAllStudentProgressButton', () => {
     fireEvent.click(expandAllOption);
     expect(expandMetadataForStudents).to.have.been.calledOnce;
     expect(expandMetadataForStudents).to.have.been.calledWith([1, 2]);
+    expect(screen.queryByText(i18n.expandAll())).to.not.exist;
+    expect(screen.queryByText(i18n.collapseAll())).to.not.exist;
   });
 
   it('calls expandMetaDataForStudents when option clicked', () => {
@@ -53,5 +55,7 @@ describe('OpenAllStudentProgressButton', () => {
     fireEvent.click(collapseAllOption);
     expect(collapseMetadataForStudents).to.have.been.calledOnce;
     expect(collapseMetadataForStudents).to.have.been.calledWith([1, 2]);
+    expect(screen.queryByText(i18n.expandAll())).to.not.exist;
+    expect(screen.queryByText(i18n.collapseAll())).to.not.exist;
   });
 });

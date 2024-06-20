@@ -31,10 +31,12 @@ function OpenAllStudentProgressButton({
 
   const expandMetaDataForAllStudents = () => {
     expandMetadataForStudents(getAllStudentIds);
+    setOpened(false);
   };
 
   const collapseMetaDataForAllStudents = () => {
     collapseMetadataForStudents(getAllStudentIds);
+    setOpened(false);
   };
 
   const getMenuLocation = () => {
