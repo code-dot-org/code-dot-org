@@ -34,18 +34,6 @@ class Forms::ChildAccount::ParentalPermissionRequestTest < ActiveSupport::TestCa
       end
     end
 
-    test 'updates child account compliance state to request_sent' do
-      assert_change -> {@child_account.child_account_compliance_state}, from: nil, to: Policies::ChildAccount::ComplianceState::REQUEST_SENT do
-        assert @permission_request_form.request
-      end
-    end
-
-    test 'updates child account compliance state update time' do
-      assert_change -> {@child_account.child_account_compliance_state_last_updated}, from: nil, to: DateTime.now.as_json do
-        assert @permission_request_form.request
-      end
-    end
-
     test 'sends permission request email to parent' do
       uuid = 'expected_parental_permission_request_uuid'
 

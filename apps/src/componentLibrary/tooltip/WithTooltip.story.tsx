@@ -1,7 +1,7 @@
 import {Meta, StoryFn} from '@storybook/react';
 import React from 'react';
 
-import Tooltip, {TooltipOverlay, TooltipProps, WithTooltip} from './index';
+import Tooltip, {TooltipProps, WithTooltip} from './index';
 
 export default {
   title: 'DesignSystem/Tooltip', // eslint-disable-line storybook/no-title-property-in-meta
@@ -28,23 +28,17 @@ const SingleTemplate: StoryFn<TooltipProps> = args => (
 const MultipleTemplate: StoryFn<{components: TooltipProps[]}> = args => (
   <>
     <p>
-      * Margins on this screen does not represent Component's margins, and are
-      only added to improve storybook view *
+      * Margins on this screen do not represent the Component's margins and are
+      only added to improve the storybook view *
     </p>
     <p>Multiple Tooltips:</p>
     <div style={{display: 'flex', gap: '20px', flexWrap: 'wrap'}}>
       {args.components?.map(componentArg => (
-        <TooltipOverlay key={componentArg.tooltipId}>
-          <button
-            aria-describedby={componentArg.tooltipId}
-            type="button"
-            style={{margin: 0}}
-            onClick={() => {}}
-          >
+        <WithTooltip key={componentArg.tooltipId} tooltipProps={componentArg}>
+          <button style={{margin: 0}} type="button">
             Hover Me
           </button>
-          <Tooltip {...componentArg} />
-        </TooltipOverlay>
+        </WithTooltip>
       ))}
     </div>
   </>
