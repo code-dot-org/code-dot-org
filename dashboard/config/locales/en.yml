@@ -1424,6 +1424,7 @@ en:
     your_friends: "Your Friends at Code.org"
   lti:
     account_linking:
+      account_not_found: "Account not found"
       connect_button: "Connect with %{provider}"
       connect_with: "Connect with..."
       connect_with_email: "Connect with personal login"
