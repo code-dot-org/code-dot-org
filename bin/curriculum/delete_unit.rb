@@ -51,11 +51,11 @@ options.unit_names.each do |unit_nm|
 
   user_progress_count = UserScript.where(script_id: unit_to_del.id).count
   if user_progress_count > 0
-    print "Some users have existing progress in unit [#{unit_nm}]. Continue with deletion? (Y/N)"
+    print "Some users have existing progress in unit [#{unit_nm}]. Continue? (Y/N)"
     next unless gets.chomp.casecmp('y').zero?
   end
 
-  puts "No references to Unit [#{unit_nm}] found from sections."
+  puts "No references to Unit [#{unit_nm}] found from sections. All validations for deletion passed."
   if options.dry_run
     puts "Skipping deletion due to dry run mode."
   else
