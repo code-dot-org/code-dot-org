@@ -30,9 +30,8 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
 
   test 'fails if the password is wrong' do
     PartialRegistration.stubs(:in_progress?).returns(true)
-
+    Services::Lti::AccountLinker.expects(:call).never
     post :link_email, params: {email: @user.email, password: 'password'}
-    assert_response :unauthorized
   end
 
   test 'blocks access if lti_account_linking_enabled is false' do

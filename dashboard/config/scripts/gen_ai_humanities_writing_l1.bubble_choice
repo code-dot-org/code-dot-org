@@ -1,0 +1,13 @@
+name 'gen-ai-humanities-writing-L1'
+display_name 'Crafting Prompts'
+description 'write prompts for scenarios'
+
+sublevels
+level 'gen-ai-humanities-L1A'
+level 'gen-ai-humanities-L1B'
+level 'gen-ai-humanities-L1C'
+level 'gen-ai-humanities-L1D'
+level 'gen-ai-humanities-L1E'
+level 'gen-ai-humanities-L1F'
+level 'gen-ai-humanities-L1G'
+level 'gen-ai-humanities-L1H'

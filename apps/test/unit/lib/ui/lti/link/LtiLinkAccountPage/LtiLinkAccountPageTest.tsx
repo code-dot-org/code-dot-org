@@ -17,6 +17,8 @@ const DEFAULT_CONTEXT: LtiProviderContextProps = {
   newAccountUrl: '/new-account',
   existingAccountUrl: new URL('https://example.com/existing-account'),
   emailAddress: 'test@code.org',
+  newCtaType: 'new',
+  continueAccountUrl: '/continue',
 };
 
 describe('LTI Link Account Page Tests', () => {

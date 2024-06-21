@@ -3,7 +3,9 @@ import moment from 'moment';
 import {getTypedKeys} from '@cdo/apps/types/utils';
 
 import {
+  AichatCompletionMessage,
   AiCustomizations,
+  ChatCompletionMessage,
   FieldVisibilities,
   ModelCardInfo,
   Visibility,
@@ -78,3 +80,28 @@ export const allFieldsHidden = (fieldVisibilities: FieldVisibilities) =>
   getTypedKeys(fieldVisibilities).every(
     key => fieldVisibilities[key] === Visibility.HIDDEN
   );
+
+// Opposite of decorateMessageFromModelResponse.
+// Preps messages to send to model for response.
+export const prepMessageForModelInput = (
+  message: ChatCompletionMessage
+): AichatCompletionMessage => {
+  return {
+    role: message.role,
+    chatMessageText: message.chatMessageText,
+    status: message.status,
+  };
+};
+
+// Opposite of trimMessageForModelInput.
+// Adds front-end specific information (message ID, timestamp)
+// to messages received from model.
+export const decorateMessageFromModelResponse = (
+  responseMessage: AichatCompletionMessage
+): ChatCompletionMessage => {
+  return {
+    ...responseMessage,
+    id: getNewMessageId(),
+    timestamp: getCurrentTimestamp(),
+  };
+};

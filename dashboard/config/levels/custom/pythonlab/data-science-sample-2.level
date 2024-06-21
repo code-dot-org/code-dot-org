@@ -1,0 +1,16 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2024-06-20T19:34:38.000Z",
+  "level_num": "custom",
+  "user_id": 1054,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "data-science-sample-pbt-1",
+    "long_instructions": "## Step 2: Load the Data\r\nNext, you'll need to load your dataset from a CSV file into a pandas DataFrame so you can manipulate and analyze the data.\r\n\r\n### Do This\r\n1. Load the dataset containing the product ratings.",
+    "teacher_markdown": "Students might run into errors if they have typos in the file name or forget the `.csv`. Remind students that these are common errors and how to resolve them.",
+    "hide_share_and_remix": "false"
+  },
+  "published": true
+}]]></config>
+</Pythonlab>

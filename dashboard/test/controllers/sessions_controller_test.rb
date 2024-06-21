@@ -326,7 +326,6 @@ class SessionsControllerTest < ActionController::TestCase
     let(:user) {create(:parent_managed_student)}
 
     let(:user_is_locked_out) {true}
-    let(:latest_permission_request) {nil}
 
     around do |test|
       Timecop.freeze {test.call}
@@ -334,7 +333,6 @@ class SessionsControllerTest < ActionController::TestCase
 
     before do
       Policies::ChildAccount::ComplianceState.stubs(:locked_out?).with(user).returns(user_is_locked_out)
-      Queries::ChildAccount.stubs(:latest_permission_request).with(user).returns(latest_permission_request)
 
       sign_in user
     end
@@ -380,8 +378,8 @@ class SessionsControllerTest < ActionController::TestCase
     end
 
     context 'when permission request is already sent' do
-      let(:latest_permission_request) do
-        build(:parental_permission_request, parent_email: parent_email, updated_at: request_date)
+      before do
+        create(:parental_permission_request, user: user, parent_email: parent_email, updated_at: request_date)
       end
 
       let(:parent_email) {'latest_permission_request@parent.email'}

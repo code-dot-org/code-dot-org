@@ -1,0 +1,8 @@
+name 'Gen AI Humanities - Writing - Student L1 Survey - Q4'
+question 'Overall, how satisfied were you with the lesson?'
+right 'Not satisfied at all'
+right 'Slightly satisfied'
+right 'Moderately satisfied'
+right 'Very satisfied'
+right 'Extremely satisfied'
+allow_multiple_attempts true
