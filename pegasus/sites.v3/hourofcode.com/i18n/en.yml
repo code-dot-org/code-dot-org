@@ -1119,6 +1119,59 @@
     desc: "Find our entire selection of AI curriculum offerings and filter to see what works best for your classroom in the curriculum catalog."
     button: "Explore all AI curricula"
 
+  ai_page:
+    curricula:
+      heading_elementary: "Elementary AI curricula"
+      heading_middle_high: "Middle and High school AI curricula"
+      tile:
+        decisions:
+          overline: "3-5"
+          title: "How AI Makes Decisions"
+          desc: "Introduce young students to AI and machine learning with hands-on activities using predictive data models. Students will practice making their own predictions and learn about data categorization and sorting."
+          duration: "1 hour"
+          button: "Explore unit"
+          aria_label: "Explore the How AI Makes Decisions unit"
+        humanities:
+          overline: "6-12"
+          title: "Generative AI for Humanities"
+          desc: "This unit includes two standalone lessons — one on writing with AI and one on researching with AI—designed for Humanities classes to demystify ethical and effective chatbot use, encouraging students to explore and reflect on these technologies."
+          duration: "Two, 45-minute lessons"
+          button: "Explore unit"
+          aria_label: "Explore the Generative AI for Humanities unit"
+        computer_vision:
+          overline: "9-12"
+          title: "Computer Vision"
+          desc: "Explore how artificial intelligence interprets visual data through our computer vision units."
+          duration: "5+ hours"
+          button: "Explore units"
+          aria_label: "Explore the Computer Vision units"
+    pl:
+      desc: "Empower yourself with the knowledge and tools to effectively teach AI and machine learning in the classroom."
+      tile:
+        decisions:
+          overline: "3-5 Teachers"
+          title: "Teaching How AI Makes Decisions"
+          desc: "This professional learning module equips educators to teach Code.org's How AI Makes Decisions module, where students (grades 3-5) explore AI concepts through engaging activities, data exploration, and decision making."
+          duration: "1 hour"
+          button: "Start module"
+          aria_label: "Start the Teaching How AI Makes Decisions module"
+        coding_with_ai:
+          overline: "6-12 Teachers"
+          title: "Teaching Coding with AI"
+          desc: "This professional learning module prepares teachers to guide students through Code.org's Coding with AI unit, where students leverage Large Language Models to write more powerful code while exploring ethical considerations and responsible AI use."
+          duration: "2 hours"
+          aria_label: "Start the Teaching Coding with AI module"
+          button: "Start module"
+        computer_vision:
+          overline: "9-12 Teachers"
+          title: "Teaching Computer Vision"
+          desc: "This professional learning module equips educators to teach Code.org's Computer Vision unit, where students (grades 6-12) explore image and video analysis through engaging activities and discussions on ethics and real-world applications."
+          duration: "1.5 hours"
+          aria_label: "Start the Teaching Computer Vision module"
+          button: "Start module"
+        ai_101:
+          aria_label: "Start the AI 101 for Teachers module"
+
   ai_integrations:
     heading: "AI Integrations"
     desc: "We are working on some exciting new technologies to empower students and teachers in the classroom."
