@@ -329,10 +329,7 @@ class UnitGroup < ApplicationRecord
     course_versions_for_user&.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
   end
 
-  # If a user has no experiments enabled, return the default set of units.
-  # If a user has an experiment enabled corresponding to an alternate unit in
-  # this course, use the alternate unit in place of the default unit with
-  # the same position.
+  # return the default set of units.
   # If the unit is in development, hide it from everyone but levelbuilders.
   # @param user [User]
   def units_for_user(user)
