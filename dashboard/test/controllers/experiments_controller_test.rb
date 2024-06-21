@@ -10,15 +10,7 @@ class ExperimentsControllerTest < ActionController::TestCase
     @teacher = create :teacher
     unit_group = create :unit_group, name: 'my-course'
     default_script = create(:script, name: 'default-script')
-    alternate_script = create(:script, name: 'alternate-script')
-
     create :unit_group_unit, unit_group: unit_group, script: default_script, position: 2
-    create :unit_group_unit,
-      unit_group: unit_group,
-      script: alternate_script,
-      position: 2,
-      default_script: default_script,
-      experiment_name: @pilot_name
   end
 
   test_redirect_to_sign_in_for(

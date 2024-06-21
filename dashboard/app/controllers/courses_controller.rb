@@ -69,7 +69,7 @@ class CoursesController < ApplicationController
   end
 
   def update
-    @unit_group.persist_strings_and_units_changes(params[:scripts], params[:alternate_units], i18n_params)
+    @unit_group.persist_strings_and_units_changes(params[:scripts], i18n_params)
     @unit_group.update(course_params)
     CourseOffering.add_course_offering(@unit_group)
     @unit_group.reload

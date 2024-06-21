@@ -123,7 +123,7 @@ class UnitGroup < ApplicationRecord
 
   def self.seed_from_hash(hash)
     unit_group = UnitGroup.find_or_create_by!(name: hash['name'])
-    unit_group.update_scripts(hash['script_names'], hash['alternate_units'])
+    unit_group.update_scripts(hash['script_names'])
     unit_group.properties = hash['properties']
     unit_group.published_state = hash['published_state'] || Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
     unit_group.instruction_type = hash['instruction_type'] || Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
@@ -178,11 +178,10 @@ class UnitGroup < ApplicationRecord
   # This method updates both our localizeable strings related to this course, and
   # the set of units that are in the course, then writes out our serialization
   # @param units [Array<String>] - Updated list of names of units in this course
-  # @param alternate_units [Array<Hash>] Updated list of alternate units in this course
   # @param course_strings[Hash{String => String}]
-  def persist_strings_and_units_changes(units, alternate_units, course_strings)
+  def persist_strings_and_units_changes(units, course_strings)
     UnitGroup.update_strings(name, course_strings)
-    update_scripts(units, alternate_units) if units
+    update_scripts(units) if units
     save!
   end
 
@@ -193,15 +192,11 @@ class UnitGroup < ApplicationRecord
   end
 
   # @param new_units [Array<String>]
-  # @param alternate_units [Array<Hash>] An array of hashes containing fields
-  #   'alternate_script', 'default_script' and 'experiment_name'. Optional.
-  def update_scripts(new_units, alternate_units = nil)
-    alternate_units ||= []
+  def update_scripts(new_units)
     new_units = new_units.reject(&:empty?)
     new_units_objects = new_units.map {|s| Unit.find_by_name!(s)}
     # we want to delete existing unit group units that aren't in our new list
     units_to_remove = default_unit_group_units.map(&:script) - new_units_objects
-    units_to_remove -= alternate_units.map {|hash| Unit.find_by_name!(hash['alternate_script'])}
 
     unremovable_unit_names = units_to_remove.select(&:prevent_course_version_change?).map(&:name)
     raise "Cannot remove units that have resources or vocabulary: #{unremovable_unit_names}" if unremovable_unit_names.any?
@@ -222,23 +217,6 @@ class UnitGroup < ApplicationRecord
         unit.write_script_json
       end
       unit_group_unit.update!(position: index + 1)
-    end
-
-    alternate_units.each do |hash|
-      alternate_unit = Unit.find_by_name!(hash['alternate_script'])
-      default_unit = Unit.find_by_name!(hash['default_script'])
-      # alternate units should have the same position as the unit they replace.
-      position = default_unit_group_units.find_by(script: default_unit).position
-      unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: alternate_unit) do |ugu|
-        ugu.position = position
-        ugu.experiment_name = hash['experiment_name']
-        ugu.default_script = default_unit
-      end
-      unit_group_unit.update!(
-        position: position,
-        experiment_name: hash['experiment_name'],
-        default_script: default_unit
-      )
     end
 
     units_to_remove.each do |unit|
