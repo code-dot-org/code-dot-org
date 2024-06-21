@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 
 import {disabledBubblesSupportArticle} from '@cdo/apps/code-studio/disabledBubbles';
 import Link from '@cdo/apps/componentLibrary/link';
+import DCDO from '@cdo/apps/dcdo';
 import {getStore} from '@cdo/apps/redux';
 import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
@@ -47,7 +48,8 @@ function TeacherDashboardHeader({
   const inUSA =
     ['US', 'RD'].includes(currentUser.countryCode) || !!currentUser.usStateCode;
   const showAgeGatedStudentsBanner =
-    inUSA && currentUser.isTeacher && ageGatedStudentsCount > 0;
+    (inUSA && currentUser.isTeacher && ageGatedStudentsCount > 0) ||
+    DCDO.get('show-age-gated-students-banner', false);
 
   const toggleModal = () => {
     setModalOpen(!modalOpen);
