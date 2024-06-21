@@ -89,6 +89,7 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
     defaultSelectedTabValue: visibleTabs[0].value,
     onChange: handleOnChange,
     type: 'secondary',
+    tabsContainerClassName: styles.tabsContainer,
   };
   console.log('defaultSelectedTabValue', tabArgs.defaultSelectedTabValue);
   console.log('visibleTabs', visibleTabs);

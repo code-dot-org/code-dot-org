@@ -11,6 +11,10 @@
   display: flex;
   flex-direction: column;
 
+  .tabsContainer {
+    background-color: $light_gray_200;
+  }
+
   textarea {
     @extend %full-width;
     height: 120px;
