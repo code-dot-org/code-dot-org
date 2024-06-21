@@ -32,14 +32,10 @@ class Pythonlab < Level
     is_project_level
     submittable
     starter_assets
-    is_predict_level
     predict_settings
-    predict_placeholder_text
-    predict_solution
-    predict_question_type
-    predict_question_options
-    predict_single_correct_answer
   )
+
+  validate :has_correct_multiple_choice_answer?
 
   def self.predict_question_types
     [['Free response', 'free_response'], ['Multiple choice', 'multiple_choice']]
@@ -57,5 +53,17 @@ class Pythonlab < Level
 
   def uses_lab2?
     true
+  end
+
+  # Ensure that if this is a multiple choice predict level, there is at least one correct answer
+  # specified.
+  def has_correct_multiple_choice_answer?
+    if predict_settings && predict_settings[:is_predict_level] && predict_settings[:question_type] == 'multiple_choice'
+      options = predict_settings[:multiple_choice_options]
+      answers = predict_settings[:multiple_choice_answers]
+      unless options && answers && !options.empty? && !answers.empty?
+        errors.add(:predict_settings, 'multiple choice questions must have at least one correct answer')
+      end
+    end
   end
 end

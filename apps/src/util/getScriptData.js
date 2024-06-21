@@ -18,7 +18,6 @@
 export default function getScriptData(name) {
   name = name.toLowerCase();
   const script = document.querySelector(`script[data-${name}]`);
-  console.log({name, script});
   try {
     return JSON.parse(script.dataset[name]);
   } catch (e) {
