@@ -1048,6 +1048,8 @@ FactoryBot.define do
       after(:create) do |csc_script|
         csc_script.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSC
         csc_script.save!
+        course_offering = CourseOffering.add_course_offering(csc_script)
+        course_offering.update!(marketing_initiative: 'CSC')
       end
     end
 
@@ -1059,7 +1061,7 @@ FactoryBot.define do
         hoc_script.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.HOC
         hoc_script.save!
         course_offering = CourseOffering.add_course_offering(hoc_script)
-        course_offering.update!(category: 'hoc')
+        course_offering.update!(marketing_initiative: 'HOC')
       end
     end
 

@@ -40,7 +40,7 @@ module ChildAccountHelper
     else
       return unless student_lockout_date
       return unless DCDO.get('cap_student_warnings_enabled', false)
-      return if Queries::ChildAccount.latest_permission_request(user)
+      return if user.latest_parental_permission_request
     end
 
     render partial: 'policy_compliance/parental_permission/modal',
