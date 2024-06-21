@@ -5,6 +5,7 @@
     "login_required": true,
     "properties": {
       "curriculum_umbrella": "AI",
+      "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_course": true,
@@ -17,7 +18,7 @@
     },
     "new_name": null,
     "family_name": "gen-ai-humanities",
-    "serialized_at": "2024-06-19 22:11:26 UTC",
+    "serialized_at": "2024-06-21 00:17:53 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -81,7 +82,7 @@
       "key": "b6e9ab3f-8ac3-43ce-a078-10493a013bfc",
       "position": 1,
       "properties": {
-        "name": "Preparing for the Lesson"
+        "name": "Before the Lesson"
       },
       "seeding_key": {
         "lesson_activity.key": "b6e9ab3f-8ac3-43ce-a078-10493a013bfc",
@@ -190,25 +191,26 @@
   ],
   "activity_sections": [
     {
-      "key": "f03e64f6-f66c-4b87-88a7-afcd4d80c618",
+      "key": "b3778875-fd8e-460f-88c5-544f592920b2",
       "position": 1,
       "properties": {
-        "description": "**Technical Requirements:** For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to ensure specific sites are allowed and are not blocked. In particular, you should ensure that whatever chatbot you use and at least one search engine is not blocked.\n\n**Choosing a Chatbot:** This module was built to be chatbot agnostic. Any chatbot that is not domain-specific (ie written specifically for medicine or finance, etc.) should work, though we have written the following guides: [r guide_to_microsoft_copilot/gen-ai-humanities/unversioned],\n[r guide_to_google_gemini/gen-ai-humanities/unversioned], and\n[r guide_to_chatgpt/gen-ai-humanities/unversioned]\n* First and foremost, you should use the chatbot you and your students can access. \n* ChatGPT requires a login and parent permission, and is only for 13+. \n* BingChat can be used without a login, but it will not keep track of discussion history. Using a login will also require parental permission, and being 13+\n* Bard is usable on personal Google accounts that have it enabled; school accounts will not allow it. \nAll three of those chatbots allow speech-to-text, translation, and are usable by a screen reader.\n\n"
+        "description": "**Getting Started with Code.org:** Consider watching our [**Getting Started with Code.org**](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [**click here to learn more**](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [**click here to learn more**](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [**Click here**](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [**Click Here**](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [**Click here to complete a form**](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day.\n\n**Supports for Teachers:** You can learn more about bringing AI lessons to your classroom through our [**AI 101 for Teachers series**](https://code.org/ai/pl/101). AI 101 for Teachers is a free, foundational online professional learning series for any teacher and educator interested in the groundbreaking world of AI and its transformative potential in education.",
+        "name": "Getting Started with Code.org"
       },
       "seeding_key": {
-        "activity_section.key": "f03e64f6-f66c-4b87-88a7-afcd4d80c618",
+        "activity_section.key": "b3778875-fd8e-460f-88c5-544f592920b2",
         "lesson_activity.key": "b6e9ab3f-8ac3-43ce-a078-10493a013bfc"
       }
     },
     {
-      "key": "a850fa2c-dfab-4ec4-9d54-cd739695e846",
+      "key": "f03e64f6-f66c-4b87-88a7-afcd4d80c618",
       "position": 2,
       "properties": {
-        "description": "No prerequisites are necessary for this lesson, though it may be helpful for students (and you) to have the context provided in the [**Chatbots and Large Language Models (LLMs)**](https://studio.code.org/s/how-ai-works-2023/lessons/4) lesson to have a grounding in what makes a chatbot behave in the manner it does.\n",
-        "name": "Prerequisites"
+        "description": "This lesson was designed to be chatbot agnostic. Any chatbot that is not domain-specific (i.e., written specifically for medicine or finance, etc.) should work. You should use the chatbot you and your students can access. We recommend consulting with your school or district's IT department to ensure access to a chatbot is allowed and not blocked.",
+        "name": "Choosing a Chatbot"
       },
       "seeding_key": {
-        "activity_section.key": "a850fa2c-dfab-4ec4-9d54-cd739695e846",
+        "activity_section.key": "f03e64f6-f66c-4b87-88a7-afcd4d80c618",
         "lesson_activity.key": "b6e9ab3f-8ac3-43ce-a078-10493a013bfc"
       }
     },
@@ -309,7 +311,8 @@
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1. You can either assign each pair one of the writing tasks or allow pairs to choose their own. Students should think about what information they need from the AI and how to phrase their prompts clearly, and each write different prompts for their task on the level.",
         "duration": "15",
-        "name": "Crafting Prompts and Evaluating Responses"
+        "name": "Crafting Prompts and Evaluating Responses",
+        "progression_name": "Crafting Prompts"
       },
       "seeding_key": {
         "activity_section.key": "ede884c4-3843-4340-988e-044bbbade2ad",
@@ -320,7 +323,8 @@
       "key": "157720b6-ed4a-48e5-b7bc-95752244f163",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for active engagement and collaboration, with students experimenting with different strategies and refining their prompts based on AI feedback. Identify and support students who may need additional guidance in developing effective prompt engineering strategies.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 to enter their prompt and the AI's response. Have students continue to Level 3 to discuss how the response they got from the AI compared to the response their partner got."
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for active engagement and collaboration, with students experimenting with different strategies and refining their prompts based on AI feedback. Identify and support students who may need additional guidance in developing effective prompt engineering strategies.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 to enter their prompt and the AI's response. Have students continue to Level 3 to discuss how the response they got from the AI compared to the response their partner got.",
+        "progression_name": "Evaluating Responses"
       },
       "seeding_key": {
         "activity_section.key": "157720b6-ed4a-48e5-b7bc-95752244f163",
@@ -382,7 +386,8 @@
       "key": "0c8b742e-65f7-40da-a31c-0c21ce91e959",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What is one way you plan to use AI tools like ChatGPT to improve your writing while keeping it original and ethical?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should share practical strategies for integrating AI into their writing process in a way that enhances their work without compromising originality or ethical standards, such as for idea generation, grammar checks, or refining their writing, while ensuring they maintain their own voice and avoid plagiarism. Listen for reflections on balancing AI assistance with personal effort, and how students plan to credit or acknowledge AI contributions appropriately.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 4 to complete the End of Lesson survey."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What is one way you plan to use AI tools like ChatGPT to improve your writing while keeping it original and ethical?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should share practical strategies for integrating AI into their writing process in a way that enhances their work without compromising originality or ethical standards, such as for idea generation, grammar checks, or refining their writing, while ensuring they maintain their own voice and avoid plagiarism. Listen for reflections on balancing AI assistance with personal effort, and how students plan to credit or acknowledge AI contributions appropriately.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 4 to complete the End of Lesson survey.",
+        "progression_name": "End of Lesson Survey"
       },
       "seeding_key": {
         "activity_section.key": "0c8b742e-65f7-40da-a31c-0c21ce91e959",
@@ -731,10 +736,156 @@
     }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-humanities-L1A"
+        ],
+        "progression": "Crafting Prompts"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-humanities-L1A"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-humanities",
+        "activity_section.key": "ede884c4-3843-4340-988e-044bbbade2ad"
+      },
+      "level_keys": [
+        "gen-ai-humanities-L1A"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-humanities-writing-L2"
+        ],
+        "progression": "Evaluating Responses"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-humanities-writing-L2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-humanities",
+        "activity_section.key": "157720b6-ed4a-48e5-b7bc-95752244f163"
+      },
+      "level_keys": [
+        "gen-ai-humanities-writing-L2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-humanities-writing-L3"
+        ],
+        "progression": "Evaluating Responses"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-humanities-writing-L3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-humanities",
+        "activity_section.key": "157720b6-ed4a-48e5-b7bc-95752244f163"
+      },
+      "level_keys": [
+        "gen-ai-humanities-writing-L3"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "Gen AI Humanities - Writing - Student L1 Survey"
+        ],
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Gen AI Humanities - Writing - Student L1 Survey"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-humanities",
+        "activity_section.key": "0c8b742e-65f7-40da-a31c-0c21ce91e959"
+      },
+      "level_keys": [
+        "Gen AI Humanities - Writing - Student L1 Survey"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-humanities-L1A",
+        "script_level.level_keys": [
+          "gen-ai-humanities-L1A"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-humanities",
+        "activity_section.key": "ede884c4-3843-4340-988e-044bbbade2ad"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-humanities-writing-L2",
+        "script_level.level_keys": [
+          "gen-ai-humanities-writing-L2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-humanities",
+        "activity_section.key": "157720b6-ed4a-48e5-b7bc-95752244f163"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-humanities-writing-L3",
+        "script_level.level_keys": [
+          "gen-ai-humanities-writing-L3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-humanities",
+        "activity_section.key": "157720b6-ed4a-48e5-b7bc-95752244f163"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Gen AI Humanities - Writing - Student L1 Survey",
+        "script_level.level_keys": [
+          "Gen AI Humanities - Writing - Student L1 Survey"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-humanities",
+        "activity_section.key": "0c8b742e-65f7-40da-a31c-0c21ce91e959"
+      }
+    }
   ],
   "resources": [
     {

@@ -5,16 +5,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {askAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-
-import {
-  AITutorTypes as ActionType,
-  AITutorTypesValue,
-} from '@cdo/apps/aiTutor/types';
-
-const QuickActions = {
-  [ActionType.COMPILATION]: "Why doesn't my code compile?",
-  [ActionType.VALIDATION]: "Why aren't my tests passing?",
-};
+import {AITutorTypes as ActionType} from '@cdo/apps/aiTutor/types';
 
 interface AITutorFooterProps {
   renderAITutor: boolean;
@@ -38,65 +29,27 @@ const AITutorFooter: React.FC<AITutorFooterProps> = ({renderAITutor}) => {
   );
   const studentCode = sources[fileMetadata[activeTabKey]].text;
 
-  const hasCompilationError = useAppSelector(
-    state => state.javalabEditor.hasCompilationError
-  );
-  const hasRunOrTestedCode = useAppSelector(
-    state => state.javalab.hasRunOrTestedCode
-  );
-  const isRunning = useAppSelector(state => state.javalab.isRunning);
-  const validationPassed = useAppSelector(
-    state => state.javalab.validationPassed
-  );
-
   const dispatch = useAppDispatch();
 
-  const showCompilationOption =
-    !isRunning && hasRunOrTestedCode && hasCompilationError;
-  const showValidationOption =
-    hasRunOrTestedCode && !hasCompilationError && !validationPassed;
+  const handleSubmit = useCallback(() => {
+    if (isWaitingForChatResponse) {
+      return;
+    }
 
-  const handleSubmit = useCallback(
-    (actionType: AITutorTypesValue) => {
-      if (isWaitingForChatResponse) {
-        return;
-      }
+    const chatContext = {
+      studentInput: userMessage,
+      studentCode,
+      actionType: ActionType.GENERAL_CHAT,
+    };
 
-      let studentInput = '';
-      let event = '';
+    dispatch(askAITutor(chatContext));
+    setUserMessage('');
 
-      switch (actionType) {
-        case ActionType.COMPILATION:
-          studentInput = QuickActions[ActionType.COMPILATION];
-          event = EVENTS.AI_TUTOR_ASK_ABOUT_COMPILATION;
-          break;
-        case ActionType.VALIDATION:
-          studentInput = QuickActions[ActionType.VALIDATION];
-          event = EVENTS.AI_TUTOR_ASK_ABOUT_VALIDATION;
-          break;
-        case ActionType.GENERAL_CHAT:
-        default:
-          studentInput = userMessage;
-          event = EVENTS.AI_TUTOR_ASK_GENERAL_CHAT;
-          break;
-      }
-
-      const chatContext = {
-        studentInput,
-        studentCode,
-        actionType,
-      };
-
-      dispatch(askAITutor(chatContext));
-      setUserMessage('');
-
-      analyticsReporter.sendEvent(event, {
-        levelId: level?.id,
-        levelType: level?.type,
-      });
-    },
-    [userMessage, studentCode, isWaitingForChatResponse, level, dispatch]
-  );
+    analyticsReporter.sendEvent(EVENTS.AI_TUTOR_ASK_GENERAL_CHAT, {
+      levelId: level?.id,
+      levelType: level?.type,
+    });
+  }, [userMessage, studentCode, isWaitingForChatResponse, level, dispatch]);
 
   const disabled = !renderAITutor || isWaitingForChatResponse;
 
@@ -104,7 +57,7 @@ const AITutorFooter: React.FC<AITutorFooterProps> = ({renderAITutor}) => {
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' && userMessage.trim() !== '') {
-      handleSubmit(ActionType.GENERAL_CHAT);
+      handleSubmit();
     }
   };
 
@@ -127,35 +80,9 @@ const AITutorFooter: React.FC<AITutorFooterProps> = ({renderAITutor}) => {
           iconRight={{iconName: 'arrow-up', iconStyle: 'solid'}}
           size="s"
           key="submit"
-          onClick={() => handleSubmit(ActionType.GENERAL_CHAT)}
+          onClick={() => handleSubmit()}
           text="Submit"
         />
-      </div>
-      <div>
-        {showCompilationOption && (
-          <Button
-            className={style.quickActionButton}
-            color={buttonColors.gray}
-            type={'secondary'}
-            size="s"
-            disabled={disabled}
-            key="compilation"
-            text={QuickActions.compilation}
-            onClick={() => handleSubmit(ActionType.COMPILATION)}
-          />
-        )}
-        {showValidationOption && (
-          <Button
-            className={style.quickActionButton}
-            color={buttonColors.gray}
-            type={'secondary'}
-            size="s"
-            disabled={disabled}
-            key="validation"
-            text={QuickActions.validation}
-            onClick={() => handleSubmit(ActionType.VALIDATION)}
-          />
-        )}
       </div>
     </div>
   );

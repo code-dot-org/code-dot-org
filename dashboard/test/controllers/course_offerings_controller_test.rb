@@ -11,12 +11,12 @@ class CourseOfferingsControllerTest < ActionController::TestCase
 
     @levelbuilder = create :levelbuilder
 
-    @course_offering = create :course_offering, display_name: 'Course Offering Name', category: 'other', is_featured: false
+    @course_offering = create :course_offering, display_name: 'Course Offering Name', marketing_initiative: 'HOC', is_featured: false
 
     @update_params = {
       key: @course_offering.key,
       display_name: 'New Display Name',
-      category: 'full_course',
+      marketing_initiative: 'CSF',
       is_featured: false
     }
   end
@@ -36,19 +36,19 @@ class CourseOfferingsControllerTest < ActionController::TestCase
   test 'update course offering updates fields' do
     sign_in @levelbuilder
 
-    course_offering = create :course_offering, display_name: 'Course Offering Name', category: 'other', is_featured: true
+    course_offering = create :course_offering, display_name: 'Course Offering Name', marketing_initiative: 'HOC', is_featured: true
 
     put :update, params: {
       key: course_offering.key,
       display_name: 'New Display Name',
-      category: 'full_course',
+      marketing_initiative: 'CSD',
       is_featured: false
     }
 
     course_offering.reload
 
     assert_equal 'New Display Name', course_offering.display_name
-    assert_equal 'full_course', course_offering.category
+    assert_equal 'CSD', course_offering.marketing_initiative
     assert_equal false, course_offering.is_featured
   end
 end

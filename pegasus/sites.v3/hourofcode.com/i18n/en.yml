@@ -213,6 +213,28 @@
   curricula_title_high: "High School Curricula"
   curricula_desc_high: "Browse the compelling courses and activities that invite you and your high school students to dig deeper into computer science."
 
+  curricula_pages:
+    game_design:
+      title: "Game Design"
+      desc: "Discover the exciting world of game design with Code.org's curriculum. Our game design units foster creativity, problem-solving, and critical thinking skills, empowering students to bring their own interactive experiences to life."
+      button: "Explore Game Design curricula"
+    additional_resources:
+      title: "Additional resources"
+      desc: "Beyond curriculum and professional learning, we have helpful materials to support your classroom."
+      catalog:
+        title: "Curriculum Catalog"
+        desc: "Comprehensive curriculum offerings for every grade and experience level featuring robust structured and self-paced learning options."
+        button: "Explore the catalog"
+      self_paced:
+        title: "Self-Paced Learning"
+        desc: "These modules allow you to engage at your own pace and on your own time while focusing on areas most important to your needs and teaching context."
+        button: "Discover the district program"
+      workshops:
+        title_k_5: "K-5 Workshops"
+        title_6_12: "6-12 Workshops"
+        desc: "With our Regional Partners as hosts and our Code.org facilitators as guides, our workshops around the country focus on reflection, discussion, and growth-oriented learning."
+        button: "Explore professional learning"
+
   facilitator_led_pl_heading: "Facilitator-Led Professional Learning Workshops"
   facilitator_led_pl_desc: "Learn about our professional learning workshops for elementary, middle, and high school teachers."
 
@@ -1613,6 +1635,23 @@
   csf_page_faq_answer_05: "Each CSF course includes 13-17 lessons designed for 45-minute periods. We recommend all students move from lesson to lesson at a pace set by the teacher. There are many teacher-led project levels designed to be experienced in unison while the skill-building lessons can be completed by students at their own pace."
   csf_page_faq_question_06: "What materials do I need for CS Fundamentals?"
   csf_page_faq_answer_06: "Many lessons have handouts that guide students through activities. These resources can be printed or assigned digitally. Some lessons call for typical classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url})."
+  csf_page:
+    intro_list_05: "Aligned to K-5 CSTA curriculum standards"
+    additional_resources:
+      heading: "Additional resources"
+      desc: "Beyond curriculum and professional learning, we have many materials to support your classroom."
+      catalog:
+        title: "Curriculum Catalog"
+        desc: "Comprehensive curriculum offerings for every grade and experience level featuring robust, structured, and self-paced learning options."
+        button: "Explore the catalog"
+      videos:
+        title: "Explore Videos"
+        desc: "We offer a growing library of educational videos for use by educators worldwide, online or in classrooms."
+        button: "View video library"
+      support:
+        title: "Get Support"
+        desc: "Our customer support team is ready to answer your questions. Email us at [support@code.org](%{email_url}) or check out our support center, which offers useful guides and answers!"
+        button: "Visit our support center"
 
   csa_page_top_desc: "Introduce students to software engineering and object-oriented design while they learn the Java programming language in this free curriculum for [AP® Computer Science A (AP® CSA)](%{csa_url})."
   csa_page_intro_heading: "A new approach to AP® CSA"
@@ -11114,6 +11153,12 @@
   hoc_beyond_carousel_description: "Want to keep learning after Hour of Code? Check out these activities for learners of all ages and skill levels."
   hoc_beyond_submit_activity_form: "Submit your own activity [here](%{form_url})."
   hoc_beyond_end_section_label: "The Hour of Code is organized by [Code.org](%{home_page})"
+
+  pl_curriculum_launch_skinny_banner_2024:
+    title: Introducing new professional learning!
+    description: Explore new self-paced online modules that will empower you to teach the newest additions to our curriculum.
+    call_to_action: "Start here!"
+    call_to_action_aria_label: "Start self-paced professional learning"
 
   language_code:
     ar: "Arabic"
