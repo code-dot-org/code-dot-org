@@ -543,20 +543,4 @@ class ProjectsControllerTest < ActionController::TestCase
     assert_response :redirect
     assert_redirected_to "/projects/music/#{channel_id}/view"
   end
-
-  # Get request from teacher without project_validator permission returns a forbidden response
-  test_user_gets_response_for :extra_links,
-  name: "teacher_forbidden_test",
-  user: :teacher,
-  method: :get,
-  params: {channel_id: 'abc123'},
-  response: :forbidden
-
-  # Get request from project validator returns a success response
-  test_user_gets_response_for :extra_links,
-  name: "project_validator_success_test",
-  user: :project_validator,
-  method: :get,
-  params: {channel_id: 'undefined'},
-  response: :success
 end

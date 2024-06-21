@@ -346,6 +346,12 @@ class Ability
       can :extra_links, Level
     end
 
+      
+    if user.persisted? && (user.permission?(UserPermission::PROJECT_VALIDATOR))
+      can :extra_links, ProjectsController
+    end 
+
+
     # In order to accommodate the possibility of there being no database, we
     # need to check that the user is persisted before checking the user
     # permissions.
