@@ -50,9 +50,9 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
     isDisabled(modelCardInfo) || isReadOnly ? iconValue : undefined;
 
   const viewOnlyTooltip = {
-    text: 'View Only',
+    text: '(view only)',
     tooltipId: 'viewOnlyTooltip',
-    direction: 'onLeft',
+    direction: 'onBottom',
   };
   const visibleTabs = [];
   if (showSetupCustomization) {
