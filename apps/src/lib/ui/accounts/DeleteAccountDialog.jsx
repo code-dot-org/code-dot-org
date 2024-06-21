@@ -145,7 +145,7 @@ export default class DeleteAccountDialog extends React.Component {
             onConfirm={deleteUser}
             onCancel={onCancel}
             disableConfirm={disableConfirm}
-            tabIndex="1"
+            tabIndex="0"
           >
             <span
               id="uitest-delete-error"

@@ -12,7 +12,7 @@ const rulesToEventuallyReenable = {
   'jsx-a11y/mouse-events-have-key-events': 'off',
   'jsx-a11y/no-noninteractive-element-interactions': 'off',
   'jsx-a11y/no-static-element-interactions': 'off',
-  'jsx-a11y/tabindex-no-positive': 'off',
+  //'jsx-a11y/tabindex-no-positive': 'off',
 };
 
 // This config defines globals available especially in apps,
