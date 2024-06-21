@@ -345,34 +345,11 @@ class UnitGroup < ApplicationRecord
   def units_for_user(user)
     # @return [Array<Unit>]
     units = default_unit_group_units.map do |ugu|
-      Unit.get_from_cache(select_unit_group_unit(user, ugu).script_id)
+      Unit.get_from_cache(ugu.script_id)
     end
     units.compact.reject do |unit|
       unit.in_development? && !user&.permission?(UserPermission::LEVELBUILDER)
     end
-  end
-
-  # Return an alternate unit group unit associated with the specified default
-  # unit group unit (or the default unit group unit itself) by evaluating these
-  # rules in order:
-  #
-  # 1. If the user is a teacher, and they have a course experiment enabled,
-  # show the corresponding alternate unit group unit.
-  #
-  # 2. If the user is in a section assigned to this course: show an alternate
-  # unit group unit if any section's teacher is in a corresponding course
-  # experiment, otherwise show the default unit group unit.
-  #
-  # 3. If the user is a student and has progress in an alternate unit group unit,
-  # show the alternate unit group unit.
-  #
-  # 4. Otherwise, show the default unit group unit.
-  #
-  # @param user [User|nil]
-  # @param default_unit_group_unit [UnitGroupUnit]
-  # @return [UnitGroupUnit]
-  def select_unit_group_unit(_user, unit_group_unit)
-    unit_group_unit
   end
 
   # @param user [User]

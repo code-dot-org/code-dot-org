@@ -769,30 +769,6 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_equal 'my-unit-group', @unit_group.name
       assert_equal %w(unit1 unit2 unit3), @unit_group.default_units.map(&:name)
     end
-
-    test 'select default unit group unit for teacher without experiment' do
-      assert_equal(
-        @unit_group_unit,
-        @unit_group.select_unit_group_unit(@other_teacher, @unit_group_unit)
-      )
-    end
-
-    test 'select default unit group unit for student by default' do
-      assert_equal(
-        @unit_group_unit,
-        @unit_group.select_unit_group_unit(@student, @unit_group_unit)
-      )
-    end
-
-    test 'select default unit group unit for student when other teacher has experiment' do
-      create :follower, section: @other_section, student_user: @student
-      experiment = create :single_user_experiment, min_user_id: @other_teacher.id, name: 'my-experiment'
-      assert_equal(
-        @unit_group_unit,
-        @unit_group.select_unit_group_unit(@student, @unit_group_unit)
-      )
-      experiment.destroy
-    end
   end
 
   class RedirectCourseUrl < ActiveSupport::TestCase
