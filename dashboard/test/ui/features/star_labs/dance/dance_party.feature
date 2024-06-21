@@ -1,3 +1,4 @@
+@no_firefox
 Feature: Dance Party
   # This test relies on CloudFront signed cookies to access /restricted/ on the
   # test machine, but uses SoundLibraryApi for access in CircleCI.
