@@ -14,48 +14,6 @@ class ExperimentsControllerTest < ActionController::TestCase
   end
 
   test_redirect_to_sign_in_for(
-    :set_course_experiment,
-    params: -> {{experiment_name: @pilot_name}}
-  )
-
-  test_user_gets_response_for(
-    :set_course_experiment,
-    name: "student cannot set course experiment",
-    response: :redirect,
-    user: :student,
-    # use proc syntax so we can pass in @pilot_name
-    params: -> {{experiment_name: @pilot_name}}
-  ) do
-    assert_equal flash[:alert], "Only teachers may join course experiments."
-    assert_nil flash[:notice]
-    assert_nil Experiment.first
-  end
-
-  test_user_gets_response_for(
-    :set_course_experiment,
-    name: 'teacher can set valid experiment name',
-    response: :redirect,
-    user: -> {@teacher},
-    params: -> {{experiment_name: @pilot_name}}
-  ) do
-    assert_nil flash[:alert]
-    assert_includes flash[:notice], "success"
-    assert Experiment.find_by(min_user_id: @teacher.id, name: @pilot_name)
-  end
-
-  test_user_gets_response_for(
-    :set_course_experiment,
-    name: 'teacher cannot set invalid experiment name',
-    response: :redirect,
-    user: :teacher,
-    params: -> {{experiment_name: 'invalid-experiment-name'}}
-  ) do
-    assert_includes flash[:alert], "Unknown experiment name"
-    assert_nil flash[:notice]
-    assert_nil Experiment.first
-  end
-
-  test_redirect_to_sign_in_for(
     :set_single_user_experiment,
     params: -> {{experiment_name: @pilot_name}}
   )
