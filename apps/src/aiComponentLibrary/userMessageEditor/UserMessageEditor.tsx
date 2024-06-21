@@ -1,4 +1,4 @@
-import React, {useState, useCallback} from 'react';
+import React, {useState, useCallback, useMemo} from 'react';
 
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import i18n from '@cdo/locale';
@@ -20,7 +20,9 @@ const UserMessageEditor: React.FunctionComponent<UserMessageEditorProps> = ({
 }) => {
   const [userMessage, setUserMessage] = useState<string>('');
 
-  const userMessageIsEmpty = userMessage.trim() === '';
+  const userMessageIsEmpty = useMemo(() => {
+    userMessage.trim() === '';
+  }, [userMessage]);
 
   const handleKeyPress = (e: React.KeyboardEvent, userMessage: string) => {
     if (e.key === 'Enter' && userMessage.trim() !== '') {

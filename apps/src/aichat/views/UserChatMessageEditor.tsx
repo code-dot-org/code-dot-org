@@ -26,11 +26,7 @@ const UserChatMessageEditor: React.FunctionComponent = () => {
 
   const disabled = isWaitingForChatResponse || saveInProgress;
 
-  return (
-    <>
-      <UserMessageEditor onSubmit={handleSubmit} disabled={disabled} />
-    </>
-  );
+  return <UserMessageEditor onSubmit={handleSubmit} disabled={disabled} />;
 };
 
 export default UserChatMessageEditor;

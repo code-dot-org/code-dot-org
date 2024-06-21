@@ -72,7 +72,6 @@ export const askAITutor = createAsyncThunk(
     const levelInstructions = instructionsState.instructions.longInstructions;
 
     const storedMessages = aiTutorState.aiTutor.chatMessages;
-
     const newMessage: ChatCompletionMessage = {
       role: Role.USER,
       status: Status.UNKNOWN,
