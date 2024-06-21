@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import Button from '@cdo/apps/templates/Button';
-import {useFetch} from '@cdo/apps/util/useFetch';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {ExtraLinksLevelData, ExtraLinksProjectData} from '@cdo/apps/lab2/types';
 import moduleStyles from './extra-links.module.scss';
@@ -16,65 +15,81 @@ interface PermissionResponse {
   permissions: string[];
 }
 
+interface PermissionsAndLinkData {
+  levelLinkData: ExtraLinksLevelData | undefined;
+  projectLinkData: ExtraLinksProjectData | undefined;
+  permissions: string[];
+}
+
+async function fetchPermissionsAndLinkData(
+  levelId: number,
+  channelId?: string
+): Promise<PermissionsAndLinkData> {
+  // Fetch permissions.
+  const permissionsResponse = await HttpClient.fetchJson<PermissionResponse>(
+    '/api/v1/users/current/permissions'
+  );
+  const {permissions} = permissionsResponse.value;
+
+  // Fetch level link data.
+  let levelLinkData: ExtraLinksLevelData | undefined;
+  if (permissions.includes(PERMISSIONS.LEVELBUILDER)) {
+    const levelLinkDataResponse =
+      await HttpClient.fetchJson<ExtraLinksLevelData>(
+        `/levels/${levelId}/extra_links`
+      );
+    levelLinkData = levelLinkDataResponse.value;
+  }
+
+  // Fetch project link data.
+  let projectLinkData: ExtraLinksProjectData | undefined;
+  if (permissions.includes(PERMISSIONS.PROJECT_VALIDATOR)) {
+    const levelProjectDataResponse =
+      await HttpClient.fetchJson<ExtraLinksProjectData>(
+        `/projects/${channelId}/extra_links`
+      );
+    projectLinkData = levelProjectDataResponse.value;
+  }
+
+  // Return fetched permissions and link data.
+  return {
+    levelLinkData,
+    projectLinkData,
+    permissions,
+  };
+}
+
 // If the user has permission to see extra links, fetch extra links for the level,
 // then display a modal with the link data.
 const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
   levelId,
 }: ExtraLinksProps) => {
-  const {loading, data} = useFetch('/api/v1/users/current/permissions');
+  const [isLoading, setIsLoading] = useState(false);
+  const [PermissionsAndLinkData, setPermissionsAndLinkData] =
+    useState<PermissionsAndLinkData | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [levelLinkData, setLevelLinkData] =
-    useState<ExtraLinksLevelData | null>(null);
-  const [projectLinkData, setProjectLinkData] =
-    useState<ExtraLinksProjectData | null>(null);
-  const permissionData = data
-    ? (data as PermissionResponse)
-    : {permissions: []};
+
   const channelId = useAppSelector(
     state => state.lab.channel && state.lab.channel.id
   );
 
   useEffect(() => {
-    const permissionData = data
-      ? (data as PermissionResponse)
-      : {permissions: []};
-    setLevelLinkData(null);
-    setProjectLinkData(null);
-    if (
-      permissionData.permissions.includes(PERMISSIONS.LEVELBUILDER) ||
-      permissionData.permissions.includes(PERMISSIONS.PROJECT_VALIDATOR)
-    ) {
-      try {
-        HttpClient.fetchJson<ExtraLinksLevelData>(
-          `/levels/${levelId}/extra_links`
-        ).then(response => {
-          setLevelLinkData(response.value);
-        });
-      } catch (e) {
-        console.error('Error fetching levelbuilder extra links', e);
-      }
-    }
-    if (permissionData.permissions.includes(PERMISSIONS.PROJECT_VALIDATOR)) {
-      try {
-        HttpClient.fetchJson<ExtraLinksProjectData>(
-          `/projects/${channelId}/extra_links`
-        ).then(response => {
-          setProjectLinkData(response.value);
-        });
-      } catch (e) {
-        console.error('Error fetching project validator extra links', e);
-      }
-    }
-  }, [data, levelId, channelId]);
-
+    setIsLoading(true);
+    fetchPermissionsAndLinkData(levelId, channelId).then(data => {
+      setPermissionsAndLinkData(data);
+      setIsLoading(false);
+    });
+  }, [levelId, channelId]);
+  const {levelLinkData, projectLinkData, permissions} =
+    PermissionsAndLinkData || {};
   if (
-    !permissionData.permissions.includes(PERMISSIONS.LEVELBUILDER) &&
-    !permissionData.permissions.includes(PERMISSIONS.PROJECT_VALIDATOR)
+    !permissions?.includes(PERMISSIONS.LEVELBUILDER) &&
+    !permissions?.includes(PERMISSIONS.PROJECT_VALIDATOR)
   ) {
     return <></>;
   }
 
-  return loading || (!levelLinkData && !projectLinkData) ? null : (
+  return isLoading || (!levelLinkData && !projectLinkData) ? null : (
     <>
       <Button
         onClick={() => setIsModalOpen(true)}

@@ -13,7 +13,7 @@ import moduleStyles from './extra-links.module.scss';
 // version of extra links, which doesn't work on lab2 after a level change.
 interface ExtraLinksModalProps {
   levelLinkData: ExtraLinksLevelData;
-  projectLinkData: ExtraLinksProjectData | null;
+  projectLinkData: ExtraLinksProjectData | undefined;
   isOpen: boolean;
   closeModal: () => void;
   levelId: number;
