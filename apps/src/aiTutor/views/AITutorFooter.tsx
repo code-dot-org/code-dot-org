@@ -1,11 +1,13 @@
 import React, {useState, useCallback} from 'react';
-import style from './ai-tutor.module.scss';
-import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
 import {askAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {AITutorTypes as ActionType} from '@cdo/apps/aiTutor/types';
+import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import style from './ai-tutor.module.scss';
 
 interface AITutorFooterProps {
   renderAITutor: boolean;
