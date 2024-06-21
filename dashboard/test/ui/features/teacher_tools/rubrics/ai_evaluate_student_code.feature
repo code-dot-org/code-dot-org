@@ -152,7 +152,7 @@ Feature: Evaluate student code against rubrics using AI
     # Teacher switches to Class Management tab
     When I click selector "button:contains('Class Data')"
     And I wait until element ".uitest-run-ai-assessment-all" is visible
-    And I wait for 2 seconds
+    And I wait until element "#ui-teacherFeedback" is enabled 
     And element ".uitest-run-ai-assessment-all" is enabled
 
     # Teacher runs AI evaluation
