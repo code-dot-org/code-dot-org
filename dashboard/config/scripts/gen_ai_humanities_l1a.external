@@ -1,0 +1,10 @@
+name 'gen-ai-humanities-L1A'
+title 'Crafting Prompts'
+
+markdown <<MARKDOWN
+Essay Introduction
+
+Prompt: Write an engaging introduction for an essay about the benefits of learning a second language.
+
+Focus on creating a clear and specific prompt to get a strong, relevant introduction from the AI.
+MARKDOWN

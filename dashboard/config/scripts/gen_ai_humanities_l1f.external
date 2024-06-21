@@ -1,0 +1,10 @@
+name 'gen-ai-humanities-L1F'
+title 'Crafting Prompts'
+
+markdown <<MARKDOWN
+Research Summary
+
+Prompt: Summarize the key findings of a recent study on the effects of screen time on children.
+
+Focus on crafting prompts that ask for concise and relevant summaries of complex information.
+MARKDOWN

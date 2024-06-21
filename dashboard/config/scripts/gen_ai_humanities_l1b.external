@@ -1,0 +1,10 @@
+name 'gen-ai-humanities-L1B'
+title 'Crafting Prompts'
+
+markdown <<MARKDOWN
+Story Idea Generation
+
+Prompt: Generate three creative story ideas for a science fiction short story.
+
+Experiment with being specific about the type of story ideas desired, such as themes, settings, or characters.
+MARKDOWN

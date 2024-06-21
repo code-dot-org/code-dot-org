@@ -1,0 +1,10 @@
+name 'gen-ai-humanities-L1E'
+title 'Crafting Prompts'
+
+markdown <<MARKDOWN
+Poem Creation
+
+Prompt: Write a short poem about the changing seasons.
+
+Be clear and descriptive in your prompt to help the AI generate creative and vivid poetry.
+MARKDOWN
