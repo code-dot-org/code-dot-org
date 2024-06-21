@@ -67,6 +67,7 @@ export default function TwoColumnActionBlock({
                   target={button.target}
                   id={button.id}
                   onClick={button.onClick}
+                  aria-label={button.ariaLabel}
                 />
                 {button.extraText && (
                   <BodyFourText>{button.extraText}</BodyFourText>
