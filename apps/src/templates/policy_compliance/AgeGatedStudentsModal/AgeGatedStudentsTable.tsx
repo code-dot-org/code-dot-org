@@ -64,10 +64,9 @@ const AgeGatedStudentsTable: React.FC<Props> = ({studentData}) => {
   };
 
   const parentEmailedFormatter = (
-    latestPermissionRequestSentAt: Date | null,
-    {rowData}: RowData
+    latestPermissionRequestSentAt: Date | null
   ) => (
-    <div key={rowData.id} style={tableLayoutStyles.tableText}>
+    <div style={tableLayoutStyles.tableText}>
       {latestPermissionRequestSentAt ? i18n.yes() : i18n.no()}
     </div>
   );
