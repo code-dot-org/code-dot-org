@@ -2376,11 +2376,13 @@
         title: "Teaching Elementary Game Design"
         desc: "Prepare to teach Code.org's game design module, where students explore game design through engaging activities, exploring concepts, and collaboratively building games."
         button: "Start professional learning"
+        aria_label: "Start the Teaching Elementary Game Design professional learning course"
       interactive:
         overline: "6-12 Teachers"
         title: "Teaching Interactive Animations and Games"
         desc: "Prepare to teach Code.org's CSD Unit 3 - Interactive Animations and Games, allowing you to engage with the content at your own pace and in the order that best suits your needs."
         button: "Start professional learning"
+        aria_label: "Start the Teaching Interactive Animations and Games professional learning course"
     additional_resources:
       heading: "Additional resources"
       desc: "Beyond curriculum and professional learning, we have many materials to support your classroom."
