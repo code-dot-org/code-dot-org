@@ -33,7 +33,6 @@ class UnitGroup < ApplicationRecord
   has_one :plc_course, class_name: 'Plc::Course', foreign_key: 'course_id'
   has_many :default_unit_group_units, -> {where(experiment_name: nil).order(:position)}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
   has_many :default_units, through: :default_unit_group_units, source: :script
-  has_many :alternate_unit_group_units, -> {where.not(experiment_name: nil)}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
   has_and_belongs_to_many :resources, join_table: :unit_groups_resources
   has_many :unit_groups_student_resources, dependent: :destroy
   has_many :student_resources, through: :unit_groups_student_resources, source: :resource
@@ -44,7 +43,6 @@ class UnitGroup < ApplicationRecord
       [
         :plc_course,
         :default_unit_group_units,
-        :alternate_unit_group_units,
         {
           course_version: {
             course_offering: :course_versions
@@ -166,7 +164,6 @@ class UnitGroup < ApplicationRecord
       {
         name: name,
         script_names: default_unit_group_units.map(&:script).map(&:name),
-        alternate_units: summarize_alternate_units,
         published_state: published_state,
         instruction_type: instruction_type,
         participant_audience: participant_audience,
@@ -176,18 +173,6 @@ class UnitGroup < ApplicationRecord
         student_resources: student_resources.sort_by(&:key).map {|r| Services::ScriptSeed::ResourceSerializer.new(r, scope: {}).as_json}
       }.compact
     ) + "\n"
-  end
-
-  def summarize_alternate_units
-    alternates = alternate_unit_group_units.all
-    return nil if alternates.empty?
-    alternates.map do |ugu|
-      {
-        experiment_name: ugu.experiment_name,
-        alternate_script: ugu.script.name,
-        default_script: ugu.default_script.name
-      }
-    end
   end
 
   # This method updates both our localizeable strings related to this course, and
@@ -408,37 +393,7 @@ class UnitGroup < ApplicationRecord
   # @param user [User|nil]
   # @param default_unit_group_unit [UnitGroupUnit]
   # @return [UnitGroupUnit]
-  def select_unit_group_unit(user, unit_group_unit)
-    return unit_group_unit unless user
-
-    alternates = alternate_unit_group_units.to_a.select {|unit| unit.default_script_id == unit_group_unit.script_id}
-    return unit_group_unit if alternates.empty?
-
-    if user.teacher?
-      alternates.each do |ugu|
-        return ugu if SingleUserExperiment.enabled?(user: user, experiment_name: ugu.experiment_name)
-      end
-    end
-
-    course_sections = user.sections_as_student.where(unit_group: self).to_a
-    unless course_sections.empty?
-      alternates.each do |ugu|
-        course_sections.each do |section|
-          return ugu if SingleUserExperiment.enabled?(user: section.teacher, experiment_name: ugu.experiment_name)
-        end
-      end
-      return unit_group_unit
-    end
-
-    if user.student?
-      alternates.each do |ugu|
-        # include hidden units when iterating over user units.
-        user.user_scripts.each do |us|
-          return ugu if ugu.script == us.script
-        end
-      end
-    end
-
+  def select_unit_group_unit(_user, unit_group_unit)
     unit_group_unit
   end
 
