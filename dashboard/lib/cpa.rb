@@ -14,8 +14,7 @@ module Cpa
   # There are four phases for the Colorado Privacy Act:
   # 1. Nothing - nil
   # 2. New User Accounts must be compliant - 'cpa_new_user_lockout'
-  # 3. Existing accounts warned of lockout - 'cpa_all_user_lockout_warning'
-  # 4. All User Accounts must be compliant - 'cpa_all_user_lockout'
+  # 3. All User Accounts must be compliant - 'cpa_all_user_lockout'
   # @param current_request [ActionDispatch::Request] the web request being
   # processed
   # The DateTime strings must be ISO 8601 formatted.
