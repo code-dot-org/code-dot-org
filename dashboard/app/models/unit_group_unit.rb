@@ -21,8 +21,4 @@ class UnitGroupUnit < ApplicationRecord
 
   belongs_to :unit_group, foreign_key: 'course_id', optional: true
   belongs_to :script, class_name: 'Unit', optional: true
-
-  # The script will replace the default_script when the user has
-  # the experiment_name enabled.
-  belongs_to :default_script, class_name: 'Unit', optional: true
 end
