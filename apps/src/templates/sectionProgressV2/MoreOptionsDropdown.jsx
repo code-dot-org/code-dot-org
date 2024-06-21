@@ -17,7 +17,7 @@ import style from './expand-all-rows-dropdown.module.scss';
 
 const DROPDOWN_OFFSET = 172;
 
-function OpenAllStudentProgressButton({
+function MoreOptionsDropdown({
   students,
   expandMetadataForStudents,
   collapseMetadataForStudents,
@@ -27,7 +27,10 @@ function OpenAllStudentProgressButton({
   const elementRef = useRef(null);
   const resizeListener = useRef(null);
 
-  const getAllStudentIds = students.map(student => student.id);
+  const getAllStudentIds = React.useMemo(
+    () => students.map(student => student.id),
+    [students]
+  );
 
   const expandMetaDataForAllStudents = () => {
     expandMetadataForStudents(getAllStudentIds);
@@ -41,12 +44,6 @@ function OpenAllStudentProgressButton({
 
   const getMenuLocation = () => {
     const rect = elementRef.current.firstChild.getBoundingClientRect();
-    console.log(
-      rect.bottom,
-      window.pageYOffset,
-      rect.right,
-      window.pageXOffset
-    );
     return {
       menuTop: rect.bottom + window.pageYOffset,
       menuLeft: rect.right + window.pageXOffset - DROPDOWN_OFFSET,
@@ -78,12 +75,8 @@ function OpenAllStudentProgressButton({
     setOpened(!opened);
   };
 
-  const closeMenu = () => {
-    if (opened) setOpened(false);
-  };
-
   const onClose = () => {
-    closeMenu();
+    setOpened(false);
   };
 
   const targetPoint = {top: menuLocation.menuTop, left: menuLocation.menuLeft};
@@ -127,14 +120,13 @@ function OpenAllStudentProgressButton({
     </div>
   );
 }
-OpenAllStudentProgressButton.propTypes = {
+MoreOptionsDropdown.propTypes = {
   students: PropTypes.arrayOf(studentShape),
   expandMetadataForStudents: PropTypes.func,
   collapseMetadataForStudents: PropTypes.func,
 };
 
-export const UnconnectedOpenAllStudentProgressButton =
-  OpenAllStudentProgressButton;
+export const UnconnectedMoreOptionsDropdown = MoreOptionsDropdown;
 
 export default connect(
   state => ({
@@ -146,4 +138,4 @@ export default connect(
     collapseMetadataForStudents: studentIds =>
       dispatch(collapseMetadataForStudents(studentIds)),
   })
-)(OpenAllStudentProgressButton);
+)(MoreOptionsDropdown);

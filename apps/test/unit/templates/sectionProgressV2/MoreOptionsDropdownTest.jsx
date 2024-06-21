@@ -2,12 +2,12 @@ import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 import sinon from 'sinon';
 
-import {UnconnectedOpenAllStudentProgressButton as OpenAllStudentProgressButton} from '@cdo/apps/templates/sectionProgressV2/OpenAllStudentProgressButton';
+import {UnconnectedMoreOptionsDropdown as MoreOptionsDropdown} from '@cdo/apps/templates/sectionProgressV2/MoreOptionsDropdown';
 import i18n from '@cdo/locale';
 
 import {expect} from '../../../util/reconfiguredChai';
 
-describe('OpenAllStudentProgressButton', () => {
+describe('MoreOptionsDropdown', () => {
   const students = [
     {id: 1, name: 'Student1'},
     {id: 2, name: 'Student2'},
@@ -17,7 +17,7 @@ describe('OpenAllStudentProgressButton', () => {
 
   const renderComponent = () =>
     render(
-      <OpenAllStudentProgressButton
+      <MoreOptionsDropdown
         students={students}
         expandMetadataForStudents={expandMetadataForStudents}
         collapseMetadataForStudents={collapseMetadataForStudents}
@@ -42,6 +42,8 @@ describe('OpenAllStudentProgressButton', () => {
     fireEvent.click(expandAllOption);
     expect(expandMetadataForStudents).to.have.been.calledOnce;
     expect(expandMetadataForStudents).to.have.been.calledWith([1, 2]);
+
+    // closes menu after click
     expect(screen.queryByText(i18n.expandAll())).to.not.exist;
     expect(screen.queryByText(i18n.collapseAll())).to.not.exist;
   });
@@ -55,6 +57,8 @@ describe('OpenAllStudentProgressButton', () => {
     fireEvent.click(collapseAllOption);
     expect(collapseMetadataForStudents).to.have.been.calledOnce;
     expect(collapseMetadataForStudents).to.have.been.calledWith([1, 2]);
+
+    // closes menu after click
     expect(screen.queryByText(i18n.expandAll())).to.not.exist;
     expect(screen.queryByText(i18n.collapseAll())).to.not.exist;
   });
