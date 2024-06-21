@@ -94,6 +94,7 @@ class UnitEditor extends React.Component {
     scriptPath: PropTypes.string.isRequired,
     courseOfferingEditorLink: PropTypes.string,
     isCSDCourseOffering: PropTypes.bool,
+    isMissingRequiredDeviceCompatibilities: PropTypes.bool,
 
     // from redux
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
@@ -245,6 +246,18 @@ class UnitEditor extends React.Component {
       this.setState({
         isSaving: false,
         error: 'Please set both version year and family name.',
+      });
+      return;
+    } else if (
+      [PublishedState.preview, PublishedState.stable].includes(
+        this.state.publishedState
+      ) &&
+      this.props.isMissingRequiredDeviceCompatibilities
+    ) {
+      this.setState({
+        isSaving: false,
+        error:
+          'Please set all device compatibilities in order to save with published state as preview or stable.',
       });
       return;
     }

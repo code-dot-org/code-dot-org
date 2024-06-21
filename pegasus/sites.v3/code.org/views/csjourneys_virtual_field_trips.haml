@@ -54,7 +54,7 @@
   - block_item.each do |block_item|
     .action-block.action-block--one-col.flex-space-between
       .content-wrapper
-        %img{src: "#{block_item[:image]}", alt: ""}
+        %img{src: block_item[:image], alt: ""}
         %p.overline
           = block_item[:overline]
         %h3

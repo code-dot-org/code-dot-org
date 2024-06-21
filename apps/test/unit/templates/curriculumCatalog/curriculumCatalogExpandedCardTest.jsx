@@ -226,6 +226,20 @@ describe('CurriculumCatalogExpandedCard', () => {
     });
   });
 
+  it('does not render a device if their compatibility is not set', () => {
+    renderCurriculumExpandedCard({
+      ...defaultProps,
+      deviceCompatibility:
+        '{"computer":"","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}',
+    });
+
+    expect(screen.queryByText('Computer')).to.be.null;
+    screen.getByText('Chromebook');
+    screen.getByText('Tablet');
+    screen.getByText('Mobile');
+    screen.getByText('Offline');
+  });
+
   it('clicking assign button triggers onAssign function', () => {
     const onAssign = sinon.spy();
     renderCurriculumExpandedCard({
