@@ -375,20 +375,6 @@ class Unit < ApplicationRecord
     end
   end
 
-  # @return [Array<Unit>] An array of modern elementary units.
-  def self.modern_elementary_courses
-    Unit::CATEGORIES[:csf].map {|name| Unit.get_from_cache(name)}
-  end
-
-  # @param locale [String] An "xx-YY" locale string.
-  # @return [Boolean] Whether all the modern elementary courses are available in the given locale.
-  def self.modern_elementary_courses_available?(locale)
-    @modern_elementary_courses_available = modern_elementary_courses.all? do |unit|
-      supported_languages = unit.supported_locales || []
-      supported_languages.any? {|s| locale.casecmp?(s)}
-    end
-  end
-
   def starting_level
     raise "Unit #{name} has no level to start at" if script_levels.empty?
     candidate_level = script_levels.first.or_next_progression_level
@@ -829,8 +815,8 @@ class Unit < ApplicationRecord
     name
   end
 
-  def self.unit_in_category?(category, script)
-    return Unit.get_from_cache(script)&.course_version&.course_offering&.category == category
+  def in_initiative?(initiative)
+    return cached&.course_version&.course_offering&.marketing_initiative == initiative
   end
 
   # Legacy levels have different video and title logic in LevelsHelper.
@@ -858,7 +844,7 @@ class Unit < ApplicationRecord
   end
 
   def csf_international?
-    Unit.unit_in_category?('csf_international', name)
+    ScriptConstants::CATEGORIES[:csf_international].include?(name)
   end
 
   def self.unit_names_by_curriculum_umbrella(curriculum_umbrella)
@@ -885,6 +871,7 @@ class Unit < ApplicationRecord
     lessons.sum(&:total_lesson_duration)
   end
 
+  # curriculum umbrella is deprecated. use in_initiative? instead.
   def under_curriculum_umbrella?(specific_curriculum_umbrella)
     curriculum_umbrella == specific_curriculum_umbrella
   end
@@ -928,7 +915,7 @@ class Unit < ApplicationRecord
   end
 
   def csc?
-    Unit.unit_in_category?('csc', name)
+    in_initiative?('CSC')
   end
 
   # TODO: (Dani) Update to use new course types framework.

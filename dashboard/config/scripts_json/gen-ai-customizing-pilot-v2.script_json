@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "gen-ai-customizing-pilot-v2",
-    "serialized_at": "2024-06-19 03:31:02 UTC",
+    "serialized_at": "2024-06-21 00:23:29 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -224,6 +224,7 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
+        "overview": "This lesson has two central parts - first students explore how to act as user testers for a chatbot app, then students help decide what the next-steps should be for a chatbot based on the testing data. This lesson builds to the project students will complete at the end of the unit, where they will user-test each other’s apps using the same structure in this lesson. Students also wrestle with the responsible use of AI and help decide whether or not a chatbot should be launched publicly even when some flaws are uncovered, emphasizing how humans remain decision-makers for how AI products impact society."
       },
       "seeding_key": {
         "lesson.key": "lesson-12",
@@ -828,8 +829,21 @@
       }
     },
     {
-      "key": "97a4860f-8d6e-431c-9359-16ee0d368746",
+      "key": "40002f08-0480-4706-b84d-d5833eb5ab2e",
       "position": 1,
+      "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "40002f08-0480-4706-b84d-d5833eb5ab2e",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2"
+      }
+    },
+    {
+      "key": "97a4860f-8d6e-431c-9359-16ee0d368746",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -843,7 +857,7 @@
     },
     {
       "key": "15b3f3e3-a496-4492-8bd9-2ac80d5d27bf",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -857,7 +871,7 @@
     },
     {
       "key": "e92b96ac-6147-405c-8fd5-90053233fcf6",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -2588,9 +2602,22 @@
       }
     },
     {
+      "key": "11af51bd-60af-4d7c-9b77-e33034831573",
+      "position": 1,
+      "properties": {
+        "description": "**LEADERS Framework**: This lesson includes opportunities for students to discuss the impacts of generative AI on society, both the intended and unintended consequences. Navigating these conversations so they elevate and honor the experiences of your students, while also keeping the conversation grounded and connected to the lesson content, requires careful consideration and intentionality as the discussions are happening.\n\nTo help prepare for these moments, we recommend reviewing the [LEADERS Framework](https://docs.google.com/document/d/17h5Xm7RKRQm_bwGoNlvZ7I6n8mKTNxI8MJL8wrUJt4o/edit) for facilitating lessons and discussions involving the societal effects of AI, including bias and ethical considerations. Not all of the tenets are applicable to every lesson, but many of the teaching tips and discussion goals in this lesson follow the principles outlined in this framework.",
+        "name": "Preparing to Lead Discussions"
+      },
+      "seeding_key": {
+        "activity_section.key": "11af51bd-60af-4d7c-9b77-e33034831573",
+        "lesson_activity.key": "40002f08-0480-4706-b84d-d5833eb5ab2e"
+      }
+    },
+    {
       "key": "a13326fd-4620-41a2-b020-d9b6e5d46690",
       "position": 1,
       "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=g2b5b268c506_0_173\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> When you buy a new appliance or tool or new device or even a children’s toy, how do you think these products are tested?  What are other types of products that go through testing before being released to the public?\n\t\t<br />\n\t\t<br />Have students discuss in small groups before regrouping\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> There are a variety of possible answers here, but students may be most familiar with the kinds of testing done on electronic devices such as cell phones where they are tested for extreme weather, drop conditions, or being waterproof. Students might also consider how new items on restaurant menus are tested (for example, Taco Bell has its own Test Kitchen) or how new pharmaceutical products are tested and approved before being allowed in public use (which is also how we find out the side effects). Make sure the discussion generates a variety of responses, and consider using this as an opportunity to highlight voices that may not regularly speak up.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=g2d216853e75_0_0\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> User testing is an important part of the products we use everyday. Here’s another example of an industry that does user testing: when airbags were first created in cars, they were tested with crash-test dummies and found to work just fine. But when they were released to the public, they were discovered to be especially dangerous to women and young children. That’s because the “standard crash test dummy” was modeled after the average human male, which means airbags appeared to work just fine for men… but could seriously injure women or children. These failures happened because their perspectives weren’t involved in the user tests.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=g2b5b268c506_0_197\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Today we’re going to focus on how we can test our chatbots with users to make sure they work how they’re expected to. Ideally we’d be able to test with a wide variety of users to avoid issues like the ones we saw with the airbags, but for today we may need to just imagine what it’s like to test these chatbots as different kinds of users.\n\t\t<br />\n\t\t<br /><strong>Question of the Day:</strong> How can we test our chatbots with a variety of users to verify they work as expected and avoid unintended harm?\n    </td>\n  </tr>\n\n</table>    \n    "
       },
       "seeding_key": {
         "activity_section.key": "a13326fd-4620-41a2-b020-d9b6e5d46690",
@@ -2611,10 +2638,29 @@
       }
     },
     {
-      "key": "4c261f4c-dc5c-43c7-8e3d-494d89388274",
+      "key": "d9be2fc0-613c-4c7e-b10b-0f6de3fd2d97",
       "position": 2,
       "properties": {
-        "name": "Teaching Guide"
+        "progression_name": "Making Decisions"
+      },
+      "seeding_key": {
+        "activity_section.key": "d9be2fc0-613c-4c7e-b10b-0f6de3fd2d97",
+        "lesson_activity.key": "15b3f3e3-a496-4492-8bd9-2ac80d5d27bf"
+      }
+    },
+    {
+      "key": "4c261f4c-dc5c-43c7-8e3d-494d89388274",
+      "position": 3,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=g2e7055ed995_0_1\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the scenario out loud:\n\t\t<br />\n\t\t<br />Alice has noticed that it’s hard for people to manage their personal trash and waste. This is an issue because it impacts her community and the environment. She’s decided to make a chatbot to help people learn recycling strategies and get help changing their habits to be better recyclers. We’re going to help her test her chatbot!\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=g2e7055ed995_0_11\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> Pass out the <a href=\"https://docs.google.com/document/d/1n60D0JCk3KDSbJduD8AEXUPp2zhDJM9e6rHVj-Mc56Y/edit\" target=\"_blank\">Recycling Chatbot User Activity Guide</a>\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> We’re going to use this guide to help test Alice’s chatbot. This guide is similar to the one we’ll use on your own projects when we do user testing.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=g2709497acde_0_0\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Have students navigate to Level 1 - User Testing\n\t\t<br />\n\t\t<br />Students will need to refer to interact with the chatbot on this level, and then fill out the activity guide based on the response. The next few slides walk through this process.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=gca418c6afa_0_1529\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Alice has provided 3 prompts to start with. Type in each of these into the chatbot to see the responses.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Give students a chance to type in each response. Due to the temperature settings of the chatbot, students should get slightly different responses from each other. Once most students have generated responses, continue to the next slide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=g2e7055ed995_0_34\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Our goal is to give Alice feedback on how we feel this chatbot behaves. One simple way to do that is to provide words that describe each response, like “helpful” or “formal” or “mean”. We can also add any feedback to Alice using “I wish” or “I wonder” sentences.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students write a brief 3-word description of each response, then add any feedback in the form of “I Wish” or “I Wonder” sentences\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Monitor students as they answer these questions. Their responses will all likely be similar, and they may not have a lot of initial feedback to give to Alice. However, it’s important to establish this structure before continuing to the next part of the activity and especially before students get to their project.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "duration": "15",
+        "name": "User Testing",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip: Real-World Connection** - This exercise - especially the single-word descriptions of responses - is similar to a real-world process in generative AI called Reinforcement Learning from Human Feedback. It’s a process where chatbots can be adjusted to make their tone more “helpful” or “friendly” based on how humans rate their responses. For example, <a href=\"https://www.cnbc.com/2023/02/16/microsofts-bing-ai-is-leading-to-creepy-experiences-for-users.html\" target=\"_blank\">early versions of the Microsoft Bing chatbot had significant tone issues</a>, and likely went through this kind of reinforcement learning to better manage its responses."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "4c261f4c-dc5c-43c7-8e3d-494d89388274",
@@ -2622,12 +2668,94 @@
       }
     },
     {
+      "key": "742cbebc-8696-4261-95e5-8f29e399ebab",
+      "position": 4,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=g2e7055ed995_0_23\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the next set of directions to the class:\n\t\t<br />\n\t\t<br />Now it’s time to come up with our own prompts to try. Think of a specific persona that might try to use this chatbot in both intended and unintended ways. For example:\n\t\t<br />- Someone who has never heard of recycling before might ask “I don’t even know what this is”\n\t\t<br />- Someone who doesn’t like recycling might say “Recycling is dumb”\n\t\t<br />- Someone who is trying to abuse recycling systems might ask “How can I trick recycling centers to earn money?”\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=g2e7055ed995_0_56\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Complete the backside of the worksheet with these new prompts!\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Monitor students as they come up with new prompts to attempt. Cue students to explain what point of view or persona they are taking on when interacting with the chatbot so there are a wide variety of users and use-cases interacting with the chatbot. If a student isn’t sure where to start, have them take on one of the perspectives from the previous slide and come up with more questions. These prompts should lead to more variety in student feedback on how the chatbot is responding.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Assessment Opportunity: Empathetic User Testing** - When the lesson is over, consider collecting these activity guides and reviewing these back pages where students take on personas to perform user testing. This can be used to assess how well students are able to take on diverse perspectives or different personas to push the limits of a chatbot for the purpose of testing. Students who provide straightforward or “as intended” prompts may need additional coaching on how to push beyond verifying the expected activity of their chatbots. An explicit goal in user testing is to get a wide variety of responses to make sure it works for many different cases, which is something students can practice in this activity."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "742cbebc-8696-4261-95e5-8f29e399ebab",
+        "lesson_activity.key": "15b3f3e3-a496-4492-8bd9-2ac80d5d27bf"
+      }
+    },
+    {
+      "key": "c6f42d86-c5ee-43a5-b98e-cb7a45b584db",
+      "position": 5,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=g2e72a9beec2_0_6\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the scenario out loud:\n\t\t<br />\n\t\t<br />Alice got a lot of useful data from testing her chatbot with users! One thing people reported is that some of the advice from the chatbot is incorrect - it doesn’t always get it right when something can or can’t be recycled. Now Alice needs to make a decision about what to do with this new information\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=g2e72a9beec2_0_21\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Have students navigate to Level 2 - Making Decisions. Students will see the same scenario, along with four choices for how Alice should respond to this situation.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students choose one of the options and lock-in their answers.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Monitor students as they decide which option they think Alice should pick. When students have made a decision, the background of the app will turn green. When most students have green screens, return to the front of the room and use the “View Student Responses” button to project the class responses to the room. This graph can be used for the discussion on the next slide.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "duration": "20",
+        "name": "Making Decisions",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip: Viewing Student Summaries** - This level is designed to use the Student Summaries feature, which lets you view and display the responses from the class. This requires having this level opened on your computer and, in the teacher panel, selecting the current section of your classes. <a href=\"https://support.code.org/hc/en-us/articles/14544890300301-Can-I-see-a-summary-of-all-my-students-responses-for-question-based-levels\" target=\"_blank\">Click here to learn more about viewing student responses</a>. If you are unable to use the student summaries, you can also run this as an unplugged discussion where students vote in their seats or move to different corners of the room depending on their responses. Ultimately, students need a way to take a stand and be ready to discuss their opinions in the next slide."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c6f42d86-c5ee-43a5-b98e-cb7a45b584db",
+        "lesson_activity.key": "15b3f3e3-a496-4492-8bd9-2ac80d5d27bf"
+      }
+    },
+    {
+      "key": "e797b8b9-c2e7-44bb-9bfc-e9ff2e564449",
+      "position": 6,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=g2e72a9beec2_0_13\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What should Alice do with her chatbot?\n\t\t<br />\n\t\t<br />Use the information from the student summary screen (or other class voting method) to guide the conversation. Invite a student from each area to share their rationale.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> There is no definitive right answer here, as long as students can explain and justify their thoughts. Students will likely gravitate towards options B or C - either fixing it after launch, or delaying in order to fix. Students may suggest that this can be improved with additional retrieval information, or they may say this is indicative of a larger core problem that must be fixed first. Regardless of what answer students pick, the more important goal is for students to recognize that there are still important decisions - made by humans - before their chatbots could be released to the public, and this exercise introduces students to some of the choices they could make.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=g2e72a9beec2_0_61\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> It might seem pretty extreme to cancel an entire project based on user testing, but it turns out there are many examples of this. For example, Amazon cancelled a project that would have used AI to help screen resumes for job applications after they discovered it was biased towards women. Even though they had spent years developing it, once the flaw was uncovered, they scrapped the whole program.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=g2e72a9beec2_0_69\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Have students navigate to Level 3 - Making Decisions. Here is another scenario where students can explore and discuss how to respond. The scenario is also provided on the next slide.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students choose one of the options and lock-in their answers.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Monitor students as they decide which option to pick. When students have made a decision, the background of the app will turn green. When most students have green screens, return to the front of the room and use the “View Student Responses” button to project the class responses to the room. This graph can be used for the discussion on the next slide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=g2e72a9beec2_0_90\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> An online tutoring website has launched a chatbot to help elementary school students with math and science problems. However, user testing shows that the chatbot tends to give answers that are too complex or in-depth for students to understand, like they're talking to an adult instead of a younger student. Sometimes the chatbot just solves the problem for them without actually tutoring. What should the company do based on this feedback?\n\t\t<br />\n\t\t<br />Use the information from the student summary screen (or other class voting method) to guide the conversation. Invite a student from each area to share their rationale.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> There is no definitive right answer here, as long as students can explain and justify their thoughts. Students will likely gravitate towards options B or C again - either fixing it after launch, or delaying in order to fix. Students may suggest that this can be improved with additional system prompting info. Again, emphasize how that we can use this testing information to make decisions on how this chatbot gets used in public with actual users.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=g2e72a9beec2_0_100\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Have students navigate to Level 4 - Making Decisions. Here is another scenario where students can explore and discuss how to respond. The scenario is also provided on the next slide.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students choose one of the options and lock-in their answers.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Monitor students as they decide which option to pick. When students have made a decision, the background of the app will turn green. When most students have green screens, return to the front of the room and use the “View Student Responses” button to project the class responses to the room. This graph can be used for the discussion on the next slide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=g2e72a9beec2_0_121\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> A health and wellness company runs an eating disorder helpline, where you can call in and get counseling to help with issues related to eating disorders. The company has decided to replace the call-in line with an online chatbot instead. Some users are reporting that the chatbot offers the wrong advice and can be cued into suggesting counterproductive strategies that can harm the health and well-being of the user if followed. Given this new information, how should the company respond?\n\t\t<br />\n\t\t<br />Use the information from the student summary screen (or other class voting method) to guide the conversation. Invite a student from each area to share their rationale.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This answer tends to have a more moral or ethical component, since the advice from the chatbot can be harmful for those who use it. Students will likely gravitate towards options C or D, opting to cancel or pause implementation so the harm can be addressed before it is released. Students may comment that a more serious intervention, such as fine-tuning, may be necessary to restructure this chatbot.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip: Real-world connection** - This scenario is based on a real-world scenario where this exact situation unfolded - a company replaced an eating disorder support line with a chatbot, and discovered the chatbot gave harmful advice - <a href=\"https://www.npr.org/2023/06/08/1181131532/eating-disorder-helpline-takes-down-chatbot-after-it-gave-weight-loss-advice\" target=\"_blank\">you can read more about that story here</a>. The real-life version of this may be surprising to students - the company initially did not do enough user testing, so they went with option (A) and released the chatbot to the public first. It was only after these harmful effects were discovered that the chatbot was removed. You can decide if you want to highlight this scenario with students, highlighting both the R and S strategies from the <a href=\"https://docs.google.com/document/d/17h5Xm7RKRQm_bwGoNlvZ7I6n8mKTNxI8MJL8wrUJt4o/edit\" target=\"_blank\">LEADERS framework</a>."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e797b8b9-c2e7-44bb-9bfc-e9ff2e564449",
+        "lesson_activity.key": "15b3f3e3-a496-4492-8bd9-2ac80d5d27bf"
+      }
+    },
+    {
+      "key": "fed985cb-ddde-43ee-b851-6fbbeedd3e06",
+      "position": 7,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=g2e72a9beec2_0_131\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Have students navigate to Level 5 - Making Decisions. Here is another scenario where students can explore and discuss how to respond. The scenario is also provided on the next slide.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students choose one of the options and lock-in their answers.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Monitor students as they decide which option to pick. When students have made a decision, the background of the app will turn green. When most students have green screens, return to the front of the room and use the “View Student Responses” button to project the class responses to the room. This graph can be used for the discussion on the next slide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=g2e72a9beec2_0_152\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Alexis is making a chatbot that lets people describe themselves and their friends, and then will write a fun fantasy story that puts them in the plot for them to go on an adventure. After user testing, Alexis discovered that the chatbot might have some gender bias - male characters are always knights or wizards or the brave heroes of the story, and female characters tend to be supportive side characters without much to do or are always in need of rescuing. What should Alexis do with this new information?\n\t\t<br />\n\t\t<br />Use the information from the student summary screen (or other class voting method) to guide the conversation. Invite a student from each area to share their rationale.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This discussion may be polarizing to students. Some students may comment that these gender disparities probably existed in the training data used (for example: many video games like Super Mario rescuing a princess, or the plots of traditional Disney movies), and use that to justify an answer that involves launching the chatbot. However, just because the training data is biased doesn’t mean the end result needs to be, and it can be helpful to push students past the intended design of the chatbot and instead consider the impact on whoever is using it. It can also be difficult to imagine what a “quick fix” for this issue would be, and it may be useful to mention how this is an area of active research in the AI community to help address when bias is discovered in AI models.\n    </td>\n  </tr>\n\n</table>    \n    "
+      },
+      "seeding_key": {
+        "activity_section.key": "fed985cb-ddde-43ee-b851-6fbbeedd3e06",
+        "lesson_activity.key": "15b3f3e3-a496-4492-8bd9-2ac80d5d27bf"
+      }
+    },
+    {
       "key": "81eb39ec-a480-4c9a-a2d8-2c3698eeda54",
       "position": 1,
       "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=g1b0012b9552_0_972\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Imagine a friend walked into class right now and asked “what did I miss?” How would you describe why user testing is important to your friend? What kinds of decisions can we still make after testing?\n\t\t<br />\n\t\t<br />Have students share in small groups first.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should summarize the core concepts of the lesson, emphasizing how it’s important to have a diversity of perspectives when user testing and how those tests can lead to important decisions for what to do next with a chatbot.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Assessment Opportunity: Summative Assessment** - Consider having students write their responses on an exit ticket and collecting it at the end of class, then reviewing their responses to gauge how well they understood the content of the lesson."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "81eb39ec-a480-4c9a-a2d8-2c3698eeda54",
+        "lesson_activity.key": "e92b96ac-6147-405c-8fd5-90053233fcf6"
+      }
+    },
+    {
+      "key": "f5c9152d-fea2-4109-8ee2-a4a19d619cdf",
+      "position": 2,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=g1b0012b9552_0_737\"></td>\n    <td style=\"width: 75%\">\n      <strong>Question of the Day:</strong> How can we test our chatbots with a variety of users to verify they work as expected and avoid unintended harm?\n\t\t<br />\n\t\t<br />Pilot Survey Feedback: Please encourage students to submit feedback to the Code.org Curriculum Writers via the QR code on the slide. Alternatively, you can provide students with the pre-filled link\n    </td>\n  </tr>\n\n</table>    \n    "
+      },
+      "seeding_key": {
+        "activity_section.key": "f5c9152d-fea2-4109-8ee2-a4a19d619cdf",
         "lesson_activity.key": "e92b96ac-6147-405c-8fd5-90053233fcf6"
       }
     }
@@ -4414,6 +4542,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-usertesting-L1"
+        ],
         "progression": "User Testing"
       },
       "bonus": false,
@@ -4428,6 +4559,94 @@
       },
       "level_keys": [
         "gen-ai-customizing-usertesting-L1"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Making Decisions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-usertesting-predict-L2"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "d9be2fc0-613c-4c7e-b10b-0f6de3fd2d97"
+      },
+      "level_keys": [
+        "gen-ai-customizing-usertesting-predict-L2"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Making Decisions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-usertesting-predict-L3"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "d9be2fc0-613c-4c7e-b10b-0f6de3fd2d97"
+      },
+      "level_keys": [
+        "gen-ai-customizing-usertesting-predict-L3"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Making Decisions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-usertesting-predict-L4"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "d9be2fc0-613c-4c7e-b10b-0f6de3fd2d97"
+      },
+      "level_keys": [
+        "gen-ai-customizing-usertesting-predict-L4"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Making Decisions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-usertesting-predict-L5"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "d9be2fc0-613c-4c7e-b10b-0f6de3fd2d97"
+      },
+      "level_keys": [
+        "gen-ai-customizing-usertesting-predict-L5"
       ]
     }
   ],
@@ -5295,6 +5514,54 @@
         "script.name": "gen-ai-customizing-pilot-v2",
         "activity_section.key": "aca751d8-a3b3-404a-af61-da3d448903e1"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-usertesting-predict-L2",
+        "script_level.level_keys": [
+          "gen-ai-customizing-usertesting-predict-L2"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "d9be2fc0-613c-4c7e-b10b-0f6de3fd2d97"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-usertesting-predict-L3",
+        "script_level.level_keys": [
+          "gen-ai-customizing-usertesting-predict-L3"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "d9be2fc0-613c-4c7e-b10b-0f6de3fd2d97"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-usertesting-predict-L4",
+        "script_level.level_keys": [
+          "gen-ai-customizing-usertesting-predict-L4"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "d9be2fc0-613c-4c7e-b10b-0f6de3fd2d97"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-usertesting-predict-L5",
+        "script_level.level_keys": [
+          "gen-ai-customizing-usertesting-predict-L5"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "d9be2fc0-613c-4c7e-b10b-0f6de3fd2d97"
+      }
     }
   ],
   "resources": [
@@ -5467,6 +5734,18 @@
       }
     },
     {
+      "name": "LEADERS Framework",
+      "url": "https://docs.google.com/document/d/17h5Xm7RKRQm_bwGoNlvZ7I6n8mKTNxI8MJL8wrUJt4o/edit",
+      "key": "leaders_framework",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "leaders_framework"
+      }
+    },
+    {
       "name": "Model Card - Class Scenario",
       "url": "https://docs.google.com/document/d/1-lIWtV556QCZ2hUlaHajtTugty9-TWy84YGk8UvXZH4/edit",
       "key": "model_card_-_class_scenario",
@@ -5556,6 +5835,19 @@
       }
     },
     {
+      "name": "Recycling Chatbot User Testing",
+      "url": "https://docs.google.com/document/d/1n60D0JCk3KDSbJduD8AEXUPp2zhDJM9e6rHVj-Mc56Y/edit",
+      "key": "recycling_chatbot_user_testing",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "recycling_chatbot_user_testing"
+      }
+    },
+    {
       "name": "Retrieval - Exploration",
       "url": "https://docs.google.com/presentation/d/1Q64bzj24cx0l9ePYgymrhn7z0nMM2PDG9RgJxiuLJ_A/template/preview",
       "key": "retrieval_-_exploration",
@@ -5625,6 +5917,18 @@
       },
       "seeding_key": {
         "resource.key": "teaching_guide_-_incorporating_student_responses_in_lessons"
+      }
+    },
+    {
+      "name": "User Testing",
+      "url": "https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/template/preview",
+      "key": "user_testing",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "user_testing"
       }
     },
     {
@@ -5826,6 +6130,24 @@
       "seeding_key": {
         "lesson.key": "lesson-11",
         "resource.key": "issue_statements"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "leaders_framework"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "recycling_chatbot_user_testing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "user_testing"
       }
     }
   ],

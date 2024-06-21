@@ -123,7 +123,7 @@ describe I18n::Resources::Dashboard::TextToSpeech::SyncOut do
     end
 
     it 'uploads the level TTS "short_instructions" localization to S3' do
-      level.expects(:tts_upload_to_s3).with(level_tts_short_instructions_l10n, 'update_level_i18n', locale: locale).once
+      level.expects(:tts_upload_to_s3).with(level_tts_short_instructions_l10n, 'short_instructions', 'update_level_i18n', locale: locale).once
       upload_level_tts_short_instructions_l10n
     end
 
@@ -163,7 +163,7 @@ describe I18n::Resources::Dashboard::TextToSpeech::SyncOut do
     end
 
     it 'uploads the level TTS "long_instructions" localization to S3' do
-      level.expects(:tts_upload_to_s3).with(level_tts_long_instructions_l10n, 'update_level_i18n', locale: locale).once
+      level.expects(:tts_upload_to_s3).with(level_tts_long_instructions_l10n, 'long_instructions', 'update_level_i18n', locale: locale).once
       upload_level_tts_long_instructions_l10n
     end
 
@@ -217,7 +217,7 @@ describe I18n::Resources::Dashboard::TextToSpeech::SyncOut do
     end
 
     it 'uploads the level TTS "authored_hints" localization to S3' do
-      level.expects(:tts_upload_to_s3).with(level_tts_authored_hint_markdown_l10n, 'update_level_i18n', locale: locale)
+      level.expects(:tts_upload_to_s3).with(level_tts_authored_hint_markdown_l10n, 'hint_markdown', 'update_level_i18n', locale: locale)
       upload_level_tts_authored_hints_l10n
     end
 
