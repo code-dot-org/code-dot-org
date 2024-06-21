@@ -549,6 +549,10 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # For linking new LTI auth options to existing accounts
   private def link_accounts(user)
     if user
+      if user.admin
+        flash[:alert] = "Admins cannot link LTI accounts"
+        redirect_to user_session_path(lti_provider: params[:lti_provider], lms_name: params[:lms_name]) and return
+      end
       begin
         Services::Lti::AccountLinker.call(user: user, session: session)
       rescue => exception
