@@ -509,6 +509,9 @@ sq-AL:
   dashboard_curriculum_middle_title: Burime për Mësues të Shkollave 9-vjeçare
   dashboard_curriculum_overview: Pamja e përgjithshme e Planit Mësimor K-5
   dashboard_debugging: 'Rregullimi:'
+  dashboard_error_other_section: Nëse jeni duke i zhvendosur nxënësit midis sesioneve
+    tuaja, zgjedhni sesionin tuaj nga menyja rënëse. Zgjedhni vetëm “Tjetër mësimdhënës”
+    për të zhvendosur nxënësit tuaj në një sesion të mësimdhënësit tjetër.
   dashboard_faq: Pyetjet më të shpeshta
   dashboard_faq_k5: Pyetje e shtruar shpesh të K-5
   dashboard_filter_all: Të gjitha
@@ -614,6 +617,7 @@ sq-AL:
   dashboard_question: Pyetje
   dashboard_responses_view: 'Shiko përgjigjet e mesazheve në:'
   dashboard_sections_account_creation_question: Kush i krijon llogaritë e studentëve?
+  dashboard_sections_both_sections: Dëshironi që nxënësit të jenë në të dy sesionet?
   dashboard_sections_choose_secret: Nëse ti dëshiron të sigurosh llogari për studentët
     e tu, zgjidh një mënyrë fshehje një <b>fjalë</b> ose një<b> figurë</b> për atë
     seksion.
@@ -626,9 +630,11 @@ sq-AL:
   dashboard_sections_login_type_explanation: Kjo tabelë shpjegonë se cili nga këto
     lloje logimi, <b>figura, fjala ose email-i</b>, do të duash të zgjedhësh për një
     seksion.
+  dashboard_sections_move_students: Zhvendos nxënësit
   dashboard_sections_name: 'Emri i sesionit:'
   dashboard_sections_new_google_section: Seksioni i importit nga Google Classroom
   dashboard_sections_new_section: Seksion i ri
+  dashboard_sections_other_section: Mësimdhënës tjetër
   dashboard_sections_password_account_creation: Fjalëkalimi i krijuar nga studentet
   dashboard_sections_password_question: Çfarë përdorin studentët si një "fjalëkalim"?
   dashboard_sections_picture_account_creation: Një figurë e caktuar nga Code.org
@@ -863,7 +869,7 @@ sq-AL:
   hoc2014_host: Organizo
   hoc2014_students: Studentët
   hoc2014_support: Mbështete &#x25BE;
-  hoc2014_teachers: Mesuesit
+  hoc2014_teachers: Mësuesit
   hoc2014_try: Provoje
   hoc2014_try_frozen: Artistët me Anna dhe Elsa, nga Frozen
   hoc2014_try_new_tutorial: Provo tutorialin tonë të ri Ora e Kodimit në beta
@@ -1742,6 +1748,7 @@ sq-AL:
   user_header_minecraft: Minecraft
   user_header_my_projects: Projektet e mia
   user_header_new_project: Projekti i ri
+  user_header_new_project_low_cap: Projekti i ri
   user_header_playlab: Play Lab
   user_header_settings: Cilësimet e llogarisë
   user_header_signin: Kyçu

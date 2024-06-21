@@ -29,14 +29,6 @@ class CoursesController < ApplicationController
     @course_families_course_types = @course_families_course_types.to_h
   end
 
-  def index
-    view_options(full_width: true, responsive_content: true, no_padding_container: true, has_i18n: true)
-    @is_english = request.language == 'en'
-    @is_signed_out = current_user.nil?
-    @force_race_interstitial = params[:forceRaceInterstitial]
-    @modern_elementary_courses_available = Unit.modern_elementary_courses_available?(request.locale)
-  end
-
   def show
     if !params[:section_id] && current_user&.last_section_id
       redirect_to "#{request.path}?section_id=#{current_user.last_section_id}"

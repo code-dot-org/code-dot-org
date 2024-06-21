@@ -536,7 +536,15 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   # For linking new LTI auth options to existing accounts
   private def link_accounts(user)
-    Services::Lti::AccountLinker.call(user: user, session: session)
+    begin
+      Services::Lti::AccountLinker.call(user: user, session: session)
+    rescue => exception
+      Honeybadger.notify(exception, context: {message: 'Error linking LTI account to oauth account', user_id: user.id})
+      PartialRegistration.delete(session)
+
+      flash.alert = I18n.t('lti.account_linking.backend_error')
+      redirect_to user_session_path and return
+    end
     sign_in_and_redirect user and return
   end
 end

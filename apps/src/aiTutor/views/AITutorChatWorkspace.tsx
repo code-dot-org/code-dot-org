@@ -3,6 +3,7 @@ import React from 'react';
 import {Role} from '@cdo/apps/aiTutor/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import AITutorSuggestedPrompts from './AITutorSuggestedPrompts';
 import AssistantMessage from './AssistantMessage';
 import UserMessage from './UserMessage';
 import WarningModal from './WarningModal';
@@ -38,6 +39,7 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
       )}
       {showWaitingAnimation()}
       <WarningModal />
+      <AITutorSuggestedPrompts />
     </div>
   );
 };

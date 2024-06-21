@@ -631,6 +631,7 @@ Dashboard::Application.routes.draw do
         namespace :account_linking do
           get :landing
           get :existing_account
+          get :finish_link
           post :link_email
         end
       end

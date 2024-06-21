@@ -3,6 +3,7 @@ import {useSelector} from 'react-redux';
 
 import {
   AichatState,
+  selectAllMessages,
   setShowWarningModal,
 } from '@cdo/apps/aichat/redux/aichatRedux';
 import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
@@ -21,9 +22,7 @@ const ChatWorkspace: React.FunctionComponent = () => {
     (state: {aichat: AichatState}) => state.aichat.showWarningModal
   );
 
-  const storedMessages = useSelector(
-    (state: {aichat: AichatState}) => state.aichat.chatMessages
-  );
+  const messages = useSelector(selectAllMessages);
 
   const isWaitingForChatResponse = useSelector(
     (state: {aichat: AichatState}) => state.aichat.isWaitingForChatResponse
@@ -38,7 +37,7 @@ const ChatWorkspace: React.FunctionComponent = () => {
         behavior: 'smooth',
       });
     }
-  }, [conversationContainerRef, storedMessages, isWaitingForChatResponse]);
+  }, [conversationContainerRef, messages, isWaitingForChatResponse]);
 
   const dispatch = useAppDispatch();
 
@@ -67,7 +66,7 @@ const ChatWorkspace: React.FunctionComponent = () => {
         className={moduleStyles.conversationArea}
         ref={conversationContainerRef}
       >
-        {storedMessages.map(message => (
+        {messages.map(message => (
           <ChatMessage message={message} key={message.id} />
         ))}
         {showWaitingAnimation()}

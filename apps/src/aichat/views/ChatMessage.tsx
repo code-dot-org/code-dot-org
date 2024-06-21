@@ -86,7 +86,7 @@ const displayAssistantMessage = (status: string, chatMessageText: string) => {
           moduleStyles.dangerContainer
         )}
       >
-        {chatMessageText}
+        {'There was an error getting a response. Please try again.'}
       </div>
     );
   }

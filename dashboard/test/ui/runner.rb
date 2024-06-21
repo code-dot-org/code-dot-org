@@ -656,7 +656,7 @@ def cucumber_arguments_for_browser(browser, options)
   # skipped via skip_tag(). See `cucumber --help` for more info.
   if eyes?
     arguments +=
-      if browser['mobile']
+      if browser['appium:mobile']
         # iOS browsers will only run eyes tests tagged with @eyes_mobile.
         tag('@eyes_mobile')
       else
@@ -670,8 +670,8 @@ def cucumber_arguments_for_browser(browser, options)
     arguments += skip_tag('@eyes')
   end
 
-  arguments += skip_tag('@no_mobile') if browser['mobile']
-  arguments += skip_tag('@only_mobile') unless browser['mobile']
+  arguments += skip_tag('@no_mobile') if browser['appium:mobile']
+  arguments += skip_tag('@only_mobile') unless browser['appium:mobile']
   arguments += skip_tag('@no_phone') if browser['name'] == 'iPhone'
   arguments += skip_tag('@only_phone') unless browser['name'] == 'iPhone'
   arguments += skip_tag('@no_circle') if options.is_circle
@@ -744,7 +744,7 @@ def run_feature(browser, feature, options)
   run_environment['TEST_LOCAL'] = options.local ? "true" : "false"
   run_environment['TEST_LOCAL_HEADLESS'] = options.local_headless ? "true" : "false"
   run_environment['MAXIMIZE_LOCAL'] = options.maximize ? "true" : "false"
-  run_environment['MOBILE'] = browser['mobile'] ? "true" : "false"
+  run_environment['MOBILE'] = browser['appium:mobile'] ? "true" : "false"
   run_environment['TEST_RUN_NAME'] = test_run_string
   run_environment['IS_CIRCLE'] = options.is_circle ? "true" : "false"
   run_environment['PRIORITY'] = options.priority
