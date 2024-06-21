@@ -127,7 +127,7 @@ GroupOfSizesOfAlerts.args = {
       icon: {iconName: 'circle-check'},
       link: {
         href: '#',
-        text: 'This is a plink',
+        text: 'This is a link',
       },
       onClose: () => console.log('close'),
     },
@@ -138,7 +138,7 @@ GroupOfSizesOfAlerts.args = {
       icon: {iconName: 'circle-check'},
       link: {
         href: '#',
-        children: 'This is a plink',
+        children: 'This is a link',
       },
       onClose: () => console.log('close'),
     },
@@ -149,7 +149,7 @@ GroupOfSizesOfAlerts.args = {
       icon: {iconName: 'circle-check'},
       link: {
         href: '#',
-        children: 'This is a plink',
+        children: 'This is a link',
       },
       onClose: () => console.log('close'),
     },
@@ -160,7 +160,7 @@ GroupOfSizesOfAlerts.args = {
       icon: {iconName: 'circle-check'},
       link: {
         href: '#',
-        children: 'This is a plink',
+        children: 'This is a link',
       },
       onClose: () => console.log('close'),
     },

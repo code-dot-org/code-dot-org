@@ -2,7 +2,7 @@
 
 ## Consuming This Component
 
-This package exports two styled React components: [Alert](Alert.tsx). 
+This package exports two styled React component: [Alert](Alert.tsx). 
 You can import it like this:
 
 ```javascript
