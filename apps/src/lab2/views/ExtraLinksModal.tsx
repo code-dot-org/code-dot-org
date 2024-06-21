@@ -176,8 +176,8 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
         {Object.entries(levelLinkData.script_level_path_links).length} scripts:
       </StrongText>
       <ul>
-        {levelLinkData.script_level_path_links.map((link, index) => (
-          <li key={index}>
+        {levelLinkData.script_level_path_links.map(link => (
+          <li key={link.path}>
             <a href={'/s/' + link.script}>{link.script}</a> as{' '}
             <a href={link.path}>{link.path}</a>
           </li>
@@ -190,8 +190,8 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
     if (remixList.length === 0) {
       return <li>Not a remix.</li>;
     }
-    return remixList.map((link: string, index: number) => (
-      <li key={index}>
+    return remixList.map((link: string) => (
+      <li key={link}>
         <a href={link}>{link}</a>
       </li>
     ));
@@ -257,8 +257,8 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
         <div key={`${listTitle}-div`}>
           <StrongText key={`${listTitle}-title`}>{listTitle}</StrongText>
           <ul key={`${listTitle}-list`}>
-            {links.map((link, index) => (
-              <li key={index}>
+            {links.map(link => (
+              <li key={link.url}>
                 {link.url ? (
                   // This menu is only used by internal users, who have explicitly requested access keys.
                   // eslint-disable-next-line jsx-a11y/no-access-key
