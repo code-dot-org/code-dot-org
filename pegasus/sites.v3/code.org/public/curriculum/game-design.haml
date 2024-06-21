@@ -31,11 +31,12 @@ theme: responsive_full_width
 
 %section.bg-primary-light
   .wrapper
-    .flex-container.align-items-center.gap-2
-      .text-wrapper.flex-1
+    .flex-container.align-items-center.flex-direction-column-mobile.flex-wrap.gap-2
+      .text-wrapper.flex-2
         %h2.heading-sm
           =hoc_s("game_design_page.resources.heading")
-        %p=hoc_s("game_design_page.resources.desc", markdown: :inline)
+        %p.no-margin-bottom
+          =hoc_s("game_design_page.resources.desc", markdown: :inline)
       %a.link-button{href: CDO.studio_url("/users/sign_up")}
         =hoc_s("game_design_page.resources.button")
 

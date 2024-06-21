@@ -173,6 +173,9 @@ i.fa-fw {
   & > .flex-1-5 {
     flex: 1.5;
   }
+  & > .flex-2 {
+    flex: 2;
+  }
 }
 
 // Grid container
@@ -515,29 +518,14 @@ ol.steps-list,
 ul.steps-list {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   align-items: baseline;
-  margin: unset;
+  margin: calc(3rem + 6px) auto 3rem;
   padding: unset;
+  gap: 2rem;
 
-  &.four-col {
-    li {
-      width: 20%;
-
-      @media screen and (max-width: $width-sm) {
-        width: 100%;
-      }
-    }
-  }
-
-  &.three-col {
-    li {
-      width: 28%;
-
-      @media screen and (max-width: $width-sm) {
-        width: 100%;
-      }
-    }
+  @media (max-width: $width-sm) {
+    flex-direction: column;
   }
 
   li {
@@ -545,9 +533,9 @@ ul.steps-list {
     text-indent: 0 !important;
     display: flex;
     justify-content: center;
+    flex: 1;
     flex-wrap: wrap;
     text-align: center;
-    margin: 3rem 0 2.5rem;
 
     a.link-button,
     button,
@@ -608,6 +596,10 @@ ul.steps-list {
 
   p {
     @include body-three;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
