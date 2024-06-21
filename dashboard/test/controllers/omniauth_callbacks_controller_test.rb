@@ -1768,7 +1768,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     OmniauthCallbacksController.expects(:sign_in_google_oauth2).never
     OmniauthCallbacksController.expects(:sign_up_google_oauth2).never
     assert_response :redirect
-    assert_nil User.last
+    assert_nil User.find_by_credential type: AuthenticationOption::GOOGLE, id: auth.uid
   end
 
   # Try to link a credential to the provided user
