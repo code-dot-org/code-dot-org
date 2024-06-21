@@ -8,7 +8,7 @@
   "examples": [
     {
       "name": "Example 1",
-      "description": "Each sprite is set to a different size.",
+      "description": "When the rhino is clicked, each sprite is set to a different size.",
       "app": "https://studio.code.org/projects/spritelab/LLivCo_Re1h4pHsRFRnS2L68tpF6RFPfinwb_dAyu2w",
       "image": null,
       "app_display_type": "embedAppWithCode",
@@ -16,7 +16,7 @@
     },
     {
       "name": "Example 2",
-      "description": "Each sprite is set to a different rotation.",
+      "description": "When the rhino is clicked, each sprite is set to a different rotation.",
       "app": "https://studio.code.org/projects/spritelab/Ems0tkcP45ZIBWpmWwCNkMabLNrQorCCiXlN7hOJVLI",
       "image": null,
       "app_display_type": "embedAppWithCode",

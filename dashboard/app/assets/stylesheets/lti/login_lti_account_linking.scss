@@ -25,9 +25,20 @@
   color: $white;
 }
 
+#flash-messages {
+  text-align: center;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.call-to-action-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .go-back-link {
   display: block;
-  margin-top: 60px;
 }
 
 .oauth-sign-in {

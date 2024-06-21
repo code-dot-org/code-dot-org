@@ -88,7 +88,9 @@ if '${LOCAL_MODE}' == '1'
   local_mode true
 else
   validation_client_name   'code-dot-org-validator'
-  chef_server_url          'https://api.chef.io/organizations/code-dot-org'
+  chef_server_url          'https://code-org.saas.chef.io/organizations/code-dot-org'
+  chef_license             'accept'
+  validation_key           '/etc/chef/validation.pem'
 end
 RUBY
 

@@ -1,7 +1,6 @@
 {
   "key": "csa-data-lab",
   "display_name": "AP CSA Data Lab",
-  "category": "other",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Standalone Unit",

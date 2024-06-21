@@ -2023,6 +2023,16 @@ StudioApp.prototype.setConfigValues_ = function (config) {
       'JavaScript',
       xml
     );
+
+    // Generate code for the initialization blocks. Used at execution time
+    // for labs like Maze.
+    if (this.initializationBlocks.length) {
+      const generator = Blockly.getGenerator();
+      generator.init(this.initializationBlocks[0].workspace);
+      this.initializationCode = generator.finish(
+        Blockly.Generator.blocksToCode('JavaScript', this.initializationBlocks)
+      );
+    }
   }
 
   // enableShowCode defaults to true if not defined
@@ -2071,7 +2081,7 @@ function runButtonClickWrapper(callback) {
     );
     Blockly.mainBlockSpace.getCanvas().dispatchEvent(customEvent);
   }
-
+  getStore().dispatch(setFeedback(null));
   callback();
 }
 
@@ -3440,6 +3450,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
       locale: config.locale,
       assetUrl: this.assetUrl,
       inStartBlocksMode: level.edit_blocks === START_BLOCKS,
+      inToolboxBlocksMode: level.edit_blocks === TOOLBOX_EDIT_MODE,
       isReadOnlyWorkspace: !!config.readonlyWorkspace,
       isDroplet: !!level.editCode,
       isBlockly: this.isUsingBlockly(),

@@ -1,0 +1,10 @@
+name 'gen-ai-humanities-L1H'
+title 'Crafting Prompts'
+
+markdown <<MARKDOWN
+Creative Writing
+
+Prompt: Write a creative scene where a character discovers a hidden door in their house.
+
+Include enough detail in your prompt to inspire rich and imaginative AI-generated scenes.
+MARKDOWN

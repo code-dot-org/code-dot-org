@@ -61,6 +61,8 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    resources :images, only: [:new]
+
     get 'maker/home', to: 'maker#home'
     get 'maker/setup', to: 'maker#setup'
 
@@ -629,6 +631,7 @@ Dashboard::Application.routes.draw do
         namespace :account_linking do
           get :landing
           get :existing_account
+          get :finish_link
           post :link_email
         end
       end

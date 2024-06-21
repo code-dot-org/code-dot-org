@@ -8,8 +8,16 @@ import Link from '@cdo/apps/componentLibrary/link';
 import {expect} from '../../util/reconfiguredChai';
 
 describe('Design System - Link', () => {
-  it('Link - renders with correct text', () => {
+  it('Link - renders with correct text when passed as children prop', () => {
     render(<Link href="https://studio.code.org/home">Home</Link>);
+
+    const link = screen.getByRole('link', {name: 'Home'});
+    expect(link).to.exist;
+    expect(link.href).to.equal('https://studio.code.org/home');
+  });
+
+  it('Link - renders with correct text when passed as text prop', () => {
+    render(<Link href="https://studio.code.org/home" text="Home" />);
 
     const link = screen.getByRole('link', {name: 'Home'});
     expect(link).to.exist;

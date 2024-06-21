@@ -65,23 +65,6 @@ module Curriculum
       }
     ).freeze
 
-    # All the categories options used to group course offerings in the assignment dropdown
-    COURSE_OFFERING_CATEGORIES = %w(
-      pl_self_paced
-      pl_virtual
-      pl_other
-      full_course
-      csf
-      csc
-      aiml
-      maker
-      hoc
-      csf_international
-      math
-      twenty_hour
-      other
-    ).freeze
-
     # The curriculum types used in curriculum quick assign
     COURSE_OFFERING_CURRICULUM_TYPES = OpenStruct.new(
       {

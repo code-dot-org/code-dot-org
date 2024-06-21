@@ -7,6 +7,7 @@ import {isProjectTemplateLevel} from '@cdo/apps/lab2/lab2Redux';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import ProjectTemplateWorkspaceIcon from '@cdo/apps/templates/ProjectTemplateWorkspaceIcon';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import commonI18n from '@cdo/locale';
 
 import HeaderButtons from './HeaderButtons';
 
@@ -16,7 +17,10 @@ const Workspace = () => {
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
 
   const headerContent = (
-    <>Workspace {projectTemplateLevel && <ProjectTemplateWorkspaceIcon />}</>
+    <>
+      {commonI18n.workspaceHeaderShort()}{' '}
+      {projectTemplateLevel && <ProjectTemplateWorkspaceIcon />}
+    </>
   );
 
   return (
