@@ -1758,6 +1758,19 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_includes existing_user.authentication_options, ao
   end
 
+  test 'Account linking flow doesn\'t sign up new users' do
+    DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(true)
+    OmniauthCallbacksController.stubs(:should_link_accounts?).returns(true)
+    auth = generate_auth_user_hash provider: AuthenticationOption::GOOGLE, uid: 'some-uid'
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    get :google_oauth2
+    OmniauthCallbacksController.expects(:sign_in_google_oauth2).never
+    OmniauthCallbacksController.expects(:sign_up_google_oauth2).never
+    assert_response :redirect
+    assert_nil User.find_by_credential type: AuthenticationOption::GOOGLE, id: auth.uid
+  end
+
   # Try to link a credential to the provided user
   # @return [OmniAuth::AuthHash] the auth hash, useful for validating
   #   linked credentials with assert_auth_option
