@@ -11154,6 +11154,12 @@
   hoc_beyond_submit_activity_form: "Submit your own activity [here](%{form_url})."
   hoc_beyond_end_section_label: "The Hour of Code is organized by [Code.org](%{home_page})"
 
+  pl_curriculum_launch_skinny_banner_2024:
+    title: Introducing new professional learning!
+    description: Explore new self-paced online modules that will empower you to teach the newest additions to our curriculum.
+    call_to_action: "Start here!"
+    call_to_action_aria_label: "Start self-paced professional learning"
+
   language_code:
     ar: "Arabic"
     az: "Azerbaijani"
