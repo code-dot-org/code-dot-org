@@ -157,6 +157,7 @@ function LandingPage({
     } else if (lastWorkshopSurveyUrl) {
       return RenderLastWorkshopSurveyBanner();
     } else if (!!DCDO.get('curriculum-launch-2024', false)) {
+      // TODO(ACQ-1998): Remove this block after the 2024 curriculum launch
       return (
         <TwoColumnActionBlock
           imageUrl={pegasus(
@@ -168,6 +169,7 @@ function LandingPage({
             {
               url: pegasus('/educate/professional-learning'),
               text: i18n.plLandingCurriculumLaunchBannerButtonText(),
+              ariaLabel: i18n.plLandingCurriculumLaunchBannerButtonAriaLabel(),
             },
           ]}
         />
