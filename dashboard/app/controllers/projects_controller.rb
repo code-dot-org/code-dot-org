@@ -576,6 +576,7 @@ class ProjectsController < ApplicationController
   # This is used by lab2 levels that cannot use the haml 'extra links' box since
   # this box will not refresh when changing levels.
   def extra_links
+    return render(status: :forbidden, json: {error: 'This user does not have project validator access.'}) unless current_user.project_validator?
     src_channel_id = params[:channel_id]
     if src_channel_id == "undefined"
       return render json: {error: 'No channel id provided.'}, status: 200
