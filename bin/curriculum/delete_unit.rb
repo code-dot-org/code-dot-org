@@ -40,6 +40,8 @@ raise "unit name is required. Use -h for options." if options.unit_names.nil?
 
 require_relative '../../dashboard/config/environment'
 options.unit_names.each do |unit_nm|
+  puts "Processing unit [#{unit_nm}]..."
+
   unit_to_del = Unit.find_by(name: unit_nm)
   raise "Unit with name #{unit_nm} not found" if unit_to_del.nil?
   raise "Published units (state set as 'Stable') cannot be deleted as they could have active sections and progress." unless unit_to_del.published_state != "stable"
@@ -48,9 +50,12 @@ options.unit_names.each do |unit_nm|
   raise "Unit is currently assigned to some sections, deleting will break loading dashboard for those teachers." unless assigned_section_count == 0
 
   user_progress_count = UserScript.where(script_id: unit_to_del.id).count
-  raise "Some users have existing progress in this unit" unless user_progress_count == 0
+  if user_progress_count > 0
+    print "Some users have existing progress in unit [#{unit_nm}]. Continue with deletion? (Y/N)"
+    next unless gets.chomp.casecmp('y').zero?
+  end
 
-  puts "No references to Unit found from sections or user progress."
+  puts "No references to Unit [#{unit_nm}] found from sections."
   if options.dry_run
     puts "Skipping deletion due to dry run mode."
   else
