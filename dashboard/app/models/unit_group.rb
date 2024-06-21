@@ -243,13 +243,6 @@ class UnitGroup < ApplicationRecord
     CourseVersion.course_offering_keys('UnitGroup')
   end
 
-  # @param user [User]
-  # @returns [Boolean] Whether the user has any experiment enabled which is
-  #   associated with an alternate unit group unit.
-  def self.has_any_course_experiments?(user)
-    Experiment.any_enabled?(user: user, experiment_names: UnitGroupUnit.experiments)
-  end
-
   # A course that the general public can assign. Has been soft or
   # hard launched.
   def launched?
