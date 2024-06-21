@@ -43,7 +43,6 @@ import {
   allFieldsHidden,
   findChangedProperties,
   getNewMessageId,
-  getCurrentTime,
   hasFilledOutModelCard,
 } from './utils';
 import {validateModelId} from '../views/modelCustomization/utils';
@@ -210,7 +209,7 @@ export const onSaveComplete =
           id: getNewMessageId(),
           updatedField: typedProperty,
           updatedValue: currentAiCustomizations[typedProperty],
-          timestamp: getCurrentTime(),
+          timestamp: Date.now(),
         })
       );
 
@@ -243,7 +242,7 @@ export const onSaveFail = () => (dispatch: AppDispatch) => {
       id: getNewMessageId(),
       text: 'Error updating project. Please try again.',
       notificationType: 'error',
-      timestamp: getCurrentTime(),
+      timestamp: Date.now(),
     })
   );
   // Notify the UI that the save is complete.
@@ -273,7 +272,7 @@ export const submitChatContents = createAsyncThunk(
       role: Role.USER,
       status: Status.UNKNOWN,
       chatMessageText: newUserMessageText,
-      timestamp: getCurrentTime(),
+      timestamp: Date.now(),
     };
     thunkAPI.dispatch(setChatMessagePending(newMessage));
 
@@ -301,7 +300,7 @@ export const submitChatContents = createAsyncThunk(
         role: Role.ASSISTANT,
         status: Status.ERROR,
         chatMessageText: 'error',
-        timestamp: getCurrentTime(),
+        timestamp: Date.now(),
       };
       thunkAPI.dispatch(addChatMessage(assistantChatMessage));
 
@@ -329,9 +328,7 @@ export const submitChatContents = createAsyncThunk(
 
     thunkAPI.dispatch(clearChatMessagePending());
     chatApiResponse.messages.forEach(message =>
-      thunkAPI.dispatch(
-        addChatMessage({...message, timestamp: getCurrentTime()})
-      )
+      thunkAPI.dispatch(addChatMessage({...message, timestamp: Date.now()}))
     );
   }
 );

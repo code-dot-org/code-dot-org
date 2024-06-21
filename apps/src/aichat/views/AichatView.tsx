@@ -40,13 +40,13 @@ import PresentationView from './presentation/PresentationView';
 import CopyButton from './CopyButton';
 import moduleStyles from './aichatView.module.scss';
 import aichatI18n from '../locale';
-import {getCurrentTime, getNewMessageId} from '../redux/utils';
+import {getNewMessageId} from '../redux/utils';
 
 const getResetModelNotification = (): Notification => ({
   id: getNewMessageId(),
   text: 'Model customizations and model card information have been reset to default settings.',
   notificationType: 'success',
-  timestamp: getCurrentTime(),
+  timestamp: Date.now(),
 });
 
 const AichatView: React.FunctionComponent = () => {

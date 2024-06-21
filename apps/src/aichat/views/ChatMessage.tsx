@@ -22,6 +22,7 @@ import ChatNotificationMessage from './ChatNotificationMessage';
 import moduleStyles from './chatMessage.module.scss';
 import {AI_CUSTOMIZATIONS_LABELS} from './modelCustomization/constants';
 import {modelDescriptions} from '../constants';
+import {timestampToLocalTime} from '../redux/utils';
 
 interface ChatMessageProps {
   message: ChatItem;
@@ -129,7 +130,7 @@ const displayModelUpdateMessage = (
             {updatedText}
             {updatedToText && <StrongText>{updatedToText}</StrongText>}
           </span>
-          <StrongText>{timestamp}</StrongText>
+          <StrongText>{timestampToLocalTime(timestamp)}</StrongText>
         </>
       }
       iconName="check"
@@ -152,7 +153,7 @@ const displayErrorMessage = (
           <span className={moduleStyles.modelUpdateMessageTextContainer}>
             <StrongText>{text}</StrongText>
           </span>
-          {timestamp && <StrongText>{timestamp}</StrongText>}
+          <StrongText>{timestampToLocalTime(timestamp)}</StrongText>
         </>
       }
       iconName={notificationType === 'error' ? 'circle-xmark' : 'check'}

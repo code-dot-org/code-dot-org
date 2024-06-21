@@ -4,7 +4,8 @@ import {LevelProperties} from '@cdo/apps/lab2/types';
 export type AichatInteractionStatusValue = string;
 
 export interface ChatItem {
-  timestamp: string;
+  // UTC timestamp in milliseconds
+  timestamp: number;
 }
 
 export interface ChatMessage extends ChatItem {

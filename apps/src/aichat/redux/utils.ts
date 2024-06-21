@@ -17,9 +17,10 @@ export const getNewMessageId = () => {
   return latestMessageId;
 };
 
-export const getCurrentTimestamp = () =>
-  moment(Date.now()).format('YYYY-MM-DD HH:mm');
-export const getCurrentTime = () => moment(Date.now()).format('LT');
+export const timestampToDateTime = (timestamp: number) =>
+  moment(timestamp).format('YYYY-MM-DD HH:mm');
+export const timestampToLocalTime = (timestamp: number) =>
+  moment(timestamp).format('LT');
 
 const haveDifferentValues = (
   value1: AiCustomizations[keyof AiCustomizations],

@@ -9,6 +9,7 @@ import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 import {ChatItem, isChatMessage, isModelUpdate, isNotification} from '../types';
 import {AI_CUSTOMIZATIONS_LABELS} from './modelCustomization/constants';
+import {timestampToDateTime} from '../redux/utils';
 
 const CopyButton: React.FunctionComponent = () => {
   const messages = useSelector(selectAllMessages);
@@ -44,8 +45,9 @@ const CopyButton: React.FunctionComponent = () => {
 };
 
 function chatItemToFormattedString(chatItem: ChatItem) {
+  const formattedTimestamp = timestampToDateTime(chatItem.timestamp);
   if (isChatMessage(chatItem)) {
-    return `[${chatItem.timestamp} - ${chatItem.role}] ${
+    return `[${formattedTimestamp} - ${chatItem.role}] ${
       chatItem.status === Status.PROFANITY_VIOLATION
         ? '[FLAGGED AS PROFANITY]'
         : chatItem.chatMessageText
@@ -53,13 +55,13 @@ function chatItemToFormattedString(chatItem: ChatItem) {
   }
 
   if (isModelUpdate(chatItem)) {
-    return `[${chatItem.timestamp} - Model Update] ${
+    return `[${formattedTimestamp} - Model Update] ${
       AI_CUSTOMIZATIONS_LABELS[chatItem.updatedField]
     } updated.`;
   }
 
   if (isNotification(chatItem)) {
-    return `[${chatItem.timestamp} - Notification] ${chatItem.text}`;
+    return `[${formattedTimestamp} - Notification] ${chatItem.text}`;
   }
 }
 
