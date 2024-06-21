@@ -49,7 +49,7 @@ describe I18n::Resources::Apps::TextToSpeech::SyncOut do
 
       TextToSpeech.expects(:sanitize).with(lab_message_i10n).once.returns(expected_tts_message_l10n)
       TextToSpeech.expects(:tts_path).with(lab_message_i10n, lab_message_i10n, locale: locale).once.returns(expected_tts_file_path)
-      TextToSpeech.expects(:tts_upload_to_s3).with(expected_tts_message_l10n, expected_tts_file_path, 'update_i18n_static_messages', locale: locale).once
+      TextToSpeech.expects(:tts_upload_to_s3).with(expected_tts_message_l10n, 'message', expected_tts_file_path, 'update_i18n_static_messages', locale: locale).once
 
       perform_sync_out
     end

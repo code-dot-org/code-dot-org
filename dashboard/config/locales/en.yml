@@ -952,7 +952,7 @@ en:
     age: Your age
     header: Account Information Update
     warning: "We're in the process of updating our experience to provide you with even stronger privacy protections. To do this, we need existing users to enter their age here."
-    disclaimer: 'Code.org [will never rent, sell or share this information with any third parties](%{url}).'
+    disclaimer: 'Code.org will never rent, sell or share this information with any third parties.'
     sign_out_markdown: 'If you do not wish to provide your age you may [sign out](%{url}).'
   terms_interstitial:
     title: "Updated Terms of Service and Privacy Policy"
@@ -1427,7 +1427,9 @@ en:
       connect_button: "Connect with %{provider}"
       connect_with: "Connect with..."
       connect_with_email: "Connect with personal login"
+      backend_error: "Oops! We encountered an error while trying to link your account. Please try launching Code.org again from your LMS."
       go_back: "Go back"
+      invalid_credentials: "Invalid credentials"
       linking_page_header: "Link your %{provider} account to your existing Code.org account"
       linking_page_description: "Choose the sign-in method you normally use to access Code.org"
       sign_in_and_connect: "Sign in and connect"

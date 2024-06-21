@@ -1,0 +1,41 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2024-06-20T16:07:00.000Z",
+  "level_num": "custom",
+  "user_id": 1054,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "data-science-sample-pbt-1",
+    "long_instructions": "## Step 1: Import Necessary Libraries\r\nLet's start by importing the Python libraries `pandas` and `matplotlib`.\r\n\r\n### Do This\r\n1. Import `pandas` as `pd`\r\n2. Import `matplotlib.pyplot` as `plt`",
+    "hide_share_and_remix": "false",
+    "teacher_markdown": "Remind students of the purpose of each library: `pandas` for data manipulation and `matplotlib` for plotting graphs.\r\n",
+    "source": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        },
+        "1": {
+          "id": "1",
+          "name": "product_ratings.csv",
+          "language": "csv",
+          "contents": "product,rating\nLaptop,8\nSmartphone,9\nLaptop,7\nTablet,6\nSmartphone,8\nLaptop,9\nHeadphones,7\nTablet,8\nSmartphone,10\nTablet,7\nHeadphones,6\nSmartphone,8\nLaptop,9\nHeadphones,8\nTablet,9\n",
+          "folderId": "0",
+          "active": false,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-06-20 16:08:22 +0000\",\"changed\":[],\"changed_by_id\":1054,\"changed_by_email\":\"molly@code.org\"},{\"changed_at\":\"2024-06-20 19:35:23 +0000\",\"changed\":[],\"changed_by_id\":1054,\"changed_by_email\":\"molly@code.org\"},{\"changed_at\":\"2024-06-20 19:42:41 +0000\",\"changed\":[],\"changed_by_id\":1054,\"changed_by_email\":\"molly@code.org\"}]"
+}]]></config>
+</Pythonlab>
