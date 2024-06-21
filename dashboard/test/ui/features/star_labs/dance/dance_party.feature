@@ -3,13 +3,11 @@ Feature: Dance Party
   # test machine, but uses SoundLibraryApi for access in CircleCI.
   Scenario: Restricted audio content is protected
     When I am on "http://studio.code.org/restricted/placeholder.txt"
-    And I wait for the page to fully load
     Then page text does not contain "placeholder for testing"
 
     When I am on "http://studio.code.org/s/dance/lessons/1/levels/1"
     And I wait for the page to fully load
     And I am on "http://studio.code.org/restricted/placeholder.txt"
-    And I wait for the page to fully load
     Then page text does contain "placeholder for testing"
 
   @no_mobile
