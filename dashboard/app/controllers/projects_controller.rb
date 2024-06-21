@@ -579,7 +579,7 @@ class ProjectsController < ApplicationController
     return render(status: :forbidden, json: {error: 'This user does not have project validator access.'}) unless current_user.project_validator?
     src_channel_id = params[:channel_id]
     if src_channel_id == "undefined"
-      return render json: {error: 'No channel id provided.'}, status: 200
+      return render json: {error: 'No channel id provided.'}, status: :ok
     end
     project_info = {}
     owner_info = {}
