@@ -34,7 +34,6 @@ class ProjectsControllerTest < ActionController::TestCase
     @section = create :section
     @section.add_student @driver
     @section.add_student @navigator
-    @oproject_validator = create :project_validator
   end
 
   teardown do
