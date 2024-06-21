@@ -1,0 +1,10 @@
+name 'gen-ai-humanities-L1C'
+title 'Crafting Prompts'
+
+markdown <<MARKDOWN
+Grammar and Style Correction
+
+Prompt: Improve the grammar and style of the following sentence: "Running fast the dog through the park chasing the frisbee."
+
+Emphasize clarity in asking the AI to correct specific grammatical issues and improve overall readability.
+MARKDOWN

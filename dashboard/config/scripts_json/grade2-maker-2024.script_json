@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "grade2-maker",
-    "serialized_at": "2024-06-12 21:07:52 UTC",
+    "serialized_at": "2024-06-20 17:29:24 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -139,7 +139,7 @@
     },
     {
       "key": "Cristina - Emotion badge with micro:bit",
-      "name": "micro:bit - Emotion badge",
+      "name": "Emotion badge with micro:bit",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -197,7 +197,7 @@
     },
     {
       "key": "Cristina - Calming LEDs with micro:bit",
-      "name": "micro:bit - Calming LEDs",
+      "name": "Calming LEDs with micro:bit",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
