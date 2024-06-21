@@ -17,6 +17,8 @@ const DEFAULT_CONTEXT: LtiProviderContextProps = {
   newAccountUrl: '/new-account',
   existingAccountUrl: new URL('https://example.com/existing-account'),
   emailAddress: 'test@code.org',
+  newCtaType: 'new',
+  continueAccountUrl: '/continue',
 };
 
 describe('LTI Link Account Page Tests', () => {
@@ -122,6 +124,22 @@ describe('LTI Link Account Page Tests', () => {
       expect(formValues.get('user[email]')).to.equal(
         DEFAULT_CONTEXT.emailAddress
       );
+    });
+  });
+
+  describe('cancel button', () => {
+    it('should link to the cancel controller', () => {
+      render(
+        <LtiProviderContext.Provider value={DEFAULT_CONTEXT}>
+          <LtiLinkAccountPage />
+        </LtiProviderContext.Provider>
+      );
+
+      const cancelButton = screen.getByText(i18n.cancel());
+
+      fireEvent.click(cancelButton);
+
+      expect(utils.navigateToHref).to.have.been.calledWith(`/users/cancel`);
     });
   });
 });

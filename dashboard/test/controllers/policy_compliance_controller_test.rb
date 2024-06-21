@@ -115,9 +115,8 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
     assert_response :bad_request
   end
 
-  test "should update user and send an email to the parent upon creating the request" do
-    user = create(:young_student, :without_parent_permission
-)
+  test "should send an email to the parent upon creating the request" do
+    user = create(:young_student, :without_parent_permission)
     sign_in user
 
     assert_emails 1 do
@@ -126,9 +125,6 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
           'parent-email': 'parent@example.com',
         }
       assert_redirected_to lockout_path
-      user.reload
-      assert_equal Policies::ChildAccount::ComplianceState::REQUEST_SENT, user.child_account_compliance_state
-      refute_empty user.child_account_compliance_state_last_updated
     end
   end
 

@@ -1,11 +1,12 @@
+import HttpClient from '@cdo/apps/util/HttpClient';
+
+import {prepMessageForModelInput} from './redux/utils';
 import {
-  Role,
   ChatCompletionMessage,
   AiCustomizations,
   AichatContext,
   AichatModelCustomizations,
 } from './types';
-import HttpClient from '@cdo/apps/util/HttpClient';
 
 const CHAT_COMPLETION_URL = '/aichat/chat_completion';
 
@@ -15,7 +16,7 @@ const CHAT_COMPLETION_URL = '/aichat/chat_completion';
  * and assistant message if successful.
  */
 export async function postAichatCompletionMessage(
-  newMessage: string,
+  newMessage: ChatCompletionMessage,
   messagesToSend: ChatCompletionMessage[],
   aiCustomizations: AiCustomizations,
   aichatContext: AichatContext,
@@ -27,9 +28,9 @@ export async function postAichatCompletionMessage(
     retrievalContexts: aiCustomizations.retrievalContexts,
     systemPrompt: aiCustomizations.systemPrompt,
   };
-  const storedMessages = formatMessagesForAichatCompletion(messagesToSend);
+  const storedMessages = messagesToSend.map(prepMessageForModelInput);
   const payload = {
-    newMessage,
+    newMessage: prepMessageForModelInput(newMessage),
     storedMessages,
     aichatModelCustomizations,
     aichatContext,
@@ -46,20 +47,3 @@ export async function postAichatCompletionMessage(
 
   return await response.json();
 }
-
-const formatMessagesForAichatCompletion = (
-  chatMessages: ChatCompletionMessage[]
-): AichatCompletionMessage[] => {
-  return chatMessages.map(message => {
-    return {
-      role: message.role,
-      content: message.chatMessageText,
-      status: message.status,
-    };
-  });
-};
-
-type AichatCompletionMessage = {
-  role: Role;
-  content: string;
-};
