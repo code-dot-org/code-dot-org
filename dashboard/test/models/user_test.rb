@@ -5430,4 +5430,32 @@ class UserTest < ActiveSupport::TestCase
     student.us_state = 'WA'
     assert student.us_state_changed?
   end
+
+  describe '#latest_parental_permission_request' do
+    let(:latest_parental_permission_request) {user.latest_parental_permission_request}
+
+    let(:user) {create(:non_compliant_child)}
+
+    let(:user_permission_request1) {create(:parental_permission_request, user: user, parent_email: 'test1@example.org')}
+    let(:user_permission_request2) {create(:parental_permission_request, user: user, parent_email: 'test2@example.org')}
+
+    before do
+      user_permission_request1
+      user_permission_request2
+    end
+
+    it 'returns latest parental permission request' do
+      _(latest_parental_permission_request).must_equal user_permission_request2
+    end
+
+    context 'when oldest parental permission request was resent' do
+      before do
+        user_permission_request1.update(resends_sent: 1)
+      end
+
+      it 'returns resend parental permission request' do
+        _(latest_parental_permission_request).must_equal user_permission_request1
+      end
+    end
+  end
 end
