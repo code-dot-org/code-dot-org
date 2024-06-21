@@ -240,19 +240,14 @@ class CourseOffering < ApplicationRecord
     false
   end
 
-  # Return if the course offering's device compatibilities JSON string either:
-  # - Is null
-  # - Contains a device compatibility mapping to the (None) option (which would appear like `{tablet: ""}`)
-  def missing_device_compatibility?
-    return true unless device_compatibility
+  # Checks if the course offering requires device compatibilities and is missing any.
+  def missing_required_device_compatibility?
+    # Only student course offerings require device compatibilites to be published.
+    return false if get_participant_audience != 'student'
+    return true if device_compatibility.nil?
 
     device_compatibility_values = JSON.parse(device_compatibility).values
     device_compatibility_values.any?(&:blank?)
-  end
-
-  def missing_required_device_compatibility?
-    # Course offering device compatibilites are required to publish student courses that are assignable.
-    assignable? && get_participant_audience == 'student' && missing_device_compatibility?
   end
 
   def summarize_for_assignment_dropdown(user, locale_code)

@@ -674,14 +674,23 @@ class CourseOfferingTest < ActiveSupport::TestCase
     Unit.clear_cache
   end
 
-  test 'missing_device_compatibility?' do
+  test 'missing_required_device_compatibility? returns false for pl course offerings' do
+    pl_co = create :course_offering
+    pl_unit = create :script, participant_audience: 'teacher', instructor_audience: 'facilitator'
+    create :course_version, content_root: pl_unit, course_offering: pl_co
+    co = create :course_offering, self_paced_pl_course_offering: pl_co
+
+    refute(co.missing_required_device_compatibility?)
+  end
+
+  test 'missing_required_device_compatibility? returns if device compatibilities are missing for student course offerings' do
     co_device_comp_nil = create :course_offering, key: 'course-offering-dc-nil', device_compatibility: nil
     co_device_comp_missing_one = create :course_offering, key: 'course-offering-dc-missing-one', device_compatibility: '{"computer":"","chromebook":"not_recommended","tablet":"incompatible","mobile":"incompatible","no_device":"incompatible"}'
     co_device_comp_full = create :course_offering, key: 'course-offering-dc-full', device_compatibility: '{"computer":"ideal","chromebook":"not_recommended","tablet":"incompatible","mobile":"incompatible","no_device":"incompatible"}'
 
-    assert(co_device_comp_nil.missing_device_compatibility?)
-    assert(co_device_comp_missing_one.missing_device_compatibility?)
-    refute(co_device_comp_full.missing_device_compatibility?)
+    assert(co_device_comp_nil.missing_required_device_compatibility?)
+    assert(co_device_comp_missing_one.missing_required_device_compatibility?)
+    refute(co_device_comp_full.missing_required_device_compatibility?)
   end
 
   test 'duration returns nil if latest_published_version does not exist' do
