@@ -32,7 +32,11 @@ interface Props {
 
 const AgeGatedStudentsTable: React.FC<Props> = ({studentData}) => {
   const getColumns = () => {
-    const columns = [nameColumn(), consentStatusColumn()];
+    const columns = [
+      nameColumn(),
+      consentStatusColumn(),
+      parentEmailedColumn(),
+    ];
 
     return columns;
   };
@@ -58,6 +62,14 @@ const AgeGatedStudentsTable: React.FC<Props> = ({studentData}) => {
       />
     );
   };
+
+  const parentEmailedFormatter = (
+    latestPermissionRequestSentAt: Date | null
+  ) => (
+    <div style={tableLayoutStyles.tableText}>
+      {latestPermissionRequestSentAt ? i18n.yes() : i18n.no()}
+    </div>
+  );
 
   const nameColumn = () => {
     return {
@@ -102,6 +114,26 @@ const AgeGatedStudentsTable: React.FC<Props> = ({studentData}) => {
       },
     };
   };
+
+  const parentEmailedColumn = () => ({
+    property: 'latestPermissionRequestSentAt',
+    header: {
+      label: i18n.childAccountPolicy_parentEmailed(),
+      props: {
+        style: {
+          ...tableLayoutStyles.headerCell,
+        },
+      },
+    },
+    cell: {
+      formatters: [parentEmailedFormatter],
+      props: {
+        style: {
+          ...tableLayoutStyles.cell,
+        },
+      },
+    },
+  });
 
   const columns = getColumns();
   return (

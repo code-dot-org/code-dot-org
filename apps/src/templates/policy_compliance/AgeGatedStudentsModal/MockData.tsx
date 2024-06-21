@@ -14,6 +14,7 @@ export const MockStudentData = [
     age: 10,
     atRiskAgeGatedStudent: true,
     childAccountComplianceState: ChildAccountComplianceStates.LOCKED_OUT,
+    latestPermissionRequestSentAt: null,
   },
   {
     id: 2,
@@ -27,6 +28,7 @@ export const MockStudentData = [
     age: 10,
     atRiskAgeGatedStudent: false,
     childAccountComplianceState: '',
+    latestPermissionRequestSentAt: null,
   },
   {
     id: 3,
@@ -40,6 +42,7 @@ export const MockStudentData = [
     age: 10,
     atRiskAgeGatedStudent: true,
     childAccountComplianceState: ChildAccountComplianceStates.GRACE_PERIOD,
+    latestPermissionRequestSentAt: null,
   },
   {
     id: 4,
@@ -53,6 +56,7 @@ export const MockStudentData = [
     age: 10,
     atRiskAgeGatedStudent: false,
     childAccountComplianceState: '',
+    latestPermissionRequestSentAt: null,
   },
   {
     id: 5,
@@ -67,5 +71,6 @@ export const MockStudentData = [
     atRiskAgeGatedStudent: true,
     childAccountComplianceState:
       ChildAccountComplianceStates.PERMISSION_GRANTED,
+    latestPermissionRequestSentAt: new Date(),
   },
 ];
