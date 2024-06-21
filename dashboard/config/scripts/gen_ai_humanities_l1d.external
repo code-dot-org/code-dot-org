@@ -1,0 +1,10 @@
+name 'gen-ai-humanities-L1D'
+title 'Crafting Prompts'
+
+markdown <<MARKDOWN
+Argumentative Essay Points
+
+Prompt: List three strong arguments against the use of single-use plastics.
+
+Try to craft prompts that request detailed and well-supported arguments from the AI.
+MARKDOWN

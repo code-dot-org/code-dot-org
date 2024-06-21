@@ -413,7 +413,7 @@ class CourseOffering < ApplicationRecord
   end
 
   def hoc?
-    category == 'hoc' || marketing_initiative == Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.hoc
+    marketing_initiative == Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.hoc
   end
 
   def pl_course?

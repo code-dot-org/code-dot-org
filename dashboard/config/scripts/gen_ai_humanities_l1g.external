@@ -1,0 +1,10 @@
+name 'gen-ai-humanities-L1G'
+title 'Crafting Prompts'
+
+markdown <<MARKDOWN
+Email Draft
+
+Prompt: Draft a formal email to a teacher requesting an extension on a project deadline.
+
+Emphasize the importance of clarity and context in prompts to ensure the AI generates appropriate and polite communication.
+MARKDOWN

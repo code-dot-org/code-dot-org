@@ -1,44 +1,81 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2023-04-11T09:30:59.000Z",
+  "level_num": "custom",
+  "user_id": 4,
   "properties": {
     "encrypted": "false",
-    "preload_asset_list": null,
     "background": "music-black",
     "level_data": {
       "library": "intro2024",
       "text": "First, please play one sound.",
       "toolbox": {
         "blocks": {
-          "Play": ["play_sound_at_current_location_simple2"]
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ]
         },
         "type": "flyout"
       },
       "sounds": {
-        "beats": ["disco_beat", "reggaeton_beat"]
+        "beats": [
+          "disco_beat",
+          "reggaeton_beat"
+        ]
       },
-      "validations": [
-        {
-          "conditions": [{"name": "played_sounds_together", "value": 1}],
-          "message": "Nice work.",
-          "next": "true"
-        },
-        {"message": "Please play one sound."}
-      ],
       "startSources": {
         "blocks": {
           "languageVersion": 0,
-          "blocks": [{"id": "when-run-block", "type": "when_run_simple2", "deletable": false, "movable": false, "x": 34, "y": 34}]
+          "blocks": [
+            {
+              "id": "when-run-block",
+              "type": "when_run_simple2",
+              "deletable": false,
+              "movable": false,
+              "x": 34,
+              "y": 34
+            }
+          ]
         },
-        "variables": [{"name": "currentTime"}, {"name": "i"}]
+        "variables": [
+          {
+            "name": "currentTime"
+          },
+          {
+            "name": "i"
+          }
+        ]
       }
-    }
+    },
+    "instructions_important": "false",
+    "long_instructions": "First, please play one sound.",
+    "hide_share_and_remix": "false",
+    "validations": [
+      {
+        "conditions": [
+          {
+            "name": "played_sounds_together",
+            "value": 1
+          }
+        ],
+        "message": "Nice work.",
+        "next": true,
+        "key": "Music Level 1_391b0b44-af8d-4559-a985-d5b643aed908"
+      },
+      {
+        "message": "Please play one sound.",
+        "key": "Music Level 1_c0da3b0b-c4d6-490c-8bfb-4faf4188ff32",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "preload_asset_list": null
   },
-  "game_id": 70,
-  "published": true,
-  "created_at": "2023-04-05T06:56:32.000Z",
-  "level_num": "custom",
-  "user_id": 4,
-  "audit_log": "[{\"changed_at\":\"2023-04-05 08:25:34 +0000\",\"changed\":[\"published\"],\"changed_by_id\":4,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-04-05 08:25:34 +0000\",\"changed\":[\"published\"],\"changed_by_id\":4,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-20 17:44:09 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":13506,\"changed_by_email\":\"sanchit+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
