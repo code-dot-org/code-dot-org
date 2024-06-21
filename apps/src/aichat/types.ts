@@ -3,24 +3,47 @@ import {LevelProperties} from '@cdo/apps/lab2/types';
 // TODO: Update this once https://codedotorg.atlassian.net/browse/CT-471 is resolved
 export type AichatInteractionStatusValue = string;
 
-export type ChatCompletionMessage = {
-  id: number;
-  role: Role;
+export interface ChatItem {
+  timestamp: string;
+}
+
+export interface ChatMessage extends ChatItem {
   chatMessageText: string;
+  role: Role;
   status: AichatInteractionStatusValue;
-  chatMessageSuffix?: ChatMessageSuffix;
-  timestamp?: string;
-};
+}
 
-export type AichatCompletionMessage = Pick<
-  ChatCompletionMessage,
-  'role' | 'chatMessageText' | 'status'
->;
+export interface ModelUpdate extends ChatItem {
+  id: number;
+  updatedField: keyof AiCustomizations;
+  updatedValue: AiCustomizations[keyof AiCustomizations];
+}
 
-type ChatMessageSuffix = {
+export interface Notification extends ChatItem {
+  id: number;
   text: string;
-  boldtypeText?: string;
-};
+  notificationType: 'error' | 'success';
+}
+
+// Type Predicates: checks if a ChatItem is a given type, and more helpfully,
+// automatically narrows to the specific type.
+export function isChatMessage(item: ChatItem): item is ChatMessage {
+  return (item as ChatMessage).chatMessageText !== undefined;
+}
+
+export function isModelUpdate(item: ChatItem): item is ModelUpdate {
+  return (item as ModelUpdate).updatedField !== undefined;
+}
+
+export function isNotification(item: ChatItem): item is Notification {
+  return (item as Notification).notificationType !== undefined;
+}
+
+export interface ChatApiResponse {
+  messages: ChatMessage[];
+  session_id: number;
+  flagged_content?: string;
+}
 
 export type AichatContext = {
   currentLevelId: number | null;
@@ -42,12 +65,6 @@ export enum ViewMode {
 }
 
 export interface AichatLevelProperties extends LevelProperties {
-  // --- DEPRECATED - used for old AI Chat
-  systemPrompt: string;
-  botTitle?: string;
-  botDescription?: string;
-  // ---
-
   /**
    * Initial AI chat customizations set by the level.
    * For each field, levelbuilders may define the initial default value,

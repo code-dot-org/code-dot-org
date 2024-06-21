@@ -20,10 +20,8 @@ import {
 } from '@cdo/apps/lab2/views/dialogs/DialogManager';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {commonI18n} from '@cdo/apps/types/locale';
-import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
 import {
-  addChatMessage,
   clearChatMessages,
   resetToDefaultAiCustomizations,
   setStartingAiCustomizations,
@@ -32,13 +30,9 @@ import {
   onSaveComplete,
   onSaveFail,
   endSave,
+  addNotification,
 } from '../redux/aichatRedux';
-import {
-  AichatLevelProperties,
-  ChatCompletionMessage,
-  Role,
-  ViewMode,
-} from '../types';
+import {AichatLevelProperties, Notification, ViewMode} from '../types';
 import {isDisabled} from './modelCustomization/utils';
 import ChatWorkspace from './ChatWorkspace';
 import ModelCustomizationWorkspace from './ModelCustomizationWorkspace';
@@ -48,14 +42,12 @@ import moduleStyles from './aichatView.module.scss';
 import aichatI18n from '../locale';
 import {getCurrentTime, getNewMessageId} from '../redux/utils';
 
-const RESET_MODEL_NOTIFICATION: ChatCompletionMessage = {
+const getResetModelNotification = (): Notification => ({
   id: getNewMessageId(),
-  role: Role.MODEL_UPDATE,
-  chatMessageText: 'Model customizations and model card information',
-  chatMessageSuffix: {text: ' have been reset to default settings.'},
-  status: Status.OK,
+  text: 'Model customizations and model card information have been reset to default settings.',
+  notificationType: 'success',
   timestamp: getCurrentTime(),
-};
+});
 
 const AichatView: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
@@ -170,7 +162,7 @@ const AichatView: React.FunctionComponent = () => {
   const resetProject = useCallback(() => {
     dispatch(resetToDefaultAiCustomizations(levelAichatSettings));
     dispatch(clearChatMessages());
-    dispatch(addChatMessage(RESET_MODEL_NOTIFICATION));
+    dispatch(addNotification(getResetModelNotification()));
   }, [dispatch, levelAichatSettings]);
 
   const dialogControl = useContext(DialogContext);
