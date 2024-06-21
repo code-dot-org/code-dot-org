@@ -37,10 +37,6 @@ class Pythonlab < Level
 
   validate :has_correct_multiple_choice_answer?
 
-  def self.predict_question_types
-    [['Free response', 'free_response'], ['Multiple choice', 'multiple_choice']]
-  end
-
   def self.create_from_level_builder(params, level_params)
     create!(
       level_params.merge(
