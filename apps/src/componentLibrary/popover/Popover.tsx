@@ -40,7 +40,7 @@ export interface TabsProps {
 // - add styles
 // - update Readme
 // - update index
-// - update Changelog
+// - ✔ update Changelog ✔
 
 /**
  * ### Production-ready Checklist:
