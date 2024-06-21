@@ -52,7 +52,7 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
   const viewOnlyTooltip = {
     text: 'View Only',
     tooltipId: 'viewOnlyTooltip',
-    direction: 'onBottom',
+    direction: 'onLeft',
   };
   const visibleTabs = [];
   if (showSetupCustomization) {
@@ -60,7 +60,7 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
       value: 'setup',
       text: 'Setup',
       tabContent: <SetupCustomization />,
-      iconRight: setupCustomizationIcon,
+      iconLeft: setupCustomizationIcon,
       tooltip: viewOnlyTooltip,
     });
   }
@@ -69,7 +69,7 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
       value: 'retrieval',
       text: 'Retrieval',
       tabContent: <RetrievalCustomization />,
-      iconRight: retrievalIcon,
+      iconLeft: retrievalIcon,
       tooltip: viewOnlyTooltip,
     });
   }
@@ -78,7 +78,7 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
       value: 'modelCardInfo',
       text: 'Publish',
       tabContent: <PublishNotes />,
-      iconRight: publishIcon,
+      iconLeft: publishIcon,
       tooltip: viewOnlyTooltip,
     });
   }
