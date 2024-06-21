@@ -48,8 +48,8 @@ function TeacherDashboardHeader({
   const inUSA =
     ['US', 'RD'].includes(currentUser.countryCode) || !!currentUser.usStateCode;
   const showAgeGatedStudentsBanner =
-    (inUSA && currentUser.isTeacher && ageGatedStudentsCount > 0) ||
-    DCDO.get('show-age-gated-students-banner', false);
+    (inUSA && currentUser.isTeacher && ageGatedStudentsCount > 0) &&
+    DCDO.get('show-age-gated-students-banner', !Rails.env.production?);
 
   const toggleModal = () => {
     setModalOpen(!modalOpen);
