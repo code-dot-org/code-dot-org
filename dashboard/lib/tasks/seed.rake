@@ -33,8 +33,12 @@ namespace :seed do
     ActiveRecord::Migration.check_pending!
   end
 
+  # Path to the dashboard directory from which content files (under /config) should be read.
+  DASHBOARD_DIR = ENV['DASHBOARD_DIR'] || '.'
+  DASHBOARD_PATHNAME = Pathname(DASHBOARD_DIR)
+
   timed_task_with_logging videos: :environment do
-    Video.setup
+    Video.setup(DASHBOARD_DIR)
   end
 
   timed_task_with_logging concepts: :environment do
@@ -54,19 +58,19 @@ namespace :seed do
   end
 
   timed_task_with_logging foorm_libraries: :environment do
-    Foorm::Library.setup
+    Foorm::Library.setup(DASHBOARD_DIR)
   end
 
   timed_task_with_logging foorm_forms: :environment do
-    Foorm::Form.setup
+    Foorm::Form.setup(DASHBOARD_DIR)
   end
 
   timed_task_with_logging foorms: :environment do
-    Foorm::Library.setup
-    Foorm::Form.setup
+    Foorm::Library.setup(DASHBOARD_DIR)
+    Foorm::Form.setup(DASHBOARD_DIR)
   end
 
-  SCRIPTS_GLOB = Dir.glob('config/scripts_json/**/*.script_json').sort.flatten.freeze
+  SCRIPTS_GLOB = Dir.glob("#{DASHBOARD_DIR}/config/scripts_json/**/*.script_json").sort.flatten.freeze
   SPECIAL_UI_TEST_SCRIPTS = %w(
     ui-test-script-in-course-2017
     ui-test-script-in-course-2019
@@ -142,7 +146,7 @@ namespace :seed do
     oceans
     sports
   ).map {|script| "config/scripts_json/#{script}.script_json"}.freeze
-  SEEDED = 'config/scripts/.seeded'.freeze
+  SEEDED = "#{DASHBOARD_DIR}/config/scripts/.seeded".freeze
 
   # Update scripts in the database from their file definitions.
   #
@@ -211,7 +215,7 @@ namespace :seed do
   end
 
   timed_task_with_logging courses: :environment do
-    Dir.glob(UnitGroup.file_path('**')).sort.map do |path|
+    Dir.glob(UnitGroup.file_path('**', DASHBOARD_PATHNAME)).sort.map do |path|
       UnitGroup.load_from_path(path)
     end
   end
@@ -228,7 +232,7 @@ namespace :seed do
 
   # multi and match files must be seeded before any custom levels which contain them
   CHILD_DSL_TYPES = %w(TextMatch ContractMatch External Match Multi EvaluationMulti).freeze
-  CHILD_DSL_FILES = CHILD_DSL_TYPES.map {|x| Dir.glob("config/scripts/**/*.#{x.underscore}*").sort}.flatten.freeze
+  CHILD_DSL_FILES = CHILD_DSL_TYPES.map {|x| Dir.glob("#{DASHBOARD_DIR}/config/scripts/**/*.#{x.underscore}*").sort}.flatten.freeze
 
   timed_task_with_logging child_dsls: :environment do
     DSLDefined.transaction do
@@ -239,7 +243,7 @@ namespace :seed do
   # bubble choice and level group files must be seeded last, since they can
   # contain many other level types
   PARENT_DSL_TYPES = %w(BubbleChoice LevelGroup).freeze
-  PARENT_DSL_FILES = PARENT_DSL_TYPES.map {|x| Dir.glob("config/scripts/**/*.#{x.underscore}*").sort}.flatten.freeze
+  PARENT_DSL_FILES = PARENT_DSL_TYPES.map {|x| Dir.glob("#{DASHBOARD_DIR}/config/scripts/**/*.#{x.underscore}*").sort}.flatten.freeze
 
   timed_task_with_logging parent_dsls: :environment do
     DSLDefined.transaction do
@@ -252,7 +256,7 @@ namespace :seed do
   # rake seed:single_dsl DSL_FILENAME=csa_unit_6_assessment_2023.level_group
   timed_task_with_logging single_dsl: :environment do
     DSLDefined.transaction do
-      dsl_files = Dir.glob("config/scripts/**/#{ENV['DSL_FILENAME']}")
+      dsl_files = Dir.glob("#{DASHBOARD_DIR}/config/scripts/**/#{ENV['DSL_FILENAME']}")
 
       unless dsl_files.count > 0
         raise 'no matching dsl-defined level files found. please check filename for exact case and spelling.'
@@ -288,26 +292,26 @@ namespace :seed do
   end
 
   timed_task_with_logging blocks: :environment do
-    Block.load_records
+    Block.load_records(root_dir: DASHBOARD_PATHNAME)
   end
 
   timed_task_with_logging shared_blockly_functions: :environment do
-    SharedBlocklyFunction.load_records
+    SharedBlocklyFunction.load_records(root_dir: DASHBOARD_PATHNAME)
   end
 
   timed_task_with_logging libraries: :environment do
-    Library.load_records
+    Library.load_records(root_dir: DASHBOARD_PATHNAME)
   end
 
   # Generate the database entry from the custom levels json file.
   # Optionally limit to a single level via LEVEL_NAME= env variable.
   timed_task_with_logging custom_levels: :environment do
     level_name = ENV['LEVEL_NAME']
-    LevelLoader.load_custom_levels(level_name)
+    LevelLoader.load_custom_levels(level_name, DASHBOARD_DIR)
   end
 
   timed_task_with_logging deprecated_blockly_levels: :environment do
-    Services::DeprecatedLevelLoader.load_blockly_levels
+    Services::DeprecatedLevelLoader.load_blockly_levels(DASHBOARD_DIR)
   end
 
   # Seeds the data in callouts
@@ -321,7 +325,7 @@ namespace :seed do
   end
 
   timed_task_with_logging course_offerings: :environment do
-    CourseOffering.seed_all
+    CourseOffering.seed_all(root_dir: DASHBOARD_PATHNAME)
   end
 
   timed_task_with_logging course_offerings_ui_tests: :environment do
@@ -331,7 +335,7 @@ namespace :seed do
   end
 
   timed_task_with_logging reference_guides: :environment do
-    ReferenceGuide.seed_all
+    ReferenceGuide.seed_all(DASHBOARD_PATHNAME)
   end
 
   # Seeds Standards
@@ -341,14 +345,15 @@ namespace :seed do
     Standard.seed_all
   end
 
+  #
   timed_task_with_logging code_docs: :environment do
-    ProgrammingEnvironment.seed_all
-    ProgrammingExpression.seed_all
-    ProgrammingClass.seed_all
+    ProgrammingEnvironment.seed_all(root_dir: DASHBOARD_PATHNAME)
+    ProgrammingExpression.seed_all(root_dir: DASHBOARD_PATHNAME)
+    ProgrammingClass.seed_all(root_dir: DASHBOARD_PATHNAME)
   end
 
   timed_task_with_logging data_docs: :environment do
-    DataDoc.seed_all
+    DataDoc.seed_all(DASHBOARD_DIR)
   end
 
   # Seeds the data in school_districts
@@ -406,12 +411,10 @@ namespace :seed do
 
   timed_task_with_logging secret_words: :environment do
     SecretWord.setup
-    puts "done"
   end
 
   timed_task_with_logging secret_pictures: :environment do
     SecretPicture.setup
-    puts "done"
   end
 
   timed_task_with_logging restricted_section: :environment do

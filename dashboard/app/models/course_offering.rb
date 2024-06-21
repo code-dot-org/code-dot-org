@@ -369,9 +369,9 @@ class CourseOffering < ApplicationRecord
     File.write(file_path, JSON.pretty_generate(object_to_serialize) + "\n")
   end
 
-  def self.seed_all(glob = "config/course_offerings/*.json")
+  def self.seed_all(root_dir: Rails.root, glob: "config/course_offerings/*.json")
     removed_records = all.pluck(:key)
-    Dir.glob(Rails.root.join(glob)).each do |path|
+    Dir.glob(root_dir.join(glob)).each do |path|
       removed_records -= [CourseOffering.seed_record(path)]
     end
     where(key: removed_records).destroy_all
