@@ -4018,7 +4018,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'summarize' do
-    latest_permission_request_sent_at = 1.month.ago
+    latest_permission_request_sent_at = 1.month.ago.change(usec: 0)
 
     create(:parental_permission_request, user: @student, updated_at: latest_permission_request_sent_at)
 
