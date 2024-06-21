@@ -104,8 +104,7 @@ $(document).ready(() => {
   });
 
   function cleanSchoolInfo() {
-    // Clear school_id if the searched school is not found.
-    // New school search flow
+    // Clear school_id and zip if the searched school is not found.
     const newSchoolIdEl = $(
       'select[name="user[school_info_attributes][school_id]"]'
     );
@@ -115,7 +114,6 @@ $(document).ready(() => {
       )
     ) {
       newSchoolIdEl.val('');
-      // Clear out zip before saving as well
       $('input[name="user[school_info_attributes][school_zip]"]').val('');
     }
   }
