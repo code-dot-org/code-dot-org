@@ -683,14 +683,28 @@ class CourseOfferingTest < ActiveSupport::TestCase
     refute(co.missing_required_device_compatibility?)
   end
 
-  test 'missing_required_device_compatibility? returns if device compatibilities are missing for student course offerings' do
-    co_device_comp_nil = create :course_offering, key: 'course-offering-dc-nil', device_compatibility: nil
-    co_device_comp_missing_one = create :course_offering, key: 'course-offering-dc-missing-one', device_compatibility: '{"computer":"","chromebook":"not_recommended","tablet":"incompatible","mobile":"incompatible","no_device":"incompatible"}'
-    co_device_comp_full = create :course_offering, key: 'course-offering-dc-full', device_compatibility: '{"computer":"ideal","chromebook":"not_recommended","tablet":"incompatible","mobile":"incompatible","no_device":"incompatible"}'
+  test 'missing_required_device_compatibility? returns true for student course offering with nil device_compatibility' do
+    co = create :course_offering, device_compatibility: nil
+    unit = create :script, participant_audience: 'student', instructor_audience: 'teacher'
+    create :course_version, content_root: unit, course_offering: co
 
-    assert(co_device_comp_nil.missing_required_device_compatibility?)
-    assert(co_device_comp_missing_one.missing_required_device_compatibility?)
-    refute(co_device_comp_full.missing_required_device_compatibility?)
+    assert(co.missing_required_device_compatibility?)
+  end
+
+  test 'missing_required_device_compatibility? returns true for student course offering missing a device_compatibility' do
+    co = create :course_offering, device_compatibility: '{"computer":"","chromebook":"not_recommended","tablet":"incompatible","mobile":"incompatible","no_device":"incompatible"}'
+    unit = create :script, participant_audience: 'student', instructor_audience: 'teacher'
+    create :course_version, content_root: unit, course_offering: co
+
+    assert(co.missing_required_device_compatibility?)
+  end
+
+  test 'missing_required_device_compatibility? returns false for student course offering not missing any device_compatibility' do
+    co = create :course_offering, device_compatibility: '{"computer":"ideal","chromebook":"not_recommended","tablet":"incompatible","mobile":"incompatible","no_device":"incompatible"}'
+    unit = create :script, participant_audience: 'student', instructor_audience: 'teacher'
+    create :course_version, content_root: unit, course_offering: co
+
+    refute(co.missing_required_device_compatibility?)
   end
 
   test 'duration returns nil if latest_published_version does not exist' do
