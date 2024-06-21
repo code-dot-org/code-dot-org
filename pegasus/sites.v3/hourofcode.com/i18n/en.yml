@@ -213,6 +213,28 @@
   curricula_title_high: "High School Curricula"
   curricula_desc_high: "Browse the compelling courses and activities that invite you and your high school students to dig deeper into computer science."
 
+  curricula_pages:
+    game_design:
+      title: "Game Design"
+      desc: "Discover the exciting world of game design with Code.org's curriculum. Our game design units foster creativity, problem-solving, and critical thinking skills, empowering students to bring their own interactive experiences to life."
+      button: "Explore Game Design curricula"
+    additional_resources:
+      title: "Additional resources"
+      desc: "Beyond curriculum and professional learning, we have helpful materials to support your classroom."
+      catalog:
+        title: "Curriculum Catalog"
+        desc: "Comprehensive curriculum offerings for every grade and experience level featuring robust structured and self-paced learning options."
+        button: "Explore the catalog"
+      self_paced:
+        title: "Self-Paced Learning"
+        desc: "These modules allow you to engage at your own pace and on your own time while focusing on areas most important to your needs and teaching context."
+        button: "Discover the district program"
+      workshops:
+        title_k_5: "K-5 Workshops"
+        title_6_12: "6-12 Workshops"
+        desc: "With our Regional Partners as hosts and our Code.org facilitators as guides, our workshops around the country focus on reflection, discussion, and growth-oriented learning."
+        button: "Explore professional learning"
+
   facilitator_led_pl_heading: "Facilitator-Led Professional Learning Workshops"
   facilitator_led_pl_desc: "Learn about our professional learning workshops for elementary, middle, and high school teachers."
 
