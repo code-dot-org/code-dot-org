@@ -118,7 +118,7 @@ const displayModelUpdateMessage = (
 
   const updatedText = updatedToText
     ? ' has been updated to '
-    : 'has been updated.';
+    : ' has been updated.';
 
   return (
     <ChatNotificationMessage
