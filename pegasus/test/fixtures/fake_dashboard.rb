@@ -122,11 +122,6 @@ module FakeDashboard
       name: 'allthehiddenthings',
       published_state: 'beta'
     },
-    UNIT_CSP2_ALT = {
-      id: 53,
-      name: 'csp2-alt',
-      published_state: 'beta'
-    },
   ]
 
   COURSE_UNITS = [
@@ -142,26 +137,9 @@ module FakeDashboard
     },
     {
       course_id: COURSE_CSP[:id],
-      script_id: UNIT_CSP2_ALT[:id],
-      position: 2,
-      experiment_name: 'csp2-alt-experiment',
-      default_script_id: UNIT_CSP2[:id]
-    },
-    {
-      course_id: COURSE_CSP[:id],
       script_id: UNIT_CSP3[:id],
       position: 3
     },
-  ]
-
-  EXPERIMENTS = [
-    CSP2_ALT_EXPERIMENT = {
-      name: 'csp2-alt-experiment',
-      type: 'SingleUserExperiment',
-      min_user_id: 17,
-      created_at: Time.now,
-      updated_at: Time.now
-    }
   ]
 
   #
@@ -227,7 +205,6 @@ module FakeDashboard
     unit_groups: COURSES,
     scripts: UNITS,
     course_scripts: COURSE_UNITS,
-    experiments: EXPERIMENTS,
     sections: TEACHER_SECTIONS,
     followers: FOLLOWERS,
     secret_words: SECRET_WORDS,
