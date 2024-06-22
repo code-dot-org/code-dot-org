@@ -22,7 +22,6 @@ services:
   # Selenium nodes.
   test:
     <<: *cdo-test-base
-    container_name: test-web
     hostname: test-web
     volumes:
       - ../..:/app/src
@@ -259,7 +258,6 @@ services:
   # run the karma process on that container.
   js-browser-test-chrome: &cdo-js-browser-test-chrome
     hostname: js-browser-test-chrome
-    container_name: js-browser-test-chrome
     build:
       dockerfile: ./docker/developers/Dockerfile
       context: ../..
@@ -288,7 +286,6 @@ services:
   js-browser-test-firefox:
     <<: *cdo-js-browser-test-chrome
     hostname: js-browser-test-firefox
-    container_name: js-browser-test-firefox
     entrypoint: ['/bin/bash', './docker/developers/run.sh', 'ssh', 'test-web', 'WORKING_DIR=/app/src/apps', '/app/src/docker/developers/run.sh', 'yarn', 'test:unit', '--browser=docker-selenium-firefox']
     depends_on:
       test:
@@ -300,7 +297,6 @@ services:
   js-browser-test-edge:
     <<: *cdo-js-browser-test-chrome
     hostname: js-browser-test-edge
-    container_name: js-browser-test-edge
     entrypoint: ['/bin/bash', './docker/developers/run.sh', 'ssh', 'test-web', 'WORKING_DIR=/app/src/apps', '/app/src/docker/developers/run.sh', 'yarn', 'test:unit', '--browser=docker-selenium-edge']
     depends_on:
       test:

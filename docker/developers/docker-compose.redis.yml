@@ -4,7 +4,6 @@ include:
 services:
   # Docker-managed redis server
   redis-contained: &redis-base
-    container_name: redis
     hostname: redis
     image: redis:latest
     networks:

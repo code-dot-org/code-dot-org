@@ -22,7 +22,6 @@ services:
   web: &cdo-web
     <<: *cdo-web-base
     hostname: web
-    container_name: web
     environment:
       HOST_PWD: ${PWD}
     volumes:
@@ -60,7 +59,6 @@ services:
   pegasus:
     <<: *cdo-web-base
     hostname: pegasus
-    container_name: pegasus
     volumes:
       - ../..:/app/src
       - ./locals-container.yml:/app/src/locals.yml

@@ -4,7 +4,6 @@ include:
 services:
   # Docker-managed database
   mysql-contained: &mysql-base
-    container_name: mysql
     hostname: db
     image: mysql/mysql-server:8.0
     environment:

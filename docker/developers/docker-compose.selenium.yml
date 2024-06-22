@@ -4,8 +4,7 @@ include:
 services:
   # A Selenium grid hub that will run *-node services that are described below
   selenium-grid:
-    image: selenium/hub
-    container_name: selenium-hub
+    image: selenium/hub:${SELENIUM_HUB_VERSION}
     hostname: selenium
     expose:
       # The Selenium 'Publish' port
@@ -15,7 +14,7 @@ services:
       # The Protocol port that our testing infrastructure connects to
       - "4444:4444"  
     environment: &selenium-grid-environment
-      SE_EVENT_BUS_HOST: selenium-hub
+      SE_EVENT_BUS_HOST: selenium
       SE_EVENT_BUS_PUBLISH_PORT: 4442
       SE_EVENT_BUS_SUBSCRIBE_PORT: 4443
     ulimits: &selenium-ulimits
@@ -26,7 +25,6 @@ services:
       cdo_network_test:
 
   selenium-video:
-    container_name: selenium-video
     hostname: selenium-video
     image: codedotorg/selenium-video
     build:
@@ -41,9 +39,8 @@ services:
 
   # A Selenium server running Chrome for running UI tests contained in Docker
   selenium-chrome-base: &selenium-chrome-base
-    container_name: selenium-chrome
     hostname: selenium
-    image: seleniarm/standalone-chromium:latest
+    image: seleniarm/standalone-chromium:${SELENIUM_CHROME_VERSION}
     environment:
       JAVA_OPTS: -Dwebdriver.chrome.whitelistedIps= -Dwebdriver.chrome.allowedIps=
     shm_size: '2gb'
@@ -71,9 +68,10 @@ services:
 
   # A Selenium server that connects through the selenium grid
   selenium-chrome-node:
-    hostname: chrome
+    # We need an explicit container name for the target of the video service
     container_name: selenium-chrome
-    image: selenium/node-chrome
+    hostname: chrome
+    image: selenium/node-chrome:${SELENIUM_CHROME_VERSION}
     shm_size: 2gb
     depends_on:
       selenium-grid:
@@ -91,9 +89,8 @@ services:
 
   # A Selenium server running Firefox for running UI tests contained in Docker
   selenium-firefox-base: &selenium-firefox-base
-    container_name: selenium-firefox
     hostname: selenium
-    image: seleniarm/standalone-firefox:latest
+    image: seleniarm/standalone-firefox:${SELENIUM_FIREFOX_VERSION}
     shm_size: '2gb'
     expose: *selenium-exposed-ports
     ports:
@@ -117,9 +114,10 @@ services:
 
   # A Selenium server that connects through the selenium grid
   selenium-firefox-node:
-    hostname: firefox
+    # We need an explicit container name for the target of the video service
     container_name: selenium-firefox
-    image: selenium/node-firefox
+    hostname: firefox
+    image: seleniarm/node-firefox:${SELENIUM_FIREFOX_VERSION}
     shm_size: 2gb
     depends_on:
       selenium-grid:
@@ -136,9 +134,8 @@ services:
 
   # A Selenium server running Edge for running UI tests contained in Docker
   selenium-edge-base: &selenium-edge-base
-    container_name: selenium-edge
     hostname: selenium
-    image: selenium/standalone-edge:latest
+    image: selenium/standalone-edge:${SELENIUM_EDGE_VERSION}
     expose: *selenium-exposed-ports
     ports:
       - "5912:5900"
@@ -162,9 +159,10 @@ services:
 
   # A Selenium server that connects through the selenium grid
   selenium-edge-node:
-    hostname: edge
+    # We need an explicit container name for the target of the video service
     container_name: selenium-edge
-    image: selenium/node-edge
+    hostname: edge
+    image: selenium/node-edge:${SELENIUM_EDGE_VERSION}
     shm_size: 2gb
     depends_on:
       selenium-grid:

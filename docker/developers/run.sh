@@ -17,6 +17,19 @@ set +e
 eval "$(rbenv init -)"
 set -e
 
+after()
+{
+if [[ ! -z "${AFTER}" ]]; then
+  CMD=${AFTER}
+  AFTER=
+  echo running \""${CMD}"\" to finalize
+  eval "${CMD}"
+fi
+}
+
+# Trap handlers (make sure we perform 'after')
+trap after SIGTERM SIGINT EXIT
+
 # init nvm
 . ${HOME}/.nvm/nvm.sh
 
@@ -80,7 +93,4 @@ fi
 echo running \""${cmd}"\"
 eval "${cmd[@]}"
 
-if [[ ! -z "${AFTER}" ]]; then
-  echo running \""${AFTER}"\" to finalize
-  eval "${AFTER}"
-fi
+after
