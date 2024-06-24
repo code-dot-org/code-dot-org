@@ -116,7 +116,7 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
     }
   };
 
-  const renderCloneLevel = (
+  const renderCloneLevelButton = (
     <div>
       <Button
         size={Button.ButtonSize.small}
@@ -145,7 +145,7 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
     </div>
   );
 
-  const renderDeleteLevel = (
+  const renderDeleteLevelButton = (
     <div>
       <Button
         size={Button.ButtonSize.small}
@@ -168,77 +168,6 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
       )}
     </div>
   );
-
-  const renderScriptLevelPathLinks = (
-    <>
-      <StrongText>
-        This level is in{' '}
-        {Object.entries(levelLinkData.script_level_path_links).length} scripts:
-      </StrongText>
-      <ul>
-        {levelLinkData.script_level_path_links.map(link => (
-          <li key={link.path}>
-            <a href={'/s/' + link.script}>{link.script}</a> as{' '}
-            <a href={link.path}>{link.path}</a>
-          </li>
-        ))}
-      </ul>
-    </>
-  );
-
-  const renderRemixAncestry = (remixList: string[]) => {
-    if (remixList.length === 0) {
-      return <li>Not a remix.</li>;
-    }
-    return remixList.map((link: string) => (
-      <li key={link}>
-        <a href={link}>{link}</a>
-      </li>
-    ));
-  };
-
-  const renderFeaturedProjectInfo = () => {
-    if (featuredProjectStatus === 'n/a') {
-      return (
-        <>
-          <div>Not a featured project</div>
-          <Button
-            size={Button.ButtonSize.small}
-            color={Button.ButtonColor.purple}
-            onClick={onBookmark}
-            text={'Bookmark as featured'}
-          />
-        </>
-      );
-    }
-    return <div>Featured project status: {featuredProjectStatus}</div>;
-  };
-
-  const renderProjectValidatorData = (
-    projectValidatorLinkData: ExtraLinksProjectData
-  ) => {
-    const ownerInfo = projectValidatorLinkData.owner_info;
-    const projectInfo = projectValidatorLinkData.project_info;
-
-    return (
-      <>
-        <StrongText>Project Info</StrongText>
-        <ul>
-          <li>Project owner: {ownerInfo.name}</li>
-          <li>Owner storage id: {ownerInfo.storage_id}</li>
-          <li>Project id: {projectInfo.id}</li>
-          <li>
-            S3 links: <a href={`${projectInfo.sources_link}`}>Sources</a>
-          </li>
-          <li>
-            Remix ancestry:
-            <ul>{renderRemixAncestry(projectInfo.remix_ancestry)}</ul>
-          </li>
-          <li>{renderFeaturedProjectInfo()}</li>
-        </ul>
-      </>
-    );
-  };
 
   return isOpen ? (
     <AccessibleDialog onClose={onClose}>
@@ -273,14 +202,137 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
           </ul>
         </div>
       ))}
-      {levelLinkData.can_clone && !isStandaloneProject && renderCloneLevel}
-      {levelLinkData.can_delete && !isStandaloneProject && renderDeleteLevel}
-      {levelLinkData.script_level_path_links && renderScriptLevelPathLinks}
-      {projectLinkData &&
-        isStandaloneProject &&
-        renderProjectValidatorData(projectLinkData)}
+      {levelLinkData.can_clone &&
+        !isStandaloneProject &&
+        renderCloneLevelButton}
+      {levelLinkData.can_delete &&
+        !isStandaloneProject &&
+        renderDeleteLevelButton}
+      <ScriptLevelPathLinks
+        scriptLevelPathLinks={levelLinkData.script_level_path_links}
+      />
+      <ProjectLinkData
+        isStandaloneProject={isStandaloneProject}
+        projectLinkData={projectLinkData}
+        featuredProjectStatus={featuredProjectStatus}
+        onBookmark={onBookmark}
+      />
     </AccessibleDialog>
   ) : null;
+};
+
+interface FeaturedProjectStatusProps {
+  featuredProjectStatus: string | undefined;
+  onBookmark: () => void;
+}
+
+const FeaturedProjectInfo: React.FunctionComponent<
+  FeaturedProjectStatusProps
+> = ({featuredProjectStatus, onBookmark}) => {
+  if (featuredProjectStatus === 'n/a') {
+    return (
+      <>
+        <div>Not a featured project</div>
+        <Button
+          size={Button.ButtonSize.small}
+          color={Button.ButtonColor.purple}
+          onClick={onBookmark}
+          text={'Bookmark as featured'}
+        />
+      </>
+    );
+  }
+  return <div>Featured project status: {featuredProjectStatus}</div>;
+};
+
+const RemixAncestry: React.FunctionComponent<string[]> = remixList => {
+  console.log('remixList', remixList);
+  console.log('typeof remixList', typeof remixList);
+  if (remixList.length === 0) {
+    return <li>Not a remix.</li>;
+  }
+  return remixList.map((link: string) => (
+    <li key={link}>
+      <a href={link}>{link}</a>
+    </li>
+  ));
+};
+
+interface ProjectLinkDataProps {
+  projectLinkData?: ExtraLinksProjectData;
+  isStandaloneProject: boolean;
+  featuredProjectStatus?: string;
+  onBookmark: () => void;
+}
+
+const ProjectLinkData: React.FunctionComponent<ProjectLinkDataProps> = ({
+  projectLinkData,
+  isStandaloneProject,
+  featuredProjectStatus,
+  onBookmark,
+}) => {
+  if (!isStandaloneProject || !projectLinkData) {
+    return null;
+  }
+  const ownerInfo = projectLinkData.owner_info;
+  const projectInfo = projectLinkData.project_info;
+  const remixList = projectInfo.remix_ancestry;
+
+  return (
+    <>
+      <StrongText>Project Info</StrongText>
+      <ul>
+        <li>Project owner: {ownerInfo.name}</li>
+        <li>Owner storage id: {ownerInfo.storage_id}</li>
+        <li>Project id: {projectInfo.id}</li>
+        <li>
+          S3 links: <a href={`${projectInfo.sources_link}`}>Sources</a>
+        </li>
+        <li>
+          Remix ancestry:
+          <ul>
+            <RemixAncestry remixList={remixList} />
+          </ul>
+        </li>
+        <li>
+          <FeaturedProjectInfo
+            featuredProjectStatus={featuredProjectStatus}
+            onBookmark={onBookmark}
+          />
+        </li>
+      </ul>
+    </>
+  );
+};
+
+interface ScriptLevelPathLinksProps {
+  scriptLevelPathLinks?: {
+    script: string;
+    path: string;
+  }[];
+}
+
+const ScriptLevelPathLinks: React.FunctionComponent<
+  ScriptLevelPathLinksProps
+> = ({scriptLevelPathLinks}) => {
+  if (!scriptLevelPathLinks) {
+    return null;
+  }
+  return (
+    <>
+      <StrongText>
+        This level is in {Object.entries(scriptLevelPathLinks).length} scripts:
+      </StrongText>
+      <ul>
+        {scriptLevelPathLinks.map(link => (
+          <li key={link.path}>
+            <a href={'/s/' + link.script}>{link.script}</a> as{' '}
+            <a href={link.path}>{link.path}</a>
+          </li>
+        ))}
+      </ul>
+    </>
+  );
 };
 
 export default ExtraLinksModal;
