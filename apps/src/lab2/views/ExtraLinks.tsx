@@ -53,7 +53,7 @@ async function fetchExtraLinksData(
     projectLinkData = levelProjectDataResponse.value;
   }
 
-  // Return fetched permissions and link data.
+  // Return fetched link data.
   return {
     levelLinkData,
     projectLinkData,

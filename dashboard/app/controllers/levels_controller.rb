@@ -563,7 +563,6 @@ class LevelsController < ApplicationController
       can_delete: can?(:delete, @level),
       level_name: @level.name,
       script_level_path_links: script_level_path_links,
-      is_standalone_project: is_standalone_project
     }
   end
 

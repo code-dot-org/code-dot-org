@@ -39,7 +39,9 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
     state => state.lab.channel && state.lab.channel.id
   );
 
-  const isStandaloneProject = levelLinkData.is_standalone_project;
+  const isStandaloneProject: boolean = useAppSelector(
+    state => !!state.lab.levelProperties?.isProjectLevel
+  );
 
   useEffect(() => {
     setClonedLevelName(levelLinkData.level_name);
