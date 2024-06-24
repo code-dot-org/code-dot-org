@@ -140,7 +140,7 @@ const displayModelUpdateMessage = (
   );
 };
 
-const displayErrorMessage = (
+const displayNotification = (
   notification: Notification,
   onRemove: () => void
 ) => {
@@ -191,7 +191,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({message}) => {
         )}
 
       {isNotification(message) &&
-        displayErrorMessage(message, () =>
+        displayNotification(message, () =>
           dispatch(removeUpdateMessage(message.id))
         )}
     </div>

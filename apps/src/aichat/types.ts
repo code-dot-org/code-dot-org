@@ -55,9 +55,6 @@ export type AichatContext = {
 export enum Role {
   ASSISTANT = 'assistant',
   USER = 'user',
-  SYSTEM = 'system',
-  MODEL_UPDATE = 'update',
-  ERROR_NOTIFICATION = 'error_notification',
 }
 
 export enum ViewMode {
