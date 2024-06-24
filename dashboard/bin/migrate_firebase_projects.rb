@@ -9,10 +9,9 @@ def get_project_id(channel_id)
   storage_decrypt_channel_id(channel_id)[1]
 end
 
-def transform_to_datablock_tables(channel, channel_id)
+def fetch_datablock_tables(channel, project_id)
   tables = channel.dig("metadata", "tables")
   tables_records = channel.dig("storage", "tables")
-  project_id = get_project_id(channel_id)
 
   datablock_tables = []
 
@@ -45,11 +44,28 @@ def transform_to_datablock_tables(channel, channel_id)
   datablock_tables
 end
 
+def fetch_datablock_kvps(channel, project_id)
+  kvps = channel.dig("storage", "keys")
+  kvps.map do |key, value|
+    {
+      project_id: project_id,
+      key: key,
+      value: JSON.parse(value)
+    }
+  end
+end
+
 def insert_datablock_tables(tables)
   # tables.table, and tables.records
   tables.each do |table|
     DatablockStorageTable.create!(table[:table])
     DatablockStorageRecord.insert_all!(table[:records]) unless table[:records].empty?
+  end
+end
+
+def insert_datablock_kvps(kvps)
+  kvps.each do |kvp|
+    DatablockStorageKvp.create!(kvp)
   end
 end
 
@@ -69,9 +85,12 @@ end
 
 def migrate(channel_id)
   channel = firebase_get_channel(channel_id)
-  tables = transform_to_datablock_tables(channel, channel_id)
+  project_id = get_project_id(channel_id)
+  tables = fetch_datablock_tables(channel, project_id)
+  kvps = fetch_datablock_kvps(channel, project_id)
   ActiveRecord::Base.transaction do
     insert_datablock_tables(tables)
+    insert_datablock_kvps(kvps)
   end
 end
 
