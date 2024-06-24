@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  before_action :assert_child_account_policy, if: :current_user
+  before_action :handle_cap_lockout, if: :current_user
 
   # this is needed to avoid devise breaking on email param
   before_action :configure_permitted_parameters, if: :devise_controller?
@@ -332,12 +332,15 @@ class ApplicationController < ActionController::Base
 
   # Check that the user is compliant with the Child Account Policy. If they
   # are not compliant, then we need to send them to the lockout page.
-  protected def assert_child_account_policy
+  protected def handle_cap_lockout
     # Check that the child account policy is currently enabled.
     return unless ::Cpa.cpa_experience(request)
 
-    # Lock the user out if they do not comply with CAP during the lockout phase.
-    Services::ChildAccount.lock_out(current_user) if Policies::ChildAccount.lockable?(current_user)
+    # Transits the user to the CAP grace period if they are eligible.
+    Services::ChildAccount::GracePeriodHandler.call(user: current_user)
+
+    # Locks out the user if they are not compliant with CAP, otherwise, do nothing.
+    return unless Services::ChildAccount::LockoutHandler.call(user: current_user)
 
     # URLs we should not redirect.
     return if Set[
@@ -353,7 +356,16 @@ class ApplicationController < ActionController::Base
       users_set_student_information_path,
     ].include?(request.path)
 
-    redirect_to lockout_path if Policies::ChildAccount::ComplianceState.locked_out?(current_user)
+    redirect_to lockout_path
+  rescue StandardError => exception
+    Honeybadger.notify(
+      exception,
+      error_message: 'Failed to apply the Child Account Policy to the user',
+      context: {
+        user_id: current_user.id,
+        request_path: request.path,
+      }
+    )
   end
 
   # Creates a stable statsig id for use of session tracking (whether the user is logged in or not)

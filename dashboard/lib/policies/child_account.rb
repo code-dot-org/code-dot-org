@@ -82,27 +82,34 @@ class Policies::ChildAccount
     user.created_at < user_state_policy[:start_date]
   end
 
-  # The date on which the student's account will be locked if the account is not compliant.
-  def self.lockout_date(user)
-    return if compliant?(user)
-
+  # The date on which the student's grace period ends.
+  # @param user [User] the student account
+  # @param approximate [Boolean] if true, return an approximate date if the exact date is not known
+  def self.grace_period_end_date(user, approximate: false)
     user_state_policy = state_policy(user)
     return unless user_state_policy
 
-    # CAP non-compliant students who were created:
-    # - before the policy took effect - should be locked out during the all users lockout phase.
-    # - after the policy took effect - should be locked out immediately.
-    user_predates_policy?(user) ? user_state_policy[:lockout_date] : user_state_policy[:start_date]
+    grace_period_duration = user_state_policy[:grace_period_duration]
+    return unless grace_period_duration
+
+    start_date = DateTime.parse(user.child_account_compliance_state_last_updated) if ComplianceState.grace_period?(user)
+    start_date = user_state_policy[:lockout_date] if approximate && start_date.nil?
+
+    start_date&.since(grace_period_duration)
   end
 
-  # Checks if the user can be locked out due to non-compliance with CAP.
-  def self.lockable?(user)
-    return false if ComplianceState.locked_out?(user)
+  # The date on which the student's account will be locked if the account is not compliant.
+  # @param user [User] the student account
+  # @param approximate [Boolean] if true, return an approximate date if the exact date is not known
+  def self.lockout_date(user, approximate: false)
+    return if compliant?(user)
+    return if ComplianceState.locked_out?(user)
 
-    user_lockout_date = lockout_date(user)
-    return false unless user_lockout_date
+    # CAP non-compliant "pre-policy" created students can be locked out only after their grace period ends.
+    return grace_period_end_date(user, approximate: approximate) if user_predates_policy?(user)
 
-    user_lockout_date <= DateTime.now
+    # CAP non-compliant "post-policy" created students should be locked out immediately after the policy goes into effect.
+    state_policy(user).try(:[], :start_date)
   end
 
   # Authentication option types which we consider to be "owned" by the school
@@ -129,6 +136,7 @@ class Policies::ChildAccount
   def self.state_policies
     # The individual US State child account policy configuration
     # name: the name of the policy
+    # grace_period_duration: the duration of the grace period in seconds.
     # max_age: the oldest age of the child at which this policy applies.
     # lockout_date: the date at which we will begin to lockout all CPA users who
     # are not in compliance with the policy.
@@ -137,6 +145,7 @@ class Policies::ChildAccount
       'CO' => {
         name: Cpa::NAME,
         max_age: 12,
+        grace_period_duration: DCDO.get('cpa_grace_period_duration', Cpa::GRACE_PERIOD_DURATION)&.seconds,
         lockout_date: DateTime.parse(DCDO.get('cpa_schedule', {})[Cpa::ALL_USER_LOCKOUT] || Cpa::ALL_USER_LOCKOUT_DATE.iso8601),
         start_date: DateTime.parse(DCDO.get('cpa_schedule', {})[Cpa::NEW_USER_LOCKOUT] || Cpa::NEW_USER_LOCKOUT_DATE.iso8601),
       }
