@@ -8,8 +8,7 @@ Scenario: Teacher can create an account with the new school association flow
   And I press keys "password" for element "#user_password"
   And I press keys "password" for element "#user_password_confirmation"
   And I press "#signup_form_submit" using jQuery
-  And I wait for 2 seconds
-  And I press "select-user-type-teacher"
+  And I click selector "#select-user-type-teacher" once I see it
   And I press keys "myDisplayName" for element "#user_name"
   And I select the "United States" option in dropdown "uitest-country-dropdown"
   And I press keys "31513" for element "#uitest-school-zip"
