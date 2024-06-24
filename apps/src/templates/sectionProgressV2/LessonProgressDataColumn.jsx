@@ -8,6 +8,7 @@ import {
 } from '../progress/progressTypes';
 import {studentShape} from '../teacherDashboard/teacherSectionsRedux';
 
+import FloatingHeader from './floatingHeader/FloatingHeader';
 import LessonDataCell from './LessonDataCell';
 import LessonProgressColumnHeader from './LessonProgressColumnHeader';
 
@@ -21,6 +22,8 @@ function LessonProgressDataColumn({
   addExpandedLesson,
   expandedMetadataStudentIds,
 }) {
+  const columnRef = React.useRef();
+
   const lockedPerStudent = React.useMemo(
     () =>
       Object.fromEntries(
@@ -42,29 +45,33 @@ function LessonProgressDataColumn({
     [sortedStudents, lockedPerStudent]
   );
 
+  const header = (
+    <LessonProgressColumnHeader
+      lesson={lesson}
+      addExpandedLesson={addExpandedLesson}
+      allLocked={allLocked}
+    />
+  );
+
   return (
     <div className={styles.lessonColumn}>
-      <LessonProgressColumnHeader
-        lesson={lesson}
-        addExpandedLesson={addExpandedLesson}
-        allLocked={allLocked}
-      />
-
-      <div className={styles.lessonDataColumn}>
-        {sortedStudents.map(student => (
-          <LessonDataCell
-            locked={lockedPerStudent[student.id]}
-            lesson={lesson}
-            studentLessonProgress={
-              lessonProgressByStudent[student.id][lesson.id]
-            }
-            key={student.id + '.' + lesson.id}
-            studentId={student.id}
-            addExpandedLesson={addExpandedLesson}
-            metadataExpanded={expandedMetadataStudentIds.includes(student.id)}
-          />
-        ))}
-      </div>
+      <FloatingHeader header={header} childRef={columnRef}>
+        <div className={styles.lessonDataColumn} ref={columnRef}>
+          {sortedStudents.map(student => (
+            <LessonDataCell
+              locked={lockedPerStudent[student.id]}
+              lesson={lesson}
+              studentLessonProgress={
+                lessonProgressByStudent[student.id][lesson.id]
+              }
+              key={student.id + '.' + lesson.id}
+              studentId={student.id}
+              addExpandedLesson={addExpandedLesson}
+              metadataExpanded={expandedMetadataStudentIds.includes(student.id)}
+            />
+          ))}
+        </div>
+      </FloatingHeader>
     </div>
   );
 }

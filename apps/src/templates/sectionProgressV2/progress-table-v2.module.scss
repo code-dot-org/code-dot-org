@@ -173,7 +173,6 @@ $level-cell-width: 52;
     height: 42px;
     line-height: 42px;
     min-width: 52px;
-    margin-bottom: 32px;
     text-align: center;
     background-color: $light_gray_50;
     font-size: 14px;
@@ -187,7 +186,6 @@ $level-cell-width: 52;
     height: 42px;
     line-height: 42px;
     min-width: 52px;
-    margin-bottom: 32px;
     text-align: center;
     background-color: $light_gray_50;
     font-size: 14px;
@@ -219,6 +217,7 @@ $level-cell-width: 52;
     flex-direction: column;
     border-bottom: 1px solid $neutral_dark40;
     border-right: 1px solid $neutral_dark40;
+    margin-top: 76px;
   }
 }
 
