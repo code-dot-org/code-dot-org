@@ -77,4 +77,23 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
 
     assert_equal true, partial_user.lms_landing_opted_out
   end
+  # TODO: This is failing
+  test 'disallow account linking for admin users' do
+    email = "admin@test.com"
+    admin_teacher = create(:admin, email: email)
+    fake_id_token = {iss: @lti_integration.issuer, aud: @lti_integration.client_id, sub: 'bar'}
+    auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
+    ao = AuthenticationOption.new(
+      authentication_id: auth_id,
+      credential_type: AuthenticationOption::LTI_V1,
+      email: email,
+    )
+    admin_teacher.authentication_options = [ao]
+    PartialRegistration.persist_attributes session, admin_teacher
+    puts "session: #{session.to_json}"
+    puts "admin_teacher #{admin_teacher.authentication_options.to_json}"
+    User.any_instance.stubs(:valid_password?).returns(true)
+    post :link_email, params: {email: email, password: 'password'}
+    assert_equal I18n.t('lti.account_linking.admin_not_allowed', flash[:alert])
+  end
 end
