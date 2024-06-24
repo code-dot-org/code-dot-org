@@ -437,11 +437,11 @@ FactoryBot.define do
       end
 
       trait :before_p20_937_exception_date do
-        created_at {Policies::ChildAccount::CPA_CREATED_AT_EXCEPTION_DATE - 1.second}
+        created_at {Cpa::CREATED_AT_EXCEPTION_DATE.ago(1.second)}
       end
 
       trait :p20_937_exception_date do
-        created_at {Policies::ChildAccount::CPA_CREATED_AT_EXCEPTION_DATE}
+        created_at {Cpa::CREATED_AT_EXCEPTION_DATE}
       end
 
       factory :non_compliant_child, traits: [:U13, :in_colorado, :p20_937_exception_date] do

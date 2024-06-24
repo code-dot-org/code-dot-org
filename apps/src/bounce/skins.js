@@ -8,6 +8,7 @@
 // graph: Colour of optional grid lines, or false.
 
 var skinsBase = require('../skins');
+
 var msg = require('./locale');
 
 var CONFIGS = {

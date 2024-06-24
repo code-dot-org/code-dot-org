@@ -25,8 +25,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     return connect_provider if should_connect_provider?
 
     user = find_user_by_credential
+    return link_accounts user if should_link_accounts?
     if user
-      return link_accounts user if should_link_accounts?
       sign_in_clever user
     else
       sign_up_clever
@@ -38,7 +38,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     user = find_user_by_credential
     user&.update_oauth_credential_tokens auth_hash
 
-    return link_accounts user if user && should_link_accounts?
+    return link_accounts user if should_link_accounts?
     return connect_provider if should_connect_provider?
     login
   end
@@ -48,7 +48,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     user = find_user_by_credential
     user&.update_oauth_credential_tokens auth_hash
 
-    return link_accounts user if user && should_link_accounts?
+    return link_accounts user if should_link_accounts?
 
     # Redirect to open roster dialog on home page if user just authorized access
     # to Google Classroom courses and rosters
@@ -67,7 +67,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     user = find_user_by_credential
     user&.update_oauth_credential_tokens auth_hash
 
-    return link_accounts user if user && should_link_accounts?
+    return link_accounts user if should_link_accounts?
     return connect_provider if should_connect_provider?
     login
   end
@@ -536,15 +536,22 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   # For linking new LTI auth options to existing accounts
   private def link_accounts(user)
-    begin
-      Services::Lti::AccountLinker.call(user: user, session: session)
-    rescue => exception
-      Honeybadger.notify(exception, context: {message: 'Error linking LTI account to oauth account', user_id: user.id})
-      PartialRegistration.delete(session)
+    if user
+      begin
+        Services::Lti::AccountLinker.call(user: user, session: session)
+      rescue => exception
+        Honeybadger.notify(exception, context: {message: 'Error linking LTI account to oauth account', user_id: user.id})
+        PartialRegistration.delete(session)
 
-      flash.alert = I18n.t('lti.account_linking.backend_error')
-      redirect_to user_session_path and return
+        flash.alert = I18n.t('lti.account_linking.backend_error')
+        redirect_to user_session_path and return
+      end
+      sign_in_and_redirect user and return
     end
-    sign_in_and_redirect user and return
+
+    # If no user was found for the provided credentials, redirect back to
+    # the sign-in page instead of creating a new account.
+    flash.alert = I18n.t('lti.account_linking.account_not_found')
+    return redirect_to user_session_path
   end
 end

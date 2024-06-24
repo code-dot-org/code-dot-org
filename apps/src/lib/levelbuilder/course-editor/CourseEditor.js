@@ -53,6 +53,7 @@ class CourseEditor extends Component {
     courseVersionId: PropTypes.number,
     coursePath: PropTypes.string.isRequired,
     courseOfferingEditorLink: PropTypes.string,
+    isMissingRequiredDeviceCompatibilities: PropTypes.bool,
 
     // Provided by redux
     teacherResources: PropTypes.arrayOf(resourceShape),
@@ -142,6 +143,18 @@ class CourseEditor extends Component {
       this.setState({
         isSaving: false,
         error: 'Please set both version year and family name.',
+      });
+      return;
+    } else if (
+      [PublishedState.preview, PublishedState.stable].includes(
+        this.state.publishedState
+      ) &&
+      this.props.isMissingRequiredDeviceCompatibilities
+    ) {
+      this.setState({
+        isSaving: false,
+        error:
+          'Please set all device compatibilities in order to save with published state as preview or stable.',
       });
       return;
     }
