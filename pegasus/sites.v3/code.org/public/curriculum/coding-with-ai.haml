@@ -50,6 +50,16 @@ theme: responsive_full_width
     = view :"coding_with_ai/coding_with_ai_lessons"
 
 %section.bg-neutral-light
+  .wrapper
+    %h2=hoc_s("coding_with_ai_page.teach.heading")
+    = view :"coding_with_ai/coding_with_ai_teach"
+
+%section
+  .wrapper
+    %h2=hoc_s("coding_with_ai_page.faq.heading")
+    = view :"coding_with_ai/coding_with_ai_faq"
+
+%section.bg-neutral-light
   .wrapper.centered
     %h2=hoc_s("coding_with_ai_page.learn_more.heading")
     = view :"coding_with_ai/coding_with_ai_learn_more"
@@ -58,14 +68,3 @@ theme: responsive_full_width
     %p=hoc_s("coding_with_ai_page.learn_more.desc")
     %a.link-button.secondary{href: "/ai"}
       =hoc_s("coding_with_ai_page.learn_more.button")
-
-%section.no-padding-bottom
-  .wrapper
-    %h2=hoc_s("coding_with_ai_page.faq.heading")
-    = view :"coding_with_ai/coding_with_ai_faq"
-
-%section
-  .wrapper
-    %h2=hoc_s("coding_with_ai_page.resources.heading")
-    %p=hoc_s("coding_with_ai_page.resources.desc")
-    = view :"ai_pages_shared/ai_pages_resources", white_bg: false
