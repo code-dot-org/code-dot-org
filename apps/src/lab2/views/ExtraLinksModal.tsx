@@ -116,59 +116,6 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
     }
   };
 
-  const renderCloneLevelButton = (
-    <div>
-      <Button
-        size={Button.ButtonSize.small}
-        color={Button.ButtonColor.purple}
-        onClick={() => setShowCloneField(!showCloneField)}
-        text={showCloneField ? 'Cancel Clone' : 'Clone'}
-      />
-      {showCloneField && (
-        <div>
-          {'New level name: '}
-          <input
-            type="text"
-            value={clonedLevelName}
-            onChange={event => setClonedLevelName(event.target.value)}
-          />
-          <Button
-            onClick={handleClone}
-            text={'Clone'}
-            size={Button.ButtonSize.small}
-          />
-          {cloneError && (
-            <p className={moduleStyles.errorMessage}>{cloneError}</p>
-          )}
-        </div>
-      )}
-    </div>
-  );
-
-  const renderDeleteLevelButton = (
-    <div>
-      <Button
-        size={Button.ButtonSize.small}
-        text={showDeleteConfirm ? 'Cancel Delete' : 'Delete'}
-        color={Button.ButtonColor.red}
-        onClick={() => setShowDeleteConfirm(!showDeleteConfirm)}
-      />
-      {showDeleteConfirm && (
-        <div>
-          {'Are you sure you want to delete this level? '}
-          <Button
-            onClick={handleDelete}
-            text={'Confirm Delete'}
-            size={Button.ButtonSize.small}
-          />
-          {deleteError && (
-            <p className={moduleStyles.errorMessage}>{deleteError}</p>
-          )}
-        </div>
-      )}
-    </div>
-  );
-
   return isOpen ? (
     <AccessibleDialog onClose={onClose}>
       <Heading3>Extra links</Heading3>
@@ -202,12 +149,24 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
           </ul>
         </div>
       ))}
-      {levelLinkData.can_clone &&
-        !isStandaloneProject &&
-        renderCloneLevelButton}
-      {levelLinkData.can_delete &&
-        !isStandaloneProject &&
-        renderDeleteLevelButton}
+      <CloneLevelButton
+        canClone={levelLinkData.can_clone}
+        isStandaloneProject={isStandaloneProject}
+        setShowCloneField={setShowCloneField}
+        showCloneField={showCloneField}
+        handleClone={handleClone}
+        clonedLevelName={clonedLevelName}
+        setClonedLevelName={setClonedLevelName}
+        cloneError={cloneError}
+      />
+      <DeleteLevelButton
+        canDelete={levelLinkData.can_delete}
+        isStandaloneProject={isStandaloneProject}
+        showDeleteConfirm={showDeleteConfirm}
+        setShowDeleteConfirm={setShowDeleteConfirm}
+        handleDelete={handleDelete}
+        deleteError={deleteError}
+      />
       <ScriptLevelPathLinks
         scriptLevelPathLinks={levelLinkData.script_level_path_links}
       />
@@ -221,6 +180,103 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
   ) : null;
 };
 
+interface CloneLevelButtonProps {
+  canClone: boolean;
+  isStandaloneProject: boolean;
+  setShowCloneField: (showCloneField: boolean) => void;
+  showCloneField: boolean;
+  handleClone: () => void;
+  clonedLevelName: string;
+  setClonedLevelName: (clonedLevelName: string) => void;
+  cloneError: string;
+}
+
+const CloneLevelButton: React.FunctionComponent<CloneLevelButtonProps> = ({
+  canClone,
+  isStandaloneProject,
+  setShowCloneField,
+  showCloneField,
+  handleClone,
+  clonedLevelName,
+  setClonedLevelName,
+  cloneError,
+}) => {
+  if (!canClone || isStandaloneProject) {
+    return null;
+  }
+  return (
+    <div>
+      <Button
+        size={Button.ButtonSize.small}
+        color={Button.ButtonColor.purple}
+        onClick={() => setShowCloneField(!showCloneField)}
+        text={showCloneField ? 'Cancel Clone' : 'Clone'}
+      />
+      {showCloneField && (
+        <div>
+          {'New level name: '}
+          <input
+            type="text"
+            value={clonedLevelName}
+            onChange={event => setClonedLevelName(event.target.value)}
+          />
+          <Button
+            onClick={handleClone}
+            text={'Clone'}
+            size={Button.ButtonSize.small}
+          />
+          {cloneError && (
+            <p className={moduleStyles.errorMessage}>{cloneError}</p>
+          )}
+        </div>
+      )}
+    </div>
+  );
+};
+
+interface DeleteLevelButtonProps {
+  canDelete: boolean;
+  isStandaloneProject: boolean;
+  showDeleteConfirm: boolean;
+  setShowDeleteConfirm: (showDeleteConfirm: boolean) => void;
+  handleDelete: () => void;
+  deleteError: string;
+}
+const DeleteLevelButton: React.FunctionComponent<DeleteLevelButtonProps> = ({
+  canDelete,
+  isStandaloneProject,
+  showDeleteConfirm,
+  setShowDeleteConfirm,
+  handleDelete,
+  deleteError,
+}) => {
+  if (!canDelete || isStandaloneProject) {
+    return null;
+  }
+  return (
+    <div>
+      <Button
+        size={Button.ButtonSize.small}
+        text={showDeleteConfirm ? 'Cancel Delete' : 'Delete'}
+        color={Button.ButtonColor.red}
+        onClick={() => setShowDeleteConfirm(!showDeleteConfirm)}
+      />
+      {showDeleteConfirm && (
+        <div>
+          {'Are you sure you want to delete this level? '}
+          <Button
+            onClick={handleDelete}
+            text={'Confirm Delete'}
+            size={Button.ButtonSize.small}
+          />
+          {deleteError && (
+            <p className={moduleStyles.errorMessage}>{deleteError}</p>
+          )}
+        </div>
+      )}
+    </div>
+  );
+};
 interface FeaturedProjectStatusProps {
   featuredProjectStatus: string | undefined;
   onBookmark: () => void;
@@ -245,17 +301,21 @@ const FeaturedProjectInfo: React.FunctionComponent<
   return <div>Featured project status: {featuredProjectStatus}</div>;
 };
 
-const RemixAncestry: React.FunctionComponent<string[]> = remixList => {
-  console.log('remixList', remixList);
-  console.log('typeof remixList', typeof remixList);
+const RemixAncestry: React.FunctionComponent<{
+  remixList: string[];
+}> = ({remixList}) => {
   if (remixList.length === 0) {
     return <li>Not a remix.</li>;
   }
-  return remixList.map((link: string) => (
-    <li key={link}>
-      <a href={link}>{link}</a>
-    </li>
-  ));
+  return (
+    <>
+      {remixList.map((link: string) => (
+        <li key={link}>
+          <a href={link}>{link}</a>
+        </li>
+      ))}
+    </>
+  );
 };
 
 interface ProjectLinkDataProps {
@@ -271,7 +331,7 @@ const ProjectLinkData: React.FunctionComponent<ProjectLinkDataProps> = ({
   featuredProjectStatus,
   onBookmark,
 }) => {
-  if (!isStandaloneProject || !projectLinkData) {
+  if (!projectLinkData) {
     return null;
   }
   const ownerInfo = projectLinkData.owner_info;
@@ -288,18 +348,22 @@ const ProjectLinkData: React.FunctionComponent<ProjectLinkDataProps> = ({
         <li>
           S3 links: <a href={`${projectInfo.sources_link}`}>Sources</a>
         </li>
-        <li>
-          Remix ancestry:
-          <ul>
-            <RemixAncestry remixList={remixList} />
-          </ul>
-        </li>
-        <li>
-          <FeaturedProjectInfo
-            featuredProjectStatus={featuredProjectStatus}
-            onBookmark={onBookmark}
-          />
-        </li>
+        {isStandaloneProject && (
+          <>
+            <li>
+              Remix ancestry:
+              <ul>
+                <RemixAncestry remixList={remixList} />
+              </ul>
+            </li>
+            <li>
+              <FeaturedProjectInfo
+                featuredProjectStatus={featuredProjectStatus}
+                onBookmark={onBookmark}
+              />
+            </li>
+          </>
+        )}
       </ul>
     </>
   );

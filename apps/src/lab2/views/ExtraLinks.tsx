@@ -84,7 +84,11 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
   }, [levelId, channelId]);
   const {levelLinkData, projectLinkData} = extraLinksData || {};
 
-  return isLoading || (!levelLinkData && !projectLinkData) ? null : (
+  if (isLoading || (!levelLinkData && !projectLinkData)) {
+    return null;
+  }
+
+  return (
     <>
       <Button
         onClick={() => setIsModalOpen(true)}
