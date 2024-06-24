@@ -1539,14 +1539,14 @@ class UnitTest < ActiveSupport::TestCase
     assert_nil unit.course_link
   end
 
-  test "course_link returns nil if unit is in two courses" do
+  test "course_link returns link to first course if unit is in two courses" do
     unit = create :script
     unit_group = create :unit_group, name: 'csp'
     other_unit_group = create :unit_group, name: 'othercsp'
     create :unit_group_unit, position: 1, unit_group: unit_group, script: unit
     create :unit_group_unit, position: 1, unit_group: other_unit_group, script: unit
 
-    assert_nil unit.course_link
+    assert_equal '/courses/csp', unit.course_link
   end
 
   test "course_link returns course_path if unit is in one course" do
