@@ -2,26 +2,27 @@
 
 import React, {useCallback, useEffect, useContext} from 'react';
 
-import Instructions from '@cdo/apps/lab2/views/components/Instructions';
-import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
-import {isProjectTemplateLevel} from '@cdo/apps/lab2/lab2Redux';
 import {sendSuccessReport} from '@cdo/apps/code-studio/progressRedux';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import Button from '@cdo/apps/componentLibrary/button/Button';
 import SegmentedButtons, {
   SegmentedButtonsProps,
 } from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
-import Button from '@cdo/apps/componentLibrary/button/Button';
-import ProjectTemplateWorkspaceIcon from '@cdo/apps/templates/ProjectTemplateWorkspaceIcon';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {isProjectTemplateLevel} from '@cdo/apps/lab2/lab2Redux';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import Instructions from '@cdo/apps/lab2/views/components/Instructions';
+import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {
   DialogContext,
   DialogType,
 } from '@cdo/apps/lab2/views/dialogs/DialogManager';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import ProjectTemplateWorkspaceIcon from '@cdo/apps/templates/ProjectTemplateWorkspaceIcon';
 import {commonI18n} from '@cdo/apps/types/locale';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
+import aichatI18n from '../locale';
 import {
   addChatMessage,
   clearChatMessages,
@@ -33,20 +34,21 @@ import {
   onSaveFail,
   endSave,
 } from '../redux/aichatRedux';
+import {getCurrentTime, getNewMessageId} from '../redux/utils';
 import {
   AichatLevelProperties,
   ChatCompletionMessage,
   Role,
   ViewMode,
 } from '../types';
-import {isDisabled} from './modelCustomization/utils';
+
 import ChatWorkspace from './ChatWorkspace';
+import CopyButton from './CopyButton';
+import {isDisabled} from './modelCustomization/utils';
 import ModelCustomizationWorkspace from './ModelCustomizationWorkspace';
 import PresentationView from './presentation/PresentationView';
-import CopyButton from './CopyButton';
+
 import moduleStyles from './aichatView.module.scss';
-import aichatI18n from '../locale';
-import {getCurrentTime, getNewMessageId} from '../redux/utils';
 
 const RESET_MODEL_NOTIFICATION: ChatCompletionMessage = {
   id: getNewMessageId(),

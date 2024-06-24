@@ -24,11 +24,6 @@ class Policies::ChildAccount
     end
   end
 
-  # P20-937 - We had a regression which we have chosen to mitigate by allowing
-  # accounts created before the below date to have their lock-out delayed until
-  # the CAP policy is set to lockout all users.
-  CPA_CREATED_AT_EXCEPTION_DATE = DateTime.parse('2024-05-26T00:00:00MDT')
-
   # The delay is intended to provide notice to a parent
   # when a student may no longer be monitoring the "parent's email."
   PERMISSION_GRANTED_MAIL_DELAY = 24.hours
@@ -68,21 +63,23 @@ class Policies::ChildAccount
   # policy going into effect.
   def self.user_predates_policy?(user)
     return false unless parent_permission_required?(user)
-    return false unless state_policy(user)
-    policy_start_date = state_policy(user)[:start_date]
 
-    user.created_at < policy_start_date ||
-      user.created_at < CPA_CREATED_AT_EXCEPTION_DATE ||
-      user.authentication_options.any?(&:google?)
-  end
+    user_state_policy = state_policy(user)
+    return false unless user_state_policy
 
-  # Checks if a user affected by a state policy was created before the lockout date.
-  def self.pre_lockout_user?(user)
-    lockout_date = state_policy(user).try(:[], :lockout_date)
-    return false unless lockout_date
-    return user_predates_policy?(user) if DateTime.now < lockout_date
+    if user_state_policy[:name] == Cpa::NAME
+      # Accounts created before 5/26/2024 should have been locked upon creation,
+      # but they weren't because their state wasn't collected.
+      # To avoid immediate lockout after the state banner rollout,
+      # their lockout was postponed to the start of the "all-user lockout" phase.
+      return true if user.created_at < Cpa::CREATED_AT_EXCEPTION_DATE
 
-    user.created_at < lockout_date
+      # Due to a leaky bucket issue, roster-synced Google accounts weren't being locked out as intended.
+      # Therefore, it was decided to move their locking out to the "all-user lockout" phase.
+      return true if user.created_at < user_state_policy[:lockout_date] && user.authentication_options.any?(&:google?)
+    end
+
+    user.created_at < user_state_policy[:start_date]
   end
 
   # The date on which the student's grace period ends.

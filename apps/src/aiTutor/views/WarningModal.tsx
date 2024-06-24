@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
+
+import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
-import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
 
 const AITutorWarningModal = () => {
   const sessionStorageKey = 'AITutorWarningModalSeenKey';
