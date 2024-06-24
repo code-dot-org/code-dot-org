@@ -96,7 +96,9 @@ class Blockly < Level
       # Maze
       "birds", "pvz", "scrat",
       # Karel
-      "farmer", "farmer_night", "bee", "bee_night", "collector", "harvester", "planter"
+      "farmer", "farmer_night", "bee", "bee_night", "collector", "harvester", "planter",
+      # Spelling Bee
+      "letters"
     ]
     skin = properties['skin']
     migrated_skins.include?(skin) && DCDO.get('maze_sw_google_blockly', true)
