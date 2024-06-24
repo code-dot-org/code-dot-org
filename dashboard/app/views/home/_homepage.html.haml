@@ -21,38 +21,3 @@
         = render partial: 'home/survey_diversity'
 
 #homepage-container
-
-#workshop-links.container.main
-  -if can? :read, Pd::Application::ApplicationBase
-    %h1
-      Application Dashboard
-    = link_to pd_application_dashboard_path do
-      %h3
-        Manage Applications
-  -if can? :read, Pd::Workshop
-    %h1
-      Workshop Dashboard
-    %a{href:'/pd/workshop_dashboard'}
-      %h3
-        Manage PD Workshops
-    -if current_user.permission?(UserPermission::WORKSHOP_ADMIN)
-      = link_to pd_workshop_admins_path do
-        %h3
-          Directory for Workshop Admins
-    - courses_facilitated = Pd::CourseFacilitator.where(facilitator: current_user).map(&:course)
-    -if courses_facilitated.any?
-      %h1
-        Facilitator Landing Page
-
-      -if courses_facilitated.include? Pd::Workshop::COURSE_CSF
-        %h3
-          = link_to "CSF Facilitator Landing Page", "https://code.org/educate/facilitator-landing/CSF"
-      -if courses_facilitated.include? Pd::Workshop::COURSE_CSD
-        %h3
-          = link_to "CSD Facilitator Landing Page", "https://code.org/educate/facilitator-landing/CSD"
-      -if courses_facilitated.include? Pd::Workshop::COURSE_CSP
-        %h3
-          = link_to "CSP Facilitator Landing Page", "https://code.org/educate/facilitator-landing/CSP"
-      -if courses_facilitated.include? Pd::Workshop::COURSE_CSA
-        %h3
-          = link_to "CSA Facilitator Landing Page", "https://code.org/educate/facilitator-landing/CSA"

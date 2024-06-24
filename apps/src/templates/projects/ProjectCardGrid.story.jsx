@@ -1,10 +1,12 @@
-import React from 'react';
 import _ from 'lodash';
-import projects from './projectsRedux';
-import {reduxStore} from '@cdo/storybook/decorators';
+import React from 'react';
 import {Provider} from 'react-redux';
-import {Galleries} from './projectConstants';
+
+import {reduxStore} from '@cdo/storybook/decorators';
+
 import ProjectCardGrid from './ProjectCardGrid';
+import {Galleries} from './projectConstants';
+import projects from './projectsRedux';
 
 let projectTypes = ['applab', 'gamelab', 'artist', 'playlab'];
 

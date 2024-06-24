@@ -1,15 +1,17 @@
-import React, {useState} from 'react';
 import PropTypes from 'prop-types';
+import React, {useState} from 'react';
 import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
-import CodeReviewGroupsDataApi from './CodeReviewGroupsDataApi';
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+
 import ToggleSwitch from '@cdo/apps/code-studio/components/ToggleSwitch';
-import color from '@cdo/apps/util/color';
+import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import {
   setSectionCodeReviewExpiresAt,
   selectedSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
+import CodeReviewGroupsDataApi from './CodeReviewGroupsDataApi';
 
 function CodeReviewGroupsStatusToggle({
   codeReviewExpiresAt,

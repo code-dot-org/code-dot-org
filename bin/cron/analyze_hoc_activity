@@ -15,6 +15,7 @@ abort 'Script already running' unless only_one_running?(__FILE__)
 # data, it is computed from scratch every time.
 #
 require File.expand_path('../../../pegasus/src/env', __FILE__)
+require 'cdo/sequel'
 require src_dir 'database'
 require_relative '../../pegasus/helpers/properties'
 require 'dynamic_config/dcdo'
@@ -27,7 +28,7 @@ require_relative '../../pegasus/helper_modules/forms'
 # This default number of lines of code is from 2016-11-23.
 DEFAULT_LINES_OF_CODE = 20_886_942_901
 
-DASHBOARD_DB_READER = sequel_connect(CDO.dashboard_db_reader, CDO.dashboard_db_reader, query_timeout: 1200)
+DASHBOARD_DB_READER = Cdo::Sequel.database_connection_pool(CDO.dashboard_db_reader, CDO.dashboard_db_reader, query_timeout: 1200)
 
 def main
   to_date = JSON.parse(File.read(pegasus_dir("cache/HourOfActivity_Totals_2014-12-05.json")))

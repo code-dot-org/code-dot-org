@@ -178,7 +178,7 @@ class ScriptLevel < ApplicationRecord
     elsif script.pl_course?
       return build_script_level_path(level_to_follow) if level_to_follow
       next_unit = script.next_unit(user)
-      next_unit ? script_path(next_unit) : script_completion_redirect(script)
+      next_unit ? script_path(next_unit) : script_completion_redirect(user, script)
     elsif bubble_choice? && !bubble_choice_parent
       # Redirect user back to the BubbleChoice activity page from sublevels.
       build_script_level_path(self)
@@ -197,7 +197,7 @@ class ScriptLevel < ApplicationRecord
           script_path(script) + "?completedLessonNumber=#{lesson.relative_position}"
         end
       else
-        level_to_follow ? build_script_level_path(level_to_follow) : script_completion_redirect(script)
+        level_to_follow ? build_script_level_path(level_to_follow) : script_completion_redirect(user, script)
       end
     end
   end
@@ -319,7 +319,7 @@ class ScriptLevel < ApplicationRecord
       end
 
       summary = {
-        id: id,
+        id: id.to_s,
         ids: ids.map(&:to_s),
         activeId: active_id.to_s,
         inactiveIds: inactive_ids.map(&:to_s),
@@ -691,7 +691,7 @@ class ScriptLevel < ApplicationRecord
 
     return [] if !Policies::InlineAnswer.visible_for_script_level?(current_user, self) || CDO.properties_encryption_key.blank?
 
-    # exemplar_sources is used by Javalab levels to store level solutions
+    # exemplar_sources is used by Javalab and Code Bridge levels to store level solutions
     if level.try(:exemplar_sources).present? && current_user&.verified_instructor?
       if oldest_active_level.is_a? BubbleChoice
         # If the script level has sublevels, get a link for the sublevel that looks like
@@ -738,6 +738,10 @@ class ScriptLevel < ApplicationRecord
     end
 
     level_example_links
+  end
+
+  def level_deprecated?
+    level&.deprecated?
   end
 
   private def kind

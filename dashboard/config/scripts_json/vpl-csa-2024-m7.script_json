@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-25 22:49:36 UTC",
+    "serialized_at": "2024-04-18 15:27:34 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -55,6 +55,7 @@
       "key": "3b87ba2d-8406-4233-89d0-a6d6fc785311",
       "position": 1,
       "properties": {
+        "duration": 60
       },
       "seeding_key": {
         "lesson_activity.key": "3b87ba2d-8406-4233-89d0-a6d6fc785311",
@@ -128,6 +129,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-7-overview_-f_2024"
+        ],
         "progression": "Module 7 Overview (~5 minutes)"
       },
       "bonus": false,
@@ -150,6 +154,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-7-2022-what-is-pm-video_2024"
+        ],
         "progression": "Project Managment"
       },
       "bonus": false,
@@ -172,6 +179,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-7-2022-day-in-the-life-of-pm-video_2024"
+        ],
         "progression": "Project Managment"
       },
       "bonus": false,
@@ -194,6 +204,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-7-unit-7-project-text_-f_2024"
+        ],
         "progression": "The Unit 7 Project"
       },
       "bonus": false,
@@ -216,6 +229,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-7-clone-projects-level_-f_2024"
+        ],
         "progression": "The Unit 7 Project"
       },
       "bonus": false,
@@ -238,6 +254,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-7-unit-7-project-structure-2022-text_-f_2024"
+        ],
         "progression": "The Unit 7 Project"
       },
       "bonus": false,
@@ -260,6 +279,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-7-2022-project-planning-reflection_2024"
+        ],
         "progression": "The Unit 7 Project"
       },
       "bonus": false,
@@ -282,6 +304,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-7-2022-vocabulary-of-pm-video_2024"
+        ],
         "progression": "Building Project Management Skills"
       },
       "bonus": false,
@@ -304,6 +329,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-7-2022-putting-it-all-together-reflection_2024"
+        ],
         "progression": "Building Project Management Skills"
       },
       "bonus": false,
@@ -326,6 +354,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-7-wrap-up_-f_2024"
+        ],
         "progression": "Wrap-up (~5 minutes)"
       },
       "bonus": false,

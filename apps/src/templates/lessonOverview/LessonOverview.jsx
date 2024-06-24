@@ -2,33 +2,35 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import Activity from '@cdo/apps/templates/lessonOverview/activities/Activity';
+import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+import styleConstants from '@cdo/apps/styleConstants';
 import Button from '@cdo/apps/templates/Button';
+import CopyrightInfo from '@cdo/apps/templates/CopyrightInfo';
+import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
+import Activity from '@cdo/apps/templates/lessonOverview/activities/Activity';
 import LessonAgenda from '@cdo/apps/templates/lessonOverview/LessonAgenda';
 import LessonNavigationDropdown from '@cdo/apps/templates/lessonOverview/LessonNavigationDropdown';
-import {linkWithQueryParams} from '@cdo/apps/utils';
+import {lessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
 import ResourceList from '@cdo/apps/templates/lessonOverview/ResourceList';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import color from '@cdo/apps/util/color';
+import {linkWithQueryParams} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
-import styleConstants from '@cdo/apps/styleConstants';
-import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
-import {lessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
+
 import Announcements from '../../code-studio/components/progress/Announcements';
+import FontAwesome from '../FontAwesome';
+
 import LessonStandards from './LessonStandards';
 import StyledCodeBlock from './StyledCodeBlock';
-import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
-import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
-import FontAwesome from '../FontAwesome';
-import CopyrightInfo from '@cdo/apps/templates/CopyrightInfo';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 class LessonOverview extends Component {
   static propTypes = {

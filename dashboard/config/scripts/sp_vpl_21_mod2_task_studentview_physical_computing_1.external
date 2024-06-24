@@ -1,0 +1,27 @@
+name 'SP-VPL-21-mod2-Task-StudentView_physical-computing_1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Task: Explore the Student View
+
+<img src="https://images.code.org/bc0123ce94917e3e6547a0dded925912-image-1713993560196.18.52 PM.png" alt="The Teacher Panel, demonstrating how to access student view." style="float: right; height: 275px; padding-left: 50px; clear: both; margin: 0 20px 20px 0;">
+
+#### **Step 1:** Open a new tab and log into your teacher account on Code.org.
+#### **Step 2:** Click on the name of the course you would like to view in the course column of the classroom sections table. 
+* #### If you have not yet created a class section, scroll down to the "My Courses" section and find a select to explore.
+
+#### **Step 3:** Select a unit and click the "Go to Unit" button.
+#### **Step 4:** When you reach the Unit Overview page, click on the blue arrow on the right hand side of your screen  to expand the teacher panel. 
+#### **Step 5:** Toggle to the student view. 
+#### **Step 6:** Click on the "Lesson Resources" button to view the student resources for a level of your choosing. 
+___
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">Show Me How</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<img src="https://images.code.org/c931daa06ba3100867789c5175cc336a-image-1713995054271.gif" alt="A gif showing how to complete the above steps" width="800px">
+
+</div>
+</details>
+MARKDOWN

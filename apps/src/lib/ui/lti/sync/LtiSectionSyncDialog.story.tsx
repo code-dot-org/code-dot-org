@@ -28,10 +28,11 @@ SuccessfulSync.args = {
         name: 'CSD - Period 1',
         short_name: 'Period 1',
         size: 34,
+        lti_section_id: 1,
         instructors: [
           {
             name: 'Teacher 1',
-            id: '0',
+            id: 0,
             isOwner: true,
           },
         ],
@@ -40,10 +41,11 @@ SuccessfulSync.args = {
         name: 'CSD - Period 2',
         short_name: 'Period 2',
         size: 27,
+        lti_section_id: 2,
         instructors: [
           {
             name: 'Teacher 1',
-            id: '0',
+            id: 0,
             isOwner: true,
           },
         ],
@@ -52,10 +54,11 @@ SuccessfulSync.args = {
         name: 'CSD - Period 3',
         short_name: 'Period 3',
         size: 32,
+        lti_section_id: 3,
         instructors: [
           {
             name: 'Teacher 1',
-            id: '0',
+            id: 0,
             isOwner: true,
           },
         ],
@@ -66,10 +69,11 @@ SuccessfulSync.args = {
         name: 'CSD - Period 2',
         short_name: 'Period 2',
         size: 27,
+        lti_section_id: 2,
         instructors: [
           {
             name: 'Teacher 1',
-            id: '0',
+            id: 0,
             isOwner: true,
           },
         ],
@@ -78,10 +82,11 @@ SuccessfulSync.args = {
         name: 'CSD - Period 3',
         short_name: 'Period 3',
         size: 32,
+        lti_section_id: 3,
         instructors: [
           {
             name: 'Teacher 1',
-            id: '0',
+            id: 0,
             isOwner: true,
           },
         ],

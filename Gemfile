@@ -46,6 +46,7 @@ gem 'jumphash'
 gem 'os'
 gem 'parallel'
 gem 'redis', '~> 4.8.1'
+gem 'redis-actionpack', '~> 5.4.0'
 # Using commit ref on fork until maintainer publishes a new version.
 gem 'redis-slave-read', require: false, github: 'code-dot-org/redis-slave-read', ref: 'cfe1bd0f5cf65eee5b52560139cab133f22cb880'
 gem 'xxhash'
@@ -91,7 +92,7 @@ group :development, :test do
   gem 'brakeman'
   gem 'database_cleaner-active_record', '~> 2.1.0'
   gem 'haml-rails' # haml (instead of erb) generators
-  gem 'ruby-prof'
+  gem 'ruby-prof', '>= 1.7.0'
   gem 'vcr', require: false
   # For unit testing.
   gem 'webmock', '~> 3.8', require: false
@@ -106,6 +107,7 @@ group :development, :test do
   gem 'fakefs', '~> 2.5.0', require: false
   gem 'minitest', '~> 5.15'
   gem 'minitest-around'
+  gem 'minitest-rails', '~> 6.1', require: false
   gem 'minitest-reporters', '~> 1.2.0.beta3'
   gem 'minitest-spec-context', '~> 0.0.3'
   gem 'minitest-stub-const', '~> 0.6'
@@ -240,6 +242,7 @@ gem 'aws-sdk-glue'
 gem 'aws-sdk-rds'
 gem 'aws-sdk-route53'
 gem 'aws-sdk-s3'
+gem 'aws-sdk-sagemakerruntime'
 gem 'aws-sdk-secretsmanager'
 
 # Lint tools
@@ -264,7 +267,7 @@ gem 'pusher', '~> 1.3.1', require: false
 
 gem 'youtube-dl.rb', group: [:development, :staging, :levelbuilder]
 
-gem 'daemons'
+gem 'daemons', '1.1.9' # Pinned to old version, see PR 57938
 gem 'httparty'
 gem 'net-scp'
 gem 'net-ssh'
@@ -349,7 +352,7 @@ gem 'pry', '~> 0.14.0'
 # Google's Compact Language Detector
 gem 'cld'
 
-gem 'crowdin-api', '~> 1.8.1'
+gem 'crowdin-api', '~> 1.10.0'
 
 gem "delayed_job_active_record", "~> 4.1"
 
@@ -361,4 +364,5 @@ gem 'http', '~> 5.0'
 
 gem 'statsig', '~> 1.33'
 
+gem 'mailgun-ruby', '~>1.2.14'
 gem 'mailjet', '~> 1.7.3'

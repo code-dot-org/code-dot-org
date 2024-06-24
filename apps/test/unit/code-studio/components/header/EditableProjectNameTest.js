@@ -2,7 +2,7 @@ import React from 'react';
 import sinon from 'sinon';
 import {Provider} from 'react-redux';
 import {createStore, combineReducers} from 'redux';
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 
 import {expect} from '../../../../util/reconfiguredChai';
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';

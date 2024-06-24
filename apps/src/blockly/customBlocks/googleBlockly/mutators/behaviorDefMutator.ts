@@ -13,13 +13,15 @@ import {
   ObservableParameterModel,
   isProcedureBlock,
 } from '@blockly/block-shareable-procedures';
+import {Block} from 'blockly';
+
+import {ProcedureBlock} from '@cdo/apps/blockly/types';
 import {FALSEY_DEFAULT, readBooleanAttribute} from '@cdo/apps/blockly/utils';
+
 import {
   getBlockDescription,
   setBlockDescription,
 } from './functionMutatorHelpers';
-import {Block} from 'blockly';
-import {ProcedureBlock} from '@cdo/apps/blockly/types';
 
 export const behaviorDefMutator = {
   hasStatements_: true,

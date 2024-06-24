@@ -1,9 +1,11 @@
-import React, {useMemo} from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import style from './rubrics.module.scss';
-import {rubricShape, submittedEvaluationShape} from './rubricShapes';
+import PropTypes from 'prop-types';
+import React, {useMemo} from 'react';
+
 import LearningGoal from './LearningGoal';
+import {rubricShape, submittedEvaluationShape} from './rubricShapes';
+
+import style from './rubrics.module.scss';
 
 export default function StudentRubricView({rubric, submittedEvaluation}) {
   const evaluationsByLearningGoal = useMemo(() => {

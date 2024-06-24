@@ -12,7 +12,7 @@
  */
 import {SourcesStore} from './SourcesStore';
 import {ChannelsStore} from './ChannelsStore';
-import {Channel, Project, ProjectSources} from '../types';
+import {Channel, ProjectAndSources, ProjectSources} from '../types';
 import {currentLocation} from '@cdo/apps/utils';
 import LabMetricsReporter from '../Lab2MetricsReporter';
 import {ValidationError} from '../responseValidators';
@@ -72,7 +72,7 @@ export default class ProjectManager {
   }
 
   // Load the project from the sources and channels store.
-  async load(): Promise<Project> {
+  async load(): Promise<ProjectAndSources> {
     if (this.destroyed) {
       this.throwErrorIfDestroyed('load');
     }
@@ -150,7 +150,7 @@ export default class ProjectManager {
   /**
    * Try to force save with the last sourcesToSave, if it exists.
    * This is used to flush out any remaining enqueued saves.
-   * @returns  a promise that resolves to a Response. If the save is successful, the response
+   * @returns a promise that resolves to a Response. If the save is successful, the response
    * will be empty, otherwise it will contain failure information.
    */
   async flushSave() {
@@ -220,6 +220,15 @@ export default class ProjectManager {
       return;
     }
     this.channelsStore.redirectToRemix(this.lastChannel);
+  }
+
+  redirectToView() {
+    this.throwErrorIfDestroyed('redirectToView');
+    if (!this.lastChannel || !this.lastChannel.projectType) {
+      this.logAndThrowError('Cannot view without channel');
+      return;
+    }
+    this.channelsStore.redirectToView(this.lastChannel);
   }
 
   /**
@@ -317,6 +326,17 @@ export default class ProjectManager {
       // Even if only the source changed, we still update the channel to modify the last
       // updated time.
       this.channelToSave ||= this.lastChannel;
+
+      // If the sources contain a labConfig entry, then also save this to the
+      // channel, which means that the labConfig entry will also be saved in the
+      // Project model in the database, specifically inside the value field JSON.
+      if (this.sourcesToSave?.labConfig) {
+        this.channelToSave = {
+          ...this.channelToSave,
+          labConfig: this.sourcesToSave?.labConfig,
+        };
+      }
+
       let channelResponse;
       try {
         channelResponse = await this.channelsStore.save(this.channelToSave);
@@ -337,12 +357,13 @@ export default class ProjectManager {
   private onSaveFail(errorMessage: string, error: Error) {
     this.saveInProgress = false;
     this.executeSaveFailListeners(error);
-    if (error.message.includes('409')) {
-      // If this is a conflict, we need to reload the page.
+    if (error.message.includes('409') || error.message.includes('401')) {
+      // If this is a conflict or the user has somehow become unauthorized,
+      // we need to reload the page.
       // We set forceReloading to true so the client can skip
       // showing the user a dialog before reload.
       this.forceReloading = true;
-      this.metricsReporter.logWarning('Conflict on save, reloading page');
+      this.metricsReporter.logWarning(`${error.message}. Reloading page.`);
       reload();
     } else {
       // Otherwise, we log the error.

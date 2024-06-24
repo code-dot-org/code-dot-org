@@ -35,6 +35,7 @@ class ProgrammingExpression < ApplicationRecord
   validate :validate_key_format
 
   after_destroy :remove_serialization
+  before_destroy :check_unused
 
   serialized_attrs %w(
     color
@@ -179,7 +180,7 @@ class ProgrammingExpression < ApplicationRecord
       blockName: block_name,
       categoryKey: programming_environment_category&.key,
       programmingEnvironmentName: programming_environment.name,
-      environmentEditorLanguage: programming_environment.editor_language,
+      environmentLanguageType: programming_environment.editor_language,
       imageUrl: image_url,
       videoKey: video_key,
       shortDescription: short_description || '',
@@ -251,6 +252,7 @@ class ProgrammingExpression < ApplicationRecord
       environmentId: programming_environment.id,
       environmentTitle: programming_environment.title,
       categoryName: programming_environment_category&.name,
+      deletable: lessons.empty?,
       editPath: edit_programming_expression_path(self)
     }
   end
@@ -371,6 +373,12 @@ class ProgrammingExpression < ApplicationRecord
   def remove_serialization
     return unless Rails.application.config.levelbuilder_mode
     FileUtils.rm_f(file_path)
+  end
+
+  def check_unused
+    return if lessons.empty?
+    errors.add(:base, 'Cannot delete programming expressions that are introduced in existing lessons')
+    throw(:abort)
   end
 
   def clone_to_programming_environment(environment_name, new_category_key = nil)

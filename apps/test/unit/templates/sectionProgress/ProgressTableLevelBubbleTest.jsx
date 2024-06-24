@@ -1,4 +1,4 @@
-import {shallow, mount} from 'enzyme';
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon';
 
@@ -17,7 +17,7 @@ import {
 import ProgressTableLevelBubble from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLevelBubble';
 import {unitTestExports as cacheExports} from '@cdo/apps/util/CachedElement';
 import color from '@cdo/apps/util/color';
-import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
+import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {expect} from '../../../util/reconfiguredChai';

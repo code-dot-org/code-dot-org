@@ -1,0 +1,32 @@
+name 'SP-VPL-21-mod2-feedback-c4u_physical-computing_1'
+title 'Check for Understanding'
+description 'Match the letter to the correct description.'
+
+question 'A'
+answer 'Click to evaluate a single key concept'
+
+question 'B'
+answer 'Provide a student with text feedback'
+
+question 'C'
+answer 'Toggle between teacher and student views'
+
+question 'D'
+answer 'Move to view the work of the next student on the class list'
+
+question 'E'
+answer 'View a worked example'
+
+question 'F'
+answer 'Move to a new class section'
+
+question 'G'
+answer 'Click to move to view the work of a specific student'
+
+markdown <<MARKDOWN
+#### <a href="https://studio.code.org/s/csd3-2024/lessons/3/levels/8" target="blank" >Click here</a> if you would like to view a sample assessment. Some features will only appear when enrolled students have made progress on the level.
+
+<img src="https://images.code.org/d7fc700c8a44e44c6f2160a2fbfe6645-image-1713996906891.14.49 PM.png" alt="A screenshot of a level in CS Discoveries with several features annotated.">
+MARKDOWN
+
+allow_multiple_attempts true

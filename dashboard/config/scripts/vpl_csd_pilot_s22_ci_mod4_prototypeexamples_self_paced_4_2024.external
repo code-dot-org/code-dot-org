@@ -5,13 +5,16 @@ description 'description here'
 markdown <<MARKDOWN
 # What is a Paper Prototype?
 
->### **Key Vocabulary**
->* ##### **Prototype** - A first or early model of a product that allows you to test assumptions before developing a final version.
-> * ##### **User Interface** - The visual elements of a program through which a user controls or communicates with the application. Often abbreviated UI.
+<div style="background-color: #F7F8FA; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;">
 
-##### Throughout the Design Process unit, students will use **paper prototypes** as a quick tool to kick off the development of an app. Paper prototypes are used by designers in many industries to create low-stakes, low-cost first drafts of their final products. 
+## **Key Vocabulary**
+* #### **Prototype** - A first or early model of a product that allows you to test assumptions before developing a final version.
+* #### **User Interface** - The visual elements of a program through which a user controls or communicates with the application. Often abbreviated UI.</p> </div>
+<br>
 
-##### Check out some real-world examples below. While you do so, ask yourself, **"Why might a designer choose to start with a paper prototype?"**
+#### Throughout the Design Process unit, students will use **paper prototypes** as a quick tool to kick off the development of an app. Paper prototypes are used by designers in many industries to create low-stakes, low-cost first drafts of their final products. 
+
+#### Check out some real-world examples below. While you do so, ask yourself, **"Why might a designer choose to start with a paper prototype?"**
 <br>
 
 |Image  |Description  |

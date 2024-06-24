@@ -103,7 +103,7 @@ And(/^I create a(n authorized)? teacher-associated( under-13)? student named "([
   section = JSON.parse(browser_request(url: '/dashboardapi/sections', method: 'POST', body: {login_type: 'email', participant_type: 'student'}))
   section_code = section['code']
   @section_url = "http://studio.code.org/join/#{section_code}"
-  create_user(name, url: "/join/#{section_code}", code: 200, age: under_13 ? '10' : '16')
+  create_user(name, url: "/join/#{section_code}", age: under_13 ? '10' : '16')
 end
 
 And(/^I save the student section url$/) do
@@ -228,6 +228,12 @@ end
 
 Then /^the section table row at index (\d+) has (primary|secondary) assignment path "([^"]+)"$/ do |row_index, assignment_type, expected_path|
   link_index = (assignment_type == 'primary') ? 0 : 1
+  # Wait until the link loads in the table
+  wait_until do
+    @browser.execute_script("return $('.uitest-owned-sections tbody tr:eq(#{row_index}) td:eq(3) a:eq(#{link_index})').attr('href') !== null;")
+  end
+
+  # Then grab it
   href = @browser.execute_script(
     "return $('.uitest-owned-sections tbody tr:eq(#{row_index}) td:eq(3) a:eq(#{link_index})').attr('href');"
   )
@@ -341,5 +347,20 @@ Then /^I create a new code review group for the section I saved$/ do
     And I open the code review groups management dialog
     And I wait for 2 seconds
     And I click selector "#uitest-create-code-review-group" once I see it
+  GHERKIN
+end
+
+And /^I navigate to the V2 progress dashboard for "([^"]+)"$/ do |section_name|
+  steps <<-GHERKIN
+    When I click selector "a:contains(#{section_name})" once I see it to load a new page
+    And I wait until element "#uitest-teacher-dashboard-nav" is visible
+    And check that the URL contains "/teacher_dashboard/sections/"
+    And I wait until element "#uitest-course-dropdown" is visible
+    Then I append "/?enableExperiments=section_progress_v2" to the URL
+    And I click selector "#ui-close-dialog" if I see it
+
+    # toggle to V2 progress view
+    Then I click selector "#ui-test-toggle-progress-view"
+    And element "#ui-test-progress-table-v2" is visible
   GHERKIN
 end

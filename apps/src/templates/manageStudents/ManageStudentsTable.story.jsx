@@ -2,7 +2,7 @@ import React from 'react';
 import {Provider} from 'react-redux';
 
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import {reduxStore} from '@cdo/storybook/decorators';
 
 import teacherSections from '../teacherDashboard/teacherSectionsRedux';

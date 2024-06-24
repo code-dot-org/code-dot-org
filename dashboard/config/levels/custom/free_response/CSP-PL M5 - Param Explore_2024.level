@@ -1,5 +1,6 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
   "game_id": 52,
   "created_at": "2024-03-25T22:53:59.000Z",
   "level_num": "custom",
@@ -9,7 +10,7 @@
     "tts_short_instructions_override": "How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
     "tts_long_instructions_override": "Congratulations! You just wrote some code. You are officially a programmer!\r\n\r\nDid you notice that the last puzzle was a little more difficult? It was a challenge puzzle. Challenge puzzles are meant to stretch the boundaries of what students will do. We make it clear that they should be attempted, but do not require that they be completed for students to succeed for the lesson.\r\n\r\nNow take a moment to reflect. How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
     "instructions_important": "false",
-    "long_instructions": "# Parameters and Return Explore - from U7L1\r\n\r\n**Goal:** Understanding how to use functions with a parameter and a return is important for students during the Create Performance Task.  The purpose of this section is to give you experience with the mental model for this concept. *(Estimated time: ~25 minutes)*\r\n\r\n## Do this: \r\n* ##### Review the <a href=\"https://studio.code.org/s/csp7-2023/lessons/1\" target=\"blank\">U7L1 - Parameters and Return Explore lesson plan</a> and the accompanying <a href=\"https://docs.google.com/document/d/1SdMlqfeAFtIVh3BKjRDQguOL5d4jC2nsvtdNAi0x-ts/edit?usp=sharing\" target=\"blank\">Activity Guide</a>. \r\n* ##### Watch the <a href=\"https://drive.google.com/file/d/17suKEThzUUpj8Tc0J2bA9vPj6mLx7C5d/view\" target=\"blank\">student-facing video</a> intended for asynchronous distance learning that shows the mental model in action.\r\n\r\n## Reflect: \r\n##### How do you see this mental model connecting to other mental models students gained exposure to earlier in the curriculum?\r\n\r\n",
+    "long_instructions": "# Parameters and Return Explore - from U7L1\r\n\r\n**Goal:** Understanding how to use functions with a parameter and a return is important for students during the Create Performance Task.  The purpose of this section is to give you experience with the mental model for this concept. *(Estimated time: ~25 minutes)*\r\n\r\n## Do this: \r\n* ##### Review the <a href=\"https://studio.code.org/s/csp7-2024/lessons/1\" target=\"blank\">U7L1 - Parameters and Return Explore lesson plan</a> and the accompanying <a href=\"https://docs.google.com/document/d/1SdMlqfeAFtIVh3BKjRDQguOL5d4jC2nsvtdNAi0x-ts/edit?usp=sharing\" target=\"blank\">Activity Guide</a>. \r\n* ##### Watch the <a href=\"https://drive.google.com/file/d/17suKEThzUUpj8Tc0J2bA9vPj6mLx7C5d/view\" target=\"blank\">student-facing video</a> intended for asynchronous distance learning that shows the mental model in action.\r\n\r\n## Reflect: \r\n##### How do you see this mental model connecting to other mental models students gained exposure to earlier in the curriculum?\r\n\r\n",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -20,9 +21,8 @@
     "name_suffix": "_2024",
     "allow_multiple_attempts": "true"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-25T22:53:59.589+00:00\",\"changed\":[\"cloned from \\\"CSP-PL M5 - Param Explore_2023\\\"\"],\"cloned_from\":\"CSP-PL M5 - Param Explore_2023\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-25T22:53:59.589+00:00\",\"changed\":[\"cloned from \\\"CSP-PL M5 - Param Explore_2023\\\"\"],\"cloned_from\":\"CSP-PL M5 - Param Explore_2023\"},{\"changed_at\":\"2024-05-09 15:23:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

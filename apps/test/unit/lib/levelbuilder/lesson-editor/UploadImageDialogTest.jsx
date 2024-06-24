@@ -1,6 +1,6 @@
 import React from 'react';
 import sinon from 'sinon';
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 
 import UploadImageDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/UploadImageDialog';
 

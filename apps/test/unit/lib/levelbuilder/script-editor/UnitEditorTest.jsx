@@ -1,5 +1,5 @@
 import React from 'react';
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import UnitEditor from '@cdo/apps/lib/levelbuilder/unit-editor/UnitEditor';
 import {assert, expect} from '../../../../util/reconfiguredChai';
 import {Provider} from 'react-redux';
@@ -88,6 +88,7 @@ describe('UnitEditor', () => {
       scriptPath: '/s/test-unit',
       initialProfessionalLearningCourse: '',
       isCSDCourseOffering: false,
+      isMissingRequiredDeviceCompatibilities: false,
     };
   });
 
@@ -486,6 +487,83 @@ describe('UnitEditor', () => {
           .find('.saveBar')
           .contains(
             'Error Saving: Please provide a pilot experiment in order to save with published state as pilot.'
+          )
+      ).to.be.true;
+
+      $.ajax.restore();
+    });
+
+    it('shows error when published state is preview or stable and device compatibility JSON is null', () => {
+      sinon.stub($, 'ajax');
+      const wrapper = createWrapper({
+        isMissingRequiredDeviceCompatibilities: true,
+        hasCourse: true,
+      });
+
+      const unitEditor = wrapper.find('UnitEditor');
+      unitEditor.setState({
+        publishedState: PublishedState.preview,
+        courseOfferingDeviceCompatibilities: null,
+      });
+
+      const saveBar = wrapper.find('SaveBar');
+
+      const saveAndKeepEditingButton = saveBar.find('button').at(1);
+      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+        .true;
+      saveAndKeepEditingButton.simulate('click');
+
+      expect($.ajax).to.not.have.been.called;
+
+      expect(unitEditor.state().isSaving).to.equal(false);
+      expect(unitEditor.state().error).to.equal(
+        'Please set all device compatibilities in order to save with published state as preview or stable.'
+      );
+
+      expect(
+        wrapper
+          .find('.saveBar')
+          .contains(
+            'Error Saving: Please set all device compatibilities in order to save with published state as preview or stable.'
+          )
+      ).to.be.true;
+
+      $.ajax.restore();
+    });
+
+    it('shows error when published state is preview or stable and at least one device compatibility is not set', () => {
+      sinon.stub($, 'ajax');
+      const wrapper = createWrapper({
+        isMissingRequiredDeviceCompatibilities: true,
+        hasCourse: true,
+      });
+
+      const unitEditor = wrapper.find('UnitEditor');
+      unitEditor.setState({
+        publishedState: PublishedState.stable,
+        courseOfferingDeviceCompatibilities:
+          '{"computer":"","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}',
+      });
+
+      const saveBar = wrapper.find('SaveBar');
+
+      const saveAndKeepEditingButton = saveBar.find('button').at(1);
+      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+        .true;
+      saveAndKeepEditingButton.simulate('click');
+
+      expect($.ajax).to.not.have.been.called;
+
+      expect(unitEditor.state().isSaving).to.equal(false);
+      expect(unitEditor.state().error).to.equal(
+        'Please set all device compatibilities in order to save with published state as preview or stable.'
+      );
+
+      expect(
+        wrapper
+          .find('.saveBar')
+          .contains(
+            'Error Saving: Please set all device compatibilities in order to save with published state as preview or stable.'
           )
       ).to.be.true;
 

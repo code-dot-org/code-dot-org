@@ -5,25 +5,20 @@ description 'description here'
 markdown <<MARKDOWN
 # Discussion: Think-Pair-Share
 
-<div style="background-color: #a6e3e8; border-radius: 40px 40px 40px 40px; color: #000000; width: 95%; padding: 0.5px 20px 1px 20px;">
-
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; ">
-Think-Pair-Share is a three part activity in which students are presented with a problem or task to work on. 
-</p>
-
-</div>
+#### **Think-Pair-Share** is a three part activity in which students are presented with a problem or task to work on. 
 
 <img src="https://images.code.org/ad27dae853b5257e29679dfebb7a4c05-image-1684293246363.14.04 PM.png" alt="A student turns around in their chair to look at another student, who appears to be speaking." width="350px" style="border-radius:10px; float:right; margin: 0 0px 40px 10px;">
 
 <br>
 
 #### You're likely already familiar with the Think-Pair-Share strategy. Here's a reminder of the three steps:
+<br>
 
-* #### 1️⃣ **Think**: First, students work individually. Working individually gives students the opportunity to collect their thoughts before communicating them with others. They should write down their thoughts in a journal for later sharing.
+#### 1️⃣ **Think**: First, students work individually. Working individually gives students the opportunity to collect their thoughts before communicating them with others. They should write down their thoughts in a journal for later sharing.
 
-* #### 2️⃣ **Pair**: Once students have had time to work individually, they then enter the “Pair” stage in which they work with a small group. These groups can consist of two or three students. The group discusses the thoughts each member collected during the “Think” stage. The goal is for students to engage in a low-risk discussion where they get a chance to share their ideas with others.
+#### 2️⃣ **Pair**: Once students have had time to work individually, they then enter the “Pair” stage in which they work with a small group. These groups can consist of two or three students. The group discusses the thoughts each member collected during the “Think” stage. The goal is for students to engage in a low-risk discussion where they get a chance to share their ideas with others.
 
-* #### 3️⃣ **Share**: Finally, the groups share out some of the ideas they discussed to the whole class, and the discussion will continue as needed in the whole group setting. This allows major ideas to bubble up to the whole group, where everyone can hear and benefit from them. 
+#### 3️⃣ **Share**: Finally, the groups share out some of the ideas they discussed to the whole class, and the discussion will continue as needed in the whole group setting. This allows major ideas to bubble up to the whole group, where everyone can hear and benefit from them. 
 
 ## What is my role as the teacher?
 
@@ -37,7 +32,7 @@ Think-Pair-Share is a three part activity in which students are presented with a
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
-##### Almost every lesson in the CS Discoveries curriculum involves some kind of discussion that uses a version of Think-Pair-Share. It is one of the most common practices used for warm ups and wrap ups. Think-Pair-Share is used for these discussions as it gives students time to think on their own and engage with the content before talking to someone else. When students talk to their partner, it should be a low risk environment to try out an idea. It also allows everyone to play a part in the discussion, even if they don’t like talking in the whole class environment. 
+#### Almost every lesson in the CS Discoveries curriculum involves some kind of discussion that uses a version of Think-Pair-Share. It is one of the most common practices used for warm ups and wrap ups. Think-Pair-Share is used for these discussions as it gives students time to think on their own and engage with the content before talking to someone else. When students talk to their partner, it should be a low risk environment to try out an idea. It also allows everyone to play a part in the discussion, even if they don’t like talking in the whole class environment. 
 </p></div></details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
@@ -45,8 +40,8 @@ Think-Pair-Share is a three part activity in which students are presented with a
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
-* ##### Whenever you are given a prompt, consider giving students time to work individually and then with a partner before bringing the discussion or creation to the whole class.
-* ##### View Think-Pair-Share as a way for the class to learn from each other as much as possible. As the lead learner, you should direct the conversation without giving away answers or cutting off the conversation too early.
+* #### Whenever you are given a prompt, consider giving students time to work individually and then with a partner before bringing the discussion or creation to the whole class.
+* #### View Think-Pair-Share as a way for the class to learn from each other as much as possible. As the lead learner, you should direct the conversation without giving away answers or cutting off the conversation too early.
 
 
 </p></div></details>

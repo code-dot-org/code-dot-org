@@ -21,9 +21,9 @@ const ProgressFeedbackBanner = ({
   fetchProgressV2Feedback,
   createProgressV2Feedback,
   errorWhenCreatingOrLoading,
+  bannerStatusCallback,
 }) => {
   const [bannerStatus, setBannerStatus] = React.useState(BANNER_STATUS.UNSET);
-  const [answered, setAnswered] = React.useState(false);
 
   // Load feedback on mount
   React.useEffect(() => {
@@ -35,26 +35,22 @@ const ProgressFeedbackBanner = ({
     if (!canShow) {
       setBannerStatus(BANNER_STATUS.UNAVAILABLE);
       return;
-    }
-
-    // If we are loading or already closed, we shouldn't change states
-    if (isLoading || bannerStatus === BANNER_STATUS.CLOSED) {
-      return;
-    }
-
-    // If we just answered the banner, set it to answered
-    if (answered && bannerStatus === BANNER_STATUS.UNANSWERED) {
-      setBannerStatus(BANNER_STATUS.ANSWERED);
+    } else if (bannerStatus === BANNER_STATUS.UNAVAILABLE) {
+      setBannerStatus(BANNER_STATUS.UNSET);
       return;
     }
 
     // If feedback has been loaded and empty and the user hasn't answered, it is unanswered.
-    // If we have feedback and the user did not just submit feedback, close the banner.
-    if (progressV2Feedback && !answered) {
+    // If we have feedback and the user did not just submit feedback, set to previously-answered.
+    if (
+      !isLoading &&
+      bannerStatus === BANNER_STATUS.UNSET &&
+      progressV2Feedback
+    ) {
       if (progressV2Feedback.empty) {
         setBannerStatus(BANNER_STATUS.UNANSWERED);
       } else {
-        setBannerStatus(BANNER_STATUS.CLOSED);
+        setBannerStatus(BANNER_STATUS.PREVIOUSLY_ANSWERED);
       }
     }
   }, [
@@ -62,7 +58,6 @@ const ProgressFeedbackBanner = ({
     bannerStatus,
     canShow,
     isLoading,
-    answered,
     fetchProgressV2Feedback,
   ]);
 
@@ -70,13 +65,20 @@ const ProgressFeedbackBanner = ({
    * Effect for handling errors.
    */
   React.useEffect(() => {
-    errorWhenCreatingOrLoading && setBannerStatus(BANNER_STATUS.UNSET);
-  }, [errorWhenCreatingOrLoading]);
+    if (errorWhenCreatingOrLoading) {
+      setBannerStatus(BANNER_STATUS.UNSET);
+      fetchProgressV2Feedback();
+    }
+  }, [errorWhenCreatingOrLoading, fetchProgressV2Feedback]);
+
+  React.useEffect(() => {
+    bannerStatusCallback?.(bannerStatus);
+  }, [bannerStatus, bannerStatusCallback]);
 
   const answer = satisfied => {
     if (bannerStatus === BANNER_STATUS.UNANSWERED) {
-      setAnswered(true);
       createProgressV2Feedback(satisfied);
+      setBannerStatus(BANNER_STATUS.ANSWERED);
     }
   };
 
@@ -90,7 +92,7 @@ const ProgressFeedbackBanner = ({
       answerStatus={bannerStatus}
       answer={answer}
       close={close}
-      isLoading={isLoading}
+      isLoading={isLoading || bannerStatus === BANNER_STATUS.UNSET}
       closeLabel={i18n.closeDialog()}
       question={i18n.progressV2_feedback_question()}
       positiveAnswer={i18n.progressV2_feedback_thumbsUp()}
@@ -104,13 +106,16 @@ const ProgressFeedbackBanner = ({
 
 ProgressFeedbackBanner.propTypes = {
   currentUser: PropTypes.object.isRequired,
-  canShow: PropTypes.bool.isRequired,
+  canShow: PropTypes.bool,
   isLoading: PropTypes.bool.isRequired,
   progressV2Feedback: PropTypes.object,
   fetchProgressV2Feedback: PropTypes.func.isRequired,
   createProgressV2Feedback: PropTypes.func.isRequired,
   errorWhenCreatingOrLoading: PropTypes.string,
+  bannerStatusCallback: PropTypes.func,
 };
+
+export const UnconnectedProgressFeedbackBanner = ProgressFeedbackBanner;
 
 export default connect(
   state => ({

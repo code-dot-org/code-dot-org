@@ -1,17 +1,19 @@
 import * as GoogleBlockly from 'blockly/core';
-import {commonI18n} from '@cdo/apps/types/locale';
-import {nameComparator} from '@cdo/apps/util/sort';
-import BlockSvgFrame from '@cdo/apps/blockly/addons/blockSvgFrame';
-import {convertXmlToJson} from '@cdo/apps/blockly/addons/cdoSerializationHelpers';
-import {behaviorDefMutator} from './mutators/behaviorDefMutator';
-import {behaviorGetMutator} from './mutators/behaviorGetMutator';
-import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
-import {behaviorCallerGetDefMixin} from './mixins/behaviorCallerGetDefMixin';
-import {behaviorCreateDefMixin} from './mixins/behaviorCreateDefMixin';
-import {ExtendedBlockSvg, ProcedureBlock} from '@cdo/apps/blockly/types';
 import {Abstract} from 'blockly/core/events/events_abstract';
 import {BlockChange} from 'blockly/core/events/events_block_change';
 import {FlyoutItemInfoArray} from 'blockly/core/utils/toolbox';
+
+import BlockSvgFrame from '@cdo/apps/blockly/addons/blockSvgFrame';
+import {convertXmlToJson} from '@cdo/apps/blockly/addons/cdoSerializationHelpers';
+import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
+import {ExtendedBlockSvg, ProcedureBlock} from '@cdo/apps/blockly/types';
+import {commonI18n} from '@cdo/apps/types/locale';
+import {nameComparator} from '@cdo/apps/util/sort';
+
+import {behaviorCallerGetDefMixin} from './mixins/behaviorCallerGetDefMixin';
+import {behaviorCreateDefMixin} from './mixins/behaviorCreateDefMixin';
+import {behaviorDefMutator} from './mutators/behaviorDefMutator';
+import {behaviorGetMutator} from './mutators/behaviorGetMutator';
 
 /**
  * A dictionary of our custom procedure block definitions, used across labs.
@@ -81,7 +83,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
     message0: '%1 %2',
     args0: [
       {
-        type: 'field_label_serializable',
+        type: 'field_label',
         name: 'NAME',
         text: '%{BKY_UNNAMED_KEY}',
       },
@@ -95,7 +97,6 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
     helpUrl: '/docs/spritelab/spritelab_adding-and-removing-behaviors',
     extensions: [
       'procedures_edit_button',
-      'procedure_caller_serialize_name',
       'procedure_caller_get_def_mixin',
       'behavior_caller_get_def_mixin',
       'procedure_caller_var_mixin',
@@ -243,12 +244,14 @@ export function flyoutCategory(
     blockList.push(newBehaviorButton);
   }
 
+  // Add blocks from the level toolbox XML, if present.
+  const levelToolboxBlocks = Blockly.cdoUtils.getLevelToolboxBlocks('Behavior');
+  if (!levelToolboxBlocks?.querySelector('xml')?.hasChildNodes()) {
+    return blockList;
+  }
+
   // Blockly supports XML or JSON, but not a combination of both.
   // We convert to JSON here because the behavior_get blocks are JSON.
-  const levelToolboxBlocks = Blockly.cdoUtils.getLevelToolboxBlocks('Behavior');
-  if (!levelToolboxBlocks) {
-    return [];
-  }
   const blocksConvertedJson = convertXmlToJson(
     levelToolboxBlocks.documentElement
   );

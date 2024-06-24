@@ -36,7 +36,6 @@ import logToCloud from './logToCloud';
 import msg from '@cdo/locale';
 import project from './code-studio/initApp/project';
 import puzzleRatingUtils from './puzzleRatingUtils';
-import userAgentParser from './code-studio/initApp/userAgentParser';
 import {
   KeyCodes,
   TestResults,
@@ -100,7 +99,11 @@ var copyrightStrings;
  */
 const MIN_WIDTH = 1400;
 const DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
-export const MAX_VISUALIZATION_WIDTH = 400;
+export const MAX_VISUALIZATION_WIDTH = experiments.isEnabled(
+  experiments.BIG_PLAYSPACE
+)
+  ? 0.75 * window.innerHeight
+  : 400;
 export const MIN_VISUALIZATION_WIDTH = 200;
 
 /**
@@ -1525,6 +1528,10 @@ StudioApp.prototype.resizeVisualization = function (width) {
   visualizationColumn.style.maxWidth = newVizWidth + vizSideBorderWidth + 'px';
   visualization.style.maxWidth = newVizWidthString;
   visualization.style.maxHeight = newVizHeightString;
+  if (experiments.isEnabled(experiments.BIG_PLAYSPACE)) {
+    visualization.style.width = newVizWidthString;
+    visualization.style.height = newVizHeightString;
+  }
 
   var scale = newVizWidth / this.nativeVizWidth;
   getStore().dispatch(setVisualizationScale(scale));
@@ -1589,13 +1596,10 @@ StudioApp.prototype.resizeToolboxHeader = function () {
 StudioApp.prototype.highlight = function (id, spotlight) {
   if (this.isUsingBlockly() && !isEditWhileRun(getStore().getState())) {
     if (id) {
-      var m = id.match(/^block_id_(\d+)$/);
-      if (m) {
-        id = m[1];
-      }
+      id = id.replace(/^block_id_/, '');
     }
 
-    Blockly.mainBlockSpace.highlightBlock(id, spotlight);
+    Blockly.cdoUtils.highlightBlock(id, spotlight);
   }
 };
 
@@ -2009,6 +2013,9 @@ StudioApp.prototype.setConfigValues_ = function (config) {
     config.level.lastAttempt || config.level.startBlocks || '';
   this.vizAspectRatio = config.vizAspectRatio || 1.0;
   this.nativeVizWidth = config.nativeVizWidth || this.maxVisualizationWidth;
+  if (experiments.isEnabled(experiments.BIG_PLAYSPACE)) {
+    this.nativeVizWidth = 400;
+  }
 
   if (config.level.initializationBlocks) {
     var xml = parseXmlElement(config.level.initializationBlocks);
@@ -2016,6 +2023,16 @@ StudioApp.prototype.setConfigValues_ = function (config) {
       'JavaScript',
       xml
     );
+
+    // Generate code for the initialization blocks. Used at execution time
+    // for labs like Maze.
+    if (this.initializationBlocks.length) {
+      const generator = Blockly.getGenerator();
+      generator.init(this.initializationBlocks[0].workspace);
+      this.initializationCode = generator.finish(
+        Blockly.Generator.blocksToCode('JavaScript', this.initializationBlocks)
+      );
+    }
   }
 
   // enableShowCode defaults to true if not defined
@@ -2064,7 +2081,7 @@ function runButtonClickWrapper(callback) {
     );
     Blockly.mainBlockSpace.getCanvas().dispatchEvent(customEvent);
   }
-
+  getStore().dispatch(setFeedback(null));
   callback();
 }
 
@@ -2768,7 +2785,7 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
   let isXml = stringIsXml(startBlocks);
 
   if (isXml) {
-    // Only used in Calc/Eval, Craft, Maze, and Artist
+    // Only used in Craft, Maze, and Artist
     if (config.forceInsertTopBlock) {
       // Adds a 'when_run' or similar block to workspace, if there isn't one.
       startBlocks = blockUtils.forceInsertTopBlock(
@@ -2938,13 +2955,11 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
   }
   this.setStartBlocks_(config, true);
 
-  if (userAgentParser.isMobile() && userAgentParser.isSafari()) {
-    // Mobile Safari resize events fire too early, see:
-    // https://openradar.appspot.com/31725316
-    // Rerun the blockly resize handler after 500ms when clientWidth/Height
-    // should be correct
-    window.setTimeout(() => Blockly.fireUiEvent(window, 'resize'), 500);
-  }
+  // In some cases, resize events fire too early. For example, see:
+  // https://openradar.appspot.com/31725316
+  // Resize the Blockly workspace after 500ms when clientWidth/Height
+  // should be correct.
+  window.setTimeout(() => Blockly.fireUiEvent(window, 'resize'), 500);
 };
 
 /**
@@ -3025,11 +3040,6 @@ StudioApp.prototype.getFilteredUnfilledFunctionalBlock_ = function (filter) {
     var rootBlock = block.getRootBlock();
     if (!filter(rootBlock)) {
       return false;
-    }
-
-    if (block.hasUnfilledFunctionalInput()) {
-      unfilledBlock = block;
-      return true;
     }
   });
 
@@ -3440,6 +3450,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
       locale: config.locale,
       assetUrl: this.assetUrl,
       inStartBlocksMode: level.edit_blocks === START_BLOCKS,
+      inToolboxBlocksMode: level.edit_blocks === TOOLBOX_EDIT_MODE,
       isReadOnlyWorkspace: !!config.readonlyWorkspace,
       isDroplet: !!level.editCode,
       isBlockly: this.isUsingBlockly(),

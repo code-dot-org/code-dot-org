@@ -6,7 +6,8 @@ ja-JP:
   accelerated_gradelevel: 10-18 才
   accelerated_name: 上級コース
   account_sign_up_child_accept_terms: Code.orgのサービスを利用することについて、親または保護者の許可を得ていることを確認します。
-  account_sign_up_email_opt_in: 当社のコースについての最新情報、各地域における機会、コンピュータサイエンスに関するニュースなどを電子メールを介して送付してもよろしいですか？
+  account_sign_up_email_opt_in: コースの最新情報、地元でのイベント、その他コンピュータサイエンスに関する情報などをメールでお知らせしてもよろしいですか？
+    ( 概ね月1回)
   ai_activity: アクティビティ
   ai_aiedu_intro: 'AiEdu: 人工知能入門'
   ai_aiedu_intro_description: Intro to AI は、学生が AI とは何か、そしてそれが現実世界でどのように使用されているかについて、概念的な知識を身につけることができる、革新的で文化的な関連性を備えた無料のカリキュラムです。
@@ -1197,6 +1198,7 @@ ja-JP:
   homepage_slot_text_link_k5: 小学生以下向けのコース
   homepage_slot_text_link_local: 地元のクラスを探す
   homepage_slot_text_link_middle: 中学校
+  homepage_slot_text_link_middle_and_high: 中学生・高校生
   homepage_slot_text_link_othercourses: その他のオンラインコース
   homepage_slot_text_link_pd: プロになるために
   homepage_slot_text_link_shop: T シャツ、帽子、その他
@@ -1869,6 +1871,8 @@ ja-JP:
   user_header_applab: 'アプリラボ '
   user_header_artist: 'アーティスト '
   user_header_create: 'つくる '
+  user_header_create_account: アカウントを作成
+  user_header_create_account_low_cap: アカウントを作成
   user_header_dance: ダンスパーティー
   user_header_flappy: フラッピー
   user_header_gamelab: ゲーム ラボ
@@ -1876,6 +1880,8 @@ ja-JP:
   user_header_logout: サインアウト
   user_header_minecraft: マインクラフト
   user_header_my_projects: 私のプロジェクト
+  user_header_new_project: 新しいプロジェクト
+  user_header_new_project_low_cap: 新しいプロジェクト
   user_header_playlab: プレイラボ
   user_header_settings: アカウント
   user_header_signin: サインイン

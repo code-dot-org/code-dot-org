@@ -168,7 +168,7 @@ class Lesson < ApplicationRecord
   end
 
   def has_lesson_pdf?
-    return false if Unit.unit_in_category?('csf', script.name) && ['2017', '2018'].include?(script.version_year)
+    return false if script.csf? && ['2017', '2018'].include?(script.version_year)
 
     !!has_lesson_plan
   end
@@ -605,7 +605,7 @@ class Lesson < ApplicationRecord
     end
     next_level = next_level_for_lesson_extras(user)
     next_level ?
-      build_script_level_path(next_level) : script_completion_redirect(script)
+      build_script_level_path(next_level) : script_completion_redirect(user, script)
   end
 
   def next_level_number_for_lesson_extras(user)

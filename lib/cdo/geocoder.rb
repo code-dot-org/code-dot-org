@@ -91,7 +91,11 @@ module Geocoder
 
     first_number_to_end = number_to_end_search.first.first
 
-    return nil if Float(first_number_to_end) rescue false # is a number
+    begin
+      return nil if Float(first_number_to_end)
+    rescue
+      false # is a number
+    end
     return nil if first_number_to_end.length < MIN_ADDRESS_LENGTH # too short to be an address
     return nil if first_number_to_end.count(' ') < 2 # too few words to be an address
 
@@ -129,7 +133,11 @@ module Geocoder
     ]
 
     def search(query, options = {})
-      ip = IPAddr.new(query) rescue nil
+      ip = begin
+        IPAddr.new(query)
+      rescue
+        nil
+      end
       if SAUCELABS_CIDR.any? {|cidr| cidr.include?(ip)}
         [OpenStruct.new(country_code: 'US', country: 'United States')]
       else
@@ -145,7 +153,11 @@ module Geocoder
   # https://github.com/alexreisner/geocoder/blob/350cf0cc6a158d510aec3d91594d9b5718f877a9/lib/geocoder/lookups/freegeoip.rb#L41-L54
   module LocahostOverride
     def search(query, options = {})
-      ip = IPAddr.new(query) rescue nil
+      ip = begin
+        IPAddr.new(query)
+      rescue
+        nil
+      end
       if ip&.loopback?
         [OpenStruct.new(
           ip: ip.to_s,

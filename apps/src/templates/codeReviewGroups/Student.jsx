@@ -1,6 +1,7 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import {Draggable} from 'react-beautiful-dnd';
+
 import color from '@cdo/apps/util/color';
 
 // A Student is a component that

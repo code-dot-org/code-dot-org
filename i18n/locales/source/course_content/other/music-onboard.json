@@ -1,0 +1,18 @@
+{
+  "https://studio.code.org/s/music-onboard/lessons/1/levels/1": {
+    "panels": {
+      "musiclab_intro_panels_start-421d64b2-c4db-42cb-ac1f-de66a4d22fa7": "#### Welcome to Music Lab!\n\nMusic Lab lets you mix, remix, and even perform music using code. Don’t worry if you don’t know much about code, or even music! All you need is a little time and some curiosity to start making your own creations."
+    }
+  },
+  "https://studio.code.org/s/music-onboard/lessons/1/levels/2": {
+    "panels": {
+      "musiclab_intro_panels_function-b2da9c67-9c99-42b2-9c72-c2e576663899": "A cool feature in Music Lab is that you can take a set of blocks and put them into your own block.  In coding, this is called making a _function_.",
+      "musiclab_intro_panels_function-e62e1783-6e0c-4dfb-9300-5dd081a80614": "You can \"call\" your new function by using the block with the matching name, like this."
+    }
+  },
+  "https://studio.code.org/s/music-onboard/lessons/1/levels/3": {
+    "panels": {
+      "musiclab_intro_panels_end-70b08fdd-abbf-42bb-bdc9-d406bb513faf": "#### You're good to go!\n\nYou've learned the basics, and now you're ready to make your own mix! Be sure to explore the sound library - there is a lot to explore and use to make an amazing track.\n\nYou'll see even more new things in the toolbox, including:\n\n-   A beat-making block\n\n-   Sound effects like reverb and filter\n\n-   A synthesizer block\n\n-   A block for randomizing what gets played\n\n ...and more! Have fun!"
+    }
+  }
+}

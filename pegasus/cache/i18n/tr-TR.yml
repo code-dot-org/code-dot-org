@@ -1607,6 +1607,7 @@ tr-TR:
   homepage_slot_text_link_k5: K-5 sınıflar için kurslar
   homepage_slot_text_link_local: En yakın sınıfı bulun
   homepage_slot_text_link_middle: Orta öğretim
+  homepage_slot_text_link_middle_and_high: Ortaokul ve Lise
   homepage_slot_text_link_othercourses: Diğer online kurslar
   homepage_slot_text_link_pd: Mesleki Gelişim
   homepage_slot_text_link_shop: Tişörtler, şapkalar ve daha fazlası
@@ -2500,6 +2501,7 @@ tr-TR:
   user_header_artist: 'Sanatçı '
   user_header_create: 'Oluştur '
   user_header_create_account: 'Hesap oluştur '
+  user_header_create_account_low_cap: Hesap oluştur
   user_header_dance: Dans Partisi
   user_header_flappy: Flappy
   user_header_gamelab: Oyun Laboratuvarı
@@ -2507,6 +2509,8 @@ tr-TR:
   user_header_logout: Çıkış Yap
   user_header_minecraft: Minecraft
   user_header_my_projects: Projelerim
+  user_header_new_project: Yeni Proje
+  user_header_new_project_low_cap: Yeni proje
   user_header_playlab: Oyun Laboratuvarı
   user_header_settings: Hesap Ayarları
   user_header_signin: Giriş Yap

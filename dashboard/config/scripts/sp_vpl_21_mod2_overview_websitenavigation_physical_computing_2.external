@@ -1,0 +1,21 @@
+name 'SP-VPL-21-mod2-Overview-WebsiteNavigation_physical-computing_2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Navigating Code.org 
+
+<img src="https://images.code.org/d83020a28b0525fa84d3fc765673085d-image-1713985590249.06.25 PM.png" alt="Two students sitting at individual laptops smile at the camera" style="border-radius:10px; float: right; height: 200px; clear: both; margin: 0 20px 20px 0;">
+
+#### Welcome! This lesson is designed to orient you to the Code.org website and teaching tools. 
+
+### **You will learn how to:**
+
+* #### Navigate the Code.org website and teacher tools.
+* #### Set up a class section.
+<br>
+
+#### **Suggested time:** 35 minutes
+
+<br><br><br><br>
+MARKDOWN

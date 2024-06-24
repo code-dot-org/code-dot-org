@@ -1,7 +1,7 @@
 {
   "pages": {
-    "/home": "ai-teaching-assistant",
-    "/student-home": "hoc-2023-dance-ai"
+    "/home": "lms-launch",
+    "/student-home": "music-lab-launch"
   },
   "banners": {
     "superhero": {
@@ -20,22 +20,32 @@
       "buttonUrl": "https://code.org/hourofcode",
       "buttonId": "hoc-2023"
     },
-    "hoc-2023-dance-ai": {
-      "image": "/images/dance-hoc/dance-party-activity-ai-edition.png",
-      "title": "Dance Party: AI Edition",
-      "body": "Learn about artificial intelligence (AI) concepts to create your own virtual dance party showcasing today's top artists. With dozens of songs to choose from, reach every student no matter their music taste. It's time to strut your stuff!",
+    "music-lab-launch": {
+      "dcdo": "music-lab-launch-2024",
+      "image": "/shared/images/banners/music-lab-with-afe-logo.png",
+      "title": "Introducing Music Lab",
+      "body": "Get creative with your favorite artist's music and code new songs and mixes!",
       "buttonText": "Learn more",
-      "buttonUrl": "https://code.org/dance",
-      "buttonId": "hoc-2023-dance-ai"
+      "buttonUrl": "https://code.org/music",
+      "buttonId": "music-lab-launch"
     },
-    "ai-teaching-assistant": {
-      "dcdo": "ai-teaching-assistant-launch",
-      "image": "/images/action-blocks/action-block-ai-ta.png",
-      "title": "AI Teaching Assistant",
-      "body": "Elevate teaching confidence and streamline assessment of student progress. This tool heralds a new chapter in personalized learning and instructional excellence.",
-      "buttonText": "Learn more about AI Teaching Assistant",
-      "buttonUrl": "https://code.org/ai-ta",
-      "buttonId": "ai-teaching-assistant"
+    "lms-launch": {
+      "dcdo": "show-updated-lms-content",
+      "image": "/shared/images/banners/banner-lms-launch.png",
+      "title": "Discover our new LMS integrations",
+      "body": "We've added new LMS integrations for Canvas and Schoology! Connect existing LMS classrooms in your school to Code.org with one-click Roster Syncing, Single Sign-On, and integrated access to curriculum.",
+      "buttonText": "Learn more",
+      "buttonUrl": "https://code.org/lms",
+      "buttonId": "lms-launch"
+    },
+    "curriculum-launch-2024": {
+      "dcdo": "curriculum-launch-2024",
+      "image": "",
+      "title": "Discover new and updated curriculum!",
+      "body": "Explore our latest units and professional learning resources to inspire future tech innovators.",
+      "buttonText": "See what's new",
+      "buttonUrl": "",
+      "buttonId": "curriculum-launch-2024"
     }
   }
 }

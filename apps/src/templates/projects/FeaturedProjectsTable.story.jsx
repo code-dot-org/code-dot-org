@@ -1,4 +1,5 @@
 import React from 'react';
+
 import FeaturedProjectsTable from './FeaturedProjectsTable';
 import {
   stubFakeActiveFeaturedProjectData,

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import LockoutPanel from './LockoutPanel';
 
 const DAYS = 1000 * 60 * 60 * 24;
@@ -18,6 +19,11 @@ const Template = args => (
 
 export const NewAccount = Template.bind({});
 NewAccount.args = {};
+
+export const NewPreLockoutAccount = Template.bind({});
+NewPreLockoutAccount.args = {
+  isPreLockoutUser: true,
+};
 
 export const PendingRequest = Template.bind({});
 PendingRequest.args = {

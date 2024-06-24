@@ -41,8 +41,8 @@ Dashboard::Application.routes.draw do
     get "/congrats", to: "congrats#index"
 
     get "/incubator", to: "incubator#index"
-    get "/musiclab", to: redirect("/projectbeats", status: 302)
-    get "/projectbeats", to: "musiclab#index"
+    get "/musiclab", to: redirect(CDO.code_org_url("/music"))
+    get "/projectbeats", to: redirect(CDO.code_org_url("/music"))
     get "/musiclab/menu", to: "musiclab#menu"
     get "/musiclab/gallery", to: "musiclab#gallery"
     get "/musiclab/embed", to: "musiclab#embed"
@@ -60,6 +60,8 @@ Dashboard::Application.routes.draw do
         get 'test'
       end
     end
+
+    resources :images, only: [:new]
 
     get 'maker/home', to: 'maker#home'
     get 'maker/setup', to: 'maker#setup'
@@ -128,6 +130,7 @@ Dashboard::Application.routes.draw do
           get 'code_review_groups'
           post 'code_review_groups', to: 'sections#set_code_review_groups'
           post 'code_review_enabled', to: 'sections#set_code_review_enabled'
+          post 'ai_tutor_enabled', to: 'sections#set_ai_tutor_enabled'
         end
         collection do
           get 'membership'
@@ -181,6 +184,7 @@ Dashboard::Application.routes.draw do
     devise_scope :user do
       get '/oauth_sign_out/:provider', to: 'sessions#oauth_sign_out', as: :oauth_sign_out
       post '/users/begin_sign_up', to: 'registrations#begin_sign_up'
+      post '/users/finish_sign_up', to: 'registrations#new'
       patch '/dashboardapi/users', to: 'registrations#update'
       patch '/users/upgrade', to: 'registrations#upgrade'
       patch '/users/set_student_information', to: 'registrations#set_student_information'
@@ -270,7 +274,10 @@ Dashboard::Application.routes.draw do
 
     # Get or create a project for the given level_id. Optionally, the request
     # can include script_id to get or create a project for the level and script.
-    get "projects(/script/:script_id)/level/:level_id", to: 'projects#get_or_create_for_level'
+    # Optionally, the request can include user_id to get a project for another user,
+    # like a teacher viewing a student's work.
+    # The request can also include a script_level_id if the level_id refers to a different level (for example, a sublevel).
+    get "projects(/script/:script_id)(/script_level/:script_level_id)/level/:level_id(/user/:user_id)", to: 'projects#get_or_create_for_level'
 
     post '/locale', to: 'home#set_locale', as: 'locale'
 
@@ -320,6 +327,7 @@ Dashboard::Application.routes.draw do
         post 'update_start_code'
         post 'update_exemplar_code'
         get 'level_properties'
+        get 'extra_links'
       end
     end
 
@@ -476,7 +484,7 @@ Dashboard::Application.routes.draw do
             get 'sublevel/:sublevel_position', to: 'script_levels#show', as: 'sublevel', format: false
             # Get the level's properties via JSON.
             # /s/xxx/lessons/yyy/levels/zzz/level_properties
-            get 'level_properties', to: 'script_levels#level_properties'
+            get '(sublevel/:sublevel_position)/level_properties', to: 'script_levels#level_properties'
           end
         end
         resources :script_levels, only: [:show], path: "/levels", format: false do
@@ -604,7 +612,6 @@ Dashboard::Application.routes.draw do
     # LTI API endpoints
     match '/lti/v1/login(/:platform_id)', to: 'lti_v1#login', via: [:get, :post]
     match '/lti/v1/authenticate', to: 'lti_v1#authenticate', via: [:get, :post]
-    get '/lti/v1/iframe', to: 'lti_v1#iframe'
     match '/lti/v1/sync_course', to: 'lti_v1#sync_course', via: [:get, :post]
     post '/lti/v1/integrations', to: 'lti_v1#create_integration'
     get '/lti/v1/integrations', to: 'lti_v1#new_integration'
@@ -612,6 +619,21 @@ Dashboard::Application.routes.draw do
     namespace :lti do
       namespace :v1 do
         resource :feedback, controller: :feedback, only: %i[create show]
+        controller :dynamic_registration do
+          get 'dynamic_registration', action: :new_registration
+          post 'dynamic_registration', action: :create_registration
+        end
+        resources :sections, only: [] do
+          collection do
+            patch :bulk_update_owners
+          end
+        end
+        namespace :account_linking do
+          get :landing
+          get :existing_account
+          get :finish_link
+          post :link_email
+        end
       end
     end
 
@@ -901,6 +923,9 @@ Dashboard::Application.routes.draw do
         post 'users/sort_by_family_name', to: 'users#post_sort_by_family_name'
 
         post 'users/show_progress_table_v2', to: 'users#post_show_progress_table_v2'
+        post 'users/date_progress_table_invitation_last_delayed', to: 'users#post_date_progress_table_invitation_last_delayed'
+        post 'users/has_seen_progress_table_v2_invitation', to: 'users#post_has_seen_progress_table_v2_invitation'
+        post 'users/ai_rubrics_disabled', to: 'users#post_ai_rubrics_disabled'
         post 'users/disable_lti_roster_sync', to: 'users#post_disable_lti_roster_sync'
         post 'users/:user_id/ai_tutor_access', to: 'users#update_ai_tutor_access'
 
@@ -914,6 +939,8 @@ Dashboard::Application.routes.draw do
         get 'users/:user_id/school_name', to: 'users#get_school_name'
         get 'users/:user_id/school_donor_name', to: 'users#get_school_donor_name'
         get 'users/:user_id/tos_version', to: 'users#get_tos_version'
+
+        get 'users/cached_page_auth_redirect', to: 'users#cached_page_auth_redirect'
 
         patch 'user_school_infos/:id/update_last_confirmation_date', to: 'user_school_infos#update_last_confirmation_date'
 
@@ -1007,6 +1034,7 @@ Dashboard::Application.routes.draw do
     # @see http://guides.rubyonrails.org/routing.html#specifying-constraints
     get '/dashboardapi/v1/districtsearch/:q/:limit', to: 'api/v1/school_districts#search', defaults: {format: 'json'}, constraints: {q: /[^\/]+/}
     get '/dashboardapi/v1/schoolsearch/:q/:limit(/:use_new_search)', to: 'api/v1/schools#search', defaults: {format: 'json'}, constraints: {q: /[^\/]+/}
+    get '/dashboardapi/v1/schoolzipsearch/:zip', to: 'api/v1/schools#zip_search', defaults: {format: 'json'}, constraints: {zip: /\d{5}/}
 
     get '/dashboardapi/v1/regional-partners/:school_district_id', to: 'api/v1/regional_partners#index', defaults: {format: 'json'}
     get '/dashboardapi/v1/projects/section/:section_id', to: 'api/v1/projects/section_projects#index', defaults: {format: 'json'}
@@ -1126,13 +1154,16 @@ Dashboard::Application.routes.draw do
 
     post '/aichat/chat_completion', to: 'aichat#chat_completion'
 
-    resources :ai_tutor_interactions, only: [:create, :index]
+    resources :ai_tutor_interactions, only: [:create, :index] do
+      resources :feedbacks, controller: 'ai_tutor_interaction_feedbacks', only: [:create]
+    end
 
     # Policy Compliance
-    get '/policy_compliance/child_account_consent/', to:
-      'policy_compliance#child_account_consent'
-    post '/policy_compliance/child_account_consent/', to:
-      'policy_compliance#child_account_consent_request'
+    namespace :policy_compliance do
+      get :pending_permission_request
+      get :child_account_consent
+      post :child_account_consent, action: :child_account_consent_request
+    end
 
     # DatablockStorageController powers the data features of applab,
     # and the key/value pair store feature of gamelab

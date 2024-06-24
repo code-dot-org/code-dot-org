@@ -257,9 +257,7 @@ const CustomizableCurriculumCatalogCard = ({
           <img src={imageSrc} alt={imageAltText} />
           <div className={style.curriculumInfoContainer}>
             <div className={style.labelsAndTranslatabilityContainer}>
-              <div className={style.labelsContainer}>
-                <CardLabels subjectsAndTopics={subjectsAndTopics} />
-              </div>
+              <CardLabels subjectsAndTopics={subjectsAndTopics} />
               {!isEnglish && isTranslated && (
                 <FontAwesome
                   icon="language"

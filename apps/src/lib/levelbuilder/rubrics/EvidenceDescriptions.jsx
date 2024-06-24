@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import EvidenceDescriptionsRow from './EvidenceDescriptionsRow';
 import {UNDERSTANDING_LEVEL_STRINGS} from '@cdo/apps/templates/rubrics/rubricHelpers';
-import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
+import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 
 export default function EvidenceDescriptions({
   learningGoalData,

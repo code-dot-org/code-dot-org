@@ -201,7 +201,7 @@
   &:has(.dropdownButton:active) {
     .dropdownButton:not(:disabled) {
       color: $light_black;
-      background-color: unset;
+      background-color: $light_white;
     }
   }
 
@@ -210,6 +210,52 @@
       color: $light_gray_200;
       border-color: $light_gray_200 !important;
       cursor: not-allowed;
+
+      .dropdownLabel {
+        color: $light_gray_200;
+      }
+    }
+
+    .dropdownLabel {
+      color: $light_gray_200;
+    }
+  }
+}
+
+.dropdownContainer-gray {
+  .dropdownLabel {
+    color: $light_black;
+  }
+
+  .dropdownButton {
+    color: $light_black;
+    border-color: $light_gray_400;
+    background-color: $light_white;
+  }
+
+  &:has(.dropdownButton:hover) {
+    .dropdownButton:not(:disabled) {
+      color: $light_black;
+      background-color: $light_gray_100;
+    }
+  }
+
+  &:has(.dropdownButton:active) {
+    .dropdownButton:not(:disabled) {
+      color: $light_black;
+      background-color: $light_white;
+    }
+  }
+
+  &:has(.dropdownButton:disabled) {
+    .dropdownButton {
+      color: $light_gray_200;
+      border-color: $light_gray_200 !important;
+      cursor: not-allowed;
+
+      .dropdownLabel {
+        color: $light_gray_200;
+      }
     }
 
     .dropdownLabel {
@@ -227,6 +273,10 @@
     color: $light_white;
     border-color: $light_white;
     background-color: $light_black;
+
+    span {
+      color: $light_white;
+    }
   }
 
   &:has(.dropdownButton:hover) {
@@ -246,6 +296,11 @@
     .dropdownButton {
       color: $light_gray_900;
       border-color: $light_gray_900;
+      cursor: not-allowed;
+
+      .dropdownLabel {
+        color: $light_gray_900;
+      }
     }
   }
 }

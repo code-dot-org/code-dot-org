@@ -1,10 +1,11 @@
-import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
+import React, {useEffect, useState} from 'react';
+
 import testImageAccess from '@cdo/apps/code-studio/url_test';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
 
 export default function SocialShare({
   facebook,

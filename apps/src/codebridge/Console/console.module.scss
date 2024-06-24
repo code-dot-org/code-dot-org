@@ -1,0 +1,20 @@
+@import 'color.scss';
+
+.consoleContainer {
+  grid-area: console;
+  color: $white;
+  margin: 0 5px 10px 0;
+  overflow: hidden;
+  height: 100%;
+  white-space: pre;
+}
+
+.console {
+  font-family:'Courier New', Courier, monospace;
+  overflow-y: scroll;
+  user-select: text;
+}
+
+.errorLine {
+  color: $lightest_red;
+}

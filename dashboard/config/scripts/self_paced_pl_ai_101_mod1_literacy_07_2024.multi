@@ -1,11 +1,11 @@
 name 'self-paced-pl-ai-101-mod1-literacy_07_2024'
 title 'Check for Understanding: AI Literacy'
 description ''
-question 'Which of the following are AI literacy skills?'
+question 'Which of the following is NOT an AI literacy skill?'
 
-right 'Understanding basic AI concepts and terminology.'
-right  'Identifying real-world applications of AI technology.'
-right 'Analyzing ethical implications of AI use.'
-wrong 'Programming advanced AI algorithms.'
-right 'Recognizing biases in AI systems.'
+wrong 'Understanding basic AI concepts and terminology.'
+wrong  'Identifying real-world applications of AI technology.'
+wrong 'Analyzing ethical implications of AI use.'
+right 'Programming advanced AI algorithms.'
+wrong 'Recognizing biases in AI systems.'
 allow_multiple_attempts true

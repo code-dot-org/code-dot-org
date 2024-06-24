@@ -9,17 +9,17 @@ wrong '"My first example was a piece of trash. Student B had a fish as the first
 
 
 markdown <<MARKDOWN
-##### Student A and Student B are discussing their results after training A.I. Bot to recognize fish. They notice that one A.I. Bot incorrectly identified six pieces of trash as fish and the other A.I. Bot did not identify any trash as fish. 
+#### Student A and Student B are discussing their results after training A.I. Bot to recognize fish. They notice that one A.I. Bot incorrectly identified six pieces of trash as fish and the other A.I. Bot did not identify any trash as fish. 
 
-##### You ask, "**What is a possible explanation for why one A.I. Bot was more accurate than the other in telling the difference between trash and fish?"**
+#### You ask, "**What is a possible explanation for why one A.I. Bot was more accurate than the other in telling the difference between trash and fish?"**
 
-## Student A's results
+### **Student A's Results**
 
 <img src="https://images.code.org/734499abe99f0130236165e47cdb0fcf-image-1634847032485.05.27 PM.png" alt = "Image showing six peices of trash and fourteen fish" style="border-radius:10px; float: left; height: 200px; clear: both; margin: 0 20px 20px 0;">
 
 <div style="clear:both"/>
 
-## Student B's results
+### **Student B's Results**
 
 <img src="https://images.code.org/c734d27c3583bced86f680a7562b6135-image-1634847026019.10.11 PM.png" alt = "Image showing zero peices of trash and twenty fish" style="border-radius:10px; float: left; height: 200px; clear: both; margin: 0 20px 20px 0;">
 

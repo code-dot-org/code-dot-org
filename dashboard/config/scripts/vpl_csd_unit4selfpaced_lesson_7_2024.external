@@ -5,23 +5,23 @@ description 'description here'
 markdown <<MARKDOWN
 # Chapter 1 Project
 
-##### The Chapter 1 Project is completed in **Lesson 7 - Identifying User Needs** and **Lesson 8 - Project: Paper Prototype**. After spending time working with an exemplar paper prototype, students will create their own.
+#### The Chapter 1 Project is completed in **Lesson 7 - Identifying User Needs** and **Lesson 8 - Project: Paper Prototype**. After spending time working with an exemplar paper prototype, students will create their own.
 
-##### **In the next level**, you'll watch a video that covers the Chapter 1 Project specifics. 
+#### **In the next level**, you'll watch a video that covers the Chapter 1 Project specifics. 
 
 ## Project Overview
 
-##### **Student goal:** Create a paper prototype of an app to help a user address a need or interest.
+### **Student Goal:** Create a paper prototype of an app to help a user address a need or interest.
 
-##### **Students will submit:**
+### **Students will submit:**
 
-* ##### A completed <a href="https://docs.google.com/document/d/1o5-nB-iYLFCdquqAMdeBm57WkqWnmVlSHVrQcBRjVDE/edit?usp=sharing" target="blank" rel="noopener noreferrer">project guide</a>
-* ##### The screens of the app, drawn on notecards
-* ##### A navigation diagram of the app, showing how a user moves between screens
-* ##### A poster showing off the prototype and describing how it works 
+* #### A completed <a href="https://docs.google.com/document/d/1o5-nB-iYLFCdquqAMdeBm57WkqWnmVlSHVrQcBRjVDE/edit?usp=sharing" target="blank" rel="noopener noreferrer">Project Guide</a>
+* #### The screens of the app, drawn on notecards
+* #### A navigation diagram of the app, showing how a user moves between screens
+* #### A poster showing off the prototype and describing how it works 
 
-##### **Student resources:**
+### **Student Resources:**
 
-* ##### <a href="https://docs.google.com/document/d/1azVKaOq9wrtcbROSjrBr10xsuiBQA_rvODOO7RYbrbU/edit?usp=sharing" target="blank" rel="noopener noreferrer">Student rubric</a>
-* ##### <a href="https://docs.google.com/document/d/1tysTwNU1ZCRVEROiOZ2gKYUYP8QRYn2D92IdDjvBSpk/edit?usp=sharing" target="blank" rel="noopener noreferrer">Student checklist</a>
+* #### <a href="https://docs.google.com/document/d/1azVKaOq9wrtcbROSjrBr10xsuiBQA_rvODOO7RYbrbU/edit?usp=sharing" target="blank" rel="noopener noreferrer">Student Rubric</a>
+* #### <a href="https://docs.google.com/document/d/1tysTwNU1ZCRVEROiOZ2gKYUYP8QRYn2D92IdDjvBSpk/edit?usp=sharing" target="blank" rel="noopener noreferrer">Student Checklist</a>
 MARKDOWN

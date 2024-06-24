@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "playground",
-    "serialized_at": "2024-04-16 16:24:21 UTC",
+    "serialized_at": "2024-04-24 16:50:42 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -336,6 +336,28 @@
       },
       "seeding_key": {
         "activity_section.key": "71a26d6c-c189-4e44-adf0-d87e1e1efb5c",
+        "lesson_activity.key": "873dd67c-9e94-453f-a589-b5de0a7adc18"
+      }
+    },
+    {
+      "key": "c786354d-ca88-4c07-bf11-716bc5592c70",
+      "position": 8,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "c786354d-ca88-4c07-bf11-716bc5592c70",
+        "lesson_activity.key": "873dd67c-9e94-453f-a589-b5de0a7adc18"
+      }
+    },
+    {
+      "key": "bf7996d2-bb05-41a4-9c09-83306c3c1100",
+      "position": 9,
+      "properties": {
+        "progression_name": "Google Form"
+      },
+      "seeding_key": {
+        "activity_section.key": "bf7996d2-bb05-41a4-9c09-83306c3c1100",
         "lesson_activity.key": "873dd67c-9e94-453f-a589-b5de0a7adc18"
       }
     },
@@ -820,6 +842,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-csp-matching-csc-images"
+        ],
         "progression": "Multiple Choice w/Images"
       },
       "bonus": false,
@@ -838,6 +863,50 @@
     },
     {
       "chapter": 15,
+      "position": 15,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_survey_L2-test"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "c786354d-ca88-4c07-bf11-716bc5592c70"
+      },
+      "level_keys": [
+        "csc_ecosystems_survey_L2-test"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 16,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Google Form"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_Particles_StatesOfMatter_L7-Liquid_google_form"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "bf7996d2-bb05-41a4-9c09-83306c3c1100"
+      },
+      "level_keys": [
+        "csc_Particles_StatesOfMatter_L7-Liquid_google_form"
+      ]
+    },
+    {
+      "chapter": 17,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -862,7 +931,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 18,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -887,7 +956,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 19,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -912,7 +981,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 20,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -937,7 +1006,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 21,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -962,7 +1031,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 22,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -987,7 +1056,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 23,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -1012,7 +1081,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 24,
       "position": 8,
       "activity_section_position": 5,
       "assessment": false,
@@ -1037,7 +1106,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 25,
       "position": 9,
       "activity_section_position": 6,
       "assessment": false,
@@ -1062,7 +1131,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 26,
       "position": 10,
       "activity_section_position": 7,
       "assessment": false,
@@ -1087,7 +1156,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 27,
       "position": 11,
       "activity_section_position": 8,
       "assessment": false,
@@ -1112,7 +1181,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 28,
       "position": 12,
       "activity_section_position": 1,
       "assessment": true,
@@ -1137,7 +1206,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 29,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -1161,7 +1230,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1186,7 +1255,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 31,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1211,7 +1280,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 32,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -1236,7 +1305,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 33,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -1261,7 +1330,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 34,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -1286,7 +1355,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 35,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -1311,7 +1380,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 36,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -1336,7 +1405,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 37,
       "position": 8,
       "activity_section_position": 5,
       "assessment": false,
@@ -1361,7 +1430,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 38,
       "position": 9,
       "activity_section_position": 6,
       "assessment": false,
@@ -1386,7 +1455,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 39,
       "position": 10,
       "activity_section_position": 7,
       "assessment": false,
@@ -1411,7 +1480,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 40,
       "position": 11,
       "activity_section_position": 8,
       "assessment": false,
@@ -1436,7 +1505,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 41,
       "position": 12,
       "activity_section_position": 1,
       "assessment": true,
@@ -1461,7 +1530,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1485,7 +1554,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 43,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1509,7 +1578,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 44,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -1533,7 +1602,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 45,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -1557,7 +1626,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 46,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -1581,7 +1650,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 47,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1605,7 +1674,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 48,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1629,7 +1698,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 49,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1653,7 +1722,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 50,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1677,7 +1746,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1701,7 +1770,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 52,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1725,7 +1794,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 53,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -1916,6 +1985,30 @@
         "lesson_group.key": "",
         "script.name": "csc-playground",
         "activity_section.key": "71a26d6c-c189-4e44-adf0-d87e1e1efb5c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_survey_L2-test",
+        "script_level.level_keys": [
+          "csc_ecosystems_survey_L2-test"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "c786354d-ca88-4c07-bf11-716bc5592c70"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Particles_StatesOfMatter_L7-Liquid_google_form",
+        "script_level.level_keys": [
+          "csc_Particles_StatesOfMatter_L7-Liquid_google_form"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "bf7996d2-bb05-41a4-9c09-83306c3c1100"
       }
     },
     {

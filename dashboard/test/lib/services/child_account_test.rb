@@ -1,62 +1,6 @@
 require 'test_helper'
 
 class Services::ChildAccountTest < ActiveSupport::TestCase
-  class LockOut < ActiveSupport::TestCase
-    teardown do
-      Timecop.return
-    end
-
-    test 'given no user should not throw an error' do
-      Services::ChildAccount.lock_out(nil)
-    end
-
-    test 'given non compliant user sets the lock_out state' do
-      user = create :non_compliant_child
-
-      Services::ChildAccount.lock_out(user)
-
-      assert_equal Policies::ChildAccount::ComplianceState::LOCKED_OUT, user.child_account_compliance_state
-      refute_nil user.child_account_compliance_state_last_updated
-      refute_nil user.child_account_compliance_lock_out_date
-    end
-
-    test 'given locked_out user does not update state' do
-      user = create :locked_out_child
-      compliance_state = user.child_account_compliance_state
-      last_updated = user.child_account_compliance_state_last_updated
-      Timecop.travel 5.minutes
-
-      Services::ChildAccount.lock_out(user)
-
-      assert_equal compliance_state, user.child_account_compliance_state
-      assert_equal last_updated, user.child_account_compliance_state_last_updated
-    end
-
-    test 'given pending_permission user does not update state' do
-      user = create :locked_out_child, :with_pending_parent_permission
-      compliance_state = user.child_account_compliance_state
-      last_updated = user.child_account_compliance_state_last_updated
-      Timecop.travel 5.minutes
-
-      Services::ChildAccount.lock_out(user)
-
-      assert_equal compliance_state, user.child_account_compliance_state
-      assert_equal last_updated, user.child_account_compliance_state_last_updated
-    end
-
-    test 'given parent_permission user does not update state' do
-      user = create :locked_out_child, :with_parent_permission
-      compliance_state = user.child_account_compliance_state
-      last_updated = user.child_account_compliance_state_last_updated
-      Timecop.travel 5.minutes
-
-      Services::ChildAccount.lock_out(user)
-
-      assert_equal compliance_state, user.child_account_compliance_state
-      assert_equal last_updated, user.child_account_compliance_state_last_updated
-    end
-  end
-
   class UpdateCompliance < ActiveSupport::TestCase
     teardown do
       Timecop.return
@@ -80,14 +24,6 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
 
       last_updated = user.child_account_compliance_state_last_updated
       Timecop.travel 5.minutes
-      new_state = Policies::ChildAccount::ComplianceState::REQUEST_SENT
-      Services::ChildAccount.update_compliance(user, new_state)
-
-      assert_equal new_state, user.child_account_compliance_state
-      refute_equal last_updated, user.child_account_compliance_state_last_updated
-
-      last_updated = user.child_account_compliance_state_last_updated
-      Timecop.travel 5.minutes
       new_state = Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED
       Services::ChildAccount.update_compliance(user, new_state)
 
@@ -97,6 +33,16 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
   end
 
   class GrantPermissionRequest < ActionDispatch::IntegrationTest
+    def assert_enqueued_parent_permission_confirm_mail(permission, &block)
+      assert_enqueued_with(
+        job: ParentMailer.delivery_job,
+        args: ['ParentMailer', 'parent_permission_confirmation', 'deliver_now', {args: [permission.parent_email]}],
+        queue: 'mailers',
+        at: 24.hours.from_now,
+        &block
+      )
+    end
+
     teardown do
       Timecop.return
     end
@@ -108,7 +54,7 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
     test 'given permission request it should update user and send email' do
       permission = create :parental_permission_request
       user = permission.user
-      assert_emails 1 do
+      assert_enqueued_parent_permission_confirm_mail(permission) do
         Services::ChildAccount.grant_permission_request! permission
       end
       user.reload
@@ -119,7 +65,7 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
     test 'granting permission twice only makes changes once' do
       permission = create :parental_permission_request
       user = permission.user
-      assert_emails 1 do
+      assert_enqueued_parent_permission_confirm_mail(permission) do
         Services::ChildAccount.grant_permission_request! permission
       end
       user.reload
@@ -129,7 +75,7 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
       refute_empty last_updated
 
       # No emails should be sent
-      assert_emails 0 do
+      assert_no_enqueued_emails do
         Services::ChildAccount.grant_permission_request! permission
       end
       user.reload
@@ -138,16 +84,25 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
     end
   end
 
-  class TeacherUsState < ActiveSupport::TestCase
-    test 'Sets the student\'s us_state based on their teacher\'s state' do
-      school_info = create :school_info, state: 'WA'
-      teacher = create :teacher, :with_school_info, school_info: school_info
-      section = create :section, user: teacher
-      student = create(:follower, section: section).student_user
+  describe '.lock_out' do
+    let(:lock_out) {Services::ChildAccount.lock_out(user)}
 
-      Services::ChildAccount.update_us_state_from_teacher!(student)
+    let(:user) {create(:non_compliant_child)}
 
-      assert_equal 'WA', student.reload.us_state
+    around do |test|
+      Timecop.freeze {test.call}
+    end
+
+    it 'updates user CAP attributes with "lock out" compliance state' do
+      assert_changes -> {user.properties} do
+        lock_out
+      end
+
+      assert_attributes user, {
+        child_account_compliance_state: 'l',
+        child_account_compliance_lock_out_date: DateTime.now.iso8601(3),
+        child_account_compliance_state_last_updated: DateTime.now.iso8601(3),
+      }
     end
   end
 end

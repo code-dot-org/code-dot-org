@@ -6,7 +6,6 @@ import $ from 'jquery';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import {
-  CourseOfferingCategories,
   CourseOfferingHeaders,
   CourseOfferingCurriculumTypes,
   CourseOfferingMarketingInitiatives,
@@ -15,8 +14,7 @@ import {
   DeviceTypes,
   DeviceCompatibilityLevels,
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
-import {StudentGradeLevels} from '@cdo/apps/util/sharedConstants';
-import {translatedCourseOfferingCategories} from '@cdo/apps/templates/teacherDashboard/AssignmentSelectorHelpers';
+import {StudentGradeLevels} from '@cdo/generated-scripts/sharedConstants';
 import {
   translatedCourseOfferingCsTopics,
   translatedCourseOfferingSchoolSubjects,
@@ -183,26 +181,6 @@ export default function CourseOfferingEditor(props) {
           style={styles.input}
           onChange={e => updateCourseOffering('display_name', e.target.value)}
         />
-      </label>
-      <label>
-        Category
-        <select
-          value={courseOffering.category}
-          style={styles.dropdown}
-          onChange={e => updateCourseOffering('category', e.target.value)}
-        >
-          {CourseOfferingCategories.map(category => (
-            <option key={category} value={category}>
-              {translatedCourseOfferingCategories[category]}
-            </option>
-          ))}
-        </select>
-        <HelpTip>
-          <p>
-            Course offerings are organized by category in the assignment
-            dropdown.
-          </p>
-        </HelpTip>
       </label>
       <label>
         Description
@@ -500,7 +478,6 @@ CourseOfferingEditor.propTypes = {
   initialCourseOffering: PropTypes.shape({
     key: PropTypes.string,
     is_featured: PropTypes.bool,
-    category: PropTypes.string,
     display_name: PropTypes.string,
     assignable: PropTypes.bool,
     grade_levels: PropTypes.string,

@@ -32,6 +32,12 @@ import {
   ValidationState,
 } from './progress/ProgressManager';
 import {LevelPropertiesValidator} from './responseValidators';
+import {
+  getAppOptionsEditBlocks,
+  getAppOptionsEditingExemplar,
+  getAppOptionsViewingExemplar,
+} from '@cdo/apps/lab2/projects/utils';
+import {START_SOURCES} from './constants';
 
 interface PageError {
   errorMessage: string;
@@ -57,6 +63,8 @@ export interface LabState {
   validationState: ValidationState;
   // Level properties for the current level.
   levelProperties: LevelProperties | undefined;
+  // If this lab should presented in a "share" or "play-only" view, which may hide certain UI elements.
+  isShareView: boolean | undefined;
 }
 
 const initialState: LabState = {
@@ -67,6 +75,7 @@ const initialState: LabState = {
   initialSources: undefined,
   validationState: getInitialValidationState(),
   levelProperties: undefined,
+  isShareView: undefined,
 };
 
 // Thunks
@@ -84,6 +93,8 @@ export const setUpWithLevel = createAsyncThunk(
       scriptId?: number;
       levelPropertiesPath: string;
       channelId?: string;
+      userId?: string;
+      scriptLevelId?: string;
     },
     thunkAPI
   ) => {
@@ -96,6 +107,8 @@ export const setUpWithLevel = createAsyncThunk(
       });
 
       await cleanUpProjectManager();
+      const isViewingExemplar = getAppOptionsViewingExemplar();
+      const isEditingExemplar = getAppOptionsEditingExemplar();
 
       // Load level properties if we have a levelPropertiesPath.
       const levelProperties = await loadLevelProperties(
@@ -120,6 +133,18 @@ export const setUpWithLevel = createAsyncThunk(
         return;
       }
 
+      // If we are in start mode or are editing or viewing exemplars,
+      // we don't use a channel id.
+      // We can skip creating a project manager and just set the level data.
+      const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+      if (isStartMode || isViewingExemplar || isEditingExemplar) {
+        setProjectAndLevelData(
+          {levelProperties},
+          thunkAPI.signal.aborted,
+          thunkAPI.dispatch
+        );
+        return;
+      }
       // Create a new project manager. If we have a channel id,
       // default to loading the project for that channel. Otherwise
       // create a project manager for the given level and script id.
@@ -132,11 +157,26 @@ export const setUpWithLevel = createAsyncThunk(
           : await ProjectManagerFactory.getProjectManagerForLevel(
               ProjectManagerStorageType.REMOTE,
               payload.levelId,
-              payload.scriptId
+              payload.userId,
+              payload.scriptId,
+              payload.scriptLevelId
             );
+
       // Only set the project manager and initiate load
       // if this request hasn't been cancelled.
       if (thunkAPI.signal.aborted) {
+        return;
+      }
+
+      // We might be a teacher attempting to view a student level that hasn't been
+      // started, and there is no project manager available.
+      if (!projectManager) {
+        // If the level hasn't been started, we can skip loading projects data.
+        setProjectAndLevelData(
+          {levelProperties},
+          thunkAPI.signal.aborted,
+          thunkAPI.dispatch
+        );
         return;
       }
 
@@ -165,8 +205,8 @@ export const setUpWithLevel = createAsyncThunk(
 // Given a channel id and app name as the payload, set up the lab for that channel id.
 // This consists of cleaning up the existing project manager (if applicable), then
 // creating a project manager and loading the project data.
-// This method is used for loading a lab that is not associated with a level
-// (e.g., /projectbeats).
+// This method is used for loading a lab that is not associated with a level.
+// (This was previously used for /projectbeats).
 // If we get an aborted signal, we will exit early.
 export const setUpWithoutLevel = createAsyncThunk(
   'lab/setUpWithoutLevel',
@@ -217,7 +257,12 @@ export const isLabLoading = (state: {lab: LabState}) =>
 
 // This may depend on more factors, such as share.
 export const isReadOnlyWorkspace = (state: {lab: LabState}) => {
-  return !state.lab.channel?.isOwner;
+  const isOwner = state.lab.channel?.isOwner;
+  const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+  const isFrozen = !!state.lab.channel?.frozen;
+  // We are in read-only mode if we are not the owner of the channel
+  // and we are not in start mode OR if the channel is frozen.
+  return (!isStartMode && !isOwner) || isFrozen;
 };
 
 // If there is an error present on the page.
@@ -274,6 +319,9 @@ const labSlice = createSlice({
       state.channel = action.payload.channel;
       state.levelProperties = action.payload.levelProperties;
       state.initialSources = action.payload.initialSources;
+    },
+    setIsShareView(state, action: PayloadAction<boolean>) {
+      state.isShareView = action.payload;
     },
   },
   extraReducers: builder => {
@@ -423,8 +471,13 @@ async function cleanUpProjectManager() {
   Lab2Registry.getInstance().clearProjectManager();
 }
 
-export const {setIsLoading, setPageError, clearPageError, setValidationState} =
-  labSlice.actions;
+export const {
+  setIsLoading,
+  setPageError,
+  clearPageError,
+  setValidationState,
+  setIsShareView,
+} = labSlice.actions;
 
 // These should not be set outside of the lab slice.
 const {setChannel, onLevelChange} = labSlice.actions;

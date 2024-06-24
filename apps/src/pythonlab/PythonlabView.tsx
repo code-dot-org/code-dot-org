@@ -1,50 +1,44 @@
 // Pythonlab view
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import moduleStyles from './pythonlab-view.module.scss';
-import {ConfigType} from '@cdo/apps/weblab2/CDOIDE/types';
-import Editor from '../weblab2/CDOIDE/CenterPane/Editor';
+import {ConfigType} from '@codebridge/types';
 import {LanguageSupport} from '@codemirror/language';
 import {python} from '@codemirror/lang-python';
-import {CDOIDE} from '../weblab2/CDOIDE';
-import {MultiFileSource} from '../lab2/types';
-import Lab2Registry from '../lab2/Lab2Registry';
-import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
-import {setSource} from './pythonlabRedux';
-import PythonConsole from './PythonConsole';
+import {Codebridge} from '@codebridge/Codebridge';
+import {ProjectSources} from '@cdo/apps/lab2/types';
+import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
+import {useSource} from '@codebridge/hooks/useSource';
+import {handleRunClick} from './pyodideRunner';
 
 const pythonlabLangMapping: {[key: string]: LanguageSupport} = {
   py: python(),
 };
 
-const defaultProject: MultiFileSource = {
-  files: {
-    '0': {
-      id: '0',
-      name: 'main.py',
-      language: 'py',
-      contents: 'print("Hello world!")',
-      folderId: '1',
-      active: true,
-      open: true,
+const defaultProject: ProjectSources = {
+  source: {
+    files: {
+      '0': {
+        id: '0',
+        name: MAIN_PYTHON_FILE,
+        language: 'py',
+        contents: 'print("Hello world!")',
+        folderId: '0',
+        active: true,
+        open: true,
+      },
     },
-  },
-  folders: {
-    '1': {
-      id: '1',
-      name: 'src',
-      parentId: '0',
-    },
+    folders: {},
   },
 };
 
 const defaultConfig: ConfigType = {
-  showPreview: false,
   activeLeftNav: 'Files',
-  EditorComponent: () => Editor(pythonlabLangMapping, ['py', 'csv', 'txt']),
+  languageMapping: pythonlabLangMapping,
+  editableFileTypes: ['py', 'csv', 'txt'],
   leftNav: [
     {
       icon: 'fa-square-check',
-      component: 'Instructions',
+      component: 'info-panel',
     },
     {
       icon: 'fa-file',
@@ -67,51 +61,32 @@ const defaultConfig: ConfigType = {
       action: () => window.alert('You are already on the file browser'),
     },
   ],
-  instructions: 'Welcome to Python Lab!',
+  gridLayoutRows: '1fr 1fr 1fr 48px',
+  gridLayoutColumns: '300px minmax(0, 1fr)',
+  gridLayout: `
+    "info-panel workspace"
+    "file-browser workspace"
+    "file-browser console"
+    "file-browser control-buttons"
+  `,
 };
 
 const PythonlabView: React.FunctionComponent = () => {
-  const [currentProject, setCurrentProject] = useState<MultiFileSource>();
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const initialSources = useAppSelector(state => state.lab.initialSources);
-  const channelId = useAppSelector(state => state.lab.channel?.id);
-  const dispatch = useAppDispatch();
-
-  // TODO: This is repeated in Weblab2View. Can we extract this out somewhere?
-  const setProject = (newProject: MultiFileSource) => {
-    setCurrentProject(newProject);
-    dispatch(setSource(newProject));
-    if (Lab2Registry.getInstance().getProjectManager()) {
-      const projectSources = {
-        source: newProject,
-      };
-      Lab2Registry.getInstance().getProjectManager()?.save(projectSources);
-    }
-  };
-
-  useEffect(() => {
-    // We reset the project when the channelId changes, as this means we are on a new level.
-    setCurrentProject(
-      (initialSources?.source as MultiFileSource) || defaultProject
-    );
-  }, [channelId, initialSources]);
+  const {source, setSource, resetToStartSource} = useSource(defaultProject);
 
   return (
     <div className={moduleStyles.pythonlab}>
-      <div className={moduleStyles.editor}>
-        {currentProject && (
-          <CDOIDE
-            project={currentProject}
-            config={config}
-            setProject={setProject}
-            setConfig={setConfig}
-          />
-        )}
-      </div>
-      {/** TODO: Should the console be a part of CDOIDE? */}
-      <div className={moduleStyles.console}>
-        <PythonConsole />
-      </div>
+      {source && (
+        <Codebridge
+          project={source}
+          config={config}
+          setProject={setSource}
+          setConfig={setConfig}
+          resetProject={resetToStartSource}
+          onRun={handleRunClick}
+        />
+      )}
     </div>
   );
 };

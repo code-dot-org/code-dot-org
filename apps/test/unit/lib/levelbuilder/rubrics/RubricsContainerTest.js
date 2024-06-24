@@ -1,12 +1,12 @@
 import React from 'react';
-import {mount, shallow} from 'enzyme';
+import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import {expect} from '../../../../util/reconfiguredChai';
 import RubricsContainer from '@cdo/apps/lib/levelbuilder/rubrics/RubricsContainer';
 import * as rubricHelper from '@cdo/apps/lib/levelbuilder/rubrics/rubricHelper';
 import LearningGoalItem from '@cdo/apps/lib/levelbuilder/rubrics/LearningGoalItem';
 import RubricEditor from '@cdo/apps/lib/levelbuilder/rubrics/RubricEditor';
 import Button from '@cdo/apps/templates/Button';
-import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
+import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 import sinon from 'sinon';
 
 describe('RubricsContainerTest', () => {

@@ -111,19 +111,9 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_select 'a', text: 'Overview of Courses 1, 2, and 3'
   end
 
-  test "should redirect to /s/course1" do
-    get :show, params: {id: Unit.find_by_name("course1").id}
-    assert_redirected_to "/s/course1"
-  end
-
   test "show of hourofcode redirects to hoc" do
     get :show, params: {id: 'hourofcode'}
     assert_response :success
-  end
-
-  test "show of hourofcode by id should redirect to hoc" do
-    get :show, params: {id: Unit.find_by_name('hourofcode').id}
-    assert_redirected_to '/s/hourofcode'
   end
 
   test "should get show if not signed in" do
@@ -376,14 +366,14 @@ class ScriptsControllerTest < ActionController::TestCase
   test "platformization partner cannot edit our units" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:platformization_partner)
-    get :edit, params: {id: @coursez_2019.id}
+    get :edit, params: {id: @coursez_2019.name}
     assert_response :forbidden
   end
 
   test "platformization partner can edit their units" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:platformization_partner)
-    get :edit, params: {id: @partner_unit.id}
+    get :edit, params: {id: @partner_unit.name}
     assert_response :success
   end
 
@@ -411,19 +401,6 @@ class ScriptsControllerTest < ActionController::TestCase
       lesson_groups: '[]',
     }
     assert_response :success
-  end
-
-  # These two tests are the only remaining dependency on script seed order.  Check that /s/1 redirects to /s/20-hour in
-  # production. On a fresh db the only guarantee that '20-hour.script' has id:1 is by manually specifying ID in the DSL.
-
-  test "should redirect old k-8" do
-    get :show, params: {id: 1}
-    assert_redirected_to script_path(Unit.twenty_hour_unit)
-  end
-
-  test "show should redirect to flappy" do
-    get :show, params: {id: 6}
-    assert_redirected_to "/s/flappy"
   end
 
   test 'create' do

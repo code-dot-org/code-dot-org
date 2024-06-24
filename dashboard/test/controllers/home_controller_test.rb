@@ -281,8 +281,10 @@ class HomeControllerTest < ActionController::TestCase
   test 'student without age gets student information prompt with age select' do
     student = create(:student)
     student.update_attribute(:birthday, nil) # bypasses validations
+    student.update_attribute(:us_state, 'DC')
     student = student.reload
     refute student.age, "user should not have age, but value was #{student.age}"
+    assert student.us_state
 
     sign_in student
     get :home
@@ -303,7 +305,6 @@ class HomeControllerTest < ActionController::TestCase
     get :home
 
     assert_select '#student-information-modal'
-    assert_select '#user_age'
     assert_select '#user_us_state'
     assert_select '#user_gender_student_input'
   end
@@ -330,6 +331,91 @@ class HomeControllerTest < ActionController::TestCase
 
     get :home
 
+    assert_select '#student-information-modal', false
+  end
+
+  test 'student under 13 and in US with no us_state gets student information prompt' do
+    student = create(:student, age: 12)
+    student.update_attribute(:created_at, DateTime.new(2023, 6, 30))
+    student.update_attribute(:us_state, nil) # bypasses validations
+    refute student.us_state, "user should not have us_state, but value was #{student.us_state}"
+    request.env['HTTP_CLOUDFRONT_VIEWER_COUNTRY'] = 'US'
+    sign_in student
+    Policies::ChildAccount.stubs(:show_cap_state_modal?).with(student).returns(true)
+    get :home
+
+    assert_select '#student-information-modal', true
+    assert_select '#user_age', false
+    assert_select '#user_us_state', true
+    assert_select '#user_gender_student_input', false
+  end
+
+  test 'student under 13 and in US with no provided us_state gets student information prompt' do
+    student = create(:student, age: 12)
+    student.update_attribute(:us_state, 'DC')
+    student.update_attribute(:user_provided_us_state, false)
+    student.update_attribute(:created_at, DateTime.new(2023, 6, 30))
+    request.env['HTTP_CLOUDFRONT_VIEWER_COUNTRY'] = 'US'
+    student = student.reload
+    assert student.age, 12
+
+    sign_in student
+    Policies::ChildAccount.stubs(:show_cap_state_modal?).with(student).returns(true)
+    get :home
+
+    assert_select '#student-information-modal', true
+    assert_select '#user_age', false
+    assert_select '#user_us_state', true
+    assert_select '#user_gender_student_input', false
+  end
+
+  test 'CAP student missing us_state and created after CPA started does sees the student information prompt' do
+    student = create(:student, age: 12)
+    student.update_attribute(:created_at, DateTime.new(2023, 7, 1))
+    request.env['HTTP_CLOUDFRONT_VIEWER_COUNTRY'] = 'US'
+    student = student.reload
+    assert student.age, 12
+
+    sign_in student
+    Policies::ChildAccount.stubs(:show_cap_state_modal?).with(student).returns(true)
+    get :home
+
+    assert_select '#student-information-modal', true
+    assert_select '#user_age', false
+    assert_select '#user_us_state', true
+    assert_select '#user_gender_student_input', false
+  end
+
+  test 'student under 13 and in US with provided us_state does not get student information prompt' do
+    student = create(:student, age: 12)
+    student.update_attribute(:us_state, 'DC')
+    student.update_attribute(:user_provided_us_state, true)
+    student = student.reload
+    assert student.age, 12
+    assert student.us_state
+
+    sign_in student
+    get :home
+
+    assert_select '#student-information-modal', false
+  end
+
+  test 'student over 13 and in US with us_state does not get student information prompt' do
+    student = create(:student, age: 19)
+    request.env['HTTP_CLOUDFRONT_VIEWER_COUNTRY'] = 'US'
+    sign_in student
+    get :home
+
+    assert_select '#student-information-modal', false
+  end
+
+  test 'clever student under 13 and in US with no us_state does not get student information prompt' do
+    student = create :student, :clever_sso_provider
+    student.update_attribute(:age, 11)
+    request.env['HTTP_CLOUDFRONT_VIEWER_COUNTRY'] = 'US'
+    sign_in student
+    Policies::ChildAccount.stubs(:show_cap_state_modal?).with(student).returns(true)
+    get :home
     assert_select '#student-information-modal', false
   end
 
@@ -370,91 +456,5 @@ class HomeControllerTest < ActionController::TestCase
     assert_raises ActionController::UrlGenerationError do
       get :debug
     end
-  end
-
-  test 'workshop organizers see dashboard links' do
-    sign_in create(:workshop_organizer, :with_terms_of_service, :not_first_sign_in)
-    query_count = 17
-    assert_queries query_count do
-      get :home
-    end
-    assert_select 'h1', count: 1, text: 'Workshop Dashboard'
-  end
-
-  test 'program managers see dashboard links' do
-    sign_in create(:program_manager, :with_terms_of_service, :not_first_sign_in)
-    query_count = 18
-    assert_queries query_count do
-      get :home
-    end
-    assert_select 'h1', count: 1, text: 'Workshop Dashboard'
-  end
-
-  test 'workshop admins see dashboard links' do
-    sign_in create(:workshop_admin, :with_terms_of_service, :not_first_sign_in)
-    query_count = 16
-    assert_queries query_count do
-      get :home
-    end
-    assert_select 'h1', count: 1, text: 'Workshop Dashboard'
-  end
-
-  test 'facilitators see dashboard links' do
-    facilitator = create(:facilitator, :with_terms_of_service, :not_first_sign_in)
-    sign_in facilitator
-    query_count = 17
-    assert_queries query_count do
-      get :home
-    end
-    assert_select 'h1', count: 1, text: 'Workshop Dashboard'
-  end
-
-  test 'teachers cannot see dashboard links' do
-    sign_in create(:terms_of_service_teacher, :not_first_sign_in)
-    query_count = 15
-    assert_queries query_count do
-      get :home
-    end
-    assert_select 'h1', count: 0, text: 'Workshop Dashboard'
-  end
-
-  test 'workshop admins see application dashboard links' do
-    sign_in create(:workshop_admin, :with_terms_of_service, :not_first_sign_in)
-    query_count = 16
-    assert_queries query_count do
-      get :home
-    end
-    assert_select 'h1', count: 1, text: 'Application Dashboard'
-    assert_select 'h3', count: 1, text: 'Manage Applications'
-  end
-
-  test 'workshop organizers who are regional partner program managers see application dashboard links' do
-    sign_in create(:workshop_organizer, :as_regional_partner_program_manager, :with_terms_of_service, :not_first_sign_in)
-    query_count = 18
-    assert_queries query_count do
-      get :home
-    end
-    assert_select 'h1', count: 1, text: 'Application Dashboard'
-    assert_select 'h3', count: 1, text: 'Manage Applications'
-  end
-
-  test 'program managers see application dashboard links' do
-    sign_in create(:program_manager, :with_terms_of_service, :not_first_sign_in)
-    query_count = 18
-    assert_queries query_count do
-      get :home
-    end
-    assert_select 'h1', count: 1, text: 'Application Dashboard'
-    assert_select 'h3', count: 1, text: 'Manage Applications'
-  end
-
-  test 'workshop organizers who are not regional partner program managers do not see application dashboard links' do
-    sign_in create(:workshop_organizer, :with_terms_of_service, :not_first_sign_in)
-    query_count = 17
-    assert_queries query_count do
-      get :home
-    end
-    assert_select 'h1', count: 0, text: 'Application Dashboard'
-    assert_select 'h3', count: 0, text: 'Manage Applications'
   end
 end

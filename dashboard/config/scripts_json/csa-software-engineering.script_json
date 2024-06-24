@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "csa-software-engineering",
-    "serialized_at": "2024-03-11 22:02:39 UTC",
+    "serialized_at": "2024-04-17 16:45:23 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -3929,7 +3929,7 @@
     },
     {
       "name": "Getting Started on GitHub (Teachers)",
-      "url": "https://docs.google.com/document/d/16qrRG9ez9Yn\\_ZL44vM54dQb4EzKMtHSWvtKllFNRa6Y/edit?usp=share\\_link",
+      "url": "https://docs.google.com/document/d/16qrRG9ez9Yn_ZL44vM54dQb4EzKMtHSWvtKllFNRa6Y/edit?usp=sharing",
       "key": "getting_started_on_github_teachers_",
       "properties": {
         "audience": "Verified Teacher",

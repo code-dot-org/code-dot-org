@@ -1,4 +1,4 @@
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import React from 'react';
 import sinon from 'sinon';
@@ -94,7 +94,7 @@ describe('AddSectionDialog', () => {
       navigateToHrefSpy.restore();
     });
 
-    it('redirects to new section setup when selecting non-student participant type', () => {
+    it('redirects to new section setup with redirect to MyPL page when selecting non-student participant type', () => {
       const newSection = _.cloneDeep(defaultProps.section);
       const wrapper = shallow(
         <AddSectionDialog
@@ -109,7 +109,7 @@ describe('AddSectionDialog', () => {
       );
       expect(navigateToHrefSpy).to.be.called.once;
       expect(navigateToHrefSpy.getCall(0).args[0]).to.equal(
-        '/sections/new?participantType=teacher&loginType=email'
+        '/sections/new?participantType=teacher&loginType=email&redirectToPage=my-professional-learning'
       );
     });
 

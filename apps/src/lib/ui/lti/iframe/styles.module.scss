@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+}
+
+.mainContentContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.mainContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 8px 0 8px
+}
+
+.logo {
+  min-width: 85px;
+  width: 30vh; // 30% of view port height for small iPhone
+  max-width: 250px;
+}
+
+.description {
+  text-align: center;
+  font-weight: bolder;
+}
+
+.mainContent > * {
+  flex: 1;
+  padding-bottom: 30px;
+}
+
+.callToAction {
+  box-shadow: 0 4px 4px 0 #00000040;
+}

@@ -319,7 +319,7 @@ module LevelsHelper
 
     @app_options =
       if @level.uses_lab2?
-        {app: 'lab2', channel: view_options[:channel], projectType: @level.project_type}
+        lab2_options
       elsif @level.is_a? Blockly
         blockly_options
       elsif @level.is_a?(Weblab) || @level.is_a?(Fish) || @level.is_a?(Ailab) || @level.is_a?(Javalab)
@@ -730,6 +730,23 @@ module LevelsHelper
     end
 
     app_options
+  end
+
+  def lab2_options
+    raise ArgumentError.new("#{@level} is not a Lab2 level") unless @level.uses_lab2?
+    app_options = {channel: view_options[:channel], level_id: @level.id}
+    level_options = level_view_options(@level.id)
+    # Add edit_blocks to app_options if it exists in level_options
+    if level_options[:edit_blocks]
+      app_options[:edit_blocks] = level_options[:edit_blocks]
+    end
+    # Also pass through if we are in exemplar edit or view mode.
+    if level_options[:is_editing_exemplar] || level_options[:is_viewing_exemplar]
+      app_options[:is_editing_exemplar] = level_options[:is_editing_exemplar] || false
+      app_options[:is_viewing_exemplar] = level_options[:is_viewing_exemplar] || false
+    end
+    app_options[:share] = level_options[:share] if level_options[:share]
+    app_options.camelize_keys
   end
 
   def build_copyright_strings

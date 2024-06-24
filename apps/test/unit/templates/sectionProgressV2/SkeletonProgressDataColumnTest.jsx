@@ -1,12 +1,10 @@
-import {mount} from 'enzyme';
+import {render, screen} from '@testing-library/react';
 import React from 'react';
 
 import {fakeLessonWithLevels} from '@cdo/apps/templates/progress/progressTestHelpers';
-import SkeletonProgressDataColumn from '@cdo/apps/templates/sectionProgressV2/SkeletonProgressDataColumn.jsx';
+import {UnconnectedSkeletonProgressDataColumn} from '@cdo/apps/templates/sectionProgressV2/SkeletonProgressDataColumn.jsx';
 
 import {expect} from '../../../util/reconfiguredChai';
-
-import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
 
 const STUDENT_1 = {id: 1, name: 'Student 1', familyName: 'FamNameB'};
 const STUDENT_2 = {id: 2, name: 'Student 2', familyName: 'FamNameA'};
@@ -16,27 +14,53 @@ const LESSON = fakeLessonWithLevels({}, 1);
 const DEFAULT_PROPS = {
   lesson: LESSON,
   sortedStudents: STUDENTS,
+  expandedMetadataStudentIds: [],
 };
 
-const setUp = overrideProps => {
-  const props = {...DEFAULT_PROPS, ...overrideProps};
-  return mount(<SkeletonProgressDataColumn {...props} />);
-};
+const getTestId = (lessonId, studentId, suffix = '') =>
+  `lesson-skeleton-cell-${studentId}.${lessonId}${suffix}`;
+
+function renderDefault(overrideProps = {}) {
+  render(
+    <UnconnectedSkeletonProgressDataColumn
+      {...DEFAULT_PROPS}
+      {...overrideProps}
+    />
+  );
+}
 
 describe('SkeletonProgressDataColumn', () => {
   it('Shows skeleton if fake lesson', () => {
-    const wrapper = setUp({lesson: {id: 1, isFake: true}});
+    renderDefault({lesson: {id: 1, isFake: true}});
 
+    screen.getByTestId(getTestId(1, STUDENT_1.id));
+    screen.getByTestId(getTestId(1, STUDENT_2.id));
+    screen.getByLabelText('Loading lesson');
     expect(
-      wrapper.find(`.${skeletonizeContent.skeletonizeContent}`)
-    ).to.have.length(STUDENTS.length + 1);
+      screen.getAllByTestId('lesson-skeleton-cell', {exact: false})
+    ).to.have.length(2);
   });
 
   it('Shows real header', () => {
-    const wrapper = setUp();
+    renderDefault();
 
+    screen.getByTestId(getTestId(LESSON.id, STUDENT_1.id));
+    screen.getByTestId(getTestId(LESSON.id, STUDENT_2.id));
+    expect(screen.queryByLabelText('Loading lesson')).to.not.exist;
     expect(
-      wrapper.find(`.${skeletonizeContent.skeletonizeContent}`)
-    ).to.have.length(STUDENTS.length);
+      screen.getAllByTestId('lesson-skeleton-cell', {exact: false})
+    ).to.have.length(2);
+  });
+
+  it('Shows expanded metadata rows', () => {
+    renderDefault({expandedMetadataStudentIds: [1]});
+
+    screen.getByTestId(getTestId(LESSON.id, STUDENT_1.id));
+    screen.getByTestId(getTestId(LESSON.id, STUDENT_1.id, '-last-updated'));
+    screen.getByTestId(getTestId(LESSON.id, STUDENT_1.id, '-time-spent'));
+    screen.getByTestId(getTestId(LESSON.id, STUDENT_2.id));
+    expect(
+      screen.getAllByTestId('lesson-skeleton-cell', {exact: false})
+    ).to.have.length(4);
   });
 });

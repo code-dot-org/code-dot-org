@@ -1,6 +1,7 @@
 /** Generic search bar */
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import color from '@cdo/apps/util/color';
 
 export default class SearchBar extends React.Component {

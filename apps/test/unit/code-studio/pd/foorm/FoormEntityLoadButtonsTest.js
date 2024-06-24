@@ -1,5 +1,5 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import {assert} from 'chai';
 
 import {UnconnectedFoormEntityLoadButtons as FoormEntityLoadButtons} from '@cdo/apps/code-studio/pd/foorm/editor/components/FoormEntityLoadButtons';

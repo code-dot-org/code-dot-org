@@ -1,5 +1,5 @@
 import React from 'react';
-import {shallow, mount} from 'enzyme';
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import {expect} from '../../../../../util/reconfiguredChai';
 import {UnconnectedTeacherPanel as TeacherPanel} from '@cdo/apps/code-studio/components/progress/teacherPanel/TeacherPanel';
 import viewAs, {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
@@ -36,11 +36,13 @@ const DEFAULT_PROPS = {
   teacherId: 5,
   exampleSolutions: [],
   selectUser: () => {},
+  setViewAsUserId: () => {},
   setStudentsForCurrentSection: () => {},
   setSections: () => {},
   setSectionLockStatus: () => {},
   selectSection: () => {},
   setViewType: () => {},
+  isCurrentLevelLab2: false,
 };
 
 const setUp = overrideProps => {

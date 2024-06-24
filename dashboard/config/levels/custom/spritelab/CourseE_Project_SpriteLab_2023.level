@@ -64,7 +64,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-14T20:41:32.400+00:00\",\"changed\":[\"cloned from \\\"CourseE_Project_SpriteLab2022\\\"\"],\"cloned_from\":\"CourseE_Project_SpriteLab2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-14T20:41:32.400+00:00\",\"changed\":[\"cloned from \\\"CourseE_Project_SpriteLab2022\\\"\"],\"cloned_from\":\"CourseE_Project_SpriteLab2022\"},{\"changed_at\":\"2024-05-06 23:42:49 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-07 17:26:08 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-08 21:52:54 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]"
 }]]></config>
   <blocks>
     <start_blocks>
@@ -580,226 +580,251 @@
       </xml>
     </start_blocks>
     <toolbox_blocks>
-      <xml>
+      <xml xmlns="https://developers.google.com/blockly/xml">
         <category name="World">
-          <block type="gamelab_setBackgroundImageAs">
+          <block type="gamelab_setBackgroundImageAs" id="mZ1gLY-*6CAvP{(r-6.S">
             <field name="IMG">"cave"</field>
           </block>
-          <block type="gamelab_setBackground">
+          <block type="gamelab_setBackground" id="_)o9}Vtor@6%7]l(Px?Z">
             <value name="COLOR">
-              <block type="colour_picker">
+              <block type="colour_picker" id="jA+!s62e,mk5/TMMhvW.">
                 <field name="COLOUR">#ff0000</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_randomColor"/>
-          <block type="gamelab_printText">
+          <block type="gamelab_randomColor" id="A^P@rBVGr0|!c@s7wk_]"/>
+          <block type="gamelab_playSoundOptions" id="1@[?-636k}wN69iML$36">
+            <field name="SOUND">'sound://category_accent/puzzle_game_accent_a_01.mp3'</field>
+          </block>
+          <block type="gamelab_printText" id="7{Y{+@^%Qo%wVtLO-:~[">
             <value name="TEXT">
-              <block type="text">
+              <block type="text" id="@A.bSD!7J4z+xYdFh#L[">
                 <field name="TEXT"/>
               </block>
             </value>
           </block>
-          <block type="gamelab_showTitleScreen">
+          <block type="gamelab_showTitleScreen" id="KTqfSQLV`Hh-rtF=$Vqd">
             <value name="TITLE">
-              <block type="text">
+              <block type="text" id="jVvWQOaIZC^{84D8!j^$">
                 <field name="TEXT"/>
               </block>
             </value>
             <value name="SUBTITLE">
-              <block type="text">
+              <block type="text" id="]9sn^|Y.v.l[xMaje7Ch">
                 <field name="TEXT"/>
               </block>
             </value>
           </block>
-          <block type="gamelab_hideTitleScreen"/>
+          <block type="gamelab_hideTitleScreen" id="~nJ~)7h9Y$~Q`[a0-QMa"/>
         </category>
         <category name="Sprites">
-          <block type="gamelab_makeNewSpriteAnon">
+          <block type="gamelab_makeNewSpriteAnon" id="D8NDyN)y4m|lCIX2IoPT">
             <field name="ANIMATION_NAME">"green monster"</field>
             <value name="LOCATION">
-              <block type="gamelab_location_picker">
+              <block type="gamelab_location_picker" id="|@q7w5(Hj^[d=~RS8a1q">
                 <field name="LOCATION">{"x":200,"y":200}</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_makeBurst">
+          <block type="gamelab_makeBurst" id="wRC74cq+k1IuvTX3NrR~">
             <field name="EFFECT">"burst"</field>
             <field name="ANIMATION_NAME">"green monster"</field>
             <value name="NUM">
-              <block type="math_number">
+              <block type="math_number" id="TaF/a43?9=2qi[/I;ohM">
                 <field name="NUM">3</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_setProp">
+          <block type="gamelab_setProp" id="dVy0IJ-:T;RDrKExE-hL">
             <field name="PROPERTY">"scale"</field>
             <value name="SPRITE">
-              <block type="gamelab_allSpritesWithAnimation">
+              <block type="gamelab_allSpritesWithAnimation" id="kJDQ5InmT~p2r@ZMa(4t">
                 <field name="ANIMATION">"green monster"</field>
               </block>
             </value>
             <value name="VAL">
-              <block type="math_number">
+              <block type="math_number" id="/On@RfVT0aN=qwfN^aM]">
                 <field name="NUM">50</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_changePropBy">
+          <block type="gamelab_changePropBy" id="R!?J{=MsgNDv2:YK_nPh">
             <field name="PROPERTY">"scale"</field>
             <value name="SPRITE">
-              <block type="gamelab_allSpritesWithAnimation">
+              <block type="gamelab_allSpritesWithAnimation" id="I%+zm.DxdNhG]PUK@*1u">
                 <field name="ANIMATION">"green monster"</field>
               </block>
             </value>
             <value name="VAL">
-              <block type="math_number">
+              <block type="math_number" id="xSTpWi3N|JA5]VY%2/le">
                 <field name="NUM">10</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_setTint">
+          <block type="gamelab_setTint" id="y]5:80b@r%M3|hj12!uM">
             <value name="THIS">
-              <block type="gamelab_allSpritesWithAnimation">
+              <block type="gamelab_allSpritesWithAnimation" id="F5%vLe37P8c6qQ:7DIv[">
                 <field name="ANIMATION">"green monster"</field>
               </block>
             </value>
             <value name="COLOR">
-              <block type="colour_picker">
+              <block type="colour_picker" id="xPbG-$xTzCOItWV%ap/A">
                 <field name="COLOUR">#ff0000</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_spriteSay">
+          <block type="gamelab_spriteSay" id="%+sPvKO|%E^QJ497wR.)">
             <field name="SPEECH"/>
             <value name="SPRITE">
-              <block type="gamelab_allSpritesWithAnimation">
+              <block type="gamelab_allSpritesWithAnimation" id="|NXu3!f|/`02xeb6[q,z">
                 <field name="ANIMATION">"green monster"</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_randomColor"/>
-          <block type="gamelab_removeTint">
+          <block type="gamelab_spriteThink" id=")W7^s:-z4YMMFW.p*q9K">
+            <field name="SPEECH"/>
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation" id="TOH-%?L/ECAw@FX:)Dgc" movable="false">
+                <field name="ANIMATION">"green monster"</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_randomColor" id="to4R[69n)tz-cZ%[S0c%"/>
+          <block type="gamelab_removeTint" id="=bJqvO0c9`n}+B6lNqWU">
             <value name="THIS">
-              <block type="gamelab_allSpritesWithAnimation">
+              <block type="gamelab_allSpritesWithAnimation" id="1:i/=!rl*9DZR9k,Z?;J">
                 <field name="ANIMATION">"green monster"</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_moveInDirection">
+          <block type="gamelab_moveInDirection" id="J0j.X_Qcf,N8rn$^TnhM">
             <field name="DIRECTION">"North"</field>
             <value name="SPRITE">
-              <block type="gamelab_allSpritesWithAnimation">
+              <block type="gamelab_allSpritesWithAnimation" id="*4Q}8NC%Wb@JRB.%QJ%?">
                 <field name="ANIMATION">"green monster"</field>
               </block>
             </value>
             <value name="DISTANCE">
-              <block type="math_number">
+              <block type="math_number" id="nz3#+jE9/6d!a:-;t?3l">
                 <field name="NUM">10</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_destroy">
+          <block type="gamelab_jumpTo" id="{i;M#qzJOA%u#`dTGUBo">
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation" id="vpB6+uY2-2=x8_7T^Yy0">
+                <field name="ANIMATION">"green monster"</field>
+              </block>
+            </value>
+            <value name="LOCATION">
+              <block type="gamelab_randomLocation" id="N?cTwW=Dwvs%FEgUeFF_"/>
+            </value>
+          </block>
+          <block type="gamelab_destroy" id="U^l+o(xS][m!*8pTTFNJ">
             <value name="THIS">
-              <block type="gamelab_allSpritesWithAnimation">
+              <block type="gamelab_allSpritesWithAnimation" id="~{04y{qj8HPJ,G,L?(+B">
                 <field name="ANIMATION">"green monster"</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_turn">
+          <block type="gamelab_turn" id="c`J(%q=DJZGGU0TnHetf">
             <field name="DIRECTION">"right"</field>
             <value name="SPRITE">
-              <block type="gamelab_allSpritesWithAnimation">
+              <block type="gamelab_allSpritesWithAnimation" id="6u+}(S464mr@~$W$)|6|">
                 <field name="ANIMATION">"green monster"</field>
               </block>
             </value>
             <value name="N">
-              <block type="math_number">
+              <block type="math_number" id="-]wwS5dZ9:Q)g^K#ub@n">
                 <field name="NUM">90</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_setAnimation">
+          <block type="gamelab_setAnimation" id="|Y*hN1r*2i;`1-gEm|:6">
             <field name="ANIMATION">"brown bunny"</field>
             <value name="THIS">
-              <block type="gamelab_allSpritesWithAnimation">
+              <block type="gamelab_allSpritesWithAnimation" id="OAKE*x8POM}9Y@^`87(/">
                 <field name="ANIMATION">"green monster"</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_allSpritesWithAnimation">
+          <block type="gamelab_allSpritesWithAnimation" id="Pw;/dyxLeHg6?q@9U)Dy">
             <field name="ANIMATION">"green monster"</field>
           </block>
         </category>
         <category name="Locations">
-          <block type="gamelab_location_picker">
+          <block type="gamelab_location_picker" id="T}~1+hu,eY@8skaA8]bL">
             <field name="LOCATION">{"x":200,"y":200}</field>
           </block>
-          <block type="gamelab_randomLocation"/>
+          <block type="gamelab_randomLocation" id="gp*1u]{F2`_9DOAyQAh3"/>
         </category>
         <category name="Events">
-          <block type="gamelab_keyPressed">
+          <block type="gamelab_keyPressed" id="2VED,%S2E_(h?3n=T3g6">
             <field name="CONDITION">"when"</field>
             <field name="KEY">"up"</field>
           </block>
-          <block type="gamelab_spriteClicked">
+          <block type="gamelab_spriteClicked" id="!xFCLtvziESHF9][`axC">
+            <mutation useDefaultIcon="true"/>
+            <field name="button_gamelab_spriteClicked"/>
             <field name="CONDITION">"when"</field>
             <value name="SPRITE">
-              <block type="gamelab_allSpritesWithAnimation">
+              <block type="gamelab_allSpritesWithAnimation" id="Ouh0sT~-~q*v`B.2yz%w">
                 <field name="ANIMATION">"green monster"</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_checkTouching">
+          <block type="gamelab_checkTouching" id="T!SmFY~#X!JzAwY-CSEH">
+            <mutation useDefaultIcon="true"/>
+            <field name="button_gamelab_checkTouching"/>
             <field name="CONDITION">"when"</field>
             <value name="SPRITE1">
-              <block type="gamelab_allSpritesWithAnimation">
+              <block type="gamelab_allSpritesWithAnimation" id="0;0fkk{2,uNbqY,gFIgU">
                 <field name="ANIMATION">"green monster"</field>
               </block>
             </value>
             <value name="SPRITE2">
-              <block type="gamelab_allSpritesWithAnimation">
+              <block type="gamelab_allSpritesWithAnimation" id="|1:u~F2$vfZTz~-4/TSQ">
                 <field name="ANIMATION">"purple monster"</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_atTime">
+          <block type="gamelab_atTime" id="-bv-0z|j93L:,cl2Q+kz">
             <field name="UNIT">"seconds"</field>
             <value name="N">
-              <block type="math_number">
+              <block type="math_number" id="v3hoR.i[+WY)qzt;r]BA">
                 <field name="NUM">3</field>
               </block>
             </value>
           </block>
         </category>
         <category name="Behaviors" custom="Behavior">
-          <block type="gamelab_addBehaviorSimple">
+          <block type="gamelab_addBehaviorSimple" id="w%*PCnTsg9Omap@yeGke">
             <value name="SPRITE">
-              <block type="gamelab_allSpritesWithAnimation">
+              <block type="gamelab_allSpritesWithAnimation" id="w3P1C_G_Oq^qcDu8||6%">
                 <field name="ANIMATION">"green monster"</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_removeBehaviorSimple">
+          <block type="gamelab_removeBehaviorSimple" id="Y3DlzsHU+rGQx$dB+`M.">
             <value name="SPRITE">
-              <block type="gamelab_allSpritesWithAnimation">
+              <block type="gamelab_allSpritesWithAnimation" id="e5p:fFo;CubU$PVZzhAc">
                 <field name="ANIMATION">"green monster"</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_removeAllBehaviors">
+          <block type="gamelab_removeAllBehaviors" id="t)WA6{oMR*Eh0SVq6@Ki">
             <value name="SPRITE">
-              <block type="gamelab_allSpritesWithAnimation">
+              <block type="gamelab_allSpritesWithAnimation" id="6W9%`*..j~h-%2F#u3-x">
                 <field name="ANIMATION">"green monster"</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_draggable"/>
+          <block type="gamelab_draggable" id="S)RDSJagqiR/6_vWSe.{"/>
         </category>
         <category name="Loops">
-          <block type="controls_repeat_ext">
+          <block type="controls_repeat_ext" id="I;E}VdcaAI3,yO~Ww:Jc">
             <value name="TIMES">
-              <block type="math_number">
+              <block type="math_number" id="$0fWXKzJmvNI2VJ~x?e_">
                 <field name="NUM">10</field>
               </block>
             </value>

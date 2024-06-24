@@ -1,8 +1,9 @@
-import {expect} from '../../../util/reconfiguredChai';
 import {
   addMutationToMiniToolboxBlocks,
   processBlockAndChildren,
 } from '@cdo/apps/blockly/addons/cdoXml';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const parser = new DOMParser();
 

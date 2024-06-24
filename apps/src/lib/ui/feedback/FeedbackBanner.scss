@@ -10,6 +10,11 @@
   color: $dark_charcoal;
   line-height: 2rem;
 
+  & .share-more,
+  & .feedback-title {
+    font-size: 16px;
+  }
+
   & .feedback-banner-greeting {
     display: inline-block;
     margin-right: $indent;
@@ -28,7 +33,7 @@
   }
 
   & i {
-    color: #0F0F0F;
+    color: #0f0f0f;
     font-size: 1.3rem;
   }
 

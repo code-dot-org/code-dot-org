@@ -1,20 +1,23 @@
 /* eslint no-unused-vars: "error" */
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon';
-import {shallow, mount} from 'enzyme';
-import {expect} from '../../util/reconfiguredChai';
+
+import {
+  ImportScreensDialog,
+  ScreenListItem,
+  AssetListItem,
+  IMPORT_FAILURE_MESSAGE,
+} from '@cdo/apps/applab/ImportScreensDialog';
+import AssetThumbnail from '@cdo/apps/code-studio/components/AssetThumbnail';
 import Dialog, {
   Body,
   Buttons,
   Confirm,
   Cancel,
 } from '@cdo/apps/templates/Dialog';
-import {
-  ImportScreensDialog,
-  ScreenListItem,
-  AssetListItem,
-} from '@cdo/apps/applab/ImportScreensDialog';
-import AssetThumbnail from '@cdo/apps/code-studio/components/AssetThumbnail';
+
+import {expect} from '../../util/reconfiguredChai';
 
 describe('AssetListItem', () => {
   var item;
@@ -149,7 +152,7 @@ describe('ScreenListItem', () => {
     );
     expect(item.text()).to.contain('main_screen');
     expect(item.text()).to.contain(
-      'Uses existing element IDs: "input1", "input2".'
+      'Uses existing element or screen IDs: "input1", "input2".'
     );
     // we don't want to show other errors related to importing.
     expect(item.text()).not.to.contain(
@@ -350,13 +353,7 @@ describe('ImportScreensDialog', () => {
               <div>
                 <div>
                   <h2>Cannot Import</h2>
-                  <p>
-                    Cannot import the following screens because they contain
-                    design elements with IDs already used in your existing
-                    project. Fix the IDs in either project so they aren't
-                    duplicated across different screens before trying to import
-                    the following.
-                  </p>
+                  <p>{IMPORT_FAILURE_MESSAGE}</p>
                   <ul>
                     <li>
                       <ScreenListItem

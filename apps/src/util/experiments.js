@@ -6,10 +6,13 @@
  * Experiment state is persisted across page loads using local storage.  Note
  * that it's only written when isEnabled is called for the key in question.
  */
-import {trySetLocalStorage} from '../utils';
 import Cookie from 'js-cookie';
-import trackEvent from './trackEvent';
+
 import DCDO from '@cdo/apps/dcdo';
+
+import {trySetLocalStorage} from '../utils';
+
+import trackEvent from './trackEvent';
 
 const queryString = require('query-string');
 
@@ -39,8 +42,6 @@ experiments.OPT_IN_EMAIL_REG_PARTNER = 'optInEmailRegPartner';
 // for Sprite Lab animations
 experiments.BACKGROUNDS_AND_UPLOAD = 'backgroundsTab';
 experiments.SECTION_SETUP_REFRESH = 'sectionSetupRefresh';
-// Experiment for testing Blockly workspace serialization with the JSON system.
-experiments.BLOCKLY_JSON = 'blocklyJson';
 // Experiment for showing the gender field
 experiments.GENDER_FEATURE_ENABLED = 'gender';
 // Experiment for enabling the CPA lockout
@@ -59,6 +60,10 @@ experiments.KEYBOARD_NAVIGATION = 'blockly_keyboard';
 experiments.SECTION_PROGRESS_V2 = 'section_progress_v2';
 // Enables a user to utilize the new school association flow
 experiments.SCHOOL_ASSOCIATION_V2 = 'school_association_v2';
+// Allows the playspace to be dragged to take up a larger portion of the screen
+experiments.BIG_PLAYSPACE = 'bigPlayspace';
+// Shows the new sign-up flow
+experiments.NEW_SIGN_UP_FLOW = 'new_sign_up_flow';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,

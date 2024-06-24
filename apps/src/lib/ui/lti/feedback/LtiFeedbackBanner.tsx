@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useReducer} from 'react';
-import {LmsLinks} from '@cdo/apps/util/sharedConstants';
+import {LmsLinks} from '@cdo/generated-scripts/sharedConstants';
 import {trySetLocalStorage, tryGetLocalStorage} from '@cdo/apps/utils';
 import {getStore} from '@cdo/apps/redux';
 import {

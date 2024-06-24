@@ -48,7 +48,7 @@
   ]
 
 .carousel-wrapper
-  %swiper-container.three-col{navigation: "true", "navigation-next-el": ".swiper-nav-next", "navigation-prev-el": ".swiper-nav-prev", init: "false"}
+  %swiper-container.applab-lessons{navigation: "true", "navigation-next-el": ".applab-lessons-nav-next", "navigation-prev-el": ".applab-lessons-nav-prev", init: "false"}
     - block_item.each do |block_item|
       %swiper-slide
         .action-block.action-block--one-col.white.flex-space-between
@@ -57,14 +57,12 @@
               = block_item[:overline]
             %h3
               = block_item[:title]
-            %img{src: "#{block_item[:image]}", alt: "", style: "width: 100%"}
+            %img{src: block_item[:image], alt: "", style: "width: 100%"}
             %p
               = block_item[:desc]
           .content-footer
             %a.link-button{href: block_item[:url], aria:{label: "#{block_item[:aria_label]}"}}
               = block_item[:button_label]
 
-  %button.swiper-nav-prev
-  %button.swiper-nav-next
-
-= view :swiper
+  %button.swiper-nav-prev.applab-lessons-nav-prev
+  %button.swiper-nav-next.applab-lessons-nav-next

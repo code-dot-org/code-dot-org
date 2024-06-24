@@ -41,6 +41,7 @@ function setupVideos(player) {
 
   $('.insert_video_player').each(function () {
     const downloadPath = $(this).data('download-path');
+    const posterPath = $(this).data('poster-path');
 
     // Use fallback player if that's the preference.
     // It requires a downloadPath, and it doesn't seem to work on IE8 because
@@ -49,17 +50,17 @@ function setupVideos(player) {
       $(this)
         .parent()
         .append(
-          '<video ' +
-            'style="position:absolute; top: 0; left: 0; width: 100%; height: 100%" ' +
-            'width="100%" height="100%" ' +
-            'class="video-js lazyload vjs-big-play-centered" ' +
-            'preload="none" ' +
-            'data-setup=\'{"nativeControlsForTouch": true}\' ' +
-            'controls>' +
-            '  <source src="' +
-            downloadPath +
-            '" type="video/mp4"/>' +
-            '</video>'
+          `<video
+            style="position:absolute; top: 0; left: 0; width: 100%; height: 100%"
+            width="100%"
+            height="100%"
+            class="video-js lazyload vjs-big-play-centered"
+            preload="none"
+            ${posterPath ? `poster="${posterPath}"` : ''}
+            data-setup='{"nativeControlsForTouch": true}'
+            controls>
+            <source src="${downloadPath}" type="video/mp4"/>
+          </video>`
         );
     } else {
       // Always default to YouTube player.

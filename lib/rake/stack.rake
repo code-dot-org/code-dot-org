@@ -48,6 +48,11 @@ Note: Consumes AWS resources until `adhoc:stop` is called.'
     @cfn.validate
   end
 
+  desc 'Lint Cloudformation template.'
+  timed_task_with_logging lint: :environment do
+    @cfn.lint
+  end
+
   # Managed resource stacks other than the Code.org application.
   simple_stacks = %I(lambda alerting)
   rack_stacks = %I(ami data)
@@ -82,6 +87,11 @@ Note: Consumes AWS resources until `adhoc:stop` is called.'
       desc "Validate #{stack} stack template."
       timed_task_with_logging validate: :environment do
         @cfn.validate
+      end
+
+      desc "Lint #{stack} stack template."
+      timed_task_with_logging lint: :environment do
+        @cfn.lint
       end
 
       # `stop` command intentionally removed. Use AWS console to manually delete stacks.

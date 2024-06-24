@@ -1,0 +1,23 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-05-20T20:56:11.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "**Read 3** \r\n\r\nQuestions I can answer using this data are…",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2024-05-20T20:56:11.239+00:00\",\"changed\":[\"cloned from \\\"Data Science Ch1 L2 Three Reads of Data - Pizza Slices Read3\\\"\"],\"cloned_from\":\"Data Science Ch1 L2 Three Reads of Data - Pizza Slices Read3\"},{\"changed_at\":\"2024-05-20 20:56:31 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

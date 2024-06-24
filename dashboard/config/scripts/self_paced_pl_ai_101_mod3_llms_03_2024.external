@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 
 #### Now it’s your turn. Keep in mind that this technology is changing rapidly, so your experience might be slightly different than what you saw in the videos. For example, Bard is now Gemini and Bing is now Copilot. It’ll look a bit different from the videos, but it has similar functionality.
 
-#### Feel free to use a different LLM than the one shown in the video.
+#### Feel free to use a different LLM than the one shown in the video. We recommend <a href="https://chat.openai.com/" target="_blank">ChatGPT</a>, <a href="https://www.bing.com/chat" target="_blank">Copilot</a>, or <a href="https://gemini.google.com/" target="_blank">Gemini</a>, but the choice is up to you.
 
 ## Educator’s Choice
 
@@ -70,7 +70,7 @@ markdown <<MARKDOWN
 </p></div>
 </details>
 
-#### **Tips and Tricks**
+## Tips and Tricks
 * #### When you’re prompting the AI don’t just stop after the first prompt! Keep asking it more questions and diving deeper.
 * #### For more accurate and helpful responses, try to be as detailed as possible in your requests. The more context you provide, the better LLMs can tailor their answers to your needs.
 * #### Don’t forget to use the feedback mechanisms to improve your experience. Whether it’s clarifying misunderstandings, asking for further details, or simply exploring different approaches, your interactions can help guide the conversation to more effectively meet your goals.

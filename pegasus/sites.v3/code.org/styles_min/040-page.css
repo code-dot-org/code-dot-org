@@ -591,6 +591,10 @@ nav.main .help_button {
   padding: 0;
   height: unset;
   margin-inline-end: -6px;
+
+  @media (max-width: 1268px) {
+    display: none;
+  }
 }
 
 nav.main .help_button .help_icon {
@@ -599,7 +603,7 @@ nav.main .help_button .help_icon {
 }
 
 nav.main .help_button .help_contents {
-  top: 46px;
+  top: 44px;
 }
 
 nav.main #hamburger #hamburger-icon {
@@ -607,8 +611,31 @@ nav.main #hamburger #hamburger-icon {
   margin-inline-start: 6px;
 }
 
-@media screen and (max-width: 1010px) {
-  nav.main .create_menu,
+@media (max-width: 1023px) {
+  nav.main .create_menu {
+    display: none !important;
+  }
+}
+
+/* Show the hamburger on small desktop
+  with appropriate links hidden */
+@media (min-width: 1024px) and (max-width: 1268px) {
+  nav.main .left ul li:nth-child(n+4),
+  nav.main #hamburger-contents > div:nth-child(-n+4) {
+    display: none !important;
+  }
+
+  nav.main #hamburger {
+    display: block;
+  }
+
+  #hamburger .show-mobile {
+    display: block !important;
+  }
+}
+
+/* Hide the main list of links on mobile */
+@media (max-width: 1023px) {
   nav.main .left ul {
     display: none;
   }
@@ -679,6 +706,7 @@ aside.top-skinny-banner {
 /* Start carousel styles ------------------------ */
 .carousel-wrapper {
   position: relative;
+  margin: 2rem 0 0;
 }
 
 /* Sets the font-family for text/image carousels */
@@ -701,7 +729,7 @@ swiper-slide {
 .carousel-wrapper .swiper-nav-prev,
 .carousel-wrapper .swiper-nav-next {
   position: absolute;
-  top: 42%;
+  top: 40%;
   border: 0;
   height: 48px;
 }
@@ -726,6 +754,17 @@ swiper-slide {
   .carousel-wrapper .swiper-nav-next {
     display: none;
   }
+}
+
+/* Video carousel styles */
+.carousel-wrapper.video-carousel swiper-slide {
+  display: block;
+  text-align: left;
+}
+
+.carousel-wrapper.video-carousel .swiper-nav-prev,
+.carousel-wrapper.video-carousel .swiper-nav-next {
+  top: 28%;
 }
 
 /* Begin legacy styles ------------------------ */
@@ -813,19 +852,6 @@ a.about_list_item:hover {
 .dropdown {
   border-color: rgb(204, 204, 204);
   border-radius: 5px;
-}
-
-#stats-carousel .slide-prev > span {
-  border-right-color: #b9bf15;
-}
-#stats-carousel .slide-next > span {
-  border-left-color: #b9bf15;
-}
-.carousel-wrapper .pagination a {
-  background: var(--brand_primary_light);
-}
-.carousel-wrapper .pagination a.selected {
-  background: var(--brand_primary_default);
 }
 
 @media screen and (max-width: 450px) {

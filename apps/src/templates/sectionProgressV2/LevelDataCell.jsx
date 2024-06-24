@@ -7,12 +7,13 @@ import {connect} from 'react-redux';
 
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {commentLeft, studentNeedsFeedback} from '../progress/progressHelpers';
 import {studentLevelProgressType} from '../progress/progressTypes';
 
 import {ITEM_TYPE} from './ItemType';
+import {formatTimeSpent, formatLastUpdated} from './MetadataHelpers';
 import ProgressIcon from './ProgressIcon';
 
 import legendStyles from './progress-table-legend.module.scss';
@@ -73,6 +74,7 @@ function LevelDataCell({
   linkClassName,
   parentLevelId,
   lessonId,
+  metadataExpanded,
 }) {
   const itemType = React.useMemo(() => {
     if (expandedChoiceLevel) {
@@ -123,7 +125,7 @@ function LevelDataCell({
     }
   }, [studentLevelProgress, level, expandedChoiceLevel]);
 
-  return (
+  const levelCellUnexpanded = (
     <td
       className={classNames(
         styles.gridBox,
@@ -134,6 +136,7 @@ function LevelDataCell({
       headers={getHeadersForCell(studentId, level.id, parentLevelId, lessonId)}
     >
       <Link
+        id={'ui-test' + level.path?.replaceAll('/', '-') + '-cell-data'}
         href={navigateToLevelOverviewUrl(level.url, studentId, sectionId)}
         openInNewTab
         external
@@ -148,6 +151,30 @@ function LevelDataCell({
       </Link>
     </td>
   );
+
+  if (metadataExpanded) {
+    return (
+      <div className={styles.lessonDataCellExpanded}>
+        {levelCellUnexpanded}
+        <div
+          className={classNames(styles.gridBox, styles.gridBoxMetadata, {
+            [styles.gridBoxChoiceSubLevel]: level.parentLevelId !== undefined,
+          })}
+        >
+          {!level.parentLevelId && formatTimeSpent(studentLevelProgress)}
+        </div>
+        <div
+          className={classNames(styles.gridBox, styles.gridBoxMetadata, {
+            [styles.gridBoxChoiceSubLevel]: level.parentLevelId !== undefined,
+          })}
+        >
+          {!level.parentLevelId && formatLastUpdated(studentLevelProgress)}
+        </div>
+      </div>
+    );
+  }
+
+  return levelCellUnexpanded;
 }
 
 export const UnconnectedLevelDataCell = LevelDataCell;
@@ -166,4 +193,5 @@ LevelDataCell.propTypes = {
   lessonId: PropTypes.number.isRequired,
   className: PropTypes.string,
   linkClassName: PropTypes.string,
+  metadataExpanded: PropTypes.bool,
 };

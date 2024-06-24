@@ -4,7 +4,7 @@ import * as utils from '../../utils';
 import {CIPHER, ALPHABET} from '../../constants';
 import {files as filesApi} from '../../clientApi';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {AbuseConstants} from '@cdo/apps/util/sharedConstants';
+import {AbuseConstants} from '@cdo/generated-scripts/sharedConstants';
 import NameFailureError from '../NameFailureError';
 import {CP_API} from '../../lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 
@@ -575,13 +575,17 @@ var projects = (module.exports = {
 
   // Students should not be able to easily see source for embedded applab or
   // gamelab levels.
+  // Hide Share/Remix for studio app because converting studio level to standalone project
+  // is problematic.
   shouldHideShareAndRemix() {
+    const appType = appOptions.app;
     return (
       (appOptions.level && appOptions.level.hideShareAndRemix) ||
       (appOptions.embed &&
-        (appOptions.app === 'applab' ||
-          appOptions.app === 'gamelab' ||
-          appOptions.app === 'spritelab'))
+        (appType === 'applab' ||
+          appType === 'gamelab' ||
+          appType === 'spritelab')) ||
+      appType === 'studio'
     );
   },
 
@@ -858,9 +862,7 @@ var projects = (module.exports = {
     }
     switch (appOptions.app) {
       case 'applab':
-      case 'calc':
       case 'dance':
-      case 'eval':
       case 'flappy':
       case 'weblab':
       case 'gamelab':

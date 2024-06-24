@@ -1,0 +1,21 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2024-04-23T19:53:17.000Z",
+  "level_num": "custom",
+  "user_id": 285,
+  "properties": {
+    "video_key": "CSF_if_allskins",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "instructions_important": "false",
+    "name_suffix": "_grade5",
+    "parent_level_id": 21366
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-04-23T19:53:17.847+00:00\",\"changed\":[\"cloned from \\\"courseD_bee_conditionalsVid1_maker\\\"\"],\"cloned_from\":\"courseD_bee_conditionalsVid1_maker\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

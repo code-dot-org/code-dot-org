@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-25 22:48:34 UTC",
+    "serialized_at": "2024-04-18 15:26:25 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -55,6 +55,7 @@
       "key": "e0467317-5e4c-4fa0-ae59-2436e1fc1d2a",
       "position": 1,
       "properties": {
+        "duration": 60
       },
       "seeding_key": {
         "lesson_activity.key": "e0467317-5e4c-4fa0-ae59-2436e1fc1d2a",
@@ -128,6 +129,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-4-overview_2024"
+        ],
         "progression": "Module 4 Overview (~5 minutes)"
       },
       "bonus": false,
@@ -150,6 +154,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-4-applying the rubric_2024"
+        ],
         "progression": "College Board FRQs (~25 minutes)"
       },
       "bonus": false,
@@ -172,6 +179,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-2022-module-4-frq-reflection_2024"
+        ],
         "progression": "College Board FRQs (~25 minutes)"
       },
       "bonus": false,
@@ -194,6 +204,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-4-additional-FRQ-resources_2024"
+        ],
         "progression": "College Board FRQs (~25 minutes)"
       },
       "bonus": false,
@@ -216,6 +229,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-4-unit-5-frq_2024"
+        ],
         "progression": "FRQ Day in Code.org's Unit 5 (~20 minutes)"
       },
       "bonus": false,
@@ -238,6 +254,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-2022-module-4-frq-skills-reflection_2024"
+        ],
         "progression": "FRQ Skills (~5 minutes)"
       },
       "bonus": false,
@@ -260,6 +279,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-4-wrap-up_2024"
+        ],
         "progression": "Wrap-up (~5 minutes)"
       },
       "bonus": false,

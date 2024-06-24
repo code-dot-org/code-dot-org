@@ -2,8 +2,9 @@
   position: absolute;
   background-color: gray;
   padding: 25px;
-  left: 25vw;
-  top: 25vh;
+  left: 15vw;
+  right: 15vw;
+  top: 15vh;
   z-index: 100;
 }
 
@@ -11,4 +12,12 @@
   display: flex;
   justify-content: flex-end;
   gap: 10px;
+}
+
+.config-modal textarea {
+  width: 100%;
+}
+
+.config-modal input {
+  width: 100%;
 }

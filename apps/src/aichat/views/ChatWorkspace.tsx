@@ -1,16 +1,18 @@
-import React, {useCallback, useEffect} from 'react';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import React, {useCallback, useRef, useEffect} from 'react';
 import {useSelector} from 'react-redux';
-import ChatWarningModal from '@cdo/apps/aichat/views/ChatWarningModal';
-import ChatMessage from './ChatMessage';
-import UserChatMessageEditor from './UserChatMessageEditor';
-import moduleStyles from './chatWorkspace.module.scss';
+
 import {
   AichatState,
-  clearChatMessages,
+  selectAllMessages,
   setShowWarningModal,
 } from '@cdo/apps/aichat/redux/aichatRedux';
-import {ProgressState} from '@cdo/apps/code-studio/progressRedux';
+import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+
+import ChatMessage from './ChatMessage';
+import UserChatMessageEditor from './UserChatMessageEditor';
+
+import moduleStyles from './chatWorkspace.module.scss';
 
 /**
  * Renders the AI Chat Lab main chat workspace component.
@@ -20,23 +22,28 @@ const ChatWorkspace: React.FunctionComponent = () => {
     (state: {aichat: AichatState}) => state.aichat.showWarningModal
   );
 
-  const storedMessages = useSelector(
-    (state: {aichat: AichatState}) => state.aichat.chatMessages
-  );
+  const messages = useSelector(selectAllMessages);
 
   const isWaitingForChatResponse = useSelector(
     (state: {aichat: AichatState}) => state.aichat.isWaitingForChatResponse
   );
+
+  const conversationContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (conversationContainerRef.current) {
+      conversationContainerRef.current.scrollTo({
+        top: conversationContainerRef.current.scrollHeight,
+        behavior: 'smooth',
+      });
+    }
+  }, [conversationContainerRef, messages, isWaitingForChatResponse]);
 
   const dispatch = useAppDispatch();
 
   const onCloseWarningModal = useCallback(
     () => dispatch(setShowWarningModal(false)),
     [dispatch]
-  );
-
-  const currentLevelId = useSelector(
-    (state: {progress: ProgressState}) => state.progress.currentLevelId
   );
 
   const showWaitingAnimation = () => {
@@ -51,19 +58,15 @@ const ChatWorkspace: React.FunctionComponent = () => {
     }
   };
 
-  // When the level changes, clear the chat message history.
-  useEffect(() => {
-    dispatch(clearChatMessages());
-  }, [currentLevelId, dispatch]);
-
   return (
     <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
       {showWarningModal && <ChatWarningModal onClose={onCloseWarningModal} />}
       <div
         id="chat-workspace-conversation"
         className={moduleStyles.conversationArea}
+        ref={conversationContainerRef}
       >
-        {storedMessages.map(message => (
+        {messages.map(message => (
           <ChatMessage message={message} key={message.id} />
         ))}
         {showWaitingAnimation()}

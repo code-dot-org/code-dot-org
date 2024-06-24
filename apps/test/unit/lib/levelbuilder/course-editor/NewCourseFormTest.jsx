@@ -1,6 +1,6 @@
 import {expect} from '../../../../util/reconfiguredChai';
 import React from 'react';
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import NewCourseForm from '@cdo/apps/lib/levelbuilder/course-editor/NewCourseForm';
 
 describe('NewCourseFormTest', () => {

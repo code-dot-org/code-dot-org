@@ -1,6 +1,6 @@
 import {expect} from '../../../../util/reconfiguredChai';
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import i18n from '@cdo/locale';

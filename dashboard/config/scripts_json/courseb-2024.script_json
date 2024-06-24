@@ -19,8 +19,8 @@
     },
     "new_name": null,
     "family_name": "courseb",
-    "serialized_at": "2024-04-16 18:11:13 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2024-05-29 18:22:59 UTC",
+    "published_state": "preview",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -295,10 +295,10 @@
       "relative_position": 10,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this **exploratory** lesson, students empathize with several fictional smartphone users to help them find the “right app” that addresses their needs.",
-        "preparation": "* Read through the speaker notes in the ***slide deck**. \n* Prepare enough sketching/drawing supplies for all students.\n* Make sure each student has a reflection journal.",
+        "overview": "In this **exploratory** lesson, students learn about different computing technologies that exist. They also compare how people lived before the invention of apps and computers with how people live now. The lesson concludes with an activity where students empathize with several fictional smartphone users to help them design the “right app” that addresses their needs.",
+        "preparation": "* Read through the speaker notes in the ***slide deck**. \n* Cut out the Stations Activities resources in advance\n* Prepare enough sketching/drawing supplies for all students.\n* Make sure each student has a reflection journal.",
         "purpose": "Today, computing is more accessible than ever before. People from all walks of life use software on many different devices, particularly smartphones, for information, communication, and entertainment. Because people have such diverse experiences and needs, it is important for budding computer scientists to empathize with people and identify solutions with them in mind. ",
-        "student_overview": "Sketch your own smartphone app.",
+        "student_overview": "Let's learn about apps!",
         "unplugged": true
       },
       "seeding_key": {
@@ -989,7 +989,7 @@
       "key": "09f1f11e-b8c0-405e-a15a-73b15a6884cc",
       "position": 1,
       "properties": {
-        "duration": 5,
+        "duration": 10,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -1003,7 +1003,7 @@
       "key": "89ea6cf6-7b91-4853-afe6-a237e3d509ff",
       "position": 2,
       "properties": {
-        "duration": 35,
+        "duration": 30,
         "name": "Activity"
       },
       "seeding_key": {
@@ -2551,36 +2551,41 @@
       }
     },
     {
-      "key": "eb87343f-ad83-489c-800f-12e8a2df90b9",
+      "key": "1d4ec210-3c97-4216-83b9-97532d9c26fa",
       "position": 1,
       "properties": {
-        "description": "**Discuss**: Ask students if they have ever played a game on a smartphone. If you have a smartphone of your own, show a few examples, or show screenshots of smartphone games on the web. \r\n\r\n**Discuss**: Ask students what else they can do on a smartphone. \r\n\r\nExamples to add to students' responses. Provide screenshots or live examples if available: \r\n\r\n- search the web for information\r\n- do math with a calculator\r\n- talk to friends and family\r\n- listen to music\r\n- watch videos\r\n- get directions using a map\r\n\r\n**Say**: \r\n\r\n- You might notice that many of the things you can do on a smartphone you can also do on a computer. This is because smartphones are actually computers, just smaller than those we use in computer science class. \r\n- Smartphone programs are usually called \"apps\". Apps allow us to do all the things we just mentioned, along with many others.\r\n- Smartphones are small and easy to take with us wherever we go, making it convenient to do things that would be difficult otherwise. \r\n\r\n**Discuss**: Ask students if they have ever gotten frustrated while using an app. For example, have they ever played a game that was too hard, or the buttons didn't work, or other problems prevented them from having fun? Have they ever tried going to a website and couldn't because it was too hard to figure out how? Allow students to present an anecdote or two of their own about apps that caused them problems.",
-        "name": "What's an app?\r"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n",
+        "duration": "1",
+        "name": "Vocabulary"
       },
       "seeding_key": {
-        "activity_section.key": "eb87343f-ad83-489c-800f-12e8a2df90b9",
+        "activity_section.key": "1d4ec210-3c97-4216-83b9-97532d9c26fa",
         "lesson_activity.key": "09f1f11e-b8c0-405e-a15a-73b15a6884cc"
       }
     },
     {
-      "key": "9f3cfea8-eaac-49c4-aecb-ca65b7a35f44",
+      "key": "34b1bb4b-873b-47a3-b0db-55323b4edbed",
       "position": 2,
       "properties": {
-        "remarks": true
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Question of the Day” slide\n\n**Say:** _What was life like before and after the invention of different types of computers?_ We will revisit this question at the end of the lesson. \n",
+        "duration": "1",
+        "name": "Question of the Day"
       },
       "seeding_key": {
-        "activity_section.key": "9f3cfea8-eaac-49c4-aecb-ca65b7a35f44",
+        "activity_section.key": "34b1bb4b-873b-47a3-b0db-55323b4edbed",
         "lesson_activity.key": "09f1f11e-b8c0-405e-a15a-73b15a6884cc"
       }
     },
     {
-      "key": "8c8df02c-d513-4f43-9cce-0f314031c312",
+      "key": "66991923-7918-4981-aae7-34ec629875e4",
       "position": 3,
       "properties": {
-        "description": "- Apps are made for people to use, just as food is made for people to eat. \r\n- So, just like cooking, it’s important to know what people want when making an app. \r\n- An app that is made with no one in mind is probably going to have lots of problems!\r\n\r\nRemark that there are many questions we can ask when suggesting or making an app for someone. Ideally, we want to ask questions that can help us \"walk in a user's shoes\": \r\n\r\n- What do they want to do? \r\n- What do they like? \r\n- What is their personality? \r\n- What kind of computer do they have?\r\n\r\n**Transition:** Tell students that there are a few code.org friends who are struggling to find the apps that are \"just right\" for them. Ask if they are ready to put their expert skills to use and help their friends."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Fill-in-the-blank” slide\n \n**Say:** Look at the two pictures on the top of the screen. Which of the three computing technologies at the bottom would come next in the timeline. Fill in the blank: a self-driving car, a robot dog, or a laptop? Explain your answer. \n\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Think about it” slide\n\n**Say:** These pictures in the timeline represent different forms of transportation. People used to travel by horse and carriage before the invention of the car. Now people mostly travel in cars. Did you know some car companies just invented a car that can drive itself? It’s called a self-driving car or autonomous vehicle.\n\n**Discuss:** What problem did each of these inventions solve?\n\n**Discussion Goal:** Students should understand that each of these images represents a technological advancement in travel. As our technology advances, we are able to create more efficient means of transportation. The horse and carriage replaced walking or traveling on horseback and being exposed to the elements. Cars replaced having to rely on animals for transportation. Self-driving cars replace the need for a human driver with the goal to be safer than human-driven cars.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Fill-in-the-blank” slide\n\n**Say:** Look at the two pictures on the top of the screen and see if you can figure out which of the 3 apps at the bottom would come next. Would it make sense to fill in the blank with a texting app, a maps app, or a music app?\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Think about it” slide\n\n**Discuss:** What can a music app do that a radio or piano can't do? Why might someone choose to play music on a piano and not a music app?\n\n**Discussion Goal:** Students should understand that a music app represents an advancement in computing technology. We now have the ability to play any song we want on demand from our phone or computer. A radio can only play stations that are currently broadcasting. And a piano can only play piano music (and only if the person knows how to play).\n\nSomeone might choose to play music from a piano when they want to play music themselves or for a live audience. They also might prefer the sound of piano music or wish to learn a new instrument.\n\n",
+        "duration": "8",
+        "name": "Fill in the Blank"
       },
       "seeding_key": {
-        "activity_section.key": "8c8df02c-d513-4f43-9cce-0f314031c312",
+        "activity_section.key": "66991923-7918-4981-aae7-34ec629875e4",
         "lesson_activity.key": "09f1f11e-b8c0-405e-a15a-73b15a6884cc"
       }
     },
@@ -2596,38 +2601,54 @@
       }
     },
     {
-      "key": "37d97cd2-d792-4f94-b379-f892cd6a6619",
+      "key": "26b9b7fe-0212-4602-a162-55bcfbc3c6f2",
       "position": 2,
       "properties": {
-        "description": "**Display**: Display each scenario from the ***Slide Deck**. While displaying a scenario image, read its accompanying script to the class (see below, or the notes beneath each slide in the deck). After each scenario, ask students to vote on which app they would choose for their friend, then discuss their reasons why. \n\n\n\n[slides]\n\n#### The Right App Scenarios\n\n##### Scenario 1: Daisy the Dragon\n\n**Slide 1:** Help! Daisy the Dragon wants to play with her penguin classmates. However, when Daisy talks, her hot breath warms up anyone she is near, and penguins don’t enjoy that AT ALL. So Daisy wants an app that can help her with this problem. \n\n**Slide 2:** Which is the right app for Daisy?\n\n* *Dance Master*: an app that teaches you cool dance moves.\n* *Am I Too Close?!*: an app that shouts “too close!” if you are too close to someone.\n\n**Slide 3:** Daisy decides to use “Am I Too Close?!”, which makes it easier for her to play with her penguin friends! When they get too close, the app warns her with a friendly shout, “Too close!” Daisy and the penguins are happy! “Am I Too Close?!” is the right app for Daisy!\n\n---\n\n##### Scenario 2: Sam the Bat\n\n**Slide 4:** Help! Sam the Bat wants to listen to his favorite music on his phone while he flies through the night sky. He’s considering two different music apps, but he doesn’t know which one is best for him. As a bat, Sam has poor eyesight but excellent hearing. He also happens to sing very well!\n\n**Slide 5:** Which is the right app for Sam? \n\n* *Eyes ‘n Ears*: a music app that has a lot of tiny buttons.\n* *Sing ‘n Play*: a music app that lets you press a BIG green button to record your voice. You sing a part of any song you want to hear, and it’ll play it for you.\n\n**Slide 6:** Sam decides to use “Sing ‘n Play”. He simply presses the BIG green button, sings the first part of a song he likes, then the app plays the entire song for him! It’s that easy! And that’s why “Sing ‘n Play” is the right app for Sam!\n\n---\n\n##### Scenario 3: Codella the Witch\n\n**Slide 7:** Help! Codella the Witch is a serious gamer, and she’s looking for a new game to play. Codella has many different kinds of computers, including a desktop, a laptop, a tablet, and a smartphone. Her favorite games are those she can play on all of her computers, including her smartphone.\n\n**Slide 8:** Which is the right app for Codella? \n\n* *Sort Knight*: a game where you play as a knight who travels around sorting everything. Also has cool dance moves. You can play it on many different kinds of computers!\n* *Mobo-Robo*: a game that lets you build cool robots and make them do whatever you want. You can only play it on smartphones and tablets, though.\n\n**Slide 9:** Codella decides to play “Sort Knight”. At first she’s not sure if she’ll like it (she doesn’t really like sorting things), but she loves that she can play it on any of her computers, and that’s really important to her as a serious gamer. The more Codella plays “Sort Knight”, the more she loves it. “Sort Knight” is the right app for her!\n\n[/slides]",
-        "name": "\"The Right App\" Scenarios (15 min)\r"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “What’s an app?” slide\n\n**Discuss:** Which apps do you recognize? What do people use these apps for?\n\n**Discussion Goal:** Students should be able to identify some of the following apps: Calendar, Weather, Maps, Photos, Clock, YouTube, Safari, Camera, Calculator, Messages, Music, FaceTime/video calls.\n\nHave students choose one app to explain how it works or when people might use it. For example, people would use a calendar app to keep track of important events, such as going on a trip or meeting up with a friend. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Different examples of apps” slide\n\n**Say:** Here are some more examples of apps that you might recognize. It will be important to know how these apps work for the first station. Are there any apps that you have a question about?\n\n**Do this:** Answer any questions students might have about apps before moving on.\n",
+        "duration": "5",
+        "name": "What is an App? "
       },
       "seeding_key": {
-        "activity_section.key": "37d97cd2-d792-4f94-b379-f892cd6a6619",
+        "activity_section.key": "26b9b7fe-0212-4602-a162-55bcfbc3c6f2",
         "lesson_activity.key": "89ea6cf6-7b91-4853-afe6-a237e3d509ff"
       }
     },
     {
-      "key": "bf22cad1-820a-4749-88bd-be73ba7975a0",
+      "key": "1c54fbc2-9d69-473f-a143-40494539141f",
       "position": 3,
       "properties": {
-        "description": "The final scenario allows students to sketch their own app design. \n\n[slides]\n\n#### The Right App Design\n\n##### Scenario 4: Anton the Alien\n\n**Slide 10:** Help! Anton the Alien has crash-landed on Earth and is waiting for his fellow aliens to come rescue him. Until then, he has nothing to do, so he heads to a local library to find a book to read (Anton LOVES reading books). Unfortunately, all the books at the library are written in Earthling languages like English, Chinese, Spanish, and many others. So Anton is out of luck! Or is he?\n\n**Slide 11:** As an alien, Anton is very good with technology! He immediately opens his super-powered smartphone to look for an app that can help him solve his problem at the library, but he can’t find anything he likes! So let’s each design our own app for Anton! \n\n[/slides]\n\n**Distribute**: Pass out crayons/pencils/etc to each student as they open their reflection journals. In their journals, students design the home screen of the app they believe best suits Anton’s needs. They can refer to the previous activity for inspiration.  \n\n**Share**: After designing, students share their app design with a neighbor, or if there is time, some students can share with the whole class. Each student should answer how their app design is \"right\" for Anton, given his situation.",
-        "name": "App Design Activity (20 min)\r"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Station 1: Matching” slide\n\n**Say:** At Station One, you’ll be playing a matching game. Look at the pictures on the left and figure out what they represent. Then look at the apps on the right and find the app that has replaced the activity on the left.\n\n**[Optional] Do This:** In the teacher resources section, there is a set of matching cards with words instead of images. If students are older and would like more practice reading, use the word matching cards instead.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Station 2: Sorting” slide\n\n**Say:** At Station Two, you’ll be sorting the images on the right into one of two categories: Computer or Not a computer. Make sure to look at the definition of computer at the bottom of the screen.\n\n**Do This:** Do an example as a class by asking students to classify one of the images on the right. Then drag it under the corresponding category on the left. \n\n**Discussion Goal:** Some items might be easily sorted, whereas others like the calculator might inspire some discussion among students.\n\n**Do This:** If students have extra time at this station, encourage them to play a game of charades where they have to act out one of the images and have their classmates guess what they’re acting out.\n",
+        "duration": "10",
+        "name": "Station Activities "
       },
       "seeding_key": {
-        "activity_section.key": "bf22cad1-820a-4749-88bd-be73ba7975a0",
+        "activity_section.key": "1c54fbc2-9d69-473f-a143-40494539141f",
         "lesson_activity.key": "89ea6cf6-7b91-4853-afe6-a237e3d509ff"
       }
     },
     {
-      "key": "aa2c9883-2a51-40c2-8a31-bec7b26d3ef2",
+      "key": "fd21eec3-989f-4000-89eb-e4f8cad78446",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Choose a character and design their app” slide\n\n**Say:** The final activity will be done in your student guide. Choose one of the following characters and design an app for them. Here are the characters: \n- **Adventurous Hedgehog** wants a Travel App to keep track of all the countries they visit\n- **Peaceful Turtle** wants a Yoga App to learn new yoga poses\n- **Reader Rabbit** wants a Book App to choose a new book to read \n- **Daydreamer Fox** wants a Dream App with a place to write down dreams\n",
+        "duration": "15",
+        "name": "Design an App"
+      },
+      "seeding_key": {
+        "activity_section.key": "fd21eec3-989f-4000-89eb-e4f8cad78446",
+        "lesson_activity.key": "89ea6cf6-7b91-4853-afe6-a237e3d509ff"
+      }
+    },
+    {
+      "key": "e3ca5503-2792-449b-8afa-0f4ec498a810",
       "position": 1,
       "properties": {
-        "description": "**Discuss**: Discuss real-world examples of how apps can help people solve problems.\n\nReiterate the importance of empathizing with users when recommending or designing apps.\n\n**Prompts:**\n\n* Who is this app made for? \n* What does the user like? \n* What problem do they have, or what do they want?\n* Is this \"the right app\" for them? Why or why not?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflection” slide\n\n**Discuss:** Choose one:\nThink about an app you use. What would you use instead if this app didn’t exist?\nWhat type of app or computer technology do you wish existed?\n\n**Discussion goal:** Have students consider what their lives would be like if they didn’t have access to an app (or other computing technology) that they use on a regular basis. Get them to consider how different their life might be. Then have them brainstorm a computing technology or app they wish existed. Encourage them to think of ways that an app could make their life easier.\n",
+        "duration": "5",
         "name": "Reflection"
       },
       "seeding_key": {
-        "activity_section.key": "aa2c9883-2a51-40c2-8a31-bec7b26d3ef2",
+        "activity_section.key": "e3ca5503-2792-449b-8afa-0f4ec498a810",
         "lesson_activity.key": "b480ae70-11f0-479e-bd28-01f3bdd83692"
       }
     },
@@ -2861,8 +2882,19 @@
       }
     },
     {
-      "key": "25b558e7-d5a6-4863-98a9-ae495fabbc4b",
+      "key": "da9285f5-7b01-49eb-b25f-ba0eda9bb774",
       "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Give credit!” slide\n\n**Say:** Sometimes when we create our own projects we find inspiration from other people’s projects. \n\nIf you have gotten permission to remix a project, make sure to give credit to the original coder.\n\n_**If you remix a Code.org project:**_\n 1. Add a comment block that explains where you remixed from.\n 2. You might also keep the word “Remix” in the title of your project to tell others that this project originally came from someone else.\n\n_**If you want to remix a friend’s project:**_\n\nMake sure you get their permission first. Once you get permission, follow the steps above to give them credit.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “How do I remix a project?” slide\n\n1. Click **Run**\n2. When you see the **Finish** button click on it\n3. Click **Copy link to project**\n4. Open the new link, click **How It Works**\n5. Click **Remix**\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "da9285f5-7b01-49eb-b25f-ba0eda9bb774",
+        "lesson_activity.key": "1a4e4a9a-2793-4c40-8f9d-08f1083ebe0a"
+      }
+    },
+    {
+      "key": "25b558e7-d5a6-4863-98a9-ae495fabbc4b",
+      "position": 7,
       "properties": {
         "progression_name": "Lesson Extras"
       },
@@ -6458,8 +6490,34 @@
       }
     },
     {
+      "name": "[KEY] The Right App - Student Guide",
+      "url": "https://docs.google.com/document/d/1qmd66rx4ynS6r-NFC1x6dY2pCGfJ7Q_gAgHrf6VUQ6A/template/preview",
+      "key": "_key_the_right_app_-_student_guide",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/document/d/1qmd66rx4ynS6r-NFC1x6dY2pCGfJ7Q_gAgHrf6VUQ6A/export/pdf",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_the_right_app_-_student_guide"
+      }
+    },
+    {
+      "name": "[Optional] The Right App - Stations Activities - Words",
+      "url": "https://docs.google.com/document/d/1zAV04r0zi5JTH2aD98MjwVe_m2J0K6CIr7MrMNTOV7Q/template/preview",
+      "key": "_optional_the_right_app_-_stations_activities_-_words",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/document/d/1zAV04r0zi5JTH2aD98MjwVe_m2J0K6CIr7MrMNTOV7Q/export/pdf",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "_optional_the_right_app_-_stations_activities_-_words"
+      }
+    },
+    {
       "name": "All Resources",
-      "url": "/s/courseb-2023/resources",
+      "url": "/s/courseb-2024/resources",
       "key": "all_resources",
       "properties": {
         "is_rollup": true
@@ -6470,7 +6528,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/courseb-2023/standards",
+      "url": "/s/courseb-2024/standards",
       "key": "all_standards",
       "properties": {
         "is_rollup": true
@@ -6481,7 +6539,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/courseb-2023/vocab",
+      "url": "/s/courseb-2024/vocab",
       "key": "all_vocabulary",
       "properties": {
         "is_rollup": true
@@ -6963,15 +7021,29 @@
       }
     },
     {
-      "name": "The Right App Scenarios",
-      "url": "https://docs.google.com/presentation/d/1WzO71WwSTbn2XhkWjG3tvD7vnQbsCSb58rhSBpurQjw/edit#slide=id.g45fb8e6318_0_0",
-      "key": "the_right_app_scenarios",
+      "name": "The Right App - Stations Activities",
+      "url": "https://docs.google.com/document/d/1HyVecgHbM1Q9QS07JHl9A5CVsUu_K5tuI7IFSJ-fopA/template/preview",
+      "key": "the_right_app_-_stations_activities",
       "properties": {
-        "audience": "Student",
-        "type": "Slide Deck"
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/document/d/1HyVecgHbM1Q9QS07JHl9A5CVsUu_K5tuI7IFSJ-fopA/export/pdf",
+        "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "the_right_app_scenarios"
+        "resource.key": "the_right_app_-_stations_activities"
+      }
+    },
+    {
+      "name": "The Right App - Student Guide",
+      "url": "https://docs.google.com/document/d/17fqp-Mt--NIgZq7HXGVNxF8np_frdrCNID3bqkNaiWk/template/preview",
+      "key": "the_right_app_-_student_guide",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://docs.google.com/document/d/17fqp-Mt--NIgZq7HXGVNxF8np_frdrCNID3bqkNaiWk/export/pdf",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "the_right_app_-_student_guide"
       }
     },
     {
@@ -7391,13 +7463,31 @@
     {
       "seeding_key": {
         "lesson.key": "The Right App",
+        "resource.key": "_key_the_right_app_-_student_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Right App",
+        "resource.key": "_optional_the_right_app_-_stations_activities_-_words"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Right App",
         "resource.key": "csf_course_b_lesson_slides"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "The Right App",
-        "resource.key": "the_right_app_scenarios"
+        "resource.key": "the_right_app_-_stations_activities"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Right App",
+        "resource.key": "the_right_app_-_student_guide"
       }
     }
   ],
@@ -7490,6 +7580,16 @@
       }
     },
     {
+      "key": "app",
+      "word": "App",
+      "definition": "An application that a person downloads to a phone or tablet.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "app"
+      }
+    },
+    {
       "key": "bug",
       "word": "Bug",
       "definition": "Part of a program that does not work correctly.",
@@ -7507,6 +7607,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "click"
+      }
+    },
+    {
+      "key": "computer",
+      "word": "Computer",
+      "definition": "An electronic device that can input, output, store, and process information",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "computer"
       }
     },
     {
@@ -7790,6 +7900,18 @@
         "lesson.key": "The Big Event Jr",
         "vocabulary.key": "event"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Right App",
+        "vocabulary.key": "app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Right App",
+        "vocabulary.key": "computer"
+      }
     }
   ],
   "lessons_programming_expressions": [
@@ -7814,6 +7936,16 @@
       "seeding_key": {
         "lesson.key": "Getting Loopy",
         "objective.key": "0c724cb5-de80-4d93-92b5-8abd3c1413cf"
+      }
+    },
+    {
+      "key": "12b900ed-f391-421b-9582-60b8ba3a4831",
+      "properties": {
+        "description": " Compare daily life before and after the invention of certain technologies"
+      },
+      "seeding_key": {
+        "lesson.key": "The Right App",
+        "objective.key": "12b900ed-f391-421b-9582-60b8ba3a4831"
       }
     },
     {
@@ -7864,6 +7996,16 @@
       "seeding_key": {
         "lesson.key": "Loops with Laurel",
         "objective.key": "388de265-234a-4eb3-913b-296738a93304"
+      }
+    },
+    {
+      "key": "3b52e99e-fbdf-4d70-a611-7efea2e4ea0c",
+      "properties": {
+        "description": "List several different examples of smartphone apps and computing technologies."
+      },
+      "seeding_key": {
+        "lesson.key": "The Right App",
+        "objective.key": "3b52e99e-fbdf-4d70-a611-7efea2e4ea0c"
       }
     },
     {
@@ -8047,16 +8189,6 @@
       }
     },
     {
-      "key": "b937c374-0e28-4975-a553-05ac75a39dc8",
-      "properties": {
-        "description": "Recommend technology to others based on their unique needs. "
-      },
-      "seeding_key": {
-        "lesson.key": "The Right App",
-        "objective.key": "b937c374-0e28-4975-a553-05ac75a39dc8"
-      }
-    },
-    {
       "key": "b95c75a0-edca-4d6b-8202-95026996a96e",
       "properties": {
         "description": "Experiment with standard block-based programming actions such as: clicking, drag and drop, etc."
@@ -8154,26 +8286,6 @@
       "seeding_key": {
         "lesson.key": "Programming with Angry Birds",
         "objective.key": "e3363ff3-441d-44c8-b60b-0af0231e6241"
-      }
-    },
-    {
-      "key": "e83d1b9c-cfb2-445e-af65-419ef88994ca",
-      "properties": {
-        "description": "List several different examples of smartphone apps."
-      },
-      "seeding_key": {
-        "lesson.key": "The Right App",
-        "objective.key": "e83d1b9c-cfb2-445e-af65-419ef88994ca"
-      }
-    },
-    {
-      "key": "ee603e85-7a68-4fca-bfca-71dae9041faf",
-      "properties": {
-        "description": "Apply empathy and creativity to design technology for others. "
-      },
-      "seeding_key": {
-        "lesson.key": "The Right App",
-        "objective.key": "ee603e85-7a68-4fca-bfca-71dae9041faf"
       }
     },
     {

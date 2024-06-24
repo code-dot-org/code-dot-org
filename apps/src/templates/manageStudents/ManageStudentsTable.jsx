@@ -22,7 +22,7 @@ import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpe
 import color from '@cdo/apps/util/color';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import experiments from '@cdo/apps/util/experiments';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import Button from '../Button';

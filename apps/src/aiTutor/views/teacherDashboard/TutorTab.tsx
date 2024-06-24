@@ -1,7 +1,11 @@
 import React, {useState} from 'react';
-import InteractionsTable from './InteractionsTable';
+
+import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
+
 import AccessControls from './AccessControls';
-import Button from '@cdo/apps/templates/Button';
+import InteractionsTable from './InteractionsTable';
+
+import style from './interactions-table.module.scss';
 
 /**
  * Renders table of student chat messages and toggles to control student access to AI Tutor.
@@ -10,40 +14,39 @@ interface TutorTabProps {
   sectionId: number;
 }
 
+export const TAB_NAMES = {
+  ACCESS: 'access',
+  INTERACTIONS: 'interactions',
+};
+
 const TutorTab: React.FC<TutorTabProps> = ({sectionId}) => {
-  const [showControls, setShowControls] = useState<boolean>(false);
-
-  const onClickControls = () => {
-    setShowControls(true);
-  };
-
-  const onClickShowChats = () => {
-    setShowControls(false);
-  };
+  const [selectedTab, setSelectedTab] = useState(TAB_NAMES.ACCESS);
 
   return (
     <div>
-      <Button
-        color={Button.ButtonColor.brandSecondaryDefault}
-        key="controlAccess"
-        onClick={onClickControls}
-        size={Button.ButtonSize.default}
-        text="Control Student Access to AI Tutor"
-        disabled={showControls}
-      />
-      <Button
-        color={Button.ButtonColor.brandSecondaryDefault}
-        key="showChats"
-        onClick={onClickShowChats}
-        size={Button.ButtonSize.default}
-        text="Show Student Chats with AI Tutor"
-        disabled={!showControls}
-      />
-      {showControls ? (
-        <AccessControls sectionId={sectionId} />
-      ) : (
-        <InteractionsTable sectionId={sectionId} />
-      )}
+      <div className={style.interactionsElement}>
+        <SegmentedButtons
+          className="ai-tutor-tab-buttons"
+          selectedButtonValue={selectedTab}
+          size="s"
+          buttons={[
+            {label: 'View Access Controls', value: TAB_NAMES.ACCESS},
+            {
+              label: 'View Interactions',
+              value: TAB_NAMES.INTERACTIONS,
+            },
+          ]}
+          onChange={setSelectedTab}
+        />
+      </div>
+      <div>
+        {selectedTab === TAB_NAMES.ACCESS && (
+          <AccessControls sectionId={sectionId} />
+        )}
+        {selectedTab === TAB_NAMES.INTERACTIONS && (
+          <InteractionsTable sectionId={sectionId} />
+        )}
+      </div>
     </div>
   );
 };

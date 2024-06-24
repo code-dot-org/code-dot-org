@@ -7,16 +7,14 @@ import CheckboxDropdown, {CheckboxDropdownProps} from './index';
 
 export default {
   title: 'DesignSystem/Dropdown/Checkbox Dropdown', // eslint-disable-line storybook/no-title-property-in-meta
-  component: CheckboxDropdown,
+  component: CheckboxDropdown.type,
 } as Meta;
 
 //
 // TEMPLATE
 //
 const SingleTemplate: StoryFn<CheckboxDropdownProps> = args => {
-  const [selectedValues, setValues] = useState(
-    (args.checkedOptions = [] as string[])
-  );
+  const [selectedValues, setValues] = useState(args.checkedOptions as string[]);
   const onChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
       if (e.target.checked) {
@@ -145,7 +143,7 @@ DefaultCheckboxDropdown.args = {
 
 export const DisabledCheckboxDropdown = SingleTemplate.bind({});
 DisabledCheckboxDropdown.args = {
-  name: 'default-dropdown',
+  name: 'disabled-dropdown',
   allOptions: [
     {value: 'option-1', label: 'Option 1'},
     {value: 'option-2', label: 'Option 2'},
@@ -162,7 +160,7 @@ DisabledCheckboxDropdown.args = {
 
 export const WithDisabledOptionCheckboxDropdown = SingleTemplate.bind({});
 WithDisabledOptionCheckboxDropdown.args = {
-  name: 'default-dropdown',
+  name: 'withDisabledOption-dropdown',
   allOptions: [
     {value: 'option-1', label: 'Option 1', isOptionDisabled: true},
     {value: 'option-2', label: 'Option 2'},
@@ -247,8 +245,24 @@ GroupOfCheckboxDropdownColors.args = {
       color: dropdownColors.black,
       disabled: false,
     },
+    {
+      name: 'default-dropdown-gray',
+      allOptions: [
+        {value: 'option-1', label: 'Option 1'},
+        {value: 'option-2', label: 'Option 2'},
+      ],
+      checkedOptions: ['option-1'],
+      labelText: 'Gray Dropdown',
+      onChange: args => null,
+      onSelectAll: args => null,
+      onClearAll: args => null,
+      size: 'm',
+      color: dropdownColors.gray,
+      disabled: false,
+    },
   ],
 };
+
 export const GroupOfSizesOfCheckboxDropdown = MultipleTemplate.bind({});
 GroupOfSizesOfCheckboxDropdown.args = {
   components: [

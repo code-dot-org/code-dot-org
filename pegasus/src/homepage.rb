@@ -250,11 +250,17 @@ class Homepage
           text_h1: action["text_h1"],
           text_desc: action["text_desc"],
           text_desc_02: action["text_desc_02"],
+          text_overline: action["text_overline"],
+          external_link: action["external_link"],
+          button_color_white: action["button_color_white"],
           button_link: action["button_link"],
           studio_button_link: action["studio_button_link"],
+          button_label_primary: action["button_label_primary"],
+          button_label_secondary: action["button_label_secondary"],
+          button_url_primary: action["button_url_primary"],
+          button_url_secondary: action["button_url_secondary"],
           button_text: action["button_text"],
           img_src: action["img_src"],
-          # Used with the `ai-pl-launch-2023` hero banner
           logo_list_01: action["logo_list_01"],
           logo_list_02: action["logo_list_02"],
           logo_list_03: action["logo_list_03"],
@@ -360,25 +366,24 @@ class Homepage
         text: "homepage_slot_text_blurb_students_courses",
         color1: "118, 101, 160",
         color2: "166, 155, 193",
-        url: CDO.studio_url("/courses"),
+        url: "/students",
         image: "/shared/images/courses/logo_tall_elementary.jpg",
         links:
           [
             {
-              text: "homepage_slot_text_link_codestudio",
-              url: CDO.studio_url("/")
+              text: "header_educate_elementary",
+              url: "/student/elementary"
             },
             {
-              text: "homepage_slot_text_link_thebadguys",
-              url: "/thebadguys"
+              text: "khan_beyond_gradelevel",
+              url: "/student/middle-high"
             },
             {
-              text: "homepage_slot_text_link_othercourses",
-              url: "/learn/beyond"
+              text: "header_about_jobs",
+              url: "/careers-with-cs"
             }
           ]
       },
-
       {
         id: "educators-en",
         type: "block",
@@ -386,7 +391,7 @@ class Homepage
         text: "homepage_slot_text_blurb_educators",
         color1: "0, 148, 202",
         color2: "89, 185, 220",
-        url: "/educate",
+        url: "/teach",
         image: "/shared/images/courses/logo_tall_teacher2.jpg",
         links:
           [
@@ -404,7 +409,6 @@ class Homepage
             }
           ]
       },
-
       {
         id: "advocate-en",
         type: "block",

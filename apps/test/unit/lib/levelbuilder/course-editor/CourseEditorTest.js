@@ -1,6 +1,6 @@
 import {assert, expect} from '../../../../util/reconfiguredChai';
 import React from 'react';
-import {mount, shallow} from 'enzyme';
+import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import {UnconnectedCourseEditor as CourseEditor} from '@cdo/apps/lib/levelbuilder/course-editor/CourseEditor';
 import {
   stubRedux,
@@ -371,6 +371,81 @@ describe('CourseEditor', () => {
       wrapper
         .find('.saveBar')
         .contains('Error Saving: Please set both version year and family name.')
+    ).to.be.true;
+
+    $.ajax.restore();
+  });
+
+  it('shows error when published state is preview or stable and device compatibility JSON is null', () => {
+    sinon.stub($, 'ajax');
+    const wrapper = createWrapper({
+      isMissingRequiredDeviceCompatibilities: true,
+    });
+
+    const courseEditor = wrapper.find('CourseEditor');
+    courseEditor.setState({
+      publishedState: PublishedState.preview,
+      courseOfferingDeviceCompatibilities: null,
+    });
+
+    const saveBar = wrapper.find('SaveBar');
+
+    const saveAndKeepEditingButton = saveBar.find('button').at(1);
+    expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+      .true;
+    saveAndKeepEditingButton.simulate('click');
+
+    expect($.ajax).to.not.have.been.called;
+
+    expect(courseEditor.state().isSaving).to.equal(false);
+    expect(courseEditor.state().error).to.equal(
+      'Please set all device compatibilities in order to save with published state as preview or stable.'
+    );
+
+    expect(
+      wrapper
+        .find('.saveBar')
+        .contains(
+          'Error Saving: Please set all device compatibilities in order to save with published state as preview or stable.'
+        )
+    ).to.be.true;
+
+    $.ajax.restore();
+  });
+
+  it('shows error when published state is preview or stable and at least one device compatibility is not set', () => {
+    sinon.stub($, 'ajax');
+    const wrapper = createWrapper({
+      isMissingRequiredDeviceCompatibilities: true,
+    });
+
+    const courseEditor = wrapper.find('CourseEditor');
+    courseEditor.setState({
+      publishedState: PublishedState.stable,
+      courseOfferingDeviceCompatibilities:
+        '{"computer":"","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}',
+    });
+
+    const saveBar = wrapper.find('SaveBar');
+
+    const saveAndKeepEditingButton = saveBar.find('button').at(1);
+    expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+      .true;
+    saveAndKeepEditingButton.simulate('click');
+
+    expect($.ajax).to.not.have.been.called;
+
+    expect(courseEditor.state().isSaving).to.equal(false);
+    expect(courseEditor.state().error).to.equal(
+      'Please set all device compatibilities in order to save with published state as preview or stable.'
+    );
+
+    expect(
+      wrapper
+        .find('.saveBar')
+        .contains(
+          'Error Saving: Please set all device compatibilities in order to save with published state as preview or stable.'
+        )
     ).to.be.true;
 
     $.ajax.restore();

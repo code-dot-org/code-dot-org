@@ -1,25 +1,28 @@
+import $ from 'jquery';
+import PropTypes from 'prop-types';
+import queryString from 'query-string';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+
+import {RegionalPartnerMiniContactPopupLink} from '@cdo/apps/code-studio/pd/regional_partner_mini_contact/RegionalPartnerMiniContact';
+import fontConstants from '@cdo/apps/fontConstants';
 import {
   WorkshopApplicationStates,
   WorkshopSearchErrors,
   ActiveCourseWorkshops,
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
-import {RegionalPartnerMiniContactPopupLink} from '@cdo/apps/code-studio/pd/regional_partner_mini_contact/RegionalPartnerMiniContact';
-import Notification from '@cdo/apps/templates/Notification';
-import * as color from '../util/color';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
+import Notification from '@cdo/apps/templates/Notification';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {currentLocation} from '@cdo/apps/utils';
-import PropTypes from 'prop-types';
-import queryString from 'query-string';
-import $ from 'jquery';
-import fontConstants from '@cdo/apps/fontConstants';
+
 import {
   BodyThreeText,
   Heading2,
   Heading3,
 } from '../componentLibrary/typography';
+import * as color from '../util/color';
+
 import Button from './Button';
 
 const WorkshopCard = props => {

@@ -5,35 +5,19 @@ description 'description here'
 markdown <<MARKDOWN
 # Welcome! 
 
-##### This free self-paced professional learning experience is designed for educators who want to get started using Code.org. 
-
-
-
-##### **You will:**
-
 <img src="https://images.code.org/8f8f1dae36b39433164cf3752db52472-image-1628784411625.jpg" alt="Two students laughing next to a laptop" style="border-radius:10px; float: right; height: 200px; clear: both; margin: 0 20px 20px 0; ">
 
-* ##### Get an introduction to Code.org’s mission.
-* ##### Learn how to navigate the Code.org website and teacher tools.
-* ##### Set up a classroom section.
-* ##### Locate and use course lesson plans and teacher resources.
-* ##### Learn how to access support while teaching Code.org curricula.
+#### This free self-paced professional learning experience is designed for educators who want to get started using Code.org. 
+<br>
 
-##### **Suggested time to complete:** 80 minutes
+#### **You will:**
 
-<div style="clear:both"/>
+* #### Get an introduction to Code.org’s mission.
+* #### Learn how to navigate the Code.org website and teacher tools.
+* #### Set up a classroom section.
+* #### Locate and use course lesson plans and teacher resources.
+* #### Learn how to access support while teaching Code.org curricula.
+<br>
 
-
-## Let's get started with Lesson 1!
-
-
-##### **You will:**
-
-* ##### Get an introduction to Code.org's mission.
-
-##### **Suggested time to complete the lesson:** 10 minutes
-
-
-
-
+#### **Suggested time to complete the Getting Started Module:** 80 minutes
 MARKDOWN

@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-25 22:51:57 UTC",
+    "serialized_at": "2024-04-18 14:29:09 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -69,6 +69,7 @@
       "key": "954fba73-3354-47c1-8f1e-af9170763e13",
       "position": 1,
       "properties": {
+        "duration": 60
       },
       "seeding_key": {
         "lesson_activity.key": "954fba73-3354-47c1-8f1e-af9170763e13",
@@ -81,6 +82,7 @@
       "key": "7c576ec7-3314-406e-beb5-a43fd9e917bc",
       "position": 1,
       "properties": {
+        "duration": 60
       },
       "seeding_key": {
         "lesson_activity.key": "7c576ec7-3314-406e-beb5-a43fd9e917bc",
@@ -198,6 +200,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-prework-m4-overview_2024"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -220,6 +225,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-prework-m4-intro-to-classes-video_2024"
+        ],
         "progression": "Video: Introduction to Object-Oriented Programming"
       },
       "bonus": false,
@@ -242,6 +250,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-prework-m4-predict-level_2024"
+        ],
         "progression": "Predict and run "
       },
       "bonus": false,
@@ -264,6 +275,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sa-prework-m4-intro-1-JL_2024"
+        ],
         "progression": "Introducing The Neighborhood"
       },
       "bonus": false,
@@ -286,6 +300,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-prework-m4-intro-to-javalab-video_2024"
+        ],
         "progression": "Introducing The Neighborhood"
       },
       "bonus": false,
@@ -308,6 +325,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-prework-m4-intro-2-JL_2024"
+        ],
         "progression": "Introducing The Neighborhood"
       },
       "bonus": false,
@@ -330,6 +350,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-prework-m4-transition-text_2024"
+        ],
         "progression": "Instantiating objects and calling methods"
       },
       "bonus": false,
@@ -352,6 +375,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-prework-m4-calling-methods-video_2024"
+        ],
         "progression": "Instantiating objects and calling methods"
       },
       "bonus": false,
@@ -374,6 +400,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-prework-m4-instantiating-video_2024"
+        ],
         "progression": "Instantiating objects and calling methods"
       },
       "bonus": false,
@@ -396,6 +425,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-prework-m4-debug-instantiate_2024"
+        ],
         "progression": "Instantiating objects and calling methods"
       },
       "bonus": false,
@@ -418,6 +450,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-prework-m4-debug-instantiate-practice_2024"
+        ],
         "progression": "Instantiating objects and calling methods"
       },
       "bonus": false,
@@ -440,6 +475,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-prework-m4-matching-code_2024"
+        ],
         "progression": "Lesson 1 summary"
       },
       "bonus": false,
@@ -462,6 +500,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-prework-m4-summary-L1_2024"
+        ],
         "progression": "Lesson 1 summary"
       },
       "bonus": false,
@@ -484,6 +525,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-prework-m4-attributes-reflection_2024"
+        ],
         "progression": "Introduction to UML diagrams"
       },
       "bonus": false,
@@ -506,6 +550,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-23-mod4-UML-text_2024"
+        ],
         "progression": "Introduction to UML diagrams"
       },
       "bonus": false,
@@ -528,6 +575,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-prework-m4-using-docs-video_2024"
+        ],
         "progression": "Introduction to UML diagrams"
       },
       "bonus": false,
@@ -550,6 +600,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-prework-m4-useDocs-JL_2024"
+        ],
         "progression": "Introduction to UML diagrams"
       },
       "bonus": false,
@@ -572,6 +625,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "P-VPL-CSA-23-mod4-retrun-text_2024"
+        ],
         "progression": "Using methods that return information"
       },
       "bonus": false,
@@ -594,6 +650,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-prework-m4-predict_2024"
+        ],
         "progression": "Using methods that return information"
       },
       "bonus": false,
@@ -616,6 +675,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-prework-m4-use-isOnPaint-JL_2024"
+        ],
         "progression": "Using methods that return information"
       },
       "bonus": false,
@@ -638,6 +700,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-prework-example-solution-video_2024"
+        ],
         "progression": "Using methods that return information"
       },
       "bonus": false,
@@ -660,6 +725,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-prework-m4-painter-choices_2024"
+        ],
         "progression": "Using methods that return information"
       },
       "bonus": false,
@@ -682,6 +750,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-23-mod4-full-module-summary-text_2024"
+        ],
         "progression": "Wrap up"
       },
       "bonus": false,

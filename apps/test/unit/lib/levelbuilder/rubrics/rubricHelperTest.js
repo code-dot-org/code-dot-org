@@ -4,7 +4,7 @@ import {
   RUBRIC_PATH,
   SAVE_COMPLETED_TEXT,
 } from '@cdo/apps/lib/levelbuilder/rubrics/rubricHelper';
-import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
+import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 import sinon from 'sinon';
 
 describe('rubricHelperTest.js', () => {

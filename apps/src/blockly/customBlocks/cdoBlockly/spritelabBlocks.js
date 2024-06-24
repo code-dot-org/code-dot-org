@@ -1,12 +1,12 @@
 // This file contains customizations to CDO Blockly Sprite Lab blocks.
 // When we are ready to remove support for CDO Blockly we can remove this file.
-import i18n from '@cdo/locale';
 import {
   BlockColors,
   BlockStyles,
   BLOCK_TYPES,
   NO_OPTIONS_MESSAGE,
 } from '@cdo/apps/blockly/constants';
+import i18n from '@cdo/locale';
 
 export const blocks = {
   // Called by block_utils when creating Sprite Lab blocks with mini-toolboxes.

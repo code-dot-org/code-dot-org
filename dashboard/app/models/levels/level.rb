@@ -203,16 +203,13 @@ class Level < ApplicationRecord
   def available_callouts(script_level)
     if custom?
       if callout_json.present?
-        return JSON.parse(callout_json).map do |callout_definition|
-          i18n_key = "data.callouts.#{name}.#{callout_definition['localization_key']}"
-          callout_text = (should_localize? &&
-            I18n.t(i18n_key, default: nil)) ||
-              callout_definition['callout_text']
+        callouts_i18n = should_localize? ? I18n.t(name, scope: %i[data callouts], default: {}).with_indifferent_access : {}
 
+        return JSON.parse(callout_json).map do |callout_definition|
           Callout.new(
             element_id: callout_definition['element_id'],
             localization_key: callout_definition['localization_key'],
-            callout_text: callout_text,
+            callout_text: callouts_i18n[callout_definition['localization_key']] || callout_definition['callout_text'],
             qtip_config: callout_definition['qtip_config'].try(:to_json),
             on: callout_definition['on']
           )
@@ -602,6 +599,10 @@ class Level < ApplicationRecord
     false
   end
 
+  def deprecated?
+    false
+  end
+
   # Create a copy of this level named new_name
   # @param [String] new_name
   # @param [String] editor_experiment
@@ -834,7 +835,7 @@ class Level < ApplicationRecord
   # These properties are usually just the serialized properties for
   # the level, which usually include levelData.  If this level is a
   # StandaloneVideo then we put its properties into levelData.
-  def summarize_for_lab2_properties(script)
+  def summarize_for_lab2_properties(script, script_level = nil, current_user = nil)
     video = specified_autoplay_video&.summarize(false)&.camelize_keys
     properties_camelized = properties.camelize_keys
     properties_camelized[:id] = id
@@ -843,10 +844,22 @@ class Level < ApplicationRecord
     properties_camelized[:appName] = game&.app
     properties_camelized[:useRestrictedSongs] = game.use_restricted_songs?
     properties_camelized[:usesProjects] = try(:is_project_level) || channel_backed?
+    if try(:project_template_level).try(:source) || try(:source)
+      # Override start sources with project template level sources if they exist
+      properties_camelized['source'] = try(:project_template_level).try(:source) || try(:source)
+    end
     # Localized properties
     properties_camelized["validations"] = localized_validations if properties_camelized["validations"]
     properties_camelized["panels"] = localized_panels if properties_camelized["panels"]
     properties_camelized["longInstructions"] = (get_localized_property("long_instructions") || long_instructions) if properties_camelized["longInstructions"]
+    if script_level
+      properties_camelized[:exampleSolutions] = script_level.get_example_solutions(self, current_user, nil)
+    end
+    if current_user&.verified_instructor? || current_user&.permission?(UserPermission::LEVELBUILDER)
+      # Verified instructors can view exemplars and levelbuilders can edit them, so we include them in the properties
+      # for these users.
+      properties_camelized[:exemplarSources] = try(:exemplar_sources)
+    end
     properties_camelized
   end
 

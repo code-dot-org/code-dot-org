@@ -1,6 +1,8 @@
 import React from 'react';
 import {Provider} from 'react-redux';
+
 import {reduxStore} from '@cdo/storybook/decorators';
+
 import LargeChevronLink from './LargeChevronLink';
 
 export default {

@@ -1,6 +1,6 @@
 import React from 'react';
 import {expect} from '../../util/reconfiguredChai';
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import JavalabConsole from '@cdo/apps/javalab/JavalabConsole';
 import {Provider} from 'react-redux';
 import {

@@ -1,4 +1,5 @@
 @import 'color.scss';
+@import 'font';
 @import 'style-constants';
 
 .navContainer {
@@ -58,6 +59,51 @@
 
 .emptyClassroomDiv {
   margin: 24px 64px 82px 64px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  &Container {
+    padding: 0 64px;
+
+    & h1 {
+      font-family: $barlowSemiCondensed-medium;
+      font-weight: 600;
+      font-size: 34px;
+      color: $darkest_gray;
+      line-height: 42px;
+      margin-top: 18px;
+    }
+  }
+
+  &Link {
+    margin-top: 12px;
+
+    &Chevron {
+      margin-inline-end: 8px;
+      color: $light_secondary_500;
+
+      &:hover, :active, :visited, :focus-visible {
+        color: $light_secondary_500;
+      }
+    }
+  }
+
+  &Curriculum {
+    margin-bottom: 8px;
+  }
+
+  &RightColumn {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  &ButtonSection {
+    display: flex;
+    margin-bottom: 5px;
+  }
 }
 
 .navLink {

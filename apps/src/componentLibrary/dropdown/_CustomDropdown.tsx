@@ -4,11 +4,13 @@ import React, {
   useMemo,
   useRef,
   useEffect,
+  AriaAttributes,
   KeyboardEvent,
 } from 'react';
 
 import {dropdownColors} from '@cdo/apps/componentLibrary/common/constants';
 import {useDropdownContext} from '@cdo/apps/componentLibrary/common/contexts/DropdownContext';
+import {getAriaPropsFromProps} from '@cdo/apps/componentLibrary/common/helpers';
 import {
   ComponentSizeXSToL,
   DropdownColor,
@@ -19,10 +21,12 @@ import FontAwesomeV6Icon, {
 
 import moduleStyles from './customDropdown.module.scss';
 
-export interface CustomDropdownProps {
+export interface CustomDropdownProps extends AriaAttributes {
   /** CustomDropdown name.
    * Name of the dropdown, used as unique identifier of the dropdown's HTML element */
   name: string;
+  /** CustomDropdown custom class name */
+  className?: string;
   /** CustomDropdown color */
   color?: DropdownColor;
   /** CustomDropdown size */
@@ -49,6 +53,7 @@ export interface CustomDropdownProps {
  */
 const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
   name,
+  className,
   labelText,
   labelType = 'thick',
   children,
@@ -57,6 +62,7 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
   disabled = false,
   color = dropdownColors.black,
   size = 'm',
+  ...rest
 }) => {
   const {activeDropdownName, setActiveDropdownName} = useDropdownContext();
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -73,6 +79,8 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
     },
     [dropdownRef, setActiveDropdownName, activeDropdownName]
   );
+
+  const ariaProps = getAriaPropsFromProps(rest);
 
   useEffect(() => {
     document.addEventListener('mousedown', handleClickOutside);
@@ -110,20 +118,23 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
         {[moduleStyles.open]: isOpen},
         moduleStyles.dropdownContainer,
         moduleStyles[`dropdownContainer-${color}`],
-        moduleStyles[`dropdownContainer-${size}`]
+        moduleStyles[`dropdownContainer-${size}`],
+        className
       )}
       onKeyDown={onKeyDown}
       ref={dropdownRef}
+      aria-describedby={ariaProps['aria-describedby']}
     >
       <button
         id={`${name}-dropdown-button`}
         type="button"
         className={moduleStyles.dropdownButton}
         data-toggle="dropdown"
-        aria-haspopup={true}
-        aria-label={`${name} filter dropdown`}
         onClick={toggleDropdown}
         disabled={disabled}
+        {...ariaProps}
+        aria-haspopup={true}
+        aria-label={ariaProps['aria-label'] || `${name} filter dropdown`}
       >
         {isSomeValueSelected && (
           <FontAwesomeV6Icon iconName="check-circle" iconStyle="solid" />

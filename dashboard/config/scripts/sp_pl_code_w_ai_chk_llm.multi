@@ -1,7 +1,7 @@
 name 'sp-pl-Code_w_AI-chk_LLM'
 editor_experiment ''
 title 'Check for Understanding: Large Language Models'
-type 'multi2'
+type 'multi1'
 question 'Which of the following best describes a Large Language Model (LLM)?'
 
 

@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import style from './rubrics.module.scss';
-import i18n from '@cdo/locale';
+import React, {useState} from 'react';
+
 import {
   BodyThreeText,
   BodyTwoText,
@@ -9,16 +9,19 @@ import {
   Heading4,
 } from '@cdo/apps/componentLibrary/typography';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import i18n from '@cdo/locale';
+
+import LearningGoals from './LearningGoals';
 import {
   aiEvaluationShape,
   reportingDataShape,
   rubricShape,
   studentLevelInfoShape,
 } from './rubricShapes';
-import LearningGoals from './LearningGoals';
-import classnames from 'classnames';
-import StudentSelector from './StudentSelector';
 import SectionSelector from './SectionSelector';
+import StudentSelector from './StudentSelector';
+
+import style from './rubrics.module.scss';
 
 const formatTimeSpent = timeSpent => {
   const minutes = Math.floor(timeSpent / 60);

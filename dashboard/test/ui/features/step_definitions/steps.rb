@@ -83,7 +83,15 @@ end
 def navigate_to(url)
   Retryable.retryable(on: RSpec::Expectations::ExpectationNotMetError, sleep: 10, tries: 3) do
     with_read_timeout(DEFAULT_WAIT_TIMEOUT + 5.seconds) do
+      root = @browser.find_element(css: ':root')
       @browser.navigate.to url
+      # Wait until the document has actually changed
+      if root
+        wait_until do
+          root != @browser.find_element(css: ':root')
+        end
+      end
+      # Then, wait until the document is done loading
       wait_until do
         @browser.execute_script('return document.readyState;') == 'complete'
       end
@@ -95,7 +103,13 @@ end
 
 Given /^I am on "([^"]*)"$/ do |url|
   check_window_for_js_errors('before navigation')
-  navigate_to replace_hostname(url)
+  begin
+    navigate_to replace_hostname(url)
+  rescue Selenium::WebDriver::Error::TimeoutError => exception
+    puts "Timeout: I am not on #{url} like I want."
+    puts "         I am on #{@browser.current_url} instead."
+    raise exception
+  end
 end
 
 And /^I take note of the current loaded page$/ do
@@ -121,6 +135,10 @@ When /^I go to a new tab$/ do
   page_load('tab', blank_tab: true) do
     @browser.execute_script('window.open();')
   end
+end
+
+When /^I go back$/ do
+  @browser.execute_script('window.history.back();')
 end
 
 When /^I close the current tab$/ do
@@ -311,7 +329,13 @@ end
 
 Then /^I wait until I am on "([^"]*)"$/ do |url|
   url = replace_hostname(url)
-  wait_until {@browser.current_url == url}
+  begin
+    wait_until {@browser.current_url == url}
+  rescue Selenium::WebDriver::Error::TimeoutError => exception
+    puts "Timeout: I am not on #{url} like I want."
+    puts "         I am on #{@browser.current_url} instead."
+    raise exception
+  end
 end
 
 Then /^check that the URL contains "([^"]*)"$/i do |url|
@@ -604,8 +628,10 @@ Then /^evaluate JavaScript expression "([^"]*)"$/ do |expression|
   expect(@browser.execute_script("return #{expression}")).to eq(true)
 end
 
-Then /^execute JavaScript expression "([^"]*)"$/ do |expression|
-  @browser.execute_script("return #{expression}")
+Then /^execute JavaScript expression "([^"]*)"( to load a new page)?$/ do |expression, load|
+  page_load(load) do
+    @browser.execute_script("return #{expression}")
+  end
 end
 
 Then /^I navigate to the course page for "([^"]*)"$/ do |course|
@@ -1006,10 +1032,10 @@ Then /^element "([^"]*)" is a child of element "([^"]*)"$/ do |child_id, parent_
   expect(actual_parent_id).to eq(parent_id)
 end
 
-And(/^I set the language cookie$/) do
+def set_cookie(key, value)
   params = {
-    name: "_language",
-    value: 'en'
+    name: key,
+    value: value,
   }
 
   if ENV['DASHBOARD_TEST_DOMAIN'] && ENV['DASHBOARD_TEST_DOMAIN'] =~ /\.code.org/ &&
@@ -1020,18 +1046,16 @@ And(/^I set the language cookie$/) do
   @browser.manage.add_cookie params
 end
 
+And(/^I set the language cookie$/) do
+  set_cookie '_language', 'en'
+end
+
 And(/^I set the pagemode cookie to "([^"]*)"$/) do |cookie_value|
-  params = {
-    name: "pm",
-    value: cookie_value
-  }
+  set_cookie 'pm', cookie_value
+end
 
-  if ENV['DASHBOARD_TEST_DOMAIN'] && ENV['DASHBOARD_TEST_DOMAIN'] =~ /\.code.org/ &&
-      ENV['PEGASUS_TEST_DOMAIN'] && ENV['PEGASUS_TEST_DOMAIN'] =~ /\.code.org/
-    params[:domain] = '.code.org' # top level domain cookie
-  end
-
-  @browser.manage.add_cookie params
+And(/^I set the cookie named "([^"]*)" to "([^"]*)"$/) do |key, value|
+  set_cookie key, value
 end
 
 Given(/^I am enrolled in a plc course$/) do
@@ -1118,8 +1142,8 @@ end
 # Send an asynchronous XmlHttpRequest from the browser.
 def browser_request(url:, method: 'GET', headers: {}, body: nil, code: 200, tries: 3)
   if body
-    headers['Content-Type'] = 'application/x-www-form-urlencoded'
-    body = "'#{body.to_param}'" if body
+    headers['Content-Type'] = 'application/json'
+    body = "'#{body.to_json}'"
   end
 
   js = <<~JS

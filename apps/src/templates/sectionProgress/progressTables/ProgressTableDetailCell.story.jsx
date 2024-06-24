@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {
   fakeLevels,

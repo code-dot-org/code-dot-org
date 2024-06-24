@@ -4,13 +4,15 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import {LmsLinks} from '@cdo/apps/util/sharedConstants';
+import {LmsLinks} from '@cdo/generated-scripts/sharedConstants';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {
   LtiSection,
   LtiSectionMap,
   LtiSectionSyncDialogProps,
   LtiSectionSyncResult,
+  LtiSectionOwnerMap,
   SubView,
 } from './types';
 import PropTypes from 'prop-types';
@@ -29,6 +31,20 @@ export default function LtiSectionSyncDialog({
 }: LtiSectionSyncDialogProps) {
   const initialView = syncResult.error ? SubView.ERROR : SubView.SYNC_RESULT;
   const [currentView, setCurrentView] = useState<SubView>(initialView);
+  const [sectionOwners, setSectionOwners] = useState<LtiSectionOwnerMap>(() => {
+    const sectionOwners: LtiSectionOwnerMap = {};
+    if (syncResult.changed) {
+      Object.values(syncResult.changed).forEach(section => {
+        const sectionOwner = section.instructors.find(
+          instructor => instructor.isOwner
+        );
+        if (sectionOwner) {
+          sectionOwners[section.lti_section_id] = sectionOwner.id;
+        }
+      });
+    }
+    return sectionOwners;
+  });
 
   const handleClose = () => {
     setCurrentView(SubView.SPINNER);
@@ -58,7 +74,11 @@ export default function LtiSectionSyncDialog({
       <div>
         <h2 style={styles.dialogHeader}>{i18n.errorOccurredTitle()}</h2>
         {errorMessages.map((errorMessage: string, index: React.Key) => (
-          <SafeMarkdown key={index} markdown={errorMessage} />
+          <SafeMarkdown
+            openExternalLinksInNewTab={true}
+            key={index}
+            markdown={errorMessage}
+          />
         ))}
       </div>
     );
@@ -120,6 +140,22 @@ export default function LtiSectionSyncDialog({
       PLATFORMS.STATSIG
     );
   };
+
+  const handleUpdateSectionOwners = () => {
+    if (!syncResult.changed || Object.keys(syncResult.changed).length === 0) {
+      return handleClose();
+    }
+    return $.ajax({
+      url: '/lti/v1/sections/bulk_update_owners',
+      type: 'PATCH',
+      data: {
+        section_owners: sectionOwners,
+      },
+      success: () => {
+        handleClose();
+      },
+    });
+  };
   /**
    * Displays a summary of the changes after a successful sync with the LMS
    * @param syncResult
@@ -149,7 +185,10 @@ export default function LtiSectionSyncDialog({
             {dialogTitle}
           </h2>
           <div onClick={handleDocsClick}>
-            <SafeMarkdown markdown={dialogDescription} />
+            <SafeMarkdown
+              openExternalLinksInNewTab={true}
+              markdown={dialogDescription}
+            />
           </div>
           <div
             style={styles.summaryContainer}
@@ -174,7 +213,7 @@ export default function LtiSectionSyncDialog({
               onClick={() => setCurrentView(SubView.DISABLE_ROSTER_SYNC)}
             />
           )}
-          <Button text={i18n.continue()} onClick={handleClose} />
+          <Button text={i18n.continue()} onClick={handleUpdateSectionOwners} />
         </DialogFooter>
       </div>
     );
@@ -198,13 +237,35 @@ export default function LtiSectionSyncDialog({
   const hideCloseButton = currentView === SubView.SPINNER;
 
   const SectionRow = (id: string, section: LtiSection) => {
-    const sectionOwnerName = section.instructors.find(
-      instructor => instructor.isOwner
-    )?.name;
+    const instructorOptions = section.instructors.map(instructor => ({
+      value: instructor.id.toString(),
+      text: instructor.name,
+    }));
     return (
       <tr key={id} role={'gridcell'}>
         <td style={styles.tableCellText}>{section.short_name}</td>
-        <td style={styles.tableCellText}>{sectionOwnerName}</td>
+        <td style={styles.tableCellText}>
+          <SimpleDropdown
+            name={`instructor-dropdown-${id}`}
+            items={instructorOptions}
+            selectedValue={
+              sectionOwners[section.lti_section_id]?.toString() ?? undefined
+            }
+            labelText={i18n.ltiSectionSyncDialogHeaderPrimaryInstructor()}
+            isLabelVisible={false}
+            size={'xs'}
+            onChange={e => {
+              e.persist();
+              setSectionOwners(owners => ({
+                ...owners,
+                [section.lti_section_id.toString()]: parseInt(
+                  e.target.value,
+                  10
+                ),
+              }));
+            }}
+          />
+        </td>
         <td style={styles.tableCellNumber}>{section.size}</td>
         <td style={styles.tableCellNumber}>{section.instructors.length}</td>
       </tr>

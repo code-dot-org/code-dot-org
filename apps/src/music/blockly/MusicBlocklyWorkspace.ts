@@ -58,7 +58,8 @@ export default class MusicBlocklyWorkspace {
     container: HTMLElement,
     onBlockSpaceChange: (e: Abstract) => void,
     isReadOnlyWorkspace: boolean,
-    toolbox: {[key: string]: string[]}
+    toolbox: {[key: string]: string[]},
+    isRtl: boolean
   ) {
     if (this.workspace) {
       this.workspace.dispose();
@@ -82,6 +83,7 @@ export default class MusicBlocklyWorkspace {
       },
       readOnly: isReadOnlyWorkspace,
       useBlocklyDynamicCategories: true,
+      rtl: isRtl,
     } as BlocklyOptions);
 
     this.resizeBlockly();
@@ -381,7 +383,10 @@ export default class MusicBlocklyWorkspace {
   }
 
   updateHighlightedBlocks(playingBlockIds: string[]) {
-    if (this.headlessMode || !this.workspace) {
+    if (this.headlessMode) {
+      return;
+    }
+    if (!this.workspace) {
       this.metricsReporter.logWarning(
         'updateHighlightedBlocks called before workspace initialized.'
       );

@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {PureComponent} from 'react';
+
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
 

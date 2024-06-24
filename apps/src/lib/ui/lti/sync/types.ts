@@ -2,12 +2,13 @@ export type LtiSection = {
   name: string;
   short_name: string;
   size: number;
+  lti_section_id: number;
   instructors: LtiInstructor[];
 };
 
 export interface LtiInstructor {
   name: string;
-  id: string;
+  id: number;
   isOwner: boolean;
 }
 
@@ -35,3 +36,5 @@ export enum SubView {
   ERROR = 'error',
   DISABLE_ROSTER_SYNC = 'disableRosterSync',
 }
+
+export type LtiSectionOwnerMap = {[sectionId: string]: number};

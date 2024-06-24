@@ -3,7 +3,7 @@ import React from 'react';
 
 import {ITEM_TYPE} from '@cdo/apps/templates/sectionProgressV2/ItemType';
 import {UnconnectedLevelDataCell} from '@cdo/apps/templates/sectionProgressV2/LevelDataCell';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {expect} from '../../../util/reconfiguredChai';
 

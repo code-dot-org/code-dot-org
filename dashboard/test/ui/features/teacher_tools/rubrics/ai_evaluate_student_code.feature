@@ -86,7 +86,9 @@ Feature: Evaluate student code against rubrics using AI
     And element ".teacher-panel td:eq(1)" contains text "Aiden"
     And I click selector ".teacher-panel td:eq(1)" to load a new page
     And I wait for the page to fully load
+    And I wait until element "h1:contains(Getting Started with Your AI Teaching Assistant)" is visible
     And I click selector ".introjs-skipbutton" if it exists
+    And I wait until element ".congrats" is gone
     #Then I verify progress in the header of the current page is "attempted_assessment" for level 2
     And element "#ui-floatingActionButton" is visible
 
@@ -136,7 +138,9 @@ Feature: Evaluate student code against rubrics using AI
     And element ".teacher-panel td:eq(1)" contains text "Aiden"
     And I click selector ".teacher-panel td:eq(1)" to load a new page
     And I wait for the page to fully load
+    And I wait until element "h1:contains(Getting Started with Your AI Teaching Assistant)" is visible
     And I click selector ".introjs-skipbutton" if it exists
+    And I wait until element ".congrats" is gone 
     #Then I verify progress in the header of the current page is "attempted_assessment" for level 2
     And element "#ui-floatingActionButton" is visible
 
@@ -148,6 +152,7 @@ Feature: Evaluate student code against rubrics using AI
     # Teacher switches to Class Management tab
     When I click selector "button:contains('Class Data')"
     And I wait until element ".uitest-run-ai-assessment-all" is visible
+    And I wait until element "#ui-teacherFeedback" is enabled 
     And element ".uitest-run-ai-assessment-all" is enabled
 
     # Teacher runs AI evaluation

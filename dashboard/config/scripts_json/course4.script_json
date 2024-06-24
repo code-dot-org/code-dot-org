@@ -14,6 +14,16 @@
           "visibility": "Teacher-only",
           "dismissible": false,
           "buttonText": "Learn More"
+        },
+        {
+          "key": "4bdda9c9-0bed-4ecf-a3bc-d3da4ad31a29",
+          "notice": "CS Fundamentals now available in Filipino!",
+          "details": "With generous support from HP, we translated CS Fundamentals into Filipino. We invite you to begin using the CS Fundamentals created for all elementary and beginner secondary students. Sa bukas na suporta mula sa HP, isinalin namin ang CS Fundamentals sa Filipino. Inaanyayahan namin kayong simulan ang paggamit ng CS Fundamentals sa Filipino.",
+          "link": "https://studio.code.org/s/coursed-2021?lang=fil-PH",
+          "type": "bullhorn",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "CSF Kursong D "
         }
       ],
       "curriculum_path": "https://code.org/curriculum/course4/{LESSON}/Teacher",
@@ -27,7 +37,7 @@
     },
     "new_name": null,
     "family_name": "course4",
-    "serialized_at": "2024-03-14 18:50:50 UTC",
+    "serialized_at": "2024-04-17 19:13:30 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

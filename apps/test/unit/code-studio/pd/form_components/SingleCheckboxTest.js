@@ -2,7 +2,7 @@ import SingleCheckbox from '@cdo/apps/code-studio/pd/form_components/SingleCheck
 import {Checkbox} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {expect} from 'chai';
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import sinon from 'sinon';
 
 describe('SingleCheckbox', () => {

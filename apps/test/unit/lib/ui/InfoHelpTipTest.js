@@ -1,6 +1,6 @@
 /** @file Test InfoHelpTip component */
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import {expect} from '../../../util/reconfiguredChai';
 import InfoHelpTip from '@cdo/apps/lib/ui/InfoHelpTip';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';

@@ -1,6 +1,6 @@
 import {ResponseValidator} from '@cdo/apps/util/HttpClient';
 import {Key} from '../utils/Notes';
-import {baseAssetUrlRestricted} from '../constants';
+import {baseAssetUrlRestricted, DEFAULT_PACK} from '../constants';
 import {getBaseAssetUrl} from '../appConfig';
 
 export default class MusicLibrary {
@@ -71,7 +71,7 @@ export default class MusicLibrary {
     return this.libraryJson.path;
   }
 
-  setCurrentPackId(packId: string) {
+  setCurrentPackId(packId: string | null) {
     this.currentPackId = packId;
   }
 
@@ -159,6 +159,21 @@ export default class MusicLibrary {
     return folders.find(folder => folder.id === folderId) || null;
   }
 
+  // Given a pack ID (e.g. "pack1"), return the path for its image.
+  getPackImageUrl(packId: string): string | undefined {
+    const folder = this.getFolderForFolderId(packId);
+    if (!folder) {
+      return undefined;
+    }
+
+    return (
+      folder.imageSrc &&
+      `${getBaseAssetUrl()}${this.libraryJson.path}/${folder.path}/${
+        folder.imageSrc
+      }`
+    );
+  }
+
   // A progression step might specify a smaller set of allowed sounds.
   setAllowedSounds(allowedSounds: Sounds): void {
     this.allowedSounds = allowedSounds;
@@ -175,12 +190,16 @@ export default class MusicLibrary {
 
   getAvailableSounds() {
     return this.getAllowedSounds().filter(
-      folder => !folder.restricted || this.currentPackId === folder.id
+      folder =>
+        (!folder.restricted || this.currentPackId === folder.id) &&
+        folder.id !== DEFAULT_PACK
     );
   }
 
   getRestrictedPacks(): SoundFolder[] {
-    return this.getAllowedSounds().filter(folder => folder.restricted);
+    return this.getAllowedSounds().filter(
+      folder => folder.restricted && folder.id !== DEFAULT_PACK
+    );
   }
 
   // Return a deep copy of the packs folders only containing folders
@@ -226,7 +245,7 @@ export default class MusicLibrary {
     const folder = this.getFolderForFolderId(this.currentPackId);
     // Read key from the folder, or the first sound that has a key if not present on the folder.
     return (
-      folder?.key || folder?.sounds.find(sound => sound.key !== undefined)?.key
+      folder?.key ?? folder?.sounds.find(sound => sound.key !== undefined)?.key
     );
   }
 }
@@ -287,6 +306,7 @@ export interface SoundFolder {
   type?: SoundFolderType;
   path: string;
   imageSrc: string;
+  color?: string;
   restricted?: boolean;
   sounds: SoundData[];
   bpm?: number;

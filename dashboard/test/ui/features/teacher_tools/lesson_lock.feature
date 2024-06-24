@@ -1,3 +1,4 @@
+@no_mobile
 Feature: Lesson Locking
 
 @eyes

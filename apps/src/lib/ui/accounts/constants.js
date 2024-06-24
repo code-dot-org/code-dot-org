@@ -1,5 +1,5 @@
 import {makeEnum} from '@cdo/apps/utils';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 
 export const OAuthSectionTypes = makeEnum(
   SectionLoginType.google_classroom,

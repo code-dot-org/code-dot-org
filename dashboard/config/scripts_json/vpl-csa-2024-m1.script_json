@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-25 22:48:07 UTC",
+    "serialized_at": "2024-04-18 15:24:41 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -55,6 +55,7 @@
       "key": "7e965a7c-72e4-40e3-bd07-2e5aaac3fde4",
       "position": 1,
       "properties": {
+        "duration": 60
       },
       "seeding_key": {
         "lesson_activity.key": "7e965a7c-72e4-40e3-bd07-2e5aaac3fde4",
@@ -128,6 +129,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-1-overview_2024"
+        ],
         "progression": "Module 1 Overview (~5 minutes)"
       },
       "bonus": false,
@@ -150,6 +154,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-1-intro-to-unit3-project_2024"
+        ],
         "progression": "User Stories in the Unit 3 project (~15 minutes)"
       },
       "bonus": false,
@@ -172,6 +179,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-1-user-stories-video_2024"
+        ],
         "progression": "User Stories in the Unit 3 project (~15 minutes)"
       },
       "bonus": false,
@@ -194,6 +204,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-2022-user-story-reflection_2024"
+        ],
         "progression": "User Stories in the Unit 3 project (~15 minutes)"
       },
       "bonus": false,
@@ -216,6 +229,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-2022-module-1-review-exemplar_2024"
+        ],
         "progression": "Planning the Unit 3 project in your classroom (~20 minutes)"
       },
       "bonus": false,
@@ -238,6 +254,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-1-unit3-project-rubric_2024"
+        ],
         "progression": "Planning the Unit 3 project in your classroom (~20 minutes)"
       },
       "bonus": false,
@@ -260,6 +279,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-1-daily-tasks-unit-3-project_2024"
+        ],
         "progression": "Planning the Unit 3 project in your classroom (~20 minutes)"
       },
       "bonus": false,
@@ -282,6 +304,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-2022-module-1-one-day-project-reflection_2024"
+        ],
         "progression": "Planning the Unit 3 project in your classroom (~20 minutes)"
       },
       "bonus": false,
@@ -304,6 +329,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-2022-module-1-timing-reflection_2024"
+        ],
         "progression": "Timing and pacing of the course (~10 minutes)"
       },
       "bonus": false,
@@ -326,6 +354,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-1-wrap-up_2024"
+        ],
         "progression": "Module 1 Wrap Up (~5 minutes) "
       },
       "bonus": false,

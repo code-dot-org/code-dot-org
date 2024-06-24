@@ -50,7 +50,7 @@ class CongratsController < ApplicationController
       # The order of this conditional is important. During HoC, we generally want to avoid
       # hitting the database, so we check if the unit is an HoC unit first.
       @certificate_data =
-        if curriculum&.hoc? || curriculum&.csf? || Policies::ScriptActivity.completed?(current_user, curriculum)
+        if Policies::ScriptActivity.can_view_congrats_page?(current_user, curriculum)
           [{
             courseName: @course_name,
             courseTitle: curriculum.localized_title,

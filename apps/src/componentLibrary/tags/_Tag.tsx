@@ -72,6 +72,7 @@ const Tag: React.FunctionComponent<TagProps> = ({
       )}
     >
       <div
+        tabIndex={0} // eslint-disable-line jsx-a11y/no-noninteractive-tabindex
         role="tooltip"
         aria-describedby={tooltipId}
         className={moduleStyles.tag}

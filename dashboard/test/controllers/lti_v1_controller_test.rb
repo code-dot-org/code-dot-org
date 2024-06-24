@@ -4,6 +4,7 @@ require 'jwt'
 require 'policies/lti'
 require "services/lti"
 require "clients/lti_advantage_client"
+require 'clients/lti_dynamic_registration_client'
 
 class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   include Devise::Test::IntegrationHelpers
@@ -558,8 +559,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     payload = {**get_valid_payload, iss: issuer, aud: integration.client_id}
     jwt = create_jwt_and_stub(payload)
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
-    assert_response :redirect
-    assert_redirected_to '/lti/v1/iframe' + "?id_token=#{jwt}&state=#{@state}"
+    assert_template 'lti/v1/iframe'
   end
 
   test 'auth - should NOT redirect to iframe route if LMS caller is Schoology AND new_tab=true param is present' do
@@ -572,6 +572,23 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state, new_tab: true}
     assert_response :redirect
     assert_redirected_to '/users/sign_up'
+  end
+
+  test 'auth - should render oauth redirector if student-email-post-enabled' do
+    DCDO.stubs(:get)
+    Cpa.stubs(:cpa_experience).with(any_parameters).returns(false)
+    SignUpTracking.stubs(:begin_sign_up_tracking).returns(false)
+    DCDO.stubs(:get).with(I18nStringUrlTracker::I18N_STRING_TRACKING_DCDO_KEY, false).returns(false)
+    DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(false)
+    DCDO.stubs(:get).with('student-email-post-enabled', false).returns(true)
+    payload = {**get_valid_payload, Policies::Lti::LTI_ROLES_KEY => [Policies::Lti::CONTEXT_LEARNER_ROLE]}
+    jwt = create_jwt_and_stub(payload)
+
+    deployment = LtiDeployment.create(deployment_id: @deployment_id, lti_integration_id: @integration.id)
+    assert deployment
+    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
+
+    assert_template 'omniauth/redirect'
   end
 
   test 'sync - should redirect students to homepage without syncing' do
@@ -614,6 +631,23 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
 
     get '/lti/v1/sync_course', params: {lti_integration_id: lti_integration.id, deployment_id: 'foo', context_id: lti_course.context_id, rlid: lti_course.resource_link_id, nrps_url: lti_course.nrps_url}
     assert_response :ok
+  end
+
+  test 'sync - should update the LtiCourse resource link id if the params rlid has changed' do
+    user = create :teacher, :with_lti_auth
+    sign_in user
+    lti_integration = create :lti_integration
+    lti_course = create :lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid, resource_link_id: SecureRandom.uuid, nrps_url: 'https://example.com/nrps'
+    new_resource_id = SecureRandom.uuid
+    LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course.nrps_url, new_resource_id).returns({})
+    Services::Lti.expects(:parse_nrps_response).returns(@parsed_nrps_sections)
+    Services::Lti.expects(:sync_course_roster).returns(@sync_course_result_with_changes)
+
+    get '/lti/v1/sync_course', params: {lti_integration_id: lti_integration.id, deployment_id: 'foo', context_id: lti_course.context_id, rlid: new_resource_id, nrps_url: lti_course.nrps_url}
+
+    lti_course.reload
+    assert_response :ok
+    assert_equal new_resource_id, lti_course.resource_link_id
   end
 
   test 'sync_course as json - syncs and returns course sections data' do
@@ -893,13 +927,14 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'upgrade_account - upgrades current user to teacher' do
-    user = create :student
+    user = create :student, :with_lti_auth
     sign_in user
     post '/lti/v1/upgrade_account', params: {email: 'test-teacher@code.org'}
 
     assert_response :ok
     user.reload
     assert_equal User::TYPE_TEACHER, user.user_type
+    assert_equal true, user.lti_roster_sync_enabled
   end
 
   test 'should not sync if the user has roster sync disabled' do

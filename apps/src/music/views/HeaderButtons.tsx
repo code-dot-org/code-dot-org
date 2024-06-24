@@ -39,7 +39,7 @@ const CurrentPack: React.FunctionComponent<CurrentPackProps> = ({
   }
 
   return (
-    <span>
+    <span className={moduleStyles.currentPack}>
       {packImageSrc && (
         <img
           src={packImageSrc}
@@ -111,6 +111,9 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
   );
 
   const onClickStartOver = useCallback(() => {
+    // Hide any custom fields that are showing.
+    Blockly.getMainWorkspace().hideChaff();
+
     if (dialogControl) {
       dialogControl.showDialog(DialogType.StartOver, clearCode);
     }
@@ -223,9 +226,7 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
           type="button"
           className={classNames(moduleStyles.button, moduleStyles.buttonSkip)}
         >
-          <span className={moduleStyles.buttonSkipContent}>
-            {commonI18n.skipToProject()}
-          </span>
+          {commonI18n.skipToProject()}
           <FontAwesome
             title={commonI18n.skipToProject()}
             icon="arrow-right"

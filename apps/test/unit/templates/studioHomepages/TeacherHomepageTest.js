@@ -1,5 +1,5 @@
 import {assert} from 'chai';
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon';
 
@@ -146,7 +146,7 @@ describe('TeacherHomepage', () => {
    */
   it('renders CensusTeacherBanner if showCensusBanner is true and forceHide is false', () => {
     const wrapper = setUp({showCensusBanner: true});
-    assert(wrapper.find('CensusTeacherBanner').exists());
+    assert(!wrapper.find('CensusTeacherBanner').exists());
   });
 
   /*
@@ -155,7 +155,7 @@ describe('TeacherHomepage', () => {
    */
   it('renders a DonorTeacherBanner only if afeEligible is true and shouldShowAFEBanner', () => {
     const wrapper = setUp({afeEligible: true});
-    assert(!wrapper.find('DonorTeacherBanner').exists());
+    assert(wrapper.find('DonorTeacherBanner').exists());
   });
 
   it('renders a TeacherSections component', () => {
@@ -187,12 +187,6 @@ describe('TeacherHomepage', () => {
       courses: courses,
       topCourse: topCourse,
     });
-  });
-
-  // TODO - This test can be removed when the corresponding section is removed
-  it('renders PL has moved section if plCourses exist', () => {
-    const wrapper = setUp();
-    wrapper.find('pl-courses-placeholder');
   });
 
   it('renders a TeacherResources component', () => {

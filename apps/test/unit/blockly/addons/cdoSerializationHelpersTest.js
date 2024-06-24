@@ -1,4 +1,3 @@
-import {expect} from '../../../util/reconfiguredChai';
 import {
   addPositionsToState,
   getCombinedSerialization,
@@ -9,6 +8,8 @@ import {
   partitionJsonBlocksByType,
 } from '@cdo/apps/blockly/addons/cdoSerializationHelpers';
 import {PROCEDURE_DEFINITION_TYPES} from '@cdo/apps/blockly/constants';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('CdoSerializationHelpers', () => {
   describe('addPositionsToState', () => {

@@ -15,6 +15,9 @@ const STARTED_EVENT = 'Section Setup Started';
 class SetUpSections extends Component {
   static propTypes = {
     beginEditingSection: PropTypes.func.isRequired,
+    headingText: PropTypes.string,
+    descriptionText: PropTypes.string,
+    solidBorder: PropTypes.bool,
   };
 
   // Wrapped to avoid passing event args
@@ -31,12 +34,15 @@ class SetUpSections extends Component {
     return (
       <BorderedCallToAction
         type="sections"
-        headingText={i18n.newSectionAdd()}
-        descriptionText={i18n.createNewClassroom()}
+        headingText={this.props.headingText || i18n.newSectionAdd()}
+        descriptionText={
+          this.props.descriptionText || i18n.createNewClassroom()
+        }
         buttonText={i18n.createSection()}
         className="uitest-set-up-sections"
         buttonClass="uitest-newsection"
         onClick={this.beginEditingSection}
+        solidBorder={this.props.solidBorder || false}
       />
     );
   }

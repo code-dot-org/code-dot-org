@@ -24,5 +24,13 @@ class Policies::UserTest < ActiveSupport::TestCase
       assert_equal ao_email, attrs_aos[0]['email']
       assert_equal user.authentication_options.count, attrs_aos.count
     end
+
+    test 'remove email from user session value' do
+      DCDO.stubs(:get).with('student-email-post-enabled', false).returns(true)
+      user = create :teacher
+
+      attrs = Policies::User.user_attributes(user)
+      assert_nil attrs['email']
+    end
   end
 end

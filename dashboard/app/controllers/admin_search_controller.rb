@@ -16,7 +16,7 @@ class AdminSearchController < ApplicationController
 
     # If requested, filter...
     if params[:usernameFilter].present?
-      users = users.where(User.arel_table[:username].matches("%#{params[:usernameFilter]}%"))
+      users = users.where(username: params[:usernameFilter])
     end
     if params[:studentNameFilter].present?
       users = users.where(User.arel_table[:name].matches("%#{params[:studentNameFilter]}%"))

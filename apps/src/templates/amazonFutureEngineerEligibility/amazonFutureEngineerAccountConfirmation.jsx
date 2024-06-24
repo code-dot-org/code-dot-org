@@ -1,7 +1,8 @@
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import React from 'react';
 import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {studio, pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import color from '@cdo/apps/util/color';
 

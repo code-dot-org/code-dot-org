@@ -1,0 +1,17 @@
+name 'sp-pl-CV_defining'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Define 
+
+<img src="https://images.code.org/c4b01f7701ef26a6359a6da014cfaa7e-image-1714664241063.png" alt="AI bot with a directional sign" width="250px" style="border-radius:10px; float:right; margin: 0 20px 40px 40px;">
+
+#### The defining stage is the second step in the design thinking process, where designers **synthesize information** to clearly articulate users' needs and identify core issues that require solutions.
+
+#### By **clearly defining the problem**, designers ensure that their creative efforts in later stages are directed towards solutions that are most likely to meet the users' needs. 
+
+#### This stage sets the foundation for ideation by providing a specific, **user-focused problem to solve**.
+
+
+MARKDOWN

@@ -1,0 +1,13 @@
+name 'sp-pd-Code_w_AI-L4-Debugging_24_24'
+skip_dialog true
+markdown <<MARKDOWN
+# Lesson Four: AI as your Debugging Partner
+
+<img src="https://images.code.org/04f43d411bcc1eb98fbd34c391072de7-image-1712849567049.png" alt="Image CS Discoveries students" width="150px" style="border-radius:10px; float:right; margin: 0 40px 40px 40px;">
+
+#### This lesson focuses on debugging with AI. Students will engage in practical exercises using AI to identify and understand buggy code and participate in step-by-step debugging.
+
+#### The lesson emphasizes ethical considerations and personal reflection on using AI in the debugging process, encouraging students to form their value statements regarding AI's role in coding and creativity.
+
+![]()
+MARKDOWN

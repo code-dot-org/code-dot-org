@@ -7,8 +7,9 @@ id-ID:
   accelerated_name: Kursus Akselerasi
   account_sign_up_child_accept_terms: Saya mengonfirmasi bahwa saya telah menerima
     izin dari orang tua atau wali saya untuk menggunakan layanan Code.org.
-  account_sign_up_email_opt_in: Dapatkah kami mengirimi Anda email berisi pembaruan
-    kursus, peluang lokal, atau berita ilmu komputer lainnya? (kira-kira sekali sebulan)
+  account_sign_up_email_opt_in: Bolehkah kami mengirim email kepada Anda tentang pembaruan
+    program, peluang lokal, atau info lain terkait ilmu komputer? (kurang lebih sekali
+    sebulan)
   ai_activity: Kegiatan
   ai_aiedu_intro: 'aiEDU: Pengantar Kecerdasan Buatan'
   ai_aiedu_intro_description: Pengantar Kecerdasan Buatan adalah sebuah kurikulum
@@ -1646,6 +1647,7 @@ id-ID:
   homepage_slot_text_link_k5: Kursus untuk kelas K-5
   homepage_slot_text_link_local: Temukan kelas setempat
   homepage_slot_text_link_middle: Sekolah Menengah Pertama
+  homepage_slot_text_link_middle_and_high: Sekolah Menengah dan SMA
   homepage_slot_text_link_othercourses: Kursus daring lainnya
   homepage_slot_text_link_pd: Pengembangan profesional
   homepage_slot_text_link_shop: Kaos, topi, & banyak lagi
@@ -2598,6 +2600,8 @@ id-ID:
   user_header_applab: 'Aplikasi Lab '
   user_header_artist: 'Artis '
   user_header_create: 'Buat '
+  user_header_create_account: Buat Akun
+  user_header_create_account_low_cap: Buat akun
   user_header_dance: Pesta Tari
   user_header_flappy: Flappy
   user_header_gamelab: Game Lab
@@ -2605,6 +2609,8 @@ id-ID:
   user_header_logout: Keluar
   user_header_minecraft: Minecraft
   user_header_my_projects: Proyek saya
+  user_header_new_project: Proyek Baru
+  user_header_new_project_low_cap: New project
   user_header_playlab: Lab Permainan
   user_header_settings: Pengaturan akun
   user_header_signin: Masuk

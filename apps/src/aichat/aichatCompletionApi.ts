@@ -1,12 +1,12 @@
+import HttpClient from '@cdo/apps/util/HttpClient';
+
+import {prepMessageForModelInput} from './redux/utils';
 import {
-  Role,
   ChatCompletionMessage,
   AiCustomizations,
-  ChatContext,
-  AichatParameters,
+  AichatContext,
+  AichatModelCustomizations,
 } from './types';
-import HttpClient from '@cdo/apps/util/HttpClient';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
 const CHAT_COMPLETION_URL = '/aichat/chat_completion';
 
@@ -16,56 +16,34 @@ const CHAT_COMPLETION_URL = '/aichat/chat_completion';
  * and assistant message if successful.
  */
 export async function postAichatCompletionMessage(
-  newMessage: string,
+  newMessage: ChatCompletionMessage,
   messagesToSend: ChatCompletionMessage[],
   aiCustomizations: AiCustomizations,
-  chatContext: ChatContext
+  aichatContext: AichatContext,
+  sessionId?: number
 ) {
-  const aichatParameters: AichatParameters = {
+  const aichatModelCustomizations: AichatModelCustomizations = {
     selectedModelId: aiCustomizations.selectedModelId,
     temperature: aiCustomizations.temperature,
     retrievalContexts: aiCustomizations.retrievalContexts,
     systemPrompt: aiCustomizations.systemPrompt,
   };
-  const storedMessages = formatMessagesForAichatCompletion(messagesToSend);
+  const storedMessages = messagesToSend.map(prepMessageForModelInput);
   const payload = {
-    newMessage,
+    newMessage: prepMessageForModelInput(newMessage),
     storedMessages,
-    aichatParameters,
-    chatContext,
+    aichatModelCustomizations,
+    aichatContext,
+    ...(sessionId ? {sessionId} : {}),
   };
-  let response;
-  try {
-    response = await HttpClient.post(
-      CHAT_COMPLETION_URL,
-      JSON.stringify(payload),
-      true,
-      {
-        'Content-Type': 'application/json; charset=UTF-8',
-      }
-    );
-    // For now, response will be null if there was an error.
-    if (response.ok) {
-      return await response.json();
-    } else {
-      return null;
+  const response = await HttpClient.post(
+    CHAT_COMPLETION_URL,
+    JSON.stringify(payload),
+    true,
+    {
+      'Content-Type': 'application/json; charset=UTF-8',
     }
-  } catch (error) {
-    Lab2Registry.getInstance()
-      .getMetricsReporter()
-      .logError('Error in aichat completion request', error as Error);
-  }
+  );
+
+  return await response.json();
 }
-
-const formatMessagesForAichatCompletion = (
-  chatMessages: ChatCompletionMessage[]
-): AichatCompletionMessage[] => {
-  return chatMessages.map(message => {
-    return {role: message.role, content: message.chatMessageText};
-  });
-};
-
-type AichatCompletionMessage = {
-  role: Role;
-  content: string;
-};

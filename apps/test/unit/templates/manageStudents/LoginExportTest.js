@@ -1,9 +1,9 @@
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import LoginExport from '@cdo/apps/templates/manageStudents/LoginExport';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 
 import {expect} from '../../../util/reconfiguredChai';
 

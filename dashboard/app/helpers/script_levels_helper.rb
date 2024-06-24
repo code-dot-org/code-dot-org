@@ -44,13 +44,11 @@ module ScriptLevelsHelper
     video_info_response
   end
 
-  def script_completion_redirect(script)
-    if script.hoc?
-      script.hoc_finish_url
-    elsif script.csf?
-      script.csf_finish_url
+  def script_completion_redirect(user, script)
+    if Policies::ScriptActivity.can_view_congrats_page?(user, script)
+      script.finish_url
     else
-      root_path
+      script_path(script)
     end
   end
 

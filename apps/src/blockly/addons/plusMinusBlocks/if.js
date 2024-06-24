@@ -14,6 +14,7 @@
  */
 
 import GoogleBlockly from 'blockly/core';
+
 import {createMinusField} from './field_minus';
 import {createPlusField} from './field_plus';
 

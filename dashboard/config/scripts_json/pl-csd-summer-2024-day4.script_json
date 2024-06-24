@@ -8,11 +8,12 @@
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-27 21:49:08 UTC",
+    "serialized_at": "2024-05-07 20:51:15 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1669,6 +1670,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "intro-pulse-survey_csd5_pl_2024"
+        ],
         "progression": "Check-In Survey"
       },
       "bonus": false,
@@ -1691,6 +1695,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 L1 - Design Templates_2023a_pl_2024"
+        ],
         "progression": "Physical Design Prototypes"
       },
       "bonus": false,
@@ -1713,6 +1720,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "intro-pulse-survey_csd6_pl_2024"
+        ],
         "progression": "Check-In Survey"
       },
       "bonus": false,
@@ -1735,6 +1745,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_FishVTrash_2024"
+        ],
         "progression": "Recognizing Fish"
       },
       "bonus": false,
@@ -1757,6 +1770,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Short_2024"
+        ],
         "progression": "Recognizing Fish Features"
       },
       "bonus": false,
@@ -1779,6 +1795,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Long_2024"
+        ],
         "progression": "Recognizing Expressions"
       },
       "bonus": false,
@@ -1801,6 +1820,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "aiml-intro-pulse-survey_pl_2024"
+        ],
         "progression": "Check-In Survey"
       },
       "bonus": false,
@@ -1931,19 +1953,6 @@
       }
     },
     {
-      "name": "Activity Packet",
-      "url": "https://docs.google.com/document/d/15gERZooKYoMlBjeHTEb63zlkG9oaCayUUblHzaSW9VE/view",
-      "key": "activity_packet",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/document/d/15gERZooKYoMlBjeHTEb63zlkG9oaCayUUblHzaSW9VE/view",
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "activity_packet"
-      }
-    },
-    {
       "name": "AI: What is Machine Learning?",
       "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
       "key": "ai_what_is_machine_learning_",
@@ -1970,30 +1979,43 @@
       }
     },
     {
-      "name": "Day 4 Agenda",
-      "url": "https://docs.google.com/document/d/1xsuMarpkD79C27Im40st8yQkvsvZZjta0A68X0NoVUo/edit?usp=sharing",
-      "key": "day_4_agenda",
+      "name": "CSD Activity Packet 2024",
+      "url": "https://docs.google.com/document/d/1e6h0_yN0txqYVXmxUEco5ldh0l1K8cU4tukxdnXh3Xo/edit?usp=drive_link",
+      "key": "csd_activity_packet_2024",
       "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/document/d/1xsuMarpkD79C27Im40st8yQkvsvZZjta0A68X0NoVUo/edit?usp=sharing",
-        "include_in_pdf": true,
-        "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "day_4_agenda"
+        "resource.key": "csd_activity_packet_2024"
       }
     },
     {
-      "name": "Day 4 Slides Template",
-      "url": "https://docs.google.com/presentation/d/1fyQ9BL4piHmaey7UQY9FCr53lkpv2CfGq56s0rRUib0/edit?usp=share_link",
-      "key": "day_4_slides_template",
+      "name": "CSD In-Person Summer Workshop Day 4 Agenda",
+      "url": "https://docs.google.com/document/d/1auEy8yk3R-h5lSBjD5XxZM5fGq_zDGZKyDUid0JyDXA/edit?usp=drive_link",
+      "key": "csd_in-person_summer_workshop_day_4_agenda",
       "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1fyQ9BL4piHmaey7UQY9FCr53lkpv2CfGq56s0rRUib0/edit?usp=share_link",
-        "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "day_4_slides_template"
+        "resource.key": "csd_in-person_summer_workshop_day_4_agenda"
+      }
+    },
+    {
+      "name": "CSD In-Person Summer Workshop Day 4 Slides",
+      "url": "https://docs.google.com/presentation/d/1w_fANSxO9Ke2TUSlNs-Xbd1YdXeIe0AyQ5KtogOVrkc/edit?usp=drive_link",
+      "key": "csd_in-person_summer_workshop_day_4_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_in-person_summer_workshop_day_4_slides"
+      }
+    },
+    {
+      "name": "CSD Resource Packet 2024",
+      "url": "https://docs.google.com/document/d/17b0KVjqOsr2X3NUyE6gS82SEkXOsAuEE815H_Z6FRGU/edit?usp=drive_link",
+      "key": "csd_resource_packet_2024",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_resource_packet_2024"
       }
     },
     {
@@ -2241,31 +2263,30 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "activity_packet",
+        "resource.key": "csd_in-person_summer_workshop_day_4_agenda",
         "script.name": "pl-csd-summer-2024-day4"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "day_4_agenda",
-        "script.name": "pl-csd-summer-2024-day4"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "day_4_slides_template",
-        "script.name": "pl-csd-summer-2024-day4"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "resource_packet",
+        "resource.key": "csd_in-person_summer_workshop_day_4_slides",
         "script.name": "pl-csd-summer-2024-day4"
       }
     }
   ],
   "scripts_student_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "csd_activity_packet_2024",
+        "script.name": "pl-csd-summer-2024-day4"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_resource_packet_2024",
+        "script.name": "pl-csd-summer-2024-day4"
+      }
+    }
   ],
   "vocabularies": [
     {

@@ -1,6 +1,7 @@
 import GoogleBlockly from 'blockly/core';
-import CdoPathObject from './cdoPathObjectGeras';
 import {BlockStyle} from 'blockly/core/theme';
+
+import CdoPathObject from './cdoPathObjectGeras';
 
 export default class CdoRendererGeras extends GoogleBlockly.geras.Renderer {
   /**

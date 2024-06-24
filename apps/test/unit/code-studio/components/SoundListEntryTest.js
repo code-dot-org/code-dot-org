@@ -1,6 +1,6 @@
 import {assert, expect} from '../../../util/reconfiguredChai';
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import SoundListEntry from '@cdo/apps/code-studio/components/SoundListEntry';
 import Sounds from '@cdo/apps/Sounds';
 import color from '@cdo/apps/util/color';

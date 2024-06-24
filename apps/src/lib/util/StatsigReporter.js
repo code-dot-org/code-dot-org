@@ -5,6 +5,7 @@ import {
   isDevelopmentEnvironment,
 } from '../../utils';
 import Statsig from 'statsig-js';
+import experiments from '@cdo/apps/util/experiments';
 
 // A flag that can be toggled to send events regardless of environment
 const ALWAYS_SEND = false;
@@ -12,7 +13,11 @@ const NO_EVENT_NAME = 'NO_VALID_EVENT_NAME_LOG_ERROR';
 
 class StatsigReporter {
   constructor() {
-    let user = {};
+    let user = {
+      custom: {
+        enabledExperiments: experiments.getEnabledExperiments(),
+      },
+    };
     const user_id_element = document.querySelector('script[data-user-id]');
     const user_id = user_id_element ? user_id_element.dataset.userId : null;
     const user_type_element = document.querySelector('script[data-user-type');
@@ -20,10 +25,8 @@ class StatsigReporter {
       ? user_type_element.dataset.userType
       : null;
     if (user_id) {
-      user = {
-        userID: this.formatUserId(user_id),
-        custom: {userType: user_type},
-      };
+      user.userID = this.formatUserId(user_id);
+      user.custom.userType = user_type;
     }
     const api_element = document.querySelector(
       'script[data-statsig-api-client-key]'
@@ -53,11 +56,11 @@ class StatsigReporter {
   }
 
   // Utilizes Statsig's function for updating a user once we've recognized a sign in
-  async setUserProperties(userId, userType) {
+  async setUserProperties(userId, userType, enabledExperiments) {
     const formattedUserId = this.formatUserId(userId);
     const user = {
       userID: formattedUserId,
-      custom: {userType: userType},
+      custom: {userType: userType, enabledExperiments: enabledExperiments},
     };
     if (!this.shouldPutRecord(ALWAYS_SEND)) {
       this.log(
@@ -98,6 +101,13 @@ class StatsigReporter {
     if (isDevelopmentEnvironment() && !IN_UNIT_TEST) {
       console.log(`[STATSIG ANALYTICS EVENT]: ${message}`);
     }
+  }
+
+  getIsInExperiment(name, parameter, defaultValue) {
+    if (this.local_mode) {
+      return false;
+    }
+    return Statsig.getExperiment(name).get(parameter, defaultValue);
   }
 
   formatUserId(userId) {

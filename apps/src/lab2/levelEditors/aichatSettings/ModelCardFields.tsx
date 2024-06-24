@@ -16,7 +16,7 @@ const ModelCardFields: React.FunctionComponent = () => {
   return (
     <div className={moduleStyles['model-card-fields']}>
       {MODEL_CARD_FIELDS_LABELS_ICONS.map(([property, label, _]) => {
-        if (property === 'exampleTopics') {
+        if (property === 'exampleTopics' || property === 'isPublished') {
           return null;
         }
         return (

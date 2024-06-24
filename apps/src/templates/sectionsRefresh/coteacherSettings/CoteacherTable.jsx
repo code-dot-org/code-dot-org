@@ -11,7 +11,7 @@ import styles from './coteacher-settings.module.scss';
 
 const getPendingPill = () => {
   return (
-    <span style={styles.toolTipBox}>
+    <span>
       <div
         className={classNames(styles.tablePending, styles.tablePill)}
         data-tip

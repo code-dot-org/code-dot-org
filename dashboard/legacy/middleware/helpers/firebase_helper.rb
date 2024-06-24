@@ -43,7 +43,9 @@ class FirebaseHelper
   end
 
   def number?(num)
-    !Float(num).nil? rescue false
+    !Float(num).nil?
+  rescue
+    false
   end
 
   def csv_as_table(csv_data)

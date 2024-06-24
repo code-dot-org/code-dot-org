@@ -37,6 +37,11 @@
     font-weight: $medium-font-weight;
     color: $neutral_white;
   }
+
+  .tabIcon {
+    color: $lighter_gray;
+    margin-left: 5px;    
+  }
 }
 
 .tabPanelsContainer {

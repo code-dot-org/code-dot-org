@@ -1,7 +1,9 @@
 import React from 'react';
-import {UnconnectedSummaryProgressTable as SummaryProgressTable} from './SummaryProgressTable';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {Provider} from 'react-redux';
+
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
+
 import {
   fakeLesson,
   fakeLevels,
@@ -9,7 +11,7 @@ import {
   createStoreWithHiddenLesson,
   createStoreWithLockedLesson,
 } from './progressTestHelpers';
-import {Provider} from 'react-redux';
+import {UnconnectedSummaryProgressTable as SummaryProgressTable} from './SummaryProgressTable';
 
 export default {
   component: SummaryProgressTable,

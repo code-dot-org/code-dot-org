@@ -42,7 +42,7 @@ video_player: true
       - if index === 5
         = view :carousel_inspirational_video
       - if index === 6
-        = view :carousel_cs_video
+        = view :carousel_careers_in_cs_video
   = view :section_divider_line
 
 %section.centered
@@ -51,8 +51,6 @@ video_player: true
   %a.link-button.secondary{href: "https://www.youtube.com/channel/UCJyEBMU1xVP2be1-AoGS1BA", target: "_blank", rel: "noopener noreferrer"}
     =hoc_s(:video_library_page_footer_cta)
 
-%script{:src=>'/js/jquery.carouFredSel-6.2.1-packed.js'}
-%script{:src=>'/js/jquery.touchSwipe.min.js'}
-%script{:src=>'/js/page/video_page.js'}
+= view :swiper_page_videos
 
 = view :analytics_event_log_helper, event_name: AnalyticsConstants::VIDEO_LIBRARY_PAGE_VISIT_EVENT

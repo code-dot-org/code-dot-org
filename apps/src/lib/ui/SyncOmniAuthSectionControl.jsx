@@ -18,7 +18,7 @@ import {
 import Button from '../../templates/Button';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import LtiSectionSyncDialog, {
   LtiSectionSyncResultShape,
 } from '@cdo/apps/lib/ui/lti/sync/LtiSectionSyncDialog';

@@ -15,10 +15,11 @@ const MOCK_ALL_SECTION_MAP: LtiSectionMap = {
     name: 'Section 1',
     short_name: 'Section 1',
     size: 100,
+    lti_section_id: 1,
     instructors: [
       {
         name: 'Teacher 1',
-        id: '0',
+        id: 0,
         isOwner: true,
       },
     ],
@@ -27,15 +28,16 @@ const MOCK_ALL_SECTION_MAP: LtiSectionMap = {
     name: 'Section 2',
     short_name: 'Section 2',
     size: 10,
+    lti_section_id: 2,
     instructors: [
       {
         name: 'Teacher 1',
-        id: '0',
+        id: 0,
         isOwner: true,
       },
       {
         name: 'Teacher 2',
-        id: '1',
+        id: 0,
         isOwner: false,
       },
     ],
@@ -47,10 +49,11 @@ const MOCK_UPDATED_SECTION_MAP: LtiSectionMap = {
     name: 'Section 2: Code.org fundamentals',
     short_name: 'Section 2',
     size: 15,
+    lti_section_id: 2,
     instructors: [
       {
         name: 'Teacher 1',
-        id: '0',
+        id: 0,
         isOwner: true,
       },
     ],

@@ -38,7 +38,7 @@ const CopyToClipboardButton: React.FunctionComponent<{shareUrl: string}> = ({
 
 /**
  * A new implementation of the project share dialog for Lab2 labs.  Currently only used
- * by Music Lab and only supports a minimal subset of functionality.
+ * by Music Lab and Python Lab, and only supports a minimal subset of functionality.
  */
 const ShareDialog: React.FunctionComponent<{shareUrl: string}> = ({
   shareUrl,

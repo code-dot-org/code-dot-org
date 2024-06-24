@@ -2,6 +2,10 @@ require 'cdo/activity_constants'
 require 'policies/child_account'
 
 FactoryBot.define do
+  trait :skip_validation do
+    to_create {|instance| instance.save(validate: false)}
+  end
+
   factory :course_offering do
     sequence(:key, 'a') {|c| "bogus-course-offering-#{c}"}
     sequence(:display_name, 'a') {|c| "bogus-course-offering-#{c}"}
@@ -407,13 +411,23 @@ FactoryBot.define do
         birthday {Time.zone.today - 13.years}
       end
 
-      trait :with_parent_permission do
-        child_account_compliance_state {Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED}
-        child_account_compliance_state_last_updated {DateTime.now}
+      trait :with_interpolated_co do
+        us_state {'CO'}
+        country_code {nil}
       end
 
-      trait :with_pending_parent_permission do
-        child_account_compliance_state {Policies::ChildAccount::ComplianceState::REQUEST_SENT}
+      trait :with_interpolated_wa do
+        us_state {'wa'}
+        country_code {nil}
+      end
+
+      trait :with_interpolated_colorado do
+        us_state {'Colorado'}
+        country_code {nil}
+      end
+
+      trait :with_parent_permission do
+        child_account_compliance_state {Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED}
         child_account_compliance_state_last_updated {DateTime.now}
       end
 
@@ -422,7 +436,15 @@ FactoryBot.define do
         child_account_compliance_state_last_updated {DateTime.now}
       end
 
-      factory :non_compliant_child, traits: [:U13, :in_colorado] do
+      trait :before_p20_937_exception_date do
+        created_at {Cpa::CREATED_AT_EXCEPTION_DATE.ago(1.second)}
+      end
+
+      trait :p20_937_exception_date do
+        created_at {Cpa::CREATED_AT_EXCEPTION_DATE}
+      end
+
+      factory :non_compliant_child, traits: [:U13, :in_colorado, :p20_937_exception_date] do
         factory :locked_out_child do
           child_account_compliance_state {Policies::ChildAccount::ComplianceState::LOCKED_OUT}
           child_account_compliance_state_last_updated {DateTime.now}
@@ -522,6 +544,23 @@ FactoryBot.define do
       provider {'windowslive'}
     end
 
+    trait :with_facebook_authentication_option do
+      after(:create) do |user|
+        create(:authentication_option,
+          user: user,
+          email: user.email,
+          hashed_email: user.hashed_email,
+          credential_type: AuthenticationOption::FACEBOOK,
+          authentication_id: SecureRandom.uuid,
+          data: {
+            oauth_token: 'some-facebook-token',
+            oauth_refresh_token: 'some-facebook-refresh-token',
+            oauth_token_expiration: '999999'
+          }.to_json
+        )
+      end
+    end
+
     trait :with_google_authentication_option do
       after(:create) do |user|
         create(:authentication_option,
@@ -533,6 +572,23 @@ FactoryBot.define do
           data: {
             oauth_token: 'some-google-token',
             oauth_refresh_token: 'some-google-refresh-token',
+            oauth_token_expiration: '999999'
+          }.to_json
+        )
+      end
+    end
+
+    trait :with_microsoft_authentication_option do
+      after(:create) do |user|
+        create(:authentication_option,
+          user: user,
+          email: user.email,
+          hashed_email: user.hashed_email,
+          credential_type: AuthenticationOption::MICROSOFT,
+          authentication_id: SecureRandom.uuid,
+          data: {
+            oauth_token: 'some-microsoft-token',
+            oauth_refresh_token: 'some-microsoft-refresh-token',
             oauth_token_expiration: '999999'
           }.to_json
         )
@@ -987,6 +1043,8 @@ FactoryBot.define do
       after(:create) do |csc_script|
         csc_script.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSC
         csc_script.save!
+        course_offering = CourseOffering.add_course_offering(csc_script)
+        course_offering.update!(marketing_initiative: 'CSC')
       end
     end
 
@@ -998,7 +1056,7 @@ FactoryBot.define do
         hoc_script.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.HOC
         hoc_script.save!
         course_offering = CourseOffering.add_course_offering(hoc_script)
-        course_offering.update!(category: 'hoc')
+        course_offering.update!(marketing_initiative: 'HOC')
       end
     end
 

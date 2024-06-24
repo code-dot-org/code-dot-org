@@ -1,36 +1,39 @@
 import {LevelProperties} from '@cdo/apps/lab2/types';
-import {PiiTypes as PII} from '@cdo/apps/util/sharedConstants';
 
-export {PII};
+// TODO: Update this once https://codedotorg.atlassian.net/browse/CT-471 is resolved
+export type AichatInteractionStatusValue = string;
 
 export type ChatCompletionMessage = {
   id: number;
   role: Role;
   chatMessageText: string;
-  status: AichatInteractionStatus;
+  status: AichatInteractionStatusValue;
+  chatMessageSuffix?: ChatMessageSuffix;
   timestamp?: string;
 };
 
-export type ChatContext = {
-  userId: number;
-  currentLevelId: string | null;
+export type AichatCompletionMessage = Pick<
+  ChatCompletionMessage,
+  'role' | 'chatMessageText' | 'status'
+>;
+
+type ChatMessageSuffix = {
+  text: string;
+  boldtypeText?: string;
+};
+
+export type AichatContext = {
+  currentLevelId: number | null;
   scriptId: number | null;
   channelId: string | undefined;
 };
-
-export enum AichatInteractionStatus {
-  ERROR = 'error',
-  PII_VIOLATION = 'pii_violation',
-  PROFANITY_VIOLATION = 'profanity_violation',
-  OK = 'ok',
-  UNKNOWN = 'unknown',
-}
 
 export enum Role {
   ASSISTANT = 'assistant',
   USER = 'user',
   SYSTEM = 'system',
   MODEL_UPDATE = 'update',
+  ERROR_NOTIFICATION = 'error_notification',
 }
 
 export enum ViewMode {
@@ -55,7 +58,7 @@ export interface AichatLevelProperties extends LevelProperties {
   aichatSettings?: LevelAichatSettings;
 }
 
-/** AI customizations for student chat bots
+/** Model customizations and model card information for aichat levels.
  *  selectedModelId is a foreign key to ModelDescription.id */
 export interface AiCustomizations {
   selectedModelId: string;
@@ -65,7 +68,11 @@ export interface AiCustomizations {
   modelCardInfo: ModelCardInfo;
 }
 
-export type AichatParameters = Omit<AiCustomizations, 'modelCardInfo'>;
+// Model customizations sent to backend for aichat levels - excludes modelCardInfo.
+// The customizations will be included in request to LLM endpoint.
+export type AichatModelCustomizations = Omit<AiCustomizations, 'modelCardInfo'>;
+
+export type FieldVisibilities = {[key in keyof AiCustomizations]: Visibility};
 
 /** Chat bot Model Card information */
 export interface ModelCardInfo {
@@ -75,6 +82,7 @@ export interface ModelCardInfo {
   limitationsAndWarnings: string;
   testingAndEvaluation: string;
   exampleTopics: string[];
+  isPublished: boolean;
 }
 
 /** Metadata about a given model, common across all aichat levels */
@@ -104,3 +112,6 @@ export interface LevelAichatSettings {
   /** list of ModelDescription.ids to limit the models available to choose from in the level */
   availableModelIds: string[];
 }
+
+// The type of save action being performed (customization update, publish, model card save, etc).
+export type SaveType = 'updateChatbot' | 'publishModelCard' | 'saveModelCard';

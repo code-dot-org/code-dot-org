@@ -18,6 +18,7 @@ class SchoolTest < ActiveSupport::TestCase
         state: 'AL',
         zip: '35950',
         school_type: 'public',
+        last_known_school_year_open: '2022-2023'
       }
     )
   end

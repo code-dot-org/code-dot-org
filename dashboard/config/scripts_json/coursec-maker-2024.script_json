@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "coursec-maker",
-    "serialized_at": "2024-03-06 19:25:20 UTC",
+    "serialized_at": "2024-05-07 20:24:02 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -25,7 +25,7 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Beginner: Events"
+        "display_name": "Emotion Badge with micro:bit - Events"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-2",
@@ -37,7 +37,7 @@
       "user_facing": true,
       "position": 2,
       "properties": {
-        "display_name": "Intermediate: Sequencing and Loops"
+        "display_name": "Calming LEDs with micro:bit - Sequencing and Loops"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
@@ -49,7 +49,7 @@
       "user_facing": true,
       "position": 3,
       "properties": {
-        "display_name": "Stretch: Data and Variables"
+        "display_name": "Counter with micro:bit - Data and Variables"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-4",
@@ -99,33 +99,38 @@
       }
     },
     {
-      "key": "lesson-3",
+      "key": "lesson-7",
       "name": "Meet your micro:bit",
       "absolute_position": 3,
       "lockable": false,
-      "has_lesson_plan": false,
+      "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "####**Overview**\nThis lesson is a pre-requisite for teaching with micro:bit. It gives your students hands-on experience with the micro:bit and allows them to start making connections to concepts they learned in previous lessons.\n\nThis lesson is also designed for you to model for students how to review code. This will help your students make connections between familiar coding concepts and their practical application in physical computing.\n\n####**Lesson Plan**\nThis lesson plan is not available on Code.org's website - instead, follow along with the <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf#page=7\" target=\"_blank\">lesson plan on pp. 7-17</a> in the micro:bit course booklet.\n\n::: details [**Prep for this lesson**]\nBefore teaching the Meet your micro:bit lesson, make sure to download the program onto several micro:bits so students can use them. Watch this <a href=\"https://www.youtube.com/watch?v=X3zxNSIFsdQ\" target=\"_blank\">video</a> to get you started on using your micro:bits.\n:::\n\n::: details [**Block Coding Matching Game (Optional)**]\nAfter completing the **Meet your micro:bit** lesson, students can complete a short matching game to transition from using Code.org blocks to micro:bit blocks. This activity is hosted on the JuiceMind platform (think Kahoot! for coding). To assign the activity to your students, click <a href=\"https://play.juicemind.com/dashboard/explore/class/codeorg-microbit/unitNumber/1/topicNumber/1/quizId/XkZonzuWj9xCxCAfYQqG\" target=\"_blank\">here.</a>\n\n**Note**: You will need to <a href=\"https://play.juicemind.com/signup\" target=\"_blank\">sign up</a> for an account on JuiceMind to assign the activity.\n\n:::"
+        "overview": "This lesson gives your students an early hands-on experience to discover the excitement that learning with the micro:bit offers. It helps reinforce what your students already know about code and computing concepts by transferring them to the physical world through exploring preprogrammed micro:bits. The exploration is also designed for you to model reviewing code together, helping your students make links between familiar computing concepts and their practical application by programming a physical device. This lesson is a pre-requisite before moving on to the rest of the activities in this unit.",
+        "preparation": "- Watch **<a href=\"https://www.youtube.com/watch?v=G46PU1K1wBA&feature=youtu.be&themeRefresh=1\" target=\"_blank\"> Meet your micro:bit video</a>**\n\n- Get to know the **<a href=\"https://makecode.microbit.org/#editor\" target=\"_blank\"> MakeCode editor</a>**\n\n- Load **<a href=\"https://mbit.io/csf-1-project\" target=\"_blank\">Meet your micro:bit</a>** code onto micro:bits\n\n**Materials:**\n- micro:bits with micro USB cords (one for every two to three students is ideal)\n\n- Power source for the micro:bits (battery packs are best, but you can also power from the computer USB port)",
+        "purpose": "The micro:bit is a tiny computer packed with **inputs** like buttons and sensors for light, movement, temperature, magnetism, and sound. It can also **output** pictures, numbers, and words on it's LED display, make sound and music, and even communicate with other micro:bits using radio. \n\nThe micro:bit needs instructions -**programs**- to tell it what to do. Your students will be able to create working code which they can test out in the simulator before transferring them to a real micro:bit over a USD cable. They can then unplug the micro:bit from the computer, attach a battery pack, and use their projects anywhere.\n\nBy making micro:bit projects, your students can take their code off the screen and make self-contained physical devices they can hold in the palm of their hands, making abstract computing concepts tangible.",
+        "student_overview": "In this lesson you will be introduced to the micro:bit. A micro:bit is a tiny computer. Today you will explore a pre-programmed micro:bit."
       },
       "seeding_key": {
-        "lesson.key": "lesson-3",
+        "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "coursec-maker-2024"
       }
     },
     {
-      "key": "lesson-4",
+      "key": "lesson-8",
       "name": "Emotion badge with micro:bit",
       "absolute_position": 4,
       "lockable": false,
-      "has_lesson_plan": false,
+      "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "overview": "####**Overview**\n\nThis lesson builds on the coding concepts your students learned in the previous lessons. This micro:bit project lesson allows them to transfer knowledge from the screen into physical projects they can code and hold in their hands.\n\n####**Lesson Plan**\nThis lesson plan is not available on Code.org's website - instead, follow along with the <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf#page=22\" target=\"_blank\">lesson plan on pp. 22-24</a> in the micro:bit course booklet. Click <a href=\"https://mbit.io/csf-c2-classroom\" target=\"_blank\">here</a> to start a classroom session for Emotion Badge.\n\n####**Assessment**\nAfter completing the lesson, assess students' knowledge of the concepts covered by assigning them a content assessment hosted on the JuiceMind platform. To assign the assessment to your students, click <a href=\"https://play.juicemind.com/dashboard/explore/class/codeorg-microbit/unitNumber/1/topicNumber/2/quizId/rBYlV1ov5omq9rIKXB1s\" target=\"_blank\">here.</a>\n\n::: details [**Setting up a micro:bit classroom session**]\nBefore teaching this lesson, make sure to set up a new classroom on the BBC micro:bit platform. Watch this <a href=\"https://www.youtube.com/watch?v=QD8kpuSC0Vc\" target=\"_blank\">video</a> to learn how to set up a classroom. \n:::\n\n::: details [**Setting up a JuiceMind assessment**]\nClick \"Assign\" on the assessment page, then have students join your unique class session. Students have a link to the Join page on level 2, and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note**: You will need to <a href=\"https://play.juicemind.com/signup\" target=\"_blank\">sign up</a> for an account on JuiceMind to assign the assessment.\n:::\n"
+        "overview": "In today's **skill-building** lesson, the goal is to program the micro:bit to show different emotion images when you press different buttons. This could be used to help people who have difficulty reading facial expressions. The key concepts are: **events**, **inputs** and **outputs**. ",
+        "preparation": "Make sure students have completed the **<a href=\"https://studio.code.org/s/coursec-maker-2024/lessons/3\" target=\"_blank\">Meet your micro:bit exploration lesson.</a>** ",
+        "student_overview": "Program the micro:bit to show different emotion icons when you press different buttons."
       },
       "seeding_key": {
-        "lesson.key": "lesson-4",
+        "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "coursec-maker-2024"
       }
@@ -171,33 +176,19 @@
       }
     },
     {
-      "key": "lesson-5",
-      "name": "Meet your micro:bit",
+      "key": "lesson-10",
+      "name": "Cristina - Calming LEDs with micro:bit",
       "absolute_position": 7,
       "lockable": false,
-      "has_lesson_plan": false,
+      "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "####**Overview**\nThis lesson is a pre-requisite for teaching with micro:bit. It gives your students hands-on experience with the micro:bit and allows them to start making connections to concepts they learned in previous lessons.\n\nThis lesson is also designed for you to model for students how to review code. This will help your students make connections between familiar coding concepts and their practical application in physical computing.\n\n####**Lesson Plan**\nThis lesson plan is not available on Code.org's website - instead, follow along with the <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf#page=7\" target=\"_blank\">lesson plan on pp. 7-17</a> in the micro:bit course booklet.\n\n::: details [**Prep for this lesson**]\nBefore teaching the Meet your micro:bit lesson, make sure to download the program onto several micro:bits so students can use them. Watch this <a href=\"https://www.youtube.com/watch?v=X3zxNSIFsdQ\" target=\"_blank\">video</a> to get you started on using your micro:bits.\n:::\n\n::: details [**Block Coding Matching Game (Optional)**]\nAfter completing the **Meet your micro:bit** lesson, students can complete a short matching game to transition from using Code.org blocks to micro:bit blocks. This activity is hosted on the JuiceMind platform (think Kahoot! for coding). To assign the activity to your students, click <a href=\"https://play.juicemind.com/dashboard/explore/class/codeorg-microbit/unitNumber/1/topicNumber/1/quizId/tZK3O5Ephto9BafURhYB\" target=\"_blank\">here.</a>\n\n**Note**: You will need to <a href=\"https://play.juicemind.com/signup\" target=\"_blank\">sign up</a> for an account on JuiceMind to assign the activity.\n\n:::"
+        "overview": "In today's skill-building lesson, the goal is to program the micro:bit to make a timed animation. This could be used to help regulate your breathing and relax. The key concepts are: **sequencing** and **loops**.",
+        "preparation": "- Make sure students have completed the **Meet your micro:bit** exploration lesson.\n\n- Make sure you know how to create **<a href=\"https://www.youtube.com/watch?v=QD8kpuSC0Vc\" target=\"_blank\">a new classroom section </a>** where students will code their micro:bit project.",
+        "student_overview": "Today you will program a timed animation to help you regulate your breathing and relax. "
       },
       "seeding_key": {
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "coursec-maker-2024"
-      }
-    },
-    {
-      "key": "lesson-6",
-      "name": "Calming LEDs with micro:bit",
-      "absolute_position": 8,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 8,
-      "properties": {
-        "overview": "####**Overview**\n\nThis lesson builds on the coding concepts your students learned in the previous lessons. This micro:bit project lesson allows them to transfer knowledge from the screen into physical projects they can code and hold in their hands.\n\n####**Lesson Plan**\nThis lesson plan is not available on Code.org's website - instead, follow along with the <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf#page=25\" target=\"_blank\">lesson plan on pp. 25-27</a> in the micro:bit course booklet. Click <a href=\"https://mbit.io/csf-c3-classroom\" target=\"_blank\">here</a> to start a classroom session for Calming LEDs with micro:bit.\n\n####**Assessment**\nAfter completing the lesson, assess students' knowledge of the concepts covered by assigning them a content assessment hosted on the JuiceMind platform. To assign the assessment to your students, click <a href=\"https://play.juicemind.com/dashboard/explore/class/codeorg-microbit/unitNumber/1/topicNumber/2/quizId/HreMBqsN2VV3eI8u8xSC\" target=\"_blank\">here.</a>\n\n::: details [**Setting up a micro:bit classroom session**]\nBefore teaching this lesson, make sure to set up a new classroom on the BBC micro:bit platform. Watch this <a href=\"https://www.youtube.com/watch?v=QD8kpuSC0Vc\" target=\"_blank\">video</a> to learn how to set up a classroom. \n:::\n\n::: details [**Setting up a JuiceMind assessment**]\nClick \"Assign\" on the assessment page, then have students join your unique class session. Students have a link to the Join page on level 2, and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note**: You will need to <a href=\"https://play.juicemind.com/signup\" target=\"_blank\">sign up</a> for an account on JuiceMind to assign the assessment.\n:::\n\n"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-6",
+        "lesson.key": "lesson-10",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "coursec-maker-2024"
       }
@@ -205,10 +196,10 @@
     {
       "key": "Picturing Data",
       "name": "Picturing Data",
-      "absolute_position": 9,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 9,
+      "relative_position": 8,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students will collect data from a Play Lab project and visualize it using different graphs in this **exploratory** lesson.",
@@ -225,10 +216,10 @@
     {
       "key": "Counting with Variables",
       "name": "Counting with Variables",
-      "absolute_position": 10,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 10,
+      "relative_position": 9,
       "properties": {
         "overview": "In this **skill-building** lesson, students will use variables to track a value that changes over time, like a counter. This lesson also includes a short **mini-project** in which students create a simple game.",
         "preparation": "Play through the levels and review the **lesson slides**.\n",
@@ -242,33 +233,18 @@
       }
     },
     {
-      "key": "lesson-1",
-      "name": "Meet your micro:bit",
-      "absolute_position": 11,
+      "key": "lesson-9",
+      "name": "Cristina - Counter with micro:bit",
+      "absolute_position": 10,
       "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 11,
+      "has_lesson_plan": true,
+      "relative_position": 10,
       "properties": {
-        "overview": "####**Overview**\nThis lesson is a pre-requisite for teaching with micro:bit. It gives your students hands-on experience with the micro:bit and allows them to start making connections to concepts they learned in previous lessons.\n\nThis lesson is also designed for you to model for students how to review code. This will help your students make connections between familiar coding concepts and their practical application in physical computing.\n\n####**Lesson Plan**\nThis lesson plan is not available on Code.org's website - instead, follow along with the <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf#page=7\" target=\"_blank\">lesson plan on pp. 7-17</a> in the micro:bit course booklet.\n\n::: details [**Prep for this lesson**]\nBefore teaching the Meet your micro:bit lesson, make sure to download the program onto several micro:bits so students can use them. Watch this <a href=\"https://www.youtube.com/watch?v=X3zxNSIFsdQ\" target=\"_blank\">video</a> to get you started on using your micro:bits.\n:::\n\n::: details [**Block Coding Matching Game (Optional)**]\nAfter completing the **Meet your micro:bit** lesson, students can complete a short matching game to transition from using Code.org blocks to micro:bit blocks. This activity is hosted on the JuiceMind platform (think Kahoot! for coding). To assign the activity to your students, click <a href=\"https://play.juicemind.com/dashboard/explore/class/codeorg-microbit/unitNumber/1/topicNumber/1/quizId/NnATuAjBUdyfyKjUlV6r\" target=\"_blank\">here.</a>\n\n**Note**: You will need to <a href=\"https://play.juicemind.com/signup\" target=\"_blank\">sign up</a> for an account on JuiceMind to assign the activity.\n\n:::"
+        "overview": "In today's **skill-building** lesson, the goal is to make a clicker you can use to count anything around you - like wildlife, traffic, or trash - as part of a data study. The key concepts are: **data** and **variables**.",
+        "preparation": "- Make sure students have completed the **Meet your micro:bit** exploration lesson.\n- Make sure you know how to create **<a href=\"https://www.youtube.com/watch?v=QD8kpuSC0Vc\" target=\"_blank\">a new classroom section </a>** where students will code their micro:bit project."
       },
       "seeding_key": {
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "coursec-maker-2024"
-      }
-    },
-    {
-      "key": "lesson-2",
-      "name": "Counter with micro:bit",
-      "absolute_position": 12,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 12,
-      "properties": {
-        "overview": "####**Overview**\n\nThis lesson builds on the coding concepts your students learned in the previous lessons. This micro:bit project lesson allows them to transfer knowledge from the screen into physical projects they can code and hold in their hands.\n\n####**Lesson Plan**\nThis lesson plan is not available on Code.org's website - instead, follow along with the <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf#page=28\" target=\"_blank\">lesson plan on pp. 28-30</a> in the micro:bit course booklet. Click <a href=\"https://mbit.io/csf-c4-classroom\" target=\"_blank\">here</a> to start a classroom session for Counter with micro:bit.\n\n####**Assessment**\nAfter completing the lesson, assess students' knowledge of the concepts covered by assigning them a content assessment hosted on the JuiceMind platform. To assign the assessment to your students, click <a href=\"https://play.juicemind.com/dashboard/explore/class/codeorg-microbit/unitNumber/1/topicNumber/2/quizId/m8PawyAAKNkODu8hvSX9\" target=\"_blank\">here.</a>\n\n::: details [**Setting up a micro:bit classroom session**]\nBefore teaching this lesson, make sure to set up a new classroom on the BBC micro:bit platform. Watch this <a href=\"https://www.youtube.com/watch?v=QD8kpuSC0Vc\" target=\"_blank\">video</a> to learn how to set up a classroom. \n:::\n\n::: details [**Setting up a JuiceMind assessment**]\nClick \"Assign\" on the assessment page, then have students join your unique class session. Students have a link to the Join page on level 2, and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note**: You will need to <a href=\"https://play.juicemind.com/signup\" target=\"_blank\">sign up</a> for an account on JuiceMind to assign the assessment.\n:::\n"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-2",
+        "lesson.key": "lesson-9",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "coursec-maker-2024"
       }
@@ -400,25 +376,124 @@
       }
     },
     {
-      "key": "f430ee6c-9834-4d3b-9aaf-2f60386441c5",
+      "key": "a668e49e-4291-41a1-ab92-6cb758142d0f",
       "position": 1,
       "properties": {
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "f430ee6c-9834-4d3b-9aaf-2f60386441c5",
-        "lesson.key": "lesson-3",
+        "lesson_activity.key": "a668e49e-4291-41a1-ab92-6cb758142d0f",
+        "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "coursec-maker-2024"
       }
     },
     {
-      "key": "34f3d454-ad69-4b3f-9f47-aaa202cbd4ec",
-      "position": 1,
+      "key": "15fa7f84-af70-41c2-800f-6e4042fdef8a",
+      "position": 2,
       "properties": {
+        "duration": 30,
+        "name": "Main Activity"
       },
       "seeding_key": {
-        "lesson_activity.key": "34f3d454-ad69-4b3f-9f47-aaa202cbd4ec",
-        "lesson.key": "lesson-4",
+        "lesson_activity.key": "15fa7f84-af70-41c2-800f-6e4042fdef8a",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursec-maker-2024"
+      }
+    },
+    {
+      "key": "897a0936-7d3e-4f0f-b9f4-696707eb9db3",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "897a0936-7d3e-4f0f-b9f4-696707eb9db3",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursec-maker-2024"
+      }
+    },
+    {
+      "key": "fda20978-120c-4c87-b3c6-d81bf1371d39",
+      "position": 4,
+      "properties": {
+        "name": "[Optional] Extended Learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fda20978-120c-4c87-b3c6-d81bf1371d39",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursec-maker-2024"
+      }
+    },
+    {
+      "key": "82ee70ef-94d2-4c20-bbfb-e6e8bc306501",
+      "position": 5,
+      "properties": {
+        "name": "Markdown formatting"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "82ee70ef-94d2-4c20-bbfb-e6e8bc306501",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursec-maker-2024"
+      }
+    },
+    {
+      "key": "70d810d6-9907-4a56-9a36-fd67aac6b50e",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "70d810d6-9907-4a56-9a36-fd67aac6b50e",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursec-maker-2024"
+      }
+    },
+    {
+      "key": "f8bc39a4-b4f6-4a17-bfa6-fea80fb467ee",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f8bc39a4-b4f6-4a17-bfa6-fea80fb467ee",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursec-maker-2024"
+      }
+    },
+    {
+      "key": "4cfb3840-3efd-4faa-90cc-2c5470c48232",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4cfb3840-3efd-4faa-90cc-2c5470c48232",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursec-maker-2024"
+      }
+    },
+    {
+      "key": "6640ca94-4ba6-448e-a218-34b400f0fbd2",
+      "position": 4,
+      "properties": {
+        "name": "[Optional] Extended learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6640ca94-4ba6-448e-a218-34b400f0fbd2",
+        "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "coursec-maker-2024"
       }
@@ -546,25 +621,56 @@
       }
     },
     {
-      "key": "6589350e-4722-4ebc-8208-0b84007bce66",
+      "key": "e0069f44-499d-4907-b53b-7c0097caaf8c",
       "position": 1,
       "properties": {
+        "duration": 10,
+        "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "6589350e-4722-4ebc-8208-0b84007bce66",
-        "lesson.key": "lesson-5",
+        "lesson_activity.key": "e0069f44-499d-4907-b53b-7c0097caaf8c",
+        "lesson.key": "lesson-10",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "coursec-maker-2024"
       }
     },
     {
-      "key": "aee1c063-fbf1-499a-90c4-a6b1b3fa4e15",
-      "position": 1,
+      "key": "8c41e379-4c07-4e72-9012-1875f882ad30",
+      "position": 2,
       "properties": {
+        "duration": 30,
+        "name": "Main Activity"
       },
       "seeding_key": {
-        "lesson_activity.key": "aee1c063-fbf1-499a-90c4-a6b1b3fa4e15",
-        "lesson.key": "lesson-6",
+        "lesson_activity.key": "8c41e379-4c07-4e72-9012-1875f882ad30",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursec-maker-2024"
+      }
+    },
+    {
+      "key": "4b9cf311-a22e-4bbd-9683-7e806ba84f1d",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4b9cf311-a22e-4bbd-9683-7e806ba84f1d",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursec-maker-2024"
+      }
+    },
+    {
+      "key": "feb722cb-e2d6-40b2-9554-53d0209d0e05",
+      "position": 4,
+      "properties": {
+        "name": "[Optional] Extended learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "feb722cb-e2d6-40b2-9554-53d0209d0e05",
+        "lesson.key": "lesson-10",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "coursec-maker-2024"
       }
@@ -666,25 +772,56 @@
       }
     },
     {
-      "key": "8a686e12-9e31-41bb-bb8f-e85550f621ab",
+      "key": "1558cbb7-ee89-48da-ac63-0f436a630148",
       "position": 1,
       "properties": {
+        "duration": 10,
+        "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "8a686e12-9e31-41bb-bb8f-e85550f621ab",
-        "lesson.key": "lesson-1",
+        "lesson_activity.key": "1558cbb7-ee89-48da-ac63-0f436a630148",
+        "lesson.key": "lesson-9",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "coursec-maker-2024"
       }
     },
     {
-      "key": "fab02723-90c1-401f-9e66-d2e80e2d7212",
-      "position": 1,
+      "key": "95d0095a-d8b6-40fa-9ceb-e13b5407d171",
+      "position": 2,
       "properties": {
+        "duration": 30,
+        "name": "Main Activity"
       },
       "seeding_key": {
-        "lesson_activity.key": "fab02723-90c1-401f-9e66-d2e80e2d7212",
-        "lesson.key": "lesson-2",
+        "lesson_activity.key": "95d0095a-d8b6-40fa-9ceb-e13b5407d171",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "coursec-maker-2024"
+      }
+    },
+    {
+      "key": "86f556e2-92e2-4f6b-b0e0-0462339921f4",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "86f556e2-92e2-4f6b-b0e0-0462339921f4",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "coursec-maker-2024"
+      }
+    },
+    {
+      "key": "1376efc3-ff60-40ac-b87f-e0e953e0234e",
+      "position": 4,
+      "properties": {
+        "name": "[Optional] Extended learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1376efc3-ff60-40ac-b87f-e0e953e0234e",
+        "lesson.key": "lesson-9",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "coursec-maker-2024"
       }
@@ -984,47 +1121,191 @@
       }
     },
     {
-      "key": "39e055c1-b58e-40d9-af70-8cd830b3aaa0",
+      "key": "a215bfe0-9e9d-468d-ab98-e08043e046a7",
       "position": 1,
+      "properties": {
+        "description": "**Say:** The micro:bit is a tiny computer you can program to make self-contained projects to do different things. For it to work, it first needs to be programmed to tell it what to do. Today you'll be given micro:bits that have already been programmed. \n\n**Discuss:**\n\n - _What can you figure out about the micro:bit and the code that makes it work?_\n\n- _The program responds to different **events** - can you work out what they are?_\n\n- _What **inputs** is the micro:bit using?_\n\n- _What **outputs** is it using?_\n",
+        "duration": "5",
+        "name": "Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "a215bfe0-9e9d-468d-ab98-e08043e046a7",
+        "lesson_activity.key": "a668e49e-4291-41a1-ab92-6cb758142d0f"
+      }
+    },
+    {
+      "key": "232855a5-52a9-42d3-9b59-aa330f0bc8cc",
+      "position": 1,
+      "properties": {
+        "description": "Students work in pairs of small groups to investigate the micro:bit and identify events, inputs, outputs and any coding concepts they recognize. \n\n[Optional] They can record their findings with paper, whiteboards or electronically. For example it could be recorded in a table like below.\n\n![](https://images.code.org/085db8b0775f530475d79ca87f87a4dd-Screenshot 2024-04-18 at 8.29.07 AM.png)",
+        "duration": "20",
+        "name": "Examine the micro:bit"
+      },
+      "seeding_key": {
+        "activity_section.key": "232855a5-52a9-42d3-9b59-aa330f0bc8cc",
+        "lesson_activity.key": "15fa7f84-af70-41c2-800f-6e4042fdef8a"
+      }
+    },
+    {
+      "key": "4f9e7655-0f19-42ee-8df9-8c8ecab071ef",
+      "position": 2,
+      "properties": {
+        "description": "**Do this:** Students should...\n- Connect to a power source (battery pack) and notice what happens to the micro:bit.\n- Press button A to see a zooming square animation. _Does it repeat?_ _How many times?_ _Does it get faster or slower?_ _What computing concepts might be making this work?_\n- Press button B to see text scroll accross the display. _Where else do you see visual information displayed like this?_ _What might they use it for on the micro:bit?_\n- Press buttons A and B together to make a sun or moon appear. _Can you figure out what is making the image appear?_ ",
+        "duration": "10",
+        "name": "Explore the “Meet your micro:bit” project"
+      },
+      "seeding_key": {
+        "activity_section.key": "4f9e7655-0f19-42ee-8df9-8c8ecab071ef",
+        "lesson_activity.key": "15fa7f84-af70-41c2-800f-6e4042fdef8a"
+      }
+    },
+    {
+      "key": "997bba49-f180-4067-ac31-331b015c9663",
+      "position": 3,
       "properties": {
         "progression_name": "Meet your micro:bit"
       },
       "seeding_key": {
-        "activity_section.key": "39e055c1-b58e-40d9-af70-8cd830b3aaa0",
-        "lesson_activity.key": "f430ee6c-9834-4d3b-9aaf-2f60386441c5"
+        "activity_section.key": "997bba49-f180-4067-ac31-331b015c9663",
+        "lesson_activity.key": "15fa7f84-af70-41c2-800f-6e4042fdef8a"
       }
     },
     {
-      "key": "a949a200-700a-4907-8cab-19dbe06049e6",
-      "position": 2,
-      "properties": {
-        "progression_name": "Matching Game (Optional)"
-      },
-      "seeding_key": {
-        "activity_section.key": "a949a200-700a-4907-8cab-19dbe06049e6",
-        "lesson_activity.key": "f430ee6c-9834-4d3b-9aaf-2f60386441c5"
-      }
-    },
-    {
-      "key": "f90547b7-ad2d-4bec-9a8c-82e93e725eb6",
+      "key": "c2584679-35d8-48cc-b749-3cf3f16472ad",
       "position": 1,
       "properties": {
-        "progression_name": "Emotion Badge"
+        "description": "**Do this**: Show the code for the **<a href=\"https://mbit.io/csf-1-project\" target=\"_blank\">Meet your micro:bit project.</a>**  \n\n**Discuss:** \n- _What did you discover today when using the micro:bits?_\n- _What computing concepts do you already know that are used to make this project work?_ \n\n**Discussion Goal:** Talk about as many of the event blocks as is appropriate to the time available and students' prior learning.",
+        "duration": "10",
+        "name": "Discussion"
       },
       "seeding_key": {
-        "activity_section.key": "f90547b7-ad2d-4bec-9a8c-82e93e725eb6",
-        "lesson_activity.key": "34f3d454-ad69-4b3f-9f47-aaa202cbd4ec"
+        "activity_section.key": "c2584679-35d8-48cc-b749-3cf3f16472ad",
+        "lesson_activity.key": "897a0936-7d3e-4f0f-b9f4-696707eb9db3"
       }
     },
     {
-      "key": "9743c9ca-c9f3-480e-b2d8-80530e9484e8",
-      "position": 2,
+      "key": "fb058fdc-cbb8-4aad-8709-fbcb5a37a264",
+      "position": 1,
       "properties": {
-        "progression_name": "JuiceMind Quiz"
+        "description": "You can use any of these resources to support an optional follow-up lesson, where students recreate the code for themselves and practice transferring the code to their micro:bits. You can further challenge them to remix the code to add more inputs and outputs.\n\n- Introduction <a href=\"https://mbit.io/csf-1-intro\" target=\"_blank\">video</a>\n- Step-by-step coding <a href=\"https://mbit.io/csf-1-coding\" target=\"_blank\">video</a>\n- Completed <a href=\"https://mbit.io/csf-1-project\" target=\"_blank\">MakeCode project</a>\n- <a href=\"https://mbit.io/csf-1-classroom\" target=\"_blank\">micro:bit classroom session</a>\n- <a href=\"https://mbit.io/csf-1-make\" target=\"_blank\">Project page</a>"
       },
       "seeding_key": {
-        "activity_section.key": "9743c9ca-c9f3-480e-b2d8-80530e9484e8",
-        "lesson_activity.key": "34f3d454-ad69-4b3f-9f47-aaa202cbd4ec"
+        "activity_section.key": "fb058fdc-cbb8-4aad-8709-fbcb5a37a264",
+        "lesson_activity.key": "fda20978-120c-4c87-b3c6-d81bf1371d39"
+      }
+    },
+    {
+      "key": "5803c4e3-6087-4720-b687-389cfd9f5023",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Do this:** Teacher instructions\n\n**Say:** Teacher instructions to students\n\n**Discuss:** List out discussion questions\n\n**Discussion goal:** Give the goal for discussion questions"
+      },
+      "seeding_key": {
+        "activity_section.key": "5803c4e3-6087-4720-b687-389cfd9f5023",
+        "lesson_activity.key": "82ee70ef-94d2-4c20-bbfb-e6e8bc306501"
+      }
+    },
+    {
+      "key": "28436c60-f34f-472b-83de-b6b1205b4d8a",
+      "position": 2,
+      "properties": {
+        "description": "##Header\n\n**bolded word**\n\n_italics_\n- bullet point\n    - more indented bullet point\n- _italics in a bullet point list_\n\n\n&nbsp\n\nspace"
+      },
+      "seeding_key": {
+        "activity_section.key": "28436c60-f34f-472b-83de-b6b1205b4d8a",
+        "lesson_activity.key": "82ee70ef-94d2-4c20-bbfb-e6e8bc306501"
+      }
+    },
+    {
+      "key": "7b67167e-a577-477a-884c-a6c89c7870e4",
+      "position": 3,
+      "properties": {
+        "description": " 1. Numbered list\n2. Second item"
+      },
+      "seeding_key": {
+        "activity_section.key": "7b67167e-a577-477a-884c-a6c89c7870e4",
+        "lesson_activity.key": "82ee70ef-94d2-4c20-bbfb-e6e8bc306501"
+      }
+    },
+    {
+      "key": "1e7fa8a5-9ce2-4b70-8f4a-bfe7af537b3d",
+      "position": 4,
+      "properties": {
+        "description": "<img style=\"float: right;\" src=\"https://curriculum.code.org/media/uploads/floss_sm.gif\">"
+      },
+      "seeding_key": {
+        "activity_section.key": "1e7fa8a5-9ce2-4b70-8f4a-bfe7af537b3d",
+        "lesson_activity.key": "82ee70ef-94d2-4c20-bbfb-e6e8bc306501"
+      }
+    },
+    {
+      "key": "bd0c4c55-39f0-433a-9e99-55037ea80687",
+      "position": 5,
+      "properties": {
+        "description": "This is my video <a href=\"https://mbit.io/csf-1-lesson-guide\" target=\"_blank\">link.</a>"
+      },
+      "seeding_key": {
+        "activity_section.key": "bd0c4c55-39f0-433a-9e99-55037ea80687",
+        "lesson_activity.key": "82ee70ef-94d2-4c20-bbfb-e6e8bc306501"
+      }
+    },
+    {
+      "key": "3841627e-f0b5-4446-8de4-5f735920d6c7",
+      "position": 1,
+      "properties": {
+        "description": "**Say**: Today's aim is to program the micro:bit to show different emotion images when you press different buttons. This could be used to help people who have difficulty reading facial expressions.\n\n[Option 1] **Do this**: Watch the **<a href=\"https://mbit.io/csf-c2-intro\" target=\"_blank\">introduction video.</a>**  \n\n[Option 2] **Do this:** Explore the **<a href=\"https://mbit.io/csf-c2-project\" target=\"_blank\">project</a>** uploaded onto micro:bits prior to the lesson. \n\n**Discuss** where these concepts are being used and where students may have used them before:\n- **Events**: actions that cause something to happen\n- **Inputs**: information computers get from users or sensors\n- **Outputs**: information users get from computers\n\n**Do this:** Share the **<a href=\"https://mbit.io/csf-c2-project\" target=\"_blank\">project</a>**  working in the simulator with your students and look at the code together prior to students coding the main activity.",
+        "duration": "10",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "3841627e-f0b5-4446-8de4-5f735920d6c7",
+        "lesson_activity.key": "70d810d6-9907-4a56-9a36-fd67aac6b50e"
+      }
+    },
+    {
+      "key": "04e69cd8-205f-49b6-9779-b7c940ac761b",
+      "position": 1,
+      "properties": {
+        "description": "Students will make the project themselves using the MakeCode editor and micro:bit simulator. Once they have tested their code in the simulator, they will download their code onto the micro:bits.\n\nPick one:\n- Step by step coding **<a href=\"https://mbit.io/csf-c2-coding\" target=\"_blank\">video</a>**\n- Live micro:bit **<a href=\"https://mbit.io/csf-c2-classroom\" target=\"_blank\">classroom session</a>** ",
+        "name": "Student Coding"
+      },
+      "seeding_key": {
+        "activity_section.key": "04e69cd8-205f-49b6-9779-b7c940ac761b",
+        "lesson_activity.key": "f8bc39a4-b4f6-4a17-bfa6-fea80fb467ee"
+      }
+    },
+    {
+      "key": "85db2bab-1b5e-4c7d-845c-37765f934778",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "85db2bab-1b5e-4c7d-845c-37765f934778",
+        "lesson_activity.key": "f8bc39a4-b4f6-4a17-bfa6-fea80fb467ee"
+      }
+    },
+    {
+      "key": "1be8937c-9f26-420b-a7eb-1fb0bf5d8284",
+      "position": 1,
+      "properties": {
+        "description": "Share student work, revisit key concepts used, and explore ideas for extended learning.",
+        "duration": "5",
+        "name": "Discussion"
+      },
+      "seeding_key": {
+        "activity_section.key": "1be8937c-9f26-420b-a7eb-1fb0bf5d8284",
+        "lesson_activity.key": "4cfb3840-3efd-4faa-90cc-2c5470c48232"
+      }
+    },
+    {
+      "key": "3df08198-a6fc-4943-8582-433ace669cc9",
+      "position": 1,
+      "properties": {
+        "description": "**A + B input**: Add another input block to react to the event when you press buttons A+B together. The output should show a different emotion.\n\n**Use the \"show LEDs\" block**: Design your own emotion.\n\n**Find this project and more on <a href=\"https://microbit.org\" target=\"_blank\">microbit.org</a>**"
+      },
+      "seeding_key": {
+        "activity_section.key": "3df08198-a6fc-4943-8582-433ace669cc9",
+        "lesson_activity.key": "6640ca94-4ba6-448e-a218-34b400f0fbd2"
       }
     },
     {
@@ -1299,47 +1580,63 @@
       }
     },
     {
-      "key": "e18d3478-dbe2-44dd-9ce0-fc7eda714219",
+      "key": "3f290a00-6a86-489b-9de8-fd847d9a3bc8",
       "position": 1,
       "properties": {
-        "progression_name": "Meet your micro:bit"
+        "description": "**Say**: Today's aim is to program a micro:bit to make a timed animation to help you regulate your breathing and relax. \n\n[Option 1] **Do this:** Watch the **<a href=\"https://mbit.io/csf-c3-intro\" target=\"_blank\">introduction video.</a>** \n\n[Option 2] **Do this:** Explore the **<a href=\"https://mbit.io/csf-c3-project\" target=\"_blank\"> project </a>** uploaded onto micro:bits prior to the lesson.\n\n**Discuss** where these concepts are being used and where students have used them before:\n\n- **Sequencing:** putting commands in correct order so computers can read them (e.g., the diamond animation on the LED display)\n- **Loop:** the action of doing something over and over again (e.g., to keep the animation going forever) \n\n**Do this:** Share the **<a href=\"https://mbit.io/csf-c3-project\" target=\"_blank\"> project </a>** working in the simulator with your students and look at the code together prior to students coding the main activity.",
+        "duration": "10",
+        "name": "Warm Up"
       },
       "seeding_key": {
-        "activity_section.key": "e18d3478-dbe2-44dd-9ce0-fc7eda714219",
-        "lesson_activity.key": "6589350e-4722-4ebc-8208-0b84007bce66"
+        "activity_section.key": "3f290a00-6a86-489b-9de8-fd847d9a3bc8",
+        "lesson_activity.key": "e0069f44-499d-4907-b53b-7c0097caaf8c"
       }
     },
     {
-      "key": "e18c7217-1980-4f60-854d-a0980e31df30",
-      "position": 2,
-      "properties": {
-        "progression_name": "Matching Game (Optional)"
-      },
-      "seeding_key": {
-        "activity_section.key": "e18c7217-1980-4f60-854d-a0980e31df30",
-        "lesson_activity.key": "6589350e-4722-4ebc-8208-0b84007bce66"
-      }
-    },
-    {
-      "key": "ce5804af-f79f-4429-9cfb-b9e2d760a6b6",
+      "key": "3dab69e2-0420-4261-822b-f977011e8bef",
       "position": 1,
       "properties": {
-        "progression_name": "Calming LEDs"
+        "description": "Students will make the project themselves using the MakeCode editor and micro:bit simulator. Once they have tested their code in the simulator, they will download their code onto the micro:bits.\n\nPick one:\n\n- Step by step coding **<a href=\"https://mbit.io/csf-c3-coding\" target=\"_blank\"> video </a>**\n- Live micro:bit **<a href=\"https://mbit.io/csf-c3-classroom\" target=\"_blank\"> classroom session </a>**",
+        "name": "Student Coding"
       },
       "seeding_key": {
-        "activity_section.key": "ce5804af-f79f-4429-9cfb-b9e2d760a6b6",
-        "lesson_activity.key": "aee1c063-fbf1-499a-90c4-a6b1b3fa4e15"
+        "activity_section.key": "3dab69e2-0420-4261-822b-f977011e8bef",
+        "lesson_activity.key": "8c41e379-4c07-4e72-9012-1875f882ad30"
       }
     },
     {
-      "key": "03fd31b3-69b1-458a-9dd0-9ba61ba3495a",
+      "key": "bfa71cc7-e457-41a5-885f-57f0d0d1acc3",
       "position": 2,
       "properties": {
-        "progression_name": "JuiceMind Quiz"
+        "progression_name": "Calming LEDs with micro:bit"
       },
       "seeding_key": {
-        "activity_section.key": "03fd31b3-69b1-458a-9dd0-9ba61ba3495a",
-        "lesson_activity.key": "aee1c063-fbf1-499a-90c4-a6b1b3fa4e15"
+        "activity_section.key": "bfa71cc7-e457-41a5-885f-57f0d0d1acc3",
+        "lesson_activity.key": "8c41e379-4c07-4e72-9012-1875f882ad30"
+      }
+    },
+    {
+      "key": "e3906435-3f85-4e7e-8a3e-68ff8b6a1def",
+      "position": 1,
+      "properties": {
+        "description": "Share student work, revisit key concepts used, and explore ideas for extended learning.",
+        "duration": "5",
+        "name": "Discussion"
+      },
+      "seeding_key": {
+        "activity_section.key": "e3906435-3f85-4e7e-8a3e-68ff8b6a1def",
+        "lesson_activity.key": "4b9cf311-a22e-4bbd-9683-7e806ba84f1d"
+      }
+    },
+    {
+      "key": "2fca4dda-52d0-45eb-bc90-4a2bb9173b27",
+      "position": 1,
+      "properties": {
+        "description": "**Pause blocks:** Change the times in the pause blocks to match your own preferred pace of breathing.\n\n**New images:** Create different images to replace the diamonds.\n\n**Find this project and more on <a href=\"https://mbit.io/csf-c3-make\" target=\"_blank\"> microbit.org </a>**"
+      },
+      "seeding_key": {
+        "activity_section.key": "2fca4dda-52d0-45eb-bc90-4a2bb9173b27",
+        "lesson_activity.key": "feb722cb-e2d6-40b2-9554-53d0209d0e05"
       }
     },
     {
@@ -1688,47 +1985,61 @@
       }
     },
     {
-      "key": "004eb3c8-79e2-4ba8-83b1-5f8e817fdfb3",
+      "key": "4f413d15-2fb4-487d-8a75-0adbd1d7d39c",
       "position": 1,
       "properties": {
-        "progression_name": "Meet your micro:bit"
+        "description": "**Say**: Today's aim is to make a clicker to count anything around you - like wildlife, traffic, or trash - as part of a data study.\n\n[Option 1] **Do this**: Watch the **<a href=\"https://mbit.io/csf-c4-intro\" target=\"_blank\">introduction video.</a>**  \n\n[Option 2] **Do this:** Explore the **<a href=\"https://mbit.io/csf-c4-project\" target=\"_blank\">project</a>** uploaded onto micro:bits prior to the lesson. \n\n**Discuss** where these concepts are being used and where students may have used them before:\n- **Data**: a collection of information (e.g., different things you can count with the micro:bit)\n- **Variable**: a label for a piece of information used in a program (e.g., the \"count\" variable used to track what you're counting)\n\n**Do this:** Share the **<a href=\"https://mbit.io/csf-c4-project\" target=\"_blank\">project</a>** working in the simulator with your students and look at the code together prior to students coding the main activity.",
+        "name": "Warm Up"
       },
       "seeding_key": {
-        "activity_section.key": "004eb3c8-79e2-4ba8-83b1-5f8e817fdfb3",
-        "lesson_activity.key": "8a686e12-9e31-41bb-bb8f-e85550f621ab"
+        "activity_section.key": "4f413d15-2fb4-487d-8a75-0adbd1d7d39c",
+        "lesson_activity.key": "1558cbb7-ee89-48da-ac63-0f436a630148"
       }
     },
     {
-      "key": "213b212e-727f-4d88-ba9c-f23f7467d054",
-      "position": 2,
-      "properties": {
-        "progression_name": "Matching Game (Optional)"
-      },
-      "seeding_key": {
-        "activity_section.key": "213b212e-727f-4d88-ba9c-f23f7467d054",
-        "lesson_activity.key": "8a686e12-9e31-41bb-bb8f-e85550f621ab"
-      }
-    },
-    {
-      "key": "2a45eed6-43d6-445c-acf6-e465970ed3a8",
+      "key": "5eb5e0b8-73b1-43c0-aabe-151275cf33ba",
       "position": 1,
       "properties": {
-        "progression_name": "Counter"
+        "description": "Students will make the project themselves using the MakeCode editor and micro:bit simulator. Once they have tested their code in the simulator, they will download their code onto the micro:bits.\n\nPick one:\n\n- Step by step coding **<a href=\"https://mbit.io/csf-c4-coding\" target=\"_blank\">video.</a>**  \n- Live micro:bit **<a href=\"https://mbit.io/csf-c4-classroom\" target=\"_blank\">classroom session.</a>**  ",
+        "name": "Student Coding"
       },
       "seeding_key": {
-        "activity_section.key": "2a45eed6-43d6-445c-acf6-e465970ed3a8",
-        "lesson_activity.key": "fab02723-90c1-401f-9e66-d2e80e2d7212"
+        "activity_section.key": "5eb5e0b8-73b1-43c0-aabe-151275cf33ba",
+        "lesson_activity.key": "95d0095a-d8b6-40fa-9ceb-e13b5407d171"
       }
     },
     {
-      "key": "575e0439-bcd7-4079-95ef-d918e21c90dc",
+      "key": "ba873947-617b-47d4-87d5-37a75c6a007b",
       "position": 2,
       "properties": {
-        "progression_name": "JuiceMind Quiz"
+        "progression_name": "Counter with micro:bit"
       },
       "seeding_key": {
-        "activity_section.key": "575e0439-bcd7-4079-95ef-d918e21c90dc",
-        "lesson_activity.key": "fab02723-90c1-401f-9e66-d2e80e2d7212"
+        "activity_section.key": "ba873947-617b-47d4-87d5-37a75c6a007b",
+        "lesson_activity.key": "95d0095a-d8b6-40fa-9ceb-e13b5407d171"
+      }
+    },
+    {
+      "key": "c7c15b0f-8dff-4092-9a77-9eee5ab57bbf",
+      "position": 1,
+      "properties": {
+        "description": "Share student work, revisit key concepts used, and explore ideas for extended learning.",
+        "name": "Discussion"
+      },
+      "seeding_key": {
+        "activity_section.key": "c7c15b0f-8dff-4092-9a77-9eee5ab57bbf",
+        "lesson_activity.key": "86f556e2-92e2-4f6b-b0e0-0462339921f4"
+      }
+    },
+    {
+      "key": "17522ca7-1ac2-4c72-9473-005126abcacf",
+      "position": 1,
+      "properties": {
+        "description": "**Data collection:** Use this \"counter\" project to collect data which your students can then visualize in different ways as part of a math lesson.\n\n**Reach a target:** Show a heart or another picture when you reach a certain number - it could be your target for jumping jacks or another activity.\n\n**Find this project and more on <a href=\"https://microbit.org\" target=\"_blank\">microbit.org</a>**"
+      },
+      "seeding_key": {
+        "activity_section.key": "17522ca7-1ac2-4c72-9473-005126abcacf",
+        "lesson_activity.key": "1376efc3-ff60-40ac-b87f-e0e953e0234e"
       }
     }
   ],
@@ -2049,10 +2360,10 @@
         "script_level.level_keys": [
           "course_c_maker_meet_your_microbit"
         ],
-        "lesson.key": "lesson-3",
+        "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "coursec-maker-2024",
-        "activity_section.key": "39e055c1-b58e-40d9-af70-8cd830b3aaa0"
+        "activity_section.key": "997bba49-f180-4067-ac31-331b015c9663"
       },
       "level_keys": [
         "course_c_maker_meet_your_microbit"
@@ -2060,81 +2371,30 @@
     },
     {
       "chapter": 14,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "course_c_maker_juicemind_bridging_activity_beginner"
-        ],
-        "progression": "Matching Game (Optional)"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "course_c_maker_juicemind_bridging_activity_beginner"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "coursec-maker-2024",
-        "activity_section.key": "a949a200-700a-4907-8cab-19dbe06049e6"
-      },
-      "level_keys": [
-        "course_c_maker_juicemind_bridging_activity_beginner"
-      ]
-    },
-    {
-      "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "course_c_maker_emotion_badge"
-        ],
-        "progression": "Emotion Badge"
+        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "course_c_maker_emotion_badge"
         ],
-        "lesson.key": "lesson-4",
+        "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "coursec-maker-2024",
-        "activity_section.key": "f90547b7-ad2d-4bec-9a8c-82e93e725eb6"
+        "activity_section.key": "85db2bab-1b5e-4c7d-845c-37765f934778"
       },
       "level_keys": [
         "course_c_maker_emotion_badge"
       ]
     },
     {
-      "chapter": 16,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "course_c_maker_juicemind_content_assessment_beginner"
-        ],
-        "progression": "JuiceMind Quiz"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "course_c_maker_juicemind_content_assessment_beginner"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "coursec-maker-2024",
-        "activity_section.key": "9743c9ca-c9f3-480e-b2d8-80530e9484e8"
-      },
-      "level_keys": [
-        "course_c_maker_juicemind_content_assessment_beginner"
-      ]
-    },
-    {
-      "chapter": 17,
+      "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2159,7 +2419,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2184,7 +2444,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 17,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2209,7 +2469,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 18,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2234,7 +2494,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 19,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -2259,7 +2519,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 20,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -2284,7 +2544,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 21,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -2309,7 +2569,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 22,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -2334,7 +2594,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 23,
       "position": 8,
       "activity_section_position": 5,
       "assessment": false,
@@ -2359,7 +2619,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 24,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -2385,7 +2645,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 25,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -2410,7 +2670,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 26,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
@@ -2435,7 +2695,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 27,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -2460,7 +2720,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 28,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -2485,7 +2745,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 29,
       "position": 14,
       "activity_section_position": 2,
       "assessment": false,
@@ -2510,57 +2770,7 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "course_c_maker_meet_your_microbit_2"
-        ],
-        "progression": "Meet your micro:bit"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "course_c_maker_meet_your_microbit_2"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "coursec-maker-2024",
-        "activity_section.key": "e18d3478-dbe2-44dd-9ce0-fc7eda714219"
-      },
-      "level_keys": [
-        "course_c_maker_meet_your_microbit_2"
-      ]
-    },
-    {
-      "chapter": 33,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "course_c_maker_juicemind_bridging_activity_intermediate"
-        ],
-        "progression": "Matching Game (Optional)"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "course_c_maker_juicemind_bridging_activity_intermediate"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "coursec-maker-2024",
-        "activity_section.key": "e18c7217-1980-4f60-854d-a0980e31df30"
-      },
-      "level_keys": [
-        "course_c_maker_juicemind_bridging_activity_intermediate"
-      ]
-    },
-    {
-      "chapter": 34,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2568,49 +2778,24 @@
         "level_keys": [
           "course_c_maker_calming_leds"
         ],
-        "progression": "Calming LEDs"
+        "progression": "Calming LEDs with micro:bit"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "course_c_maker_calming_leds"
         ],
-        "lesson.key": "lesson-6",
+        "lesson.key": "lesson-10",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "coursec-maker-2024",
-        "activity_section.key": "ce5804af-f79f-4429-9cfb-b9e2d760a6b6"
+        "activity_section.key": "bfa71cc7-e457-41a5-885f-57f0d0d1acc3"
       },
       "level_keys": [
         "course_c_maker_calming_leds"
       ]
     },
     {
-      "chapter": 35,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "course_c_maker_juicemind_content_assessment_intermediate"
-        ],
-        "progression": "JuiceMind Quiz"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "course_c_maker_juicemind_content_assessment_intermediate"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "coursec-maker-2024",
-        "activity_section.key": "03fd31b3-69b1-458a-9dd0-9ba61ba3495a"
-      },
-      "level_keys": [
-        "course_c_maker_juicemind_content_assessment_intermediate"
-      ]
-    },
-    {
-      "chapter": 36,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2635,7 +2820,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2660,7 +2845,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 33,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2685,7 +2870,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 34,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2710,7 +2895,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 35,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -2735,7 +2920,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 36,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -2760,7 +2945,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 37,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -2785,7 +2970,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 38,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -2810,7 +2995,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 39,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -2835,7 +3020,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 40,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -2860,7 +3045,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 41,
       "position": 10,
       "activity_section_position": 4,
       "assessment": false,
@@ -2885,7 +3070,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 42,
       "position": 11,
       "activity_section_position": 5,
       "assessment": false,
@@ -2910,57 +3095,7 @@
       ]
     },
     {
-      "chapter": 48,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "course_c_maker_meet_your_microbit_3"
-        ],
-        "progression": "Meet your micro:bit"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "course_c_maker_meet_your_microbit_3"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "coursec-maker-2024",
-        "activity_section.key": "004eb3c8-79e2-4ba8-83b1-5f8e817fdfb3"
-      },
-      "level_keys": [
-        "course_c_maker_meet_your_microbit_3"
-      ]
-    },
-    {
-      "chapter": 49,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "course_c_maker_juicemind_bridging_activity_stretch"
-        ],
-        "progression": "Matching Game (Optional)"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "course_c_maker_juicemind_bridging_activity_stretch"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "coursec-maker-2024",
-        "activity_section.key": "213b212e-727f-4d88-ba9c-f23f7467d054"
-      },
-      "level_keys": [
-        "course_c_maker_juicemind_bridging_activity_stretch"
-      ]
-    },
-    {
-      "chapter": 50,
+      "chapter": 43,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2968,45 +3103,20 @@
         "level_keys": [
           "course_c_maker_counter"
         ],
-        "progression": "Counter"
+        "progression": "Counter with micro:bit"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "course_c_maker_counter"
         ],
-        "lesson.key": "lesson-2",
+        "lesson.key": "lesson-9",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "coursec-maker-2024",
-        "activity_section.key": "2a45eed6-43d6-445c-acf6-e465970ed3a8"
+        "activity_section.key": "ba873947-617b-47d4-87d5-37a75c6a007b"
       },
       "level_keys": [
         "course_c_maker_counter"
-      ]
-    },
-    {
-      "chapter": 51,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "course_c_maker_juicemind_content_assessment_stretch"
-        ],
-        "progression": "JuiceMind Quiz"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "course_c_maker_juicemind_content_assessment_stretch"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "coursec-maker-2024",
-        "activity_section.key": "575e0439-bcd7-4079-95ef-d918e21c90dc"
-      },
-      "level_keys": [
-        "course_c_maker_juicemind_content_assessment_stretch"
       ]
     }
   ],
@@ -3161,22 +3271,10 @@
         "script_level.level_keys": [
           "course_c_maker_meet_your_microbit"
         ],
-        "lesson.key": "lesson-3",
+        "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "coursec-maker-2024",
-        "activity_section.key": "39e055c1-b58e-40d9-af70-8cd830b3aaa0"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "course_c_maker_juicemind_bridging_activity_beginner",
-        "script_level.level_keys": [
-          "course_c_maker_juicemind_bridging_activity_beginner"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "coursec-maker-2024",
-        "activity_section.key": "a949a200-700a-4907-8cab-19dbe06049e6"
+        "activity_section.key": "997bba49-f180-4067-ac31-331b015c9663"
       }
     },
     {
@@ -3185,22 +3283,10 @@
         "script_level.level_keys": [
           "course_c_maker_emotion_badge"
         ],
-        "lesson.key": "lesson-4",
+        "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "coursec-maker-2024",
-        "activity_section.key": "f90547b7-ad2d-4bec-9a8c-82e93e725eb6"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "course_c_maker_juicemind_content_assessment_beginner",
-        "script_level.level_keys": [
-          "course_c_maker_juicemind_content_assessment_beginner"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "coursec-maker-2024",
-        "activity_section.key": "9743c9ca-c9f3-480e-b2d8-80530e9484e8"
+        "activity_section.key": "85db2bab-1b5e-4c7d-845c-37765f934778"
       }
     },
     {
@@ -3385,50 +3471,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "course_c_maker_meet_your_microbit_2",
-        "script_level.level_keys": [
-          "course_c_maker_meet_your_microbit_2"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "coursec-maker-2024",
-        "activity_section.key": "e18d3478-dbe2-44dd-9ce0-fc7eda714219"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "course_c_maker_juicemind_bridging_activity_intermediate",
-        "script_level.level_keys": [
-          "course_c_maker_juicemind_bridging_activity_intermediate"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "coursec-maker-2024",
-        "activity_section.key": "e18c7217-1980-4f60-854d-a0980e31df30"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "course_c_maker_calming_leds",
         "script_level.level_keys": [
           "course_c_maker_calming_leds"
         ],
-        "lesson.key": "lesson-6",
+        "lesson.key": "lesson-10",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "coursec-maker-2024",
-        "activity_section.key": "ce5804af-f79f-4429-9cfb-b9e2d760a6b6"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "course_c_maker_juicemind_content_assessment_intermediate",
-        "script_level.level_keys": [
-          "course_c_maker_juicemind_content_assessment_intermediate"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "coursec-maker-2024",
-        "activity_section.key": "03fd31b3-69b1-458a-9dd0-9ba61ba3495a"
+        "activity_section.key": "bfa71cc7-e457-41a5-885f-57f0d0d1acc3"
       }
     },
     {
@@ -3577,54 +3627,114 @@
     },
     {
       "seeding_key": {
-        "level.key": "course_c_maker_meet_your_microbit_3",
-        "script_level.level_keys": [
-          "course_c_maker_meet_your_microbit_3"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "coursec-maker-2024",
-        "activity_section.key": "004eb3c8-79e2-4ba8-83b1-5f8e817fdfb3"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "course_c_maker_juicemind_bridging_activity_stretch",
-        "script_level.level_keys": [
-          "course_c_maker_juicemind_bridging_activity_stretch"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "coursec-maker-2024",
-        "activity_section.key": "213b212e-727f-4d88-ba9c-f23f7467d054"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "course_c_maker_counter",
         "script_level.level_keys": [
           "course_c_maker_counter"
         ],
-        "lesson.key": "lesson-2",
+        "lesson.key": "lesson-9",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "coursec-maker-2024",
-        "activity_section.key": "2a45eed6-43d6-445c-acf6-e465970ed3a8"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "course_c_maker_juicemind_content_assessment_stretch",
-        "script_level.level_keys": [
-          "course_c_maker_juicemind_content_assessment_stretch"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "coursec-maker-2024",
-        "activity_section.key": "575e0439-bcd7-4079-95ef-d918e21c90dc"
+        "activity_section.key": "ba873947-617b-47d4-87d5-37a75c6a007b"
       }
     }
   ],
   "resources": [
+    {
+      "name": "[optional] CS talking points for code",
+      "url": "https://drive.google.com/file/d/1sNxwf9r42G1IYayXxaUC5W-sGbskDyY5/view?usp=sharing",
+      "key": "_optional_cs_talking_points_for_code",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "_optional_cs_talking_points_for_code"
+      }
+    },
+    {
+      "name": "[optional] How to put code onto micro:bit ",
+      "url": "https://drive.google.com/file/d/1Pk3SILaHv0OP6yQtWILf9C2GtcUBxJEt/view?usp=drive_link",
+      "key": "_optional_how_to_put_code_onto_micro_bit",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "_optional_how_to_put_code_onto_micro_bit"
+      }
+    },
+    {
+      "name": "Calming LEDs: Finished project",
+      "url": "https://mbit.io/csf-c3-project",
+      "key": "calming_leds_finished_products",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "calming_leds_finished_products"
+      }
+    },
+    {
+      "name": "Calming LEDs: Introduction Video",
+      "url": "https://mbit.io/csf-c3-intro",
+      "key": "calming_leds_introduction_video",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "calming_leds_introduction_video"
+      }
+    },
+    {
+      "name": "Calming LEDs: Step by step coding video",
+      "url": "https://mbit.io/csf-c3-coding",
+      "key": "calming_leds_step_by_step_coding_video",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "calming_leds_step_by_step_coding_video"
+      }
+    },
+    {
+      "name": "Counter: Finished project",
+      "url": "https://mbit.io/csf-c4-project",
+      "key": "counter_finished_project",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "counter_finished_project"
+      }
+    },
+    {
+      "name": "Counter: Introduction Video",
+      "url": "https://mbit.io/csf-c4-intro",
+      "key": "counter_introduction_video",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "counter_introduction_video"
+      }
+    },
+    {
+      "name": "Counter: Step by step coding video",
+      "url": "https://mbit.io/csf-c4-coding",
+      "key": "counter_step_by_step_coding_video",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "counter_step_by_step_coding_video"
+      }
+    },
     {
       "name": "CS Fundamentals Main Activity Tips",
       "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
@@ -3636,6 +3746,42 @@
       },
       "seeding_key": {
         "resource.key": "cs_fundamentals_main_activity_tips"
+      }
+    },
+    {
+      "name": "CS talking points for code",
+      "url": "https://drive.google.com/file/d/1hL1nFtd8SQKpUhEETXIsBZqPPbpGWUEe/view?usp=drive_link",
+      "key": "cs_talking_points_for_code",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "cs_talking_points_for_code"
+      }
+    },
+    {
+      "name": "CS talking points for code",
+      "url": "https://drive.google.com/file/d/1PlYwXiCMg5Alb-swlvnVxEQrTt_4gj6T/view?usp=drive_link",
+      "key": "cs_talking_points_for_code_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "cs_talking_points_for_code_1"
+      }
+    },
+    {
+      "name": "CS talking points for code",
+      "url": "https://drive.google.com/file/d/1GqlElPUE5Y9KC7bNz8A3YOZmSs0CjbKp/view?usp=drive_link",
+      "key": "cs_talking_points_for_code_2",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "cs_talking_points_for_code_2"
       }
     },
     {
@@ -3678,6 +3824,18 @@
       }
     },
     {
+      "name": "Emotion Badge: Introduction Video",
+      "url": "https://www.youtube.com/watch?v=wSXwc3rlJ7s",
+      "key": "emotion_badge_introduction_video",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "emotion_badge_introduction_video"
+      }
+    },
+    {
       "name": "Event Controller",
       "url": "https://code.org/curriculum/course2/15/Activity15-TheBigEvent.pdf",
       "key": "event_controller",
@@ -3701,6 +3859,30 @@
       }
     },
     {
+      "name": "Meet your micro:bit - Finished project",
+      "url": "https://mbit.io/csf-1-project",
+      "key": "finished_project",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "finished_project"
+      }
+    },
+    {
+      "name": "Emotion Badge: Finished project",
+      "url": "https://mbit.io/csf-c2-project",
+      "key": "finished_project_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "finished_project_1"
+      }
+    },
+    {
       "name": "Graphing Data from Play Lab",
       "url": "https://docs.google.com/document/d/177NVkzjc--XVvd5jssO5TZolUTzz9SD5pAw1DazflQ8/edit#heading=h.v577cjs0yrx5",
       "key": "graphing_data_from_play_lab",
@@ -3710,6 +3892,66 @@
       },
       "seeding_key": {
         "resource.key": "graphing_data_from_play_lab"
+      }
+    },
+    {
+      "name": "Live micro:bit classroom session",
+      "url": "https://mbit.io/csf-c2-classroom",
+      "key": "live_micro_bit_classroom_session",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "live_micro_bit_classroom_session"
+      }
+    },
+    {
+      "name": "Live micro:bit classroom session",
+      "url": "https://mbit.io/csf-c3-classroom",
+      "key": "live_micro_bit_classroom_session_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "live_micro_bit_classroom_session_1"
+      }
+    },
+    {
+      "name": "Live micro:bit classroom session",
+      "url": "https://mbit.io/csf-c4-classroom",
+      "key": "live_micro_bit_classroom_session_2",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "live_micro_bit_classroom_session_2"
+      }
+    },
+    {
+      "name": "MakeCode editor",
+      "url": "https://makecode.microbit.org/#editor",
+      "key": "makecode_editors",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "makecode_editors"
+      }
+    },
+    {
+      "name": "Meet your micro:bit video guide",
+      "url": "https://mbit.io/csf-1-lesson-guide",
+      "key": "meet_your_micro_bit_video_guide",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "meet_your_micro_bit_video_guide"
       }
     },
     {
@@ -3809,6 +4051,18 @@
       },
       "seeding_key": {
         "resource.key": "spotify_playlist_all_ages_"
+      }
+    },
+    {
+      "name": "Emotion Badge: Step by step coding video",
+      "url": "https://mbit.io/csf-c2-coding",
+      "key": "step_by_step_coding_video",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "step_by_step_coding_video"
       }
     },
     {
@@ -3974,6 +4228,126 @@
         "lesson.key": "Picturing Data",
         "resource.key": "graphing_data_from_play_lab"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "calming_leds_finished_products"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "calming_leds_introduction_video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "calming_leds_step_by_step_coding_video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "cs_talking_points_for_code_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "live_micro_bit_classroom_session_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "_optional_cs_talking_points_for_code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "_optional_how_to_put_code_onto_micro_bit"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "finished_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "makecode_editors"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "meet_your_micro_bit_video_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "cs_talking_points_for_code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "emotion_badge_introduction_video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "finished_project_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "live_micro_bit_classroom_session"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "step_by_step_coding_video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "counter_finished_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "counter_introduction_video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "counter_step_by_step_coding_video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "cs_talking_points_for_code_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "live_micro_bit_classroom_session_2"
+      }
     }
   ],
   "scripts_resources": [
@@ -4014,6 +4388,36 @@
       }
     },
     {
+      "key": "hardware",
+      "word": "Hardware",
+      "definition": "The physical, electronic parts of a computer system.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "hardware"
+      }
+    },
+    {
+      "key": "input",
+      "word": "Input",
+      "definition": "The information computers get from users or sensors. ",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "input"
+      }
+    },
+    {
+      "key": "light_emitting_diode_led_",
+      "word": "Light Emitting Diode (LED)",
+      "definition": "the micro:bit has 25 LEDs on the front arranged in a 5 x 5 grid for showing pictures, numbers, and words.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "light_emitting_diode_led_"
+      }
+    },
+    {
       "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
@@ -4024,6 +4428,46 @@
       }
     },
     {
+      "key": "makecode",
+      "word": "MakeCode",
+      "definition": "The microsoft block editor used for creating programs for your micro:bit. It's similar to Scratch and the block code editors used in CS Fundamentals.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "makecode"
+      }
+    },
+    {
+      "key": "micro_bit",
+      "word": "micro:bit",
+      "definition": "A tiny computer packed with sensors, inputs, and outputs.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "micro_bit"
+      }
+    },
+    {
+      "key": "output",
+      "word": "Output",
+      "definition": "The information users get from computers.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "output"
+      }
+    },
+    {
+      "key": "programming",
+      "word": "Programming",
+      "definition": "The art of creating a program.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "programming"
+      }
+    },
+    {
       "key": "repeat",
       "word": "Repeat",
       "definition": "To do something again.",
@@ -4031,6 +4475,56 @@
       },
       "seeding_key": {
         "vocabulary.key": "repeat"
+      }
+    },
+    {
+      "key": "sensor",
+      "word": "Sensor",
+      "definition": "A device that detects and records changes in the environment, such as the micro:bit's sensor for temperature, light, movement, and magnetism.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sensor"
+      }
+    },
+    {
+      "key": "sequencing",
+      "word": "Sequencing",
+      "definition": "Putting commands in correct order so computers can read them.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sequencing"
+      }
+    },
+    {
+      "key": "simulator",
+      "word": "Simulator",
+      "definition": "A pretend, or virtual, micro:bit in the MakeCode editor that lets you test your programs before transferring them to a real micro:bit.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "simulator"
+      }
+    },
+    {
+      "key": "software",
+      "word": "Software",
+      "definition": "Programs made of code that tell a computer what to do.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "software"
+      }
+    },
+    {
+      "key": "variable",
+      "word": "Variable",
+      "definition": "A label for a piece of information used in a program.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "variable"
       }
     }
   ],
@@ -4076,12 +4570,128 @@
         "lesson.key": "Picturing Data",
         "vocabulary.key": "graph"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "hardware"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "sequencing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "software"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "input"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "micro_bit"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "output"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "vocabulary.key": "light_emitting_diode_led_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "vocabulary.key": "makecode"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "vocabulary.key": "sensor"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "vocabulary.key": "simulator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "vocabulary.key": "data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "vocabulary.key": "graph"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "vocabulary.key": "variable"
+      }
     }
   ],
   "lessons_programming_expressions": [
 
   ],
   "objectives": [
+    {
+      "key": "0ccad91b-8029-4a1f-9bde-08efb839daf3",
+      "properties": {
+        "description": "Identify and fix errors in the program"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "0ccad91b-8029-4a1f-9bde-08efb839daf3"
+      }
+    },
+    {
+      "key": "0f6ba231-9363-4ba6-a3ee-baf8bb945651",
+      "properties": {
+        "description": "Program the micro:bit to present data visually"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "0f6ba231-9363-4ba6-a3ee-baf8bb945651"
+      }
+    },
     {
       "key": "133fe9ce-778b-48d0-9459-8f1f31f04891",
       "properties": {
@@ -4103,6 +4713,26 @@
       }
     },
     {
+      "key": "201ad086-a2b1-4b97-af6c-6df8acd1bc4e",
+      "properties": {
+        "description": "Program events on the micro:bit that are triggered by pressing button A or B"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "objective.key": "201ad086-a2b1-4b97-af6c-6df8acd1bc4e"
+      }
+    },
+    {
+      "key": "44bbb8ab-bf28-4e1d-b87e-b3eed36e792f",
+      "properties": {
+        "description": "Share projects with classmates"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "44bbb8ab-bf28-4e1d-b87e-b3eed36e792f"
+      }
+    },
+    {
       "key": "57170f84-3132-47e4-9ffe-eea871ed8768",
       "properties": {
         "description": "Recognize movements of the teacher as signals to start an action."
@@ -4110,6 +4740,16 @@
       "seeding_key": {
         "lesson.key": "Dance Party: Unplugged",
         "objective.key": "57170f84-3132-47e4-9ffe-eea871ed8768"
+      }
+    },
+    {
+      "key": "5e79c50d-ba6a-4fed-92a4-e8ae15c434f6",
+      "properties": {
+        "description": "Apply sequences and loops to program an animation on the micro:bit"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "5e79c50d-ba6a-4fed-92a4-e8ae15c434f6"
       }
     },
     {
@@ -4143,6 +4783,16 @@
       }
     },
     {
+      "key": "87b47da0-26f0-494b-9d9f-8a218ed79eaf",
+      "properties": {
+        "description": "Use a micro:bit and explore its capabilities"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "objective.key": "87b47da0-26f0-494b-9d9f-8a218ed79eaf"
+      }
+    },
+    {
       "key": "8904bbd8-fe6e-4493-b7bc-48292823a0c3",
       "properties": {
         "description": "Create a variable that stores information and changes over time"
@@ -4150,6 +4800,16 @@
       "seeding_key": {
         "lesson.key": "Counting with Variables",
         "objective.key": "8904bbd8-fe6e-4493-b7bc-48292823a0c3"
+      }
+    },
+    {
+      "key": "9d0d1114-9241-4b78-a555-190d9abd7343",
+      "properties": {
+        "description": "Use the simulator to test the program before transferring it to the micro:bit"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "objective.key": "9d0d1114-9241-4b78-a555-190d9abd7343"
       }
     },
     {
@@ -4173,6 +4833,16 @@
       }
     },
     {
+      "key": "ca47ea5e-c5cf-45fd-a6b4-58717c91b572",
+      "properties": {
+        "description": "View a micro:bit program and interpret how it works"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "objective.key": "ca47ea5e-c5cf-45fd-a6b4-58717c91b572"
+      }
+    },
+    {
       "key": "cd3531b0-4aa7-4098-87f7-18742a753fff",
       "properties": {
         "description": "Match blocks with the appropriate event handler."
@@ -4193,6 +4863,16 @@
       }
     },
     {
+      "key": "da6507ea-1f47-45c4-b330-1e08a8f23bca",
+      "properties": {
+        "description": "Use events to trigger actions when buttons A and/or B are pushed"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "da6507ea-1f47-45c4-b330-1e08a8f23bca"
+      }
+    },
+    {
       "key": "dadfa254-0f29-4147-bb0f-d94aaeb84870",
       "properties": {
         "description": "Decompose a shape into its largest repeatable sequence."
@@ -4210,6 +4890,16 @@
       "seeding_key": {
         "lesson.key": "My Loopy Robotic Friends Jr",
         "objective.key": "e334124d-9f23-4855-a745-a8dfd23faea5"
+      }
+    },
+    {
+      "key": "e41200f8-7282-4d16-8092-1f47669e5473",
+      "properties": {
+        "description": "Use vocabulary for hardware components"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "e41200f8-7282-4d16-8092-1f47669e5473"
       }
     },
     {
@@ -4361,6 +5051,83 @@
         "lesson.key": "Picturing Data",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-DA-07"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-DA-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-DA-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
       }
     }
   ],

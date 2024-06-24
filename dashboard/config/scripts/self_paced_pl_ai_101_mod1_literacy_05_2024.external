@@ -9,9 +9,9 @@ markdown <<MARKDOWN
 
 ## Educator’s Choice
 
-#### Choose one of the following scenarios, each of which demonstrates how a student or teacher might apply AI literacy skills.
+#### Read one of the following scenarios, each of which demonstrates how a student or teacher might apply AI literacy skills.
 
-#### In the next level, after you read the scenario you’ll identify what you would want to know in order to help support students and/or yourself in each situation.
+#### In the next level, you’ll identify what you would want to know in order to help support students and/or yourself in each situation.
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em; font-weight: bold;">Elementary Student</summary>
@@ -55,11 +55,5 @@ markdown <<MARKDOWN
 
 </p></div>
 </details>
-
-<br>
-
-#### If we as educators haven’t built our own AI literacy skills, then how are we supposed to support students on this journey?
-
-#### This is why we’re all here taking this course!
 
 MARKDOWN

@@ -8,7 +8,7 @@ import {getStore} from '@cdo/apps/redux';
 import QuickActionsCell from '@cdo/apps/templates/tables/QuickActionsCell';
 import {setRosterProvider} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import color from '../../util/color';
@@ -77,8 +77,9 @@ class SectionActionDropdown extends Component {
   /**
    * Returns the URL to the correct section to be edited
    */
-  editRedirectUrl = sectionId => {
-    const editSectionUrl = '/sections/' + sectionId + '/edit';
+  editRedirectUrl = (sectionId, isPl) => {
+    let editSectionUrl = '/sections/' + sectionId + '/edit';
+    editSectionUrl += isPl ? '?redirectToPage=my-professional-learning' : '';
     return editSectionUrl;
   };
 
@@ -114,7 +115,10 @@ class SectionActionDropdown extends Component {
       <span>
         <QuickActionsCell type={'header'}>
           <PopUpMenu.Item
-            href={this.editRedirectUrl(sectionData.id)}
+            href={this.editRedirectUrl(
+              sectionData.id,
+              sectionData.grades?.includes('pl')
+            )}
             className="edit-section-details-link"
           >
             {i18n.editSectionDetails()}

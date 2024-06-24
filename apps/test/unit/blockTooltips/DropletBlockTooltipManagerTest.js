@@ -1,10 +1,11 @@
-import {expect} from '../../util/reconfiguredChai';
 import sinon from 'sinon';
-import commonI18n from '@cdo/locale';
-
-import {DropletTooltipManagerStub} from './stubs';
 
 import DropletBlockTooltipManager from '@cdo/apps/blockTooltips/DropletBlockTooltipManager.js';
+import commonI18n from '@cdo/locale';
+
+import {expect} from '../../util/reconfiguredChai';
+
+import {DropletTooltipManagerStub} from './stubs';
 
 describe('DropletBlockTooltipManager', () => {
   afterEach(() => {

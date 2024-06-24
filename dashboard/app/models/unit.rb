@@ -375,20 +375,6 @@ class Unit < ApplicationRecord
     end
   end
 
-  # @return [Array<Unit>] An array of modern elementary units.
-  def self.modern_elementary_courses
-    Unit::CATEGORIES[:csf].map {|name| Unit.get_from_cache(name)}
-  end
-
-  # @param locale [String] An "xx-YY" locale string.
-  # @return [Boolean] Whether all the modern elementary courses are available in the given locale.
-  def self.modern_elementary_courses_available?(locale)
-    @modern_elementary_courses_available = modern_elementary_courses.all? do |unit|
-      supported_languages = unit.supported_locales || []
-      supported_languages.any? {|s| locale.casecmp?(s)}
-    end
-  end
-
   def starting_level
     raise "Unit #{name} has no level to start at" if script_levels.empty?
     candidate_level = script_levels.first.or_next_progression_level
@@ -829,8 +815,8 @@ class Unit < ApplicationRecord
     name
   end
 
-  def self.unit_in_category?(category, script)
-    return Unit.get_from_cache(script)&.course_version&.course_offering&.category == category
+  def in_initiative?(initiative)
+    return cached&.course_version&.course_offering&.marketing_initiative == initiative
   end
 
   # Legacy levels have different video and title logic in LevelsHelper.
@@ -858,7 +844,7 @@ class Unit < ApplicationRecord
   end
 
   def csf_international?
-    Unit.unit_in_category?('csf_international', name)
+    ScriptConstants::CATEGORIES[:csf_international].include?(name)
   end
 
   def self.unit_names_by_curriculum_umbrella(curriculum_umbrella)
@@ -885,6 +871,7 @@ class Unit < ApplicationRecord
     lessons.sum(&:total_lesson_duration)
   end
 
+  # curriculum umbrella is deprecated. use in_initiative? instead.
   def under_curriculum_umbrella?(specific_curriculum_umbrella)
     curriculum_umbrella == specific_curriculum_umbrella
   end
@@ -928,7 +915,7 @@ class Unit < ApplicationRecord
   end
 
   def csc?
-    Unit.unit_in_category?('csc', name)
+    in_initiative?('CSC')
   end
 
   # TODO: (Dani) Update to use new course types framework.
@@ -1238,7 +1225,7 @@ class Unit < ApplicationRecord
         end
 
         source_course_version&.reference_guides&.each do |reference_guide|
-          reference_guide.copy_to_course_version(destination_unit_group.course_version)
+          reference_guide.copy_to_course_version(copied_unit.get_course_version)
         end
 
         if destination_professional_learning_course.nil?
@@ -1617,7 +1604,8 @@ class Unit < ApplicationRecord
     include_lessons = false
     summary = summarize(include_lessons)
     summary[:lesson_groups] = lesson_groups.map(&:summarize_for_unit_edit)
-    summary[:courseOfferingEditPath] = edit_course_offering_path(course_version.course_offering.key) if course_version
+    summary[:courseOfferingEditPath] = edit_course_offering_path(course_version&.course_offering&.key) if course_version
+    summary[:missingRequiredDeviceCompatibilities] = course_version&.course_offering&.missing_required_device_compatibility?
     summary[:coursePublishedState] = unit_group ? unit_group.published_state : published_state
     summary[:unitPublishedState] = unit_group ? published_state : nil
     summary[:isCSDCourseOffering] = unit_group&.course_version&.course_offering&.csd?
@@ -1924,11 +1912,6 @@ class Unit < ApplicationRecord
     }
   end
 
-  private def teacher_feedback_enabled?
-    initiative = get_course_version&.course_offering&.marketing_initiative
-    TEACHER_FEEDBACK_INITIATIVES.include? initiative
-  end
-
   def summarize_for_assignment_dropdown
     [
       id,
@@ -2104,5 +2087,10 @@ class Unit < ApplicationRecord
   # send students on the last level of a lesson to the unit overview page.
   def show_unit_overview_between_lessons?
     middle_high? || ['vpl-csd-summer-pilot'].include?(get_course_version&.course_offering&.key)
+  end
+
+  private def teacher_feedback_enabled?
+    initiative = get_course_version&.course_offering&.marketing_initiative
+    TEACHER_FEEDBACK_INITIATIVES.include? initiative
   end
 end

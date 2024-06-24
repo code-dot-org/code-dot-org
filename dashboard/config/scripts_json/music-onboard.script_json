@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "music-onboard",
-    "serialized_at": "2024-04-10 22:50:07 UTC",
+    "serialized_at": "2024-04-18 03:20:03 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -35,7 +35,7 @@
   "lessons": [
     {
       "key": "Music Intro",
-      "name": "Music Intro",
+      "name": "Music Onboard",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -69,98 +69,12 @@
   ],
   "activity_sections": [
     {
-      "key": "80e76f33-8032-492c-93af-80abe75d6283",
+      "key": "ee87828d-f4b8-4578-a685-8b2945bfec2d",
       "position": 1,
       "properties": {
-        "name": "Intro",
-        "progression_name": "Intro"
       },
       "seeding_key": {
-        "activity_section.key": "80e76f33-8032-492c-93af-80abe75d6283",
-        "lesson_activity.key": "8de97b41-20d5-4904-b593-7c32adb7acf7"
-      }
-    },
-    {
-      "key": "82f1e231-ce7f-4db7-9b20-5bbfdbbd1de1",
-      "position": 2,
-      "properties": {
-        "name": "Change a sound",
-        "progression_name": "Change a sound"
-      },
-      "seeding_key": {
-        "activity_section.key": "82f1e231-ce7f-4db7-9b20-5bbfdbbd1de1",
-        "lesson_activity.key": "8de97b41-20d5-4904-b593-7c32adb7acf7"
-      }
-    },
-    {
-      "key": "7b7e2a01-115d-43bf-96da-d2e2e911c24f",
-      "position": 3,
-      "properties": {
-        "name": "Play a sound",
-        "progression_name": "Play a sound"
-      },
-      "seeding_key": {
-        "activity_section.key": "7b7e2a01-115d-43bf-96da-d2e2e911c24f",
-        "lesson_activity.key": "8de97b41-20d5-4904-b593-7c32adb7acf7"
-      }
-    },
-    {
-      "key": "c2b9ae82-396d-452a-bfd7-6981f8972c1c",
-      "position": 4,
-      "properties": {
-        "name": "Play together",
-        "progression_name": "Play together"
-      },
-      "seeding_key": {
-        "activity_section.key": "c2b9ae82-396d-452a-bfd7-6981f8972c1c",
-        "lesson_activity.key": "8de97b41-20d5-4904-b593-7c32adb7acf7"
-      }
-    },
-    {
-      "key": "6800a1a1-c675-4a3f-86c1-086db3fcab6e",
-      "position": 5,
-      "properties": {
-        "name": "Repeat",
-        "progression_name": "Repeat"
-      },
-      "seeding_key": {
-        "activity_section.key": "6800a1a1-c675-4a3f-86c1-086db3fcab6e",
-        "lesson_activity.key": "8de97b41-20d5-4904-b593-7c32adb7acf7"
-      }
-    },
-    {
-      "key": "b6cd1caa-ba26-43c5-893a-12428a107e95",
-      "position": 6,
-      "properties": {
-        "name": "Functions",
-        "progression_name": "Functions"
-      },
-      "seeding_key": {
-        "activity_section.key": "b6cd1caa-ba26-43c5-893a-12428a107e95",
-        "lesson_activity.key": "8de97b41-20d5-4904-b593-7c32adb7acf7"
-      }
-    },
-    {
-      "key": "67f784b2-b78f-45e2-a36f-d518d5c723d8",
-      "position": 7,
-      "properties": {
-        "name": "Play live",
-        "progression_name": "Play live"
-      },
-      "seeding_key": {
-        "activity_section.key": "67f784b2-b78f-45e2-a36f-d518d5c723d8",
-        "lesson_activity.key": "8de97b41-20d5-4904-b593-7c32adb7acf7"
-      }
-    },
-    {
-      "key": "449491ae-4fe6-404b-bba5-a52e51a82526",
-      "position": 8,
-      "properties": {
-        "name": "Outro",
-        "progression_name": "Outro"
-      },
-      "seeding_key": {
-        "activity_section.key": "449491ae-4fe6-404b-bba5-a52e51a82526",
+        "activity_section.key": "ee87828d-f4b8-4578-a685-8b2945bfec2d",
         "lesson_activity.key": "8de97b41-20d5-4904-b593-7c32adb7acf7"
       }
     }
@@ -172,306 +86,99 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Intro"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "musiclab_intro_panels_start_onboard"
+          "musiclab_intro_panels_start_2"
         ],
         "lesson.key": "Music Intro",
         "lesson_group.key": "",
         "script.name": "music-onboard",
-        "activity_section.key": "80e76f33-8032-492c-93af-80abe75d6283"
+        "activity_section.key": "ee87828d-f4b8-4578-a685-8b2945bfec2d"
       },
       "level_keys": [
-        "musiclab_intro_panels_start_onboard"
+        "musiclab_intro_panels_start_2"
       ]
     },
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Change a sound"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "musiclab_intro_change_sound_onboard"
+          "musiclab_intro_panels_function_2"
         ],
         "lesson.key": "Music Intro",
         "lesson_group.key": "",
         "script.name": "music-onboard",
-        "activity_section.key": "82f1e231-ce7f-4db7-9b20-5bbfdbbd1de1"
+        "activity_section.key": "ee87828d-f4b8-4578-a685-8b2945bfec2d"
       },
       "level_keys": [
-        "musiclab_intro_change_sound_onboard"
+        "musiclab_intro_panels_function_2"
       ]
     },
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Play a sound"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "musiclab_intro_play_sound_onboard"
+          "musiclab_intro_panels_end_2"
         ],
         "lesson.key": "Music Intro",
         "lesson_group.key": "",
         "script.name": "music-onboard",
-        "activity_section.key": "7b7e2a01-115d-43bf-96da-d2e2e911c24f"
+        "activity_section.key": "ee87828d-f4b8-4578-a685-8b2945bfec2d"
       },
       "level_keys": [
-        "musiclab_intro_play_sound_onboard"
-      ]
-    },
-    {
-      "chapter": 4,
-      "position": 4,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Play together"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "musiclab_intro_play_together_onboard"
-        ],
-        "lesson.key": "Music Intro",
-        "lesson_group.key": "",
-        "script.name": "music-onboard",
-        "activity_section.key": "c2b9ae82-396d-452a-bfd7-6981f8972c1c"
-      },
-      "level_keys": [
-        "musiclab_intro_play_together_onboard"
-      ]
-    },
-    {
-      "chapter": 5,
-      "position": 5,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Repeat"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "musiclab_intro_repeat_onboard"
-        ],
-        "lesson.key": "Music Intro",
-        "lesson_group.key": "",
-        "script.name": "music-onboard",
-        "activity_section.key": "6800a1a1-c675-4a3f-86c1-086db3fcab6e"
-      },
-      "level_keys": [
-        "musiclab_intro_repeat_onboard"
-      ]
-    },
-    {
-      "chapter": 6,
-      "position": 6,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Functions"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "musiclab_intro_panels_function_onboard"
-        ],
-        "lesson.key": "Music Intro",
-        "lesson_group.key": "",
-        "script.name": "music-onboard",
-        "activity_section.key": "b6cd1caa-ba26-43c5-893a-12428a107e95"
-      },
-      "level_keys": [
-        "musiclab_intro_panels_function_onboard"
-      ]
-    },
-    {
-      "chapter": 7,
-      "position": 7,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Functions"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "musiclab_intro_function_onboard"
-        ],
-        "lesson.key": "Music Intro",
-        "lesson_group.key": "",
-        "script.name": "music-onboard",
-        "activity_section.key": "b6cd1caa-ba26-43c5-893a-12428a107e95"
-      },
-      "level_keys": [
-        "musiclab_intro_function_onboard"
-      ]
-    },
-    {
-      "chapter": 8,
-      "position": 8,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Play live"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "musiclab_intro_trigger_onboard"
-        ],
-        "lesson.key": "Music Intro",
-        "lesson_group.key": "",
-        "script.name": "music-onboard",
-        "activity_section.key": "67f784b2-b78f-45e2-a36f-d518d5c723d8"
-      },
-      "level_keys": [
-        "musiclab_intro_trigger_onboard"
-      ]
-    },
-    {
-      "chapter": 9,
-      "position": 9,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Outro"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "musiclab_intro_panels_end_onboard"
-        ],
-        "lesson.key": "Music Intro",
-        "lesson_group.key": "",
-        "script.name": "music-onboard",
-        "activity_section.key": "449491ae-4fe6-404b-bba5-a52e51a82526"
-      },
-      "level_keys": [
-        "musiclab_intro_panels_end_onboard"
+        "musiclab_intro_panels_end_2"
       ]
     }
   ],
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "musiclab_intro_panels_start_onboard",
+        "level.key": "musiclab_intro_panels_start_2",
         "script_level.level_keys": [
-          "musiclab_intro_panels_start_onboard"
+          "musiclab_intro_panels_start_2"
         ],
         "lesson.key": "Music Intro",
         "lesson_group.key": "",
         "script.name": "music-onboard",
-        "activity_section.key": "80e76f33-8032-492c-93af-80abe75d6283"
+        "activity_section.key": "ee87828d-f4b8-4578-a685-8b2945bfec2d"
       }
     },
     {
       "seeding_key": {
-        "level.key": "musiclab_intro_change_sound_onboard",
+        "level.key": "musiclab_intro_panels_function_2",
         "script_level.level_keys": [
-          "musiclab_intro_change_sound_onboard"
+          "musiclab_intro_panels_function_2"
         ],
         "lesson.key": "Music Intro",
         "lesson_group.key": "",
         "script.name": "music-onboard",
-        "activity_section.key": "82f1e231-ce7f-4db7-9b20-5bbfdbbd1de1"
+        "activity_section.key": "ee87828d-f4b8-4578-a685-8b2945bfec2d"
       }
     },
     {
       "seeding_key": {
-        "level.key": "musiclab_intro_play_sound_onboard",
+        "level.key": "musiclab_intro_panels_end_2",
         "script_level.level_keys": [
-          "musiclab_intro_play_sound_onboard"
+          "musiclab_intro_panels_end_2"
         ],
         "lesson.key": "Music Intro",
         "lesson_group.key": "",
         "script.name": "music-onboard",
-        "activity_section.key": "7b7e2a01-115d-43bf-96da-d2e2e911c24f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "musiclab_intro_play_together_onboard",
-        "script_level.level_keys": [
-          "musiclab_intro_play_together_onboard"
-        ],
-        "lesson.key": "Music Intro",
-        "lesson_group.key": "",
-        "script.name": "music-onboard",
-        "activity_section.key": "c2b9ae82-396d-452a-bfd7-6981f8972c1c"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "musiclab_intro_repeat_onboard",
-        "script_level.level_keys": [
-          "musiclab_intro_repeat_onboard"
-        ],
-        "lesson.key": "Music Intro",
-        "lesson_group.key": "",
-        "script.name": "music-onboard",
-        "activity_section.key": "6800a1a1-c675-4a3f-86c1-086db3fcab6e"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "musiclab_intro_panels_function_onboard",
-        "script_level.level_keys": [
-          "musiclab_intro_panels_function_onboard"
-        ],
-        "lesson.key": "Music Intro",
-        "lesson_group.key": "",
-        "script.name": "music-onboard",
-        "activity_section.key": "b6cd1caa-ba26-43c5-893a-12428a107e95"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "musiclab_intro_function_onboard",
-        "script_level.level_keys": [
-          "musiclab_intro_function_onboard"
-        ],
-        "lesson.key": "Music Intro",
-        "lesson_group.key": "",
-        "script.name": "music-onboard",
-        "activity_section.key": "b6cd1caa-ba26-43c5-893a-12428a107e95"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "musiclab_intro_trigger_onboard",
-        "script_level.level_keys": [
-          "musiclab_intro_trigger_onboard"
-        ],
-        "lesson.key": "Music Intro",
-        "lesson_group.key": "",
-        "script.name": "music-onboard",
-        "activity_section.key": "67f784b2-b78f-45e2-a36f-d518d5c723d8"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "musiclab_intro_panels_end_onboard",
-        "script_level.level_keys": [
-          "musiclab_intro_panels_end_onboard"
-        ],
-        "lesson.key": "Music Intro",
-        "lesson_group.key": "",
-        "script.name": "music-onboard",
-        "activity_section.key": "449491ae-4fe6-404b-bba5-a52e51a82526"
+        "activity_section.key": "ee87828d-f4b8-4578-a685-8b2945bfec2d"
       }
     }
   ],

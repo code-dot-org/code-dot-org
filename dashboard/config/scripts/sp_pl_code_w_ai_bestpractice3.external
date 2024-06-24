@@ -1,0 +1,54 @@
+name 'sp-pl-Code_w_AI-bestpractice3'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Teaching Tips for Using LLMs in Class 
+
+#### Setting clear boundaries and limitations is essential when using AI to teach coding, ensuring that students engage with the technology honestly. By carefully structuring your lessons, like in this Coding with AI unit, you can maintain a dynamic and engaging learning environment while promoting integrity and ethical use of AI.
+
+## Prevent Overreliance and Cheating 
+#### Keep your your students in charge of their learning.
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🚦 Set Clear Expectations</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p style = "font-size: 16px;">
+  Set clear guidelines on appropriate LLM use before introducing it. Decide the level of AI use permitted for each assignment. Are students able to freely use AI, or are their more moderate or restrictive guidelines for how they can use AI on a given assignment? <br><br> <b>Lesson guides</b> in this unit model effective ways to set expectations with your students.
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">⚙️ Focus on the Learning Process</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p style = "font-size: 16px;">
+   Emphasize the importance of the learning journey, not just the final product. Have students document their learning process by showing where they used AI and how it helped. <br><br> The <b>digital journal</b> in this unit is a great example of this.
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">💡 Prioritize Understanding</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p style = "font-size: 16px;">
+   Structure activities that require students to demonstrate their own understanding, not just the LLM's capabilities.<br><br> <b>Lesson activities</b> in this unit are designed with peer interactions, discussions, and reflections to prioritize understanding. 
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">✅ Promote Responsible Use</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p style = "font-size: 16px;">
+   Emphasize the importance of using LLMs ethically and responsibly, avoiding plagiarism and ensuring that the work produced reflects their own understanding and effort. <br><br> Code.org's  <a href="https://code.org/ai" target="blank" rel="noopener noreferrer">Ethics and AI videos</a> help establish working knowledge of the ethical considerations of using AI. 
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">👍 Peer Review and Discussion</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p style = "font-size: 16px;">
+   Facilitate peer review sessions for code and writing to identify areas requiring deeper understanding.<br><br> <b>Lesson activities</b> in this unit are designed with peer interactions, discussions, and reflections to prioritize understanding.
+</p></div>
+</details>
+
+MARKDOWN

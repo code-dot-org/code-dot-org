@@ -25,13 +25,12 @@
 #
 class Pythonlab < Level
   serialized_attrs %w(
-    start_sources
+    source
     encrypted_exemplar_sources
     encrypted_validation
     hide_share_and_remix
     is_project_level
     submittable
-    encrypted_examples
     starter_assets
     contained_level_names
   )

@@ -1,9 +1,10 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactTooltip from 'react-tooltip';
-import _ from 'lodash';
-import TeacherInfoBox from '@cdo/apps/templates/progress/TeacherInfoBox';
+
 import HiddenForSectionToggle from '@cdo/apps/templates/progress/HiddenForSectionToggle';
+import TeacherInfoBox from '@cdo/apps/templates/progress/TeacherInfoBox';
 import i18n from '@cdo/locale';
 
 export default class CourseScriptTeacherInfo extends Component {

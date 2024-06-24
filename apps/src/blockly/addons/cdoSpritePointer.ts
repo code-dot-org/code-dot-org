@@ -3,6 +3,7 @@
 // This file contains functions to get and set the image on the pointer block.
 
 import {ExtendedBlockSvg, PointerMetadataMap} from '../types';
+
 import CdoFieldImage from './cdoFieldImage';
 
 /**

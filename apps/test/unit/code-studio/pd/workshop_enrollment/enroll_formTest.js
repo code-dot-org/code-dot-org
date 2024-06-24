@@ -1,6 +1,6 @@
 import React from 'react';
 import {assert, expect} from 'chai';
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import sinon from 'sinon';
 import jQuery from 'jquery';
 import {pick, omit} from 'lodash';

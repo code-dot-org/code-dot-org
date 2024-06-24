@@ -15,7 +15,7 @@ import teacherSections, {
   setSections,
   selectSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 export function fakeRowsForStudents(students) {
   const rows = [];

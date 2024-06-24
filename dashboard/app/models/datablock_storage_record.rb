@@ -20,8 +20,15 @@ class DatablockStorageRecord < ApplicationRecord
   # Composite primary key:
   self.primary_keys = :project_id, :table_name, :record_id
 
-  # TODO: #57001, implement enforcement of MAX_RECORD_LENGTH, we already have
-  # a test for this, but we're skipping it until this is implemented. This
-  # should ensure the string form of .json is less than 4096 bytes.
+  validate :max_record_length
+
+  StudentFacingError = DatablockStorageTable::StudentFacingError
+
   MAX_RECORD_LENGTH = 4096
+
+  private def max_record_length
+    if record_json.to_json.bytesize > MAX_RECORD_LENGTH
+      raise StudentFacingError.new(:MAX_RECORD_LENGTH_EXCEEDED), "The record is too large. The maximum allowable size is #{DatablockStorageRecord::MAX_RECORD_LENGTH} bytes ('characters')"
+    end
+  end
 end

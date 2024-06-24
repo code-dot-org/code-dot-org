@@ -31,6 +31,7 @@ describe I18n::Utils::CrowdinClient do
 
       client_config.expects(:api_token=).with(api_token).once
       client_config.expects(:project_id=).with(project_id).once
+      client_config.expects(:request_timeout=).with(120).once
 
       assert_equal client, described_instance.send(:client)
     end

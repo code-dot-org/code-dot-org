@@ -55,6 +55,9 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     FirebaseHelper.stubs(:delete_channel)
     FirebaseHelper.stubs(:delete_channels)
 
+    # Skip MailJet calls
+    MailJet.stubs(:delete_contact)
+
     # Global log used to check expected log output
     @log = StringIO.new
   end

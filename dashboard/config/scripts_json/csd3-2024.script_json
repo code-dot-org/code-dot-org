@@ -5,6 +5,7 @@
     "login_required": true,
     "properties": {
       "curriculum_umbrella": "CSD",
+      "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
@@ -16,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-28 18:19:51 UTC",
+    "serialized_at": "2024-06-12 23:20:42 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -16296,7 +16297,7 @@
     },
     {
       "name": "Collision Detection",
-      "url": "https://docs.google.com/presentation/d/1r4I_2bAd7GCqWPlIaQ_JaXr1UaIISo5TXCLvsXIiQiY/template/preview",
+      "url": "https://docs.google.com/presentation/d/1yKK_3UkcNSimxtJ4G9iP7K0D8b2_B19SrhkUcJyJR-g/template/preview",
       "key": "collision_detection_2",
       "properties": {
         "audience": "Teacher",
@@ -16334,7 +16335,7 @@
     },
     {
       "name": "Collisions",
-      "url": "https://docs.google.com/presentation/d/18nEJsDVITNK8jHkhfBSdtvwoHBB12DVnKtjm-MhYoxI/template/preview",
+      "url": "https://docs.google.com/presentation/d/1esa_3_MhBj8F10Om9besT5YQuYUjeRRz1FqIoQ_ipiA/template/preview",
       "key": "collisions",
       "properties": {
         "audience": "Teacher",
@@ -16346,7 +16347,7 @@
     },
     {
       "name": "Complex Sprite Movement",
-      "url": "https://docs.google.com/presentation/d/1r3fGTf_J1buSAn10_qBNJI4h8mHEGWOFatytHyQOVYQ/template/preview",
+      "url": "https://docs.google.com/presentation/d/1rXNodvpCUF-fQmmj13U9br5qInqyVCnPf6WER9xLi04/template/preview",
       "key": "complex_sprite_movement",
       "properties": {
         "audience": "Teacher",
@@ -16384,7 +16385,7 @@
     },
     {
       "name": "Conditionals",
-      "url": "https://docs.google.com/presentation/d/1Pa444DLx4TBgZ1vaBgJMgHmaLSryolD7phxmdK7YQ2w/template/preview",
+      "url": "https://docs.google.com/presentation/d/1tDYqoKSIIlKJnxgjJwwDcRAVs-ghDBlQVF1nncM2d7Q/template/preview",
       "key": "conditionals",
       "properties": {
         "audience": "Teacher",
@@ -16485,7 +16486,7 @@
     },
     {
       "name": "Drawing in Game Lab",
-      "url": "https://docs.google.com/presentation/d/1kVwsZPhVrafAXXkK5qhWdfZeYKSEjK-eD6txmmWmPSA/template/preview",
+      "url": "https://docs.google.com/presentation/d/1bWhfO6YBUVSGQo6mGCiAvZpJfOy4MplwT4pecP17qHw/template/preview",
       "key": "drawing_in_game_lab",
       "properties": {
         "audience": "Teacher",
@@ -16684,7 +16685,7 @@
     },
     {
       "name": "Functions",
-      "url": "https://docs.google.com/presentation/d/1HX7a6aQXxnjvS99K0FDO0W7Kp23fnMNSHiHCYtcuD-s/view",
+      "url": "https://docs.google.com/presentation/d/1ClPlD6ff94HJUAMwSJ8e2yst6e_D5bpmim0Dp7cXR34/template/preview",
       "key": "functions_2",
       "properties": {
         "audience": "Teacher",
@@ -16836,7 +16837,7 @@
     },
     {
       "name": "Keyboard Input",
-      "url": "https://docs.google.com/presentation/d/1dxsWmBnyhc0pzGs5KjupRRNaYkXX8Ehdiebja2N0Yss/template/preview",
+      "url": "https://docs.google.com/presentation/d/1bgNOcwrT-n84tyNtGDbRKKAKx-49mP3nPlbS5V5cnZ0/template/preview",
       "key": "keyboard_input",
       "properties": {
         "audience": "Teacher",
@@ -16924,7 +16925,7 @@
     },
     {
       "name": "Mini-Project - Animation",
-      "url": "https://docs.google.com/presentation/d/1us7auvKet5Mdtd21WNeVH0p7CO8ZOiqHjVK6_SXGn0Y/template/preview",
+      "url": "https://docs.google.com/presentation/d/1K_axYLp1S_wR_WRnp0Epp_LDsNLsIuODCj6RPFUorog/template/preview",
       "key": "mini-project_-_animation",
       "properties": {
         "audience": "Teacher",
@@ -16936,7 +16937,7 @@
     },
     {
       "name": "Mini-Project - Captioned Scenes",
-      "url": "https://docs.google.com/presentation/d/1S843wg4O8Cxz12NagDW2nu8B0Taj1_pSvyvj4o85asc/template/preview",
+      "url": "https://docs.google.com/presentation/d/1tTLeCnyAHknY2SyxgqxDbg9sI7udaNPVw2C3-vHCCHw/template/preview",
       "key": "mini-project_-_captioned_scenes",
       "properties": {
         "audience": "Teacher",
@@ -16948,7 +16949,7 @@
     },
     {
       "name": "Mini-Project - Flyer Game",
-      "url": "https://docs.google.com/presentation/d/1qbOF9IpC97i4GDN1c1KieAb6XtVb6Lh7mon9WcdUM9Q/template/preview",
+      "url": "https://docs.google.com/presentation/d/1LaIaV9sm8aJYL27ByafjARzgNb3hIbJIumKBs0qnNQw/template/preview",
       "key": "mini-project_-_flyer_game",
       "properties": {
         "audience": "Teacher",
@@ -16960,7 +16961,7 @@
     },
     {
       "name": "Mini-Project - Robot Faces",
-      "url": "https://docs.google.com/presentation/d/1161OfiePgWMjWrrBoN4dHU2Srxna4tE8gVhj9OYTHgg/template/preview",
+      "url": "https://docs.google.com/presentation/d/1EJJ-JQKv7knPl8GXRWiEZkLE43WpEvJK5enuP9LDg6s/template/preview",
       "key": "mini-project_-_robot_faces",
       "properties": {
         "audience": "Teacher",
@@ -16984,7 +16985,7 @@
     },
     {
       "name": "Mini-Project - Side Scroller",
-      "url": "https://docs.google.com/presentation/d/1-Zd08aeFU9Po2Qa7EHi9pf870CUilb2pdHtR44s_h_U/template/preview",
+      "url": "https://docs.google.com/presentation/d/17XUl4Z08ksLJqmLJzNJwMkhvD8LrRAvp2whc560Q83A/template/preview",
       "key": "mini-project_-_side_scroller",
       "properties": {
         "audience": "Teacher",
@@ -17020,7 +17021,7 @@
     },
     {
       "name": "Mouse Input",
-      "url": "https://docs.google.com/presentation/d/1V_I3P7hFqxijePGNKF5V0RynQqv1_zYLJaBrQyhwpns/template/preview",
+      "url": "https://docs.google.com/presentation/d/1I3CWiaVL-m3q49m5J2FVSVGQK_HYJCYUUpO6ZPZsBNA/template/preview",
       "key": "mouse_input",
       "properties": {
         "audience": "Teacher",
@@ -17069,7 +17070,7 @@
     },
     {
       "name": "Plotting Shapes",
-      "url": "https://docs.google.com/presentation/d/1kAI6VK8GU8k-ounpUizwzLRdhjMfwF4M0yumF8-O9qc/template/preview",
+      "url": "https://docs.google.com/presentation/d/1O4bfdQmx_M8-AzAI0GmUKkErGlL26a-P1UC8D_2xqLs/template/preview",
       "key": "plotting_shapes",
       "properties": {
         "audience": "Teacher",
@@ -17107,7 +17108,7 @@
     },
     {
       "name": "Programming for a Purpose",
-      "url": "https://docs.google.com/presentation/d/1lR2Il6bOm-OHQltTtHO5XJ_p0q2J-3dye_RiCZW-sGY/template/preview",
+      "url": "https://docs.google.com/presentation/d/1QJTgXE4bO3hyMxdrDk9wucshxaaBFpcas5MoCX-DNE8/template/preview",
       "key": "programming_for_a_purpose",
       "properties": {
         "audience": "Teacher",
@@ -17119,7 +17120,7 @@
     },
     {
       "name": "Project - Design a Game",
-      "url": "https://docs.google.com/presentation/d/14RyASPSwS_vT1jf_OWromepRlsN8LQtQiAnLj2qzXVQ/template/preview",
+      "url": "https://docs.google.com/presentation/d/1P_XWf1rcbsmTw4xycNfyIIgdxWONj287ylxsYbTnOR8/template/preview",
       "key": "project_-_design_a_game",
       "properties": {
         "audience": "Teacher",
@@ -17131,7 +17132,7 @@
     },
     {
       "name": "Project - Interactive Card",
-      "url": "https://docs.google.com/presentation/d/1VymZrgMdUtcehg9rA2u-IGevR5rptmlNRkeuHRmwisw/template/preview",
+      "url": "https://docs.google.com/presentation/d/1WPiFVLFkuA0kYii9_XA65cTgdhNJp6A2L4CR40P7KBo/template/preview",
       "key": "project_-_interactive_card",
       "properties": {
         "audience": "Teacher",
@@ -17166,7 +17167,7 @@
     },
     {
       "name": "Random Numbers",
-      "url": "https://docs.google.com/presentation/d/1gYcOnHhQRTTNDFj1s1Anfu5XkrkeCPk_9N7GmLCLzFo/template/preview",
+      "url": "https://docs.google.com/presentation/d/1wGEmc5Le7yplEoDzGSvWeaNxSxXCLUgu3f9DPZIwzF0/template/preview",
       "key": "random_numbers_1",
       "properties": {
         "audience": "Teacher",
@@ -17226,7 +17227,7 @@
     },
     {
       "name": "Shapes and Parameters",
-      "url": "https://docs.google.com/presentation/d/1apejlCGeW2ptqIoFWTcy-WqthPGMsItKNbEUOWGosEk/template/preview",
+      "url": "https://docs.google.com/presentation/d/1HGeX0jqJRNhvVggcwgYEge_m2liwREqcIe7ioSLrIyM/template/preview",
       "key": "shapes_and_parameters_1",
       "properties": {
         "audience": "Teacher",
@@ -17277,7 +17278,7 @@
     },
     {
       "name": "Sprite Movement",
-      "url": "https://docs.google.com/presentation/d/1qcdkzXVAkXUd9c3JIRba4ik35i02bk_-xRMfwrQVz8I/template/preview",
+      "url": "https://docs.google.com/presentation/d/1pz872KrUOQwVzCQ0hTFQP-nnap_fuj683iGHIEJC4f4/template/preview",
       "key": "sprite_movement_1",
       "properties": {
         "audience": "Teacher",
@@ -17301,7 +17302,7 @@
     },
     {
       "name": "Sprite Properties",
-      "url": "https://docs.google.com/presentation/d/1T7SX_rhCuVe6DkmQFMWz2QIgQMBD0G4RXwY-lCA72ug/template/preview",
+      "url": "https://docs.google.com/presentation/d/1lXQZubMuJ4727CqmBJwd3pOy55oFYbbo9960UxLTXCc/template/preview",
       "key": "sprite_properties_1",
       "properties": {
         "audience": "Teacher",
@@ -17351,7 +17352,7 @@
     },
     {
       "name": "Sprites",
-      "url": "https://docs.google.com/presentation/d/1XcR7-9AOjlV-ksjFts4MturQ7qISXUFMXWSWwrecjvU/template/preview",
+      "url": "https://docs.google.com/presentation/d/1ONvRNfx1y9rfvRV7Y68nb9oo3v7tvsHt4OwJ4cUK9HE/template/preview",
       "key": "sprites_1",
       "properties": {
         "audience": "Teacher",
@@ -17373,7 +17374,7 @@
     },
     {
       "name": "Text",
-      "url": "https://docs.google.com/presentation/d/1ovtVNX4feLKwx1ETO18kkTmRQRa7_SLjqdLUrzuEi5I/template/preview",
+      "url": "https://docs.google.com/presentation/d/1Zm25EfxB2rMi0wHvlNf_F1R1oar0zZFVIIAJWeIEQKo/template/preview",
       "key": "text",
       "properties": {
         "audience": "Teacher",
@@ -17410,7 +17411,7 @@
     },
     {
       "name": "The Draw Loop",
-      "url": "https://docs.google.com/presentation/d/1WiAmb354NypVe1SsF3AUZ0O2b-aXgvnhRgkETaO3sZQ/template/preview",
+      "url": "https://docs.google.com/presentation/d/1imAOQ_w4tBEKgMO_K30Dh0MKLCvDORjEfVhybM8nFSU/template/preview",
       "key": "the_draw_loop_1",
       "properties": {
         "audience": "Teacher",
@@ -17422,7 +17423,7 @@
     },
     {
       "name": "The Game Design Process",
-      "url": "https://docs.google.com/presentation/d/1R52jE2nA2mmd8dex6wfWKrAU63m64spVHgotpqid86w/template/preview",
+      "url": "https://docs.google.com/presentation/d/1CqJ4QCZMFqvzQECVc96PEtzMHiCMNsiSjVbnLisw0lM/template/preview",
       "key": "the_game_design_process",
       "properties": {
         "audience": "Teacher",
@@ -17468,7 +17469,7 @@
     },
     {
       "name": "Using the Game Design Process",
-      "url": "https://docs.google.com/presentation/d/14SNOuHJQ_rkJGymgcAA1DT7Nshhk1wROENBo-W6kY7g/template/preview",
+      "url": "https://docs.google.com/presentation/d/1PvYBJaQiRy9Z70afGQMd4mF7h6FmYR2V4_giZ8OjEsg/template/preview",
       "key": "using_the_game_design_process",
       "properties": {
         "audience": "Teacher",
@@ -17504,7 +17505,7 @@
     },
     {
       "name": "Variables",
-      "url": "https://docs.google.com/presentation/d/1HtBUmXrH6cqE2SPhCtaxnouYF_xaitoWrvBgZDFOnpk/template/preview",
+      "url": "https://docs.google.com/presentation/d/1-QFe2TlgeOb8_ap7eWCv3CLF_t7qUTBGvU2qbrLwu9A/template/preview",
       "key": "variables_2",
       "properties": {
         "audience": "Teacher",
@@ -17541,7 +17542,7 @@
     },
     {
       "name": "Velocity",
-      "url": "https://docs.google.com/presentation/d/112H3VkJf1Dq8MQNQqDsFg5a6y62_kjSwUhafQD9xxoo/template/preview",
+      "url": "https://docs.google.com/presentation/d/1uoga0K_11JZI6K01TxuoJQ8JgtH29Th-3nZn1nggfGY/template/preview",
       "key": "velocity_2",
       "properties": {
         "audience": "Teacher",

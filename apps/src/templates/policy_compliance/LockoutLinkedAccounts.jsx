@@ -1,14 +1,16 @@
-import React, {useState} from 'react';
-import PropTypes from 'prop-types';
-import Button from '../Button';
-import i18n from '@cdo/locale';
-import {getStore} from '../../redux';
-import {isEmail} from '@cdo/apps/util/formatValidation';
 import cookies from 'js-cookie';
+import PropTypes from 'prop-types';
+import React, {useState} from 'react';
+
+import {isEmail} from '@cdo/apps/util/formatValidation';
+import {ChildAccountComplianceStates} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
+
+import Spinner from '../../code-studio/pd/components/spinner';
+import {getStore} from '../../redux';
 import * as color from '../../util/color';
 import {hashString} from '../../utils';
-import {ChildAccountComplianceStates} from '@cdo/apps/util/sharedConstants';
-import Spinner from '../../code-studio/pd/components/spinner';
+import Button from '../Button';
 
 /**
  * This component allows students whose personal account linking has been
@@ -34,7 +36,7 @@ export default function LockoutLinkedAccounts(props) {
   const [loading, setLoading] = useState(false);
 
   // Track the state of the request as the user interacts with the form.
-  const [status, setStatus] = useState(props.permissionStatus);
+  const status = props.permissionStatus;
 
   // State of the parent email entered by the user
   const [pendingEmail, setPendingEmail] = useState(props.pendingEmail);
@@ -84,18 +86,15 @@ export default function LockoutLinkedAccounts(props) {
 
   // Child permission status from the user record
   const permissionStatus = {};
-  switch (status) {
-    case ChildAccountComplianceStates.REQUEST_SENT:
-      permissionStatus.message = i18n.sessionLockoutStatusPending();
-      permissionStatus.style = styles.pending;
-      break;
-    case ChildAccountComplianceStates.PERMISSION_GRANTED:
-      permissionStatus.message = i18n.sessionLockoutStatusGranted();
-      permissionStatus.style = styles.granted;
-      break;
-    default:
-      permissionStatus.message = i18n.sessionLockoutStatusNotSubmitted();
-      permissionStatus.style = styles.notSubmitted;
+  if (status === ChildAccountComplianceStates.PERMISSION_GRANTED) {
+    permissionStatus.message = i18n.sessionLockoutStatusGranted();
+    permissionStatus.style = styles.granted;
+  } else if (pendingEmail) {
+    permissionStatus.message = i18n.sessionLockoutStatusPending();
+    permissionStatus.style = styles.pending;
+  } else {
+    permissionStatus.message = i18n.sessionLockoutStatusNotSubmitted();
+    permissionStatus.style = styles.notSubmitted;
   }
 
   // Custom form handler to submit the permission request. The default form
@@ -117,7 +116,6 @@ export default function LockoutLinkedAccounts(props) {
     setLoading(false);
     setPendingEmail(parentEmail);
     setLastEmailDate(new Date());
-    setStatus(ChildAccountComplianceStates.REQUEST_SENT);
   };
 
   return (

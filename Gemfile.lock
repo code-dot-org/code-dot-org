@@ -257,6 +257,9 @@ GEM
       aws-sdk-core (~> 3, >= 3.119.0)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.1)
+    aws-sdk-sagemakerruntime (1.55.0)
+      aws-sdk-core (~> 3, >= 3.177.0)
+      aws-sigv4 (~> 1.1)
     aws-sdk-secretsmanager (1.48.0)
       aws-sdk-core (~> 3, >= 3.119.0)
       aws-sigv4 (~> 1.1)
@@ -299,7 +302,7 @@ GEM
     crack (0.4.5)
       rexml
     crass (1.0.6)
-    crowdin-api (1.8.1)
+    crowdin-api (1.10.0)
       open-uri (>= 0.1.0, < 0.2.0)
       rest-client (>= 2.0.0, < 2.2.0)
     css_parser (1.10.0)
@@ -320,7 +323,7 @@ GEM
     cucumber-expressions (6.0.1)
     cucumber-tag_expressions (1.1.1)
     cucumber-wire (0.0.1)
-    daemons (1.4.1)
+    daemons (1.1.9)
     dalli (2.7.6)
     dalli-elasticache (1.0.1)
       dalli (>= 2.0.0)
@@ -539,6 +542,8 @@ GEM
       net-imap
       net-pop
       net-smtp
+    mailgun-ruby (1.2.14)
+      rest-client (>= 2.0.2)
     mailjet (1.7.3)
       activesupport (>= 3.1.0)
       rack (>= 1.4.0)
@@ -559,6 +564,9 @@ GEM
     minitest (5.18.0)
     minitest-around (0.5.0)
       minitest (~> 5.0)
+    minitest-rails (6.1.1)
+      minitest (~> 5.10)
+      railties (~> 6.1.0)
     minitest-reporters (1.2.0)
       ansi
       builder
@@ -696,6 +704,8 @@ GEM
       ruby-openid (>= 2.1.8)
     rack-protection (2.2.3)
       rack
+    rack-session (1.0.2)
+      rack (< 3)
     rack-ssl-enforcer (0.2.9)
     rack-test (2.0.2)
       rack (>= 1.3)
@@ -743,6 +753,15 @@ GEM
       json
     redcarpet (3.5.1)
     redis (4.8.1)
+    redis-actionpack (5.4.0)
+      actionpack (>= 5, < 8)
+      redis-rack (>= 2.1.0, < 4)
+      redis-store (>= 1.1.0, < 2)
+    redis-rack (3.0.0)
+      rack-session (>= 0.2.0)
+      redis-store (>= 1.2, < 2)
+    redis-store (1.10.0)
+      redis (>= 4, < 6)
     regexp_parser (2.8.1)
     representable (3.2.0)
       declarative (< 0.1.0)
@@ -801,7 +820,7 @@ GEM
     rubocop-rails-accessibility (0.2.0)
       rubocop (>= 1.0.0)
     ruby-openid (2.9.2)
-    ruby-prof (0.15.9)
+    ruby-prof (1.7.0)
     ruby-progressbar (1.13.0)
     ruby-rc4 (0.1.5)
     ruby2_keywords (0.0.5)
@@ -982,6 +1001,7 @@ DEPENDENCIES
   aws-sdk-rds
   aws-sdk-route53
   aws-sdk-s3
+  aws-sdk-sagemakerruntime
   aws-sdk-secretsmanager
   bcrypt (= 3.1.13)
   benchmark-ips
@@ -995,9 +1015,9 @@ DEPENDENCIES
   cld
   colorize
   composite_primary_keys (~> 13.0)
-  crowdin-api (~> 1.8.1)
+  crowdin-api (~> 1.10.0)
   cucumber
-  daemons
+  daemons (= 1.1.9)
   dalli
   dalli-elasticache
   database_cleaner-active_record (~> 2.1.0)
@@ -1039,12 +1059,14 @@ DEPENDENCIES
   kaminari
   lograge!
   loofah (~> 2.19.1)
+  mailgun-ruby (~> 1.2.14)
   mailjet (~> 1.7.3)
   memory_profiler
   mini_magick (>= 4.10.0)
   mini_racer
   minitest (~> 5.15)
   minitest-around
+  minitest-rails (~> 6.1)
   minitest-reporters (~> 1.2.0.beta3)
   minitest-spec-context (~> 0.0.3)
   minitest-stub-const (~> 0.6)
@@ -1091,6 +1113,7 @@ DEPENDENCIES
   recaptcha
   redcarpet (~> 3.5.1)
   redis (~> 4.8.1)
+  redis-actionpack (~> 5.4.0)
   redis-slave-read!
   require_all
   rerun
@@ -1104,7 +1127,7 @@ DEPENDENCIES
   rubocop-performance
   rubocop-rails
   rubocop-rails-accessibility
-  ruby-prof
+  ruby-prof (>= 1.7.0)
   ruby-progressbar
   sass-rails (~> 6.0.0)
   sassc-rails!
