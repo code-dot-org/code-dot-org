@@ -1,6 +1,6 @@
 name 'gen-ai-humanities-writing-L1'
 display_name 'Crafting Prompts'
-description 'write prompts for scenarios'
+description 'Choose one of the following writing tasks to work on with your partner. Each of you will write your own prompt for the task, then enter it into the AI tool you are using.'
 
 sublevels
 level 'gen-ai-humanities-L1A'

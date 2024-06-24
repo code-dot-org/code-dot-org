@@ -1,0 +1,10 @@
+name 'cv-studentsurvey-postmodule-q4'
+question 'What challenges, if any, did you face during the module? (**Choose no more than two.**)'
+right 'Understanding the concepts'
+right 'Keeping up with assignments'
+right 'Working in groups'
+right 'Lack of interest in the topic'
+right 'Something else'
+right 'No challenges'
+type 'multi2'
+allow_multiple_attempts true

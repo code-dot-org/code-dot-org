@@ -1,25 +1,28 @@
-import React, {useState, useMemo} from 'react';
 import classNames from 'classnames';
+import React, {useState, useMemo} from 'react';
+import {useSelector} from 'react-redux';
 
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
+import {AichatLevelProperties, ModelDescription} from '@cdo/apps/aichat/types';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown/SimpleDropdown';
+import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {modelDescriptions} from '../../constants';
 import {setAiCustomizationProperty} from '../../redux/aichatRedux';
-import styles from '../model-customization-workspace.module.scss';
+
+import CompareModelsDialog from './CompareModelsDialog';
 import {
   DEFAULT_VISIBILITIES,
   MAX_TEMPERATURE,
   MIN_TEMPERATURE,
   SET_TEMPERATURE_STEP,
 } from './constants';
-import {isVisible, isDisabled, isEditable} from './utils';
-import CompareModelsDialog from './CompareModelsDialog';
-import {modelDescriptions} from '../../constants';
-import {AichatLevelProperties, ModelDescription} from '@cdo/apps/aichat/types';
-import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
-import {useSelector} from 'react-redux';
 import UpdateButton from './UpdateButton';
+import {isVisible, isDisabled, isEditable} from './utils';
+
+import styles from '../model-customization-workspace.module.scss';
 
 const SetupCustomization: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
