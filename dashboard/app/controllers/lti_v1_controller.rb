@@ -177,6 +177,7 @@ class LtiV1Controller < ApplicationController
         # If this is the user's first login, send them into the account linking flow
         if original_sign_in_count < 1 && DCDO.get('lti_account_linking_enabled', false)
           PartialRegistration.persist_attributes(session, user)
+          publish_linking_page_visit(user, integration[:platform_name])
           render 'lti/v1/account_linking/landing', locals: {lti_provider: integration[:platform_name], email: Services::Lti.get_claim(decoded_jwt, :email), new_cta_type: 'continue'} and return
         end
 
@@ -207,14 +208,7 @@ class LtiV1Controller < ApplicationController
         email_address = Services::Lti.get_claim(decoded_jwt, :email)
         PartialRegistration.persist_attributes(session, user)
         if DCDO.get('lti_account_linking_enabled', false)
-          metadata = {
-            'lms_name' => integration[:platform_name],
-          }
-          Metrics::Events.log_event(
-            user: user,
-            event_name: 'lti_account_linking_page_visit',
-            metadata: metadata,
-          )
+          publish_linking_page_visit(user, integration[:platform_name])
           render 'lti/v1/account_linking/landing', locals: {lti_provider: integration[:platform_name], email: email_address, new_cta_type: 'new'} and return
         end
 
@@ -494,5 +488,16 @@ class LtiV1Controller < ApplicationController
       context: context
     )
     unauthorized_status
+  end
+
+  private def publish_linking_page_visit(user, platform_name)
+    metadata = {
+      'lms_name' => platform_name,
+    }
+    Metrics::Events.log_event(
+      user: user,
+      event_name: 'lti_account_linking_page_visit',
+      metadata: metadata,
+    )
   end
 end

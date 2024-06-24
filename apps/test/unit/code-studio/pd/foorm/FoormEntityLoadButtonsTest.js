@@ -1,11 +1,11 @@
-import React from 'react';
-import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import {assert} from 'chai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import React from 'react';
+import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+import sinon from 'sinon';
 
 import {UnconnectedFoormEntityLoadButtons as FoormEntityLoadButtons} from '@cdo/apps/code-studio/pd/foorm/editor/components/FoormEntityLoadButtons';
 import SingleCheckbox from '@cdo/apps/code-studio/pd/form_components/SingleCheckbox';
-import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-import sinon from 'sinon';
 
 describe('FoormEntityLoadButtons', () => {
   let defaultProps, wrapper, showCodeMirrorStub;

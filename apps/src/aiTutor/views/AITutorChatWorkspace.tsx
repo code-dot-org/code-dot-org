@@ -3,10 +3,12 @@ import React from 'react';
 import {Role} from '@cdo/apps/aiTutor/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import style from './ai-tutor.module.scss';
+import AITutorSuggestedPrompts from './AITutorSuggestedPrompts';
 import AssistantMessage from './AssistantMessage';
 import UserMessage from './UserMessage';
 import WarningModal from './WarningModal';
+
+import style from './ai-tutor.module.scss';
 
 const AITutorChatWorkspace: React.FunctionComponent = () => {
   const storedMessages = useAppSelector(state => state.aiTutor.chatMessages);
@@ -37,6 +39,7 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
       )}
       {showWaitingAnimation()}
       <WarningModal />
+      <AITutorSuggestedPrompts />
     </div>
   );
 };

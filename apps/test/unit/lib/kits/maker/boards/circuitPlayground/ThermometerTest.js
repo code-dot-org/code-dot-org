@@ -1,8 +1,10 @@
 /** @file Test the Thermometer controller wrapping playground-io Thermometer */
-import {expect} from '../../../../../../util/reconfiguredChai';
-import sinon from 'sinon';
-import Thermometer from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Thermometer';
 import Playground from 'playground-io';
+import sinon from 'sinon';
+
+import Thermometer from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Thermometer';
+
+import {expect} from '../../../../../../util/reconfiguredChai';
 
 describe('Thermometer', function () {
   let testObj;

@@ -1,20 +1,33 @@
-import React from 'react';
 import classNames from 'classnames';
+import React from 'react';
 
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {StrongText} from '@cdo/apps/componentLibrary/typography';
-import aiBotIcon from '@cdo/static/aichat/ai-bot-icon.svg';
-import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
+import aiBotIcon from '@cdo/static/aichat/ai-bot-icon.svg';
 
-import {removeUpdateMessage} from '../redux/aichatRedux';
-import {ChatCompletionMessage, Role} from '../types';
+import {modelDescriptions} from '../constants';
 import aichatI18n from '../locale';
+import {removeUpdateMessage} from '../redux/aichatRedux';
+import {timestampToLocalTime} from '../redux/utils';
+import {
+  ChatItem,
+  Notification,
+  ModelUpdate,
+  Role,
+  isChatMessage,
+  isNotification,
+  isModelUpdate,
+} from '../types';
+
 import ChatNotificationMessage from './ChatNotificationMessage';
+import {AI_CUSTOMIZATIONS_LABELS} from './modelCustomization/constants';
+
 import moduleStyles from './chatMessage.module.scss';
 
 interface ChatMessageProps {
-  message: ChatCompletionMessage;
+  message: ChatItem;
 }
 
 const INAPPROPRIATE_MESSAGE = aichatI18n.inappropriateUserMessage();
@@ -22,8 +35,6 @@ const TOO_PERSONAL_MESSAGE = aichatI18n.tooPersonalUserMessage();
 
 const isAssistant = (role: string) => role === Role.ASSISTANT;
 const isUser = (role: string) => role === Role.USER;
-const isModelUpdate = (role: string) => role === Role.MODEL_UPDATE;
-const isError = (role: string) => role === Role.ERROR_NOTIFICATION;
 
 const displayUserMessage = (status: string, chatMessageText: string) => {
   if (
@@ -91,10 +102,25 @@ const displayAssistantMessage = (status: string, chatMessageText: string) => {
 };
 
 const displayModelUpdateMessage = (
-  message: ChatCompletionMessage,
+  update: ModelUpdate,
   onRemove: () => void
 ) => {
-  const {chatMessageText, chatMessageSuffix, timestamp} = message;
+  const {updatedField, updatedValue, timestamp} = update;
+  const fieldLabel = AI_CUSTOMIZATIONS_LABELS[updatedField];
+
+  let updatedToText = undefined;
+  if (updatedField === 'temperature') {
+    updatedToText = updatedValue as number;
+  }
+  if (updatedField === 'selectedModelId') {
+    updatedToText = modelDescriptions.find(
+      model => model.id === updatedValue
+    )?.name;
+  }
+
+  const updatedText = updatedToText
+    ? ' has been updated to '
+    : ' has been updated.';
 
   return (
     <ChatNotificationMessage
@@ -102,13 +128,11 @@ const displayModelUpdateMessage = (
       content={
         <>
           <span className={moduleStyles.modelUpdateMessageTextContainer}>
-            <StrongText>{chatMessageText}</StrongText>
-            {chatMessageSuffix?.text}
-            {chatMessageSuffix?.boldtypeText && (
-              <StrongText>{chatMessageSuffix?.boldtypeText}</StrongText>
-            )}
+            <StrongText>{fieldLabel}</StrongText>
+            {updatedText}
+            {updatedToText && <StrongText>{updatedToText}</StrongText>}
           </span>
-          <StrongText>{timestamp}</StrongText>
+          <StrongText>{timestampToLocalTime(timestamp)}</StrongText>
         </>
       }
       iconName="check"
@@ -118,25 +142,31 @@ const displayModelUpdateMessage = (
   );
 };
 
-const displayErrorMessage = (
-  message: ChatCompletionMessage,
+const displayNotification = (
+  notification: Notification,
   onRemove: () => void
 ) => {
-  const {chatMessageText} = message;
-
+  const {text, notificationType, timestamp} = notification;
   return (
     <ChatNotificationMessage
       onRemove={onRemove}
       content={
         <>
           <span className={moduleStyles.modelUpdateMessageTextContainer}>
-            <StrongText>{chatMessageText}</StrongText>
+            <StrongText>{text}</StrongText>
           </span>
+          <StrongText>{timestampToLocalTime(timestamp)}</StrongText>
         </>
       }
-      iconName="circle-xmark"
-      iconClass={moduleStyles.danger}
-      containerClass={moduleStyles.dangerContainer}
+      iconName={notificationType === 'error' ? 'circle-xmark' : 'check'}
+      iconClass={
+        notificationType === 'error' ? moduleStyles.danger : moduleStyles.check
+      }
+      containerClass={
+        notificationType === 'error'
+          ? moduleStyles.dangerContainer
+          : moduleStyles.modelUpdateContainer
+      }
     />
   );
 };
@@ -145,24 +175,25 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({message}) => {
   const dispatch = useAppDispatch();
 
   return (
-    <div id={`ChatMessage id: ${message.id}`}>
-      {isUser(message.role) &&
+    <div>
+      {isChatMessage(message) &&
+        isUser(message.role) &&
         displayUserMessage(message.status, message.chatMessageText)}
 
-      {isAssistant(message.role) && (
+      {isChatMessage(message) && isAssistant(message.role) && (
         <div className={moduleStyles.assistantMessageContainer}>
           <img src={aiBotIcon} alt="An icon depicting a robot" />
           {displayAssistantMessage(message.status, message.chatMessageText)}
         </div>
       )}
 
-      {isModelUpdate(message.role) &&
+      {isModelUpdate(message) &&
         displayModelUpdateMessage(message, () =>
           dispatch(removeUpdateMessage(message.id))
         )}
 
-      {isError(message.role) &&
-        displayErrorMessage(message, () =>
+      {isNotification(message) &&
+        displayNotification(message, () =>
           dispatch(removeUpdateMessage(message.id))
         )}
     </div>

@@ -1,4 +1,3 @@
-import {assert} from '../../util/reconfiguredChai';
 import currentUser, {
   SignInState,
   setUserSignedIn,
@@ -9,6 +8,8 @@ import currentUser, {
   setUserRoleInCourse,
   CourseRoles,
 } from '@cdo/apps/templates/currentUserRedux';
+
+import {assert} from '../../util/reconfiguredChai';
 
 describe('currentUserRedux', () => {
   const initialState = currentUser(undefined, {});

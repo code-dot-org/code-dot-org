@@ -5,6 +5,7 @@
     "login_required": true,
     "properties": {
       "curriculum_umbrella": "AI",
+      "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_course": true,
@@ -17,7 +18,7 @@
     },
     "new_name": null,
     "family_name": "gen-ai-humanities",
-    "serialized_at": "2024-06-19 22:11:26 UTC",
+    "serialized_at": "2024-06-21 22:25:33 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -66,7 +67,6 @@
       "relative_position": 2,
       "properties": {
         "overview": "In this lesson, students explore the use of AI chatbots and search engines for research purposes, comparing their effectiveness in finding quotes, verifying historical claims, and answering scientific questions. They engage in hands-on activities to discern the strengths, limitations and ethical considerations of both tools. Through interactive reflection stations, students critically evaluate when and why to use each tool, fostering their skills as informed digital citizens. \n",
-        "preparation": "* Choose which chatbot you will use with your class, and read the appropriate guide.\n* Watch the [How Chatbots and Large Language Models Work video](https://www.youtube.com/watch?v=X-AWdfSFCHQ) and [How Search Works videos](https://www.youtube.com/watch?v=LVV_93mBfSU) to become familiar with how each tool works, which may help you facilitate discussions\n* Run through the activities to have a basic idea of what students are likely to get out of the search engine and a chatbot using a large language model\n* Prepare the [r reflection_stations/gen-ai-humanities/unversioned] posters ahead of time\n* Print copies of the activity guides and handouts for all students.\n* Ensure all students have access to computers connected to the internet and accounts for the chosen chatbot.\n* Optionally, read the guides for the chatbot of your choice: [r guide_to_using_microsoft_copilot_1/gen-ai-humanities/unversioned],  [r guide_to_chatgpt_1/gen-ai-humanities/unversioned], [r guide_to_microsoft_copilot_1/gen-ai-humanities/unversioned]",
         "student_overview": "Explore how AI chatbots and search engines can shape our research as we navigate the world of digital information to become more skilled and thoughtful digital explorers.\n"
       },
       "seeding_key": {
@@ -81,7 +81,7 @@
       "key": "b6e9ab3f-8ac3-43ce-a078-10493a013bfc",
       "position": 1,
       "properties": {
-        "name": "Preparing for the Lesson"
+        "name": "Before the Lesson"
       },
       "seeding_key": {
         "lesson_activity.key": "b6e9ab3f-8ac3-43ce-a078-10493a013bfc",
@@ -136,7 +136,7 @@
       "key": "743590d4-6284-4ba5-a5b5-493bbdce6433",
       "position": 1,
       "properties": {
-        "name": "Preparing for the Lesson"
+        "name": "Before the Lesson"
       },
       "seeding_key": {
         "lesson_activity.key": "743590d4-6284-4ba5-a5b5-493bbdce6433",
@@ -149,7 +149,7 @@
       "key": "892eddf4-059a-46ee-8861-7c5f863165ec",
       "position": 2,
       "properties": {
-        "duration": 5,
+        "duration": 10,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -163,7 +163,7 @@
       "key": "35f4f5bd-caf3-4755-89a5-79e9bad312af",
       "position": 3,
       "properties": {
-        "duration": 25,
+        "duration": 30,
         "name": "Activity"
       },
       "seeding_key": {
@@ -177,7 +177,7 @@
       "key": "37303088-2234-4446-9b60-3b7f9cab9e40",
       "position": 4,
       "properties": {
-        "duration": 15,
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -190,25 +190,26 @@
   ],
   "activity_sections": [
     {
-      "key": "f03e64f6-f66c-4b87-88a7-afcd4d80c618",
+      "key": "b3778875-fd8e-460f-88c5-544f592920b2",
       "position": 1,
       "properties": {
-        "description": "**Technical Requirements:** For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to ensure specific sites are allowed and are not blocked. In particular, you should ensure that whatever chatbot you use and at least one search engine is not blocked.\n\n**Choosing a Chatbot:** This module was built to be chatbot agnostic. Any chatbot that is not domain-specific (ie written specifically for medicine or finance, etc.) should work, though we have written the following guides: [r guide_to_microsoft_copilot/gen-ai-humanities/unversioned],\n[r guide_to_google_gemini/gen-ai-humanities/unversioned], and\n[r guide_to_chatgpt/gen-ai-humanities/unversioned]\n* First and foremost, you should use the chatbot you and your students can access. \n* ChatGPT requires a login and parent permission, and is only for 13+. \n* BingChat can be used without a login, but it will not keep track of discussion history. Using a login will also require parental permission, and being 13+\n* Bard is usable on personal Google accounts that have it enabled; school accounts will not allow it. \nAll three of those chatbots allow speech-to-text, translation, and are usable by a screen reader.\n\n"
+        "description": "**Getting Started with Code.org:** Consider watching our [**Getting Started with Code.org**](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [**click here to learn more**](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [**click here to learn more**](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [**Click here**](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [**Click Here**](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [**Click here to complete a form**](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day.\n\n**Supports for Teachers:** You can learn more about bringing AI lessons to your classroom through our [**AI 101 for Teachers series**](https://code.org/ai/pl/101). AI 101 for Teachers is a free, foundational online professional learning series for any teacher and educator interested in the groundbreaking world of AI and its transformative potential in education.",
+        "name": "Getting Started with Code.org"
       },
       "seeding_key": {
-        "activity_section.key": "f03e64f6-f66c-4b87-88a7-afcd4d80c618",
+        "activity_section.key": "b3778875-fd8e-460f-88c5-544f592920b2",
         "lesson_activity.key": "b6e9ab3f-8ac3-43ce-a078-10493a013bfc"
       }
     },
     {
-      "key": "a850fa2c-dfab-4ec4-9d54-cd739695e846",
+      "key": "f03e64f6-f66c-4b87-88a7-afcd4d80c618",
       "position": 2,
       "properties": {
-        "description": "No prerequisites are necessary for this lesson, though it may be helpful for students (and you) to have the context provided in the [**Chatbots and Large Language Models (LLMs)**](https://studio.code.org/s/how-ai-works-2023/lessons/4) lesson to have a grounding in what makes a chatbot behave in the manner it does.\n",
-        "name": "Prerequisites"
+        "description": "This lesson was designed to be chatbot agnostic. Any chatbot that is not domain-specific (i.e., written specifically for medicine or finance, etc.) should work. You should use the chatbot you and your students can access. We recommend consulting with your school or district's IT department to ensure access to a chatbot is allowed and not blocked.",
+        "name": "Choosing a Chatbot"
       },
       "seeding_key": {
-        "activity_section.key": "a850fa2c-dfab-4ec4-9d54-cd739695e846",
+        "activity_section.key": "f03e64f6-f66c-4b87-88a7-afcd4d80c618",
         "lesson_activity.key": "b6e9ab3f-8ac3-43ce-a078-10493a013bfc"
       }
     },
@@ -309,7 +310,8 @@
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1. You can either assign each pair one of the writing tasks or allow pairs to choose their own. Students should think about what information they need from the AI and how to phrase their prompts clearly, and each write different prompts for their task on the level.",
         "duration": "15",
-        "name": "Crafting Prompts and Evaluating Responses"
+        "name": "Crafting Prompts and Evaluating Responses",
+        "progression_name": "Crafting Prompts"
       },
       "seeding_key": {
         "activity_section.key": "ede884c4-3843-4340-988e-044bbbade2ad",
@@ -320,7 +322,8 @@
       "key": "157720b6-ed4a-48e5-b7bc-95752244f163",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for active engagement and collaboration, with students experimenting with different strategies and refining their prompts based on AI feedback. Identify and support students who may need additional guidance in developing effective prompt engineering strategies.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 to enter their prompt and the AI's response. Have students continue to Level 3 to discuss how the response they got from the AI compared to the response their partner got."
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for active engagement and collaboration, with students experimenting with different strategies and refining their prompts based on AI feedback. Identify and support students who may need additional guidance in developing effective prompt engineering strategies.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 to enter their prompt and the AI's response. Have students continue to Level 3 to discuss how the response they got from the AI compared to the response their partner got.",
+        "progression_name": "Evaluating Responses"
       },
       "seeding_key": {
         "activity_section.key": "157720b6-ed4a-48e5-b7bc-95752244f163",
@@ -382,7 +385,8 @@
       "key": "0c8b742e-65f7-40da-a31c-0c21ce91e959",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What is one way you plan to use AI tools like ChatGPT to improve your writing while keeping it original and ethical?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should share practical strategies for integrating AI into their writing process in a way that enhances their work without compromising originality or ethical standards, such as for idea generation, grammar checks, or refining their writing, while ensuring they maintain their own voice and avoid plagiarism. Listen for reflections on balancing AI assistance with personal effort, and how students plan to credit or acknowledge AI contributions appropriately.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 4 to complete the End of Lesson survey."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What is one way you plan to use AI tools like ChatGPT to improve your writing while keeping it original and ethical?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should share practical strategies for integrating AI into their writing process in a way that enhances their work without compromising originality or ethical standards, such as for idea generation, grammar checks, or refining their writing, while ensuring they maintain their own voice and avoid plagiarism. Listen for reflections on balancing AI assistance with personal effort, and how students plan to credit or acknowledge AI contributions appropriately.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 4 to complete the End of Lesson survey.",
+        "progression_name": "End of Lesson Survey"
       },
       "seeding_key": {
         "activity_section.key": "0c8b742e-65f7-40da-a31c-0c21ce91e959",
@@ -393,7 +397,8 @@
       "key": "ddf36ef1-cf64-4500-ad48-9518283729a8",
       "position": 1,
       "properties": {
-        "description": "**Technical Requirements:** For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to ensure specific sites are allowed and are not blocked. In particular, you should ensure that whatever chatbot you use and at least one search engine is not blocked.\n\n**Choosing a Chatbot:** This module was built to be chatbot agnostic. Any chatbot that is not domain-specific (ie written specifically for medicine or finance, etc.) should work, though we have written the following guides: [r guide_to_microsoft_copilot/gen-ai-humanities/unversioned],\n[r guide_to_google_gemini/gen-ai-humanities/unversioned], and\n[r guide_to_chatgpt/gen-ai-humanities/unversioned]\n* First and foremost, you should use the chatbot you and your students can access. \n* ChatGPT requires a login and parent permission, and is only for 13+. \n* BingChat can be used without a login, but it will not keep track of discussion history. Using a login will also require parental permission, and being 13+\n* Bard is usable on personal Google accounts that have it enabled; school accounts will not allow it. \nAll three of those chatbots allow speech-to-text, translation, and are usable by a screen reader.\n\n"
+        "description": "**Getting Started with Code.org:** Consider watching our [**Getting Started with Code.org**](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [**click here to learn more**](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [**click here to learn more**](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [**Click here**](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [**Click Here**](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [**Click here to complete a form**](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day.\n\n**Supports for Teachers:** You can learn more about bringing AI lessons to your classroom through our [**AI 101 for Teachers series**](https://code.org/ai/pl/101). AI 101 for Teachers is a free, foundational online professional learning series for any teacher and educator interested in the groundbreaking world of AI and its transformative potential in education.",
+        "name": "Getting Started with Code.org"
       },
       "seeding_key": {
         "activity_section.key": "ddf36ef1-cf64-4500-ad48-9518283729a8",
@@ -404,8 +409,8 @@
       "key": "f306ca87-9218-41a4-9c4a-71fd8a1aa60e",
       "position": 2,
       "properties": {
-        "description": "No prerequisites are necessary for this lesson, though it may be helpful for students (and you) to have the context provided in the [**Chatbots and Large Language Models (LLMs)**](https://studio.code.org/s/how-ai-works-2023/lessons/4) lesson to have a grounding in what makes a chatbot behave in the manner it does.",
-        "name": "Prerequisites"
+        "description": "This lesson was designed to be chatbot agnostic. Any chatbot that is not domain-specific (i.e., written specifically for medicine or finance, etc.) should work. You should use the chatbot you and your students can access. We recommend consulting with your school or district's IT department to ensure access to a chatbot is allowed and not blocked.",
+        "name": "Choosing a Chatbot"
       },
       "seeding_key": {
         "activity_section.key": "f306ca87-9218-41a4-9c4a-71fd8a1aa60e",
@@ -413,354 +418,463 @@
       }
     },
     {
-      "key": "7272aeeb-d662-4457-a93b-8d99fbadeff2",
+      "key": "46b3f975-5810-44ef-af5d-ad79dc749a85",
       "position": 1,
       "properties": {
-        "description": "We are kicking off our lesson today with a challenge: Can you figure out what’s real and what’s fake? Your task is to use your investigative skills to determine if quotes are genuine, correctly attributed, and authentic. Let’s see how well we can separate fact from fiction. Remember, not everything you read online is true, so let’s sharpen our critical thinking and research abilities!",
-        "name": "Verify Quotes",
-        "remarks": true
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1. Students will choose \"Real\" or \"Fake\" to indicate their initial guesses and their thoughts after verifying. They will also document how they know the quotes are real or fake.",
+        "name": "Verifying Quotes",
+        "progression_name": "Verifying Quotes"
       },
       "seeding_key": {
-        "activity_section.key": "7272aeeb-d662-4457-a93b-8d99fbadeff2",
+        "activity_section.key": "46b3f975-5810-44ef-af5d-ad79dc749a85",
         "lesson_activity.key": "892eddf4-059a-46ee-8861-7c5f863165ec"
       }
     },
     {
-      "key": "743cdec8-5c5a-42e8-bdfd-b2b23d6eea14",
+      "key": "e73bb6f5-98b4-4cf6-8e8d-92d3032780d4",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Hand out copies of the \n[r verify_quotes_activity_guide/gen-ai-humanities/unversioned]\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do this** Direct students to figure out which quotes in the activity guide were said by the people they are being attributed to and which are falsely attributed. Use the provided timer in the slide to keep the activity to 5 minutes (*the music in the timer has been muted; feel free to unmute it in the “Format Options” when right-clicking on the video in the slide*).\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Walk around the room observing how students are addressing the problem. Allow them to use whichever search engine they would like. Encourage students to document their thought process in the activity guide – which sources did they use to verify the quotes? Why did they believe those sources? Empathize with students and share in their surprises and discomforts.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students share their findings, then click through the animated slide to display the result and potential response.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students share their findings, then click through the animated slide to display the result and potential response.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students share their findings, then click through the animated slide to display the result and potential response.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students share their findings, then click through the animated slide to display the result and potential response.\n\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *If a quote you initially believed to be true turned out to be false or misattributed, how did you feel about this discovery? What does this tell us about the nature of belief and evidence?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This short discussion aims to cultivate a healthy level of skepticism in students toward information they encounter, especially online, encouraging them to always seek evidence and verify before accepting information as true. The question may also make students aware of their cognitive biases, such as confirmation bias (the tendency to search for, interpret, favor, and recall information to confirm preexisting beliefs or hypotheses). Try to get them to recognize how these biases can influence their acceptance of information as true without adequate verification. Encourage students to see the value in discovering they were wrong. This moment of realization is crucial for developing critical thinking and fact-checking skills.\n\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Why is it important to verify information?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** The central goal of asking students this explicit question is to foster an understanding of the critical role that information accuracy plays in various aspects of personal, academic, and societal life. This discussion aims to instill a sense of responsibility and diligence in handling information, emphasizing that verification is not just a skill but a fundamental aspect of being an informed and responsible member of society. Hopefully, students will have realized that there is a lot of misinformation in the world that they may have taken as fact. They should also realize that when they spread information without checking it, they are part of the problem. If students do not seem to come to these conclusions independently, help guide them there.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Answer Keys & Exemplars:** \nAn answer key or exemplar is provided for verified teachers as part of the resources in this lesson plan. If you do not see an answer key or exemplar listed as a resource, [follow these steps](https://support.code.org/hc/en-us/articles/115001550131-How-to-Become-a-Verified-Teacher) to become a verified teacher.\n\n**Grouping**: This activity can be done in pairs or small groups to allow students to divide and conquer in looking up the quotes and discussing and verifying each other’s answers."
+            "markdown": "Here are some additional guidelines you can offer your students when it comes specifically to quotes they see online:\n* If you’re reading sources that are generally trusted and well-regarded for their fact-checking or scholarly rigor, such as The New York Times or PMLA (the journal of the Modern Language Association of America), you can usually assume that all quotations have been accurately attributed and checked.\n   * Large newspapers like The New York Times employ teams of fact-checkers, for instance, and scholarly journals like PMLA have thorough processes of peer review and copyediting.\n   * But smaller, non-scholarly publications might not have the resources to check quotations.\n* While some social media platforms might moderate their content to some degree, they do not check the accuracy of the vast majority of quotations posted on them.\n   * If you see a quotation reposted by someone on Twitter, even someone you know and trust, it’s best to check it yourself.\n* Consider a quotation that does not mention the work it came from or the context in which it was said to be especially suspect.\n   * If you want to use any quotation from an untrusted or dubious source in something you’re writing, perhaps a speech or an essay, it’s always a good idea to find and verify the original quotation.\n\nDiscussing this [**Deepfakes video from the New York Times**](https://www.youtube.com/watch?v=1OqFY_2JE1c&t=27s) with your students may be useful if you have extra time and want to reinforce this topic. The video discusses that misinformation and misleading information have always existed but that modern tools are making it easier to make and spread this misinformation. In turn, even correct information can plausibly seem like lies. The takeaway message is that the best defense against spreading misinformation is to stop and verify each source."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "743cdec8-5c5a-42e8-bdfd-b2b23d6eea14",
+        "activity_section.key": "e73bb6f5-98b4-4cf6-8e8d-92d3032780d4",
         "lesson_activity.key": "892eddf4-059a-46ee-8861-7c5f863165ec"
       }
     },
     {
-      "key": "92e78b58-648f-414d-82e9-23e120989d0d",
+      "key": "d985e118-7722-4979-b6c2-b85e1fe19643",
       "position": 3,
       "properties": {
       },
       "seeding_key": {
-        "activity_section.key": "92e78b58-648f-414d-82e9-23e120989d0d",
+        "activity_section.key": "d985e118-7722-4979-b6c2-b85e1fe19643",
         "lesson_activity.key": "892eddf4-059a-46ee-8861-7c5f863165ec"
       }
     },
     {
-      "key": "314e2eef-d536-4656-ad21-9b4cd9c2cda9",
+      "key": "ecf0babd-78cb-40ac-8301-b80d40a336ef",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do this**: After five minutes, take a quick thumbs-up/thumbs-down poll. For each quote, ask students if they initially thought it was real (thumbs-up) or fake (thumbs-down), and after verifying, ask if they now think each is real or fake. \n",
-        "name": "Verifying Information Discussion",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Suggestions for conducting the thumbs-up/thumbs-down poll:**\n\n* **Encourage Honesty:** Remind students that the purpose of this activity is learning, not being right or wrong. Encourage them to be honest in their initial and post-verification response.\n* **Observe Changes in Responses:** Pay close attention to changes in students’ responses before and after verification. This can provide insight into their thought processes and how their perceptions were altered by research.\n* **Facilitate Open Discussion:** If you notice a significant split in responses on certain quotes after verifying, pause to discuss these. Ask students to share why they changed their minds or remained steadfast in their initial beliefs. Ask students to share how they verified the quote and why they might trust one source over another. This encourages critical thinking and reflection.\n* **Summarize Key Learnings:** After the poll, summarize the key takeaways, emphasizing the importance of critical thinking and verifying information in the age of digital media. "
-          }
-        ]
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
-        "activity_section.key": "314e2eef-d536-4656-ad21-9b4cd9c2cda9",
+        "activity_section.key": "ecf0babd-78cb-40ac-8301-b80d40a336ef",
         "lesson_activity.key": "892eddf4-059a-46ee-8861-7c5f863165ec"
       }
     },
     {
-      "key": "174ae523-0d4e-4105-b8ae-038b29b82958",
-      "position": 5,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> <i class=\"fa fa-comments\" aria-hidden=\"true\"></i>  **Prompt**: If a quote you initially believed to be true turned out to be false or misattributed, how did you feel about this discovery? What does this tell us about the nature of belief and evidence? \n\n**Discussion Goal:** This short discussion aims to cultivate a healthy level of skepticism in students toward information they encounter, especially online, encouraging them to always seek evidence and verify before accepting information as true. The question may also make students aware of their cognitive biases, such as confirmation bias (the tendency to search for, interpret, favor, and recall information to confirm preexisting beliefs or hypotheses). Try to get them to recognize how these biases can influence their acceptance of information as true without adequate verification. Encourage students to see the value in discovering they were wrong. This moment of realization is crucial for developing critical thinking and fact-checking skills.  \n",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Optional extension:** Engage students by asking them if there are any quotes they would like to verify or that they think are commonly misattributed, and add them to future iterations of this assignment."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "174ae523-0d4e-4105-b8ae-038b29b82958",
-        "lesson_activity.key": "892eddf4-059a-46ee-8861-7c5f863165ec"
-      }
-    },
-    {
-      "key": "cccc0ab0-bc21-4e1a-a6e3-ba97a5285122",
-      "position": 6,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> <i class=\"fa fa-comments\" aria-hidden=\"true\"></i>  **Prompt**: Why is it important to verify information? \n\n**Discussion Goal:** The central goal of asking students this explicit question is to foster an understanding of the critical role that information accuracy plays in various aspects of personal, academic, and societal life. This discussion aims to instill a sense of responsibility and diligence in handling information, emphasizing that verification is not just a skill but a fundamental aspect of being an informed and responsible member of society. Hopefully, students will have realized that there is a lot of misinformation in the world that they may have taken as fact. They should also realize that when they spread information without checking it, they are part of the problem. If students do not seem to come to these conclusions independently, help guide them there. ",
-        "tips": [
-          {
-            "type": "contentCorner",
-            "markdown": "Here are some additional guidelines you can offer your students when it comes specifically to quotes they see online: \n* If you’re reading sources that are generally trusted and well-regarded for their fact-checking or scholarly rigor, such as The New York Times or PMLA (the journal of the Modern Language Association of America), you can usually assume that all quotations have been accurately attributed and checked.\n  * Large newspapers like The New York Times employ teams of fact-checkers, for instance, and scholarly journals like PMLA have thorough processes of peer review and copyediting.\n  * But smaller, nons-cholarly publications might not have the resources to check quotations.\n* While some social media platforms might moderate their content to some degree, they do not check the accuracy of the vast majority of quotations posted on them.\n  * If you see a quotation reposted by someone on Twitter, even someone you know and trust, it’s best to check it yourself.\n* Consider a quotation that does not mention the work it came from or the context in which it was said to be especially suspect.\n  * If you want to use any quotation from an untrusted or dubious source in something you’re writing, perhaps a speech or an essay, it’s always a good idea to find and verify the original quotation.\n\n\n"
-          },
-          {
-            "type": "teachingTip",
-            "markdown": "Discussing this [Deepfakes video from the New York Times](https://www.youtube.com/watch?v=1OqFY_2JE1c&t=27s) with your students may be useful if you have extra time and want to reinforce this topic. The video discusses that misinformation and misleading information have always existed but that modern tools are making it easier to make and spread this misinformation. In turn, even correct information can plausibly seem like lies. The takeaway message is that the best defense against spreading misinformation is to stop and verify each source."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "cccc0ab0-bc21-4e1a-a6e3-ba97a5285122",
-        "lesson_activity.key": "892eddf4-059a-46ee-8861-7c5f863165ec"
-      }
-    },
-    {
-      "key": "c91ddf82-6f4e-444e-864a-33abc7339315",
+      "key": "1dba9d3f-5eff-42dd-9a81-2b2e71b4ab19",
       "position": 1,
       "properties": {
-        "description": "Great work on the warm-up! Now, we will explore how different tools - an AI chatbot and a search engine - can vary in providing information. Using both tools, we’ll look up quotes, verify historical claims, and answer scientific questions. This will help us understand the strengths and limitations of AI and traditional search engines in research. Let’s dive in and see what differences we find!",
-        "duration": "10",
-        "name": "Using A Search Engine to Find Information",
+        "description": "Now, we will explore how different tools - an AI chatbot and a search engine - can vary in providing information. Using both tools, we’ll look up quotes, verify historical claims, and answer scientific questions. This will help us understand the strengths and limitations of AI and traditional search engines in research. Let’s dive in and see what differences we find!",
+        "name": "Using a Search Engine to Find Information",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "c91ddf82-6f4e-444e-864a-33abc7339315",
+        "activity_section.key": "1dba9d3f-5eff-42dd-9a81-2b2e71b4ab19",
         "lesson_activity.key": "35f4f5bd-caf3-4755-89a5-79e9bad312af"
       }
     },
     {
-      "key": "8ff9311f-039b-494e-ac62-9081c02b94a9",
+      "key": "19903042-39ca-4971-8ec4-6072e2a00aab",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Pass out the \n[r find_the_information/gen-ai-humanities/unversioned] Activity Guide ",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs or small groups of three.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 2. Students use a search engine to help answer Sofia, Miguel, and Sonja's questions, then rate the search engine.",
+        "progression_name": "Using a Search Engine to Find Information"
+      },
+      "seeding_key": {
+        "activity_section.key": "19903042-39ca-4971-8ec4-6072e2a00aab",
+        "lesson_activity.key": "35f4f5bd-caf3-4755-89a5-79e9bad312af"
+      }
+    },
+    {
+      "key": "85cc0ec0-ff07-4a88-b31c-7f595aaf7ab1",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As you walk around the room, guide students to use effective search techniques, like using keywords and evaluating the credibility of sources. Encourage students to go beyond the first few search results and explore more diverse sources. Remind students to cross-check information and consider the date and reliability of the sources.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct groups to compare their results with another group.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce ***artificial intelligence (AI)***.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The answer key for this activity guide includes tips and tricks for answering each of the questions, as well as some of the reasons for asking those questions."
+            "markdown": "Consider prompting students to share additional examples of AI they have encountered or use. Briefly discuss how each example uses AI to perform its task and the impact it has on individuals or society."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "8ff9311f-039b-494e-ac62-9081c02b94a9",
+        "activity_section.key": "85cc0ec0-ff07-4a88-b31c-7f595aaf7ab1",
         "lesson_activity.key": "35f4f5bd-caf3-4755-89a5-79e9bad312af"
       }
     },
     {
-      "key": "15af4eed-da97-41c5-9578-ff15bbb18be1",
-      "position": 3,
-      "properties": {
-        "description": "**Group** Place students in groups of 2-4. Larger groups may have an easier time splitting up the work and answering all the questions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display** Use the “Using a Search Engine” slide to help you explain the instructions for Part 1 of the activity guide.\n\n <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Ensure students only complete the first page of the activity guide. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As you walk around the room, guide students to use effective search techniques, like using keywords and evaluating the credibility of sources. Encourage students to go beyond the first few search results and explore more diverse sources. Remind students to cross-check information and consider the date and reliability of the sources.",
-        "tips": [
-          {
-            "type": "contentCorner",
-            "markdown": "There are some tips and tricks for searching that students may know – Some may have used quotation marks to find more direct quotes, for instance. Others may have used the minus sign ( - ) to eliminate useless sources. If none of the students have used these tricks, you can share them with the class, showing them what you can find with them. [This site has 10 tips](https://www.freecodecamp.org/news/how-to-google-like-a-pro-10-tips-for-effective-googling/)."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "15af4eed-da97-41c5-9578-ff15bbb18be1",
-        "lesson_activity.key": "35f4f5bd-caf3-4755-89a5-79e9bad312af"
-      }
-    },
-    {
-      "key": "1b20ffec-8cea-40f1-9d8e-f2ef09d0039e",
+      "key": "1fc391b5-53fa-45e2-8c0a-f115567dabf0",
       "position": 4,
       "properties": {
-        "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** When a couple of minutes are left, direct students to fill out the Search Engine Scorecard in their activity guide and have pairs group up with another pair to share and compare their results."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce ***generative AI***.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce ***large language models (LLMs)***.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to briefly explain how LLMs work.",
+        "name": "Introduction to Generative AI"
       },
       "seeding_key": {
-        "activity_section.key": "1b20ffec-8cea-40f1-9d8e-f2ef09d0039e",
+        "activity_section.key": "1fc391b5-53fa-45e2-8c0a-f115567dabf0",
         "lesson_activity.key": "35f4f5bd-caf3-4755-89a5-79e9bad312af"
       }
     },
     {
-      "key": "9cdf2fcc-554d-494e-b60b-e0d642ab55b3",
+      "key": "79787c08-feb1-4904-8f61-eed9cdd6bd8e",
       "position": 5,
       "properties": {
+        "description": "Large Language Models do not \"understand\" what they are saying; they see word choice in numbers. This means not everything that a large language model says will be truthful, even though almost all of it will sound like something a human might have created.",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you'd like to give students additional context about how LLMs work, you may want to show parts or all of our [**How AI Works: Chatbots and Large Language Models**](https://youtu.be/X-AWdfSFCHQ) video. If so, you may consider using some of the strategies and resources for watching this video from our [**Chatbots and Large Language Models**](https://studio.code.org/s/how-ai-works-2023/lessons/4?viewAs=Instructor) lesson."
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "9cdf2fcc-554d-494e-b60b-e0d642ab55b3",
+        "activity_section.key": "79787c08-feb1-4904-8f61-eed9cdd6bd8e",
         "lesson_activity.key": "35f4f5bd-caf3-4755-89a5-79e9bad312af"
       }
     },
     {
-      "key": "50ec7b7b-2380-4635-87c9-c7b470ae9eff",
+      "key": "0d27e3f8-57be-4198-a52b-2e50dc1101c5",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Pass out the [r chatbot_prompting_guide/gen-ai-humanities/unversioned] to each student, which should help them prompt the chatbot for this activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>**Display:** Use the “Using an AI Chatbot” slide to help you explain the instructions for Part 2 of the activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>**Do This:** Direct students to complete Part 2 of the activity guide. Instruct the students to verify the information obtained from the chatbot since it can (and will) state things as facts that are not true (like the misattribution of quotes that no one ever said).  \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i>**Circulate:** As you walk around the room, monitor students' interaction with the chatbots to ensure they ask clear, specific questions and remind them to refer to their AI Chatbot Prompting Guide. Encourage students to critically assess the chatbot’s responses, looking at not just the answer but the logic or source cited. Ensure students verify that everything the chatbot says exists and is accurate.\n",
-        "duration": "15",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce ***prompt engineering***. Have students call out differences in the prompts and the AI's response in the example shown.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What makes this prompt effective or ineffective?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Encourage students to critically evaluate the given prompt and response. Listen for students' observations on how well the prompt directs the AI to produce a focused and coherent introduction, the completeness and relevance of the AI's response, and any potential improvements to the prompt for better results."
+      },
+      "seeding_key": {
+        "activity_section.key": "0d27e3f8-57be-4198-a52b-2e50dc1101c5",
+        "lesson_activity.key": "35f4f5bd-caf3-4755-89a5-79e9bad312af"
+      }
+    },
+    {
+      "key": "0dfcb6c5-e1c7-49c4-89a4-ee7e0e792886",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 3. Students use a chatbot to research the same queries they used the search engine for, then rate the AI chatbot.",
         "name": "Using an AI Chatbot to Find Information",
-        "tips": [
-          {
-            "type": "contentCorner",
-            "markdown": "The chatbots your students will be using are large language models. Large language models say things based on what words and sentences probably come next. This means that sometimes, the chatbot will state things as facts that are not true.\n\nAs discussed during the warm-up, double-checking information is important with sites you find via a normal search engine, and the same can be said when working with an AI chatbot.\n\nIt is also important to know that sometimes, a chatbot will remind students that it is only guessing. Keep students looking for statements like “This might have been said by…” Also, note that sometimes the chatbot doesn’t say something like this but *still might be* making up the information.\n\nSome chatbots will also cite their sources and often provide links to follow. **Not all of the links are what the chatbots say they are.** Also, even when a website says the same thing as the chatbot, it does not guarantee that the information is correct; **it is always important to double-check all information on the internet - whether from an AI or a traditional search engine.**"
-          },
-          {
-            "type": "teachingTip",
-            "markdown": "**Pre-work extension:** As mentioned in the optional pre-work section, this lesson might benefit from gaining more context on how large language models work. Depending on how much time you have, the two options below will help you and your students gain more information and context on large language models. \n\n**Video:** If you do not have time for a full 45 minute lesson, but do have time for a 7 minute video during this lesson, you may show your students the [“How Chatbots and Large Language Models Work” video](https://youtu.be/X-AWdfSFCHQ).\n\n**Lesson:** If you have the time for it, there is another 45 minute lesson you can do before this lesson on How [**Chatbots and Large Language Models (LLMs)**](https://studio.code.org/s/how-ai-works-2023/lessons/4) work."
-          }
-        ]
+        "progression_name": "Using an AI Chatbot to Find Information"
       },
       "seeding_key": {
-        "activity_section.key": "50ec7b7b-2380-4635-87c9-c7b470ae9eff",
+        "activity_section.key": "0dfcb6c5-e1c7-49c4-89a4-ee7e0e792886",
         "lesson_activity.key": "35f4f5bd-caf3-4755-89a5-79e9bad312af"
       }
     },
     {
-      "key": "52c9052e-5f69-42b4-8e8d-e51602c09035",
-      "position": 7,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** When a couple of minutes are left, direct students to fill out the AI Chatbot Scorecard in their activity guide and  have pairs group up with another pair, different than the pair they shared with after Part 1, to share and compare their results.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Use the “Tool Comparison” slide to direct the grouped pairs also to reflect and discuss the following questions:\n* Was there anything easier to find with the chatbot than the traditional search engine? \n* Was there anything more difficult?\n* Was there anything that was equally difficult regardless of the tool?\nWhy do you think that is? \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i>**Circulate:** Move around from group to group during this short discussion to ensure that students are not only sharing their experiences but also critically thinking about the reasons behind them. When needed, encourage them to delve deeper into their analysis rather than just stating surface-level observations. Be attentive to any misconceptions about how AI chatbots and search engines work. This is an opportunity to clarify and provide accurate information.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "This lesson assumes that students are familiar with the marginalization of certain groups and what it means. If they do not, this might be a good place to begin that discussion, though it is out of the scope of this lesson. For resources on discussing marginalization more generally, we recommend you check out any of the following resources:\n* [Learning for Justice](https://www.learningforjustice.org/)\n* [Morningside Center](https://www.morningsidecenter.org/)\n* [Facing History](https://www.facinghistory.org/)\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "52c9052e-5f69-42b4-8e8d-e51602c09035",
-        "lesson_activity.key": "35f4f5bd-caf3-4755-89a5-79e9bad312af"
-      }
-    },
-    {
-      "key": "8e7f868b-a733-408c-a778-649d8df0830c",
-      "position": 1,
-      "properties": {
-        "description": "Great job with your research today! As we transition to our last activity, consider the two tools you’ve used and their impact on your ability to find, verify, and even understand information. This reflection will be key to developing your skills as researchers, critical thinkers, and digital citizens! ",
-        "duration": "10",
-        "name": "Reflection Stations",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "8e7f868b-a733-408c-a778-649d8df0830c",
-        "lesson_activity.key": "37303088-2234-4446-9b60-3b7f9cab9e40"
-      }
-    },
-    {
-      "key": "0e681ce7-4cd1-4867-9610-bb685cec4179",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:**: Explain the Reflection Stations and the steps for this reflection activity.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:* Give each student a copy of  [r reflection_stations_activity_guide/gen-ai-humanities/unversioned].\n\n**Group**: Place students into pairs different from those with whom they did the main activity\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:**: Direct students to complete the Reflection Stations with their partners. They will have about 2-3 minutes per station.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i>  **Circulate:** Move around from station to station as students work to ensure they complete each station’s tasks. Read students’ responses on the station posters as you move around. You may notice some responses you want to highlight and discuss when the class comes back together.\n",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Encourage those who finish early to discuss their experiences from today, which are the reasons behind their responses."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "0e681ce7-4cd1-4867-9610-bb685cec4179",
-        "lesson_activity.key": "37303088-2234-4446-9b60-3b7f9cab9e40"
-      }
-    },
-    {
-      "key": "a6e39114-211c-4770-bd3b-5da4ff1b1806",
-      "position": 3,
-      "properties": {
-        "description": "Nicely done everyone! Let’s take a look at what was said at each station. ",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "a6e39114-211c-4770-bd3b-5da4ff1b1806",
-        "lesson_activity.key": "37303088-2234-4446-9b60-3b7f9cab9e40"
-      }
-    },
-    {
-      "key": "7b553bc8-4cc3-43bc-b37b-ba938556b38c",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Direct students to return to the station they started at for about 1 minute to look at the sticky placement and read their peer’s sticky note comments. Once time is up, direct students to the station they went to second and repeat. Remind students to write down any new ideas or reflections they have on their activity guide as they visit each station. ",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Students do not need to return to the 3rd station as that was the last station they were at, and they should have seen the station poster in its final version.\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "7b553bc8-4cc3-43bc-b37b-ba938556b38c",
-        "lesson_activity.key": "37303088-2234-4446-9b60-3b7f9cab9e40"
-      }
-    },
-    {
-      "key": "e45087fc-f413-41eb-b012-ae340c5751c9",
-      "position": 5,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "e45087fc-f413-41eb-b012-ae340c5751c9",
-        "lesson_activity.key": "37303088-2234-4446-9b60-3b7f9cab9e40"
-      }
-    },
-    {
-      "key": "f36e3509-ec86-4153-9a34-4209096be608",
-      "position": 6,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Display the slide for Station A. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Have a quick discussion about the placement of sticky notes along the chatbot usage scale. What do they notice? What do they wonder? Pick out a couple of sticky notes from the 2nd question on the poster to help drive the discussion of when to use a chatbot for research.\n\n**Discussion Goal:** The goal here is for students to recognize situations where a chatbot's conversational interface and thematic search capabilities are advantageous, such as when exploring less mainstream topics, combining ideas, accessing marginalized voices, or seeking a more engaging, interactive research experience. This reflection should enhance their understanding of the unique strengths of chatbots in information gathering.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Display the slide for Station B. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**Have a quick discussion about the placement of sticky notes on the search engine usage scale. What do they notice? What do they wonder? Pick out a couple of sticky notes from the 2nd question on the poster to help drive the discussion of when (and even how) to use a search engine for research.\n\n**Discussion Goal:**  This short discussion aims to help students appreciate the effectiveness of search engines in quickly providing a vast array of information for straightforward, factual queries. They should consider the value of having multiple sources and perspectives at their fingertips despite the need for critical evaluation and verification of these sources.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Display the slide for Station C. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**  Have a quick discussion about the placement of sticky notes in the ethical concerns chart. What do they notice? What do they wonder? Pick out a couple of sticky notes from the 2nd question on the poster to help drive the discussion of ethical considerations when using either tool for research.\n\n**Discussion Goal:** The goal is to encourage students to think critically about the ethical dimensions of digital tools. They should reflect on issues like the spread of misinformation, the reliability of AI-generated content, and the challenges in accessing diverse perspectives. This discussion should foster awareness about responsible information consumption and sharing.\n",
-        "duration": "5",
-        "name": "Reflection Station Discussion",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "The Reflection Stations Activity Guide can be used as a formative assessment to gauge understanding of when to use various tools when doing research and their ethical implications."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "f36e3509-ec86-4153-9a34-4209096be608",
-        "lesson_activity.key": "37303088-2234-4446-9b60-3b7f9cab9e40"
-      }
-    },
-    {
-      "key": "37744132-cbe9-4823-9754-e535615c79d8",
-      "position": 7,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Prompt: What is one takeaway from our exploration into research tools?\n**Discussion Goal:** The goal is to give students space to synthesize and articulate a key insight or lesson they have learned from the day’s activities. Encourage students to reflect on the learning experience and identify what stood out most. Help students recognize the value of critically assessing information, understanding the strengths and limitations of different tools, and verifying information, regardless of the tool used. "
-      },
-      "seeding_key": {
-        "activity_section.key": "37744132-cbe9-4823-9754-e535615c79d8",
-        "lesson_activity.key": "37303088-2234-4446-9b60-3b7f9cab9e40"
-      }
-    },
-    {
-      "key": "81d4b9c5-2093-43b7-bbd2-ab7f62f2cade",
+      "key": "32855c68-354d-41d3-b325-932b0097bb68",
       "position": 8,
       "properties": {
-        "description": "Great work today, everyone! We've seen how each tool, whether a chatbot or a search engine, has unique research uses. As you’ve pointed out, the main thing we should all remember when researching is the critical need to verify information from any source! We all have a shared responsibility to combat the vast amount of misinformation! ",
-        "remarks": true
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct groups to compare their results with another group.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have the groups discuss the following to compare the tools they used in this lesson:\n* Was there anything easier to find with the chatbot than the traditional search engine?\n* Was there anything more difficult to find than the search engine?\n* Was there anything that was equally difficult to find regardless of the tool?\n* What factors do you think influenced the ease or difficulty of finding information with each tool?\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Move around from group to group during this short discussion to ensure that students are not only sharing their experiences but also critically thinking about the reasons behind them. When needed, encourage them to delve deeper into their analysis rather than just stating surface-level observations. Be attentive to any misconceptions about how AI chatbots and search engines work. This is an opportunity to clarify and provide accurate information."
       },
       "seeding_key": {
-        "activity_section.key": "81d4b9c5-2093-43b7-bbd2-ab7f62f2cade",
+        "activity_section.key": "32855c68-354d-41d3-b325-932b0097bb68",
+        "lesson_activity.key": "35f4f5bd-caf3-4755-89a5-79e9bad312af"
+      }
+    },
+    {
+      "key": "a158e931-ac2c-409d-83c8-2671a9f451ef",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What is one takeaway from our exploration into research tools?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** The goal is to give students space to synthesize and articulate a key insight or lesson they have learned from the day’s activities. Encourage students to reflect on the learning experience and identify what stood out most. Help students recognize the value of critically assessing information, understanding the strengths and limitations of different tools, and verifying information, regardless of the tool used.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 4 to complete the End of Lesson survey.",
+        "name": "Key Takeaways",
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "a158e931-ac2c-409d-83c8-2671a9f451ef",
         "lesson_activity.key": "37303088-2234-4446-9b60-3b7f9cab9e40"
       }
     }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Crafting Prompts"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-humanities-writing-L1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-humanities",
+        "activity_section.key": "ede884c4-3843-4340-988e-044bbbade2ad"
+      },
+      "level_keys": [
+        "gen-ai-humanities-writing-L1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-humanities-writing-L2"
+        ],
+        "progression": "Evaluating Responses"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-humanities-writing-L2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-humanities",
+        "activity_section.key": "157720b6-ed4a-48e5-b7bc-95752244f163"
+      },
+      "level_keys": [
+        "gen-ai-humanities-writing-L2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-humanities-writing-L3"
+        ],
+        "progression": "Evaluating Responses"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-humanities-writing-L3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-humanities",
+        "activity_section.key": "157720b6-ed4a-48e5-b7bc-95752244f163"
+      },
+      "level_keys": [
+        "gen-ai-humanities-writing-L3"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "Gen AI Humanities - Writing - Student L1 Survey"
+        ],
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Gen AI Humanities - Writing - Student L1 Survey"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-humanities",
+        "activity_section.key": "0c8b742e-65f7-40da-a31c-0c21ce91e959"
+      },
+      "level_keys": [
+        "Gen AI Humanities - Writing - Student L1 Survey"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Verifying Quotes"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-humanities-research-L1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-humanities",
+        "activity_section.key": "46b3f975-5810-44ef-af5d-ad79dc749a85"
+      },
+      "level_keys": [
+        "gen-ai-humanities-research-L1"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Using a Search Engine to Find Information"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-humanities-research-L2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-humanities",
+        "activity_section.key": "19903042-39ca-4971-8ec4-6072e2a00aab"
+      },
+      "level_keys": [
+        "gen-ai-humanities-research-L2"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Using an AI Chatbot to Find Information"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-humanities-research-L3"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-humanities",
+        "activity_section.key": "0dfcb6c5-e1c7-49c4-89a4-ee7e0e792886"
+      },
+      "level_keys": [
+        "gen-ai-humanities-research-L3"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Gen AI Humanities - Research - Student L1 Survey"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-humanities",
+        "activity_section.key": "a158e931-ac2c-409d-83c8-2671a9f451ef"
+      },
+      "level_keys": [
+        "Gen AI Humanities - Research - Student L1 Survey"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-humanities-writing-L1",
+        "script_level.level_keys": [
+          "gen-ai-humanities-writing-L1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-humanities",
+        "activity_section.key": "ede884c4-3843-4340-988e-044bbbade2ad"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-humanities-writing-L2",
+        "script_level.level_keys": [
+          "gen-ai-humanities-writing-L2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-humanities",
+        "activity_section.key": "157720b6-ed4a-48e5-b7bc-95752244f163"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-humanities-writing-L3",
+        "script_level.level_keys": [
+          "gen-ai-humanities-writing-L3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-humanities",
+        "activity_section.key": "157720b6-ed4a-48e5-b7bc-95752244f163"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Gen AI Humanities - Writing - Student L1 Survey",
+        "script_level.level_keys": [
+          "Gen AI Humanities - Writing - Student L1 Survey"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-humanities",
+        "activity_section.key": "0c8b742e-65f7-40da-a31c-0c21ce91e959"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-humanities-research-L1",
+        "script_level.level_keys": [
+          "gen-ai-humanities-research-L1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-humanities",
+        "activity_section.key": "46b3f975-5810-44ef-af5d-ad79dc749a85"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-humanities-research-L2",
+        "script_level.level_keys": [
+          "gen-ai-humanities-research-L2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-humanities",
+        "activity_section.key": "19903042-39ca-4971-8ec4-6072e2a00aab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-humanities-research-L3",
+        "script_level.level_keys": [
+          "gen-ai-humanities-research-L3"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-humanities",
+        "activity_section.key": "0dfcb6c5-e1c7-49c4-89a4-ee7e0e792886"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Gen AI Humanities - Research - Student L1 Survey",
+        "script_level.level_keys": [
+          "Gen AI Humanities - Research - Student L1 Survey"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-humanities",
+        "activity_section.key": "a158e931-ac2c-409d-83c8-2671a9f451ef"
+      }
+    }
   ],
   "resources": [
-    {
-      "name": "[KEY] Find the Information Exemplar",
-      "url": "https://docs.google.com/document/d/1rs4sDLVwdO0JeLO73QNQtqYf73ZrpvRUh4ddBPjUHUc/",
-      "key": "_key_find_the_information_exemplar",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_find_the_information_exemplar"
-      }
-    },
-    {
-      "name": "[KEY] Verify Quotes",
-      "url": "https://docs.google.com/document/d/1dtgwLQgsdqGHmL8KnOpNfH_l1KyVScleexo6qAusyqk/",
-      "key": "_key_verify_quotes",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_verify_quotes"
-      }
-    },
     {
       "name": "AI Chatbot Prompting Guide",
       "url": "https://docs.google.com/document/d/16Z61Blt2ZcaKkjM9UURl_D8c2VKjz40dovTLEXWgxlE/",
@@ -774,72 +888,30 @@
       }
     },
     {
-      "name": "Chatbot Prompting Guide",
-      "url": "https://docs.google.com/document/d/16Z61Blt2ZcaKkjM9UURl_D8c2VKjz40dovTLEXWgxlE/",
-      "key": "chatbot_prompting_guide",
-      "properties": {
-        "audience": "Student",
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "chatbot_prompting_guide"
-      }
-    },
-    {
-      "name": "Find the Information ",
-      "url": "https://docs.google.com/document/d/1PpKT1RVPoJ3ROhw_Zqc1yLMzRfi0aWbFSA-bZXYQL-g/",
-      "key": "find_the_information",
-      "properties": {
-        "audience": "Student",
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "find_the_information"
-      }
-    },
-    {
-      "name": "Research Lesson Slides",
-      "url": "https://docs.google.com/presentation/d/1-iwHjQKrqJ3iWQq6-JiM8gL75OY-hyyGYtzHmhP0RUs/",
-      "key": "gah_-_research_slides",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "gah_-_research_slides"
-      }
-    },
-    {
-      "name": "Guide for working with ChatGPT",
+      "name": "Guide to ChatGPT",
       "url": "https://docs.google.com/document/d/1X9RLIpeAwlxckdAugepxS4h7hyjvHUTSDn-knipVneE/edit",
       "key": "guide_for_working_with_chatgpt",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "guide_for_working_with_chatgpt"
       }
     },
     {
-      "name": "Guide for working with Google Gemini",
+      "name": "Guide to Google Gemini",
       "url": "https://docs.google.com/document/d/1NFPloHIzAxZca_86Up4Ubrji4xLjGKBIH9gqoBRopAg/edit",
       "key": "guide_for_working_with_google_gemini",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "guide_for_working_with_google_gemini"
       }
     },
     {
-      "name": "Guide for Working with Microsoft Copilot",
+      "name": "Guide to Microsoft Copilot",
       "url": "https://docs.google.com/document/d/1Pqz-xjN1btqSvFj4vYMOZS0boJ0Bw_DFDZ3v_3nwUVk/edit",
       "key": "guide_for_working_with_microsoft_copilot",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "guide_for_working_with_microsoft_copilot"
@@ -855,18 +927,6 @@
       },
       "seeding_key": {
         "resource.key": "guide_to_chatgpt"
-      }
-    },
-    {
-      "name": "Guide to ChatGPT",
-      "url": "https://docs.google.com/document/d/1X9RLIpeAwlxckdAugepxS4h7hyjvHUTSDn-knipVneE/",
-      "key": "guide_to_chatgpt_1",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "guide_to_chatgpt_1"
       }
     },
     {
@@ -894,51 +954,15 @@
       }
     },
     {
-      "name": "Guide to Microsoft Copilot",
-      "url": "https://docs.google.com/document/d/1Pqz-xjN1btqSvFj4vYMOZS0boJ0Bw_DFDZ3v_3nwUVk/",
-      "key": "guide_to_microsoft_copilot_1",
+      "name": "The Research Process",
+      "url": "https://docs.google.com/presentation/d/1NxfQ9eGNUVMZ7MB6NCG8doAdTi1a06tAQEOvPG1XysI/edit?usp=sharing",
+      "key": "the_research_process",
       "properties": {
         "audience": "Teacher",
-        "type": "Resource"
+        "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "guide_to_microsoft_copilot_1"
-      }
-    },
-    {
-      "name": "Guide to Google Gemini",
-      "url": "https://docs.google.com/document/d/1NFPloHIzAxZca_86Up4Ubrji4xLjGKBIH9gqoBRopAg/",
-      "key": "guide_to_using_microsoft_copilot_1",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "guide_to_using_microsoft_copilot_1"
-      }
-    },
-    {
-      "name": "Reflection Stations Setup Guide",
-      "url": "https://docs.google.com/document/d/1LP4VtH4fRAM-2aW0APydKUj5pVGlS6q3Gq2Bzw4qKb8/",
-      "key": "reflection_stations",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "reflection_stations"
-      }
-    },
-    {
-      "name": "Reflection Stations Activity Guide",
-      "url": "https://docs.google.com/document/d/1x9zG7AYEXysmyLsxENyPqt8t_qHSSoJ8teHP3P5HzjQ/",
-      "key": "reflection_stations_activity_guide",
-      "properties": {
-        "audience": "Student",
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "reflection_stations_activity_guide"
+        "resource.key": "the_research_process"
       }
     },
     {
@@ -951,18 +975,6 @@
       },
       "seeding_key": {
         "resource.key": "the_writing_process"
-      }
-    },
-    {
-      "name": "Verify Quotes Activity Guide",
-      "url": "https://docs.google.com/document/d/1jeFAxPKQbConJ0yEhilWDAGkti7PbqjW2Y4STcLwN5o/",
-      "key": "verify_quotes_activity_guide",
-      "properties": {
-        "audience": "Student",
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "verify_quotes_activity_guide"
       }
     }
   ],
@@ -994,67 +1006,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
-        "resource.key": "_key_find_the_information_exemplar"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "resource.key": "_key_verify_quotes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "resource.key": "chatbot_prompting_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "resource.key": "find_the_information"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "resource.key": "gah_-_research_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "resource.key": "guide_to_chatgpt_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "resource.key": "guide_to_microsoft_copilot_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "resource.key": "guide_to_using_microsoft_copilot_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "resource.key": "reflection_stations"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "resource.key": "reflection_stations_activity_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "resource.key": "verify_quotes_activity_guide"
+        "resource.key": "the_research_process"
       }
     }
   ],
@@ -1119,16 +1071,6 @@
       }
     },
     {
-      "key": "large_language_models",
-      "word": "Large Language Models",
-      "definition": "Trained models that can recognize, summarize, translate, predict, and generate text in a human-like fashion",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "large_language_models"
-      }
-    },
-    {
       "key": "prompt_engineering",
       "word": "prompt engineering",
       "definition": "crafting specific and clear instructions (prompts) for LLMs",
@@ -1167,7 +1109,25 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
-        "vocabulary.key": "large_language_models"
+        "vocabulary.key": "artificial_intelligence_ai_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "generative_ai"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "large_language_model_llm_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "prompt_engineering"
       }
     }
   ],
@@ -1176,23 +1136,23 @@
   ],
   "objectives": [
     {
-      "key": "9f8ce5d8-bb91-452b-bb66-5542c01b9dde",
+      "key": "0460281d-c0e3-4dce-84f6-aff503c40eac",
       "properties": {
-        "description": "Learn how to more effectively prompt a chatbot in the process"
+        "description": "Evaluate the effectiveness and appropriateness of LLM-generated responses in different research scenarios"
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
-        "objective.key": "9f8ce5d8-bb91-452b-bb66-5542c01b9dde"
+        "objective.key": "0460281d-c0e3-4dce-84f6-aff503c40eac"
       }
     },
     {
-      "key": "bd7939db-6207-4353-94b7-fc57db43523e",
+      "key": "a0bb552d-1892-4802-9b8d-4b07637dd2a1",
       "properties": {
-        "description": "Discuss what kind of research AI is helpful for"
+        "description": "Use a search engine and an AI chatbot to research and verify information"
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
-        "objective.key": "bd7939db-6207-4353-94b7-fc57db43523e"
+        "objective.key": "a0bb552d-1892-4802-9b8d-4b07637dd2a1"
       }
     },
     {
@@ -1214,16 +1174,6 @@
         "lesson.key": "lesson-1",
         "objective.key": "f78505db-7830-4415-b3ac-5e0380d8c692"
       }
-    },
-    {
-      "key": "fa34d1c0-b320-4034-943a-71dc2b3e2585",
-      "properties": {
-        "description": "Use a chatbot and a search engine to research and verify information"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "objective.key": "fa34d1c0-b320-4034-943a-71dc2b3e2585"
-      }
     }
   ],
   "lessons_standards": [
@@ -1239,6 +1189,20 @@
         "lesson.key": "lesson-1",
         "framework.shortcode": "ai4k12-2023",
         "standard.shortcode": "5-B-i.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-21"
       }
     },
     {

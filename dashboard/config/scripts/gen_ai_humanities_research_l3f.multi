@@ -1,0 +1,10 @@
+name 'gen-ai-humanities-research-L3f'
+title 'Scorecard'
+
+question 'On average, how accurate was the information you found?'
+right '1'
+right '2'
+right '3'
+right '4'
+right '5'
+allow_multiple_attempts false

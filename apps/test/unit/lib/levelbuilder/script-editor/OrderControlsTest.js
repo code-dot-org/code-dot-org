@@ -1,8 +1,10 @@
-import React from 'react';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../../util/reconfiguredChai';
+import React from 'react';
 import sinon from 'sinon';
+
 import OrderControls from '@cdo/apps/lib/levelbuilder/OrderControls';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('OrderControls', () => {
   let move, remove, defaultProps;
