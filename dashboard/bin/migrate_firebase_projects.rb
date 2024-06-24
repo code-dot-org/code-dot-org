@@ -26,11 +26,11 @@ def transform_to_datablock_tables(channel)
       updated_at: Time.now
     }
 
-    datablock_records = records.map.with_index(1) do |record, record_id|
+    datablock_records = records.map do |record|
       {
         project_id: project_id,
         table_name: table_name,
-        record_id: record_id,
+        record_id: record["id"],
         record_json: record
       }
     end
