@@ -12,15 +12,13 @@ module Services
 
       def call
         return if Policies::ChildAccount::ComplianceState.locked_out?(user)
-        # Only "pre-policy" created students can be transited to the grace period.
-        return unless Policies::ChildAccount.user_predates_policy?(user)
         # Users can be transitioned to the grace period only after the "all users' lockout" phase has started.
         return if all_users_lockout_start_date.nil? || all_users_lockout_start_date > DateTime.now
 
         if Policies::ChildAccount.compliant?(user)
           # Removes the "grace period" state if the user is now CAP compliant.
           Services::ChildAccount.remove_compliance(user) if Policies::ChildAccount::ComplianceState.grace_period?(user)
-        else
+        elsif Policies::ChildAccount.user_predates_policy?(user)
           # Transits the user to the "grace period" state if they are not already in it.
           start_grace_period unless Policies::ChildAccount::ComplianceState.grace_period?(user)
         end

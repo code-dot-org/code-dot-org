@@ -30,6 +30,7 @@ module Services::ChildAccount
     return unless user
     user.child_account_compliance_state = new_state
     user.child_account_compliance_state_last_updated = DateTime.now
+    user.child_account_compliance_lock_out_date = nil
   end
 
   # Updates the User in the given PermissionRequest to indicate that their

@@ -116,6 +116,17 @@ class Services::ChildAccount::GracePeriodHandlerTest < ActiveSupport::TestCase
 
           handle_user_grace_period_transition
         end
+
+        context 'and not predates policy anymore' do
+          let(:user_predates_policy?) {false}
+
+          it 'ends grace period for user' do
+            expect_grace_period_starting.never
+            expect_cap_compliance_clearing.once
+
+            handle_user_grace_period_transition
+          end
+        end
       end
     end
   end
