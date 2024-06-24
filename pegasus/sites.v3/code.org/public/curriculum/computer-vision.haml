@@ -53,6 +53,16 @@ theme: responsive_full_width
         %p=hoc_s("computer_vision_page.teach.desc")
         = view :"computer_vision/computer_vision_teach"
 
+  %section.bg-neutral-light
+    .wrapper.centered
+      %h2=hoc_s("computer_vision_page.learn_more.heading")
+      = view :"computer_vision/computer_vision_learn_more"
+      %hr.light
+      %h3=hoc_s("computer_vision_page.learn_more.discover.heading")
+      %p=hoc_s("computer_vision_page.learn_more.discover.desc")
+      %a.link-button.secondary{href: "/ai"}
+        =hoc_s("computer_vision_page.learn_more.discover.button")
+
 - else
   -# TODO Remove everything below the else statement after the 2024 curriculum launch
   %link{href: "/css/generated/computer-vision-software.css", rel: "stylesheet"}
