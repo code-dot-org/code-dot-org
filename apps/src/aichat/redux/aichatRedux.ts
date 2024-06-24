@@ -38,7 +38,6 @@ import {
 import {
   DEFAULT_VISIBILITIES,
   EMPTY_AI_CUSTOMIZATIONS,
-  AI_CUSTOMIZATIONS_LABELS,
 } from '../views/modelCustomization/constants';
 import {validateModelId} from '../views/modelCustomization/utils';
 

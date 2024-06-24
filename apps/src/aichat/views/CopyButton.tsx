@@ -7,9 +7,11 @@ import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
-import {ChatItem, isChatMessage, isModelUpdate, isNotification} from '../types';
-import {AI_CUSTOMIZATIONS_LABELS} from './modelCustomization/constants';
+
 import {timestampToDateTime} from '../redux/utils';
+import {ChatItem, isChatMessage, isModelUpdate, isNotification} from '../types';
+
+import {AI_CUSTOMIZATIONS_LABELS} from './modelCustomization/constants';
 
 const CopyButton: React.FunctionComponent = () => {
   const messages = useSelector(selectAllMessages);
