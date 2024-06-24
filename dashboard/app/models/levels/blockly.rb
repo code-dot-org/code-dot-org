@@ -89,8 +89,8 @@ class Blockly < Level
   # DCDO key for turning this feature on or off.
   BLOCKLY_I18N_IN_TEXT_DCDO_KEY = 'blockly_i18n_in_text'.freeze
 
-  def uses_google_blockly?
-    migrated_skins = [
+  def self.migrated_skins
+    [
       # Star Wars
       "hoc2015", "hoc2015x",
       # Maze
@@ -100,8 +100,11 @@ class Blockly < Level
       # Spelling Bee
       "letters"
     ]
+  end
+
+  def uses_google_blockly?
     skin = properties['skin']
-    migrated_skins.include?(skin) && DCDO.get('maze_sw_google_blockly', true)
+    self.class.migrated_skins.include?(skin) && DCDO.get('maze_sw_google_blockly', true)
   end
 
   def summarize_for_lab2_properties(script, script_level = nil, current_user = nil)
