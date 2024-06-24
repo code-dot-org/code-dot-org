@@ -1,13 +1,16 @@
-import React from 'react';
 import classNames from 'classnames';
+import React from 'react';
 
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {StrongText} from '@cdo/apps/componentLibrary/typography';
-import aiBotIcon from '@cdo/static/aichat/ai-bot-icon.svg';
-import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
+import aiBotIcon from '@cdo/static/aichat/ai-bot-icon.svg';
 
+import {modelDescriptions} from '../constants';
+import aichatI18n from '../locale';
 import {removeUpdateMessage} from '../redux/aichatRedux';
+import {timestampToLocalTime} from '../redux/utils';
 import {
   ChatItem,
   Notification,
@@ -17,12 +20,11 @@ import {
   isNotification,
   isModelUpdate,
 } from '../types';
-import aichatI18n from '../locale';
+
 import ChatNotificationMessage from './ChatNotificationMessage';
-import moduleStyles from './chatMessage.module.scss';
 import {AI_CUSTOMIZATIONS_LABELS} from './modelCustomization/constants';
-import {modelDescriptions} from '../constants';
-import {timestampToLocalTime} from '../redux/utils';
+
+import moduleStyles from './chatMessage.module.scss';
 
 interface ChatMessageProps {
   message: ChatItem;
