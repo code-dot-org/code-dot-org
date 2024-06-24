@@ -14,7 +14,8 @@ def transform_to_datablock_tables(channel)
 
   tables.each do |table_name, table_data|
     columns = table_data["columns"].values.map {|col| col["columnName"]}
-    records = tables_records.dig(table_name, "records").compact.map {|record| JSON.parse(record)}
+    json_records = tables_records.dig(table_name, "records")
+    records = json_records ? json_records.compact.map {|record| JSON.parse(record)} : []
 
     datablock_table = {
       project_id: project_id,
