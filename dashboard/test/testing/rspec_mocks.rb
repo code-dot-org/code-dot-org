@@ -7,6 +7,11 @@ require 'rspec/mocks'
 #  class MyTest < ActiveSupport::TestCase
 #     include Minitest::RSpecMocks
 #
+#     setup do
+#       allow(DCDO).to receive(:get).and_call_original
+#       allow(DCDO).to receive(:get).with('foo', anything).and_return('bar')
+#     end
+#
 #     test 'using RSpec mocks' do
 #       expect(obj).to receive(:foo).and_return('bar')
 #       assert_equal 'bar', obj.foo
@@ -16,11 +21,6 @@ module Minitest
   module RSpecMocks
     extend ActiveSupport::Concern
     include RSpec::Mocks::ExampleMethods
-
-    # included do
-    #   remove_method(:expect) if method_defined?(:expect)
-    #   remove_method(:stub) if method_defined?(:stub)
-    # end
 
     def before_setup
       RSpec::Mocks.setup
