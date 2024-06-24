@@ -42,11 +42,6 @@ let schoolData = {
 // Keep track of whether the current user is in the U.S. or not (for regional partner email sharing)
 let isInUnitedStates = schoolData.countryCode === 'US';
 
-// Track whether clearer user type buttons rollout is enabled
-const inClearerUserTypeRollout = experiments.isEnabled(
-  experiments.CLEARER_SIGN_UP_USER_TYPE
-);
-
 let userInRegionalPartnerVariant = experiments.isEnabled(
   experiments.OPT_IN_EMAIL_REG_PARTNER
 );
@@ -59,23 +54,12 @@ $(document).ready(() => {
   function init() {
     let hiddenUserType = $('#user_user_type').attr('type') === 'hidden';
     if (!hiddenUserType) {
-      if (inClearerUserTypeRollout) {
-        // If in variant, toggle large buttons
-        document.getElementById('select-user-type-original').style.cssText =
-          'display:none;';
-        document.getElementById('select-user-type-variant').style.cssText =
-          'display:flex;';
-        document.getElementById('signup-select-user-type-label').style.cssText =
-          'width:135px;';
-      } else {
-        // Otherwise (also the default), keep original dropdown
-        document.getElementById('select-user-type-variant').style.cssText =
-          'display:none;';
-        document.getElementById('select-user-type-original').style.cssText =
-          'display:flex;';
-        document.getElementById('signup-select-user-type-label').style.cssText =
-          'width:220px;';
-      }
+      document.getElementById('select-user-type-original').style.cssText =
+        'display:none;';
+      document.getElementById('select-user-type-variant').style.cssText =
+        'display:flex;';
+      document.getElementById('signup-select-user-type-label').style.cssText =
+        'width:135px;';
     }
     setUserType(user_type);
     renderSchoolInfo();
@@ -171,9 +155,7 @@ $(document).ready(() => {
       // Show student fields by default.
       switchToStudent();
     }
-    if (inClearerUserTypeRollout) {
-      styleSelectedUserTypeButton(new_user_type);
-    }
+    styleSelectedUserTypeButton(new_user_type);
     user_type = new_user_type;
   }
 
@@ -265,6 +247,11 @@ $(document).ready(() => {
     if (event) {
       schoolData.country = event.value;
       schoolData.countryCode = event.label;
+      analyticsReporter.sendEvent(
+        EVENTS.COUNTRY_SELECTED,
+        {country: schoolData.country, countryCode: schoolData.countryCode},
+        PLATFORMS.BOTH
+      );
     }
     isInUnitedStates = schoolData.countryCode === 'US';
     toggleVisShareEmailRegPartner(isInUnitedStates);
@@ -278,6 +265,15 @@ $(document).ready(() => {
 
   function onSchoolChange(_, event) {
     schoolData.ncesSchoolId = event ? event.value : '';
+    // ID is set to -1 and '' respectively as user toggles 'I cannot find my
+    // school above': exlude these from school selection events
+    if (!['-1', ''].includes(schoolData.ncesSchoolId)) {
+      analyticsReporter.sendEvent(
+        EVENTS.SCHOOL_SELECTED_FROM_LIST,
+        {ncesId: schoolData.ncesSchoolId},
+        PLATFORMS.BOTH
+      );
+    }
     renderSchoolInfo();
   }
 
