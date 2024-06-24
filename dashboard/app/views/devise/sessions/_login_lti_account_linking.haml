@@ -2,6 +2,7 @@
 
 %h2#linking-page-header= t('lti.account_linking.linking_page_header', provider: params[:lms_name])
 %p#linking-page-description= t('lti.account_linking.linking_page_description')
+%div#flash-messages= show_flashes.html_safe
 
 %div#link-account
   .flex-container
@@ -20,7 +21,6 @@
     #email-side
       %h3= t('lti.account_linking.connect_with_email')
       = form_with(url: :lti_v1_account_linking_link_email, method: :post) do |f|
-        = show_flashes.html_safe
 
         / Email
         .field
@@ -32,6 +32,9 @@
         .field#password_field
           = f.label :password
           = f.password_field :password, autofocus: email != '', required: true
+
+        = f.hidden_field :lti_provider, value: params[:lti_provider]
+        = f.hidden_field :lms_name, value: params[:lms_name]
 
         / Sign in button
         %button#signin-connect-button= t('lti.account_linking.sign_in_and_connect')

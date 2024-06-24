@@ -83,12 +83,12 @@ end
 def navigate_to(url)
   Retryable.retryable(on: RSpec::Expectations::ExpectationNotMetError, sleep: 10, tries: 3) do
     with_read_timeout(DEFAULT_WAIT_TIMEOUT + 5.seconds) do
-      page_body = @browser.find_element(:css, 'body')
+      root = @browser.find_element(css: ':root')
       @browser.navigate.to url
       # Wait until the document has actually changed
-      if page_body
+      if root
         wait_until do
-          page_body != @browser.find_element(:css, 'body')
+          root != @browser.find_element(css: ':root')
         end
       end
       # Then, wait until the document is done loading

@@ -729,11 +729,6 @@ module SharedConstants
     GENERAL_CHAT: 'general_chat',
   }.freeze
 
-  AICHAT_ERROR_TYPE = {
-    PROFANITY_MODEL: 'profanity_model',
-    PROFANITY_USER: 'profanity_user'
-  }.freeze
-
   USER_TYPES = OpenStruct.new(
     STUDENT: 'student',
     TEACHER: 'teacher',
