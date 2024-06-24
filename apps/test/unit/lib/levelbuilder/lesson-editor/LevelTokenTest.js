@@ -1,12 +1,14 @@
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../../util/reconfiguredChai';
+import _ from 'lodash';
+import React from 'react';
 import sinon from 'sinon';
+
 import {
   UnconnectedLevelToken as LevelToken,
   LevelTokenContents,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelToken';
-import _ from 'lodash';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 const defaultScriptLevel = {
   id: '11',

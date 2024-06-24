@@ -1,4 +1,3 @@
-import {assert} from '../../util/reconfiguredChai';
 import unitSelection, {
   setScriptId,
   getSelectedScriptName,
@@ -6,6 +5,8 @@ import unitSelection, {
   setCoursesWithProgress,
 } from '@cdo/apps/redux/unitSelectionRedux';
 import {fakeCoursesWithProgress} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
+
+import {assert} from '../../util/reconfiguredChai';
 
 describe('unitSelectionRedux', () => {
   const initialState = unitSelection(undefined, {});

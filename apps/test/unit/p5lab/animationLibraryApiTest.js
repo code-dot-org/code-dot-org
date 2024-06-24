@@ -1,5 +1,5 @@
 import sinon from 'sinon';
-import {expect, assert} from '../../util/reconfiguredChai';
+
 import {
   regenerateDefaultSpriteMetadata,
   buildAnimationMetadata,
@@ -7,6 +7,9 @@ import {
   generateAnimationMetadataForFile,
   generateLevelAnimationsManifest,
 } from '@cdo/apps/assetManagement/animationLibraryApi';
+
+import {expect, assert} from '../../util/reconfiguredChai';
+
 import testAnimationLibrary from './testAnimationLibrary.json';
 
 describe('animationLibraryApi', () => {

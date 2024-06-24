@@ -1,11 +1,13 @@
 import {assert} from 'chai';
+import _ from 'lodash';
+
 import createResourcesReducer, {
   addResource,
   editResource,
   removeResource,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
+
 import resourceTestData from './resourceTestData';
-import _ from 'lodash';
 
 const getInitialState = () => _.cloneDeep(resourceTestData);
 

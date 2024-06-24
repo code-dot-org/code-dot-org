@@ -1,6 +1,8 @@
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import React from 'react';
+
 import AllCodeDocs from '@cdo/apps/lib/levelbuilder/code-docs-editor/AllCodeDocs';
+
 import {expect} from '../../../../util/reconfiguredChai';
 
 describe('AllCodeDocs', () => {

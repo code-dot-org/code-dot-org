@@ -1,6 +1,6 @@
-var assert = require('assert');
-
 import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';
+
+var assert = require('assert');
 
 // Disable prettier so that we can indent the parameter name comments consistently.
 /* eslint-disable prettier/prettier */

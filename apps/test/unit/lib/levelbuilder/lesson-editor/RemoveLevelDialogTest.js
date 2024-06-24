@@ -1,8 +1,11 @@
-import React from 'react';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../../util/reconfiguredChai';
+import React from 'react';
 import sinon from 'sinon';
+
 import {UnconnectedRemoveLevelDialog as RemoveLevelDialog} from '@cdo/apps/lib/levelbuilder/lesson-editor/RemoveLevelDialog';
+
+import {expect} from '../../../../util/reconfiguredChai';
+
 import {sampleActivities} from './activitiesTestData';
 
 describe('RemoveLevelDialog', () => {
