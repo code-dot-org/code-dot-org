@@ -65,7 +65,7 @@ end
 # Create sparse checkout of staging content directories on production-daemon
 # for the purpose of content seeding.
 if node.chef_environment == 'adhoc'
-# if node.name == 'production-daemon'
+  # if node.name == 'production-daemon'
   worktree_path = File.join(home_path, 'staging')
 
   execute 'create worktree for managing deployment scripts' do
