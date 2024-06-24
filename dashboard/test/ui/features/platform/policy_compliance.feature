@@ -252,4 +252,7 @@ Feature: Policy Compliance and Parental Permission
     # Find the now unlocked region to create a personal login
     Given I am on "http://studio.code.org/users/edit?cpa-partial-lockout=1"
     Then I wait to see "#edit_user_create_personal_account"
-    Then element "#edit_user_create_personal_account input[type=\'password\']" is enabled
+    And element "#edit_user_create_personal_account input[type=\'password\']" is enabled
+
+    # And it should tell me that the request was granted
+    And element "#permission-status" contains text "Granted"

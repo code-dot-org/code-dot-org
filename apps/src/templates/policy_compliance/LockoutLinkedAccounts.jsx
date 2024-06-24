@@ -128,7 +128,7 @@ export default function LockoutLinkedAccounts(props) {
         method="post"
         onSubmit={submitPermissionRequest}
       >
-        <p>{i18n.lockoutManageLinkedAccountsPrompt()}</p>
+        <p>{status !== ChildAccountComplianceStates.PERMISSION_GRANTED ? i18n.lockoutManageLinkedAccountsPrompt() : i18n.lockoutManageLinkedAccountsGrantedPrompt()}</p>
         <input type="hidden" value={csrfToken} name="authenticity_token" />
         {/* The top prompt, which depends on whether or not a request is pending. */}
         {pendingEmail &&

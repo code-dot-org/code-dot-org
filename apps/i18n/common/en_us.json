@@ -1549,6 +1549,7 @@
   "lockAssessment": "Lock assessment",
   "lockAssessmentLong": "Lock assessment when students finish using the \"Lock Settings\" button.",
   "lockoutManageLinkedAccountsPrompt": "Our records indicate that your account requires parent or guardian permission to use a personal login and password. Please supply your parent or guardian's details below.",
+  "lockoutManageLinkedAccountsGrantedPrompt": "Our records indicate that your account requires parent or guardian permission to use a personal login and password.",
   "lockoutManageLinkedAccountsHeader": "Parent or Guardian Permission",
   "lockSettings": "Lock Settings",
   "lockStage": "Lock lesson",
