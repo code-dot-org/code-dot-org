@@ -5,4 +5,14 @@ services:
     extends:
       file: docker-compose.dashboard.yml
       service: web
+    environment:
+      SILENT: 'true'
     command: /bin/bash -l -c './docker/developers/run.sh ./tools/hooks/pre-commit'
+
+  git-post-merge:
+    <<: *command-base
+    command: /bin/bash -l -c './docker/developers/run.sh ./tools/hooks/post-merge'
+
+  git-post-checkout:
+    <<: *command-base
+    command: /bin/bash -l -c './docker/developers/run.sh ./tools/hooks/post-checkout'

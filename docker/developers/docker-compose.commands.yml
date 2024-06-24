@@ -44,6 +44,8 @@ services:
   # Run the 'rake install' step with/without AWS
   install: &install-base
     <<: *command-base
+    environment:
+      AFTER: "rm -f .git/hooks/pre-commit .git/hooks/post-checkout .git/hooks/post-merge; ln -s ../../docker/developers/hooks/pre-commit .git/hooks/pre-merge; ln -s ../../docker/developers/hooks/post-merge .git/hooks/post-merge; ln -s ../../docker/developers/hooks/post-checkout .git/hooks/post-checkout"
     command: /bin/bash -l -c './docker/developers/run.sh bundle exec rake install'
   install-aws:
     <<: *command-aws-base

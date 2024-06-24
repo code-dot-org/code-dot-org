@@ -22,7 +22,9 @@ after()
 if [[ ! -z "${AFTER}" ]]; then
   CMD=${AFTER}
   AFTER=
-  echo running \""${CMD}"\" to finalize
+  if [[ -z ${SILENT} ]]; then
+    echo running \""${CMD}"\" to finalize
+  fi
   eval "${CMD}"
 fi
 }
@@ -80,7 +82,9 @@ for item in "${@}"; do
 done
 
 if [[ ! -z "${BEFORE}" ]]; then
-  echo running \""${BEFORE}"\" before
+  if [[ -z ${SILENT} ]]; then
+    echo running \""${BEFORE}"\" before
+  fi
   eval "${BEFORE}"
 fi
 
@@ -90,7 +94,10 @@ if [[ ! -z "${ECHO_MESSAGE}" ]]; then
   echo
 fi
 
-echo running \""${cmd}"\"
+if [[ -z ${SILENT} ]]; then
+  echo "running \"${cmd::-1}\""
+fi
+
 eval "${cmd[@]}"
 
 after
