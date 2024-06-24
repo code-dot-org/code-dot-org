@@ -2,7 +2,9 @@ import React, {useState} from 'react';
 
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
 
-import {saveFeedback, FeedbackData} from '../interactionsApi';
+import {FeedbackData} from '../interactionsApi';
+
+import AssistantMessageFeedbackDetails from './AssistantMessageFeedbackDetails';
 
 import style from './chat-workspace.module.scss';
 
@@ -18,29 +20,6 @@ const AssistantMessageFeedback: React.FC<AssistantMessageProps> = ({
     thumbsDown: false,
   });
 
-  const handleFeedbackSubmission = async (
-    thumbsUp: boolean,
-    messageId?: number
-  ) => {
-    if (!messageId) {
-      return;
-    }
-
-    // This logic allows the user to "ungive" feedback by clicking the same button again
-    // If the user "ungives" all feedback, a row with null values will persist in the database
-    const feedbackData = {
-      thumbsUp: thumbsUp ? (feedbackState.thumbsUp ? null : true) : null,
-      thumbsDown: thumbsUp ? null : feedbackState.thumbsDown ? null : true,
-    };
-
-    try {
-      setFeedbackState(feedbackData);
-      await saveFeedback(messageId, feedbackData);
-    } catch (error) {
-      setFeedbackState({thumbsUp: null, thumbsDown: null});
-    }
-  };
-
   return (
     <div className={style.feedbackIcons}>
       Was this helpful?
@@ -49,7 +28,7 @@ const AssistantMessageFeedback: React.FC<AssistantMessageProps> = ({
         disabled={false}
         icon={{iconName: 'thumbs-up', iconStyle: 'solid'}}
         isIconOnly={true}
-        onClick={() => handleFeedbackSubmission(true, messageId)}
+        onClick={() => setFeedbackState({thumbsUp: true, thumbsDown: false})}
         size="xs"
         type={feedbackState.thumbsUp ? 'primary' : 'tertiary'}
       />
@@ -58,10 +37,16 @@ const AssistantMessageFeedback: React.FC<AssistantMessageProps> = ({
         disabled={false}
         icon={{iconName: 'thumbs-down', iconStyle: 'solid'}}
         isIconOnly={true}
-        onClick={() => handleFeedbackSubmission(false, messageId)}
+        onClick={() => setFeedbackState({thumbsUp: false, thumbsDown: true})}
         size="xs"
         type={feedbackState.thumbsDown ? 'primary' : 'tertiary'}
       />
+      {(feedbackState.thumbsUp || feedbackState.thumbsDown) && (
+        <AssistantMessageFeedbackDetails
+          feedbackData={feedbackState}
+          messageId={messageId}
+        />
+      )}
     </div>
   );
 };
