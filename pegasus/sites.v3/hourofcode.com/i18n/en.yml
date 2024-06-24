@@ -10959,6 +10959,13 @@
         title: "Get Support"
         desc: "Our customer support team is ready to answer your questions. Email us at [support@code.org](%{email_url}) or check out our support center, which offers useful guides and answers!"
         button: "Visit our support center"
+    teach:
+      heading: "Preparing to teach Coding with AI"
+      tile:
+        overline: "6-12 Teachers"
+        title: "Teaching Coding with AI"
+        desc: "This professional learning module prepares teachers to guide 6-12 students through Code.org's Coding with AI unit, where students leverage Large Language Models to write more powerful code while exploring ethical considerations and responsible AI use."
+        button: "Start professional learning"
 
   coding_with_ai_tile:
     title: "Coding with AI"
