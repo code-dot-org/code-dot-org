@@ -24,20 +24,20 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const handleSubmit = parentalPermissionRequest => {
-      reportEvent(EVENTS.CAP_PARENT_EMAIL_MODAL_SUBMITTED, {
+      reportEvent(EVENTS.CAP_PARENT_EMAIL_SUBMITTED, {
         consentStatus: parentalPermissionRequest.consent_status,
       });
     };
 
     const handleResend = (prevPPR, PPR) => {
-      reportEvent(EVENTS.CAP_PARENT_EMAIL_MODAL_RESEND, {
+      reportEvent(EVENTS.CAP_PARENT_EMAIL_RESEND, {
         oldConsentStatus: prevPPR.consent_status,
         newConsentStatus: PPR.consent_status,
       });
     };
 
     const handleUpdate = (prevPPR, PPR) => {
-      reportEvent(EVENTS.CAP_PARENT_EMAIL_MODAL_UPDATED, {
+      reportEvent(EVENTS.CAP_PARENT_EMAIL_UPDATED, {
         oldConsentStatus: prevPPR.consent_status,
         newConsentStatus: PPR.consent_status,
       });
