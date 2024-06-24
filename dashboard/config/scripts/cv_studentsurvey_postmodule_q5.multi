@@ -1,0 +1,8 @@
+name 'cv-studentsurvey-postmodule-q5'
+question 'How interested are you to continue exploring computer vision or related fields after this module?'
+right 'Very likely'
+right 'Likely'
+right 'Neutral'
+right 'Unlikely'
+right 'Very unlikely'
+allow_multiple_attempts true

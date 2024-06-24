@@ -1,11 +1,11 @@
 import React from 'react';
 import {useSelector} from 'react-redux';
 
-import Button from '@cdo/apps/componentLibrary/button/Button';
-import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {selectAllMessages} from '@cdo/apps/aichat/redux/aichatRedux';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import Button from '@cdo/apps/componentLibrary/button/Button';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 import {ChatItem, isChatMessage, isModelUpdate, isNotification} from '../types';
 import {AI_CUSTOMIZATIONS_LABELS} from './modelCustomization/constants';

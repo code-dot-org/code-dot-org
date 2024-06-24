@@ -1,7 +1,9 @@
-var commonMsg = require('@cdo/locale');
-var utils = require('../utils');
 import {getStore} from '../redux';
 import Sounds from '../Sounds';
+
+var commonMsg = require('@cdo/locale');
+
+var utils = require('../utils');
 
 /**
  * Returns a list of options (optionally filtered by type) for code-mode

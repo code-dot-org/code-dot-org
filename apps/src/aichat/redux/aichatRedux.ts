@@ -7,20 +7,16 @@ import {
   ThunkDispatch,
 } from '@reduxjs/toolkit';
 
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {registerReducers} from '@cdo/apps/redux';
 import {RootState} from '@cdo/apps/types/redux';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
+import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
-import {
-  DEFAULT_VISIBILITIES,
-  EMPTY_AI_CUSTOMIZATIONS,
-} from '../views/modelCustomization/constants';
-import {saveTypeToAnalyticsEvent} from '../constants';
 import {postAichatCompletionMessage} from '../aichatCompletionApi';
+import {saveTypeToAnalyticsEvent} from '../constants';
 import {
   AiCustomizations,
   AichatContext,
@@ -40,12 +36,18 @@ import {
   Notification,
 } from '../types';
 import {
+  DEFAULT_VISIBILITIES,
+  EMPTY_AI_CUSTOMIZATIONS,
+  AI_CUSTOMIZATIONS_LABELS,
+} from '../views/modelCustomization/constants';
+import {validateModelId} from '../views/modelCustomization/utils';
+
+import {
   allFieldsHidden,
   findChangedProperties,
   getNewMessageId,
   hasFilledOutModelCard,
 } from './utils';
-import {validateModelId} from '../views/modelCustomization/utils';
 
 const messageListKeys = ['chatItemsPast', 'chatItemsCurrent'] as const;
 type MessageLocation = {

@@ -15055,7 +15055,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: melissambcc
-          title: 2nd Grade- Maker with micro:bit
+          title: 2nd Grade
           description_audience: ''
           description_short: ''
           description: "#### This module covers the concepts and skills that are in the micro:bit beginner track.\n\n#### **You will:**\n* #### Code using events with Code.org.\n* #### Explore an unplugged coding lesson. \n\n\n#### **Suggested Time:** 30 minutes\n\n\n"
@@ -15074,7 +15074,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: melissambcd
-          title: Course D (3rd-4th Grade)
+          title: 3rd Grade
           description_audience: ''
           description_short: ''
           description: |+
@@ -15104,7 +15104,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: melissambce
-          title: Course E (4th-5th) Grade
+          title: 4th Grade
           description_audience: ''
           description_short: ''
           description: "#### This module covers the concepts and skills that are in the micro:bit beginner track.\n\n#### **You will:**\n* #### Code using events with Code.org.\n* #### Explore an unplugged coding lesson. \n\n\n#### **Suggested Time:** 30 minutes\n\n\n"
@@ -15113,7 +15113,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: melissambcf
-          title: Course F (5th-6th Grade)
+          title: 5th Grade
           description_audience: ''
           description_short: ''
           description: "#### This module covers the concepts and skills that are in the micro:bit beginner track.\n\n#### **You will:**\n* #### Code using events with Code.org.\n* #### Explore an unplugged coding lesson. \n* #### Create and code with variables.\n\n\n#### **Suggested Time:** 40 minutes\n\n\n"
@@ -15525,9 +15525,8 @@ en:
             * Craft effective prompts to interact with LLMs to generate useful and relevant responses for various writing tasks
 
             In the Research Process lesson, students will:
-            * Use a chatbot and a search engine to research and verify information.
-            * Learn how to more effectively prompt a chatbot in the process.
-            * Discuss what kind of research AI is helpful for.
+            * Evaluate the effectiveness and appropriateness of LLM-generated responses in different research scenarios
+            * Use a search engine and an AI chatbot to research and verify information
 
             **Support for teachers**: You can learn more about bringing AI lessons to your classroom through our [**AI 101 for Teachers**](https://code.org/ai/pl/101) series. AI 101 for Teachers is a free, foundational online professional learning series for any teacher and educator interested in the groundbreaking world of artificial intelligence (AI) and its transformative potential in education.
           student_description: |-
@@ -15536,9 +15535,8 @@ en:
             * Craft effective prompts to interact with LLMs to generate useful and relevant responses for various writing tasks
 
             In the Research Process Lesson, you will:
-            * Use a chatbot and a search engine to research and verify information.
-            * Learn how to more effectively prompt a chatbot in the process.
-            * Discuss what kind of research AI is helpful for.
+            * Evaluate the effectiveness and appropriateness of LLM-generated responses in different research scenarios
+            * Use a search engine and an AI chatbot to research and verify information
         self-paced-pl-csd1-2024:
           lesson_groups:
             lessonGroup-2:
@@ -17889,6 +17887,25 @@ en:
           student_description: In this unit, you'll dive into how computers interpret and understand visual information from the world around us. You'll start with the basics of how images are captured and processed and move on to more complex topics like training data, model development, and the ethical implications of artificial intelligence. Through a series of interactive lessons, hands-on activities, and project-based learning, you'll get to design your own computer vision app. Along the way, you'll learn not only about the technology itself but also how it can be used responsibly to make a positive impact in various fields like healthcare, automotive, and public safety.
           description_short: ''
           description_audience: ''
+          lessons:
+            lesson-1:
+              name: Pre-Module Survey
+            lesson-2:
+              name: Mid-Module Survey
+            lesson-3:
+              name: Post-Module Survey
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Pre-Module Survey
+            lessonGroup-2:
+              display_name: Content, Part 1
+            lessonGroup-4:
+              display_name: Mid-Module Survey
+            lessonGroup-5:
+              display_name: Content, Part 2
+            lessonGroup-6:
+              display_name: Post-Module Survey
+          name: computer-vision
         gen-ai-standalone:
           lessons:
             lesson-1:
@@ -17954,5 +17971,16 @@ en:
           title: Data Science Sample
           description_audience: ''
           description_short: Sample progression for data science
+          description: ''
+          student_description: ''
+        sandbox-welcome-to-maker:
+          lessons:
+            lesson-1:
+              name: Welcome to Maker with micro:bit
+          lesson_groups: {}
+          name: sandbox-welcome-to-maker
+          title: ''
+          description_audience: ''
+          description_short: ''
           description: ''
           student_description: ''
