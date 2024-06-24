@@ -30,6 +30,8 @@ theme: responsive_full_width
         %li=hoc_s(:csf_page_intro_list_02)
         %li=hoc_s(:csf_page_intro_list_03)
         %li=hoc_s(:csf_page_intro_list_04)
+        -# The list item below is using the new namespace pattern for strings
+        %li=hoc_s("csf_page.intro_list_05")
       %a.link-button{href: "#pick-a-course"}
         =hoc_s(:call_to_action_explore_courses)
     .clear
