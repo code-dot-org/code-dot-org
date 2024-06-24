@@ -5,18 +5,20 @@ import {
   waitFor,
   within,
 } from '@testing-library/react';
+import React from 'react';
+import sinon from 'sinon';
+
+import DCDO from '@cdo/apps/dcdo';
+import LtiLinkAccountPage from '@cdo/apps/lib/ui/lti/link/LtiLinkAccountPage';
 import {
   LtiProviderContext,
   LtiProviderContextProps,
 } from '@cdo/apps/lib/ui/lti/link/LtiLinkAccountPage/context';
-import React from 'react';
-import i18n from '@cdo/locale';
-import {expect} from '../../../../../../util/reconfiguredChai';
-import LtiLinkAccountPage from '@cdo/apps/lib/ui/lti/link/LtiLinkAccountPage';
-import sinon from 'sinon';
-import * as utils from '@cdo/apps/utils';
-import DCDO from '@cdo/apps/dcdo';
 import * as authenticityTokenStore from '@cdo/apps/util/AuthenticityTokenStore';
+import * as utils from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
+
+import {expect} from '../../../../../../util/reconfiguredChai';
 
 const DEFAULT_CONTEXT: LtiProviderContextProps = {
   ltiProvider: 'canvas_cloud',
