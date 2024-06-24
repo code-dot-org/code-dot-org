@@ -9,6 +9,7 @@
 
 import {BlockDefinition} from '@cdo/apps/blockly/types';
 import {PanelsLevelData} from '@cdo/apps/panels/types';
+import {LevelPredictSettings} from './levelEditors/types';
 
 export interface Channel {
   id: string;
@@ -162,6 +163,7 @@ export interface LevelProperties {
   exemplarSources?: MultiFileSource;
   // For Teachers Only value
   teacherMarkdown?: string;
+  predictSettings?: LevelPredictSettings;
 }
 
 // Level configuration data used by project-backed labs that don't require

@@ -40,6 +40,19 @@ class UserLevelsController < ApplicationController
     return head :ok
   end
 
+  # GET /user_levels/get_program/:level_id/:script_id
+  def get_program
+    user_levels = UserLevel.where(user_id: current_user.id, level_id: params[:level_id])
+    if params[:script_id]
+      user_levels = user_levels.where(script_id: params[:script_id])
+    end
+    most_recent_user_level = user_levels.order(updated_at: :desc).first
+    unless most_recent_user_level&.level_source&.data
+      return render json: {message: 'no program found'}, status: :not_found
+    end
+    return render json: {program: most_recent_user_level.level_source.data}, status: :ok
+  end
+
   private def set_user_level
     return unless params[:id]
     @user_level = UserLevel.find(params[:id])

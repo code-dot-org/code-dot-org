@@ -81,6 +81,14 @@ export interface ProgressState {
   unitCompleted: boolean | undefined;
 }
 
+export interface MilestoneReport {
+  app: string;
+  level?: number;
+  result: boolean;
+  testResult: number;
+  program?: string;
+}
+
 const initialState: ProgressState = {
   currentLevelId: null,
 
@@ -403,7 +411,49 @@ export function sendSuccessReport(appType: string): ProgressThunkAction {
   };
 }
 
-// Helpers
+export function sendPredictLevelReport(
+  appType: string,
+  program: string
+): ProgressThunkAction {
+  return (dispatch, getState) => {
+    const state = getState().progress;
+    const levelId = state.currentLevelId;
+    if (!state.currentLessonId || !levelId) {
+      return;
+    }
+    const scriptLevelId = getCurrentScriptLevelId(getState());
+    if (!scriptLevelId) {
+      return;
+    }
+
+    // The server does not appear to use the user ID parameter,
+    // so just pass 0, like some other milestone posts do.
+    const userId = 0;
+    const predictLevelResult = TestResults.CONTAINED_LEVEL_RESULT;
+
+    const data = {
+      app: appType,
+      level: levelId,
+      program: program,
+      result: true,
+      testResult: predictLevelResult,
+    };
+
+    fetch(`/milestone/${userId}/${scriptLevelId}/${levelId}`, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    }).then(response => {
+      if (response.ok && levelId !== null) {
+        // Update the progress store by merging in this
+        // particular result immediately.
+        dispatch(mergeResults({[levelId]: predictLevelResult}));
+      }
+    });
+  };
+}
 
 /**
  * Requests user progress from the server and dispatches other redux actions

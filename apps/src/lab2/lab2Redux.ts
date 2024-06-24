@@ -38,6 +38,7 @@ import {
   getAppOptionsViewingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
 import {START_SOURCES} from './constants';
+import {getProgram} from './projects/userLevelsApi';
 
 interface PageError {
   errorMessage: string;
@@ -65,6 +66,7 @@ export interface LabState {
   levelProperties: LevelProperties | undefined;
   // If this lab should presented in a "share" or "play-only" view, which may hide certain UI elements.
   isShareView: boolean | undefined;
+  predictResponse: string | undefined;
 }
 
 const initialState: LabState = {
@@ -76,6 +78,7 @@ const initialState: LabState = {
   validationState: getInitialValidationState(),
   levelProperties: undefined,
   isShareView: undefined,
+  predictResponse: undefined,
 };
 
 // Thunks
@@ -145,6 +148,19 @@ export const setUpWithLevel = createAsyncThunk(
         );
         return;
       }
+
+      // If we have a predict level, we should try to load the existing response.
+      if (levelProperties.predictSettings?.is_predict_level) {
+        const predictResponse = await getProgram(
+          payload.levelId,
+          payload.scriptId
+        );
+        console.log(`got predict response ${predictResponse}`);
+        if (predictResponse) {
+          thunkAPI.dispatch(setPredictResponse(predictResponse));
+        }
+      }
+
       // Create a new project manager. If we have a channel id,
       // default to loading the project for that channel. Otherwise
       // create a project manager for the given level and script id.
@@ -323,6 +339,9 @@ const labSlice = createSlice({
     setIsShareView(state, action: PayloadAction<boolean>) {
       state.isShareView = action.payload;
     },
+    setPredictResponse(state, action: PayloadAction<string | undefined>) {
+      state.predictResponse = action.payload;
+    },
   },
   extraReducers: builder => {
     builder.addCase(setUpWithLevel.fulfilled, state => {
@@ -477,6 +496,7 @@ export const {
   clearPageError,
   setValidationState,
   setIsShareView,
+  setPredictResponse,
 } = labSlice.actions;
 
 // These should not be set outside of the lab slice.
