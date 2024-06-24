@@ -10980,7 +10980,7 @@
         desc: "Empower students to solve real-world problems by understanding how AI interprets visual data, from healthcare diagnostics to autonomous vehicles."
       innovative:
         heading: "Innovative thinking"
-        desc: "Foster innovative thinking by engaging students with cutting-edge technology, encouraging them to develop creative solutions and explore new possibilities."
+        desc: "Foster innovative thinking by engaging students with cutting-edge technology, encouraging them to develop creative solutions, and explore new possibilities."
       ethical:
         heading: "Ethical awareness"
         desc: "Teach students to critically assess the ethical implications of AI, promoting responsible and thoughtful application of computer vision technologies."
@@ -11010,10 +11010,11 @@
     teach:
       heading: "Preparing to teach about computer vision"
       desc: "Boost your teaching skills with our self-paced professional learning for computer vision."
-      overline: "9-12 Teachers"
-      title: "Teaching Computer Vision"
-      desc: "This professional learning module equips educators to teach Code.org's Computer Vision unit, where students (grades 6-12) explore image and video analysis through engaging activities and discussions on ethics and real-world applications."
-      button: "Start professional learning"
+      tile:
+        overline: "9-12 Teachers"
+        title: "Teaching Computer Vision"
+        desc: "This professional learning module equips educators to teach Code.org's Computer Vision unit, where students (grades 6-12) explore image and video analysis through engaging activities and discussions on ethics and real-world applications."
+        button: "Start professional learning"
     learn_more:
       heading: "Learn more about Artificial Intelligence"
       dance:
@@ -11028,7 +11029,7 @@
         button: "View lessons"
         aria_label: "View How AI Works lessons"
       ai_101:
-        overline: "PProfessional Learning"
+        overline: "Professional Learning"
         title: "AI 101 for Teachers"
         desc: "Discover the groundbreaking world of AI and its transformative potential in education with our foundational online learning series for teachers."
         button: "Watch videos"
