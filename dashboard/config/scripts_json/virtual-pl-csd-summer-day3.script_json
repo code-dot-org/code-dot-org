@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-06-27 19:16:21 UTC",
+    "serialized_at": "2024-06-21 18:55:26 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -305,6 +305,7 @@
       "key": "f9d44658-b62d-42f1-b718-9f73fb3616f9",
       "position": 1,
       "properties": {
+        "duration": 10
       },
       "seeding_key": {
         "lesson_activity.key": "f9d44658-b62d-42f1-b718-9f73fb3616f9",
@@ -317,6 +318,7 @@
       "key": "bc2278e4-0b4c-4b49-9ae5-c735790831a9",
       "position": 1,
       "properties": {
+        "duration": 30
       },
       "seeding_key": {
         "lesson_activity.key": "bc2278e4-0b4c-4b49-9ae5-c735790831a9",
@@ -329,6 +331,7 @@
       "key": "e90b1e9a-31e4-4511-b017-3fa0572c456d",
       "position": 1,
       "properties": {
+        "duration": 40
       },
       "seeding_key": {
         "lesson_activity.key": "e90b1e9a-31e4-4511-b017-3fa0572c456d",
@@ -342,7 +345,7 @@
       "position": 1,
       "properties": {
         "duration": 5,
-        "name": "Warm Up"
+        "name": "Warm-up"
       },
       "seeding_key": {
         "lesson_activity.key": "605862ab-c79f-4b8f-918d-70afcb1f4dae",
@@ -383,6 +386,7 @@
       "key": "7ce9e0e7-02b5-47fe-b19e-8ba79a02c9e4",
       "position": 1,
       "properties": {
+        "duration": 10
       },
       "seeding_key": {
         "lesson_activity.key": "7ce9e0e7-02b5-47fe-b19e-8ba79a02c9e4",
@@ -395,6 +399,7 @@
       "key": "d5d5a9c7-751b-4b1a-b962-39f0d403d7cc",
       "position": 1,
       "properties": {
+        "duration": 60
       },
       "seeding_key": {
         "lesson_activity.key": "d5d5a9c7-751b-4b1a-b962-39f0d403d7cc",
@@ -407,6 +412,7 @@
       "key": "faf380fd-83bd-42b9-be91-734e16950b07",
       "position": 1,
       "properties": {
+        "duration": 15
       },
       "seeding_key": {
         "lesson_activity.key": "faf380fd-83bd-42b9-be91-734e16950b07",
@@ -461,6 +467,7 @@
       "key": "05e810e3-d088-4cfe-ac7e-a2bcef9179af",
       "position": 1,
       "properties": {
+        "duration": 15
       },
       "seeding_key": {
         "lesson_activity.key": "05e810e3-d088-4cfe-ac7e-a2bcef9179af",
@@ -527,6 +534,7 @@
       "key": "ceac91c2-c0d3-4958-b351-d3404d4cca74",
       "position": 1,
       "properties": {
+        "duration": 10
       },
       "seeding_key": {
         "lesson_activity.key": "ceac91c2-c0d3-4958-b351-d3404d4cca74",
@@ -539,6 +547,7 @@
       "key": "6085d26b-156f-4162-bf4a-bd0760acfeff",
       "position": 1,
       "properties": {
+        "duration": 60
       },
       "seeding_key": {
         "lesson_activity.key": "6085d26b-156f-4162-bf4a-bd0760acfeff",
@@ -1426,6 +1435,7 @@
       "key": "fe96749b-b307-4f95-bda0-ae33af892e97",
       "position": 1,
       "properties": {
+        "duration": "10"
       },
       "seeding_key": {
         "activity_section.key": "fe96749b-b307-4f95-bda0-ae33af892e97",
@@ -3284,6 +3294,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }
