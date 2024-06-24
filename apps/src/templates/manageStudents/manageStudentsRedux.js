@@ -869,6 +869,9 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
       userType: student.user_type,
       atRiskAgeGatedStudent: student.at_risk_age_gated,
       childAccountComplianceState: student.child_account_compliance_state,
+      latestPermissionRequestSentAt:
+        student.latest_permission_request_sent_at &&
+        new Date(student.latest_permission_request_sent_at),
     };
   }
   return studentLookup;
