@@ -5,10 +5,9 @@ import {
   AITutorTypesValue,
   ChatCompletionMessage,
 } from '@cdo/apps/aiTutor/types';
-import HttpClient from '@cdo/apps/util/HttpClient';
-
-import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
 import {MetricEvent} from '@cdo/apps/lib/metrics/events';
+import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 // These are the possible statuses returned by ShareFiltering.find_failure
 enum ShareFilterStatus {
@@ -29,6 +28,7 @@ const logViolationDetails = (response: OpenaiChatCompletionMessage) => {
   });
   MetricsReporter.logWarning({
     event: MetricEvent.AI_TUTOR_CHAT_PROFANITY_PII_VIOLATION,
+    content: response.flagged_content,
   });
 };
 

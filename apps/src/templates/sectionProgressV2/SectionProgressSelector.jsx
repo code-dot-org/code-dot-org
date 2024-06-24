@@ -98,6 +98,18 @@ function SectionProgressSelector({
     </div>
   );
 
+  const includeModalIfAvailable = () => {
+    const disableModal = DCDO.get('disable-try-new-progress-view-modal', false);
+    if (!disableModal) {
+      return (
+        <InviteToV2ProgressModal
+          sectionId={sectionId}
+          setHasJustSwitchedToV2={setHasJustSwitchedToV2}
+        />
+      );
+    }
+  };
+
   return (
     <div className={styles.pageContent}>
       {displayV2 && (
@@ -109,10 +121,7 @@ function SectionProgressSelector({
         <SectionProgressV2 />
       ) : (
         <>
-          <InviteToV2ProgressModal
-            sectionId={sectionId}
-            setHasJustSwitchedToV2={setHasJustSwitchedToV2}
-          />
+          {includeModalIfAvailable()}
           <SectionProgress allowUserToSelectV2View={true} />
         </>
       )}

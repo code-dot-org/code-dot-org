@@ -1,3 +1,5 @@
+# This test has been very flaky recently. Temporarily disabling on mobile while we investigate in LABS-867
+@no_mobile
 @as_student
 Feature: App Lab Versions
 

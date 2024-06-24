@@ -44,8 +44,11 @@
 
       ]
     },
-    "project_template_level_name": "gen-ai-customizing-prompt-templateA"
+    "project_template_level_name": "gen-ai-customizing-prompt-templateA",
+    "display_name": "Historical Experiences",
+    "bubble_choice_description": "Have you ever wanted to talk to someone from the past and learn what it was like? Or a famous historical figure?",
+    "thumbnail_url": "https://images.code.org/bdfe974903ad0c242e6d183723dc6b5c-Lesson 3 - Level 7A - Historical Experiences.png"
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-03T23:15:19.559+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-explore-template\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-explore-template\"},{\"changed_at\":\"2024-05-06 04:38:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-06 04:54:18 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-08 20:44:59 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-21 17:28:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-03T23:15:19.559+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-explore-template\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-explore-template\"},{\"changed_at\":\"2024-05-06 04:38:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-06 04:54:18 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-08 20:44:59 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-21 17:28:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-06-04 02:08:43 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>

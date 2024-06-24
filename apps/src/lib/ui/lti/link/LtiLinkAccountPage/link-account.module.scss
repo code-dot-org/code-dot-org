@@ -13,6 +13,12 @@
   width: 100%;
 }
 
+.cancelButtonContainer {
+  padding-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+}
+
 // Increase specificity to override base button
 .cardSecondaryButton.cardSecondaryButton {
   border: 1px solid #292F36
@@ -40,4 +46,8 @@
 
 .exchangeIcon {
   color: #7F8286;
+}
+
+.newAccountForm {
+  display: none;
 }

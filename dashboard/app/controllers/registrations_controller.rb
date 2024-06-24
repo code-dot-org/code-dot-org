@@ -257,6 +257,7 @@ class RegistrationsController < Devise::RegistrationsController
     student_information[:us_state] = params[:user][:us_state] unless current_user.user_provided_us_state
     student_information[:user_provided_us_state] = params[:user][:us_state].present? unless current_user.user_provided_us_state
     student_information[:gender_student_input] = params[:user][:gender_student_input] if current_user.gender.blank?
+    student_information[:country_code] = params[:user][:country_code] if current_user.country_code.blank?
 
     current_user.update(student_information) unless student_information.empty?
   end
@@ -392,7 +393,7 @@ class RegistrationsController < Devise::RegistrationsController
 
     # Handle users who aren't locked out, but still need parent permission to link personal accounts.
     if Policies::ChildAccount.user_predates_policy?(current_user)
-      permission_request = Queries::ChildAccount.latest_permission_request(current_user)
+      permission_request = current_user.latest_parental_permission_request
       @pending_email = permission_request&.parent_email
       @request_date = permission_request&.updated_at || Date.new
       @personal_account_linking_enabled = false unless Policies::ChildAccount.compliant?(current_user)

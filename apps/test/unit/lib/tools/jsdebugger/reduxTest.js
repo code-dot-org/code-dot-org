@@ -1,19 +1,21 @@
 import sinon from 'sinon';
-import {expect} from '../../../../util/reconfiguredChai';
+
+import CommandHistory from '@cdo/apps/lib/tools/jsdebugger/CommandHistory';
+import {
+  reducers,
+  selectors,
+  actions,
+} from '@cdo/apps/lib/tools/jsdebugger/redux';
+import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
+import Observer from '@cdo/apps/Observer';
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
-import {
-  reducers,
-  selectors,
-  actions,
-} from '@cdo/apps/lib/tools/jsdebugger/redux';
-import CommandHistory from '@cdo/apps/lib/tools/jsdebugger/CommandHistory';
-import Observer from '@cdo/apps/Observer';
-import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('The JSDebugger redux duck', () => {
   let store, state, studioApp, interpreter;

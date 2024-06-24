@@ -1,10 +1,12 @@
 /** @file Tests for our johnny-five Button wrapper */
-import _ from 'lodash';
-import {expect} from '../../../../../../util/reconfiguredChai';
 import five from '@code-dot-org/johnny-five';
-import {makeCPBoardStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
+import _ from 'lodash';
+
 import PlaygroundButton from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Button';
 import {EXTERNAL_PINS} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
+import {makeCPBoardStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
+
+import {expect} from '../../../../../../util/reconfiguredChai';
 
 describe('PlaygroundButton', function () {
   it('is a johnny-five Button component', function () {

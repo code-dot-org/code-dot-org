@@ -193,14 +193,13 @@ class Pd::ProfessionalLearningLandingControllerTest < ActionController::TestCase
     assert_equal application.id, response[:current_year_application_id]
   end
 
-  test 'enrolled workshops are passed down' do
+  test 'has_enrolled_in_workshops is true when user is enrolled workshops' do
     prepare_scenario
 
     load_pl_landing @teacher
 
     response = assigns(:landing_page_data)
-    assert_equal 3, response[:workshops_as_participant].length
-    assert_equal([@csf_workshop, @csd_workshop, @csp_workshop].map(&:course_name), response[:workshops_as_participant].map {|workshop| workshop[:course]})
+    assert response[:has_enrolled_in_workshop]
   end
 
   test 'facilitated workshops are passed down' do
@@ -208,6 +207,7 @@ class Pd::ProfessionalLearningLandingControllerTest < ActionController::TestCase
 
     @teacher.permission = UserPermission::FACILITATOR
     workshop = create :pd_workshop, facilitators: [@teacher]
+    create :pd_workshop, :ended, facilitators: [@teacher]
     @teacher.reload
 
     load_pl_landing @teacher
@@ -222,6 +222,7 @@ class Pd::ProfessionalLearningLandingControllerTest < ActionController::TestCase
 
     @teacher.permission = UserPermission::WORKSHOP_ORGANIZER
     workshop = create :pd_workshop, organizer: @teacher
+    create :pd_workshop, :ended, organizer: @teacher
 
     load_pl_landing @teacher
 
@@ -236,6 +237,7 @@ class Pd::ProfessionalLearningLandingControllerTest < ActionController::TestCase
     regional_partner = create :regional_partner
     @teacher.regional_partners << regional_partner
     workshop = create :pd_workshop, regional_partner: regional_partner
+    create :pd_workshop, :ended, regional_partner: regional_partner
 
     load_pl_landing @teacher
 

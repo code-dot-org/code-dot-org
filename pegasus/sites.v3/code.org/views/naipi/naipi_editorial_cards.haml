@@ -34,7 +34,7 @@
   - card_list.each do |card_list|
     .flex-container
       %figure
-        %img{src: "#{card_list[:image]}", alt: ""}
+        %img{src: card_list[:image], alt: ""}
       .text-wrapper
         %h3.heading-sm
           = card_list[:title]

@@ -31,6 +31,7 @@ class DCDOBase < DynamicConfigBase
       'frontend-i18n-tracking': DCDO.get('frontend-i18n-tracking', false),
       'pl-teacher-application-off-season': DCDO.get('pl_teacher_application', false),
       'pl-launch-hero-banner': DCDO.get('pl-launch-hero-banner', false),
+      'curriculum-launch-2024': DCDO.get('curriculum-launch-2024', false),
       'csta-form-extension': DCDO.get('csta-form-extension', false),
       cpa_experience: DCDO.get('cpa_experience', false),
       gender: DCDO.get('gender', false),
@@ -50,7 +51,11 @@ class DCDOBase < DynamicConfigBase
       'progress-table-v2-metadata-enabled': DCDO.get('progress-table-v2-metadata-enabled', false),
       'music-lab-launch-2024': DCDO.get('music-lab-launch-2024', false),
       'music-lab-samples-report': DCDO.get('music-lab-samples-report', true),
+      'disable-try-new-progress-view-modal': DCDO.get('disable-try-new-progress-view-modal', false),
       'music-lab-existing-projects-default-sounds': DCDO.get('music-lab-existing-projects-default-sounds', true),
+      'student-email-post-enabled': DCDO.get('student-email-post-enabled', false),
+      'progress-v2-metadata-enabled': DCDO.get('progress-v2-metadata-enabled', false),
+      'show-updated-lms-content': DCDO.get('show-updated-lms-content', false),
     }
   end
 end

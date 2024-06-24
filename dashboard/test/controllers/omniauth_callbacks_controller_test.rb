@@ -5,6 +5,82 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   include UsersHelper
   STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
 
+  # This is a sample AuthHash provided by omniauth-clever plugin
+  TEST_CLEVER_STUDENT_DATA = OmniAuth::AuthHash.new(JSON.parse(<<~JSON
+    {
+      "provider": "clever",
+      "uid": "5966ed736b21538e3c000006",
+      "info": {
+        "name": "Elizabeth Smith",
+        "first_name": "Elizabeth",
+        "last_name": "Smith",
+        "user_type": "student"
+      },
+      "credentials": {
+        "token": "faketoken123455678",
+        "expires": false
+      },
+      "extra": {
+        "raw_info": {
+          "me": {
+            "type": "student",
+            "data": {
+              "id": "5966ed736b21538e3c000006",
+              "district": "59484d29ae5dee0001fd3291",
+              "type": "student",
+              "authorized_by": "district"
+            },
+            "links": [
+              {
+                "rel": "self",
+                "uri": "/me"
+              },
+              {
+                "rel": "canonical",
+                "uri": "/v2.1/students/5966ed736b21538e3c000006"
+              },
+              {
+                "rel": "district",
+                "uri": "/v2.1/districts/59484d29ae5dee0001fd3291"
+              }
+            ]
+          },
+          "canonical": {
+            "data": {
+              "created": "2017-07-13T03:48:03.512Z",
+              "district": "59484d29ae5dee0001fd3291",
+              "dob": "2000-05-21T00:00:00.000Z",
+              "enrollments": [],
+              "gender": "M",
+              "hispanic_ethnicity": "",
+              "last_modified": "2017-11-02T00:49:40.504Z",
+              "name": {
+                "first": "Elizabeth",
+                "last": "Smith",
+                "middle": ""
+              },
+              "race": "",
+              "school": "5966ed6cf9d478523c000004",
+              "schools": [
+                "5966ed6cf9d478523c000004"
+              ],
+              "sis_id": "202",
+              "id": "5966ed736b21538e3c000006"
+            },
+            "links": [
+              {
+                "rel": "self",
+                "uri": "/v2.1/students/5966ed736b21538e3c000006"
+              }
+            ]
+          }
+        }
+      }
+    }
+  JSON
+  )
+  )
+
   setup do
     @request.env["devise.mapping"] = Devise.mappings[:user]
     @request.host = CDO.dashboard_hostname
@@ -1624,6 +1700,77 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_includes existing_user.authentication_options, ao
   end
 
+  test 'Facebook SSO: links an LTI auth option to an existing account' do
+    DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(true)
+    lti_integration = create :lti_integration
+
+    # Pre-existing Facebook account that we want the new LTI auth option to be linked to
+    existing_user = create :teacher, :with_facebook_authentication_option
+    auth = generate_auth_user_hash provider: AuthenticationOption::FACEBOOK, uid: existing_user.authentication_options[1].authentication_id
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    # Teacher that is going through the account linking flow
+    partial_lti_teacher = create :teacher
+    fake_id_token = {iss: lti_integration.issuer, aud: lti_integration.client_id, sub: 'foo'}
+    auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
+    ao = AuthenticationOption.new(
+      authentication_id: auth_id,
+      credential_type: AuthenticationOption::LTI_V1,
+      email: existing_user.email,
+    )
+    partial_lti_teacher.authentication_options = [ao]
+    PartialRegistration.persist_attributes session, partial_lti_teacher
+
+    get :facebook
+    # The user factory automatically creates an email auth option,
+    # so this includes 1 email, 1 Facebook, and 1 LTI auth option
+    assert_equal 3, existing_user.reload.authentication_options.count
+    assert_includes existing_user.authentication_options, ao
+  end
+
+  test 'Microsoft SSO: links an LTI auth option to an existing account' do
+    DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(true)
+    lti_integration = create :lti_integration
+
+    # Pre-existing Microsoft account that we want the new LTI auth option to be linked to
+    existing_user = create :teacher, :with_microsoft_authentication_option
+    auth = generate_auth_user_hash provider: AuthenticationOption::MICROSOFT, uid: existing_user.authentication_options[1].authentication_id
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    # Teacher that is going through the account linking flow
+    partial_lti_teacher = create :teacher
+    fake_id_token = {iss: lti_integration.issuer, aud: lti_integration.client_id, sub: 'foo'}
+    auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
+    ao = AuthenticationOption.new(
+      authentication_id: auth_id,
+      credential_type: AuthenticationOption::LTI_V1,
+      email: existing_user.email,
+    )
+    partial_lti_teacher.authentication_options = [ao]
+    PartialRegistration.persist_attributes session, partial_lti_teacher
+
+    get :microsoft_v2_auth
+    # The user factory automatically creates an email auth option,
+    # so this includes 1 email, 1 Microsoft, and 1 LTI auth option
+    assert_equal 3, existing_user.reload.authentication_options.count
+    assert_includes existing_user.authentication_options, ao
+  end
+
+  test 'Account linking flow doesn\'t sign up new users' do
+    DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(true)
+    OmniauthCallbacksController.stubs(:should_link_accounts?).returns(true)
+    auth = generate_auth_user_hash provider: AuthenticationOption::GOOGLE, uid: 'some-uid'
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    get :google_oauth2
+    OmniauthCallbacksController.expects(:sign_in_google_oauth2).never
+    OmniauthCallbacksController.expects(:sign_up_google_oauth2).never
+    assert_response :redirect
+    assert_nil User.find_by_credential type: AuthenticationOption::GOOGLE, id: auth.uid
+  end
+
   # Try to link a credential to the provided user
   # @return [OmniAuth::AuthHash] the auth hash, useful for validating
   #   linked credentials with assert_auth_option
@@ -1673,80 +1820,4 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
         oauth_refresh_token: oauth_hash.credentials.refresh_token
       }
   end
-
-  # This is a sample AuthHash provided by omniauth-clever plugin
-  TEST_CLEVER_STUDENT_DATA = OmniAuth::AuthHash.new(JSON.parse('
-{
-  "provider": "clever",
-  "uid": "5966ed736b21538e3c000006",
-  "info": {
-    "name": "Elizabeth Smith",
-    "first_name": "Elizabeth",
-    "last_name": "Smith",
-    "user_type": "student"
-  },
-  "credentials": {
-    "token": "faketoken123455678",
-    "expires": false
-  },
-  "extra": {
-    "raw_info": {
-      "me": {
-        "type": "student",
-        "data": {
-          "id": "5966ed736b21538e3c000006",
-          "district": "59484d29ae5dee0001fd3291",
-          "type": "student",
-          "authorized_by": "district"
-        },
-        "links": [
-          {
-            "rel": "self",
-            "uri": "/me"
-          },
-          {
-            "rel": "canonical",
-            "uri": "/v2.1/students/5966ed736b21538e3c000006"
-          },
-          {
-            "rel": "district",
-            "uri": "/v2.1/districts/59484d29ae5dee0001fd3291"
-          }
-        ]
-      },
-      "canonical": {
-        "data": {
-          "created": "2017-07-13T03:48:03.512Z",
-          "district": "59484d29ae5dee0001fd3291",
-          "dob": "2000-05-21T00:00:00.000Z",
-          "enrollments": [],
-          "gender": "M",
-          "hispanic_ethnicity": "",
-          "last_modified": "2017-11-02T00:49:40.504Z",
-          "name": {
-            "first": "Elizabeth",
-            "last": "Smith",
-            "middle": ""
-          },
-          "race": "",
-          "school": "5966ed6cf9d478523c000004",
-          "schools": [
-            "5966ed6cf9d478523c000004"
-          ],
-          "sis_id": "202",
-          "id": "5966ed736b21538e3c000006"
-        },
-        "links": [
-          {
-            "rel": "self",
-            "uri": "/v2.1/students/5966ed736b21538e3c000006"
-          }
-        ]
-      }
-    }
-  }
-}
-'
-  )
-  )
 end

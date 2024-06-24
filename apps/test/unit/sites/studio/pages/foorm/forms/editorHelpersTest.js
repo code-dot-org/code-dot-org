@@ -1,4 +1,5 @@
 import {assert} from 'chai';
+
 import {lintFoormKeys} from '@cdo/apps/sites/studio/pages/foorm/forms/editorHelpers';
 
 const fakeCodeMirror = {

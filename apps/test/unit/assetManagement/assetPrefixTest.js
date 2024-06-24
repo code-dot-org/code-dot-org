@@ -1,6 +1,8 @@
 import sinon from 'sinon';
-import * as redux from '@cdo/apps/redux';
+
 import {init, fixPath} from '@cdo/apps/assetManagement/assetPrefix';
+import * as redux from '@cdo/apps/redux';
+
 import {expect} from '../../util/reconfiguredChai';
 
 describe('apps/src/assetManagement/assetPrefix.js', () => {

@@ -7,7 +7,7 @@ import {useSelector} from 'react-redux';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {ParentalPermissionRequest} from '@cdo/apps/redux/parentalPermissionRequestReducer';
-import Notification from '@cdo/apps/templates/Notification';
+import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import ParentalPermissionModal from '@cdo/apps/templates/policy_compliance/ParentalPermissionModal';
 import {RootState} from '@cdo/apps/types/redux';
 import color from '@cdo/apps/util/color';
@@ -43,7 +43,7 @@ const ParentalPermissionBanner: React.FC<ParentalPermissionBannerProps> = ({
 
   useEffect(() => {
     if (show) {
-      reportEvent(EVENTS.CPA_PARENT_EMAIL_BANNER_SHOWN, {
+      reportEvent(EVENTS.CAP_PARENT_EMAIL_BANNER_SHOWN, {
         inSection: currentUser.inSection,
         consentStatus: currentUser.childAccountComplianceState,
       });
@@ -53,7 +53,7 @@ const ParentalPermissionBanner: React.FC<ParentalPermissionBannerProps> = ({
   const handleModalShow = () => {
     setShowModal(true);
 
-    reportEvent(EVENTS.CPA_PARENT_EMAIL_BANNER_CLICKED, {
+    reportEvent(EVENTS.CAP_PARENT_EMAIL_BANNER_CLICKED, {
       inSection: currentUser.inSection,
       consentStatus,
     });
@@ -70,7 +70,7 @@ const ParentalPermissionBanner: React.FC<ParentalPermissionBannerProps> = ({
 
     setConsentStatus(newConsentStatus);
 
-    reportEvent(EVENTS.CPA_PARENT_EMAIL_BANNER_CLOSED, {
+    reportEvent(EVENTS.CAP_PARENT_EMAIL_BANNER_CLOSED, {
       inSection: currentUser.inSection,
       consentStatus: newConsentStatus,
     });
@@ -83,7 +83,7 @@ const ParentalPermissionBanner: React.FC<ParentalPermissionBannerProps> = ({
 
     setConsentStatus(newConsentStatus);
 
-    reportEvent(EVENTS.CPA_PARENT_EMAIL_BANNER_SUBMITTED, {
+    reportEvent(EVENTS.CAP_PARENT_EMAIL_BANNER_SUBMITTED, {
       inSection: currentUser.inSection,
       consentStatus: newConsentStatus,
     });
@@ -98,7 +98,7 @@ const ParentalPermissionBanner: React.FC<ParentalPermissionBannerProps> = ({
 
     setConsentStatus(newConsentStatus);
 
-    reportEvent(EVENTS.CPA_PARENT_EMAIL_BANNER_RESEND, {
+    reportEvent(EVENTS.CAP_PARENT_EMAIL_BANNER_RESEND, {
       inSection: currentUser.inSection,
       oldConsentStatus,
       newConsentStatus,
@@ -114,7 +114,7 @@ const ParentalPermissionBanner: React.FC<ParentalPermissionBannerProps> = ({
 
     setConsentStatus(newConsentStatus);
 
-    reportEvent(EVENTS.CPA_PARENT_EMAIL_BANNER_UPDATED, {
+    reportEvent(EVENTS.CAP_PARENT_EMAIL_BANNER_UPDATED, {
       inSection: currentUser.inSection,
       oldConsentStatus,
       newConsentStatus,
@@ -134,6 +134,7 @@ const ParentalPermissionBanner: React.FC<ParentalPermissionBannerProps> = ({
         />
 
         <Notification
+          type={NotificationType.warning}
           colors={{backgroundColor: color.orange, borderColor: color.orange}}
           notice={i18n.policyCompliance_parentalPermissionBanner_title()}
           details={i18n.policyCompliance_parentalPermissionBanner_desc({

@@ -1,16 +1,23 @@
 import {render, screen} from '@testing-library/react';
-import WelcomeBanner from '@cdo/apps/lib/ui/lti/link/LtiLinkAccountPage/WelcomeBanner';
-import {LtiProviderContext} from '@cdo/apps/lib/ui/lti/link/LtiLinkAccountPage/context';
-import {LtiProvider} from '@cdo/apps/lib/ui/lti/link/LtiLinkAccountPage/types';
 import React from 'react';
+
+import {
+  LtiProviderContext,
+  LtiProviderContextProps,
+} from '@cdo/apps/lib/ui/lti/link/LtiLinkAccountPage/context';
+import {LtiProvider} from '@cdo/apps/lib/ui/lti/link/LtiLinkAccountPage/types';
+import WelcomeBanner from '@cdo/apps/lib/ui/lti/link/LtiLinkAccountPage/WelcomeBanner';
 import i18n from '@cdo/locale';
 
-const getContext = (ltiProvider: LtiProvider) => {
+const getContext = (ltiProvider: LtiProvider): LtiProviderContextProps => {
   return {
     ltiProvider,
     ltiProviderName: 'LMS',
     newAccountUrl: '/new-account',
     existingAccountUrl: new URL('https://test.com/existing-account'),
+    emailAddress: 'test@code.org',
+    newCtaType: 'new',
+    continueAccountUrl: '/continue',
   };
 };
 

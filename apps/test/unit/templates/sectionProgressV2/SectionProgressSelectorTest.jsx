@@ -16,11 +16,14 @@ import unitSelection, {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 import currentUser, {
   setShowProgressTableV2,
   setProgressTableV2ClosedBeta,
+  setDateProgressTableInvitationDelayed,
+  setHasSeenProgressTableInvite,
 } from '@cdo/apps/templates/currentUserRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import progressV2Feedback from '@cdo/apps/templates/sectionProgressV2/progressV2FeedbackRedux';
 import SectionProgressSelector from '@cdo/apps/templates/sectionProgressV2/SectionProgressSelector.jsx';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import i18n from '@cdo/locale';
 
 import {expect} from '../../../util/reconfiguredChai';
 
@@ -186,5 +189,35 @@ describe('SectionProgressSelector', () => {
 
     expect(screen.queryByText(V2_PAGE_LINK_TEXT)).to.not.exist;
     expect(screen.queryByTestId(V2_TEST_ID)).to.not.exist;
+  });
+
+  it('shows modal if modal is available', () => {
+    DCDO.set('progress-table-v2-enabled', true);
+    DCDO.set('progress-table-v2-closed-beta-enabled', true);
+    DCDO.set('disable-try-new-progress-view-modal', false);
+
+    store.dispatch(setDateProgressTableInvitationDelayed(''));
+    store.dispatch(setHasSeenProgressTableInvite(false));
+
+    renderDefault();
+
+    screen.getByText(i18n.progressTrackingAnnouncement());
+  });
+
+  it('does not show modal if modal is not available', () => {
+    DCDO.set('progress-table-v2-enabled', true);
+    DCDO.set('progress-table-v2-closed-beta-enabled', true);
+    DCDO.set('disable-try-new-progress-view-modal', true);
+
+    store.dispatch(setDateProgressTableInvitationDelayed(''));
+    store.dispatch(setHasSeenProgressTableInvite(false));
+
+    renderDefault();
+
+    screen.getByText(V1_PAGE_LINK_TEXT);
+    screen.getByTestId(V1_TEST_ID);
+
+    expect(screen.queryByText(i18n.progressTrackingAnnouncement())).to.not
+      .exist;
   });
 });

@@ -1,6 +1,7 @@
 /** @file Tests for share dialog redux module */
-import {expect} from '../../../util/reconfiguredChai';
 import reducer, * as shareDialog from '@cdo/apps/code-studio/components/shareDialogRedux';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('Share dialog redux module', () => {
   let originalState = {

@@ -1,0 +1,23 @@
+name 'self-paced-pl-microbit_welcome_this_PL'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Navigating this Module 
+
+put the stuff
+step one - optional code org
+step two - choose grade level
+step three - micorbit unit 
+
+dropdown here with notes/ recomendations 
+
+links here to continue (already there)
+return to homepage button 
+
+
+
+<div style="clear:both"/>
+
+
+MARKDOWN
