@@ -59,8 +59,8 @@ class ScriptsController < ApplicationController
     session[:show_unversioned_redirect_warning] = false
 
     additional_script_data = {
-      course_name: @script.unit_group&.name,
-      course_id: @script.unit_group&.id,
+      course_name: @script.original_unit_group&.name,
+      course_id: @script.original_unit_group&.id,
       show_redirect_warning: @show_redirect_warning,
       redirect_script_url: @redirect_unit_url,
       show_unversioned_redirect_warning: !!@show_unversioned_redirect_warning,

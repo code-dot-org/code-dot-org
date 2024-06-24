@@ -2233,7 +2233,7 @@ class UnitTest < ActiveSupport::TestCase
       cloned_unit = @standalone_unit.clone_migrated_unit('coursename2-2021', destination_unit_group_name: @unit_group.name)
       assert_equal 2, @unit_group.default_units.count
       assert_equal 'coursename2-2021', @unit_group.default_units[1].name
-      assert_equal cloned_unit.unit_group, @unit_group
+      assert_equal cloned_unit.original_unit_group, @unit_group
       assert_nil cloned_unit.published_state
       assert_nil cloned_unit.instruction_type
       assert_nil cloned_unit.instructor_audience
@@ -2242,7 +2242,7 @@ class UnitTest < ActiveSupport::TestCase
 
     test 'can copy a unit in a unit group to a standalone unit' do
       cloned_unit = @unit_in_course.clone_migrated_unit('standalone-coursename-2021', version_year: '2021', family_name: 'csf')
-      assert_nil cloned_unit.unit_group
+      assert_nil cloned_unit.original_unit_group
       assert_equal 'standalone-coursename-2021', cloned_unit.name
       assert_equal cloned_unit.published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
       assert_equal cloned_unit.instruction_type, @unit_group.instruction_type
@@ -2311,7 +2311,7 @@ class UnitTest < ActiveSupport::TestCase
       ReferenceGuide.any_instance.expects(:write_serialization).once
       File.stubs(:write)
       cloned_unit = @unit_in_course.clone_migrated_unit('refguidetest-ug-coursename-2021', destination_unit_group_name: @unit_group.name)
-      assert_equal cloned_unit.unit_group, @unit_group
+      assert_equal cloned_unit.original_unit_group, @unit_group
       assert_equal 1, cloned_unit.get_course_version.reference_guides.count
     end
 

@@ -202,7 +202,7 @@ class UnitGroup < ApplicationRecord
     raise "Cannot remove units that have resources or vocabulary: #{unremovable_unit_names}" if unremovable_unit_names.any?
 
     if new_units_objects.any? do |s|
-      s.unit_group != self && s.prevent_course_version_change?
+      s.original_unit_group != self && s.prevent_course_version_change?
     end
       raise 'Cannot add units that have resources or vocabulary'
     end
