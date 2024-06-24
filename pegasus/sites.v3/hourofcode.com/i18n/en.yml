@@ -594,7 +594,7 @@
   curriculum_name_maker: "Maker"
   curriculum_name_maker_cp: "Creating Apps with Devices (Circuit Playground)"
   curriculum_name_maker_microbit: "Creating Apps with Devices (micro:bit)"
-  curriculum_name_microbit_maker_modules: "micro:bit Maker modules" 
+  curriculum_name_microbit_maker_modules: "micro:bit Maker modules"
   curriculum_name_creating_apps_with_devices: "Creating Apps with Devices"
   curriculum_name_poetry: "Coding with Poetry"
   curriculum_name_dance_party: "Dance Party"
@@ -720,7 +720,7 @@
   module_grade_2_5_teachers: "2-5 Teachers"
   module_grade_3_5_teachers: "3-5 Teachers"
   module_grade_6_10_teachers: "6-10 Teachers"
-  module_grade_6_12_teachers: "6-12 Teachers" 
+  module_grade_6_12_teachers: "6-12 Teachers"
   module_grade_9_12_teachers: "9-12 Teachers"
   module_level_beginner: "Beginner"
   module_level_intermediate: "Intermediate"
@@ -2320,24 +2320,28 @@
         desc: "Dive into game development with our 5-hour Game Design module, teaching students to create games using Sprite Lab while mastering key concepts and culminating in a Game Jam showcase."
         duration: "5 hours"
         button: "Explore unit"
+        aria_label: "Explore the Elementary Game Design unit"
       sports:
         overline: "Grades 2-12"
         title: "Code Your Own Sports Game"
         desc: "Score big with a sports game coded by you! Learn all about events in programming, work through puzzles, and customize the fun. Let's play and code like champs!"
         duration: "1 hour"
         button: "Try activity"
+        aria_label: "Try the Code Your Own Sports Game activity"
       flappy:
         overline: "Grades 2-12"
         title: "Flappy Code"
         desc: "Create a game using basic block code in this introductory computer science activity."
         duration: "1 hour"
         button: "Try activity"
+        aria_label: "Try the Flappy Code activity"
       basketball:
         overline: "Grades 2-12"
         title: "Choose Your Team and Make a Basketball Game"
         desc: "Learn what \"events\" are and how computers use them in programs like video games! Students work through puzzles and customize their games with speed and sound."
         duration: "1 hour"
         button: "Try activity"
+        aria_label: "Try the Choose Your Team and Make a Basketball Game activity"
     mid_high_curricula:
       heading: "Middle and high school game design curricula"
       interactive:
@@ -2346,18 +2350,21 @@
         desc: "Engaging the same design process that computer scientists use, students learn programming concepts and develop images, animations, interactive art, and games."
         duration: "3 hours, 20 minutes"
         button: "Explore unit"
+        aria_label: "Explore the Interactive Animations and Games unit"
       game_lab:
         overline: "Grades 6-12"
         title: "Self-Paced Introduction to Game Lab"
         desc: "Move at your own pace in this introduction to our Game Lab environment as you program animations, interactive art, and games."
         duration: "Month"
         button: "Explore unit"
+        aria_label: "Explore the Self-Paced Introduction to Game Lab unit"
       star_wars:
         overline: "Grades 6-12"
         title: "Star Wars: Building a Galaxy With Code (JavaScript)"
         desc: "Use JavaScript to learn to program droids, and create your own Star Wars game in a galaxy far, far away."
         duration: "1 hour"
         button: "Try activity"
+        aria_label: "Try the Star Wars: Building a Galaxy With Code activity"
     quote:
       text: "This curriculum is all inclusive, well organized, and student centered! The incredible organization in the curriculum is what makes me use it year after year."
       byline: "AP® CSA Teacher"
@@ -2369,11 +2376,13 @@
         title: "Teaching Elementary Game Design"
         desc: "Prepare to teach Code.org's game design module, where students explore game design through engaging activities, exploring concepts, and collaboratively building games."
         button: "Start professional learning"
+        aria_label: "Start the Teaching Elementary Game Design professional learning course"
       interactive:
         overline: "6-12 Teachers"
         title: "Teaching Interactive Animations and Games"
         desc: "Prepare to teach Code.org's CSD Unit 3 - Interactive Animations and Games, allowing you to engage with the content at your own pace and in the order that best suits your needs."
         button: "Start professional learning"
+        aria_label: "Start the Teaching Interactive Animations and Games professional learning course"
     additional_resources:
       heading: "Additional resources"
       desc: "Beyond curriculum and professional learning, we have many materials to support your classroom."
@@ -10957,6 +10966,78 @@
     duration: "Five 45 minute lessons"
     aria_label: "Explore the Coding with AI lessons"
     button_label: "Explore lessons"
+
+  computer_vision_page:
+    heading: "Computer vision"
+    top:
+      desc: "Explore how artificial intelligence interprets visual data through our computer vision units. Equip students with essential skills in image processing, object recognition, and ethical AI considerations, preparing them for future opportunities in technology."
+      button: "Explore curriculum"
+    why:
+      heading: "Why teach computer vision?"
+      desc: "Empower students to solve real-world challenges, foster innovation, and explore AI's ethical implications in visual data."
+      real_world:
+        heading: "Real-world applications"
+        desc: "Empower students to solve real-world problems by understanding how AI interprets visual data, from healthcare diagnostics to autonomous vehicles."
+      innovative:
+        heading: "Innovative thinking"
+        desc: "Foster innovative thinking by engaging students with cutting-edge technology, encouraging them to develop creative solutions, and explore new possibilities."
+      ethical:
+        heading: "Ethical awareness"
+        desc: "Teach students to critically assess the ethical implications of AI, promoting responsible and thoughtful application of computer vision technologies."
+      button:
+        explore_curriculum: "Explore curriculum"
+        see_professional_learning: "See professional learning"
+    resources:
+      heading: "Resources to support you every step of the way"
+      desc: "Get access to materials that will help you teach computer science with confidence — even without prior CS teaching experience — when you create a **free** Code.org account."
+      button: "Create a free account"
+    get_started:
+      heading: "Get started with computer vision"
+      computer_vision:
+        overline: "Grades 9-12"
+        title: "Computer Vision"
+        desc: "This comprehensive module introduces high school students to the principles of computer vision through hands-on projects and real-world applications. Students will learn essential skills in image processing, feature detection, and object recognition, fostering both technical proficiency and ethical awareness in AI."
+        duration: "3 Weeks"
+        button: "Explore module"
+        aria_label: "Explore the Computer Vision module"
+      csa:
+        overline: "Grades 9-12"
+        title: "AP® CSA Computer Vision"
+        desc: "This two-chapter post-AP® CSA module offers high school students hands-on experience with professional software development tools, including GitHub and GitHub Copilot, and imparts them with the real-world skills to develop a computer vision program."
+        duration: "2 Weeks"
+        button: "Explore module"
+        aria_label: "Explore the AP CSA Computer Vision module"
+    teach:
+      heading: "Preparing to teach about computer vision"
+      desc: "Boost your teaching skills with our self-paced professional learning for computer vision."
+      tile:
+        overline: "9-12 Teachers"
+        title: "Teaching Computer Vision"
+        desc: "This professional learning module equips educators to teach Code.org's Computer Vision unit, where students (grades 6-12) explore image and video analysis through engaging activities and discussions on ethics and real-world applications."
+        button: "Start professional learning"
+    learn_more:
+      heading: "Learn more about Artificial Intelligence"
+      dance:
+        overline: "Grades 3-12"
+        title: "Dance Party: AI Edition"
+        desc: "Learn about artificial intelligence (AI) concepts to create your own virtual dance party showcasing today's top artists."
+        button: "Explore Dance Party AI"
+      how_ai_works:
+        overline: "Grades 6-12"
+        title: "How AI Works"
+        desc: "This series of short videos and accompanying lessons will introduce you and your students to how artificial intelligence works and why it matters."
+        button: "View lessons"
+        aria_label: "View How AI Works lessons"
+      ai_101:
+        overline: "Professional Learning"
+        title: "AI 101 for Teachers"
+        desc: "Discover the groundbreaking world of AI and its transformative potential in education with our foundational online learning series for teachers."
+        button: "Watch videos"
+        aria_label: "Watch AI 101 for Teachers videos"
+      discover:
+        heading: "Discover our extensive AI resources"
+        desc: "We're rapidly expanding our AI offerings, including robust AI-focused curriculum, professional learning, educational videos, and more! Explore everything we have to offer and find what's right for you."
+        button: "Explore AI resources"
 
   ai_ta_page:
     heading: "AI Teaching Assistant"

@@ -1,7 +1,9 @@
 import React, {useState} from 'react';
+
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
 
 import {saveFeedback, FeedbackData} from '../interactionsApi';
+
 import style from './chat-workspace.module.scss';
 
 interface AssistantMessageProps {

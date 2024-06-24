@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "gen-ai-customizing-pilot-v2",
-    "serialized_at": "2024-06-21 00:23:29 UTC",
+    "serialized_at": "2024-06-22 05:49:37 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -240,6 +240,7 @@
       "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
+        "overview": "In this lesson, students create their project for the unit. In the project, students create a chatbot that addresses a personally relevant issue or an issue in their community. Students rely on the user-centered design strategies they’ve seen throughout the unit to create issue statements, design a chatbot, perform user testing, and reflect on the results. Optionally, students can design a presentation on their project and the problem it was designed to address."
       },
       "seeding_key": {
         "lesson.key": "lesson-13",
@@ -879,6 +880,48 @@
       "seeding_key": {
         "lesson_activity.key": "e92b96ac-6147-405c-8fd5-90053233fcf6",
         "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2"
+      }
+    },
+    {
+      "key": "99d6df78-1c34-4f13-b66e-18cf688d8dc7",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "99d6df78-1c34-4f13-b66e-18cf688d8dc7",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2"
+      }
+    },
+    {
+      "key": "1067fbc1-2e98-4745-a076-eb09a1b6e56b",
+      "position": 2,
+      "properties": {
+        "duration": 170,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1067fbc1-2e98-4745-a076-eb09a1b6e56b",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2"
+      }
+    },
+    {
+      "key": "f0664d2b-154a-4210-aefe-2c1f3796dc03",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f0664d2b-154a-4210-aefe-2c1f3796dc03",
+        "lesson.key": "lesson-13",
         "lesson_group.key": "",
         "script.name": "gen-ai-customizing-pilot-v2"
       }
@@ -2758,6 +2801,131 @@
         "activity_section.key": "f5c9152d-fea2-4109-8ee2-a4a19d619cdf",
         "lesson_activity.key": "e92b96ac-6147-405c-8fd5-90053233fcf6"
       }
+    },
+    {
+      "key": "88b3f251-a646-4cd4-845b-8964b71a8710",
+      "position": 1,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w/export/png?id=1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w&pageid=g2b5b268c506_0_173\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> We’ve seen a lot of chatbot examples in this unit that help solve problems. What’s one chatbot you could see yourself actually using to help with a personal problem or something a family member cares about?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This discussion is meant to prime students to think about how chatbots can address an issue in their community - in this case, they’re thinking of past chatbots and how they might be useful outside of this class. For example, students might think of tutoring chatbots or writing assistance chatbots that could be helpful to them personally. They might also think of chatbots that help brainstorm recipes or ideas as something a family member might find useful. As students name examples of chatbot, try to focus on the kind of problem this chatbot is solving and how it’s personally relevant to students or to members of their community.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w/export/png?id=1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w&pageid=g2b5b268c506_0_197\"></td>\n    <td style=\"width: 75%\">\n      <strong>Question of the Day:</strong> How can I make a chatbot to address an issue in my community?\n    </td>\n  </tr>\n\n</table>    \n    "
+      },
+      "seeding_key": {
+        "activity_section.key": "88b3f251-a646-4cd4-845b-8964b71a8710",
+        "lesson_activity.key": "99d6df78-1c34-4f13-b66e-18cf688d8dc7"
+      }
+    },
+    {
+      "key": "b6ac7e0e-29f1-4e79-8ea9-e6cb92bf0658",
+      "position": 1,
+      "properties": {
+        "name": "Student Levels",
+        "progression_name": "Step 4: Create your Chatbot"
+      },
+      "seeding_key": {
+        "activity_section.key": "b6ac7e0e-29f1-4e79-8ea9-e6cb92bf0658",
+        "lesson_activity.key": "1067fbc1-2e98-4745-a076-eb09a1b6e56b"
+      }
+    },
+    {
+      "key": "bf7dbe6a-2c81-41eb-aeaf-2c33e52f9fc1",
+      "position": 2,
+      "properties": {
+        "progression_name": "Step 5: Make a Model Card"
+      },
+      "seeding_key": {
+        "activity_section.key": "bf7dbe6a-2c81-41eb-aeaf-2c33e52f9fc1",
+        "lesson_activity.key": "1067fbc1-2e98-4745-a076-eb09a1b6e56b"
+      }
+    },
+    {
+      "key": "d55cd88c-f68c-4a79-9dfc-9ff6946608ba",
+      "position": 3,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w/export/png?id=1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w&pageid=g1413e1213c5_0_216\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> Pass out the <a href=\"https://docs.google.com/document/d/1dM1g3ZPt1Q43I8iq-7oxxmm0acqGAiOubaeBdFHRofU/edit\" target=\"_blank\">Project Guide - Solving Community Problems</a>\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w/export/png?id=1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w&pageid=g2dbaca4c0de_0_10\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the overview of the project. Students can read individually, or you can read the overview as a class.\n\t\t<br />\n\t\t<br />Students will be creating a chatbot that can be used to solve a problem or accomplish a task relevant to their community.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w/export/png?id=1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w&pageid=g2dbaca4c0de_0_27\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 1: Choose an Issue Statement\n\t\t<br />\n\t\t<br />Students will need to write an issue statement that describes an issue we’ve observed and how it is affecting people in our community. Students can use the <a href=\"https://docs.google.com/presentation/d/171c_MuqxMJZ2Px5DGbxl0Z0q3wNnS5VRkQSQmAK12ag/edit\" target=\"_blank\"><a href=\"https://docs.google.com/presentation/d/171c_MuqxMJZ2Px5DGbxl0Z0q3wNnS5VRkQSQmAK12ag/edit\" target=\"_blank\">5 Why’s Worksheet</a></a> to help develop an issue statement.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> (Optional) <strong>Distribute:</strong> Distribute copies of the 5 Why’s Worksheet to students to help develop their Issue Statement\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Give ample time for students to draft an issue statement. Having a broad but impactful issue statement can make the rest of the project easier to complete since it is anchored in this initial statement.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w/export/png?id=1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w&pageid=g2e77da08d69_0_13\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 2: Planning a Solution\n\t\t<br />\n\t\t<br />Students will Brainstorm two different types of chatbot that could help with this issue. Each chatbot should have a specific purpose and an ideal user who the chatbot is designed for.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Help students come up with chatbot ideas to address their issue statement, similar to the examples in the Issue Statements lesson earlier in the unit. Encourage students to come up with at least 2 ideas so that if something happens with their first choice, they have a backup. Give students ample time to brainstorm and then make a decision and fill in the written responses on the project guide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w/export/png?id=1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w&pageid=g2e77da08d69_0_34\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> Pass out the <a href=\"https://docs.google.com/document/d/1a2cGqEck2s97XZoPhUalPNUKWcg0IKQOcFAxLWWyMXc/edit\" target=\"_blank\">Resource - Chatbot Planning Guide</a>\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "name": "Teaching Guide",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip: Document the Planning Process** - Students may want to dive right-in to creating their chatbot, but we recommend providing some kind of opportunity for planning before students dive in. This provides an opportunity to check-n with students as they plan and ensure their ideas are on-track before they get too far in development. Depending on how long the first parts of this activity have gone, this planning guide can also act as an end-of-Day-1 activity that you can collect as an exit ticket and check before starting chatbot development on Day 2."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d55cd88c-f68c-4a79-9dfc-9ff6946608ba",
+        "lesson_activity.key": "1067fbc1-2e98-4745-a076-eb09a1b6e56b"
+      }
+    },
+    {
+      "key": "b4813875-d731-4945-a6dc-020edaecff27",
+      "position": 4,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w/export/png?id=1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w&pageid=g2e77da08d69_0_24\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 2: Planning a Solution\n\t\t<br />\n\t\t<br />Students will Brainstorm two different types of chatbot that could help with this issue. Each chatbot should have a specific purpose and an ideal user who the chatbot is designed for.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Help students come up with chatbot ideas to address their issue statement, similar to the examples in the Issue Statements lesson earlier in the unit. Encourage students to come up with at least 2 ideas so that if something happens with their first choice, they have a backup. Give students ample time to brainstorm and then make a decision and fill in the written responses on the project guide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w/export/png?id=1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w&pageid=g270fde699fd_0_0\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson X Level 1.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 4: Make your Chatbot. Students will be setting the system prompt, temperature, and retrieval. They should also test their chatbot and ensure it responds as expected.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w/export/png?id=1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w&pageid=g270fde699fd_0_200\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson X Level 2.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 5: Make the Model Card.  Students will be adding their model card information to their chatbot and then “publishing”.\n\t\t<br />\n\t\t<br />Optionally, students can complete a physical or digital model card using this <a href=\"https://docs.google.com/presentation/d/1KXIwPhbXIumnp4enyOcAvhGucqZmlm7_pDYkZPCQNeE/edit\" target=\"_blank\">Model Card Template</a>\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip: Displaying Student Work** - Creating a paper version of a model card can be redundant since students will do it in the chatbot as well, but having a physical or digital version of the model card also acts as an artifact that you or students can share with broader members of the community. For example, physical model cards can be hung on bulletin boards or digital model cards can be put on a website. These can be tangible ways for students to share their work outside of the chatbot levels themselves."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b4813875-d731-4945-a6dc-020edaecff27",
+        "lesson_activity.key": "1067fbc1-2e98-4745-a076-eb09a1b6e56b"
+      }
+    },
+    {
+      "key": "f0f4df30-a904-4bd6-96cd-7c9f10a926f3",
+      "position": 5,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w/export/png?id=1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w&pageid=g2e77da08d69_0_48\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> Pass out two copies of <a href=\"https://docs.google.com/document/d/1SqWCKewyia6WXiWacVnlD-TWj8AcEAP0apg9yE0X58c/edit\" target=\"_blank\">Activity Guide - Chatbot User Testing</a> to each student\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip: Ending Day 2, Starting Day 3** - Depending on how long classes are, consider ending the day with creating the chatbot in steps 4 and 5 and saving user testing for a new day. This makes it easier to focus what students are doing in each class period, and it also creates an opportunity for students to user-test with members of the community. Consider having students use one of the user testing handouts with a friend or family member at home and bringing in the results the next day."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f0f4df30-a904-4bd6-96cd-7c9f10a926f3",
+        "lesson_activity.key": "1067fbc1-2e98-4745-a076-eb09a1b6e56b"
+      }
+    },
+    {
+      "key": "9f7fa213-3c96-4157-b4f7-62975ac653ac",
+      "position": 6,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w/export/png?id=1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w&pageid=g2dbaca4c0de_0_43\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 6: User Testing\n\t\t<br />\n\t\t<br />Students will use the Chatbot User Testing Activity Guide to have other users test your chatbot. Try to have at least two other students test your chatbot. Once you’ve had at least two other people test your chatbot, complete the table in the project guide\n\t\t<br />\n\t\t<br />Students will need time to fill out the User Testing Activity guide with 3 prompts of their own, then trade their testing guides with other students to test each others chatbots. Once they’re done, students should review the feedback and decide on how to update their chatbots.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip: Lesson Timing** - Even though user testing is just one step in the project guide, it can take a lot of time. Consider taking an entire class period for user testing, ensuring students can test several different chatbots and have time to review the feedback to make adjustments to their chatbots. Emphasize how testing and responding to user feedback is an important aspect of responsible use of AI, similar to the lesson on User Testing."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9f7fa213-3c96-4157-b4f7-62975ac653ac",
+        "lesson_activity.key": "1067fbc1-2e98-4745-a076-eb09a1b6e56b"
+      }
+    },
+    {
+      "key": "8b938fbc-64a4-4b72-813e-a579eef0287d",
+      "position": 7,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w/export/png?id=1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w&pageid=g1413e1213c5_0_280\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> (Optional) Finalize and Present. Have students prepare a short presentation of their chatbot to share with their peers.\n    </td>\n  </tr>\n\n</table>    \n    "
+      },
+      "seeding_key": {
+        "activity_section.key": "8b938fbc-64a4-4b72-813e-a579eef0287d",
+        "lesson_activity.key": "1067fbc1-2e98-4745-a076-eb09a1b6e56b"
+      }
+    },
+    {
+      "key": "7f3d4b3d-90cb-4f97-b072-1f1b24c32a8e",
+      "position": 1,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w/export/png?id=1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w&pageid=g1b0012b9552_0_972\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students complete Step 7: Reflect.\n\t\t<br />\n\t\t<br />Students will answer three reflection questions on the final page of the project guide\n    </td>\n  </tr>\n\n</table>    \n    "
+      },
+      "seeding_key": {
+        "activity_section.key": "7f3d4b3d-90cb-4f97-b072-1f1b24c32a8e",
+        "lesson_activity.key": "f0664d2b-154a-4210-aefe-2c1f3796dc03"
+      }
     }
   ],
   "script_levels": [
@@ -4567,6 +4735,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-usertesting-predict-L2"
+        ],
         "progression": "Making Decisions"
       },
       "bonus": false,
@@ -4589,6 +4760,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-usertesting-predict-L3"
+        ],
         "progression": "Making Decisions"
       },
       "bonus": false,
@@ -4611,6 +4785,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-usertesting-predict-L4"
+        ],
         "progression": "Making Decisions"
       },
       "bonus": false,
@@ -4633,6 +4810,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-usertesting-predict-L5"
+        ],
         "progression": "Making Decisions"
       },
       "bonus": false,
@@ -4647,6 +4827,50 @@
       },
       "level_keys": [
         "gen-ai-customizing-usertesting-predict-L5"
+      ]
+    },
+    {
+      "chapter": 77,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Step 4: Create your Chatbot"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-project2-L1"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "b6ac7e0e-29f1-4e79-8ea9-e6cb92bf0658"
+      },
+      "level_keys": [
+        "gen-ai-customizing-project2-L1"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Step 5: Make a Model Card"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-project2-L2"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "bf7dbe6a-2c81-41eb-aeaf-2c33e52f9fc1"
+      },
+      "level_keys": [
+        "gen-ai-customizing-project2-L2"
       ]
     }
   ],
@@ -5562,6 +5786,30 @@
         "script.name": "gen-ai-customizing-pilot-v2",
         "activity_section.key": "d9be2fc0-613c-4c7e-b10b-0f6de3fd2d97"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-project2-L1",
+        "script_level.level_keys": [
+          "gen-ai-customizing-project2-L1"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "b6ac7e0e-29f1-4e79-8ea9-e6cb92bf0658"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-project2-L2",
+        "script_level.level_keys": [
+          "gen-ai-customizing-project2-L2"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "bf7dbe6a-2c81-41eb-aeaf-2c33e52f9fc1"
+      }
     }
   ],
   "resources": [
@@ -5637,6 +5885,30 @@
       }
     },
     {
+      "name": "[Template] 5 Why's",
+      "url": "https://docs.google.com/presentation/d/171c_MuqxMJZ2Px5DGbxl0Z0q3wNnS5VRkQSQmAK12ag/edit",
+      "key": "_template_5_why_s",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "_template_5_why_s"
+      }
+    },
+    {
+      "name": "[Template] Chatbot Model Card",
+      "url": "https://docs.google.com/presentation/d/1KXIwPhbXIumnp4enyOcAvhGucqZmlm7_pDYkZPCQNeE/edit",
+      "key": "_template_chatbot_model_card",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "_template_chatbot_model_card"
+      }
+    },
+    {
       "name": "Chatbot Brainstorm",
       "url": "https://docs.google.com/document/d/11_hnorhUsT1qm-zzkAVXYOvT7g-gbXi5qZy489LAQpA/edit",
       "key": "chatbot_brainstorm",
@@ -5647,6 +5919,32 @@
       },
       "seeding_key": {
         "resource.key": "chatbot_brainstorm"
+      }
+    },
+    {
+      "name": "Chatbot Planning Guide",
+      "url": "https://docs.google.com/document/d/1a2cGqEck2s97XZoPhUalPNUKWcg0IKQOcFAxLWWyMXc/edit",
+      "key": "chatbot_planning_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "chatbot_planning_guide"
+      }
+    },
+    {
+      "name": "Chatbot User Testing",
+      "url": "https://docs.google.com/document/d/1SqWCKewyia6WXiWacVnlD-TWj8AcEAP0apg9yE0X58c/edit",
+      "key": "chatbot_user_testing",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "chatbot_user_testing"
       }
     },
     {
@@ -5835,6 +6133,18 @@
       }
     },
     {
+      "name": "Project: Solving Community Problems",
+      "url": "https://docs.google.com/presentation/d/1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w/template/preview",
+      "key": "project_solving_community_problems",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "project_solving_community_problems"
+      }
+    },
+    {
       "name": "Recycling Chatbot User Testing",
       "url": "https://docs.google.com/document/d/1n60D0JCk3KDSbJduD8AEXUPp2zhDJM9e6rHVj-Mc56Y/edit",
       "key": "recycling_chatbot_user_testing",
@@ -5881,6 +6191,19 @@
       },
       "seeding_key": {
         "resource.key": "retrieval_-_synthesis"
+      }
+    },
+    {
+      "name": "Solving Community Problems",
+      "url": "https://docs.google.com/document/d/1dM1g3ZPt1Q43I8iq-7oxxmm0acqGAiOubaeBdFHRofU/edit",
+      "key": "solving_community_problems",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "solving_community_problems"
       }
     },
     {
@@ -6148,6 +6471,42 @@
       "seeding_key": {
         "lesson.key": "lesson-12",
         "resource.key": "user_testing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "_template_5_why_s"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "_template_chatbot_model_card"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "chatbot_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "chatbot_user_testing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "project_solving_community_problems"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "solving_community_problems"
       }
     }
   ],
