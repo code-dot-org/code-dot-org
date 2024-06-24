@@ -45,6 +45,14 @@ def transform_to_datablock_tables(channel, channel_id)
   datablock_tables
 end
 
+def insert_datablock_tables(tables)
+  # tables.table, and tables.records
+  tables.each do |table|
+    DatablockStorageTable.create!(table[:table])
+    DatablockStorageRecord.insert_all!(table[:records]) unless table[:records].empty?
+  end
+end
+
 def firebase_get(path)
   base_uri = "https://#{CDO.firebase_name}.firebaseio.com/"
   firebase_secret = ENV['FIREBASE_SECRET'] || CDO.firebase_secret
@@ -61,9 +69,10 @@ end
 
 def migrate(channel_id)
   channel = firebase_get_channel(channel_id)
-  #channel
   tables = transform_to_datablock_tables(channel, channel_id)
-  tables
+  ActiveRecord::Base.transaction do
+    insert_datablock_tables(tables)
+  end
 end
 
 # Figure out how to set up env to be able to insert into the sql database
