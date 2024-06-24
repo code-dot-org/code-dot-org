@@ -21,7 +21,7 @@ const UserMessageEditor: React.FunctionComponent<UserMessageEditorProps> = ({
   const [userMessage, setUserMessage] = useState<string>('');
 
   const userMessageIsEmpty = useMemo(() => {
-    userMessage.trim() === '';
+    return userMessage.trim() === '';
   }, [userMessage]);
 
   const handleKeyPress = (e: React.KeyboardEvent, userMessage: string) => {
