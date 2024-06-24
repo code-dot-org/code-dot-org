@@ -5,10 +5,14 @@ require 'json'
 
 require_relative '../config/environment'
 
-def transform_to_datablock_tables(channel)
+def get_project_id(channel_id)
+  storage_decrypt_channel_id(channel_id)[1]
+end
+
+def transform_to_datablock_tables(channel, channel_id)
   tables = channel.dig("metadata", "tables")
   tables_records = channel.dig("storage", "tables")
-  project_id = 1  # need to decrypt the channel to get this
+  project_id = get_project_id(channel_id)
 
   datablock_tables = []
 
@@ -42,9 +46,8 @@ def transform_to_datablock_tables(channel)
 end
 
 def firebase_get(path)
-  base_uri = 'https://cdo-v3-prod.firebaseio.com/'
-  # base_uri = 'https://cdo-v3-shared.firebaseio.com/'
-  firebase_secret = ENV['FIREBASE_SECRET'] # || CDO.firebase_shared_secret
+  base_uri = "https://#{CDO.firebase_name}.firebaseio.com/"
+  firebase_secret = ENV['FIREBASE_SECRET'] || CDO.firebase_secret
   raise "FIREBASE_SECRET not defined" unless firebase_secret
   firebase = Firebase::Client.new base_uri, firebase_secret
   response = firebase.get(path)
@@ -59,7 +62,7 @@ end
 def migrate(channel_id)
   channel = firebase_get_channel(channel_id)
   #channel
-  tables = transform_to_datablock_tables(channel)
+  tables = transform_to_datablock_tables(channel, channel_id)
   tables
 end
 
