@@ -1824,10 +1824,10 @@ class Unit < ApplicationRecord
     result
   end
 
-  # A unit is considered to have a matching course if there is exactly one
+  # A unit is considered to have a matching course if there is at least one
   # unit_group for this unit
   def unit_group
-    return nil if unit_group_units.length != 1
+    return nil if unit_group_units.empty?
     UnitGroup.get_from_cache(unit_group_units[0].course_id)
   end
 
