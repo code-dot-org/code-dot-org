@@ -1541,11 +1541,6 @@ class User < ApplicationRecord
       SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME)
   end
 
-  # This method just checks if a user has project validator permission
-  def project_validator?
-    permission?(UserPermission::PROJECT_VALIDATOR)
-  end
-
   # Students
   def has_ai_tutor_access?
     return false if ai_tutor_access_denied || ai_tutor_feature_globally_disabled?

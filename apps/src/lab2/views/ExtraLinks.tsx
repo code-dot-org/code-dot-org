@@ -15,16 +15,15 @@ interface PermissionResponse {
   permissions: string[];
 }
 
-interface PermissionsAndLinkData {
-  levelLinkData: ExtraLinksLevelData | undefined;
-  projectLinkData: ExtraLinksProjectData | undefined;
-  permissions: string[];
+interface ExtraLinksData {
+  levelLinkData?: ExtraLinksLevelData;
+  projectLinkData?: ExtraLinksProjectData;
 }
 
-async function fetchPermissionsAndLinkData(
+async function fetchExtraLinksData(
   levelId: number,
   channelId?: string
-): Promise<PermissionsAndLinkData> {
+): Promise<ExtraLinksData> {
   // Fetch permissions.
   const permissionsResponse = await HttpClient.fetchJson<PermissionResponse>(
     '/api/v1/users/current/permissions'
@@ -33,7 +32,10 @@ async function fetchPermissionsAndLinkData(
 
   // Fetch level link data.
   let levelLinkData: ExtraLinksLevelData | undefined;
-  if (permissions.includes(PERMISSIONS.LEVELBUILDER)) {
+  if (
+    permissions.includes(PERMISSIONS.LEVELBUILDER) ||
+    permissions.includes(PERMISSIONS.PROJECT_VALIDATOR)
+  ) {
     const levelLinkDataResponse =
       await HttpClient.fetchJson<ExtraLinksLevelData>(
         `/levels/${levelId}/extra_links`
@@ -55,7 +57,6 @@ async function fetchPermissionsAndLinkData(
   return {
     levelLinkData,
     projectLinkData,
-    permissions,
   };
 }
 
@@ -65,8 +66,9 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
   levelId,
 }: ExtraLinksProps) => {
   const [isLoading, setIsLoading] = useState(false);
-  const [PermissionsAndLinkData, setPermissionsAndLinkData] =
-    useState<PermissionsAndLinkData | null>(null);
+  const [extraLinksData, setExtraLinksData] = useState<ExtraLinksData | null>(
+    null
+  );
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const channelId = useAppSelector(
@@ -75,19 +77,12 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
 
   useEffect(() => {
     setIsLoading(true);
-    fetchPermissionsAndLinkData(levelId, channelId).then(data => {
-      setPermissionsAndLinkData(data);
+    fetchExtraLinksData(levelId, channelId).then(data => {
+      setExtraLinksData(data);
       setIsLoading(false);
     });
   }, [levelId, channelId]);
-  const {levelLinkData, projectLinkData, permissions} =
-    PermissionsAndLinkData || {};
-  if (
-    !permissions?.includes(PERMISSIONS.LEVELBUILDER) &&
-    !permissions?.includes(PERMISSIONS.PROJECT_VALIDATOR)
-  ) {
-    return <></>;
-  }
+  const {levelLinkData, projectLinkData} = extraLinksData || {};
 
   return isLoading || (!levelLinkData && !projectLinkData) ? null : (
     <>
