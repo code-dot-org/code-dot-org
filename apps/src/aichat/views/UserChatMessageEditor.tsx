@@ -1,7 +1,9 @@
 import React, {useCallback} from 'react';
-import {submitChatContents} from '../redux/aichatRedux';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {submitChatContents} from '../redux/aichatRedux';
 
 /**
  * Renders the AI Chat Lab user chat message editor component.

@@ -1,12 +1,13 @@
 import React, {useCallback} from 'react';
-import style from './ai-tutor.module.scss';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {askAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
-import {AITutorTypes as ActionType} from '@cdo/apps/aiTutor/types';
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
+import {askAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
+import {AITutorTypes as ActionType} from '@cdo/apps/aiTutor/types';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import style from './ai-tutor.module.scss';
 
 /**
  * Renders the AI Tutor user chat message editor component.

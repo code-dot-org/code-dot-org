@@ -1,7 +1,10 @@
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import React, {useCallback} from 'react';
-import {updateAiCustomization} from '../../redux/aichatRedux';
+
 import {Button} from '@cdo/apps/componentLibrary/button';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {updateAiCustomization} from '../../redux/aichatRedux';
+
 import styles from '../model-customization-workspace.module.scss';
 
 interface UpdateButtonProps {

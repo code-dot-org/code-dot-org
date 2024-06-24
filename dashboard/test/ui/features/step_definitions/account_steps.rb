@@ -145,7 +145,7 @@ And(/^I create( as a parent)? a (young )?student( in Colorado)?( who has never s
     user_opts[:user_provided_us_state] = true
   end
 
-  # See Policies::ChildAccount::CPA_CREATED_AT_EXCEPTION_DATE
+  # See Cpa::CREATED_AT_EXCEPTION_DATE
   cpa_exception_date = DateTime.parse('2024-05-26T00:00:00MDT')
 
   if after_cpa_exception
