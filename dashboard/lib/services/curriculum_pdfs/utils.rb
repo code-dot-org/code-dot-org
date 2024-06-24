@@ -44,6 +44,8 @@ module Services
             return CDO.shared_cache.read(cache_key) if CDO.shared_cache.exist?(cache_key)
           end
 
+          return false unless CDO.aws_access?
+
           result = AWS::S3.exists_in_bucket(S3_BUCKET, pathname)
 
           # Note that we don't set an explicit `expires_in` value here. We
