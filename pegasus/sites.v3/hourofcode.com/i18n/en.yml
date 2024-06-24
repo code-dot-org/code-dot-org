@@ -10970,7 +10970,7 @@
   computer_vision_page:
     heading: "Computer vision"
     top:
-      dec: "Explore how artificial intelligence interprets visual data through our computer vision units. Equip students with essential skills in image processing, object recognition, and ethical AI considerations, preparing them for future opportunities in technology."
+      desc: "Explore how artificial intelligence interprets visual data through our computer vision units. Equip students with essential skills in image processing, object recognition, and ethical AI considerations, preparing them for future opportunities in technology."
       button: "Explore curriculum"
     why:
       heading: "Why teach computer vision?"
