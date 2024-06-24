@@ -83,7 +83,6 @@ export interface ProgressState {
 
 export interface MilestoneReport {
   app: string;
-  level?: number;
   result: boolean;
   testResult: number;
   program?: string;
@@ -372,42 +371,7 @@ export function navigateToNextLevel(): ProgressThunkAction {
 // will not be reloading. Currently only used by Lab2 labs.
 export function sendSuccessReport(appType: string): ProgressThunkAction {
   return (dispatch, getState) => {
-    const state = getState().progress;
-    const levelId = state.currentLevelId;
-    if (!state.currentLessonId || !levelId) {
-      return;
-    }
-    const scriptLevelId = getCurrentScriptLevelId(getState());
-    if (!scriptLevelId) {
-      return;
-    }
-
-    // The server does not appear to use the user ID parameter,
-    // so just pass 0, like some other milestone posts do.
-    const userId = 0;
-
-    // An ideal score.
-    const idealPassResult = TestResults.ALL_PASS;
-
-    const data = {
-      app: appType,
-      result: true,
-      testResult: idealPassResult,
-    };
-
-    fetch(`/milestone/${userId}/${scriptLevelId}/${levelId}`, {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    }).then(response => {
-      if (response.ok && levelId !== null) {
-        // Update the progress store by merging in this
-        // particular result immediately.
-        dispatch(mergeResults({[levelId]: idealPassResult}));
-      }
-    });
+    sendReportHelper(appType, TestResults.ALL_PASS, dispatch, getState);
   };
 }
 
@@ -416,43 +380,60 @@ export function sendPredictLevelReport(
   program: string
 ): ProgressThunkAction {
   return (dispatch, getState) => {
-    const state = getState().progress;
-    const levelId = state.currentLevelId;
-    if (!state.currentLessonId || !levelId) {
-      return;
-    }
-    const scriptLevelId = getCurrentScriptLevelId(getState());
-    if (!scriptLevelId) {
-      return;
-    }
-
-    // The server does not appear to use the user ID parameter,
-    // so just pass 0, like some other milestone posts do.
-    const userId = 0;
-    const predictLevelResult = TestResults.CONTAINED_LEVEL_RESULT;
-
-    const data = {
-      app: appType,
-      level: levelId,
-      program: program,
-      result: true,
-      testResult: predictLevelResult,
-    };
-
-    fetch(`/milestone/${userId}/${scriptLevelId}/${levelId}`, {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    }).then(response => {
-      if (response.ok && levelId !== null) {
-        // Update the progress store by merging in this
-        // particular result immediately.
-        dispatch(mergeResults({[levelId]: predictLevelResult}));
-      }
-    });
+    sendReportHelper(
+      appType,
+      TestResults.CONTAINED_LEVEL_RESULT,
+      dispatch,
+      getState,
+      program
+    );
   };
+}
+
+function sendReportHelper(
+  appType: string,
+  result: number,
+  dispatch: ThunkDispatch<{progress: ProgressState}, undefined, AnyAction>,
+  getState: () => {progress: ProgressState},
+  program?: string
+) {
+  const state = getState().progress;
+  const levelId = state.currentLevelId;
+  if (!state.currentLessonId || !levelId) {
+    return;
+  }
+  const scriptLevelId = getCurrentScriptLevelId(getState());
+  if (!scriptLevelId) {
+    return;
+  }
+
+  // The server does not appear to use the user ID parameter,
+  // so just pass 0, like some other milestone posts do.
+  const userId = 0;
+
+  const data: MilestoneReport = {
+    app: appType,
+    result: true,
+    testResult: result,
+  };
+
+  if (program) {
+    data.program = program;
+  }
+
+  fetch(`/milestone/${userId}/${scriptLevelId}/${levelId}`, {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  }).then(response => {
+    if (response.ok && levelId !== null) {
+      // Update the progress store by merging in this
+      // particular result immediately.
+      dispatch(mergeResults({[levelId]: result}));
+    }
+  });
 }
 
 /**
