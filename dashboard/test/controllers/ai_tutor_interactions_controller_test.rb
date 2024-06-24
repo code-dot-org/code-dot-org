@@ -217,17 +217,6 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
     assert response_json.length, num_ai_tutor_interactions
     assert response_json.first["userId"], @student_with_ai_tutor_access.id
   end
-
-  private def stub_project_source_data(channel_id, code: 'fake-code', version_id: 'fake-version-id')
-    fake_main_json = {source: code}.to_json
-    fake_source_data = {
-      status: 'FOUND',
-      body: StringIO.new(fake_main_json),
-      version_id: version_id,
-      last_modified: DateTime.now
-    }
-    SourceBucket.any_instance.stubs(:get).with(channel_id, "main.json").returns(fake_source_data)
-  end
   class FindProjectAndVersionIdTest < ActionController::TestCase
     setup do
       @controller = AiTutorInteractionsController.new
@@ -290,5 +279,16 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
       result = @controller.find_project_and_version_id(@level.id, @script_id)
       assert_equal({project_id: nil, version_id: nil}, result)
     end
+  end
+
+  private def stub_project_source_data(channel_id, code: 'fake-code', version_id: 'fake-version-id')
+    fake_main_json = {source: code}.to_json
+    fake_source_data = {
+      status: 'FOUND',
+      body: StringIO.new(fake_main_json),
+      version_id: version_id,
+      last_modified: DateTime.now
+    }
+    SourceBucket.any_instance.stubs(:get).with(channel_id, "main.json").returns(fake_source_data)
   end
 end
