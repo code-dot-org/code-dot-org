@@ -57,6 +57,7 @@ module Services
         return if user_to_remove.sections_instructed.empty?
         user_to_remove.sections_instructed.each do |section|
           section.add_instructor(user_to_add)
+          section.update(user_id: user_to_add.id) if section.user_id == user_to_remove.id
           section.remove_instructor(user_to_remove)
         end
       end
