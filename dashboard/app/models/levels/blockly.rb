@@ -90,12 +90,16 @@ class Blockly < Level
   BLOCKLY_I18N_IN_TEXT_DCDO_KEY = 'blockly_i18n_in_text'.freeze
 
   def uses_google_blockly?
-    migrated_skins = ["hoc2015", "hoc2015x"]
+    migrated_skins = [
+      # Star Wars
+      "hoc2015", "hoc2015x",
+      # Maze
+      "birds", "pvz", "scrat",
+      # Karel
+      "farmer", "farmer_night", "bee", "bee_night", "collector", "harvester", "planter"
+    ]
     skin = properties['skin']
-    if migrated_skins.include?(skin)
-      return true
-    end
-    false
+    migrated_skins.include?(skin) && DCDO.get('maze_sw_google_blockly', true)
   end
 
   def summarize_for_lab2_properties(script, script_level = nil, current_user = nil)
