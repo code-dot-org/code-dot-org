@@ -46,6 +46,7 @@ options.unit_names.each do |unit_nm|
   raise "Unit with name #{unit_nm} not found" if unit_to_del.nil?
   raise "Published units (state set as 'Stable') cannot be deleted as they could have active sections and progress." unless unit_to_del.get_published_state != "stable"
 
+  # Include additional warning if the script is not in one of the safe states where its not available for use externally.
   if unit_to_del.get_published_state != "in_development"
     print "Published state for Unit [#{unit_nm}] is not in_development, script might have usage. " \
       "Please confirm with curriculum team and ensure comms has been sent before deletion. Continue? (Y/N)"
