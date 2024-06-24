@@ -44,14 +44,15 @@ module Lti
 
       # POST /lti/v1/account_linking/new_account
       def new_account
-        if PartialRegistration.in_progress?(session)
+        if current_user
+          return render status: :bad_request, json: {} if current_user.nil?
+
+          current_user.lms_landing_opted_out = true
+          current_user.save!
+        else
           partial_user = User.new_with_session(ActionController::Parameters.new, session)
           partial_user.lms_landing_opted_out = true
           PartialRegistration.persist_attributes(session, partial_user)
-        else
-          head :bad_request unless current_user
-          current_user.lms_landing_opted_out = true
-          current_user.save!
         end
       end
 

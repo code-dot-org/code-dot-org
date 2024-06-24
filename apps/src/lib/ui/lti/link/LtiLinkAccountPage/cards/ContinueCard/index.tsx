@@ -43,6 +43,7 @@ const ContinueAccountCard = () => {
       },
     }).then(response => {
       if (response.ok) {
+        setIsSaving(false);
         handleNewAccountSaved();
       }
     });

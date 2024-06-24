@@ -372,7 +372,7 @@ class ApplicationController < ActionController::Base
 
   # Check that the user has completed the LMS onboarding flow
   protected def assert_lms_landing_policy
-    return unless current_user.authentication_options.first&.lti? && !current_user.lms_landing_opted_out
+    return unless Policies::Lti.lti?(current_user) && !current_user.lms_landing_opted_out
 
     # URLs we should not redirect.
     return if Set[
