@@ -13,13 +13,46 @@ theme: responsive_full_width
     .wrapper.grid-container.justify-space-between.align-items-center.gap-4.wider-text
       .text-wrapper
         %h1.white
-          =hoc_s("game_design_page.heading")
+          =hoc_s("computer_vision_page.heading")
         %p.body-two.white
-          =hoc_s("game_design_page.desc")
+          =hoc_s("computer_vision_page.top.desc")
         %a.link-button.white{href: "#curricula"}
-          =hoc_s("game_design_page.button.explore_curriculum")
+          =hoc_s("computer_vision_page.top.button")
       %figure
         %img{src: "/images/banners/ai-bot-vision.svg", alt: "", style: "width: 100%"}
+
+  %section
+    .wrapper.centered
+      %h2=hoc_s("computer_vision_page.why.heading")
+      %p=hoc_s("computer_vision_page.why.desc")
+      = view :"computer_vision/computer_vision_why_list"
+      .button-wrapper.centered
+        %a.link-button{href: "#curricula"}
+          =hoc_s("computer_vision_page.why.button.explore_curriculum")
+        %a.link-button.secondary{href: "#professional-learning"}
+          =hoc_s("computer_vision_page.why.button.see_pl")
+
+  %section.bg-primary-light
+    .wrapper
+      .flex-container.align-items-center.flex-direction-column-mobile.flex-wrap.gap-2
+        .text-wrapper.flex-2
+          %h2.heading-sm
+            =hoc_s("game_design_page.resources.heading")
+          %p.no-margin-bottom
+            =hoc_s("game_design_page.resources.desc", markdown: :inline)
+        %a.link-button{href: CDO.studio_url("/users/sign_up")}
+          =hoc_s("game_design_page.resources.button")
+
+  %section#curricula
+    .wrapper
+      %h2=hoc_s("computer_vision_page.curricula.heading")
+      = view :"computer_vision/computer_vision_curricula"
+      %hr.light
+      #professional-learning
+        %h2=hoc_s("computer_vision_page.teach.heading")
+        %p=hoc_s("computer_vision_page.teach.desc")
+        = view :"computer_vision/computer_vision_teach"
+
 - else
   -# TODO Remove everything below the else statement after the 2024 curriculum launch
   %link{href: "/css/generated/computer-vision-software.css", rel: "stylesheet"}
