@@ -1,10 +1,12 @@
-import React from 'react';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../../util/deprecatedChai';
+import React from 'react';
+
 import {
   UnconnectedManageLinkedAccounts as ManageLinkedAccounts,
   ENCRYPTED,
 } from '@cdo/apps/lib/ui/accounts/ManageLinkedAccounts';
+
+import {expect} from '../../../../util/deprecatedChai';
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 
 const DEFAULT_PROPS = {

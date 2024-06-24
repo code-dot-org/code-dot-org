@@ -1,9 +1,11 @@
 import sinon from 'sinon';
-import {assert} from '../../../../util/reconfiguredChai';
+
 import manageLinkedAccounts, {
   initializeState,
   convertServerAuthOptions,
 } from '@cdo/apps/lib/ui/accounts/manageLinkedAccountsRedux';
+
+import {assert} from '../../../../util/reconfiguredChai';
 
 describe('manageLinkedAccountsRedux', () => {
   let server;

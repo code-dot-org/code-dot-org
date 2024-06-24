@@ -1,5 +1,9 @@
+import _ from 'lodash';
 import {combineReducers} from 'redux';
 import sinon from 'sinon';
+
+import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
+import {EMPTY_IMAGE} from '@cdo/apps/p5lab/constants';
 import reducer, {
   START_LOADING_FROM_SOURCE,
   DONE_LOADING_FROM_SOURCE,
@@ -16,23 +20,22 @@ import reducer, {
   saveAnimation,
 } from '@cdo/apps/p5lab/redux/animationList';
 import animationTab from '@cdo/apps/p5lab/redux/animationTab';
-import {EMPTY_IMAGE} from '@cdo/apps/p5lab/constants';
-import {createStore} from '../../../util/redux';
-import {expect} from '../../../util/reconfiguredChai';
-import {setExternalGlobals} from '../../../util/testUtils';
-import commonReducers from '@cdo/apps/redux/commonReducers';
-import pageConstantsReducer, {
-  setPageConstants,
-} from '@cdo/apps/redux/pageConstants';
-const project = require('@cdo/apps/code-studio/initApp/project');
-import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
-import _ from 'lodash';
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
+import commonReducers from '@cdo/apps/redux/commonReducers';
+import pageConstantsReducer, {
+  setPageConstants,
+} from '@cdo/apps/redux/pageConstants';
+
+import {expect} from '../../../util/reconfiguredChai';
+import {createStore} from '../../../util/redux';
+import {setExternalGlobals} from '../../../util/testUtils';
+
+const project = require('@cdo/apps/code-studio/initApp/project');
 
 describe('animationList', function () {
   setExternalGlobals(beforeEach, afterEach);

@@ -1,8 +1,10 @@
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../../util/reconfiguredChai';
-import OrderableList from '@cdo/apps/lib/levelbuilder/code-docs-editor/OrderableList';
+import React from 'react';
 import sinon from 'sinon';
+
+import OrderableList from '@cdo/apps/lib/levelbuilder/code-docs-editor/OrderableList';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('OrderableList', () => {
   let defaultProps, setListSpy, renderItemSpy;

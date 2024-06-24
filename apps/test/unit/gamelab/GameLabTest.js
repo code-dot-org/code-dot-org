@@ -1,8 +1,9 @@
 import ReactDOM from 'react-dom';
 import sinon from 'sinon';
-import {expect} from '../../util/reconfiguredChai';
+
+import {isOpen as isDebuggerOpen} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import GameLab from '@cdo/apps/p5lab/gamelab/GameLab';
-import Sounds from '@cdo/apps/Sounds';
+import reducers from '@cdo/apps/p5lab/reducers';
 import {
   getStore,
   registerReducers,
@@ -10,8 +11,9 @@ import {
   restoreRedux,
 } from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
-import reducers from '@cdo/apps/p5lab/reducers';
-import {isOpen as isDebuggerOpen} from '@cdo/apps/lib/tools/jsdebugger/redux';
+import Sounds from '@cdo/apps/Sounds';
+
+import {expect} from '../../util/reconfiguredChai';
 import {setExternalGlobals} from '../../util/testUtils';
 import 'script-loader!@code-dot-org/p5.play/examples/lib/p5';
 import 'script-loader!@code-dot-org/p5.play/lib/p5.play';

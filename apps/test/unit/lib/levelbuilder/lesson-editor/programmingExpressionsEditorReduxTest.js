@@ -1,4 +1,5 @@
 import {assert} from 'chai';
+
 import programmingExpressionEditor, {
   addProgrammingExpression,
   removeProgrammingExpression,

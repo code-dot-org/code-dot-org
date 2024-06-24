@@ -1,12 +1,15 @@
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../../util/reconfiguredChai';
+import React from 'react';
+import sinon from 'sinon';
+
 import {UnconnectedActivityCard as ActivityCard} from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivityCard';
+
+import {expect} from '../../../../util/reconfiguredChai';
+
 import {
   sampleActivities,
   sampleActivityForLessonWithoutLessonPlan,
 } from './activitiesTestData';
-import sinon from 'sinon';
 
 describe('ActivityCard', () => {
   let defaultProps,

@@ -1,6 +1,8 @@
-import React from 'react';
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import React from 'react';
+
 import ProgrammingEnvironmentsTable from '@cdo/apps/lib/levelbuilder/code-docs-editor/ProgrammingEnvironmentsTable';
+
 import {expect} from '../../../../util/reconfiguredChai';
 
 describe('ProgrammingEnvironmentsTable', () => {

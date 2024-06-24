@@ -1,8 +1,10 @@
-import {expect} from '../../../util/reconfiguredChai';
-import React from 'react';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import SoundLibrary from '@cdo/apps/code-studio/components/SoundLibrary';
+import React from 'react';
 import sinon from 'sinon';
+
+import SoundLibrary from '@cdo/apps/code-studio/components/SoundLibrary';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('SoundListEntry', () => {
   it('stops playing sound when user chooses a sound', () => {

@@ -1,8 +1,10 @@
-import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
-import {expect} from '../../../../../../util/reconfiguredChai';
 import sinon from 'sinon';
-import MicroBitThermometer from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitThermometer';
+
 import {SENSOR_CHANNELS} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
+import MicroBitThermometer from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitThermometer';
+import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
+
+import {expect} from '../../../../../../util/reconfiguredChai';
 
 describe('MicroBitThermometer', function () {
   let boardClient, thermometer;
