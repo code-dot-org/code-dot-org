@@ -44,7 +44,7 @@ class StarWarsGrid < Studio
   end
 
   def uses_google_blockly?
-    true
+    DCDO.get('maze_sw_google_blockly', true)
   end
 
   def common_blocks(_)
