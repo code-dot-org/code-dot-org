@@ -40,30 +40,28 @@ def transform_to_datablock_tables(channel)
   datablock_tables
 end
 
-# Get Firebase secret from environment variable
-firebase_secret = ENV['FIREBASE_SECRET']
-unless firebase_secret
-  puts "FIREBASE_SECRET environment variable is not set"
-  exit
+def firebase_get(path)
+  base_uri = 'https://cdo-v3-prod.firebaseio.com/'
+  # base_uri = 'https://cdo-v3-shared.firebaseio.com/'
+  firebase_secret = ENV['FIREBASE_SECRET'] # || CDO.firebase_shared_secret
+  raise "FIREBASE_SECRET not defined" unless firebase_secret
+  firebase = Firebase::Client.new base_uri, firebase_secret
+  response = firebase.get(path)
+  raise "Error fetching #{path} from Firebase: #{response.code}" unless response.success?
+  response.body
 end
 
-# Initialize Firebase client
-base_uri = 'https://cdo-v3-prod.firebaseio.com/'
-firebase = Firebase::Client.new(base_uri, firebase_secret)
+def firebase_get_channel(channel_id)
+  firebase_get("/v3/channels/#{channel_id}")
+end
 
-# First pass, going to take a single channel and convert it json objects that match
-# the datablock_storage models
-response = firebase.get("/v3/channels/put_the_channel_id_here")
-
-if response.success?
-  channel = response.body
-
+def migrate(channel_id)
+  channel = firebase_get_channel(channel_id)
+  #channel
   tables = transform_to_datablock_tables(channel)
-  puts tables
-
-else
-  puts "Failed to get channel: #{response.code} #{response.body}"
+  tables
 end
+
 # Figure out how to set up env to be able to insert into the sql database
 
 # For each item in response.current_tables, add a shared table to datablock with the same name if valid
