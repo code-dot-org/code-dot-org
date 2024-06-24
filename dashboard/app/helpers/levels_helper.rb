@@ -65,6 +65,8 @@ module LevelsHelper
   def replay_video_view_options(channel = nil)
     return unless DCDO.get('share_video_generation_enabled', true)
 
+    return unless CDO.aws_access?
+
     signed_url = AWS::S3.presigned_upload_url(
       "cdo-p5-replay-source.s3.amazonaws.com",
       "source/#{channel || @view_options['channel']}",
