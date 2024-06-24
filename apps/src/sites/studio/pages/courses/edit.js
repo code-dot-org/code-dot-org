@@ -81,6 +81,9 @@ function showCourseEditor() {
         courseOfferingEditorLink={
           courseEditorData.course_summary.course_offering_edit_path
         }
+        isMissingRequiredDeviceCompatibilities={
+          courseEditorData.missing_required_device_compatibilities
+        }
       />
     </Provider>,
     document.getElementById('course_editor')

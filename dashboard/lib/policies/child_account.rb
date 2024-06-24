@@ -5,17 +5,17 @@ require 'date'
 class Policies::ChildAccount
   # Values for the `child_account_compliance_state` attribute
   module ComplianceState
-    # The student's account has been used to issue a request to a parent.
-    LOCKED_OUT = SharedConstants::CHILD_ACCOUNT_COMPLIANCE_STATES.LOCKED_OUT
+    # The period for "existing" users before their accounts locked out.
+    GRACE_PERIOD = SharedConstants::CHILD_ACCOUNT_COMPLIANCE_STATES.GRACE_PERIOD
 
     # The student's account has been used to issue a request to a parent.
-    REQUEST_SENT = SharedConstants::CHILD_ACCOUNT_COMPLIANCE_STATES.REQUEST_SENT
+    LOCKED_OUT = SharedConstants::CHILD_ACCOUNT_COMPLIANCE_STATES.LOCKED_OUT
 
     # The student's account has been approved by their parent.
     PERMISSION_GRANTED = SharedConstants::CHILD_ACCOUNT_COMPLIANCE_STATES.PERMISSION_GRANTED
 
+    # def self.grace_period?(student)
     # def self.locked_out?(student)
-    # def self.request_sent?(student)
     # def self.permission_granted?(student)
     SharedConstants::CHILD_ACCOUNT_COMPLIANCE_STATES.to_h.each do |key, value|
       define_singleton_method("#{key.downcase}?") do |student|
@@ -23,11 +23,6 @@ class Policies::ChildAccount
       end
     end
   end
-
-  # P20-937 - We had a regression which we have chosen to mitigate by allowing
-  # accounts created before the below date to have their lock-out delayed until
-  # the CAP policy is set to lockout all users.
-  CPA_CREATED_AT_EXCEPTION_DATE = DateTime.parse('2024-05-26T00:00:00MST')
 
   # The delay is intended to provide notice to a parent
   # when a student may no longer be monitoring the "parent's email."
@@ -68,21 +63,23 @@ class Policies::ChildAccount
   # policy going into effect.
   def self.user_predates_policy?(user)
     return false unless parent_permission_required?(user)
-    return false unless state_policy(user)
-    policy_start_date = state_policy(user)[:start_date]
 
-    user.created_at < policy_start_date ||
-      user.created_at < CPA_CREATED_AT_EXCEPTION_DATE ||
-      user.authentication_options.any?(&:google?)
-  end
+    user_state_policy = state_policy(user)
+    return false unless user_state_policy
 
-  # Checks if a user affected by a state policy was created before the lockout date.
-  def self.pre_lockout_user?(user)
-    lockout_date = state_policy(user).try(:[], :lockout_date)
-    return false unless lockout_date
-    return user_predates_policy?(user) if DateTime.now < lockout_date
+    if user_state_policy[:name] == Cpa::NAME
+      # Accounts created before 5/26/2024 should have been locked upon creation,
+      # but they weren't because their state wasn't collected.
+      # To avoid immediate lockout after the state banner rollout,
+      # their lockout was postponed to the start of the "all-user lockout" phase.
+      return true if user.created_at < Cpa::CREATED_AT_EXCEPTION_DATE
 
-    user.created_at < lockout_date
+      # Due to a leaky bucket issue, roster-synced Google accounts weren't being locked out as intended.
+      # Therefore, it was decided to move their locking out to the "all-user lockout" phase.
+      return true if user.created_at < user_state_policy[:lockout_date] && user.authentication_options.any?(&:google?)
+    end
+
+    user.created_at < user_state_policy[:start_date]
   end
 
   # The date on which the student's account will be locked if the account is not compliant.
@@ -138,7 +135,7 @@ class Policies::ChildAccount
     # start_date: the date on which this policy first went into effect.
     {
       'CO' => {
-        name: 'CPA', # Colorado Privacy Act
+        name: Cpa::NAME,
         max_age: 12,
         lockout_date: DateTime.parse(DCDO.get('cpa_schedule', {})[Cpa::ALL_USER_LOCKOUT] || Cpa::ALL_USER_LOCKOUT_DATE.iso8601),
         start_date: DateTime.parse(DCDO.get('cpa_schedule', {})[Cpa::NEW_USER_LOCKOUT] || Cpa::NEW_USER_LOCKOUT_DATE.iso8601),

@@ -83,4 +83,3 @@ if node.chef_environment == 'adhoc'
     group node[:user]
   end
 end
-

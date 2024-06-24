@@ -1,5 +1,6 @@
 var tiles = require('./tiles');
-var studioApp = require('../StudioApp').singleton;
+
+var studioApp = require('../StudioApp').singleton; // eslint-disable-line import/order
 
 exports.PaddleSpeed = {
   VERY_SLOW: 0.04,

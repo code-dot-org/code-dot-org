@@ -1,7 +1,6 @@
 {
   "key": "coursec",
   "display_name": "CS Fundamentals: Course C",
-  "category": "csf",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Course",

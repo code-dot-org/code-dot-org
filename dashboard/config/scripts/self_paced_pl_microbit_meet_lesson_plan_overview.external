@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Meet your micro:bit - Lesson Overview
 
-<p style="font-size: 14pt; font-weight: bold;"> Carefully read over the entire <a href="https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf#page=7" target="_blank" style="color: #8C52BA;">lesson plan on pages 7-17</a> before you begin teaching.</p>
+<p style="font-size: 14pt; font-weight: bold;"> Carefully read over the entire <a href="https://studio.code.org/s/grade2-maker-2024/lessons/4" target="_blank" style="color: #8C52BA;">lesson plan</a> before you begin teaching.</p>
 
-#### *Remember, lesson plans for the CSF maker courses are located in the downloadable micro:bit booklet. 
+#### *Remember, the Meet your micro:bit lesson can be found in the main pathway of each of the grade level courses.*
 
 ## What your students will learn
 
@@ -34,7 +34,7 @@ markdown <<MARKDOWN
     <p>
 
 
-##### Each lesson begins with a warm up, which introduces the micro:bit and the activity.
+##### The warm-up in this lesson encourages students to think about how a micro:bit might work and introduces the micro:bit and the activity.
 </p></div>
 </details>
 
@@ -54,7 +54,9 @@ markdown <<MARKDOWN
     <p>
 
 
-##### Discuss what they have discovered and look at the project code together. You will start to familiarize yourselves with the online Microsoft MakeCode block editor. You can optionally follow this with another lesson where students recreate the code for themselves. 
+#####The lesson wraps with a disscusion about what students have discovered while exploring the micro:bit code. They will start to familiarize themselves with the online Microsoft MakeCode block editor. 
+
+You can optionally follow this with another lesson where students recreate the code for themselves. 
 </p></div>
 </details>
 
@@ -62,9 +64,9 @@ markdown <<MARKDOWN
 
 ## Equipment list
 #### **You will need:**
-- #### Access to the micro:bit classroom online editor on the teacher’s computer.
-- #### Several micro:bits with micro USB cords. One micro:bit for every two to three students is ideal. 
-- #### A power source for the micro:bits. Battery packs are best, but you can also power them from computer USB ports.
+- #### **Access to the micro:bit classroom online editor on the teacher’s computer.** *(Link in the lesson plan)*
+- #### **Several micro:bits with micro USB cords.** One micro:bit for every two to three students is ideal. 
+- #### **A power source for the micro:bits.** Battery packs are best, but you can also power them from computer USB ports.
 
 
 

@@ -1,16 +1,18 @@
-import React from 'react';
 import classNames from 'classnames';
+import React from 'react';
 
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {StrongText} from '@cdo/apps/componentLibrary/typography';
-import aiBotIcon from '@cdo/static/aichat/ai-bot-icon.svg';
-import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
+import aiBotIcon from '@cdo/static/aichat/ai-bot-icon.svg';
 
+import aichatI18n from '../locale';
 import {removeUpdateMessage} from '../redux/aichatRedux';
 import {ChatCompletionMessage, Role} from '../types';
-import aichatI18n from '../locale';
+
 import ChatNotificationMessage from './ChatNotificationMessage';
+
 import moduleStyles from './chatMessage.module.scss';
 
 interface ChatMessageProps {
@@ -84,7 +86,7 @@ const displayAssistantMessage = (status: string, chatMessageText: string) => {
           moduleStyles.dangerContainer
         )}
       >
-        {chatMessageText}
+        {'There was an error getting a response. Please try again.'}
       </div>
     );
   }
