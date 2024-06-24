@@ -1,17 +1,22 @@
-import {fireEvent, render, screen, within} from '@testing-library/react';
-import React from 'react';
-import sinon from 'sinon';
-
-import DCDO from '@cdo/apps/dcdo';
-import LtiLinkAccountPage from '@cdo/apps/lib/ui/lti/link/LtiLinkAccountPage';
+import {
+  fireEvent,
+  render,
+  screen,
+  waitFor,
+  within,
+} from '@testing-library/react';
 import {
   LtiProviderContext,
   LtiProviderContextProps,
 } from '@cdo/apps/lib/ui/lti/link/LtiLinkAccountPage/context';
-import * as utils from '@cdo/apps/utils';
+import React from 'react';
 import i18n from '@cdo/locale';
-
 import {expect} from '../../../../../../util/reconfiguredChai';
+import LtiLinkAccountPage from '@cdo/apps/lib/ui/lti/link/LtiLinkAccountPage';
+import sinon from 'sinon';
+import * as utils from '@cdo/apps/utils';
+import DCDO from '@cdo/apps/dcdo';
+import * as authenticityTokenStore from '@cdo/apps/util/AuthenticityTokenStore';
 
 const DEFAULT_CONTEXT: LtiProviderContextProps = {
   ltiProvider: 'canvas_cloud',
@@ -70,7 +75,18 @@ describe('LTI Link Account Page Tests', () => {
   });
 
   describe('LTI Link Account New Account Card Tests', () => {
-    it('should render a new account card', () => {
+    it('should render a new account card', async () => {
+      const authenticityTokenStoreStub = sinon.stub(
+        authenticityTokenStore,
+        'getAuthenticityToken'
+      );
+      authenticityTokenStoreStub.returns(Promise.resolve('123'));
+
+      const fetchStub = sinon.stub(window, 'fetch');
+      fetchStub
+        .withArgs('/lti/v1/account_linking/new_account')
+        .returns(Promise.resolve({ok: true} as never));
+
       render(
         <LtiProviderContext.Provider value={DEFAULT_CONTEXT}>
           <LtiLinkAccountPage />
@@ -95,7 +111,11 @@ describe('LTI Link Account Page Tests', () => {
 
       fireEvent.click(newAccountButton);
 
-      expect(utils.navigateToHref).to.have.been.calledWith('/new-account');
+      await waitFor(
+        () =>
+          expect(utils.navigateToHref).to.have.been.calledWith('/new-account'),
+        {timeout: 999999}
+      );
     });
 
     it('should render a new account card - student email post enabled', () => {
@@ -142,6 +162,22 @@ describe('LTI Link Account Page Tests', () => {
       fireEvent.click(cancelButton);
 
       expect(utils.navigateToHref).to.have.been.calledWith(`/users/cancel`);
+    });
+
+    it('should link to the sign out controller', () => {
+      render(
+        <LtiProviderContext.Provider
+          value={{...DEFAULT_CONTEXT, newCtaType: 'continue'}}
+        >
+          <LtiLinkAccountPage />
+        </LtiProviderContext.Provider>
+      );
+
+      const cancelButton = screen.getByText(i18n.cancel());
+
+      fireEvent.click(cancelButton);
+
+      expect(utils.navigateToHref).to.have.been.calledWith(`/users/sign_out`);
     });
   });
 });
