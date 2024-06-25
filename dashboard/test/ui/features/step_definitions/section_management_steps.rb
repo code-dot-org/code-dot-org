@@ -153,9 +153,11 @@ And(/^I join the section$/) do
   page_load(true) do
     steps <<~GHERKIN
       Given I am on "#{@section_url}"
-      And I click selector ".btn.btn-primary" once I see it
     GHERKIN
   end
+  steps <<~GHERKIN
+    And I click selector ".btn.btn-primary" once I see it to load a new page
+  GHERKIN
 end
 
 And(/^I attempt to join the section$/) do
