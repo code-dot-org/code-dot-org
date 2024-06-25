@@ -230,8 +230,8 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
       @storage_id = 'storage-id'
       @channel = 'encrypted-channel'
 
+      AWS::S3.stubs :create_client
       @source_data = {status: 'FOUND', version_id: @version_id}
-
       @controller.stubs(:current_user).returns(@user)
       @controller.stubs(:storage_id_for_user_id).with(@user.id).returns(@storage_id)
       Level.stubs(:find).with(@level.id).returns(@level)
