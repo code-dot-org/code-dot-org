@@ -24,6 +24,7 @@ class PolicyComplianceController < ApplicationController
     @permission_granted = true
     user = permission_request.user
     @permission_granted_date = user.child_account_compliance_state_last_updated
+    @student_id = user.id
   end
 
   # GET /policy_compliance/pending_permission_request

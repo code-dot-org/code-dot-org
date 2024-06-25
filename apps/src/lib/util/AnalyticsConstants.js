@@ -36,6 +36,8 @@ const EVENTS = {
   CAP_STATE_FORM_SHOW: 'CAP State Form Shown',
   CAP_STATE_FORM_PROVIDED: 'CAP State Form Submitted',
   CAP_STATE_FORM_DISMISSED: 'CAP State Form Sign Out Button Clicked',
+  CAP_PARENT_CONSENT_EXPIRED: 'CAP Parent Consent Expired',
+  CAP_PARENT_CONSENT_GRANTED: 'CAP Parent Consent Granted',
   CAP_PARENT_EMAIL_BANNER_SHOWN: 'CAP Parent Email Banner Shown',
   CAP_PARENT_EMAIL_BANNER_CLICKED: 'CAP Parent Email Banner Clicked',
   CAP_PARENT_EMAIL_BANNER_SUBMITTED: 'CAP Parent Email Banner Submitted',
