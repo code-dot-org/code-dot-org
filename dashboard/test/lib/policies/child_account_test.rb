@@ -313,63 +313,6 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     end
   end
 
-  describe '.pre_lockout_user?' do
-    let(:pre_lockout_user?) {Policies::ChildAccount.pre_lockout_user?(user)}
-
-    let(:user) {build_stubbed(:student, created_at: user_lockout_date.ago(1.second))}
-
-    let(:user_lockout_date) {DateTime.now}
-    let(:user_state_policy) {{lockout_date: user_lockout_date}}
-    let(:user_predates_policy?) {false}
-
-    around do |test|
-      Timecop.freeze {test.call}
-    end
-
-    before do
-      Policies::ChildAccount.stubs(:state_policy).with(user).returns(user_state_policy)
-      Policies::ChildAccount.stubs(:user_predates_policy?).with(user).returns(user_predates_policy?)
-    end
-
-    it 'returns true' do
-      _(pre_lockout_user?).must_equal true
-    end
-
-    context 'when user was created during lockout phase' do
-      before do
-        user.created_at = user_lockout_date.since(1.second)
-      end
-
-      it 'returns false' do
-        _(pre_lockout_user?).must_equal false
-      end
-    end
-
-    context 'when currently is pre lockout phase' do
-      let(:user_lockout_date) {1.second.since}
-
-      it 'returns false' do
-        _(pre_lockout_user?).must_equal false
-      end
-
-      context 'if user predates policy' do
-        let(:user_predates_policy?) {true}
-
-        it 'returns true' do
-          _(pre_lockout_user?).must_equal true
-        end
-      end
-    end
-
-    context 'when user is not affected by a state policy' do
-      let(:user_state_policy) {nil}
-
-      it 'returns false' do
-        _(pre_lockout_user?).must_equal false
-      end
-    end
-  end
-
   describe '.lockout_date' do
     let(:lockout_date) {Policies::ChildAccount.lockout_date(user, approximate: approximate)}
 
