@@ -185,7 +185,7 @@ class ManageLinkedAccounts extends React.Component {
       this.shouldDisableConnectButton
     );
     return (
-      <div>
+      <div style={styles.container}>
         <hr />
         <h2 style={styles.header}>{i18n.manageLinkedAccounts()}</h2>
         <table style={styles.table}>
@@ -367,6 +367,9 @@ const BUTTON_WIDTH = 105;
 const BUTTON_PADDING = 8;
 const CELL_WIDTH = tableLayoutStyles.table.width / 3;
 const styles = {
+  container: {
+    clear: 'both',
+  },
   header: {
     fontSize: 22,
   },
