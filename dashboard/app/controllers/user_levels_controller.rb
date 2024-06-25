@@ -1,5 +1,5 @@
 class UserLevelsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:get_level_source]
   check_authorization
   load_and_authorize_resource
   protect_from_forgery except: [:update] # referer is the script level page which is publically cacheable

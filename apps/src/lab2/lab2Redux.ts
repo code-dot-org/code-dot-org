@@ -66,7 +66,7 @@ export interface LabState {
   levelProperties: LevelProperties | undefined;
   // If this lab should presented in a "share" or "play-only" view, which may hide certain UI elements.
   isShareView: boolean | undefined;
-  predictResponse: string | undefined;
+  predictResponse: string;
 }
 
 const initialState: LabState = {
@@ -78,7 +78,7 @@ const initialState: LabState = {
   validationState: getInitialValidationState(),
   levelProperties: undefined,
   isShareView: undefined,
-  predictResponse: undefined,
+  predictResponse: '',
 };
 
 // Thunks
@@ -150,15 +150,11 @@ export const setUpWithLevel = createAsyncThunk(
       }
 
       // If we have a predict level, we should try to load the existing response.
-      // We only can load predict responses if we have a script id.
+      // We only can load predict responses if we have a script id and user id.
       if (levelProperties.predictSettings?.isPredictLevel && payload.scriptId) {
-        const predictResponse = await getPredictResponse(
-          payload.levelId,
-          payload.scriptId
-        );
-        if (predictResponse) {
-          thunkAPI.dispatch(setPredictResponse(predictResponse));
-        }
+        const predictResponse =
+          (await getPredictResponse(payload.levelId, payload.scriptId)) || '';
+        thunkAPI.dispatch(setPredictResponse(predictResponse));
       }
 
       // Create a new project manager. If we have a channel id,
@@ -339,7 +335,7 @@ const labSlice = createSlice({
     setIsShareView(state, action: PayloadAction<boolean>) {
       state.isShareView = action.payload;
     },
-    setPredictResponse(state, action: PayloadAction<string | undefined>) {
+    setPredictResponse(state, action: PayloadAction<string>) {
       state.predictResponse = action.payload;
     },
   },
