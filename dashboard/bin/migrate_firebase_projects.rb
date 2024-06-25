@@ -254,6 +254,9 @@ end
 
 def load_channel_ids(filename)
   Set.new(File.readlines(filename).map(&:strip))
+rescue Errno::ENOENT
+  puts "Warning: couldn't read #{filename}"
+  Set.new
 end
 
 def migrate_from_file(filename)
