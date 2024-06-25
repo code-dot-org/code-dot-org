@@ -189,7 +189,7 @@ class Policies::ChildAccount
 
     # Check to see if they are old enough at the current date
     # We cannot trust 'user.age' because that is a different time zone and broken for leap years
-    today = Date.today.in_time_zone(lockout_date.utc_offset)
+    today = Time.zone.today.in_time_zone(lockout_date.utc_offset)
     student_age = today.year - student_birthday.year
     ((student_birthday + student_age.years > today) ? (student_age - 1) : student_age) <= policy[:max_age]
   end
