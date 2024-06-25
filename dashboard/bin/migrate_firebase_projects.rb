@@ -6,6 +6,7 @@ require 'json'
 require_relative '../config/environment'
 
 # Don't use more workers than we have connections in our SQL connection pool.
+# NUM_PARALLEL_WORKERS = 1
 NUM_PARALLEL_WORKERS = ActiveRecord::Base.connection_pool.size
 
 def get_project_id(channel_id)
@@ -14,11 +15,17 @@ end
 
 def fetch_datablock_tables(channel, project_id)
   datablock_tables = []
-
   tables = channel.dig("metadata", "tables") || {}
   tables.each do |table_name, table_data|
     columns = table_data["columns"].values.map {|col| col["columnName"]}
     json_records = channel.dig("storage", "tables", table_name, "records") || []
+
+    if json_records.is_a? Hash
+      # Most storage.tables.TABLE_NAME.records are arrays [record_json,...], but some of
+      # them are stored as objects/hashes instead ({record_id => record_json, ...}).
+      json_records = json_records.values
+    end
+
     records = json_records.compact.map {|record| JSON.parse(record)}
 
     datablock_table = {
