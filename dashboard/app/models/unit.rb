@@ -1873,15 +1873,17 @@ class Unit < ApplicationRecord
 
   # @return {String|nil} path to the course overview page for this unit if there
   #   is one.
-  def course_link(section_id = nil)
-    return nil unless original_unit_group
-    path = course_path(original_unit_group)
+  def course_link(section_id = nil, current_unit_group = nil)
+    unit_group = current_unit_group || original_unit_group
+    return nil unless unit_group
+    path = course_path(unit_group)
     path += "?section_id=#{section_id}" if section_id
     path
   end
 
-  def course_title
-    original_unit_group.try(:localized_title)
+  def course_title(current_unit_group = nil)
+    unit_group = current_unit_group || original_unit_group
+    unit_group.try(:localized_title)
   end
 
   def unversioned?

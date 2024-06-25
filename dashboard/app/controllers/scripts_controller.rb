@@ -14,6 +14,7 @@ class ScriptsController < ApplicationController
   use_reader_connection_for_route(:show)
 
   def show
+    @current_unit_group = params[:course_name] && UnitGroup.find_by_name(params[:course_name])
     if @script.is_deprecated
       return render 'errors/deprecated_course'
     end
@@ -72,8 +73,8 @@ class ScriptsController < ApplicationController
       is_verified_instructor: current_user&.verified_instructor?,
       locale: Unit.locale_english_name_map[request.locale],
       locale_code: request.locale,
-      course_link: @script.course_link(params[:section_id]),
-      course_title: @script.course_title || I18n.t('view_all_units'),
+      course_link: @script.course_link(params[:section_id], @current_unit_group),
+      course_title: @script.course_title(@current_unit_group) || I18n.t('view_all_units'),
       sections: @sections_with_assigned_info
     }
 
