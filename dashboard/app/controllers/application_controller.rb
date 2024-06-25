@@ -129,7 +129,9 @@ class ApplicationController < ActionController::Base
   # set in accounts created/updated in tests, but do not
   # want to be set via account creates/updates otherwise.
   UI_TEST_ATTRIBUTES = [
-    :sign_in_count
+    :sign_in_count,
+    :provider,
+    :created_at,
   ].freeze
 
   PERMITTED_USER_FIELDS = [

@@ -164,7 +164,6 @@ Feature: Evaluate student code against rubrics using AI
     When I click selector "button:contains('Assess a Student')"
     And I wait until element "#uitest-next-goal" is visible
     And I click selector "#uitest-next-goal"
-    And I wait until element ".uitest-learning-goal-title" is visible
-    Then element ".uitest-learning-goal-title" contains text "Sprites"
+    Then I wait until element ".uitest-learning-goal-title" contains text "Sprites"
     And I wait until element ".uitest-ai-assessment" is visible
     Then element ".uitest-ai-assessment" contains text "Aiden has achieved Extensive or Convincing Evidence"
