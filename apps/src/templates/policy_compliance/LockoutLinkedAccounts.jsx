@@ -45,7 +45,6 @@ export default function LockoutLinkedAccounts(props) {
 
   // Track the state of the request as the user interacts with the form.
   const [status, setConsentStatus] = useState(props.permissionStatus);
-  const prevConsentStatus = usePrevious(status);
 
   // State of the parent email entered by the user
   const [pendingEmail, setPendingEmail] = useState(props.pendingEmail);
@@ -91,23 +90,15 @@ export default function LockoutLinkedAccounts(props) {
     } else if (parentalPermissionRequest.parent_email === prevPendingEmail) {
       reportEvent(EVENTS.CAP_SETTINGS_EMAIL_RESEND, {
         inSection: props.inSection,
-        oldConsentStatus: prevConsentStatus,
-        newConsentStatus: parentalPermissionRequest.consent_status,
+        consentStatus: parentalPermissionRequest.consent_status,
       });
     } else {
       reportEvent(EVENTS.CAP_SETTINGS_EMAIL_UPDATED, {
         inSection: props.inSection,
-        oldConsentStatus: prevConsentStatus,
-        newConsentStatus: parentalPermissionRequest.consent_status,
+        consentStatus: parentalPermissionRequest.consent_status,
       });
     }
-  }, [
-    action,
-    prevConsentStatus,
-    prevPendingEmail,
-    parentalPermissionRequest,
-    props.inSection,
-  ]);
+  }, [action, prevPendingEmail, parentalPermissionRequest, props.inSection]);
 
   // When the email field is updated, also update the disability state of the
   // submit button.

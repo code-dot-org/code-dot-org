@@ -19,8 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
       analyticsReporter.sendEvent(eventName, payload, PLATFORMS.AMPLITUDE);
     };
 
-    const handleClose = () => {
-      reportEvent(EVENTS.CAP_PARENT_EMAIL_MODAL_CLOSED);
+    const handleClose = parentalPermissionRequest => {
+      reportEvent(EVENTS.CAP_PARENT_EMAIL_MODAL_CLOSED, {
+        consentStatus: parentalPermissionRequest?.consent_status,
+      });
     };
 
     const handleSubmit = parentalPermissionRequest => {
@@ -29,17 +31,15 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     };
 
-    const handleResend = (prevPPR, PPR) => {
+    const handleResend = parentalPermissionRequest => {
       reportEvent(EVENTS.CAP_PARENT_EMAIL_RESEND, {
-        oldConsentStatus: prevPPR.consent_status,
-        newConsentStatus: PPR.consent_status,
+        consentStatus: parentalPermissionRequest.consent_status,
       });
     };
 
-    const handleUpdate = (prevPPR, PPR) => {
+    const handleUpdate = parentalPermissionRequest => {
       reportEvent(EVENTS.CAP_PARENT_EMAIL_UPDATED, {
-        oldConsentStatus: prevPPR.consent_status,
-        newConsentStatus: PPR.consent_status,
+        consentStatus: parentalPermissionRequest.consent_status,
       });
     };
 
