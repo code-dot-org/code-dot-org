@@ -49,9 +49,11 @@ Feature: Pixelation levels
     When I press keys ":arrow_down" for element "#height"
     And pixelation data has text "0000 0100 0000 0010 0000 0011 000 111 100 010 001 110"
 
+    When I press keys ":backspace" for element "#height"
     When I press keys "7" for element "#height"
     And pixelation data has text "0000 0100 0000 0111 0000 0011 000 111 100 010 001 110"
 
+    When I press keys ":backspace" for element "#width"
     When I press keys "7" for element "#width"
     And pixelation data has text "0000 0111 0000 0111 0000 0011 000 111 100 010 001 110"
 
