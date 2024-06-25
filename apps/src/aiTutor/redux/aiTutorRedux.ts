@@ -1,6 +1,8 @@
-import _ from 'lodash';
-import {getChatCompletionMessage} from '@cdo/apps/aiTutor/chatApi';
 import {createSlice, PayloadAction, createAsyncThunk} from '@reduxjs/toolkit';
+import _ from 'lodash';
+
+import {getChatCompletionMessage} from '@cdo/apps/aiTutor/chatApi';
+
 import {savePromptAndResponse} from '../interactionsApi';
 import {
   Role,
