@@ -16,6 +16,7 @@ module Services
           Services::Lti.create_lti_user_identity(user)
           handle_sections(rehydrated_user, user)
           user.lti_roster_sync_enabled = true if user.teacher?
+          user.lms_landing_opted_out = true
           PartialRegistration.delete(session)
           rehydrated_user.destroy if rehydrated_user.id
         end
