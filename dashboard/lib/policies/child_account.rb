@@ -182,9 +182,16 @@ class Policies::ChildAccount
     # inaccurate values and we want to *ensure* the student age is legally valid.
     min_required_age = (policy[:max_age] + 1).years
 
-    # Checks if the student meets the minimum age requirement at the start of the lockout
+    # Checks if the student meets the minimum age requirement by the start of the lockout
+    # (And thus they are not considered underage during pre-lockout periods)
     student_birthday = user.birthday.in_time_zone(lockout_date.utc_offset)
-    student_birthday.since(min_required_age) > lockout_date
+    return false unless student_birthday.since(min_required_age) > lockout_date
+
+    # Check to see if they are old enough at the current date
+    # We cannot trust 'user.age' because that is a different time zone and broken for leap years
+    today = Date.today.in_time_zone(lockout_date.utc_offset)
+    student_age = today.year - student_birthday.year
+    ((student_birthday + student_age.years > today) ? (student_age - 1) : student_age) <= policy[:max_age]
   end
 
   # Whether or not the user can create/link new personal logins

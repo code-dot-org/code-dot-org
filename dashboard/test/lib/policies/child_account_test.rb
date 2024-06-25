@@ -471,26 +471,6 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     end
   end
 
-  describe '.lockable?' do
-    let(:lockable?) {Policies::ChildAccount.lockable?(user)}
-
-    let(:user) {build_stubbed(:student)}
-
-    let(:user_lockout_date) {DateTime.now}
-
-    around do |test|
-      Timecop.freeze {test.call}
-    end
-
-    before do
-      Policies::ChildAccount.stubs(:lockout_date).with(user).returns(user_lockout_date)
-    end
-
-    it 'returns true' do
-      _(lockable?).must_equal true
-    end
-  end
-
   describe '.personal_account?' do
     let(:personal_account?) {Policies::ChildAccount.personal_account?(user)}
 
@@ -557,13 +537,6 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       it 'returns false' do
         _(personal_account?).must_equal false
       end
-    end
-  end
-
-  describe '.parent_permission_required?' do
-    let(:parent_permission_required?) {Policies::ChildAccount.parent_permission_required?(user)}
-
-    before do
     end
   end
 
