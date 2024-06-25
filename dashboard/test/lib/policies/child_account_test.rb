@@ -272,6 +272,14 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       Policies::ChildAccount.stubs(:state_policy).with(user).returns(user_state_policy)
     end
 
+    context 'the user is a teacher' do
+      let(:user) {build_stubbed(:teacher)}
+
+      it 'returns false' do
+        _(underage?).must_equal false
+      end
+    end
+
     context 'there is no state policy for the user' do
       let(:user_state_policy) {nil}
 
@@ -423,7 +431,7 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     let(:can_link_new_personal_account?) {Policies::ChildAccount.can_link_new_personal_account?(user)}
 
     let(:user_birthday) {DateTime.now}
-    let(:user) {build_stubbed(:student, birthday: user_birthday)}
+    let(:user) {build_stubbed(:student, birthday: user_birthday, us_state: 'CO', country_code: 'US')}
     let(:underage?) {true}
     let(:permission_granted?) {true}
 
@@ -437,6 +445,30 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
 
       it 'returns true' do
         _(can_link_new_personal_account?).must_equal true
+      end
+    end
+
+    context 'when the user does not have a state' do
+      let(:user) {build_stubbed(:student, birthday: user_birthday, us_state: nil)}
+
+      it 'returns false' do
+        _(can_link_new_personal_account?).must_equal false
+      end
+    end
+
+    context 'when the user does not have a country' do
+      let(:user) {build_stubbed(:student, birthday: user_birthday, country_code: nil)}
+
+      it 'returns false' do
+        _(can_link_new_personal_account?).must_equal false
+      end
+    end
+
+    context 'when the user does not have a state nor country' do
+      let(:user) {build_stubbed(:student, birthday: user_birthday, us_state: nil, country_code: nil)}
+
+      it 'returns false' do
+        _(can_link_new_personal_account?).must_equal false
       end
     end
 
