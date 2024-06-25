@@ -38,7 +38,7 @@ import {
   getAppOptionsViewingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
 import {START_SOURCES} from './constants';
-import {getProgram} from './projects/userLevelsApi';
+import {getPredictResponse} from './projects/userLevelsApi';
 
 interface PageError {
   errorMessage: string;
@@ -150,8 +150,12 @@ export const setUpWithLevel = createAsyncThunk(
       }
 
       // If we have a predict level, we should try to load the existing response.
-      if (levelProperties.predictSettings?.is_predict_level) {
-        const predictResponse = await getProgram(
+      // We only can load predict responses if we have a script id.
+      if (
+        levelProperties.predictSettings?.is_predict_level &&
+        payload.scriptId
+      ) {
+        const predictResponse = await getPredictResponse(
           payload.levelId,
           payload.scriptId
         );

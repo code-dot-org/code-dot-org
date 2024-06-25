@@ -1,23 +1,16 @@
-import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
-const rootUrl = (levelId: number, scriptId?: number) =>
-  `/user_levels/program/${levelId}/${scriptId}`;
+const rootUrl = (levelId: number, scriptId: number) =>
+  `/user_levels/level_source/${scriptId}/${levelId}`;
 
-export async function getProgram(
+export async function getPredictResponse(
   levelId: number,
-  scriptId?: number
+  scriptId: number
 ): Promise<string | null> {
-  try {
-    const response = await HttpClient.fetchJson<{program: string}>(
-      rootUrl(levelId, scriptId),
-      {}
-    );
-    return response.value.program;
-  } catch (e) {
-    if (e instanceof NetworkError && e.response.status === 404) {
-      // There was no program for this user and level, which is an expected case.
-      return null;
-    }
-    throw e;
-  }
+  const response = await HttpClient.fetchJson<{data: string}>(
+    rootUrl(levelId, scriptId),
+    {}
+  );
+  // The program is the predict response.
+  return response.value?.data;
 }
