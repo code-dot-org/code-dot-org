@@ -1,0 +1,85 @@
+@import 'color.scss';
+@import './chat-items-common.module.scss';
+
+$auto-dismiss-timeout-seconds: 3;
+
+.icon {
+  margin-right: 10px;
+}
+
+%container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  border-radius: 4px;
+  padding: $internal-spacing;
+  margin: $vertical-spacing $horizontal-spacing;
+  min-height: 25px;
+
+  .dismissButton {
+    background-color: transparent;
+    color: $light_gray_700;
+
+    &:hover {
+      background-color: transparent;
+      color: $light_gray_500;
+    }
+  }
+
+  // Needed to override default p styling rendered by SafeMarkdown
+  p {
+    margin: 0;
+  }
+}
+
+.container-error {
+  @extend %container;
+  background-color: $light_negative_100;
+}
+
+.container-success {
+  @extend %container;
+  background-color: $light_affirmative_100;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.autoDismiss {
+  animation: fade-out #{$auto-dismiss-timeout-seconds + 's'};
+  opacity: 0;
+}
+
+%icon {
+  font-size: 16px;
+}
+
+.icon-success {
+  @extend %icon;
+  color: $light_affirmative_500;
+}
+
+.icon-error {
+  @extend %icon;
+  color: $light_negative_500;
+}
+
+.textIconContainer {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+:export {
+  autoDismissTimeoutSeconds: $auto-dismiss-timeout-seconds;
+}

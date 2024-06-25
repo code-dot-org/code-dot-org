@@ -9,7 +9,7 @@ import {
 import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
-import ChatMessage from './ChatMessage';
+import ChatItemView from './ChatItemView';
 import UserChatMessageEditor from './UserChatMessageEditor';
 
 import moduleStyles from './chatWorkspace.module.scss';
@@ -22,7 +22,7 @@ const ChatWorkspace: React.FunctionComponent = () => {
     (state: {aichat: AichatState}) => state.aichat.showWarningModal
   );
 
-  const messages = useSelector(selectAllMessages);
+  const items = useSelector(selectAllMessages);
 
   const isWaitingForChatResponse = useSelector(
     (state: {aichat: AichatState}) => state.aichat.isWaitingForChatResponse
@@ -37,7 +37,7 @@ const ChatWorkspace: React.FunctionComponent = () => {
         behavior: 'smooth',
       });
     }
-  }, [conversationContainerRef, messages, isWaitingForChatResponse]);
+  }, [conversationContainerRef, items, isWaitingForChatResponse]);
 
   const dispatch = useAppDispatch();
 
@@ -66,8 +66,8 @@ const ChatWorkspace: React.FunctionComponent = () => {
         className={moduleStyles.conversationArea}
         ref={conversationContainerRef}
       >
-        {messages.map((message, index) => (
-          <ChatMessage message={message} key={index} />
+        {items.map((item, index) => (
+          <ChatItemView item={item} key={index} />
         ))}
         {showWaitingAnimation()}
       </div>

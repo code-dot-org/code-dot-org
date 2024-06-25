@@ -7,6 +7,7 @@ import {
   ThunkDispatch,
 } from '@reduxjs/toolkit';
 
+import {Role} from '@cdo/apps/aiComponentLibrary/chatItems/types';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
@@ -23,7 +24,6 @@ import {
   FieldVisibilities,
   LevelAichatSettings,
   ModelCardInfo,
-  Role,
   SaveType,
   ViewMode,
   Visibility,
@@ -543,6 +543,12 @@ export const selectAllMessages = (state: {aichat: AichatState}) => {
   }
   return messages;
 };
+
+export const selectHaveCustomizationsChanged = (state: RootState) =>
+  findChangedProperties(
+    state.aichat.savedAiCustomizations,
+    state.aichat.currentAiCustomizations
+  ).length > 0;
 
 // Actions not to be used outside of this file
 const {

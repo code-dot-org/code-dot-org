@@ -46,7 +46,7 @@ import moduleStyles from './aichatView.module.scss';
 
 const getResetModelNotification = (): Notification => ({
   id: getNewMessageId(),
-  text: 'Model customizations and model card information have been reset to default settings.',
+  text: '**Model customizations and model card information** have been reset to default settings.',
   notificationType: 'success',
   timestamp: Date.now(),
 });

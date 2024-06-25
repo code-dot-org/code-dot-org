@@ -3,7 +3,10 @@ import React, {useCallback} from 'react';
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {updateAiCustomization} from '../../redux/aichatRedux';
+import {
+  selectHaveCustomizationsChanged,
+  updateAiCustomization,
+} from '../../redux/aichatRedux';
 
 import styles from '../model-customization-workspace.module.scss';
 
@@ -21,11 +24,16 @@ const UpdateButton: React.FunctionComponent<UpdateButtonProps> = ({
   );
   const saveInProgress = useAppSelector(state => state.aichat.saveInProgress);
   const currentSaveType = useAppSelector(state => state.aichat.currentSaveType);
+  const haveCustomizationsChanged = useAppSelector(
+    selectHaveCustomizationsChanged
+  );
 
   return (
     <Button
       text="Update"
-      disabled={isDisabledDefault || saveInProgress}
+      disabled={
+        isDisabledDefault || saveInProgress || !haveCustomizationsChanged
+      }
       iconLeft={
         saveInProgress && currentSaveType === 'updateChatbot'
           ? {iconName: 'spinner', animationType: 'spin'}

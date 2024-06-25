@@ -1,5 +1,7 @@
 import {LevelProperties} from '@cdo/apps/lab2/types';
 
+import {NotificationType, Role} from '../aiComponentLibrary/chatItems/types';
+
 // TODO: Update this once https://codedotorg.atlassian.net/browse/CT-471 is resolved
 export type AichatInteractionStatusValue = string;
 
@@ -23,7 +25,7 @@ export interface ModelUpdate extends ChatItem {
 export interface Notification extends ChatItem {
   id: number;
   text: string;
-  notificationType: 'error' | 'success';
+  notificationType: NotificationType;
 }
 
 // Type Predicates: checks if a ChatItem is a given type, and more helpfully,
@@ -51,11 +53,6 @@ export type AichatContext = {
   scriptId: number | null;
   channelId: string | undefined;
 };
-
-export enum Role {
-  ASSISTANT = 'assistant',
-  USER = 'user',
-}
 
 export enum ViewMode {
   EDIT = 'edit-mode',
