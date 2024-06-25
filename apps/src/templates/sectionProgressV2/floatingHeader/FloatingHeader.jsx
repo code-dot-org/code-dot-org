@@ -19,6 +19,7 @@ export default function FloatingHeader({header, children, tableRef, id}) {
 
   const [floatHeader, setFloatHeader] = React.useState(false);
   const [floatXPosition, setFloatXPosition] = React.useState(0);
+  const [showHeader, setShowHeader] = React.useState(0);
 
   const handleScrollAndResize = React.useCallback(() => {
     const maxVisibleY =
@@ -47,6 +48,12 @@ export default function FloatingHeader({header, children, tableRef, id}) {
     }
 
     setFloatXPosition(childContainerRef?.current.getBoundingClientRect().left);
+    setShowHeader(
+      childContainerRef?.current.getBoundingClientRect().left >=
+        tableRef?.current.getBoundingClientRect().left &&
+        childContainerRef?.current.getBoundingClientRect().right <=
+          tableRef?.current.getBoundingClientRect().right
+    );
   }, [childContainerRef, floatHeader, setFloatHeader, id, tableRef]);
 
   React.useEffect(() => {
@@ -65,10 +72,7 @@ export default function FloatingHeader({header, children, tableRef, id}) {
 
   return (
     <div className={styles.floatingHeader}>
-      {(!floatHeader ||
-        (floatXPosition >= tableRef?.current.getBoundingClientRect().left &&
-          floatXPosition <
-            tableRef?.current.getBoundingClientRect().right)) && (
+      {(!floatHeader || showHeader) && (
         <div
           className={floatHeader && styles.floatHeader}
           ref={headerRef}
