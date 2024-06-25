@@ -5,6 +5,15 @@ require 'json'
 
 require_relative '../config/environment'
 
+def set_active_record_connection_pool_size(pool_size)
+  ActiveRecord::Base.connection_pool.disconnect!
+  ActiveRecord::Base.establish_connection(
+    ActiveRecord::Base.configurations[Rails.env].merge('pool' => pool_size)
+  )
+end
+
+set_active_record_connection_pool_size(10)
+
 # Don't use more workers than we have connections in our SQL connection pool.
 # NUM_PARALLEL_WORKERS = 1
 NUM_PARALLEL_WORKERS = ActiveRecord::Base.connection_pool.size
