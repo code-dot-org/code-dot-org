@@ -209,13 +209,18 @@ module Services
             regenerate_pdf = true
           end
 
-          # Regenerate the PDF
           if regenerate_pdf && File.exist?(path)
-            new_path = File.join(File.dirname(path), "optimized_#{File.basename(path)}")
-            gs_command = "gs -sDEVICE=pdfwrite -dNOPAUSE -dBATCH -dQUIET -sOutputFile=#{new_path} #{path}"
-            system(gs_command)
-            puts "I regenerated #{path} to #{new_path} using Ghostscript."
-            return new_path
+            # Regenerate the PDF using ghostscript
+            if DCDO.get('use-ghostscript-to-generate-pdfs', false)
+              new_path = File.join(File.dirname(path), "optimized_#{File.basename(path)}")
+              gs_command = "gs -sDEVICE=pdfwrite -dNOPAUSE -dBATCH -dQUIET -sOutputFile=#{new_path} #{path}"
+              system(gs_command)
+              puts "I regenerated #{path} to #{new_path} using Ghostscript."
+              return new_path
+            else
+              # do old way
+              puts "I did not regenerate #{path} using Ghostscript."
+              return path
           end
         rescue Google::Apis::ClientError, Google::Apis::ServerError, GoogleDrive::Error => exception
           ChatClient.log(
