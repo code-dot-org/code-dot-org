@@ -42,7 +42,7 @@ import {
 } from './progressReduxSelectors';
 import {getBubbleUrl} from '../templates/progress/BubbleFactory';
 import {navigateToHref} from '../utils';
-import {RootState} from '../types/redux';
+import {RootState} from '@cdo/apps/types/redux';
 
 export interface ProgressState {
   currentLevelId: string | null;

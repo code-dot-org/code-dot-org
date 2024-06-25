@@ -262,6 +262,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
             />
             {showPredictFreeResponse && (
               <div key="predict-response" id="predict-response">
+                {/** TODO: include other free response configuration. */}
                 <input
                   type="text"
                   value={predictResponse}

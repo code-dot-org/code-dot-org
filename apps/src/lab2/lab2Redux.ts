@@ -157,6 +157,10 @@ export const setUpWithLevel = createAsyncThunk(
         const predictResponse =
           (await getPredictResponse(payload.levelId, payload.scriptId)) || '';
         thunkAPI.dispatch(setPredictResponse(predictResponse));
+      } else {
+        // If this isn't a predict level, reset the response to an empty string
+        // to avoid potentially confusing behavior.
+        thunkAPI.dispatch(setPredictResponse(''));
       }
 
       // Create a new project manager. If we have a channel id,
