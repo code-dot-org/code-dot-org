@@ -142,6 +142,9 @@ function ProgressTableV2({
             sortedStudents={sortedStudents}
             removeExpandedLesson={removeExpandedLesson}
             key={index}
+            tableRef={outsideTableRef}
+            addScrollCallback={addScrollCallback}
+            removeScrollCallback={removeScrollCallback}
           />
         );
       } else {
