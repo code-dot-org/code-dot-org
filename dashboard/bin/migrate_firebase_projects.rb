@@ -5,7 +5,8 @@ require 'json'
 
 require_relative '../config/environment'
 
-NUM_PARALLEL_WORKERS = 1
+# Don't use more workers than we have connections in our SQL connection pool.
+NUM_PARALLEL_WORKERS = ActiveRecord::Base.connection_pool.size
 
 def get_project_id(channel_id)
   storage_decrypt_channel_id(channel_id)[1]
