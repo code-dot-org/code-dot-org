@@ -129,13 +129,13 @@ module ShareFiltering
   # @param [String] locale a two-character ISO 639-1 language code
   # @param [Hash] A set of text to replace before performing a profanity check.
   # @return [ShareFailure, nil]
-  def self.find_failure(text, locale, profanity_filter_replace_text_list = {}, exceptions: false, skip_pii: false)
+  def self.find_failure(text, locale, profanity_filter_replace_text_list = {}, exceptions: false)
     # We only fail programs when the webpurity service is enabled
     return nil unless Gatekeeper.allows('webpurify', default: true)
 
     # First, check for PII issues
     pii_failure = find_pii_failure(text, exceptions: exceptions)
-    return pii_failure if pii_failure && !skip_pii
+    return pii_failure if pii_failure
 
     # Search for profanity
     expletive = ProfanityFilter.find_potential_profanity(text, locale, profanity_filter_replace_text_list)

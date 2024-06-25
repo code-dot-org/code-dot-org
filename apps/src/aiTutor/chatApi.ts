@@ -24,7 +24,7 @@ const CHAT_COMPLETION_URL = '/openai/chat_completion';
 // We want to expose enough information to help troubleshoot false positives
 const logViolationDetails = (response: OpenaiChatCompletionMessage) => {
   console.info('Violation detected in chat completion response', {
-    type: response.status,
+    type: response.safety_status,
     content: response.flagged_content,
   });
   MetricsReporter.logWarning({
@@ -42,8 +42,7 @@ export async function postOpenaiChatCompletion(
   messagesToSend: OpenaiChatCompletionMessage[],
   levelId?: number,
   tutorType?: AITutorTypesValue,
-  levelInstructions?: string,
-  skipPIIFilter?: boolean
+  levelInstructions?: string
 ): Promise<OpenaiChatCompletionMessage | null> {
   const payload = levelId
     ? {
@@ -51,13 +50,11 @@ export async function postOpenaiChatCompletion(
         messages: messagesToSend,
         type: tutorType,
         levelInstructions,
-        skipPIIFilter,
       }
     : {
         messages: messagesToSend,
         type: tutorType,
         levelInstructions,
-        skipPIIFilter,
       };
 
   const response = await HttpClient.post(
@@ -100,17 +97,12 @@ export async function getChatCompletionMessage(
   ];
   let response;
 
-  // Some level instructions include data that looks like PII, optionally skip the PII filter for those levels.
-  // For example s/csa6-2023/lessons/6/levels/7/sublevel/4
-  const skipPIIFilter = levelInstructions?.includes('email');
-
   try {
     response = await postOpenaiChatCompletion(
       messagesToSend,
       levelId,
       tutorType,
-      levelInstructions,
-      skipPIIFilter
+      levelInstructions
     );
   } catch (error) {
     MetricsReporter.logError({
@@ -127,7 +119,7 @@ export async function getChatCompletionMessage(
         'There was an error processing your request. Please try again.',
     };
 
-  switch (response.status) {
+  switch (response.safety_status) {
     case ShareFilterStatus.Profanity:
       logViolationDetails(response);
       return {
@@ -138,11 +130,12 @@ export async function getChatCompletionMessage(
     case ShareFilterStatus.Email:
     case ShareFilterStatus.Phone:
     case ShareFilterStatus.Address:
+      // False positives with the PII filter (e.g. `for loops` flagged as addresses,
+      // and curriculum fake emails) were significantly impacting user experience.
+      // We're effectively turning PII filtering off for AI Tutor
+      // but still logging the violation for future analysis.
       logViolationDetails(response);
-      return {
-        status: Status.PII_VIOLATION,
-        assistantResponse: `To protect your privacy, please remove any personal details like your ${response.status} from your message and try again.`,
-      };
+      return {status: Status.OK, assistantResponse: response.content};
     default:
       return {status: Status.OK, assistantResponse: response.content};
   }
@@ -154,6 +147,7 @@ type OpenaiChatCompletionMessage = {
   content: string;
   // Only used in case of PII or profanity violation
   flagged_content?: string;
+  safety_status?: AITutorInteractionStatusValue;
 };
 
 type ChatCompletionResponse = {
