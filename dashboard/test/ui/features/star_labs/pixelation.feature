@@ -33,7 +33,7 @@ Feature: Pixelation levels
     Then pixelation data has text "0000 0100 0000 0010 0000 0011 000 111 100 010 001 110 111 000 111 000 01"
 
   @as_student
-  Scenario: Pixelation sliders are accessible via keyboard keys
+  Scenario: Pixelation slider input fields are accessible via keyboard keys
     Given I am on the 2nd pixelation test level
     And pixelation data has text "0000 0100 0000 0010 0000 0011 000 111 100 010 001 110"
 
