@@ -367,9 +367,6 @@ const BUTTON_WIDTH = 105;
 const BUTTON_PADDING = 8;
 const CELL_WIDTH = tableLayoutStyles.table.width / 3;
 const styles = {
-  container: {
-    clear: 'both',
-  },
   header: {
     fontSize: 22,
   },
