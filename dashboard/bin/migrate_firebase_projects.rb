@@ -116,7 +116,10 @@ def stream_results_to_logs(log_filename_prefix, pool, results)
         succeeded_log.puts(channel_id)
       else
         failed_log.puts(channel_id)
-        exception_log.puts("#{channel_id}, #{exception}")
+        exception_log.puts("Exception migrating #{channel_id}")
+        exception_log.puts(exception.message)
+        exception_log.puts(exception.backtrace)
+        exception_log.puts
       end
     end
   rescue ThreadError
@@ -156,8 +159,29 @@ def migrate_all(channel_ids, log_filename_prefix = "firebase-channel-ids.txt")
   pool.wait_for_termination
 end
 
+def load_channel_ids(filename)
+  Set.new(File.readlines(filename).map(&:strip))
+end
+
+def migrate_from_file(filename)
+  puts "Migrating channel_ids from #{filename}"
+  channel_ids = load_channel_ids(filename)
+  failed_channel_ids = load_channel_ids(fail_filename(filename))
+  succeeded_channel_ids = load_channel_ids(success_filename(filename))
+
+  puts "Num Total channel_ids: #{channel_ids.length}"
+  puts "Num Failed channel_ids: #{failed_channel_ids.length}"
+  puts "Num Succeeded channel_ids: #{succeeded_channel_ids.length}"
+  puts
+
+  channel_ids -= failed_channel_ids
+  channel_ids -= succeeded_channel_ids
+
+  puts "Num channel_ids left to process: #{channel_ids.length}"
+  # migrate_all(channel_ids)
+end
+
 if $PROGRAM_NAME == __FILE__
   id_filename = ARGV[0] || 'firebase-channel-ids.txt'
-  channel_ids = File.readlines(id_filename).map(&:strip)
-  migrate_all(channel_ids)
+  migrate_from_file(id_filename)
 end
