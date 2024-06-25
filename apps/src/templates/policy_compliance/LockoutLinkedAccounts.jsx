@@ -59,8 +59,7 @@ export default function LockoutLinkedAccounts(props) {
     if (parentalPermissionRequest) {
       setPendingEmail(parentalPermissionRequest.parent_email);
       setLastEmailDate(new Date(parentalPermissionRequest.requested_at));
-      // setConsentStatus(parentalPermissionRequest.consent_status);
-      setConsentStatus(Math.random());
+      setConsentStatus(parentalPermissionRequest.consent_status);
     }
   }, [parentalPermissionRequest]);
 
