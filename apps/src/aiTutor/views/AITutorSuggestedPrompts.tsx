@@ -1,15 +1,15 @@
 import React, {useCallback} from 'react';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import SuggestedPrompts from '@cdo/apps/aiComponentLibrary/suggestedPrompt/SuggestedPrompts';
-
 import {
   AITutorTypes as ActionType,
   AITutorTypesValue,
 } from '@cdo/apps/aiTutor/types';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import {askAITutor} from '../redux/aiTutorRedux';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {askAITutor} from '../redux/aiTutorRedux';
 
 const QuickActions = {
   [ActionType.COMPILATION]: "Why doesn't my code compile?",

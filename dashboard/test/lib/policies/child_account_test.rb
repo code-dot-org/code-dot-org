@@ -85,7 +85,9 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       [[:non_compliant_child, :migrated_imported_from_clever, {created_at: '2024-06-29T23:59:59MDT'}], false],
       [[:non_compliant_child, :migrated_imported_from_google_classroom, {created_at: '2023-06-29T23:59:59MDT'}], true],
       [[:non_compliant_child, :migrated_imported_from_google_classroom, {created_at: '2024-06-29T23:59:59MDT'}], true],
+      [[:non_compliant_child, :migrated_imported_from_google_classroom, {created_at: '2024-07-01T00:00:00MDT'}], false],
       [[:non_compliant_child, :with_google_authentication_option, {created_at: '2024-06-29T23:59:59MDT'}], true],
+      [[:non_compliant_child, :with_google_authentication_option, {created_at: '2024-07-01T00:00:00MDT'}], false],
       # The following test cases address P20-937
       [[:non_compliant_child, :before_p20_937_exception_date], true],
       [[:non_compliant_child, :microsoft_v2_sso_provider, :before_p20_937_exception_date], true],
@@ -161,63 +163,6 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
         it 'contains DCDO configured lockout_date' do
           _(co_state_policy[:lockout_date]).must_equal cpa_all_user_lockout
         end
-      end
-    end
-  end
-
-  describe '.pre_lockout_user?' do
-    let(:pre_lockout_user?) {Policies::ChildAccount.pre_lockout_user?(user)}
-
-    let(:user) {build_stubbed(:student, created_at: user_lockout_date.ago(1.second))}
-
-    let(:user_lockout_date) {DateTime.now}
-    let(:user_state_policy) {{lockout_date: user_lockout_date}}
-    let(:user_predates_policy?) {false}
-
-    around do |test|
-      Timecop.freeze {test.call}
-    end
-
-    before do
-      Policies::ChildAccount.stubs(:state_policy).with(user).returns(user_state_policy)
-      Policies::ChildAccount.stubs(:user_predates_policy?).with(user).returns(user_predates_policy?)
-    end
-
-    it 'returns true' do
-      _(pre_lockout_user?).must_equal true
-    end
-
-    context 'when user was created during lockout phase' do
-      before do
-        user.created_at = user_lockout_date.since(1.second)
-      end
-
-      it 'returns false' do
-        _(pre_lockout_user?).must_equal false
-      end
-    end
-
-    context 'when currently is pre lockout phase' do
-      let(:user_lockout_date) {1.second.since}
-
-      it 'returns false' do
-        _(pre_lockout_user?).must_equal false
-      end
-
-      context 'if user predates policy' do
-        let(:user_predates_policy?) {true}
-
-        it 'returns true' do
-          _(pre_lockout_user?).must_equal true
-        end
-      end
-    end
-
-    context 'when user is not affected by a state policy' do
-      let(:user_state_policy) {nil}
-
-      it 'returns false' do
-        _(pre_lockout_user?).must_equal false
       end
     end
   end
