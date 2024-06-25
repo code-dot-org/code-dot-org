@@ -221,6 +221,7 @@ module Services
               # do old way
               puts "I did not regenerate #{path} using Ghostscript."
               return path
+            end
           end
         rescue Google::Apis::ClientError, Google::Apis::ServerError, GoogleDrive::Error => exception
           ChatClient.log(
