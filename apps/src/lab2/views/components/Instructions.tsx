@@ -5,10 +5,10 @@ import moduleStyles from './instructions.module.scss';
 import {useSelector} from 'react-redux';
 import {navigateToNextLevel} from '@cdo/apps/code-studio/progressRedux';
 import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
-import {LabState} from '../../lab2Redux';
-import {ProjectLevelData} from '../../types';
+import {LabState, setPredictResponse} from '../../lab2Redux';
+import {PredictSettings, ProjectLevelData} from '../../types';
 import {ThemeContext} from '../ThemeWrapper';
 const commonI18n = require('@cdo/locale');
 
@@ -59,6 +59,10 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   const {hasConditions, message, satisfied, index} = useSelector(
     (state: {lab: LabState}) => state.lab.validationState
   );
+  const predictSettings = useAppSelector(
+    state => state.lab.levelProperties?.predictSettings
+  );
+  const predictResponse = useAppSelector(state => state.lab.predictResponse);
 
   // If there are no validation conditions, we can show the continue button so long as
   // there is another level. If validation is present, also check that conditions are satisfied.
@@ -95,6 +99,9 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       beforeFinish={beforeNextLevel}
       onNextPanel={onNextPanel}
       theme={theme}
+      predictSettings={predictSettings}
+      predictResponse={predictResponse}
+      setPredictResponse={response => dispatch(setPredictResponse(response))}
       {...{baseUrl, layout, imagePopOutDirection, handleInstructionsTextClick}}
     />
   );
@@ -130,6 +137,9 @@ interface InstructionsPanelProps {
    * A callback when the user clicks on clickable text.
    */
   handleInstructionsTextClick?: (id: string) => void;
+  predictSettings?: PredictSettings;
+  predictResponse?: string;
+  setPredictResponse: (response: string) => void;
 }
 
 /**
@@ -149,6 +159,9 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   imagePopOutDirection = 'right',
   theme = 'dark',
   handleInstructionsTextClick,
+  predictSettings,
+  predictResponse,
+  setPredictResponse,
 }) => {
   const [showBigImage, setShowBigImage] = useState(false);
   const [isFinished, setIsFinished] = useState(false);
@@ -241,6 +254,17 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
               className={moduleStyles.markdownText}
               handleInstructionsTextClick={handleInstructionsTextClick}
             />
+
+            {predictSettings?.isPredictLevel && (
+              <div key="predict-response" id="predict-response">
+                <input
+                  type="text"
+                  value={predictResponse}
+                  placeholder={predictSettings.placeholderText}
+                  onChange={e => setPredictResponse(e.target.value)}
+                />
+              </div>
+            )}
           </div>
         )}
         {(message || canShowContinueButton || canShowFinishButton) && (

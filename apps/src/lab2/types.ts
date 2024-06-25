@@ -9,7 +9,7 @@
 
 import {BlockDefinition} from '@cdo/apps/blockly/types';
 import {PanelsLevelData} from '@cdo/apps/panels/types';
-import {LevelPredictSettings} from './levelEditors/types';
+import {PredictQuestionType} from './levelEditors/types';
 
 export interface Channel {
   id: string;
@@ -163,7 +163,7 @@ export interface LevelProperties {
   exemplarSources?: MultiFileSource;
   // For Teachers Only value
   teacherMarkdown?: string;
-  predictSettings?: LevelPredictSettings;
+  predictSettings?: PredictSettings;
 }
 
 // Level configuration data used by project-backed labs that don't require
@@ -286,3 +286,14 @@ export interface ExtraLinksData {
 
 // Text-based labs that are currently supported by lab2.
 export const TEXT_BASED_LABS: AppName[] = ['aichat', 'pythonlab', 'weblab2'];
+
+export interface PredictSettings {
+  isPredictLevel: boolean;
+  placeholderText?: string;
+  solution?: string | string[];
+  questionType?: PredictQuestionType;
+  multipleChoiceOptions?: string[];
+  multipleChoiceAnswers?: string[];
+  allowMultipleAttempts?: boolean;
+  freeResponseHeight?: number;
+}

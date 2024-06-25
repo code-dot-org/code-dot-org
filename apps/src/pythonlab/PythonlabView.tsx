@@ -77,7 +77,7 @@ const PythonlabView: React.FunctionComponent = () => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
   const {source, setSource, resetToStartSource} = useSource(defaultProject);
   const isPredictLevel = useAppSelector(
-    state => state.lab.levelProperties?.predictSettings?.is_predict_level
+    state => state.lab.levelProperties?.predictSettings?.isPredictLevel
   );
 
   const onRun = (
@@ -87,10 +87,8 @@ const PythonlabView: React.FunctionComponent = () => {
     source: MultiFileSource | undefined
   ) => {
     handleRunClick(runTests, dispatch, permissions, source);
-    console.log({isPredictLevel});
     if (isPredictLevel) {
-      console.log('sending predict report?');
-      dispatch(sendPredictLevelReport('pythonlab', 'sample program'));
+      dispatch(sendPredictLevelReport('pythonlab'));
     }
   };
 

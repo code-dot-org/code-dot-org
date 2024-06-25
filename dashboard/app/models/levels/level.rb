@@ -851,6 +851,9 @@ class Level < ApplicationRecord
     if script_level
       properties_camelized[:exampleSolutions] = script_level.get_example_solutions(self, current_user, nil)
     end
+    if properties_camelized["predictSettings"]
+      properties_camelized["predictSettings"] = properties_camelized["predictSettings"].camelize_keys
+    end
     if current_user&.verified_instructor? || current_user&.permission?(UserPermission::LEVELBUILDER)
       # Verified instructors can view exemplars and levelbuilders can edit them, so we include them in the properties
       # for these users.

@@ -151,15 +151,11 @@ export const setUpWithLevel = createAsyncThunk(
 
       // If we have a predict level, we should try to load the existing response.
       // We only can load predict responses if we have a script id.
-      if (
-        levelProperties.predictSettings?.is_predict_level &&
-        payload.scriptId
-      ) {
+      if (levelProperties.predictSettings?.isPredictLevel && payload.scriptId) {
         const predictResponse = await getPredictResponse(
           payload.levelId,
           payload.scriptId
         );
-        console.log(`got predict response ${predictResponse}`);
         if (predictResponse) {
           thunkAPI.dispatch(setPredictResponse(predictResponse));
         }

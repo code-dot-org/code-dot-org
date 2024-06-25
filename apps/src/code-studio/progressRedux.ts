@@ -42,6 +42,7 @@ import {
 } from './progressReduxSelectors';
 import {getBubbleUrl} from '../templates/progress/BubbleFactory';
 import {navigateToHref} from '../utils';
+import {RootState} from '../types/redux';
 
 export interface ProgressState {
   currentLevelId: string | null;
@@ -287,12 +288,7 @@ const progressSlice = createSlice({
 });
 
 // Thunks
-type ProgressThunkAction = ThunkAction<
-  void,
-  {progress: ProgressState},
-  undefined,
-  AnyAction
->;
+type ProgressThunkAction = ThunkAction<void, RootState, undefined, AnyAction>;
 
 export const queryUserProgress =
   (userId: string, mergeProgress: boolean = true): ProgressThunkAction =>
@@ -375,17 +371,15 @@ export function sendSuccessReport(appType: string): ProgressThunkAction {
   };
 }
 
-export function sendPredictLevelReport(
-  appType: string,
-  program: string
-): ProgressThunkAction {
+export function sendPredictLevelReport(appType: string): ProgressThunkAction {
   return (dispatch, getState) => {
+    const predictResponse = getState().lab.predictResponse;
     sendReportHelper(
       appType,
       TestResults.CONTAINED_LEVEL_RESULT,
       dispatch,
       getState,
-      program
+      predictResponse
     );
   };
 }
@@ -393,8 +387,8 @@ export function sendPredictLevelReport(
 function sendReportHelper(
   appType: string,
   result: number,
-  dispatch: ThunkDispatch<{progress: ProgressState}, undefined, AnyAction>,
-  getState: () => {progress: ProgressState},
+  dispatch: ThunkDispatch<RootState, undefined, AnyAction>,
+  getState: () => RootState,
   program?: string
 ) {
   const state = getState().progress;
