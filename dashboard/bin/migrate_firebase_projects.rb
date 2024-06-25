@@ -12,15 +12,13 @@ def get_project_id(channel_id)
 end
 
 def fetch_datablock_tables(channel, project_id)
-  tables = channel.dig("metadata", "tables")
-  tables_records = channel.dig("storage", "tables")
-
   datablock_tables = []
 
+  tables = channel.dig("metadata", "tables") || {}
   tables.each do |table_name, table_data|
     columns = table_data["columns"].values.map {|col| col["columnName"]}
-    json_records = tables_records.dig(table_name, "records")
-    records = json_records ? json_records.compact.map {|record| JSON.parse(record)} : []
+    json_records = channel.dig("storage", "tables", table_name, "records") || []
+    records = json_records.compact.map {|record| JSON.parse(record)}
 
     datablock_table = {
       project_id: project_id,
@@ -47,7 +45,7 @@ def fetch_datablock_tables(channel, project_id)
 end
 
 def fetch_datablock_kvps(channel, project_id)
-  kvps = channel.dig("storage", "keys")
+  kvps = channel.dig("storage", "keys") || []
   kvps.map do |key, value|
     {
       project_id: project_id,
