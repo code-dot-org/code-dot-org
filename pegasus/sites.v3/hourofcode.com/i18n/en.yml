@@ -1811,7 +1811,7 @@
 
   lms_page:
     heading: "Integrate Code.org with your LMS platform"
-    top_desc: "Connect existing LMS classrooms in your school to Code.org with one-click roster syncing, single sign-on (SSO), and integrated access curriculum."
+    top_desc: "Connect existing LMS classrooms in your school to Code.org with one-click roster syncing, single sign-on (SSO), and integrated curriculum access."
     top_module:
       heading: "Code.org supports major learning management systems"
       desc: "Code.org has seamless, secure, one-click integrations for most major LMS & SSO providers."
