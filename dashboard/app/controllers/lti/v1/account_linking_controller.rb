@@ -18,8 +18,8 @@ module Lti
         # clear the session, so we need to store cache key first, sign them out,
         # then set it again in their now empty session.
         if current_user
-          partial_registration_cache_key = PartialRegistration.cache_key(current_user)
-          sign_out
+          partial_registration_cache_key = session[PartialRegistration::SESSION_KEY]
+          sign_out current_user
           session[PartialRegistration::SESSION_KEY] = partial_registration_cache_key
         end
 
