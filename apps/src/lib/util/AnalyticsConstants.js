@@ -44,6 +44,10 @@ const EVENTS = {
   CAP_PARENT_EMAIL_UPDATED: 'CAP Parent Email Updated',
   CAP_PARENT_EMAIL_RESEND: 'CAP Parent Email Resend',
   CAP_AGE_GATED_MODAL_SHOWN: 'CAP Teacher Students Warning Modal Shown',
+  CAP_SETTINGS_SHOWN: 'CAP Settings Shown',
+  CAP_SETTINGS_EMAIL_SUBMITTED: 'CAP Settings Email Submitted',
+  CAP_SETTINGS_EMAIL_UPDATED: 'CAP Settings Email Updated',
+  CAP_SETTINGS_EMAIL_RESEND: 'CAP Settings Email Resend',
   CAP_STUDENT_WARNING_LINK_CLICKED:
     'CAP Teacher Students Warning Modal Documentation Clicked',
 
