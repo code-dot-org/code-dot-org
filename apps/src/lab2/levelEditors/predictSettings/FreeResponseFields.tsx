@@ -58,7 +58,7 @@ const FreeResponseFields: React.FunctionComponent<FreeResponseFieldsProps> = ({
           }
           name="free_response_height"
           min={0}
-          step={50}
+          step={1}
         />
       </label>
     </div>
