@@ -54,7 +54,7 @@ const checkTabForErrors = (
   }
 };
 
-const renderButtonContent = (
+const renderTabButtonContent = (
   isIconOnly: boolean,
   icon?: FontAwesomeV6IconProps,
   text?: string,
@@ -90,7 +90,7 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
   const handleClick = useCallback(() => onClick(value), [onClick, value]);
   checkTabForErrors(isIconOnly, icon, text);
 
-  const buttonContent = renderButtonContent(
+  const buttonContent = renderTabButtonContent(
     isIconOnly,
     icon,
     text,
