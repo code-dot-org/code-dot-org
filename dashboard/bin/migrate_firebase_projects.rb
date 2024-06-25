@@ -102,21 +102,96 @@ def fail_filename(log_filename_prefix)
   "#{log_filename_prefix}.fail"
 end
 
-def stream_results_to_logs(log_filename_prefix, pool, results)
+class MetricsTracker
+  def initialize(total_count = 0, failed_count = 0, succeeded_count = 0)
+    @start_time = Time.now
+    @last_time = @start_time
+
+    @succeeded_count = 0
+    @failed_count = 0
+
+    @total_count = total_count
+    @total_failed_count = failed_count
+    @total_succeeded_count = succeeded_count
+
+    @logging_interval_s = 5
+
+    if failed_count || succeeded_count
+      puts "Resuming from previous run: #{win_lose_string}"
+    end
+  end
+
+  def failed
+    @failed_count += 1
+    print "❌"
+  end
+
+  def succeeded
+    @succeeded_count += 1
+    print "🟢"
+  end
+
+  def percent_complete
+    total_processed = @total_succeeded_count + @total_failed_count
+    percent = (total_processed.to_f / @total_count) * 100
+    format("%.2f", percent) + "%"
+  end
+
+  def win_lose_string
+    "#{@total_succeeded_count} succeeded, #{@total_failed_count} failed, #{percent_complete} complete"
+  end
+
+  def print_metrics
+    now = Time.now
+    elapsed = now - @start_time
+    # if its been more than N seconds, we print metrics...
+    if elapsed > @logging_interval_s
+      processed = @succeeded_count + @failed_count
+      processing_rate = processed / elapsed
+
+      @total_succeeded_count += @succeeded_count
+      @total_failed_count += @failed_count
+      total_processed = @total_succeeded_count + @total_failed_count
+
+      seconds_remaining = (@total_count - total_processed) / processing_rate
+      days_remaining = format('%.2f', seconds_remaining / 86400)
+
+      puts
+      puts "migrated #{total_processed} of #{@total_count}, #{format('%.1f', processing_rate)} channels/s, ~#{days_remaining} days remaining, #{win_lose_string}"
+      puts
+
+      # Reset metrics for next sampling period
+      @succeeded_count = 0
+      @failed_count = 0
+      @start_time = now
+    end
+  end
+end
+
+def stream_results_to_logs(log_filename_prefix, pool, results, count, failed_count, succeeded_count)
   succeeded_log = File.open(success_filename(log_filename_prefix), 'a+')
+  succeeded_log.sync = true
+
   failed_log = File.open(fail_filename(log_filename_prefix), 'a+')
+  failed_log.sync = true
+
   exception_log = File.open("#{log_filename_prefix}.exceptions", 'a+')
+  exception_log.sync = true
+
+  metrics_tracker = MetricsTracker.new(count, failed_count, succeeded_count)
 
   log_results = -> do
     loop do
       channel_id, success, exception = results.pop(non_block: true)
 
       if success
+        metrics_tracker.succeeded
         succeeded_log.puts(channel_id)
       else
+        metrics_tracker.failed
         failed_log.puts(channel_id)
         exception_log.puts("Exception migrating #{channel_id}")
-        exception_log.puts(exception.message)
+        exception_log.puts("#{exception.class}: #{exception.message}")
         exception_log.puts(exception.backtrace)
         exception_log.puts
       end
@@ -127,6 +202,7 @@ def stream_results_to_logs(log_filename_prefix, pool, results)
 
   until pool.shutdown?
     log_results.call
+    metrics_tracker.print_metrics
     sleep 0.1
   end
   puts "pool shutdown, draining results queue"
@@ -137,7 +213,7 @@ ensure
   exception_log.close
 end
 
-def migrate_all(channel_ids, log_filename_prefix = "firebase-channel-ids.txt")
+def migrate_all(channel_ids, log_filename_prefix: "firebase-channel-ids.txt", count: 0, failed_count: 0, succeeded_count: 0)
   pool = Concurrent::FixedThreadPool.new(NUM_PARALLEL_WORKERS)
 
   results = Queue.new
@@ -145,16 +221,14 @@ def migrate_all(channel_ids, log_filename_prefix = "firebase-channel-ids.txt")
   channel_ids.each do |channel_id|
     pool.post do
       migrate(channel_id)
-      puts "SUCCESS: #{channel_id}"
       results.push [channel_id, true]
     rescue => exception
-      puts "FAILURE: #{channel_id}"
       results.push [channel_id, false, exception]
     end
   end
 
   pool.shutdown
-  stream_results_to_logs(log_filename_prefix, pool, results)
+  stream_results_to_logs(log_filename_prefix, pool, results, count, failed_count, succeeded_count)
   pool.wait_for_termination
 ensure
   # This is particularly useful because ctrl-c from within irb
@@ -182,11 +256,15 @@ def migrate_from_file(filename)
   puts "Num Succeeded channel_ids: #{succeeded_channel_ids.length}"
   puts
 
+  count = channel_ids.length
+  failed_count = failed_channel_ids.length
+  succeeded_count = succeeded_channel_ids.length
+
   channel_ids -= failed_channel_ids
   channel_ids -= succeeded_channel_ids
 
   puts "Num channel_ids left to process: #{channel_ids.length}"
-  migrate_all(channel_ids)
+  migrate_all(channel_ids, log_filename_prefix: filename, count: count, failed_count: failed_count, succeeded_count: succeeded_count)
 end
 
 if $PROGRAM_NAME == __FILE__
