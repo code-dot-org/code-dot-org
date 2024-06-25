@@ -384,6 +384,8 @@ export function sendPredictLevelReport(appType: string): ProgressThunkAction {
   };
 }
 
+// Helpers
+
 function sendReportHelper(
   appType: string,
   result: number,
