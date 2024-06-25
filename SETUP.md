@@ -279,8 +279,8 @@ It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 
     1. `wsl --set-default-version 2`
         1. You may need to [update the WSL 2 Linux kernel](https://docs.microsoft.com/en-us/windows/wsl/wsl2-kernel)
 1. Make sure virtualization is turned on your BIOS settings.
-1. Install [Ubuntu 20.04](https://www.microsoft.com/store/productId/9NBLGGH4MSV6) or [Ubuntu 22.04.3 LTS](https://apps.microsoft.com/detail/9PN20MSR04DW) 
-    * If you want to follow the Ubuntu setup exactly, Ubuntu 18.04 is available from the [Microsoft docs](https://docs.microsoft.com/en-us/windows/wsl/install-manual).
+1. Via the Microsoft Store, install [Ubuntu 20.04](https://www.microsoft.com/store/productId/9NBLGGH4MSV6) or [Ubuntu 22.04.3 LTS](https://apps.microsoft.com/detail/9PN20MSR04DW) 
+    * If instead you want to exactly follow the Ubuntu setup instructions in the [Alternative note](#alternative-use-an-ubuntu-vm), or if the Microsoft Store app is not available for some reason, you can download and manually install Linux distributions linked to from the [Microsoft docs](https://docs.microsoft.com/en-us/windows/wsl/install-manual).
 1. From the command line, run `wsl`, or from the Start menu, find and launch 'Ubuntu'. When this runs for the first time, WSL will complete installation in the resulting terminal window.
 1. Optionally configure your **zsh** experience. [instructions](https://itsfoss.com/zsh-ubuntu/)
 1. Make it so that you can run apps tests locally by setting up the `CHROME_BIN` env var. You have a few options here:
