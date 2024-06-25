@@ -15,8 +15,8 @@ const MultipleChoiceFields: React.FunctionComponent<
   const handleToggleMultipleChoiceAnswer = (
     e: React.ChangeEvent<HTMLInputElement>
   ) => {
-    const newCorrectAnswers = predictSettings.multiple_choice_answers
-      ? [...predictSettings.multiple_choice_answers]
+    const newCorrectAnswers = predictSettings.multipleChoiceAnswers
+      ? [...predictSettings.multipleChoiceAnswers]
       : [];
     if (e.target.checked && !newCorrectAnswers.includes(e.target.value)) {
       newCorrectAnswers.push(e.target.value);
@@ -28,36 +28,51 @@ const MultipleChoiceFields: React.FunctionComponent<
     }
     setPredictSettings({
       ...predictSettings,
-      multiple_choice_answers: newCorrectAnswers,
+      multipleChoiceAnswers: newCorrectAnswers,
     });
   };
 
-  return predictSettings.multiple_choice_options ? (
+  const handleEditMultipleChoiceOption = (
+    e: React.ChangeEvent<HTMLInputElement>,
+    index: number
+  ) => {
+    const newOptions = [...predictSettings.multipleChoiceOptions!];
+    const newAnswers = predictSettings.multipleChoiceAnswers
+      ? [...predictSettings.multipleChoiceAnswers]
+      : [];
+    const oldValue = predictSettings.multipleChoiceOptions![index];
+    const newValue = e.target.value;
+    if (newAnswers.includes(oldValue)) {
+      newAnswers.splice(newAnswers.indexOf(oldValue), 1, newValue);
+    }
+    newOptions[index] = newValue;
+    setPredictSettings({
+      ...predictSettings,
+      multipleChoiceOptions: newOptions,
+      multipleChoiceAnswers: newAnswers,
+    });
+  };
+
+  if (!predictSettings.multipleChoiceOptions) {
+    return null;
+  }
+
+  return (
     <div>
       <label className={moduleStyles.fieldArea}>
         <div className={moduleStyles.label}>Multiple Choice Options</div>
-        {predictSettings.multiple_choice_options.map((option, index) => (
+        {predictSettings.multipleChoiceOptions.map((option, index) => (
           <div key={index} className={moduleStyles.multipleChoiceOption}>
             <input
               type="text"
               value={option}
-              onChange={e => {
-                const newOptions = [
-                  ...predictSettings.multiple_choice_options!,
-                ];
-                newOptions[index] = e.target.value;
-                setPredictSettings({
-                  ...predictSettings,
-                  multiple_choice_options: newOptions,
-                });
-              }}
+              onChange={e => handleEditMultipleChoiceOption(e, index)}
               name={`multiple_choice_option_${index}`}
             />
             <Checkbox
               label="Correct answer"
               checked={
-                predictSettings.multiple_choice_answers?.includes(option) ||
-                false
+                predictSettings.multipleChoiceAnswers?.includes(option) || false
               }
               onChange={handleToggleMultipleChoiceAnswer}
               name={`mark_correct_answer_${index}`}
@@ -67,12 +82,12 @@ const MultipleChoiceFields: React.FunctionComponent<
               <Button
                 onClick={() => {
                   const newOptions = [
-                    ...predictSettings.multiple_choice_options!,
+                    ...predictSettings.multipleChoiceOptions!,
                   ];
                   newOptions.splice(index, 1);
                   setPredictSettings({
                     ...predictSettings,
-                    multiple_choice_options: newOptions,
+                    multipleChoiceOptions: newOptions,
                   });
                 }}
                 ariaLabel={'Delete option'}
@@ -88,8 +103,8 @@ const MultipleChoiceFields: React.FunctionComponent<
           onClick={() =>
             setPredictSettings({
               ...predictSettings,
-              multiple_choice_options: [
-                ...predictSettings.multiple_choice_options!,
+              multipleChoiceOptions: [
+                ...predictSettings.multipleChoiceOptions!,
                 '',
               ],
             })
@@ -102,7 +117,7 @@ const MultipleChoiceFields: React.FunctionComponent<
         />
       </label>
     </div>
-  ) : null;
+  );
 };
 
 export default MultipleChoiceFields;

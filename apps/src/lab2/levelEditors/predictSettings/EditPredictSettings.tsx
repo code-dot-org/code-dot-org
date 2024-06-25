@@ -14,16 +14,18 @@ interface EditPredictSettingsProps {
 const EditPredictSettings: React.FunctionComponent<
   EditPredictSettingsProps
 > = ({initialSettings}) => {
-  const [predictSettings, setPredictSettings] = useState<LevelPredictSettings>(
-    initialSettings || {is_predict_level: false}
-  );
+  const defaultSettings = initialSettings
+    ? {multipleChoiceOptions: [''], ...initialSettings}
+    : {isPredictLevel: false, multipleChoiceOptions: ['']};
+  const [predictSettings, setPredictSettings] =
+    useState<LevelPredictSettings>(defaultSettings);
 
   const handleIsPredictToggle = () => {
     setPredictSettings({
       ...predictSettings,
-      is_predict_level: !predictSettings.is_predict_level,
-      question_type:
-        predictSettings.question_type || PredictQuestionType.FreeResponse,
+      isPredictLevel: !predictSettings.isPredictLevel,
+      questionType:
+        predictSettings.questionType || PredictQuestionType.FreeResponse,
     });
   };
 
@@ -32,17 +34,11 @@ const EditPredictSettings: React.FunctionComponent<
   ) => {
     setPredictSettings({
       ...predictSettings,
-      question_type: e.target.value as PredictQuestionType,
+      questionType: e.target.value as PredictQuestionType,
     });
   };
 
   const renderMultipleChoiceOptions = () => {
-    if (!predictSettings.multiple_choice_options) {
-      setPredictSettings({
-        ...predictSettings,
-        multiple_choice_options: [''],
-      });
-    }
     return (
       <MultipleChoiceFields
         predictSettings={predictSettings}
@@ -67,11 +63,11 @@ const EditPredictSettings: React.FunctionComponent<
       />
       <Checkbox
         label="Set this level as a predict level"
-        checked={predictSettings.is_predict_level}
+        checked={predictSettings.isPredictLevel}
         onChange={handleIsPredictToggle}
-        name="is_predict_level"
+        name="isPredictLevel"
       />
-      {predictSettings?.is_predict_level && (
+      {predictSettings?.isPredictLevel && (
         <div>
           <SimpleDropdown
             items={[
@@ -82,7 +78,7 @@ const EditPredictSettings: React.FunctionComponent<
               },
             ]}
             selectedValue={
-              predictSettings.question_type || PredictQuestionType.FreeResponse
+              predictSettings.questionType || PredictQuestionType.FreeResponse
             }
             onChange={handleQuestionTypeChange}
             labelText="Question Type"
@@ -90,8 +86,7 @@ const EditPredictSettings: React.FunctionComponent<
             size="s"
             className={moduleStyles.fieldArea}
           />
-          {predictSettings.question_type ===
-          PredictQuestionType.FreeResponse ? (
+          {predictSettings.questionType === PredictQuestionType.FreeResponse ? (
             <FreeResponseFields
               predictSettings={predictSettings}
               setPredictSettings={setPredictSettings}
@@ -101,11 +96,11 @@ const EditPredictSettings: React.FunctionComponent<
           )}
           <Checkbox
             label="Allow multiple tries"
-            checked={predictSettings.allow_multiple_attempts || false}
+            checked={predictSettings.allowMultipleAttempts || false}
             onChange={e =>
               setPredictSettings({
                 ...predictSettings,
-                allow_multiple_attempts: e.target.checked,
+                allowMultipleAttempts: e.target.checked,
               })
             }
             name="allow_multiple_tries"

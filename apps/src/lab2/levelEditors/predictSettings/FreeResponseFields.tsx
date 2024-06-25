@@ -16,11 +16,11 @@ const FreeResponseFields: React.FunctionComponent<FreeResponseFieldsProps> = ({
     <div>
       <TextField
         label="Placeholder text to show in the answer text area"
-        value={predictSettings.placeholder_text}
+        value={predictSettings.placeholderText}
         onChange={e =>
           setPredictSettings({
             ...predictSettings,
-            placeholder_text: e.target.value,
+            placeholderText: e.target.value,
           })
         }
         name="placeholder_text"
@@ -49,11 +49,11 @@ const FreeResponseFields: React.FunctionComponent<FreeResponseFieldsProps> = ({
         </div>
         <input
           type="number"
-          value={predictSettings.free_response_height}
+          value={predictSettings.freeResponseHeight}
           onChange={e =>
             setPredictSettings({
               ...predictSettings,
-              free_response_height: parseInt(e.target.value),
+              freeResponseHeight: parseInt(e.target.value),
             })
           }
           name="free_response_height"

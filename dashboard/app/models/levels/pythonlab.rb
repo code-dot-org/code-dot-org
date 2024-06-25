@@ -36,6 +36,7 @@ class Pythonlab < Level
   )
 
   validate :has_correct_multiple_choice_answer?
+  before_save :clean_up_predict_settings
 
   def self.create_from_level_builder(params, level_params)
     create!(
@@ -54,12 +55,28 @@ class Pythonlab < Level
   # Ensure that if this is a multiple choice predict level, there is at least one correct answer
   # specified.
   def has_correct_multiple_choice_answer?
-    if predict_settings && predict_settings[:is_predict_level] && predict_settings[:question_type] == 'multiple_choice'
-      options = predict_settings[:multiple_choice_options]
-      answers = predict_settings[:multiple_choice_answers]
+    if predict_settings && predict_settings[:isPredictLevel] && predict_settings[:questionType] == 'multipleChoice'
+      options = predict_settings[:multipleChoiceOptions]
+      answers = predict_settings[:multipleChoiceAnswers]
       unless options && answers && !options.empty? && !answers.empty?
         errors.add(:predict_settings, 'multiple choice questions must have at least one correct answer')
       end
+    end
+  end
+
+  def clean_up_predict_settings
+    return unless predict_settings
+    if !predict_settings[:isPredictLevel]
+      # If this is not a predict level, remove any predict settings that may have been set.
+      self.predict_settings = {isPredictLevel: false}
+    elsif predict_settings[:questionType] == 'multipleChoice'
+      # Remove any free response settings if this is a multiple choice question.
+      predict_settings.delete(:placeholderText)
+      predict_settings.delete(:freeResponseHeight)
+    else
+      # Remove any multiple choice settings if this is a free response question.
+      predict_settings.delete(:multipleChoiceOptions)
+      predict_settings.delete(:multipleChoiceAnswers)
     end
   end
 end
