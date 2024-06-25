@@ -1,15 +1,17 @@
 import {fireEvent, render, screen, within} from '@testing-library/react';
+import React from 'react';
+import sinon from 'sinon';
+
+import DCDO from '@cdo/apps/dcdo';
+import LtiLinkAccountPage from '@cdo/apps/lib/ui/lti/link/LtiLinkAccountPage';
 import {
   LtiProviderContext,
   LtiProviderContextProps,
 } from '@cdo/apps/lib/ui/lti/link/LtiLinkAccountPage/context';
-import React from 'react';
-import i18n from '@cdo/locale';
-import {expect} from '../../../../../../util/reconfiguredChai';
-import LtiLinkAccountPage from '@cdo/apps/lib/ui/lti/link/LtiLinkAccountPage';
-import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
-import DCDO from '@cdo/apps/dcdo';
+import i18n from '@cdo/locale';
+
+import {expect} from '../../../../../../util/reconfiguredChai';
 
 const DEFAULT_CONTEXT: LtiProviderContextProps = {
   ltiProvider: 'canvas_cloud',
@@ -17,6 +19,8 @@ const DEFAULT_CONTEXT: LtiProviderContextProps = {
   newAccountUrl: '/new-account',
   existingAccountUrl: new URL('https://example.com/existing-account'),
   emailAddress: 'test@code.org',
+  newCtaType: 'new',
+  continueAccountUrl: '/continue',
 };
 
 describe('LTI Link Account Page Tests', () => {
@@ -122,6 +126,22 @@ describe('LTI Link Account Page Tests', () => {
       expect(formValues.get('user[email]')).to.equal(
         DEFAULT_CONTEXT.emailAddress
       );
+    });
+  });
+
+  describe('cancel button', () => {
+    it('should link to the cancel controller', () => {
+      render(
+        <LtiProviderContext.Provider value={DEFAULT_CONTEXT}>
+          <LtiLinkAccountPage />
+        </LtiProviderContext.Provider>
+      );
+
+      const cancelButton = screen.getByText(i18n.cancel());
+
+      fireEvent.click(cancelButton);
+
+      expect(utils.navigateToHref).to.have.been.calledWith(`/users/cancel`);
     });
   });
 });

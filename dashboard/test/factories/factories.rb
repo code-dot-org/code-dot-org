@@ -431,25 +431,29 @@ FactoryBot.define do
         child_account_compliance_state_last_updated {DateTime.now}
       end
 
-      trait :with_pending_parent_permission do
-        child_account_compliance_state {Policies::ChildAccount::ComplianceState::REQUEST_SENT}
-        child_account_compliance_state_last_updated {DateTime.now}
-      end
-
       trait :without_parent_permission do
         child_account_compliance_state {nil}
         child_account_compliance_state_last_updated {DateTime.now}
       end
 
       trait :before_p20_937_exception_date do
-        created_at {Policies::ChildAccount::CPA_CREATED_AT_EXCEPTION_DATE - 1.second}
+        created_at {Cpa::CREATED_AT_EXCEPTION_DATE.ago(1.second)}
       end
 
       trait :p20_937_exception_date do
-        created_at {Policies::ChildAccount::CPA_CREATED_AT_EXCEPTION_DATE}
+        created_at {Cpa::CREATED_AT_EXCEPTION_DATE}
       end
 
-      factory :non_compliant_child, traits: [:U13, :in_colorado, :p20_937_exception_date] do
+      factory :cpa_non_compliant_student, traits: [:U13, :in_colorado, :p20_937_exception_date], aliases: %i[non_compliant_child] do
+        trait :predates_policy do
+          created_at {Policies::ChildAccount.state_policies.dig('CO', :start_date).ago(1.second)}
+        end
+
+        trait :in_grace_period do
+          child_account_compliance_state {Policies::ChildAccount::ComplianceState::GRACE_PERIOD}
+          child_account_compliance_state_last_updated {DateTime.now}
+        end
+
         factory :locked_out_child do
           child_account_compliance_state {Policies::ChildAccount::ComplianceState::LOCKED_OUT}
           child_account_compliance_state_last_updated {DateTime.now}
@@ -1048,6 +1052,8 @@ FactoryBot.define do
       after(:create) do |csc_script|
         csc_script.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSC
         csc_script.save!
+        course_offering = CourseOffering.add_course_offering(csc_script)
+        course_offering.update!(marketing_initiative: 'CSC')
       end
     end
 
@@ -1059,7 +1065,7 @@ FactoryBot.define do
         hoc_script.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.HOC
         hoc_script.save!
         course_offering = CourseOffering.add_course_offering(hoc_script)
-        course_offering.update!(category: 'hoc')
+        course_offering.update!(marketing_initiative: 'HOC')
       end
     end
 

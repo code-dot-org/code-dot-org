@@ -1,11 +1,12 @@
+import HttpClient from '@cdo/apps/util/HttpClient';
+
 import {
-  Role,
-  ChatCompletionMessage,
   AiCustomizations,
   AichatContext,
   AichatModelCustomizations,
+  ChatApiResponse,
+  ChatMessage,
 } from './types';
-import HttpClient from '@cdo/apps/util/HttpClient';
 
 const CHAT_COMPLETION_URL = '/aichat/chat_completion';
 
@@ -15,19 +16,18 @@ const CHAT_COMPLETION_URL = '/aichat/chat_completion';
  * and assistant message if successful.
  */
 export async function postAichatCompletionMessage(
-  newMessage: string,
-  messagesToSend: ChatCompletionMessage[],
+  newMessage: ChatMessage,
+  storedMessages: ChatMessage[],
   aiCustomizations: AiCustomizations,
   aichatContext: AichatContext,
   sessionId?: number
-) {
+): Promise<ChatApiResponse> {
   const aichatModelCustomizations: AichatModelCustomizations = {
     selectedModelId: aiCustomizations.selectedModelId,
     temperature: aiCustomizations.temperature,
     retrievalContexts: aiCustomizations.retrievalContexts,
     systemPrompt: aiCustomizations.systemPrompt,
   };
-  const storedMessages = formatMessagesForAichatCompletion(messagesToSend);
   const payload = {
     newMessage,
     storedMessages,
@@ -46,20 +46,3 @@ export async function postAichatCompletionMessage(
 
   return await response.json();
 }
-
-const formatMessagesForAichatCompletion = (
-  chatMessages: ChatCompletionMessage[]
-): AichatCompletionMessage[] => {
-  return chatMessages.map(message => {
-    return {
-      role: message.role,
-      content: message.chatMessageText,
-      status: message.status,
-    };
-  });
-};
-
-type AichatCompletionMessage = {
-  role: Role;
-  content: string;
-};

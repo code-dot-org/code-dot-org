@@ -1,6 +1,8 @@
-import {itImplementsTheMakerBoardInterface} from '../MakerBoardInterfaceTestUtil';
 import VirtualCPBoard from '@cdo/apps/lib/kits/maker/boards/VirtualCPBoard';
+
 import {expect} from '../../../../../../util/reconfiguredChai';
+import {itImplementsTheMakerBoardInterface} from '../MakerBoardInterfaceTestUtil';
+
 import {itMakesCircuitPlaygroundComponentsAvailable} from './CircuitPlaygroundComponentTestUtil';
 
 describe('VirtualCPBoard', () => {

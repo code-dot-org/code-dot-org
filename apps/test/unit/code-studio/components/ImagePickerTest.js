@@ -1,10 +1,12 @@
-import {assert} from '../../../util/reconfiguredChai';
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import ImagePicker from '@cdo/apps/code-studio/components/ImagePicker';
-import IconLibrary from '@cdo/apps/code-studio/components/IconLibrary';
+import React from 'react';
+
 import AssetManager from '@cdo/apps/code-studio/components/AssetManager';
+import IconLibrary from '@cdo/apps/code-studio/components/IconLibrary';
+import ImagePicker from '@cdo/apps/code-studio/components/ImagePicker';
 import ImageURLInput from '@cdo/apps/code-studio/components/ImageURLInput';
+
+import {assert} from '../../../util/reconfiguredChai';
 
 describe('ImagePicker', () => {
   const defaultProps = {

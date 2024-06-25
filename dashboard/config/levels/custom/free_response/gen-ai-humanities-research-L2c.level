@@ -1,0 +1,24 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-06-21T19:01:43.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Miguel is writing and directing a musical about a historical figure of his choice. Help him pick a historical figure, and find a playlist of modern music that person would listen to.\r\n\r\n**Answer from a search engine:**",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "encrypted_solution": "GBonkuMtcz6IkEbddPIBOEgMTMfPDooCt/4ejuuD3y5Z5K0pnBDQnB6QdFET\nCIIDZTeVlwj7wIFIYgITqz2iXkPM6vxYrPj06MsFHBWgWBrJydTfT/7QJ11/\n82whM7rKMhkn/McxFX5UPeJW18gQA96bAk22wZ1gLlhvR/XEuRVm8W4IFe+T\n1FP2E8qI/GXSdaQsWTbBBk72A0JsyeoGXeCGbnGTozqDa9Px6ZYkeHs6/gNC\nAz7VRSNWzpqP6RKXXzFkI+W81dUlrjeu7Mwmb/HN4ao0WI7ucWF2EkUwwcJb\nurbpjt95ESceelEAd/YMF9ARXy/bfAXZ+k56VYLZgCaA2jD7Vq7g9NJ1goK1\nkhcJzpjlTchq74xcP0jdYwi7uHN1GyOsdA58L+lbTKclqOcExyWAMZL4Av34\nfm3gnCSIFG1/f7ZfGQcU6Yo1+N+KRQ3EoPHz3uWXivoYE66xEGrHlg4fvsmr\nhyIF3qI5uI3s3miTvoDV31Qu9VhTmkYW\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-06-21T19:01:43.147+00:00\",\"changed\":[\"cloned from \\\"gen-ai-humanities-research-L2b\\\"\"],\"cloned_from\":\"gen-ai-humanities-research-L2b\"},{\"changed_at\":\"2024-06-21 19:02:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-06-21 22:02:50 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-06-21 22:04:38 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

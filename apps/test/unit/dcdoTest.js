@@ -1,4 +1,5 @@
 import {DCDO} from '@cdo/apps/dcdo';
+
 import {expect} from '../util/reconfiguredChai';
 
 describe('DCDO.constructor', () => {

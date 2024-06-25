@@ -1,9 +1,11 @@
-import {expect, assert} from '../../../../util/reconfiguredChai';
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import React from 'react';
+import ReactTooltip from 'react-tooltip';
+
 import UnitCalendarLessonChunk from '@cdo/apps/code-studio/components/progress/UnitCalendarLessonChunk';
 import color from '@cdo/apps/util/color';
-import ReactTooltip from 'react-tooltip';
+
+import {expect, assert} from '../../../../util/reconfiguredChai';
 
 const sampleLessonChunk = {
   id: 1,

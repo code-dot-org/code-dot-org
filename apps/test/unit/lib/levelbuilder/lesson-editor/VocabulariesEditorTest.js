@@ -1,8 +1,10 @@
-import React from 'react';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import React from 'react';
 import sinon from 'sinon';
-import {expect} from '../../../../util/reconfiguredChai';
+
 import {UnconnectedVocabulariesEditor as VocabulariesEditor} from '@cdo/apps/lib/levelbuilder/lesson-editor/VocabulariesEditor';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('VocabulariesEditor', () => {
   let defaultProps, addVocabulary, updateVocabulary, removeVocabulary;

@@ -1,8 +1,10 @@
-import React from 'react';
 import {isolateComponent} from 'isolate-react';
+import React from 'react';
 import sinon from 'sinon';
-import {expect} from '../../../../util/reconfiguredChai';
+
 import ReferenceGuideEditAll from '@cdo/apps/lib/levelbuilder/reference-guide-editor/ReferenceGuideEditAll';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 const makeReferenceGuide = (key, parent = null, pos = 0) => ({
   display_name: key,

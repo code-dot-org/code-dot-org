@@ -13,6 +13,7 @@ import procedureCallerOnChangeMixin from './mixins/procedureCallerOnChangeMixin'
 import procedureCallerMutator from './mutators/procedureCallerMutator';
 import {procedureDefMutator} from './mutators/procedureDefMutator';
 
+const PARAMETERS_LABEL = 'PARAMETERS_LABEL';
 /**
  * A dictionary of our custom procedure block definitions, used across labs.
  * Replaces blocks that are part of core Blockly.
@@ -97,6 +98,20 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
     ],
     mutator: 'procedure_caller_mutator',
   },
+  {
+    type: 'parameters_get',
+    message0: '%1',
+    args0: [
+      {
+        type: 'field_parameter',
+        name: 'VAR',
+        variable: '%{BKY_VARIABLES_DEFAULT_NAME}',
+      },
+    ],
+    output: null,
+    style: 'sprite_blocks',
+    extensions: ['contextMenu_variableSetterGetter'],
+  },
 ]);
 
 // Respond to the click of a call block's edit button
@@ -143,13 +158,18 @@ GoogleBlockly.Extensions.register(
 GoogleBlockly.Extensions.register(
   'procedure_def_mini_toolbox',
   function (this: ProcedureBlock) {
-    // TODO: Add comment block here after https://codedotorg.atlassian.net/browse/CT-121
     const miniToolboxBlocks = [];
-    if (this.type === BLOCK_TYPES.behaviorDefinition) {
-      miniToolboxBlocks.push('sprite_parameter_get');
+    switch (this.type) {
+      case BLOCK_TYPES.behaviorDefinition:
+        miniToolboxBlocks.push(BLOCK_TYPES.spriteParameterGet);
+        break;
+      case BLOCK_TYPES.procedureDefinition:
+        if (Blockly.enableParamEditing) {
+          miniToolboxBlocks.push(BLOCK_TYPES.parametersGet);
+        }
+        break;
     }
 
-    // TODO: Remove this comment after https://codedotorg.atlassian.net/browse/CT-121
     if (!miniToolboxBlocks.length) {
       return;
     }
@@ -166,6 +186,14 @@ GoogleBlockly.Extensions.register(
     );
     // Open mini-toolbox by default
     flyoutToggleButton.setIcon(false);
+    // If we added a flyout, place a 'Parameters' label before it.
+    const flyoutInput = this.getInput('flyout_input');
+    if (flyoutInput) {
+      flyoutInput.insertFieldAt(
+        0,
+        new Blockly.FieldLabel(commonI18n.parameters(), PARAMETERS_LABEL)
+      );
+    }
   }
 );
 
@@ -227,6 +255,12 @@ GoogleBlockly.Extensions.register(
   'procedure_call_do_update',
   function (this: ProcedureBlock) {
     const mixin = {
+      /**
+       * Adds or removes the parameter label to match the state of the data model.
+       * No-op to avoid adding "with:" label to the block.
+       */
+      addParametersLabel__: function () {},
+
       /**
        * Updates the shape of this block to reflect the state of the data model.
        */
@@ -319,29 +353,29 @@ export function flyoutCategory(
     Blockly.getHiddenDefinitionWorkspace(),
   ];
 
-  const allFunctions: {name: string; id: string}[] = [];
+  const allFunctions: GoogleBlockly.serialization.procedures.State[] = [];
   workspaces.forEach(workspace => {
-    const procedureBlocks = workspace
-      .getTopBlocks()
-      .filter(topBlock => topBlock.type === BLOCK_TYPES.procedureDefinition);
+    const procedureBlocks = (
+      workspace.getTopBlocks() as ProcedureBlock[]
+    ).filter(block => block.type === BLOCK_TYPES.procedureDefinition);
+
     procedureBlocks.forEach(block => {
-      allFunctions.push({
-        name: block.getFieldValue('NAME'),
-        id: block.id,
-      });
+      allFunctions.push(
+        Blockly.serialization.procedures.saveProcedure(
+          block.getProcedureModel()
+        )
+      );
     });
   });
 
-  allFunctions.sort(nameComparator).forEach(({name, id}) => {
+  allFunctions.sort(nameComparator).forEach(({name, id, parameters}) => {
     blockList.push({
       kind: 'block',
       type: BLOCK_TYPES.procedureCall,
       extraState: {
         name: name,
         id: id,
-      },
-      fields: {
-        NAME: name,
+        params: parameters?.map(param => param.name),
       },
     });
   });

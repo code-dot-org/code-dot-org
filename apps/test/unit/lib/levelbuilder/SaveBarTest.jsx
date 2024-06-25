@@ -1,9 +1,11 @@
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
 import sinon from 'sinon';
+
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import * as utils from '@cdo/apps/utils';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('SaveBar', () => {
   let handleSave;

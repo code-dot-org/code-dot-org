@@ -1,9 +1,12 @@
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../../util/reconfiguredChai';
-import {UnconnectedActivitySectionCardButtons as ActivitySectionCardButtons} from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivitySectionCardButtons';
-import {sampleActivities} from './activitiesTestData';
+import React from 'react';
 import sinon from 'sinon';
+
+import {UnconnectedActivitySectionCardButtons as ActivitySectionCardButtons} from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivitySectionCardButtons';
+
+import {expect} from '../../../../util/reconfiguredChai';
+
+import {sampleActivities} from './activitiesTestData';
 
 describe('ActivitySectionCardButtons', () => {
   let defaultProps,

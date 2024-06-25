@@ -30,9 +30,15 @@ function BackgroundMusicMuteButton({
 
   const [isBackgroundMusicMuted, setIsBackgroundMusicMuted] =
     useState(initialMuteState);
+  const [isSavingMutePreference, setIsSavingMutePreference] = useState(false);
 
   const updateMuteMusic = updatedMuteValue => {
-    signedIn ? new UserPreferences().setMuteMusic(updatedMuteValue) : {};
+    if (signedIn) {
+      setIsSavingMutePreference(true);
+      new UserPreferences()
+        .setMuteMusic(updatedMuteValue)
+        .always(() => setIsSavingMutePreference(false));
+    }
     setMuteMusic(updatedMuteValue);
   };
 
@@ -84,7 +90,8 @@ function BackgroundMusicMuteButton({
       }
       isRtl={isRtl}
       isMinecraft={isMinecraft}
-      onClick={handleMuteMusicTabClick}
+      isDisabled={isSavingMutePreference}
+      onClick={isSavingMutePreference ? () => {} : handleMuteMusicTabClick}
       style={{
         ...styles.button,
         ...(!isMinecraft

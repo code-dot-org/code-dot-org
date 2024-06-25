@@ -1,7 +1,6 @@
 {
   "key": "basketball",
   "display_name": "Choose Your Team and Make a Basketball Game",
-  "category": "hoc",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": null,
