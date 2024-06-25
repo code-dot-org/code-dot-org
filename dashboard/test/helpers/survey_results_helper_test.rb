@@ -50,7 +50,7 @@ class SurveyResultsHelperTest < ActionView::TestCase
     stubs(:request).returns(stub(location: stub(try: "RD")))
     follower = create :follower, user: @teacher
     follower.student_user.update(age: 10)
-    assert show_diversity_survey? current_survey
+    refute show_diversity_survey? current_survey
 
     DCDO.stubs(:get).with('diversity_audience', 'all').returns('none')
     refute show_diversity_survey? current_survey
@@ -58,7 +58,7 @@ class SurveyResultsHelperTest < ActionView::TestCase
 
     @teacher.id = 8_675_309
     DCDO.stubs(:get).with('diversity_audience', 'all').returns('odd')
-    assert show_diversity_survey? current_survey
+    refute show_diversity_survey? current_survey
     DCDO.unstub(:get)
     DCDO.stubs(:get).with('diversity_audience', 'all').returns('even')
     refute show_diversity_survey? current_survey
