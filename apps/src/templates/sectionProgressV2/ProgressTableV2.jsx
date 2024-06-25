@@ -74,6 +74,8 @@ function ProgressTableV2({
         if (prevCallbacks[id]) {
           return prevCallbacks;
         }
+        Object.values(prevCallbacks).forEach(cb => cb());
+        callback();
         return {...prevCallbacks, [id]: callback};
       });
     },
@@ -82,7 +84,12 @@ function ProgressTableV2({
 
   const removeScrollCallback = React.useCallback(
     id => {
-      setScrollCallbacks(prevCallbacks => _.omit(prevCallbacks, id));
+      setScrollCallbacks(prevCallbacks => {
+        const remed = _.omit(prevCallbacks, [id]);
+        console.log('lfm', prevCallbacks, [id], remed);
+        Object.values(remed).forEach(cb => cb());
+        return remed;
+      });
     },
     [setScrollCallbacks]
   );

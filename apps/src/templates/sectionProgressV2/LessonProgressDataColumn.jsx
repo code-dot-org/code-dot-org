@@ -23,6 +23,7 @@ function LessonProgressDataColumn({
   expandedMetadataStudentIds,
   tableRef,
   addScrollCallback,
+  removeScrollCallback,
 }) {
   const columnRef = React.useRef();
 
@@ -62,6 +63,7 @@ function LessonProgressDataColumn({
         id={lesson.id}
         tableRef={tableRef}
         addScrollCallback={addScrollCallback}
+        removeScrollCallback={removeScrollCallback}
       >
         <div className={styles.lessonDataColumn} ref={columnRef}>
           {sortedStudents.map(student => (
@@ -98,6 +100,7 @@ LessonProgressDataColumn.propTypes = {
   expandedMetadataStudentIds: PropTypes.array,
   tableRef: PropTypes.object,
   addScrollCallback: PropTypes.func,
+  removeScrollCallback: PropTypes.func,
 };
 
 export default connect(state => ({

@@ -66,7 +66,7 @@ export default function FloatingHeader({
   React.useEffect(() => {
     window.addEventListener('scroll', handleScrollAndResize);
     window.addEventListener('resize', handleScrollAndResize);
-    addScrollCallback(id, handleScrollAndResize);
+    addScrollCallback(id, () => handleScrollAndResize());
     // tableRef.addEventListener('scroll', handleScrollAndResize);
     // Call it on initial render to set the initial state
     handleScrollAndResize();
