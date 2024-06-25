@@ -102,6 +102,7 @@ def fail_filename(log_filename_prefix)
   "#{log_filename_prefix}.fail"
 end
 
+METRICS_LOGGING_INTERVAL_S = 60
 class MetricsTracker
   def initialize(total_count = 0, failed_count = 0, succeeded_count = 0)
     @start_time = Time.now
@@ -114,6 +115,8 @@ class MetricsTracker
     @total_failed_count = failed_count
     @total_succeeded_count = succeeded_count
 
+    # First logging interval is shorter than METRICS_LOGGING_INTERVAL_S
+    # to give immediate feedback on rate
     @logging_interval_s = 5
 
     if failed_count || succeeded_count
@@ -143,9 +146,10 @@ class MetricsTracker
 
   def print_metrics
     now = Time.now
-    elapsed = now - @start_time
+    elapsed = now - @last_time
     # if its been more than N seconds, we print metrics...
     if elapsed > @logging_interval_s
+      @logging_interval_s = METRICS_LOGGING_INTERVAL_S
       processed = @succeeded_count + @failed_count
       processing_rate = processed / elapsed
 
@@ -163,7 +167,7 @@ class MetricsTracker
       # Reset metrics for next sampling period
       @succeeded_count = 0
       @failed_count = 0
-      @start_time = now
+      @last_time = now
     end
   end
 end
