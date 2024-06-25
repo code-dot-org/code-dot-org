@@ -63,6 +63,7 @@ function ProgressTableV2({
   }, [filteredStudents, isSortedByFamilyName, isSkeleton]);
 
   const tableRef = React.useRef();
+  const outsideTableRef = React.useRef();
 
   const removeExpandedLesson = React.useCallback(
     lessonId => {
@@ -121,6 +122,7 @@ function ProgressTableV2({
             sortedStudents={sortedStudents}
             addExpandedLesson={addExpandedLesson}
             key={index}
+            tableRef={outsideTableRef}
           />
         );
       }
@@ -151,19 +153,28 @@ function ProgressTableV2({
     }
 
     return (
-      <FloatingScrollbar childRef={tableRef}>
-        <div
-          className={classNames(
-            styles.table,
-            isSkeleton && styles.tableLoading
-          )}
-          ref={tableRef}
-        >
-          <div className={styles.tableInterior}>
-            {unitData.lessons.map(getRenderedColumn)}
+      <div
+        ref={outsideTableRef}
+        style={{
+          overflow: 'hidden',
+          width: '100%',
+          height: '100%',
+        }}
+      >
+        <FloatingScrollbar childRef={tableRef}>
+          <div
+            className={classNames(
+              styles.table,
+              isSkeleton && styles.tableLoading
+            )}
+            ref={tableRef}
+          >
+            <div className={styles.tableInterior}>
+              {unitData.lessons.map(getRenderedColumn)}
+            </div>
           </div>
-        </div>
-      </FloatingScrollbar>
+        </FloatingScrollbar>
+      </div>
     );
   }, [isSkeleton, getRenderedColumn, unitData, tableRef]);
 

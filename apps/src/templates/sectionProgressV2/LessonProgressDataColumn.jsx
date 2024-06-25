@@ -21,6 +21,7 @@ function LessonProgressDataColumn({
   sortedStudents,
   addExpandedLesson,
   expandedMetadataStudentIds,
+  tableRef,
 }) {
   const columnRef = React.useRef();
 
@@ -55,7 +56,7 @@ function LessonProgressDataColumn({
 
   return (
     <div className={styles.lessonColumn}>
-      <FloatingHeader header={header} childRef={columnRef}>
+      <FloatingHeader header={header} id={lesson.id} tableRef={tableRef}>
         <div className={styles.lessonDataColumn} ref={columnRef}>
           {sortedStudents.map(student => (
             <LessonDataCell
@@ -89,6 +90,7 @@ LessonProgressDataColumn.propTypes = {
   lesson: PropTypes.object.isRequired,
   addExpandedLesson: PropTypes.func.isRequired,
   expandedMetadataStudentIds: PropTypes.array,
+  tableRef: PropTypes.object,
 };
 
 export default connect(state => ({

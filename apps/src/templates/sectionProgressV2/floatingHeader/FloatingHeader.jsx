@@ -9,17 +9,16 @@ import styles from './floating-header.module.scss';
  *
  * {child} must be a single element and not a list of elements.
  *  {child} should have all content visible and not itself scrollable.
- * childRef - a ref to {child} element.
- *   Set by calling `ref={childRef}` on the {child} element
  * header - the element to float at the top of the screen
  * {header} should have all content visible and not itself scrollable.
  */
 
-export default function FloatingHeader({header, children, childRef}) {
+export default function FloatingHeader({header, children, tableRef, id}) {
   const headerRef = React.useRef();
   const childContainerRef = React.useRef();
 
   const [floatHeader, setFloatHeader] = React.useState(false);
+  const [floatXPosition, setFloatXPosition] = React.useState(0);
 
   const handleScrollAndResize = React.useCallback(() => {
     const maxVisibleY =
@@ -36,19 +35,24 @@ export default function FloatingHeader({header, children, childRef}) {
 
     if (shouldFloatHeader !== floatHeader) {
       setFloatHeader(shouldFloatHeader);
-      console.log({
-        label: 'lfm',
-        shouldFloatHeader: shouldFloatHeader,
-        floatHeader: floatHeader,
-        isTableOffScreen: isTableOffScreen,
-        isTableTopVisible: isTableTopVisible,
-      });
+      if (id === 5186) {
+        console.log({
+          label: 'lfm',
+          id: id,
+          columnLeft1: childContainerRef?.current.getBoundingClientRect().left,
+          tableLeft: tableRef?.current.getBoundingClientRect().left,
+          // headerLeft: headerRef?.current.getBoundingClientRect().left,
+        });
+      }
     }
-  }, [childContainerRef, floatHeader, setFloatHeader]);
+
+    setFloatXPosition(childContainerRef?.current.getBoundingClientRect().left);
+  }, [childContainerRef, floatHeader, setFloatHeader, id, tableRef]);
 
   React.useEffect(() => {
     window.addEventListener('scroll', handleScrollAndResize);
     window.addEventListener('resize', handleScrollAndResize);
+    // tableRef.addEventListener('scroll', handleScrollAndResize);
     // Call it on initial render to set the initial state
     handleScrollAndResize();
 
@@ -57,13 +61,22 @@ export default function FloatingHeader({header, children, childRef}) {
       window.removeEventListener('scroll', handleScrollAndResize);
       window.removeEventListener('resize', handleScrollAndResize);
     };
-  }, [handleScrollAndResize]);
+  }, [handleScrollAndResize, tableRef]);
 
   return (
     <div className={styles.floatingHeader}>
-      <div className={floatHeader && styles.floatHeader} ref={headerRef}>
-        {header}
-      </div>
+      {(!floatHeader ||
+        (floatXPosition >= tableRef?.current.getBoundingClientRect().left &&
+          floatXPosition <
+            tableRef?.current.getBoundingClientRect().right)) && (
+        <div
+          className={floatHeader && styles.floatHeader}
+          ref={headerRef}
+          style={{left: floatXPosition + 'px'}}
+        >
+          {header}
+        </div>
+      )}
       <div className={styles.childContainer} ref={childContainerRef}>
         <div className={styles.child}>{children}</div>
       </div>
@@ -74,5 +87,6 @@ export default function FloatingHeader({header, children, childRef}) {
 FloatingHeader.propTypes = {
   header: PropTypes.node.isRequired,
   children: PropTypes.node.isRequired,
-  childRef: PropTypes.object.isRequired,
+  tableRef: PropTypes.object,
+  id: PropTypes.number,
 };
