@@ -1,7 +1,9 @@
 import type {Metadata} from 'next';
 import {Inter} from 'next/font/google';
 import React from 'react';
+
 import './globals.css';
+import Header from '@cdo/app/header';
 
 const inter = Inter({subsets: ['latin']});
 
@@ -17,7 +19,28 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <link
+          rel={'stylesheet'}
+          media={'all'}
+          href={
+            'https://studio.code.org/assets/application-fa0513c7a2863e7b2e52b415c4a78c445bb13f64c92f10a611e903476436d7b9.css'
+          }
+        />
+
+        <link
+          rel={'stylesheet'}
+          media={'all'}
+          href={
+            'https://studio.code.org/assets/application-fa0513c7a2863e7b2e52b415c4a78c445bb13f64c92f10a611e903476436d7b9.css'
+          }
+        />
+      </head>
+
+      <body className={inter.className}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
