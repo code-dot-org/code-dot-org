@@ -156,6 +156,9 @@ class Ability
         can?(:manage, section) || user.sections_as_student.include?(section)
       end
 
+      # all signed in users can get their level source
+      can :get_level_source, UserLevel
+
       if user.teacher?
         can :manage, Section do |s|
           s.instructors.include?(user)
