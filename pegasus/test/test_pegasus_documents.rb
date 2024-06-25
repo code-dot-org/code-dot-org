@@ -39,6 +39,7 @@ class PegasusTest < Minitest::Test
     ],
     301 => %w[
       csedweek.org/resource_kit
+      code.org/privacy
     ]
   }
 
