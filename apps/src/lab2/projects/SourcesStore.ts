@@ -1,5 +1,5 @@
 /**
- * This file contains the SourcesStore interface and the local (saved to broswer local storage)
+ * This file contains the SourcesStore interface and the local (saved to browwer local storage)
  * and remote (saved to the server) implementations of the SourcesStore.
  * A SourcesStore manages the loading and saving of sources to the appropriate location.
  */

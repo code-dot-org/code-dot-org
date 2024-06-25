@@ -51,7 +51,11 @@ module ShareFiltering
   # @param [String] program the student's program text
   # @param [String] locale a two-character ISO 639-1 language code
   def self.find_share_failure(program, locale, exceptions: false)
-    return nil unless should_filter_program(program)
+    puts "instide share_filtering.rb find_share_failure method"
+    puts "program is #{program}"
+    puts "should_filter_program(program) is #{should_filter_program(program)}"
+
+    #return nil unless should_filter_program(program)
 
     xml_tag_regexp = /<[^>]*>/
     program_tags_removed = program.gsub(xml_tag_regexp, "\n")
@@ -132,13 +136,14 @@ module ShareFiltering
   def self.find_failure(text, locale, profanity_filter_replace_text_list = {}, exceptions: false)
     # We only fail programs when the webpurity service is enabled
     return nil unless Gatekeeper.allows('webpurify', default: true)
-
+    puts "inside find_failure method in share_filtering.rb - text is #{text}"
     # First, check for PII issues
     pii_failure = find_pii_failure(text, exceptions: exceptions)
     return pii_failure if pii_failure
 
     # Search for profanity
     expletive = ProfanityFilter.find_potential_profanity(text, locale, profanity_filter_replace_text_list)
+    puts "expletive is #{expletive}"
     share_failure = ShareFailure.new(FailureType::PROFANITY, expletive) if expletive
     raise ProfanityFilterException.new("Profanity Filter Violation", share_failure) if share_failure && exceptions
     return share_failure if share_failure

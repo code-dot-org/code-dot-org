@@ -52,10 +52,14 @@ class ActivitiesController < ApplicationController
     end
 
     sharing_allowed = Gatekeeper.allows('shareEnabled', where: {script_name: script_name}, default: true)
+    puts "sharing_allowed = #{sharing_allowed}"
+    puts "params = #{params}"
+    puts "params[:program] = #{params[:program]}"
     if params[:program] && sharing_allowed
       share_failure = nil
-      if @level.game.sharing_filtered?
+      if @level.game.sharing_filtered? # only for Studio apps
         begin
+          puts " begin sharing_filtered - params[:program] = #{params[:program]}"
           share_failure = ShareFiltering.find_share_failure(params[:program], locale)
         rescue WebPurify::TextTooLongError, OpenURI::HTTPError, IO::EAGAINWaitReadable => exception
           # If WebPurify or Geocoder fail, the program will be allowed, and we

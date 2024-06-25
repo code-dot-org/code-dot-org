@@ -17,6 +17,7 @@ end
 BLOCKLY_SOURCE_FILENAME = 'main.json'.freeze unless defined? BLOCKLY_SOURCE_FILENAME
 
 def profanity_privacy_violation?(filename, body)
+  puts "inside profanity_privacy_helper profanity_privacy_violation? method"
   return false unless filename == BLOCKLY_SOURCE_FILENAME
   share_failure = share_failure_from_body body, request.locale
   !!share_failure
@@ -90,6 +91,7 @@ def share_failure_from_body(body, locale)
   return false unless blockly_source
 
   begin
+    puts "share_failure_from_body in profanity_privacy_helper.rb - calling on find_share_failure"
     ShareFiltering.find_share_failure(blockly_source, locale)
   rescue WebPurify::TextTooLongError, OpenURI::HTTPError, IO::EAGAINWaitReadable
     # If WebPurify or Geocoder are unavailable, default to viewable

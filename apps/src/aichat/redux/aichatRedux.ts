@@ -173,7 +173,14 @@ const saveAiCustomization = async (
 
   // Notify the UI that a save is in progress.
   dispatch(startSave(saveType));
+  // Check system prompt and retrievals for profanity.
+  // await ...
 
+  // If profanity is found, abort save process, call on `onSaveFail`,
+  // and show notification message in chat workspace.
+  // Otherwise, proceed to saving.
+
+  // Save user customizations to project sources.
   await Lab2Registry.getInstance()
     .getProjectManager()
     ?.save({source: JSON.stringify(trimmedCurrentAiCustomizations)}, true);

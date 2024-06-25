@@ -221,6 +221,7 @@ class FilesApi < Sinatra::Base
   # @return [IO] requested file body as an IO stream
   #
   def get_file(endpoint, encrypted_channel_id, filename, code_projects_domain_root_route = false, cache_duration: nil)
+   puts "get_file in files_api.rb"
     # We occasionally serve HTML files through theses APIs - we don't want NewRelic JS inserted...
     begin
       NewRelic::Agent.ignore_enduser
@@ -236,8 +237,10 @@ class FilesApi < Sinatra::Base
     response['Cache-Control'] += ', no-transform'
 
     filename.downcase! if endpoint == 'files'
+    puts "buckets.allowed_file_name? filename is #{buckets.allowed_file_name? filename}"
     not_found unless buckets.allowed_file_name? filename
     type = File.extname(filename)
+    puts "type is #{type}"
     not_found if type.empty?
     unsupported_media_type unless buckets.allowed_file_type?(type)
     content_type type
@@ -252,14 +255,16 @@ class FilesApi < Sinatra::Base
     end
 
     result = buckets.get(encrypted_channel_id, filename, env['HTTP_IF_MODIFIED_SINCE'], request.GET['version'])
+    puts "result is #{result}"
     not_found if result[:status] == 'NOT_FOUND'
     not_modified if result[:status] == 'NOT_MODIFIED'
     last_modified result[:last_modified]
-
+    puts "filename is #{filename}"
+    puts "result is #{result}"
     metadata = result[:metadata]
     abuse_score = [metadata['abuse_score'].to_i, metadata['abuse-score'].to_i].max
     not_found if abuse_score >= SharedConstants::ABUSE_CONSTANTS.ABUSE_THRESHOLD && !can_view_abusive_assets?(encrypted_channel_id)
-    not_found if profanity_privacy_violation?(filename, result[:body]) && !can_view_profane_or_pii_assets?(encrypted_channel_id)
+    not_found if profanity_privacy_violation?(filename, result[:body])
     not_found if code_projects_domain_root_route && !codeprojects_can_view?(encrypted_channel_id)
 
     if code_projects_domain_root_route && html?(response.headers)
