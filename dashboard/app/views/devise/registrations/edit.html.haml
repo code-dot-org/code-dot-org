@@ -137,8 +137,11 @@
     = f.hidden_field :lti_roster_sync_enabled
 
 -# The CPA checks for whether or not the account is a personal login... so we check everything except that
-- locked = experiment_value('cpa-partial-lockout', request) && Policies::ChildAccount.underage?(current_user)
-- if locked
+- potentially_locked = experiment_value('cpa-partial-lockout', request) && Policies::ChildAccount.underage?(current_user)
+-# We need to also account for the case when the US State is not specified
+- locked = (potentially_locked && !Policies::ChildAccount::ComplianceState.permission_granted?(current_user)) || current_user.country_code.nil? || current_user.us_state.nil?
+
+- if potentially_locked
   %div#lockout-linked-accounts{
     data: {
       request_date: @request_date&.iso8601,
@@ -172,9 +175,6 @@
 - if current_user.can_create_personal_login?
   %hr
   %h2= t('user.create_personal_login')
-
-  -# We need to also account for the case when the US State is not specified
-  - locked = locked || current_user.country_code.nil? || current_user.us_state.nil?
 
   %p#edit_user_create_personal_account_description
     - if locked
