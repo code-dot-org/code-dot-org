@@ -682,6 +682,7 @@
   module_label_self_paced: "Self-paced module"
   module_label_event_or_lessons: "Event or lessons"
   module_label_or: "Or"
+  module_label_visit_site: "Visit %{site_name}"
 
   module_ages_5_10: "5-10"
   module_ages_11_18: "11-18"
