@@ -18,6 +18,7 @@ const SuggestedPrompts: React.FC<SuggestedPromptsProps> = ({
   <div className={moduleStyles.prompts}>
     {suggestedPrompts.map(prompt => (
       <SuggestedPrompt
+        key={prompt.label}
         onClick={prompt.onClick}
         label={prompt.label}
         show={prompt.show}

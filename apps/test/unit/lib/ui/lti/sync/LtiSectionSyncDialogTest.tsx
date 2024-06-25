@@ -1,14 +1,16 @@
-import LtiSectionSyncDialog from '@cdo/apps/lib/ui/lti/sync/LtiSectionSyncDialog';
 import {fireEvent, render, screen, within} from '@testing-library/react';
+import $ from 'jquery';
+import React from 'react';
+import sinon from 'sinon';
+
+import LtiSectionSyncDialog from '@cdo/apps/lib/ui/lti/sync/LtiSectionSyncDialog';
 import {
   LtiSectionMap,
   LtiSectionSyncResult,
 } from '@cdo/apps/lib/ui/lti/sync/types';
-import React from 'react';
-import {expect} from '../../../../../util/reconfiguredChai';
 import i18n from '@cdo/locale';
-import $ from 'jquery';
-import sinon from 'sinon';
+
+import {expect} from '../../../../../util/reconfiguredChai';
 
 const MOCK_ALL_SECTION_MAP: LtiSectionMap = {
   1: {

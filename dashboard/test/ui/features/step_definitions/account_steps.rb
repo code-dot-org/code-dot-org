@@ -109,20 +109,26 @@ def create_user(name, url: '/api/test/create_user', **user_opts)
       user_opts[:email_preference_source] = 'ACCOUNT_SIGN_UP'
     end
 
+    user_params = {
+      user_type: 'student',
+      email: email,
+      password: password,
+      password_confirmation: password,
+      name: name,
+      age: '16',
+      terms_of_service_version: '1',
+      sign_in_count: 2
+    }.merge(user_opts)
+    user_params.delete(:email) if user_params[:email].blank?
+    user_params.delete(:password) if user_params[:password].blank?
+    user_params.delete(:password_confirmation) if user_params[:password_confirmation].blank?
+
+    # Issue the update request for the user
     browser_request(
       url: url,
       method: 'POST',
       body: {
-        user: {
-          user_type: 'student',
-          email: email,
-          password: password,
-          password_confirmation: password,
-          name: name,
-          age: '16',
-          terms_of_service_version: '1',
-          sign_in_count: 2
-        }.merge(user_opts)
+        user: user_params
       },
       code: 200
     )
@@ -162,6 +168,10 @@ And(/^I create( as a parent)? a (young )?student( in Colorado)?( who has never s
 
   create_user(name, **user_opts)
   navigate_to replace_hostname('http://studio.code.org') if home
+end
+
+Then /^My parent permits my parental request$/ do
+  browser_request(url: '/api/test/accept_parental_request', method: 'POST')
 end
 
 And(/^I type the email for "([^"]*)" into element "([^"]*)"$/) do |name, element|

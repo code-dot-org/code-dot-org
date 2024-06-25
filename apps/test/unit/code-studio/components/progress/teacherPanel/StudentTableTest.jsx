@@ -1,10 +1,12 @@
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../../../util/reconfiguredChai';
+import React from 'react';
+import sinon from 'sinon';
+
 import {UnconnectedStudentTable as StudentTable} from '@cdo/apps/code-studio/components/progress/teacherPanel/StudentTable';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
-import sinon from 'sinon';
+
+import {expect} from '../../../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   students: [

@@ -111,13 +111,14 @@
 
 // Tabs Sizes
 .tabs-l {
-  i {
-    font-size: 1.1875rem;
-    line-height: 125%;
-    width: 1.5rem;
-  }
-
   &.tabs-primary {
+    i {
+      font-size: 1.1875rem;
+      line-height: 125%;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
     ul {
       gap: 1rem;
 
@@ -135,6 +136,12 @@
   }
 
   &.tabs-secondary {
+    i {
+      font-size: 1rem;
+      line-height: 125%;
+      width: 1.25rem;
+    }
+
     ul {
       gap: 0.25rem;
 
@@ -167,13 +174,13 @@
 }
 
 .tabs-m {
-  i {
-    font-size: 1rem;
-    line-height: 125%;
-    width: 1.25rem;
-  }
-
   &.tabs-primary {
+    i {
+      font-size: 1rem;
+      line-height: 125%;
+      width: 1.25rem;
+    }
+
     ul {
       gap: 1rem;
 
@@ -191,6 +198,12 @@
   }
 
   &.tabs-secondary {
+    i {
+      font-size: 0.875rem;
+      line-height: 125%;
+      width: 1.125rem;
+    }
+
     ul {
       gap: 0.25rem;
 
@@ -223,6 +236,12 @@
 
 .tabs-s {
   &.tabs-primary {
+    i {
+      font-size: 0.875rem;
+      line-height: 125%;
+      width: 1.125rem;
+    }
+
     ul {
       gap: 1rem;
 
@@ -240,6 +259,12 @@
   }
 
   &.tabs-secondary {
+    i {
+      font-size: 0.75rem;
+      line-height: 125%;
+      width: 0.9375rem;
+    }
+
     ul {
       gap: 0.125rem;
 
@@ -272,6 +297,13 @@
 
 .tabs-xs {
   &.tabs-primary {
+    i {
+      font-size: 0.75rem;
+      line-height: 125%;
+      width: 1rem;
+      height: 1rem;
+    }
+
     ul {
       gap: 0.5rem;
 
@@ -289,6 +321,12 @@
   }
 
   &.tabs-secondary {
+    i {
+      font-size: 0.625rem;
+      line-height: 125%;
+      width: 0.8125rem;
+    }
+
     ul {
       gap: 0.125rem;
 

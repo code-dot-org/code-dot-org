@@ -1,5 +1,6 @@
-var animationTab = require('@cdo/apps/p5lab/redux/animationTab');
 import {expect} from '../../util/reconfiguredChai';
+
+var animationTab = require('@cdo/apps/p5lab/redux/animationTab');
 
 describe('AnimationTab', function () {
   describe('reducer', function () {

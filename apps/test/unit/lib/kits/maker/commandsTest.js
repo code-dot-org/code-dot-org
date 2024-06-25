@@ -1,6 +1,8 @@
 /** @file Test maker command behavior for Circuit Playground and Micro:Bit*/
-import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
+
+import MicroBitBoard from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitBoard';
+import VirtualCPBoard from '@cdo/apps/lib/kits/maker/boards/VirtualCPBoard';
 import {
   analogRead,
   analogWrite,
@@ -13,10 +15,10 @@ import {
   onBoardEvent,
   pinMode,
 } from '@cdo/apps/lib/kits/maker/commands';
-import VirtualCPBoard from '@cdo/apps/lib/kits/maker/boards/VirtualCPBoard';
-import MicroBitBoard from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitBoard';
 import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('maker/commands.js - CircuitPlayground', () => {
   let stubBoardController, errorHandler;

@@ -1,14 +1,16 @@
 /** @file MicroBit Component setup tests */
-import {expect} from '../../../../../../util/reconfiguredChai';
+import {EventEmitter} from 'events';
+import sinon from 'sinon';
+
+import CapacitiveTouchSensor from '@cdo/apps/lib/kits/maker/boards/microBit/CapacitiveTouchSensor';
 import {
   createMicroBitComponents,
   cleanupMicroBitComponents,
   enableMicroBitComponents,
 } from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitComponents';
 import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
-import {EventEmitter} from 'events';
-import sinon from 'sinon';
-import CapacitiveTouchSensor from '@cdo/apps/lib/kits/maker/boards/microBit/CapacitiveTouchSensor';
+
+import {expect} from '../../../../../../util/reconfiguredChai';
 
 const COMPONENTS = [
   'buttonA',

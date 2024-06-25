@@ -1,10 +1,12 @@
-import ReactDOM from 'react-dom';
 import $ from 'jquery';
+import ReactDOM from 'react-dom';
 import {spy, stub} from 'sinon';
-import {expect} from '../../../../util/reconfiguredChai';
-import ChangeEmailController from '@cdo/apps/lib/ui/accounts/ChangeEmailController';
+
 import {hashEmail} from '@cdo/apps/code-studio/hashEmail';
+import ChangeEmailController from '@cdo/apps/lib/ui/accounts/ChangeEmailController';
 import color from '@cdo/apps/util/color';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 export const ENCRYPTED_EMAIL_PLACEHOLDER = '***encrypted***';
 

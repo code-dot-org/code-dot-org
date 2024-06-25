@@ -14,6 +14,7 @@ import {getCurrentUnitData} from '../sectionProgress/sectionProgressRedux';
 import UnitSelectorV2 from '../UnitSelectorV2';
 
 import IconKey from './IconKey';
+import MoreOptionsDropdown from './MoreOptionsDropdown';
 import ProgressTableV2 from './ProgressTableV2';
 
 import styles from './progress-table-v2.module.scss';
@@ -101,6 +102,7 @@ function SectionProgressV2({
           {i18n.lessonsIn()}
 
           <UnitSelectorV2 className={styles.titleUnitSelectorDropdown} />
+          <MoreOptionsDropdown />
         </Heading6>
       </div>
       <ProgressTableV2
