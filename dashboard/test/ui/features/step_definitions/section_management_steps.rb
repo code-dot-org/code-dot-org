@@ -118,6 +118,7 @@ And(/^I create a(n authorized)? teacher-associated( under-13)?( sponsored)? stud
   if locked
     user_opts[:country_code] = "US"
     user_opts[:us_state] = "CO"
+    user_opts[:user_provided_us_state] = true
   end
 
   # See Policies::ChildAccount::CPA_CREATED_AT_EXCEPTION_DATE

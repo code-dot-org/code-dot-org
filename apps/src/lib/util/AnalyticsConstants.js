@@ -48,8 +48,10 @@ const EVENTS = {
   CAP_PARENT_EMAIL_MODAL_RESEND: 'CAP Parent Email Modal Resend',
   CAP_PARENT_EMAIL_MODAL_CLOSED: 'CAP Parent Email Modal Closed',
   CAP_AGE_GATED_MODAL_SHOWN: 'CAP Teacher Students Warning Modal Shown',
+  CAP_AGE_GATED_MODAL_CLOSED: 'CAP Teacher Students Warning Modal Closed',
   CAP_STUDENT_WARNING_LINK_CLICKED:
     'CAP Teacher Students Warning Modal Documentation Clicked',
+  CAP_AGE_GATED_BANNER_SHOWN: 'CAP Teacher Students Banner Shown',
 
   // School Selection Component
   COUNTRY_SELECTED: 'User Selects Country',
