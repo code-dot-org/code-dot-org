@@ -234,10 +234,13 @@ ensure
 end
 
 def migrate_all(channel_ids, log_filename_prefix: "firebase-channel-ids.txt", count: 0, failed_count: 0, succeeded_count: 0)
+  puts "Running with #{NUM_PARALLEL_WORKERS} parallel workers"
+
   pool = Concurrent::FixedThreadPool.new(NUM_PARALLEL_WORKERS)
 
   results = Queue.new
 
+  puts "Building task queue..."
   channel_ids.each do |channel_id|
     pool.post do
       migrate(channel_id)
@@ -246,6 +249,8 @@ def migrate_all(channel_ids, log_filename_prefix: "firebase-channel-ids.txt", co
       results.push [channel_id, false, exception]
     end
   end
+  puts "done building task queue, starting migration"
+  puts
 
   pool.shutdown
   stream_results_to_logs(log_filename_prefix, pool, results, count, failed_count, succeeded_count)
