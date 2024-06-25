@@ -112,6 +112,14 @@ class Policies::ChildAccount
     state_policy(user).try(:[], :start_date)
   end
 
+  # Checks if the user is partially locked out due to current non-compliance with CAP, even
+  # if we are granting them temporary 'compliance' in a grace period.
+  def self.partially_locked_out?(user)
+    # They are in the 'almost' locked out phase by predating the policy and
+    # not pre-emptively getting parent permission. (They may be temporarily compliant.)
+    user_predates_policy?(user) && !ComplianceState.permission_granted?(user)
+  end
+
   # Authentication option types which we consider to be "owned" by the school
   # the student attends because the school has admin control of the account.
   SCHOOL_OWNED_TYPES = [AuthenticationOption::CLEVER, AuthenticationOption::LTI_V1].freeze
@@ -160,6 +168,41 @@ class Policies::ChildAccount
     state_policies[user.us_state]
   end
 
+  # Checks if the user will not be old enough by the lockout date
+  def self.underage?(user)
+    return false unless user.birthday
+
+    policy = state_policy(user)
+    return false unless policy
+
+    lockout_date = policy.try(:[], :lockout_date)
+    return false unless lockout_date
+
+    # We have to add 1 to the max_age when calculating the birthday since birthdays are
+    # inaccurate values and we want to *ensure* the student age is legally valid.
+    min_required_age = (policy[:max_age] + 1).years
+
+    # Checks if the student meets the minimum age requirement by the start of the lockout
+    # (And thus they are not considered underage during pre-lockout periods)
+    student_birthday = user.birthday.in_time_zone(lockout_date.utc_offset)
+    return false unless student_birthday.since(min_required_age) > lockout_date
+
+    # Check to see if they are old enough at the current date
+    # We cannot trust 'user.age' because that is a different time zone and broken for leap years
+    today = Time.zone.today.in_time_zone(lockout_date.utc_offset)
+    student_age = today.year - student_birthday.year
+    ((student_birthday + student_age.years > today) ? (student_age - 1) : student_age) <= policy[:max_age]
+  end
+
+  # Whether or not the user can create/link new personal logins
+  def self.can_link_new_personal_account?(user)
+    return true unless user.student?
+    return true unless user.birthday
+    return true unless underage?(user)
+
+    ComplianceState.permission_granted?(user)
+  end
+
   # Check if parent permission is required for this account according to our
   # Child Account Policy.
   def self.parent_permission_required?(user)
@@ -174,7 +217,7 @@ class Policies::ChildAccount
 
     # Parental permission is not required for students
     # whose age cannot be identified or who are older than the maximum age covered by the policy.
-    return false if user.age.nil? || user.age.to_i > policy[:max_age]
+    return false unless underage?(user)
 
     personal_account?(user)
   end
