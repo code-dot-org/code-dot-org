@@ -42,6 +42,21 @@ module Lti
         end
       end
 
+      # POST /lti/v1/account_linking/new_account
+      def new_account
+        if current_user
+
+          current_user.lms_landing_opted_out = true
+          current_user.save!
+        elsif PartialRegistration.in_progress?(session)
+          partial_user = User.new_with_session(ActionController::Parameters.new, session)
+          partial_user.lms_landing_opted_out = true
+          PartialRegistration.persist_attributes(session, partial_user)
+        else
+          render status: :bad_request, json: {}
+        end
+      end
+
       private def lti_account_linking_enabled?
         head :not_found unless DCDO.get('lti_account_linking_enabled', false)
       end

@@ -138,6 +138,47 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
     end
   end
 
+  describe 'LMS lockout' do
+    let(:user) do
+      create(:student)
+    end
+
+    before do
+      user.authentication_options << build(:lti_authentication_option)
+      user.save
+
+      sign_in user
+    end
+
+    it 'should redirect to landing path' do
+      get root_path
+
+      assert_redirected_to lti_v1_account_linking_landing_path
+    end
+
+    it 'should NOT redirect if opted out' do
+      user.lms_landing_opted_out = true
+      user.save
+
+      get root_path
+      assert_redirected_to home_path
+    end
+
+    it 'should NOT redirect to landing path for allow listed paths' do
+      get destroy_user_session_path
+
+      assert_redirected_to '//test.code.org'
+    end
+
+    it 'should NOT redirect if not a lti user' do
+      regular_user = create(:student)
+      sign_in regular_user
+      get root_path
+
+      assert_redirected_to home_path
+    end
+  end
+
   # Assert that the response is not a redirection to the given path.
   private def refute_redirect_to(expected_path)
     return unless response.redirect_url

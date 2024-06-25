@@ -477,6 +477,7 @@ FactoryBot.define do
 
     trait :with_lti_auth do
       after(:create) do |user|
+        user.lms_landing_opted_out = true
         user.authentication_options.destroy_all
         lti_auth = create(:lti_authentication_option, user: user)
         user.authentication_options << lti_auth
