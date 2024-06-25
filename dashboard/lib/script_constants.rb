@@ -302,7 +302,7 @@ module ScriptConstants
   ].freeze
 
   def self.unit_in_category?(category, script)
-    return CATEGORIES[category.to_sym].include? script
+    return CATEGORIES[category].include? script
   end
 
   CSF_COURSE_PATTERNS = [/^(course[a-f])-([0-9]+)$/, /^(express)-([0-9]+)$/, /^(pre-express)-([0-9]+)$/]
