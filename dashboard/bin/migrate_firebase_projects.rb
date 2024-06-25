@@ -157,6 +157,15 @@ def migrate_all(channel_ids, log_filename_prefix = "firebase-channel-ids.txt")
   pool.shutdown
   stream_results_to_logs(log_filename_prefix, pool, results)
   pool.wait_for_termination
+ensure
+  # This is particularly useful because ctrl-c from within irb
+  # doesn't kill the thread pool, which makes repl-driven dev hard.
+  unless pool.shutdown?
+    puts "migrate_all() interrupted, killing thread pool"
+    pool.shutdown
+    pool.kill
+    pool.wait_for_termination
+  end
 end
 
 def load_channel_ids(filename)
@@ -178,7 +187,7 @@ def migrate_from_file(filename)
   channel_ids -= succeeded_channel_ids
 
   puts "Num channel_ids left to process: #{channel_ids.length}"
-  # migrate_all(channel_ids)
+  migrate_all(channel_ids)
 end
 
 if $PROGRAM_NAME == __FILE__
