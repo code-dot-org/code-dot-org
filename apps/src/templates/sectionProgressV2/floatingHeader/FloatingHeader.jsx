@@ -13,7 +13,14 @@ import styles from './floating-header.module.scss';
  * {header} should have all content visible and not itself scrollable.
  */
 
-export default function FloatingHeader({header, children, tableRef, id}) {
+export default function FloatingHeader({
+  header,
+  children,
+  tableRef,
+  id,
+  addScrollCallback,
+  removeScrollCallback,
+}) {
   const headerRef = React.useRef();
   const childContainerRef = React.useRef();
 
@@ -36,15 +43,15 @@ export default function FloatingHeader({header, children, tableRef, id}) {
 
     if (shouldFloatHeader !== floatHeader) {
       setFloatHeader(shouldFloatHeader);
-      if (id === 5186) {
-        console.log({
-          label: 'lfm',
-          id: id,
-          columnLeft1: childContainerRef?.current.getBoundingClientRect().left,
-          tableLeft: tableRef?.current.getBoundingClientRect().left,
-          // headerLeft: headerRef?.current.getBoundingClientRect().left,
-        });
-      }
+      // if (id === 5186) {
+      //   console.log({
+      //     label: 'lfm',
+      //     id: id,
+      //     columnLeft1: childContainerRef?.current.getBoundingClientRect().left,
+      //     tableLeft: tableRef?.current.getBoundingClientRect().left,
+      //     // headerLeft: headerRef?.current.getBoundingClientRect().left,
+      //   });
+      // }
     }
 
     setFloatXPosition(childContainerRef?.current.getBoundingClientRect().left);
@@ -54,11 +61,12 @@ export default function FloatingHeader({header, children, tableRef, id}) {
         childContainerRef?.current.getBoundingClientRect().right <=
           tableRef?.current.getBoundingClientRect().right
     );
-  }, [childContainerRef, floatHeader, setFloatHeader, id, tableRef]);
+  }, [childContainerRef, floatHeader, setFloatHeader, tableRef, setShowHeader]);
 
   React.useEffect(() => {
     window.addEventListener('scroll', handleScrollAndResize);
     window.addEventListener('resize', handleScrollAndResize);
+    addScrollCallback(id, handleScrollAndResize);
     // tableRef.addEventListener('scroll', handleScrollAndResize);
     // Call it on initial render to set the initial state
     handleScrollAndResize();
@@ -67,8 +75,15 @@ export default function FloatingHeader({header, children, tableRef, id}) {
       // return a cleanup function to unregister our function since it will run multiple times
       window.removeEventListener('scroll', handleScrollAndResize);
       window.removeEventListener('resize', handleScrollAndResize);
+      removeScrollCallback(id);
     };
-  }, [handleScrollAndResize, tableRef]);
+  }, [
+    handleScrollAndResize,
+    tableRef,
+    addScrollCallback,
+    id,
+    removeScrollCallback,
+  ]);
 
   return (
     <div className={styles.floatingHeader}>
@@ -93,4 +108,6 @@ FloatingHeader.propTypes = {
   children: PropTypes.node.isRequired,
   tableRef: PropTypes.object,
   id: PropTypes.number,
+  addScrollCallback: PropTypes.func,
+  removeScrollCallback: PropTypes.func,
 };

@@ -15,7 +15,11 @@ import styles from './floating-scrollbar.module.scss';
  * childRef - a ref to {child} element.
  *    Set by calling `ref={childRef}` on the {child} element
  */
-export default function FloatingScrollbar({children, childRef}) {
+export default function FloatingScrollbar({
+  children,
+  childRef,
+  scrollCallback,
+}) {
   const scrollRef = React.useRef();
   const childContainerRef = React.useRef();
 
@@ -110,9 +114,13 @@ export default function FloatingScrollbar({children, childRef}) {
     scroll => {
       if (childContainerRef?.current) {
         childContainerRef.current.scrollLeft = scroll.target.scrollLeft;
+
+        if (scrollCallback) {
+          scrollCallback.map(callback => callback(scroll));
+        }
       }
     },
-    [childContainerRef]
+    [childContainerRef, scrollCallback]
   );
 
   if (children.length > 1) {
@@ -161,4 +169,5 @@ export default function FloatingScrollbar({children, childRef}) {
 FloatingScrollbar.propTypes = {
   children: PropTypes.element.isRequired,
   childRef: PropTypes.object.isRequired,
+  scrollCallback: PropTypes.func,
 };

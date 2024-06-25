@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -65,6 +66,27 @@ function ProgressTableV2({
   const tableRef = React.useRef();
   const outsideTableRef = React.useRef();
 
+  const [scrollCallbacks, setScrollCallbacks] = React.useState({});
+
+  const addScrollCallback = React.useCallback(
+    (id, callback) => {
+      setScrollCallbacks(prevCallbacks => {
+        if (prevCallbacks[id]) {
+          return prevCallbacks;
+        }
+        return {...prevCallbacks, [id]: callback};
+      });
+    },
+    [setScrollCallbacks]
+  );
+
+  const removeScrollCallback = React.useCallback(
+    id => {
+      setScrollCallbacks(prevCallbacks => _.omit(prevCallbacks, id));
+    },
+    [setScrollCallbacks]
+  );
+
   const removeExpandedLesson = React.useCallback(
     lessonId => {
       setExpandedLessons(expandedLessonIds =>
@@ -123,6 +145,8 @@ function ProgressTableV2({
             addExpandedLesson={addExpandedLesson}
             key={index}
             tableRef={outsideTableRef}
+            addScrollCallback={addScrollCallback}
+            removeScrollCallback={removeScrollCallback}
           />
         );
       }
@@ -134,6 +158,8 @@ function ProgressTableV2({
       sectionId,
       removeExpandedLesson,
       addExpandedLesson,
+      addScrollCallback,
+      removeScrollCallback,
     ]
   );
 
@@ -161,7 +187,7 @@ function ProgressTableV2({
           height: '100%',
         }}
       >
-        <FloatingScrollbar childRef={tableRef}>
+        <FloatingScrollbar childRef={tableRef} scrollCallback={scrollCallbacks}>
           <div
             className={classNames(
               styles.table,
@@ -176,7 +202,7 @@ function ProgressTableV2({
         </FloatingScrollbar>
       </div>
     );
-  }, [isSkeleton, getRenderedColumn, unitData, tableRef]);
+  }, [isSkeleton, getRenderedColumn, unitData, tableRef, scrollCallbacks]);
 
   return (
     <div className={styles.progressTableV2} id="ui-test-progress-table-v2">
