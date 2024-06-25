@@ -1,8 +1,11 @@
-import sinon from 'sinon';
 import Interpreter from '@code-dot-org/js-interpreter';
-import {expect} from '../../../../util/reconfiguredChai';
-import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import sinon from 'sinon';
+
 import CustomMarshaler from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshaler';
+import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+
+import {expect} from '../../../../util/reconfiguredChai';
+
 import {
   makeAssertableObj,
   attachAssertToInterpreter,

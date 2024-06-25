@@ -1,11 +1,11 @@
 import HttpClient from '@cdo/apps/util/HttpClient';
 
-import {prepMessageForModelInput} from './redux/utils';
 import {
-  ChatCompletionMessage,
   AiCustomizations,
   AichatContext,
   AichatModelCustomizations,
+  ChatApiResponse,
+  ChatMessage,
 } from './types';
 
 const CHAT_COMPLETION_URL = '/aichat/chat_completion';
@@ -16,21 +16,20 @@ const CHAT_COMPLETION_URL = '/aichat/chat_completion';
  * and assistant message if successful.
  */
 export async function postAichatCompletionMessage(
-  newMessage: ChatCompletionMessage,
-  messagesToSend: ChatCompletionMessage[],
+  newMessage: ChatMessage,
+  storedMessages: ChatMessage[],
   aiCustomizations: AiCustomizations,
   aichatContext: AichatContext,
   sessionId?: number
-) {
+): Promise<ChatApiResponse> {
   const aichatModelCustomizations: AichatModelCustomizations = {
     selectedModelId: aiCustomizations.selectedModelId,
     temperature: aiCustomizations.temperature,
     retrievalContexts: aiCustomizations.retrievalContexts,
     systemPrompt: aiCustomizations.systemPrompt,
   };
-  const storedMessages = messagesToSend.map(prepMessageForModelInput);
   const payload = {
-    newMessage: prepMessageForModelInput(newMessage),
+    newMessage,
     storedMessages,
     aichatModelCustomizations,
     aichatContext,

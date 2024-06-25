@@ -1,7 +1,8 @@
 /* Tests for music/utils/UniqueSounds.js */
 
-var assert = require('assert');
 import UniqueSounds from '@cdo/apps/music/utils/UniqueSounds';
+
+var assert = require('assert');
 
 describe('Music uniqueSounds tests', function () {
   it('adding one new sound puts it at end', function () {

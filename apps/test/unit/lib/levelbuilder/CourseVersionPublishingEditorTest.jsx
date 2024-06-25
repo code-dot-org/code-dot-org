@@ -1,9 +1,11 @@
-import {expect} from '../../../util/reconfiguredChai';
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import React from 'react';
 import sinon from 'sinon';
-import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
+
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('CourseVersionPublishingEditor', () => {
   let defaultProps,

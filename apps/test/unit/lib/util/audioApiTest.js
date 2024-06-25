@@ -1,5 +1,7 @@
 import sinon from 'sinon';
-import {expect} from '../../../util/reconfiguredChai';
+
+import AzureTextToSpeech from '@cdo/apps/AzureTextToSpeech';
+import {setAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 import {
   commands,
   executors,
@@ -8,8 +10,8 @@ import {
 } from '@cdo/apps/lib/util/audioApi';
 import dropletConfig from '@cdo/apps/lib/util/audioApiDropletConfig';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
-import {setAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
-import AzureTextToSpeech from '@cdo/apps/AzureTextToSpeech';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('Audio API', function () {
   // Check that every command, has an executor, has a droplet config entry.

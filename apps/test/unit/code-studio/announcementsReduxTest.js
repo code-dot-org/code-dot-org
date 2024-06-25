@@ -1,4 +1,5 @@
 import {assert} from 'chai';
+
 import reducer, {
   addAnnouncement,
   VisibilityType,

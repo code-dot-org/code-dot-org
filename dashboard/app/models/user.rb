@@ -2898,10 +2898,12 @@ class User < ApplicationRecord
   end
 
   private def log_cap_event
-    if Policies::ChildAccount::ComplianceState.locked_out?(self)
-      Services::ChildAccount::EventLogger.log_account_locking(self)
-    elsif Policies::ChildAccount::ComplianceState.permission_granted?(self)
+    if Policies::ChildAccount::ComplianceState.permission_granted?(self)
       Services::ChildAccount::EventLogger.log_permission_granting(self)
+    elsif Policies::ChildAccount::ComplianceState.locked_out?(self)
+      Services::ChildAccount::EventLogger.log_account_locking(self)
+    elsif Policies::ChildAccount::ComplianceState.grace_period?(self)
+      Services::ChildAccount::EventLogger.log_grace_period_start(self)
     end
   end
 end
