@@ -7,23 +7,22 @@ theme: responsive_full_width
 %script{data: {'statsig-api-client-key': CDO.safe_statsig_api_client_key}}
 %script{data: {'managed-test-server': "#{CDO.running_web_application? && CDO.test_system?}"}}
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
-%link{href: "/css/generated/maker-styles.css", rel: "stylesheet"}
+%link{href: "/css/generated/page/maker-index-styles.css", rel: "stylesheet"}
 
 -# FontAwesome icons
 - icon_microchip = "fa-solid fa-microchip"
 - icon_hands_clapping = "fa-solid fa-hands-clapping"
 - icon_face_smile = "fa-solid fa-face-smile"
 
-%section.hero-banner-basic{style: "background: #00736E"}
-  .wrapper
-    %div.flex-container
-      %div.text-wrapper.col-50
-        %h1.white Become a Maker
-        %p.white Explore your creativity with physical computing.
-      %div.col-30.flex-container.justify-end
-        %img{src: "/images/maker/maker-skinny-banner-img-left.svg", alt: ""}
-        %img{src: "/images/maker/maker-skinny-banner-img-right.svg", alt: ""}
-    .clear
+%section.hero-banner-basic.overlay
+  .wrapper.grid-container.justify-space-between.align-items-center.gap-4.wider-text
+    .text-wrapper
+      %h1.white
+        Become a Maker
+      %p.body-two.white
+        Explore your creativity with physical computing.
+    %figure
+      %img{src: "/images/maker/maker-banner-image.svg", alt: "", style: "width: 100%"}
 
 %section
   .wrapper
