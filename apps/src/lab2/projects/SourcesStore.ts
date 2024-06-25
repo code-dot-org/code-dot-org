@@ -1,16 +1,20 @@
 /**
- * This file contains the SourcesStore interface and the local (saved to broswer local storage)
+ * This file contains the SourcesStore interface and the local (saved to browser local storage)
  * and remote (saved to the server) implementations of the SourcesStore.
  * A SourcesStore manages the loading and saving of sources to the appropriate location.
  */
-import {ProjectSources} from '../types';
+import {ProjectSources, ProjectType} from '../types';
 import * as sourcesApi from './sourcesApi';
 const {getTabId} = require('@cdo/apps/utils');
 
 export interface SourcesStore {
   load: (key: string) => Promise<ProjectSources>;
 
-  save: (key: string, sources: ProjectSources) => Promise<Response>;
+  save: (
+    key: string,
+    sources: ProjectSources,
+    appType?: ProjectType
+  ) => Promise<Response>;
 }
 
 export class LocalSourcesStore implements SourcesStore {
@@ -41,14 +45,21 @@ export class RemoteSourcesStore implements SourcesStore {
     return value;
   }
 
-  async save(channelId: string, sources: ProjectSources, replace = false) {
+  async save(
+    channelId: string,
+    sources: ProjectSources,
+    appType?: ProjectType,
+    replace = false
+  ) {
     let options = undefined;
+    // Add to options app type.
     if (this.currentVersionId) {
       options = {
         currentVersion: this.currentVersionId,
         replace: replace || this.shouldReplace(),
         firstSaveTimestamp: encodeURIComponent(this.firstSaveTime || ''),
         tabId: getTabId(),
+        appType: appType,
       };
     }
     const response = await sourcesApi.update(channelId, sources, options);

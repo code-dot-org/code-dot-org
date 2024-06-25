@@ -289,6 +289,7 @@ export default class ProjectManager {
       this.executeSaveNoopListeners(this.lastChannel);
       return;
     }
+    console.log('this.lastChannel.projectType', this.lastChannel.projectType);
     this.resetSaveState();
     this.saveInProgress = true;
     this.nextSaveTime = Date.now() + this.saveInterval;
@@ -304,7 +305,11 @@ export default class ProjectManager {
     // Only save the source if it has changed.
     if (this.sourcesToSave && sourceChanged) {
       try {
-        await this.sourcesStore.save(this.channelId, this.sourcesToSave);
+        await this.sourcesStore.save(
+          this.channelId,
+          this.sourcesToSave,
+          this.lastChannel.projectType
+        );
       } catch (error) {
         this.onSaveFail('Error saving sources', error as Error);
         return;

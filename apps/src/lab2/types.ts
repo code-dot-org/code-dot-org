@@ -57,6 +57,7 @@ export interface SourceUpdateOptions {
   replace: boolean;
   firstSaveTimestamp: string;
   tabId: string | null;
+  appType?: ProjectType;
 }
 
 // -- BLOCKLY -- //
