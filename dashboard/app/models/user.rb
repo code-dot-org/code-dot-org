@@ -234,6 +234,8 @@ class User < ApplicationRecord
 
   has_many :lti_user_identities, dependent: :destroy
 
+  has_one :latest_parental_permission_request, -> {order(updated_at: :desc)}, class_name: 'ParentalPermissionRequest'
+
   # This custom validator makes email collision checks on the AuthenticationOption
   # model also show up as validation errors for the email field on the User
   # model.
@@ -2244,6 +2246,7 @@ class User < ApplicationRecord
       ai_tutor_access_denied: !!ai_tutor_access_denied,
       at_risk_age_gated: Policies::ChildAccount.parent_permission_required?(self),
       child_account_compliance_state: child_account_compliance_state,
+      latest_permission_request_sent_at: latest_parental_permission_request&.updated_at,
     }
   end
 
@@ -2895,10 +2898,12 @@ class User < ApplicationRecord
   end
 
   private def log_cap_event
-    if Policies::ChildAccount::ComplianceState.locked_out?(self)
-      Services::ChildAccount::EventLogger.log_account_locking(self)
-    elsif Policies::ChildAccount::ComplianceState.permission_granted?(self)
+    if Policies::ChildAccount::ComplianceState.permission_granted?(self)
       Services::ChildAccount::EventLogger.log_permission_granting(self)
+    elsif Policies::ChildAccount::ComplianceState.locked_out?(self)
+      Services::ChildAccount::EventLogger.log_account_locking(self)
+    elsif Policies::ChildAccount::ComplianceState.grace_period?(self)
+      Services::ChildAccount::EventLogger.log_grace_period_start(self)
     end
   end
 end

@@ -844,6 +844,10 @@ class Level < ApplicationRecord
     properties_camelized[:appName] = game&.app
     properties_camelized[:useRestrictedSongs] = game.use_restricted_songs?
     properties_camelized[:usesProjects] = try(:is_project_level) || channel_backed?
+    if try(:project_template_level).try(:source) || try(:source)
+      # Override start sources with project template level sources if they exist
+      properties_camelized['source'] = try(:project_template_level).try(:source) || try(:source)
+    end
     # Localized properties
     properties_camelized["validations"] = localized_validations if properties_camelized["validations"]
     properties_camelized["panels"] = localized_panels if properties_camelized["panels"]

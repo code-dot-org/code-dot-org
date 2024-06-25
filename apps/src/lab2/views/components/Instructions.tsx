@@ -8,7 +8,6 @@ import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import {LabState} from '../../lab2Redux';
-import {ProjectLevelData} from '../../types';
 import {ThemeContext} from '../ThemeWrapper';
 const commonI18n = require('@cdo/locale');
 
@@ -48,12 +47,8 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   imagePopOutDirection,
   handleInstructionsTextClick,
 }) => {
-  // Prefer using long instructions if available, otherwise fall back to level data text.
   const instructionsText = useSelector(
-    (state: {lab: LabState}) =>
-      state.lab.levelProperties?.longInstructions ||
-      (state.lab.levelProperties?.levelData as ProjectLevelData | undefined)
-        ?.text
+    (state: {lab: LabState}) => state.lab.levelProperties?.longInstructions
   );
   const hasNextLevel = useSelector(state => nextLevelId(state) !== undefined);
   const {hasConditions, message, satisfied, index} = useSelector(

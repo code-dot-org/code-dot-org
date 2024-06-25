@@ -35,16 +35,8 @@ class UnitTest < ActiveSupport::TestCase
     @csa_unit = create :csa_script, name: 'csa1'
 
     @csc_unit = create :csc_script, name: 'csc1', is_course: true, family_name: 'csc-test-unit', version_year: 'unversioned'
-    CourseOffering.add_course_offering(@csc_unit)
-    @csc_unit.course_version.course_offering.category = 'csc'
-    @csc_unit.course_version.course_offering.save!
-    @csc_unit.reload
 
     @hoc_unit = create :hoc_script, name: 'hoc1', is_course: true, family_name: 'hoc-test-unit', version_year: 'unversioned'
-    CourseOffering.add_course_offering(@hoc_unit)
-    @hoc_unit.course_version.course_offering.category = 'hoc'
-    @hoc_unit.course_version.course_offering.save!
-    @hoc_unit.reload
 
     @csf_unit_2019 = create :csf_script, name: 'csf-2019', version_year: '2019'
 
@@ -1676,18 +1668,6 @@ class UnitTest < ActiveSupport::TestCase
 
     assessment_script_levels = unit.get_assessment_script_levels
     assert_equal assessment_script_levels[0], script_level
-  end
-
-  test "self.modern_elementary_courses_available?" do
-    course1_modern = create(:script, name: 'course1-modern', supported_locales: ["en-us", "it-it"])
-    course2_modern = create(:script, name: 'course2-modern', supported_locales: ["fr-fr", "en-us"])
-
-    Unit.stubs(:modern_elementary_courses).returns([course1_modern, course2_modern])
-
-    assert Unit.modern_elementary_courses_available?("en-us")
-    refute Unit.modern_elementary_courses_available?("ch-ch")
-    refute Unit.modern_elementary_courses_available?("it-it")
-    refute Unit.modern_elementary_courses_available?("fr-fr")
   end
 
   test 'locale_english_name_map' do

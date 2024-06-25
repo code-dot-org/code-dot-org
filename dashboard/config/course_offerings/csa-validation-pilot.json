@@ -1,7 +1,6 @@
 {
   "key": "csa-validation-pilot",
   "display_name": "CSA Validation Pilot",
-  "category": "full_course",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": null,

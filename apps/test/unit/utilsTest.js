@@ -1,7 +1,9 @@
 import _ from 'lodash';
 import {stub} from 'sinon';
-import {assert, expect} from '../util/reconfiguredChai';
+
 import * as utils from '@cdo/apps/utils';
+
+import {assert, expect} from '../util/reconfiguredChai';
 
 const {
   isSubsequence,

@@ -1,0 +1,22 @@
+name 'sp-pd-Code_w_AI-L1scenario_wrap_24'
+skip_dialog true
+markdown <<MARKDOWN
+# Wrapping up lesson one
+
+#### Students do not need to have firm ideas or decisions on the "right" way to supportively work with AI in these scenarios - that's what they will explore in the following lessons. The goal of the scenarios is to give students the opportunity to begin thinking about supportive vs non-supportive ways to use AI that will help, rather than hinder their education.
+
+## Supportive and non-supportive 
+
+#### The scenario discussions aim to help students distinguish the difference between "supportive" and "non-supportive". Help guide your students to understand that "supportive" includes ways to use AI to assist in a task while they still maintain control and make decisions on the final product, while "non-supportive" usually means using AI in a way that leaves all the decisions up to the AI.
+
+## Creating value statements
+
+#### The lesson progresses to an activity prompting ethical considerations with working with AI and wraps up with the students creating a value statement about how they think AI can and should be used to support them when programming and their reasons why.
+
+---
+
+#### Read the entire lesson plan <a href="http://studio.code.org/s/coding-with-ai/lessons/1" target="blank" rel="noopener noreferrer">here</a>. 
+
+
+
+MARKDOWN

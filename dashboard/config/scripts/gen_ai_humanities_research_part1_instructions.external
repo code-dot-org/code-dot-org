@@ -1,0 +1,8 @@
+name 'gen-ai-humanities-research-part1-instructions'
+
+
+markdown <<MARKDOWN
+HELP! Your mission, should you choose to accept it, is to help Sofia, Miguel, and Sonja find information using two different research tools. You need to find accurate information, score each tool individually, and then compare the results so they know which tool is better at which types of research tasks.
+
+Research the quotes and their authors, verify (or dispute) the historical claims, and answer the questions below! Remember - don't trust the first thing you read! **VERIFY!!**
+MARKDOWN

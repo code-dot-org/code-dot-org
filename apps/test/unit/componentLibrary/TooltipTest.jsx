@@ -1,4 +1,5 @@
 import {render, screen} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import React from 'react';
 
 import {WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
@@ -6,7 +7,9 @@ import {WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 import {expect} from '../../util/reconfiguredChai';
 
 describe('Design System - Tooltip', () => {
-  it('Tooltip - renders with correct label', () => {
+  it('Tooltip - renders with correct label', async () => {
+    const user = userEvent.setup();
+
     const WithTooltipToRender = () => (
       <WithTooltip tooltipProps={{tooltipId: 'tooltip1', text: 'tooltipText'}}>
         <button type="button">hover me</button>
@@ -14,11 +17,13 @@ describe('Design System - Tooltip', () => {
     );
     const {rerender} = render(<WithTooltipToRender />);
 
-    let tooltip = screen.getByText('tooltipText');
+    let tooltip = screen.queryByText('tooltipText');
     let tooltipTrigger = screen.getByText('hover me');
 
-    expect(tooltip).to.exist;
+    expect(tooltip).not.to.exist;
     expect(tooltipTrigger).to.exist;
+
+    await user.hover(tooltipTrigger);
 
     rerender(<WithTooltipToRender />);
 

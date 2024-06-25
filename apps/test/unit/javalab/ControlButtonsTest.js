@@ -1,6 +1,7 @@
-import React from 'react';
-import {expect} from '../../util/reconfiguredChai';
 import {render, screen} from '@testing-library/react';
+import React from 'react';
+import {Provider} from 'react-redux';
+
 import ControlButtons from '@cdo/apps/javalab/ControlButtons';
 import javalabView from '@cdo/apps/javalab/redux/viewRedux';
 import {
@@ -9,7 +10,8 @@ import {
   restoreRedux,
   stubRedux,
 } from '@cdo/apps/redux';
-import {Provider} from 'react-redux';
+
+import {expect} from '../../util/reconfiguredChai';
 
 describe('Java Lab Control Buttons Test', () => {
   let defaultProps;

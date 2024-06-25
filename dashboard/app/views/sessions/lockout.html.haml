@@ -8,7 +8,7 @@
       controller: :policy_compliance
     ),
     disallowed_email: @disallowed_email,
-    is_pre_lockout_user: Policies::ChildAccount.pre_lockout_user?(current_user).to_json,
+    is_pre_lockout_user: Policies::ChildAccount.user_predates_policy?(current_user).to_json,
   }
 }
 
