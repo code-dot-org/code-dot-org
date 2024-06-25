@@ -5,6 +5,8 @@ require 'json'
 
 require_relative '../config/environment'
 
+NUM_PARALLEL_WORKERS = 1
+
 def get_project_id(channel_id)
   storage_decrypt_channel_id(channel_id)[1]
 end
@@ -56,7 +58,6 @@ def fetch_datablock_kvps(channel, project_id)
 end
 
 def insert_datablock_tables(tables)
-  # tables.table, and tables.records
   tables.each do |table|
     DatablockStorageTable.create!(table[:table])
     DatablockStorageRecord.insert_all!(table[:records]) unless table[:records].empty?
@@ -94,6 +95,69 @@ def migrate(channel_id)
   end
 end
 
-# Figure out how to set up env to be able to insert into the sql database
+def success_filename(log_filename_prefix)
+  "#{log_filename_prefix}.success"
+end
 
-# For each item in response.current_tables, add a shared table to datablock with the same name if valid
+def fail_filename(log_filename_prefix)
+  "#{log_filename_prefix}.fail"
+end
+
+def stream_results_to_logs(log_filename_prefix, pool, results)
+  succeeded_log = File.open(success_filename(log_filename_prefix), 'a+')
+  failed_log = File.open(fail_filename(log_filename_prefix), 'a+')
+  exception_log = File.open("#{log_filename_prefix}.exceptions", 'a+')
+
+  log_results = -> do
+    loop do
+      channel_id, success, exception = results.pop(non_block: true)
+
+      if success
+        succeeded_log.puts(channel_id)
+      else
+        failed_log.puts(channel_id)
+        exception_log.puts("#{channel_id}, #{exception}")
+      end
+    end
+  rescue ThreadError
+    # queue.pop(non_block: true) raises ThreadError if the queue is empty
+  end
+
+  until pool.shutdown?
+    log_results.call
+    sleep 0.1
+  end
+  puts "pool shutdown, draining results queue"
+  log_results.call
+ensure
+  succeeded_log.close
+  failed_log.close
+  exception_log.close
+end
+
+def migrate_all(channel_ids, log_filename_prefix = "firebase-channel-ids.txt")
+  pool = Concurrent::FixedThreadPool.new(NUM_PARALLEL_WORKERS)
+
+  results = Queue.new
+
+  channel_ids.each do |channel_id|
+    pool.post do
+      migrate(channel_id)
+      puts "SUCCESS: #{channel_id}"
+      results.push [channel_id, true]
+    rescue => exception
+      puts "FAILURE: #{channel_id}"
+      results.push [channel_id, false, exception]
+    end
+  end
+
+  pool.shutdown
+  stream_results_to_logs(log_filename_prefix, pool, results)
+  pool.wait_for_termination
+end
+
+if $PROGRAM_NAME == __FILE__
+  id_filename = ARGV[0] || 'firebase-channel-ids.txt'
+  channel_ids = File.readlines(id_filename).map(&:strip)
+  migrate_all(channel_ids)
+end
