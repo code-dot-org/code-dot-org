@@ -45,7 +45,7 @@ const FreeResponseFields: React.FunctionComponent<FreeResponseFieldsProps> = ({
       </label>
       <label className={moduleStyles.fieldArea}>
         <div className={moduleStyles.label}>
-          Height of the answer textarea in px
+          Height of the answer textarea in px. Default is 20px.
         </div>
         <input
           type="number"
@@ -53,7 +53,10 @@ const FreeResponseFields: React.FunctionComponent<FreeResponseFieldsProps> = ({
           onChange={e =>
             setPredictSettings({
               ...predictSettings,
-              freeResponseHeight: parseInt(e.target.value),
+              freeResponseHeight:
+                e.target.value !== undefined
+                  ? parseInt(e.target.value)
+                  : undefined,
             })
           }
           name="free_response_height"

@@ -14,11 +14,21 @@ interface EditPredictSettingsProps {
 const EditPredictSettings: React.FunctionComponent<
   EditPredictSettingsProps
 > = ({initialSettings}) => {
-  const defaultSettings = initialSettings
-    ? {multipleChoiceOptions: [''], ...initialSettings}
-    : {isPredictLevel: false, multipleChoiceOptions: ['']};
-  const [predictSettings, setPredictSettings] =
-    useState<LevelPredictSettings>(defaultSettings);
+  // Add default empty values to avoid errors
+  const defaultSettings: LevelPredictSettings = {
+    isPredictLevel: false,
+    solution: '',
+    questionType: PredictQuestionType.FreeResponse,
+    allowMultipleAttempts: false,
+    placeholderText: '',
+    multipleChoiceOptions: [''],
+    multipleChoiceAnswers: [],
+    freeResponseHeight: 20,
+  };
+
+  const [predictSettings, setPredictSettings] = useState<LevelPredictSettings>(
+    initialSettings ? {...defaultSettings, ...initialSettings} : defaultSettings
+  );
 
   const handleIsPredictToggle = () => {
     setPredictSettings({
