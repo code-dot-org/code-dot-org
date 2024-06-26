@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-10 16:04:07 UTC",
+    "serialized_at": "2024-06-25 18:16:38 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -95,9 +95,9 @@
       "relative_position": 2,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\nThe purpose of this session is to demonstrate how student’s first experiences with “programming” can be very approachable.\n\n**Objectives:**\n* Participants understand how the curriculum and AppLab are designed to remove barriers to the content for students.\n\n**Suggested Time:** 60 minutes\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp3-2023/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> \n\n**Lesson Overview:**\nStudents work through a progression of levels to build an understanding of how to use Design Mode to layout an app. The final level has students setting up the screen of an app by attempting to copy an image of an app. ",
+        "overview": "**Purpose:**\nThe purpose of this session is to demonstrate how student’s first experiences with “programming” can be very approachable.\n\n**Objectives:**\n* Participants understand how the curriculum and AppLab are designed to remove barriers to the content for students.\n\n**Suggested Time:** 60 minutes\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp3-2023/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n\n**Lesson Overview:**\nStudents work through a progression of levels to build an understanding of how to use Design Mode to layout an app. The final level has students setting up the screen of an app by attempting to copy an image of an app. ",
         "preparation": "* Review the programming levels to ensure you understand the fundamentals of Design Mode in App Lab and how elements are created and their properties are modified.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-intro-to-app-design-lessons-1-2-5-7/36472) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/19sZq9TrPXas5dhs2ZjhwhXX500ljGM50MHP5zbQjbHs/edit?usp=sharing)",
-        "student_overview": "Learn how to create screens, buttons, images, text, and more inside of App Lab."
+        "student_overview": "Learn how to create screens, buttons, images, text, and more inside of App Lab.\n\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp3-2023/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n\n**Lesson Overview:**\nStudents work through a progression of levels to build an understanding of how to use Design Mode to layout an app. The final level has students setting up the screen of an app by attempting to copy an image of an app. "
       },
       "seeding_key": {
         "lesson.key": "Introduction to Design Mode",
@@ -115,9 +115,9 @@
       "properties": {
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\nThis session gives participants a start on the project that runs through the unit. In the last model lesson of the day, participants will create this app. The goal of this session is to ensure that participants have an idea for an app that they and a partner could make. We want to emphasize the excitement around making your own app.\n\n**Objectives:**\n* Participants have been introduced to the project in Unit 3\n* Participants have engaged in the brainstorming process for creating their own app in this unit.\n* Participants have built the UI for their app.\n\n**Suggested Time:** 45 minutes\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp3-2023/lessons/3\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> \n\n**Lesson Overview:**\nThis is the first in a series of lessons where students will make progress on building their own functional app. \n* On Day 1, students brainstorm app ideas and sketch out user interfaces in preparation for the next lesson where they will return to App Lab.  \n* On Day 2, students continue working on the unit projects in what is primarily designed to be work time. Students continue to follow the app development process outlined in their App Development Guide by transferring their user interfaces designs from their planning guides over to App Lab",
+        "overview": "**Purpose:**\nThis session gives participants a start on the project that runs through the unit. In the last model lesson of the day, participants will create this app. The goal of this session is to ensure that participants have an idea for an app that they and a partner could make. We want to emphasize the excitement around making your own app.\n\n**Objectives:**\n* Participants have been introduced to the project in Unit 3\n* Participants have engaged in the brainstorming process for creating their own app in this unit.\n* Participants have built the UI for their app.\n\n**Suggested Time:** 45 minutes\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp3-2023/lessons/3\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n\n**Lesson Overview:**\nThis is the first in a series of lessons where students will make progress on building their own functional app. \n* On Day 1, students brainstorm app ideas and sketch out user interfaces in preparation for the next lesson where they will return to App Lab.  \n* On Day 2, students continue working on the unit projects in what is primarily designed to be work time. Students continue to follow the app development process outlined in their App Development Guide by transferring their user interfaces designs from their planning guides over to App Lab",
         "preparation": "* Read over the [r app_development_planning_guide/virtual-pl-csp-summer/2024]\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-designing-an-app-unit-3-lessons-3-4-8-10/36473) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our Virtual Lesson Modifications [Day 1](https://docs.google.com/document/d/1XA7mXpjzcvOeihfrU4WckgTxSQLpi2gSDseFOZnmgNc/edit?usp=sharing) and [Day 2](https://docs.google.com/document/d/1ll3y-flunEOVSk3iBBOkCG35yUuaxuSfm0LLm9i022g/edit?usp=sharing)",
-        "student_overview": "This is the first part of a project where students will make progress on building their own functional app. ",
+        "student_overview": "This is the first part of a project where students will make progress on building their own functional app. \n\n<a href=\"https://levelbuilder-studio.code.org/s/csp3-2023/lessons/3\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n\n**Lesson Overview:**\nThis is the first in a series of lessons where students will make progress on building their own functional app. \n* On Day 1, students brainstorm app ideas and sketch out user interfaces in preparation for the next lesson where they will return to App Lab.  \n* On Day 2, students continue working on the unit projects in what is primarily designed to be work time. Students continue to follow the app development process outlined in their App Development Guide by transferring their user interfaces designs from their planning guides over to App Lab",
         "unplugged": true
       },
       "seeding_key": {
@@ -135,9 +135,9 @@
       "relative_position": 4,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\nThis session shows participants how the role of the teacher is similar and different in programming lessons to other lesson types.\n\n**Objectives:**\n* Participants learn how event handlers work.\n* Participants see how to navigate students working on computers and holding classroom discussions back and forth in programming units.\n\n**Suggested Time:** 60 minutes\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp3-2023/lessons/5\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> \n\n**Lesson Overview:**\nStudents use and modify a series of simple apps to get familiar with a small set of programming commands. They observe the way the code runs by slowing down the code and compare programs that run all at once to those that respond to user actions like buttons clicks. At the end of the lesson students discuss what they observed and are introduced to some key vocabulary for describing the running of programs.",
+        "overview": "**Purpose:**\nThis session shows participants how the role of the teacher is similar and different in programming lessons to other lesson types.\n\n**Objectives:**\n* Participants learn how event handlers work.\n* Participants see how to navigate students working on computers and holding classroom discussions back and forth in programming units.\n\n**Suggested Time:** 60 minutes\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp3-2023/lessons/5\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n\n**Lesson Overview:**\nStudents use and modify a series of simple apps to get familiar with a small set of programming commands. They observe the way the code runs by slowing down the code and compare programs that run all at once to those that respond to user actions like buttons clicks. At the end of the lesson students discuss what they observed and are introduced to some key vocabulary for describing the running of programs.",
         "preparation": "* Review the example apps and the prompts that students will be asked to respond to for each\n* Review the information covered in the slides at the conclusion of the lesson\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-intro-to-app-design-lessons-1-2-5-7/36472) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1TfLlWANuZcXn4tljTl6_Mp9FqUAYnLQXkTwmaG0_Sgk/edit?usp=sharing)",
-        "student_overview": "Get familiar with what programs are and how they run by using and modifying several working apps."
+        "student_overview": "Get familiar with what programs are and how they run by using and modifying several working apps.\n\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp3-2023/lessons/5\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n\n**Lesson Overview:**\nStudents use and modify a series of simple apps to get familiar with a small set of programming commands. They observe the way the code runs by slowing down the code and compare programs that run all at once to those that respond to user actions like buttons clicks. At the end of the lesson students discuss what they observed and are introduced to some key vocabulary for describing the running of programs."
       },
       "seeding_key": {
         "lesson.key": "Intro to Programming",
@@ -206,9 +206,9 @@
       "properties": {
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\nThis session shows participants what active teaching looks like when teaching programming.\n\n**Objectives:**\n* Participants have seen what it looks like to teach with pair programming and the debugging process in mind.\n* Participants are excited about what they can create in App Lab.\n\n**Suggested Time:** 60 minutes\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp3-2023/lessons/7\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> \n\n**Lesson Overview:**\nThis lesson covers the last three days of the unit project. Students add code to make their apps function. \n* On Day 3, students learn about Pair Programming by watching a video and then practicing it themselves while working on their project apps. At this stage, students are adding their first lines of code to their app using debugging skills from the previous lesson. \n* On Day 4, students continue working on their apps. Halfway through class the focus of the lesson shifts to getting feedback. Students watch other groups test their apps and collect feedback that will be used to make updates.\n* On Day 5, students complete their apps, making any final adjustments based on feedback from their peers. Students spend some time reviewing other apps that classmates made and then complete a short set of reflection prompts before submitting their projects.",
+        "overview": "**Purpose:**\nThis session shows participants what active teaching looks like when teaching programming.\n\n**Objectives:**\n* Participants have seen what it looks like to teach with pair programming and the debugging process in mind.\n* Participants are excited about what they can create in App Lab.\n\n**Suggested Time:** 60 minutes\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp3-2023/lessons/7\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n\n**Lesson Overview:**\nThis lesson covers the last three days of the unit project. Students add code to make their apps function. \n* On Day 3, students learn about Pair Programming by watching a video and then practicing it themselves while working on their project apps. At this stage, students are adding their first lines of code to their app using debugging skills from the previous lesson. \n* On Day 4, students continue working on their apps. Halfway through class the focus of the lesson shifts to getting feedback. Students watch other groups test their apps and collect feedback that will be used to make updates.\n* On Day 5, students complete their apps, making any final adjustments based on feedback from their peers. Students spend some time reviewing other apps that classmates made and then complete a short set of reflection prompts before submitting their projects.",
         "preparation": "* Make sure students have access to their App Development Planning Guides\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-designing-an-app-unit-3-lessons-3-4-8-10/36473) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our Virtual Lesson Modifications for [Day 3](https://docs.google.com/document/d/1kBx4fXvt8obUsTbzGc70qhwbMubp1Pg7e59FbLqbvYs/edit?usp=sharing), [Day 4](https://docs.google.com/document/d/1hrU8a61iIz-tKlzmTTdFYS7-RDmak0NGtL3gfUXu9gA/edit?usp=sharing), and [Day 5](https://docs.google.com/document/d/1G7PK2YHIn3n84VNrk3yskWRhMtmGUFYedoI9A7u9PGc/edit?usp=sharing).",
-        "student_overview": "Start programming your app and learn how to effectively use pair programming to collaborate while writing code."
+        "student_overview": "Start programming your app and learn how to effectively use pair programming to collaborate while writing code.\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp3-2023/lessons/7\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n\n**Lesson Overview:**\nThis lesson covers the last three days of the unit project. Students add code to make their apps function. \n* On Day 3, students learn about Pair Programming by watching a video and then practicing it themselves while working on their project apps. At this stage, students are adding their first lines of code to their app using debugging skills from the previous lesson. \n* On Day 4, students continue working on their apps. Halfway through class the focus of the lesson shifts to getting feedback. Students watch other groups test their apps and collect feedback that will be used to make updates.\n* On Day 5, students complete their apps, making any final adjustments based on feedback from their peers. Students spend some time reviewing other apps that classmates made and then complete a short set of reflection prompts before submitting their projects."
       },
       "seeding_key": {
         "lesson.key": "Project - Designing an App Part 2",
@@ -1977,6 +1977,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day4-asynch1-01-2024"
+        ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
@@ -1999,6 +2002,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day4-asynch1-02-2024"
+        ],
         "progression": "Applying Our Knowledge of Identity and Bias"
       },
       "bonus": false,
@@ -2021,6 +2027,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day4-asynch1-03-2024"
+        ],
         "progression": "Applying Our Knowledge of Identity and Bias"
       },
       "bonus": false,
@@ -2043,6 +2052,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day4-asynch1-04-2024"
+        ],
         "progression": "Applying Our Knowledge of Identity and Bias"
       },
       "bonus": false,
@@ -2065,6 +2077,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day4-asynch1-05-2024"
+        ],
         "progression": "Applying Our Knowledge of Identity and Bias"
       },
       "bonus": false,
@@ -2087,6 +2102,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day4-asynch1-06-2024"
+        ],
         "progression": "Previously On...U3L7"
       },
       "bonus": false,
@@ -2334,6 +2352,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day4-asynch2-01-2024"
+        ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
@@ -2356,6 +2377,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day4-asynch2-02-2024"
+        ],
         "progression": "Recruiting And Retaining Students Gallery Walk"
       },
       "bonus": false,
@@ -2378,6 +2402,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day4-asynch2-03-2024"
+        ],
         "progression": "Recruiting And Retaining Students Gallery Walk"
       },
       "bonus": false,
@@ -2400,6 +2427,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day4-asynch2-04-2024"
+        ],
         "progression": "Belonging and Differentiation"
       },
       "bonus": false,
@@ -2422,6 +2452,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day4-asynch2-05-2024"
+        ],
         "progression": "Unit 3 Connections And Conclusions"
       },
       "bonus": false,
@@ -2444,6 +2477,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day4-asynch2-06-2024"
+        ],
         "progression": "Breakout Groups Poll"
       },
       "bonus": false,

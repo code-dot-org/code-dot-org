@@ -1,0 +1,9 @@
+name 'ai_sorting_items_predict_pl'
+question 'Look closely at the items on the left. How are they sorted?'
+wrong 'By shape', feedback: 'Incorrect. These items are sorted by color.'
+wrong 'By size', feedback: 'Incorrect. These items are sorted by color.'
+right 'By color', feedback: 'Correct!'
+wrong 'We need more training data to know.', feedback: 'Incorrect. These items are sorted by color.'
+
+
+allow_multiple_attempts true

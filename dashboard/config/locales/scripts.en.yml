@@ -16933,7 +16933,7 @@ en:
 
             **New to teaching AI?**
 
-            Get started with our [self-paced Professional Learning](studio.code.org/courses/elementaryai-2024).
+            Get started with our [self-paced Professional Learning](https://studio.code.org/courses/elementaryai-2024).
           student_description: ''
         music-tutorial-2024:
           lessons:
@@ -17979,6 +17979,20 @@ en:
               name: Welcome to Maker with micro:bit
           lesson_groups: {}
           name: sandbox-welcome-to-maker
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pl-maker-shallowcopy:
+          lessons: {}
+          lesson_groups: {}
+        maker-shallow:
+          lessons:
+            lesson-1:
+              name: DanceParty
+          lesson_groups: {}
+          name: maker-shallow
           title: ''
           description_audience: ''
           description_short: ''
