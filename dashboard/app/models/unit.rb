@@ -1564,7 +1564,7 @@ class Unit < ApplicationRecord
         weeklyInstructionalMinutes: weekly_instructional_minutes,
         includeStudentLessonPlans: is_migrated ? include_student_lesson_plans : false,
         useLegacyLessonPlans: is_migrated && use_legacy_lesson_plans,
-        courseVersionId: get_course_version&.id,
+        courseVersionId: unit_group&.get_course_version&.id || get_course_version&.id,
         courseOfferingId: get_course_version&.course_offering&.id,
         scriptOverviewPdfUrl: get_unit_overview_pdf_url,
         scriptResourcesPdfUrl: get_unit_resources_pdf_url,
@@ -1605,6 +1605,8 @@ class Unit < ApplicationRecord
   def summarize_for_unit_edit
     include_lessons = false
     summary = summarize(include_lessons)
+    # always provide original course version, even if summarize provided current course version
+    summary[:courseVersionId] = get_course_version&.id
     summary[:lesson_groups] = lesson_groups.map(&:summarize_for_unit_edit)
     summary[:courseOfferingEditPath] = edit_course_offering_path(course_version&.course_offering&.key) if course_version
     summary[:missingRequiredDeviceCompatibilities] = course_version&.course_offering&.missing_required_device_compatibility?
