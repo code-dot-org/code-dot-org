@@ -8,9 +8,11 @@ import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import {LabState, setPredictResponse} from '../../lab2Redux';
-import {PredictSettings} from '../../types';
 import {ThemeContext} from '../ThemeWrapper';
-import {PredictQuestionType} from '@cdo/apps/lab2/levelEditors/types';
+import {
+  LevelPredictSettings,
+  PredictQuestionType,
+} from '@cdo/apps/lab2/levelEditors/types';
 const commonI18n = require('@cdo/locale');
 
 interface InstructionsProps {
@@ -134,7 +136,7 @@ interface InstructionsPanelProps {
    * A callback when the user clicks on clickable text.
    */
   handleInstructionsTextClick?: (id: string) => void;
-  predictSettings?: PredictSettings;
+  predictSettings?: LevelPredictSettings;
   predictResponse?: string;
   setPredictResponse: (response: string) => void;
 }

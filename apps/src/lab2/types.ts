@@ -8,7 +8,7 @@
 // The library data should definitely live elsewhere.
 
 import {BlockDefinition} from '@cdo/apps/blockly/types';
-import {PredictQuestionType} from './levelEditors/types';
+import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
 
 /// ------ PROJECTS ------ ///
 
@@ -158,7 +158,7 @@ export interface LevelProperties {
   exemplarSources?: MultiFileSource;
   // For Teachers Only value
   teacherMarkdown?: string;
-  predictSettings?: PredictSettings;
+  predictSettings?: LevelPredictSettings;
 }
 
 // Level configuration data used by project-backed labs that don't require
@@ -278,18 +278,4 @@ export interface ExtraLinksProjectData {
     featured_status: string;
     remix_ancestry: string[];
   };
-}
-
-// Text-based labs that are currently supported by lab2.
-export const TEXT_BASED_LABS: AppName[] = ['aichat', 'pythonlab', 'weblab2'];
-
-export interface PredictSettings {
-  isPredictLevel: boolean;
-  placeholderText?: string;
-  solution?: string | string[];
-  questionType?: PredictQuestionType;
-  multipleChoiceOptions?: string[];
-  multipleChoiceAnswers?: string[];
-  allowMultipleAttempts?: boolean;
-  freeResponseHeight?: number;
 }
