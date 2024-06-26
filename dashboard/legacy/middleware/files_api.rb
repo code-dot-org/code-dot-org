@@ -9,8 +9,6 @@ require 'nokogiri'
 
 class FilesApi < Sinatra::Base
   set :mustermann_opts, check_anchors: false
-  # Can set this to an empty array if we do not want aichat checked for profanity.
-  LABS_TO_CHECK_FOR_PROFANITY = DCDO.get('labs_to_check_for_profanity', ['aichat'])
 
   def max_file_size
     5_000_000 # 5 MB
@@ -420,15 +418,18 @@ class FilesApi < Sinatra::Base
     # Javalab's "backpack" feature uses libraries to allow students to share code
     # between their own projects -- skip this check for .java files, since in this use case
     # the files are only being used by a single user.
-    if (endpoint == 'libraries' && file_type != '.java') || LABS_TO_CHECK_FOR_PROFANITY.include?(project_type)
+    if (endpoint == 'libraries' && file_type != '.java') || profanity_project_type?(project_type)
+      text_to_check = body
+      if project_type == 'aichat'
+        source = JSON.parse(body)['source']
+        source_json = JSON.parse(source)
+        text_to_check = source_json['systemPrompt'] + ' ' + source_json['retrievalContexts'].join(' ')
+      end
       begin
-        if project_type == 'aichat'
-          source = JSON.parse(body)['source']
-          source_json = JSON.parse(source)
-          text_to_check = source_json['systemPrompt'] + ' ' + source_json['retrievalContexts'].join(' ')
-          share_failure = ShareFiltering.find_failure(text_to_check, request.locale)
+        if profanity_project_type?(project_type)
+          share_failure = ShareFiltering.find_profanity_failure(text_to_check, request.locale)
         else
-          share_failure = ShareFiltering.find_failure(body, request.locale)
+          share_failure = ShareFiltering.find_failure(text_to_check request.locale)
         end
       rescue StandardError => exception
         return file_too_large(endpoint) if exception.instance_of?(WebPurify::TextTooLongError)
@@ -438,14 +439,12 @@ class FilesApi < Sinatra::Base
       # TODO(JillianK): we are temporarily ignoring address share failures because our address detection is very broken.
       # Once we have a better geocoding solution in H1, we should start filtering for addresses again.
       # Additional context: https://codedotorg.atlassian.net/browse/STAR-1361
-      if project_type != 'aichat' && share_failure && share_failure[:type] != "address"
-        details_key = share_failure.type == ShareFiltering::FailureType::PROFANITY ? "profaneWords" : "pIIWords"
-        details = {details_key => [share_failure.content]}
-        return json_bad_request(details)
-      end
-      # For now, just check for profanity in aichat.
-      if project_type == 'aichat' && share_failure && share_failure[:type] == ShareFiltering::FailureType::PROFANITY
-        details_key = "profaneWords"
+      if share_failure && share_failure[:type] != ShareFiltering::FailureType::ADDRESS
+        if share_failure[:type] == ShareFiltering::FailureType::PROFANITY
+          details_key = "profaneWords"
+        else
+          details_key = "pIIWords"
+        end
         details = {details_key => [share_failure.content]}
         return json_bad_request(details)
       end
@@ -1097,5 +1096,12 @@ class FilesApi < Sinatra::Base
   private def moderate_channel?(encrypted_channel_id)
     project = Projects.new(get_storage_id)
     !project.content_moderation_disabled?(encrypted_channel_id)
+  end
+
+  # Can set this to an empty array if we do not want aichat checked for profanity.
+  LABS_TO_CHECK_FOR_PROFANITY = DCDO.get('labs_to_check_for_profanity', ['aichat'])
+
+  private def profanity_project_type?(project_type)
+    LABS_TO_CHECK_FOR_PROFANITY.include?(project_type)
   end
 end

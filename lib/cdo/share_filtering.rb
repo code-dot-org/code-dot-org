@@ -112,6 +112,15 @@ module ShareFiltering
     nil
   end
 
+  def self.find_profanity_failure(text, locale, profanity_filter_replace_text_list = {}, exceptions: false)
+    expletive = ProfanityFilter.find_potential_profanity(text, locale, profanity_filter_replace_text_list)
+    share_failure = ShareFailure.new(FailureType::PROFANITY, expletive) if expletive
+    raise ProfanityFilterException.new("Profanity Filter Violation", share_failure) if share_failure && exceptions
+    return share_failure if share_failure
+
+    nil
+  end
+
   # Searches for all sources of offenses in text that might be worth flagging.
   # Returns both the error type and the offending text snippet.
   #
@@ -138,10 +147,8 @@ module ShareFiltering
     return pii_failure if pii_failure
 
     # Search for profanity
-    expletive = ProfanityFilter.find_potential_profanity(text, locale, profanity_filter_replace_text_list)
-    share_failure = ShareFailure.new(FailureType::PROFANITY, expletive) if expletive
-    raise ProfanityFilterException.new("Profanity Filter Violation", share_failure) if share_failure && exceptions
-    return share_failure if share_failure
+    profanity_failure = find_profanity_failure(text, locale, profanity_filter_replace_text_list, exceptions: exceptions)
+    return profanity_failure if profanity_failure
 
     nil
   end
