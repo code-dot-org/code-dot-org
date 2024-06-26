@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": "computer-vision",
-    "serialized_at": "2024-06-22 01:35:52 UTC",
+    "serialized_at": "2024-06-26 16:06:09 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -132,6 +132,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "assessment_opportunities": "### (Optional) JuiceMind Assessment\n\nYou can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://play.juicemind.com/create/OIcMzfkoETJJUXSpMMrj).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\nNote: You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
         "overview": "**How can we put ourselves in the shoes of our users?**\n\nThis lesson delves into understanding user needs and problems through qualitative and quantitative data collection. Students are introduced to the Design Thinking Process, particularly the \"Empathize\" phase, using real-world examples like FarmWise's approach to understanding farmer needs. Students then practice developing empathy and tailored research questions for community-specific issues. The aim is for students to learn effective strategies for gathering user data that will inform the design of practical solutions.",
         "preparation": "* Print copies of the Communities I Belong To activity guide (one for each student)\n* Print copies of the Problem Observations to Research Questions activity guide (one for each group of students)\n",
         "student_overview": "**How can we put ourselves in the shoes of our users?**\n\nToday's lesson focuses on empathizing with users, an essential step in creating technology that meets people's needs. You will look at how companies like Farmwise learn directly from their users by engaging with them in meaningful ways. You will also explore different communities you belong to, identify their unique challenges, and think about questions that can help you better understand these challenges."
@@ -150,6 +151,7 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "assessment_opportunities": "### (Optional) JuiceMind Assessment\n\nYou can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://play.juicemind.com/create/OIcMzfkoETJJUXSpMMrj).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\nNote: You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
         "overview": "**How can we collect data that helps us better understand our users?**\n\nIn this lesson, students learn to distinguish between qualitative and quantitative data, which are vital skills for understanding user needs and behaviors. This lesson uses a workout tracking device as a case study to discuss privacy concerns and user demographics. Students then develop a data collection plan that includes crafting questions that yield both data types. By the end of the lesson, students should be able to apply these skills to create surveys tailored to collecting useful user data, which they will use to inform their project designs.",
         "preparation": "* (Optional) Print copies of the Paper Survey Template (one for each group of students)\n",
         "student_overview": "**How can we collect data that helps us better understand our users?**\n\nToday, we're learning about collecting data to understand better what users need from technology. You explore the difference between qualitative data, which describes using words, and quantitative data, which uses numbers. By the end of today's lesson, you will know how to ask the right questions to gather valuable information from users, helping you make solutions that truly meet their needs."
@@ -168,6 +170,7 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
+        "assessment_opportunities": "### (Optional) JuiceMind Assessment\n\nYou can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://play.juicemind.com/create/OIcMzfkoETJJUXSpMMrj).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\nNote: You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
         "overview": "**How can data visualizations give insight into a community's needs?**\n\nThis lesson focuses on the pivotal role of data in shaping product features and services. Students learn to translate user data into actionable insights through visual representations. Using examples like robotic vacuum cleaners, students explore how data visualizations can highlight user concerns and inform feature development. Activities guide them through creating and interpreting their own visualizations using tools like Google Sheets, culminating in a deep understanding of how visual data can reveal trends and needs within a community.",
         "preparation": "* Students will need access to the data that they gathered from the survey that they created and distributed in the previous lesson. If students don’t have access to data, you may provide them with a pre-created set of survey data.\n",
         "student_overview": "**How can data visualizations give insight into a community's needs?**\n\nIn today's lesson, we discover how visualizing data helps us understand what features a product needs to serve its users better. You learn to create your own data visualizations, like graphs or charts, using Google Sheets. These visual tools will help you see patterns and insights about the needs of a community, guiding you in developing solutions that help. By the end of the lesson, you can take information and turn it into a visual story that can inform better decisions."
@@ -186,6 +189,7 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "assessment_opportunities": "### (Optional) JuiceMind Assessment\n\nYou can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://play.juicemind.com/create/OIcMzfkoETJJUXSpMMrj).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\nNote: You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
         "overview": "**How can we identify the core problem our product or service should address?**\n\nThis lesson equips students with the tools to deeply understand user needs and articulate problem statements effectively. The lesson focuses on constructing user stories from gathered data and using these to develop specific, insightful problem statements that address real user concerns. Activities will challenge students to analyze user behavior patterns and to think critically about the underlying reasons for these behaviors, using iterative questioning to refine their understanding. By the end of the lesson, students should be able to create user stories and corresponding problem statements that guide the development of user-centered solutions.",
         "preparation": "* Print copies of the User Personas and Problem Statements activity guide (one for each project group)\n",
         "student_overview": "**How can we identify the core problem our product or service should address?**\n\nToday's lesson is all about understanding the people who use technology—like you! You learn to create user stories, which are short descriptions that capture what users do and why they might behave a certain way based on our research. From these stories, we craft problem statements that clearly state what issues we must solve. This process helps us think deeply about the needs and challenges of users, guiding us to design technology that truly makes a difference."
@@ -204,6 +208,7 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "assessment_opportunities": "### (Optional) JuiceMind Assessment\n\nYou can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://play.juicemind.com/create/OIcMzfkoETJJUXSpMMrj).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\nNote: You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
         "overview": "**How should we tell computers what a pixel represents in an image?**\n\nThis lesson introduces students to the fundamental concepts of digital image processing and information encoding. Students explore how images are represented on screens using pixels and color values (RGB) and how QR codes use these principles to encode data. Students engage in activities that illustrate the conversion of binary data into visual patterns and explore decoding mechanisms. By the end of the lesson, students should be able to explain the information stored within a pixel and apply their knowledge to encode and decode QR codes.",
         "preparation": "* Print or provide a digital copy of the QR Code Exploration Activity Guide\n* Print or provide a digital copy of the Lotus Blossom diagram\n",
         "student_overview": "**How should we tell computers what a pixel represents in an image?**\n\nIn today's lesson, we uncover the science behind digital images and QR codes. You learn how tiny dots called pixels make up the images you see on your screens and how these pixels use colors to convey information. We also investigate how QR codes store data using black-and-white patterns. By the end of the lesson, you know how to read and create your own QR codes, understanding what each part of these codes represents."
@@ -222,6 +227,7 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "assessment_opportunities": "### (Optional) JuiceMind Assessment\n\nYou can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://play.juicemind.com/create/OIcMzfkoETJJUXSpMMrj).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\nNote: You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
         "overview": "**Why do we use image filters?**\n\nThis lesson focuses on developing algorithms that help computers identify and outline distinct boundaries within images. Students learn how edge detection algorithms work and their applications in computer vision, particularly in image processing and enhancement. They engage in activities that involve writing and optimizing their own edge detection algorithms and discussing their efficiency and practical applications. By the end of this lesson, students should understand the technical aspects and importance of edge detection in various computer vision tasks.",
         "preparation": "* Print a classroom set of the Algorithm Hint Cards\n",
         "student_overview": "**Why do we use image filters?**\n\nToday, we dive into how computers understand and process images through edge detection. You learn to create algorithms that help a computer highlight the edges of objects in a picture—much like sketching only the outlines of someone's face. We also discuss how these algorithms can be made faster and more effective. By the end of the lesson, you will have a clearer idea of how this technology works and why it's crucial for enhancing images or helping autonomous cars understand their surroundings."
@@ -256,6 +262,7 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
+        "assessment_opportunities": "### (Optional) JuiceMind Assessment\n\nYou can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://play.juicemind.com/create/OIcMzfkoETJJUXSpMMrj).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\nNote: You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
         "overview": "**How do we know a dataset is appropriate for a specific problem?**\n\nIn this lesson, students explore the role of datasets in training computer vision models and learn how to evaluate the suitability of datasets for specific applications. The lesson includes hands-on exploration of the COCO dataset and object detection models using MediaPipe, allowing students to understand the practical aspects of using pre-trained models and the importance of confidence scores in model predictions. By the end of this lesson, students should be able to assess the relevance and quality of a dataset for solving a particular problem in computer vision.",
         "preparation": "* Print copies of the Classifying and Grouping Images resource (one set for each pair of students)\n",
         "student_overview": "**How do we know a dataset is appropriate for a specific problem?**\n\nToday, you learn how computer vision systems use large collections of images, known as datasets, to make sense of new images. We explore the COCO dataset to see how images are categorized and use the MediaPipe object detection model to understand how these categories help the model recognize objects in images. You also discover how confidence scores indicate the reliability of the model's predictions. By the end of the lesson, you know how to choose the right dataset for a specific problem and evaluate the effectiveness of computer vision models."
@@ -274,6 +281,7 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "assessment_opportunities": "### (Optional) JuiceMind Assessment\n\nYou can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://play.juicemind.com/create/OIcMzfkoETJJUXSpMMrj).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\nNote: You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
         "overview": "**How might bias affect users who engage with computer vision applications?**\n\nThis lesson addresses the critical topic of bias in computer vision systems. Students explore how biases in training data can affect the performance and fairness of computer vision applications using practical activities like the COCO dataset exploration and Auto-Doggie Door model testing. Students engage in discussions and activities designed to identify potential biases and propose methods to mitigate them, ensuring more equitable technology solutions. By the end of this lesson, students should be able to recognize bias in datasets and understand strategies to reduce its impact.",
         "preparation": "* Print copies of the Bingo Cards resource (one card for each student)\n",
         "student_overview": "**How might bias affect users who engage with computer vision applications?**\n\nToday, we're tackling an important issue in technology: bias in computer vision. You learn how biases can sneak into the data that train AI models, like the ones that recognize faces or interpret commands, and see firsthand how this can lead to unfair outcomes. We experiment with a model designed to recognize dogs to see which ones it identifies correctly and which ones it doesn't, discussing why this happens. By understanding these challenges, you are better equipped to think critically about technology and ensure it works fairly for everyone."
@@ -292,6 +300,7 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "assessment_opportunities": "### (Optional) JuiceMind Assessment\n\nYou can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://play.juicemind.com/create/OIcMzfkoETJJUXSpMMrj).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\nNote: You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
         "overview": "**How does the quality and quantity of training data impact the performance of computer vision models?**\n\nThis lesson introduces students to the practical aspects of training a computer vision model using the Teachable Machine platform. This lesson emphasizes the importance of visual data in training models and the impact of data quality and quantity on model performance. Students engage in hands-on activities to create, train, and test their own image or pose classification models, understanding the challenges and considerations involved in model development. By the end of the lesson, students should be proficient in the basics of model training and evaluating their models in real-world applications.",
         "preparation": "* Print the Object Cards resource\n* Print copies of the Training a Model activity guide (one for each student)\n",
         "student_overview": "**How does the quality and quantity of training data impact the performance of computer vision models?**\n\nToday, we're stepping into machine learning by training our models using a tool called Teachable Machine. You learn how computers use images to learn and make decisions, and you get to create a model that can classify images or poses. We explore how the quality and diversity of your images can affect your model's ability to identify what it sees correctly. By the end of the lesson, you will better understand how AI models work and how to improve them."
@@ -310,6 +319,7 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
+        "assessment_opportunities": "### (Optional) JuiceMind Assessment\n\nYou can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://play.juicemind.com/create/OIcMzfkoETJJUXSpMMrj).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\nNote: You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
         "overview": "**How do the benefits and challenges of computer vision technologies impact society?**\n\nThis lesson examines the ethical implications, potential biases, privacy concerns, and security challenges associated with computer vision technologies. Students are encouraged to think critically about developing and implementing computer vision in various sectors of society and explore how to ethically align technologies with societal needs, ensure privacy protection, and manage biases. By the end of this lesson, students should be able to articulate thoughtful perspectives on how computer vision technologies can be developed and used responsibly.",
         "preparation": "* Print copies of the Ethics Exploration activity guide (one for each pair of students)\n",
         "student_overview": "**How do the benefits and challenges of computer vision technologies impact society?**\n\nToday, we're diving into the ethical landscape of computer vision technologies. We explore the benefits and challenges of these technologies, particularly how they impact privacy, security, and society at large. You engage in activities that help you understand the importance of ethical considerations like bias and consent in technology development. By the end of the lesson, you will have a deeper understanding of what needs to be considered to ensure that computer vision technologies are used in a way that benefits everyone."
@@ -328,6 +338,7 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
+        "assessment_opportunities": "### (Optional) JuiceMind Assessment\n\nYou can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://play.juicemind.com/create/OIcMzfkoETJJUXSpMMrj).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\nNote: You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
         "overview": "**How might we develop computer vision applications that focus on our user's needs?**\n\nThis lesson is about initiating the prototyping phase in developing computer vision applications. Students are guided through creating and refining prototypes that address societal issues and personal interests. The iterative nature of design is emphasized, encouraging students to apply feedback effectively to enhance their projects. The activities include discussing the scope of their projects, deciding on additional features, and using various methods like storyboards and digital mockups to visualize their ideas. By the end of this lesson, students should clearly understand how to develop and refine a prototype that meets user needs.",
         "preparation": "* Collect necessary materials for prototype development, which may include paper, markers, crafting supplies, and any specific tools relevant to the computer vision projects being developed.\n* Print the Inspiration Cards resource (one class set)\n* Gather different colored cups or colored construction paper for the status updates (one set for each project group)\n",
         "student_overview": "**How might we develop computer vision applications that focus on our user's needs?**\n\nToday, we develop our first prototypes by turning our computer vision ideas into reality. You think about what features your project needs and how you can visually represent these ideas. We discuss why creating a prototype is important and how \"failing\" at this stage can help improve your project. By the end of the lesson, you should have a basic prototype that you can test and iterate on based on the feedback you receive."
@@ -346,6 +357,7 @@
       "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
+        "assessment_opportunities": "### (Optional) JuiceMind Assessment\n\nYou can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://play.juicemind.com/create/OIcMzfkoETJJUXSpMMrj).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\nNote: You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
         "overview": "**How might we develop computer vision applications that focus on our user's needs?**\n\nThis lesson continues the practical work of refining and iterating on computer vision prototypes, students began in the previous lesson. Students focus on assessing and enhancing the prototypes based on specific criteria outlined in a rubric. Students are encouraged to identify improvement areas and seek and incorporate feedback effectively. By the end of this lesson, students should have made significant advances in their prototypes, with a clearer understanding of how to align their projects with user needs.",
         "student_overview": "**How might we develop computer vision applications that focus on our user's needs?**\n\nIn today's lesson, we're continuing to develop and refine our computer vision prototypes. You evaluate what's working and what's not, using a rubric to guide your revisions. We also discuss any challenges you're facing and brainstorm solutions together. This iteration process is key to creating a solution that truly meets the needs of its users. By the end of the lesson, your prototype should be closer to something that can be tested and eventually implemented."
       },
@@ -363,6 +375,7 @@
       "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
+        "assessment_opportunities": "### (Optional) JuiceMind Assessment\n\nYou can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://play.juicemind.com/create/OIcMzfkoETJJUXSpMMrj).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\nNote: You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
         "overview": "This lesson is an essential phase in the Design Thinking Process where students learn the value of gathering and incorporating user feedback into their computer vision projects. Students are guided through the process of role-playing different users to understand diverse perspectives and needs. They learn how to receive and interpret feedback constructively to refine their prototypes. By the end of this lesson, students should have actionable insights to enhance their projects based on user feedback.\n\n**Question of the day:** How can testing a design with users help to improve it?",
         "preparation": "* Print copies of the User Feedback sheets, double-sided (about 6-8 feedback sheets per group)\n",
         "student_overview": "Today, we're focusing on understanding how real users interact with and feel about your computer vision prototypes. You play the role of different users, like an elderly driver or a retail employee, to see how well computer vision solutions meet their needs. By stepping into their shoes, you gain valuable insights into how your technology can serve people better. We gather feedback on each project, which will help you see your work from new angles and discover ways to improve.\n\n**Question of the day:** How can testing a design with users help to improve it?\n"
@@ -381,6 +394,7 @@
       "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
+        "assessment_opportunities": "### (Optional) JuiceMind Assessment\n\nYou can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://play.juicemind.com/create/OIcMzfkoETJJUXSpMMrj).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\nNote: You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
         "overview": "**How can user feedback inform the iterative nature of the Design Thinking Process?**\n\nIn this lesson, students refine their prototypes based on user feedback. Students learn to evaluate, prioritize, and effectively incorporate suggestions to enhance their computer vision projects. The lesson emphasizes the importance of being responsive to user needs and adjusting designs accordingly through a structured activity involving a categorization method (Must Have, Should Have, Could Have, Will Not Have). By the end of this lesson, students should have a refined prototype that better meets the needs of their target users.",
         "preparation": "* Gather enough of each type of object used in the Warm-up activity for each group of two to three students so that each group has a physical object to work with during the activity. \n* Create or arrange the materials for students to categorize feedback (e.g., sticky notes in various colors, digital platforms like Miro or Google Slides for virtual categorization, and printed templates for feedback organization).\n* Ensure that necessary tools for prototype iteration are ready and accessible. This could involve software for digital prototypes or materials like paper, markers, and model-making supplies for physical prototypes.\n",
         "student_overview": "**How can user feedback inform the iterative nature of the Design Thinking Process?**\n\nToday, we'll examine the feedback you've received on your prototypes. You'll learn how to categorize this feedback based on its importance and urgency, which will help you decide which suggestions to implement first. This process is crucial for refining your project to ensure it effectively meets the needs of its users. By prioritizing and acting on the most critical feedback, you'll make your project more robust and user-friendly."
@@ -1234,16 +1248,33 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 2 to complete the reflection question:\n\n* _What is your definition of computer vision?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goal:** This activity allows students to share what they have constructed as their working definition of computer vision thus far. This definition is sure to evolve and grow as the module progresses. Some possible examples for a working definition that students might construct include: \n* Computer vision is like when your computer tries to figure out what's in a picture, kind of like how we recognize our friends' faces or stuff in photos \n* Computer vision helps computers 'see' and understand the images and videos like we do, but through cameras and algorithms \n* It's like teaching a computer to see and interpret the world around it, so it can recognize objects, people, and even actions \n* It's a part of artificial intelligence where computers are trained to interpret and understand the visual world.",
-        "progression_name": "Reflection",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "It might prove to be an interesting experience to revisit these student responses to this question at the end of the module to see what has changed and why."
-          }
-        ]
+        "progression_name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "ef4655bf-d645-45a4-8551-89e0501f2b1c",
+        "lesson_activity.key": "387829bb-271a-465e-8199-e15e2a956052"
+      }
+    },
+    {
+      "key": "8a6d8d58-2dfc-45e7-bcb1-c5764bf5fd31",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8a6d8d58-2dfc-45e7-bcb1-c5764bf5fd31",
+        "lesson_activity.key": "387829bb-271a-465e-8199-e15e2a956052"
+      }
+    },
+    {
+      "key": "5a2ae495-4449-4496-8b1c-3aa87e2eb6b0",
+      "position": 3,
+      "properties": {
+        "description": "You can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://play.juicemind.com/create/OIcMzfkoETJJUXSpMMrj).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note:** You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
+        "name": "(Optional) JuiceMind Assessment",
+        "progression_name": "JuiceMind Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "5a2ae495-4449-4496-8b1c-3aa87e2eb6b0",
         "lesson_activity.key": "387829bb-271a-465e-8199-e15e2a956052"
       }
     },
@@ -1403,7 +1434,7 @@
       "key": "5112c678-0a5b-4d55-a3ea-2191eb719f4f",
       "position": 9,
       "properties": {
-        "description": "Next, we are going to practice turning observations about problems facing a community into questions that will allow us to gather more information about our users’ needs. For this, let’s return to the example of FarmWise employees volunteering on farms and interviewing farmers.\n\nWe already discussed some things that the FarmWise employees might have learned from their interviews. Let’s break down the process of gathering that information a little bit more, starting with some observations that the designers might have made while volunteering as a part of the farming community: Lack of access to enough water Trouble finding enough workers to hire Challenges minimizing the loss of crops due to pests and disease.\n\nThese problems and the needs associated with them might be obvious to members of the community, but as designers, our job is to find out more about what our users need instead of making assumptions. To do this, we need to dig a bit deeper by talking with users, just like the FarmWise employees interviewed farmers.\n\nTurning these observations into research questions will help you as a designer gather more data about your users and help you more clearly define the problem you are trying to solve.\n\nHere is an example of a question that the employees at FarmWise might have asked to learn more about the issue of water scarcity. Can you think of questions they might ask about labor shortages or pest and disease management?",
+        "description": "Next, we are going to practice turning observations about problems facing a community, into questions that will allow us to gather more information about our users' needs. For this, let's return to the example of FarmWise employees volunteering on farms, and interviewing farmers.\n\nWe already discussed some things that the FarmWise employees might have learned from their interviews. Let's break down the process of gathering that information a little bit more, starting with some observations that the designers might have made while volunteering as part of the farming community: lack of access to enough water, trouble finding enough workers to hire, and challenges minimizing the loss of crops due to pests and disease.\n\nThese problems and the needs associated with them might be obvious to members of the community. But, as designers, our job is to find out more about what our users need instead of making assumptions. To do this, we need to dig a bit deeper by talking with users, just like the FarmWise employees interviewed farmers.\n\nTurning these observations into research questions will help you, as a designer, gather more data about your users and help you more clearly define the problem you are trying to solve.\n\nHere is an example of a question that the employees at FarmWise might have asked to learn more about the issue of water scarcity. Can you think of questions they might ask about labor shortages, or pest and disease management?",
         "remarks": true
       },
       "seeding_key": {
@@ -3803,6 +3834,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "cv-studentsurvey-premodule"
+        ],
         "progression": "Pre-Module Survey"
       },
       "bonus": false,
@@ -3871,6 +3905,28 @@
     },
     {
       "chapter": 4,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "JuiceMind Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computervision-lesson1-juicemindquiz"
+        ],
+        "lesson.key": "Introduction to Computer Vision",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision",
+        "activity_section.key": "5a2ae495-4449-4496-8b1c-3aa87e2eb6b0"
+      },
+      "level_keys": [
+        "computervision-lesson1-juicemindquiz"
+      ]
+    },
+    {
+      "chapter": 5,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -3895,7 +3951,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -3920,7 +3976,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -3945,7 +4001,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3970,7 +4026,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3995,7 +4051,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -4020,7 +4076,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4045,7 +4101,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -4070,7 +4126,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 3,
       "activity_section_position": 3,
       "assessment": true,
@@ -4095,7 +4151,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4120,7 +4176,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4145,7 +4201,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -4170,7 +4226,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4195,7 +4251,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -4220,11 +4276,14 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "cv-studentsurvey-midmodule"
+        ],
         "progression": "Mid-Module Survey"
       },
       "bonus": false,
@@ -4242,7 +4301,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4267,7 +4326,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4292,7 +4351,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4317,7 +4376,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4342,7 +4401,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -4367,7 +4426,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 6,
       "activity_section_position": 2,
       "assessment": true,
@@ -4392,7 +4451,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 7,
       "activity_section_position": 3,
       "assessment": true,
@@ -4417,7 +4476,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4442,7 +4501,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4467,7 +4526,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -4492,7 +4551,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4517,7 +4576,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4542,7 +4601,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -4567,7 +4626,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 4,
       "activity_section_position": 3,
       "assessment": true,
@@ -4592,7 +4651,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4617,7 +4676,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4642,7 +4701,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -4667,7 +4726,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 4,
       "activity_section_position": 3,
       "assessment": true,
@@ -4692,7 +4751,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4717,7 +4776,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -4742,7 +4801,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4767,7 +4826,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4792,7 +4851,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -4817,7 +4876,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4842,7 +4901,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -4867,7 +4926,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 3,
       "activity_section_position": 3,
       "assessment": true,
@@ -4892,7 +4951,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4917,7 +4976,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -4942,7 +5001,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 3,
       "activity_section_position": 3,
       "assessment": true,
@@ -4967,11 +5026,14 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "cv-studentsurvey-postmodule"
+        ],
         "progression": "Post-Module Survey"
       },
       "bonus": false,
@@ -5024,6 +5086,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "ef4655bf-d645-45a4-8551-89e0501f2b1c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computervision-lesson1-juicemindquiz",
+        "script_level.level_keys": [
+          "computervision-lesson1-juicemindquiz"
+        ],
+        "lesson.key": "Introduction to Computer Vision",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision",
+        "activity_section.key": "5a2ae495-4449-4496-8b1c-3aa87e2eb6b0"
       }
     },
     {
@@ -5787,6 +5861,19 @@
       }
     },
     {
+      "name": "Edge Detection Algorithm Guide",
+      "url": "https://docs.google.com/document/d/105VSDMbOHSkPw2J3IDxJ8naTEGFgH1S2EHF6FY_NfB8/edit?usp=sharing",
+      "key": "edge_detection_algorithm_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "edge_detection_algorithm_guide"
+      }
+    },
+    {
       "name": "Empathizing with Users",
       "url": "https://docs.google.com/presentation/d/1HoRS5VKrUOX0uqgc7UBJn6uqZeSIrghF4lBmaEiGWL4/template/preview",
       "key": "empathizing_with_users",
@@ -6223,6 +6310,12 @@
       "seeding_key": {
         "lesson.key": "Edge Detection",
         "resource.key": "edge_detection"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Edge Detection",
+        "resource.key": "edge_detection_algorithm_guide"
       }
     },
     {
