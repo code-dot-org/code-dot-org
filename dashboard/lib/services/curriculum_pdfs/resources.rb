@@ -129,15 +129,6 @@ module Services
             type: :haml
           )
 
-          # # Or, write to a file
-          # File.write('output.html', page_content)
-
-          # temp_html_path = File.join(Dir.tmpdir, 'lesson_preview.html')
-          # File.write(temp_html_path, page_content)
-
-          # # Assuming you're on a system where you can programmatically open a browser:
-          # system("open #{temp_html_path}")  # On macOS
-
           filename = ActiveStorage::Filename.new("lesson.#{lesson.key.parameterize}.title.pdf").to_s
           path = File.join(directory, filename)
 

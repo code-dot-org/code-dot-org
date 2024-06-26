@@ -62,18 +62,6 @@ module PDF
     temp_file_handles.each(&:unlink)
   end
 
-  def self.prepare_pdf_for_merging(original_file)
-    temp_file = "#{File.dirname(original_file)}/optimized_#{File.basename(original_file)}"
-    gs_preprocess_command = "gs -sDEVICE=pdfwrite -dNOPAUSE -dBATCH -dQUIET -sOutputFile=#{Shellwords.escape(temp_file)} #{Shellwords.escape(original_file)}"
-
-    system(gs_preprocess_command)
-    unless $?.exitstatus == 0
-      raise "Ghostscript preprocessing error for file #{original_file}"
-    end
-
-    temp_file
-  end
-
   def self.merge_local_pdfs(output_file, *filenames)
     escaped_filenames = filenames.map {|f| Shellwords.escape(f)}
     gs_command = "gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=#{Shellwords.escape(output_file)} #{escaped_filenames.join(' ')}"
