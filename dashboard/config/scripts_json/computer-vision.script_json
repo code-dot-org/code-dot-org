@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": "computer-vision",
-    "serialized_at": "2024-06-26 16:06:09 UTC",
+    "serialized_at": "2024-06-26 16:40:18 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -132,7 +132,6 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "assessment_opportunities": "### (Optional) JuiceMind Assessment\n\nYou can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://play.juicemind.com/create/OIcMzfkoETJJUXSpMMrj).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\nNote: You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
         "overview": "**How can we put ourselves in the shoes of our users?**\n\nThis lesson delves into understanding user needs and problems through qualitative and quantitative data collection. Students are introduced to the Design Thinking Process, particularly the \"Empathize\" phase, using real-world examples like FarmWise's approach to understanding farmer needs. Students then practice developing empathy and tailored research questions for community-specific issues. The aim is for students to learn effective strategies for gathering user data that will inform the design of practical solutions.",
         "preparation": "* Print copies of the Communities I Belong To activity guide (one for each student)\n* Print copies of the Problem Observations to Research Questions activity guide (one for each group of students)\n",
         "student_overview": "**How can we put ourselves in the shoes of our users?**\n\nToday's lesson focuses on empathizing with users, an essential step in creating technology that meets people's needs. You will look at how companies like Farmwise learn directly from their users by engaging with them in meaningful ways. You will also explore different communities you belong to, identify their unique challenges, and think about questions that can help you better understand these challenges."
@@ -151,7 +150,6 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "assessment_opportunities": "### (Optional) JuiceMind Assessment\n\nYou can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://play.juicemind.com/create/OIcMzfkoETJJUXSpMMrj).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\nNote: You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
         "overview": "**How can we collect data that helps us better understand our users?**\n\nIn this lesson, students learn to distinguish between qualitative and quantitative data, which are vital skills for understanding user needs and behaviors. This lesson uses a workout tracking device as a case study to discuss privacy concerns and user demographics. Students then develop a data collection plan that includes crafting questions that yield both data types. By the end of the lesson, students should be able to apply these skills to create surveys tailored to collecting useful user data, which they will use to inform their project designs.",
         "preparation": "* (Optional) Print copies of the Paper Survey Template (one for each group of students)\n",
         "student_overview": "**How can we collect data that helps us better understand our users?**\n\nToday, we're learning about collecting data to understand better what users need from technology. You explore the difference between qualitative data, which describes using words, and quantitative data, which uses numbers. By the end of today's lesson, you will know how to ask the right questions to gather valuable information from users, helping you make solutions that truly meet their needs."
@@ -170,7 +168,6 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "assessment_opportunities": "### (Optional) JuiceMind Assessment\n\nYou can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://play.juicemind.com/create/OIcMzfkoETJJUXSpMMrj).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\nNote: You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
         "overview": "**How can data visualizations give insight into a community's needs?**\n\nThis lesson focuses on the pivotal role of data in shaping product features and services. Students learn to translate user data into actionable insights through visual representations. Using examples like robotic vacuum cleaners, students explore how data visualizations can highlight user concerns and inform feature development. Activities guide them through creating and interpreting their own visualizations using tools like Google Sheets, culminating in a deep understanding of how visual data can reveal trends and needs within a community.",
         "preparation": "* Students will need access to the data that they gathered from the survey that they created and distributed in the previous lesson. If students don’t have access to data, you may provide them with a pre-created set of survey data.\n",
         "student_overview": "**How can data visualizations give insight into a community's needs?**\n\nIn today's lesson, we discover how visualizing data helps us understand what features a product needs to serve its users better. You learn to create your own data visualizations, like graphs or charts, using Google Sheets. These visual tools will help you see patterns and insights about the needs of a community, guiding you in developing solutions that help. By the end of the lesson, you can take information and turn it into a visual story that can inform better decisions."
@@ -189,7 +186,6 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "assessment_opportunities": "### (Optional) JuiceMind Assessment\n\nYou can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://play.juicemind.com/create/OIcMzfkoETJJUXSpMMrj).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\nNote: You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
         "overview": "**How can we identify the core problem our product or service should address?**\n\nThis lesson equips students with the tools to deeply understand user needs and articulate problem statements effectively. The lesson focuses on constructing user stories from gathered data and using these to develop specific, insightful problem statements that address real user concerns. Activities will challenge students to analyze user behavior patterns and to think critically about the underlying reasons for these behaviors, using iterative questioning to refine their understanding. By the end of the lesson, students should be able to create user stories and corresponding problem statements that guide the development of user-centered solutions.",
         "preparation": "* Print copies of the User Personas and Problem Statements activity guide (one for each project group)\n",
         "student_overview": "**How can we identify the core problem our product or service should address?**\n\nToday's lesson is all about understanding the people who use technology—like you! You learn to create user stories, which are short descriptions that capture what users do and why they might behave a certain way based on our research. From these stories, we craft problem statements that clearly state what issues we must solve. This process helps us think deeply about the needs and challenges of users, guiding us to design technology that truly makes a difference."
@@ -208,7 +204,6 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "assessment_opportunities": "### (Optional) JuiceMind Assessment\n\nYou can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://play.juicemind.com/create/OIcMzfkoETJJUXSpMMrj).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\nNote: You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
         "overview": "**How should we tell computers what a pixel represents in an image?**\n\nThis lesson introduces students to the fundamental concepts of digital image processing and information encoding. Students explore how images are represented on screens using pixels and color values (RGB) and how QR codes use these principles to encode data. Students engage in activities that illustrate the conversion of binary data into visual patterns and explore decoding mechanisms. By the end of the lesson, students should be able to explain the information stored within a pixel and apply their knowledge to encode and decode QR codes.",
         "preparation": "* Print or provide a digital copy of the QR Code Exploration Activity Guide\n* Print or provide a digital copy of the Lotus Blossom diagram\n",
         "student_overview": "**How should we tell computers what a pixel represents in an image?**\n\nIn today's lesson, we uncover the science behind digital images and QR codes. You learn how tiny dots called pixels make up the images you see on your screens and how these pixels use colors to convey information. We also investigate how QR codes store data using black-and-white patterns. By the end of the lesson, you know how to read and create your own QR codes, understanding what each part of these codes represents."
@@ -227,7 +222,6 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "assessment_opportunities": "### (Optional) JuiceMind Assessment\n\nYou can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://play.juicemind.com/create/OIcMzfkoETJJUXSpMMrj).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\nNote: You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
         "overview": "**Why do we use image filters?**\n\nThis lesson focuses on developing algorithms that help computers identify and outline distinct boundaries within images. Students learn how edge detection algorithms work and their applications in computer vision, particularly in image processing and enhancement. They engage in activities that involve writing and optimizing their own edge detection algorithms and discussing their efficiency and practical applications. By the end of this lesson, students should understand the technical aspects and importance of edge detection in various computer vision tasks.",
         "preparation": "* Print a classroom set of the Algorithm Hint Cards\n",
         "student_overview": "**Why do we use image filters?**\n\nToday, we dive into how computers understand and process images through edge detection. You learn to create algorithms that help a computer highlight the edges of objects in a picture—much like sketching only the outlines of someone's face. We also discuss how these algorithms can be made faster and more effective. By the end of the lesson, you will have a clearer idea of how this technology works and why it's crucial for enhancing images or helping autonomous cars understand their surroundings."
@@ -1522,6 +1516,29 @@
       }
     },
     {
+      "key": "4ca58aff-a143-4208-8b13-4d40b6a175c7",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4ca58aff-a143-4208-8b13-4d40b6a175c7",
+        "lesson_activity.key": "1c7252dc-fdbb-4087-adab-afc69c9cc1bf"
+      }
+    },
+    {
+      "key": "96c72b37-884d-4d27-bc3d-2187adea75a5",
+      "position": 5,
+      "properties": {
+        "description": "You can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://www.play.juicemind.com/quizzes/oh3RsgEInYZlgKlp3oM3).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note:** You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
+        "name": "(Optional) JuiceMind Assessment",
+        "progression_name": "JuiceMind Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "96c72b37-884d-4d27-bc3d-2187adea75a5",
+        "lesson_activity.key": "1c7252dc-fdbb-4087-adab-afc69c9cc1bf"
+      }
+    },
+    {
       "key": "0a08f120-407f-4da2-810f-b028c729c6fc",
       "position": 1,
       "properties": {
@@ -1636,6 +1653,29 @@
       },
       "seeding_key": {
         "activity_section.key": "bc9d6b75-bfb1-4679-acc8-06808b3d4135",
+        "lesson_activity.key": "b97fbb78-8663-4dc0-8f30-14239584542e"
+      }
+    },
+    {
+      "key": "cd7e047e-6d7d-4e57-a6a7-b19d4857f42f",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "cd7e047e-6d7d-4e57-a6a7-b19d4857f42f",
+        "lesson_activity.key": "b97fbb78-8663-4dc0-8f30-14239584542e"
+      }
+    },
+    {
+      "key": "e712616d-ea4b-4c31-945f-9fc149b6e0b1",
+      "position": 3,
+      "properties": {
+        "description": "You can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://www.play.juicemind.com/quizzes/VIobnrAsH2Gj1zJWkG2L).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note:** You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
+        "name": "(Optional) JuiceMind Assessment",
+        "progression_name": "JuiceMind Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "e712616d-ea4b-4c31-945f-9fc149b6e0b1",
         "lesson_activity.key": "b97fbb78-8663-4dc0-8f30-14239584542e"
       }
     },
@@ -1809,12 +1849,35 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "Review the different analyses that students performed on their data in order to know which groups might need more assistance at the next stage of project development, in which they will be taking this observation / question / inference and turning it into a user persona that attempts to define the type of user that might use their product, and what problem they have that might be potentially solved with a computer vision application."
+            "markdown": "Review the different analyses that students performed on their data to identify which groups might need more assistance at the next stage of project development. In the next phase of the project, they will use this to define the type of user that might use their product and what problem they have that could be solved with a computer vision application."
           }
         ]
       },
       "seeding_key": {
         "activity_section.key": "d78f8b37-cd36-45b9-b305-474d8ac49a6c",
+        "lesson_activity.key": "3681b01c-b446-4aeb-a334-592ee1b50025"
+      }
+    },
+    {
+      "key": "52377278-691f-4c67-8b29-baf5137257dc",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "52377278-691f-4c67-8b29-baf5137257dc",
+        "lesson_activity.key": "3681b01c-b446-4aeb-a334-592ee1b50025"
+      }
+    },
+    {
+      "key": "6afe8f87-8055-418f-a161-0cfef009d711",
+      "position": 3,
+      "properties": {
+        "description": "You can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://www.play.juicemind.com/quizzes/YBRHUa5z28OpnPvCU7w2).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note:** You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
+        "name": "(Optional) JuiceMind Assessment",
+        "progression_name": "JuiceMind Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "6afe8f87-8055-418f-a161-0cfef009d711",
         "lesson_activity.key": "3681b01c-b446-4aeb-a334-592ee1b50025"
       }
     },
@@ -2044,6 +2107,29 @@
       },
       "seeding_key": {
         "activity_section.key": "f4bcf09d-9edb-4f1c-84d7-facd68c80205",
+        "lesson_activity.key": "d267a158-cf8b-496c-a061-7c828b45db96"
+      }
+    },
+    {
+      "key": "6f44f491-ff19-43a6-8ea8-6eb943d0c2d2",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6f44f491-ff19-43a6-8ea8-6eb943d0c2d2",
+        "lesson_activity.key": "d267a158-cf8b-496c-a061-7c828b45db96"
+      }
+    },
+    {
+      "key": "2fcc8b18-8991-42c1-8117-503cd45ad7eb",
+      "position": 3,
+      "properties": {
+        "description": "You can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://www.play.juicemind.com/quizzes/gaHKHyGramrmMcTQs8e8).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note:** You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
+        "name": "(Optional) JuiceMind Assessment",
+        "progression_name": "JuiceMind Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "2fcc8b18-8991-42c1-8117-503cd45ad7eb",
         "lesson_activity.key": "d267a158-cf8b-496c-a061-7c828b45db96"
       }
     },
@@ -2284,6 +2370,29 @@
       }
     },
     {
+      "key": "bb16eacf-edb3-42e8-aea0-4448aa68f74a",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "bb16eacf-edb3-42e8-aea0-4448aa68f74a",
+        "lesson_activity.key": "d43e15ed-518c-47a4-a26b-c4c7c6af85c7"
+      }
+    },
+    {
+      "key": "8d5de666-17e1-4e2b-85c6-b1ea7c12f1e6",
+      "position": 3,
+      "properties": {
+        "description": "You can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://www.play.juicemind.com/quizzes/U3o2bLdZlZmZokSVmxaK).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note:** You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
+        "name": "(Optional) JuiceMind Assessment",
+        "progression_name": "JuiceMind Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "8d5de666-17e1-4e2b-85c6-b1ea7c12f1e6",
+        "lesson_activity.key": "d43e15ed-518c-47a4-a26b-c4c7c6af85c7"
+      }
+    },
+    {
       "key": "8c3da77d-2d7d-48ba-9038-d8a8cfaa5c6c",
       "position": 1,
       "properties": {
@@ -2456,6 +2565,29 @@
       },
       "seeding_key": {
         "activity_section.key": "cf99cdd6-86aa-466e-acdf-786c6a9971e0",
+        "lesson_activity.key": "02045366-94ac-4236-b403-3b0a988b3cd1"
+      }
+    },
+    {
+      "key": "33ce88fb-3ae6-473c-8d4a-c81b3258acaf",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "33ce88fb-3ae6-473c-8d4a-c81b3258acaf",
+        "lesson_activity.key": "02045366-94ac-4236-b403-3b0a988b3cd1"
+      }
+    },
+    {
+      "key": "cdfb7a9c-4cea-421c-b8d8-6b736d85ac4f",
+      "position": 3,
+      "properties": {
+        "description": "You can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://www.play.juicemind.com/quizzes/x0Jx9owE8cFyGjkhfbh9).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note:** You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
+        "name": "(Optional) JuiceMind Assessment",
+        "progression_name": "JuiceMind Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "cdfb7a9c-4cea-421c-b8d8-6b736d85ac4f",
         "lesson_activity.key": "02045366-94ac-4236-b403-3b0a988b3cd1"
       }
     },
@@ -3977,6 +4109,28 @@
     },
     {
       "chapter": 7,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "JuiceMind Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computervision-lesson2-juicemindquiz"
+        ],
+        "lesson.key": "Empathizing with Users",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision",
+        "activity_section.key": "96c72b37-884d-4d27-bc3d-2187adea75a5"
+      },
+      "level_keys": [
+        "computervision-lesson2-juicemindquiz"
+      ]
+    },
+    {
+      "chapter": 8,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4001,7 +4155,29 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "JuiceMind Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computervision-lesson3-juicemindquiz"
+        ],
+        "lesson.key": "Gathering User Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision",
+        "activity_section.key": "e712616d-ea4b-4c31-945f-9fc149b6e0b1"
+      },
+      "level_keys": [
+        "computervision-lesson3-juicemindquiz"
+      ]
+    },
+    {
+      "chapter": 10,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4026,7 +4202,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 11,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4051,7 +4227,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 12,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -4076,7 +4252,29 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 13,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "JuiceMind Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computervision-lesson4-juicemindquiz"
+        ],
+        "lesson.key": "Data Visualizations",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision",
+        "activity_section.key": "6afe8f87-8055-418f-a161-0cfef009d711"
+      },
+      "level_keys": [
+        "computervision-lesson4-juicemindquiz"
+      ]
+    },
+    {
+      "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4101,7 +4299,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 15,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -4126,7 +4324,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 16,
       "position": 3,
       "activity_section_position": 3,
       "assessment": true,
@@ -4151,7 +4349,29 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 17,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "JuiceMind Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computervision-lesson5-juicemindquiz"
+        ],
+        "lesson.key": "User Stories and Problem Statements",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision",
+        "activity_section.key": "2fcc8b18-8991-42c1-8117-503cd45ad7eb"
+      },
+      "level_keys": [
+        "computervision-lesson5-juicemindquiz"
+      ]
+    },
+    {
+      "chapter": 18,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4176,7 +4396,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 19,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4201,7 +4421,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 20,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -4226,7 +4446,29 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 21,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "JuiceMind Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computervision-lesson6-juicemindquiz"
+        ],
+        "lesson.key": "Pixels and QR Codes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision",
+        "activity_section.key": "8d5de666-17e1-4e2b-85c6-b1ea7c12f1e6"
+      },
+      "level_keys": [
+        "computervision-lesson6-juicemindquiz"
+      ]
+    },
+    {
+      "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4251,7 +4493,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 23,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -4276,7 +4518,29 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 24,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "JuiceMind Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computervision-lesson7-juicemindquiz"
+        ],
+        "lesson.key": "Edge Detection",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision",
+        "activity_section.key": "cdfb7a9c-4cea-421c-b8d8-6b736d85ac4f"
+      },
+      "level_keys": [
+        "computervision-lesson7-juicemindquiz"
+      ]
+    },
+    {
+      "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4301,7 +4565,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4326,7 +4590,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 27,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4351,7 +4615,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 28,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4376,7 +4640,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 29,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4401,7 +4665,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 30,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -4426,7 +4690,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 31,
       "position": 6,
       "activity_section_position": 2,
       "assessment": true,
@@ -4451,7 +4715,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 32,
       "position": 7,
       "activity_section_position": 3,
       "assessment": true,
@@ -4476,7 +4740,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4501,7 +4765,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 34,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4526,7 +4790,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 35,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -4551,7 +4815,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4576,7 +4840,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 37,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4601,7 +4865,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 38,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -4626,7 +4890,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 39,
       "position": 4,
       "activity_section_position": 3,
       "assessment": true,
@@ -4651,7 +4915,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4676,7 +4940,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 41,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4701,7 +4965,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 42,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -4726,7 +4990,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 43,
       "position": 4,
       "activity_section_position": 3,
       "assessment": true,
@@ -4751,7 +5015,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4776,7 +5040,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 45,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -4801,7 +5065,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 46,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4826,7 +5090,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 47,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4851,7 +5115,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 48,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -4876,7 +5140,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 49,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4901,7 +5165,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 50,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -4926,7 +5190,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 51,
       "position": 3,
       "activity_section_position": 3,
       "assessment": true,
@@ -4951,7 +5215,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 52,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4976,7 +5240,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 53,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -5001,7 +5265,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 54,
       "position": 3,
       "activity_section_position": 3,
       "assessment": true,
@@ -5026,7 +5290,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 55,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5126,6 +5390,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "computervision-lesson2-juicemindquiz",
+        "script_level.level_keys": [
+          "computervision-lesson2-juicemindquiz"
+        ],
+        "lesson.key": "Empathizing with Users",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision",
+        "activity_section.key": "96c72b37-884d-4d27-bc3d-2187adea75a5"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CV_L3_Reflection_1_2024",
         "script_level.level_keys": [
           "CV_L3_Reflection_1_2024"
@@ -5134,6 +5410,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "bc9d6b75-bfb1-4679-acc8-06808b3d4135"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computervision-lesson3-juicemindquiz",
+        "script_level.level_keys": [
+          "computervision-lesson3-juicemindquiz"
+        ],
+        "lesson.key": "Gathering User Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision",
+        "activity_section.key": "e712616d-ea4b-4c31-945f-9fc149b6e0b1"
       }
     },
     {
@@ -5174,6 +5462,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "computervision-lesson4-juicemindquiz",
+        "script_level.level_keys": [
+          "computervision-lesson4-juicemindquiz"
+        ],
+        "lesson.key": "Data Visualizations",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision",
+        "activity_section.key": "6afe8f87-8055-418f-a161-0cfef009d711"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CV_L5_Reflection_1_2024",
         "script_level.level_keys": [
           "CV_L5_Reflection_1_2024"
@@ -5206,6 +5506,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "f4bcf09d-9edb-4f1c-84d7-facd68c80205"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computervision-lesson5-juicemindquiz",
+        "script_level.level_keys": [
+          "computervision-lesson5-juicemindquiz"
+        ],
+        "lesson.key": "User Stories and Problem Statements",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision",
+        "activity_section.key": "2fcc8b18-8991-42c1-8117-503cd45ad7eb"
       }
     },
     {
@@ -5246,6 +5558,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "computervision-lesson6-juicemindquiz",
+        "script_level.level_keys": [
+          "computervision-lesson6-juicemindquiz"
+        ],
+        "lesson.key": "Pixels and QR Codes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision",
+        "activity_section.key": "8d5de666-17e1-4e2b-85c6-b1ea7c12f1e6"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CV_L7_Reflection_1_2024",
         "script_level.level_keys": [
           "CV_L7_Reflection_1_2024"
@@ -5266,6 +5590,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "cf99cdd6-86aa-466e-acdf-786c6a9971e0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computervision-lesson7-juicemindquiz",
+        "script_level.level_keys": [
+          "computervision-lesson7-juicemindquiz"
+        ],
+        "lesson.key": "Edge Detection",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision",
+        "activity_section.key": "cdfb7a9c-4cea-421c-b8d8-6b736d85ac4f"
       }
     },
     {

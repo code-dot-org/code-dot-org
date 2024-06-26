@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-06-25 17:05:16 UTC",
+    "serialized_at": "2024-06-26 17:39:03 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -95,14 +95,14 @@
       }
     },
     {
-      "key": "1ff85339-b869-466a-abc2-66f6decbcfa3",
+      "key": "0fc6f2ad-eb4e-41b5-b927-1e0d46e8e712",
       "position": 1,
       "properties": {
         "duration": 30,
         "name": "Activity"
       },
       "seeding_key": {
-        "lesson_activity.key": "1ff85339-b869-466a-abc2-66f6decbcfa3",
+        "lesson_activity.key": "0fc6f2ad-eb4e-41b5-b927-1e0d46e8e712",
         "lesson.key": "Dance Party",
         "lesson_group.key": "",
         "script.name": "melissambcf"
@@ -179,124 +179,135 @@
       }
     },
     {
-      "key": "583ae8e8-1c07-41ef-a718-652edb736e75",
+      "key": "357e10fa-470d-47fe-a21c-9d5346239622",
       "position": 1,
       "properties": {
+        "name": "Level by Level Support",
         "progression_name": "Video: Warm Up"
       },
       "seeding_key": {
-        "activity_section.key": "583ae8e8-1c07-41ef-a718-652edb736e75",
-        "lesson_activity.key": "1ff85339-b869-466a-abc2-66f6decbcfa3"
+        "activity_section.key": "357e10fa-470d-47fe-a21c-9d5346239622",
+        "lesson_activity.key": "0fc6f2ad-eb4e-41b5-b927-1e0d46e8e712"
       }
     },
     {
-      "key": "ba23d7c0-e763-4d44-9f8d-4a5085d6f7dd",
+      "key": "b2ba0eb4-642a-4162-9601-2a368bc857dc",
       "position": 2,
       "properties": {
         "progression_name": "Practice"
       },
       "seeding_key": {
-        "activity_section.key": "ba23d7c0-e763-4d44-9f8d-4a5085d6f7dd",
-        "lesson_activity.key": "1ff85339-b869-466a-abc2-66f6decbcfa3"
+        "activity_section.key": "b2ba0eb4-642a-4162-9601-2a368bc857dc",
+        "lesson_activity.key": "0fc6f2ad-eb4e-41b5-b927-1e0d46e8e712"
       }
     },
     {
-      "key": "ab2b277d-b16b-4027-abef-4187ad1ab1fb",
+      "key": "bd5c7cfd-c98b-42de-98fd-494dc3368d47",
       "position": 3,
       "properties": {
         "progression_name": "Video: Events"
       },
       "seeding_key": {
-        "activity_section.key": "ab2b277d-b16b-4027-abef-4187ad1ab1fb",
-        "lesson_activity.key": "1ff85339-b869-466a-abc2-66f6decbcfa3"
+        "activity_section.key": "bd5c7cfd-c98b-42de-98fd-494dc3368d47",
+        "lesson_activity.key": "0fc6f2ad-eb4e-41b5-b927-1e0d46e8e712"
       }
     },
     {
-      "key": "3c141ff8-a200-4e59-af1a-0c7555fd23bb",
+      "key": "ba4181ae-116a-4250-8ac7-0739f548035f",
       "position": 4,
       "properties": {
         "progression_name": "Events"
       },
       "seeding_key": {
-        "activity_section.key": "3c141ff8-a200-4e59-af1a-0c7555fd23bb",
-        "lesson_activity.key": "1ff85339-b869-466a-abc2-66f6decbcfa3"
+        "activity_section.key": "ba4181ae-116a-4250-8ac7-0739f548035f",
+        "lesson_activity.key": "0fc6f2ad-eb4e-41b5-b927-1e0d46e8e712"
       }
     },
     {
-      "key": "63073074-14fb-40fe-b9d7-289306fbb8d4",
+      "key": "82d036dd-95eb-4641-90ef-223541e0772a",
       "position": 5,
       "properties": {
         "progression_name": "Video: Measures"
       },
       "seeding_key": {
-        "activity_section.key": "63073074-14fb-40fe-b9d7-289306fbb8d4",
-        "lesson_activity.key": "1ff85339-b869-466a-abc2-66f6decbcfa3"
+        "activity_section.key": "82d036dd-95eb-4641-90ef-223541e0772a",
+        "lesson_activity.key": "0fc6f2ad-eb4e-41b5-b927-1e0d46e8e712"
       }
     },
     {
-      "key": "d7da7ca5-7cf6-473b-bab9-c11a669c0441",
+      "key": "3bb710fd-3ac9-4cac-83ae-474dc56452d6",
       "position": 6,
       "properties": {
         "progression_name": "Measures"
       },
       "seeding_key": {
-        "activity_section.key": "d7da7ca5-7cf6-473b-bab9-c11a669c0441",
-        "lesson_activity.key": "1ff85339-b869-466a-abc2-66f6decbcfa3"
+        "activity_section.key": "3bb710fd-3ac9-4cac-83ae-474dc56452d6",
+        "lesson_activity.key": "0fc6f2ad-eb4e-41b5-b927-1e0d46e8e712"
       }
     },
     {
-      "key": "a494607a-c499-45aa-a868-4879b290c771",
+      "key": "1c0984dc-a725-4d3f-adc3-d51612e74627",
       "position": 7,
       "properties": {
         "progression_name": "Video: Properties"
       },
       "seeding_key": {
-        "activity_section.key": "a494607a-c499-45aa-a868-4879b290c771",
-        "lesson_activity.key": "1ff85339-b869-466a-abc2-66f6decbcfa3"
+        "activity_section.key": "1c0984dc-a725-4d3f-adc3-d51612e74627",
+        "lesson_activity.key": "0fc6f2ad-eb4e-41b5-b927-1e0d46e8e712"
       }
     },
     {
-      "key": "a2a0d4c8-add2-4968-98fb-62ce42dc6c34",
+      "key": "0726d199-8bde-4e70-ae9b-673fd0c00884",
       "position": 8,
       "properties": {
         "progression_name": "Properties"
       },
       "seeding_key": {
-        "activity_section.key": "a2a0d4c8-add2-4968-98fb-62ce42dc6c34",
-        "lesson_activity.key": "1ff85339-b869-466a-abc2-66f6decbcfa3"
+        "activity_section.key": "0726d199-8bde-4e70-ae9b-673fd0c00884",
+        "lesson_activity.key": "0fc6f2ad-eb4e-41b5-b927-1e0d46e8e712"
       }
     },
     {
-      "key": "d1b84ff8-10a3-4ad6-b42c-29ebcea1b165",
+      "key": "e72e8768-97df-454b-a5be-a68b09d3e39b",
       "position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e72e8768-97df-454b-a5be-a68b09d3e39b",
+        "lesson_activity.key": "0fc6f2ad-eb4e-41b5-b927-1e0d46e8e712"
+      }
+    },
+    {
+      "key": "35568f9a-0925-4443-8bd3-dac909b8fd33",
+      "position": 10,
       "properties": {
         "progression_name": "Video: Wrap-up"
       },
       "seeding_key": {
-        "activity_section.key": "d1b84ff8-10a3-4ad6-b42c-29ebcea1b165",
-        "lesson_activity.key": "1ff85339-b869-466a-abc2-66f6decbcfa3"
+        "activity_section.key": "35568f9a-0925-4443-8bd3-dac909b8fd33",
+        "lesson_activity.key": "0fc6f2ad-eb4e-41b5-b927-1e0d46e8e712"
       }
     },
     {
-      "key": "309eabba-3f18-461a-9bde-77e052028661",
-      "position": 10,
+      "key": "09e210f5-32de-4051-b6b9-2a5d67a3a903",
+      "position": 11,
       "properties": {
         "progression_name": "Free Play"
       },
       "seeding_key": {
-        "activity_section.key": "309eabba-3f18-461a-9bde-77e052028661",
-        "lesson_activity.key": "1ff85339-b869-466a-abc2-66f6decbcfa3"
+        "activity_section.key": "09e210f5-32de-4051-b6b9-2a5d67a3a903",
+        "lesson_activity.key": "0fc6f2ad-eb4e-41b5-b927-1e0d46e8e712"
       }
     },
     {
-      "key": "1b0f4b75-1201-48ee-b624-c5cb67c46d09",
-      "position": 11,
+      "key": "b30cc477-0cd5-412f-adbd-9a935775da4b",
+      "position": 12,
       "properties": {
         "progression_name": "Lesson Extras"
       },
       "seeding_key": {
-        "activity_section.key": "1b0f4b75-1201-48ee-b624-c5cb67c46d09",
-        "lesson_activity.key": "1ff85339-b869-466a-abc2-66f6decbcfa3"
+        "activity_section.key": "b30cc477-0cd5-412f-adbd-9a935775da4b",
+        "lesson_activity.key": "0fc6f2ad-eb4e-41b5-b927-1e0d46e8e712"
       }
     },
     {
@@ -399,431 +410,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CourseD_Dance_2020_vid1_grade5"
-        ],
-        "progression": "Video: Warm Up"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseD_Dance_2020_vid1_grade5"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "",
-        "script.name": "melissambcf",
-        "activity_section.key": "583ae8e8-1c07-41ef-a718-652edb736e75"
-      },
-      "level_keys": [
-        "CourseD_Dance_2020_vid1_grade5"
-      ]
-    },
-    {
-      "chapter": 4,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CourseD_Dance_2020_01_grade5"
-        ],
-        "progression": "Practice"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseD_Dance_2020_01_grade5"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "",
-        "script.name": "melissambcf",
-        "activity_section.key": "ba23d7c0-e763-4d44-9f8d-4a5085d6f7dd"
-      },
-      "level_keys": [
-        "CourseD_Dance_2020_01_grade5"
-      ]
-    },
-    {
-      "chapter": 5,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CourseD_Dance_2020_vid2_grade5"
-        ],
-        "progression": "Video: Events"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseD_Dance_2020_vid2_grade5"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "",
-        "script.name": "melissambcf",
-        "activity_section.key": "ab2b277d-b16b-4027-abef-4187ad1ab1fb"
-      },
-      "level_keys": [
-        "CourseD_Dance_2020_vid2_grade5"
-      ]
-    },
-    {
-      "chapter": 6,
-      "position": 4,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CourseD_Dance_2020_02_grade5"
-        ],
-        "progression": "Events"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseD_Dance_2020_02_grade5"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "",
-        "script.name": "melissambcf",
-        "activity_section.key": "3c141ff8-a200-4e59-af1a-0c7555fd23bb"
-      },
-      "level_keys": [
-        "CourseD_Dance_2020_02_grade5"
-      ]
-    },
-    {
-      "chapter": 7,
-      "position": 5,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CourseD_Dance_2020_03_grade5"
-        ],
-        "progression": "Events"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseD_Dance_2020_03_grade5"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "",
-        "script.name": "melissambcf",
-        "activity_section.key": "3c141ff8-a200-4e59-af1a-0c7555fd23bb"
-      },
-      "level_keys": [
-        "CourseD_Dance_2020_03_grade5"
-      ]
-    },
-    {
-      "chapter": 8,
-      "position": 6,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CourseD_Dance_2020_vid3_grade5"
-        ],
-        "progression": "Video: Measures"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseD_Dance_2020_vid3_grade5"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "",
-        "script.name": "melissambcf",
-        "activity_section.key": "63073074-14fb-40fe-b9d7-289306fbb8d4"
-      },
-      "level_keys": [
-        "CourseD_Dance_2020_vid3_grade5"
-      ]
-    },
-    {
-      "chapter": 9,
-      "position": 7,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CourseD_Dance_2020_04_grade5"
-        ],
-        "progression": "Measures"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseD_Dance_2020_04_grade5"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "",
-        "script.name": "melissambcf",
-        "activity_section.key": "d7da7ca5-7cf6-473b-bab9-c11a669c0441"
-      },
-      "level_keys": [
-        "CourseD_Dance_2020_04_grade5"
-      ]
-    },
-    {
-      "chapter": 10,
-      "position": 8,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CourseD_Dance_2020_05_grade5"
-        ],
-        "progression": "Measures"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseD_Dance_2020_05_grade5"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "",
-        "script.name": "melissambcf",
-        "activity_section.key": "d7da7ca5-7cf6-473b-bab9-c11a669c0441"
-      },
-      "level_keys": [
-        "CourseD_Dance_2020_05_grade5"
-      ]
-    },
-    {
-      "chapter": 11,
-      "position": 9,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CourseD_Dance_2020_06_grade5"
-        ],
-        "progression": "Measures"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseD_Dance_2020_06_grade5"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "",
-        "script.name": "melissambcf",
-        "activity_section.key": "d7da7ca5-7cf6-473b-bab9-c11a669c0441"
-      },
-      "level_keys": [
-        "CourseD_Dance_2020_06_grade5"
-      ]
-    },
-    {
-      "chapter": 12,
-      "position": 10,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CourseD_Dance_2020_vid4_grade5"
-        ],
-        "progression": "Video: Properties"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseD_Dance_2020_vid4_grade5"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "",
-        "script.name": "melissambcf",
-        "activity_section.key": "a494607a-c499-45aa-a868-4879b290c771"
-      },
-      "level_keys": [
-        "CourseD_Dance_2020_vid4_grade5"
-      ]
-    },
-    {
-      "chapter": 13,
-      "position": 11,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CourseD_Dance_2020_07_grade5"
-        ],
-        "progression": "Properties"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseD_Dance_2020_07_grade5"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "",
-        "script.name": "melissambcf",
-        "activity_section.key": "a2a0d4c8-add2-4968-98fb-62ce42dc6c34"
-      },
-      "level_keys": [
-        "CourseD_Dance_2020_07_grade5"
-      ]
-    },
-    {
-      "chapter": 14,
-      "position": 12,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CourseD_Dance_2020_08_grade5"
-        ],
-        "progression": "Properties"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseD_Dance_2020_08_grade5"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "",
-        "script.name": "melissambcf",
-        "activity_section.key": "a2a0d4c8-add2-4968-98fb-62ce42dc6c34"
-      },
-      "level_keys": [
-        "CourseD_Dance_2020_08_grade5"
-      ]
-    },
-    {
-      "chapter": 15,
-      "position": 13,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CourseD_Dance_2020_09_grade5"
-        ],
-        "progression": "Properties"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseD_Dance_2020_09_grade5"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "",
-        "script.name": "melissambcf",
-        "activity_section.key": "a2a0d4c8-add2-4968-98fb-62ce42dc6c34"
-      },
-      "level_keys": [
-        "CourseD_Dance_2020_09_grade5"
-      ]
-    },
-    {
-      "chapter": 16,
-      "position": 14,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CourseD_Dance_2020_vid5_grade5"
-        ],
-        "progression": "Video: Wrap-up"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseD_Dance_2020_vid5_grade5"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "",
-        "script.name": "melissambcf",
-        "activity_section.key": "d1b84ff8-10a3-4ad6-b42c-29ebcea1b165"
-      },
-      "level_keys": [
-        "CourseD_Dance_2020_vid5_grade5"
-      ]
-    },
-    {
-      "chapter": 17,
-      "position": 15,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CourseD_Dance_2020_10_grade5"
-        ],
-        "progression": "Free Play"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseD_Dance_2020_10_grade5"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "",
-        "script.name": "melissambcf",
-        "activity_section.key": "309eabba-3f18-461a-9bde-77e052028661"
-      },
-      "level_keys": [
-        "CourseD_Dance_2020_10_grade5"
-      ]
-    },
-    {
-      "chapter": 18,
-      "position": 16,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CourseD_Dance_2020_bonus1_grade5"
-        ],
-        "progression": "Lesson Extras"
-      },
-      "bonus": true,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseD_Dance_2020_bonus1_grade5"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "",
-        "script.name": "melissambcf",
-        "activity_section.key": "1b0f4b75-1201-48ee-b624-c5cb67c46d09"
-      },
-      "level_keys": [
-        "CourseD_Dance_2020_bonus1_grade5"
-      ]
-    },
-    {
-      "chapter": 19,
-      "position": 17,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CourseD_Dance_2020_bonus3_grade5"
-        ],
-        "progression": "Lesson Extras"
-      },
-      "bonus": true,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseD_Dance_2020_bonus3_grade5"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "",
-        "script.name": "melissambcf",
-        "activity_section.key": "1b0f4b75-1201-48ee-b624-c5cb67c46d09"
-      },
-      "level_keys": [
-        "CourseD_Dance_2020_bonus3_grade5"
-      ]
-    },
-    {
-      "chapter": 20,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "intro to variables_1"
         ],
         "progression": "Introduction to Variables"
@@ -843,7 +429,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 4,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -868,7 +454,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 5,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -893,7 +479,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 6,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -918,7 +504,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 7,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -943,7 +529,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 8,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -968,7 +554,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 9,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -993,7 +579,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 10,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -1018,7 +604,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 11,
       "position": 9,
       "activity_section_position": 4,
       "assessment": false,
@@ -1043,7 +629,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 12,
       "position": 10,
       "activity_section_position": 5,
       "assessment": false,
@@ -1068,7 +654,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 13,
       "position": 11,
       "activity_section_position": 6,
       "assessment": false,
@@ -1093,7 +679,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 14,
       "position": 12,
       "activity_section_position": 7,
       "assessment": false,
@@ -1115,6 +701,380 @@
       },
       "level_keys": [
         "CSF_maker_microbit_PL_end_naviagtion_F"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Video: Warm Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_vid1_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "melissambcf",
+        "activity_section.key": "357e10fa-470d-47fe-a21c-9d5346239622"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_vid1_PL"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_01_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "melissambcf",
+        "activity_section.key": "b2ba0eb4-642a-4162-9601-2a368bc857dc"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_01_PL"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Video: Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_vid2_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "melissambcf",
+        "activity_section.key": "bd5c7cfd-c98b-42de-98fd-494dc3368d47"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_vid2_PL"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_02_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "melissambcf",
+        "activity_section.key": "ba4181ae-116a-4250-8ac7-0739f548035f"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_02_PL"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_03_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "melissambcf",
+        "activity_section.key": "ba4181ae-116a-4250-8ac7-0739f548035f"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_03_PL"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Video: Measures"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_vid3_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "melissambcf",
+        "activity_section.key": "82d036dd-95eb-4641-90ef-223541e0772a"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_vid3_PL"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Measures"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_04_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "melissambcf",
+        "activity_section.key": "3bb710fd-3ac9-4cac-83ae-474dc56452d6"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_04_PL"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Measures"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_05_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "melissambcf",
+        "activity_section.key": "3bb710fd-3ac9-4cac-83ae-474dc56452d6"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_05_PL"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 9,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Measures"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_06_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "melissambcf",
+        "activity_section.key": "3bb710fd-3ac9-4cac-83ae-474dc56452d6"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_06_PL"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Video: Properties"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_vid4_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "melissambcf",
+        "activity_section.key": "1c0984dc-a725-4d3f-adc3-d51612e74627"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_vid4_PL"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Properties"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_07_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "melissambcf",
+        "activity_section.key": "0726d199-8bde-4e70-ae9b-673fd0c00884"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_07_PL"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 12,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Properties"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_08_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "melissambcf",
+        "activity_section.key": "0726d199-8bde-4e70-ae9b-673fd0c00884"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_08_PL"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 13,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Properties"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_09_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "melissambcf",
+        "activity_section.key": "0726d199-8bde-4e70-ae9b-673fd0c00884"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_09_PL"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 14,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Video: Wrap-up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_vid5_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "melissambcf",
+        "activity_section.key": "35568f9a-0925-4443-8bd3-dac909b8fd33"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_vid5_PL"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 15,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Free Play"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_10_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "melissambcf",
+        "activity_section.key": "09e210f5-32de-4051-b6b9-2a5d67a3a903"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_10_PL"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 16,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Extras"
+      },
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_bonus1_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "melissambcf",
+        "activity_section.key": "b30cc477-0cd5-412f-adbd-9a935775da4b"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_bonus1_PL"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 17,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Extras"
+      },
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_bonus3_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "melissambcf",
+        "activity_section.key": "b30cc477-0cd5-412f-adbd-9a935775da4b"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_bonus3_PL"
       ]
     }
   ],
@@ -1141,210 +1101,6 @@
         "lesson_group.key": "",
         "script.name": "melissambcf",
         "activity_section.key": "aa046282-634c-43a8-a6e8-67d16e6c42ee"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CourseD_Dance_2020_vid1_grade5",
-        "script_level.level_keys": [
-          "CourseD_Dance_2020_vid1_grade5"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "",
-        "script.name": "melissambcf",
-        "activity_section.key": "583ae8e8-1c07-41ef-a718-652edb736e75"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CourseD_Dance_2020_01_grade5",
-        "script_level.level_keys": [
-          "CourseD_Dance_2020_01_grade5"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "",
-        "script.name": "melissambcf",
-        "activity_section.key": "ba23d7c0-e763-4d44-9f8d-4a5085d6f7dd"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CourseD_Dance_2020_vid2_grade5",
-        "script_level.level_keys": [
-          "CourseD_Dance_2020_vid2_grade5"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "",
-        "script.name": "melissambcf",
-        "activity_section.key": "ab2b277d-b16b-4027-abef-4187ad1ab1fb"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CourseD_Dance_2020_02_grade5",
-        "script_level.level_keys": [
-          "CourseD_Dance_2020_02_grade5"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "",
-        "script.name": "melissambcf",
-        "activity_section.key": "3c141ff8-a200-4e59-af1a-0c7555fd23bb"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CourseD_Dance_2020_03_grade5",
-        "script_level.level_keys": [
-          "CourseD_Dance_2020_03_grade5"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "",
-        "script.name": "melissambcf",
-        "activity_section.key": "3c141ff8-a200-4e59-af1a-0c7555fd23bb"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CourseD_Dance_2020_vid3_grade5",
-        "script_level.level_keys": [
-          "CourseD_Dance_2020_vid3_grade5"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "",
-        "script.name": "melissambcf",
-        "activity_section.key": "63073074-14fb-40fe-b9d7-289306fbb8d4"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CourseD_Dance_2020_04_grade5",
-        "script_level.level_keys": [
-          "CourseD_Dance_2020_04_grade5"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "",
-        "script.name": "melissambcf",
-        "activity_section.key": "d7da7ca5-7cf6-473b-bab9-c11a669c0441"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CourseD_Dance_2020_05_grade5",
-        "script_level.level_keys": [
-          "CourseD_Dance_2020_05_grade5"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "",
-        "script.name": "melissambcf",
-        "activity_section.key": "d7da7ca5-7cf6-473b-bab9-c11a669c0441"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CourseD_Dance_2020_06_grade5",
-        "script_level.level_keys": [
-          "CourseD_Dance_2020_06_grade5"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "",
-        "script.name": "melissambcf",
-        "activity_section.key": "d7da7ca5-7cf6-473b-bab9-c11a669c0441"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CourseD_Dance_2020_vid4_grade5",
-        "script_level.level_keys": [
-          "CourseD_Dance_2020_vid4_grade5"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "",
-        "script.name": "melissambcf",
-        "activity_section.key": "a494607a-c499-45aa-a868-4879b290c771"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CourseD_Dance_2020_07_grade5",
-        "script_level.level_keys": [
-          "CourseD_Dance_2020_07_grade5"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "",
-        "script.name": "melissambcf",
-        "activity_section.key": "a2a0d4c8-add2-4968-98fb-62ce42dc6c34"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CourseD_Dance_2020_08_grade5",
-        "script_level.level_keys": [
-          "CourseD_Dance_2020_08_grade5"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "",
-        "script.name": "melissambcf",
-        "activity_section.key": "a2a0d4c8-add2-4968-98fb-62ce42dc6c34"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CourseD_Dance_2020_09_grade5",
-        "script_level.level_keys": [
-          "CourseD_Dance_2020_09_grade5"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "",
-        "script.name": "melissambcf",
-        "activity_section.key": "a2a0d4c8-add2-4968-98fb-62ce42dc6c34"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CourseD_Dance_2020_vid5_grade5",
-        "script_level.level_keys": [
-          "CourseD_Dance_2020_vid5_grade5"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "",
-        "script.name": "melissambcf",
-        "activity_section.key": "d1b84ff8-10a3-4ad6-b42c-29ebcea1b165"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CourseD_Dance_2020_10_grade5",
-        "script_level.level_keys": [
-          "CourseD_Dance_2020_10_grade5"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "",
-        "script.name": "melissambcf",
-        "activity_section.key": "309eabba-3f18-461a-9bde-77e052028661"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CourseD_Dance_2020_bonus1_grade5",
-        "script_level.level_keys": [
-          "CourseD_Dance_2020_bonus1_grade5"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "",
-        "script.name": "melissambcf",
-        "activity_section.key": "1b0f4b75-1201-48ee-b624-c5cb67c46d09"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CourseD_Dance_2020_bonus3_grade5",
-        "script_level.level_keys": [
-          "CourseD_Dance_2020_bonus3_grade5"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "",
-        "script.name": "melissambcf",
-        "activity_section.key": "1b0f4b75-1201-48ee-b624-c5cb67c46d09"
       }
     },
     {
@@ -1489,6 +1245,210 @@
         "lesson_group.key": "",
         "script.name": "melissambcf",
         "activity_section.key": "cfc7d877-d4e6-4f4b-b1c8-dd75ca95f05c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_vid1_PL",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_vid1_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "melissambcf",
+        "activity_section.key": "357e10fa-470d-47fe-a21c-9d5346239622"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_01_PL",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_01_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "melissambcf",
+        "activity_section.key": "b2ba0eb4-642a-4162-9601-2a368bc857dc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_vid2_PL",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_vid2_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "melissambcf",
+        "activity_section.key": "bd5c7cfd-c98b-42de-98fd-494dc3368d47"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_02_PL",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_02_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "melissambcf",
+        "activity_section.key": "ba4181ae-116a-4250-8ac7-0739f548035f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_03_PL",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_03_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "melissambcf",
+        "activity_section.key": "ba4181ae-116a-4250-8ac7-0739f548035f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_vid3_PL",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_vid3_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "melissambcf",
+        "activity_section.key": "82d036dd-95eb-4641-90ef-223541e0772a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_04_PL",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_04_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "melissambcf",
+        "activity_section.key": "3bb710fd-3ac9-4cac-83ae-474dc56452d6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_05_PL",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_05_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "melissambcf",
+        "activity_section.key": "3bb710fd-3ac9-4cac-83ae-474dc56452d6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_06_PL",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_06_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "melissambcf",
+        "activity_section.key": "3bb710fd-3ac9-4cac-83ae-474dc56452d6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_vid4_PL",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_vid4_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "melissambcf",
+        "activity_section.key": "1c0984dc-a725-4d3f-adc3-d51612e74627"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_07_PL",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_07_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "melissambcf",
+        "activity_section.key": "0726d199-8bde-4e70-ae9b-673fd0c00884"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_08_PL",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_08_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "melissambcf",
+        "activity_section.key": "0726d199-8bde-4e70-ae9b-673fd0c00884"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_09_PL",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_09_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "melissambcf",
+        "activity_section.key": "0726d199-8bde-4e70-ae9b-673fd0c00884"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_vid5_PL",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_vid5_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "melissambcf",
+        "activity_section.key": "35568f9a-0925-4443-8bd3-dac909b8fd33"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_10_PL",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_10_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "melissambcf",
+        "activity_section.key": "09e210f5-32de-4051-b6b9-2a5d67a3a903"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_bonus1_PL",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_bonus1_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "melissambcf",
+        "activity_section.key": "b30cc477-0cd5-412f-adbd-9a935775da4b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_bonus3_PL",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_bonus3_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "melissambcf",
+        "activity_section.key": "b30cc477-0cd5-412f-adbd-9a935775da4b"
       }
     }
   ],
@@ -1650,33 +1610,33 @@
   ],
   "objectives": [
     {
-      "key": "0b0de458-c4b8-4ab1-b225-5bf97026e322",
-      "properties": {
-        "description": "Develop programs that respond to user input"
-      },
-      "seeding_key": {
-        "lesson.key": "Dance Party",
-        "objective.key": "0b0de458-c4b8-4ab1-b225-5bf97026e322"
-      }
-    },
-    {
-      "key": "4cdf4df9-bcdb-48c0-a4d5-4ce4753789d3",
-      "properties": {
-        "description": "Develop programs that respond to timed events"
-      },
-      "seeding_key": {
-        "lesson.key": "Dance Party",
-        "objective.key": "4cdf4df9-bcdb-48c0-a4d5-4ce4753789d3"
-      }
-    },
-    {
-      "key": "7a7b3afc-2ce9-4446-8892-f52cf39abbab",
+      "key": "3ea07aa7-2f04-4c0a-b032-593ab1b555da",
       "properties": {
         "description": "Create dance animations with code"
       },
       "seeding_key": {
         "lesson.key": "Dance Party",
-        "objective.key": "7a7b3afc-2ce9-4446-8892-f52cf39abbab"
+        "objective.key": "3ea07aa7-2f04-4c0a-b032-593ab1b555da"
+      }
+    },
+    {
+      "key": "e5352e0a-b4e5-44f3-9dcb-b9f4fbeec2d3",
+      "properties": {
+        "description": "Develop programs that respond to timed events"
+      },
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "objective.key": "e5352e0a-b4e5-44f3-9dcb-b9f4fbeec2d3"
+      }
+    },
+    {
+      "key": "f991eb43-d0c6-4a3f-a265-a8ec2371dbe6",
+      "properties": {
+        "description": "Develop programs that respond to user input"
+      },
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "objective.key": "f991eb43-d0c6-4a3f-a265-a8ec2371dbe6"
       }
     }
   ],
