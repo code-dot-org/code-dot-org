@@ -1,6 +1,6 @@
 /** @file Tests for Maker Toolkit redux module */
-import {expect} from '../../../../util/reconfiguredChai';
 import {createStore, combineReducers} from 'redux';
+
 import {
   reducer,
   enable,
@@ -16,6 +16,8 @@ import {
   getConnectionError,
   shouldRunWithVirtualBoard,
 } from '@cdo/apps/lib/kits/maker/redux';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('maker/redux.js', () => {
   let store;

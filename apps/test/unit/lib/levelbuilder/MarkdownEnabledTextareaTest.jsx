@@ -1,8 +1,10 @@
-import {expect} from '../../../util/reconfiguredChai';
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import MarkdownEnabledTextarea from '@cdo/apps/lib/levelbuilder/MarkdownEnabledTextarea';
+import React from 'react';
 import sinon from 'sinon';
+
+import MarkdownEnabledTextarea from '@cdo/apps/lib/levelbuilder/MarkdownEnabledTextarea';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('MarkdownEnabledTextarea', () => {
   let defaultProps, handleMarkdownChange;

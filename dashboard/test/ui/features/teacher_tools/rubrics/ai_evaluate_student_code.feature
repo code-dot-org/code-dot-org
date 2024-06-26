@@ -95,7 +95,7 @@ Feature: Evaluate student code against rubrics using AI
     # Teacher views AI evaluation status in settings tab
     When I click selector "#ui-floatingActionButton"
     And I wait until element "#uitest-rubric-content" is visible
-    And element ".uitest-run-ai-assessment" is enabled
+    And I wait until element ".uitest-run-ai-assessment" is enabled
 
     # Teacher runs AI evaluation
     When I click selector ".uitest-run-ai-assessment"
@@ -140,20 +140,20 @@ Feature: Evaluate student code against rubrics using AI
     And I wait for the page to fully load
     And I wait until element "h1:contains(Getting Started with Your AI Teaching Assistant)" is visible
     And I click selector ".introjs-skipbutton" if it exists
-    And I wait until element ".congrats" is gone 
+    And I wait until element ".congrats" is gone
     #Then I verify progress in the header of the current page is "attempted_assessment" for level 2
     And element "#ui-floatingActionButton" is visible
 
     # Teacher views AI evaluation status in settings tab
     When I click selector "#ui-floatingActionButton"
     And I wait until element "#uitest-rubric-content" is visible
-    And element ".uitest-run-ai-assessment" is enabled
+    And I wait until element ".uitest-run-ai-assessment" is enabled
 
     # Teacher switches to Class Management tab
     When I click selector "button:contains('Class Data')"
     And I wait until element ".uitest-run-ai-assessment-all" is visible
-    And I wait until element "#ui-teacherFeedback" is enabled 
-    And element ".uitest-run-ai-assessment-all" is enabled
+    And I wait until element "#ui-teacherFeedback" is enabled
+    And I wait until element ".uitest-run-ai-assessment-all" is enabled
 
     # Teacher runs AI evaluation
     When I click selector ".uitest-run-ai-assessment-all"
@@ -164,7 +164,6 @@ Feature: Evaluate student code against rubrics using AI
     When I click selector "button:contains('Assess a Student')"
     And I wait until element "#uitest-next-goal" is visible
     And I click selector "#uitest-next-goal"
-    And I wait until element ".uitest-learning-goal-title" is visible
-    Then element ".uitest-learning-goal-title" contains text "Sprites"
+    Then I wait until element ".uitest-learning-goal-title" contains text "Sprites"
     And I wait until element ".uitest-ai-assessment" is visible
     Then element ".uitest-ai-assessment" contains text "Aiden has achieved Extensive or Convincing Evidence"

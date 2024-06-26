@@ -1,10 +1,10 @@
-import {expect} from '../../util/reconfiguredChai';
 import {
   rateLimit,
   resetRateLimit,
   RATE_LIMIT,
   RATE_LIMIT_INTERVAL_MS,
 } from '../../../src/storage/rateLimit';
+import {expect} from '../../util/reconfiguredChai';
 
 describe('DatablockStorage', () => {
   beforeEach(() => {

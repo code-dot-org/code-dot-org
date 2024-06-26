@@ -1,4 +1,3 @@
-import {expect} from '../../util/reconfiguredChai';
 import {
   addColumnName,
   deleteColumnName,
@@ -11,6 +10,8 @@ import {
   getProjectDatabase,
   getConfigRef,
 } from '@cdo/apps/storage/firebaseUtils';
+
+import {expect} from '../../util/reconfiguredChai';
 
 describe('firebaseMetadata', () => {
   beforeEach(() => {

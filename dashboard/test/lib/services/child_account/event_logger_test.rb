@@ -52,6 +52,12 @@ class Services::ChildAccount::EventLoggerTest < ActiveSupport::TestCase
     assert_equal event_name, Services::ChildAccount::EventLogger.log_permission_granting(@user)
   end
 
+  test 'log_grace_period_start' do
+    event_name = CAP::UserEvent::GRACE_PERIOD_START
+    Services::ChildAccount::EventLogger.expects(:call).with(user: @user, event_name: event_name).returns(event_name)
+    assert_equal event_name, Services::ChildAccount::EventLogger.log_grace_period_start(@user)
+  end
+
   test 'log_account_locking' do
     event_name = CAP::UserEvent::ACCOUNT_LOCKING
     Services::ChildAccount::EventLogger.expects(:call).with(user: @user, event_name: event_name).returns(event_name)

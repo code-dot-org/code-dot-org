@@ -1,10 +1,11 @@
 /** @file Tests for Game Lab helper methods that make decisions based on redux state */
-import {expect} from '../../util/reconfiguredChai';
-import {forEveryBooleanPermutation} from '../../util/testUtils';
 import {
   allowAnimationMode,
   countAllowedModes,
 } from '@cdo/apps/p5lab/stateQueries';
+
+import {expect} from '../../util/reconfiguredChai';
+import {forEveryBooleanPermutation} from '../../util/testUtils';
 
 describe('stateQueries', function () {
   describe('allowAnimationMode', function () {

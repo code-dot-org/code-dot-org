@@ -1,4 +1,6 @@
+import _ from 'lodash';
 import {combineReducers} from 'redux';
+
 import reducers, {
   addActivity,
   moveActivity,
@@ -20,9 +22,10 @@ import reducers, {
   emptyActivitySection,
   getSerializedActivities,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
-import {sampleActivities} from './activitiesTestData';
-import _ from 'lodash';
+
 import {expect, assert} from '../../../../util/reconfiguredChai';
+
+import {sampleActivities} from './activitiesTestData';
 
 const getInitialState = () => ({
   activities: _.cloneDeep(sampleActivities),
