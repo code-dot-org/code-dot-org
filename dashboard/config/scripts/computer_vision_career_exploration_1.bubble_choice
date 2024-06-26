@@ -1,0 +1,7 @@
+name 'CV_CareerExploration1_1_2024'
+display_name 'Computer Vision Career Exploration 1'
+description 'Explore the jobs of the future by seeing how computer vision might aid or enhance professions'
+
+sublevels
+level 'CV_CareerExploration1_1a_2024'
+level 'level2'

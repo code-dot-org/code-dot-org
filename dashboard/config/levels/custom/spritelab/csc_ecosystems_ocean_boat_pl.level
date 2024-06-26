@@ -1,8 +1,7 @@
 <GamelabJr>
   <config><![CDATA[{
-  "published": true,
   "game_id": 64,
-  "created_at": "2024-04-23T19:37:19.000Z",
+  "created_at": "2024-06-26T17:32:12.000Z",
   "level_num": "custom",
   "user_id": 18528,
   "properties": {
@@ -15,19 +14,19 @@
     ],
     "helper_libraries": [
       "NativeSpriteLab",
-      "oceanSetup"
+      "oceanSetup",
+      "zCriterionValidationLibrary"
     ],
     "use_default_sprites": "false",
     "hide_animation_mode": "true",
     "show_type_hints": true,
     "hide_custom_blocks": true,
     "all_animations_single_frame": "true",
-    "use_modal_function_editor": "true",
+    "use_modal_function_editor": "false",
     "embed": "false",
-    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"Make sure the eat block is connected to the event block. \\n\\nThey should snap together like puzzle pieces!\",\"hint_id\":\"Connect\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/dbb73181d1df5d325e3dff62f827017d/csc_ecosystems_ocean_algae_2023.mp3\"}]",
     "instructions_important": "false",
-    "short_instructions": "Add a block to simulate how the fish eat the algae in the ocean.",
-    "long_instructions": "##Food Chain - Fish Eat Algae\r\n**When the fish touches an algae, the fish eats the algae**\r\n\r\n- Find the event <code style=\"color:black; background-color:#6AF36C\">when fish touches algae</code>\r\n- Connect an <code style=\"color:black; background-color:#5ED5DD\">eat object</code> block under the event\r\n- Press <code style=\"color:black; background-color:#FFBD46\">Run</code>. **Are the fish eating the algae?**\r\n\r\n",
+    "short_instructions": "Add a block to make the boat catch fish.",
+    "long_instructions": "##Human Impact - The Boat Catches Fish\r\n\r\n\r\n**When the boat touches a fish sprite, the boat catches the fish**\r\n\r\n- Find the event <code style=\"color:black; background-color:#6AF36C\">when boat touches fish</code> in the workspace\r\n- Connect a <code style=\"color:black; background-color:#5ED5DD\">catch object</code> block under this event\r\n- Press <code style=\"color:black; background-color:#FFBD46\">Run</code> **Is the boat catching the fish?**\r\n\r\n",
     "submittable": "false",
     "hide_share_and_remix": "true",
     "never_autoplay_video": "false",
@@ -39,25 +38,26 @@
     "debugger_disabled": "false",
     "validation_enabled": "false",
     "start_in_animation_tab": "false",
-    "mini_toolbox": "true",
+    "mini_toolbox": "false",
     "hide_pause_button": "false",
-    "start_animations": "{\"orderedKeys\":[\"32f872bb-78fc-41d9-97c1-ed4e5613ab05\",\"fdbf231b-ef01-4472-89bc-cd482e623602\",\"ad4e7603-ec32-45b2-88e2-d3cd5c600ef7\",\"2e3e0cec-9d68-42b4-9966-8a7a198cb727\",\"aff99bb2-a237-4d1e-818e-996ab82e001e\",\"1918c24b-863e-4a04-8acd-6366b7a0e114\"],\"propsByKey\":{\"1918c24b-863e-4a04-8acd-6366b7a0e114\":{\"name\":\"underseadeco_25\",\"categories\":[\"aquatic_objects\"],\"frameCount\":1,\"frameSize\":{\"x\":316,\"y\":394},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:51:11 UTC\",\"pngLastModified\":\"2021-01-19 23:51:14 UTC\",\"version\":\"BhwhWkxxwEdIvnGKm6st6kqUm9QvS.bw\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/BhwhWkxxwEdIvnGKm6st6kqUm9QvS.bw/category_aquatic_objects/underseadeco_25.png\",\"sourceSize\":{\"x\":316,\"y\":394}},\"aff99bb2-a237-4d1e-818e-996ab82e001e\":{\"name\":\"red-coral-dead\",\"frameCount\":1,\"frameSize\":{\"x\":316,\"y\":394},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2022-04-18T23:10:11.000Z\",\"pngLastModified\":\"2022-04-18T23:10:10.000Z\",\"version\":\"RQCgmEclO.axc7PWfRZ4NIZdWq6_O8BS\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/RQCgmEclO.axc7PWfRZ4NIZdWq6_O8BS/red-coral-dead.png\",\"sourceSize\":{\"x\":316,\"y\":394}},\"2e3e0cec-9d68-42b4-9966-8a7a198cb727\":{\"name\":\"green-sea-plant-2\",\"frameCount\":1,\"frameSize\":{\"x\":360,\"y\":390},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2022-04-11T21:02:50.000Z\",\"pngLastModified\":\"2022-04-11T21:02:50.000Z\",\"version\":\"5b9IyVs3kjEFG_er_OO9IkBNGtw1AtpA\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/5b9IyVs3kjEFG_er_OO9IkBNGtw1AtpA/green-sea-plant-2.png\",\"sourceSize\":{\"x\":360,\"y\":390}},\"ad4e7603-ec32-45b2-88e2-d3cd5c600ef7\":{\"name\":\"fishing_boat\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":257},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2023-04-18T14:06:23.000Z\",\"pngLastModified\":\"2023-04-18T14:06:23.000Z\",\"version\":\"1A9TeBxUn2WkvaG5XC.LuRFKOXzbWPST\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/1A9TeBxUn2WkvaG5XC.LuRFKOXzbWPST/fishing_boat.png\",\"sourceSize\":{\"x\":400,\"y\":257}},\"fdbf231b-ef01-4472-89bc-cd482e623602\":{\"name\":\"fish_10\",\"categories\":[\"animals\"],\"frameCount\":1,\"frameSize\":{\"x\":395,\"y\":247},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:46:44 UTC\",\"pngLastModified\":\"2021-01-19 23:46:45 UTC\",\"version\":\"0rhBDi4DUUwKbJatsf.dSkxMiiPwS2HQ\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/0rhBDi4DUUwKbJatsf.dSkxMiiPwS2HQ/category_animals/fish_10.png\",\"sourceSize\":{\"x\":395,\"y\":247}},\"32f872bb-78fc-41d9-97c1-ed4e5613ab05\":{\"name\":\"background_underwater_17\",\"categories\":[\"backgrounds\"],\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":399},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:53:15 UTC\",\"pngLastModified\":\"2021-01-19 23:53:16 UTC\",\"version\":\"T3iCeWVvk34YAqG8qfnOzbGcWXDnBqlp\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/T3iCeWVvk34YAqG8qfnOzbGcWXDnBqlp/category_backgrounds/background_underwater_17.png\",\"sourceSize\":{\"x\":400,\"y\":399}}}}\r\n\r\n",
+    "start_animations": "{\"orderedKeys\":[\"224a49c5-c59f-4da8-8e87-2b7c68e11657\",\"dd1e6250-a641-4bbf-b5ff-c9502e7b7743\",\"32f872bb-78fc-41d9-97c1-ed4e5613ab05\",\"2e3e0cec-9d68-42b4-9966-8a7a198cb727\",\"aff99bb2-a237-4d1e-818e-996ab82e001e\",\"1918c24b-863e-4a04-8acd-6366b7a0e114\"],\"propsByKey\":{\"1918c24b-863e-4a04-8acd-6366b7a0e114\":{\"name\":\"underseadeco_25\",\"categories\":[\"aquatic_objects\"],\"frameCount\":1,\"frameSize\":{\"x\":316,\"y\":394},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:51:11 UTC\",\"pngLastModified\":\"2021-01-19 23:51:14 UTC\",\"version\":\"BhwhWkxxwEdIvnGKm6st6kqUm9QvS.bw\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/BhwhWkxxwEdIvnGKm6st6kqUm9QvS.bw/category_aquatic_objects/underseadeco_25.png\",\"sourceSize\":{\"x\":316,\"y\":394}},\"aff99bb2-a237-4d1e-818e-996ab82e001e\":{\"name\":\"red-coral-dead\",\"frameCount\":1,\"frameSize\":{\"x\":316,\"y\":394},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2022-04-18T23:10:11.000Z\",\"pngLastModified\":\"2022-04-18T23:10:10.000Z\",\"version\":\"RQCgmEclO.axc7PWfRZ4NIZdWq6_O8BS\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/RQCgmEclO.axc7PWfRZ4NIZdWq6_O8BS/red-coral-dead.png\",\"sourceSize\":{\"x\":316,\"y\":394}},\"2e3e0cec-9d68-42b4-9966-8a7a198cb727\":{\"name\":\"green-sea-plant-2\",\"frameCount\":1,\"frameSize\":{\"x\":360,\"y\":390},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2022-04-11T21:02:50.000Z\",\"pngLastModified\":\"2022-04-11T21:02:50.000Z\",\"version\":\"5b9IyVs3kjEFG_er_OO9IkBNGtw1AtpA\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/5b9IyVs3kjEFG_er_OO9IkBNGtw1AtpA/green-sea-plant-2.png\",\"sourceSize\":{\"x\":360,\"y\":390}},\"32f872bb-78fc-41d9-97c1-ed4e5613ab05\":{\"name\":\"background_underwater_17\",\"categories\":[\"backgrounds\"],\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":399},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:53:15 UTC\",\"pngLastModified\":\"2021-01-19 23:53:16 UTC\",\"version\":\"T3iCeWVvk34YAqG8qfnOzbGcWXDnBqlp\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/T3iCeWVvk34YAqG8qfnOzbGcWXDnBqlp/category_backgrounds/background_underwater_17.png\",\"sourceSize\":{\"x\":400,\"y\":399}},\"dd1e6250-a641-4bbf-b5ff-c9502e7b7743\":{\"name\":\"fishing_boat\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":257},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2023-04-18T14:06:23.000Z\",\"pngLastModified\":\"2023-04-18T14:06:23.000Z\",\"version\":\"1A9TeBxUn2WkvaG5XC.LuRFKOXzbWPST\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/1A9TeBxUn2WkvaG5XC.LuRFKOXzbWPST/fishing_boat.png\",\"sourceSize\":{\"x\":400,\"y\":257}},\"224a49c5-c59f-4da8-8e87-2b7c68e11657\":{\"name\":\"fish_10\",\"categories\":[\"animals\"],\"frameCount\":1,\"frameSize\":{\"x\":395,\"y\":247},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:46:44 UTC\",\"pngLastModified\":\"2021-01-19 23:46:45 UTC\",\"version\":\"0rhBDi4DUUwKbJatsf.dSkxMiiPwS2HQ\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/0rhBDi4DUUwKbJatsf.dSkxMiiPwS2HQ/category_animals/fish_10.png\",\"sourceSize\":{\"x\":395,\"y\":247}}}}\r\n\r\n",
     "instructions_icon": "crab",
-    "name_suffix": "_grade3",
-    "validation_code": "if (World.frameCount == 1) {\r\n\r\n  validationProps.initialAlgaeAmount = countByAnimation({costume: 'green-sea-plant-2'});\r\n\r\n  //fail when touch event and algea not dissapeared\r\n  addCriteria(function() {\r\n    return (touchEventFound()  && spriteRemoved() && countByAnimation({costume: 'green-sea-plant-2'}) < validationProps.initialAlgaeAmount);\r\n  }, \"cscEcosystemsFishEatAlgae\");\r\n}\r\n\r\ncheck();\r\n",
+    "name_suffix": "_pl",
+    "validation_code": "if (World.frameCount == 1) {\r\n  setFailTime(150);\r\n  setDelayTime(90);\r\n\r\n  setupPrevious();\r\n\r\n  validationProps.initialAlgaeAmount = countByAnimation({ costume: 'green-sea-plant-2' });\r\n  validationProps.initialFishAmount = countByAnimation({ costume: 'fish_10' });\r\n\r\n  //fail when touch event and algea not dissapeared\r\n  addCriteria(function () {\r\n    return (touchEventFound() && spriteRemoved() && countByAnimation({ costume: 'green-sea-plant-2' }) < validationProps.initialAlgaeAmount);\r\n  }, \"cscEcosystemsFishEatAlgae\");\r\n\r\n  //fail when fishing boat doesn't catch fish\r\n  addCriteria(function () {\r\n    var prevEventCount = validationProps.previous.eventLog.length;\r\n    var fishingBoatId = getSpecificSpriteByCostume(\"fishing_boat\");\r\n    var fishingBoatWasTouched = false;\r\n    for (var i = prevEventCount; i < eventLog.length; i++) {\r\n      if (eventLog[i].split(\" \").indexOf(fishingBoatId.toString()) > -1) {\r\n        fishingBoatWasTouched = true;\r\n      }\r\n    }\r\n    return (fishingBoatWasTouched && spriteRemoved() && countByAnimation({ costume: 'fish_10' }) < validationProps.initialFishAmount);\r\n  }, \"cscEcosystemsBoatCatchFish\"); //Make sure to code the boat to catch the fish.\r\n\r\n}\r\n\r\ngetHelperVars();\r\ncheck();\r\nupdatePrevious();\r\n\r\n\r\n",
+    "encrypted_examples": "l7BSDKvsJO3Rto25gyqwfFj8bOxiPQi27PFTdRuQIggMNEN6dGPTwZhhwuWn\nIvdYIOV1J7B3NEejfhxshR90zA==\n",
     "standalone_app_name": "ecosystems",
-    "video_key": "csc-event-short-intro",
-    "encrypted_examples": "Q00Be2qsdk+4kI7XNyTpKOqfk3O3NI1zRjaMgEnHRGq0W6bwkBfrhmWJ150Q\nBjYYrIFMVSZsT7lJkLI/oRkm+A==\n",
+    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"Use the catch object block so that the boat catches the fish\",\"hint_id\":\"Catch\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/86e8dab0ab7725f30cdf3c87d49b3b9e/csc_ecosystems_ocean_boat_2023.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"The catch object block should be\\nconnected under the boats touches \\nfish event.\",\"hint_id\":\"CatchUnder\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6d385a68a562f3441b16aa26933a72da/csc_ecosystems_ocean_boat_2023.mp3\"}]",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-04-23T19:37:19.075+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_ocean_algae_maker\\\"\"],\"cloned_from\":\"csc_ecosystems_ocean_algae_maker\"},{\"changed_at\":\"2024-06-24 23:16:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-06-26 17:43:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-06-26T17:32:12.245+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_ocean_boat_grade3\\\"\"],\"cloned_from\":\"csc_ecosystems_ocean_boat_grade3\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="gamelab_checkTouching" deletable="false" movable="false">
+        <block type="gamelab_checkTouching" movable="false">
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
@@ -67,6 +67,26 @@
           <value name="SPRITE2">
             <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
               <field name="ANIMATION">"green-sea-plant-2"</field>
+            </block>
+          </value>
+          <next>
+            <block type="ecosystems_eat">
+              <value name="THIS">
+                <block type="gamelab_objectSpritePointer"/>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_checkTouching" deletable="false">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+              <field name="ANIMATION">"fishing_boat"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+              <field name="ANIMATION">"fish_10"</field>
             </block>
           </value>
         </block>
@@ -1397,6 +1417,11 @@
     <toolbox_blocks>
       <xml>
         <block type="ecosystems_eat">
+          <value name="THIS">
+            <block type="gamelab_objectSpritePointer"/>
+          </value>
+        </block>
+        <block type="ecosystems_catchMe">
           <value name="THIS">
             <block type="gamelab_objectSpritePointer"/>
           </value>

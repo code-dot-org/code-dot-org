@@ -1,5 +1,5 @@
 name 'k5_ai_data_survey_level_ai'
-title 'Let's collect some data!'
+title 'Let\'s collect some data!'
 submittable 'true'
 anonymous 'false'
 

@@ -1,8 +1,7 @@
 <GamelabJr>
   <config><![CDATA[{
-  "published": true,
   "game_id": 64,
-  "created_at": "2024-04-23T19:37:19.000Z",
+  "created_at": "2024-06-26T17:32:11.000Z",
   "level_num": "custom",
   "user_id": 18528,
   "properties": {
@@ -27,7 +26,7 @@
     "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"Make sure the eat block is connected to the event block. \\n\\nThey should snap together like puzzle pieces!\",\"hint_id\":\"Connect\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/dbb73181d1df5d325e3dff62f827017d/csc_ecosystems_ocean_algae_2023.mp3\"}]",
     "instructions_important": "false",
     "short_instructions": "Add a block to simulate how the fish eat the algae in the ocean.",
-    "long_instructions": "##Food Chain - Fish Eat Algae\r\n**When the fish touches an algae, the fish eats the algae**\r\n\r\n- Find the event <code style=\"color:black; background-color:#6AF36C\">when fish touches algae</code>\r\n- Connect an <code style=\"color:black; background-color:#5ED5DD\">eat object</code> block under the event\r\n- Press <code style=\"color:black; background-color:#FFBD46\">Run</code>. **Are the fish eating the algae?**\r\n\r\n",
+    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\r\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \r\nIf students want to rewatch the video, they can access it beneath the playspace.\r\n</p>\r\n</div>\r\n\r\n##Food Chain - Fish Eat Algae\r\n**When the fish touches an algae, the fish eats the algae**\r\n\r\n- Find the event <code style=\"color:black; background-color:#6AF36C\">when fish touches algae</code>\r\n- Connect an <code style=\"color:black; background-color:#5ED5DD\">eat object</code> block under the event\r\n- Press <code style=\"color:black; background-color:#FFBD46\">Run</code>. **Are the fish eating the algae?**\r\n\r\n",
     "submittable": "false",
     "hide_share_and_remix": "true",
     "never_autoplay_video": "false",
@@ -43,14 +42,15 @@
     "hide_pause_button": "false",
     "start_animations": "{\"orderedKeys\":[\"32f872bb-78fc-41d9-97c1-ed4e5613ab05\",\"fdbf231b-ef01-4472-89bc-cd482e623602\",\"ad4e7603-ec32-45b2-88e2-d3cd5c600ef7\",\"2e3e0cec-9d68-42b4-9966-8a7a198cb727\",\"aff99bb2-a237-4d1e-818e-996ab82e001e\",\"1918c24b-863e-4a04-8acd-6366b7a0e114\"],\"propsByKey\":{\"1918c24b-863e-4a04-8acd-6366b7a0e114\":{\"name\":\"underseadeco_25\",\"categories\":[\"aquatic_objects\"],\"frameCount\":1,\"frameSize\":{\"x\":316,\"y\":394},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:51:11 UTC\",\"pngLastModified\":\"2021-01-19 23:51:14 UTC\",\"version\":\"BhwhWkxxwEdIvnGKm6st6kqUm9QvS.bw\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/BhwhWkxxwEdIvnGKm6st6kqUm9QvS.bw/category_aquatic_objects/underseadeco_25.png\",\"sourceSize\":{\"x\":316,\"y\":394}},\"aff99bb2-a237-4d1e-818e-996ab82e001e\":{\"name\":\"red-coral-dead\",\"frameCount\":1,\"frameSize\":{\"x\":316,\"y\":394},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2022-04-18T23:10:11.000Z\",\"pngLastModified\":\"2022-04-18T23:10:10.000Z\",\"version\":\"RQCgmEclO.axc7PWfRZ4NIZdWq6_O8BS\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/RQCgmEclO.axc7PWfRZ4NIZdWq6_O8BS/red-coral-dead.png\",\"sourceSize\":{\"x\":316,\"y\":394}},\"2e3e0cec-9d68-42b4-9966-8a7a198cb727\":{\"name\":\"green-sea-plant-2\",\"frameCount\":1,\"frameSize\":{\"x\":360,\"y\":390},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2022-04-11T21:02:50.000Z\",\"pngLastModified\":\"2022-04-11T21:02:50.000Z\",\"version\":\"5b9IyVs3kjEFG_er_OO9IkBNGtw1AtpA\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/5b9IyVs3kjEFG_er_OO9IkBNGtw1AtpA/green-sea-plant-2.png\",\"sourceSize\":{\"x\":360,\"y\":390}},\"ad4e7603-ec32-45b2-88e2-d3cd5c600ef7\":{\"name\":\"fishing_boat\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":257},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2023-04-18T14:06:23.000Z\",\"pngLastModified\":\"2023-04-18T14:06:23.000Z\",\"version\":\"1A9TeBxUn2WkvaG5XC.LuRFKOXzbWPST\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/1A9TeBxUn2WkvaG5XC.LuRFKOXzbWPST/fishing_boat.png\",\"sourceSize\":{\"x\":400,\"y\":257}},\"fdbf231b-ef01-4472-89bc-cd482e623602\":{\"name\":\"fish_10\",\"categories\":[\"animals\"],\"frameCount\":1,\"frameSize\":{\"x\":395,\"y\":247},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:46:44 UTC\",\"pngLastModified\":\"2021-01-19 23:46:45 UTC\",\"version\":\"0rhBDi4DUUwKbJatsf.dSkxMiiPwS2HQ\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/0rhBDi4DUUwKbJatsf.dSkxMiiPwS2HQ/category_animals/fish_10.png\",\"sourceSize\":{\"x\":395,\"y\":247}},\"32f872bb-78fc-41d9-97c1-ed4e5613ab05\":{\"name\":\"background_underwater_17\",\"categories\":[\"backgrounds\"],\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":399},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:53:15 UTC\",\"pngLastModified\":\"2021-01-19 23:53:16 UTC\",\"version\":\"T3iCeWVvk34YAqG8qfnOzbGcWXDnBqlp\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/T3iCeWVvk34YAqG8qfnOzbGcWXDnBqlp/category_backgrounds/background_underwater_17.png\",\"sourceSize\":{\"x\":400,\"y\":399}}}}\r\n\r\n",
     "instructions_icon": "crab",
-    "name_suffix": "_grade3",
+    "name_suffix": "_pl",
     "validation_code": "if (World.frameCount == 1) {\r\n\r\n  validationProps.initialAlgaeAmount = countByAnimation({costume: 'green-sea-plant-2'});\r\n\r\n  //fail when touch event and algea not dissapeared\r\n  addCriteria(function() {\r\n    return (touchEventFound()  && spriteRemoved() && countByAnimation({costume: 'green-sea-plant-2'}) < validationProps.initialAlgaeAmount);\r\n  }, \"cscEcosystemsFishEatAlgae\");\r\n}\r\n\r\ncheck();\r\n",
     "standalone_app_name": "ecosystems",
     "video_key": "csc-event-short-intro",
     "encrypted_examples": "Q00Be2qsdk+4kI7XNyTpKOqfk3O3NI1zRjaMgEnHRGq0W6bwkBfrhmWJ150Q\nBjYYrIFMVSZsT7lJkLI/oRkm+A==\n",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-04-23T19:37:19.075+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_ocean_algae_maker\\\"\"],\"cloned_from\":\"csc_ecosystems_ocean_algae_maker\"},{\"changed_at\":\"2024-06-24 23:16:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-06-26 17:43:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-06-26T17:32:11.850+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_ocean_algae_grade3\\\"\"],\"cloned_from\":\"csc_ecosystems_ocean_algae_grade3\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
