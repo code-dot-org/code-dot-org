@@ -3,6 +3,9 @@ import {
   LevelPredictSettings,
   PredictQuestionType,
 } from '@cdo/apps/lab2/levelEditors/types';
+import Checkbox from '@cdo/apps/componentLibrary/checkbox';
+import RadioButton from '@cdo/apps/componentLibrary/radioButton';
+import moduleStyles from './predict-question.module.scss';
 
 interface PredictQuestionProps {
   predictSettings: LevelPredictSettings | undefined;
@@ -26,10 +29,49 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
   if (!showFreeResponse && !showMultipleChoice) {
     return null;
   }
+
+  const handleMultiSelectChanged = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (predictSettings.isMultiSelect) {
+      const newResponse = predictResponse ? predictResponse.split(',') : [];
+      if (e.target.checked) {
+        newResponse.push(e.target.value);
+      } else if (newResponse.includes(e.target.value)) {
+        newResponse.splice(newResponse.indexOf(e.target.value), 1);
+      }
+      setPredictResponse(newResponse.join(','));
+    } else {
+      setPredictResponse(e.target.value);
+    }
+  };
+
+  const renderMultipleChoice = () => {
+    const OptionElement = predictSettings.isMultiSelect
+      ? Checkbox
+      : RadioButton;
+    return predictSettings.multipleChoiceOptions?.map((option, index) => (
+      <div
+        key={`multiple-choice-${index}`}
+        className={moduleStyles.multipleChoiceContainer}
+      >
+        <OptionElement
+          value={option}
+          checked={
+            (predictResponse && predictResponse.split(',').includes(option)) ||
+            false
+          }
+          onChange={handleMultiSelectChanged}
+          label={option}
+          name={option}
+          key={index}
+        />
+      </div>
+    ));
+  };
+
   return (
     <>
       {showFreeResponse && (
-        <div key="predict-response" id="predict-response">
+        <div key="predict-free-response" id="predict-free-response">
           <textarea
             value={predictResponse}
             placeholder={predictSettings.placeholderText}
@@ -38,6 +80,7 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
           />
         </div>
       )}
+      {showMultipleChoice && renderMultipleChoice()}
     </>
   );
 };
