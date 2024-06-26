@@ -225,6 +225,6 @@ class Policies::Lti
   end
 
   def self.account_linking?(session, user)
-    session[:lms_landing].present? && Policies::Lti.only_lti_auth?(user) && !user.lms_landing_opted_out
+    session[:lms_landing].present? && only_lti_auth?(user) && !user.lms_landing_opted_out
   end
 end
