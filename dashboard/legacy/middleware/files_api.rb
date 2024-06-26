@@ -420,14 +420,14 @@ class FilesApi < Sinatra::Base
     # Javalab's "backpack" feature uses libraries to allow students to share code
     # between their own projects -- skip this check for .java files, since in this use case
     # the files are only being used by a single user.
-    if endpoint == 'libraries' && file_type != '.java' || LABS_TO_CHECK_FOR_PROFANITY.include?(app_type)
+    if (endpoint == 'libraries' && file_type != '.java') || LABS_TO_CHECK_FOR_PROFANITY.include?(app_type)
       begin
         if app_type == 'aichat'
           source = JSON.parse(body)['source']
           source_json = JSON.parse(source)
           text_to_check = source_json['systemPrompt'] + ' ' + source_json['retrievalContexts'].join(' ')
           share_failure = ShareFiltering.find_failure(text_to_check, request.locale)
-        else      
+        else
           share_failure = ShareFiltering.find_failure(body, request.locale)
         end
       rescue StandardError => exception
