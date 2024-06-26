@@ -551,7 +551,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     if user
       if user.admin?
         flash[:alert] = I18n.t('lti.account_linking.admin_not_allowed')
-        redirect_to user_session_path(lti_provider: params[:lti_provider], lms_name: params[:lms_name]) and return
+        redirect_to user_session_path and return
       end
       begin
         Services::Lti::AccountLinker.call(user: user, session: session)
