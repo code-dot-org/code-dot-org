@@ -240,8 +240,11 @@ export const onSaveComplete =
 export const onSaveFail =
   (e: Error) => (dispatch: AppDispatch, getState: () => RootState) => {
     const {savedAiCustomizations} = getState().aichat;
-    dispatch(setAllAiCustomizations(savedAiCustomizations));
-    const errorMessage = e.message.includes('profanity')
+    const isProfanityError = e.message.includes('profanity');
+    if (isProfanityError) {
+      dispatch(setAllAiCustomizations(savedAiCustomizations));
+    }
+    const errorMessage = isProfanityError
       ? 'Profanity detected in system prompt or retrieval context(s) and cannot be updated. Please try again.'
       : 'Error updating project. Please try again.';
     dispatch(
