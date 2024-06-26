@@ -389,17 +389,17 @@ class RegistrationsController < Devise::RegistrationsController
   #
   def edit
     @permission_status = current_user.child_account_compliance_state
-    @personal_account_linking_enabled = true
+    @personal_account_linking_enabled = Policies::ChildAccount.can_link_new_personal_account?(current_user)
 
     # Handle users who aren't locked out, but still need parent permission to link personal accounts.
     if Policies::ChildAccount.user_predates_policy?(current_user)
-      permission_request = Queries::ChildAccount.latest_permission_request(current_user)
+      permission_request = current_user.latest_parental_permission_request
       @pending_email = permission_request&.parent_email
       @request_date = permission_request&.updated_at || Date.new
-      @personal_account_linking_enabled = false unless Policies::ChildAccount.compliant?(current_user)
-    end
 
-    @personal_account_linking_enabled = true unless experiment_value('cpa-partial-lockout', request)
+      partially_locked = Policies::ChildAccount.partially_locked_out?(current_user) && experiment_value('cpa-partial-lockout', request)
+      @personal_account_linking_enabled = false if partially_locked
+    end
   end
 
   private def update_user_email

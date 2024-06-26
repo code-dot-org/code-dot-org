@@ -1,14 +1,15 @@
 // TODO: post-firebase-cleanup, remove this file #56994
 
-import {expect} from '../../util/reconfiguredChai';
-import {initFirebaseStorage} from '@cdo/apps/storage/firebaseStorage';
 import {WarningType} from '@cdo/apps/storage/constants';
-import {tableType} from '@cdo/apps/storage/redux/data';
+import {initFirebaseStorage} from '@cdo/apps/storage/firebaseStorage';
 import {
   getProjectDatabase,
   getSharedDatabase,
   getConfigRef,
 } from '@cdo/apps/storage/firebaseUtils';
+import {tableType} from '@cdo/apps/storage/redux/data';
+
+import {expect} from '../../util/reconfiguredChai';
 
 describe('FirebaseStorage', () => {
   let FirebaseStorage;

@@ -1,14 +1,16 @@
 import $ from 'jquery';
-import clientState from '@cdo/apps/code-studio/clientState';
 import sinon from 'sinon';
-import {expect} from '../../../util/reconfiguredChai';
+
+import {files} from '@cdo/apps/clientApi';
+import clientState from '@cdo/apps/code-studio/clientState';
 import loadAppOptions, {
   setupApp,
   setAppOptions,
 } from '@cdo/apps/code-studio/initApp/loadApp';
-import {files} from '@cdo/apps/clientApi';
-import * as imageUtils from '@cdo/apps/imageUtils';
 import project from '@cdo/apps/code-studio/initApp/project';
+import * as imageUtils from '@cdo/apps/imageUtils';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const SERVER_LEVEL_ID = 5;
 const SERVER_PROJECT_LEVEL_ID = 10;

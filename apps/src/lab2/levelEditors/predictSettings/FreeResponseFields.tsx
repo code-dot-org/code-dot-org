@@ -16,11 +16,11 @@ const FreeResponseFields: React.FunctionComponent<FreeResponseFieldsProps> = ({
     <div>
       <TextField
         label="Placeholder text to show in the answer text area"
-        value={predictSettings.placeholder_text}
+        value={predictSettings.placeholderText}
         onChange={e =>
           setPredictSettings({
             ...predictSettings,
-            placeholder_text: e.target.value,
+            placeholderText: e.target.value,
           })
         }
         name="placeholder_text"
@@ -45,20 +45,23 @@ const FreeResponseFields: React.FunctionComponent<FreeResponseFieldsProps> = ({
       </label>
       <label className={moduleStyles.fieldArea}>
         <div className={moduleStyles.label}>
-          Height of the answer textarea in px
+          Height of the answer textarea in px. Default is 20px.
         </div>
         <input
           type="number"
-          value={predictSettings.free_response_height}
+          value={predictSettings.freeResponseHeight}
           onChange={e =>
             setPredictSettings({
               ...predictSettings,
-              free_response_height: parseInt(e.target.value),
+              freeResponseHeight:
+                e.target.value !== undefined
+                  ? parseInt(e.target.value)
+                  : undefined,
             })
           }
           name="free_response_height"
           min={0}
-          step={50}
+          step={1}
         />
       </label>
     </div>

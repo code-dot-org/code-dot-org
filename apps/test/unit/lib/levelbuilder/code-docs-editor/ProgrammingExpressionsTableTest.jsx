@@ -1,9 +1,11 @@
-import React from 'react';
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import ProgrammingExpressionsTable from '@cdo/apps/lib/levelbuilder/code-docs-editor/ProgrammingExpressionsTable';
-import {expect} from '../../../../util/reconfiguredChai';
-import sinon from 'sinon';
 import {isolateComponent} from 'isolate-react';
+import React from 'react';
+import sinon from 'sinon';
+
+import ProgrammingExpressionsTable from '@cdo/apps/lib/levelbuilder/code-docs-editor/ProgrammingExpressionsTable';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('ProgrammingExpressionsTable', () => {
   let defaultProps, fetchStub, returnData;

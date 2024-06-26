@@ -20,9 +20,4 @@ class Queries::ChildAccount
         expiration_date
       )
   end
-
-  # Retrieve the most recent ParentalPermissionRequest for a user
-  def self.latest_permission_request(user)
-    ParentalPermissionRequest.where(user: user).order(updated_at: :desc).limit(1).first
-  end
 end

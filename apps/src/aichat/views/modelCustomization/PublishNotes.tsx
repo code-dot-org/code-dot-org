@@ -1,5 +1,6 @@
-import React, {useCallback} from 'react';
 import classNames from 'classnames';
+import React, {useCallback} from 'react';
+import {useSelector} from 'react-redux';
 
 import {
   setModelCardProperty,
@@ -7,20 +8,21 @@ import {
   publishModel,
   selectHasFilledOutModelCard,
 } from '@cdo/apps/aichat/redux/aichatRedux';
-import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
 import Button from '@cdo/apps/componentLibrary/button/Button';
+import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
+import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
+
+import {ModelCardInfo} from '../../types';
 
 import {MODEL_CARD_FIELDS_LABELS_ICONS} from './constants';
-import {isDisabled} from './utils';
 import ExampleTopicsInputs from './ExampleTopicsInputs';
 import PublishStatus from './PublishStatus';
+import {isDisabled} from './utils';
+
 import moduleStyles from './publish-notes.module.scss';
 import modelCustomizationStyles from '../model-customization-workspace.module.scss';
-import {ModelCardInfo} from '../../types';
-import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
-import {useSelector} from 'react-redux';
-import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 
 const PublishNotes: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();

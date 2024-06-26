@@ -3,8 +3,8 @@ import React from 'react';
 import {BaseDialogProps} from './DialogManager';
 import moduleStyles from './confirm-dialog.module.scss';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {TEXT_BASED_LABS} from '@cdo/apps/lab2/types';
-const commonI18n = require('@cdo/locale');
+import {TEXT_BASED_LABS} from '../../constants';
+import {commonI18n} from '@cdo/apps/types/locale';
 
 // Lab-specific messages for starting over.
 const LAB_SPECIFIC_MESSAGES: {[key: string]: string} = {

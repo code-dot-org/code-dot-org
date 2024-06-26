@@ -299,5 +299,12 @@ module Services
       end
       course_sync_result
     end
+
+    def self.initialize_lms_landing_session(session, lti_provider_name, new_cta_type)
+      session[:lms_landing] = {
+        lti_provider_name: lti_provider_name,
+        new_cta_type: new_cta_type
+      }
+    end
   end
 end

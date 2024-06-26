@@ -1,4 +1,4 @@
-import {expect} from '../../../../../../util/reconfiguredChai';
+import MBFirmataUpdater from '@cdo/apps/lib/kits/maker/boards/microBit/MBFirmataUpdater';
 import {
   MICROBIT_V1,
   MICROBIT_V2,
@@ -7,7 +7,6 @@ import {
   MICROBIT_IDS_V1,
   MICROBIT_IDS_V2,
 } from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
-import MBFirmataUpdater from '@cdo/apps/lib/kits/maker/boards/microBit/MBFirmataUpdater';
 import microBitReducer, {
   setMicroBitFirmataUpdatePercent,
 } from '@cdo/apps/lib/kits/maker/microBitRedux';
@@ -17,6 +16,8 @@ import {
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
+
+import {expect} from '../../../../../../util/reconfiguredChai';
 
 describe('MBFirmataUpdater', () => {
   const mbFirmataUpdater = new MBFirmataUpdater();

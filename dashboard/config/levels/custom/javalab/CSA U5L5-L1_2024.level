@@ -1,5 +1,6 @@
 <Javalab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 68,
   "created_at": "2024-01-12T21:01:29.000Z",
   "level_num": "custom",
@@ -22,9 +23,11 @@
     ],
     "project_template_level_name": "CSA U5L5-Enhanced For Loops PBT_2024",
     "name_suffix": "_2024",
-    "ai_tutor_available": true
+    "ai_tutor_available": "true",
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-01-12T21:01:29.868+00:00\",\"changed\":[\"cloned from \\\"CSA U5L5-L1_2023\\\"\"],\"cloned_from\":\"CSA U5L5-L1_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-01-12T21:01:29.868+00:00\",\"changed\":[\"cloned from \\\"CSA U5L5-L1_2023\\\"\"],\"cloned_from\":\"CSA U5L5-L1_2023\"},{\"changed_at\":\"2024-06-20 18:23:57 +0000\",\"changed\":[\"ai_tutor_available\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Javalab>

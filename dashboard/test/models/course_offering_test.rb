@@ -674,6 +674,39 @@ class CourseOfferingTest < ActiveSupport::TestCase
     Unit.clear_cache
   end
 
+  test 'missing_required_device_compatibility? returns false for pl course offerings' do
+    pl_co = create :course_offering
+    pl_unit = create :script, participant_audience: 'teacher', instructor_audience: 'facilitator'
+    create :course_version, content_root: pl_unit, course_offering: pl_co
+    co = create :course_offering, self_paced_pl_course_offering: pl_co
+
+    refute(co.missing_required_device_compatibility?)
+  end
+
+  test 'missing_required_device_compatibility? returns true for student course offering with nil device_compatibility' do
+    co = create :course_offering, device_compatibility: nil
+    unit = create :script, participant_audience: 'student', instructor_audience: 'teacher'
+    create :course_version, content_root: unit, course_offering: co
+
+    assert(co.missing_required_device_compatibility?)
+  end
+
+  test 'missing_required_device_compatibility? returns true for student course offering missing a device_compatibility' do
+    co = create :course_offering, device_compatibility: '{"computer":"","chromebook":"not_recommended","tablet":"incompatible","mobile":"incompatible","no_device":"incompatible"}'
+    unit = create :script, participant_audience: 'student', instructor_audience: 'teacher'
+    create :course_version, content_root: unit, course_offering: co
+
+    assert(co.missing_required_device_compatibility?)
+  end
+
+  test 'missing_required_device_compatibility? returns false for student course offering not missing any device_compatibility' do
+    co = create :course_offering, device_compatibility: '{"computer":"ideal","chromebook":"not_recommended","tablet":"incompatible","mobile":"incompatible","no_device":"incompatible"}'
+    unit = create :script, participant_audience: 'student', instructor_audience: 'teacher'
+    create :course_version, content_root: unit, course_offering: co
+
+    refute(co.missing_required_device_compatibility?)
+  end
+
   test 'duration returns nil if latest_published_version does not exist' do
     unit = create(:script, family_name: 'test-duration', version_year: '1997', is_course: true, published_state: 'in_development')
     co = CourseOffering.add_course_offering(unit)

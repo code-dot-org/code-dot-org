@@ -78,7 +78,7 @@
   -# special tracking image to make sure a cookie is set when hoc starts (/hoc/1)
   = image_tag(tracking_pixel_url(@script))
 
-- if current_user && (!@level.uses_lab2? || (@level.uses_lab2? && !current_user.levelbuilder?))
+- if current_user && !@level.uses_lab2?
   = render partial: 'levels/admin'
 
 - if @script && !@script.old_professional_learning_course? && !@level.is_a?(NetSim)

@@ -62,7 +62,7 @@ const ExpandedCurriculumCatalogCard = ({
     },
   };
 
-  const devices = JSON.parse(deviceCompatibility);
+  const devices = deviceCompatibility ? JSON.parse(deviceCompatibility) : {};
 
   const resoucesOrder = [
     'Lesson Plan',
@@ -233,22 +233,29 @@ const ExpandedCurriculumCatalogCard = ({
               </div>
               <hr className={style.horizontalDivider} />
               <div className={style.compatibilityContainer}>
-                {Object.keys(devices).map(device => (
-                  <div key={device} className={style.iconWithDescription}>
-                    <FontAwesome
-                      icon={iconData[devices[device]].icon}
-                      className={`fa-solid ${iconData[devices[device]].color}`}
-                    />
-                    <BodyTwoText>
-                      {device !== 'no_device'
-                        ? translatedCourseOfferingDeviceTypes[device]
-                            .charAt(0)
-                            .toUpperCase() +
-                          translatedCourseOfferingDeviceTypes[device].slice(1)
-                        : i18n.offline()}
-                    </BodyTwoText>
-                  </div>
-                ))}
+                {Object.keys(devices).map(
+                  device =>
+                    devices[device] !== '' && (
+                      <div key={device} className={style.iconWithDescription}>
+                        <FontAwesome
+                          icon={iconData[devices[device]].icon}
+                          className={`fa-solid ${
+                            iconData[devices[device]].color
+                          }`}
+                        />
+                        <BodyTwoText>
+                          {device !== 'no_device'
+                            ? translatedCourseOfferingDeviceTypes[device]
+                                .charAt(0)
+                                .toUpperCase() +
+                              translatedCourseOfferingDeviceTypes[device].slice(
+                                1
+                              )
+                            : i18n.offline()}
+                        </BodyTwoText>
+                      </div>
+                    )
+                )}
               </div>
               <hr className={style.horizontalDivider} />
               <div className={style.buttonsContainer}>
