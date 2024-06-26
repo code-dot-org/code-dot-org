@@ -2400,6 +2400,134 @@
         desc: "One-hour tutorials in over 45 languages. No experience needed. Hour of Code activities are available for free year-round."
         button: "Explore activities"
 
+  maker_page:
+    top:
+      heading: "Become a Maker"
+      desc: "Explore your creativity with physical computing."
+    what:
+      heading: "What is a Maker?"
+      desc_01: "Makers invent, explore, innovate, and create using technology like development boards, robotics, 3D printing, programming, and more."
+      desc_02: "Maker education takes STEM (Science, Technology, Engineering, Mathematics) a step further by inviting hands-on experience and collaboration into the classroom to help teach problem solving and critical thinking."
+    case_study:
+      overline: "Case study"
+      heading: "Bringing micro:bit to Alaskan classrooms"
+      desc: "We addressed this problem head-on by providing a complete package for successful implementation: curricula, professional development, facilitated workshops, a district support program, and classroom sets of devices."
+      button: "Read more"
+    get_started:
+      heading: "Getting started with physical computing"
+      desc: "We have curriculum options that support two different devices — see available options below."
+      microbit:
+        title: "BBC micro:bit"
+        button:
+          see_curriculum: "See available curriculum"
+            aria_label: "See available micro:bit curriculum"
+          learn: "Learn about micro:bit"
+      circuit_playground:
+        title: "Circuit Playground"
+        button:
+          see_curriculum: "See available curriculum"
+            aria_label: "See available Circuit Playground curriculum"
+          learn: "Learn about Circuit Playground"
+    why:
+      heading: "Why physical computing?"
+      real_world:
+        title: "Real-world applications"
+        desc: "Using a physical device can help students engage and connect the actions on a screen to their impact in the real world."
+      inclusion:
+        title: "Inclusion and engagement"
+        desc: "Surveys show female students described feeling more confident after exposure to physical computing."
+      social:
+        title: "Social + emotional learning"
+        desc: "Physical computing encourages students to work together, fostering collaboration, interpersonal skills, and active learning."
+    curricula_microbit:
+      heading: "Curriculum using the micro:bit"
+      desc: "Code.org has partnered with the Micro:bit Educational Foundation to offer teachers several resources on using the BBC micro:bit device."
+      creating_apps:
+        overline: "Grades 6-12"
+        title: "Creating Apps with Devices"
+        desc: "Explore the role of physical devices in computing. Using App Lab and the BBC micro:bit, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices."
+        duration: "25 hours"
+        button:
+          explore_unit: "Explore the unit"
+            aria_label: "Explore the Creating Apps with Devices unit"
+          teach: "Prepare to teach"
+            aria_label: "Prepare to teach the Creating Apps with Devices unit"
+      module_grade_2:
+        overline: "Grades 2"
+        title: "micro:bit Maker Module"
+        desc: "Learn events, sequencing, loops, data and variables while creating an emotion badge, calming LEDs and a counter with the micro:bit."
+        duration: "9 hours"
+        button:
+          explore_unit: "Explore the unit"
+            aria_label: "Explore the micro:bit Maker Module unit for grade 2"
+          teach: "Prepare to teach"
+            aria_label: "Prepare to teach the micro:bit Maker Module unit for grade 2"
+      module_grade_3:
+        overline: "Grade 3"
+        title: "micro:bit Maker Module"
+        desc: "Learn conditionals, events, and text inputs while saving sea turtle, creating rock paper scissors and making an activity picker with the micro:bit."
+        duration: "7 hours"
+        button:
+          explore_unit: "Explore the unit"
+            aria_label: "Explore the micro:bit Maker Module unit for grade 3"
+          teach: "Prepare to teach"
+            aria_label: "Prepare to teach the micro:bit Maker Module unit for grade 3"
+      module_grade_4:
+        overline: "Grade 4"
+        title: "micro:bit Maker Module"
+        desc: "Learn events, designing for accessibility, conditionals and functions creating a sensory toy, simple door alarm, and tilt alarm with the micro:bit."
+        duration: "9 hours"
+        button:
+          explore_unit: "Explore the unit"
+            aria_label: "Explore the micro:bit Maker Module unit for grade 4"
+          teach: "Prepare to teach"
+            aria_label: "Prepare to teach the micro:bit Maker Module unit for grade 4"
+      module_grade_5:
+        overline: "Grade 5"
+        title: "micro:bit Maker Module"
+        desc: "Learn events, variables. conditionals, and sounds while creating a step counter, pet, and thermometer with the micro:bit."
+        duration: "9 hours"
+        button:
+          explore_unit: "Explore the unit"
+            aria_label: "Explore the micro:bit Maker Module unit for grade 5"
+          teach: "Prepare to teach"
+            aria_label: "Prepare to teach the micro:bit Maker Module unit for grade 5"
+    curricula_circuit_playground:
+      heading: "Curriculum using the Circuit Playground"
+      creating_apps:
+        overline: "Grades 6-12"
+        title: "Creating Apps with Devices"
+        desc: "Explore the role of physical devices in computing. Using App Lab and Adafruit's Circuit Playground, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices."
+        duration: "25 hours"
+        button: "Explore the unit"
+        aria_label: "Explore the Creating Apps with Devices unit"
+      teach_creating_apps:
+        overline: "6-12 Teacher"
+        title: "Teaching Creating Apps with Devices"
+        desc: "Self-paced online professional learning experience designed to prepare educators to get started teaching the Creating Apps with Devices unit."
+        note: "**Note:** A circuit playground device is required to engage with the activities in this professional learning experience."
+        button: "Prepare to teach"
+        aria_label: "Prepare to teach the Creating Apps with Devices unit"
+    careers:
+      heading: "Maker careers"
+      subhead: "Meet Jerome Morrison at Meow Wolf"
+      desc: "Jerome is a design technologist at Meow Wolf who works on amazing interactive art installations. With technology, he helps create portals to imaginative worlds at Meow Wolf's location in Santa Fe, New Mexico."
+    additional_resources:
+      heading: "Additional resources"
+      desc: "Beyond curriculum and professional learning, we have many materials to support your classroom."
+      catalog:
+        title: "Curriculum Catalog"
+        desc: "Comprehensive curriculum offerings for every grade and experience level featuring robust structured and self-paced learning options."
+        button: "Explore the catalog"
+      professional_learning:
+        title: "Professional Learning"
+        desc: "Help today's students become tomorrow's superheroes with professional learning that meets your needs."
+        button: "Explore professional learning"
+      hour_of_code:
+        title: "Hour of Code Activities"
+        desc: "One-hour tutorials in over 45 languages. No experience needed. Hour of Code activities are available for free year-round."
+        button: "Explore activities"
+
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'
   hoc_live_learn_title: 'Learn with Hour of Code Live'
