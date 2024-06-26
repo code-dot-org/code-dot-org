@@ -12,22 +12,40 @@ theme: responsive_full_width
 - icon_face_smile = "fa-solid fa-face-smile"
 
 %section.hero-banner-basic.overlay
-  .wrapper.grid-container.justify-space-between.align-items-center.gap-4
+  .wrapper.grid-container.justify-space-between.align-items-center.gap-4.wider-text
     .text-wrapper
       %h1.white
-        Become a Maker
-      %p.body-two.white
-        Explore your creativity with physical computing.
+        =hoc_s("maker_page.top.heading")
+      %p.body-one.no-margin-bottom.white
+        =hoc_s("maker_page.top.desc")
     %figure
       %img{src: "/images/maker/maker-banner-image.svg", alt: "", style: "width: 100%"}
 
 %section
   .wrapper
-    WHAT IS A MAKER
+    .grid-container.two-col.justify-space-between.align-items-center.gap-4
+      %figure
+        %img.rounded-corners{src: "/images/maker/maker-students-cp.png", alt: "", style: "width: 100%"}
+      .text-wrapper
+        %h2=hoc_s("maker_page.what.heading")
+        %p.heading-xs{style: "margin-bottom: 1rem"}
+          =hoc_s("maker_page.what.desc_01")
+        %p=hoc_s("maker_page.what.desc_02")
 
-%section.bg-neutral-dark
-  .wrapper
-    ALAKSA
+-# TODO - remove the divider line and unhide case study section when we get the link
+= view :section_divider_line
+-# %section.bg-neutral-dark
+-#   .wrapper.flex-container.justify-space-between.align-items-center.flex-direction-column-mobile.gap-3
+-#     .text-wrapper.flex-1
+-#       %p.overline-two.white
+-#         =hoc_s("maker_page.case_study.overline")
+-#       %h2.heading-lg.white
+-#         =hoc_s("maker_page.case_study.heading")
+-#       %p.body-three.white.no-margin-bottom
+-#         =hoc_s("maker_page.case_study.desc")
+-#     %img{src: "/images/maker/alaska.png", alt: "", style: "width: 182px"}
+-#     %a.link-button.white.has-external-link{href: "#", target: "_blank", rel: "noopener noreferrer"}
+-#       =hoc_s("maker_page.case_study.button")
 
 %section
   .wrapper
