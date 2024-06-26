@@ -238,13 +238,16 @@ export const onSaveComplete =
 
 // Thunk called when a save has failed.
 export const onSaveFail =
-  () => (dispatch: AppDispatch, getState: () => RootState) => {
+  (e: Error) => (dispatch: AppDispatch, getState: () => RootState) => {
     const {savedAiCustomizations} = getState().aichat;
     dispatch(setAllAiCustomizations(savedAiCustomizations));
+    const errorMessage = e.message.includes('profanity')
+      ? 'Profanity detected in system prompt or retrieval context(s) and cannot be updated. Please try again.'
+      : 'Error updating project. Please try again.';
     dispatch(
       addNotification({
         id: getNewMessageId(),
-        text: 'Error updating project. Please try again.',
+        text: errorMessage,
         notificationType: 'error',
         timestamp: Date.now(),
       })

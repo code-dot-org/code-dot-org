@@ -289,7 +289,6 @@ export default class ProjectManager {
       this.executeSaveNoopListeners(this.lastChannel);
       return;
     }
-    console.log('this.lastChannel.projectType', this.lastChannel.projectType);
     this.resetSaveState();
     this.saveInProgress = true;
     this.nextSaveTime = Date.now() + this.saveInterval;

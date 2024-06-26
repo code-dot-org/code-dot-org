@@ -70,7 +70,13 @@ export class RemoteSourcesStore implements SourcesStore {
       this.firstSaveTime = this.firstSaveTime || timestamp;
       this.currentVersionId = versionId;
     } else {
-      throw new Error(response.status + ' ' + response.statusText);
+      const reader = await response.json();
+      const details = reader.details;
+      const statusText =
+        details && details.profaneWords
+          ? `${response.statusText} (profanity)`
+          : response.statusText;
+      throw new Error(response.status + ' ' + statusText);
     }
 
     return response;
