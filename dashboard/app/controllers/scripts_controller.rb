@@ -25,13 +25,13 @@ class ScriptsController < ApplicationController
       return
     end
 
-    if request.path != (canonical_path = script_path(@script))
-      # return a temporary redirect rather than a permanent one, to avoid ever
-      # serving a permanent redirect from a unit's new location to its old
-      # location during the unit renaming process.
-      redirect_to canonical_path
-      return
-    end
+    # if request.path != (canonical_path = script_path(@script))
+    #   # return a temporary redirect rather than a permanent one, to avoid ever
+    #   # serving a permanent redirect from a unit's new location to its old
+    #   # location during the unit renaming process.
+    #   redirect_to canonical_path
+    #   return
+    # end
 
     if !params[:section_id] && current_user&.last_section_id
       redirect_to request.query_parameters.merge({"section_id" => current_user&.last_section_id})
