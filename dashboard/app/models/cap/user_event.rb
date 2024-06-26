@@ -25,6 +25,7 @@ module CAP
       PARENT_EMAIL_SUBMIT = 'parent_email_submit'.freeze,
       PARENT_EMAIL_UPDATE = 'parent_email_update'.freeze,
       PERMISSION_GRANTING = 'permission_granting'.freeze,
+      GRACE_PERIOD_START = 'grace_period_start'.freeze,
       ACCOUNT_LOCKING = 'account_locking'.freeze,
       ACCOUNT_PURGING = 'account_purging'.freeze,
     ].freeze

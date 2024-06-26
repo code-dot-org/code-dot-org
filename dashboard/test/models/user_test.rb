@@ -89,6 +89,14 @@ class UserTest < ActiveSupport::TestCase
       @student = create(:non_compliant_child)
     end
 
+    test 'logs CAP event "account_locking" after student compliance state changed to "p"' do
+      Services::ChildAccount.update_compliance(@student, Policies::ChildAccount::ComplianceState::GRACE_PERIOD)
+
+      Services::ChildAccount::EventLogger.expects(:log_grace_period_start).with(@student).once
+
+      @student.save!
+    end
+
     test 'logs CAP event "account_locking" after student compliance state changed to "l"' do
       Services::ChildAccount.update_compliance(@student, Policies::ChildAccount::ComplianceState::LOCKED_OUT)
 

@@ -1,6 +1,8 @@
-import {expect} from '../util/reconfiguredChai';
-import Sound from '@cdo/apps/Sound';
 import sinon from 'sinon';
+
+import Sound from '@cdo/apps/Sound';
+
+import {expect} from '../util/reconfiguredChai';
 
 describe('Sound', () => {
   let sound;

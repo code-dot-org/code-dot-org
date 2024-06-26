@@ -1,7 +1,9 @@
-import {expect} from '../../../../../util/reconfiguredChai';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+
 import SessionAttendanceRow from '@cdo/apps/code-studio/pd/workshop_dashboard/attendance/session_attendance_row';
+
+import {expect} from '../../../../../util/reconfiguredChai';
 
 const FAKE_WORKSHOP_ID = 11;
 const FAKE_SESSION_ID = 22;

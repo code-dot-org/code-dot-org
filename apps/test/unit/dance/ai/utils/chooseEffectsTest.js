@@ -1,8 +1,10 @@
-import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
-import {chooseEffects} from '@cdo/apps/dance/ai/utils/chooseEffects';
-import * as calculateOutputSummedWeights from '@cdo/apps/dance/ai/utils/calculateOutputSummedWeights';
+
 import {EffectsQuality} from '@cdo/apps/dance/ai/types';
+import * as calculateOutputSummedWeights from '@cdo/apps/dance/ai/utils/calculateOutputSummedWeights';
+import {chooseEffects} from '@cdo/apps/dance/ai/utils/chooseEffects';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('chooseEffects', () => {
   beforeEach(() => {

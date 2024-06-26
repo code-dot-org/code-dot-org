@@ -1,10 +1,12 @@
 /** @file Test SetupGuide component */
-import React from 'react';
-import {expect} from '../../../../../util/deprecatedChai';
 import {render, screen} from '@testing-library/react';
+import React from 'react';
 import sinon from 'sinon';
-import SetupGuide from '@cdo/apps/lib/kits/maker/ui/SetupGuide';
+
 import applabI18n from '@cdo/applab/locale';
+import SetupGuide from '@cdo/apps/lib/kits/maker/ui/SetupGuide';
+
+import {expect} from '../../../../../util/deprecatedChai';
 
 describe('MakerSetupGuide', () => {
   describe('General description displayed correctly', () => {

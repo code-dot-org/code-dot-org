@@ -1,7 +1,9 @@
-import {expect} from '../../../../../../util/reconfiguredChai';
 import sinon from 'sinon';
-import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
+
 import ExternalLed from '@cdo/apps/lib/kits/maker/boards/microBit/ExternalLed';
+import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
+
+import {expect} from '../../../../../../util/reconfiguredChai';
 
 describe('ExternalLed', function () {
   describe('on() and off()', () => {
