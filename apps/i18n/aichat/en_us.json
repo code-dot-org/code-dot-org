@@ -1,5 +1,6 @@
 {
   "aichatWorkspaceHeader": "AI Chat",
+  "startOverAichatModelCustomizations": "This will reset this level to its start state and remove any model customizations or model card information you’ve added or changed.",
   "continue": "Continue",
   "inappropriateUserMessage": "This message has been flagged as inappropriate.",
   "tooPersonalUserMessage": "This message has been flagged as too personal.",
