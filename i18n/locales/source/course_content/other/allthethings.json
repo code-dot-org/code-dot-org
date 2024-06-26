@@ -2900,6 +2900,25 @@
   "https://studio.code.org/s/allthethings/lessons/45/levels/4": {
     "long_instructions": "This is a Poetry level which includes the auto-populated `PROCEDURES` category and uses the modal function editor."
   },
+  "https://studio.code.org/s/allthethings/lessons/46/levels/2": {
+    "long_instructions": "First, please play one sound.",
+    "validations": {
+      "Music Level 1_391b0b44-af8d-4559-a985-d5b643aed908": "Nice work.",
+      "Music Level 1_c0da3b0b-c4d6-490c-8bfb-4faf4188ff32": "Please play one sound."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/46/levels/3": {
+    "long_instructions": "Second, please play three sounds at the same time.",
+    "validations": {
+      "Music Level 2_b4505750-86bb-40d7-8c31-ca015980d7ee": "Nice work.",
+      "Music Level 2_f5ef3af6-0010-4e06-937c-d35b5cb8e0be": "It's good that you played two sounds, but you need to play another one.",
+      "Music Level 2_3e35e104-7422-4fb8-80e1-b9da580384f2": "It's good that you played one sound, but you need to play two more.",
+      "Music Level 2_dc4dddf1-5e9d-4664-b9a1-00d73e728a06": "Please play three sounds together."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/46/levels/4": {
+    "long_instructions": "Try everything!"
+  },
   "https://studio.code.org/s/allthethings/lessons/47/levels/1": {
     "long_instructions": "## Sample Instructions\n\nThis is a chat bot which allows you to talk to historical figures.\n\n### Do This\n\nType in a question and press the `Submit`(#7435b2) button. What can you learn about Ada Lovelace?"
   },
@@ -2946,6 +2965,9 @@
   },
   "https://studio.code.org/s/allthethings/lessons/51/levels/2": {
     "long_instructions": "## Web Lab 2 Basics\n\nCreate your own web page!"
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/1": {
+    "long_instructions": "Try everything!"
   },
   "https://studio.code.org/s/allthethings/lessons/52/levels/2": {
     "long_instructions": "## Sample Instructions\n\nThis is a chat bot which allows you to talk to historical figures.\n\n### Do This\n\nType in a question and press the `Submit`(#7435b2) button. What can you learn about Ada Lovelace?"
