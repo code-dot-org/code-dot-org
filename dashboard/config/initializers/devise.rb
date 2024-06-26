@@ -218,7 +218,7 @@ Devise.setup do |config|
   config.maximum_attempts = Rails.env.test? ? 2 : 10
 
   # Time interval to unlock the account if :time is enabled as unlock_strategy.
-  config.unlock_in = 1.hour
+  config.unlock_in = 30.minutes
 
   # ==> Configuration for :recoverable
   #
