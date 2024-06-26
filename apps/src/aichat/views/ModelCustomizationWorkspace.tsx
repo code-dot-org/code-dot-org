@@ -91,6 +91,7 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
     onChange: handleOnChange,
     type: 'secondary',
     tabsContainerClassName: styles.tabsContainer,
+    tabPanelsContainerClassName: styles.tabPanels,
   };
 
   useEffect(() => {

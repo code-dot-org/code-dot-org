@@ -15,6 +15,11 @@
     background-color: $light_gray_200
   }
 
+  .tabPanels {
+    padding: 10px;
+    height: 100%;
+  }
+
   textarea {
     @extend %full-width;
     height: 120px;
