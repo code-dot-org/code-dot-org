@@ -9,12 +9,17 @@ import {
   EmText,
   StrongText,
 } from '@cdo/apps/componentLibrary/typography';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
-
 import './index.scss';
 
-function returnToCdoButton() {
+const reportEvent = (eventName: string, payload: object = {}) => {
+  analyticsReporter.sendEvent(eventName, payload, PLATFORMS.AMPLITUDE);
+};
+
+const returnToCdoButton = () => {
   return (
     <Button
       className="return-to-cdo"
@@ -22,18 +27,18 @@ function returnToCdoButton() {
       onClick={() => location.replace('/')}
     />
   );
-}
+};
 
-function permissionGrantedMessage(date) {
+const permissionGrantedMessage = (date: Date) => {
   // Get the current locale.
   const locale = cookies.get('language_') || 'en-US';
-  const dateOptions = {
+  const dateOptions: Intl.DateTimeFormatOptions = {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
   };
   const grantedDateString = i18n.childAccountConsentValidPermissionGranted({
-    date: date.toLocaleDateString(locale, {...dateOptions}),
+    date: date.toLocaleDateString(locale, dateOptions),
   });
   return (
     <div id="permission_granted_container">
@@ -49,9 +54,9 @@ function permissionGrantedMessage(date) {
       {returnToCdoButton()}
     </div>
   );
-}
+};
 
-function expiredTokenMessage() {
+const expiredTokenMessage = () => {
   return (
     <div id="expired_token_container">
       <Heading4>{i18n.childAccountConsentExpiredHeader()}</Heading4>
@@ -62,16 +67,31 @@ function expiredTokenMessage() {
       {returnToCdoButton()}
     </div>
   );
+};
+
+export interface ChildAccountConsentProps {
+  permissionGranted?: boolean;
+  permissionGrantedDate?: Date;
+  studentId?: number;
 }
-export default function ChildAccountConsent(props) {
-  if (props.permissionGranted) {
-    return permissionGrantedMessage(props.permissionGrantedDate);
+
+const ChildAccountConsent: React.FC<ChildAccountConsentProps> = ({
+  permissionGranted,
+  permissionGrantedDate,
+  studentId,
+}) => {
+  if (permissionGranted && permissionGrantedDate) {
+    reportEvent(EVENTS.CAP_PARENT_CONSENT_GRANTED, {studentId: studentId});
+    return permissionGrantedMessage(permissionGrantedDate);
   } else {
+    reportEvent(EVENTS.CAP_PARENT_CONSENT_EXPIRED);
     return expiredTokenMessage();
   }
-}
+};
 
 ChildAccountConsent.propTypes = {
   permissionGranted: PropTypes.bool,
   permissionGrantedDate: PropTypes.instanceOf(Date),
 };
+
+export default ChildAccountConsent;

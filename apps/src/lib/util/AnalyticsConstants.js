@@ -36,6 +36,8 @@ const EVENTS = {
   CAP_STATE_FORM_SHOW: 'CAP State Form Shown',
   CAP_STATE_FORM_PROVIDED: 'CAP State Form Submitted',
   CAP_STATE_FORM_DISMISSED: 'CAP State Form Sign Out Button Clicked',
+  CAP_PARENT_CONSENT_EXPIRED: 'CAP Parent Consent Expired',
+  CAP_PARENT_CONSENT_GRANTED: 'CAP Parent Consent Granted',
   CAP_PARENT_EMAIL_BANNER_SHOWN: 'CAP Parent Email Banner Shown',
   CAP_PARENT_EMAIL_BANNER_CLICKED: 'CAP Parent Email Banner Clicked',
   CAP_PARENT_EMAIL_MODAL_SHOWN: 'CAP Parent Email Modal Shown',
@@ -44,12 +46,14 @@ const EVENTS = {
   CAP_PARENT_EMAIL_UPDATED: 'CAP Parent Email Updated',
   CAP_PARENT_EMAIL_RESEND: 'CAP Parent Email Resend',
   CAP_AGE_GATED_MODAL_SHOWN: 'CAP Teacher Students Warning Modal Shown',
+  CAP_AGE_GATED_MODAL_CLOSED: 'CAP Teacher Students Warning Modal Closed',
   CAP_SETTINGS_SHOWN: 'CAP Settings Shown',
   CAP_SETTINGS_EMAIL_SUBMITTED: 'CAP Settings Email Submitted',
   CAP_SETTINGS_EMAIL_UPDATED: 'CAP Settings Email Updated',
   CAP_SETTINGS_EMAIL_RESEND: 'CAP Settings Email Resend',
   CAP_STUDENT_WARNING_LINK_CLICKED:
     'CAP Teacher Students Warning Modal Documentation Clicked',
+  CAP_AGE_GATED_BANNER_SHOWN: 'CAP Teacher Students Banner Shown',
 
   // School Selection Component
   COUNTRY_SELECTED: 'User Selects Country',
