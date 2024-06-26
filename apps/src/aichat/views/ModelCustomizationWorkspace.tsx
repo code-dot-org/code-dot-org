@@ -82,7 +82,6 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
   }
 
   const handleOnChange = (value: string) => {
-    console.log('value', value);
     setSelectedTab(value);
   };
   const tabArgs: TabsProps = {
@@ -96,19 +95,38 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
 
   useEffect(() => {
     if (selectedTab === 'setup') {
-      setSetupTabName('Setup (view only)');
+      if (isSetupCustomizationReadOnly || isReadOnly) {
+        setSetupTabName('Setup (view only)');
+      } else {
+        setSetupTabName('Setup');
+      }
       setRetrievalTabName('Retrieval');
       setPublishTabName('Publish');
     } else if (selectedTab === 'retrieval') {
-      setRetrievalTabName('Retrieval (view only)');
+      if (isDisabled(retrievalContexts) || isReadOnly) {
+        setRetrievalTabName('Retrieval (view only)');
+      } else {
+        setRetrievalTabName('Retrieval');
+      }
       setSetupTabName('Setup');
       setPublishTabName('Publish');
     } else if (selectedTab === 'modelCardInfo') {
-      setPublishTabName('Publish (view only)');
+      if (isDisabled(modelCardInfo) || isReadOnly) {
+        setPublishTabName('Publish (view only)');
+      } else {
+        setPublishTabName('Publish');
+      }
       setSetupTabName('Setup');
       setRetrievalTabName('Retrieval');
     }
-  }, [setSelectedTab, selectedTab]);
+  }, [
+    setSelectedTab,
+    selectedTab,
+    isSetupCustomizationReadOnly,
+    isReadOnly,
+    retrievalContexts,
+    modelCardInfo,
+  ]);
   return (
     <div className={styles.modelCustomizationWorkspace}>
       <Tabs {...tabArgs} />
