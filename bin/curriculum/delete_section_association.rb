@@ -50,9 +50,6 @@ options.unit_names.each do |unit_nm|
     puts "Skipping section update due to dry run mode."
   elsif assigned_sections.count > 0
     puts "Removing all section assignments."
-    assigned_sections.each do |section|
-      section.script_id = nil
-      section.save!
-    end
+    assigned_sections.update_all(script_id: nil)
   end
 end
