@@ -389,7 +389,7 @@ class FilesApi < Sinatra::Base
     end
   end
 
-  def put_file(endpoint, encrypted_channel_id, filename, body, app_type = nil)
+  def put_file(endpoint, encrypted_channel_id, filename, body, project_type = nil)
     not_authorized unless owns_channel?(encrypted_channel_id)
     file_type = File.extname(filename)
     buckets = get_bucket_impl(endpoint).new
@@ -420,9 +420,9 @@ class FilesApi < Sinatra::Base
     # Javalab's "backpack" feature uses libraries to allow students to share code
     # between their own projects -- skip this check for .java files, since in this use case
     # the files are only being used by a single user.
-    if (endpoint == 'libraries' && file_type != '.java') || LABS_TO_CHECK_FOR_PROFANITY.include?(app_type)
+    if (endpoint == 'libraries' && file_type != '.java') || LABS_TO_CHECK_FOR_PROFANITY.include?(project_type)
       begin
-        if app_type == 'aichat'
+        if project_type == 'aichat'
           source = JSON.parse(body)['source']
           source_json = JSON.parse(source)
           text_to_check = source_json['systemPrompt'] + ' ' + source_json['retrievalContexts'].join(' ')
@@ -438,13 +438,13 @@ class FilesApi < Sinatra::Base
       # TODO(JillianK): we are temporarily ignoring address share failures because our address detection is very broken.
       # Once we have a better geocoding solution in H1, we should start filtering for addresses again.
       # Additional context: https://codedotorg.atlassian.net/browse/STAR-1361
-      if app_type != 'aichat' && share_failure && share_failure[:type] != "address"
+      if project_type != 'aichat' && share_failure && share_failure[:type] != "address"
         details_key = share_failure.type == ShareFiltering::FailureType::PROFANITY ? "profaneWords" : "pIIWords"
         details = {details_key => [share_failure.content]}
         return json_bad_request(details)
       end
       # For now, just check for profanity in aichat.
-      if app_type == 'aichat' && share_failure && share_failure[:type] == ShareFiltering::FailureType::PROFANITY
+      if project_type == 'aichat' && share_failure && share_failure[:type] == ShareFiltering::FailureType::PROFANITY
         details_key = "profaneWords"
         details = {details_key => [share_failure.content]}
         return json_bad_request(details)
@@ -568,9 +568,9 @@ class FilesApi < Sinatra::Base
     # this prevents us from rejecting large files based on the Content-Length
     # header.
     body = request.body.read
-    app_type = params[:appType]
+    project_type = params[:projectType]
 
-    put_file(endpoint, encrypted_channel_id, filename, body, app_type)
+    put_file(endpoint, encrypted_channel_id, filename, body, project_type)
   end
 
   # POST /v3/assets/<channel-id>/

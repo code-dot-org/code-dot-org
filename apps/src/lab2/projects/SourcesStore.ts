@@ -48,7 +48,7 @@ export class RemoteSourcesStore implements SourcesStore {
   async save(
     channelId: string,
     sources: ProjectSources,
-    appType?: ProjectType,
+    projectType?: ProjectType,
     replace = false
   ) {
     let options = undefined;
@@ -58,7 +58,7 @@ export class RemoteSourcesStore implements SourcesStore {
         replace: replace || this.shouldReplace(),
         firstSaveTimestamp: encodeURIComponent(this.firstSaveTime || ''),
         tabId: getTabId(),
-        appType: appType,
+        projectType: projectType,
       };
     }
     const response = await sourcesApi.update(channelId, sources, options);
