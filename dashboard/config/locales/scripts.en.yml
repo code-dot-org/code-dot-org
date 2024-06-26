@@ -17984,3 +17984,17 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        pl-maker-shallowcopy:
+          lessons: {}
+          lesson_groups: {}
+        maker-shallow:
+          lessons:
+            lesson-1:
+              name: DanceParty
+          lesson_groups: {}
+          name: maker-shallow
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
