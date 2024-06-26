@@ -1812,9 +1812,9 @@ class ScriptsControllerTest < ActionController::TestCase
       get :resources, params: {id: legacy_path_validation_unit.id}
     end
 
-    # assert_raises ActiveRecord::RecordNotFound do
-    #   post :update, params: {id: legacy_path_validation_unit.id}
-    # end
+    assert_raises ActiveRecord::RecordNotFound do
+      post :update, params: {id: legacy_path_validation_unit.id}
+    end
 
     assert_raises ActiveRecord::RecordNotFound do
       delete :destroy, params: {id: legacy_path_validation_unit.id}
