@@ -1,7 +1,8 @@
-import WorkshopEnrollmentPreSurvey from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_enrollment_pre_survey';
-import React from 'react';
-import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import {expect} from 'chai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import React from 'react';
+
+import WorkshopEnrollmentPreSurvey from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_enrollment_pre_survey';
 
 describe('WorkshopEnrollmentPreSurvey', () => {
   const fakeWorkshopDate = 'October 4th';

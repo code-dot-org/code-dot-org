@@ -1,9 +1,10 @@
 import {assert} from 'chai';
+import _ from 'lodash';
+
 import createStandardsEditor, {
   addStandard,
   removeStandard,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/standardsEditorRedux';
-import _ from 'lodash';
 
 const fakeStandards = [
   {

@@ -1,5 +1,6 @@
-import {assert} from '../../../../util/reconfiguredChai';
 import * as codegen from '@cdo/apps/lib/tools/jsinterpreter/codegen';
+
+import {assert} from '../../../../util/reconfiguredChai';
 
 describe('codegen', function () {
   describe('generates cumulative length stats', function () {

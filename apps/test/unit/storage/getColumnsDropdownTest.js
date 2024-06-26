@@ -1,5 +1,6 @@
-import {expect} from '../../util/reconfiguredChai';
 import {__TestInterface} from '@cdo/apps/storage/getColumnDropdown';
+
+import {expect} from '../../util/reconfiguredChai';
 
 describe('getTableNameFromColumnSocket', () => {
   const makeFakeSocket = function (tableName) {

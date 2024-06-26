@@ -1,9 +1,17 @@
 - content_for(:head) do
   :ruby
     script_data = {}
-    lti_provider ||= params[:lti_provider]
+    landing_session = session[:lms_landing]
+
+    if landing_session.present?
+      lti_provider = landing_session[:lti_provider_name]
+      new_cta_type = landing_session[:new_cta_type]
+    else
+      lti_provider ||= params[:lti_provider]
+      new_cta_type ||= params[:new_cta_type]
+    end
+
     email ||= params[:email]
-    new_cta_type ||= params[:new_cta_type]
     new_account_url = DCDO.get('student-email-post-enabled', false) ? users_finish_sign_up_path : new_user_registration_url
     script_data[:lti_provider] = lti_provider
     script_data[:lti_provider_name] = Policies::Lti::LMS_PLATFORMS[lti_provider.to_sym][:name]
