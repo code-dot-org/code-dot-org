@@ -48,6 +48,11 @@ function SectionProgressV2({
     getLocalStorage(scriptId, sectionId)
   );
 
+  const expandedMetadataEnabled = React.useMemo(
+    () => DCDO.get('progress-v2-metadata-enabled', false),
+    []
+  );
+
   React.useEffect(() => {
     setExpandedLessonIds(getLocalStorage(scriptId, sectionId));
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_VIEW, {
@@ -103,9 +108,7 @@ function SectionProgressV2({
           {i18n.lessonsIn()}
 
           <UnitSelectorV2 className={styles.titleUnitSelectorDropdown} />
-          {DCDO.get('progress-table-v2-metadata-enabled', false) && (
-            <MoreOptionsDropdown />
-          )}
+          {expandedMetadataEnabled && <MoreOptionsDropdown />}
         </Heading6>
       </div>
       <ProgressTableV2

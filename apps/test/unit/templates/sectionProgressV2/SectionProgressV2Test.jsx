@@ -38,6 +38,7 @@ describe('SectionProgressV2', () => {
     store = createStore(5, 5);
     store.dispatch(setScriptId(1));
     store.dispatch(finishLoadingProgress());
+    DCDO.set('progress-v2-metadata-enabled', false);
   });
 
   afterEach(() => {
