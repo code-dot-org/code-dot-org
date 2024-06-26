@@ -362,6 +362,8 @@ Dashboard::Application.routes.draw do
       end
 
       resources :reference_guides, param: 'key', path: 'guides'
+
+      resources :scripts, only: [:show]
     end
 
     resources :potential_teachers, only: [:create]

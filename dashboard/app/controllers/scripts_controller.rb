@@ -6,6 +6,7 @@ class ScriptsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :vocab, :resources, :code, :standards]
   check_authorization
   before_action :set_unit_by_name, only: [:show, :vocab, :resources, :code, :standards, :edit]
+  before_action :set_current_unit_group, only: [:show]
   before_action :render_no_access, only: [:show]
   before_action :set_redirect_override, only: [:show]
   authorize_resource class: 'Unit', except: [:update, :destroy]
@@ -14,7 +15,6 @@ class ScriptsController < ApplicationController
   use_reader_connection_for_route(:show)
 
   def show
-    @current_unit_group = params[:course_name] && UnitGroup.find_by_name(params[:course_name])
     if @script.is_deprecated
       return render 'errors/deprecated_course'
     end
@@ -293,6 +293,16 @@ class ScriptsController < ApplicationController
   private def set_unit_by_name
     @script = get_unit_by_name
     raise ActiveRecord::RecordNotFound unless @script
+  end
+
+  private def set_current_unit_group
+    @current_unit_group = UnitGroup.find_by_name(params[:course_course_name])
+    if params[:course_course_name] && !@current_unit_group
+      raise ActiveRecord::RecordNotFound.new("Course #{params[:course_course_name]} not found")
+    end
+    if @current_unit_group && @script.unit_groups.exclude?(@current_unit_group)
+      raise ActiveRecord::RecordNotFound.new("Unit #{@script.name} does not belong to course #{@current_unit_group.name}")
+    end
   end
 
   private def render_no_access
