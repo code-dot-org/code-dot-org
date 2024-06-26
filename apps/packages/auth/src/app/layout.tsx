@@ -1,4 +1,3 @@
-import {UserProvider} from '@auth0/nextjs-auth0/client';
 import type {Metadata} from 'next';
 import {Inter} from 'next/font/google';
 import React from 'react';
@@ -39,10 +38,8 @@ export default function RootLayout({
       </head>
 
       <body className={inter.className}>
-        <UserProvider>
-          <Header />
-          {children}
-        </UserProvider>
+        <Header />
+        {children}
       </body>
     </html>
   );

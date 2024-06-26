@@ -271,6 +271,17 @@ Devise.setup do |config|
   # changing this from :delete to :get to allow signing out from code.org
   config.sign_out_via = :get
 
+  config.jwt do |jwt|
+    jwt.secret = CDO.devise_jwt_secret_key
+    jwt.dispatch_requests = [
+      ['POST', %r{^/login$}]
+    ]
+    jwt.revocation_requests = [
+      ['DELETE', %r{^/logout$}]
+    ]
+    jwt.expiration_time = 30.minutes.to_i
+  end
+
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.

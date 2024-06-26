@@ -140,3 +140,4 @@ use_my_apps: true
 dashboard_auth0_client_id: ''
 dashboard_auth0_secret: ''
 dashboard_auth0_domain: ''
+devise_jwt_secret_key: ''

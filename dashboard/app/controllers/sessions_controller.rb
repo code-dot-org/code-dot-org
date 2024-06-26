@@ -2,6 +2,15 @@ require 'policies/child_account'
 
 class SessionsController < Devise::SessionsController
   include UsersHelper
+  respond_to :json
+  skip_before_action :verify_authenticity_token
+
+  def respond_with(resource, _opts = {})
+    render json: {
+      status: {code: 200, message: 'Logged in sucessfully.'},
+      data: UserSerializer.new(resource).serializable_hash
+    }, status: :ok
+  end
 
   # see also
   # https://github.com/plataformatec/devise/blob/v3.2/app/controllers/devise/sessions_controller.rb

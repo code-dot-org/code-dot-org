@@ -70,5 +70,5 @@
 #
 
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :email, :ops_first_name, :ops_last_name, :ops_school, :ops_gender, :races
+  attributes :id, :email, :ops_first_name, :ops_last_name, :ops_school, :ops_gender, :races, :name
 end
