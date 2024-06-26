@@ -20,6 +20,7 @@ module Lti
               section_id: section.id,
               previous_owner_id: section.user_id,
               new_owner_id: owner_id,
+              lms_name: section&.lti_course&.lti_integration&.platform_name,
             }
             section.update!(user_id: owner_id)
             Metrics::Events.log_event(
