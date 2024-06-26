@@ -19,7 +19,7 @@
   Bubble Choice & Lesson Extras
 
 #bubble_choice.in.collapse
-  - unless @level.is_a?(Unplugged)
+  - unless @level.is_a?(DSLDefined) || @level.is_a?(Unplugged)
     .field
       = f.label :display_name
       %p Set the name that will show for this level on the parent level. Also will override how this level is displayed on the Course Overview page. Limit to 25 characters
