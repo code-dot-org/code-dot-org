@@ -201,11 +201,11 @@ class UnitGroup < ApplicationRecord
     unremovable_unit_names = units_to_remove.select(&:prevent_course_version_change?).map(&:name)
     raise "Cannot remove units that have resources or vocabulary: #{unremovable_unit_names}" if unremovable_unit_names.any?
 
-    if new_units_objects.any? do |s|
-      s.original_unit_group != self && s.prevent_course_version_change?
-    end
-      raise 'Cannot add units that have resources or vocabulary'
-    end
+    # if new_units_objects.any? do |s|
+    #   s.original_unit_group != self && s.prevent_course_version_change?
+    # end
+    #   raise 'Cannot add units that have resources or vocabulary'
+    # end
 
     new_units_objects.each_with_index do |unit, index|
       unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: unit) do |ugu|
