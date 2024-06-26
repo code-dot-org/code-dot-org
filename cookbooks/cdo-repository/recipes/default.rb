@@ -76,10 +76,10 @@ if node.chef_environment == 'adhoc'
     not_if {File.exist? worktree_path}
   end
 
-  execute 'initiate sparse checkout of staging worktree' do
-    command "git sparse-checkout dashboard/config"
-    cwd worktree_path
-    user node[:user]
-    group node[:user]
-  end
+  # execute 'initiate sparse checkout of staging worktree' do
+  #   command "git sparse-checkout dashboard/config"
+  #   cwd worktree_path
+  #   user node[:user]
+  #   group node[:user]
+  # end
 end
