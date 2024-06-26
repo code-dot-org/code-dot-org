@@ -237,18 +237,21 @@ export const onSaveComplete =
   };
 
 // Thunk called when a save has failed.
-export const onSaveFail = () => (dispatch: AppDispatch) => {
-  dispatch(
-    addNotification({
-      id: getNewMessageId(),
-      text: 'Error updating project. Please try again.',
-      notificationType: 'error',
-      timestamp: Date.now(),
-    })
-  );
-  // Notify the UI that the save is complete.
-  dispatch(endSave());
-};
+export const onSaveFail =
+  () => (dispatch: AppDispatch, getState: () => RootState) => {
+    const {savedAiCustomizations} = getState().aichat;
+    dispatch(setAllAiCustomizations(savedAiCustomizations));
+    dispatch(
+      addNotification({
+        id: getNewMessageId(),
+        text: 'Error updating project. Please try again.',
+        notificationType: 'error',
+        timestamp: Date.now(),
+      })
+    );
+    // Notify the UI that the save is complete.
+    dispatch(endSave());
+  };
 
 // This thunk's callback function submits a user's chat content and AI customizations to
 // the chat completion endpoint, then waits for a chat completion response, and updates
@@ -447,6 +450,12 @@ const aichatSlice = createSlice({
     ) => {
       state.savedAiCustomizations = action.payload;
     },
+    setAllAiCustomizations: (
+      state,
+      action: PayloadAction<AiCustomizations>
+    ) => {
+      state.currentAiCustomizations = action.payload;
+    },
     setAiCustomizationProperty: (
       state,
       action: PayloadAction<{
@@ -566,6 +575,7 @@ export const {
   setViewMode,
   setStartingAiCustomizations,
   setAiCustomizationProperty,
+  setAllAiCustomizations,
   setModelCardProperty,
   endSave,
 } = aichatSlice.actions;
