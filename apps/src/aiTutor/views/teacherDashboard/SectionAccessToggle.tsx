@@ -1,12 +1,14 @@
 import React, {useState, useEffect} from 'react';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useSelector} from 'react-redux';
+
+import {handleUpdateSectionAITutorEnabled} from '@cdo/apps/aiTutor/accessControlsApi';
 import ToggleSwitch from '@cdo/apps/code-studio/components/ToggleSwitch';
 import InfoHelpTip from '@cdo/apps/lib/ui/InfoHelpTip';
-import i18n from '@cdo/locale';
-import style from '@cdo/apps/aiTutor/views/teacherDashboard/access-controls.module.scss';
-import {useSelector} from 'react-redux';
-import {handleUpdateSectionAITutorEnabled} from '@cdo/apps/aiTutor/accessControlsApi';
 import {updateSectionAiTutorEnabled} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import i18n from '@cdo/locale';
+
+import style from '@cdo/apps/aiTutor/views/teacherDashboard/access-controls.module.scss';
 
 interface SectionAccessToggleProps {
   sectionId: number;

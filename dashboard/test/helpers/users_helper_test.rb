@@ -515,4 +515,26 @@ class UsersHelperTest < ActionView::TestCase
     assert_equal destination_teacher.id, section.user.id
     assert_equal destination_teacher.id, section_instructor2.instructor.id
   end
+
+  describe '.account_linking_lock_reason' do
+    let(:user) {build_stubbed(:user)}
+
+    let(:user_cap_compliant?) {true}
+
+    before do
+      Policies::ChildAccount.stubs(:compliant?).with(user).returns(user_cap_compliant?)
+    end
+
+    it 'returns nil' do
+      _(account_linking_lock_reason(user)).must_be_nil
+    end
+
+    context 'when user is not compliant with CAP' do
+      let(:user_cap_compliant?) {false}
+
+      it 'returns lock reason message' do
+        _(account_linking_lock_reason(user)).must_equal 'Uh oh! You must obtain parental permission before creating a linked account.'
+      end
+    end
+  end
 end

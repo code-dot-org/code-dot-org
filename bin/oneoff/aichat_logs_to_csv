@@ -76,7 +76,7 @@ def main
           *base_row,
           message["status"],
           message["role"],
-          message["content"]
+          message["content"] || message["chatMessageText"]
         ]
         csv << row
       end

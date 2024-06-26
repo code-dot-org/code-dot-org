@@ -1,11 +1,13 @@
 import {fireEvent, render, screen} from '@testing-library/react';
-import React from 'react';
-import {expect} from '../../../../../util/reconfiguredChai';
-import i18n from '@cdo/locale';
 import $ from 'jquery';
+import React from 'react';
 import sinon from 'sinon';
-import {LtiUpgradeAccountForm} from '@cdo/apps/lib/ui/lti/upgrade/types';
+
 import LtiUpgradeAccountDialog from '@cdo/apps/lib/ui/lti/upgrade/LtiUpgradeAccountDialog';
+import {LtiUpgradeAccountForm} from '@cdo/apps/lib/ui/lti/upgrade/types';
+import i18n from '@cdo/locale';
+
+import {expect} from '../../../../../util/reconfiguredChai';
 
 const MOCK_FORM_DATA: LtiUpgradeAccountForm = {
   destination_url: 'https://code.org/upgrade',

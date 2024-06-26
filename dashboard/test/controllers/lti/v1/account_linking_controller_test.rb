@@ -17,20 +17,21 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
       credential_type: AuthenticationOption::LTI_V1,
       email: @user.email,
     )
+    target_url = "some/test/path"
+    session[:user_return_to] = target_url
     partial_lti_teacher.authentication_options = [ao]
     PartialRegistration.persist_attributes session, partial_lti_teacher
     User.any_instance.stubs(:valid_password?).returns(true)
 
     post :link_email, params: {email: @user.email, password: 'password'}
-    assert_redirected_to home_path
+    assert_redirected_to target_url
     assert Policies::Lti.lti?(@user)
   end
 
   test 'fails if the password is wrong' do
     PartialRegistration.stubs(:in_progress?).returns(true)
-
+    Services::Lti::AccountLinker.expects(:call).never
     post :link_email, params: {email: @user.email, password: 'password'}
-    assert_response :unauthorized
   end
 
   test 'blocks access if lti_account_linking_enabled is false' do
@@ -47,5 +48,33 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
   test 'allows access if lti_account_linking_enabled is true' do
     get :existing_account
     assert_response :ok
+  end
+
+  test 'returns bad request if not logged in' do
+    post :new_account
+
+    assert_response :bad_request
+  end
+
+  test 'opts out of lms landing for a signed in user' do
+    lti_user = create :student
+    sign_in lti_user
+
+    post :new_account
+
+    lti_user.reload
+
+    assert_equal true, lti_user.lms_landing_opted_out
+  end
+
+  test 'opts out of lms landing for a partial registration user' do
+    lti_user = create :student
+    PartialRegistration.persist_attributes(session, lti_user)
+
+    post :new_account
+
+    partial_user = User.new_with_session(ActionController::Parameters.new, session)
+
+    assert_equal true, partial_user.lms_landing_opted_out
   end
 end

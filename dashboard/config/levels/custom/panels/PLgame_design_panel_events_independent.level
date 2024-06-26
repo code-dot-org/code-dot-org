@@ -31,6 +31,6 @@
     ],
     "name_suffix": "_independent"
   },
-  "audit_log": "[{\"changed_at\":\"2024-06-07T20:26:28.382+00:00\",\"changed\":[\"cloned from \\\"game_design_panel_events_independent\\\"\"],\"cloned_from\":\"game_design_panel_events_independent\"},{\"changed_at\":\"2024-06-07 20:30:40 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-06-07T20:26:28.382+00:00\",\"changed\":[\"cloned from \\\"game_design_panel_events_independent\\\"\"],\"cloned_from\":\"game_design_panel_events_independent\"},{\"changed_at\":\"2024-06-07 20:30:40 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-06-20 15:26:45 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-06-20 15:27:06 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Panels>

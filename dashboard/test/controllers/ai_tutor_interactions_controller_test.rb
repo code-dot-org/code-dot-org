@@ -67,7 +67,7 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
     assert_includes(@response.body, "Status is unacceptable")
   end
 
-  test "create AI Tutor Interaction for project backed level with valid params" do
+  test "create AI Tutor Interaction for level that uses projects with valid params" do
     sign_in @student_with_ai_tutor_access
     @level = create(:level, :with_script)
     assert_creates(AiTutorInteraction) do
@@ -78,12 +78,11 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
           prompt: "Can you help me?",
           status: SharedConstants::AI_TUTOR_INTERACTION_STATUS[:PROFANITY_VIOLATION],
           ai_response: "Yes, I can help.",
-          isProjectBacked: true
       }
     end
   end
 
-  test "create AI Tutor Interaction for project backed level in lesson with lesson group with valid params" do
+  test "create AI Tutor Interaction for level that uses projects in lesson with lesson group with valid params" do
     sign_in @student_with_ai_tutor_access
     @lesson = create(:lesson, :with_lesson_group)
     @level = create(:level)
@@ -108,7 +107,6 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
           prompt: "Why is my test failing?",
           status: SharedConstants::AI_TUTOR_INTERACTION_STATUS[:OK],
           ai_response: "Because your code is wrong.",
-          isProjectBacked: true
       }
       created_ai_tutor_interaction = AiTutorInteraction.last
       assert created_ai_tutor_interaction.project_id == @project_id.to_s
@@ -218,6 +216,69 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
     response_json = JSON.parse(response.body)
     assert response_json.length, num_ai_tutor_interactions
     assert response_json.first["userId"], @student_with_ai_tutor_access.id
+  end
+  class FindProjectAndVersionIdTest < ActionController::TestCase
+    setup do
+      @controller = AiTutorInteractionsController.new
+      @user = create(:user)
+      @level = create(:level)
+      @script_id = 1
+      sign_in @user
+
+      @project_id = 'project-id'
+      @version_id = 'version-id'
+      @storage_id = 'storage-id'
+      @channel = 'encrypted-channel'
+
+      AWS::S3.stubs :create_client
+      @source_data = {status: 'FOUND', version_id: @version_id}
+      @controller.stubs(:current_user).returns(@user)
+      @controller.stubs(:storage_id_for_user_id).with(@user.id).returns(@storage_id)
+      Level.stubs(:find).with(@level.id).returns(@level)
+      ChannelToken.stubs(:find_channel_token).with(@level, @storage_id, @script_id).returns(channel_token)
+      @controller.stubs(:storage_decrypt_channel_id).with(@channel).returns([nil, @project_id])
+      SourceBucket.any_instance.stubs(:get).with(@channel, "main.json").returns(@source_data)
+    end
+
+    def channel_token
+      ChannelToken.new.tap do |token|
+        token.stubs(:channel).returns(@channel)
+      end
+    end
+
+    test 'returns project_id and version_id when all lookups succeed' do
+      result = @controller.find_project_and_version_id(@level.id, @script_id)
+      assert_equal({project_id: @project_id, version_id: @version_id}, result)
+    end
+
+    test 'returns project_id and nil when source data is not found' do
+      @source_data = {status: 'NOT_FOUND'}
+      SourceBucket.any_instance.stubs(:get).with(@channel, "main.json").returns(@source_data)
+
+      result = @controller.find_project_and_version_id(@level.id, @script_id)
+      assert_equal({project_id: @project_id, version_id: nil}, result)
+    end
+
+    test 'returns nil for project_id and version_id when channel token is not found' do
+      ChannelToken.stubs(:find_channel_token).with(@level, @storage_id, @script_id).returns(nil)
+
+      result = @controller.find_project_and_version_id(@level.id, @script_id)
+      assert_equal({project_id: nil, version_id: nil}, result)
+    end
+
+    test 'returns nil for project_id and version_id when level is not found' do
+      Level.stubs(:find).with(@level.id).returns(nil)
+
+      result = @controller.find_project_and_version_id(@level.id, @script_id)
+      assert_equal({project_id: nil, version_id: nil}, result)
+    end
+
+    test 'returns nil for project_id and version_id when user storage ID is not found' do
+      @controller.stubs(:storage_id_for_user_id).with(@user.id).returns(nil)
+
+      result = @controller.find_project_and_version_id(@level.id, @script_id)
+      assert_equal({project_id: nil, version_id: nil}, result)
+    end
   end
 
   private def stub_project_source_data(channel_id, code: 'fake-code', version_id: 'fake-version-id')

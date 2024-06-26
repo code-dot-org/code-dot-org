@@ -1,7 +1,6 @@
 {
   "key": "music-intro",
   "display_name": "music-intro",
-  "category": "csf",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Module",

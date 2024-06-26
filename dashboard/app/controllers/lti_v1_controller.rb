@@ -168,15 +168,18 @@ class LtiV1Controller < ApplicationController
       }
 
       destination_url = "#{target_link_uri}?#{redirect_params.to_query}"
+      session[:user_return_to] = destination_url
 
       if user
-        # If this is the user's first login, send them into the account linking flow
-        if user.sign_in_count < 1 && DCDO.get('lti_account_linking_enabled', false)
-          PartialRegistration.persist_attributes(session, user)
-          render 'lti/v1/account_linking/landing', locals: {lti_provider: integration[:platform_name], email: Services::Lti.get_claim(decoded_jwt, :email)} and return
-        end
-
         sign_in user
+
+        # If this is the user's first login, send them into the account linking flow
+        if DCDO.get('lti_account_linking_enabled', false) && !user.lms_landing_opted_out
+          Services::Lti.initialize_lms_landing_session(session, integration[:platform_name], 'continue')
+          PartialRegistration.persist_attributes(session, user)
+          publish_linking_page_visit(user, integration[:platform_name])
+          render 'lti/v1/account_linking/landing', locals: {email: Services::Lti.get_claim(decoded_jwt, :email)} and return
+        end
 
         metadata = {
           'user_type' => user.user_type,
@@ -204,17 +207,10 @@ class LtiV1Controller < ApplicationController
         # PartialRegistration removes the email address, so store it in a local variable first
         email_address = Services::Lti.get_claim(decoded_jwt, :email)
         PartialRegistration.persist_attributes(session, user)
-        session[:user_return_to] = destination_url
         if DCDO.get('lti_account_linking_enabled', false)
-          metadata = {
-            'lms_name' => integration[:platform_name],
-          }
-          Metrics::Events.log_event(
-            user: user,
-            event_name: 'lti_account_linking_page_visit',
-            metadata: metadata,
-          )
-          render 'lti/v1/account_linking/landing', locals: {lti_provider: integration[:platform_name], email: email_address} and return
+          Services::Lti.initialize_lms_landing_session(session, integration[:platform_name], 'new')
+          publish_linking_page_visit(user, integration[:platform_name])
+          render 'lti/v1/account_linking/landing', locals: {email: email_address} and return
         end
 
         if DCDO.get('student-email-post-enabled', false)
@@ -493,5 +489,16 @@ class LtiV1Controller < ApplicationController
       context: context
     )
     unauthorized_status
+  end
+
+  private def publish_linking_page_visit(user, platform_name)
+    metadata = {
+      'lms_name' => platform_name,
+    }
+    Metrics::Events.log_event(
+      user: user,
+      event_name: 'lti_account_linking_page_visit',
+      metadata: metadata,
+    )
   end
 end

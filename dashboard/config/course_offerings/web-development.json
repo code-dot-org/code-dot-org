@@ -1,7 +1,6 @@
 {
   "key": "web-development",
   "display_name": "Web Development",
-  "category": "other",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Standalone Unit",

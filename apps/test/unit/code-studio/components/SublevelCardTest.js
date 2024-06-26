@@ -1,9 +1,11 @@
-import React from 'react';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {assert, expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
 import SublevelCard from '@cdo/apps/code-studio/components/SublevelCard';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
+
+import {assert, expect} from '../../../util/reconfiguredChai';
 
 const DEFAULT_SUBLEVEL = {
   id: '1',

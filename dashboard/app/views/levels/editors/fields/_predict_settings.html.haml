@@ -1,0 +1,8 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#predict-settings-container"}}
+  Predict Level Settings
+
+#predict-settings-container.in.collapse
+
+- content_for :body_scripts do
+  %script{src: webpack_asset_path('js/levels/editors/fields/_predict_settings.js'),
+        data: {predictsettings: (@level.properties["predict_settings"]).to_json}}
