@@ -2436,13 +2436,6 @@
     curricula_microbit:
       heading: "Curriculum using the micro:bit"
       desc: "Code.org has partnered with the Micro:bit Educational Foundation to offer teachers several resources on using the BBC micro:bit device."
-      button:
-        explore_unit:
-          label: "Explore the unit"
-          aria_label: "Explore the micro:bit Maker Module unit for grade %{grade}"
-        teach:
-          label: "Prepare to teach"
-          aria_label: "Prepare to teach the micro:bit Maker Module unit for grade %{grade}"
       creating_apps:
         overline: "Grades 6-12"
         title: "Creating Apps with Devices"
@@ -2475,6 +2468,13 @@
         title: "micro:bit Maker Module"
         desc: "Learn events, variables, conditionals, and sounds while creating a step counter, pet, and thermometer with the micro:bit."
         duration: "9 hours"
+      button:
+        explore_unit:
+          label: "Explore the unit"
+          aria_label: "Explore the micro:bit Maker Module unit for grade %{grade}"
+        teach:
+          label: "Prepare to teach"
+          aria_label: "Prepare to teach the micro:bit Maker Module unit for grade %{grade}"
     curricula_circuit_playground:
       heading: "Curriculum using the Circuit Playground"
       creating_apps:
