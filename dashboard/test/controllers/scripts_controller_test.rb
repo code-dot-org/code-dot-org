@@ -489,6 +489,17 @@ class ScriptsControllerTest < ActionController::TestCase
     end
   end
 
+  test 'destroy successfully deletes the unit' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:levelbuilder)
+
+    unit_to_delete = create :script
+    delete :destroy, params: {id: unit_to_delete.name}
+
+    assert_response :success
+    assert_nil Unit.find_by(name: unit_to_delete.name)
+  end
+
   test "cannot update on production" do
     CDO.stubs(:rack_env).returns(:production)
     Rails.application.config.stubs(:levelbuilder_mode).returns false
@@ -497,7 +508,7 @@ class ScriptsControllerTest < ActionController::TestCase
     unit = create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
     File.stubs(:write).raises('must not modify filesystem')
     post :update, params: {
-      id: unit.id,
+      id: unit.name,
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
@@ -518,7 +529,7 @@ class ScriptsControllerTest < ActionController::TestCase
       filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
     end
     post :update, params: {
-      id: unit.id,
+      id: unit.name,
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
@@ -539,7 +550,7 @@ class ScriptsControllerTest < ActionController::TestCase
       filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
     end
     post :update, params: {
-      id: unit.id,
+      id: unit.name,
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
@@ -560,7 +571,7 @@ class ScriptsControllerTest < ActionController::TestCase
       filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
     end
     post :update, params: {
-      id: unit.id,
+      id: unit.name,
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
@@ -581,7 +592,7 @@ class ScriptsControllerTest < ActionController::TestCase
       filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
     end
     post :update, params: {
-      id: unit.id,
+      id: unit.name,
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
@@ -603,7 +614,7 @@ class ScriptsControllerTest < ActionController::TestCase
       filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
     end
     post :update, params: {
-      id: unit.id,
+      id: unit.name,
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
@@ -624,7 +635,7 @@ class ScriptsControllerTest < ActionController::TestCase
       filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
     end
     post :update, params: {
-      id: unit.id,
+      id: unit.name,
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
@@ -645,7 +656,7 @@ class ScriptsControllerTest < ActionController::TestCase
       filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
     end
     post :update, params: {
-      id: unit.id,
+      id: unit.name,
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
@@ -664,7 +675,7 @@ class ScriptsControllerTest < ActionController::TestCase
     unit = create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
     File.stubs(:write).raises('must not modify filesystem')
     post :update, params: {
-      id: unit.id,
+      id: unit.name,
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
@@ -683,7 +694,7 @@ class ScriptsControllerTest < ActionController::TestCase
     unit = create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
     File.stubs(:write).raises('must not modify filesystem')
     post :update, params: {
-      id: unit.id,
+      id: unit.name,
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
@@ -702,7 +713,7 @@ class ScriptsControllerTest < ActionController::TestCase
     stub_file_writes(unit.name)
 
     post :update, params: {
-      id: unit.id,
+      id: unit.name,
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
@@ -773,7 +784,7 @@ class ScriptsControllerTest < ActionController::TestCase
     unit.reload
     lesson_groups_json = unit.lesson_groups.map(&:summarize_for_unit_edit).to_json
     post :update, params: {
-      id: unit.id,
+      id: unit.name,
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: lesson_groups_json,
@@ -804,7 +815,7 @@ class ScriptsControllerTest < ActionController::TestCase
     unit.reload
     lesson_groups_json = unit.lesson_groups.map(&:summarize_for_unit_edit).to_json
     post :update, params: {
-      id: unit.id,
+      id: unit.name,
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: lesson_groups_json,
@@ -834,7 +845,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
     unit.reload
     post :update, params: {
-      id: unit.id,
+      id: unit.name,
       script: {name: unit.name},
       lesson_groups: '[]',
       resourceIds: teacher_resources.map(&:id),
@@ -859,7 +870,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
     unit.reload
     post :update, params: {
-      id: unit.id,
+      id: unit.name,
       script: {name: unit.name},
       lesson_groups: '[]',
       studentResourceIds: student_resources.map(&:id),
@@ -877,7 +888,7 @@ class ScriptsControllerTest < ActionController::TestCase
     stub_file_writes(unit.name)
 
     post :update, params: {
-      id: unit.id,
+      id: unit.name,
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
@@ -900,7 +911,7 @@ class ScriptsControllerTest < ActionController::TestCase
     stub_file_writes(unit.name)
 
     post :update, params: {
-      id: unit.id,
+      id: unit.name,
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
@@ -928,7 +939,7 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_nil unit.version_year
 
     post :update, params: {
-      id: unit.id,
+      id: unit.name,
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
@@ -980,7 +991,7 @@ class ScriptsControllerTest < ActionController::TestCase
     }
 
     post :update, params: {
-      id: unit.id,
+      id: unit.name,
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
@@ -998,7 +1009,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
     # Unset the properties.
     post :update, params: {
-      id: unit.id,
+      id: unit.name,
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
@@ -1029,7 +1040,7 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_nil unit.tts
 
     post :update, params: {
-      id: unit.id,
+      id: unit.name,
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
@@ -1053,7 +1064,7 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal true, unit.tts
 
     post :update, params: {
-      id: unit.id,
+      id: unit.name,
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
@@ -1075,7 +1086,7 @@ class ScriptsControllerTest < ActionController::TestCase
     stub_file_writes(unit.name)
 
     post :update, params: {
-      id: unit.id,
+      id: unit.name,
       script: {name: unit.name},
       lesson_groups: '[]',
       is_migrated: true,
@@ -1097,7 +1108,7 @@ class ScriptsControllerTest < ActionController::TestCase
     stub_file_writes(unit.name)
 
     post :update, params: {
-      id: unit.id,
+      id: unit.name,
       script: {name: unit.name},
       lesson_groups: '[]',
       is_migrated: true,
@@ -1141,7 +1152,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
     unit.reload
     post :update, params: {
-      id: unit.id,
+      id: unit.name,
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: lesson_groups_json,
@@ -1181,7 +1192,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
     unit.reload
     post :update, params: {
-      id: unit.id,
+      id: unit.name,
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: lesson_groups_json,
@@ -1236,7 +1247,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
     unit.reload
     post :update, params: {
-      id: unit.id,
+      id: unit.name,
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: lesson_groups_json,
@@ -1287,7 +1298,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
     unit.reload
     post :update, params: {
-      id: unit.id,
+      id: unit.name,
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: lesson_groups_json,
@@ -1339,7 +1350,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
     unit.reload
     post :update, params: {
-      id: unit.id,
+      id: unit.name,
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: lesson_groups_json,
@@ -1389,7 +1400,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
     unit.reload
     post :update, params: {
-      id: unit.id,
+      id: unit.name,
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: lesson_groups_json,
@@ -1439,7 +1450,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
     unit.reload
     post :update, params: {
-      id: unit.id,
+      id: unit.name,
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: lesson_groups_json,
@@ -1489,7 +1500,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
     unit.reload
     post :update, params: {
-      id: unit.id,
+      id: unit.name,
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: lesson_groups_json,
@@ -1770,6 +1781,44 @@ class ScriptsControllerTest < ActionController::TestCase
     Unit.expects(:get_from_cache).with(@migrated_unit.name, raise_exceptions: false).returns(@migrated_unit).once
     Unit.expects(:get_without_cache).never
     get :show, params: {id: @migrated_unit.name}
+  end
+
+  test "legacy path look up by id fails with not found" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in(create(:levelbuilder))
+    legacy_path_validation_unit = create :script
+
+    assert_raises ActiveRecord::RecordNotFound do
+      get :edit, params: {id: legacy_path_validation_unit.id}
+    end
+
+    assert_raises ActiveRecord::RecordNotFound do
+      get :show, params: {id: legacy_path_validation_unit.id}
+    end
+
+    assert_raises ActiveRecord::RecordNotFound do
+      get :standards, params: {id: legacy_path_validation_unit.id}
+    end
+
+    assert_raises ActiveRecord::RecordNotFound do
+      get :code, params: {id: legacy_path_validation_unit.id}
+    end
+
+    assert_raises ActiveRecord::RecordNotFound do
+      get :vocab, params: {id: legacy_path_validation_unit.id}
+    end
+
+    assert_raises ActiveRecord::RecordNotFound do
+      get :resources, params: {id: legacy_path_validation_unit.id}
+    end
+
+    # assert_raises ActiveRecord::RecordNotFound do
+    #   post :update, params: {id: legacy_path_validation_unit.id}
+    # end
+
+    assert_raises ActiveRecord::RecordNotFound do
+      delete :destroy, params: {id: legacy_path_validation_unit.id}
+    end
   end
 
   def stub_file_writes(unit_name, family_name: nil)
