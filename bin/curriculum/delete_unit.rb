@@ -44,6 +44,9 @@ options.unit_names.each do |unit_nm|
 
   unit_to_del = Unit.find_by(name: unit_nm)
   raise "Unit with name #{unit_nm} not found" if unit_to_del.nil?
+
+  # Ensure the unit getting deleted is not marked stable. Using the get_published_state method to address units that are part of unit groups
+  # This would return the state for the unit if not null else fall back to return state of unit group
   raise "Published units (state set as 'Stable') cannot be deleted as they could have active sections and progress." unless unit_to_del.get_published_state != "stable"
 
   # Include additional warning if the script is not in one of the safe states where its not available for use externally.
