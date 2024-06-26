@@ -9,10 +9,8 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import {LabState, setPredictResponse} from '../../lab2Redux';
 import {ThemeContext} from '../ThemeWrapper';
-import {
-  LevelPredictSettings,
-  PredictQuestionType,
-} from '@cdo/apps/lab2/levelEditors/types';
+import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
+import PredictQuestion from './PredictQuestion';
 const commonI18n = require('@cdo/locale');
 
 interface InstructionsProps {
@@ -190,11 +188,6 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   const finalMessage =
     'You finished this lesson! Check in with your teacher for the next activity';
 
-  // TODO: Handle multiple choice predict questions.
-  const showPredictFreeResponse =
-    predictSettings?.isPredictLevel &&
-    predictSettings?.questionType === PredictQuestionType.FreeResponse;
-
   return (
     <div
       id="instructions"
@@ -258,17 +251,11 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
               className={moduleStyles.markdownText}
               handleInstructionsTextClick={handleInstructionsTextClick}
             />
-            {showPredictFreeResponse && (
-              <div key="predict-response" id="predict-response">
-                {/** TODO: include other free response configuration. */}
-                <input
-                  type="text"
-                  value={predictResponse}
-                  placeholder={predictSettings.placeholderText}
-                  onChange={e => setPredictResponse(e.target.value)}
-                />
-              </div>
-            )}
+            <PredictQuestion
+              predictSettings={predictSettings}
+              predictResponse={predictResponse}
+              setPredictResponse={setPredictResponse}
+            />
           </div>
         )}
         {(message || canShowContinueButton || canShowFinishButton) && (
