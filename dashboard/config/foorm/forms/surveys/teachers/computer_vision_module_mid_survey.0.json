@@ -61,7 +61,7 @@
         {
           "type": "checkbox",
           "name": "module_challenges",
-          "title": "What challenges do you anticipate in teaching this unit?",
+          "title": "What challenges have you encountered in teaching the unit?",
           "description": "(Please select all that apply)",
           "choices": [
             {
