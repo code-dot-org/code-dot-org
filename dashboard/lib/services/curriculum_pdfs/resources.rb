@@ -155,12 +155,16 @@ module Services
           end
           raise "File #{path.inspect} does not exist after generation" unless File.exist?(path)
 
-          # Regenerate the PDF using Ghostscript
-          optimized_path = File.join(directory, "optimized_#{filename}")
-          gs_command = "gs -q -sDEVICE=pdfwrite -dNOPAUSE -dBATCH -sOutputFile=#{optimized_path} #{path}"
-          system(gs_command)
+          if DCDO.get('use-ghostscript-to-generate-pdfs', false)
+            # Regenerate the PDF using Ghostscript
+            optimized_path = File.join(directory, "optimized_#{filename}")
+            gs_command = "gs -q -sDEVICE=pdfwrite -dNOPAUSE -dBATCH -sOutputFile=#{optimized_path} #{path}"
+            system(gs_command)
+            return optimized_path
+          end
 
-          return optimized_path
+          # return the original path
+          return path
         end
 
         # Given a Resource object, persist a PDF of that Resource (with a name
