@@ -10,25 +10,26 @@ module Rack
 
     def initialize(app)
       @app = app
+
+      modify_dcdo
     end
 
     def call(env)
-      # Stores the cookie DCDO data per request.
-      RequestStore.store[KEY] = JSON.parse(Rack::Request.new(env).cookies[KEY] || '{}')
-
-      unless DCDO.instance_variable_get(:@_redefined)
-        # Redefines `DCDO#get` to return the cookie DCDO value if it exists.
-        DCDO.define_singleton_method(:get) do |key, *args|
-          RequestStore.store[KEY]&.key?(key) ? RequestStore.store[KEY][key] : super(key, *args)
-        end
-
-        DCDO.instance_variable_set(:@_redefined, true)
-      end
+      RequestStore.store[KEY] = JSON.parse(
+        Rack::Request.new(env).cookies[KEY] || '{}'
+      )
 
       @app.call(env)
     ensure
       # Clears the cookie DCDO after the request to avoid data leaking.
-      RequestStore.store[KEY] = nil
+      RequestStore.store.delete(KEY)
+    end
+
+    private def modify_dcdo
+      # Redefines `DCDO#get` to return the cookie DCDO value if it exists.
+      DCDO.define_singleton_method(:get) do |key, *args|
+        RequestStore.store[KEY]&.key?(key) ? RequestStore.store.dig(KEY, key) : super(key, *args)
+      end
     end
   end
 end
