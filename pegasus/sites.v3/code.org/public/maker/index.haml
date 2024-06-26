@@ -34,22 +34,24 @@ theme: responsive_full_width
 
 -# TODO - remove the divider line and unhide case study section when we get the link
 = view :section_divider_line
--# %section.bg-neutral-dark
--#   .wrapper.flex-container.justify-space-between.align-items-center.flex-direction-column-mobile.gap-2
--#     .text-wrapper{style: "flex: 0.9"}
--#       %p.overline-two.white
--#         =hoc_s("maker_page.case_study.overline")
--#       %h2.heading-lg.white
--#         =hoc_s("maker_page.case_study.heading")
--#       %p.body-three.white.no-margin-bottom
--#         =hoc_s("maker_page.case_study.desc")
--#     %img{src: "/images/maker/alaska.png", alt: "", style: "width: 182px"}
--#     %a.link-button.white.has-external-link{href: "#", target: "_blank", rel: "noopener noreferrer"}
--#       =hoc_s("maker_page.case_study.button")
+%section.bg-neutral-dark
+  .wrapper.flex-container.justify-space-between.align-items-center.flex-direction-column-mobile.gap-2
+    .text-wrapper{style: "flex: 0.9"}
+      %p.overline-two.white
+        =hoc_s("maker_page.case_study.overline")
+      %h2.heading-lg.white
+        =hoc_s("maker_page.case_study.heading")
+      %p.body-three.white.no-margin-bottom
+        =hoc_s("maker_page.case_study.desc")
+    %img{src: "/images/maker/alaska.png", alt: "", style: "width: 182px"}
+    %a.link-button.white.has-external-link{href: "#", target: "_blank", rel: "noopener noreferrer"}
+      =hoc_s("maker_page.case_study.button")
 
 %section
   .wrapper
-    GET STARTED
+    %h2=hoc_s("maker_page.get_started.heading")
+    %p=hoc_s("maker_page.get_started.desc")
+    = view :maker_devices, curriculum_link_cp: "#curriculum_link_cp", curriculum_link_microbit: "#curriculum_link_microbit",  button_label: hoc_s("maker_page.get_started.button.see_curriculum.label"), aria_label_cp: hoc_s("maker_page.get_started.button.see_curriculum.aria_label", markdown: :inline, locals:{device: "BBC micro:bit"}), aria_label_microbit: hoc_s("maker_page.get_started.button.see_curriculum.aria_label", markdown: :inline, locals:{device: "Circuit Playground"})
 
 %section.bg-neutral-light
   .wrapper
@@ -58,10 +60,6 @@ theme: responsive_full_width
 %section
   .wrapper
     CURRICULUM
-
-%section.bg-neutral-light
-  .wrapper
-    CAREERS
 
 %section.bg-neutral-light
   .wrapper
