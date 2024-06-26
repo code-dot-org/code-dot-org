@@ -6,7 +6,7 @@ module Lti
       before_action :authenticate_user!
 
       def bulk_update_owners
-        section_owners = params.require(:section_owners)
+        section_owners = JSON.parse(params.require(:section_owners))
         ActiveRecord::Base.transaction do
           section_owners.each do |lti_section_id, owner_id|
             section = LtiSection.find_by(id: lti_section_id)&.section
