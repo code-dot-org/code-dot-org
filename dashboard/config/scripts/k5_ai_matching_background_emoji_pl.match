@@ -1,0 +1,23 @@
+name 'k5_ai_matching_background_emoji_pl'
+title 'Using the training data'
+height '300'
+width '100'
+question 'Not colorful and not happy effects: ![](https://images.code.org/dc3f45485921e1a83735d44ca656c02b-image-1716564593233.jpg)'
+answer '![](https://images.code.org/d6f30a1117a19366dbec9720572aa5e5-image-1716564634252.png)'
+question 'A little color and very happy effects:![](https://images.code.org/998a2f603ecb1c65677b2b8fc3345e4d-image-1716504922992.jpg)'
+answer ' ![](https://images.code.org/b9f170de01a2947d4e192f9be9b3eeb3-image-1716564662966.png)' 
+question 'Very colorful and happy effects:![](https://images.code.org/c8187188cd1bd2c180bcf98433dc6012-image-1716564684133.jpg)'
+answer ' ![](https://images.code.org/bec0c48dce24fc447e7133e62d6de7de-image-1716564742728.jpg)' 
+
+markdown <<MARKDOWN
+###Based on this training data, match the backgrounds with the emojis.
+<img src="https://images.code.org/53c9fb0a0a2da359cbf79891a86f8817-image-1716936583924.png" style="margin-left: 200px; width: 35%; float: center;">
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+allow_multiple_attempts true
