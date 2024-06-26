@@ -141,6 +141,10 @@ class Policies::Lti
     !user.authentication_options.empty? && user.authentication_options.any?(&:lti?)
   end
 
+  def self.only_lti_auth?(user)
+    user.authentication_options&.length == 1 && user.authentication_options.first.lti?
+  end
+
   def self.issuer(user)
     auth_options = user.authentication_options.find(&:lti?)
     if auth_options
@@ -218,5 +222,9 @@ class Policies::Lti
   # Check if a partial registration is in progress for an LTI user.
   def self.lti_registration_in_progress?(session)
     PartialRegistration.in_progress?(session) && PartialRegistration.get_provider(session) == AuthenticationOption::LTI_V1
+  end
+
+  def self.account_linking?(session, user)
+    session[:lms_landing].present? && Policies::Lti.only_lti_auth?(user) && !user.lms_landing_opted_out
   end
 end
