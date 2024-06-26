@@ -2068,6 +2068,25 @@
         desc: "Comprehensive curriculum offerings for every grade and experience level featuring robust structured and self-paced learning options."
         button: "Explore the catalog"
 
+  csa_page:
+    additional_resources:
+      heading: "Additional AP CSA resources for educators"
+      pl:
+        overline: "Professional Learning"
+        title: "6-12 Educator Workshops"
+        desc: "Our highly supportive Professional Learning Program will bring you together with a group of teachers to learn from each other as well as expert facilitators as you take on the first year of teaching the free CSA curriculum to your students."
+        button_label: "Apply for 6-12 workshops"
+      ap_class_quiz:
+        overline: "Prep for the exam"
+        title: "Custom Quizzes for AP Classroom"
+        desc: "Unlock the full potential of AP Classroom with Code.org's custom quizzes, seamlessly mapped to our curriculum sequence. Empower your teaching and boost your students' AP exam readiness with practice materials that resonate with the way you teach."
+        button_label: "Learn more about quizzes"
+      ap_csa_computer_vision:
+        overline: "After the exam"
+        title: "AP CSA Computer Vision"
+        desc: "This two-chapter post-AP® CSA module offers high school students hands-on experience with professional software development tools, including GitHub and GitHub Copilot, and imparts them with the real-world skills to develop a computer vision program."
+        button_label: "Explore module"
+
   poetry_page:
     heading: "Coding with Poetry"
     desc: "Explore how coding can bring poems to life, creating your own digital poetry masterpieces. Available in 25+ languages!"
