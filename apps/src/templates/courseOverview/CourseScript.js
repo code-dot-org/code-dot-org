@@ -40,6 +40,7 @@ class CourseScript extends Component {
     hasNoSections: PropTypes.bool.isRequired,
     toggleHiddenScript: PropTypes.func.isRequired,
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
+    urlPath: PropTypes.string,
   };
 
   state = {
@@ -78,7 +79,6 @@ class CourseScript extends Component {
   render() {
     const {
       title,
-      name,
       id,
       description,
       viewAs,
@@ -91,6 +91,7 @@ class CourseScript extends Component {
       courseVersionId,
       sectionsForDropdown,
       showAssignButton,
+      urlPath,
     } = this.props;
 
     const isHidden = isScriptHiddenForSection(
@@ -132,7 +133,7 @@ class CourseScript extends Component {
             <Button
               __useDeprecatedTag
               text={i18n.goToUnit()}
-              href={`/s/${name}${location.search}`}
+              href={`${urlPath}${location.search}`}
               color={Button.ButtonColor.gray}
               className="uitest-go-to-unit-button"
             />

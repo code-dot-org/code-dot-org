@@ -1475,7 +1475,7 @@ class Unit < ApplicationRecord
     get_published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
   end
 
-  def summarize(include_lessons = true, user = nil, include_bonus_levels = false, locale_code = 'en-us')
+  def summarize(include_lessons = true, user = nil, include_bonus_levels = false, locale_code = 'en-us', unit_group: nil)
     ActiveRecord::Base.connected_to(role: :reading) do
       # TODO: Set up peer reviews to be more consistent with the rest of the system
       # so that they don't need a bunch of one off cases (example peer reviews
@@ -1578,6 +1578,8 @@ class Unit < ApplicationRecord
       summary[:deeperLearningCourse] = professional_learning_course if old_professional_learning_course?
       summary[:wrapupVideo] = wrapup_video.key if wrapup_video
       summary[:calendarLessons] = lessons.map(&:summarize_for_calendar)
+
+      summary[:urlPath] = unit_group ? course_script_path(unit_group, self) : script_path(self)
 
       summary
     end
