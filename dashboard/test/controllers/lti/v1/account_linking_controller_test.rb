@@ -3,7 +3,7 @@ require 'test_helper'
 class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
   setup do
     @user = create(:teacher, email: 'test@lti.com')
-    @admin = create :admin, email: 'admin@lti.com'
+    @admin = create :admin
     @lti_integration = create :lti_integration
     DCDO.stubs(:get)
     DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(true)
@@ -29,7 +29,6 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
     assert Policies::Lti.lti?(@user)
   end
 
-  # TODO: This is failing
   test 'disallow account linking for admin users' do
     partial_lti_teacher = create :teacher
     fake_id_token = {iss: @lti_integration.issuer, aud: @lti_integration.client_id, sub: 'bar'}
