@@ -1,12 +1,17 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import QuickActionsCell from '../tables/QuickActionsCell';
+
 import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
-import color from '../../util/color';
-import FontAwesome from '../FontAwesome';
-import Button from '../Button';
 import i18n from '@cdo/locale';
+
+import NameFailureDialog from '../../code-studio/components/NameFailureDialog';
+import color from '../../util/color';
+import Button from '../Button';
+import FontAwesome from '../FontAwesome';
+import QuickActionsCell from '../tables/QuickActionsCell';
+
+import {showDeleteDialog} from './deleteDialog/deleteProjectDialogRedux';
 import {
   startRenamingProject,
   cancelRenamingProject,
@@ -14,8 +19,7 @@ import {
   remix,
   unsetNameFailure,
 } from './projectsRedux';
-import {showDeleteDialog} from './deleteDialog/deleteProjectDialogRedux';
-import NameFailureDialog from '../../code-studio/components/NameFailureDialog';
+
 import moduleStyles from './personal-projects-table-actions-cell.module.scss';
 
 export class PersonalProjectsTableActionsCell extends Component {

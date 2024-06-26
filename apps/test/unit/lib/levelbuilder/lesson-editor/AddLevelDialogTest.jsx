@@ -1,9 +1,12 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
-import AddLevelDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelDialog';
-import {sampleActivities} from './activitiesTestData';
 import sinon from 'sinon';
+
+import AddLevelDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelDialog';
+
+import {expect} from '../../../../util/reconfiguredChai';
+
+import {sampleActivities} from './activitiesTestData';
 
 describe('AddLevelDialog', () => {
   let defaultProps, handleConfirm, addLevel;

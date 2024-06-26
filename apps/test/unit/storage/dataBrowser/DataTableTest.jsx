@@ -1,10 +1,11 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import commonI18n from '@cdo/locale';
 import sinon from 'sinon';
 
 import {UnconnectedDataTable as DataTable} from '@cdo/apps/storage/dataBrowser/DataTable';
+import commonI18n from '@cdo/locale';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   readOnly: false,

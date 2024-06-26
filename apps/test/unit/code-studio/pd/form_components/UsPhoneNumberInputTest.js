@@ -1,8 +1,9 @@
-import UsPhoneNumberInput from '@cdo/apps/code-studio/pd/form_components/UsPhoneNumberInput';
-import React from 'react';
 import {expect} from 'chai';
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import React from 'react';
 import sinon from 'sinon';
+
+import UsPhoneNumberInput from '@cdo/apps/code-studio/pd/form_components/UsPhoneNumberInput';
 
 describe('UsPhoneNumberInput', () => {
   it('Displays initial value properly formatted', () => {

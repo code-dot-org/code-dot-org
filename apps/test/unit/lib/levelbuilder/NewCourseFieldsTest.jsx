@@ -1,8 +1,10 @@
-import {expect} from '../../../util/reconfiguredChai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import NewCourseFields from '@cdo/apps/lib/levelbuilder/NewCourseFields';
 import sinon from 'sinon';
+
+import NewCourseFields from '@cdo/apps/lib/levelbuilder/NewCourseFields';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('NewCourseFieldsTest', () => {
   let defaultProps, setFamilyName, setVersionYear, setFamilyAndCourseType;

@@ -1,8 +1,10 @@
-import React from 'react';
-import {mount} from 'enzyme';
 import CodeMirror from 'codemirror';
-import {expect} from '../../../../util/reconfiguredChai';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import React from 'react';
+
 import DropletPaletteSelector from '@cdo/apps/lib/levelbuilder/level-editor/DropletPaletteSelector';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('DropletPaletteSelector', () => {
   let textArea, editor;

@@ -1,11 +1,13 @@
-import {expect} from '../../util/reconfiguredChai';
-import sinon from 'sinon';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import i18n from '@cdo/locale';
-import Alert from '@cdo/apps/templates/alert';
-import DisabledBubblesAlert from '@cdo/apps/code-studio/DisabledBubblesAlert';
+import sinon from 'sinon';
+
 import {disabledBubblesSupportArticle} from '@cdo/apps/code-studio/disabledBubbles';
+import DisabledBubblesAlert from '@cdo/apps/code-studio/DisabledBubblesAlert';
+import Alert from '@cdo/apps/templates/alert';
+import i18n from '@cdo/locale';
+
+import {expect} from '../../util/reconfiguredChai';
 
 describe('DisabledBubblesAlert', () => {
   beforeEach(() => {

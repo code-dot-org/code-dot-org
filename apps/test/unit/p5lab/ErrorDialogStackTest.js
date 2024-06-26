@@ -1,8 +1,11 @@
-var errorDialogStack = require('@cdo/apps/p5lab/redux/errorDialogStack');
-import {expect} from '../../util/reconfiguredChai';
-import {UnconnectedErrorDialogStack as ErrorDialogStack} from '@cdo/apps/p5lab/ErrorDialogStack';
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+
+import {UnconnectedErrorDialogStack as ErrorDialogStack} from '@cdo/apps/p5lab/ErrorDialogStack';
+
+import {expect} from '../../util/reconfiguredChai';
+
+var errorDialogStack = require('@cdo/apps/p5lab/redux/errorDialogStack');
 
 describe('ErrorDialogStack', function () {
   describe('reducer', function () {

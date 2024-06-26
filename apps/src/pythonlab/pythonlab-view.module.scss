@@ -17,12 +17,3 @@ $default-spacing: 2px;
   gap: $default-spacing;
 }
 
-.editor {
-  max-height: 60%;
-  flex-grow: 3;
-}
-
-.console {
-  max-height: 35%;
-  flex-grow: 1;
-}

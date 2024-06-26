@@ -51,6 +51,13 @@ describe('SectionProgressV2', () => {
     );
   }
 
+  it('shows expand and collapse dropdown', () => {
+    renderDefault();
+
+    store.dispatch(setStudentsForCurrentSection(1, STUDENTS));
+    screen.getByRole('button', {name: 'Additional options'});
+  });
+
   it('shows skeleton if loading', () => {
     renderDefault();
     store.dispatch(startLoadingProgress());

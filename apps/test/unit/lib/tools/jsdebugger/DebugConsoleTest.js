@@ -1,18 +1,20 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 import {Provider} from 'react-redux';
-import {mount} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
+import sinon from 'sinon';
+
+import {KeyCodes} from '@cdo/apps/constants';
 import DebugConsole from '@cdo/apps/lib/tools/jsdebugger/DebugConsole';
 import {reducers, actions} from '@cdo/apps/lib/tools/jsdebugger/redux';
+import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
-import {KeyCodes} from '@cdo/apps/constants';
-import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 const newJSInterpreter = () => {
   let interpreter = new JSInterpreter({

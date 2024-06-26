@@ -1,9 +1,11 @@
-import * as color from '../util/color';
-import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import {singleton as studioApp} from '../StudioApp';
+import React, {Component} from 'react';
+
 import msg from '@cdo/locale';
+
+import {singleton as studioApp} from '../StudioApp';
+import * as color from '../util/color';
 
 const PHONE_MARGIN = 68;
 const PLAY_BUTTON_SIZE = 26;

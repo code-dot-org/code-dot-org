@@ -1,9 +1,11 @@
 /** @file Test maker overlay button */
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {expect} from '../../../../../util/deprecatedChai';
-import {mount} from 'enzyme';
 import sinon from 'sinon';
+
 import OverlayButton from '@cdo/apps/lib/kits/maker/ui/OverlayButton';
+
+import {expect} from '../../../../../util/deprecatedChai';
 
 describe('OverlayButton', () => {
   it('renders a button', () => {

@@ -20,23 +20,4 @@ class Queries::ChildAccount
         expiration_date
       )
   end
-
-  # Retrieve the most recent ParentalPermissionRequest for a user
-  def self.latest_permission_request(user)
-    ParentalPermissionRequest.where(user: user).order(updated_at: :desc).limit(1).first
-  end
-
-  # Find the US state that the student most likely resides in, based on the state
-  # associated with their most recent teacher's school.
-  def self.teacher_us_state(user)
-    return nil unless user.student?
-
-    latest_student_section = user.sections_as_student.order(created_at: :desc).first
-    return nil unless latest_student_section
-
-    latest_teacher_school_info = UserSchoolInfo.where(user_id: latest_student_section.user_id).order(start_date: :desc).first
-    return nil unless latest_teacher_school_info
-
-    latest_teacher_school_info.school_info&.state
-  end
 end

@@ -1,9 +1,10 @@
+import {expect} from 'chai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
+import sinon from 'sinon';
+
 import {QuickView} from '@cdo/apps/code-studio/pd/application_dashboard/quick_view';
 import QuickViewTable from '@cdo/apps/code-studio/pd/application_dashboard/quick_view_table';
-import {expect} from 'chai';
-import sinon from 'sinon';
 
 describe('Quick View', () => {
   const fakeRouter = {

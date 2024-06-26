@@ -1,8 +1,10 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
-import LearningGoalItem from '@cdo/apps/lib/levelbuilder/rubrics/LearningGoalItem';
 import sinon from 'sinon';
+
+import LearningGoalItem from '@cdo/apps/lib/levelbuilder/rubrics/LearningGoalItem';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('LearningGoalItem', () => {
   let defaultProps;

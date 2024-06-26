@@ -1,20 +1,21 @@
-import React from 'react';
-import {mount} from 'enzyme';
 import {assert, expect} from 'chai';
-import {Factory} from 'rosie';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import React from 'react';
 import {FormControl} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+import '../workshopFactory';
+import {Provider} from 'react-redux';
+import {MemoryRouter} from 'react-router-dom';
+import {createStore, combineReducers} from 'redux';
+import {Factory} from 'rosie';
+import sinon from 'sinon';
+
+import {WorkshopForm} from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_form';
 import Permission, {
   WorkshopAdmin,
   ProgramManager,
 } from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
-import {WorkshopForm} from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_form';
-import '../workshopFactory';
 import {Subjects} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
-import {Provider} from 'react-redux';
-import {MemoryRouter} from 'react-router-dom';
 import mapboxReducer from '@cdo/apps/redux/mapbox';
-import {createStore, combineReducers} from 'redux';
-import sinon from 'sinon';
 
 // Returns a fake "today" for the stubbed out "getToday" method in workshop_form.jsx.
 // isEndOfYear:

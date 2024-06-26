@@ -1,8 +1,10 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
-import ParameterEditor from '@cdo/apps/lib/levelbuilder/code-docs-editor/ParameterEditor';
 import sinon from 'sinon';
+
+import ParameterEditor from '@cdo/apps/lib/levelbuilder/code-docs-editor/ParameterEditor';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('ParameterEditor', () => {
   let defaultProps, updateSpy;

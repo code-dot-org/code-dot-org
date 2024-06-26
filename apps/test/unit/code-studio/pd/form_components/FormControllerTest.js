@@ -1,9 +1,11 @@
-import FormController from '@cdo/apps/code-studio/pd/form_components/FormController';
-import FormComponent from '@cdo/apps/code-studio/pd/form_components/FormComponent';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {expect} from '../../../../util/reconfiguredChai';
-import {mount} from 'enzyme';
 import sinon from 'sinon';
+
+import FormComponent from '@cdo/apps/code-studio/pd/form_components/FormComponent';
+import FormController from '@cdo/apps/code-studio/pd/form_components/FormController';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 class DummyPage1 extends FormComponent {
   static associatedFields = [];

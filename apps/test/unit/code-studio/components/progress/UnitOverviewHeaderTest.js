@@ -1,14 +1,17 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {assert, expect} from '../../../../util/reconfiguredChai';
-import {shallow} from 'enzyme';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+
 import {UnconnectedUnitOverviewHeader as UnitOverviewHeader} from '@cdo/apps/code-studio/components/progress/UnitOverviewHeader';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
+
+import {assert, expect} from '../../../../util/reconfiguredChai';
+
 import {
   fakeStudentAnnouncement,
   fakeTeacherAndStudentAnnouncement,
   fakeTeacherAnnouncement,
 } from './FakeAnnouncementsTestData';
-import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 
 const defaultProps = {
   plcHeaderProps: undefined,

@@ -1,16 +1,27 @@
-class Services::ChildAccount
+module Services::ChildAccount
+  # Transits the child's account to the grace period state.
+  # @param user [User] the student account
+  def self.start_grace_period(user)
+    update_compliance(user, Policies::ChildAccount::ComplianceState::GRACE_PERIOD)
+    user.save!
+  end
+
   # Sets the child's account to a lock_out state according to our Child Account
   # Policy.
   def self.lock_out(user)
-    return unless user
-    # Verify the account has not already started the lock out process.
-    return if user.child_account_compliance_state
     # Set the child's account to be locked out
     update_compliance(
       user,
       Policies::ChildAccount::ComplianceState::LOCKED_OUT
     )
     user.child_account_compliance_lock_out_date = DateTime.now
+    user.save!
+  end
+
+  # Removes the current child's account compliance state.
+  def self.remove_compliance(user)
+    update_compliance(user, nil)
+    user.save!
   end
 
   # Updates the child_account_compliance_state attribute to the given state.
@@ -19,6 +30,7 @@ class Services::ChildAccount
     return unless user
     user.child_account_compliance_state = new_state
     user.child_account_compliance_state_last_updated = DateTime.now
+    user.child_account_compliance_lock_out_date = nil
   end
 
   # Updates the User in the given PermissionRequest to indicate that their
@@ -36,14 +48,5 @@ class Services::ChildAccount
         parent_permission_confirmation(parent_email).
         deliver_later(wait: Policies::ChildAccount::PERMISSION_GRANTED_MAIL_DELAY)
     end
-  end
-
-  # The US state field was added in July 2023. Accounts created prior to that
-  # do not have state location data, so we can try to infer it from their teacher's
-  # state, if that teacher is associated with a school.
-  def self.update_us_state_from_teacher!(user)
-    return unless user
-    teacher_us_state = Queries::ChildAccount.teacher_us_state(user)
-    user.update(us_state: teacher_us_state) if teacher_us_state
   end
 end

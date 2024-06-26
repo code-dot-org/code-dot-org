@@ -1,8 +1,10 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
-import EditTipDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/EditTipDialog';
 import sinon from 'sinon';
+
+import EditTipDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/EditTipDialog';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('EditTipDialog', () => {
   let defaultProps, handleConfirm, handleDelete;

@@ -1,9 +1,10 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon';
-import {mount} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
 
 import Pairing from '@cdo/apps/code-studio/components/pairing/Pairing.jsx';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('Pairing component', function () {
   function createDomElement() {

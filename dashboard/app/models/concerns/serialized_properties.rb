@@ -29,6 +29,10 @@ module SerializedProperties
     super
   end
 
+  def property_before_save(key)
+    properties_previous_change&.any? ? properties_previous_change.dig(0, key) : properties[key]
+  end
+
   def property_changed?(key)
     changes = changed_attributes['properties']
     return false if changes.nil?

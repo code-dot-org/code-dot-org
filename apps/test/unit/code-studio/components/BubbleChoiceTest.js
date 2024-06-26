@@ -1,9 +1,11 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
 import sinon from 'sinon';
-import {expect, assert} from '../../../util/reconfiguredChai';
+
 import BubbleChoice from '@cdo/apps/code-studio/components/BubbleChoice';
 import * as utils from '@cdo/apps/utils';
+
+import {expect, assert} from '../../../util/reconfiguredChai';
 
 const fakeSublevels = [
   {

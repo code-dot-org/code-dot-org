@@ -1,7 +1,9 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {expect} from '../../../../util/reconfiguredChai';
+
 import StudentSelector from '@cdo/apps/code-studio/components/pairing/StudentSelector';
-import {shallow} from 'enzyme';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('StudentSelector', () => {
   describe('with more than 4 students selected', () => {

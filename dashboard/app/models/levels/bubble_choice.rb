@@ -137,7 +137,8 @@ class BubbleChoice < DSLDefined
           thumbnail_url: level.try(:thumbnail_url),
           position: index + 1,
           letter: ALPHABET[index],
-          icon: level.try(:icon)
+          icon: level.try(:icon),
+          uses_lab2: level.uses_lab2?
         }
       )
 
@@ -147,6 +148,10 @@ class BubbleChoice < DSLDefined
       level_info[:url] = script_level ?
         build_script_level_url(script_level, {sublevel_position: index + 1}) :
         level_url(level.id)
+
+      level_info[:path] = script_level ?
+        build_script_level_path(script_level, {sublevel_position: index + 1}) :
+        level_path(level.id)
 
       if user_id
         level_for_sublevel_progress = BubbleChoice.level_for_progress_for_sublevel(level)

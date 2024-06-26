@@ -1,7 +1,9 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {assert} from '../../../../util/reconfiguredChai';
+
 import {UnconnectedMiniView as MiniView} from '@cdo/apps/code-studio/components/progress/MiniView';
-import {shallow} from 'enzyme';
+
+import {assert} from '../../../../util/reconfiguredChai';
 
 describe('MiniView', () => {
   const defaultProps = {

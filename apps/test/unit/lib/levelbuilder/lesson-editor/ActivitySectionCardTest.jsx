@@ -1,28 +1,31 @@
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow, mount} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
-import {UnconnectedActivitySectionCard as ActivitySectionCard} from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivitySectionCard';
-import sinon from 'sinon';
-import {
-  stubRedux,
-  restoreRedux,
-  getStore,
-  registerReducers,
-} from '@cdo/apps/redux';
 import {Provider} from 'react-redux';
-import resourceTestData from './resourceTestData';
-import {sampleActivities, searchOptions} from './activitiesTestData';
+import sinon from 'sinon';
+
 import reducers, {
   initActivities,
   initLevelSearching,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
+import {UnconnectedActivitySectionCard as ActivitySectionCard} from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivitySectionCard';
 import createResourcesReducer, {
   initResources,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import vocabulariesEditor, {
   initVocabularies,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
+import {
+  stubRedux,
+  restoreRedux,
+  getStore,
+  registerReducers,
+} from '@cdo/apps/redux';
+
+import {expect} from '../../../../util/reconfiguredChai';
 import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
+
+import {sampleActivities, searchOptions} from './activitiesTestData';
+import resourceTestData from './resourceTestData';
 
 describe('ActivitySectionCard', () => {
   // Warnings allowed due to usage of deprecated componentWillReceiveProps

@@ -1,12 +1,8 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
 import {stub} from 'sinon';
-import {expect} from '../../../util/reconfiguredChai';
-import * as utils from '@cdo/apps/utils';
+
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
-import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import Button from '@cdo/apps/templates/Button';
 import {
   UnconnectedSyncOmniAuthSectionControl as SyncOmniAuthSectionControl,
   SyncOmniAuthSectionButton,
@@ -15,6 +11,12 @@ import {
   SUCCESS,
   DISABLED,
 } from '@cdo/apps/lib/ui/SyncOmniAuthSectionControl';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import Button from '@cdo/apps/templates/Button';
+import * as utils from '@cdo/apps/utils';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('SyncOmniAuthSectionControl', () => {
   let updateRoster, testSyncSucceeds, testSyncFails, defaultProps;

@@ -1,14 +1,16 @@
-import React from 'react';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import PropTypes from 'prop-types';
-import {mount} from 'enzyme';
-import {expect} from '../../../../../util/reconfiguredChai';
+import React from 'react';
 import sinon from 'sinon';
+
 import {
   LockStatus,
   saveLockState,
   useGetLockState,
 } from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDataApi';
 import * as useFetch from '@cdo/apps/util/useFetch';
+
+import {expect} from '../../../../../util/reconfiguredChai';
 
 describe('LessonLockDataApi', () => {
   const fakeUnitId = 1;

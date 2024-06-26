@@ -1,8 +1,9 @@
+import {expect} from 'chai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import React from 'react';
+
 import {WorkshopEnrollmentSchoolInfo} from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_enrollment_school_info';
 import Permission from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
-import React from 'react';
-import {expect} from 'chai';
-import {shallow} from 'enzyme';
 import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 describe('Workshop Enrollment School Info', () => {

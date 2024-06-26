@@ -1,10 +1,12 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
 import sinon from 'sinon';
-import {expect} from '../../../util/deprecatedChai';
-import i18n from '@cdo/locale';
-import WireframeButtons from '@cdo/apps/lib/ui/WireframeButtons';
+
 import SendToPhone from '@cdo/apps/code-studio/components/SendToPhone';
+import WireframeButtons from '@cdo/apps/lib/ui/WireframeButtons';
+import i18n from '@cdo/locale';
+
+import {expect} from '../../../util/deprecatedChai';
 
 describe('WireframeButtons', () => {
   let wrapper;

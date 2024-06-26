@@ -1,11 +1,14 @@
-import React, {useContext} from 'react';
-import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
-import style from './rubrics.module.scss';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
+import React, {useContext} from 'react';
+
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import AiAssessmentFeedbackContext from './AiAssessmentFeedbackContext';
+import i18n from '@cdo/locale';
+
 import {submitAiFeedback} from './AiAssessmentFeedback';
+import AiAssessmentFeedbackContext from './AiAssessmentFeedbackContext';
+
+import style from './rubrics.module.scss';
 
 export default function AiAssessmentFeedbackRadio({aiEvalId, onChosen}) {
   const radioGroupName = `ai-assessment-feedback-${aiEvalId}`;

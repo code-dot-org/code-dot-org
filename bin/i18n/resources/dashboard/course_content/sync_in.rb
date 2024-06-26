@@ -342,7 +342,7 @@ module I18n
               # We want to make sure to categorize HoC scripts as HoC scripts even if
               # they have a version year, so this ordering is important
               script_i18n_directory =
-                if Unit.unit_in_category?('hoc', script.name)
+                if script.in_initiative?('HOC')
                   File.join(I18N_SOURCE_DIR_PATH, 'Hour of Code')
                 elsif script.unversioned?
                   File.join(I18N_SOURCE_DIR_PATH, 'other')
@@ -418,9 +418,9 @@ module I18n
             source_data = JSON.load_file(source_path)
             return if source_data.blank?
 
-            redactable_data = source_data.map do |level_url, i18n_strings|
-              [level_url, select_redactable(i18n_strings)]
-            end.to_h
+            redactable_data = source_data.transform_values do |i18n_strings|
+              select_redactable(i18n_strings)
+            end
 
             backup_path = source_path.sub('source', 'original')
             I18nScriptUtils.write_json_file(backup_path, redactable_data)

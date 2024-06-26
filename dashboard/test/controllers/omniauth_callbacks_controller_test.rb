@@ -5,10 +5,88 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   include UsersHelper
   STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
 
+  # This is a sample AuthHash provided by omniauth-clever plugin
+  TEST_CLEVER_STUDENT_DATA = OmniAuth::AuthHash.new(JSON.parse(<<~JSON
+    {
+      "provider": "clever",
+      "uid": "5966ed736b21538e3c000006",
+      "info": {
+        "name": "Elizabeth Smith",
+        "first_name": "Elizabeth",
+        "last_name": "Smith",
+        "user_type": "student"
+      },
+      "credentials": {
+        "token": "faketoken123455678",
+        "expires": false
+      },
+      "extra": {
+        "raw_info": {
+          "me": {
+            "type": "student",
+            "data": {
+              "id": "5966ed736b21538e3c000006",
+              "district": "59484d29ae5dee0001fd3291",
+              "type": "student",
+              "authorized_by": "district"
+            },
+            "links": [
+              {
+                "rel": "self",
+                "uri": "/me"
+              },
+              {
+                "rel": "canonical",
+                "uri": "/v2.1/students/5966ed736b21538e3c000006"
+              },
+              {
+                "rel": "district",
+                "uri": "/v2.1/districts/59484d29ae5dee0001fd3291"
+              }
+            ]
+          },
+          "canonical": {
+            "data": {
+              "created": "2017-07-13T03:48:03.512Z",
+              "district": "59484d29ae5dee0001fd3291",
+              "dob": "2000-05-21T00:00:00.000Z",
+              "enrollments": [],
+              "gender": "M",
+              "hispanic_ethnicity": "",
+              "last_modified": "2017-11-02T00:49:40.504Z",
+              "name": {
+                "first": "Elizabeth",
+                "last": "Smith",
+                "middle": ""
+              },
+              "race": "",
+              "school": "5966ed6cf9d478523c000004",
+              "schools": [
+                "5966ed6cf9d478523c000004"
+              ],
+              "sis_id": "202",
+              "id": "5966ed736b21538e3c000006"
+            },
+            "links": [
+              {
+                "rel": "self",
+                "uri": "/v2.1/students/5966ed736b21538e3c000006"
+              }
+            ]
+          }
+        }
+      }
+    }
+  JSON
+  )
+  )
+
   setup do
     @request.env["devise.mapping"] = Devise.mappings[:user]
     @request.host = CDO.dashboard_hostname
     CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
+    DCDO.stubs(:get)
+    DCDO.stubs(:get).with('sign_up_split_test', 0).returns(0)
   end
 
   test "login: authorizing with known facebook account signs in" do
@@ -1593,6 +1671,155 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_nil signed_in_user_id
   end
 
+  describe '#connect_provider' do
+    let(:user) {create(:user, uid: user_uid)}
+    let(:user_uid) {SecureRandom.uuid}
+
+    AuthenticationOption::OAUTH_CREDENTIAL_TYPES.excluding(
+      AuthenticationOption::QWIKLABS,
+      AuthenticationOption::TWITTER,
+    ).each do |provider|
+      context "when provider is #{provider}" do
+        let(:auth_hash) {generate_auth_user_hash(provider: provider, uid: user_uid)}
+        let(:user_account_linking_lock_reason) {nil}
+
+        before do
+          setup_should_connect_provider(user, auth_hash)
+          @controller.stubs(:account_linking_lock_reason).with(user).returns(user_account_linking_lock_reason)
+        end
+
+        context 'if account linking is locked for user' do
+          let(:user_account_linking_lock_reason) {'expected_user_account_linking_lock_reason'}
+
+          it 'redirects to the sign in page with alert about lock reason' do
+            assert_does_not_create(AuthenticationOption) do
+              get provider
+            end
+
+            assert_redirected_to new_user_session_path
+            _(flash.alert).must_equal user_account_linking_lock_reason
+          end
+
+          context 'and the user has a referrer page' do
+            before do
+              @request.env['HTTP_REFERER'] = 'https://example.com/where-i-came-from'
+            end
+
+            it 'redirects back to where the user came from with alert about lock reason' do
+              assert_does_not_create(AuthenticationOption) do
+                get provider
+              end
+
+              assert_redirected_to 'https://example.com/where-i-came-from'
+              _(flash.alert).must_equal user_account_linking_lock_reason
+            end
+          end
+        end
+      end
+    end
+  end
+
+  describe '#link_accounts' do
+    let(:user) {create(:teacher)}
+
+    let(:user_account_linking_lock_reason) {nil}
+
+    before do
+      DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(true)
+      @controller.stubs(:account_linking_lock_reason).with(user).returns(user_account_linking_lock_reason)
+    end
+
+    [AuthenticationOption::GOOGLE, AuthenticationOption::FACEBOOK, AuthenticationOption::MICROSOFT].each do |provider|
+      context "when #{provider} SSO" do
+        let(:partial_lti_teacher) {create(:teacher)}
+        let(:lti_integration) {create(:lti_integration)}
+        let(:provider_auth_option) do
+          create(
+            :authentication_option,
+            user: user,
+            email: user.email,
+            hashed_email: user.hashed_email,
+            credential_type: provider,
+            authentication_id: SecureRandom.uuid,
+            data: {
+              oauth_token: "some-#{provider}-token",
+              oauth_refresh_token: "some-#{provider}-refresh-token",
+              oauth_token_expiration: '999999'
+            }.to_json
+          )
+        end
+        let(:lti_auth_option) do
+          AuthenticationOption.new(
+            authentication_id: Services::Lti::AuthIdGenerator.new(
+              {iss: lti_integration.issuer, aud: lti_integration.client_id, sub: 'foo'}
+            ).call,
+            credential_type: AuthenticationOption::LTI_V1,
+            email: user.email,
+          )
+        end
+
+        before do
+          @request.env['omniauth.auth'] = generate_auth_user_hash(provider: provider, uid: provider_auth_option.authentication_id)
+          @request.env['omniauth.params'] = {}
+
+          partial_lti_teacher.authentication_options = [lti_auth_option]
+          PartialRegistration.persist_attributes session, partial_lti_teacher
+        end
+
+        it 'links an LTI auth option to an existing account' do
+          get provider
+          # The user factory automatically creates an email auth option,
+          # so this includes 1 email, 1 SSO, and 1 LTI auth option
+          _(user.authentication_options.count).must_equal 3
+          _(user.authentication_options).must_include lti_auth_option
+        end
+
+        context 'if account linking is locked for user' do
+          let(:user_account_linking_lock_reason) {'expected_user_account_linking_lock_reason'}
+
+          it 'redirects to the sign in page by default with alert about lock reason' do
+            get provider
+
+            _(user.authentication_options.count).must_equal 2
+            _(user.authentication_options).wont_include lti_auth_option
+
+            assert_redirected_to new_user_session_path
+            _(flash.alert).must_equal user_account_linking_lock_reason
+          end
+
+          context 'and the user has a referrer page' do
+            before do
+              @request.env['HTTP_REFERER'] = 'https://example.com/where-i-came-from'
+            end
+
+            it 'redirects back to where we came from with alert about lock reason' do
+              get provider
+
+              _(user.authentication_options.count).must_equal 2
+              _(user.authentication_options).wont_include lti_auth_option
+
+              assert_redirected_to 'https://example.com/where-i-came-from'
+              _(flash.alert).must_equal user_account_linking_lock_reason
+            end
+          end
+        end
+      end
+    end
+  end
+
+  test 'Account linking flow doesn\'t sign up new users' do
+    DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(true)
+    OmniauthCallbacksController.stubs(:should_link_accounts?).returns(true)
+    auth = generate_auth_user_hash provider: AuthenticationOption::GOOGLE, uid: 'some-uid'
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    get :google_oauth2
+    OmniauthCallbacksController.expects(:sign_in_google_oauth2).never
+    OmniauthCallbacksController.expects(:sign_up_google_oauth2).never
+    assert_response :redirect
+    assert_nil User.find_by_credential type: AuthenticationOption::GOOGLE, id: auth.uid
+  end
+
   # Try to link a credential to the provided user
   # @return [OmniAuth::AuthHash] the auth hash, useful for validating
   #   linked credentials with assert_auth_option
@@ -1642,80 +1869,4 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
         oauth_refresh_token: oauth_hash.credentials.refresh_token
       }
   end
-
-  # This is a sample AuthHash provided by omniauth-clever plugin
-  TEST_CLEVER_STUDENT_DATA = OmniAuth::AuthHash.new(JSON.parse('
-{
-  "provider": "clever",
-  "uid": "5966ed736b21538e3c000006",
-  "info": {
-    "name": "Elizabeth Smith",
-    "first_name": "Elizabeth",
-    "last_name": "Smith",
-    "user_type": "student"
-  },
-  "credentials": {
-    "token": "faketoken123455678",
-    "expires": false
-  },
-  "extra": {
-    "raw_info": {
-      "me": {
-        "type": "student",
-        "data": {
-          "id": "5966ed736b21538e3c000006",
-          "district": "59484d29ae5dee0001fd3291",
-          "type": "student",
-          "authorized_by": "district"
-        },
-        "links": [
-          {
-            "rel": "self",
-            "uri": "/me"
-          },
-          {
-            "rel": "canonical",
-            "uri": "/v2.1/students/5966ed736b21538e3c000006"
-          },
-          {
-            "rel": "district",
-            "uri": "/v2.1/districts/59484d29ae5dee0001fd3291"
-          }
-        ]
-      },
-      "canonical": {
-        "data": {
-          "created": "2017-07-13T03:48:03.512Z",
-          "district": "59484d29ae5dee0001fd3291",
-          "dob": "2000-05-21T00:00:00.000Z",
-          "enrollments": [],
-          "gender": "M",
-          "hispanic_ethnicity": "",
-          "last_modified": "2017-11-02T00:49:40.504Z",
-          "name": {
-            "first": "Elizabeth",
-            "last": "Smith",
-            "middle": ""
-          },
-          "race": "",
-          "school": "5966ed6cf9d478523c000004",
-          "schools": [
-            "5966ed6cf9d478523c000004"
-          ],
-          "sis_id": "202",
-          "id": "5966ed736b21538e3c000006"
-        },
-        "links": [
-          {
-            "rel": "self",
-            "uri": "/v2.1/students/5966ed736b21538e3c000006"
-          }
-        ]
-      }
-    }
-  }
-}
-'
-  )
-  )
 end

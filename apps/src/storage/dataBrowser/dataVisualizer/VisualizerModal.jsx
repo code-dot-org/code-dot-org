@@ -1,23 +1,26 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
-import memoize from 'memoize-one';
-import {DebounceInput} from 'react-debounce-input';
-import _ from 'lodash';
-import msg from '@cdo/locale';
-import color from '../../../util/color';
-import dataStyles from '../data-styles.module.scss';
 import classNames from 'classnames';
+import _ from 'lodash';
+import memoize from 'memoize-one';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {DebounceInput} from 'react-debounce-input';
+import {connect} from 'react-redux';
+
 import * as rowStyle from '@cdo/apps/applab/designElements/rowStyle';
-import {ChartType, isBlank, isNumber, isBoolean, toBoolean} from '../dataUtils';
-import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
-import DropdownField from './DropdownField';
-import DataVisualizer from './DataVisualizer';
-import Snapshot from './Snapshot';
-import placeholderImage from './placeholder.png';
 import fontConstants from '@cdo/apps/fontConstants';
+import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
+import msg from '@cdo/locale';
+
+import color from '../../../util/color';
+import {ChartType, isBlank, isNumber, isBoolean, toBoolean} from '../dataUtils';
 
 import {MAX_CROSSTAB_CELLS, MAX_CROSSTAB_COLUMNS} from './CrossTabChart';
+import DataVisualizer from './DataVisualizer';
+import DropdownField from './DropdownField';
+import placeholderImage from './placeholder.png';
+import Snapshot from './Snapshot';
+
+import dataStyles from '../data-styles.module.scss';
 
 export const OperatorType = {
   EQUAL: 0,

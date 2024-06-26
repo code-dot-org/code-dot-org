@@ -1,12 +1,11 @@
 {
   "key": "gen-ai-customizing-pilot-v1",
   "display_name": "[Pilot] Customizing Language Models",
-  "category": "aiml",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Standalone Unit",
   "marketing_initiative": null,
-  "grade_levels": null,
+  "grade_levels": "6,7,8,9,10,11,12",
   "header": "teacher_led",
   "image": null,
   "cs_topic": null,

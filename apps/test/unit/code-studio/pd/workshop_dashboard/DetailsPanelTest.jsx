@@ -1,8 +1,9 @@
-import React from 'react';
-import {shallow} from 'enzyme';
 import {assert} from 'chai';
-import sinon from 'sinon';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import React from 'react';
 import {Factory} from 'rosie';
+import sinon from 'sinon';
+
 import DetailsPanel from '@cdo/apps/code-studio/pd/workshop_dashboard/DetailsPanel';
 import {States} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import './workshopFactory';

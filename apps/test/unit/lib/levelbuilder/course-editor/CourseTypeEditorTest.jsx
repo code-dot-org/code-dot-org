@@ -1,12 +1,14 @@
-import {assert} from '../../../../util/reconfiguredChai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
+
 import {
   InstructionType,
   InstructorAudience,
   ParticipantAudience,
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import CourseTypeEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseTypeEditor';
+
+import {assert} from '../../../../util/reconfiguredChai';
 
 const defaultProps = {
   instructorAudience: InstructorAudience.teacher,

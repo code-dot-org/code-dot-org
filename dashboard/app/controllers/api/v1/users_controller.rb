@@ -6,10 +6,6 @@ class Api::V1::UsersController < Api::V1::JSONApiController
   skip_before_action :load_user, only: [:current, :netsim_signed_in, :post_sort_by_family_name, :cached_page_auth_redirect, :post_show_progress_table_v2, :post_ai_rubrics_disabled, :post_date_progress_table_invitation_last_delayed, :post_has_seen_progress_table_v2_invitation, :get_current_permissions, :post_disable_lti_roster_sync, :update_ai_tutor_access]
   skip_before_action :clear_sign_up_session_vars, only: [:current]
 
-  private def to_bool(val)
-    ActiveModel::Type::Boolean.new.cast val
-  end
-
   def load_user
     user_id = params[:user_id]
     if current_user.nil? || (user_id != 'me' && user_id.to_i != current_user.id)
@@ -42,6 +38,9 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         has_seen_progress_table_v2_invitation: current_user.has_seen_progress_table_v2_invitation?,
         date_progress_table_invitation_last_delayed: current_user.date_progress_table_invitation_last_delayed,
         child_account_compliance_state: current_user.child_account_compliance_state,
+        country_code: helpers.country_code(current_user, request),
+        us_state_code: current_user.us_state_code,
+        in_section: current_user.student? ? current_user.sections_as_student.present? : nil,
       }
     else
       render json: {
@@ -197,8 +196,15 @@ class Api::V1::UsersController < Api::V1::JSONApiController
   def post_show_progress_table_v2
     return head :unauthorized unless current_user
 
-    current_user.show_progress_table_v2 = !!params[:show_progress_table_v2].try(:to_bool)
-    current_user.save
+    show_v2_arg = !!params[:show_progress_table_v2].try(:to_bool)
+    current_user.show_progress_table_v2 = show_v2_arg
+
+    if show_v2_arg
+      current_user.progress_table_v2_timestamp = DateTime.now
+    else
+      current_user.progress_table_v1_timestamp = DateTime.now
+    end
+    current_user.save!
 
     head :no_content
   end
@@ -208,7 +214,15 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     return head :unauthorized unless current_user
 
     current_user.has_seen_progress_table_v2_invitation = !!params[:has_seen_progress_table_v2_invitation].try(:to_bool)
-    current_user.save
+
+    show_v2_arg = !!params[:show_progress_table_v2].try(:to_bool)
+    current_user.show_progress_table_v2 = show_v2_arg
+
+    if show_v2_arg
+      current_user.progress_table_v2_timestamp = DateTime.now
+    end
+
+    current_user.save!
 
     head :no_content
   end
@@ -351,5 +365,9 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     else
       return head :bad_request
     end
+  end
+
+  private def to_bool(val)
+    ActiveModel::Type::Boolean.new.cast val
   end
 end

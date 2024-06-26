@@ -1,9 +1,11 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../../../util/reconfiguredChai';
 import sinon from 'sinon';
-import StudentRow from '@cdo/apps/code-studio/components/progress/lessonLockDialog/StudentRow';
+
 import {LockStatus} from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDataApi';
+import StudentRow from '@cdo/apps/code-studio/components/progress/lessonLockDialog/StudentRow';
+
+import {expect} from '../../../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   index: 1,

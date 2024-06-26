@@ -2,7 +2,7 @@
   "script": {
     "name": "self-paced-pl-ai-101-mod2",
     "wrapup_video_id": null,
-    "login_required": true,
+    "login_required": false,
     "properties": {
       "is_migrated": true,
       "student_detail_progress_view": true,
@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-09 16:00:56 UTC",
+    "serialized_at": "2024-05-10 16:03:45 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

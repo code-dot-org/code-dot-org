@@ -1,4 +1,8 @@
 import {
+  ObservableParameterModel,
+  ObservableProcedureModel,
+} from '@blockly/block-shareable-procedures';
+import {
   Block,
   BlockSvg,
   BlocklyOptions,
@@ -14,36 +18,34 @@ import {
   Xml,
 } from 'blockly';
 import GoogleBlockly from 'blockly/core';
+import {Abstract} from 'blockly/core/events/events_abstract';
+import {Field, FieldProto} from 'blockly/core/field';
+import {IProcedureBlock, IProcedureModel} from 'blockly/core/procedures';
+import {ProcedureSerializer} from 'blockly/core/serialization/procedures';
+import {ToolboxDefinition} from 'blockly/core/utils/toolbox';
 import {javascriptGenerator} from 'blockly/javascript';
+
+import BlockSvgFrame from './addons/blockSvgFrame';
+import BlockSvgLimitIndicator from './addons/blockSvgLimitIndicator';
+import CdoFieldAngleDropdown from './addons/cdoFieldAngleDropdown';
+import CdoFieldAngleTextInput from './addons/cdoFieldAngleTextInput';
+import CdoFieldAnimationDropdown from './addons/cdoFieldAnimationDropdown';
+import CdoFieldBehaviorPicker from './addons/cdoFieldBehaviorPicker';
+import {CdoFieldBitmap} from './addons/cdoFieldBitmap';
+import CdoFieldButton from './addons/cdoFieldButton';
+import CdoFieldFlyout from './addons/cdoFieldFlyout';
+import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
+import CdoFieldParameter from './addons/cdoFieldParameter';
+import CdoFieldToggle from './addons/cdoFieldToggle';
+import CdoFieldVariable from './addons/cdoFieldVariable';
+import FunctionEditor from './addons/functionEditor';
+import WorkspaceSvgFrame from './addons/workspaceSvgFrame';
 import {
   BLOCK_TYPES,
   BlocklyVersion,
   Themes,
   WORKSPACE_EVENTS,
 } from './constants';
-import {Field, FieldProto} from 'blockly/core/field';
-import CdoFieldAnimationDropdown from './addons/cdoFieldAnimationDropdown';
-import CdoFieldButton from './addons/cdoFieldButton';
-import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
-import CdoFieldToggle from './addons/cdoFieldToggle';
-import CdoFieldFlyout from './addons/cdoFieldFlyout';
-import {CdoFieldBitmap} from './addons/cdoFieldBitmap';
-import {ProcedureSerializer} from 'blockly/core/serialization/procedures';
-import {
-  ObservableParameterModel,
-  ObservableProcedureModel,
-} from '@blockly/block-shareable-procedures';
-import {Abstract} from 'blockly/core/events/events_abstract';
-import FunctionEditor from './addons/functionEditor';
-import WorkspaceSvgFrame from './addons/workspaceSvgFrame';
-import {IProcedureBlock, IProcedureModel} from 'blockly/core/procedures';
-import BlockSvgFrame from './addons/blockSvgFrame';
-import {ToolboxDefinition} from 'blockly/core/utils/toolbox';
-import CdoFieldVariable from './addons/cdoFieldVariable';
-import CdoFieldBehaviorPicker from './addons/cdoFieldBehaviorPicker';
-import CdoFieldAngleDropdown from './addons/cdoFieldAngleDropdown';
-import CdoFieldAngleTextInput from './addons/cdoFieldAngleTextInput';
-import BlockSvgLimitIndicator from './addons/blockSvgLimitIndicator';
 
 export interface BlockDefinition {
   category: string;
@@ -77,6 +79,7 @@ type GoogleBlocklyType = typeof GoogleBlockly;
 
 // Type for the Blockly instance created and modified by googleBlocklyWrapper.
 export interface BlocklyWrapperType extends GoogleBlocklyType {
+  enableParamEditing: boolean;
   selected: BlockSvg;
   blockCountMap: Map<string, number> | undefined;
   blockLimitMap: Map<string, number> | undefined;
@@ -111,6 +114,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   FieldFlyout: typeof CdoFieldFlyout;
   FieldBitmap: typeof CdoFieldBitmap;
   FieldVariable: typeof CdoFieldVariable;
+  FieldParameter: typeof CdoFieldParameter;
   JavaScript: JavascriptGeneratorType;
   assetUrl: (path: string) => string;
   customSimpleDialog: (config: object) => void;
@@ -201,6 +205,11 @@ export interface ExtendedInput extends Input {
 }
 
 export interface ExtendedBlock extends Block {
+  interpolateMsg: (
+    this: ExtendedBlock,
+    msg: string,
+    ...inputArgs: [...([string, string, number] | (() => void))[], number]
+  ) => void;
   setStrictOutput: (isOutput: boolean, check: string | string[] | null) => void;
   // Blockly uses any for value.
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -209,6 +218,7 @@ export interface ExtendedBlock extends Block {
 }
 
 export interface ExtendedWorkspaceSvg extends WorkspaceSvg {
+  flyoutParentBlock: Block | null;
   globalVariables: string[];
   noFunctionBlockFrame: boolean;
   events: {
@@ -243,6 +253,7 @@ export interface ExtendedBlocklyOptions extends BlocklyOptions {
   useModalFunctionEditor: boolean;
   useBlocklyDynamicCategories: boolean;
   grayOutUndeletableBlocks: boolean | undefined;
+  disableParamEditing: boolean;
 }
 
 export interface ExtendedWorkspace extends Workspace {
@@ -252,7 +263,7 @@ export interface ExtendedWorkspace extends Workspace {
 type CodeGeneratorType = typeof CodeGenerator;
 export interface ExtendedGenerator extends CodeGeneratorType {
   xmlToCode: (name: string, domBlocks: Element) => string;
-  xmlToBlocks: (name: string, xml: Node) => Block[];
+  xmlToBlocks: (name: string, xml: Element) => Block[];
   blockSpaceToCode: (
     name: string,
     opt_typeFilter?: string | string[]

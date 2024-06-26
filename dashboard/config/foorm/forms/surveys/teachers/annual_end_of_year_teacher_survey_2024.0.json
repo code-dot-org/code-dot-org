@@ -823,7 +823,7 @@
         {
           "type": "rating",
           "name": "teach_cs_cdo_easy",
-          "title": "How easy is it to teach computer science using code.org?",
+          "title": "How easy is it to teach computer science using Code.org?",
           "rateCount": 7,
           "rateMax": 7,
           "minRateDescription": "Very Hard",
@@ -859,7 +859,7 @@
         {
           "type": "rating",
           "name": "cdo_students_interest",
-          "title": "Are the topics in Code.org's activities related to their interests?",
+          "title": "Are the topics in Code.org's activities related to your students' interests?",
           "rateCount": 7,
           "rateMax": 7,
           "minRateDescription": "Unrelated to Students' Interests",
@@ -886,31 +886,31 @@
           "columns": [
             {
               "value": "1",
-              "text": "Never"
+              "text": "Strongly Disagree"
             },
             {
               "value": "2",
-              "text": "Once or twice"
+              "text": "Disagree"
             },
             {
               "value": "3",
-              "text": "Once in a while"
+              "text": "Slightly Disagree"
             },
             {
               "value": "4",
-              "text": "Sometimes"
+              "text": "Neutral"
             },
             {
               "value": "5",
-              "text": "Often"
+              "text": "Slightly Agree"
             },
             {
               "value": "6",
-              "text": "Almost every time"
+              "text": "Agree"
             },
             {
               "value": "7",
-              "text": "Every time I taught"
+              "text": "Strongly Agree"
             }
           ],
           "rows": [
@@ -973,7 +973,7 @@
             },
             {
               "value": "features_teacher_resources",
-              "text": "I can use code.org's curriculum resources (lesson plans, slides, examples, guides and forums) to prepare my lessons"
+              "text": "I can use Code.org's curriculum resources (lesson plans, slides, examples, guides and forums) to prepare my lessons"
             },
             {
               "value": "features_students_experience",
@@ -1026,7 +1026,7 @@
             },
             {
               "value": "features_teacher_resources",
-              "text": "I can use code.org's curriculum resources (lesson plans, slides, examples, guides and forums) to prepare my lessons",
+              "text": "I can use Code.org's curriculum resources (lesson plans, slides, examples, guides and forums) to prepare my lessons",
               "visibleIf": "{features_main_choice} <> 'features_teacher_resources'"
             },
             {
@@ -1117,7 +1117,8 @@
           "type": "rating",
           "name": "6_12_standalone_units_likelihood",
           "visibleIf": "{grade} anyof [6, 7, 8, 9, 10, 11, 12, '12up']",
-          "title": "If Code.org were to offer new units, 2-8 weeks in length, on specific topics such as data science or AI, designed for students in grades 6-12, how likely would you be to teach them?",
+          "title": "How likely are you to teach brief modules (2-8 week-long) focused on specific topics, designed for students in grades 6-12?",
+          "description": "These would be short modules focusing on one specific topic, for example data science or AI, that don't need to be taught within a longer course.",
           "rateCount": 7,
           "rateMax": 7,
           "minRateDescription": "Not Likely",
@@ -1127,7 +1128,7 @@
           "type": "checkbox",
           "name": "6_12_standalone_units_reasons",
           "visibleIf": "{6_12_standalone_units_likelihood} <= 4",
-          "title": "Please share some reasons why you wouldn't be likely to teach short units for students in grades 6-12, on specific topics such as data science or AI.",
+          "title": "Please share some reasons why you wouldn't be likely to teach brief, 2-8 week-long modules on specific topics, for students in grades 6-12.",
           "choices": [
             {
               "value": "content_overlaps",
@@ -1163,13 +1164,14 @@
           "type": "text",
           "name": "6_12_standalone_units_reasons_other_comment",
           "visibleIf": "{6_12_standalone_units_reasons} contains 'other'",
-          "title": "Please share what are some other reasons why you are not likely to teach short units on specific topics such as data science or AI."
+          "title": "Please share what are some other reasons why you are not likely to teach brief, 2-8 week-long modules on specific topics, for students in grades 6-12."
         },
         {
           "type": "rating",
           "name": "9_12_cs_foundations_likelihood",
           "visibleIf": "{grade} anyof [ 9, 10, 11, 12, '12up']",
-          "title": "If Code.org were to offer a semester-long, introductory course about foundations of computer science, for students in grades 9-12, how likely would you be to teach it?  This course would be aligned to State and CSTA standards and would not be an AP course.",
+          "title": "If Code.org were to offer a semester-long, introductory course about foundations of computer science, for students in grades 9-12, how likely would you be to teach it?",
+          "description": "This course would be aligned to State and CSTA standards and would not be an AP course.",
           "rateCount": 7,
           "rateMax": 7,
           "minRateDescription": "Not Likely",
@@ -1235,8 +1237,8 @@
           "type": "checkbox",
           "name": "k_5_cross_curricular_content",
           "visibleIf": "{grade} anyof ['k', 1, 2, 3, 4, 5]",
-          "title": "Would you (or your colleagues) be interested in teaching short units (three to five lessons long) that incorporate computer science concepts while teaching core subject standards of the following areas?",
-          "description": "(Please select all that you (or your colleagues) would be likely to teach)",
+          "title": "Would you be interested in teaching short units (three to five lessons long) that incorporate computer science concepts while teaching core subject standards of the following areas?",
+          "description": "(You may answer this question thinking about your interest or that of your colleagues teaching other content-areas. Please select all that apply)",
           "choices": [
             {
               "value": "math",
@@ -1286,15 +1288,15 @@
           "columns": [
             {
               "value": "1",
-              "text": "Not likely at all"
+              "text": "Not Interested at All"
             },
             {
               "value": "2",
-              "text": "Unlikely"
+              "text": "Not Interested"
             },
             {
               "value": "3",
-              "text": "Somewhat unlikely"
+              "text": "Slightly Uninterested"
             },
             {
               "value": "4",
@@ -1302,15 +1304,15 @@
             },
             {
               "value": "5",
-              "text": "Somewhat likely"
+              "text": "Somewhat Interested"
             },
             {
               "value": "6",
-              "text": " Likely"
+              "text": " Interested"
             },
             {
               "value": "7",
-              "text": "Definitely likely"
+              "text": "Very Interested"
             }
           ],
           "rows": [
@@ -1331,7 +1333,8 @@
         {
           "type": "text",
           "name": "customized_teaching_other",
-          "title": "If there are any other ways in which you would want to customize the Code.org content you teach, please describe them."
+          "title": "If there are any other ways in which you would want to customize the Code.org content you teach, please describe them.",
+          "description": "(Optional)"
         }
       ]
     },
@@ -1363,10 +1366,6 @@
           "title": "Have you taught AI content in a K-12 classroom?",
           "choices": [
             {
-              "value": "no",
-              "text": "No"
-            },
-            {
               "value": "yes_cdo",
               "text": "Yes, using mostly Code.org content"
             },
@@ -1377,6 +1376,10 @@
             {
               "value": "yes_own_content",
               "text": "Yes, using mostly content I developed myself"
+            },
+            {
+              "value": "no",
+              "text": "No"
             }
           ]
         },
@@ -1400,7 +1403,7 @@
             },
             {
               "value": "ai_how_works_in_depth",
-              "text": "In-depth content about how AI works (e.g. Machine Learning, Natural Language Processing)"
+              "text": "In-depth content about how AI works (e.g. Natural Language Processing, Neural Networks, Computer Vision)"
             },
             {
               "value": "ai_ethics",
@@ -1439,6 +1442,14 @@
               "text": "My school restricts access to AI tools"
             },
             {
+              "value": "lack_school_ai_policy",
+              "text": "My school doesn't have clear guidance or policies around using and teaching AI"
+            },
+            {
+              "value": "lack_ai_standards",
+              "text": "It is not clear to me how AI aligns to standards"
+            },
+            {
               "value": "none",
               "text": "None"
             },
@@ -1451,13 +1462,14 @@
         {
           "type": "text",
           "name": "ai_teaching_barriers_other_comment",
-          "visibleIf": "{ai_teaching_barriers_content} = 'other'",
+          "visibleIf": "{ai_teaching_barriers_content} anyof ['other']",
           "title": "What other barriers do you think could prevent you from implementing new AI curriculum at your school?"
         },
         {
           "type": "comment",
           "name": "ai_teaching_comments",
-          "title": "Is there anything you would like us to know as we think about future AI content development?"
+          "title": "Is there anything you would like us to know as we think about future AI content development?",
+          "description": "(Optional)"
         }
       ]
     },

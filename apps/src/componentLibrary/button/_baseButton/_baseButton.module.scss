@@ -105,6 +105,7 @@ a.button-primary {
 
 .button-secondary,
 a.button-secondary {
+  // ! Warning!! Secondary purple button is deprecated and will be removed soon.
   &.button-purple {
     border: 1px solid $light_secondary_500;
     color: $light_secondary_500;
@@ -129,6 +130,7 @@ a.button-secondary {
 
   &.button-black {
     border: 1px solid $light_black;
+    background-color: $light_white;
     color: $light_black;
 
     &:hover {
@@ -149,8 +151,32 @@ a.button-secondary {
     }
   }
 
+  &.button-gray {
+    border: 1px solid $light_gray_400;
+    background-color: $light_white;
+    color: $light_black;
+
+    &:hover {
+      background-color: $light_gray_100;
+      border: 1px solid $light_gray_400;
+      color: $light_black;
+    }
+
+    &:active {
+      // !important is used here to override the ./apps/style/common.scss line 655 styles
+      border: 1px solid $light_gray_400 !important;
+    }
+
+    &:disabled, &[aria-disabled="true"] {
+      border-color: $light_gray_200 !important;
+      color: $light_gray_200;
+      background-color: unset;
+    }
+  }
+
   &.button-white {
     border: 1px solid $light_white;
+    background-color: $light_black;
     color: $light_white;
 
     &:hover {

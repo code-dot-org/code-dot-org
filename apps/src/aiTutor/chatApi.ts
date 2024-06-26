@@ -5,10 +5,9 @@ import {
   AITutorTypesValue,
   ChatCompletionMessage,
 } from '@cdo/apps/aiTutor/types';
-import HttpClient from '@cdo/apps/util/HttpClient';
-
-import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
 import {MetricEvent} from '@cdo/apps/lib/metrics/events';
+import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 // These are the possible statuses returned by ShareFiltering.find_failure
 enum ShareFilterStatus {
@@ -29,6 +28,7 @@ const logViolationDetails = (response: OpenaiChatCompletionMessage) => {
   });
   MetricsReporter.logWarning({
     event: MetricEvent.AI_TUTOR_CHAT_PROFANITY_PII_VIOLATION,
+    content: response.flagged_content,
   });
 };
 
@@ -40,11 +40,17 @@ const logViolationDetails = (response: OpenaiChatCompletionMessage) => {
 export async function postOpenaiChatCompletion(
   messagesToSend: OpenaiChatCompletionMessage[],
   levelId?: number,
-  tutorType?: AITutorTypesValue
+  tutorType?: AITutorTypesValue,
+  levelInstructions?: string
 ): Promise<OpenaiChatCompletionMessage | null> {
   const payload = levelId
-    ? {levelId: levelId, messages: messagesToSend, type: tutorType}
-    : {messages: messagesToSend, type: tutorType};
+    ? {
+        levelId: levelId,
+        messages: messagesToSend,
+        type: tutorType,
+        levelInstructions,
+      }
+    : {messages: messagesToSend, type: tutorType, levelInstructions};
 
   const response = await HttpClient.post(
     CHAT_COMPLETION_URL,
@@ -57,7 +63,7 @@ export async function postOpenaiChatCompletion(
   if (response.ok) {
     return await response.json();
   } else {
-    return null;
+    throw new Error('Error getting chat completion response');
   }
 }
 
@@ -74,14 +80,13 @@ const formatForChatCompletion = (
  * to `postOpenaiChatCompletion`, then returns the status of the response and assistant message if successful.
  */
 export async function getChatCompletionMessage(
-  systemPrompt: string,
   formattedQuestion: string,
   chatMessages: ChatCompletionMessage[],
   levelId?: number,
-  tutorType?: AITutorTypesValue
+  tutorType?: AITutorTypesValue,
+  levelInstructions?: string
 ): Promise<ChatCompletionResponse> {
   const messagesToSend = [
-    {role: Role.SYSTEM, content: systemPrompt},
     ...formatForChatCompletion(chatMessages),
     {role: Role.USER, content: formattedQuestion},
   ];
@@ -90,7 +95,8 @@ export async function getChatCompletionMessage(
     response = await postOpenaiChatCompletion(
       messagesToSend,
       levelId,
-      tutorType
+      tutorType,
+      levelInstructions
     );
   } catch (error) {
     MetricsReporter.logError({
@@ -100,7 +106,12 @@ export async function getChatCompletionMessage(
     });
   }
 
-  if (!response) return {status: Status.ERROR};
+  if (!response)
+    return {
+      status: Status.ERROR,
+      assistantResponse:
+        'There was an error processing your request. Please try again.',
+    };
 
   switch (response.status) {
     case ShareFilterStatus.Profanity:

@@ -1,9 +1,11 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
+import sinon from 'sinon';
+
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
 import * as utils from '@cdo/apps/utils';
+
 import {expect, assert} from '../../../../util/reconfiguredChai';
-import sinon from 'sinon';
 
 const sampleAnnouncement = {
   key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',

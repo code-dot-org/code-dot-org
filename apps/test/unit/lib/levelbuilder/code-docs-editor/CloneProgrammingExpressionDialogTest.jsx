@@ -1,10 +1,12 @@
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow, mount} from 'enzyme';
+import sinon from 'sinon';
+
 import CloneProgrammingExpressionDialog, {
   CloneFormDialog,
 } from '@cdo/apps/lib/levelbuilder/code-docs-editor/CloneProgrammingExpressionDialog';
+
 import {expect} from '../../../../util/reconfiguredChai';
-import sinon from 'sinon';
 
 describe('CloneFormDialog', () => {
   let defaultProps, onCloneSuccessSpy;

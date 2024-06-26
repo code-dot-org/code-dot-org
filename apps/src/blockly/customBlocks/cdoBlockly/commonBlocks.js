@@ -1,8 +1,9 @@
 /**
  * Defines blocks useful in multiple blockly apps
  */
-var commonMsg = require('@cdo/locale');
 var blockly = require('@code-dot-org/blockly');
+
+var commonMsg = require('@cdo/locale');
 
 export const blocks = {
   installJoinBlock(blockly) {

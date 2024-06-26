@@ -41,8 +41,8 @@ Dashboard::Application.routes.draw do
     get "/congrats", to: "congrats#index"
 
     get "/incubator", to: "incubator#index"
-    get "/musiclab", to: redirect("/projectbeats", status: 302)
-    get "/projectbeats", to: "musiclab#index"
+    get "/musiclab", to: redirect(CDO.code_org_url("/music"))
+    get "/projectbeats", to: redirect(CDO.code_org_url("/music"))
     get "/musiclab/menu", to: "musiclab#menu"
     get "/musiclab/gallery", to: "musiclab#gallery"
     get "/musiclab/embed", to: "musiclab#embed"
@@ -60,6 +60,8 @@ Dashboard::Application.routes.draw do
         get 'test'
       end
     end
+
+    resources :images, only: [:new]
 
     get 'maker/home', to: 'maker#home'
     get 'maker/setup', to: 'maker#setup'
@@ -128,6 +130,7 @@ Dashboard::Application.routes.draw do
           get 'code_review_groups'
           post 'code_review_groups', to: 'sections#set_code_review_groups'
           post 'code_review_enabled', to: 'sections#set_code_review_enabled'
+          post 'ai_tutor_enabled', to: 'sections#set_ai_tutor_enabled'
         end
         collection do
           get 'membership'
@@ -233,6 +236,8 @@ Dashboard::Application.routes.draw do
     put '/featured_projects/:channel_id/feature', to: 'featured_projects#feature'
     put '/featured_projects/:channel_id/bookmark', to: 'featured_projects#bookmark'
 
+    get 'projects/:channel_id/extra_links', to: 'projects#extra_links'
+
     resources :projects, path: '/projects/', only: [:index] do
       collection do
         ProjectsController::STANDALONE_PROJECTS.each do |key, _|
@@ -271,7 +276,10 @@ Dashboard::Application.routes.draw do
 
     # Get or create a project for the given level_id. Optionally, the request
     # can include script_id to get or create a project for the level and script.
-    get "projects(/script/:script_id)/level/:level_id", to: 'projects#get_or_create_for_level'
+    # Optionally, the request can include user_id to get a project for another user,
+    # like a teacher viewing a student's work.
+    # The request can also include a script_level_id if the level_id refers to a different level (for example, a sublevel).
+    get "projects(/script/:script_id)(/script_level/:script_level_id)/level/:level_id(/user/:user_id)", to: 'projects#get_or_create_for_level'
 
     post '/locale', to: 'home#set_locale', as: 'locale'
 
@@ -478,7 +486,7 @@ Dashboard::Application.routes.draw do
             get 'sublevel/:sublevel_position', to: 'script_levels#show', as: 'sublevel', format: false
             # Get the level's properties via JSON.
             # /s/xxx/lessons/yyy/levels/zzz/level_properties
-            get 'level_properties', to: 'script_levels#level_properties'
+            get '(sublevel/:sublevel_position)/level_properties', to: 'script_levels#level_properties'
           end
         end
         resources :script_levels, only: [:show], path: "/levels", format: false do
@@ -613,6 +621,10 @@ Dashboard::Application.routes.draw do
     namespace :lti do
       namespace :v1 do
         resource :feedback, controller: :feedback, only: %i[create show]
+        controller :dynamic_registration do
+          get 'dynamic_registration', action: :new_registration
+          post 'dynamic_registration', action: :create_registration
+        end
         resources :sections, only: [] do
           collection do
             patch :bulk_update_owners
@@ -621,7 +633,9 @@ Dashboard::Application.routes.draw do
         namespace :account_linking do
           get :landing
           get :existing_account
+          get :finish_link
           post :link_email
+          post :new_account
         end
       end
     end

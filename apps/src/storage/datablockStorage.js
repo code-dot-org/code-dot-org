@@ -1,4 +1,5 @@
 import _ from 'lodash';
+
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 
 // DatablockStorage powers the "Data" tab in App Lab and Game Lab, including the

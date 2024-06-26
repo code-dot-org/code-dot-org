@@ -1,8 +1,10 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import CloneLessonDialog from '@cdo/apps/lib/levelbuilder/unit-editor/CloneLessonDialog';
-import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
+
+import CloneLessonDialog from '@cdo/apps/lib/levelbuilder/unit-editor/CloneLessonDialog';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('CloneLessonDialog', () => {
   let defaultProps, handleCloseSpy, fetchSpy;

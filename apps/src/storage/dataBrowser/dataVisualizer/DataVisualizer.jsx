@@ -1,6 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
 import {ChartType, ignoreMissingValues} from '../dataUtils';
+
 import CrossTabChart from './CrossTabChart';
 import GoogleChartWrapper from './GoogleChartWrapper';
 

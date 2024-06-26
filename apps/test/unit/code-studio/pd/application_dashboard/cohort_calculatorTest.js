@@ -1,9 +1,10 @@
+import {expect} from 'chai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
+import sinon from 'sinon';
+
 import CohortCalculator from '@cdo/apps/code-studio/pd/application_dashboard/cohort_calculator';
 import {AllPartnersValue} from '@cdo/apps/code-studio/pd/application_dashboard/constants';
-import {expect} from 'chai';
-import sinon from 'sinon';
 
 describe('Cohort Calculator', () => {
   describe('Initially', () => {

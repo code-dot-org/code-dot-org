@@ -1,9 +1,10 @@
-import WorkshopTableLoader from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_table_loader';
-import React from 'react';
-import _ from 'lodash';
-import sinon from 'sinon';
 import {expect} from 'chai';
-import {mount, shallow} from 'enzyme';
+import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import _ from 'lodash';
+import React from 'react';
+import sinon from 'sinon';
+
+import WorkshopTableLoader from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_table_loader';
 
 describe('WorkshopTableLoader', () => {
   let server;

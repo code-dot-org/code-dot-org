@@ -1,10 +1,11 @@
-import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import color from '@cdo/apps/util/color';
-import fontConstants from '@cdo/apps/fontConstants';
+import React, {Component} from 'react';
 import onClickOutside from 'react-onclickoutside';
+
 import {KeyCodes} from '@cdo/apps/constants';
+import fontConstants from '@cdo/apps/fontConstants';
+import color from '@cdo/apps/util/color';
 
 // HTML Adapted from:
 // https://www.w3.org/TR/wai-aria-practices-1.1/examples/menu-button/menu-button-actions.html

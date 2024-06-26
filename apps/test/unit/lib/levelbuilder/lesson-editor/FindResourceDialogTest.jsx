@@ -1,8 +1,11 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
-import {UnconnectedFindResourceDialog as FindResourceDialog} from '@cdo/apps/lib/levelbuilder/lesson-editor/FindResourceDialog';
 import sinon from 'sinon';
+
+import {UnconnectedFindResourceDialog as FindResourceDialog} from '@cdo/apps/lib/levelbuilder/lesson-editor/FindResourceDialog';
+
+import {expect} from '../../../../util/reconfiguredChai';
+
 import resourceTestData from './resourceTestData';
 
 describe('FindResourceDialog', () => {

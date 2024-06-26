@@ -1,5 +1,6 @@
-import {expect} from '../../../util/reconfiguredChai';
 import library from '@cdo/apps/applab/designElements/library';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 function getRect(photoSelectComponent) {
   return {

@@ -1,5 +1,6 @@
 import {render, screen, fireEvent} from '@testing-library/react';
 import $ from 'jquery';
+import _ from 'lodash';
 import React from 'react';
 import {Provider} from 'react-redux';
 import sinon from 'sinon';
@@ -15,11 +16,14 @@ import unitSelection, {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 import currentUser, {
   setShowProgressTableV2,
   setProgressTableV2ClosedBeta,
+  setDateProgressTableInvitationDelayed,
+  setHasSeenProgressTableInvite,
 } from '@cdo/apps/templates/currentUserRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import progressV2Feedback from '@cdo/apps/templates/sectionProgressV2/progressV2FeedbackRedux';
 import SectionProgressSelector from '@cdo/apps/templates/sectionProgressV2/SectionProgressSelector.jsx';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import i18n from '@cdo/locale';
 
 import {expect} from '../../../util/reconfiguredChai';
 
@@ -32,6 +36,8 @@ const DEFAULT_PROPS = {};
 
 describe('SectionProgressSelector', () => {
   let store;
+
+  let postStub;
 
   beforeEach(() => {
     stubRedux();
@@ -50,10 +56,18 @@ describe('SectionProgressSelector', () => {
     DCDO.set('progress-table-v2-enabled', true);
     DCDO.set('progress-table-v2-default-v2', false);
     DCDO.set('progress-table-v2-closed-beta-enabled', false);
+
+    postStub = sinon.stub($, 'post');
+    postStub.returns(Promise.resolve());
+
+    sinon.stub(_, 'debounce').callsFake(fn => fn);
   });
 
   afterEach(() => {
     restoreRedux();
+
+    postStub.restore();
+    sinon.restore();
   });
 
   function renderDefault(propOverrides = {}) {
@@ -128,19 +142,17 @@ describe('SectionProgressSelector', () => {
   });
 
   it('sets user preference when link clicked', () => {
-    const stub = sinon.stub($, 'post');
     renderDefault();
 
-    const remindLaterLink = screen.getByText('Remind me later');
-    fireEvent.click(remindLaterLink);
     const link = screen.getByText(V1_PAGE_LINK_TEXT);
     fireEvent.click(link);
 
-    expect(stub).calledWith('/api/v1/users/show_progress_table_v2', {
-      show_progress_table_v2: true,
-    });
-
-    stub.reset();
+    expect(postStub).to.have.been.calledWith(
+      '/api/v1/users/show_progress_table_v2',
+      {
+        show_progress_table_v2: true,
+      }
+    );
   });
 
   it('shows v1 only if user not in closed beta', () => {
@@ -177,5 +189,35 @@ describe('SectionProgressSelector', () => {
 
     expect(screen.queryByText(V2_PAGE_LINK_TEXT)).to.not.exist;
     expect(screen.queryByTestId(V2_TEST_ID)).to.not.exist;
+  });
+
+  it('shows modal if modal is available', () => {
+    DCDO.set('progress-table-v2-enabled', true);
+    DCDO.set('progress-table-v2-closed-beta-enabled', true);
+    DCDO.set('disable-try-new-progress-view-modal', false);
+
+    store.dispatch(setDateProgressTableInvitationDelayed(''));
+    store.dispatch(setHasSeenProgressTableInvite(false));
+
+    renderDefault();
+
+    screen.getByText(i18n.progressTrackingAnnouncement());
+  });
+
+  it('does not show modal if modal is not available', () => {
+    DCDO.set('progress-table-v2-enabled', true);
+    DCDO.set('progress-table-v2-closed-beta-enabled', true);
+    DCDO.set('disable-try-new-progress-view-modal', true);
+
+    store.dispatch(setDateProgressTableInvitationDelayed(''));
+    store.dispatch(setHasSeenProgressTableInvite(false));
+
+    renderDefault();
+
+    screen.getByText(V1_PAGE_LINK_TEXT);
+    screen.getByTestId(V1_TEST_ID);
+
+    expect(screen.queryByText(i18n.progressTrackingAnnouncement())).to.not
+      .exist;
   });
 });

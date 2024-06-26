@@ -1,8 +1,9 @@
 import {expect} from 'chai';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
-import LessonExtrasEditor from '@cdo/apps/lib/levelbuilder/unit-editor/LessonExtrasEditor';
 import sinon from 'sinon';
+
+import LessonExtrasEditor from '@cdo/apps/lib/levelbuilder/unit-editor/LessonExtrasEditor';
 
 describe('LessonExtrasEditor', () => {
   let defaultProps,

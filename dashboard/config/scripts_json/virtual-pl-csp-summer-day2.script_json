@@ -4,11 +4,12 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true
+      "is_migrated": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-20 16:14:46 UTC",
+    "serialized_at": "2024-06-25 18:15:16 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -96,7 +97,7 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Purpose:**\nTLOs are intended to help participants experience part of the curriculum as a learner and also practice teaching lessons from the curriculum. We use the debrief to discuss important aspects of teaching CS Principles in classrooms.\n\n**Objectives:**\n* Participants understand how to use widgets in the classroom to support understanding of computer science content\n\n**Suggested Time:** 65 minutes\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp1-2024/lessons/7\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> \n\n**Lesson Overview:**\nStudents explore how black and white images are represented.  Students use the black and white pixelation widget to represent each pixel of an image with black or white light.  They learn how to sample an analog image using small squares of uniform size (each represented with a black or white value) and reflect on the pros and cons of choosing a smaller or larger square size when sampling.",
         "preparation": "\n* Practice using the pixelation widget\n* Copies of [r activity_guide_-_black_and_white_images/virtual-pl-csp-summer/2024] for each pair of students\n* [KEY U1L7 Black and White Images](https://docs.google.com/document/d/1b02zxA27_uBJHDHkyBSyw56KiEPcgQRdwGekJmNs5Fk/edit?usp=sharing)\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/14ElmcZSzyt5mBh_GmBN_91lVf5WFMUgPjnFf0UYAbv4/edit?usp=sharing)",
-        "student_overview": "Learn how computers represent black and white images using bits."
+        "student_overview": "Learn how computers represent black and white images using bits.\n\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp1-2024/lessons/7\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> \n\n**Lesson Overview:**\nStudents explore how black and white images are represented.  Students use the black and white pixelation widget to represent each pixel of an image with black or white light.  They learn how to sample an analog image using small squares of uniform size (each represented with a black or white value) and reflect on the pros and cons of choosing a smaller or larger square size when sampling."
       },
       "seeding_key": {
         "lesson.key": "Black and White Images",
@@ -132,7 +133,7 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Purpose:**\nTLOs are intended to help participants experience part of the curriculum as a learner and also practice teaching lessons from the curriculum. We use the debrief to discuss important aspects of teaching CS Principles in classrooms.\n\n**Objectives:**\n* Participants understand the role they play in managing student behavior and actions when using widgets to teach content.\n\n**Suggested Time:** 60 minutes\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp1-2024/lessons/9\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> \n\n**Lesson Overview:**\nStudents use the Text Compression Widget to experiment with compressing songs and poems and try to find their ‘personal best’ compression. A video introduces important vocabulary for the lesson and demonstrates the full features of the widget. Students pick a text they think will be ‘easy’ to compress and one they think will be ‘difficult’, paying attention to why some texts might be more compressible than others. As a wrap-up, students discuss what factors make some texts more compressible than others. The widget is just one example of lossless compression and students aren’t expected to master specific compression strategies - instead, they should understand that lossless compression uses less data and still lets them re-create the original information.",
         "preparation": "\n* Familiarize yourself with the Text Compression Widget\n* Open Unit 1 Slideshow to current lesson\n* Plan for how you will display the initial Pitter Patter Message & it's Compressed Message during the warm-up\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1T27X3QE0zjoakeRIRwdba-xKfTXb3-nC0cnb0Wtdgks/edit?usp=sharing)",
-        "student_overview": "Learn how computers can decrease the number of bits used to represent a piece of information."
+        "student_overview": "Learn how computers can decrease the number of bits used to represent a piece of information.\n\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp1-2024/lessons/9\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> \n\n**Lesson Overview:**\nStudents use the Text Compression Widget to experiment with compressing songs and poems and try to find their ‘personal best’ compression. A video introduces important vocabulary for the lesson and demonstrates the full features of the widget. Students pick a text they think will be ‘easy’ to compress and one they think will be ‘difficult’, paying attention to why some texts might be more compressible than others. As a wrap-up, students discuss what factors make some texts more compressible than others. The widget is just one example of lossless compression and students aren’t expected to master specific compression strategies - instead, they should understand that lossless compression uses less data and still lets them re-create the original information."
       },
       "seeding_key": {
         "lesson.key": "Lossless Compression",
@@ -166,7 +167,7 @@
       "relative_position": 6,
       "properties": {
         "overview": "**Purpose:**\nIn this activity, a facilitator goes over the \"answers\" to the scavenger hunt and connects the “Big Ideas” and “Computational Thinking Skills” from the CED to the Unit 1-10 plan of the curriculum..\n\n**Objectives:**\n* Participants can explain how the curriculum unit structure lends itself to the AP requirements.\n* Participants know how to navigate the CED binder and access it online.\n* Participants can explain how the curriculum framework is organized (i.e., big ideas, enduring understandings, learning objectives, essential knowledge, practices/skills).\n* Participants can describe the “big ideas” of the course (as provided by the College Board) and the Computational Thinking Practices and Skills of the course.\n* Participants have engaged in an activity to explore the exam section of the CED and how students will be assessed on both content and skills.\n\n**Suggested time:** 55 minutes",
-        "student_overview": "**You will:**\n* Explain how the curriculum unit structure lends itself to the AP requirements.\n* Learn how to navigate the CED binder and access it online.\n* Explain how the curriculum framework is organized (i.e., big ideas, enduring understandings, learning objectives, essential knowledge, practices/skills).\n* Describe the “big ideas” of the course (as provided by the College Board) and the Computational Thinking Practices and Skills of the course.\n* Engage in an activity to explore the exam section of the CED and how students will be assessed on both content and skills.\n"
+        "student_overview": "**You Will:**\n* Explain how the curriculum unit structure lends itself to the AP requirements.\n* Learn how to navigate the CED binder and access it online.\n* Explain how the curriculum framework is organized (i.e., big ideas, enduring understandings, learning objectives, essential knowledge, practices/skills).\n* Describe the “big ideas” of the course (as provided by the College Board) and the Computational Thinking Practices and Skills of the course.\n* Engage in an activity to explore the exam section of the CED and how students will be assessed on both content and skills."
       },
       "seeding_key": {
         "lesson.key": "Asynchronous Part 2",
@@ -200,9 +201,9 @@
       "relative_position": 8,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\nTLOs are intended to help participants experience part of the curriculum as a learner and also practice teaching lessons from the curriculum. We use the debrief to discuss important aspects of teaching CS Principles in classrooms.\n\n**Objectives:**\n* Participants understand how productive classroom discussions support students in being informed decision makers.\n\n**Suggested Time:** 60 minutes\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp1-2024/lessons/3/lessons/10\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> \n\n**Lesson Overview:**\nStudents are introduced to lossy compression via the Lossy Text Compression widget. They apply this concept and their prior knowledge of sampling to create their own lossy compressions of image files using the Lossy Image Widget. A theme throughout the lesson is that lossy compression can greatly reduce the file size, but it can also greatly reduce the quality and it’s important to find that balance between quality and file size. The real challenge here is finding where that line is - how much can we compress but still keep it recognizable? Students then discuss several practical scenarios where they need to decide whether to use a lossy or lossless compression algorithm. The lesson ends with a discussion of the situations where lossless compression is important and the situations where lossy compression is important.",
+        "overview": "**Purpose:**\nTLOs are intended to help participants experience part of the curriculum as a learner and also practice teaching lessons from the curriculum. We use the debrief to discuss important aspects of teaching CS Principles in classrooms.\n\n**Objectives:**\n* Participants understand how productive classroom discussions support students in being informed decision makers.\n\n**Suggested Time:** 60 minutes\n\n<a href=\"https://studio.code.org/s/csp1-2024/lessons/10\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n\n**Lesson Overview:**\nStudents are introduced to lossy compression via the Lossy Text Compression widget. They apply this concept and their prior knowledge of sampling to create their own lossy compressions of image files using the Lossy Image Widget. A theme throughout the lesson is that lossy compression can greatly reduce the file size, but it can also greatly reduce the quality and it’s important to find that balance between quality and file size. The real challenge here is finding where that line is - how much can we compress but still keep it recognizable? Students then discuss several practical scenarios where they need to decide whether to use a lossy or lossless compression algorithm. The lesson ends with a discussion of the situations where lossless compression is important and the situations where lossy compression is important.",
         "preparation": "* Explore each of the widgets for this lesson\n* Decide how you will let students share their lossy compressions with each other or the whole class\n* Have [r csp_unit_1_lesson_12_digital_dilemmas_part_1/virtual-pl-csp-summer/2024] ready for the discussion towards the end of the lesson\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1_sbw1zXbQa2_ZJkN20PrijCdIxLCxys_cYFPj1kYND0/edit?usp=sharing)",
-        "student_overview": "Learn how information is represented using fewer bits when it's OK for some of the information or details to be lost."
+        "student_overview": "Learn how information is represented using fewer bits when it's OK for some of the information or details to be lost.\n\n<a href=\"https://studio.code.org/s/csp1-2024/lessons/10\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n\n**Lesson Overview:**\nStudents are introduced to lossy compression via the Lossy Text Compression widget. They apply this concept and their prior knowledge of sampling to create their own lossy compressions of image files using the Lossy Image Widget. A theme throughout the lesson is that lossy compression can greatly reduce the file size, but it can also greatly reduce the quality and it’s important to find that balance between quality and file size. The real challenge here is finding where that line is - how much can we compress but still keep it recognizable? Students then discuss several practical scenarios where they need to decide whether to use a lossy or lossless compression algorithm. The lesson ends with a discussion of the situations where lossless compression is important and the situations where lossy compression is important."
       },
       "seeding_key": {
         "lesson.key": "Lossy Compression",
@@ -236,7 +237,7 @@
       "relative_position": 10,
       "properties": {
         "overview": "**Purpose:**\nParticipants will explore data related to access to CS education. The activities in this asynchronous session will prepare participants to engage in the discussions in synchronous sessions.\n\n**Objectives:**\n\n* Participants define access, diversity, and inclusion.\n* Participants explore CS access data.\n* Participants complete any remaining challenges from the TLO.\n\n**Suggested time:** 65 minutes",
-        "student_overview": "**You will:**\n\n* Define access, diversity, and inclusion.\n* Explore CS access data.\n* Complete any remaining challenges from the TLO."
+        "student_overview": "**You Will:**\n* Define access, diversity, and inclusion.\n* Explore CS access data.\n* Complete any remaining challenges from the TLO."
       },
       "seeding_key": {
         "lesson.key": "Asynchronous Part 1",
@@ -1608,14 +1609,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "virtual-pl-csp-summer-day2-Context1"
+          "virtual-pl-csp-summer-day2-asynch1-01-2024"
         ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csp-summer-day2-Context1"
+          "virtual-pl-csp-summer-day2-asynch1-01-2024"
         ],
         "lesson.key": "Asynchronous Part 2",
         "lesson_group.key": "lessonGroup-3",
@@ -1623,7 +1624,7 @@
         "activity_section.key": "8ea4bbf1-c11d-4594-801b-73fd7439290a"
       },
       "level_keys": [
-        "virtual-pl-csp-summer-day2-Context1"
+        "virtual-pl-csp-summer-day2-asynch1-01-2024"
       ]
     },
     {
@@ -1633,14 +1634,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "virtual-pl-csp-summer-day2-Context3"
+          "virtual-pl-csp-summer-day2-asynch1-02-2024"
         ],
         "progression": "CED Scavenger Hunt"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csp-summer-day2-Context3"
+          "virtual-pl-csp-summer-day2-asynch1-02-2024"
         ],
         "lesson.key": "Asynchronous Part 2",
         "lesson_group.key": "lessonGroup-3",
@@ -1648,7 +1649,7 @@
         "activity_section.key": "ba757f11-a52c-488b-be80-9edf7da65cc0"
       },
       "level_keys": [
-        "virtual-pl-csp-summer-day2-Context3"
+        "virtual-pl-csp-summer-day2-asynch1-02-2024"
       ]
     },
     {
@@ -1658,14 +1659,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "virtual-pl-csd-summer-day2-UsingResources3_1"
+          "virtual-pl-csp-summer-day2-asynch1-03-2024"
         ],
         "progression": "CED Scavenger Hunt"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day2-UsingResources3_1"
+          "virtual-pl-csp-summer-day2-asynch1-03-2024"
         ],
         "lesson.key": "Asynchronous Part 2",
         "lesson_group.key": "lessonGroup-3",
@@ -1673,7 +1674,7 @@
         "activity_section.key": "ba757f11-a52c-488b-be80-9edf7da65cc0"
       },
       "level_keys": [
-        "virtual-pl-csd-summer-day2-UsingResources3_1"
+        "virtual-pl-csp-summer-day2-asynch1-03-2024"
       ]
     },
     {
@@ -1758,14 +1759,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "virtual-pl-csp-summer-day2-P2-Context1"
+          "virtual-pl-csp-summer-day2-asynch2-01-2024"
         ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csp-summer-day2-P2-Context1"
+          "virtual-pl-csp-summer-day2-asynch2-01-2024"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-5",
@@ -1773,7 +1774,7 @@
         "activity_section.key": "daa7f504-c005-4029-8074-8062ea4cb624"
       },
       "level_keys": [
-        "virtual-pl-csp-summer-day2-P2-Context1"
+        "virtual-pl-csp-summer-day2-asynch2-01-2024"
       ]
     },
     {
@@ -1783,14 +1784,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext2_1_video"
+          "virtual-pl-csp-summer-day2-asynch2-02-2024"
         ],
         "progression": "Unit 1 Connections and Conclusions"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext2_1_video"
+          "virtual-pl-csp-summer-day2-asynch2-02-2024"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-5",
@@ -1798,7 +1799,7 @@
         "activity_section.key": "815c8b57-180b-4f88-a8af-6f3a9e200764"
       },
       "level_keys": [
-        "virtual-pl-csd-summer-day3-UnderstandingContext2_1_video"
+        "virtual-pl-csp-summer-day2-asynch2-02-2024"
       ]
     },
     {
@@ -1807,12 +1808,15 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day2-asynch2-03-2024"
+        ],
         "progression": "Previously, On...Unit 2"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext2_5_video"
+          "virtual-pl-csp-summer-day2-asynch2-03-2024"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-5",
@@ -1820,7 +1824,7 @@
         "activity_section.key": "99a2b61e-3060-4e42-a3a6-ff6ecadffe27"
       },
       "level_keys": [
-        "virtual-pl-csd-summer-day3-UnderstandingContext2_5_video"
+        "virtual-pl-csp-summer-day2-asynch2-03-2024"
       ]
     },
     {
@@ -1830,14 +1834,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "virtual-pl-csd-summer-day3-Context4_1"
+          "virtual-pl-csp-summer-day2-asynch2-04-2024"
         ],
         "progression": "Understanding Self: Identity Map"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-Context4_1"
+          "virtual-pl-csp-summer-day2-asynch2-04-2024"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-5",
@@ -1845,7 +1849,7 @@
         "activity_section.key": "dd6a66c8-5087-4ba4-a833-292ce217772f"
       },
       "level_keys": [
-        "virtual-pl-csd-summer-day3-Context4_1"
+        "virtual-pl-csp-summer-day2-asynch2-04-2024"
       ]
     }
   ],
@@ -1984,9 +1988,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csp-summer-day2-Context1",
+        "level.key": "virtual-pl-csp-summer-day2-asynch1-01-2024",
         "script_level.level_keys": [
-          "virtual-pl-csp-summer-day2-Context1"
+          "virtual-pl-csp-summer-day2-asynch1-01-2024"
         ],
         "lesson.key": "Asynchronous Part 2",
         "lesson_group.key": "lessonGroup-3",
@@ -1996,9 +2000,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csp-summer-day2-Context3",
+        "level.key": "virtual-pl-csp-summer-day2-asynch1-02-2024",
         "script_level.level_keys": [
-          "virtual-pl-csp-summer-day2-Context3"
+          "virtual-pl-csp-summer-day2-asynch1-02-2024"
         ],
         "lesson.key": "Asynchronous Part 2",
         "lesson_group.key": "lessonGroup-3",
@@ -2008,9 +2012,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day2-UsingResources3_1",
+        "level.key": "virtual-pl-csp-summer-day2-asynch1-03-2024",
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day2-UsingResources3_1"
+          "virtual-pl-csp-summer-day2-asynch1-03-2024"
         ],
         "lesson.key": "Asynchronous Part 2",
         "lesson_group.key": "lessonGroup-3",
@@ -2056,9 +2060,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csp-summer-day2-P2-Context1",
+        "level.key": "virtual-pl-csp-summer-day2-asynch2-01-2024",
         "script_level.level_keys": [
-          "virtual-pl-csp-summer-day2-P2-Context1"
+          "virtual-pl-csp-summer-day2-asynch2-01-2024"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-5",
@@ -2068,9 +2072,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day3-UnderstandingContext2_1_video",
+        "level.key": "virtual-pl-csp-summer-day2-asynch2-02-2024",
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext2_1_video"
+          "virtual-pl-csp-summer-day2-asynch2-02-2024"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-5",
@@ -2080,9 +2084,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day3-UnderstandingContext2_5_video",
+        "level.key": "virtual-pl-csp-summer-day2-asynch2-03-2024",
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext2_5_video"
+          "virtual-pl-csp-summer-day2-asynch2-03-2024"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-5",
@@ -2092,9 +2096,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day3-Context4_1",
+        "level.key": "virtual-pl-csp-summer-day2-asynch2-04-2024",
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-Context4_1"
+          "virtual-pl-csp-summer-day2-asynch2-04-2024"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-5",

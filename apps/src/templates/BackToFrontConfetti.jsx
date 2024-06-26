@@ -7,9 +7,9 @@
  * Confetti component directly.
  */
 
-import Confetti from 'react-dom-confetti';
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+import Confetti from 'react-dom-confetti';
 
 const defaultStyle = {
   position: 'relative',

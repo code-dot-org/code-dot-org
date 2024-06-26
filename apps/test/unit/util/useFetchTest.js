@@ -1,4 +1,4 @@
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import PropTypes from 'prop-types';
 import React from 'react';
 import sinon from 'sinon';

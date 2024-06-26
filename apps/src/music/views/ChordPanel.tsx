@@ -8,7 +8,7 @@ import PreviewControls from './PreviewControls';
 import musicI18n from '../locale';
 import moduleStyles from './chordPanel.module.scss';
 import LoadingOverlay from './LoadingOverlay';
-import {LoadFinishedCallback} from '../types';
+import MusicPlayer from '../player/MusicPlayer';
 
 const NUM_OCTAVES = 3;
 const START_OCTAVE = 4;
@@ -25,15 +25,12 @@ export interface ChordPanelProps {
   library: MusicLibrary;
   initValue: ChordEventValue;
   onChange: (value: ChordEventValue) => void;
-  previewChord: (chord: ChordEventValue, onStop?: () => void) => void;
-  previewNote: (note: number, instrument: string, onStop?: () => void) => void;
-  cancelPreviews: () => void;
-  setupSampler: (
-    instrument: string,
-    onLoadFinished?: LoadFinishedCallback
-  ) => void;
-  isInstrumentLoading: (instrument: string) => boolean;
-  isInstrumentLoaded: (instrument: string) => boolean;
+  previewChord: MusicPlayer['previewChord'];
+  previewNote: MusicPlayer['previewNote'];
+  cancelPreviews: MusicPlayer['cancelPreviews'];
+  setupSampler: MusicPlayer['setupSampler'];
+  isInstrumentLoading: MusicPlayer['isInstrumentLoading'];
+  isInstrumentLoaded: MusicPlayer['isInstrumentLoaded'];
   registerInstrumentLoadCallback: (
     callback: (instrumentName: string) => void
   ) => void;
@@ -58,6 +55,7 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
     selectedNotes.length >= MAX_NOTES
   );
   const [isLoading, setIsLoading] = useState(false);
+  const [isPlayingPreview, setIsPlayingPreview] = useState(false);
 
   const instruments: [string, string][] = library.instruments.map(folder => [
     folder.name,
@@ -114,15 +112,23 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
     setIsDisabled(selectedNotes.length >= MAX_NOTES);
   }, [selectedNotes]);
 
-  const playPreview = useCallback(
-    () =>
-      previewChord({
+  const playPreview = useCallback(() => {
+    previewChord(
+      {
         notes: selectedNotes,
         playStyle,
         instrument,
-      }),
-    [previewChord, selectedNotes, playStyle, instrument]
-  );
+      },
+      undefined, // TODO: use onTick() callback to highlight notes
+      () => setIsPlayingPreview(false)
+    );
+    setIsPlayingPreview(true);
+  }, [previewChord, selectedNotes, playStyle, instrument]);
+
+  const stopPreview = useCallback(() => {
+    cancelPreviews();
+    setIsPlayingPreview(false);
+  }, [cancelPreviews, setIsPlayingPreview]);
 
   const onClear = useCallback(() => setSelectedNotes([]), [setSelectedNotes]);
 
@@ -172,7 +178,8 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
         enabled={selectedNotes.length > 0 && !isLoading}
         playPreview={playPreview}
         onClickClear={onClear}
-        cancelPreviews={cancelPreviews}
+        cancelPreviews={stopPreview}
+        isPlayingPreview={isPlayingPreview}
       />
     </div>
   );

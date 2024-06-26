@@ -16,6 +16,9 @@ $(document).ready(function () {
         new Date(Date.parse(element.getAttribute('data-delete-date')))
       }
       disallowedEmail={element.getAttribute('data-disallowed-email')}
+      isPreLockoutUser={JSON.parse(
+        element.getAttribute('data-is-pre-lockout-user')
+      )}
     />,
     element
   );

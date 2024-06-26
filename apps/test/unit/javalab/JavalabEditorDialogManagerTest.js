@@ -1,30 +1,32 @@
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {expect} from '../../util/reconfiguredChai';
-import {shallow, mount} from 'enzyme';
-import sinon from 'sinon';
 import {Provider} from 'react-redux';
-import {
-  getStore,
-  registerReducers,
-  stubRedux,
-  restoreRedux,
-} from '@cdo/apps/redux';
-import javalabMsg from '@cdo/javalab/locale';
+import sinon from 'sinon';
+
+import CommitDialog from '@cdo/apps/javalab/CommitDialog';
 import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
+import JavalabDialog from '@cdo/apps/javalab/JavalabDialog';
 import JavalabEditorDialogManager, {
   DEFAULT_FILE_NAME,
   UnconnectedJavalabEditorDialogManager,
 } from '@cdo/apps/javalab/JavalabEditorDialogManager';
-import JavalabDialog from '@cdo/apps/javalab/JavalabDialog';
 import NameFileDialog from '@cdo/apps/javalab/NameFileDialog';
-import CommitDialog from '@cdo/apps/javalab/CommitDialog';
-import VersionHistoryWithCommitsDialog from '@cdo/apps/templates/VersionHistoryWithCommitsDialog';
 import javalabEditor, {
   setAllSourcesAndFileMetadata,
 } from '@cdo/apps/javalab/redux/editorRedux';
 import javalab from '@cdo/apps/javalab/redux/javalabRedux';
 import javalabView from '@cdo/apps/javalab/redux/viewRedux';
 import {JavalabEditorDialog} from '@cdo/apps/javalab/types';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux,
+} from '@cdo/apps/redux';
+import VersionHistoryWithCommitsDialog from '@cdo/apps/templates/VersionHistoryWithCommitsDialog';
+import javalabMsg from '@cdo/javalab/locale';
+
+import {expect} from '../../util/reconfiguredChai';
 
 describe('JavalabEditorDialogManager', () => {
   let defaultProps;

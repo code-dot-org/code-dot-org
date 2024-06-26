@@ -1,7 +1,9 @@
-import {expect} from '../../../../util/reconfiguredChai';
+import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount, shallow} from 'enzyme';
+
 import NewUnitForm from '@cdo/apps/lib/levelbuilder/unit-editor/NewUnitForm';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('NewUnitFormTest', () => {
   let defaultProps;

@@ -1,4 +1,5 @@
 import {Workspace, WorkspaceSvg} from 'blockly';
+
 import {BLOCK_TYPES, PROCEDURE_DEFINITION_TYPES} from '../constants';
 import {BlocklyWrapperType, XmlBlockConfig} from '../types';
 import {
@@ -148,7 +149,8 @@ export function removeIdsFromBlocks(
  */
 export function addMutationToMiniToolboxBlocks(blockElement: Element) {
   const miniflyoutAttribute = blockElement.getAttribute('miniflyout');
-  const existingMutationElement = blockElement.querySelector('mutation');
+  const existingMutationElement =
+    blockElement.querySelector(':scope > mutation');
   if (!miniflyoutAttribute || existingMutationElement) {
     // The block is the wrong type or has somehow already been processed.
     return;
@@ -201,7 +203,7 @@ export function addMutationToBehaviorBlocks(blockElement: Element) {
     return;
   }
   const mutationElement =
-    blockElement.querySelector('mutation') ||
+    blockElement.querySelector(':scope > mutation') ||
     blockElement.ownerDocument.createElement('mutation');
   // Place mutator before fields, values, and other nested blocks.
   blockElement.insertBefore(mutationElement, blockElement.firstChild);
@@ -243,7 +245,7 @@ export function addMutationToProcedureDefBlocks(blockElement: Element) {
     return;
   }
   const mutationElement =
-    blockElement.querySelector('mutation') ||
+    blockElement.querySelector(':scope > mutation') ||
     blockElement.ownerDocument.createElement('mutation');
   // Place mutator before fields, values, and other nested blocks.
   blockElement.insertBefore(mutationElement, blockElement.firstChild);
@@ -281,7 +283,7 @@ export function addMutationToInvisibleBlocks(blockElement: Element) {
     return;
   }
   const mutationElement =
-    blockElement.querySelector('mutation') ||
+    blockElement.querySelector(':scope > mutation') ||
     blockElement.ownerDocument.createElement('mutation');
   // Place mutator before fields, values, and other nested blocks.
   blockElement.insertBefore(mutationElement, blockElement.firstChild);
@@ -320,7 +322,7 @@ export function addNameToBlockFunctionCallBlock(blockElement: Element) {
     return;
   }
   const mutationElement =
-    blockElement.querySelector('mutation') ||
+    blockElement.querySelector(':scope > mutation') ||
     blockElement.ownerDocument.createElement('mutation');
   // Place mutator before fields, values, and other nested blocks.
   blockElement.insertBefore(mutationElement, blockElement.firstChild);
@@ -378,7 +380,7 @@ export function addMutationToTextJoinBlock(blockElement: Element) {
     return;
   }
   const mutationElement =
-    blockElement.querySelector('mutation') ||
+    blockElement.querySelector(':scope > mutation') ||
     blockElement.ownerDocument.createElement('mutation');
   // Place mutator before fields, values, and other nested blocks.
   blockElement.insertBefore(mutationElement, blockElement.firstChild);

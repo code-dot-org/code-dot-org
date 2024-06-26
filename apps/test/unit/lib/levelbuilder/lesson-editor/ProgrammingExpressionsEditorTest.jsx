@@ -1,19 +1,21 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
-import sinon from 'sinon';
-import {expect} from '../../../../util/reconfiguredChai';
-import {UnconnectedProgrammingExpressionsEditor as ProgrammingExpressionsEditor} from '@cdo/apps/lib/levelbuilder/lesson-editor/ProgrammingExpressionsEditor';
 import {Provider} from 'react-redux';
+import sinon from 'sinon';
+
+import reducers, {
+  initActivities,
+  initLevelSearching,
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
+import {UnconnectedProgrammingExpressionsEditor as ProgrammingExpressionsEditor} from '@cdo/apps/lib/levelbuilder/lesson-editor/ProgrammingExpressionsEditor';
 import {
   stubRedux,
   restoreRedux,
   getStore,
   registerReducers,
 } from '@cdo/apps/redux';
-import reducers, {
-  initActivities,
-  initLevelSearching,
-} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('ProgrammingExpressionsEditor', () => {
   let defaultProps,

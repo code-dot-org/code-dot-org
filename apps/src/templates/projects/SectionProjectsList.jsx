@@ -1,10 +1,11 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import _ from 'lodash';
+
+import {DEPRECATED_PROJECT_TYPES} from '@cdo/apps/constants';
 
 import ProjectsList from './ProjectsList';
 import StudentFilterDropdown, {ALL_STUDENTS} from './StudentFilterDropdown';
-import {DEPRECATED_PROJECT_TYPES} from '@cdo/apps/constants';
 
 class SectionProjectsList extends Component {
   static propTypes = {

@@ -1,12 +1,12 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
 import React from 'react';
 import sinon from 'sinon';
-import {shallow} from 'enzyme';
+
+import ProjectImport from '@cdo/apps/code-studio/components/header/ProjectImport';
 
 import {expect} from '../../../../util/reconfiguredChai';
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
-
-import ProjectImport from '@cdo/apps/code-studio/components/header/ProjectImport';
 
 describe('ProjectImport', () => {
   let wrapper, showImportPopupStub;

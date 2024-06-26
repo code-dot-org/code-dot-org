@@ -4,14 +4,10 @@ import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import moduleStyles from './instructions.module.scss';
 import {useSelector} from 'react-redux';
 import {navigateToNextLevel} from '@cdo/apps/code-studio/progressRedux';
-import {
-  levelCount,
-  currentLevelIndex,
-} from '@cdo/apps/code-studio/progressReduxSelectors';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import {LabState} from '../../lab2Redux';
-import {ProjectLevelData} from '../../types';
 import {ThemeContext} from '../ThemeWrapper';
 const commonI18n = require('@cdo/locale');
 
@@ -51,29 +47,22 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   imagePopOutDirection,
   handleInstructionsTextClick,
 }) => {
-  // Prefer using long instructions if available, otherwise fall back to level data text.
   const instructionsText = useSelector(
-    (state: {lab: LabState}) =>
-      state.lab.levelProperties?.longInstructions ||
-      (state.lab.levelProperties?.levelData as ProjectLevelData | undefined)
-        ?.text
+    (state: {lab: LabState}) => state.lab.levelProperties?.longInstructions
   );
-  const levelIndex = useSelector(currentLevelIndex);
-  const currentLevelCount = useSelector(levelCount);
+  const hasNextLevel = useSelector(state => nextLevelId(state) !== undefined);
   const {hasConditions, message, satisfied, index} = useSelector(
     (state: {lab: LabState}) => state.lab.validationState
   );
 
   // If there are no validation conditions, we can show the continue button so long as
   // there is another level. If validation is present, also check that conditions are satisfied.
-  const showContinueButton =
-    (!hasConditions || satisfied) && levelIndex + 1 < currentLevelCount;
+  const showContinueButton = (!hasConditions || satisfied) && hasNextLevel;
 
   // If there are no validation conditions, we can show the finish button so long as
   // this is the last level in the progression. If validation is present, also
   // check that conditions are satisfied.
-  const showFinishButton =
-    (!hasConditions || satisfied) && levelIndex + 1 === currentLevelCount;
+  const showFinishButton = (!hasConditions || satisfied) && !hasNextLevel;
 
   const dispatch = useAppDispatch();
 
@@ -169,8 +158,6 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
 
   const canShowFinishButton = showFinishButton;
 
-  const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
-
   const onFinish = useCallback(() => {
     if (beforeFinish) {
       beforeFinish();
@@ -178,10 +165,10 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
     setIsFinished(true);
   }, [beforeFinish]);
 
-  // When the level changes, the Finish button is active again if user returns to last level.
+  // Reset the Finish button state when it changes from shown to hidden.
   useEffect(() => {
     setIsFinished(false);
-  }, [currentLevelId]);
+  }, [canShowFinishButton]);
 
   const finalMessage =
     'You finished this lesson! Check in with your teacher for the next activity';

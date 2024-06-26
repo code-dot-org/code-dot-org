@@ -1,5 +1,5 @@
 import {assert} from 'chai';
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon';
 
@@ -187,12 +187,6 @@ describe('TeacherHomepage', () => {
       courses: courses,
       topCourse: topCourse,
     });
-  });
-
-  // TODO - This test can be removed when the corresponding section is removed
-  it('renders PL has moved section if plCourses exist', () => {
-    const wrapper = setUp();
-    wrapper.find('pl-courses-placeholder');
   });
 
   it('renders a TeacherResources component', () => {

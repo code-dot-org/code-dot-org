@@ -1,0 +1,11 @@
+name 'k5_ai_data_survey_level'
+title 'Let\'s collect some data!'
+submittable 'true'
+anonymous 'false'
+
+page
+level 'k5_ai_data_survey_level_q1'
+level 'k5_ai_data_survey_level_q2'
+level 'k5_ai_data_survey_level_q3'
+level 'k5_ai_data_survey_level_q4'
+

@@ -1,8 +1,11 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import {expect} from '../../../../util/reconfiguredChai';
+
 import ActivityCardAndPreview from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivityCardAndPreview';
+
+import {expect} from '../../../../util/reconfiguredChai';
+
 import {sampleActivities} from './activitiesTestData';
 
 describe('ActivityCardAndPreview', () => {

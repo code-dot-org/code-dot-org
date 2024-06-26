@@ -1,14 +1,16 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import {expect} from '../../../../util/reconfiguredChai';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
+
 import {ChartType} from '@cdo/apps/storage/dataBrowser/dataUtils';
+import DropDownField from '@cdo/apps/storage/dataBrowser/dataVisualizer/DropdownField';
 import {
   UnconnectedVisualizerModal as VisualizerModal,
   OperatorType,
 } from '@cdo/apps/storage/dataBrowser/dataVisualizer/VisualizerModal';
-import DropDownField from '@cdo/apps/storage/dataBrowser/dataVisualizer/DropdownField';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   isRtl: false,

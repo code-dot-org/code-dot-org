@@ -572,7 +572,7 @@ en:
           description_teacher: "**Participants will:**\n\n* Prepare to teach CSA.\n* Practice key concepts in the CSA curriculum.\n* Grow in their understanding of equitable CS education. \n* Develop empathy for the student experience. \n* Become a part of a network of teachers who are doing similar work."
           version_title: ''
         virtual-pl-csp-summer-2024:
-          title: CS Principles Virtual PL Summer Workshop Course
+          title: CS Principles Virtual PL Workshop Course
           description_short: ''
           description_student: "**You will:**\n\n* Prepare to teach CS Principles.\n* Practice key concepts in the CS Principles curriculum.\n* Grow in your understanding of equitable CS education. \n* Develop empathy for the student experience. \n* Become a part of a network of teachers who are doing similar work."
           description_teacher: "**Participants will:**\n\n* Prepare to teach CS Principles.\n* Practice key concepts in the CS Principles curriculum.\n* Grow in their understanding of equitable CS education. \n* Develop empathy for the student experience. \n* Become a part of a network of teachers who are doing similar work."
@@ -693,8 +693,11 @@ en:
         foundations-of-cs-beta-2024:
           title: Foundations of Computer Science BETA
           description_short: ''
-          description_student: ''
-          description_teacher: ''
+          description_student: |-
+            Welcome to Foundations of Computer Science! This exciting course is your gateway to the powerful world of computer science. Whether you're curious about how apps work or want to know more about the impact of technology on society, this course has something for you. Over the semester, you'll learn the basics of programming, dive into how the Internet functions, and even create your own projects that could solve real-world problems.
+
+            ⚠️ **Note:** This is a beta version of the Foundations of CS curriculum that consists primarily of content from our existing Computer Science Discoveries and Computer Science Principles curricula. As such, you will see CSD and CSP labels on activity guides, resources, and slide decks. This will not be the case on the final version of the curriculum!
+          description_teacher: The Foundations of Computer Science (FCS) course is a comprehensive introduction to the vast field of computer science. Designed for high school students, this course integrates fundamental concepts with hands-on practical experience to foster a deep understanding of computing, its capabilities, and its impacts. The curriculum is structured to align with state requirements and CSTA standards, offering a solid foundation in computer science that prepares students for further study and future careers in technology.
           version_title: "'24-'25"
         self-paced-pl-csd-2024:
           title: Teaching CS Discoveries
@@ -897,4 +900,109 @@ en:
             * Professional development is available to help you get started teaching CSA. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Click here</a> to learn more about professional learning opportunities in your region.
 
             * You can find the *Syllabus*, *Course Vocab*, and other resources to help you implement this curriculum in the Teacher Resources menu below.
+          version_title: "'24-'25"
+        focus-on-coding-2024:
+          title: Focus on Coding ('24-'25)
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        focus-on-creativity-2024:
+          title: Focus on Creativity ('24-'25)
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        focus-on-hardware-2024:
+          title: Focus on Hardware ('24-'25)
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        focus-on-design-with-purpose-2024:
+          title: Focus on Design with Purpose ('24-'25)
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        focus-on-impact-in-society-2024:
+          title: Focus on Impact in Society ('24-'25)
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        focus-on-data-2024:
+          title: Focus on Data ('24-'25)
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        self-paced-foundations-cs-2024:
+          title: Foundations of CS
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'24-'25"
+        self-paced-pl-computer-vision:
+          title: self-paced-pl-computer-vision
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        self-paced-pl-coding-with-ai:
+          title: self-paced-pl-coding-with-ai
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        3-5gamedesign-2024:
+          title: 3-5gamedesign-2024
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        microbitmakermodule-2024:
+          title: microbitmakermodule-2024
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        elementaryai-2024:
+          title: elementaryai-2024
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        self-paced-pl-computer-vision-2024:
+          title: Teaching Computer Vision
+          description_short: ''
+          description_student: |
+            ## Welcome
+            Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s Computer Vision Unit** with your students.
+
+            ### Find the learning that works for you
+            * **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**
+
+            * **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and Computer Vision. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Computer Vision.
+          description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s Computer Vision Unit** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and CSD Unit 1 - Problem Solving and Computing. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Problem Solving and Computing. \n\n"
+          version_title: "'24-'25"
+        self-paced-pl-coding-with-ai-2024:
+          title: Teaching Coding with AI
+          description_short: ''
+          description_student: |
+            ## Welcome
+            Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s Coding with AI Unit** with your students.
+
+            ### Find the learning that works for you
+            * **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**
+
+            * **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and Coding with AI. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Coding with AI.
+          description_teacher: |-
+            ## Welcome
+            Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s Coding with AI Unit** with your students.
+
+            ### Find the learning that works for you
+            * **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**
+
+            * **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and Coding with AI. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Coding with AI.
           version_title: "'24-'25"

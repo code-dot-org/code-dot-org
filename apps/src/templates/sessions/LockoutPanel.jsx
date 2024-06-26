@@ -1,14 +1,16 @@
-import React, {useState} from 'react';
-import PropTypes from 'prop-types';
-import Button from '../Button';
-import i18n from '@cdo/locale';
-import {getStore} from '../../redux';
-import {isEmail} from '@cdo/apps/util/formatValidation';
 import cookies from 'js-cookie';
-import * as color from '../../util/color';
-import headerImage from '@cdo/static/common_images/penguin/yelling.png';
+import PropTypes from 'prop-types';
+import React, {useState} from 'react';
+
+import {isEmail} from '@cdo/apps/util/formatValidation';
+import i18n from '@cdo/locale';
 import headerThanksImage from '@cdo/static/common_images/penguin/dancing.png';
+import headerImage from '@cdo/static/common_images/penguin/yelling.png';
+
+import {getStore} from '../../redux';
+import * as color from '../../util/color';
 import {hashString} from '../../utils';
+import Button from '../Button';
 
 /**
  * This panel represents the page that is displayed to accounts that are being
@@ -96,6 +98,8 @@ export default function LockoutPanel(props) {
       <h2>
         {props.pendingEmail
           ? i18n.sessionLockoutPendingHeader()
+          : props.isPreLockoutUser
+          ? i18n.sessionLockoutNewPreLockoutAccountHeader()
           : i18n.sessionLockoutNewAccountHeader()}
       </h2>
 
@@ -110,7 +114,13 @@ export default function LockoutPanel(props) {
             {pendingPromptParts[1]}
           </p>
         )}
-        {!props.pendingEmail && <p>{i18n.sessionLockoutPrompt()}</p>}
+        {!props.pendingEmail && (
+          <p>
+            {props.isPreLockoutUser
+              ? i18n.sessionLockoutPreLockoutAccountPrompt()
+              : i18n.sessionLockoutPrompt()}
+          </p>
+        )}
 
         {/* The timezone is set to UTC to ensure that the exact date renders. */}
         <p>
@@ -234,6 +244,11 @@ LockoutPanel.propTypes = {
   pendingEmail: PropTypes.string,
   requestDate: PropTypes.instanceOf(Date),
   disallowedEmail: PropTypes.string.isRequired,
+  isPreLockoutUser: PropTypes.bool,
+};
+
+LockoutPanel.defaultProps = {
+  isPreLockoutUser: false,
 };
 
 const styles = {

@@ -1,10 +1,12 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
-import EvidenceDescriptions from '@cdo/apps/lib/levelbuilder/rubrics/EvidenceDescriptions';
 import sinon from 'sinon';
+
+import EvidenceDescriptions from '@cdo/apps/lib/levelbuilder/rubrics/EvidenceDescriptions';
 import {UNDERSTANDING_LEVEL_STRINGS} from '@cdo/apps/templates/rubrics/rubricHelpers';
 import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('EvidenceDescriptions', () => {
   let defaultProps;

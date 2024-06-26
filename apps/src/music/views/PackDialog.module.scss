@@ -90,13 +90,14 @@
           }
 
           &Footer {
-            margin-top: 10px;
+            margin-top: 8px;
             display: flex;
             justify-content: space-between;
-            align-items: center;
 
             &Name {
-              font-size: 16px;
+              font-size: 18px;
+              font-weight: 600;
+              line-height: 1.3;
             }
 
             &Artist {
@@ -104,15 +105,11 @@
             }
 
             &Preview {
-              margin-right: 10px;
+              margin: 3px 6px 0 3px;
+              font-size: 18px;
 
               .preview {
                 color: $neutral_dark40;
-
-                &Playing {
-                  color: $neutral_dark70;
-                  cursor: default;
-                }
               }
             }
           }

@@ -1,8 +1,10 @@
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow, mount} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
-import AddResourceDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/AddResourceDialog';
 import sinon from 'sinon';
+
+import AddResourceDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/AddResourceDialog';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('AddResourceDialog', () => {
   let defaultProps, onSaveSpy, handleCloseSpy;

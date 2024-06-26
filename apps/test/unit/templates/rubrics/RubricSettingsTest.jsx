@@ -1,6 +1,6 @@
 import {screen} from '@testing-library/dom';
 import {render, fireEvent, act} from '@testing-library/react';
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
 import sinon from 'sinon';

@@ -1,4 +1,4 @@
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 
 /**
  * Generate and run a suite of simple tests that make sure all of provided

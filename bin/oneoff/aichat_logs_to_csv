@@ -1,0 +1,87 @@
+#!/usr/bin/env ruby
+
+require 'csv'
+require_relative '../../dashboard/config/environment'
+
+def main
+  options = {}
+  OptionParser.new do |opts|
+    opts.on('--section_id SECTION_ID') do |section_id|
+      options[:section_id] = Integer(section_id)
+    end
+    opts.on('--date DATE') do |date|
+      options[:date] = Date.parse(date)
+    end
+  end.parse!
+
+  CSV.open("aichat_logs_#{options[:section_id]}_#{options[:date]}.csv", "w") do |csv|
+    headers = %w[
+      session_id user_id username name path created_at updated_at
+      selectedModelId temperature systemPrompt retrievalContexts
+      status role content
+    ]
+    csv << headers
+
+    student_users_in_section = Section.find(options[:section_id]).followers.map(&:student_user)
+    sessions = AichatSession.where(
+      user: student_users_in_section,
+      created_at: options[:date].beginning_of_day..options[:date].end_of_day
+    )
+
+    sessions.each do |session|
+      model_customizations = JSON.parse(session.model_customizations)
+      messages = JSON.parse(session.messages)
+      user = session.user
+
+      level = Level.find(session.level_id)
+      path = ""
+
+      script_level = level.script_levels.find_by_script_id(session.script_id)
+      if script_level
+        # This handles chat history that occurred on standard levels in a progression
+        path = script_level.path
+      else
+        # This handles chat history that occurred on a sublevel
+        parent_levels = BubbleChoice.parent_levels(level.name)
+        parent_levels_in_script = parent_levels.filter do |pl|
+          pl.script_levels.any? {|sl| sl.script_id == session.script_id}
+        end
+
+        if parent_levels_in_script
+          parent_level = parent_levels_in_script.first
+          sublevel_position = parent_level.sublevel_position(level)
+          path = parent_level.build_script_level_path(
+            parent_level.script_levels.first,
+            {sublevel_position: sublevel_position}
+          )
+        end
+      end
+
+      base_row = [
+        session.id,
+        session.user_id,
+        user.username,
+        user.name,
+        path,
+        session.created_at,
+        session.updated_at,
+        model_customizations["selectedModelId"],
+        model_customizations["temperature"],
+        model_customizations["systemPrompt"],
+        model_customizations["retrievalContexts"],
+      ]
+
+      messages.each do |message|
+        row = [
+          *base_row,
+          message["status"],
+          message["role"],
+          message["content"] || message["chatMessageText"]
+        ]
+        csv << row
+      end
+    end
+  end
+end
+
+main

@@ -1,17 +1,18 @@
 import {expect} from 'chai';
-import Results from '@cdo/apps/code-studio/pd/workshop_dashboard/reports/local_summer_workshop_daily_survey/results';
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
+
+import workshopDashboard, {
+  setPermission,
+} from '@cdo/apps/code-studio/pd/workshop_dashboard/reducers';
+import Results from '@cdo/apps/code-studio/pd/workshop_dashboard/reports/local_summer_workshop_daily_survey/results';
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
-import workshopDashboard, {
-  setPermission,
-} from '@cdo/apps/code-studio/pd/workshop_dashboard/reducers';
 
 describe('Local Summer Workshop Daily Survey Results class', () => {
   beforeEach(() => {

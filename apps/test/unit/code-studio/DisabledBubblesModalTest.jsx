@@ -1,10 +1,12 @@
-import {expect} from '../../util/reconfiguredChai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import i18n from '@cdo/locale';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import DisabledBubblesModal from '@cdo/apps/code-studio/DisabledBubblesModal';
+
 import {disabledBubblesSupportArticle} from '@cdo/apps/code-studio/disabledBubbles';
+import DisabledBubblesModal from '@cdo/apps/code-studio/DisabledBubblesModal';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import i18n from '@cdo/locale';
+
+import {expect} from '../../util/reconfiguredChai';
 
 describe('DisabledBubblesModal', () => {
   it('is open to begin with', () => {

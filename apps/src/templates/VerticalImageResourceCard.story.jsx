@@ -1,7 +1,9 @@
 import React from 'react';
-import VerticalImageResourceCard from './VerticalImageResourceCard';
 import {Provider} from 'react-redux';
+
 import {reduxStore} from '@cdo/storybook/decorators';
+
+import VerticalImageResourceCard from './VerticalImageResourceCard';
 
 const exampleCard = {
   title: 'CS Fundamentals Express',

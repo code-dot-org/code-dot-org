@@ -1,23 +1,25 @@
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow, mount} from 'enzyme';
-import sinon from 'sinon';
-import msg from '@cdo/locale';
-import {expect} from '../../../util/reconfiguredChai';
-import {renderMakerButton, SettingsCog} from '@cdo/apps/lib/ui/SettingsCog';
-import JavalabDropdown from '@cdo/apps/javalab/components/JavalabDropdown';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import * as makerRedux from '@cdo/apps/lib/kits/maker/redux';
-import * as assets from '@cdo/apps/code-studio/assets';
-import pageConstantsReducer, {
-  setPageConstants,
-} from '@cdo/apps/redux/pageConstants';
 import {Provider} from 'react-redux';
+import sinon from 'sinon';
+
+import * as assets from '@cdo/apps/code-studio/assets';
+import JavalabDropdown from '@cdo/apps/javalab/components/JavalabDropdown';
+import * as makerRedux from '@cdo/apps/lib/kits/maker/redux';
+import {renderMakerButton, SettingsCog} from '@cdo/apps/lib/ui/SettingsCog';
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
+import pageConstantsReducer, {
+  setPageConstants,
+} from '@cdo/apps/redux/pageConstants';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import msg from '@cdo/locale';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('SettingsCog', () => {
   it('renders as a FontAwesome icon', () => {

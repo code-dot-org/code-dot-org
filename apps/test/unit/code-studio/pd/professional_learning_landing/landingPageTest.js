@@ -1,18 +1,20 @@
-import React from 'react';
 import {fireEvent, render, screen} from '@testing-library/react';
+import React from 'react';
 import {Provider} from 'react-redux';
+
+import isRtl from '@cdo/apps/code-studio/isRtlRedux';
+import {selfPacedCourseConstants} from '@cdo/apps/code-studio/pd/professional_learning_landing/constants.js';
+import {UnconnectedLandingPage as LandingPage} from '@cdo/apps/code-studio/pd/professional_learning_landing/LandingPage';
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
-import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
+
 import {expect} from '../../../../util/reconfiguredChai';
-import {UnconnectedLandingPage as LandingPage} from '@cdo/apps/code-studio/pd/professional_learning_landing/LandingPage';
-import {selfPacedCourseConstants} from '@cdo/apps/code-studio/pd/professional_learning_landing/constants.js';
 
 const TEST_WORKSHOP = {
   id: 1,
@@ -39,7 +41,7 @@ const DEFAULT_PROPS = {
   lastWorkshopSurveyCourse: 'CS Fundamentals',
   deeperLearningCourseData: [{data: 'oh yeah'}],
   currentYearApplicationId: 2024,
-  workshopsAsParticipant: [{data: 'workshops'}],
+  hasEnrorolledInWorkshop: true,
   workshopsAsFacilitator: [],
   workshopsAsOrganizer: [],
   workshopsAsRegionalPartner: [],
@@ -79,7 +81,7 @@ describe('LandingPage', () => {
       lastWorkshopSurveyCourse: null,
       deeperLearningCourseData: null,
       currentYearApplicationId: null,
-      workshopsAsParticipant: [],
+      hasEnrolledInWorkshop: false,
       plCoursesStarted: [],
     });
     screen.getByText(i18n.plLandingGettingStartedHeading());
@@ -280,7 +282,7 @@ describe('LandingPage', () => {
     screen.getByText(i18n.plSectionsInstructorTitle());
 
     // Facilitated workshop table
-    screen.getByText('My Workshops');
+    screen.getByText('In Progress and Upcoming Workshops');
   });
 
   it('page shows expected sections in Instructor Center tab (for universal instructor)', () => {
@@ -318,7 +320,7 @@ describe('LandingPage', () => {
     screen.getByText(i18n.plSectionsRegionalPartnerPlaybookTitle());
 
     // Regional Partner workshop table
-    screen.getByText('My Workshops');
+    screen.getByText('In Progress and Upcoming Workshops');
   });
 
   it('page shows expected sections in Workshop Organizer Center tab', () => {
@@ -334,6 +336,6 @@ describe('LandingPage', () => {
     screen.getByText(i18n.plSectionsWorkshopResources());
 
     // Workshop Organizer workshop table
-    screen.getByText('My Workshops');
+    screen.getByText('In Progress and Upcoming Workshops');
   });
 });

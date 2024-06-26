@@ -103,6 +103,13 @@ const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
         name="level[panels]"
         value={JSON.stringify(panels)}
       />
+      {/* This extra empty input is used to clear out any old panels data saved to the level's "level_data" field */}
+      <input
+        type="hidden"
+        id="level_level_data"
+        name="level[level_data]"
+        value={JSON.stringify({})}
+      />
       <Heading3>Preview</Heading3>
       <div className={moduleStyles.panelsContainer}>
         <Toast message={toastMessage} index={toastIndex} />

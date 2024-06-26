@@ -1,9 +1,11 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
+
 import Pairing from '@cdo/apps/code-studio/components/pairing/Pairing';
 import PairingDialog from '@cdo/apps/code-studio/components/pairing/PairingDialog';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('PairingDialog', () => {
   it('renders a dialog containing the Pairing component', () => {

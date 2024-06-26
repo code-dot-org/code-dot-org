@@ -1,12 +1,16 @@
-import React, {useState, useEffect} from 'react';
 import classNames from 'classnames';
+import React, {useState, useEffect} from 'react';
+
+import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+
+import TabPanel from './TabPanel';
 
 import styles from './tabs.module.scss';
-import TabPanel from './TabPanel';
 
 export type Tab = {
   title: string;
   content: React.ReactNode;
+  isReadOnly: boolean;
 };
 
 interface TabsProps {
@@ -67,6 +71,13 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
                   className={classNames(index === activeIndex && styles.active)}
                 >
                   {tab.title}
+                  {tab.isReadOnly && (
+                    <FontAwesomeV6Icon
+                      iconName="lock"
+                      iconStyle="solid"
+                      className={styles.tabIcon}
+                    />
+                  )}
                 </button>
               </li>
             );

@@ -1,8 +1,11 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
-import {UnconnectedAddLevelFilters as AddLevelFilters} from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelFilters';
 import sinon from 'sinon';
+
+import {UnconnectedAddLevelFilters as AddLevelFilters} from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelFilters';
+
+import {expect} from '../../../../util/reconfiguredChai';
+
 import {searchOptions} from './activitiesTestData';
 
 describe('AddLevelFilters', () => {

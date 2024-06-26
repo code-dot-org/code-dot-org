@@ -1,9 +1,11 @@
-import {assert} from '../../util/reconfiguredChai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
 import sinon from 'sinon';
+
 import {JavalabEditorTabMenu} from '@cdo/apps/javalab/JavalabEditorTabMenu';
 import javalabMsg from '@cdo/javalab/locale';
+
+import {assert} from '../../util/reconfiguredChai';
 
 describe('JavalabEditorTabMenu', () => {
   let cancelTabMenu,

@@ -1,10 +1,13 @@
-import {expect} from '../../../../util/reconfiguredChai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
+
+import UnitCalendar from '@cdo/apps/code-studio/components/progress/UnitCalendar';
 import UnitCalendarDialog, {
   WEEK_WIDTH,
 } from '@cdo/apps/code-studio/components/progress/UnitCalendarDialog';
-import UnitCalendar from '@cdo/apps/code-studio/components/progress/UnitCalendar';
+
+import {expect} from '../../../../util/reconfiguredChai';
+
 import {testLessons} from './unitCalendarTestData';
 
 describe('UnitCalendarDialog', () => {

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import LockoutLinkedAccounts from './LockoutLinkedAccounts';
 
 export default {
@@ -22,7 +23,6 @@ export const PendingRequest = Template.bind({});
 PendingRequest.args = {
   pendingEmail: 'parent-email@code.org',
   requestDate: new Date(),
-  permissionStatus: 's',
 };
 
 export const RequestGranted = Template.bind({});

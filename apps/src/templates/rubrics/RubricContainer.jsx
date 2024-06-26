@@ -1,31 +1,37 @@
-import React, {useCallback, useEffect, useState, useRef} from 'react';
-import PropTypes from 'prop-types';
-import style from './rubrics.module.scss';
-import i18n from '@cdo/locale';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
+import React, {useCallback, useEffect, useState, useRef} from 'react';
+import Draggable from 'react-draggable';
+
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
+import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
+
+import RubricContent from './RubricContent';
+import {TAB_NAMES} from './rubricHelpers';
+import RubricSettings from './RubricSettings';
 import {
   reportingDataShape,
   rubricShape,
   studentLevelInfoShape,
 } from './rubricShapes';
-import RubricContent from './RubricContent';
-import RubricSettings from './RubricSettings';
-import RubricTabButtons from './RubricTabButtons';
 import RubricSubmitFooter from './RubricSubmitFooter';
-import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
-import Draggable from 'react-draggable';
-import {TAB_NAMES} from './rubricHelpers';
-import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
-import HttpClient from '@cdo/apps/util/HttpClient';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import RubricTabButtons from './RubricTabButtons';
+
+import style from './rubrics.module.scss';
 
 // product Tour
+/* eslint-disable import/order */
+// Disabling import/order rule for grouped product tour imports.
 import './introjs.scss';
 import {Steps} from 'intro.js-react';
 import {INITIAL_STEP, STEPS, DUMMY_PROPS} from './productTourHelpers';
+/* eslint-enable import/order */
 
 export default function RubricContainer({
   rubric,
@@ -249,7 +255,7 @@ export default function RubricContainer({
         })}
       >
         <Steps
-          enabled={canProvideFeedback && productTour}
+          enabled={canProvideFeedback && productTour && teacherHasEnabledAi}
           initialStep={INITIAL_STEP}
           steps={STEPS}
           onStart={onTourStart}
@@ -278,7 +284,7 @@ export default function RubricContainer({
             <span>{i18n.rubricAiHeaderText()}</span>
           </div>
           <div className={style.rubricHeaderRightSide}>
-            {canProvideFeedback && (
+            {canProvideFeedback && teacherHasEnabledAi && (
               <button
                 id="ui-restart-product-tour"
                 aria-label="restart product tour"
@@ -314,13 +320,13 @@ export default function RubricContainer({
           <RubricContent
             productTour={productTour}
             rubric={
-              canProvideFeedback && productTour
+              canProvideFeedback && productTour && teacherHasEnabledAi
                 ? DUMMY_PROPS['rubricDummy']
                 : rubric
             }
             open={open}
             studentLevelInfo={
-              canProvideFeedback && productTour
+              canProvideFeedback && productTour && teacherHasEnabledAi
                 ? DUMMY_PROPS['studentLevelInfoDummy']
                 : studentLevelInfo
             }
@@ -330,7 +336,7 @@ export default function RubricContainer({
             reportingData={reportingData}
             visible={selectedTab === TAB_NAMES.RUBRIC}
             aiEvaluations={
-              canProvideFeedback && productTour
+              canProvideFeedback && productTour && teacherHasEnabledAi
                 ? DUMMY_PROPS['aiEvaluationsDummy']
                 : aiEvaluations
             }

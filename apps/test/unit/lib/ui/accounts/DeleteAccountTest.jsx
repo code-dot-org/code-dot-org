@@ -1,12 +1,14 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
 import sinon from 'sinon';
-import {expect} from '../../../../util/deprecatedChai';
+
 import DeleteAccount, {
   DELETE_VERIFICATION_STRING,
 } from '@cdo/apps/lib/ui/accounts/DeleteAccount';
 import {getCheckboxes} from '@cdo/apps/lib/ui/accounts/DeleteAccountHelpers';
 import * as utils from '@cdo/apps/utils';
+
+import {expect} from '../../../../util/deprecatedChai';
 
 const DEFAULT_PROPS = {
   isPasswordRequired: true,

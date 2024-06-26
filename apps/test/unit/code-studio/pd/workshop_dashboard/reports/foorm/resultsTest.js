@@ -1,17 +1,18 @@
+import {expect} from 'chai';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
+
+import workshopDashboard, {
+  setPermission,
+} from '@cdo/apps/code-studio/pd/workshop_dashboard/reducers';
+import Results from '@cdo/apps/code-studio/pd/workshop_dashboard/reports/foorm/results';
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
-import workshopDashboard, {
-  setPermission,
-} from '@cdo/apps/code-studio/pd/workshop_dashboard/reducers';
-import {expect} from 'chai';
-import Results from '@cdo/apps/code-studio/pd/workshop_dashboard/reports/foorm/results';
-import {mount} from 'enzyme';
 
 describe('Foorm Daily Survey Results', () => {
   beforeEach(() => {

@@ -15,22 +15,29 @@
 }
 
 .modal {
-  min-width: 90% !important;
+  max-width: 980px !important;
+  max-height: 90% !important;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.remindMeLaterButton {
-  color: $neutral_dark !important;
-  text-decoration: underline !important;
-  margin: 12px 0 !important;
+@media screen and (max-width: 980px) {
+  .modal {
+    width: 90% !important; /* Set width to 90% of the viewport width */
+  }
 }
 
 img {
   max-width: 100%;
   max-height: 50vh;
   height: auto;
+}
+
+.remindMeLaterButton {
+  color: $neutral_dark !important;
+  text-decoration: underline !important;
+  margin: 12px 0 !important;
 }
 
 .xCloseButton {

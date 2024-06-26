@@ -1,62 +1,6 @@
 require 'test_helper'
 
 class Services::ChildAccountTest < ActiveSupport::TestCase
-  class LockOut < ActiveSupport::TestCase
-    teardown do
-      Timecop.return
-    end
-
-    test 'given no user should not throw an error' do
-      Services::ChildAccount.lock_out(nil)
-    end
-
-    test 'given non compliant user sets the lock_out state' do
-      user = create :non_compliant_child
-
-      Services::ChildAccount.lock_out(user)
-
-      assert_equal Policies::ChildAccount::ComplianceState::LOCKED_OUT, user.child_account_compliance_state
-      refute_nil user.child_account_compliance_state_last_updated
-      refute_nil user.child_account_compliance_lock_out_date
-    end
-
-    test 'given locked_out user does not update state' do
-      user = create :locked_out_child
-      compliance_state = user.child_account_compliance_state
-      last_updated = user.child_account_compliance_state_last_updated
-      Timecop.travel 5.minutes
-
-      Services::ChildAccount.lock_out(user)
-
-      assert_equal compliance_state, user.child_account_compliance_state
-      assert_equal last_updated, user.child_account_compliance_state_last_updated
-    end
-
-    test 'given pending_permission user does not update state' do
-      user = create :locked_out_child, :with_pending_parent_permission
-      compliance_state = user.child_account_compliance_state
-      last_updated = user.child_account_compliance_state_last_updated
-      Timecop.travel 5.minutes
-
-      Services::ChildAccount.lock_out(user)
-
-      assert_equal compliance_state, user.child_account_compliance_state
-      assert_equal last_updated, user.child_account_compliance_state_last_updated
-    end
-
-    test 'given parent_permission user does not update state' do
-      user = create :locked_out_child, :with_parent_permission
-      compliance_state = user.child_account_compliance_state
-      last_updated = user.child_account_compliance_state_last_updated
-      Timecop.travel 5.minutes
-
-      Services::ChildAccount.lock_out(user)
-
-      assert_equal compliance_state, user.child_account_compliance_state
-      assert_equal last_updated, user.child_account_compliance_state_last_updated
-    end
-  end
-
   class UpdateCompliance < ActiveSupport::TestCase
     teardown do
       Timecop.return
@@ -77,14 +21,6 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
 
       assert_equal new_state, user.child_account_compliance_state
       refute_nil user.child_account_compliance_state_last_updated
-
-      last_updated = user.child_account_compliance_state_last_updated
-      Timecop.travel 5.minutes
-      new_state = Policies::ChildAccount::ComplianceState::REQUEST_SENT
-      Services::ChildAccount.update_compliance(user, new_state)
-
-      assert_equal new_state, user.child_account_compliance_state
-      refute_equal last_updated, user.child_account_compliance_state_last_updated
 
       last_updated = user.child_account_compliance_state_last_updated
       Timecop.travel 5.minutes
@@ -148,16 +84,74 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
     end
   end
 
-  class TeacherUsState < ActiveSupport::TestCase
-    test 'Sets the student\'s us_state based on their teacher\'s state' do
-      school_info = create :school_info, state: 'WA'
-      teacher = create :teacher, :with_school_info, school_info: school_info
-      section = create :section, user: teacher
-      student = create(:follower, section: section).student_user
+  describe '.start_grace_period' do
+    let(:start_grace_period) {Services::ChildAccount.start_grace_period(user)}
 
-      Services::ChildAccount.update_us_state_from_teacher!(student)
+    let(:user) {create(:non_compliant_child)}
 
-      assert_equal 'WA', student.reload.us_state
+    around do |test|
+      Timecop.freeze {test.call}
+    end
+
+    it 'updates user CAP attributes with "grace period" compliance state' do
+      assert_changes -> {user.properties} do
+        start_grace_period
+      end
+
+      assert_attributes user, {
+        child_account_compliance_state: 'p',
+        child_account_compliance_state_last_updated: DateTime.now.iso8601(3),
+      }
+    end
+  end
+
+  describe '.lock_out' do
+    let(:lock_out) {Services::ChildAccount.lock_out(user)}
+
+    let(:user) {create(:non_compliant_child)}
+
+    around do |test|
+      Timecop.freeze {test.call}
+    end
+
+    it 'updates user CAP attributes with "lock out" compliance state' do
+      assert_changes -> {user.properties} do
+        lock_out
+      end
+
+      assert_attributes user, {
+        child_account_compliance_state: 'l',
+        child_account_compliance_lock_out_date: DateTime.now.iso8601(3),
+        child_account_compliance_state_last_updated: DateTime.now.iso8601(3),
+      }
+    end
+  end
+
+  describe '.remove_compliance' do
+    let(:remove_user_cap_compliance_state) {Services::ChildAccount.remove_compliance(user)}
+
+    let(:user_cap_compliance_updated_at) {1.day.ago}
+    let(:user) do
+      create(
+        :non_compliant_child, :in_grace_period,
+        child_account_compliance_state_last_updated: user_cap_compliance_updated_at,
+      )
+    end
+
+    around do |test|
+      Timecop.freeze {test.call}
+    end
+
+    it 'removes user CAP compliance state' do
+      assert_changes -> {user.reload.child_account_compliance_state}, from: Policies::ChildAccount::ComplianceState::GRACE_PERIOD, to: nil do
+        remove_user_cap_compliance_state
+      end
+    end
+
+    it 'updates user CAP compliance state last updated date' do
+      assert_changes -> {user.reload.child_account_compliance_state_last_updated}, from: user_cap_compliance_updated_at.iso8601(3), to: DateTime.now.iso8601(3) do
+        remove_user_cap_compliance_state
+      end
     end
   end
 end

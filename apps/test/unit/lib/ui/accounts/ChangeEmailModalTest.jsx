@@ -1,11 +1,13 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
 import sinon from 'sinon';
-import {expect} from '../../../../util/deprecatedChai';
-import ChangeEmailModal from '@cdo/apps/lib/ui/accounts/ChangeEmailModal';
+
 import {hashEmail} from '@cdo/apps/code-studio/hashEmail';
+import ChangeEmailModal from '@cdo/apps/lib/ui/accounts/ChangeEmailModal';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
+
+import {expect} from '../../../../util/deprecatedChai';
 
 describe('ChangeEmailModal', () => {
   let wrapper;

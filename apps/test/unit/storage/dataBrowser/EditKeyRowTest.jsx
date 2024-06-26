@@ -1,10 +1,11 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import commonI18n from '@cdo/locale';
 import sinon from 'sinon';
 
 import EditKeyRow from '@cdo/apps/storage/dataBrowser/EditKeyRow';
+import commonI18n from '@cdo/locale';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('EditKeyRow', () => {
   describe('localization', () => {

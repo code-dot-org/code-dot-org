@@ -1,15 +1,18 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-const msg = require('@cdo/locale');
+
+import {PICKER_TYPE} from '@cdo/apps/p5lab/AnimationPicker/AnimationPicker';
 import AnimationPickerBody, {
   WarningLabel,
 } from '@cdo/apps/p5lab/AnimationPicker/AnimationPickerBody';
 import AnimationPickerListItem from '@cdo/apps/p5lab/AnimationPicker/AnimationPickerListItem';
-import testAnimationLibrary from '../testAnimationLibrary.json';
-import {CostumeCategories} from '@cdo/apps/p5lab/spritelab/constants';
-import {PICKER_TYPE} from '@cdo/apps/p5lab/AnimationPicker/AnimationPicker';
 import AnimationUploadButton from '@cdo/apps/p5lab/AnimationPicker/AnimationUploadButton';
+import {CostumeCategories} from '@cdo/apps/p5lab/spritelab/constants';
+
+import {expect} from '../../../util/reconfiguredChai';
+import testAnimationLibrary from '../testAnimationLibrary.json';
+
+const msg = require('@cdo/locale');
 
 const emptyFunction = function () {};
 

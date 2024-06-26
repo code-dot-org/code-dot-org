@@ -1,20 +1,22 @@
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow, mount} from 'enzyme';
-import {expect} from '../../../../../util/reconfiguredChai';
-import {UnconnectedTeacherPanel as TeacherPanel} from '@cdo/apps/code-studio/components/progress/teacherPanel/TeacherPanel';
-import viewAs, {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
-import ViewAsToggle from '@cdo/apps/code-studio/components/progress/ViewAsToggle';
-import i18n from '@cdo/locale';
-import StudentTable from '@cdo/apps/code-studio/components/progress/teacherPanel/StudentTable';
-import SelectedStudentInfo from '@cdo/apps/code-studio/components/progress/teacherPanel/SelectedStudentInfo';
-import {pageTypes} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import currentUser from '@cdo/apps/templates/currentUserRedux';
-import sinon from 'sinon';
-import * as utils from '@cdo/apps/code-studio/utils';
 import {Provider} from 'react-redux';
 import {createStore, combineReducers} from 'redux';
+import sinon from 'sinon';
+
+import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
+import SelectedStudentInfo from '@cdo/apps/code-studio/components/progress/teacherPanel/SelectedStudentInfo';
+import StudentTable from '@cdo/apps/code-studio/components/progress/teacherPanel/StudentTable';
+import {UnconnectedTeacherPanel as TeacherPanel} from '@cdo/apps/code-studio/components/progress/teacherPanel/TeacherPanel';
 import * as teacherPanelData from '@cdo/apps/code-studio/components/progress/teacherPanel/teacherPanelData';
+import ViewAsToggle from '@cdo/apps/code-studio/components/progress/ViewAsToggle';
+import * as utils from '@cdo/apps/code-studio/utils';
+import viewAs, {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
+import {pageTypes} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import i18n from '@cdo/locale';
+
+import {expect} from '../../../../../util/reconfiguredChai';
 
 const students = [
   {id: 1, name: 'Student 1'},
@@ -36,11 +38,13 @@ const DEFAULT_PROPS = {
   teacherId: 5,
   exampleSolutions: [],
   selectUser: () => {},
+  setViewAsUserId: () => {},
   setStudentsForCurrentSection: () => {},
   setSections: () => {},
   setSectionLockStatus: () => {},
   selectSection: () => {},
   setViewType: () => {},
+  isCurrentLevelLab2: false,
 };
 
 const setUp = overrideProps => {

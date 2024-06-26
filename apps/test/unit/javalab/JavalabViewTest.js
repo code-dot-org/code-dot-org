@@ -1,8 +1,10 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {expect} from '../../util/reconfiguredChai';
-import {shallow} from 'enzyme';
-import {UnconnectedJavalabView as JavalabView} from '@cdo/apps/javalab/JavalabView';
+
 import JavalabCaptchaDialog from '@cdo/apps/javalab/JavalabCaptchaDialog';
+import {UnconnectedJavalabView as JavalabView} from '@cdo/apps/javalab/JavalabView';
+
+import {expect} from '../../util/reconfiguredChai';
 
 describe('Javalab View', () => {
   let defaultProps;

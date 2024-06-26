@@ -1,7 +1,9 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
+
 import {RegionalPartnerMiniContact} from '@cdo/apps/code-studio/pd/regional_partner_mini_contact/RegionalPartnerMiniContact';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('RegionalPartnerMiniContactTest', () => {
   const API_ENDPOINT = '/api/v1/pd/regional_partner_mini_contacts';

@@ -2,6 +2,7 @@
   "category": "World",
   "config": {
     "func": "textJoin",
+    "docFunc": "codestudio_string",
     "blockText": "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}",
     "returnType": "String",
     "inline": false,

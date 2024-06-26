@@ -7,7 +7,7 @@
   "user_id": 4,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Ali’s Chatbot\r\n\r\n**Define:** Ali is really excited about music and how different musicians influence each other. He wants to design a chatbot where the user types in a band or musical artist, and the chatbot lists the various musical influences on this artist's work. The list shouldn't be too long, but it should reference specific music.\r\n\r\n**Prepare:** What is your strategy for addressing this user? What aspects of a prompt will be most important?\r\n\r\n**Try:** Design a chatbot that meets the needs of this person\r\n\r\n**Reflect:** Test the chatbot! Have a conversation with at least 4 messages, then press the `Continue`(#7435b2) button!\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* Beyonce\r\n* Taylor Swift\r\n:::\r\n\r\n&nbsp;",
+    "long_instructions": "## Ali's Chatbot\r\n\r\n**Define:** Ali is really excited about music and how different musicians influence each other. He wants to design a chatbot where the user types in a band or musical artist, and the chatbot lists the various musical influences on this artist's work. The list shouldn't be too long, but it should reference specific music.\r\n\r\n**Prepare:** What is your strategy for addressing this user? What aspects of a prompt will be most important?\r\n\r\n**Try:** Design a chatbot that meets the needs of this person\r\n\r\n**Reflect:** Test the chatbot! Have a conversation with at least 4 messages, then press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* Beyonce\r\n* Taylor Swift\r\n:::\r\n\r\n&nbsp;",
     "system_prompt": "deprecated",
     "bot_title": "deprecated",
     "bot_description": "deprecated",
@@ -43,8 +43,11 @@
       "availableModelIds": [
 
       ]
-    }
+    },
+    "display_name": "Ali's Chatbot",
+    "bubble_choice_description": "Ali is really excited about music and how different musicians influence each other.",
+    "thumbnail_url": "https://images.code.org/21d769f46e85c5cde2c841b2df866ff5-Lesson 4 - Level 13B - Ali's Chatbot - Musical Influences.png"
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-03T23:40:15.465+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-explore-template\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-explore-template\"},{\"changed_at\":\"2024-05-07 03:40:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-03T23:40:15.465+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-explore-template\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-explore-template\"},{\"changed_at\":\"2024-05-07 03:40:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-21 17:32:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-06-04 02:14:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>

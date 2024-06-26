@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
-import fontConstants from '@cdo/apps/fontConstants';
 
 export default class Assigned extends Component {
   render() {

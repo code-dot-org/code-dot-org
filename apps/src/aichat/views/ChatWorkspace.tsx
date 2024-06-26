@@ -1,14 +1,18 @@
 import React, {useCallback, useRef, useEffect} from 'react';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {useSelector} from 'react-redux';
-import ChatWarningModal from '@cdo/apps/aichat/views/ChatWarningModal';
-import ChatMessage from './ChatMessage';
-import UserChatMessageEditor from './UserChatMessageEditor';
-import moduleStyles from './chatWorkspace.module.scss';
+
 import {
   AichatState,
+  selectAllMessages,
   setShowWarningModal,
 } from '@cdo/apps/aichat/redux/aichatRedux';
+import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+
+import ChatMessage from './ChatMessage';
+import UserChatMessageEditor from './UserChatMessageEditor';
+
+import moduleStyles from './chatWorkspace.module.scss';
 
 /**
  * Renders the AI Chat Lab main chat workspace component.
@@ -18,9 +22,7 @@ const ChatWorkspace: React.FunctionComponent = () => {
     (state: {aichat: AichatState}) => state.aichat.showWarningModal
   );
 
-  const storedMessages = useSelector(
-    (state: {aichat: AichatState}) => state.aichat.chatMessages
-  );
+  const messages = useSelector(selectAllMessages);
 
   const isWaitingForChatResponse = useSelector(
     (state: {aichat: AichatState}) => state.aichat.isWaitingForChatResponse
@@ -35,7 +37,7 @@ const ChatWorkspace: React.FunctionComponent = () => {
         behavior: 'smooth',
       });
     }
-  }, [conversationContainerRef, storedMessages, isWaitingForChatResponse]);
+  }, [conversationContainerRef, messages, isWaitingForChatResponse]);
 
   const dispatch = useAppDispatch();
 
@@ -64,8 +66,8 @@ const ChatWorkspace: React.FunctionComponent = () => {
         className={moduleStyles.conversationArea}
         ref={conversationContainerRef}
       >
-        {storedMessages.map(message => (
-          <ChatMessage message={message} key={message.id} />
+        {messages.map((message, index) => (
+          <ChatMessage message={message} key={index} />
         ))}
         {showWaitingAnimation()}
       </div>

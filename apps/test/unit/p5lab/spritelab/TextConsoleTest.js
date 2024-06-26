@@ -1,10 +1,12 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {expect} from '../../../util/reconfiguredChai';
+import sinon from 'sinon';
+
 import TextConsole, {
   AUTO_CLOSE_TIME,
 } from '@cdo/apps/p5lab/spritelab/TextConsole';
-import {mount} from 'enzyme';
-import sinon from 'sinon';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('Sprite Lab Text Console', () => {
   let wrapper;
