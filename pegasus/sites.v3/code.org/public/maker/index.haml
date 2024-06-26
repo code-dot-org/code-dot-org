@@ -54,8 +54,9 @@ theme: responsive_full_width
     = view :maker_devices, curriculum_link_cp: "#curriculum_link_cp", curriculum_link_microbit: "#curriculum_link_microbit",  button_label: hoc_s("maker_page.get_started.button.see_curriculum.label"), aria_label_cp: hoc_s("maker_page.get_started.button.see_curriculum.aria_label", markdown: :inline, locals:{device: "BBC micro:bit"}), aria_label_microbit: hoc_s("maker_page.get_started.button.see_curriculum.aria_label", markdown: :inline, locals:{device: "Circuit Playground"})
 
 %section.bg-neutral-light
-  .wrapper
-    WHY
+  .wrapper.centered
+    %h2=hoc_s("maker_page.why.heading")
+    = view :maker_why_list
 
 %section
   .wrapper
