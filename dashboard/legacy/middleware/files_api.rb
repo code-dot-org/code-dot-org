@@ -9,7 +9,8 @@ require 'nokogiri'
 
 class FilesApi < Sinatra::Base
   set :mustermann_opts, check_anchors: false
-  LABS_TO_CHECK_FOR_PROFANITY = ['aichat'].freeze
+  # Can set this to an empty array if we do not want aichat checked for profanity.
+  LABS_TO_CHECK_FOR_PROFANITY = DCDO.get('labs_to_check_for_profanity', ['aichat'])
 
   def max_file_size
     5_000_000 # 5 MB

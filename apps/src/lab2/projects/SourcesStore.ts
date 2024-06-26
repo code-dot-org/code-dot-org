@@ -52,7 +52,6 @@ export class RemoteSourcesStore implements SourcesStore {
     replace = false
   ) {
     let options = undefined;
-    // Add to options app type.
     if (this.currentVersionId) {
       options = {
         currentVersion: this.currentVersionId,
