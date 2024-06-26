@@ -147,7 +147,7 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
 
     post '/dashboardapi/v1/teacher_scores', params: {section_id: section.id, lesson_scores: [{lesson_id: lesson.id, score: score}]}
 
-    assert_queries 10 do
+    assert_queries 8 do
       get "/dashboardapi/v1/teacher_scores/#{section.id}/#{script.id}"
     end
 
@@ -159,7 +159,7 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
 
     assert_equal section.students.count, 11
 
-    assert_queries 10 do
+    assert_queries 8 do
       get "/dashboardapi/v1/teacher_scores/#{section.id}/#{script.id}"
     end
   end

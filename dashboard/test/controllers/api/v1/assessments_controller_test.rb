@@ -713,7 +713,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
       create :teacher_feedback, script: script, level: weblab_level, student: student, teacher: @teacher
     end
 
-    assert_queries 16 do
+    assert_queries 14 do
       get :section_feedback, params: {section_id: @section.id, script_id: script.id}
     end
 

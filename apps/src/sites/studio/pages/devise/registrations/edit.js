@@ -109,7 +109,6 @@ $(document).ready(() => {
   if (lockoutLinkedAccountsMountPoint) {
     ReactDOM.render(
       <LockoutLinkedAccounts
-        apiUrl={lockoutLinkedAccountsMountPoint.getAttribute('data-api-url')}
         pendingEmail={lockoutLinkedAccountsMountPoint.getAttribute(
           'data-pending-email'
         )}
@@ -125,6 +124,9 @@ $(document).ready(() => {
         )}
         userEmail={lockoutLinkedAccountsMountPoint.getAttribute(
           'data-user-email'
+        )}
+        inSection={JSON.parse(
+          lockoutLinkedAccountsMountPoint.getAttribute('data-in-section')
         )}
       />,
       lockoutLinkedAccountsMountPoint
