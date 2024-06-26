@@ -18,8 +18,8 @@ module Lti
         # clear the session, so we need to store cache key first, sign them out,
         # then set it again in their now empty session.
         if current_user
-          partial_registration_cache_key = session[PartialRegistration::SESSION_KEY]
-          sign_out current_user
+          partial_registration_cache_key = PartialRegistration.cache_key(current_user)
+          sign_out
           session[PartialRegistration::SESSION_KEY] = partial_registration_cache_key
         end
 
@@ -45,14 +45,15 @@ module Lti
       # POST /lti/v1/account_linking/new_account
       def new_account
         if current_user
-          return render status: :bad_request, json: {} if current_user.nil?
 
           current_user.lms_landing_opted_out = true
           current_user.save!
-        else
+        elsif PartialRegistration.in_progress?(session)
           partial_user = User.new_with_session(ActionController::Parameters.new, session)
           partial_user.lms_landing_opted_out = true
           PartialRegistration.persist_attributes(session, partial_user)
+        else
+          render status: :bad_request, json: {}
         end
       end
 
