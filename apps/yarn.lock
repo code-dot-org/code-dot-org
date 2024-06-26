@@ -6615,6 +6615,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/md5@npm:^2.3.5":
+  version: 2.3.5
+  resolution: "@types/md5@npm:2.3.5"
+  checksum: a86baf0521006e3072488bd79089b84831780866102e5e4b4f7afabfab17e0270a3791f3331776b73efb2cc9317efd56a334fd3d2698c7929e9b18593ca3fd39
+  languageName: node
+  linkType: hard
+
 "@types/mdx@npm:^2.0.0":
   version: 2.0.11
   resolution: "@types/mdx@npm:2.0.11"
@@ -8710,11 +8717,13 @@ __metadata:
   resolution: "auth@workspace:packages/auth"
   dependencies:
     "@cdo/component-library": "*"
+    "@types/md5": ^2.3.5
     "@types/node": ^20
     "@types/react": ^18
     "@types/react-dom": ^18
     eslint: ^8
     eslint-config-next: 14.2.4
+    md5: ^2.3.0
     next: 14.2.4
     react: ^18
     react-dom: ^18

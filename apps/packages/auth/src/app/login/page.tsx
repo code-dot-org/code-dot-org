@@ -5,9 +5,7 @@ import {useFormState, useFormStatus} from 'react-dom';
 import {authenticate} from '@cdo/app/lib/actions';
 
 export default function Page() {
-  const [errorMessage, dispatch] = useFormState(() => {
-    webAuth.login();
-  }, undefined);
+  const [errorMessage, dispatch] = useFormState(authenticate, undefined);
 
   return (
     <form action={dispatch}>

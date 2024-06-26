@@ -10,11 +10,13 @@
   },
   "dependencies": {
     "@cdo/component-library": "*",
+    "md5": "^2.3.0",
     "next": "14.2.4",
     "react": "^18",
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@types/md5": "^2.3.5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
