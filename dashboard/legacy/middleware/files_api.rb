@@ -421,14 +421,12 @@ class FilesApi < Sinatra::Base
     # the files are only being used by a single user.
     if endpoint == 'libraries' && file_type != '.java' || LABS_TO_CHECK_FOR_PROFANITY.include?(app_type)
       begin
-        puts "endpoint is #{endpoint} and app_type is #{app_type}"
         if app_type == 'aichat'
           source = JSON.parse(body)['source']
           source_json = JSON.parse(source)
           text_to_check = source_json['systemPrompt'] + ' ' + source_json['retrievalContexts'].join(' ')
           share_failure = ShareFiltering.find_failure(text_to_check, request.locale)
-        else
-          puts "body is #{body}"        
+        else      
           share_failure = ShareFiltering.find_failure(body, request.locale)
         end
       rescue StandardError => exception
@@ -439,7 +437,6 @@ class FilesApi < Sinatra::Base
       # TODO(JillianK): we are temporarily ignoring address share failures because our address detection is very broken.
       # Once we have a better geocoding solution in H1, we should start filtering for addresses again.
       # Additional context: https://codedotorg.atlassian.net/browse/STAR-1361
-      puts "share_failure is #{share_failure}"
       if app_type != 'aichat' && share_failure && share_failure[:type] != "address"
         details_key = share_failure.type == ShareFiltering::FailureType::PROFANITY ? "profaneWords" : "pIIWords"
         details = {details_key => [share_failure.content]}
