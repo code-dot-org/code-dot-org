@@ -1,6 +1,5 @@
 import cookies from 'js-cookie';
-import PropTypes from 'prop-types';
-import React, {useState} from 'react';
+import React, {CSSProperties, useState} from 'react';
 
 import {isEmail} from '@cdo/apps/util/formatValidation';
 import i18n from '@cdo/locale';
@@ -18,14 +17,17 @@ import Button from '../Button';
  * permission. This panel gives a form to request (or see details about a
  * pending request for) parental permission.
  */
-export default function LockoutPanel(props) {
+const LockoutPanel: React.FC<LockoutPanelProps> = props => {
   // Determine if we think the given email matches the child email
-  const isEmailDisallowed = email => {
+  const isEmailDisallowed = (email: string) => {
     return props.disallowedEmail === hashString(email);
   };
 
   // Determine if the email is allowed
-  const validateEmail = email => {
+  const validateEmail = (email?: string) => {
+    if (!email) {
+      return false;
+    }
     return isEmail(email) && !isEmailDisallowed(email);
   };
 
@@ -37,21 +39,27 @@ export default function LockoutPanel(props) {
 
   // When the email field is updated, also update the disability state of the
   // submit button.
-  const onEmailUpdate = event => {
-    setDisabled(!validateEmail(event.target.value));
+  const onEmailUpdate = (event: React.FormEvent<HTMLInputElement>) => {
+    setDisabled(!validateEmail((event.target as HTMLInputElement).value));
   };
 
   // This will set the email to the current pending email and fire off the
   // form as though they had typed in the same email again.
-  const resendPermissionEmail = event => {
-    const field = document.getElementById('parent-email');
-    field.value = props.pendingEmail;
+  const resendPermissionEmail = () => {
+    const field = document.getElementById('parent-email') as HTMLInputElement;
+    if (field && props.pendingEmail) {
+      field.value = props.pendingEmail;
+    }
 
-    const form = document.getElementById('lockout-panel-form');
-    form.submit();
+    const form = document.getElementById(
+      'lockout-panel-form'
+    ) as HTMLFormElement;
+    if (form) {
+      form.submit();
+    }
   };
 
-  const signOut = event => {
+  const signOut = (event: React.MouseEvent<HTMLButtonElement>) => {
     window.location.href = 'users/sign_out';
   };
 
@@ -62,7 +70,7 @@ export default function LockoutPanel(props) {
   const isRTL = getStore().getState()?.isRtl;
 
   // How to format any localized dates on the page.
-  const dateOptions = {
+  const dateOptions: Intl.DateTimeFormatOptions = {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
@@ -79,7 +87,10 @@ export default function LockoutPanel(props) {
   const tokenElement = document.querySelector('meta[name="csrf-token"]');
   let csrfToken = '';
   if (tokenElement) {
-    csrfToken = tokenElement.attributes['content'].value;
+    const content = tokenElement.attributes.getNamedItem('content');
+    if (content) {
+      csrfToken = content.value;
+    }
   }
 
   return (
@@ -191,7 +202,7 @@ export default function LockoutPanel(props) {
               />
 
               {/* Show a 'Last email sent' prompt when available. */}
-              {props.pendingEmail && (
+              {props.pendingEmail && props.requestDate && (
                 <p style={styles.lastEmail}>
                   <em id="lockout-last-email-date">
                     {i18n.sessionLockoutLastEmailSent() + ' '}
@@ -236,22 +247,24 @@ export default function LockoutPanel(props) {
       </form>
     </div>
   );
-}
-
-LockoutPanel.propTypes = {
-  apiURL: PropTypes.string.isRequired,
-  deleteDate: PropTypes.instanceOf(Date).isRequired,
-  pendingEmail: PropTypes.string,
-  requestDate: PropTypes.instanceOf(Date),
-  disallowedEmail: PropTypes.string.isRequired,
-  isPreLockoutUser: PropTypes.bool,
 };
+
+export interface LockoutPanelProps {
+  apiURL: string;
+  deleteDate: Date;
+  pendingEmail?: string;
+  requestDate?: Date;
+  disallowedEmail: string;
+  isPreLockoutUser?: boolean;
+}
 
 LockoutPanel.defaultProps = {
   isPreLockoutUser: false,
 };
 
-const styles = {
+export default LockoutPanel;
+
+const styles: {[key: string]: CSSProperties} = {
   container: {
     border: '1px solid rgb(233 233 233)',
     boxShadow: '5px 5px 3px 0px #ccc',

@@ -1,6 +1,7 @@
+import {StoryFn} from '@storybook/react';
 import React from 'react';
 
-import LockoutPanel from './LockoutPanel';
+import LockoutPanel, {LockoutPanelProps} from './LockoutPanel';
 
 const DAYS = 1000 * 60 * 60 * 24;
 
@@ -8,13 +9,14 @@ export default {
   component: LockoutPanel,
 };
 
-const Template = args => (
-  <LockoutPanel
-    apiURL="/permissions"
-    deleteDate={new Date(Date.now() + 6 * DAYS)}
-    disallowedEmail="student@test.com"
-    {...args}
-  />
+const defaultArgs: LockoutPanelProps = {
+  apiURL: '/permissions',
+  deleteDate: new Date(Date.now() + 6 * DAYS),
+  disallowedEmail: 'student@test.com',
+};
+
+const Template: StoryFn<typeof LockoutPanel> = args => (
+  <LockoutPanel {...defaultArgs} {...args} />
 );
 
 export const NewAccount = Template.bind({});
