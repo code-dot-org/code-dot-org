@@ -62,6 +62,7 @@ theme: responsive_full_width
   .wrapper
     %h2=hoc_s("maker_page.curricula_microbit.heading")
     %p=hoc_s("maker_page.curricula_microbit.desc")
+    = view :maker_curriculum_microbit, explore_unit_link: CDO.studio_url("/s/microbit?viewAs=Instructor"), extension_lessons_link: "/maker/csf-microbit", self_paced_pl_link: CDO.studio_url("/courses/self-paced-pl-microbit")
 
 = view :section_divider_line
 
