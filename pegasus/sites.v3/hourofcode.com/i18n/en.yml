@@ -2416,19 +2416,13 @@
     get_started:
       heading: "Getting started with physical computing"
       desc: "We have curriculum options that support two different devices — see available options below."
-      microbit:
-        title: "BBC micro:bit"
-        button:
-          see_curriculum:
-            label: "See available curriculum"
-            aria_label: "See available micro:bit curriculum"
-          learn: "Learn about micro:bit"
-      circuit_playground:
-        title: "Circuit Playground"
-        button:
-          see_curriculum: "See available curriculum"
-            aria_label: "See available Circuit Playground curriculum"
-          learn: "Learn about Circuit Playground"
+      microbit: "BBC micro:bit"
+      circuit_playground: "Circuit Playground"
+      button:
+        see_curriculum:
+          label: "See available curriculum"
+          aria_label: "See available ${device} curriculum"
+        learn_about: "Learn about ${device}"
     why:
       heading: "Why physical computing?"
       real_world:
