@@ -1,4 +1,4 @@
-import {shallow, ShallowWrapper} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import {render, screen} from '@testing-library/react';
 import React from 'react';
 import sinon, {SinonStub} from 'sinon';
 
@@ -6,12 +6,9 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import ChildAccountConsent, {
   ChildAccountConsentProps,
 } from '@cdo/apps/templates/policy_compliance/ChildAccountConsent';
+import i18n from '@cdo/locale';
 
 import {expect} from '../../../util/reconfiguredChai';
-
-const createChildAccountConsent = (props: ChildAccountConsentProps) => {
-  return shallow(<ChildAccountConsent {...props} />);
-};
 
 describe('ChildAccountConsent', () => {
   let sendEventSpy: SinonStub;
@@ -20,23 +17,20 @@ describe('ChildAccountConsent', () => {
   });
 
   afterEach(() => {
-    analyticsReporter.sendEvent.restore();
+    (analyticsReporter.sendEvent as sinon.SinonStub).restore();
   });
 
   context('no parent permission', () => {
     const props: ChildAccountConsentProps = {
       permissionGranted: false,
     };
-    let childAccountConsent: ShallowWrapper;
 
     beforeEach(() => {
-      childAccountConsent = createChildAccountConsent(props);
+      render(<ChildAccountConsent {...props} />);
     });
 
     it('shows the link expired message', () => {
-      expect(
-        childAccountConsent.find('#expired_token_container')
-      ).to.have.lengthOf(1);
+      screen.getByText(i18n.childAccountConsentExpiredMessage());
     });
 
     it('reports expired event', () => {
@@ -46,21 +40,28 @@ describe('ChildAccountConsent', () => {
   });
 
   context('has parent permission', () => {
+    const permissionGrantedDate = new Date();
     const props: ChildAccountConsentProps = {
       permissionGranted: true,
-      permissionGrantedDate: new Date(),
+      permissionGrantedDate: permissionGrantedDate,
       studentId: 12345,
     };
-    let childAccountConsent: ShallowWrapper;
+    const dateOptions: Intl.DateTimeFormatOptions = {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    };
+    const grantedDateString = i18n.childAccountConsentValidPermissionGranted({
+      date: permissionGrantedDate.toLocaleDateString('en-US', dateOptions),
+    });
 
     beforeEach(() => {
-      childAccountConsent = createChildAccountConsent(props);
+      render(<ChildAccountConsent {...props} />);
     });
 
     it('shows the thanks message', () => {
-      expect(
-        childAccountConsent.find('#permission_granted_container')
-      ).to.have.lengthOf(1);
+      screen.getByText(i18n.childAccountConsentValidPermission());
+      screen.getByText(grantedDateString);
     });
 
     it('reports permission granted event', () => {
