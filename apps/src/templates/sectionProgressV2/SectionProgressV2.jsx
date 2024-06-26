@@ -108,7 +108,6 @@ function SectionProgressV2({
           {i18n.lessonsIn()}
 
           <UnitSelectorV2 className={styles.titleUnitSelectorDropdown} />
-          {console.log(expandedMetadataEnabled)}
           {expandedMetadataEnabled && <MoreOptionsDropdown />}
         </Heading6>
       </div>
