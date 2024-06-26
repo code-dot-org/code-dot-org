@@ -544,6 +544,12 @@ export const selectAllMessages = (state: {aichat: AichatState}) => {
   return messages;
 };
 
+export const selectHavePropertiesChanged = (state: RootState) =>
+  findChangedProperties(
+    state.aichat.savedAiCustomizations,
+    state.aichat.currentAiCustomizations
+  ).length > 0;
+
 // Actions not to be used outside of this file
 const {
   addChatMessage,
