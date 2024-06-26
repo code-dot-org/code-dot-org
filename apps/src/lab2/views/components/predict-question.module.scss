@@ -1,9 +1,15 @@
-.multipleChoiceLabel {
+.multipleChoiceContainer {
+  display: flex;
+  align-items: start;
   input {
-    margin: 0 4px 0 0;
+    margin: 4px 4px 0 0;
   }
 }
 
-.multipleChoiceInput {
-  padding-right: 5px;
+.multipleChoiceLabel {
+  margin-left: 4px;
+}
+
+.freeResponse {
+  max-width: 100%;
 }

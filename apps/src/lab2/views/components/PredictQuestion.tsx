@@ -16,15 +16,7 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
   predictResponse,
   setPredictResponse,
 }) => {
-  // TODO: Handle multiple choice predict questions.
-  const showFreeResponse =
-    predictSettings?.isPredictLevel &&
-    predictSettings?.questionType === PredictQuestionType.FreeResponse;
-  const showMultipleChoice =
-    predictSettings?.isPredictLevel &&
-    predictSettings?.questionType === PredictQuestionType.MultipleChoice;
-
-  if (!showFreeResponse && !showMultipleChoice) {
+  if (!predictSettings?.isPredictLevel) {
     return null;
   }
 
@@ -42,42 +34,38 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
     }
   };
 
-  const renderMultipleChoice = () => {
-    return predictSettings.multipleChoiceOptions?.map((option, index) => (
-      <label
-        key={`multiple-choice-${index}`}
-        className={moduleStyles.multipleChoiceLabel}
-      >
-        <input
-          type={predictSettings.isMultiSelect ? 'checkbox' : 'radio'}
-          value={option}
-          checked={
-            (predictResponse && predictResponse.split(',').includes(option)) ||
-            false
-          }
-          onChange={handleMultiSelectChanged}
-          name={option}
-          key={index}
-          className={moduleStyles.multipleChoiceInput}
-        />
-        {option}
-      </label>
-    ));
-  };
-
   return (
     <>
-      {showFreeResponse && (
-        <div key="predict-free-response" id="predict-free-response">
-          <textarea
-            value={predictResponse}
-            placeholder={predictSettings.placeholderText}
-            onChange={e => setPredictResponse(e.target.value)}
-            style={{height: predictSettings.freeResponseHeight || 20}}
-          />
-        </div>
+      {predictSettings.questionType === PredictQuestionType.FreeResponse ? (
+        <textarea
+          value={predictResponse}
+          placeholder={predictSettings.placeholderText}
+          onChange={e => setPredictResponse(e.target.value)}
+          style={{height: predictSettings.freeResponseHeight || 20}}
+          className={moduleStyles.freeResponse}
+        />
+      ) : (
+        predictSettings.multipleChoiceOptions?.map((option, index) => (
+          <label
+            key={`multiple-choice-${index}`}
+            className={moduleStyles.multipleChoiceContainer}
+          >
+            <input
+              type={predictSettings.isMultiSelect ? 'checkbox' : 'radio'}
+              value={option}
+              checked={
+                (predictResponse &&
+                  predictResponse.split(',').includes(option)) ||
+                false
+              }
+              onChange={handleMultiSelectChanged}
+              name={option}
+              key={index}
+            />
+            <span className={moduleStyles.multipleChoiceLabel}>{option}</span>
+          </label>
+        ))
       )}
-      {showMultipleChoice && renderMultipleChoice()}
     </>
   );
 };
