@@ -1,8 +1,10 @@
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../../util/reconfiguredChai';
-import {UnconnectedLessonGroupCard as LessonGroupCard} from '@cdo/apps/lib/levelbuilder/unit-editor/LessonGroupCard';
+import React from 'react';
 import sinon from 'sinon';
+
+import {UnconnectedLessonGroupCard as LessonGroupCard} from '@cdo/apps/lib/levelbuilder/unit-editor/LessonGroupCard';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 export const nonUserFacingGroup = {
   key: 'lg-key',

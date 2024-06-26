@@ -1,10 +1,12 @@
-import React from 'react';
-import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {WorkshopsTable} from '@cdo/apps/code-studio/pd/professional_learning_landing/EnrolledWorkshops';
-import sinon from 'sinon';
 import {assert, expect} from 'chai';
-import * as utils from '@cdo/apps/utils';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import moment from 'moment';
+import React from 'react';
+import sinon from 'sinon';
+
+import {WorkshopsTable} from '@cdo/apps/code-studio/pd/professional_learning_landing/EnrolledWorkshops';
+import * as utils from '@cdo/apps/utils';
+
 import {serializedWorkshopFactory} from '../../../../factories/professionalLearning';
 
 describe('EnrolledWorkshops', () => {

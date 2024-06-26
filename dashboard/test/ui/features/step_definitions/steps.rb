@@ -83,7 +83,15 @@ end
 def navigate_to(url)
   Retryable.retryable(on: RSpec::Expectations::ExpectationNotMetError, sleep: 10, tries: 3) do
     with_read_timeout(DEFAULT_WAIT_TIMEOUT + 5.seconds) do
+      root = @browser.find_element(css: ':root')
       @browser.navigate.to url
+      # Wait until the document has actually changed
+      if root
+        wait_until do
+          root != @browser.find_element(css: ':root')
+        end
+      end
+      # Then, wait until the document is done loading
       wait_until do
         @browser.execute_script('return document.readyState;') == 'complete'
       end
@@ -95,19 +103,32 @@ end
 
 Given /^I am on "([^"]*)"$/ do |url|
   check_window_for_js_errors('before navigation')
-  navigate_to replace_hostname(url)
+  begin
+    navigate_to replace_hostname(url)
+  rescue Selenium::WebDriver::Error::TimeoutError => exception
+    puts "Timeout: I am not on #{url} like I want."
+    puts "         I am on #{@browser.current_url} instead."
+    raise exception
+  end
 end
 
 And /^I take note of the current loaded page$/ do
   # Remember this page
   @current_page_body = @browser.find_element(:css, 'body')
+  @current_page_body_url = @browser.current_url
 end
 
 Then /^I wait until I am on a different page than I noted before$/ do
   # When we've seen a page before, look for a different page
   if @current_page_body
-    wait_until do
-      @current_page_body != @browser.find_element(:css, 'body')
+    begin
+      wait_until do
+        @current_page_body != @browser.find_element(:css, 'body')
+      end
+    rescue Selenium::WebDriver::Error::TimeoutError => exception
+      puts "Timeout: I am not still on #{@current_page_body_url} like I want."
+      puts "         I am on #{@browser.current_url} instead."
+      raise exception
     end
   end
 end
@@ -314,6 +335,9 @@ And /^check that the URL matches "([^"]*)"$/ do |regex_text|
 end
 
 Then /^I wait until I am on "([^"]*)"$/ do |url|
+  if @browser.capabilities.browser_name == 'Safari'
+    puts "WARNING: 'I wait until I am on' is not reliable in Safari. Consider 'to load a new page' steps instead."
+  end
   url = replace_hostname(url)
   begin
     wait_until {@browser.current_url == url}

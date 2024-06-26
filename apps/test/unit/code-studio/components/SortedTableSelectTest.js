@@ -1,7 +1,9 @@
-import React from 'react';
 import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
 import SortedTableSelect from '@cdo/apps/code-studio/components/SortedTableSelect';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const ROW_DATA = [
   {id: 1, name: 'itemb'},

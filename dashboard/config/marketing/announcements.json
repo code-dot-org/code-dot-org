@@ -37,6 +37,15 @@
       "buttonText": "Learn more",
       "buttonUrl": "https://code.org/lms",
       "buttonId": "lms-launch"
+    },
+    "curriculum-launch-2024": {
+      "dcdo": "curriculum-launch-2024",
+      "image": "",
+      "title": "Discover new and updated curriculum!",
+      "body": "Explore our latest units and professional learning resources to inspire future tech innovators.",
+      "buttonText": "See what's new",
+      "buttonUrl": "",
+      "buttonId": "curriculum-launch-2024"
     }
   }
 }

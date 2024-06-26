@@ -61,6 +61,8 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    resources :images, only: [:new]
+
     get 'maker/home', to: 'maker#home'
     get 'maker/setup', to: 'maker#setup'
 
@@ -233,6 +235,8 @@ Dashboard::Application.routes.draw do
     put '/featured_projects/:channel_id/unfeature', to: 'featured_projects#unfeature'
     put '/featured_projects/:channel_id/feature', to: 'featured_projects#feature'
     put '/featured_projects/:channel_id/bookmark', to: 'featured_projects#bookmark'
+
+    get 'projects/:channel_id/extra_links', to: 'projects#extra_links'
 
     resources :projects, path: '/projects/', only: [:index] do
       collection do
@@ -629,7 +633,9 @@ Dashboard::Application.routes.draw do
         namespace :account_linking do
           get :landing
           get :existing_account
+          get :finish_link
           post :link_email
+          post :new_account
         end
       end
     end

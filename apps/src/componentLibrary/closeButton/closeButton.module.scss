@@ -1,0 +1,88 @@
+@import "color";
+@import "@cdo/apps/componentLibrary/common/styles/mixins";
+
+// Close Button common styles
+.closeButton {
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+  border: 1px solid transparent;
+  background-color: transparent;
+  color: unset;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:focus-visible, &:focus {
+    text-decoration: none;
+  }
+
+  &:hover {
+    box-shadow: none;
+    text-decoration: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $light_primary_500;
+    outline-offset: 2px;
+    border-radius: 0.25rem;
+  }
+
+  &:active {
+    // !important is used here to override the ./apps/style/common.scss line 655 styles
+    border: 1px solid transparent !important;
+  }
+}
+
+// Button Colors
+.closeButton-dark {
+  color: $light_gray_600;
+
+  &:hover {
+    color: $light_gray_400;
+  }
+
+  &:active {
+    color: $light_gray_600;
+  }
+}
+
+.closeButton-light {
+  color: $light_gray_400;
+
+  &:hover {
+    color: $light_gray_600;
+  }
+
+  &:active {
+    color: $light_gray_400;
+  }
+}
+
+// Close Button Sizes
+.closeButton-l {
+  width: 1.5625rem;
+  height: 1.5625rem;
+
+  i {
+    font-size: 1.25rem;
+    line-height: 125%;
+    width: 1.5625rem;
+  }
+}
+
+.closeButton-m {
+  width: 1.25rem;
+  height: 1.25rem;
+
+  i {
+    font-size: 1rem;
+    line-height: 125%;
+    width: 1.25rem;
+  }
+}

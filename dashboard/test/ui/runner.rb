@@ -330,7 +330,7 @@ def log_browser_error(msg)
   puts msg if $options.verbose
 end
 
-def run_tests(env, feature, arguments, log_prefix)
+def run_tests(env, feature, target_platform, arguments, log_prefix)
   start_time = Time.now
   cmd = "cucumber #{feature} #{arguments}"
   puts "#{log_prefix}#{cmd}"
@@ -342,7 +342,8 @@ def run_tests(env, feature, arguments, log_prefix)
     eyes_succeeded = count_eyes_errors(stdout) == 0
     duration = Time.now - start_time
     extra_dimensions = {test_type: test_type,
-                        feature_name: feature}
+                        feature_name: feature.include?(".feature") ? feature.split(".feature")[0] : feature,
+                        target_browser: target_platform}
     # Metrics for individual feature runs. They will be flushed once all of them run
     Infrastructure::Logger.put("runner_feature_success", cucumber_succeeded ? 1 : 0, extra_dimensions)
     Infrastructure::Logger.put("runner_feature_failure", cucumber_succeeded ? 0 : 1, extra_dimensions)
@@ -655,7 +656,7 @@ def cucumber_arguments_for_browser(browser, options)
   # skipped via skip_tag(). See `cucumber --help` for more info.
   if eyes?
     arguments +=
-      if browser['mobile']
+      if browser['appium:mobile']
         # iOS browsers will only run eyes tests tagged with @eyes_mobile.
         tag('@eyes_mobile')
       else
@@ -669,8 +670,8 @@ def cucumber_arguments_for_browser(browser, options)
     arguments += skip_tag('@eyes')
   end
 
-  arguments += skip_tag('@no_mobile') if browser['mobile']
-  arguments += skip_tag('@only_mobile') unless browser['mobile']
+  arguments += skip_tag('@no_mobile') if browser['appium:mobile']
+  arguments += skip_tag('@only_mobile') unless browser['appium:mobile']
   arguments += skip_tag('@no_phone') if browser['name'] == 'iPhone'
   arguments += skip_tag('@only_phone') unless browser['name'] == 'iPhone'
   arguments += skip_tag('@no_circle') if options.is_circle
@@ -743,7 +744,7 @@ def run_feature(browser, feature, options)
   run_environment['TEST_LOCAL'] = options.local ? "true" : "false"
   run_environment['TEST_LOCAL_HEADLESS'] = options.local_headless ? "true" : "false"
   run_environment['MAXIMIZE_LOCAL'] = options.maximize ? "true" : "false"
-  run_environment['MOBILE'] = browser['mobile'] ? "true" : "false"
+  run_environment['MOBILE'] = browser['appium:mobile'] ? "true" : "false"
   run_environment['TEST_RUN_NAME'] = test_run_string
   run_environment['IS_CIRCLE'] = options.is_circle ? "true" : "false"
   run_environment['PRIORITY'] = options.priority
@@ -762,7 +763,7 @@ def run_feature(browser, feature, options)
   reruns = 0
   arguments = cucumber_arguments_for_browser(browser, options)
   arguments += cucumber_arguments_for_feature(options, test_run_string, max_reruns)
-  cucumber_succeeded, eyes_succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, feature, arguments, log_prefix)
+  cucumber_succeeded, eyes_succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, feature, browser_name_or_unknown(browser), arguments, log_prefix)
   feature_succeeded = cucumber_succeeded && eyes_succeeded
   log_link = upload_log_and_get_public_link(
     html_log,
@@ -793,7 +794,7 @@ def run_feature(browser, feature, options)
 
     rerun_feature = File.exist?(rerun_file) ? File.read(rerun_file).split.join(' ') : feature
 
-    cucumber_succeeded, eyes_succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, rerun_feature, arguments, log_prefix)
+    cucumber_succeeded, eyes_succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, rerun_feature, browser_name_or_unknown(browser), arguments, log_prefix)
     feature_succeeded = cucumber_succeeded && eyes_succeeded
     log_link = upload_log_and_get_public_link(
       html_log,

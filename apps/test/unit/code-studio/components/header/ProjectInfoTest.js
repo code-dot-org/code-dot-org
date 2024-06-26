@@ -1,16 +1,14 @@
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import React from 'react';
 
-import {expect} from '../../../../util/reconfiguredChai';
-
-import {UnconnectedProjectInfo as ProjectInfo} from '@cdo/apps/code-studio/components/header/ProjectInfo';
-
-import ProjectHeader from '@cdo/apps/code-studio/components/header/ProjectHeader';
+import LevelBuilderSaveButton from '@cdo/apps/code-studio/components/header/LevelBuilderSaveButton';
 import MinimalProjectHeader from '@cdo/apps/code-studio/components/header/MinimalProjectHeader';
 import ProjectBackedHeader from '@cdo/apps/code-studio/components/header/ProjectBackedHeader';
-import LevelBuilderSaveButton from '@cdo/apps/code-studio/components/header/LevelBuilderSaveButton';
-
+import ProjectHeader from '@cdo/apps/code-studio/components/header/ProjectHeader';
+import {UnconnectedProjectInfo as ProjectInfo} from '@cdo/apps/code-studio/components/header/ProjectInfo';
 import {possibleHeaders} from '@cdo/apps/code-studio/headerRedux';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('ProjectInfo', () => {
   it('renders nothing by default', () => {

@@ -35,6 +35,7 @@ import {CdoFieldBitmap} from './addons/cdoFieldBitmap';
 import CdoFieldButton from './addons/cdoFieldButton';
 import CdoFieldFlyout from './addons/cdoFieldFlyout';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
+import CdoFieldParameter from './addons/cdoFieldParameter';
 import CdoFieldToggle from './addons/cdoFieldToggle';
 import CdoFieldVariable from './addons/cdoFieldVariable';
 import FunctionEditor from './addons/functionEditor';
@@ -113,6 +114,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   FieldFlyout: typeof CdoFieldFlyout;
   FieldBitmap: typeof CdoFieldBitmap;
   FieldVariable: typeof CdoFieldVariable;
+  FieldParameter: typeof CdoFieldParameter;
   JavaScript: JavascriptGeneratorType;
   assetUrl: (path: string) => string;
   customSimpleDialog: (config: object) => void;
@@ -216,6 +218,7 @@ export interface ExtendedBlock extends Block {
 }
 
 export interface ExtendedWorkspaceSvg extends WorkspaceSvg {
+  flyoutParentBlock: Block | null;
   globalVariables: string[];
   noFunctionBlockFrame: boolean;
   events: {

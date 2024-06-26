@@ -89,6 +89,14 @@ class UserTest < ActiveSupport::TestCase
       @student = create(:non_compliant_child)
     end
 
+    test 'logs CAP event "account_locking" after student compliance state changed to "p"' do
+      Services::ChildAccount.update_compliance(@student, Policies::ChildAccount::ComplianceState::GRACE_PERIOD)
+
+      Services::ChildAccount::EventLogger.expects(:log_grace_period_start).with(@student).once
+
+      @student.save!
+    end
+
     test 'logs CAP event "account_locking" after student compliance state changed to "l"' do
       Services::ChildAccount.update_compliance(@student, Policies::ChildAccount::ComplianceState::LOCKED_OUT)
 
@@ -514,6 +522,38 @@ class UserTest < ActiveSupport::TestCase
   test "cannot create multi-auth user with duplicate of multi-auth user's second email" do
     create_multi_auth_user_with_second_email COLLISION_EMAIL
     cannot_create_multi_auth_users_with_email COLLISION_EMAIL
+  end
+
+  test "can create multi-auth LTI user with duplicate of multi-auth user's second email" do
+    create :student, email: COLLISION_EMAIL
+    # trigger the email validation by changing the email (partial registration has email as "" which becomes the actual
+    # email in the finish sign up flow)
+    user = create :student
+    user.authentication_options.destroy_all
+
+    lti_authentication_option = create(:lti_authentication_option, user: user, email: COLLISION_EMAIL)
+    user.authentication_options << lti_authentication_option
+    user.email = COLLISION_EMAIL
+
+    user.save!
+
+    user.valid?
+  end
+
+  test "cannot create multi-auth LTI user multiple auth options and duplicate of multi-auth user's second email" do
+    create :student, email: COLLISION_EMAIL
+    # trigger the email validation by changing the email (partial registration has email as "" which becomes the actual
+    # email in the finish sign up flow)
+    user = create :student
+    user.authentication_options.destroy_all
+
+    lti_authentication_option = create(:lti_authentication_option, user: user, email: COLLISION_EMAIL)
+    user.authentication_options << lti_authentication_option
+    user.email = COLLISION_EMAIL
+
+    user.save!
+    user.authentication_options << create(:lti_authentication_option, user: user, email: COLLISION_EMAIL)
+    cannot_create_user_with_email :google_authentication_option, user: user, email: COLLISION_EMAIL
   end
 
   def cannot_create_multi_auth_users_with_email(email)
@@ -3986,6 +4026,10 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'summarize' do
+    latest_permission_request_sent_at = 1.month.ago.change(usec: 0)
+
+    create(:parental_permission_request, user: @student, updated_at: latest_permission_request_sent_at)
+
     assert_equal(
       {
         id: @student.id,
@@ -4008,6 +4052,7 @@ class UserTest < ActiveSupport::TestCase
         ai_tutor_access_denied: !!@student.ai_tutor_access_denied,
         at_risk_age_gated: false,
         child_account_compliance_state: @student.child_account_compliance_state,
+        latest_permission_request_sent_at: latest_permission_request_sent_at,
       },
       @student.summarize
     )
@@ -5392,5 +5437,33 @@ class UserTest < ActiveSupport::TestCase
     refute student.us_state_changed?
     student.us_state = 'WA'
     assert student.us_state_changed?
+  end
+
+  describe '#latest_parental_permission_request' do
+    let(:latest_parental_permission_request) {user.latest_parental_permission_request}
+
+    let(:user) {create(:non_compliant_child)}
+
+    let(:user_permission_request1) {create(:parental_permission_request, user: user, parent_email: 'test1@example.org')}
+    let(:user_permission_request2) {create(:parental_permission_request, user: user, parent_email: 'test2@example.org')}
+
+    before do
+      user_permission_request1
+      user_permission_request2
+    end
+
+    it 'returns latest parental permission request' do
+      _(latest_parental_permission_request).must_equal user_permission_request2
+    end
+
+    context 'when oldest parental permission request was resent' do
+      before do
+        user_permission_request1.update(resends_sent: 1)
+      end
+
+      it 'returns resend parental permission request' do
+        _(latest_parental_permission_request).must_equal user_permission_request1
+      end
+    end
   end
 end

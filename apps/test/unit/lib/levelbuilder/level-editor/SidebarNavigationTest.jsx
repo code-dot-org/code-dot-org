@@ -1,6 +1,7 @@
 import {render, screen} from '@testing-library/react';
-import NavigationSidebar from '@cdo/apps/lab2/levelEditors/NavigationSidebar';
 import React from 'react';
+
+import NavigationSidebar from '@cdo/apps/lab2/levelEditors/NavigationSidebar';
 
 import {expect} from '../../../../util/reconfiguredChai.js';
 

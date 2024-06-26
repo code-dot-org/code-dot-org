@@ -1,12 +1,14 @@
 import sinon from 'sinon';
+
+import annotationList from '@cdo/apps/acemode/annotationList';
 import EditorAnnotator, {DropletAnnotator} from '@cdo/apps/EditorAnnotator';
-import {expect} from '../util/reconfiguredChai';
 import {
   singleton as studioApp,
   stubStudioApp,
   restoreStudioApp,
 } from '@cdo/apps/StudioApp';
-import annotationList from '@cdo/apps/acemode/annotationList';
+
+import {expect} from '../util/reconfiguredChai';
 
 describe('EditorAnnotator', () => {
   let patchStub;
