@@ -30,6 +30,7 @@ interface InstructionsProps {
    * A callback when the user clicks on clickable text.
    */
   handleInstructionsTextClick?: (id: string) => void;
+  manageNavigation?: boolean;
 }
 
 /**
@@ -46,6 +47,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   layout,
   imagePopOutDirection,
   handleInstructionsTextClick,
+  manageNavigation = true,
 }) => {
   const instructionsText = useSelector(
     (state: {lab: LabState}) => state.lab.levelProperties?.longInstructions
@@ -57,12 +59,14 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
 
   // If there are no validation conditions, we can show the continue button so long as
   // there is another level. If validation is present, also check that conditions are satisfied.
-  const showContinueButton = (!hasConditions || satisfied) && hasNextLevel;
+  const showContinueButton =
+    manageNavigation && (!hasConditions || satisfied) && hasNextLevel;
 
   // If there are no validation conditions, we can show the finish button so long as
   // this is the last level in the progression. If validation is present, also
   // check that conditions are satisfied.
-  const showFinishButton = (!hasConditions || satisfied) && !hasNextLevel;
+  const showFinishButton =
+    manageNavigation && (!hasConditions || satisfied) && !hasNextLevel;
 
   const dispatch = useAppDispatch();
 
