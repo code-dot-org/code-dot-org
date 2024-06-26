@@ -2,6 +2,9 @@
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 import {commands as timeoutCommands} from '@cdo/apps/lib/util/timeoutApi';
+import {rateLimit} from '@cdo/apps/storage/rateLimit';
+
+import {outputError} from '../../lib/util/javascriptMode';
 
 /*
   The 'commands' file assembles a set of calls that student code can make
@@ -25,7 +28,12 @@ gamelabCommands.getUserId = function () {
 gamelabCommands.getKeyValue = function (opts) {
   var onSuccess = gamelabCommands.handleReadValue.bind(this, opts);
   var onError = opts.onError;
-  studioApp().storage.getKeyValue(opts.key, onSuccess, onError);
+  try {
+    rateLimit();
+    studioApp().storage.getKeyValue(opts.key, onSuccess, onError);
+  } catch (e) {
+    outputError(e.message);
+  }
 };
 
 gamelabCommands.handleReadValue = function (opts, value) {
@@ -37,7 +45,12 @@ gamelabCommands.handleReadValue = function (opts, value) {
 gamelabCommands.setKeyValue = function (opts) {
   var onSuccess = gamelabCommands.handleSetKeyValue.bind(this, opts);
   var onError = opts.onError;
-  studioApp().storage.setKeyValue(opts.key, opts.value, onSuccess, onError);
+  try {
+    rateLimit();
+    studioApp().storage.setKeyValue(opts.key, opts.value, onSuccess, onError);
+  } catch (e) {
+    outputError(e.message);
+  }
 };
 
 gamelabCommands.handleSetKeyValue = function (opts) {
