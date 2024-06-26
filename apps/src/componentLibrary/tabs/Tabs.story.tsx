@@ -70,6 +70,45 @@ DefaultTabsWithDisabledTab.args = {
   onChange: () => null,
 };
 
+export const TabsWithTooltips = SingleTemplate.bind({});
+TabsWithTooltips.args = {
+  name: 'tabs_with_tooltips',
+  tabs: [
+    {
+      value: 'tab1',
+      text: 'Tab 1',
+      tabContent: <div>Tab 1 Content</div>,
+      tooltip: {
+        text: 'Tooltip for Tab 1',
+        tooltipId: 'tooltip1',
+        direction: 'onBottom',
+      },
+    },
+    {
+      value: 'tab2',
+      text: 'Tab 2',
+      tabContent: <div>Tab 2 Content</div>,
+      tooltip: {
+        text: 'Tooltip for Tab 2',
+        tooltipId: 'tooltip2',
+        direction: 'onBottom',
+      },
+    },
+    {
+      value: 'tab3',
+      text: 'Tab 3',
+      tabContent: <div>Tab 3 Content</div>,
+      tooltip: {
+        text: 'Tooltip for Tab 3',
+        tooltipId: 'tooltip3',
+        direction: 'onBottom',
+      },
+    },
+  ],
+  defaultSelectedTabValue: 'tab1',
+  onChange: () => null,
+};
+
 export const GroupOfTypesOfTabs = MultipleTemplate.bind({});
 GroupOfTypesOfTabs.args = {
   components: [

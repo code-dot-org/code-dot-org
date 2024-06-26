@@ -1,5 +1,6 @@
-import {assert} from '../util/reconfiguredChai';
 import {TestResults} from '@cdo/apps/constants';
+
+import {assert} from '../util/reconfiguredChai';
 
 var executionLog = require('@cdo/apps/executionLog');
 

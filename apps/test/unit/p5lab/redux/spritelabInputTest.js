@@ -1,4 +1,5 @@
 import spritelabInputList, * as spritelabInput from '@cdo/apps/p5lab/redux/spritelabInput';
+
 import {expect} from '../../../util/reconfiguredChai';
 
 const PromptType = spritelabInput.PromptType;

@@ -109,20 +109,26 @@ def create_user(name, url: '/api/test/create_user', **user_opts)
       user_opts[:email_preference_source] = 'ACCOUNT_SIGN_UP'
     end
 
+    user_params = {
+      user_type: 'student',
+      email: email,
+      password: password,
+      password_confirmation: password,
+      name: name,
+      age: '16',
+      terms_of_service_version: '1',
+      sign_in_count: 2
+    }.merge(user_opts)
+    user_params.delete(:email) if user_params[:email].blank?
+    user_params.delete(:password) if user_params[:password].blank?
+    user_params.delete(:password_confirmation) if user_params[:password_confirmation].blank?
+
+    # Issue the update request for the user
     browser_request(
       url: url,
       method: 'POST',
       body: {
-        user: {
-          user_type: 'student',
-          email: email,
-          password: password,
-          password_confirmation: password,
-          name: name,
-          age: '16',
-          terms_of_service_version: '1',
-          sign_in_count: 2
-        }.merge(user_opts)
+        user: user_params
       },
       code: 200
     )
@@ -145,7 +151,7 @@ And(/^I create( as a parent)? a (young )?student( in Colorado)?( who has never s
     user_opts[:user_provided_us_state] = true
   end
 
-  # See Policies::ChildAccount::CPA_CREATED_AT_EXCEPTION_DATE
+  # See Cpa::CREATED_AT_EXCEPTION_DATE
   cpa_exception_date = DateTime.parse('2024-05-26T00:00:00MDT')
 
   if after_cpa_exception
@@ -162,6 +168,10 @@ And(/^I create( as a parent)? a (young )?student( in Colorado)?( who has never s
 
   create_user(name, **user_opts)
   navigate_to replace_hostname('http://studio.code.org') if home
+end
+
+Then /^My parent permits my parental request$/ do
+  browser_request(url: '/api/test/accept_parental_request', method: 'POST')
 end
 
 And(/^I type the email for "([^"]*)" into element "([^"]*)"$/) do |name, element|
@@ -186,10 +196,28 @@ And(/^I create a student in the eu named "([^"]*)"$/) do |name|
   )
 end
 
-And(/^I create a teacher( who has never signed in)? named "([^"]*)"( and go home)?$/) do |new_account, name, home|
+And(/^I create a teacher( who has never signed in)? named "([^"]*)"( after CPA exception)?( before CPA exception)?( and go home)?$/) do |new_account, name, after_cpa_exception, before_cpa_exception, home|
   sign_in_count = new_account ? 0 : 2
 
-  create_user(name, age: '21+', user_type: 'teacher', email_preference_opt_in: 'yes', sign_in_count: sign_in_count)
+  user_opts = {
+    user_type: 'teacher',
+    age: '21+',
+    email_preference_opt_in: 'yes',
+    sign_in_count: sign_in_count,
+  }
+
+  # See Cpa::CREATED_AT_EXCEPTION_DATE
+  cpa_exception_date = DateTime.parse('2024-05-26T00:00:00MDT')
+
+  if after_cpa_exception
+    user_opts[:created_at] = cpa_exception_date
+  end
+
+  if before_cpa_exception
+    user_opts[:created_at] = cpa_exception_date - 1.second
+  end
+
+  create_user(name, **user_opts)
   navigate_to replace_hostname('http://studio.code.org') if home
 end
 

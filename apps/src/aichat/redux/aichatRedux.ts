@@ -7,25 +7,18 @@ import {
   ThunkDispatch,
 } from '@reduxjs/toolkit';
 
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {registerReducers} from '@cdo/apps/redux';
 import {RootState} from '@cdo/apps/types/redux';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
+import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
-import {
-  AI_CUSTOMIZATIONS_LABELS,
-  DEFAULT_VISIBILITIES,
-  EMPTY_AI_CUSTOMIZATIONS,
-} from '../views/modelCustomization/constants';
-import {saveTypeToAnalyticsEvent} from '../constants';
 import {postAichatCompletionMessage} from '../aichatCompletionApi';
+import {saveTypeToAnalyticsEvent} from '../constants';
 import {
   AiCustomizations,
-  ChatCompletionMessage,
-  AichatCompletionMessage,
   AichatContext,
   FieldVisibilities,
   LevelAichatSettings,
@@ -34,32 +27,41 @@ import {
   SaveType,
   ViewMode,
   Visibility,
+  ChatMessage,
+  ChatItem,
+  isModelUpdate,
+  isNotification,
+  isChatMessage,
+  ModelUpdate,
+  Notification,
 } from '../types';
 import {
-  allFieldsHidden,
-  decorateMessageFromModelResponse,
-  findChangedProperties,
-  getNewMessageId,
-  getCurrentTime,
-  getCurrentTimestamp,
-  hasFilledOutModelCard,
-} from './utils';
+  DEFAULT_VISIBILITIES,
+  EMPTY_AI_CUSTOMIZATIONS,
+} from '../views/modelCustomization/constants';
 import {validateModelId} from '../views/modelCustomization/utils';
 
-type MessageListKey = 'chatMessagesCurrent' | 'chatMessagesPast';
+import {
+  allFieldsHidden,
+  findChangedProperties,
+  getNewMessageId,
+  hasFilledOutModelCard,
+} from './utils';
+
+const messageListKeys = ['chatItemsPast', 'chatItemsCurrent'] as const;
 type MessageLocation = {
   index: number;
-  messageListKey: MessageListKey;
+  messageListKey: (typeof messageListKeys)[number];
 };
 
 export interface AichatState {
-  // Messages from previous chat sessions that we track purely for visibility to the user
+  // Content from previous chat sessions that we track purely for visibility to the user
   // and do not send to the model as history.
-  chatMessagesPast: ChatCompletionMessage[];
-  // Messages in the current chat session that we want to provide as history to the model.
-  chatMessagesCurrent: ChatCompletionMessage[];
+  chatItemsPast: ChatItem[];
+  // Items in the current chat session that we want to provide as history to the model.
+  chatItemsCurrent: ChatItem[];
   // The user message currently awaiting response from the model (if any).
-  chatMessagePending?: ChatCompletionMessage;
+  chatMessagePending?: ChatMessage;
   // Denotes whether we are waiting for a chat completion response from the backend
   isWaitingForChatResponse: boolean;
   // Denotes whether we should show the warning modal
@@ -78,8 +80,8 @@ export interface AichatState {
 }
 
 const initialState: AichatState = {
-  chatMessagesPast: [],
-  chatMessagesCurrent: [],
+  chatItemsPast: [],
+  chatItemsCurrent: [],
   chatMessagePending: undefined,
   isWaitingForChatResponse: false,
   showWarningModal: true,
@@ -203,25 +205,12 @@ export const onSaveComplete =
 
     changedProperties.forEach(property => {
       const typedProperty = property as keyof AiCustomizations;
-      const propertiesSpecificityNeeded = ['temperature', 'selectedModelId'];
-      const textSuffix = propertiesSpecificityNeeded.includes(property)
-        ? {
-            text: ' has been updated to ',
-            boldtypeText: `${currentAiCustomizations[typedProperty]}.`,
-          }
-        : {
-            text: ' has been updated.',
-          };
-
       dispatch(
-        addChatMessage({
+        addModelUpdate({
           id: getNewMessageId(),
-          role: Role.MODEL_UPDATE,
-          chatMessageText:
-            AI_CUSTOMIZATIONS_LABELS[property as keyof AiCustomizations],
-          chatMessageSuffix: textSuffix,
-          status: Status.OK,
-          timestamp: getCurrentTime(),
+          updatedField: typedProperty,
+          updatedValue: currentAiCustomizations[typedProperty],
+          timestamp: Date.now(),
         })
       );
 
@@ -250,12 +239,11 @@ export const onSaveComplete =
 // Thunk called when a save has failed.
 export const onSaveFail = () => (dispatch: AppDispatch) => {
   dispatch(
-    addChatMessage({
+    addNotification({
       id: getNewMessageId(),
-      role: Role.ERROR_NOTIFICATION,
-      chatMessageText: 'Error updating project. Please try again.',
-      status: Status.ERROR,
-      timestamp: getCurrentTime(),
+      text: 'Error updating project. Please try again.',
+      notificationType: 'error',
+      timestamp: Date.now(),
     })
   );
   // Notify the UI that the save is complete.
@@ -271,7 +259,7 @@ export const submitChatContents = createAsyncThunk(
     const state = thunkAPI.getState() as RootState;
     const {
       savedAiCustomizations: aiCustomizations,
-      chatMessagesCurrent,
+      chatItemsCurrent,
       currentSessionId,
     } = state.aichat;
 
@@ -281,12 +269,11 @@ export const submitChatContents = createAsyncThunk(
       channelId: state.lab.channel?.id,
     };
     // Create the new user ChatCompleteMessage and add to chatMessages.
-    const newMessage: ChatCompletionMessage = {
-      id: getNewMessageId(),
+    const newMessage: ChatMessage = {
       role: Role.USER,
       status: Status.UNKNOWN,
       chatMessageText: newUserMessageText,
-      timestamp: getCurrentTimestamp(),
+      timestamp: Date.now(),
     };
     thunkAPI.dispatch(setChatMessagePending(newMessage));
 
@@ -295,12 +282,9 @@ export const submitChatContents = createAsyncThunk(
 
     let chatApiResponse;
     try {
-      const conversationMessages = chatMessagesCurrent.filter(
-        message => message.role === Role.USER || message.role === Role.ASSISTANT
-      );
       chatApiResponse = await postAichatCompletionMessage(
         newMessage,
-        conversationMessages,
+        chatItemsCurrent.filter(isChatMessage) as ChatMessage[],
         aiCustomizations,
         aichatContext,
         currentSessionId
@@ -313,12 +297,11 @@ export const submitChatContents = createAsyncThunk(
       thunkAPI.dispatch(clearChatMessagePending());
       thunkAPI.dispatch(addChatMessage({...newMessage, status: Status.ERROR}));
 
-      const assistantChatMessage: ChatCompletionMessage = {
-        id: getNewMessageId(),
+      const assistantChatMessage: ChatMessage = {
         role: Role.ASSISTANT,
         status: Status.ERROR,
         chatMessageText: 'error',
-        timestamp: getCurrentTimestamp(),
+        timestamp: Date.now(),
       };
       thunkAPI.dispatch(addChatMessage(assistantChatMessage));
 
@@ -338,17 +321,15 @@ export const submitChatContents = createAsyncThunk(
       thunkAPI.dispatch(setChatSessionId(chatApiResponse.session_id));
     }
 
-    if (chatApiResponse?.flagged_content) {
+    if (chatApiResponse.flagged_content) {
       console.log(
-        `Content flagged by profanity filter: ${chatApiResponse?.flagged_content}`
+        `Content flagged by profanity filter: ${chatApiResponse.flagged_content}`
       );
     }
 
     thunkAPI.dispatch(clearChatMessagePending());
-    chatApiResponse?.messages.forEach((message: AichatCompletionMessage) =>
-      thunkAPI.dispatch(
-        addChatMessage(decorateMessageFromModelResponse(message))
-      )
+    chatApiResponse.messages.forEach(message =>
+      thunkAPI.dispatch(addChatMessage({...message, timestamp: Date.now()}))
     );
   }
 );
@@ -357,8 +338,14 @@ const aichatSlice = createSlice({
   name: 'aichat',
   initialState,
   reducers: {
-    addChatMessage: (state, action: PayloadAction<ChatCompletionMessage>) => {
-      state.chatMessagesCurrent.push(action.payload);
+    addChatMessage: (state, action: PayloadAction<ChatMessage>) => {
+      state.chatItemsCurrent.push(action.payload);
+    },
+    addModelUpdate: (state, action: PayloadAction<ModelUpdate>) => {
+      state.chatItemsCurrent.push(action.payload);
+    },
+    addNotification: (state, action: PayloadAction<Notification>) => {
+      state.chatItemsCurrent.push(action.payload);
     },
     removeUpdateMessage: (state, action: PayloadAction<number>) => {
       const modelUpdateMessageInfo = getUpdateMessageLocation(
@@ -373,20 +360,17 @@ const aichatSlice = createSlice({
       state[messageListKey].splice(index, 1);
     },
     clearChatMessages: state => {
-      state.chatMessagesPast = [];
-      state.chatMessagesCurrent = [];
+      state.chatItemsPast = [];
+      state.chatItemsCurrent = [];
       state.currentSessionId = undefined;
     },
-    setChatMessagePending: (
-      state,
-      action: PayloadAction<ChatCompletionMessage>
-    ) => {
+    setChatMessagePending: (state, action: PayloadAction<ChatMessage>) => {
       state.chatMessagePending = action.payload;
     },
     clearChatMessagePending: state => (state.chatMessagePending = undefined),
     setNewChatSession: state => {
-      state.chatMessagesPast.push(...state.chatMessagesCurrent);
-      state.chatMessagesCurrent = [];
+      state.chatItemsPast.push(...state.chatItemsCurrent);
+      state.chatItemsCurrent = [];
       state.currentSessionId = undefined;
     },
     setChatSessionId: (state, action: PayloadAction<number>) => {
@@ -520,24 +504,22 @@ const getUpdateMessageLocation = (
   id: number,
   state: AichatState
 ): MessageLocation | undefined => {
-  for (const messageListKey of ['chatMessagesCurrent', 'chatMessagesPast']) {
-    const typedKey = messageListKey as MessageListKey;
-    const messageList = state[typedKey] as ChatCompletionMessage[];
+  for (const messageListKey of messageListKeys) {
+    const messageList = state[messageListKey];
 
     // Only allow removing individual messages that are model updates and error notifications,
     // as we want to retain user and bot message history
     // when requesting model responses within a chat session.
     // If we want to clear all history
     // and start a new session, see clearChatMessages.
-    const messageToRemovePosition = messageList.findIndex(
+    const itemToRemovePosition = messageList.findIndex(
       message =>
-        message.id === id &&
-        (message.role === Role.MODEL_UPDATE ||
-          message.role === Role.ERROR_NOTIFICATION)
+        (isModelUpdate(message) && message.id === id) ||
+        (isNotification(message) && message.id === id)
     );
 
-    if (messageToRemovePosition >= 0) {
-      return {index: messageToRemovePosition, messageListKey: typedKey};
+    if (itemToRemovePosition >= 0) {
+      return {index: itemToRemovePosition, messageListKey};
     }
   }
 };
@@ -554,9 +536,8 @@ export const selectAllFieldsHidden = createSelector(
 );
 
 export const selectAllMessages = (state: {aichat: AichatState}) => {
-  const {chatMessagesPast, chatMessagesCurrent, chatMessagePending} =
-    state.aichat;
-  const messages = [...chatMessagesPast, ...chatMessagesCurrent];
+  const {chatItemsPast, chatItemsCurrent, chatMessagePending} = state.aichat;
+  const messages = [...chatItemsPast, ...chatItemsCurrent];
   if (chatMessagePending) {
     messages.push(chatMessagePending);
   }
@@ -564,22 +545,26 @@ export const selectAllMessages = (state: {aichat: AichatState}) => {
 };
 
 // Actions not to be used outside of this file
-const {startSave} = aichatSlice.actions;
+const {
+  addChatMessage,
+  addModelUpdate,
+  startSave,
+  setChatMessagePending,
+  clearChatMessagePending,
+  setSavedAiCustomizations,
+} = aichatSlice.actions;
 
 registerReducers({aichat: aichatSlice.reducer});
 export const {
-  addChatMessage,
+  addNotification,
   removeUpdateMessage,
   setNewChatSession,
   setChatSessionId,
-  setChatMessagePending,
   clearChatMessages,
-  clearChatMessagePending,
   setShowWarningModal,
   resetToDefaultAiCustomizations,
   setViewMode,
   setStartingAiCustomizations,
-  setSavedAiCustomizations,
   setAiCustomizationProperty,
   setModelCardProperty,
   endSave,

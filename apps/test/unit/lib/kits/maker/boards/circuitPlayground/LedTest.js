@@ -1,9 +1,11 @@
 /** @file Tests for our johnny-five Led wrapper */
-import {expect} from '../../../../../../util/reconfiguredChai';
-import sinon from 'sinon';
 import five from '@code-dot-org/johnny-five';
-import {makeCPBoardStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
+import sinon from 'sinon';
+
 import Led from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Led';
+import {makeCPBoardStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
+
+import {expect} from '../../../../../../util/reconfiguredChai';
 
 describe('Led', function () {
   it('is a five.Led', () => {
