@@ -3,8 +3,6 @@ import {
   LevelPredictSettings,
   PredictQuestionType,
 } from '@cdo/apps/lab2/levelEditors/types';
-import Checkbox from '@cdo/apps/componentLibrary/checkbox';
-import RadioButton from '@cdo/apps/componentLibrary/radioButton';
 import moduleStyles from './predict-question.module.scss';
 
 interface PredictQuestionProps {
@@ -45,26 +43,25 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
   };
 
   const renderMultipleChoice = () => {
-    const OptionElement = predictSettings.isMultiSelect
-      ? Checkbox
-      : RadioButton;
     return predictSettings.multipleChoiceOptions?.map((option, index) => (
-      <div
+      <label
         key={`multiple-choice-${index}`}
-        className={moduleStyles.multipleChoiceContainer}
+        className={moduleStyles.multipleChoiceLabel}
       >
-        <OptionElement
+        <input
+          type={predictSettings.isMultiSelect ? 'checkbox' : 'radio'}
           value={option}
           checked={
             (predictResponse && predictResponse.split(',').includes(option)) ||
             false
           }
           onChange={handleMultiSelectChanged}
-          label={option}
           name={option}
           key={index}
+          className={moduleStyles.multipleChoiceInput}
         />
-      </div>
+        {option}
+      </label>
     ));
   };
 

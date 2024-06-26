@@ -1,4 +1,9 @@
-.multipleChoiceContainer {
-  clear: both;
-  height: fit-content;
+.multipleChoiceLabel {
+  input {
+    margin: 0 4px 0 0;
+  }
+}
+
+.multipleChoiceInput {
+  padding-right: 5px;
 }
