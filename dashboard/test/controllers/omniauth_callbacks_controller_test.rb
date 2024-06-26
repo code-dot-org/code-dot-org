@@ -1721,12 +1721,14 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   describe '#link_accounts' do
     let(:user) {create(:teacher)}
+    let(:admin) {create(:admin)}
 
     let(:user_account_linking_lock_reason) {nil}
 
     before do
       DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(true)
       @controller.stubs(:account_linking_lock_reason).with(user).returns(user_account_linking_lock_reason)
+      @controller.stubs(:account_linking_lock_reason).with(admin).returns(user_account_linking_lock_reason)
     end
 
     [AuthenticationOption::GOOGLE, AuthenticationOption::FACEBOOK, AuthenticationOption::MICROSOFT].each do |provider|
@@ -1802,6 +1804,49 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
               _(flash.alert).must_equal user_account_linking_lock_reason
             end
           end
+        end
+      end
+      context "when #{provider} SSO as admin" do
+        let(:partial_lti_teacher) {create(:teacher)}
+        let(:lti_integration) {create(:lti_integration)}
+        let(:provider_auth_option) do
+          create(
+            :authentication_option,
+            user: admin,
+            email: admin.email,
+            hashed_email: admin.hashed_email,
+            credential_type: provider,
+            authentication_id: SecureRandom.uuid,
+            data: {
+              oauth_token: "some-#{provider}-token",
+              oauth_refresh_token: "some-#{provider}-refresh-token",
+              oauth_token_expiration: '999999'
+            }.to_json
+          )
+        end
+        let(:lti_auth_option) do
+          AuthenticationOption.new(
+            authentication_id: Services::Lti::AuthIdGenerator.new(
+              {iss: lti_integration.issuer, aud: lti_integration.client_id, sub: 'bar'}
+            ).call,
+            credential_type: AuthenticationOption::LTI_V1,
+            email: admin.email,
+          )
+        end
+
+        before do
+          @request.env['omniauth.auth'] = generate_auth_user_hash(provider: provider, uid: provider_auth_option.authentication_id)
+          @request.env['omniauth.params'] = {}
+
+          partial_lti_teacher.authentication_options = [lti_auth_option]
+          PartialRegistration.persist_attributes session, partial_lti_teacher
+        end
+
+        it 'returns flash alert and does not link admin account' do
+          get provider
+
+          assert_equal I18n.t('lti.account_linking.admin_not_allowed'), flash[:alert]
+          assert_redirected_to user_session_path
         end
       end
     end
