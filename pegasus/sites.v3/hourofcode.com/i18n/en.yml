@@ -2419,7 +2419,8 @@
       microbit:
         title: "BBC micro:bit"
         button:
-          see_curriculum: "See available curriculum"
+          see_curriculum:
+            label: "See available curriculum"
             aria_label: "See available micro:bit curriculum"
           learn: "Learn about micro:bit"
       circuit_playground:
@@ -2443,9 +2444,11 @@
       heading: "Curriculum using the micro:bit"
       desc: "Code.org has partnered with the Micro:bit Educational Foundation to offer teachers several resources on using the BBC micro:bit device."
       button:
-        explore_unit: "Explore the unit"
+        explore_unit:
+          label: "Explore the unit"
           aria_label: "Explore the micro:bit Maker Module unit for grade %{grade}"
-        teach: "Prepare to teach"
+        teach:
+          label: "Prepare to teach"
           aria_label: "Prepare to teach the micro:bit Maker Module unit for grade %{grade}"
       creating_apps:
         overline: "Grades 6-12"
@@ -2453,9 +2456,11 @@
         desc: "Explore the role of physical devices in computing. Using App Lab and the BBC micro:bit, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices."
         duration: "25 hours"
         button:
-          explore_unit: "Explore the unit"
+          explore_unit:
+            label: "Explore the unit"
             aria_label: "Explore the Creating Apps with Devices unit"
-          teach: "Prepare to teach"
+          teach:
+            label: "Prepare to teach"
             aria_label: "Prepare to teach the Creating Apps with Devices unit"
       module_grade_2:
         overline: "Grade 2"
