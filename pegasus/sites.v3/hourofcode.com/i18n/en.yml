@@ -2442,6 +2442,11 @@
     curricula_microbit:
       heading: "Curriculum using the micro:bit"
       desc: "Code.org has partnered with the Micro:bit Educational Foundation to offer teachers several resources on using the BBC micro:bit device."
+      button:
+        explore_unit: "Explore the unit"
+          aria_label: "Explore the micro:bit Maker Module unit for grade %{grade}"
+        teach: "Prepare to teach"
+          aria_label: "Prepare to teach the micro:bit Maker Module unit for grade %{grade}"
       creating_apps:
         overline: "Grades 6-12"
         title: "Creating Apps with Devices"
@@ -2453,45 +2458,25 @@
           teach: "Prepare to teach"
             aria_label: "Prepare to teach the Creating Apps with Devices unit"
       module_grade_2:
-        overline: "Grades 2"
+        overline: "Grade 2"
         title: "micro:bit Maker Module"
-        desc: "Learn events, sequencing, loops, data and variables while creating an emotion badge, calming LEDs and a counter with the micro:bit."
+        desc: "Learn events, sequencing, loops, data and variables while creating an emotion badge, calming LEDs, and a counter with the micro:bit."
         duration: "9 hours"
-        button:
-          explore_unit: "Explore the unit"
-            aria_label: "Explore the micro:bit Maker Module unit for grade 2"
-          teach: "Prepare to teach"
-            aria_label: "Prepare to teach the micro:bit Maker Module unit for grade 2"
       module_grade_3:
         overline: "Grade 3"
         title: "micro:bit Maker Module"
-        desc: "Learn conditionals, events, and text inputs while saving sea turtle, creating rock paper scissors and making an activity picker with the micro:bit."
+        desc: "Learn conditionals, events, and text inputs while saving sea turtles, creating a rock paper scissors game, and making an activity picker with the micro:bit."
         duration: "7 hours"
-        button:
-          explore_unit: "Explore the unit"
-            aria_label: "Explore the micro:bit Maker Module unit for grade 3"
-          teach: "Prepare to teach"
-            aria_label: "Prepare to teach the micro:bit Maker Module unit for grade 3"
       module_grade_4:
         overline: "Grade 4"
         title: "micro:bit Maker Module"
-        desc: "Learn events, designing for accessibility, conditionals and functions creating a sensory toy, simple door alarm, and tilt alarm with the micro:bit."
+        desc: "Learn events, designing for accessibility, conditionals, and functions creating a sensory toy, simple door alarm, and tilt alarm with the micro:bit."
         duration: "9 hours"
-        button:
-          explore_unit: "Explore the unit"
-            aria_label: "Explore the micro:bit Maker Module unit for grade 4"
-          teach: "Prepare to teach"
-            aria_label: "Prepare to teach the micro:bit Maker Module unit for grade 4"
       module_grade_5:
         overline: "Grade 5"
         title: "micro:bit Maker Module"
-        desc: "Learn events, variables. conditionals, and sounds while creating a step counter, pet, and thermometer with the micro:bit."
+        desc: "Learn events, variables, conditionals, and sounds while creating a step counter, pet, and thermometer with the micro:bit."
         duration: "9 hours"
-        button:
-          explore_unit: "Explore the unit"
-            aria_label: "Explore the micro:bit Maker Module unit for grade 5"
-          teach: "Prepare to teach"
-            aria_label: "Prepare to teach the micro:bit Maker Module unit for grade 5"
     curricula_circuit_playground:
       heading: "Curriculum using the Circuit Playground"
       creating_apps:
@@ -2502,7 +2487,7 @@
         button: "Explore the unit"
         aria_label: "Explore the Creating Apps with Devices unit"
       teach_creating_apps:
-        overline: "6-12 Teacher"
+        overline: "6-12 Teachers"
         title: "Teaching Creating Apps with Devices"
         desc: "Self-paced online professional learning experience designed to prepare educators to get started teaching the Creating Apps with Devices unit."
         note: "**Note:** A circuit playground device is required to engage with the activities in this professional learning experience."
