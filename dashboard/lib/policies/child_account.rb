@@ -170,6 +170,7 @@ class Policies::ChildAccount
 
   # Checks if the user will not be old enough by the lockout date
   def self.underage?(user)
+    return false unless user.student?
     return false unless user.birthday
 
     policy = state_policy(user)
@@ -197,6 +198,7 @@ class Policies::ChildAccount
   # Whether or not the user can create/link new personal logins
   def self.can_link_new_personal_account?(user)
     return true unless user.student?
+    return false unless user.us_state && user.country_code
     return true unless user.birthday
     return true unless underage?(user)
 

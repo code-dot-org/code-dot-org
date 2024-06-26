@@ -185,7 +185,7 @@ class ManageLinkedAccounts extends React.Component {
       this.shouldDisableConnectButton
     );
     return (
-      <div>
+      <div style={styles.container}>
         <hr />
         <h2 style={styles.header}>{i18n.manageLinkedAccounts()}</h2>
         <table style={styles.table}>

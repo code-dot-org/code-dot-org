@@ -196,10 +196,28 @@ And(/^I create a student in the eu named "([^"]*)"$/) do |name|
   )
 end
 
-And(/^I create a teacher( who has never signed in)? named "([^"]*)"( and go home)?$/) do |new_account, name, home|
+And(/^I create a teacher( who has never signed in)? named "([^"]*)"( after CPA exception)?( before CPA exception)?( and go home)?$/) do |new_account, name, after_cpa_exception, before_cpa_exception, home|
   sign_in_count = new_account ? 0 : 2
 
-  create_user(name, age: '21+', user_type: 'teacher', email_preference_opt_in: 'yes', sign_in_count: sign_in_count)
+  user_opts = {
+    user_type: 'teacher',
+    age: '21+',
+    email_preference_opt_in: 'yes',
+    sign_in_count: sign_in_count,
+  }
+
+  # See Cpa::CREATED_AT_EXCEPTION_DATE
+  cpa_exception_date = DateTime.parse('2024-05-26T00:00:00MDT')
+
+  if after_cpa_exception
+    user_opts[:created_at] = cpa_exception_date
+  end
+
+  if before_cpa_exception
+    user_opts[:created_at] = cpa_exception_date - 1.second
+  end
+
+  create_user(name, **user_opts)
   navigate_to replace_hostname('http://studio.code.org') if home
 end
 

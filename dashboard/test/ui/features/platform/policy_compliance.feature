@@ -155,6 +155,14 @@ Feature: Policy Compliance and Parental Permission
     Given I create a young student in Colorado who has never signed in named "Sally Student" before CPA exception and go home
     Given I am on "http://studio.code.org/home"
 
+  Scenario: Teacher should be able to connect a third-party account even without a state specified
+    Given I create a teacher who has never signed in named "Amstrad Teacher" after CPA exception and go home
+
+    # Find the unlocked buttons to connect an account
+    Given I am on "http://studio.code.org/users/edit?cpa-partial-lockout=1"
+    Then I wait to see "#manage-linked-accounts"
+    Then I wait until "form[action=\'/users/auth/google_oauth2?action=connect\'] button" is not disabled
+
   Scenario: Student should not be able to connect a third-party account until their account is unlocked
     Given I create a young student in Colorado who has never signed in named "Coco Student" after CPA exception and go home
 
