@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
@@ -279,17 +279,21 @@ export const assignToSection = (
       (courseVersionId && section.courseVersionId !== courseVersionId) ||
       (unitId && section.unitId !== unitId)
     ) {
-      analyticsReporter.sendEvent(EVENTS.CURRICULUM_ASSIGNED, {
-        sectionName: section.name,
-        sectionId,
-        sectionLoginType: section.loginType,
-        previousUnitId: section.unitId,
-        previousCourseId: section.courseOfferingId,
-        previousCourseVersionId: section.courseVersionId,
-        newUnitId: unitId,
-        newCourseId: courseOfferingId,
-        newCourseVersionId: courseVersionId,
-      });
+      analyticsReporter.sendEvent(
+        EVENTS.CURRICULUM_ASSIGNED,
+        {
+          sectionName: section.name,
+          sectionId,
+          sectionLoginType: section.loginType,
+          previousUnitId: section.unitId,
+          previousCourseId: section.courseOfferingId,
+          previousCourseVersionId: section.courseVersionId,
+          newUnitId: unitId,
+          newCourseId: courseOfferingId,
+          newCourseVersionId: courseVersionId,
+        },
+        PLATFORMS.BOTH
+      );
     }
 
     dispatch(beginEditingSection(sectionId, true));
