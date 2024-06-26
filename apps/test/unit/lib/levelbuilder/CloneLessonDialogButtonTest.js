@@ -1,6 +1,8 @@
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import React from 'react';
+
 import CloneLessonDialogButton from '@cdo/apps/lib/levelbuilder/CloneLessonDialogButton';
+
 import {expect} from '../../../util/reconfiguredChai';
 
 describe('CloneLessonDialogButton', () => {

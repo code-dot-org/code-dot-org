@@ -1,5 +1,6 @@
-import {expect} from '../../util/reconfiguredChai';
 import {throwIfSerializedAnimationListIsInvalid} from '@cdo/apps/p5lab/shapes';
+
+import {expect} from '../../util/reconfiguredChai';
 
 var testUtils = require('../../util/testUtils');
 

@@ -1,7 +1,17 @@
-import {assert, expect} from '../../../../util/reconfiguredChai';
-import React from 'react';
 import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import $ from 'jquery';
+import React from 'react';
+import {Provider} from 'react-redux';
+import sinon from 'sinon';
+
+import {
+  PublishedState,
+  InstructionType,
+  InstructorAudience,
+  ParticipantAudience,
+} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import {UnconnectedCourseEditor as CourseEditor} from '@cdo/apps/lib/levelbuilder/course-editor/CourseEditor';
+import createResourcesReducer from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import {
   stubRedux,
   restoreRedux,
@@ -9,17 +19,9 @@ import {
   registerReducers,
 } from '@cdo/apps/redux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import createResourcesReducer from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
-import {Provider} from 'react-redux';
-import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
-import $ from 'jquery';
-import {
-  PublishedState,
-  InstructionType,
-  InstructorAudience,
-  ParticipantAudience,
-} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+
+import {assert, expect} from '../../../../util/reconfiguredChai';
 import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
 
 const defaultProps = {

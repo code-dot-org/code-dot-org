@@ -1,10 +1,12 @@
-import React from 'react';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import React from 'react';
 import sinon from 'sinon';
-import {expect} from '../../../../util/reconfiguredChai';
-import {ChartType} from '@cdo/apps/storage/dataBrowser/dataUtils';
+
 import GoogleChart from '@cdo/apps/applab/GoogleChart';
+import {ChartType} from '@cdo/apps/storage/dataBrowser/dataUtils';
 import GoogleChartWrapper from '@cdo/apps/storage/dataBrowser/dataVisualizer/GoogleChartWrapper';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('GoogleChartWrapper', () => {
   describe('updateChart', () => {
