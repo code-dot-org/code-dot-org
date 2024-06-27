@@ -164,12 +164,6 @@ $arrow-size: 1.5rem;
     }
   }
 
-  @media (min-width: 1024px) and (max-width: 1268px) {
-    #hamburger-contents > div:nth-child(-n+4) {
-      display: none !important;
-    }
-  }
-
   @media(max-width: 1023px) {
     &.show-mobile,
     .show-mobile {

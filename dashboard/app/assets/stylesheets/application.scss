@@ -230,6 +230,13 @@ img.video_thumbnail {
     }
   }
 
+  @media (min-width: 1024px) and (max-width: 1268px) {
+    &.hide-small-desktop,
+    .hide-small-desktop {
+      display: none !important;
+    }
+  }
+
   .headerlinks {
     margin-inline-start: 1rem;
     display: flex;
@@ -252,12 +259,6 @@ img.video_thumbnail {
         border-bottom: solid 2px $orange;
         margin-top: 3px;
         padding-bottom: 2px;
-      }
-
-      @media (min-width: 1024px) and (max-width: 1268px) {
-        &.hide-small-desktop {
-          display: none;
-        }
       }
     }
 

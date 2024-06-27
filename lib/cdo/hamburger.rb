@@ -59,7 +59,7 @@ class Hamburger
       # We want to show the pegasus options.  They're in the hamburger for desktop
       # if they didn't fit on the header, or they're just in it for mobile if they did.
       show_pegasus_options =
-        (options[:user_type] == "teacher" || options[:user_type] == "student") ? SHOW_ALWAYS : SHOW_SMALL_DESKTOP
+        (options[:user_type] == "teacher" || options[:user_type] == "student" || options[:level]) ? SHOW_ALWAYS : SHOW_SMALL_DESKTOP
     end
 
     # Do we show hamburger on all widths, only mobile, or not at all?
@@ -89,6 +89,7 @@ class Hamburger
   def self.get_hamburger_contents(options)
     loc_prefix = options[:loc_prefix]
     is_teacher_or_student = options[:user_type] == "teacher" || options[:user_type] == "student"
+    hide_small_desktop = is_teacher_or_student || options[:level]
 
     # Teacher-specific hamburger dropdown links.
     teacher_entries = [
@@ -192,7 +193,7 @@ class Hamburger
     entries << {
       title: I18n.t("#{loc_prefix}learn"),
       url: CDO.code_org_url("/students"),
-      class: visibility[:show_pegasus_options],
+      class: visibility[:show_pegasus_options] + (hide_small_desktop ? "" : " hide-small-desktop"),
       id: "learn"
     }
 
@@ -201,13 +202,13 @@ class Hamburger
       title: I18n.t("#{loc_prefix}teach"),
       id: "educate_entries",
       subentries: educate_entries.each {|e| e[:class] = visibility[:show_pegasus_options]},
-      class: visibility[:show_pegasus_options]
+      class: visibility[:show_pegasus_options] + (hide_small_desktop ? "" : " hide-small-desktop")
     }
 
     entries << {
       title: I18n.t("#{loc_prefix}districts"),
       url: CDO.code_org_url("/administrators"),
-      class: visibility[:show_pegasus_options],
+      class: visibility[:show_pegasus_options] + (hide_small_desktop ? "" : " hide-small-desktop"),
       id: "districts"
     }
 
