@@ -132,10 +132,11 @@ end
 puts "Discovered #{records.length} new event records. Add a '1' as an argument to write them."
 
 KEYS = [:created_at, :updated_at].freeze
+
+output = 'cpa-backfill-records-written.json'
 if ARGV[0] == '1'
   puts
   puts "Writing"
-  puts
 
   records.each do |data|
     KEYS.each do |key|
@@ -143,16 +144,20 @@ if ARGV[0] == '1'
     end
     DASHBOARD_DB[:cap_user_events] << data
   end
-else
-  puts
-  puts "Writing 'cpa-backfill-records.json' with the records we intend to write."
-  puts "  Refer and verify this file and then re-run the script and append '1' as an argument to commit these records."
-  puts
 
-  # Write out the record information we intend to write
-  File.open('cpa-backfill-records.json', 'w+') do |f|
-    records.each do |data|
-      f.write(JSON.pretty_generate(data))
-    end
+  puts
+  puts "Writing '#{output}' with the records we wrote."
+  puts "  Refer and verify this file afterward and compare with the one from the original run."
+else
+  output = 'cpa-backfill-records.json'
+  puts
+  puts "Writing '#{output}' with the records we intend to write."
+  puts "  Refer and verify this file and then re-run the script and append '1' as an argument to commit these records."
+end
+
+# Write out the record information we intend to write
+File.open(output, 'w+') do |f|
+  records.each do |data|
+    f.write(JSON.pretty_generate(data))
   end
 end
