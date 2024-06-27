@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
+import i18n from '@cdo/locale';
 
 import {FeedbackData} from '../interactionsApi';
 
@@ -19,16 +20,22 @@ const AssistantMessageFeedback: React.FC<AssistantMessageProps> = ({
     thumbsUp: false,
     thumbsDown: false,
   });
+  const [detailsOpen, setDetailsOpen] = useState<boolean>(false);
+
+  const handleIconClick = (thumbsUp: boolean, thumbsDown: boolean) => {
+    setFeedbackState({thumbsUp: thumbsUp, thumbsDown: thumbsDown});
+    setDetailsOpen(thumbsUp || thumbsDown);
+  };
 
   return (
     <div className={style.feedbackIcons}>
-      Was this helpful?
+      {i18n.aiFeedbackQuestion()}
       <Button
         color={buttonColors.black}
         disabled={false}
         icon={{iconName: 'thumbs-up', iconStyle: 'solid'}}
         isIconOnly={true}
-        onClick={() => setFeedbackState({thumbsUp: true, thumbsDown: false})}
+        onClick={() => handleIconClick(true, false)}
         size="xs"
         type={feedbackState.thumbsUp ? 'primary' : 'tertiary'}
       />
@@ -37,14 +44,15 @@ const AssistantMessageFeedback: React.FC<AssistantMessageProps> = ({
         disabled={false}
         icon={{iconName: 'thumbs-down', iconStyle: 'solid'}}
         isIconOnly={true}
-        onClick={() => setFeedbackState({thumbsUp: false, thumbsDown: true})}
+        onClick={() => handleIconClick(false, true)}
         size="xs"
         type={feedbackState.thumbsDown ? 'primary' : 'tertiary'}
       />
-      {(feedbackState.thumbsUp || feedbackState.thumbsDown) && (
+      {detailsOpen && (
         <AssistantMessageFeedbackDetails
           feedbackData={feedbackState}
           messageId={messageId}
+          onClose={() => setDetailsOpen(false)}
         />
       )}
     </div>
