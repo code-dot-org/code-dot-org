@@ -106,7 +106,6 @@ class Services::CurriculumPdfs::ResourcesTest < ActiveSupport::TestCase
     assert_equal @drive_file_id, Services::CurriculumPdfs.url_to_id(@drive_url)
   end
 
-  # This is the test that is failing - it is returning a google form
   test 'resources that are google forms will be ignored' do
     resource = create(:resource, url: "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe3_rxy0l_KEOg/view", name: "fake_form")
     @fake_service.expects(:export_file).never
