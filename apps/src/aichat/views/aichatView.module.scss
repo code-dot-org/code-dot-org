@@ -20,6 +20,7 @@ $column-min-width: 200px;
   display: flex;
   flex-direction: column;
   margin: 2px;
+  background: $light_gray_50;
 
   .instructionsArea {
     width: 30%;
@@ -48,11 +49,10 @@ $column-min-width: 200px;
 .labCoreContainer {
   display: flex;
   flex: 1;
-  gap: 2px;
+  gap: 16px;
   overflow: auto;
 }
 
 .aichatViewButton {
   margin-right: 5px;
 }
-
