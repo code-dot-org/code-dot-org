@@ -484,7 +484,7 @@ class ScriptsControllerTest < ActionController::TestCase
       evil_unit = Unit.new(name: name)
       evil_unit.save(validate: false)
       assert_raise ArgumentError do
-        delete :destroy, params: {id: evil_unit.id}
+        delete :destroy, params: {id: evil_unit.name}
       end
     end
   end
@@ -496,7 +496,7 @@ class ScriptsControllerTest < ActionController::TestCase
     unit_to_delete = create :script
     delete :destroy, params: {id: unit_to_delete.name}
 
-    assert_response :success
+    assert_response :found
     assert_nil Unit.find_by(name: unit_to_delete.name)
   end
 
