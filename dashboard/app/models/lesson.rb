@@ -299,7 +299,7 @@ class Lesson < ApplicationRecord
         lockable: !!lockable,
         hasLessonPlan: has_lesson_plan,
         numberedLesson: numbered_lesson?,
-        levels: cached_levels.map {|sl| sl.summarize(false, for_edit: for_edit)},
+        levels: cached_levels.map {|sl| sl.summarize(false, for_edit: for_edit, unit_group: unit_group)},
         description_student: description_student,
         description_teacher: description_teacher,
         unplugged: unplugged,

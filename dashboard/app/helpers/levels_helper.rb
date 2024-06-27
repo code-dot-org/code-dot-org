@@ -18,6 +18,7 @@ module LevelsHelper
 
   def build_script_level_path(script_level, params = {})
     params ||= {}
+    unit_group = params[:unit_group]
     if script_level.script.name == Unit::HOC_NAME
       hoc_chapter_path(script_level.chapter, params)
     elsif script_level.script.name == Unit::FLAPPY_NAME
@@ -37,6 +38,8 @@ module LevelsHelper
     elsif script_level.bonus
       query_params = params.merge(level_name: script_level.level.name)
       script_lesson_extras_path(script_level.script.name, script_level.lesson.relative_position, query_params)
+    elsif unit_group
+      course_script_lesson_script_level_path(unit_group, script_level.script, script_level.lesson, script_level, params)
     else
       script_lesson_script_level_path(script_level.script, script_level.lesson, script_level, params)
     end

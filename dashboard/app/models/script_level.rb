@@ -308,7 +308,7 @@ class ScriptLevel < ApplicationRecord
     build_script_level_path(self)
   end
 
-  def summarize(include_prev_next = true, for_edit: false, user_id: nil)
+  def summarize(include_prev_next = true, for_edit: false, user_id: nil, unit_group: nil)
     ActiveRecord::Base.connected_to(role: :reading) do
       ids = level_ids
       active_id = oldest_active_level.id
@@ -328,8 +328,8 @@ class ScriptLevel < ApplicationRecord
         icon: level.icon,
         is_concept_level: level.concept_level?,
         title: level_display_text,
-        url: build_script_level_url(self),
-        path: build_script_level_path(self),
+        url: build_script_level_url(self, {unit_group: unit_group}),
+        path: build_script_level_path(self, {unit_group: unit_group}),
         freePlay: level.try(:free_play) == "true",
         bonus: bonus,
         display_as_unplugged: level.display_as_unplugged?,
