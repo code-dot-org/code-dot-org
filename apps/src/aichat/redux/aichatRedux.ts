@@ -12,6 +12,7 @@ import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {registerReducers} from '@cdo/apps/redux';
 import {RootState} from '@cdo/apps/types/redux';
+import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
@@ -249,11 +250,29 @@ export const onSaveNoop =
 
 // Thunk called when a save has failed.
 export const onSaveFail =
-  (e: Error) => (dispatch: AppDispatch, getState: () => RootState) => {
-    const isProfanityError = e.message.includes('profanity');
-    const errorMessage = isProfanityError
-      ? 'Profanity detected in system prompt or retrieval context(s) and cannot be updated. Please try again.'
-      : 'Error updating project. Please try again.';
+  (e: NetworkError) => (dispatch: AppDispatch, getState: () => RootState) => {
+    const response = e.response;
+    console.log('response', response);
+    const changedProperties = findChangedProperties(
+      getState().aichat.savedAiCustomizations,
+      getState().aichat.currentAiCustomizations
+    );
+    let flaggedProperties = '';
+    if (
+      changedProperties.includes('systemPrompt') &&
+      changedProperties.includes('retrievalContexts')
+    ) {
+      flaggedProperties = 'system prompt and retrieval contexts';
+    } else if (changedProperties.includes('systemPrompt')) {
+      flaggedProperties = 'system prompt';
+    } else if (changedProperties.includes('retrievalContexts')) {
+      flaggedProperties = 'retrieval contexts';
+    }
+    const body = await response.json();
+    const errorMessage =
+      body?.details?.profaneWords?.length > 0
+        ? `Profanity detected in the ${flaggedProperties} and cannot be updated. Please try again.`
+        : 'Error updating project. Please try again.';
     dispatch(
       addNotification({
         id: getNewMessageId(),

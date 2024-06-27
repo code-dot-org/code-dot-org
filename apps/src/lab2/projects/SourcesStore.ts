@@ -6,6 +6,7 @@
 import {ProjectSources, ProjectType} from '../types';
 import * as sourcesApi from './sourcesApi';
 const {getTabId} = require('@cdo/apps/utils');
+import {NetworkError} from '@cdo/apps/util/HttpClient';
 
 export interface SourcesStore {
   load: (key: string) => Promise<ProjectSources>;
@@ -69,15 +70,11 @@ export class RemoteSourcesStore implements SourcesStore {
       this.firstSaveTime = this.firstSaveTime || timestamp;
       this.currentVersionId = versionId;
     } else {
-      const reader = await response.json();
-      const details = reader.details;
-      const statusText =
-        details && details.profaneWords
-          ? `${response.statusText} (profanity)`
-          : response.statusText;
-      throw new Error(response.status + ' ' + statusText);
+      throw new NetworkError(
+        response.status + ' ' + response.statusText,
+        response
+      );
     }
-
     return response;
   }
 
