@@ -2,12 +2,9 @@ import PropTypes from 'prop-types';
 import React, {useCallback} from 'react';
 
 import {StrongText} from '@cdo/component-library';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import Button from '@cdo/apps/templates/Button';
+import Button from '../../Button';
 import i18n from '@cdo/locale';
 
-import AccessibleDialog from '../../AccessibleDialog';
 
 import styles from './coteacher-settings.module.scss';
 
@@ -38,9 +35,6 @@ export default function RemoveCoteacherDialog({
         method: 'DELETE',
       }).then(response => {
         if (response.ok) {
-          analyticsReporter.sendEvent(EVENTS.COTEACHER_REMOVED, {
-            sectionId: sectionId,
-          });
           removeSavedCoteacher(coteacher.id);
         }
         closeRemoveDialog();
@@ -51,10 +45,7 @@ export default function RemoveCoteacherDialog({
 
   return (
     !!coteacherToRemove && (
-      <AccessibleDialog
-        onClose={closeRemoveDialog}
-        className={styles.removeDialog}
-      >
+      <>
         <StrongText className={styles.removeDialogTitle}>
           {i18n.coteacherRemoveDialogHeader({
             email: coteacherToRemove.instructorEmail,
@@ -77,7 +68,7 @@ export default function RemoveCoteacherDialog({
             className={styles.removeDialogRemove}
           />
         </div>
-      </AccessibleDialog>
+      </>
     )
   );
 }

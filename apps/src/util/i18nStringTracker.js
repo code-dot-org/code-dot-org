@@ -1,11 +1,6 @@
-import experiments from '@cdo/apps/util/experiments';
-import {getI18nStringTrackerWorker} from '@cdo/apps/util/i18nStringTrackerWorker';
+import {getI18nStringTrackerWorker} from '../../src/util/i18nStringTrackerWorker';
 
 export default function localeWithI18nStringTracker(locale, source) {
-  if (!experiments.isEnabled(experiments.I18N_TRACKING)) {
-    return locale;
-  }
-
   const localeWithTracker = {};
   // Iterates each function in the given locale object and creates a wrapper function.
   Object.keys(locale).forEach(function (stringKey, index) {

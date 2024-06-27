@@ -6,7 +6,7 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from './FontAwesome';
 import classNames from 'classnames';
 import moduleStyles from './button.module.scss';
 

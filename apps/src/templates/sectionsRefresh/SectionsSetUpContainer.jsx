@@ -4,25 +4,13 @@ import React, {useState, useCallback, useRef} from 'react';
 import {Provider} from 'react-redux';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {showVideoDialog} from '@cdo/apps/code-studio/videos';
-import {
-  BodyTwoText,
-  Heading1,
-  Heading3,
-} from '@cdo/component-library';
-import InfoHelpTip from '@cdo/apps/lib/ui/InfoHelpTip';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
-import Button from '@cdo/apps/templates/Button';
-import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
-import CoteacherSettings from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/CoteacherSettings';
-import {navigateToHref} from '@cdo/apps/utils';
+import CoteacherSettings from '../../templates/sectionsRefresh/coteacherSettings/CoteacherSettings';
+import {BodyTwoText, Heading1, Heading3} from '@cdo/component-library';
+import Button from '../../templates/Button';
 import i18n from '@cdo/locale';
 
-import AdvancedSettingToggles from './AdvancedSettingToggles';
 import {getCoteacherMetricInfoFromSection} from './coteacherSettings/CoteacherUtils';
-import CurriculumQuickAssign from './CurriculumQuickAssign';
 import SingleSectionSetUp from './SingleSectionSetUp';
 
 import moduleStyles from './sections-refresh.module.scss';
@@ -122,17 +110,6 @@ export default function SectionsSetUpContainer({
     course offerings controller function to populate previousVersionYear and newVersionYear.
     */
     if (isNewSection) {
-      analyticsReporter.sendEvent(EVENTS.COMPLETED_EVENT, {
-        sectionUnitId: section.course?.unitId,
-        sectionCurriculumLocalizedName: section.course?.displayName,
-        sectionCurriculum: section.course?.courseOfferingId, //this is course Offering id
-        sectionCurriculumVersionYear: section.course?.versionYear,
-        sectionGrade: section.grade ? section.grade[0] : null,
-        sectionLockSelection: section.restrictSection,
-        sectionName: section.name,
-        sectionPairProgramSelection: section.pairingAllowed,
-        flowVersion: NEW,
-      });
     }
     /*
     We want to send a 'curriculum assigned' event if this is not a new section
@@ -148,20 +125,6 @@ export default function SectionsSetUpContainer({
         initialSection &&
         section.course?.unitId !== initialSection.course?.unitId)
     ) {
-      analyticsReporter.sendEvent(EVENTS.CURRICULUM_ASSIGNED, {
-        sectionName: section.name,
-        sectionId: section.id,
-        sectionLoginType: section.loginType,
-        previousUnitId: initialSection.course?.unitId,
-        previousCourseId: initialSection.course?.courseOfferingId,
-        previousCourseVersionId: initialSection.course?.versionId,
-        previousVersionYear: null,
-        newUnitId: section.course?.unitId,
-        newCourseId: section.course?.courseOfferingId,
-        newCourseVersionId: section.course?.courseVersionId,
-        newVersionYear: null,
-        flowVersion: NEW,
-      });
     }
   };
 
@@ -226,12 +189,7 @@ export default function SectionsSetUpContainer({
       })
       .then(data => {
         recordSectionSetupEvent(section);
-        coteachersToAdd.forEach(() => {
-          analyticsReporter.sendEvent(
-            EVENTS.COTEACHER_INVITE_SENT,
-            getCoteacherMetricInfoFromSection(section)
-          );
-        });
+        coteachersToAdd.forEach(() => {});
         // Redirect to the sections list.
         let redirectUrl = window.location.origin + '/home';
         if (createAnotherSection) {
@@ -239,7 +197,6 @@ export default function SectionsSetUpContainer({
         } else if (shouldShowCelebrationDialogOnRedirect) {
           redirectUrl += '?showSectionCreationDialog=true';
         }
-        navigateToHref(redirectUrl);
       })
       .catch(err => {
         setIsSaveInProgress(false);
@@ -247,20 +204,7 @@ export default function SectionsSetUpContainer({
       });
   };
 
-  const onURLClick = () => {
-    showVideoDialog(
-      {
-        autoplay: true,
-        download:
-          'https://videos.code.org/levelbuilder/gettingstarted-creatingclasssection_sm-mp4.mp4',
-        enable_fallback: true,
-        key: 'Gettting_Started_ClassSection',
-        name: 'Creating a Class Section',
-        src: 'https://www.youtube-nocookie.com/embed/4Wugxc80fNU/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=yPWQfa4CHbw&wmode=transparent',
-      },
-      true
-    );
-  };
+  const onURLClick = () => {};
 
   const renderChildAccountPolicyNotification = () => {
     const isEmailLoggin = queryParams('loginType') === 'email';
@@ -271,15 +215,6 @@ export default function SectionsSetUpContainer({
     if (isCapCountry && isStudentSection && isEmailLoggin) {
       return (
         <Provider store={getStore()}>
-          <Notification
-            type={NotificationType.warning}
-            notice=""
-            details={i18n.childAccountPolicy_CreateSectionsWarning()}
-            detailsLink="https://support.code.org/hc/en-us/articles/15465423491085-How-do-I-obtain-parent-or-guardian-permission-for-student-accounts"
-            detailsLinkNewWindow={true}
-            detailsLinkText={i18n.childAccountPolicy_LearnMore()}
-            dismissible={false}
-          />
         </Provider>
       );
     } else {
@@ -320,16 +255,7 @@ export default function SectionsSetUpContainer({
     return renderExpandableSection(
       'uitest-expandable-settings',
       () => i18n.advancedSettings(),
-      () => (
-        <AdvancedSettingToggles
-          updateSection={(key, val) => updateSection(0, key, val)}
-          section={sections[0]}
-          hasLessonExtras={sections[0].course.hasLessonExtras}
-          hasTextToSpeech={sections[0].course.hasTextToSpeech}
-          aiTutorAvailable={aiTutorAvailable}
-          label={i18n.pairProgramming()}
-        />
-      ),
+      () => <div />,
       advancedSettingsOpen,
       toggleAdvancedSettingsOpen
     );
@@ -345,10 +271,7 @@ export default function SectionsSetUpContainer({
       () => (
         <div>
           {i18n.coteacherAdd()}
-          <InfoHelpTip
-            id={'coteacher-toggle-info'}
-            content={i18n.coteacherAddTooltip()}
-          />
+          <div />
         </div>
       ),
       () => (
@@ -398,14 +321,6 @@ export default function SectionsSetUpContainer({
         section={sections[0]}
         updateSection={(key, val) => updateSection(0, key, val)}
         isNewSection={isNewSection}
-      />
-
-      <CurriculumQuickAssign
-        id="uitest-curriculum-quick-assign"
-        isNewSection={isNewSection}
-        updateSection={(key, val) => updateSection(0, key, val)}
-        sectionCourse={sections[0].course}
-        initialParticipantType={sections[0].participantType}
       />
 
       <div

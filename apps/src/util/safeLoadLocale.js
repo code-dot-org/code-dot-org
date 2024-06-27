@@ -8,8 +8,9 @@
  *     "applab_locale", etc.
  */
 export default function safeLoadLocale(localeKey) {
-  if (window.locales && window.locales[localeKey]) {
-    return window.locales[localeKey];
+  console.log(global.locales);
+  if (global.locales && global.locales[localeKey]) {
+    return global.locales[localeKey];
   } else {
     console.warn(
       'Translations must be loaded into the global scope before access. ' +

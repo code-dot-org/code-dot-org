@@ -5,7 +5,7 @@ import {
   identify,
   setUserId,
 } from '@amplitude/analytics-browser';
-import logToCloud from '@cdo/apps/logToCloud';
+import logToCloud from '../../logToCloud';
 import {
   getEnvironment,
   isProductionEnvironment,

@@ -4,7 +4,7 @@ import React from 'react';
 import ReactTooltip from 'react-tooltip';
 
 import {StrongText, BodyTwoText} from '@cdo/component-library';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from '../../../templates/FontAwesome';
 import i18n from '@cdo/locale';
 
 import styles from './coteacher-settings.module.scss';

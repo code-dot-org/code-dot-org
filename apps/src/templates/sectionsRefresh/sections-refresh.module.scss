@@ -2,11 +2,6 @@
 @import "font.scss";
 @import '@cdo/apps/componentLibrary/common/styles/mixins';
 
-// In order to make typography work correctly with em units. (Design system is build for 16px default font size)
-body {
-  font-size: 16px;
-}
-
 .containerWithMarginTop {
   margin-top: 40px;
 }
