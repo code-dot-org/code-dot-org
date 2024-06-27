@@ -54,7 +54,7 @@ const ControlButtons: React.FunctionComponent = () => {
         onClick={() => handleRun(false)}
         disabled={loading}
         iconLeft={{iconStyle: 'solid', iconName: 'play'}}
-        className={moduleStyles.controlButton}
+        className={moduleStyles.firstControlButton}
         size={'s'}
       />
       <Button
@@ -63,7 +63,6 @@ const ControlButtons: React.FunctionComponent = () => {
         disabled={loading}
         iconLeft={{iconStyle: 'solid', iconName: 'flask'}}
         color={'black'}
-        className={moduleStyles.controlButton}
         size={'s'}
       />
       <Button
@@ -71,7 +70,7 @@ const ControlButtons: React.FunctionComponent = () => {
         onClick={hasNextLevel ? onContinue : onFinish}
         disabled={loading || isFinished}
         color={'purple'}
-        className={moduleStyles.controlButton}
+        className={moduleStyles.navigationButton}
         size={'s'}
       />
     </div>
