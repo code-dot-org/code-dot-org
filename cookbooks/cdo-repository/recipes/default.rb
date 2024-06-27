@@ -64,8 +64,7 @@ end
 
 # Create sparse checkout of staging content directories on production-daemon
 # for the purpose of content seeding.
-if node.chef_environment == 'adhoc'
-  # if node.name == 'production-daemon'
+if node.name == 'production-daemon'
   worktree_path = File.join(home_path, 'staging')
 
   execute 'create worktree for managing deployment scripts' do
@@ -75,6 +74,9 @@ if node.chef_environment == 'adhoc'
     group node[:user]
     not_if {File.exist? worktree_path}
   end
+
+  # TODO: implement a sparse checkout for added assurance that staging code
+  # is not making its way into production.
 
   # execute 'initiate sparse checkout of staging worktree' do
   #   command "git sparse-checkout dashboard/config"
