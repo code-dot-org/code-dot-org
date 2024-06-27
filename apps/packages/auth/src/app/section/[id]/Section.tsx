@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 
-import SectionsSetUpContainer from '../../../../../src/templates/sectionsRefresh/SectionsSetUpContainer';
+import SectionsSetUpContainer from '../../../../../../src/templates/sectionsRefresh/SectionsSetUpContainer';
 
 interface SectionProps {
   section: any;

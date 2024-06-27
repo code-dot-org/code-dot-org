@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 
-import {GET_SECTION_QUERY} from '@cdo/app/sections/page';
+import {GET_SECTION_QUERY} from '@cdo/app/section/[id]/page';
 import {Button} from '@cdo/component-library';
 import client from '@cdo/services/gql/apollo';
 

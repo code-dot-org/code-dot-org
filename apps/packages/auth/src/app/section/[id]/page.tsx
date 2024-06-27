@@ -1,7 +1,7 @@
 import {gql} from '@apollo/client';
 import React from 'react';
 
-import Section from '@cdo/app/sections/Section';
+import Section from '@cdo/app/section/[id]/Section';
 import client from '@cdo/services/gql/apollo';
 
 export const GET_SECTION_QUERY = gql`
@@ -25,19 +25,19 @@ export const GET_SECTION_QUERY = gql`
   }
 `;
 
-export default async function Page() {
+export default async function Page({params}: {params: {id: string}}) {
   const {loading, error, data} = await client.query({
     query: GET_SECTION_QUERY,
-    variables: {id: 16},
+    variables: {id: params.id},
   });
 
   if (loading) return <p>Loading</p>;
   if (error) return `Error! ${error}`;
 
   return (
-      <div>
-        <Section section={data.section}/>
-        <pre>section {JSON.stringify(data.section, null, 2)}</pre>
-      </div>
+    <div>
+      <Section section={data.section} />
+      <pre>section {JSON.stringify(data.section, null, 2)}</pre>
+    </div>
   );
 }
