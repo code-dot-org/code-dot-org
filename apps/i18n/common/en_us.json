@@ -2686,7 +2686,6 @@
   "startOver": "Start Over",
   "startOverTitle": "Are you sure you want to start over?",
   "startOverBody": "This will reset the puzzle to its start state and reset all the data you've added or changed.",
-  "startOverAichatModelCustomizations": "This will reset this level to its start state and remove any model customizations or model card information you’ve added or changed.",
   "startOverWorkspace": "This will reset the workspace to its start state and remove all the blocks you've added or changed.",
   "startOverWorkspaceText": "This will reset the workspace to its start state and remove all the code you've added or changed.",
   "startWithUnit": "Start with unit:",

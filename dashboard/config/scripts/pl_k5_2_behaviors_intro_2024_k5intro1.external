@@ -5,21 +5,23 @@ description 'description here'
 markdown <<MARKDOWN
 # Code.org AI Lessons
 
-#### This lesson will teach you about algorithms and sequencing, building on your understanding of computer science and its everyday applications.
+#### This lesson will teach you about the foundational concepts of AI, building on your understanding of AI and its everyday applications.
 
-<img src="https://images.code.org/205cc0e8da353930786208309788529d-image-1679953465855.png" alt="Image of a cartoon octopus holding a microphone and wearing a hat" style="border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/826e9a97bb0fbd0d6fc0c8f70a6604a5-image-1719426950472.png" alt="white robot head with blue eyes with the letters AI beneath the face" style="border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;">
 
 
 ## In this lesson, you will:
 
-* #### Practice coding using blocks.
-* #### Create a program using algorithms and sequencing.
+* #### Explore how data impacts AI decision making and results 
+* #### Train an AI bot to recognize fish
+* #### Experience how biases impact AI 
 
-
-### **Suggested time:** 15 minutes
+### **Suggested time:** 60 minutes
 
 
 ## Let's get started!
 
 <div style="clear:both"/>
+
+
 MARKDOWN
