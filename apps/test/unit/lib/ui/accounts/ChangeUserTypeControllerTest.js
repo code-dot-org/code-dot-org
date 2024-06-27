@@ -1,10 +1,12 @@
-import ReactDOM from 'react-dom';
 import $ from 'jquery';
+import ReactDOM from 'react-dom';
 import {spy, stub} from 'sinon';
-import {expect} from '../../../../util/reconfiguredChai';
-import i18n from '@cdo/locale';
-import * as utils from '@cdo/apps/utils';
+
 import ChangeUserTypeController from '@cdo/apps/lib/ui/accounts/ChangeUserTypeController';
+import * as utils from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('ChangeUserTypeController', () => {
   let controller, form, button, status, dropdown;

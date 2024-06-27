@@ -57,6 +57,7 @@ class DCDOBase < DynamicConfigBase
       'progress-v2-metadata-enabled': DCDO.get('progress-v2-metadata-enabled', false),
       'show-updated-lms-content': DCDO.get('show-updated-lms-content', false),
       'use-ghostscript-to-generate-pdfs': DCDO.get('use-ghostscript-to-generate-pdfs', false),
+      'show-age-gated-students-banner': DCDO.get('show-age-gated-students-banner', true),
     }
   end
 end

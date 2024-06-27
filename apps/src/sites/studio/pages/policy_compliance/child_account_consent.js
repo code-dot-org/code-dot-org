@@ -12,10 +12,12 @@ $(document).ready(function () {
   const permissionGrantedDate = permissionGrantedDateString
     ? new Date(permissionGrantedDateString)
     : undefined;
+  const studentId = element.getAttribute('data-student-id');
   ReactDOM.render(
     <ChildAccountConsent
       permissionGranted={permissionGranted}
       permissionGrantedDate={permissionGrantedDate}
+      studentId={studentId}
     />,
     element
   );

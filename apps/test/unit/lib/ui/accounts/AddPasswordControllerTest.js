@@ -1,8 +1,10 @@
-import ReactDOM from 'react-dom';
 import $ from 'jquery';
+import ReactDOM from 'react-dom';
 import {spy, stub} from 'sinon';
-import {expect, assert} from '../../../../util/reconfiguredChai';
+
 import AddPasswordController from '@cdo/apps/lib/ui/accounts/AddPasswordController';
+
+import {expect, assert} from '../../../../util/reconfiguredChai';
 
 describe('AddPasswordController', () => {
   let controller, form, mockMountPoint;

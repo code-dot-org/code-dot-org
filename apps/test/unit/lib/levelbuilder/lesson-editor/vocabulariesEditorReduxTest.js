@@ -1,10 +1,11 @@
 import {assert} from 'chai';
+import _ from 'lodash';
+
 import vocabularyEditor, {
   addVocabulary,
   updateVocabulary,
   removeVocabulary,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
-import _ from 'lodash';
 
 const getInitialState = () => [
   {

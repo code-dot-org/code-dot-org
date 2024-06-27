@@ -49,4 +49,32 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
     get :existing_account
     assert_response :ok
   end
+
+  test 'returns bad request if not logged in' do
+    post :new_account
+
+    assert_response :bad_request
+  end
+
+  test 'opts out of lms landing for a signed in user' do
+    lti_user = create :student
+    sign_in lti_user
+
+    post :new_account
+
+    lti_user.reload
+
+    assert_equal true, lti_user.lms_landing_opted_out
+  end
+
+  test 'opts out of lms landing for a partial registration user' do
+    lti_user = create :student
+    PartialRegistration.persist_attributes(session, lti_user)
+
+    post :new_account
+
+    partial_user = User.new_with_session(ActionController::Parameters.new, session)
+
+    assert_equal true, partial_user.lms_landing_opted_out
+  end
 end

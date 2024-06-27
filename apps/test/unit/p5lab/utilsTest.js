@@ -1,4 +1,5 @@
 import {formatForPlayspace} from '@cdo/apps/p5lab/utils';
+
 import {expect} from '../../util/reconfiguredChai';
 
 describe('formatForPlayspace', function () {

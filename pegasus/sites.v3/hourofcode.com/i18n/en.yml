@@ -682,6 +682,7 @@
   module_label_self_paced: "Self-paced module"
   module_label_event_or_lessons: "Event or lessons"
   module_label_or: "Or"
+  module_label_visit_site: "Visit %{site_name}"
 
   module_ages_5_10: "5-10"
   module_ages_11_18: "11-18"
@@ -1811,7 +1812,7 @@
 
   lms_page:
     heading: "Integrate Code.org with your LMS platform"
-    top_desc: "Connect existing LMS classrooms in your school to Code.org with one-click roster syncing, single sign-on (SSO), and integrated access curriculum."
+    top_desc: "Connect existing LMS classrooms in your school to Code.org with one-click roster syncing, single sign-on (SSO), and integrated curriculum access."
     top_module:
       heading: "Code.org supports major learning management systems"
       desc: "Code.org has seamless, secure, one-click integrations for most major LMS & SSO providers."
@@ -10959,6 +10960,13 @@
         title: "Get Support"
         desc: "Our customer support team is ready to answer your questions. Email us at [support@code.org](%{email_url}) or check out our support center, which offers useful guides and answers!"
         button: "Visit our support center"
+    teach:
+      heading: "Preparing to teach Coding with AI"
+      tile:
+        overline: "6-12 Teachers"
+        title: "Teaching Coding with AI"
+        desc: "This professional learning module prepares teachers to guide 6-12 students through Code.org's Coding with AI unit, where students leverage Large Language Models to write more powerful code while exploring ethical considerations and responsible AI use."
+        button: "Start professional learning"
 
   coding_with_ai_tile:
     title: "Coding with AI"
@@ -10976,22 +10984,22 @@
       heading: "Why teach computer vision?"
       desc: "Empower students to solve real-world challenges, foster innovation, and explore AI's ethical implications in visual data."
       real_world:
-        heading: "Real-world applications"
+        title: "Real-world applications"
         desc: "Empower students to solve real-world problems by understanding how AI interprets visual data, from healthcare diagnostics to autonomous vehicles."
       innovative:
-        heading: "Innovative thinking"
+        title: "Innovative thinking"
         desc: "Foster innovative thinking by engaging students with cutting-edge technology, encouraging them to develop creative solutions, and explore new possibilities."
       ethical:
-        heading: "Ethical awareness"
+        title: "Ethical awareness"
         desc: "Teach students to critically assess the ethical implications of AI, promoting responsible and thoughtful application of computer vision technologies."
       button:
         explore_curriculum: "Explore curriculum"
-        see_professional_learning: "See professional learning"
+        see_pl: "See professional learning"
     resources:
       heading: "Resources to support you every step of the way"
       desc: "Get access to materials that will help you teach computer science with confidence — even without prior CS teaching experience — when you create a **free** Code.org account."
       button: "Create a free account"
-    get_started:
+    curricula:
       heading: "Get started with computer vision"
       computer_vision:
         overline: "Grades 9-12"
@@ -11318,6 +11326,12 @@
     description: Explore new self-paced online modules that will empower you to teach the newest additions to our curriculum.
     call_to_action: "Start here!"
     call_to_action_aria_label: "Start self-paced professional learning"
+
+  teach_ai_banner_july_2024:
+    headline: "Guidance on the Future of CS Education in an Age of AI"
+    subtitle: "New"
+    description: "Why is it still important for students to learn to program? How are teachers in CS classrooms already incorporating AI? Explore the guidance and engage in the future of CS education in an age of AI."
+    button_text: "Explore the guidance"
 
   language_code:
     ar: "Arabic"

@@ -1,8 +1,10 @@
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
 import sinon from 'sinon';
+
 import CloseOnEscape from '@cdo/apps/templates/CloseOnEscape';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('CloseOnEscape', () => {
   let wrapper, handleClose, className;

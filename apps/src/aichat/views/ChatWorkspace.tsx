@@ -66,8 +66,8 @@ const ChatWorkspace: React.FunctionComponent = () => {
         className={moduleStyles.conversationArea}
         ref={conversationContainerRef}
       >
-        {messages.map(message => (
-          <ChatMessage message={message} key={message.id} />
+        {messages.map((message, index) => (
+          <ChatMessage message={message} key={index} />
         ))}
         {showWaitingAnimation()}
       </div>

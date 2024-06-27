@@ -1462,7 +1462,7 @@
         {
           "type": "text",
           "name": "ai_teaching_barriers_other_comment",
-          "visibleIf": "{ai_teaching_barriers_content} = 'other'",
+          "visibleIf": "{ai_teaching_barriers_content} anyof ['other']",
           "title": "What other barriers do you think could prevent you from implementing new AI curriculum at your school?"
         },
         {
