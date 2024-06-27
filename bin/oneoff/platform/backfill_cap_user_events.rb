@@ -129,7 +129,7 @@ if File.exist?('lockout_dates.tsv')
 end
 
 # Print out the number of event records
-puts "Discovered #{records.length} new event records. Add a '1' as an argument to write them."
+puts "Discovered #{records.length} new event records."
 
 KEYS = [:created_at, :updated_at].freeze
 
