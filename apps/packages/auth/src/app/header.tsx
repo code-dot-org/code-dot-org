@@ -33,8 +33,28 @@ const Header = async () => {
               </a>
             </div>
           </div>
-          <div>Hello {session?.user?.name}</div>
-            <div>Token {session?.user?.token}</div>
+          <div
+            className="header_button header_user user_menu"
+            id="header_user_menu"
+            role="button"
+          >
+            <span
+              className="display_name"
+              data-id="78"
+              data-shortname="Stephen"
+              id="header_display_name"
+            >
+              {session?.user?.name}
+            </span>
+            &nbsp;
+            <i
+              className="user_menu_arrow_down fa fa-caret-down"
+              style={{display: 'inline-block'}}
+            />
+          </div>
+          <div>
+            <a href={`/logout`}>Logout</a>
+          </div>
         </div>
       </div>
     </div>
