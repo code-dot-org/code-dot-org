@@ -1,6 +1,10 @@
 import cookies from 'js-cookie';
 import React, {CSSProperties, useState} from 'react';
+import {useSelector} from 'react-redux';
 
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {RootState} from '@cdo/apps/types/redux';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 import i18n from '@cdo/locale';
 import headerThanksImage from '@cdo/static/common_images/penguin/dancing.png';
@@ -18,6 +22,15 @@ import Button from '../Button';
  * pending request for) parental permission.
  */
 const LockoutPanel: React.FC<LockoutPanelProps> = props => {
+  const currentUser = useSelector((state: RootState) => state.currentUser);
+  const reportEvent = (eventName: string, payload: object = {}) => {
+    analyticsReporter.sendEvent(eventName, payload, PLATFORMS.AMPLITUDE);
+  };
+
+  reportEvent(EVENTS.CAP_LOCKOUT_SHOWN, {
+    inSection: currentUser.inSection,
+    consentStatus: currentUser.childAccountComplianceState,
+  });
   // Determine if we think the given email matches the child email
   const isEmailDisallowed = (email: string) => {
     return props.disallowedEmail === hashString(email);
@@ -45,7 +58,7 @@ const LockoutPanel: React.FC<LockoutPanelProps> = props => {
 
   // This will set the email to the current pending email and fire off the
   // form as though they had typed in the same email again.
-  const resendPermissionEmail = () => {
+  const handleResend = () => {
     const field = document.getElementById('parent-email') as HTMLInputElement;
     if (field && props.pendingEmail) {
       field.value = props.pendingEmail;
@@ -55,12 +68,34 @@ const LockoutPanel: React.FC<LockoutPanelProps> = props => {
       'lockout-panel-form'
     ) as HTMLFormElement;
     if (form) {
+      reportEvent(EVENTS.CAP_PARENT_EMAIL_RESEND, {
+        inSection: currentUser.inSection,
+        consentStatus: currentUser.childAccountComplianceState,
+      });
       form.submit();
     }
   };
 
+  const handleSubmit = () => {
+    reportEvent(EVENTS.CAP_PARENT_EMAIL_SUBMITTED, {
+      inSection: currentUser.inSection,
+      consentStatus: currentUser.childAccountComplianceState,
+    });
+  };
+
+  const handleUpdate = () => {
+    reportEvent(EVENTS.CAP_PARENT_EMAIL_UPDATED, {
+      inSection: currentUser.inSection,
+      consentStatus: currentUser.childAccountComplianceState,
+    });
+  };
+
   const signOut = (event: React.MouseEvent<HTMLButtonElement>) => {
     window.location.href = 'users/sign_out';
+    reportEvent(EVENTS.CAP_LOCKOUT_SIGN_OUT, {
+      inSection: currentUser.inSection,
+      consentStatus: currentUser.childAccountComplianceState,
+    });
   };
 
   // Get the current locale.
@@ -92,6 +127,8 @@ const LockoutPanel: React.FC<LockoutPanelProps> = props => {
       csrfToken = content.value;
     }
   }
+
+  const handleEmailSubmit = props.pendingEmail ? handleUpdate : handleSubmit;
 
   return (
     <div style={styles.container} className="lockout-panel">
@@ -173,7 +210,7 @@ const LockoutPanel: React.FC<LockoutPanelProps> = props => {
               style={styles.resendLink}
               text={i18n.sessionLockoutResendEmail()}
               type="button"
-              onClick={resendPermissionEmail}
+              onClick={handleResend}
             />
           )}
         </div>
@@ -241,7 +278,7 @@ const LockoutPanel: React.FC<LockoutPanelProps> = props => {
                 : i18n.sessionLockoutSubmit()
             }
             disabled={disabled}
-            onClick={() => {}}
+            onClick={handleEmailSubmit}
           />
         </div>
       </form>
