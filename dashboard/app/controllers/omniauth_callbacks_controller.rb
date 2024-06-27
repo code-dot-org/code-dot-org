@@ -11,7 +11,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # TODO: figure out how to avoid skipping CSRF verification for Powerschool
   skip_before_action :verify_authenticity_token, only: :powerschool
 
-  before_action :check_account_linking_lock, on: %i[connect_provider link_accounts]
+  before_action :check_account_linking_lock, only: %i[connect_provider link_accounts]
 
   # Note: We can probably remove these once we've broken out all providers
   BROKEN_OUT_TYPES = [
