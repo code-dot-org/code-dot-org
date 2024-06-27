@@ -250,6 +250,10 @@ const EVENTS = {
     'Signed Out User Clicks Create Dropdown',
   SIGNED_OUT_USER_SELECTS_CREATE_DROPDOWN_OPTION:
     'Signed Out User Selects Create Dropdown Option',
+  SIGNED_IN_TEACHER_CLICKS_CREATE_DROPDOWN:
+    'Signed In Teacher Clicks Create Dropdown',
+  SIGNED_IN_TEACHER_SELECTS_CREATE_DROPDOWN_OPTION:
+    'Signed In Teacher Selects Create Dropdown Option',
 
   // Project sharing via 'Share' button
   SHARING_DIALOG_OPEN: 'User Opens Project Share Dialog',
