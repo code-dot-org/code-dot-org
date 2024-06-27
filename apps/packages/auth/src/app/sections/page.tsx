@@ -9,8 +9,16 @@ export const GET_SECTION_QUERY = gql`
     section(id: $id) {
       name
       id
-      instructors {
+      grade
+      participantType
+      sectionInstructors {
         id
+        status
+        instructorEmail
+        instructorName
+      }
+      primaryInstructor: teacher {
+        email
         name
       }
     }
@@ -27,9 +35,9 @@ export default async function Page() {
   if (error) return `Error! ${error}`;
 
   return (
-    <div>
-      <div>section {JSON.stringify(data)}</div>
-      <Section section={undefined} />
-    </div>
+      <div>
+        <Section section={data.section}/>
+        <pre>section {JSON.stringify(data.section, null, 2)}</pre>
+      </div>
   );
 }

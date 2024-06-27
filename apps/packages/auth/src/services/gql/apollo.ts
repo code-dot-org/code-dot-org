@@ -10,7 +10,7 @@ const httpLink = createHttpLink({
 const authLink = setContext(async (_, {headers}) => {
   const token = (await auth())?.user?.token;
 
-  console.log(`using`, token)
+  console.log(`using`, token);
 
   // return the headers to the context so httpLink can read them
   return {
@@ -24,4 +24,14 @@ const authLink = setContext(async (_, {headers}) => {
 export default new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
+  defaultOptions: {
+    watchQuery: {
+      fetchPolicy: 'no-cache',
+      errorPolicy: 'ignore',
+    },
+    query: {
+      fetchPolicy: 'no-cache',
+      errorPolicy: 'all',
+    },
+  },
 });

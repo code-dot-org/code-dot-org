@@ -10,5 +10,7 @@ module Types
 
     field :id, ID, description: 'ID of the user'
     field :name, String, description: 'Name of the user'
+    field :email, String, description: 'Email of the user'
+    field :status, String, description: 'Status of the user'
   end
 end
