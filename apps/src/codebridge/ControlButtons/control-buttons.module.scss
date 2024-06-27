@@ -5,8 +5,6 @@
   display: grid;
   grid-template-columns: 1fr repeat(2, auto) 1fr;
   padding: 8px 0;
-  justify-content: center;
-  align-items: center;
   background-color: $neutral_dark80;
   column-gap: 8px;
 }

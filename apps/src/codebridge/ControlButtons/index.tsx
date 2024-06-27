@@ -20,7 +20,6 @@ const ControlButtons: React.FunctionComponent = () => {
   const {onRun} = useCodebridgeContext();
   const {loading, data} = useFetch('/api/v1/users/current/permissions');
   const dispatch = useAppDispatch();
-  const [isFinished, setIsFinished] = React.useState(false);
 
   const source = useAppSelector(
     state => state.lab2Project.projectSource?.source
@@ -34,7 +33,9 @@ const ControlButtons: React.FunctionComponent = () => {
     : commonI18n.finish();
 
   const onContinue = () => dispatch(navigateToNextLevel());
-  const onFinish = () => setIsFinished(true);
+  // No-op for now. TODO: figure out what the finish button should do.
+  // https://codedotorg.atlassian.net/browse/CT-664
+  const onFinish = () => {};
 
   const handleRun = (runTests: boolean) => {
     if (onRun) {
@@ -56,6 +57,7 @@ const ControlButtons: React.FunctionComponent = () => {
         iconLeft={{iconStyle: 'solid', iconName: 'play'}}
         className={moduleStyles.firstControlButton}
         size={'s'}
+        color={'white'}
       />
       <Button
         text="Test"
@@ -68,10 +70,15 @@ const ControlButtons: React.FunctionComponent = () => {
       <Button
         text={navigationButtonText}
         onClick={hasNextLevel ? onContinue : onFinish}
-        disabled={loading || isFinished}
+        disabled={loading}
         color={'purple'}
         className={moduleStyles.navigationButton}
         size={'s'}
+        iconLeft={
+          hasNextLevel
+            ? {iconStyle: 'solid', iconName: 'arrow-right'}
+            : undefined
+        }
       />
     </div>
   );
