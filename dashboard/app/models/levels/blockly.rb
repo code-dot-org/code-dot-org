@@ -457,11 +457,18 @@ class Blockly < Level
     get_localized_property('failure_message_override')
   end
 
+  # Retrieve the localized property for "long_instructions",
+  # @return [String] the localized long_instructions property
   def localized_long_instructions
     localized_long_instructions = get_localized_property("long_instructions")
-    localized_blockly_in_text(localized_long_instructions)
+    unescaped_codeblocks = unescape_codeblocks(localized_long_instructions)
+    localized_blockly_in_text(unescaped_codeblocks)
   end
 
+  # Processes and localizes the TRANSALTIONTEXT from i18n start libraries content.
+  # @param start_libraries [String] JSON-encoded string representing an array of library objects.
+  # Each library object should contain a name and source field.
+  # @return [String] JSON-encoded string representing the localized start libraries.
   def localized_start_libraries(start_libraries)
     return unless start_libraries
     level_libraries = JSON.parse(start_libraries)
@@ -995,5 +1002,12 @@ class Blockly < Level
         skin: skin
       }
     )
+  end
+
+  # Unescapes the backticks used to format codeblocks in the given text.
+  # @param text [String] the text to unescape.
+  # @return [String] the text with unescaped backticks.
+  private def unescape_codeblocks(text)
+    text.gsub('\\`', '`')
   end
 end
