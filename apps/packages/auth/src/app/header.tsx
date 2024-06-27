@@ -34,6 +34,7 @@ const Header = async () => {
             </div>
           </div>
           <div>Hello {session?.user?.name}</div>
+            <div>Token {session?.user?.token}</div>
         </div>
       </div>
     </div>
