@@ -1428,6 +1428,7 @@ en:
   lti:
     account_linking:
       account_not_found: "Account not found"
+      admin_not_allowed: "Admins cannot link LTI accounts"
       connect_button: "Connect with %{provider}"
       connect_with: "Connect with..."
       connect_with_email: "Connect with personal login"

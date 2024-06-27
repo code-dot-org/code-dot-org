@@ -25,13 +25,14 @@ import aichatI18n from '../locale';
 import {
   addNotification,
   clearChatMessages,
-  endSave,
   onSaveComplete,
   onSaveFail,
+  onSaveNoop,
   resetToDefaultAiCustomizations,
   selectAllFieldsHidden,
   setStartingAiCustomizations,
   setViewMode,
+  updateAiCustomization,
 } from '../redux/aichatRedux';
 import {getNewMessageId} from '../redux/utils';
 import {AichatLevelProperties, Notification, ViewMode} from '../types';
@@ -89,7 +90,7 @@ const AichatView: React.FunctionComponent = () => {
     }
     // No save occurred
     projectManager.addSaveNoopListener(() => {
-      dispatch(endSave());
+      dispatch(onSaveNoop());
     });
 
     projectManager.addSaveSuccessListener(() => {
@@ -163,6 +164,8 @@ const AichatView: React.FunctionComponent = () => {
 
   const resetProject = useCallback(() => {
     dispatch(resetToDefaultAiCustomizations(levelAichatSettings));
+    // Save the customizations to the user's project.
+    dispatch(updateAiCustomization());
     dispatch(clearChatMessages());
     dispatch(addNotification(getResetModelNotification()));
   }, [dispatch, levelAichatSettings]);

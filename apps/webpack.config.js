@@ -224,6 +224,9 @@ const WEBPACK_BASE_CONFIG = {
         test: /\.ejs$/,
         include: [p('src'), p('test')],
         loader: 'ejs-webpack-loader',
+        options: {
+          strict: true,
+        },
       },
       {test: /\.css$/, use: [{loader: 'style-loader'}, {loader: 'css-loader'}]},
 

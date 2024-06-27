@@ -122,12 +122,7 @@ const PublishNotes: React.FunctionComponent = () => {
               ? spinnerIconProps
               : {iconName: 'upload'}
           }
-          disabled={
-            isReadOnly ||
-            !hasFilledOutModelCard ||
-            saveInProgress ||
-            !havePropertiesChanged
-          }
+          disabled={isReadOnly || !hasFilledOutModelCard || saveInProgress}
           onClick={onPublish}
           className={modelCustomizationStyles.updateButton}
         />
