@@ -1,0 +1,16 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2024-06-20T19:39:35.000Z",
+  "level_num": "custom",
+  "user_id": 1054,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "data-science-sample-pbt-1",
+    "long_instructions": "## Step 4: Calculate Average Ratings\r\nWe need to calculate the average rating for each product so we can understand the overall customer satisfaction for each item. We'll need to group the data by product so we can find the average.\r\n\r\n### Do This\r\n1. Use groupby to group the data by product.\r\n2. Calculate the average rating for each product.",
+    "teacher_markdown": "Encourage students to check the output after calculating the averages to ensure their code has worked as expected.",
+    "hide_share_and_remix": "false"
+  },
+  "published": true
+}]]></config>
+</Pythonlab>

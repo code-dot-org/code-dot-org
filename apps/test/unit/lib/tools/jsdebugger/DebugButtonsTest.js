@@ -1,17 +1,19 @@
-import React from 'react';
-import sinon from 'sinon';
-import {Provider} from 'react-redux';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../../util/reconfiguredChai';
+import React from 'react';
+import {Provider} from 'react-redux';
+import sinon from 'sinon';
+
 import DebugButtons from '@cdo/apps/lib/tools/jsdebugger/DebugButtons';
 import {reducers, actions} from '@cdo/apps/lib/tools/jsdebugger/redux';
+import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
-import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 const EXAMPLE_CODE = `
 for (var i = 0; i < 10; i++) {

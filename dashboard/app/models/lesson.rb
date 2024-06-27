@@ -168,7 +168,7 @@ class Lesson < ApplicationRecord
   end
 
   def has_lesson_pdf?
-    return false if Unit.unit_in_category?('csf', script.name) && ['2017', '2018'].include?(script.version_year)
+    return false if script.csf? && ['2017', '2018'].include?(script.version_year)
 
     !!has_lesson_plan
   end

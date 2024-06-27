@@ -1,7 +1,6 @@
 {
   "key": "ai-tutor-test",
   "display_name": "ai-tutor-test",
-  "category": "other",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": null,

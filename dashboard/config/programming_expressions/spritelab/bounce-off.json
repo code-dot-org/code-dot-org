@@ -16,7 +16,7 @@
     },
     {
       "name": "Example 2",
-      "description": "Sprites that are moving left and right using the `swimming left and right` block can bounce off of each other.",
+      "description": "Sprites that are moving left and right using the `swimming left and right` block can bounce off of a middle obstacle.",
       "app": "https://studio.code.org/projects/spritelab/EYPy9gVzbivcaqdRx0CStNo4HuKqoS8kb4h_jjjSiFQ",
       "image": null,
       "app_display_type": "embedAppWithCode",

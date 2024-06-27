@@ -1,5 +1,6 @@
-import {expect} from '../../../../util/reconfiguredChai';
 import {calculateOutputSummedWeights} from '@cdo/apps/dance/ai/utils/calculateOutputSummedWeights';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 const outputWeightsMapping = {
   emojiAssociations: {

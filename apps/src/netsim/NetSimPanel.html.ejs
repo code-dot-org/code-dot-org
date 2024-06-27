@@ -1,3 +1,12 @@
+<%
+/**
+ * This block destructures the local variables for use within this ejs template.
+ */
+var instanceID = locals.instanceID;
+var className = locals.className;
+var panelTitle = locals.panelTitle;
+var userToggleable = locals.userToggleable;
+%>
 <div id="netsim-panel-<%= instanceID %>"
      class="netsim-panel <%= className %>">
   <h1>

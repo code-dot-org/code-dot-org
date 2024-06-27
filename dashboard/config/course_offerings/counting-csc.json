@@ -1,7 +1,6 @@
 {
   "key": "counting-csc",
   "display_name": "Counting Activity",
-  "category": "csc",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Module",

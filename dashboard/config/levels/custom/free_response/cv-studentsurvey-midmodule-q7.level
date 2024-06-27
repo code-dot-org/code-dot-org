@@ -1,0 +1,23 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-06-22T01:18:16.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Looking ahead, what topics or activities are you most looking forward to in the remainder of the unit?",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2024-06-22T01:18:16.848+00:00\",\"changed\":[\"cloned from \\\"cv-studentsurvey-midmodule-q6\\\"\"],\"cloned_from\":\"cv-studentsurvey-midmodule-q6\"},{\"changed_at\":\"2024-06-22 01:18:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

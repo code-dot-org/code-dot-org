@@ -1,7 +1,9 @@
 import {stub} from 'sinon';
-import {expect} from '../../../util/reconfiguredChai';
+
 import {validateFirehoseDataSize} from '@cdo/apps/lib/util/firehose';
 import logToCloud from '@cdo/apps/logToCloud';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('firehoseDataSize', () => {
   const maxDataJSONBytes = 65500;

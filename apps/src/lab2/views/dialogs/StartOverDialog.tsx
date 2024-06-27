@@ -3,12 +3,14 @@ import React from 'react';
 import {BaseDialogProps} from './DialogManager';
 import moduleStyles from './confirm-dialog.module.scss';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {TEXT_BASED_LABS} from '@cdo/apps/lab2/types';
-const commonI18n = require('@cdo/locale');
+import {TEXT_BASED_LABS} from '../../constants';
+import {commonI18n} from '@cdo/apps/types/locale';
+import aichatI18n from '@cdo/apps/aichat/locale';
+import {AppName} from '../../types';
 
 // Lab-specific messages for starting over.
-const LAB_SPECIFIC_MESSAGES: {[key: string]: string} = {
-  aichat: commonI18n.startOverAichatModelCustomizations(),
+const LAB_SPECIFIC_MESSAGES: {[appName in AppName]?: string} = {
+  aichat: aichatI18n.startOverAichatModelCustomizations(),
 };
 
 /**
@@ -18,14 +20,15 @@ const StartOverDialog: React.FunctionComponent<BaseDialogProps> = ({
   handleConfirm,
   handleCancel,
 }) => {
-  const currentAppName =
-    useAppSelector(state => state.lab.levelProperties?.appName) || '';
+  const currentAppName = useAppSelector(
+    state => state.lab.levelProperties?.appName
+  );
 
   const isTextWorkspace =
     currentAppName && TEXT_BASED_LABS.includes(currentAppName);
 
   const dialogMessage =
-    LAB_SPECIFIC_MESSAGES[currentAppName] ||
+    (currentAppName && LAB_SPECIFIC_MESSAGES[currentAppName]) ||
     (isTextWorkspace
       ? commonI18n.startOverWorkspaceText()
       : commonI18n.startOverWorkspace());

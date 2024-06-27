@@ -1,7 +1,6 @@
 {
   "key": "minecraft",
   "display_name": "Minecraft Designer",
-  "category": "hoc",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": null,
