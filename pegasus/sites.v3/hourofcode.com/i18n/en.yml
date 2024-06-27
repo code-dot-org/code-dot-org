@@ -2069,6 +2069,7 @@
         button: "Explore the catalog"
 
   csa_page:
+    ap_quizzes_banner: "Quizzes now available in AP Classroom! [Learn more](%{learn_more_url})"
     additional_resources:
       heading: "Additional AP CSA resources for educators"
       pl:
