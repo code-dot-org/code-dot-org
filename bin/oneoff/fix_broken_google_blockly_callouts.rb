@@ -16,8 +16,20 @@ def fix_callouts
   else
     puts "THIS IS A FULL RUN"
   end
-  puts "***SPRITE LAB***"
-  process_levels(GamelabJr.where(game_id: 64))
+  puts "***PROCESSING ALL BLOCKLY LEVELS***"
+  process_levels(Blockly.all)
+  puts "***PROCESSING ALL GRID LEVELS***"
+  process_levels(Grid.all)
+  puts "***PROCESSING ALL MAZE LEVELS***"
+  process_levels(Maze.all)
+  puts "***PROCESSING ALL KAREL LEVELS***"
+  process_levels(Karel.all)
+  puts "***PROCESSING ALL STUDIO LEVELS***"
+  process_levels(Studio.all)
+  puts "***PROCESSING ALL STAR WARS GRID LEVELS***"
+  process_levels(StarWarsGrid.all)
+  puts "***PROCESSING ALL ARTIST LEVELS***"
+  process_levels(Artist.all)
 end
 
 def process_levels(levels)
@@ -28,6 +40,8 @@ def process_levels(levels)
   blockly_flyout_id_matcher = /\.blocklyFlyout \[data-id="(.*)"\]/
   svg_ws_id_matcher = /\.svgGroup \[block-id="(.*)"\]/
   blockly_ws_id_matcher = /\.blocklySvg \[data-id="(.*)"\]/
+  general_block_id_matcher = /\[block-id=['"]([^'"]+)['"]\]/
+  general_data_id_matcher = /\[data-id=['"]([^'"]+)['"]\]/
   category_matcher = /\[id=':(.*)\.label'\]/
   fixed_category_matcher = /\[id='blockly-(.*)\.label'\]/
   levels.each do |level|
@@ -64,10 +78,20 @@ def process_levels(levels)
         broken_category_ids,
         broken_category_callouts
       )
+      # This check needs to be last since it is less restrictive than those that provide a class.
+      check_for_broken_callout(
+        callout,
+        general_block_id_matcher,
+        false,
+        false,
+        broken_block_ids,
+        broken_block_callouts
+      )
 
       check_for_fixed_callout(callout, blockly_flyout_id_matcher, fixed_block_ids, false)
       check_for_fixed_callout(callout, blockly_ws_id_matcher, fixed_block_ids, false)
       check_for_fixed_callout(callout, fixed_category_matcher, fixed_category_ids, true)
+      check_for_fixed_callout(callout, general_data_id_matcher, fixed_block_ids, false)
     end
     next if broken_block_ids.empty? && broken_category_ids.empty?
     block_ids_to_fix = broken_block_ids.difference(fixed_block_ids)
@@ -108,21 +132,36 @@ def add_new_callouts(ids_to_fix, broken_callouts, callouts)
 end
 
 def check_for_broken_callout(callout, element_id_matcher, new_css_class, is_category, broken_block_ids, broken_callouts)
-  match_data = callout['element_id'].match(element_id_matcher)
+  element_id = callout['element_id']
+  match_data = element_id.match(element_id_matcher)
   if match_data
     broken_id = match_data[1]
-    broken_block_ids.push(broken_id)
-    new_element_id = if is_category
-                       new_id_for_category(broken_id)
-                     else
-                       new_id_for_block(new_css_class, broken_id)
-                     end
-    broken_callouts[broken_id] = {callout: callout, new_element_id: new_element_id}
+    # This is needed so we don't process the same callout multiple times. For example, an element_id could match
+    # both svg_flyout_id_matcher and general_block_id_matcher. We'll stop here if we've already found the first one.
+    unless broken_block_ids.include?(broken_id)
+      broken_block_ids.push(broken_id)
+      new_element_id = if is_category
+                         new_id_for_category(broken_id)
+                       else
+                         new_id_for_block(new_css_class, broken_id, element_id)
+                       end
+      broken_callouts[broken_id] = {callout: callout, new_element_id: new_element_id}
+    end
   end
 end
 
-def new_id_for_block(new_css_class, id)
-  ".#{new_css_class} [data-id=\"#{id}\"]"
+def new_id_for_block(new_css_class, id, element_id)
+  if new_css_class
+    ".#{new_css_class} [data-id=\"#{id}\"]"
+  else
+    # For the general_block_id_matcher, we simply replace block-id with data-id.
+    # We copy the old element so we don't lose other trailing selector information.
+    modified_id = element_id.dup
+    modified_id.sub!('block-id', 'data-id')
+    # Special case to modify selection of function call block's edit button
+    modified_id.sub!('.blocklyIconGroup', 'g>.blocklyFieldRect')
+    modified_id
+  end
 end
 
 def new_id_for_category(old_id)
@@ -156,10 +195,12 @@ def add_ids_to_blocks(ids_to_add, level, broken_callouts)
   toolbox_blocks = toolbox_xml.xpath("*[local-name()='xml']//*[local-name()='block']")
   category_blocks = toolbox_xml.xpath("*[local-name()='xml']//*[local-name()='category']")
   start_blocks = start_blocks_xml.xpath("*[local-name()='xml']//*[local-name()='block']")
+  all_blocks = start_blocks + toolbox_blocks
   could_match = true
   ids_to_add.each do |id_to_add|
     callout_data = broken_callouts[id_to_add]
     is_toolbox_block = callout_data[:new_element_id].include? 'blocklyFlyout'
+    is_start_block = callout_data[:new_element_id].include? 'blocklySvg'
     if is_toolbox_block
       index = category_blocks.empty? ? id_to_add.to_i - 1 : id_to_add.to_i - start_blocks.length - 1 - long_instructions_block_count
       if toolbox_blocks.length <= index
@@ -172,7 +213,7 @@ def add_ids_to_blocks(ids_to_add, level, broken_callouts)
       else
         toolbox_blocks[index]['id'] = id_to_add
       end
-    else # Otherwise it's a start block.
+    elsif is_start_block
       index = category_blocks.empty? ? id_to_add.to_i - toolbox_blocks.length - 1 - long_instructions_block_count : id_to_add.to_i - 1 - long_instructions_block_count
       if start_blocks.length <= index
         puts "#{level.name} INVALID START_BLOCKS INDEX #{id_to_add}"
@@ -183,6 +224,18 @@ def add_ids_to_blocks(ids_to_add, level, broken_callouts)
         could_match = false
       else
         start_blocks[index]['id'] = id_to_add
+      end
+    else # The specific type of block (toolbox or start) isn't clear
+      index = id_to_add.to_i - 1
+      if index < 0 || index >= all_blocks.length
+        puts "#{level.name} INVALID BLOCK INDEX #{id_to_add}"
+        could_match = false
+      elsif all_blocks[index]['id']
+        # If the block already has an id, we can't add a new one. Fail this update.
+        puts "#{level.name} Block with index #{id_to_add} already has id #{all_blocks[index]['id']}"
+        could_match = false
+      else
+        all_blocks[index]['id'] = id_to_add
       end
     end
   end
