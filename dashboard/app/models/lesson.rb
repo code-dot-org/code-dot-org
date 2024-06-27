@@ -219,8 +219,14 @@ class Lesson < ApplicationRecord
     get_localized_property(:name) || ''
   end
 
-  def localized_lesson_plan
-    return script_lesson_path(script, self) if script.is_migrated? && !script.use_legacy_lesson_plans?
+  def localized_lesson_plan(unit_group: nil)
+    if script.is_migrated? && !script.use_legacy_lesson_plans?
+      if unit_group
+        return course_script_lesson_path(unit_group, script, self)
+      else
+        return script_lesson_path(script, self)
+      end
+    end
 
     if script.curriculum_path?
       path = script.curriculum_path.gsub('{LESSON}', relative_position.to_s)
@@ -233,8 +239,8 @@ class Lesson < ApplicationRecord
     end
   end
 
-  def lesson_plan_html_url
-    localized_lesson_plan || "#{lesson_plan_base_url}/Teacher"
+  def lesson_plan_html_url(unit_group: nil)
+    localized_lesson_plan(unit_group: unit_group) || "#{lesson_plan_base_url}/Teacher"
   end
 
   def lesson_feedback_url
@@ -269,7 +275,7 @@ class Lesson < ApplicationRecord
     script.get_course_version&.all_standards_url
   end
 
-  def summarize(include_bonus_levels = false, for_edit: false)
+  def summarize(include_bonus_levels = false, for_edit: false, unit_group: nil)
     lesson_summary = Rails.cache.fetch("#{cache_key}/lesson_summary/#{I18n.locale}/#{include_bonus_levels}") do
       cached_levels = include_bonus_levels ? cached_script_levels : cached_script_levels.reject(&:bonus)
 
@@ -319,7 +325,7 @@ class Lesson < ApplicationRecord
       if has_lesson_plan
         # only collect lesson feedback on the most recent stable english version of the course
         lesson_data[:lesson_feedback_url] = lesson_feedback_url if script.get_course_version&.recommended?
-        lesson_data[:lesson_plan_html_url] = lesson_plan_html_url
+        lesson_data[:lesson_plan_html_url] = lesson_plan_html_url(unit_group: unit_group)
         lesson_data[:lesson_plan_pdf_url] = lesson_plan_pdf_url
         if script.include_student_lesson_plans && script.is_migrated
           lesson_data[:student_lesson_plan_html_url] = script_lesson_student_path(script, self)
