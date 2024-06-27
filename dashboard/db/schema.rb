@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 2024_06_24_164604) do
     t.index ["lesson_activity_id"], name: "index_activity_sections_on_lesson_activity_id"
   end
 
-  create_table "ai_tutor_interaction_feedbacks", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "ai_tutor_interaction_feedbacks", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|    
     t.bigint "ai_tutor_interaction_id", null: false
     t.integer "user_id", null: false
     t.boolean "thumbs_up"
@@ -169,7 +169,7 @@ ActiveRecord::Schema.define(version: 2024_06_24_164604) do
     t.string "callout_text"
   end
 
-  create_table "cap_user_events", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "cap_user_events", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.string "name", limit: 64, null: false
     t.integer "user_id", null: false
     t.string "policy", limit: 16, null: false
@@ -479,7 +479,7 @@ ActiveRecord::Schema.define(version: 2024_06_24_164604) do
     t.index ["project_id"], name: "index_datablock_storage_kvps_on_project_id"
   end
 
-  create_table "datablock_storage_library_manifest", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "datablock_storage_library_manifest", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|    
     t.json "library_manifest"
     t.integer "singleton_guard", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -902,7 +902,7 @@ ActiveRecord::Schema.define(version: 2024_06_24_164604) do
     t.index ["lti_integration_id"], name: "index_lti_deployments_on_lti_integration_id"
   end
 
-  create_table "lti_feedbacks", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "lti_feedbacks", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.boolean "satisfied", null: false
     t.string "locale"
@@ -967,7 +967,7 @@ ActiveRecord::Schema.define(version: 2024_06_24_164604) do
     t.float "value", null: false
   end
 
-  create_table "new_feature_feedbacks", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "new_feature_feedbacks", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "form_key", null: false
     t.boolean "satisfied", null: false
@@ -1662,7 +1662,7 @@ ActiveRecord::Schema.define(version: 2024_06_24_164604) do
     t.index ["storage_app_id"], name: "index_project_commits_on_storage_app_id"
   end
 
-  create_table "project_use_datablock_storages", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "project_use_datablock_storages", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "project_id", null: false
     t.boolean "use_datablock_storage", default: false, null: false
     t.index ["project_id"], name: "index_project_use_datablock_storages_on_project_id"
