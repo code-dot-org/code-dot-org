@@ -261,7 +261,7 @@ export const onSaveFail =
         changedProperties.includes('systemPrompt') &&
         changedProperties.includes('retrievalContexts')
       ) {
-        flaggedProperties = 'system prompt and retrieval contexts';
+        flaggedProperties = 'system prompt and/or retrieval contexts';
       } else if (changedProperties.includes('systemPrompt')) {
         flaggedProperties = 'system prompt';
       } else if (changedProperties.includes('retrievalContexts')) {
