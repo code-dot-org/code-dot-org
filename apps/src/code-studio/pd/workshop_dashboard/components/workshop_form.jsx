@@ -793,6 +793,9 @@ export class WorkshopForm extends React.Component {
       module: null,
     });
     this.loadAvailableFacilitators(course);
+    if (course === 'Build Your Own Workshop') {
+      this.setState({funded: false});
+    }
   };
 
   handleSubjectChange = event => {
