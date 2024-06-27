@@ -490,7 +490,9 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   extendedWorkspaceSvg.addUnusedBlocksHelpListener = function () {};
 
   extendedWorkspaceSvg.getAllUsedBlocks = function () {
-    return this.getAllBlocks().filter(block => block.isEnabled());
+    return this.getAllBlocks().filter(
+      block => block.isEnabled() && block.getRootBlock().isEnabled()
+    );
   };
 
   extendedWorkspaceSvg.isReadOnly = function () {
