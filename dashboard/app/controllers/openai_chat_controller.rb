@@ -14,14 +14,13 @@ class OpenaiChatController < ApplicationController
     unless has_required_messages_param?
       return render(status: :bad_request, json: {})
     end
-
     # Check for PII / Profanity
     locale = params[:locale] || "en"
     # Just look at the most recent message from the student.
     message = params[:messages].last[:content]
-    filter_result = ShareFiltering.find_failure(message, locale) if message
-    # If the content is inappropriate, we skip sending to OpenAI and instead hardcode a warning response on the front-end.
-    return render(status: :ok, json: {status: filter_result.type, flagged_content: filter_result.content}) if filter_result
+    filter_result = ShareFiltering.find_failure(message, locale, {}) if message
+    # If the content is profane, we skip sending to OpenAI and instead hardcode a warning response on the front-end.
+    return render(status: :ok, json: {safety_status: filter_result.type, flagged_content: filter_result.content}) if filter_result && filter_result.type == 'profanity'
 
     # The system prompt is stored server-side so we need to prepend it to the student's messages
     system_prompt = read_file_from_s3(S3_TUTOR_SYSTEM_PROMPT_PATH)
@@ -38,6 +37,10 @@ class OpenaiChatController < ApplicationController
 
     response = OpenaiChatHelper.request_chat_completion(messages)
     chat_completion_return_message = OpenaiChatHelper.get_chat_completion_response_message(response)
+    # We currently allow PII flagged content through to OpenAI because false positives were impacting user experience.
+    # We send the flagged content along in the request so we can log it for analysis.
+    chat_completion_return_message[:json][:safety_status] = filter_result.type if filter_result
+    chat_completion_return_message[:json][:flagged_content] = filter_result.content if filter_result
     return render(status: chat_completion_return_message[:status], json: chat_completion_return_message[:json])
   end
 
