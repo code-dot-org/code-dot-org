@@ -163,7 +163,7 @@ $(document).ready(() => {
   }
 
   if (userAge && userState && studentInLockoutFlow) {
-    const usStateDropdown = document.getElementById('us_state_dropdown');
+    const usStateDropdown = document.getElementById('user_us_state');
     const ageDropdown = document.getElementById('user_age');
     usStateDropdown.disabled = true;
     ageDropdown.disabled = true;

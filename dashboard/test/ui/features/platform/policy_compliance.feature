@@ -272,6 +272,7 @@ Feature: Policy Compliance and Parental Permission
     Given I am on "http://studio.code.org/users/edit?cpa-partial-lockout=1"
 
     # Navigate the lockout process via the Account Settings page
-    Then I wait to see "#us_state_dropdown"
-    Then element "#us_state_dropdown" is disabled
+    Then I wait to see "#user_age"
+    Then I wait to see "#user_us_state"
+    Then element "#user_us_state" is disabled
     Then element "#user_age" is disabled

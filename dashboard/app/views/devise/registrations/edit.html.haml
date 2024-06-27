@@ -86,7 +86,7 @@
       - if studentInLockoutFlow
         %em= t('user.update_field_parent_permission_required')
         %br/
-      = f.select :us_state, us_state_options, {include_blank: t('school_info.select_state')}, required: true, id: 'us_state_dropdown'
+      = f.select :us_state, us_state_options, {include_blank: t('school_info.select_state')}, required: true
       = f.hidden_field :country_code, value: country_code
   - if resource.teacher?
     .field
