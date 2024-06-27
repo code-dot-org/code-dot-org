@@ -84,6 +84,13 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
   const handleOnChange = (value: string) => {
     setSelectedTab(value);
   };
+
+  const resetTabNames = () => {
+    setSetupTabName('Setup');
+    setRetrievalTabName('Retrieval');
+    setPublishTabName('Publish');
+  };
+
   const tabArgs: TabsProps = {
     name: 'modelCustomizationTabs',
     tabs: visibleTabs,
@@ -95,30 +102,22 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
   };
 
   useEffect(() => {
-    if (selectedTab === 'setup') {
-      if (isSetupCustomizationReadOnly || isReadOnly) {
-        setSetupTabName('Setup (view only)');
-      } else {
-        setSetupTabName('Setup');
-      }
-      setRetrievalTabName('Retrieval');
-      setPublishTabName('Publish');
-    } else if (selectedTab === 'retrieval') {
-      if (isDisabled(retrievalContexts) || isReadOnly) {
-        setRetrievalTabName('Retrieval (view only)');
-      } else {
-        setRetrievalTabName('Retrieval');
-      }
-      setSetupTabName('Setup');
-      setPublishTabName('Publish');
-    } else if (selectedTab === 'modelCardInfo') {
-      if (isDisabled(modelCardInfo) || isReadOnly) {
-        setPublishTabName('Publish (view only)');
-      } else {
-        setPublishTabName('Publish');
-      }
-      setSetupTabName('Setup');
-      setRetrievalTabName('Retrieval');
+    resetTabNames();
+    if (
+      selectedTab === 'setup' &&
+      (isSetupCustomizationReadOnly || isReadOnly)
+    ) {
+      setSetupTabName('Setup (view only)');
+    } else if (
+      selectedTab === 'retrieval' &&
+      (isDisabled(retrievalContexts) || isReadOnly)
+    ) {
+      setRetrievalTabName('Retrieval (view only)');
+    } else if (
+      selectedTab === 'modelCardInfo' &&
+      (isDisabled(modelCardInfo) || isReadOnly)
+    ) {
+      setPublishTabName('Publish (view only)');
     }
   }, [
     setSelectedTab,
