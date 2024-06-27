@@ -5,6 +5,7 @@ require 'policies/lti'
 require "services/lti"
 require "clients/lti_advantage_client"
 require 'clients/lti_dynamic_registration_client'
+require 'metrics/events'
 
 class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   include Devise::Test::IntegrationHelpers
@@ -855,12 +856,32 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     email = "fake@email.com"
 
     post '/lti/v1/integrations', params: {name: name, client_id: client_id, lms: lms, email: email}
+    # Something is different with this test suite. Getting a 500 server error
+    Metrics::Events.expects(:log_event_with_session).with(
+      has_entries(
+        session: session,
+        event_name: 'lti_portal_registration_completed',
+        metadata: {
+          lms_name: Policies::Lti::LMS_PLATFORMS[:canvas_cloud][:name],
+        },
+      )
+    )
     assert_response :ok
 
     client_id = "5678schoology"
     lms = "schoology"
 
     post '/lti/v1/integrations', params: {name: name, client_id: client_id, lms: lms, email: email}
+
+    Metrics::Events.expects(:log_event_with_session).with(
+      has_entries(
+        session: session,
+        event_name: 'lti_portal_registration_completed',
+        metadata: {
+          lms_name: Policies::Lti::LMS_PLATFORMS[:schoology][:name],
+        },
+      )
+    )
     assert_response :ok
   end
 
