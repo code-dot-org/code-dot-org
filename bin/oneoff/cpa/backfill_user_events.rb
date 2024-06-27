@@ -114,14 +114,14 @@ if File.exist?('lockout_dates.tsv')
     # Get the tuple
     user_id, lockout_date = line.split("\t").map {|value| JSON.parse(value)}
 
-    # Write out a record for it
+    # Write out a record for it (state_before can't be nil, so it ends up being 'l')
     records << {
       created_at: lockout_date,
       updated_at: lockout_date,
       policy: POLICY,
       name: ACCOUNT_LOCKING,
       user_id: user_id,
-      state_before: nil,
+      state_before: 'l',
       state_after: 'l',
     }
     records = records[...-1] if DASHBOARD_DB_READER[:cap_user_events].where(policy: records[-1][:policy], name: records[-1][:name], user_id: records[-1][:user_id]).count > 0
