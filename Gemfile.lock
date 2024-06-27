@@ -1115,7 +1115,6 @@ DEPENDENCIES
   redis (~> 4.8.1)
   redis-actionpack (~> 5.4.0)
   redis-slave-read!
-  request_store (~> 1.6.0)
   require_all
   rerun
   responders (~> 3.0)

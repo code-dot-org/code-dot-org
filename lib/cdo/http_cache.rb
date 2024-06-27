@@ -137,12 +137,6 @@ class HttpCache
     assumed_identity = "_assumed_identity#{env_suffix}"
     default_cookies = DEFAULT_COOKIES + [user_type, limit_project_types, assumed_identity]
 
-    # Allow the DCDO cookie if the cookie DCDO feature is enabled.
-    if CDO.use_cookie_dcdo
-      require 'cdo/rack/cookie_dcdo'
-      default_cookies << Rack::CookieDCDO::KEY
-    end
-
     # These cookies are allowlisted on all session-specific (not cached) pages.
     allowlisted_cookies = [
       'hour_of_code',
