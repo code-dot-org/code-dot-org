@@ -36,10 +36,17 @@ Parameters:
   RedshiftDatabase:
     Type: String
     Default: dashboard
+  RedshiftAdminUsername:
+    Type: String
+  RedshiftAdminPassword:
+    Type: String
+    NoEcho: true
   RedshiftUsername:
     Type: String
+    Description: Redshift SQL user to execute Extract Transform Load (ETL) processes.
   RedshiftPassword:
     Type: String
+    Description: Redshift SQL user to execute Extract Transform Load (ETL) processes.
     NoEcho: true
   RDSBackupAccount:
     Type: String
@@ -60,8 +67,8 @@ Resources:
       DBName: {Ref: RedshiftDatabase}
       Encrypted: true
       KmsKeyId: alias/aws/redshift
-      MasterUsername: {Ref: RedshiftUsername}
-      MasterUserPassword: {Ref: RedshiftPassword}
+      MasterUsername: {Ref: RedshiftAdminUsername}
+      MasterUserPassword: {Ref: RedshiftAdminPassword}
       NodeType: dc1.large
       # This maintenance can interfere with the daily export from MySQL to Redshift which starts at 02:00 UTC, so set it
       # to start at least 1 hour before the export begins (it typically takes 15 minutes).
