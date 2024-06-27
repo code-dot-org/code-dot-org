@@ -1,34 +1,22 @@
-'use client';
 import React from 'react';
-import {useFormState, useFormStatus} from 'react-dom';
 
-import {authenticate} from '@cdo/app/lib/actions';
+import {signIn} from '@cdo/app/auth';
 
-export default function Page() {
-  const [errorMessage, dispatch] = useFormState(authenticate, undefined);
-
+export default async function Page() {
   return (
-    <form action={dispatch}>
+    <form
+      action={async (formData: FormData) => {
+        'use server';
+        await signIn('credentials', formData);
+      }}
+    >
       <input type="email" name="email" placeholder="Email" required />
       <input type="password" name="password" placeholder="Password" required />
-      <div>{errorMessage && <p>{errorMessage}</p>}</div>
       <LoginButton />
     </form>
   );
 }
 
 function LoginButton() {
-  const {pending} = useFormStatus();
-
-  const handleClick = (event: React.MouseEvent) => {
-    if (pending) {
-      event.preventDefault();
-    }
-  };
-
-  return (
-    <button aria-disabled={pending} type="submit" onClick={handleClick}>
-      Login
-    </button>
-  );
+  return <button type="submit">Login</button>;
 }
