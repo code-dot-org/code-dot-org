@@ -1,3 +1,10 @@
+<%
+/**
+ * This block destructures the local variables for use within this ejs template.
+ */
+var level = locals.level;
+var page = locals.page;
+%>
 <% if (page === 2) { -%>
   <% if (level < 4) { -%>
     <block type="maze_moveForward" x="70" y="70"></block>

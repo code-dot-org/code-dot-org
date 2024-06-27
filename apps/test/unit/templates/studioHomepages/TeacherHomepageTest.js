@@ -79,6 +79,7 @@ describe('TeacherHomepage', () => {
     expect(analyticsSpy.firstCall.args).to.deep.eq([
       'Teacher Login',
       {'user id': 42},
+      'Both',
     ]);
 
     // After setting the session value to true, we should not see sessionStorage.setItem or analyticsSpy called again.

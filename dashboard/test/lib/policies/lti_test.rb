@@ -87,6 +87,54 @@ class Policies::LtiTest < ActiveSupport::TestCase
     assert_equal true, Policies::Lti.lti_teacher?(['http://purl.imsglobal.org/vocab/lis/v1/institution/person#Instructor'])
   end
 
+  def create_opted_out_user
+    user = create :student, :with_lti_auth
+    user.lms_landing_opted_out = false
+    user.save
+
+    user
+  end
+
+  test 'account_linking returns true if session initialized, single LTI auth, and not opted out' do
+    user = create_opted_out_user
+
+    session = {}
+    Services::Lti.initialize_lms_landing_session(session, 'canvas_cloud', 'new')
+
+    assert_equal true, Policies::Lti.account_linking?(session, user)
+  end
+
+  test 'account_linking returns false if session is not initialized' do
+    user = create_opted_out_user
+
+    session = {}
+
+    assert_equal false, Policies::Lti.account_linking?(session, user)
+  end
+
+  test 'account_linking returns false if session initialized, with multiple LTI auth' do
+    user = create_opted_out_user
+    google_auth = create(:google_authentication_option, user: user)
+    user.authentication_options << google_auth
+    user.save
+
+    session = {}
+    Services::Lti.initialize_lms_landing_session(session, 'canvas_cloud', 'new')
+
+    assert_equal false, Policies::Lti.account_linking?(session, user)
+  end
+
+  test 'account_linking returns false if session initialized, single LTI auth, and opted out' do
+    user = create_opted_out_user
+    user.lms_landing_opted_out = true
+    user.save
+
+    session = {}
+    Services::Lti.initialize_lms_landing_session(session, 'canvas_cloud', 'new')
+
+    assert_equal false, Policies::Lti.account_linking?(session, user)
+  end
+
   test 'show_email_input?' do
     test_matrix = [
       [true, [:teacher, :with_lti_auth]],

@@ -31,6 +31,10 @@ module Lti
         head :bad_request unless PartialRegistration.in_progress?(session)
         params.require([:email, :password])
         existing_user = User.find_by_email_or_hashed_email(params[:email])
+        if existing_user.admin?
+          flash[:alert] = I18n.t('lti.account_linking.admin_not_allowed')
+          redirect_to user_session_path(lti_provider: params[:lti_provider], lms_name: params[:lms_name]) and return
+        end
         if existing_user&.valid_password?(params[:password])
           Services::Lti::AccountLinker.call(user: existing_user, session: session)
           sign_in existing_user
