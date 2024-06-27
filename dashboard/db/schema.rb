@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 2024_06_24_164604) do
     t.index ["lesson_activity_id"], name: "index_activity_sections_on_lesson_activity_id"
   end
 
-  create_table "ai_tutor_interaction_feedbacks", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|    
+  create_table "ai_tutor_interaction_feedbacks", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.bigint "ai_tutor_interaction_id", null: false
     t.integer "user_id", null: false
     t.boolean "thumbs_up"
@@ -479,7 +479,7 @@ ActiveRecord::Schema.define(version: 2024_06_24_164604) do
     t.index ["project_id"], name: "index_datablock_storage_kvps_on_project_id"
   end
 
-  create_table "datablock_storage_library_manifest", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|    
+  create_table "datablock_storage_library_manifest", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.json "library_manifest"
     t.integer "singleton_guard", null: false
     t.datetime "created_at", precision: 6, null: false
