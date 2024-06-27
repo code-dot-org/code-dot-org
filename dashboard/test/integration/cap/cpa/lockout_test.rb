@@ -37,7 +37,7 @@ module CAP
         end
 
         describe 'new user lockout phase' do
-          let(:current_date) {new_user_lockout_date}
+          let(:current_date) {new_user_lockout_date.since(1.day)}
 
           it 'student should be locked out immediately until permission is granted' do
             assert_student_is_locked_out_until_permission_granted

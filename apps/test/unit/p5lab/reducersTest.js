@@ -1,28 +1,20 @@
-// Require statements can change behavior based on order.
-// We are keeping the original order of the require statements.
-/* eslint-disable import/order */
-var actions = require('@cdo/apps/p5lab/actions');
+import {expect} from '../../util/reconfiguredChai';
 
+var _ = require('lodash');
+var combineReducers = require('redux').combineReducers;
+
+var actions = require('@cdo/apps/p5lab/actions');
+var P5LabInterfaceMode =
+  require('@cdo/apps/p5lab/constants').P5LabInterfaceMode;
+var gamelabReducers = require('@cdo/apps/p5lab/reducers');
 var {
   clearConsole,
   addConsoleMessage,
 } = require('@cdo/apps/p5lab/redux/textConsole');
-
-var createStore = require('../../util/redux').createStore;
-
-var combineReducers = require('redux').combineReducers;
-
-import {expect} from '../../util/reconfiguredChai';
-
-var _ = require('lodash');
-/* eslint-enable import/order */
-
-var P5LabInterfaceMode =
-  require('@cdo/apps/p5lab/constants').P5LabInterfaceMode;
-var gamelabReducers = require('@cdo/apps/p5lab/reducers');
 var commonReducers = require('@cdo/apps/redux/commonReducers');
 var pageConstants = require('@cdo/apps/redux/pageConstants');
 
+var createStore = require('../../util/redux').createStore;
 var testUtils = require('../../util/testUtils');
 
 describe('gamelabReducer', function () {

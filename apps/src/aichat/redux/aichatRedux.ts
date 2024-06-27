@@ -236,6 +236,17 @@ export const onSaveComplete =
     }
   };
 
+// Thunk called when a save no-ops (there are no changes to save)
+export const onSaveNoop =
+  () => (dispatch: AppDispatch, getState: () => RootState) => {
+    // Even if no changes were saved, go to the presentation page if the user tried to publish
+    // a model card.
+    if (getState().aichat.currentSaveType === 'publishModelCard') {
+      dispatch(setViewMode(ViewMode.PRESENTATION));
+    }
+    dispatch(endSave());
+  };
+
 // Thunk called when a save has failed.
 export const onSaveFail =
   (e: Error) => (dispatch: AppDispatch, getState: () => RootState) => {
@@ -548,6 +559,12 @@ export const selectAllMessages = (state: {aichat: AichatState}) => {
   }
   return messages;
 };
+
+export const selectHavePropertiesChanged = (state: RootState) =>
+  findChangedProperties(
+    state.aichat.savedAiCustomizations,
+    state.aichat.currentAiCustomizations
+  ).length > 0;
 
 // Actions not to be used outside of this file
 const {

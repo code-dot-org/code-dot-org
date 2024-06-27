@@ -253,6 +253,74 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     end
   end
 
+  describe '.underage?' do
+    let(:underage?) {Policies::ChildAccount.underage?(user)}
+
+    let(:age) {10.years}
+
+    # A lockout date that is always in the future
+    let(:user_lockout_date) {DateTime.now + 1.year}
+    let(:user_state_policy) {{lockout_date: user_lockout_date, max_age: 13}}
+    let(:user_birthday) {DateTime.now.ago(age)}
+    let(:user) {build_stubbed(:student, birthday: user_birthday)}
+
+    around do |test|
+      Timecop.freeze {test.call}
+    end
+
+    before do
+      Policies::ChildAccount.stubs(:state_policy).with(user).returns(user_state_policy)
+    end
+
+    context 'the user is a teacher' do
+      let(:user) {build_stubbed(:teacher)}
+
+      it 'returns false' do
+        _(underage?).must_equal false
+      end
+    end
+
+    context 'there is no state policy for the user' do
+      let(:user_state_policy) {nil}
+
+      it 'returns false' do
+        _(underage?).must_equal false
+      end
+    end
+
+    context 'there is no recorded lockout date for the state policy for the user' do
+      let(:user_state_policy) {{max_age: 13}}
+
+      it 'returns false' do
+        _(underage?).must_equal false
+      end
+    end
+
+    context 'the user is younger than the max age on the policy' do
+      it 'returns true' do
+        _(underage?).must_equal true
+      end
+
+      context 'the user is, however, going to turn of age (within a year) by the lockout date' do
+        # We have to add 1 to the max_age when calculating the birthday since birthdays are
+        # inaccurate values and we want to *ensure* the student age is legally valid.
+        let(:user_birthday) {user_lockout_date - (user_state_policy[:max_age] + 1).years - 1.day}
+
+        it 'returns false' do
+          _(underage?).must_equal false
+        end
+      end
+    end
+
+    context 'the user is older than the max age on the policy' do
+      let(:age) {18.years}
+
+      it 'returns false' do
+        _(underage?).must_equal false
+      end
+    end
+  end
+
   describe '.lockout_date' do
     let(:lockout_date) {Policies::ChildAccount.lockout_date(user, approximate: approximate)}
 
@@ -310,6 +378,127 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
 
       it 'returns nil' do
         _(lockout_date).must_be_nil
+      end
+    end
+  end
+
+  describe '.partially_locked_out?' do
+    let(:partially_locked_out?) {Policies::ChildAccount.partially_locked_out?(user)}
+
+    let(:user) {build_stubbed(:student)}
+    let(:user_predates_policy?) {true}
+    let(:permission_granted?) {false}
+
+    around do |test|
+      Timecop.freeze {test.call}
+    end
+
+    before do
+      Policies::ChildAccount.stubs(:user_predates_policy?).with(user).returns(user_predates_policy?)
+      Policies::ChildAccount::ComplianceState.stubs(:permission_granted?).with(user).returns(permission_granted?)
+    end
+
+    it 'returns true' do
+      _(partially_locked_out?).must_equal true
+    end
+
+    context 'when the user does not predate the policy' do
+      let(:user_predates_policy?) {false}
+
+      it 'returns false' do
+        _(partially_locked_out?).must_equal false
+      end
+
+      context 'when the user has been granted permission' do
+        let(:permission_granted?) {true}
+
+        it 'returns false' do
+          _(partially_locked_out?).must_equal false
+        end
+      end
+    end
+
+    context 'when the user has been granted permission while predating the policy' do
+      let(:permission_granted?) {true}
+
+      it 'returns false' do
+        _(partially_locked_out?).must_equal false
+      end
+    end
+  end
+
+  describe '.can_link_new_personal_account?' do
+    let(:can_link_new_personal_account?) {Policies::ChildAccount.can_link_new_personal_account?(user)}
+
+    let(:user_birthday) {DateTime.now}
+    let(:user) {build_stubbed(:student, birthday: user_birthday, us_state: 'CO', country_code: 'US')}
+    let(:underage?) {true}
+    let(:permission_granted?) {true}
+
+    before do
+      Policies::ChildAccount.stubs(:underage?).with(user).returns(underage?)
+      Policies::ChildAccount::ComplianceState.stubs(:permission_granted?).with(user).returns(permission_granted?)
+    end
+
+    context 'when the user is a teacher' do
+      let(:user) {build_stubbed(:teacher)}
+
+      it 'returns true' do
+        _(can_link_new_personal_account?).must_equal true
+      end
+    end
+
+    context 'when the user does not have a state' do
+      let(:user) {build_stubbed(:student, birthday: user_birthday, us_state: nil)}
+
+      it 'returns false' do
+        _(can_link_new_personal_account?).must_equal false
+      end
+    end
+
+    context 'when the user does not have a country' do
+      let(:user) {build_stubbed(:student, birthday: user_birthday, country_code: nil)}
+
+      it 'returns false' do
+        _(can_link_new_personal_account?).must_equal false
+      end
+    end
+
+    context 'when the user does not have a state nor country' do
+      let(:user) {build_stubbed(:student, birthday: user_birthday, us_state: nil, country_code: nil)}
+
+      it 'returns false' do
+        _(can_link_new_personal_account?).must_equal false
+      end
+    end
+
+    context 'when the user is a student without a birthday' do
+      let(:user_birthday) {nil}
+
+      it 'returns true' do
+        _(can_link_new_personal_account?).must_equal true
+      end
+    end
+
+    context 'when the user is a student that is not underage' do
+      let(:underage?) {false}
+
+      it 'returns true' do
+        _(can_link_new_personal_account?).must_equal true
+      end
+    end
+
+    context 'when the user is a student without parental permission' do
+      let(:permission_granted?) {false}
+
+      it 'returns false' do
+        _(can_link_new_personal_account?).must_equal false
+      end
+    end
+
+    context 'when an underage student has been granted parental permission' do
+      it 'returns true' do
+        _(can_link_new_personal_account?).must_equal true
       end
     end
   end
@@ -386,14 +575,19 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
   describe '.parent_permission_required?' do
     let(:parent_permission_required?) {Policies::ChildAccount.parent_permission_required?(user)}
 
+    # Create, initially, a student that does require parent permission
     let(:user_type) {'student'}
-    let(:user_age) {user_state_policy_max_age}
+    # So, their age makes them younger than the policy max age
+    let(:user_age) {user_state_policy_max_age - 1.year}
+    # With a personal account
+    let(:user_account_is_personal?) {true}
     let(:user) {build_stubbed(:user, user_type: user_type, birthday: user_age&.year&.ago)}
 
-    let(:user_account_is_personal?) {true}
+    # This is the policy: max age of 12 with a lockout date 1 year after the start date
     let(:user_state_policy_start_date) {DateTime.now}
     let(:user_state_policy_max_age) {12}
-    let(:user_state_policy) {{start_date: user_state_policy_start_date, max_age: user_state_policy_max_age}}
+    let(:user_lockout_date) {user_state_policy_start_date + 1.year}
+    let(:user_state_policy) {{start_date: user_state_policy_start_date, lockout_date: user_lockout_date, max_age: user_state_policy_max_age}}
 
     around do |test|
       Timecop.freeze {test.call}

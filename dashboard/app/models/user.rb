@@ -160,6 +160,7 @@ class User < ApplicationRecord
     has_seen_progress_table_v2_invitation
     date_progress_table_invitation_last_delayed
     user_provided_us_state
+    lms_landing_opted_out
   )
 
   attr_accessor(
