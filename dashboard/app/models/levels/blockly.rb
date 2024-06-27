@@ -1008,6 +1008,7 @@ class Blockly < Level
   # @param text [String] the text to unescape.
   # @return [String] the text with unescaped backticks.
   private def unescape_codeblocks(text)
+    return text unless text
     text.gsub('\\`', '`')
   end
 end

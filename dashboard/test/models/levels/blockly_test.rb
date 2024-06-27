@@ -1239,6 +1239,40 @@ class BlocklyTest < ActiveSupport::TestCase
     assert_equal parsed_xml.at_xpath('//block[@type="studio_ask"]/*[@name="VAR"]').content, localized_variable_str
   end
 
+  test 'localizes long_instruction when present' do
+    test_locale = 'te-ST'
+    level_name = 'test localize long_instruction'
+    level = create(
+      :level,
+      :blockly,
+      name: level_name,
+      long_instructions: 'original long instructions'
+    )
+
+    custom_i18n = {
+      'data' => {
+        'long_instructions' => {
+          level_name => 'translated long instructions'
+        }
+      }
+    }
+    I18n.locale = test_locale
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    assert_equal 'translated long instructions', level.localized_long_instructions
+  end
+
+  test 'returns empty strings when long_instruction is an empty string' do
+    level = create(
+      :level,
+      :blockly,
+      name: 'test localize long_instruction',
+      long_instructions: ''
+    )
+
+    assert_equal '', level.localized_long_instructions
+  end
+
   test 'localizes start_libraries when i18n_library is present' do
     test_locale = 'te-ST'
     level_name = 'test localize start_libraries'
