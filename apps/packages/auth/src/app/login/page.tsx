@@ -7,7 +7,10 @@ export default async function Page() {
     <form
       action={async (formData: FormData) => {
         'use server';
-        await signIn('credentials', formData);
+        const object = {redirectTo: '/'};
+        formData.forEach((value, key) => (object[key] = value));
+
+        await signIn('credentials', object);
       }}
     >
       <input type="email" name="email" placeholder="Email" required />

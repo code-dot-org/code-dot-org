@@ -1,6 +1,10 @@
 import React from 'react';
 
-const Header = () => {
+import {auth} from '@cdo/app/auth';
+
+const Header = async () => {
+  const session = await auth();
+
   return (
     <div className="header-wrapper">
       <div className="navbar-static-top header" dir="ltr">
@@ -29,6 +33,7 @@ const Header = () => {
               </a>
             </div>
           </div>
+          <div>Hello {session?.user?.name}</div>
         </div>
       </div>
     </div>

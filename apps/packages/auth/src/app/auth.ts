@@ -46,7 +46,7 @@ export const authOptions = {
 
         // If no error and we have user data, return it
         if (res.ok && user) {
-          console.log(user);
+          //console.log(user);
           return user;
         }
         // Return null if user data could not be retrieved
@@ -57,12 +57,18 @@ export const authOptions = {
   ],
   callbacks: {
     async jwt({token, user}) {
-      token.serverToken = user.token;
-      console.log('jwt', user, token);
-      return {...token, ...user};
+      if (user) {
+        token.serverToken = user.token;
+        token.user = user.data;
+        console.log('jwt', user, token);
+        return {...token, ...user};
+      }
+      return token;
     },
     async session({session, token}) {
+      console.log('session1', session, token);
       session.user.token = token.serverToken;
+      session.user.name = token.user.name;
       console.log('session', session, token);
       return session;
     },
